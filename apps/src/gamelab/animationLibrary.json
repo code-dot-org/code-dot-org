@@ -5,6 +5,44 @@
     "See tools/scripts/rebuildAnimationLibraryManifest.rb for more information."
   ],
   "metadata": {
+    "apple": {
+      "name": "apple",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "UP4HdZEz8ZvhBZU0_YgHQQHNNo5flTFL",
+      "sourceUrl": "/api/v1/animation-library/UP4HdZEz8ZvhBZU0_YgHQQHNNo5flTFL/apple.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "arrow": {
+      "name": "arrow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "PRlxpIXQ.JrAibJaf_4JbFB4AsMlwzVO",
+      "sourceUrl": "/api/v1/animation-library/PRlxpIXQ.JrAibJaf_4JbFB4AsMlwzVO/arrow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "asterisk_circle": {
       "name": "asterisk_circle",
       "aliases": [
@@ -81,6 +119,177 @@
         "y": 432
       }
     },
+    "axe_bronze": {
+      "name": "axe_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "DGP9l76sbLCnZwTSDPbkuszrbUx9kFIB",
+      "sourceUrl": "/api/v1/animation-library/DGP9l76sbLCnZwTSDPbkuszrbUx9kFIB/axe_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_diamond": {
+      "name": "axe_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "f7KFTKaoW4pPVkJXQ8WZn73lx4Zd23zb",
+      "sourceUrl": "/api/v1/animation-library/f7KFTKaoW4pPVkJXQ8WZn73lx4Zd23zb/axe_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_gold": {
+      "name": "axe_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "7NlTST8oLws9RQjl2KBCrT8uVwzXJClS",
+      "sourceUrl": "/api/v1/animation-library/7NlTST8oLws9RQjl2KBCrT8uVwzXJClS/axe_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_iron": {
+      "name": "axe_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "qJjf_nBlbv3h_Xi5qx8av8hmb2HmnSOq",
+      "sourceUrl": "/api/v1/animation-library/qJjf_nBlbv3h_Xi5qx8av8hmb2HmnSOq/axe_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_silver": {
+      "name": "axe_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "weVIjQ2af2TPMJ6KS.q1jrXJfKHP66nG",
+      "sourceUrl": "/api/v1/animation-library/weVIjQ2af2TPMJ6KS.q1jrXJfKHP66nG/axe_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "boat": {
+      "name": "boat",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "EM0dwJbOskjFN8wOBS4HQltNDwdlNrIe",
+      "sourceUrl": "/api/v1/animation-library/EM0dwJbOskjFN8wOBS4HQltNDwdlNrIe/boat.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "bow": {
+      "name": "bow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "X0KHXswDd.K7UMNfa7UZKRz_wrmdvTfP",
+      "sourceUrl": "/api/v1/animation-library/X0KHXswDd.K7UMNfa7UZKRz_wrmdvTfP/bow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "bowArrow": {
+      "name": "bowArrow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "SfdM9jO3mzzTaS7YPghbofDskgJ_sgxL",
+      "sourceUrl": "/api/v1/animation-library/SfdM9jO3mzzTaS7YPghbofDskgJ_sgxL/bowArrow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "bowl": {
+      "name": "bowl",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "kUS06Qpxis6DytTAUlIJD9iplRlBJ_6S",
+      "sourceUrl": "/api/v1/animation-library/kUS06Qpxis6DytTAUlIJD9iplRlBJ_6S/bowl.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "box": {
       "name": "box",
       "aliases": [
@@ -98,6 +307,44 @@
       "sourceSize": {
         "x": 198,
         "y": 118
+      }
+    },
+    "brick_grey": {
+      "name": "brick_grey",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "6rg7JdY8R3SNxiwlTWJ5Mp5Gqkz3qJyJ",
+      "sourceUrl": "/api/v1/animation-library/6rg7JdY8R3SNxiwlTWJ5Mp5Gqkz3qJyJ/brick_grey.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "brick_red": {
+      "name": "brick_red",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "9Jtgnx50xegncnNWQbIK6eE0EZm0Wuen",
+      "sourceUrl": "/api/v1/animation-library/9Jtgnx50xegncnNWQbIK6eE0EZm0Wuen/brick_red.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "bronze_1": {
@@ -492,6 +739,63 @@
         "y": 160
       }
     },
+    "cactus_inside": {
+      "name": "cactus_inside",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "RhkUfKWuz0oIWCuETVw5zO9gNlAfXymE",
+      "sourceUrl": "/api/v1/animation-library/RhkUfKWuz0oIWCuETVw5zO9gNlAfXymE/cactus_inside.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "cactus_side": {
+      "name": "cactus_side",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "_ZzsGzN8IRRi5sBYUypmfHIFmt5o4C10",
+      "sourceUrl": "/api/v1/animation-library/_ZzsGzN8IRRi5sBYUypmfHIFmt5o4C10/cactus_side.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "cactus_top": {
+      "name": "cactus_top",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "ZGApr46pn9JinSjVEM_pKWuMdfyVtfWH",
+      "sourceUrl": "/api/v1/animation-library/ZGApr46pn9JinSjVEM_pKWuMdfyVtfWH/cactus_top.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "carrot": {
       "name": "carrot",
       "aliases": [
@@ -630,6 +934,348 @@
       "sourceSize": {
         "x": 61,
         "y": 61
+      }
+    },
+    "cotton_blue": {
+      "name": "cotton_blue",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "mX3ypEgSp8t.pfAbRH9kvez5oSkpCX2B",
+      "sourceUrl": "/api/v1/animation-library/mX3ypEgSp8t.pfAbRH9kvez5oSkpCX2B/cotton_blue.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "cotton_green": {
+      "name": "cotton_green",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "ejSO1aRzS9OpbnN8tmSas709JEbliY.r",
+      "sourceUrl": "/api/v1/animation-library/ejSO1aRzS9OpbnN8tmSas709JEbliY.r/cotton_green.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "cotton_red": {
+      "name": "cotton_red",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "XyKizyGYo624mKomESlfuWqX3t.LYOnQ",
+      "sourceUrl": "/api/v1/animation-library/XyKizyGYo624mKomESlfuWqX3t.LYOnQ/cotton_red.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "cotton_tan": {
+      "name": "cotton_tan",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "tWi787XEB04Hau9K7sKQ4bmKTJOS.8.l",
+      "sourceUrl": "/api/v1/animation-library/tWi787XEB04Hau9K7sKQ4bmKTJOS.8.l/cotton_tan.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "dirt": {
+      "name": "dirt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "If1SuipEo0HbMHgSfaOCUbYGfJ98GDDY",
+      "sourceUrl": "/api/v1/animation-library/If1SuipEo0HbMHgSfaOCUbYGfJ98GDDY/dirt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "dirt_grass": {
+      "name": "dirt_grass",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "BOCPlRFePmZOkMPAz4kUwGRGFOpYf7q0",
+      "sourceUrl": "/api/v1/animation-library/BOCPlRFePmZOkMPAz4kUwGRGFOpYf7q0/dirt_grass.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "dirt_sand": {
+      "name": "dirt_sand",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Nrzk5Q_I0zJvQcsE9wgLVRMhD1uAiUyz",
+      "sourceUrl": "/api/v1/animation-library/Nrzk5Q_I0zJvQcsE9wgLVRMhD1uAiUyz/dirt_sand.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "dirt_snow": {
+      "name": "dirt_snow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "RoXV8o1Xz7qu9Gp4ZRkaUqs_dABV0maR",
+      "sourceUrl": "/api/v1/animation-library/RoXV8o1Xz7qu9Gp4ZRkaUqs_dABV0maR/dirt_snow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fence_stone": {
+      "name": "fence_stone",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "u8LzDDrjkzEaCoWmUcEFMY527zUQtcqF",
+      "sourceUrl": "/api/v1/animation-library/u8LzDDrjkzEaCoWmUcEFMY527zUQtcqF/fence_stone.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fence_wood": {
+      "name": "fence_wood",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "_466htBS77fqVKPrIbYZcRI4nFdxWGAB",
+      "sourceUrl": "/api/v1/animation-library/_466htBS77fqVKPrIbYZcRI4nFdxWGAB/fence_wood.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fish": {
+      "name": "fish",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "3HOrxU9dUD4p3TM0EhGBH86visfi9zgw",
+      "sourceUrl": "/api/v1/animation-library/3HOrxU9dUD4p3TM0EhGBH86visfi9zgw/fish.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fish_cooked": {
+      "name": "fish_cooked",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "GcgAjdlq.5cS0ObW3Z5sAGUqR3IvWjFg",
+      "sourceUrl": "/api/v1/animation-library/GcgAjdlq.5cS0ObW3Z5sAGUqR3IvWjFg/fish_cooked.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fishingPole": {
+      "name": "fishingPole",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "YYN2a57hXiGsem_9eKn3J8ysFQTzRwWG",
+      "sourceUrl": "/api/v1/animation-library/YYN2a57hXiGsem_9eKn3J8ysFQTzRwWG/fishingPole.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_bronze": {
+      "name": "flail_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "BbitMXmTfM.pRBHafR8hDzV0TYzcBOM9",
+      "sourceUrl": "/api/v1/animation-library/BbitMXmTfM.pRBHafR8hDzV0TYzcBOM9/flail_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_diamond": {
+      "name": "flail_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "iB_qshaQw0kd1ZsigAe_pF7PxgPxuH8l",
+      "sourceUrl": "/api/v1/animation-library/iB_qshaQw0kd1ZsigAe_pF7PxgPxuH8l/flail_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_gold": {
+      "name": "flail_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "gf0.Vq384PLFyA_nw4KinlepIOtIjg.D",
+      "sourceUrl": "/api/v1/animation-library/gf0.Vq384PLFyA_nw4KinlepIOtIjg.D/flail_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_iron": {
+      "name": "flail_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "sXJD_KQUPwP_F_fcXcIzjGuYrBI1KQ6m",
+      "sourceUrl": "/api/v1/animation-library/sXJD_KQUPwP_F_fcXcIzjGuYrBI1KQ6m/flail_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_silver": {
+      "name": "flail_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "z8wxfXorFHHKofc6VS.frCwL6nNTLoRv",
+      "sourceUrl": "/api/v1/animation-library/z8wxfXorFHHKofc6VS.frCwL6nNTLoRv/flail_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "flyMan_fly": {
@@ -771,6 +1417,44 @@
         "y": 158
       }
     },
+    "glass": {
+      "name": "glass",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "b8amMh22rwyDC8mY.JSK8sUY1fKQkBz9",
+      "sourceUrl": "/api/v1/animation-library/b8amMh22rwyDC8mY.JSK8sUY1fKQkBz9/glass.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "glass_frame": {
+      "name": "glass_frame",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "cS3EzqDBt8Ks2KUGu2CgIrgcngEzrKl.",
+      "sourceUrl": "/api/v1/animation-library/cS3EzqDBt8Ks2KUGu2CgIrgcngEzrKl./glass_frame.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "gold_1": {
       "name": "gold_1",
       "aliases": [
@@ -854,43 +1538,96 @@
     "grass1": {
       "name": "grass1",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
-        "x": 58,
-        "y": 57
+        "x": 128,
+        "y": 128
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
-      "version": "H_Zg7qIZuBUiUoZzyc6dt3hbnBRyg_Sh",
-      "sourceUrl": "/api/v1/animation-library/H_Zg7qIZuBUiUoZzyc6dt3hbnBRyg_Sh/grass1.png",
+      "version": "OcU0y_jf8vVIF9zeVJv1kY65AbJSbb_n",
+      "sourceUrl": "/api/v1/animation-library/OcU0y_jf8vVIF9zeVJv1kY65AbJSbb_n/grass1.png",
       "sourceSize": {
-        "x": 58,
-        "y": 57
+        "x": 128,
+        "y": 128
       }
     },
     "grass2": {
       "name": "grass2",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
-        "x": 82,
-        "y": 70
+        "x": 128,
+        "y": 128
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
-      "version": "QLla_mTrb.zWA.hivS2cQzMGM2r9zipv",
-      "sourceUrl": "/api/v1/animation-library/QLla_mTrb.zWA.hivS2cQzMGM2r9zipv/grass2.png",
+      "version": "r7sWKo_WM4G8AHSQSDzDO.YcZAAcu_dH",
+      "sourceUrl": "/api/v1/animation-library/r7sWKo_WM4G8AHSQSDzDO.YcZAAcu_dH/grass2.png",
       "sourceSize": {
-        "x": 82,
-        "y": 70
+        "x": 128,
+        "y": 128
+      }
+    },
+    "grass3": {
+      "name": "grass3",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "DrMc77y7PKc1LOY8thcWFAXwfi3_45zT",
+      "sourceUrl": "/api/v1/animation-library/DrMc77y7PKc1LOY8thcWFAXwfi3_45zT/grass3.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "grass4": {
+      "name": "grass4",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "ITBizzI37OoLmpFbDZ1VxIzra4i.EdKH",
+      "sourceUrl": "/api/v1/animation-library/ITBizzI37OoLmpFbDZ1VxIzra4i.EdKH/grass4.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "grass_brown": {
+      "name": "grass_brown",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "b0Wnezl0JBe7eueOw7PWhRGcwXO2L9gB",
+      "sourceUrl": "/api/v1/animation-library/b0Wnezl0JBe7eueOw7PWhRGcwXO2L9gB/grass_brown.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "grass_brown1": {
@@ -933,6 +1670,177 @@
       "sourceSize": {
         "x": 82,
         "y": 70
+      }
+    },
+    "grass_tan": {
+      "name": "grass_tan",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "gq581B3V9l85T3dtb5q5nkjoMRWbv73E",
+      "sourceUrl": "/api/v1/animation-library/gq581B3V9l85T3dtb5q5nkjoMRWbv73E/grass_tan.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "grass_top": {
+      "name": "grass_top",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fRB6_uWnmzl9proOrZ3dOgjCDPK88bZl",
+      "sourceUrl": "/api/v1/animation-library/fRB6_uWnmzl9proOrZ3dOgjCDPK88bZl/grass_top.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "gravel_dirt": {
+      "name": "gravel_dirt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "SDrvmA2XvrEv19ZVnsHgkNNmmfjxEw08",
+      "sourceUrl": "/api/v1/animation-library/SDrvmA2XvrEv19ZVnsHgkNNmmfjxEw08/gravel_dirt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "gravel_stone": {
+      "name": "gravel_stone",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "5ErwphHY8V3Fybl7nco80.ABH.7_dgQC",
+      "sourceUrl": "/api/v1/animation-library/5ErwphHY8V3Fybl7nco80.ABH.7_dgQC/gravel_stone.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "greysand": {
+      "name": "greysand",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "qRD8JiRljmURW2DrGbxhYfn.0kKuAO_Q",
+      "sourceUrl": "/api/v1/animation-library/qRD8JiRljmURW2DrGbxhYfn.0kKuAO_Q/greysand.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "greystone": {
+      "name": "greystone",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fqkzAs9bBzUWT5CYWlFQWZFwhHKK9uXy",
+      "sourceUrl": "/api/v1/animation-library/fqkzAs9bBzUWT5CYWlFQWZFwhHKK9uXy/greystone.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "greystone_ruby": {
+      "name": "greystone_ruby",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "oblNq71nX1RWWtqtrXj.RYmdce4ZHes7",
+      "sourceUrl": "/api/v1/animation-library/oblNq71nX1RWWtqtrXj.RYmdce4ZHes7/greystone_ruby.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "greystone_ruby_alt": {
+      "name": "greystone_ruby_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "dxNoAbO9DuXRbrDc9Wcg4FS8GFqwzBJB",
+      "sourceUrl": "/api/v1/animation-library/dxNoAbO9DuXRbrDc9Wcg4FS8GFqwzBJB/greystone_ruby_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "greystone_sand": {
+      "name": "greystone_sand",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "tBkzyE_ZRuY22u0BYq_.obHusBu6RUMl",
+      "sourceUrl": "/api/v1/animation-library/tBkzyE_ZRuY22u0BYq_.obHusBu6RUMl/greystone_sand.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "ground_cake": {
@@ -1439,6 +2347,215 @@
         "y": 100
       }
     },
+    "hammer_bronze": {
+      "name": "hammer_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "UGILI_oNaJ5S5iKQJRDlpH_GFOhcswq9",
+      "sourceUrl": "/api/v1/animation-library/UGILI_oNaJ5S5iKQJRDlpH_GFOhcswq9/hammer_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_diamond": {
+      "name": "hammer_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "qE3NU3H6OOwbDKe7iagXBFvnEf5mG7qP",
+      "sourceUrl": "/api/v1/animation-library/qE3NU3H6OOwbDKe7iagXBFvnEf5mG7qP/hammer_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_gold": {
+      "name": "hammer_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fwYAlBqBPrlAKi_TQv_QIY21zOK6Mo3q",
+      "sourceUrl": "/api/v1/animation-library/fwYAlBqBPrlAKi_TQv_QIY21zOK6Mo3q/hammer_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_iron": {
+      "name": "hammer_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "3zwQrCC3nBEVU0b7ePAecMsAM0BAn8LQ",
+      "sourceUrl": "/api/v1/animation-library/3zwQrCC3nBEVU0b7ePAecMsAM0BAn8LQ/hammer_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_silver": {
+      "name": "hammer_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "H8dNYTUgjxk7fz54zf5LKv_Fl_AGj.f1",
+      "sourceUrl": "/api/v1/animation-library/H8dNYTUgjxk7fz54zf5LKv_Fl_AGj.f1/hammer_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_bronze": {
+      "name": "hoe_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "YgVw7MX0fbKK4oOJ8.CkqF_Q3JCoT0cA",
+      "sourceUrl": "/api/v1/animation-library/YgVw7MX0fbKK4oOJ8.CkqF_Q3JCoT0cA/hoe_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_diamond": {
+      "name": "hoe_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "jnOmTAjVnq5TV5xxcx4Svc4KuKf_GMih",
+      "sourceUrl": "/api/v1/animation-library/jnOmTAjVnq5TV5xxcx4Svc4KuKf_GMih/hoe_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_gold": {
+      "name": "hoe_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "LJhUiZDm_txkR5dXjSlYLd8q0GztTS98",
+      "sourceUrl": "/api/v1/animation-library/LJhUiZDm_txkR5dXjSlYLd8q0GztTS98/hoe_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_iron": {
+      "name": "hoe_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "SiUsXa_bxlAiQOcAGICdmpiK9Jgs3p4K",
+      "sourceUrl": "/api/v1/animation-library/SiUsXa_bxlAiQOcAGICdmpiK9Jgs3p4K/hoe_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_silver": {
+      "name": "hoe_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "KG2QzB411spLKWVpKXxY_mmi2P0MHEvT",
+      "sourceUrl": "/api/v1/animation-library/KG2QzB411spLKWVpKXxY_mmi2P0MHEvT/hoe_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ice": {
+      "name": "ice",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "W1oUmHbQCQh4LxR41RDBIfsQv9x2yvUC",
+      "sourceUrl": "/api/v1/animation-library/W1oUmHbQCQh4LxR41RDBIfsQv9x2yvUC/ice.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "jetpack": {
       "name": "jetpack",
       "aliases": [
@@ -1479,6 +2596,101 @@
         "y": 77
       }
     },
+    "lava": {
+      "name": "lava",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "xGnido..kSJleSkBMs5bPzO2HKBvBDlR",
+      "sourceUrl": "/api/v1/animation-library/xGnido..kSJleSkBMs5bPzO2HKBvBDlR/lava.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "leaves": {
+      "name": "leaves",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "MOk.qT_5RHqZ4Lly.1qtZFN4OtKYuAQW",
+      "sourceUrl": "/api/v1/animation-library/MOk.qT_5RHqZ4Lly.1qtZFN4OtKYuAQW/leaves.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "leaves_orange": {
+      "name": "leaves_orange",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "11HIu.1FB3X_5Wbev..y95414SX1jAcB",
+      "sourceUrl": "/api/v1/animation-library/11HIu.1FB3X_5Wbev..y95414SX1jAcB/leaves_orange.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "leaves_orange_transparent": {
+      "name": "leaves_orange_transparent",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "gSu70vdrUs6txbpZlMYk2C8Y5A04PxTZ",
+      "sourceUrl": "/api/v1/animation-library/gSu70vdrUs6txbpZlMYk2C8Y5A04PxTZ/leaves_orange_transparent.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "leaves_transparent": {
+      "name": "leaves_transparent",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "hehbDFqOghvHtrj3rnNbeFmB30NvkyiF",
+      "sourceUrl": "/api/v1/animation-library/hehbDFqOghvHtrj3rnNbeFmB30NvkyiF/leaves_transparent.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "lifes": {
       "name": "lifes",
       "aliases": [
@@ -1499,46 +2711,346 @@
         "y": 71
       }
     },
-    "mushroom_brown": {
-      "name": "mushroom_brown",
+    "minecart": {
+      "name": "minecart",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
-        "x": 81,
-        "y": 85
+        "x": 128,
+        "y": 128
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
-      "version": "gKcyrDxQ5fsV01A8w0A5PfcC7EIVzs8m",
-      "sourceUrl": "/api/v1/animation-library/gKcyrDxQ5fsV01A8w0A5PfcC7EIVzs8m/mushroom_brown.png",
+      "version": "VdMpguY6.wZ1JVMPxzeTrTZUTszwGmTJ",
+      "sourceUrl": "/api/v1/animation-library/VdMpguY6.wZ1JVMPxzeTrTZUTszwGmTJ/minecart.png",
       "sourceSize": {
-        "x": 81,
-        "y": 85
+        "x": 128,
+        "y": 128
+      }
+    },
+    "mushroom_brown": {
+      "name": "mushroom_brown",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "m3YeNJzT7QPTkXPLOuhMY3cmnj5CmxzF",
+      "sourceUrl": "/api/v1/animation-library/m3YeNJzT7QPTkXPLOuhMY3cmnj5CmxzF/mushroom_brown.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "mushroom_red": {
       "name": "mushroom_red",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
-        "x": 81,
-        "y": 99
+        "x": 128,
+        "y": 128
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
-      "version": "cBZ__A5yFN.P0fPRyNbN_r.It8IMYrze",
-      "sourceUrl": "/api/v1/animation-library/cBZ__A5yFN.P0fPRyNbN_r.It8IMYrze/mushroom_red.png",
+      "version": "WAXClcG1wdIYHyMh9FmNpmh1_cG5gQYr",
+      "sourceUrl": "/api/v1/animation-library/WAXClcG1wdIYHyMh9FmNpmh1_cG5gQYr/mushroom_red.png",
       "sourceSize": {
-        "x": 81,
-        "y": 99
+        "x": 128,
+        "y": 128
+      }
+    },
+    "mushroom_tan": {
+      "name": "mushroom_tan",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "6dpHZjBXUhhb9Rt0Q66MyU5mpFRZp8hG",
+      "sourceUrl": "/api/v1/animation-library/6dpHZjBXUhhb9Rt0Q66MyU5mpFRZp8hG/mushroom_tan.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_coal": {
+      "name": "ore_coal",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "HdVcf5FTdKWUK4sIRNrLVHldGn8ZrTTX",
+      "sourceUrl": "/api/v1/animation-library/HdVcf5FTdKWUK4sIRNrLVHldGn8ZrTTX/ore_coal.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_diamond": {
+      "name": "ore_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fuISHiqbR7WY3H.k0_tIJ83NzUCZoAZb",
+      "sourceUrl": "/api/v1/animation-library/fuISHiqbR7WY3H.k0_tIJ83NzUCZoAZb/ore_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_emerald": {
+      "name": "ore_emerald",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "DzlxcjonPSUo5xJqRN13SjrJmip2APYw",
+      "sourceUrl": "/api/v1/animation-library/DzlxcjonPSUo5xJqRN13SjrJmip2APYw/ore_emerald.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_gold": {
+      "name": "ore_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "8eFSM9MgqHIpOoJS1ZktwS8zwJdNeVIi",
+      "sourceUrl": "/api/v1/animation-library/8eFSM9MgqHIpOoJS1ZktwS8zwJdNeVIi/ore_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_iron": {
+      "name": "ore_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "XOKIt_UMV_hJLjzLxniAnFuJk8XqbklE",
+      "sourceUrl": "/api/v1/animation-library/XOKIt_UMV_hJLjzLxniAnFuJk8XqbklE/ore_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_ironAlt": {
+      "name": "ore_ironAlt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "HOpD4DP34p_1PrmKNSHNkHtF._1.uM9S",
+      "sourceUrl": "/api/v1/animation-library/HOpD4DP34p_1PrmKNSHNkHtF._1.uM9S/ore_ironAlt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_ruby": {
+      "name": "ore_ruby",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "WIKuw7dZGXSbRjfCgenMGItyr5sJfk9J",
+      "sourceUrl": "/api/v1/animation-library/WIKuw7dZGXSbRjfCgenMGItyr5sJfk9J/ore_ruby.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_silver": {
+      "name": "ore_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "pnr7o0unNPVKkR6zQBHEziae4nvjqLoz",
+      "sourceUrl": "/api/v1/animation-library/pnr7o0unNPVKkR6zQBHEziae4nvjqLoz/ore_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "oven": {
+      "name": "oven",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "n9J73abFbC6QyYqUxpGleXdquUrO4MCJ",
+      "sourceUrl": "/api/v1/animation-library/n9J73abFbC6QyYqUxpGleXdquUrO4MCJ/oven.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_bronze": {
+      "name": "pick_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "UnI4yrr1Kas6RNnDhjSgJMChuLEA4qze",
+      "sourceUrl": "/api/v1/animation-library/UnI4yrr1Kas6RNnDhjSgJMChuLEA4qze/pick_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_diamond": {
+      "name": "pick_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "LmKPfZd_03LF0uZorsX_NrWbubIy_TxK",
+      "sourceUrl": "/api/v1/animation-library/LmKPfZd_03LF0uZorsX_NrWbubIy_TxK/pick_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_gold": {
+      "name": "pick_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "SRuiblUQRVmypp36jomswM155nUsRLLj",
+      "sourceUrl": "/api/v1/animation-library/SRuiblUQRVmypp36jomswM155nUsRLLj/pick_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_iron": {
+      "name": "pick_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "6oDBdANSa.HXxZnjmVXNSH_F.3A7ZvOq",
+      "sourceUrl": "/api/v1/animation-library/6oDBdANSa.HXxZnjmVXNSH_F.3A7ZvOq/pick_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_silver": {
+      "name": "pick_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "k0K5_f6jrf10o6jAEviBkHIWwb.PQg6z",
+      "sourceUrl": "/api/v1/animation-library/k0K5_f6jrf10o6jAEviBkHIWwb.PQg6z/pick_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "platform": {
@@ -1700,6 +3212,272 @@
         "y": 70
       }
     },
+    "redsand": {
+      "name": "redsand",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "OQLx5BCATfbxRR9QfxYju6RBaV9y7TGD",
+      "sourceUrl": "/api/v1/animation-library/OQLx5BCATfbxRR9QfxYju6RBaV9y7TGD/redsand.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "redstone": {
+      "name": "redstone",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "w62zIpAIFBu_Cb38PC0HPNc11kTzQYiS",
+      "sourceUrl": "/api/v1/animation-library/w62zIpAIFBu_Cb38PC0HPNc11kTzQYiS/redstone.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "redstone_emerald": {
+      "name": "redstone_emerald",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "8v_mV3AVTubWoPqfw4XpKwJPMXI5frVu",
+      "sourceUrl": "/api/v1/animation-library/8v_mV3AVTubWoPqfw4XpKwJPMXI5frVu/redstone_emerald.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "redstone_emerald_alt": {
+      "name": "redstone_emerald_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "EISL3VHe7V.fLMm1WiBI5iQUsYM9t8Jr",
+      "sourceUrl": "/api/v1/animation-library/EISL3VHe7V.fLMm1WiBI5iQUsYM9t8Jr/redstone_emerald_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "redstone_sand": {
+      "name": "redstone_sand",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "cUgDU1z6kL0ZU6k7lqoYoIZJlgZg6l3S",
+      "sourceUrl": "/api/v1/animation-library/cUgDU1z6kL0ZU6k7lqoYoIZJlgZg6l3S/redstone_sand.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "rock": {
+      "name": "rock",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "8kiC3SGFPNBDW.98UTXOHdLncmkuxjCG",
+      "sourceUrl": "/api/v1/animation-library/8kiC3SGFPNBDW.98UTXOHdLncmkuxjCG/rock.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "rock_moss": {
+      "name": "rock_moss",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "vIFILvAYmf_AiZBIc.FDLvFXGxeXccld",
+      "sourceUrl": "/api/v1/animation-library/vIFILvAYmf_AiZBIc.FDLvFXGxeXccld/rock_moss.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sand": {
+      "name": "sand",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "pr07RJ8PXleyOLp9NEyWrGoVzWZmKfYi",
+      "sourceUrl": "/api/v1/animation-library/pr07RJ8PXleyOLp9NEyWrGoVzWZmKfYi/sand.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "seed": {
+      "name": "seed",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Y.Ae581MxGmZtH4HVUohocXDLit6At38",
+      "sourceUrl": "/api/v1/animation-library/Y.Ae581MxGmZtH4HVUohocXDLit6At38/seed.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_bronze": {
+      "name": "shovel_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "bWmI1TOx9DyKwij2LtovX6KlPr7aJblD",
+      "sourceUrl": "/api/v1/animation-library/bWmI1TOx9DyKwij2LtovX6KlPr7aJblD/shovel_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_diamond": {
+      "name": "shovel_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "rV1Fe3gTJWr0B95FzMKbeN.By5FF_Cny",
+      "sourceUrl": "/api/v1/animation-library/rV1Fe3gTJWr0B95FzMKbeN.By5FF_Cny/shovel_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_gold": {
+      "name": "shovel_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "bm.TlaUJlCrf.crZjVzh0_3w7nmQebP3",
+      "sourceUrl": "/api/v1/animation-library/bm.TlaUJlCrf.crZjVzh0_3w7nmQebP3/shovel_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_iron": {
+      "name": "shovel_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "jPzlqu2KNXArQDhEQG_T.c.6yT_oHAEc",
+      "sourceUrl": "/api/v1/animation-library/jPzlqu2KNXArQDhEQG_T.c.6yT_oHAEc/shovel_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_silver": {
+      "name": "shovel_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "QPNZ59d6X.DhYSH8XGvHPvdxM0B6x.Kr",
+      "sourceUrl": "/api/v1/animation-library/QPNZ59d6X.DhYSH8XGvHPvdxM0B6x.Kr/shovel_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "silver_1": {
       "name": "silver_1",
       "aliases": [
@@ -1778,6 +3556,25 @@
       "sourceSize": {
         "x": 14,
         "y": 84
+      }
+    },
+    "snow": {
+      "name": "snow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "tIbviUFwVFoSMfwMv9SiT00rtDNDBGE1",
+      "sourceUrl": "/api/v1/animation-library/tIbviUFwVFoSMfwMv9SiT00rtDNDBGE1/snow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "spikeBall1": {
@@ -2084,6 +3881,348 @@
         "y": 110
       }
     },
+    "stew": {
+      "name": "stew",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": ".Gvd2fYyxezPpvnuiz40ASnk8wgZLGvD",
+      "sourceUrl": "/api/v1/animation-library/.Gvd2fYyxezPpvnuiz40ASnk8wgZLGvD/stew.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone": {
+      "name": "stone",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "A6w5OUKolJX.2sPA8QWxCDJ0572ohnRd",
+      "sourceUrl": "/api/v1/animation-library/A6w5OUKolJX.2sPA8QWxCDJ0572ohnRd/stone.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_browniron": {
+      "name": "stone_browniron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "IZB1en0fuQujGly0q14xkGT_PEmwi5hm",
+      "sourceUrl": "/api/v1/animation-library/IZB1en0fuQujGly0q14xkGT_PEmwi5hm/stone_browniron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_browniron_alt": {
+      "name": "stone_browniron_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "4XVTSYLZkDeQnpA8AxrUgKttBAuSBegj",
+      "sourceUrl": "/api/v1/animation-library/4XVTSYLZkDeQnpA8AxrUgKttBAuSBegj/stone_browniron_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_coal": {
+      "name": "stone_coal",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "1sqmdGvUrlgJQYb8kHj_eoFFkUelErRx",
+      "sourceUrl": "/api/v1/animation-library/1sqmdGvUrlgJQYb8kHj_eoFFkUelErRx/stone_coal.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_coal_alt": {
+      "name": "stone_coal_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "24BisRgB5TLIxaVRRMZiPav8xm7gTuAn",
+      "sourceUrl": "/api/v1/animation-library/24BisRgB5TLIxaVRRMZiPav8xm7gTuAn/stone_coal_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_diamond": {
+      "name": "stone_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "swhB9pe5ov2R09dCYvxSjh8rtr6JckvK",
+      "sourceUrl": "/api/v1/animation-library/swhB9pe5ov2R09dCYvxSjh8rtr6JckvK/stone_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_diamond_alt": {
+      "name": "stone_diamond_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "7EZ1uRrjc4skrozUmnJREEhkEBvFbAWl",
+      "sourceUrl": "/api/v1/animation-library/7EZ1uRrjc4skrozUmnJREEhkEBvFbAWl/stone_diamond_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_dirt": {
+      "name": "stone_dirt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "lalfdIX0ZLFpMjXYeCWshacOaqGN0goo",
+      "sourceUrl": "/api/v1/animation-library/lalfdIX0ZLFpMjXYeCWshacOaqGN0goo/stone_dirt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_gold": {
+      "name": "stone_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Uukg1bCXwS9tByQJ83BIG1aDj.YVG7R5",
+      "sourceUrl": "/api/v1/animation-library/Uukg1bCXwS9tByQJ83BIG1aDj.YVG7R5/stone_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_gold_alt": {
+      "name": "stone_gold_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "mQwf_QrCP2u9L6GYqOGAx8En2WjG5V3B",
+      "sourceUrl": "/api/v1/animation-library/mQwf_QrCP2u9L6GYqOGAx8En2WjG5V3B/stone_gold_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_grass": {
+      "name": "stone_grass",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "PdfquNeAnMRaBiCdK_XkCsrWAHVnhDoS",
+      "sourceUrl": "/api/v1/animation-library/PdfquNeAnMRaBiCdK_XkCsrWAHVnhDoS/stone_grass.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_iron": {
+      "name": "stone_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "9sbw_n3lNdjvIOEsJBoLOnLTaSvkHdMz",
+      "sourceUrl": "/api/v1/animation-library/9sbw_n3lNdjvIOEsJBoLOnLTaSvkHdMz/stone_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_iron_alt": {
+      "name": "stone_iron_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "IzCk60DaFTMqrqlFsfgjO1UYyRbm6A85",
+      "sourceUrl": "/api/v1/animation-library/IzCk60DaFTMqrqlFsfgjO1UYyRbm6A85/stone_iron_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_sand": {
+      "name": "stone_sand",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "oeTR9x_A62A8CpjTYthu.DQ9SSFznLjW",
+      "sourceUrl": "/api/v1/animation-library/oeTR9x_A62A8CpjTYthu.DQ9SSFznLjW/stone_sand.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_silver": {
+      "name": "stone_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "HjWv2d1QjT9aDMF1sJl_.qfMlDvUkysv",
+      "sourceUrl": "/api/v1/animation-library/HjWv2d1QjT9aDMF1sJl_.qfMlDvUkysv/stone_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_silver_alt": {
+      "name": "stone_silver_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "CycwSTI8OSIT6tZcJjkIA8CuGS8nSqCn",
+      "sourceUrl": "/api/v1/animation-library/CycwSTI8OSIT6tZcJjkIA8CuGS8nSqCn/stone_silver_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "stone_snow": {
+      "name": "stone_snow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "kf78dovNgOR7Fl0G2R1DdbmWi_3vriRW",
+      "sourceUrl": "/api/v1/animation-library/kf78dovNgOR7Fl0G2R1DdbmWi_3vriRW/stone_snow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "sun1": {
       "name": "sun1",
       "aliases": [
@@ -2122,6 +4261,424 @@
       "sourceSize": {
         "x": 148,
         "y": 142
+      }
+    },
+    "sword_bronze": {
+      "name": "sword_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "TiLowm5T4tThkeilgLpQznnO0eRNLHrH",
+      "sourceUrl": "/api/v1/animation-library/TiLowm5T4tThkeilgLpQznnO0eRNLHrH/sword_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_diamond": {
+      "name": "sword_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "mq9LgNXlgmDduTcWgQuSppZAL_8uhgCI",
+      "sourceUrl": "/api/v1/animation-library/mq9LgNXlgmDduTcWgQuSppZAL_8uhgCI/sword_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_gold": {
+      "name": "sword_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "d.aAXwix28BcBq4GbYWcQpoanHXuU2yc",
+      "sourceUrl": "/api/v1/animation-library/d.aAXwix28BcBq4GbYWcQpoanHXuU2yc/sword_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_iron": {
+      "name": "sword_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": ".qi9arsPsvUxdpWjWa78zS2HoqVH_h5k",
+      "sourceUrl": "/api/v1/animation-library/.qi9arsPsvUxdpWjWa78zS2HoqVH_h5k/sword_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_silver": {
+      "name": "sword_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "2EJ79j06lb9chtUWyULVOukOVZXiQtpM",
+      "sourceUrl": "/api/v1/animation-library/2EJ79j06lb9chtUWyULVOukOVZXiQtpM/sword_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "table": {
+      "name": "table",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "QhO_i0Y2kGB9sF4Hry3I1FoEoIhv7jRo",
+      "sourceUrl": "/api/v1/animation-library/QhO_i0Y2kGB9sF4Hry3I1FoEoIhv7jRo/table.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "track_corner": {
+      "name": "track_corner",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "G0bBr8egPtz0GkZqmtUT5mHsaXbbs4HK",
+      "sourceUrl": "/api/v1/animation-library/G0bBr8egPtz0GkZqmtUT5mHsaXbbs4HK/track_corner.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "track_corner_alt": {
+      "name": "track_corner_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "AimknRX8iVamenOqzm0X9SIuUr0xKbIM",
+      "sourceUrl": "/api/v1/animation-library/AimknRX8iVamenOqzm0X9SIuUr0xKbIM/track_corner_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "track_straight": {
+      "name": "track_straight",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "MY7gFo7lA3pcXn6BCbo5VNLBTMov650E",
+      "sourceUrl": "/api/v1/animation-library/MY7gFo7lA3pcXn6BCbo5VNLBTMov650E/track_straight.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "track_straight_alt": {
+      "name": "track_straight_alt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "L2dsT7FTTpP3FPaWct8Ek1GYxttvhnbm",
+      "sourceUrl": "/api/v1/animation-library/L2dsT7FTTpP3FPaWct8Ek1GYxttvhnbm/track_straight_alt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "trunk_bottom": {
+      "name": "trunk_bottom",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "WuACKPTR5GzJ3vo2anQ_eLHGzk6G.y3y",
+      "sourceUrl": "/api/v1/animation-library/WuACKPTR5GzJ3vo2anQ_eLHGzk6G.y3y/trunk_bottom.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "trunk_mid": {
+      "name": "trunk_mid",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "CKqyA.rYx6yAORjIUu_1O8d9qummoslR",
+      "sourceUrl": "/api/v1/animation-library/CKqyA.rYx6yAORjIUu_1O8d9qummoslR/trunk_mid.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "trunk_side": {
+      "name": "trunk_side",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "hi0N9tWptTywGUqak7oF2z9fOZkAVe6c",
+      "sourceUrl": "/api/v1/animation-library/hi0N9tWptTywGUqak7oF2z9fOZkAVe6c/trunk_side.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "trunk_top": {
+      "name": "trunk_top",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "xuGOZsq.HadDzu5bLKc6jWHWfYqlF_lC",
+      "sourceUrl": "/api/v1/animation-library/xuGOZsq.HadDzu5bLKc6jWHWfYqlF_lC/trunk_top.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "trunk_white_side": {
+      "name": "trunk_white_side",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "jda_nAC4Ju8WnOlUdIAj1Xq.hkI7Sawm",
+      "sourceUrl": "/api/v1/animation-library/jda_nAC4Ju8WnOlUdIAj1Xq.hkI7Sawm/trunk_white_side.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "trunk_white_top": {
+      "name": "trunk_white_top",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "3Q.swHEUriTLb3NxZ__eG6Fmt9_TIBDn",
+      "sourceUrl": "/api/v1/animation-library/3Q.swHEUriTLb3NxZ__eG6Fmt9_TIBDn/trunk_white_top.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "water": {
+      "name": "water",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "rWwRxT84z_CSfd_8Y.9M58jpGWEbhptT",
+      "sourceUrl": "/api/v1/animation-library/rWwRxT84z_CSfd_8Y.9M58jpGWEbhptT/water.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "wheat": {
+      "name": "wheat",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "kkSRI5Z1bDl.kp5g5OSJR7mUxc2QdGju",
+      "sourceUrl": "/api/v1/animation-library/kkSRI5Z1bDl.kp5g5OSJR7mUxc2QdGju/wheat.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "wheat_stage1": {
+      "name": "wheat_stage1",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "9yo196cJKE0qMU5S7sVs7qbjJ9QjuXVZ",
+      "sourceUrl": "/api/v1/animation-library/9yo196cJKE0qMU5S7sVs7qbjJ9QjuXVZ/wheat_stage1.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "wheat_stage2": {
+      "name": "wheat_stage2",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "576wb1J2Tv67WGiCMeJeIDXjdSFbz487",
+      "sourceUrl": "/api/v1/animation-library/576wb1J2Tv67WGiCMeJeIDXjdSFbz487/wheat_stage2.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "wheat_stage3": {
+      "name": "wheat_stage3",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "alToToICwK0vwo83piNrvrBFI0uVKLKt",
+      "sourceUrl": "/api/v1/animation-library/alToToICwK0vwo83piNrvrBFI0uVKLKt/wheat_stage3.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "wheat_stage4": {
+      "name": "wheat_stage4",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "3QkZ.ZOzxXmHkA_qq9fMJkFXGVdU.VHA",
+      "sourceUrl": "/api/v1/animation-library/3QkZ.ZOzxXmHkA_qq9fMJkFXGVdU.VHA/wheat_stage4.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "wingMan1": {
@@ -2263,9 +4820,53 @@
         "x": 85,
         "y": 74
       }
+    },
+    "wood": {
+      "name": "wood",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "27lN7Tl8r52n2SWakHuOFEEnjWKCQZ2f",
+      "sourceUrl": "/api/v1/animation-library/27lN7Tl8r52n2SWakHuOFEEnjWKCQZ2f/wood.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "wood_red": {
+      "name": "wood_red",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "iWoPjcGIoUgKXuIpcOBCQsLt.B0ILdnZ",
+      "sourceUrl": "/api/v1/animation-library/iWoPjcGIoUgKXuIpcOBCQsLt.B0ILdnZ/wood_red.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
     }
   },
   "aliases": {
+    "apple": [
+      "apple"
+    ],
+    "arrow": [
+      "arrow"
+    ],
     "asterisk_circle": [
       "asterisk_circle"
     ],
@@ -2288,8 +4889,41 @@
     "asterisk_stretching": [
       "asterisk_stretching"
     ],
+    "axe_bronze": [
+      "axe_bronze"
+    ],
+    "axe_diamond": [
+      "axe_diamond"
+    ],
+    "axe_gold": [
+      "axe_gold"
+    ],
+    "axe_iron": [
+      "axe_iron"
+    ],
+    "axe_silver": [
+      "axe_silver"
+    ],
+    "boat": [
+      "boat"
+    ],
+    "bow": [
+      "bow"
+    ],
+    "bowArrow": [
+      "bowArrow"
+    ],
+    "bowl": [
+      "bowl"
+    ],
     "box": [
       "box"
+    ],
+    "brick_grey": [
+      "brick_grey"
+    ],
+    "brick_red": [
+      "brick_red"
     ],
     "bronze_1": [
       "bronze_1"
@@ -2330,8 +4964,6 @@
       "gold_2",
       "gold_3",
       "gold_4",
-      "grass1",
-      "grass2",
       "grass_brown1",
       "grass_brown2",
       "ground_cake",
@@ -2361,8 +4993,6 @@
       "jetpack",
       "jetpack_item",
       "lifes",
-      "mushroom_brown",
-      "mushroom_red",
       "portal_orange",
       "portal_yellow",
       "powerup_bubble",
@@ -2516,8 +5146,6 @@
     ],
     "environment": [
       "cactus",
-      "grass1",
-      "grass2",
       "grass_brown1",
       "grass_brown2",
       "ground_cake",
@@ -2544,8 +5172,6 @@
       "ground_wood_broken",
       "ground_wood_small",
       "ground_wood_small_broken",
-      "mushroom_brown",
-      "mushroom_red",
       "spike_bottom",
       "spike_top",
       "spikes_bottom",
@@ -2553,8 +5179,6 @@
     ],
     "scenery": [
       "cactus",
-      "grass1",
-      "grass2",
       "grass_brown1",
       "grass_brown2",
       "ground_cake",
@@ -2581,12 +5205,19 @@
       "ground_wood_broken",
       "ground_wood_small",
       "ground_wood_small_broken",
-      "mushroom_brown",
-      "mushroom_red",
       "spike_bottom",
       "spike_top",
       "spikes_bottom",
       "spikes_top"
+    ],
+    "cactus_inside": [
+      "cactus_inside"
+    ],
+    "cactus_side": [
+      "cactus_side"
+    ],
+    "cactus_top": [
+      "cactus_top"
     ],
     "carrot": [
       "carrot"
@@ -2640,6 +5271,60 @@
     "coin_silver": [
       "coin_silver"
     ],
+    "cotton_blue": [
+      "cotton_blue"
+    ],
+    "cotton_green": [
+      "cotton_green"
+    ],
+    "cotton_red": [
+      "cotton_red"
+    ],
+    "cotton_tan": [
+      "cotton_tan"
+    ],
+    "dirt": [
+      "dirt"
+    ],
+    "dirt_grass": [
+      "dirt_grass"
+    ],
+    "dirt_sand": [
+      "dirt_sand"
+    ],
+    "dirt_snow": [
+      "dirt_snow"
+    ],
+    "fence_stone": [
+      "fence_stone"
+    ],
+    "fence_wood": [
+      "fence_wood"
+    ],
+    "fish": [
+      "fish"
+    ],
+    "fish_cooked": [
+      "fish_cooked"
+    ],
+    "fishingPole": [
+      "fishingPole"
+    ],
+    "flail_bronze": [
+      "flail_bronze"
+    ],
+    "flail_diamond": [
+      "flail_diamond"
+    ],
+    "flail_gold": [
+      "flail_gold"
+    ],
+    "flail_iron": [
+      "flail_iron"
+    ],
+    "flail_silver": [
+      "flail_silver"
+    ],
     "flyMan_fly": [
       "flyMan_fly"
     ],
@@ -2661,6 +5346,12 @@
     "ghost_standing": [
       "ghost_standing"
     ],
+    "glass": [
+      "glass"
+    ],
+    "glass_frame": [
+      "glass_frame"
+    ],
     "gold_1": [
       "gold_1"
     ],
@@ -2679,11 +5370,47 @@
     "grass2": [
       "grass2"
     ],
+    "grass3": [
+      "grass3"
+    ],
+    "grass4": [
+      "grass4"
+    ],
+    "grass_brown": [
+      "grass_brown"
+    ],
     "grass_brown1": [
       "grass_brown1"
     ],
     "grass_brown2": [
       "grass_brown2"
+    ],
+    "grass_tan": [
+      "grass_tan"
+    ],
+    "grass_top": [
+      "grass_top"
+    ],
+    "gravel_dirt": [
+      "gravel_dirt"
+    ],
+    "gravel_stone": [
+      "gravel_stone"
+    ],
+    "greysand": [
+      "greysand"
+    ],
+    "greystone": [
+      "greystone"
+    ],
+    "greystone_ruby": [
+      "greystone_ruby"
+    ],
+    "greystone_ruby_alt": [
+      "greystone_ruby_alt"
+    ],
+    "greystone_sand": [
+      "greystone_sand"
     ],
     "ground_cake": [
       "ground_cake"
@@ -2757,20 +5484,116 @@
     "ground_wood_small_broken": [
       "ground_wood_small_broken"
     ],
+    "hammer_bronze": [
+      "hammer_bronze"
+    ],
+    "hammer_diamond": [
+      "hammer_diamond"
+    ],
+    "hammer_gold": [
+      "hammer_gold"
+    ],
+    "hammer_iron": [
+      "hammer_iron"
+    ],
+    "hammer_silver": [
+      "hammer_silver"
+    ],
+    "hoe_bronze": [
+      "hoe_bronze"
+    ],
+    "hoe_diamond": [
+      "hoe_diamond"
+    ],
+    "hoe_gold": [
+      "hoe_gold"
+    ],
+    "hoe_iron": [
+      "hoe_iron"
+    ],
+    "hoe_silver": [
+      "hoe_silver"
+    ],
+    "ice": [
+      "ice"
+    ],
     "jetpack": [
       "jetpack"
     ],
     "jetpack_item": [
       "jetpack_item"
     ],
+    "lava": [
+      "lava"
+    ],
+    "leaves": [
+      "leaves"
+    ],
+    "leaves_orange": [
+      "leaves_orange"
+    ],
+    "leaves_orange_transparent": [
+      "leaves_orange_transparent"
+    ],
+    "leaves_transparent": [
+      "leaves_transparent"
+    ],
     "lifes": [
       "lifes"
+    ],
+    "minecart": [
+      "minecart"
     ],
     "mushroom_brown": [
       "mushroom_brown"
     ],
     "mushroom_red": [
       "mushroom_red"
+    ],
+    "mushroom_tan": [
+      "mushroom_tan"
+    ],
+    "ore_coal": [
+      "ore_coal"
+    ],
+    "ore_diamond": [
+      "ore_diamond"
+    ],
+    "ore_emerald": [
+      "ore_emerald"
+    ],
+    "ore_gold": [
+      "ore_gold"
+    ],
+    "ore_iron": [
+      "ore_iron"
+    ],
+    "ore_ironAlt": [
+      "ore_ironAlt"
+    ],
+    "ore_ruby": [
+      "ore_ruby"
+    ],
+    "ore_silver": [
+      "ore_silver"
+    ],
+    "oven": [
+      "oven"
+    ],
+    "pick_bronze": [
+      "pick_bronze"
+    ],
+    "pick_diamond": [
+      "pick_diamond"
+    ],
+    "pick_gold": [
+      "pick_gold"
+    ],
+    "pick_iron": [
+      "pick_iron"
+    ],
+    "pick_silver": [
+      "pick_silver"
     ],
     "platform": [
       "platform"
@@ -2796,6 +5619,48 @@
     "powerup_wings": [
       "powerup_wings"
     ],
+    "redsand": [
+      "redsand"
+    ],
+    "redstone": [
+      "redstone"
+    ],
+    "redstone_emerald": [
+      "redstone_emerald"
+    ],
+    "redstone_emerald_alt": [
+      "redstone_emerald_alt"
+    ],
+    "redstone_sand": [
+      "redstone_sand"
+    ],
+    "rock": [
+      "rock"
+    ],
+    "rock_moss": [
+      "rock_moss"
+    ],
+    "sand": [
+      "sand"
+    ],
+    "seed": [
+      "seed"
+    ],
+    "shovel_bronze": [
+      "shovel_bronze"
+    ],
+    "shovel_diamond": [
+      "shovel_diamond"
+    ],
+    "shovel_gold": [
+      "shovel_gold"
+    ],
+    "shovel_iron": [
+      "shovel_iron"
+    ],
+    "shovel_silver": [
+      "shovel_silver"
+    ],
     "silver_1": [
       "silver_1"
     ],
@@ -2807,6 +5672,9 @@
     ],
     "silver_4": [
       "silver_4"
+    ],
+    "snow": [
+      "snow"
     ],
     "spikeBall1": [
       "spikeBall1"
@@ -2853,11 +5721,131 @@
     "spring_out": [
       "spring_out"
     ],
+    "stew": [
+      "stew"
+    ],
+    "stone": [
+      "stone"
+    ],
+    "stone_browniron": [
+      "stone_browniron"
+    ],
+    "stone_browniron_alt": [
+      "stone_browniron_alt"
+    ],
+    "stone_coal": [
+      "stone_coal"
+    ],
+    "stone_coal_alt": [
+      "stone_coal_alt"
+    ],
+    "stone_diamond": [
+      "stone_diamond"
+    ],
+    "stone_diamond_alt": [
+      "stone_diamond_alt"
+    ],
+    "stone_dirt": [
+      "stone_dirt"
+    ],
+    "stone_gold": [
+      "stone_gold"
+    ],
+    "stone_gold_alt": [
+      "stone_gold_alt"
+    ],
+    "stone_grass": [
+      "stone_grass"
+    ],
+    "stone_iron": [
+      "stone_iron"
+    ],
+    "stone_iron_alt": [
+      "stone_iron_alt"
+    ],
+    "stone_sand": [
+      "stone_sand"
+    ],
+    "stone_silver": [
+      "stone_silver"
+    ],
+    "stone_silver_alt": [
+      "stone_silver_alt"
+    ],
+    "stone_snow": [
+      "stone_snow"
+    ],
     "sun1": [
       "sun1"
     ],
     "sun2": [
       "sun2"
+    ],
+    "sword_bronze": [
+      "sword_bronze"
+    ],
+    "sword_diamond": [
+      "sword_diamond"
+    ],
+    "sword_gold": [
+      "sword_gold"
+    ],
+    "sword_iron": [
+      "sword_iron"
+    ],
+    "sword_silver": [
+      "sword_silver"
+    ],
+    "table": [
+      "table"
+    ],
+    "track_corner": [
+      "track_corner"
+    ],
+    "track_corner_alt": [
+      "track_corner_alt"
+    ],
+    "track_straight": [
+      "track_straight"
+    ],
+    "track_straight_alt": [
+      "track_straight_alt"
+    ],
+    "trunk_bottom": [
+      "trunk_bottom"
+    ],
+    "trunk_mid": [
+      "trunk_mid"
+    ],
+    "trunk_side": [
+      "trunk_side"
+    ],
+    "trunk_top": [
+      "trunk_top"
+    ],
+    "trunk_white_side": [
+      "trunk_white_side"
+    ],
+    "trunk_white_top": [
+      "trunk_white_top"
+    ],
+    "water": [
+      "water"
+    ],
+    "wheat": [
+      "wheat"
+    ],
+    "wheat_stage1": [
+      "wheat_stage1"
+    ],
+    "wheat_stage2": [
+      "wheat_stage2"
+    ],
+    "wheat_stage3": [
+      "wheat_stage3"
+    ],
+    "wheat_stage4": [
+      "wheat_stage4"
     ],
     "wingMan1": [
       "wingMan1"
@@ -2879,6 +5867,12 @@
     ],
     "wing_right": [
       "wing_right"
+    ],
+    "wood": [
+      "wood"
+    ],
+    "wood_red": [
+      "wood_red"
     ]
   }
 }
