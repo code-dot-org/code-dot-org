@@ -44,80 +44,11 @@ class ManifestBuilder
     # Connect to S3 and get a listing of all objects in the animation library bucket
     bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
     animations_by_name = get_animations_by_name(bucket)
-
     info "Found #{animations_by_name.size} animations."
 
-    # Parallelize metadata construction because some objects will require an
-    # extra S3 request to get version IDs or image dimensions.
+    # Convert the set of objects into a big metadata map
     info "Building animation metadata..."
-    metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
-    animation_metadata_by_name = {}
-    Parallel.map(animations_by_name.keys, finish: lambda do |name, _, result|
-      # This lambda runs synchronously after each entry is done processing - it's
-      # used to collect up results and warnings to the original process/thread.
-      if result.is_a? Hash
-        animation_metadata_by_name[name] = result
-      else
-        @warnings.push result
-      end
-      metadata_progress_bar.increment unless metadata_progress_bar.nil?
-    end) do |name|
-      # This is the parallel block.  This block should return a string to
-      # generate a warning and skip the animation, and a metadata Hash in
-      # the success case.
-      objects = animations_by_name[name]
-
-      # Drop this animation if it is missing its JSON or PNG components
-      if objects['json'].nil?
-        next "Animation #{name} does not have a JSON file and was skipped."
-      elsif objects['png'].nil?
-        next "Animation #{name} does not have a PNG file and was skipped."
-      end
-
-      # Actually download the JSON from S3
-      begin
-        json_response = objects['json'].get
-        metadata = JSON.parse(json_response.body.read)
-      rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json from S3:
-#{service_error}
-The animation has been skipped.
-        WARN
-      rescue JSON::JSONError => json_error
-        next <<-WARN
-There was an error parsing #{name}.json:
-#{json_error}
-The animation ha been skipped.
-        WARN
-      end
-
-      # If no frameCount information is present, it's probably a single frame
-      metadata['frameCount'] ||= 1
-
-      # TODO: Validate metadata, ensure it has everything it needs
-      # Record target version in the metadata, so environments (and projects)
-      # consistently reference the version they originally imported.
-      metadata['version'] = objects['png'].object.version_id
-
-      # Generate appropriate sourceUrl pointing to the animation library API
-      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
-
-      # Populate sourceSize if not already present
-      unless metadata.key?('sourceSize')
-        png_body = objects['png'].object.get.body.read
-        metadata['sourceSize'] = PngUtils.dimensions_from_png(png_body)
-      end
-
-      verbose <<-EOS
-#{bold name} @ #{metadata['version']}
-#{JSON.pretty_generate metadata}
-      EOS
-
-      metadata
-    end
-    metadata_progress_bar.finish unless metadata_progress_bar.nil?
-
+    animation_metadata_by_name = build_animation_metadata(animations_by_name)
     info "Metadata built for #{animation_metadata_by_name.size} animations."
 
     info "Building alias map..."
@@ -194,6 +125,82 @@ The animation ha been skipped.
       end
     end
     animations_by_name
+  end
+
+  # Given a map of S3 objects for animations, build up an animation
+  # metadata map.
+  def build_animation_metadata(animations_by_name)
+    metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
+    animation_metadata_by_name = {}
+
+    # Parallelize metadata construction because some objects will require an
+    # extra S3 request to get version IDs or image dimensions.
+    Parallel.map(animations_by_name.keys, finish: lambda do |name, _, result|
+      # This lambda runs synchronously after each entry is done processing - it's
+      # used to collect up results and warnings to the original process/thread.
+      if result.is_a? Hash
+        animation_metadata_by_name[name] = result
+      else
+        @warnings.push result
+      end
+      metadata_progress_bar.increment unless metadata_progress_bar.nil?
+    end) do |name|
+      # This is the parallel block.  This block should return a string to
+      # generate a warning and skip the animation, and a metadata Hash in
+      # the success case.
+      objects = animations_by_name[name]
+
+      # Drop this animation if it is missing its JSON or PNG components
+      if objects['json'].nil?
+        next "Animation #{name} does not have a JSON file and was skipped."
+      elsif objects['png'].nil?
+        next "Animation #{name} does not have a PNG file and was skipped."
+      end
+
+      # Actually download the JSON from S3
+      begin
+        json_response = objects['json'].get
+        metadata = JSON.parse(json_response.body.read)
+      rescue Aws::Errors::ServiceError => service_error
+        next <<-WARN
+There was an error retrieving #{name}.json from S3:
+#{service_error}
+The animation has been skipped.
+        WARN
+      rescue JSON::JSONError => json_error
+        next <<-WARN
+There was an error parsing #{name}.json:
+#{json_error}
+The animation ha been skipped.
+        WARN
+      end
+
+      # If no frameCount information is present, it's probably a single frame
+      metadata['frameCount'] ||= 1
+
+      # TODO: Validate metadata, ensure it has everything it needs
+      # Record target version in the metadata, so environments (and projects)
+      # consistently reference the version they originally imported.
+      metadata['version'] = objects['png'].object.version_id
+
+      # Generate appropriate sourceUrl pointing to the animation library API
+      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
+
+      # Populate sourceSize if not already present
+      unless metadata.key?('sourceSize')
+        png_body = objects['png'].object.get.body.read
+        metadata['sourceSize'] = PngUtils.dimensions_from_png(png_body)
+      end
+
+      verbose <<-EOS
+#{bold name} @ #{metadata['version']}
+#{JSON.pretty_generate metadata}
+      EOS
+
+      metadata
+    end
+    metadata_progress_bar.finish unless metadata_progress_bar.nil?
+    animation_metadata_by_name
   end
 
   def verbose(s)
