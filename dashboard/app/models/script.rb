@@ -228,21 +228,6 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Returns a cached map from level id to LevelConceptDifficulty, or nil if in
-  # level_builder mode which disables caching. The value associated with a level
-  # id is nil if it has no LevelConceptDifficulty.
-  def self.level_concept_difficulty_cache
-    return nil unless self.should_cache?
-    @@level_concept_difficulty_cache ||= {}.tap do |cache|
-      level_cache.each do |level_identifier, level|
-        next unless level_identifier.is_a? Integer
-        if level.try(:level_concept_difficulty)
-          cache[level_identifier] = level.level_concept_difficulty
-        end
-      end
-    end
-  end
-
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
   # the script and we're not in level mode (for example because the script was created after
@@ -281,20 +266,6 @@ class Script < ActiveRecord::Base
     @@level_cache[level.id] = level if level && self.should_cache?
     @@level_cache[level.name] = level if level && self.should_cache?
     level
-  end
-
-  # Find the LevelConceptDifficulty for the given level from the cache, unless
-  # the level build mode is enabled in which case it is always fetched from the
-  # database.
-  # @param level_id [Integer] the level to fetch the LevelConceptDifficulty of
-  # return [LevelConceptDifficulty | nil] the associated LevelConceptDifficulty
-  def self.cache_find_level_concept_difficulty(level_id)
-     # We intentionally return nil if not found in the cache.
-    return level_concept_difficulty_cache[level_id] if self.should_cache?
-
-    # If we aren't using the cache, fetch the LevelConceptDifficulty from the
-    # database.
-    LevelConceptDifficulty.find_by_level_id(level_id)
   end
 
   def cached
