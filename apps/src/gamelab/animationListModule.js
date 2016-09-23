@@ -164,18 +164,13 @@ function animationPropsReducer(state, action) {
 }
 
 /**
- * Used to order numbers for sort()
+ * Given a name and animationList, determine if the name is unique
+ * @param {string} name
+ * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  */
-function compareNumbers(a, b) {
-  return a - b;
-}
-
-/**
- * Given a name and an animationList, determine if the name is unique.
- */
-export function isNameUnique(name, animationList) {
-  for (let animation in animationList) {
-    if (animationList[animation].name === name) {
+export function isNameUnique(name, animationListProps) {
+  for (let animation in animationListProps) {
+    if (animationListProps[animation].name === name) {
       return false;
     }
   }
@@ -184,22 +179,20 @@ export function isNameUnique(name, animationList) {
 
 /**
  * Given a baseName and a animationList, provide a unique name
+ * @param {string} baseName - the original name for the animation (without numbers)
+ * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  */
 function generateAnimationName(baseName, animationList) {
   let unavailableNumbers = [];
+  // Match names with the form baseName_#
+  const re = new RegExp(`^${baseName}_(\\d+)$`);
   for (let animation in animationList) {
-    let existingName = animationList[animation].name;
-    let lastUnderscore = existingName.lastIndexOf("_");
-    let lastDigits = existingName.substring(lastUnderscore + 1);
-    let existingBaseName = existingName;
-    if (/^\+?(0|[1-9]\d*)$/.test(lastDigits)) {
-      existingBaseName = existingName.substring(0, lastUnderscore);
-      if (existingBaseName === baseName) {
-        unavailableNumbers.push(parseInt(lastDigits));
-      }
+    let match = re.exec(animationList[animation].name);
+    if (match !== null) {
+      unavailableNumbers.push(parseInt(match[1]));
     }
   }
-  unavailableNumbers.sort(compareNumbers);
+  unavailableNumbers.sort((a, b) => a - b);
   let availableNumber = 1;
   for (let i = 0; i < unavailableNumbers.length; i++) {
     if (availableNumber === unavailableNumbers[i]) {

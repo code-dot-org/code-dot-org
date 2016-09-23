@@ -94,10 +94,16 @@ const AnimationListItem = React.createClass({
     style: React.PropTypes.object,
   },
 
+  getAnimationProps(props) {
+    const {animationList, animationKey} = props;
+    return animationList.propsByKey[animationKey];
+  },
+
   getInitialState: function () {
+    const {name, frameDelay} = this.getAnimationProps(this.props);
     return {
-      frameDelay: this.props.animationList.propsByKey[this.props.animationKey].frameDelay,
-      name: this.props.animationList.propsByKey[this.props.animationKey].name,
+      frameDelay: frameDelay,
+      name: name,
       isNameValid: true
     };
   },
@@ -106,14 +112,14 @@ const AnimationListItem = React.createClass({
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
-    this.setState({frameDelay: nextProps.animationList.propsByKey[this.props.animationKey].frameDelay});
+    this.setState({frameDelay: this.getAnimationProps(nextProps).frameDelay});
     if (this.props.isSelected && !nextProps.isSelected) {
-      this.setState({name: this.props.animationList.propsByKey[this.props.animationKey].name, isNameValid: true});
+      this.setState({name: this.getAnimationProps(this.props).name, isNameValid: true});
     }
   },
 
   componentWillMount() {
-    this.setState({frameDelay: this.props.animationList.propsByKey[this.props.animationKey].frameDelay});
+    this.setState({frameDelay: this.getAnimationProps(this.props).frameDelay});
     this.debouncedFrameDelay = _.debounce(() => {
       const latestFrameDelay = this.state.frameDelay;
       this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
@@ -139,13 +145,12 @@ const AnimationListItem = React.createClass({
   },
 
   onNameChange(event) {
+    const {animationKey, animationList, setAnimationName} = this.props;
     const newName = event.target.value;
-    this.setState({name: newName});
-    if (isNameUnique(newName, this.props.animationList.propsByKey)) {
-      this.setState({isNameValid: true});
-      this.props.setAnimationName(this.props.animationKey, newName);
-    } else {
-      this.setState({isNameValid: false});
+    const isNameValid = isNameUnique(newName, animationList.propsByKey);
+    this.setState({name: newName, isNameValid: isNameValid});
+    if (isNameValid) {
+      setAnimationName(animationKey, newName);
     }
   },
 
@@ -208,15 +213,16 @@ const AnimationListItem = React.createClass({
   },
 
   render() {
+    const animationProps = Object.assign({}, this.getAnimationProps(this.props), {frameDelay: this.state.frameDelay});
     const name = this.state.name;
     var animationName;
     if (this.props.isSelected) {
-      let inValidNameStyle = this.state.isNameValid ? {} : {backgroundColor: '#ffcccc'};
+      let invalidNameStyle = this.state.isNameValid ? {} : {backgroundColor: color.lightest_red};
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
             type="text"
-            style={[styles.nameInput, inValidNameStyle]}
+            style={[styles.nameInput, invalidNameStyle]}
             value={name}
             onChange={this.onNameChange}
           />
@@ -239,11 +245,7 @@ const AnimationListItem = React.createClass({
         <div style={arrowStyle}></div>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={
-            Object.assign({},
-            this.props.animationList.propsByKey[this.props.animationKey],
-            {frameDelay: this.state.frameDelay})
-          }
+          animationProps={animationProps}
           isSelected={this.props.isSelected}
         />
         {animationName}
@@ -253,7 +255,7 @@ const AnimationListItem = React.createClass({
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
             onLoopingChanged={this.setAnimationLooping}
-            looping={this.props.animationList.propsByKey[this.props.animationKey].looping}
+            looping={animationProps.looping}
             frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
           />}
       </div>
