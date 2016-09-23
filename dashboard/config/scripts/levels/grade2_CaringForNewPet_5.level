@@ -26,6 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't quite see what you need to do, try saying the steps that your bird will take out loud one-by-one and see if they match the blocks in the workspace.\",\r\n  \"hint_id\": \"grade2_CaringForNewPet_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -42,6 +43,9 @@
         </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>

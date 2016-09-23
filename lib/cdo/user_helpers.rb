@@ -7,29 +7,39 @@ module UserHelpers
   USERNAME_ALLOWED_CHARACTERS = /[a-z0-9\-\_\.]/
 
   def self.generate_username(queryable, name)
-    prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.gsub(' ', '_')
+    prefix = name.downcase.
+      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].
+      squish.
+      tr(' ', '_')
 
     if prefix.empty? || prefix == ''
       prefix = 'coder' + (rand(900000) + 100000).to_s
     end
-
     prefix = "coder_#{prefix}" if prefix.length < 5
 
     return prefix if queryable.where(username: prefix).limit(1).empty?
 
-    similar_users = queryable.where(["username like ?", prefix + '%']).select(:username).to_a
-    similar_usernames = similar_users.map do |user|
-      if user.respond_to?(:username)
-        # AR returns a User instance
-        user.username
-      else
-        # Sequel returns a hash
-        user[:username]
+    # Throw darts to find an appropriate suffix, using it if we hit bullseye.
+    (0..1).each do |exponent|
+      min_index = 10**exponent
+      max_index = 10**(exponent + 1) - 1
+      3.times do |_i|
+        suffix = Random.rand(min_index..max_index)
+        if queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
+          return "#{prefix}#{suffix}"
+        end
       end
     end
 
-    # find the current maximum integer suffix and add 1. Not guaranteed to be the "next" as in not leave holes,
-    # but is guaranteed to be (currently) unique
+    # The darts missed, so revert to using a slow query.
+    similar_users = queryable.where(["username like ?", prefix + '%']).select(:username).to_a
+    similar_usernames = similar_users.map do |user|
+      # ActiveRecord returns a User instance, whereas Sequel returns a hash.
+      user.respond_to?(:username) ? user.username : user[:username]
+    end
+
+    # Increment the current maximum integer suffix. Though it may leave holes,
+    # it is guaranteed to be (currently) unique.
     suffix = similar_usernames.map{|n| n[prefix.length..-1]}.map(&:to_i).max + 1
     return "#{prefix}#{suffix}"
   end

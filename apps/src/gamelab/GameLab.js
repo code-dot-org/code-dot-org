@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var commonMsg = require('@cdo/locale');
-var msg = require('./locale');
+var msg = require('@cdo/gamelab/locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
@@ -90,6 +90,13 @@ var GameLab = function () {
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
+
+  /** Expose for levelbuilder */
+  window.printSerializedAnimationList = () => {
+    this.getSerializedAnimationList(list => {
+      console.log(JSON.stringify(list, null, 2));
+    });
+  };
 };
 
 module.exports = GameLab;

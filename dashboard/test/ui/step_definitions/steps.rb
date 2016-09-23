@@ -25,9 +25,9 @@ def replace_hostname(url)
   end
 
   # Convert http to https
-  url = url.gsub(/^http:\/\//,'https://') unless url.start_with? 'http://localhost'
+  url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org
-  url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
+  url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
 end
 
 # Get the SCSS color constant for a given status.
@@ -648,12 +648,16 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   }
 end
 
-Given(/^I am enrolled in a plc course$/) do
+def enroll_in_plc_course(user_email)
   require_rails_env
-  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  user = User.find_by_email_or_hashed_email(user_email)
   course = Plc::Course.find_by(name: 'All The PLC Things')
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+end
+
+Given(/^I am enrolled in a plc course$/) do
+  enroll_in_plc_course(@users.first[1][:email])
 end
 
 Then(/^I fake completion of the assessment$/) do
@@ -674,6 +678,41 @@ def generate_user(name)
       email: email
   }
   return email, password
+end
+
+And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "Teacher_#{name}"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email])
+
+  steps %Q{
+    Then I am on "http://code.org/teacher-dashboard#/sections"
+    And I wait to see ".jumbotron"
+    And I click selector ".close"
+    And I wait for 3 seconds
+    And I click selector ".btn-white:contains('New section')"
+    Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
+    Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
+    And I click selector ".btn-primary:contains('Save')"
+    And I wait for 3 seconds
+    And I click selector "a:contains('Manage Students')"
+    And I save the section url
+    Then I sign out
+    And I navigate to the section url
+    And I wait to see "#user_name"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "16" option in dropdown "user_age"
+    And I click selector "input[type=submit]"
+    And I wait until I am on "http://studio.code.org/"
+  }
 end
 
 And(/^I create a student named "([^"]*)"$/) do |name|
@@ -708,6 +747,22 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I click selector "#signup-button"
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
+end
+
+And(/^I save the section url$/) do
+  wait_with_short_timeout.until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
+  steps %Q{
+    And I wait to see ".jumbotron"
+  }
+  wait_with_short_timeout.until { "" != @browser.execute_script("return $('.jumbotron a').text().trim()") }
+  @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
+end
+
+And(/^I navigate to the section url$/) do
+  steps %Q{
+    Given I am on "#{@section_url}"
+  }
+  wait_with_short_timeout.until { /^\/join/.match(@browser.execute_script("return location.pathname")) }
 end
 
 # TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
@@ -879,4 +934,21 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   unless ENV['TEST_LOCAL'] == 'true'
     @browser.file_detector = nil
   end
+end
+
+Then /^I scroll our lockable stage into view$/ do
+  wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+end
+
+Then /^I open the stage lock dialog$/ do
+  wait_with_short_timeout.until { @browser.execute_script("return $('.uitest-locksettings').length") > 0 }
+  @browser.execute_script("$('.uitest-locksettings').click()")
+end
+
+Then /^I unlock the stage for students$/ do
+  # allow editing
+  @browser.execute_script("$('.modal-body button').first().click()")
+  # save
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end

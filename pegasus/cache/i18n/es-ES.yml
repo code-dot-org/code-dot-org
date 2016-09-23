@@ -375,6 +375,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comienza hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -684,6 +686,7 @@
   dashboard_action_remove_confirm: "¿Eliminar?"
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Sin evaluaciones
   dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso
@@ -901,9 +904,14 @@
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_message: "<b>6 de enero, 2015</b> - Aprender más allá de una
-    Hora de Code en tu clase. Comienza un nuevo curso de introducción y realiza un
-    seguimiento del progreso del alumno."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -921,6 +929,14 @@
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Aprenda más
   learn_sign_up_description: Regístrate para participar en la Hora de Code durante
     la Semana de Educación en Ciencias de la Computación
@@ -1810,4 +1826,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates

@@ -102,7 +102,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
     assert @workshop.section
-    assert_equal Section::TYPE_PD_WORKSHOP, @workshop.section.section_type
+    assert @workshop.section.workshop_section?
+    assert_equal @workshop.section_type, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload
@@ -223,6 +224,61 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :pd_workshop, section: section
     assert_equal workshop, Pd::Workshop.find_by_section_code(section.code)
     assert_nil Pd::Workshop.find_by_section_code('nonsense code')
+  end
+
+  test 'soft delete' do
+    session = create :pd_session, workshop: @workshop
+    enrollment = create :pd_enrollment, workshop: @workshop
+    @workshop.reload.destroy!
+
+    assert @workshop.reload.deleted?
+    refute Pd::Workshop.exists? @workshop.attributes
+    assert Pd::Workshop.with_deleted.exists? @workshop.attributes
+
+    # Make sure dependent sessions and enrollments are also soft-deleted.
+    assert session.reload.deleted?
+    refute Pd::Session.exists? session.attributes
+    assert Pd::Session.with_deleted.exists? session.attributes
+
+    assert enrollment.reload.deleted?
+    refute Pd::Enrollment.exists? enrollment.attributes
+    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+  end
+
+  test 'friendly name' do
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF, location_name: 'Code.org',
+      sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
+
+    # no subject
+    assert_equal 'CS Fundamentals workshop on 09/01/16 at Code.org', workshop.friendly_name
+
+    # with subject
+    workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
+    assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org', workshop.friendly_name
+
+    # truncated at 255 chars
+    workshop.update!(location_name: "blah" * 60)
+    assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'
+    assert workshop.friendly_name.length == 255
+  end
+
+  test 'date filters' do
+    pivot_date = Date.today
+    workshop_before = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
+    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date)]
+    workshop_after = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
+
+    # on or before
+    assert_equal [workshop_before, workshop_pivot].map(&:id).sort,
+      Pd::Workshop.start_on_or_before(pivot_date).pluck(:id).sort
+
+    # on or after
+    assert_equal [workshop_pivot, workshop_after].map(&:id).sort,
+      Pd::Workshop.start_on_or_after(pivot_date).pluck(:id).sort
+
+    # combined
+    assert_equal [workshop_pivot.id],
+      Pd::Workshop.start_on_or_after(pivot_date).start_on_or_before(pivot_date).pluck(:id)
   end
 
   private

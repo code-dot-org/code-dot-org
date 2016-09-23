@@ -2,17 +2,19 @@
 import React from 'react';
 import color from '../color';
 
-const style = {
-  backgroundColor: color.lightest_cyan,
-  borderRadius: 4
-};
-
 export default function IntegerField(props) {
-  const composedStyle = Object.assign({}, style, props.style);
+  const style = Object.assign({
+    backgroundColor: props.color || 'transparent',
+    padding: '4px 8px',
+    borderRadius: 15,
+    fontWeight: 'bold'
+  }, props.style);
   const displayValue = Number.isInteger(props.value) ? props.value : '??';
-  return <span style={composedStyle}>{displayValue}</span>;
+  return <span className={props.className} style={style}>{displayValue}</span>;
 }
 IntegerField.propTypes = {
+  className: React.PropTypes.string,
   value: React.PropTypes.number,
+  color: React.PropTypes.string,
   style: React.PropTypes.object
 };

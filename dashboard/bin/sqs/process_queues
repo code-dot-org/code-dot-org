@@ -66,7 +66,7 @@ class QueueProcessorManager
   end
 
   def run
-    if argv.size < 1
+    if argv.empty?
       puts "Usage: #{$0} CONFIG_FILE.json.erb [UPDATE-INTERVAL]"
       exit 0
     end
@@ -109,7 +109,7 @@ class QueueProcessorManager
       else
         puts unless last_changed
         last_changed = true
-        metrics_map.each do |k,v|
+        metrics_map.each do |k, v|
           logger.info "#{k}: #{v}  time=#{Time.now.to_i - start_time}"
         end
         old_metrics_json = metrics_map.to_json

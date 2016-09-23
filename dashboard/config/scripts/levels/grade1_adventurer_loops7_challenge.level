@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}]]",
+    "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,11 +22,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "1",
-    "step_mode": "0",
+    "start_direction": "2",
+    "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Challenge: The gold goes all the way up these stairs!  Write the code to help me get it all.",
+    "instructions": "Challenge: The gold goes all the way down these stairs!  Write the code to help me get it all.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out where to put the repeat loops, program it out step-by-step and look for a pattern. \",\r\n  \"hint_id\": \"grade1_adventurer_loops7_challenge_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -54,7 +55,12 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="collector_collect"/>
         <block type="maze_moveEast"/>
+        <block type="maze_moveSouth"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>
@@ -62,9 +68,9 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="2-10">2</title>
+              <title name="TIMES" config="2-10">3</title>
               <statement name="DO">
-                <block type="maze_moveEast">
+                <block type="maze_moveSouth">
                   <next>
                     <block type="collector_collect"/>
                   </next>
@@ -74,7 +80,7 @@
                 <block type="controls_repeat_simplified_dropdown">
                   <title name="TIMES" config="2-10">2</title>
                   <statement name="DO">
-                    <block type="maze_moveNorth">
+                    <block type="maze_moveEast">
                       <next>
                         <block type="collector_collect"/>
                       </next>
@@ -82,9 +88,9 @@
                   </statement>
                   <next>
                     <block type="controls_repeat_simplified_dropdown">
-                      <title name="TIMES" config="2-10">2</title>
+                      <title name="TIMES" config="2-10">3</title>
                       <statement name="DO">
-                        <block type="maze_moveEast">
+                        <block type="maze_moveSouth">
                           <next>
                             <block type="collector_collect"/>
                           </next>
@@ -94,24 +100,12 @@
                         <block type="controls_repeat_simplified_dropdown">
                           <title name="TIMES" config="2-10">2</title>
                           <statement name="DO">
-                            <block type="maze_moveNorth">
+                            <block type="maze_moveEast">
                               <next>
                                 <block type="collector_collect"/>
                               </next>
                             </block>
                           </statement>
-                          <next>
-                            <block type="controls_repeat_simplified_dropdown">
-                              <title name="TIMES" config="2-10">2</title>
-                              <statement name="DO">
-                                <block type="maze_moveEast">
-                                  <next>
-                                    <block type="collector_collect"/>
-                                  </next>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
                         </block>
                       </next>
                     </block>

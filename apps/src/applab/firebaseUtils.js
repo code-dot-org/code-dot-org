@@ -50,6 +50,7 @@ function handleLoadConfig(configData) {
 function validateConfig(configData) {
   return (
     configData &&
+    configData.maxTableCount > 0 &&
     configData.maxTableRows > 0 &&
     configData.maxRecordSize > 0 &&
     configData.maxPropertySize > 0 &&
@@ -86,4 +87,30 @@ function getFirebase() {
     firebaseCache = fb;
   }
   return fb;
+}
+
+const ILLEGAL_CHARACTERS = '.$#[]/';
+
+/**
+ * Firebase keys must be UTF-8 encoded, can be a maximum of 768 bytes, and cannot contain
+ * ., $, #, [, ], /, or ASCII control characters 0-31 or 127.
+ * @param {string} key
+ * @throws with a helpful message if the key is invalid.
+ */
+export function validateFirebaseKey(key) {
+  if (key.length === 0) {
+    throw new Error('The name must not be empty.');
+  }
+  if (key.length > 768) {
+    throw new Error(`The name "${key}" is too long.`);
+  }
+  for (let i = 0; i < key.length; i++) {
+    if (ILLEGAL_CHARACTERS.includes(key.charAt(i))) {
+      throw new Error(`The name "${key}" contains an illegal character "${key.charAt(i)}".` +
+      ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.');
+    }
+    if (key.charCodeAt(i) < 32 || key.charCodeAt(i) === 127) {
+      throw new Error(`The name ${key} contains an illegal character code ${key.charCodeAt(i)}`);
+    }
+  }
 }

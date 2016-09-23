@@ -322,10 +322,13 @@
   homepage_banner_privacy_link: "더 알아보기"
   homepage_banner_20k_teachers: 20,000명의 교사들이 훈련되었고, 이제 컴퓨터 과학을 교실에서 가르치고 있습니다.
   homepage_banner_20k_teachers_link: "더 알아보기"
-  homepage_banner_congress: "미국 지도자들은 K-12 컴퓨터 과학(정보 과학) 을 위한 기금을 의회에 요청하고 있습니다."
+  homepage_banner_congress: "미국 지도자들은 유치원 부터 고등학교 졸업반을 위한 컴퓨터 과학(정보 과학) 기금을 의회에 요청하고
+    있습니다."
   homepage_banner_congress_link: "지원하기"
   homepage_banner_emailprivacy: "우리는 학생 개인 정보 보호 지원 방법에 대한 중요한 변화를 만들고 있습니다."
   homepage_banner_emailprivacy_link: "자세히 보기"
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "더 알아보기"
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: "누구든지 배울 수 있습니다. 오늘 시작하세요."
   homepage_slot_text_link_hoc: Hour of Code 해보기
@@ -585,6 +588,7 @@
   dashboard_action_remove_confirm: "삭제할까요?"
   dashboard_action_done: "완료"
   dashboard_action_required: "필수 항목"
+  dashboard_action_print_certificates: "인증서 인쇄하기"
   dashboard_assessments_view: "평가 결과 보기:"
   dashboard_assessments_none: "평가 결과 없음"
   dashboard_assessments_none_part2: "여러분이 중학교 혹은 고등학교 과정을 가르치고 있다면 학생들의 AP 시험 준비를
@@ -770,9 +774,14 @@
   dashboard_faq: "자주 묻는 질문"
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: "공시사항"
-  dashboard_announce_message: "<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은
-    언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
-    모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -783,10 +792,18 @@
     앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의
     CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
   dashboard_announce_petition_button: "이름을 입력하세요"
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: "교사 블로그에서 새로운 내용이나 추가사항을 확인할 수 있습니다. <a href='%{teacher_blog_url}'
+    target='_blank'>지난 공지사항 보기</a>"
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "지금 해보기"
   learn_sign_up_description: "컴퓨터과학교육주간 동안 Hour of Code 에 함께 참여해 주세요."
   learn_sign_up_button: "가입 신청"
@@ -1492,4 +1509,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates

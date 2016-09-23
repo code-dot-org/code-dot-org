@@ -24,8 +24,7 @@ class ActivitiesController < ApplicationController
       @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
-      # TODO: do we need a cache_find for Level like we have for ScriptLevel?
-      @level = Level.find(params[:level_id].to_i)
+      @level = Script.cache_find_level(params[:level_id].to_i)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -59,7 +58,7 @@ class ActivitiesController < ApplicationController
     if current_user && @script_level && @script_level.stage.lockable?
       user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if user_level.nil? || user_level.locked?(@script_level.stage)
+      if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
         return head 403
       end
     end
@@ -158,10 +157,10 @@ class ActivitiesController < ApplicationController
       @new_level_completed = current_user.track_level_progress_async(
         script_level: @script_level,
         new_result: test_result,
-        submitted: params[:submitted],
+        submitted: params[:submitted] == "true",
         level_source_id: @level_source.try(:id),
         level: @level,
-        pairings: pairings
+        pairing_user_ids: pairing_user_ids
       )
     end
 

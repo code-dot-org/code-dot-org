@@ -6,7 +6,7 @@ import { shallow } from 'enzyme';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 
 import {expect} from '../../util/configuredChai';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import Dialog, {Body, Buttons, Confirm, Cancel} from '@cdo/apps/templates/Dialog';
 import {
   ImportScreensDialog,
   ScreenListItem,
@@ -112,14 +112,22 @@ describe("ScreenListItem", () => {
     );
     expect(item.text()).to.contain('main_screen');
     expect(item.text()).to.contain('Uses existing element IDs: "input1", "input2".');
+    // we don't want to show other errors related to importing.
+    expect(item.text()).not.to.contain('Importing this will replace your existing assets');
+    expect(item.text()).not.to.contain('Importing this will replace your existing screen');
   });
 
 });
 
 describe("ImportScreensDialog", () => {
 
+  let dialog, onImport;
+
+  function getDialogButton() {
+    return dialog.children().at(1).children().at(0);
+  }
+
   describe("When given a list of screens", () => {
-    let dialog, onImport;
     beforeEach(() => {
       const exampleHtml = `
         <div>
@@ -153,17 +161,20 @@ describe("ImportScreensDialog", () => {
 
     it("renders a dialog with the list of screens", () => {
       expect(dialog.type()).to.equal(Dialog);
-      expect(dialog.children().type()).to.equal(Body);
+      expect(dialog.children().at(0).type()).to.equal(Body);
+      expect(dialog.children().at(1).type()).to.equal(Buttons);
       expect(dialog).to.have.exactly(1).descendants(MultiCheckboxSelector);
     });
 
     it("renders an Import button which calls onImport when clicked", () => {
-      expect(dialog).to.have.prop('confirmText').to.equal('Import');
+      const button = getDialogButton();
+      expect(button.type()).to.equal(Confirm);
+      expect(button.matchesElement(<Confirm>Import</Confirm>)).to.be.true;
     });
 
     describe("the import button", () => {
       it("calls the onImport prop when clicked", () => {
-        dialog.prop('onConfirm')();
+        getDialogButton().simulate('click');
         expect(onImport.calledWith('some-project', [], [])).to.be.true;
       });
 
@@ -173,7 +184,7 @@ describe("ImportScreensDialog", () => {
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
 
-        dialog.prop('onConfirm')();
+        getDialogButton().simulate('click');
         expect(onImport.calledWith('some-project', newSelected, [])).to.be.true;
       });
     });
@@ -203,7 +214,7 @@ describe("ImportScreensDialog", () => {
   });
 
   describe("When given other assets that can be imported", () => {
-    let dialog, checkboxSelector, onImport;
+    let checkboxSelector;
     beforeEach(() => {
       onImport = sinon.spy();
       dialog = shallow(
@@ -229,7 +240,7 @@ describe("ImportScreensDialog", () => {
       checkboxSelector.prop('onChange')(newSelected);
       dialog.update();
 
-      dialog.prop('onConfirm')();
+      getDialogButton().simulate('click');
       expect(onImport.calledWith('some-project', [], newSelected)).to.be.true;
     });
 
@@ -254,7 +265,6 @@ describe("ImportScreensDialog", () => {
   });
 
   describe("When given screens that cannot be imported", () => {
-    let dialog, onImport;
     beforeEach(() => {
       const exampleHtml = `
         <div>
@@ -305,8 +315,53 @@ describe("ImportScreensDialog", () => {
               </ul>
             </div>
           </Body>
+          <Buttons>
+            <Cancel />
+          </Buttons>
         </Dialog>
       )).to.be.true;
+    });
+  });
+
+  describe("When importing", () => {
+    beforeEach(() => {
+      const exampleHtml = `
+        <div>
+          <div class="screen" id="screen1">
+            <img src="https://code.org/images/fit-320/avatars/hadi_partovi.jpg"
+                 data-canonical-image-url="asset1.png"
+                 id="img2">
+          </div>
+        </div>`;
+      onImport = sinon.spy();
+      dialog = shallow(
+        <ImportScreensDialog
+          hideBackdrop
+          onImport={onImport}
+          isImporting={true}
+          project={{
+              id: 'some-project',
+              name: 'Some Project',
+              screens: [{
+                id: 'main_screen',
+                willReplace: true,
+                assetsToReplace: [],
+                canBeImported: true,
+                conflictingIds: [],
+                html: exampleHtml,
+              }],
+              otherAssets: [],
+            }}
+        />
+      );
+    });
+
+    it("should disable the confirmation button", () => {
+      expect(getDialogButton().prop('disabled')).to.be.true;
+    });
+
+    it("should disable the multi checkbox widget", () => {
+      expect(dialog.find('MultiCheckboxSelector').prop('disabled')).to.be.true;
     });
   });
 

@@ -25,6 +25,7 @@ Feature: App Lab Data Blocks
     Then I press "runButton"
     And I wait until element "#successLabel" is visible within element "#divApplab"
 
+  @no_circle
   Scenario: Evaluate Data Blocks with Firebase
 # This level evaluates the create/read/update/deleteRecord and set/getKeyValue blocks
 # when run, and prints success if the data storage APIs are working properly.
@@ -36,6 +37,7 @@ Feature: App Lab Data Blocks
     Then I press "runButton"
     And I wait until element "#successLabel" is visible within element "#divApplab"
 
+  @no_circle
   Scenario: Evaluate onRecordEvent block with Firebase
     # The level verifies that onRecordEvent captures the correct events when
     # the create/update/deleteRecord blocks are evaluated, then prints success.

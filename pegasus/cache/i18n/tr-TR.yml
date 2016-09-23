@@ -347,7 +347,7 @@
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: "Öğretmen Panosu"
   homepage_slot_text_studio: Tümü bizim öğrenme süreçlerimiz
   homepage_slot_text_course4: Ders 4
   homepage_slot_text_shop: Mağaza
@@ -379,9 +379,11 @@
   homepage_banner_congress: Amerika'nın liderleri Kongreyi, K-12 bilgisayar bilimi
     finanse etmek için arıyor.
   homepage_banner_congress_link: Yardımlarınızı ekleyiniz
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: "Öğrenci gizliliğini desteklemek için önemli bir değişiklik
+    yapıyoruz."
+  homepage_banner_emailprivacy_link: Daha fazla oku
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Daha fazlasını öğren
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
   homepage_slot_text_link_hoc: Kodlama Saati'ni Deneyin
@@ -478,14 +480,13 @@
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: "Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş"
   minecraft_subtitle: Minecraft Kod Saati
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: Başlamadan önce ilham veren bu videolardan birini izle
+  speak_another_language: Başka bir dil mi konuşuyorsun?
+  help_translate: Tercümede bize yardımcı ol.
+  no_internet: "İnternetin yok mu?"
+  download_offline: "Çevrimdışı sürümü indir."
   are_you_teacher: "Öğretmen misiniz?"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Ders planını ve diğer öğretmen kaynaklarını gözden geçirin.
   volunteer_engineer_submission_title: Hour of Code etkinliği için gönüllü ol ve öğrencilere
     ilham kaynağı ol.
   volunteer_engineer_submission_subtitle_generic: 'Bu sene 7-13 Aralık''ta 100,000
@@ -674,6 +675,7 @@
   dashboard_action_remove_confirm: Kaldırılsın mı?
   dashboard_action_done: Bitti
   dashboard_action_required: gerekli
+  dashboard_action_print_certificates: Sertifika yazdır
   dashboard_assessments_view: 'Değerlendirmeleri gör:'
   dashboard_assessments_none: Değerlendirme yok
   dashboard_assessments_none_part2: Eğer bir ortaokul yada lisede öğretmen iseniz
@@ -681,8 +683,8 @@
     önce dersi sınıfa ata ve dersi seç. Öğrencinin cevaplarını burada görebilirsin.
   dashboard_assessments_summaries: "Özetler"
   dashboard_assessments_answers: Tüm cevaplar
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Anketler
+  dashboard_percent: Yüzde
   dashboard_filter_by_stage: 'Aşamaya göre filtrele:'
   dashboard_filter_all: Tamamı
   dashboard_download_csv: CSV indir
@@ -697,7 +699,7 @@
   dashboard_navigation_view_progress: "İlerleme Durumu"
   dashboard_navigation_view_text_responses: Metin Yanıtlar
   dashboard_navigation_view_assessments: Değerlendirmeler
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Değerlendirmeler/Anketler
   dashboard_navigation_add_students: "Öğrenci EKle"
   dashboard_navigation_manage_students: "Öğrencileri Yönet"
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
@@ -882,9 +884,14 @@
   dashboard_faq: Sık sorulan sorular
   dashboard_faq_k5: K-5 Sık Sorulan Sorular
   dashboard_announcements: Bildirimler
-  dashboard_announce_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde
-    bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
-    öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -897,10 +904,18 @@
     gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
     için bir açık mektup verdi."
   dashboard_announce_petition_button: Adınızı Ekleyin
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
+    takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Daha Fazla Bilgi Edinin
   learn_sign_up_description: Bilgisayar Bilimi Eğitim Haftası süresinde Kod Saati'ne
     dahil olmak için kayıt olun
@@ -1009,7 +1024,7 @@
   hourofcode_name: Klasik Labirent
   playlab_name: Oyun Laboratuvarı
   infinity_name: Sınırsız oyun laboratuarı
-  artist_name: Sanatçı
+  artist_name: Aktör
   monstercoding_name: Gizemli Ada Kodlama Macerası
   allcancode_name: "Çalış Maco!"
   csfirst_name: "Öncelikle CS"
@@ -1716,7 +1731,7 @@
     öğrenciler için öğrenme sağlar.
   sphero_beyond_longdescription: "Öğretmen veya ebeveyn olun,SPRK dersleri çocukların
     matematik ve fen yeteneklerini geliştirirken eğlenceli robot çarpışma dersi vermektedir."
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Bu uyarıyı gizle
   compatibility_unsupported_browser: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı
     <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan
     birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
@@ -1728,4 +1743,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates

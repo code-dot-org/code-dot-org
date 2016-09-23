@@ -6,7 +6,8 @@ import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
-const buttonCellWidth = 142;
+const editButtonCellWidth = 142;
+export const maxCellWidth = 350;
 
 export const row = {
   height: rowHeight,
@@ -15,18 +16,28 @@ export const row = {
 export const cell = {
   padding: cellPadding,
   border: '1px solid gray',
-  fontSize: 14
+  fontSize: 14,
+  maxWidth: maxCellWidth,
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
 };
 
-export const buttonCell = [cell, {
-  width: buttonCellWidth,
+export const addButtonCell = {
+  ...cell,
   backgroundColor: color.lightest_teal,
-}];
+};
+
+export const editButtonCell = {
+  ...cell,
+  backgroundColor: color.lightest_teal,
+  width: editButtonCellWidth,
+};
 
 export const headerCell = {
-  padding: cellPadding,
+  backgroundColor: color.teal,
   border: '1px solid gray',
-  backgroundColor: color.teal
+  maxWidth: maxCellWidth,
+  padding: '6px 10px',
 };
 
 export const link = {
@@ -48,34 +59,34 @@ export const button = {
   verticalAlign: 'middle',
 };
 
-export const whiteButton = [button, {
+export const whiteButton = {
+  ...button,
   backgroundColor: 'white',
   color: 'black',
-}];
+};
 
-export const redButton = [button, {
+export const redButton = {
+  ...button,
   backgroundColor: color.bootstrap_button_red,
   color: 'white',
-}];
+};
 
-export const blueButton = [button, {
+export const blueButton = {
+  ...button,
   backgroundColor: color.bootstrap_button_blue,
   color: 'white',
-}];
+};
 
-export const editButton = [whiteButton, {
+export const editButton = {
+  ...whiteButton,
   marginRight: 10,
-  width: 60
-}];
+  minWidth: 60
+};
 
-export const saveButton = [blueButton, {
+export const saveButton = {
+  ...blueButton,
   marginRight: 10,
-  width: 60
-}];
-
-export const alignRight = {
-  float: 'right',
-  marginLeft: 10,
+  minWidth: 60
 };
 
 export const input = {
@@ -105,7 +116,18 @@ export const debugData = {
   backgroundColor: color.lightest_gray,
   borderRadius: 10,
   border: `1px solid ${color.light_gray}`,
+  flexGrow: 1,
   fontFamily: 'monospace',
+  overflow: 'scroll',
   padding: 10,
   whiteSpace: 'pre-wrap',
+};
+
+export const clearfix = {
+  content: '',
+  display: 'inline-block',
+  width: '100%',
+  height: 0,
+  fontSize: 0,
+  lineHeight: 0,
 };

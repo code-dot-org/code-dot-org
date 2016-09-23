@@ -104,18 +104,20 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with script with text response" do
-    script = create :script
+    script = create :script, name: 'text-response-script'
+    stage1 = create :stage, script: script, name: 'First Stage'
+    stage2 = create :stage, script: script, name: 'Second Stage'
 
     # create 2 text_match levels
     level1 = create :text_match
     level1.properties['title'] = 'Text Match 1'
     level1.save!
-    create :script_level, script: script, levels: [level1]
+    create :script_level, script: script, levels: [level1], stage: stage1
 
     level2 = create :text_match
     level2.properties['title'] = 'Text Match 2'
     level2.save!
-    create :script_level, script: script, levels: [level2]
+    create :script_level, script: script, levels: [level2], stage: stage2
     # create some other random levels
     5.times do
       create :script_level, script: script
@@ -136,7 +138,7 @@ class ApiControllerTest < ActionController::TestCase
     # student_2 has one answer
     level_source2 = create :level_source, level: level2, data: 'Here is the answer 2'
     create :activity, user: @student_2, level: level1, level_source: level_source2
-    create :user_level,user: @student_2, level: level1, script: script,
+    create :user_level, user: @student_2, level: level1, script: script,
       attempts: 1, level_source: level_source2
 
     get :section_text_responses, section_id: @section.id, script_id: script.id
@@ -144,12 +146,10 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_equal script, assigns(:script)
 
-    # all these are translation missing because we don't actually generate i18n files in tests
-
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
+        'stage' => 'Stage 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -157,7 +157,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => "Stage 2: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[1].name}",
+        'stage' => 'Stage 2: Second Stage',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -165,7 +165,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
+        'stage' => 'Stage 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
@@ -603,7 +603,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # view_anwers for a user_level that does not yet exist
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
@@ -618,7 +618,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # multiple updates at once
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     assert_equal nil, UserLevel.find_by(user_level_data2)
     updates = [{

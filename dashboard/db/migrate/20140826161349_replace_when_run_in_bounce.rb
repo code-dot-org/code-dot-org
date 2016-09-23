@@ -1,4 +1,4 @@
-class ReplaceWhenRunInBounce < ActiveRecord::Migration
+class ReplaceWhenRunInBounce < ActiveRecord::Migration[4.2]
   def change
     if Game.where(:name => 'Bounce').first.nil?
       return

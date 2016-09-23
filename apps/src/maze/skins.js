@@ -85,6 +85,8 @@ var CONFIGS = {
   },
 
   harvester: {
+    obstacleIdle: 'obstacle.png',
+
     corn: 'corn.png',
     pumpkin: 'pumpkin.png',
     sprout: 'sprout.png',

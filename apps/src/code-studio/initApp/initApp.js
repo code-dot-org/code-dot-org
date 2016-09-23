@@ -83,7 +83,7 @@ window.apps = {
         if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab' || appOptions.app === 'weblab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
           if (project.isEditable()) {
@@ -240,16 +240,24 @@ window.apps = {
     setInitialLevelSource: function (levelSource) {
       appOptions.level.lastAttempt = levelSource;
     },
+    // returns a Promise to the level source
     getLevelSource: function (currentLevelSource) {
-      var source;
-      if (window.Blockly) {
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
-          Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-      } else if (appOptions.getCode) {
-        source = appOptions.getCode();
-      }
-      return source;
+      return new Promise((resolve, reject) => {
+        let source;
+        if (window.Blockly) {
+          // If we're readOnly, source hasn't changed at all
+          source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
+              Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+          resolve(source);
+        } else if (appOptions.getCode) {
+          source = appOptions.getCode();
+          resolve(source);
+        } else if (appOptions.getCodeAsync) {
+          appOptions.getCodeAsync().then((source) => {
+            resolve(source);
+          });
+        }
+      });
     },
     setInitialAnimationList: function (animationList) {
       appOptions.initialAnimationList = animationList;

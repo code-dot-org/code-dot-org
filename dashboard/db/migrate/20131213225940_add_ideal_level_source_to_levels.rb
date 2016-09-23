@@ -1,4 +1,4 @@
-class AddIdealLevelSourceToLevels < ActiveRecord::Migration
+class AddIdealLevelSourceToLevels < ActiveRecord::Migration[4.2]
   def change
     add_column :levels, :ideal_level_source_id, :integer
     Level.all.map do |level|

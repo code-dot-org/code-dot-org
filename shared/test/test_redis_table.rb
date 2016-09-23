@@ -1,12 +1,20 @@
+# Unit tests for the RedisTable.
+# This uses a fake Redis service by default, but can be configured to use a
+# real instance on localhost by setting the USE_REAL_REDIS environment variable;
+# e.g. "USE_REAL_REDIS=true ruby test_redis_property_bag.rb".
+# Caution: This test is destructive to the Redis instance it runs against,
+# use caution when running against real redis.
+
 require_relative 'test_helper'
+require 'fakeredis' unless use_real_redis?
 require 'helpers/null_pub_sub_api'
 require 'helpers/redis_table'
-require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
 class RedisTableTest < Minitest::Test
   def setup
-    @redis = FakeRedisClient.new
+    @redis = Redis.new({host: 'localhost'})
+    @redis.flushall
     @pubsub = SpyPubSubApi.new
   end
 
@@ -153,8 +161,8 @@ class RedisTableTest < Minitest::Test
 
   def test_expiration
     # Test with a 1-second expire time
-    expire_time = 2
-    margin_time = 0.2
+    expire_time = 0.01
+    margin_time = 0.002
     table = RedisTable.new(@redis, @pubsub, 'shard1', 'table', expire_time)
     value1 = {'name' => 'alice', 'age' => 7, 'male' => false}
     row1 = table.insert(value1)
@@ -163,7 +171,7 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1], table.to_a
 
     # Jump to just before expiration
-    @redis.time_travel expire_time - margin_time
+    sleep expire_time - margin_time
     assert_equal [row1], table.to_a
 
     # Reset expiration by inserting a new row
@@ -172,11 +180,11 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1, row2], table.to_a
 
     # Jump to original expiration time - nothing should be deleted
-    @redis.time_travel margin_time
+    sleep margin_time
     assert_equal [row1, row2], table.to_a
 
     # Jump to just before expiration again
-    @redis.time_travel expire_time - (2 * margin_time)
+    sleep expire_time - (2 * margin_time)
     assert_equal [row1, row2], table.to_a
 
     # Reset expiration by updating a row
@@ -185,11 +193,11 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1, updated_row2], table.to_a
 
     # Jump to next expiration time - nothing should be deleted
-    @redis.time_travel margin_time
+    sleep margin_time
     assert_equal [row1, updated_row2], table.to_a
 
     # Jump to just before expiration a third time
-    @redis.time_travel expire_time - (2 * margin_time)
+    sleep expire_time - (2 * margin_time)
     assert_equal [row1, updated_row2], table.to_a
 
     # Reset expiration by deleting a row
@@ -197,15 +205,15 @@ class RedisTableTest < Minitest::Test
     assert_equal [updated_row2], table.to_a
 
     # Jump to expiration time - nothing should be deleted
-    @redis.time_travel margin_time
+    sleep margin_time
     assert_equal [updated_row2], table.to_a
 
     # Jump to just before expiration a final time
-    @redis.time_travel expire_time - (2 * margin_time)
+    sleep expire_time - (2 * margin_time)
     assert_equal [updated_row2], table.to_a
 
     # Jump to expiration time - this time, everything should be gone
-    @redis.time_travel margin_time
+    sleep margin_time
     assert_equal [], table.to_a
   end
 

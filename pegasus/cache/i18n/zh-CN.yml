@@ -4,8 +4,8 @@
   'yes': "是"
   'no': "不"
   select_language: "请选择您的语言"
-  upgrade_ie_message: CsedWeek.org 将很快删除 Internet Explorer 8、 9 和 10 的支持。请升级到现代的浏览器。
-  upgrade_ie_message_csedweek: CSEdWeek.org 将很快删除 Internet Explorer 8、 9 和 10 的支持。请升级到现代的浏览器。
+  upgrade_ie_message: Code.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到更新版本的浏览器。
+  upgrade_ie_message_csedweek: CSEdWeek.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到更新版本的浏览器。
   upgrade_ie_link: "了解详情"
   en: "计算机科学"
   computer_science_edweek: "计算机科学教育周"
@@ -123,8 +123,8 @@
   third_party_appinv_btn_curriculum: "下载 App Inventor 2 课程"
   third_party_appinv_btn_forum: App Inventor 2 论坛
   third_party_appinv_btn_site: "访问 App Inventor 2"
-  third_party_codehs_desc: HS代码编程介绍的基石与短片，示例代码和大量的编程练习，使编码的乐趣和适合初学者使用。对于学校和教师CodeHS提供课程，教师工具和PD
-    。对于个别学生，你可以得到你沿着导师的网络的方式所需要的帮助。
+  third_party_codehs_desc: CodeHS采用视频短片、示例代码和丰富的编程练习来介绍模块式编程，使编码充满了乐趣，并且很适合初学者。对于学校和教师，CodeHS提供课程，教学工具和产品设计
+    。自学者则可以通过网上的导师们得到帮助。
   third_party_codehs_btn_try: "介绍CS了解更多的学校"
   third_party_codecademy_desc: "我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界需要教育
     - 第一个真正的净母语教育。"
@@ -287,9 +287,10 @@
   homepage_banner_20k_teachers_link: "了解详情"
   homepage_banner_congress: "美国领导人正在呼吁国会拨款给 幼儿园-12年级 的计算机科学课程。"
   homepage_banner_congress_link: "添加您的支持"
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: "我们正在对如何支持学生的隐私做重要改变"
+  homepage_banner_emailprivacy_link: "阅读更多"
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "了解详情"
   homepage_slot_text_title_hoc: "编程一小时"
   homepage_slot_text_blurb_hoc: "任何人都可学习。立即开始"
   homepage_slot_text_link_hoc: "来试试“编程一小时”项目！"
@@ -380,14 +381,13 @@
   mc_platformtext: "最新的浏览器，智能手机，平板电脑"
   mc_specs: "多语言 | 最新浏览器和平板电脑 | 适用年龄6岁以上"
   minecraft_subtitle: "我的世界 编程一小时"
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: "在开始之前，看一段鼓舞人心的视频"
+  speak_another_language: "使用另一种语言？"
+  help_translate: "帮助我们翻译"
+  no_internet: "没有互联网吗？"
+  download_offline: "下载离线版本。"
   are_you_teacher: "你是老师吗？"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: "阅读课程计划和其他教师资源。"
   volunteer_engineer_submission_title: "激励学生和志愿者"
   volunteer_engineer_submission_subtitle_generic: '2015年12月7-13日，约有10万名教师在他们的课堂上主办编程一小时活动。他（她）们需要你的帮助！ '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 老师们需要志愿者。<br>%{num_volunteers}
@@ -522,13 +522,14 @@
   dashboard_action_remove_confirm: "移除？"
   dashboard_action_done: "完成"
   dashboard_action_required: "必填"
+  dashboard_action_print_certificates: "打印证书"
   dashboard_assessments_view: "查看评价："
   dashboard_assessments_none: "没有评价"
   dashboard_assessments_none_part2: "如果你在教中学或高中课程，我们代码工作室提供的部分评估问题可帮助你的学生用于准备 AP 考试。若要使用这些评估，首先将课程分配到课堂，然后上面的下拉列表中选择课程，你将会在此处看到学生的答案。"
   dashboard_assessments_summaries: "总结"
   dashboard_assessments_answers: "全部答案"
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: "调查"
+  dashboard_percent: "百分之"
   dashboard_filter_by_stage: "按阶段筛选 ︰"
   dashboard_filter_all: "全部"
   dashboard_download_csv: "下载 CSV"
@@ -543,7 +544,7 @@
   dashboard_navigation_view_progress: "进度"
   dashboard_navigation_view_text_responses: "文字回应"
   dashboard_navigation_view_assessments: "测验"
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: "评估/调查"
   dashboard_navigation_add_students: "添加学生"
   dashboard_navigation_manage_students: "管理学生"
   dashboard_navigation_lesson_plans_resources: "课程计划及资源"
@@ -695,7 +696,14 @@
   dashboard_faq: "常见的问题"
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: "公告"
-  dashboard_announce_message: 想要帮助我们测试新的功能？我们知道它是重要的是鼓励学生以迭代和实验，所以我们将添加"未使用的代码"功能，让学生来运行他们的代码，即使有独立的块。我们公开发布该功能之前，我们欢迎您的反馈意见。
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -705,10 +713,18 @@
   dashboard_announce_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
     28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
   dashboard_announce_petition_button: "添加您的姓名"
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
+    看以前的公告。</a>"
   code_hoc_coming: "代码小时就在这里 — — 12 月 8-14 ！"
   code_sign_up: "注册以便在计算机科学教育周期间参加"
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "现在就试试"
   learn_sign_up_description: "报名参与在计算机科学教育周期间的编程一小时活动。"
   learn_sign_up_button: "注册"
@@ -1288,7 +1304,7 @@
     演变成了一个专业人士的开发工具。今天，有数以万计的学生，艺术家，设计师，研究者和爱好者使用Processing 来学习，制造原型和产品。
   alice_beyond_longdescription: "采用创新的编程环境，以支持创建三维动画，爱丽丝项目提供教学和学习计算式思维技巧的工具和材料，适合不同年龄和年级来学习如何解决问题和计算机编程。"
   sphero_beyond_longdescription: "无论你是教育工作者或者是父母，SPRK课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。"
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: "隐藏此警告"
   compatibility_unsupported_browser: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
     target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
   starwars_shortcode: sw
@@ -1299,4 +1315,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates

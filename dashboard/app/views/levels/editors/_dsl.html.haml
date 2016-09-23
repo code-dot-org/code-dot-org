@@ -28,7 +28,7 @@
 - if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
 
   - content_for(:head) do
-    = javascript_include_tag 'js/levelbuilder_markdown'
+    %script{src: minifiable_asset_path('js/levelbuilder_markdown.js')}
 
   .markdown
     %p Edit Markdown:

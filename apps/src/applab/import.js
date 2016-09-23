@@ -43,25 +43,31 @@ function getImportableScreen(dom) {
   Array.from(dom.children).forEach(child => {
     if (!elementUtils.isIdAvailable(child.id)) {
       var existingElement = elementUtils.getPrefixedElementById(child.id);
-      if (existingElement && elementUtils.getId(existingElement.parentNode) !== id) {
-        conflictingIds.push(child.id);
+      if (existingElement) {
+        const existingElementScreen = $(existingElement).parents('.screen')[0];
+        if (elementUtils.getId(existingElementScreen) !== id) {
+          conflictingIds.push(child.id);
+        }
       }
     }
   });
 
   const assetsToReplace = [];
-  const assetsToImport = $('[data-canonical-image-url]', dom)
+  let assetsToImport = $('[data-canonical-image-url]', dom)
     .toArray()
-    .map(n => $(n).attr('data-canonical-image-url'))
-    .filter(asset => {
-      if ($(`#designModeViz [data-canonical-image-url="${asset}"]`).length > 0) {
-        // this will replace an existing asset
-        // so move it to the assetsToReplace list
-        assetsToReplace.push(asset);
-        return false;
-      }
-      return true;
-    });
+    .map(n => $(n).attr('data-canonical-image-url'));
+  if ($(dom).is('[data-canonical-image-url]')) {
+    assetsToImport.push($(dom).attr('data-canonical-image-url'));
+  }
+  assetsToImport = assetsToImport.filter(asset => {
+    if ($(`#designModeViz [data-canonical-image-url="${asset}"]`).length > 0) {
+      // this will replace an existing asset
+      // so move it to the assetsToReplace list
+      assetsToReplace.push(asset);
+      return false;
+    }
+    return true;
+  });
 
 
   return {
@@ -149,21 +155,24 @@ export function importScreensAndAssets(projectId, screens, assets) {
       importableScreen.assetsToImport.forEach(asset => allAssetsToCopy[asset] = true);
     });
 
+    function finishImporting(xhr) {
+      designMode.resetPropertyTab();
+      resolve(xhr);
+    }
+
     allAssetsToCopy = Object.keys(allAssetsToCopy);
     if (allAssetsToCopy.length > 0) {
       assetsApi.copyAssets(
         projectId,
         allAssetsToCopy,
-        xhr => {
-          resolve(xhr);
-        },
+        finishImporting,
         xhr => {
           console.error("Failed to copy assets:", xhr);
           reject(xhr);
         }
       );
     } else {
-      resolve();
+      finishImporting();
     }
   });
 }

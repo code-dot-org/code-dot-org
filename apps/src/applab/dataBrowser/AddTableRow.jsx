@@ -1,8 +1,10 @@
 import FirebaseStorage from '../firebaseStorage';
+import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
 import React from 'react';
 import { castValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
+import _ from 'lodash';
 
 const AddTableRow = React.createClass({
   propTypes: {
@@ -11,20 +13,25 @@ const AddTableRow = React.createClass({
   },
 
   getInitialState() {
-    return { newRecord: {} };
+    return {
+      isAdding: false,
+      // An object whose keys are column names and values are the raw user input.
+      newInput: {},
+    };
   },
 
   handleChange(columnName, event) {
-    const newRecord = Object.assign({}, this.state.newRecord, {
-      [columnName]: castValue(event.target.value)
+    const newInput = Object.assign({}, this.state.newInput, {
+      [columnName]: event.target.value
     });
-    this.setState({ newRecord });
+    this.setState({ newInput });
   },
 
   handleAdd() {
+    this.setState({isAdding: true});
     FirebaseStorage.createRecord(
       this.props.tableName,
-      this.state.newRecord,
+      _.mapValues(this.state.newInput, castValue),
       () => this.setState(this.getInitialState()),
       msg => console.warn(msg));
   },
@@ -39,7 +46,7 @@ const AddTableRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr style={dataStyles.row} id="addDataTableRow">
         {
           this.props.columnNames.map(columnName => (
             <td key={columnName} style={dataStyles.cell}>
@@ -48,7 +55,7 @@ const AddTableRow = React.createClass({
                   <span style={{color: 'darkgray'}}>#</span> :
                   <input
                     style={dataStyles.input}
-                    value={editableValue(this.state.newRecord[columnName])}
+                    value={this.state.newInput[columnName] || ''}
                     placeholder="enter text"
                     onChange={event => this.handleChange(columnName, event)}
                     onKeyUp={this.handleKeyUp}
@@ -60,13 +67,14 @@ const AddTableRow = React.createClass({
 
         <td style={dataStyles.cell}/>
 
-        <td style={dataStyles.buttonCell}>
-          <button
-            style={dataStyles.blueButton}
+        <td style={dataStyles.addButtonCell}>
+          <PendingButton
+            isPending={this.state.isAdding}
             onClick={this.handleAdd}
-          >
-            Add Row
-          </button>
+            pendingText="Adding..."
+            style={dataStyles.blueButton}
+            text="Add Row"
+          />
         </td>
       </tr>
     );

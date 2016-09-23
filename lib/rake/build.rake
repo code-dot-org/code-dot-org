@@ -19,26 +19,6 @@ namespace :build do
     end
   end
 
-  desc 'Builds blockly core.'
-  task :blockly_core do
-    Dir.chdir(blockly_core_dir) do
-      RakeUtils.npm_install
-
-      HipChat.log 'Building <b>blockly-core</b> debug...'
-      RakeUtils.system './deploy.sh', 'debug'
-
-      HipChat.log 'Building <b>blockly-core</b>...'
-      RakeUtils.system './deploy.sh'
-    end
-  end
-  task :'blockly-core' => :blockly_core
-
-  task :core_and_apps_dev do
-    Dir.chdir(apps_dir) do
-      RakeUtils.system './build_with_core.sh debug'
-    end
-  end
-
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
@@ -51,7 +31,7 @@ namespace :build do
       end
 
       HipChat.log 'Building <b>apps</b>...'
-      npm_target = rack_env?(:development) ? 'build' : 'build:dist'
+      npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
     end
   end
@@ -99,7 +79,7 @@ namespace :build do
         # Update the schema cache file, except for production which always uses the cache.
         schema_cache_file = dashboard_dir('db/schema_cache.dump')
         unless rack_env?(:production)
-          RakeUtils.rake 'db:schema:cache:dump'
+          RakeUtils.rake 'db:schema:cache:dump' unless ENV['CI']
           if GitUtils.file_changed_from_git?(schema_cache_file)
             # Staging is responsible for committing the authoritative schema cache dump.
             if rack_env?(:staging)
@@ -115,7 +95,8 @@ namespace :build do
         end
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        if rack_env?(:development) && CDO.skip_seed_all
+        # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
+        if (rack_env?(:development) || ENV['CI']) && CDO.skip_seed_all
           HipChat.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n"\
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n"\
               "see changes to: videos, concepts, levels, scripts, prize providers, \n "\
@@ -191,7 +172,6 @@ namespace :build do
 
   tasks = []
   tasks << :configure
-  tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus

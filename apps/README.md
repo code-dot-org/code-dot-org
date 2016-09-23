@@ -229,12 +229,10 @@ more information on how to use the `storybook` api.
 
 A static version of the styleguide is hosted at https://code-dot-org.github.io/cdo-styleguide/
 
-#### Full build with blockly-core changes
+#### Full build with blockly changes
 
-1. Check out [blockly-core](https://github.com/code-dot-org/blockly-core/) as a sibling directory to blockly.
-1. `./build_with_core.sh debug`
-  * The `debug` flag builds debug versions of both blockly-core and blockly, suitable for debugging
-1. `grunt dev`
+1. Check out a local copy of [blockly](https://github.com/code-dot-org/blockly/)
+1. Follow the directions in [Building with apps](https://github.com/code-dot-org/blockly#building-with-apps)
 
 ### Localization
 

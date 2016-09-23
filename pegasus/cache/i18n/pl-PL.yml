@@ -376,6 +376,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Ucz się więcej
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
@@ -672,6 +674,7 @@
   dashboard_action_remove_confirm: Usunąć?
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -889,28 +892,40 @@
   dashboard_faq: Najczęściej zadawane pytania (FAQ)
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
-  dashboard_announce_message: "<b>Ważna zmiana w tym jak obsługujemy prywatność uczniów</b>
-    <br/> Ogłaszamy okres miesiąca, aby przejrzeć zmiany w naszej polityce prywatności
-    i aby przekazać swoją opinię. Największą zmianą jest przeprojektowanie logowania,
-    które pozwala nam usunąć wszystkie adresy e-mail dla kont studenta Code Studi.
-    Inna duża zmiana obejmuje dostęp do naszych narzędzi do tworzenia aplikacji."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Ucz się więcej
   dashboard_announce_try_now_button: Spróbuj teraz
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition: Jako nauczyciel prowadzisz drogę w ruchu, aby dać każdemu
+    uczniowi w każdej szkole możliwość nauki informatyki. Nadszedł czas, aby poinformować
+    swoich przedstawicieli żeby usłyszeli od Ciebie. W tym tygodniu liderów edukacji,
+    28 Prezesów i dyrektorów w Ameryce największych firm połączonych ze sobą w liście
+    otwartym pytaniem, Kongres USA do funduszu Edukacja informatyczna k-12.
   dashboard_announce_petition_button: Dodaj swoje imię
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Na bieżąco z nowymi funkcjami i aktualizacje na naszym blogu
+    nauczycieli. <a href='%{teacher_blog_url}' target='_blank'> Zobacz poprzednie
+    ogłoszenia.</a>
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Spróbuj teraz
   learn_sign_up_description: Zarejestruj się, by uczestniczyć w Godzinie Kodowania
     w czasie Tygodnia Nauczania Informatyki
@@ -1037,11 +1052,11 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Przyspieszony Kurs
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
@@ -1790,10 +1805,10 @@
     z SPRK są kursem programowania robotów dla dzieci, rozwijającym ich umiejętności
     matematyczne i przyrodnicze.
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: Twoja przeglądarka nie jest obsługiwana. Prosimy
+    uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>
+    jednego z naszych obsługiwanych przeglądarek</a>. Możesz wyświetlić stronę, ale
+    nie oczekuj w pełni działającej.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1802,4 +1817,3 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates

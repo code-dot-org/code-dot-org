@@ -175,6 +175,7 @@ $suite_success_count = 0
 $suite_fail_count = 0
 # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
 $total_flaky_reruns = 0
+$total_flaky_successful_reruns = 0
 $failures = []
 
 if $options.local
@@ -227,6 +228,9 @@ end
 if $options.force_db_access
   $options.pegasus_db_access = true
   $options.dashboard_db_access = true
+elsif ENV['CI']
+  $options.pegasus_db_access = true
+  $options.dashboard_db_access = true
 elsif rack_env?(:development)
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
@@ -272,7 +276,7 @@ if $options.with_status_page
 end
 
 def test_run_identifier(browser, feature)
-  feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
+  feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
   "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 end
@@ -302,7 +306,7 @@ end
 
 # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
 parallel_config = ENV['CI'] ? {:in_threads => $options.parallel_limit} : {:in_processes => $options.parallel_limit}
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
+run_results = Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
 
@@ -534,9 +538,12 @@ EOS
   end
 
   [succeeded, message, reruns]
-end.each do |succeeded, message, reruns|
+end
+
+run_results.each do |succeeded, message, reruns|
   $total_flaky_reruns += reruns
   if succeeded
+    $total_flaky_successful_reruns += reruns
     $suite_success_count += 1
   else
     $suite_fail_count += 1
@@ -552,7 +559,8 @@ $suite_duration = Time.now - $suite_start_time
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
   "Test count: #{($suite_success_count + $suite_fail_count)}. " \
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
-  "Total reruns of flaky tests: #{$total_flaky_reruns}." \
+  "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
+  "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
 if $suite_fail_count > 0

@@ -4,6 +4,26 @@ import Firebase from 'firebase';
 import { loadConfig, getDatabase } from './firebaseUtils';
 
 /**
+ * Ensure that creating the table will not bring this app over the maximum
+ * table count.
+ * @param {Object} config
+ * @param {number} config.maxTableCount The maximum number of tables allowed per app.
+ * @param {string} tableName Table to add.
+ * @returns {Promise}
+ */
+export function enforceTableCount(config, tableName) {
+  const tablesRef = getDatabase(Applab.channelId).child(`counters/tables`);
+  return tablesRef.once('value').then(snapshot => {
+    if (snapshot.numChildren() >= config.maxTableCount &&
+      snapshot.child(tableName).val() === null) {
+      return Promise.reject(`Table '${tableName}' cannot be written to because the ` +
+        `maximum number of tables (${config.maxTableCount}) has been exceeded.`);
+    }
+    return Promise.resolve(config);
+  });
+}
+
+/**
  * Updates per-table counters associated with a table write.
  * @param {string} tableName Name of the table to update.
  * @param {number} rowCountChange How much to increment or decrement the row count by.
@@ -14,6 +34,11 @@ import { loadConfig, getDatabase } from './firebaseUtils';
  */
 export function updateTableCounters(tableName, rowCountChange, updateNextId) {
   return loadConfig().then(config => {
+    if (rowCountChange > 0) {
+      return enforceTableCount(config, tableName);
+    }
+    return Promise.resolve(config);
+  }).then(config => {
     const tableRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
     return tableRef.transaction(tableData => {
       tableData = tableData || {};
@@ -110,5 +135,17 @@ function getCurrentTime() {
   const serverTimeRef = getDatabase(Applab.channelId).child('serverTime');
   return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(() => {
     return serverTimeRef.once('value').then(snapshot => snapshot.val());
+  });
+}
+
+/**
+ * @param {string} tableName
+ * @returns {Promise} Promise returning a number indicating the last_id for the
+ * current table, or 0 if no rows exist in the table or the table does not exist.
+ */
+export function getLastRecordId(tableName) {
+  const lastIdRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}/lastId`);
+  return lastIdRef.once('value').then(snapshot => {
+    return snapshot.val() || 0;
   });
 }

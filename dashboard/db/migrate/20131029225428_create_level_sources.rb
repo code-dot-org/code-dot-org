@@ -1,4 +1,4 @@
-class CreateLevelSources < ActiveRecord::Migration
+class CreateLevelSources < ActiveRecord::Migration[4.2]
   def up
     create_table :level_sources do |t|
       t.references :level

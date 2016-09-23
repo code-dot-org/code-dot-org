@@ -40,11 +40,7 @@ ________________
 - [CS Princples](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
 
 #### Online Modules ####
-Online course modules will be assigned to teachers through [Code Studio](https://studio.code.org). See [this 1-pager](https://docs.google.com/document/d/1PQiWFF21zTmM2WSeXnuZcAddvErtP6Rrv4Tci3XAEiA/edit) for more information on the modules that will be assigned to them. Need help logging in or checking if you've completed a module? See our videos below.
-
-Logging Into Code Studio - Video Coming Soon!
-
-Checking your progress in Code Stuido - Video Coming Soon!
+Online course modules will be assigned to teachers through [Code Studio](https://studio.code.org). See [this 1-pager](https://docs.google.com/document/d/1PQiWFF21zTmM2WSeXnuZcAddvErtP6Rrv4Tci3XAEiA/edit) for more information on the modules that will be assigned to them. 
 
 [**Back to the top**](#top)
 <br/>
@@ -62,6 +58,10 @@ These forums are program specific and are a great way for teachers to help each 
 [Code.org FAQ](/educate/pd/15-16/faq)<br/>
 This FAQ from previous workshops should NOT be used to answer your teacher's questions, but can provide you with a great example of how to set up your own FAQ for your teachers' specific needs. 
 
+[CSP Teacher Dashboard Walkthrough](https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be)
+This video helps CSP teachers create sections and move students between sections as needed. 
+
+
 [**Back to the top**](#top)
 <br/>
 
@@ -74,8 +74,8 @@ ________________
 
 Click on the links below to see a list of classroom supplies your teacher will need to teach the course.
 
-- [CS Principles]() - Coming Soon!
-- [Exploring Computer Science]() - Coming Soon!
+- [CS Principles](https://code.org/educate/csp#materials)
+- [Exploring Computer Science](http://www.exploringcs.org/curriculum)
 - [CS in Science]() - Coming Soon!
 - [CS in Algebra]() - Coming Soon!
 

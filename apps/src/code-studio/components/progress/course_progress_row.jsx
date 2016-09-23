@@ -20,9 +20,18 @@ const styles = {
     borderColor: color.lighter_gray,
     borderRadius: 5,
     background: color.lightest_gray,
-    display: 'table',
-    padding: 10,
-    width: '100%'
+    width: '100%',
+    display: 'table'
+  },
+  teacherRow: {
+    margin: '14px 0'
+  },
+  hiddenRow: {
+    display: 'none'
+  },
+  teacherHiddenRow: {
+    background: 'white',
+    borderStyle: 'dashed'
   },
   focusAreaRow: {
     height: 110,
@@ -35,7 +44,7 @@ const styles = {
     display: 'table-cell',
     width: 200,
     verticalAlign: 'middle',
-    paddingRight: 10
+    padding: 10
   },
   ribbonWrapper: {
     position: 'absolute',
@@ -67,6 +76,16 @@ const styles = {
   changeFocusAreaIcon: {
     fontSize: '1.2em',
     marginRight: 6
+  },
+  stageProgress: {
+    display: 'table-cell',
+    padding: 10,
+    verticalAlign: 'middle'
+  },
+  teacherInfo: {
+    display: 'table-cell',
+    verticalAlign: 'top',
+    width: 240,
   }
 };
 
@@ -75,12 +94,16 @@ const styles = {
  */
 const CourseProgressRow = React.createClass({
   propTypes: {
-    showTeacherInfo: React.PropTypes.bool,
+    stage: stageShape,
     professionalLearningCourse: React.PropTypes.bool,
     isFocusArea: React.PropTypes.bool,
-    stage: stageShape,
+
+    // redux provided
+    isHidden: React.PropTypes.bool,
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    showTeacherInfo: React.PropTypes.bool,
+    lockableAuthorized: React.PropTypes.bool.isRequired,
     changeFocusAreaPath: React.PropTypes.string,
-    lockableAuthorized: React.PropTypes.bool.isRequired
   },
 
   render() {
@@ -94,7 +117,10 @@ const CourseProgressRow = React.createClass({
         style={[
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},
-          this.props.isFocusArea && styles.focusAreaRow
+          this.props.isFocusArea && styles.focusAreaRow,
+          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenRow,
+          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.teacherHiddenRow,
+          this.props.viewAs === ViewType.Teacher && styles.teacherRow
         ]}
       >
         {this.props.isFocusArea && [
@@ -113,23 +139,30 @@ const CourseProgressRow = React.createClass({
         <div style={styles.stageName}>
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
-        <div>
-          {this.props.showTeacherInfo &&
-            <TeacherStageInfo stage={stage}/>
-          }
+        <div style={styles.stageProgress}>
           <StageProgress
+            stageId={stage.id}
             levels={stage.levels}
             courseOverviewPage={true}
           />
         </div>
+        {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
+          <div style={styles.teacherInfo}>
+            <TeacherStageInfo stage={stage}/>
+          </div>
+        }
       </div>
     );
   }
 });
 
-export default connect(state => ({
-  showTeacherInfo: state.progress.showTeacherInfo &&
-    state.stageLock.viewAs !== ViewType.Student,
-  lockableAuthorized: state.stageLock.lockableAuthorized,
-  changeFocusAreaPath: state.progress.changeFocusAreaPath,
-}))(Radium(CourseProgressRow));
+export default connect((state, ownProps) => {
+  const isHidden = state.hiddenStage[ownProps.stage.id];
+  return {
+    isHidden,
+    showTeacherInfo: state.progress.showTeacherInfo,
+    viewAs: state.stageLock.viewAs,
+    lockableAuthorized: state.stageLock.lockableAuthorized,
+    changeFocusAreaPath: state.progress.changeFocusAreaPath,
+  };
+})(Radium(CourseProgressRow));

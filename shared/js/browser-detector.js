@@ -23,7 +23,7 @@ function isUnsupportedChrome() {
 // We support Safari 7.0.x +
 function isUnsupportedSafari() {
   var isSafari = navigator.userAgent.indexOf('Safari/') !== -1;
-  var safariVersion = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Version/') + 8, 1);
+  var safariVersion = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Version/') + 8, 2);
   var unsupported =  isSafari && safariVersion < 7;
   return unsupported;
 }

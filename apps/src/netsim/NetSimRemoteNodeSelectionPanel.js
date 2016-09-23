@@ -235,12 +235,12 @@ NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function () {
   var container = this.getBody().closest('#netsim-disconnected');
 
   if (lobbyTable.is(':visible')) {
-    lobbyTable.height("none");
+    lobbyTable.height('auto');
     var overflow = container.prop('scrollHeight') - container.prop('clientHeight');
 
     if (overflow > 0) {
       var newHeight = lobbyTable.height() - overflow;
-      var minHeight = lobbyTable.find('tr').first().outerHeight(true);
+      var minHeight = 1.1 * lobbyTable.find('tr').first().outerHeight(true);
       lobbyTable.height(Math.max(newHeight, minHeight));
     }
   }

@@ -52,55 +52,49 @@ exports.evalWith = function (code, options, legacy) {
  * Generate code for each of the given events, and evaluate it using the
  * provided APIs as context.
  * @param apis Context to be set as globals in the interpreted runtime.
- * @param events Mapping of hook names to the corresponding blockly block name.
- * @param generator Function for generating code for a given block name.
+ * @param events Mapping of hook names to the corresponding handler code.
+ * @param evalCode Optional extra code to evaluate.
  * @return {{}} Mapping of hook names to the corresponding event handler.
  */
-exports.evalWithEvents = function (apis, events, generator) {
-  let interpreter, currentCallback;
-  let code = '';
-  const hooks = {};
+exports.evalWithEvents = function (apis, events, evalCode = '') {
+  let interpreter, currentCallback, lastReturnValue;
+  const hooks = [];
+
   Object.keys(events).forEach(event => {
-    hooks[event] = () => {
-      currentCallback(event);
-      interpreter.run();
-    };
-    code += `function ${event}(){${generator(events[event])}};`;
+    let {code, args} = events[event];
+    if (typeof code === 'string') {
+      code = [code];
+    }
+    code.forEach((c, index) => {
+      const eventId = `${event}-${index}`;
+      // Create a hook that triggers an event inside the interpreter.
+      hooks.push({name: event, func: (...args) => {
+        const eventArgs = {name: eventId, args};
+        currentCallback(exports.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
+        interpreter.run();
+        return lastReturnValue;
+      }});
+      evalCode += `this['${eventId}']=function(${args ? args.join() : ''}){${c}};`;
+    });
   });
 
-  interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
+  // The event loop pauses the interpreter until the native async function
+  // `currentCallback` returns a value. The value contains the name of the event
+  // to call, and any arguments.
+  const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
+
+  interpreter = exports.interpreter = new Interpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
+    }));
+    interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
+      lastReturnValue = exports.marshalInterpreterToNative(interpreter, returnValue);
     }));
   });
   interpreter.run();
 
   return hooks;
-};
-
-/**
- * Returns a function based on a string of code parameterized with a dictionary.
- */
-exports.functionFromCode = function (code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Since this returns a new native function, it doesn't make sense in the
-    // editCode case (we assume that the app will be using JSInterpreter)
-    throw "Unexpected";
-  } else {
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function () {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor();
-  }
 };
 
 //

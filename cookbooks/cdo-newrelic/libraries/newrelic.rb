@@ -23,36 +23,43 @@ class NewRelicClient
 
   # Disables alerts to the given server name.
   def disable_alerts(server_name)
-    assign_alert_policy(attributes['disabled_alert_policy_id'], server_name)
+    assign_alert_policy(attributes['disabled_alert_policy_id'], server_name, 10)
   end
 
-  # Disables alerts to the given server name.
+  # Enables alerts to the given server name.
   def enable_alerts(server_name)
-    assign_alert_policy(attributes['enabled_alert_policy_id'], server_name)
+    assign_alert_policy(attributes['enabled_alert_policy_id'], server_name, 120)
   end
 
   # Disables alerts for the given server
   # param String server_name A new relic server name (not id).
-  def assign_alert_policy(policy_id, server_name)
+  def assign_alert_policy(policy_id, server_name, timeout)
     policy = alert_policy(policy_id)
 
-    # Wait/retry up to 30 seconds for a new server ID to be registered by NewRelic.
-    max_tries = 10
-    tries = 0
-    begin
-      map = server_name_to_id_map
-      server_id = map[server_name]
+    retry_with_timeout(timeout) do
+      server_id = get_server_id(server_name)
       raise "NewRelic server ID not found for #{server_name}" unless server_id
       policy['links']['servers'] << server_id
-    rescue => e
-      raise e if tries >= max_tries
-      tries += 1
-      sleep 3
-      retry
     end
 
     body = {alert_policy: policy}.to_json
     call_newrelic_rest("alert_policies/#{policy_id}.json", 'PUT', body)
+  end
+
+  # Wait/retry up to `timeout` seconds with exponential backoff, then re-raise the last error thrown.
+  def retry_with_timeout(timeout)
+    wait_total = 0
+    tries = 0
+    begin
+      yield
+    rescue => e
+      raise e if wait_total >= timeout
+      tries += 1
+      sleep_time = [timeout - wait_total, 2**tries].min # Exponential backoff
+      Kernel.sleep sleep_time
+      wait_total += sleep_time
+      retry
+    end
   end
 
   # Returning a map from alert policy id to alert hash as described at
@@ -126,19 +133,10 @@ class NewRelicClient
     end
   end
 
-  # Returning a map from NewRelic server id to server hash as described at
+  # Returns the NewRelic server id for the given server name.
   # https://rpm.newrelic.com/api/explore/servers/list
-  def get_server_map
-    servers = call_newrelic_rest('servers.json')['servers']
-    index(servers, 'id')
-  end
-
-  # Return a map from server hostnames to new relic ids.
-  def server_name_to_id_map
-    {}.tap do |hash|
-      get_server_map.each do |id, value|
-        hash[value['host']] = id
-      end
-    end
+  def get_server_id(server_name)
+    rest = call_newrelic_rest("servers.json?#{URI.encode_www_form('filter[name]' => server_name)}")
+    rest['servers'].first{|server| server['name'] == server_name}['id']
   end
 end

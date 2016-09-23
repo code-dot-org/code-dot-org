@@ -9,7 +9,7 @@ import EditKeyRow from './EditKeyRow';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
-import { changeView } from '../redux/data';
+import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
@@ -29,9 +29,17 @@ const DataProperties = React.createClass({
   propTypes: {
     // from redux state
     view: React.PropTypes.oneOf(Object.keys(DataView)),
-    keyValueData: React.PropTypes.object.isRequired,
+    // "if all of the keys are integers, and more than half of the keys between 0 and
+    // the maximum key in the object have non-empty values, then Firebase will render
+    // it as an array."
+    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+    keyValueData: React.PropTypes.oneOfType([
+      React.PropTypes.object,
+      React.PropTypes.array
+    ]).isRequired,
 
     // from redux dispatch
+    onShowWarning: React.PropTypes.func.isRequired,
     onViewChange: React.PropTypes.func.isRequired
   },
 
@@ -77,7 +85,7 @@ const DataProperties = React.createClass({
 
           <span style={dataStyles.debugLink}>
             <a
-              id="tableDebugLink"
+              id="uitest-propertiesDebugLink"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >
@@ -103,7 +111,7 @@ const DataProperties = React.createClass({
               <th style={dataStyles.headerCell}>Actions</th>
             </tr>
 
-            <AddKeyRow/>
+            <AddKeyRow onShowWarning={this.props.onShowWarning}/>
 
             {
               Object.keys(this.props.keyValueData).map(key => (
@@ -125,6 +133,9 @@ export default connect(state => ({
   view: state.data.view,
   keyValueData: state.data.keyValueData || {}
 }), dispatch => ({
+  onShowWarning(warningMsg, warningTitle) {
+    dispatch(showWarning(warningMsg, warningTitle));
+  },
   onViewChange(view) {
     dispatch(changeView(view));
   }

@@ -31,7 +31,7 @@ class LevelGroupDSL < BaseDSL
 
   def text(name)
     # Ensure level is appropriate type.
-    level = Level.where(name: name).first # For some reason find_by_name doesn't always work here!
+    level = Script.cache_find_level(name)
     if level.nil?
       raise "Unable to locate level '#{name}'"
     end

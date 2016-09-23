@@ -1,0 +1,21 @@
+name 'CSDU2L02 SFLP'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The Internet - Web Development: Lesson 2 - Website Design
+
+## Background
+
+In this lesson students will design a sketch of a first draft of a personal home page.  Producing this sketch will reinforce the concepts of content and style while simultaneously giving students an experience in the plan stage of the problem-solving process identified in Unit One.  To accomplish this task, students will apply two self-created tools:  the class high quality feature list developed in the prior lesson, and a list of common elements that go into personal website home pages which they develop in this lesson. 
+
+
+# Vocabulary
+
+* **Web Designer** - A Web designer is someone who prepares content for the Web. This role is mainly related to the styling and layout of pages with content, including text and images. 
+* **Website Home Page** - A home page is the initial or main web page of a website.
+
+
+# Resources
+
+* [Home Page Design](https://docs.google.com/document/d/12qOkoaSgYyqgBE_d1M55vsQlcMgRBXMUPEmfXOJ81GQ/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/12qOkoaSgYyqgBE_d1M55vsQlcMgRBXMUPEmfXOJ81GQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/12qOkoaSgYyqgBE_d1M55vsQlcMgRBXMUPEmfXOJ81GQ/export?format=doc))
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+MARKDOWN
