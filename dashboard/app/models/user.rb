@@ -709,7 +709,9 @@ class User < ActiveRecord::Base
   end
 
   def in_progress_and_completed_scripts
-    [working_on_user_scripts, completed_user_scripts].compact.flatten
+    backfill_user_scripts if needs_to_backfill_user_scripts?
+
+    user_scripts.compact
   end
 
   def all_advertised_scripts_completed?
@@ -744,12 +746,16 @@ class User < ActiveRecord::Base
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
+  # NOTE: Changes to this method should be mirrored in
+  # in_progress_and_completed_scripts.
   def working_on_user_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
     user_scripts.where('user_scripts.completed_at is null')
   end
 
+  # NOTE: Changes to this method should be mirrored in
+  # in_progress_and_completed_scripts.
   def completed_user_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
