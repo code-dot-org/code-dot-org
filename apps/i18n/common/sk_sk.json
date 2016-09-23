@@ -5,6 +5,7 @@
   "animationMode": "Animačný",
   "answersVisible": "Odpovede viditeľný (iba na čítanie)",
   "assessmentSteps": "Steps to give assessment for",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "Späť na predchádzajúcu úlohu",
   "blocklyMessage": "Blockly",
@@ -185,7 +186,7 @@
   "loading": "Načítavanie...",
   "locked": "Locked",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
-  "lockSettings": "Lock settings",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Lock stage",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Lock as soon as students are done",
@@ -304,7 +305,5 @@
   "when": "keď",
   "whenRun": "pri spustení",
   "workspaceHeaderShort": "Pracovná plocha: ",
-  "yes": "Áno",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Áno"
 }

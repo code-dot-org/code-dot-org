@@ -5,6 +5,7 @@
   "animationMode": "Анимация",
   "answersVisible": "Видимые ответы (только для чтения)",
   "assessmentSteps": "Шаги, чтобы дать оценку для",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Примечание: Этап автоматически блокируется через 24 часа.",
   "backToPreviousLevel": "Вернуться на предыдущий уровень",
   "blocklyMessage": "Блокли",
@@ -185,7 +186,7 @@
   "loading": "ЗАГРУЗКА...",
   "locked": "Заблокировано",
   "lockFollowing": "Заблокировать выбранные этапы, которые сейчас заблокированны:",
-  "lockSettings": "Заблокировать настройки",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Заблокировать этап",
   "lockStageInstructions": "Как только время вышло, «Заблокировать этап» чтобы скрыть вопросы.",
   "lockWhenDone": "Заблокировать как только будет сделано",
@@ -304,7 +305,5 @@
   "when": "когда",
   "whenRun": "при запуске",
   "workspaceHeaderShort": "Место сбора блоков: ",
-  "yes": "Да",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Да"
 }

@@ -17,7 +17,7 @@ ka:
       2-3 Artist 7_instruction: 'დაასრულეთ ფანჯრების ხატვა ისე, რომ ყველას შეეძლოს გარეთ გახედვა. ყოველი კვადრატული ფანჯრის მინის სიგანეა 25 პიქსელი. '
       2-3 Artist 8_instruction: 'დაასრულეთ ყოველი ცხოველის ოთახის ხატვა მართკუთხედის ორ თანაბარ კვადრატად გაყოფით. მართკუთხედის სიგანეა 200, ხოლო სიმაღლე - 100 პიქსელი.'
       2-3 Artist 9 NEW_instruction: დაასრულეთ ამ ფრანის ხატვა
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_instruction: დაასრულეთ ამ კიბის დახატვა!
       2-3 Artist 9_instruction: დაასრულეთ ამ ფრანის ხატვა
       2-3 Artist Assessment 1_instruction: 'შეჯამება: დაასრულეთ უკანასკნელი კბილის ხატვა, 25 პიქსელი სიგანისა და 25 პიქსელი სიმაღლის.'
       2-3 Artist Debugging 1_instruction: ამ ქუდის ზედა ნაწილის განი 100 პიქსელი უნდა იყოს. შეგიძლიათ, გაასწოროთ?
@@ -148,10 +148,7 @@ ka:
       2-3 Maze 12 (copy 1)_instruction: 'შეგიძლიათ წინა პასუხი მხოლოდ ორი ბლოკით შეცვალოთ? (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
       2-3 Maze 12 (copy 2)_instruction: 'შეგიძლიათ წინა პასუხი მხოლოდ ორი ბლოკით შეცვალოთ? (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
       2-3 Maze 12 (old)_instruction: მიმიყვანეთ გოჭთან, ახლა უკვე გამეორების ბლოკის გამოყენებით!
-      2-3 Maze 12 - One Move Block_instruction: |
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 - One Move Block_instruction: მიდით ღორთან! მაგრამ ამ შემთხვევაში მხოლოდ ერთი `move forward` ბლოკის გამოყენება შეგიძლიათ. სხვა რომელიმე ბლოკი ხომ ვერ დაგეხმარებათ?
       2-3 Maze 12_instruction: 'შეგიძლიათ მიხვიდეთ გოჭამდე ისეთი ციკლის შექმნით, რომელიც მხოლოდ ერთ "წინ გადაადგილების" ბლოკს იყენებს გამეორებაში?'
       2-3 Maze 13 (old)_instruction: 'მიმიყვანეთ გოჭთან, ახლა "გაიმეორე სანამ" ბლოკით!'
       2-3 Maze 13_instruction: მიმიყვანეთ გოჭთან მხოლოდ ორი ბლოკით.
@@ -440,7 +437,7 @@ ka:
       4-5 Maze 9_instruction: 'შექმენით ციკლით, რომელშიც "გაიმეორე სანამ" ბლოკი იქნება.'
       4-5 Maze Assessment 1_instruction: 'შეჯამება: მიდით მზესუმზირამდე ბლოკების მინიმალური რაოდენობის გამოყენებით.'
       4-5 Maze Conditionals 1_instruction: 'გამოიყენეთ "გაიმეორე სანამ" ბლოკი, რათა მიიყვანოთ ზომბი მზესუმზირამდე.'
-      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \r\n\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
+      4-5 Maze Conditionals 10_instruction: "შეგიძლიათ დაამატოთ მხოლოდ 3 ბლოკი, რომ დაეხმაროთ ზომბს უფრო რთული ლაბირინთიდან თავის დაღწევაში? \r\n\r\nთუ ამას სწორად გააკეთებთ, ის შეძლებს ნებისმიერი მრუდე გზის გავლას, მიუხედავად მისი სიგრძისა!"
       4-5 Maze Conditionals 2_instruction: 'გამოიყენეთ "გაიმეორე სანამ" ბლოკი, რათა მიიყვანოთ ზომბი მზესუმზირამდე.'
       4-5 Maze Conditionals 3_instruction: "გამოიყენეთ \"თუ\" ბლოკი, რათა გადამაწყვეტინოთ როდის მოვბრუნდე. \r\n"
       4-5 Maze Conditionals 4_instruction: 'ეს წინა თავსატეხივითაა, მაგრამ დაგჭირდებათ იმის გახსენება, თუ როგორ გამოიყენება "თუ" ბლოკი და "გამეორების" ბლოკი ერთად.'
@@ -1240,14 +1237,12 @@ ka:
       Course 4 Play Labs For Loops 7a_instruction: "აი, ახლა რაღაც გამოგვდის! რა მოხდება, თუ დავითვლით, რამდენჯერ შეგვიძლია დავაჭიროთ ჯადოქარს, სანამ ძაღლი 30-ს მიაღწევს?\r\n\r\nდაუმატეთ ჯადოქარს ბლოკები ისე, რომ ყოველჯერ, როცა მას ვაჭერთ, ცვლადი \"დაკლიკვა\" ერთით იზრდებოდეს. \"ნაზრდს\" ჯერ-ჯერობით შეგიძლიათ არ მიაქციოთ ყურადღება.\r\n\r\nძაღლი დაიწყებს თვლას, როცა \"გაშვებას\" დააჭერთ."
       Course 4 Play Labs For Loops 8_instruction: 'როგორი "მიზნისთვის" ციკლი მათქმევინებს მწკრივს 19, 27, 35, 43, 51?'
       Course 4 Play Labs For Loops 8a_instruction: "ჩვენი თამაშის დასასრულებლად გვჭირდება \"ნაზრდის\" ცვლადის დაბრუნება! გადავაბათ ის თამაშის დონეს.\r\n\r\n1) დათვალეთ, რამდენჯერ დააჭერენ ჯადოქარს.\r\n2) თუ ჯადოქარს ათჯერ მაინც დააჭერენ, სანამ ძაღლი 30-მდე ავა,  გაზარდეთ \"ნაზრდი\" ერთით და დაიწყეთ თავიდან.\r\n3) თუ ჯადოქარს ათჯერ მაინც არ დააჭერენ, თამაში სრულდება."
-      Course 4 Playlab For Loop Freeplay_instruction: |
-        Freeplay: Use everything you've
-        learned so far to make a game that includes a `for` loop!
-      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \r\n\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \r\n\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
+      Course 4 Playlab For Loop Freeplay_instruction: 'თავისუფალი თამაში: გამოიყენეთ ყველაფერი, რაც ისწავლეთ, და შექმენით თამაში, რომელიც შეიცავს `for` ციკლს!'
+      Course 4 Playlab For Loops 4b_instruction: "ახლა ორი სიმბოლო ეჯიბრება ერთმანეთს! \r\n\r\nთითოეული გადაადგილდება `counter` ნაბიჯით, მაგრამ მათს `counter-ებს` განსხვავებული მნიშვნელობები აქვთ `for` ციკლის გამო.  \r\n\r\nშეგიძლიათ ისე შეცვალოთ ერთ-ერთი ციკლის ნამატი, რომ რბოლა ფრედ დასრულდეს?"
       Course 4 Playlab For Loops 5b_instruction: |
-        Adjust the interval on these `for`
-        loops so that the two characters end in the exact same place.
-      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\r\n\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
+        დაარეგულირეთ ინტერვალი ამ `for` 
+        ციკლებში ისე, რომ ორი სიმბოლო დასრულდეს ერთსა და იმავე ადგილას.
+      Course 4 Playlab For Loops 6b_instruction: "შეასწორეთ `for` ციკლი და შექმენით სახალისო თამაში!\r\n\r\nდააჭირეთ \"Run-ს\" და დაკლიკეთ \"Madame\nUnicorn\" ოთხჯერ, რომ მოიგოთ. "
       Course 4 SCF 1_instruction: გამოიყენეთ შეთავაზებული ფუნქციები და დახატეთ ექვსკუთხედების ოთხი რიგი. ამჩნევთ, რომ ლუწნომრიანი რიგები მარჯვნივ არის გაწეული?
       Course 4 SCF 1a_instruction: ხვდებით, როგორ შეაგროვოთ მთელი ნექტარი ბლოკების მინიმალური რაოდენობით?
       Course 4 SCF 1b_instruction: ხვდებით, როგორ შეაგროვოთ მთელი ნექტარი ბლოკების მინიმალური რაოდენობით?
@@ -1281,8 +1276,8 @@ ka:
         say "Hi"?
       course2_playlab_stage17_10_instruction: "Add blocks to the `when run` event\nto change the background and the speed of Waddles.\r\n\r\nPlay the game and\nmove Waddles with the arrows until you score."
       course2_playlab_stage17_11_instruction: |
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
+        შექმენით საკუთარი ისტორია. როცა
+        მორჩებით, დააჭირეთ "დასრულებას" და ათამაშეთ მეგობრები.
       course2_playlab_stage17_2_instruction: |
         Can you make Jorge (actor 1) say something,
         then have Olive the Cat (actor 2) say something?
@@ -1293,9 +1288,7 @@ ka:
         Can you write a program that makes
         Jorge (actor 1) move to Olive the Cat, and have Olive say "Hello" when Jorge
         reaches her?
-      course2_playlab_stage17_5_instruction: |
-        Can you write a program to make Octavia
-        say "Hi" when she is clicked?
+      course2_playlab_stage17_5_instruction: 'შეგიძლიათ, დაწეროთ პროგრამა, რომელიც ოქტავიას ათქმევინებს "Hi"–ს, როცა მას დააჭერენ?'
       course2_playlab_stage17_6_instruction: |
         Now, write a program to make Waddles
         move around using the up / down / left /right keys to hit all of the targets!
@@ -1307,24 +1300,24 @@ ka:
       course2_playlab_stage17_9_instruction: "Can you add a block to score a point\nwhen Waddles runs into Octavia (actor 3)? \r\nPlay the game and move Waddles\nwith the arrows until you score!"
       course3_playlab_stage16_1_instruction: 'შეგიძლიათ ათქმევინოთ ამ ძაღლს "ჰეი, სამყარო"?'
       course3_playlab_stage16_2_instruction: |
-        Can you make the dog say something
-        and then have the cat say something afterwards?
+        შეგიძლიათ, ძაღლს ათქმევინოთ რაიმე
+        და ამის შემდეგ კატასაც ათქმევინოთ?
       course3_playlab_stage16_3_instruction: |
-        Can you write a program to make this
-        dog move to the cat?
+        შეგიძლიათ, დაწეროთ პროგრამა, რომელიც ამ
+        ძაღლს გადააადგილებს კატისკენ?
       course3_playlab_stage16_4_instruction: |
         Can you write a program that makes
         the dog move to the cat, and have the cat say "hello" when the dog reaches
         him?
       course3_playlab_stage16_5_instruction: |
-        Can you add a block to make the octopus
-        happy?
+        შეგიძლიათ, ბლოკი დაამატოთ, რათა რვაფეხა
+        გააბედნიეროთ?
       course3_playlab_stage16_6_instruction: |
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
+        შექმენით საკუთარი ისტორია. როცა
+        მორჩებით, დააჭირეთ "დასრულებას" და ათამაშეთ მეგობრები.
       course3_playlab_stage17_1_instruction: |
-        Can you write a program to make the
-        octopus say "hello" when it is clicked?
+        შეგიძიათ, დაწეროთ პროგრამა, რომელიც
+        რვაფეხას ათქმევინებს "hello"–ს, როცა მას დააჭერენ?
       course3_playlab_stage17_2_instruction: |
         Can you write a program to make Waddles
         move around using the up / down / left /right keys to hit all of the targets?
@@ -1344,8 +1337,8 @@ ka:
         Can you add blocks to change the background
         and the speed of Waddles, and then move him with the arrows until you score?
       course3_playlab_stage17_7_instruction: |
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
+        შექმენით საკუთარი ისტორია. როცა
+        მორჩებით, დააჭირეთ "დასრულებას" და ათამაშეთ მეგობრები.
       Crack a Caesar Cipher_instruction: ინსტრუქციები
       Crack Random Substitution_instruction: ინსტრუქციები
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
@@ -2068,6 +2061,9 @@ ka:
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_pre1_instruction: |
+        Ruff! Can you help me collect some tennis
+        balls?
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -2096,6 +2092,17 @@ ka:
       grade2_maze_debuggingPre_instruction: |
         Play with these blocks to see what they
         make the bird do!
+      grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro6_instruction: |
+        That’s it!  Now we’re ready to try to solve
+        a few puzzles. 
+      grade2_maze_intro7_instruction: This time, try something a bit more challenging.
+      grade2_maze_intro8_instruction: |
+        This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice.
+      grade2_maze_intro9_instruction: Solve this puzzle.
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?

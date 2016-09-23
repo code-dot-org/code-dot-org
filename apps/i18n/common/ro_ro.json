@@ -5,6 +5,7 @@
   "animationMode": "Animaţie lol",
   "answersVisible": "Răspunsuri vizibile (doar citire)",
   "assessmentSteps": "Pasii ce trebuie urmati pentru evaluare",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Notă: Platforma se blochează automat dupa 24 ore.",
   "backToPreviousLevel": "Înapoi la nivelul anterior",
   "blocklyMessage": "Blockly",
@@ -185,7 +186,7 @@
   "loading": "Se încarcă...",
   "locked": "Blocat",
   "lockFollowing": "Blocați următoarele etape, care sunt în prezent deblocate:",
-  "lockSettings": "Setări de blocare",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Etapa de blocare",
   "lockStageInstructions": "Odată ce timpul a expirat, \"Blocare etapă\" pentru a ascunde întrebările.",
   "lockWhenDone": "Blocați imediat ce studenții au terminat",
@@ -304,7 +305,5 @@
   "when": "când",
   "whenRun": "când rulezi",
   "workspaceHeaderShort": "Spaţiu de lucru: ",
-  "yes": "Da",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Da"
 }

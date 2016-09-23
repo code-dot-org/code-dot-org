@@ -122,7 +122,7 @@
     user_type_teacher: "ගුරු වරයා"
     user_type_student: "ශිෂ්‍යයා"
     field_is_required: "අවශ්‍යයි"
-    accept_terms: You must agree to create an account
+    accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
   signin_form:
     title: "ඔබට ගිණුමක් ඇති නම් ඇතුලු විය හැක"
     login: "විද්‍යුත් තැපැල"
@@ -322,7 +322,7 @@
     student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
       for %{student_name}"
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: "ගුරු මණ්ඩලය"
       student: "ශිෂ්‍යයා"
       viewing_solution: "විසඳුම නරඔනවා"
       try_it_yourself: "ඔබ විසින්ම උත්සහකර බලන්න"

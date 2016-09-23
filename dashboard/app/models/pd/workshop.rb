@@ -190,13 +190,12 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def state
-    case
-      when self.started_at.nil?
-        STATE_NOT_STARTED
-      when self.ended_at.nil?
-        STATE_IN_PROGRESS
-      else
-        STATE_ENDED
+    if self.started_at.nil?
+      STATE_NOT_STARTED
+    elsif self.ended_at.nil?
+      STATE_IN_PROGRESS
+    else
+      STATE_ENDED
     end
   end
 

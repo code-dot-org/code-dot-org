@@ -1367,6 +1367,8 @@ en:
             Simple Encryption: Simple Encryption
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+            Rapid Research - Cybercrime: Rapid Research - Cybercrime
+            Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and Security Dilemmas
         csp5:
           title: CSP Unit 5 - Building Apps
           description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
@@ -1603,6 +1605,7 @@ en:
             Headers and Lists: Headers and Lists
             Designing Web Pages: Designing Web Pages
             Holding: Holding
+            Describing Web pages: Describing Web pages
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1968,3 +1971,20 @@ en:
             'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
             'Lessons 10 - 11: Redundancy and Packets': 'Lessons 10 - 11: Redundancy and Packets'
             'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction on the Internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+        csp1-support:
+          title: CSP Unit 1 Online Support
+          description_short: TeacherSupports for CSP unit 1
+          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding and Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending Text'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction on the Internet'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
