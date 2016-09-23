@@ -8,32 +8,22 @@ en:
           description_short: crwdns24906:0crwdne24906:0
           description_audience: crwdns24905:0crwdne24905:0
           stage:
-            "Artist 1: Intro": crwdns65732:0crwdne65732:0
-            Artist 2: crwdns65733:0crwdne65733:0
             "Artist: Loops": crwdns65734:0crwdne65734:0
             "Artist: Sequence": crwdns65735:0crwdne65735:0
             "Artist: Shapes": crwdns65736:0crwdne65736:0
-            Artists 2: crwdns65737:0crwdne65737:0
-            "Bee 1: Intro": crwdns65738:0crwdne65738:0
-            "Bee 2: Loops": crwdns65739:0crwdne65739:0
             "Bee: Loops": crwdns65740:0crwdne65740:0
             "Bee: Sequence": crwdns65741:0crwdne65741:0
             Building a Foundation: crwdns65742:0crwdne65742:0
-            Flappy non blockly: crwdns65743:0crwdne65743:0
             Getting Loopy: crwdns65744:0crwdne65744:0
             Going Places Safely: crwdns65745:0crwdne65745:0
             Happy Maps: crwdns65746:0crwdne65746:0
             "Jigsaw: Learn to drag and drop": crwdns65747:0crwdne65747:0
-            K-1 Flappy: crwdns65748:0crwdne65748:0
-            "Maze 2: Loops": crwdns65749:0crwdne65749:0
             "Maze: Debugging": crwdns65750:0crwdne65750:0
             "Maze: Loops": crwdns65751:0crwdne65751:0
             "Maze: Sequence": crwdns65752:0crwdne65752:0
             Move it, Move it: crwdns65753:0crwdne65753:0
-            Multi & Match: crwdns65754:0crwdne65754:0
             "Real-life Algorithms: Plant a Seed": crwdns65755:0crwdne65755:0
             Spelling Bee: crwdns65756:0crwdne65756:0
-            Spelling Bee not blockly: crwdns65757:0crwdne65757:0
             "Studio: Create a Story": crwdns65758:0crwdne65758:0
             The Big Event: crwdns65759:0crwdne65759:0
         course2:
@@ -42,39 +32,24 @@ en:
           description_short: crwdns24908:0crwdne24908:0
           description_audience: crwdns24907:0crwdne24907:0
           stage:
-            Artist Debugging: crwdns65760:0crwdne65760:0
-            Artist Functions: crwdns65761:0crwdne65761:0
-            Artist Loops: crwdns65762:0crwdne65762:0
             "Artist: Debugging": crwdns65763:0crwdne65763:0
             "Artist: Loops": crwdns65764:0crwdne65764:0
             "Artist: Nested Loops": crwdns65765:0crwdne65765:0
             "Artist: Sequence": crwdns65766:0crwdne65766:0
-            "Artist: Sequence2": crwdns65767:0crwdne65767:0
-            Bee Conditionals: crwdns65768:0crwdne65768:0
-            Bee Debugging: crwdns65769:0crwdne65769:0
-            Bee Functions: crwdns65770:0crwdne65770:0
-            Bee Loops: crwdns65771:0crwdne65771:0
             "Bee: Conditionals": crwdns65772:0crwdne65772:0
             "Bee: Debugging": crwdns65773:0crwdne65773:0
             "Bee: Loops": crwdns65774:0crwdne65774:0
             Binary Bracelets: crwdns65775:0crwdne65775:0
-            Bounce: crwdns65776:0crwdne65776:0
             Conditionals: crwdns65777:0crwdne65777:0
             Flappy: crwdns65778:0crwdne65778:0
             Getting Loopy: crwdns65779:0crwdne65779:0
             Graph Paper Programming: crwdns65780:0crwdne65780:0
-            Maze Loops: crwdns65781:0crwdne65781:0
             "Maze: Loops": crwdns65782:0crwdne65782:0
             "Maze: Sequence": crwdns65783:0crwdne65783:0
-            "Maze: Sequence2": crwdns65784:0crwdne65784:0
             "Real-life Algorithms: Paper Planes": crwdns65785:0crwdne65785:0
             Relay programming: crwdns65786:0crwdne65786:0
             "Studio: Create a Story": crwdns65787:0crwdne65787:0
-            Suzi: crwdns65788:0crwdne65788:0
-            The Artist: crwdns65789:0crwdne65789:0
-            The Artist Debugging: crwdns65790:0crwdne65790:0
             The Big Event: crwdns65791:0crwdne65791:0
-            The Maze: crwdns65792:0crwdne65792:0
             Your Digital Footprint: crwdns65793:0crwdne65793:0
         course3:
           title: crwdns5855:0crwdne5855:0
@@ -83,51 +58,26 @@ en:
           description_audience: crwdns24909:0crwdne24909:0
           stage:
             Artist: crwdns65794:0crwdne65794:0
-            Artist For Loops: crwdns65795:0crwdne65795:0
-            Artist Functions: crwdns65796:0crwdne65796:0
-            Artist Functions with Parameters: crwdns65797:0crwdne65797:0
-            Artist Functions with Params: crwdns65798:0crwdne65798:0
-            Artist Nested Loops: crwdns65799:0crwdne65799:0
-            Artist2: crwdns65800:0crwdne65800:0
             "Artist: Functions": crwdns65801:0crwdne65801:0
-            "Artist: Functions2": crwdns65802:0crwdne65802:0
             "Artist: Nested Loops": crwdns65803:0crwdne65803:0
-            "Artist: Nested Loops2": crwdns65804:0crwdne65804:0
             "Artist: Patterns": crwdns65805:0crwdne65805:0
-            Bee Conditionals: crwdns65806:0crwdne65806:0
-            Bee Debuggin: crwdns65807:0crwdne65807:0
-            Bee Debugging: crwdns65808:0crwdne65808:0
-            Bee Functions: crwdns65809:0crwdne65809:0
-            Bee Nested Loops: crwdns65810:0crwdne65810:0
             "Bee: Conditionals": crwdns65811:0crwdne65811:0
-            "Bee: Conditionals2": crwdns65812:0crwdne65812:0
             "Bee: Debugging": crwdns65813:0crwdne65813:0
-            "Bee: Debugging2": crwdns65814:0crwdne65814:0
             "Bee: Functions": crwdns65815:0crwdne65815:0
-            "Bee: Functions2": crwdns65816:0crwdne65816:0
             "Bee: Nested Loops": crwdns65817:0crwdne65817:0
-            "Bee: Nested Loops2": crwdns65818:0crwdne65818:0
             Bounce: crwdns65819:0crwdne65819:0
             Computational Thinking: crwdns65820:0crwdne65820:0
             Crowdsourcing: crwdns65821:0crwdne65821:0
             Dice Race: crwdns65822:0crwdne65822:0
             Digital Citizenship: crwdns65823:0crwdne65823:0
-            Farmer - While Loops: crwdns65824:0crwdne65824:0
             "Farmer: While Loops": crwdns65825:0crwdne65825:0
-            "Farmer: While Loops2": crwdns65826:0crwdne65826:0
             Functional Suncatchers: crwdns65827:0crwdne65827:0
             Internet: crwdns65828:0crwdne65828:0
             Maze: crwdns65829:0crwdne65829:0
-            Maze Conditionals: crwdns65830:0crwdne65830:0
-            Maze2: crwdns65831:0crwdne65831:0
             "Maze: Conditionals": crwdns65832:0crwdne65832:0
-            "Maze: Conditionals2": crwdns65833:0crwdne65833:0
             Songwriting: crwdns65834:0crwdne65834:0
-            Songwriting Parameters: crwdns65835:0crwdne65835:0
             "Studio: Create a Game": crwdns65836:0crwdne65836:0
             "Studio: Create a Story": crwdns65837:0crwdne65837:0
-            The Artist: crwdns65838:0crwdne65838:0
-            The Maze: crwdns65839:0crwdne65839:0
         playlab:
           title: crwdns8642:0crwdne8642:0
           description: crwdns8643:0crwdne8643:0
@@ -158,19 +108,15 @@ en:
           description_short: crwdns21792:0crwdne21792:0
           description_audience: crwdns24913:0crwdne24913:0
           stage:
-            "Algorithms: Tangrams": crwdns65844:0crwdne65844:0
             Artist: crwdns65845:0crwdne65845:0
             Artist Binary: crwdns65846:0crwdne65846:0
             "Artist: For Loops": crwdns65847:0crwdne65847:0
             "Artist: Functions": crwdns65848:0crwdne65848:0
             "Artist: Functions with Parameters": crwdns65849:0crwdne65849:0
             "Artist: Variables": crwdns65850:0crwdne65850:0
-            Bee: crwdns65851:0crwdne65851:0
-            Bee Binary: crwdns65852:0crwdne65852:0
             "Bee: For Loops": crwdns65853:0crwdne65853:0
             "Bee: Functions with Parameters": crwdns65854:0crwdne65854:0
             Extreme Challenge - Comprehensive: crwdns65855:0crwdne65855:0
-            Farmer Binary: crwdns65856:0crwdne65856:0
             Maze and Bee: crwdns65857:0crwdne65857:0
             "Play Lab: For Loops": crwdns65858:0crwdne65858:0
             "Play Lab: Functions with Parameters": crwdns65859:0crwdne65859:0
@@ -184,7 +130,6 @@ en:
             "Unplugged: Madlibs": crwdns65867:0crwdne65867:0
             "Unplugged: Songwriting with Parameters": crwdns65868:0crwdne65868:0
             "Unplugged: Tangrams": crwdns65869:0crwdne65869:0
-            Variables: crwdns65870:0crwdne65870:0
         Course4pre:
           title: crwdns35290:0crwdne35290:0
           description: crwdns35291:0crwdne35291:0
@@ -197,7 +142,6 @@ en:
             "Bee: Conditionals": crwdns65875:0crwdne65875:0
             "Bee: Debugging": crwdns65876:0crwdne65876:0
             "Bee: Nested Loops": crwdns65877:0crwdne65877:0
-            Course 4 Prerequisite: crwdns65878:0crwdne65878:0
             "Farmer: While Loops": crwdns65879:0crwdne65879:0
             "Maze: Sequence": crwdns65880:0crwdne65880:0
         usability:
@@ -210,7 +154,6 @@ en:
             Functions and Functions with Parameters: crwdns65883:0crwdne65883:0
             Intro: crwdns65884:0crwdne65884:0
             Variables: crwdns65885:0crwdne65885:0
-            Variables and For Loops: crwdns65886:0crwdne65886:0
         algebra:
           title: crwdns27323:0crwdne27323:0
           description: crwdns27324:0crwdne27324:0
@@ -242,13 +185,11 @@ en:
           description_short: crwdns35312:0crwdne35312:0
           stage:
             Infinity: crwdns65907:0crwdne65907:0
-            Play Lab: crwdns65908:0crwdne65908:0
         algebrademo:
           title: crwdns35315:0crwdne35315:0
           description: crwdns27930:0crwdne27930:0
           description_short: crwdns35316:0crwdne35316:0
           stage:
-            Algebra Demo: crwdns65909:0crwdne65909:0
             Defining Simple Functions: crwdns65910:0crwdne65910:0
             Defining Variables: crwdns65911:0crwdne65911:0
             Evaluation Blocks: crwdns65912:0crwdne65912:0
@@ -259,25 +200,18 @@ en:
           description: crwdns35318:0crwdne35318:0
           description_short: crwdns35319:0crwdne35319:0
           stage:
-            Blockly Basics: crwdns65915:0crwdne65915:0
-            Classroom Culture: crwdns65916:0crwdne65916:0
             Computer Science Pedagogy: crwdns65917:0crwdne65917:0
             Introduction to PD: crwdns65918:0crwdne65918:0
             K-5 Courses: crwdns65919:0crwdne65919:0
-            Navigating the teacher dashboard: crwdns65920:0crwdne65920:0
             Next Steps: crwdns65921:0crwdne65921:0
-            Personal Reflection: crwdns65922:0crwdne65922:0
             "Programming Concept: Conditionals": crwdns65923:0crwdne65923:0
             "Programming Concept: Events": crwdns65924:0crwdne65924:0
             "Programming Concept: Functions": crwdns65925:0crwdne65925:0
             "Programming Concept: Loops": crwdns65926:0crwdne65926:0
-            Programming Concepts: crwdns65927:0crwdne65927:0
             Reflection: crwdns65928:0crwdne65928:0
             Teacher Dashboard: crwdns65929:0crwdne65929:0
             Unplugged lessons: crwdns65930:0crwdne65930:0
-            Ways to go beyond Courses 1, 2, and 3: crwdns65931:0crwdne65931:0
             Writing computer programs: crwdns65932:0crwdne65932:0
-            Writing computer programs in Blockly: crwdns65933:0crwdne65933:0
         netsim:
           title: crwdns29002:0crwdne29002:0
           description: crwdns29004:0crwdne29004:0
@@ -285,25 +219,14 @@ en:
           stage:
             Automatic DNS node: crwdns65934:0crwdne65934:0
             Broadcasting messages: crwdns65935:0crwdne65935:0
-            Internet Simulator: crwdns65936:0crwdne65936:0
             Internet Simulator Freeplay: crwdns65937:0crwdne65937:0
-            Internet Simulator Templates: crwdns65938:0crwdne65938:0
             Manual DNS: crwdns65939:0crwdne65939:0
             Overview and Setup Instructions: crwdns65940:0crwdne65940:0
             Packets and Reliability: crwdns65941:0crwdne65941:0
             Peer to Peer - Sending Ascii: crwdns65942:0crwdne65942:0
             Peer to Peer - Sending Bits on a Shared Wire: crwdns65943:0crwdne65943:0
             Peer to Peer - Sending Numbers: crwdns65944:0crwdne65944:0
-            "Peer to Peer: Sending Ascii": crwdns65945:0crwdne65945:0
-            "Peer to Peer: Sending Bits on a Shared Wire": crwdns65946:0crwdne65946:0
-            "Peer to Peer: Sending Numbers": crwdns65947:0crwdne65947:0
             Routers and addresses: crwdns65948:0crwdne65948:0
-            Routing and DNS: crwdns65949:0crwdne65949:0
-            Sending Bits: crwdns65950:0crwdne65950:0
-            Unit 1: crwdns65951:0crwdne65951:0
-            "Unit 1: Sending Bits": crwdns65952:0crwdne65952:0
-            Unit 2: crwdns65953:0crwdne65953:0
-            "Unit 2: Routing and DNS": crwdns65954:0crwdne65954:0
         pixelation:
           title: crwdns34820:0crwdne34820:0
           description: crwdns34821:0crwdne34821:0
@@ -311,12 +234,9 @@ en:
           stage:
             Black & White Pixelation Freeplay: crwdns65955:0crwdne65955:0
             Black & White Pixelation Tutorial: crwdns65956:0crwdne65956:0
-            Black & White Pixelation Widget: crwdns65957:0crwdne65957:0
             Color Pixelation Examples: crwdns65958:0crwdne65958:0
             Color Pixelation Freeplay: crwdns65959:0crwdne65959:0
             Color Pixelation Tutorial: crwdns65960:0crwdne65960:0
-            Color Pixelation Widget: crwdns65961:0crwdne65961:0
-            Pixelation: crwdns65962:0crwdne65962:0
         20-hour:
           title: crwdns35335:0crwdne35335:0
           description: crwdns34824:0crwdne34824:0
@@ -351,7 +271,6 @@ en:
             Applab: crwdns65983:0crwdne65983:0
             Hoc2015 Blockly: crwdns65984:0crwdne65984:0
             Play Lab: crwdns65985:0crwdne65985:0
-            Play Lab 2015: crwdns65986:0crwdne65986:0
             The Artist: crwdns65987:0crwdne65987:0
             The Maze: crwdns65988:0crwdne65988:0
         events:
@@ -399,59 +318,26 @@ en:
           description_short: crwdns35381:0crwdne35381:0
           stage:
             Puzzles: crwdns65998:0crwdne65998:0
-        course4pre:
-          title: crwdns35384:0crwdne35384:0
-          description: crwdns35385:0crwdne35385:0
-          description_short: crwdns23536:0crwdne23536:0
-          stage:
-            "Artist: Functions": crwdns65999:0crwdne65999:0
-            "Artist: Loops": crwdns66000:0crwdne66000:0
-            "Artist: Nested Loops": crwdns66001:0crwdne66001:0
-            "Artist: Sequence": crwdns66002:0crwdne66002:0
-            "Bee: Conditionals": crwdns66003:0crwdne66003:0
-            "Bee: Debugging": crwdns66004:0crwdne66004:0
-            "Bee: Nested Loops": crwdns66005:0crwdne66005:0
-            Course 4 Prerequisite: crwdns66006:0crwdne66006:0
-            "Farmer: While Loops": crwdns66007:0crwdne66007:0
-            "Maze: Sequence": crwdns66008:0crwdne66008:0
         cspunit1:
           title: crwdns36285:0crwdne36285:0
           description: crwdns36287:0crwdne36287:0
           description_short: crwdns36286:0crwdne36286:0
           stage:
-            "Assessment: Encoding Complex Information": crwdns66009:0crwdne66009:0
             Binary Numbers: crwdns66010:0crwdne66010:0
-            Bit Sending Widget: crwdns66011:0crwdne66011:0
             Bytes and File Sizes: crwdns66012:0crwdne66012:0
-            Data Storage: crwdns66013:0crwdne66013:0
             Encode a Complex Thing: crwdns66014:0crwdne66014:0
             Encoding B&W Images: crwdns66015:0crwdne66015:0
             Encoding Color Images: crwdns66016:0crwdne66016:0
             Encoding Numbers in the Real World: crwdns66017:0crwdne66017:0
             Encoding and Sending Text: crwdns66018:0crwdne66018:0
-            Innovation: crwdns66019:0crwdne66019:0
-            Lesson 1: crwdns66020:0crwdne66020:0
-            Lesson 14: crwdns66021:0crwdne66021:0
-            Lesson 14 v2: crwdns66022:0crwdne66022:0
-            Lesson 15: crwdns66023:0crwdne66023:0
-            Lesson 2: crwdns66024:0crwdne66024:0
-            Lesson 3: crwdns66025:0crwdne66025:0
-            Lesson 4: crwdns66026:0crwdne66026:0
-            Lesson 5: crwdns66027:0crwdne66027:0
-            Lesson 6: crwdns66028:0crwdne66028:0
-            Lesson 7: crwdns66029:0crwdne66029:0
-            Lesson 8: crwdns66030:0crwdne66030:0
-            Lesson14: crwdns66031:0crwdne66031:0
             Lossy Compression and File Formats: crwdns66032:0crwdne66032:0
             Number Systems: crwdns66033:0crwdne66033:0
             Personal Innovations: crwdns66034:0crwdne66034:0
-            "Practice PT: Encode a Complex Thing": crwdns66035:0crwdne66035:0
             Sending Binary Messages: crwdns66036:0crwdne66036:0
             Sending Binary Messages with the Internet Simulator: crwdns66037:0crwdne66037:0
             Sending Bits in the Real World: crwdns66038:0crwdne66038:0
             Sending Complex Messages: crwdns66039:0crwdne66039:0
             Sending Formatted Text: crwdns66040:0crwdne66040:0
-            Sending More Complex Messages: crwdns66041:0crwdne66041:0
             Sending Numbers: crwdns66042:0crwdne66042:0
             Text Compression: crwdns66043:0crwdne66043:0
         algebraPD:
@@ -459,45 +345,12 @@ en:
           description: crwdns35394:0crwdne35394:0
           description_short: crwdns43238:0crwdne43238:0
           stage:
-            Booleans: crwdns66044:0crwdne66044:0
-            "Calc: Defining Variables": crwdns66045:0crwdne66045:0
-            "Calc: Evaluation Blocks": crwdns66046:0crwdne66046:0
-            Computer Science Pedagogy: crwdns66047:0crwdne66047:0
-            Conditionals and Piecewise Functions: crwdns66048:0crwdne66048:0
-            Contracts: crwdns66049:0crwdne66049:0
             Course Overview: crwdns66050:0crwdne66050:0
-            Design Recipe Practice: crwdns66051:0crwdne66051:0
-            "Eval: Boolean Operators": crwdns66052:0crwdne66052:0
-            "Eval: Conditionals": crwdns66053:0crwdne66053:0
-            "Eval: Defining Functions": crwdns66054:0crwdne66054:0
-            "Eval: Functions": crwdns66055:0crwdne66055:0
-            "Eval: Strings and Images": crwdns66056:0crwdne66056:0
-            "Eval: Writing Contracts": crwdns66057:0crwdne66057:0
             Evaluation Blocks: crwdns66058:0crwdne66058:0
             Introduction to PD: crwdns66059:0crwdne66059:0
-            "Play Lab: Animation (Big Game)": crwdns66060:0crwdne66060:0
-            "Play Lab: Boolean (Big Game)": crwdns66061:0crwdne66061:0
-            "Play Lab: Booleans": crwdns66062:0crwdne66062:0
-            "Play Lab: Collision Detection (Big Game)": crwdns66063:0crwdne66063:0
-            "Play Lab: Defining Functions": crwdns66064:0crwdne66064:0
-            "Play Lab: Defining Variables (Big Game)": crwdns66065:0crwdne66065:0
             Preparing for in-person PD: crwdns66066:0crwdne66066:0
-            Rocket-Height: crwdns66067:0crwdne66067:0
-            Sam the Bat: crwdns66068:0crwdne66068:0
-            Simple Function Definition: crwdns66069:0crwdne66069:0
-            Strings and Images: crwdns66070:0crwdne66070:0
             Teacher Dashboard: crwdns66071:0crwdne66071:0
-            The Design Recipe: crwdns66072:0crwdne66072:0
-            "Unplugged: Booleans": crwdns66073:0crwdne66073:0
-            "Unplugged: Collision Detection and the Distance Formula": crwdns66074:0crwdne66074:0
-            "Unplugged: Conditionals and Piecewise Functions": crwdns66075:0crwdne66075:0
-            "Unplugged: Contracts": crwdns66076:0crwdne66076:0
-            "Unplugged: The Design Recipe": crwdns66077:0crwdne66077:0
-            "Unplugged: Video Games and Coordinate Planes": crwdns66078:0crwdne66078:0
             Why Computer Science belongs in Algebra: crwdns66079:0crwdne66079:0
-            Your Game - Animation: crwdns66080:0crwdne66080:0
-            Your Game - Booleans: crwdns66081:0crwdne66081:0
-            Your Game - Defining Variables: crwdns66082:0crwdne66082:0
         algPDmiami:
           title: crwdns35428:0crwdne35428:0
           description: crwdns35429:0crwdne35429:0
@@ -507,7 +360,6 @@ en:
             Design Recipe Practice: crwdns66084:0crwdne66084:0
             Evaluation Blocks: crwdns66085:0crwdne66085:0
             Luigi's Pizza: crwdns66086:0crwdne66086:0
-            "Play Lab: Collision Detection (Big Game)": crwdns66087:0crwdne66087:0
             Rocket-Height: crwdns66088:0crwdne66088:0
             Sam the Bat: crwdns66089:0crwdne66089:0
             Strings and Images: crwdns66090:0crwdne66090:0
@@ -533,7 +385,6 @@ en:
             Preparing for in-person PD: crwdns66100:0crwdne66100:0
             Teaching Strategies: crwdns66101:0crwdne66101:0
             What is CSP?: crwdns66102:0crwdne66102:0
-            new stage: crwdns66103:0crwdne66103:0
         CSPLessonSamples:
           title: crwdns36056:0crwdne36056:0
           description: crwdns43242:0crwdne43242:0
@@ -552,7 +403,6 @@ en:
             Preparing for in-person PD: crwdns66109:0crwdne66109:0
             Teaching Strategies: crwdns66110:0crwdne66110:0
             What is ECS?: crwdns66111:0crwdne66111:0
-            reference: crwdns66112:0crwdne66112:0
         sciencePD:
           title: crwdns37925:0crwdne37925:0
           description: crwdns37926:0crwdne37926:0
@@ -566,7 +416,6 @@ en:
             Introduction to PD: crwdns66118:0crwdne66118:0
             Introduction to StarLogo Nova: crwdns66119:0crwdne66119:0
             Post-Survey: crwdns66120:0crwdne66120:0
-            Pre-Workshop Online Component: crwdns66121:0crwdne66121:0
             The Tutorial: crwdns66122:0crwdne66122:0
             Using Computer Models in Science: crwdns66123:0crwdne66123:0
             Using Models in the Classroom: crwdns66124:0crwdne66124:0
@@ -589,96 +438,34 @@ en:
           description_short: crwdns37942:0crwdne37942:0
           stage:
             APIs and Function Parameters: crwdns66128:0crwdne66128:0
-            Arrays and Loops_ Altering Images: crwdns66129:0crwdne66129:0
-            Arrays and Loops_ Hidden Images: crwdns66130:0crwdne66130:0
-            Arrays_ Intro: crwdns66131:0crwdne66131:0
-            Arrays_ Photo Album: crwdns66132:0crwdne66132:0
             Beyond Buttons Toward Apps: crwdns66133:0crwdne66133:0
-            Buttons on the Screen: crwdns66134:0crwdne66134:0
             Canvas and Arrays in Apps: crwdns66135:0crwdne66135:0
-            Chained Conditionals: crwdns66136:0crwdne66136:0
-            Chained and Nested Conditionals: crwdns66137:0crwdne66137:0
-            Chained and Nested Conditionals with Movie Bot: crwdns66138:0crwdne66138:0
-            Chatbot Challenge: crwdns66139:0crwdne66139:0
-            Clicker Game: crwdns66140:0crwdne66140:0
-            Clicker Variable Basics: crwdns66141:0crwdne66141:0
-            Clicker v.1 -  Variable Basics: crwdns66142:0crwdne66142:0
             Compound Conditional Logic: crwdns66143:0crwdne66143:0
-            Compound Conditionals: crwdns66144:0crwdne66144:0
-            Compound Conditionals with Movie Bot: crwdns66145:0crwdne66145:0
-            Conditional Basics: crwdns66146:0crwdne66146:0
-            Conditionals with Movie Bot: crwdns66147:0crwdne66147:0
-            Controlling Memory and Program Flow: crwdns66148:0crwdne66148:0
             Controlling Memory with Variables: crwdns66149:0crwdne66149:0
-            Cookie Clicker: crwdns66150:0crwdne66150:0
-            Cookie Clicker 1.0 DEPRECIATED: crwdns66151:0crwdne66151:0
             Creating Functions: crwdns66152:0crwdne66152:0
-            Creating Procedures - Part 1: crwdns66153:0crwdne66153:0
-            Creating Procedures - Part 2: crwdns66154:0crwdne66154:0
             Creating functions with Parameters: crwdns66155:0crwdne66155:0
-            Design a Digital Scene: crwdns66156:0crwdne66156:0
-            Digital Assistant Challenge: crwdns66157:0crwdne66157:0
             Digital Assistant Project: crwdns66158:0crwdne66158:0
             Event-Driven Programming and Debugging: crwdns66159:0crwdne66159:0
             Events Unplugged: crwdns66160:0crwdne66160:0
-            Functions: crwdns66161:0crwdne66161:0
             Functions and Top-Down Design: crwdns66162:0crwdne66162:0
             Functions with Return Values: crwdns66163:0crwdne66163:0
-            Getting User Input: crwdns66164:0crwdne66164:0
-            Getting to know AppLab: crwdns66165:0crwdne66165:0
             Image Scroller with Key Events: crwdns66166:0crwdne66166:0
-            Images are Arrays: crwdns66167:0crwdne66167:0
-            Improving Digital Assistant with Conditionals: crwdns66168:0crwdne66168:0
-            "Improving Digital Assistant: Complex Conditionals": crwdns66169:0crwdne66169:0
-            "Improving Digital Assistant: Conditionals": crwdns66170:0crwdne66170:0
-            "Improving Digital Assistant: Functions with Return": crwdns66171:0crwdne66171:0
-            Improving the Clicker Game: crwdns66172:0crwdne66172:0
-            Intelligent Personal Assistant Challenge: crwdns66173:0crwdne66173:0
             Introducing Design Mode: crwdns66174:0crwdne66174:0
             Introduction to Arrays: crwdns66175:0crwdne66175:0
             Introduction to Conditional Logic: crwdns66176:0crwdne66176:0
-            Introduction to Digital Assistant: crwdns66177:0crwdne66177:0
-            Introduction to Digital Assistant Project: crwdns66178:0crwdne66178:0
             Introduction to Digital Assistants: crwdns66179:0crwdne66179:0
-            Layers of Abstraction and Programming Efficiency: crwdns66180:0crwdne66180:0
             Looping and Random Numbers: crwdns66181:0crwdne66181:0
-            Looping and Random Numbers - Under the Sea: crwdns66182:0crwdne66182:0
             Loops and Simulations: crwdns66183:0crwdne66183:0
-            More Variables (2 days): crwdns66184:0crwdne66184:0
-            Multi-screen App: crwdns66185:0crwdne66185:0
             Multi-screen Apps: crwdns66186:0crwdne66186:0
-            Natural Language Processing: crwdns66187:0crwdne66187:0
-            Natural Language Processing and Chat Bots: crwdns66188:0crwdne66188:0
-            On Beyond Buttons: crwdns66189:0crwdne66189:0
-            Permanent Data Storage and Clicker Completion: crwdns66190:0crwdne66190:0
             Practice PT - Design a Digital Scene: crwdns66191:0crwdne66191:0
             "Practice PT: Create": crwdns66192:0crwdne66192:0
-            "Practice PT: Digital Assistant": crwdns66193:0crwdne66193:0
             Processing Arrays: crwdns66194:0crwdne66194:0
-            Sarah testing project backed levels: crwdns66195:0crwdne66195:0
-            Scene Design Part 1 - Plan: crwdns66196:0crwdne66196:0
-            "Scene Design Part 1: Plan": crwdns66197:0crwdne66197:0
-            Scene Design Part 2 - Code: crwdns66198:0crwdne66198:0
-            "Scene Design Part 2: Code": crwdns66199:0crwdne66199:0
-            Scene Design Part 3 - Reflect: crwdns66200:0crwdne66200:0
-            "Scene Design Part 3: Reflect": crwdns66201:0crwdne66201:0
-            Strings and Substrings: crwdns66202:0crwdne66202:0
             The Need For Programming Languages: crwdns66203:0crwdne66203:0
             Understanding Program Flow and Logic: crwdns66204:0crwdne66204:0
-            Unfortunate Events: crwdns66205:0crwdne66205:0
-            Unplugged Events Activity -  Mission Unsortable: crwdns66206:0crwdne66206:0
             User Input and Strings: crwdns66207:0crwdne66207:0
             Using Simple Commands: crwdns66208:0crwdne66208:0
             Using Variables in Apps: crwdns66209:0crwdne66209:0
-            Variable Basics DEPRECIATED: crwdns66210:0crwdne66210:0
-            Variables: crwdns66211:0crwdne66211:0
-            Variables Conceptorial Fodder: crwdns66212:0crwdne66212:0
-            "Variables: Create, Assign, and Read": crwdns66213:0crwdne66213:0
-            "Variables: Increment, Decrement, Display, and Scope": crwdns66214:0crwdne66214:0
-            While Loop Basics: crwdns66215:0crwdne66215:0
             While Loops: crwdns66216:0crwdne66216:0
-            While Loops_ Counting Flips: crwdns66217:0crwdne66217:0
-            title_short: crwdns66218:0crwdne66218:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -687,7 +474,6 @@ en:
             Computer Science Pedagogy: crwdns66219:0crwdne66219:0
             Course Overview: crwdns66220:0crwdne66220:0
             Evaluation Blocks: crwdns66221:0crwdne66221:0
-            Introduction to the new Computer Science in Algebra: crwdns66222:0crwdne66222:0
             Next Steps: crwdns66223:0crwdne66223:0
             Strings and Images: crwdns66224:0crwdne66224:0
             Teacher Dashboard: crwdns66225:0crwdne66225:0
@@ -723,7 +509,6 @@ en:
           description_short: crwdns43256:0crwdne43256:0
           logo_image: crwdns38024:0crwdne38024:0
           stage:
-            Computer Science Pedagogy: crwdns66240:0crwdne66240:0
             Course Overview: crwdns66241:0crwdne66241:0
             Evaluation Blocks: crwdns66242:0crwdne66242:0
             Introduction to PD: crwdns66243:0crwdne66243:0
@@ -736,7 +521,6 @@ en:
           description_short: crwdns43257:0crwdne43257:0
           logo_image: crwdns38034:0crwdne38034:0
           stage:
-            Computer Science Pedagogy: crwdns66247:0crwdne66247:0
             Course Overview: crwdns66248:0crwdne66248:0
             Evaluation Blocks: crwdns66249:0crwdne66249:0
             Introduction to PD: crwdns66250:0crwdne66250:0
@@ -784,21 +568,11 @@ en:
           description: crwdns43263:0crwdne43263:0
           description_short: crwdns43264:0crwdne43264:0
           stage:
-            Common Forms: crwdns66278:0crwdne66278:0
             Creating Breeds in Starlogo Nova: crwdns66279:0crwdne66279:0
-            Curricular Modules: crwdns66280:0crwdne66280:0
-            Discussion Forum: crwdns66281:0crwdne66281:0
-            Discussion Forums: crwdns66282:0crwdne66282:0
             Epidemic Model Extensions: crwdns66283:0crwdne66283:0
-            Evaluation: crwdns66284:0crwdne66284:0
-            Guides and Resources: crwdns66285:0crwdne66285:0
-            Implementation Planning: crwdns66286:0crwdne66286:0
-            Phase 2 Summer Workshop: crwdns66287:0crwdne66287:0
-            Resources: crwdns66288:0crwdne66288:0
             Review StarLogo Nova: crwdns66289:0crwdne66289:0
             Revisiting Agent Movement: crwdns66290:0crwdne66290:0
             Thinking Ahead to Implementation: crwdns66291:0crwdne66291:0
-            Welcome: crwdns66292:0crwdne66292:0
             Welcome!: crwdns66293:0crwdne66293:0
             Wrap-Up: crwdns66294:0crwdne66294:0
         sciencePD3:
@@ -806,13 +580,8 @@ en:
           description: crwdns62351:0crwdne62351:0
           description_short: crwdns62352:0crwdne62352:0
           stage:
-            Common Forms: crwdns66295:0crwdne66295:0
-            Curricular Modules: crwdns66296:0crwdne66296:0
             Decode and Share: crwdns66297:0crwdne66297:0
-            Discussion Forums: crwdns66298:0crwdne66298:0
-            Guides and Resources: crwdns66299:0crwdne66299:0
             Mystery Model: crwdns66300:0crwdne66300:0
-            Welcome: crwdns66301:0crwdne66301:0
             Welcome Back!: crwdns66302:0crwdne66302:0
         Testing:
           title: crwdns43268:0crwdne43268:0
@@ -829,47 +598,27 @@ en:
             Algorithms Detour - How Routers Learn: crwdns66305:0crwdne66305:0
             Algorithms Detour - Minimum Spanning Tree: crwdns66306:0crwdne66306:0
             Algorithms Detour - Shortest Path: crwdns66307:0crwdne66307:0
-            Algorithms in Networking: crwdns66308:0crwdne66308:0
             Alice and Bob and Asymmetric Keys: crwdns66309:0crwdne66309:0
-            Beyond Sending Bits: crwdns66310:0crwdne66310:0
-            Challenges of the Internet: crwdns66311:0crwdne66311:0
-            Classroom Internet: crwdns66312:0crwdne66312:0
             Cracking the Code: crwdns66313:0crwdne66313:0
-            DNS Simulation: crwdns66314:0crwdne66314:0
             DNS in the Real World: crwdns66315:0crwdne66315:0
             Encryption Algorithms: crwdns66316:0crwdne66316:0
-            Global Impacts of the Internet: crwdns66317:0crwdne66317:0
             HTTP and Abstraction: crwdns66318:0crwdne66318:0
-            HTTP and Abstraction on the Internet: crwdns66319:0crwdne66319:0
-            How HTTP Works: crwdns66320:0crwdne66320:0
-            How Routers Learn: crwdns66321:0crwdne66321:0
-            IP and DNS in the Real World: crwdns66322:0crwdne66322:0
             Invent an Addressing Protocol: crwdns66323:0crwdne66323:0
-            Keys and Passwords: crwdns66324:0crwdne66324:0
             One Way Functions - Ice Cream Vans: crwdns66325:0crwdne66325:0
             Packets and Making a Reliable Internet: crwdns66326:0crwdne66326:0
-            Packets in the Real World: crwdns66327:0crwdne66327:0
             Practice PT - Cybersecurity Innovations: crwdns66328:0crwdne66328:0
             Practice PT - The Internet and Society: crwdns66329:0crwdne66329:0
             Public Key Crypto: crwdns66330:0crwdne66330:0
-            Public Key Encryption: crwdns66331:0crwdne66331:0
-            Routers and Addresses: crwdns66332:0crwdne66332:0
-            Routers and Addresses as Numbers: crwdns66333:0crwdne66333:0
             Routers and Redundancy: crwdns66334:0crwdne66334:0
-            Security and Hacking in the Real World: crwdns66335:0crwdne66335:0
             Tell Me a Secret - Encrypting Text: crwdns66336:0crwdne66336:0
             The Internet: crwdns66337:0crwdne66337:0
-            The Internet is for Everyone: crwdns66338:0crwdne66338:0
             The Need for Addressing: crwdns66339:0crwdne66339:0
             The Need for DNS: crwdns66340:0crwdne66340:0
-            The Need for Encryption: crwdns66341:0crwdne66341:0
-            The Need for Packets: crwdns66342:0crwdne66342:0
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
           description_short: crwdns43271:0crwdne43271:0
           stage:
-            Big GAme - Collision Detection: crwdns66343:0crwdne66343:0
             Big Game - Animation: crwdns66344:0crwdne66344:0
             Big Game - Booleans: crwdns66345:0crwdne66345:0
             Big Game - Collision Detection: crwdns66346:0crwdne66346:0
@@ -880,7 +629,6 @@ en:
             Evaluation Blocks: crwdns66351:0crwdne66351:0
             Free Play: crwdns66352:0crwdne66352:0
             Luigi's Pizza: crwdns66353:0crwdne66353:0
-            "Play Lab: Defining Functions": crwdns66354:0crwdne66354:0
             Rocket-Height: crwdns66355:0crwdne66355:0
             Sam the Bat: crwdns66356:0crwdne66356:0
             Strings and Images: crwdns66357:0crwdne66357:0
@@ -900,8 +648,6 @@ en:
             Farmer: crwdns66366:0crwdne66366:0
             Flappy: crwdns66367:0crwdne66367:0
             Free Response: crwdns66368:0crwdne66368:0
-            Frequency: crwdns66369:0crwdne66369:0
-            Game Lab: crwdns66370:0crwdne66370:0
             Gamelab: crwdns66371:0crwdne66371:0
             Jigsaw: crwdns66372:0crwdne66372:0
             Long assessment: crwdns66373:0crwdne66373:0
@@ -924,10 +670,7 @@ en:
             Swapped Levels: crwdns66390:0crwdne66390:0
             Text Compression: crwdns66391:0crwdne66391:0
             TextMatch: crwdns66392:0crwdne66392:0
-            Vigenere: crwdns66393:0crwdne66393:0
             Web Lab: crwdns66394:0crwdne66394:0
-            applab: crwdns66395:0crwdne66395:0
-            online pd?: crwdns66396:0crwdne66396:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -935,7 +678,6 @@ en:
           stage:
             Best Practices for Teaching Computer Science: crwdns66397:0crwdne66397:0
             Booleans: crwdns66398:0crwdne66398:0
-            Computer Science Pedagogy: crwdns66399:0crwdne66399:0
             Course Overview: crwdns66400:0crwdne66400:0
             Defining Functions: crwdns66401:0crwdne66401:0
             Defining Variables: crwdns66402:0crwdne66402:0
@@ -979,33 +721,15 @@ en:
           description: crwdns41857:0crwdne41857:0
           description_short: crwdns43277:0crwdne43277:0
           stage:
-            Unit 1, Day 10: crwdns66428:0crwdne66428:0
             Unit 1, Day 10 Telling a Story with Data: crwdns66429:0crwdne66429:0
-            Unit 1, Day 10. Telling a Story with Data: crwdns66430:0crwdne66430:0
-            Unit 1, Day 11-14: crwdns66431:0crwdne66431:0
             Unit 1, Day 11-14 Data Modeling and Design: crwdns66432:0crwdne66432:0
-            Unit 1, Day 11-14. Data Modeling and Design: crwdns66433:0crwdne66433:0
-            Unit 1, Day 15-16: crwdns66434:0crwdne66434:0
             Unit 1, Day 15-16 Computer Programs and Following Directions: crwdns66435:0crwdne66435:0
-            Unit 1, Day 15-16. Computer Programs and Following Directions: crwdns66436:0crwdne66436:0
-            Unit 1, Day 17-19: crwdns66437:0crwdne66437:0
             Unit 1, Day 17-19 What Is Intelligence?: crwdns66438:0crwdne66438:0
-            Unit 1, Day 17-19. What Is Intelligence?: crwdns66439:0crwdne66439:0
-            Unit 1, Days 1-2: crwdns66440:0crwdne66440:0
-            '0': crwdns66441:0crwdne66441:0
+            0: crwdns66441:0crwdne66441:0
             1: crwdns66442:0crwdne66442:0
-            Unit 1, Days 1-2. What Is a Computer?: crwdns66443:0crwdne66443:0
-            "Unit 1, Days 1-2: What Is a Computer?": crwdns66444:0crwdne66444:0
-            Unit 1, Days 3-4: crwdns66445:0crwdne66445:0
             Unit 1, Days 3-4 Buying a Computer: crwdns66446:0crwdne66446:0
-            Unit 1, Days 3-4. Buying a Computer: crwdns66447:0crwdne66447:0
-            Unit 1, Days 5-7: crwdns66448:0crwdne66448:0
             Unit 1, Days 5-7 Searching and Web 2: crwdns66449:0crwdne66449:0
-            Unit 1, Days 5-7 Searching and Web 2.0: crwdns66450:0crwdne66450:0
-            Unit 1, Days 5-7. Searching and Web 2.0: crwdns66451:0crwdne66451:0
-            Unit 1, Days 8-9: crwdns66452:0crwdne66452:0
             Unit 1, Days 8-9 Impact of Computers and Communication: crwdns66453:0crwdne66453:0
-            Unit 1, Days 8-9. Impact of Computers and Communication: crwdns66454:0crwdne66454:0
             Welcome!: crwdns66455:0crwdne66455:0
             Wrap-up: crwdns66456:0crwdne66456:0
         equityPD:
@@ -1013,35 +737,19 @@ en:
           description: crwdns41868:0crwdne41868:0
           description_short: crwdns43278:0crwdne43278:0
           stage:
-            Code.org Equity PD: crwdns66457:0crwdne66457:0
             Equity PD: crwdns66458:0crwdne66458:0
-            Equity Vs. Equality: crwdns66459:0crwdne66459:0
-            Introduction to the Equity PD: crwdns66460:0crwdne66460:0
             Necessary Background: crwdns66461:0crwdne66461:0
         algebraPD2:
           title: crwdns42133:0crwdne42133:0
           description: crwdns42134:0crwdne42134:0
           description_short: crwdns43279:0crwdne43279:0
           stage:
-            Best Practices for Teaching Computer Science: crwdns66462:0crwdne66462:0
-            Booleans: crwdns66463:0crwdne66463:0
-            Computer Science Pedagogy: crwdns66464:0crwdne66464:0
-            Course Overview: crwdns66465:0crwdne66465:0
-            Defining Functions: crwdns66466:0crwdne66466:0
-            Defining Variables: crwdns66467:0crwdne66467:0
-            "Eval: Conditionals": crwdns66468:0crwdne66468:0
-            Evaluation Blocks: crwdns66469:0crwdne66469:0
             Lesson Prep: crwdns66470:0crwdne66470:0
-            Next Steps: crwdns66471:0crwdne66471:0
-            Practice with Puzzles: crwdns66472:0crwdne66472:0
-            Rocket-Height: crwdns66473:0crwdne66473:0
-            Strings and Images: crwdns66474:0crwdne66474:0
             Teacher Dashboard: crwdns66475:0crwdne66475:0
             Teaching with Puzzles: crwdns66476:0crwdne66476:0
             Teaching with the Design Recipe: crwdns66477:0crwdne66477:0
             The Design Recipe: crwdns66478:0crwdne66478:0
             Welcome!: crwdns66479:0crwdne66479:0
-            Writing Contracts: crwdns66480:0crwdne66480:0
         sciencePD2b:
           title: crwdns43280:0crwdne43280:0
           description: crwdns43282:0crwdne43282:0
@@ -1133,14 +841,10 @@ en:
           stage:
             Getting Started: crwdns66530:0crwdne66530:0
             Lesson Chunk 1- Sending Binary Messages: crwdns66531:0crwdne66531:0
-            "Lesson Chunk 1: Sending Binary Messages": crwdns66532:0crwdne66532:0
             Lesson Chunk 2- Encoding and Sending Numbers: crwdns66533:0crwdne66533:0
-            "Lesson Chunk 2: Encoding and Sending Numbers": crwdns66534:0crwdne66534:0
             Lesson Chunk 3- Encoding and Sending Text: crwdns66535:0crwdne66535:0
-            "Lesson Chunk 3: Encoding and Sending Text": crwdns66536:0crwdne66536:0
             Lesson Chunk 4- Compressing and Storing Information: crwdns66537:0crwdne66537:0
             Practice PT: crwdns66538:0crwdne66538:0
-            Ramping Up: crwdns66539:0crwdne66539:0
             Welcome to the Course!: crwdns66540:0crwdne66540:0
             Wrap Up and Next Steps: crwdns66541:0crwdne66541:0
         odometer:
@@ -1205,93 +909,33 @@ en:
           description_short: crwdns48425:0crwdne48425:0
           stage:
             Close & Next Steps: crwdns66561:0crwdne66561:0
-            Day 1-2 Solving Community Problems with Data: crwdns66562:0crwdne66562:0
-            Day 10-12 Binary Number Systems: crwdns66563:0crwdne66563:0
-            "Day 13-14 Linear and Binary Search: Tower Building Activity": crwdns66564:0crwdne66564:0
-            Day 15-16 Sorting Algorithms: crwdns66565:0crwdne66565:0
-            "Day 17 Minimal Spanning Trees: Muddy City": crwdns66566:0crwdne66566:0
-            Day 18-21 Final Project: crwdns66567:0crwdne66567:0
-            "Day 3 Intro To Problem Solving: Candy Bar Activity": crwdns66568:0crwdne66568:0
-            "Day 4-6 Strategies in Problem Solving: Handshake Activity": crwdns66569:0crwdne66569:0
-            "Day 7-9 Problem Solving: Cornrow Curves": crwdns66570:0crwdne66570:0
             Getting Started: crwdns66571:0crwdne66571:0
             Intro to Unit 2: crwdns66572:0crwdne66572:0
-            Introduction to the Unit 2 Challenge: crwdns66573:0crwdne66573:0
             Lesson Overviews: crwdns66574:0crwdne66574:0
-            Problem Solving: crwdns66575:0crwdne66575:0
             Teaching Strategies: crwdns66576:0crwdne66576:0
             Unit 2 Challenge: crwdns66577:0crwdne66577:0
-            Unit 2 Challenge Creation: crwdns66578:0crwdne66578:0
-            Unit 2 Challenge Planning: crwdns66579:0crwdne66579:0
-            Unit 2 Challenge Planning & Creation: crwdns66580:0crwdne66580:0
-            Unit 2 Challenge Preview: crwdns66581:0crwdne66581:0
-            Unit 2 Overview: crwdns66582:0crwdne66582:0
-            Welcome!: crwdns66583:0crwdne66583:0
         ECSPD3-Unit3:
           title: crwdns48442:0crwdne48442:0
           description: crwdns48444:0crwdne48444:0
           description_short: crwdns48443:0crwdne48443:0
           stage:
             Close & Next Steps: crwdns66584:0crwdne66584:0
-            Day 1-2 Online Experiences: crwdns66585:0crwdne66585:0
-            Day 11-13 Separating HTML and CSS: crwdns66586:0crwdne66586:0
-            "Day 14 HTML: Links": crwdns66587:0crwdne66587:0
-            "Day 15-16 HTML and CSS: Tables, Lists,  Menus": crwdns66588:0crwdne66588:0
-            "Day 15-16 HTML and CSS: Tables, Lists, Menus": crwdns66589:0crwdne66589:0
-            "Day 17-19 HTML and CSS: Create own webpage": crwdns66590:0crwdne66590:0
-            "Day 20-21 HTML and CSS: Adding Enhancements to Site": crwdns66591:0crwdne66591:0
-            Day 22-25 Final Project: crwdns66592:0crwdne66592:0
-            Day 3-4 HTML- Paragraph and Header Tags: crwdns66593:0crwdne66593:0
-            Day 5 HTML - Strong and EM Tags: crwdns66594:0crwdne66594:0
-            Day 6-7 HTML -Images: crwdns66595:0crwdne66595:0
-            Day 8-10 Introduction to CSS: crwdns66596:0crwdne66596:0
             Getting Started: crwdns66597:0crwdne66597:0
-            Intro to Unit 2: crwdns66598:0crwdne66598:0
             Intro to Unit 3: crwdns66599:0crwdne66599:0
-            Introduction to the Unit 3 Challenge: crwdns66600:0crwdne66600:0
             Teaching Strategies: crwdns66601:0crwdne66601:0
-            Unit 2 Challenge: crwdns66602:0crwdne66602:0
-            Unit 2 Challenge Preview: crwdns66603:0crwdne66603:0
             Unit 3 Challenge: crwdns66604:0crwdne66604:0
-            Unit 3 Challenge Planning & Creation: crwdns66605:0crwdne66605:0
-            Unit 3 Challenge Preview: crwdns66606:0crwdne66606:0
             Unit 3 Day-by-Day: crwdns66607:0crwdne66607:0
-            Unit 3 Overview: crwdns66608:0crwdne66608:0
-            Welcome!: crwdns66609:0crwdne66609:0
         ECSPD3-Unit4:
           title: crwdns48462:0crwdne48462:0
           description: crwdns48464:0crwdne48464:0
           description_short: crwdns48463:0crwdne48463:0
           stage:
             Close & Next Steps: crwdns66610:0crwdne66610:0
-            "Day 1 Scratch: Intro": crwdns66611:0crwdne66611:0
-            "Day 10-13 Scratch: Broadcasting": crwdns66612:0crwdne66612:0
-            "Day 14 Scratch: Variables": crwdns66613:0crwdne66613:0
-            "Day 15 Scratch: Conditionals": crwdns66614:0crwdne66614:0
-            "Day 16-17 Scratch: AND OR and Randomness": crwdns66615:0crwdne66615:0
-            "Day 18 Scratch: Rock Paper Scissors": crwdns66616:0crwdne66616:0
-            "Day 19 Scratch: Timer": crwdns66617:0crwdne66617:0
-            "Day 2-3 Scratch: Name Project": crwdns66618:0crwdne66618:0
-            "Day 20-23 Scratch: Timing Game": crwdns66619:0crwdne66619:0
-            "Day 24 Scratch: Games": crwdns66620:0crwdne66620:0
-            Day 25-30 Final Project: crwdns66621:0crwdne66621:0
-            "Day 4 Scratch: Creating Dialogue": crwdns66622:0crwdne66622:0
-            "Day 5-6 Scratch: Moving Sprites": crwdns66623:0crwdne66623:0
-            "Day 7-8 Scratch: Event Driven Programming": crwdns66624:0crwdne66624:0
-            Day 9 Broadcasting Role Play: crwdns66625:0crwdne66625:0
             Getting Started: crwdns66626:0crwdne66626:0
             Intro to Unit 4: crwdns66627:0crwdne66627:0
-            Introduction to the Unit 4 Challenge: crwdns66628:0crwdne66628:0
             Teaching Strategies: crwdns66629:0crwdne66629:0
-            Unit 3 Day-by-Day: crwdns66630:0crwdne66630:0
             Unit 4 Challenge: crwdns66631:0crwdne66631:0
-            Unit 4 Challenge Creation: crwdns66632:0crwdne66632:0
-            Unit 4 Challenge Planning: crwdns66633:0crwdne66633:0
-            Unit 4 Challenge Planning & Creation: crwdns66634:0crwdne66634:0
-            Unit 4 Challenge Preview: crwdns66635:0crwdne66635:0
             Unit 4 Day-by-Day: crwdns66636:0crwdne66636:0
-            Unit 4 Overview: crwdns66637:0crwdne66637:0
-            Welcome!: crwdns66638:0crwdne66638:0
         ECSPD3-Unit5:
           title: crwdns48485:0crwdne48485:0
           description: crwdns48487:0crwdne48487:0
@@ -1301,11 +945,8 @@ en:
             Getting Started: crwdns66640:0crwdne66640:0
             Introduction to the Unit 5 Challenge: crwdns66641:0crwdne66641:0
             Share out and Submit: crwdns66642:0crwdne66642:0
-            Teaching Strategies: crwdns66643:0crwdne66643:0
-            Unit 5 Challenge Planning & Creation: crwdns66644:0crwdne66644:0
             Unit 5 Overview: crwdns66645:0crwdne66645:0
             Unit 5 lessons: crwdns66646:0crwdne66646:0
-            Welcome!: crwdns66647:0crwdne66647:0
         ECSPD3-Unit6:
           title: crwdns48493:0crwdne48493:0
           description: crwdns48495:0crwdne48495:0
@@ -1313,68 +954,40 @@ en:
           stage:
             Alternative Ideas for Unit 6: crwdns66648:0crwdne66648:0
             Getting Started: crwdns66649:0crwdne66649:0
-            Introduction to the Unit 6 Challenge: crwdns66650:0crwdne66650:0
             Share out and Submit: crwdns66651:0crwdne66651:0
-            Teaching Strategies: crwdns66652:0crwdne66652:0
             Unit 6 Challenge: crwdns66653:0crwdne66653:0
-            Unit 6 Challenge Planning & Creation: crwdns66654:0crwdne66654:0
             Unit 6 Overview: crwdns66655:0crwdne66655:0
             Unit 6 lessons: crwdns66656:0crwdne66656:0
-            Welcome!: crwdns66657:0crwdne66657:0
         cspunit4draft:
           title: crwdns48501:0crwdne48501:0
           description: crwdns48503:0crwdne48503:0
           description_short: crwdns48502:0crwdne48502:0
           stage:
-            APIs and Access to Large Data Sets: crwdns66658:0crwdne66658:0
-            Building Apps Using Structured Data: crwdns66659:0crwdne66659:0
             Check Your Assumptions: crwdns66660:0crwdne66660:0
             Cleaning Data: crwdns66661:0crwdne66661:0
-            Collecting Personal Information: crwdns66662:0crwdne66662:0
             Compiling Data: crwdns66663:0crwdne66663:0
             Creating Javascript Objects: crwdns66664:0crwdne66664:0
             Creating Summary Tables: crwdns66665:0crwdne66665:0
-            "Data App Part 1: Brainstorm": crwdns66666:0crwdne66666:0
-            "Data App Part 2: Data Design": crwdns66667:0crwdne66667:0
-            "Data App Part 3: Code": crwdns66668:0crwdne66668:0
-            "Data App Part 4: App Permissions": crwdns66669:0crwdne66669:0
-            "Data App Part 5: Clean Data": crwdns66670:0crwdne66670:0
-            "Data App Part 6: Sort and Search": crwdns66671:0crwdne66671:0
-            "Data App Part 7: Read Data": crwdns66672:0crwdne66672:0
-            "Data App Part 8: Visualize Data": crwdns66673:0crwdne66673:0
-            "Data App Part 9: Reflect": crwdns66674:0crwdne66674:0
-            Data is the Secret Ingredient: crwdns66675:0crwdne66675:0
             Data, Security, and Privacy: crwdns66676:0crwdne66676:0
-            "Debate: Privacy vs Utility": crwdns66677:0crwdne66677:0
-            "Debate: Privacy vs. Utility": crwdns66678:0crwdne66678:0
             Designing Data Collection: crwdns66679:0crwdne66679:0
             Designing for Your User: crwdns66680:0crwdne66680:0
             Discover a Data Story: crwdns66681:0crwdne66681:0
-            Finding Data: crwdns66682:0crwdne66682:0
             Finding Trends with Visualizations: crwdns66683:0crwdne66683:0
             Good and Bad Data Visualizations: crwdns66684:0crwdne66684:0
             How is Data Collected?: crwdns66685:0crwdne66685:0
-            Identifying People with Data: crwdns66686:0crwdne66686:0
             Import, Export, and Visualize Data: crwdns66687:0crwdne66687:0
             Interpreting Data Visualizations: crwdns66688:0crwdne66688:0
-            Interpreting Data from Different Perspectives: crwdns66689:0crwdne66689:0
             Making Data Visualizations: crwdns66690:0crwdne66690:0
             Permanent Data Storage: crwdns66691:0crwdne66691:0
             Permanent Data Storage and Clicker Completion: crwdns66692:0crwdne66692:0
             "Practice Create PT: Data App": crwdns66693:0crwdne66693:0
-            Privacy Policy: crwdns66694:0crwdne66694:0
             Privacy in a Digital World: crwdns66695:0crwdne66695:0
             Privacy vs Utility: crwdns66696:0crwdne66696:0
             Rapid Research - Data Innovations: crwdns66697:0crwdne66697:0
-            Reading Data: crwdns66698:0crwdne66698:0
             Reading Records: crwdns66699:0crwdne66699:0
             Search Terms: crwdns66700:0crwdne66700:0
-            Searching: crwdns66701:0crwdne66701:0
-            Sorting: crwdns66702:0crwdne66702:0
-            Structuring Data with JSON: crwdns66703:0crwdne66703:0
             Unique IDs, Delete and Update Records: crwdns66704:0crwdne66704:0
             Using Data in the Real World: crwdns66705:0crwdne66705:0
-            Visualizations in the Real World: crwdns66706:0crwdne66706:0
             Web Requests and APIs: crwdns66707:0crwdne66707:0
             What Data Can Tell Us: crwdns66708:0crwdne66708:0
             Why Make Apps?: crwdns66709:0crwdne66709:0
@@ -1387,7 +1000,6 @@ en:
             Life Science Challenges: crwdns66711:0crwdne66711:0
             Physical Science Challenges: crwdns66712:0crwdne66712:0
             Thinking About Implementation: crwdns66713:0crwdne66713:0
-            Thinking Ahead to Implementation: crwdns66714:0crwdne66714:0
             Welcome!: crwdns66715:0crwdne66715:0
             Wrap-Up: crwdns66716:0crwdne66716:0
         algebraPD3b:
@@ -1412,13 +1024,12 @@ en:
             Getting Started: crwdns66726:0crwdne66726:0
             Share out and Submit: crwdns66727:0crwdne66727:0
             Unit 2 Overview: crwdns66728:0crwdne66728:0
-            Welcome!: crwdns66729:0crwdne66729:0
         duino:
+          title: crwdns67418:0crwdne67418:0
           description: crwdns51268:0crwdne51268:0
           stage:
             Basic Circuits: crwdns66730:0crwdne66730:0
             Blinky Lights: crwdns66731:0crwdne66731:0
-            Experimenting with Arduino stuff: crwdns66732:0crwdne66732:0
             JunkBot: crwdns66733:0crwdne66733:0
             Making Music: crwdns66734:0crwdne66734:0
         Special Fun:
@@ -1433,9 +1044,7 @@ en:
           description_short: crwdns50715:0crwdne50715:0
           description_audience: crwdns50716:0crwdne50716:0
           stage:
-            Halloween 2015: crwdns66736:0crwdne66736:0
             Spring 2016: crwdns66737:0crwdne66737:0
-            Valentine 2016: crwdns66738:0crwdne66738:0
         iceage:
           title: crwdns51272:0crwdne51272:0
           description: crwdns51274:0crwdne51274:0
@@ -1463,35 +1072,24 @@ en:
           description: crwdns51290:0crwdne51290:0
           description_short: crwdns51289:0crwdne51289:0
           stage:
-            Arrays and Loops_ Altering Images: crwdns66751:0crwdne66751:0
-            Arrays and Loops_ Hidden Images: crwdns66752:0crwdne66752:0
-            Arrays_ Intro: crwdns66753:0crwdne66753:0
-            Arrays_ Photo Album: crwdns66754:0crwdne66754:0
             Canvas and Arrays in Apps: crwdns66755:0crwdne66755:0
             Functions with Return Values: crwdns66756:0crwdne66756:0
             Image Scroller with Key Events: crwdns66757:0crwdne66757:0
-            Images are Arrays: crwdns66758:0crwdne66758:0
             Introduction to Arrays: crwdns66759:0crwdne66759:0
-            Key Events with Image Scroller: crwdns66760:0crwdne66760:0
             Loops and Simulations: crwdns66761:0crwdne66761:0
-            Practice Create Performance Task: crwdns66762:0crwdne66762:0
             "Practice PT: Create": crwdns66763:0crwdne66763:0
             Processing Arrays: crwdns66764:0crwdne66764:0
-            While Loop Basics: crwdns66765:0crwdne66765:0
             While Loops: crwdns66766:0crwdne66766:0
-            While Loops_ Counting Flips: crwdns66767:0crwdne66767:0
         CSP-Unit3-Support:
           title: crwdns51299:0crwdne51299:0
           description: crwdns51301:0crwdne51301:0
           description_short: crwdns51300:0crwdne51300:0
           stage:
-            Challenge Overview: crwdns66768:0crwdne66768:0
             Chunk 1 Overview: crwdns66769:0crwdne66769:0
             Chunk 2 Overview: crwdns66770:0crwdne66770:0
             Chunk 3 Overview: crwdns66771:0crwdne66771:0
             Chunk 4 Overview: crwdns66772:0crwdne66772:0
             Chunk 5 Overview: crwdns66773:0crwdne66773:0
-            Getting Started: crwdns66774:0crwdne66774:0
             Practice Performance Task: crwdns66775:0crwdne66775:0
             Unit 3 Overview: crwdns66776:0crwdne66776:0
         gumball:
@@ -1533,7 +1131,6 @@ en:
           stage:
             "(optional) Refresh your connection to Complex Adaptive Systems": crwdns66784:0crwdne66784:0
             Assessing Computer Models: crwdns66785:0crwdne66785:0
-            Thinking About Implementation: crwdns66786:0crwdne66786:0
             Welcome!: crwdns66787:0crwdne66787:0
             Wrap-Up: crwdns66788:0crwdne66788:0
         cspunit5:
@@ -1561,7 +1158,6 @@ en:
             Making Data Visualizations: crwdns66801:0crwdne66801:0
             Practice PT - Propose an Innovation: crwdns66802:0crwdne66802:0
             Practice PT - Tell a Data Story: crwdns66803:0crwdne66803:0
-            Privacy Abandoned: crwdns66804:0crwdne66804:0
             Rapid Research - Data Innovations: crwdns66805:0crwdne66805:0
             The Cost of Free: crwdns66806:0crwdne66806:0
             What is Big Data?: crwdns66807:0crwdne66807:0
@@ -1599,8 +1195,6 @@ en:
           stage:
             Challenge Overview: crwdns66825:0crwdne66825:0
             Complete the Challenge: crwdns66826:0crwdne66826:0
-            Complete the Challlege: crwdns66827:0crwdne66827:0
-            Complete the Challlenge: crwdns66828:0crwdne66828:0
             Create PT Breakdown: crwdns66829:0crwdne66829:0
             Explore PT Breakdown: crwdns66830:0crwdne66830:0
             Getting Started: crwdns66831:0crwdne66831:0
@@ -1681,17 +1275,10 @@ en:
           description: crwdns56331:0crwdne56331:0
           description_short: crwdns56330:0crwdne56330:0
           stage:
-            Algorithms Detour - How Routers Learn: crwdns66874:0crwdne66874:0
-            Algorithms Detour - Minimum Spanning Tree: crwdns66875:0crwdne66875:0
-            Algorithms Detour - Shortest Path: crwdns66876:0crwdne66876:0
             Binary Numbers: crwdns66877:0crwdne66877:0
             CS Principles Pre-survey: crwdns66878:0crwdne66878:0
-            DNS in the Real World: crwdns66879:0crwdne66879:0
-            Encoding Numbers in the Real World: crwdns66880:0crwdne66880:0
             Encoding and Sending Formatted Text: crwdns66881:0crwdne66881:0
-            Encoding and Sending Text: crwdns66882:0crwdne66882:0
             HTTP and Abstraction: crwdns66883:0crwdne66883:0
-            Invent an Addressing Protocol: crwdns66884:0crwdne66884:0
             Number Systems: crwdns66885:0crwdne66885:0
             Packets and Making a Reliable Internet: crwdns66886:0crwdne66886:0
             Personal Innovations: crwdns66887:0crwdne66887:0
@@ -1699,9 +1286,6 @@ en:
             Routers and Redundancy: crwdns66889:0crwdne66889:0
             Sending Binary Messages: crwdns66890:0crwdne66890:0
             Sending Binary Messages with the Internet Simulator: crwdns66891:0crwdne66891:0
-            Sending Bits in the Real World: crwdns66892:0crwdne66892:0
-            Sending Complex Messages: crwdns66893:0crwdne66893:0
-            Sending Formatted Text: crwdns66894:0crwdne66894:0
             Sending Numbers: crwdns66895:0crwdne66895:0
             The Internet: crwdns66896:0crwdne66896:0
             The Need for Addressing: crwdns66897:0crwdne66897:0
@@ -1752,14 +1336,13 @@ en:
           stage:
             Alice and Bob and Asymmetric Keys: crwdns66928:0crwdne66928:0
             Cracking the Code: crwdns66929:0crwdne66929:0
-            Encryption Algorithms: crwdns66930:0crwdne66930:0
+            Encryption with Keys and Passwords: crwdns67419:0crwdne67419:0
             Identifying People with Data: crwdns66931:0crwdne66931:0
             Practice PT - Cybersecurity Innovations: crwdns66932:0crwdne66932:0
             Practice PT - Propose an Innovation: crwdns66933:0crwdne66933:0
             Public Key Crypto: crwdns66934:0crwdne66934:0
             Rapid Research - Data Innovations: crwdns66935:0crwdne66935:0
             Simple Encryption: crwdns66936:0crwdne66936:0
-            Tell Me a Secret - Encrypting Text: crwdns66937:0crwdne66937:0
             The Cost of Free: crwdns66938:0crwdne66938:0
             What is Big Data?: crwdns66939:0crwdne66939:0
         csp5:
@@ -1802,30 +1385,18 @@ en:
           description: crwdns56433:0crwdne56433:0
           description_short: crwdns56432:0crwdne56432:0
           stage:
-            Animation: crwdns66965:0crwdne66965:0
-            Animations: crwdns66966:0crwdne66966:0
             Booleans and Conditionals: crwdns66967:0crwdne66967:0
-            CSD U3 Variables and Animation: crwdns66968:0crwdne66968:0
             Collision Detection: crwdns66969:0crwdne66969:0
             Collisions: crwdns66970:0crwdne66970:0
             Complex Conditionals: crwdns66971:0crwdne66971:0
             Complex Sprite Movement: crwdns66972:0crwdne66972:0
-            Conditionals Update: crwdns66973:0crwdne66973:0
             Conditionals and Keyboard Input: crwdns66974:0crwdne66974:0
-            Counting with Variables: crwdns66975:0crwdne66975:0
-            Draw Loop and Random: crwdns66976:0crwdne66976:0
             Draw Loop and Randomization: crwdns66977:0crwdne66977:0
             Drawing in Game Lab: crwdns66978:0crwdne66978:0
-            Expressions: crwdns66979:0crwdne66979:0
-            Expressions and Reassignment: crwdns66980:0crwdne66980:0
             "Project: Interactive Card": crwdns66981:0crwdne66981:0
-            Proposed Sprites and Props: crwdns66982:0crwdne66982:0
-            SFLP: crwdns66983:0crwdne66983:0
             Sprite Movement Methods: crwdns66984:0crwdne66984:0
-            Sprite Properties and Mod: crwdns66985:0crwdne66985:0
             Sprites and Images: crwdns66986:0crwdne66986:0
             Sprites and Properties: crwdns66987:0crwdne66987:0
-            Variables: crwdns66988:0crwdne66988:0
             Variables Unplugged: crwdns66989:0crwdne66989:0
             Variables and Animation: crwdns66990:0crwdne66990:0
         2016_sciencePD_phase1:
@@ -1857,7 +1428,6 @@ en:
           description_short: crwdns56604:0crwdne56604:0
           description_audience: crwdns56606:0crwdne56606:0
           stage:
-            Computational Thinking: crwdns67004:0crwdne67004:0
             Sample Stage: crwdns67005:0crwdne67005:0
         ECSPD1:
           title: crwdns56609:0crwdne56609:0
@@ -1866,18 +1436,14 @@ en:
           stage:
             Background and Context: crwdns67006:0crwdne67006:0
             'Classroom and Workshop Style ': crwdns67007:0crwdne67007:0
-            'Classroom and workshop style ': crwdns67008:0crwdne67008:0
             ECS Curriculum: crwdns67009:0crwdne67009:0
-            Getting Started: crwdns67010:0crwdne67010:0
             Welcome to Phase 1!: crwdns67011:0crwdne67011:0
-            What is ECS?: crwdns67012:0crwdne67012:0
             Wrap Up: crwdns67013:0crwdne67013:0
         algebraFacilitator:
           title: crwdns56620:0crwdne56620:0
           description: crwdns56622:0crwdne56622:0
           description_short: crwdns56621:0crwdne56621:0
           stage:
-            Course Overview: crwdns67014:0crwdne67014:0
             Evaluation Blocks: crwdns67015:0crwdne67015:0
             Introduction to PD: crwdns67016:0crwdne67016:0
             Teacher Dashboard: crwdns67017:0crwdne67017:0
@@ -1920,9 +1486,9 @@ en:
             Sending Binary Messages: crwdns67040:0crwdne67040:0
             Strategies for Student Writing: crwdns67041:0crwdne67041:0
             Supporting Peer Learning: crwdns67042:0crwdne67042:0
-            Teachers and Tools: crwdns67043:0crwdne67043:0
             "Tool Talk: Intro to Netsim": crwdns67044:0crwdne67044:0
         test-teaching-ap-cs-unit-1:
+          title: crwdns67420:0crwdne67420:0
           stage:
             test Unit 1 content module Alpha: crwdns67045:0crwdne67045:0
             test Unit 1 content module Bravo: crwdns67046:0crwdne67046:0
@@ -1948,14 +1514,6 @@ en:
           description: crwdns56677:0crwdne56677:0
           stage:
             netsim: crwdns67055:0crwdne67055:0
-        'csp-facilitators ':
-          title: crwdns56686:0crwdne56686:0
-          description: crwdns56688:0crwdne56688:0
-          description_short: crwdns56687:0crwdne56687:0
-          stage:
-            Introduction to Events: crwdns67056:0crwdne67056:0
-            Introduction to Text Compression: crwdns67057:0crwdne67057:0
-            Turtle Programming: crwdns67058:0crwdne67058:0
         csp-facilitators:
           title: crwdns56692:0crwdne56692:0
           description: crwdns56694:0crwdne56694:0
@@ -1987,35 +1545,9 @@ en:
           description: crwdns56789:0crwdne56789:0
           description_short: crwdns56788:0crwdne56788:0
           stage:
-            APIs and Function Parameters: crwdns67065:0crwdne67065:0
             Adding Functionality (optional): crwdns67066:0crwdne67066:0
-            App Lab: crwdns67067:0crwdne67067:0
-            Beyond Buttons Toward Apps: crwdns67068:0crwdne67068:0
-            Compound Conditional Logic: crwdns67069:0crwdne67069:0
-            Controlling Memory with Variables: crwdns67070:0crwdne67070:0
-            Creating Functions: crwdns67071:0crwdne67071:0
-            Creating functions with Parameters: crwdns67072:0crwdne67072:0
             Design Mode: crwdns67073:0crwdne67073:0
-            Digital Assistant Project: crwdns67074:0crwdne67074:0
-            Event-Driven Programming and Debugging: crwdns67075:0crwdne67075:0
-            Functions and Top-Down Design: crwdns67076:0crwdne67076:0
-            Functions with Return Values: crwdns67077:0crwdne67077:0
-            Image Scroller with Key Events: crwdns67078:0crwdne67078:0
-            Introducing Design Mode: crwdns67079:0crwdne67079:0
-            Introduction to Arrays: crwdns67080:0crwdne67080:0
-            Introduction to Conditional Logic: crwdns67081:0crwdne67081:0
-            Introduction to Digital Assistants: crwdns67082:0crwdne67082:0
-            Looping and Random Numbers: crwdns67083:0crwdne67083:0
-            Loops and Simulations: crwdns67084:0crwdne67084:0
             Making it Interactive: crwdns67085:0crwdne67085:0
-            Multi-screen Apps: crwdns67086:0crwdne67086:0
-            Processing Arrays: crwdns67087:0crwdne67087:0
-            The Need For Programming Languages: crwdns67088:0crwdne67088:0
-            Understanding Program Flow and Logic: crwdns67089:0crwdne67089:0
-            User Input and Strings: crwdns67090:0crwdne67090:0
-            Using Simple Commands: crwdns67091:0crwdne67091:0
-            Using Variables in Apps: crwdns67092:0crwdne67092:0
-            While Loops: crwdns67093:0crwdne67093:0
         CSDU1-Draft:
           title: crwdns56817:0crwdne56817:0
           description: crwdns56819:0crwdne56819:0
@@ -2028,27 +1560,27 @@ en:
           description: crwdns56822:0crwdne56822:0
           description_short: crwdns56821:0crwdne56821:0
           stage:
-            Box Model and Page Layout: crwdns67096:0crwdne67096:0
-            Classes and External Style Sheets: crwdns67097:0crwdne67097:0
             Clean Code and Debugging: crwdns67098:0crwdne67098:0
             Describing Webpages: crwdns67099:0crwdne67099:0
             Designing Code for Computers: crwdns67100:0crwdne67100:0
-            Designing Web Pages: crwdns67101:0crwdne67101:0
             Digital Footprint: crwdns67102:0crwdne67102:0
-            Finalizing Website: crwdns67103:0crwdne67103:0
-            Headers and Lists: crwdns67104:0crwdne67104:0
             Images on the Web: crwdns67105:0crwdne67105:0
-            Intellectual Property: crwdns67106:0crwdne67106:0
-            Introduction to HTML: crwdns67107:0crwdne67107:0
-            Introduction to Styling with CSS: crwdns67108:0crwdne67108:0
-            "Personal Website: Connecting Pages": crwdns67109:0crwdne67109:0
             "Personal Website: Finalizing Site": crwdns67110:0crwdne67110:0
-            "Personal Website: Midway Check": crwdns67111:0crwdne67111:0
-            Publishing a Website: crwdns67112:0crwdne67112:0
             Quality Websites: crwdns67113:0crwdne67113:0
-            Sources and Search Engines: crwdns67114:0crwdne67114:0
             Text on the Web: crwdns67115:0crwdne67115:0
             Website Design: crwdns67116:0crwdne67116:0
+            Intellectual Property: crwdns67106:0crwdne67106:0
+            Introduction to Styling with CSS: crwdns67108:0crwdne67108:0
+            "Personal Website: Connecting Pages": crwdns67109:0crwdne67109:0
+            Classes and External Style Sheets: crwdns67097:0crwdne67097:0
+            Box Model and Page Layout: crwdns67096:0crwdne67096:0
+            "Personal Website: Midway Check": crwdns67111:0crwdne67111:0
+            Publishing a Website: crwdns67112:0crwdne67112:0
+            Sources and Search Engines: crwdns67114:0crwdne67114:0
+            Introduction to HTML: crwdns67107:0crwdne67107:0
+            Headers and Lists: crwdns67104:0crwdne67104:0
+            Designing Web Pages: crwdns67101:0crwdne67101:0
+            Holding: crwdns67421:0crwdne67421:0
         CSDU5-Draft:
           title: crwdns56823:0crwdne56823:0
           description: crwdns56825:0crwdne56825:0
@@ -2083,18 +1615,6 @@ en:
           description_audience: crwdns56980:0crwdne56980:0
           stage:
             Artist Exemplar: crwdns67122:0crwdne67122:0
-        2016_sciencePD_phase2b:
-          title: crwdns57030:0crwdne57030:0
-          description: crwdns57032:0crwdne57032:0
-          description_short: crwdns57031:0crwdne57031:0
-          stage:
-            Advanced StarLogo Nova: crwdns67123:0crwdne67123:0
-            Remixing Phases 1 and 2: crwdns67124:0crwdne67124:0
-            Review StarLogo Nova: crwdns67125:0crwdne67125:0
-            Reviewing the Modules: crwdns67126:0crwdne67126:0
-            Thinking Ahead to Implementation: crwdns67127:0crwdne67127:0
-            Welcome!: crwdns67128:0crwdne67128:0
-            Wrap-Up: crwdns67129:0crwdne67129:0
         teachercon:
           title: crwdns57040:0crwdne57040:0
           description: crwdns57042:0crwdne57042:0
@@ -2113,18 +1633,6 @@ en:
             Lesson 2,2: crwdns67140:0crwdne67140:0
             Lesson 2,3: crwdns67141:0crwdne67141:0
             Measuring Student Learning: crwdns67142:0crwdne67142:0
-        2016_sciencePD-phase2b:
-          title: crwdns57056:0crwdne57056:0
-          description: crwdns57058:0crwdne57058:0
-          description_short: crwdns57057:0crwdne57057:0
-          stage:
-            Advanced StarLogo Nova: crwdns67143:0crwdne67143:0
-            Remixing Phases 1 and 2: crwdns67144:0crwdne67144:0
-            Review StarLogo Nova: crwdns67145:0crwdne67145:0
-            Reviewing the Modules: crwdns67146:0crwdne67146:0
-            Thinking Ahead to Implementation: crwdns67147:0crwdne67147:0
-            Welcome!: crwdns67148:0crwdne67148:0
-            Wrap-Up: crwdns67149:0crwdne67149:0
         kinderTest:
           stage:
             "Bee: Conditionals": crwdns67150:0crwdne67150:0
@@ -2154,45 +1662,20 @@ en:
           description_short: crwdns57113:0crwdne57113:0
           description_audience: crwdns57115:0crwdne57115:0
           stage:
-            Artist Ramp Up (including Nested Loops): crwdns67165:0crwdne67165:0
-            "Artist: Nested Loops": crwdns67166:0crwdne67166:0
-            "Bee: Conditionals": crwdns67167:0crwdne67167:0
             "Bee: Determine the Concept": crwdns67168:0crwdne67168:0
-            "Bee: Functions": crwdns67169:0crwdne67169:0
             "Bee: Functions (Course 3)": crwdns67170:0crwdne67170:0
-            "Bee: Nested Loops": crwdns67171:0crwdne67171:0
             Build a Star Wars Game!: crwdns67172:0crwdne67172:0
-            Choose Your Own Adventure: crwdns67173:0crwdne67173:0
-            Conditionals: crwdns67174:0crwdne67174:0
-            Crowdsourcing: crwdns67175:0crwdne67175:0
-            Decision Trees: crwdns67176:0crwdne67176:0
-            Determine the Concept Part 2: crwdns67177:0crwdne67177:0
             Digital Citizenship: crwdns67178:0crwdne67178:0
             Explore project ideas: crwdns67179:0crwdne67179:0
             "Farmer: Functions (New)": crwdns67180:0crwdne67180:0
             Final Project - Presentation Day: crwdns67181:0crwdne67181:0
             "Final Project - Unplugged: Design Process": crwdns67182:0crwdne67182:0
             "Final Project - Work Day: Build Project Online": crwdns67183:0crwdne67183:0
-            Internet: crwdns67184:0crwdne67184:0
-            "Mixed Review #1 (Ramp Up)": crwdns67185:0crwdne67185:0
-            "Mixed Review #2 (Conditionals, Events, Functions)": crwdns67186:0crwdne67186:0
-            "Mixed Review #3 (Deduce the Concept)": crwdns67187:0crwdne67187:0
             More Programming with Scratch: crwdns67188:0crwdne67188:0
-            Nested Loops: crwdns67189:0crwdne67189:0
             "New Artist: Functions": crwdns67190:0crwdne67190:0
-            New Playlab Behaviors and Events Review: crwdns67191:0crwdne67191:0
-            "PlayLab: Conditionals": crwdns67192:0crwdne67192:0
-            "Project #1": crwdns67193:0crwdne67193:0
-            "Project #1: Artist (Nested Loops, Functions)": crwdns67194:0crwdne67194:0
-            "Project #2": crwdns67195:0crwdne67195:0
-            "Project 2: PlayLab Game (Events, Conditionals, Functions)": crwdns67196:0crwdne67196:0
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): crwdns67197:0crwdne67197:0
             Songwriting: crwdns67198:0crwdne67198:0
-            "Unplugged: Conditionals with Cards": crwdns67199:0crwdne67199:0
-            "Unplugged: Decision Trees (New)": crwdns67200:0crwdne67200:0
             "Unplugged: Funky Functions": crwdns67201:0crwdne67201:0
-            "Unplugged: Kinesthetic Functions": crwdns67202:0crwdne67202:0
-            "Unplugged: Nested Loops (New)": crwdns67203:0crwdne67203:0
         grade1:
           title: crwdns57733:0crwdne57733:0
           description: crwdns57735:0crwdne57735:0
@@ -2209,7 +1692,6 @@ en:
             Loops Unplugged: crwdns67211:0crwdne67211:0
             More Computer Science: crwdns67212:0crwdne67212:0
             Persistence & Frustration: crwdns67213:0crwdne67213:0
-            Predicting & Debugging: crwdns67214:0crwdne67214:0
             Programming: crwdns67215:0crwdne67215:0
             Programming Unplugged: crwdns67216:0crwdne67216:0
             Sequences & Algorithms: crwdns67217:0crwdne67217:0
@@ -2219,34 +1701,21 @@ en:
           description_short: crwdns57139:0crwdne57139:0
           description_audience: crwdns57141:0crwdne57141:0
           stage:
-            Artist Binary: crwdns67218:0crwdne67218:0
             "Artist: For Loops": crwdns67219:0crwdne67219:0
             "Artist: Functions with Parameters": crwdns67220:0crwdne67220:0
             "Artist: Variables": crwdns67221:0crwdne67221:0
             "Bee: For Loops": crwdns67222:0crwdne67222:0
             "Bee: Functions with Parameters": crwdns67223:0crwdne67223:0
-            Concept Script (All below this point): crwdns67224:0crwdne67224:0
             Digital Citizenship: crwdns67225:0crwdne67225:0
             Explore project ideas: crwdns67226:0crwdne67226:0
             Final Project - Presentation Day: crwdns67227:0crwdne67227:0
             Final Project - Review/Revise Day: crwdns67228:0crwdne67228:0
             "Final Project - Unplugged: Design Process": crwdns67229:0crwdne67229:0
             "Final Project - Work Day: Build Project Online": crwdns67230:0crwdne67230:0
-            Mixed Review (Ramp Up): crwdns67231:0crwdne67231:0
-            "Pixelation: Binary Exploration": crwdns67232:0crwdne67232:0
-            "Play Lab: Events and Conditionals": crwdns67233:0crwdne67233:0
-            "Play Lab: Functions with Parameters": crwdns67234:0crwdne67234:0
             "Play Lab: Variables": crwdns67235:0crwdne67235:0
-            "Project 1: Choose Your Own Story App": crwdns67236:0crwdne67236:0
-            "Project 2: For Loops with the Artist": crwdns67237:0crwdne67237:0
-            "Project 3: Design your own App (PlayLab)": crwdns67238:0crwdne67238:0
-            "Project: Chase/Collect Game": crwdns67239:0crwdne67239:0
-            Scratch (Optional Third-Party Stage): crwdns67240:0crwdne67240:0
             Try programming with Khan Academy: crwdns67241:0crwdne67241:0
-            "Unplugged: Binary Images": crwdns67242:0crwdne67242:0
             "Unplugged: Envelope Variables": crwdns67243:0crwdne67243:0
             "Unplugged: For Loop Fun": crwdns67244:0crwdne67244:0
-            "Unplugged: Madlibs": crwdns67245:0crwdne67245:0
             "Unplugged: Songwriting with Parameters": crwdns67246:0crwdne67246:0
         ecs-unit1:
           title: crwdns57142:0crwdne57142:0
@@ -2270,15 +1739,6 @@ en:
           description_short: crwdns57157:0crwdne57157:0
           stage:
             Close & Next Steps: crwdns67258:0crwdne67258:0
-            Day 1-2 Solving Community Problems with Data: crwdns67259:0crwdne67259:0
-            Day 10-12 Binary Number Systems: crwdns67260:0crwdne67260:0
-            "Day 13-14 Linear and Binary Search: Tower Building Activity": crwdns67261:0crwdne67261:0
-            Day 15-16 Sorting Algorithms: crwdns67262:0crwdne67262:0
-            "Day 17 Minimal Spanning Trees: Muddy City": crwdns67263:0crwdne67263:0
-            Day 18-21 Final Project: crwdns67264:0crwdne67264:0
-            "Day 3 Intro To Problem Solving: Candy Bar Activity": crwdns67265:0crwdne67265:0
-            "Day 4-6 Strategies in Problem Solving: Handshake Activity": crwdns67266:0crwdne67266:0
-            "Day 7-9 Problem Solving: Cornrow Curves": crwdns67267:0crwdne67267:0
             Getting Started: crwdns67268:0crwdne67268:0
             Intro to Unit 2: crwdns67269:0crwdne67269:0
             Lesson Overviews: crwdns67270:0crwdne67270:0
@@ -2294,7 +1754,6 @@ en:
             Intro to Unit 3: crwdns67275:0crwdne67275:0
             Teaching Strategies: crwdns67276:0crwdne67276:0
             Unit 3 Challenge: crwdns67277:0crwdne67277:0
-            Unit 3 Challenge Preview: crwdns67278:0crwdne67278:0
             Unit 3 Day-by-Day: crwdns67279:0crwdne67279:0
         ecs-unit4:
           title: crwdns57765:0crwdne57765:0
@@ -2306,7 +1765,6 @@ en:
             Intro to Unit 4: crwdns67282:0crwdne67282:0
             Teaching Strategies: crwdns67283:0crwdne67283:0
             Unit 4 Challenge: crwdns67284:0crwdne67284:0
-            Unit 4 Challenge Preview: crwdns67285:0crwdne67285:0
             Unit 4 Day-by-Day: crwdns67286:0crwdne67286:0
         ecs-unit5:
           title: crwdns57775:0crwdne57775:0
@@ -2337,43 +1795,20 @@ en:
           description_audience: crwdns57812:0crwdne57812:0
           stage:
             " Bee: Conditionals": crwdns67299:0crwdne67299:0
-            About My Robot: crwdns67300:0crwdne67300:0
-            Artist Debugging: crwdns67301:0crwdne67301:0
-            "Artist: Loops": crwdns67302:0crwdne67302:0
             "Artist: Nested Loops": crwdns67303:0crwdne67303:0
             Bee Debugging: crwdns67304:0crwdne67304:0
             Bounce: crwdns67305:0crwdne67305:0
             Build a Game: crwdns67306:0crwdne67306:0
-            Choose Your Own Adventure: crwdns67307:0crwdne67307:0
             Farmer Conditional with Cards: crwdns67308:0crwdne67308:0
             Farmer Debug Relay Programming: crwdns67309:0crwdne67309:0
             Farmer Graph Paper Programming: crwdns67310:0crwdne67310:0
             Farmer Impacts of Computing: crwdns67311:0crwdne67311:0
-            Farmer Robot Conditionals: crwdns67312:0crwdne67312:0
-            Farmer Robot Conditionals with Else: crwdns67313:0crwdne67313:0
             "Farmer: While Loops": crwdns67314:0crwdne67314:0
             "Maze: Conditionals with Loops": crwdns67315:0crwdne67315:0
             "Maze: Nested Loops": crwdns67316:0crwdne67316:0
             More Programming with CS4FN: crwdns67317:0crwdne67317:0
-            More Programming with Scratch: crwdns67318:0crwdne67318:0
-            Preview to What is Next: crwdns67319:0crwdne67319:0
-            Robot Debugging: crwdns67320:0crwdne67320:0
-            Robot Farmer Conditionals Intro: crwdns67321:0crwdne67321:0
-            Robot Farmer Conditionals with Loops: crwdns67322:0crwdne67322:0
-            Robot Farmer Loops: crwdns67323:0crwdne67323:0
-            Robot Farmer While: crwdns67324:0crwdne67324:0
-            Robot Games: crwdns67325:0crwdne67325:0
             Robot Running the Farm: crwdns67326:0crwdne67326:0
             Unplugged Conditionals with Loops: crwdns67327:0crwdne67327:0
-        Test CPS PD:
-          stage:
-            test Unit 1 content module Alpha: crwdns67328:0crwdne67328:0
-            test Unit 1 content module Bravo: crwdns67329:0crwdne67329:0
-            test Unit 1 content module Charlie: crwdns67330:0crwdne67330:0
-            test Unit 1 practice module Delta: crwdns67331:0crwdne67331:0
-            test Unit 1 practice module Echo: crwdns67332:0crwdne67332:0
-            test Unit 1 practice module Foxtrot: crwdns67333:0crwdne67333:0
-            test Unit 1 required reading: crwdns67334:0crwdne67334:0
         alltheplcthings:
           title: crwdns57813:0crwdne57813:0
           description: crwdns57815:0crwdne57815:0
@@ -2412,28 +1847,20 @@ en:
           description_audience: crwdns57857:0crwdne57857:0
           stage:
             At The Dog Park: crwdns67356:0crwdne67356:0
-            Big Event: crwdns67357:0crwdne67357:0
-            Build A Block: crwdns67358:0crwdne67358:0
-            Build A Puppy Picture: crwdns67359:0crwdne67359:0
             Caring for My New Pet: crwdns67360:0crwdne67360:0
-            Caring for my new pet: crwdns67361:0crwdne67361:0
             Exploring the Neighborhood: crwdns67362:0crwdne67362:0
-            Exploring the neighborhood: crwdns67363:0crwdne67363:0
             Flappy: crwdns67364:0crwdne67364:0
-            Free Play with your Pet: crwdns67365:0crwdne67365:0
-            Getting Loopy: crwdns67366:0crwdne67366:0
             Getting Loopy with Puppy: crwdns67367:0crwdne67367:0
-            Have a name needs a do tag: crwdns67368:0crwdne67368:0
             Make a Dog Tag: crwdns67369:0crwdne67369:0
             More CS with Run Marco: crwdns67370:0crwdne67370:0
-            More CS with Scratch: crwdns67371:0crwdne67371:0
             New Home for My Pet: crwdns67372:0crwdne67372:0
             Online Internet Safety: crwdns67373:0crwdne67373:0
             Online My New Pet Jigsaw: crwdns67374:0crwdne67374:0
-            Pet's New Home: crwdns67375:0crwdne67375:0
             Puppy Event: crwdns67376:0crwdne67376:0
             Puppy Introduction: crwdns67377:0crwdne67377:0
             Puppy Loops: crwdns67378:0crwdne67378:0
+            How to behave in the lab_How to use Code_org puzzles: crwdns67422:0crwdne67422:0
+            Programming at home with my pet: crwdns67423:0crwdne67423:0
         transferring-over:
           stage:
             20-hr Stage 2: crwdns67379:0crwdne67379:0
@@ -2441,24 +1868,6 @@ en:
             Course 2 Stage 17: crwdns67381:0crwdne67381:0
             Course 3 Stage 16: crwdns67382:0crwdne67382:0
             Course 3 Stage 17: crwdns67383:0crwdne67383:0
-        cspunit1assessment:
-          title: crwdns58009:0crwdne58009:0
-          description: crwdns58011:0crwdne58011:0
-          description_short: crwdns58010:0crwdne58010:0
-          stage:
-            CS Principles Culminating Assessment: crwdns67384:0crwdne67384:0
-        cspunit2ch1assessment:
-          title: crwdns58013:0crwdne58013:0
-          description: crwdns58015:0crwdne58015:0
-          description_short: crwdns58014:0crwdne58014:0
-          stage:
-            CS Principles Unit 2 Assessment: crwdns67385:0crwdne67385:0
-        cspunit2ch2assessment:
-          title: crwdns58017:0crwdne58017:0
-          description: crwdns58019:0crwdne58019:0
-          description_short: crwdns58018:0crwdne58018:0
-          stage:
-            CS Principles Unit 2 Assessment: crwdns67386:0crwdne67386:0
         k5concepts:
           title: crwdns58211:0crwdne58211:0
           stage:
@@ -2472,18 +1881,6 @@ en:
             Nested Loops: crwdns67394:0crwdne67394:0
             Variables: crwdns67395:0crwdne67395:0
             While Loops: crwdns67396:0crwdne67396:0
-        cspunit1ch1assessment:
-          title: crwdns58223:0crwdne58223:0
-          description: crwdns58225:0crwdne58225:0
-          description_short: crwdns58224:0crwdne58224:0
-          stage:
-            CS Principles Unit 1 Ch 1 Assessment: crwdns67397:0crwdne67397:0
-        cspunit1ch2assessment:
-          title: crwdns58227:0crwdne58227:0
-          description: crwdns58229:0crwdne58229:0
-          description_short: crwdns58228:0crwdne58228:0
-          stage:
-            CS Principles Unit 1 Ch 2 Assessment: crwdns67398:0crwdne67398:0
         algebrapdnext:
           title: crwdns58230:0crwdne58230:0
           description: crwdns58232:0crwdne58232:0
@@ -2499,14 +1896,49 @@ en:
           title: crwdns58239:0crwdne58239:0
           stage:
             Anonymous student pre-survey: crwdns67405:0crwdne67405:0
-            Anonymous student survey 2: crwdns67406:0crwdne67406:0
             NEW Unit 1 Chapter 1 Assessment: crwdns67407:0crwdne67407:0
             Unit 1 Chapter 1 Assessment: crwdns67408:0crwdne67408:0
         sciencepd3-2016:
           title: crwdns58387:0crwdne58387:0
-          description: crwdns58389:0crwdne58389:0
           description_short: crwdns58388:0crwdne58388:0
+          description: crwdns58389:0crwdne58389:0
           stage:
-            Prep With Your Modules: crwdns67409:0crwdne67409:0
-            The TLO: crwdns67410:0crwdne67410:0
             Welcome Back!: crwdns67411:0crwdne67411:0
+            The TLO: crwdns67410:0crwdne67410:0
+            Prep With Your Modules: crwdns67409:0crwdne67409:0
+        csd1:
+          title: crwdns67424:0crwdne67424:0
+          description_short: crwdns67425:0crwdne67425:0
+          description: crwdns67426:0crwdne67426:0
+          stage:
+            Intro to Problem Solving: crwdns67427:0crwdne67427:0
+            The Problem Solving Process: crwdns67428:0crwdne67428:0
+            Exploring Problem Solving: crwdns67429:0crwdne67429:0
+            What is a Computer?: crwdns67430:0crwdne67430:0
+            Representing Information: crwdns67431:0crwdne67431:0
+            Processing with Bits: crwdns67432:0crwdne67432:0
+            Human vs. Computer Processing: crwdns67433:0crwdne67433:0
+            Processing with Apps: crwdns67434:0crwdne67434:0
+            "Project: Apps and Problem Solving": crwdns67435:0crwdne67435:0
+            Human vs Computer Processing: crwdns67436:0crwdne67436:0
+        csp-online-test:
+          title: crwdns67437:0crwdne67437:0
+          description_short: crwdns67438:0crwdne67438:0
+          description: crwdns67439:0crwdne67439:0
+          stage:
+            Unit 1 Overview: crwdns67440:0crwdne67440:0
+            "Lessons 2-3: Binary Messages": crwdns67441:0crwdne67441:0
+            Group Work and Peer Learning: crwdns67442:0crwdne67442:0
+            Balancing Teachers and Tools: crwdns67443:0crwdne67443:0
+            Discovery Learning: crwdns67444:0crwdne67444:0
+            Measuring Student Learning: crwdns67445:0crwdne67445:0
+            "Lessons 4-6: Encoding and Sending Numbers": crwdns67446:0crwdne67446:0
+            "Lesson 7: Encoding and Sending Text": crwdns67447:0crwdne67447:0
+            "lessons 9: Internet Addressing": crwdns67448:0crwdne67448:0
+            "lessons 10: Routers and Redundancy": crwdns67449:0crwdne67449:0
+            "lessons 11-12: Protocols and Abstraction": crwdns67450:0crwdne67450:0
+            "Lessons 2 - 3: Binary Messages": crwdns67451:0crwdne67451:0
+            "Lessons 4 - 6: Encoding and Sending Numbers": crwdns67452:0crwdne67452:0
+            "Lesson 9: Internet Addressing": crwdns67453:0crwdne67453:0
+            "Lessons 10 - 11: Redundancy and Packets": crwdns67454:0crwdne67454:0
+            "Lessons 12 - 13: Abstraction on the Internet": crwdns67455:0crwdne67455:0

@@ -5,6 +5,7 @@
   "animationMode": "Анимация",
   "answersVisible": "Отговорите са видими (само за четене)",
   "assessmentSteps": "Стъпки, за да даване оценка за",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Забележка: Етапа се заключва автоматично след 24 часа.",
   "backToPreviousLevel": "Обратно към предишното ниво",
   "blocklyMessage": "Blockly",
@@ -185,7 +186,7 @@
   "loading": "Зареждане...",
   "locked": "Заключен",
   "lockFollowing": "Заключване на следните етапи, които са в момента отключени:",
-  "lockSettings": "Настройки за заключване",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Заключване на етап",
   "lockStageInstructions": "След изпичане на времето, \"Заключване на етап\" да скрие въпросите.",
   "lockWhenDone": "След като учениците са готови да се заключи",
@@ -304,7 +305,5 @@
   "when": "когато",
   "whenRun": "при стартиране",
   "workspaceHeaderShort": "Работна област: ",
-  "yes": "Да",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Да"
 }

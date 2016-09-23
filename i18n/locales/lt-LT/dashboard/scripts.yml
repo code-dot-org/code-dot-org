@@ -8,32 +8,22 @@ lt:
           description_short: Pradėti 1-ą kursą, skirtą pradedantiems skaityti.
           description_audience: Amžius 4-6 metai
           stage:
-            "Artist 1: Intro": 'Menininkas 1: įžanga'
-            Artist 2: Menininkas 2
             "Artist: Loops": 'Menininkas: kartojimas'
             "Artist: Sequence": 'Menininkas: seka'
             "Artist: Shapes": 'Menininkas: formos'
-            Artists 2: Menininkai 2
-            "Bee 1: Intro": 'Bitė 1: įžanga'
-            "Bee 2: Loops": 'Bitė 2: Kartojimas'
             "Bee: Loops": 'Bitė: kartojimas'
             "Bee: Sequence": 'Bitė: seka'
             Building a Foundation: Laiptuota piramidė
-            Flappy non blockly: Flappy be blokelių
             Getting Loopy: Kartojimo supratimas
             Going Places Safely: Saugus naršymas internete
             Happy Maps: Laimingieji žemėlapiai
             "Jigsaw: Learn to drag and drop": 'Dėlionės: išmokite, kaip nuvilkti'
-            K-1 Flappy: K-1 Flappy
-            "Maze 2: Loops": 'Labirintas 2: Kartojimas'
             "Maze: Debugging": 'Labirintas: klaidų ieškojimas'
             "Maze: Loops": 'Labirintas: kartojimas'
             "Maze: Sequence": 'Labirintas: seka'
             Move it, Move it: Judėk, judėk
-            Multi & Match: 'Multi & Match'
             "Real-life Algorithms: Plant a Seed": 'Algoritmai realiame gyvenime: sėklos sodinimas'
             Spelling Bee: Rašanti bitė
-            Spelling Bee not blockly: Rašanti bitė be blokelių
             "Studio: Create a Story": 'Žaidimų laboratorija: sukurk istoriją'
             The Big Event: Didelis įvykis
         course2:
@@ -42,39 +32,24 @@ lt:
           description_short: 2 kursas yra skirtas mokiniams, kurie jau moka skaityti.
           description_audience: Amžius 6-18 metų
           stage:
-            Artist Debugging: 'Menininkas: klaidų ieškojimas'
-            Artist Functions: 'Menininkas: komandos'
-            Artist Loops: 'Menininkas: kartojimas'
             "Artist: Debugging": 'Menininkas: klaidų ieškojimas'
             "Artist: Loops": 'Menininkas: kartojimas'
             "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
             "Artist: Sequence": 'Menininkas: seka'
-            "Artist: Sequence2": 'Menininkas: seka2'
-            Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
-            Bee Debugging: 'Bitė: klaidų ieškojimas'
-            Bee Functions: 'Bitė: sudėtinės komandos'
-            Bee Loops: 'Bitė: kartojimas'
             "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
             "Bee: Debugging": 'Bitė: klaidų ieškojimas'
             "Bee: Loops": 'Bitė: kartojimas'
             Binary Bracelets: Dvejetainės apyrankės
-            Bounce: Tenisas
             Conditionals: Sąlyginiai sakiniai
             Flappy: Flappy
             Getting Loopy: Kartojimo supratimas
             Graph Paper Programming: Programavimas ant languoto popieriaus
-            Maze Loops: 'Labirintas: kartojimas'
             "Maze: Loops": 'Labirintas: kartojimas'
             "Maze: Sequence": 'Labirintas: seka'
-            "Maze: Sequence2": 'Labirintas: seka2'
             "Real-life Algorithms: Paper Planes": 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
             Relay programming: Programavimas komandoje
             "Studio: Create a Story": 'Žaidimų laboratorija: sukurk istoriją'
-            Suzi: Suzi
-            The Artist: Menininkas
-            The Artist Debugging: 'Menininkas: klaidų ieškojimas'
             The Big Event: Didelis įvykis
-            The Maze: Labirintas
             Your Digital Footprint: Virtualūs pirštų antspaudai
         course3:
           title: Kursas 3
@@ -83,51 +58,26 @@ lt:
           description_audience: Amžius 8-18 metų
           stage:
             Artist: Menininkas
-            Artist For Loops: 'Menininkas: kartojimai'
-            Artist Functions: 'Menininkas: komandos'
-            Artist Functions with Parameters: 'Menininkas: komandų kūrimas su parametrais'
-            Artist Functions with Params: 'Menininkas: komandų kūrimas su parametrais'
-            Artist Nested Loops: 'Menininkas: kartojimas kartojime'
-            Artist2: Menininkas2
             "Artist: Functions": 'Menininkas: komandų kūrimas'
-            "Artist: Functions2": 'Menininkas: komandų kūrimas 2'
             "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
-            "Artist: Nested Loops2": 'Menininkas: Kartojimas kartojime'
             "Artist: Patterns": 'Menininkas: raštai'
-            Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
-            Bee Debuggin: 'Bitė: klaidų ieškojimas'
-            Bee Debugging: 'Bitė: klaidų ieškojimas'
-            Bee Functions: 'Bitė: sudėtinės komandos'
-            Bee Nested Loops: 'Bitė: kartojimas kartojime'
             "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
-            "Bee: Conditionals2": 'Bitė: sąlyginiai sakiniai2'
             "Bee: Debugging": 'Bitė: klaidų ieškojimas'
-            "Bee: Debugging2": 'Bitė: klaidų ieškojimas2'
             "Bee: Functions": 'Bitė: komandų kūrimas'
-            "Bee: Functions2": 'Bitė: komandų kūrimas 2'
             "Bee: Nested Loops": 'Bitė: kartojimas kartojime'
-            "Bee: Nested Loops2": 'Bitė: kartojimas kartojime'
             Bounce: Tenisas
             Computational Thinking: Skaičiuojamasis mąstymas
             Crowdsourcing: Komandinis programavimas
             Dice Race: Kauliukų lenktynės
             Digital Citizenship: Virtuali pilietybė
-            Farmer - While Loops: 'Ūkininkas: kartojimas'
             "Farmer: While Loops": 'Ūkininkas: kartojimas'
-            "Farmer: While Loops2": 'Ūkininkas: kartojimas2'
             Functional Suncatchers: Sekų suvokimas
             Internet: Internetas
             Maze: Labirintas
-            Maze Conditionals: 'Labirintas: sąlyginiai sakiniai'
-            Maze2: Labirintas2
             "Maze: Conditionals": 'Labirintas: sąlyginiai sakiniai'
-            "Maze: Conditionals2": 'Labirintas: sąlyginiai sakiniai2'
             Songwriting: Dainų rašymas
-            Songwriting Parameters: Dainos kūrimo parametrai
             "Studio: Create a Game": 'Laboratorija: sukurk žaidimą'
             "Studio: Create a Story": 'Žaidimų laboratorija: sukurk istoriją'
-            The Artist: Menininkas
-            The Maze: Labirintas
         playlab:
           title: Laboratorija
           description: Sukurk istoriją arba žaidimą!
@@ -158,19 +108,15 @@ lt:
           description_short: Mokiniai turėtų pradėti 4 kursą tik užbaigę 2 ir 3 kursus.
           description_audience: Amžius 10+ (pabaigus 3 kursą)
           stage:
-            "Algorithms: Tangrams": 'Algoritmai: tanagramos'
             Artist: Menininkas
             Artist Binary: Artist Binary
             "Artist: For Loops": 'Menininkas: kartojimai'
             "Artist: Functions": 'Menininkas: komandų kūrimas'
             "Artist: Functions with Parameters": 'Menininkas: komandos su parametrais'
             "Artist: Variables": 'Menininkas: kintamieji'
-            Bee: Bitė
-            Bee Binary: Bee Binary
             "Bee: For Loops": 'Bitė: kartojimai'
             "Bee: Functions with Parameters": 'Bitė: komandos su parametrais'
             Extreme Challenge - Comprehensive: 'Ekstremalus iššūkis - Visapusiškumas'
-            Farmer Binary: Farmer Binary
             Maze and Bee: Labirintas ir bitė
             "Play Lab: For Loops": 'Žaidimų laboratorija: kartojimai'
             "Play Lab: Functions with Parameters": 'Žaidimų laboratorija: komandos su parametrais'
@@ -184,7 +130,6 @@ lt:
             "Unplugged: Madlibs": 'Unplugged: Madlibs'
             "Unplugged: Songwriting with Parameters": 'Be kompiuterio: dainų rašymas pagal parametrus'
             "Unplugged: Tangrams": 'Be kompiuterio: tanagramos'
-            Variables: Kintamieji
         Course4pre:
           title: '4 kursas - Prielaidos'
           description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
@@ -197,7 +142,6 @@ lt:
             "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
             "Bee: Debugging": 'Bitė: klaidų ieškojimas'
             "Bee: Nested Loops": 'Bitė: kartojimas kartojime'
-            Course 4 Prerequisite: '4 kursas - Prielaidos'
             "Farmer: While Loops": 'Ūkininkas: kartojimas'
             "Maze: Sequence": 'Labirintas: seka'
         usability:
@@ -210,7 +154,6 @@ lt:
             Functions and Functions with Parameters: Komandos ir komandos su parametrais
             Intro: Įvadas
             Variables: Kintamieji
-            Variables and For Loops: Kintamieji ir kartojimas
         algebra:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -242,13 +185,11 @@ lt:
           description_short: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
           stage:
             Infinity: Begalybė
-            Play Lab: Laboratorija
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           stage:
-            Algebra Demo: Algebra Demo
             Defining Simple Functions: Defining Simple Functions
             Defining Variables: Kintamųjų apibrėžimas
             Evaluation Blocks: Evaluation Blocks
@@ -259,25 +200,18 @@ lt:
           description: Professional Development for K5 Courses
           description_short: Professional Development for K5 Courses
           stage:
-            Blockly Basics: Blockly pagrindai
-            Classroom Culture: Klasės kultūra
             Computer Science Pedagogy: Informatikos pedagogika
             Introduction to PD: Introduction to PD
             K-5 Courses: Kursai pradinių klasių mokiniams
-            Navigating the teacher dashboard: Mokytojo prietaisų skydelio valdymas
             Next Steps: Kiti žingsniai
-            Personal Reflection: Personal Reflection
             "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
             "Programming Concept: Events": 'Programming Concept: Events'
             "Programming Concept: Functions": 'Programming Concept: Functions'
             "Programming Concept: Loops": 'Programming Concept: Loops'
-            Programming Concepts: Programming Concepts
             Reflection: Reflection
             Teacher Dashboard: Mokytojo prietaisų skydelis
             Unplugged lessons: Papildomos pamokėlės
-            Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
             Writing computer programs: Kompiuterinių programų rašymas
-            Writing computer programs in Blockly: Kompiuterinių programų rašymas su Blockly
         netsim:
           title: Interneto simuliatorius
           description: Learn about how the Internet works
@@ -285,25 +219,14 @@ lt:
           stage:
             Automatic DNS node: Automatic DNS node
             Broadcasting messages: Broadcasting messages
-            Internet Simulator: Interneto simuliatorius
             Internet Simulator Freeplay: Internet Simulator Freeplay
-            Internet Simulator Templates: Interneto simuliatoriaus šablonai
             Manual DNS: Manual DNS
             Overview and Setup Instructions: Overview and Setup Instructions
             Packets and Reliability: Packets and Reliability
             Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
             Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
             Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
-            "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
-            "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
-            "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
             Routers and addresses: Routers and addresses
-            Routing and DNS: Routing and DNS
-            Sending Bits: Sending Bits
-            Unit 1: Skyrius 1
-            "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
-            Unit 2: Skyrius 2
-            "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
         pixelation:
           title: Pikseliavimas
           description: Create images with bits and bytes.
@@ -311,12 +234,9 @@ lt:
           stage:
             Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
             Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
-            Black & White Pixelation Widget: 'Black & White Pixelation Widget'
             Color Pixelation Examples: Color Pixelation Examples
             Color Pixelation Freeplay: Color Pixelation Freeplay
             Color Pixelation Tutorial: Color Pixelation Tutorial
-            Color Pixelation Widget: Color Pixelation Widget
-            Pixelation: Pikseliavimas
         20-hour:
           title: 20-ties valandų įvadiniai kursai
           description: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
@@ -351,7 +271,6 @@ lt:
             Applab: Applab
             Hoc2015 Blockly: Hoc2015 Blockly
             Play Lab: Laboratorija
-            Play Lab 2015: Žaidimų laboratorija 2015
             The Artist: Menininkas
             The Maze: Labirintas
         events:
@@ -399,59 +318,26 @@ lt:
           description_short: Iššūkis tau!
           stage:
             Puzzles: Galvosūkiai
-        course4pre:
-          title: '4 kursas - Prielaidos'
-          description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
-          description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
-          stage:
-            "Artist: Functions": 'Menininkas: komandų kūrimas'
-            "Artist: Loops": 'Menininkas: kartojimas'
-            "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
-            "Artist: Sequence": 'Menininkas: seka'
-            "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
-            "Bee: Debugging": 'Bitė: klaidų ieškojimas'
-            "Bee: Nested Loops": 'Bitė: kartojimas kartojime'
-            Course 4 Prerequisite: '4 kursas - Prielaidos'
-            "Farmer: While Loops": 'Ūkininkas: kartojimas'
-            "Maze: Sequence": 'Labirintas: seka'
         cspunit1:
           title: '(old) CS Principles Unit 1 - Digital Information'
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           stage:
-            "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
             Binary Numbers: Dvejetainiai skaičiai
-            Bit Sending Widget: Bit Sending Widget
             Bytes and File Sizes: Bytes and File Sizes
-            Data Storage: Data Storage
             Encode a Complex Thing: Encode an Experience
             Encoding B&W Images: 'Encoding B&W Images'
             Encoding Color Images: Encoding Color Images
             Encoding Numbers in the Real World: Encoding Numbers in the Real World
             Encoding and Sending Text: Encoding and Sending Text
-            Innovation: Inovacija
-            Lesson 1: 1 pamoka
-            Lesson 14: 14 pamoka
-            Lesson 14 v2: 14 pamoka v2
-            Lesson 15: 15 pamoka
-            Lesson 2: 2 pamoka
-            Lesson 3: 3 pamoka
-            Lesson 4: 4 pamoka
-            Lesson 5: 5 pamoka
-            Lesson 6: 6 pamoka
-            Lesson 7: 7 pamoka
-            Lesson 8: 8 pamoka
-            Lesson14: 14 pamoka
             Lossy Compression and File Formats: Lossy Compression and File Formats
             Number Systems: Skaičių sistemos
             Personal Innovations: Personal Innovations
-            "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
             Sending Binary Messages: Dvejetainių žinučių siuntimas
             Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
             Sending Bits in the Real World: Bitų persiuntimas realiame pasaulyje
             Sending Complex Messages: Sending Complex Messages
             Sending Formatted Text: Sending Formatted Text
-            Sending More Complex Messages: Sudėtingų žinučių siuntimas
             Sending Numbers: Sending Numbers
             Text Compression: Text Compression
         algebraPD:
@@ -459,45 +345,12 @@ lt:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           stage:
-            Booleans: Loginės reikšmės
-            "Calc: Defining Variables": 'Calc: Defining Variables'
-            "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-            Computer Science Pedagogy: Informatikos pedagogika
-            Conditionals and Piecewise Functions: Sąlygos ir funkcijos iš dalių
-            Contracts: Contracts
             Course Overview: Course Overview
-            Design Recipe Practice: Design Recipe Practice
-            "Eval: Boolean Operators": 'Eval: Boolean Operators'
-            "Eval: Conditionals": 'Eval: Conditionals'
-            "Eval: Defining Functions": 'Eval: Defining Functions'
-            "Eval: Functions": 'Eval: Functions'
-            "Eval: Strings and Images": 'Eval: Strings and Images'
-            "Eval: Writing Contracts": 'Eval: Writing Contracts'
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
-            "Play Lab: Animation (Big Game)": 'Žaidimų laboratorija: animacijos (Didysis žaidimas)'
-            "Play Lab: Boolean (Big Game)": 'Žaidimų laboratorija: Logika (Big Game)'
-            "Play Lab: Booleans": 'Žaidimų laboratorija: loginės reikšmės'
-            "Play Lab: Collision Detection (Big Game)": 'Žaidimų laboratorija: Susidūrimo nustatymas (Big Game)'
-            "Play Lab: Defining Functions": 'Žaidimų laboratorija: komandų apibrėžimas'
-            "Play Lab: Defining Variables (Big Game)": 'Žaidimų laboratorija: kintamųjų apibrėžimas (Didysis žaidimas)'
             Preparing for in-person PD: Preparing for in-person PD
-            Rocket-Height: Rocket-Height
-            Sam the Bat: Šikšnosparnis Semas
-            Simple Function Definition: Paprastų komandų apibrėžimas
-            Strings and Images: Eilutės ir paveikslėliai
             Teacher Dashboard: Mokytojo prietaisų skydelis
-            The Design Recipe: The Design Recipe
-            "Unplugged: Booleans": 'Unplugged: Booleans'
-            "Unplugged: Collision Detection and the Distance Formula": 'Papildoma pamokėlė: susidūrimo aptikimas ir atstumo formulė'
-            "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-            "Unplugged: Contracts": 'Unplugged: Contracts'
-            "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-            "Unplugged: Video Games and Coordinate Planes": 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
-            Your Game - Animation: Tavo žaidimas – animacijos
-            Your Game - Booleans: Tavo žaidimas – Loginės reikšmės
-            Your Game - Defining Variables: Tavo žaidimas – kintamųjų apibrėžimas
         algPDmiami:
           title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
@@ -507,7 +360,6 @@ lt:
             Design Recipe Practice: Design Recipe Practice
             Evaluation Blocks: Evaluation Blocks
             Luigi's Pizza: "Luigi's Pizza"
-            "Play Lab: Collision Detection (Big Game)": 'Žaidimų laboratorija: Susidūrimo nustatymas (Big Game)'
             Rocket-Height: Rocket-Height
             Sam the Bat: Šikšnosparnis Semas
             Strings and Images: Eilutės ir paveikslėliai
@@ -533,7 +385,6 @@ lt:
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is CSP?: What is CSP?
-            new stage: naujas lygis
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for csp
@@ -552,7 +403,6 @@ lt:
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is ECS?: What is ECS?
-            reference: reference
         sciencePD:
           title: Computer Science in Science PD
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -566,7 +416,6 @@ lt:
             Introduction to PD: Introduction to PD
             Introduction to StarLogo Nova: Introduction to StarLogo Nova
             Post-Survey: Post-Survey
-            Pre-Workshop Online Component: Pre-Workshop Online Component
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
@@ -589,96 +438,34 @@ lt:
           description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           stage:
             APIs and Function Parameters: APIs and Function Parameters
-            Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
-            Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
-            Arrays_ Intro: Arrays_ Intro
-            Arrays_ Photo Album: Arrays_ Photo Album
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
-            Buttons on the Screen: Buttons on the Screen
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
-            Chained Conditionals: Chained Conditionals
-            Chained and Nested Conditionals: Chained and Nested Conditionals
-            Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals with Movie Bot
-            Chatbot Challenge: Chatbot Challenge
-            Clicker Game: Clicker Game
-            Clicker Variable Basics: Clicker Variable Basics
-            Clicker v.1 -  Variable Basics: 'Clicker v.1 -  Variable Basics'
             Compound Conditional Logic: Compound Conditional Logic
-            Compound Conditionals: Compound Conditionals
-            Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
-            Conditional Basics: Conditional Basics
-            Conditionals with Movie Bot: Conditionals with Movie Bot
-            Controlling Memory and Program Flow: Controlling Memory and Program Flow
             Controlling Memory with Variables: Controlling Memory with Variables
-            Cookie Clicker: Cookie Clicker
-            Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
             Creating Functions: Komandų kūrimas
-            Creating Procedures - Part 1: 'Creating Procedures - Part 1'
-            Creating Procedures - Part 2: 'Creating Procedures - Part 2'
             Creating functions with Parameters: Creating Functions with Parameters
-            Design a Digital Scene: Design a Digital Scene
-            Digital Assistant Challenge: Digital Assistant Challenge
             Digital Assistant Project: Digital Assistant Project
             Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
             Events Unplugged: Events Unplugged
-            Functions: Komandų kūrimas
             Functions and Top-Down Design: Functions and Top-Down Design
             Functions with Return Values: Functions with Return Values
-            Getting User Input: Getting User Input
-            Getting to know AppLab: Getting to know AppLab
             Image Scroller with Key Events: Image Scroller with Key Events
-            Images are Arrays: Images are Arrays
-            Improving Digital Assistant with Conditionals: Improving Digital Assistant with Conditionals
-            "Improving Digital Assistant: Complex Conditionals": 'Improving Digital Assistant: Complex Conditionals'
-            "Improving Digital Assistant: Conditionals": 'Improving Digital Assistant: Conditionals'
-            "Improving Digital Assistant: Functions with Return": 'Improving Digital Assistant: Functions with Return'
-            Improving the Clicker Game: Improving the Clicker Game
-            Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
             Introducing Design Mode: Introducing Design Mode
             Introduction to Arrays: Introduction to Arrays
             Introduction to Conditional Logic: Introduction to Conditional Logic
-            Introduction to Digital Assistant: Introduction to Digital Assistant
-            Introduction to Digital Assistant Project: Introduction to Digital Assistant Project
             Introduction to Digital Assistants: Introduction to Digital Assistants
-            Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
             Looping and Random Numbers: Looping and Random Numbers
-            Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
             Loops and Simulations: Loops and Simulations
-            More Variables (2 days): More Variables (2 days)
-            Multi-screen App: Multi-screen App
             Multi-screen Apps: Multi-screen Apps
-            Natural Language Processing: Natural Language Processing
-            Natural Language Processing and Chat Bots: Natural Language Processing and Chat Bots
-            On Beyond Buttons: On Beyond Buttons
-            Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
             Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
             "Practice PT: Create": 'Practice PT: Create'
-            "Practice PT: Digital Assistant": 'Practice PT: Digital Assistant'
             Processing Arrays: Processing Arrays
-            Sarah testing project backed levels: Sarah testing project backed levels
-            Scene Design Part 1 - Plan: Design a Digital Scene
-            "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
-            Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
-            "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
-            Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
-            "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
-            Strings and Substrings: Strings and Substrings
             The Need For Programming Languages: The Need For Programming Languages
             Understanding Program Flow and Logic: Understanding Program Flow and Logic
-            Unfortunate Events: Unfortunate Events
-            Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
             User Input and Strings: User Input and Strings
             Using Simple Commands: Using Simple Commands
             Using Variables in Apps: Using Variables in Apps
-            Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
-            Variables: Kintamieji
-            Variables Conceptorial Fodder: Variables Conceptorial Fodder
-            "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
-            "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
-            While Loop Basics: While Loop Basics
             While Loops: „Kol“ kartojimas
-            While Loops_ Counting Flips: While Loops_ Counting Flips
-            title_short: CSP Unit 3
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -687,7 +474,6 @@ lt:
             Computer Science Pedagogy: Informatikos pedagogika
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
-            Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
             Next Steps: Kiti žingsniai
             Strings and Images: Eilutės ir paveikslėliai
             Teacher Dashboard: Mokytojo prietaisų skydelis
@@ -723,7 +509,6 @@ lt:
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           logo_image: nextech_logo.png
           stage:
-            Computer Science Pedagogy: Informatikos pedagogika
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
@@ -736,7 +521,6 @@ lt:
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           logo_image: izone_logo.png
           stage:
-            Computer Science Pedagogy: Informatikos pedagogika
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
@@ -784,21 +568,11 @@ lt:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           stage:
-            Common Forms: Common Forms
             Creating Breeds in Starlogo Nova: Creating Breeds in Starlogo Nova
-            Curricular Modules: Curricular Modules
-            Discussion Forum: Discussion Forum
-            Discussion Forums: Discussion Forums
             Epidemic Model Extensions: Epidemic Model Extensions
-            Evaluation: Evaluation
-            Guides and Resources: Guides and Resources
-            Implementation Planning: Implementation Planning
-            Phase 2 Summer Workshop: Phase 2 Summer Workshop
-            Resources: Resources
             Review StarLogo Nova: Review StarLogo Nova
             Revisiting Agent Movement: Revisiting Agent Movement
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Welcome: Welcome
             Welcome!: Sveiki atvykę!
             Wrap-Up: Apibendrinimas
         sciencePD3:
@@ -806,13 +580,8 @@ lt:
           description: 'Academic Year Support - Semester 1'
           description_short: 'Academic Year Support - Semester 1'
           stage:
-            Common Forms: Common Forms
-            Curricular Modules: Curricular Modules
             Decode and Share: Decode and Share
-            Discussion Forums: Discussion Forums
-            Guides and Resources: Guides and Resources
             Mystery Model: Mystery Model
-            Welcome: Welcome
             Welcome Back!: Welcome Back!
         Testing:
           title: Testing
@@ -834,47 +603,27 @@ lt:
             Algorithms Detour - How Routers Learn: How Routers Learn
             Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
             Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
-            Algorithms in Networking: Algorithms in Networking
             Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
-            Beyond Sending Bits: Beyond Sending Bits
-            Challenges of the Internet: Global Impacts of the Internet
-            Classroom Internet: Classroom Internet
             Cracking the Code: Cracking the Code
-            DNS Simulation: DNS Simulation
             DNS in the Real World: DNS in the Real World
             Encryption Algorithms: Keys and Passwords
-            Global Impacts of the Internet: Global Impacts of the Internet
             HTTP and Abstraction: HTTP and Abstraction on the Internet
-            HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
-            How HTTP Works: How HTTP Works
-            How Routers Learn: How Routers Learn
-            IP and DNS in the Real World: IP and DNS in the Real World
             Invent an Addressing Protocol: Invent an Addressing Protocol
-            Keys and Passwords: Keys and Passwords
             One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
             Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
-            Packets in the Real World: Packets in the Real World
             Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
             Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
             Public Key Crypto: Public Key Cryptography
-            Public Key Encryption: Public Key Encryption
-            Routers and Addresses: Routers and Addresses
-            Routers and Addresses as Numbers: Routers and Addresses as Numbers
             Routers and Redundancy: Routers and Redundancy
-            Security and Hacking in the Real World: Security and Hacking in the Real World
             Tell Me a Secret - Encrypting Text: The Need for Encryption
             The Internet: Internetas
-            The Internet is for Everyone: The Internet is for Everyone
             The Need for Addressing: The Need for Addressing
             The Need for DNS: The Need for DNS
-            The Need for Encryption: The Need for Encryption
-            The Need for Packets: The Need for Packets
         algebraPD2a:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           stage:
-            Big GAme - Collision Detection: 'Big GAme - Collision Detection'
             Big Game - Animation: 'Big Game - Animation'
             Big Game - Booleans: 'Big Game - Booleans'
             Big Game - Collision Detection: 'Big Game - Collision Detection'
@@ -885,7 +634,6 @@ lt:
             Evaluation Blocks: Evaluation Blocks
             Free Play: Free Play
             Luigi's Pizza: "Luigi's Pizza"
-            "Play Lab: Defining Functions": 'Žaidimų laboratorija: komandų apibrėžimas'
             Rocket-Height: Rocket-Height
             Sam the Bat: Šikšnosparnis Semas
             Strings and Images: Eilutės ir paveikslėliai
@@ -905,8 +653,6 @@ lt:
             Farmer: Farmer
             Flappy: Flappy
             Free Response: Free Response
-            Frequency: Frequency
-            Game Lab: Game Lab
             Gamelab: Gamelab
             Jigsaw: Dėlionės
             Long assessment: Long assessment
@@ -929,10 +675,7 @@ lt:
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
-            Vigenere: Vigenere
             Web Lab: Web Lab
-            applab: applab
-            online pd?: online pd?
         algebraPD2b:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -940,7 +683,6 @@ lt:
           stage:
             Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
             Booleans: Loginės reikšmės
-            Computer Science Pedagogy: Informatikos pedagogika
             Course Overview: Course Overview
             Defining Functions: Komandų apibrėžimas
             Defining Variables: Kintamųjų apibrėžimas
@@ -984,37 +726,19 @@ lt:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           stage:
-            Unit 1, Day 10: Unit 1, Day 10
             Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
-            Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
-            Unit 1, Day 11-14: Unit 1, Day 11-14
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
-            Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
-            Unit 1, Day 15-16: Unit 1, Day 15-16
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
-            Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
-            Unit 1, Day 17-19: Unit 1, Day 17-19
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
-            Unit 1, Days 1-2: Unit 1, Days 1-2
-            '0': |
+            0: |
               Unit 1, Days 1-2
               What Is a Computer?
             1: |
               Unit 1, Days 1-2
               What Is a Computer?
-            Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
-            "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
-            Unit 1, Days 3-4: Unit 1, Days 3-4
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
-            Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
-            Unit 1, Days 5-7: Unit 1, Days 5-7
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
-            Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
-            Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
-            Unit 1, Days 8-9: Unit 1, Days 8-9
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
-            Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
             Welcome!: Sveiki atvykę!
             Wrap-up: Apibendrinimas
         equityPD:
@@ -1022,35 +746,19 @@ lt:
           description: How to lead a discussion on equity in a Code.org PD
           description_short: How to lead a discussion on equity in a Code.org PD
           stage:
-            Code.org Equity PD: Code.org Equity PD
             Equity PD: Equity PD
-            Equity Vs. Equality: Equity Vs. Equality
-            Introduction to the Equity PD: Introduction to the Equity PD
             Necessary Background: Necessary Background
         algebraPD2:
           title: CS in Algebra Part 2
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           stage:
-            Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-            Booleans: Loginės reikšmės
-            Computer Science Pedagogy: Informatikos pedagogika
-            Course Overview: Course Overview
-            Defining Functions: Komandų apibrėžimas
-            Defining Variables: Kintamųjų apibrėžimas
-            "Eval: Conditionals": 'Eval: Conditionals'
-            Evaluation Blocks: Evaluation Blocks
             Lesson Prep: Lesson Prep
-            Next Steps: Kiti žingsniai
-            Practice with Puzzles: Practice with Puzzles
-            Rocket-Height: Rocket-Height
-            Strings and Images: Eilutės ir paveikslėliai
             Teacher Dashboard: Mokytojo prietaisų skydelis
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: The Design Recipe
             Welcome!: Sveiki atvykę!
-            Writing Contracts: Writing Contracts
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -1150,14 +858,10 @@ lt:
           stage:
             Getting Started: Getting Started
             Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
-            "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
             Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
-            "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
             Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
-            "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
             Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
             Practice PT: Practice PT
-            Ramping Up: Ramping Up
             Welcome to the Course!: Welcome to the Course!
             Wrap Up and Next Steps: Wrap Up and Next Steps
         odometer:
@@ -1222,93 +926,33 @@ lt:
           description_short: Unit 2 of the Exploring Computer Science curriculum
           stage:
             Close & Next Steps: 'Close & Next Steps'
-            Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community Problems with Data
-            Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
-            "Day 13-14 Linear and Binary Search: Tower Building Activity": 'Day 13-14 Linear and Binary Search: Tower Building Activity'
-            Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
-            "Day 17 Minimal Spanning Trees: Muddy City": 'Day 17 Minimal Spanning Trees: Muddy City'
-            Day 18-21 Final Project: Day 18-21 Final Project
-            "Day 3 Intro To Problem Solving: Candy Bar Activity": 'Day 3 Intro To Problem Solving: Candy Bar Activity'
-            "Day 4-6 Strategies in Problem Solving: Handshake Activity": 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
-            "Day 7-9 Problem Solving: Cornrow Curves": 'Day 7-9 Problem Solving: Cornrow Curves'
             Getting Started: Getting Started
             Intro to Unit 2: Intro to Unit 2
-            Introduction to the Unit 2 Challenge: Introduction to the Unit 2 Challenge
             Lesson Overviews: Lesson Overviews
-            Problem Solving: Problem Solving
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
-            Unit 2 Challenge Creation: Unit 2 Challenge Creation
-            Unit 2 Challenge Planning: Unit 2 Challenge Planning
-            Unit 2 Challenge Planning & Creation: 'Unit 2 Challenge Planning & Creation'
-            Unit 2 Challenge Preview: Unit 2 Challenge Preview
-            Unit 2 Overview: Unit 2 Overview
-            Welcome!: Sveiki atvykę!
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
           stage:
             Close & Next Steps: 'Close & Next Steps'
-            Day 1-2 Online Experiences: Day 1-2 Online Experiences
-            Day 11-13 Separating HTML and CSS: Day 11-13 Separating HTML and CSS
-            "Day 14 HTML: Links": 'Day 14 HTML: Links'
-            "Day 15-16 HTML and CSS: Tables, Lists,  Menus": 'Day 15-16 HTML and CSS: Tables, Lists,  Menus'
-            "Day 15-16 HTML and CSS: Tables, Lists, Menus": 'Day 15-16 HTML and CSS: Tables, Lists, Menus'
-            "Day 17-19 HTML and CSS: Create own webpage": 'Day 17-19 HTML and CSS: Create own webpage'
-            "Day 20-21 HTML and CSS: Adding Enhancements to Site": 'Day 20-21 HTML and CSS: Adding Enhancements to Site'
-            Day 22-25 Final Project: Day 22-25 Final Project
-            Day 3-4 HTML- Paragraph and Header Tags: 'Day 3-4 HTML- Paragraph and Header Tags'
-            Day 5 HTML - Strong and EM Tags: 'Day 5 HTML - Strong and EM Tags'
-            Day 6-7 HTML -Images: Day 6-7 HTML -Images
-            Day 8-10 Introduction to CSS: Day 8-10 Introduction to CSS
             Getting Started: Getting Started
-            Intro to Unit 2: Intro to Unit 2
             Intro to Unit 3: Intro to Unit 3
-            Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
             Teaching Strategies: Teaching Strategies
-            Unit 2 Challenge: Unit 2 Challenge
-            Unit 2 Challenge Preview: Unit 2 Challenge Preview
             Unit 3 Challenge: Unit 3 Challenge
-            Unit 3 Challenge Planning & Creation: 'Unit 3 Challenge Planning & Creation'
-            Unit 3 Challenge Preview: Unit 3 Challenge Preview
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
-            Unit 3 Overview: Unit 3 Overview
-            Welcome!: Sveiki atvykę!
         ECSPD3-Unit4:
           title: 'Exploring Computer Science: Unit 4'
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
           description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
           stage:
             Close & Next Steps: 'Close & Next Steps'
-            "Day 1 Scratch: Intro": 'Day 1 Scratch: Intro'
-            "Day 10-13 Scratch: Broadcasting": 'Day 10-13 Scratch: Broadcasting'
-            "Day 14 Scratch: Variables": 'Day 14 Scratch: Variables'
-            "Day 15 Scratch: Conditionals": 'Day 15 Scratch: Conditionals'
-            "Day 16-17 Scratch: AND OR and Randomness": 'Day 16-17 Scratch: AND OR and Randomness'
-            "Day 18 Scratch: Rock Paper Scissors": 'Day 18 Scratch: Rock Paper Scissors'
-            "Day 19 Scratch: Timer": 'Day 19 Scratch: Timer'
-            "Day 2-3 Scratch: Name Project": 'Day 2-3 Scratch: Name Project'
-            "Day 20-23 Scratch: Timing Game": 'Day 20-23 Scratch: Timing Game'
-            "Day 24 Scratch: Games": 'Day 24 Scratch: Games'
-            Day 25-30 Final Project: Day 25-30 Final Project
-            "Day 4 Scratch: Creating Dialogue": 'Day 4 Scratch: Creating Dialogue'
-            "Day 5-6 Scratch: Moving Sprites": 'Day 5-6 Scratch: Moving Sprites'
-            "Day 7-8 Scratch: Event Driven Programming": 'Day 7-8 Scratch: Event Driven Programming'
-            Day 9 Broadcasting Role Play: Day 9 Broadcasting Role Play
             Getting Started: Getting Started
             Intro to Unit 4: Intro to Unit 4
-            Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
             Teaching Strategies: Teaching Strategies
-            Unit 3 Day-by-Day: Unit 3 Day-by-Day
             Unit 4 Challenge: Unit 4 Challenge
-            Unit 4 Challenge Creation: Unit 4 Challenge Creation
-            Unit 4 Challenge Planning: Unit 4 Challenge Planning
-            Unit 4 Challenge Planning & Creation: 'Unit 4 Challenge Planning & Creation'
-            Unit 4 Challenge Preview: Unit 4 Challenge Preview
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
-            Unit 4 Overview: Unit 4 Overview
-            Welcome!: Sveiki atvykę!
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1318,11 +962,8 @@ lt:
             Getting Started: Getting Started
             Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
             Share out and Submit: Share out and Submit
-            Teaching Strategies: Teaching Strategies
-            Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
-            Welcome!: Sveiki atvykę!
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1330,14 +971,10 @@ lt:
           stage:
             Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
             Getting Started: Getting Started
-            Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
             Share out and Submit: Share out and Submit
-            Teaching Strategies: Teaching Strategies
             Unit 6 Challenge: Unit 6 Challenge
-            Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
-            Welcome!: Sveiki atvykę!
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description: |
@@ -1346,55 +983,31 @@ lt:
             data from live data APIs.
           description_short: Data
           stage:
-            APIs and Access to Large Data Sets: APIs and Access to Large Data Sets
-            Building Apps Using Structured Data: Building Apps Using Structured Data
             Check Your Assumptions: Check Your Assumptions
             Cleaning Data: Cleaning Data
-            Collecting Personal Information: Collecting Personal Information
             Compiling Data: Compiling Data
             Creating Javascript Objects: Creating Javascript Objects
             Creating Summary Tables: Creating Summary Tables
-            "Data App Part 1: Brainstorm": 'Data App Part 1: Brainstorm'
-            "Data App Part 2: Data Design": 'Data App Part 2: Data Design'
-            "Data App Part 3: Code": 'Data App Part 3: Code'
-            "Data App Part 4: App Permissions": 'Data App Part 4: App Permissions'
-            "Data App Part 5: Clean Data": 'Data App Part 5: Clean Data'
-            "Data App Part 6: Sort and Search": 'Data App Part 6: Sort and Search'
-            "Data App Part 7: Read Data": 'Data App Part 7: Read Data'
-            "Data App Part 8: Visualize Data": 'Data App Part 8: Visualize Data'
-            "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
-            Data is the Secret Ingredient: Data is the Secret Ingredient
             Data, Security, and Privacy: Data, Security, and Privacy
-            "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
-            "Debate: Privacy vs. Utility": 'Debate: Privacy vs. Utility'
             Designing Data Collection: Designing Data Collection
             Designing for Your User: Designing for Your User
             Discover a Data Story: Discover a Data Story
-            Finding Data: Finding Data
             Finding Trends with Visualizations: Finding Trends with Visualizations
             Good and Bad Data Visualizations: Good and Bad Data Visualizations
             How is Data Collected?: How is Data Collected?
-            Identifying People with Data: Identifying People with Data
             Import, Export, and Visualize Data: Import, Export, and Visualize Data
             Interpreting Data Visualizations: Interpreting Data Visualizations
-            Interpreting Data from Different Perspectives: Interpreting Data from Different Perspectives
             Making Data Visualizations: Making Data Visualizations
             Permanent Data Storage: Permanent Data Storage
             Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
             "Practice Create PT: Data App": 'Practice Create PT: Data App'
-            Privacy Policy: Privatumo politika
             Privacy in a Digital World: Privacy in a Digital World
             Privacy vs Utility: Privacy vs Utility
             Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
-            Reading Data: Reading Data
             Reading Records: Reading Records
             Search Terms: Search Terms
-            Searching: Searching
-            Sorting: Sorting
-            Structuring Data with JSON: Structuring Data with JSON
             Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
             Using Data in the Real World: Using Data in the Real World
-            Visualizations in the Real World: Visualizations in the Real World
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: What Data Can Tell Us
             Why Make Apps?: Why Make Apps?
@@ -1407,7 +1020,6 @@ lt:
             Life Science Challenges: Life Science Challenges
             Physical Science Challenges: Physical Science Challenges
             Thinking About Implementation: Thinking About Implementation
-            Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Sveiki atvykę!
             Wrap-Up: Apibendrinimas
         algebraPD3b:
@@ -1432,13 +1044,12 @@ lt:
             Getting Started: Getting Started
             Share out and Submit: Share out and Submit
             Unit 2 Overview: Unit 2 Overview
-            Welcome!: Sveiki atvykę!
         duino:
+          title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
           stage:
             Basic Circuits: Basic Circuits
             Blinky Lights: Blinky Lights
-            Experimenting with Arduino stuff: Experimenting with Arduino stuff
             JunkBot: JunkBot
             Making Music: Making Music
         Special Fun:
@@ -1453,9 +1064,7 @@ lt:
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           description_audience: Amžius 10+ (pabaigus 3 kursą)
           stage:
-            Halloween 2015: Halloween 2015
             Spring 2016: Spring 2016
-            Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description: Create a story or make a game with Ice Age Play Lab!
@@ -1483,35 +1092,24 @@ lt:
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           stage:
-            Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
-            Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
-            Arrays_ Intro: Arrays_ Intro
-            Arrays_ Photo Album: Arrays_ Photo Album
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
             Functions with Return Values: Functions with Return Values
             Image Scroller with Key Events: Image Scroller with Key Events
-            Images are Arrays: Images are Arrays
             Introduction to Arrays: Introduction to Arrays
-            Key Events with Image Scroller: Key Events with Image Scroller
             Loops and Simulations: Loops and Simulations
-            Practice Create Performance Task: Practice Create Performance Task
             "Practice PT: Create": 'Practice PT: Create'
             Processing Arrays: Processing Arrays
-            While Loop Basics: While Loop Basics
             While Loops: „Kol“ kartojimas
-            While Loops_ Counting Flips: While Loops_ Counting Flips
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
           description_short: Online Exploration of CSP Unit 3
           stage:
-            Challenge Overview: Challenge Overview
             Chunk 1 Overview: Chunk 1 Overview
             Chunk 2 Overview: Chunk 2 Overview
             Chunk 3 Overview: Chunk 3 Overview
             Chunk 4 Overview: Chunk 4 Overview
             Chunk 5 Overview: Chunk 5 Overview
-            Getting Started: Getting Started
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
@@ -1553,7 +1151,6 @@ lt:
           stage:
             "(optional) Refresh your connection to Complex Adaptive Systems": (optional) Refresh your connection to Complex Adaptive Systems
             Assessing Computer Models: Assessing Computer Models
-            Thinking About Implementation: Thinking About Implementation
             Welcome!: Sveiki atvykę!
             Wrap-Up: Apibendrinimas
         cspunit5:
@@ -1581,7 +1178,6 @@ lt:
             Making Data Visualizations: Making Data Visualizations
             Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
             Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
-            Privacy Abandoned: Privacy Abandoned
             Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
@@ -1619,8 +1215,6 @@ lt:
           stage:
             Challenge Overview: Challenge Overview
             Complete the Challenge: Complete the Challenge
-            Complete the Challlege: Complete the Challlege
-            Complete the Challlenge: Complete the Challlenge
             Create PT Breakdown: Create PT Breakdown
             Explore PT Breakdown: Explore PT Breakdown
             Getting Started: Getting Started
@@ -1701,17 +1295,10 @@ lt:
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
           stage:
-            Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
-            Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
-            Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
             Binary Numbers: Dvejetainiai skaičiai
             CS Principles Pre-survey: CS Principles Pre-survey
-            DNS in the Real World: DNS in the Real World
-            Encoding Numbers in the Real World: Encoding Numbers in the Real World
             Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
-            Encoding and Sending Text: Encoding and Sending Text
             HTTP and Abstraction: HTTP and Abstraction
-            Invent an Addressing Protocol: Invent an Addressing Protocol
             Number Systems: Skaičių sistemos
             Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
             Personal Innovations: Personal Innovations
@@ -1719,9 +1306,6 @@ lt:
             Routers and Redundancy: Routers and Redundancy
             Sending Binary Messages: Dvejetainių žinučių siuntimas
             Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
-            Sending Bits in the Real World: Bitų persiuntimas realiame pasaulyje
-            Sending Complex Messages: Sending Complex Messages
-            Sending Formatted Text: Sending Formatted Text
             Sending Numbers: Sending Numbers
             The Internet: Internetas
             The Need for Addressing: The Need for Addressing
@@ -1772,14 +1356,13 @@ lt:
           stage:
             Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
             Cracking the Code: Cracking the Code
-            Encryption Algorithms: Encryption Algorithms
+            Encryption with Keys and Passwords: Encryption with Keys and Passwords
             Identifying People with Data: Identifying People with Data
             Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
             Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
             Public Key Crypto: Public Key Crypto
             Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
             Simple Encryption: Simple Encryption
-            Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
         csp5:
@@ -1822,30 +1405,18 @@ lt:
           description: Temp place to work on U3 of Disco
           description_short: Programming
           stage:
-            Animation: Animacija
-            Animations: Animations
             Booleans and Conditionals: Booleans and Conditionals
-            CSD U3 Variables and Animation: CSD U3 Variables and Animation
             Collision Detection: Collision Detection
             Collisions: Collisions
             Complex Conditionals: Complex Conditionals
             Complex Sprite Movement: Complex Sprite Movement
-            Conditionals Update: Conditionals Update
             Conditionals and Keyboard Input: Conditionals and Keyboard Input
-            Counting with Variables: Counting with Variables
-            Draw Loop and Random: Draw Loop and Random
             Draw Loop and Randomization: Draw Loop and Randomization
             Drawing in Game Lab: Drawing in Game Lab
-            Expressions: Expressions
-            Expressions and Reassignment: Expressions and Reassignment
             "Project: Interactive Card": 'Project: Interactive Card'
-            Proposed Sprites and Props: Proposed Sprites and Props
-            SFLP: SFLP
             Sprite Movement Methods: Sprite Movement Methods
-            Sprite Properties and Mod: Sprite Properties and Mod
             Sprites and Images: Sprites and Images
             Sprites and Properties: Sprites and Properties
-            Variables: Kintamieji
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
         2016_sciencePD_phase1:
@@ -1877,7 +1448,6 @@ lt:
           description_short: This is a secret...shhhhh
           description_audience: Amžius 8-18 metų
           stage:
-            Computational Thinking: Skaičiuojamasis mąstymas
             Sample Stage: Sample Stage
         ECSPD1:
           title: ECS Part 1
@@ -1886,18 +1456,14 @@ lt:
           stage:
             Background and Context: Background and Context
             'Classroom and Workshop Style ': 'Classroom and Workshop Style '
-            'Classroom and workshop style ': 'Classroom and workshop style '
             ECS Curriculum: ECS Curriculum
-            Getting Started: Getting Started
             Welcome to Phase 1!: Welcome to Phase 1!
-            What is ECS?: What is ECS?
             Wrap Up: Wrap Up
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Algebros mokymas per funkcijų programavimą
           description_short: Algebros mokymas per funkcijų programavimą
           stage:
-            Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
             Teacher Dashboard: Mokytojo prietaisų skydelis
@@ -1940,9 +1506,9 @@ lt:
             Sending Binary Messages: Dvejetainių žinučių siuntimas
             Strategies for Student Writing: Strategies for Student Writing
             Supporting Peer Learning: Supporting Peer Learning
-            Teachers and Tools: Teachers and Tools
             "Tool Talk: Intro to Netsim": 'Tool Talk: Intro to Netsim'
         test-teaching-ap-cs-unit-1:
+          title: Test CPS PD
           stage:
             test Unit 1 content module Alpha: test Unit 1 content module Alpha
             test Unit 1 content module Bravo: test Unit 1 content module Bravo
@@ -1968,14 +1534,6 @@ lt:
           description: introduction to the internet simulator and a discussion of how we use it to teach the internet
           stage:
             netsim: netsim
-        'csp-facilitators ':
-          title: CSP Tool Overview
-          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
-          description_short: Introduction to CS Principles for new Facilitators
-          stage:
-            Introduction to Events: Introduction to Events
-            Introduction to Text Compression: Introduction to Text Compression
-            Turtle Programming: Turtle Programming
         csp-facilitators:
           title: CSP Tool Overview
           description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
@@ -2007,35 +1565,9 @@ lt:
           description: Temp place to work on U4 of Disco
           description_short: Design Process and App Lab
           stage:
-            APIs and Function Parameters: APIs and Function Parameters
             Adding Functionality (optional): Adding Functionality (optional)
-            App Lab: App Lab
-            Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
-            Compound Conditional Logic: Compound Conditional Logic
-            Controlling Memory with Variables: Controlling Memory with Variables
-            Creating Functions: Komandų kūrimas
-            Creating functions with Parameters: Creating functions with Parameters
             Design Mode: Design Mode
-            Digital Assistant Project: Digital Assistant Project
-            Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
-            Functions and Top-Down Design: Functions and Top-Down Design
-            Functions with Return Values: Functions with Return Values
-            Image Scroller with Key Events: Image Scroller with Key Events
-            Introducing Design Mode: Introducing Design Mode
-            Introduction to Arrays: Introduction to Arrays
-            Introduction to Conditional Logic: Introduction to Conditional Logic
-            Introduction to Digital Assistants: Introduction to Digital Assistants
-            Looping and Random Numbers: Looping and Random Numbers
-            Loops and Simulations: Loops and Simulations
             Making it Interactive: Making it Interactive
-            Multi-screen Apps: Multi-screen Apps
-            Processing Arrays: Processing Arrays
-            The Need For Programming Languages: The Need For Programming Languages
-            Understanding Program Flow and Logic: Understanding Program Flow and Logic
-            User Input and Strings: User Input and Strings
-            Using Simple Commands: Using Simple Commands
-            Using Variables in Apps: Using Variables in Apps
-            While Loops: „Kol“ kartojimas
         CSDU1-Draft:
           title: ' TEMP CSD Unit 1'
           description: Temp place to work on U1 of Disco
@@ -2048,27 +1580,27 @@ lt:
           description: Temp place to work on U2 of Disco
           description_short: Web Development
           stage:
-            Box Model and Page Layout: Box Model and Page Layout
-            Classes and External Style Sheets: Classes and External Style Sheets
             Clean Code and Debugging: Clean Code and Debugging
             Describing Webpages: Describing Webpages
             Designing Code for Computers: Designing Code for Computers
-            Designing Web Pages: Designing Web Pages
             Digital Footprint: Digital Footprint
-            Finalizing Website: Finalizing Website
-            Headers and Lists: Headers and Lists
             Images on the Web: Images on the Web
-            Intellectual Property: Intellectual Property
-            Introduction to HTML: Introduction to HTML
-            Introduction to Styling with CSS: Introduction to Styling with CSS
-            "Personal Website: Connecting Pages": 'Personal Website: Connecting Pages'
             "Personal Website: Finalizing Site": 'Personal Website: Finalizing Site'
-            "Personal Website: Midway Check": 'Personal Website: Midway Check'
-            Publishing a Website: Publishing a Website
             Quality Websites: Quality Websites
-            Sources and Search Engines: Sources and Search Engines
             Text on the Web: Text on the Web
             Website Design: Website Design
+            Intellectual Property: Intellectual Property
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            "Personal Website: Connecting Pages": 'Personal Website: Connecting Pages'
+            Classes and External Style Sheets: Classes and External Style Sheets
+            Box Model and Page Layout: Box Model and Page Layout
+            "Personal Website: Midway Check": 'Personal Website: Midway Check'
+            Publishing a Website: Publishing a Website
+            Sources and Search Engines: Sources and Search Engines
+            Introduction to HTML: Introduction to HTML
+            Headers and Lists: Headers and Lists
+            Designing Web Pages: Designing Web Pages
+            Holding: Holding
         CSDU5-Draft:
           title: ' TEMP CSD Unit 5'
           description: Temp place to work on U5 of Disco
@@ -2103,18 +1635,6 @@ lt:
           description_audience: Amžius 8-18 metų
           stage:
             Artist Exemplar: Artist Exemplar
-        2016_sciencePD_phase2b:
-          title: Computer Science in Science PD Phase 2b 2016-2017
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          stage:
-            Advanced StarLogo Nova: Advanced StarLogo Nova
-            Remixing Phases 1 and 2: Remixing Phases 1 and 2
-            Review StarLogo Nova: Review StarLogo Nova
-            Reviewing the Modules: Reviewing the Modules
-            Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Welcome!: Sveiki atvykę!
-            Wrap-Up: Apibendrinimas
         teachercon:
           title: TeacherCon Supports
           description: We will use this during TeacherCon to deliver supports and materials for sessions
@@ -2133,18 +1653,6 @@ lt:
             Lesson 2,2: 'Lesson 2.2: Text Compression'
             Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
             Measuring Student Learning: Measuring Student Learning
-        2016_sciencePD-phase2b:
-          title: Computer Science in Science PD Phase 2b 2016 2017
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          stage:
-            Advanced StarLogo Nova: Advanced StarLogo Nova
-            Remixing Phases 1 and 2: Remixing Phases 1 and 2
-            Review StarLogo Nova: Review StarLogo Nova
-            Reviewing the Modules: Reviewing the Modules
-            Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Welcome!: Sveiki atvykę!
-            Wrap-Up: Apibendrinimas
         kinderTest:
           stage:
             "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
@@ -2174,45 +1682,20 @@ lt:
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 9-99
           stage:
-            Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested Loops)
-            "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
-            "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
             "Bee: Determine the Concept": 'Bee: Determine the Concept'
-            "Bee: Functions": 'Bitė: komandų kūrimas'
             "Bee: Functions (Course 3)": 'Bee: Functions (Course 3)'
-            "Bee: Nested Loops": 'Bitė: kartojimas kartojime'
             Build a Star Wars Game!: Build a Star Wars Game!
-            Choose Your Own Adventure: Choose Your Own Adventure
-            Conditionals: Sąlyginiai sakiniai
-            Crowdsourcing: Komandinis programavimas
-            Decision Trees: Decision Trees
-            Determine the Concept Part 2: Determine the Concept Part 2
             Digital Citizenship: Virtuali pilietybė
             Explore project ideas: Explore project ideas
             "Farmer: Functions (New)": 'Farmer: Functions (New)'
             Final Project - Presentation Day: 'Final Project - Presentation Day'
             "Final Project - Unplugged: Design Process": 'Final Project - Unplugged: Design Process'
             "Final Project - Work Day: Build Project Online": 'Final Project - Work Day: Build Project Online'
-            Internet: Internetas
-            "Mixed Review #1 (Ramp Up)": 'Mixed Review #1 (Ramp Up)'
-            "Mixed Review #2 (Conditionals, Events, Functions)": 'Mixed Review #2 (Conditionals, Events, Functions)'
-            "Mixed Review #3 (Deduce the Concept)": 'Mixed Review #3 (Deduce the Concept)'
             More Programming with Scratch: More Programming with Scratch
-            Nested Loops: Kartojimas kartojime
             "New Artist: Functions": 'New Artist: Functions'
-            New Playlab Behaviors and Events Review: New Playlab Behaviors and Events Review
-            "PlayLab: Conditionals": 'PlayLab: Conditionals'
-            "Project #1": 'Project #1'
-            "Project #1: Artist (Nested Loops, Functions)": 'Project #1: Artist (Nested Loops, Functions)'
-            "Project #2": 'Project #2'
-            "Project 2: PlayLab Game (Events, Conditionals, Functions)": 'Project 2: PlayLab Game (Events, Conditionals, Functions)'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting: Dainų rašymas
-            "Unplugged: Conditionals with Cards": 'Unplugged: Conditionals with Cards'
-            "Unplugged: Decision Trees (New)": 'Unplugged: Decision Trees (New)'
             "Unplugged: Funky Functions": 'Unplugged: Funky Functions'
-            "Unplugged: Kinesthetic Functions": 'Unplugged: Kinesthetic Functions'
-            "Unplugged: Nested Loops (New)": 'Unplugged: Nested Loops (New)'
         grade1:
           title: Grade 1
           description: Planning Script for CSF 2.0
@@ -2229,7 +1712,6 @@ lt:
             Loops Unplugged: Loops Unplugged
             More Computer Science: More Computer Science
             Persistence & Frustration: 'Persistence & Frustration'
-            Predicting & Debugging: 'Predicting & Debugging'
             Programming: Programming
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: 'Sequences & Algorithms'
@@ -2239,34 +1721,21 @@ lt:
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 10-110
           stage:
-            Artist Binary: Artist Binary
             "Artist: For Loops": 'Menininkas: kartojimai'
             "Artist: Functions with Parameters": 'Menininkas: komandos su parametrais'
             "Artist: Variables": 'Menininkas: kintamieji'
             "Bee: For Loops": 'Bitė: kartojimai'
             "Bee: Functions with Parameters": 'Bitė: komandos su parametrais'
-            Concept Script (All below this point): Concept Script (All below this point)
             Digital Citizenship: Virtuali pilietybė
             Explore project ideas: Explore project ideas
             Final Project - Presentation Day: 'Final Project - Presentation Day'
             Final Project - Review/Revise Day: 'Final Project - Review/Revise Day'
             "Final Project - Unplugged: Design Process": 'Final Project - Unplugged: Design Process'
             "Final Project - Work Day: Build Project Online": 'Final Project - Work Day: Build Project Online'
-            Mixed Review (Ramp Up): Mixed Review (Ramp Up)
-            "Pixelation: Binary Exploration": 'Pixelation: Binary Exploration'
-            "Play Lab: Events and Conditionals": 'Play Lab: Events and Conditionals'
-            "Play Lab: Functions with Parameters": 'Žaidimų laboratorija: komandos su parametrais'
             "Play Lab: Variables": 'Žaidimų laboratorija: kintamieji'
-            "Project 1: Choose Your Own Story App": 'Project 1: Choose Your Own Story App'
-            "Project 2: For Loops with the Artist": 'Project 2: For Loops with the Artist'
-            "Project 3: Design your own App (PlayLab)": 'Project 3: Design your own App (PlayLab)'
-            "Project: Chase/Collect Game": 'Project: Chase/Collect Game'
-            Scratch (Optional Third-Party Stage): Scratch (Optional Third-Party Stage)
             Try programming with Khan Academy: Try programming with Khan Academy
-            "Unplugged: Binary Images": 'Unplugged: Binary Images'
             "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
             "Unplugged: For Loop Fun": 'Be kompiuterio: kartojimai'
-            "Unplugged: Madlibs": 'Unplugged: Madlibs'
             "Unplugged: Songwriting with Parameters": 'Be kompiuterio: dainų rašymas pagal parametrus'
         ecs-unit1:
           title: ECS Unit 1
@@ -2294,15 +1763,6 @@ lt:
           description_short: 'Unit 2: Problem Solving'
           stage:
             Close & Next Steps: 'Close & Next Steps'
-            Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community Problems with Data
-            Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
-            "Day 13-14 Linear and Binary Search: Tower Building Activity": 'Day 13-14 Linear and Binary Search: Tower Building Activity'
-            Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
-            "Day 17 Minimal Spanning Trees: Muddy City": 'Day 17 Minimal Spanning Trees: Muddy City'
-            Day 18-21 Final Project: Day 18-21 Final Project
-            "Day 3 Intro To Problem Solving: Candy Bar Activity": 'Day 3 Intro To Problem Solving: Candy Bar Activity'
-            "Day 4-6 Strategies in Problem Solving: Handshake Activity": 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
-            "Day 7-9 Problem Solving: Cornrow Curves": 'Day 7-9 Problem Solving: Cornrow Curves'
             Getting Started: Getting Started
             Intro to Unit 2: Intro to Unit 2
             Lesson Overviews: Lesson Overviews
@@ -2318,7 +1778,6 @@ lt:
             Intro to Unit 3: Intro to Unit 3
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
-            Unit 3 Challenge Preview: Unit 3 Challenge Preview
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
         ecs-unit4:
           title: ECS Unit 4
@@ -2330,7 +1789,6 @@ lt:
             Intro to Unit 4: Intro to Unit 4
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
-            Unit 4 Challenge Preview: Unit 4 Challenge Preview
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ecs-unit5:
           title: ECS Unit 5
@@ -2361,43 +1819,20 @@ lt:
           description_audience: Ages 5-18
           stage:
             " Bee: Conditionals": ' Bee: Conditionals'
-            About My Robot: About My Robot
-            Artist Debugging: 'Menininkas: klaidų ieškojimas'
-            "Artist: Loops": 'Menininkas: kartojimas'
             "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
             Bee Debugging: 'Bitė: klaidų ieškojimas'
             Bounce: Tenisas
             Build a Game: Build a Game
-            Choose Your Own Adventure: Choose Your Own Adventure
             Farmer Conditional with Cards: Farmer Conditional with Cards
             Farmer Debug Relay Programming: Farmer Debug Relay Programming
             Farmer Graph Paper Programming: Farmer Graph Paper Programming
             Farmer Impacts of Computing: Farmer Impacts of Computing
-            Farmer Robot Conditionals: Farmer Robot Conditionals
-            Farmer Robot Conditionals with Else: Farmer Robot Conditionals with Else
             "Farmer: While Loops": 'Ūkininkas: kartojimas'
             "Maze: Conditionals with Loops": 'Maze: Conditionals with Loops'
             "Maze: Nested Loops": 'Maze: Nested Loops'
             More Programming with CS4FN: More Programming with CS4FN
-            More Programming with Scratch: More Programming with Scratch
-            Preview to What is Next: Preview to What is Next
-            Robot Debugging: Robot Debugging
-            Robot Farmer Conditionals Intro: Robot Farmer Conditionals Intro
-            Robot Farmer Conditionals with Loops: Robot Farmer Conditionals with Loops
-            Robot Farmer Loops: Robot Farmer Loops
-            Robot Farmer While: Robot Farmer While
-            Robot Games: Robot Games
             Robot Running the Farm: Robot Running the Farm
             Unplugged Conditionals with Loops: Unplugged Conditionals with Loops
-        Test CPS PD:
-          stage:
-            test Unit 1 content module Alpha: test Unit 1 content module Alpha
-            test Unit 1 content module Bravo: test Unit 1 content module Bravo
-            test Unit 1 content module Charlie: test Unit 1 content module Charlie
-            test Unit 1 practice module Delta: test Unit 1 practice module Delta
-            test Unit 1 practice module Echo: test Unit 1 practice module Echo
-            test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
-            test Unit 1 required reading: test Unit 1 required reading
         alltheplcthings:
           title: Sample course for PLC things
           description: "This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon"
@@ -2436,28 +1871,20 @@ lt:
           description_audience: Ages 5-18
           stage:
             At The Dog Park: At The Dog Park
-            Big Event: Big Event
-            Build A Block: Build A Block
-            Build A Puppy Picture: Build A Puppy Picture
             Caring for My New Pet: Caring for My New Pet
-            Caring for my new pet: Caring for my new pet
             Exploring the Neighborhood: Exploring the Neighborhood
-            Exploring the neighborhood: Exploring the neighborhood
             Flappy: Flappy
-            Free Play with your Pet: Free Play with your Pet
-            Getting Loopy: Kartojimo supratimas
             Getting Loopy with Puppy: Getting Loopy with Puppy
-            Have a name needs a do tag: Have a name needs a do tag
             Make a Dog Tag: Make a Dog Tag
             More CS with Run Marco: More CS with Run Marco
-            More CS with Scratch: More CS with Scratch
             New Home for My Pet: New Home for My Pet
             Online Internet Safety: Online Internet Safety
             Online My New Pet Jigsaw: Online My New Pet Jigsaw
-            Pet's New Home: "Pet's New Home"
             Puppy Event: Puppy Event
             Puppy Introduction: Puppy Introduction
             Puppy Loops: Puppy Loops
+            How to behave in the lab_How to use Code_org puzzles: How to behave in the lab/How to use Code.org puzzles
+            Programming at home with my pet: Programming at home with my pet
         transferring-over:
           stage:
             20-hr Stage 2: 20-hr Stage 2
@@ -2465,24 +1892,6 @@ lt:
             Course 2 Stage 17: Course 2 Stage 17
             Course 3 Stage 16: Course 3 Stage 16
             Course 3 Stage 17: Course 3 Stage 17
-        cspunit1assessment:
-          title: CS Principles Unit 1 Assessment
-          description: This 10-question multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 1
-          description_short: Unit 1 Assessment
-          stage:
-            CS Principles Culminating Assessment: CS Principles Culminating Assessment
-        cspunit2ch1assessment:
-          title: CS Principles Unit 2 Ch 1 Assessment
-          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 2 Chapter 1 (Lessons 1-6)
-          description_short: Unit 2.1 Assessment
-          stage:
-            CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
-        cspunit2ch2assessment:
-          title: CS Principles Unit 2 Ch 2 Assessment
-          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 2 Chapter 2 (Lessons 7-15)
-          description_short: Unit 2.1 Assessment
-          stage:
-            CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
         k5concepts:
           title: K5 Concepts
           stage:
@@ -2496,18 +1905,6 @@ lt:
             Nested Loops: Kartojimas kartojime
             Variables: Kintamieji
             While Loops: „Kol“ kartojimas
-        cspunit1ch1assessment:
-          title: CS Principles Unit 1 Ch 1 Assessment
-          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 1 Chapter 1 (Lessons 1-7)
-          description_short: Unit 1.1 Assessment
-          stage:
-            CS Principles Unit 1 Ch 1 Assessment: CS Principles Unit 1 Ch 1 Assessment
-        cspunit1ch2assessment:
-          title: CS Principles Unit 1 Ch 2 Assessment
-          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 1 Chapter 2 (Lessons 8-14)
-          description_short: Unit 1.2 Assessment
-          stage:
-            CS Principles Unit 1 Ch 2 Assessment: CS Principles Unit 1 Ch 2 Assessment
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Algebros mokymas per funkcijų programavimą
@@ -2523,14 +1920,49 @@ lt:
           title: CS Principles Pre-Survey
           stage:
             Anonymous student pre-survey: Anonymous student pre-survey
-            Anonymous student survey 2: Anonymous student survey 2
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
         sciencepd3-2016:
           title: CS in Science PD3 Before 1st In-Person
-          description: 'Phase 3: Academic Year Development (Segment One)'
           description_short: 'Phase 3: Academic Year Development Pre 1'
+          description: 'Phase 3: Academic Year Development (Segment One)'
           stage:
-            Prep With Your Modules: Prep With Your Modules
-            The TLO: The TLO
             Welcome Back!: Welcome Back!
+            The TLO: The TLO
+            Prep With Your Modules: Prep With Your Modules
+        csd1:
+          title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
+          description_short: Problem Solving
+          description: U1 of Discoveries
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Representing Information: Representing Information
+            Processing with Bits: Processing with Bits
+            Human vs. Computer Processing: Human vs. Computer Processing
+            Processing with Apps: Processing with Apps
+            "Project: Apps and Problem Solving": 'Project: Apps and Problem Solving'
+            Human vs Computer Processing: Human vs Computer Processing
+        csp-online-test:
+          title: test space for csp online support
+          description_short: This is a sample course for testing csp online pd
+          description: This is a test space for online pd. Enrollment in this course does nothing.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            "Lessons 2-3: Binary Messages": 'Lessons 2-3: Binary Messages'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            "Lessons 4-6: Encoding and Sending Numbers": 'Lessons 4-6: Encoding and Sending Numbers'
+            "Lesson 7: Encoding and Sending Text": 'Lesson 7: Encoding and Sending Text'
+            "lessons 9: Internet Addressing": 'lessons 9: Internet Addressing'
+            "lessons 10: Routers and Redundancy": 'lessons 10: Routers and Redundancy'
+            "lessons 11-12: Protocols and Abstraction": 'lessons 11-12: Protocols and Abstraction'
+            "Lessons 2 - 3: Binary Messages": 'Lessons 2 - 3: Binary Messages'
+            "Lessons 4 - 6: Encoding and Sending Numbers": 'Lessons 4 - 6: Encoding and Sending Numbers'
+            "Lesson 9: Internet Addressing": 'Lesson 9: Internet Addressing'
+            "Lessons 10 - 11: Redundancy and Packets": 'Lessons 10 - 11: Redundancy and Packets'
+            "Lessons 12 - 13: Abstraction on the Internet": 'Lessons 12 - 13: Abstraction on the Internet'
