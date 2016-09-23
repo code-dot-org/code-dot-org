@@ -58,7 +58,6 @@ class ManifestBuilder
     animation_objects = get_animation_objects(bucket)
     info "Found #{animation_objects.size} animations."
 
-    # Convert the set of objects into a big metadata map
     info "Building animation metadata..."
     animation_metadata = build_animation_metadata(animation_objects)
     info "Metadata built for #{animation_metadata.size} animations."
@@ -176,7 +175,7 @@ The animation has been skipped.
         next <<-WARN
 There was an error parsing #{name}.json:
 #{json_error}
-The animation ha been skipped.
+The animation has been skipped.
         WARN
       end
 
