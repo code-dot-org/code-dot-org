@@ -2,7 +2,7 @@
 
 import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
-import { loadConfig, getDatabase } from './firebaseUtils';
+import { loadConfig, getDatabase, validateFirebaseKey } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
 import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
 
@@ -51,7 +51,6 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  *    http status.
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  const keyRef = getKeysRef(Applab.channelId).child(key);
   // Store the value as a string representing a JSON value, or delete the key if the
   // value is undefined. For compatibility with parsers
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
@@ -59,11 +58,16 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   const jsonValue = (value === undefined) ? null : JSON.stringify(value);
 
   loadConfig().then(config => {
+    try {
+      validateFirebaseKey(key);
+    } catch (e) {
+      return Promise.reject(`The key is invalid. ${e.message}`);
+    }
     if (jsonValue && jsonValue.length > config.maxPropertySize) {
       return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
     }
     return incrementRateLimitCounters();
-  }).then(() => keyRef.set(jsonValue)).then(onSuccess, onError);
+  }).then(() => getKeysRef(Applab.channelId).child(key).set(jsonValue)).then(onSuccess, onError);
 };
 
 /**
@@ -102,9 +106,10 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   // Assign a unique id for the new record.
   const updateNextId = true;
 
-  // Validate the length of the record before updating table counters, so that the
+  // Validate the table name and record before updating table counters, so that the
   // row count does not become inaccurate if the record is too large.
   validateRecord(record)
+    .then(() => validateTableName(tableName))
     .then(() => incrementRateLimitCounters())
     .then(() => updateTableCounters(tableName, 1, updateNextId))
     .then(nextId => {
@@ -125,6 +130,15 @@ function matchesSearch(record, searchParams) {
     matches = matches && (record[key] === searchParams[key]);
   });
   return matches;
+}
+
+function validateTableName(tableName) {
+  try {
+    validateFirebaseKey(tableName);
+    return Promise.resolve();
+  } catch (e) {
+    return Promise.reject(`The table name is invalid. ${e.message}`);
+  }
 }
 
 function validateRecord(record, hasId) {
@@ -311,7 +325,7 @@ FirebaseStorage.resetRecordListener = function () {
  * @param {function(string)} onError
  */
 FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
-  return incrementRateLimitCounters().then(loadConfig).then(config => {
+  return validateTableName(tableName).then(incrementRateLimitCounters).then(loadConfig).then(config => {
     return enforceTableCount(config, tableName);
   }).then(() => {
     const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);

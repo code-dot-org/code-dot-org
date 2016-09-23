@@ -115,8 +115,8 @@ var loadLevel = function () {
   Bounce.BALL_Y_OFFSET = skin.ballYOffset;
   Bounce.PADDLE_Y_OFFSET = skin.paddleYOffset;
   // Height and width of the goal and obstacles.
-  Bounce.MARKER_HEIGHT = 43;
-  Bounce.MARKER_WIDTH = 50;
+  Bounce.MARKER_HEIGHT = skin.markerHeight;
+  Bounce.MARKER_WIDTH = skin.markerWidth;
 
   Bounce.MAZE_WIDTH = Bounce.SQUARE_SIZE * Bounce.COLS;
   Bounce.MAZE_HEIGHT = Bounce.SQUARE_SIZE * Bounce.ROWS;
