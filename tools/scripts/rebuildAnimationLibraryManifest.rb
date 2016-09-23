@@ -43,16 +43,16 @@ class ManifestBuilder
   def rebuild_animation_library_manifest
     # Connect to S3 and get a listing of all objects in the animation library bucket
     bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    animations_by_name = get_animations_by_name(bucket)
-    info "Found #{animations_by_name.size} animations."
+    animation_objects = get_animation_objects(bucket)
+    info "Found #{animation_objects.size} animations."
 
     # Convert the set of objects into a big metadata map
     info "Building animation metadata..."
-    animation_metadata_by_name = build_animation_metadata(animations_by_name)
-    info "Metadata built for #{animation_metadata_by_name.size} animations."
+    animation_metadata = build_animation_metadata(animation_objects)
+    info "Metadata built for #{animation_metadata.size} animations."
 
     info "Building alias map..."
-    alias_map = build_alias_map(animation_metadata_by_name)
+    alias_map = build_alias_map(animation_metadata)
     info "Mapped #{alias_map.size} aliases."
 
     # Write result to file
@@ -63,7 +63,7 @@ class ManifestBuilder
               'GENERATED FILE: DO NOT MODIFY DIRECTLY',
               'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
           ],
-          'metadata': animation_metadata_by_name.sort.to_h,
+          'metadata': animation_metadata.sort.to_h,
           'aliases': alias_map.sort.to_h
       }))
     end
@@ -93,7 +93,7 @@ class ManifestBuilder
 
   # Given an S3 bucket, return map of animation file objects:
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
-  def get_animations_by_name(bucket)
+  def get_animation_objects(bucket)
     animations_by_name = {}
     bucket.objects.each do |object_summary|
       animation_name = object_summary.key[/^[^.]+/]
@@ -115,13 +115,13 @@ class ManifestBuilder
 
   # Given a map of S3 objects for animations, build up an animation
   # metadata map.
-  def build_animation_metadata(animations_by_name)
-    metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
+  def build_animation_metadata(animation_objects)
+    metadata_progress_bar = ProgressBar.create(total: animation_objects.size) unless @options[:verbose] || @options[:quiet]
     animation_metadata_by_name = {}
 
     # Parallelize metadata construction because some objects will require an
     # extra S3 request to get version IDs or image dimensions.
-    Parallel.map(animations_by_name.keys, finish: lambda do |name, _, result|
+    Parallel.map(animation_objects.keys, finish: lambda do |name, _, result|
       # This lambda runs synchronously after each entry is done processing - it's
       # used to collect up results and warnings to the original process/thread.
       if result.is_a? Hash
@@ -134,7 +134,7 @@ class ManifestBuilder
       # This is the parallel block.  This block should return a string to
       # generate a warning and skip the animation, and a metadata Hash in
       # the success case.
-      objects = animations_by_name[name]
+      objects = animation_objects[name]
 
       # Drop this animation if it is missing its JSON or PNG components
       if objects['json'].nil?
@@ -161,10 +161,23 @@ The animation ha been skipped.
         WARN
       end
 
-      # If no frameCount information is present, it's probably a single frame
-      metadata['frameCount'] ||= 1
+      # Default name to file name
+      next "Animation #{name} is missing the 'name' attribute." unless metadata['name'].is_a?(String)
 
-      # TODO: Validate metadata, ensure it has everything it needs
+      # If no frameCount information is present, it's probably a single frame
+      next "Animation #{name} is missing the 'frameCount' attribute." unless metadata['frameCount'].is_a?(Integer)
+
+      # Require frameSize information
+      next "Animation #{name} is missing the 'frameSize' attribute." unless metadata['frameSize'].is_a?(Hash)
+      next "Animation #{name} is missing the 'frameSize.x' attribute." unless metadata['frameSize']['x'].is_a?(Integer)
+      next "Animation #{name} is missing the 'frameSize.y' attribute." unless metadata['frameSize']['y'].is_a?(Integer)
+
+      # Require boolean looping attribute
+      next "Animation #{name} is missing the 'looping' attribute." unless [TrueClass, FalseClass].include? metadata['looping'].class
+
+      # Require frameDelay attribute
+      next "Animation #{name} is missing the 'frameDelay' attribute." unless metadata['frameDelay'].is_a?(Integer)
+
       # Record target version in the metadata, so environments (and projects)
       # consistently reference the version they originally imported.
       metadata['version'] = objects['png'].object.version_id
@@ -190,10 +203,10 @@ The animation ha been skipped.
   end
 
   # Given a metadata map, build the alias map
-  def build_alias_map(animation_metadata_by_name)
-    alias_progress_bar = ProgressBar.create(total: animation_metadata_by_name.size) unless @options[:quiet]
+  def build_alias_map(animation_metadata)
+    alias_progress_bar = ProgressBar.create(total: animation_metadata.size) unless @options[:quiet]
     alias_map = Hash.new {|h, k| h[k] = []}
-    animation_metadata_by_name.each do |name, metadata|
+    animation_metadata.each do |name, metadata|
       aliases = [name]
       aliases += metadata['aliases'] unless metadata['aliases'].nil?
       aliases.each do |aliaz|
