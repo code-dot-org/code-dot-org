@@ -7,6 +7,7 @@ markdown <<MARKDOWN
 
 ### Content and Teaching Strategies
 
+<img src="https://images.code.org/190076e990942f564a5af581540252ce-image-1474651955809.31.15 PM.png" style=" width:300px; float:right; margin-left:30px">
 The purpose of the lessons in this chapter is to acquaint students with a fundamental truth about computers: all information on computers is represented and stored in binary.  Even though a lot of people can regurgitate that fact, very few actually get a hands-on experience that exposes why that is true and how it works. 
 
 **Teaching Binary and the Internet**
@@ -34,4 +35,6 @@ With each lesson the Internet Simulator changes to incorporate a solution to the
 Teaching networking concepts is very challenging and relatively unaddressed at the K-12 level.  It is very easy while teaching these concepts for things to get abstract, intangible, and involve a lot of reading.  Our intent here is to give students a more visceral experience, using unplugged activities and the Internet Simulator to bolster student’s understanding of how the Internet was designed and built to function as we know it today.  
 
 Inventing these things should be both revelatory, educational and empowering. We want students to say: “whoa, I feel like I just invented the Internet”
+
+
 MARKDOWN

@@ -125,6 +125,57 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U1 Eval q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U1 Eval q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U1 Eval q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U1 Eval q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U1 Eval q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U1 Eval q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U1 eval q1:
+        Brand new!: Brand new!
+        How experienced would you say you are with computer science?: How experienced would you say you are with computer science?
+        Somewhat Experienced: Somewhat Experienced
+        Very Experienced: Very Experienced
+      U1 eval q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Are you comfortable with the underlying concepts behind how non-decimal number systems work?
+        I have no idea what you're talking about!: I have no idea what you're talking about!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: I know how to convert between number systems, but I don't know about the underlying rules of how they work
+        Yes!: Yes!
+      U1 eval q3:
+        Are you comfortable with HTML or Markdown?: Are you comfortable with HTML or Markdown?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q4:
+        Do you know how IP addresses work?: Do you know how IP addresses work?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q5:
+        Do you know how messages are broken down and routed on the internet?: Do you know how messages are broken down and routed on the internet?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
+        Nope!: Nope!
+        Yes!: Yes!
     external:
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -143,6 +194,8 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Assessing Student Learning in Unit 1: {}
+      Balancing Teacher and Tools in Unit 1: {}
       Begin planning your project:
         description here: description here
         title: title
@@ -437,6 +490,7 @@ en:
       Digital Footprint instantframe:
         instantframe - johnsnow: instantframe - johnsnow
       Digital Footprint instantframe moonbeam: {}
+      Discovery Learning in Unit 1: {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -823,6 +877,7 @@ en:
       GoodBadVisualizations_v2:
         description here: description here
         title: title
+      Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
       How Secure Is Your Password?:
@@ -919,6 +974,9 @@ en:
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
       'Overview: Balancing Teachers and Tools': {}
+      'Overview: Balancing Teachers and Tools- Teachercon':
+        description here: description here
+        title: title
       'Overview: Capturing Student Learning': {}
       'Overview: Discovery Learning': {}
       'Overview: Group Work and Peer Learning': {}
@@ -1144,6 +1202,7 @@ en:
       'Stop: External Style Sheets': {}
       'Stop: Hobbies Page': {}
       'Stop: Images': {}
+      'Stop: Intro to CSS': {}
       'Stop: Validator': {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
@@ -1653,6 +1712,8 @@ en:
       Welcome to TeacherCon!: {}
       What is ASCII?: {}
       What is HTML?: {}
+      What's inside and how is it organized?: {}
+      'What''s inside and how is it organized? ': {}
       Why Teach Number Systems?: {}
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
@@ -1778,6 +1839,7 @@ en:
       gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
+      intro to self assessment: {}
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
@@ -2209,6 +2271,8 @@ en:
         Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        Unit 1 Self Assessment: {}
+        Unit 1 Self-Assessment: {}
         brendan test survey: {}
     match:
       2-3 Big Event Match 1:
