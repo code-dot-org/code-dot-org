@@ -7,9 +7,6 @@
   "metadata": {
     "apple": {
       "name": "apple",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -26,9 +23,6 @@
     },
     "arrow": {
       "name": "arrow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -45,9 +39,6 @@
     },
     "asterisk_circle": {
       "name": "asterisk_circle",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 132,
         "y": 126
@@ -64,9 +55,6 @@
     },
     "asterisk_explode": {
       "name": "asterisk_explode",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 171,
         "y": 158
@@ -83,9 +71,6 @@
     },
     "asterisk_normal": {
       "name": "asterisk_normal",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 132,
         "y": 126
@@ -102,9 +87,6 @@
     },
     "asterisk_stretching": {
       "name": "asterisk_stretching",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 144,
         "y": 144
@@ -121,9 +103,6 @@
     },
     "axe_bronze": {
       "name": "axe_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -140,9 +119,6 @@
     },
     "axe_diamond": {
       "name": "axe_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -159,9 +135,6 @@
     },
     "axe_gold": {
       "name": "axe_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -178,9 +151,6 @@
     },
     "axe_iron": {
       "name": "axe_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -197,9 +167,6 @@
     },
     "axe_silver": {
       "name": "axe_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -216,9 +183,6 @@
     },
     "boat": {
       "name": "boat",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -235,9 +199,6 @@
     },
     "bow": {
       "name": "bow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -254,9 +215,6 @@
     },
     "bowArrow": {
       "name": "bowArrow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -273,9 +231,6 @@
     },
     "bowl": {
       "name": "bowl",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -292,9 +247,6 @@
     },
     "box": {
       "name": "box",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 66,
         "y": 118
@@ -311,9 +263,6 @@
     },
     "brick_grey": {
       "name": "brick_grey",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -330,9 +279,6 @@
     },
     "brick_red": {
       "name": "brick_red",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -349,9 +295,6 @@
     },
     "bronze_1": {
       "name": "bronze_1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 84,
@@ -368,9 +311,6 @@
     },
     "bronze_2": {
       "name": "bronze_2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 66,
@@ -387,9 +327,6 @@
     },
     "bronze_3": {
       "name": "bronze_3",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 50,
@@ -406,9 +343,6 @@
     },
     "bronze_4": {
       "name": "bronze_4",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 14,
@@ -425,9 +359,6 @@
     },
     "bubble": {
       "name": "bubble",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 211,
@@ -444,9 +375,6 @@
     },
     "bubbly": {
       "name": "bubbly",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 82,
         "y": 130
@@ -463,11 +391,6 @@
     },
     "bunny1_hurt": {
       "name": "bunny1_hurt",
-      "aliases": [
-        "jumper",
-        "player",
-        "brown"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 150,
@@ -484,11 +407,6 @@
     },
     "bunny1_jump": {
       "name": "bunny1_jump",
-      "aliases": [
-        "jumper",
-        "player",
-        "brown"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 150,
@@ -505,11 +423,6 @@
     },
     "bunny1_ready": {
       "name": "bunny1_ready",
-      "aliases": [
-        "jumper",
-        "player",
-        "brown"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -526,11 +439,6 @@
     },
     "bunny1_stand": {
       "name": "bunny1_stand",
-      "aliases": [
-        "jumper",
-        "player",
-        "brown"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -547,11 +455,6 @@
     },
     "bunny1_walk1": {
       "name": "bunny1_walk1",
-      "aliases": [
-        "jumper",
-        "player",
-        "brown"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -568,11 +471,6 @@
     },
     "bunny1_walk2": {
       "name": "bunny1_walk2",
-      "aliases": [
-        "jumper",
-        "player",
-        "brown"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -589,11 +487,6 @@
     },
     "bunny2_hurt": {
       "name": "bunny2_hurt",
-      "aliases": [
-        "jumper",
-        "player",
-        "purple"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 150,
@@ -610,11 +503,6 @@
     },
     "bunny2_jump": {
       "name": "bunny2_jump",
-      "aliases": [
-        "jumper",
-        "player",
-        "purple"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 150,
@@ -631,11 +519,6 @@
     },
     "bunny2_ready": {
       "name": "bunny2_ready",
-      "aliases": [
-        "jumper",
-        "player",
-        "purple"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 121,
@@ -652,11 +535,6 @@
     },
     "bunny2_stand": {
       "name": "bunny2_stand",
-      "aliases": [
-        "jumper",
-        "player",
-        "purple"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 121,
@@ -673,11 +551,6 @@
     },
     "bunny2_walk1": {
       "name": "bunny2_walk1",
-      "aliases": [
-        "jumper",
-        "player",
-        "purple"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 121,
@@ -694,11 +567,6 @@
     },
     "bunny2_walk2": {
       "name": "bunny2_walk2",
-      "aliases": [
-        "jumper",
-        "player",
-        "purple"
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 121,
@@ -715,9 +583,6 @@
     },
     "cactus": {
       "name": "cactus",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 117,
@@ -734,9 +599,6 @@
     },
     "cactus_inside": {
       "name": "cactus_inside",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -753,9 +615,6 @@
     },
     "cactus_side": {
       "name": "cactus_side",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -772,9 +631,6 @@
     },
     "cactus_top": {
       "name": "cactus_top",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -791,9 +647,6 @@
     },
     "carrot": {
       "name": "carrot",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 78,
@@ -810,9 +663,6 @@
     },
     "carrot_gold": {
       "name": "carrot_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 78,
@@ -829,9 +679,6 @@
     },
     "carrots": {
       "name": "carrots",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 54,
@@ -848,9 +695,6 @@
     },
     "cloud": {
       "name": "cloud",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 260,
@@ -867,9 +711,6 @@
     },
     "coin_bronze": {
       "name": "coin_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 60,
@@ -886,9 +727,6 @@
     },
     "coin_gold": {
       "name": "coin_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 61,
@@ -905,9 +743,6 @@
     },
     "coin_silver": {
       "name": "coin_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 61,
@@ -924,9 +759,6 @@
     },
     "cotton_blue": {
       "name": "cotton_blue",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -943,9 +775,6 @@
     },
     "cotton_green": {
       "name": "cotton_green",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -962,9 +791,6 @@
     },
     "cotton_red": {
       "name": "cotton_red",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -981,9 +807,6 @@
     },
     "cotton_tan": {
       "name": "cotton_tan",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1000,9 +823,6 @@
     },
     "dirt": {
       "name": "dirt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1019,9 +839,6 @@
     },
     "dirt_grass": {
       "name": "dirt_grass",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1038,9 +855,6 @@
     },
     "dirt_sand": {
       "name": "dirt_sand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1057,9 +871,6 @@
     },
     "dirt_snow": {
       "name": "dirt_snow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1076,9 +887,6 @@
     },
     "fence_stone": {
       "name": "fence_stone",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1095,9 +903,6 @@
     },
     "fence_wood": {
       "name": "fence_wood",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1114,9 +919,6 @@
     },
     "fish": {
       "name": "fish",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1133,9 +935,6 @@
     },
     "fish_cooked": {
       "name": "fish_cooked",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1152,9 +951,6 @@
     },
     "fishingPole": {
       "name": "fishingPole",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1171,9 +967,6 @@
     },
     "flail_bronze": {
       "name": "flail_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1190,9 +983,6 @@
     },
     "flail_diamond": {
       "name": "flail_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1209,9 +999,6 @@
     },
     "flail_gold": {
       "name": "flail_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1228,9 +1015,6 @@
     },
     "flail_iron": {
       "name": "flail_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1247,9 +1031,6 @@
     },
     "flail_silver": {
       "name": "flail_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1266,9 +1047,6 @@
     },
     "flyMan_fly": {
       "name": "flyMan_fly",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 122,
@@ -1285,9 +1063,6 @@
     },
     "flyMan_jump": {
       "name": "flyMan_jump",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 122,
@@ -1304,9 +1079,6 @@
     },
     "flyMan_stand": {
       "name": "flyMan_stand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 122,
@@ -1323,9 +1095,6 @@
     },
     "flyMan_still_fly": {
       "name": "flyMan_still_fly",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -1342,9 +1111,6 @@
     },
     "flyMan_still_jump": {
       "name": "flyMan_still_jump",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -1361,9 +1127,6 @@
     },
     "flyMan_still_stand": {
       "name": "flyMan_still_stand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -1380,9 +1143,6 @@
     },
     "ghost_standing": {
       "name": "ghost_standing",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 72,
         "y": 158
@@ -1399,9 +1159,6 @@
     },
     "glass": {
       "name": "glass",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1418,9 +1175,6 @@
     },
     "glass_frame": {
       "name": "glass_frame",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1437,9 +1191,6 @@
     },
     "gold_1": {
       "name": "gold_1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 84,
@@ -1456,9 +1207,6 @@
     },
     "gold_2": {
       "name": "gold_2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 66,
@@ -1475,9 +1223,6 @@
     },
     "gold_3": {
       "name": "gold_3",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 50,
@@ -1494,9 +1239,6 @@
     },
     "gold_4": {
       "name": "gold_4",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 15,
@@ -1513,9 +1255,6 @@
     },
     "grass1": {
       "name": "grass1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 58,
@@ -1532,9 +1271,6 @@
     },
     "grass2": {
       "name": "grass2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 82,
@@ -1551,9 +1287,6 @@
     },
     "grass3": {
       "name": "grass3",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1570,9 +1303,6 @@
     },
     "grass4": {
       "name": "grass4",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1589,9 +1319,6 @@
     },
     "grass_brown": {
       "name": "grass_brown",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1608,9 +1335,6 @@
     },
     "grass_brown1": {
       "name": "grass_brown1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 58,
@@ -1627,9 +1351,6 @@
     },
     "grass_brown2": {
       "name": "grass_brown2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 82,
@@ -1646,9 +1367,6 @@
     },
     "grass_tan": {
       "name": "grass_tan",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1665,9 +1383,6 @@
     },
     "grass_top": {
       "name": "grass_top",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1684,9 +1399,6 @@
     },
     "gravel_dirt": {
       "name": "gravel_dirt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1703,9 +1415,6 @@
     },
     "gravel_stone": {
       "name": "gravel_stone",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1722,9 +1431,6 @@
     },
     "greysand": {
       "name": "greysand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1741,9 +1447,6 @@
     },
     "greystone": {
       "name": "greystone",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1760,9 +1463,6 @@
     },
     "greystone_ruby": {
       "name": "greystone_ruby",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1779,9 +1479,6 @@
     },
     "greystone_ruby_alt": {
       "name": "greystone_ruby_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1798,9 +1495,6 @@
     },
     "greystone_sand": {
       "name": "greystone_sand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -1817,9 +1511,6 @@
     },
     "ground_cake": {
       "name": "ground_cake",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -1836,9 +1527,6 @@
     },
     "ground_cake_broken": {
       "name": "ground_cake_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -1855,9 +1543,6 @@
     },
     "ground_cake_small": {
       "name": "ground_cake_small",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 201,
@@ -1874,9 +1559,6 @@
     },
     "ground_cake_small_broken": {
       "name": "ground_cake_small_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -1893,9 +1575,6 @@
     },
     "ground_grass": {
       "name": "ground_grass",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -1912,9 +1591,6 @@
     },
     "ground_grass_broken": {
       "name": "ground_grass_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -1931,9 +1607,6 @@
     },
     "ground_grass_small": {
       "name": "ground_grass_small",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 201,
@@ -1950,9 +1623,6 @@
     },
     "ground_grass_small_broken": {
       "name": "ground_grass_small_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -1969,9 +1639,6 @@
     },
     "ground_sand": {
       "name": "ground_sand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -1988,9 +1655,6 @@
     },
     "ground_sand_broken": {
       "name": "ground_sand_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -2007,9 +1671,6 @@
     },
     "ground_sand_small": {
       "name": "ground_sand_small",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 201,
@@ -2026,9 +1687,6 @@
     },
     "ground_sand_small_broken": {
       "name": "ground_sand_small_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -2045,9 +1703,6 @@
     },
     "ground_snow": {
       "name": "ground_snow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -2064,9 +1719,6 @@
     },
     "ground_snow_broken": {
       "name": "ground_snow_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -2083,9 +1735,6 @@
     },
     "ground_snow_small": {
       "name": "ground_snow_small",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 201,
@@ -2102,9 +1751,6 @@
     },
     "ground_snow_small_broken": {
       "name": "ground_snow_small_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -2121,9 +1767,6 @@
     },
     "ground_stone": {
       "name": "ground_stone",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -2140,9 +1783,6 @@
     },
     "ground_stone_broken": {
       "name": "ground_stone_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -2159,9 +1799,6 @@
     },
     "ground_stone_small": {
       "name": "ground_stone_small",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -2178,9 +1815,6 @@
     },
     "ground_stone_small_broken": {
       "name": "ground_stone_small_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -2197,9 +1831,6 @@
     },
     "ground_wood": {
       "name": "ground_wood",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -2216,9 +1847,6 @@
     },
     "ground_wood_broken": {
       "name": "ground_wood_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 380,
@@ -2235,9 +1863,6 @@
     },
     "ground_wood_small": {
       "name": "ground_wood_small",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -2254,9 +1879,6 @@
     },
     "ground_wood_small_broken": {
       "name": "ground_wood_small_broken",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 200,
@@ -2273,9 +1895,6 @@
     },
     "hammer_bronze": {
       "name": "hammer_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2292,9 +1911,6 @@
     },
     "hammer_diamond": {
       "name": "hammer_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2311,9 +1927,6 @@
     },
     "hammer_gold": {
       "name": "hammer_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2330,9 +1943,6 @@
     },
     "hammer_iron": {
       "name": "hammer_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2349,9 +1959,6 @@
     },
     "hammer_silver": {
       "name": "hammer_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2368,9 +1975,6 @@
     },
     "hoe_bronze": {
       "name": "hoe_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2387,9 +1991,6 @@
     },
     "hoe_diamond": {
       "name": "hoe_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2406,9 +2007,6 @@
     },
     "hoe_gold": {
       "name": "hoe_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2425,9 +2023,6 @@
     },
     "hoe_iron": {
       "name": "hoe_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2444,9 +2039,6 @@
     },
     "hoe_silver": {
       "name": "hoe_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2463,9 +2055,6 @@
     },
     "ice": {
       "name": "ice",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2482,9 +2071,6 @@
     },
     "jetpack": {
       "name": "jetpack",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 133,
@@ -2501,9 +2087,6 @@
     },
     "jetpack_item": {
       "name": "jetpack_item",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 65,
@@ -2520,9 +2103,6 @@
     },
     "lava": {
       "name": "lava",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2539,9 +2119,6 @@
     },
     "leaves": {
       "name": "leaves",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2558,9 +2135,6 @@
     },
     "leaves_orange": {
       "name": "leaves_orange",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2577,9 +2151,6 @@
     },
     "leaves_orange_transparent": {
       "name": "leaves_orange_transparent",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2596,9 +2167,6 @@
     },
     "leaves_transparent": {
       "name": "leaves_transparent",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2615,9 +2183,6 @@
     },
     "lifes": {
       "name": "lifes",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 52,
@@ -2634,9 +2199,6 @@
     },
     "minecart": {
       "name": "minecart",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2653,9 +2215,6 @@
     },
     "mushroom_brown": {
       "name": "mushroom_brown",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 81,
@@ -2672,9 +2231,6 @@
     },
     "mushroom_red": {
       "name": "mushroom_red",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 81,
@@ -2691,9 +2247,6 @@
     },
     "mushroom_tan": {
       "name": "mushroom_tan",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2710,9 +2263,6 @@
     },
     "ore_coal": {
       "name": "ore_coal",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2729,9 +2279,6 @@
     },
     "ore_diamond": {
       "name": "ore_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2748,9 +2295,6 @@
     },
     "ore_emerald": {
       "name": "ore_emerald",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2767,9 +2311,6 @@
     },
     "ore_gold": {
       "name": "ore_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2786,9 +2327,6 @@
     },
     "ore_iron": {
       "name": "ore_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2805,9 +2343,6 @@
     },
     "ore_ironAlt": {
       "name": "ore_ironAlt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2824,9 +2359,6 @@
     },
     "ore_ruby": {
       "name": "ore_ruby",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2843,9 +2375,6 @@
     },
     "ore_silver": {
       "name": "ore_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2862,9 +2391,6 @@
     },
     "oven": {
       "name": "oven",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2881,9 +2407,6 @@
     },
     "pick_bronze": {
       "name": "pick_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2900,9 +2423,6 @@
     },
     "pick_diamond": {
       "name": "pick_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2919,9 +2439,6 @@
     },
     "pick_gold": {
       "name": "pick_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2938,9 +2455,6 @@
     },
     "pick_iron": {
       "name": "pick_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2957,9 +2471,6 @@
     },
     "pick_silver": {
       "name": "pick_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -2976,9 +2487,6 @@
     },
     "platform": {
       "name": "platform",
-      "aliases": [
-        "p5.play"
-      ],
       "frameSize": {
         "x": 200,
         "y": 73
@@ -2995,9 +2503,6 @@
     },
     "portal_orange": {
       "name": "portal_orange",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 230,
@@ -3014,9 +2519,6 @@
     },
     "portal_yellow": {
       "name": "portal_yellow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 230,
@@ -3033,9 +2535,6 @@
     },
     "powerup_bubble": {
       "name": "powerup_bubble",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 71,
@@ -3052,9 +2551,6 @@
     },
     "powerup_bunny": {
       "name": "powerup_bunny",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 71,
@@ -3071,9 +2567,6 @@
     },
     "powerup_empty": {
       "name": "powerup_empty",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 71,
@@ -3090,9 +2583,6 @@
     },
     "powerup_jetpack": {
       "name": "powerup_jetpack",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 71,
@@ -3109,9 +2599,6 @@
     },
     "powerup_wings": {
       "name": "powerup_wings",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 71,
@@ -3128,9 +2615,6 @@
     },
     "redsand": {
       "name": "redsand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3147,9 +2631,6 @@
     },
     "redstone": {
       "name": "redstone",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3166,9 +2647,6 @@
     },
     "redstone_emerald": {
       "name": "redstone_emerald",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3185,9 +2663,6 @@
     },
     "redstone_emerald_alt": {
       "name": "redstone_emerald_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3204,9 +2679,6 @@
     },
     "redstone_sand": {
       "name": "redstone_sand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3223,9 +2695,6 @@
     },
     "rock": {
       "name": "rock",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3242,9 +2711,6 @@
     },
     "rock_moss": {
       "name": "rock_moss",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3261,9 +2727,6 @@
     },
     "sand": {
       "name": "sand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3280,9 +2743,6 @@
     },
     "seed": {
       "name": "seed",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3299,9 +2759,6 @@
     },
     "shovel_bronze": {
       "name": "shovel_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3318,9 +2775,6 @@
     },
     "shovel_diamond": {
       "name": "shovel_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3337,9 +2791,6 @@
     },
     "shovel_gold": {
       "name": "shovel_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3356,9 +2807,6 @@
     },
     "shovel_iron": {
       "name": "shovel_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3375,9 +2823,6 @@
     },
     "shovel_silver": {
       "name": "shovel_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3394,9 +2839,6 @@
     },
     "silver_1": {
       "name": "silver_1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 84,
@@ -3413,9 +2855,6 @@
     },
     "silver_2": {
       "name": "silver_2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 66,
@@ -3432,9 +2871,6 @@
     },
     "silver_3": {
       "name": "silver_3",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 50,
@@ -3451,9 +2887,6 @@
     },
     "silver_4": {
       "name": "silver_4",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 14,
@@ -3470,9 +2903,6 @@
     },
     "snow": {
       "name": "snow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3489,9 +2919,6 @@
     },
     "spikeBall": {
       "name": "Spike Ball",
-      "aliases": [
-
-      ],
       "frameCount": 2,
       "frameSize": {
         "x": 150,
@@ -3508,9 +2935,6 @@
     },
     "spikeMan_jump": {
       "name": "spikeMan_jump",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 114,
@@ -3527,9 +2951,6 @@
     },
     "spikeMan_stand": {
       "name": "spikeMan_stand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 90,
@@ -3546,9 +2967,6 @@
     },
     "spikeMan_walk1": {
       "name": "spikeMan_walk1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 120,
@@ -3565,9 +2983,6 @@
     },
     "spikeMan_walk2": {
       "name": "spikeMan_walk2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 90,
@@ -3584,9 +2999,6 @@
     },
     "spike_bottom": {
       "name": "spike_bottom",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 51,
@@ -3603,9 +3015,6 @@
     },
     "spike_top": {
       "name": "spike_top",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 51,
@@ -3622,9 +3031,6 @@
     },
     "spikes_bottom": {
       "name": "spikes_bottom",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 95,
@@ -3641,9 +3047,6 @@
     },
     "spikes_top": {
       "name": "spikes_top",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 95,
@@ -3660,9 +3063,6 @@
     },
     "spring": {
       "name": "spring",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 145,
@@ -3679,9 +3079,6 @@
     },
     "springMan_hurt": {
       "name": "springMan_hurt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 110,
@@ -3698,9 +3095,6 @@
     },
     "springMan_stand": {
       "name": "springMan_stand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 110,
@@ -3717,9 +3111,6 @@
     },
     "spring_in": {
       "name": "spring_in",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 145,
@@ -3736,9 +3127,6 @@
     },
     "spring_out": {
       "name": "spring_out",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 145,
@@ -3755,9 +3143,6 @@
     },
     "stew": {
       "name": "stew",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3774,9 +3159,6 @@
     },
     "stone": {
       "name": "stone",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3793,9 +3175,6 @@
     },
     "stone_browniron": {
       "name": "stone_browniron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3812,9 +3191,6 @@
     },
     "stone_browniron_alt": {
       "name": "stone_browniron_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3831,9 +3207,6 @@
     },
     "stone_coal": {
       "name": "stone_coal",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3850,9 +3223,6 @@
     },
     "stone_coal_alt": {
       "name": "stone_coal_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3869,9 +3239,6 @@
     },
     "stone_diamond": {
       "name": "stone_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3888,9 +3255,6 @@
     },
     "stone_diamond_alt": {
       "name": "stone_diamond_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3907,9 +3271,6 @@
     },
     "stone_dirt": {
       "name": "stone_dirt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3926,9 +3287,6 @@
     },
     "stone_gold": {
       "name": "stone_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3945,9 +3303,6 @@
     },
     "stone_gold_alt": {
       "name": "stone_gold_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3964,9 +3319,6 @@
     },
     "stone_grass": {
       "name": "stone_grass",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -3983,9 +3335,6 @@
     },
     "stone_iron": {
       "name": "stone_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4002,9 +3351,6 @@
     },
     "stone_iron_alt": {
       "name": "stone_iron_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4021,9 +3367,6 @@
     },
     "stone_sand": {
       "name": "stone_sand",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4040,9 +3383,6 @@
     },
     "stone_silver": {
       "name": "stone_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4059,9 +3399,6 @@
     },
     "stone_silver_alt": {
       "name": "stone_silver_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4078,9 +3415,6 @@
     },
     "stone_snow": {
       "name": "stone_snow",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4097,9 +3431,6 @@
     },
     "sun1": {
       "name": "sun1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 142,
@@ -4116,9 +3447,6 @@
     },
     "sun2": {
       "name": "sun2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 148,
@@ -4135,9 +3463,6 @@
     },
     "sword_bronze": {
       "name": "sword_bronze",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4154,9 +3479,6 @@
     },
     "sword_diamond": {
       "name": "sword_diamond",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4173,9 +3495,6 @@
     },
     "sword_gold": {
       "name": "sword_gold",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4192,9 +3511,6 @@
     },
     "sword_iron": {
       "name": "sword_iron",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4211,9 +3527,6 @@
     },
     "sword_silver": {
       "name": "sword_silver",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4230,9 +3543,6 @@
     },
     "table": {
       "name": "table",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4249,9 +3559,6 @@
     },
     "track_corner": {
       "name": "track_corner",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4268,9 +3575,6 @@
     },
     "track_corner_alt": {
       "name": "track_corner_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4287,9 +3591,6 @@
     },
     "track_straight": {
       "name": "track_straight",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4306,9 +3607,6 @@
     },
     "track_straight_alt": {
       "name": "track_straight_alt",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4325,9 +3623,6 @@
     },
     "trunk_bottom": {
       "name": "trunk_bottom",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4344,9 +3639,6 @@
     },
     "trunk_mid": {
       "name": "trunk_mid",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4363,9 +3655,6 @@
     },
     "trunk_side": {
       "name": "trunk_side",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4382,9 +3671,6 @@
     },
     "trunk_top": {
       "name": "trunk_top",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4401,9 +3687,6 @@
     },
     "trunk_white_side": {
       "name": "trunk_white_side",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4420,9 +3703,6 @@
     },
     "trunk_white_top": {
       "name": "trunk_white_top",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4439,9 +3719,6 @@
     },
     "water": {
       "name": "water",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4458,9 +3735,6 @@
     },
     "wheat": {
       "name": "wheat",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4477,9 +3751,6 @@
     },
     "wheat_stage1": {
       "name": "wheat_stage1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4496,9 +3767,6 @@
     },
     "wheat_stage2": {
       "name": "wheat_stage2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4515,9 +3783,6 @@
     },
     "wheat_stage3": {
       "name": "wheat_stage3",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4534,9 +3799,6 @@
     },
     "wheat_stage4": {
       "name": "wheat_stage4",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4553,9 +3815,6 @@
     },
     "wingMan1": {
       "name": "wingMan1",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 174,
@@ -4572,9 +3831,6 @@
     },
     "wingMan2": {
       "name": "wingMan2",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 206,
@@ -4591,9 +3847,6 @@
     },
     "wingMan3": {
       "name": "wingMan3",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 216,
@@ -4610,9 +3863,6 @@
     },
     "wingMan4": {
       "name": "wingMan4",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 216,
@@ -4629,9 +3879,6 @@
     },
     "wingMan5": {
       "name": "wingMan5",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 182,
@@ -4648,9 +3895,6 @@
     },
     "wing_left": {
       "name": "wing_left",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 85,
@@ -4667,9 +3911,6 @@
     },
     "wing_right": {
       "name": "wing_right",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 85,
@@ -4686,9 +3927,6 @@
     },
     "wood": {
       "name": "wood",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,
@@ -4705,9 +3943,6 @@
     },
     "wood_red": {
       "name": "wood_red",
-      "aliases": [
-
-      ],
       "frameCount": 1,
       "frameSize": {
         "x": 128,

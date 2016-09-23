@@ -30,6 +30,18 @@ include CdoCli
 DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
 DEFAULT_OUTPUT_FILE = 'apps/src/gamelab/animationLibrary.json'.freeze
 
+class Hash
+  # Like Enumerable::map but returns a Hash instead of an Array
+  def hmap(&block)
+    Hash[self.map {|k, v| yield k, v }]
+  end
+
+  # Drop a key from the hash, returning the hash (destructive)
+  def omit!(key)
+    self.tap {|hs| hs.delete(key)}
+  end
+end
+
 class ManifestBuilder
   def initialize(options)
     @options = options
@@ -58,12 +70,19 @@ class ManifestBuilder
     # Write result to file
     File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
       file.write(JSON.pretty_generate({
+          # JSON-style file comment
           '//': [
               'Animation Library Manifest',
               'GENERATED FILE: DO NOT MODIFY DIRECTLY',
               'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
           ],
-          'metadata': animation_metadata.sort.to_h,
+
+          # Strip aliases from metadata - they're no longer needed since they
+          #   are represented in the alias map.
+          # Also sort for stable updates
+          'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+
+          # Sort alias map for stable updates
           'aliases': alias_map.sort.to_h
       }))
     end
