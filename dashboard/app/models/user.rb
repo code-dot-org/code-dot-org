@@ -720,7 +720,8 @@ class User < ActiveRecord::Base
 
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
-    user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
+    return false unless user_script
+    user_script.completed_at || next_unpassed_progression_level(script).nil?
   end
 
   def not_started?(script)
