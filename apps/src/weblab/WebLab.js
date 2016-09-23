@@ -12,6 +12,9 @@ import dom from '../dom';
 import experiments from '../experiments';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
+var assetsApi = require('@cdo/apps/clientApi').assets;
+var assetListStore = require('../code-studio/assets/assetListStore');
+
 
 /**
  * An instantiable WebLab class
@@ -93,6 +96,8 @@ WebLab.prototype.init = function (config) {
     return new Promise((resolve, reject) => {
       // Reset startSources to the original value (ignoring lastAttempt)
       this.startSources = JSON.parse(this.level.startSources);
+      // TODO: (cpirich) reload currentAssets once those are versioned
+
       // Force brambleHost to reload based on startSources
       this.brambleHost.loadStartSources(() => {
         resolve();
@@ -108,6 +113,8 @@ WebLab.prototype.init = function (config) {
   config.noInstructionsWhenCollapsed = true;
 
   config.pinWorkspaceToBottom = true;
+
+  this.loadCurrentAssets();
 
   const onMount = () => {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
@@ -135,6 +142,18 @@ WebLab.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
+  function onAddFileHTML() {
+    this.brambleHost.addFileHTML();
+  }
+
+  function onAddFileCSS() {
+    this.brambleHost.addFileCSS();
+  }
+
+  function onAddFileImage() {
+    dashboard.assets.showAssetManager(null, 'image', this.loadCurrentAssets.bind(this), !this.studioApp_.reduxStore.getState().pageConstants.is13Plus);
+  }
+
   function onUndo() {
     this.brambleHost.undo();
   }
@@ -156,6 +175,9 @@ WebLab.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <WebLabView
+        onAddFileHTML={onAddFileHTML.bind(this)}
+        onAddFileCSS={onAddFileCSS.bind(this)}
+        onAddFileImage={onAddFileImage.bind(this)}
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
@@ -183,6 +205,11 @@ WebLab.prototype.getCodeAsync = function () {
 // Called by Bramble to get source files to initialize with
 WebLab.prototype.getStartSources = function () {
   return this.startSources;
+};
+
+// Called by Bramble to get the current assets
+WebLab.prototype.getCurrentAssets = function () {
+  return this.currentAssets;
 };
 
 // Called by Bramble when project has changed
@@ -214,6 +241,27 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
 };
 
 WebLab.prototype.onIsRunningChange = function () {
+};
+
+/**
+ * Load the asset list and store it as this.currentAssets
+ */
+WebLab.prototype.loadCurrentAssets = function () {
+  assetsApi.ajax('GET', '', (xhr) => {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+    this.currentAssets = assetListStore.list().map(function (asset) {
+      return {
+        name: asset.filename,
+        url: '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename
+      };
+    });
+    if (this.brambleHost) {
+      this.brambleHost.syncAssets(() => {});
+    }
+  }, (xhr) => {
+    console.error('assets API failed, status: ' +  xhr.status);
+    this.currentAssets = null;
+  });
 };
 
 /**
