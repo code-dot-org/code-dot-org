@@ -88,6 +88,7 @@ function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
       // Reset the counters.
       limitData.writeCount = 1;
       limitData.lastResetTime = Firebase.ServerValue.TIMESTAMP;
+      interval === '15' && console.log(`incrementRateLimitCounters ${interval} resetting ${JSON.stringify(limitData)}`)
       return limitData;
     } else {
       // The maximum number of writes has been exceeded in less than `interval` seconds.
@@ -141,6 +142,7 @@ export function incrementRateLimitCounters() {
             // For reasons not fully understood, firebase security rules sometimes fail
             // when incrementing rate limit counts shortly after they have been reset,
             // even under low contention. Work around this by attempting a single retry.
+            console.log(`incrementRateLimitCounters retrying permission_denied`)
             return incrementIntervalCounters(maxWriteCount, interval, currentTimeMs)
               .catch(error => {
                 if (String(error).includes('permission_denied')) {
