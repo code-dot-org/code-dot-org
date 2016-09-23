@@ -32,7 +32,6 @@ import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
-var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
