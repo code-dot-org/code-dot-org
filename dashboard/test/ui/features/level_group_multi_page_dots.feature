@@ -47,6 +47,9 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
 
+  Then I reload the page
+  And I wait to see ".react_stage"
+
   # Verify the three dots in the header are 1. some, 2. none, 3. all questions answered.
   And I verify progress in the header of the current page is "perfect" for level 2
   And I verify progress in the header of the current page is "not_tried" for level 3
