@@ -59,9 +59,7 @@ function outputError(errorString) {
  */
 function getAsyncErrorHandler() {
   const line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  return error => {
-    errorHandler.outputError(String(error), ErrorLevel.WARNING, line);
-  };
+  return error => errorHandler.outputError(String(error), ErrorLevel.WARNING, line);
 }
 
 /**
