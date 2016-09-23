@@ -2934,7 +2934,7 @@
       }
     },
     "spikeMan_jump": {
-      "name": "spikeMan_jump",
+      "name": "Spike Man Jump",
       "frameCount": 1,
       "frameSize": {
         "x": 114,
@@ -2950,7 +2950,7 @@
       }
     },
     "spikeMan_stand": {
-      "name": "spikeMan_stand",
+      "name": "Spike Man Stand",
       "frameCount": 1,
       "frameSize": {
         "x": 90,
@@ -2965,36 +2965,20 @@
         "y": 155
       }
     },
-    "spikeMan_walk1": {
-      "name": "spikeMan_walk1",
-      "frameCount": 1,
+    "spikeMan_walk": {
+      "name": "Spike Man Walk",
+      "frameCount": 2,
       "frameSize": {
-        "x": 120,
-        "y": 159
+        "x": 122,
+        "y": 161
       },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo",
-      "sourceUrl": "/api/v1/animation-library/NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo/spikeMan_walk1.png",
+      "looping": true,
+      "frameDelay": 10,
+      "version": "xWNVrORnPAVGPd2jx3m3XKa9qumlo8zf",
+      "sourceUrl": "/api/v1/animation-library/xWNVrORnPAVGPd2jx3m3XKa9qumlo8zf/spikeMan_walk.png",
       "sourceSize": {
-        "x": 120,
-        "y": 159
-      }
-    },
-    "spikeMan_walk2": {
-      "name": "spikeMan_walk2",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 90,
-        "y": 155
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK",
-      "sourceUrl": "/api/v1/animation-library/rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK/spikeMan_walk2.png",
-      "sourceSize": {
-        "x": 90,
-        "y": 155
+        "x": 122,
+        "y": 322
       }
     },
     "spike_bottom": {
@@ -3078,7 +3062,7 @@
       }
     },
     "springMan_hurt": {
-      "name": "springMan_hurt",
+      "name": "Spring Man Hurt",
       "frameCount": 1,
       "frameSize": {
         "x": 110,
@@ -3094,7 +3078,7 @@
       }
     },
     "springMan_stand": {
-      "name": "springMan_stand",
+      "name": "Spring Man Stand",
       "frameCount": 1,
       "frameSize": {
         "x": 110,
@@ -4327,6 +4311,10 @@
     "mushroom_tan": [
       "mushroom_tan"
     ],
+    "orange": [
+      "springMan_hurt",
+      "springMan_stand"
+    ],
     "ore_coal": [
       "ore_coal"
     ],
@@ -4425,6 +4413,11 @@
       "bunny2_walk1",
       "bunny2_walk2"
     ],
+    "red": [
+      "spikeMan_jump",
+      "spikeMan_stand",
+      "spikeMan_walk"
+    ],
     "redsand": [
       "redsand"
     ],
@@ -4485,23 +4478,20 @@
     "spike ball": [
       "spikeBall"
     ],
+    "spike man jump": [
+      "spikeMan_jump"
+    ],
+    "spike man stand": [
+      "spikeMan_stand"
+    ],
+    "spike man walk": [
+      "spikeMan_walk"
+    ],
     "spike_bottom": [
       "spike_bottom"
     ],
     "spike_top": [
       "spike_top"
-    ],
-    "spikeman_jump": [
-      "spikeMan_jump"
-    ],
-    "spikeman_stand": [
-      "spikeMan_stand"
-    ],
-    "spikeman_walk1": [
-      "spikeMan_walk1"
-    ],
-    "spikeman_walk2": [
-      "spikeMan_walk2"
     ],
     "spikes_bottom": [
       "spikes_bottom"
@@ -4512,17 +4502,17 @@
     "spring": [
       "spring"
     ],
+    "spring man hurt": [
+      "springMan_hurt"
+    ],
+    "spring man stand": [
+      "springMan_stand"
+    ],
     "spring_in": [
       "spring_in"
     ],
     "spring_out": [
       "spring_out"
-    ],
-    "springman_hurt": [
-      "springMan_hurt"
-    ],
-    "springman_stand": [
-      "springMan_stand"
     ],
     "stew": [
       "stew"
