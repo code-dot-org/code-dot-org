@@ -333,6 +333,15 @@ class ScriptTest < ActiveSupport::TestCase
       Script.cache_find_script_level(script_level.id).level
   end
 
+  test 'level_concept_difficulty uses preloading' do
+    level = Script.find_by_name('20-hour').script_levels.third.level
+    expected = level.level_concept_difficulty
+
+    populate_cache_and_disconnect_db
+
+    assert_equal expected, level.level_concept_difficulty
+  end
+
   test 'get_without_cache raises exception for bad id' do
     bad_id = Script.last.id + 1
 
