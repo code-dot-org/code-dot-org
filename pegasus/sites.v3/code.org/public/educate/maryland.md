@@ -21,7 +21,7 @@ Computer science opens more doors for students than any other discipline in toda
 
 ### High School
 
-Schools and teachers can [sign up now](https://form.jotform.com/60746479314159) to offer Exploring Computer Science a year-long, nationally recognized, introductory course in computer science for the 16-17 school year.
+Schools and teachers can [sign up now](https://form.jotform.com/60746479314159) to offer Exploring Computer Science, a year-long, nationally recognized, introductory course in computer science for the 16-17 school year.
 
 - No prior computer science experience is required!
 - Teachers undergo research-based professional development starting in summer 2016
