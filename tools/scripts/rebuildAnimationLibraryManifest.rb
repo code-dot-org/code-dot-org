@@ -205,9 +205,9 @@ The animation ha been skipped.
         # Push name into target array, deduplicate, and sort
         alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
       end
-      alias_progress_bar.increment unless @options[:quiet]
+      alias_progress_bar.increment unless alias_progress_bar.nil?
     end
-    alias_progress_bar.finish unless @options[:quiet]
+    alias_progress_bar.finish unless alias_progress_bar.nil?
     alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
     alias_map
   end
