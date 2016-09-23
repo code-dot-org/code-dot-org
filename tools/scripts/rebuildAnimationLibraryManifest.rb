@@ -33,6 +33,7 @@ DEFAULT_OUTPUT_FILE = 'apps/src/gamelab/animationLibrary.json'.freeze
 class ManifestBuilder
   def initialize(options)
     @options = options
+    @warnings = []
   end
 
   #
@@ -40,27 +41,9 @@ class ManifestBuilder
   # See end of file for possible options, parsed from command line
   #
   def rebuild_animation_library_manifest
-    warnings = []
-    animations_by_name = {}
-
     # Connect to S3 and get a listing of all objects in the animation library bucket
-    info 'Reading object list from S3...'
     bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    bucket.objects.each do |object_summary|
-      animation_name = object_summary.key[/^[^.]+/]
-      extension = object_summary.key[/(?<=\.)\w+$/]
-      verbose <<-EOS.unindent
-        #{bold object_summary.key}
-          #{object_summary.last_modified} | #{object_summary.size}
-      EOS
-      # Push into animations collection if unique
-      animations_by_name[animation_name] ||= {}
-      if animations_by_name[animation_name][extension].nil?
-        animations_by_name[animation_name][extension] = object_summary
-      else
-        warnings.push "Encountered multiple objects with key #{object_summary.key} - only using the first one."
-      end
-    end
+    animations_by_name = get_animations_by_name(bucket)
 
     info "Found #{animations_by_name.size} animations."
 
@@ -75,7 +58,7 @@ class ManifestBuilder
       if result.is_a? Hash
         animation_metadata_by_name[name] = result
       else
-        warnings.push result
+        @warnings.push result
       end
       metadata_progress_bar.increment unless metadata_progress_bar.nil?
     end) do |name|
@@ -168,7 +151,7 @@ The animation ha been skipped.
       }))
     end
 
-    warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
+    @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
     info <<-EOS.unindent
       Manifest written to #{DEFAULT_OUTPUT_FILE}.
@@ -189,6 +172,28 @@ The animation ha been skipped.
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
     EOS
+  end
+
+  # Given an S3 bucket, return map of animation file objects:
+  # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
+  def get_animations_by_name(bucket)
+    animations_by_name = {}
+    bucket.objects.each do |object_summary|
+      animation_name = object_summary.key[/^[^.]+/]
+      extension = object_summary.key[/(?<=\.)\w+$/]
+      verbose <<-EOS.unindent
+        #{bold object_summary.key}
+        #{object_summary.last_modified} | #{object_summary.size}
+      EOS
+      # Push into animations collection if unique
+      animations_by_name[animation_name] ||= {}
+      if animations_by_name[animation_name][extension].nil?
+        animations_by_name[animation_name][extension] = object_summary
+      else
+        @warnings.push "Encountered multiple objects with key #{object_summary.key} - only using the first one."
+      end
+    end
+    animations_by_name
   end
 
   def verbose(s)
