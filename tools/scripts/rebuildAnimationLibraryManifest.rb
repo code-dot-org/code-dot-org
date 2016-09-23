@@ -199,8 +199,8 @@ The animation ha been skipped.
     alias_progress_bar = ProgressBar.create(total: animation_metadata.size) unless @options[:quiet]
     alias_map = Hash.new {|h, k| h[k] = []}
     animation_metadata.each do |name, metadata|
-      aliases = [name]
-      aliases += metadata['aliases'] unless metadata['aliases'].nil?
+      aliases = [metadata['name'].downcase]
+      aliases += metadata['aliases'].map &:downcase unless metadata['aliases'].nil?
       aliases.each do |aliaz|
         # Push name into target array, deduplicate, and sort
         alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
