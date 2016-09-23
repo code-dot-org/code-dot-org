@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: Este contenido tiene restricciones de edad y no está disponible para
-        los estudiantes más jóvenes
+      too_young: https://code.org/mc
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this

@@ -830,8 +830,8 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Poiščite ikono...
+      no_icons_found: Ni najdenih ikon
     playzone:
       artist_description: Draw cool pictures and designs with the Artist!
       artist_title: New Drawing
