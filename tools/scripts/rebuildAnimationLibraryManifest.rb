@@ -161,21 +161,13 @@ The animation ha been skipped.
         WARN
       end
 
-      # Default name to file name
+      # Verify that the parsed metadata contains all expected fields
       next "Animation #{name} is missing the 'name' attribute." unless metadata['name'].is_a?(String)
-
-      # If no frameCount information is present, it's probably a single frame
       next "Animation #{name} is missing the 'frameCount' attribute." unless metadata['frameCount'].is_a?(Integer)
-
-      # Require frameSize information
       next "Animation #{name} is missing the 'frameSize' attribute." unless metadata['frameSize'].is_a?(Hash)
       next "Animation #{name} is missing the 'frameSize.x' attribute." unless metadata['frameSize']['x'].is_a?(Integer)
       next "Animation #{name} is missing the 'frameSize.y' attribute." unless metadata['frameSize']['y'].is_a?(Integer)
-
-      # Require boolean looping attribute
       next "Animation #{name} is missing the 'looping' attribute." unless [TrueClass, FalseClass].include? metadata['looping'].class
-
-      # Require frameDelay attribute
       next "Animation #{name} is missing the 'frameDelay' attribute." unless metadata['frameDelay'].is_a?(Integer)
 
       # Record target version in the metadata, so environments (and projects)
