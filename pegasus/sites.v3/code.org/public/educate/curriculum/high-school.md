@@ -7,7 +7,7 @@ nav: educate_nav
 For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 
-<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">
+<!--<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">-->
 
 # Computer Science Principles
 
@@ -49,7 +49,7 @@ Code.org offers a four course [Computer Science Fundamentals](https://studio.cod
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | Exploring Computer Science intro course and Computer Science Principles, a pilot course with an AP exam coming in 2016, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
 | [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
-| [Exploring Computer Science](http://www.exploringcs.org/)| Year-long introductory high school consisting of 6 units, approximately 6 weeks each | Week-long summer institute and quarterly one-day academic year workshops | 
+| [Exploring Computer Science](http://www.exploringcs.org/)| Year-long introductory high school consisting of 6 units, approximately 6 weeks each, FREE | Week-long summer institute and quarterly one-day academic year workshops | 
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Mobile CSP](http://www.mobile-csp.org/) | Year-long Computer Science Principles course, materials available online, FREE | Online, regional in-person offered in CT, MA, NH and CA (others may be available), FREE, stipends available|
 | [NMSI](http://www.nms.org/) | Year-long AP CS Principles/AP CS A course, FREE| In-person summer training + 4 days of PD throughout the year. One-on-one mentoring available to partner schools, FREE |
