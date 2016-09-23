@@ -3429,36 +3429,20 @@
         "y": 128
       }
     },
-    "sun1": {
-      "name": "sun1",
-      "frameCount": 1,
+    "sun": {
+      "name": "Sun",
+      "frameCount": 2,
       "frameSize": {
-        "x": 142,
-        "y": 148
+        "x": 150,
+        "y": 150
       },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u",
-      "sourceUrl": "/api/v1/animation-library/Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u/sun1.png",
+      "looping": true,
+      "frameDelay": 10,
+      "version": "7ctAHbV.I2je865YMEMIVifBS8i9rzi3",
+      "sourceUrl": "/api/v1/animation-library/7ctAHbV.I2je865YMEMIVifBS8i9rzi3/sun.png",
       "sourceSize": {
-        "x": 142,
-        "y": 148
-      }
-    },
-    "sun2": {
-      "name": "sun2",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 148,
-        "y": 142
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "f9uKdGsJGQCaK0zgcVbep9yHewv..b_6",
-      "sourceUrl": "/api/v1/animation-library/f9uKdGsJGQCaK0zgcVbep9yHewv..b_6/sun2.png",
-      "sourceSize": {
-        "x": 148,
-        "y": 142
+        "x": 300,
+        "y": 150
       }
     },
     "sword_bronze": {
@@ -3813,84 +3797,20 @@
         "y": 128
       }
     },
-    "wingMan1": {
-      "name": "wingMan1",
-      "frameCount": 1,
+    "wingMan": {
+      "name": "Wing Man",
+      "frameCount": 8,
       "frameSize": {
-        "x": 174,
-        "y": 126
+        "x": 218,
+        "y": 128
       },
-      "looping": false,
+      "looping": true,
       "frameDelay": 2,
-      "version": "HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX",
-      "sourceUrl": "/api/v1/animation-library/HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX/wingMan1.png",
+      "version": "VnnbHQe2vCoNznEzePqPA2YHHIEd.LAi",
+      "sourceUrl": "/api/v1/animation-library/VnnbHQe2vCoNznEzePqPA2YHHIEd.LAi/wingMan.png",
       "sourceSize": {
-        "x": 174,
-        "y": 126
-      }
-    },
-    "wingMan2": {
-      "name": "wingMan2",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 206,
-        "y": 107
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "P.3VrBPCevphdqgZcIJdrEfSB9teU4yV",
-      "sourceUrl": "/api/v1/animation-library/P.3VrBPCevphdqgZcIJdrEfSB9teU4yV/wingMan2.png",
-      "sourceSize": {
-        "x": 206,
-        "y": 107
-      }
-    },
-    "wingMan3": {
-      "name": "wingMan3",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 216,
-        "y": 101
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ",
-      "sourceUrl": "/api/v1/animation-library/WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ/wingMan3.png",
-      "sourceSize": {
-        "x": 216,
-        "y": 101
-      }
-    },
-    "wingMan4": {
-      "name": "wingMan4",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 216,
-        "y": 101
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2",
-      "sourceUrl": "/api/v1/animation-library/O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2/wingMan4.png",
-      "sourceSize": {
-        "x": 216,
-        "y": 101
-      }
-    },
-    "wingMan5": {
-      "name": "wingMan5",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 182,
-        "y": 123
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "axjL357_sG9vML._lVBRMVkhLPcefxLW",
-      "sourceUrl": "/api/v1/animation-library/axjL357_sG9vML._lVBRMVkhLPcefxLW/wingMan5.png",
-      "sourceSize": {
-        "x": 182,
-        "y": 123
+        "x": 1744,
+        "y": 128
       }
     },
     "wing_left": {
@@ -4161,6 +4081,9 @@
     ],
     "flail_silver": [
       "flail_silver"
+    ],
+    "flying": [
+      "wingMan"
     ],
     "flyman_fly": [
       "flyMan_fly"
@@ -4655,11 +4578,8 @@
     "stone_snow": [
       "stone_snow"
     ],
-    "sun1": [
-      "sun1"
-    ],
-    "sun2": [
-      "sun2"
+    "sun": [
+      "sun"
     ],
     "sword_bronze": [
       "sword_bronze"
@@ -4727,32 +4647,24 @@
     "wheat_stage4": [
       "wheat_stage4"
     ],
+    "wing man": [
+      "wingMan"
+    ],
     "wing_left": [
       "wing_left"
     ],
     "wing_right": [
       "wing_right"
     ],
-    "wingman1": [
-      "wingMan1"
-    ],
-    "wingman2": [
-      "wingMan2"
-    ],
-    "wingman3": [
-      "wingMan3"
-    ],
-    "wingman4": [
-      "wingMan4"
-    ],
-    "wingman5": [
-      "wingMan5"
-    ],
     "wood": [
       "wood"
     ],
     "wood_red": [
       "wood_red"
+    ],
+    "yellow": [
+      "sun",
+      "wingMan"
     ]
   }
 }
