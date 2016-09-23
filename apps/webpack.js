@@ -38,7 +38,6 @@ var baseConfig = {
         loader: "babel",
         query: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
-          sourceMaps: true,
           compact: false,
         }
       },
@@ -156,7 +155,7 @@ function create(options) {
       path: outputDir,
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
-    devtool: options.minify ? 'source-map' : 'inline-source-map',
+    devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',
     entry: entries,
     externals: externals,
     plugins: [
