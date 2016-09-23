@@ -24,6 +24,7 @@ var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 var MEDIA_URL = '/blockly/media/craft/';
+const IS_EVENT_LEVEL = false;
 
 /**
  * Create a namespace for the application.
@@ -247,7 +248,7 @@ Craft.init = function (config) {
 
   var onMount = function () {
     studioApp.init(Object.assign({}, config, {
-      forceInsertTopBlock: 'when_run',
+      forceInsertTopBlock: IS_EVENT_LEVEL ? null : 'when_run',
       appStrings: {
         generatedCodeDescription: craftMsg.generatedCodeDescription(),
       },

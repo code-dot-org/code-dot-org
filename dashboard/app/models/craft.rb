@@ -277,6 +277,11 @@ class Craft < Blockly
   <block type='craft_placeBlockAhead'></block>
 </category>
 <category name="Events">
+  <block type="craft_forever"></block>
+  <block type="craft_creeper"></block>
+  <block type="craft_cow"></block>
+  <block type="craft_zombie"></block>
+  <block type="craft_sheep"></block>
   <block type="craft_onTouched"></block>
   <block type="craft_onPlayerMoved"></block>
   <block type='craft_playSound'></block>

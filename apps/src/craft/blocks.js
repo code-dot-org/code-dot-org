@@ -259,6 +259,30 @@ exports.install = function (blockly, blockInstallOptions) {
         ');\n';
   };
 
+  blockly.Blocks.craft_forever = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(322, 0.90, 0.95);
+      this.appendDummyInput()
+          .appendTitle('forever')
+      this.appendStatementInput('DO')
+          .appendTitle(i18n.blockWhileXAheadDo());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_forever = function () {
+    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    var blockType = this.getTitleValue('TYPE');
+    return 'forever(\'block_id_' + this.id + '\',\n"' +
+            blockType + '", ' +
+        '  function() { '+
+            innerCode +
+        '  }' +
+        ');\n';
+  };
+
   blockly.Blocks.craft_ifBlockAhead = {
     helpUrl: '',
     init: function () {
@@ -284,6 +308,49 @@ exports.install = function (blockly, blockInstallOptions) {
       innerCode +
     '}, \'block_id_' + this.id + '\');\n';
   };
+
+  function blockFor(displayName) {
+    return {
+      init: function () {
+        this.appendDummyInput()
+            .appendTitle(displayName);
+        this.appendStatementInput("WHEN_USED")
+            .appendTitle("When Used");
+        this.appendStatementInput("WHEN_TOUCHED")
+            .appendTitle("When Touched");
+        this.appendStatementInput("WHEN_SPAWNED")
+            .appendTitle("When Spawned");
+        this.appendStatementInput("WHEN_ATTACKED")
+            .appendTitle("When Attacked");
+        this.setColour(120);
+        this.setTooltip('');
+      }
+    };
+  }
+
+  function generatorFor(type) {
+    return function () {
+      var whenUsedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_USED");
+      var whenTouchedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_TOUCHED");
+      var whenSpawnedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_SPAWNED");
+      var whenAttackedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_ATTACKED");
+      return console.log(`Running ${type} code.`) +
+          whenUsedCode +
+          whenTouchedCode +
+          whenSpawnedCode +
+          whenAttackedCode;
+    }
+  }
+
+  function createEventBlockForEntity(entityID, displayName) {
+    blockly.Blocks[`craft_${entityID}`] = blockFor(displayName);
+    blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(entityID);
+  }
+
+  createEventBlockForEntity('creeper', 'Creeper');
+  createEventBlockForEntity('cow', 'Cow');
+  createEventBlockForEntity('zombie', 'Zombie');
+  createEventBlockForEntity('sheep', 'Sheep');
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
