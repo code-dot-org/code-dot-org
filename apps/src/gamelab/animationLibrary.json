@@ -329,76 +329,22 @@
         "y": 128
       }
     },
-    "bronze_1": {
-      "name": "bronze_1",
-      "frameCount": 1,
+    "bronze": {
+      "name": "Bronze Coin",
+      "frameCount": 6,
       "frameSize": {
-        "x": 84,
-        "y": 84
+        "x": 86,
+        "y": 86
       },
-      "looping": false,
+      "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-09-23 21:07:02 UTC",
-      "pngLastModified": "2016-09-21 23:15:44 UTC",
-      "version": "MGlAkMv5jwkBrWRqxaawNAUUxbAu_4q5",
-      "sourceUrl": "/api/v1/animation-library/MGlAkMv5jwkBrWRqxaawNAUUxbAu_4q5/bronze_1.png",
+      "jsonLastModified": "2016-09-24 00:34:57 UTC",
+      "pngLastModified": "2016-09-24 00:34:57 UTC",
+      "version": "JPDcBkJ2ulok.thJEx7gfdnhm0vL6bAF",
+      "sourceUrl": "/api/v1/animation-library/JPDcBkJ2ulok.thJEx7gfdnhm0vL6bAF/bronze.png",
       "sourceSize": {
-        "x": 84,
-        "y": 84
-      }
-    },
-    "bronze_2": {
-      "name": "bronze_2",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 66,
-        "y": 84
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "jsonLastModified": "2016-09-23 21:07:02 UTC",
-      "pngLastModified": "2016-09-21 23:15:45 UTC",
-      "version": "rmVin83DTg9uyruY.Kp1L1dHGbCLfUuZ",
-      "sourceUrl": "/api/v1/animation-library/rmVin83DTg9uyruY.Kp1L1dHGbCLfUuZ/bronze_2.png",
-      "sourceSize": {
-        "x": 66,
-        "y": 84
-      }
-    },
-    "bronze_3": {
-      "name": "bronze_3",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 50,
-        "y": 84
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "jsonLastModified": "2016-09-23 21:07:02 UTC",
-      "pngLastModified": "2016-09-21 23:15:45 UTC",
-      "version": "momuHkKZjtcZqgzYM1Up3tT1.eA6EFrL",
-      "sourceUrl": "/api/v1/animation-library/momuHkKZjtcZqgzYM1Up3tT1.eA6EFrL/bronze_3.png",
-      "sourceSize": {
-        "x": 50,
-        "y": 84
-      }
-    },
-    "bronze_4": {
-      "name": "bronze_4",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 14,
-        "y": 84
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "jsonLastModified": "2016-09-23 21:07:02 UTC",
-      "pngLastModified": "2016-09-21 23:15:46 UTC",
-      "version": "EiGoc4oIjmAngiXKxijPHSMxHpPQxBFE",
-      "sourceUrl": "/api/v1/animation-library/EiGoc4oIjmAngiXKxijPHSMxHpPQxBFE/bronze_4.png",
-      "sourceSize": {
-        "x": 14,
-        "y": 84
+        "x": 516,
+        "y": 86
       }
     },
     "bubble": {
@@ -4399,17 +4345,8 @@
     "brick_red": [
       "brick_red"
     ],
-    "bronze_1": [
-      "bronze_1"
-    ],
-    "bronze_2": [
-      "bronze_2"
-    ],
-    "bronze_3": [
-      "bronze_3"
-    ],
-    "bronze_4": [
-      "bronze_4"
+    "bronze coin": [
+      "bronze"
     ],
     "brown": [
       "bunny1_hurt",
