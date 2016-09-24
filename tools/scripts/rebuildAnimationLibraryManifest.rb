@@ -59,7 +59,7 @@ class ManifestBuilder
     info "Found #{animation_objects.size} animations."
 
     info "Building animation metadata..."
-    animation_metadata = build_animation_metadata(animation_objects)
+    animation_metadata = build_animation_metadata(animation_objects, read_old_metadata)
     info "Metadata built for #{animation_metadata.size} animations."
 
     info "Building alias map..."
@@ -131,9 +131,32 @@ class ManifestBuilder
     animations_by_name
   end
 
+  # Load metadata from previously-generated file, which we'll use later to
+  # skip update work if it's unchanged.
+  def read_old_metadata
+    File.open(DEFAULT_OUTPUT_FILE, 'r') do |file|
+      old_manifest = JSON.parse(file.read)
+
+      # Build reverse alias map
+      aliases_by_key = Hash.new {|h, k| h[k] = []}
+      old_manifest['aliases'].each do |aliaz, keys|
+        keys.each {|key| aliases_by_key[key].push(aliaz)}
+      end
+
+      # Put aliases back in metadata
+      return old_manifest['metadata'].hmap do |key, metadata|
+        metadata['aliases'] = aliases_by_key[key]
+        [key, metadata]
+      end
+    end
+  rescue
+    warn "There was a problem reading the existing manifest.  Rebuilding from scratch..."
+    return {}
+  end
+
   # Given a map of S3 objects for animations, build up an animation
   # metadata map.
-  def build_animation_metadata(animation_objects)
+  def build_animation_metadata(animation_objects, previous_metadata)
     metadata_progress_bar = ProgressBar.create(total: animation_objects.size) unless @options[:verbose] || @options[:quiet]
     animation_metadata_by_name = {}
 
@@ -159,6 +182,16 @@ class ManifestBuilder
         next "Animation #{name} does not have a JSON file and was skipped."
       elsif objects['png'].nil?
         next "Animation #{name} does not have a PNG file and was skipped."
+      end
+
+      # Before we do anything else, check the last modify times on both files.
+      # If they are unchanged, just use the old metadata (+aliases).
+      # This saves us from actually downloading the files from S3
+      if previous_metadata[name].is_a?(Hash) &&
+          previous_metadata[name]['jsonLastModified'] == objects['json'].last_modified.to_s &&
+          previous_metadata[name]['pngLastModified'] == objects['png'].last_modified.to_s
+        verbose "#{bold name} is unchanged, using old metadata"
+        next previous_metadata[name]
       end
 
       # Actually download the JSON from S3
@@ -187,6 +220,11 @@ The animation has been skipped.
       next "Animation #{name} is missing the 'frameSize.y' attribute." unless metadata['frameSize']['y'].is_a?(Integer)
       next "Animation #{name} is missing the 'looping' attribute." unless [TrueClass, FalseClass].include? metadata['looping'].class
       next "Animation #{name} is missing the 'frameDelay' attribute." unless metadata['frameDelay'].is_a?(Integer)
+
+      # Add last modification time for each file to the metadata so we can skip
+      # unmodified files in future manifest updates
+      metadata['jsonLastModified'] = objects['json'].last_modified.to_s
+      metadata['pngLastModified'] = objects['png'].last_modified.to_s
 
       # Record target version in the metadata, so environments (and projects)
       # consistently reference the version they originally imported.
