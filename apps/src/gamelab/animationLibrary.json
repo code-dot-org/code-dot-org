@@ -2885,6 +2885,438 @@
         "y": 70
       }
     },
+    "racing-pack/car_black_2": {
+      "name": "car_black_2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 116
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:02 UTC",
+      "pngLastModified": "2016-09-24 06:39:02 UTC",
+      "version": "E2e20K8qHFKi1YMPcFL1obwv5EDMuNR4",
+      "sourceUrl": "/api/v1/animation-library/E2e20K8qHFKi1YMPcFL1obwv5EDMuNR4/racing-pack/car_black_2.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 116
+      }
+    },
+    "racing-pack/car_black_3": {
+      "name": "car_black_3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:02 UTC",
+      "pngLastModified": "2016-09-24 06:39:03 UTC",
+      "version": "q_t_lYpMUslJMGfmR_Jkn4SZMR2bSYHd",
+      "sourceUrl": "/api/v1/animation-library/q_t_lYpMUslJMGfmR_Jkn4SZMR2bSYHd/racing-pack/car_black_3.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_black_4": {
+      "name": "car_black_4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:04 UTC",
+      "pngLastModified": "2016-09-24 06:39:04 UTC",
+      "version": "q75s4XJy6ULUYYpbaUGtlN1TgxPM4myK",
+      "sourceUrl": "/api/v1/animation-library/q75s4XJy6ULUYYpbaUGtlN1TgxPM4myK/racing-pack/car_black_4.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_black_5": {
+      "name": "car_black_5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 121
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:05 UTC",
+      "pngLastModified": "2016-09-24 06:39:05 UTC",
+      "version": ".0qxjkz03A3fbxTzVuctEA3ZHhIlcvi_",
+      "sourceUrl": "/api/v1/animation-library/.0qxjkz03A3fbxTzVuctEA3ZHhIlcvi_/racing-pack/car_black_5.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 121
+      }
+    },
+    "racing-pack/car_blue_1": {
+      "name": "car_blue_1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:06 UTC",
+      "pngLastModified": "2016-09-24 06:39:06 UTC",
+      "version": "YlBP40IOZ796kvm.wlJ3.Nd2_KzTK3Dj",
+      "sourceUrl": "/api/v1/animation-library/YlBP40IOZ796kvm.wlJ3.Nd2_KzTK3Dj/racing-pack/car_blue_1.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 131
+      }
+    },
+    "racing-pack/car_blue_2": {
+      "name": "car_blue_2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 116
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:06 UTC",
+      "pngLastModified": "2016-09-24 06:39:07 UTC",
+      "version": "iqiTcH8lQlIw2Wec0nqcSQvsIBnwhD_l",
+      "sourceUrl": "/api/v1/animation-library/iqiTcH8lQlIw2Wec0nqcSQvsIBnwhD_l/racing-pack/car_blue_2.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 116
+      }
+    },
+    "racing-pack/car_blue_3": {
+      "name": "car_blue_3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:07 UTC",
+      "pngLastModified": "2016-09-24 06:39:08 UTC",
+      "version": "S72c2e5UaZ2UjxRjZhHzKiapBJmj0nIE",
+      "sourceUrl": "/api/v1/animation-library/S72c2e5UaZ2UjxRjZhHzKiapBJmj0nIE/racing-pack/car_blue_3.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_blue_4": {
+      "name": "car_blue_4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:08 UTC",
+      "pngLastModified": "2016-09-24 06:39:09 UTC",
+      "version": "vQ0jsx1tZWIhAqdPoFWpPBvGOLyrSptn",
+      "sourceUrl": "/api/v1/animation-library/vQ0jsx1tZWIhAqdPoFWpPBvGOLyrSptn/racing-pack/car_blue_4.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_blue_5": {
+      "name": "car_blue_5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 121
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:09 UTC",
+      "pngLastModified": "2016-09-24 06:39:10 UTC",
+      "version": "rLHyGhMKvDfZgzkEnBabBpascVl5kOzt",
+      "sourceUrl": "/api/v1/animation-library/rLHyGhMKvDfZgzkEnBabBpascVl5kOzt/racing-pack/car_blue_5.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 121
+      }
+    },
+    "racing-pack/car_green_1": {
+      "name": "car_green_1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:10 UTC",
+      "pngLastModified": "2016-09-24 06:39:11 UTC",
+      "version": "oUkxEzGEwjI2_XDiAtvUlkbbITwo9mDJ",
+      "sourceUrl": "/api/v1/animation-library/oUkxEzGEwjI2_XDiAtvUlkbbITwo9mDJ/racing-pack/car_green_1.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 131
+      }
+    },
+    "racing-pack/car_green_2": {
+      "name": "car_green_2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 116
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:12 UTC",
+      "pngLastModified": "2016-09-24 06:39:12 UTC",
+      "version": "GMymWepiiPYCav_UTOm8KRA6PAHGD.oU",
+      "sourceUrl": "/api/v1/animation-library/GMymWepiiPYCav_UTOm8KRA6PAHGD.oU/racing-pack/car_green_2.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 116
+      }
+    },
+    "racing-pack/car_green_3": {
+      "name": "car_green_3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:13 UTC",
+      "pngLastModified": "2016-09-24 06:39:13 UTC",
+      "version": "q1cCHkEhD.B78Hcrt5WBRziPB9cRxwIz",
+      "sourceUrl": "/api/v1/animation-library/q1cCHkEhD.B78Hcrt5WBRziPB9cRxwIz/racing-pack/car_green_3.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_green_4": {
+      "name": "car_green_4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:14 UTC",
+      "pngLastModified": "2016-09-24 06:39:15 UTC",
+      "version": "Ib6t2y634sfpyXMzXb_JNi1O2uaS5gq3",
+      "sourceUrl": "/api/v1/animation-library/Ib6t2y634sfpyXMzXb_JNi1O2uaS5gq3/racing-pack/car_green_4.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_green_5": {
+      "name": "car_green_5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 121
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:16 UTC",
+      "pngLastModified": "2016-09-24 06:39:17 UTC",
+      "version": "ozpkepzXChWuPssxhsmWKt2TM4yt2THM",
+      "sourceUrl": "/api/v1/animation-library/ozpkepzXChWuPssxhsmWKt2TM4yt2THM/racing-pack/car_green_5.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 121
+      }
+    },
+    "racing-pack/car_red_1": {
+      "name": "car_red_1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:17 UTC",
+      "pngLastModified": "2016-09-24 06:39:18 UTC",
+      "version": "uS5phr8P7p.88zp5gLuK.Xe20nj5Aclv",
+      "sourceUrl": "/api/v1/animation-library/uS5phr8P7p.88zp5gLuK.Xe20nj5Aclv/racing-pack/car_red_1.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 131
+      }
+    },
+    "racing-pack/car_red_2": {
+      "name": "car_red_2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 116
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:19 UTC",
+      "pngLastModified": "2016-09-24 06:39:20 UTC",
+      "version": "2VQWRHklIyEJW67CIqk2eHPrj6RRhtQF",
+      "sourceUrl": "/api/v1/animation-library/2VQWRHklIyEJW67CIqk2eHPrj6RRhtQF/racing-pack/car_red_2.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 116
+      }
+    },
+    "racing-pack/car_red_3": {
+      "name": "car_red_3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:21 UTC",
+      "pngLastModified": "2016-09-24 06:39:22 UTC",
+      "version": "B0gHSBYyZbFtEqQIWZIl.tqaG80wb_Yf",
+      "sourceUrl": "/api/v1/animation-library/B0gHSBYyZbFtEqQIWZIl.tqaG80wb_Yf/racing-pack/car_red_3.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_red_4": {
+      "name": "car_red_4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:23 UTC",
+      "pngLastModified": "2016-09-24 06:39:24 UTC",
+      "version": "dP45TWjR4ytj.zZyB6loOONJUYmQw5pL",
+      "sourceUrl": "/api/v1/animation-library/dP45TWjR4ytj.zZyB6loOONJUYmQw5pL/racing-pack/car_red_4.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_red_5": {
+      "name": "car_red_5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 121
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:25 UTC",
+      "pngLastModified": "2016-09-24 06:39:26 UTC",
+      "version": "x9lA7Z3NW9jxMa2b16K3J90fW_qHAcPx",
+      "sourceUrl": "/api/v1/animation-library/x9lA7Z3NW9jxMa2b16K3J90fW_qHAcPx/racing-pack/car_red_5.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 121
+      }
+    },
+    "racing-pack/car_yellow_1": {
+      "name": "car_yellow_1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:26 UTC",
+      "pngLastModified": "2016-09-24 06:39:27 UTC",
+      "version": "BT.CFUBTVcj2xizGImWIZTzjNqgLgvuP",
+      "sourceUrl": "/api/v1/animation-library/BT.CFUBTVcj2xizGImWIZTzjNqgLgvuP/racing-pack/car_yellow_1.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 131
+      }
+    },
+    "racing-pack/car_yellow_2": {
+      "name": "car_yellow_2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 116
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:27 UTC",
+      "pngLastModified": "2016-09-24 06:39:28 UTC",
+      "version": "13pVUoq4dc4222Rq6PzwqFpOv78n1dkM",
+      "sourceUrl": "/api/v1/animation-library/13pVUoq4dc4222Rq6PzwqFpOv78n1dkM/racing-pack/car_yellow_2.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 116
+      }
+    },
+    "racing-pack/car_yellow_3": {
+      "name": "car_yellow_3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:28 UTC",
+      "pngLastModified": "2016-09-24 06:39:28 UTC",
+      "version": "r8ME_HvuFhB4lg6AiY7Bo_vX0JARQvGd",
+      "sourceUrl": "/api/v1/animation-library/r8ME_HvuFhB4lg6AiY7Bo_vX0JARQvGd/racing-pack/car_yellow_3.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_yellow_4": {
+      "name": "car_yellow_4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:29 UTC",
+      "pngLastModified": "2016-09-24 06:39:29 UTC",
+      "version": "20iBebe29tkCJEhwpkqhIQk.9KIwbG8Q",
+      "sourceUrl": "/api/v1/animation-library/20iBebe29tkCJEhwpkqhIQk.9KIwbG8Q/racing-pack/car_yellow_4.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 131
+      }
+    },
+    "racing-pack/car_yellow_5": {
+      "name": "car_yellow_5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 121
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:39:30 UTC",
+      "pngLastModified": "2016-09-24 06:39:30 UTC",
+      "version": "NXcL2wolQrLw9qmt_Qu1dAXxxwQFX6i.",
+      "sourceUrl": "/api/v1/animation-library/NXcL2wolQrLw9qmt_Qu1dAXxxwQFX6i./racing-pack/car_yellow_5.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 121
+      }
+    },
     "redsand": {
       "name": "redsand",
       "frameCount": 1,
@@ -4409,6 +4841,78 @@
     ],
     "cactus_top": [
       "cactus_top"
+    ],
+    "car_black_2": [
+      "racing-pack/car_black_2"
+    ],
+    "car_black_3": [
+      "racing-pack/car_black_3"
+    ],
+    "car_black_4": [
+      "racing-pack/car_black_4"
+    ],
+    "car_black_5": [
+      "racing-pack/car_black_5"
+    ],
+    "car_blue_1": [
+      "racing-pack/car_blue_1"
+    ],
+    "car_blue_2": [
+      "racing-pack/car_blue_2"
+    ],
+    "car_blue_3": [
+      "racing-pack/car_blue_3"
+    ],
+    "car_blue_4": [
+      "racing-pack/car_blue_4"
+    ],
+    "car_blue_5": [
+      "racing-pack/car_blue_5"
+    ],
+    "car_green_1": [
+      "racing-pack/car_green_1"
+    ],
+    "car_green_2": [
+      "racing-pack/car_green_2"
+    ],
+    "car_green_3": [
+      "racing-pack/car_green_3"
+    ],
+    "car_green_4": [
+      "racing-pack/car_green_4"
+    ],
+    "car_green_5": [
+      "racing-pack/car_green_5"
+    ],
+    "car_red_1": [
+      "racing-pack/car_red_1"
+    ],
+    "car_red_2": [
+      "racing-pack/car_red_2"
+    ],
+    "car_red_3": [
+      "racing-pack/car_red_3"
+    ],
+    "car_red_4": [
+      "racing-pack/car_red_4"
+    ],
+    "car_red_5": [
+      "racing-pack/car_red_5"
+    ],
+    "car_yellow_1": [
+      "racing-pack/car_yellow_1"
+    ],
+    "car_yellow_2": [
+      "racing-pack/car_yellow_2"
+    ],
+    "car_yellow_3": [
+      "racing-pack/car_yellow_3"
+    ],
+    "car_yellow_4": [
+      "racing-pack/car_yellow_4"
+    ],
+    "car_yellow_5": [
+      "racing-pack/car_yellow_5"
     ],
     "carrot": [
       "carrot"
