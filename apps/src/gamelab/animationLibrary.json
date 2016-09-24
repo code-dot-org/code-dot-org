@@ -2417,6 +2417,492 @@
         "y": 71
       }
     },
+    "medals/flat_medal1": {
+      "name": "flat_medal1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:09:55 UTC",
+      "pngLastModified": "2016-09-24 07:09:55 UTC",
+      "version": "ABF2wo.dhgqN67cfLPgiVN7OcuTPWeS.",
+      "sourceUrl": "/api/v1/animation-library/ABF2wo.dhgqN67cfLPgiVN7OcuTPWeS./medals/flat_medal1.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal2": {
+      "name": "flat_medal2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:09:56 UTC",
+      "pngLastModified": "2016-09-24 07:09:56 UTC",
+      "version": "8h3OclGEAIQ8D9w04Q1rjcVMdcGpkTnp",
+      "sourceUrl": "/api/v1/animation-library/8h3OclGEAIQ8D9w04Q1rjcVMdcGpkTnp/medals/flat_medal2.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal3": {
+      "name": "flat_medal3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:09:57 UTC",
+      "pngLastModified": "2016-09-24 07:09:57 UTC",
+      "version": "MOok3zCsGo2rULh5cxRX5GQIrQ.vtSli",
+      "sourceUrl": "/api/v1/animation-library/MOok3zCsGo2rULh5cxRX5GQIrQ.vtSli/medals/flat_medal3.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal4": {
+      "name": "flat_medal4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:09:58 UTC",
+      "pngLastModified": "2016-09-24 07:09:58 UTC",
+      "version": "iwrce33U5y.cHHxruXiZwJTanR9JD_q4",
+      "sourceUrl": "/api/v1/animation-library/iwrce33U5y.cHHxruXiZwJTanR9JD_q4/medals/flat_medal4.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal5": {
+      "name": "flat_medal5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:09:59 UTC",
+      "pngLastModified": "2016-09-24 07:10:00 UTC",
+      "version": "ExA1KBdz4VTVNKG__dTOMDhGlYdAF4z8",
+      "sourceUrl": "/api/v1/animation-library/ExA1KBdz4VTVNKG__dTOMDhGlYdAF4z8/medals/flat_medal5.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal6": {
+      "name": "flat_medal6",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:01 UTC",
+      "pngLastModified": "2016-09-24 07:10:02 UTC",
+      "version": "pzfHK43JNEk8u_e1JRhNH1htQzG7iRx5",
+      "sourceUrl": "/api/v1/animation-library/pzfHK43JNEk8u_e1JRhNH1htQzG7iRx5/medals/flat_medal6.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal7": {
+      "name": "flat_medal7",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:02 UTC",
+      "pngLastModified": "2016-09-24 07:10:03 UTC",
+      "version": "fRz1jqJzg87EAC3RjEY_OrQtxfncYE42",
+      "sourceUrl": "/api/v1/animation-library/fRz1jqJzg87EAC3RjEY_OrQtxfncYE42/medals/flat_medal7.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal8": {
+      "name": "flat_medal8",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:03 UTC",
+      "pngLastModified": "2016-09-24 07:10:04 UTC",
+      "version": "_W7mnOEMvfrmk2vWHGFYE8Lgez_7TSTS",
+      "sourceUrl": "/api/v1/animation-library/_W7mnOEMvfrmk2vWHGFYE8Lgez_7TSTS/medals/flat_medal8.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flat_medal9": {
+      "name": "flat_medal9",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 74
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:04 UTC",
+      "pngLastModified": "2016-09-24 07:10:05 UTC",
+      "version": "Fy.Jruwl4GjjtDt8DgdHqc2RWMjQB2u1",
+      "sourceUrl": "/api/v1/animation-library/Fy.Jruwl4GjjtDt8DgdHqc2RWMjQB2u1/medals/flat_medal9.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 74
+      }
+    },
+    "medals/flatshadow_medal1": {
+      "name": "flatshadow_medal1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:06 UTC",
+      "pngLastModified": "2016-09-24 07:10:07 UTC",
+      "version": "UfiGkKofgr986aoAv5TLjyD6liOUSOv8",
+      "sourceUrl": "/api/v1/animation-library/UfiGkKofgr986aoAv5TLjyD6liOUSOv8/medals/flatshadow_medal1.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal2": {
+      "name": "flatshadow_medal2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:08 UTC",
+      "pngLastModified": "2016-09-24 07:10:08 UTC",
+      "version": "JdLiUBPnGU_PGH6oJVpDMekMKSbxN6jK",
+      "sourceUrl": "/api/v1/animation-library/JdLiUBPnGU_PGH6oJVpDMekMKSbxN6jK/medals/flatshadow_medal2.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal3": {
+      "name": "flatshadow_medal3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:09 UTC",
+      "pngLastModified": "2016-09-24 07:10:11 UTC",
+      "version": "StGUHW1TQA.3poJ6hgDUMeVjKaVH44IL",
+      "sourceUrl": "/api/v1/animation-library/StGUHW1TQA.3poJ6hgDUMeVjKaVH44IL/medals/flatshadow_medal3.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal4": {
+      "name": "flatshadow_medal4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:11 UTC",
+      "pngLastModified": "2016-09-24 07:10:12 UTC",
+      "version": "EEjX209CJEzoFiWcogrx1YH2RDH8cf2O",
+      "sourceUrl": "/api/v1/animation-library/EEjX209CJEzoFiWcogrx1YH2RDH8cf2O/medals/flatshadow_medal4.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal5": {
+      "name": "flatshadow_medal5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:12 UTC",
+      "pngLastModified": "2016-09-24 07:10:13 UTC",
+      "version": "PVynunfaap608LRaH367ZGzi1ppPer1m",
+      "sourceUrl": "/api/v1/animation-library/PVynunfaap608LRaH367ZGzi1ppPer1m/medals/flatshadow_medal5.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal6": {
+      "name": "flatshadow_medal6",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:14 UTC",
+      "pngLastModified": "2016-09-24 07:10:14 UTC",
+      "version": "LunnAYwuH8Ob.HEAlDjSRPXpYkfVzyo4",
+      "sourceUrl": "/api/v1/animation-library/LunnAYwuH8Ob.HEAlDjSRPXpYkfVzyo4/medals/flatshadow_medal6.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal7": {
+      "name": "flatshadow_medal7",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:15 UTC",
+      "pngLastModified": "2016-09-24 07:10:15 UTC",
+      "version": "nOzTx7lOkXcix1x0bC8wpFe4atWWqABK",
+      "sourceUrl": "/api/v1/animation-library/nOzTx7lOkXcix1x0bC8wpFe4atWWqABK/medals/flatshadow_medal7.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal8": {
+      "name": "flatshadow_medal8",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:16 UTC",
+      "pngLastModified": "2016-09-24 07:10:16 UTC",
+      "version": "A7DY8iVDH8fcLKTnugwtbH6HLo_L3mEV",
+      "sourceUrl": "/api/v1/animation-library/A7DY8iVDH8fcLKTnugwtbH6HLo_L3mEV/medals/flatshadow_medal8.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/flatshadow_medal9": {
+      "name": "flatshadow_medal9",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 41,
+        "y": 75
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:17 UTC",
+      "pngLastModified": "2016-09-24 07:10:18 UTC",
+      "version": "tZkC5PUk50LtySthZtTREDmcn9QxVpaN",
+      "sourceUrl": "/api/v1/animation-library/tZkC5PUk50LtySthZtTREDmcn9QxVpaN/medals/flatshadow_medal9.png",
+      "sourceSize": {
+        "x": 41,
+        "y": 75
+      }
+    },
+    "medals/shaded_medal1": {
+      "name": "shaded_medal1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 81
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:18 UTC",
+      "pngLastModified": "2016-09-24 07:10:20 UTC",
+      "version": "ss0fysveAvCgAbsHFjjeqMd4TEvWAknt",
+      "sourceUrl": "/api/v1/animation-library/ss0fysveAvCgAbsHFjjeqMd4TEvWAknt/medals/shaded_medal1.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 81
+      }
+    },
+    "medals/shaded_medal2": {
+      "name": "shaded_medal2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 80
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:20 UTC",
+      "pngLastModified": "2016-09-24 07:10:20 UTC",
+      "version": "htDjZfWDvUD7_Ic3PQCVVz4.w8eQSdyS",
+      "sourceUrl": "/api/v1/animation-library/htDjZfWDvUD7_Ic3PQCVVz4.w8eQSdyS/medals/shaded_medal2.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "medals/shaded_medal3": {
+      "name": "shaded_medal3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 80
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:21 UTC",
+      "pngLastModified": "2016-09-24 07:10:21 UTC",
+      "version": "QCQfnCHUQhJfAw8.GB7qt4TYi9dqn3ot",
+      "sourceUrl": "/api/v1/animation-library/QCQfnCHUQhJfAw8.GB7qt4TYi9dqn3ot/medals/shaded_medal3.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "medals/shaded_medal4": {
+      "name": "shaded_medal4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 80
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:21 UTC",
+      "pngLastModified": "2016-09-24 07:10:21 UTC",
+      "version": "_GWF7lItW0CvrDeAur81qQ0Y7HrmSZ1u",
+      "sourceUrl": "/api/v1/animation-library/_GWF7lItW0CvrDeAur81qQ0Y7HrmSZ1u/medals/shaded_medal4.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "medals/shaded_medal5": {
+      "name": "shaded_medal5",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 80
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:22 UTC",
+      "pngLastModified": "2016-09-24 07:10:22 UTC",
+      "version": "gTS5SukjNh_d8Bo1YZLhOFs8MdHD4oDl",
+      "sourceUrl": "/api/v1/animation-library/gTS5SukjNh_d8Bo1YZLhOFs8MdHD4oDl/medals/shaded_medal5.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "medals/shaded_medal6": {
+      "name": "shaded_medal6",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 80
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:22 UTC",
+      "pngLastModified": "2016-09-24 07:10:23 UTC",
+      "version": "kVAltyPllLgqs.rOdkeb9Zla5nCXs6VI",
+      "sourceUrl": "/api/v1/animation-library/kVAltyPllLgqs.rOdkeb9Zla5nCXs6VI/medals/shaded_medal6.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "medals/shaded_medal7": {
+      "name": "shaded_medal7",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 80
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:24 UTC",
+      "pngLastModified": "2016-09-24 07:10:25 UTC",
+      "version": "x1j9Wi8KdJKG5j347QhYBO1AIfgsVV34",
+      "sourceUrl": "/api/v1/animation-library/x1j9Wi8KdJKG5j347QhYBO1AIfgsVV34/medals/shaded_medal7.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "medals/shaded_medal8": {
+      "name": "shaded_medal8",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 80
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:25 UTC",
+      "pngLastModified": "2016-09-24 07:10:26 UTC",
+      "version": "ACdgYe6HTftm0Bx4hIx_fIAreYTEjbOy",
+      "sourceUrl": "/api/v1/animation-library/ACdgYe6HTftm0Bx4hIx_fIAreYTEjbOy/medals/shaded_medal8.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "medals/shaded_medal9": {
+      "name": "shaded_medal9",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 40,
+        "y": 81
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:10:27 UTC",
+      "pngLastModified": "2016-09-24 07:10:28 UTC",
+      "version": "h.UV0X4KNI6hFMyFSrUCgGGhhHUb0UvE",
+      "sourceUrl": "/api/v1/animation-library/h.UV0X4KNI6hFMyFSrUCgGGhhHUb0UvE/medals/shaded_medal9.png",
+      "sourceSize": {
+        "x": 40,
+        "y": 81
+      }
+    },
     "minecart": {
       "name": "minecart",
       "frameCount": 1,
@@ -4849,6 +5335,35 @@
     "asterisk_stretching": [
       "asterisk_stretching"
     ],
+    "award": [
+      "medals/flat_medal1",
+      "medals/flat_medal2",
+      "medals/flat_medal3",
+      "medals/flat_medal4",
+      "medals/flat_medal5",
+      "medals/flat_medal6",
+      "medals/flat_medal7",
+      "medals/flat_medal8",
+      "medals/flat_medal9",
+      "medals/flatshadow_medal1",
+      "medals/flatshadow_medal2",
+      "medals/flatshadow_medal3",
+      "medals/flatshadow_medal4",
+      "medals/flatshadow_medal5",
+      "medals/flatshadow_medal6",
+      "medals/flatshadow_medal7",
+      "medals/flatshadow_medal8",
+      "medals/flatshadow_medal9",
+      "medals/shaded_medal1",
+      "medals/shaded_medal2",
+      "medals/shaded_medal3",
+      "medals/shaded_medal4",
+      "medals/shaded_medal5",
+      "medals/shaded_medal6",
+      "medals/shaded_medal7",
+      "medals/shaded_medal8",
+      "medals/shaded_medal9"
+    ],
     "axe_bronze": [
       "axe_bronze"
     ],
@@ -4884,6 +5399,11 @@
     ],
     "brick_red": [
       "brick_red"
+    ],
+    "bronze": [
+      "medals/flat_medal2",
+      "medals/flatshadow_medal2",
+      "medals/shaded_medal2"
     ],
     "bronze coin": [
       "bronze"
@@ -5100,6 +5620,60 @@
     "flail_silver": [
       "flail_silver"
     ],
+    "flat_medal1": [
+      "medals/flat_medal1"
+    ],
+    "flat_medal2": [
+      "medals/flat_medal2"
+    ],
+    "flat_medal3": [
+      "medals/flat_medal3"
+    ],
+    "flat_medal4": [
+      "medals/flat_medal4"
+    ],
+    "flat_medal5": [
+      "medals/flat_medal5"
+    ],
+    "flat_medal6": [
+      "medals/flat_medal6"
+    ],
+    "flat_medal7": [
+      "medals/flat_medal7"
+    ],
+    "flat_medal8": [
+      "medals/flat_medal8"
+    ],
+    "flat_medal9": [
+      "medals/flat_medal9"
+    ],
+    "flatshadow_medal1": [
+      "medals/flatshadow_medal1"
+    ],
+    "flatshadow_medal2": [
+      "medals/flatshadow_medal2"
+    ],
+    "flatshadow_medal3": [
+      "medals/flatshadow_medal3"
+    ],
+    "flatshadow_medal4": [
+      "medals/flatshadow_medal4"
+    ],
+    "flatshadow_medal5": [
+      "medals/flatshadow_medal5"
+    ],
+    "flatshadow_medal6": [
+      "medals/flatshadow_medal6"
+    ],
+    "flatshadow_medal7": [
+      "medals/flatshadow_medal7"
+    ],
+    "flatshadow_medal8": [
+      "medals/flatshadow_medal8"
+    ],
+    "flatshadow_medal9": [
+      "medals/flatshadow_medal9"
+    ],
     "flying": [
       "wingMan"
     ],
@@ -5129,6 +5703,20 @@
     ],
     "glass_frame": [
       "glass_frame"
+    ],
+    "gold": [
+      "medals/flat_medal1",
+      "medals/flat_medal4",
+      "medals/flat_medal6",
+      "medals/flat_medal8",
+      "medals/flatshadow_medal1",
+      "medals/flatshadow_medal4",
+      "medals/flatshadow_medal6",
+      "medals/flatshadow_medal8",
+      "medals/shaded_medal1",
+      "medals/shaded_medal4",
+      "medals/shaded_medal6",
+      "medals/shaded_medal8"
     ],
     "gold_1": [
       "gold_1"
@@ -5482,6 +6070,35 @@
     "redstone_sand": [
       "redstone_sand"
     ],
+    "ribbon": [
+      "medals/flat_medal1",
+      "medals/flat_medal2",
+      "medals/flat_medal3",
+      "medals/flat_medal4",
+      "medals/flat_medal5",
+      "medals/flat_medal6",
+      "medals/flat_medal7",
+      "medals/flat_medal8",
+      "medals/flat_medal9",
+      "medals/flatshadow_medal1",
+      "medals/flatshadow_medal2",
+      "medals/flatshadow_medal3",
+      "medals/flatshadow_medal4",
+      "medals/flatshadow_medal5",
+      "medals/flatshadow_medal6",
+      "medals/flatshadow_medal7",
+      "medals/flatshadow_medal8",
+      "medals/flatshadow_medal9",
+      "medals/shaded_medal1",
+      "medals/shaded_medal2",
+      "medals/shaded_medal3",
+      "medals/shaded_medal4",
+      "medals/shaded_medal5",
+      "medals/shaded_medal6",
+      "medals/shaded_medal7",
+      "medals/shaded_medal8",
+      "medals/shaded_medal9"
+    ],
     "rock": [
       "rock"
     ],
@@ -5493,6 +6110,33 @@
     ],
     "seed": [
       "seed"
+    ],
+    "shaded_medal1": [
+      "medals/shaded_medal1"
+    ],
+    "shaded_medal2": [
+      "medals/shaded_medal2"
+    ],
+    "shaded_medal3": [
+      "medals/shaded_medal3"
+    ],
+    "shaded_medal4": [
+      "medals/shaded_medal4"
+    ],
+    "shaded_medal5": [
+      "medals/shaded_medal5"
+    ],
+    "shaded_medal6": [
+      "medals/shaded_medal6"
+    ],
+    "shaded_medal7": [
+      "medals/shaded_medal7"
+    ],
+    "shaded_medal8": [
+      "medals/shaded_medal8"
+    ],
+    "shaded_medal9": [
+      "medals/shaded_medal9"
     ],
     "shovel_bronze": [
       "shovel_bronze"
@@ -5508,6 +6152,20 @@
     ],
     "shovel_silver": [
       "shovel_silver"
+    ],
+    "silver": [
+      "medals/flat_medal3",
+      "medals/flat_medal5",
+      "medals/flat_medal7",
+      "medals/flat_medal9",
+      "medals/flatshadow_medal3",
+      "medals/flatshadow_medal5",
+      "medals/flatshadow_medal7",
+      "medals/flatshadow_medal9",
+      "medals/shaded_medal3",
+      "medals/shaded_medal5",
+      "medals/shaded_medal7",
+      "medals/shaded_medal9"
     ],
     "silver_1": [
       "silver_1"
