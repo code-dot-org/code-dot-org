@@ -2885,6 +2885,24 @@
         "y": 70
       }
     },
+    "racing-pack/car_black_1": {
+      "name": "car_black_1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 07:00:00 UTC",
+      "pngLastModified": "2016-09-24 06:39:01 UTC",
+      "version": "vC3wctsNER9fILjNNf8mhvF26BYwrsUG",
+      "sourceUrl": "/api/v1/animation-library/vC3wctsNER9fILjNNf8mhvF26BYwrsUG/racing-pack/car_black_1.png",
+      "sourceSize": {
+        "x": 71,
+        "y": 131
+      }
+    },
     "racing-pack/car_black_2": {
       "name": "car_black_2",
       "frameCount": 1,
@@ -3315,6 +3333,96 @@
       "sourceSize": {
         "x": 70,
         "y": 121
+      }
+    },
+    "racing-pack/motorcycle_black": {
+      "name": "motorcycle_black",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 44,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:58:28 UTC",
+      "pngLastModified": "2016-09-24 06:58:28 UTC",
+      "version": "oi8BumjVq7SR.eLIlzwo0DHMfWSXt5jh",
+      "sourceUrl": "/api/v1/animation-library/oi8BumjVq7SR.eLIlzwo0DHMfWSXt5jh/racing-pack/motorcycle_black.png",
+      "sourceSize": {
+        "x": 44,
+        "y": 100
+      }
+    },
+    "racing-pack/motorcycle_blue": {
+      "name": "motorcycle_blue",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 44,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:58:28 UTC",
+      "pngLastModified": "2016-09-24 06:58:28 UTC",
+      "version": "F9omSNJ5O4j1bxNQnofE9PnuwECWtD.s",
+      "sourceUrl": "/api/v1/animation-library/F9omSNJ5O4j1bxNQnofE9PnuwECWtD.s/racing-pack/motorcycle_blue.png",
+      "sourceSize": {
+        "x": 44,
+        "y": 100
+      }
+    },
+    "racing-pack/motorcycle_green": {
+      "name": "motorcycle_green",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 44,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:58:29 UTC",
+      "pngLastModified": "2016-09-24 06:58:30 UTC",
+      "version": "kfUIyLMsw.GWaVRAJR7KV6oOHfwHwjVi",
+      "sourceUrl": "/api/v1/animation-library/kfUIyLMsw.GWaVRAJR7KV6oOHfwHwjVi/racing-pack/motorcycle_green.png",
+      "sourceSize": {
+        "x": 44,
+        "y": 100
+      }
+    },
+    "racing-pack/motorcycle_red": {
+      "name": "motorcycle_red",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 44,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:58:30 UTC",
+      "pngLastModified": "2016-09-24 06:58:30 UTC",
+      "version": "bE8bg12NxoU3lU7B4iutt8KJgyFHZ5JK",
+      "sourceUrl": "/api/v1/animation-library/bE8bg12NxoU3lU7B4iutt8KJgyFHZ5JK/racing-pack/motorcycle_red.png",
+      "sourceSize": {
+        "x": 44,
+        "y": 100
+      }
+    },
+    "racing-pack/motorcycle_yellow": {
+      "name": "motorcycle_yellow",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 44,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-24 06:58:31 UTC",
+      "pngLastModified": "2016-09-24 06:58:31 UTC",
+      "version": "1GwmLt9nCQ4xtF3BXLgmiEX.1JN6.1r2",
+      "sourceUrl": "/api/v1/animation-library/1GwmLt9nCQ4xtF3BXLgmiEX.1JN6.1r2/racing-pack/motorcycle_yellow.png",
+      "sourceSize": {
+        "x": 44,
+        "y": 100
       }
     },
     "redsand": {
@@ -4842,6 +4950,9 @@
     "cactus_top": [
       "cactus_top"
     ],
+    "car_black_1": [
+      "racing-pack/car_black_1"
+    ],
     "car_black_2": [
       "racing-pack/car_black_2"
     ],
@@ -5224,6 +5335,21 @@
     ],
     "minecart": [
       "minecart"
+    ],
+    "motorcycle_black": [
+      "racing-pack/motorcycle_black"
+    ],
+    "motorcycle_blue": [
+      "racing-pack/motorcycle_blue"
+    ],
+    "motorcycle_green": [
+      "racing-pack/motorcycle_green"
+    ],
+    "motorcycle_red": [
+      "racing-pack/motorcycle_red"
+    ],
+    "motorcycle_yellow": [
+      "racing-pack/motorcycle_yellow"
     ],
     "mushroom_brown": [
       "mushroom_brown"
