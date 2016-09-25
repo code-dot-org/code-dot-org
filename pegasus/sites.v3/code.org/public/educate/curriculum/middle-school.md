@@ -57,7 +57,7 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt 
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | 20-lesson CS in Algebra and CS in Science modules for math and science classes, FREE  | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
-| [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway/gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
+| [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 

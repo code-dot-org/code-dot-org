@@ -80,5 +80,5 @@ Founder, Code.org
 
 Follow us [on Facebook](http://facebook.com/code.org) or [on Twitter](http://twitter.com/codeorg)
 
-Code.org is a public 501c3. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+Code.org is a public 501c3. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
