@@ -7,11 +7,11 @@ theme: responsive
 
 Thank you for your interest in volunteering to inspire students about computer science! Below are the current volunteer opportunities:
 
-- **[Volunteer in a Classroom during the Hour of Code](#HoC Volunteer)**
+- **[Volunteer in a Classroom during the Hour of Code](#hocvolunteer)**
 	- Although most popular during Computer Science Education week in December, this is a year round opportunity
-- **[Volunteer at TEALS](#Teals)**
+- **[Volunteer at TEALS](#teals)**
 
-## <a name="HoC Volunteer"href="HoC Volunteer">Sign up to volunteer </a>
+## <a name="hocvolunteer" href="hocvolunteer">Sign up to volunteer </a>
 Anyone passionate about computer science education and careers in tech can be a volunteer. We want volunteers of all ages, backgrounds and experience levels who have a passion for increasing diversity in tech. The Hour of Code has a large variety of tutorials for all ages and skill levels so you don’t need to be an expert to volunteer!
 
 Volunteers are most needed during the Hour of Code, but if you're also interested in a year-round commitment teachers are constantly looking for professionals and students alike to inspire their students. Sign up to volunteer at [code.org/volunteer](/volunteer).
@@ -97,7 +97,7 @@ An in-person classroom visit usually lasts 60-90 minutes while a virtual classro
 Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
 
 
-## <a name="Teals"href="Teals">Volunteer at TEALS </a>
+## <a name="teals" href="teals">Volunteer at TEALS </a>
 
 If you are a software engineer who is available for a bigger commitment, consider volunteering with TEALS. [TEALS](http://c.tealsk12.org/l/667) (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. You can make an impact in local schools by helping teachers teach Intro and AP CS classes 2 days a week.
 
