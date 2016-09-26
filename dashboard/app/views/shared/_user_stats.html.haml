@@ -19,14 +19,18 @@
       .games
         - last_level_id = nil
         - level_repeat = 0
-        - stage[:levels].each do |level|
-          - if last_level_id != level[:ids][0]
+        - stage[:levels].each do |script_level|
+          // script_level[:ids] includes an array of contained_level_ids at the
+          // end, so drop the last element before searching for the best level
+          - level_id = level_with_best_progress(script_level[:ids][0..-2], level_progress)
+
+          - if last_level_id != level_id
             - level_repeat = 0
           - else
             - level_repeat += 1
-          - last_level_id = level[:ids][0]
+          - last_level_id = level_id
           .level
-            - p = level_progress[level[:ids][0]]
+            - p = level_progress[level_id]
             - if p.try(:[], :submitted)
               - status = "submitted"
             - elsif p.try(:[], :pages_completed)
@@ -35,26 +39,26 @@
             - else
               - status = p.try(:[], :status) || 'not_tried'
               - result = p.try(:[], :result) || 0
-            - if current_level_id == "#{level[:ids][0]}"
+            - if current_level_id == "#{level_id}"
               - puzzle_outer_class = 'puzzle_outer_current'
-            - elsif level[:kind] == 'assessment'
+            - elsif script_level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              - link = level[:url]
+              - link = script_level[:url]
               - if current_user && current_user != user # viewing someone else's progress
                 - link += "?user_id=#{user.id}"
               - if @section
                 - link += "&section_id=#{@section.id}"
-              %a.level_link{href: link, class: [status, "level-#{level[:ids][0]}"], data: {result: result}}
-                - if level[:kind] == 'unplugged'
+              %a.level_link{href: link, class: [status, "level-#{level_id}"], data: {result: result}}
+                - if script_level[:kind] == 'unplugged'
                   %span.puzzle-named
-                    = level[:title]
+                    = script_level[:title]
                 - elsif status == 'passed' || status == 'perfect'
                   = check_mark_html
                 - else
                   %span.puzzle-number
-                    = level[:title]
+                    = script_level[:title]
 
   = render partial: 'shared/user_stats_key'
