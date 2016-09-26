@@ -63,6 +63,7 @@ export function getConfigRef() {
 }
 
 export function getDatabase(channelId) {
+  channelId = channelId + Applab.firebaseChannelIdSuffix;
   return getFirebase().child(`v3/channels/${channelId}`);
 }
 
