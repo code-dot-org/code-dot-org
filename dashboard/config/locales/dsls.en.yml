@@ -176,6 +176,57 @@ en:
         Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
         Nope!: Nope!
         Yes!: Yes!
+      U1 evaluation q1:
+        Brand new!: Brand new!
+        How experienced would you say you are with computer science?: How experienced would you say you are with computer science?
+        Somewhat Experienced: Somewhat Experienced
+        Very Experienced: Very Experienced
+      U1 evaluation q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U1 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U1 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U1 evaluation q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Are you comfortable with the underlying concepts behind how non-decimal number systems work?
+        I have no idea what you're talking about!: I have no idea what you're talking about!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: I know how to convert between number systems, but I don't know about the underlying rules of how they work
+        Yes!: Yes!
+      U1 evaluation q3:
+        Are you comfortable with HTML or Markdown?: Are you comfortable with HTML or Markdown?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q4:
+        Do you know how IP addresses work?: Do you know how IP addresses work?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q5:
+        Do you know how messages are broken down and routed on the internet?: Do you know how messages are broken down and routed on the internet?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U1 evaluation q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U1 evaluation q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -231,6 +282,7 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
+      CSD U3 Functions Introduction: {}
       CSD U3 Keypress Stop: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
@@ -1200,7 +1252,9 @@ en:
       'Stop: Hobbies Page': {}
       'Stop: Images': {}
       'Stop: Intro to CSS': {}
+      'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
+      'Stop: Website Navigation': {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
