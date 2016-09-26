@@ -132,10 +132,6 @@ Style/CommentIndentation:
 Style/ConditionalAssignment:
   Enabled: false
 
-# Offense count: 3
-Style/ConstantName:
-  Enabled: false
-
 # Offense count: 7
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: format, sprintf, percent

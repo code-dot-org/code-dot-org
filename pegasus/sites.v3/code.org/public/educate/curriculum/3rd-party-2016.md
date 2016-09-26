@@ -114,7 +114,7 @@ To decide which resources to list here, we used a rubric that looked for:
 
  * Full-service partnerships
       * This page is primarily focused on full curriculum + professional development partners that a school or school district can use to provide a full, in-school offering for their students.
- * Quality of curriculum
+ * High quality of curriculum
  * Proven scale + support (in use in at least 100 schools)
  * Professional development & support for teachers included
  * Affordable

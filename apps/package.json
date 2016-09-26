@@ -59,6 +59,7 @@
     "chrome-serialport": "bcjordan/chrome-serialport#2",
     "classnames": "^2.2.5",
     "codemirror": "5.5",
+    "codemirror-spell-checker": "^1.1.2",
     "connect-livereload": "0.5.3",
     "copy-webpack-plugin": "^3.0.0",
     "css-loader": "^0.23.1",
