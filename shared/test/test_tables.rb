@@ -8,7 +8,7 @@ class TablesTest < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
+  TABLE_TYPE = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
   def build_rack_mock_session
     @session = Rack::MockSession.new(ChannelsApi.new(TablesApi), "studio.code.org")
@@ -312,7 +312,7 @@ class TablesTest < Minitest::Test
     delete_table 'table1'
     delete_table 'table2'
     delete_table 'new_table'
-    assert_equal [], TableType.table_names(decrypted_channel_id)
+    assert_equal [], TABLE_TYPE.table_names(decrypted_channel_id)
 
     data1 = {
       'table1' => [{'name' => 'trevor'}, {'name' => 'alex'}],
@@ -321,11 +321,11 @@ class TablesTest < Minitest::Test
 
     populate_table(data1, true)
 
-    assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
+    assert_equal ['table1', 'table2'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     # Now add a data that has no records (but should have metadata)
     populate_table({ 'new_table' => [] }, false)
-    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+    assert_equal ['table1', 'table2', 'new_table'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     delete_channel
   end
