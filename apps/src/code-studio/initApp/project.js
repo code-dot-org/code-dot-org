@@ -246,8 +246,7 @@ var projects = module.exports = {
   },
 
   useFirebaseForNewProject() {
-    return experiments.isEnabled('useFirebaseForNewProject') &&
-      current.level === '/projects/applab';
+    return current.level === '/projects/applab';
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -626,8 +625,7 @@ var projects = module.exports = {
       }
     }
     function redirectToRemix() {
-      const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
-      const url = `${projects.getPathName('remix')}${suffix}`;
+      const url = `${projects.getPathName('remix')}`;
       location.href = url;
     }
     // If the user is the owner, save before remixing on the server.
@@ -638,8 +636,7 @@ var projects = module.exports = {
     }
   },
   createNew() {
-    const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
-    const url = `${projects.appToProjectUrl()}/new${suffix}`;
+    const url = `${projects.appToProjectUrl()}/new`;
     projects.save(function () {
       location.href = url;
     });
