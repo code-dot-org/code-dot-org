@@ -184,7 +184,7 @@ var JsDebugger = function (props) {
           headerHasFocus={hasFocus}
           isRtl={false}
         />
-        <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={props.stepSpeed} lineWidth={130} onChange={props.setStepSpeed}/>
+        {props.debugButtons && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={props.stepSpeed} lineWidth={130} onChange={props.setStepSpeed}/>}
       </PaneHeader>
       {props.debugButtons && <DebugButtons/>}
       {props.debugConsole && <DebugConsole debugButtons={props.debugButtons} debugWatch={props.debugWatch}/>}
