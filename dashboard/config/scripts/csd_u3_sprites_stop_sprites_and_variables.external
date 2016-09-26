@@ -10,3 +10,10 @@ With a neighbor discuss the following questions and be ready to share your answe
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Use this discussion to try and identify common misconceptions about the difference between variables and object properties. In particular, you might probe into:
+
+* How are they each created (eg `var x` vs `sprite.x`)?
+* Is the dot part of the property name? What would happen if you tried to create a variable with `var sprite.x = 200`?
+MARKDOWN
