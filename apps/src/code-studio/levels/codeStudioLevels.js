@@ -12,7 +12,7 @@ window.dashboard.codeStudioLevels = {
  * Previously this was just injected into the global namespace, making it
  * difficult to track. This makes both the registration and the usage more explicit.
  */
-export function registerGetResult(getResultFunction) {
+export function registerGetResult(getResultFunction=basicGetResult) {
   if (window.dashboard.codeStudioLevels.__registeredGetResult) {
     console.error('already have a getResult function');
   }
@@ -25,4 +25,16 @@ export function getResult() {
     return;
   }
   return window.dashboard.codeStudioLevels.__registeredGetResult();
+}
+
+/**
+ * At a minimum, our get result function should return an object with a response
+ * and a result. This function is used by level types that don't need to return
+ * more.
+ */
+function basicGetResult() {
+  return {
+    response: 'ok',
+    result: true
+  };
 }
