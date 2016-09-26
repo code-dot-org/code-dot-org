@@ -14,7 +14,7 @@ import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
 import Header from './header';
-import SurveyResults from './survey_results.jsx'
+import SurveyResults from './components/survey_results.jsx'
 import WorkshopIndex from './workshop_index';
 import WorkshopAttendance from './attendance/workshop_attendance';
 
