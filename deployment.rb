@@ -187,6 +187,16 @@ class CDOImpl < OpenStruct
     canonical_hostname('hourofcode.com')
   end
 
+  # provide a unique path for firebase channels data for development and circleci,
+  # to avoid conflicts in channel ids.
+  def firebase_channel_id_suffix
+    return "-circleci-#{ENV['CIRCLE_BUILD_NUM/channels']}" if ENV['CI']
+
+    return "-development-#{ENV['USER']}" if CDO.firebase_name == 'cdo-v3-dev'
+
+    nil
+  end
+
   def site_url(domain, path = '', scheme = '')
     host = canonical_hostname(domain)
     if rack_env?(:development) && !CDO.https_development
