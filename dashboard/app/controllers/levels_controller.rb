@@ -96,6 +96,7 @@ class LevelsController < ApplicationController
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
     @level.save!
+    Script.update_level_in_cache @level
     render json: { redirect: level_url(@level) }
   end
 

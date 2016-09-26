@@ -158,7 +158,6 @@ class Script < ActiveRecord::Base
 
   # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
-    return false if Rails.application.config.levelbuilder_mode
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -178,22 +177,41 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([
-          {
-            script_levels: [
-              {levels: [:game, :concepts, :level_concept_difficulty]},
-              :stage,
-              :callouts
-            ]
-          },
-          {
-            stages: [{script_levels: [:levels]}]
-          }
-        ]).find(script_id)
+        script = get_cacheable_script(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
       end
+    end
+  end
+
+  def self.get_cacheable_script(script_id)
+    Script.includes([
+      {
+        script_levels: [
+          {levels: [:game, :concepts, :level_concept_difficulty]},
+          :stage,
+          :callouts
+        ]
+      },
+      {
+        stages: [{script_levels: [:levels]}]
+      }
+    ]).find(script_id)
+  end
+
+  def self.update_script_in_cache(script)
+    script = get_cacheable_script(script.id)
+
+    @@script_cache[script.name] = script
+    @@script_cache[script.id.to_s] = script
+
+    @@script_level_cache.merge!(script.script_levels.index_by(&:id))
+    script.script_levels.each do |script_level|
+      level = script_level.level
+      next unless level
+      @@level_cache[level.id] = level unless @@level_cache.key? level.id
+      @@level_cache[level.name] = level unless @@level_cache.key? level.name
     end
   end
 
@@ -226,6 +244,11 @@ class Script < ActiveRecord::Base
         cache[level.name] = level unless cache.key? level.name
       end
     end
+  end
+
+  def self.update_level_in_cache(level)
+    @@level_cache[level.id] = level if @@level_cache.key? level.id
+    @@level_cache[level.name] = level if @@level_cache.key? level.name
   end
 
   # Find the script level with the given id from the cache, unless the level build mode
@@ -586,13 +609,14 @@ class Script < ActiveRecord::Base
       script_name = script_params[:name]
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        Script.add_script({
+        script = Script.add_script({
           name: script_name,
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
+        Script.update_script_in_cache(script)
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
     rescue StandardError => e
