@@ -103,7 +103,7 @@ class ActivitiesController < ApplicationController
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
 
-    if solved  
+    if solved
       slog(
         :tag => 'activity_finish',
         :script_level_id => @script_level.try(:id),
