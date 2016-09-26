@@ -35,7 +35,8 @@ const SurveyResults = React.createClass({
 
   getInitialState() {
     return {
-      workshopOptions: []
+      course: null,
+      filteredWorkshops: []
     };
   },
 
@@ -44,14 +45,11 @@ const SurveyResults = React.createClass({
       return workshop.course === course;
     });
 
-    let filteredWorkshopOptions = filteredWorkshops.map(function (workshop, i) {
-      return (<option key={i} value={workshop.id}>{course} - {workshop.id}</option>)
-    });
-
-    console.log(filteredWorkshopOptions);
+    console.log(filteredWorkshops);
 
     this.setState({
-      workshopsOptions: filteredWorkshopOptions
+      selectedCourse: course,
+      filteredWorkshops: filteredWorkshops
     });
   },
 
@@ -62,8 +60,13 @@ const SurveyResults = React.createClass({
   },
 
   render() {
-    let courseOptions = window.dashboard.workshop.COURSES.map(function (course, i) {
+    const courseOptions = window.dashboard.workshop.COURSES.map(function (course, i) {
       return (<option key={i} value={course}>{course}</option>);
+    });
+
+    const selectedCourse = this.state.selectedCourse;
+    const workshopOptions = this.state.filteredWorkshops.map(function (workshop, i) {
+      return (<option key={i} value={workshop.id}>{selectedCourse} - {workshop.id}</option>);
     });
 
     return (
@@ -84,7 +87,7 @@ const SurveyResults = React.createClass({
               name="workshop"
               defaultValue="Select a course..."
             >
-              {this.state.workshopOptions}
+              {workshopOptions}
             </select>
           </Col>
 
