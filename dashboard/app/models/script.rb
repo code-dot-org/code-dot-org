@@ -180,7 +180,16 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        script = Script.includes([
+          {
+            script_levels: [
+              {levels: [:game, :concepts, :level_concept_difficulty]},
+              :stage,
+              :callouts
+            ]
+          },
+          :stages
+        ]).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
