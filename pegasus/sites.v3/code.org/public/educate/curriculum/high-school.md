@@ -4,7 +4,7 @@ nav: educate_nav
 ---
 
 # High School 
-For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
+For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 
 <!--<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">-->
@@ -45,17 +45,18 @@ Code.org offers a four course [Computer Science Fundamentals](https://studio.cod
 |--------------|------------|---------------|--------------------------|------|
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
-| [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |
-| [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
-| [Code.org](/educate) | Exploring Computer Science intro course and Computer Science Principles, a pilot course with an AP exam coming in 2016, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
+| [CodeHS](https://codehs.com) | 4-year high school CS pathway. Intro CS JavaScript, Intro CS Python, AP CS Principles, AP CS in Java, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500 | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CSP, 30-40 hour course, $1500/teacher |
 | [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
-| [Exploring Computer Science](http://www.exploringcs.org/)| Year-long introductory high school consisting of 6 units, approximately 6 weeks each, FREE | Week-long summer institute and quarterly one-day academic year workshops | 
+| [Exploring Computer Science](http://www.exploringcs.org/)| Year-long introductory high school course aimed at broadening participation in CS. 6 units, 6 weeks each | Week-long summer institute and quarterly one-day academic year workshops |
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Mobile CSP](http://www.mobile-csp.org/) | Year-long Computer Science Principles course, materials available online, FREE | Online, regional in-person offered in CT, MA, NH and CA (others may be available), FREE, stipends available|
 | [NMSI](http://www.nms.org/) | Year-long AP CS Principles/AP CS A course, FREE| In-person summer training + 4 days of PD throughout the year. One-on-one mentoring available to partner schools, FREE |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-computer-science/pltw-computer-science-curriculum) | 3 courses, $2000/school | 5 or 10-day in-person training, $1200 or $2400, depending on course |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE | Program implemented by TEALS volunteers, $5000 |
+| [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, and robotics. Annual subscription/$1000. Software $300/computer lab. Free PDF files. | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
+
+
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
