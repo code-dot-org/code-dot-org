@@ -92,15 +92,25 @@ WebLab.prototype.init = function (config) {
   config.noHowItWorks = true;
   config.versionHistoryInInstructionsHeader = true;
 
-  config.afterClearPuzzle = (config) => {
+  config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
       // Reset startSources to the original value (ignoring lastAttempt)
-      this.startSources = JSON.parse(this.level.startSources);
+      try {
+        this.startSources = JSON.parse(this.level.startSources);
+      } catch (e) {
+        this.startSources = null;
+        reject(e);
+        return;
+      }
       // TODO: (cpirich) reload currentAssets once those are versioned
 
       // Force brambleHost to reload based on startSources
-      this.brambleHost.loadStartSources(() => {
-        resolve();
+      this.brambleHost.loadStartSources(err => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve();
+        }
       });
     });
   };
@@ -192,8 +202,12 @@ WebLab.prototype.init = function (config) {
 WebLab.prototype.getCodeAsync = function () {
   return new Promise((resolve, reject) => {
     if (this.brambleHost !== null) {
-      this.brambleHost.getBrambleCode(function (code) {
-        resolve(code);
+      this.brambleHost.getBrambleCode(function (err, code) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(code);
+        }
       });
     } else {
       // Bramble not installed yet - we have no code to return
@@ -247,18 +261,24 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the asset list and store it as this.currentAssets
  */
 WebLab.prototype.loadCurrentAssets = function () {
-  assetsApi.ajax('GET', '', (xhr) => {
-    assetListStore.reset(JSON.parse(xhr.responseText));
-    this.currentAssets = assetListStore.list().map(function (asset) {
-      return {
-        name: asset.filename,
-        url: '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename
-      };
-    });
+  assetsApi.ajax('GET', '', xhr => {
+    let parsedResponse;
+    try {
+      parsedResponse = JSON.parse(xhr.responseText);
+    } catch (e) {
+      console.error('assets API parse failed, error: ' + e);
+      this.currentAssets = null;
+      return;
+    }
+    assetListStore.reset(parsedResponse);
+    this.currentAssets = assetListStore.list().map(asset => ({
+      name: asset.filename,
+      url: '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename
+    }));
     if (this.brambleHost) {
       this.brambleHost.syncAssets(() => {});
     }
-  }, (xhr) => {
+  }, xhr => {
     console.error('assets API failed, status: ' +  xhr.status);
     this.currentAssets = null;
   });

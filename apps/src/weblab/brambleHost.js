@@ -23,27 +23,21 @@ let onProjectChangedCallback_ = null;
 // Project root in file system
 const projectRoot = "/codedotorg/weblab";
 
-function putFilesInBramble(Bramble, sources, callback) {
+function putFilesInBramble(sources, callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
 
-  sh.rm(projectRoot, {recursive: true}, function (err) {
+  sh.rm(projectRoot, {recursive: true}, err => {
     // create project root directory
-    sh.mkdirp(projectRoot, function (err) {
-      if (err && err.code !== "EEXIST") {
-        throw err;
-      }
+    sh.mkdirp(projectRoot, err => {
 
       function writeFileData(path, data, callback) {
         path = Path.join(projectRoot, path);
         // write the data
-        fs.writeFile(path, data, function (err) {
-          if (err) {
-            throw err;
-          }
+        fs.writeFile(path, data, err => {
           // call completion callback
-          callback();
+          callback(err);
         });
       }
 
@@ -52,32 +46,33 @@ function putFilesInBramble(Bramble, sources, callback) {
         if (i < sources.files.length) {
           const file = sources.files[i];
           // write file data into Bramble
-          writeFileData(file.name, file.data, function () {
+          writeFileData(file.name, file.data, () => {
             // continue on to the next item on the list
             writeSourceFile(sources, i + 1, callback);
           });
         } else {
           // end of list, call completion callback
-          callback();
+          callback(null);
         }
       }
 
-      // start an async-chained enumeration through the file list
-      writeSourceFile(sources, 0, callback);
+      if (err && err.code !== "EEXIST") {
+        callback(err);
+      } else {
+        // start an async-chained enumeration through the file list
+        writeSourceFile(sources, 0, callback);
+      }
     });
   });
 }
 
-function removeAllAssetsInBramble(Bramble, callback) {
+function removeAllAssetsInBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
 
   // enumerate files in the file system off the project root
   sh.ls(projectRoot, function (err, entries) {
-    if (err) {
-      throw err;
-    }
     // async-chained enumeration: remove the file if the attributes indicate
     // that it is an asset
     function removeEntryIfAsset(i, callback) {
@@ -86,32 +81,39 @@ function removeAllAssetsInBramble(Bramble, callback) {
         const path = Path.join(projectRoot, entry.path);
         fs.getxattr(path, 'asset', (err, assetAttrValue) => {
           if (err && err.name !== 'ENOATTR') {
-            throw err;
-          }
-          if (assetAttrValue) {
-            sh.rm(path, (err) => {
-              if (err) {
-                throw err;
-              }
-              // File removed, move to next file entry:
-              removeEntryIfAsset(i + 1, callback);
-            });
+            callback(err);
             return;
           }
-          // Not an asset file, move to next file entry:
-          removeEntryIfAsset(i + 1, callback);
+          if (assetAttrValue) {
+            sh.rm(path, err => {
+              if (err) {
+                callback(err);
+              } else {
+                // File removed, move to next file entry:
+                removeEntryIfAsset(i + 1, callback);
+              }
+            });
+          } else {
+            // Not an asset file, move to next file entry:
+            removeEntryIfAsset(i + 1, callback);
+          }
         });
       } else {
         // end of list, call completion callback
-        callback();
+        callback(null);
       }
     }
-    // start an async-chained enumeration through the file list
-    removeEntryIfAsset(0, callback);
+
+    if (err) {
+      callback(err);
+    } else {
+      // start an async-chained enumeration through the file list
+      removeEntryIfAsset(0, callback);
+    }
   });
 }
 
-function syncAssetsWithBramble(Bramble, assets, callback) {
+function syncAssetsWithBramble(assets, callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
@@ -123,22 +125,22 @@ function syncAssetsWithBramble(Bramble, assets, callback) {
     $.ajax(asset.url, {
       dataType: 'binary',
       responseType: 'arraybuffer'
-    }).done((data) => {
+    }).done(data => {
       var path = Path.join(projectRoot, asset.name);
       // write the data
-      fs.writeFile(path, new Buffer(data), { encoding: null }, (err) => {
+      fs.writeFile(path, new Buffer(data), { encoding: null }, err => {
         if (err) {
-          throw err;
+          callback(err);
+        } else {
+          // mark the extended attribute 'asset' as true
+          fs.setxattr(path, 'asset', true, err => {
+            // call completion callback
+            callback(err);
+          });
         }
-        // mark the extended attribute 'asset' as true
-        fs.setxattr(path, 'asset', true, (err) => {
-          if (err) {
-            throw err;
-          }
-          // call completion callback
-          callback();
-        });
       });
+    }).fail((jqXHR, textStatus, errorThrown) => {
+      callback(errorThrown);
     });
   }
 
@@ -146,7 +148,11 @@ function syncAssetsWithBramble(Bramble, assets, callback) {
   function writeAssetFile(i, callback) {
     if (i < assets.length) {
       // request and write asset data into Bramble
-      requestAssetAndWrite(assets[i], function () {
+      requestAssetAndWrite(assets[i], err => {
+        if (err) {
+          // error, call completion callback
+          callback();
+        }
         // continue on to the next item on the list
         writeAssetFile(i + 1, callback);
       });
@@ -156,9 +162,13 @@ function syncAssetsWithBramble(Bramble, assets, callback) {
     }
   }
 
-  removeAllAssetsInBramble(Bramble, () => {
-    // start an async-chained enumeration through the file list
-    writeAssetFile(0, callback);
+  removeAllAssetsInBramble(err => {
+    if (err) {
+      callback();
+    } else {
+      // start an async-chained enumeration through the file list
+      writeAssetFile(0, callback);
+    }
   });
 }
 
@@ -169,9 +179,6 @@ function getFilesFromBramble(callback) {
 
   // enumerate files in the file system off the project root
   sh.ls(projectRoot, function (err, entries) {
-    if (err) {
-      throw err;
-    }
     let fileList = [];
 
     // async-chained enumeration: get the file data for i-th file
@@ -181,34 +188,40 @@ function getFilesFromBramble(callback) {
         const path = Path.join(projectRoot, entry.path);
         fs.getxattr(path, 'asset', (err, assetAttrValue) => {
           if (err && err.name !== 'ENOATTR') {
-            throw err;
+            callback(err);
+            return;
           }
           if (assetAttrValue) {
             // ignore assets, move to the next file...
             getFileData(i + 1, callback);
-            return;
+          } else {
+            // read file data
+            fs.readFile(path, 'utf8', (err, fileData) => {
+              if (err) {
+                callback(err);
+              } else {
+                // add file data to list that gets returned
+                const file = {name: entry.path, data: fileData};
+                fileList.push(file);
+                // continue on to next item in list
+                getFileData(i + 1, callback);
+              }
+            });
           }
-          // read file data
-          fs.readFile(path, 'utf8', function (err, fileData) {
-            if (err) {
-              throw err;
-            }
-            // add file data to list that gets returned
-            const file = {name: entry.path, data: fileData};
-            fileList.push(file);
-            // continue on to next item in list
-            getFileData(i + 1, callback);
-          });
         });
       } else {
         const code = {files: fileList};
         // end of list, call completion callback
-        callback(code);
+        callback(null, code);
       }
     }
 
-    // start an async-chained enumeration through the file list
-    getFileData(0, callback);
+    if (err) {
+      callback(err);
+    } else {
+      // start an async-chained enumeration through the file list
+      getFileData(0, callback);
+    }
   });
 }
 
@@ -217,7 +230,7 @@ function addFileHTML() {
     basenamePrefix: 'new',
     ext: 'html',
     contents: '<!DOCTYPE html>\n<html>\n<body>\n\n</body>\n</html>',
-  }, (err) => {
+  }, err => {
     if (err) {
       throw err;
     }
@@ -229,7 +242,7 @@ function addFileCSS() {
     basenamePrefix: 'new',
     ext: 'css',
     contents: 'body {\n  \n}',
-  }, (err) => {
+  }, err => {
     if (err) {
       throw err;
     }
@@ -269,9 +282,13 @@ function loadStartSources(callback) {
   const startSources = webLab_.getStartSources();
 
   // put the source files into the Bramble file system
-  putFilesInBramble(bramble_, startSources, () => {
-    // Start the initial assets sync
-    syncAssets(callback);
+  putFilesInBramble(startSources, err => {
+    if (err) {
+      callback();
+    } else {
+      // Start the initial assets sync
+      syncAssets(callback);
+    }
   });
 }
 
@@ -279,7 +296,7 @@ function syncAssets(callback) {
   // Get current assets to put in file system
   const currentAssets = webLab_.getCurrentAssets();
 
-  syncAssetsWithBramble(bramble_, currentAssets, callback);
+  syncAssetsWithBramble(currentAssets, callback);
 }
 
 // Get the WebLab object from our parent window
