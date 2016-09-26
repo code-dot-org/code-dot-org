@@ -4,13 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
+import processMarkdown from 'marked';
+import renderer from '../../StylelessRenderer';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
-
-var processMarkdown = require('marked');
 
 var ProtectedStatefulDiv = require('../ProtectedStatefulDiv');
 var Instructions = require('./Instructions');
@@ -199,7 +199,8 @@ var TopInstructions = React.createClass({
             {!this.props.hasContainedLevels &&
               <Instructions
                 ref="instructions"
-                renderedMarkdown={processMarkdown(this.props.markdown)}
+                renderedMarkdown={processMarkdown(this.props.markdown,
+                    { renderer })}
                 onResize={this.adjustMaxNeededHeight}
                 inTopPane
               />}
