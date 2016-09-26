@@ -7,10 +7,7 @@ require('./multi.js');
 require('./textMatch.js');
 var saveAnswers = require('./saveAnswers.js').saveAnswers;
 
-window.initLevelGroup = function (
-  levelCount,
-  currentPage,
-  lastAttempt) {
+window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
