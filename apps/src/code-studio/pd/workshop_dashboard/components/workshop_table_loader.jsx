@@ -8,6 +8,7 @@
 import $ from 'jquery';
 import _, {orderBy} from 'lodash';
 import React from 'react';
+import SurveyResults from './survey_results';
 import WorkshopTable from './workshop_table';
 import FontAwesome from '../../../../templates/FontAwesome';
 
@@ -17,7 +18,8 @@ const WorkshopTableLoader = React.createClass({
     canEdit: React.PropTypes.bool,
     canDelete: React.PropTypes.bool,
     showSignupUrl: React.PropTypes.bool,
-    showOrganizer: React.PropTypes.bool
+    showOrganizer: React.PropTypes.bool,
+    componentToLoad: React.PropTypes.string,
   },
 
   getDefaultProps() {
@@ -79,6 +81,14 @@ const WorkshopTableLoader = React.createClass({
       return <p>None.</p>;
     }
 
+    if (this.props.componentToLoad == 'surveyResults') {
+      return (
+        <SurveyResults
+          workshops={this.state.workshops}
+          />
+      );
+    }
+
     return (
       <WorkshopTable
         workshops={this.state.workshops}
@@ -86,7 +96,7 @@ const WorkshopTableLoader = React.createClass({
         onDelete={this.props.canDelete ? this.handleDelete : null}
         showSignupUrl={this.props.showSignupUrl}
         showOrganizer={this.props.showOrganizer}
-      />
+        />
     );
   }
 });
