@@ -116,6 +116,8 @@ class ManifestBuilder
     bucket.objects.each do |object_summary|
       animation_name = object_summary.key[/^[^.]+/]
       extension = object_summary.key[/(?<=\.)\w+$/]
+      next if extension.nil? # Skip 'directory' objects
+
       verbose <<-EOS.unindent
         #{bold object_summary.key}
         #{object_summary.last_modified} | #{object_summary.size}
