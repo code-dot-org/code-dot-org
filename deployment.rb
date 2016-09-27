@@ -196,7 +196,7 @@ class CDOImpl < OpenStruct
   def firebase_channel_id_suffix
     return "-#{circle_run_identifier}" if ENV['CI']
     return "-DEVELOPMENT-#{ENV['USER']}" if CDO.firebase_name == 'cdo-v3-dev'
-    nil
+    ''
   end
 
   def site_url(domain, path = '', scheme = '')
