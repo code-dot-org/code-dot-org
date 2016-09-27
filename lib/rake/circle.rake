@@ -1,3 +1,4 @@
+require_relative '../../deployment'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'open-uri'
