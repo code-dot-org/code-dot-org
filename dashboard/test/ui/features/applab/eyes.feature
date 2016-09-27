@@ -190,6 +190,7 @@ Scenario: Data Browser
   Then I see no difference for "data table"
 
   When I press enter key
+  And I wait until element "th .test-tableNameDiv:contains(column1)" is visible
   And I click selector "#addColumnButton"
   And I press enter key
   And I press keys "foo" for element "#addDataTableRow :nth-child(2) input"
