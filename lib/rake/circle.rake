@@ -44,6 +44,7 @@ namespace :circle do
           " -d localhost.studio.code.org:3000" \
           " --circle" \
           " --parallel 26" \
+          " --abort_when_failures_exceed 30" \
           " --retry_count 3" \
           " --html"
       if is_pipeline_branch
