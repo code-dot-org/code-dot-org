@@ -184,6 +184,8 @@ class Pd::Workshop < ActiveRecord::Base
     self.section
   end
 
+  # Ends the workshop, or no-op if it's already ended.
+  # The return value is undefined.
   def end!
     return unless self.ended_at.nil?
     self.ended_at = Time.zone.now

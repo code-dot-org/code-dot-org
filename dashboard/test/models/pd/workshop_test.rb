@@ -106,20 +106,29 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal returned_section, @workshop.section
     assert @workshop.section.workshop_section?
     assert_equal @workshop.section_type, @workshop.section.section_type
-    started_at = @workshop.started_at
-
-    # Start should be idempotent. Calling again returns the same section and leaves the original start time.
-    returned_section_2 = @workshop.start!
-    assert returned_section_2
-    assert_equal returned_section, returned_section_2
-    assert_equal started_at, @workshop.reload.started_at
 
     @workshop.end!
     @workshop.reload
     assert_equal 'Ended', @workshop.state
-    ended_at = @workshop.ended_at
+  end
 
-    # End should be idempotent. Calling again leaves the original end time.
+  test 'start is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    returned_section = @workshop.start!
+    assert returned_section
+    started_at = @workshop.reload.started_at
+
+    returned_section_2 = @workshop.start!
+    assert returned_section_2
+    assert_equal returned_section, returned_section_2
+    assert_equal started_at, @workshop.reload.started_at
+  end
+
+  test 'end is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+    @workshop.end!
+    ended_at = @workshop.reload.ended_at
     @workshop.end!
     assert_equal ended_at, @workshop.reload.ended_at
   end
