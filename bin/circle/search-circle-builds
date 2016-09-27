@@ -1,0 +1,77 @@
+#!/usr/bin/env ruby
+
+require 'pp'
+require 'json'
+require 'memoist'
+require 'open-uri'
+require 'optparse'
+
+CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
+
+KNOWN_FAIL_TYPES = [
+    {
+        search_string: 'ConnectionTimeoutError',
+        step_string: 'run_tests',
+        container: 1
+    },
+    {
+        search_string: 'io_fillbuf',
+        step_string: 'run_tests',
+        container: 1
+    },
+]
+
+extend Memoist
+
+def get_build(id)
+  JSON.parse(open("#{CIRCLE_API_BASE}/#{id}").read)
+end
+
+memoize :get_build
+
+def output_url(build, container, step_includes)
+  build['steps'].select { |o| o['name'].include? step_includes }[0]['actions'][container]['output_url']
+end
+
+memoize :output_url
+
+def get_output(id, container, step_includes)
+  JSON.parse(open(output_url(get_build(id), container, step_includes)).read)
+rescue => _
+end
+
+memoize :get_output
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = 'Usage: example.rb [options]'
+
+  opts.on('--start StartTime', String, 'Start searching at build #') do |n|
+    options[:start_build] = n.to_i
+  end
+  opts.on('--end EndTime', String, 'End searching at build #') do |n|
+    options[:end_build] = n.to_i
+  end
+end.parse!
+
+start_build = options[:start_build]
+end_build = options[:end_build]
+
+builds = (start_build..end_build).to_a
+
+puts "Checking builds #{builds.join ', '} for errors:\n#{KNOWN_FAIL_TYPES.map { |f| "#{f[:search_string]} in container #{f[:container]} step #{f[:step_string]}" }.join "\n"}"
+
+builds.each do |build|
+  KNOWN_FAIL_TYPES.each do |known_fail|
+    output = get_output(build, known_fail[:container], known_fail[:step_string])
+
+    begin
+      if output[0]['message'].include? known_fail[:search_string]
+        puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} had error #{known_fail[:search_string]}"
+      end
+    rescue => _
+    end
+  end
+end
+
+exit(0)
