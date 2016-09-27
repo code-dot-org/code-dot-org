@@ -76,7 +76,7 @@ function getFirebase() {
     if (!Applab.firebaseAuthToken) {
       let msg = "Error connecting to Firebase: Firebase auth token not specified. ";
       if (Applab.firebaseName === 'cdo-v3-dev') {
-        msg += 'To use Applab data blocks or data browser in development, you must set' +
+        msg += 'To use Applab data blocks or data browser in development, you must ' +
           'set "firebase_secret" in locals.yml to the value at ' +
           'https://manage.chef.io/organizations/code-dot-org/environments/development/attributes ' +
           '-> cdo-secrets';
