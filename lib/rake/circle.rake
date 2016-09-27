@@ -37,9 +37,27 @@ namespace :circle do
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
       browsers_to_run = is_pipeline_branch ? 'ChromeLatestWin7,Firefox45Win7,IE11Win10,SafariYosemite' : 'ChromeLatestWin7'
-      RakeUtils.system_stream_output "bundle exec ./runner.rb -f #{container_features.join(',')} -c #{browsers_to_run} -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html"
+      RakeUtils.system_stream_output "bundle exec ./runner.rb" \
+          " --feature #{container_features.join(',')}" \
+          " --config #{browsers_to_run}" \
+          " --pegasus localhost.code.org:3000" \
+          " --dashboard localhost.studio.code.org:3000" \
+          " --circle" \
+          " --parallel 26" \
+          " --abort_when_failures_exceed 30" \
+          " --retry_count 3" \
+          " --html"
       if is_pipeline_branch
-        RakeUtils.system_stream_output "bundle exec ./runner.rb --eyes -f #{container_eyes_features.join(',')} -c ChromeLatestWin7,iPhone -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html"
+        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
+            " --eyes" \
+            " --feature #{container_eyes_features.join(',')}" \
+            " --config ChromeLatestWin7,iPhone" \
+            " --pegasus localhost.code.org:3000" \
+            " --dashboard localhost.studio.code.org:3000" \
+            " --circle" \
+            " --parallel 26" \
+            " --retry_count 3" \
+            " --html"
       end
     end
     # Kill Sauce Connect tunnel
