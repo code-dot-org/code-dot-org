@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# A script to analyze a range of CircleCI builds for known failures.
+# For available options, run ./search-circle-builds -h
 
 require 'pp'
 require 'json'
@@ -44,13 +46,17 @@ memoize :get_output
 
 options = {}
 OptionParser.new do |opts|
-  opts.banner = 'Usage: example.rb [options]'
+  opts.banner = 'Usage: ./search-circle-builds [options]'
 
   opts.on('--start StartTime', String, 'Start searching at build #') do |n|
     options[:start_build] = n.to_i
   end
   opts.on('--end EndTime', String, 'End searching at build #') do |n|
     options[:end_build] = n.to_i
+  end
+  opts.on_tail('-h', '--help', 'Show this message') do
+    puts opts
+    exit
   end
 end.parse!
 
