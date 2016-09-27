@@ -8,6 +8,7 @@ let registeredGetResult = null;
 export function registerGetResult(getResultFunction=basicGetResult) {
   if (registeredGetResult) {
     console.error('already have a getResult function');
+    return;
   }
   registeredGetResult = getResultFunction;
 }

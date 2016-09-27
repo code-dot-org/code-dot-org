@@ -75,7 +75,6 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
       return;
     }
     var currentResponse = getAggregatedResults().response;
-    // TODO - this always be true?
     if (lastResponse !== currentResponse) {
       throttledSaveAnswers(levelId);
     }
