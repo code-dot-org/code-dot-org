@@ -1,4 +1,4 @@
-/* globals getResult, dashboard, appOptions */
+/* globals dashboard, appOptions */
 
 import {
   showDialog,
@@ -6,6 +6,7 @@ import {
   showInstructionsDialog,
   processResults
 } from  './dialogHelper';
+import { getResult } from './codeStudioLevels';
 
 /**
  * This file injects some of our dialog related methods onto the dashboard namespace
@@ -66,7 +67,7 @@ $(document).on('click', '.submitButton', function () {
     return;
   }
 
-  var result = window.getResult();
+  var result = getResult();
   var showConfirmationDialog = result.showConfirmationDialog || false;
   if (showConfirmationDialog) {
     showDialog(showConfirmationDialog, function () {
