@@ -40,11 +40,12 @@ const AnimationList = React.createClass({
               animationKey={key}
               animationProps={this.props.animationList.propsByKey[key]}
               isSelected={key === this.props.selectedAnimation}
+              animationList={this.props.animationList}
             />
           )}
           <NewListItem
             key="new_animation"
-            label="new sequence"
+            label="new animation"
             onClick={this.props.onNewItemClick}
           />
         </ScrollableList>

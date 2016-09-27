@@ -26,25 +26,27 @@ end
 
 Given /^I start a new Applab project$/ do
   steps <<-STEPS
-    And I am on "http://learn.code.org/projects/applab/new"
+    And I am on "http://learn.code.org/projects/applab/new?noUseFirebase=1"
     And I rotate to landscape
     And I wait to see "#runButton"
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#viewDataButton" is visible
+    And Firebase is disabled
   STEPS
 end
 
 Given /^I start a new Applab project with Firebase$/ do
   steps <<-STEPS
-    And I am on "http://learn.code.org/projects/applab/new?useFirebase=1"
+    And I am on "http://learn.code.org/projects/applab/new"
     And I rotate to landscape
     And I wait to see "#runButton"
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#dataModeButton" is visible
+    And Firebase is enabled
   STEPS
 end
 

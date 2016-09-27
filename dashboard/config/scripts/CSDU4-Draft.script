@@ -2,7 +2,6 @@ title ' TEMP CSD Unit 4 - The Design Process'
 description 'Temp place to work on U4 of Disco'
 description_short 'Design Process and App Lab'
 login_required 'true'
-student_of_admin_required 'true'
 hidden 'true'
 
 stage 'Design Mode'

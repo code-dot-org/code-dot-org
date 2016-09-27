@@ -27,7 +27,7 @@
   -# page.  The controller takes care of that for us.
   - current_page = params[:puzzle_page] || 1
 
-  -# anonymous users shoulnd't ever see lockable stages, but give them the locked_stage message if they do
+  -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
   - if @script_level && @script_level.stage.lockable? && (!current_user || current_user.user_level_locked?(@script_level, @level))
     .locked-level{style: 'font-size: 14px; margin-top: 10px; margin-bottom: 10px;'}
       =t('locked_stage')

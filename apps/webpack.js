@@ -43,6 +43,9 @@ var baseConfig = {
       },
     ],
   },
+  node: {
+    fs: 'empty',
+  },
 };
 
 // modify baseConfig's preLoaders if looking for code coverage info

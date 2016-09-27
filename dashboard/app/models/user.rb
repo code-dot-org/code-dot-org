@@ -720,7 +720,8 @@ class User < ActiveRecord::Base
 
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
-    user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
+    return false unless user_script
+    user_script.completed_at || next_unpassed_progression_level(script).nil?
   end
 
   def not_started?(script)
@@ -838,7 +839,7 @@ class User < ActiveRecord::Base
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
   def self.track_proficiency(user_id, script_id, level_id)
-    level_concept_difficulty = LevelConceptDifficulty.find_by_level_id(level_id)
+    level_concept_difficulty = Script.cache_find_level(level_id).level_concept_difficulty
     return unless level_concept_difficulty
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
