@@ -191,14 +191,11 @@ class CDOImpl < OpenStruct
     ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
   end
 
-
   # provide a unique path for firebase channels data for development and circleci,
   # to avoid conflicts in channel ids.
   def firebase_channel_id_suffix
     return "-#{circle_run_identifier}" if ENV['CI']
-
-    return "-development-#{ENV['USER']}" if CDO.firebase_name == 'cdo-v3-dev'
-
+    return "-DEVELOPMENT-#{ENV['USER']}" if CDO.firebase_name == 'cdo-v3-dev'
     nil
   end
 
