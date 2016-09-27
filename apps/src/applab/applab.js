@@ -775,6 +775,7 @@ Applab.init = function (config) {
     isSubmitted: !!config.level.submitted,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
+    showDebugSlider: showDebugConsole,
     showDebugWatch: false
   });
 
