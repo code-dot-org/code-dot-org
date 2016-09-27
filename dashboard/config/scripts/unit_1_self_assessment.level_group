@@ -1,20 +1,18 @@
-name 'Unit 1 Self Assessment'
-title 'Unit 1 Self Assessment'
+name 'Unit 1 Self-Assessment'
+title 'Unit 1 Self-Assessment'
 submittable 'true'
 
 page
 text 'intro to self assessment'
-level ‘U1 eval q1’
-level ‘U1 eval q2’
-level ‘U1 eval q3’
-level ‘U1 eval q4’
-level ‘U1 eval q5’
-level ‘U1 eval q6’
-
-page
-level 'U1 Eval q7'
-level 'U1 Eval q8'
-level 'U1 Eval q9'
-level 'U1 Eval q10'
-level 'U1 Eval q11'
-level 'U1 Eval q12'
+level ‘U1 evaluation q1’
+level ‘U1 evaluation q2’
+level ‘U1 evaluation q3’
+level ‘U1 evaluation q4’
+level ‘U1 evaluation q5’
+level ‘U1 evaluation q6’
+level 'U1 evaluation q7'
+level 'U1 evaluation q8'
+level 'U1 evaluation q9'
+level 'U1 evaluation q10'
+level 'U1 evaluation q11'
+level 'U1 evaluation q12'

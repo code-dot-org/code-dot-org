@@ -1,0 +1,61 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-09-27T14:58:31.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "markdown_instructions": "# Creating Functions to Organize Code\r\n\r\n<img src=\"https://images.code.org/12cbd392777940e614752018c00c8558-image-1474988485968.00.50 AM.png\" style=\"float:right;height:80px\">\r\n\r\nIn Game Lab all the action is happening in the draw loop. If it gets clogged up with too much messy code it can get hard to tell what's going on! Look how easy your draw loop was in the last level thanks to functions.\r\n\r\n# Do This\r\n\r\nThis program draws two different backgrounds, depending on the location of the mouse. Look at how enormous the draw loop is getting and you haven't even added sprites!\r\n\r\n* **Create 2 different functions**, one for each type of background\r\n* **Give your functions clear names**. \r\n\t* Function names **may not include spaces**\r\n    * Function names **may not start with a number**\r\n    * Function names **should indicate what they do clearly**\r\n    * Be ready to **share the names you picked with a neighbor**\r\n* Move the code for these functions out of the draw loop and into the correct function\r\n* Call your functions in the draw loop so the program runs as expected",
+    "start_blocks": "function draw() {\r\n  if(Game.mouseY > 200){\r\n    noStroke();\r\n    //Sky\r\n    background(color(0,0,50));\r\n    \r\n    //Water\r\n    fill(color(0,0,80));\r\n    rect(0,300,400,100);\r\n    \r\n    //Moon\r\n    fill(color(100,100,100));\r\n    ellipse(300,100,50,50);\r\n\r\n    // Reflection\r\n    ellipse(randomNumber(250,350),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(250,350),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(250,350),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(250,350),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(250,350),randomNumber(300,400),5,5);\r\n  } else {\r\n    noStroke();\r\n    \r\n    //Sky\r\n    background(color(0,200,255));\r\n\r\n    //Water\r\n    fill(color(0,0,150));\r\n    rect(0,300,400,100);\r\n    \r\n    //Sun\r\n    fill(color(255,255,0));\r\n    ellipse(100,100,50,50);\r\n    \r\n    // Reflection\r\n    ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n    ellipse(randomNumber(50,150),randomNumber(300,400),5,5);  \r\n  }\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "code_functions": {
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "noStroke": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "text": null,
+      "textAlign": null,
+      "textSize": null,
+      "functionParams_none": null,
+      "callMyFunction": null
+    },
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "show_d_pad": "false",
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

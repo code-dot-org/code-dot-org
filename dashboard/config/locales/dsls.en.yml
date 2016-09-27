@@ -176,6 +176,57 @@ en:
         Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
         Nope!: Nope!
         Yes!: Yes!
+      U1 evaluation q1:
+        Brand new!: Brand new!
+        How experienced would you say you are with computer science?: How experienced would you say you are with computer science?
+        Somewhat Experienced: Somewhat Experienced
+        Very Experienced: Very Experienced
+      U1 evaluation q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U1 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U1 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U1 evaluation q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Are you comfortable with the underlying concepts behind how non-decimal number systems work?
+        I have no idea what you're talking about!: I have no idea what you're talking about!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: I know how to convert between number systems, but I don't know about the underlying rules of how they work
+        Yes!: Yes!
+      U1 evaluation q3:
+        Are you comfortable with HTML or Markdown?: Are you comfortable with HTML or Markdown?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q4:
+        Do you know how IP addresses work?: Do you know how IP addresses work?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q5:
+        Do you know how messages are broken down and routed on the internet?: Do you know how messages are broken down and routed on the internet?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U1 evaluation q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U1 evaluation q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -231,6 +282,7 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
+      CSD U3 Functions Introduction: {}
       CSD U3 Keypress Stop: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
@@ -1200,7 +1252,9 @@ en:
       'Stop: Hobbies Page': {}
       'Stop: Images': {}
       'Stop: Intro to CSS': {}
+      'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
+      'Stop: Website Navigation': {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -2267,7 +2321,7 @@ en:
         Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
-        Unit 1 Self Assessment: {}
+        Unit 1 Self-Assessment: {}
         brendan test survey: {}
     match:
       2-3 Big Event Match 1:
@@ -5632,6 +5686,75 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      cspu3_assess1_callfunction:
+        drawStar();: drawStar();
+        drawStar;: drawStar;
+        function drawStar();: function drawStar();
+        ? "function drawStar(){\n    \t   for(var i = 0; i < 5; i++){\n\t     moveForward(100);\n\t     turnLeft(36);\n    \t   }\n  \t}"
+        : "function drawStar(){\n    \t   for(var i = 0; i < 5; i++){\n\t     moveForward(100);\n\t     turnLeft(36);\n    \t   }\n  \t}"
+        function drawStar;: function drawStar;
+      cspu3_assess1_codeoutcome:
+        It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
+        The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
+        The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
+        The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
+      cspu3_assess1_collaboration:
+        Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
+        In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
+        ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        : Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        Programmers can write functions without needing to know what they do or how they should work.: Programmers can write functions without needing to know what they do or how they should work.
+        Team members can rely on one another to explain their code.: Team members can rely on one another to explain their code.
+      cspu3_assess1_functionsfalse:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+        choice A: choice A
+        choice B: choice B
+        choice C: choice C
+        choice D: choice D
+      cspu3_assess1_namingconvention:
+        A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
+        A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
+        Function names should be organized alphabetically.: Function names should be organized alphabetically.
+        The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
+        Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
+      cspu3_assess1_naturallanguage:
+        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
+        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
+        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
+        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      cspu3_assess1_outputdrawing:
+        <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
+        <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
+        <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
+        <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">: <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">
+        <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
+        right answer: right answer
+      cspu3_assess1_parameters:
+        Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
+        Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
+        Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
+        Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
+      cspu3_assess1_removeline:
+        Line 3 and Line 4: Line 3 and Line 4
+        Line 8 and Line 9: Line 8 and Line 9
+        Line 9: Line 9
+        Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
+      cspu3_assess1_robotpath:
+        <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
+        <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
+        <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
+        <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
+        <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
+      cspu3_assess1_truefunctions:
+        A function can change names over the course of a program.: A function can change names over the course of a program.
+        Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
+        Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
+        Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
+        Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
@@ -5946,6 +6069,12 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      sarah_test_maggie:
+        <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>
+        <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png">: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png">
+        Question: Question
+        right answer: right answer
+        test: test
       sciPD PreQ 1:
         Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
         'No': 'No'
