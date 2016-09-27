@@ -44,7 +44,7 @@ const DataOverview = React.createClass({
       () => this.props.onViewChange(DataView.TABLE, tableName),
       error => {
         if (typeof error === 'string' && (
-          !error.includes('maximum number of tables') ||
+          error.includes('maximum number of tables') ||
           error.includes('The table name is invalid')
         )) {
           this.props.onShowWarning(error);
