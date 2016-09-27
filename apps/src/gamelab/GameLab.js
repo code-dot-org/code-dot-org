@@ -192,7 +192,9 @@ GameLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  var breakpointsEnabled = !config.level.debuggerDisabled;
+  // TODO(caleybrock): Should be depenedent on !config.level.debuggerDisabled,
+  // but disabled until bugs fixed.
+  var breakpointsEnabled = false;
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
@@ -222,7 +224,11 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
+
+  // TODO(caleybrock): Should be dependent on (!config.hideSource && !config.level.debuggerDisabled),
+  // but disabled until debug bugs fixed.
+  var showDebugButtons = false;
+
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
