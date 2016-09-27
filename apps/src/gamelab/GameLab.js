@@ -140,6 +140,10 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
+  this.skin.smallStaticAvatar = null;
+  this.skin.staticAvatar = null;
+  this.skin.winAvatar = null;
+  this.skin.failureAvatar = null;
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
