@@ -108,7 +108,7 @@ export function processResults(onComplete, beforeHook) {
     sendResultsCompletion();
   }
   function sendResultsCompletion() {
-    var results = window.getResult();
+    var results = getResult();
     var response = results.response;
     var result = results.result;
     var errorType = results.errorType;
