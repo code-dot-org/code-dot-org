@@ -26,12 +26,15 @@
     "build:stats": "node ./script/build-stats.js",
     "prestorybook": "curl -o build/package/css/application.css http://localhost:3000/assets/application.css",
     "storybook": "start-storybook -p 9001 -s build/package/",
-    "storybook:deploy": "./script/deploy-storybook.sh"
+    "storybook:deploy": "./script/deploy-storybook.sh",
+    "codemod:es6-modules": "./script/codemod-es6-modules.sh",
+    "codemod:move-file": "./script/codemod-move-file.sh"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
   },
   "devDependencies": {
+    "5to6-codemod": "^1.1.2",
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "0.0.3",
     "@code-dot-org/bramble": "0.1.4",
@@ -106,6 +109,7 @@
     "jquery-ui": "1.10.5",
     "js-cookie": "^2.1.2",
     "js-yaml": "^3.6.0",
+    "jscodeshift": "^0.3.28",
     "json-loader": "0.5.4",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
@@ -150,6 +154,7 @@
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.0.1",
+    "refactoring-codemods": "^0.3.2",
     "require-globify": "1.2.1",
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",
