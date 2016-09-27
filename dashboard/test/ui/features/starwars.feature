@@ -16,6 +16,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Then I wait to see a dialog titled "Puzzle 2 of 15"
     And I close the dialog
     When element "#runButton" is visible
+    And I wait to see the progress header
     And I verify progress in the header of the current page is "perfect" for level 1
 
   Scenario: Solving puzzle 1 in text mode
@@ -32,6 +33,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Then I wait to see a dialog titled "Puzzle 2 of 15"
     And I close the dialog
     When element "#runButton" is visible
+    And I wait to see the progress header
     And I verify progress in the header of the current page is "perfect" for level 1
 
   Scenario: Solving puzzle 2 in text mode
