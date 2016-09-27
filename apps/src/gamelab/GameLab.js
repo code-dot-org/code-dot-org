@@ -140,6 +140,10 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
+  this.skin.smallStaticAvatar = null;
+  this.skin.staticAvatar = null;
+  this.skin.winAvatar = null;
+  this.skin.failureAvatar = null;
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
@@ -191,6 +195,9 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
+
+  config.enableShowCode = false;
+  config.enableShowLinesCount = false;
 
   // TODO(caleybrock): Should be depenedent on !config.level.debuggerDisabled,
   // but disabled until bugs fixed.
