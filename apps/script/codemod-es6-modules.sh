@@ -6,9 +6,13 @@ if [[ $# -lt 1 ]]; then
     exit 0;
 fi
 
-echo "Converting require statements to es6 import statements in $1"
-echo "If this doesn't work, make sure you are using node>4"
+NODE_VERSION=`node --version | cut -c2`
+if [[ $NODE_VERSION -lt 4 ]]; then
+    echo "You must use node v4 or higher"
+    exit 0;
+fi
 
+echo "Converting require statements to es6 import statements in $1"
 
 jscodeshift -t ./node_modules/5to6-codemod/transforms/cjs.js $@
 
