@@ -169,8 +169,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Puts workshop in 'In Progress' state, creates a section and returns the section.
+  # If the workshop has already been started, it will return the existing section.
   def start!
-    return unless self.started_at.nil?
+    return self.section unless self.started_at.nil?
     raise 'Workshop must have at least one session to start.' if self.sessions.empty?
 
     self.started_at = Time.zone.now
