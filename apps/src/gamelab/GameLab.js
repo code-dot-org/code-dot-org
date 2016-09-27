@@ -235,6 +235,7 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
+    showDebugSlider: false,
     showAnimationMode: !config.level.hideAnimationMode
   });
 
