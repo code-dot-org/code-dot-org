@@ -32,7 +32,7 @@
     "maze_data": null
   },
   "published": true,
-  "notes": "[Ryan, 6/28] Updated to remove \"undeletable\" move forward and replace it with a limited # of move forwards in the toolbox",
+  "notes": "[Ryan, 6/28] Updated to remove \"undeletable\" move forward and replace it with a limited # of move forwards in the toolbox\r\n[Mike, 9/26] Changed instructions, added hints, renamed",
   "level_concept_difficulty": {
   }
 }]]></config>
