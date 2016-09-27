@@ -359,29 +359,19 @@ Then /^mark the current level as completed on the client/ do
   @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
-Then /^I wait to see the progress header$/ do
-  steps %{
-    And I wait to see ".header_level_container"
-    And I wait for 5 seconds
-  }
-end
-
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
   steps %{
-    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
-  }
-end
-
-Then /^I open the progress drop down of the current page$/ do
-  steps %{
-    Then I click selector ".header_popup_link"
-    And I wait to see ".user-stats-block"
+    And I wait to see ".header_level_container"
     And I wait for 10 seconds
+    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
   steps %{
+    Then I click selector ".header_popup_link"
+    And I wait to see ".user-stats-block"
+    And I wait for 10 seconds
     And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
@@ -390,16 +380,11 @@ Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, 
   element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
 end
 
-Then /^I navigate to the course page for "([^"]*)"$/ do |course|
+Then /^I navigate to the course page and verify progress for course "([^"]*)" stage (\d+) level (\d+) is "([^"]*)"/ do |course, stage, level, test_result|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
     And I wait for 10 seconds
-  }
-end
-
-Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
-  steps %{
     And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
