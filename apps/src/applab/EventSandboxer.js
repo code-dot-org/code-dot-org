@@ -1,5 +1,5 @@
 /** @file Helper that generates sanitized, standardized event objects. */
-var keyEvent = require('./keyEvent');
+import keyEvent from './keyEvent';
 
 /**
  * Helper that generates sanitized, standardized event objects.

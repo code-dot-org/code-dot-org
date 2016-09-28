@@ -1,5 +1,5 @@
-var sanitize = require('sanitize-html');
-var elementUtils = require('./designElements/elementUtils');
+import sanitize from 'sanitize-html';
+import * as elementUtils from './designElements/elementUtils';
 
 /**
  * Return any html which is present in 'before' and absent in 'after'.
@@ -119,7 +119,7 @@ function isIdAvailable(elementId) {
  * @param {boolean} rejectExistingIds Optional if true, remove ids
  *     which already exist in the DOM and give a warning.
  */
-module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
+export default function sanitizeHtml(unsafe, warn, rejectExistingIds) {
   var warnings = [];
 
   // Define tags with a standard set of allowed attributes
@@ -176,4 +176,4 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
   }
 
   return safe;
-};
+}

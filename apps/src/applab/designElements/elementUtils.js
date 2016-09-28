@@ -1,6 +1,6 @@
 import $ from 'jquery';
-var constants = require('../constants');
-var utils = require('../../utils');
+import constants from '../constants';
+import * as utils from '../../utils';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {

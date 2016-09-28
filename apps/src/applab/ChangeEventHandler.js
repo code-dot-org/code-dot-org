@@ -1,6 +1,6 @@
-var constants = require('../constants');
+import constants from '../constants';
 var KeyCodes = constants.KeyCodes;
-var elementLibrary = require('./designElements/library');
+import elementLibrary from './designElements/library';
 
 /**
  * Helper class for generating a synthetic change event when an element's

@@ -4,9 +4,10 @@
  * For now, uses Google charts.
  * @see {GoogleChart}
  */
- /* global Promise */
-var utils = require('../utils');
-var GoogleChart = require('./GoogleChart');
+/* global Promise */
+import * as utils from '../utils';
+
+import GoogleChart from './GoogleChart';
 
 /**
  * API for requesting/generating charts in Applab.

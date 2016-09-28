@@ -1,6 +1,6 @@
-var utils = require('../utils');
+import * as utils from '../utils';
 
-module.exports = {
+export default {
   FOOTER_HEIGHT: 30,
   APP_WIDTH: 320,
   APP_HEIGHT: 480,
