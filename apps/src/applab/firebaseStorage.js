@@ -513,6 +513,10 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
  * @param {function(*)} onError
  */
 FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {
+  if (!tableName) {
+    onError('tableName is a required parameter to FirebaseStorage.renameColumn');
+    return;
+  }
   const recordsRef =
     getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
   recordsRef.once('value')

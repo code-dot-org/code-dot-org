@@ -63,6 +63,7 @@ export function getConfigRef() {
 }
 
 export function getDatabase(channelId) {
+  channelId = channelId + Applab.firebaseChannelIdSuffix;
   return getFirebase().child(`v3/channels/${channelId}`);
 }
 
@@ -73,7 +74,14 @@ function getFirebase() {
       throw new Error("Error connecting to Firebase: Firebase name not specified");
     }
     if (!Applab.firebaseAuthToken) {
-      throw new Error("Error connecting to Firebase: Firebase auth token not specified");
+      let msg = "Error connecting to Firebase: Firebase auth token not specified. ";
+      if (Applab.firebaseName === 'cdo-v3-dev') {
+        msg += 'To use Applab data blocks or data browser in development, you must ' +
+          'set "firebase_secret" in locals.yml to the value at ' +
+          'https://manage.chef.io/organizations/code-dot-org/environments/development/attributes ' +
+          '-> cdo-secrets';
+      }
+      throw new Error(msg);
     }
     let base_url = `https://${Applab.firebaseName}.firebaseio.com`;
     fb = new Firebase(base_url);
