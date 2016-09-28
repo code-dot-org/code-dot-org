@@ -2,6 +2,7 @@
 /* global dashboard */
 import React from 'react';
 import i18n from '@cdo/locale';
+import processResults from '../code-studio/levels/dialogHelper';
 
 const ContinueButton = React.createClass({
   getInitialState() {
@@ -10,7 +11,7 @@ const ContinueButton = React.createClass({
 
   onClick() {
     this.setState({submitting: true});
-    dashboard.dialog.processResults(willRedirect => {
+    processResults(willRedirect => {
       if (!willRedirect) {
         this.setState({submitting: false});
       }
