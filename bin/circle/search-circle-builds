@@ -32,21 +32,32 @@ KNOWN_FAIL_TYPES = [
 
 extend Memoist
 
-def get_build(id)
-  JSON.parse(open("#{CIRCLE_API_BASE}/#{id}").read)
+# @param [Fixnum] build_id The CircleCI build #
+# @return [Object] build descriptor object from the CircleCI API
+#   Example output JSON: https://gist.github.com/bcjordan/02f7c2906b524fa86ec75b19f9a72cd2
+def get_build(build_id)
+  JSON.parse(open("#{CIRCLE_API_BASE}/#{build_id}").read)
 end
 
 memoize :get_build
 
-def output_url(build, container, step_includes)
-  build['steps'].select { |o| o['name'].include? step_includes }[0]['actions'][container]['output_url']
+# Returns the full output URL for a given build step
+# @param [Fixnum] build_object The build information object from the Circle API
+# @param [Fixnum] container_id The container ID #
+# @param [String] grep_for_step The build step to search for (e.g. "rake install")
+def build_step_output_url(build_object, container_id, grep_for_step)
+  build_object['steps'].select { |o| o['name'].include? grep_for_step }[0]['actions'][container_id]['output_url']
 end
 
-memoize :output_url
+memoize :build_step_output_url
 
-#
-def get_output(id, container, step_includes)
-  JSON.parse(open(output_url(get_build(id), container, step_includes)).read)
+# @param [Fixnum] build_id The build ID #
+# @param [Fixnum] container_id The container ID #
+# @param [String] grep_for_step The build step to search for (e.g. "rake install")
+# @return [Object, nil] full build output JSON object from CircleCI, or nil if error in retrieval
+#   Example output JSON: https://gist.github.com/bcjordan/8349fbb1edc284839b42ae53ad19b68a
+def get_output(build_id, container_id, grep_for_step)
+  JSON.parse(open(build_step_output_url(get_build(build_id), container_id, grep_for_step)).read)
 rescue => _
 end
 
