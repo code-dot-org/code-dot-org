@@ -5711,10 +5711,6 @@ en:
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
-        choice A: choice A
-        choice B: choice B
-        choice C: choice C
-        choice D: choice D
       cspu3_assess1_namingconvention:
         A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
         A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
@@ -6071,7 +6067,6 @@ en:
         Strongly disagree: Strongly disagree
       sarah_test_maggie:
         <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>
-        <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png">: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png">
         Question: Question
         right answer: right answer
         test: test
