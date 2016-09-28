@@ -74,30 +74,36 @@ named_level 'Stop: Website Navigation'
 level 'CSDU2 - Nav on Personal Website'
 level 'CSDU2 - Nav add to Personal Site'
 
-stage 'Classes and External Style Sheets'
+stage 'Classes'
 named_level 'Unit 2 Lesson 9 Overview'
+level 'CSDU2 - Classes'
+level 'CSDU2 - Footer'
+named_level 'Stop: Classes'
+level 'CSDU2 - PW - Classes on Recipe'
+level 'CSDU2 - PW - RGB color'
+level 'CSDU2 - PW - Final Classes Style'
+
+stage 'External Style Sheets'
+named_level 'Unit 2 Lesson 10 Overview'
 level 'CSDU2 - External Style Sheets'
 level 'CSDU2 - Link Tag'
 level 'CSDU2 - Separate Content and Style'
 level 'CSDU2 - Priority of CSS Rules'
-level 'CSDU2 - Classes'
-level 'CSDU2 - Footer'
 named_level 'Stop: External Style Sheets'
 level 'CSDU2 - PW - External Style Sheets'
-level 'CSDU2 - PW - RGB color'
-level 'CSDU2 - PW - Classes on Recipe'
-level 'CSDU2 - PW - Final Classes Style'
+level 'CSDU2 - PW - Consistent Personal Site Style'
+
 
 stage 'Box Model and Page Layout'
-named_level 'Unit 2 Lesson 10 Overview'
-
-
-stage 'Personal Website: Midway Check'
 named_level 'Unit 2 Lesson 11 Overview'
 
 
-stage 'Digital Footprint'
+stage 'Personal Website: Midway Check'
 named_level 'Unit 2 Lesson 12 Overview'
+
+
+stage 'Digital Footprint'
+named_level 'Unit 2 Lesson 13 Overview'
 level 'Digital Footprint FaceSpace John'
 level 'Digital Footprint FaceSpace Soleil'
 level 'Digital Footprint Chirpr johnsnow'
@@ -106,15 +112,15 @@ level 'Digital Footprint instantframe'
 level 'Digital Footprint instantframe moonbeam'
 
 stage 'Publishing a Website'
-named_level 'Unit 2 Lesson 13 Overview'
-
-
-stage 'Sources and Search Engines'
 named_level 'Unit 2 Lesson 14 Overview'
 
 
-stage 'Intellectual Property'
+stage 'Sources and Search Engines'
 named_level 'Unit 2 Lesson 15 Overview'
+
+
+stage 'Intellectual Property'
+named_level 'Unit 2 Lesson 16 Overview'
 level 'CSDU2 IP Fair Use'
 level 'CSDU2 IP Research Content'
 level 'CSDu2 IP CC Search'
@@ -123,11 +129,11 @@ level 'CSDU2 IP Final Touches'
 level 'CSDU2 IP Portfolio'
 
 stage 'Personal Website: Finalizing Site'
-named_level 'Unit 2 Lesson 16 Overview'
+named_level 'Unit 2 Lesson 17 Overview'
 level 'CSDU2 - further styling suggestions'
 
-stage 'Holding'
-named_level 'Unit 2 Lesson 17 Overview'
+
+
 
 
 #not in use
@@ -136,3 +142,5 @@ stage 'Headers and Lists'
 stage 'Designing Web Pages'
 stage 'Designing Code for Computers'
 stage 'Personal Website: Connecting Pages'
+stage 'Classes and External Style Sheets'
+stage 'Holding'
