@@ -8,7 +8,7 @@ import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
-import setPropertyDropdown from './setPropertyDropdown';
+import * as setPropertyDropdown from './setPropertyDropdown';
 import assetPrefix from '../assetManagement/assetPrefix';
 import errorHandler from '../errorHandler';
 var ErrorLevel = errorHandler.ErrorLevel;
@@ -24,7 +24,8 @@ var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
 import {ICON_PREFIX_REGEX} from './constants';
 
-var applabCommands = module.exports;
+var applabCommands = {};
+export default applabCommands;
 
 /**
  * Lookup table of asset URLs. If an asset isn't listed here, initiate a

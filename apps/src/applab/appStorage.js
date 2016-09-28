@@ -5,7 +5,8 @@ import RecordListener from './RecordListener';
 /**
  * Namespace for app storage.
  */
-var AppStorage = module.exports;
+const AppStorage = {};
+export default AppStorage;
 
 /**
  * @param {number} status Http status code.

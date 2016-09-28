@@ -3,7 +3,7 @@
 import * as utils from '../utils';
 
 /** @enum {string} */
-var ActionType = module.exports.ActionType = utils.makeEnum(
+export const ActionType = utils.makeEnum(
   'CHANGE_INTERFACE_MODE'
 );
 
@@ -13,6 +13,9 @@ var ActionType = module.exports.ActionType = utils.makeEnum(
  * @returns {{type: ActionType, interfaceMode: ApplabInterfaceMode}}
  */
 export function changeInterfaceMode(interfaceMode) {
+  if (!interfaceMode) {
+    throw new Error("Expected an interace mode!");
+  }
   return {
     type: ActionType.CHANGE_INTERFACE_MODE,
     interfaceMode: interfaceMode

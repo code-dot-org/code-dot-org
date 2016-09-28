@@ -6,7 +6,7 @@ window.$ = require('jquery');
 
 window.Applab = require('./applab');
 import applabCommands from './commands';
-import api from './api';
+import * as api from './api';
 import appStorage from './appStorage';
 import Sounds from '../Sounds';
 import {singleton as studioApp} from '../StudioApp';

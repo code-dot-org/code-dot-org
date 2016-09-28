@@ -13,8 +13,8 @@ import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
 import skins from '../skins';
 import codegen from '../codegen';
-import api from './api';
-import dontMarshalApi from './dontMarshalApi';
+import * as api from './api';
+import * as dontMarshalApi from './dontMarshalApi';
 import AppLabView from './AppLabView';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
@@ -22,7 +22,7 @@ import dom from '../dom';
 import {parseElement as parseXmlElement} from '../xml';
 import * as utils from '../utils';
 import dropletUtils from '../dropletUtils';
-import dropletConfig from './dropletConfig';
+import * as dropletConfig from './dropletConfig';
 import makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
 import FirebaseStorage from './firebaseStorage';
@@ -54,8 +54,8 @@ import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 import {setPageConstants} from '../redux/pageConstants';
-
-import applabConstants, { ApplabInterfaceMode, DataView }  from './constants';
+import * as applabConstants from './constants';
+const { ApplabInterfaceMode, DataView } = applabConstants;
 import consoleApi from '../consoleApi';
 import BoardController from '../makerlab/BoardController';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from './redux/data';
@@ -66,7 +66,8 @@ var TestResults = studioApp.TestResults;
 /**
  * Create a namespace for the application.
  */
-var Applab = module.exports;
+const Applab = {};
+export default Applab;
 
 /**
  * @type {JsInterpreterLogger} observes the interpreter and logs to console

@@ -9,14 +9,16 @@ import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import {singleton as studioApp} from '../StudioApp';
 import {KeyCodes} from '../constants';
-import applabConstants from './constants';
-var designMode = module.exports;
+import * as applabConstants from './constants';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
-import gridUtils from './gridUtils';
+import * as gridUtils from './gridUtils';
 import logToCloud from '../logToCloud';
 import * as actions from './actions';
 import * as screens from './redux/screens';
+
+var designMode = {};
+export default designMode;
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
