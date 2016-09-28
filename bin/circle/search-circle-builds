@@ -9,22 +9,24 @@ require 'open-uri'
 require 'optparse'
 
 CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
+RUN_UI_TESTS_STEP_STRING = 'run_tests'
+RUN_UI_TESTS_CONTAINER = 1
 
 KNOWN_FAIL_TYPES = [
     {
         search_string: 'ConnectionTimeoutError',
-        step_string: 'run_tests',
-        container: 1
+        step_string: RUN_UI_TESTS_STEP_STRING,
+        container: RUN_UI_TESTS_CONTAINER
     },
     {
         search_string: 'io_fillbuf',
-        step_string: 'run_tests',
-        container: 1
+        step_string: RUN_UI_TESTS_STEP_STRING,
+        container: RUN_UI_TESTS_CONTAINER
     },
     {
         search_string: 'invalid base64',
-        step_string: 'run_tests',
-        container: 1
+        step_string: RUN_UI_TESTS_STEP_STRING,
+        container: RUN_UI_TESTS_CONTAINER
     },
 ]
 
@@ -42,6 +44,7 @@ end
 
 memoize :output_url
 
+#
 def get_output(id, container, step_includes)
   JSON.parse(open(output_url(get_build(id), container, step_includes)).read)
 rescue => _
@@ -53,12 +56,23 @@ options = {}
 OptionParser.new do |opts|
   opts.banner = 'Usage: ./search-circle-builds [options]'
 
-  opts.on('--start StartTime', String, 'Start searching at build #') do |n|
+  opts.on('--start StartBuildNumber', String, 'Start searching at build #') do |n|
     options[:start_build] = n.to_i
   end
-  opts.on('--end EndTime', String, 'End searching at build #') do |n|
+  opts.on('--end EndBuildNumber', String, 'End searching at build #') do |n|
     options[:end_build] = n.to_i
   end
+  opts.on('--grep "String to Search for"', String, 'Search for given string') do |grep_string|
+    options[:grep_string] = grep_string
+  end
+  opts.on('--grep-container ', String, 'Search given container # for grep string') do |grep_container|
+    options[:grep_container] = grep_container.to_i
+  end
+  options[:grep_container] ||= RUN_UI_TESTS_CONTAINER
+  opts.on('--grep-step ', String, 'Search given step (substring) for grep string') do |grep_step|
+    options[:grep_step] = grep_step
+  end
+  options[:grep_step] ||= RUN_UI_TESTS_STEP_STRING
   opts.on_tail('-h', '--help', 'Show this message') do
     puts opts
     exit
@@ -70,15 +84,30 @@ end_build = options[:end_build]
 
 builds = (start_build..end_build).to_a
 
-puts "Checking builds #{builds.join ', '} for errors:\n#{KNOWN_FAIL_TYPES.map { |f| "#{f[:search_string]} in container #{f[:container]} step #{f[:step_string]}" }.join "\n"}"
+fail_types_to_check = KNOWN_FAIL_TYPES
+
+if options[:grep_string]
+  fail_types_to_check = [{
+                             search_string: options[:grep_string],
+                             step_string: options[:grep_step],
+                             container: options[:grep_container]
+                         }]
+end
+
+def describe_fail_type(f)
+  "#{f[:search_string]} in container #{f[:container]} step #{f[:step_string]}"
+end
+
+fail_types_list = fail_types_to_check.map { |f| describe_fail_type(f) }.join "\n"
+puts "Checking builds #{builds.join ', '} for output:\n#{fail_types_list}"
 
 builds.each do |build|
-  KNOWN_FAIL_TYPES.each do |known_fail|
+  fail_types_to_check.each do |known_fail|
     output = get_output(build, known_fail[:container], known_fail[:step_string])
 
     begin
       if output[0]['message'].include? known_fail[:search_string]
-        puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} had error #{known_fail[:search_string]}"
+        puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains: #{known_fail[:search_string]}"
       end
     rescue => _
     end
