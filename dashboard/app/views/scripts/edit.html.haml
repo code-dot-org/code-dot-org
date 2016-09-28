@@ -29,12 +29,6 @@
   rename a level you need to update all scripts referencing it, this
   does not happen automatically.
 
-:javascript
-  const i18nData = #{@script.summarize_i18n.to_json};
-
-.edit_container
-= javascript_include_tag 'js/levelbuilder_edit_script'
-
 = render 'form'
 = link_to t('crud.show'), @script
 |
