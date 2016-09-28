@@ -77,20 +77,10 @@
 
 - unless @script_level.nil?
   :javascript
-    var levelCount = #{@total_level_count};
-    var page = #{current_page || -1};
-
-    var fallbackResponse = #{@fallback_response.to_json};
-    var callback = "#{@callback}";
-    var app = "#{app}";
-    var level = appOptions.levelPosition;
-
-    var lastAttempt = #{@last_attempt || {}};
-
     $(document).ready(function() {
-      initLevelGroup(
-        levelCount,
-        page,
-        lastAttempt
+      window.initLevelGroup(
+        #{@total_level_count},
+        #{current_page || -1},
+        #{@last_attempt || {}}
       );
     });

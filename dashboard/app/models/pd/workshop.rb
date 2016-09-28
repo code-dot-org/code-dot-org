@@ -169,8 +169,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Puts workshop in 'In Progress' state, creates a section and returns the section.
+  # If the workshop has already been started, it will return the existing section.
   def start!
-    return unless self.started_at.nil?
+    return self.section unless self.started_at.nil?
     raise 'Workshop must have at least one session to start.' if self.sessions.empty?
 
     self.started_at = Time.zone.now
@@ -183,6 +184,8 @@ class Pd::Workshop < ActiveRecord::Base
     self.section
   end
 
+  # Ends the workshop, or no-op if it's already ended.
+  # The return value is undefined.
   def end!
     return unless self.ended_at.nil?
     self.ended_at = Time.zone.now
@@ -190,13 +193,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def state
-    if self.started_at.nil?
-      STATE_NOT_STARTED
-    elsif self.ended_at.nil?
-      STATE_IN_PROGRESS
-    else
-      STATE_ENDED
-    end
+    return STATE_NOT_STARTED if self.started_at.nil?
+    return STATE_IN_PROGRESS if self.ended_at.nil?
+    STATE_ENDED
   end
 
   def year

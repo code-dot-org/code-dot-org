@@ -40,18 +40,20 @@
       });
     });
 
-- else # Otherwise we need to provide a `window.getResult` function.
+- else # Otherwise we need to provide a `getResult` function.
   :javascript
-    function getResult() {
-      var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+    window.dashboard.codeStudioLevels.registerGetResult(
+      function getResult() {
+        var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-      return {
-        response: encodeURIComponent($('.response').val()),
-        submitted: appOptions.level.submittable || forceSubmittable,
-        result: true,
-        testResult: #{level.submittable? ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT}
-      };
-    }
+        return {
+          response: encodeURIComponent($('.response').val()),
+          submitted: appOptions.level.submittable || forceSubmittable,
+          result: true,
+          testResult: #{level.submittable? ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT}
+        };
+      }
+    );
 
 .free-response
   - if level.title.present? && !in_level_group
