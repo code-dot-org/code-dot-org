@@ -37,7 +37,8 @@ end
 
 And(/^I close my eyes$/) do
   @browser = @original_browser
-  @eyes.close
+  fail_on_mismatch = !CDO.ignore_eyes_mismatches
+  @eyes.close(fail_on_mismatch)
 end
 
 And(/^I see no difference for "([^"]*)"$/) do |identifier|

@@ -1,8 +1,9 @@
-/* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
+/* globals appOptions, Dialog, CDOSounds, showVideoDialog, dashboard */
 import $ from 'jquery';
 import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
+import { getResult } from './codeStudioLevels';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -107,7 +108,7 @@ export function processResults(onComplete, beforeHook) {
     sendResultsCompletion();
   }
   function sendResultsCompletion() {
-    var results = window.getResult();
+    var results = getResult();
     var response = results.response;
     var result = results.result;
     var errorType = results.errorType;

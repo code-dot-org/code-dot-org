@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { registerGetResult } from './codeStudioLevels';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
@@ -30,9 +31,9 @@ TextMatch.prototype.ready = function () {
   $("#" + this.id + " textarea.response").val(this.lastAttempt);
 
   // If we are relying on the containing page's submission buttons/dialog, then
-  // we need to provide a window.getResult function.
+  // we need to provide a getResult function.
   if (this.standalone) {
-    window.getResult = $.proxy(this.getResult, this);
+    registerGetResult(this.getResult.bind(this));
   }
 
   var textarea = $("#" + this.id + " textarea.response");

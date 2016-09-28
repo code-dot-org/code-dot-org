@@ -1,5 +1,6 @@
 /* global Dialog, appOptions, CDOSounds */
 import $ from 'jquery';
+import { registerGetResult } from './codeStudioLevels';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
@@ -157,9 +158,9 @@ Multi.prototype.ready = function () {
   this.enableButton(false);
 
   // If we are relying on the containing page's submission buttons/dialog, then
-  // we need to provide a window.getResult function.
+  // we need to provide a getResult function.
   if (this.standalone) {
-    window.getResult = $.proxy(this.getResult, this);
+    registerGetResult(this.getResult.bind(this));
   }
 
   // Pre-select previously submitted response if available.

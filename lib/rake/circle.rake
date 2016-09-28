@@ -1,3 +1,4 @@
+require_relative '../../deployment'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'open-uri'
@@ -28,7 +29,7 @@ namespace :circle do
     RakeUtils.system_stream_output 'tar -xzf sc-4.4.0-rc2-linux.tar.gz'
     Dir.chdir(Dir.glob('sc-*-linux')[0]) do
       # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
-      RakeUtils.exec_in_background 'for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM-$CIRCLE_NODE_INDEX --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done'
+      RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done"
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
@@ -44,7 +45,7 @@ namespace :circle do
           " --dashboard localhost.studio.code.org:3000" \
           " --circle" \
           " --parallel 26" \
-          " --abort_when_failures_exceed 30" \
+          " --abort_when_failures_exceed 10" \
           " --retry_count 3" \
           " --html"
       if is_pipeline_branch
@@ -55,8 +56,8 @@ namespace :circle do
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
-            " --parallel 26" \
-            " --retry_count 3" \
+            " --parallel 10" \
+            " --retry_count 1" \
             " --html"
       end
     end
