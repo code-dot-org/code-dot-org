@@ -119,6 +119,10 @@ When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
+When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
+end
+
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
@@ -367,7 +371,7 @@ end
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
   selector = ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    And I wait until element "#{selector}" is visible
+    And I wait until element "#{selector}" is in the DOM
     And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
@@ -382,7 +386,7 @@ end
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
   selector = ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    And I wait until element "#{selector}" is visible
+    And I wait until element "#{selector}" is in the DOM
     And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
