@@ -1,5 +1,5 @@
-var React = require('react');
-var rowStyle = require('./rowStyle');
+import React from 'react';
+import * as rowStyle from './rowStyle';
 
 var OptionsSelectRow = React.createClass({
   propTypes: {
@@ -49,4 +49,4 @@ var OptionsSelectRow = React.createClass({
   }
 });
 
-module.exports = OptionsSelectRow;
+export default OptionsSelectRow;

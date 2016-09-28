@@ -1,14 +1,14 @@
 import $ from 'jquery';
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var BooleanPropertyRow = require('./BooleanPropertyRow');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
-var ZOrderRow = require('./ZOrderRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-var utils = require('../../utils');
-var elementUtils = require('./elementUtils');
-var EnumPropertyRow = require('./EnumPropertyRow');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import BooleanPropertyRow from './BooleanPropertyRow';
+import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import ZOrderRow from './ZOrderRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import * as utils from '../../utils';
+import * as elementUtils from './elementUtils';
+import EnumPropertyRow from './EnumPropertyRow';
 
 var TextAreaProperties = React.createClass({
   propTypes: {
@@ -156,7 +156,7 @@ var TextAreaEvents = React.createClass({
   }
 });
 
-module.exports = {
+export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
 
