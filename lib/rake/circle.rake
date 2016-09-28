@@ -56,7 +56,7 @@ namespace :circle do
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
             " --parallel 26" \
-            " --retry_count 3" \
+            " --retry_count 1" \
             " --html"
       end
     end
