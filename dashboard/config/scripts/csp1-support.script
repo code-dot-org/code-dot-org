@@ -12,7 +12,7 @@ named_level 'Introduction to Unit 1'
 named_level 'Unit 1 Teaching Philosophy and Commentary'
 named_level 'Teaching with the Internet Simulator'
 named_level 'Practice Performance Tasks in Unit 1'
-named_level 'Unit 1 Self Assessment'
+named_level  'Unit 1 Self-Assessment'
 
 stage 'Lessons 2 - 3: Binary Messages',
   flex_category: 'content'

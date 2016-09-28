@@ -190,13 +190,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def state
-    if self.started_at.nil?
-      STATE_NOT_STARTED
-    elsif self.ended_at.nil?
-      STATE_IN_PROGRESS
-    else
-      STATE_ENDED
-    end
+    return STATE_NOT_STARTED if self.started_at.nil?
+    return STATE_IN_PROGRESS if self.ended_at.nil?
+    STATE_ENDED
   end
 
   def year
