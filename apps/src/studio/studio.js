@@ -14,7 +14,7 @@ import AppView from '../templates/AppView';
 import BigGameLogic from './bigGameLogic';
 import Collidable from './collidable';
 import CollisionMaskWalls from './collisionMaskWalls';
-import Hammer from '../hammer';
+import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
