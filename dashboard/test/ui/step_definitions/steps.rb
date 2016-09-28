@@ -371,13 +371,14 @@ Then /^I open the progress drop down of the current page$/ do
   steps %{
     Then I click selector ".header_popup_link"
     And I wait to see ".user-stats-block"
-    And I wait for 10 seconds
   }
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
+  selector = ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait until element "#{selector}" is visible
+    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -389,13 +390,14 @@ Then /^I navigate to the course page for "([^"]*)"$/ do |course|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
-    And I wait for 10 seconds
   }
 end
 
 Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
+  selector = ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait until element "#{selector}" is visible
+    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
