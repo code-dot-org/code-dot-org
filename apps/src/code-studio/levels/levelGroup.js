@@ -69,17 +69,19 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   var lastResponse = getAggregatedResults().response;
 
-  window.levelGroup.answerChangedFn = function (levelId, saveThisAnswer) {
-    if (!saveThisAnswer) {
-      // Ignore typing events before focus change (when commit will be true)
-      return;
+  window.dashboard.codeStudioLevels.registerAnswersChangedFn(
+    (levelId, saveThisAnswer) => {
+      if (!saveThisAnswer) {
+        // Ignore typing events before focus change (when commit will be true)
+        return;
+      }
+      const currentResponse = getAggregatedResults().response;
+      if (lastResponse !== currentResponse) {
+        throttledSaveAnswers(levelId);
+      }
+      lastResponse = currentResponse;
     }
-    var currentResponse = getAggregatedResults().response;
-    if (lastResponse !== currentResponse) {
-      throttledSaveAnswers(levelId);
-    }
-    lastResponse = currentResponse;
-  };
+  );
 
   /**
    * Construct an array of all the level results. When submitted it's something
