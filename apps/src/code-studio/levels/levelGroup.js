@@ -71,8 +71,8 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   window.dashboard.codeStudioLevels.registerAnswersChangedFn(
     (levelId, saveThisAnswer) => {
+      // LevelGroup is only interested in changes that should result in a save
       if (!saveThisAnswer) {
-        // Ignore typing events before focus change (when commit will be true)
         return;
       }
       const currentResponse = getAggregatedResults().response;
