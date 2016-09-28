@@ -251,6 +251,10 @@ class Script < ActiveRecord::Base
     @@level_cache[level.name] = level if @@level_cache.key? level.name
   end
 
+  def self.delete_level_from_cache(level)
+    @@level_cache.except!(level.id, level.name)
+  end
+
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
   # the script and we're not in level mode (for example because the script was created after
