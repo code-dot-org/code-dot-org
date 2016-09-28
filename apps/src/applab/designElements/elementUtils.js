@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import constants from '../constants';
+import * as constants from '../constants';
 import * as utils from '../../utils';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748

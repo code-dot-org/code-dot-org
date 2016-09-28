@@ -3,7 +3,7 @@
 import { ActionType } from './actions';
 import { ApplabInterfaceMode } from './constants';
 import data from './redux/data';
-import * as screens from './redux/screens';
+import screens from './redux/screens';
 
 function interfaceMode(state, action) {
   state = state || ApplabInterfaceMode.CODE;
@@ -16,7 +16,7 @@ function interfaceMode(state, action) {
   }
 }
 
-export {
+export default {
   data,
   interfaceMode,
   screens

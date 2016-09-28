@@ -1,14 +1,14 @@
 /* global dashboard */
 import $ from 'jquery';
-import api from './api';
-import dontMarshalApi from './dontMarshalApi';
+import * as api from './api';
+import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
 import {setPropertyDropdown} from './setPropertyDropdown';
 import {singleton as studioApp} from '../StudioApp';
-import applabConstants from './constants';
+import * as applabConstants from './constants';
 
 var DEFAULT_WIDTH = "320";
 var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();

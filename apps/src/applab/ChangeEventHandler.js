@@ -1,5 +1,4 @@
-import constants from '../constants';
-var KeyCodes = constants.KeyCodes;
+import {KeyCodes} from '../constants';
 import elementLibrary from './designElements/library';
 
 /**
@@ -9,7 +8,7 @@ import elementLibrary from './designElements/library';
  * @param {Function} callback
  * @constructor
  */
-var ChangeEventHandler = module.exports = function (element, callback) {
+export default function ChangeEventHandler(element, callback) {
   /**
    * @type {Element}
    * @private
@@ -29,7 +28,7 @@ var ChangeEventHandler = module.exports = function (element, callback) {
    * @private
    */
   this.initialValue_ = '';
-};
+}
 
 ChangeEventHandler.prototype.onFocus = function () {
   this.initialValue_ = this.getValue();

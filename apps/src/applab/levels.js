@@ -8,7 +8,8 @@ var createCategory = blockUtils.createCategory;
 /*
  * Configuration for all levels.
  */
-var levels = module.exports = {};
+var levels = {};
+export default levels;
 
 levels.simple = {
   'requiredBlocks': [
