@@ -36,12 +36,6 @@ Dashboard::Application.configure do
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
 
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = true
-
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = true
-
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
