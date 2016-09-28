@@ -25,24 +25,41 @@ var ScriptEditor = React.createClass({
 
   render() {
     return (
-      <form>
+      <div>
         <label>
           Title
-          <input defaultValue={this.props.i18nData.title} style={styles.input} />
+          <input
+            name="title"
+            defaultValue={this.props.i18nData.title}
+            style={styles.input}
+          />
         </label>
         <label>
           Audience
-          <input defaultValue={this.props.i18nData.descriptionAudience} style={styles.input} />
+          <input
+            name="description_audience"
+            defaultValue={this.props.i18nData.descriptionAudience}
+            style={styles.input}
+          />
         </label>
         <label>
           Short Description
-          <input defaultValue={this.props.i18nData.descriptionShort} style={styles.input} />
+          <input
+            name="description_short"
+            defaultValue={this.props.i18nData.descriptionShort}
+            style={styles.input}
+          />
         </label>
         <label>
           Description
-          <textarea defaultValue={this.props.i18nData.description} rows={5} style={styles.input} />
+          <textarea
+            name="description"
+            defaultValue={this.props.i18nData.description}
+            rows={5}
+            style={styles.input}
+          />
         </label>
-      </form>
+      </div>
     );
   }
 });
