@@ -57,13 +57,16 @@ dependencies:
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_dashboard: \"localhost-studio.code.org:3000\"" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_pegasus: \"localhost.code.org:3000\"" >> locals.yml ;; esac'
     # For install and build, increase default 10 minute timeout to 14 minutes (840s)
+    # We use ts to timestamp output lines
+    # We use mispipe instead of | to exit with the first step's exit code
     # Run rake install
-    - bundle exec rake install | ts '[%Y-%m-%d %H:%M:%S]':
+    - mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'":
         environment:
           RAKE_VERBOSE: true
         timeout: 840
     # Run rake build (twice in case of intermittent test failures within rake build)
-    - for i in 1 2; do bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]' && break; done:
+    # See notes above rake install for timeout, ts, and mispipe reasoning
+    - for i in 1 2; do mispipe "bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break; done:
         timeout: 840
 database:
   override:
