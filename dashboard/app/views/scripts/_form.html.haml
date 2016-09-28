@@ -10,9 +10,10 @@
             %ul
               - @script.errors.full_messages.each do |msg|
                 %li= msg
-        .field
-          = f.label :name
-          = f.text_field :name
+        - if @script.nil? || @script.new_record?
+          .field
+            = f.label :name
+            = f.text_field :name
         .script_text
           - rows = @script_file ? @script_file.lines.count + 10 : 5
           = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
