@@ -100,7 +100,7 @@ considered carefully before being implemented.
 Creating a new bundle is easy, but you need to think about what that bundle's
 dependencies will be. Here are the different options:
 
-1. I'm creating a new "app" like applab/gamelab/etc.
+1. I'm creating a new code studio "app" like applab/gamelab/etc.
 
    Add the name of your app's directory to the `ALL_APPS` array in
    `Gruntfile.js` and make sure the directory contains a `main.js` file. The build
