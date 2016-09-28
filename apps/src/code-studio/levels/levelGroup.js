@@ -69,7 +69,7 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   var lastResponse = getAggregatedResults().response;
 
-  window.dashboard.codeStudioLevels.registerAnswersChangedFn(
+  window.dashboard.codeStudioLevels.registerAnswerChangedFn(
     (levelId, saveThisAnswer) => {
       // LevelGroup is only interested in changes that should result in a save
       if (!saveThisAnswer) {
