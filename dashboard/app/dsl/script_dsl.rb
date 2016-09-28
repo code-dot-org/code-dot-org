@@ -140,10 +140,6 @@ class ScriptDSL < BaseDSL
   end
 
   def i18n_strings
-    @i18n_strings['title'] = @title if @title
-    @i18n_strings['description_short'] = @description_short if @description_short
-    @i18n_strings['description'] = @description if @description
-    @i18n_strings['description_audience'] = @description_audience if @description_audience
     @i18n_strings['stage'] = {}
     @stages.each do |stage|
       @i18n_strings['stage'][stage[:stage]] = stage[:stage]
