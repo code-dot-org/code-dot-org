@@ -2,16 +2,16 @@
  * Load Skin for Applab.
  */
 
-var skinsBase = require('../skins');
+import skinsBase from '../skins';
 
 var CONFIGS = {
   applab: {
   }
 };
 
-exports.load = function (assetUrl, id) {
+export function load(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
   var config = CONFIGS[skin.id];
 
   return skin;
-};
+}
