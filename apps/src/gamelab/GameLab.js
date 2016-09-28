@@ -196,7 +196,7 @@ GameLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  config.enableShowCode = false;
+  config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
   // TODO(caleybrock): Should be depenedent on !config.level.debuggerDisabled,
