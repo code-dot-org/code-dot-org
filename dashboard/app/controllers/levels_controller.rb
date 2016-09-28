@@ -111,6 +111,7 @@ class LevelsController < ApplicationController
       render json: @level.errors, status: :unprocessable_entity
     elsif @level.update(level_params)
       render json: { redirect: level_url(@level, show_callouts: 1) }
+      Script.update_level_in_cache @level
     else
       render json: @level.errors, status: :unprocessable_entity
     end
@@ -142,6 +143,7 @@ class LevelsController < ApplicationController
 
     begin
       @level = type_class.create_from_level_builder(params, level_params)
+      Script.update_level_in_cache(@level)
     rescue ArgumentError => e
       render(status: :not_acceptable, text: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
@@ -154,6 +156,7 @@ class LevelsController < ApplicationController
   # DELETE /levels/1
   # DELETE /levels/1.json
   def destroy
+    Script.delete_level_from_cache(@level)
     @level.destroy
     redirect_to(params[:redirect] || levels_url)
   end
@@ -200,6 +203,7 @@ class LevelsController < ApplicationController
       @level = old_level.dup
       begin
         @level.update!(name: params[:name])
+        Script.update_level_in_cache(@level)
       rescue ArgumentError => e
         render(status: :not_acceptable, text: e.message) && return
       rescue ActiveRecord::RecordInvalid => invalid
