@@ -14,7 +14,7 @@ import AppView from '../templates/AppView';
 import BigGameLogic from './bigGameLogic';
 import Collidable from './collidable';
 import CollisionMaskWalls from './collisionMaskWalls';
-import Hammer from '../hammer';
+import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
@@ -50,12 +50,7 @@ import { Provider } from 'react-redux';
 import { singleton as studioApp } from '../StudioApp';
 
 // tests don't have svgelement
-if (typeof SVGElement !== 'undefined') {
-  // Loading these modules extends SVGElement and puts canvg in the global
-  // namespace
-  require('canvg');
-  require('../canvg/svg_todataurl');
-}
+import '../util/svgelement-polyfill';
 
 var Direction = constants.Direction;
 var CardinalDirections = constants.CardinalDirections;

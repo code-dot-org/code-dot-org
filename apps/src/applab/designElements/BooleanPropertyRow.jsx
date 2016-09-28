@@ -1,5 +1,5 @@
-var React = require('react');
-var rowStyle = require('./rowStyle');
+import React from 'react';
+import * as rowStyle from './rowStyle';
 
 var BooleanPropertyRow = React.createClass({
   propTypes: {
@@ -43,4 +43,4 @@ var BooleanPropertyRow = React.createClass({
   }
 });
 
-module.exports = BooleanPropertyRow;
+export default BooleanPropertyRow;

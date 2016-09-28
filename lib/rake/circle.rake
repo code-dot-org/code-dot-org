@@ -45,7 +45,7 @@ namespace :circle do
           " --dashboard localhost.studio.code.org:3000" \
           " --circle" \
           " --parallel 26" \
-          " --abort_when_failures_exceed 30" \
+          " --abort_when_failures_exceed 10" \
           " --retry_count 3" \
           " --html"
       if is_pipeline_branch
@@ -56,7 +56,7 @@ namespace :circle do
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
-            " --parallel 26" \
+            " --parallel 10" \
             " --retry_count 1" \
             " --html"
       end

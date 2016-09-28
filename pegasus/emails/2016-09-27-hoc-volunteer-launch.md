@@ -2,7 +2,7 @@
 from: 'Tanya Parker (Code.org) <tanya@code.org>'
 subject: "Are you ready to change students' lives?"
 ---
-Hi <%= name_s %>,
+Hi <%= name %>,
 
 We're so excited to share that more than 13,000 of you have signed up to volunteer for the [Hour of Code](https://hourofcode.com) this year, December 5-11! Thank you for doing your part in this movement. Together, you will all impact **thousands** of classrooms. 
 
