@@ -33,7 +33,7 @@ namespace :circle do
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       is_pipeline_branch = ['staging', 'test', 'production'].include?(GitUtils.current_branch)
-      container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
+      container_features = `find ./features -name '*.feature'`.split("\n")
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
       browsers_to_run = is_pipeline_branch ? 'ChromeLatestWin7,Firefox45Win7,IE11Win10,SafariYosemite' : 'ChromeLatestWin7'
@@ -43,7 +43,7 @@ namespace :circle do
           " --pegasus localhost.code.org:3000" \
           " --dashboard localhost.studio.code.org:3000" \
           " --circle" \
-          " --parallel 26" \
+          " --parallel 10" \
           " --abort_when_failures_exceed 30" \
           " --retry_count 3" \
           " --html"
