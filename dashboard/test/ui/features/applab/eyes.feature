@@ -175,7 +175,6 @@ Scenario: Drag to delete
 
   And I close my eyes
 
-@no_circle
 Scenario: Data Browser
   Given I open my eyes to test "Applab Data Browser"
 
@@ -187,11 +186,11 @@ Scenario: Data Browser
 
   When I press keys "foo" for element "#dataOverview input"
   And I click selector "#dataOverview button:contains(Add)"
-  # CircleCI: fails on following step. Not Firebase-compatible?
   And I wait until element "#dataTable" is visible
   Then I see no difference for "data table"
 
   When I press enter key
+  And I wait until element "th .test-tableNameDiv:contains(column1)" is visible
   And I click selector "#addColumnButton"
   And I press enter key
   And I press keys "foo" for element "#addDataTableRow :nth-child(2) input"

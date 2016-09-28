@@ -94,20 +94,43 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Workshop must have at least one session to start.', e.message
   end
 
-  test 'start stop' do
+  test 'start end' do
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
 
-    @workshop.start!
+    returned_section = @workshop.start!
+    assert returned_section
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
     assert @workshop.section
+    assert_equal returned_section, @workshop.section
     assert @workshop.section.workshop_section?
     assert_equal @workshop.section_type, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload
     assert_equal 'Ended', @workshop.state
+  end
+
+  test 'start is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    returned_section = @workshop.start!
+    assert returned_section
+    started_at = @workshop.reload.started_at
+
+    returned_section_2 = @workshop.start!
+    assert returned_section_2
+    assert_equal returned_section, returned_section_2
+    assert_equal started_at, @workshop.reload.started_at
+  end
+
+  test 'end is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+    @workshop.end!
+    ended_at = @workshop.reload.ended_at
+    @workshop.end!
+    assert_equal ended_at, @workshop.reload.ended_at
   end
 
   test 'sessions must start on separate days' do

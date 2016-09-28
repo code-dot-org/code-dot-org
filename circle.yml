@@ -40,6 +40,8 @@ dependencies:
     - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
     - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
     - 'echo "ignore_eyes_mismatches: true" >> locals.yml'
+    - 'echo "firebase_name: $FIREBASE_NAME" >> locals.yml'
+    - 'echo "firebase_secret: $FIREBASE_SECRET" >> locals.yml'
     - 'echo "use_my_apps: true" >> locals.yml'
     - 'echo "use_my_shared_js: true" >> locals.yml'
     - 'echo "use_my_code_studio: true" >> locals.yml'
@@ -66,6 +68,9 @@ dependencies:
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]' && break; done:
         timeout: 840
+    # Update firebase security rules and config params. If these security rules change in a
+    # non-backward-compatible way, this may cause a new test run to make an older one fail.
+    - rake firebase_task --rakefile aws/build.rake
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
