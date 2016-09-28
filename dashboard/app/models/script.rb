@@ -581,17 +581,19 @@ class Script < ActiveRecord::Base
     script
   end
 
-  def update_text(script_params, script_text)
+  def update_text(script_params, script_text, i18n_data)
     begin
+      script_name = script_params[:name]
       transaction do
-        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
+        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
         Script.add_script({
-          name: script_params[:name],
+          name: script_name,
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
+        i18n.deep_merge!({'en' => {'data' => {'script' => {'name' => {script_name => i18n_data}}}}})
         Script.update_i18n(i18n)
       end
     rescue StandardError => e
