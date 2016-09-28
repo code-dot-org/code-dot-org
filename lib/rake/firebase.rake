@@ -53,7 +53,7 @@ namespace :firebase do
 
   desc 'Clear all channels data, but only on the test machine'
   task :clear_test_channels do
-    if (rack_env?(:test) && CDO.firebase_name == 'cdo-v3-test')
+    if rack_env?(:test) && CDO.firebase_name == 'cdo-v3-test'
       HipChat.log 'Clearing firebase channels data...'
       url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels.json?auth=#{CDO.firebase_secret}"
       RakeUtils.system("curl -X PUT -d 'null' '#{url}'")
