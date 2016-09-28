@@ -53,7 +53,6 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And I wait to see ".react_stage"
 
   # Verify the three dots in the header are 1. some, 2. none, 3. all questions answered.
-  Then I wait to see the progress header
   And I verify progress in the header of the current page is "perfect" for level 2
   And I verify progress in the header of the current page is "not_tried" for level 3
   And I verify progress in the header of the current page is "attempted" for level 4

@@ -15,14 +15,12 @@ Scenario:
   Then I wait to see a dialog titled "Puzzle 2 of 20"
   And I close the dialog
   When element "#runButton" is visible
-  And I wait to see the progress header
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
   Then I navigate to the course page for "hourofcode"
   And I verify progress for stage 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/2?noautoplay=true"
-  And I wait to see the progress header
   And I verify progress in the header of the current page is "not_tried" for level 1
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
@@ -50,30 +48,25 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
   Then I wait to see ".modal"
   And I close the dialog
   When element "#runButton" is visible
-  And I wait to see the progress header
   Then I verify progress in the header of the current page is "attempted" for level 6
 
 Scenario: Async progress write followed by a stale read
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
-  And I wait to see the progress header
   And I verify progress in the header of the current page is "not_tried" for level 20
   Then mark the current level as completed on the client
   And I reload the page
-  And I wait to see the progress header
   And I verify progress in the header of the current page is "perfect" for level 20
   And I navigate to the course page for "hourofcode"
   And I verify progress for stage 1 level 20 is "perfect"
 
 Scenario: Progress on the server that is not on the client
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
-  And I wait to see the progress header
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I close the dialog
   And I press "runButton"
   And I wait to see ".modal"
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
-  And I wait to see the progress header
   And I verify progress in the header of the current page is "attempted" for level 20
   And I navigate to the course page for "hourofcode"
   And I verify progress for stage 1 level 20 is "attempted"
