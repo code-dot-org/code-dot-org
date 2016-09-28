@@ -1,4 +1,20 @@
 let registeredGetResult = null;
+let answerChangedFn = null;
+
+/**
+ * At a minimum, our get result function should return an object with a response
+ * and a result. This function is used by level types that don't need to return
+ * more.
+ * Eventually we may want to just always use this if the page didn't explicitly
+ * register a getResult function, but I'd like to start out requiring explicit
+ * registration to better catch any places where we unintentionally fail to register.
+ */
+function basicGetResult() {
+  return {
+    response: 'ok',
+    result: true
+  };
+}
 
 /**
  * A number of our levels provide a function that can be used to get results.
@@ -21,14 +37,16 @@ export function getResult() {
   return registeredGetResult();
 }
 
+export function registerAnswerChangedFn(fn) {
+  answerChangedFn = fn;
+}
+
 /**
- * At a minimum, our get result function should return an object with a response
- * and a result. This function is used by level types that don't need to return
- * more.
+ * @param {string} levelId
+ * @param {boolean} saveThisAnswer
  */
-function basicGetResult() {
-  return {
-    response: 'ok',
-    result: true
-  };
+export function onAnswerChanged(levelId, saveThisAnswer) {
+  if (answerChangedFn) {
+    return answerChangedFn(levelId, saveThisAnswer);
+  }
 }
