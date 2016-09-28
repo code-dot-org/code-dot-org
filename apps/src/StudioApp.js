@@ -480,7 +480,7 @@ StudioApp.prototype.init = function (config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
+    var ResizeSensor = require("./third-party/ResizeSensor");
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
