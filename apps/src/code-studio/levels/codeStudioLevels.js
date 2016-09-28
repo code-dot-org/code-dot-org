@@ -37,13 +37,18 @@ export function getResult() {
   return registeredGetResult();
 }
 
+/**
+ * Register a handler that will be told when one of our answers changes.
+ * Provided function will be told the levelId, and whether or not this is a
+ * change that should result in a save
+ */
 export function registerAnswerChangedFn(fn) {
   answerChangedFn = fn;
 }
 
 /**
  * @param {string} levelId
- * @param {boolean} saveThisAnswer
+ * @param {boolean?} saveThisAnswer
  */
 export function onAnswerChanged(levelId, saveThisAnswer) {
   if (answerChangedFn) {
