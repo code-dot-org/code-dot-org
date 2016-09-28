@@ -21,6 +21,11 @@ KNOWN_FAIL_TYPES = [
         step_string: 'run_tests',
         container: 1
     },
+    {
+        search_string: 'invalid base64',
+        step_string: 'run_tests',
+        container: 1
+    },
 ]
 
 extend Memoist
