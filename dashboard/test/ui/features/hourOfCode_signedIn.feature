@@ -17,7 +17,8 @@ Scenario:
   When element "#runButton" is visible
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
-  Then I navigate to the course page and verify progress for course "hourofcode" stage 1 level 1 is "perfect"
+  Then I navigate to the course page for "hourofcode"
+  And I verify progress for stage 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/2?noautoplay=true"
   And I verify progress in the header of the current page is "not_tried" for level 1
@@ -55,7 +56,8 @@ Scenario: Async progress write followed by a stale read
   Then mark the current level as completed on the client
   And I reload the page
   And I verify progress in the header of the current page is "perfect" for level 20
-  And I navigate to the course page and verify progress for course "hourofcode" stage 1 level 20 is "perfect"
+  And I navigate to the course page for "hourofcode"
+  And I verify progress for stage 1 level 20 is "perfect"
 
 Scenario: Progress on the server that is not on the client
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
@@ -66,7 +68,8 @@ Scenario: Progress on the server that is not on the client
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I verify progress in the header of the current page is "attempted" for level 20
-  And I navigate to the course page and verify progress for course "hourofcode" stage 1 level 20 is "attempted"
+  And I navigate to the course page for "hourofcode"
+  And I verify progress for stage 1 level 20 is "attempted"
 
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video

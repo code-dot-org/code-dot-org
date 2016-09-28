@@ -283,6 +283,9 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  # channel id suffix, used by firebase in development and circleci environments
+  TEST_SUFFIX = '-test-suffix'
+
   def test_firebase_export
     create_channel
 
@@ -294,7 +297,7 @@ class TablesTest < Minitest::Test
     response = MiniTest::Mock.new
     response.expect(:body, records_data)
 
-    firebase_path = "/v3/channels/#{@channel_id}/storage/tables/#{@table_name}/records"
+    firebase_path = "/v3/channels/#{@channel_id}#{TEST_SUFFIX}/storage/tables/#{@table_name}/records"
     Firebase::Client.any_instance.expects(:get).with(firebase_path).returns(response)
 
     expected_csv_data = "id,name,age,male\n1,alice,7,false\n2,bob,8,true\n"
@@ -439,7 +442,9 @@ class TablesTest < Minitest::Test
   def export_firebase
     CDO.stub(:firebase_name, 'my-firebase-name') do
       CDO.stub(:firebase_secret, 'my-firebase-secret') do
-        get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+        CDO.stub(:firebase_channel_id_suffix, TEST_SUFFIX) do
+          get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+        end
       end
     end
   end

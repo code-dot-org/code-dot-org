@@ -140,6 +140,10 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
+  this.skin.smallStaticAvatar = null;
+  this.skin.staticAvatar = null;
+  this.skin.winAvatar = null;
+  this.skin.failureAvatar = null;
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
@@ -193,6 +197,9 @@ GameLab.prototype.init = function (config) {
   config.noInstructionsWhenCollapsed = true;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
+
+  config.enableShowCode = false;
+  config.enableShowLinesCount = false;
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
