@@ -50,12 +50,7 @@ import { Provider } from 'react-redux';
 import { singleton as studioApp } from '../StudioApp';
 
 // tests don't have svgelement
-if (typeof SVGElement !== 'undefined') {
-  // Loading these modules extends SVGElement and puts canvg in the global
-  // namespace
-  require('canvg');
-  require('../canvg/svg_todataurl');
-}
+import '../util/svgelement-polyfill';
 
 var Direction = constants.Direction;
 var CardinalDirections = constants.CardinalDirections;
