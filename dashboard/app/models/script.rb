@@ -679,6 +679,12 @@ class Script < ActiveRecord::Base
     summary
   end
 
+  def summarize_i18n
+    %w(title description description_short description_audience).map do |key|
+      [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
+    end.to_h
+  end
+
   def self.clear_cache
     # only call this in a test!
     @@script_cache = nil

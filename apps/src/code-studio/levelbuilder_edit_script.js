@@ -1,23 +1,30 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
+/* globals i18nData */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 /**
- * TODO
+ * Component for editing course scripts.
  */
-var TestComponent = React.createClass({
+var ScriptEditor = React.createClass({
   propTypes: {
-    // alignment: React.PropTypes.string,
-    // assetChosen: React.PropTypes.func.isRequired
+    i18nData: React.PropTypes.object.isRequired
   },
 
   render() {
-    return <div>Hello world</div>;
+    return (
+      <form>
+        <label>Title <input defaultValue={this.props.i18nData.title} /></label>
+        <label>Short Description <input defaultValue={this.props.i18nData.descriptionShort} /></label>
+        <label>Description <textarea defaultValue={this.props.i18nData.description} /></label>
+        <label>Audience <input defaultValue={this.props.i18nData.descriptionAudience} /></label>
+      </form>
+    );
   }
 });
 
 ReactDOM.render(
-  <TestComponent />,
+  <ScriptEditor i18nData={i18nData} />,
   document.querySelector('.edit_container')
 );
