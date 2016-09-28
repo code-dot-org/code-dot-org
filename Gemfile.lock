@@ -696,6 +696,7 @@ DEPENDENCIES
   lograge
   mail_view
   marked-rails
+  memoist
   mini_magick
   minitest (~> 5.5)
   minitest-around
