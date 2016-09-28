@@ -15,18 +15,22 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('/workshops/new');
   },
 
+  handleSurveyClick() {
+    this.context.router.push('/survey_results');
+  },
+
   render() {
     const showOrganizer = window.dashboard.workshop.permission === "admin";
     return (
       <div>
         <h1>Your Workshops</h1>
-        <WorkshopTableLoader
-          queryUrl="/api/v1/pd/workshops/?state=Ended"
-          componentToLoad="surveyResults"
-          />
         <p>
           <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
             New Workshop
+          </Button>
+
+          <Button className="btn-primary" onClick={this.handleSurveyClick}>
+            View Survey Results
           </Button>
         </p>
         <h2>In Progress</h2>

@@ -8,7 +8,7 @@
 import $ from 'jquery';
 import _, {orderBy} from 'lodash';
 import React from 'react';
-import SurveyResults from './survey_results';
+import SurveyResultsHeader from './survey_results_header';
 import WorkshopTable from './workshop_table';
 import FontAwesome from '../../../../templates/FontAwesome';
 
@@ -81,11 +81,11 @@ const WorkshopTableLoader = React.createClass({
       return <p>None.</p>;
     }
 
-    if (this.props.componentToLoad == 'surveyResults') {
+    if (this.props.componentToLoad === 'surveyResults') {
       return (
-        <SurveyResults
+        <SurveyResultsHeader
           workshops={this.state.workshops}
-          />
+        />
       );
     }
 
@@ -96,7 +96,7 @@ const WorkshopTableLoader = React.createClass({
         onDelete={this.props.canDelete ? this.handleDelete : null}
         showSignupUrl={this.props.showSignupUrl}
         showOrganizer={this.props.showOrganizer}
-        />
+      />
     );
   }
 });
