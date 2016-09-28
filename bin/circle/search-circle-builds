@@ -99,10 +99,10 @@ fail_types_to_check = KNOWN_FAIL_TYPES
 
 if options[:grep_string]
   fail_types_to_check = [{
-                             search_string: options[:grep_string],
-                             step_string: options[:grep_step],
-                             container: options[:grep_container]
-                         }]
+    search_string: options[:grep_string],
+    step_string: options[:grep_step],
+    container: options[:grep_container]
+  }]
 end
 
 def describe_fail_type(f)
