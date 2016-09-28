@@ -359,16 +359,11 @@ Then /^mark the current level as completed on the client/ do
   @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
-Then /^I wait to see the progress header$/ do
-  steps %{
-    And I wait to see ".header_level_container"
-    And I wait for 5 seconds
-  }
-end
-
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  selector = ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait until element "#{selector}" is visible
+    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
