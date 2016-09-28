@@ -1,4 +1,4 @@
-var errorHandler = require('../errorHandler');
+import errorHandler from '../errorHandler';
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 
@@ -49,7 +49,7 @@ var getInt = function (obj, def) {
   return n;
 };
 
-exports.insertItem = function (array, index, item) {
+export function insertItem(array, index, item) {
   dmapiValidateType('insertItem', 'list', array, 'array');
   dmapiValidateType('insertItem', 'index', index, 'number');
 
@@ -65,9 +65,9 @@ exports.insertItem = function (array, index, item) {
   }
   array.length += 1;
   array.properties[index] = item;
-};
+}
 
-exports.removeItem = function (array, index) {
+export function removeItem(array, index) {
   dmapiValidateType('removeItem', 'list', array, 'array');
   dmapiValidateType('removeItem', 'index', index, 'number');
 
@@ -88,70 +88,77 @@ exports.removeItem = function (array, index) {
                     ") is larger than the number of items in the list (" +
                     array.length + ").");
   }
-};
+}
 
-exports.appendItem = function (array, item) {
+export function appendItem(array, item) {
   dmapiValidateType('appendItem', 'list', array, 'array');
 
   array.properties[array.length] = item;
   array.length++;
   return window.Applab.JSInterpreter.createPrimitive(array.length);
-};
+}
 
 // ImageData RGB helper functions
 
 // TODO: more parameter validation (data array type, length), error output
 
-exports.getRed = function (imageData, x, y) {
+export function getRed(imageData, x, y) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     return imageData.properties.data.properties[pixelOffset].toNumber();
   }
-};
-exports.getGreen = function (imageData, x, y) {
+}
+
+export function getGreen(imageData, x, y) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     return imageData.properties.data.properties[pixelOffset + 1].toNumber();
   }
-};
-exports.getBlue = function (imageData, x, y) {
+}
+
+export function getBlue(imageData, x, y) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     return imageData.properties.data.properties[pixelOffset + 2].toNumber();
   }
-};
-exports.getAlpha = function (imageData, x, y) {
+}
+
+export function getAlpha(imageData, x, y) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     return imageData.properties.data.properties[pixelOffset + 3].toNumber();
   }
-};
+}
 
-exports.setRed = function (imageData, x, y, value) {
+export function setRed(imageData, x, y, value) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset] = value;
   }
-};
-exports.setGreen = function (imageData, x, y, value) {
+}
+
+export function setGreen(imageData, x, y, value) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset + 1] = value;
   }
-};
-exports.setBlue = function (imageData, x, y, value) {
+}
+
+export function setBlue(imageData, x, y, value) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset + 2] = value;
   }
-};
-exports.setAlpha = function (imageData, x, y, value) {
+}
+
+export function setAlpha(imageData, x, y, value) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset + 3] = value;
   }
-};
-exports.setRGB = function (imageData, x, y, r, g, b, a) {
+}
+
+export function setRGB(imageData, x, y, r, g, b, a) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset] = r;
@@ -160,4 +167,4 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
     imageData.properties.data.properties[pixelOffset + 3] =
       (typeof a === 'undefined') ? window.Applab.JSInterpreter.createPrimitive(255) : a;
   }
-};
+}

@@ -1,5 +1,5 @@
-var studioApp = require('../StudioApp').singleton;
-var applabCommands = require('./commands');
+import {singleton as studioApp} from '../StudioApp';
+import applabCommands from './commands';
 
 var applabTurtle = module.exports;
 

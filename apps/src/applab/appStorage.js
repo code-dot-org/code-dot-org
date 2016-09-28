@@ -1,6 +1,6 @@
 /* global Applab */
 
-var RecordListener = require('./RecordListener');
+import RecordListener from './RecordListener';
 
 /**
  * Namespace for app storage.
