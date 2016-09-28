@@ -197,8 +197,7 @@ GameLab.prototype.init = function (config) {
   config.noInstructionsWhenCollapsed = true;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
-
-  config.enableShowCode = false;
+  config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
   var onMount = function () {

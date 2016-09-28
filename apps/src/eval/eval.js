@@ -41,13 +41,9 @@ var experiments = require('../experiments');
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-// Loading these modules extends SVGElement and puts canvg in the global
-// namespace
-var canvg = require('canvg');
+import canvg from 'canvg';
 // tests don't have svgelement
-if (typeof SVGElement !== 'undefined') {
-  require('../canvg/svg_todataurl');
-}
+import '../util/svgelement-polyfill';
 
 var level;
 var skin;
