@@ -38,7 +38,7 @@ CONCEPT_TO_INDEX_HASH = {
 }.freeze
 
 # @param file [String] filepath to a CSV containing UserLevel summary data.
-#   Each for of the CSV should contain a user_id, level_id, best_result,
+#   Each line of the CSV should contain a user_id, level_id, best_result,
 #   num attempts, num_hints, and num_authored_hints.
 # @return [Hash[Integer, Hash]] hash mapping user_ids to hashes, themselves
 #   mapping level_id to user_level information.
@@ -72,7 +72,7 @@ end
 # @return [Float] whether the level was passed perfectly without hints.
 def perfect_without_hints(best_result, attempts, num_hints, num_authored_hints)
   raise ArgumentError.new('FreePlay') if best_result == 30
-  return 1.0 if best_result == 100 && num_hints == 0 && num_authored_hints == 0
+  return 1.0 if best_result > 30 && num_hints == 0 && num_authored_hints == 0
   0.0
 end
 
