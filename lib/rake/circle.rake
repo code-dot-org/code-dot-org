@@ -44,9 +44,9 @@ namespace :circle do
           " --pegasus localhost.code.org:3000" \
           " --dashboard localhost.studio.code.org:3000" \
           " --circle" \
-          " --parallel 26" \
+          " --parallel 16" \
           " --abort_when_failures_exceed 10" \
-          " --retry_count 3" \
+          " --retry_count 2" \
           " --html"
       if is_pipeline_branch
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
