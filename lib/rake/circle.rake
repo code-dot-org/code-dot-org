@@ -37,7 +37,7 @@ namespace :circle do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      browsers_to_run = is_pipeline_branch ? 'ChromeLatestWin7,Firefox45Win7,IE11Win10,SafariYosemite' : 'ChromeLatestWin7'
+      browsers_to_run = is_pipeline_branch ? 'ChromeLatestWin7,Firefox45Win7,IE11Win10,SafariYosemite' : 'ChromeLatestWin7,IE11Win10'
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
           " --feature #{container_features.join(',')}" \
           " --config #{browsers_to_run}" \
