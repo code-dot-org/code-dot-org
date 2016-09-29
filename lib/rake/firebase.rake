@@ -22,6 +22,11 @@ namespace :firebase do
             "To upload the firebase rules you built using `rake firebase:compile_rules`, you will need to\n"\
             "set `use_my_apps: true` in locals.yml and then run `rake package:apps:symlink`.\n\n"
         end
+        if !File::exist?('public/blockly')
+          raise 'Could not upload firebase security rules because an apps package was not found at dashboard/public/blockly.'
+        elsif !File::exist?('public/blockly/firebase/rules.json')
+          raise 'Could not upload firebase security rules because the apps package does not contain firebase/rules.json.'
+        end
         url = "https://#{CDO.firebase_name}.firebaseio.com/.settings/rules.json?auth=#{CDO.firebase_secret}"
         RakeUtils.system("curl -X PUT -T ./public/blockly/firebase/rules.json '#{url}'")
       }
