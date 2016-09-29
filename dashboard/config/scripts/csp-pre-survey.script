@@ -1,3 +1,5 @@
+hideable_stages true
+
 stage 'Anonymous student pre-survey', 
 lockable: false
 assessment 'CSP pre-assessment survey'
