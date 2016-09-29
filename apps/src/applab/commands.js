@@ -1,31 +1,31 @@
-var studioApp = require('../StudioApp').singleton;
-var apiTimeoutList = require('../timeoutList');
-var ChartApi = require('./ChartApi');
-var EventSandboxer = require('./EventSandboxer');
-var RGBColor = require('./rgbcolor.js');
-var codegen = require('../codegen');
-var sanitizeHtml = require('./sanitizeHtml');
-var utils = require('../utils');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var setPropertyDropdown = require('./setPropertyDropdown');
-var assetPrefix = require('../assetManagement/assetPrefix');
-
-var errorHandler = require('../errorHandler');
+import {singleton as studioApp} from '../StudioApp';
+import apiTimeoutList from '../timeoutList';
+import ChartApi from './ChartApi';
+import EventSandboxer from './EventSandboxer';
+import RGBColor from './rgbcolor.js';
+import codegen from '../codegen';
+import sanitizeHtml from './sanitizeHtml';
+import * as utils from '../utils';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import * as setPropertyDropdown from './setPropertyDropdown';
+import assetPrefix from '../assetManagement/assetPrefix';
+import errorHandler from '../errorHandler';
 var ErrorLevel = errorHandler.ErrorLevel;
-var applabTurtle = require('./applabTurtle');
-var ChangeEventHandler = require('./ChangeEventHandler');
-var color = require('../color');
-var logToCloud = require('../logToCloud');
+import applabTurtle from './applabTurtle';
+import ChangeEventHandler from './ChangeEventHandler';
+import color from '../color';
+import logToCloud from '../logToCloud';
 
 var OPTIONAL = true;
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-var ICON_PREFIX_REGEX = require('./constants').ICON_PREFIX_REGEX;
+import {ICON_PREFIX_REGEX} from './constants';
 
-var applabCommands = module.exports;
+var applabCommands = {};
+export default applabCommands;
 
 /**
  * Lookup table of asset URLs. If an asset isn't listed here, initiate a
@@ -59,9 +59,7 @@ function outputError(errorString) {
  */
 function getAsyncErrorHandler() {
   const line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  return errorString => {
-    errorHandler.outputError(errorString, ErrorLevel.WARNING, line);
-  };
+  return error => errorHandler.outputError(String(error), ErrorLevel.WARNING, line);
 }
 
 /**

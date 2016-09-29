@@ -5,6 +5,7 @@
   "animationMode": "Анімація",
   "answersVisible": "Відповіді видимі (тільки для читання)",
   "assessmentSteps": "Steps to give assessment for",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "Повернутися до попереднього рівня",
   "blocklyMessage": "Блоклі",
@@ -185,7 +186,7 @@
   "loading": "Завантаження...",
   "locked": "Заблоковано",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
-  "lockSettings": "Налаштування блокування",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Lock stage",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Lock as soon as students are done",
@@ -304,7 +305,5 @@
   "when": "коли",
   "whenRun": "коли гра починається",
   "workspaceHeaderShort": "Робоча область: ",
-  "yes": "Так",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Так"
 }

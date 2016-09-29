@@ -5,6 +5,7 @@
   "animationMode": "Κινούμενα γραφικά",
   "answersVisible": "Answers visible (read-only)",
   "assessmentSteps": "Steps to give assessment for",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "Πίσω στο προηγούμενο επίπεδο",
   "blocklyMessage": "Blockly",
@@ -185,7 +186,7 @@
   "loading": "Φόρτωση...",
   "locked": "Κλειδωμένο",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
-  "lockSettings": "Ρυθμίσεις κλειδώματος",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Κλείδωμα στάδιου",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Lock as soon as students are done",
@@ -304,7 +305,5 @@
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
   "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "yes": "Ναι",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Ναι"
 }

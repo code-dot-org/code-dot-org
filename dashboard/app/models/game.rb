@@ -181,7 +181,7 @@ class Game < ActiveRecord::Base
   end
 
   def use_firebase_for_new_project?
-    app == APPLAB && CDO.use_firebase_for_new_applab_projects
+    app == APPLAB
   end
 
   def self.setup

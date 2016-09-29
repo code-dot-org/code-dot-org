@@ -2,7 +2,8 @@
   errors:
     messages:
       not_saved: 'Proszę poprawić następujące błędy:'
-      too_young: Te materiały nie są dostępne dla młodszych uczniów
+      too_young: Ta zawartość ma przypisane ograniczenia wiekowe i nie jest dostępna
+        dla młodszych uczniów.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -93,7 +94,7 @@
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Patrz podręcznik nauczyciela
-    title: Sign up for Code.org
+    title: Zarejestruj się w Code.org
     school_name: Nazwa szkoły (opcjonalnie)
     school_address: Adres szkoły (opcjonalnie)
     address_placeholder: adres, miasto, województwo, kod pocztowy
@@ -122,7 +123,7 @@
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
     field_is_required: jest wymagane
-    accept_terms: You must agree to create an account
+    accept_terms: Musisz wyrazić zgodę aby utworzyć konto
   signin_form:
     title: Masz już konto? Zaloguj się
     login: E-mail lub nazwa użytkownika
@@ -144,8 +145,8 @@
   password:
     reset_form:
       title: Nie pamiętasz hasła?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Wpisz poniżej swój adres e-mail a my wyślemy Ci instrukcje resetowania
+        hasła.
       email: Adres e-mail
       submit: Wyślij
     change_form:
@@ -294,7 +295,7 @@
       prizes: Nagrody
       logout: Wyloguj się
       signin: Zaloguj się
-      signup: Zarejestruj się
+      signup: Załóż konto
       already_registered: Czy jesteś Już zarejestrowany?
       pair_programming: Programowanie w parach
       team: Zespół
@@ -335,7 +336,7 @@
       submitted_on: Przesłane dnia %{date}
       unsubmit: Nieprzesłane
       worked_with: Pracował/a z
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Tutaj zaktualizujesz ustawienia blokady.
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -716,7 +717,7 @@
     sign_out: Jeśli nie chcesz podać swojego wieku, to możesz się <a href="%{url}">
       wylogować</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
+    title: Zaktualizowano warunki usług i politykę prywatności
     intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
       The changes are effective as of August 24, 2016.  The biggest change: we will
       <i>no longer store email addresses for student accounts on Code Studio.</i>
@@ -731,12 +732,12 @@
       educational programs such as Code Studio.
     tos: Regulamin
     privacy: Polityka prywatności
-    privacy_notice: Privacy Notice
+    privacy_notice: Polityka poprawności
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    accept: Akceptuj
     print: Drukuj
-    later: Later
+    later: Poźniej
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching

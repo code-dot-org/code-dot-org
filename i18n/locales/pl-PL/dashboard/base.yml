@@ -2,7 +2,7 @@ pl:
   errors:
     messages:
       not_saved: 'Proszę poprawić następujące błędy:'
-      too_young: This content has age restrictions in place and is not available for younger students.
+      too_young: Ta zawartość ma przypisane ograniczenia wiekowe i nie jest dostępna dla młodszych uczniów.
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
       pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
@@ -84,7 +84,7 @@ pl:
     teacher_count: '%{count} nauczycieli już się zarejestrowało.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Patrz podręcznik nauczyciela
-    title: Sign up for Code.org
+    title: Zarejestruj się w Code.org
     school_name: Nazwa szkoły (opcjonalnie)
     school_address: Adres szkoły (opcjonalnie)
     address_placeholder: adres, miasto, województwo, kod pocztowy
@@ -107,7 +107,7 @@ pl:
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
     field_is_required: jest wymagane
-    accept_terms: You must agree to create an account
+    accept_terms: Musisz wyrazić zgodę aby utworzyć konto
   signin_form:
     title: Masz już konto? Zaloguj się
     login: Email
@@ -129,7 +129,7 @@ pl:
   password:
     reset_form:
       title: Nie pamiętasz hasła?
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: Wpisz poniżej swój adres e-mail a my wyślemy Ci instrukcje resetowania hasła.
       email: Adres e-mail
       submit: Wyślij
     change_form:
@@ -247,7 +247,7 @@ pl:
       prizes: Nagrody
       logout: Wyloguj się
       signin: Zaloguj się
-      signup: Create an account
+      signup: Załóż konto
       already_registered: Czy jesteś Już zarejestrowany?
       pair_programming: Programowanie w parach
       team: Zespół
@@ -288,7 +288,7 @@ pl:
       submitted_on: 'Przesłane dnia %{date}'
       unsubmit: Nieprzesłane
       worked_with: Pracował/a z
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Tutaj zaktualizujesz ustawienia blokady.
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -575,16 +575,16 @@ pl:
     message: 'Jesteśmy w trakcie aktualizacji naszych doświadczeń, aby zapewnić Państwu jeszcze silniejszą ochronę prywatności. Aby to zrobić, prosimy obecnych użytkowników o podanie tutaj ich wieku. <br/>Jak zawsze Code.org nigdy nie wypożycza, sprzedaje lub udostępnia tych informacji osobom trzecim.'
     sign_out: 'Jeśli nie chcesz podać swojego wieku, to możesz się <a href="%{url}"> wylogować</a>.'
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
+    title: Zaktualizowano warunki usług i politykę prywatności
     intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: Regulamin
     privacy: Polityka prywatności
-    privacy_notice: Privacy Notice
+    privacy_notice: Polityka poprawności
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
+    accept: Akceptuj
     print: Drukuj
-    later: Later
+    later: Poźniej
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     review_terms: Review updated terms
   zendesk_too_young_message: 'Przepraszamy, młodsi użytkownicy nie mogą logować się na naszej stronie pomocy. Możesz przejrzeć <a href="http://support.code.org"> support.code.org</a> bez logowania się lub poprosić rodziców lub nauczyciela, by skontaktowali się z nami  w Twoim imieniu.'

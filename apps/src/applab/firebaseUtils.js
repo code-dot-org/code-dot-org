@@ -63,6 +63,7 @@ export function getConfigRef() {
 }
 
 export function getDatabase(channelId) {
+  channelId = channelId + Applab.firebaseChannelIdSuffix;
   return getFirebase().child(`v3/channels/${channelId}`);
 }
 
@@ -73,7 +74,14 @@ function getFirebase() {
       throw new Error("Error connecting to Firebase: Firebase name not specified");
     }
     if (!Applab.firebaseAuthToken) {
-      throw new Error("Error connecting to Firebase: Firebase auth token not specified");
+      let msg = "Error connecting to Firebase: Firebase auth token not specified. ";
+      if (Applab.firebaseName === 'cdo-v3-dev') {
+        msg += 'To use Applab data blocks or data browser in development, you must ' +
+          'set "firebase_secret" in locals.yml to the value at ' +
+          'https://manage.chef.io/organizations/code-dot-org/environments/development/attributes ' +
+          '-> cdo-secrets';
+      }
+      throw new Error(msg);
     }
     let base_url = `https://${Applab.firebaseName}.firebaseio.com`;
     fb = new Firebase(base_url);
@@ -87,4 +95,30 @@ function getFirebase() {
     firebaseCache = fb;
   }
   return fb;
+}
+
+const ILLEGAL_CHARACTERS = '.$#[]/';
+
+/**
+ * Firebase keys must be UTF-8 encoded, can be a maximum of 768 bytes, and cannot contain
+ * ., $, #, [, ], /, or ASCII control characters 0-31 or 127.
+ * @param {string} key
+ * @throws with a helpful message if the key is invalid.
+ */
+export function validateFirebaseKey(key) {
+  if (key.length === 0) {
+    throw new Error('The name must not be empty.');
+  }
+  if (key.length > 768) {
+    throw new Error(`The name "${key}" is too long.`);
+  }
+  for (let i = 0; i < key.length; i++) {
+    if (ILLEGAL_CHARACTERS.includes(key.charAt(i))) {
+      throw new Error(`The name "${key}" contains an illegal character "${key.charAt(i)}".` +
+      ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.');
+    }
+    if (key.charCodeAt(i) < 32 || key.charCodeAt(i) === 127) {
+      throw new Error(`The name ${key} contains an illegal character code ${key.charCodeAt(i)}`);
+    }
+  }
 }

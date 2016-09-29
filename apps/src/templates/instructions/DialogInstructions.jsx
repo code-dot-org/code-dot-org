@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
-var processMarkdown = require('marked');
+import processMarkdown from 'marked';
+import renderer from '../../StylelessRenderer';
 
 /**
  * Component for displaying our instructions in the context of a modal dialog
@@ -26,7 +27,7 @@ const DialogInstructions = React.createClass({
   },
   render() {
     const renderedMarkdown = this.props.longInstructions ?
-      processMarkdown(this.props.longInstructions) : undefined;
+      processMarkdown(this.props.longInstructions, { renderer }) : undefined;
     const acapelaSrc = this.props.longInstructions ?
       this.props.acapelaMarkdownInstructionsSrc : this.props.acapelaInstructionsSrc;
 

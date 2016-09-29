@@ -1938,9 +1938,8 @@
         svo í aðra, til að ég nái svíninu"
       Course1MazeAssessment2_instruction: "Þetta er próf!\r\nFærðu mig í eina átt,
         svo í aðra, til að ég nái svíninu."
-      course2_playlab_stage17_1_instruction: |
-        Can you make Jorge the Dog (actor 1)
-        say "Hi"?
+      course2_playlab_stage17_1_instruction: Getur þú látið hundinn Jorge (leikmann
+        1) segja "Hi"?
       course2_playlab_stage17_10_instruction: Getur þú bætt við kubbum til að breyta
         bakgrunni og hraða Waddles og síðan fært hann með örvarlyklunum þar til þú
         skorar?
@@ -1985,10 +1984,9 @@
       course3_playlab_stage17_2_instruction: Getur þú skrifað forrit sem lætur Waddles
         hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að
         snerta öll mörkin?
-      course3_playlab_stage17_3_instruction: |
-        The "repeat forever" block allows
-        you to run code continuously. Can you attach blocks to move this dinosaur
-        up and down repeatedly?
+      course3_playlab_stage17_3_instruction: Með kubbnum "endurtaka endalaust" getur
+        þú látið kóða keyra án þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan
+        hreyfist stanslaust upp og niður?
       course3_playlab_stage17_4_instruction: Getur þú látið Waddles segja "Ouch!"
         og spila snertihljóð þegar hún rekst á risaeðluna og síðan notað örvarlykla
         til að færa hann svo það geti orðið árekstur?
@@ -2714,6 +2712,9 @@
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_pre1_instruction: |
+        Ruff! Can you help me collect some tennis
+        balls?
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -2744,6 +2745,16 @@
       grade2_maze_debuggingPre_instruction: |
         Play with these blocks to see what they
         make the bird do!
+      grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro6_instruction: "That’s it!  Now we’re ready to try to solve\na
+        few puzzles. \n"
+      grade2_maze_intro7_instruction: This time, try something a bit more challenging.
+      grade2_maze_intro8_instruction: |
+        This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice.
+      grade2_maze_intro9_instruction: Solve this puzzle.
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?
