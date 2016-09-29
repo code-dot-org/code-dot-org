@@ -2,17 +2,16 @@ name 'TheGreatBugBash'
 title 'The Great Bug Bash'
 description 'Debugging Story for K Level'
 markdown <<MARKDOWN
-# Outline
+# The Great Bug Bash
+  
+<br/><br/>    
+    
+<a href="https://docs.google.com/document/d/1iyFodiPIPttFLeHpEMOGqPFueeqexXEOb9QqDC4Fbn4/edit?usp=sharing" target="_new">
+<button>
+Go to lesson plan
+</button> 
+</a>
 
-[Document link](https://docs.google.com/a/code.org/document/d/1rba64Yki1hItlYwaboNsTQS0uuTGHhKp7v9kNuYlkdw/edit?usp=sharing)
-
-Bugs have gotten loose in Codeville. Bugs love to cause problems. Help us find all the bugs. Look for them wherever you see trouble!
-
-- Situation 1: Upside down car (bug surfing on top of car?)
-  - Explain: The car was upside down, we found the bug, righted the wrong, now let’s move along
-- Situation 2: Sky and trees change colors (Bright green & yellow sky with muted blue/grey trees) Put bug in trees
-  - Explain: The trees and sky switched colors
-- Situation 3: House missing doors and windows
-- Situation 4: Animals wearing clothes
-- Situation 5: Words on the computer only partially show up
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

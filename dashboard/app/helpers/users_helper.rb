@@ -26,21 +26,6 @@ module UsersHelper
     user_data.compact
   end
 
-  def level_with_best_progress(ids, level_progress)
-    return ids[0] if ids.length == 1
-
-    submitted_id = ids.find {|id| level_progress[id].try(:[], :submitted)}
-    return submitted_id if submitted_id
-
-    completed_pages_id = ids.find {|id| level_progress[id].try(:[], :pages_completed)}
-    return completed_pages_id if completed_pages_id
-
-    attempted_ids = ids.select {|id| level_progress[id].try(:[], :result)}
-    return attempted_ids.max_by {|id| level_progress[id][:result]} unless attempted_ids.empty?
-
-    return ids[0]
-  end
-
   # Summarize a user and his or her progress across all scripts.
   # Example return value:
   # {

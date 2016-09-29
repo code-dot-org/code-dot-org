@@ -1,3 +1,5 @@
+hideable_stages true
+
 stage 'Jigsaw'
 level 'blockly:Jigsaw:3'
 
