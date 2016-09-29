@@ -15,8 +15,6 @@ class Ability
       Prize,
       TeacherPrize,
       TeacherBonusPrize,
-      LevelSourceHint,
-      FrequentUnsuccessfulLevelSource,
       :reports,
       User,
       UserPermission,
@@ -58,10 +56,6 @@ class Ability
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :read, SectionHiddenStage
-
-      if user.teacher? || (user.persisted? && user.permission?(UserPermission::HINT_ACCESS))
-        can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
-      end
 
       if user.teacher?
         can :read, Section, user_id: user.id
