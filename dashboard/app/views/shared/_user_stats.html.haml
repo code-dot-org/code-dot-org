@@ -20,9 +20,7 @@
         - last_level_id = nil
         - level_repeat = 0
         - stage[:levels].each do |script_level|
-          // script_level[:ids] includes an array of contained_level_ids at the
-          // end, so drop the last element before searching for the best level
-          - level_id = level_with_best_progress(script_level[:ids][0..-2], level_progress)
+          - level_id = level_with_best_progress(script_level[:ids], level_progress)
 
           - if last_level_id != level_id
             - level_repeat = 0
