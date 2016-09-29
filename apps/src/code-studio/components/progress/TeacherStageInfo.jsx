@@ -83,7 +83,7 @@ const TeacherStageInfo = Radium(React.createClass({
             </button>
           }
           {lockable && <StageLock stage={stage}/>}
-          {experiments.isEnabled('hiddenStages') && hiddenStagesInitialized &&
+          {experiments.isEnabled('hiddenStages') && hiddenStagesInitialized && !hasNoSections &&
             <div>
               <HiddenStageToggle
                 hidden={!!isHidden}
