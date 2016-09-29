@@ -14,7 +14,7 @@ var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
-import { getLevelIds, getLevel } from '../levels/codeStudioLevels';
+import { getLevelIds, getLevel, lockContainedLevelAnswers } from '../levels/codeStudioLevels';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -35,30 +35,10 @@ window.apps = {
 
     var lastSavedProgram;
 
-    var containedLevelOps;
     if (appOptions.hasContainedLevels) {
-      containedLevelOps = {
-        lockAnswers() {
-          const levelIds = getLevelIds();
-          levelIds.forEach(levelId => getLevel(levelId).lockAnswers());
-        },
-        getResults() {
-          const levelIds = getLevelIds();
-          return levelIds.map(levelId => {
-            const level = getLevel(levelId);
-            return {
-              id: level.levelId,
-              app: level.getAppName(),
-              callback: appOptions.report.sublevelCallback + level.levelId,
-              result: level.getResult(),
-              feedback: level.getCurrentAnswerFeedback()
-            };
-          });
-        }
-      };
       if (appOptions.readonlyWorkspace) {
         // Lock the contained levels if this is a teacher viewing student work:
-        containedLevelOps.lockAnswers();
+        lockContainedLevelAnswers();
       }
       // Always mark the workspace as readonly when we have contained levels:
       appOptions.readonlyWorkspace = true;
@@ -69,7 +49,6 @@ window.apps = {
       containerId: 'codeApp',
       Dialog: Dialog,
       cdoSounds: CDOSounds,
-      containedLevelOps: containedLevelOps,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function () {
         createCallouts(this.level.callouts || this.callouts);
