@@ -1,4 +1,5 @@
 /* global appOptions, dashboard */
+import { getResult } from './codeStudioLevels';
 
 // The external web page might tell us to save our progress and then navigate
 // to a new URL when that's done.  This is done when the level dots are
@@ -22,7 +23,7 @@ const UNSUBMITTED_ATTEMPT = -50;
  *   save answers.
  */
 function saveAnswers(completeFn) {
-  var results = window.getResult();
+  var results = getResult();
   var response = results.response;
   var result = results.result;
   var submitted = appOptions.submitted || false;

@@ -1,0 +1,19 @@
+<PublicKeyCryptography>
+  <config><![CDATA[{
+  "game_id": 57,
+  "created_at": "2016-09-29T14:41:11.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skip_dialog": true,
+    "href": "public_key_cryptography/public_key_cryptography.html",
+    "cryptography_widget_view": "1",
+    "markdown_instructions": "### Directions\r\n\r\nHere are some instructions\r\n\r\n### Try this:\r\n\r\n* blah \r\n* blah \r\n* blah",
+    "instructions": "Instructions"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</PublicKeyCryptography>

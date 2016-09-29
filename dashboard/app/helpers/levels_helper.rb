@@ -414,6 +414,7 @@ module LevelsHelper
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:firebaseName] = CDO.firebase_name if @game == Game.applab
     app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
+    app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
