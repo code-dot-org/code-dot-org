@@ -1026,9 +1026,6 @@ en:
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
       'Overview: Balancing Teachers and Tools': {}
-      'Overview: Balancing Teachers and Tools- Teachercon':
-        description here: description here
-        title: title
       'Overview: Capturing Student Learning': {}
       'Overview: Discovery Learning': {}
       'Overview: Group Work and Peer Learning': {}
@@ -1774,7 +1771,6 @@ en:
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
-      'What''s inside and how is it organized? ': {}
       Why Teach Number Systems?: {}
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
@@ -2332,7 +2328,6 @@ en:
         Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
-        Unit 1 Self Assessment: {}
         Unit 1 Self-Assessment: {}
         brendan test survey: {}
     match:
@@ -3654,20 +3649,13 @@ en:
         A 30 will be displayed. Variables grow as you add more to them: A 30 will be displayed. Variables grow as you add more to them
         An error will be generated.: An error will be generated.
       CSD U3 displace Prediction:
-        "# Diagonal Elevator": "# Diagonal Elevator"
         Diagonal Elevator: Diagonal Elevator
-        ? Last time we saw balloon, it pushed the feather all the way off screen.  This time, the balloon is moving diagonally, so it will only lift the feather for a short while before moving away from it.
-        : Last time we saw balloon, it pushed the feather all the way off screen.  This time, the balloon is moving diagonally, so it will only lift the feather for a short while before moving away from it.
         ? Last time we saw balloon, it pushed the feather all the way off screen.  This time, the balloon is moving diagonally, so it will only lift the feather for a short while before moving away from it..  What do you think will happen when the balloon moves away from the feather after it's lifted it?
         : Last time we saw balloon, it pushed the feather all the way off screen.  This time, the balloon is moving diagonally, so it will only lift the feather for a short while before moving away from it..  What do you think will happen when the balloon moves away from the feather after it's lifted it?
         The feather will continue up for a while, then start to fall again.: The feather will continue up for a while, then start to fall again.
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
-        What do you think will happen when the balloon moves away from the feather after it's lifted it?: What do you think will happen when the balloon moves away from the feather after it's lifted it?
-        What do you think will happen when the balloon moves away from the feather after it's moved it?: What do you think will happen when the balloon moves away from the feather after it's moved it?
-        description here: description here
-        title: title
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -5738,10 +5726,6 @@ en:
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
-        choice A: choice A
-        choice B: choice B
-        choice C: choice C
-        choice D: choice D
       cspu3_assess1_namingconvention:
         A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
         A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
@@ -6098,7 +6082,6 @@ en:
         Strongly disagree: Strongly disagree
       sarah_test_maggie:
         <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>
-        <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png">: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png">
         Question: Question
         right answer: right answer
         test: test

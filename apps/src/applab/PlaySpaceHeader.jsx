@@ -1,17 +1,16 @@
 /** @file Row of controls above the visualization. */
 
-var React = require('react');
-var constants = require('./constants');
-var msg = require('@cdo/locale');
-var utils = require('../utils');
-var actions = require('./actions');
-var connect = require('react-redux').connect;
-var ScreenSelector = require('./ScreenSelector');
-var ToggleGroup = require('../templates/ToggleGroup');
-var ViewDataButton = require('./ViewDataButton');
-var experiments = require('../experiments');
+import React from 'react';
 
-var ApplabInterfaceMode = constants.ApplabInterfaceMode;
+import {ApplabInterfaceMode} from './constants';
+import msg from '@cdo/locale';
+import * as utils from '../utils';
+import * as actions from './actions';
+import {connect} from 'react-redux';
+import ScreenSelector from './ScreenSelector';
+import ToggleGroup from '../templates/ToggleGroup';
+import ViewDataButton from './ViewDataButton';
+import experiments from '../experiments';
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
@@ -92,7 +91,8 @@ var PlaySpaceHeader = React.createClass({
         this.props.hasDataMode;
   }
 });
-module.exports = connect(function propsFromStore(state) {
+
+export default connect(function propsFromStore(state) {
   return {
     channelId: state.pageConstants.channelId,
     hasDataMode: state.pageConstants.hasDataMode,

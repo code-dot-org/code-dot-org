@@ -1,15 +1,14 @@
 import $ from 'jquery';
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
-var BooleanPropertyRow = require('./BooleanPropertyRow');
-var ImagePickerPropertyRow = require('./ImagePickerPropertyRow');
-var ZOrderRow = require('./ZOrderRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
-
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import BooleanPropertyRow from './BooleanPropertyRow';
+import ImagePickerPropertyRow from './ImagePickerPropertyRow';
+import ZOrderRow from './ZOrderRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import {ICON_PREFIX_REGEX} from '../constants';
+import * as elementUtils from './elementUtils';
 
 var ImageProperties = React.createClass({
   propTypes: {
@@ -141,7 +140,7 @@ var ImageEvents = React.createClass({
 });
 
 
-module.exports = {
+export default {
   PropertyTab: ImageProperties,
   EventTab: ImageEvents,
 

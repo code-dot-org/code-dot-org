@@ -42,6 +42,7 @@ group :development do
   gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'
+  gem 'memoist'
 end
 
 group :development, :test do

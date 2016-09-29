@@ -11,13 +11,13 @@
  *
  * @constructor
  */
-var RecordListener = module.exports = function () {
+export default function RecordListener() {
   /**
    * Map from table name to table handler.
    * @private {Object.<string, TableHandler>}
    */
   this.tableHandlers_ = {};
-};
+}
 
 /**
  * Number of ms to wait before polling each table for more data after finishing

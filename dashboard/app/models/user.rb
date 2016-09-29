@@ -709,7 +709,9 @@ class User < ActiveRecord::Base
   end
 
   def in_progress_and_completed_scripts
-    [working_on_user_scripts, completed_user_scripts].compact.flatten
+    backfill_user_scripts if needs_to_backfill_user_scripts?
+
+    user_scripts.compact
   end
 
   def all_advertised_scripts_completed?
@@ -718,7 +720,8 @@ class User < ActiveRecord::Base
 
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
-    user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
+    return false unless user_script
+    user_script.completed_at || next_unpassed_progression_level(script).nil?
   end
 
   def not_started?(script)
@@ -744,12 +747,16 @@ class User < ActiveRecord::Base
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
+  # NOTE: Changes to this method should be mirrored in
+  # in_progress_and_completed_scripts.
   def working_on_user_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
     user_scripts.where('user_scripts.completed_at is null')
   end
 
+  # NOTE: Changes to this method should be mirrored in
+  # in_progress_and_completed_scripts.
   def completed_user_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
@@ -832,7 +839,7 @@ class User < ActiveRecord::Base
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
   def self.track_proficiency(user_id, script_id, level_id)
-    level_concept_difficulty = LevelConceptDifficulty.find_by_level_id(level_id)
+    level_concept_difficulty = Script.cache_find_level(level_id).level_concept_difficulty
     return unless level_concept_difficulty
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
