@@ -5,14 +5,14 @@ description_audience "Ages 5-18"
 
 stage 'Debugging'
 level 'TheGreatBugBash'
-level 'MarbleMaze'
+#level 'MarbleMaze'
 
 
 stage 'Persistence & Frustration'
 level 'StevieMarbles'
-level 'FrustrationSolutions'
-level 'MarbleMaze2'
-level 'gradeK_external_FrustrationWorksheet'
+#level 'FrustrationSolutions'
+#level 'MarbleMaze2'
+#level 'gradeK_external_FrustrationWorksheet'
 
 
 stage 'Sequences & Algorithms'
