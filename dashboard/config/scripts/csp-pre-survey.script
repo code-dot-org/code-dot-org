@@ -1,4 +1,3 @@
-title 'CS Principles Pre-Survey'
 stage 'Anonymous student pre-survey', 
 lockable: false
 assessment 'CSP pre-assessment survey'
