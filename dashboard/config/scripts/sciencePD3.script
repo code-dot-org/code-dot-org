@@ -1,5 +1,6 @@
+professional_learning_course 'CS in Science Support'
 login_required 'true'
-pd 'true'
+
 stage 'Welcome Back!'
 level 'sciPDpart4_S1_L1'
 level 'sciPD2Part4_S1_L2'
