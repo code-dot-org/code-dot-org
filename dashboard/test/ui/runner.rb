@@ -474,6 +474,10 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     arguments += " --format rerun --out #{rerun_filename}"
   end
 
+  if ENV['CI']
+    arguments += " --format json --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.cucumber"
+  end
+
   FileUtils.rm rerun_filename, force: true
 
   reruns = 0
