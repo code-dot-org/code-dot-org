@@ -160,7 +160,6 @@ namespace :build do
   tasks = []
   tasks << :configure
   tasks << :apps if CDO.build_apps
-  tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
