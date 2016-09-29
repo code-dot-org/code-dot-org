@@ -2,10 +2,6 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @title = nil
-    @description_short = nil
-    @description = nil
-    @description_audience = nil
     @stage = nil
     @stage_flex_category = nil
     @stage_lockable = false
@@ -27,10 +23,6 @@ class ScriptDSL < BaseDSL
   end
 
   integer :id
-  string :title
-  string :description_short
-  string :description
-  string :description_audience
   string :professional_learning_course
   integer :peer_reviews_to_complete
 
