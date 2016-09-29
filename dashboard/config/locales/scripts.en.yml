@@ -1423,6 +1423,7 @@ en:
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Functions: Functions
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description: In Partnership with Project GUTS
@@ -1607,6 +1608,8 @@ en:
             Holding: Holding
             Describing Web pages: Describing Web pages
             Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco

@@ -1,16 +1,15 @@
 import $ from 'jquery';
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var BooleanPropertyRow = require('./BooleanPropertyRow');
-var OptionsSelectRow = require('./OptionsSelectRow');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
-var ZOrderRow = require('./ZOrderRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-var color = require('../../color');
-var EnumPropertyRow = require('./EnumPropertyRow');
-
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import BooleanPropertyRow from './BooleanPropertyRow';
+import OptionsSelectRow from './OptionsSelectRow';
+import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import ZOrderRow from './ZOrderRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import color from '../../color';
+import EnumPropertyRow from './EnumPropertyRow';
+import * as elementUtils from './elementUtils';
 
 var DropdownProperties = React.createClass({
   propTypes: {
@@ -143,7 +142,7 @@ var DropdownEvents = React.createClass({
   }
 });
 
-module.exports = {
+export default {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
 
