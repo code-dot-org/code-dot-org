@@ -32,6 +32,7 @@ namespace :circle do
       RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done"
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
+    RakeUtils.system_stream_output 'mkdir -p $CIRCLE_TEST_REPORTS/cucumber'
     Dir.chdir('dashboard/test/ui') do
       is_pipeline_branch = ['staging', 'test', 'production'].include?(GitUtils.current_branch)
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
