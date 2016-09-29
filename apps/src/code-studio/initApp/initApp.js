@@ -14,6 +14,7 @@ var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
+import { getLevelIds, getLevel } from '../levels/codeStudioLevels';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -37,25 +38,22 @@ window.apps = {
     var containedLevelOps;
     if (appOptions.hasContainedLevels) {
       containedLevelOps = {
-        lockAnswers: function () {
-          for (var levelKey in window.levelGroup.levels) {
-            var level = window.levelGroup.levels[levelKey];
-            level.lockAnswers();
-          }
+        lockAnswers() {
+          const levelIds = getLevelIds();
+          levelIds.forEach(levelId => getLevel(levelId).lockAnswers());
         },
-        getResults: function () {
-          var results = [];
-          for (var levelKey in window.levelGroup.levels) {
-            var level = window.levelGroup.levels[levelKey];
-            results.push({
+        getResults() {
+          const levelIds = getLevelIds();
+          return levelIds.map(levelId => {
+            const level = getLevel(levelId);
+            return {
               id: level.levelId,
               app: level.getAppName(),
               callback: appOptions.report.sublevelCallback + level.levelId,
               result: level.getResult(),
               feedback: level.getCurrentAnswerFeedback()
-            });
-          }
-          return results;
+            };
+          });
         }
       };
       if (appOptions.readonlyWorkspace) {
