@@ -1,6 +1,7 @@
 - level ||= @level
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
 - in_level_group ||= false
+- left_align = local_assigns[:left_align]
 
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
@@ -29,31 +30,29 @@
     $(document).ready(function() {
       var textarea = $("textarea#level_#{level.id}.response");
       textarea.blur(function () {
-        if (window.levelGroup && window.levelGroup.answerChangedFn) {
-          window.levelGroup.answerChangedFn(#{level.id}, true);
-        }
+        window.dashboard.codeStudioLevels.onAnswerChanged(#{level.id}, true);
       });
       textarea.on("input", null, null, function () {
-        if (window.levelGroup && window.levelGroup.answerChangedFn) {
-          window.levelGroup.answerChangedFn(#{level.id});
-        }
+        window.dashboard.codeStudioLevels.onAnswerChanged(#{level.id}, false);
       });
     });
 
-- else # Otherwise we need to provide a `window.getResult` function.
+- else # Otherwise we need to provide a `getResult` function.
   :javascript
-    function getResult() {
-      var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+    window.dashboard.codeStudioLevels.registerGetResult(
+      function getResult() {
+        var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-      return {
-        response: encodeURIComponent($('.response').val()),
-        submitted: appOptions.level.submittable || forceSubmittable,
-        result: true,
-        testResult: #{level.submittable? ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT}
-      };
-    }
+        return {
+          response: encodeURIComponent($('.response').val()),
+          submitted: appOptions.level.submittable || forceSubmittable,
+          result: true,
+          testResult: #{level.submittable? ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT}
+        };
+      }
+    );
 
-.free-response
+.free-response{:class => ('left-aligned' if left_align)}
   - if level.title.present? && !in_level_group
     %h1= level.title
   - if level.markdown_instructions

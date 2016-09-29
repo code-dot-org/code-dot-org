@@ -480,7 +480,7 @@ StudioApp.prototype.init = function (config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
+    var ResizeSensor = require("./third-party/ResizeSensor");
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
@@ -663,7 +663,7 @@ StudioApp.prototype.hasValidContainedLevelResult_ = function () {
       // No answers yet, disable Run button until there is an answer
       $('#runButton').prop('disabled', true);
 
-      config.containedLevelOps.registerAnswerChangedFn(levelId => {
+      dashboard.codeStudioLevels.registerAnswerChangedFn(() => {
         $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
       });
     }

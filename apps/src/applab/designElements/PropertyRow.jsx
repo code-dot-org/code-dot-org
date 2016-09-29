@@ -1,8 +1,8 @@
-var React = require('react');
-var color = require('../../color');
-var rowStyle = require('./rowStyle');
-var elementUtils = require('./elementUtils');
-var utils = require('../../utils');
+import React from 'react';
+import color from '../../color';
+import * as rowStyle from './rowStyle';
+import * as elementUtils from './elementUtils';
+import * as utils from '../../utils';
 
 var LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 
@@ -149,4 +149,4 @@ var PropertyRow = React.createClass({
 });
 PropertyRow.LockState = LockState;
 
-module.exports = PropertyRow;
+export default PropertyRow;

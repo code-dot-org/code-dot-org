@@ -2,14 +2,12 @@
 
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
+import * as codeStudioLevels from './codeStudioLevels';
 require('./multi.js');
 require('./textMatch.js');
 var saveAnswers = require('./saveAnswers.js').saveAnswers;
 
-window.initLevelGroup = function (
-  levelCount,
-  currentPage,
-  lastAttempt) {
+window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
@@ -19,7 +17,7 @@ window.initLevelGroup = function (
   // edge").  Any pending throttled calls are cancelled when we go to a new page
   // and save for that reason.
 
-  window.getResult = getResult;
+  codeStudioLevels.registerGetResult(getAggregatedResults);
 
   function submitSublevelResults(completion, subLevelIdChanged) {
     var levels = window.levelGroup.levels;
@@ -69,19 +67,21 @@ window.initLevelGroup = function (
       submitSublevelResults(saveAnswers, subLevelId);
     }, 20 * 1000);
 
-  var lastResponse = window.getResult().response;
+  var lastResponse = getAggregatedResults().response;
 
-  window.levelGroup.answerChangedFn = function (levelId, saveThisAnswer) {
-    if (!saveThisAnswer) {
-      // Ignore typing events before focus change (when commit will be true)
-      return;
+  window.dashboard.codeStudioLevels.registerAnswerChangedFn(
+    (levelId, saveThisAnswer) => {
+      // LevelGroup is only interested in changes that should result in a save
+      if (!saveThisAnswer) {
+        return;
+      }
+      const currentResponse = getAggregatedResults().response;
+      if (lastResponse !== currentResponse) {
+        throttledSaveAnswers(levelId);
+      }
+      lastResponse = currentResponse;
     }
-    var currentResponse = window.getResult().response;
-    if (lastResponse !== currentResponse) {
-      throttledSaveAnswers(levelId);
-    }
-    lastResponse = currentResponse;
-  };
+  );
 
   /**
    * Construct an array of all the level results. When submitted it's something
@@ -91,7 +91,7 @@ window.initLevelGroup = function (
    *  "2007": {"result": "-1", "valid": false},
    *  "1939": {"result": "2,1", "valid": true}}
    */
-  function getResult() {
+  function getAggregatedResults() {
     // Add any new results to the existing lastAttempt results.
     var levels = window.levelGroup.levels;
     Object.keys(levels).forEach(function (levelId) {
@@ -112,12 +112,12 @@ window.initLevelGroup = function (
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {
-      "response": encodeURIComponent(JSON.stringify(lastAttempt)),
-      "result": true,
-      "errorType": null,
-      "submitted": window.appOptions.level.submittable,
-      "showConfirmationDialog": showConfirmationDialog,
-      "beforeProcessResultsHook": submitSublevelResults
+      response: encodeURIComponent(JSON.stringify(lastAttempt)),
+      result: true,
+      errorType: null,
+      submitted: window.appOptions.level.submittable,
+      showConfirmationDialog: showConfirmationDialog,
+      beforeProcessResultsHook: submitSublevelResults
     };
   }
 

@@ -1,8 +1,9 @@
 /** @file Button that opens the data browser */
-var React = require('react');
-var applabMsg = require('@cdo/applab/locale');
-var styles = require('../templates/ToggleButtonStyles');
-var FontAwesome = require('../templates/FontAwesome');
+import React from 'react';
+
+import applabMsg from '@cdo/applab/locale';
+import styles from '../templates/ToggleButtonStyles';
+import FontAwesome from '../templates/FontAwesome';
 
 /**
  * The button above the visualization that opens the data browser.
@@ -40,4 +41,4 @@ var ViewDataButton = React.createClass({
     );
   }
 });
-module.exports = ViewDataButton;
+export default ViewDataButton;

@@ -1,64 +1,64 @@
 // APIs needed for droplet (keep in sync with apiBlockly.js):
 
-exports.container = function (elementId, html) {
+export function container(elementId, html) {
   return Applab.executeCmd(null,
                           'container',
                           {'elementId': elementId,
                            'html': html });
-};
+}
 
-exports.write = function (html) {
+export function write(html) {
   return Applab.executeCmd(null,
                           'write',
                           {'html': html });
-};
+}
 
-exports.innerHTML = function (elementId, html) {
+export function innerHTML(elementId, html) {
   return Applab.executeCmd(null,
                           'innerHTML',
                           {'elementId': elementId,
                            'html': html });
-};
+}
 
-exports.deleteElement = function (elementId) {
+export function deleteElement(elementId) {
   return Applab.executeCmd(null,
                           'deleteElement',
                           {'elementId': elementId });
-};
+}
 
-exports.showElement = function (elementId) {
+export function showElement(elementId) {
   return Applab.executeCmd(null,
                           'showElement',
                           {'elementId': elementId });
-};
+}
 
-exports.hideElement = function (elementId) {
+export function hideElement(elementId) {
   return Applab.executeCmd(null,
                           'hideElement',
                           {'elementId': elementId });
-};
+}
 
-exports.setScreen = function (screenId) {
+export function setScreen(screenId) {
   return Applab.executeCmd(null,
                           'setScreen',
                           {'screenId': screenId });
-};
+}
 
-exports.button = function (elementId, text) {
+export function button(elementId, text) {
   return Applab.executeCmd(null,
                           'button',
                           {'elementId': elementId,
                            'text': text });
-};
+}
 
-exports.image = function (elementId, src) {
+export function image(elementId, src) {
   return Applab.executeCmd(null,
                           'image',
                           {'elementId': elementId,
                            'src': src });
-};
+}
 
-exports.setPosition = function (elementId, left, top, width, height) {
+export function setPosition(elementId, left, top, width, height) {
   return Applab.executeCmd(null,
                           'setPosition',
                           {'elementId': elementId,
@@ -66,100 +66,99 @@ exports.setPosition = function (elementId, left, top, width, height) {
                            'top': top,
                            'width': width,
                            'height': height });
-};
+}
 
-exports.setSize = function (elementId, width, height) {
+export function setSize(elementId, width, height) {
   return Applab.executeCmd(null,
                           'setSize',
                           {'elementId': elementId,
                            'width': width,
                            'height': height });
-};
+}
 
-exports.setProperty = function (elementId, property, value) {
+export function setProperty(elementId, property, value) {
   return Applab.executeCmd(null,
                           'setProperty',
                           {'elementId': elementId,
                            'property': property,
                            'value': value });
-};
+}
 
-
-exports.getXPosition = function (elementId) {
+export function getXPosition(elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',
                           {'elementId': elementId });
-};
+}
 
-exports.getYPosition = function (elementId) {
+export function getYPosition(elementId) {
   return Applab.executeCmd(null,
                           'getYPosition',
                           {'elementId': elementId });
-};
+}
 
-exports.createCanvas = function (elementId, width, height) {
+export function createCanvas(elementId, width, height) {
   return Applab.executeCmd(null,
                           'createCanvas',
                           {'elementId': elementId,
                            'width': width,
                            'height': height });
-};
+}
 
-exports.setActiveCanvas = function (elementId) {
+export function setActiveCanvas(elementId) {
   return Applab.executeCmd(null,
                           'setActiveCanvas',
                           {'elementId': elementId  });
-};
+}
 
-exports.line = function (x1, y1, x2, y2) {
+export function line(x1, y1, x2, y2) {
   return Applab.executeCmd(null,
                           'line',
                           {'x1': x1,
                            'y1': y1,
                            'x2': x2,
                            'y2': y2 });
-};
+}
 
-exports.circle = function (x, y, radius) {
+export function circle(x, y, radius) {
   return Applab.executeCmd(null,
                           'circle',
                           {'x': x,
                            'y': y,
                            'radius': radius });
-};
+}
 
-exports.rect = function (x, y, width, height) {
+export function rect(x, y, width, height) {
   return Applab.executeCmd(null,
                           'rect',
                           {'x': x,
                            'y': y,
                            'width': width,
                            'height': height });
-};
+}
 
-exports.setStrokeWidth = function (width) {
+export function setStrokeWidth(width) {
   return Applab.executeCmd(null,
                           'setStrokeWidth',
                           {'width': width });
-};
+}
 
-exports.setStrokeColor = function (color) {
+export function setStrokeColor(color) {
   return Applab.executeCmd(null,
                           'setStrokeColor',
                           {'color': color });
-};
+}
 
-exports.setFillColor = function (color) {
+export function setFillColor(color) {
   return Applab.executeCmd(null,
                           'setFillColor',
                           {'color': color });
-};
+}
 
-exports.clearCanvas = function () {
+export function clearCanvas() {
   return Applab.executeCmd(null, 'clearCanvas');
-};
+}
 
-exports.drawImage = function (imageId, x, y, width, height) {
+export function drawImage(imageId, x, y, width, height) {
   return Applab.executeCmd(null,
                           'drawImage',
                           {'imageId': imageId,
@@ -167,9 +166,9 @@ exports.drawImage = function (imageId, x, y, width, height) {
                            'y': y,
                            'width': width,
                            'height': height });
-};
+}
 
-exports.drawImageURL = function (url, x, y, width, height, callback) {
+export function drawImageURL(url, x, y, width, height, callback) {
   if (y === undefined && width === undefined && height === undefined &&
       callback === undefined) {
     // everything after x is undefined. assume the two param version (in which
@@ -185,153 +184,152 @@ exports.drawImageURL = function (url, x, y, width, height, callback) {
                            'width': width,
                            'height': height,
                            'callback': callback});
-};
+}
 
-
-exports.getImageData = function (x, y, width, height) {
+export function getImageData(x, y, width, height) {
   return Applab.executeCmd(null,
                           'getImageData',
                           {'x': x,
                            'y': y,
                            'width': width,
                            'height': height });
-};
+}
 
-exports.putImageData = function (imageData, x, y) {
+export function putImageData(imageData, x, y) {
   return Applab.executeCmd(null,
                           'putImageData',
                           {'imageData': imageData,
                            'x': x,
                            'y': y });
-};
+}
 
-exports.textInput = function (elementId, text) {
+export function textInput(elementId, text) {
   return Applab.executeCmd(null,
                           'textInput',
                           {'elementId': elementId,
                            'text': text });
-};
+}
 
-exports.textLabel = function (elementId, text, forId) {
+export function textLabel(elementId, text, forId) {
   return Applab.executeCmd(null,
                           'textLabel',
                           {'elementId': elementId,
                            'text': text,
                            'forId': forId });
-};
+}
 
-exports.checkbox = function (elementId, checked) {
+export function checkbox(elementId, checked) {
   return Applab.executeCmd(null,
                           'checkbox',
                           {'elementId': elementId,
                            'checked': checked });
-};
+}
 
-exports.radioButton = function (elementId, checked, name) {
+export function radioButton(elementId, checked, name) {
   return Applab.executeCmd(null,
                           'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
                            'name': name });
-};
+}
 
-exports.getChecked = function (elementId) {
+export function getChecked(elementId) {
   return Applab.executeCmd(null,
                           'getChecked',
                           {'elementId': elementId });
-};
+}
 
-exports.setChecked = function (elementId, checked) {
+export function setChecked(elementId, checked) {
   return Applab.executeCmd(null,
                           'setChecked',
                           {'elementId': elementId,
                            'checked': checked });
-};
+}
 
-exports.dropdown = function (elementId) {
+export function dropdown(elementId) {
   var optionsArray = Array.prototype.slice.call(arguments, 1);
   return Applab.executeCmd(null,
                           'dropdown',
                           {'elementId': elementId,
                            'optionsArray': optionsArray });
-};
+}
 
-exports.getAttribute = function (elementId, attribute) {
+export function getAttribute(elementId, attribute) {
   return Applab.executeCmd(null,
                            'getAttribute',
                            {elementId: elementId,
                             attribute: attribute});
-};
+}
 
-exports.setAttribute = function (elementId, attribute, value) {
+export function setAttribute(elementId, attribute, value) {
   return Applab.executeCmd(null,
                            'setAttribute',
                            {elementId: elementId,
                             attribute: attribute,
                             value: value});
-};
+}
 
-exports.getText = function (elementId) {
+export function getText(elementId) {
   return Applab.executeCmd(null,
                           'getText',
                           {'elementId': elementId });
-};
+}
 
-exports.setText = function (elementId, text) {
+export function setText(elementId, text) {
   return Applab.executeCmd(null,
                           'setText',
                           {'elementId': elementId,
                            'text': text });
-};
+}
 
-exports.getNumber = function (elementId) {
+export function getNumber(elementId) {
   return Applab.executeCmd(null,
                           'getNumber',
                           {'elementId': elementId });
-};
+}
 
-exports.setNumber = function (elementId, number) {
+export function setNumber(elementId, number) {
   return Applab.executeCmd(null,
                           'setNumber',
                           {'elementId': elementId,
                            'number': number });
-};
+}
 
-exports.getImageURL = function (elementId) {
+export function getImageURL(elementId) {
   return Applab.executeCmd(null,
                           'getImageURL',
                           {'elementId': elementId });
-};
+}
 
-exports.setImageURL = function (elementId, src) {
+export function setImageURL(elementId, src) {
   return Applab.executeCmd(null,
                           'setImageURL',
                           {'elementId': elementId,
                            'src': src });
-};
+}
 
-exports.imageUploadButton = function (elementId, text) {
+export function imageUploadButton(elementId, text) {
   return Applab.executeCmd(null,
                            'imageUploadButton',
                            {'elementId': elementId,
                             'text': text });
-};
+}
 
-exports.setParent = function (elementId, parentId) {
+export function setParent(elementId, parentId) {
   return Applab.executeCmd(null,
                           'setParent',
                           {'elementId': elementId,
                            'parentId': parentId });
-};
+}
 
-exports.setStyle = function (elementId, style) {
+export function setStyle(elementId, style) {
   return Applab.executeCmd(null,
                            'setStyle',
                            {'elementId': elementId,
                            'style': style });
-};
+}
 
-exports.onEvent = function (elementId, eventName, func) {
+export function onEvent(elementId, eventName, func) {
   var extraArgs = Array.prototype.slice.call(arguments).slice(3);
   return Applab.executeCmd(null,
                           'onEvent',
@@ -339,271 +337,271 @@ exports.onEvent = function (elementId, eventName, func) {
                            'eventName': eventName,
                            'func': func,
                            'extraArgs': extraArgs});
-};
+}
 
-exports.startWebRequest = function (url, func) {
+export function startWebRequest(url, func) {
   return Applab.executeCmd(null,
                           'startWebRequest',
                           {'url': url,
                            'func': func });
-};
+}
 
-exports.setTimeout = function (func, milliseconds) {
+export function setTimeout(func, milliseconds) {
   return Applab.executeCmd(null,
                           'setTimeout',
                           {'func': func,
                            'milliseconds': milliseconds });
-};
+}
 
-exports.clearTimeout = function (timeoutId) {
+export function clearTimeout(timeoutId) {
   return Applab.executeCmd(null,
                            'clearTimeout',
                            {'timeoutId': timeoutId });
-};
+}
 
-exports.setInterval = function (func, milliseconds) {
+export function setInterval(func, milliseconds) {
   return Applab.executeCmd(null,
                           'setInterval',
                           {'func': func,
                            'milliseconds': milliseconds });
-};
+}
 
-exports.clearInterval = function (intervalId) {
+export function clearInterval(intervalId) {
   return Applab.executeCmd(null,
                            'clearInterval',
                            {'intervalId': intervalId });
-};
+}
 
-exports.playSound = function (url) {
+export function playSound(url) {
   return Applab.executeCmd(null,
                           'playSound',
                           {'url': url});
-};
+}
 
-exports.getKeyValue = function (key, onSuccess, onError) {
+export function getKeyValue(key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',
                            {'key':key,
                             'onSuccess': onSuccess,
                             'onError': onError});
-};
+}
 
-exports.getKeyValueSync = function (key, callback) {
+export function getKeyValueSync(key, callback) {
   return Applab.executeCmd(null,
                            'getKeyValueSync',
                            {'key':key,
                             'callback': callback});
-};
+}
 
-exports.setKeyValue = function (key, value, onSuccess, onError) {
+export function setKeyValue(key, value, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'setKeyValue',
                            {'key':key,
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});
-};
+}
 
-exports.setKeyValueSync = function (key, value, callback) {
+export function setKeyValueSync(key, value, callback) {
   return Applab.executeCmd(null,
                            'setKeyValueSync',
                            {'key':key,
                             'value': value,
                             'callback': callback});
-};
+}
 
-exports.createRecord = function (table, record, onSuccess, onError) {
+export function createRecord(table, record, onSuccess, onError) {
   return Applab.executeCmd(null,
                           'createRecord',
                           {'table': table,
                            'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
-};
+}
 
-exports.readRecords = function (table, searchParams, onSuccess, onError) {
+export function readRecords(table, searchParams, onSuccess, onError) {
   return Applab.executeCmd(null,
                           'readRecords',
                           {'table': table,
                            'searchParams': searchParams,
                            'onSuccess': onSuccess,
                            'onError': onError});
-};
+}
 
-exports.updateRecord = function (table, record, onComplete, onError) {
+export function updateRecord(table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'updateRecord',
                           {'table': table,
                            'record': record,
                            'onComplete': onComplete,
                            'onError': onError});
-};
+}
 
-exports.deleteRecord = function (table, record, onComplete, onError) {
+export function deleteRecord(table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'deleteRecord',
                           {'table': table,
                            'record': record,
                            'onComplete': onComplete,
                            'onError': onError});
-};
+}
 
-exports.onRecordEvent = function (table, onRecord, includeAll) {
+export function onRecordEvent(table, onRecord, includeAll) {
   return Applab.executeCmd(null,
                            'onRecordEvent',
                            {'table': table,
                             'onRecord': onRecord,
                             'includeAll': includeAll});
-};
+}
 
-exports.getUserId = function () {
+export function getUserId() {
   return Applab.executeCmd(null,
                           'getUserId',
                           {});
-};
+}
 
-exports.moveForward = function (distance) {
+export function moveForward(distance) {
   return Applab.executeCmd(null,
                           'moveForward',
                           {'distance': distance });
-};
+}
 
-exports.moveBackward = function (distance) {
+export function moveBackward(distance) {
   return Applab.executeCmd(null,
                           'moveBackward',
                           {'distance': distance });
-};
+}
 
-exports.move = function (x, y) {
+export function move(x, y) {
   return Applab.executeCmd(null,
                           'move',
                           {'x': x,
                            'y': y });
-};
+}
 
-exports.moveTo = function (x, y) {
+export function moveTo(x, y) {
   return Applab.executeCmd(null,
                           'moveTo',
                           {'x': x,
                            'y': y });
-};
+}
 
-exports.turnRight = function (degrees) {
+export function turnRight(degrees) {
   return Applab.executeCmd(null,
                           'turnRight',
                           {'degrees': degrees });
-};
+}
 
-exports.turnLeft = function (degrees) {
+export function turnLeft(degrees) {
   return Applab.executeCmd(null,
                           'turnLeft',
                           {'degrees': degrees });
-};
+}
 
-exports.turnTo = function (direction) {
+export function turnTo(direction) {
   return Applab.executeCmd(null,
                            'turnTo',
                            {'direction': direction });
-};
+}
 
-exports.arcRight = function (degrees, radius) {
+export function arcRight(degrees, radius) {
   return Applab.executeCmd(null,
                            'arcRight',
                            {'degrees': degrees,
                             'radius': radius });
-};
+}
 
-exports.arcLeft = function (degrees, radius) {
+export function arcLeft(degrees, radius) {
   return Applab.executeCmd(null,
                            'arcLeft',
                            {'degrees': degrees,
                             'radius': radius });
-};
+}
 
-exports.dot = function (radius) {
+export function dot(radius) {
   return Applab.executeCmd(null,
                            'dot',
                            {'radius': radius });
-};
+}
 
-exports.getX = function () {
+export function getX() {
   return Applab.executeCmd(null, 'getX');
-};
+}
 
-exports.getY = function () {
+export function getY() {
   return Applab.executeCmd(null, 'getY');
-};
+}
 
-exports.getDirection = function () {
+export function getDirection() {
   return Applab.executeCmd(null, 'getDirection');
-};
+}
 
-exports.penUp = function () {
+export function penUp() {
   return Applab.executeCmd(null, 'penUp');
-};
+}
 
-exports.penDown = function () {
+export function penDown() {
   return Applab.executeCmd(null, 'penDown');
-};
+}
 
-exports.show = function () {
+export function show() {
   return Applab.executeCmd(null, 'show');
-};
+}
 
-exports.hide = function () {
+export function hide() {
   return Applab.executeCmd(null, 'hide');
-};
+}
 
-exports.speed = function (percent) {
+export function speed(percent) {
   return Applab.executeCmd(null,
                            'speed',
                            {'percent': percent});
-};
+}
 
-exports.penWidth = function (width) {
+export function penWidth(width) {
   return Applab.executeCmd(null,
                           'penWidth',
                           {'width': width });
-};
+}
 
-exports.penColor = function (color) {
+export function penColor(color) {
   return Applab.executeCmd(null,
                           'penColor',
                           {'color': color });
-};
+}
 
-exports.penRGB = function (r, g, b, a) {
+export function penRGB(r, g, b, a) {
   return Applab.executeCmd(null,
                           'penRGB',
                           {'r': r,
                            'g': g,
                            'b': b,
                            'a': a });
-};
+}
 
-exports.insertItem = function (array, index, item) {
+export function insertItem(array, index, item) {
   return Applab.executeCmd(null,
                           'insertItem',
                           {'array': array,
                            'index': index,
                            'item': item });
-};
+}
 
-exports.appendItem = function (array, item) {
+export function appendItem(array, item) {
   return Applab.executeCmd(null,
                           'appendItem',
                           {'array': array,
                            'item': item });
-};
+}
 
-exports.removeItem = function (array, index) {
+export function removeItem(array, index) {
   return Applab.executeCmd(null,
                           'removeItem',
                           {'array': array,
                            'index': index });
-};
+}
 
-exports.drawChart = function (chartId, chartType, chartData, options, callback) {
+export function drawChart(chartId, chartType, chartData, options, callback) {
   return Applab.executeCmd(null,
                           'drawChart',
                           {'chartId': chartId,
@@ -611,9 +609,9 @@ exports.drawChart = function (chartId, chartType, chartData, options, callback) 
                            'chartData': chartData,
                            'options': options,
                            'callback': callback });
-};
+}
 
-exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {
+export function drawChartFromRecords(chartId, chartType, tableName, columns, options, callback) {
   return Applab.executeCmd(null,
                           'drawChartFromRecords',
                           {'chartId': chartId,
@@ -622,4 +620,4 @@ exports.drawChartFromRecords = function (chartId, chartType, tableName, columns,
                            'columns': columns,
                            'options': options,
                            'callback': callback });
-};
+}
