@@ -130,6 +130,7 @@ end
 task :firebase_task do
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:upload_rules'
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:set_config'
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:clear_test_channels'
 end
 
 file deploy_dir('rebuild') do
