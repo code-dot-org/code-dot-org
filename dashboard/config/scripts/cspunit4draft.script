@@ -1,8 +1,3 @@
-title 'CS Principles Unit 4 - Data'
-description 'Collect, analyze, and extract knowledge from data by programming and
-building apps. Process data imported from other sources and also pull
-data from live data APIs.'
-description_short 'Data'
 login_required 'true'
 
 #1new

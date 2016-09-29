@@ -466,8 +466,6 @@ DSL
 
   test 'can set hideable_stages' do
     input_dsl = <<DSL
-title 'Script title'
-description 'script description'
 hideable_stages 'true'
 
 stage 'Stage1'
