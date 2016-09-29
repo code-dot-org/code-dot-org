@@ -312,6 +312,18 @@ end
 # if we exceed a certain limit.  See $options.abort_when_failures_exceed.
 failed_features = 0
 
+# This lambda function is called by Parallel.map each time it needs a new work
+# item.  It should return Parallel::Stop when there is no more work to do.
+next_feature = lambda do
+  if failed_features > $options.abort_when_failures_exceed
+    message = "Abandoning test run; passed limit of #{$options.abort_when_failures_exceed} failed features."
+    HipChat.log message, color: 'red'
+    return Parallel::Stop
+  end
+  return Parallel::Stop if browser_features.empty?
+  browser_features.pop
+end
+
 parallel_config = {
     # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
     in_threads: ENV['CI'] ? $options.parallel_limit : nil,
@@ -321,19 +333,11 @@ parallel_config = {
     # item is completed.
     finish: lambda do |_, _, result|
       succeeded, _, _ = result
-
-      # Abort the whole test run if we exceed a certain number of failures
-      unless succeeded
-        failed_features += 1
-        if failed_features > $options.abort_when_failures_exceed
-          message = "Aborting test run; exceeded limit of #{$options.abort_when_failures_exceed} failed features."
-          HipChat.log message, color: 'red'
-          raise Parallel::Kill
-        end
-      end
+      # Count failures so we can abort the whole test run if we exceed the limit
+      failed_features += 1 unless succeeded
     end
 }
-run_results = Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
+run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
 
@@ -571,7 +575,13 @@ $logfile.close
 $errfile.close
 $errbrowserfile.close
 
-# If we aborted for some reason we probably have no run results, and should
+# Produce a final report if we aborted due to excess failures
+if failed_features > $options.abort_when_failures_exceed
+  abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
+  HipChat.log abandoned_message, color: 'red'
+end
+
+# If we aborted for some reason we may have no run results, and should
 # exit with a failure code.
 exit 1 if run_results.nil?
 
