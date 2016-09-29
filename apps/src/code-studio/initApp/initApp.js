@@ -37,11 +37,6 @@ window.apps = {
     var containedLevelOps;
     if (appOptions.hasContainedLevels) {
       containedLevelOps = {
-        registerAnswerChangedFn: function (answerChangedFn) {
-          if (window.levelGroup) {
-            window.levelGroup.answerChangedFn = answerChangedFn;
-          }
-        },
         lockAnswers: function () {
           for (var levelKey in window.levelGroup.levels) {
             var level = window.levelGroup.levels[levelKey];
