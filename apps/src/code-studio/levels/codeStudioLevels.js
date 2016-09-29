@@ -1,3 +1,5 @@
+/* global appOptions */
+
 let registeredGetResult = null;
 let answerChangedFn = null;
 
@@ -83,10 +85,39 @@ export function registerLevel(levelId, level) {
   levelGroup[levelId] = level;
 }
 
+/**
+ * Get one of the levels we've registered
+ * @param {number} levelId
+ * @returns {object}
+ */
 export function getLevel(levelId) {
   return levelGroup[levelId];
 }
 
+/**
+ * @returns {number[]} A list of the leveIds we've registered
+ */
 export function getLevelIds() {
   return Object.keys(levelGroup);
+}
+
+// TODO - There should be only one contiained level. In the future, I will simplify
+// these next two methods to reflect that
+export function lockContainedLevelAnswers() {
+  const levelIds = getLevelIds();
+  levelIds.forEach(levelId => getLevel(levelId).lockAnswers());
+}
+
+export function getContainedLevelResults() {
+  const levelIds = getLevelIds();
+  return levelIds.map(levelId => {
+    const level = getLevel(levelId);
+    return {
+      id: level.levelId,
+      app: level.getAppName(),
+      callback: appOptions.report.sublevelCallback + level.levelId,
+      result: level.getResult(),
+      feedback: level.getCurrentAnswerFeedback()
+    };
+  });
 }
