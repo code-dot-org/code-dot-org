@@ -1,7 +1,4 @@
 professional_learning_course 'CSP Support'
-title 'CSP Unit 1 Online Support'
-description_short 'TeacherSupports for CSP unit 1'
-description 'This is a set of online supports of CSP teachers preparing to teach Unit 1.'
 login_required 'true'
 peer_reviews_to_complete 4
 
