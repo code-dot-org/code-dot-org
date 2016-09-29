@@ -49,6 +49,7 @@ class Script < ActiveRecord::Base
   include SerializedProperties
 
   after_save :generate_plc_objects
+  after_save :update_script_cache
 
   def generate_plc_objects
     if professional_learning_course?
@@ -200,11 +201,12 @@ class Script < ActiveRecord::Base
     ]).find(script_id)
   end
 
-  def self.update_script_in_cache(script)
-    script = get_cacheable_script(script.id)
+  def update_script_cache
+    return unless Script.should_cache?
 
-    @@script_cache[script.name] = script
-    @@script_cache[script.id.to_s] = script
+    script = Script.get_cacheable_script(id)
+    @@script_cache[name] = script
+    @@script_cache[id.to_s] = script
 
     @@script_level_cache.merge!(script.script_levels.index_by(&:id))
     script.script_levels.each do |script_level|
@@ -247,6 +249,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.update_level_in_cache(level)
+    return unless self.should_cache?
     @@level_cache[level.id] = level if @@level_cache.key? level.id
     @@level_cache[level.name] = level if @@level_cache.key? level.name
   end
@@ -613,14 +616,13 @@ class Script < ActiveRecord::Base
       script_name = script_params[:name]
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        script = Script.add_script({
+        Script.add_script({
           name: script_name,
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
-        Script.update_script_in_cache(script)
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
     rescue StandardError => e

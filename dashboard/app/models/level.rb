@@ -40,6 +40,7 @@ class Level < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
   after_save :write_custom_level_file
+  after_save :update_level_cache
   after_destroy :delete_custom_level_file
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
@@ -185,6 +186,10 @@ class Level < ActiveRecord::Base
       File.write(file_path, self.to_xml)
       file_path
     end
+  end
+
+  def update_level_cache
+    Script.update_level_in_cache(self)
   end
 
   def to_xml(options = {})
