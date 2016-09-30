@@ -43,6 +43,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'aniGifURL',
   'inputOutputTable',
   'showAnimationMode',
+  'allAnimationsSingleFrame',
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
