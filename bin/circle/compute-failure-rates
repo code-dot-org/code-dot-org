@@ -119,7 +119,7 @@ end
 puts "Failure rates by date (1.0 = 100% failures)"
 puts "%-10s %10s %10s %10s" % ['Date', 'Branch', 'Pipeline', 'Overall']
 stats_by_date.each do |date, stats|
-  puts "%-10s %10s %10s %10s" % [date, stats[:branch_failure_rate].round(3), stats[:pipeline_failure_rate].round(3), stats[:total_failure_rate].round(3)]
+  puts "%-10s %10.3f %10.3f %10.3f" % [date, stats[:branch_failure_rate].round(3), stats[:pipeline_failure_rate].round(3), stats[:total_failure_rate].round(3)]
 end
 
 exit(0)
