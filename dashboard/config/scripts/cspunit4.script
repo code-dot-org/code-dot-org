@@ -58,8 +58,8 @@ level 'U4L10 Student Lesson Introduction'
 #11
 stage 'Rapid Research - Data Innovations'
 level 'U4L11 Student Lesson Introduction'
-level 'U4L11 Data and Medicine - Video'
-level 'U1L1 Innovation - Video'
+named_level 'Video - Data and Medicine'
+named_level 'Video - CS is Changing Everything'
 
 #12
 stage 'Identifying People with Data'
