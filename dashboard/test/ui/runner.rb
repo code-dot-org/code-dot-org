@@ -23,6 +23,7 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 require 'parallel'
+require 'securerandom'
 require 'socket'
 
 require_relative './utils/selenium_browser'
@@ -252,6 +253,12 @@ ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
 if test_type == 'Eyes'
+  # Generate a batch ID, unique to this test run.
+  # Each Eyes instance will use the same one so that tests from this
+  # run get grouped together. This gets used in eyes_steps.rb.
+  # See "Aggregating tests from different processes"
+  # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
+  ENV['BATCH_ID'] = "#{ENV['BATCH_NAME']} | #{SecureRandom.uuid}"
   HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
