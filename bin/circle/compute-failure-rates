@@ -9,8 +9,11 @@ require 'open-uri'
 require 'optparse'
 require 'parallel'
 require 'ruby-progressbar'
+require_relative './circle_project'
 
 CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
+
+@project = CircleProject.new('code-dot-org/code-dot-org')
 
 extend Memoist
 
@@ -44,7 +47,7 @@ memoize :get_recent_builds
 # @return [Object] build descriptor object from the CircleCI API
 #   Example output JSON: https://gist.github.com/bcjordan/02f7c2906b524fa86ec75b19f9a72cd2
 def get_build(build_id)
-  JSON.parse(open("#{CIRCLE_API_BASE}/#{build_id}").read)
+  @project.get_build(build_id)
 end
 
 memoize :get_build
