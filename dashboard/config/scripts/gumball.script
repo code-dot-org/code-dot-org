@@ -1,6 +1,3 @@
-title 'Gumball Play Lab'
-description_short "Create a story or make a game with Gumball Play Lab!"
-description "Create a story or make a game with Gumball Play Lab!"
 hidden 'false'
 login_required 'false'
 

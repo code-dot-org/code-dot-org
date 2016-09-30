@@ -227,28 +227,6 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'allow applab and gamelab levels in student_of_admin_required scripts' do
-    Script.add_script(
-      {name: 'test script', hidden: false, student_of_admin_required: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-    Script.add_script(
-      {name: 'test script', hidden: false, student_of_admin_required: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab and gamelab levels in admin_required scripts' do
-    Script.add_script(
-      {name: 'test script', hidden: false, admin_required: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-    Script.add_script(
-      {name: 'test script', hidden: false, admin_required: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
   test 'scripts are hidden or not' do
     visible_scripts = %w{
       20-hour flappy playlab infinity artist course1 course2 course3 course4
@@ -403,6 +381,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
+    custom_i18n.deep_merge!({'en' => {'data' => {'script' => {'name' => {'test-plc' => {
+      'title' => 'PLC Test',
+      'description' => 'PLC test fixture script'
+    }}}}}})
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     script = scripts.first

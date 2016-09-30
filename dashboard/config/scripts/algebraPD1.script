@@ -1,6 +1,3 @@
-title 'CS in Algebra Part 1'
-description "Teach Algebra through Functional Programming"
-description_short "	Phase 1: Online Introduction"
 login_required 'true'
 pd 'true'
 

@@ -1,7 +1,3 @@
-title 'Algebra Demo'
-description_short "A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra"
-description "A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra"
-
 stage 'Evaluation Blocks'
 level 'Calc Circles of Eval .1'
 level 'Calc Circles of Eval .2'

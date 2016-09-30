@@ -1,7 +1,4 @@
 pd 'true'
-title 'Computer Science Principles: Unit 2 PD'
-description 'Online Exploration of CSP Unit 2'
-description_short 'Online Exploration of CSP Unit 2'
 login_required 'true'
 
 stage 'Getting Started'
