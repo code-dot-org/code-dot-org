@@ -1,5 +1,3 @@
-import FacingDirection from "./FacingDirection.js";
-
 export default class LevelBlock {
   constructor(blockType) {
     this.blockType = blockType;
@@ -14,9 +12,6 @@ export default class LevelBlock {
     this.isEmpty = false;
     this.isEmissive = false;
     this.isTransparent = false;
-
-    // facing direction to hold state of moving entities on action plane.
-    this.facing = FacingDirection.Left;
 
     if (blockType === "") {
       this.isWalkable = true;

@@ -1,0 +1,1668 @@
+{"frames": {
+
+"Iron_Golem_Anims001.png":
+{
+	"frame": {"x":1,"y":311,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims002.png":
+{
+	"frame": {"x":1,"y":311,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims003.png":
+{
+	"frame": {"x":1,"y":445,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims004.png":
+{
+	"frame": {"x":62,"y":446,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims005.png":
+{
+	"frame": {"x":1,"y":445,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims006.png":
+{
+	"frame": {"x":62,"y":312,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims007.png":
+{
+	"frame": {"x":123,"y":448,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims008.png":
+{
+	"frame": {"x":184,"y":449,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims009.png":
+{
+	"frame": {"x":245,"y":452,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims010.png":
+{
+	"frame": {"x":1,"y":311,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims011.png":
+{
+	"frame": {"x":335,"y":58,"w":59,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":34,"w":59,"h":62},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims012.png":
+{
+	"frame": {"x":86,"y":56,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":37,"w":59,"h":59},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims013.png":
+{
+	"frame": {"x":396,"y":60,"w":59,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":34,"w":59,"h":62},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims014.png":
+{
+	"frame": {"x":1,"y":311,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims015.png":
+{
+	"frame": {"x":184,"y":517,"w":59,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":28,"w":59,"h":68},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims016.png":
+{
+	"frame": {"x":1,"y":513,"w":59,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":29,"w":59,"h":67},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims017.png":
+{
+	"frame": {"x":245,"y":520,"w":59,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":28,"w":59,"h":68},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims018.png":
+{
+	"frame": {"x":123,"y":314,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims019.png":
+{
+	"frame": {"x":306,"y":318,"w":61,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":31,"w":61,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims020.png":
+{
+	"frame": {"x":369,"y":321,"w":62,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":33,"y":31,"w":62,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims021.png":
+{
+	"frame": {"x":433,"y":324,"w":61,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":31,"w":61,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims022.png":
+{
+	"frame": {"x":184,"y":315,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims023.png":
+{
+	"frame": {"x":245,"y":316,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims024.png":
+{
+	"frame": {"x":277,"y":385,"w":60,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":60,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims025.png":
+{
+	"frame": {"x":1,"y":378,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims026.png":
+{
+	"frame": {"x":62,"y":379,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims027.png":
+{
+	"frame": {"x":62,"y":379,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims028.png":
+{
+	"frame": {"x":62,"y":657,"w":59,"h":80},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":80},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims029.png":
+{
+	"frame": {"x":125,"y":587,"w":60,"h":72},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":31,"w":60,"h":72},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims030.png":
+{
+	"frame": {"x":339,"y":388,"w":60,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":31,"w":60,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims031.png":
+{
+	"frame": {"x":187,"y":590,"w":60,"h":72},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":31,"w":60,"h":72},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims032.png":
+{
+	"frame": {"x":371,"y":597,"w":59,"h":77},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":77},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims033.png":
+{
+	"frame": {"x":123,"y":381,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims034.png":
+{
+	"frame": {"x":1,"y":583,"w":60,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":26,"w":60,"h":70},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims035.png":
+{
+	"frame": {"x":62,"y":514,"w":58,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":21,"w":58,"h":67},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims036.png":
+{
+	"frame": {"x":63,"y":585,"w":60,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":26,"w":60,"h":70},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims037.png":
+{
+	"frame": {"x":184,"y":382,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims038.png":
+{
+	"frame": {"x":184,"y":382,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims039.png":
+{
+	"frame": {"x":433,"y":391,"w":63,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":31,"w":63,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims040.png":
+{
+	"frame": {"x":433,"y":258,"w":75,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":32,"w":75,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims041.png":
+{
+	"frame": {"x":251,"y":58,"w":82,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":35,"w":82,"h":61},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims042.png":
+{
+	"frame": {"x":424,"y":1,"w":82,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":38,"w":82,"h":57},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims043.png":
+{
+	"frame": {"x":171,"y":1,"w":82,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":38,"w":82,"h":55},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims044.png":
+{
+	"frame": {"x":255,"y":1,"w":82,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":38,"w":82,"h":55},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims045.png":
+{
+	"frame": {"x":184,"y":119,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims046.png":
+{
+	"frame": {"x":184,"y":119,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims047.png":
+{
+	"frame": {"x":377,"y":189,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":32,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims048.png":
+{
+	"frame": {"x":438,"y":192,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":32,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims049.png":
+{
+	"frame": {"x":377,"y":189,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":32,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims050.png":
+{
+	"frame": {"x":322,"y":122,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims051.png":
+{
+	"frame": {"x":1,"y":245,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":32,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims052.png":
+{
+	"frame": {"x":62,"y":246,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":32,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims053.png":
+{
+	"frame": {"x":123,"y":248,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":32,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims054.png":
+{
+	"frame": {"x":184,"y":119,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims055.png":
+{
+	"frame": {"x":306,"y":455,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims056.png":
+{
+	"frame": {"x":412,"y":526,"w":59,"h":69},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":27,"w":59,"h":69},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims057.png":
+{
+	"frame": {"x":367,"y":455,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims058.png":
+{
+	"frame": {"x":184,"y":119,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims059.png":
+{
+	"frame": {"x":1,"y":116,"w":59,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":34,"w":59,"h":62},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims060.png":
+{
+	"frame": {"x":62,"y":117,"w":59,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":34,"w":59,"h":62},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims061.png":
+{
+	"frame": {"x":123,"y":119,"w":59,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":34,"w":59,"h":62},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims062.png":
+{
+	"frame": {"x":383,"y":124,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims063.png":
+{
+	"frame": {"x":444,"y":127,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims064.png":
+{
+	"frame": {"x":184,"y":249,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":33,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims065.png":
+{
+	"frame": {"x":245,"y":250,"w":59,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":32,"w":59,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims066.png":
+{
+	"frame": {"x":184,"y":119,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims067.png":
+{
+	"frame": {"x":245,"y":185,"w":61,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":33,"w":61,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims068.png":
+{
+	"frame": {"x":306,"y":252,"w":62,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":33,"y":33,"w":62,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims069.png":
+{
+	"frame": {"x":370,"y":255,"w":61,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":32,"w":61,"h":64},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims070.png":
+{
+	"frame": {"x":1,"y":180,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims071.png":
+{
+	"frame": {"x":1,"y":180,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims072.png":
+{
+	"frame": {"x":62,"y":181,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims073.png":
+{
+	"frame": {"x":433,"y":1146,"w":60,"h":93},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":3,"w":60,"h":93},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims074.png":
+{
+	"frame": {"x":140,"y":1208,"w":60,"h":95},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":1,"w":60,"h":95},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims075.png":
+{
+	"frame": {"x":433,"y":1146,"w":60,"h":93},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":3,"w":60,"h":93},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims076.png":
+{
+	"frame": {"x":428,"y":458,"w":59,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":66},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims077.png":
+{
+	"frame": {"x":123,"y":183,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims078.png":
+{
+	"frame": {"x":122,"y":516,"w":60,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":29,"w":60,"h":67},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims079.png":
+{
+	"frame": {"x":147,"y":58,"w":58,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":26,"w":58,"h":59},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims080.png":
+{
+	"frame": {"x":306,"y":523,"w":60,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":29,"w":60,"h":67},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims081.png":
+{
+	"frame": {"x":184,"y":184,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims082.png":
+{
+	"frame": {"x":184,"y":184,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims083.png":
+{
+	"frame": {"x":308,"y":187,"w":67,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":28,"y":33,"w":67,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims084.png":
+{
+	"frame": {"x":245,"y":121,"w":75,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":34,"w":75,"h":62},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims085.png":
+{
+	"frame": {"x":1,"y":56,"w":83,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":38,"w":83,"h":58},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims086.png":
+{
+	"frame": {"x":339,"y":1,"w":83,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":40,"w":83,"h":55},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims087.png":
+{
+	"frame": {"x":1,"y":1,"w":83,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":40,"w":83,"h":53},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims088.png":
+{
+	"frame": {"x":86,"y":1,"w":83,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":40,"w":83,"h":53},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims089.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims090.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims091.png":
+{
+	"frame": {"x":87,"y":918,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims092.png":
+{
+	"frame": {"x":442,"y":964,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims093.png":
+{
+	"frame": {"x":87,"y":918,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims094.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims095.png":
+{
+	"frame": {"x":1,"y":998,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims096.png":
+{
+	"frame": {"x":44,"y":1004,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims097.png":
+{
+	"frame": {"x":1,"y":998,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims098.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims099.png":
+{
+	"frame": {"x":87,"y":1009,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims100.png":
+{
+	"frame": {"x":130,"y":1014,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims101.png":
+{
+	"frame": {"x":87,"y":1009,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims102.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims103.png":
+{
+	"frame": {"x":173,"y":1020,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims104.png":
+{
+	"frame": {"x":216,"y":1025,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims105.png":
+{
+	"frame": {"x":259,"y":1025,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims106.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims107.png":
+{
+	"frame": {"x":141,"y":1111,"w":46,"h":90},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":19,"w":46,"h":90},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims108.png":
+{
+	"frame": {"x":328,"y":1132,"w":52,"h":91},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":18,"w":52,"h":91},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims109.png":
+{
+	"frame": {"x":382,"y":1132,"w":49,"h":91},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":18,"w":49,"h":91},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims110.png":
+{
+	"frame": {"x":302,"y":1034,"w":43,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":43,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims111.png":
+{
+	"frame": {"x":1,"y":908,"w":41,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":21,"w":41,"h":88},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims112.png":
+{
+	"frame": {"x":336,"y":944,"w":51,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":21,"w":51,"h":88},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims113.png":
+{
+	"frame": {"x":428,"y":680,"w":39,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":21,"w":39,"h":88},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims114.png":
+{
+	"frame": {"x":347,"y":1041,"w":43,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":43,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims115.png":
+{
+	"frame": {"x":347,"y":1041,"w":43,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":43,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims116.png":
+{
+	"frame": {"x":189,"y":1116,"w":71,"h":90},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":19,"w":71,"h":90},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims117.png":
+{
+	"frame": {"x":307,"y":1225,"w":84,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":13,"w":84,"h":96},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims118.png":
+{
+	"frame": {"x":179,"y":1306,"w":70,"h":109},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":0,"w":70,"h":109},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims119.png":
+{
+	"frame": {"x":1,"y":1287,"w":84,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":13,"w":84,"h":96},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims120.png":
+{
+	"frame": {"x":262,"y":1125,"w":64,"h":90},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":19,"w":64,"h":90},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims121.png":
+{
+	"frame": {"x":392,"y":1041,"w":43,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":43,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims122.png":
+{
+	"frame": {"x":1,"y":1186,"w":45,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":15,"w":45,"h":94},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims123.png":
+{
+	"frame": {"x":432,"y":597,"w":36,"h":81},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":10,"w":36,"h":81},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims124.png":
+{
+	"frame": {"x":48,"y":1191,"w":46,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":15,"w":46,"h":94},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims125.png":
+{
+	"frame": {"x":437,"y":1055,"w":43,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":43,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims126.png":
+{
+	"frame": {"x":437,"y":1055,"w":43,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":43,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims127.png":
+{
+	"frame": {"x":187,"y":664,"w":43,"h":84},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":25,"w":43,"h":84},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims128.png":
+{
+	"frame": {"x":368,"y":523,"w":42,"h":71},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":38,"w":42,"h":71},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims129.png":
+{
+	"frame": {"x":207,"y":58,"w":42,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":52,"w":42,"h":59},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims130.png":
+{
+	"frame": {"x":457,"y":60,"w":41,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":52,"w":41,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims131.png":
+{
+	"frame": {"x":245,"y":383,"w":30,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":52,"w":30,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims132.png":
+{
+	"frame": {"x":401,"y":388,"w":30,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":52,"w":30,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims133.png":
+{
+	"frame": {"x":385,"y":676,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims134.png":
+{
+	"frame": {"x":385,"y":676,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims135.png":
+{
+	"frame": {"x":1,"y":734,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims136.png":
+{
+	"frame": {"x":44,"y":739,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims137.png":
+{
+	"frame": {"x":87,"y":744,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims138.png":
+{
+	"frame": {"x":130,"y":744,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims139.png":
+{
+	"frame": {"x":173,"y":750,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims140.png":
+{
+	"frame": {"x":216,"y":752,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims141.png":
+{
+	"frame": {"x":259,"y":757,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims142.png":
+{
+	"frame": {"x":302,"y":762,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims143.png":
+{
+	"frame": {"x":345,"y":763,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims144.png":
+{
+	"frame": {"x":388,"y":770,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims145.png":
+{
+	"frame": {"x":345,"y":763,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims146.png":
+{
+	"frame": {"x":463,"y":788,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims147.png":
+{
+	"frame": {"x":1,"y":821,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims148.png":
+{
+	"frame": {"x":87,"y":831,"w":42,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":24,"w":42,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims149.png":
+{
+	"frame": {"x":44,"y":826,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims150.png":
+{
+	"frame": {"x":131,"y":837,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims151.png":
+{
+	"frame": {"x":232,"y":666,"w":46,"h":84},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":25,"w":46,"h":84},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims152.png":
+{
+	"frame": {"x":280,"y":671,"w":52,"h":84},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":25,"w":52,"h":84},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims153.png":
+{
+	"frame": {"x":334,"y":676,"w":49,"h":84},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":25,"w":49,"h":84},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims154.png":
+{
+	"frame": {"x":174,"y":839,"w":43,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":24,"w":43,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims155.png":
+{
+	"frame": {"x":460,"y":875,"w":41,"h":87},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":22,"w":41,"h":87},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims156.png":
+{
+	"frame": {"x":389,"y":951,"w":51,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":21,"w":51,"h":88},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims157.png":
+{
+	"frame": {"x":470,"y":606,"w":39,"h":86},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":23,"w":39,"h":86},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims158.png":
+{
+	"frame": {"x":219,"y":844,"w":43,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":24,"w":43,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims159.png":
+{
+	"frame": {"x":219,"y":844,"w":43,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":24,"w":43,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims160.png":
+{
+	"frame": {"x":130,"y":926,"w":55,"h":86},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":23,"w":55,"h":86},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims161.png":
+{
+	"frame": {"x":254,"y":937,"w":80,"h":86},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":23,"w":80,"h":86},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims162.png":
+{
+	"frame": {"x":129,"y":1305,"w":48,"h":106},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":3,"w":48,"h":106},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims163.png":
+{
+	"frame": {"x":432,"y":1241,"w":77,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":11,"w":77,"h":98},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims164.png":
+{
+	"frame": {"x":187,"y":931,"w":65,"h":87},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":22,"w":65,"h":87},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims165.png":
+{
+	"frame": {"x":264,"y":849,"w":43,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":24,"w":43,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims166.png":
+{
+	"frame": {"x":1,"y":1095,"w":45,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":45,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims167.png":
+{
+	"frame": {"x":473,"y":526,"w":36,"h":78},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":16,"w":36,"h":78},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims168.png":
+{
+	"frame": {"x":48,"y":1100,"w":46,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":46,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims169.png":
+{
+	"frame": {"x":309,"y":850,"w":43,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":24,"w":43,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims170.png":
+{
+	"frame": {"x":309,"y":850,"w":43,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":24,"w":43,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims171.png":
+{
+	"frame": {"x":96,"y":1105,"w":43,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":20,"w":43,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims172.png":
+{
+	"frame": {"x":96,"y":1196,"w":42,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":13,"w":42,"h":96},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims173.png":
+{
+	"frame": {"x":87,"y":1294,"w":40,"h":105},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":3,"w":40,"h":105},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims174.png":
+{
+	"frame": {"x":393,"y":1225,"w":37,"h":108},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":0,"w":37,"h":108},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims175.png":
+{
+	"frame": {"x":469,"y":694,"w":30,"h":92},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":50,"y":0,"w":30,"h":92},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims176.png":
+{
+	"frame": {"x":431,"y":770,"w":30,"h":92},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":50,"y":0,"w":30,"h":92},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims177.png":
+{
+	"frame": {"x":123,"y":314,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims178.png":
+{
+	"frame": {"x":306,"y":318,"w":61,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":35,"w":61,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims179.png":
+{
+	"frame": {"x":123,"y":661,"w":62,"h":81},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":33,"y":23,"w":62,"h":81},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims180.png":
+{
+	"frame": {"x":306,"y":318,"w":61,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":35,"w":61,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims181.png":
+{
+	"frame": {"x":310,"y":596,"w":59,"h":73},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":23,"w":59,"h":73},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims182.png":
+{
+	"frame": {"x":245,"y":316,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":27,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims183.png":
+{
+	"frame": {"x":310,"y":596,"w":59,"h":73},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":23,"w":59,"h":73},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims184.png":
+{
+	"frame": {"x":123,"y":314,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":31,"w":59,"h":65},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims185.png":
+{
+	"frame": {"x":383,"y":124,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims186.png":
+{
+	"frame": {"x":444,"y":127,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims187.png":
+{
+	"frame": {"x":249,"y":592,"w":59,"h":72},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":19,"w":59,"h":72},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims188.png":
+{
+	"frame": {"x":444,"y":127,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":30,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims189.png":
+{
+	"frame": {"x":1,"y":655,"w":59,"h":77},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":19,"w":59,"h":77},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims190.png":
+{
+	"frame": {"x":245,"y":185,"w":61,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":39,"w":61,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims191.png":
+{
+	"frame": {"x":1,"y":655,"w":59,"h":77},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":19,"w":59,"h":77},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims192.png":
+{
+	"frame": {"x":383,"y":124,"w":59,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":33,"w":59,"h":63},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims193.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims194.png":
+{
+	"frame": {"x":141,"y":1111,"w":46,"h":90},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":19,"w":46,"h":90},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims195.png":
+{
+	"frame": {"x":202,"y":1208,"w":52,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":13,"w":52,"h":96},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims196.png":
+{
+	"frame": {"x":141,"y":1111,"w":46,"h":90},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":19,"w":46,"h":90},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims197.png":
+{
+	"frame": {"x":256,"y":1217,"w":49,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":13,"w":49,"h":96},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims198.png":
+{
+	"frame": {"x":1,"y":908,"w":41,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":21,"w":41,"h":88},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims199.png":
+{
+	"frame": {"x":256,"y":1217,"w":49,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":13,"w":49,"h":96},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims200.png":
+{
+	"frame": {"x":44,"y":913,"w":41,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":20,"w":41,"h":89},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims201.png":
+{
+	"frame": {"x":131,"y":837,"w":41,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":24,"w":41,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims202.png":
+{
+	"frame": {"x":232,"y":666,"w":46,"h":84},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":47,"y":25,"w":46,"h":84},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims203.png":
+{
+	"frame": {"x":354,"y":857,"w":58,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":24,"w":58,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims204.png":
+{
+	"frame": {"x":232,"y":666,"w":46,"h":84},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":47,"y":25,"w":46,"h":84},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims205.png":
+{
+	"frame": {"x":414,"y":864,"w":44,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":24,"w":44,"h":85},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims206.png":
+{
+	"frame": {"x":460,"y":875,"w":41,"h":87},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":22,"w":41,"h":87},
+	"sourceSize": {"w":127,"h":117}
+},
+"Iron_Golem_Anims207.png":
+{
+	"frame": {"x":414,"y":864,"w":44,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":24,"w":44,"h":85},
+	"sourceSize": {"w":127,"h":117}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Iron_Golem.png",
+	"format": "RGBA8888",
+	"size": {"w":510,"h":1416},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:381ebe636ebb9a8946d22c651b34fc05:0b3ae0eccc35a0a5320e65b8fb5d908e:dcfccc1936713d1b4683c650864af99d$"
+}
+}

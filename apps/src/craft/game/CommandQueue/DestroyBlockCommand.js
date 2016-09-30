@@ -2,9 +2,9 @@ import CommandState from "./CommandState.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class DestroyBlockCommand extends BaseCommand {
-  constructor(gameController, highlightCallback) {
+  constructor(gameController, highlightCallback, targetEntity) {
 
-    super(gameController, highlightCallback);
+    super(gameController, highlightCallback, targetEntity);
   }
 
   tick() {
@@ -13,7 +13,7 @@ export default class DestroyBlockCommand extends BaseCommand {
 
   begin() {
     super.begin();
-    this.gameController.destroyBlock(this);
+    this.GameController.destroyBlock(this);
   }
 
 }

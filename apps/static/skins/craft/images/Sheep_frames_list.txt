@@ -4,8 +4,6 @@ Facing Down
 	Eat Grass: 019-036
 	Kick Back Legs: 037-054
 	Look Down: 055-060
-	Look Up: 481-489
-	Walk: 490-501
 
 Facing Right
 	Look Right: 061-069
@@ -13,8 +11,6 @@ Facing Right
 	Eat Grass: 079-096
 	Kick Back Legs: 097-114
 	Look Down: 115-120
-	Look Up: 502-510
-	Walk: 511-522
 
 Facing Up
 	Look Right: 121-129
@@ -22,8 +18,6 @@ Facing Up
 	Eat Grass: 139-156
 	Kick Back Legs: 157-174
 	Look Down: 175-180
-	Look Up: 523-531
-	Walk: 532-543
 
 Facing Left
 	Look Right: 181-189
@@ -31,8 +25,7 @@ Facing Left
 	Eat Grass: 199-216
 	Kick Back Legs: 217-234
 	Look Down: 235-240
-	Look Up: 641-648
-	Walk: 545-556
+	Look At Camera: 481-486
 
 NAKED SHEEP
 
@@ -42,8 +35,6 @@ Facing Down
 	Eat Grass: 259-276
 	Kick Back Legs: 277-294
 	Look Down: 295-300
-	Look Up: 557-565
-	Walk: 566-577
 
 Facing Right
 	Look Right: 301-309
@@ -51,8 +42,6 @@ Facing Right
 	Eat Grass: 319-336
 	Kick Back Legs: 337-354
 	Look Down: 355-360
-	Look Up: 578-586
-	Walk: 587-598
 
 Facing Up
 	Look Right: 361-369
@@ -60,14 +49,11 @@ Facing Up
 	Eat Grass: 379-396
 	Kick Back Legs: 397-414
 	Look Down: 415-420
-	Look Up: 599-607
-	Walk: 608-619
-
+	
 Facing Left
 	Look Right: 421-429
 	Look Left: 430-438
 	Eat Grass: 439-456
 	Kick Back Legs: 457-474
 	Look Down: 475-480
-	Look At Camera: 632-640
-	Walk: 621-632
+	Look At Camera: 487-492

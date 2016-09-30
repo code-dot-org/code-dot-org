@@ -1,19 +1,21 @@
 import CommandQueue from "./CommandQueue/CommandQueue.js";
 import BaseCommand from "./CommandQueue/BaseCommand.js";
 import DestroyBlockCommand from "./CommandQueue/DestroyBlockCommand.js";
-import CallbackCommand from "./CommandQueue/CallbackCommand.js";
 import MoveForwardCommand from "./CommandQueue/MoveForwardCommand.js";
 import TurnCommand from "./CommandQueue/TurnCommand.js";
 import WhileCommand from "./CommandQueue/WhileCommand.js";
 import IfBlockAheadCommand from "./CommandQueue/IfBlockAheadCommand.js";
+import CallbackCommand from "./CommandQueue/CallbackCommand.js";
+
+import EventType from "./Event/EventType.js";
+import FacingDirection from "./LevelMVC/FacingDirection.js";
 
 import LevelModel from "./LevelMVC/LevelModel.js";
 import LevelView from "./LevelMVC/LevelView.js";
+import LevelEntity from "./LevelMVC/LevelEntity.js";
 import AssetLoader from "./LevelMVC/AssetLoader.js";
 
-import FacingDirection from "./LevelMVC/FacingDirection.js";
-
-import AStarPathFinding from "./LevelMVC/AStarPathFinding.js";
+import BaseEntity from "./Entities/BaseEntity.js";
 
 import * as CodeOrgAPI from "./API/CodeOrgAPI.js";
 
@@ -72,9 +74,9 @@ class GameController {
     this.afterAssetsLoaded = gameControllerConfig.afterAssetsLoaded;
     this.assetLoader = new AssetLoader(this);
     this.earlyLoadAssetPacks =
-        gameControllerConfig.earlyLoadAssetPacks || [];
+      gameControllerConfig.earlyLoadAssetPacks || [];
     this.earlyLoadNiceToHaveAssetPacks =
-        gameControllerConfig.earlyLoadNiceToHaveAssetPacks || [];
+      gameControllerConfig.earlyLoadNiceToHaveAssetPacks || [];
 
     this.resettableTimers = [];
 
@@ -107,18 +109,14 @@ class GameController {
     });
   }
 
-  getRandomBool() {
-    return this.levelModel.getRandomBool();
-  }
-
   /**
    * @param {Object} levelConfig
    */
   loadLevel(levelConfig) {
-    levelConfig.isEventLevel = true; // TODO(bjordan): DO NOT COMMIT
     this.levelData = Object.freeze(levelConfig);
 
-    this.levelModel = new LevelModel(this.levelData);
+    this.levelEntity = new LevelEntity(this);
+    this.levelModel = new LevelModel(this.levelData, this);
     this.levelView = new LevelView(this);
     this.specialLevelType = levelConfig.specialLevelType;
 
@@ -126,8 +124,10 @@ class GameController {
   }
 
   reset() {
+    this.levelEntity.reset();
     this.levelModel.reset();
     this.levelView.reset(this.levelModel);
+    this.levelEntity.loadData(this.levelData);
     this.resettableTimers.forEach((timer) => {
       timer.stop(true);
     });
@@ -152,7 +152,7 @@ class GameController {
         this.afterAssetsLoaded();
       }
     });
-
+    this.levelEntity.loadData(this.levelData);
     this.game.load.start();
   }
 
@@ -162,6 +162,7 @@ class GameController {
 
   update() {
     this.queue.tick();
+    this.levelEntity.tick();
     this.levelView.update();
 
     if (this.queue.isFinished()) {
@@ -177,54 +178,46 @@ class GameController {
       var dummyFunc = function () {
         console.log("highlight move forward command.");
       };
-      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
-      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Up);
-      this.queue.begin();
+      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Up);
     });
 
     this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onUp.add(() => {
       var dummyFunc = function () {
         console.log("highlight turn right command.");
       };
-      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
-      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Right);
-      this.queue.begin();
+      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Right);
     });
 
     this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onUp.add(() => {
       var dummyFunc = function () {
         console.log("highlight turn left command.");
       };
-      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
-      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Left);
-      this.queue.begin();
+      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Left);
     });
 
     this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onUp.add(() => {
       var dummyFunc = function () {
         console.log("highlight turn left command.");
       };
-      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
-      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Down);
-      this.queue.begin();
+      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Down);
     });
-
     this.game.input.keyboard.addKey(Phaser.Keyboard.P).onUp.add(() => {
       var dummyFunc = function () {
         console.log("highlight placeBlock command.");
       };
-      this.codeOrgAPI.placeBlock(dummyFunc, "logOak");
-      this.codeOrgAPI.startAttempt(dummyFunc);
+      this.codeOrgAPI.placeBlock(dummyFunc, "wool");
+      this.queue.begin();
     });
 
     this.game.input.keyboard.addKey(Phaser.Keyboard.D).onUp.add(() => {
       var dummyFunc = function () {
-        console.log("highlight destroy block command.");
+        console.log("highlight destroy / use block command.");
       };
       this.codeOrgAPI.destroyBlock(dummyFunc);
-      this.codeOrgAPI.startAttempt(dummyFunc);
+      this.queue.begin();
     });
 
+    /*
     this.game.input.keyboard.addKey(Phaser.Keyboard.E).onUp.add(() => {
       var dummyFunc = function (result) {
         console.log(`Execute command list done: ${result} `);
@@ -250,6 +243,7 @@ class GameController {
       };
       this.codeOrgAPI.whilePathAhead(dummyFunc, blockType, codeBlock);
     });
+    */
   }
 
   handleEndState() {
@@ -283,248 +277,370 @@ class GameController {
   }
 
   // command processors
-  moveEntityNorth(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
 
-    this.moveEntityTo(entity, [x, y - 1]);
-    commandQueueItem.succeeded();
+  getEntity(target) {
+    if (target === undefined)
+      target = 'Player';
+    let entity = this.levelEntity.entityMap.get(target);
+    if (entity === undefined)
+      this.printErrorMsg("Debug GetEntity: there is no entity : " + target + "\n");
+    return entity;
   }
 
-  moveEntitySouth(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
-
-    this.moveEntityTo(entity, [x, y + 1]);
-    commandQueueItem.succeeded();
+  getEntities(type) {
+    return this.levelEntity.getEntitiesOfType(type);
   }
 
-  moveEntityEast(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
-
-    this.moveEntityTo(entity, [x + 1, y]);
-    commandQueueItem.succeeded();
+  isType(target) {
+    return typeof (target) === 'string' && target !== 'Player';
   }
 
-  moveEntityWest(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
-
-    this.moveEntityTo(entity, [x - 1, y]);
-    commandQueueItem.succeeded();
+  printErrorMsg(msg) {
+    if (this.DEBUG)
+      this.game.debug.text(msg);
   }
 
-  moveEntityForward(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
-
-    this.moveEntityTo(entity, this.levelModel.getEntityMoveForwardPosition([x, y], entity.facing));
-    commandQueueItem.succeeded();
-  }
-
-  // direction is 1 ==> move toward, or -1 ==> move away from
-  moveEntityToPlayer(commandQueueItem, entity, isToward) {
-    const aStar = new AStarPathFinding(this.levelModel);
-    const entityPosition = this.levelModel.entityToPosition(entity);
-
-    const path = aStar.findPath([entityPosition.x, entityPosition.y], this.levelModel.player.position);
-
-    // if there is a valid path to the player, turn to face the block in the first step.
-    if (path.length > 0) {
-      const firstNode = path[0];
-      let targetPosition = isToward ? [firstNode.x, firstNode.y] : this.levelModel.getEntityRunAwayPosition(entity, this.levelModel.getFaceDirectionTo([entityPosition.x, entityPosition.y], [firstNode.x, firstNode.y]));
-
-      // if the intent is to move away from the player, there may not be a valid position to move to.
-      if (targetPosition) {
-        this.moveEntityTo(entity, targetPosition);
+  /**
+   * @param {any} commandQueueItem
+   * @param {any} moveAwayFrom (entity identifier)
+   * 
+   * @memberOf GameController
+   */
+  moveAway(commandQueueItem, moveAwayFrom) {
+    var target = commandQueueItem.target;
+    var targetIsType = this.isType(target);
+    var moveAwayFromIsType = this.isType(moveAwayFrom);
+    if (target === moveAwayFrom) {
+      this.printErrorMsg("Debug MoveAway: Can't move away entity from itself\n");
+      commandQueueItem.failed();
+      return;
+    }
+    // move away entity from entity
+    if (!targetIsType && !moveAwayFromIsType) {
+      var entity = this.getEntity(target);
+      var moveAwayFromEntity = this.getEntity(moveAwayFrom);
+      entity.moveAway(commandQueueItem, moveAwayFromEntity);
+    }
+    // move away type from entity
+    else if (targetIsType && !moveAwayFromIsType) {
+      var targetEntities = this.getEntities(target);
+      var moveAwayFromEntity = this.getEntity(moveAwayFrom);
+      if (moveAwayFromEntity !== undefined) {
+        for (var i = 0; i < targetEntities.length; i++) {
+          let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveAway(callbackCommand, moveAwayFrom) }, targetEntities[i].identifier);
+          targetEntities[i].addCommand(callbackCommand);
+        }
+      }
+      commandQueueItem.succeeded();
+    }
+    // move away entity from type
+    else if (!targetIsType && moveAwayFromIsType) {
+      var entity = this.getEntity(target);
+      var moveAwayFromEntities = this.getEntities(moveAwayFrom);
+      if (moveAwayFromEntities.length > 0) {
+        var closestTarget = [entity.getDistance(moveAwayFromEntities[0]), 0];
+        for (var i = 1; i < moveAwayFromEntities.length; i++) {
+          let distance = entity.getDistance(moveAwayFromEntities[i]);
+          if (distance < closestTarget[0]) {
+            closestTarget = [distance, i];
+          }
+        }
+        entity.moveAway(commandQueueItem, moveAwayFromEntities[closestTarget[1]]);
+      }
+      commandQueueItem.succeeded();
+    }
+    // move away type from type
+    else {
+      var entities = this.getEntities(target);
+      var moveAwayFromEntities = this.getEntities(moveAwayFrom);
+      if (moveAwayFromEntities.length > 0 && entities.length > 0) {
+        for (var i = 0; i < entities.length; i++) {
+          var entity = entities[i];
+          var closestTarget = [entity.getDistance(moveAwayFromEntities[0]), 0];
+          for (var j = 1; j < moveAwayFromEntities.length; j++) {
+            let distance = entity.getDistance(moveAwayFromEntities[j]);
+            if (distance < closestTarget[0]) {
+              closestTarget = [distance, j];
+            }
+          }
+          let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveAway(callbackCommand, moveAwayFromEntities[closestTarget[1]].identifier) }, entity.identifier);
+          entity.addCommand(callbackCommand);
+        }
+        commandQueueItem.succeeded();
       }
     }
-    commandQueueItem.succeeded();
   }
 
-  moveEntityTo(entity, position) {
-    const playerIndex = this.levelModel.coordinatesToIndex(this.levelModel.player.position);
 
-    // Move only if the designated block is empty
-    const targetIndex = this.levelModel.coordinatesToIndex(position);
-    if (this.levelModel.inBounds(position[0], position[1]) &&
-        this.levelModel.actionPlane[targetIndex].isEmpty &&
-        playerIndex !== targetIndex) {
-      const sourceIndex = this.levelModel.actionPlane.indexOf(entity);
+  /**
+   * @param {any} commandQueueItem
+   * @param {any} moveTowardTo (entity identifier)
+   * 
+   * @memberOf GameController
+   */
+  moveToward(commandQueueItem, moveTowardTo) {
+    var target = commandQueueItem.target;
+    var targetIsType = this.isType(target);
+    var moveTowardToIsType = this.isType(moveTowardTo);
+    if (target === moveTowardTo) {
+      this.printErrorMsg("Debug MoveToward: Can't move toward entity to itself\n");
+      commandQueueItem.failed();
+      return;
+    }
+    // move toward entity to entity
+    if (!targetIsType && !moveTowardToIsType) {
+      var entity = this.getEntity(target);
+      var moveTowardToEntity = this.getEntity(moveTowardTo);
+      entity.moveToward(commandQueueItem, moveTowardToEntity);
+    }
+    // move toward type to entity
+    else if (targetIsType && !moveTowardToIsType) {
+      var targetEntities = this.getEntities(target);
+      var moveTowardToEntity = this.getEntity(moveTowardTo);
+      if (moveTowardToEntity !== undefined) {
+        for (var i = 0; i < targetEntities.length; i++) {
+          let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveToward(callbackCommand, moveTowardTo) }, targetEntities[i].identifier);
+          targetEntities[i].addCommand(callbackCommand);
+        }
+        commandQueueItem.succeeded();
+      }
+    }
+    // move toward entity to type
+    else if (!targetIsType && moveTowardToIsType) {
+      var entity = this.getEntity(target);
+      var moveTowardToEntities = this.getEntities(moveTowardTo);
+      if (moveTowardToEntities.length > 0) {
+        var closestTarget = [entity.getDistance(moveTowardToEntities[0]), 0];
+        for (var i = 1; i < moveTowardToEntities.length; i++) {
+          let distance = entity.getDistance(moveTowardToEntities[i]);
+          if (distance < closestTarget[0]) {
+            closestTarget = [distance, i];
+          }
+        }
+        entity.moveToward(commandQueueItem, moveTowardToEntities[closestTarget[1]]);
+      }
+      commandQueueItem.succeeded();
+    }
+    // move toward type to type
+    else {
+      var entities = this.getEntities(target);
+      var moveTowardToEntities = this.getEntities(moveTowardTo);
+      if (moveTowardToEntities.length > 0 && entities.length > 0) {
+        for (var i = 0; i < entities.length; i++) {
+          var entity = entities[i];
+          var closestTarget = [entity.getDistance(moveTowardToEntities[0]), 0];
+          for (var j = 1; j < moveTowardToEntities.length; j++) {
+            let distance = entity.getDistance(moveTowardToEntities[j]);
+            if (distance < closestTarget[0]) {
+              closestTarget = [distance, j];
+            }
+          }
+          let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveToward(callbackCommand, moveTowardToEntities[closestTarget[1]].identifier) }, entity.identifier);
+          entity.addCommand(callbackCommand);
+        }
+        commandQueueItem.succeeded();
+      }
+    }
+  }
 
-      const sourcePos = this.levelModel.indexToXY(sourceIndex);
-      const targetPos = this.levelModel.indexToXY(targetIndex);
-      this.levelView.playEntityAnimation("normalWalk", this.levelModel.actionPlane.indexOf(entity), this.levelModel.getFaceDirectionTo([sourcePos.x, sourcePos.y], [targetPos.x, targetPos.y]));
-
-      // Move the block in the model and view.
-      this.levelModel.moveBlock(sourceIndex, targetIndex);
-      this.levelView.moveBlockSprite(sourceIndex, position, entity.isEntity);
-
-      // Update renderer
-      this.levelModel.computeShadingPlane();
-      this.levelModel.computeFowPlane();
-      this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
-      this.levelView.updateFowPlane(this.levelModel.fowPlane);
+  moveTo(commandQueueItem, moveTowardTo) {
+    var target = commandQueueItem.target;
+    var targetIsType = this.isType(target);
+    var moveTowardToIsType = this.isType(moveTowardTo);
+    if (target === moveTowardTo) {
+      this.printErrorMsg("Debug MoveToward: Can't move toward entity to itself\n");
+      commandQueueItem.failed();
+      return;
+    }
+    // move toward entity to entity
+    if (!targetIsType && !moveTowardToIsType) {
+      var entity = this.getEntity(target);
+      var moveTowardToEntity = this.getEntity(moveTowardTo);
+      entity.moveTo(commandQueueItem, moveTowardToEntity);
+    }
+    // move toward type to entity
+    else if (targetIsType && !moveTowardToIsType) {
+      var targetEntities = this.getEntities(target);
+      var moveTowardToEntity = this.getEntity(moveTowardTo);
+      if (moveTowardToEntity !== undefined) {
+        for (var i = 0; i < targetEntities.length; i++) {
+          let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveTo(callbackCommand, moveTowardTo) }, targetEntities[i].identifier);
+          targetEntities[i].addCommand(callbackCommand);
+        }
+        commandQueueItem.succeeded();
+      }
+    }
+    // move toward entity to type
+    else if (!targetIsType && moveTowardToIsType) {
+      var entity = this.getEntity(target);
+      var moveTowardToEntities = this.getEntities(moveTowardTo);
+      if (moveTowardToEntities.length > 0) {
+        var closestTarget = [entity.getDistance(moveTowardToEntities[0]), 0];
+        for (var i = 1; i < moveTowardToEntities.length; i++) {
+          let distance = entity.getDistance(moveTowardToEntities[i]);
+          if (distance < closestTarget[0]) {
+            closestTarget = [distance, i];
+          }
+        }
+        entity.moveTo(commandQueueItem, moveTowardToEntities[closestTarget[1]]);
+      }
+      commandQueueItem.succeeded();
+    }
+    // move toward type to type
+    else {
+      var entities = this.getEntities(target);
+      var moveTowardToEntities = this.getEntities(moveTowardTo);
+      if (moveTowardToEntities.length > 0 && entities.length > 0) {
+        for (var i = 0; i < entities.length; i++) {
+          var entity = entities[i];
+          var closestTarget = [entity.getDistance(moveTowardToEntities[0]), 0];
+          for (var j = 1; j < moveTowardToEntities.length; j++) {
+            let distance = entity.getDistance(moveTowardToEntities[j]);
+            if (distance < closestTarget[0]) {
+              closestTarget = [distance, j];
+            }
+          }
+          let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveTo(callbackCommand, moveTowardToEntities[closestTarget[1]].identifier) }, entity.identifier);
+          entity.addCommand(callbackCommand);
+        }
+        commandQueueItem.succeeded();
+      }
     }
   }
 
   moveForward(commandQueueItem) {
-    var player = this.levelModel.player,
-        allFoundCreepers,
-        groundType,
-        jumpOff;
-
-    if (this.levelModel.canMoveForward()) {
-      let wasOnBlock = player.isOnBlock;
-      this.levelModel.moveForward();
-      // TODO: check for Lava, Creeper, water => play approp animation & call commandQueueItem.failed()
-
-      jumpOff = wasOnBlock && wasOnBlock !== player.isOnBlock;
-      if (player.isOnBlock || jumpOff) {
-        groundType = this.levelModel.actionPlane[this.levelModel.coordinatesToIndex(player.position)].blockType;
-      } else {
-        groundType = this.levelModel.groundPlane[this.levelModel.coordinatesToIndex(player.position)].blockType;
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      entity.moveForward(commandQueueItem);
+    }
+    else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveForward(callbackCommand) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
       }
-
-      this.levelView.playMoveForwardAnimation(player.position, player.facing, jumpOff, player.isOnBlock, groundType, () => {
-        this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
-
-        // First arg is if we found a creeper
-        allFoundCreepers = this.levelModel.isPlayerStandingNearCreeper();
-
-        if (this.levelModel.isPlayerStandingInWater()) {
-          this.levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
-            commandQueueItem.failed();
-          });
-        } else if (this.levelModel.isPlayerStandingInLava()) {
-          this.levelView.playBurnInLavaAnimation(player.position, player.facing, player.isOnBlock, () => {
-            commandQueueItem.failed();
-          });
-        } else {
-          this.delayPlayerMoveBy(30, 200, () => {
-            commandQueueItem.succeeded();
-          });
-        }
-      });
-    } else {
-      if (this.levelModel.isForwardBlockOfType("creeper")) {
-        this.levelView.playCreeperExplodeAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), player.isOnBlock, () => {
-          commandQueueItem.failed();
-        });
-      } else {
-        this.levelView.playBumpAnimation(player.position, player.facing, false);
-        this.delayPlayerMoveBy(400, 800, () => {
-          commandQueueItem.succeeded();
-        });
-      }
+      commandQueueItem.succeeded();
     }
   }
 
   moveDirection(commandQueueItem, direction) {
-    const player = this.levelModel.player;
-
-    this.levelModel.turnToDirection(player, direction);
-
-    if (!this.levelModel.canMoveForward()) {
-      this.levelView.playBumpAnimation(player.position, player.facing, false);
-      commandQueueItem.succeeded();
-
-      // The world edge was bumped, don't invoke events.
-      const forwardPos = this.levelModel.getMoveForwardPosition();
-      if (this.levelModel.inBounds(forwardPos[0], forwardPos[1])) {
-        this.events.forEach(e => e({ eventType: 'blockTouched', blockReference: this.levelModel.getForwardBlock(), blockType: this.levelModel.getForwardBlockType() }));
-      }
-      return;
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      entity.moveDirection(commandQueueItem, direction);
     }
-
-    this.levelModel.actionPlane.forEach((block) => {
-      if (block.isEmpty) {
-        return;
+    else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveDirection(callbackCommand, direction) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
       }
+      commandQueueItem.succeeded();
+    }
+  }
 
-      this.events.forEach(e => {
-        e({ eventType: 'playerMoved', blockReference: block, blockType: block.blockType });
-      });
-    });
-
-    this.levelModel.moveDirection(direction);
-    const groundType = this.levelModel.groundPlane[this.levelModel.coordinatesToIndex(player.position)].blockType;
-    this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
-    this.levelView.playMoveForwardAnimation(player.position, player.facing, false, player.isOnBlock, groundType, () => {
-      this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
-      this.delayPlayerMoveBy(30, 200, () => {
-        commandQueueItem.succeeded();
-      });
-    });
+  moveRandom(commandQueueItem) {
+    var target = commandQueueItem.target;
+    var getRandomInt = function (min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      entity.moveDirection(commandQueueItem, getRandomInt(0, 3));
+    }
+    else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.moveDirection(callbackCommand, getRandomInt(0, 3)) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
+      commandQueueItem.succeeded();
+    }
   }
 
   turn(commandQueueItem, direction) {
-    const player = this.levelModel.player;
-
-    if (direction === -1) {
-      this.levelModel.turnLeft(player);
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      entity.turn(commandQueueItem, direction);
     }
-
-    if (direction === 1) {
-      this.levelModel.turnRight(player);
-    }
-    this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
-
-    this.delayPlayerMoveBy(200, 800, () => {
+    else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.turn(callbackCommand, direction) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
       commandQueueItem.succeeded();
-    });
-  }
-
-  turnEntity(commandQueueItem, entity, direction) {
-    if (direction === -1) {
-      this.levelModel.turnLeft(entity);
     }
+  }
 
-    if (direction === 1) {
-      this.levelModel.turnRight(entity);
+  turnRandom(commandQueueItem) {
+    var target = commandQueueItem.target;
+    var getRandomInt = function (min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-
-    const sourceIndex = this.levelModel.actionPlane.indexOf(entity);
-    this.levelView.updateBlockSpriteDirection(sourceIndex, entity.facing);
-
-    commandQueueItem.succeeded();
-  }
-
-  turnEntityToPlayer(commandQueueItem, entity) {
-    const aStar = new AStarPathFinding(this.levelModel);
-    const entityPosition = this.levelModel.entityToPosition(entity);
-
-    const path = aStar.findPath([entityPosition.x, entityPosition.y], this.levelModel.player.position);
-
-    // if there is a valid path to the player, turn to face the block in the first step.
-    if (path.length > 0) {
-      const firstNode = path[0];
-      this.levelModel.turnToDirection(entity, this.levelModel.getFaceDirectionTo([entityPosition.x, entityPosition.y], [firstNode.x, firstNode.y]));
-
-      const sourceIndex = this.levelModel.actionPlane.indexOf(entity);
-      this.levelView.updateBlockSpriteDirection(sourceIndex, entity.facing);
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      entity.turn(commandQueueItem, getRandomInt(0, 3));
     }
-    commandQueueItem.succeeded();
-  }
-
-  destroyEntity(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
-    this.destroyBlockWithoutPlayerInteraction([x, y]);
-    this.levelModel.computeShadingPlane();
-    this.levelModel.computeFowPlane();
-    this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
-    this.levelView.updateFowPlane(this.levelModel.fowPlane);
-    commandQueueItem.succeeded();
-  }
-
-  explodeEntity(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
-    this.levelView.playExplosionCloudAnimation([x, y]);
-    commandQueueItem.succeeded();
-  }
-
-  flashEntity(commandQueueItem, entity) {
-    const {x, y} = this.levelModel.entityToPosition(entity);
-    var delay = this.levelView.flashSpriteToWhite([x, y]);
-    this.delayBy(delay, () => {
+    else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.turn(callbackCommand, getRandomInt(0, 3)) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
       commandQueueItem.succeeded();
-    });
+    }
+  }
+
+  flashEntity(commandQueueItem) {
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      var delay = this.levelView.flashSpriteToWhite(entity.sprite);
+      this.delayBy(delay, () => {
+        commandQueueItem.succeeded();
+      });
+    } else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.flashEntity(callbackCommand) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
+      commandQueueItem.succeeded();
+    }
+  }
+
+
+  explodeEntity(commandQueueItem) {
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      this.levelView.playExplosionCloudAnimation(entity.position);
+      commandQueueItem.succeeded();
+    } else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.explodeEntity(callbackCommand) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
+      commandQueueItem.succeeded();
+    }
+  }
+
+  wait(commandQueueItem, time) {
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      setTimeout(() => { commandQueueItem.succeeded() }, time * 1000);
+    } else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.wait(callbackCommand, time) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
+      commandQueueItem.succeeded();
+    }
   }
 
   playSound(commandQueueItem, sound) {
@@ -533,11 +649,11 @@ class GameController {
   }
 
   destroyBlockWithoutPlayerInteraction(position) {
-      let block = this.levelModel.actionPlane[this.levelModel.yToIndex(position[1]) + position[0]];
+    let block = this.levelModel.actionPlane[this.levelModel.yToIndex(position[1]) + position[0]];
     this.levelModel.destroyBlock(position);
 
-    if (block) {
-      let destroyPosition = block.position; // position isn't a member of block, is this valid? Resolves to Undefined.
+    if (block !== null) {
+      let destroyPosition = block.position;
       let blockType = block.blockType;
 
       if (block.isDestroyable) {
@@ -565,22 +681,23 @@ class GameController {
             blockType = "planksSpruce";
             break;
         }
-
         this.levelView.actionPlaneBlocks[this.levelModel.yToIndex(destroyPosition[1]) + destroyPosition[0]].kill();
-        this.levelView.playExplosionAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, () => {}, true);
+        this.levelView.playExplosionAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, () => { }, true);
       } else if (block.isUsable) {
         switch (blockType) {
           case "sheep":
             // TODO: What to do with already sheered sheep?
-            this.levelView.playShearAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, () => {});
+            this.levelView.playShearAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, () => { });
             break;
         }
       }
     }
   }
 
-  destroyBlock(commandQueueItem) {
+  destroyBlock(commandQueueItem, type) {
     let player = this.levelModel.player;
+    let frontEntity = this.levelEntity.getEntityAt(this.levelModel.getMoveForwardPosition(player));
+    // if there is a destroyable block in front of the player
     if (this.levelModel.canDestroyBlockForward()) {
       let block = this.levelModel.destroyBlockForward();
 
@@ -617,13 +734,15 @@ class GameController {
           this.levelView.playDestroyBlockAnimation(player.position, player.facing, destroyPosition, blockType, this.levelModel.shadingPlane, this.levelModel.fowPlane, () => {
             commandQueueItem.succeeded();
           });
-        } else if (block.isUsable) {
+        }
+        else if (block.isUsable) {
           switch (blockType) {
             case "sheep":
               // TODO: What to do with already sheered sheep?
               this.levelView.playShearSheepAnimation(player.position, player.facing, destroyPosition, blockType, () => {
                 commandQueueItem.succeeded();
               });
+
               break;
             default:
               commandQueueItem.succeeded();
@@ -632,6 +751,17 @@ class GameController {
           commandQueueItem.succeeded();
         }
       }
+      // if there is a entity in front of the player
+    } else if (frontEntity != null) {
+      // push use command to execute general use behavior of the entity before executing the event
+      this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
+        var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
+        frontEntity.addCommand(useCommand);
+        this.levelView.playExplosionAnimation(player.position, player.facing, frontEntity.position, frontEntity.type, () => { }, false);
+        this.levelView.playPlayerAnimation("idle", player.position, player.facing, false);
+        commandQueueItem.succeeded();
+        setTimeout(() => { this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]); }, 200);
+      });
     } else {
       this.levelView.playPunchDestroyAirAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), () => {
         this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]);
@@ -662,7 +792,7 @@ class GameController {
   }
 
   checkRailBlock(blockType) {
-      var checkRailBlock = this.levelModel.railMap[this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]];
+    var checkRailBlock = this.levelModel.railMap[this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]];
     if (checkRailBlock !== "") {
       blockType = checkRailBlock;
     } else {
@@ -672,7 +802,7 @@ class GameController {
   }
 
   placeBlock(commandQueueItem, blockType) {
-      var blockIndex = (this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]);
+    var blockIndex = (this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]);
     var blockTypeAtPosition = this.levelModel.actionPlane[blockIndex].blockType;
     if (this.levelModel.canPlaceBlock()) {
       if (this.checkMinecartLevelEndAnimation() && blockType === "rail") {
@@ -741,8 +871,8 @@ class GameController {
 
   placeBlockForward(commandQueueItem, blockType) {
     var forwardPosition,
-        placementPlane,
-        soundEffect = () => {};
+      placementPlane,
+      soundEffect = () => { };
 
     if (!this.levelModel.canPlaceBlockForward()) {
       this.levelView.playPunchAirAnimation(this.levelModel.player.position, this.levelModel.player.facing, this.levelModel.player.position, () => {
@@ -786,68 +916,68 @@ class GameController {
         var doorPosition = [houseBottomRight[0] - 1, houseBottomRight[1] + 1];
         this.levelModel.moveTo(inFrontOfDoor);
         this.levelView.playSuccessHouseBuiltAnimation(
-            player.position,
-            player.facing,
-            player.isOnBlock,
-            this.levelModel.houseGroundToFloorBlocks(houseBottomRight),
-            [bedPosition, doorPosition],
-            () => {
-              commandQueueItem.succeeded();
-            },
-            () => {
-              this.levelModel.destroyBlock(bedPosition);
-              this.levelModel.destroyBlock(doorPosition);
-              this.levelModel.computeShadingPlane();
-              this.levelModel.computeFowPlane();
-              this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
-              this.levelView.updateFowPlane(this.levelModel.fowPlane);
-            }
+          player.position,
+          player.facing,
+          player.isOnBlock,
+          this.levelModel.houseGroundToFloorBlocks(houseBottomRight),
+          [bedPosition, doorPosition],
+          () => {
+            commandQueueItem.succeeded();
+          },
+          () => {
+            this.levelModel.destroyBlock(bedPosition);
+            this.levelModel.destroyBlock(doorPosition);
+            this.levelModel.computeShadingPlane();
+            this.levelModel.computeFowPlane();
+            this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+            this.levelView.updateFowPlane(this.levelModel.fowPlane);
+          }
         );
       } else if (this.checkMinecartLevelEndAnimation()) {
         this.levelView.playMinecartAnimation(player.position, player.facing, player.isOnBlock,
-            () => commandQueueItem.succeeded(), this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
+          () => commandQueueItem.succeeded(), this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
       } else if (this.checkTntAnimation()) {
-        this.levelView.scaleShowWholeWorld(() => {});
+        this.levelView.scaleShowWholeWorld(() => { });
         var tnt = this.levelModel.getTnt();
         var wasOnBlock = player.isOnBlock;
         this.levelView.playDestroyTntAnimation(player.position, player.facing, player.isOnBlock, this.levelModel.getTnt(), this.levelModel.shadingPlane,
-            () => {
-              if (tnt.length) {
-                // Shakes camera (need to avoid contention with pan?)
-                //this.game.camera.setPosition(0, 5);
-                //this.game.add.tween(this.game.camera)
-                //    .to({y: -10}, 40, Phaser.Easing.Sinusoidal.InOut, false, 0, 3, true)
-                //    .to({y: 0}, 0)
-                //    .start();
+          () => {
+            if (tnt.length) {
+              // Shakes camera (need to avoid contention with pan?)
+              //this.game.camera.setPosition(0, 5);
+              //this.game.add.tween(this.game.camera)
+              //    .to({y: -10}, 40, Phaser.Easing.Sinusoidal.InOut, false, 0, 3, true)
+              //    .to({y: 0}, 0)
+              //    .start();
+            }
+            for (var i in tnt) {
+              if (tnt[i].x === this.levelModel.player.position.x && tnt[i].y === this.levelModel.player.position.y) {
+                this.levelModel.player.isOnBlock = false;
               }
-              for (var i in tnt) {
-                if (tnt[i].x === this.levelModel.player.position.x && tnt[i].y === this.levelModel.player.position.y) {
-                  this.levelModel.player.isOnBlock = false;
+              var surroundingBlocks = this.levelModel.getAllBorderingPositionNotOfType(tnt[i], "tnt");
+              this.levelModel.destroyBlock(tnt[i]);
+              for (var b = 1; b < surroundingBlocks.length; ++b) {
+                if (surroundingBlocks[b][0]) {
+                  this.destroyBlockWithoutPlayerInteraction(surroundingBlocks[b][1]);
                 }
-                var surroundingBlocks = this.levelModel.getAllBorderingPositionNotOfType(tnt[i], "tnt");
-                this.levelModel.destroyBlock(tnt[i]);
-                for (var b = 1; b < surroundingBlocks.length; ++b) {
-                  if (surroundingBlocks[b][0]) {
-                    this.destroyBlockWithoutPlayerInteraction(surroundingBlocks[b][1]);
-                  }
-                }
               }
-              if (!player.isOnBlock && wasOnBlock) {
-                this.levelView.playPlayerJumpDownVerticalAnimation(player.position, player.facing);
-              }
-              this.levelModel.computeShadingPlane();
-              this.levelModel.computeFowPlane();
-              this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
-              this.levelView.updateFowPlane(this.levelModel.fowPlane);
-              this.delayBy(200, () => {
-                this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock, () => {
-                  commandQueueItem.succeeded();
-                });
+            }
+            if (!player.isOnBlock && wasOnBlock) {
+              this.levelView.playPlayerJumpDownVerticalAnimation(player.position, player.facing);
+            }
+            this.levelModel.computeShadingPlane();
+            this.levelModel.computeFowPlane();
+            this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+            this.levelView.updateFowPlane(this.levelModel.fowPlane);
+            this.delayBy(200, () => {
+              this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock, () => {
+                commandQueueItem.succeeded();
               });
             });
+          });
       } else {
         this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock,
-            () => commandQueueItem.succeeded());
+          () => commandQueueItem.succeeded());
       }
     } else {
       this.levelView.playFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
@@ -860,6 +990,138 @@ class GameController {
     return this.levelModel.isForwardBlockOfType(blockType);
   }
 
+  useEntity(commandQueueItem, userIdentifier, targetIdentifier) {
+    if (this.levelEntity.entityMap.has(targetIdentifier)) {
+      let userEntity = this.getEntity(userIdentifier);
+      this.levelEntity.entityMap.get(targetIdentifier).use(commandQueueItem, userEntity);
+    }
+  }
+
+  spawnEntity(commandQueueItem, type, spawnDirection) {
+    var spawnedEntity = this.levelEntity.spawnEntity(type, spawnDirection);
+    if (spawnedEntity !== null) {
+      this.events.forEach(e => e({ eventType: EventType.WhenSpawned, targetType: type, targetIdentifier: spawnedEntity.identifier }));
+      commandQueueItem.succeeded();
+    }
+    else
+      commandQueueItem.failed();
+  }
+
+  spawnEntityAt(commandQueueItem, type, x, y, facing) {
+    var spawnedEntity = this.levelEntity.spawnEntityAt(type, x, y, facing);
+    if (spawnedEntity !== null) {
+      this.events.forEach(e => e({ eventType: EventType.WhenSpawned, targetType: type, targetIdentifier: spawnedEntity.identifier }));
+      commandQueueItem.succeeded();
+    }
+    else
+      commandQueueItem.failed();
+  }
+
+  destroyEntity(commandQueueItem, target) {
+    if (!this.isType(target)) {
+      if (target !== 'Player') {
+        this.levelEntity.destroyEntity(target);
+      }
+      else {
+        this.printErrorMsg("Not able to destroy player\n");
+      }
+      commandQueueItem.succeeded();
+    }
+    else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        this.levelEntity.destroyEntity(entities[i].identifier);
+      }
+      commandQueueItem.succeeded();
+    }
+  }
+
+  drop(commandQueueItem, itemType) {
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      entity.drop(commandQueueItem, itemType);
+    } else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.drop(callbackCommand, itemType) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
+      commandQueueItem.succeeded();
+    }
+  }
+
+  attack(commandQueueItem) {
+    var target = commandQueueItem.target;
+    if (!this.isType(target)) {
+      var entity = this.getEntity(target);
+      if(entity.identifier === 'Player')
+      {
+        this.codeOrgAPI.destroyBlock(dummyFunc);
+        commandQueueItem.succeeded();
+      } else {
+        entity.attack(commandQueueItem);
+      }
+    } else {
+      var entities = this.getEntities(target);
+      for (var i = 0; i < entities.length; i++) {
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.attack(callbackCommand) }, entities[i].identifier);
+        entities[i].addCommand(callbackCommand);
+      }
+      commandQueueItem.succeeded();
+    }
+  }
+
+  addCommand(commandQueueItem) {
+    var target = this.getEntity(commandQueueItem.target);
+    // there is a target, push command to the specific target
+    if (target !== undefined)
+      target.addCommand(commandQueueItem);
+    else {
+      this.queue.addCommand(commandQueueItem);
+      this.queue.begin();
+    }
+  }
+
+  addGlobalCommand(commandQueueItem) {
+    let entity = this.levelEntity.entityMap.get(commandQueueItem.target);
+    if (entity !== undefined)
+      entity.addCommand(commandQueueItem);
+    else {
+      this.queue.addCommand(commandQueueItem);
+      this.queue.begin();
+    }
+  }
+
+  startDay(commandQueueItem) {
+    if (this.levelModel.isDaytime) {
+      commandQueueItem.succeeded();
+      if (this.DEBUG)
+        this.game.debug.text("Impossible to start day since it's already day time\n");
+    }
+    else {
+      this.levelModel.isDaytime = true;
+      this.levelModel.clearFow();
+      this.levelView.updateFowPlane(this.levelModel.fowPlane);
+      this.events.forEach(e => e({ eventType: EventType.WhenDay }));
+      commandQueueItem.succeeded();
+    }
+  }
+
+  startNight(commandQueueItem) {
+    if (!this.levelModel.isDaytime) {
+      commandQueueItem.succeeded();
+      if (this.DEBUG)
+        this.game.debug.text("Impossible to start night since it's already night time\n");
+    }
+    else {
+      this.levelModel.isDaytime = false;
+      this.levelModel.computeFowPlane();
+      this.levelView.updateFowPlane(this.levelModel.fowPlane);
+      this.events.forEach(e => e({ eventType: EventType.WhenNight }));
+      commandQueueItem.succeeded();
+    }
+  }
 }
 
 window.GameController = GameController;

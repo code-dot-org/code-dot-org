@@ -14,7 +14,7 @@ export default class PlaceInFrontCommand extends BaseCommand {
 
   begin() {
     super.begin();
-    this.gameController.placeBlockForward(this, this.BlockType);
+    this.GameController.placeBlockForward(this, this.BlockType);
   }
 }
 

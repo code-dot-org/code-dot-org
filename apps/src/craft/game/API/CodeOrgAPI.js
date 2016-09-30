@@ -9,6 +9,7 @@ import WhileCommand from "../CommandQueue/WhileCommand.js";
 import IfBlockAheadCommand from "../CommandQueue/IfBlockAheadCommand.js";
 import CheckSolutionCommand from "../CommandQueue/CheckSolutionCommand.js";
 import CallbackCommand from "../CommandQueue/CallbackCommand.js";
+import RepeatCommand from "../CommandQueue/RepeatCommand.js";
 
 export function get(controller) {
   return {
@@ -36,7 +37,6 @@ export function get(controller) {
       }
 
       controller.setPlayerActionDelayByQueueLength();
-
       controller.queue.begin();
     },
 
@@ -71,168 +71,187 @@ export function get(controller) {
       // (and clear out on reset)
     },
 
-    destroyEntity: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.destroyEntity(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
+    // not used
+    /*
+    isEntityMove: function (event, entityIdentifier) {
+      if (event.eventType === 'entityMoved') {
+        return event.entityIdentifier === entityIdentifier;
+      }
+      return false;
+    },*/
+    // helper functions for event
+    isEventTriggered: function (event, eventType) {
+      return (event.eventType === eventType);
+    },
+    // command list
+    moveForward: function (highlightCallback, targetEntity) {
+      controller.addCommand(new MoveForwardCommand(controller, highlightCallback, targetEntity), targetEntity);
     },
 
-    explodeEntity: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.explodeEntity(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
+    moveRandom: function (highlightCallback, targetEntity) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveRandom(callbackCommand);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
     },
 
-    flashEntity: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.flashEntity(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
+    moveDirection: function (highlightCallback, direction, targetEntity) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveDirection(callbackCommand, direction);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
+    },
+
+    moveAway: function (highlightCallback, targetEntity, moveAwayFrom) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveAway(callbackCommand, moveAwayFrom);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
+    },
+
+    moveToward: function (highlightCallback, targetEntity, moveTowardTo) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveToward(callbackCommand, moveTowardTo);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
+    },
+
+    moveTo: function (highlightCallback, targetEntity, moveTowardTo) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveTo(callbackCommand, moveTowardTo);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
+    },
+
+    flashEntity: function (highlightCallback, targetEntity) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.flashEntity(callbackCommand);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
+    },
+
+    explodeEntity: function (highlightCallback, targetEntity) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.explodeEntity(callbackCommand);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
     },
 
     playSound: function (highlightCallback, sound) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.playSound(myQueueItem, sound);
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.playSound(callbackCommand, sound);
       });
-      controller.queue.addCommand(myQueueItem);
+      controller.addCommand(callbackCommand);
     },
 
-    moveEntityNorth: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveEntityNorth(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
+    turn: function (highlightCallback, direction, targetEntity) {
+
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.turn(callbackCommand, direction === 'right' ? 1 : -1);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
     },
 
-    moveEntitySouth: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveEntitySouth(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
+    turnRandom: function (highlightCallback, targetEntity) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.turnRandom(callbackCommand);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
     },
 
-    moveEntityEast: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveEntityEast(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
+    turnRight: function (highlightCallback, targetEntity) {
+      controller.addCommand(new TurnCommand(controller, highlightCallback, 1, targetEntity));
     },
 
-    moveEntityWest: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveEntityWest(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
+    turnLeft: function (highlightCallback, targetEntity) {
+      controller.addCommand(new TurnCommand(controller, highlightCallback, -1, targetEntity));
     },
 
-    moveEntityForward: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveEntityForward(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    moveEntityTowardPlayer: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveEntityToPlayer(myQueueItem, entity, 1);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    moveEntityAwayFromPlayer: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveEntityToPlayer(myQueueItem, entity, 0);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    moveDirection: function (highlightCallback, direction) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveDirection(myQueueItem, direction);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    moveForward: function (highlightCallback) {
-      controller.queue.addCommand(new MoveForwardCommand(controller, highlightCallback));
-    },
-
-    turn: function (highlightCallback, direction) {
-      controller.queue.addCommand(new TurnCommand(controller, highlightCallback, direction === 'right' ? 1 : -1));
-    },
-
-    turnRight: function (highlightCallback) {
-      controller.queue.addCommand(new TurnCommand(controller, highlightCallback, 1));
-    },
-
-    turnLeft: function (highlightCallback) {
-      controller.queue.addCommand(new TurnCommand(controller, highlightCallback, -1));
-    },
-
-    turnEntity: function (highlightCallback, entity, direction) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.turnEntity(myQueueItem, entity, direction === 'right' ? 1 : -1);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    turnEntityRight: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.turnEntity(myQueueItem, entity, 1);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    turnEntityLeft: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.turnEntity(myQueueItem, entity, -1);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    turnEntityRandom: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        const rand = controller.getRandomBool();
-        controller.turnEntity(myQueueItem, entity, rand ? 1 : -1);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    turnEntityToPlayer: function (highlightCallback, entity) {
-      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
-        controller.turnEntityToPlayer(myQueueItem, entity);
-      });
-      controller.queue.addCommand(myQueueItem);
-    },
-
-    destroyBlock: function (highlightCallback) {
-      controller.queue.addCommand(new DestroyBlockCommand(controller, highlightCallback));
+    destroyBlock: function (highlightCallback, targetEntity) {
+      controller.addCommand(new DestroyBlockCommand(controller, highlightCallback, targetEntity));
     },
 
     placeBlock: function (highlightCallback, blockType) {
-      controller.queue.addCommand(new PlaceBlockCommand(controller, highlightCallback, blockType));
+      controller.addCommand(new PlaceBlockCommand(controller, highlightCallback, blockType));
     },
 
     placeInFront: function (highlightCallback, blockType) {
-      controller.queue.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType));
+      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType));
     },
 
     tillSoil: function (highlightCallback) {
-      controller.queue.addCommand(new PlaceInFrontCommand(controller, highlightCallback, 'watering'));
+      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, 'watering'));
     },
 
     whilePathAhead: function (highlightCallback, blockType, codeBlock) {
-      controller.queue.addCommand(new WhileCommand(controller, highlightCallback, blockType, codeBlock));
+      controller.addCommand(new WhileCommand(controller, highlightCallback, blockType, codeBlock));
     },
 
     ifBlockAhead: function (highlightCallback, blockType, codeBlock) {
-      controller.queue.addCommand(new IfBlockAheadCommand(controller, highlightCallback, blockType, codeBlock));
+      controller.addCommand(new IfBlockAheadCommand(controller, highlightCallback, blockType, codeBlock));
+    },
+    // -1 for infinite repeat
+    repeat: function (highlightCallback, codeBlock, iteration, targetEntity) {
+      controller.addCommand(new RepeatCommand(controller, highlightCallback, codeBlock, iteration, targetEntity));
     },
 
     getScreenshot: function () {
       return controller.getScreenshot();
+    },
+
+    spawnEntity: function (highlightCallback, type, spawnDirection) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.spawnEntity(callbackCommand, type, spawnDirection);
+      });
+      controller.addCommand(callbackCommand);
+    },
+    spawnEntityAt: function (highlightCallback, type, x, y, facing) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.spawnEntityAt(callbackCommand, type, x, y, facing);
+      });
+      controller.addCommand(callbackCommand);
+    },
+
+    destroyEntity: function (highlightCallback, targetEntity) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.destroyEntity(callbackCommand, targetEntity);
+      });
+      controller.addCommand(callbackCommand);
+    },
+
+    drop: function (highlightCallback, itemType, targetEntity) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.drop(callbackCommand, itemType);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
+    },
+
+    startDay: function (highlightCallback) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.startDay(callbackCommand);
+      });
+      controller.addGlobalCommand(callbackCommand);
+    },
+
+    startNight: function (highlightCallback) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.startNight(callbackCommand);
+      });
+      controller.addGlobalCommand(callbackCommand);
+    },
+
+    wait: function (highlightCallback, time, targetEntity) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.wait(callbackCommand, time)
+      }, targetEntity);
+      controller.addGlobalCommand(callbackCommand);
+    },
+    
+    attack: function (highlightCallback, targetEntity) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.attack(callbackCommand)
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
     }
   };
 }

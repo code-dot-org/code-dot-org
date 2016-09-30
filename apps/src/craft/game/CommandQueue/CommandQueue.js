@@ -6,6 +6,7 @@ export default class CommandQueue {
     this.gameController = gameController;
     this.game = gameController.game;
     this.reset();
+    this.repeatCommands = [];
   }
 
   addCommand(command) {
@@ -40,11 +41,26 @@ export default class CommandQueue {
 
   tick() {
     if (this.state === CommandState.WORKING) {
+      // if there is no command
       if (!this.currentCommand) {
+        // if command list is empty
         if (this.commandList_.length === 0) {
+          // mark this queue as a success
           this.state = CommandState.SUCCESS;
+          // if there are repeat command for this queue, add them
+          for (var i = 0; i < this.repeatCommands.length; i++) {
+            if (this.repeatCommands[i][1] > 0) {
+              this.repeatCommands[i][0]();
+              this.repeatCommands[i][1]--;
+            }
+            else if (this.repeatCommands[i][1] === -1)
+              this.repeatCommands[i][0]();
+            else
+              this.repeatCommands.splice(i,1);
+          }
           return;
         }
+        // get new command from the command list
         this.currentCommand = this.commandList_.shift();
       }
 
@@ -62,6 +78,7 @@ export default class CommandQueue {
       }
     }
   }
+
 
   getLength() {
     return this.commandList_ ? this.commandList_.length : 0;
@@ -98,6 +115,11 @@ export default class CommandQueue {
    */
   isFailed() {
     return this.state === CommandState.FAILURE;
+  }
+
+  addRepeatCommands(codeBlock, iteration) {
+    this.repeatCommands.push([codeBlock, iteration]);
+    this.begin();
   }
 }
 

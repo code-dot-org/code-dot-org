@@ -2,8 +2,8 @@ import CommandState from "./CommandState.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class TurnCommand extends BaseCommand {
-  constructor(gameController, highlightCallback, direction) {
-    super(gameController, highlightCallback);
+  constructor(gameController, highlightCallback, direction, targetEntity) {
+    super(gameController, highlightCallback, targetEntity);
 
     this.Direction = direction;
   }
@@ -14,9 +14,9 @@ export default class TurnCommand extends BaseCommand {
 
   begin() {
     super.begin();
-    if (this.gameController.DEBUG) {
+    if (this.GameController.DEBUG) {
       console.log(`TURN command: BEGIN turning ${this.Direction}  `);
     }
-    this.gameController.turn(this, this.Direction);
+    this.GameController.turn(this, this.Direction);
   }
 }

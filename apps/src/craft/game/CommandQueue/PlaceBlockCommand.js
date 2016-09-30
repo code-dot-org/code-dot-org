@@ -14,7 +14,7 @@ export default class PlaceBlockCommand extends BaseCommand {
 
   begin() {
     super.begin();
-    this.gameController.placeBlock(this, this.BlockType);
+    this.GameController.placeBlock(this, this.BlockType);
   }
 }
 

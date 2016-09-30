@@ -29,7 +29,7 @@ export default class WhileCommand extends BaseCommand {
 
   begin() {
     super.begin();
-    if (this.gameController.DEBUG) {
+    if (this.GameController.DEBUG) {
       console.log("WHILE command: BEGIN");
     }
 
@@ -42,18 +42,18 @@ export default class WhileCommand extends BaseCommand {
       this.state = CommandState.FAILURE;
     }
 
-    if (this.gameController.isPathAhead(this.BlockType)) {
+    if (this.GameController.isPathAhead(this.BlockType)) {
       this.queue.reset();
-      this.gameController.queue.setWhileCommandInsertState(this.queue);
+      this.GameController.queue.setWhileCommandInsertState(this.queue);
       this.WhileCode();
-      this.gameController.queue.setWhileCommandInsertState(null);
+      this.GameController.queue.setWhileCommandInsertState(null);
       this.queue.begin();
     } else {
       this.state = CommandState.SUCCESS;
     }
 
     this.iterationsLeft--;
-    if (this.gameController.DEBUG) {
+    if (this.GameController.DEBUG) {
       console.log(`While command: Iterationsleft   ${this.iterationsLeft} `);
     }
   }

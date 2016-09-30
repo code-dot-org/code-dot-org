@@ -29,7 +29,7 @@ export default class IfBlockAheadCommand extends BaseCommand {
 
   begin() {
     super.begin();
-    if (this.gameController.DEBUG) {
+    if (this.GameController.DEBUG) {
       console.log("WHILE command: BEGIN");
     }
 
@@ -38,11 +38,11 @@ export default class IfBlockAheadCommand extends BaseCommand {
   }
 
   handleIfCheck() {
-    if (this.gameController.isPathAhead(this.blockType)) {
+    if (this.GameController.isPathAhead(this.blockType)) {
       this.queue.reset();
-      this.gameController.queue.setWhileCommandInsertState(this.queue);
+      this.GameController.queue.setWhileCommandInsertState(this.queue);
       this.ifCodeCallback(); // inserts commands via CodeOrgAPI
-      this.gameController.queue.setWhileCommandInsertState(null);
+      this.GameController.queue.setWhileCommandInsertState(null);
       this.queue.begin();
     } else {
       this.state = CommandState.SUCCESS;

@@ -19,10 +19,10 @@ export default class CheckSolutionCommand extends BaseCommand {
 
   begin() {
     super.begin();
-    if (this.gameController.DEBUG) {
+    if (this.GameController.DEBUG) {
       console.log("Solve command: BEGIN");
     }
-    var result = this.gameController.checkSolution(this);
+    var result = this.GameController.checkSolution(this);
   }
 
 }

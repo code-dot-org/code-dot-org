@@ -1,0 +1,67 @@
+Dirt 000-005
+
+Coarse Dirt 006-011
+
+Sand 012-017
+
+Gravel 018-023
+
+Brick 024-029
+
+Acacia Log 030-035
+
+Birch Log 036-041
+
+Jungle Log 042-047
+
+Oak Log 048-053
+
+Spruce Log 054-059
+
+Acacia Planks 060-065
+
+Birch Planks 066-071
+
+Jungle Planks 072-077
+
+Oak Planks 078-083
+
+Spruce Planks 084-089
+
+Cobblestone 090-095
+
+Sandstone 096-101
+
+Wool 102-107
+
+Redstone Dust 108-113
+
+Lapis Lazuli 114-119
+
+Iron Ingot 120-125
+
+Gold Ingot 126-131
+
+Emerald 132-137
+
+Diamond 138-143
+
+Coal 144-149
+
+Water Bucket 150-155
+
+Lava Bucket 156-161
+
+Gun Powder 162-167
+
+Wheat 168-173
+
+Potato 174-179
+
+Carrots 180-185
+
+Milk 186-191
+
+Egg 192-197
+
+Poppy 198-203
