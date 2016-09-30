@@ -76,6 +76,9 @@ OptionParser.new do |opts|
   opts.on('--grep "String to Search for"', String, 'Search for given string') do |grep_string|
     options[:grep_string] = grep_string
   end
+  opts.on('--whole-lines', TrueClass, 'Print entire lines of found strings in output') do |is_true|
+    options[:whole_lines] = is_true
+  end
   opts.on('--grep-container ', String, 'Search given container # for grep string') do |grep_container|
     options[:grep_container] = grep_container.to_i
   end
@@ -117,8 +120,18 @@ builds.each do |build|
     output = get_output(build, known_fail[:container], known_fail[:step_string])
 
     begin
-      if output[0]['message'].include? known_fail[:search_string]
-        puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains: #{known_fail[:search_string]}"
+      full_output_string = output[0]['message']
+      if full_output_string.include? known_fail[:search_string]
+        if options[:whole_lines]
+          lines = []
+          full_output_string.split("\n").each do |line|
+            lines << line if line.include? known_fail[:search_string]
+          end
+          puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains lines:"
+          lines.each{|l| puts l}
+        else
+          puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains: #{known_fail[:search_string]}"
+        end
       end
     rescue => _
     end
