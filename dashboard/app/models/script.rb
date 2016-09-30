@@ -80,12 +80,10 @@ class Script < ActiveRecord::Base
   end
 
   serialized_attrs %w(
-    admin_required
     hideable_stages
     pd
     peer_reviews_to_complete
     professional_learning_course
-    student_of_admin_required
   )
 
   def self.twenty_hour_script
@@ -483,7 +481,7 @@ class Script < ActiveRecord::Base
         end
 
         if [Game.applab, Game.gamelab].include? level.game
-          unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+          unless script.hidden || script.login_required
             raise <<-ERROR.gsub(/^\s+/, '')
               Applab and Gamelab levels can only be added to scripts that are hidden or require login
               (while adding level "#{level.name}" to script "#{script.name}")
@@ -700,9 +698,7 @@ class Script < ActiveRecord::Base
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
       pd: script_data[:pd] || false, # default false
-      admin_required: script_data[:admin_required] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      student_of_admin_required: script_data[:student_of_admin_required] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
     }.compact
   end

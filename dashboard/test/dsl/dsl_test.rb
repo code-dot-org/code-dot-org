@@ -39,8 +39,6 @@ class DslTest < ActiveSupport::TestCase
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
-      student_of_admin_required: false,
       professional_learning_course: nil,
       pd: false,
       hideable_stages: false,
@@ -53,98 +51,6 @@ class DslTest < ActiveSupport::TestCase
     }}}}}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
-  end
-
-  test 'test Script DSL admin_required as boolean' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      admin_required true
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: true,
-      student_of_admin_required: false,
-      professional_learning_course: nil,
-      pd: false,
-      hideable_stages: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL admin_required as string' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      admin_required 'true'
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: true,
-      student_of_admin_required: false,
-      professional_learning_course: nil,
-      pd: false,
-      hideable_stages: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL student_of_admin_required as boolean' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      student_of_admin_required true
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: false,
-      student_of_admin_required: true,
-      professional_learning_course: nil,
-      pd: false,
-      hideable_stages: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL student_of_admin_required as string' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      student_of_admin_required 'true'
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: false,
-      student_of_admin_required: true,
-      professional_learning_course: nil,
-      pd: false,
-      hideable_stages: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
   end
 
   test 'test Script DSL with level variants' do
@@ -174,10 +80,8 @@ level 'Level 3'
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
       pd: false,
       hideable_stages: false,
-      student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -236,10 +140,8 @@ level 'Level 3'
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
       pd: false,
       hideable_stages: false,
-      student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -294,10 +196,8 @@ level 'Level 3'
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
       pd: false,
       hideable_stages: false,
-      student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -412,10 +312,8 @@ DSL
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
       pd: false,
       hideable_stages: false,
-      student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -452,10 +350,8 @@ DSL
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
       pd: false,
       hideable_stages: false,
-      student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
