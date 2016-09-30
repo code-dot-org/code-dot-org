@@ -706,9 +706,9 @@ pt-BR:
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Saiba mais
   dashboard_announce_try_now_button: Experimente agora
-  dashboard_announce_petition: Como professor, você está liderando o caminho em um movimento para dar a cada aluno em todas as escolas a oportunidade de aprender informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes de educação, 28 governadores e maiores empresas de CEOs da América se uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de ciência de computador K-12.
-  dashboard_announce_petition_button: Adicione o seu nome
-  dashboard_announce_all: "Fique por dentro dos novos recursos e atualizações em nosso blog de professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas novidades.</a>"
+  dashboard_announce_petition: Como professor, você está abrindo as portas de um movimento que dará a cada aluno de todas as escolas a oportunidade de aprender ciência da computação. Agora chegou a hora de seus representantes ouvirem o que você tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola ao Ensino médio.
+  dashboard_announce_petition_button: Adicione seu nome
+  dashboard_announce_all: "Fique por dentro dos novos recursos e atualizações em nosso blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas novidades.</a>"
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   host_an_hour: Host an hour

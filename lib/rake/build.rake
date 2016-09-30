@@ -31,23 +31,10 @@ namespace :build do
       end
 
       HipChat.log 'Building <b>apps</b>...'
-      npm_target = rack_env?(:development) ? 'build' : 'build:dist'
+      npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
     end
   end
-
-  # TODO: (brent) - temporarily leave in a build step that just does a clean of
-  # code-studio to make sure we don't have artifacts from old builds
-  desc 'Builds code studio.'
-  task :code_studio do
-    if File.exist?(code_studio_dir)
-      Dir.chdir(code_studio_dir) do
-        HipChat.log 'Removing <b>code-studio</b>...'
-        RakeUtils.system 'rm -rf build'
-      end
-    end
-  end
-  task :'code-studio' => :code_studio
 
   task :stop_varnish do
     Dir.chdir(aws_dir) do
@@ -95,7 +82,8 @@ namespace :build do
         end
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        if rack_env?(:development) && CDO.skip_seed_all
+        # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
+        if (rack_env?(:development) || ENV['CI']) && CDO.skip_seed_all
           HipChat.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n"\
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n"\
               "see changes to: videos, concepts, levels, scripts, prize providers, \n "\
@@ -172,7 +160,6 @@ namespace :build do
   tasks = []
   tasks << :configure
   tasks << :apps if CDO.build_apps
-  tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus

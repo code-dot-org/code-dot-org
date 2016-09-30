@@ -11,7 +11,7 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag "js/#{js_locale}/common_locale"
-    %script{src: minifiable_asset_path('js/minimal.js')}
+    %script{src: minifiable_asset_path('js/essential.js')}
     %script{src: minifiable_asset_path('js/code-studio-common.js')}
     %script{src: minifiable_asset_path('js/code-studio.js')}
     = csrf_meta_tags

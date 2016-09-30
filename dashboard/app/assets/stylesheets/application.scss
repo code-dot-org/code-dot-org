@@ -1779,6 +1779,10 @@ a.download-video {
 .external, .free-response {
   max-width: 970px;
   margin: auto;
+
+  &.left-aligned {
+    margin-left: 0;
+  }
 }
 
 .free-response .response {

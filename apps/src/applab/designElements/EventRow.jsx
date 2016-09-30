@@ -1,8 +1,8 @@
-var React = require('react');
-var color = require('../../color');
-var rowStyle = require('./rowStyle');
+import React from 'react';
+import color from '../../color';
+import * as rowStyle from './rowStyle';
 
-var EventRow = module.exports = React.createClass({
+var EventRow = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
     desc: React.PropTypes.string.isRequired,
@@ -38,3 +38,4 @@ var EventRow = module.exports = React.createClass({
     );
   }
 });
+export default EventRow;

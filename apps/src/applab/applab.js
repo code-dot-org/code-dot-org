@@ -6,61 +6,59 @@
  */
 /* global dashboard */
 import $ from 'jquery';
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
-var applabMsg = require('@cdo/applab/locale');
-var skins = require('../skins');
-var codegen = require('../codegen');
-var api = require('./api');
-var dontMarshalApi = require('./dontMarshalApi');
-var AppLabView = require('./AppLabView');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
-var dom = require('../dom');
-var parseXmlElement = require('../xml').parseElement;
-var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
-var dropletConfig = require('./dropletConfig');
-var makerDropletConfig = require('../makerlab/dropletConfig');
-var AppStorage = require('./appStorage');
-var FirebaseStorage = require('./firebaseStorage');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {singleton as studioApp} from '../StudioApp';
+import commonMsg from '@cdo/locale';
+import applabMsg from '@cdo/applab/locale';
+import skins from '../skins';
+import codegen from '../codegen';
+import * as api from './api';
+import * as dontMarshalApi from './dontMarshalApi';
+import AppLabView from './AppLabView';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
+import ApplabVisualizationColumn from './ApplabVisualizationColumn';
+import dom from '../dom';
+import {parseElement as parseXmlElement} from '../xml';
+import * as utils from '../utils';
+import dropletUtils from '../dropletUtils';
+import * as dropletConfig from './dropletConfig';
+import makerDropletConfig from '../makerlab/dropletConfig';
+import AppStorage from './appStorage';
+import FirebaseStorage from './firebaseStorage';
+import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
 import { getDatabase } from './firebaseUtils';
-var constants = require('../constants');
-var experiments = require('../experiments');
-var _ = require('lodash');
-var apiTimeoutList = require('../timeoutList');
-var designMode = require('./designMode');
-var applabTurtle = require('./applabTurtle');
-var applabCommands = require('./commands');
-var JSInterpreter = require('../JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
-var JsDebuggerUi = require('../JsDebuggerUi');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var VisualizationOverlay = require('../templates/VisualizationOverlay');
-var AppLabCrosshairOverlay = require('./AppLabCrosshairOverlay');
-var logToCloud = require('../logToCloud');
-var DialogButtons = require('../templates/DialogButtons');
-var executionLog = require('../executionLog');
-var annotationList = require('../acemode/annotationList');
-var Exporter = require('./Exporter');
-
-var Provider = require('react-redux').Provider;
-var reducers = require('./reducers');
-var actions = require('./actions');
+import constants from '../constants';
+import experiments from '../experiments';
+import _ from 'lodash';
+import apiTimeoutList from '../timeoutList';
+import designMode from './designMode';
+import applabTurtle from './applabTurtle';
+import applabCommands from './commands';
+import JSInterpreter from '../JSInterpreter';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+import JsDebuggerUi from '../JsDebuggerUi';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import VisualizationOverlay, { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
+import logToCloud from '../logToCloud';
+import DialogButtons from '../templates/DialogButtons';
+import executionLog from '../executionLog';
+import annotationList from '../acemode/annotationList';
+import Exporter from './Exporter';
+import {Provider} from 'react-redux';
+import reducers from './reducers';
+import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
-
-import applabConstants, { ApplabInterfaceMode, DataView }  from './constants';
-var consoleApi = require('../consoleApi');
-
-var BoardController = require('../makerlab/BoardController');
-import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import { addTableName, deleteTableName, updateTableRecords, updateKeyValueData } from './redux/data';
+import {setPageConstants} from '../redux/pageConstants';
+import * as applabConstants from './constants';
+const { ApplabInterfaceMode, DataView } = applabConstants;
+import consoleApi from '../consoleApi';
+import BoardController from '../makerlab/BoardController';
+import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from './redux/data';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -68,7 +66,8 @@ var TestResults = studioApp.TestResults;
 /**
  * Create a namespace for the application.
  */
-var Applab = module.exports;
+const Applab = {};
+export default Applab;
 
 /**
  * @type {JsInterpreterLogger} observes the interpreter and logs to console
@@ -98,7 +97,7 @@ Applab.log = function (object) {
 };
 consoleApi.setLogMethod(Applab.log);
 
-var errorHandler = require('../errorHandler');
+import errorHandler from '../errorHandler';
 errorHandler.setLogMethod(Applab.log);
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
@@ -567,8 +566,7 @@ Applab.init = function (config) {
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
-  // Persist the useFirebaseForNewProject experiment from the url path to local storage
-  experiments.isEnabled('useFirebaseForNewProject');
+  Applab.firebaseChannelIdSuffix = config.firebaseChannelIdSuffix || '';
   var useFirebase = window.dashboard.project.useFirebase() || false;
   Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
@@ -776,6 +774,7 @@ Applab.init = function (config) {
     isSubmitted: !!config.level.submitted,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
+    showDebugSlider: showDebugConsole,
     showDebugWatch: false
   });
 
@@ -1240,6 +1239,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   // only unlistening from 'value' events here.
   storageRef.child('keys').off('value');
   storageRef.child(`tables/${oldTableName}/records`).off('value');
+  getColumnsRef(oldTableName).off();
 
   switch (view) {
     case DataView.PROPERTIES:
@@ -1248,6 +1248,15 @@ function onDataViewChange(view, oldTableName, newTableName) {
       });
       return;
     case DataView.TABLE:
+      // Add any columns which appear in records in Firebase to the list of columns in
+      // Firebase. Do NOT do this every time the records change, to avoid adding back
+      // a column shortly after it was explicitly renamed or deleted.
+      addMissingColumns(newTableName);
+
+      onColumnNames(newTableName, columnNames => {
+        studioApp.reduxStore.dispatch(updateTableColumns(newTableName, columnNames));
+      });
+
       storageRef.child(`tables/${newTableName}/records`).on('value', snapshot => {
         studioApp.reduxStore.dispatch(updateTableRecords(newTableName, snapshot.val()));
       });

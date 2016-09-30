@@ -32,7 +32,7 @@ en:
           title: Course 2
           description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           description_short: Start with Course 2 for students who can read.
-          description_audience: Ages 6-18
+          description_audience: Ages 6+ (reading required)
           stage:
             'Artist: Debugging': 'Artist: Debugging'
             'Artist: Loops': 'Artist: Loops'
@@ -55,7 +55,7 @@ en:
             Your Digital Footprint: Your Digital Footprint
         course3:
           title: Course 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           description_short: Course 3 is a follow-up to Course 2.
           description_audience: Ages 8-18
           stage:
@@ -108,7 +108,7 @@ en:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description_audience: Ages 10-18
+          description_audience: Ages 9-18
           stage:
             Artist: Artist
             Artist Binary: Artist Binary
@@ -1367,6 +1367,8 @@ en:
             Simple Encryption: Simple Encryption
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+            Rapid Research - Cybercrime: Rapid Research - Cybercrime
+            Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and Security Dilemmas
         csp5:
           title: CSP Unit 5 - Building Apps
           description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
@@ -1421,8 +1423,9 @@ en:
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Functions: Functions
         2016_sciencePD_phase1:
-          title: Computer Science in Science PD 2016-2017
+          title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
           description_short: In Partnership with Project GUTS
           stage:
@@ -1438,6 +1441,7 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
@@ -1602,6 +1606,11 @@ en:
             Introduction to HTML: Introduction to HTML
             Headers and Lists: Headers and Lists
             Designing Web Pages: Designing Web Pages
+            Holding: Holding
+            Describing Web pages: Describing Web pages
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1851,8 +1860,8 @@ en:
             Lesson 2,2: Lesson 2,2
             Lesson 2,3: Lesson 2,3
         csd3:
-          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
-          description: Temp place to work on U3 of Disco
+          title: CSD Unit 3 - Interactive Games and Animations
+          description: U3 of Discoveries
           description_short: Programming
           stage:
             Booleans and Conditionals: Booleans and Conditionals
@@ -1865,6 +1874,7 @@ en:
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+          description_audience: ''
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -1885,6 +1895,7 @@ en:
             Puppy Introduction: Puppy Introduction
             Puppy Loops: Puppy Loops
             How to behave in the lab_How to use Code_org puzzles: How to behave in the lab/How to use Code.org puzzles
+            Programming at home with my pet: Programming at home with my pet
         transferring-over:
           stage:
             20-hr Stage 2: 20-hr Stage 2
@@ -1922,18 +1933,10 @@ en:
             Anonymous student pre-survey: Anonymous student pre-survey
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
-        sciencepd3-2016:
-          title: CS in Science PD3 Before 1st In-Person
-          description_short: 'Phase 3: Academic Year Development Pre 1'
-          description: 'Phase 3: Academic Year Development (Segment One)'
-          stage:
-            Welcome Back!: Welcome Back!
-            The TLO: The TLO
-            Prep With Your Modules: Prep With Your Modules
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: Problem Solving
-          description: U1 of Discoveries
+          description: In this unit you will explore all kinds of problems and learn a structured process to help you solve them. In the second half of the unit you will learn how computers help to solve problems and use this knowledge to propose a technological solution to a problem of your choosing.
           stage:
             Intro to Problem Solving: Intro to Problem Solving
             The Problem Solving Process: The Problem Solving Process
@@ -1945,6 +1948,7 @@ en:
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+          description_audience: ''
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -1966,3 +1970,20 @@ en:
             'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
             'Lessons 10 - 11: Redundancy and Packets': 'Lessons 10 - 11: Redundancy and Packets'
             'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction on the Internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+        csp1-support:
+          title: CSP Unit 1 Online Support
+          description_short: TeacherSupports for CSP unit 1
+          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding and Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending Text'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction on the Internet'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning

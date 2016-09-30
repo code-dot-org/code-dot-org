@@ -1,0 +1,7 @@
+name 'Stop: Website Navigation'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Wait for directions from your teacher on what to do next.
+MARKDOWN

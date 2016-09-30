@@ -5,6 +5,7 @@
   "animationMode": "動畫",
   "answersVisible": "Answers visible (read-only)",
   "assessmentSteps": "Steps to give assessment for",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "返回上一關",
   "blocklyMessage": "Blockly",
@@ -185,7 +186,7 @@
   "loading": "載入中...",
   "locked": "已鎖定",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
-  "lockSettings": "鎖定設置",
+  "lockAssessment": "Lock assessment",
   "lockStage": "鎖階鎖定",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Lock as soon as students are done",
@@ -304,7 +305,5 @@
   "when": "當",
   "whenRun": "當按下\"執行\"時",
   "workspaceHeaderShort": "工作區:",
-  "yes": "是",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "是"
 }

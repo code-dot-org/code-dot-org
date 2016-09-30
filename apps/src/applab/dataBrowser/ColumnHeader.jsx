@@ -153,7 +153,7 @@ const ColumnHeader = React.createClass({
     return (
       <th style={dataStyles.headerCell}>
         <div style={containerStyle} className="flex">
-          <div style={styles.columnName}>
+          <div style={styles.columnName} className="test-tableNameDiv">
             {this.props.columnName}
           </div>
           <div style={styles.iconWrapper}>

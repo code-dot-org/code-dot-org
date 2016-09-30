@@ -32,9 +32,9 @@ import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
-var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
+import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -322,6 +322,8 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
+  this.hasContainedLevels = config.hasContainedLevels;
+
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -481,7 +483,7 @@ StudioApp.prototype.init = function (config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
+    var ResizeSensor = require("./third-party/ResizeSensor");
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
@@ -634,7 +636,7 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
 };
 
 StudioApp.prototype.getFirstContainedLevelResult_ = function () {
-  var results = this.getContainedLevelResults();
+  const results = codeStudioLevels.getContainedLevelResults();
   if (results.length !== 1) {
     throw "Exactly one contained level result is currently required.";
   }
@@ -642,29 +644,28 @@ StudioApp.prototype.getFirstContainedLevelResult_ = function () {
 };
 
 StudioApp.prototype.hasValidContainedLevelResult_ = function () {
-  var firstResult = this.getFirstContainedLevelResult_();
+  const firstResult = this.getFirstContainedLevelResult_();
   return firstResult.result.valid;
 };
 
 /**
  * @param {!AppOptionsConfig} config
  */
- StudioApp.prototype.notifyInitialRenderComplete = function (config) {
-  if (config.hasContainedLevels && config.containedLevelOps) {
-    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
-    this.getContainedLevelResults = config.containedLevelOps.getResults;
-
+ StudioApp.prototype.notifyInitialRenderComplete = function () {
+  // TODO - better way to do this might be to have a component for containedLevelContainer
+  // that handles this in a lifecycle method (onComponentDidMount)
+  if (this.hasContainedLevels) {
     $('#containedLevel0').appendTo($('#containedLevelContainer'));
 
     if (this.hasValidContainedLevelResult_()) {
       // We already have an answer, don't allow it to be changed, but allow Run
       // to be pressed so the code can be run again.
-      this.lockContainedLevelAnswers();
+      codeStudioLevels.lockContainedLevelAnswers();
     } else {
       // No answers yet, disable Run button until there is an answer
       $('#runButton').prop('disabled', true);
 
-      config.containedLevelOps.registerAnswerChangedFn(levelId => {
+      codeStudioLevels.registerAnswerChangedFn(() => {
         $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
       });
     }
@@ -672,7 +673,7 @@ StudioApp.prototype.hasValidContainedLevelResult_ = function () {
 };
 
 StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.getContainedLevelResults) {
+  if (this.hasContainedLevels) {
     var firstResult = this.getFirstContainedLevelResult_();
     var containedResult = firstResult.result;
     var testResults = utils.valueOr(firstResult.testResult,
@@ -967,8 +968,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
-  if (this.lockContainedLevelAnswers) {
-    this.lockContainedLevelAnswers();
+  if (this.hasContainedLevels) {
+    codeStudioLevels.lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');

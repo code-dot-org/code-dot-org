@@ -11,7 +11,7 @@
   <%= javascript_include_tag 'application' %>
   <script src="<%= minifiable_asset_path('js/embedBlocks.js') %>"></script>
   <%= javascript_include_tag "js/#{js_locale}/common_locale" %>
-  <script src="<%= minifiable_asset_path('js/minimal.js') %>"></script>
+  <script src="<%= minifiable_asset_path('js/essential.js') %>"></script>
   <script src="<%= minifiable_asset_path('js/code-studio-common.js') %>"></script>
   <%= render partial: 'levels/apps_dependencies', locals: { app: app, use_blockly: true } %>
 </head>

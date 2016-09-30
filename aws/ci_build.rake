@@ -117,19 +117,10 @@ task :apps_task do
   packager.decompress_package(package)
 end
 
-# TODO: This is a temporary task meant to cleanup old code-studio packages.
-# It should go away in the nearish future
-task :code_studio_task do
-  HipChat.log 'Cleaning code-studio package'
-  # get rid of any symlink to a built package
-  RakeUtils.system 'rm', dashboard_dir('public/code-studio') if File.exist?(dashboard_dir('public/code-studio'))
-  # also delete the package itself
-  RakeUtils.system 'rm -rf', dashboard_dir('public/code-studio-package') if File.exist?(dashboard_dir('public/code-studio-package'))
-end
-
 task :firebase_task do
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:upload_rules'
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:set_config'
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:clear_test_channels'
 end
 
 file deploy_dir('rebuild') do
@@ -269,7 +260,6 @@ $websites = build_task('websites', [
   deploy_dir('rebuild'),
   :apps_task,
   :firebase_task,
-  :code_studio_task,
   :build_with_cloudfront,
   :deploy
 ])
@@ -303,6 +293,7 @@ task :dashboard_unit_tests do
       ENV['UNIT_TEST'] = '1'
       RakeUtils.bundle_exec 'rails', 'test'
       ENV.delete 'UNIT_TEST'
+      RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
   end
