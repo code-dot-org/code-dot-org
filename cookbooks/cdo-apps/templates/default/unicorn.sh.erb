@@ -61,6 +61,21 @@ stop)
         fi
         echo >&2 "Not running"
         ;;
+stop-with-status)
+        if sig QUIT
+        then
+          # give up with error status if the process doesn't stop within 2 minutes
+          for i in `seq 1 60`;
+          do
+            sig 0 || exit 0
+            echo "Stopping..."
+            sleep 2
+          done
+          echo >&2 "Failed to stop"
+          exit 1
+        fi
+        echo >&2 "Not running"
+        ;;
 force-stop)
         sig TERM && exit 0
         echo >&2 "Not running"
