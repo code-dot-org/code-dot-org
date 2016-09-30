@@ -3648,8 +3648,6 @@ en:
         ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
         : Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
         Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
-        ? So far all the functions you have called have been created at the bottom of your code. What do you think will happen if we define the function first? Read the code below and predict which of the two shapes will be drawn.
-        : So far all the functions you have called have been created at the bottom of your code. What do you think will happen if we define the function first? Read the code below and predict which of the two shapes will be drawn.
         The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
         The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
       CSD U3 Variables Reassign Predict Multi:
