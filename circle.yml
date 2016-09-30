@@ -31,7 +31,9 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"
   override:
+    - sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
     - sudo apt-get install libicu-dev enscript moreutils
+    - sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
     - bundle install --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
