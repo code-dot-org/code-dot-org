@@ -20,5 +20,18 @@ class CircleProject
     JSON.parse(open("#{@project_api_base}/#{build_id}").read)
   end
 
+  # @return [Array<build_descriptor:Object>] 30 most recent build descriptors
+  # from the CircleCI API, in reverse-chronological order.
+  def get_recent_builds
+    JSON.parse(open(@project_api_base).read)
+  end
+
+  # @return [Integer] The most recent build number in the project
+  def get_latest_build_num
+    get_recent_builds.first['build_num']
+  end
+
   memoize :get_build
+  memoize :get_recent_builds
+  memoize :get_latest_build_num
 end
