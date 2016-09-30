@@ -46,7 +46,9 @@ var Attachments = React.createClass({
   },
 
   showAssetManager: function () {
-    dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}), this.props.showUnderageWarning);
+    dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}), {
+      showUnderageWarning: this.props.showUnderageWarning
+    });
   },
 
   render: function () {

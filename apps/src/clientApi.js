@@ -70,9 +70,30 @@ class AssetsApi extends CollectionsApi {
   }
 }
 
+class FilesApi extends CollectionsApi {
+  getVersionHistory(success, error) {
+    var path = apiPath(
+      'files-version',
+      this.projectId || window.dashboard.project.getCurrentId()
+    );
+    return ajaxInternal('GET', path, success, error);
+  }
+
+  restorePreviousVersion(versionId, success, error) {
+    var path = apiPath(
+      'files-version',
+      this.projectId || window.dashboard.project.getCurrentId()
+    );
+    path += '?' + queryString.stringify({
+      version: versionId
+    });
+    return ajaxInternal('PUT', path, success, error);
+  }
+}
 module.exports = {
   animations: new CollectionsApi('animations'),
   assets: new AssetsApi('assets'),
+  files: new FilesApi('files'),
   sources: new CollectionsApi('sources'),
   channels: new CollectionsApi('channels'),
 };

@@ -625,7 +625,8 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
         id: 'showVersionsModal'
       });
       ReactDOM.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+        useFilesApi: config.useFilesApi
       }), codeDiv);
 
       dialog.show();

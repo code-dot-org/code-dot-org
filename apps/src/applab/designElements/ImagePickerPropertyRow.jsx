@@ -61,7 +61,9 @@ var ImagePickerPropertyRow = React.createClass({
     //
     // However today the `createModalDialog` function and `Dialog` component
     // are intertwined with `StudioApp` which is why we have this direct call.
-    dashboard.assets.showAssetManager(this.changeImage, 'image', null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
+    dashboard.assets.showAssetManager(this.changeImage, 'image', null, {
+      showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
+    });
   },
 
   changeImage: function (filename) {

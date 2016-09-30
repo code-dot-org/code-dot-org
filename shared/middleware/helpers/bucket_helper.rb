@@ -82,7 +82,7 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     begin
       s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
-      {status: 'FOUND', body: s3_object.body, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
+      {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
@@ -118,6 +118,13 @@ class BucketHelper
         {filename: filename, category: category, size: fileinfo.size}
       end
     end
+  end
+
+  def restore_file_version(encrypted_channel_id, filename, version)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
   end
 
   def replace_abuse_score(encrypted_channel_id, filename, abuse_score)

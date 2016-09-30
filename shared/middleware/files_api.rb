@@ -18,6 +18,8 @@ class FilesApi < Sinatra::Base
       AnimationBucket
     when 'assets'
       AssetBucket
+    when 'files'
+      FileBucket
     when 'sources'
       SourceBucket
     else
@@ -88,7 +90,7 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -106,11 +108,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|assets|sources)/<channel-id>/<filename>?version=<version-id>
+  # GET /v3/(animations|assets|sources|files)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|assets|sources|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
 
@@ -160,7 +162,7 @@ class FilesApi < Sinatra::Base
 
     quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, params['version'])
 
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
@@ -291,11 +293,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PATCH /v3/(animations|assets|sources)/<channel-id>?abuse_score=<abuse_score>
+  # PATCH /v3/(animations|assets|sources|files)/<channel-id>?abuse_score=<abuse_score>
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources)/([^/]+)/$} do |endpoint, encrypted_channel_id|
+  patch %r{/v3/(animations|assets|sources|files)/([^/]+)/$} do |endpoint, encrypted_channel_id|
     dont_cache
 
     abuse_score = request.GET['abuse_score']
@@ -333,7 +335,7 @@ class FilesApi < Sinatra::Base
   # List versions of the given file.
   # NOTE: Not yet implemented for assets.
   #
-  get %r{/v3/(animations|sources)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|sources|files)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -354,5 +356,185 @@ class FilesApi < Sinatra::Base
     not_authorized unless owner_id == storage_id('user')
 
     get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+  end
+
+  #
+  # GET /v3/files/<channel-id>
+  #
+  # List filenames and sizes.
+  #
+  get %r{/v3/files/([^/]+)$} do |encrypted_channel_id|
+    dont_cache
+    content_type :json
+
+    bucket = FileBucket.new
+    result = bucket.get(encrypted_channel_id, 'manifest.json', env['HTTP_IF_MODIFIED_SINCE'])
+    not_modified if result[:status] == 'NOT_MODIFIED'
+    last_modified result[:last_modified]
+
+    if result[:status] == 'NOT_FOUND'
+      { "filesVersionId": "unused", "files": [] }.to_json
+    else
+      # {
+      #   "filesVersionId": "sadfhkjahfsdj",
+      #   "files": [
+      #     {
+      #       "filename": "name.jpg",
+      #        "category": "image",
+      #       "size": 100,
+      #       "versionId": "asldfklsakdfj"
+      #     }
+      #   ]
+      # }
+      { "filesVersionId": result[:version_id], "files": JSON.load(result[:body]) }.to_json
+    end
+  end
+
+  def files_put_file(encrypted_channel_id, filename, body)
+    # read the manifest
+    bucket = FileBucket.new
+    manifest_result = bucket.get(encrypted_channel_id, 'manifest.json')
+    if manifest_result[:status] == 'NOT_FOUND'
+      manifest = []
+    else
+      manifest = JSON.load manifest_result[:body]
+    end
+
+    # store the new file
+    new_entry_json = put_file('files', encrypted_channel_id, filename, body)
+    new_entry_hash = JSON.parse new_entry_json
+    entry_is_unchanged = false
+
+    existing_entry = manifest.detect { |e| e['filename'].downcase == filename.downcase }
+    if existing_entry.nil?
+      manifest << new_entry_hash
+    else
+      if existing_entry == new_entry_hash
+        entry_is_unchanged = true
+      else
+        existing_entry.merge!(new_entry_hash) { |_key, _v1, v2| v2 }
+      end
+    end
+
+    # write the manifest (assuming the entry changed)
+    response = bucket.create_or_replace(encrypted_channel_id, 'manifest.json', manifest.to_json, request.GET['project_version']) unless entry_is_unchanged
+
+    # return the new entry info
+    new_entry_hash['filesVersionId'] = response.version_id
+    new_entry_hash.to_json
+  end
+
+  # POST /v3/files/<channel-id>/?version=<version-id>&project_version=<project-version-id>
+  #
+  # Create or replace a file. We use this method so that IE9 can still
+  # upload by posting to an iframe.
+  #
+  post %r{/v3/files/([^/]+)/$} do |encrypted_channel_id|
+    dont_cache
+    # though this is JSON data, we're making the POST request via iframe
+    # form submission. IE9 will try to download the response if we have
+    # content_type json
+    content_type 'text/plain'
+
+    bad_request unless request.POST['files'] && request.POST['files'][0]
+
+    file = request.POST['files'][0]
+
+    bad_request unless file[:filename] && file[:tempfile]
+
+    files_put_file(encrypted_channel_id, file[:filename], file[:tempfile].read)
+  end
+
+  #
+  # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&project_version=<project-version-id>
+  #
+  # Create or replace a file. Optionally overwrite a specific version.
+  #
+  put %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+    dont_cache
+    content_type :json
+
+    # read the entire request before considering rejecting it, otherwise varnish
+    # may return a 503 instead of whatever status code we specify. Unfortunately
+    # this prevents us from rejecting large files based on the Content-Length
+    # header.
+    body = request.body.read
+
+    files_put_file(encrypted_channel_id, filename, body)
+  end
+
+  #
+  # DELETE /v3/files/<channel-id>/<filename>?files-version=<project-version-id>
+  #
+  # Delete a file.
+  #
+  delete %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+    dont_cache
+    content_type :json
+
+    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    not_authorized unless owner_id == storage_id('user')
+
+    # read the manifest
+    bucket = FileBucket.new
+    manifest_result = bucket.get(encrypted_channel_id, 'manifest.json')
+    not_found if manifest_result[:status] == 'NOT_FOUND'
+    manifest = JSON.load manifest_result[:body]
+
+    # remove the file from the manifest
+    reject_result = manifest.reject! { |e| e['filename'].downcase == filename.downcase }
+    not_found if reject_result.nil?
+
+    # write the manifest
+    response = bucket.create_or_replace(encrypted_channel_id, 'manifest.json', manifest.to_json, params['files-version'])
+
+    # delete the file
+    bucket.delete(encrypted_channel_id, filename)
+
+    { filesVersionId: response.version_id }.to_json
+  end
+
+  #
+  # GET /v3/files-version/<channel-id>
+  #
+  # List versions of the project.
+  #
+  get %r{/v3/files-version/([^/]+)$} do |encrypted_channel_id|
+    dont_cache
+    content_type :json
+
+    FileBucket.new.list_versions(encrypted_channel_id, 'manifest.json').to_json
+  end
+
+  #
+  # PUT /v3/files-version/<channel-id>?version=<version-id>
+  #
+  # Restore project files to the state of a previous version id.
+  #
+  put %r{/v3/files-version/([^/]+)$} do |encrypted_channel_id|
+    dont_cache
+    content_type :json
+
+    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    not_authorized unless owner_id == storage_id('user')
+
+    # read the manifest using the version-id specified
+    bucket = FileBucket.new
+    manifest_result = bucket.get(encrypted_channel_id, 'manifest.json', nil, params['version'])
+    bad_request if manifest_result[:status] == 'NOT_FOUND'
+    manifest = JSON.load manifest_result[:body]
+
+    # restore the files based on the versions stored in the manifest
+    manifest.each do |entry|
+      # TODO: (cpirich) optimization possible to avoid restoring if versionId matches current version
+      response = bucket.restore_file_version(encrypted_channel_id, entry['filename'], entry['versionId'])
+      entry['versionId'] = response.version_id
+    end
+
+    # save the new manifest
+    manifest_json = manifest.to_json
+    bucket.create_or_replace(encrypted_channel_id, 'manifest.json', manifest_json)
+
+    manifest_json
   end
 end
