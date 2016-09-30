@@ -9,8 +9,8 @@ level 'U4L10 Student Lesson Introduction'
 
 stage 'Rapid Research - Data Innovations'
 level 'U4L11 Student Lesson Introduction'
-level 'U4L11 Data and Medicine - Video'
-level 'U1L1 Innovation - Video'
+named_level 'Video - Data and Medicine'
+named_level 'Video - CS is Changing Everything'
 
 stage 'Identifying People with Data'
 level 'U4L12 Student Lesson Introduction'
@@ -52,8 +52,8 @@ assessment 'U2L15 Assessment1'
 
 
 stage 'Public Key Crypto'
-level 'U2L19 Student Lesson Introduction'
-level 'U2 Encryption and Public Keys - Video'
+level 'U4L07 Student Introduction public key crypto'
+named_level 'Video - Encryption and Public Keys'
 named_level 'U4L08 - mod clock instructions'
 named_level 'The Modulo Clock'
 level 'U4L07 Public Key Crypto Interstitial'
@@ -69,8 +69,7 @@ assessment 'U2L19 Free Response Wrap Up'
 
 stage 'Rapid Research - Cybercrime'
 level 'U4L14 Student Lesson Introduction'
-level 'U2 The Internet: Cybersecurity and Crime - Video'
-level 'U2 Encryption and Public Keys - Video'
+named_level 'Video - Cybersecurity and Crime'
 
 stage 'Practice PT - Big Data and Security Dilemmas'
 level 'U2L20 Student Lesson Introduction'

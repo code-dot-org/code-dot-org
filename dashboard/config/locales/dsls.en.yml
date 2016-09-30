@@ -3643,15 +3643,21 @@ en:
         The x and y value are the center of a sprite and in the upper right corner of a rectangle: The x and y value are the center of a sprite and in the upper right corner of a rectangle
         There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
         What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
+      CSD U3 Functions Prediction define first:
+        Both squares will be drawn. You can create functions anywhere you like in your code.: Both squares will be drawn. You can create functions anywhere you like in your code.
+        ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        : Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
+        ? So far all the functions you have called have been created at the bottom of your code. What do you think will happen if we define the function first? Read the code below and predict which of the two shapes will be drawn.
+        : So far all the functions you have called have been created at the bottom of your code. What do you think will happen if we define the function first? Read the code below and predict which of the two shapes will be drawn.
+        The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
+        The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
         A 30 will be displayed. Variables grow as you add more to them: A 30 will be displayed. Variables grow as you add more to them
         An error will be generated.: An error will be generated.
       CSD U3 displace Prediction:
-        Diagonal Elevator: Diagonal Elevator
-        ? Last time we saw balloon, it pushed the feather all the way off screen.  This time, the balloon is moving diagonally, so it will only lift the feather for a short while before moving away from it..  What do you think will happen when the balloon moves away from the feather after it's lifted it?
-        : Last time we saw balloon, it pushed the feather all the way off screen.  This time, the balloon is moving diagonally, so it will only lift the feather for a short while before moving away from it..  What do you think will happen when the balloon moves away from the feather after it's lifted it?
         The feather will continue up for a while, then start to fall again.: The feather will continue up for a while, then start to fall again.
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
