@@ -12,7 +12,7 @@ import dom from '../dom';
 import experiments from '../experiments';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
-var assetsApi = require('@cdo/apps/clientApi').assets;
+var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
 
 
@@ -124,6 +124,8 @@ WebLab.prototype.init = function (config) {
 
   config.pinWorkspaceToBottom = true;
 
+  config.useFilesApi = true;
+
   this.loadCurrentAssets();
 
   const onMount = () => {
@@ -161,7 +163,10 @@ WebLab.prototype.init = function (config) {
   }
 
   function onAddFileImage() {
-    dashboard.assets.showAssetManager(null, 'image', this.loadCurrentAssets.bind(this), !this.studioApp_.reduxStore.getState().pageConstants.is13Plus);
+    dashboard.assets.showAssetManager(null, 'image', this.loadCurrentAssets.bind(this), {
+      showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
+      useFilesApi: true
+    });
   }
 
   function onUndo() {
@@ -261,7 +266,7 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the asset list and store it as this.currentAssets
  */
 WebLab.prototype.loadCurrentAssets = function () {
-  assetsApi.ajax('GET', '', xhr => {
+  filesApi.ajax('GET', '', xhr => {
     let parsedResponse;
     try {
       parsedResponse = JSON.parse(xhr.responseText);
@@ -270,10 +275,10 @@ WebLab.prototype.loadCurrentAssets = function () {
       this.currentAssets = null;
       return;
     }
-    assetListStore.reset(parsedResponse);
+    assetListStore.reset(parsedResponse.files);
     this.currentAssets = assetListStore.list().map(asset => ({
       name: asset.filename,
-      url: '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename
+      url: '/v3/files/' + dashboard.project.getCurrentId() + '/' + asset.filename
     }));
     if (this.brambleHost) {
       this.brambleHost.syncAssets(() => {});

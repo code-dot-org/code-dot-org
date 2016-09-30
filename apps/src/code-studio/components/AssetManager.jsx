@@ -1,6 +1,7 @@
 /* eslint-disable react/no-is-mounted */
 var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
+var filesApi = require('@cdo/apps/clientApi').files;
 
 var AssetRow = require('./AssetRow');
 var AssetUploader = require('./AssetUploader');
@@ -28,8 +29,8 @@ var AssetManager = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     allowedExtensions: React.PropTypes.string,
-    channelId: React.PropTypes.string.isRequired,
-    uploadsEnabled: React.PropTypes.bool.isRequired
+    uploadsEnabled: React.PropTypes.bool.isRequired,
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -40,7 +41,8 @@ var AssetManager = React.createClass({
   },
 
   componentWillMount: function () {
-    assetsApi.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
+    let api = this.props.useFilesApi ? filesApi : assetsApi;
+    api.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
   },
 
   /**
@@ -49,7 +51,11 @@ var AssetManager = React.createClass({
    * @param xhr
    */
   onAssetListReceived: function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
+    let parsedResponse = JSON.parse(xhr.responseText);
+    if (this.props.useFilesApi) {
+      parsedResponse = parsedResponse.files;
+    }
+    assetListStore.reset(parsedResponse);
     if (this.isMounted()) {
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }
@@ -73,6 +79,7 @@ var AssetManager = React.createClass({
   },
 
   onUploadDone: function (result) {
+    // FILESTODO: store away new files-version
     assetListStore.add(result);
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
@@ -97,7 +104,7 @@ var AssetManager = React.createClass({
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
         allowedExtensions={this.props.allowedExtensions}
-        channelId={this.props.channelId}
+        useFilesApi={this.props.useFilesApi}
         onUploadStart={this.onUploadStart}
         onUploadDone={this.onUploadDone}
         onUploadError={this.onUploadError}
@@ -138,6 +145,7 @@ var AssetManager = React.createClass({
             name={asset.filename}
             type={asset.category}
             size={asset.size}
+            useFilesApi={this.props.useFilesApi}
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
           />
