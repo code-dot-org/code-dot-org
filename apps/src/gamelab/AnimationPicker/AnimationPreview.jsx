@@ -1,4 +1,5 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
+import {connect} from 'react-redux';
 import React from 'react';
 import {EMPTY_IMAGE} from '../constants';
 import * as PropTypes from '../PropTypes';
@@ -14,7 +15,8 @@ const AnimationPreview = React.createClass({
     sourceUrl: React.PropTypes.string, // of spritesheet
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
-    alwaysPlay: React.PropTypes.bool
+    alwaysPlay: React.PropTypes.bool,
+    allAnimationsSingleFrame: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -56,7 +58,10 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    // If the animation shouldn't loop, include a 2.5 second timeout after playing.
+    if (this.props.allAnimationsSingleFrame) {
+      return;
+    }
+
     const {currentFrame} = this.state;
     const {frameCount, frameDelay} = this.props.animationProps;
     this.setState({
@@ -133,7 +138,11 @@ const AnimationPreview = React.createClass({
     );
   }
 });
-export default AnimationPreview;
+module.exports = connect(function propsFromStore(state) {
+  return {
+    allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame
+  };
+})(AnimationPreview);
 
 function scaleVector2(vector, scale) {
   return {
