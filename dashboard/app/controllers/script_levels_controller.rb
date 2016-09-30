@@ -353,7 +353,11 @@ class ScriptLevelsController < ApplicationController
     # a mapping from section id to hidden stages in that section
     if current_user.try(:teacher?)
       sections = current_user.sections.select{|s| s.deleted_at.nil?}
-      return sections.each_with_object(Hash.new(0)) {|section, hash| hash[section.id] = section.section_hidden_stages}
+      hidden_by_section = {}
+      sections.each do |section|
+        hidden_by_section[section.id] = section.section_hidden_stages.map(&:stage_id)
+      end
+      return hidden_by_section
     end
 
     # if we're a student, we want to look through each of the sections in which
