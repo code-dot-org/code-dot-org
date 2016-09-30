@@ -17,7 +17,6 @@ class ScriptDSL < BaseDSL
     @login_required = false
     @admin_required = false
     @student_of_admin_required = false
-    @pd = false
     @hideable_stages = false
     @wrapup_video = nil
   end
@@ -30,7 +29,6 @@ class ScriptDSL < BaseDSL
   boolean :login_required
   boolean :admin_required
   boolean :student_of_admin_required
-  boolean :pd
   boolean :hideable_stages
 
   string :wrapup_video
@@ -54,7 +52,6 @@ class ScriptDSL < BaseDSL
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       admin_required: @admin_required,
-      pd: @pd,
       hideable_stages: @hideable_stages,
       student_of_admin_required: @student_of_admin_required,
       professional_learning_course: @professional_learning_course,
