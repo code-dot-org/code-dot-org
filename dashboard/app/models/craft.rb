@@ -277,6 +277,7 @@ class Craft < Blockly
   <block type='craft_placeBlockAhead'></block>
 </category>
 <category name="Events">
+  <block type="craft_drop"></block>
   <block type="craft_forever"></block>
   <block type="craft_creeper"></block>
   <block type="craft_cow"></block>

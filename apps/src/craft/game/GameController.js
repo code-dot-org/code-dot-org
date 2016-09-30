@@ -303,7 +303,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveAwayFrom (entity identifier)
-   * 
+   *
    * @memberOf GameController
    */
   moveAway(commandQueueItem, moveAwayFrom) {
@@ -375,7 +375,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveTowardTo (entity identifier)
-   * 
+   *
    * @memberOf GameController
    */
   moveToward(commandQueueItem, moveTowardTo) {
@@ -753,6 +753,7 @@ class GameController {
       }
       // if there is a entity in front of the player
     } else if (frontEntity != null) {
+      console.log("Entity in front");
       // push use command to execute general use behavior of the entity before executing the event
       this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
         var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
@@ -763,6 +764,7 @@ class GameController {
         setTimeout(() => { this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]); }, 200);
       });
     } else {
+      console.log("No entity in front");
       this.levelView.playPunchDestroyAirAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), () => {
         this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]);
         this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);

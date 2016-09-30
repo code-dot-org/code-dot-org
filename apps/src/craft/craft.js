@@ -435,6 +435,7 @@ Craft.onHouseSelected = function (houseType) {
 Craft.initializeAppLevel = function (levelConfig) {
   var houseBlocks = JSON.parse(window.localStorage.getItem('craftHouseBlocks'));
   Craft.foldInCustomHouseBlocks(houseBlocks, levelConfig);
+  Craft.foldInEntities(houseBlocks, levelConfig);
 
   var fluffPlane = [];
   // TODO(bjordan): remove configuration requirement in visualization
@@ -450,6 +451,8 @@ Craft.initializeAppLevel = function (levelConfig) {
   Craft.gameController.loadLevel({
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
+    entities: levelConfig.entities,
+    isEventLevel: true,
     groundDecorationPlane: levelConfig.groundDecorationPlane,
     actionPlane: levelConfig.actionPlane,
     fluffPlane: fluffPlane,
@@ -534,6 +537,21 @@ Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
       if (item.match(/house/)) {
         plane[i] = (houseBlockMap && houseBlockMap[item]) ?
             houseBlockMap[item] : "planksBirch";
+      }
+    }
+  });
+};
+
+Craft.foldInEntities = function (houseBlockMap, levelConfig) {
+  var planesToCustomize = [levelConfig.actionPlane];
+  planesToCustomize.forEach(function (plane) {
+    for (var i = 0; i < plane.length; i++) {
+      var item = plane[i];
+      if (item.match(/sheep/)) {
+        levelConfig.entities = levelConfig.entities || [];
+        // TODO: separate map, or allow for non-10-size map.
+        levelConfig.entities.push(['sheep', i % 10, Math.floor(i / 10), 1]);
+        plane[i] = '';
       }
     }
   });
@@ -684,8 +702,27 @@ Craft.executeUserCode = function () {
               callback(event.blockReference);
           });
     },
+    onEventTriggered: function (type, eventType, callback, blockID) {
+      console.log("sup");
+      appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
+          function (event) {
+              console.log("Called 1");
+              if (event.eventType !== eventType) {
+                return;
+              }
+              if (event.targetType !== type) {
+                return;
+              }
+
+              console.log("Called");
+              callback(event);
+          });
+    },
     destroyEntity: function (blockReference, blockID) {
       appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    drop: function (blockType, targetEntity, blockID) {
+      appCodeOrgAPI.drop(studioApp.highlight.bind(studioApp, blockID), blockType, targetEntity);
     },
     explodeEntity: function (blockReference, blockID) {
       appCodeOrgAPI.explodeEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);

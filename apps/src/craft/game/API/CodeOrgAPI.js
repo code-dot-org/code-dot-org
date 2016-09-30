@@ -63,6 +63,7 @@ export function get(controller) {
      */
 
     registerEventCallback(highlightCallback, codeBlockCallback) {
+      console.log("pushing")
       // TODO(bjordan): maybe need to also handle top-level event block highlighting
       controller.events.push(codeBlockCallback);
 
@@ -246,7 +247,7 @@ export function get(controller) {
       }, targetEntity);
       controller.addGlobalCommand(callbackCommand);
     },
-    
+
     attack: function (highlightCallback, targetEntity) {
       var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.attack(callbackCommand)

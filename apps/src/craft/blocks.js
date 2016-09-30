@@ -334,11 +334,19 @@ exports.install = function (blockly, blockInstallOptions) {
       var whenTouchedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_TOUCHED");
       var whenSpawnedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_SPAWNED");
       var whenAttackedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_ATTACKED");
-      return console.log(`Running ${type} code.`) +
-          whenUsedCode +
-          whenTouchedCode +
-          whenSpawnedCode +
-          whenAttackedCode;
+      var blockType = type;
+      return `
+        console.log('triggered 1');
+        onEventTriggered("${blockType}", 1, function(event) {
+          console.log(event);
+
+          ${whenUsedCode}
+        }, 'block_id_${this.id}');`;
+      //return console.log(`Running ${type} code.`) +
+      //    whenUsedCode +
+      //    whenTouchedCode +
+      //    whenSpawnedCode +
+      //    whenAttackedCode;
     }
   }
 
@@ -417,6 +425,29 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
+  function dropdownEntityBlock(simpleFunctionName, blockText, dropdownArray) {
+    blockly.Blocks[`craft_${simpleFunctionName}`] = {
+      helpUrl: '',
+      init: function () {
+        var dropdownOptions = keysToDropdownOptions(dropdownArray);
+        var dropdown = new blockly.FieldDropdown(dropdownOptions);
+        dropdown.setValue(dropdownOptions[0][1]);
+
+        this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldLabel(blockText))
+            .appendTitle(dropdown, 'TYPE');
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+      }
+    };
+
+    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
+      return `${simpleFunctionName}('${this.getTitleValue('TYPE')}', event.targetIdentifier, 'block_id_${this.id}');\n`;
+    };
+  }
+
+  dropdownEntityBlock('drop', 'drop', ['wool'])
   simpleEntityBlock('destroyEntity', 'destroy it');
   simpleEntityBlock('flashEntity', 'flash it');
   simpleEntityBlock('moveEntityForward', 'move it forward');

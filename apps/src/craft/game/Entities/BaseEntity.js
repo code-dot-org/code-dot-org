@@ -107,10 +107,10 @@ export default class BaseEntity {
 
     /**
      * check all the movable points and choose the farthest one
-     * 
+     *
      * @param {any} commandQueueItem
      * @param {any} moveAwayFrom (entity)
-     * 
+     *
      * @memberOf BaseEntity
      */
     moveAway(commandQueueItem, moveAwayFrom) {
@@ -158,10 +158,10 @@ export default class BaseEntity {
 
     /**
      * check all the movable points and choose the farthest one
-     * 
+     *
      * @param {any} commandQueueItem
      * @param {any} moveTowardTo (entity)
-     * 
+     *
      * @memberOf BaseEntity
      */
     moveToward(commandQueueItem, moveTowardTo) {
@@ -271,6 +271,7 @@ export default class BaseEntity {
 
     use(commandQueueItem, userEntity) {
         // default behavior for use ?
+        console.log("using");
         this.controller.events.forEach(e => e({ eventType: EventType.WhenUsed, targetType: this.type, eventSenderIdentifier: userEntity.identifier, targetIdentifier: this.identifier }));
     }
 
