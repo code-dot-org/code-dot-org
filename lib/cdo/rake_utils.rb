@@ -30,6 +30,14 @@ module RakeUtils
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
 
+  def self.stop_service_with_retry(id)
+    if OS.linux? && CDO.chef_managed
+      return if sudo('service', id.to_s, 'stop-with-status')
+      return if sudo('service', id.to_s, 'stop-with-status')
+      raise "Could not stop #{id} after 2 attempts"
+    end
+  end
+
   def self.restart_service(id)
     sudo 'service', id.to_s, 'restart' if OS.linux? && CDO.chef_managed
   end
