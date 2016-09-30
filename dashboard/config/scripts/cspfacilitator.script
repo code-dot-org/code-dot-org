@@ -1,6 +1,3 @@
-title 'CS Principles Facilitator Workshop '
-description 'Online levels for PD workshop'
-description_short 'Online levels for PD workshop'
 login_required 'true'
 pd 'true'
 

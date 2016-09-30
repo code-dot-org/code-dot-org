@@ -1,6 +1,3 @@
-title 'Computer Science in Science PD Phase 2b'
-description "Phase 2 Online Blended Summer Study"
-description_short "Phase 2 Online Blended Summer Study"
 login_required 'true'
 pd 'true'
 
