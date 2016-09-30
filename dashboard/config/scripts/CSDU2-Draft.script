@@ -76,6 +76,7 @@ named_level 'Unit 2 Lesson 9 Overview'
 level 'CSDU2 - Classes'
 level 'CSDU2 - Footer'
 named_level 'Stop: Classes'
+level 'CSDU2 - Matching Class Style Checker'
 level 'CSDU2 - PW - Classes on Recipe'
 level 'CSDU2 - PW - RGB color'
 level 'CSDU2 - PW - Final Classes Style'
@@ -83,6 +84,7 @@ level 'CSDU2 - PW - Class Style Personal Site'
 
 stage 'External Style Sheets'
 named_level 'Unit 2 Lesson 10 Overview'
+level 'CSDU2 - further styling suggestions'
 level 'CSDU2 - External Style Sheets'
 level 'CSDU2 - Link Tag'
 level 'CSDU2 - Separate Content and Style'
@@ -129,7 +131,8 @@ level 'CSDU2 IP Portfolio'
 
 stage 'Personal Website: Finalizing Site'
 named_level 'Unit 2 Lesson 17 Overview'
-level 'CSDU2 - further styling suggestions'
+named_level 'Final Personal Website'
+
 
 
 

@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Grouping with Divs\r\n\r\nTo further improve the consistent look of a website it is good to group together sections of the page. You have already practiced doing this for the header of the web page using the `<div>` element. Since you now know how to differentiate between elements of the same type using class we can add more `<div>` elements.\r\n\r\n# Do This\r\n* Find the current `<div>` element on each page and put it in the \"header\" class\r\n* Change the current style rule for `<div>` element to style elements in the header class instead.\r\n* Move all content on the home page that is not in the header div into a separate div element\r\n* Move all content on the technology page that is not in the header div into a separate div element\r\n* Add the new `<div>` element on each page to the \"content\" class\r\n* Add styling for the content class. For example try setting the `background-color`.",
-    "project_template_level_name": "CSDU2 - Multi Page ESS Styling Template"
+    "markdown_instructions": "# Grouping with Divs\r\n\r\nTo improve the consistent look of a website it is good to group together sections of the page. You have already practiced doing this for the header of the web page using the `<div>` element. Since you now know how to differentiate between elements of the same type using class we can add more `<div>` elements.\r\n\r\n# Do This\r\n* ______ put it in the \"header\" class\r\n* Style the header class\r\n* ______ put it in the \"content\" class\r\n* Style the content class",
+    "project_template_level_name": "CSDU2 - Seasons Template"
   },
   "published": true,
   "notes": "",
