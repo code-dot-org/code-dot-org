@@ -1,6 +1,2 @@
-title 'Frequency Analysis Widget'
-description 'Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.'
-description_short 'Frequency Analysis Widget'
-
 stage 'Frequency Analysis'
 level 'Frequency Analysis'

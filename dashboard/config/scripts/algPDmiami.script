@@ -1,6 +1,3 @@
-title 'Computer Science in Algebra PD'
-description "Teach Algebra through Functional Programming"
-description_short "Teach Algebra through Functional Programming"
 pd 'true'
 login_required 'true'
 
