@@ -20,9 +20,9 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
   codeStudioLevels.registerGetResult(getAggregatedResults);
 
   function submitSublevelResults(completion, subLevelIdChanged) {
-    var levels = window.levelGroup.levels;
+    const levelIds = codeStudioLevels.getLevelIds();
     var sendReportCompleteCount = 0;
-    var subLevelCount = Object.keys(levels).length;
+    var subLevelCount = levelIds.length;
     if (subLevelCount === 0) {
       return completion();
     }
@@ -32,14 +32,15 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
         completion();
       }
     }
-    for (var subLevelId in levels) {
+    for (var subLevelId of levelIds) {
       if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
         // Only one sublevel changed and this is not the one, so skip the post and
         // call the completion function immediately
         handleSublevelComplete();
         continue;
       }
-      var subLevelResult = levels[subLevelId].getResult(true);
+      const subLevel = codeStudioLevels.getLevel(subLevelId);
+      var subLevelResult = subLevel.getResult(true);
       var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
       var result = subLevelResult.result;
       var errorType = subLevelResult.errorType;
@@ -50,7 +51,7 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
         program: response,
         fallbackResponse: appOptions.dialog.fallbackResponse,
         callback: appOptions.dialog.sublevelCallback + subLevelId,
-        app: levels[subLevelId].getAppName(),
+        app: subLevel.getAppName(),
         allowMultipleSends: true,
         level: subLevelId,
         result: subLevelResult,
@@ -69,7 +70,7 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   var lastResponse = getAggregatedResults().response;
 
-  window.dashboard.codeStudioLevels.registerAnswerChangedFn(
+  codeStudioLevels.registerAnswerChangedFn(
     (levelId, saveThisAnswer) => {
       // LevelGroup is only interested in changes that should result in a save
       if (!saveThisAnswer) {
@@ -93,12 +94,16 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
    */
   function getAggregatedResults() {
     // Add any new results to the existing lastAttempt results.
-    var levels = window.levelGroup.levels;
-    Object.keys(levels).forEach(function (levelId) {
-      var currentAnswer = levels[levelId].getResult(true);
-      var levelResult = replaceEmoji(currentAnswer.response.toString());
-      var valid = currentAnswer.valid;
-      lastAttempt[levelId] = {result: levelResult, valid: valid};
+    const levelIds = codeStudioLevels.getLevelIds();
+    levelIds.forEach(function (levelId) {
+      const subLevel = codeStudioLevels.getLevel(levelId);
+      const currentAnswer = subLevel.getResult(true);
+      const levelResult = replaceEmoji(currentAnswer.response.toString());
+      const valid = currentAnswer.valid;
+      lastAttempt[levelId] = {
+        result: levelResult,
+        valid: valid
+      };
     });
 
     var validCount = 0;
