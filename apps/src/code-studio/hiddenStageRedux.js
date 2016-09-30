@@ -31,7 +31,7 @@ const initialState = Immutable.fromJS({
 export default function reducer(state = initialState, action) {
   if (action.type === UPDATE_HIDDEN_STAGE) {
     const { sectionId, stageId, hidden } = action;
-    return state.setIn(['bySection', sectionId, stageId], hidden);
+    return state.setIn(['bySection', sectionId, stageId.toString()], hidden);
   }
 
   if (action.type === ALLOW_HIDEABLE) {
@@ -91,14 +91,13 @@ export function getHiddenStages(scriptName) {
       dataType: 'json',
       contentType: 'application/json'
     }).done(response => {
-      console.log('allow hideable');
       dispatch(allowHideable());
 
       // For a teacher, we get back a map of section id to hidden stage ids
       // For a student, we just get back a list of hidden stage ids. Turn that
-      // into an object.
+      // into an object, under the 'stageId' of STUDENT
       if (Array.isArray(response)) {
-        response = { undefined: response };
+        response = { STUDENT: response };
       }
 
       Object.keys(response).forEach(sectionId => {
@@ -111,4 +110,13 @@ export function getHiddenStages(scriptName) {
       console.error(err);
     });
   };
+}
+
+// utils
+export function isHiddenFromState(bySection, sectionId, stageId) {
+  // if we don't have a sectionId, we must be a student
+  if (sectionId === null ){
+    sectionId = 'STUDENT';
+  }
+  return !!bySection.getIn([sectionId, stageId.toString()]);
 }

@@ -58,7 +58,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: true,
       bySection: {
-        undefined: {
+        STUDENT: {
           123: true,
           456: true
         }
