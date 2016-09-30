@@ -1062,7 +1062,7 @@ class User < ActiveRecord::Base
   def should_see_inline_answer?(script_level)
     script = script_level.try(:script)
 
-    (authorized_teacher? && !script.professional_learning_course?) ||
+    (authorized_teacher? && script && !script.professional_learning_course?) ||
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 end

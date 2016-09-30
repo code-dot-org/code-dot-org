@@ -341,9 +341,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'nextech_logo.png', Script.find_by_name('ECSPD-NexTech').logo_image
   end
 
-  test 'professional_course?' do
-    refute Script.find_by_name('flappy').professional_course?
-    assert Script.find_by_name('ECSPD').professional_course?
+  test 'professional_learning_course?' do
+    refute Script.find_by_name('flappy').professional_learning_course?
+    assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
   test 'hoc?' do
