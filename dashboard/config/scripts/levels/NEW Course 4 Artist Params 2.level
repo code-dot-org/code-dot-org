@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Create a `draw a triangle` function from scratch that makes a triangle with  50 pixel sides.",
+    "instructions": "Create a `draw triangle` function from scratch that makes a triangle with  50 pixel sides.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

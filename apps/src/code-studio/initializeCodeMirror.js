@@ -3,16 +3,22 @@
  */
 /* global inlineAttach */
 import $ from 'jquery';
-var CodeMirror = require('codemirror');
-require("codemirror/mode/markdown/markdown");
-require("codemirror/addon/edit/closetag");
-require("codemirror/addon/edit/matchtags");
-require("codemirror/addon/edit/matchbrackets");
-require("codemirror/addon/edit/trailingspace");
-require("codemirror/addon/fold/xml-fold");
-require("codemirror/mode/xml/xml");
-require("codemirror/mode/javascript/javascript");
-require("./vendor/codemirror.inline-attach");
+import CodeMirror from 'codemirror';
+import CodeMirrorSpellChecker from 'codemirror-spell-checker';
+import 'codemirror/mode/markdown/markdown';
+import 'codemirror/addon/edit/closetag';
+import 'codemirror/addon/edit/matchtags';
+import 'codemirror/addon/edit/matchbrackets';
+import 'codemirror/addon/edit/trailingspace';
+import 'codemirror/addon/mode/overlay';
+import 'codemirror/addon/fold/xml-fold';
+import 'codemirror/mode/xml/xml';
+import 'codemirror/mode/javascript/javascript';
+import './vendor/codemirror.inline-attach';
+
+CodeMirrorSpellChecker({
+  codeMirrorInstance: CodeMirror,
+});
 
 /**
  * initializeCodeMirror replaces a textarea on the page with a full-featured
@@ -31,9 +37,16 @@ module.exports = function (target, mode, callback, attachments) {
     htmlMode = true;
   }
 
+  var backdrop = undefined;
+  if (mode === 'markdown') {
+    backdrop = mode;
+    mode = 'spell-checker';
+  }
+
   var node = target.nodeType ? target : document.getElementById(target);
   var editor = CodeMirror.fromTextArea(node, {
     mode: mode,
+    backdrop: backdrop,
     htmlMode: htmlMode,
     viewportMargin: Infinity,
     matchTags: {bothTags: true},

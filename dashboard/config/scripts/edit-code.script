@@ -1,7 +1,4 @@
 id '3'
-title 'Edit Code'
-description 'Edit Code'
-description_short 'Edit Code'
 wrapup_video 'hoc_wrapup'
 hidden 'true'
 

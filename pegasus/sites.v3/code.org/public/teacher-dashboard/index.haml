@@ -426,7 +426,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.moveStudents = function() {
       function isOwnSection(sectionCode) {
-        return $scope.sections.map(function(section) {return section.code}).includes(sectionCode);
+        return $scope.sections.some(function(section) {return section.code === sectionCode});
       }
 
       function displayError(errorMessage) {

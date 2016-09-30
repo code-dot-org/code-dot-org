@@ -1,8 +1,9 @@
 /* global dashboard */
 
-var React = require('react');
-var rowStyle = require('./rowStyle');
-const studioApp = require('../../StudioApp').singleton;
+import React from 'react';
+
+import * as rowStyle from './rowStyle';
+import {singleton as studioApp} from '../../StudioApp';
 
 // We'd prefer not to make GET requests every time someone types a character.
 // This is the amount of time that must pass between edits before we'll do a GET
@@ -94,4 +95,4 @@ var ImagePickerPropertyRow = React.createClass({
   }
 });
 
-module.exports = ImagePickerPropertyRow;
+export default ImagePickerPropertyRow;

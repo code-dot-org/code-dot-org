@@ -15,6 +15,7 @@ import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../color';
 import { connect } from 'react-redux';
+import { getColumnNamesFromRecords } from '../firebaseMetadata';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -51,6 +52,7 @@ const styles = {
 const DataTable = React.createClass({
   propTypes: {
     // from redux state
+    tableColumns: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     tableName: React.PropTypes.string.isRequired,
     // "if all of the keys are integers, and more than half of the keys between 0 and
     // the maximum key in the object have non-empty values, then Firebase will render
@@ -69,7 +71,6 @@ const DataTable = React.createClass({
 
   getInitialState() {
     return {
-      newColumns: [],
       editingColumn: null,
       pendingAdd: false,
       // The old name of the column currently being renamed or deleted.
@@ -87,15 +88,23 @@ const DataTable = React.createClass({
 
   addColumn() {
     const columnName = this.getNextColumnName();
-    const newColumns = this.state.newColumns.concat(columnName);
     this.setState({pendingAdd: true});
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      this.setState({
-        newColumns,
-        editingColumn: columnName,
-        pendingAdd: false,
-      });
+      FirebaseStorage.addColumn(
+        this.props.tableName,
+        columnName,
+        () => {
+          this.setState({
+            editingColumn: columnName,
+            pendingAdd: false,
+          });
+        },
+        msg => {
+          console.warn(msg);
+          this.resetColumnState();
+        }
+      );
     }, 0);
   },
 
@@ -103,16 +112,15 @@ const DataTable = React.createClass({
     this.setState({
       pendingColumn: columnToRemove,
     });
-    const newColumns = this.state.newColumns.filter(column => column !== columnToRemove);
     // Show the spinner icon before updating the data.
     setTimeout(() => {
       FirebaseStorage.deleteColumn(
         this.props.tableName,
         columnToRemove,
-        () => this.resetColumnState(newColumns),
+        this.resetColumnState,
         error => {
           console.warn(error);
-          this.resetColumnState(newColumns);
+          this.resetColumnState();
         }
       );
     }, 0);
@@ -126,61 +134,47 @@ const DataTable = React.createClass({
   },
 
   renameColumn(oldName, newName) {
-    let newColumns = this.state.newColumns.map(
-      curName => (curName === oldName ? newName : curName)
-    );
-    // Append the new name if the old name was not found.
-    if (newColumns.indexOf(newName) === -1) {
-      newColumns.push(newName);
-    }
-
-    if (oldName === newName) {
-      this.setState({
-        newColumns,
-        editingColumn: null,
-      });
-    } else {
-      this.setState({
-        editingColumn: null,
-        pendingColumn: oldName,
-      });
-      // Show the spinner icon before updating the data.
-      setTimeout(() => {
+    this.setState({
+      editingColumn: null,
+      pendingColumn: oldName,
+    });
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
+      if (this.props.tableName) {
         FirebaseStorage.renameColumn(
           this.props.tableName,
           oldName,
           newName,
-          () => this.resetColumnState(newColumns),
+          this.resetColumnState,
           error => {
             console.warn(error);
-            this.resetColumnState(newColumns);
+            this.resetColumnState();
           }
         );
-      }, 0);
-    }
+      } else {
+        // We've navigated away before the column could be renamed.
+        this.resetColumnState();
+      }
+    }, 0);
   },
 
-  resetColumnState(newColumns) {
+  resetColumnState() {
     this.setState({
-      newColumns,
-      pendingColumn: null
+      editingColumn: null,
+      pendingAdd: false,
+      pendingColumn: null,
     });
   },
 
-  getColumnNames() {
+  /**
+   * @param {Array} records Array of JSON-encoded records.
+   * @param {string} columns Array of column names.
+   */
+  getColumnNames(records, columns) {
     // Make sure 'id' is the first column.
-    let columnNames = ['id'];
+    const columnNames = getColumnNamesFromRecords(records);
 
-    Object.keys(this.props.tableRecords).forEach(id => {
-      const record = JSON.parse(this.props.tableRecords[id]);
-      Object.keys(record).forEach(columnName => {
-        if (columnNames.indexOf(columnName) === -1) {
-          columnNames.push(columnName);
-        }
-      });
-    });
-
-    this.state.newColumns.forEach(columnName => {
+    columns.forEach(columnName => {
       if (columnNames.indexOf(columnName) === -1) {
         columnNames.push(columnName);
       }
@@ -190,7 +184,7 @@ const DataTable = React.createClass({
   },
 
   getNextColumnName() {
-    const names = this.getColumnNames();
+    const names = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let i = names.length;
     while (names.includes(`column${i}`)) {
       i++;
@@ -219,10 +213,9 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    const newColumns = this.getColumnNames();
     FirebaseStorage.clearTable(
       this.props.tableName,
-      () => this.setState({newColumns, editingColumn: null}),
+      () => {},
       msg => console.warn(msg));
   },
 
@@ -242,7 +235,7 @@ const DataTable = React.createClass({
         this.props.tableName,
         columnName,
         columnType,
-        () => this.resetColumnState(this.state.newColumns),
+        this.resetColumnState,
         msg => {
           if (String(msg).includes('Not all values in column')) {
             this.props.onShowWarning(msg);
@@ -265,7 +258,7 @@ const DataTable = React.createClass({
   },
 
   render() {
-    let columnNames = this.getColumnNames();
+    let columnNames = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let editingColumn = this.state.editingColumn;
 
     // Always show at least one column.
@@ -383,6 +376,7 @@ const DataTable = React.createClass({
 
 export default connect(state => ({
   view: state.data.view,
+  tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || {},
   tableName: state.data.tableName || ''
 }), dispatch => ({

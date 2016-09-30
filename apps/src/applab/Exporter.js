@@ -1,15 +1,14 @@
 /* global dashboard */
 import $ from 'jquery';
 
-var JSZip = require('jszip');
-var saveAs = require('filesaver.js').saveAs;
-
-var assetPrefix = require('../assetManagement/assetPrefix');
-var download = require('../assetManagement/download');
-var elementLibrary = require('./designElements/library');
-var exportProjectEjs = require('../templates/exportProject.html.ejs');
-var exportProjectReadmeEjs = require('../templates/exportProjectReadme.md.ejs');
-var logToCloud = require('../logToCloud');
+import JSZip from 'jszip';
+import {saveAs} from 'filesaver.js';
+import assetPrefix from '../assetManagement/assetPrefix';
+import download from '../assetManagement/download';
+import elementLibrary from './designElements/library';
+import exportProjectEjs from '../templates/exportProject.html.ejs';
+import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
+import logToCloud from '../logToCloud';
 
 /**
  * Extracts a CSS file from the given HTML dom node by traversing each node and

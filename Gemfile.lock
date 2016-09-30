@@ -146,12 +146,12 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    aws-sdk (2.5.3)
-      aws-sdk-resources (= 2.5.3)
-    aws-sdk-core (2.5.3)
+    aws-sdk (2.6.1)
+      aws-sdk-resources (= 2.6.1)
+    aws-sdk-core (2.6.1)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.5.3)
-      aws-sdk-core (= 2.5.3)
+    aws-sdk-resources (2.6.1)
+      aws-sdk-core (= 2.6.1)
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -696,6 +696,7 @@ DEPENDENCIES
   lograge
   mail_view
   marked-rails
+  memoist
   mini_magick
   minitest (~> 5.5)
   minitest-around
@@ -739,6 +740,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.42.0)
   ruby-prof
+  ruby-progressbar
   sass-rails!
   scss_lint
   sdoc

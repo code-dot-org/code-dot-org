@@ -64,7 +64,7 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if stage_hidden?(current_user, @script_level)
+    if stage_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/hidden_stage'
       return
@@ -100,7 +100,7 @@ class ScriptLevelsController < ApplicationController
   def hidden
     authorize! :read, ScriptLevel
 
-    stage_ids = get_hidden_stage_ids(current_user, params[:script_id])
+    stage_ids = get_hidden_stage_ids(params[:script_id])
 
     render json: stage_ids
   end
@@ -347,7 +347,7 @@ class ScriptLevelsController < ApplicationController
     [sections, script_sections]
   end
 
-  def stage_hidden?(current_user, script_level)
+  def stage_hidden?(script_level)
     sections, script_sections = user_sections(script_level.script.id)
     return false if sections.empty?
 
@@ -362,7 +362,7 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def get_hidden_stage_ids(current_user, script_id)
+  def get_hidden_stage_ids(script_id)
     sections, script_sections = user_sections(script_id)
 
     return [] if sections.empty?

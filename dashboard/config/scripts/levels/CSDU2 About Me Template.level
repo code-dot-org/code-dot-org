@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" \"\r\n    }\r\n  ]\r\n}"
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!-- Chocolate Ice Cream Image: https://upload.wikimedia.org/wikipedia/commons/a/aa/Raw_Ice_Cream_Company_Vegan_Chocolate_Icecream_(5104075438).jpg -->\\n<!-- Vanilla Ice Cream Image: https://c2.staticflickr.com/2/1308/1226919797_313eb3ba4f_b.jpg -->\\n<!-- Dog Image: https://static.pexels.com/photos/59523/pexels-photo-59523.jpeg -->\\n<!-- Cat Image: https://static.pexels.com/photos/39500/cat-animal-cute-pet-39500.jpeg -->\\n<!-- Movies Image: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Toyogeki-Movie_Toyooka002.jpg/1280px-Toyogeki-Movie_Toyooka002.jpg -->\\n<!-- Books Image: https://static.pexels.com/photos/5710/books-colorful-harry-potter.jpg -->\\n<!DOCTYPE html>\\n<html>\\n\\n</html> \"\r\n    }\r\n  ]\r\n}"
   },
   "published": true,
   "notes": "",

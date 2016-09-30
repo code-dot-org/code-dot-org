@@ -12,7 +12,7 @@ Amazon,,name,supporter,0.0309982142
 AmazonSmile,https://smile.amazon.com/,name,bronze,0.0336527383
 Ari Steinberg ,,name,other,0.0337851845
 Association of Computing Machinery (ACM),http://www.acm.org/,name,bronze,0.0355917712
-AT&T ,http://about.att.com/content/csr/home/possibilities/at-t-aspire.html,both,silver,0.0434181355
+AT&T,http://about.att.com/content/csr/home/possibilities/at-t-aspire.html,logo,silver,0.0434181355
 Ballmer Family Giving,http://en.wikipedia.org/wiki/Steve_Ballmer,both,platinum,0.0795398167
 Barton Family Foundation,,name,supporter,0.0801418447
 Best Buy,,name,supporter,0.0805030615
@@ -38,7 +38,7 @@ Drew Houston,http://en.wikipedia.org/wiki/Drew_Houston,both,gold,0.1539661328
 Emerson Collective,,name,bronze,0.1551701888
 EWCY Foundation,,name,other,0.1552905944
 Elastic,,name,other,0.1554900140
-Expedia,http://www.expedia.com/,both,silver,0.1615102942
+Expedia,http://www.expedia.com/,logo,silver,0.1615102942
 Facebook,http://www.facebook.com,logo,platinum,0.3446695546
 Feroz and Erica Dewan,http://www.crunchbase.com/person/feroz-dewan,name,silver,0.3506898348
 Glenn Greenberg,,name,silver,0.3597202551
