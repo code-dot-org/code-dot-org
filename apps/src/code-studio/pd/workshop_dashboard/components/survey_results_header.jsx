@@ -8,8 +8,8 @@ import {
   Button
 } from 'react-bootstrap';
 import moment from 'moment';
-import 'react-select/dist/react-select.css';
 import {DATE_FORMAT} from '../workshopConstants';
+import { workshopShape } from '../types.js';
 
 const rowOrder = [
   {text: 'Number of attending teachers', key: 'number_teachers'},
@@ -24,29 +24,15 @@ const SurveyResultsHeader = React.createClass({
   },
 
   propTypes: {
-    workshops: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        id: React.PropTypes.number.isRequired,
-        sessions: React.PropTypes.array.isRequired,
-        location_name: React.PropTypes.string.isRequired,
-        workshop_type: React.PropTypes.string.isRequired,
-        course: React.PropTypes.string.isRequired,
-        enrolled_teacher_count: React.PropTypes.number.isRequired,
-        capacity: React.PropTypes.number.isRequired,
-        facilitators: React.PropTypes.array.isRequired,
-        organizer: React.PropTypes.shape({
-          name: React.PropTypes.string.isRequired,
-          email: React.PropTypes.string.isRequired
-        }).isRequired
-      })
-    )
+    workshops: React.PropTypes.arrayOf(workshopShape)
   },
 
   getInitialState() {
     return {
-      course: '',
+      selectedCourse: '',
       filteredWorkshops: [],
-      workshopSurveyData: undefined
+      workshopSurveyData: undefined,
+      selectedWorkshopId: undefined,
     };
   },
 
