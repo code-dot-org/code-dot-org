@@ -2,8 +2,6 @@
 import $ from 'jquery';
 import { registerGetResult } from './codeStudioLevels';
 
-window.levelGroup = window.levelGroup || {levels: {}};
-
 var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
   // The dashboard levelId.

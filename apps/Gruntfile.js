@@ -354,6 +354,7 @@ module.exports = function (grunt) {
     'levelbuilder_studio': './src/code-studio/levelbuilder_studio.js',
     'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
     'levelbuilder_applab': './src/code-studio/levelbuilder_applab.js',
+    'levelbuilder_edit_script': './src/code-studio/levelbuilder_edit_script.js',
     'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
     'districtDropdown': './src/code-studio/districtDropdown.js',
     'signup': './src/code-studio/signup.js',

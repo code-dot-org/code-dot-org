@@ -1,6 +1,3 @@
-title 'CS Principles Unit 2 - Digital Information'
-description 'This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.'
-description_short "Digital Information"
 login_required 'true'
 hidden 'false'
 
