@@ -247,7 +247,8 @@ GameLab.prototype.init = function (config) {
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
     showDebugSlider: false,
-    showAnimationMode: !config.level.hideAnimationMode
+    showAnimationMode: !config.level.hideAnimationMode,
+    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
   });
 
   // Push project-sourced animation metadata into store
