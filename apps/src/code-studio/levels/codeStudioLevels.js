@@ -1,5 +1,9 @@
+/* global appOptions */
+
 let registeredGetResult = null;
 let answerChangedFn = null;
+
+let levelGroup = {};
 
 /**
  * At a minimum, our get result function should return an object with a response
@@ -54,4 +58,66 @@ export function onAnswerChanged(levelId, saveThisAnswer) {
   if (answerChangedFn) {
     return answerChangedFn(levelId, saveThisAnswer);
   }
+}
+
+function objectHasFieldOfType(obj, field, type) {
+  if (!obj[field]) {
+    throw new Error(`Expected object to have field of ${field}`);
+  }
+  if (typeof(obj[field]) !== type) {
+    throw new Error(`Expected object['${field}'] to have type of ${type}`);
+  }
+}
+
+/**
+ * Register a level, while also enforcing its interface. Levels will be of
+ * different types, but must all have the methods we validate here.
+ * @param {number} levelId
+ * @param {object} level
+ */
+export function registerLevel(levelId, level) {
+  objectHasFieldOfType(level, 'getResult', 'function');
+  objectHasFieldOfType(level, 'getAppName', 'function');
+  objectHasFieldOfType(level, 'lockAnswers', 'function');
+  objectHasFieldOfType(level, 'getCurrentAnswerFeedback', 'function');
+  objectHasFieldOfType(level, 'levelId', 'number');
+
+  levelGroup[levelId] = level;
+}
+
+/**
+ * Get one of the levels we've registered
+ * @param {number} levelId
+ * @returns {object}
+ */
+export function getLevel(levelId) {
+  return levelGroup[levelId];
+}
+
+/**
+ * @returns {number[]} A list of the leveIds we've registered
+ */
+export function getLevelIds() {
+  return Object.keys(levelGroup);
+}
+
+// TODO - There should be only one contiained level. In the future, I will simplify
+// these next two methods to reflect that
+export function lockContainedLevelAnswers() {
+  const levelIds = getLevelIds();
+  levelIds.forEach(levelId => getLevel(levelId).lockAnswers());
+}
+
+export function getContainedLevelResults() {
+  const levelIds = getLevelIds();
+  return levelIds.map(levelId => {
+    const level = getLevel(levelId);
+    return {
+      id: level.levelId,
+      app: level.getAppName(),
+      callback: appOptions.report.sublevelCallback + level.levelId,
+      result: level.getResult(),
+      feedback: level.getCurrentAnswerFeedback()
+    };
+  });
 }
