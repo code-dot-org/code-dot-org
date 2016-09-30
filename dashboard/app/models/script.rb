@@ -82,7 +82,6 @@ class Script < ActiveRecord::Base
   serialized_attrs %w(
     admin_required
     hideable_stages
-    pd
     peer_reviews_to_complete
     professional_learning_course
     student_of_admin_required
@@ -384,10 +383,6 @@ class Script < ActiveRecord::Base
     else
       ['playlab', 'artist']
     end
-  end
-
-  def professional_course?
-    pd? || professional_learning_course?
   end
 
   def has_peer_reviews?
@@ -699,7 +694,6 @@ class Script < ActiveRecord::Base
   def self.build_property_hash(script_data)
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
-      pd: script_data[:pd] || false, # default false
       admin_required: script_data[:admin_required] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
       student_of_admin_required: script_data[:student_of_admin_required] || false, # default false
