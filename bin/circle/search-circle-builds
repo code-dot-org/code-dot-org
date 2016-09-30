@@ -7,6 +7,7 @@ require 'json'
 require 'memoist'
 require 'open-uri'
 require 'optparse'
+require 'parallel'
 
 CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
 RUN_UI_TESTS_STEP_STRING = 'run_tests'
@@ -116,32 +117,27 @@ end
 fail_types_list = fail_types_to_check.map { |f| describe_fail_type(f) }.join "\n"
 puts "Checking builds #{builds.join ', '} for output:\n#{fail_types_list}"
 
-builds.each_slice(MAX_THREADS) do |chunk|
-  threads = []
-  chunk.each do |build|
-    threads << Thread.new do
-      fail_types_to_check.each do |known_fail|
-        output = get_output(build, known_fail[:container], known_fail[:step_string])
-        begin
-          full_output_string = output[0]['message']
-          if full_output_string.include? known_fail[:search_string]
-            if options[:whole_lines]
-              lines = []
-              full_output_string.split("\n").each do |line|
-                lines << line if line.include? known_fail[:search_string]
-              end
-              puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains lines:"
-              lines.each{|l| puts l}
-            else
-              puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains: #{known_fail[:search_string]}"
-            end
+Parallel.each(builds, in_processes: MAX_THREADS) do |build|
+  fail_types_to_check.each do |known_fail|
+    output = get_output(build, known_fail[:container], known_fail[:step_string])
+
+    begin
+      full_output_string = output[0]['message']
+      if full_output_string.include? known_fail[:search_string]
+        if options[:whole_lines]
+          lines = []
+          full_output_string.split("\n").each do |line|
+            lines << line if line.include? known_fail[:search_string]
           end
-        rescue => _
+          puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains lines:"
+          lines.each{|l| puts l}
+        else
+          puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains: #{known_fail[:search_string]}"
         end
       end
+    rescue => _
     end
   end
-  threads.each &:join
 end
 
 exit(0)
