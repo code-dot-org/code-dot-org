@@ -52,7 +52,8 @@
     "start_blocks": "var score = 0;\r\nconsole.log(\"The value of score is: \");\r\nconsole.log(score);",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": "CpmpXvXUWzxzXheO4FtKeabMIDD0YNv9IdOfx8V7SYS+ntutrPHR8HVbdeJL\nZ41L\n"
+    "encrypted_examples": "CpmpXvXUWzxzXheO4FtKeabMIDD0YNv9IdOfx8V7SYS+ntutrPHR8HVbdeJL\nZ41L\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>
