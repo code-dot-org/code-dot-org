@@ -5,6 +5,114 @@
     "See tools/scripts/rebuildAnimationLibraryManifest.rb for more information."
   ],
   "metadata": {
+    "alienGreen_duck": {
+      "name": "alienGreen_duck",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:06 UTC",
+      "pngLastModified": "2016-09-30 17:04:06 UTC",
+      "version": "Ya6f8oR1koav.ExkZsxY5.AigUDdtO1b",
+      "sourceUrl": "/api/v1/animation-library/Ya6f8oR1koav.ExkZsxY5.AigUDdtO1b/alienGreen_duck.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 256
+      }
+    },
+    "alienGreen_jump": {
+      "name": "alienGreen_jump",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:08 UTC",
+      "pngLastModified": "2016-09-30 17:04:09 UTC",
+      "version": "3mmshsl_7gzWFamFSqvc9mUWgi._4slW",
+      "sourceUrl": "/api/v1/animation-library/3mmshsl_7gzWFamFSqvc9mUWgi._4slW/alienGreen_jump.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 256
+      }
+    },
+    "alienGreen_walk": {
+      "name": "alienGreen_walk",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 130,
+        "y": 258
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:09 UTC",
+      "pngLastModified": "2016-09-30 17:04:10 UTC",
+      "version": "8._7fSFdammQZIkxbPp5FKbrb3NPJafh",
+      "sourceUrl": "/api/v1/animation-library/8._7fSFdammQZIkxbPp5FKbrb3NPJafh/alienGreen_walk.png",
+      "sourceSize": {
+        "x": 260,
+        "y": 258
+      }
+    },
+    "alienPink_hit": {
+      "name": "alienPink_hit",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:10 UTC",
+      "pngLastModified": "2016-09-30 17:04:12 UTC",
+      "version": ".8u.EGt6JD9Wp47VsBMs97Jv8h_F6af1",
+      "sourceUrl": "/api/v1/animation-library/.8u.EGt6JD9Wp47VsBMs97Jv8h_F6af1/alienPink_hit.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 256
+      }
+    },
+    "alienPink_jump": {
+      "name": "alienPink_jump",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:13 UTC",
+      "pngLastModified": "2016-09-30 17:04:13 UTC",
+      "version": "hV2.4cvmLEHrUSPwKLPoeXdd7xAZMLZr",
+      "sourceUrl": "/api/v1/animation-library/hV2.4cvmLEHrUSPwKLPoeXdd7xAZMLZr/alienPink_jump.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 256
+      }
+    },
+    "alienPink_walk": {
+      "name": "alienPink_walk",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 130,
+        "y": 258
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:14 UTC",
+      "pngLastModified": "2016-09-30 17:04:15 UTC",
+      "version": "qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr",
+      "sourceUrl": "/api/v1/animation-library/qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr/alienPink_walk.png",
+      "sourceSize": {
+        "x": 260,
+        "y": 258
+      }
+    },
     "apple": {
       "name": "apple",
       "frameCount": 1,
@@ -201,6 +309,42 @@
       "sourceSize": {
         "x": 128,
         "y": 128
+      }
+    },
+    "bee": {
+      "name": "bee",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 63,
+        "y": 50
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:15 UTC",
+      "pngLastModified": "2016-09-30 17:04:16 UTC",
+      "version": "krbtJBejY4raLS62DunvI1MnuoK47eQr",
+      "sourceUrl": "/api/v1/animation-library/krbtJBejY4raLS62DunvI1MnuoK47eQr/bee.png",
+      "sourceSize": {
+        "x": 126,
+        "y": 50
+      }
+    },
+    "blender": {
+      "name": "blender",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 89,
+        "y": 136
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:16 UTC",
+      "pngLastModified": "2016-09-30 17:04:16 UTC",
+      "version": "BrCgjf4LIXQbkBCHeStpCJFRM3NFGyet",
+      "sourceUrl": "/api/v1/animation-library/BrCgjf4LIXQbkBCHeStpCJFRM3NFGyet/blender.png",
+      "sourceSize": {
+        "x": 89,
+        "y": 136
       }
     },
     "boat": {
@@ -995,6 +1139,42 @@
         "y": 128
       }
     },
+    "fish_blue": {
+      "name": "fish_blue",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 127,
+        "y": 96
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:17 UTC",
+      "pngLastModified": "2016-09-30 17:04:18 UTC",
+      "version": "S6eS0NhUFSHMjShC9GmGQBevyWK4LOwZ",
+      "sourceUrl": "/api/v1/animation-library/S6eS0NhUFSHMjShC9GmGQBevyWK4LOwZ/fish_blue.png",
+      "sourceSize": {
+        "x": 254,
+        "y": 96
+      }
+    },
+    "fish_brown": {
+      "name": "fish_brown",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:18 UTC",
+      "pngLastModified": "2016-09-30 17:04:19 UTC",
+      "version": "v_.ifq6.2G42dxagT3nsAjRpCORfoCl9",
+      "sourceUrl": "/api/v1/animation-library/v_.ifq6.2G42dxagT3nsAjRpCORfoCl9/fish_brown.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "fish_cooked": {
       "name": "fish_cooked",
       "frameCount": 1,
@@ -1008,6 +1188,60 @@
       "pngLastModified": "2016-09-22 18:12:24 UTC",
       "version": "GcgAjdlq.5cS0ObW3Z5sAGUqR3IvWjFg",
       "sourceUrl": "/api/v1/animation-library/GcgAjdlq.5cS0ObW3Z5sAGUqR3IvWjFg/fish_cooked.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fish_green": {
+      "name": "fish_green",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 67,
+        "y": 47
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:19 UTC",
+      "pngLastModified": "2016-09-30 17:04:20 UTC",
+      "version": "JaxFz0fXNDJ2DwVHXEukD1S5YJM9P5.K",
+      "sourceUrl": "/api/v1/animation-library/JaxFz0fXNDJ2DwVHXEukD1S5YJM9P5.K/fish_green.png",
+      "sourceSize": {
+        "x": 134,
+        "y": 47
+      }
+    },
+    "fish_pink": {
+      "name": "fish_pink",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 67,
+        "y": 47
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:20 UTC",
+      "pngLastModified": "2016-09-30 17:04:20 UTC",
+      "version": "b8DdAj_z8frRgLnrXc_z0fgxT24ypvzh",
+      "sourceUrl": "/api/v1/animation-library/b8DdAj_z8frRgLnrXc_z0fgxT24ypvzh/fish_pink.png",
+      "sourceSize": {
+        "x": 134,
+        "y": 47
+      }
+    },
+    "fish_silver": {
+      "name": "fish_silver",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:20 UTC",
+      "pngLastModified": "2016-09-30 17:04:20 UTC",
+      "version": "0NkBTnrWIKoFnF0_e41BrjbLSs6r3tUc",
+      "sourceUrl": "/api/v1/animation-library/0NkBTnrWIKoFnF0_e41BrjbLSs6r3tUc/fish_silver.png",
       "sourceSize": {
         "x": 128,
         "y": 128
@@ -1121,6 +1355,24 @@
         "y": 128
       }
     },
+    "fly": {
+      "name": "fly",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 67,
+        "y": 47
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:21 UTC",
+      "pngLastModified": "2016-09-30 17:04:22 UTC",
+      "version": "r7hToTYZYHF3cBcXgtAyUqRZ6lC7ELdR",
+      "sourceUrl": "/api/v1/animation-library/r7hToTYZYHF3cBcXgtAyUqRZ6lC7ELdR/fly.png",
+      "sourceSize": {
+        "x": 134,
+        "y": 47
+      }
+    },
     "flyMan_fly": {
       "name": "flyMan_fly",
       "frameCount": 1,
@@ -1229,6 +1481,24 @@
         "y": 132
       }
     },
+    "ghost": {
+      "name": "ghost",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 51,
+        "y": 73
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:22 UTC",
+      "pngLastModified": "2016-09-30 17:04:22 UTC",
+      "version": "TZIhjYF8cekSqZ0Zlm94YuqWneuvocld",
+      "sourceUrl": "/api/v1/animation-library/TZIhjYF8cekSqZ0Zlm94YuqWneuvocld/ghost.png",
+      "sourceSize": {
+        "x": 51,
+        "y": 73
+      }
+    },
     "ghost_standing": {
       "name": "ghost_standing",
       "frameSize": {
@@ -1281,6 +1551,24 @@
       "sourceSize": {
         "x": 128,
         "y": 128
+      }
+    },
+    "gnome": {
+      "name": "gnome",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 44,
+        "y": 136
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:23 UTC",
+      "pngLastModified": "2016-09-30 17:04:23 UTC",
+      "version": "BtfikHdmuMr.95ePz_dhUZvW79IP0wFY",
+      "sourceUrl": "/api/v1/animation-library/BtfikHdmuMr.95ePz_dhUZvW79IP0wFY/gnome.png",
+      "sourceSize": {
+        "x": 44,
+        "y": 136
       }
     },
     "gold_1": {
@@ -2309,6 +2597,24 @@
         "y": 77
       }
     },
+    "ladybug": {
+      "name": "ladybug",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 63,
+        "y": 36
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:23 UTC",
+      "pngLastModified": "2016-09-30 17:04:24 UTC",
+      "version": "sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E",
+      "sourceUrl": "/api/v1/animation-library/sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E/ladybug.png",
+      "sourceSize": {
+        "x": 126,
+        "y": 36
+      }
+    },
     "lava": {
       "name": "lava",
       "frameCount": 1,
@@ -2415,6 +2721,24 @@
       "sourceSize": {
         "x": 52,
         "y": 71
+      }
+    },
+    "lollipop_red": {
+      "name": "lollipop_red",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 70
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:24 UTC",
+      "pngLastModified": "2016-09-30 17:04:24 UTC",
+      "version": "CiE4M0rx5bN1puzSeZUBUM.OrGbjHMYY",
+      "sourceUrl": "/api/v1/animation-library/CiE4M0rx5bN1puzSeZUBUM.OrGbjHMYY/lollipop_red.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 70
       }
     },
     "medals/flat_medal1": {
@@ -2921,6 +3245,24 @@
         "y": 128
       }
     },
+    "mouse": {
+      "name": "mouse",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 61,
+        "y": 37
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:24 UTC",
+      "pngLastModified": "2016-09-30 17:04:24 UTC",
+      "version": "7KbcWT79T9it3M6qb9fADawKujPqpfL5",
+      "sourceUrl": "/api/v1/animation-library/7KbcWT79T9it3M6qb9fADawKujPqpfL5/mouse.png",
+      "sourceSize": {
+        "x": 122,
+        "y": 37
+      }
+    },
     "mushroom_brown": {
       "name": "mushroom_brown",
       "frameCount": 1,
@@ -2948,13 +3290,13 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-09-28 23:58:02 UTC",
-      "pngLastModified": "2016-09-22 18:22:05 UTC",
-      "version": "WAXClcG1wdIYHyMh9FmNpmh1_cG5gQYr",
-      "sourceUrl": "/api/v1/animation-library/WAXClcG1wdIYHyMh9FmNpmh1_cG5gQYr/mushroom_red.png",
+      "jsonLastModified": "2016-09-30 17:04:24 UTC",
+      "pngLastModified": "2016-09-30 17:04:25 UTC",
+      "version": "8KI7zngkTq3DjEPsjBr3ZDXOpIuYkjF9",
+      "sourceUrl": "/api/v1/animation-library/8KI7zngkTq3DjEPsjBr3ZDXOpIuYkjF9/mushroom_red.png",
       "sourceSize": {
-        "x": 128,
-        "y": 128
+        "x": 81,
+        "y": 99
       }
     },
     "mushroom_tan": {
@@ -2984,10 +3326,10 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-09-28 23:58:03 UTC",
-      "pngLastModified": "2016-09-22 18:13:10 UTC",
-      "version": "HdVcf5FTdKWUK4sIRNrLVHldGn8ZrTTX",
-      "sourceUrl": "/api/v1/animation-library/HdVcf5FTdKWUK4sIRNrLVHldGn8ZrTTX/ore_coal.png",
+      "jsonLastModified": "2016-09-30 17:04:25 UTC",
+      "pngLastModified": "2016-09-30 17:04:25 UTC",
+      "version": "Z6zK9GwnnLfVcdOzqGEdaZvmORye8Ai6",
+      "sourceUrl": "/api/v1/animation-library/Z6zK9GwnnLfVcdOzqGEdaZvmORye8Ai6/ore_coal.png",
       "sourceSize": {
         "x": 128,
         "y": 128
@@ -3254,10 +3596,10 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-09-28 23:58:09 UTC",
-      "pngLastModified": "2016-09-21 23:15:54 UTC",
-      "version": "pE8zehInngxiFHr7VmwDVhj4vNTsXC5p",
-      "sourceUrl": "/api/v1/animation-library/pE8zehInngxiFHr7VmwDVhj4vNTsXC5p/portal_orange.png",
+      "jsonLastModified": "2016-09-30 17:04:25 UTC",
+      "pngLastModified": "2016-09-30 17:04:26 UTC",
+      "version": "usJKAo3jXvcSEQ6ryVoQD16TLODs.wnG",
+      "sourceUrl": "/api/v1/animation-library/usJKAo3jXvcSEQ6ryVoQD16TLODs.wnG/portal_orange.png",
       "sourceSize": {
         "x": 230,
         "y": 82
@@ -4233,6 +4575,24 @@
       "sourceSize": {
         "x": 14,
         "y": 84
+      }
+    },
+    "snail": {
+      "name": "snail",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 62,
+        "y": 42
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-09-30 17:04:26 UTC",
+      "pngLastModified": "2016-09-30 17:04:26 UTC",
+      "version": "j3q0YnQ6Lpclgjb18S0uFN.b_VHEEtAn",
+      "sourceUrl": "/api/v1/animation-library/j3q0YnQ6Lpclgjb18S0uFN.b_VHEEtAn/snail.png",
+      "sourceSize": {
+        "x": 124,
+        "y": 42
       }
     },
     "snow": {
@@ -5317,6 +5677,24 @@
     }
   },
   "aliases": {
+    "aliengreen_duck": [
+      "alienGreen_duck"
+    ],
+    "aliengreen_jump": [
+      "alienGreen_jump"
+    ],
+    "aliengreen_walk": [
+      "alienGreen_walk"
+    ],
+    "alienpink_hit": [
+      "alienPink_hit"
+    ],
+    "alienpink_jump": [
+      "alienPink_jump"
+    ],
+    "alienpink_walk": [
+      "alienPink_walk"
+    ],
     "apple": [
       "apple"
     ],
@@ -5378,6 +5756,12 @@
     ],
     "axe_silver": [
       "axe_silver"
+    ],
+    "bee": [
+      "bee"
+    ],
+    "blender": [
+      "blender"
     ],
     "boat": [
       "boat"
@@ -5599,8 +5983,23 @@
     "fish": [
       "fish"
     ],
+    "fish_blue": [
+      "fish_blue"
+    ],
+    "fish_brown": [
+      "fish_brown"
+    ],
     "fish_cooked": [
       "fish_cooked"
+    ],
+    "fish_green": [
+      "fish_green"
+    ],
+    "fish_pink": [
+      "fish_pink"
+    ],
+    "fish_silver": [
+      "fish_silver"
     ],
     "fishingpole": [
       "fishingPole"
@@ -5674,6 +6073,9 @@
     "flatshadow_medal9": [
       "medals/flatshadow_medal9"
     ],
+    "fly": [
+      "fly"
+    ],
     "flying": [
       "wingMan"
     ],
@@ -5695,6 +6097,9 @@
     "flyman_still_stand": [
       "flyMan_still_stand"
     ],
+    "ghost": [
+      "ghost"
+    ],
     "ghost_standing": [
       "ghost_standing"
     ],
@@ -5703,6 +6108,9 @@
     ],
     "glass_frame": [
       "glass_frame"
+    ],
+    "gnome": [
+      "gnome"
     ],
     "gold": [
       "medals/flat_medal1",
@@ -5903,6 +6311,9 @@
       "bunny2_walk1",
       "bunny2_walk2"
     ],
+    "ladybug": [
+      "ladybug"
+    ],
     "lava": [
       "lava"
     ],
@@ -5921,6 +6332,9 @@
     "lifes": [
       "lifes"
     ],
+    "lollipop_red": [
+      "lollipop_red"
+    ],
     "minecart": [
       "minecart"
     ],
@@ -5938,6 +6352,9 @@
     ],
     "motorcycle_yellow": [
       "racing-pack/motorcycle_yellow"
+    ],
+    "mouse": [
+      "mouse"
     ],
     "mushroom_brown": [
       "mushroom_brown"
@@ -6178,6 +6595,9 @@
     ],
     "silver_4": [
       "silver_4"
+    ],
+    "snail": [
+      "snail"
     ],
     "snow": [
       "snow"
