@@ -474,6 +474,9 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     arguments += " --format rerun --out #{rerun_filename}"
   end
 
+  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # provide pretty test reports with success/fail/timing data upon completion.
+  # See: https://circleci.com/docs/test-metadata/#cucumber
   if ENV['CI']
     arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
