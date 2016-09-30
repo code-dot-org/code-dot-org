@@ -31,6 +31,9 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"
   override:
+    # Install any dependencies not covered by rake install
+    # When installing moreutils, make sure it does not overwrite GNU parallel,
+    # which CircleCI uses to capture artifacts.
     - sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
     - sudo apt-get install libicu-dev enscript moreutils
     - sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
