@@ -1,6 +1,3 @@
-title 'Computer Science in Algebra: Course A'
-description "Learn Functional Programming through Algebra"
-description_short "Learn Functional Programming through Algebra"
 hidden 'false'
 login_required 'true'
 
