@@ -40,7 +40,6 @@ class DslTest < ActiveSupport::TestCase
       wrapup_video: nil,
       login_required: false,
       professional_learning_course: nil,
-      pd: false,
       hideable_stages: false,
       peer_reviews_to_complete: nil
     }
@@ -80,7 +79,6 @@ level 'Level 3'
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      pd: false,
       hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -140,7 +138,6 @@ level 'Level 3'
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      pd: false,
       hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -196,7 +193,6 @@ level 'Level 3'
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      pd: false,
       hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -312,7 +308,6 @@ DSL
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      pd: false,
       hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -350,7 +345,6 @@ DSL
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      pd: false,
       hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil

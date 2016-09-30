@@ -881,8 +881,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     script = Script.find_by_name('ECSPD')
-    assert script.pd?
-    assert script.professional_course?
+    assert script.professional_learning_course?
 
     get :show, params: {script_id: script, stage_position: 1, id: 1}
     assert_select '.teacher-panel', 0
@@ -894,7 +893,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
-    assert script.professional_course?
 
     get :show, script_id: script, stage_position: 1, id: 1
     assert_select '.teacher-panel', 0
