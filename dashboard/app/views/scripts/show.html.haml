@@ -4,14 +4,15 @@
 = render partial: 'shared/check_admin'
 #landingpage
   #lesson
-    - if @script.professional_learning_course?
-      #breadcrumb
-      - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
-      :javascript
-        ReactDOM.render(
-          React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
-          document.getElementById('breadcrumb')
-        );
+    - if @script.professional_learning_course? && @current_user
+      - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.professional_learning_course)
+        #breadcrumb
+        - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
+        :javascript
+          ReactDOM.render(
+            React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
+            document.getElementById('breadcrumb')
+          );
     - else
       #trynow
         = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
