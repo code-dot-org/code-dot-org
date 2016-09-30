@@ -1245,29 +1245,39 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], hidden
   end
 
-  # test "teacher gets hidden stages for sections they own" do
-  #   teacher = create :teacher
-  #   teacher_teacher = create :teacher
-  #   student = create :student
-  #   sign_in teacher
-  #
-  #   teacher_owner_section = put_student_in_section(student, teacher, @script)
-  #   teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
-  #
-  #   stage1 = @script.stages[0]
-  #   stage2 = @script.stages[1]
-  #
-  #   # stage 1 is hidden in the section owned by the teacher
-  #   SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: stage1.id)
-  #
-  #   # stage 2 is hidden in the section in which the teacher is a member
-  #   SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: stage2.id)
-  #
-  #   response = get_hidden(@script)
-  #   hidden = JSON.parse(response.body)
-  #   # only the stages hidden in the owned section are considered hidden
-  #   assert_equal [stage1.id.to_s], hidden
-  # end
+  test "teacher gets hidden stages for sections they own" do
+    teacher = create :teacher
+    teacher_teacher = create :teacher
+    student = create :student
+    sign_in teacher
+
+    teacher_owner_section = put_student_in_section(student, teacher, @script)
+    teacher_owner_section2 = put_student_in_section(student, teacher, @script)
+    teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
+
+    stage1 = @script.stages[0]
+    stage2 = @script.stages[1]
+    stage3 = @script.stages[2]
+
+    # stage 1 is hidden in the first section owned by the teacher
+    SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: stage1.id)
+
+    # stage 1 and 2 are hidden in the second section owned by the teacher
+    SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: stage2.id)
+
+    # stage 3 is hidden in the section in which the teacher is a member
+    SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: stage3.id)
+
+    response = get_hidden(@script)
+    hidden = JSON.parse(response.body)
+    # only the stages hidden in the owned section are considered hidden
+    expected = {
+      teacher_owner_section.id.to_s => [stage1.id],
+      teacher_owner_section2.id.to_s => [stage1.id, stage2.id]
+    }
+    assert_equal expected, hidden
+  end
 
   test "teacher can hide and unhide stages in sections they own" do
     teacher = create :teacher

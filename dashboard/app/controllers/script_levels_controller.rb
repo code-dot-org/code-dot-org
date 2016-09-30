@@ -330,7 +330,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def stage_hidden?(script_level)
-    return false if current_user.try(:teacher?)
+    return false if !current_user || current_user.try(:teacher?)
 
     sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
     return false if sections.empty?
@@ -349,6 +349,8 @@ class ScriptLevelsController < ApplicationController
   end
 
   def get_hidden_stage_ids(script_id)
+    return [] unless current_user
+
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden stages in that section
     if current_user.try(:teacher?)
