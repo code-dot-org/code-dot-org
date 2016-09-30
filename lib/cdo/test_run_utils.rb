@@ -34,10 +34,10 @@ module TestRunUtils
     end
   end
 
-  def self.run_code_studio_tests
-    Dir.chdir(code_studio_dir) do
-      with_hipchat_logging('code studio tests') do
-        RakeUtils.system 'npm run test'
+  def self.run_blockly_core_tests
+    Dir.chdir(blockly_core_dir) do
+      with_hipchat_logging('blockly core tests') do
+        RakeUtils.system './test.sh'
       end
     end
   end

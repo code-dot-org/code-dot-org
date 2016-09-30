@@ -32,16 +32,27 @@ export function onReady() {
   });
 
   $('#unsubmit').click(function (ev) {
-    $.post($(ev.target).attr('data-user-level-url'), {
-      "_method": 'PUT',
+    $.ajax({
+      url: $(ev.target).attr('data-user-level-url'),
+      method: 'PUT',
       user_level: {
         best_result: 1,
         submitted: false
       }
-    }, function (data) {
+    }).done(data => {
       // Let's just refresh so that the dots are correct, etc.
       location.reload();
-    });
+    }).fail(err => console.error(err));
+  });
+
+  $("#clear-response").click(ev => {
+    $.ajax({
+      url: $(ev.target).attr('data-user-level-url'),
+      method: 'DELETE'
+    }).done(data => {
+      // Refresh, so that we no longer have the students response loaded
+      location.reload();
+    }).fail(err => console.error(err));
   });
 
   setStageLockedText();

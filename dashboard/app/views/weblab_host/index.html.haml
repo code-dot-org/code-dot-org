@@ -1,6 +1,8 @@
 %html{spellcheck: 'false'}
   %head
+    = javascript_include_tag 'application'
   %body{style: 'margin: 0'}
     %div{style: 'height: 20px'}
     #bramble{style: 'height: 100vh;overflow: hidden;'}
     %script{src: asset_path('js/bramble/thirdparty/require.min.js'), 'data-main': asset_path('js/brambleHost.js')}
+    =# DEVMODE: %script{src: asset_path('http://127.0.0.1:8000/src/thirdparty/require.min.js'), 'data-main': asset_path('js/brambleHost.js')}
