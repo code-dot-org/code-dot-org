@@ -46,6 +46,13 @@
                   .timestamp= @user_level.updated_at.iso8601
                   %button.btn.btn-info#unsubmit{"data-user-level-url" => url_for(@user_level)}
                     = t('teacher.panel.unsubmit')
+        - if @level && @level.contained_levels.any?
+          - contained_level = @level.contained_levels.first
+          - if @user.last_attempt(contained_level).try(:level_source).try(:data)
+            - contained_user_level = @user.user_level_for(@script_level, contained_level)
+            .level
+              %button.btn.btn-info#clear-response{"data-user-level-url" => url_for(contained_user_level)}
+                = t('teacher.panel.clear_response')
         .level
           - if @level && @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
             - if @ideal_level_source

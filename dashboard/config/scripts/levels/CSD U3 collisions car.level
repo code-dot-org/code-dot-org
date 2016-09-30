@@ -74,8 +74,8 @@
     "markdown_instructions": "# Improve Your Game\r\n\r\nNow that you know how to use `isTouching` and `playSound`, you can make some fun things happen when your sprites run into each other.\r\n\r\n# Do This\r\n\r\nUse the `if`, `isTouching`, `playsound`, and any other blocks you want to add effects when your sprites collide.  You should have at least two effects.\r\n\r\n_Challenge: Can you add a score board to the top of the screen?  How would your game keep score, and how would the score be displayed?_",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
-    "contained_level_names": null,
-    "project_template_level_name": "CSD U3 abstraction sidescroll template"
+    "project_template_level_name": "CSD U3 abstraction sidescroll template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -109,7 +109,7 @@
     - answers_feedback = data['answers'].map {|answer| answer['feedback']}
 
   :javascript
-    window.levelGroup.levels[#{level.id}] = new Multi(
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Multi(
       #{level.id},
       "level_#{level.id}",
       "#{app}",
@@ -119,4 +119,4 @@
       #{answers_feedback.to_json},
       #{last_attempt.to_json},
       #{contained_mode}
-    );
+    ));

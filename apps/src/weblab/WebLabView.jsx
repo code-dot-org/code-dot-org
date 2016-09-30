@@ -16,6 +16,9 @@ const WebLabView = React.createClass({
     onUndo: React.PropTypes.func.isRequired,
     onRedo: React.PropTypes.func.isRequired,
     onToggleInspector: React.PropTypes.func.isRequired,
+    onAddFileHTML: React.PropTypes.func.isRequired,
+    onAddFileCSS: React.PropTypes.func.isRequired,
+    onAddFileImage: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -46,6 +49,12 @@ const WebLabView = React.createClass({
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
           <div>
+            <a id="add-file-html-link" href="#" onClick={this.props.onAddFileHTML}> Add HTML File </a>
+            |
+            <a id="add-file-css-link" href="#" onClick={this.props.onAddFileCSS}> Add CSS File </a>
+            |
+            <a id="add-file-image-link" href="#" onClick={this.props.onAddFileImage}> Add Image File </a>
+            |
             <a id="undo-link" href="#" onClick={this.props.onUndo}> Undo </a>
             |
             <a id="redo-link" href="#" onClick={this.props.onRedo}> Redo </a>
