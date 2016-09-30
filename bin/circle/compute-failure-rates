@@ -32,13 +32,13 @@ end
 # @return [Hash<build_num:Integer, build_descriptor:Object>] 30 most recent
 #         build descriptors from the CircleCI API
 def get_recent_builds
-  builds = JSON.parse(open(CIRCLE_API_BASE).read)
+  builds = @project.get_recent_builds
   Hash[builds.collect {|b| [b['build_num'], b]}]
 end
 
 # @return [Integer] The most recent build number in the project
 def latest_build_num
-  get_recent_builds.first[0]
+  @project.get_latest_build_num
 end
 
 memoize :get_recent_builds
@@ -51,28 +51,6 @@ def get_build(build_id)
 end
 
 memoize :get_build
-
-# Returns the full output URL for a given build step
-# @param [Fixnum] build_object The build information object from the Circle API
-# @param [Fixnum] container_id The container ID #
-# @param [String] grep_for_step The build step to search for (e.g. "rake install")
-def build_step_output_url(build_object, container_id, grep_for_step)
-  build_object['steps'].select { |o| o['name'].include? grep_for_step }[0]['actions'][container_id]['output_url']
-end
-
-memoize :build_step_output_url
-
-# @param [Fixnum] build_id The build ID #
-# @param [Fixnum] container_id The container ID #
-# @param [String] grep_for_step The build step to search for (e.g. "rake install")
-# @return [Object, nil] full build output JSON object from CircleCI, or nil if error in retrieval
-#   Example output JSON: https://gist.github.com/bcjordan/8349fbb1edc284839b42ae53ad19b68a
-def get_output(build_id, container_id, grep_for_step)
-  JSON.parse(open(build_step_output_url(get_build(build_id), container_id, grep_for_step)).read)
-rescue => _
-end
-
-memoize :get_output
 
 options = {}
 OptionParser.new do |opts|
