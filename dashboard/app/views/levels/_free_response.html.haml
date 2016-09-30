@@ -5,7 +5,7 @@
 
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
-    window.levelGroup.levels[#{level.id}] = {
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, {
       getResult: function () {
         var response = $('#level_#{level.id}').val();
         return {
@@ -25,7 +25,7 @@
         // Not implemented
       },
       levelId: #{level.id}
-    };
+    });
 
     $(document).ready(function() {
       var textarea = $("textarea#level_#{level.id}.response");

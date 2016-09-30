@@ -1,8 +1,6 @@
 import $ from 'jquery';
 import { registerGetResult } from './codeStudioLevels';
 
-window.levelGroup = window.levelGroup || {levels: {}};
-
 var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
 
   // The dashboard levelId.
