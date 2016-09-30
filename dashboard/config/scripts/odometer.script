@@ -1,6 +1,2 @@
-title 'Odometer Widget'
-description 'Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.'
-description_short 'Odometer widget'
-
 stage 'Odometer Widget'
 level 'odometer'

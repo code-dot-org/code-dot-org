@@ -364,7 +364,3 @@ end
 def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
 end
-
-def code_studio_dir(*dirs)
-  deploy_dir('code-studio', *dirs)
-end

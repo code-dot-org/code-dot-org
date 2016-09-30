@@ -1,6 +1,3 @@
-title 'Play Lab'
-description_short "Create a story or make a game with Play Lab!"
-description "Create a story or make a game with Play Lab!"
 hidden 'false'
 
 stage 'Play Lab'
