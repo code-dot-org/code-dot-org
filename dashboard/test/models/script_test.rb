@@ -227,28 +227,6 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'allow applab and gamelab levels in student_of_admin_required scripts' do
-    Script.add_script(
-      {name: 'test script', hidden: false, student_of_admin_required: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-    Script.add_script(
-      {name: 'test script', hidden: false, student_of_admin_required: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab and gamelab levels in admin_required scripts' do
-    Script.add_script(
-      {name: 'test script', hidden: false, admin_required: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-    Script.add_script(
-      {name: 'test script', hidden: false, admin_required: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
   test 'scripts are hidden or not' do
     visible_scripts = %w{
       20-hour flappy playlab infinity artist course1 course2 course3 course4
