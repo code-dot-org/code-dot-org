@@ -93,4 +93,8 @@ Dashboard::Application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
+
+  # enable script cache by default. This is overridden in models/script.rb for
+  # unit tests and CI environments
+  config.enable_script_cache = CDO.with_default(true).enable_script_cache
 end
