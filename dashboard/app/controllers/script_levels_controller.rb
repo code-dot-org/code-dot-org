@@ -133,14 +133,17 @@ class ScriptLevelsController < ApplicationController
     require_levelbuilder_mode
     authorize! :read, ScriptLevel
 
-    script = Script.get_from_cache(params[:script_id])
-
+    stages = Script.get_from_cache(params[:script_id]).stages
     if params[:stage_position]
-      stage = script.stages.select{|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
+      stage = stages.select{|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
     else
-      stage = script.stages.select{|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
+      stage = stages.select{|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
     end
 
+    unless stage
+      render text: 'stage does not exist'
+      return
+    end
     render json: stage.summary_for_lesson_plans
   end
 

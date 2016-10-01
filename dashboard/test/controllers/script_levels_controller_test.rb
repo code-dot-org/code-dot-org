@@ -1288,4 +1288,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
   end
+
+  test 'summary for lesson plans handles missing stage gracefully' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    user = create :user
+    sign_in user
+
+    script = Script.twenty_hour_script
+
+    get :summary_for_lesson_plans,
+      script_id: script.id,
+      stage_position: script.stages.count + 1
+    assert_response 200
+    assert_equal response.body, 'stage does not exist'
+  end
 end
