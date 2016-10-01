@@ -90,6 +90,29 @@ class Pd::Workshop < ActiveRecord::Base
   }.freeze
   SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
 
+  # Time constrains for payment, per subject.
+  # Each subject has the following constraints:
+  # min_days: the minimum # of days a teacher must attend in order to be counted at all.
+  # max_days: the maximum # of days the workshop can be recognized for.
+  # max_hours: the maximum # of hours the workshop can be recognized for.
+  TIME_CONSTRAINTS_BY_SUBJECT = {
+    SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5, max_hours: 30},
+    SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
+  }
+
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -268,5 +291,37 @@ class Pd::Workshop < ActiveRecord::Base
       longitude: result.longitude,
       formatted_address: result.formatted_address
     }.to_json
+  end
+
+  # Min number of days a teacher must attend for it to count
+  def min_attendance_days
+    constraints = TIME_CONSTRAINTS_BY_SUBJECT[self.subject]
+    if constraints
+      constraints[:min_days]
+    else
+      1
+    end
+  end
+
+  # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
+  def effective_num_days
+    max_days = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_days]}
+
+    if max_days
+      [self.sessions.count, max_days].min
+    else
+      self.sessions.count
+    end
+  end
+
+  def effective_num_hours
+    actual_hours = sessions.map(&:hours).reduce(&:+)
+    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_hours]}
+
+    if max_hours
+      [actual_hours, max_hours].min
+    else
+      actual_hours
+    end
   end
 end
