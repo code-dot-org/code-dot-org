@@ -115,7 +115,7 @@ start_build = options[:start_build] || end_build - 29
 build_nums = (start_build..end_build).to_a
 
 # Download the build information we need
-build_infos = Parallel.map(build_nums, progress: 'Downloading...') do |build_num|
+build_infos = Parallel.map(build_nums, progress: 'Downloading...', in_processes: 50) do |build_num|
   build = get_recent_builds[build_num] || get_build(build_num)
   next if build['queued_at'].nil? || build['branch'].nil? || build['outcome'].nil?
   {
