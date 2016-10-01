@@ -65,4 +65,8 @@ Dashboard::Application.configure do
   # don't act like a levelbuilder by default
   # set "levelbuilder_mode: true" in locals.yml if you want to be able to create levels or test levelbuilder functionality
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  # disable script cache by default in development mode, to reduce server
+  # startup time. Set 'disable_script_cache: true" in locals.yml to override
+  config.enable_script_cache = CDO.with_default(false).enable_script_cache
 end
