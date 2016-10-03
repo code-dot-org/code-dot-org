@@ -45,7 +45,7 @@ module RakeUtils
           next
         end
       end
-      raise "Could not stop #{id} after #{i} attempts" unless success
+      raise "Could not stop #{id} after #{retry_count + 1} attempts" unless success
     end
   end
 
