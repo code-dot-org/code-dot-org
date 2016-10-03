@@ -14,7 +14,6 @@ import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
 import Header from './header';
-import SurveyResults from './survey_results.jsx';
 import WorkshopIndex from './workshop_index';
 import WorkshopAttendance from './attendance/workshop_attendance';
 
@@ -31,11 +30,6 @@ const WorkshopDashboard = (
         path="workshops"
         breadcrumbs="Workshops"
         component={WorkshopIndex}
-      />
-      <Route
-        path="survey_results"
-        breadcrumbs="Survey Results"
-        component={SurveyResults}
       />
       <Route
         path="workshops/new"
