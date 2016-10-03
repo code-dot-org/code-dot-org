@@ -5,64 +5,57 @@
 import $ from 'jquery';
 import { INIT_PROGRESS } from './progressRedux';
 import experiments from '@cdo/apps/experiments';
-import Immutable from 'immutable';
 
-export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
+export const UPDATE_HIDDEN_STAGES = 'hiddenStage/UPDATE_HIDDEN_STAGES';
 export const ALLOW_HIDEABLE = 'hiddenStage/ALLOW_HIDEABLE';
-
-const STUDENT_SECTION_ID = 'STUDENT';
 
 export const hiddenStagesEnabled = () => experiments.isEnabled('hiddenStages');
 
-const initialState = Immutable.fromJS({
-  initialized: false,
-  // mapping of section id to hidden stages for that section
-  // Teachers will potentially have a number of section ids. For students we
-  // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
-  // for the student based on the sections they are in.
-  bySection: {
-    // [sectionId]: {
-    //   [stageId]: true
-    // }
-  }
-});
+// State is a key indicating whether or not we've received hidden stage info
+// from the server, and then a set of stageIds mapped to bools that are true
+// if that stage is hidden
+const initialState = {
+  initialized: false
+};
 
 /**
  * hidden stage reducer
  * Mapping of stage ids to bools indicating whether it's locked or not
  */
 export default function reducer(state = initialState, action) {
-  if (action.type === UPDATE_HIDDEN_STAGE) {
-    const { sectionId, stageId, hidden } = action;
-    const nextState = state.setIn(['bySection', sectionId, stageId.toString()], hidden);
-    if (state.getIn(['bySection', STUDENT_SECTION_ID]) &&
-        state.get('bySection').size > 1) {
-      throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
-    }
-    return nextState;
+  if (action.type === UPDATE_HIDDEN_STAGES) {
+    return {
+      ...state,
+      ...action.updates
+    };
   }
 
   if (action.type === ALLOW_HIDEABLE) {
-    return state.set('initialized', true);
+    return {
+      ...state,
+      initialized: true
+    };
   }
 
   return state;
 }
 
 // action creators
-function updateHiddenStage(sectionId, stageId, hidden) {
+export function updateHiddenStages(updates) {
   return {
-    type: UPDATE_HIDDEN_STAGE,
-    sectionId,
-    stageId,
-    hidden
+    type: UPDATE_HIDDEN_STAGES,
+    updates
   };
 }
 
-export function toggleHidden(scriptName, sectionId, stageId, hidden) {
+export function toggleHidden(scriptName, stageId, hidden) {
   return (dispatch, getState) => {
     // update local state
-    dispatch(updateHiddenStage(sectionId, stageId, hidden));
+    dispatch(updateHiddenStages({
+      [stageId]: hidden
+    }));
+
+    const sectionId = getState().stageLock.selectedSection;
 
     // update the server. note: we don't do anything differently if it succeeds
     // or fails
@@ -88,7 +81,7 @@ export function allowHideable() {
 
 
 export function getHiddenStages(scriptName) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     if (!hiddenStagesEnabled()) {
       return;
     }
@@ -98,38 +91,16 @@ export function getHiddenStages(scriptName) {
       url: `/s/${scriptName}/hidden_stages`,
       dataType: 'json',
       contentType: 'application/json'
-    }).done(response => {
+    }).done(hiddenStageIds => {
+      // send updates for all stageIds, setting hidden to true
+      const updates = hiddenStageIds.reduce((obj, id) => {
+        obj[id] = true;
+        return obj;
+      }, {});
+      dispatch(updateHiddenStages(updates));
       dispatch(allowHideable());
-
-      // For a teacher, we get back a map of section id to hidden stage ids
-      // For a student, we just get back a list of hidden stage ids. Turn that
-      // into an object, under the 'sectionId' of STUDENT_SECTION_ID
-      if (Array.isArray(response)) {
-        response = { [STUDENT_SECTION_ID]: response };
-      }
-
-      Object.keys(response).forEach(sectionId => {
-        const hiddenStageIds = response[sectionId];
-        hiddenStageIds.forEach(stageId => {
-          dispatch(updateHiddenStage(sectionId, stageId, true));
-        });
-      });
     }).fail(err => {
       console.error(err);
     });
   };
-}
-
-// utils
-
-/**
- * Helper to determine whether a stage is hidden for a given section. If no
- * section is given,
- */
-export function isHiddenFromState(bySection, sectionId, stageId) {
-  // if we don't have a sectionId, we must be a student
-  if (sectionId === null ){
-    sectionId = STUDENT_SECTION_ID;
-  }
-  return !!bySection.getIn([sectionId, stageId.toString()]);
 }
