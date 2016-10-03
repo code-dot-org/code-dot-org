@@ -17,6 +17,7 @@
     "test:code-studio": "grunt codeStudioTest",
     "clean": "grunt clean",
     "build": "DEV=1 grunt build && grunt logBuildTimes",
+    "build:blockly": "DEV=1 grunt preconcat && grunt concat",
     "build:dist": "NODE_ENV=production grunt clean build && grunt logBuildTimes",
     "start": "DEV=1 grunt dev; grunt logBuildTimes",
     "start:applab": "DEV=1 grunt dev --app=applab; grunt logBuildTimes",
