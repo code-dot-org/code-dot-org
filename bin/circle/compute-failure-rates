@@ -26,6 +26,20 @@ class Hash
   end
 end
 
+# @return [Hash<build_num:Integer, build_descriptor:Object>] 30 most recent
+#         build descriptors from the CircleCI API
+def get_recent_builds
+  builds = JSON.parse(open(CIRCLE_API_BASE).read)
+  Hash[builds.collect {|b| [b['build_num'], b]}]
+end
+
+# @return [Integer] The most recent build number in the project
+def latest_build_num
+  get_recent_builds.first[0]
+end
+
+memoize :get_recent_builds
+
 # @param [Fixnum] build_id The CircleCI build #
 # @return [Object] build descriptor object from the CircleCI API
 #   Example output JSON: https://gist.github.com/bcjordan/02f7c2906b524fa86ec75b19f9a72cd2
@@ -59,12 +73,31 @@ memoize :get_output
 
 options = {}
 OptionParser.new do |opts|
-  opts.banner = 'Usage: ./search-circle-builds [options]'
+  opts.banner = 'Usage: ./compute-failure-rates [options]'
 
-  opts.on('--start StartBuildNumber', String, 'Start searching at build #') do |n|
+  opts.separator <<-EXAMPLES
+
+  Examples:
+
+    Default behavior, view stats for the last 30 builds:
+    ./compute-failure-rates
+
+    View stats for 30 builds ending at build 123:
+    ./compute-failure-rates --end 123
+
+    View stats for all builds since (and including) build 123:
+    ./compute-failure-rates --start 123
+
+    View status for builds in range 123-456 inclusive:
+    ./compute-failure-rates --start 123 --end 456
+
+  Options:
+  EXAMPLES
+
+  opts.on('--start StartBuildNumber', String, 'Start searching at build #. Default: Get 30 builds.') do |n|
     options[:start_build] = n.to_i
   end
-  opts.on('--end EndBuildNumber', String, 'End searching at build #') do |n|
+  opts.on('--end EndBuildNumber', String, 'End searching at build #. Default: Latest build.') do |n|
     options[:end_build] = n.to_i
   end
   opts.on_tail('-h', '--help', 'Show this message') do
@@ -73,14 +106,17 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-start_build = options[:start_build]
-end_build = options[:end_build]
-
+# Default end build should be the most recent build
+end_build = options[:end_build] || latest_build_num
+# Default start build should give us 30 builds up to the end build.
+# This allows us to make only one API call in the all-defaults case, since
+# the recent builds API call returns 30 builds.
+start_build = options[:start_build] || end_build - 29
 build_nums = (start_build..end_build).to_a
 
 # Download the build information we need
-build_infos = Parallel.map(build_nums, progress: 'Downloading...') do |build_num|
-  build = get_build(build_num)
+build_infos = Parallel.map(build_nums, progress: 'Downloading...', in_processes: 50) do |build_num|
+  build = get_recent_builds[build_num] || get_build(build_num)
   next if build['queued_at'].nil? || build['branch'].nil? || build['outcome'].nil?
   {
     build_num: build_num,
@@ -116,10 +152,10 @@ stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
 end
 
 # Print build stats
-puts "Failure rates by date (1.0 = 100% failures)"
+puts "Failure rates for builds #{start_build}..#{end_build} by date (1.0 = 100% failures)"
 puts "%-10s %10s %10s %10s" % ['Date', 'Branch', 'Pipeline', 'Overall']
 stats_by_date.each do |date, stats|
-  puts "%-10s %10s %10s %10s" % [date, stats[:branch_failure_rate].round(3), stats[:pipeline_failure_rate].round(3), stats[:total_failure_rate].round(3)]
+  puts "%-10s %10.3f %10.3f %10.3f" % [date, stats[:branch_failure_rate].round(3), stats[:pipeline_failure_rate].round(3), stats[:total_failure_rate].round(3)]
 end
 
 exit(0)
