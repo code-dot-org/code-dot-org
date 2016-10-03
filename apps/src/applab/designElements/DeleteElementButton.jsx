@@ -1,7 +1,7 @@
-var React = require('react');
-var color = require('../../color');
-var commonStyles = require('../../commonStyles');
-var Radium = require('radium');
+import React from 'react';
+import color from '../../color';
+import commonStyles from '../../commonStyles';
+import Radium from 'radium';
 
 var styles = {
   right: {
@@ -82,4 +82,4 @@ var DeleteElementButton = React.createClass({
   }
 });
 
-module.exports = Radium(DeleteElementButton);
+export default Radium(DeleteElementButton);

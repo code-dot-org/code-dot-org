@@ -1,6 +1,4 @@
-title 'All the Things!'
-description 'All the level types for UI testing'
-description_short 'All the level types for UI testing'
+hideable_stages true
 
 stage 'Jigsaw'
 level 'blockly:Jigsaw:3'

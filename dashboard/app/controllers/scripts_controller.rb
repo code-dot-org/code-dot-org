@@ -50,7 +50,7 @@ class ScriptsController < ApplicationController
   def update
     respond_to do |format|
       script_text = params[:script_text]
-      if @script.update_text(script_params, script_text)
+      if @script.update_text(script_params, script_text, i18n_params)
         format.html { redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human) }
         format.json { head :no_content }
       else
@@ -94,5 +94,15 @@ class ScriptsController < ApplicationController
 
   def script_params
     params.require(:script).permit(:name)
+  end
+
+  def i18n_params
+    params.permit(
+      :name,
+      :title,
+      :description_audience,
+      :description_short,
+      :description,
+    ).to_h
   end
 end

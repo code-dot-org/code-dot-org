@@ -132,10 +132,6 @@ Style/CommentIndentation:
 Style/ConditionalAssignment:
   Enabled: false
 
-# Offense count: 3
-Style/ConstantName:
-  Enabled: false
-
 # Offense count: 7
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: format, sprintf, percent
@@ -300,11 +296,6 @@ Style/SpaceInsideBlockBraces:
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
 # SupportedStyles: space, no_space, compact
 Style/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/SpaceInsidePercentLiteralDelimiters:
   Enabled: false
 
 # Offense count: 20

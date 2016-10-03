@@ -14,6 +14,7 @@ crowdin.yaml
 /.dropbox.cache
 /.gdrive_session
 /.ruby-version
+/apps/.babel-cache
 /apps/build
 /apps/build-times.log
 /apps/build-times-to-upload.log

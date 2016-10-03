@@ -10,7 +10,7 @@ Dashboard::Application.routes.draw do
 
   resource :pairing, only: [:show, :update]
 
-  resources :user_levels, only: [:update]
+  resources :user_levels, only: [:update, :destroy]
 
   get '/download/:product', to: 'hoc_download#index'
 

@@ -60,6 +60,7 @@ const ScriptTeacherPanel = React.createClass({
     ).isRequired,
     sectionsLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
+    scriptHasHideableStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     setViewType: React.PropTypes.func.isRequired,
   },
@@ -71,17 +72,20 @@ const ScriptTeacherPanel = React.createClass({
       sectionsLoaded,
       setViewType,
       scriptHasLockableStages,
+      scriptHasHideableStages,
       unlockedStageNames
     } = this.props;
     const hasSections = Object.keys(sections).length > 0;
+
     return (
       <TeacherPanel>
         <h3>{commonMsg.teacherPanel()}</h3>
         <div className="content">
           <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
           {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          {scriptHasLockableStages && hasSections && <SectionSelector/>}
-          {scriptHasLockableStages && hasSections && this.props.viewAs === ViewType.Teacher &&
+          {hasSections && (scriptHasLockableStages || scriptHasHideableStages) &&
+            <SectionSelector/>}
+          {hasSections && scriptHasLockableStages && this.props.viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
                 {commonMsg.selectSection()}
@@ -132,6 +136,7 @@ export default connect((state, ownProps) => {
     sections,
     sectionsLoaded,
     scriptHasLockableStages,
+    scriptHasHideableStages: state.hiddenStage.get('initialized'),
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 }, dispatch => ({

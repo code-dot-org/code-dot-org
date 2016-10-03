@@ -1,6 +1,3 @@
-title 'Computer Science in Science PD Phase 3b'
-description "Phase 3 Academic Year Development"
-description_short "Phase 3 Academic Year Development"
 login_required 'true'
 pd 'true'
 
