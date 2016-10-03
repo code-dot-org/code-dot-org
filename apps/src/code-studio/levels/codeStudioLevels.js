@@ -101,17 +101,24 @@ export function getLevelIds() {
   return Object.keys(levelGroup);
 }
 
-// TODO - There should be only one contiained level. In the future, I will simplify
-// these next two methods to reflect that
+/**
+ * Lock the answer fo the contained level
+ */
 export function lockContainedLevelAnswers() {
   const levelIds = getLevelIds();
-  levelIds.forEach(levelId => getLevel(levelId).lockAnswers());
+  if (levelIds.length !== 1) {
+    throw `Expected exactly one contained level. Got ${levelIds.length}`;
+  }
+  getLevel(levelIds[0]).lockAnswers();
 }
 
+/**
+ * Get the result of the single contained level.
+ */
 export function getContainedLevelResult() {
   const levelIds = getLevelIds();
   if (levelIds.length !== 1) {
-    throw "Exactly one contained level result is currently required.";
+    throw `Expected exactly one contained level. Got ${levelIds.length}`;
   }
 
   const level = getLevel(levelIds[0]);
@@ -124,6 +131,9 @@ export function getContainedLevelResult() {
   };
 }
 
+/**
+ * @returns {boolean} True if the contained level has a valid result.
+ */
 export function hasValidContainedLevelResult() {
   return getContainedLevelResult().result.valid;
 }
