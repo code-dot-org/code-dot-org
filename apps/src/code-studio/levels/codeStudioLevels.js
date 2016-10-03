@@ -108,16 +108,22 @@ export function lockContainedLevelAnswers() {
   levelIds.forEach(levelId => getLevel(levelId).lockAnswers());
 }
 
-export function getContainedLevelResults() {
+export function getContainedLevelResult() {
   const levelIds = getLevelIds();
-  return levelIds.map(levelId => {
-    const level = getLevel(levelId);
-    return {
-      id: level.levelId,
-      app: level.getAppName(),
-      callback: appOptions.report.sublevelCallback + level.levelId,
-      result: level.getResult(),
-      feedback: level.getCurrentAnswerFeedback()
-    };
-  });
+  if (levelIds.length !== 1) {
+    throw "Exactly one contained level result is currently required.";
+  }
+
+  const level = getLevel(levelIds[0]);
+  return {
+    id: level.levelId,
+    app: level.getAppName(),
+    callback: appOptions.report.sublevelCallback + level.levelId,
+    result: level.getResult(),
+    feedback: level.getCurrentAnswerFeedback()
+  };
+}
+
+export function hasValidContainedLevelResult() {
+  return getContainedLevelResult().result.valid;
 }
