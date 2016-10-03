@@ -652,11 +652,8 @@ StudioApp.prototype.hasValidContainedLevelResult_ = function () {
  * @param {!AppOptionsConfig} config
  */
  StudioApp.prototype.notifyInitialRenderComplete = function () {
-  // TODO - better way to do this might be to have a component for containedLevelContainer
-  // that handles this in a lifecycle method (onComponentDidMount)
+  // TODO - should our ContainedLevel component handle more of this?
   if (this.hasContainedLevels) {
-    $('#containedLevel0').appendTo($('#containedLevelContainer'));
-
     if (this.hasValidContainedLevelResult_()) {
       // We already have an answer, don't allow it to be changed, but allow Run
       // to be pressed so the code can be run again.
