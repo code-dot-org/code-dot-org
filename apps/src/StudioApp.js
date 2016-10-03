@@ -635,26 +635,13 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
   }
 };
 
-StudioApp.prototype.getFirstContainedLevelResult_ = function () {
-  const results = codeStudioLevels.getContainedLevelResults();
-  if (results.length !== 1) {
-    throw "Exactly one contained level result is currently required.";
-  }
-  return results[0];
-};
-
-StudioApp.prototype.hasValidContainedLevelResult_ = function () {
-  const firstResult = this.getFirstContainedLevelResult_();
-  return firstResult.result.valid;
-};
-
 /**
  * @param {!AppOptionsConfig} config
  */
  StudioApp.prototype.notifyInitialRenderComplete = function () {
   // TODO - should our ContainedLevel component handle more of this?
   if (this.hasContainedLevels) {
-    if (this.hasValidContainedLevelResult_()) {
+    if (codeStudioLevels.hasValidContainedLevelResult()) {
       // We already have an answer, don't allow it to be changed, but allow Run
       // to be pressed so the code can be run again.
       codeStudioLevels.lockContainedLevelAnswers();
@@ -663,7 +650,7 @@ StudioApp.prototype.hasValidContainedLevelResult_ = function () {
       $('#runButton').prop('disabled', true);
 
       codeStudioLevels.registerAnswerChangedFn(() => {
-        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
+        $('#runButton').prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
       });
     }
   }
@@ -671,7 +658,7 @@ StudioApp.prototype.hasValidContainedLevelResult_ = function () {
 
 StudioApp.prototype.getContainedLevelResultsInfo = function () {
   if (this.hasContainedLevels) {
-    var firstResult = this.getFirstContainedLevelResult_();
+    var firstResult = codeStudioLevels.getContainedLevelResult();
     var containedResult = firstResult.result;
     var testResults = utils.valueOr(firstResult.testResult,
         containedResult.result ? this.TestResults.ALL_PASS :
