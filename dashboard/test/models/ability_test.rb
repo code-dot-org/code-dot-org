@@ -85,21 +85,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @login_required_script_level)
   end
 
-  test 'with hint_access manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
-    time_now = DateTime.now
-    hint_access_student = create :student
-    UserPermission.create!(
-      user_id: hint_access_student.id,
-      permission: UserPermission::HINT_ACCESS,
-      created_at: time_now,
-      updated_at: time_now
-    )
-    ability = Ability.new(hint_access_student)
-
-    assert ability.can?(:manage, LevelSourceHint)
-    assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
-  end
-
   test 'teachers read their Section' do
     teacher = create :teacher
     ability = Ability.new teacher
@@ -115,20 +100,6 @@ class AbilityTest < ActiveSupport::TestCase
 
     # A teacher cannot read another teacher's section.
     assert ability.cannot? :read, not_my_section
-  end
-
-  test 'teachers manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
-    ability = Ability.new(create(:teacher))
-
-    assert ability.can?(:manage, LevelSourceHint)
-    assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
-  end
-
-  test 'students do not manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
-    ability = Ability.new(create(:student))
-
-    assert ability.cannot?(:manage, LevelSourceHint)
-    assert ability.cannot?(:manage, FrequentUnsuccessfulLevelSource)
   end
 
   test 'non-admins can read only own UserPermission' do
