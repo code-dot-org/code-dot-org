@@ -32,7 +32,7 @@ module RakeUtils
 
   def self.stop_service_with_retry(id)
     if OS.linux? && CDO.chef_managed
-      return if system('service', id.to_s, 'stop-with-status')
+      return if sudo('service', id.to_s, 'fail-to-stop-with-status')
       HipChat.log "Service #{id} failed to stop, retrying"
       return if sudo('service', id.to_s, 'stop-with-status')
       HipChat.log "Service #{id} failed to stop, failing after 2 attempts"
