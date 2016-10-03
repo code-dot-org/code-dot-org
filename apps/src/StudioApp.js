@@ -635,27 +635,6 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
   }
 };
 
-/**
- * @param {!AppOptionsConfig} config
- */
- StudioApp.prototype.notifyInitialRenderComplete = function () {
-  // TODO - should our ContainedLevel component handle more of this?
-  if (this.hasContainedLevels) {
-    if (codeStudioLevels.hasValidContainedLevelResult()) {
-      // We already have an answer, don't allow it to be changed, but allow Run
-      // to be pressed so the code can be run again.
-      codeStudioLevels.lockContainedLevelAnswers();
-    } else {
-      // No answers yet, disable Run button until there is an answer
-      $('#runButton').prop('disabled', true);
-
-      codeStudioLevels.registerAnswerChangedFn(() => {
-        $('#runButton').prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
-      });
-    }
-  }
-};
-
 StudioApp.prototype.getContainedLevelResultsInfo = function () {
   if (this.hasContainedLevels) {
     var firstResult = codeStudioLevels.getContainedLevelResult();
