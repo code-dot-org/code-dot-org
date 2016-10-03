@@ -37,10 +37,12 @@ module RakeUtils
         begin
           if sudo('service', id.to_s, 'fail-to-stop-with-status')
             success = true
+            HipChat.log "Successfully stopped service #{id}"
             break
           end
         rescue
           HipChat.log "Service #{id} failed to stop, retrying (attempt #{i})"
+          next
         end
       end
       raise "Could not stop #{id} after #{i} attempts" unless success
