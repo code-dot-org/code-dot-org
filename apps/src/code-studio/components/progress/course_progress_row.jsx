@@ -100,7 +100,7 @@ const CourseProgressRow = React.createClass({
     isFocusArea: React.PropTypes.bool,
 
     // redux provided
-    sectionId: React.PropTypes.string.isRequired,
+    sectionId: React.PropTypes.string,
     hiddenStageMap: React.PropTypes.object.isRequired,
     showTeacherInfo: React.PropTypes.bool,
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -151,6 +151,7 @@ const CourseProgressRow = React.createClass({
           />
         </div>
         {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
+            this.props.sectionId &&
           <div style={styles.teacherInfo}>
             <TeacherStageInfo stage={stage}/>
           </div>
