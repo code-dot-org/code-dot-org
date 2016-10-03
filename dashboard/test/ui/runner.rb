@@ -325,9 +325,7 @@ next_feature = lambda do
 end
 
 parallel_config = {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
-    in_threads: ENV['CI'] ? $options.parallel_limit : nil,
-    in_processes: ENV['CI'] ? nil : $options.parallel_limit,
+    in_processes: $options.parallel_limit,
 
     # This 'finish' lambda runs on the main thread after each Parallel.map work
     # item is completed.
