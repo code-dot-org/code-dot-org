@@ -4,7 +4,6 @@
  */
 import React from 'react';
 import {Button} from 'react-bootstrap';
-import WorkshopTable from './components/workshop_table';
 import WorkshopTableLoader from './components/workshop_table_loader';
 
 const WorkshopIndex = React.createClass({
@@ -16,10 +15,6 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('/workshops/new');
   },
 
-  handleSurveyClick() {
-    this.context.router.push('/survey_results');
-  },
-
   render() {
     const showOrganizer = window.dashboard.workshop.permission === "admin";
     return (
@@ -29,33 +24,26 @@ const WorkshopIndex = React.createClass({
           <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
             New Workshop
           </Button>
-
-          <Button className="btn-primary" onClick={this.handleSurveyClick}>
-            View Survey Results
-          </Button>
         </p>
         <h2>In Progress</h2>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=In%20Progress">
-          <WorkshopTable
-            canDelete
-            showOrganizer={showOrganizer}
-          />
-        </WorkshopTableLoader>
+        <WorkshopTableLoader
+          queryUrl="/api/v1/pd/workshops/?state=In%20Progress"
+          canDelete
+          showOrganizer={showOrganizer}
+        />
         <h2>Upcoming</h2>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Not%20Started">
-          <WorkshopTable
-            canEdit
-            canDelete
-            showSignupUrl
-            showOrganizer={showOrganizer}
-          />
-        </WorkshopTableLoader>
+        <WorkshopTableLoader
+          queryUrl="/api/v1/pd/workshops/?state=Not%20Started"
+          canEdit
+          canDelete
+          showSignupUrl
+          showOrganizer={showOrganizer}
+        />
         <h2>Past</h2>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended">
-          <WorkshopTable
-            showOrganizer={showOrganizer}
-          />
-        </WorkshopTableLoader>
+        <WorkshopTableLoader
+          queryUrl="/api/v1/pd/workshops/?state=Ended"
+          showOrganizer={showOrganizer}
+        />
       </div>
     );
   }

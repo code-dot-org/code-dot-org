@@ -11,11 +11,25 @@ import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
-import { workshopShape } from '../types.js';
 
 const WorkshopTable = React.createClass({
   propTypes: {
-    workshops: React.PropTypes.arrayOf(workshopShape),
+    workshops: React.PropTypes.arrayOf(
+      React.PropTypes.shape({
+        id: React.PropTypes.number.isRequired,
+        sessions: React.PropTypes.array.isRequired,
+        location_name: React.PropTypes.string.isRequired,
+        workshop_type: React.PropTypes.string.isRequired,
+        course: React.PropTypes.string.isRequired,
+        enrolled_teacher_count: React.PropTypes.number.isRequired,
+        capacity: React.PropTypes.number.isRequired,
+        facilitators: React.PropTypes.array.isRequired,
+        organizer: React.PropTypes.shape({
+          name: React.PropTypes.string.isRequired,
+          email: React.PropTypes.string.isRequired
+        }).isRequired
+      })
+    ),
     canEdit: React.PropTypes.bool,
     onDelete: React.PropTypes.func,
     showSignupUrl: React.PropTypes.bool,
