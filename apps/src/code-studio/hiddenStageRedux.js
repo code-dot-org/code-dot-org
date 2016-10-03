@@ -88,7 +88,7 @@ export function allowHideable() {
 
 
 export function getHiddenStages(scriptName) {
-  return (dispatch) => {
+  return dispatch => {
     if (!hiddenStagesEnabled()) {
       return;
     }
@@ -124,11 +124,11 @@ export function getHiddenStages(scriptName) {
 
 /**
  * Helper to determine whether a stage is hidden for a given section. If no
- * section is given,
+ * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
 export function isHiddenFromState(bySection, sectionId, stageId) {
   // if we don't have a sectionId, we must be a student
-  if (sectionId === null ){
+  if (sectionId === null){
     sectionId = STUDENT_SECTION_ID;
   }
   return !!bySection.getIn([sectionId, stageId.toString()]);
