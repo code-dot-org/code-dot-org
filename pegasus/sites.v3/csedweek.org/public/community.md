@@ -36,9 +36,9 @@ offline)
 Print these posters (ideally on a color printer, or on nice, large poster paper at Kinko's), and hang it up where participants can see it.
 
 <div class="clear">
-  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Zuckerberg_poster.pdf"><img style="width: 100%" src="/images/zuckerberg_poster.png" alt="Zuckerberg poster"></a></div>
-  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Bosh_poster.pdf"><img style="width: 100%" src="/images/bosh_poster.png" alt=""></a></div>
-  <div style="float: left; width: 200px;"><a href="/files/susan_poster.pdf"><img style="width: 100%" src="/images/susan_poster.png" alt=""></a></div>
+  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Zuckerberg_poster.pdf"><img style="width: 100%" src="/images/Zuckerberg_poster.png" alt="Zuckerberg poster"></a></div>
+  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Bosh_poster.pdf"><img style="width: 100%" src="/images/Bosh_poster.png" alt=""></a></div>
+  <div style="float: left; width: 200px;"><a href="/files/susan_poster.pdf"><img style="width: 100%" src="/images/Susan_poster.png" alt=""></a></div>
 </div>
 
 ## Show this video to participants

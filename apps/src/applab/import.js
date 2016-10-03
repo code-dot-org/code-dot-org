@@ -4,7 +4,7 @@ import {PropTypes} from 'react';
 import $ from 'jquery';
 import designMode from './designMode';
 import * as elementUtils from './designElements/elementUtils';
-import applabConstants from './constants';
+import * as applabConstants from './constants';
 import {assets as assetsApi} from '../clientApi';
 
 export const importableScreenShape = PropTypes.shape({

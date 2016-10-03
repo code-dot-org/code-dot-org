@@ -120,11 +120,23 @@ By exploring innovative computing devices from a variety of fields, students wil
 
 ## <a name="involved"></a>Get Involved
 
-<div style="float:left; padding:0px; width:100%">
+<div style="float:left; padding:25px; width:50%">
+
+<h4>Get on the interest list for professional learning</h4>
+
+Are you interested in teaching CS Discoveries and want to take part in our professional learning program for the course? While applications for our CS Discoveries professional learning program are not open yet, you can learn more about the program commitments and get on the interest list.
+
+<br><br>
+
+<a href="/educate/professional-learning/cs-discoveries"> <button>Learn more about professional learning</button> </a>
+
+</div>
+
+<div style="float:left; padding:25px; width:50%">
 
 <h4> Stay up to date on our progress </h4>
 
-Want to know when we've posted lesson drafts and have tools that are ready to experiment with? Sign up for our monthly status emails, which will contain the latest news and links to beta lesson plans, tools, and videos for CS Discoveries. Even if you're not an official pilot teacher, we'd love to hear your feedback as an early adopter.
+Want to know when we've posted lesson drafts and have tools that are ready to experiment with? Sign up for our monthly emails, which contain the latest news and links to beta lesson plans, tools, and videos for CS Discoveries. Even if you're not an official pilot teacher, we'd love to hear your feedback as an early adopter.
 
 <br><br>
 
