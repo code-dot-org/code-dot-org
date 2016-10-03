@@ -9,7 +9,7 @@ import HiddenStageToggle from './HiddenStageToggle';
 import color from '../../../color';
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
-import { toggleHidden, isHiddenFromState } from '../../hiddenStageRedux';
+import { toggleHidden } from '../../hiddenStageRedux';
 import experiments from '@cdo/apps/experiments';
 
 /**
@@ -45,7 +45,6 @@ const TeacherStageInfo = Radium(React.createClass({
     stage: stageShape,
 
     // redux provided
-    sectionId: React.PropTypes.string.isRequired,
     hiddenStagesInitialized: React.PropTypes.bool.isRequired,
     hiddenStageMap: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
@@ -54,8 +53,8 @@ const TeacherStageInfo = Radium(React.createClass({
   },
 
   onClickHiddenToggle(value) {
-    const { scriptName, sectionId, stage } = this.props;
-    this.props.toggleHidden(scriptName, sectionId, stage.id, value === 'hidden');
+    this.props.toggleHidden(this.props.scriptName,
+      this.props.stage.id, value === 'hidden');
   },
 
   clickLessonPlan() {
@@ -63,9 +62,8 @@ const TeacherStageInfo = Radium(React.createClass({
   },
 
   render() {
-    const { stage, sectionId, hiddenStageMap, hasNoSections, hiddenStagesInitialized } = this.props;
-    const isHidden = hiddenStagesInitialized &&
-      isHiddenFromState(hiddenStageMap, sectionId, stage.id);
+    const { stage, hiddenStageMap, hasNoSections, hiddenStagesInitialized } = this.props;
+    const isHidden = hiddenStagesInitialized && hiddenStageMap[stage.id];
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
     const lockable = stage.lockable && !hasNoSections;
@@ -101,15 +99,14 @@ const TeacherStageInfo = Radium(React.createClass({
 
 export default connect(state => {
   return {
-    sectionId: state.stageLock.selectedSection,
-    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
-    hiddenStageMap: state.hiddenStage.get('bySection'),
+    hiddenStagesInitialized: state.hiddenStage.initialized,
+    hiddenStageMap: state.hiddenStage,
     scriptName: state.progress.scriptName,
     hasNoSections: state.stageLock.sectionsLoaded &&
       Object.keys(state.stageLock.sections).length === 0
     };
 }, dispatch => ({
-  toggleHidden(scriptName, sectionId, stageId, hidden) {
-    dispatch(toggleHidden(scriptName, sectionId, stageId, hidden));
+  toggleHidden(scriptName, stageId, hidden) {
+    dispatch(toggleHidden(scriptName, stageId, hidden));
   }
 }))(TeacherStageInfo);
