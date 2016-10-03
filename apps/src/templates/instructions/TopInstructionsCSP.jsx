@@ -19,6 +19,7 @@ var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('@cdo/locale');
 var PaneButton = require('../PaneHeader').PaneButton;
+import ContainedLevel from '../ContainedLevel';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -55,9 +56,6 @@ var styles = {
   embedView: {
     height: undefined,
     bottom: 0
-  },
-  containedLevelContainer: {
-    minHeight: 200,
   }
 };
 
@@ -131,9 +129,7 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
-    const contentContainer = this.props.hasContainedLevels ?
-        this.refs.containedLevelContainer : this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(contentContainer)).outerHeight(true) +
+    const maxNeededHeight = $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
@@ -190,12 +186,7 @@ var TopInstructions = React.createClass({
         </div>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
-            {this.props.hasContainedLevels &&
-              <ProtectedStatefulDiv
-                id="containedLevelContainer"
-                ref="containedLevelContainer"
-                style={styles.containedLevelContainer}
-              />}
+            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
             {!this.props.hasContainedLevels &&
               <Instructions
                 ref="instructions"
