@@ -206,15 +206,15 @@ class Script < ActiveRecord::Base
     return unless Script.should_cache?
 
     script = Script.get_cacheable_script(id)
-    @@script_cache[name] = script
-    @@script_cache[id.to_s] = script
+    Script.script_cache[name] = script
+    Script.script_cache[id.to_s] = script
 
-    @@script_level_cache.merge!(script.script_levels.index_by(&:id))
+    Script.script_level_cache.merge!(script.script_levels.index_by(&:id))
     script.script_levels.each do |script_level|
       level = script_level.level
       next unless level
-      @@level_cache[level.id] = level unless @@level_cache.key? level.id
-      @@level_cache[level.name] = level unless @@level_cache.key? level.name
+      Script.level_cache[level.id] = level unless Script.level_cache.key? level.id
+      Script.level_cache[level.name] = level unless Script.level_cache.key? level.name
     end
   end
 
@@ -251,11 +251,12 @@ class Script < ActiveRecord::Base
 
   def self.update_level_in_cache(level)
     return unless self.should_cache?
-    @@level_cache[level.id] = level if @@level_cache.key? level.id
-    @@level_cache[level.name] = level if @@level_cache.key? level.name
+    level_cache[level.id] = level if level_cache.key? level.id
+    level_cache[level.name] = level if level_cache.key? level.name
   end
 
   def self.delete_level_from_cache(level)
+    return unless self.should_cache?
     @@level_cache.except!(level.id, level.name)
   end
 
