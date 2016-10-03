@@ -48,9 +48,9 @@ class Api::V1::Pd::WorkshopSurveyReportController < Api::V1::Pd::ReportControlle
 
       survey_response.symbolize_keys.each do |k, v|
         if FACILITATOR_EFFECTIVENESS_QUESTIONS.include?(k)
-          report_column[:facilitator_effectiveness] += PdWorkshopSurvey::OPTIONS[k].index(v)
+          report_column[:facilitator_effectiveness] += PdWorkshopSurvey::OPTIONS[k].index(v) + 1
         elsif OVERALL_SUCCESS_QUESTIONS.include?(k)
-          report_column[:overall_success] += PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(v)
+          report_column[:overall_success] += PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(v) + 1
         end
       end
     end

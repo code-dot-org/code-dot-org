@@ -121,7 +121,7 @@ const SurveyResultsHeader = React.createClass({
                 Selected workshop
               </th>
               <th>
-                Across all my workshops
+                Across all my workshops for this course
               </th>
             </tr>
           </thead>
