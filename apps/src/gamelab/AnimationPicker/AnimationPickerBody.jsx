@@ -60,7 +60,7 @@ const AnimationPickerBody = React.createClass({
           {pageOfResults.map(animationProps =>
             <AnimationPickerListItem
               key={animationProps.sourceUrl}
-              label={`${animationProps.name} (${animationProps.frameCount})`}
+              label={animationProps.name}
               animationProps={animationProps}
               onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
             />
