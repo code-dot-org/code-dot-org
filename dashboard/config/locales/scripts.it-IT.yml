@@ -13,34 +13,24 @@
           description_short: Il corso 1 è rivolto a chi sta iniziando a leggere.
           description_audience: Da 4 anni in su (pre-scolare)
           stage:
-            'Artist 1: Intro': 'Artista 1: Introduzione'
-            Artist 2: Artista 2
             'Artist: Loops': 'Artista: Cicli'
             'Artist: Sequence': 'Artista: Sequenze'
             'Artist: Shapes': 'Artista: Forme'
-            Artists 2: Artista 2
-            'Bee 1: Intro': 'Ape 1: Introduzione'
-            'Bee 2: Loops': 'Ape 2: Cicli'
             'Bee: Loops': 'Ape: Cicli'
             'Bee: Sequence': 'Ape: Sequenze'
             Building a Foundation: Costruire le Fondamenta
-            Flappy non blockly: Flappy senza blocchi
             Getting Loopy: Diventare Ripetitivi
             Going Places Safely: Visitare Luoghi in Modo Sicuro
             Happy Maps: Mappe Felici
             'Jigsaw: Learn to drag and drop': 'Puzzle: Impara come trascinare e rilasciare
               (drag and drop)'
-            K-1 Flappy: K-1 Flappy
-            'Maze 2: Loops': 'Labirinto 2: Cicli'
             'Maze: Debugging': 'Labirinto: Correzione di Errori'
             'Maze: Loops': 'Labirinto: Cicli'
             'Maze: Sequence': 'Labirinto: Sequenze'
             Move it, Move it: Muovilo, Muovilo
-            Multi & Match: Risposte Multiple e Corrispondenze
             'Real-life Algorithms: Plant a Seed': 'Algoritmi della Vita Reale: Piantare
               un Seme'
             Spelling Bee: Ape Sapiente
-            Spelling Bee not blockly: Ape Sapiente senza blocchi
             'Studio: Create a Story': 'Laboratorio: Crea una Storia'
             The Big Event: Il Grande Evento
         course2:
@@ -53,40 +43,25 @@
           description_short: Il corso 2 è rivolto a studenti che sanno leggere.
           description_audience: Da 6 anni in su (per chi sa leggere)
           stage:
-            Artist Debugging: 'Artista: Correzione di Errori'
-            Artist Functions: 'Artista: Funzioni'
-            Artist Loops: 'Artista: Cicli'
             'Artist: Debugging': 'Artista: Correzione di Errori'
             'Artist: Loops': 'Artista: Cicli'
             'Artist: Nested Loops': 'Artista: Cicli Annidati'
             'Artist: Sequence': 'Artista: Sequenze'
-            'Artist: Sequence2': 'Artista: Sequenza 2'
-            Bee Conditionals: 'Ape: Istruzioni Condizionali'
-            Bee Debugging: 'Ape: Correzione di Errori'
-            Bee Functions: 'Ape: Funzioni'
-            Bee Loops: 'Ape: Cicli'
             'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
             'Bee: Debugging': 'Ape: Correzione di Errori'
             'Bee: Loops': 'Ape: Cicli'
             Binary Bracelets: Braccialetti Binari
-            Bounce: Ping-Pong
             Conditionals: Istruzioni condizionali
             Flappy: Flappy
             Getting Loopy: Diventare Ripetitivi
             Graph Paper Programming: Programmazione su carta a quadretti
-            Maze Loops: 'Labirinto: Cicli'
             'Maze: Loops': 'Labirinto: Cicli'
             'Maze: Sequence': 'Labirinto: Sequenze'
-            'Maze: Sequence2': 'Labirinto: Sequenza 2'
             'Real-life Algorithms: Paper Planes': 'Algoritmi della Vita Reale: Aeroplani
               di Carta'
             Relay programming: Programmazione a Staffetta
             'Studio: Create a Story': 'Laboratorio: Crea una Storia'
-            Suzi: Suzi
-            The Artist: L'artista
-            The Artist Debugging: 'L''Artista: Correzione di Errori'
             The Big Event: Il Grande Evento
-            The Maze: Il labirinto
             Your Digital Footprint: La tua Impronta Digitale
         course3:
           title: Corso 3
@@ -100,51 +75,26 @@
           description_audience: Da 8 anni in su (dopo il Corso 2)
           stage:
             Artist: Artista
-            Artist For Loops: 'Artista: Cicli con Contatore'
-            Artist Functions: 'Artista: Funzioni'
-            Artist Functions with Parameters: 'Artista: Funzioni con Parametri'
-            Artist Functions with Params: 'Artista: Funzioni con Parametri'
-            Artist Nested Loops: 'Artista: Cicli Annidati'
-            Artist2: Artista 2
             'Artist: Functions': 'Artista: Funzioni'
-            'Artist: Functions2': 'Artista: Funzioni 2'
             'Artist: Nested Loops': 'Artista: Cicli Annidati'
-            'Artist: Nested Loops2': 'Artista: Cicli Annidati 2'
             'Artist: Patterns': 'Artista: Schemi'
-            Bee Conditionals: 'Ape: Istruzioni Condizionali'
-            Bee Debuggin: 'Ape: Correzione di Errori'
-            Bee Debugging: 'Ape: Correzione di Errori'
-            Bee Functions: 'Ape: Funzioni'
-            Bee Nested Loops: 'Ape: Cicli Annidati'
             'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
-            'Bee: Conditionals2': 'Ape: Istruzioni Condizionali 2'
             'Bee: Debugging': 'Ape: Correzione di Errori'
-            'Bee: Debugging2': 'Ape: Correzione di Errori 2'
             'Bee: Functions': 'Ape: Funzioni'
-            'Bee: Functions2': 'Ape: Funzioni 2'
             'Bee: Nested Loops': 'Ape: Cicli Annidati'
-            'Bee: Nested Loops2': 'Ape: Cicli Annidati 2'
             Bounce: Ping-Pong
             Computational Thinking: Pensiero computazionale
             Crowdsourcing: Intelligenza Collettiva
             Dice Race: Gara con i Dadi
             Digital Citizenship: Cittadinanza Digitale
-            Farmer - While Loops: 'Contadina: Cicli "Mentre"'
             'Farmer: While Loops': 'Contadina: Cicli "Mentre"'
-            'Farmer: While Loops2': 'Contadina: Cicli "Mentre" 2'
             Functional Suncatchers: Acchiappa-Sole Funzionale
             Internet: Internet
             Maze: Esercizio di Verifica (Risposte Multiple)
-            Maze Conditionals: 'Labirinto: Istruzioni Condizionali'
-            Maze2: Labirinto 2
             'Maze: Conditionals': 'Labirinto: Istruzioni Condizionali'
-            'Maze: Conditionals2': 'Labirinto: Istruzioni Condizionali 2'
             Songwriting: Composizione di canzoni
-            Songwriting Parameters: Parametri per la Composizione di Canzoni
             'Studio: Create a Game': 'Laboratorio: Crea un Gioco'
             'Studio: Create a Story': 'Laboratorio: Crea una Storia'
-            The Artist: L'artista
-            The Maze: Il labirinto
         playlab:
           title: Laboratorio
           description: Crea una storia o inventa un gioco col Laboratorio!
@@ -187,19 +137,15 @@
             svolto i Corsi 2 e 3.
           description_audience: Da 10 anni in su (dopo il Corso 3)
           stage:
-            'Algorithms: Tangrams': 'Algoritmi: Tangram'
             Artist: Artista
             Artist Binary: 'Artista: Binario'
             'Artist: For Loops': 'Artista: Cicli con Contatore'
             'Artist: Functions': 'Artista: Funzioni'
             'Artist: Functions with Parameters': 'Artista: Funzioni con Parametri'
             'Artist: Variables': 'Artista: Variabili'
-            Bee: Ape
-            Bee Binary: 'Ape: Binario'
             'Bee: For Loops': 'Ape: Cicli con Contatore'
             'Bee: Functions with Parameters': 'Ape: Funzioni con Parametri'
             Extreme Challenge - Comprehensive: Super Sfida Finale
-            Farmer Binary: 'Contadina: Binario'
             Maze and Bee: 'Il Labirinto e l''Ape: Sequenze, Cicli, Istruzioni Condizionali'
             'Play Lab: For Loops': 'Laboratorio: Cicli con Contatore'
             'Play Lab: Functions with Parameters': 'Laboratorio: Funzioni con Parametri'
@@ -214,7 +160,6 @@
             'Unplugged: Songwriting with Parameters': Composizione di Canzoni con
               Parametri
             'Unplugged: Tangrams': Tangram
-            Variables: Variabili
         Course4pre:
           title: Prerequisiti del Corso 4
           description: Una breve presentazione dei concetti importanti per gli studenti
@@ -229,7 +174,6 @@
             'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
             'Bee: Debugging': 'Ape: Correzione di Errori'
             'Bee: Nested Loops': 'Ape: Cicli Annidati'
-            Course 4 Prerequisite: Prerequisiti del Corso 4
             'Farmer: While Loops': 'Contadina: Cicli "Mentre"'
             'Maze: Sequence': 'Labirinto: Sequenze'
         usability:
@@ -242,7 +186,6 @@
             Functions and Functions with Parameters: Funzioni e Funzioni con Parametri
             Intro: Introduzione
             Variables: Variabili
-            Variables and For Loops: Variabili e Cicli con Contatore
         algebra:
           title: Informatica in Algebra
           description: Impara la Programmazione Funzionale mediante l'Algebra
@@ -280,7 +223,6 @@
             Disney Infinity come protagonisti!
           stage:
             Infinity: Infinito
-            Play Lab: Laboratorio
         algebrademo:
           title: Demo per l'Algebra
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio
@@ -288,7 +230,6 @@
           description_short: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio
             di programmazione usati nel corso "Informatica in Algebra"
           stage:
-            Algebra Demo: Demo per l'Algebra
             Defining Simple Functions: Definizione di Semplici Funzioni
             Defining Variables: Definizione di Variabili
             Evaluation Blocks: Blocchi di Valutazione
@@ -299,25 +240,18 @@
           description: Professional Development for K5 Courses
           description_short: Professional Development for K5 Courses
           stage:
-            Blockly Basics: Concetti di base di Blockly
-            Classroom Culture: Cultura di classe
             Computer Science Pedagogy: Computer Science Pedagogy
             Introduction to PD: Introduzione a PD
             K-5 Courses: K-5 Courses
-            Navigating the teacher dashboard: Esplorare il cruscotto di lavoro dell'insegnante
             Next Steps: Next Steps
-            Personal Reflection: Personal Reflection
             'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
             'Programming Concept: Events': 'Programming Concept: Events'
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
-            Programming Concepts: Programming Concepts
             Reflection: Reflection
             Teacher Dashboard: Teacher Dashboard
             Unplugged lessons: Lezioni Tradizionali
-            Ways to go beyond Courses 1, 2, and 3: Cosa fare dopo i corsi 1, 2 e 3
             Writing computer programs: Scrivere programmi per il computer
-            Writing computer programs in Blockly: Writing computer programs in Blockly
         netsim:
           title: Simulatore di Internet
           description: Impariamo come funziona Internet
@@ -325,9 +259,7 @@
           stage:
             Automatic DNS node: Automatic DNS node
             Broadcasting messages: Broadcasting messages
-            Internet Simulator: Simulatore di Internet
             Internet Simulator Freeplay: Internet Simulator Freeplay
-            Internet Simulator Templates: Internet Simulator Templates
             Manual DNS: Manual DNS
             Overview and Setup Instructions: Overview and Setup Instructions
             Packets and Reliability: Packets and Reliability
@@ -335,17 +267,7 @@
             Peer to Peer - Sending Bits on a Shared Wire: Peer to Peer - Sending Bits
               on a Shared Wire
             Peer to Peer - Sending Numbers: Peer to Peer - Sending Numbers
-            'Peer to Peer: Sending Ascii': 'Peer to Peer: Sending Ascii'
-            'Peer to Peer: Sending Bits on a Shared Wire': 'Peer to Peer: Sending
-              Bits on a Shared Wire'
-            'Peer to Peer: Sending Numbers': 'Peer to Peer: Sending Numbers'
             Routers and addresses: Routers and addresses
-            Routing and DNS: Routing and DNS
-            Sending Bits: Sending Bits
-            Unit 1: Unità 1
-            'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
-            Unit 2: Unità 2
-            'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
         pixelation:
           title: Conversione di pixel
           description: Crea immagini utilizzando bit e byte.
@@ -353,12 +275,9 @@
           stage:
             Black & White Pixelation Freeplay: Black & White Pixelation Freeplay
             Black & White Pixelation Tutorial: Black & White Pixelation Tutorial
-            Black & White Pixelation Widget: Black & White Pixelation Widget
             Color Pixelation Examples: Color Pixelation Examples
             Color Pixelation Freeplay: Color Pixelation Freeplay
             Color Pixelation Tutorial: Color Pixelation Tutorial
-            Color Pixelation Widget: Color Pixelation Widget
-            Pixelation: Conversione di pixel
         20-hour:
           title: Corso rapido in 20 ore
           description: Questo corso rapido in 20 lezioni introduce in modo sintetico
@@ -399,7 +318,6 @@
             Applab: Applab
             Hoc2015 Blockly: Hoc2015 Blockly
             Play Lab: Laboratorio
-            Play Lab 2015: Laboratorio 2015
             The Artist: L'artista
             The Maze: Il labirinto
         events:
@@ -453,64 +371,27 @@
           description_short: Challenge yourself!
           stage:
             Puzzles: Puzzles
-        course4pre:
-          title: Prerequisiti del Corso 4
-          description: Una breve presentazione dei concetti importanti per gli studenti
-            che non hanno svolto i Corsi 2 e 3.
-          description_short: Una breve presentazione dei concetti importanti per gli
-            studenti che non hanno svolto i Corsi 2 e 3.
-          stage:
-            'Artist: Functions': 'Artista: Funzioni'
-            'Artist: Loops': 'Artista: Cicli'
-            'Artist: Nested Loops': 'Artista: Cicli Annidati'
-            'Artist: Sequence': 'Artista: Sequenze'
-            'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
-            'Bee: Debugging': 'Ape: Correzione di Errori'
-            'Bee: Nested Loops': 'Ape: Cicli Annidati'
-            Course 4 Prerequisite: Prerequisiti del Corso 4
-            'Farmer: While Loops': 'Contadina: Cicli "Mentre"'
-            'Maze: Sequence': 'Labirinto: Sequenze'
         cspunit1:
           title: CSP Unit 1
           description: CSP Unit 1 Stages
           description_short: Make Black and White Images with the pixelation tool
           stage:
-            'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
-              Information'
             Binary Numbers: Binary Numbers
-            Bit Sending Widget: Bit Sending Widget
             Bytes and File Sizes: Bytes and File Sizes
-            Data Storage: Data Storage
             Encode a Complex Thing: Encode an Experience
             Encoding B&W Images: Encoding B&W Images
             Encoding Color Images: Encoding Color Images
             Encoding Numbers in the Real World: Encoding Numbers in the Real World
             Encoding and Sending Text: Encoding and Sending Text
-            Innovation: Innovation
-            Lesson 1: Lesson 1
-            Lesson 14: Lesson 14
-            Lesson 14 v2: Lesson 14 v2
-            Lesson 15: Lesson 15
-            Lesson 2: Lesson 2
-            Lesson 3: Lesson 3
-            Lesson 4: Lesson 4
-            Lesson 5: Lesson 5
-            Lesson 6: Lesson 6
-            Lesson 7: Lesson 7
-            Lesson 8: Lesson 8
-            Lesson14: Lesson14
             Lossy Compression and File Formats: Lossy Compression and File Formats
             Number Systems: Number Systems
             Personal Innovations: Personal Innovations
-            'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex
-              Thing'
             Sending Binary Messages: Sending Binary Messages
             Sending Binary Messages with the Internet Simulator: Sending Binary Messages
               with the Internet Simulator
             Sending Bits in the Real World: Sending Bits in the Real World
             Sending Complex Messages: Sending Complex Messages
             Sending Formatted Text: Sending Formatted Text
-            Sending More Complex Messages: Sending More Complex Messages
             Sending Numbers: Sending Numbers
             Text Compression: Text Compression
         algebraPD:
@@ -518,53 +399,13 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           stage:
-            Booleans: Valori Booleani
-            'Calc: Defining Variables': 'Calcolo: Definizione di Variabili'
-            'Calc: Evaluation Blocks': 'Calcolo: Blocchi di Valutazione'
-            Computer Science Pedagogy: Computer Science Pedagogy
-            Conditionals and Piecewise Functions: Istruzioni Condizionali e Funzioni
-              a Tratti
-            Contracts: Contratti
             Course Overview: Course Overview
-            Design Recipe Practice: Design Recipe Practice
-            'Eval: Boolean Operators': 'Valutazione: Operatori Booleani'
-            'Eval: Conditionals': 'Valutazione: Istruzioni Condizionali'
-            'Eval: Defining Functions': 'Eval: Defining Functions'
-            'Eval: Functions': 'Eval: Functions'
-            'Eval: Strings and Images': 'Valutazione: Stringhe e Immagini'
-            'Eval: Writing Contracts': 'Valutazione: Scrittura di Contratti'
             Evaluation Blocks: Blocchi di Valutazione
             Introduction to PD: Introduzione a PD
-            'Play Lab: Animation (Big Game)': 'Laboratorio: Animazione (Big Game)'
-            'Play Lab: Boolean (Big Game)': 'Laboratorio: Valori Booleani (Big Game)'
-            'Play Lab: Booleans': 'Laboratorio: Valori Booleani'
-            'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento
-              delle Collisioni (Big Game)'
-            'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-            'Play Lab: Defining Variables (Big Game)': 'Laboratorio: Definizione di
-              Variabili (Big Game)'
             Preparing for in-person PD: Preparing for in-person PD
-            Rocket-Height: Rocket-Height
-            Sam the Bat: Sam the Bat
-            Simple Function Definition: Simple Function Definition
-            Strings and Images: Stringhe e Immagini
             Teacher Dashboard: Teacher Dashboard
-            The Design Recipe: La Ricetta della Progettazione
-            'Unplugged: Booleans': Tradizionale &ndash; Valori Booleani
-            'Unplugged: Collision Detection and the Distance Formula': Tradizionale
-              &ndash; Rilevamento delle Collisioni e Formula per la Distanza
-            'Unplugged: Conditionals and Piecewise Functions': Tradizionale &ndash;
-              Istruzioni Condizionali e Funzioni a Tratti
-            'Unplugged: Contracts': Tradizionale &ndash; Contratti
-            'Unplugged: The Design Recipe': Tradizionale &ndash; La Ricetta della
-              Progettazione
-            'Unplugged: Video Games and Coordinate Planes': Tradizionale &ndash; Videogiochi
-              e Piani Cartesiani
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
-            Your Game - Animation: Your Game - Animation
-            Your Game - Booleans: Your Game - Booleans
-            Your Game - Defining Variables: Your Game - Defining Variables
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -574,8 +415,6 @@
             Design Recipe Practice: Design Recipe Practice
             Evaluation Blocks: Blocchi di Valutazione
             Luigi's Pizza: Luigi's Pizza
-            'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento
-              delle Collisioni (Big Game)'
             Rocket-Height: Rocket-Height
             Sam the Bat: Sam the Bat
             Strings and Images: Stringhe e Immagini
@@ -601,7 +440,6 @@
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is CSP?: What is CSP?
-            new stage: new stage
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for csp
@@ -620,7 +458,6 @@
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is ECS?: What is ECS?
-            reference: reference
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -637,7 +474,6 @@
             Introduction to PD: Introduzione a PD
             Introduction to StarLogo Nova: Introduction to StarLogo Nova
             Post-Survey: Post-Survey
-            Pre-Workshop Online Component: Pre-Workshop Online Component
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
@@ -660,111 +496,34 @@
           description_short: Programming
           stage:
             APIs and Function Parameters: APIs and Function Parameters
-            Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
-            Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
-            Arrays_ Intro: Arrays_ Intro
-            Arrays_ Photo Album: Arrays_ Photo Album
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
-            Buttons on the Screen: Buttons on the Screen
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
-            Chained Conditionals: Chained Conditionals
-            Chained and Nested Conditionals: Chained and Nested Conditionals
-            Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
-              with Movie Bot
-            Chatbot Challenge: Chatbot Challenge
-            Clicker Game: Clicker Game
-            Clicker Variable Basics: Clicker Variable Basics
-            Clicker v.1 -  Variable Basics: Clicker v.1 -  Variable Basics
             Compound Conditional Logic: Compound Conditional Logic
-            Compound Conditionals: Compound Conditionals
-            Compound Conditionals with Movie Bot: Compound Conditionals with Movie
-              Bot
-            Conditional Basics: Conditional Basics
-            Conditionals with Movie Bot: Conditionals with Movie Bot
-            Controlling Memory and Program Flow: Controlling Memory and Program Flow
             Controlling Memory with Variables: Controlling Memory with Variables
-            Cookie Clicker: Cookie Clicker
-            Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
             Creating Functions: Creazione di funzioni
-            Creating Procedures - Part 1: Creating Procedures - Part 1
-            Creating Procedures - Part 2: Creating Procedures - Part 2
             Creating functions with Parameters: Creating Functions with Parameters
-            Design a Digital Scene: Design a Digital Scene
-            Digital Assistant Challenge: Digital Assistant Challenge
             Digital Assistant Project: Digital Assistant Project
             Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
             Events Unplugged: Events Unplugged
-            Functions: Funzioni
             Functions and Top-Down Design: Functions and Top-Down Design
             Functions with Return Values: Functions with Return Values
-            Getting User Input: Getting User Input
-            Getting to know AppLab: Getting to know AppLab
             Image Scroller with Key Events: Image Scroller with Key Events
-            Images are Arrays: Images are Arrays
-            Improving Digital Assistant with Conditionals: Improving Digital Assistant
-              with Conditionals
-            'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
-              Assistant: Complex Conditionals'
-            'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
-              Conditionals'
-            'Improving Digital Assistant: Functions with Return': 'Improving Digital
-              Assistant: Functions with Return'
-            Improving the Clicker Game: Improving the Clicker Game
-            Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
-              Challenge
             Introducing Design Mode: Introducing Design Mode
             Introduction to Arrays: Introduction to Arrays
             Introduction to Conditional Logic: Introduction to Conditional Logic
-            Introduction to Digital Assistant: Introduction to Digital Assistant
-            Introduction to Digital Assistant Project: Introduction to Digital Assistant
-              Project
             Introduction to Digital Assistants: Introduction to Digital Assistants
-            Layers of Abstraction and Programming Efficiency: Layers of Abstraction
-              and Programming Efficiency
             Looping and Random Numbers: Looping and Random Numbers
-            Looping and Random Numbers - Under the Sea: Looping and Random Numbers
-              - Under the Sea
             Loops and Simulations: Loops and Simulations
-            More Variables (2 days): More Variables (2 days)
-            Multi-screen App: Multi-screen App
             Multi-screen Apps: Multi-screen Apps
-            Natural Language Processing: Natural Language Processing
-            Natural Language Processing and Chat Bots: Natural Language Processing
-              and Chat Bots
-            On Beyond Buttons: On Beyond Buttons
-            Permanent Data Storage and Clicker Completion: Permanent Data Storage
-              and Clicker Completion
             Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
             'Practice PT: Create': 'Practice PT: Create'
-            'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
             Processing Arrays: Processing Arrays
-            Sarah testing project backed levels: Sarah testing project backed levels
-            Scene Design Part 1 - Plan: Design a Digital Scene
-            'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
-            Scene Design Part 2 - Code: Scene Design Part 2 - Code
-            'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
-            Scene Design Part 3 - Reflect: Scene Design Part 3 - Reflect
-            'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
-            Strings and Substrings: Strings and Substrings
             The Need For Programming Languages: The Need For Programming Languages
             Understanding Program Flow and Logic: Understanding Program Flow and Logic
-            Unfortunate Events: Unfortunate Events
-            Unplugged Events Activity -  Mission Unsortable: Unplugged Events Activity
-              -  Mission Unsortable
             User Input and Strings: User Input and Strings
             Using Simple Commands: Using Simple Commands
             Using Variables in Apps: Using Variables in Apps
-            Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
-            Variables: Variabili
-            Variables Conceptorial Fodder: Variables Conceptorial Fodder
-            'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and
-              Read'
-            'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
-              Decrement, Display, and Scope'
-            While Loop Basics: While Loop Basics
             While Loops: Cicli "Mentre"
-            While Loops_ Counting Flips: While Loops_ Counting Flips
-            title_short: CSP Unit 3
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -773,8 +532,6 @@
             Computer Science Pedagogy: Computer Science Pedagogy
             Course Overview: Course Overview
             Evaluation Blocks: Blocchi di Valutazione
-            Introduction to the new Computer Science in Algebra: Introduction to the
-              new Computer Science in Algebra
             Next Steps: Next Steps
             Strings and Images: Stringhe e Immagini
             Teacher Dashboard: Teacher Dashboard
@@ -810,7 +567,6 @@
           description_short: 'Phase 1: Online Introduction'
           logo_image: nextech_logo.png
           stage:
-            Computer Science Pedagogy: Computer Science Pedagogy
             Course Overview: Course Overview
             Evaluation Blocks: Blocchi di Valutazione
             Introduction to PD: Introduzione a PD
@@ -824,7 +580,6 @@
           description_short: 'Phase 1: Online Introduction'
           logo_image: izone_logo.png
           stage:
-            Computer Science Pedagogy: Computer Science Pedagogy
             Course Overview: Course Overview
             Evaluation Blocks: Blocchi di Valutazione
             Introduction to PD: Introduzione a PD
@@ -880,21 +635,11 @@
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           stage:
-            Common Forms: Common Forms
             Creating Breeds in Starlogo Nova: Creating Breeds in Starlogo Nova
-            Curricular Modules: Curricular Modules
-            Discussion Forum: Discussion Forum
-            Discussion Forums: Discussion Forums
             Epidemic Model Extensions: Epidemic Model Extensions
-            Evaluation: Evaluation
-            Guides and Resources: Guides and Resources
-            Implementation Planning: Implementation Planning
-            Phase 2 Summer Workshop: Phase 2 Summer Workshop
-            Resources: Resources
             Review StarLogo Nova: Review StarLogo Nova
             Revisiting Agent Movement: Revisiting Agent Movement
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Welcome: Welcome
             Welcome!: Benvenuto!
             Wrap-Up: Conclusione
         sciencePD3:
@@ -902,13 +647,8 @@
           description: Phase 3 Professional Development
           description_short: Phase 3 Professional Development
           stage:
-            Common Forms: Common Forms
-            Curricular Modules: Curricular Modules
             Decode and Share: Decode and Share
-            Discussion Forums: Discussion Forums
-            Guides and Resources: Guides and Resources
             Mystery Model: Mystery Model
-            Welcome: Welcome
             Welcome Back!: Welcome Back!
         Testing:
           title: Testing
@@ -932,52 +672,31 @@
             Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum
               Spanning Tree
             Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
-            Algorithms in Networking: Algorithms in Networking
             Alice and Bob and Asymmetric Keys: Asymmetric Keys - Cups and Beans
-            Beyond Sending Bits: Beyond Sending Bits
-            Challenges of the Internet: Global Impacts of the Internet
-            Classroom Internet: Classroom Internet
             Cracking the Code: Cracking the Code
-            DNS Simulation: DNS Simulation
             DNS in the Real World: DNS in the Real World
             Encryption Algorithms: Keys and Passwords
-            Global Impacts of the Internet: Global Impacts of the Internet
             HTTP and Abstraction: HTTP and Abstraction on the Internet
-            HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
-            How HTTP Works: How HTTP Works
-            How Routers Learn: How Routers Learn
-            IP and DNS in the Real World: IP and DNS in the Real World
             Invent an Addressing Protocol: Invent an Addressing Protocol
-            Keys and Passwords: Keys and Passwords
             One Way Functions - Ice Cream Vans: One-Way Functions - The WiFi Hotspot
               Problem
             Packets and Making a Reliable Internet: Packets and Making a Reliable
               Internet
-            Packets in the Real World: Packets in the Real World
             Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
             Practice PT - The Internet and Society: Practice PT - The Internet and
               Society
             Public Key Crypto: Public Key Cryptography
-            Public Key Encryption: Public Key Encryption
-            Routers and Addresses: Routers and Addresses
-            Routers and Addresses as Numbers: Routers and Addresses as Numbers
             Routers and Redundancy: Routers and Redundancy
-            Security and Hacking in the Real World: Security and Hacking in the Real
-              World
             Tell Me a Secret - Encrypting Text: The Need for Encryption
             The Internet: Internet
-            The Internet is for Everyone: The Internet is for Everyone
             The Need for Addressing: The Need for Addressing
             The Need for DNS: The Need for DNS
-            The Need for Encryption: The Need for Encryption
-            The Need for Packets: The Need for Packets
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           stage:
-            Big GAme - Collision Detection: Big GAme - Collision Detection
             Big Game - Animation: Big Game - Animation
             Big Game - Booleans: Big Game - Booleans
             Big Game - Collision Detection: Big Game - Collision Detection
@@ -988,7 +707,6 @@
             Evaluation Blocks: Blocchi di Valutazione
             Free Play: Tempo di giocare
             Luigi's Pizza: Luigi's Pizza
-            'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
             Rocket-Height: Rocket-Height
             Sam the Bat: Sam the Bat
             Strings and Images: Stringhe e Immagini
@@ -1010,8 +728,6 @@
             Farmer: Farmer
             Flappy: Flappy
             Free Response: Free Response
-            Frequency: Frequency
-            Game Lab: Game Lab
             Gamelab: Gamelab
             Jigsaw: Puzzle
             Long assessment: Long assessment
@@ -1034,10 +750,7 @@
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
-            Vigenere: Vigenere
             Web Lab: Web Lab
-            applab: applab
-            online pd?: online pd?
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -1047,7 +760,6 @@
             Best Practices for Teaching Computer Science: Best Practices for Teaching
               Computer Science
             Booleans: Valori Booleani
-            Computer Science Pedagogy: Computer Science Pedagogy
             Course Overview: Course Overview
             Defining Functions: Definizione di Funzioni
             Defining Variables: Definizione di Variabili
@@ -1095,49 +807,24 @@
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           stage:
-            Unit 1, Day 10: Unit 1, Day 10
             Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
               with Data
-            Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story
-              with Data
-            Unit 1, Day 11-14: Unit 1, Day 11-14
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
               and Design
-            Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling
-              and Design
-            Unit 1, Day 15-16: Unit 1, Day 15-16
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
-            Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1,
-              Day 15-16. Computer Programs and Following Directions
-            Unit 1, Day 17-19: Unit 1, Day 17-19
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
-            Unit 1, Days 1-2: Unit 1, Days 1-2
-            '0': |
+            0: |
               Unit 1, Days 1-2
               What Is a Computer?
             1: |
               Unit 1, Days 1-2
               What Is a Computer?
-            Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
-            'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a
-              Computer?'
-            Unit 1, Days 3-4: Unit 1, Days 3-4
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
-            Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
-            Unit 1, Days 5-7: Unit 1, Days 5-7
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
               2
-            Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and
-              Web 2.0
-            Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
-              Web 2.0
-            Unit 1, Days 8-9: Unit 1, Days 8-9
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
               Impact of Computers and Communication
-            Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days
-              8-9. Impact of Computers and Communication
             Welcome!: Benvenuto!
             Wrap-up: Conclusione
         equityPD:
@@ -1145,10 +832,7 @@
           description: How to lead a discussion on equity in a Code.org PD
           description_short: How to lead a discussion on equity in a Code.org PD
           stage:
-            Code.org Equity PD: Code.org Equity PD
             Equity PD: Equity PD
-            Equity Vs. Equality: Equity Vs. Equality
-            Introduction to the Equity PD: Introduction to the Equity PD
             Necessary Background: Necessary Background
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1156,26 +840,12 @@
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           stage:
-            Best Practices for Teaching Computer Science: Best Practices for Teaching
-              Computer Science
-            Booleans: Valori Booleani
-            Computer Science Pedagogy: Computer Science Pedagogy
-            Course Overview: Course Overview
-            Defining Functions: Definizione di Funzioni
-            Defining Variables: Definizione di Variabili
-            'Eval: Conditionals': 'Valutazione: Istruzioni Condizionali'
-            Evaluation Blocks: Blocchi di Valutazione
             Lesson Prep: Lesson Prep
-            Next Steps: Next Steps
-            Practice with Puzzles: Practice with Puzzles
-            Rocket-Height: Rocket-Height
-            Strings and Images: Stringhe e Immagini
             Teacher Dashboard: Teacher Dashboard
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: La Ricetta della Progettazione
             Welcome!: Benvenuto!
-            Writing Contracts: Writing Contracts
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -1295,20 +965,13 @@
             Getting Started: Getting Started
             Lesson Chunk 1- Sending Binary Messages: Lesson Chunk 1- Sending Binary
               Messages
-            'Lesson Chunk 1: Sending Binary Messages': 'Lesson Chunk 1: Sending Binary
-              Messages'
             Lesson Chunk 2- Encoding and Sending Numbers: Lesson Chunk 2- Encoding
               and Sending Numbers
-            'Lesson Chunk 2: Encoding and Sending Numbers': 'Lesson Chunk 2: Encoding
-              and Sending Numbers'
             Lesson Chunk 3- Encoding and Sending Text: Lesson Chunk 3- Encoding and
               Sending Text
-            'Lesson Chunk 3: Encoding and Sending Text': 'Lesson Chunk 3: Encoding
-              and Sending Text'
             Lesson Chunk 4- Compressing and Storing Information: Lesson Chunk 4- Compressing
               and Storing Information
             Practice PT: Practice PT
-            Ramping Up: Ramping Up
             Welcome to the Course!: Welcome to the Course!
             Wrap Up and Next Steps: Wrap Up and Next Steps
         odometer:
@@ -1387,106 +1050,33 @@
           description_short: Academic Year Development
           stage:
             Close & Next Steps: Close & Next Steps
-            Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
-              Problems with Data
-            Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
-            'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
-              Linear and Binary Search: Tower Building Activity'
-            Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
-            'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning
-              Trees: Muddy City'
-            Day 18-21 Final Project: Day 18-21 Final Project
-            'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To
-              Problem Solving: Candy Bar Activity'
-            'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6
-              Strategies in Problem Solving: Handshake Activity'
-            'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
-              Curves'
             Getting Started: Getting Started
             Intro to Unit 2: Intro to Unit 2
-            Introduction to the Unit 2 Challenge: Introduction to the Unit 2 Challenge
             Lesson Overviews: Lesson Overviews
-            Problem Solving: Problem Solving
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
-            Unit 2 Challenge Creation: Unit 2 Challenge Creation
-            Unit 2 Challenge Planning: Unit 2 Challenge Planning
-            Unit 2 Challenge Planning & Creation: Unit 2 Challenge Planning & Creation
-            Unit 2 Challenge Preview: Unit 2 Challenge Preview
-            Unit 2 Overview: Unit 2 Overview
-            Welcome!: Benvenuto!
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
           description_short: Academic Year Development
           stage:
             Close & Next Steps: Close & Next Steps
-            Day 1-2 Online Experiences: Day 1-2 Online Experiences
-            Day 11-13 Separating HTML and CSS: Day 11-13 Separating HTML and CSS
-            'Day 14 HTML: Links': 'Day 14 HTML: Links'
-            'Day 15-16 HTML and CSS: Tables, Lists,  Menus': 'Day 15-16 HTML and CSS:
-              Tables, Lists,  Menus'
-            'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
-              Tables, Lists, Menus'
-            'Day 17-19 HTML and CSS: Create own webpage': 'Day 17-19 HTML and CSS:
-              Create own webpage'
-            'Day 20-21 HTML and CSS: Adding Enhancements to Site': 'Day 20-21 HTML
-              and CSS: Adding Enhancements to Site'
-            Day 22-25 Final Project: Day 22-25 Final Project
-            Day 3-4 HTML- Paragraph and Header Tags: Day 3-4 HTML- Paragraph and Header
-              Tags
-            Day 5 HTML - Strong and EM Tags: Day 5 HTML - Strong and EM Tags
-            Day 6-7 HTML -Images: Day 6-7 HTML -Images
-            Day 8-10 Introduction to CSS: Day 8-10 Introduction to CSS
             Getting Started: Getting Started
-            Intro to Unit 2: Intro to Unit 2
             Intro to Unit 3: Intro to Unit 3
-            Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
             Teaching Strategies: Teaching Strategies
-            Unit 2 Challenge: Unit 2 Challenge
-            Unit 2 Challenge Preview: Unit 2 Challenge Preview
             Unit 3 Challenge: Unit 3 Challenge
-            Unit 3 Challenge Planning & Creation: Unit 3 Challenge Planning & Creation
-            Unit 3 Challenge Preview: Unit 3 Challenge Preview
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
-            Unit 3 Overview: Unit 3 Overview
-            Welcome!: Benvenuto!
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
           description_short: Academic Year Development
           stage:
             Close & Next Steps: Close & Next Steps
-            'Day 1 Scratch: Intro': 'Day 1 Scratch: Intro'
-            'Day 10-13 Scratch: Broadcasting': 'Day 10-13 Scratch: Broadcasting'
-            'Day 14 Scratch: Variables': 'Day 14 Scratch: Variables'
-            'Day 15 Scratch: Conditionals': 'Day 15 Scratch: Conditionals'
-            'Day 16-17 Scratch: AND OR and Randomness': 'Day 16-17 Scratch: AND OR
-              and Randomness'
-            'Day 18 Scratch: Rock Paper Scissors': 'Day 18 Scratch: Rock Paper Scissors'
-            'Day 19 Scratch: Timer': 'Day 19 Scratch: Timer'
-            'Day 2-3 Scratch: Name Project': 'Day 2-3 Scratch: Name Project'
-            'Day 20-23 Scratch: Timing Game': 'Day 20-23 Scratch: Timing Game'
-            'Day 24 Scratch: Games': 'Day 24 Scratch: Games'
-            Day 25-30 Final Project: Day 25-30 Final Project
-            'Day 4 Scratch: Creating Dialogue': 'Day 4 Scratch: Creating Dialogue'
-            'Day 5-6 Scratch: Moving Sprites': 'Day 5-6 Scratch: Moving Sprites'
-            'Day 7-8 Scratch: Event Driven Programming': 'Day 7-8 Scratch: Event Driven
-              Programming'
-            Day 9 Broadcasting Role Play: Day 9 Broadcasting Role Play
             Getting Started: Getting Started
             Intro to Unit 4: Intro to Unit 4
-            Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
             Teaching Strategies: Teaching Strategies
-            Unit 3 Day-by-Day: Unit 3 Day-by-Day
             Unit 4 Challenge: Unit 4 Challenge
-            Unit 4 Challenge Creation: Unit 4 Challenge Creation
-            Unit 4 Challenge Planning: Unit 4 Challenge Planning
-            Unit 4 Challenge Planning & Creation: Unit 4 Challenge Planning & Creation
-            Unit 4 Challenge Preview: Unit 4 Challenge Preview
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
-            Unit 4 Overview: Unit 4 Overview
-            Welcome!: Benvenuto!
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1496,11 +1086,8 @@
             Getting Started: Getting Started
             Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
             Share out and Submit: Share out and Submit
-            Teaching Strategies: Teaching Strategies
-            Unit 5 Challenge Planning & Creation: Unit 5 Challenge Planning & Creation
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
-            Welcome!: Benvenuto!
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1508,14 +1095,10 @@
           stage:
             Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
             Getting Started: Getting Started
-            Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
             Share out and Submit: Share out and Submit
-            Teaching Strategies: Teaching Strategies
             Unit 6 Challenge: Unit 6 Challenge
-            Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
-            Welcome!: Benvenuto!
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description: |
@@ -1524,57 +1107,32 @@
             data from live data APIs.
           description_short: Data
           stage:
-            APIs and Access to Large Data Sets: APIs and Access to Large Data Sets
-            Building Apps Using Structured Data: Building Apps Using Structured Data
             Check Your Assumptions: Check Your Assumptions
             Cleaning Data: Cleaning Data
-            Collecting Personal Information: Collecting Personal Information
             Compiling Data: Compiling Data
             Creating Javascript Objects: Creating Javascript Objects
             Creating Summary Tables: Creating Summary Tables
-            'Data App Part 1: Brainstorm': 'Data App Part 1: Brainstorm'
-            'Data App Part 2: Data Design': 'Data App Part 2: Data Design'
-            'Data App Part 3: Code': 'Data App Part 3: Code'
-            'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
-            'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
-            'Data App Part 6: Sort and Search': 'Data App Part 6: Sort and Search'
-            'Data App Part 7: Read Data': 'Data App Part 7: Read Data'
-            'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
-            'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
-            Data is the Secret Ingredient: Data is the Secret Ingredient
             Data, Security, and Privacy: Data, Security, and Privacy
-            'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
-            'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
             Designing Data Collection: Designing Data Collection
             Designing for Your User: Designing for Your User
             Discover a Data Story: Discover a Data Story
-            Finding Data: Finding Data
             Finding Trends with Visualizations: Finding Trends with Visualizations
             Good and Bad Data Visualizations: Good and Bad Data Visualizations
             How is Data Collected?: How is Data Collected?
-            Identifying People with Data: Identifying People with Data
             Import, Export, and Visualize Data: Import, Export, and Visualize Data
             Interpreting Data Visualizations: Interpreting Data Visualizations
-            Interpreting Data from Different Perspectives: Interpreting Data from
-              Different Perspectives
             Making Data Visualizations: Making Data Visualizations
             Permanent Data Storage: Permanent Data Storage
             Permanent Data Storage and Clicker Completion: Permanent Data Storage
               and Clicker Completion
             'Practice Create PT: Data App': 'Practice Create PT: Data App'
-            Privacy Policy: Informativa sulla privacy
             Privacy in a Digital World: Privacy in a Digital World
             Privacy vs Utility: Privacy vs Utility
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
-            Reading Data: Reading Data
             Reading Records: Reading Records
             Search Terms: Search Terms
-            Searching: Searching
-            Sorting: Sorting
-            Structuring Data with JSON: Structuring Data with JSON
             Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
             Using Data in the Real World: Using Data in the Real World
-            Visualizations in the Real World: Visualizations in the Real World
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: What Data Can Tell Us
             Why Make Apps?: Why Make Apps?
@@ -1587,7 +1145,6 @@
             Life Science Challenges: Life Science Challenges
             Physical Science Challenges: Physical Science Challenges
             Thinking About Implementation: Thinking About Implementation
-            Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Benvenuto!
             Wrap-Up: Conclusione
         algebraPD3b:
@@ -1612,13 +1169,12 @@
             Getting Started: Getting Started
             Share out and Submit: Share out and Submit
             Unit 2 Overview: Unit 2 Overview
-            Welcome!: Benvenuto!
         duino:
+          title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
           stage:
             Basic Circuits: Basic Circuits
             Blinky Lights: Blinky Lights
-            Experimenting with Arduino stuff: Experimenting with Arduino stuff
             JunkBot: JunkBot
             Making Music: Making Music
         Special Fun:
@@ -1639,9 +1195,7 @@
             finché ci sono!
           description_audience: Da 10 anni in su (dopo il Corso 3)
           stage:
-            Halloween 2015: Halloween 2015
             Spring 2016: Spring 2016
-            Valentine 2016: Valentine 2016
         iceage:
           title: Laboratorio con L'Era Glaciale
           description: Crea una storia oppure fai un gioco con il Laboratorio con
@@ -1675,35 +1229,24 @@
             these lessons span all programming languages and tools.
           description_short: Programmazione
           stage:
-            Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
-            Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
-            Arrays_ Intro: Arrays_ Intro
-            Arrays_ Photo Album: Arrays_ Photo Album
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
             Functions with Return Values: Functions with Return Values
             Image Scroller with Key Events: Image Scroller with Key Events
-            Images are Arrays: Images are Arrays
             Introduction to Arrays: Introduction to Arrays
-            Key Events with Image Scroller: Key Events with Image Scroller
             Loops and Simulations: Loops and Simulations
-            Practice Create Performance Task: Practice Create Performance Task
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
-            While Loop Basics: While Loop Basics
             While Loops: Cicli "Mentre"
-            While Loops_ Counting Flips: While Loops_ Counting Flips
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
           description_short: Online Exploration of CSP Unit 3
           stage:
-            Challenge Overview: Challenge Overview
             Chunk 1 Overview: Chunk 1 Overview
             Chunk 2 Overview: Chunk 2 Overview
             Chunk 3 Overview: Chunk 3 Overview
             Chunk 4 Overview: Chunk 4 Overview
             Chunk 5 Overview: Chunk 5 Overview
-            Getting Started: Getting Started
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
@@ -1753,7 +1296,6 @@
             "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
               Refresh your connection to Complex Adaptive Systems"
             Assessing Computer Models: Assessing Computer Models
-            Thinking About Implementation: Thinking About Implementation
             Welcome!: Benvenuto!
             Wrap-Up: Conclusione
         cspunit5:
@@ -1789,7 +1331,6 @@
             Making Data Visualizations: Making Data Visualizations
             Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
             Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
-            Privacy Abandoned: Privacy Abandoned
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
@@ -1830,8 +1371,6 @@
           stage:
             Challenge Overview: Challenge Overview
             Complete the Challenge: Complete the Challenge
-            Complete the Challlege: Complete the Challlege
-            Complete the Challlenge: Complete the Challlenge
             Create PT Breakdown: Create PT Breakdown
             Explore PT Breakdown: Explore PT Breakdown
             Getting Started: Getting Started
@@ -1926,19 +1465,10 @@
             design decisions.
           description_short: Internet
           stage:
-            Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers
-              Learn
-            Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum
-              Spanning Tree
-            Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
             Binary Numbers: Binary Numbers
             CS Principles Pre-survey: CS Principles Pre-survey
-            DNS in the Real World: DNS in the Real World
-            Encoding Numbers in the Real World: Encoding Numbers in the Real World
             Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
-            Encoding and Sending Text: Encoding and Sending Text
             HTTP and Abstraction: HTTP and Abstraction
-            Invent an Addressing Protocol: Invent an Addressing Protocol
             Number Systems: Number Systems
             Packets and Making a Reliable Internet: Packets and Making a Reliable
               Internet
@@ -1949,9 +1479,6 @@
             Sending Binary Messages: Sending Binary Messages
             Sending Binary Messages with the Internet Simulator: Sending Binary Messages
               with the Internet Simulator
-            Sending Bits in the Real World: Sending Bits in the Real World
-            Sending Complex Messages: Sending Complex Messages
-            Sending Formatted Text: Sending Formatted Text
             Sending Numbers: Sending Numbers
             The Internet: Internet
             The Need for Addressing: The Need for Addressing
@@ -2017,14 +1544,13 @@
           stage:
             Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
             Cracking the Code: Cracking the Code
-            Encryption Algorithms: Encryption Algorithms
+            Encryption with Keys and Passwords: Encryption with Keys and Passwords
             Identifying People with Data: Identifying People with Data
             Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
             Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
             Public Key Crypto: Public Key Crypto
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             Simple Encryption: Simple Encryption
-            Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
         csp5:
@@ -2072,30 +1598,18 @@
           description: Temp place to work on U3 of Disco
           description_short: Programmazione
           stage:
-            Animation: Animazione
-            Animations: Animations
             Booleans and Conditionals: Booleans and Conditionals
-            CSD U3 Variables and Animation: CSD U3 Variables and Animation
             Collision Detection: Collision Detection
             Collisions: Collisions
             Complex Conditionals: Complex Conditionals
             Complex Sprite Movement: Complex Sprite Movement
-            Conditionals Update: Conditionals Update
             Conditionals and Keyboard Input: Conditionals and Keyboard Input
-            Counting with Variables: Counting with Variables
-            Draw Loop and Random: Draw Loop and Random
             Draw Loop and Randomization: Draw Loop and Randomization
             Drawing in Game Lab: Drawing in Game Lab
-            Expressions: Expressions
-            Expressions and Reassignment: Expressions and Reassignment
             'Project: Interactive Card': 'Project: Interactive Card'
-            Proposed Sprites and Props: Proposed Sprites and Props
-            SFLP: SFLP
             Sprite Movement Methods: Sprite Movement Methods
-            Sprite Properties and Mod: Sprite Properties and Mod
             Sprites and Images: Sprites and Images
             Sprites and Properties: Sprites and Properties
-            Variables: Variabili
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
         2016_sciencePD_phase1:
@@ -2130,7 +1644,6 @@
           description_short: This is a secret...shhhhh
           description_audience: Da 8 anni in su (dopo il Corso 2)
           stage:
-            Computational Thinking: Pensiero computazionale
             Sample Stage: Sample Stage
         ECSPD1:
           title: ECS Part 1
@@ -2140,18 +1653,14 @@
           stage:
             Background and Context: Background and Context
             'Classroom and Workshop Style ': 'Classroom and Workshop Style '
-            'Classroom and workshop style ': 'Classroom and workshop style '
             ECS Curriculum: ECS Curriculum
-            Getting Started: Getting Started
             Welcome to Phase 1!: Welcome to Phase 1!
-            What is ECS?: What is ECS?
             Wrap Up: Wrap Up
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           stage:
-            Course Overview: Course Overview
             Evaluation Blocks: Blocchi di Valutazione
             Introduction to PD: Introduzione a PD
             Teacher Dashboard: Teacher Dashboard
@@ -2203,9 +1712,9 @@
             Sending Binary Messages: Sending Binary Messages
             Strategies for Student Writing: Strategies for Student Writing
             Supporting Peer Learning: Supporting Peer Learning
-            Teachers and Tools: Teachers and Tools
             'Tool Talk: Intro to Netsim': 'Tool Talk: Intro to Netsim'
         test-teaching-ap-cs-unit-1:
+          title: Test CPS PD
           stage:
             test Unit 1 content module Alpha: test Unit 1 content module Alpha
             test Unit 1 content module Bravo: test Unit 1 content module Bravo
@@ -2232,16 +1741,6 @@
             how we use it to teach the internet
           stage:
             netsim: netsim
-        'csp-facilitators ':
-          title: CSP Tool Overview
-          description: A collection of tools from the CS Principles course. These
-            levels provide a glimpse into the tools we use throughout the curriculum
-            to
-          description_short: Introduction to CS Principles for new Facilitators
-          stage:
-            Introduction to Events: Introduction to Events
-            Introduction to Text Compression: Introduction to Text Compression
-            Turtle Programming: Turtle Programming
         csp-facilitators:
           title: CSP Tool Overview
           description: A collection of tools from the CS Principles course. These
@@ -2284,35 +1783,9 @@
           description: Temp place to work on U4 of Disco
           description_short: Design Process and App Lab
           stage:
-            APIs and Function Parameters: APIs and Function Parameters
             Adding Functionality (optional): Adding Functionality (optional)
-            App Lab: Laboratorio per le App
-            Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
-            Compound Conditional Logic: Compound Conditional Logic
-            Controlling Memory with Variables: Controlling Memory with Variables
-            Creating Functions: Creazione di funzioni
-            Creating functions with Parameters: Creating functions with Parameters
             Design Mode: Design Mode
-            Digital Assistant Project: Digital Assistant Project
-            Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
-            Functions and Top-Down Design: Functions and Top-Down Design
-            Functions with Return Values: Functions with Return Values
-            Image Scroller with Key Events: Image Scroller with Key Events
-            Introducing Design Mode: Introducing Design Mode
-            Introduction to Arrays: Introduction to Arrays
-            Introduction to Conditional Logic: Introduction to Conditional Logic
-            Introduction to Digital Assistants: Introduction to Digital Assistants
-            Looping and Random Numbers: Looping and Random Numbers
-            Loops and Simulations: Loops and Simulations
             Making it Interactive: Making it Interactive
-            Multi-screen Apps: Multi-screen Apps
-            Processing Arrays: Processing Arrays
-            The Need For Programming Languages: The Need For Programming Languages
-            Understanding Program Flow and Logic: Understanding Program Flow and Logic
-            User Input and Strings: User Input and Strings
-            Using Simple Commands: Using Simple Commands
-            Using Variables in Apps: Using Variables in Apps
-            While Loops: Cicli "Mentre"
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description: Temp place to work on U1 of Disco
@@ -2325,27 +1798,27 @@
           description: Temp place to work on U2 of Disco
           description_short: Web Development
           stage:
-            Box Model and Page Layout: Box Model and Page Layout
-            Classes and External Style Sheets: Classes and External Style Sheets
             Clean Code and Debugging: Clean Code and Debugging
             Describing Webpages: Describing Webpages
             Designing Code for Computers: Designing Code for Computers
-            Designing Web Pages: Designing Web Pages
             Digital Footprint: Digital Footprint
-            Finalizing Website: Finalizing Website
-            Headers and Lists: Headers and Lists
             Images on the Web: Images on the Web
-            Intellectual Property: Intellectual Property
-            Introduction to HTML: Introduction to HTML
-            Introduction to Styling with CSS: Introduction to Styling with CSS
-            'Personal Website: Connecting Pages': 'Personal Website: Connecting Pages'
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
-            'Personal Website: Midway Check': 'Personal Website: Midway Check'
-            Publishing a Website: Publishing a Website
             Quality Websites: Quality Websites
-            Sources and Search Engines: Sources and Search Engines
             Text on the Web: Text on the Web
             Website Design: Website Design
+            Intellectual Property: Intellectual Property
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            'Personal Website: Connecting Pages': 'Personal Website: Connecting Pages'
+            Classes and External Style Sheets: Classes and External Style Sheets
+            Box Model and Page Layout: Box Model and Page Layout
+            'Personal Website: Midway Check': 'Personal Website: Midway Check'
+            Publishing a Website: Publishing a Website
+            Sources and Search Engines: Sources and Search Engines
+            Introduction to HTML: Introduction to HTML
+            Headers and Lists: Headers and Lists
+            Designing Web Pages: Designing Web Pages
+            Holding: Holding
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -2380,19 +1853,6 @@
           description_audience: Da 8 anni in su (dopo il Corso 2)
           stage:
             Artist Exemplar: Artist Exemplar
-        2016_sciencePD_phase2b:
-          title: Computer Science in Science PD Phase 2b 2016-2017
-          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
-          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
-            learning)'
-          stage:
-            Advanced StarLogo Nova: Advanced StarLogo Nova
-            Remixing Phases 1 and 2: Remixing Phases 1 and 2
-            Review StarLogo Nova: Review StarLogo Nova
-            Reviewing the Modules: Reviewing the Modules
-            Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Welcome!: Benvenuto!
-            Wrap-Up: Conclusione
         teachercon:
           title: TeacherCon Supports
           description: We will use this during TeacherCon to deliver supports and
@@ -2413,19 +1873,6 @@
             Lesson 2,2: 'Lesson 2.2: Text Compression'
             Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
             Measuring Student Learning: Measuring Student Learning
-        2016_sciencePD-phase2b:
-          title: Computer Science in Science PD Phase 2b 2016 2017
-          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
-          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
-            learning)'
-          stage:
-            Advanced StarLogo Nova: Advanced StarLogo Nova
-            Remixing Phases 1 and 2: Remixing Phases 1 and 2
-            Review StarLogo Nova: Review StarLogo Nova
-            Reviewing the Modules: Reviewing the Modules
-            Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Welcome!: Benvenuto!
-            Wrap-Up: Conclusione
         kinderTest:
           stage:
             'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
@@ -2456,20 +1903,9 @@
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 9-99
           stage:
-            Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested
-              Loops)
-            'Artist: Nested Loops': 'Artista: Cicli Annidati'
-            'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
             'Bee: Determine the Concept': 'Bee: Determine the Concept'
-            'Bee: Functions': 'Ape: Funzioni'
             'Bee: Functions (Course 3)': 'Bee: Functions (Course 3)'
-            'Bee: Nested Loops': 'Ape: Cicli Annidati'
             Build a Star Wars Game!: Build a Star Wars Game!
-            Choose Your Own Adventure: Choose Your Own Adventure
-            Conditionals: Istruzioni condizionali
-            Crowdsourcing: Intelligenza Collettiva
-            Decision Trees: Decision Trees
-            Determine the Concept Part 2: Determine the Concept Part 2
             Digital Citizenship: Cittadinanza Digitale
             Explore project ideas: Explore project ideas
             'Farmer: Functions (New)': 'Farmer: Functions (New)'
@@ -2478,31 +1914,12 @@
               Design Process'
             'Final Project - Work Day: Build Project Online': 'Final Project - Work
               Day: Build Project Online'
-            Internet: Internet
-            'Mixed Review #1 (Ramp Up)': 'Mixed Review #1 (Ramp Up)'
-            'Mixed Review #2 (Conditionals, Events, Functions)': 'Mixed Review #2
-              (Conditionals, Events, Functions)'
-            'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
             More Programming with Scratch: More Programming with Scratch
-            Nested Loops: Cicli Annidati
             'New Artist: Functions': 'New Artist: Functions'
-            New Playlab Behaviors and Events Review: New Playlab Behaviors and Events
-              Review
-            'PlayLab: Conditionals': 'PlayLab: Conditionals'
-            'Project #1': 'Project #1'
-            'Project #1: Artist (Nested Loops, Functions)': 'Project #1: Artist (Nested
-              Loops, Functions)'
-            'Project #2': 'Project #2'
-            'Project 2: PlayLab Game (Events, Conditionals, Functions)': 'Project
-              2: PlayLab Game (Events, Conditionals, Functions)'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded
               Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting: Composizione di canzoni
-            'Unplugged: Conditionals with Cards': 'Unplugged: Conditionals with Cards'
-            'Unplugged: Decision Trees (New)': 'Unplugged: Decision Trees (New)'
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
-            'Unplugged: Kinesthetic Functions': 'Unplugged: Kinesthetic Functions'
-            'Unplugged: Nested Loops (New)': 'Unplugged: Nested Loops (New)'
         grade1:
           title: Grade 1
           description: Planning Script for CSF 2.0
@@ -2520,7 +1937,6 @@
             Loops Unplugged: Loops Unplugged
             More Computer Science: More Computer Science
             Persistence & Frustration: Persistence & Frustration
-            Predicting & Debugging: Predicting & Debugging
             Programming: Programmazione
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
@@ -2530,14 +1946,11 @@
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 10-110
           stage:
-            Artist Binary: 'Artista: Binario'
             'Artist: For Loops': 'Artista: Cicli con Contatore'
             'Artist: Functions with Parameters': 'Artista: Funzioni con Parametri'
             'Artist: Variables': 'Artista: Variabili'
             'Bee: For Loops': 'Ape: Cicli con Contatore'
             'Bee: Functions with Parameters': 'Ape: Funzioni con Parametri'
-            Concept Script (All below this point): Concept Script (All below this
-              point)
             Digital Citizenship: Cittadinanza Digitale
             Explore project ideas: Explore project ideas
             Final Project - Presentation Day: Final Project - Presentation Day
@@ -2546,24 +1959,10 @@
               Design Process'
             'Final Project - Work Day: Build Project Online': 'Final Project - Work
               Day: Build Project Online'
-            Mixed Review (Ramp Up): Mixed Review (Ramp Up)
-            'Pixelation: Binary Exploration': 'Pixelation: Binary Exploration'
-            'Play Lab: Events and Conditionals': 'Play Lab: Events and Conditionals'
-            'Play Lab: Functions with Parameters': 'Laboratorio: Funzioni con Parametri'
             'Play Lab: Variables': 'Laboratorio: Variabili'
-            'Project 1: Choose Your Own Story App': 'Project 1: Choose Your Own Story
-              App'
-            'Project 2: For Loops with the Artist': 'Project 2: For Loops with the
-              Artist'
-            'Project 3: Design your own App (PlayLab)': 'Project 3: Design your own
-              App (PlayLab)'
-            'Project: Chase/Collect Game': 'Project: Chase/Collect Game'
-            Scratch (Optional Third-Party Stage): Scratch (Optional Third-Party Stage)
             Try programming with Khan Academy: Try programming with Khan Academy
-            'Unplugged: Binary Images': 'Unplugged: Binary Images'
             'Unplugged: Envelope Variables': Variabili e Buste
             'Unplugged: For Loop Fun': Divertiti usando i Cicli con Contatore
-            'Unplugged: Madlibs': Mad-Libs
             'Unplugged: Songwriting with Parameters': Composizione di Canzoni con
               Parametri
         ecs-unit1:
@@ -2597,21 +1996,6 @@
           description_short: 'Unit 2: Problem Solving'
           stage:
             Close & Next Steps: Close & Next Steps
-            Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
-              Problems with Data
-            Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
-            'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
-              Linear and Binary Search: Tower Building Activity'
-            Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
-            'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning
-              Trees: Muddy City'
-            Day 18-21 Final Project: Day 18-21 Final Project
-            'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To
-              Problem Solving: Candy Bar Activity'
-            'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6
-              Strategies in Problem Solving: Handshake Activity'
-            'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
-              Curves'
             Getting Started: Getting Started
             Intro to Unit 2: Intro to Unit 2
             Lesson Overviews: Lesson Overviews
@@ -2627,7 +2011,6 @@
             Intro to Unit 3: Intro to Unit 3
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
-            Unit 3 Challenge Preview: Unit 3 Challenge Preview
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
         ecs-unit4:
           title: ECS Unit 4
@@ -2639,7 +2022,6 @@
             Intro to Unit 4: Intro to Unit 4
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
-            Unit 4 Challenge Preview: Unit 4 Challenge Preview
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ecs-unit5:
           title: ECS Unit 5
@@ -2670,43 +2052,20 @@
           description_audience: Ages 5-18
           stage:
             " Bee: Conditionals": " Bee: Conditionals"
-            About My Robot: About My Robot
-            Artist Debugging: 'Artista: Correzione di Errori'
-            'Artist: Loops': 'Artista: Cicli'
             'Artist: Nested Loops': 'Artista: Cicli Annidati'
             Bee Debugging: 'Ape: Correzione di Errori'
             Bounce: Ping-Pong
             Build a Game: Build a Game
-            Choose Your Own Adventure: Choose Your Own Adventure
             Farmer Conditional with Cards: Farmer Conditional with Cards
             Farmer Debug Relay Programming: Farmer Debug Relay Programming
             Farmer Graph Paper Programming: Farmer Graph Paper Programming
             Farmer Impacts of Computing: Farmer Impacts of Computing
-            Farmer Robot Conditionals: Farmer Robot Conditionals
-            Farmer Robot Conditionals with Else: Farmer Robot Conditionals with Else
             'Farmer: While Loops': 'Contadina: Cicli "Mentre"'
             'Maze: Conditionals with Loops': 'Maze: Conditionals with Loops'
             'Maze: Nested Loops': 'Maze: Nested Loops'
             More Programming with CS4FN: More Programming with CS4FN
-            More Programming with Scratch: More Programming with Scratch
-            Preview to What is Next: Preview to What is Next
-            Robot Debugging: Robot Debugging
-            Robot Farmer Conditionals Intro: Robot Farmer Conditionals Intro
-            Robot Farmer Conditionals with Loops: Robot Farmer Conditionals with Loops
-            Robot Farmer Loops: Robot Farmer Loops
-            Robot Farmer While: Robot Farmer While
-            Robot Games: Robot Games
             Robot Running the Farm: Robot Running the Farm
             Unplugged Conditionals with Loops: Unplugged Conditionals with Loops
-        Test CPS PD:
-          stage:
-            test Unit 1 content module Alpha: test Unit 1 content module Alpha
-            test Unit 1 content module Bravo: test Unit 1 content module Bravo
-            test Unit 1 content module Charlie: test Unit 1 content module Charlie
-            test Unit 1 practice module Delta: test Unit 1 practice module Delta
-            test Unit 1 practice module Echo: test Unit 1 practice module Echo
-            test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
-            test Unit 1 required reading: test Unit 1 required reading
         alltheplcthings:
           title: Sample course for PLC things
           description: This is a sample course that has all of the plc special things.
@@ -2748,28 +2107,21 @@
           description_audience: Ages 5-18
           stage:
             At The Dog Park: At The Dog Park
-            Big Event: Big Event
-            Build A Block: Build A Block
-            Build A Puppy Picture: Build A Puppy Picture
             Caring for My New Pet: Caring for My New Pet
-            Caring for my new pet: Caring for my new pet
             Exploring the Neighborhood: Exploring the Neighborhood
-            Exploring the neighborhood: Exploring the neighborhood
             Flappy: Flappy
-            Free Play with your Pet: Free Play with your Pet
-            Getting Loopy: Diventare Ripetitivi
             Getting Loopy with Puppy: Getting Loopy with Puppy
-            Have a name needs a do tag: Have a name needs a do tag
             Make a Dog Tag: Make a Dog Tag
             More CS with Run Marco: More CS with Run Marco
-            More CS with Scratch: More CS with Scratch
             New Home for My Pet: New Home for My Pet
             Online Internet Safety: Online Internet Safety
             Online My New Pet Jigsaw: Online My New Pet Jigsaw
-            Pet's New Home: Pet's New Home
             Puppy Event: Puppy Event
             Puppy Introduction: Puppy Introduction
             Puppy Loops: Puppy Loops
+            How to behave in the lab_How to use Code_org puzzles: How to behave in
+              the lab/How to use Code.org puzzles
+            Programming at home with my pet: Programming at home with my pet
         transferring-over:
           stage:
             20-hr Stage 2: 20-hr Stage 2
@@ -2777,27 +2129,6 @@
             Course 2 Stage 17: Course 2 Stage 17
             Course 3 Stage 16: Course 3 Stage 16
             Course 3 Stage 17: Course 3 Stage 17
-        cspunit1assessment:
-          title: CS Principles Unit 1 Assessment
-          description: This 10-question multiple choice assessment is similar in style
-            to the AP CSP Exam and covers material from Unit 1
-          description_short: Unit 1 Assessment
-          stage:
-            CS Principles Culminating Assessment: CS Principles Culminating Assessment
-        cspunit2ch1assessment:
-          title: CS Principles Unit 2 Ch 1 Assessment
-          description: This multiple choice assessment is similar in style to the
-            AP CSP Exam and covers material from Unit 2 Chapter 1 (Lessons 1-6)
-          description_short: Unit 2.1 Assessment
-          stage:
-            CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
-        cspunit2ch2assessment:
-          title: CS Principles Unit 2 Ch 2 Assessment
-          description: This multiple choice assessment is similar in style to the
-            AP CSP Exam and covers material from Unit 2 Chapter 2 (Lessons 7-15)
-          description_short: Unit 2.1 Assessment
-          stage:
-            CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
         k5concepts:
           title: K5 Concepts
           stage:
@@ -2811,20 +2142,6 @@
             Nested Loops: Cicli Annidati
             Variables: Variabili
             While Loops: Cicli "Mentre"
-        cspunit1ch1assessment:
-          title: CS Principles Unit 1 Ch 1 Assessment
-          description: This multiple choice assessment is similar in style to the
-            AP CSP Exam and covers material from Unit 1 Chapter 1 (Lessons 1-7)
-          description_short: Unit 1.1 Assessment
-          stage:
-            CS Principles Unit 1 Ch 1 Assessment: CS Principles Unit 1 Ch 1 Assessment
-        cspunit1ch2assessment:
-          title: CS Principles Unit 1 Ch 2 Assessment
-          description: This multiple choice assessment is similar in style to the
-            AP CSP Exam and covers material from Unit 1 Chapter 2 (Lessons 8-14)
-          description_short: Unit 1.2 Assessment
-          stage:
-            CS Principles Unit 1 Ch 2 Assessment: CS Principles Unit 1 Ch 2 Assessment
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -2840,14 +2157,56 @@
           title: CS Principles Pre-Survey
           stage:
             Anonymous student pre-survey: Anonymous student pre-survey
-            Anonymous student survey 2: Anonymous student survey 2
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
         sciencepd3-2016:
           title: CS in Science PD3 Before 1st In-Person
-          description: 'Phase 3: Academic Year Development (Segment One)'
           description_short: 'Phase 3: Academic Year Development Pre 1'
+          description: 'Phase 3: Academic Year Development (Segment One)'
           stage:
-            Prep With Your Modules: Prep With Your Modules
-            The TLO: The TLO
             Welcome Back!: Welcome Back!
+            The TLO: The TLO
+            Prep With Your Modules: Prep With Your Modules
+        csd1:
+          title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
+          description_short: Problem Solving
+          description: U1 of Discoveries
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Representing Information: Representing Information
+            Processing with Bits: Processing with Bits
+            Human vs. Computer Processing: Human vs. Computer Processing
+            Processing with Apps: Processing with Apps
+            'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
+            Human vs Computer Processing: Human vs Computer Processing
+        csp-online-test:
+          title: test space for csp online support
+          description_short: This is a sample course for testing csp online pd
+          description: This is a test space for online pd. Enrollment in this course
+            does nothing.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2-3: Binary Messages': 'Lessons 2-3: Binary Messages'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            'Lessons 4-6: Encoding and Sending Numbers': 'Lessons 4-6: Encoding and
+              Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending
+              Text'
+            'lessons 9: Internet Addressing': 'lessons 9: Internet Addressing'
+            'lessons 10: Routers and Redundancy': 'lessons 10: Routers and Redundancy'
+            'lessons 11-12: Protocols and Abstraction': 'lessons 11-12: Protocols
+              and Abstraction'
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding
+              and Sending Numbers'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Redundancy and Packets': 'Lessons 10 - 11: Redundancy
+              and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
+              on the Internet'

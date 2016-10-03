@@ -34,7 +34,7 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "1.2.0",
-    "@code-dot-org/bramble": "0.1.4",
+    "@code-dot-org/bramble": "0.1.5",
     "@code-dot-org/piskel": "0.8.3",
     "@kadira/react-storybook-addon-info": "^3.0.4",
     "@kadira/storybook": "^1.41.0",
@@ -59,6 +59,7 @@
     "chrome-serialport": "bcjordan/chrome-serialport#2",
     "classnames": "^2.2.5",
     "codemirror": "5.5",
+    "codemirror-spell-checker": "^1.1.2",
     "connect-livereload": "0.5.3",
     "copy-webpack-plugin": "^3.0.0",
     "css-loader": "^0.23.1",

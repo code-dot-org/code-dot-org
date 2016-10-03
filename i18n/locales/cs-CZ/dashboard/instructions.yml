@@ -2117,6 +2117,9 @@ cs:
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_pre1_instruction: |
+        Ruff! Can you help me collect some tennis
+        balls?
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -2145,6 +2148,17 @@ cs:
       grade2_maze_debuggingPre_instruction: |
         Play with these blocks to see what they
         make the bird do!
+      grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro6_instruction: |
+        That’s it!  Now we’re ready to try to solve
+        a few puzzles. 
+      grade2_maze_intro7_instruction: This time, try something a bit more challenging.
+      grade2_maze_intro8_instruction: |
+        This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice.
+      grade2_maze_intro9_instruction: Solve this puzzle.
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?

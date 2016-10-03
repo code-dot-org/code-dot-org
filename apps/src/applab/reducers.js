@@ -16,7 +16,7 @@ function interfaceMode(state, action) {
   }
 }
 
-export {
+export default {
   data,
   interfaceMode,
   screens

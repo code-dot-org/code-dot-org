@@ -1,6 +1,3 @@
-title 'Computer Science in Algebra PD Phase 2'
-description "Teach Algebra through Functional Programming"
-description_short "	Phase 3: School Year Support"
 login_required 'true'
 pd 'true'
 

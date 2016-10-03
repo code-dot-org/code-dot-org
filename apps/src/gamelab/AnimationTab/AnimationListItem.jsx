@@ -4,7 +4,8 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay, setAnimationLooping} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation,setAnimationFrameDelay, setAnimationLooping,
+  isNameUnique} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -81,7 +82,7 @@ const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
     animationKey: PropTypes.AnimationKey.isRequired,
-    animationProps: PropTypes.AnimationProps.isRequired,
+    animationList: PropTypes.AnimationList.isRequired,
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
@@ -93,15 +94,32 @@ const AnimationListItem = React.createClass({
     style: React.PropTypes.object,
   },
 
+  getAnimationProps(props) {
+    const {animationList, animationKey} = props;
+    return animationList.propsByKey[animationKey];
+  },
+
+  getInitialState: function () {
+    const {name, frameDelay} = this.getAnimationProps(this.props);
+    return {
+      frameDelay: frameDelay,
+      name: name,
+      isNameValid: true
+    };
+  },
+
   componentWillReceiveProps(nextProps) {
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
-    this.setState({frameDelay: nextProps.animationProps.frameDelay});
+    this.setState({frameDelay: this.getAnimationProps(nextProps).frameDelay});
+    if (this.props.isSelected && !nextProps.isSelected) {
+      this.setState({name: this.getAnimationProps(this.props).name, isNameValid: true});
+    }
   },
 
   componentWillMount() {
-    this.setState({frameDelay: this.props.animationProps.frameDelay});
+    this.setState({frameDelay: this.getAnimationProps(this.props).frameDelay});
     this.debouncedFrameDelay = _.debounce(() => {
       const latestFrameDelay = this.state.frameDelay;
       this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
@@ -127,7 +145,13 @@ const AnimationListItem = React.createClass({
   },
 
   onNameChange(event) {
-    this.props.setAnimationName(this.props.animationKey, event.target.value);
+    const {animationKey, animationList, setAnimationName} = this.props;
+    const newName = event.target.value;
+    const isNameValid = isNameUnique(newName, animationList.propsByKey);
+    this.setState({name: newName, isNameValid: isNameValid});
+    if (isNameValid) {
+      setAnimationName(animationKey, newName);
+    }
   },
 
   convertFrameDelayToLockedValues(fraction) {
@@ -189,14 +213,16 @@ const AnimationListItem = React.createClass({
   },
 
   render() {
-    const name = this.props.animationProps.name;
+    const animationProps = Object.assign({}, this.getAnimationProps(this.props), {frameDelay: this.state.frameDelay});
+    const name = this.state.name;
     var animationName;
     if (this.props.isSelected) {
+      let invalidNameStyle = this.state.isNameValid ? {} : {backgroundColor: color.lightest_red};
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
             type="text"
-            style={styles.nameInput}
+            style={[styles.nameInput, invalidNameStyle]}
             value={name}
             onChange={this.onNameChange}
           />
@@ -219,7 +245,7 @@ const AnimationListItem = React.createClass({
         <div style={arrowStyle}></div>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={Object.assign({}, this.props.animationProps, {frameDelay: this.state.frameDelay})}
+          animationProps={animationProps}
           isSelected={this.props.isSelected}
         />
         {animationName}
@@ -229,7 +255,7 @@ const AnimationListItem = React.createClass({
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
             onLoopingChanged={this.setAnimationLooping}
-            looping={this.props.animationProps.looping}
+            looping={animationProps.looping}
             frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
           />}
       </div>
