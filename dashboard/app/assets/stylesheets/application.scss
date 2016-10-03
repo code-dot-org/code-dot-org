@@ -1945,6 +1945,12 @@ $information-desktop: "only screen and (min-width: 1024px)";
     }
   }
 
+  &.contained {
+    h1 {
+      text-align: left;
+    }
+  }
+
   // The tight layout is designed for a full-width layout that tends to
   // vertically stack every element, rather than going for side-by-side elements.
   &.tight {

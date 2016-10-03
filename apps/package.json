@@ -17,6 +17,7 @@
     "test:code-studio": "grunt codeStudioTest",
     "clean": "grunt clean",
     "build": "DEV=1 grunt build && grunt logBuildTimes",
+    "build:blockly": "DEV=1 grunt preconcat && grunt concat",
     "build:dist": "NODE_ENV=production grunt clean build && grunt logBuildTimes",
     "start": "DEV=1 grunt dev; grunt logBuildTimes",
     "start:applab": "DEV=1 grunt dev --app=applab; grunt logBuildTimes",
@@ -33,7 +34,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "0.0.3",
+    "@code-dot-org/blockly": "1.2.0",
     "@code-dot-org/bramble": "0.1.5",
     "@code-dot-org/piskel": "0.8.3",
     "@kadira/react-storybook-addon-info": "^3.0.4",
