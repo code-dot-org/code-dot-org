@@ -5,7 +5,7 @@
 #landingpage
   #lesson
     - if @script.professional_learning_course? && @current_user
-      - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.professional_learning_course)
+      - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
         #breadcrumb
         - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
         :javascript
