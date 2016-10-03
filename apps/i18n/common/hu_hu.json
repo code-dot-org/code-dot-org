@@ -5,6 +5,7 @@
   "animationMode": "Animáció",
   "answersVisible": "Válaszok láthatóak (csak olvasásra)",
   "assessmentSteps": "Steps to give assessment for",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "Vissza az előző szintre",
   "blocklyMessage": "Blockly",
@@ -185,7 +186,7 @@
   "loading": "Betöltés...",
   "locked": "Zárolt",
   "lockFollowing": "A következő nyitott szintek zárolása:",
-  "lockSettings": "Zárolási beállítások",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Szint zárolása",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Zárolás, amint a tanulók végeztek",
@@ -205,7 +206,7 @@
   "numLinesOfCodeWritten": "Éppen most írtál újabb {numLines, plural, one {1 sor} other {# sor}} kódot!",
   "openWorkspace": "Hogyan is működik",
   "orientationLock": "Kapcsold ki a tájolási zárat az eszközbeállításokban.",
-  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team.",
+  "pairingNavigatorWarning": "Ezt a feladatot {driver} segítségével párban programozva oldottátok meg. A csapatotok megoldását a társad nevén bejelentkezve nézhetitek meg.",
   "pause": "Break",
   "play": "lejátszás",
   "positionBottomCenter": "alsó középső helyzetbe",
@@ -304,7 +305,5 @@
   "when": "amikor",
   "whenRun": "futtatáskor",
   "workspaceHeaderShort": "Munkaterület: ",
-  "yes": "Igen",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Igen"
 }

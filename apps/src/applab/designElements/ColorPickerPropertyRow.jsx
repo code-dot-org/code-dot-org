@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var rowStyle = require('./rowStyle');
-var ColorPicker = require('react-color').default;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import * as rowStyle from './rowStyle';
+import ColorPicker from 'react-color';
 
 var ColorPickerPropertyRow = React.createClass({
   propTypes: {
@@ -92,4 +92,4 @@ var ColorPickerPropertyRow = React.createClass({
   }
 });
 
-module.exports = ColorPickerPropertyRow;
+export default ColorPickerPropertyRow;

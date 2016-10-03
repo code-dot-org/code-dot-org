@@ -79,9 +79,6 @@
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
     cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
     cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
-    cronjob at:'40 4 * * *', do:deploy_dir('bin', 'cron', 'funometer')
-    cronjob at:'30 6 * * *', do:deploy_dir('bin', 'cron', 'admin_progress')
-    cronjob at:'10 7 * * *', do:deploy_dir('bin', 'cron', 'retention_stats')
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
   end
 

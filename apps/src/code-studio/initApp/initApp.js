@@ -14,6 +14,7 @@ var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
+import { getLevelIds, getLevel, lockContainedLevelAnswers } from '../levels/codeStudioLevels';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -34,38 +35,10 @@ window.apps = {
 
     var lastSavedProgram;
 
-    var containedLevelOps;
     if (appOptions.hasContainedLevels) {
-      containedLevelOps = {
-        registerAnswerChangedFn: function (answerChangedFn) {
-          if (window.levelGroup) {
-            window.levelGroup.answerChangedFn = answerChangedFn;
-          }
-        },
-        lockAnswers: function () {
-          for (var levelKey in window.levelGroup.levels) {
-            var level = window.levelGroup.levels[levelKey];
-            level.lockAnswers();
-          }
-        },
-        getResults: function () {
-          var results = [];
-          for (var levelKey in window.levelGroup.levels) {
-            var level = window.levelGroup.levels[levelKey];
-            results.push({
-              id: level.levelId,
-              app: level.getAppName(),
-              callback: appOptions.report.sublevelCallback + level.levelId,
-              result: level.getResult(),
-              feedback: level.getCurrentAnswerFeedback()
-            });
-          }
-          return results;
-        }
-      };
       if (appOptions.readonlyWorkspace) {
         // Lock the contained levels if this is a teacher viewing student work:
-        containedLevelOps.lockAnswers();
+        lockContainedLevelAnswers();
       }
       // Always mark the workspace as readonly when we have contained levels:
       appOptions.readonlyWorkspace = true;
@@ -76,7 +49,6 @@ window.apps = {
       containerId: 'codeApp',
       Dialog: Dialog,
       cdoSounds: CDOSounds,
-      containedLevelOps: containedLevelOps,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function () {
         createCallouts(this.level.callouts || this.callouts);

@@ -42,6 +42,7 @@ group :development do
   gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'
+  gem 'memoist'
 end
 
 group :development, :test do
@@ -84,7 +85,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
-  gem 'eyes_selenium', '~> 2.28.0'
+  gem 'eyes_selenium', '~> 2.38.0'
 
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false

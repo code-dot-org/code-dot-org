@@ -1,10 +1,7 @@
 src/**/*.min.js*
-src/hammer.js
-src/lodash.js
-src/canvg/*.js
 src/calc/js-numbers/js-numbers.js
-src/ResizeSensor.js
 src/code-studio/vendor/
+src/third-party/**/*.js
 
 lib
 build

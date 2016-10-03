@@ -98,13 +98,6 @@ FactoryGirl.define do
       birthday Time.zone.today - 10.years
     end
 
-    factory :student_of_admin do
-      after(:create) do |user|
-        section = create(:section, user: create(:admin_teacher))
-        create(:follower, section: section, student_user: user)
-      end
-    end
-
     factory :young_student_with_tos_teacher do
       after(:create) do |user|
         section = create(:section, user: create(:terms_of_service_teacher))
@@ -373,11 +366,6 @@ FactoryGirl.define do
     section
     user { section.user }
     student_user { create :student }
-  end
-
-  factory :level_source_hint do
-    level_source
-    sequence(:hint) { |n| "Hint #{n}" }
   end
 
   factory :user_level do
