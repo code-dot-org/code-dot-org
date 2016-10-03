@@ -306,22 +306,12 @@ class Pd::Workshop < ActiveRecord::Base
   # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
   def effective_num_days
     max_days = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_days]}
-
-    if max_days
-      [self.sessions.count, max_days].min
-    else
-      self.sessions.count
-    end
+    [self.sessions.count, max_days].compact.min
   end
 
   def effective_num_hours
     actual_hours = sessions.map(&:hours).reduce(&:+)
     max_hours = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_hours]}
-
-    if max_hours
-      [actual_hours, max_hours].min
-    else
-      actual_hours
-    end
+    [actual_hours, max_hours].compact.min
   end
 end

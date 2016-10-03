@@ -80,7 +80,7 @@ module Pd::Payment
     test 'small venue plp urban' do
       plp = create :professional_learning_partner, contact: @workshop.organizer, urban: true
 
-      payment = StandardPay.new workshop
+      payment = StandardPay.new @workshop
 
       assert_equal plp, payment.plp
       assert payment.qualified?
