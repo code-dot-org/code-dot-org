@@ -186,7 +186,9 @@ class Script < ActiveRecord::Base
               :callouts
             ]
           },
-          :stages
+          {
+            stages: [{script_levels: [:levels]}]
+          }
         ]).find(script_id)
 
         cache[script.name] = script
