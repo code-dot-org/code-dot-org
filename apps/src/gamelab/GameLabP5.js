@@ -1,3 +1,4 @@
+import {singleton as studioApp} from '../StudioApp';
 var animationsApi = require('../clientApi').animations;
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
@@ -767,12 +768,13 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
   this.p5.projectAnimations = {};
   animationList.orderedKeys.forEach(key => {
     const props = animationList.propsByKey[key];
+    const frameCount = studioApp.reduxStore.getState().pageConstants.allAnimationsSingleFrame ? 1 : props.frameCount;
     const image = this.p5.loadImage(props.dataURI, () => {
       const spriteSheet = this.p5.loadSpriteSheet(
           image,
           props.frameSize.x,
           props.frameSize.y,
-          props.frameCount
+          frameCount
       );
       this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
       this.p5.projectAnimations[props.name].looping = props.looping;
