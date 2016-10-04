@@ -3,7 +3,6 @@
 # For available options, run ./search-circle-builds -h
 
 require 'optparse'
-require 'parallel'
 require_relative './circle_project'
 
 @project = CircleProject.new('code-dot-org/code-dot-org')
@@ -13,18 +12,6 @@ class Hash
   def hmap(&block)
     Hash[self.map {|k, v| yield k, v }]
   end
-
-  # Drop a key from the hash, returning the hash (destructive)
-  def omit!(key)
-    self.tap {|hs| hs.delete(key)}
-  end
-end
-
-# @return [Hash<build_num:Integer, build_descriptor:Object>] 30 most recent
-#         build descriptors from the CircleCI API
-def get_recent_builds
-  builds = @project.get_recent_builds
-  Hash[builds.collect {|b| [b['build_num'], b]}]
 end
 
 options = {}
@@ -62,20 +49,12 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-# Default end build should be the most recent build
-end_build = options[:end_build] || @project.get_latest_build_num
-# Default start build should give us 30 builds up to the end build.
-# This allows us to make only one API call in the all-defaults case, since
-# the recent builds API call returns 30 builds.
-start_build = options[:start_build] || end_build - 29
-build_nums = (start_build..end_build).to_a
-
-# Download the build information we need
-build_infos = Parallel.map(build_nums, progress: 'Downloading...', in_processes: 50) do |build_num|
-  build = get_recent_builds[build_num] || @project.get_build(build_num)
+# Download and format the build information we need
+build_range = @project.build_range_from_options(options)
+build_infos = @project.get_builds(build_range).map do |build|
   next if build['queued_at'].nil? || build['branch'].nil? || build['outcome'].nil?
   {
-    build_num: build_num,
+    build_num: build['build_num'],
     queued_at: DateTime.parse(build['queued_at']),
     branch: build['branch'],
     succeeded: build['outcome'] == 'success'
@@ -108,7 +87,7 @@ stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
 end
 
 # Print build stats
-puts "Failure rates for builds #{start_build}..#{end_build} by date (1.0 = 100% failures)"
+puts "Failure rates for builds #{build_range} by date (1.0 = 100% failures)"
 puts "%-10s %10s %10s %10s" % ['Date', 'Branch', 'Pipeline', 'Overall']
 stats_by_date.each do |date, stats|
   puts "%-10s %10.3f %10.3f %10.3f" % [date, stats[:branch_failure_rate].round(3), stats[:pipeline_failure_rate].round(3), stats[:total_failure_rate].round(3)]
