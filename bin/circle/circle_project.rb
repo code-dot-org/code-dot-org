@@ -60,11 +60,11 @@ class CircleProject
     raise ArgumentError unless range.is_a?(Enumerable)
 
     # Download the build information we need in parallel
-    Parallel.map(range,
-                 progress: "Downloading #{range.min}..#{range.max}",
-                 in_processes: 50) do |build_num|
-      get_build(build_num)
-    end
+    Parallel.map(
+      range,
+      progress: "Downloading #{range.min}..#{range.max}",
+      in_processes: 50
+    ) {|n| get_build(n)}
   end
 
   memoize :get_build
