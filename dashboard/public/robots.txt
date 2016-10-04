@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /admin/
-Disallow: /join/
-Disallow: /sections/
-Disallow: /milestone/
 Disallow: /blockly/
+Disallow: /join/
+Disallow: /milestone/
+Disallow: /sections/
