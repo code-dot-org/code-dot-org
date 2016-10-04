@@ -16,10 +16,6 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('/workshops/new');
   },
 
-  handleSurveyClick() {
-    this.context.router.push('/survey_results');
-  },
-
   render() {
     const showOrganizer = window.dashboard.workshop.permission === "admin";
     return (
