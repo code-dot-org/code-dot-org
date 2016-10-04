@@ -549,8 +549,17 @@ what feature libraries cannot do:
 - do not depend directly on other feature libraries unless you are reponsible
   for configuring them
 
+## Further Reading ##
+
+If all this sounds a bit confusing to you, read
+http://jaysoo.ca/2016/02/28/organizing-redux-application/, which is a more
+concise explanation of basically the same thing as is proposed in this document.
+
 # The Actual Plan #
 
 While having patterns for capsule and feature libraries is helpful, we need to
+go one step further to figure out how to actually execute this refactoring.
+
+## Directory Hierarchy ##
 
 ... TBD
