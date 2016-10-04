@@ -1,4 +1,4 @@
-# Refactoring code.org javascript
+# Refactoring Code.org javascript #
 
 The code base has been around for a while and a lot has changed. While there is
 still a lot of spaghetti, it's at least now in a place where we have the
@@ -111,15 +111,15 @@ The other critical aspect of an entry point is that it should explicitly "own"
 all the application state that is needed to render and update the page. In the
 event that any of the entry point's dependencies need to access or modify the
 application state owned by the entry point, it is up to the entry point to
-explicitly pass that state to it's dependencies, along with mutators for
+explicitly pass that state to its dependencies, along with mutators for
 modifying that state.
 
 **library**
 
 Each entry point can make use of numerous "libraries" to setup and run the
-page. A library is just an arbitary collection of related code that provides
-functionality at an arbitary level of abstraction. This is the broadest and
-vaguest term that will be covered in our list of definitions.
+page. A library is just a collection of related code that provides functionality
+at an arbitary level of abstraction. This is the broadest and vaguest term that
+will be covered in our list of definitions.
 
 Libraries are not responsible for owning shared application state. Libraries may
 have and maintain their own internal state, but this state should be kept
@@ -181,13 +181,13 @@ Getting back to "library types", I think there are two different library types
 for which we need to establish well defined patterns.
 
 1. **feature library** - This is a library that provide some meaty feature
-   of a page. It is characterized by the following attributes:
+   of a page. It is characterized by having any one of the following attributes:
 
    - maintains UI represented in the DOM (i.e. calls to ReactDOM.render(), or
      use of jQuery to manipulate the DOM)
    - interacts with a remote, stateful service (i.e. ajax calls that generate
      writes to a database)
-   - uses or provides shared application state
+   - uses or provides shared application state (e.g. Redux)
 
    Some examples of "feature libraries" in our code base today would be the code
    found in `src/applab`, `src/netsim`, and `src/flappy`. Note however that
@@ -195,14 +195,16 @@ for which we need to establish well defined patterns.
    not part of the "library" but are actually entry points that get loaded on a
    particular html page.
 
-2. **capsule library** - This is a library that is wholy encapsulated and
+2. **capsule library** - This is a library that is wholly encapsulated and
    decoupled, and which therefore:
 
    - does not maintain any UI represented in the DOM (react components are OK, but
-     calls to ReactDOM.render() are not)
+     calls to ReactDOM.render() are not; creating DOM nodes through other means
+     is ok, but attaching them to the document is not.)
    - does not interact with remote, stateful services (ajax calls to read-only
      services could be OK)
-   - does not use or provide shared application state (at least not in a direct way)
+   - does not use or provide shared application state (except where that state
+     is explicitly passed from above)
 
    Some examples of "capsule libraries" in our code base would be
    `src/MusicController.js`, `src/dom.js`, `src/Sounds.js`.
@@ -221,7 +223,10 @@ file, the pattern is pretty simple:
 - If the library works with internal state, encapsulate that state into a class
   that must be instantiated by the calling code.
 - If the library works with internal state, but only supports a singleton
-  instance, only export the singleton instance and not the backing class.
+  instance, only export the singleton instance and not the backing class. Note
+  that you don't even need to have a backing class to have a library which acts
+  as a singleton. It's fine to just enclose data within a library's internal
+  scope.
 
 For more complicated capsule libraries whose code is spread across multiple
 files the pattern is only a bit more involved:
