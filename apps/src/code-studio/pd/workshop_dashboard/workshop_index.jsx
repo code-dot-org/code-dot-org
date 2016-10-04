@@ -16,10 +16,6 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('/workshops/new');
   },
 
-  handleSurveyClick() {
-    this.context.router.push('/survey_results');
-  },
-
   render() {
     const showOrganizer = window.dashboard.workshop.permission === "admin";
     return (
@@ -28,10 +24,6 @@ const WorkshopIndex = React.createClass({
         <p>
           <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
             New Workshop
-          </Button>
-
-          <Button className="btn-primary" onClick={this.handleSurveyClick}>
-            View Survey Results
           </Button>
         </p>
         <h2>In Progress</h2>
