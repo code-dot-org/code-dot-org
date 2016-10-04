@@ -15,6 +15,7 @@ const rowOrder = [
   {text: 'Number of attending teachers', key: 'number_teachers'},
   {text: 'Number of survey responses', key: 'response_count'},
   {text: 'Facilitator Effectiveness (out of 5)', key: 'facilitator_effectiveness'},
+  {text: 'Teacher Engagement (out of 5)', key: 'teacher_engagement'},
   {text: 'Overall Success Score (out of 6)', key: 'overall_success'},
 ];
 
