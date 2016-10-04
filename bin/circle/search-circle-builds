@@ -2,12 +2,12 @@
 # A script to analyze a range of CircleCI builds for known failures.
 # For available options, run ./search-circle-builds -h
 
-require 'pp'
 require 'json'
 require 'memoist'
 require 'open-uri'
 require 'optparse'
 require 'parallel'
+require_relative './circle_project'
 
 CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
 RUN_UI_TESTS_STEP_STRING = 'run_tests'
@@ -33,6 +33,8 @@ KNOWN_FAIL_TYPES = [
 ]
 
 extend Memoist
+
+@project = CircleProject.new('code-dot-org/code-dot-org')
 
 # @param [Fixnum] build_id The CircleCI build #
 # @return [Object] build descriptor object from the CircleCI API
@@ -95,10 +97,7 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-start_build = options[:start_build]
-end_build = options[:end_build]
-
-builds = (start_build..end_build).to_a
+build_range = @project.build_range_from_options(options)
 
 fail_types_to_check = KNOWN_FAIL_TYPES
 
@@ -115,9 +114,9 @@ def describe_fail_type(f)
 end
 
 fail_types_list = fail_types_to_check.map { |f| describe_fail_type(f) }.join "\n"
-puts "Checking builds #{builds.join ', '} for output:\n#{fail_types_list}"
+puts "Checking builds #{build_range} for output:\n#{fail_types_list}"
 
-Parallel.each(builds, in_processes: MAX_THREADS) do |build|
+Parallel.each(build_range, in_processes: MAX_THREADS) do |build|
   fail_types_to_check.each do |known_fail|
     output = get_output(build, known_fail[:container], known_fail[:step_string])
 
