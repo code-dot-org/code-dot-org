@@ -40,7 +40,7 @@ class Pd::Payment::BasePay
     @adjusted_attendance_days_per_teacher = {}
     @adjusted_attendance_hours_per_teacher = {}
     calculate_raw_attendance
-    calaulate_adjusted_attendance
+    calculate_adjusted_attendance
 
     @num_qualified_teachers = @adjusted_attendance_days_per_teacher.count
     @total_teacher_attendance_days = @adjusted_attendance_days_per_teacher.values.reduce(0, :+)
@@ -113,7 +113,7 @@ class Pd::Payment::BasePay
   #   @adjusted_attendance_days_per_teacher - Hash of teacher_id to the adjusted number of days attended.
   #   @adjusted_attendance_hours_per_teacher - Hash of teacher_id to the adjusted number of hours attended.
   #                                           Unqualified teachers, and those with 0 attendance will be filtered out.
-  def calaulate_adjusted_attendance
+  def calculate_adjusted_attendance
     min_attendance_days = @workshop.min_attendance_days
 
     # Require min attendance, filter out unqualified teachers, and apply caps (via @num_days & @num_hours).
