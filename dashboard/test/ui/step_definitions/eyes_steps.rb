@@ -11,8 +11,9 @@ MATCH_TIMEOUT = 5
 When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   ensure_eyes_available
 
-  batch_name = test_name + " | " + ENV['BATCH_NAME']
-  @eyes.batch = Applitools::Base::BatchInfo.new(batch_name)
+  batch = Applitools::Base::BatchInfo.new(ENV['BATCH_NAME'])
+  batch.id = ENV['BATCH_ID']
+  @eyes.batch = batch
 
   @eyes.branch_name = GitUtils.current_branch
 

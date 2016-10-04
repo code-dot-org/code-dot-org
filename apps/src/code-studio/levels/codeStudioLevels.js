@@ -101,23 +101,39 @@ export function getLevelIds() {
   return Object.keys(levelGroup);
 }
 
-// TODO - There should be only one contiained level. In the future, I will simplify
-// these next two methods to reflect that
+/**
+ * Lock the answer fo the contained level
+ */
 export function lockContainedLevelAnswers() {
   const levelIds = getLevelIds();
-  levelIds.forEach(levelId => getLevel(levelId).lockAnswers());
+  if (levelIds.length !== 1) {
+    throw `Expected exactly one contained level. Got ${levelIds.length}`;
+  }
+  getLevel(levelIds[0]).lockAnswers();
 }
 
-export function getContainedLevelResults() {
+/**
+ * Get the result of the single contained level.
+ */
+export function getContainedLevelResult() {
   const levelIds = getLevelIds();
-  return levelIds.map(levelId => {
-    const level = getLevel(levelId);
-    return {
-      id: level.levelId,
-      app: level.getAppName(),
-      callback: appOptions.report.sublevelCallback + level.levelId,
-      result: level.getResult(),
-      feedback: level.getCurrentAnswerFeedback()
-    };
-  });
+  if (levelIds.length !== 1) {
+    throw `Expected exactly one contained level. Got ${levelIds.length}`;
+  }
+
+  const level = getLevel(levelIds[0]);
+  return {
+    id: level.levelId,
+    app: level.getAppName(),
+    callback: appOptions.report.sublevelCallback + level.levelId,
+    result: level.getResult(),
+    feedback: level.getCurrentAnswerFeedback()
+  };
+}
+
+/**
+ * @returns {boolean} True if the contained level has a valid result.
+ */
+export function hasValidContainedLevelResult() {
+  return getContainedLevelResult().result.valid;
 }

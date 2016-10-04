@@ -130,14 +130,13 @@ export default connect((state, ownProps) => {
   // Pretend we don't have lockable stages if we're not authorized to see them
   const scriptHasLockableStages = lockableAuthorized &&
     state.progress.stages.some(stage => stage.lockable);
-  const scriptHasHideableStages = !!state.hiddenStage.initialized;
 
   return {
     viewAs,
     sections,
     sectionsLoaded,
     scriptHasLockableStages,
-    scriptHasHideableStages,
+    scriptHasHideableStages: state.hiddenStage.get('initialized'),
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 }, dispatch => ({
