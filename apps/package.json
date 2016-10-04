@@ -35,7 +35,7 @@
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "0.0.3",
     "@code-dot-org/bramble": "0.1.5",
-    "@code-dot-org/piskel": "0.8.3",
+    "@code-dot-org/piskel": "0.8.5",
     "@kadira/react-storybook-addon-info": "^3.0.4",
     "@kadira/storybook": "^1.41.0",
     "Base64": "0.3.0",
