@@ -4,8 +4,6 @@ Feature: Looking at a few things with Applitools Eyes
 Background:
   Given I am on "http://learn.code.org/reset_session"
 
-# TODO: (Brad) Temporarily disabled to fix a bug
-@skip
 Scenario:
   When I open my eyes to test "bounce game"
   And I am on "http://learn.code.org/s/events/stage/1/puzzle/1?noautoplay=true"
