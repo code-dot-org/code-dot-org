@@ -745,7 +745,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button"
-    And I wait until current URL contains "http://code.org/teacher-dashboard"
+    And I wait until current URL contains "teacher-dashboard"
   }
 end
 
