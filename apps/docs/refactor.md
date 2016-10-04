@@ -288,7 +288,7 @@ to only expose the action types, action creators, and selectors that other
 libraries need to use, while keeping the rest more "private" to our own
 library. Also, it's important to consider that other code which uses this feature
 library should not have to know about the shape of the state provided by the
-feature. Likewise, the feature should not have to know how it's state gets
+feature. Likewise, the feature should not have to know how its state gets
 stored in the global redux state tree.
 
 Here is how the above files might look if we wanted to expose only step
@@ -460,7 +460,7 @@ assumes that at some point the authentication library has been configured
 properly by the entry point. This would be unintentional coupling.
 
 Instead, the entry point should be responsible for passing the configured
-authentication selectors directly to the stepper library via it's `configure`
+authentication selectors directly to the stepper library via its `configure`
 function. Here is how that might look:
 
 **`src/entry-points/some-page.js`**
@@ -567,4 +567,63 @@ go one step further to figure out how to actually execute this refactoring.
 
 ## Directory Hierarchy ##
 
-... TBD
+The first step is determining a sensible directory structure that organizes code
+based on the various patterns we want to use, and based on the various problem
+domains that our code base covers.
+
+Here is a strawman to discuss:
+
+```
+src/
+  sites/   <--- resusable libraries do not belong in here
+    <site-name>/
+      pages/
+        <page-name>.js
+        <page-name-with-multiple-entry-points>/
+          <entry-point-name>.js
+          <other-entry-point-name>.js
+      init/
+        redux.js
+        constants.js
+        other-site-specific-config-shared-across-entry-points.js
+  lib/   <--- all reusable libraries go in here
+    kits/   <--- Big feature libraries that are only referenced from entry points
+      <kit-name>/
+        <kit-name>.js
+        redux.js
+        ui/  <--- capsules that generate DOM specific to this kit
+        util/  <--- capsules specific to this kit
+    tools/   <--- Small feature libraries that can be used by other feature libraries
+      <tool-name>/
+        <tool-name>.js
+        redux.js
+        ui/
+        util/
+    ui/   <--- capsule libraries that generate DOM
+      <ReactComponentName>.jsx
+    util/  <--- capsule libraries that do not generate DOM
+      <stateless-util-library>.js
+    third-party/
+```
+
+And here is a list of ordered steps to take that will move us in this direction:
+
+1. Move all entry points into `sites` directory structure [easy]
+2. Move initialization code into `sites` directory structure [medium]
+3. Move "leaf nodes" of depdency graph into `lib/util` directory [easy]
+4. Rename templates directory to `lib/ui` [easy]
+5. Remove cycles from our dependency graph [hard]
+6. Move applab/gamelab/weblab/maze/studio/etc into `lib/kits` directory [medium]
+7. Move all the other stateless utility modules into `lib/util` [easy]
+8. Move all the other stateful modules into `lib/tools` directory [medium]
+9. Refactor entry points to inject dependent modules into feature libraries [hard]
+10. [...]
+11. profit!
+
+The [easy] stuff should take no more than one developer day to do.
+
+The [medium] stuff should take a few developer days to do.
+
+The [hard] stuff will probably take at least a developer week to do.
+
+The [...] stuff could take an immeasurable amount of time to do.
