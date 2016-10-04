@@ -15,7 +15,7 @@ module Pd::Payment
     protected
 
     # CSF workshops have different attendance rules. Workshops are always exactly one day (session),
-    # and every teacher in the section counts but only those who have solved >= 10 puzzles is qualified (see #teacher_qualified?)
+    # and every teacher in the section counts but only those who have solved >= 10 puzzles are qualified (see #teacher_qualified?)
     # Sets the following member variables:
     #   @attendance_count_per_session - array of attendance count per session, with min/max days applied.
     #   @raw_attendance_days_per_teacher - hash of teacher_id to the raw number of days attended.
