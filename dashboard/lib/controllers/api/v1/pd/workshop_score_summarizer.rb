@@ -34,13 +34,13 @@ module WorkshopScoreSummarizer
     report_column = Hash.new(0)
     response_count = 0
 
-    workshops.flat_map(&:enrollments).each do |enrollment|
-      response_object = PEGASUS_DB[:forms].where(source_id: enrollment.id, kind: 'PdWorkshopSurvey').first
+    enrollment_ids = workshops.flat_map(&:enrollments).pluck(:id)
 
-      next if response_object.nil?
+    PEGASUS_DB[:forms].where(source_id: enrollment_ids, kind: 'PdWorkshopSurvey').each do |response|
+      next if response.nil?
 
       response_count += 1
-      survey_response = JSON.parse(response_object[:data])
+      survey_response = JSON.parse(response[:data])
 
       survey_response.symbolize_keys.each do |k, v|
         if FACILITATOR_EFFECTIVENESS_QUESTIONS.include?(k)
