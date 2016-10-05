@@ -129,7 +129,7 @@ rescue => e
   puts e.backtrace
 end
 
-def up
+def migrate_all
   puts 'Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately '\
     '15 minutes to run over ~4.5M rows in storage_apps in production...'
   channels = fetch_applab_channels
@@ -143,7 +143,7 @@ def up
   puts "#{channels.size} projects scanned total"
 end
 
-def down
+def rollback
   puts "'rollback' is for development/emergency purposes only and has been disabled."
   # fetch_applab_channels.each do |_, channel_id|
   #   row = PEGASUS_DB[:storage_apps].where(id: channel_id).first
@@ -156,8 +156,17 @@ def down
   # end
 end
 
-if ARGV[0] == 'rollback'
-  down
+if ARGV[0] == 'all'
+  migrate_all
+elsif ARGV[0] == 'rollback'
+  rollback
+elsif ARGV[0] == 'channel'
+  encrypted_channel_id = ARGV[1]
+  owner_storage_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+  migrate_channel(owner_storage_id, channel_id)
 else
-  up
+  puts "Usage:\n"\
+    "  migrate all\n"\
+    "  migrate rollback\n"\
+    "  migrate channel <encrypted-channel-id>"
 end
