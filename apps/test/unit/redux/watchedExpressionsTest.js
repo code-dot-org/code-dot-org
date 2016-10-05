@@ -1,5 +1,6 @@
 import Immutable from 'immutable';
 import reducer, * as watchedExpressions from '@cdo/apps/redux/watchedExpressions';
+import {createUuid} from '@cdo/apps/utils';
 import {expect} from '../../util/configuredChai';
 
 describe('watchedExpressions', function () {
@@ -25,20 +26,23 @@ describe('watchedExpressions', function () {
         expect(newState).not.to.equal(state);
         expect(newState.size).to.equal(1);
         expect(newState.get(0).get('expression')).to.equal(testVarString);
+        expect(newState.get(0).get('uuid')).to.not.be.null;
       });
     });
 
     const singleItemState = Immutable.List([
       Immutable.Map({
         expression: 'test',
-        lastValue: 0
+        lastValue: 0,
+        uuid: createUuid()
       })
     ]);
 
     const twoItemState = singleItemState.push(
       Immutable.Map({
         expression: 'test2',
-        lastValue: 1
+        lastValue: 1,
+        uuid: createUuid()
       })
     );
 
