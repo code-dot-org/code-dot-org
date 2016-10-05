@@ -2,7 +2,7 @@ require 'test_helper'
 require 'cdo/activity_constants'
 
 module Pd::Payment
-  class DistrictPayTest < ActiveSupport::TestCase
+  class PaymentCalculatorDistrictTest < ActiveSupport::TestCase
     setup do
       @workshop = create :pd_ended_workshop,
         workshop_type: Pd::Workshop::TYPE_DISTRICT,
@@ -31,18 +31,18 @@ module Pd::Payment
     end
 
     test 'payment' do
-      payment = DistrictPay.new @workshop
+      payment = PaymentCalculatorDistrict.instance.calculate @workshop
 
-      assert payment.qualified?
+      assert payment.qualified
       assert_equal 11, payment.num_teachers
       assert_equal 10, payment.num_qualified_teachers
       assert_equal 29, payment.total_teacher_attendance_days
 
-      expected_payment = {
+      expected_payment_amounts = {
         food: 1160,
         facilitator: 3000
       }
-      assert_equal expected_payment, payment.payment
+      assert_equal expected_payment_amounts, payment.payment_amounts
       assert_equal 4160, payment.payment_total
     end
   end

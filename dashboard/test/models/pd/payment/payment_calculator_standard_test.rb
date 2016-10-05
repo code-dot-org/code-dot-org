@@ -32,22 +32,20 @@ module Pd::Payment
     end
 
     test 'small venue non-plp' do
-      payment = StandardPay.new @workshop
+      payment = PaymentCalculatorStandard.instance.calculate @workshop
 
-      assert payment.qualified?
+      assert payment.qualified
       assert_equal 11, payment.num_teachers
       assert_equal 10, payment.num_qualified_teachers
       assert_equal 29, payment.total_teacher_attendance_days
-      assert_equal StandardPay::PAYMENT_VENUE_SMALL_PER_DAY, payment.venue_payment_per_day
-      assert_equal 1, payment.plp_multiplier
 
-      expected_payment = {
+      expected_payment_amounts = {
         food: 1160,
         facilitator: 3000,
         staffer: 750,
         venue: 1200
       }
-      assert_equal expected_payment, payment.payment
+      assert_equal expected_payment_amounts, payment.payment_amounts
       assert_equal 6110, payment.payment_total
     end
 
@@ -58,44 +56,40 @@ module Pd::Payment
       create :pd_workshop_participant, workshop: @workshop,
         enrolled: true, in_section: true, attended: @workshop.sessions
 
-      payment = StandardPay.new @workshop
+      payment = PaymentCalculatorStandard.instance.calculate @workshop
 
       assert_equal plp, payment.plp
-      assert payment.qualified?
+      assert payment.qualified
       assert_equal 11, payment.num_qualified_teachers
       assert_equal 32, payment.total_teacher_attendance_days
-      assert_equal StandardPay::PAYMENT_VENUE_LARGE_PER_DAY, payment.venue_payment_per_day
-      assert_equal 1, payment.plp_multiplier
 
-      expected_payment = {
+      expected_payment_amounts = {
         food: 1280,
         facilitator: 3000,
         staffer: 750,
         venue: 1350
       }
-      assert_equal expected_payment, payment.payment
+      assert_equal expected_payment_amounts, payment.payment_amounts
       assert_equal 6380, payment.payment_total
     end
 
     test 'small venue plp urban' do
       plp = create :professional_learning_partner, contact: @workshop.organizer, urban: true
 
-      payment = StandardPay.new @workshop
+      payment = PaymentCalculatorStandard.instance.calculate @workshop
 
       assert_equal plp, payment.plp
-      assert payment.qualified?
+      assert payment.qualified
       assert_equal 10, payment.num_qualified_teachers
       assert_equal 29, payment.total_teacher_attendance_days
-      assert_equal StandardPay::PAYMENT_VENUE_SMALL_PER_DAY, payment.venue_payment_per_day
-      assert_equal 1.25, payment.plp_multiplier
 
-      expected_payment = {
+      expected_payment_amounts = {
         food: 1450,
         facilitator: 3000,
         staffer: 937.5,
         venue: 1500
       }
-      assert_equal expected_payment, payment.payment
+      assert_equal expected_payment_amounts, payment.payment_amounts
       assert_equal 6887.5, payment.payment_total
     end
   end
