@@ -25,6 +25,7 @@ module Pd::Payment
 
       WorkshopPayment.new.tap do |payment|
         payment.workshop = workshop
+        payment.calculator_class = self.class
         payment.pay_period = get_pay_period workshop
 
         payment.num_days = workshop.effective_num_days
