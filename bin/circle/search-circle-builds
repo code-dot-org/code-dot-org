@@ -2,14 +2,10 @@
 # A script to analyze a range of CircleCI builds for known failures.
 # For available options, run ./search-circle-builds -h
 
-require 'json'
-require 'memoist'
-require 'open-uri'
 require 'optparse'
 require 'parallel'
 require_relative './circle_project'
 
-CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
 RUN_UI_TESTS_STEP_STRING = 'run_tests'
 RUN_UI_TESTS_CONTAINER = 1
 MAX_THREADS = 50
@@ -31,41 +27,6 @@ KNOWN_FAIL_TYPES = [
         container: RUN_UI_TESTS_CONTAINER
     },
 ]
-
-extend Memoist
-
-@project = CircleProject.new('code-dot-org/code-dot-org')
-
-# @param [Fixnum] build_id The CircleCI build #
-# @return [Object] build descriptor object from the CircleCI API
-#   Example output JSON: https://gist.github.com/bcjordan/02f7c2906b524fa86ec75b19f9a72cd2
-def get_build(build_id)
-  JSON.parse(open("#{CIRCLE_API_BASE}/#{build_id}").read)
-end
-
-memoize :get_build
-
-# Returns the full output URL for a given build step
-# @param [Fixnum] build_object The build information object from the Circle API
-# @param [Fixnum] container_id The container ID #
-# @param [String] grep_for_step The build step to search for (e.g. "rake install")
-def build_step_output_url(build_object, container_id, grep_for_step)
-  build_object['steps'].select { |o| o['name'].include? grep_for_step }[0]['actions'][container_id]['output_url']
-end
-
-memoize :build_step_output_url
-
-# @param [Fixnum] build_id The build ID #
-# @param [Fixnum] container_id The container ID #
-# @param [String] grep_for_step The build step to search for (e.g. "rake install")
-# @return [Object, nil] full build output JSON object from CircleCI, or nil if error in retrieval
-#   Example output JSON: https://gist.github.com/bcjordan/8349fbb1edc284839b42ae53ad19b68a
-def get_output(build_id, container_id, grep_for_step)
-  JSON.parse(open(build_step_output_url(get_build(build_id), container_id, grep_for_step)).read)
-rescue => _
-end
-
-memoize :get_output
 
 options = {}
 OptionParser.new do |opts|
@@ -97,6 +58,7 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+@project = CircleProject.new('code-dot-org/code-dot-org')
 build_range = @project.build_range_from_options(options)
 
 fail_types_to_check = KNOWN_FAIL_TYPES
@@ -118,7 +80,7 @@ puts "Checking builds #{build_range} for output:\n#{fail_types_list}"
 
 Parallel.each(build_range, in_processes: MAX_THREADS) do |build|
   fail_types_to_check.each do |known_fail|
-    output = get_output(build, known_fail[:container], known_fail[:step_string])
+    output = @project.get_log(build, known_fail[:container], known_fail[:step_string])
 
     begin
       full_output_string = output[0]['message']
