@@ -1,9 +1,19 @@
 ---
-title: Workshop Planning
+title: training materials
 nav: plp_playbook_nav
 ---
 
 # Training Materials
+
+## Table of Contents
+- [Facilitation Summit](#fac)
+- [TeacherCon](#teachercon)
+- [Program Manager Summit](#pmsummit)
+- [Virtual Trainings](#virtual)
+
+________________
+<a id="fac"></a>
+<br/>
 
 ## Facilitation Summit
 The following resources were discussed and distributed at Facilitation Summit in May 2016. Cink on the links to view them.
@@ -22,6 +32,9 @@ The following resources were discussed and distributed at Facilitation Summit in
 
 [Being a Successful Program Manager - Slides](https://docs.google.com/a/code.org/presentation/d/1Q8m-DquU2ZtCpIFC4-Oxc1MrSViOvFq4quc9qeTYZGc/edit?usp=sharing)<br/>
 
+________________
+<a id="teachercon"></a>
+<br/>
 ## TeacherCon
 Click on the following links to view the resources from TeacherCon 2016.<br>
 
@@ -84,12 +97,27 @@ CS Expansion
 
 [Administrator and Counselor PD Overview - Slides](https://docs.google.com/presentation/d/1rgA370lNX2L88S5sew5ZWThbBwXOlzSUVjb2Dcx-I84/edit?usp=sharing)
 
+________________
+<a id="pmsummit"></a>
+<br/>
 ## Program Manager Summit
-- [Funding Worksheet](https://docs.google.com/document/d/1LnSNDbN44JuD6hXkaRnrDexQUQJiSJPI6f0Jg6JyeJc/edit)
-- [Roadmap Overview](https://docs.google.com/document/d/19Y3Fe_5ugdG62Ew_azv00ZbuWATD9JMLHUDDl55A4KY/edit)
-- 
+[Funding Worksheet - gdoc](https://docs.google.com/document/d/1LnSNDbN44JuD6hXkaRnrDexQUQJiSJPI6f0Jg6JyeJc/edit)
 
+[Roadmap Overview - gdoc](https://docs.google.com/document/d/19Y3Fe_5ugdG62Ew_azv00ZbuWATD9JMLHUDDl55A4KY/edit) 
 
+[Program Manager Onboarding Deck - Saturday & Sunday - slides](https://docs.google.com/presentation/d/1rV7Hg7iQy9okYgz3apl_KOQBLAO_EbllF0D1D0KLSj0/edit?usp=sharing)
+
+[Program Manager Summit Deck - Tuesday & Wednesday - slides](https://docs.google.com/presentation/d/1ZTxt18qi09BIqi6mO5QpIiHXllNL21t_8QNLDTYGXig/edit?usp=sharing)
+
+[Administrator & Counselor PD Implementation Plan Template - gdoc](https://docs.google.com/document/d/19dnV7dIDPp6354ynLFWZJy8H2vXiricFB_8LzTKQIg0/edit)
+
+[District Terms Sheet Example with Errors - gdoc](https://docs.google.com/document/d/1Gk3dpHgiH2D3tFS9nL-1k6ZwcfAfP6Op54shq-KWWBM/edit)
+
+*For administrator and counselor PD materials and slide decks see the counselor and administrator professional development tile.
+
+________________
+<a id="virtual"></a>
+<br/>
 ## Virtual Trainings
 June 2016:
 
@@ -97,13 +125,19 @@ June 2016:
 
 July 7, 2016:
  
-- [White House Fundraising Event Webinar](http://videos.code.org/plp/september-event-guidelines.mp4)<br/>
-- [Slide Deck](https://docs.google.com/presentation/d/10gksywQToajBiQNLDE7Kx7TNBiP6Co4UhQhQDc39jJs/edit?usp=sharing)
+- White House Fundraising Event - [Video](http://videos.code.org/plp/september-event-guidelines.mp4)<br/>
+- White House Fundraising Event - [Slides](https://docs.google.com/presentation/d/10gksywQToajBiQNLDE7Kx7TNBiP6Co4UhQhQDc39jJs/edit?usp=sharing)
 
 August 18, 2016:
 
 - August Office Hours - [Video](http://videos.code.org/plp/august-2016-office-hours.mp4)
 - August Office Hours - [Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
+
+October 2016:
+
+- Supplies for Counselor and Administrator PD - [Video](http://videos.code.org/plp/counselor_administrator_supplies.mp4)
+- Supplies for Counselor and Administrator PD - [Slides](https://docs.google.com/presentation/d/1RQeBL7rTcWnqzM48xNv8f1J3da5OVboekLJyw3_WeSk/edit#slide=id.gb846b8ce1_0_5)
+
 
 
 

@@ -52,10 +52,12 @@ Administrator and counselor PD supplies should be shipped/ordered by Program Man
 Check these resources if you have questions about what to order, how many to order, or navigating the marketplace.
 
 
-- [Webinar Recording (partial)](http://videos.code.org/plp/supplies.mp4>)
-- [Slides from Webinar](https://docs.google.com/presentation/d/1AtMDfpUClPUSa9Jz2nu27cXPELhGjc6UQY96j0Q43cc/edit#slide=id.gb846b8ce1_0_5)<br/>
-- [Summer Workshop Marketplace Guidelines](https://docs.google.com/document/d/1yFyDAWesYQGxSaQQpI06leuLxvhXEa8HOCKEpAkG-JI/edit)<br/>
-- [Academic Year Marketplace Guidelines](https://docs.google.com/document/d/1O4NBCeL5M_waCiz-FFfUmnd2FlK0yJxckgrVufjhHJc/edit)
+- Ordering Workshop Supplies - [Video (partial)](http://videos.code.org/plp/supplies.mp4>)
+- Orders Workshop Supplies [Slides](https://docs.google.com/presentation/d/1AtMDfpUClPUSa9Jz2nu27cXPELhGjc6UQY96j0Q43cc/edit#slide=id.gb846b8ce1_0_5)<br/>
+- Summer Workshop Marketplace Guidelines - [gdoc](https://docs.google.com/document/d/1yFyDAWesYQGxSaQQpI06leuLxvhXEa8HOCKEpAkG-JI/edit)<br/>
+- Academic Year Marketplace Guidelines - [gdoc](https://docs.google.com/document/d/1O4NBCeL5M_waCiz-FFfUmnd2FlK0yJxckgrVufjhHJc/edit)
+- Supplies for Counselor and Administrator PD - [Video](http://videos.code.org/plp/counselor_administrator_supplies.mp4)
+- Supplies for Counselor and Administrator PD - [Slides](https://docs.google.com/presentation/d/1RQeBL7rTcWnqzM48xNv8f1J3da5OVboekLJyw3_WeSk/edit#slide=id.gb846b8ce1_0_5)
 
 
 
