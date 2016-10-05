@@ -6,6 +6,7 @@
       font-weight: bold;
     }
   %script{src: minifiable_asset_path('js/levelbuilder_gamelab.js')}
+
 .field
   = f.label :text_mode_at_start, 'Text mode (showing code) at start'
   = boolean_check_box f, :text_mode_at_start
@@ -116,3 +117,5 @@
       element.style.display = element.style.display === 'none' ? 'block' : 'none';
     }
   };
+
+= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
