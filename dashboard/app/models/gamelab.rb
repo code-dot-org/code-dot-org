@@ -140,6 +140,7 @@ class Gamelab < Blockly
         "setFrame": null,
         "x": null,
         "y": null,
+        "bounciness": null,
         "rotateToDirection": null,
         "rotation": null,
         "rotationSpeed": null,
