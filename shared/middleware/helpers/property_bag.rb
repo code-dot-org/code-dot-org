@@ -133,7 +133,7 @@ class DynamoPropertyBag
     last_evaluated_key = nil
 
     results = {}
-    begin
+    loop do
       page = db.query(
         table_name: CDO.dynamo_properties_table,
         key_conditions: {
@@ -151,7 +151,9 @@ class DynamoPropertyBag
       end
 
       last_evaluated_key = page[:last_evaluated_key]
-    end while last_evaluated_key
+
+      break unless last_evaluated_key
+    end
     results
   end
 
