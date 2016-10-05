@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-10-04T02:27:47.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Image as a Link\r\n\r\nNow that you have a logo lets add it to your website. It will go on every individual page in your header with your navigation and website title. Often clicking on the logo of a website will take you back to the home page of a website. So we will set that up as well.\r\n\r\nTo make an image also a link we just wrap the `<img>` element in a `<a>` element.\r\n\r\n<pre>\r\n&lt;a href=\"index.html\"&gt; &lt;img src=\"logo.png\" alt=\"logo\"&gt; &lt;/a&gt;\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Upload your logo to your project.\r\n* Insert the logo using an `<img>` element in the header div of each page\r\n* Make the image a link by surronding the `<img>` element in an `<a>` element that directs to the index.html page",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

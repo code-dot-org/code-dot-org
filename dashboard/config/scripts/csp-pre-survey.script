@@ -12,3 +12,6 @@ endvariants
 
 stage 'NEW Unit 1 Chapter 1 Assessment', lockable:true
 assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'
+
+stage 'Unit 3 Chapter 1 Assessment', lockable:true
+assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'

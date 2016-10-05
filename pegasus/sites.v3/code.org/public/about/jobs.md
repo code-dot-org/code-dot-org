@@ -32,13 +32,11 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Fundraising**
  	- [Major Gifts Manager](#donor)
 - **Professional Learning & Community**
-	- [Program Manager, Teacher Development](#teacherpm)
 	- [Program Coordinator](#coord)
 - **Internships**
  	- [Curriculum Team Intern](#edintern)
- 	- [State Policy Intern](#advintern)	
 
-**Don't see a good fit? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
+**Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -82,35 +80,6 @@ Please DO NOT apply for this position if you do not have experience in writing s
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-
-## <a name="teacherpm"href="#teacherpm">Program Manager, Teacher Development (Seattle, WA)</a>
-
-**Job Summary:**
-
-The Teacher Development Program Manager is an important lead role on Code.org’s Professional Learning & Community team. The PLC team is responsible for training over 30,000 K-12 teachers each year directly and via a network of highly-engaged facilitators and Professional Learning Partners. The Teacher Development PM will ensure that all of the activities and services we provide to teachers meet our mark of quality and effectiveness, and allow us to meet our goals for scale to ensure that every student in every US school has the opportunity to learn Computer Science.
-
-Responsibilities of the position include:
-
-- Serve as primary project manager for all of the major events and activities that serve teachers, especially our 5-day summer TeacherCons and 1-2 day workshops during the school year; continuously track program development against vision, and make corrections where needed; set reasonable timelines and help team members meet them. 
-- Work closely with Director of Research & Evaluation and other PLC leads to collect, analyze, and respond to data. Monitor success of our efforts and gaps in our offerings and work with team members to fill those gaps and improve quality. 
-- Work with Professional Learning & Community team, Outreach team, and Product PMs to identify efficiencies in how we track teachers through our systems so we can quickly and effectively look at the full experience teachers have in working with us. 
-- Lead internal communications so team members are continuously in the loop and able to continue moving forward. Ensure effective external communications so teachers always have the information they need to be successful.
-- Develop and implement a strategy to ensure that teachers nationwide feel that they are part of a community of excellent Computer Science educators focused on promoting equity and teaching high-quality courses. 
-- Develop and run the teacher application process for all programs.
-
-
-**Experience and Qualifications:**
-
-We are looking for an experienced educator with a solid understanding of what teachers need to be successful in working with students, and a passion for ensuring equitable access to a high-quality education for all students. Candidate must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-The ideal candidate has the following qualifications:
-
-- Has a bachelor’s degree (Computer Science background/experience not required)
-- Minimum 4 years of experience as a teacher, teacher leader, or program manager in a school setting
-- Passion for Code.org’s mission 
-- Ability to travel 10% time 
-
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="coord"href="#coord">Program Coordinator (Seattle, WA)</a>
 

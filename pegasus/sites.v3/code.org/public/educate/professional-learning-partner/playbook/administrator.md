@@ -1,11 +1,11 @@
 ---
-title: Workshop Planning
+title: administrator and counselor PD
 
 ---
 <a id="top"></a>
 
 
-### **Counsleor and Administrator Workshops**
+## **Counselor and Administrator Workshops**
 
 **Securing a Venue**<br/>
 These guidelines will give your facilitators the space they need to run a successful workshop, as well as remind you of important factors to consider for logistics and teacher experience. <br/>
