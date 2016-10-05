@@ -12,7 +12,7 @@ class Api::V1::Pd::WorkshopSurveyReportController < Api::V1::Pd::ReportControlle
     survey_report[:this_workshop] = get_score_for_workshops([@workshop])
     survey_report[:all_my_workshops_for_course] = get_score_for_workshops(Pd::Workshop.where(organizer_id: @workshop.organizer_id, course: @workshop.course))
 
-    aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', 'aggregate-workshop-scores'))
+    aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
     survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[@workshop.course]
 
     render json: survey_report
