@@ -10,11 +10,6 @@ DASHBOARD_REPORTING_DB_READONLY = sequel_connect(
   CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
 
 SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
-SOLR_PARAMS_TEACHER = {
-    q: 'kind_s:user && role_s:teacher',
-    fl: %w[id create_ip_city_s create_ip_state_s create_ip_country_s create_ip_postal_code_s],
-    rows: 100000
-}
 
 UPDATE_BATCH_SIZE = 100
 
@@ -42,6 +37,17 @@ def mysql_multi_connection
   Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
 end
 
+def merge_teacher_geo_data_from_forms
+  puts "Merging teacher geo data from forms"
+
+  solr_params = {
+      q: 'kind_s:user && role_s:teacher',
+      rows: 100000
+  }
+
+  merge_geo_data_from_forms_helper(solr_params)
+end
+
 def merge_geo_data_from_forms(kind)
   puts "Merging geo data for form kind: '#{kind}'"
 
@@ -50,6 +56,10 @@ def merge_geo_data_from_forms(kind)
       rows: 100000
   }
 
+  merge_geo_data_from_forms_helper(solr_params)
+end
+
+def merge_geo_data_from_forms_helper(solr_params)
   i = 0
   num_updated = 0
   update_batch = ""
@@ -274,41 +284,11 @@ WHERE contacts_rollup.id > 0 AND (contacts_rollup.dashboard_user_id = src.dashbo
   puts " - " + ((Time.now) - start).to_s + " seconds"
 #=end
 
-#=begin
-
-  start = Time.now
-  print "Merging geo data from SOLR"
-  i = 0
-  update_batch = ""
-  conn = mysql_multi_connection
-
-  SOLR.query(SOLR_PARAMS_TEACHER).each do |record|
-    i += 1
-    user_id_match = /(?<=user-).*/.match(record['id'])
-
-    next unless user_id_match.presence?
-
-    user_id = user_id_match[0].to_i
-
-    update_batch += conn[:contacts_rollup].where(:dashboard_user_id => user_id).update_sql(:city => record['create_ip_city_s'], :state => record['create_ip_state_s'],
-                                                                                           :postal_code => record['create_ip_postal_code_s'], :country => record['create_ip_country_s']) + ";"
-    if (i % UPDATE_BATCH_SIZE) == 0
-      conn.run update_batch
-      conn.disconnect
-      conn = mysql_multi_connection
-      update_batch = ""
-    end
-  end
-
-  if update_batch.presence
-    conn.run update_batch
-  end
-
-  puts "- #{i} records, " + ((Time.now) - start).to_s + " seconds"
-#=end
-
   # excluding forms: AffiliateWorkshopSignup
 
+  merge_teacher_geo_data_from_forms
+
+#=begin
   merge_geo_data_from_forms('BringToSchool2013')
   merge_geo_data_from_forms('CSEdWeekEvent2013')
   merge_geo_data_from_forms('ClassSubmission')
@@ -327,6 +307,7 @@ WHERE contacts_rollup.id > 0 AND (contacts_rollup.dashboard_user_id = src.dashbo
   merge_geo_data_from_forms('PdWorkshopSurvey')
   merge_geo_data_from_forms('ProfessionalDevelopmentWorkshop')
   merge_geo_data_from_forms('ProfessionalDevelopmentWorkshopSignup')
+#=end
 
   puts "Done"
 end
