@@ -1,0 +1,118 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2016-10-01T17:25:18.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "birds",
+    "instructions": "Challenge puzzle! Combine ideas from the last few puzzles to complete this.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "2",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,2,0,0,0,0,3,0],[0,1,1,0,0,0,1,0],[0,0,1,1,0,0,1,0],[0,0,0,1,1,0,1,0],[0,0,0,0,1,1,1,0],[0,0,0,0,0,1,1,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "6",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!\",\r\n  \"hint_id\": \"2-3_Maze_Loops_17_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The first half of this path is similar to the last puzzles, but it goes a different direction.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_17_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"There are different ways to solve this. You will want to use at least two loops, and repeat either a set of actions or a single movement.\",\r\n  \"hint_id\": \"courseC_puppy_loops8_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "step_speed": "1",
+    "tts_instructions_override": "Challenge puzzle! Combine ideas from the last few puzzles to complete this.",
+    "contained_level_names": null,
+    "maze_data": null
+  },
+  "published": true,
+  "notes": "Challenge Puzzle",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="4"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat" limit="3">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">5</title>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

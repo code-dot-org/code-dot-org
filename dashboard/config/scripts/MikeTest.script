@@ -5,6 +5,8 @@ level 'MikeTest1'
 level 'MikeTest2'
 level 'MikeTest3'
 assessment 'MikeAssessment1'
+skin 'basketball'
+level 'blockly:Bounce:12'
 
 stage 'Artist Functions'
 level '2-3 Artist Functions 12 Mike'

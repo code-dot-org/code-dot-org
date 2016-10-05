@@ -1351,9 +1351,11 @@ en:
             The Need For Programming Languages: The Need For Programming Languages
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Using Simple Commands
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: ''
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done in the early fall of 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below.  DESCRIPTION: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.'
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           stage:
             Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
@@ -1369,6 +1371,7 @@ en:
             What is Big Data?: What is Big Data?
             Rapid Research - Cybercrime: Rapid Research - Cybercrime
             Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and Security Dilemmas
+          description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
           description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
@@ -1424,6 +1427,9 @@ en:
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
             Functions: Functions
+            Platform Jumper: Platform Jumper
+            Defender: Defender
+          description_audience: ''
         2016_sciencePD_phase1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -1611,6 +1617,7 @@ en:
             Multi-Page Websites: Multi-Page Websites
             Classes: Classes
             External Style Sheets: External Style Sheets
+          description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1933,6 +1940,10 @@ en:
             Anonymous student pre-survey: Anonymous student pre-survey
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: Problem Solving
