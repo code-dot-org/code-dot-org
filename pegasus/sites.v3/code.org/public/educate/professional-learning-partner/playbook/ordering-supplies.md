@@ -16,6 +16,27 @@ Academic year supplies should be shipped/ordered by Program Managers as follows:
 
 - Office supplies - 1 package sent by Code.org in August/September for all workshops you will host during the academic year. [See the Academic Year Marketplace Guidelines](https://docs.google.com/document/d/1O4NBCeL5M_waCiz-FFfUmnd2FlK0yJxckgrVufjhHJc/edit) for more information on what will be shipped.
 - Printed materials - ordered through the Mimeo Marketplace (see below for details on how to place these orders)
+- Certificates - Can be ordered through the Mimeo Marketplace or downloaded and printed here:
+	- CS Principles
+		- [Quarter 1](/files/CSP-Q1.pdf)
+		- [Quarter 2](/files/CSP-Q2.pdf)
+		- [Quarter 3](/files/CSP-Q3.pdf)
+		- [Quarter 4](/files/CSP-Q4.pdf)
+	- Exploring Comuter Science
+		- [Quarter 1](/files/ECS-Q1.pdf)
+		- [Quarter 2](/files/ECS-Q2.pdf)
+		- [Quarter 3](/files/ECS-Q3.pdf)
+		- [Quarter 4](/files/ECS-Q4.pdf)
+	- CS in Science 
+		- [Semester 1](/files/CSINS-S1.pdf)
+		- [Semester 2](/files/CSINS-S2.pdf)
+	- CS in Algebra 
+		- [School Year Support](/files/CSINA-SY.pdf)
+
+	
+
+
+
 
 *Note: The only courses with printed materials are CS Principles and Administrator & Counselor PD. The only course with swag is Administrator & Counselor PD.*
 
