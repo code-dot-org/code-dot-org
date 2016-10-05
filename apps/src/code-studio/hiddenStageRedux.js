@@ -127,6 +127,9 @@ export function getHiddenStages(scriptName) {
  * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
 export function isHiddenFromState(bySection, sectionId, stageId) {
+  if (!stageId) {
+    return false;
+  }
   // if we don't have a sectionId, we must be a student
   if (sectionId === null){
     sectionId = STUDENT_SECTION_ID;
