@@ -8,6 +8,7 @@ var Observer = require('./Observer');
 var Slider = require('./slider');
 var utils = require('./utils');
 import {setStepSpeed} from './redux/runState';
+import {add, update, remove} from './redux/watchedExpressions';
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
@@ -281,12 +282,14 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     var jsInterpreter = this.jsInterpreter_;
     var watchExpression;
     if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
+      this.reduxStore_.dispatch(add(input.substring(WATCH_COMMAND_PREFIX.length)));
       watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
       this.watchExpressions_[watchExpression] = {};
       // Update immediately. When not running, this will confirm that the watch
       // was added, since no timer will refresh automatically:
       this.updateWatchView_();
     } else if (0 === input.indexOf(UNWATCH_COMMAND_PREFIX)) {
+      this.reduxStore_.dispatch(remove(input.substring(UNWATCH_COMMAND_PREFIX.length)));
       watchExpression = input.substring(UNWATCH_COMMAND_PREFIX.length);
       delete this.watchExpressions_[watchExpression];
       // Update immediately. When not running, this will confirm that the watch
@@ -547,7 +550,7 @@ JsDebuggerUi.prototype.updateWatchView_ = function () {
   var jsInterpreter = this.jsInterpreter_;
   var debugWatchDiv = this.getElement_('#debug-watch');
   if (debugWatchDiv) {
-    clearAllChildElements(debugWatchDiv);
+    //clearAllChildElements(debugWatchDiv);
     for (var watchExpression in this.watchExpressions_) {
       var currentValue;
       if (jsInterpreter) {
@@ -558,14 +561,17 @@ JsDebuggerUi.prototype.updateWatchView_ = function () {
       if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
         // Store new value
         this.watchExpressions_[watchExpression].lastValue = currentValue;
+        this.reduxStore_.dispatch(update(watchExpression, currentValue));
       }
+
+      // TODO: use Redux action to update vars & values in DebugWatch.jsx
       var watchItem = document.createElement('div');
       watchItem.className = 'debug-watch-item';
       watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
         varName: watchExpression,
         varValue: currentValue
       });
-      debugWatchDiv.appendChild(watchItem);
+      //debugWatchDiv.appendChild(watchItem);
     }
   }
 };

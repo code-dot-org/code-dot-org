@@ -1,11 +1,13 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 /**
  * A "watchers" window for our debugger.
  */
 const DebugWatch = React.createClass({
   propTypes: {
-    debugButtons: React.PropTypes.bool
+    debugButtons: React.PropTypes.bool,
+    watchedExpresssions: React.PropTypes.array
   },
 
   render() {
@@ -14,9 +16,18 @@ const DebugWatch = React.createClass({
       classes += 'no-commands';
     }
     return (
-        <div id="debug-watch" className={classes}/>
+        <div id="debug-watch" className={classes}>
+          {
+              this.props.watchedExpresssions.map(wv => <span>{wv.value}</span>)
+          }
+        </div>
     );
   }
 });
 
-export default DebugWatch;
+export default connect(state => {
+  return {
+    watchedExpresssions: state.watchedExpresssions,
+  };
+})(DebugWatch);
+

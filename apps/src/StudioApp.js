@@ -284,7 +284,7 @@ StudioApp.prototype.configureRedux = function (reducers) {
  */
 StudioApp.prototype.createReduxStore_ = function () {
   var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
-  this.reduxStore = redux.createStore(combined);
+  this.reduxStore = redux.createStore(combined, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
   if (experiments.isEnabled('reduxGlobalStore')) {
     // Expose our store globally, to make debugging easier
