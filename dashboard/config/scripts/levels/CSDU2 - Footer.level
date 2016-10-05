@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-19T15:39:57.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Grouping with Divs\r\n\r\nTo improve the consistent look of a website it is good to group together sections of the page. You have already practiced doing this for the header of the web page using the `<div>` element. Since you now know how to differentiate between elements of the same type using class we can add more `<div>` elements.\r\n\r\n# Do This\r\n* ______ put it in the \"header\" class\r\n* Style the header class\r\n* ______ put it in the \"content\" class\r\n* Style the content class",
+    "project_template_level_name": "CSDU2 - Seasons Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

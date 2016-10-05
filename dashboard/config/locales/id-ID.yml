@@ -2,16 +2,16 @@
   errors:
     messages:
       not_saved: 'Mohon Perbaiki kesalahan berikut:'
-      too_young: Konten berikut ini memiliki batasan usia dan tidak diperuntukkan
-        bagi pelajar dibawah umur
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: Konten berikut memiliki batasan umur dan tidak tersedia untuk pelajar
+        dibawah umur.
+      teacher_must_accept_terms: Konten ini memiliki batasan umur dan tidak tersedia
+        untuk pelajar dibawah umur. Minta gurumu untuk menerima syarat dan ketentuan
+        terbaru untuk memberikan akses ke layanan ini. Guru anda bisa log in ke Code
+        Studio dan mengklik tombol "Review updated terms" di bagian atas halaman depan
+        Code Studio.
+      pair_programmer: |
+        Anda sedang memakai program dengan siswa yang tidak memiliki akses ke layanan ini.
+        Untuk mengakses layanan ini, hentikan program yang terpasang dan coba lagi.
   activerecord:
     errors:
       messages:
@@ -926,3 +926,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

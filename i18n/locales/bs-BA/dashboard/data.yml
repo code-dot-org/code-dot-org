@@ -336,7 +336,7 @@ bs:
         'C2_zuck_repeat_loop': Labirint Petlje
         'C2_artist_loops': 'Umjetnik: Petlje'
         'C2_artist_debugging': 'Umjetnik: Ispravljanje grešaka'
-        'C2_bee_loops': 'Pčela: Petlje'
+        'C2_bee_loops': Pčela Petlje
         'C2_bee_debugging': Pčela za ispravljanje pogrešaka
         'C2_bee_conditionals': 'Pčela: Uvjeti'
         'C2_playlab_createstory': 'Laboratorij Igara - Napravi priču'

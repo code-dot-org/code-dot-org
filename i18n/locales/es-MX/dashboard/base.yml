@@ -2,7 +2,7 @@ es-MX:
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: This content has age restrictions in place and is not available for younger students.
+      too_young: https://code.org/mc
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
       pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
@@ -270,7 +270,7 @@ es-MX:
     user_not_found: El maestro no púdo ser allado.
     student_teacher_disassociated: 'ústed a quitado %{teacher_name} como su maestró.'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: Panel de maestro
       student: estudiante
       viewing_solution: Visualizando la Solución
       try_it_yourself: Inténtalo tú mismo
@@ -717,3 +717,5 @@ es-MX:
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

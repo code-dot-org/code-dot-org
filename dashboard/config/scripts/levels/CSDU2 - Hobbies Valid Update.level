@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Update Hobbies\r\n\r\nSince you now know 4 tags that are good practice to include in your website you should now add them to your pages.\r\n\r\n# Do This\r\n\r\n* Add &lt;!Doctype&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; tags to your Hobbies page. ",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"\"\r\n    }\r\n  ]\r\n}"
+    "markdown_instructions": "# Update Hobbies Page\r\n\r\n&lt;!DOCTYPE html&gt; and &lt;html&gt; are important to add to your web page. Practice adding them to update your Hobbies page. In all future levels they will be included for you so you won't need to add themselves.\r\n\r\n# Do This\r\nThis is your Hobbies page from the last lesson.\r\n\r\n* Add &lt;!DOCTYPE html&gt; at the top of your index.html file\r\n* Add &lt;html&gt; right underneath &lt;!DOCTYPE html&gt; and add a closing &lt;/html&gt; tag at the end of index.html",
+    "project_template_level_name": "CSDU2 - Hobbies Template"
   },
   "published": true,
   "notes": "",

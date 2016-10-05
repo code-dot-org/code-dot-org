@@ -2,19 +2,24 @@
 #
 # Table name: gallery_activities
 #
-#  id          :integer          not null, primary key
-#  user_id     :integer          not null
-#  activity_id :integer          not null
-#  created_at  :datetime
-#  updated_at  :datetime
-#  autosaved   :boolean
-#  app         :string(255)      default("turtle"), not null
+#  id              :integer          not null, primary key
+#  user_id         :integer          not null
+#  activity_id     :integer          not null
+#  user_level_id   :integer
+#  level_source_id :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  autosaved       :boolean
+#  app             :string(255)      default("turtle"), not null
 #
 # Indexes
 #
-#  index_gallery_activities_on_activity_id              (activity_id)
-#  index_gallery_activities_on_app_and_autosaved        (app,autosaved)
-#  index_gallery_activities_on_user_id_and_activity_id  (user_id,activity_id) UNIQUE
+#  index_gallery_activities_on_activity_id                  (activity_id)
+#  index_gallery_activities_on_app_and_autosaved            (app,autosaved)
+#  index_gallery_activities_on_level_source_id              (level_source_id)
+#  index_gallery_activities_on_user_id_and_activity_id      (user_id,activity_id) UNIQUE
+#  index_gallery_activities_on_user_id_and_level_source_id  (user_id,level_source_id)
+#  index_gallery_activities_on_user_level_id                (user_level_id)
 #
 
 class GalleryActivity < ActiveRecord::Base

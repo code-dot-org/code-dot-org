@@ -2,7 +2,7 @@
 - data = @level.properties
 
 - content_for(:head) do
-  =javascript_include_tag 'js/levels/levelGroup'
+  %script{src: minifiable_asset_path('js/levels/levelGroup.js')}
 
 :javascript
   window.levelData = #{data.to_json};
@@ -27,7 +27,7 @@
   -# page.  The controller takes care of that for us.
   - current_page = params[:puzzle_page] || 1
 
-  -# anonymous users shoulnd't ever see lockable stages, but give them the locked_stage message if they do
+  -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
   - if @script_level && @script_level.stage.lockable? && (!current_user || current_user.user_level_locked?(@script_level, @level))
     .locked-level{style: 'font-size: 14px; margin-top: 10px; margin-bottom: 10px;'}
       =t('locked_stage')
@@ -39,7 +39,7 @@
         %br/
 
       - page.levels.each_with_index do |level, index|
-        -# Fall back to retrieving the the last_attempt from the parsed levelgroup last_attempt
+        -# Fall back to retrieving the last_attempt from the parsed levelgroup last_attempt
         - parsed = JSON.parse(@last_attempt || '{}')
         - sublevel_last_attempt = parsed[level.id.to_s].try(:[], 'result')
         - if @user && current_user && @user != current_user
@@ -52,7 +52,7 @@
         -# Show any text from an external level.
         - if data["texts"]
           - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
-            - text_level = Level.find_by_name(text_level_info["level_name"])
+            - text_level = Script.cache_find_level(text_level_info["level_name"])
             .level-group-content
               = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
 
@@ -63,9 +63,6 @@
         .level-group-number= "#{page.offset + index + 1}. "
         .level-group-content
           - if ['multi', 'evaluation_multi'].include? level_class
-            -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
-            - unless current_user.try(:should_see_inline_answer?, @script_level)
-              - level.properties['answers'].each { |answer| answer['correct'] = false }
             = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
           - elsif level_class == "text_match"
             -# For students (or teachers doing PD), clear out all answers.
@@ -80,20 +77,10 @@
 
 - unless @script_level.nil?
   :javascript
-    var levelCount = #{@total_level_count};
-    var page = #{current_page || -1};
-
-    var fallbackResponse = #{@fallback_response.to_json};
-    var callback = "#{@callback}";
-    var app = "#{app}";
-    var level = appOptions.levelPosition;
-
-    var lastAttempt = #{@last_attempt || {}};
-
     $(document).ready(function() {
-      initLevelGroup(
-        levelCount,
-        page,
-        lastAttempt
+      window.initLevelGroup(
+        #{@total_level_count},
+        #{current_page || -1},
+        #{@last_attempt || {}}
       );
     });

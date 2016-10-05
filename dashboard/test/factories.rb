@@ -1,12 +1,16 @@
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :section_hidden_stage do
+    section nil
+    stage nil
+  end
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
   end
 
   factory :user do
-    birthday Date.new(1991, 03, 14)
+    birthday Date.new(1991, 3, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
     password "00secret"
     locale 'en-US'
@@ -28,7 +32,7 @@ FactoryGirl.define do
 
     factory :teacher do
       user_type User::TYPE_TEACHER
-      birthday Date.new(1980, 03, 14)
+      birthday Date.new(1980, 3, 14)
       admin false
       factory :admin_teacher do
         admin true
@@ -92,13 +96,6 @@ FactoryGirl.define do
     factory :young_student do
       user_type User::TYPE_STUDENT
       birthday Time.zone.today - 10.years
-    end
-
-    factory :student_of_admin do
-      after(:create) do |user|
-        section = create(:section, user: create(:admin_teacher))
-        create(:follower, section: section, student_user: user)
-      end
     end
 
     factory :young_student_with_tos_teacher do
@@ -369,11 +366,6 @@ FactoryGirl.define do
     section
     user { section.user }
     student_user { create :student }
-  end
-
-  factory :level_source_hint do
-    level_source
-    sequence(:hint) { |n| "Hint #{n}" }
   end
 
   factory :user_level do

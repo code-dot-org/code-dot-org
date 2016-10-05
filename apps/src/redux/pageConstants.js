@@ -28,6 +28,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
+  'showDebugSlider',
   'localeDirection',
   'hasContainedLevels',
   'isDroplet',
@@ -44,7 +45,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showAnimationMode',
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
-  'isSignedIn'
+  'isSignedIn',
+  'versionHistoryInInstructionsHeader'
 );
 
 const initialState = {

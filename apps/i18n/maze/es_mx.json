@@ -1,10 +1,10 @@
 {
-  "at": "at",
+  "at": "a",
   "atFlower": "en la flor",
   "atHoneycomb": "en el panal",
   "avoidCowAndRemove": "evita la vaca y elimina 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
+  "bean": "frijol",
+  "beanTooltip": "Cosechar un frijol",
   "collect": "recoger\n",
   "collectiblePresent": "Hay algún tesoro\n",
   "collectorCollectTooltip": "Collect an item",

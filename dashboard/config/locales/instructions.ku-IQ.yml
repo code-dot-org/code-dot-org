@@ -24,7 +24,7 @@
       2-3 Artist 3new_instruction: "The red hat is 100 pixels tall. Finish drawing\na
         black hat that is 70 pixels shorter. \r\n(Note: The width of each hat is\n50
         pixels.)"
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
+      2-3 Artist 4_instruction: "یارمەتیم بدە ئەو ماڵە تەواو بكەم لەبۆ ئەم پشیلەیە."
       2-3 Artist 5_instruction: |
         Replace this code with a "repeat times" block
         to draw the same house using only 3 blocks.
@@ -39,9 +39,9 @@
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall. There are many different ways to solve this puzzle, so
         have some fun!
-      2-3 Artist 9 NEW_instruction: Finish this kite
+      2-3 Artist 9 NEW_instruction: "ئەم كۆلارەیە تەواو بكە"
       2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
-      2-3 Artist 9_instruction: Finish this kite
+      2-3 Artist 9_instruction: "ئەم كۆلارەیە تەواو بكە"
       2-3 Artist Assessment 1_instruction: |
         Assessment: Finish drawing the last tooth.
         It is 25 pixels wide and 25 pixels tall.
@@ -2514,6 +2514,8 @@
       course3_playlab_stage17_7_instruction: |
         Create your own story. When you're
         done, click Finish to let friends try your story on their phones.
+      Crack a Caesar Cipher_instruction: Instructions
+      Crack Random Substitution_instruction: Instructions
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -3306,6 +3308,9 @@
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_pre1_instruction: |
+        Ruff! Can you help me collect some tennis
+        balls?
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -3313,7 +3318,8 @@
       grade2_MakeDogTag_10_instruction: Now, draw anything you like!
       grade2_MakeDogTag_2_instruction: "This house has a half-finished wall. Each\nside
         is 100, but the half-finished wall is only 50. Complete the wall. \n"
-      grade2_MakeDogTag_3_instruction: Help me complete the house for this cat.
+      grade2_MakeDogTag_3_instruction: "یارمەتیم بدە ئەو ماڵە تەواو بكەم لەبۆ ئەم
+        پشیلەیە."
       grade2_MakeDogTag_4_instruction: |
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.
@@ -3338,6 +3344,16 @@
       grade2_maze_debuggingPre_instruction: |
         Play with these blocks to see what they
         make the bird do!
+      grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro6_instruction: "That’s it!  Now we’re ready to try to solve\na
+        few puzzles. \n"
+      grade2_maze_intro7_instruction: This time, try something a bit more challenging.
+      grade2_maze_intro8_instruction: |
+        This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice.
+      grade2_maze_intro9_instruction: Solve this puzzle.
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?
@@ -5976,6 +5992,8 @@
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      The Vigenere Cipher Widget_instruction: Instructions
+      The Vigenere Cipher_instruction: Instructions
       Total Artist Clone Me_instruction: |
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -7696,6 +7714,7 @@
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 vigenere cipher 2_instruction: Instructions
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"

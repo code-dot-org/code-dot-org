@@ -1,8 +1,10 @@
 /** @overview Component for editing a key/value pair row. */
 
 import FirebaseStorage from '../firebaseStorage';
+import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
+import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
@@ -14,36 +16,54 @@ const EditKeyRow = React.createClass({
 
   getInitialState() {
     return {
+      isDeleting: false,
       isEditing: false,
-      newValue: undefined
+      isSaving: false,
+      newValue: ''
     };
   },
 
+  componentDidMount() {
+    this.isMounted_ = true;
+  },
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  },
+
   handleChange(event) {
-    this.setState({newValue: castValue(event.target.value)});
+    this.setState({newValue: event.target.value});
   },
 
   handleEdit() {
     this.setState({
       isEditing: true,
-      newValue: this.props.value
+      newValue: editableValue(this.props.value)
     });
   },
 
   handleSave() {
+    this.setState({isSaving: true});
     FirebaseStorage.setKeyValue(
       this.props.keyName,
-      this.state.newValue,
-      this.handleSaveComplete,
+      castValue(this.state.newValue),
+      this.resetState,
       msg => console.warn(msg));
   },
 
-  handleSaveComplete() {
-    this.setState({isEditing: false});
+  resetState() {
+    // Deleting a key/value pair could cause this component to become unmounted.
+    if (this.isMounted_) {
+      this.setState(this.getInitialState());
+    }
   },
 
   handleDelete() {
-    FirebaseStorage.deleteKeyValue(this.props.keyName, undefined, msg => console.warn(msg));
+    this.setState({isDeleting: true});
+    FirebaseStorage.deleteKeyValue(
+      this.props.keyName,
+      this.resetState,
+      msg => console.warn(msg));
   },
 
   handleKeyUp(event) {
@@ -57,12 +77,12 @@ const EditKeyRow = React.createClass({
   render() {
     return (
       <tr style={dataStyles.row}>
-        <td style={dataStyles.cell}>{this.props.keyName}</td>
+        <td style={dataStyles.cell}>{JSON.stringify(this.props.keyName)}</td>
         <td style={dataStyles.cell}>
           {this.state.isEditing ?
             <input
               style={dataStyles.input}
-              value={editableValue(this.state.newValue)}
+              value={this.state.newValue || ''}
               onChange={this.handleChange}
               onKeyUp={this.handleKeyUp}
             /> :
@@ -70,28 +90,36 @@ const EditKeyRow = React.createClass({
         </td>
         <td style={dataStyles.editButtonCell}>
           {
-            this.state.isEditing ?
-              <button
-                style={dataStyles.saveButton}
-                onClick={this.handleSave}
-              >
-                Save
-              </button> :
-              <button
-                style={dataStyles.editButton}
-                onClick={this.handleEdit}
-              >
-                Edit
-              </button>
+            !this.state.isDeleting && (
+              this.state.isEditing ?
+                <PendingButton
+                  isPending={this.state.isSaving}
+                  onClick={this.handleSave}
+                  pendingText="Saving..."
+                  style={dataStyles.saveButton}
+                  text="Save"
+                /> :
+                <button
+                  style={dataStyles.editButton}
+                  onClick={this.handleEdit}
+                >
+                  Edit
+                </button>
+            )
           }
 
-          <button
-            style={dataStyles.redButton}
-            onClick={this.handleDelete}
-            onKeyUp={this.handleKeyUp}
-          >
-            Delete
-          </button>
+          {
+            !this.state.isSaving && (
+              <PendingButton
+                isPending={this.state.isDeleting}
+                onClick={this.handleDelete}
+                pendingStyle={{float: 'right'}}
+                pendingText="Deleting..."
+                style={dataStyles.redButton}
+                text="Delete"
+              />
+            )
+          }
         </td>
       </tr>
     );

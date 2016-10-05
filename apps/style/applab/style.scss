@@ -469,6 +469,13 @@ body.embedded_iframe {
   display: inline-flex;
 }
 
+.flex {
+  /* PhantomJS 2.1.3 requires this vendor-specific prefix, which
+   * Radium 0.18.1 does not automatically apply. */
+  display: -webkit-flex;
+  display: flex;
+}
+
 // TODO(dave): move these styles into DesignToolboxElement
 // once we are done experimenting with them.
 .design-element-image {

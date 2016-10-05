@@ -268,7 +268,7 @@ tr-TR:
   homepage_hero_text_stat_served: "Code Stüdyo'da #student_count tane öğrenci hesabı"
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Öğretmen Panosu
   homepage_slot_text_studio: Tümü bizim öğrenme süreçlerimiz
   homepage_slot_text_course4: Ders 4
   homepage_slot_text_shop: Mağaza
@@ -298,6 +298,8 @@ tr-TR:
   homepage_banner_congress_link: Yardımlarınızı ekleyiniz
   homepage_banner_emailprivacy: Öğrenci gizliliğini desteklemek için önemli bir değişiklik yapıyoruz.
   homepage_banner_emailprivacy_link: Daha fazla oku
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Daha fazlasını öğren
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
   homepage_slot_text_link_hoc: "Kodlama Saati'ni Deneyin"
@@ -698,6 +700,9 @@ tr-TR:
   dashboard_announce_all: "Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>"
   code_hoc_coming: 'Kod Saati burada - Aralık 8-14!'
   code_sign_up: "CS Education Week' e katılmak için kaydolun."
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Daha Fazla Bilgi Edinin
   learn_sign_up_description: "Bilgisayar Bilimi Eğitim Haftası süresinde Kod Saati'ne dahil olmak için kayıt olun"
   learn_sign_up_button: Kaydol
@@ -794,7 +799,7 @@ tr-TR:
   hourofcode_name: Klasik Labirent
   playlab_name: Oyun Laboratuvarı
   infinity_name: Sınırsız oyun laboratuarı
-  artist_name: Sanatçı
+  artist_name: Aktör
   monstercoding_name: Gizemli Ada Kodlama Macerası
   allcancode_name: Çalış Maco!
   csfirst_name: Öncelikle CS

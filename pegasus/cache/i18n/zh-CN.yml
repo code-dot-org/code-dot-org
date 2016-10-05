@@ -289,6 +289,8 @@
   homepage_banner_congress_link: "添加您的支持"
   homepage_banner_emailprivacy: "我们正在对如何支持学生的隐私做重要改变"
   homepage_banner_emailprivacy_link: "阅读更多"
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "了解详情"
   homepage_slot_text_title_hoc: "编程一小时"
   homepage_slot_text_blurb_hoc: "任何人都可学习。立即开始"
   homepage_slot_text_link_hoc: "来试试“编程一小时”项目！"
@@ -715,6 +717,14 @@
     看以前的公告。</a>"
   code_hoc_coming: "代码小时就在这里 — — 12 月 8-14 ！"
   code_sign_up: "注册以便在计算机科学教育周期间参加"
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "现在就试试"
   learn_sign_up_description: "报名参与在计算机科学教育周期间的编程一小时活动。"
   learn_sign_up_button: "注册"

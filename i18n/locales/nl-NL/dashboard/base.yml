@@ -2,8 +2,8 @@ nl:
   errors:
     messages:
       not_saved: 'Corrigeer de volgende fouten:'
-      too_young: This content has age restrictions in place and is not available for younger students.
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      too_young: Deze inhoud heeft leeftijd restricties en is niet beschikbaar voor jongere studenten.
+      teacher_must_accept_terms: 'Deze inhoud heeft leeftijd restricties en is niet beschikbaar voor jongere studenten. Vraag je leraar om de laatste service bepalingen te accepteren en jou zo toegang te geven tot de inhoud. Je leraar kan dit doen door in te loggen in de Code Studio en de knop " Review updates terms" aan te klikken bovenaan de Code Studio homepage.'
       pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
@@ -81,9 +81,9 @@ nl:
   signup_form:
     student_count: '%{count} studenten hebben zich reeds aangemeld.'
     teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
+    overview: 'Maak een account aan om je vorderingen te volgen of je klad te managen.<a href="/">Je kan de verschillende stadia en puzzels</a>browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
     teacher_educator_guide: Kijk in de lerarengids
-    title: Sign up for Code.org
+    title: Log in voor Code.org
     school_name: School naam (optioneel)
     school_address: Schooladres (optioneel)
     address_placeholder: adres, stad, provincie, postcode
@@ -724,3 +724,5 @@ nl:
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

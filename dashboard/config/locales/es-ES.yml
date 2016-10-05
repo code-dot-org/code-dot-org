@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: Este contenido tiene restricciones de edad y no está disponible para
-        los estudiantes más jóvenes
+      too_young: https://code.org/mc
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -327,7 +326,7 @@
     user_not_found: No se ha podido encontrar al profesor.
     student_teacher_disassociated: Has eliminado a %{teacher_name} como tu profesor.
     panel:
-      answer_viewer: Ver respuesta
+      answer_viewer: Panel de maestro
       student: estudiante
       viewing_solution: Ver la solución
       try_it_yourself: Inténtalo tú mismo
@@ -927,3 +926,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

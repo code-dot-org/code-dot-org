@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Pakiwasto ang mga sumusunod na error:'
-      too_young: Ang nilalaman na ito ay may mga paghihigpit sa edad sa lugar at ay
-        hindi magagamit para sa mga batang mag-aaral
+      too_young: May limitadong edad ito at hindi pwedeng ibigay sa nakababatang mga
+        estudyante.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -908,3 +908,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

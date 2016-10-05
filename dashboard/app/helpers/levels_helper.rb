@@ -66,8 +66,8 @@ module LevelsHelper
   end
 
   def use_firebase
-    !!@level.game.use_firebase_for_new_project? ||
-        !!(request.parameters && request.parameters['useFirebase'])
+    !!@level.game.use_firebase_for_new_project? &&
+        !(request.parameters && request.parameters['noUseFirebase'])
   end
 
   def select_and_track_autoplay_video
@@ -258,6 +258,9 @@ module LevelsHelper
     app_options[:level]['puzzle_number'] = script_level ? script_level.position : 1
     app_options[:level]['stage_total'] = script_level ? script_level.stage_total : 1
 
+    # Ensure project_template_level allows start_sources to be overridden
+    app_options[:level]['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
+
     app_options.merge! view_options.camelize_keys
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
@@ -411,6 +414,7 @@ module LevelsHelper
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:firebaseName] = CDO.firebase_name if @game == Game.applab
     app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
+    app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
@@ -629,5 +633,11 @@ module LevelsHelper
     if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions?
       Ability.new(current_user).can? :view_level_solutions, @script
     end
+  end
+
+  # Should the multi calling on this helper function include answers to be rendered into the client?
+  # Caller indicates whether the level is standalone or not.
+  def include_multi_answers?(standalone)
+    standalone || current_user.try(:should_see_inline_answer?, @script_level)
   end
 end

@@ -2,10 +2,6 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @title = nil
-    @description_short = nil
-    @description = nil
-    @description_audience = nil
     @stage = nil
     @stage_flex_category = nil
     @stage_lockable = false
@@ -19,25 +15,19 @@ class ScriptDSL < BaseDSL
     @prompt = nil
     @hidden = true
     @login_required = false
-    @admin_required = false
-    @student_of_admin_required = false
     @pd = false
+    @hideable_stages = false
     @wrapup_video = nil
   end
 
   integer :id
-  string :title
-  string :description_short
-  string :description
-  string :description_audience
   string :professional_learning_course
   integer :peer_reviews_to_complete
 
   boolean :hidden
   boolean :login_required
-  boolean :admin_required
-  boolean :student_of_admin_required
   boolean :pd
+  boolean :hideable_stages
 
   string :wrapup_video
 
@@ -59,9 +49,8 @@ class ScriptDSL < BaseDSL
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
-      admin_required: @admin_required,
       pd: @pd,
-      student_of_admin_required: @student_of_admin_required,
+      hideable_stages: @hideable_stages,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete
     }
@@ -137,12 +126,9 @@ class ScriptDSL < BaseDSL
   end
 
   def i18n_strings
-    @i18n_strings['title'] = @title if @title
-    @i18n_strings['description_short'] = @description_short if @description_short
-    @i18n_strings['description'] = @description if @description
-    @i18n_strings['description_audience'] = @description_audience if @description_audience
+    @i18n_strings['stage'] = {}
     @stages.each do |stage|
-      @i18n_strings[stage[:stage]] = stage[:stage]
+      @i18n_strings['stage'][stage[:stage]] = stage[:stage]
     end
 
     {'name' => {@name => @i18n_strings}}

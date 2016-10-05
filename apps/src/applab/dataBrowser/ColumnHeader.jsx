@@ -2,6 +2,7 @@
  * @overview Component for adding a new column to the specified table.
  */
 
+import ColumnMenu from './ColumnMenu';
 import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
@@ -11,8 +12,19 @@ import * as dataStyles from './dataStyles';
 import { valueOr } from '../../utils';
 
 const styles = {
-  menu: {
-    float: 'right'
+  columnName: {
+    display: 'inline-block',
+    maxWidth: dataStyles.maxCellWidth,
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  container: {
+    justifyContent: 'space-between',
+    padding: '6px 0',
+  },
+  iconWrapper: {
+    alignSelf: 'flex-end',
+    paddingLeft: 5,
   },
   icon: {
     color: 'white',
@@ -22,12 +34,14 @@ const styles = {
 
 const ColumnHeader = React.createClass({
   propTypes: {
+    coerceColumn: React.PropTypes.func.isRequired,
     columnName: React.PropTypes.string.isRequired,
     columnNames: React.PropTypes.array.isRequired,
     deleteColumn: React.PropTypes.func.isRequired,
     editColumn: React.PropTypes.func.isRequired,
     isEditable: React.PropTypes.bool.isRequired,
     isEditing: React.PropTypes.bool.isRequired,
+    isPending: React.PropTypes.bool.isRequired,
     renameColumn: React.PropTypes.func.isRequired,
   },
 
@@ -73,6 +87,10 @@ const ColumnHeader = React.createClass({
     this.setState({isDialogOpen: false});
   },
 
+  handleDelete() {
+    this.setState({isDialogOpen: true});
+  },
+
   handleConfirmDelete() {
     this.setState({isDialogOpen: false});
     this.props.deleteColumn(this.props.columnName);
@@ -110,6 +128,13 @@ const ColumnHeader = React.createClass({
     }
   },
 
+  /**
+   * @param {ColumnType} type
+   */
+  coerceColumn(type) {
+    this.props.coerceColumn(this.props.columnName, type);
+  },
+
   isInputValid() {
     // The current name is always valid.
     const newName = this.state.newName;
@@ -117,13 +142,9 @@ const ColumnHeader = React.createClass({
   },
 
   render() {
-    const menuStyle = [styles.menu, {
-      display: this.props.isEditable ? null : 'none',
-    }];
-    const containerStyle = {
+    const containerStyle = [styles.container, {
       display: this.props.isEditing ? 'none' : null,
-      padding: '6px 0',
-    };
+    }];
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
       backgroundColor: this.isInputValid() ? null : color.lightest_red,
@@ -131,26 +152,23 @@ const ColumnHeader = React.createClass({
     }];
     return (
       <th style={dataStyles.headerCell}>
-        <div style={containerStyle}>
-          {this.props.columnName}
-          {/* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */}
-          <span className="dropdown pull-right" style={menuStyle}>
-            <a className="dropdown-toggle" data-toggle="dropdown">
-              <FontAwesome icon="cog" style={styles.icon}/>
-            </a>
-            <ul className="dropdown-menu dropdown-menu-right">
-              <li>
-                <a onClick={this.handleRename}>
-                 Rename
-                </a>
-              </li>
-              <li>
-                <a onClick={() => this.setState({isDialogOpen: true})}>
-                 Delete
-                </a>
-              </li>
-            </ul>
-          </span>
+        <div style={containerStyle} className="flex">
+          <div style={styles.columnName} className="test-tableNameDiv">
+            {this.props.columnName}
+          </div>
+          <div style={styles.iconWrapper}>
+            {
+              this.props.isPending ?
+                <FontAwesome icon="spinner" className="fa-spin" style={styles.icon}/> :
+                <ColumnMenu
+                  coerceColumn={this.coerceColumn}
+                  handleDelete={this.handleDelete}
+                  handleRename={this.handleRename}
+                  isEditable={this.props.isEditable}
+                />
+            }
+
+          </div>
         </div>
         <Dialog
           body="Are you sure you want to delete this entire column? You cannot undo this action."

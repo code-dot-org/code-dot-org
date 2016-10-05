@@ -3,7 +3,7 @@
     messages:
       not_saved: "Коригирайте следните грешки:"
       too_young: "Това съдържание има възрастови ограничения и не е достъпно за по-малките
-        ученици"
+        ученици."
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -320,7 +320,7 @@
     user_not_found: "Учителят не може да бъде намерен."
     student_teacher_disassociated: "Премахнали сте %{teacher_name} като ваш учител."
     panel:
-      answer_viewer: "Преглед на отговора"
+      answer_viewer: "Учителски панел"
       student: "Ученик"
       viewing_solution: "Показване на решението"
       try_it_yourself: "Опитайте сами"
@@ -924,3 +924,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

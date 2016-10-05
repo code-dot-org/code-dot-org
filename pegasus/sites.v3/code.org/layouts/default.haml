@@ -11,7 +11,7 @@
     = view :header
 
   -if header['theme'] == 'responsive'
-    -if request.path_info =~ /^\/learn/
+    -if request.path_info =~ /^\/learn/ && !request.path_info =~ /^\/learn2016/
       = view :learn_tabs
 
   -if header['theme'] == 'responsive'

@@ -4,10 +4,10 @@
   'yes': "დიახ"
   'no': "არა"
   select_language: "შეარჩიეთ თქვენი ენა"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org მალე შეწყვეტს Internet Exploere 8, 9 და 10-ის მხარდაჭერას.
+    გთხოვთ, განაახლოთ ბრაუზერი უფრო თანამედროვეთი.
+  upgrade_ie_message_csedweek: CSEdWeek.org მალე შეწყვეტს Internet Exploere 8, 9 და
+    10-ის მხარდაჭერას. გთხოვთ, განაახლოთ ბრაუზერი უფრო თანამედროვეთი.
   upgrade_ie_link: "გაიგეთ მეტი"
   en: "ინფორმატიკა"
   computer_science_edweek: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
@@ -35,8 +35,8 @@
   twentyhours_text: "დაასრულეთ თქვენი პირველი კოდის ერთი საათი? გაიგეთ მეტი ინფორმატიკისა
     და პროგრამირების შესახებ მომდევნო კურსში."
   og_title: "ყოველი ბავშვი იმსახურებს შესაძლებლობას"
-  og_description: "ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს
-    პროგრამირება."
+  og_description: "ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა, ისწავლოს
+    კომპიუტერული მეცნიერება. ის ყველაფერს ცვლის."
   hoc2014_heading: შეუერთდით<a href="http://hourofcode.com">კოდის ერთ საათს</a><br/>
     2014 წლის დეკემბერში<br/>
   hoc2014_students: "მოსწავლეები"
@@ -250,8 +250,7 @@
   learn_next_level: "კოდის სტუდიის სხვა კურსზე გადასვლა"
   learn_online: "სცადეთ სხვა ონლაინ-კურსები"
   learn_classes: "იპოვეთ ადგილობრივი კლასები"
-  hoc_is_here: "უკანასკნელი კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის ფარგლებში
-    კოდის ერთი საათი 50–მა მილიონმა მოსწავლემ გაიარა. https://youtu.be/Ofze6CWUCx8."
+  hoc_is_here: "ისწავლეთ კომპიუტერული მეცნიერება. ის ყველაფერს ცვლის. https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "ახლახან დავასრულე #HourOfCode - ნახე! @codeorg"
   just_did_course1: "ახლახან დავასრულე 1-ლი კურსი - ნახე! @codeorg"
   just_did_course2: "ახლახან დავასრულე მე–2 კურსი - ნახე! @codeorg"
@@ -330,7 +329,7 @@
   homepage_hero_text_stat_served: "კოდის ერთი საათი: #served–მა უკვე სცადა"
   homepage_slot_text_hoc: "კოდის ერთი საათი"
   homepage_slot_text_frozen: "გაყინული ანასთან და ელზასთან ერთად"
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: "მასწავლებლის მართვის პანელი"
   homepage_slot_text_studio: "ყველა ტუტორიალი"
   homepage_slot_text_course4: "კურსი 4"
   homepage_slot_text_shop: "მაღაზია"
@@ -362,10 +361,12 @@
   homepage_banner_20k_teachers_link: "გაიგეთ მეტი"
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress_link: "დაამატეთ თქვენი მხარდაჭერა"
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: "დაწვრილებით"
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "გაიგეთ მეტი"
   homepage_slot_text_title_hoc: "კოდის ერთი საათი"
   homepage_slot_text_blurb_hoc: "სწავლა შეუძლია ყველას. დაიწყეთ დღეს"
   homepage_slot_text_link_hoc: "სცადეთ კოდის ერთი საათი"
@@ -391,7 +392,7 @@
   homepage_slot_text_link_stats: "სტატისტიკის ნახვა"
   homepage_slot_text_link_buy: "მონაწილეობის მიღება"
   homepage_slot_text_link_donate: "შემოწირულობის გაღება"
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: "მაისურები, ქუდები და სხვა"
   homepage_header_codestudio: "კოდის სტუდიის მოსწავლეების ქმნილებები"
   homepage_header_donors: Code.org მადლობას უხდის მხარდამჭერებს
   homepage_donors_seall: "ყველას ნახვა"
@@ -463,11 +464,10 @@
   mc_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6–106"
   minecraft_subtitle: "მაინკრაფტის კოდის ერთი საათი"
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
+  watch_inspirational_videos: "სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს"
+  speak_another_language: "სხვა ენაზე ლაპარაკობთ?"
+  help_translate: "დაგვეხმარეთ თარგმნაში."
+  no_internet: "არ გაქვთ ინტერნეტი?"
   download_offline: Download the offline version.
   are_you_teacher: "მასწავლებელი ხართ?"
   review_lesson_plan: Review the lesson plan and other teacher resources.
@@ -609,7 +609,8 @@
     href="/learn/beyond">ჩვენი პარტნიორებისგან.</a> ისწავლეთ რობოტების დაპროგრამება,
     ვებ-გვერდების შექმნა, დაწერეთ საკუთარი აპლიკაცია ან გაეცანით სხვა ენებს, მაგალითად
     C++, Ruby ან Python-ს!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_inspire: "წაახალისეთ თქვენი მოსწავლეები პოსტერებით, ვიდეოებითა
+    და მეტით."
   dashboard_landing_video_library: Use a video from the Video Library of computer
     science concepts.
   dashboard_landing_report_bug: Request a feature or report a bug.
@@ -663,7 +664,7 @@
   dashboard_action_remove_confirm: "წავშალოთ?"
   dashboard_action_done: "მზადაა"
   dashboard_action_required: "აუცილებელია"
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: "სერტიფიკატის ამობეჭდვა"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -673,10 +674,10 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_surveys_answers: "გამოკითხვები"
+  dashboard_percent: "პროცენტი"
+  dashboard_filter_by_stage: "ფილტრაცია დონის მიხედვით:"
+  dashboard_filter_all: "ყველა"
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "მასწავლებლის მთავარი გვერდი"
   dashboard_navigation_section_student_progress: "მოსწავლეების ანგარიშები და პროგრესი"
@@ -687,13 +688,13 @@
   dashboard_navigation_section_speakers: "ინფორმატიკა <br/> მოწვეული სპიკერები"
   dashboard_navigation_all_sections: "მოსწავლეების ანგარიშები და პროგრესი"
   dashboard_navigation_view_progress: "პროგრესი"
-  dashboard_navigation_view_text_responses: "ტექსტური პასუხების ნახვა"
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_text_responses: "ტექსტური პასუხები"
+  dashboard_navigation_view_assessments: "ტესტები"
+  dashboard_navigation_view_assessments_surveys: "ტესტები/გამოკითხვები"
   dashboard_navigation_add_students: "მოსწავლეებს დამატება"
   dashboard_navigation_manage_students: "სტუდენტების მართვა"
   dashboard_navigation_lesson_plans_resources: "გაკვეთილების გეგმები და რესურსები"
-  dashboard_navigation_view_stats: "სტატისტიკის ნახვა"
+  dashboard_navigation_view_stats: "სტატისტიკა"
   dashboard_navigation_section: "განყოფილება: %{section_name}"
   dashboard_navigation_student: "მოსწავლე: %{student_name}"
   dashboard_progress_not_started: "არ არის დაწყებული"
@@ -717,7 +718,7 @@
   dashboard_sections_table_secret: "შესვლის ტიპი"
   dashboard_sections_table_grade: "შეფასება"
   dashboard_sections_table_course: "კურსი"
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: "დამატებითი რესურსები"
   dashboard_sections_table_students: "მოსწავლეები"
   dashboard_sections_table_code: "სექციის კოდი"
   dashboard_sections_name: "განყოფილების სახელი"
@@ -735,22 +736,23 @@
     ინფორმაციით და დაურიგოთ ისინი თქვენს მოსწავლეებს."
   dashboard_sections_switch_section: "განყოფილების გადართვა:"
   dashboard_sections_close: "დახურვა"
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_move_students_desc: "მონიშნეთ მოსწავლეები ახალ სექციაში გადასაყვანად.
+    მოსწავლეთა გადაყვანა არ წაშლის მათ პროგრესს."
+  dashboard_sections_one_per_teacher: "სტუდენტებს შეუძლიათ, თითოეული მასწავლებლის
+    მხოლოდ ერთ სექციაში იყვნენ. თქვენი სტუდენტები დაემატებიან ამ ახალ სექციას და დატოვებენ
+    ძველს."
+  dashboard_sections_move_to_section: "გადასვლა სექციაში:"
+  dashboard_sections_enter_code: "შეიყვანეთ სექციის კოდი:"
+  dashboard_sections_code_placeholder: 6–ნიშნა კოდი (ABCDEF)
+  dashboard_sections_other_section: "სხვა მასწავლებელი"
+  dashboard_sections_both_sections: "გსურთ, რომ მოსწავლე(ები) ორივე სექციაში იყვნენ?"
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
+  dashboard_sections_no_move: "არა, მსურს, გადაადგილებული სტუდენტ(ებ)ი იყვნენ მხოლოდ
+    ახალ სექციაში."
   dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
+  dashboard_error_none_selected: "თქვენ არ მოგინიშნავთ არც ერთი სტუდენტი გადასაადგილებლად.
+    გთხოვთ, მონიშნოთ მინიმუმ ერთი სტუდენტი."
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
@@ -892,16 +894,26 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "გაიგეთ მეტი"
   dashboard_announce_try_now_button: "სცადეთ ახლა"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: "დაამატე შენი სახელი"
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_petition: "როგორც მასწავლებელი, თქვენ მიუძღვებით მოძრაობას, რათა
+    ყველა სკოლის ყველა მოსწავლეს მიეცეს კომპიუტერული მეცნიერების სწავლის საშუალება.
+    ახლა დროა, თქვენს წარმომადგენლებს შეეხმიანოთ. ამ კვირაში, საგანმანათლებლო ლიდერები,
+    28 გუბერნატორი და ამერიკის უდიდესი კომპანიების აღმასრულებელი დირექტორები გაერთიანდნენ
+    ღია წერილში, რომლითაც ა.შ.შ-ს კონგრესს მიმართეს, რომ დააფინანსოს K-12 კომპიუტერული
+    მეცნიერების სწავლება."
+  dashboard_announce_petition_button: "დაამატეთ თქვენი სახელი"
+  dashboard_announce_all: "მიიღეთ უახლესი ინფორმაცია ახალი მახასიათებლებითა და მასწავლებლის
+    განახლებადი ბლოგით. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა
+    განცხადებები.</a>"
   code_hoc_coming: "გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!"
   code_sign_up: "დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში"
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "სცადეთ ახლა"
   learn_sign_up_description: "დარეგისტრირდით და მიიღეთ მონაწილეობა კოდის ერთ საათიში
     CS საგანმანათლებლო კვირეულის ფარგლებში"
@@ -1025,17 +1037,17 @@
   course4_name: "კურსი 4"
   accelerated_name: "დაჩქარებული კურსი"
   cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
+  cspunit2_name: "(ძველი) სექცია 2: ინტერნეტი"
   cspunit3_name: "კომპიუტერული მეცნიერების პრინციპები ერთეული 3"
-  cspunit4_name: 'Unit 4: Data'
+  cspunit4_name: "(ძველი) სექცია 4: მონაცემები"
   cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
+  csp1_name: "სექცია 1: ინტერნეტი"
+  csp2_name: "სექცია 2: ციფრული ინფორმაცია"
   csp3_name: 'Unit 3: Algorithms and Programming'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
+  cspassessment_name: "სრული ტესტი – 50 კითხვა"
+  cspexam1-mWU7ilDYM9_name: "ტესტის ნაწილი 1 – 25 კითხვა"
+  cspexam2-AKwgAh1ac5_name: "ტესტის ნაწილი 2 – 25 კითხვა"
   cspunit3_gradelevel: "კლასები 9-12"
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1043,7 +1055,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: "დაჩქარებული კურსი"
-  algebra_name: CS in Algebra
+  algebra_name: "კომპიუტერული მეცნიერება ალგებრაში"
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
@@ -1732,11 +1744,11 @@
   sphero_beyond_longdescription: "არა აქვს მნიშვნელობა, მშობელი ხართ თუ მასწავლებელი:
     SPRK გაკვეთილებით თქვენი ბავშვები სწრაფად და ხალისიანად ისწავლიან რობოტების პროგრამირებას
     და განავითარებენ მათემატიკის უნარებს."
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_hide_this_warning: "გაფრთხილების გათიშვა"
+  compatibility_unsupported_browser: "თქცენს ბრაუზერს არ აქვს მხარდაჭერა. თხოვთ, განაახლეთ
+    თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ მიერ
+    მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა
+    დარღვეული იქნება."
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn

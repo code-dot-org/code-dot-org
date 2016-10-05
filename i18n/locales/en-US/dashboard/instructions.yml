@@ -795,6 +795,8 @@ en:
       course3_playlab_stage17_5_instruction: crwdns58068:0crwdne58068:0
       course3_playlab_stage17_6_instruction: crwdns58069:0crwdne58069:0
       course3_playlab_stage17_7_instruction: crwdns58070:0crwdne58070:0
+      Crack a Caesar Cipher_instruction: crwdns60154:0crwdne60154:0
+      Crack Random Substitution_instruction: crwdns60155:0crwdne60155:0
       CSD Hackathon Pt 1_instruction: crwdns56227:0crwdne56227:0
       CSD Hackathon Pt 2_instruction: crwdns56228:0crwdne56228:0
       CSD Hackathon Week 1_instruction: crwdns56229:0crwdne56229:0
@@ -1041,6 +1043,7 @@ en:
       grade2_CaringForNewPet_5_instruction: crwdns57467:0crwdne57467:0
       grade2_CaringForNewPet_6_instruction: crwdns57468:0crwdne57468:0
       grade2_CaringForNewPet_7D_instruction: crwdns58081:0crwdne58081:0
+      grade2_collector_pre1_instruction: crwdns67412:0crwdne67412:0
       grade2_MakeDogTag_1_instruction: crwdns57469:0crwdne57469:0
       grade2_MakeDogTag_10_instruction: crwdns57470:0crwdne57470:0
       grade2_MakeDogTag_2_instruction: crwdns57471:0crwdne57471:0
@@ -1053,6 +1056,11 @@ en:
       grade2_MakeDogTag_9_instruction: crwdns57478:0crwdne57478:0
       grade2_maze_debuggingFP_instruction: crwdns58293:0crwdne58293:0
       grade2_maze_debuggingPre_instruction: crwdns58294:0crwdne58294:0
+      grade2_maze_intro10_instruction: crwdns67413:0crwdne67413:0
+      grade2_maze_intro6_instruction: crwdns67414:0crwdne67414:0
+      grade2_maze_intro7_instruction: crwdns67415:0crwdne67415:0
+      grade2_maze_intro8_instruction: crwdns67416:0crwdne67416:0
+      grade2_maze_intro9_instruction: crwdns67417:0crwdne67417:0
       grade2_PuppyLoops_1_instruction: crwdns57479:0crwdne57479:0
       grade2_PuppyLoops_10_instruction: crwdns57480:0crwdne57480:0
       grade2_PuppyLoops_2_instruction: crwdns57481:0crwdne57481:0
@@ -1883,6 +1891,8 @@ en:
       testArtistForTestK_instruction: crwdns57100:0crwdne57100:0
       Testing Quantum Farmer_instruction: crwdns56301:0crwdne56301:0
       Text Compression 1_instruction: crwdns48389:0crwdne48389:0
+      The Vigenere Cipher Widget_instruction: crwdns60156:0crwdne60156:0
+      The Vigenere Cipher_instruction: crwdns60157:0crwdne60157:0
       Total Artist Clone Me_instruction: crwdns50672:0crwdne50672:0
       U1L10 NetSim numbers with decimal_instruction: crwdns41846:0crwdne41846:0
       U1L11 NetSim numbers with Ascii_instruction: crwdns41847:0crwdne41847:0
@@ -2410,6 +2420,7 @@ en:
       U4 - ReadRecords - Contacts App 3_instruction: crwdns55847:0crwdne55847:0
       U4 - ReadRecords - Contacts App 4_instruction: crwdns55848:0crwdne55848:0
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: crwdns55849:0crwdne55849:0
+      U4 vigenere cipher 2_instruction: crwdns60158:0crwdne60158:0
       U4L02 - Objects - createObject_instruction: crwdns55169:0crwdne55169:0
       U4L02 - Objects - eventParameter_instruction: crwdns55170:0crwdne55170:0
       U4L02 - Objects - Template1_instruction: crwdns55171:0crwdne55171:0

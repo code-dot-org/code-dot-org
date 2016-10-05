@@ -830,8 +830,8 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Poiščite ikono...
+      no_icons_found: Ni najdenih ikon
     playzone:
       artist_description: Draw cool pictures and designs with the Artist!
       artist_title: New Drawing
@@ -892,3 +892,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

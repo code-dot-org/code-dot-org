@@ -2,7 +2,7 @@ si:
   errors:
     messages:
       not_saved: 'කරුණාකර පහත දෝෂ නිවැරදි කරන්න:'
-      too_young: This content has age restrictions in place and is not available for younger students.
+      too_young: මෙම අන්තර්ගතය සදහා වයස් සීමාවක් ඇති අතර තරුණ සිසුන් සඳහා ලබා ගත හැකි නොවේ.
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
       pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
@@ -106,7 +106,7 @@ si:
     user_type_teacher: ගුරු වරයා
     user_type_student: ශිෂ්‍යයා
     field_is_required: අවශ්‍යයි
-    accept_terms: You must agree to create an account
+    accept_terms: ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය
   signin_form:
     title: ඔබට ගිණුමක් ඇති නම් ඇතුලු විය හැක
     login: විද්‍යුත් තැපැල
@@ -128,7 +128,7 @@ si:
   password:
     reset_form:
       title: ඔබගේ මුරපදය අමතකද?
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: ඔබගේ ඊ-තැපැල් ලිපිනය පහත ඇතුලත් කළ පසු අපි ඔබට මුරපදය යළි සැකසීමෙී උපදෙස් එවන්නම්.
       email: විද්‍යුත් තැපැල් ලිපිනය
       submit: යොමුකරන්න
     change_form:
@@ -246,7 +246,7 @@ si:
       prizes: තෑගි
       logout: නික්මෙන්න
       signin: පුරන්න
-      signup: Create an account
+      signup: ගිණුමක් තනන්න
       already_registered: පෙර ලියාපදිංචි වී ඇත් ද?
       pair_programming: Pair Programming
       team: කණ්ඩායම
@@ -277,7 +277,7 @@ si:
     user_not_found: මෙම ගුරුවරයා සොයා ගත නොහැක.
     student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: ගුරු මණ්ඩලය
       student: ශිෂ්‍යයා
       viewing_solution: විසඳුම නරඔනවා
       try_it_yourself: ඔබ විසින්ම උත්සහකර බලන්න
@@ -287,7 +287,7 @@ si:
       submitted_on: 'ඉදිරිපත් කලේ:'
       unsubmit: යොමු නොකරන්න
       worked_with: වැඩ කරන්නේ
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: අගුලු සැකසුම් මෙහිදී යාවත්කාලීන කරන්න.
   user:
     email_confirm_needed: 'විද්යුත් තැපැල් ලිපිනය තහවුරු කර නොමැත:'
     email_confirm_needed_required: 'ඔබේ විද්යුත් තැපැල් ලිපිනය %{email} තහවුරු කර නොමැත:'
@@ -364,7 +364,7 @@ si:
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: ශිෂ්ය හැඳුනුම් පත් ලබා දෙන්න.
     student_not_found: සිසුන් එක් අයෙක් හෝ ඊට වැඩි ගණනක් සොයා ගැනීමට නොහැකි විය.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    all_students_must_be_in_current_section: සියලුම සිසුන් දැන් ඔබගේ කොටසට ඇතුළත් වී සිටිය යුතුය.
     already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න
@@ -727,3 +727,5 @@ si:
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

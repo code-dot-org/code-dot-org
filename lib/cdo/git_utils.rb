@@ -45,7 +45,7 @@ module GitUtils
   end
 
   def self.circle_commit_message
-    `git log --format=%B -n 1 -1`.strip
+    `git log --format=%B -n 1 $CIRCLE_SHA1`.strip
   end
 
   def self.get_latest_commit_merged_branch

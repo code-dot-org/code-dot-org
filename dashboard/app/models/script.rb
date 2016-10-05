@@ -79,7 +79,12 @@ class Script < ActiveRecord::Base
     end
   end
 
-  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required peer_reviews_to_complete)
+  serialized_attrs %w(
+    hideable_stages
+    pd
+    peer_reviews_to_complete
+    professional_learning_course
+  )
 
   def self.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -173,7 +178,18 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        script = Script.includes([
+          {
+            script_levels: [
+              {levels: [:game, :concepts, :level_concept_difficulty]},
+              :stage,
+              :callouts
+            ]
+          },
+          {
+            stages: [{script_levels: [:levels]}]
+          }
+        ]).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -198,8 +214,8 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Returns a cached map from level id to level, or nil if in level_builder mode
-  # which disables caching.
+  # Returns a cached map from level id and level name to level, or nil if in
+  # level_builder mode which disables caching.
   def self.level_cache
     return nil unless self.should_cache?
     @@level_cache ||= {}.tap do |cache|
@@ -207,6 +223,7 @@ class Script < ActiveRecord::Base
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
+        cache[level.name] = level unless cache.key? level.name
       end
     end
   end
@@ -227,19 +244,27 @@ class Script < ActiveRecord::Base
     script_level
   end
 
-  # Find the level with the given id from the cache, unless the level build mode
-  # is enabled in which case it is always fetched from the database. If we need to fetch
-  # the level and we're not in level mode (for example because the level was created after
-  # the cache), then an entry for the level is added to the cache.
-  def self.cache_find_level(level_id)
-    level = level_cache[level_id] if self.should_cache?
+  # Find the level with the given id or name from the cache, unless the level
+  # build mode is enabled in which case it is always fetched from the database.
+  # If we need to fetch the level and we're not in level mode (for example
+  # because the level was created after the cache), then an entry for the level
+  # is added to the cache.
+  # @param level_identifier [Integer | String] the level ID or level name to
+  #   fetch
+  # @return [Level] the (possibly cached) level
+  # @raises [ActiveRecord::RecordNotFound] if the level cannot be found
+  def self.cache_find_level(level_identifier)
+    level = level_cache[level_identifier] if self.should_cache?
+    return level unless level.nil?
 
-    # If the cache missed or we're in levelbuilder mode, fetch the level from the db.
-    if level.nil?
-      level = Level.find(level_id)
-      # Cache the level, unless it wasn't found.
-      @@level_cache[level_id] = level if level && self.should_cache?
-    end
+    # If the cache missed or we're in levelbuilder mode, fetch the level from
+    # the db. Note the field trickery is to allow passing an ID as a string,
+    # which some tests rely on (unsure about non-tests).
+    field = level_identifier.to_i.to_s == level_identifier.to_s ? :id : :name
+    level = Level.find_by!(field => level_identifier)
+    # Cache the level by ID and by name, unless it wasn't found.
+    @@level_cache[level.id] = level if level && self.should_cache?
+    @@level_cache[level.name] = level if level && self.should_cache?
     level
   end
 
@@ -344,7 +369,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
+    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_banner?
@@ -458,7 +483,7 @@ class Script < ActiveRecord::Base
         end
 
         if [Game.applab, Game.gamelab].include? level.game
-          unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+          unless script.hidden || script.login_required
             raise <<-ERROR.gsub(/^\s+/, '')
               Applab and Gamelab levels can only be added to scripts that are hidden or require login
               (while adding level "#{level.name}" to script "#{script.name}")
@@ -556,18 +581,19 @@ class Script < ActiveRecord::Base
     script
   end
 
-  def update_text(script_params, script_text)
+  def update_text(script_params, script_text, metadata_i18n)
     begin
+      script_name = script_params[:name]
       transaction do
-        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
+        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
         Script.add_script({
-          name: script_params[:name],
+          name: script_name,
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
-        Script.update_i18n(i18n)
+        Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -592,10 +618,11 @@ class Script < ActiveRecord::Base
     Rake::FileTask['config/scripts/.seeded'].invoke
   end
 
-  def self.update_i18n(custom_i18n)
+  def self.update_i18n(stages_i18n, metadata_i18n = {})
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
-    i18n.deep_merge!(custom_i18n){|_, old, _| old} # deep reverse merge
+    i18n.deep_merge!(stages_i18n){|_, old, _| old}
+    i18n.deep_merge!(metadata_i18n)
     File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
 
@@ -646,11 +673,18 @@ class Script < ActiveRecord::Base
       id: id,
       name: name,
       plc: professional_learning_course?,
+      hideable_stages: hideable_stages?,
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
 
     summary
+  end
+
+  def summarize_i18n
+    %w(title description description_short description_audience).map do |key|
+      [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
+    end.to_h
   end
 
   def self.clear_cache
@@ -664,10 +698,9 @@ class Script < ActiveRecord::Base
 
   def self.build_property_hash(script_data)
     {
+      hideable_stages: script_data[:hideable_stages] || false, # default false
       pd: script_data[:pd] || false, # default false
-      admin_required: script_data[:admin_required] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      student_of_admin_required: script_data[:student_of_admin_required] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
     }.compact
   end

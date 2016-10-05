@@ -28,7 +28,7 @@ id:
         persegi panjang menjadi 2 persegi sama besar. Lebar persegi panjang adalah 200 pikel
         dan tingginya 100 piksel.
       2-3 Artist 9 NEW_instruction: Selesaikan layang-layang ini
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_instruction: Selesaikan menggambar tangga ini!
       2-3 Artist 9_instruction: Selesaikan layang-layang ini
       2-3 Artist Assessment 1_instruction: |
         Penilaian: Selesaikan menggambar gigi terakhir,
@@ -216,9 +216,8 @@ id:
       2-3 Maze 12 (copy 2)_instruction: 'Bisakah kamu mengganti jawaban sebelumnya dengan hanya dua blok? (Petunjuk: buat perulangan dengan menggunakan blok "Ulangi kali".)'
       2-3 Maze 12 (old)_instruction: Bawa aku ke si babi, sekarang dengan blok Ulangi kali!
       2-3 Maze 12 - One Move Block_instruction: |
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+        Sampai ke babinya! Tapi kali ini, kamu
+        hanya dapat menggunakan satu balok `gerak maju`. Apakah kamu melihat balok lain yang dapat membantumu?
       2-3 Maze 12_instruction: 'Bisakah kamu mengganti blok lima ini dengan hanya dua blok? (Petunjuk: buat perulangan menggunakan blok "Ulangi kali".)'
       2-3 Maze 13 (old)_instruction: Bawa aku ke si babi, sekarang dengan blok Ulangi kali!
       2-3 Maze 13_instruction: Bawa aku ke si babi dengan hanya dua blok.
@@ -238,8 +237,8 @@ id:
       2-3 Maze 8_instruction: Bawa aku ke si babi!
       2-3 Maze 9_instruction: Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)
       2-3 Maze Loops 1_instruction: |
-        Can you get me to the pig using 5 of the same
-        kind of blocks?
+        Bisakah kamu membawaku ke babinya dengan
+        menggunakan 5 balok yang berjenis sama?
       2-3 Maze Loops 17_instruction: Bawa aku ke bunga matahari!
       2-3 Maze Loops 18_instruction: Bawa aku ke bunga matahari!
       2-3 Maze Loops 19_instruction: Bawa aku ke bunga matahari!
@@ -492,37 +491,31 @@ id:
         Kumpulkan nektar dari barisan bunga tersebut!
         Gunakan perulangan bersarang.
       4-5 Maze 1 (copy 1)_instruction: Halo seseorang disana. Saya zombie. Haru.. mendapatkan.. bunga matahari.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      4-5 Maze 1_instruction: Halo orang. Saya zombie. Harus... ke... bunga matahari.
       4-5 Maze 10_instruction: Bisakah kamu bergerak ke bunga matahari dengan menggunakan hanya empat blok?
       4-5 Maze 11_instruction: Bisakah Anda mendapatkan bunga matahari dengan hanya menggunakan enam blok?
       4-5 Maze 12_instruction: Oke, yang ini agak sedikit berbeda. Bisakah Anda melakukannya hanya dalam enam blok?
       4-5 Maze 13_instruction: Bawa aku ke si babi!
-      4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
+      4-5 Maze 14_instruction: Bawa saya ke babinya! Gunakan balok Ulangi sampai.
+      4-5 Maze 2 (copy 1)_instruction: Bawa si zombie ke bunga matahari, tapi hindari chomper!
+      4-5 Maze 2_instruction: Bawa si zombie ke bunga matahari, tapi hindari chomper!
       4-5 Maze 3 (copy 1)_instruction: Harus... segera... ke bunga matahari.
       4-5 Maze 3_instruction: Harus... segera... ke bunga matahari.
-      4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
+      4-5 Maze 4 (copy 1)_instruction: 'Coba gunakan balok "ulangi" untuk mengurangi jumlah balok...'
       4-5 Maze 4_instruction: 'Use the "repeat" block to solve the puzzle quickly...'
       4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+        Bisakah kamu memecahkan teka-teki ini dengan
+        menggunakan sesedikit balok mungkin?
+      4-5 Maze 5_instruction: Apakah kamu bisa menggunakan blok seminimal mungkin untuk memecahkan puzzle berikut?
       4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Get me to the sunflower using the fewest number of
-        blocks possible!
+        Bisakah kamu memecahkan teka-teki ini dengan
+        menggunakan sesedikit balok mungkin?
+      4-5 Maze 6_instruction: Antarkan aku ke Bunga Matahari dengan menggunakan blok seminimal mungkin!
       4-5 Maze 7_instruction: |
-        Get the zombie to the sunflower quickly!  Can you
-        solve the puzzle in fewer than 11 blocks?
-      4-5 Maze 8_instruction: "Get the zombie to the sunflower using as few blocks\nas you can.  \r\n(Avoid the chompers!)"
-      4-5 Maze 9_instruction: "Now we have a new block called `repeat until`.  \r\nThis\nwill let us keep looping commands until the zombie gets the sunflower.  \r\n\r\nUse\nthe new `repeat until` block to solve this puzzle in as few commands as possible."
+        Cepat bawa si zombie ke bunga matahari! Bisakah
+        kamu memecahkan teka-teki di bawah 11 balok?
+      4-5 Maze 8_instruction: "Antarkan zombie ke bunga matahari dengan menggunakan blok seminimal yang anda bisa. \r\n(Hindari chompers!)"
+      4-5 Maze 9_instruction: "Sekarang kita mempunyai balok yang disebut 'ulangi hingga' \r\nBalok itu akan membantu kita untuk mengiterasi perintah hingga si zombie mendapatkan bunga matahari \r\n\r\nGunakan balok baru ini untuk memecahkan teka-teki dengan perintah seminimal mungkin."
       4-5 Maze Assessment 1_instruction: |
         Assessment: Get to the sunflower using
         as few blocks as possible.
@@ -1690,12 +1683,8 @@ id:
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
         when solving this puzzle...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 5_instruction: Apakah kamu bisa menggunakan blok seminimal mungkin untuk memecahkan puzzle berikut?
+      Course 4 Maze 6_instruction: Apakah kamu bisa menggunakan blok seminimal mungkin untuk memecahkan puzzle berikut?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -1952,6 +1941,8 @@ id:
       course3_playlab_stage17_7_instruction: |
         Create your own story. When you're
         done, click Finish to let friends try your story on their phones.
+      Crack a Caesar Cipher_instruction: instruksi
+      Crack Random Substitution_instruction: instruksi
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
@@ -2721,6 +2712,9 @@ id:
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_pre1_instruction: |
+        Ruff! Can you help me collect some tennis
+        balls?
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -2753,6 +2747,17 @@ id:
       grade2_maze_debuggingPre_instruction: |
         Play with these blocks to see what they
         make the bird do!
+      grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro6_instruction: |
+        That’s it!  Now we’re ready to try to solve
+        a few puzzles. 
+      grade2_maze_intro7_instruction: This time, try something a bit more challenging.
+      grade2_maze_intro8_instruction: |
+        This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice.
+      grade2_maze_intro9_instruction: Solve this puzzle.
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?
@@ -4987,6 +4992,8 @@ id:
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      The Vigenere Cipher Widget_instruction: instruksi
+      The Vigenere Cipher_instruction: instruksi
       Total Artist Clone Me_instruction: |
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -6657,6 +6664,7 @@ id:
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 vigenere cipher 2_instruction: instruksi
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full

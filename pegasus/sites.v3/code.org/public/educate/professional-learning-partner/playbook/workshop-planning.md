@@ -276,11 +276,15 @@ Take a look at the [CSP pacing guide](https://code.org/curriculum/docs/csp/units
 <br/>
 <br/>
 <br/>
-**Example Workshop Agendas**
+**Workshop Resources**
 
-- [Phase 2: Summer Workshop](/files/csp-p2-agenda.pdf)<br/>
+- [Phase 2: Summer Workshop Agenda](/files/csp-p2-agenda.pdf)<br/>
 - Phase 3: Academic Year Development <br/>
-	- [Session A](/files/CSPFirstQuarterWorkshop-teachers.pdf)<br/>
+	- Session A
+		- [Agenda](https://code.org/files/CSPFirstQuarterWorkshop-teachers.pdf)
+		- [Teacher Packet](https://docs.google.com/document/d/13CPBruuyfu9xA7mhMBNEVvS0_TbfAF4PK-tlPmiKaqg/edit?usp=sharing)
+		- [Facilitator Prep](https://docs.google.com/document/d/1oE3khvNrgIuUl4gmqEzG1qbocHbmI3RLo0l69Irc3wc/edit?usp=sharing)
+		- [Template Slide Deck](https://docs.google.com/presentation/d/1YC0M0hASMuIs4ZXJoYJ15tv78PMG5hMoRkKgdpl-rPY/edit?usp=sharing)
 	- Session B<br/>
 	- Session C<br/>
 	- Session D<br/>

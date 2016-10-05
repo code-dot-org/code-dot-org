@@ -4,8 +4,8 @@ el-GR:
   "yes": Ναι
   "no": Όχι
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Το Code.org θα αποσύρει σύντομα την υποστήριξη για Internet Explorer 8, 9 και 10. Παρακαλούμε αναβαθμίστε σε ένα σύγχρονο πρόγραμμα περιήγησης.
+  upgrade_ie_message_csedweek: Το CSEdWeek.org θα αποσύρει σύντομα την υποστήριξη για Internet Explorer 8, 9 και 10. Παρακαλούμε αναβαθμίστε σε ένα σύγχρονο πρόγραμμα περιήγησης.
   upgrade_ie_link: Μάθετε περισσότερα
   en: Επιστήμη των Υπολογιστών
   computer_science_edweek: Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών
@@ -276,6 +276,8 @@ el-GR:
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Μάθετε περισσότερα
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
@@ -674,6 +676,9 @@ el-GR:
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!'
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής εβδομάδας για την Επιστήμη της Πληροφορικής
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Δοκιμάστε τώρα
   learn_sign_up_description: Εγγραφείτε για να συμμετάσχετε στην Ώρα του Κώδικα κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη Υπολογιστών
   learn_sign_up_button: Εγγραφή

@@ -37,6 +37,7 @@ module ScriptConstants
   CSP17_UNIT1_NAME = 'csp1'
   CSP17_UNIT2_NAME = 'csp2'
   CSP17_UNIT3_NAME = 'csp3'
+  CSP17_UNIT4_NAME = 'csp4'
 
   CSP_ASSESSMENT_NAME = 'cspassessment'
   CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'
@@ -86,7 +87,8 @@ module ScriptConstants
     csp17: [
       CSP17_UNIT1_NAME,
       CSP17_UNIT2_NAME,
-      CSP17_UNIT3_NAME
+      CSP17_UNIT3_NAME,
+      CSP17_UNIT4_NAME
     ],
     cspexams: [
       CSP_ASSESSMENT_NAME,

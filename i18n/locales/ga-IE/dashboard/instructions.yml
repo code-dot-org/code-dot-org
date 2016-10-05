@@ -1417,7 +1417,7 @@ ga:
         check the value of score - if score is ever greater that 20, make the emeny
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: 'Tugaimis ar an madra bocht seo gach uimhir ó 1 go 100 a rá. Úsáid lúb "do gach" agus an bloc "counter" chun an athróg a léamh gach uair a ritear an lúb.'
-      Course 4 Play Labs For Loops 2_instruction: An uair seo, déanaimis iarracht na huimhreacha corra ó 1 go 101 a rá.
+      Course 4 Play Labs For Loops 2_instruction: An uair seo, cabhraigh le hOlive an Cat na huimhreacha corra ó 1 go 101 a rá.
       Course 4 Play Labs For Loops 3_instruction: Má úsáidimid incrimint níos mó, is féidir linn áireamh níos airde sa tréimhse chéanna. Tabhair ar Chos Mhaide áireamh ó 10 go 1000, le hincrimint 10.
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
@@ -1479,22 +1479,20 @@ ga:
       Course1BeePuzzle12_instruction: Bailigh trí neachtar ansin déan dhá mhil
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      course2_playlab_stage17_1_instruction: |
-        Can you make Jorge the Dog (actor 1)
-        say "Hi"?
-      course2_playlab_stage17_10_instruction: An féidir leat dhá bhloc a cheangal a athróidh an cúlra agus luas na piongaine? Ansin treoraigh leis na saighde é go dtí go ngnóthóidh tú pointe.
+      course2_playlab_stage17_1_instruction: 'An féidir leat cabhrú le Jorge an Madra (aisteoir 1) "Dia dhuit" a rá?'
+      course2_playlab_stage17_10_instruction: An féidir leat blocanna a cheangal a athróidh an cúlra agus luas na piongaine? Ansin treoraigh leis na saighde é go dtí go ngnóthóidh tú pointe.
       course2_playlab_stage17_11_instruction: 'Scríobh do scéal féin. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil ar a nguthán.'
-      course2_playlab_stage17_2_instruction: An féidir leat tabhairt ar an madra seo rud éigin a rá, ansin an cat rud éigin eile a rá ina dhiaidh?
-      course2_playlab_stage17_3_instruction: An féidir leat clár a scríobh chun an madra a aistriú go dtí an cat?
-      course2_playlab_stage17_4_instruction: 'An féidir leat ríomhchlár a scríobh a aistríonn an madra go dtí an cat, agus a thugann ar an gcat "dia dhuit" a rá nuair a shroicheann an madra é?'
+      course2_playlab_stage17_2_instruction: An féidir leat tabhairt ar an madra seo (aisteoir 1) rud éigin a rá, ansin an cat (aisteoir 2) rud éigin eile a rá ina dhiaidh?
+      course2_playlab_stage17_3_instruction: An féidir leat clár a scríobh chun an madra (aisteoir 1) a aistriú go dtí an cat?
+      course2_playlab_stage17_4_instruction: 'An féidir leat ríomhchlár a scríobh a aistríonn an madra (aisteoir 1) go dtí an cat, agus a thugann ar an gcat "dia dhuit" a rá nuair a shroicheann an madra é?'
       course2_playlab_stage17_5_instruction: 'An féidir leat ríomhchlár a scríobh a thugann ar an ochtapas "dia dhuit" a rá nuair a chliceáiltear é?'
       course2_playlab_stage17_6_instruction: An féidir leat ríomhchlár a scríobh a aistríonn an phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na spriocanna go léir a bhaint amach?
       course2_playlab_stage17_7_instruction: |
         The `repeat forever` block allows you
         to run code over and over forever. Can you attach blocks to move Chomp the
         Dino (actor 2) up and down forever?
-      course2_playlab_stage17_8_instruction: 'An féidir leat tabhairt ar an bpiongain "Aigh!" a rá agus fuaim "buille" a sheinm má bhuaileann sé leis an dineasár? Ansin aistrigh leis na saighde é sa chaoi go dtarlóidh sé sin.'
-      course2_playlab_stage17_9_instruction: An féidir leat bloc a cheangal a thabharfaidh pointe don imreoir nuair a bhuailfidh an phiongain leis an ochtapas? Ansin treoraigh an phiongain leis na saighde go dtí go ngnóthóidh tú pointe.
+      course2_playlab_stage17_8_instruction: 'An féidir leat tabhairt ar an bpiongain (aisteoir 1) "Aigh!" a rá agus fuaim "buille" a sheinm má bhuaileann sé leis an dineasár? Ansin aistrigh leis na saighde é sa chaoi go dtarlóidh sé sin.'
+      course2_playlab_stage17_9_instruction: An féidir leat bloc a cheangal a thabharfaidh pointe don imreoir nuair a bhuailfidh an phiongain leis an ochtapas (aisteoir 3)? Ansin treoraigh an phiongain leis na saighde go dtí go ngnóthóidh tú pointe.
       course3_playlab_stage16_1_instruction: 'An féidir leat tabhairt ar an madra seo "dia dhaoibh" a rá?'
       course3_playlab_stage16_2_instruction: An féidir leat tabhairt ar an madra seo rud éigin a rá, ansin an cat rud éigin eile a rá ina dhiaidh?
       course3_playlab_stage16_3_instruction: An féidir leat clár a scríobh chun an madra a aistriú go dtí an cat?
@@ -1503,14 +1501,13 @@ ga:
       course3_playlab_stage16_6_instruction: 'Scríobh do scéal féin. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil ar a nguthán.'
       course3_playlab_stage17_1_instruction: 'An féidir leat ríomhchlár a scríobh a thugann ar an ochtapas "dia dhuit" a rá nuair a chliceáiltear é?'
       course3_playlab_stage17_2_instruction: An féidir leat ríomhchlár a scríobh a aistríonn an phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na spriocanna go léir a bhaint amach?
-      course3_playlab_stage17_3_instruction: |
-        The "repeat forever" block allows
-        you to run code continuously. Can you attach blocks to move this dinosaur
-        up and down repeatedly?
+      course3_playlab_stage17_3_instruction: 'Is féidir leat an bloc "go deo na ndeor" a úsáid chun cód a rith go leanúnach. An féidir leat blocanna a cheangal leis chun cabhrú leis an dineasár dul suas agus síos arís agus arís eile?'
       course3_playlab_stage17_4_instruction: 'An féidir leat tabhairt ar an bpiongain "Aigh!" a rá agus fuaim "buille" a sheinm má bhuaileann sé leis an dineasár? Ansin aistrigh leis na saighde é sa chaoi go dtarlóidh sé sin.'
       course3_playlab_stage17_5_instruction: An féidir leat bloc a cheangal a thabharfaidh pointe don imreoir nuair a bhuailfidh an phiongain leis an ochtapas? Ansin treoraigh an phiongain leis na saighde go dtí go ngnóthóidh tú pointe.
       course3_playlab_stage17_6_instruction: An féidir leat dhá bhloc a cheangal a athróidh an cúlra agus luas na piongaine? Ansin treoraigh leis na saighde é go dtí go ngnóthóidh tú pointe.
       course3_playlab_stage17_7_instruction: 'Scríobh do scéal féin. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil ar a nguthán.'
+      Crack a Caesar Cipher_instruction: Treoracha
+      Crack Random Substitution_instruction: Treoracha
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
@@ -2224,6 +2221,9 @@ ga:
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_pre1_instruction: |
+        Ruff! Can you help me collect some tennis
+        balls?
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -2252,6 +2252,17 @@ ga:
       grade2_maze_debuggingPre_instruction: |
         Play with these blocks to see what they
         make the bird do!
+      grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro6_instruction: |
+        That’s it!  Now we’re ready to try to solve
+        a few puzzles. 
+      grade2_maze_intro7_instruction: This time, try something a bit more challenging.
+      grade2_maze_intro8_instruction: |
+        This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice.
+      grade2_maze_intro9_instruction: Solve this puzzle.
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?
@@ -4166,6 +4177,8 @@ ga:
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      The Vigenere Cipher Widget_instruction: Treoracha
+      The Vigenere Cipher_instruction: Treoracha
       Total Artist Clone Me_instruction: |
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -5836,6 +5849,7 @@ ga:
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 vigenere cipher 2_instruction: Treoracha
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
