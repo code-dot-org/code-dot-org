@@ -1,0 +1,45 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-10-04T21:59:09.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "markdown_instructions": "# Player Interactions\r\n\r\nNow you can add the interactions between the player sprite and the other sprites.\r\n\r\n# Do This\r\n\r\n* Create a function that makes your player collide with the platforms, then use it in the draw loop.\r\n* Run the code to test your function.\r\n* Create a function that checks whether your player sprite is touching an item.  If the player has touched the item, use the counter pattern to increase the score by 1, and reset the item to the top of the screen.\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "show_d_pad": "false",
+    "pause_animations_by_default": "false",
+    "project_template_level_name": "CSD U3 platform template",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

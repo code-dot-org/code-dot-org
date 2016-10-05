@@ -1,0 +1,7 @@
+name 'CSD U3 platform intro'
+title 'Build a Platform Jumper'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Build a Platform Jumper
+MARKDOWN
