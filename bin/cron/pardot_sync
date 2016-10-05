@@ -1,0 +1,419 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require_relative '../../lib/state_abbr'
+require src_dir 'database'
+require_relative('../../dashboard/config/environment')
+require 'cdo/properties'
+require 'json'
+
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(
+  CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+
+UPDATE_BATCH_SIZE = 100
+
+DASHBOARD_DB_NAME = "dashboard_#{Rails.env}"
+
+def log(s)
+  puts s      # emit to stdout
+  CDO.log.info s   # emit to log file
+end
+
+def truncate_contacts_rollup
+  start = Time.now
+  log "Truncating contacts_rollup"
+  PEGASUS_DB.run "TRUNCATE TABLE contacts_rollup"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def insert_from_dashboard_contacts
+  start = Time.now
+  log "Inserting teacher contacts and IP geo data from dashboard.users"
+  PEGASUS_DB.run "
+    INSERT INTO contacts_rollup (email,name,dashboard_user_id,roles, city, state, postal_code, country)
+	  SELECT email COLLATE utf8_general_ci, name, users.id, 'Teacher', city, state, postal_code, country FROM #{DASHBOARD_DB_NAME}.users AS users
+    LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
+    WHERE users.user_type = 'teacher'AND LENGTH(email) > 0
+    ON DUPLICATE KEY UPDATE contacts_rollup.email=VALUES(email), contacts_rollup.name=VALUES(name), contacts_rollup.dashboard_user_id=VALUES(dashboard_user_id), roles=VALUES(roles)"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def insert_from_dashboard_pd_enrollments
+  start = Time.now
+  log "Inserting contacts from dashboard.pd_enrollments"
+  PEGASUS_DB.run "
+    INSERT INTO contacts_rollup (email,name)
+	  SELECT email,name FROM dashboard_development.pd_enrollments AS pd_enrollments
+    WHERE LENGTH(pd_enrollments.email) > 0
+	  ON DUPLICATE KEY UPDATE email=contacts_rollup.email,name=contacts_rollup.name"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def insert_from_pegasus_contacts
+  start = Time.now
+  log "Inserting contacts from pegasus.contacts"
+  PEGASUS_DB.run "
+    INSERT INTO contacts_rollup (email, name)
+    SELECT email,name FROM contacts WHERE LENGTH(email) > 0
+    ON DUPLICATE KEY UPDATE contacts_rollup.email=VALUES(email), contacts_rollup.name=VALUES(name)"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def insert_from_pegasus_forms
+  start = Time.now
+  log "Inserting contacts and IP geo data from pegasus.forms"
+  PEGASUS_DB.run "
+    INSERT IGNORE INTO contacts_rollup (email, name, city, state, postal_code, country)
+    SELECT email,name, city, state, postal_code,country FROM forms
+    LEFT OUTER JOIN form_geos on form_geos.form_id = forms.id"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def update_roles
+  start = Time.now
+  log "Updating Facilitator, Workshop Organizer, District Contact roles from dashboard.users"
+  append_to_role_list_from_permission("facilitator", "Facilitator")
+  append_to_role_list_from_permission("workshop_organizer", "Workshop Organizer")
+  append_to_role_list_from_permission("district_contact", "District Contact")
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  log "Updating Professional Learning Partner role"
+  append_plp_to_role_list
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def append_to_role_list_from_permission(permission_name, dest_value)
+  PEGASUS_DB.run "
+    UPDATE contacts_rollup
+	    INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = contacts_rollup.dashboard_user_id
+	    INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
+	  SET roles = CONCAT(COALESCE(CONCAT(roles,','),''),'#{dest_value}')
+    WHERE LENGTH(users.email) > 0
+		AND user_permissions.permission = '#{permission_name}' AND contacts_rollup.id > 0"
+end
+
+def append_to_list_field_from_form(form_kinds, dest_field, dest_value)
+  start = Time.now
+  log "Appending '#{dest_field}' field with #{dest_value} from forms of kind #{form_kinds}"
+
+  PEGASUS_DB.run "
+    UPDATE contacts_rollup
+      INNER JOIN forms ON forms.email = contacts_rollup.email
+	  SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field},','),''),#{dest_value})
+    WHERE forms.kind IN (#{form_kinds}) AND contacts_rollup.id > 0"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def append_plp_to_role_list
+  PEGASUS_DB.run "
+    UPDATE contacts_rollup
+	    INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = contacts_rollup.dashboard_user_id
+	    INNER JOIN #{DASHBOARD_DB_NAME}.professional_learning_partners AS professional_learning_partners ON professional_learning_partners.contact_id = users.id
+	  SET roles = CONCAT(COALESCE(CONCAT(roles,','),''),'PLP')
+    WHERE LENGTH(users.email) > 0 AND contacts_rollup.id > 0"
+end
+
+# List of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
+# need to filter here to known courses in the Pardot schema - we can't blindly pass values through
+COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science'"
+
+def update_facilitator_types
+  start = Time.now
+  log "Updating facilitator types"
+  PEGASUS_DB.run "
+    UPDATE contacts_rollup,
+    (SELECT facilitator_id, group_concat(course) AS courses FROM
+      (SELECT DISTINCT facilitator_id,course FROM #{DASHBOARD_DB_NAME}.pd_course_facilitators
+	      WHERE COURSE IN (#{COURSE_LIST})
+	      ORDER by 1,2
+      ) q
+      GROUP BY facilitator_id
+    ) src
+	  SET contacts_rollup.facilitator_type = src.courses
+    WHERE contacts_rollup.dashboard_user_id = src.facilitator_id"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def update_professional_learning_enrollment
+  start = Time.now
+  log "Updating professional learning enrollment"
+  PEGASUS_DB.run "
+    UPDATE contacts_rollup,
+      (SELECT user_id, group_concat(course) AS courses FROM
+         (SELECT DISTINCT pd_enrollments.user_id, pd_workshops.course FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
+	          INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_enrollments.pd_workshop_id
+            WHERE course IN (#{COURSE_LIST})
+            ORDER BY 1,2
+         ) q
+      GROUP by user_id
+      ) src
+	  SET contacts_rollup.professional_learning_enrolled = src.courses
+    WHERE contacts_rollup.dashboard_user_id = src.user_id"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def update_professional_learning_attendance
+  start = Time.now
+  log "Updating professional learning attendance"
+  PEGASUS_DB.run "
+    UPDATE contacts_rollup,
+      (SELECT teacher_id, group_concat(course) as courses FROM
+        (SELECT DISTINCT teacher_id,course FROM
+          (SELECT pd_attendances.teacher_id, pd_workshops.course
+            FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
+	            INNER JOIN #{DASHBOARD_DB_NAME}.pd_sessions AS pd_sessions ON pd_sessions.id = pd_attendances.pd_session_id
+	            INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_sessions.pd_workshop_id
+            WHERE course IN (#{COURSE_LIST})
+            UNION
+            SELECT teacher_id,
+              CASE program_type
+                WHEN 1 THEN 'CS in Science'
+                WHEN 2 THEN 'CS in Algebra'
+                WHEN 3 THEN 'Exploring Computer Science'
+                WHEN 4 THEN 'CS Principles'
+                WHEN 5 THEN 'CS Fundamentals'
+              END AS course
+            FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
+	            INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
+	            INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
+            ) q1
+          ORDER BY 1,2
+          ) q2
+        GROUP BY teacher_id
+      ) src
+    SET contacts_rollup.professional_learning_attended = src.courses
+    WHERE contacts_rollup.dashboard_user_id = src.teacher_id"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def mysql_multi_connection
+  # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
+  Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
+end
+
+def update_geo_data_from_forms(form_kind)
+  start = Time.now
+  log "Updating geo data for form kind #{form_kind}"
+
+  record_count = 0
+  num_updated = 0
+  num_parse_errors = 0
+  update_batch = ""
+  conn = mysql_multi_connection
+  time_last_output = start
+
+  PEGASUS_DB[:forms].where(:kind => form_kind).each do |form|
+    record_count += 1
+    begin
+      data = JSON.parse(form[:data])
+    rescue JSON::ParserError
+      # we have just a couple of records with invalid JSON (duplicate fields), rescue and skip these
+      num_parse_errors += 1
+      next
+    end
+
+    email = data['email_s'].presence
+    next if email.nil?
+
+    # get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
+    street_address = data['location_street_address_s'].presence || data['user_street_address_s'].presence
+    city = data['location_city_s'].presence || data['user_city_s'].presence || data['teacher_city_s'].presence
+    state = data['location_state_s'].presence || data['teacher_state_s'].presence
+    if state.nil?
+      # note that the 'user_state_s' record is in fact a *state code*, not a state name
+      state_code = data['location_state_code_s'].presence || data['state_code_s'].presence || data['user_state_s'].presence
+      state = get_us_state_from_abbr(abbr: state_code, include_dc: true).presence unless state_code.nil?
+    end
+    postal_code = data['location_postal_code_s'].presence || data['zip_code_s'].presence || data['user_postal_code_s'].presence
+    country = data['location_country_s'].presence || data['country_s'].presence || data['teacher_country_s'].presence
+
+    # skip if this form data has no address/location info at all
+    next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil?
+
+    # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed.
+    street_address = street_address[0...255] unless street_address.nil?
+    city = city[0...255] unless city.nil?
+    state = state[0...255] unless state.nil?
+    postal_code = postal_code[0...255] unless postal_code.nil?
+    country = country[0...255] unless country.nil?
+
+    # add to batch to update
+    update_batch += conn[:contacts_rollup].where(:email => email).update_sql(
+      :street_address => street_address, :city => city, :state => state, :postal_code => postal_code, :country => country) + ";"
+
+    num_updated += 1
+
+    if record_count % UPDATE_BATCH_SIZE == 0
+      begin
+        conn.run update_batch
+      rescue => e
+        log "Error: #{e}. Cmd: #{update_batch}"
+        raise
+      end
+
+      # Discard the connection and get a new one after each batch. Currently, if you use multiple statements in a batch, the first call will succeed; the next call on
+      # the same connecton AFTER you do a multi-stament call will fail with a MySQL error that commands are out of order. The innertubes suggest that this may be a problem in mysql2 gem.
+      # Fortunately, it is fairly cheap to get a new connection for each batch (time to get new connection is negligible compared to batch time).
+      conn.disconnect
+      conn = mysql_multi_connection
+
+      update_batch = ""
+      if Time.now - time_last_output > 5
+        log "#{record_count} "
+        time_last_output = Time.now
+      end
+    end
+  end
+
+  conn.run update_batch unless update_batch.empty?
+  log "- #{record_count} source records, #{num_updated} with geo data, #{num_parse_errors} skipped due to invalid JSON, " + ((Time.now) - start).to_s + " seconds"
+end
+
+def update_grades_taught
+  start = Time.now
+  log "Updating grades taught from dashboard.users"
+  PEGASUS_DB.run "
+    UPDATE contacts_rollup,
+    (SELECT dashboard_user_id, group_concat(grade) as grades FROM
+	    (SELECT DISTINCT contacts_rollup.dashboard_user_id, sections.grade from contacts_rollup
+		    INNER JOIN #{DASHBOARD_DB_NAME}.sections AS sections on sections.user_id = contacts_rollup.dashboard_user_id
+		    WHERE contacts_rollup.dashboard_user_id is not null
+		    AND length(sections.grade) > 0
+		    ORDER by 1,2
+	    ) q
+	    GROUP BY dashboard_user_id
+    ) src
+    SET contacts_rollup.grades_taught = src.grades
+    WHERE contacts_rollup.id > 0 AND (contacts_rollup.dashboard_user_id = src.dashboard_user_id)"
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def update_ages_taught_for_age(age)
+  start = Time.now
+  log "Updating ages taught for age #{age}"
+
+  min_birthday = ""
+  max_birthday = ""
+  # for age = 21, include 21 and above
+  min_birthday = "students.birthday > DATE_ADD(NOW(),INTERVAL -#{age + 1} YEAR) AND" unless age >= 21
+  # for age = 4, include 4 and below
+  max_birthday = "students.birthday <= DATE_ADD(NOW(),INTERVAL -#{age} YEAR) AND" unless age <= 4
+
+  sql = "
+    UPDATE contacts_rollup, (
+    SELECT DISTINCT sections.user_id AS teacher_user_id
+    FROM #{DASHBOARD_DB_NAME}.users AS students
+      INNER JOIN #{DASHBOARD_DB_NAME}.followers AS followers
+        ON followers.student_user_id = students.id
+      INNER JOIN #{DASHBOARD_DB_NAME}.sections AS sections
+        ON sections.id = followers.section_id
+    WHERE
+      #{min_birthday}
+      #{max_birthday}
+      students.id != sections.user_id
+    ) src
+    SET contacts_rollup.ages_taught = CONCAT(COALESCE(CONCAT(contacts_rollup.ages_taught,','),''),'#{age}')
+    WHERE contacts_rollup.dashboard_user_id = teacher_user_id"
+
+  PEGASUS_DB.run sql
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def update_ages_taught
+  # Computing all ages taught per teacher in one massive query was computationally
+  # overwhelming - the query would never complete. After experimenting with a variety
+  # of approaches, the most performant solution proved to be slicing first by student
+  # age (for each integer age) and calculating which teachers teach that age.
+  (4..21).each do |age|
+    update_ages_taught_for_age(age)
+  end
+end
+
+def update_district
+  start = Time.now
+  log "Updating district information from users"
+
+  # note that user district information seems less good than dashboard.pd_enrollments. So
+  # far no user has had district info where dashboard.pd_enrollments did not. And user district info
+  # has district names like "open csp".
+  districts = District.all.index_by(&:id)
+
+  users = User.where("length(email) > 0")
+
+  users.find_each do |user|
+    PEGASUS_DB[:contacts_rollup].where(:email => user.email).
+        update(:school_name => user.ops_school) unless user.ops_school.nil?
+
+    unless user.district_id.nil?
+      district = districts[user.district_id]
+      unless district.nil?
+        PEGASUS_DB[:contacts_rollup].where(:email => user.email).
+            update(:district_name => district.name)
+      end
+    end
+  end
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  log "Updating district information from dashboard.pd_enrollments"
+  DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(:email => nil).exclude(:school_district_id => nil).
+      select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
+      inner_join(:school_districts, :id => :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
+
+    PEGASUS_DB[:contacts_rollup].where(:email => pd_enrollment[:email]).update(:district_name => pd_enrollment[:district_name], :district_city => pd_enrollment[:city],
+                                                                               :district_state => pd_enrollment[:state], :district_zip => pd_enrollment[:zip])
+  end
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def update_school
+  start = Time.now
+  log "Updating school information from dashboard.pd_enrollments"
+  DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(:email => nil).where('length(school) > 0').find do |pd_enrollment|
+    PEGASUS_DB[:contacts_rollup].where(:email => pd_enrollment[:email]).update(:school_name => pd_enrollment[:school])
+  end
+  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+end
+
+def main
+  return unless only_one_running?(__FILE__)
+
+  start = Time.now
+  PEGASUS_DB.run "SET SQL_SAFE_UPDATES = 0"
+
+  truncate_contacts_rollup
+  insert_from_pegasus_forms
+  insert_from_dashboard_contacts
+  insert_from_dashboard_pd_enrollments
+  insert_from_pegasus_contacts
+  update_roles
+  update_grades_taught
+  update_ages_taught
+  update_district
+  update_school
+  update_facilitator_types
+  update_professional_learning_enrollment
+  update_professional_learning_attendance
+
+  # record contacts' interactions with us based on forms
+  form_infos = [["'CSEdWeekEvent2013'", "hoc_organizer", "'2013'"],
+                ["'HocSignup2014'", "hoc_organizer", "'2014'"],
+                ["'HocSignup2015'", "hoc_organizer", "'2015'"],
+                ["'HocSignup2016'", "hoc_organizer", "'2016'"],
+                ["'Petition'", "roles", "'Petition Signer'"]
+               ]
+  form_infos.each do |form_info|
+    append_to_list_field_from_form(form_info[0], form_info[1], form_info[2])
+  end
+
+  # parse all forms that collect user-reported address/location data
+  form_kinds = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey)
+
+  form_kinds.each do |kind|
+    update_geo_data_from_forms(kind)
+  end
+
+  log "Done. Total overall time: " + ((Time.now) - start).to_s + " seconds"
+end
+
+main
