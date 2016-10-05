@@ -19,8 +19,9 @@ machine:
     - docker
 checkout:
   post:
-    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
-        parallel: true
+    # Temporarily disable Eyes baseline branch merging while not running eyes tests on CircleCI
+    # - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
+    #    parallel: true
     - case $CIRCLE_NODE_INDEX in 0) echo "Skipping step." ;; *) ./bin/circle/merge-base ;; esac:
         parallel: true
 dependencies:
