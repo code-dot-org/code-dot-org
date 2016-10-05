@@ -1,0 +1,351 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require_relative '../../lib/state_abbr'
+require src_dir 'database'
+require_relative('../../dashboard/config/environment')
+require 'cdo/properties'
+require 'cdo/solr'
+
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(
+  CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+
+SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
+SOLR_PARAMS_TEACHER = {
+    q: 'kind_s:user && role_s:teacher',
+    fl: %w[id create_ip_city_s create_ip_state_s create_ip_country_s create_ip_postal_code_s],
+    rows: 100000
+}
+
+UPDATE_BATCH_SIZE = 100
+
+def quote_string(v)
+  v.to_s.gsub(/\\/, '\&\&').gsub(/'/, "''")
+end
+
+def append_to_role_list_from_permission(permission_name, dest_value)
+  PEGASUS_DB.run "UPDATE pegasus_development.contacts_rollup
+	INNER JOIN dashboard_development.users ON dashboard_development.users.id = pegasus_development.contacts_rollup.dashboard_user_id
+	INNER JOIN dashboard_development.user_permissions ON dashboard_development.user_permissions.user_id = dashboard_development.users.id
+	SET roles = CONCAT(COALESCE(CONCAT(roles,','),''),'#{dest_value}')
+    WHERE LENGTH(dashboard_development.users.email) > 0
+		AND dashboard_development.user_permissions.permission = '#{permission_name}' AND pegasus_development.contacts_rollup.id > 0"
+end
+
+def append_to_list_field_from_form(form_kinds, dest_field, dest_value)
+  PEGASUS_DB.run "UPDATE contacts_rollup
+    INNER JOIN forms ON forms.email = contacts_rollup.email
+	    SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field},','),''),#{dest_value})
+    WHERE forms.kind IN (#{form_kinds}) AND contacts_rollup.id > 0"
+end
+
+def mysql_multi_connection
+  Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
+end
+
+def merge_geo_data_from_forms(kind)
+  puts "Merging geo data for form kind: '#{kind}'"
+
+  solr_params = {
+      q: "kind_s:#{kind}",
+      rows: 100000
+  }
+
+  i = 0
+  num_updated = 0
+  update_batch = ""
+  conn = mysql_multi_connection
+
+  start = Time.now
+  SOLR.query(solr_params).each do |record|
+    i += 1
+
+    email = record['email_s'].presence
+    next if email.nil?
+
+    street_address = record['location_street_address_s'].presence || record['user_street_address_s'].presence
+    city = record['location_city_s'].presence || record['user_city_s'].presence || record['teacher_city_s'].presence || record['create_ip_city_s'].presence
+    state = record['location_state_s'].presence || record['teacher_state_s'].presence
+    if state.nil?
+      # note that the 'user_state_s' record is in fact a *state code*, not a state name
+      state_code = record['location_state_code_s'].presence || record['state_code_s'].presence || record['user_state_s'].presence
+      state = get_us_state_from_abbr(abbr: state_code, include_dc: true).presence unless state_code.nil?
+    end
+    state ||= record['create_ip_state_s'].presence
+    postal_code = record['location_postal_code_s'].presence || record['zip_code_s'].presence || record['user_postal_code_s'].presence || record['create_ip_postal_code_s'].presence
+    country = record['location_country_s'].presence || record['country_s'].presence || record['teacher_country_s'].presence || record['create_ip_country_s'].presence
+
+    next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil?
+
+    # TODO: add street address to schema? update street address
+    update_batch += conn[:contacts_rollup].where(:email => email).update_sql(:city => city, :state => state,
+                                                                             :postal_code => postal_code, :country => country) + ";"
+
+    num_updated += 1
+
+    if i % UPDATE_BATCH_SIZE == 0
+      # puts "batch: #{i}"
+      conn.run update_batch
+      conn.disconnect
+      conn = mysql_multi_connection
+      update_batch = ""
+    end
+  end
+
+  conn.run update_batch unless update_batch.empty?
+
+  puts "- #{i} source records, #{num_updated} with geo data " + ((Time.now) - start).to_s + " seconds"
+end
+
+def main
+  return unless only_one_running?(__FILE__)
+
+#=begin
+  start = Time.now
+  print "Truncating contacts_rollup"
+  PEGASUS_DB.run "TRUNCATE TABLE contacts_rollup"
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  limit = "LIMIT 0,100000"
+
+  start = Time.now
+  print "Inserting teacher contacts from dashboard.users"
+  PEGASUS_DB.run "INSERT INTO pegasus_development.contacts_rollup (email,name,dashboard_user_id,roles)
+	  SELECT email COLLATE utf8_general_ci, name, id, 'Teacher' FROM dashboard_development.users
+      WHERE dashboard_development.users.user_type = 'teacher'AND LENGTH(email) > 0
+      ON DUPLICATE KEY UPDATE contacts_rollup.email=VALUES(email), contacts_rollup.name=VALUES(name), contacts_rollup.dashboard_user_id=VALUES(dashboard_user_id), roles=VALUES(roles)"
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Marking Facilitator, Workshop Organizer, District Contact roles from dashboard.users"
+  append_to_role_list_from_permission("facilitator", "Facilitator")
+  append_to_role_list_from_permission("workshop_organizer", "Workshop Organizer")
+  append_to_role_list_from_permission("district_contact", "District Contact")
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Marking grades taught from dashboard.users"
+  PEGASUS_DB.run "SET SQL_SAFE_UPDATES = 0"
+  PEGASUS_DB.run "UPDATE contacts_rollup,
+(SELECT dashboard_user_id, group_concat(grade) as grades FROM
+	(SELECT DISTINCT contacts_rollup.dashboard_user_id, dashboard_development.sections.grade from contacts_rollup
+		INNER JOIN dashboard_development.sections on dashboard_development.sections.user_id = contacts_rollup.dashboard_user_id
+		WHERE contacts_rollup.dashboard_user_id is not null
+		AND length(dashboard_development.sections.grade) > 0
+		ORDER by 1,2
+	) q
+	GROUP BY dashboard_user_id
+) src
+SET contacts_rollup.grades_taught = src.grades
+WHERE contacts_rollup.id > 0 AND (contacts_rollup.dashboard_user_id = src.dashboard_user_id)"
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Inserting contacts from pegasus.contacts"
+  PEGASUS_DB.run "INSERT INTO contacts_rollup (email, name)
+    SELECT email,name FROM contacts WHERE LENGTH(email) > 0
+    ORDER BY id ASC #{limit}
+    ON DUPLICATE KEY UPDATE contacts_rollup.email=VALUES(email), contacts_rollup.name=VALUES(name)"
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Inserting contacts from pegasus.forms"
+  PEGASUS_DB.run "INSERT INTO contacts_rollup (email, name)
+    SELECT email,name FROM forms WHERE LENGTH(email) > 0
+    ORDER BY id ASC #{limit}
+    ON DUPLICATE KEY UPDATE contacts_rollup.email=VALUES(email), contacts_rollup.name=VALUES(name)"
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+#=end
+
+#=begin
+  start = Time.now
+  print "Inserting contacts from dashboard.pd_enrollments"
+  DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(:email => nil).each do |pd_enrollment|
+    email = quote_string(pd_enrollment[:email])
+    name = quote_string(pd_enrollment[:name])
+
+    # might be able to avoid raw SQL with ON_DUPLICATE_KEY_UPDATE functionality in Sequel - http://sequel.jeremyevans.net/rdoc-adapters/classes/Sequel/161/DatasetMethods.html
+    PEGASUS_DB.run "INSERT INTO contacts_rollup (email, name) VALUES ('#{email}', '#{pd_enrollment[name]}') ON DUPLICATE KEY UPDATE name=name,district_name=district_name"
+  end
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Merging district information from dashboard.pd_enrollments"
+  DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(:email => nil).exclude(:school_district_id => nil).
+      select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
+      inner_join(:school_districts, :id => :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
+
+    PEGASUS_DB[:contacts_rollup].where(:email => pd_enrollment[:email]).update(:district_name => pd_enrollment[:district_name], :district_city => pd_enrollment[:city],
+      :district_state => pd_enrollment[:state], :district_zip => pd_enrollment[:zip])
+  end
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Merging school information from dashboard.pd_enrollments"
+  DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(:email => nil).where('length(school) > 0').each do |pd_enrollment|
+    PEGASUS_DB[:contacts_rollup].where(:email => pd_enrollment[:email]).update(:school_name => pd_enrollment[:school])
+  end
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  # note that user district information seems less good than dashboard.pd_enrollments. So
+  # far no user has had district info where dashboard.pd_enrollments did not. And user district info
+  # has district names like "open csp".
+  start = Time.now
+  print "Merging district information from users"
+  # TODO: use hash instead of array
+  districts = District.all.to_a
+
+  users = User.where("length(email) > 0").limit(10000)
+
+  users.each do |user|
+    PEGASUS_DB[:contacts_rollup].where(:email => user.email).
+      update(:school_name => user.ops_school) unless user.ops_school.nil?
+
+    unless user.district_id.nil?
+      district = districts.find{|d| user.district_id == d.id }
+
+      unless district.nil?
+        PEGASUS_DB[:contacts_rollup].where(:email => user.email).
+            update(:district_name => district.name)
+      end
+    end
+  end
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+#=end
+
+#=begin
+  start = Time.now
+  print "Merging teachers, grades taught, ages taught"
+
+  teachers = User.where(:user_type => "teacher").where("length(email) > 0").limit(10000)
+
+  i = 0
+  teachers.each do |teacher_user|
+    ages_taught = SortedSet.new
+    sections = Section.where(:user_id => teacher_user.id).includes(:students)
+    sections.find_each do |section|
+      section.students.find_each do |student_user|
+        ages_taught.add(student_user.age.to_s) unless student_user.age.nil?
+      end
+    end
+
+    unless ages_taught.empty?
+      ages_list = ages_taught.to_a.join(",")
+      PEGASUS_DB[:contacts_rollup].where(:email => user.email).
+          update(:ages_taught => ages_list)
+    end
+    i += 1
+
+    if (i % 100) == 1
+      puts i
+    end
+  end
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+#=end
+
+#=begin
+  start = Time.now
+  print "Merging 2013 HOC organizers from pegasus.forms"
+  append_to_list_field_from_form("'CSEdWeekEvent2013'", "hoc_organizer", "'2013'")
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Merging 2014 HOC organizers from pegasus.forms"
+  append_to_list_field_from_form("'HocSignup2014'", "hoc_organizer", "'2014'")
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Merging 2015 HOC organizers from pegasus.forms"
+  append_to_list_field_from_form("'HocSignup2015'", "hoc_organizer", "'2015'")
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Merging 2016 HOC organizers from pegasus.forms"
+  append_to_list_field_from_form("'HocSignup2016'", "hoc_organizer", "'2016'")
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Merging petition signers from pegasus.forms"
+  append_to_list_field_from_form("'Petition'", "roles", "'Petition Signer'")
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
+  print "Merging volunteers from pegasus.forms"
+  append_to_list_field_from_form("'VolunteerContact2015','VolunteerEngineerSubmission','VolunteerEngineerSubmission2015','VolunteerTranslator'", "roles", "'Volunteer'")
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+#=end
+
+#=begin
+
+  start = Time.now
+  print "Merging geo data from SOLR"
+  i = 0
+  update_batch = ""
+  conn = mysql_multi_connection
+
+  SOLR.query(SOLR_PARAMS_TEACHER).each do |record|
+    i += 1
+    user_id_match = /(?<=user-).*/.match(record['id'])
+
+    next unless user_id_match.presence?
+
+    user_id = user_id_match[0].to_i
+
+    update_batch += conn[:contacts_rollup].where(:dashboard_user_id => user_id).update_sql(:city => record['create_ip_city_s'], :state => record['create_ip_state_s'],
+                                                                                           :postal_code => record['create_ip_postal_code_s'], :country => record['create_ip_country_s']) + ";"
+    if (i % UPDATE_BATCH_SIZE) == 0
+      conn.run update_batch
+      conn.disconnect
+      conn = mysql_multi_connection
+      update_batch = ""
+    end
+  end
+
+  if update_batch.presence
+    conn.run update_batch
+  end
+
+  puts "- #{i} records, " + ((Time.now) - start).to_s + " seconds"
+#=end
+
+  # excluding forms: AffiliateWorkshopSignup
+
+  merge_geo_data_from_forms('BringToSchool2013')
+  merge_geo_data_from_forms('CSEdWeekEvent2013')
+  merge_geo_data_from_forms('ClassSubmission')
+  merge_geo_data_from_forms('CompanyProfile')
+  merge_geo_data_from_forms('DistrictPartnerSubmission')
+  merge_geo_data_from_forms('HelpUs2013')
+  merge_geo_data_from_forms('Petition')
+
+  merge_geo_data_from_forms('HocSignup2014')
+  merge_geo_data_from_forms('HocSignup2015')
+  merge_geo_data_from_forms('HocSignup2016')
+
+  merge_geo_data_from_forms('K5OnlineProfessionalDevelopmentPostSurvey')
+  merge_geo_data_from_forms('K5ProfessionalDevelopmentSurvey')
+  merge_geo_data_from_forms('PdWorkshopMaterials')
+  merge_geo_data_from_forms('PdWorkshopSurvey')
+  merge_geo_data_from_forms('ProfessionalDevelopmentWorkshop')
+  merge_geo_data_from_forms('ProfessionalDevelopmentWorkshopSignup')
+
+  puts "Done"
+end
+
+main
+
+#=begin
+
+require src_dir 'database'
+require_relative('../dashboard/config/environment')
+require 'cdo/properties'
+require 'cdo/solr'
+SOLR = Solr::Server.new(host: 'localhost')
+SOLR_PARAMS = {
+    q: 'kind_s:user && role_s:teacher',
+    fl: %w[id create_ip_city_s create_ip_state_s create_ip_country_s create_ip_postal_code_s],
+    rows: 100000
+}
+
+UPDATE_BATCH_SIZE = 100
+merge_geo_data_from_forms('HocSignup2014')
+#=end
