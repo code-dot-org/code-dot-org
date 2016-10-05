@@ -688,7 +688,9 @@ And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   }
 
   # enroll in a plc course as a way of becoming an authorized teacher
-  enroll_in_plc_course(@users["Teacher_#{name}"][:email])
+  # Disable, as this is causing us strange issues (next url change results in 404)
+  # and is only needed by one usage, which we will also temporarily disable.
+  #enroll_in_plc_course(@users["Teacher_#{name}"][:email])
 
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
