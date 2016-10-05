@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929123700) do
+ActiveRecord::Schema.define(version: 20161003232500) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -303,11 +303,11 @@ ActiveRecord::Schema.define(version: 20160929123700) do
   end
 
   create_table "pd_district_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "district_id"
-    t.string  "course",                              null: false
-    t.string  "rate_type",                           null: false
-    t.decimal "rate",        precision: 8, scale: 2, null: false
-    t.index ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
+    t.integer "school_district_id"
+    t.string  "course",                                     null: false
+    t.string  "rate_type",                                  null: false
+    t.decimal "rate",               precision: 8, scale: 2, null: false
+    t.index ["school_district_id", "course"], name: "index_pd_district_payment_terms_on_school_district_id_and_course", using: :btree
   end
 
   create_table "pd_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
