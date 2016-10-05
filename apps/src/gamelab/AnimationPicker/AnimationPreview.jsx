@@ -16,7 +16,7 @@ const AnimationPreview = React.createClass({
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
     alwaysPlay: React.PropTypes.bool,
-    allAnimationsSingleFrame: React.PropTypes.bool.isRequired
+    neverPlay: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -58,7 +58,7 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    if (this.props.allAnimationsSingleFrame) {
+    if (this.props.neverPlay) {
       return;
     }
 
@@ -138,11 +138,7 @@ const AnimationPreview = React.createClass({
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
-  return {
-    allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame
-  };
-})(AnimationPreview);
+export default AnimationPreview;
 
 function scaleVector2(vector, scale) {
   return {
