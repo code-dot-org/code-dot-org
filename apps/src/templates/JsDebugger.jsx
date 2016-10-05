@@ -169,7 +169,7 @@ var JsDebugger = function (props) {
           headerHasFocus={hasFocus}
           isRtl={false}
         />
-        <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={props.stepSpeed} lineWidth={130} onChange={props.setStepSpeed}/>
+        {props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={props.stepSpeed} lineWidth={130} onChange={props.setStepSpeed}/>}
       </PaneHeader>
       {props.debugButtons && <DebugButtons/>}
       {props.debugConsole && <DebugConsole debugButtons={props.debugButtons} debugWatch={props.debugWatch}/>}
@@ -182,6 +182,7 @@ JsDebugger.propTypes = {
   debugButtons: React.PropTypes.bool.isRequired,
   debugConsole: React.PropTypes.bool.isRequired,
   debugWatch: React.PropTypes.bool.isRequired,
+  debugSlider: React.PropTypes.bool.isRequired,
   isDebuggerPaused: React.PropTypes.bool.isRequired,
   stepSpeed: React.PropTypes.number.isRequired,
   setStepSpeed: React.PropTypes.func.isRequired
@@ -192,6 +193,7 @@ module.exports = connect(function propsFromStore(state) {
     debugButtons: state.pageConstants.showDebugButtons,
     debugConsole: state.pageConstants.showDebugConsole,
     debugWatch: state.pageConstants.showDebugWatch,
+    debugSlider: state.pageConstants.showDebugSlider,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     stepSpeed: state.runState.stepSpeed
   };

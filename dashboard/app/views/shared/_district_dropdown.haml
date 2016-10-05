@@ -1,7 +1,7 @@
 - require 'state_abbr'
 
 - content_for(:head) do
-  =javascript_include_tag 'js/districtDropdown'
+  %script{src: minifiable_asset_path('js/districtDropdown.js')}
 
 #pl-application-form
   #pl-application-facets.form-section
@@ -53,4 +53,3 @@
     // Send through some values that the JavaScript will need.
     window.districtDropdownManager = new DistrictDropdownManager(options);
   });
-

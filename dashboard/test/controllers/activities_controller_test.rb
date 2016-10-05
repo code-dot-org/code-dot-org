@@ -385,16 +385,17 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone should save to gallery when passing an impressive level" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: false)
+      async_activity_writes: false
+    )
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: true)
+      async_activity_writes: true
+    )
   end
 
-  def  _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes:)
+  def _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(async_activity_writes:)
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
     # do all the logging

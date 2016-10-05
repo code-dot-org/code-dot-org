@@ -8,6 +8,7 @@ import { stageShape } from './types';
 import StageProgress from './stage_progress';
 import TeacherStageInfo from './TeacherStageInfo';
 import { ViewType } from '../../stageLockRedux';
+import { isHiddenFromState } from '../../hiddenStageRedux';
 import color from '../../../color';
 
 const styles = {
@@ -20,15 +21,18 @@ const styles = {
     borderColor: color.lighter_gray,
     borderRadius: 5,
     background: color.lightest_gray,
-    display: 'table',
-    padding: 10,
-    width: '100%'
+    width: '100%',
+    display: 'table'
   },
-  hiddenStage: {
+  teacherRow: {
+    margin: '14px 0'
+  },
+  hiddenRow: {
     display: 'none'
   },
-  transparentStage: {
-    opacity: 0.5,
+  teacherHiddenRow: {
+    background: 'white',
+    borderStyle: 'dashed'
   },
   focusAreaRow: {
     height: 110,
@@ -41,7 +45,7 @@ const styles = {
     display: 'table-cell',
     width: 200,
     verticalAlign: 'middle',
-    paddingRight: 10
+    padding: 10
   },
   ribbonWrapper: {
     position: 'absolute',
@@ -73,6 +77,16 @@ const styles = {
   changeFocusAreaIcon: {
     fontSize: '1.2em',
     marginRight: 6
+  },
+  stageProgress: {
+    display: 'table-cell',
+    padding: 10,
+    verticalAlign: 'middle'
+  },
+  teacherInfo: {
+    display: 'table-cell',
+    verticalAlign: 'top',
+    width: 240,
   }
 };
 
@@ -86,18 +100,21 @@ const CourseProgressRow = React.createClass({
     isFocusArea: React.PropTypes.bool,
 
     // redux provided
-    isHidden: React.PropTypes.bool,
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    sectionId: React.PropTypes.string,
+    hiddenStageMap: React.PropTypes.object.isRequired,
     showTeacherInfo: React.PropTypes.bool,
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lockableAuthorized: React.PropTypes.bool.isRequired,
     changeFocusAreaPath: React.PropTypes.string,
   },
 
   render() {
-    const { stage } = this.props;
-    if (this.props.stage.lockable && !this.props.lockableAuthorized) {
+    const { stage, sectionId, hiddenStageMap, lockableAuthorized } = this.props;
+    if (stage.lockable && !lockableAuthorized) {
       return null;
     }
+
+    const isHidden = isHiddenFromState(hiddenStageMap, sectionId, stage.id);
 
     return (
       <div
@@ -105,8 +122,9 @@ const CourseProgressRow = React.createClass({
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},
           this.props.isFocusArea && styles.focusAreaRow,
-          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenStage,
-          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.transparentStage
+          isHidden && this.props.viewAs === ViewType.Student && styles.hiddenRow,
+          isHidden && this.props.viewAs === ViewType.Teacher && styles.teacherHiddenRow,
+          this.props.viewAs === ViewType.Teacher && styles.teacherRow
         ]}
       >
         {this.props.isFocusArea && [
@@ -125,25 +143,28 @@ const CourseProgressRow = React.createClass({
         <div style={styles.stageName}>
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
-        <div>
-          {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
-            <TeacherStageInfo stage={stage}/>
-          }
+        <div style={styles.stageProgress}>
           <StageProgress
             stageId={stage.id}
             levels={stage.levels}
             courseOverviewPage={true}
           />
         </div>
+        {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
+            this.props.sectionId &&
+          <div style={styles.teacherInfo}>
+            <TeacherStageInfo stage={stage}/>
+          </div>
+        }
       </div>
     );
   }
 });
 
-export default connect((state, ownProps) => {
-  const isHidden = state.hiddenStage[ownProps.stage.id];
+export default connect(state => {
   return {
-    isHidden,
+    sectionId: state.stageLock.selectedSection,
+    hiddenStageMap: state.hiddenStage.get('bySection'),
     showTeacherInfo: state.progress.showTeacherInfo,
     viewAs: state.stageLock.viewAs,
     lockableAuthorized: state.stageLock.lockableAuthorized,

@@ -1,6 +1,3 @@
-title 'Leading a Discussion on Equity'
-description "How to lead a discussion on equity in a Code.org PD"
-description_short "How to lead a discussion on equity in a Code.org PD"
 login_required 'true'
 pd 'true'
 
@@ -14,5 +11,3 @@ stage 'Equity PD'
 level 'equity lead 1'
 level 'equity activity'
 level 'equity vids'
-
-stage 'Code.org Equity PD'

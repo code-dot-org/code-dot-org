@@ -1,6 +1,3 @@
-title 'Computer Science in Algebra PD Phase 2'
-description "Teach Algebra through Functional Programming"
-description_short "	School Year Online Support"
 login_required 'true'
 pd 'true'
 
@@ -44,13 +41,3 @@ level 'PDAlg Prep a Lesson'
 level 'PDAlg Prep on Paper'
 level 'PDAlg Prep Sandbox'
 level 'Lesson Prep Final'
-
-# Unused Stages 
-stage 'Evaluation Blocks'
-stage 'Strings and Images'
-stage 'Writing Contracts'
-stage 'Defining Variables'
-stage 'Booleans'
-stage 'Eval: Conditionals'
-stage 'Best Practices for Teaching Computer Science'
-stage 'Next Steps'

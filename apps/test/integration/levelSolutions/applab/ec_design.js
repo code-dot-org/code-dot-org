@@ -132,7 +132,8 @@ module.exports = {
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
 
         // take advantage of the fact that we expose the filesystem via
-        var assetUrl = '/base/static/flappy_promo.png';
+        var assetUrl = '/base/test/integration/assets/applab-channel-id/flappy promo.png';
+        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         var buttonElement = $("#design_button1")[0];
@@ -155,8 +156,8 @@ module.exports = {
           setTimeout(function () {
             assert.include(
               buttonElement.style.backgroundImage,
-              assetUrl,
-              'Button background image should be flappy_promo'
+              encodedAssetUrl,
+              'Button background image should be flappy promo'
             );
 
             // Validate that the button wasn't resized

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:30:12.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Separate Content and Style\r\n\r\nLet's separate the style and the code for a multi page website. Instead of having multiple css files, one for each web page. It is better to use one external style sheet for your whole site. That way the style across the website is more consistent. Consistent style across a website makes it feel like one cohesive project.\r\n\r\n# Do This\r\n\r\n* Add a style.css file for this site\r\n* Cut and paste all the style for both pages into the style.css file\r\n* Delete the `<style>` elements for both pages\r\n* Add a `<link>` element for style.css file on both pages",
+    "project_template_level_name": "CSDU2 - Multi Page ESS Styling Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -18,7 +18,7 @@ class Api::V1::Pd::WorkshopOrganizerReportDataTableSerializer < ::Api::V1::DataT
       {key: :days, type: 'number'}
     ].tap do |definitions|
       if scope.admin?
-        definitions.push *[
+        definitions.concat [
           :payment_type,
           {key: :qualified, type: 'boolean', format: ->(value) {value ? 'TRUE' : 'FALSE'}},
           {key: :teacher_payment, type: 'number', format: ->(value) {"$#{sprintf('%0.2f', (value))}"}},

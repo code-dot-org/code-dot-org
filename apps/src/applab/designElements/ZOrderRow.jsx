@@ -1,7 +1,7 @@
-var React = require('react');
-var color = require('../../color');
-var rowStyle = require('./rowStyle');
-var FontAwesome = require('../../templates/FontAwesome');
+import React from 'react';
+import color from '../../color';
+import * as rowStyle from './rowStyle';
+import FontAwesome from '../../templates/FontAwesome';
 
 var ZOrderRow = React.createClass({
   propTypes: {
@@ -77,4 +77,4 @@ var ZOrderRow = React.createClass({
   }
 });
 
-module.exports = ZOrderRow;
+export default ZOrderRow;

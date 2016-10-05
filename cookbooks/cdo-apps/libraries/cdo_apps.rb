@@ -124,7 +124,7 @@ module CdoApps
       environment env.merge(node['cdo-apps']['bundle_env'])
       user user
       group user
-      not_if { File.directory?("#{root}/#{package}/build") || File.directory?("#{root}/#{package}/build-output")}
+      not_if { File.directory?("#{root}/#{package}/build") }
       action :run
     end
   end

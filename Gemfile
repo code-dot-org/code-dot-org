@@ -39,8 +39,10 @@ gem 'rack_csrf'
 group :development do
   gem 'annotate'
   gem 'rack-mini-profiler'
+  gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'
+  gem 'memoist'
 end
 
 group :development, :test do
@@ -83,7 +85,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
-  gem 'eyes_selenium', '~> 2.28.0'
+  gem 'eyes_selenium', '~> 2.38.0'
 
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false
@@ -188,7 +190,7 @@ gem 'aws-sdk', '~> 2'
 
 # Lint tools
 group :development, :staging do
-  gem 'rubocop', '0.37.2', require: false
+  gem 'rubocop', '0.42.0', require: false
   gem 'haml_lint', require: false
   gem 'scss_lint', require: false
 end

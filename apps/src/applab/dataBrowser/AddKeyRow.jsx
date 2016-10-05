@@ -1,14 +1,20 @@
 /** @overview Component for adding a key/value pair row. */
 
 import FirebaseStorage from '../firebaseStorage';
+import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
 import React from 'react';
 import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const AddKeyRow = React.createClass({
+  propTypes: {
+    onShowWarning: React.PropTypes.func.isRequired,
+  },
+
   getInitialState() {
     return {
+      isAdding: false,
       key: '',
       value: ''
     };
@@ -24,11 +30,19 @@ const AddKeyRow = React.createClass({
 
   handleAdd() {
     if (this.state.key) {
+      this.setState({isAdding: true});
       FirebaseStorage.setKeyValue(
         this.state.key,
         castValue(this.state.value),
         () => this.setState(this.getInitialState()),
-        msg => console.warn(msg));
+        msg => {
+          if (msg.includes('The key is invalid')) {
+            this.props.onShowWarning(msg);
+          } else {
+            console.warn(msg);
+          }
+          this.setState(this.getInitialState());
+        });
     }
   },
 
@@ -42,14 +56,14 @@ const AddKeyRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr id="uitest-addKeyValuePairRow" style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
             style={dataStyles.input}
             onChange={this.handleKeyChange}
             onKeyUp={this.handleKeyUp}
             placeholder="enter text"
-            value={this.state.key}
+            value={this.state.key || ''}
           />
         </td>
         <td style={dataStyles.cell}>
@@ -58,16 +72,17 @@ const AddKeyRow = React.createClass({
             onChange={this.handleValueChange}
             onKeyUp={this.handleKeyUp}
             placeholder="enter text"
-            value={this.state.value}
+            value={this.state.value || ''}
           />
         </td>
         <td style={dataStyles.addButtonCell}>
-          <button
-            style={dataStyles.blueButton}
+          <PendingButton
+            isPending={this.state.isAdding}
             onClick={this.handleAdd}
-          >
-            Add pair
-          </button>
+            pendingText="Adding"
+            style={dataStyles.blueButton}
+            text="Add pair"
+          />
         </td>
       </tr>
     );

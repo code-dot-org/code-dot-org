@@ -32,9 +32,9 @@ import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
-var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
+import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -322,6 +322,8 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
+  this.hasContainedLevels = config.hasContainedLevels;
+
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -481,7 +483,7 @@ StudioApp.prototype.init = function (config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
+    var ResizeSensor = require("./third-party/ResizeSensor");
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
@@ -586,24 +588,7 @@ StudioApp.prototype.init = function (config) {
     }).bind(this));
   }
 
-  // Bind listener to 'Version History' button
-  var versionsHeader = document.getElementById('versions-header');
-  if (versionsHeader) {
-    dom.addClickTouchEvent(versionsHeader, (function () {
-      var codeDiv = document.createElement('div');
-      var dialog = this.createModalDialog({
-        Dialog: this.Dialog,
-        contentDiv: codeDiv,
-        defaultBtnSelector: 'again-button',
-        id: 'showVersionsModal'
-      });
-      ReactDOM.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
-      }), codeDiv);
-
-      dialog.show();
-    }).bind(this));
-  }
+  this.initVersionHistoryUI(config);
 
   if (this.isUsingBlockly() && Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
@@ -629,47 +614,30 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.getFirstContainedLevelResult_ = function () {
-  var results = this.getContainedLevelResults();
-  if (results.length !== 1) {
-    throw "Exactly one contained level result is currently required.";
-  }
-  return results[0];
-};
-
-StudioApp.prototype.hasValidContainedLevelResult_ = function () {
-  var firstResult = this.getFirstContainedLevelResult_();
-  return firstResult.result.valid;
-};
-
-/**
- * @param {!AppOptionsConfig} config
- */
- StudioApp.prototype.notifyInitialRenderComplete = function (config) {
-  if (config.hasContainedLevels && config.containedLevelOps) {
-    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
-    this.getContainedLevelResults = config.containedLevelOps.getResults;
-
-    $('#containedLevel0').appendTo($('#containedLevelContainer'));
-
-    if (this.hasValidContainedLevelResult_()) {
-      // We already have an answer, don't allow it to be changed, but allow Run
-      // to be pressed so the code can be run again.
-      this.lockContainedLevelAnswers();
-    } else {
-      // No answers yet, disable Run button until there is an answer
-      $('#runButton').prop('disabled', true);
-
-      config.containedLevelOps.registerAnswerChangedFn(levelId => {
-        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
+StudioApp.prototype.initVersionHistoryUI = function (config) {
+  // Bind listener to 'Version History' button
+  var versionsHeader = document.getElementById('versions-header');
+  if (versionsHeader) {
+    dom.addClickTouchEvent(versionsHeader, (function () {
+      var codeDiv = document.createElement('div');
+      var dialog = this.createModalDialog({
+        Dialog: this.Dialog,
+        contentDiv: codeDiv,
+        defaultBtnSelector: 'again-button',
+        id: 'showVersionsModal'
       });
-    }
+      ReactDOM.render(React.createElement(VersionHistory, {
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+      }), codeDiv);
+
+      dialog.show();
+    }).bind(this));
   }
 };
 
 StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.getContainedLevelResults) {
-    var firstResult = this.getFirstContainedLevelResult_();
+  if (this.hasContainedLevels) {
+    var firstResult = codeStudioLevels.getContainedLevelResult();
     var containedResult = firstResult.result;
     var testResults = utils.valueOr(firstResult.testResult,
         containedResult.result ? this.TestResults.ALL_PASS :
@@ -779,8 +747,10 @@ StudioApp.prototype.setIconsFromSkin = function (skin) {
  * Reset the puzzle back to its initial state.
  * Search aliases: "Start Over", startOver
  * @param {AppOptionsConfig}- same config object passed to studioApp.init().
+ * @return {Promise} to express that the async operation is complete.
  */
 StudioApp.prototype.handleClearPuzzle = function (config) {
+  var promise;
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
@@ -790,7 +760,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
-  } else {
+  } else if (this.editCode) {
     var resetValue = '';
     if (config.level.startBlocks) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
@@ -807,8 +777,15 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     annotationList.clearRuntimeAnnotations();
   }
   if (config.afterClearPuzzle) {
-    config.afterClearPuzzle();
+    promise = config.afterClearPuzzle(config);
   }
+  if (!promise) {
+    // If a promise wasn't returned from config.afterClearPuzzle(), we create
+    // on here that returns immediately since the operation must have completed
+    // synchronously.
+    promise = new Promise(function (resolve, reject) { resolve(); });
+  }
+  return promise;
 };
 
 /**
@@ -954,8 +931,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
-  if (this.lockContainedLevelAnswers) {
-    this.lockContainedLevelAnswers();
+  if (this.hasContainedLevels) {
+    codeStudioLevels.lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');
@@ -2947,6 +2924,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
+    versionHistoryInInstructionsHeader: config.versionHistoryInInstructionsHeader,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,

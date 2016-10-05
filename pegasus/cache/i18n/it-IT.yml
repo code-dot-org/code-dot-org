@@ -403,6 +403,8 @@
   homepage_banner_emailprivacy: Stiamo facendo un cambiamento importante per tutelare
     ancora di più la privacy degli studenti.
   homepage_banner_emailprivacy_link: Ulteriori informazioni…
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Ulteriori informazioni
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
@@ -980,6 +982,14 @@
     insegnanti (in inglese)</a>.
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Ulteriori informazioni
   learn_sign_up_description: Iscriviti per partecipare all'Ora del Codice durante
     la Settimana di Educazione all'Informatica
@@ -1090,7 +1100,7 @@
   hourofcode_name: Labirinto Classico
   playlab_name: Laboratorio
   infinity_name: Disney Infinity
-  artist_name: 'Artista: Sequenze e Cicli'
+  artist_name: Artista
   monstercoding_name: Missione del Coding dell' Isola Misteriosa
   allcancode_name: Corri Marco!
   csfirst_name: Prima il CS

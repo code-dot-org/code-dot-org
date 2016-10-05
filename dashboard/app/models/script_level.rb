@@ -144,7 +144,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def name
-    I18n.t("data.script.name.#{script.name}.#{stage.name}")
+    stage.localized_name
   end
 
   def report_bug_url(request)
@@ -164,6 +164,10 @@ class ScriptLevel < ActiveRecord::Base
 
   def stage_total
     stage.script_levels.to_a.size
+  end
+
+  def path
+    build_script_level_path(self)
   end
 
   def summarize

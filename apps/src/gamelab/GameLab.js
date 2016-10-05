@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var commonMsg = require('@cdo/locale');
-var msg = require('./locale');
+var msg = require('@cdo/gamelab/locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
@@ -90,6 +90,13 @@ var GameLab = function () {
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
+
+  /** Expose for levelbuilder */
+  window.printSerializedAnimationList = () => {
+    this.getSerializedAnimationList(list => {
+      console.log(JSON.stringify(list, null, 2));
+    });
+  };
 };
 
 module.exports = GameLab;
@@ -133,6 +140,10 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
+  this.skin.smallStaticAvatar = null;
+  this.skin.staticAvatar = null;
+  this.skin.winAvatar = null;
+  this.skin.failureAvatar = null;
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
@@ -185,7 +196,11 @@ GameLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  var breakpointsEnabled = !config.level.debuggerDisabled;
+  // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug
+  // features are fixed.
+  var breakpointsEnabled = false;
+  config.enableShowCode = true;
+  config.enableShowLinesCount = false;
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
@@ -215,7 +230,10 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
+
+  // TODO(caleybrock): re-enable based on (!config.hideSource && !config.level.debuggerDisabled)
+  // when debug features are fixed.
+  var showDebugButtons = false;
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
@@ -228,6 +246,7 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
+    showDebugSlider: false,
     showAnimationMode: !config.level.hideAnimationMode
   });
 
@@ -243,8 +262,6 @@ GameLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
-
-  this.studioApp_.notifyInitialRenderComplete(config);
 };
 
 /**

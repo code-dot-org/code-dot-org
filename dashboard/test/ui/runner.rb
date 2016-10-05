@@ -23,6 +23,7 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 require 'parallel'
+require 'securerandom'
 require 'socket'
 
 require_relative './utils/selenium_browser'
@@ -65,6 +66,7 @@ $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
 $options.parallel_limit = 1
+$options.abort_when_failures_exceed = Float::INFINITY
 
 # start supporting some basic command line filtering of which browsers we run against
 opt_parser = OptionParser.new do |opts|
@@ -135,6 +137,9 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("--magic_retry", "Magically retry tests based on how flaky they are") do
     $options.magic_retry = true
+  end
+  opts.on("--abort_when_failures_exceed Limit", Numeric, "Maximum allowed feature failures before the whole test run is aborted (default is infinity)") do |max_failures|
+    $options.abort_when_failures_exceed = max_failures
   end
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
@@ -246,10 +251,17 @@ browser_features = $browsers.product features_to_run
 ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
+applitools_batch_url = nil
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
 if test_type == 'Eyes'
-  HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
-  print "Batching eyes tests as #{ENV['BATCH_NAME']}"
+  # Generate a batch ID, unique to this test run.
+  # Each Eyes instance will use the same one so that tests from this
+  # run get grouped together. This gets used in eyes_steps.rb.
+  # See "Aggregating tests from different processes"
+  # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
+  ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
+  applitools_batch_url = "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
+  HipChat.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
 end
 
 status_page_url = nil
@@ -304,9 +316,36 @@ browser_features.sort! do |browser_feature_a, browser_feature_b|
     (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
 end
 
-# Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
-parallel_config = ENV['CI'] ? {:in_threads => $options.parallel_limit} : {:in_processes => $options.parallel_limit}
-run_results = Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
+# We track the number of failed features in this test run so we can abort the run
+# if we exceed a certain limit.  See $options.abort_when_failures_exceed.
+failed_features = 0
+
+# This lambda function is called by Parallel.map each time it needs a new work
+# item.  It should return Parallel::Stop when there is no more work to do.
+next_feature = lambda do
+  if failed_features > $options.abort_when_failures_exceed
+    message = "Abandoning test run; passed limit of #{$options.abort_when_failures_exceed} failed features."
+    HipChat.log message, color: 'red'
+    return Parallel::Stop
+  end
+  return Parallel::Stop if browser_features.empty?
+  browser_features.pop
+end
+
+parallel_config = {
+    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+    in_threads: ENV['CI'] ? $options.parallel_limit : nil,
+    in_processes: ENV['CI'] ? nil : $options.parallel_limit,
+
+    # This 'finish' lambda runs on the main thread after each Parallel.map work
+    # item is completed.
+    finish: lambda do |_, _, result|
+      succeeded, _, _ = result
+      # Count failures so we can abort the whole test run if we exceed the limit
+      failed_features += 1 unless succeeded
+    end
+}
+run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
 
@@ -363,6 +402,7 @@ run_results = Parallel.map(lambda { browser_features.pop || Parallel::Stop }, pa
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_circle" if $options.is_circle
+  arguments += " -t ~@no_circle_ie" if $options.is_circle && browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
@@ -414,8 +454,8 @@ run_results = Parallel.map(lambda { browser_features.pop || Parallel::Stop }, pa
         return 1
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
-        max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
-                      1].max # rerun at least once even if not flaky
+        recommended_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+        max_reruns = [1, [recommended_reruns, 5].min].max # Clamp rerun count to range 1-5
 
         confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
         flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
@@ -540,6 +580,20 @@ EOS
   [succeeded, message, reruns]
 end
 
+$logfile.close
+$errfile.close
+$errbrowserfile.close
+
+# Produce a final report if we aborted due to excess failures
+if failed_features > $options.abort_when_failures_exceed
+  abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
+  HipChat.log abandoned_message, color: 'red'
+end
+
+# If we aborted for some reason we may have no run results, and should
+# exit with a failure code.
+exit 1 if run_results.nil?
+
 run_results.each do |succeeded, message, reruns|
   $total_flaky_reruns += reruns
   if succeeded
@@ -550,9 +604,6 @@ run_results.each do |succeeded, message, reruns|
     $failures << message
   end
 end
-$logfile.close
-$errfile.close
-$errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
 
@@ -561,7 +612,8 @@ HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " 
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
   "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
   "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
-  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
+  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

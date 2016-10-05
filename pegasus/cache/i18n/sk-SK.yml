@@ -377,6 +377,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Dozvedieť sa viac
   homepage_slot_text_title_hoc: Hodina kódovania
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni dnes
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
@@ -901,10 +903,18 @@
     spojili v otvorenom liste, kde žiadajú, aby americký kongres financoval výuku
     informatiky v rámci celej školskej dochádzky na základných i stredných školách.
   dashboard_announce_petition_button: Pridaj svoje meno
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Sleduj nové vlastnosti a aktualizácie na našom učiteľskom
+    blogu. <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "Ďalšie informácie"
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -1747,10 +1757,9 @@
     zábavným kurzom programovania robotov, rozvíjajúcim ich zručnosti v matematike
     a prírodných vedách."
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: Váš prehliadač internetu nepodporujeme. Prosím
+    aktualizujte si váš prehliadač internetu, <a href='%{supported_browsers_url}',
+    target='_blank'>podporované prehliadače</a>. Skúste obnoviť stránku.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn

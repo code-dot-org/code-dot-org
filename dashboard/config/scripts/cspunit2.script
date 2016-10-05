@@ -1,10 +1,3 @@
-title 'CSP Unit 2 - The Internet'
-description 'In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
-structure and design of the internet and the implications of those design decisions including
-the reliability of network communication, the security of data, and personal privacy. Topics
-include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
-concerns.'
-description_short 'The Internet'
 login_required 'true'
 hidden 'false'
 
@@ -107,10 +100,7 @@ assessment 'U2L11 Assessment 1'
 assessment 'U2L11 Assessment 2'
 assessment 'U2L11 Free Response'
 
-# 12 old
-stage 'Challenges of the Internet'
-
-# 12 new
+# 12
 stage 'Practice PT - The Internet and Society'
 level 'U2L12 Student Lesson Introduction'
 
@@ -182,10 +172,7 @@ assessment 'U2L19 multichoice 13 MOD 17'
 assessment 'U2L19 Assessment'
 assessment 'U2L19 Free Response Wrap Up'
 
-# 20 old
-stage 'Security and Hacking in the Real World'
-
-#20 new
+#20
 stage 'Practice PT - Cybersecurity Innovations'
 level 'U2L20 Student Lesson Introduction'
 level 'U2 The Internet: Cybersecurity and Crime - Video'

@@ -10,18 +10,23 @@ import { openLockDialog, closeLockDialog, lockStage } from '../../stageLockRedux
 import { stageShape } from './types';
 
 const styles = {
+  lockSettings: {
+    ...progressStyles.whiteButton,
+    maxWidth: 240,
+    overflow: 'hidden'
+  },
   lockSettingsText: {
     marginLeft: 10
   },
   warning: {
-    position: 'relative',
-    top: 2
+    marginBottom: 5,
   },
   warnIcon: {
     color: color.red
   },
   warnText: {
-    marginLeft: 5
+    marginLeft: 5,
+    textAlign: 'left'
   }
 };
 
@@ -52,32 +57,34 @@ const StageLock = React.createClass({
     }
     return (
       <div style={{display: 'inline-block'}}>
+        {/* className used only for purposes of uitest */}
         <button
-          style={progressStyles.blueButton}
+          style={styles.lockSettings}
           onClick={this.openLockDialog}
           disabled={this.props.saving}
+          className="uitest-locksettings"
         >
           <FontAwesome icon="lock"/>
           <span style={styles.lockSettingsText}>
-            {this.props.saving ? commonMsg.saving() : commonMsg.lockSettings()}
+            {this.props.saving ? commonMsg.saving() : commonMsg.assessmentSettings()}
           </span>
         </button>
         {this.props.unlocked &&
-          <span>
+          <div>
             <button
               style={progressStyles.orangeButton}
               onClick={this.lockStage}
               disabled={this.props.saving}
             >
-              {commonMsg.lockStage()}
+              {commonMsg.lockAssessment()}
             </button>
-            <span style={styles.warning}>
+            <div style={styles.warning}>
               <FontAwesome icon="exclamation-triangle" style={styles.warnIcon}/>
               <span style={styles.warnText}>
                 {commonMsg.lockWhenDone()}
               </span>
-            </span>
-          </span>
+            </div>
+          </div>
         }
         <StageLockDialog handleClose={this.props.closeLockDialog}/>
       </div>

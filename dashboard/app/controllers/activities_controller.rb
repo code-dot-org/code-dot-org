@@ -24,8 +24,7 @@ class ActivitiesController < ApplicationController
       @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
-      # TODO: do we need a cache_find for Level like we have for ScriptLevel?
-      @level = Level.find(params[:level_id].to_i)
+      @level = Script.cache_find_level(params[:level_id].to_i)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -104,11 +103,15 @@ class ActivitiesController < ApplicationController
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
 
-    slog(:tag => 'activity_finish',
-         :script_level_id => @script_level.try(:id),
-         :level_id => @level.id,
-         :user_agent => request.user_agent,
-         :locale => locale) if solved
+    if solved
+      slog(
+        :tag => 'activity_finish',
+        :script_level_id => @script_level.try(:id),
+        :level_id => @level.id,
+        :user_agent => request.user_agent,
+        :locale => locale
+      )
+    end
 
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
     log_milestone(@level_source, params)
@@ -161,7 +164,7 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == "true",
         level_source_id: @level_source.try(:id),
         level: @level,
-        pairings: pairings
+        pairing_user_ids: pairing_user_ids
       )
     end
 

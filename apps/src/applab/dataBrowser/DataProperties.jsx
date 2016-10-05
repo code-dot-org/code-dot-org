@@ -9,7 +9,7 @@ import EditKeyRow from './EditKeyRow';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
-import { changeView } from '../redux/data';
+import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
@@ -39,6 +39,7 @@ const DataProperties = React.createClass({
     ]).isRequired,
 
     // from redux dispatch
+    onShowWarning: React.PropTypes.func.isRequired,
     onViewChange: React.PropTypes.func.isRequired
   },
 
@@ -84,7 +85,7 @@ const DataProperties = React.createClass({
 
           <span style={dataStyles.debugLink}>
             <a
-              id="tableDebugLink"
+              id="uitest-propertiesDebugLink"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >
@@ -110,7 +111,7 @@ const DataProperties = React.createClass({
               <th style={dataStyles.headerCell}>Actions</th>
             </tr>
 
-            <AddKeyRow/>
+            <AddKeyRow onShowWarning={this.props.onShowWarning}/>
 
             {
               Object.keys(this.props.keyValueData).map(key => (
@@ -132,6 +133,9 @@ export default connect(state => ({
   view: state.data.view,
   keyValueData: state.data.keyValueData || {}
 }), dispatch => ({
+  onShowWarning(warningMsg, warningTitle) {
+    dispatch(showWarning(warningMsg, warningTitle));
+  },
   onViewChange(view) {
     dispatch(changeView(view));
   }

@@ -1,7 +1,4 @@
 professional_learning_course 'ECS Support'
-title 'ECS Unit 5'
-description 'Unit 5: Computer and Data Analysis'
-description_short 'Unit 5: Computer and Data Analysis'
 login_required 'true'
 pd 'true'
 

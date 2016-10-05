@@ -1,7 +1,4 @@
 professional_learning_course 'ECS Support'
-title 'ECS Unit 3'
-description 'Unit 3: Web Design'
-description_short 'Unit 3: Web Design'
 login_required 'true'
 pd 'true'
 
@@ -9,7 +6,7 @@ stage 'Getting Started'
 level 'ECS Phase 3 Unit3 Welcome'
 level 'ECS Phase 3 Unit 3 Overview'
 level 'PDECS Tour'
-level 'PD check your progress'
+level 'PLC- check your progress'
 level 'ECSPD Unit 3 Outline'
 level 'ECSPD P3 Plan'
 

@@ -1,10 +1,9 @@
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var ZOrderRow = require('./ZOrderRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import ZOrderRow from './ZOrderRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import * as elementUtils from './elementUtils';
 
 var CanvasProperties = React.createClass({
   propTypes: {
@@ -103,7 +102,7 @@ var CanvasEvents = React.createClass({
 });
 
 
-module.exports = {
+export default {
   PropertyTab: CanvasProperties,
   EventTab: CanvasEvents,
   create: function () {

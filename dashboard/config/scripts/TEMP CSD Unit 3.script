@@ -1,8 +1,4 @@
-title ' TEMP CSD Unit 3 - Interactive Games and Animations'
-description ''
-description_short 'Programming'
 login_required 'true'
-student_of_admin_required 'true'
 hidden 'true'
 
 stage 'Drawing in Game Lab'

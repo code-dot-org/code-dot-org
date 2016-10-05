@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Update Recipe\r\n\r\nSince you now know 4 tags that are good practice to include in your website you should now add them to your pages.\r\n\r\n# Do This\r\n\r\n* Add &lt;!Doctype&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; tags to your Recipe page. ",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"\r\n \"\r\n    }\r\n  ]\r\n}"
+    "markdown_instructions": "# Doctype and HTML tag\r\n\r\nWhen a web browswer is trying to read your document it looks for alerts which tell it which language you are using. In order to let the web browser know that this is an html document you need to do two things:\r\n\r\n1. Add &lt;!DOCTYPE html&gt; at the very top of your html file. &lt;!DOCTYPE html&gt; is always the first thing in an html document because it notifies the computer that this is an html document and to interpret it as such. &lt;!DOCTYPE html&gt; is not technically a tag but instead an instruction to the web browser. \r\n\r\n2. Wrap all the content of the file in an HTML element using the &lt;html&gt; tag. The &lt;html&gt; tag notifies the computer where the html starts and ends. The  &lt;html&gt; tag is the container for all other HTML elements (except for the &lt;!DOCTYPE html&gt; tag).  So you need an opening and closing &lt;html&gt; tag.\r\n\r\n# Do This\r\nThis is your Recipe page from the last lesson.\r\n\r\n* Add &lt;!DOCTYPE html&gt; at the top of your index.html file\r\n* Add &lt;html&gt; right underneath &lt;!DOCTYPE html&gt; and add a closing &lt;/html&gt; tag at the end of index.html",
+    "project_template_level_name": "CSDU2 - Recipe Template"
   },
   "published": true,
   "notes": "",

@@ -4,13 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
+import processMarkdown from 'marked';
+import renderer from '../../StylelessRenderer';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
-
-var processMarkdown = require('marked');
 
 var ProtectedStatefulDiv = require('../ProtectedStatefulDiv');
 var Instructions = require('./Instructions');
@@ -18,6 +18,8 @@ var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('@cdo/locale');
+var PaneButton = require('../PaneHeader').PaneButton;
+import ContainedLevel from '../ContainedLevel';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -54,9 +56,6 @@ var styles = {
   embedView: {
     height: undefined,
     bottom: 0
-  },
-  containedLevelContainer: {
-    minHeight: 200,
   }
 };
 
@@ -67,6 +66,7 @@ var TopInstructions = React.createClass({
     hasContainedLevels: React.PropTypes.bool,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
+    versionHistoryInInstructionsHeader: React.PropTypes.bool,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
@@ -129,9 +129,7 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
-    const contentContainer = this.props.hasContainedLevels ?
-        this.refs.containedLevelContainer : this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(contentContainer)).outerHeight(true) +
+    const maxNeededHeight = $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
@@ -177,19 +175,23 @@ var TopInstructions = React.createClass({
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
+          {this.props.versionHistoryInInstructionsHeader &&
+            <PaneButton
+              id="versions-header"
+              headerHasFocus={false}
+              iconClass="fa fa-clock-o"
+              label={msg.showVersionsHeader()}
+              isRtl={false}
+            />}
         </div>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
-            {this.props.hasContainedLevels &&
-              <ProtectedStatefulDiv
-                id="containedLevelContainer"
-                ref="containedLevelContainer"
-                style={styles.containedLevelContainer}
-              />}
+            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
             {!this.props.hasContainedLevels &&
               <Instructions
                 ref="instructions"
-                renderedMarkdown={processMarkdown(this.props.markdown)}
+                renderedMarkdown={processMarkdown(this.props.markdown,
+                    { renderer })}
                 onResize={this.adjustMaxNeededHeight}
                 inTopPane
               />}
@@ -209,6 +211,7 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
+    versionHistoryInInstructionsHeader: state.pageConstants.versionHistoryInInstructionsHeader,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,
     height: state.instructions.renderedHeight,

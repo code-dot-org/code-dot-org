@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:06:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Div Element\r\n\r\nHTML elements allow you to group together content on your web page that is connected. However sometimes you want to group together multiple HTML elements into one connected chunk and give it a style.  To connect a set of HTML elements inside one element you can use the `<div>` element.\r\n\r\nFor your Personal Website you are going to start out by using this to group together the header section you want to go on every page of your website. This will include the title of your website as well as any navigation. Once you do this you can put a background color on the whole div to make it look like one connected block.\r\n\r\n<pre>\r\n&lt;div&gt;\r\n    &lt;h1&gt; Title of Website &lt;/h1&gt;\r\n    &lt;a href=\"index.html\"&gt; Home &lt;/a&gt;\r\n    &lt;a href=\"page1.html\"&gt; Page 1 &lt;/a&gt;\r\n    &lt;a href=\"page2.html\"&gt; Page 1 &lt;/a&gt;\r\n    &lt;a href=\"page3.html\"&gt; Page 1&lt;/a&gt;\r\n&lt;/div&gt;\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Put all the navigation hyperlinks and page title in `<div>` element\r\n* Add a `background-color` for the `<div>` element",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -18,13 +18,6 @@ const styles = {
     backgroundColor: color.lightest_gray,
     paddingRight: 10,
     paddingLeft: 10
-  },
-
-  previewRate: {
-    color: color.purple,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    padding: 3
   }
 };
 
@@ -41,18 +34,18 @@ const AnimationList = React.createClass({
   render() {
     return (
         <ScrollableList style={styles.root} className="animationList">
-          <div style={styles.previewRate}>Preview at 30fps</div>
           {this.props.animationList.orderedKeys.map(key =>
             <AnimationListItem
               key={key}
               animationKey={key}
               animationProps={this.props.animationList.propsByKey[key]}
               isSelected={key === this.props.selectedAnimation}
+              animationList={this.props.animationList}
             />
           )}
           <NewListItem
             key="new_animation"
-            label="new sequence"
+            label="new animation"
             onClick={this.props.onNewItemClick}
           />
         </ScrollableList>

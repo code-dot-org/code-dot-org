@@ -2,14 +2,12 @@
 
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
+import * as codeStudioLevels from './codeStudioLevels';
 require('./multi.js');
 require('./textMatch.js');
 var saveAnswers = require('./saveAnswers.js').saveAnswers;
 
-window.initLevelGroup = function (
-  levelCount,
-  currentPage,
-  lastAttempt) {
+window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
@@ -19,12 +17,12 @@ window.initLevelGroup = function (
   // edge").  Any pending throttled calls are cancelled when we go to a new page
   // and save for that reason.
 
-  window.getResult = getResult;
+  codeStudioLevels.registerGetResult(getAggregatedResults);
 
   function submitSublevelResults(completion, subLevelIdChanged) {
-    var levels = window.levelGroup.levels;
+    const levelIds = codeStudioLevels.getLevelIds();
     var sendReportCompleteCount = 0;
-    var subLevelCount = Object.keys(levels).length;
+    var subLevelCount = levelIds.length;
     if (subLevelCount === 0) {
       return completion();
     }
@@ -34,14 +32,15 @@ window.initLevelGroup = function (
         completion();
       }
     }
-    for (var subLevelId in levels) {
+    for (var subLevelId of levelIds) {
       if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
         // Only one sublevel changed and this is not the one, so skip the post and
         // call the completion function immediately
         handleSublevelComplete();
         continue;
       }
-      var subLevelResult = levels[subLevelId].getResult(true);
+      const subLevel = codeStudioLevels.getLevel(subLevelId);
+      var subLevelResult = subLevel.getResult(true);
       var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
       var result = subLevelResult.result;
       var errorType = subLevelResult.errorType;
@@ -52,7 +51,7 @@ window.initLevelGroup = function (
         program: response,
         fallbackResponse: appOptions.dialog.fallbackResponse,
         callback: appOptions.dialog.sublevelCallback + subLevelId,
-        app: levels[subLevelId].getAppName(),
+        app: subLevel.getAppName(),
         allowMultipleSends: true,
         level: subLevelId,
         result: subLevelResult,
@@ -65,24 +64,25 @@ window.initLevelGroup = function (
   }
 
   var throttledSaveAnswers = throttle(
-    saveAnswers.bind(this, null, submitSublevelResults), 20 * 1000, {
-      leading: true,
-      trailing: true
-    });
+    subLevelId => {
+      submitSublevelResults(saveAnswers, subLevelId);
+    }, 20 * 1000);
 
-  var lastResponse = window.getResult().response;
+  var lastResponse = getAggregatedResults().response;
 
-  window.levelGroup.answerChangedFn = function (levelId, saveThisAnswer) {
-    if (!saveThisAnswer) {
-      // Ignore typing events before focus change (when commit will be true)
-      return;
+  codeStudioLevels.registerAnswerChangedFn(
+    (levelId, saveThisAnswer) => {
+      // LevelGroup is only interested in changes that should result in a save
+      if (!saveThisAnswer) {
+        return;
+      }
+      const currentResponse = getAggregatedResults().response;
+      if (lastResponse !== currentResponse) {
+        throttledSaveAnswers(levelId);
+      }
+      lastResponse = currentResponse;
     }
-    var currentResponse = window.getResult().response;
-    if (lastResponse !== currentResponse) {
-      throttledSaveAnswers(levelId);
-    }
-    lastResponse = currentResponse;
-  };
+  );
 
   /**
    * Construct an array of all the level results. When submitted it's something
@@ -92,14 +92,18 @@ window.initLevelGroup = function (
    *  "2007": {"result": "-1", "valid": false},
    *  "1939": {"result": "2,1", "valid": true}}
    */
-  function getResult() {
+  function getAggregatedResults() {
     // Add any new results to the existing lastAttempt results.
-    var levels = window.levelGroup.levels;
-    Object.keys(levels).forEach(function (levelId) {
-      var currentAnswer = levels[levelId].getResult(true);
-      var levelResult = replaceEmoji(currentAnswer.response.toString());
-      var valid = currentAnswer.valid;
-      lastAttempt[levelId] = {result: levelResult, valid: valid};
+    const levelIds = codeStudioLevels.getLevelIds();
+    levelIds.forEach(function (levelId) {
+      const subLevel = codeStudioLevels.getLevel(levelId);
+      const currentAnswer = subLevel.getResult(true);
+      const levelResult = replaceEmoji(currentAnswer.response.toString());
+      const valid = currentAnswer.valid;
+      lastAttempt[levelId] = {
+        result: levelResult,
+        valid: valid
+      };
     });
 
     var validCount = 0;
@@ -113,12 +117,12 @@ window.initLevelGroup = function (
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {
-      "response": encodeURIComponent(JSON.stringify(lastAttempt)),
-      "result": true,
-      "errorType": null,
-      "submitted": window.appOptions.level.submittable,
-      "showConfirmationDialog": showConfirmationDialog,
-      "beforeProcessResultsHook": submitSublevelResults
+      response: encodeURIComponent(JSON.stringify(lastAttempt)),
+      result: true,
+      errorType: null,
+      submitted: window.appOptions.level.submittable,
+      showConfirmationDialog: showConfirmationDialog,
+      beforeProcessResultsHook: submitSublevelResults
     };
   }
 
@@ -139,10 +143,8 @@ window.initLevelGroup = function (
       // Submit what we have, and when that's done, go to the next page of the
       // long assessment.  Cancel any pending throttled attempts at saving state.
       throttledSaveAnswers.cancel();
-      saveAnswers(function () {
-            changePage(targetPage);
-          },
-          submitSublevelResults);
+      const afterSave = () => changePage(targetPage);
+      submitSublevelResults(() => saveAnswers(afterSave));
     }
   }
 

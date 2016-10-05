@@ -21,13 +21,20 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = { 'Cache-Control' => "public, max-age=3600, s-maxage=1800" }
 
-  # test environment should use precompiled digested assets like production,
+  # Whether or not to display pretty apps (formerly called blockly).
+  config.pretty_apps = false
+
+  # Whether or not to display pretty shared js assets
+  config.pretty_sharedjs = true
+
+  # test environment should use precompiled, minified, digested assets like production,
   # unless it's being used for unit tests.
   ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
 
   unless ci_test
     # Compress JavaScripts and CSS.
-    config.assets.js_compressor = :uglifier
+    # webpack handles js compression for us
+    # config.assets.js_compressor = :uglifier
     # config.assets.css_compressor = :sass
 
     # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -38,6 +45,10 @@ Dashboard::Application.configure do
 
     # Version of your assets, change this if you want to expire all your assets.
     config.assets.version = '1.0'
+
+    # Whether or not to display pretty shared js assets
+    config.pretty_sharedjs = false
+
   end
 
   config.assets.quiet = true
@@ -65,12 +76,6 @@ Dashboard::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
-
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = false
-
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = false
 
   # disable this for test by default, it won't make much sense if we keep wiping the db
   CDO.disable_s3_image_uploads = true

@@ -1,0 +1,21 @@
+name 'Sending Numbers: The Big Picture'
+markdown <<MARKDOWN
+# Sending Numbers: The Big Picture
+Now that students have a working number system, they will begin to send images to one another using coordinates in a way that can be re-created similar to playing “connect the dots”.  This is an exciting lesson for students because they can begin to get a handle on how computers are used to send real information rather than just on or off states and the encodings that make this possible.  While this is not how images are typically sent, it prompts students to consider questions that must also be addressed when encoding information in real life. For example:
+
+### 1.  When does one number stop and the next one start?
+
+Traditionally, when information is encoded digitally, it’s represented in eight bit chunks called **bytes**.  This is the ‘chunk size’ of each message. In addition to this established convention, images will typically begin with metadata (a set of data included in a message in addition to the core data that gives information about the structure, format, or content of the associated core data) that will include how information about how many bytes are associated with each point in the image.  Students will begin to explore metadata in the first portion of Unit 2.
+
+### 2. How do we know the message is over?
+
+The metadata also includes typically includes information about the size of the image allowing the reader to know how many bytes will be sent in the whole message, and how to reconstruct the information once it’s received.
+
+### 3. How can we 'decode' the message? Or, how do we know the format the message will be sent in?
+
+Without a set protocol, it is impossible to decode the message.  When using the Internet Simulator, we’ll want to agree on the protocol before the message is sent.  In traditional images, the file extension (the three or four letters after a dot in the file name e.g. .jpg) provide the computer information about how it should decode the image.
+
+<br>
+As students address these questions in their own protocols, they will be solving problems necessary for encoding and sending information on the real internet.  They can then extrapolate sending coordinates to sending real images by expanding on elements of their protocols to solve similar problems for different types of data.
+
+MARKDOWN

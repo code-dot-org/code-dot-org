@@ -753,10 +753,9 @@ And(/^I save the section url$/) do
   wait_with_short_timeout.until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
   steps %Q{
     And I wait to see ".jumbotron"
-    And I wait for 2 seconds
   }
+  wait_with_short_timeout.until { "" != @browser.execute_script("return $('.jumbotron a').text().trim()") }
   @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
-  expect(@section_url).not_to eq('')
 end
 
 And(/^I navigate to the section url$/) do
@@ -940,4 +939,16 @@ end
 Then /^I scroll our lockable stage into view$/ do
   wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
   @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+end
+
+Then /^I open the stage lock dialog$/ do
+  wait_with_short_timeout.until { @browser.execute_script("return $('.uitest-locksettings').length") > 0 }
+  @browser.execute_script("$('.uitest-locksettings').click()")
+end
+
+Then /^I unlock the stage for students$/ do
+  # allow editing
+  @browser.execute_script("$('.modal-body button').first().click()")
+  # save
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:02:20.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Hyperlink Element\r\n\r\nIn order to get between pages on a website you click on hyperlinks. Hyperlinks can connect to local web pages or external web pages. To add a navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlink to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page.\r\n\r\nFor example to link to the unique houses page you would add the following code inside your `<body>` element.\r\n\r\n<pre>\r\n&lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Open the index.html file\r\n* Find the comment that says `<!-- Add navigation here -->`\r\n* Below the comment add a hyperlink (`<a>`) to each of the following pages\r\n\t* Unique Houses Page\r\n    * Crazy Signs Page\r\n    * Guinness Book of World Records Page\r\n* Test it out to see if clicking the links take you to the other pages of your site.",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

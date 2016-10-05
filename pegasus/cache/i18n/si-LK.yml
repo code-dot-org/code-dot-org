@@ -162,18 +162,18 @@
     less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_site: App Inventor 2 වෙත පිවිසෙන්න
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_desc: "අපි පහළ සිට අධ්යාපනය නැවත සකස් කරමින් පවතී. අන්තර්ගජාලය
+    සියල්ලම පාහේ අලුතින් සිතා අැත - වාණිජ, සමාජ ජාල, සෞඛ්ය, සහ තවත් බොහෝ දේ.
+    අපි ලෝකයට අවශ්ය ප්රථම සමිපූර්ණයෙන්ම අන්තර්ගජාලයෙන් බිහි වූ අධ්යාපනයක් ගොඩනගමින්
+    සිටිමු."
+  third_party_codecademy_btn_curriculum: Codecademy විෂයමාලා බාගන්න
   third_party_codecademy_btn_site: Codecademy වෙත පිවිසෙන්න
   third_party_organization: "සංවිධානය"
   third_party_curriculum: "\tවිෂයමාලාව"
@@ -249,7 +249,7 @@
   learn_next_level: Try another Code Studio course
   learn_online: "තවත් පාඨමාලා සබැඳිව උත්සාහ කරන්න"
   learn_classes: "දේශීය පන්තියක් සොයාගන්න"
-  hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
+  hoc_is_here: "පරිගණක විද්යාව ඉගෙන ගන්න. එය සෑම දෙයක්ම වෙනස් කරමින් පවතී. https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: "මම දැන් 1 පාඨමාලාව නිම කරා - එය පරීක්ෂා කර බලන්න! @codeorg"
   just_did_course2: "මම දැන් 2 පාඨමාලාව නිම කරා - එය පරීක්ෂා කර බලන්න! @codeorg"
@@ -295,7 +295,7 @@
   studiobar_donate_title: "පරිත්යාග කරන්න"
   studiobar_donate_body: "ඔබ පරිත්යාග කරන සෑම ඩොලරයකටම එක දරුවෙක් ඉගෙනුම ලබයි"
   studiobar_shop_title: "සාප්පුව"
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_body: "ඒකාකෘතික බව බිඳින්න. ආඩම්බරයෙන් අපේ ලාංඡනය පළඳින්න."
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
     learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
@@ -356,7 +356,7 @@
   homepage_action_text_join_us: "අප හා එක් වන්න"
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: "එය උත්සහ කරන්න"
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: "තාක්ෂණික ස්වේච්ඡා සේවකයින් අවශ්යයි"
   homepage_action_text_codevideo: "වීඩියෝව නරඹන්න"
   homepage_action_text_teachervideo: "වීඩියෝව නරඹන්න"
   homepage_action_text_girlvideo: Inspire a girl
@@ -381,6 +381,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: "වැඩිදුර කියවන්න"
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "වැඩිදුර ඉගෙන ගන්න"
   homepage_slot_text_title_hoc: "පැයේ කේතය"
   homepage_slot_text_blurb_hoc: "කාටත් ඉගෙන ගන්න පුළුවන්. අදම ආරම්භ කරන්න"
   homepage_slot_text_link_hoc: "පැයේ කේතය උත්සාහ කරන්න"
@@ -415,7 +417,7 @@
   contact_form_topic_parent: "මම දෙමාපියෙක්"
   contact_form_topic_teacher: "මම ගුරුවරයෙකු / අධ්යාපනඥයෙකු"
   contact_form_topic_outside_us: "මම එක්සත් ජනපදයෙන් පිටත ඉන්නේ."
-  contact_form_topic_contribution: Charitable contribution
+  contact_form_topic_contribution: "පුණ්ය දායකත්වය"
   contact_form_topic_partner: "මම සහයෝගය දක්වන්න කැමතියි"
   contact_form_topic_other: "වෙනත්"
   contact_form_label_topic: "මාතෘකාව"
@@ -425,7 +427,8 @@
   class_submission_in_school: "පාසලේ"
   class_submission_in_school_daily_programming_course: Daily programming course
   class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
+  class_submission_in_school_full_university_cs_curriculum: "පූර්ණ විශ්ව විද්යාල CS
+    විෂය මාලාව"
   class_submission_in_school_robotics_club: Robotics club
   class_submission_in_school_programming_integrated_in_other_classes: Programming
     integrated in other classes (math, science, etc)
@@ -505,7 +508,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: "ඔබගේ තොරතුරු යාවත්කාලීන කරන්න"
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: "නම"
@@ -518,12 +521,12 @@
     allow teachers to search for nearby volunteers and will be shown as a pin on the
     map. If you are concerned about privacy, please use your work/school address or
     your city only.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
+  volunteer_engineer_submission_field_location_placeholder: ZIP කේතය, නගරය සහ රාජ්ය/රටක්,
+    හෝ වීදි ලිපිනය
   volunteer_engineer_submission_field_location_flexibility: I can help during the
     Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
+  volunteer_engineer_submission_checkbox_after_hoc: "මම වසර පුරා ස්වෙච්ඡා සේවයට උනන්දුවෙන්
+    සිටිමි"
   volunteer_engineer_submission_field_time_commitment: "කැප කරන ලද කාලය"
   volunteer_engineer_submission_field_linkedin: LinkedIn ගිනුම
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
@@ -576,9 +579,9 @@
   volunteer_engineer_submission_distance_24: "සැතපුම් 15"
   volunteer_engineer_submission_distance_32: "සැතපුම් 20"
   volunteer_engineer_submission_num_volunteers_5: "ස්වෙච්ඡා සේවකයින් 5"
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_num_volunteers_10: "ස්වේච්ඡා සේවකයන් 10"
+  volunteer_engineer_submission_num_volunteers_25: "ස්වේච්ඡා සේවකයන් 25"
+  volunteer_engineer_submission_num_volunteers_50: "ස්වේච්ඡා සේවකයන් 50"
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -882,7 +885,7 @@
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: Frequently Asked Questions
+  dashboard_faq: "නිතර අසන ප්රශ්න"
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: "නිවේදන"
   dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
@@ -909,6 +912,14 @@
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "දැන් අත්හදා බලන්න"
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -1038,7 +1049,7 @@
   csp1_name: "පාඩම් අංක 1: අන්තර්ජාලය"
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  cspassessment_name: Full Test - 50 questions
+  cspassessment_name: "පූර්ණ පරීක්ෂණය - 50 ප්රශ්න"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -1559,7 +1570,7 @@
   kodu_beyond_shortdescription: Design a 3D game world
   cargobot_beyond_shortdescription: Program a robot arm on your iPad
   kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
+  w3schools_beyond_shortdescription: "වෙබ් අඩවි සදන්න ඉගෙන ගන්න"
   codeavengers_beyond_shortdescription: Learn to code games and websites
   mozilla_beyond_shortdescription: Create and share web pages
   codecombat_beyond_shortdescription: Play a game and learn JavaScript to win

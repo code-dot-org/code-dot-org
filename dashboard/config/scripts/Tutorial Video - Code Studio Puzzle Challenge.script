@@ -1,6 +1,3 @@
-title 'Tutorial - Code Studio Puzzle Challenge'
-description_short "Challenge yourself!"
-description "Try out these fun coding puzzles. Do your best!"
 hidden 'true'
 
 stage 'Puzzles'

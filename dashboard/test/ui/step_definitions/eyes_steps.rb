@@ -11,8 +11,9 @@ MATCH_TIMEOUT = 5
 When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   ensure_eyes_available
 
-  batch_name = test_name + " | " + ENV['BATCH_NAME']
-  @eyes.batch = Applitools::Base::BatchInfo.new(batch_name)
+  batch = Applitools::Base::BatchInfo.new(ENV['BATCH_NAME'])
+  batch.id = ENV['BATCH_ID']
+  @eyes.batch = batch
 
   @eyes.branch_name = GitUtils.current_branch
 
@@ -37,7 +38,8 @@ end
 
 And(/^I close my eyes$/) do
   @browser = @original_browser
-  @eyes.close
+  fail_on_mismatch = !CDO.ignore_eyes_mismatches
+  @eyes.close(fail_on_mismatch)
 end
 
 And(/^I see no difference for "([^"]*)"$/) do |identifier|
