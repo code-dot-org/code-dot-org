@@ -642,6 +642,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
+  grunt.registerTask('preconcat', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+  ]);
+
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
@@ -657,25 +663,19 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('integrationTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:integration'
   ]);
 
   grunt.registerTask('codeStudioTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:codeStudio'
   ]);
 
   grunt.registerTask('test', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:all'
   ]);

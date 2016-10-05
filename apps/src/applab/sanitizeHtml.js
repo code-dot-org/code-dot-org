@@ -116,10 +116,12 @@ function isIdAvailable(elementId) {
  * @param {string} unsafe Unsafe html to sanitize.
  * @param {function(removed, unsafe, safe, warnings)} warn Optional function
  *     to call if any unsafe html was removed from the output.
+ * @param {boolean} persistingHtml - True if we plan to save this html to the
+ *     server (vs. this is just dynamic html that will existing during runtime).
  * @param {boolean} rejectExistingIds Optional if true, remove ids
  *     which already exist in the DOM and give a warning.
  */
-export default function sanitizeHtml(unsafe, warn, rejectExistingIds) {
+export default function sanitizeHtml(unsafe, warn, persistingHtml, rejectExistingIds) {
   var warnings = [];
 
   // Define tags with a standard set of allowed attributes
@@ -130,9 +132,14 @@ export default function sanitizeHtml(unsafe, warn, rejectExistingIds) {
   // <i> could allow people to covertly specify font awesome icons, which seems ok
   var tagsWithStandardAttributes = [
     'b', 'br', 'canvas', 'em', 'font', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
-    'i', 'label', 'li', 'ol', 'option', 'p', 'span', 'strong', 'table', 'td', 'th',
+    'i', 'label', 'li', 'ol', 'option', 'p', 'strong', 'table', 'td', 'th',
     'tr', 'u', 'ul'
   ];
+  if (!persistingHtml) {
+    // Spans are allowed when using write(), but we don't want to persist them
+    // since we don't know how to deserialize them into a design element type.
+    tagsWithStandardAttributes.push('span');
+  }
   var defaultAttributesMap = {};
   tagsWithStandardAttributes.forEach(function (tag) {
     defaultAttributesMap[tag] = standardAttributes;

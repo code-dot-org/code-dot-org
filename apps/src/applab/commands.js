@@ -238,7 +238,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -1107,7 +1107,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
     return true;
   }
   return false;
