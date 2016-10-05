@@ -44,6 +44,7 @@ const staticStyles = {
 const ListItemThumbnail = React.createClass({
   propTypes: {
     animationProps: PropTypes.AnimationProps.isRequired,
+    singleFrameAnimation: React.PropTypes.bool.isRequired,
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool
   },
@@ -97,6 +98,7 @@ const ListItemThumbnail = React.createClass({
             width={this.state.previewSize}
             height={this.state.previewSize}
             alwaysPlay={this.props.isSelected}
+            neverPlay={this.props.singleFrameAnimation}
           />
           {this.getIndexBubble()}
         </div>

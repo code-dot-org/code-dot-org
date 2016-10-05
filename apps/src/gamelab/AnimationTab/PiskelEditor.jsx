@@ -132,10 +132,10 @@ const PiskelEditor = React.createClass({
 
   onPiskelReady() {
     this.isPiskelReady_ = true;
-    this.loadSelectedAnimation_(this.props);
     if (this.props.allAnimationsSingleFrame) {
       this.piskel.toggleFrameColumn(true);
     }
+    this.loadSelectedAnimation_(this.props);
   },
 
   onAnimationSaved(message) {
@@ -166,7 +166,7 @@ export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
   animationList: state.animationList,
   channelId: state.pageConstants.channelId,
-  allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame
+  allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame || false
 }), dispatch => ({
   editAnimation: (key, props) => dispatch(editAnimation(key, props))
 }))(PiskelEditor);

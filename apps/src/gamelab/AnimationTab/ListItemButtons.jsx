@@ -1,5 +1,4 @@
 /** @file controls below an animation thumbnail */
-import {connect} from 'react-redux';
 import React from 'react';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import color from '../../color';
@@ -59,11 +58,11 @@ var ListItemButtons = function (props) {
   const cloneTooltip = (<Tooltip id={0}>Duplicate</Tooltip>);
   return (
     <div style={styles.root}>
-      {!props.allAnimationsSingleFrame &&
+      {!props.singleFrameAnimation &&
         <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
       }
       <div style={styles.previewControls}>
-        {!props.allAnimationsSingleFrame &&
+        {!props.singleFrameAnimation &&
           <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
         }
         <OverlayTrigger overlay={trashTooltip} placement="bottom" delayShow={500}>
@@ -93,11 +92,7 @@ ListItemButtons.propTypes = {
   looping: React.PropTypes.bool.isRequired,
   onFrameDelayChanged: React.PropTypes.func.isRequired,
   frameDelay: React.PropTypes.number.isRequired,
-  allAnimationsSingleFrame: React.PropTypes.bool.isRequired
+  singleFrameAnimation: React.PropTypes.bool.isRequired
 };
 
-module.exports = connect(function propsFromStore(state) {
-  return {
-    allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame
-  };
-})(ListItemButtons);
+module.exports = Radium(ListItemButtons);
