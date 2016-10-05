@@ -7,6 +7,7 @@
 - multi_answer_characters = ("A".."Z").to_a
 
 - layout_class = use_tight_layout ? "tight" : "default"
+- layout_class += " contained" if contained_mode
 
 .multi{id: "level_#{level.id}", class: layout_class}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?

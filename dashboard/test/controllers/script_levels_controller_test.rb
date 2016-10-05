@@ -881,8 +881,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     script = Script.find_by_name('ECSPD')
-    assert script.pd?
-    assert script.professional_course?
+    assert script.professional_learning_course?
 
     get :show, params: {script_id: script, stage_position: 1, id: 1}
     assert_select '.teacher-panel', 0
@@ -894,7 +893,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
-    assert script.professional_course?
 
     get :show, script_id: script, stage_position: 1, id: 1
     assert_select '.teacher-panel', 0
@@ -1215,21 +1213,31 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in teacher
 
     teacher_owner_section = put_student_in_section(student, teacher, @script)
+    teacher_owner_section2 = put_student_in_section(student, teacher, @script)
     teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
 
     stage1 = @script.stages[0]
     stage2 = @script.stages[1]
+    stage3 = @script.stages[2]
 
-    # stage 1 is hidden in the section owned by the teacher
+    # stage 1 is hidden in the first section owned by the teacher
     SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: stage1.id)
 
-    # stage 2 is hidden in the section in which the teacher is a member
-    SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: stage2.id)
+    # stage 1 and 2 are hidden in the second section owned by the teacher
+    SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: stage2.id)
+
+    # stage 3 is hidden in the section in which the teacher is a member
+    SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: stage3.id)
 
     response = get_hidden(@script)
     hidden = JSON.parse(response.body)
     # only the stages hidden in the owned section are considered hidden
-    assert_equal [stage1.id.to_s], hidden
+    expected = {
+      teacher_owner_section.id.to_s => [stage1.id],
+      teacher_owner_section2.id.to_s => [stage1.id, stage2.id]
+    }
+    assert_equal expected, hidden
   end
 
   test "teacher can hide and unhide stages in sections they own" do

@@ -311,6 +311,21 @@ class ScriptTest < ActiveSupport::TestCase
       Script.cache_find_script_level(script_level.id).level
   end
 
+  test 'stage hierarchy uses cache' do
+    script = Script.first
+    stage = script.stages.first
+    expected_script_level = stage.script_levels.first
+    expected_level = stage.script_levels.first.levels.first
+
+    populate_cache_and_disconnect_db
+
+    assert_equal expected_script_level,
+      Script.get_from_cache(script.id).stages.first.script_levels.first
+    assert_equal expected_level,
+      Script.get_from_cache(script.id).
+        stages.first.script_levels.first.levels.first
+  end
+
   test 'level_concept_difficulty uses preloading' do
     level = Script.find_by_name('20-hour').script_levels.third.level
     expected = level.level_concept_difficulty
@@ -341,9 +356,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'nextech_logo.png', Script.find_by_name('ECSPD-NexTech').logo_image
   end
 
-  test 'pd?' do
-    assert !Script.find_by_name('flappy').pd?
-    assert Script.find_by_name('ECSPD').pd?
+  test 'professional_learning_course?' do
+    refute Script.find_by_name('flappy').professional_learning_course?
+    assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
   test 'hoc?' do
