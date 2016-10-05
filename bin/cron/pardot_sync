@@ -13,17 +13,19 @@ SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
 
 UPDATE_BATCH_SIZE = 100
 
+DASHBOARD_DB_NAME = "dashboard_#{Rails.env}"
+
 def quote_string(v)
   v.to_s.gsub(/\\/, '\&\&').gsub(/'/, "''")
 end
 
 def append_to_role_list_from_permission(permission_name, dest_value)
-  PEGASUS_DB.run "UPDATE pegasus_development.contacts_rollup
-	INNER JOIN dashboard_development.users ON dashboard_development.users.id = pegasus_development.contacts_rollup.dashboard_user_id
-	INNER JOIN dashboard_development.user_permissions ON dashboard_development.user_permissions.user_id = dashboard_development.users.id
+  PEGASUS_DB.run "UPDATE contacts_rollup
+	INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = contacts_rollup.dashboard_user_id
+	INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
 	SET roles = CONCAT(COALESCE(CONCAT(roles,','),''),'#{dest_value}')
-    WHERE LENGTH(dashboard_development.users.email) > 0
-		AND dashboard_development.user_permissions.permission = '#{permission_name}' AND pegasus_development.contacts_rollup.id > 0"
+    WHERE LENGTH(users.email) > 0
+		AND user_permissions.permission = '#{permission_name}' AND contacts_rollup.id > 0"
 end
 
 def append_to_list_field_from_form(form_kinds, dest_field, dest_value)
@@ -31,6 +33,14 @@ def append_to_list_field_from_form(form_kinds, dest_field, dest_value)
     INNER JOIN forms ON forms.email = contacts_rollup.email
 	    SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field},','),''),#{dest_value})
     WHERE forms.kind IN (#{form_kinds}) AND contacts_rollup.id > 0"
+end
+
+def append_plp_to_role_list
+  PEGASUS_DB.run "UPDATE contacts_rollup
+	INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = contacts_rollup.dashboard_user_id
+	INNER JOIN #{DASHBOARD_DB_NAME}.professional_learning_partners AS professional_learning_partners ON professional_learning_partners.contact_id = users.id
+	SET roles = CONCAT(COALESCE(CONCAT(roles,','),''),'PLP')
+    WHERE LENGTH(users.email) > 0 AND contacts_rollup.id > 0"
 end
 
 def mysql_multi_connection
@@ -119,9 +129,9 @@ def main
 
   start = Time.now
   print "Inserting teacher contacts from dashboard.users"
-  PEGASUS_DB.run "INSERT INTO pegasus_development.contacts_rollup (email,name,dashboard_user_id,roles)
-	  SELECT email COLLATE utf8_general_ci, name, id, 'Teacher' FROM dashboard_development.users
-      WHERE dashboard_development.users.user_type = 'teacher'AND LENGTH(email) > 0
+  PEGASUS_DB.run "INSERT INTO contacts_rollup (email,name,dashboard_user_id,roles)
+	  SELECT email COLLATE utf8_general_ci, name, id, 'Teacher' FROM #{DASHBOARD_DB_NAME}.users AS users
+      WHERE users.user_type = 'teacher'AND LENGTH(email) > 0
       ON DUPLICATE KEY UPDATE contacts_rollup.email=VALUES(email), contacts_rollup.name=VALUES(name), contacts_rollup.dashboard_user_id=VALUES(dashboard_user_id), roles=VALUES(roles)"
   puts " - " + ((Time.now) - start).to_s + " seconds"
 
@@ -133,20 +143,25 @@ def main
   puts " - " + ((Time.now) - start).to_s + " seconds"
 
   start = Time.now
+  print "Marking Professional Learning Partner role"
+  append_plp_to_role_list
+  puts " - " + ((Time.now) - start).to_s + " seconds"
+
+  start = Time.now
   print "Marking grades taught from dashboard.users"
   PEGASUS_DB.run "SET SQL_SAFE_UPDATES = 0"
   PEGASUS_DB.run "UPDATE contacts_rollup,
-(SELECT dashboard_user_id, group_concat(grade) as grades FROM
-	(SELECT DISTINCT contacts_rollup.dashboard_user_id, dashboard_development.sections.grade from contacts_rollup
-		INNER JOIN dashboard_development.sections on dashboard_development.sections.user_id = contacts_rollup.dashboard_user_id
-		WHERE contacts_rollup.dashboard_user_id is not null
-		AND length(dashboard_development.sections.grade) > 0
-		ORDER by 1,2
-	) q
-	GROUP BY dashboard_user_id
-) src
-SET contacts_rollup.grades_taught = src.grades
-WHERE contacts_rollup.id > 0 AND (contacts_rollup.dashboard_user_id = src.dashboard_user_id)"
+    (SELECT dashboard_user_id, group_concat(grade) as grades FROM
+	    (SELECT DISTINCT contacts_rollup.dashboard_user_id, sections.grade from contacts_rollup
+		    INNER JOIN #{DASHBOARD_DB_NAME}.sections AS sections on sections.user_id = contacts_rollup.dashboard_user_id
+		    WHERE contacts_rollup.dashboard_user_id is not null
+		    AND length(sections.grade) > 0
+		    ORDER by 1,2
+	    ) q
+	    GROUP BY dashboard_user_id
+    ) src
+    SET contacts_rollup.grades_taught = src.grades
+    WHERE contacts_rollup.id > 0 AND (contacts_rollup.dashboard_user_id = src.dashboard_user_id)"
   puts " - " + ((Time.now) - start).to_s + " seconds"
 
   start = Time.now
