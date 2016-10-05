@@ -11,8 +11,8 @@ require_relative '../../shared/middleware/helpers/storage_id'
 require_relative '../../shared/middleware/helpers/dynamo_table'
 require_relative '../../shared/middleware/helpers/property_bag'
 
-MAX_THREADS = 20
-LOG_INCREMENT = 100
+MAX_THREADS = 50
+LOG_INCREMENT = 100_000
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
 def put_with_auth(url, data)
