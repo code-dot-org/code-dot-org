@@ -17,8 +17,9 @@ import {setExternalGlobals} from '../../util/testUtils';
 
 describe('animationListModule', function () {
   describe('animationSourceUrl', function () {
+    const key = 'foo';
+
     it(`returns the sourceUrl from props if it exists`, function () {
-      const key = 'foo';
       const props = {sourceUrl: 'bar'};
       expect(animationSourceUrl(key, props)).to.equal('bar');
       expect(animationSourceUrl(null, props)).to.equal('bar');
@@ -26,9 +27,14 @@ describe('animationListModule', function () {
 
     it(`constructs a sourceUrl from key and project if one isn't provided in props`, function () {
       setExternalGlobals();
-      const key = 'foo';
       const props = {sourceUrl: null};
       expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png');
+    });
+
+    it(`appends version query param if props has a version id`, function () {
+      setExternalGlobals();
+      const props = {sourceUrl: null, version: 'baz'};
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=baz');
     });
   });
 
