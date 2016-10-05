@@ -42,6 +42,7 @@ class Level < ActiveRecord::Base
   after_save :write_custom_level_file
   after_save :update_level_cache
   after_destroy :delete_custom_level_file
+  after_destroy :delete_from_level_cache
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
@@ -190,6 +191,10 @@ class Level < ActiveRecord::Base
 
   def update_level_cache
     Script.update_level_in_cache(self)
+  end
+
+  def delete_from_level_cache
+    Script.delete_level_from_cache(self)
   end
 
   def to_xml(options = {})

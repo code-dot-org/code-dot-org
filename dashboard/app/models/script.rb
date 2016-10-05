@@ -50,6 +50,7 @@ class Script < ActiveRecord::Base
 
   after_save :generate_plc_objects
   after_save :update_script_cache
+  after_destroy :delete_from_script_cache
 
   def generate_plc_objects
     if professional_learning_course?
@@ -216,6 +217,10 @@ class Script < ActiveRecord::Base
       Script.level_cache[level.id] = level unless Script.level_cache.key? level.id
       Script.level_cache[level.name] = level unless Script.level_cache.key? level.name
     end
+  end
+
+  def delete_from_script_cache
+    Script.script_cache.except!(name, id.to_s)
   end
 
   def self.script_cache

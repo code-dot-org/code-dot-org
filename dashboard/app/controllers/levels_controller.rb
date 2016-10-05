@@ -153,7 +153,6 @@ class LevelsController < ApplicationController
   # DELETE /levels/1
   # DELETE /levels/1.json
   def destroy
-    Script.delete_level_from_cache(@level)
     @level.destroy
     redirect_to(params[:redirect] || levels_url)
   end
