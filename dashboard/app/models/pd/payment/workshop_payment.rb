@@ -2,6 +2,9 @@ module Pd::Payment
   class WorkshopPayment
     attr_accessor :workshop, :pay_period, :num_days, :num_hours, :min_attendance_days
 
+    # @return [Class] calculator class that was used to calculate this payment.
+    attr_accessor :calculator_class
+
     # @return [Array<SessionAttendanceSummary>] One per session.
     # This does not take into account min attendance or max sessions.
     attr_accessor :session_attendance_summaries

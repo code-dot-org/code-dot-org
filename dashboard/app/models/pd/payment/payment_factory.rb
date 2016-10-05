@@ -2,10 +2,10 @@ module Pd::Payment
   module PaymentFactory
     def self.get_payment(workshop)
       raise 'Workshop required.' unless workshop && workshop.is_a?(Pd::Workshop)
-      get_payment_type(workshop).try(&:instance)
+      get_calculator_class(workshop).try{|payment| payment.instance.calculate(workshop)}
     end
 
-    def self.get_payment_type(workshop)
+    def self.get_calculator_class(workshop)
       if workshop.workshop_type == Pd::Workshop::TYPE_DISTRICT
         return PaymentCalculatorDistrict if [
           Pd::Workshop::COURSE_CS_IN_A,
