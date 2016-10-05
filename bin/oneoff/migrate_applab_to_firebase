@@ -139,7 +139,6 @@ def up
       # Mark the project as updated in the Pegasus SQL database
       sql_row_value['useFirebase'] = true
       sql_row_value['migratedToFirebase'] = true
-      puts "updating channel #{channel_id}"
       PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: sql_row_value.to_json)
     rescue => e
       HipChat.log("Error processing channel id #{channel_id}: #{e.message}")
@@ -151,16 +150,16 @@ def up
 end
 
 def down
-  fetch_applab_channels.each do |_, channel_id|
-    row = PEGASUS_DB[:storage_apps].where(id: channel_id).first
-    row_value = JSON.parse(row[:value])
-    if row_value['migratedToFirebase']
-      row_value.delete('useFirebase')
-      row_value.delete('migratedToFirebase')
-      puts "reverting channel #{channel_id} to DynamoDB. row_value: #{row_value}"
-      PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: row_value.to_json)
-    end
-  end
+  puts "'rollback' is for development/emergency purposes only and has been disabled."
+  # fetch_applab_channels.each do |_, channel_id|
+  #   row = PEGASUS_DB[:storage_apps].where(id: channel_id).first
+  #   row_value = JSON.parse(row[:value])
+  #   if row_value['migratedToFirebase']
+  #     row_value.delete('useFirebase')
+  #     row_value.delete('migratedToFirebase')
+  #     PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: row_value.to_json)
+  #   end
+  # end
 end
 
 if ARGV[0] == 'rollback'
