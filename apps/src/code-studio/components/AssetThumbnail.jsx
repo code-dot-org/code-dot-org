@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
-import {assets, files as assetsApi, filesApi} from '@cdo/apps/clientApi';
+import clientApi from '@cdo/apps/clientApi';
+var assetsApi = clientApi.assets;
+var filesApi = clientApi.files;
 
 var defaultIcons = {
   image: 'fa fa-picture-o',

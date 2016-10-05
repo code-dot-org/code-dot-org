@@ -12,6 +12,7 @@ var AssetRow = React.createClass({
     type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     size: React.PropTypes.number,
     useFilesApi: React.PropTypes.bool.isRequired,
+    filesVersionId: React.PropTypes.string,
     onChoose: React.PropTypes.func,
     onDelete: React.PropTypes.func.isRequired
   },
@@ -44,13 +45,16 @@ var AssetRow = React.createClass({
   handleDelete: function () {
     this.setState({action: 'deleting', actionText: ''});
 
+    let queryString = '';
+    if (this.props.useFilesApi && this.props.filesVersionId) {
+      queryString = `?files-version=${this.props.filesVersionId}`;
+    }
     // TODO: Use Dave's client api when it's finished.
     let api = this.props.useFilesApi ? filesApi : assetsApi;
-    api.ajax('DELETE', this.props.name, this.props.onDelete, function () {
-      // FILESTODO: store away new files-version
+    api.ajax('DELETE',`${this.props.name}${queryString}`, this.props.onDelete, () => {
       this.setState({action: 'confirming delete',
           actionText: 'Error deleting file.'});
-    }.bind(this));
+    });
   },
 
   render: function () {

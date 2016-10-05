@@ -9,6 +9,7 @@ window.requirejs.config({
   // DEVMODE: baseUrl: 'http://127.0.0.1:8000/src/'
 });
 
+// This is needed to support jQuery binary downloads
 var download = require('../assetManagement/download');
 
 // the main Bramble object -- used to access file system
@@ -19,9 +20,14 @@ let brambleProxy_ = null;
 let webLab_ = null;
 // the registered onProjectChanged callback function
 let onProjectChangedCallback_ = null;
+// the set of recent changes since the last syncAssetsWithBramble() called
+let _recentBrambleChanges;
+// the version id of the project at the time of the last bramble asset sync
+let _lastSyncedVersionId;
 
 // Project root in file system
 const projectRoot = "/codedotorg/weblab";
+const removeProjectRootRegex = /^\/codedotorg\/weblab\//g;
 
 function putFilesInBramble(sources, callback) {
   const fs = bramble_.getFileSystem();
@@ -113,12 +119,46 @@ function removeAllAssetsInBramble(callback) {
   });
 }
 
-function syncAssetsWithBramble(assets, callback) {
+/*
+ * Async-chained enumeration: get the file data for all assets listed in entries
+ * @param {string} filename
+ * @param {function} callback Function to call with error code and fileData
+ */
+function getAssetFileData(filename, callback) {
+  const fs = bramble_.getFileSystem();
+  const Path = bramble_.Filer.Path;
+  const path = Path.join(projectRoot, filename);
+  fs.getxattr(path, 'asset', (err, assetAttrValue) => {
+    if (err && err.name !== 'ENOATTR') {
+      callback(err);
+      return;
+    }
+    if (!assetAttrValue) {
+      // ignore non-assets, callback with no error or fileData
+      callback(null);
+    } else {
+      // read file data
+      fs.readFile(path, { encoding: null }, callback);
+    }
+  });
+}
+
+function resetBrambleChangesAndProjectVersion(projectVersion) {
+  _recentBrambleChanges = {
+    fileDelete: {},
+    fileRename: {},
+    fileChange: {},
+  };
+  _lastSyncedVersionId = projectVersion;
+}
+
+function syncAssetsWithBramble(assets, currentProjectVersion, callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
   const Buffer = bramble_.Filer.Buffer;
   assets = assets || [];
+  let localChangeList = [];
 
   function requestAssetAndWrite(asset, callback) {
     // read the data
@@ -152,9 +192,10 @@ function syncAssetsWithBramble(assets, callback) {
         if (err) {
           // error, call completion callback
           callback();
+        } else {
+          // continue on to the next item on the list
+          writeAssetFile(i + 1, callback);
         }
-        // continue on to the next item on the list
-        writeAssetFile(i + 1, callback);
       });
     } else {
       // end of list, call completion callback
@@ -162,14 +203,106 @@ function syncAssetsWithBramble(assets, callback) {
     }
   }
 
-  removeAllAssetsInBramble(err => {
-    if (err) {
-      callback();
+  // async-chained enumeration: handle local file system changes and send them
+  // to the service
+  function handleLocalChange(i, callback) {
+    if (i < localChangeList.length) {
+      let change = localChangeList[i];
+      switch (change.operation) {
+        case 'delete':
+          webLab_.deleteProjectFile(change.file, (err, versionId) => {
+            if (err) {
+              callback();
+            } else {
+              _lastSyncedVersionId = versionId;
+              handleLocalChange(i + 1, callback);
+            }
+          });
+          break;
+
+        case 'rename':
+          webLab_.renameProjectFile(change.file, change.newFile, (err, versionId) => {
+            if (err) {
+              callback();
+            } else {
+              _lastSyncedVersionId = versionId;
+              handleLocalChange(i + 1, callback);
+            }
+          });
+          break;
+
+        case 'change':
+          getAssetFileData(change.file, (err, fileData) => {
+            if (err) {
+              callback();
+            } else if (!fileData) {
+              // Non-asset, ignoring...
+              handleLocalChange(i + 1, callback);
+            } else {
+              webLab_.changeProjectFile(change.file, fileData, (err, versionId) => {
+                if (err) {
+                  callback();
+                } else {
+                  _lastSyncedVersionId = versionId;
+                  handleLocalChange(i + 1, callback);
+                }
+              });
+            }
+          });
+          break;
+
+        default:
+          console.error("Bramble host: unknown local change");
+          callback();
+      }
     } else {
-      // start an async-chained enumeration through the file list
-      writeAssetFile(0, callback);
+      callback();
     }
-  });
+  }
+
+  var versionChanged = _lastSyncedVersionId !== currentProjectVersion;
+  _lastSyncedVersionId = currentProjectVersion;
+  if (versionChanged) {
+    console.log(`syncAssetsWithBramble: version changed: currentProjectVersion ${currentProjectVersion}`);
+    if (!jQuery.isEmptyObject(_recentBrambleChanges.fileDelete) ||
+        !jQuery.isEmptyObject(_recentBrambleChanges.fileRename) ||
+        !jQuery.isEmptyObject(_recentBrambleChanges.fileChange)) {
+      console.warn('Bramble host: recent changes ignored and replaced by service changes!');
+    }
+    // Changes on the server, rebuild from the assets supplied:
+    removeAllAssetsInBramble(err => {
+      if (err) {
+        callback();
+      } else {
+        // start an async-chained enumeration through the file list
+        writeAssetFile(0, callback);
+      }
+    });
+  } else {
+    console.log(`syncAssetsWithBramble: version is the same: currentProjectVersion ${currentProjectVersion}`);
+    for (let name in _recentBrambleChanges.fileDelete) {
+      localChangeList.push({
+        operation: 'delete',
+        file: name
+      });
+    }
+    for (let name in _recentBrambleChanges.fileRename) {
+      localChangeList.push({
+        operation: 'rename',
+        file: name,
+        newFile: _recentBrambleChanges.fileRename[name]
+      });
+    }
+    for (let name in _recentBrambleChanges.fileChange) {
+      localChangeList.push({
+        operation: 'change',
+        file: name
+      });
+    }
+
+    // If a changeList was populated, start handling it here:
+    handleLocalChange(0, callback);
+  }
 }
 
 function getFilesFromBramble(callback) {
@@ -295,9 +428,13 @@ function loadStartSources(callback) {
 function syncAssets(callback) {
   // Get current assets to put in file system
   const currentAssets = webLab_.getCurrentAssets();
+  const currentProjectVersion = webLab_.getCurrentFilesVersionId();
 
-  syncAssetsWithBramble(currentAssets, callback);
+  syncAssetsWithBramble(currentAssets, currentProjectVersion, callback);
 }
+
+// Init change list and version structures
+resetBrambleChangesAndProjectVersion();
 
 // Get the WebLab object from our parent window
 if (parent.getWebLab) {
@@ -339,18 +476,28 @@ function load(Bramble) {
   Bramble.once("ready", function (bramble) {
 
     function handleFileChange(path) {
+      // Remove leading slash
+      var cleanedPath = path.replace(removeProjectRootRegex, '');
+      _recentBrambleChanges.fileChange[cleanedPath] = true;
       if (onProjectChangedCallback_) {
         onProjectChangedCallback_();
       }
     }
 
     function handleFileDelete(path) {
+      // Remove leading slash
+      var cleanedPath = path.replace(removeProjectRootRegex, '');
+      _recentBrambleChanges.fileDelete[cleanedPath] = true;
       if (onProjectChangedCallback_) {
         onProjectChangedCallback_();
       }
     }
 
     function handleFileRename(oldFilename, newFilename) {
+      // Remove leading slashes
+      var cleanedOldFilename = oldFilename.replace(removeProjectRootRegex, '');
+      var cleanedNewFilename = newFilename.replace(removeProjectRootRegex, '');
+      _recentBrambleChanges.fileRename[cleanedOldFilename] = cleanedNewFilename;
       if (onProjectChangedCallback_) {
         onProjectChangedCallback_();
       }

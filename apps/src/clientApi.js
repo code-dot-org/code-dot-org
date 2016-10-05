@@ -89,6 +89,23 @@ class FilesApi extends CollectionsApi {
     });
     return ajaxInternal('PUT', path, success, error);
   }
+
+  renameFile(oldFilename, newFilename, filesVersionId, success, error) {
+    var path = apiPath(
+      'files',
+      this.projectId || window.dashboard.project.getCurrentId(),
+      newFilename
+    );
+    var params = {
+      src: oldFilename,
+      delete: oldFilename
+    };
+    if (filesVersionId) {
+      params['files-version'] = filesVersionId;
+    }
+    path += '?' + queryString.stringify(params);
+    return ajaxInternal('PUT', path, success, error);
+  }
 }
 module.exports = {
   animations: new CollectionsApi('animations'),

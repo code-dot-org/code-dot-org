@@ -401,7 +401,11 @@ class FilesApi < Sinatra::Base
     end
 
     # store the new file
-    new_entry_json = put_file('files', encrypted_channel_id, filename, body)
+    if params['src']
+      new_entry_json = copy_file('files', encrypted_channel_id, filename, params['src'])
+    else
+      new_entry_json = put_file('files', encrypted_channel_id, filename, body)
+    end
     new_entry_hash = JSON.parse new_entry_json
     entry_is_unchanged = false
 
@@ -416,8 +420,14 @@ class FilesApi < Sinatra::Base
       end
     end
 
+    # if we're also deleting a file (on rename), remove it from the manifest
+    manifest.reject! { |e| e['filename'].downcase == params['delete'].downcase } if params['delete']
+
     # write the manifest (assuming the entry changed)
-    response = bucket.create_or_replace(encrypted_channel_id, 'manifest.json', manifest.to_json, request.GET['project_version']) unless entry_is_unchanged
+    response = bucket.create_or_replace(encrypted_channel_id, 'manifest.json', manifest.to_json, params['files-version']) unless entry_is_unchanged
+
+    # delete a file if requested (same as src file in a rename operation)
+    bucket.delete(encrypted_channel_id, params['delete']) if params['delete']
 
     # return the new entry info
     new_entry_hash['filesVersionId'] = response.version_id
@@ -454,11 +464,13 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    # read the entire request before considering rejecting it, otherwise varnish
-    # may return a 503 instead of whatever status code we specify. Unfortunately
-    # this prevents us from rejecting large files based on the Content-Length
-    # header.
-    body = request.body.read
+    if params['src'].nil?
+      # read the entire request before considering rejecting it, otherwise varnish
+      # may return a 503 instead of whatever status code we specify. Unfortunately
+      # this prevents us from rejecting large files based on the Content-Length
+      # header.
+      body = request.body.read
+    end
 
     files_put_file(encrypted_channel_id, filename, body)
   end

@@ -28,14 +28,17 @@ function getErrorMessage(status) {
 var AssetManager = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
+    assetsChanged: React.PropTypes.func,
     allowedExtensions: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired
+    useFilesApi: React.PropTypes.bool.isRequired,
+    filesVersionId: React.PropTypes.string
   },
 
   getInitialState: function () {
     return {
       assets: null,
+      filesVersionId: this.props.filesVersionId,
       statusMessage: this.props.uploadsEnabled ? '' : errorUploadDisabled
     };
   },
@@ -58,6 +61,9 @@ var AssetManager = React.createClass({
     assetListStore.reset(parsedResponse);
     if (this.isMounted()) {
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
+      if (this.props.useFilesApi) {
+        this.setState({filesVersionId: parsedResponse.filesVersionId});
+      }
     }
   },
 
@@ -79,12 +85,20 @@ var AssetManager = React.createClass({
   },
 
   onUploadDone: function (result) {
-    // FILESTODO: store away new files-version
     assetListStore.add(result);
+    this.setState({filesVersionId: result.filesVersionId});
+    if (this.props.assetsChanged) {
+      this.props.assetsChanged(this.state.filesVersionId);
+    }
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
     });
+    if (this.props.useFilesApi) {
+      // Update all AssetRow and AssetUploader components with the new
+      // filesVersionId:
+      this.forceUpdate();
+    }
   },
 
   onUploadError: function (status) {
@@ -92,11 +106,22 @@ var AssetManager = React.createClass({
       getErrorMessage(status)});
   },
 
-  deleteAssetRow: function (name) {
+  deleteAssetRow: function (name, e, result) {
+    if (this.prop.useFilesApi) {
+      this.setState({filesVersionId: result.filesVersionId});
+    }
+    if (this.props.assetsChanged) {
+      this.props.assetsChanged(this.state.filesVersionId);
+    }
     this.setState({
       assets: assetListStore.remove(name),
       statusMessage: 'File "' + name + '" successfully deleted!'
     });
+    if (this.props.useFilesApi) {
+      // Update all AssetRow and AssetUploader components with the new
+      // filesVersionId:
+      this.forceUpdate();
+    }
   },
 
   render: function () {
@@ -105,6 +130,7 @@ var AssetManager = React.createClass({
         uploadsEnabled={this.props.uploadsEnabled}
         allowedExtensions={this.props.allowedExtensions}
         useFilesApi={this.props.useFilesApi}
+        filesVersionId={this.state.filesVersionId}
         onUploadStart={this.onUploadStart}
         onUploadDone={this.onUploadDone}
         onUploadError={this.onUploadError}
@@ -146,6 +172,7 @@ var AssetManager = React.createClass({
             type={asset.category}
             size={asset.size}
             useFilesApi={this.props.useFilesApi}
+            filesVersionId={this.state.filesVersionId}
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
           />

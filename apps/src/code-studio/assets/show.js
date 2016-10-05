@@ -30,6 +30,10 @@ module.exports = function (assetChosen, typeFilter, onClose, options) {
     typeFilter: typeFilter,
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     useFilesApi: options.useFilesApi,
+    filesVersionId: dashboard.project.filesVersionId,
+    assetsChanged: (newFilesApiVersionId) => {
+      dashboard.project.filesVersionId = newFilesApiVersionId;
+    },
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);

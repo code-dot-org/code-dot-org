@@ -152,17 +152,23 @@ class BucketHelper
   # @param [String] encrypted_channel_id - App-identifying token
   # @param [String] filename - Destination name for new object
   # @param [String] source_filename - Name of object to be copied
-  # @param [Hash] S3 response from copy operation
-  def copy(encrypted_channel_id, filename, source_filename)
+  # @param [String] version - Version of destination object to replace
+  # @return [Hash] S3 response from copy operation
+  def copy(encrypted_channel_id, filename, source_filename, version = nil)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
     copy_source = @bucket + '/' + s3_path(owner_id, channel_id, source_filename)
-    @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
+    response = @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
 
     # TODO: (bbuchanan) Handle abuse_score metadata for animations.
     # When copying an object, should also copy its abuse_score metadata.
     # https://www.pivotaltracker.com/story/show/117949241
+
+    # Delete the old version, if doing an in-place replace
+    @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
+
+    response
   end
 
   def delete(encrypted_channel_id, filename)

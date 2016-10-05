@@ -16,10 +16,12 @@ var extensionFilter = {
 var ImagePicker = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
+    assetsChanged: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired,
     showUnderageWarning: React.PropTypes.bool.isRequired,
     useFilesApi: React.PropTypes.bool.isRequired,
+    filesVersionId: React.PropTypes.string
   },
 
   getInitialState: function () {
@@ -86,9 +88,11 @@ var ImagePicker = React.createClass({
     var body = !this.props.assetChosen || this.state.mode === 'files' ?
       <AssetManager
         assetChosen={this.props.assetChosen}
+        assetsChanged={this.props.assetsChanged}
         allowedExtensions={extensionFilter[this.props.typeFilter]}
         uploadsEnabled={this.props.uploadsEnabled}
         useFilesApi={this.props.useFilesApi}
+        filesVersionId={this.props.filesVersionId}
       /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
