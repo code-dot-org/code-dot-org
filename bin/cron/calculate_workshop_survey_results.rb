@@ -10,7 +10,7 @@ def main
   course_scores = {}
 
   Pd::Workshop::COURSES.each do |course|
-    workshops = ::Pd::Workshop.where(course: course)
+    workshops = ::Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(course: course)
 
     course_scores[course] = WorkshopScoreSummarizer.get_score_for_workshops(workshops)
   end
