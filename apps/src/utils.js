@@ -1,5 +1,6 @@
-/* global define, $ */
-import Immutable from 'immutable';
+// @flow
+import * as Immutable from 'immutable';
+import $ from 'jquery';
 import constants from './constants';
 
 /**
@@ -10,7 +11,7 @@ import constants from './constants';
  * @param subsequence Array - A subsequence of the given sequence.
  * @returns boolean - whether or not subsequence is really a subsequence of sequence.
  */
-export function isSubsequence(sequence, subsequence) {
+export function isSubsequence<T>(sequence:Array<T>, subsequence:Array<T>):bool {
   let superIndex = 0, subIndex = 0;
   while (subIndex < subsequence.length) {
     while (superIndex < sequence.length && subsequence[subIndex] !== sequence[superIndex]) {
@@ -26,7 +27,7 @@ export function isSubsequence(sequence, subsequence) {
   return true;
 }
 
-export function shallowCopy(source) {
+export function shallowCopy(source:Object): Object {
   var result = {};
   for (var prop in source) {
     result[prop] = source[prop];
@@ -38,14 +39,14 @@ export function shallowCopy(source) {
 /**
  * Returns a clone of the object, stripping any functions on it.
  */
-export function cloneWithoutFunctions(object) {
+export function cloneWithoutFunctions(object:Object):Object {
   return JSON.parse(JSON.stringify(object));
 }
 
 /**
  * Returns a string with a double quote before and after.
  */
-export function quote(str) {
+export function quote(str:string):string {
   return '"' + str + '"';
 }
 
@@ -54,7 +55,7 @@ export function quote(str) {
  * properties in options. Leaves defaults and options unchanged.
  * NOTE: For new code, use Object.assign({}, defaults, options) instead
  */
-export function extend(defaults, options) {
+export function extend(defaults:Object, options:Object):Object {
   var finalOptions = exports.shallowCopy(defaults);
   for (var prop in options) {
     finalOptions[prop] = options[prop];
@@ -63,7 +64,7 @@ export function extend(defaults, options) {
   return finalOptions;
 }
 
-export function escapeHtml(unsafe) {
+export function escapeHtml(unsafe:string):string {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -78,14 +79,14 @@ export function escapeHtml(unsafe) {
  * @param number
  * @param mod
  */
-export function mod(number, mod) {
+export function mod(number:number, mod:number):number {
   return ((number % mod) + mod) % mod;
 }
 
 /**
  * Generates an array of integers from start to end inclusive
  */
-export function range(start, end) {
+export function range(start:number, end:number):Array<number> {
   var ints = [];
   for (var i = start; i <= end; i++) {
     ints.push(i);
@@ -97,7 +98,7 @@ export function range(start, end) {
  * Given two functions, generates a function that returns the result of the
  * second function if and only if the first function returns true
  */
-export function executeIfConditional(conditional, fn) {
+export function executeIfConditional(conditional:()=>bool, fn:Function):Function {
   return function () {
     if (conditional()) {
       return fn.apply(this, arguments);
@@ -110,14 +111,16 @@ export function executeIfConditional(conditional, fn) {
  * @param inputString
  * @returns {string} string without quotes
  */
-export function stripQuotes(inputString) {
+export function stripQuotes(inputString:string):string {
   return inputString.replace(/["']/g, "");
 }
+
 
 /**
  * Defines an inheritance relationship between parent class and this class.
  */
-Function.prototype.inherits = function (parent) {
+// $FlowFixMe: extending built-in object prototypes is a no-no.
+Function.prototype.inherits = function (parent:Function) {
   this.prototype = Object.create(parent.prototype);
   this.prototype.constructor = this;
   this.superPrototype = parent.prototype;
@@ -128,6 +131,7 @@ Function.prototype.inherits = function (parent) {
  * done so that level builders can specify required blocks with wildcard fields.
  */
 export function wrapNumberValidatorsForLevelBuilder() {
+  declare var Blockly: Object;
   var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
   var numVal = Blockly.FieldTextInput.numberValidator;
 
@@ -149,7 +153,7 @@ export function wrapNumberValidatorsForLevelBuilder() {
 /**
  * Return a random value from an array
  */
-export function randomValue(values) {
+export function randomValue<T>(values:Array<T>):T {
   let key = Math.floor(Math.random() * values.length);
   return values[key];
 }
@@ -157,7 +161,7 @@ export function randomValue(values) {
 /**
  * Return a random key name from an object.
  */
-export function randomKey(obj) {
+export function randomKey(obj:Object):string {
   return randomValue(Object.keys(obj));
 }
 
@@ -171,7 +175,7 @@ export function randomKey(obj) {
  *
  * @returns {string} RFC4122-compliant UUID
  */
-export function createUuid() {
+export function createUuid():string {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
@@ -179,9 +183,7 @@ export function createUuid() {
 }
 
 export function fireResizeEvent() {
-  var ev = document.createEvent('Event');
-  ev.initEvent('resize', true, true);
-  window.dispatchEvent(ev);
+  window.dispatchEvent(new CustomEvent('resize', {bubbles: true, cancelable: true}));
 }
 
 // ECMAScript 6 polyfill for String.prototype.repeat
@@ -196,6 +198,7 @@ if (!String.prototype.repeat) {
    * @param {number} count
    * @returns {string}
    */
+  // $FlowFixMe: extending built-in types is a no-no.
   String.prototype.repeat = function (count) {
     if (this === null) {
       throw new TypeError('can\'t convert ' + this + ' to object');
@@ -241,7 +244,7 @@ if (!String.prototype.repeat) {
  * undefined instead of whether val is falsey.
  * @returns {*} val if not undefined, otherwise defaultVal
  */
-export function valueOr(val, defaultVal) {
+export function valueOr<T>(val:T, defaultVal:T):T {
   return val === undefined ? defaultVal : val;
 }
 
@@ -253,7 +256,7 @@ export function valueOr(val, defaultVal) {
  * Note: Other languages probably have localized messages, meaning we won't
  * catch them.
  */
-export function isInfiniteRecursionError(err) {
+export function isInfiniteRecursionError(err:Error):bool {
   // Chrome/Safari: message ends in a period in Safari, not in Chrome
   if (err instanceof RangeError &&
     /^Maximum call stack size exceeded/.test(err.message)) {
@@ -264,6 +267,7 @@ export function isInfiniteRecursionError(err) {
   /*eslint-disable */
   // Linter doesn't like our use of InternalError, even though we gate on its
   // existence.
+  declare class InternalError extends Error {}
   if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
       err.message === 'too much recursion') {
     return true;
@@ -280,7 +284,7 @@ export function isInfiniteRecursionError(err) {
 }
 
 // TODO(dave): move this logic to dashboard.
-export function getPegasusHost() {
+export function getPegasusHost():?string {
   switch (window.location.hostname) {
     case 'studio.code.org':
     case 'learn.code.org':
@@ -310,9 +314,10 @@ export function getPegasusHost() {
 /**
  * IE9 throws an exception when trying to access the media field of a stylesheet
  */
-export function browserSupportsCssMedia() {
+export function browserSupportsCssMedia():bool {
   var styleSheets = document.styleSheets;
   for (var i = 0; i < styleSheets.length; i++) {
+    // $FlowFixMe: `rules` is not a valid property for CSSStyleSheet objects
     var rules = styleSheets[i].cssRules || styleSheets[i].rules;
     try {
       if (rules.length > 0) {
@@ -331,7 +336,7 @@ export function browserSupportsCssMedia() {
  * @param text
  * @returns String that has no more escape characters and multiple divs converted to newlines
  */
-export function unescapeText(text) {
+export function unescapeText(text:string):string {
   var cleanedText = text;
 
   // Handling of line breaks:
@@ -377,7 +382,7 @@ export function unescapeText(text) {
  * @param text
  * @returns String with special characters escaped and newlines converted divs
  */
-export function escapeText(text) {
+export function escapeText(text:string):string {
   var escapedText = text.toString();
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
@@ -401,7 +406,7 @@ export function escapeText(text) {
   }).join('');
 }
 
-export function showUnusedBlockQtip(targetElement) {
+export function showUnusedBlockQtip(targetElement:Element) {
   var msg = require('@cdo/locale');
   $(targetElement).qtip({
     content: {
@@ -434,7 +439,7 @@ export function showUnusedBlockQtip(targetElement) {
  * @param degrees - The degrees to convert to radians
  * @return `degrees` converted to radians
  */
-export function degreesToRadians(degrees) {
+export function degreesToRadians(degrees:number):number {
     return degrees * (Math.PI / 180);
 }
 
@@ -443,7 +448,7 @@ export function degreesToRadians(degrees) {
  * example when we call setItem in Safari's private mode)
  * @return {boolean} True if we set successfully
  */
-export function trySetLocalStorage(item, value) {
+export function trySetLocalStorage(item:string, value:any):bool {
   try {
     localStorage.setItem(item, value);
     return true;
@@ -461,7 +466,7 @@ export function trySetLocalStorage(item, value) {
  *   Seasons.SUMMER === 'SUMMER';
  *   // etc...
  */
-export function makeEnum() {
+export function makeEnum():Object {
   var result = {}, key;
   for (var i = 0; i < arguments.length; i++) {
     key = String(arguments[i]);
@@ -482,7 +487,7 @@ export function makeEnum() {
  * @param {number} maxLength
  * @returns {string}
  */
-export function ellipsify(inputText, maxLength) {
+export function ellipsify(inputText:string, maxLength:number):string {
   if (inputText && inputText.length > maxLength) {
     return inputText.substr(0, maxLength - 3) + "...";
   }
@@ -504,7 +509,7 @@ export function ellipsify(inputText, maxLength) {
  * @param {Object} overrides
  * @returns {Object} original object (now modified in-place)
  */
-export function deepMergeConcatArrays(baseObject, overrides) {
+export function deepMergeConcatArrays(baseObject:Object, overrides:Object):Object {
   function deepConcatMerger(a, b) {
     const isList = Immutable.List.isList;
     if (isList(a) && isList(b)) {
@@ -532,23 +537,27 @@ export function deepMergeConcatArrays(baseObject, overrides) {
  * @param {boolean} [bubbles=false]
  * @param {boolean} [cancelable=false]
  */
-export function createEvent(type, bubbles = false, cancelable = false) {
+export function createEvent(type:string, bubbles:bool = false, cancelable:bool = false):Event {
   var customEvent;
   try {
     customEvent = new Event(type, { bubbles, cancelable });
   } catch (e) {
     customEvent = document.createEvent('Event');
+    // I think the flow type declarations for this deprecated DOM api is wrong...
+    // see https://github.com/facebook/flow/blob/master/lib/dom.js#L123
+    // $FlowFixMe
     customEvent.initEvent(type, bubbles, cancelable);
   }
   return customEvent;
 }
 
+type Vector = {x:number, y:number};
 /**
  * @param {Object} vector with x and y coordinates
  * @returns {Object} vector with x and y coordinates and length 1 (or 0 if
  *   the argument also had length 0)
  */
-export function normalize(vector) {
+export function normalize(vector:Vector):Vector {
   var mag = Math.sqrt((vector.x * vector.x) + (vector.y * vector.y));
   if (mag === 0) {
     return vector;
@@ -559,6 +568,33 @@ export function normalize(vector) {
   };
 }
 
+type Position =
+    1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | 12
+  | 13
+  | 14
+  | 15
+  | 16
+  | 17
+  | 18
+  | 19
+  | 20
+  | 21
+  | 22
+  | 23
+  | 24
+  | 25;
+
 /**
  * @param {number} position selected from constants.Position
  * @param {number} containerWidth width of the element we are
@@ -566,7 +602,11 @@ export function normalize(vector) {
  * @param {number} spriteWidth width of the element being positioned
  * @returns {number} left-most point of sprite given position constant
  */
-export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
+export function xFromPosition(
+  position:Position,
+  containerWidth:number = 0,
+  spriteWidth:number = 0
+):number {
   switch (position) {
     case constants.Position.OUTTOPOUTLEFT:
     case constants.Position.TOPOUTLEFT:
@@ -598,6 +638,9 @@ export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
     case constants.Position.BOTTOMOUTRIGHT:
     case constants.Position.OUTBOTTOMOUTRIGHT:
       return containerWidth;
+    default:
+      throw new Error("Invalid position");
+
   }
 }
 
@@ -608,7 +651,11 @@ export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
  * @param {number} spriteHeight height of the element being positioned
  * @returns {number} top-most point of sprite given position constant
  */
-export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
+export function yFromPosition(
+  position:Position,
+  containerHeight:number = 0,
+  spriteHeight:number = 0
+):number {
   switch (position) {
     case constants.Position.OUTTOPOUTLEFT:
     case constants.Position.OUTTOPLEFT:
@@ -640,5 +687,7 @@ export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
     case constants.Position.OUTBOTTOMRIGHT:
     case constants.Position.OUTBOTTOMOUTRIGHT:
       return containerHeight;
+    default:
+      throw new Error("Invalid position");
   }
 }
