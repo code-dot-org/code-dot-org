@@ -293,7 +293,8 @@ class Pd::Workshop < ActiveRecord::Base
     }.to_json
   end
 
-  # Min number of days a teacher must attend for it to count
+  # Min number of days a teacher must attend for it to count.
+  # @return [Integer]
   def min_attendance_days
     constraints = TIME_CONSTRAINTS_BY_SUBJECT[self.subject]
     if constraints
@@ -304,14 +305,22 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
+  # @return [Integer] number of payment days, after applying constraints
   def effective_num_days
     max_days = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_days]}
     [self.sessions.count, max_days].compact.min
   end
 
+  # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
+  # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.map(&:hours).reduce(&:+)
     max_hours = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_hours]}
     [actual_hours, max_hours].compact.min
+  end
+
+  # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
+  def professional_learning_partner
+    ProfessionalLearningPartner.find_by_contact_id self.organizer.id
   end
 end

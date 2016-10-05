@@ -9,16 +9,16 @@ module Pd::Payment
       workshop_cs_in_s = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_DISTRICT,
         course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2
 
-      assert_kind_of DistrictPay, PaymentFactory.get_payment(workshop_cs_in_a)
-      assert_kind_of DistrictPay, PaymentFactory.get_payment(workshop_cs_in_s)
+      assert_kind_of PaymentCalculatorDistrict, PaymentFactory.get_payment(workshop_cs_in_a)
+      assert_kind_of PaymentCalculatorDistrict, PaymentFactory.get_payment(workshop_cs_in_s)
     end
 
     test 'CSF payment' do
       workshop_csf_public = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, workshop_type: Pd::Workshop::TYPE_PUBLIC
       workshop_csf_private = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, workshop_type: Pd::Workshop::TYPE_PRIVATE
 
-      assert_kind_of CSFPay, PaymentFactory.get_payment(workshop_csf_public)
-      assert_kind_of CSFPay, PaymentFactory.get_payment(workshop_csf_private)
+      assert_kind_of PaymentCalculatorCSF, PaymentFactory.get_payment(workshop_csf_public)
+      assert_kind_of PaymentCalculatorCSF, PaymentFactory.get_payment(workshop_csf_private)
     end
 
     test 'standard payment' do
@@ -35,10 +35,10 @@ module Pd::Payment
       workshop_cs_in_s = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PUBLIC,
         course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2
 
-      assert_kind_of StandardPay, PaymentFactory.get_payment(workshop_ecs)
-      assert_kind_of StandardPay, PaymentFactory.get_payment(workshop_csp)
-      assert_kind_of StandardPay, PaymentFactory.get_payment(workshop_cs_in_a)
-      assert_kind_of StandardPay, PaymentFactory.get_payment(workshop_cs_in_s)
+      assert_kind_of PaymentCalculatorStandard, PaymentFactory.get_payment(workshop_ecs)
+      assert_kind_of PaymentCalculatorStandard, PaymentFactory.get_payment(workshop_csp)
+      assert_kind_of PaymentCalculatorStandard, PaymentFactory.get_payment(workshop_cs_in_a)
+      assert_kind_of PaymentCalculatorStandard, PaymentFactory.get_payment(workshop_cs_in_s)
     end
 
     test 'no payment' do
