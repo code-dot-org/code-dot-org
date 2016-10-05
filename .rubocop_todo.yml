@@ -25,10 +25,6 @@ Lint/IneffectiveAccessModifier:
 Lint/InheritException:
   Enabled: false
 
-# Offense count: 9
-Lint/Loop:
-  Enabled: false
-
 # Offense count: 24
 Lint/NestedMethodDefinition:
   Enabled: false
