@@ -207,12 +207,14 @@ WebLab.prototype.init = function (config) {
 WebLab.prototype.getCodeAsync = function () {
   return new Promise((resolve, reject) => {
     if (this.brambleHost !== null) {
-      this.brambleHost.getBrambleCode(function (err, code) {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(code);
-        }
+      this.brambleHost.syncAssets(err => {
+        this.brambleHost.getBrambleCode(function (err, code) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(code);
+          }
+        });
       });
     } else {
       // Bramble not installed yet - we have no code to return
@@ -229,6 +231,51 @@ WebLab.prototype.getStartSources = function () {
 // Called by Bramble to get the current assets
 WebLab.prototype.getCurrentAssets = function () {
   return this.currentAssets;
+};
+
+WebLab.prototype.getCurrentFilesVersionId = function () {
+  return dashboard.project.filesVersionId || this.initialFilesVersionId;
+};
+
+// Called by Bramble when a file has been deleted
+WebLab.prototype.deleteProjectFile = function (filename, callback) {
+  let queryString = '';
+  if (dashboard.project.filesVersionId) {
+    queryString = `?files-version=${dashboard.project.filesVersionId}`;
+  }
+  filesApi.ajax(
+    'DELETE',
+    `${filename}${queryString}`,
+    (err, result) => {
+      if (!err) {
+        dashboard.project.filesVersionId = result.filesVersionId;
+      }
+      callback(err, dashboard.project.filesVersionId);
+    },
+    (jqXHR, textStatus, errorThrown) => {
+      console.warn(`WebLab: error file ${filename} not deleted`);
+      callback(errorThrown);
+    }
+  );
+};
+
+// Called by Bramble when a file has been renamed
+WebLab.prototype.renameProjectFile = function (filename, newFilename, callback) {
+  filesApi.renameFile(
+    filename,
+    newFilename,
+    dashboard.project.filesVersionId,
+    (err, result) => {
+      if (!err) {
+        dashboard.project.filesVersionId = result.filesVersionId;
+      }
+      callback(err, dashboard.project.filesVersionId);
+    },
+    (jqXHR, textStatus, errorThrown) => {
+      console.warn(`WebLab: error file ${filename} not renamed`);
+      callback(errorThrown);
+    }
+  );
 };
 
 // Called by Bramble when project has changed
@@ -278,8 +325,15 @@ WebLab.prototype.loadCurrentAssets = function () {
     assetListStore.reset(parsedResponse.files);
     this.currentAssets = assetListStore.list().map(asset => ({
       name: asset.filename,
-      url: '/v3/files/' + dashboard.project.getCurrentId() + '/' + asset.filename
+      url: `/v3/files/${dashboard.project.getCurrentId()}/${asset.filename}`
     }));
+    if (!this.initialFilesVersionId) {
+      this.initialFilesVersionId = parsedResponse.filesVersionId;
+    } else {
+      // After the first load, we store this version id so that subsequent
+      // writes will continue to replace the current version
+      dashboard.project.filesVersionId = parsedResponse.filesVersionId;
+    }
     if (this.brambleHost) {
       this.brambleHost.syncAssets(() => {});
     }
