@@ -501,8 +501,8 @@ export function animationSourceUrl(key, props) {
   // 1. If the animation has a sourceUrl it's external (from the library
   //    or some other outside source, not the animation API)
   // 2. Otherwise use the animation key to look it up in the animations API
-  // TODO: Take version ID into account here...
-  return props.sourceUrl || animationsApi.basePath(key) + '.png';
+  return props.sourceUrl || animationsApi.basePath(key) + '.png' +
+     (props.version ? '?version=' + props.version : '');
 }
 
 /**
