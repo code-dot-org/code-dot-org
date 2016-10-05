@@ -39,6 +39,12 @@
     "timeout_failure_tick": "850",
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
     "contained_level_names": null
   },
   "published": true,
@@ -47,28 +53,6 @@
   }
 }]]></config>
   <blocks>
-    <initialization_blocks>
-      <xml>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="studio_setSpritesWander">
-              <title name="VALUE">"dragon"</title>
-              <next>
-                <block type="studio_wait">
-                  <title name="VALUE">1000</title>
-                  <next>
-                    <block type="studio_setSpritePosition">
-                      <title name="SPRITE">0</title>
-                      <title name="VALUE">random</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>
-    </initialization_blocks>
     <start_blocks>
       <xml>
         <block type="when_run"/>
@@ -80,6 +64,24 @@
               <title name="VALUE">random</title>
             </block>
           </next>
+        </block>
+        <block type="studio_repeatForever" uservisible="false">
+          <statement name="DO">
+            <block type="studio_setSpritesWander" uservisible="false">
+              <title name="VALUE">"dragon"</title>
+              <next>
+                <block type="studio_wait" uservisible="false">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSpritePosition" uservisible="false">
+                      <title name="SPRITE">0</title>
+                      <title name="VALUE">random</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
         <block type="studio_whenArrow">
           <title name="VALUE">left</title>
@@ -123,6 +125,11 @@
           <next>
             <block type="studio_vanish">
               <title name="SPRITE">1</title>
+              <next>
+                <block type="studio_playSound">
+                  <title name="SOUND">slap</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -148,7 +155,7 @@
           <title name="DIR">1</title>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">random</title>
+          <title name="SOUND">slap</title>
         </block>
         <block type="studio_changeScore"/>
         <block type="studio_saySpriteChoices">
@@ -164,7 +171,7 @@
           <title name="VALUE">0</title>
         </block>
         <block type="studio_vanish">
-          <title name="SPRITE">0</title>
+          <title name="SPRITE">1</title>
         </block>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">3</title>

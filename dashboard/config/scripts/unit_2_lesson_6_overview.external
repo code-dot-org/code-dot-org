@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 ## Background
 
-Students will work to debug web pages. The difficulty of the pages students are debugging increase as they go. In the process the importance of comments, whitespace and indentation are demonstrated in different web pages students are debugging.  Students work to create a list of strategies for debugging as well as ways to write more easily maintainable web pages in the future.
+Students will work to debug web pages. The difficulty of the pages students are debugging increase as they go. In the process, the importance of comments, whitespace and indentation are demonstrated in different web pages students are debugging.  Students work to create a list of strategies for debugging as well as ways to write more easily maintainable web pages in the future.
 # Vocabulary
 
 * **Bug** - Part of a program that does not work correctly.
