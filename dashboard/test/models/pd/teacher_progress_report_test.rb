@@ -70,11 +70,6 @@ class Pd::TeacherProgressReportTest < ActiveSupport::TestCase
     Pd::TeacherProgressReport.generate_report_for_user create(:admin)
   end
 
-  test 'report for district contact' do
-    Pd::TeacherProgressReport.expects(:generate_report).with([@teacher1])
-    Pd::TeacherProgressReport.generate_report_for_user @district.contact
-  end
-
   test 'report for workshop organizer' do
     organizer = @workshop1.organizer
     Pd::TeacherProgressReport.expects(:generate_report).with([@teacher1])
