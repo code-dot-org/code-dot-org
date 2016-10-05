@@ -15,7 +15,7 @@ def main
     course_scores[course] = WorkshopScoreSummarizer.get_score_for_workshops(workshops)
   end
 
-  AWS::S3.upload_to_bucket('pd-workshop-surveys', 'aggregate-workshop-scores', course_scores.to_json, no_random: true)
+  AWS::S3.upload_to_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}", course_scores.to_json, no_random: true)
 end
 
 main if only_one_running?(__FILE__)
