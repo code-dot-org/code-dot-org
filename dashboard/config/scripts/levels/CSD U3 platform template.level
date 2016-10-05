@@ -1,0 +1,45 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-10-03T22:34:34.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "contained_level_names": null,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "show_d_pad": "false",
+    "pause_animations_by_default": "false",
+    "start_blocks": "// Variables\r\n\r\n\r\n// Sprites\r\n\r\n\r\n// Draw Loop\r\n\r\n\r\n// Functions",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"bunnyLeft\", \"bunnyRight\", \"carrot\", \"platform\"],\r\n  \"propsByKey\": {\r\n    \"bunnyLeft\": {\r\n      \"name\": \"bunnyLeft\",\r\n      \"sourceUrl\": \"https://images.code.org/33064fe9b3899c9b0dfd0616a32706ee-image-1475478186181.png\",\r\n      \"frameSize\": {\"x\":40, \"y\": 67},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"bunnyRight\": {\r\n      \"name\": \"bunnyRight\",\r\n      \"sourceUrl\": \"https://images.code.org/c56605216886c0c318b2470438b03666-image-1475478186182.png\",\r\n      \"frameSize\": {\"x\":40, \"y\": 67},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"carrot\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://images.code.org/160430b9b29cc80ab667174045a91c15-image-1475478186183.png\",\r\n      \"frameSize\": {\"x\":20, \"y\": 18},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"platform\": {\r\n      \"name\": \"platform\",\r\n      \"sourceUrl\": \"https://images.code.org/4282bf2423f3815b66731ede0c6386f9-image-1475478186183.png\",\r\n      \"frameSize\": {\"x\":100, \"y\": 25},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    }\r\n  }\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

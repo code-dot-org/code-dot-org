@@ -23,6 +23,7 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 require 'parallel'
+require 'securerandom'
 require 'socket'
 
 require_relative './utils/selenium_browser'
@@ -250,10 +251,17 @@ browser_features = $browsers.product features_to_run
 ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
+applitools_batch_url = nil
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
 if test_type == 'Eyes'
-  HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
-  print "Batching eyes tests as #{ENV['BATCH_NAME']}"
+  # Generate a batch ID, unique to this test run.
+  # Each Eyes instance will use the same one so that tests from this
+  # run get grouped together. This gets used in eyes_steps.rb.
+  # See "Aggregating tests from different processes"
+  # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
+  ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
+  applitools_batch_url = "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
+  HipChat.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
 end
 
 status_page_url = nil
@@ -604,7 +612,8 @@ HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " 
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
   "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
   "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
-  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
+  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"
