@@ -1073,6 +1073,8 @@ Applab.runButtonClick = function () {
       app: 'applab'
     }, 1/100);
   }
+
+  this.studioApp_.postContainedLevelAttempt();
 };
 
 /**

@@ -452,8 +452,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   this.reset();
 
   var program;
-  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
-
+  const containedLevelResultsInfo = this.studioApp_.getContainedLevelResultInfo();
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
@@ -478,24 +477,33 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
 
   this.waitingForReport = true;
 
-  var sendReport = function () {
-    this.studioApp_.report({
-      app: 'gamelab',
-      level: this.level.id,
-      result: levelComplete,
-      testResult: this.testResults,
-      submitted: submit,
-      program: program,
-      image: this.encodedFeedbackImage,
-      containedLevelResultsInfo: containedLevelResultsInfo,
-      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
-    });
+  var sendReport = () => {
+    const submitted = !!submit;
+    const onComplete = (submit ? this.onSubmitComplete : this.onReportComplete).bind(this);
+
+    if (containedLevelResultsInfo) {
+      // TODO - this will cause problems if our postContainedLevelAttempt was
+      // slow and hasn't finished yet
+      // We already reported results when run was clicked, so we can just onComplete
+      onComplete();
+    } else {
+      this.studioApp_.report({
+        app: 'gamelab',
+        level: this.level.id,
+        result: levelComplete,
+        testResult: this.testResults,
+        program: program,
+        image: this.encodedFeedbackImage,
+        submitted,
+        onComplete
+      });
+    }
 
     if (this.studioApp_.isUsingBlockly()) {
       // reenable toolbox
       Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     }
-  }.bind(this);
+  };
 
   var divGameLab = document.getElementById('divGameLab');
   if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
@@ -544,6 +552,8 @@ GameLab.prototype.runButtonClick = function () {
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
+
+  this.studioApp_.postContainedLevelAttempt();
 };
 
 function p5KeyCodeFromArrow(idBtn) {

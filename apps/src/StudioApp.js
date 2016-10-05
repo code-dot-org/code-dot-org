@@ -635,25 +635,6 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
   }
 };
 
-StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.hasContainedLevels) {
-    var firstResult = codeStudioLevels.getContainedLevelResult();
-    var containedResult = firstResult.result;
-    var testResults = utils.valueOr(firstResult.testResult,
-        containedResult.result ? this.TestResults.ALL_PASS :
-          this.TestResults.GENERIC_FAIL);
-    return {
-      app: firstResult.app,
-      level: firstResult.id,
-      callback: firstResult.callback,
-      result: containedResult.result,
-      testResults: testResults,
-      program: containedResult.response,
-      feedback: firstResult.feedback
-    };
-  }
-};
-
 StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
     config.shareWarningInfo.onTooYoung = onTooYoung;
@@ -1651,23 +1632,6 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 */
 StudioApp.prototype.report = function (options) {
 
-  if (options.containedLevelResultsInfo) {
-    // If we have contained level results, just submit those directly and return
-    this.onAttempt({
-      callback: options.containedLevelResultsInfo.callback,
-      app: options.containedLevelResultsInfo.app,
-      level: options.containedLevelResultsInfo.level,
-      serverLevelId: options.containedLevelResultsInfo.level,
-      result: options.containedLevelResultsInfo.result,
-      testResult: options.containedLevelResultsInfo.testResults,
-      submitted: options.submitted,
-      program: options.containedLevelResultsInfo.program,
-      onComplete: options.onComplete
-    });
-    this.enableShowLinesCount = false;
-    return;
-  }
-
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
@@ -1841,7 +1805,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
-  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false &&
+    !config.hasContainedLevels);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -2897,6 +2862,46 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
   } else {
     return code;
   }
+};
+
+StudioApp.prototype.getContainedLevelResultInfo = function () {
+  if (!this.hasContainedLevels) {
+    return;
+  }
+
+  const containedResult = codeStudioLevels.getContainedLevelResult();
+  const levelResult = containedResult.result;
+  const testResults = utils.valueOr(containedResult.testResult,
+    levelResult.result ? this.TestResults.ALL_PASS : this.TestResults.GENERIC_FAIL);
+  return {
+    app: containedResult.app,
+    level: containedResult.id,
+    callback: containedResult.callback,
+    result: levelResult.result,
+    testResults: testResults,
+    program: levelResult.response,
+    feedback: containedResult.feedback,
+    // TODO - fully understand submitted
+    submitted: false
+  };
+};
+
+StudioApp.prototype.postContainedLevelAttempt = function () {
+  // Only want to post on the first attempt
+  if (!this.hasContainedLevels || this.attempts > 1) {
+    return;
+  }
+
+  this.pendingContainedLevelPost = true;
+  const reportInfo = this.getContainedLevelResultInfo();
+  // TODO - replicate async
+  this.onAttempt({
+    ...reportInfo,
+    onComplete() {
+      console.log('completed');
+      this.pendingContainedLevelPost = false;
+    }
+  });
 };
 
 /**
