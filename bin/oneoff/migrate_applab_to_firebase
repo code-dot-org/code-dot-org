@@ -95,6 +95,40 @@ def fetch_applab_channels
   end
 end
 
+def migrate_channel(owner_storage_id, channel_id)
+  encrypted_channel_id = storage_encrypt_channel_id(owner_storage_id, channel_id)
+
+  sql_row = PEGASUS_DB[:storage_apps].where(id: channel_id).first
+  sql_row_value = JSON.parse(sql_row[:value])
+  return if sql_row[:state] == 'deleted' || sql_row_value['useFirebase']
+
+  properties = Hash[DynamoPropertyBag.new(channel_id, nil).to_hash.map { |k, v| [k, v.to_json] }]
+  set_firebase_properties(encrypted_channel_id, properties) unless properties.empty?
+
+  DynamoTable.table_names(channel_id).each do |table_name|
+    dynamo_table = DynamoTable.new(encrypted_channel_id, nil, table_name)
+    # A hash from record id to json-encoded records
+    table_records = Hash[dynamo_table.to_a.map { |row| [row['id'].to_s, row.to_json] }]
+    table_columns = dynamo_table.metadata
+    table_columns = JSON.parse(table_columns['column_list']) if table_columns
+    set_firebase_table(encrypted_channel_id, table_name, table_records, table_columns)
+  end
+
+  # For some reason the local variables row and row_value became mismatched with the channel_id
+  # when Parallel.each_with_index was configured to use processes. This doesn't
+  # appear to be a problem with threads, but check here anyway to prevent disaster.
+  raise "parallelization error: attempting to write data from row id #{sql_row[:id]} to channel id #{channel_id}" if sql_row[:id] != channel_id
+
+  # Mark the project as updated in the Pegasus SQL database
+  sql_row_value['migratedToFirebase'] = true
+  # TODO(dave): enable this line to perform full migration after successful dry run
+  # sql_row_value['useFirebase'] = true
+  PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: sql_row_value.to_json)
+rescue => e
+  puts("Error processing channel id #{channel_id}: #{e.message}")
+  puts e.backtrace
+end
+
 def up
   puts 'Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately '\
     '15 minutes to run over ~4.5M rows in storage_apps in production...'
@@ -102,40 +136,8 @@ def up
 
   puts "Searching for #{channels.length} applab projects in DynamoDB using #{MAX_THREADS} threads..."
   Parallel.each_with_index(channels, in_threads: MAX_THREADS) do |channel_data, channel_index|
-    begin
-      owner_storage_id, channel_id = channel_data
-      encrypted_channel_id = storage_encrypt_channel_id(owner_storage_id, channel_id)
-
-      sql_row = PEGASUS_DB[:storage_apps].where(id: channel_id).first
-      sql_row_value = JSON.parse(sql_row[:value])
-      next if sql_row[:state] == 'deleted' || sql_row_value['useFirebase']
-
-      properties = Hash[DynamoPropertyBag.new(channel_id, nil).to_hash.map{ |k, v| [k, v.to_json] }]
-      set_firebase_properties(encrypted_channel_id, properties) unless properties.empty?
-
-      DynamoTable.table_names(channel_id).each do |table_name|
-        dynamo_table = DynamoTable.new(encrypted_channel_id, nil, table_name)
-        # A hash from record id to json-encoded records
-        table_records = Hash[dynamo_table.to_a.map{|row| [row['id'].to_s, row.to_json]}]
-        table_columns = dynamo_table.metadata
-        table_columns = JSON.parse(table_columns['column_list']) if table_columns
-        set_firebase_table(encrypted_channel_id, table_name, table_records, table_columns)
-      end
-
-      # For some reason the local variables row and row_value became mismatched with the channel_id
-      # when Parallel.each_with_index was configured to use processes. This doesn't
-      # appear to be a problem with threads, but check here anyway to prevent disaster.
-      raise "parallelization error: attempting to write data from row id #{sql_row[:id]} to channel id #{channel_id}" if sql_row[:id] != channel_id
-
-      # Mark the project as updated in the Pegasus SQL database
-      sql_row_value['migratedToFirebase'] = true
-      # TODO(dave): enable this line to perform full migration after successful dry run
-      # sql_row_value['useFirebase'] = true
-      PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: sql_row_value.to_json)
-    rescue => e
-      puts("Error processing channel id #{channel_id}: #{e.message}")
-      puts e.backtrace
-    end
+    owner_storage_id, channel_id = channel_data
+    migrate_channel(owner_storage_id, channel_id)
     puts "#{channel_index} of #{channels.size} projects scanned..." if channel_index % LOG_INCREMENT == 0
   end
   puts "#{channels.size} projects scanned total"
