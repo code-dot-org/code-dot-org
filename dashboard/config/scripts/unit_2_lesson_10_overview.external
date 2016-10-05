@@ -1,5 +1,22 @@
 name 'Unit 2 Lesson 10 Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Overview
+# The Internet - Web Development: Lesson 10 - External Style Sheets
+
+## Background
+
+Students will design their own personal style set or brand for their website by picking consistent colors and fonts to use across all pages of their website. Once they have decided on fonts and colors they create style rules that go across all the pages.  These get applied to the website using an external style sheet and students are forced to use classes to keep some of the unique style exceptions on their pages. Student finish class by designing a logo for their web page and making it a link to the home page.
+# Vocabulary
+
+* **Brand** - A set of marketing and communication methods that help to distinguish a company from competitors and create a lasting impression in the minds of customers.
+* **External Style Sheet** - A CSS or cascading style sheets style that is written in an external document and can be referenced by multiple documents. 
+
+# New Blocks
+
+* **Link** - `<link>`
+
+# Resources
+
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+* [Guess the Brand](https://docs.google.com/document/d/16roFJyQqQg8GZS2DNfZ1xVWTPPwM8Z9RkA0JUqRox70/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/16roFJyQqQg8GZS2DNfZ1xVWTPPwM8Z9RkA0JUqRox70/export?format=pdf) | [DOCX](https://docs.google.com/document/d/16roFJyQqQg8GZS2DNfZ1xVWTPPwM8Z9RkA0JUqRox70/export?format=doc))
 MARKDOWN
