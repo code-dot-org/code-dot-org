@@ -70,14 +70,14 @@ def merge_geo_data_from_forms(kind)
 end
 
 def merge_geo_data_from_forms_helper(solr_params)
-  i = 0
+  record_count = 0
   num_updated = 0
   update_batch = ""
   conn = mysql_multi_connection
 
   start = Time.now
   SOLR.query(solr_params).each do |record|
-    i += 1
+    record_count += 1
 
     email = record['email_s'].presence
     next if email.nil?
@@ -97,13 +97,13 @@ def merge_geo_data_from_forms_helper(solr_params)
     next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil?
 
     # TODO: add street address to schema? update street address
-    update_batch += conn[:contacts_rollup].where(:email => email).update_sql(:city => city, :state => state,
-                                                                             :postal_code => postal_code, :country => country) + ";"
+    update_batch += conn[:contacts_rollup].where(:email => email).update_sql(
+      :street_address => street_address, :city => city, :state => state, :postal_code => postal_code, :country => country) + ";"
 
     num_updated += 1
 
-    if i % UPDATE_BATCH_SIZE == 0
-      # puts "batch: #{i}"
+    if record_count % UPDATE_BATCH_SIZE == 0
+      puts "batch: #{record_count}"
       conn.run update_batch
       conn.disconnect
       conn = mysql_multi_connection
@@ -113,7 +113,7 @@ def merge_geo_data_from_forms_helper(solr_params)
 
   conn.run update_batch unless update_batch.empty?
 
-  puts "- #{i} source records, #{num_updated} with geo data " + ((Time.now) - start).to_s + " seconds"
+  puts "- #{record_count} source records, #{num_updated} with geo data " + ((Time.now) - start).to_s + " seconds"
 end
 
 def main
@@ -299,11 +299,11 @@ def main
   puts " - " + ((Time.now) - start).to_s + " seconds"
 #=end
 
-  # excluding forms: AffiliateWorkshopSignup
-
-  merge_teacher_geo_data_from_forms
-
+#  merge_teacher_geo_data_from_forms
 #=begin
+
+# excluding forms: AffiliateWorkshopSignup
+
   merge_geo_data_from_forms('BringToSchool2013')
   merge_geo_data_from_forms('CSEdWeekEvent2013')
   merge_geo_data_from_forms('ClassSubmission')
