@@ -26,12 +26,13 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "These blocks are in the wrong order! Help me collect each bone by putting them in the right order.",
-    "markdown_instructions": "These blocks are in the wrong order! Help me collect each bone by putting them in the right order.",
+    "instructions": "These blocks are in the wrong order! Help me collect each coin by putting the commands in the right order.",
+    "markdown_instructions": "These blocks are in the wrong order! Help me collect each coin by putting the commands in the right order.",
+    "ideal": "10",
     "contained_level_names": null
   },
   "published": true,
-  "notes": " All blocks already attached, but some in wrong order. How do you fix?",
+  "notes": "All blocks already attached, but some in wrong order. How do you fix?",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -43,28 +44,27 @@
             <block type="maze_move">
               <title name="DIR">moveForward</title>
               <next>
-                <block type="collector_collect">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
                       <next>
-                        <block type="collector_collect">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
                           <next>
                             <block type="maze_move">
                               <title name="DIR">moveForward</title>
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnRight</title>
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
                                   <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
                                       <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
+                                        <block type="collector_collect">
                                           <next>
-                                            <block type="maze_move">
-                                              <title name="DIR">moveForward</title>
-                                            </block>
+                                            <block type="collector_collect"/>
                                           </next>
                                         </block>
                                       </next>

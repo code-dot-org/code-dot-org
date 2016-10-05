@@ -173,8 +173,12 @@
     "hide_view_data_button": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# 3 Bit Colors\r\nEach pixel is a square on a screen that emits light. Each pixel can have a certain number of bits assigned to it, and bits per pixel determine the colors that can be rendered.\r\n\r\nIn this tool we're using 3 bits to define the one large black pixel. The first bit affects the red tint. The second bit affects the green tint. The third bit affects the blue tint.\r\n\r\n# Do This\r\n\r\n* Click on the light bulbs to turn on or off each color and see what happens to your pixel\r\n* See how many different colors you can create with just three bits\r\n* Write down the binary associated with each color you come up with\r\n",
-    "contained_level_names": null
+    "markdown_instructions": "# 3 Bit Colors\r\nEach pixel is a square on a screen that emits light. Each pixel can have a certain number of bits assigned to it, and bits per pixel determine the colors that can be rendered.\r\n\r\nIn this tool we're using 3 bits to define the one large black pixel. The first bit affects the red tint. The second bit affects the green tint. The third bit affects the blue tint.\r\n\r\n# Do This\r\n\r\n* Click the \"Run\" button to start the widget\r\n* Click on the light bulbs to turn on or off each color and see what happens to your pixel\r\n* See how many different colors you can create with just three bits\r\n* Write down the binary associated with each color you come up with\r\n",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",
