@@ -649,7 +649,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   }
 
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
-  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml, true));
   var children = $(levelDom).children();
   children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
@@ -1136,7 +1136,7 @@ designMode.renderDesignWorkspace = function (element) {
  */
 designMode.addScreenIfNecessary = function (html) {
   var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
-  html = sanitizeHtml(html, reportUnsafeHtml);
+  html = sanitizeHtml(html, reportUnsafeHtml, true);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {

@@ -81,7 +81,6 @@ class Script < ActiveRecord::Base
 
   serialized_attrs %w(
     hideable_stages
-    pd
     peer_reviews_to_complete
     professional_learning_course
   )
@@ -186,7 +185,9 @@ class Script < ActiveRecord::Base
               :callouts
             ]
           },
-          :stages
+          {
+            stages: [{script_levels: [:levels]}]
+          }
         ]).find(script_id)
 
         cache[script.name] = script
@@ -382,10 +383,6 @@ class Script < ActiveRecord::Base
     else
       ['playlab', 'artist']
     end
-  end
-
-  def professional_course?
-    pd? || professional_learning_course?
   end
 
   def has_peer_reviews?
@@ -697,7 +694,6 @@ class Script < ActiveRecord::Base
   def self.build_property_hash(script_data)
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
-      pd: script_data[:pd] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
     }.compact

@@ -17,6 +17,7 @@ Scenario: Submittable level
   And I see no difference for "submitted puzzle"
   And I close my eyes
 
+@skip
 Scenario: Lockable level
   When I open my eyes to test "lockable level"
   Then I am on "http://studio.code.org/s/allthethings"

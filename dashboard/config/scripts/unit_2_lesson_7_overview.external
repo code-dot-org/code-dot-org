@@ -20,6 +20,7 @@ This lesson introduces CSS as a way to style elements on the page. Students lear
 * **Head** - `<head></head>`
 * **Body** - `<body></body>`
 * **Style** - `<style></style>`
+* **Title** - `<title></title>`
 
 ## CSS
 * **Color** - `color: value;`

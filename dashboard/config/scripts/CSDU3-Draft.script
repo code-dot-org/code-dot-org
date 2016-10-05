@@ -192,6 +192,7 @@ level 'CSD U3 collisions egg'
 level 'CSD U3 collisions egg2'
 level 'CSD U3 collisions horse'
 level 'CSD U3 collisions debug isTouching'
+level 'CSD U3 collisions scoreboard'
 # level 'CSD U3 collisions overlap x'
 # level 'CSD U3 collisions overlap y'
 # level 'CSD U3 collisions overlap'
@@ -233,6 +234,31 @@ level 'CSD U3 collisions pirate'
 level 'CSD U3 collisions obstacle'
 level 'CSD U3 collisions tennis' # bounceOff
 level 'CSD U3 collisions bumper' # bounce
+level 'CSD U3 collisions pinball'
+level 'CSD U3 collisions pinball2'
+
+stage 'Platform Jumper'
+level 'CSD U3 platform sample'
+level 'CSD U3 platform intro'
+level 'CSD U3 platform background1'
+level 'CSD U3 platform background2'
+level 'CSD U3 platform variables'
+level 'CSD U3 platform draw loop'
+level 'CSD U3 platform platform1'
+level 'CSD U3 platform platform2'
+level 'CSD U3 platform items1'
+level 'CSD U3 platform items2'
+level 'CSD U3 platform player1'
+level 'CSD U3 platform player2'
+level 'CSD U3 platform player3'
+level 'CSD U3 platform player4'
+
+stage 'Defender'
+level 'CSD U3 AnimationsMulti Play Defender'
+level 'CSD U3 AnimationsMulti introducing multiframe'
+level 'CSD U3 AnimationsMulti slow down'
+
+
 
 
 stage 'Sprite Movement Methods'

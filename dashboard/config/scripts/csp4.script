@@ -1,5 +1,5 @@
 login_required 'true'
-hidden 'true'
+hidden 'false'
 
 stage 'What is Big Data?'
 level 'U4L10 Student Lesson Introduction'

@@ -146,22 +146,27 @@ def insert_form(kind, data, options={})
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
 
+  # For the most recent HOC signups, a duplicate (matching email and name)
+  # entry is assumed to be an update rather than an insert.
+  num_rows_updated = 0
   if kind == 'HocSignup2016'
-    # For the most recent HOC signups, a duplicate (matching email and name)
-    # entry is assumed to be an update rather than an insert.
-    update_row = DB[:forms].where(email: row[:email], kind: kind, name: row[:name]).update(row)
-    row[:id] = DB[:forms].insert(row) if update_row == 0
-  else
-    row[:id] = DB[:forms].insert(row)
+    num_rows_updated = DB[:forms].
+      where(email: row[:email], kind: kind, name: row[:name]).
+      update(row)
   end
+  # If we didn't perform an update, insert the row into the forms table and
+  # create a corresponding form_geos row.
+  if num_rows_updated == 0
+    row[:id] = DB[:forms].insert(row)
 
-  form_geos_row = {
-    form_id: row[:id],
-    created_at: timestamp,
-    updated_at: timestamp,
-    ip_address: request.ip
-  }
-  DB[:form_geos].insert(form_geos_row)
+    form_geos_row = {
+      form_id: row[:id],
+      created_at: timestamp,
+      updated_at: timestamp,
+      ip_address: request.ip
+    }
+    DB[:form_geos].insert(form_geos_row)
+  end
 
   row
 end
