@@ -5,9 +5,9 @@ require 'json'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative '../../deployment'
 
-SLACK_TOKEN = CDO.SLACK_TOKEN.freeze
-PAGERDUTY_TOKEN = CDO.PAGERDUTY_TOKEN.freeze
-CHANNEL_ID = CDO.developers_CHANNEL_ID.freeze
+SLACK_TOKEN = CDO.slack_token.freeze
+PAGERDUTY_TOKEN = CDO.pagerduty_token.freeze
+CHANNEL_ID = CDO.developers_channel_id.freeze
 
 # @param user [Hash] PagerDuty information for a user
 # @return [Boolean] whether the user is the current DOTD primary oncall.

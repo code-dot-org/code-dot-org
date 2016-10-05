@@ -7,10 +7,12 @@ require 'json'
 require 'memoist'
 require 'open-uri'
 require 'optparse'
+require 'parallel'
 
 CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
 RUN_UI_TESTS_STEP_STRING = 'run_tests'
 RUN_UI_TESTS_CONTAINER = 1
+MAX_THREADS = 50
 
 KNOWN_FAIL_TYPES = [
     {
@@ -115,7 +117,7 @@ end
 fail_types_list = fail_types_to_check.map { |f| describe_fail_type(f) }.join "\n"
 puts "Checking builds #{builds.join ', '} for output:\n#{fail_types_list}"
 
-builds.each do |build|
+Parallel.each(builds, in_processes: MAX_THREADS) do |build|
   fail_types_to_check.each do |known_fail|
     output = get_output(build, known_fail[:container], known_fail[:step_string])
 

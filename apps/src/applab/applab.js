@@ -788,8 +788,6 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
-
-  studioApp.notifyInitialRenderComplete(config);
 };
 
 function changedToDataMode(state, lastState) {
