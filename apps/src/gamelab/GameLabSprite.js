@@ -575,8 +575,7 @@ const ALIASED_PROPERTIES = {
   'position.y': 'y',
   'velocity.x': 'velocityX',
   'velocity.y': 'velocityY',
-  'life': 'lifetime',
-  "restitution": 'bounciness'
+  'life': 'lifetime'
 };
 
 /**
