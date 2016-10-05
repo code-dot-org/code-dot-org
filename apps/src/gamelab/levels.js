@@ -109,7 +109,6 @@ levels.custom = utils.extend(levels.sandbox, {
     "setFrame": null,
     "x": null,
     "y": null,
-    "bounciness": null,
     "rotateToDirection": null,
     "rotation": null,
     "rotationSpeed": null,
