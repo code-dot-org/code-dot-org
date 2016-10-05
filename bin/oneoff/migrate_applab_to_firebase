@@ -11,10 +11,9 @@ require_relative '../../shared/middleware/helpers/storage_id'
 require_relative '../../shared/middleware/helpers/dynamo_table'
 require_relative '../../shared/middleware/helpers/property_bag'
 
-puts "CDO.firebase_name: #{CDO.firebase_name}"
-
 MAX_THREADS = 20
 LOG_INCREMENT = 100
+PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
 def put_with_auth(url, data)
   uri = URI.parse("#{url}?auth=#{CDO.firebase_secret}")
@@ -84,32 +83,24 @@ def set_firebase_table(encrypted_channel_id, table_name, table_records, table_co
   end
 end
 
-# http://localhost-studio.code.org:3000/projects/applab/Ezx7frRzCh_QoTetQwzVZQ/edit
-# http://localhost.code.org:3000/v3/edit-csp-app/Ezx7frRzCh_QoTetQwzVZQ
-def stub_applab_channels
-  [
-    [1, 4307], # "Remix: My Project" (dynamodb deleted)
-    [1, 4385], # Ezx7frRzCh_QoTetQwzVZQ dynamodb with data
-    [1, 4386], # EosN50MleCkJgP-52bxCEQ dynamodb no data
-    [1, 4388], # 5Rep_hVVFfkCQR283rnQVg firebase with data
-    [1, 4389] # 6f5LdZdKnraOtKhxulEj5A firebase no data
-  ]
-end
-
 # Returns an array of pairs of storage_owner_ids and channel_ids, each representing an applab app.
 # There are ~1.1M of these on production.
 def fetch_applab_channels
-  PEGASUS_DB[:storage_apps].grep(:value, '%applab%').map do |row|
+  # In production, use the reporting db to fetch the initial channel list only. This is safe because
+  # all new applab projects are using firebase, so any which are missing from this list by
+  # definition do not need to be migrated. The check for whether each project is deleted or
+  # already migrated is done later against the real db.
+  PEGASUS_REPORTING_DB_READONLY[:storage_apps].grep(:value, '%applab%').map do |row|
     [row[:storage_id], row[:id]]
   end
 end
 
 def up
-  HipChat.log 'Fetching a list of applab apps from Pegasus DB. This step may take approximately '\
+  puts 'Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately '\
     '15 minutes to run over ~4.5M rows in storage_apps in production...'
   channels = fetch_applab_channels
 
-  HipChat.log "Searching for #{channels.length} applab projects in DynamoDB using #{MAX_THREADS} threads..."
+  puts "Searching for #{channels.length} applab projects in DynamoDB using #{MAX_THREADS} threads..."
   Parallel.each_with_index(channels, in_threads: MAX_THREADS) do |channel_data, channel_index|
     begin
       owner_storage_id, channel_id = channel_data
@@ -142,12 +133,12 @@ def up
       # sql_row_value['useFirebase'] = true
       PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: sql_row_value.to_json)
     rescue => e
-      HipChat.log("Error processing channel id #{channel_id}: #{e.message}")
+      puts("Error processing channel id #{channel_id}: #{e.message}")
       puts e.backtrace
     end
-    HipChat.log "#{channel_index} of #{channels.size} projects scanned..." if channel_index % LOG_INCREMENT == 0
+    puts "#{channel_index} of #{channels.size} projects scanned..." if channel_index % LOG_INCREMENT == 0
   end
-  HipChat.log "#{channels.size} projects scanned total"
+  puts "#{channels.size} projects scanned total"
 end
 
 def down
