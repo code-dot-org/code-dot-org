@@ -137,8 +137,9 @@ def up
       raise "parallelization error: attempting to write data from row id #{sql_row[:id]} to channel id #{channel_id}" if sql_row[:id] != channel_id
 
       # Mark the project as updated in the Pegasus SQL database
-      sql_row_value['useFirebase'] = true
       sql_row_value['migratedToFirebase'] = true
+      # TODO(dave): enable this line to perform full migration after successful dry run
+      # sql_row_value['useFirebase'] = true
       PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: sql_row_value.to_json)
     rescue => e
       HipChat.log("Error processing channel id #{channel_id}: #{e.message}")
