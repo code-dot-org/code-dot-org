@@ -1,6 +1,5 @@
 professional_learning_course ‘CS in Science Support'
 login_required 'true'
-pd 'true'
 
 stage 'Introduction to PD'
 level 'sciPD Intro'
