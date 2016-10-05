@@ -169,7 +169,7 @@ class RedisTable
   # Given a row key, return the name of the RedisTable that it belongs to.
   # @param [String] row_key
   # @return [String] the RedisTable name.
-  def self.table_from_row_key(key)
+  private_class_method def self.table_from_row_key(key)
     key.split('_')[0]
   end
 
@@ -180,7 +180,7 @@ class RedisTable
   # Given a row key, return the id of the row that it corresponds to.
   # @param [String] key
   # @return [Integer] the row id.
-  def self.id_from_row_key(key)
+  private_class_method def self.id_from_row_key(key)
     key.split('_')[1].to_i
   end
 
@@ -209,7 +209,7 @@ class RedisTable
   # @param [String] value The JSON-encoded value.
   # @return [Hash] The row, or null if no such row exists.
   # @private
-  def self.make_row(value)
+  private_class_method def self.make_row(value)
     value.nil? ? nil : JSON.parse(value)
   end
 
@@ -238,7 +238,7 @@ class RedisTable
 
   # Return true if k is special internal key (e.g. the row id key) that should
   # not be returned to callers.
-  def self.internal_key?(k)
+  private_class_method def self.internal_key?(k)
     k.end_with?(ROW_ID_SUFFIX)
   end
 

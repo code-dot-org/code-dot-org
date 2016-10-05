@@ -144,7 +144,7 @@ class HttpDocument
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
-  def self.content_type_from_extname(extname)
+  private_class_method def self.content_type_from_extname(extname)
     type = {
       '.md'   => http_content_type('text/markdown', charset: 'utf-8'),
       '.haml' => http_content_type('text/haml', charset: 'utf-8'),
@@ -155,7 +155,7 @@ class HttpDocument
     type
   end
 
-  def self.content_type_from_path(path)
+  private_class_method def self.content_type_from_path(path)
     content_type_from_extname(File.extname(path))
   end
 
