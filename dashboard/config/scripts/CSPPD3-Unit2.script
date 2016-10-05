@@ -4,7 +4,6 @@ login_required 'true'
 stage 'Getting Started'
 level 'CSPPD3-u2 Welcome'
 level 'CSPPD3-u2 overivew'
-#level 'PD check your progress'
 level 'CSPPD3-u2 tips for prep'
 level 'CSPPD3-u2 plan'
 

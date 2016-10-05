@@ -10,7 +10,6 @@ level 'grade2_maze_intro8'
 level 'grade2_maze_intro9'
 level 'grade2_maze_intro10'
 
-
 #stage 'Online My New Pet Jigsaw'
 #level 'grade1_unplugged_behavingInLab'
 #level 'elementary_video_pairProgramming'
@@ -35,7 +34,6 @@ level 'grade2_maze_intro10'
 
 stage 'Exploring the Neighborhood'
 level 'grade2_unplugged_neighborhood'
-
 
 stage 'New Home for My Pet'
 stage 'Programming at home with my pet'
