@@ -1,4 +1,5 @@
 import Immutable from 'immutable';
+import {createUuid} from '../utils';
 
 /**
  * Duck module for Watchers expression updating/dispatching.
@@ -29,14 +30,16 @@ const watchedExpressionsInitialState = Immutable.List();
 export default function reducer(state = watchedExpressionsInitialState, action) {
   if (action.type === ADD_EXPRESSION) {
     const {expression} = action;
-    return state.push(Immutable.Map({expression}));
+    const uuid = createUuid();
+    return state.push(Immutable.Map({expression, uuid}));
   }
 
   if (action.type === UPDATE_VALUE) {
     const {value, expression} = action;
     return state.map(e => e.get('expression') == expression ? Immutable.Map({
       lastValue: value,
-      expression
+      expression,
+      uuid: e.uuid
     }) : e);
   }
 

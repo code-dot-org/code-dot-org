@@ -1,4 +1,5 @@
 import React from 'react';
+import Immutable from 'immutable';
 import {connect} from 'react-redux';
 
 /**
@@ -7,19 +8,18 @@ import {connect} from 'react-redux';
 const DebugWatch = React.createClass({
   propTypes: {
     debugButtons: React.PropTypes.bool,
-    watchedExpresssions: React.PropTypes.array
+    watchedExpressions: React.PropTypes.instanceOf(Immutable.List)
   },
 
   render() {
     let classes = 'debug-watch';
-    if (!this.props.debugButtons) {
-      classes += 'no-commands';
-    }
     return (
         <div id="debug-watch" className={classes}>
+          <ul>
           {
-              this.props.watchedExpresssions.map(wv => <span>{wv.value}</span>)
+              this.props.watchedExpressions.map(wv => <li key={wv.get('uuid')}>{wv.get('expression')}: {wv.get('lastValue')}</li>)
           }
+          </ul>
         </div>
     );
   }
@@ -27,7 +27,7 @@ const DebugWatch = React.createClass({
 
 export default connect(state => {
   return {
-    watchedExpresssions: state.watchedExpresssions,
+    watchedExpressions: state.watchedExpressions,
   };
 })(DebugWatch);
 
