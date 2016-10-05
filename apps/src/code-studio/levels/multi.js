@@ -212,11 +212,11 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   }
 
   return {
-    "response": answer,
-    "result": result,
-    "errorType": errorType,
-    "submitted": submitted,
-    "valid": valid
+    response: answer,
+    result: result,
+    errorType: errorType,
+    submitted: submitted,
+    valid: valid
   };
 };
 
