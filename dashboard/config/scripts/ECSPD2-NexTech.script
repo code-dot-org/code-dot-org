@@ -1,5 +1,5 @@
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Welcome!'
 level 'ECSPD Online Welcome'
