@@ -164,6 +164,55 @@ class Level < ActiveRecord::Base
     []
   end
 
+  # Returns a cached map from level id and level name to level, or nil if in
+  # level_builder mode which disables caching.
+  def self.level_cache
+    return nil unless self.should_cache?
+    @@level_cache ||= {}.tap do |cache|
+      ScriptLevel.script_level_cache.values.each do |script_level|
+        level = script_level.level
+        next unless level
+        cache[level.id] = level unless cache.key? level.id
+        cache[level.name] = level unless cache.key? level.name
+      end
+    end
+  end
+
+  def update_level_in_cache
+    return unless Script.should_cache?
+    level_cache[id] = self if level_cache.key? id
+    level_cache[name] = self if level_cache.key? name
+  end
+
+  def delete_level_from_cache
+    return unless Script.should_cache?
+    @@level_cache.except!(id, name)
+  end
+
+  # Find the level with the given id or name from the cache, unless the level
+  # build mode is enabled in which case it is always fetched from the database.
+  # If we need to fetch the level and we're not in level mode (for example
+  # because the level was created after the cache), then an entry for the level
+  # is added to the cache.
+  # @param level_identifier [Integer | String] the level ID or level name to
+  #   fetch
+  # @return [Level] the (possibly cached) level
+  # @raises [ActiveRecord::RecordNotFound] if the level cannot be found
+  def self.cache_find_level(level_identifier)
+    level = level_cache[level_identifier] if Script.should_cache?
+    return level unless level.nil?
+
+    # If the cache missed or we're in levelbuilder mode, fetch the level from
+    # the db. Note the field trickery is to allow passing an ID as a string,
+    # which some tests rely on (unsure about non-tests).
+    field = level_identifier.to_i.to_s == level_identifier.to_s ? :id : :name
+    level = Level.find_by!(field => level_identifier)
+    # Cache the level by ID and by name, unless it wasn't found.
+    @@level_cache[level.id] = level if level && self.should_cache?
+    @@level_cache[level.name] = level if level && self.should_cache?
+    level
+  end
+
   # Input: xml level file definition
   # Output: Hash of level properties
   def load_level_xml(xml_node)
@@ -187,14 +236,6 @@ class Level < ActiveRecord::Base
       File.write(file_path, self.to_xml)
       file_path
     end
-  end
-
-  def update_level_cache
-    Script.update_level_in_cache(self)
-  end
-
-  def delete_from_level_cache
-    Script.delete_level_from_cache(self)
   end
 
   def to_xml(options = {})
@@ -317,7 +358,7 @@ class Level < ActiveRecord::Base
   end
 
   def self.cache_find(id)
-    Script.cache_find_level(id)
+    Level.cache_find_level(id)
   end
 
   def icon
