@@ -239,22 +239,14 @@ WebLab.prototype.getCurrentFilesVersionId = function () {
 
 // Called by Bramble when a file has been deleted
 WebLab.prototype.deleteProjectFile = function (filename, callback) {
-  let queryString = '';
-  if (dashboard.project.filesVersionId) {
-    queryString = `?files-version=${dashboard.project.filesVersionId}`;
-  }
-  filesApi.ajax(
-    'DELETE',
-    `${filename}${queryString}`,
-    (err, result) => {
-      if (!err) {
-        dashboard.project.filesVersionId = result.filesVersionId;
-      }
-      callback(err, dashboard.project.filesVersionId);
+  filesApi.deleteFile(
+    filename,
+    xhr => {
+      callback(null, dashboard.project.filesVersionId);
     },
-    (jqXHR, textStatus, errorThrown) => {
+    xhr => {
       console.warn(`WebLab: error file ${filename} not deleted`);
-      callback(errorThrown);
+      callback(new Error(xhr.status));
     }
   );
 };
@@ -264,16 +256,12 @@ WebLab.prototype.renameProjectFile = function (filename, newFilename, callback) 
   filesApi.renameFile(
     filename,
     newFilename,
-    dashboard.project.filesVersionId,
-    (err, result) => {
-      if (!err) {
-        dashboard.project.filesVersionId = result.filesVersionId;
-      }
-      callback(err, dashboard.project.filesVersionId);
+    xhr => {
+      callback(null, dashboard.project.filesVersionId);
     },
-    (jqXHR, textStatus, errorThrown) => {
+    xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
-      callback(errorThrown);
+      callback(new Error(xhr.status));
     }
   );
 };
@@ -327,11 +315,13 @@ WebLab.prototype.loadCurrentAssets = function () {
       name: asset.filename,
       url: `/v3/files/${dashboard.project.getCurrentId()}/${asset.filename}`
     }));
-    if (!this.initialFilesVersionId) {
-      this.initialFilesVersionId = parsedResponse.filesVersionId;
-    } else {
-      // After the first load, we store this version id so that subsequent
-      // writes will continue to replace the current version
+    var latestFilesVersionId = parsedResponse.filesVersionId;
+    this.initialFilesVersionId = this.initialFilesVersionId || latestFilesVersionId;
+
+    if (latestFilesVersionId !== this.initialFilesVersionId) {
+      // After we've detected the first change to the version, we store this
+      // version id so that subsequent writes will continue to replace the
+      // current version (until the browser page reloads)
       dashboard.project.filesVersionId = parsedResponse.filesVersionId;
     }
     if (this.brambleHost) {

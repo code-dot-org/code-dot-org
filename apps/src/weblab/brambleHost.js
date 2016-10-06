@@ -260,15 +260,13 @@ function syncAssetsWithBramble(assets, currentProjectVersion, callback) {
     }
   }
 
-  var versionChanged = _lastSyncedVersionId !== currentProjectVersion;
-  _lastSyncedVersionId = currentProjectVersion;
-  if (versionChanged) {
-    console.log(`syncAssetsWithBramble: version changed: currentProjectVersion ${currentProjectVersion}`);
+  if (_lastSyncedVersionId !== currentProjectVersion) {
     if (!jQuery.isEmptyObject(_recentBrambleChanges.fileDelete) ||
         !jQuery.isEmptyObject(_recentBrambleChanges.fileRename) ||
         !jQuery.isEmptyObject(_recentBrambleChanges.fileChange)) {
       console.warn('Bramble host: recent changes ignored and replaced by service changes!');
     }
+    resetBrambleChangesAndProjectVersion(currentProjectVersion);
     // Changes on the server, rebuild from the assets supplied:
     removeAllAssetsInBramble(err => {
       if (err) {
@@ -279,7 +277,6 @@ function syncAssetsWithBramble(assets, currentProjectVersion, callback) {
       }
     });
   } else {
-    console.log(`syncAssetsWithBramble: version is the same: currentProjectVersion ${currentProjectVersion}`);
     for (let name in _recentBrambleChanges.fileDelete) {
       localChangeList.push({
         operation: 'delete',
@@ -299,7 +296,7 @@ function syncAssetsWithBramble(assets, currentProjectVersion, callback) {
         file: name
       });
     }
-
+    resetBrambleChangesAndProjectVersion(currentProjectVersion);
     // If a changeList was populated, start handling it here:
     handleLocalChange(0, callback);
   }

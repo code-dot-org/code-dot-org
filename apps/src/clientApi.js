@@ -1,6 +1,8 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
 
+/*global dashboard*/
+
 function apiPath(endpoint, channelId, path) {
   var base = `/v3/${endpoint}/${channelId}`;
   if (path) {
@@ -68,6 +70,18 @@ class AssetsApi extends CollectionsApi {
     });
     return ajaxInternal('POST', path, success, error);
   }
+
+  deleteFile(filename, success, error) {
+    return ajaxInternal('DELETE', this.basePath(filename), success, error);
+  }
+
+  getUploadUrl() {
+    return this.basePath('/');
+  }
+
+  makeUploadDoneCallback(callback) {
+    return callback;
+  }
 }
 
 class FilesApi extends CollectionsApi {
@@ -90,21 +104,56 @@ class FilesApi extends CollectionsApi {
     return ajaxInternal('PUT', path, success, error);
   }
 
-  renameFile(oldFilename, newFilename, filesVersionId, success, error) {
-    var path = apiPath(
-      'files',
-      this.projectId || window.dashboard.project.getCurrentId(),
-      newFilename
-    );
+  renameFile(oldFilename, newFilename, success, error) {
+    var path = this.basePath(newFilename);
     var params = {
       src: oldFilename,
       delete: oldFilename
     };
-    if (filesVersionId) {
-      params['files-version'] = filesVersionId;
+    if (dashboard.project.filesVersionId) {
+      params['files-version'] = dashboard.project.filesVersionId;
     }
     path += '?' + queryString.stringify(params);
-    return ajaxInternal('PUT', path, success, error);
+    return ajaxInternal('PUT', path, xhr => {
+        var response = JSON.parse(xhr.response);
+        dashboard.project.filesVersionId = response.filesVersionId;
+        if (success) {
+          success(xhr, dashboard.project.filesVersionId);
+        }
+      },
+      error);
+  }
+
+  basePathWithFilesVersion(filename) {
+    var path = this.basePath(filename);
+    if (dashboard.project.filesVersionId) {
+      path += `?files-version=${dashboard.project.filesVersionId}`;
+    }
+    return path;
+  }
+
+  deleteFile(filename, success, error) {
+    return ajaxInternal('DELETE', this.basePathWithFilesVersion(filename), xhr => {
+        var response = JSON.parse(xhr.response);
+        dashboard.project.filesVersionId = response.filesVersionId;
+        if (success) {
+          success(xhr, dashboard.project.filesVersionId);
+        }
+      },
+      error);
+  }
+
+  getUploadUrl() {
+    return this.basePathWithFilesVersion('/');
+  }
+
+  makeUploadDoneCallback(callback) {
+    return result => {
+      dashboard.project.filesVersionId = result.filesVersionId;
+      if (callback) {
+        callback(result);
+      }
+    };
   }
 }
 module.exports = {
