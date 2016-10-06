@@ -1,6 +1,6 @@
 @eyes
 @dashboard_db_access
-@as_taught_student
+@as_authorized_taught_student
 @no_circle
 Feature: Submittable level
 
@@ -17,7 +17,6 @@ Scenario: Submittable level
   And I see no difference for "submitted puzzle"
   And I close my eyes
 
-@skip
 Scenario: Lockable level
   When I open my eyes to test "lockable level"
   Then I am on "http://studio.code.org/s/allthethings"
