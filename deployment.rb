@@ -364,3 +364,7 @@ end
 def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
 end
+
+def lib_dir(*dirs)
+  deploy_dir('lib', *dirs)
+end
