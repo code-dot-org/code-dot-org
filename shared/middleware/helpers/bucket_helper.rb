@@ -87,9 +87,6 @@ class BucketHelper
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
       {status: 'NOT_FOUND'}
-    rescue Aws::S3::Errors::InvalidArgument
-      # Can happen when passed an invalid S3 version id
-      {status: 'NOT_FOUND'}
     end
   end
 
