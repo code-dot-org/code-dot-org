@@ -25,6 +25,16 @@ describe('animationListModule', function () {
       expect(animationSourceUrl(null, props)).to.equal('bar');
     });
 
+    it(`returns the sourceUrl passed through the media proxy if it's an aboslute url`, function () {
+      const insecure = {sourceUrl: 'http://bar'};
+      expect(animationSourceUrl(key, insecure))
+          .to.equal(`//${document.location.host}/media?u=http%3A%2F%2Fbar`);
+
+      const secure = {sourceUrl: 'https://bar'};
+      expect(animationSourceUrl(key, secure))
+          .to.equal(`//${document.location.host}/media?u=https%3A%2F%2Fbar`);
+    });
+
     it(`constructs a sourceUrl from key and project if one isn't provided in props`, function () {
       setExternalGlobals();
       const props = {sourceUrl: null};
