@@ -5,14 +5,24 @@ require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
 
-RUN_ALL_TESTS_TAG = '[test all]'
-SKIP_UI_TESTS_TAG = '[skip ui]'
+# CircleCI Build Tags
+# We provide some limited control over CircleCI's build behavior by adding these
+# tags to the latest commit message.  A tag is a set of words in [] square
+# brackets - those words can be in any order and are case-insensitive.
+#
+# Supported Tags:
+# 'ci skip' (built-in to CircleCI)
+#   Don't run Circle at all
+RUN_ALL_TESTS_TAG = 'test all'
+#   Run all unit/integration tests, not just a subset based on changed files.
+SKIP_UI_TESTS_TAG = 'skip ui'
+#   Don't run any UI or Eyes tests.
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   task :run_tests do
-    if CircleUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
-      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all tests."
+    if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
+      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     else
       RakeUtils.rake_stream_output 'test:changed'
@@ -21,8 +31,8 @@ namespace :circle do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task :run_ui_tests do
-    if CircleUtils.circle_commit_contains?(SKIP_UI_TESTS_TAG)
-      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains #{SKIP_UI_TESTS_TAG}, skipping UI tests for this run."
+    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
+      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
     RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
