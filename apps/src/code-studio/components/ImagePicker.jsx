@@ -20,8 +20,7 @@ var ImagePicker = React.createClass({
     typeFilter: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired,
     showUnderageWarning: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired,
-    filesVersionId: React.PropTypes.string
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -92,7 +91,6 @@ var ImagePicker = React.createClass({
         allowedExtensions={extensionFilter[this.props.typeFilter]}
         uploadsEnabled={this.props.uploadsEnabled}
         useFilesApi={this.props.useFilesApi}
-        filesVersionId={this.props.filesVersionId}
       /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 

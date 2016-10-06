@@ -15,8 +15,7 @@ var AssetUploader = React.createClass({
     onUploadError: React.PropTypes.func,
     allowedExtensions: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired,
-    filesVersionId: React.PropTypes.string
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   /**
@@ -29,19 +28,17 @@ var AssetUploader = React.createClass({
 
   render: function () {
     let api = this.props.useFilesApi ? filesApi : assetsApi;
-    let queryString = '';
-    if (this.props.useFilesApi && this.props.filesVersionId) {
-      queryString = `?files-version=${this.props.filesVersionId}`;
-    }
+    let url = api.getUploadUrl();
+    let uploadDone = api.makeUploadDoneCallback(this.props.onUploadDone);
     return (
       <span>
         <HiddenUploader
           ref="uploader"
-          toUrl={`${api.basePath()}/${queryString}`}
+          toUrl={url}
           allowedExtensions={this.props.allowedExtensions}
           useFilesApi={this.props.useFilesApi}
           onUploadStart={this.props.onUploadStart}
-          onUploadDone={this.props.onUploadDone}
+          onUploadDone={uploadDone}
           onUploadError={this.props.onUploadError}
         />
         <button
