@@ -34,7 +34,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
-import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
+import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -913,7 +913,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
   if (this.hasContainedLevels) {
-    codeStudioLevels.lockContainedLevelAnswers();
+    lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');
