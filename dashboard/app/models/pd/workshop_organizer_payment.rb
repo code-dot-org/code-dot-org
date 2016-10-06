@@ -157,7 +157,7 @@ class Pd::WorkshopOrganizerPayment
   def evaluate(rule_part, default = 0)
     return default unless rule_part
     if rule_part.respond_to?(:call)
-      instance_exec &rule_part
+      instance_exec(&rule_part)
     else
       rule_part
     end

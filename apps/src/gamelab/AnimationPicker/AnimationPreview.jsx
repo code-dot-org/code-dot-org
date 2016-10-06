@@ -1,6 +1,7 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
+import {connect} from 'react-redux';
 import React from 'react';
-import {EMPTY_IMAGE} from '../constants';
+import {EMPTY_IMAGE, PlayBehavior} from '../constants';
 import * as PropTypes from '../PropTypes';
 const MARGIN_PX = 2;
 
@@ -14,7 +15,7 @@ const AnimationPreview = React.createClass({
     sourceUrl: React.PropTypes.string, // of spritesheet
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
-    alwaysPlay: React.PropTypes.bool
+    playBehavior: React.PropTypes.oneOf([PlayBehavior.ALWAYS_PLAY, PlayBehavior.NEVER_PLAY])
   },
 
   getInitialState: function () {
@@ -34,9 +35,9 @@ const AnimationPreview = React.createClass({
 
   componentWillReceiveProps: function (nextProps) {
     this.precalculateRenderProps(nextProps);
-    if (nextProps.alwaysPlay && !this.timeout_) {
+    if (nextProps.playBehavior === PlayBehavior.ALWAYS_PLAY && !this.timeout_) {
       this.advanceFrame();
-    } else if (!nextProps.alwaysPlay && this.timeout_) {
+    } else if (nextProps.playBehavior !== PlayBehavior.ALWAYS_PLAY && this.timeout_) {
       this.stopAndResetAnimation();
     }
   },
@@ -56,7 +57,10 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    // If the animation shouldn't loop, include a 2.5 second timeout after playing.
+    if (this.props.playBehavior === PlayBehavior.NEVER_PLAY) {
+      return;
+    }
+
     const {currentFrame} = this.state;
     const {frameCount, frameDelay} = this.props.animationProps;
     this.setState({
@@ -125,8 +129,8 @@ const AnimationPreview = React.createClass({
       <div
         ref="root"
         style={containerStyle}
-        onMouseOver={!this.props.alwaysPlay ? this.onMouseOver : null}
-        onMouseOut={!this.props.alwaysPlay ? this.onMouseOut : null}
+        onMouseOver={this.props.playBehavior !== PlayBehavior.ALWAYS_PLAY ? this.onMouseOver : null}
+        onMouseOut={this.props.playBehavior !== PlayBehavior.ALWAYS_PLAY ? this.onMouseOut : null}
       >
         <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>

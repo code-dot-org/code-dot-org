@@ -190,7 +190,7 @@ module RakeUtils
     commands << 'install'
     commands << '--quiet'
     commands += args
-    RakeUtils.system *commands
+    RakeUtils.system(*commands)
   end
 
   # Installs list of global npm packages if not already installed
