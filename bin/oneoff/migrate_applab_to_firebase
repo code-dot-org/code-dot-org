@@ -5,6 +5,7 @@ require 'cdo/db'
 require 'cdo/hip_chat'
 require 'net/http'
 require 'parallel'
+require 'time'
 require 'uri'
 
 require_relative '../../shared/middleware/helpers/storage_id'
@@ -48,6 +49,7 @@ end
 # @param encrypted_channel_id [String]
 # @param properties_data [Hash] Map from property name to JSON-encoded value
 def set_firebase_properties(encrypted_channel_id, properties_data)
+  #puts "set_firebase_properties #{encrypted_channel_id} #{properties_data.keys}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
   properties_url = "#{channel_url}/storage/keys.json"
   put_with_auth(properties_url, properties_data.to_json)
@@ -60,6 +62,7 @@ end
 # @param table_records [Hash] Map from record id to json-encoded record
 # @params table_columns [Array] Array of column names
 def set_firebase_table(encrypted_channel_id, table_name, table_records, table_columns)
+  #puts "set_firebase_table #{encrypted_channel_id} #{table_name} #{table_records.size} #{table_columns}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
 
   storage_url = "#{channel_url}/storage/tables/#{table_name}/records.json"
@@ -130,17 +133,17 @@ rescue => e
 end
 
 def migrate_all
-  puts 'Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately '\
+  puts "[#{Time.now}] Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately "\
     '15 minutes to run over ~4.5M rows in storage_apps in production...'
   channels = fetch_applab_channels
 
-  puts "Searching for #{channels.length} applab projects in DynamoDB using #{MAX_THREADS} threads..."
+  puts "[#{Time.now}] Searching for #{channels.length} applab projects in DynamoDB using #{MAX_THREADS} threads..."
   Parallel.each_with_index(channels, in_threads: MAX_THREADS) do |channel_data, channel_index|
     owner_storage_id, channel_id = channel_data
     migrate_channel(owner_storage_id, channel_id)
-    puts "#{channel_index} of #{channels.size} projects scanned..." if channel_index % LOG_INCREMENT == 0
+    puts "[#{Time.now}] #{channel_index} of #{channels.size} projects scanned..." if channel_index % LOG_INCREMENT == 0
   end
-  puts "#{channels.size} projects scanned total"
+  puts "[#{Time.now}] #{channels.size} projects scanned total"
 end
 
 def rollback
