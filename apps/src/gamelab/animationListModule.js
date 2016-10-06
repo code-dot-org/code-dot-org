@@ -570,3 +570,10 @@ function saveAnimation(animationKey, animationProps) {
     xhr.send(animationProps.blob);
   });
 }
+
+/**
+  * Selector for allAnimationsSingleFrame
+  */
+export function allAnimationsSingleFrameSelector(state) {
+  return state.pageConstants.allAnimationsSingleFrame;
+}
