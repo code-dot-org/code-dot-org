@@ -1,7 +1,7 @@
 Feature: Playing multi levels
 
 Background:
-  Given I am on "http://learn.code.org/s/course1/stage/2/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/course1/stage/2/puzzle/2?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
@@ -31,7 +31,7 @@ Scenario: Submitting an incorrect option
   And I wait until element "#cross_0" is visible
 
 Scenario: Does not scroll horizontally
-  Given I am on "http://learn.code.org/s/allthethings/stage/9/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/2?noautoplay=true"
   When I rotate to landscape
   And element ".submitButton" is visible
   Then there is no horizontal scrollbar

@@ -1,7 +1,7 @@
 Feature: Step Mode
 
 Scenario: Step Only - Failure
-  Given I am on "http://learn.code.org/s/step/puzzle/1"
+  Given I am on "http://studio.code.org/s/step/puzzle/1"
   And I wait for 3 seconds
   And I wait to see "#runButton"
   Then element "#runButton" is hidden
@@ -42,7 +42,7 @@ Scenario: Step Only - Failure
   And element "#stepButton" is not disabled
 
 Scenario: Step Only - Success
-  Given I am on "http://learn.code.org/s/step/puzzle/1"
+  Given I am on "http://studio.code.org/s/step/puzzle/1"
   And I wait to see "#runButton"
   Then element "#runButton" is hidden
   And element "#resetButton" is hidden
@@ -60,7 +60,7 @@ Scenario: Step Only - Success
   And element ".congrats" has text "Congratulations! You completed Puzzle 1."
 
 Scenario: Step Only - Reset while stepping
-  Given I am on "http://learn.code.org/s/step/puzzle/1"
+  Given I am on "http://studio.code.org/s/step/puzzle/1"
   And I wait to see "#runButton"
   Then element "#runButton" is hidden
   And element "#resetButton" is hidden
@@ -82,7 +82,7 @@ Scenario: Step Only - Reset while stepping
 
 
 Scenario: Step and Run - Stepping
-  Given I am on "http://learn.code.org/s/step/puzzle/2"
+  Given I am on "http://studio.code.org/s/step/puzzle/2"
   And I wait to see "#runButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -106,7 +106,7 @@ Scenario: Step and Run - Stepping
 
 
 Scenario: Step and Run - Running
-  Given I am on "http://learn.code.org/s/step/puzzle/2"
+  Given I am on "http://studio.code.org/s/step/puzzle/2"
   And I wait to see "#runButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
