@@ -34,7 +34,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
-import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
+import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -635,25 +635,6 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
   }
 };
 
-StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.hasContainedLevels) {
-    var firstResult = codeStudioLevels.getContainedLevelResult();
-    var containedResult = firstResult.result;
-    var testResults = utils.valueOr(firstResult.testResult,
-        containedResult.result ? this.TestResults.ALL_PASS :
-          this.TestResults.GENERIC_FAIL);
-    return {
-      app: firstResult.app,
-      level: firstResult.id,
-      callback: firstResult.callback,
-      result: containedResult.result,
-      testResults: testResults,
-      program: containedResult.response,
-      feedback: firstResult.feedback
-    };
-  }
-};
-
 StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
     config.shareWarningInfo.onTooYoung = onTooYoung;
@@ -932,7 +913,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
   if (this.hasContainedLevels) {
-    codeStudioLevels.lockContainedLevelAnswers();
+    lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');
@@ -1651,23 +1632,6 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 */
 StudioApp.prototype.report = function (options) {
 
-  if (options.containedLevelResultsInfo) {
-    // If we have contained level results, just submit those directly and return
-    this.onAttempt({
-      callback: options.containedLevelResultsInfo.callback,
-      app: options.containedLevelResultsInfo.app,
-      level: options.containedLevelResultsInfo.level,
-      serverLevelId: options.containedLevelResultsInfo.level,
-      result: options.containedLevelResultsInfo.result,
-      testResult: options.containedLevelResultsInfo.testResults,
-      submitted: options.submitted,
-      program: options.containedLevelResultsInfo.program,
-      onComplete: options.onComplete
-    });
-    this.enableShowLinesCount = false;
-    return;
-  }
-
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
@@ -1841,7 +1805,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
-  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false &&
+    !config.hasContainedLevels);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
