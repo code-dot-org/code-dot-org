@@ -680,7 +680,7 @@ def generate_user(name)
   return email, password
 end
 
-And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
+def generate_teacher_student(name, teacher_authorized)
   email, password = generate_user(name)
 
   steps %Q{
@@ -688,9 +688,7 @@ And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   }
 
   # enroll in a plc course as a way of becoming an authorized teacher
-  # Disable, as this is causing us strange issues (next url change results in 404)
-  # and is only needed by one usage, which we will also temporarily disable.
-  #enroll_in_plc_course(@users["Teacher_#{name}"][:email])
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
@@ -715,6 +713,14 @@ And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
     And I click selector "input[type=submit]"
     And I wait until I am on "http://studio.code.org/"
   }
+end
+
+And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, false)
+end
+
+And(/^I create an authorized teacher-associated student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, true)
 end
 
 And(/^I create a student named "([^"]*)"$/) do |name|

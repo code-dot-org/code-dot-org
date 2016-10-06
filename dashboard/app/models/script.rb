@@ -658,7 +658,8 @@ class Script < ActiveRecord::Base
       peer_review_section = {
           name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
           flex_category: 'Peer Review',
-          levels: levels
+          levels: levels,
+          lockable: false
       }
 
       summarized_stages << peer_review_section

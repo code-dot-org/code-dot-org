@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929123700) do
+ActiveRecord::Schema.define(version: 20161003202755) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -159,15 +159,6 @@ ActiveRecord::Schema.define(version: 20160929123700) do
     t.index ["user_id", "student_user_id"], name: "index_followers_on_user_id_and_student_user_id", using: :btree
   end
 
-  create_table "frequent_unsuccessful_level_sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "level_source_id",                 null: false
-    t.boolean  "active",          default: false, null: false
-    t.integer  "level_id",                        null: false
-    t.integer  "num_of_attempts"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
     t.integer  "activity_id",                        null: false
@@ -221,19 +212,6 @@ ActiveRecord::Schema.define(version: 20160929123700) do
     t.integer  "functions_with_params"
     t.integer  "conditionals"
     t.index ["level_id"], name: "index_level_concept_difficulties_on_level_id", using: :btree
-  end
-
-  create_table "level_source_hints", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "level_source_id"
-    t.text     "hint",            limit: 65535
-    t.integer  "times_proposed"
-    t.float    "priority",        limit: 24
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.string   "status"
-    t.string   "source"
-    t.index ["level_source_id"], name: "index_level_source_hints_on_level_source_id", using: :btree
   end
 
   create_table "level_source_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

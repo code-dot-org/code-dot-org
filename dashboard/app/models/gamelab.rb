@@ -29,6 +29,7 @@ class Gamelab < Blockly
     free_play
     text_mode_at_start
     hide_animation_mode
+    all_animations_single_frame
     show_d_pad
     soft_buttons
     submittable
@@ -140,6 +141,7 @@ class Gamelab < Blockly
         "setFrame": null,
         "x": null,
         "y": null,
+        "bounciness": null,
         "rotateToDirection": null,
         "rotation": null,
         "rotationSpeed": null,
