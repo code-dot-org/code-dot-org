@@ -13,8 +13,8 @@ end
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
+    raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
     url = url.
-      gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/").
       gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
