@@ -7,6 +7,6 @@ unless File.basename($0) == 'rake' || !Script.should_cache?
   # Populate the shared in-memory cache from the database.
   Script.script_cache_to_cache
   Script.script_cache
-  Script.script_level_cache
+  ScriptLevel.script_level_cache
   Level.level_cache
 end
