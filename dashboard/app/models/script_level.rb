@@ -265,7 +265,7 @@ class ScriptLevel < ActiveRecord::Base
     if script_level.nil?
       script_level = ScriptLevel.find(script_level_id)
       # Cache the script level, unless it wasn't found.
-      @@script_level_cache[script_level_id] = script_level if script_level && self.should_cache?
+      @@script_level_cache[script_level_id] = script_level if script_level && Script.should_cache?
     end
     script_level
   end
