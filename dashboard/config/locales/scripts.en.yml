@@ -156,6 +156,7 @@ en:
             Functions and Functions with Parameters: Functions and Functions with Parameters
             Intro: Intro
             Variables: Variables
+          description_audience: ''
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -181,6 +182,7 @@ en:
             'Unplugged: Contracts': 'Unplugged: Contracts, Domain, and Range'
             'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
             'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games and Coordinate Planes'
+          description_audience: ''
         infinity:
           title: Disney Infinity Play Lab
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
@@ -353,6 +355,7 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          description_audience: ''
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -369,6 +372,7 @@ en:
             Your Game - Booleans: Your Game - Booleans
             Your Game - Collision Detection: Your Game - Collision Detection
             Your Game - Player Movement: Your Game - Player Movement
+          description_audience: ''
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
@@ -389,11 +393,12 @@ en:
             What is CSP?: What is CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description: Lesson samples for csp
-          description_short: Lesson samples for csp
+          description: Lesson samples for CSP
+          description_short: Lesson samples for CSP
           stage:
             Lesson 14: Lesson 14
             Lesson 15: Lesson 15
+          description_audience: ''
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -422,6 +427,7 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -468,6 +474,7 @@ en:
             Using Simple Commands: Using Simple Commands
             Using Variables in Apps: Using Variables in Apps
             While Loops: While Loops
+          description_audience: ''
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -695,6 +702,7 @@ en:
             Strings and Images: Strings and Images
             Teacher Dashboard: Teacher Dashboard
             Writing Contracts: Writing Contracts
+          description_audience: ''
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -761,6 +769,7 @@ en:
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: The Design Recipe
             Welcome!: Welcome!
+          description_audience: ''
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -782,8 +791,8 @@ en:
             Necessary Background: Necessary Background
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           stage:
             Advanced StarLogo Nova: Advanced StarLogo Nova
             Remixing Phases 1 and 2: Remixing Phases 1 and 2
@@ -792,6 +801,7 @@ en:
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
@@ -909,13 +919,14 @@ en:
             Updates - The Design Recipe: Updates - The Design Recipe
             Updates - Tweaks and Polish: Updates - Tweaks and Polish
         sciencePD3_pre1:
-          title: Computer Science in Science PD Phase 3 Before 1st In-Person
-          description: Phase 3 Blended Summer Study (Segment One)
-          description_short: Phase 3 Blended Summer Study Pre 1
+          title: CS in Science PD3 Before 1st In-Person
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          description_short: 'Phase 3: Academic Year Development Pre 1'
           stage:
             Prep With Your Modules: Prep With Your Modules
             The TLO: The TLO
             Welcome Back!: Welcome Back!
+          description_audience: ''
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -924,8 +935,8 @@ en:
             Frequency Analysis: Frequency Analysis
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
-          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
-          description_short: Unit 2 of the Exploring Computer Science curriculum
+          description: Online Professional Development Course
+          description_short: Unit 2 Online PD
           stage:
             Close & Next Steps: Close & Next Steps
             Getting Started: Getting Started
@@ -933,10 +944,11 @@ en:
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: ''
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
-          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
-          description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
+          description: Academic Year Development
+          description_short: Academic Year Development
           stage:
             Close & Next Steps: Close & Next Steps
             Getting Started: Getting Started
@@ -944,10 +956,11 @@ en:
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit4:
           title: 'Exploring Computer Science: Unit 4'
-          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
-          description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
+          description: Academic Year Development
+          description_short: Academic Year Development
           stage:
             Close & Next Steps: Close & Next Steps
             Getting Started: Getting Started
@@ -955,6 +968,7 @@ en:
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -979,10 +993,7 @@ en:
             Unit 6 lessons: Unit 6 lessons
         cspunit4draft:
           title: CS Principles Unit 4 - Data
-          description: |-
-            Collect, analyze, and extract knowledge from data by programming and
-            building apps. Process data imported from other sources and also pull
-            data from live data APIs.
+          description: "Collect, analyze, and extract knowledge from data by programming and\r\nbuilding apps. Process data imported from other sources and also pull\r\ndata from live data APIs."
           description_short: Data
           stage:
             Check Your Assumptions: Check Your Assumptions
@@ -1013,6 +1024,7 @@ en:
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: What Data Can Tell Us
             Why Make Apps?: Why Make Apps?
+          description_audience: ''
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
@@ -1046,6 +1058,7 @@ en:
             Getting Started: Getting Started
             Share out and Submit: Share out and Submit
             Unit 2 Overview: Unit 2 Overview
+          description_audience: ''
         duino:
           title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
@@ -1102,6 +1115,7 @@ en:
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
             While Loops: While Loops
+          description_audience: ''
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1183,6 +1197,7 @@ en:
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+          description_audience: ''
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description: Online Support for CSP Unit 4
@@ -1251,6 +1266,7 @@ en:
             'Unplugged: Contracts': 'Unplugged: Contracts'
             'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
             'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          description_audience: ''
         AlgebraB:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -1267,6 +1283,7 @@ en:
             'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Distance Formula'
             'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals and Piecewise Functions'
             'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games and Coordinate Planes'
+          description_audience: ''
         gamelab-hackathon:
           title: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -1284,6 +1301,7 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          description_audience: ''
         algebraPD3c:
           title: Computer Science in Algebra PD
           description: CS in Algebra end of year reflection
@@ -1480,6 +1498,7 @@ en:
             Introduction to PD: Introduction to PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          description_audience: ''
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -1497,6 +1516,7 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles units are listed here
@@ -1507,6 +1527,12 @@ en:
             Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
             Unit 1 - Encoding Numbers in the Real World: Unit 1 - Encoding Numbers in the Real World
             Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the Real World
+            Unit 1 - Algorithms Detour - Minimum Spanning Tree: Unit 1 - Algorithms Detour - Minimum Spanning Tree
+            Unit 1 - Algorithms Detour - Shortest Path: Unit 1 - Algorithms Detour - Shortest Path
+            Unit 1 - How Routers Learn: Unit 1 - How Routers Learn
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem: Unit 4 - Hard Problems - The Traveling Salesperson Problem
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem: Unit 4 - One-Way Functions - The WiFi Hotspot Problem
+          description_audience: ''
         cspunit1-support:
           title: Online Support for CSP Unit 1
           description: This is a test Professional Learning Course
@@ -1785,6 +1811,7 @@ en:
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: ''
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -1934,6 +1961,7 @@ en:
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: The Design Recipe
             Welcome!: Welcome!
+          description_audience: ''
         csp-pre-survey:
           title: CS Principles Pre-Survey
           stage:
