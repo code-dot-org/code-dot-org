@@ -1,26 +1,40 @@
 name 'Unit 4 Lesson 3 Introduction'
-markdown <<MARKDOWN
-# Unit 4: Lesson 3 - Identifying People with Data
-
-## Background
-
-While there are many potential benefits associated with the collection and analysis of large amounts of data, these advances pose a constant risk to our collective security and privacy. Large-scale data breaches mean that the details of our personal, professional, and financial lives may be at risk. In order to prevent personal data from being linked to an individual person, personally identifying information, such as name, address, or identification number, is often removed from publicly available data. Nevertheless, through the use of computational analysis it is often possible to “re-identify” individuals within data based on seemingly innocuous information. 
-
-## Lesson
-
-* Investigate: World's Biggest Data Breaches
-* How Unique are You: Data Privacy Lab
-* Connect the Dots: Research Yourself Online
-
-## Resources
-
-* Interactive Infographic: <a href="http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/" target="_blank">World's Biggest Data Breaches</a>
-* Tool: <a href="http://aboutmyinfo.org/" target="_blank">Data Privacy Lab</a>
-* Activity Guide: <a href="https://docs.google.com/document/d/1UGgDu9oXLnM9Ak4MEY8XsVjSUb-xKi2F9HSrZSQI_9w" target="_blank">Research Yourself</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-Activity Guide KEY: <a href="https://docs.google.com/document/d/1s0NmVOJTjk0yyXLOOl7v0wEvN1DxAuDvdulHaUV3lVA/edit?usp=sharing" target="_blank">Research Yourself</a>
-MARKDOWN
+encrypted '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
+LLN5cBWlfjvrN49Kuevs
+'

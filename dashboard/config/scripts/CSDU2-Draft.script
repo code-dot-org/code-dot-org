@@ -130,10 +130,8 @@ level 'CSDU2 - PW - Pre Publishing 5'
 level 'CSDU2 - PW - Pre Publishing 6'
 level 'CSDU2 - PW - Publish It'
 
-
 stage 'Sources and Search Engines'
 named_level 'Unit 2 Lesson 15 Overview'
-
 
 stage 'Intellectual Property'
 named_level 'Unit 2 Lesson 16 Overview'
@@ -148,12 +146,6 @@ stage 'Personal Website: Finalizing Site'
 named_level 'Unit 2 Lesson 17 Overview'
 named_level 'Final Personal Website'
 
-
-
-
-
-
-#not in use
 stage 'Introduction to HTML'
 stage 'Headers and Lists'
 stage 'Designing Web Pages'
