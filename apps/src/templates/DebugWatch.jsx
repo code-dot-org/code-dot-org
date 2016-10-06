@@ -2,6 +2,10 @@ import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import {update} from '../redux/watchedExpressions'
+
+const WATCH_TIMER_PERIOD = 50;
+const WATCH_VALUE_NOT_RUNNING = "undefined";
 
 /**
  * A "watchers" window for our debugger.
@@ -9,7 +13,30 @@ import i18n from '@cdo/locale';
 const DebugWatch = React.createClass({
   propTypes: {
     debugButtons: React.PropTypes.bool,
+    isRunning: React.PropTypes.bool,
     watchedExpressions: React.PropTypes.instanceOf(Immutable.List)
+  },
+
+  componentDidMount() {
+    this.wasRunning = null;
+    this.intervalId_ = setInterval(() => {
+      const justStoppedRunning = this.wasRunning && !this.props.isRunning;
+      this.wasRunning = this.props.isRunning;
+
+      if (!this.props.isRunning) {
+        if (justStoppedRunning) {
+          this.props.watchedExpressions.map(we => this.props.dispatch(update(we.get('expression'), WATCH_VALUE_NOT_RUNNING)));
+        }
+        return;
+      }
+
+      this.props.watchedExpressions.map(we => {
+        if (window.tempJSInterpreter) {
+          const currentValue = window.tempJSInterpreter.evaluateWatchExpression(we.get('expression'));
+          this.props.dispatch(update(we.get('expression'), currentValue));
+        }
+      });
+    }, WATCH_TIMER_PERIOD);
   },
 
   // http://stackoverflow.com/a/7390612
@@ -37,6 +64,8 @@ const DebugWatch = React.createClass({
         return <span className="watch-value">{descriptor}</span>;
       case 'regexp':
         return <span className="watch-value">[regexp]</span>;
+      case 'array':
+        return <span className="watch-value">[array]</span>;
       case 'function':
         // [function MyFunctionName]
         return <span className="watch-value">{`[${obj.toString().match(/(.*)\(/)[1]}]`}</span>;
@@ -72,6 +101,7 @@ const DebugWatch = React.createClass({
 export default connect(state => {
   return {
     watchedExpressions: state.watchedExpressions,
+    isRunning: state.runState.isRunning,
   };
 })(DebugWatch);
 

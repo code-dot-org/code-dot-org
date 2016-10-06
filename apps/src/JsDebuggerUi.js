@@ -64,12 +64,6 @@ var JsDebuggerUi = module.exports = function (runApp, reduxStore) {
   this.history_ = new CommandHistory();
 
   /**
-   * Collection of watch expressions.
-   * @private {object}
-   */
-  this.watchExpressions_ = {};
-
-  /**
    * Id for watch timer setInterval.
    * @private {number}
    */
@@ -102,9 +96,6 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning,
       this.log.bind(this));
 
-  this.watchIntervalId_ = setInterval(this.updateWatchView_.bind(this),
-      WATCH_TIMER_PERIOD);
-
   this.updatePauseUiState();
   this.clearDebugOutput();
   this.clearDebugInput();
@@ -122,7 +113,6 @@ JsDebuggerUi.prototype.detach = function () {
 
   clearInterval(this.watchIntervalId_);
   this.watchIntervalId_ = 0;
-  this.updateWatchView_();
 
   this.resetDebugControls_();
 };
@@ -280,21 +270,10 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     e.target.textContent = '';
     this.log('> ' + input);
     var jsInterpreter = this.jsInterpreter_;
-    var watchExpression;
     if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
       this.reduxStore_.dispatch(add(input.substring(WATCH_COMMAND_PREFIX.length)));
-      watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
-      this.watchExpressions_[watchExpression] = {};
-      // Update immediately. When not running, this will confirm that the watch
-      // was added, since no timer will refresh automatically:
-      this.updateWatchView_();
     } else if (0 === input.indexOf(UNWATCH_COMMAND_PREFIX)) {
       this.reduxStore_.dispatch(remove(input.substring(UNWATCH_COMMAND_PREFIX.length)));
-      watchExpression = input.substring(UNWATCH_COMMAND_PREFIX.length);
-      delete this.watchExpressions_[watchExpression];
-      // Update immediately. When not running, this will confirm that the watch
-      // was removed, since no timer will refresh automatically:
-      this.updateWatchView_();
     } else if (jsInterpreter) {
       try {
         var result = jsInterpreter.evalInCurrentScope(input);
@@ -533,45 +512,5 @@ JsDebuggerUi.prototype.onStepOutButton = function () {
   if (jsInterpreter) {
     jsInterpreter.handleStepOut();
     this.updatePauseUiState();
-  }
-};
-
-function clearAllChildElements(element) {
-  while (element.firstChild) {
-    element.removeChild(element.firstChild);
-  }
-}
-
-/**
- * Refresh the watch expressions.
- * @private
- */
-JsDebuggerUi.prototype.updateWatchView_ = function () {
-  var jsInterpreter = this.jsInterpreter_;
-  var debugWatchDiv = this.getElement_('#debug-watch');
-  if (debugWatchDiv) {
-    //clearAllChildElements(debugWatchDiv);
-    for (var watchExpression in this.watchExpressions_) {
-      var currentValue;
-      if (jsInterpreter) {
-        currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
-      } else {
-        currentValue = WATCH_VALUE_NOT_RUNNING;
-      }
-      if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
-        // Store new value
-        this.watchExpressions_[watchExpression].lastValue = currentValue;
-        this.reduxStore_.dispatch(update(watchExpression, currentValue));
-      }
-
-      // TODO: use Redux action to update vars & values in DebugWatch.jsx
-      var watchItem = document.createElement('div');
-      watchItem.className = 'debug-watch-item';
-      watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
-        varName: watchExpression,
-        varValue: currentValue
-      });
-      //debugWatchDiv.appendChild(watchItem);
-    }
   }
 };
