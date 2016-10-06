@@ -14,7 +14,7 @@ var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
-import { getLevelIds, getLevel, lockContainedLevelAnswers } from '../levels/codeStudioLevels';
+import { lockContainedLevelAnswers } from '../levels/codeStudioLevels';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
