@@ -96,5 +96,5 @@ Dashboard::Application.configure do
 
   # enable script cache by default. This is overridden in models/script.rb for
   # unit tests and CI environments
-  config.enable_script_cache = CDO.with_default(true).enable_script_cache
+  config.disable_script_cache = CDO.with_default(false).disable_script_cache
 end

@@ -67,6 +67,6 @@ Dashboard::Application.configure do
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   # disable script cache by default in development mode, to reduce server
-  # startup time. Set 'disable_script_cache: true" in locals.yml to override
-  config.enable_script_cache = CDO.with_default(false).enable_script_cache
+  # startup time. Set 'disable_script_cache: false" in locals.yml to override
+  config.disable_script_cache = CDO.with_default(true).disable_script_cache
 end
