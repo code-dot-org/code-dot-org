@@ -7,8 +7,8 @@ module Pd::Payment
     end
   end
 
-  # Base class for Pd::Workshop payment. It calculates workshop duration, attendance numbers,
-  # and other general fields relevant to payment, and populates a #WorkshopPayment
+  # Base class for Pd::Workshop payment calculator. It calculates workshop duration, attendance numbers,
+  # other general fields relevant to payment, and populates a #WorkshopPayment
   # The class is a singleton, and should be used via #.instance.calculate(workshop)
   # Derived classes can override to provide custom logic.
   class PaymentCalculatorBase
@@ -150,10 +150,13 @@ module Pd::Payment
     # @return [Hash{Integer => TeacherAttendanceTotal}] map of teacher id to adjusted attendance totals for that teacher.
     def adjust_teacher_attendance(raw_teacher_attendance, min_attendance_days, num_days, num_hours)
       {}.tap do |adjusted_attendance_per_teacher|
-        # Require min attendance, filter out unqualified teachers, and apply caps (via @num_days & @num_hours).
-        raw_teacher_attendance.each do |teacher_id, teacher_attendance|
+        # Filter out unqualified teachers.
+        qualified_teacher_attendance = raw_teacher_attendance.select{|teacher_id| teacher_qualified?(teacher_id)}
+
+        # Require min attendance, and apply caps (via @num_days & @num_hours).
+        qualified_teacher_attendance.each do |teacher_id, teacher_attendance|
           adjusted_days = teacher_attendance.days < min_attendance_days ? 0 : [teacher_attendance.days, num_days].min
-          next unless adjusted_days > 0 && teacher_qualified?(teacher_id)
+          next unless adjusted_days > 0
 
           adjusted_hours = [teacher_attendance.hours, num_hours].min
           adjusted_attendance_per_teacher[teacher_id] = TeacherAttendanceTotal.new adjusted_days, adjusted_hours
