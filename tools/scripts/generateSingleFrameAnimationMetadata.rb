@@ -99,7 +99,7 @@ end
 cli_parser.parse!
 if ARGV.empty?
   puts cli_parser
-  exit -1
+  exit (-1)
 else
   MetadataBuilder.new(options).build_single_frame_metadatas(ARGV)
 end

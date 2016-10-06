@@ -1,5 +1,26 @@
 name 'Unit 2 Lesson 9 Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Overview
+# The Internet - Web Development: Lesson 9 - Classes
+
+## Background
+
+Classes allow web developers single out elements they want styled differently than other elements of the same type. Classes will allow students to make their styling on their page more detailed. Students learn about styling with classes by styling a page about the four seasons. Then students will style their personal websites with a notecard class before getting to add any class styling they choose.
+# Vocabulary
+
+* **HTML Class** - Makes it possible to define equal styles for elements by giving them all the same class name.
+
+# New Blocks
+
+* **Border Bottom** - `border-bottom-*`
+* **Border Left** - `border-left-*`
+* **Border Right** - `border-right-*`
+* **Border Top** - `border-top-*`
+* **RGB Color** - `rgb( red_value, green_value, blue_value)`
+
+# Resources
+
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+
+* [Matching Review](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/export?format=doc))
 MARKDOWN
