@@ -125,7 +125,7 @@ def migrate_channel(owner_storage_id, channel_id)
   # sql_row_value['useFirebase'] = true
   PEGASUS_DB[:storage_apps].where(id: channel_id).update(value: sql_row_value.to_json)
 rescue => e
-  puts("Error processing channel id #{channel_id}: #{e.message}")
+  puts("Error processing channel id [#{owner_storage_id},#{channel_id}] '#{encrypted_channel_id}': #{e.message}")
   puts e.backtrace
 end
 
