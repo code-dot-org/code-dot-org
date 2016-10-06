@@ -166,7 +166,7 @@ export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
   animationList: state.animationList,
   channelId: state.pageConstants.channelId,
-  allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame || false
+  allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame
 }), dispatch => ({
   editAnimation: (key, props) => dispatch(editAnimation(key, props))
 }))(PiskelEditor);
