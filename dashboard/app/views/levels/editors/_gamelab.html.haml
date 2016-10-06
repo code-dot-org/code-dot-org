@@ -6,6 +6,7 @@
       font-weight: bold;
     }
   %script{src: minifiable_asset_path('js/levelbuilder_gamelab.js')}
+
 .field
   = f.label :text_mode_at_start, 'Text mode (showing code) at start'
   = boolean_check_box f, :text_mode_at_start
@@ -17,6 +18,10 @@
 .field
   = f.label :start_in_animation_tab, 'Start in the Animation Tab'
   = boolean_check_box f, :start_in_animation_tab
+
+.field
+  = f.label :all_animations_single_frame, 'All animations should be a single frame. If it has multiple frames, only show the first frame as a still image.'
+  = boolean_check_box f, :all_animations_single_frame
 
 .field
   = f.label :show_d_pad
@@ -120,3 +125,5 @@
       element.style.display = element.style.display === 'none' ? 'block' : 'none';
     }
   };
+
+= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'gamelab'}

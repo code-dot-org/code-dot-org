@@ -30,6 +30,7 @@ class Gamelab < Blockly
     text_mode_at_start
     hide_animation_mode
     start_in_animation_tab
+    all_animations_single_frame
     show_d_pad
     soft_buttons
     submittable

@@ -44,6 +44,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'inputOutputTable',
   'showAnimationMode',
   'startInAnimationTab',
+  'allAnimationsSingleFrame',
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
