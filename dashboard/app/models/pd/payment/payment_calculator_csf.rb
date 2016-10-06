@@ -18,7 +18,7 @@ module Pd::Payment
       true
     end
 
-    protected
+    private
 
     # Gets session attendance summaries for a workshop.
     # CSF workshops have different attendance rules. Workshops are always exactly one day (session),
