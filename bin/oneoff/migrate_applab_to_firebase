@@ -15,6 +15,8 @@ require_relative '../../shared/middleware/helpers/property_bag'
 MAX_THREADS = 50
 LOG_INCREMENT = 10_000
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+# The following characters are illegal in firebase path names: .$#[]/
+ILLEGAL_CHAR_REGEX = %r{[\.#\$\[\]/]}
 
 def put_with_auth(url, data)
   uri = URI.parse("#{url}?auth=#{CDO.firebase_secret}")
@@ -52,6 +54,16 @@ def set_firebase_properties(encrypted_channel_id, properties_data)
   #puts "set_firebase_properties #{encrypted_channel_id} #{properties_data.keys}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
   properties_url = "#{channel_url}/storage/keys.json"
+
+  original_keys = properties_data.keys
+  original_keys.each do |key|
+    if ILLEGAL_CHAR_REGEX.match(key)
+      legal_key = key.gsub(ILLEGAL_CHAR_REGEX, '-')
+      puts "renaming key #{key} to #{legal_key} in channel #{encrypted_channel_id}"
+      properties_data[legal_key] = properties_data[key]
+      properties_data.delete(key)
+    end
+  end
   put_with_auth(properties_url, properties_data.to_json)
 end
 
@@ -64,6 +76,12 @@ end
 def set_firebase_table(encrypted_channel_id, table_name, table_records, table_columns)
   #puts "set_firebase_table #{encrypted_channel_id} #{table_name} #{table_records.size} #{table_columns}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
+
+  if ILLEGAL_CHAR_REGEX.match(table_name)
+    legal_table_name = table_name.gsub(ILLEGAL_CHAR_REGEX, '-')
+    puts "renaming table name #{table_name} to #{legal_table_name} in channel #{encrypted_channel_id}"
+    table_name = legal_table_name
+  end
 
   escaped_table_name = URI.escape(table_name, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
   storage_url = "#{channel_url}/storage/tables/#{escaped_table_name}/records.json"
@@ -99,6 +117,17 @@ def fetch_applab_channels
   end
 end
 
+# Raises an exception if the list contains duplicates after
+# @param names [Array] list of names to detect collisions within
+# @param msg [String] message to include in the raised exception
+def ensure_no_collisions(list, msg)
+  list.combination(2).each do |item1, item2|
+    renamed1 = item1.gsub(ILLEGAL_CHAR_REGEX, '-')
+    renamed2 = item2.gsub(ILLEGAL_CHAR_REGEX, '-')
+    raise "#{msg}: '#{item1}' and '#{item2}' collide after being renamed to '#{renamed1}'" if renamed1 == renamed2
+  end
+end
+
 def migrate_channel(owner_storage_id, channel_id)
   encrypted_channel_id = storage_encrypt_channel_id(owner_storage_id, channel_id)
 
@@ -107,9 +136,12 @@ def migrate_channel(owner_storage_id, channel_id)
   return if sql_row[:state] == 'deleted' || sql_row_value['useFirebase']
 
   properties = Hash[DynamoPropertyBag.new(channel_id, nil).to_hash.map { |k, v| [k, v.to_json] }]
+  ensure_no_collisions(properties.keys, "property key collision")  unless properties.empty?
   set_firebase_properties(encrypted_channel_id, properties) unless properties.empty?
 
-  DynamoTable.table_names(channel_id).each do |table_name|
+  table_names = DynamoTable.table_names(channel_id)
+  ensure_no_collisions(table_names, "table name collision") unless table_names.empty?
+  table_names.each do |table_name|
     dynamo_table = DynamoTable.new(encrypted_channel_id, nil, table_name)
     # A hash from record id to json-encoded records
     table_records = Hash[dynamo_table.to_a.map { |row| [row['id'].to_s, row.to_json] }]
