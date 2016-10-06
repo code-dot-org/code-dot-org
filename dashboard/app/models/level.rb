@@ -167,7 +167,7 @@ class Level < ActiveRecord::Base
   # Returns a cached map from level id and level name to level, or nil if in
   # level_builder mode which disables caching.
   def self.level_cache
-    return nil unless self.should_cache?
+    return nil unless Script.should_cache?
     @@level_cache ||= {}.tap do |cache|
       ScriptLevel.script_level_cache.values.each do |script_level|
         level = script_level.level
@@ -208,8 +208,8 @@ class Level < ActiveRecord::Base
     field = level_identifier.to_i.to_s == level_identifier.to_s ? :id : :name
     level = Level.find_by!(field => level_identifier)
     # Cache the level by ID and by name, unless it wasn't found.
-    @@level_cache[level.id] = level if level && self.should_cache?
-    @@level_cache[level.name] = level if level && self.should_cache?
+    @@level_cache[level.id] = level if level && Script.should_cache?
+    @@level_cache[level.name] = level if level && Script.should_cache?
     level
   end
 
