@@ -94,5 +94,5 @@ Dashboard::Application.configure do
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   # enable the script cache by default
-  config.enable_script_cache = CDO.with_default(true).enable_script_cache
+  config.disable_script_cache = CDO.with_default(false).disable_script_cache
 end
