@@ -210,7 +210,7 @@ class Script < ActiveRecord::Base
     Script.script_cache[name] = script
     Script.script_cache[id.to_s] = script
 
-    Script.script_level_cache.merge!(script.script_levels.index_by(&:id))
+    ScriptLevel.script_level_cache.merge!(script.script_levels.index_by(&:id))
     script.script_levels.each do |script_level|
       level = script_level.level
       next unless level
@@ -227,33 +227,6 @@ class Script < ActiveRecord::Base
     return nil unless self.should_cache?
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
-  end
-
-  # Returns a cached map from script level id to script_level, or nil if in level_builder mode
-  # which disables caching.
-  def self.script_level_cache
-    return nil unless self.should_cache?
-    @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |script|
-        cache.merge!(script.script_levels.index_by(&:id))
-      end
-    end
-  end
-
-  # Find the script level with the given id from the cache, unless the level build mode
-  # is enabled in which case it is always fetched from the database. If we need to fetch
-  # the script and we're not in level mode (for example because the script was created after
-  # the cache), then an entry for the script is added to the cache.
-  def self.cache_find_script_level(script_level_id)
-    script_level = script_level_cache[script_level_id] if self.should_cache?
-
-    # If the cache missed or we're in levelbuilder mode, fetch the script level from the db.
-    if script_level.nil?
-      script_level = ScriptLevel.find(script_level_id)
-      # Cache the script level, unless it wasn't found.
-      @@script_level_cache[script_level_id] = script_level if script_level && self.should_cache?
-    end
-    script_level
   end
 
   def cached
