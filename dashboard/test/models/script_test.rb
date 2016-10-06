@@ -279,7 +279,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     populate_cache_and_disconnect_db
 
-    assert_equal level, Script.cache_find_level(level.id)
+    assert_equal level, Level.cache_find_level(level.id)
   end
 
   test 'cache_find_level uses cache with name lookup' do
@@ -287,17 +287,17 @@ class ScriptTest < ActiveSupport::TestCase
 
     populate_cache_and_disconnect_db
 
-    assert_equal level, Script.cache_find_level(level.name)
+    assert_equal level, Level.cache_find_level(level.name)
   end
 
   test 'cache_find_level raises exception on bad ID and bad name' do
     bad_id = Level.last.id + 1
 
     assert_raises(ActiveRecord::RecordNotFound) do
-      Script.cache_find_level(bad_id)
+      Level.cache_find_level(bad_id)
     end
     assert_raises(ActiveRecord::RecordNotFound) do
-      Script.cache_find_level('not a level name')
+      Level.cache_find_level('not a level name')
     end
   end
 
