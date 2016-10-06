@@ -496,13 +496,25 @@ function loadAnimationFromSource(key, callback) {
   };
 }
 
+/**
+ * Given a key/serialized-props pair for an animation, work out where to get
+ * the spritesheet.
+ * @param {!AnimationKey} key
+ * @param {!SerializedAnimationProps} props
+ * @returns {string}
+ */
 export function animationSourceUrl(key, props) {
-  // Figure out where to get the animation from.
   // 1. If the animation has a sourceUrl it's external (from the library
-  //    or some other outside source, not the animation API)
-  // 2. Otherwise use the animation key to look it up in the animations API
-  return props.sourceUrl || animationsApi.basePath(key) + '.png' +
-     (props.version ? '?version=' + props.version : '');
+  //    or some other outside source, not the animation API) - and we may need
+  //    to run it through the media proxy.
+  if (props.sourceUrl) {
+    return assetPrefix.fixPath(props.sourceUrl);
+  }
+
+  // 2. Otherwise it's local to this project, and we should use the animation
+  //    key to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png' +
+      (props.version ? '?version=' + props.version : '');
 }
 
 /**
