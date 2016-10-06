@@ -65,11 +65,12 @@ def set_firebase_table(encrypted_channel_id, table_name, table_records, table_co
   #puts "set_firebase_table #{encrypted_channel_id} #{table_name} #{table_records.size} #{table_columns}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
 
-  storage_url = "#{channel_url}/storage/tables/#{table_name}/records.json"
+  escaped_table_name = URI.escape(table_name, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+  storage_url = "#{channel_url}/storage/tables/#{escaped_table_name}/records.json"
   storage_data = table_records.to_json
   put_with_auth(storage_url, storage_data)
 
-  counters_url = "#{channel_url}/counters/tables/#{table_name}.json"
+  counters_url = "#{channel_url}/counters/tables/#{escaped_table_name}.json"
   counters_data = {
     lastId: table_records.keys.map(&:to_i).max,
     rowCount: table_records.size
@@ -77,7 +78,7 @@ def set_firebase_table(encrypted_channel_id, table_name, table_records, table_co
   put_with_auth(counters_url, counters_data)
 
   if table_columns
-    metadata_url = "#{channel_url}/metadata/tables/#{table_name}/columns.json"
+    metadata_url = "#{channel_url}/metadata/tables/#{escaped_table_name}/columns.json"
     put_with_auth(metadata_url, 'null')
     table_columns = ['id'] + (table_columns - ['id'])
     table_columns.each do |column_name|
