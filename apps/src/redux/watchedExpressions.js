@@ -39,7 +39,7 @@ export default function reducer(state = watchedExpressionsInitialState, action) 
     return state.map(e => e.get('expression') == expression ? Immutable.Map({
       lastValue: value,
       expression,
-      uuid: e.uuid
+      uuid: e.get('uuid')
     }) : e);
   }
 
