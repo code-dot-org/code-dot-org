@@ -15,6 +15,10 @@
   = boolean_check_box f, :hide_animation_mode
 
 .field
+  = f.label :all_animations_single_frame, 'All animations should be a single frame. If it has multiple frames, only show the first frame as a still image.'
+  = boolean_check_box f, :all_animations_single_frame
+
+.field
   = f.label :show_d_pad
   = boolean_check_box f, :show_d_pad
 
