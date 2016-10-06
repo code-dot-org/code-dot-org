@@ -19,6 +19,9 @@ var createCategory = blockUtils.createCategory;
  * @property {?boolean} startInAnimationTab - If true, the animation tab should be
  *           selected on page load.
  *
+ * @property {?boolean} allAnimationsSingleFrame - If true, the library animations
+ *           should all be shortened to their first frame so they are still images.
+ *
  * @property {?boolean} pauseAnimationsByDefault - If true, then after
  *           `setAnimation` a sprite's animation will always be paused,
  *           not playing.

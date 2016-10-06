@@ -463,14 +463,7 @@ function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState().animationList;
-    // Figure out where to get the animation from.
-    // 1. If the animation has a sourceUrl it's external (from the library
-    //    or some other outside source, not the animation API)
-    // 2. Otherwise use the animation key to look it up in the animations API
-    // TODO: Take version ID into account here...
-
-    const rawSourceUrl = state.propsByKey[key].sourceUrl;
-    const sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
+    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -501,6 +494,27 @@ function loadAnimationFromSource(key, callback) {
       });
     });
   };
+}
+
+/**
+ * Given a key/serialized-props pair for an animation, work out where to get
+ * the spritesheet.
+ * @param {!AnimationKey} key
+ * @param {!SerializedAnimationProps} props
+ * @returns {string}
+ */
+export function animationSourceUrl(key, props) {
+  // 1. If the animation has a sourceUrl it's external (from the library
+  //    or some other outside source, not the animation API) - and we may need
+  //    to run it through the media proxy.
+  if (props.sourceUrl) {
+    return assetPrefix.fixPath(props.sourceUrl);
+  }
+
+  // 2. Otherwise it's local to this project, and we should use the animation
+  //    key to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png' +
+      (props.version ? '?version=' + props.version : '');
 }
 
 /**
@@ -569,4 +583,11 @@ function saveAnimation(animationKey, animationProps) {
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
     xhr.send(animationProps.blob);
   });
+}
+
+/**
+  * Selector for allAnimationsSingleFrame
+  */
+export function allAnimationsSingleFrameSelector(state) {
+  return state.pageConstants.allAnimationsSingleFrame;
 }

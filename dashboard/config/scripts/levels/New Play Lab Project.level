@@ -56,7 +56,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" id="when_run"/>
+        <block type="when_run" id="when_run" deletable="false"/>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="height"/>

@@ -25,6 +25,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
+  before_save :fix_examples
 
   serialized_attrs %w(
     level_url
@@ -67,6 +68,7 @@ class Blockly < Level
     droplet_tooltips_disabled
     lock_zero_param_functions
     contained_level_names
+    encrypted_examples
   )
 
   before_save :update_ideal_level_source
@@ -326,5 +328,11 @@ class Blockly < Level
   def autoplay_blocked_by_level?
     # Wrapped since we store our serialized booleans as strings.
     self.never_autoplay_video == 'true'
+  end
+
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
   end
 end
