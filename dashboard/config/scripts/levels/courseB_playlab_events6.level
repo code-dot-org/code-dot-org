@@ -41,14 +41,14 @@
     "protaganist_sprite_index": "1",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need these event blocks:\\n\\n![](https://images.code.org/02dcc4efc752dfa4187d0b1268427100-image-1475707266348.40.55.png)\",\r\n  \"hint_id\": \"courseB_playlab_events6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
-    "contained_level_names": null,
     "markdown_instructions": "Help your knight get all of the flags!\r\n\r\nTo do this, you'll need to add events to help the knight move up and down.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "downButton",
       "upButton"
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,13 +1,13 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-10-04T19:26:47.000Z",
+  "created_at": "2016-10-04T18:11:30.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Create an Item\r\n\r\nNext, you need to add in the items that fall from the top of the screen, just like the platforms, but faster.  In order to make the game more interesting, the items start at a random location above the screen.  For the sample game, the item's x position could be anything between 50 and 350, and the y position could be anything between -30 and -60.\r\n\r\n# Do This\r\n\r\n* Use the `createSprite` block to make an item sprite in the \"create sprites\" section of your code.\r\n* Use the `randomNumber` block inside your `createSprite` block to start the item at a random x and y position.\r\n* Use `setAnimation` and `velocityY` to give your sprite the correct image and make it fall from the top of the screen.\r\n* Run the code to test your sprite.",
+    "markdown_instructions": "# Make the Scoreboard\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. (Show me where)  You can see an example of a working scoreboard in [Stage 12 Puzzle 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8).\r\n\r\n# Do this\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.\r\n\r\n_Challenge: If you have other variables, you can create functions to display them on the screen, too._",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,8 +34,7 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
-    "contained_level_names": null,
-    "palette_category_at_start": "sprites"
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
