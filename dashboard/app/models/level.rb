@@ -40,9 +40,9 @@ class Level < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
   after_save :write_custom_level_file
-  after_save :update_level_cache
+  after_save :update_level_in_cache
   after_destroy :delete_custom_level_file
-  after_destroy :delete_from_level_cache
+  after_destroy :delete_level_from_cache
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
