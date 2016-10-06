@@ -3,6 +3,7 @@ import sinon from 'sinon';
 import reducer, {
     START_LOADING_FROM_SOURCE,
     DONE_LOADING_FROM_SOURCE,
+    animationSourceUrl,
     setInitialAnimationList,
     deleteAnimation,
     addBlankAnimation,
@@ -12,8 +13,31 @@ import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
 import {createStore} from '@cdo/apps/redux';
 import {expect} from '../../util/configuredChai';
+import {setExternalGlobals} from '../../util/testUtils';
 
 describe('animationListModule', function () {
+  describe('animationSourceUrl', function () {
+    const key = 'foo';
+
+    it(`returns the sourceUrl from props if it exists`, function () {
+      const props = {sourceUrl: 'bar'};
+      expect(animationSourceUrl(key, props)).to.equal('bar');
+      expect(animationSourceUrl(null, props)).to.equal('bar');
+    });
+
+    it(`constructs a sourceUrl from key and project if one isn't provided in props`, function () {
+      setExternalGlobals();
+      const props = {sourceUrl: null};
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png');
+    });
+
+    it(`appends version query param if props has a version id`, function () {
+      setExternalGlobals();
+      const props = {sourceUrl: null, version: 'baz'};
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=baz');
+    });
+  });
+
   describe('loadAnimationFromSource', function () {
     // Note: I'm basically unable to test loadAnimationFromSource right now,
     // because it makes an external request for a Blob and sinon can't fake
