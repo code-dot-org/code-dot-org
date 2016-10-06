@@ -134,4 +134,22 @@ class ScriptDSL < BaseDSL
   def self.parse_file(filename)
     super(filename, File.basename(filename, '.script'))
   end
+
+  def self.serialize(script, filename)
+    s = []
+
+    s << "hidden: 'false'" unless script.hidden
+    s << "login_required: 'true'" if script.login_required
+    s << "hideable_stages: 'true'" if script.hideable_stages
+    s << "wrapup_video: '#{wrapup_video}'" if script.wrapup_video
+
+    s << "professional_learning_course: '#{script.professional_learning_course}'" if script.professional_learning_course
+    s << "peer_reviews_to_complete: #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete
+
+    s << '' unless s.empty?
+
+    # TODO: stages
+
+    File.write(filename, s.join("\n"))
+  end
 end
