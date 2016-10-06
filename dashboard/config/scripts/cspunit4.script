@@ -1,25 +1,20 @@
 login_required 'true'
 hidden 'false'
 
-#1
 stage 'Intro to Data'
 level 'U4L01 Student Lesson Introduction'
 
-#2
 stage 'Finding Trends with Visualizations'
 level 'U4L02v2 - Finding Trends'
 
-#3
 stage 'Check Your Assumptions'
 level 'U4L03v2 - Student Introduction'
 
-#4
 stage 'Good and Bad Data Visualizations'
 level 'U4L04v2 - Student Introduction'
 level 'GoodBadVisualizations_v1'
 level 'GoodBadVisualizations_v2'
 
-#5
 stage 'Making Data Visualizations'
 level 'U4 - Making Data Visualizations - Student Introduction'
 level 'U4 - Making Data Visualizations - Getting Started'
@@ -29,47 +24,38 @@ level 'U4 - Making Data Visualizations - Bar Chart'
 level 'U4 - Making Data Visualizations - Edit Chart Appearance'
 level 'U4 - Making Data Visualizations - Free Play'
 
-#6
 stage 'Discover a Data Story'
 level 'U4L06v2 Student Lesson Introduction'
 
-#7
 stage 'Cleaning Data'
 level 'U4L16 Student Lesson Introduction'
 level 'U4 - Cleaning Data - Activity Guide'
 level 'U4 Cleaning Data Activity Guide Pt2'
 level 'U4 Cleaning Data Activity Guide Pt3'
 
-#8
 stage 'Creating Summary Tables'
 level 'U4L08v2 Student Intro'
 level 'U4L08v2 Making Pivot Tables'
 level 'U4L08v2 Making Pivot Tables Part 2'
 level 'U4L08v2 Making Pivot Tables Part 3'
 
-#9
 stage 'Practice PT - Tell a Data Story'
 level 'U4L09 Student Lesson Introduction'
 
-#10
 stage 'What is Big Data?'
 level 'U4L10 Student Lesson Introduction'
 
-#11
 stage 'Rapid Research - Data Innovations'
 level 'U4L11 Student Lesson Introduction'
 named_level 'Video - Data and Medicine'
 named_level 'Video - CS is Changing Everything'
 
-#12
 stage 'Identifying People with Data'
 level 'U4L12 Student Lesson Introduction'
 
-#13
 stage 'The Cost of Free'
 level 'U4L13 Student Lesson Introduction'
 level 'U4 - Privacy Abandoned - Hot On Your Trail Video'
 
-#14
 stage 'Practice PT - Propose an Innovation'
 level 'U4L14 Student Lesson Introduction'
