@@ -1,5 +1,4 @@
 var msg = require('@cdo/locale');
-var utils = require('../utils');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
@@ -155,7 +154,7 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
   if (this.customDocURL) {
     return this.customDocURL;
   }
-  return '//' + utils.getPegasusHost() + '/applab/docs/' + this.functionName + '?embedded';
+  return '//' + window.dashboard.CODE_ORG_URL + '/applab/docs/' + this.functionName + '?embedded';
 };
 
 module.exports = DropletFunctionTooltip;

@@ -55,6 +55,7 @@ def commit_changes(name)
   branchname = `git rev-parse --abbrev-ref HEAD`.strip
   exit 1 unless system("git add -A #{CONTENT_PATHS}")
   exit 1 unless system("git commit #{CONTENT_PATHS} -m '#{branchname} content changes (-#{name})'")
+  exit 1 unless system("git pull")
   exit 1 unless system("git push")
 end
 

@@ -34,6 +34,7 @@ const SurveyResultsHeader = React.createClass({
       filteredWorkshops: [],
       workshopSurveyData: undefined,
       selectedWorkshopId: undefined,
+      workshopName: undefined
     };
   },
 
@@ -51,16 +52,17 @@ const SurveyResultsHeader = React.createClass({
     this.setState({
       selectedCourse: course,
       filteredWorkshops: filteredWorkshops,
-      selectedWorkshopId: firstWorkshopId
+      selectedWorkshopId: firstWorkshopId,
     });
 
-    this.setSurveyPanel(firstWorkshopId);
+    this.setSurveyPanel(firstWorkshopId, this.getWorkshopFriendlyName(filteredWorkshops[0]));
   },
 
-  setSurveyPanel(workshopId) {
+  setSurveyPanel(workshopId, workshopName) {
     if (workshopId === undefined) {
       this.setState({
-        workshopSurveyData: undefined
+        workshopSurveyData: undefined,
+        workshopName: undefined
       });
     } else {
       $.ajax({
@@ -70,7 +72,8 @@ const SurveyResultsHeader = React.createClass({
       })
         .done(data => {
           this.setState({
-            workshopSurveyData: data
+            workshopSurveyData: data,
+            workshopName: workshopName
           });
         });
     }
@@ -80,13 +83,14 @@ const SurveyResultsHeader = React.createClass({
     this.filterWorkshops(event.target.value);
   },
 
-  handleCourseIdChange(event) {
-    this.setSurveyPanel(event.target.value);
+  handleWorkshopIdChange(event) {
+    this.setSurveyPanel(event.target.value, event.target.selectedOptions[0].innerHTML);
   },
 
   renderSurveyResults() {
     let thisWorkshop = this.state.workshopSurveyData['this_workshop'];
-    let allMyWorkshops = this.state.workshopSurveyData['all_my_workshops'];
+    let allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
+    let allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
 
     return (
       <tbody>
@@ -96,7 +100,8 @@ const SurveyResultsHeader = React.createClass({
               <tr key={i}>
                 <td>{row['text']}</td>
                 <td>{thisWorkshop[row['key']]}</td>
-                <td>{allMyWorkshops[row['key']]}</td>
+                <td>{allMyWorkshopsForCourse[row['key']]}</td>
+                <td>{allWorkshopsForCourse[row['key']]}</td>
               </tr>
             );
           })
@@ -119,10 +124,13 @@ const SurveyResultsHeader = React.createClass({
             <tr>
               <th/>
               <th>
-                Selected workshop
+                {this.state.workshopName}
               </th>
               <th>
-                Across all my workshops for this course
+                Across all my workshops for {this.state.selectedCourse}
+              </th>
+              <th>
+                Across all workshops for {this.state.selectedCourse}
               </th>
             </tr>
           </thead>
@@ -165,7 +173,7 @@ const SurveyResultsHeader = React.createClass({
           <Col sm={2}>
             <select
               name="workshop"
-              onChange={this.handleCourseIdChange}
+              onChange={this.handleWorkshopIdChange}
             >
               {workshopOptions}
             </select>
