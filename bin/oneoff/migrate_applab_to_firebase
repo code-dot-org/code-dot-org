@@ -133,6 +133,11 @@ rescue => e
 end
 
 def migrate_all
+  puts "[#{Time.now}] Initializing DynamoDB client"
+  # avoid initializing DynamoDB client many times from different threads
+  DynamoPropertyBag.pre_initialize
+  DynamoTable.pre_initialize
+
   puts "[#{Time.now}] Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately "\
     '15 minutes to run over ~4.5M rows in storage_apps in production...'
   channels = fetch_applab_channels
