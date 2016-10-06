@@ -37,6 +37,11 @@ var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import {GAME_WIDTH} from './constants';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -452,7 +457,8 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   this.reset();
 
   var program;
-  const containedLevelResultsInfo = this.studioApp_.getContainedLevelResultInfo();
+  const containedLevelResultsInfo = this.studioApp_.hasContainedLevels &&
+    getContainedLevelResultInfo();
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
@@ -482,10 +488,9 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     const onComplete = (submit ? this.onSubmitComplete : this.onReportComplete).bind(this);
 
     if (containedLevelResultsInfo) {
-      // TODO - this will cause problems if our postContainedLevelAttempt was
-      // slow and hasn't finished yet
-      // We already reported results when run was clicked, so we can just onComplete
-      onComplete();
+      // We already reported results when run was clicked. Make sure that call
+      // finished, then call onCompelte
+      runAfterPostContainedLevel(onComplete);
     } else {
       this.studioApp_.report({
         app: 'gamelab',
@@ -553,7 +558,7 @@ GameLab.prototype.runButtonClick = function () {
     shareCell.className = 'share-cell-enabled';
   }
 
-  this.studioApp_.postContainedLevelAttempt();
+  postContainedLevelAttempt(this.studioApp_);
 };
 
 function p5KeyCodeFromArrow(idBtn) {
