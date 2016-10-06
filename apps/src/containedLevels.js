@@ -23,7 +23,6 @@ export function getContainedLevelResultInfo() {
     testResults: testResults,
     program: levelResult.response,
     feedback: containedResult.feedback,
-    // TODO - fully understand submitted
     submitted: false
   };
 }
