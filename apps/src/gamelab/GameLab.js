@@ -26,7 +26,11 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationList, saveAnimations} from './animationListModule';
+import {
+  animationSourceUrl,
+  setInitialAnimationList,
+  saveAnimations
+} from './animationListModule';
 import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
@@ -93,7 +97,7 @@ var GameLab = function () {
 
   /** Expose for levelbuilder */
   window.printSerializedAnimationList = () => {
-    this.getSerializedAnimationList(list => {
+    this.getExportableAnimationList(list => {
       console.log(JSON.stringify(list, null, 2));
     });
   };
@@ -1051,11 +1055,30 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
- * @return {AnimationList}
+ * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getSerializedAnimationList = function (callback) {
   this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
     callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  }));
+};
+
+/**
+ * Get the project's animation metadtaa, this time for use in a level
+ * configuration.  The major difference with SerializedAnimationList is that
+ * it includes a sourceUrl for local project animations.
+ * @param {function(SerializedAnimationList)} callback
+ */
+GameLab.prototype.getExportableAnimationList = function (callback) {
+  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
+    let list = getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
+    list.orderedKeys.forEach(key => {
+      let props = list.propsByKey[key];
+      props.sourceUrl = document.location.protocol + '//' +
+          document.location.host +
+          animationSourceUrl(key, props);
+    });
+    callback(list);
   }));
 };
 
