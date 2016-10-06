@@ -2,7 +2,13 @@ import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import { TestResults } from './constants';
 import { valueOr } from './utils';
 
-let pendingPost = false;
+const PostState = {
+  None: 'None',
+  Started: 'Started',
+  Finished: 'Finished'
+};
+
+let postState = PostState.None;
 let callOnPostCompletion = null;
 
 /**
@@ -42,7 +48,7 @@ export function postContainedLevelAttempt({hasContainedLevels, attempts, onAttem
   }
 
   // Track the fact that we're currently submitting
-  pendingPost = true;
+  postState = PostState.Started;
 
   const reportInfo = getContainedLevelResultInfo();
   onAttempt({
@@ -50,7 +56,7 @@ export function postContainedLevelAttempt({hasContainedLevels, attempts, onAttem
     onComplete() {
       // Finished submitting. If we scheduled a completion function during the
       // submission, call that now.
-      pendingPost = false;
+      postState = PostState.Finished;
       if (callOnPostCompletion) {
         callOnPostCompletion();
         callOnPostCompletion = null;
@@ -65,8 +71,12 @@ export function postContainedLevelAttempt({hasContainedLevels, attempts, onAttem
  * @param {function} fn - Method to call
  */
 export function runAfterPostContainedLevel(fn) {
-  if (!pendingPost) {
+  if (postState === PostState.None) {
+    throw new Error('Shouldnt call runAfterPostContainedLevel before postContainedLevelAttempt');
+  }
+  if (PostState.Finished) {
     fn();
+    return;
   }
   callOnPostCompletion = fn;
 }
