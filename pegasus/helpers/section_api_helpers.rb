@@ -42,14 +42,11 @@ class DashboardStudent
     row
   end
 
-  def self.fetch_if_allowed(id_or_ids, dashboard_user_id)
-    if id_or_ids.is_a?(Array)
-      # TODO: This should actually send a where id in (,,,) type query.
-      return id_or_ids.map {|id| fetch_if_allowed(id, dashboard_user_id)}
-    end
-
-    id = id_or_ids
-
+  # @param ids [Integer] the ID to fetch.
+  # @param dashboard_user_id [Integer] the ID of the user doing the fetching.
+  # @returns [Hash | nil] a hash (representing the requested user) or nil (if
+  #   the requested user does not exist or is accessible by dashboard_user_id).
+  def self.fetch_if_allowed(id, dashboard_user_id)
     user = Dashboard::User.get(dashboard_user_id)
     return unless user && (user.followed_by?(id) || user.admin?)
 
@@ -63,11 +60,47 @@ class DashboardStudent
       server(:default).
       first
 
-    if row.nil?
-      return
-    end
+    return if row.nil?
 
     row.merge(age: birthday_to_age(row[:birthday]))
+  end
+
+  # @param ids [Array[Integer]] the IDs to fetch.
+  # @param dashboard_user_id [Integer] the ID of the user doing the fetching.
+  # @returns [Array[Hash | nil]] an array, one entry per requested ID, with each
+  #   entry being a hash (representing the requested user) or nil (if the
+  #   requested user does not exist or is accessible by dashboard_user_id).
+  def self.fetch_if_allowed_array(ids, dashboard_user_id)
+    user = Dashboard::User.get(dashboard_user_id)
+    return ids.map {|_id| nil} unless user
+
+    allowed_ids = user.admin? ? ids : user.get_followed_bys(ids)
+    allowed_rows = Dashboard.db[:users].
+      where(users__id: allowed_ids, users__deleted_at: nil).
+      left_outer_join(:secret_pictures, id: :secret_picture_id).
+      select(*fields,
+        :users__birthday___birthday,
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path
+      )
+
+    # Convert allowed_rows from an array of hashes (each representing a user)
+    # to a hash of hashes (keys of user_id, values representing a user).
+    allowed_rows = {}.tap do |allowed_rows_hash|
+      allowed_rows.each do |allowed_row|
+        allowed_rows_hash[allowed_row[:id]] = allowed_row
+      end
+    end
+
+    # Add user age to the hash.
+    ids.map do |id|
+      if allowed_rows.key? id
+        allowed_rows[id][:age] = birthday_to_age(allowed_rows[id][:birthday])
+      end
+    end
+
+    # Return an array of hashes.
+    allowed_rows.values
   end
 
   def self.update_if_allowed(params, dashboard_user_id)
