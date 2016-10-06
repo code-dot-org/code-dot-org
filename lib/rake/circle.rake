@@ -1,5 +1,6 @@
 require_relative '../../deployment'
 require 'cdo/rake_utils'
+require 'cdo/circle_utils'
 require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
@@ -10,8 +11,8 @@ SKIP_UI_TESTS_TAG = '[skip ui]'
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   task :run_tests do
-    if GitUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
-      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all tests."
+    if CircleUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
+      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     else
       RakeUtils.rake_stream_output 'test:changed'
@@ -20,8 +21,8 @@ namespace :circle do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task :run_ui_tests do
-    if GitUtils.circle_commit_contains?(SKIP_UI_TESTS_TAG)
-      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{SKIP_UI_TESTS_TAG}, skipping UI tests for this run."
+    if CircleUtils.circle_commit_contains?(SKIP_UI_TESTS_TAG)
+      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains #{SKIP_UI_TESTS_TAG}, skipping UI tests for this run."
       next
     end
     RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
