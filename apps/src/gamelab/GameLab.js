@@ -739,6 +739,7 @@ GameLab.prototype.initInterpreter = function () {
     customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
     customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties()
   });
+  window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
   if (this.debugger_) {
