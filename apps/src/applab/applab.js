@@ -59,6 +59,11 @@ const { ApplabInterfaceMode, DataView } = applabConstants;
 import consoleApi from '../consoleApi';
 import BoardController from '../makerlab/BoardController';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from './redux/data';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -1074,7 +1079,7 @@ Applab.runButtonClick = function () {
     }, 1/100);
   }
 
-  this.studioApp_.postContainedLevelAttempt();
+  postContainedLevelAttempt(studioApp);
 };
 
 /**
@@ -1388,8 +1393,8 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
-  var containedLevelResultsInfo = studioApp.getContainedLevelResultsInfo();
-
+  const containedLevelResultsInfo = studioApp.hasContainedLevels &&
+    getContainedLevelResultInfo();
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
@@ -1407,18 +1412,26 @@ Applab.onPuzzleComplete = function (submit) {
 
   Applab.waitingForReport = true;
 
-  var sendReport = function () {
-    studioApp.report({
-      app: 'applab',
-      level: level.id,
-      result: levelComplete,
-      testResult: Applab.testResults,
-      submitted: !!submit,
-      program: encodeURIComponent(program),
-      image: Applab.encodedFeedbackImage,
-      containedLevelResultsInfo: containedLevelResultsInfo,
-      onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
-    });
+  const sendReport = function () {
+    const onComplete = (submit ? Applab.onSubmitComplete : Applab.onReportComplete);
+
+    if (containedLevelResultsInfo) {
+      // We already reported results when run was clicked. Make sure that call
+      // finished, then call onCompelte
+      runAfterPostContainedLevel(onComplete);
+    } else {
+      studioApp.report({
+        app: 'applab',
+        level: level.id,
+        result: levelComplete,
+        testResult: Applab.testResults,
+        submitted: !!submit,
+        program: encodeURIComponent(program),
+        image: Applab.encodedFeedbackImage,
+        containedLevelResultsInfo: containedLevelResultsInfo,
+        onComplete
+      });
+    }
   };
 
   var divApplab = document.getElementById('divApplab');
