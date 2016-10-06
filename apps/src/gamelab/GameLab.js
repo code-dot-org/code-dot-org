@@ -434,7 +434,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit) {
+GameLab.prototype.onPuzzleComplete = function () {
   if (this.executionError) {
     this.result = this.studioApp_.ResultType.ERROR;
   } else {
@@ -443,20 +443,20 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   }
 
   // If we know they succeeded, mark levelComplete true
-  var levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+  const levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
 
   if (this.executionError) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
-  } else if (!submit) {
+  } else {
     this.testResults = this.studioApp_.TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
   this.reset();
 
-  var program;
+  let program;
   const containedLevelResultsInfo = this.studioApp_.hasContainedLevels &&
     getContainedLevelResultInfo();
   if (containedLevelResultsInfo) {
@@ -483,9 +483,8 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
 
   this.waitingForReport = true;
 
-  var sendReport = () => {
-    const submitted = !!submit;
-    const onComplete = (submit ? this.onSubmitComplete : this.onReportComplete).bind(this);
+  const sendReport = () => {
+    const onComplete = this.onReportComplete.bind(this);
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
@@ -499,7 +498,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
         testResult: this.testResults,
         program: program,
         image: this.encodedFeedbackImage,
-        submitted,
+        submitted: false,
         onComplete
       });
     }
@@ -510,7 +509,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     }
   };
 
-  var divGameLab = document.getElementById('divGameLab');
+  const divGameLab = document.getElementById('divGameLab');
   if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
     sendReport();
   } else {
