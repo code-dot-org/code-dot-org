@@ -463,7 +463,14 @@ function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState().animationList;
-    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
+    // Figure out where to get the animation from.
+    // 1. If the animation has a sourceUrl it's external (from the library
+    //    or some other outside source, not the animation API)
+    // 2. Otherwise use the animation key to look it up in the animations API
+    // TODO: Take version ID into account here...
+
+    const rawSourceUrl = state.propsByKey[key].sourceUrl;
+    const sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -494,15 +501,6 @@ function loadAnimationFromSource(key, callback) {
       });
     });
   };
-}
-
-export function animationSourceUrl(key, props) {
-  // Figure out where to get the animation from.
-  // 1. If the animation has a sourceUrl it's external (from the library
-  //    or some other outside source, not the animation API)
-  // 2. Otherwise use the animation key to look it up in the animations API
-  return props.sourceUrl || animationsApi.basePath(key) + '.png' +
-     (props.version ? '?version=' + props.version : '');
 }
 
 /**
