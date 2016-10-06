@@ -2,6 +2,7 @@
 @no_mobile
 @dashboard_db_access
 @pegasus_db_access
+@no_circle
 Feature: Using the teacher dashboard
 
   Scenario: Loading the teacher dashboard
