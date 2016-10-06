@@ -29,8 +29,7 @@
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This program is missing one block. Can you figure out which one?\",\r\n  \"hint_id\": \"K2.0_sequence_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "A bug! Fix the code to get me to the pig.\r\n\r\n![](https://images.code.org/2843193ce2d869ad2f06f0f5b114c9d0-image-1467924400663.gif)",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "debug: add command to end",

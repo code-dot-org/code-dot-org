@@ -17,7 +17,8 @@ const AnimationPickerBody = React.createClass({
     is13Plus: React.PropTypes.bool,
     onDrawYourOwnClick: React.PropTypes.func.isRequired,
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
-    onUploadClick: React.PropTypes.func.isRequired
+    onUploadClick: React.PropTypes.func.isRequired,
+    playAnimations: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -60,9 +61,10 @@ const AnimationPickerBody = React.createClass({
           {pageOfResults.map(animationProps =>
             <AnimationPickerListItem
               key={animationProps.sourceUrl}
-              label={`${animationProps.name} (${animationProps.frameCount})`}
+              label={animationProps.name}
               animationProps={animationProps}
               onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
+              playAnimations={this.props.playAnimations}
             />
           )}
         </ScrollableList>

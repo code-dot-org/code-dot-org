@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Create an Item\r\n\r\nNext, you need to add in the items that fall from the top of the screen.  In [Stage 11 Puzzle 6](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/11/puzzle/6), you modeled falling using the counter pattern on `velocityY`.  You can use the same pattern to make your items fall from the sky.  In our sample game, our carrots rotated and bounced off the platforms, but you can choose to add any other type of interaction that you like in the next level.\r\n\r\n# Do This\r\n\r\n* Create an item sprite with the label and starting position that you put on your worksheet.\r\n* Give the sprite the starting properties you wrote on your worksheet.\r\n* Create a function that makes the sprite fall from the top of the screen.  (Look at [Stage 11 Puzzle 6](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/11/puzzle/6) to see an example of falling using `velocityY` in a counter pattern.), then use that function inside the draw loop.\r\n* Run the code to test your sprite.",
+    "markdown_instructions": "# Create an Item\r\n\r\nNext, you need to add in the items that fall from the top of the screen, just like the platforms, but faster.  In order to make the game more interesting, the items start at a random location above the screen.  For the sample game, the item's x position could be anything between 50 and 350, and the y position could be anything between -30 and -60.\r\n\r\n# Do This\r\n\r\n* Use the `createSprite` block to make an item sprite in the \"create sprites\" section of your code.\r\n* Use the `randomNumber` block inside your `createSprite` block to start the item at a random x and y position.\r\n* Use `setAnimation` and `velocityY` to give your sprite the correct image and make it fall from the top of the screen.\r\n* Run the code to test your sprite.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,7 +34,8 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "palette_category_at_start": "sprites"
   },
   "published": true,
   "notes": "",

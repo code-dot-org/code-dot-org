@@ -8,7 +8,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Community Building', description_t: "Explore resources and ideas for building a strong, interconnected CS community in your region", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/community"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Counselor and Administrator Professional Development', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Counselor and Administrator PD', description_t: "Resources to help you plan and run this workshop!", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/administrator"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Curriculum Guides', description_t: "Links to the homepage and curriculum guide for each of Code.org’s K-12 course offerings", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/curriculum"), button_s: "Learn more"} %>
 
@@ -27,6 +27,8 @@ title: Professional Learning Partner Virtual Playbook
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "All you need to know about annual reports, workshop surveys, and the PLP Roadmap", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "Resources for teachers such as course supports, online supports, classroom materials, and technology", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>
+
+<%= view :educate_box, item: {title_s: 'Timeline', description_t: "Coming Soon with all the information you will need about upcoming events!"} %>
 
 <%= view :educate_box, item: {title_s: 'Training Materials', description_t: "The best of Facilitation Summit, TeacherCon, and virtual trainings", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/training-materials"), button_s: "Learn more"} %>
 

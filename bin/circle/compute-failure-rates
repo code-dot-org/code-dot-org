@@ -5,8 +5,6 @@
 require 'optparse'
 require_relative './circle_project'
 
-@project = CircleProject.new('code-dot-org/code-dot-org')
-
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
@@ -48,6 +46,8 @@ OptionParser.new do |opts|
     exit
   end
 end.parse!
+
+@project = CircleProject.new('code-dot-org/code-dot-org')
 
 # Download and format the build information we need
 build_range = @project.build_range_from_options(options)

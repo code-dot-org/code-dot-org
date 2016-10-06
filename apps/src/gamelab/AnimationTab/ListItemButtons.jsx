@@ -58,14 +58,28 @@ var ListItemButtons = function (props) {
   const cloneTooltip = (<Tooltip id={0}>Duplicate</Tooltip>);
   return (
     <div style={styles.root}>
-      <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
+      {!props.singleFrameAnimation &&
+        <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
+      }
       <div style={styles.previewControls}>
-        <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
+        {!props.singleFrameAnimation &&
+          <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
+        }
         <OverlayTrigger overlay={trashTooltip} placement="bottom" delayShow={500}>
-          <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
+          <i
+            key="trash"
+            className="fa fa-trash-o"
+            style={[styles.icon, styles.trash]}
+            onClick={props.onDeleteClick}
+          />
         </OverlayTrigger>
         <OverlayTrigger overlay={cloneTooltip} placement="bottom" delayShow={500}>
-          <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
+          <i
+            key="clone"
+            className="fa fa-clone"
+            style={styles.icon}
+            onClick={props.onCloneClick}
+          />
         </OverlayTrigger>
       </div>
     </div>
@@ -77,6 +91,8 @@ ListItemButtons.propTypes = {
   onLoopingChanged: React.PropTypes.func.isRequired,
   looping: React.PropTypes.bool.isRequired,
   onFrameDelayChanged: React.PropTypes.func.isRequired,
-  frameDelay: React.PropTypes.number.isRequired
+  frameDelay: React.PropTypes.number.isRequired,
+  singleFrameAnimation: React.PropTypes.bool.isRequired
 };
+
 module.exports = Radium(ListItemButtons);
