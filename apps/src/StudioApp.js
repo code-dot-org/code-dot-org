@@ -2864,46 +2864,6 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
   }
 };
 
-StudioApp.prototype.getContainedLevelResultInfo = function () {
-  if (!this.hasContainedLevels) {
-    return;
-  }
-
-  const containedResult = codeStudioLevels.getContainedLevelResult();
-  const levelResult = containedResult.result;
-  const testResults = utils.valueOr(containedResult.testResult,
-    levelResult.result ? this.TestResults.ALL_PASS : this.TestResults.GENERIC_FAIL);
-  return {
-    app: containedResult.app,
-    level: containedResult.id,
-    callback: containedResult.callback,
-    result: levelResult.result,
-    testResults: testResults,
-    program: levelResult.response,
-    feedback: containedResult.feedback,
-    // TODO - fully understand submitted
-    submitted: false
-  };
-};
-
-StudioApp.prototype.postContainedLevelAttempt = function () {
-  // Only want to post on the first attempt
-  if (!this.hasContainedLevels || this.attempts > 1) {
-    return;
-  }
-
-  this.pendingContainedLevelPost = true;
-  const reportInfo = this.getContainedLevelResultInfo();
-  // TODO - replicate async
-  this.onAttempt({
-    ...reportInfo,
-    onComplete() {
-      console.log('completed');
-      this.pendingContainedLevelPost = false;
-    }
-  });
-};
-
 /**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
