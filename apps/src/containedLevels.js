@@ -34,7 +34,7 @@ export function getContainedLevelResultInfo() {
  * @param {boolean} hasContainedLevels - Do we actually have a contained level
  * @param {number} attempts - How many times we've clicked run for this level
  * @param {function} onAttempt - Callback provided to studioApp for when we submit
- 8   contained level
+ *   contained level
  */
 export function postContainedLevelAttempt({hasContainedLevels, attempts, onAttempt}) {
   if (!hasContainedLevels || attempts !== 1) {
