@@ -29,6 +29,7 @@ class Gamelab < Blockly
     free_play
     text_mode_at_start
     hide_animation_mode
+    start_in_animation_tab
     show_d_pad
     soft_buttons
     submittable
