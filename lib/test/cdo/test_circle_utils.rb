@@ -2,6 +2,10 @@ require_relative '../../../shared/test/test_helper'
 require 'cdo/circle_utils'
 
 class CircleUtilsTest < Minitest::Test
+  def teardown
+    CircleUtils.__clear_cached_tags_for_test
+  end
+
   def test_knows_when_tag_is_present
     CircleUtils.stub :circle_commit_message, 'message [foo]' do
       assert CircleUtils.tagged? 'foo'
