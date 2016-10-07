@@ -48,17 +48,6 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert_equal [@teacher1, @teacher2], teachers
   end
 
-  test 'for_district' do
-    attendances = Pd::Attendance.for_district(@district)
-    assert_equal 3, attendances.count
-  end
-
-  test 'distinct teachers from district' do
-    teachers = Pd::Attendance.for_district(@district).distinct_teachers
-    assert_equal 2, teachers.count
-    assert_equal [@teacher1, @unrelated_teacher], teachers
-  end
-
   test 'unique constraint on pd_session_id and teacher_id prevents duplicates' do
     attendance = create :pd_attendance
     dupe = attendance.dup
