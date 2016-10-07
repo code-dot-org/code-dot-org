@@ -58,10 +58,12 @@ def set_firebase_properties(encrypted_channel_id, properties_data)
   original_keys = properties_data.keys
   original_keys.each do |key|
     if ILLEGAL_CHAR_REGEX.match(key)
-      legal_key = key.gsub(ILLEGAL_CHAR_REGEX, '-')
-      puts "renaming key #{key} to #{legal_key} in channel #{encrypted_channel_id}"
-      properties_data[legal_key] = properties_data[key]
-      properties_data.delete(key)
+      # TODO(dave): remove this line and reenable this block once data blocks / data browser handle illegal characters
+      raise "skipping key name containing illegal characters: #{key}"
+      # legal_key = key.gsub(ILLEGAL_CHAR_REGEX, '-')
+      # puts "renaming key #{key} to #{legal_key} in channel #{encrypted_channel_id}"
+      # properties_data[legal_key] = properties_data[key]
+      # properties_data.delete(key)
     end
   end
   put_with_auth(properties_url, properties_data.to_json)
@@ -78,9 +80,11 @@ def set_firebase_table(encrypted_channel_id, table_name, table_records, table_co
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
 
   if ILLEGAL_CHAR_REGEX.match(table_name)
-    legal_table_name = table_name.gsub(ILLEGAL_CHAR_REGEX, '-')
-    puts "renaming table name #{table_name} to #{legal_table_name} in channel #{encrypted_channel_id}"
-    table_name = legal_table_name
+    # TODO(dave): remove this line and reenable this block once data blocks / data browser handle illegal characters
+    raise "skipping table name containing illegal characters: #{table_name}"
+    # legal_table_name = table_name.gsub(ILLEGAL_CHAR_REGEX, '-')
+    # puts "renaming table name #{table_name} to #{legal_table_name} in channel #{encrypted_channel_id}"
+    # table_name = legal_table_name
   end
 
   escaped_table_name = URI.escape(table_name, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
