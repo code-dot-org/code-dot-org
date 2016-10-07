@@ -34,8 +34,8 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
-    "contained_level_names": null,
-    "palette_category_at_start": "control"
+    "palette_category_at_start": "control",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
