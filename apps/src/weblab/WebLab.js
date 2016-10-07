@@ -15,7 +15,6 @@ import { Provider } from 'react-redux';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
 
-
 /**
  * An instantiable WebLab class
  */
@@ -74,9 +73,7 @@ WebLab.prototype.init = function (config) {
 
   this.brambleHost = null;
 
-  if (this.level.lastAttempt) {
-    this.startSources = this.level.lastAttempt;
-  } else if (this.level.startSources && this.level.startSources.length > 0) {
+  if (this.level.startSources && this.level.startSources.length > 0) {
     try {
       this.startSources = JSON.parse(this.level.startSources);
     } catch (err) {
@@ -94,24 +91,24 @@ WebLab.prototype.init = function (config) {
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
-      // Reset startSources to the original value (ignoring lastAttempt)
-      try {
-        this.startSources = JSON.parse(this.level.startSources);
-      } catch (e) {
-        this.startSources = null;
-        reject(e);
-        return;
-      }
-      // TODO: (cpirich) reload currentAssets once those are versioned
-
-      // Force brambleHost to reload based on startSources
-      this.brambleHost.loadStartSources(err => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve();
+      // Delete everything from the service and restart the initial sync
+      filesApi.deleteAll((xhr, filesVersionId) => {
+          this.fileEntries = null;
+          // Force brambleHost to reload based on startSources
+          this.brambleHost.startInitialFileSync(err => {
+              if (err) {
+                reject(err);
+              } else {
+                resolve();
+              }
+            },
+            true
+          );
+        }, xhr => {
+          console.warn(`WebLab: error deleteAll failed: ${xhr.status}`);
+          reject(new Error(xhr.status));
         }
-      });
+      );
     });
   };
 
@@ -126,7 +123,7 @@ WebLab.prototype.init = function (config) {
 
   config.useFilesApi = true;
 
-  this.loadCurrentAssets();
+  this.loadFileEntries();
 
   const onMount = () => {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
@@ -163,7 +160,7 @@ WebLab.prototype.init = function (config) {
   }
 
   function onAddFileImage() {
-    dashboard.assets.showAssetManager(null, 'image', this.loadCurrentAssets.bind(this), {
+    dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
       showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
       useFilesApi: true
     });
@@ -207,14 +204,9 @@ WebLab.prototype.init = function (config) {
 WebLab.prototype.getCodeAsync = function () {
   return new Promise((resolve, reject) => {
     if (this.brambleHost !== null) {
-      this.brambleHost.syncAssets(err => {
-        this.brambleHost.getBrambleCode(function (err, code) {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(code);
-          }
-        });
+      this.brambleHost.syncFiles(err => {
+        // store our filesVersionId as the "sources"
+        resolve(this.getCurrentFilesVersionId() || '');
       });
     } else {
       // Bramble not installed yet - we have no code to return
@@ -228,9 +220,9 @@ WebLab.prototype.getStartSources = function () {
   return this.startSources;
 };
 
-// Called by Bramble to get the current assets
-WebLab.prototype.getCurrentAssets = function () {
-  return this.currentAssets;
+// Called by Bramble to get the current fileEntries
+WebLab.prototype.getCurrentFileEntries = function () {
+  return this.fileEntries;
 };
 
 WebLab.prototype.getCurrentFilesVersionId = function () {
@@ -266,6 +258,30 @@ WebLab.prototype.renameProjectFile = function (filename, newFilename, callback) 
   );
 };
 
+// Called by Bramble when a file has been changed or created
+WebLab.prototype.changeProjectFile = function (filename, fileData, callback) {
+  filesApi.putFile(
+    filename,
+    fileData,
+    xhr => {
+      callback(null, dashboard.project.filesVersionId);
+    },
+    xhr => {
+      console.warn(`WebLab: error file ${filename} not renamed`);
+      callback(new Error(xhr.status));
+    }
+  );
+};
+
+/*
+ * Called by Bramble when a file has been changed or created
+ * @param {Function} hook to be called once before a filesApi write.
+ *   hook should be hook(callback) and callback is callback(err)
+ */
+WebLab.prototype.registerBeforeWriteHook = function (hook) {
+  filesApi.registerBeforeWriteHook(hook);
+};
+
 // Called by Bramble when project has changed
 WebLab.prototype.onProjectChanged = function () {
   // let dashboard project object know project has changed, which will trigger autosave
@@ -298,22 +314,22 @@ WebLab.prototype.onIsRunningChange = function () {
 };
 
 /**
- * Load the asset list and store it as this.currentAssets
+ * Load the file entry list and store it as this.fileEntries
  */
-WebLab.prototype.loadCurrentAssets = function () {
+WebLab.prototype.loadFileEntries = function () {
   filesApi.ajax('GET', '', xhr => {
     let parsedResponse;
     try {
       parsedResponse = JSON.parse(xhr.responseText);
     } catch (e) {
-      console.error('assets API parse failed, error: ' + e);
-      this.currentAssets = null;
+      console.error('files API parse failed, error: ' + e);
+      this.fileEntries = null;
       return;
     }
     assetListStore.reset(parsedResponse.files);
-    this.currentAssets = assetListStore.list().map(asset => ({
-      name: asset.filename,
-      url: `/v3/files/${dashboard.project.getCurrentId()}/${asset.filename}`
+    this.fileEntries = assetListStore.list().map(fileEntry => ({
+      name: fileEntry.filename,
+      url: `/v3/files/${dashboard.project.getCurrentId()}/${fileEntry.filename}`
     }));
     var latestFilesVersionId = parsedResponse.filesVersionId;
     this.initialFilesVersionId = this.initialFilesVersionId || latestFilesVersionId;
@@ -325,11 +341,11 @@ WebLab.prototype.loadCurrentAssets = function () {
       dashboard.project.filesVersionId = parsedResponse.filesVersionId;
     }
     if (this.brambleHost) {
-      this.brambleHost.syncAssets(() => {});
+      this.brambleHost.syncFiles(() => {});
     }
   }, xhr => {
-    console.error('assets API failed, status: ' +  xhr.status);
-    this.currentAssets = null;
+    console.error('files API failed, status: ' +  xhr.status);
+    this.fileEntries = null;
   });
 };
 
