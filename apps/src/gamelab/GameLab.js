@@ -2,6 +2,8 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode} from './actions';
+import {startInAnimationTab} from './stateQueries';
+import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 var commonMsg = require('@cdo/locale');
 var msg = require('@cdo/gamelab/locale');
 var levels = require('./levels');
@@ -26,7 +28,6 @@ var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
-var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
 import {
   animationSourceUrl,
@@ -38,7 +39,6 @@ var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import {GAME_WIDTH} from './constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -258,7 +258,7 @@ GameLab.prototype.init = function (config) {
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
   });
 
-  if (config.level.startInAnimationTab) {
+  if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
     this.studioApp_.reduxStore.dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
   }
 
