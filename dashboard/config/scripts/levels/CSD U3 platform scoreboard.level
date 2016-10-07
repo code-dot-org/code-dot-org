@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Make the Scoreboard\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. (Show me where)  You can see an example of a working scoreboard in [Stage 12 Puzzle 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8).\r\n\r\n# Do this\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.\r\n\r\n_Challenge: If you have other variables, you can create functions to display them on the screen, too._",
+    "markdown_instructions": "# Make the Scoreboard\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. (Show me where)  You can see an example of a working scoreboard in [Stage 12 Puzzle 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8).\r\n\r\n# Do this\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

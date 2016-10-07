@@ -1,12 +1,12 @@
 stage 'Debugging'
 level 'grade1_activity_whatDoesItDo'
-level 'grade1_story_spottedBugs'
-level 'grade1_activity_whatGoesWrong'
+#level 'grade1_story_spottedBugs'
+#level 'grade1_activity_whatGoesWrong'
 
 stage 'Persistence & Frustration'
 #level 'grade1_story_theGreatTowerTopple'
 level 'grade1_video_frustrationRainbow'
-level 'grade1_activity_groupTower'
+#level 'grade1_activity_groupTower'
 level 'grade1_activity_frustration'
 
 stage 'Sequences & Algorithms'

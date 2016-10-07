@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Score Variable\r\n\r\nNow that you've created your backgrounds, you'll need to choose when each background is drawn.  For that, you'll need a score variable to hold information about your player's score.\r\n\r\nNo matter what order you write your code in, you should always declare your variables at the very beginning of the program.  That way, they are available for any code that comes after them.\r\n\r\n# Do this\r\n\r\n* Declare a score variable at the beginning of your game program. Show me the block\r\n* Set the score equal to 0.\r\n\r\n_Challenge: Can you think of any other variables you may want, such as number of lives, or current level?  Create those variables, too, and set their values._",
+    "markdown_instructions": "# Score Variable\r\n\r\nNow that you've created your backgrounds, you'll need to choose when each background is drawn.  For that, you'll need a score variable to hold information about your player's score.\r\n\r\nYou should always give your variables a starting value at the very beginning of the program.  That way, they are available for any code that comes after.\r\n\r\n# Do This\r\n\r\n* Create a score variable at the beginning of your game program. Show me the block\r\n* Set the score equal to 0.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,8 +34,8 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
-    "contained_level_names": null,
-    "palette_category_at_start": "variables"
+    "palette_category_at_start": "variables",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
