@@ -143,9 +143,6 @@ Dashboard::Application.routes.draw do
 
     get 'instructions', to: 'scripts#instructions'
 
-    # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
-
     # /s/xxx/puzzle/yyy
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
