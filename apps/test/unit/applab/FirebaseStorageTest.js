@@ -83,6 +83,48 @@ describe('FirebaseStorage', () => {
         done();
       }
     });
+
+    it('fails on key names with ascii control codes', done => {
+      FirebaseStorage.setKeyValue(
+        'key\n',
+        'val',
+        () => {throw "unexpectedly allowed key name with ascii control code";},
+        error => {
+          expect(error.indexOf('illegal character code') !== -1).to.be.true;
+          verifyNoKeys();
+        });
+
+      function verifyNoKeys() {
+        getDatabase(Applab.channelId).child(`storage/keys`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.equal(null);
+            done();
+          });
+      }
+    });
+
+    it('warns and succeeds on key names with illegal characters', done => {
+      let didWarn = false;
+      FirebaseStorage.setKeyValue(
+        'foo.bar',
+        'baz',
+        () => verifyValueAndWarning(),
+        error => {
+          expect(error.indexOf('renamed') !== -1).to.be.true;
+          didWarn = true;
+        });
+
+      function verifyValueAndWarning() {
+        expect(didWarn).to.be.true;
+        getDatabase(Applab.channelId).child(`storage/keys`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({'foo-bar': '"baz"'});
+            done();
+          });
+      }
+    });
   });
 
   describe('createRecord', () => {

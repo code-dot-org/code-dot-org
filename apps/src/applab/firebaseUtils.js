@@ -98,6 +98,16 @@ function getFirebase() {
 }
 
 const ILLEGAL_CHARACTERS = '.$#[]/';
+const ILLEGAL_CHARACTERS_REGEX = /[\.\$#\[\]\/]/g;
+
+/**
+ * Replaces illegal characters in the firebase key with dashes.
+ * @param {string} key
+ * @returns {string} Updated firebase key
+ */
+export function fixFirebaseKey(key) {
+  return key.replace(ILLEGAL_CHARACTERS_REGEX, '-');
+}
 
 /**
  * Firebase keys must be UTF-8 encoded, can be a maximum of 768 bytes, and cannot contain

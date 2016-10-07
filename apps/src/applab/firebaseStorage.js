@@ -2,7 +2,7 @@
 
 import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
-import { loadConfig, getDatabase, validateFirebaseKey } from './firebaseUtils';
+import { loadConfig, fixFirebaseKey, getDatabase, validateFirebaseKey } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
 import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
 
@@ -58,6 +58,17 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   const jsonValue = (value === undefined) ? null : JSON.stringify(value);
 
   loadConfig().then(config => {
+    // Some projects which were created on DynamoDB attempt to write to keys
+    // which contain characters which are illegal in firebase paths. Rename these keys
+    // So that these apps don't break. Also warn because this behavior is dangerous as
+    // it could lead to unintentional data collisions.
+    const newKey = fixFirebaseKey(key);
+    if (newKey !== key) {
+      onError(`Key ${key} renamed to ${newKey} because the characters ` +
+        '".", "$", "#", "[", "]", and "/" are not allowed.');
+      key = newKey;
+    }
+
     try {
       validateFirebaseKey(key);
     } catch (e) {
@@ -105,6 +116,17 @@ function getRecordExistsPromise(tableName, recordId) {
 FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) {
   // Assign a unique id for the new record.
   const updateNextId = true;
+
+  // Some projects which were created on DynamoDB attempt to write to table names
+  // which contain characters which are illegal in firebase paths. Rename these tables
+  // So that these apps don't break. Also warn because this behavior is dangerous as
+  // it could lead to unintentional data collisions.
+  const newTableName = fixFirebaseKey(tableName);
+  if (newTableName !== tableName) {
+    onError(`Table ${tableName} renamed to ${newTableName} because the characters ` +
+      '".", "$", "#", "[", "]", and "/" are not allowed.');
+    tableName = newTableName;
+  }
 
   // Validate the table name and record before updating table counters, so that the
   // row count does not become inaccurate if the record is too large.
