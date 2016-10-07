@@ -94,6 +94,7 @@ const DebugWatch = React.createClass({
         editing: false,
         text: ''
       });
+      this.refs.debugInput.blur();
     }
     if (e.key === 'Escape') {
       console.log('Hit escape');
@@ -129,6 +130,7 @@ const DebugWatch = React.createClass({
                   })
               }
           <input
+              ref="debugInput"
               onBlur={() => console.log("Blurred")}
               onClick={() => console.log("Editing")}
               onKeyDown={this.onKeyDown}
