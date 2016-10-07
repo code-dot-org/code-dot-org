@@ -285,7 +285,7 @@ ActiveRecord::Schema.define(version: 20161007172920) do
     t.string  "course",                                     null: false
     t.string  "rate_type",                                  null: false
     t.decimal "rate",               precision: 8, scale: 2, null: false
-    t.index ["school_district_id", "course"], name: "index_pd_district_payment_terms-school_district_course", using: :btree
+    t.index ["school_district_id", "course"], name: "index_pd_district_payment_terms_school_district_course", using: :btree
   end
 
   create_table "pd_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
