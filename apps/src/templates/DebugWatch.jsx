@@ -2,7 +2,7 @@ import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {update} from '../redux/watchedExpressions'
+import {add, update} from '../redux/watchedExpressions'
 
 const WATCH_TIMER_PERIOD = 50;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
@@ -15,6 +15,13 @@ const DebugWatch = React.createClass({
     debugButtons: React.PropTypes.bool,
     isRunning: React.PropTypes.bool,
     watchedExpressions: React.PropTypes.instanceOf(Immutable.List)
+  },
+
+  getInitialState : function() {
+    return {
+      text : "",
+      editing : false,
+    };
   },
 
   componentDidMount() {
@@ -74,6 +81,34 @@ const DebugWatch = React.createClass({
     }
   },
 
+  //onSubmit(editing: boolean) {
+  //  var value = this.state.text;
+  //
+  //}
+
+  onKeyDown(e: DOMEvent) {
+    if (e.key === 'Enter') {
+      console.log('Hit enter');
+      this.props.dispatch(add(e.target.value));
+      this.setState({
+        editing: false,
+        text: ''
+      });
+    }
+    if (e.key === 'Escape') {
+      console.log('Hit escape');
+      this.setState({
+        editing: false,
+      });
+    }
+  },
+
+  onChange(e: DOMEvent) {
+    this.setState({
+      text: e.target.value,
+    });
+  },
+
   render() {
     let classes = 'debug-watch';
     return (
@@ -93,6 +128,14 @@ const DebugWatch = React.createClass({
                       );
                   })
               }
+          <input
+              onBlur={() => console.log("Blurred")}
+              onClick={() => console.log("Editing")}
+              onKeyDown={this.onKeyDown}
+              onChange={this.onChange}
+              value={this.state.text}
+          >
+          </input>
         </div>
     );
   }
