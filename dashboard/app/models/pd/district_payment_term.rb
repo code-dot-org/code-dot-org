@@ -10,7 +10,7 @@
 #
 # Indexes
 #
-#  index_pd_district_payment_terms_on_school_district_id_and_course  (school_district_id,course)
+#  index_pd_district_payment_terms-school_district_course  (school_district_id,course)
 #
 
 class Pd::DistrictPaymentTerm < ActiveRecord::Base
