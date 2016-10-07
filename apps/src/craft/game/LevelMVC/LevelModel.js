@@ -691,10 +691,6 @@ export default class LevelModel {
     if (this.inBounds(x, y)) {
       block = this.actionPlane[blockIndex];
       if (block !== null) {
-        block.position = [x, y];
-        let inventoryType = this.getInventoryType(block.blockType);
-        this.player.inventory[inventoryType] =
-          (this.player.inventory[inventoryType] || 0) + 1;
 
         if (block.isDestroyable) {
           this.actionPlane[blockIndex] = new LevelBlock("");
@@ -703,23 +699,6 @@ export default class LevelModel {
     }
 
     return block;
-  }
-
-  getInventoryType(blockType) {
-    switch (blockType) {
-      case "sheep":
-        return "wool";
-      case "stone":
-        return "cobblestone";
-      case "treeAcacia":
-      case "treeBirch":
-      case "treeJungle":
-      case "treeOak":
-      case "treeSpruce":
-        return "planks" + blockType.substring(4);
-      default:
-        return blockType;
-    }
   }
 
   solveFOWTypeForMap() {

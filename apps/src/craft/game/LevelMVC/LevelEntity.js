@@ -86,6 +86,22 @@ export default class LevelEntity {
         var width = levelModel.planeWidth;
         var height = levelModel.planeHeight;
         if (spawnDirection === "middle") {
+            var isSpawable = false;
+            for(var i = 1 ; i < width -1 ; i++)
+            {
+                for(var j = 1; j < height -1 ; j++)
+                {
+                    if(levelModel.isPositionEmpty([i,j])[0])
+                    {
+                        isSpawable = true;
+                        break;
+                    }
+                }
+                if(isSpawable === true)
+                    break;
+            }
+            if(!isSpawable)
+                return null;
             var position = [getRandomInt(1, width - 2), getRandomInt(1, height - 2)];
             while (!levelModel.isPositionEmpty(position)[0]) {
                 position = [getRandomInt(1, width - 2), getRandomInt(1, height - 2)];
@@ -181,8 +197,10 @@ export default class LevelEntity {
 
     destroyEntity(identifier) {
         if (this.entityMap.has(identifier)) {
-            this.entityMap.get(identifier).sprite.animations.stop(null, true);
-            this.entityMap.get(identifier).sprite.destroy();
+            var entity = this.entityMap.get(identifier);
+            entity.reset();
+            entity.sprite.animations.stop(null, true);
+            entity.sprite.destroy();
             this.entityMap.delete(identifier);
         } else if (this.controller.DEBUG) {
             this.game.debug.text("It's impossible to delete since entity name : " + identifier + " is not existing\n");

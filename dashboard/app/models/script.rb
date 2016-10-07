@@ -7,7 +7,6 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  wrapup_video_id :integer
-#  trophies        :boolean          default(FALSE), not null
 #  hidden          :boolean          default(FALSE), not null
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null

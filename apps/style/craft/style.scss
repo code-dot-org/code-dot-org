@@ -16,6 +16,31 @@ $callout-fallback-border-color: $very-dark-gray;
 
 $original-background-color: #F2F2F2;
 
+.arrow {
+  display: inline !important;
+}
+
+.left-btn {
+  background-position: -21px -42px;
+  margin-right: 3px;
+}
+.right-btn {
+  background-position: -42px -21px;
+  margin-right: 3px;
+}
+.up-btn {
+  background-position: 0px -63px;
+  margin-right: 3px;
+}
+.down-btn {
+  background-position: 0px -42px;
+  margin-right: 3px;
+}
+.action-btn {
+  background-position: 43px -673px;
+  margin-right: 3px;
+}
+
 @mixin mc-text-shadow {
   text-shadow: 2px 2px #565656 !important;
 }

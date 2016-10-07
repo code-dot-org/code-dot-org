@@ -94,7 +94,7 @@ export default class Player extends BaseEntity {
       } else {
         let collectiblePosition = this.controller.levelModel.spritePositionToIndex(collectibles[i][1], [sprite.x, sprite.y]);
         if (distanceBetween(targetPosition, collectiblePosition) < 2) {
-          this.controller.levelView.playItemAcquireAnimation(this.position, this.facing, sprite, () => { });
+          this.controller.levelView.playItemAcquireAnimation(this.position, this.facing, sprite, () => { }, collectibles[i][2]);
           collectibles.splice(i, 1);
         }
       }

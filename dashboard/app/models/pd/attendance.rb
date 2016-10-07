@@ -7,10 +7,11 @@
 #  teacher_id    :integer          not null
 #  created_at    :datetime
 #  updated_at    :datetime
+#  deleted_at    :datetime
 #
 # Indexes
 #
-#  index_pd_attendances_on_pd_session_id  (pd_session_id)
+#  index_pd_attendances_on_pd_session_id_and_teacher_id  (pd_session_id,teacher_id) UNIQUE
 #
 
 class Pd::Attendance < ActiveRecord::Base

@@ -38,6 +38,7 @@ export function get(controller) {
 
       controller.setPlayerActionDelayByQueueLength();
       controller.queue.begin();
+      controller.dispatchSpawnEventAtStart();
     },
 
     resetAttempt: function () {
@@ -63,7 +64,6 @@ export function get(controller) {
      */
 
     registerEventCallback(highlightCallback, codeBlockCallback) {
-      console.log("pushing")
       // TODO(bjordan): maybe need to also handle top-level event block highlighting
       controller.events.push(codeBlockCallback);
 
@@ -195,6 +195,12 @@ export function get(controller) {
     repeat: function (highlightCallback, codeBlock, iteration, targetEntity) {
       controller.addCommand(new RepeatCommand(controller, highlightCallback, codeBlock, iteration, targetEntity));
     },
+    // -1 for infinite repeat
+    repeatRandom: function (highlightCallback, codeBlock, targetEntity) {
+      var maxIteration = 10;
+      var randomIteration = Math.floor(Math.random() * maxIteration) + 1;
+      controller.addCommand(new RepeatCommand(controller, highlightCallback, codeBlock, randomIteration, targetEntity));
+    },
 
     getScreenshot: function () {
       return controller.getScreenshot();
@@ -217,7 +223,7 @@ export function get(controller) {
       var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.destroyEntity(callbackCommand, targetEntity);
       });
-      controller.addCommand(callbackCommand);
+      controller.addGlobalCommand(callbackCommand);
     },
 
     drop: function (highlightCallback, itemType, targetEntity) {
@@ -253,6 +259,13 @@ export function get(controller) {
         controller.attack(callbackCommand)
       }, targetEntity);
       controller.addCommand(callbackCommand);
+    },
+
+    setDayNightCycle: function (delayInSecond, startTime) {
+      if (!controller.dayNightCycle) {
+        controller.dayNightCycle = true;
+        controller.setDayNightCycle(delayInSecond, startTime);
+      }
     }
   };
 }

@@ -15,7 +15,7 @@ export default class Creeper extends BaseEntity {
         let getRandomSecondBetween = function (min, max) {
             return (Math.random() * (max - min) + min) * 1000;
         }
-        let frameRate = 12, pauseFrame = 30, randomPauseMin = 0.2, randomPauseMax = 1;
+        let frameRate = 10, pauseFrame = 30, randomPauseMin = 0.2, randomPauseMax = 1;
         let actionPlane = this.controller.levelView.actionPlane;
         var frameList = [];
         var frameName = "ShadowCreeper_2016_"
@@ -31,7 +31,7 @@ export default class Creeper extends BaseEntity {
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 3);
-            for (var j = 0; j < 6; j++)
+            for (var j = 0; j < 12; j++)
                 frameList.push(frameList[0]);
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
@@ -78,6 +78,11 @@ export default class Creeper extends BaseEntity {
             // look down
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][4][0], frameListPerDirection[i][4][1], ".png", 3);
             this.sprite.animations.add("lookDown" + facingName, frameList, frameRate, false).onComplete.add(() => {
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookDown_2" + this.controller.levelView.getDirectionName(this.facing));
+            });
+
+            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][4][1], frameListPerDirection[i][4][0], ".png", 3);
+            this.sprite.animations.add("lookDown_2" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // walk
@@ -92,7 +97,7 @@ export default class Creeper extends BaseEntity {
             });
             // take damage
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][7][0], frameListPerDirection[i][7][1], ".png", 3);
-            this.sprite.animations.add("takeDamage" + facingName, frameList, frameRate, false).onComplete.add(() => {
+            this.sprite.animations.add("hurt" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });
             // die

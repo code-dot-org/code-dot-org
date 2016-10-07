@@ -418,7 +418,7 @@
 },
 "Cow0052.png":
 {
-	"frame": {"x":957,"y":91,"w":57,"h":78},
+	"frame": {"x":759,"y":227,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -426,7 +426,7 @@
 },
 "Cow0053.png":
 {
-	"frame": {"x":759,"y":227,"w":57,"h":78},
+	"frame": {"x":898,"y":146,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -434,7 +434,7 @@
 },
 "Cow0054.png":
 {
-	"frame": {"x":898,"y":146,"w":57,"h":78},
+	"frame": {"x":759,"y":307,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -442,7 +442,7 @@
 },
 "Cow0055.png":
 {
-	"frame": {"x":957,"y":171,"w":57,"h":78},
+	"frame": {"x":898,"y":226,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -450,7 +450,7 @@
 },
 "Cow0056.png":
 {
-	"frame": {"x":759,"y":307,"w":57,"h":78},
+	"frame": {"x":759,"y":387,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -458,7 +458,7 @@
 },
 "Cow0057.png":
 {
-	"frame": {"x":898,"y":226,"w":57,"h":78},
+	"frame": {"x":898,"y":306,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -466,7 +466,7 @@
 },
 "Cow0058.png":
 {
-	"frame": {"x":957,"y":251,"w":57,"h":78},
+	"frame": {"x":759,"y":467,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -474,7 +474,7 @@
 },
 "Cow0059.png":
 {
-	"frame": {"x":898,"y":306,"w":57,"h":78},
+	"frame": {"x":898,"y":386,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -482,7 +482,7 @@
 },
 "Cow0060.png":
 {
-	"frame": {"x":957,"y":331,"w":57,"h":78},
+	"frame": {"x":759,"y":547,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -506,7 +506,7 @@
 },
 "Cow0063.png":
 {
-	"frame": {"x":759,"y":387,"w":57,"h":78},
+	"frame": {"x":898,"y":466,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -514,7 +514,7 @@
 },
 "Cow0064.png":
 {
-	"frame": {"x":898,"y":386,"w":57,"h":78},
+	"frame": {"x":759,"y":627,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -522,7 +522,7 @@
 },
 "Cow0065.png":
 {
-	"frame": {"x":957,"y":411,"w":57,"h":78},
+	"frame": {"x":898,"y":546,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -530,7 +530,7 @@
 },
 "Cow0066.png":
 {
-	"frame": {"x":898,"y":386,"w":57,"h":78},
+	"frame": {"x":759,"y":627,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -538,7 +538,7 @@
 },
 "Cow0067.png":
 {
-	"frame": {"x":759,"y":387,"w":57,"h":78},
+	"frame": {"x":898,"y":466,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -554,7 +554,7 @@
 },
 "Cow0069.png":
 {
-	"frame": {"x":759,"y":467,"w":57,"h":78},
+	"frame": {"x":759,"y":707,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -562,7 +562,7 @@
 },
 "Cow0070.png":
 {
-	"frame": {"x":759,"y":547,"w":57,"h":78},
+	"frame": {"x":818,"y":696,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -570,7 +570,7 @@
 },
 "Cow0071.png":
 {
-	"frame": {"x":898,"y":466,"w":57,"h":78},
+	"frame": {"x":898,"y":626,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -578,7 +578,7 @@
 },
 "Cow0072.png":
 {
-	"frame": {"x":759,"y":547,"w":57,"h":78},
+	"frame": {"x":759,"y":787,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -586,7 +586,7 @@
 },
 "Cow0073.png":
 {
-	"frame": {"x":957,"y":491,"w":57,"h":78},
+	"frame": {"x":818,"y":776,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -594,7 +594,7 @@
 },
 "Cow0074.png":
 {
-	"frame": {"x":759,"y":627,"w":57,"h":78},
+	"frame": {"x":877,"y":765,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -602,7 +602,7 @@
 },
 "Cow0075.png":
 {
-	"frame": {"x":898,"y":546,"w":57,"h":78},
+	"frame": {"x":936,"y":765,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -610,7 +610,7 @@
 },
 "Cow0076.png":
 {
-	"frame": {"x":957,"y":571,"w":57,"h":78},
+	"frame": {"x":262,"y":1097,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -618,7 +618,7 @@
 },
 "Cow0077.png":
 {
-	"frame": {"x":898,"y":626,"w":57,"h":78},
+	"frame": {"x":259,"y":1177,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -626,7 +626,7 @@
 },
 "Cow0078.png":
 {
-	"frame": {"x":957,"y":571,"w":57,"h":78},
+	"frame": {"x":262,"y":1097,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -634,7 +634,7 @@
 },
 "Cow0079.png":
 {
-	"frame": {"x":957,"y":651,"w":57,"h":78},
+	"frame": {"x":258,"y":1257,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -642,7 +642,7 @@
 },
 "Cow0080.png":
 {
-	"frame": {"x":759,"y":707,"w":57,"h":78},
+	"frame": {"x":258,"y":1337,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -650,7 +650,7 @@
 },
 "Cow0081.png":
 {
-	"frame": {"x":262,"y":1097,"w":56,"h":78},
+	"frame": {"x":321,"y":1095,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -658,7 +658,7 @@
 },
 "Cow0082.png":
 {
-	"frame": {"x":947,"y":1131,"w":24,"h":51},
+	"frame": {"x":788,"y":1328,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":45,"w":24,"h":51},
@@ -666,7 +666,7 @@
 },
 "Cow0083.png":
 {
-	"frame": {"x":891,"y":1265,"w":24,"h":53},
+	"frame": {"x":755,"y":1392,"w":24,"h":53},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":44,"w":24,"h":53},
@@ -674,7 +674,7 @@
 },
 "Cow0084.png":
 {
-	"frame": {"x":987,"y":1228,"w":24,"h":51},
+	"frame": {"x":967,"y":1386,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":43,"w":24,"h":51},
@@ -682,7 +682,7 @@
 },
 "Cow0085.png":
 {
-	"frame": {"x":731,"y":1187,"w":24,"h":49},
+	"frame": {"x":781,"y":1436,"w":24,"h":49},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":42,"w":24,"h":49},
@@ -690,7 +690,7 @@
 },
 "Cow0086.png":
 {
-	"frame": {"x":901,"y":1565,"w":24,"h":48},
+	"frame": {"x":517,"y":1572,"w":24,"h":48},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":41,"w":24,"h":48},
@@ -698,7 +698,7 @@
 },
 "Cow0087.png":
 {
-	"frame": {"x":757,"y":1187,"w":24,"h":49},
+	"frame": {"x":755,"y":1447,"w":24,"h":49},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":42,"w":24,"h":49},
@@ -706,7 +706,7 @@
 },
 "Cow0088.png":
 {
-	"frame": {"x":927,"y":1565,"w":24,"h":51},
+	"frame": {"x":719,"y":1569,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":43,"w":24,"h":51},
@@ -714,7 +714,7 @@
 },
 "Cow0089.png":
 {
-	"frame": {"x":953,"y":1506,"w":24,"h":53},
+	"frame": {"x":781,"y":1381,"w":24,"h":53},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":44,"w":24,"h":53},
@@ -722,7 +722,7 @@
 },
 "Cow0090.png":
 {
-	"frame": {"x":941,"y":1327,"w":24,"h":51},
+	"frame": {"x":745,"y":1569,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":45,"w":24,"h":51},
@@ -730,7 +730,7 @@
 },
 "Cow0091.png":
 {
-	"frame": {"x":320,"y":1095,"w":56,"h":78},
+	"frame": {"x":957,"y":845,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -738,7 +738,7 @@
 },
 "Cow0092.png":
 {
-	"frame": {"x":898,"y":706,"w":57,"h":78},
+	"frame": {"x":258,"y":1417,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -746,7 +746,7 @@
 },
 "Cow0093.png":
 {
-	"frame": {"x":498,"y":998,"w":56,"h":78},
+	"frame": {"x":957,"y":66,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -754,7 +754,7 @@
 },
 "Cow0094.png":
 {
-	"frame": {"x":967,"y":1281,"w":24,"h":51},
+	"frame": {"x":771,"y":1569,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":45,"w":24,"h":51},
@@ -762,7 +762,7 @@
 },
 "Cow0095.png":
 {
-	"frame": {"x":953,"y":1561,"w":24,"h":53},
+	"frame": {"x":993,"y":1363,"w":24,"h":53},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":44,"w":24,"h":53},
@@ -770,7 +770,7 @@
 },
 "Cow0096.png":
 {
-	"frame": {"x":967,"y":1334,"w":24,"h":51},
+	"frame": {"x":797,"y":1569,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":43,"w":24,"h":51},
@@ -778,7 +778,7 @@
 },
 "Cow0097.png":
 {
-	"frame": {"x":964,"y":1440,"w":24,"h":49},
+	"frame": {"x":947,"y":1548,"w":24,"h":49},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":42,"w":24,"h":49},
@@ -786,7 +786,7 @@
 },
 "Cow0098.png":
 {
-	"frame": {"x":979,"y":1491,"w":24,"h":48},
+	"frame": {"x":543,"y":1572,"w":24,"h":48},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":41,"w":24,"h":48},
@@ -794,7 +794,7 @@
 },
 "Cow0099.png":
 {
-	"frame": {"x":990,"y":1440,"w":24,"h":49},
+	"frame": {"x":973,"y":1571,"w":24,"h":49},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":42,"w":24,"h":49},
@@ -802,7 +802,7 @@
 },
 "Cow0100.png":
 {
-	"frame": {"x":964,"y":1387,"w":24,"h":51},
+	"frame": {"x":823,"y":1569,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":43,"w":24,"h":51},
@@ -810,7 +810,7 @@
 },
 "Cow0101.png":
 {
-	"frame": {"x":941,"y":1272,"w":24,"h":53},
+	"frame": {"x":616,"y":974,"w":24,"h":53},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":44,"w":24,"h":53},
@@ -818,7 +818,7 @@
 },
 "Cow0102.png":
 {
-	"frame": {"x":990,"y":1387,"w":24,"h":51},
+	"frame": {"x":642,"y":972,"w":24,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":45,"w":24,"h":51},
@@ -826,7 +826,7 @@
 },
 "Cow0103.png":
 {
-	"frame": {"x":501,"y":918,"w":56,"h":78},
+	"frame": {"x":957,"y":146,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -834,7 +834,7 @@
 },
 "Cow0104.png":
 {
-	"frame": {"x":759,"y":707,"w":57,"h":78},
+	"frame": {"x":258,"y":1337,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -842,7 +842,7 @@
 },
 "Cow0105.png":
 {
-	"frame": {"x":957,"y":731,"w":57,"h":78},
+	"frame": {"x":258,"y":1497,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":38,"y":36,"w":57,"h":78},
@@ -850,7 +850,7 @@
 },
 "Cow0106.png":
 {
-	"frame": {"x":759,"y":787,"w":57,"h":78},
+	"frame": {"x":379,"y":1092,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":40,"y":36,"w":57,"h":78},
@@ -858,7 +858,7 @@
 },
 "Cow0107.png":
 {
-	"frame": {"x":898,"y":786,"w":57,"h":78},
+	"frame": {"x":818,"y":856,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":42,"y":36,"w":57,"h":78},
@@ -866,7 +866,7 @@
 },
 "Cow0108.png":
 {
-	"frame": {"x":957,"y":811,"w":57,"h":78},
+	"frame": {"x":759,"y":867,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":43,"y":36,"w":57,"h":78},
@@ -874,7 +874,7 @@
 },
 "Cow0109.png":
 {
-	"frame": {"x":259,"y":1177,"w":57,"h":78},
+	"frame": {"x":877,"y":904,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":45,"y":36,"w":57,"h":78},
@@ -882,7 +882,7 @@
 },
 "Cow0110.png":
 {
-	"frame": {"x":258,"y":1257,"w":57,"h":78},
+	"frame": {"x":818,"y":936,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":47,"y":36,"w":57,"h":78},
@@ -1546,7 +1546,7 @@
 },
 "Cow0193.png":
 {
-	"frame": {"x":199,"y":1577,"w":49,"h":42},
+	"frame": {"x":814,"y":1301,"w":49,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":44,"y":45,"w":49,"h":42},
@@ -1554,7 +1554,7 @@
 },
 "Cow0194.png":
 {
-	"frame": {"x":454,"y":1575,"w":51,"h":43},
+	"frame": {"x":199,"y":1577,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":42,"y":43,"w":51,"h":43},
@@ -1562,7 +1562,7 @@
 },
 "Cow0195.png":
 {
-	"frame": {"x":965,"y":1,"w":49,"h":43},
+	"frame": {"x":730,"y":1347,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":44,"y":42,"w":49,"h":43},
@@ -1570,7 +1570,7 @@
 },
 "Cow0196.png":
 {
-	"frame": {"x":507,"y":1572,"w":46,"h":43},
+	"frame": {"x":569,"y":1572,"w":46,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":47,"y":41,"w":46,"h":43},
@@ -1578,7 +1578,7 @@
 },
 "Cow0197.png":
 {
-	"frame": {"x":945,"y":1184,"w":46,"h":42},
+	"frame": {"x":754,"y":1498,"w":46,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":47,"y":40,"w":46,"h":42},
@@ -1586,7 +1586,7 @@
 },
 "Cow0198.png":
 {
-	"frame": {"x":839,"y":1337,"w":46,"h":43},
+	"frame": {"x":851,"y":1525,"w":46,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":47,"y":41,"w":46,"h":43},
@@ -1594,7 +1594,7 @@
 },
 "Cow0199.png":
 {
-	"frame": {"x":965,"y":46,"w":49,"h":43},
+	"frame": {"x":617,"y":1558,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":44,"y":42,"w":49,"h":43},
@@ -1602,7 +1602,7 @@
 },
 "Cow0200.png":
 {
-	"frame": {"x":555,"y":1572,"w":51,"h":43},
+	"frame": {"x":252,"y":1577,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":42,"y":43,"w":51,"h":43},
@@ -1610,7 +1610,7 @@
 },
 "Cow0201.png":
 {
-	"frame": {"x":250,"y":1577,"w":49,"h":42},
+	"frame": {"x":865,"y":1304,"w":49,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":44,"y":45,"w":49,"h":42},
@@ -1642,7 +1642,7 @@
 },
 "Cow0205.png":
 {
-	"frame": {"x":789,"y":1337,"w":48,"h":42},
+	"frame": {"x":909,"y":1459,"w":48,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":45,"y":45,"w":48,"h":42},
@@ -1650,7 +1650,7 @@
 },
 "Cow0206.png":
 {
-	"frame": {"x":612,"y":1558,"w":51,"h":43},
+	"frame": {"x":965,"y":1,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":42,"y":43,"w":51,"h":43},
@@ -1658,7 +1658,7 @@
 },
 "Cow0207.png":
 {
-	"frame": {"x":843,"y":1158,"w":49,"h":43},
+	"frame": {"x":668,"y":1558,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":44,"y":42,"w":49,"h":43},
@@ -1666,7 +1666,7 @@
 },
 "Cow0208.png":
 {
-	"frame": {"x":838,"y":1382,"w":46,"h":43},
+	"frame": {"x":899,"y":1548,"w":46,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":47,"y":41,"w":46,"h":43},
@@ -1674,7 +1674,7 @@
 },
 "Cow0209.png":
 {
-	"frame": {"x":838,"y":1472,"w":46,"h":42},
+	"frame": {"x":973,"y":1439,"w":46,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":47,"y":40,"w":46,"h":42},
@@ -1682,7 +1682,7 @@
 },
 "Cow0210.png":
 {
-	"frame": {"x":838,"y":1427,"w":46,"h":43},
+	"frame": {"x":849,"y":1570,"w":46,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":47,"y":41,"w":46,"h":43},
@@ -1690,7 +1690,7 @@
 },
 "Cow0211.png":
 {
-	"frame": {"x":896,"y":1131,"w":49,"h":43},
+	"frame": {"x":814,"y":1256,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":44,"y":42,"w":49,"h":43},
@@ -1698,7 +1698,7 @@
 },
 "Cow0212.png":
 {
-	"frame": {"x":665,"y":1558,"w":51,"h":43},
+	"frame": {"x":305,"y":1577,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":42,"y":43,"w":51,"h":43},
@@ -1706,7 +1706,7 @@
 },
 "Cow0213.png":
 {
-	"frame": {"x":301,"y":1577,"w":49,"h":42},
+	"frame": {"x":814,"y":1345,"w":49,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":44,"y":45,"w":49,"h":42},
@@ -1778,7 +1778,7 @@
 },
 "Cow0222.png":
 {
-	"frame": {"x":258,"y":1337,"w":57,"h":78},
+	"frame": {"x":759,"y":947,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1786,7 +1786,7 @@
 },
 "Cow0223.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1794,7 +1794,7 @@
 },
 "Cow0224.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1802,7 +1802,7 @@
 },
 "Cow0225.png":
 {
-	"frame": {"x":258,"y":1497,"w":57,"h":78},
+	"frame": {"x":877,"y":984,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1834,7 +1834,7 @@
 },
 "Cow0229.png":
 {
-	"frame": {"x":258,"y":1497,"w":57,"h":78},
+	"frame": {"x":877,"y":984,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1842,7 +1842,7 @@
 },
 "Cow0230.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1850,7 +1850,7 @@
 },
 "Cow0231.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1858,7 +1858,7 @@
 },
 "Cow0232.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1866,7 +1866,7 @@
 },
 "Cow0233.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1874,7 +1874,7 @@
 },
 "Cow0234.png":
 {
-	"frame": {"x":378,"y":1092,"w":57,"h":78},
+	"frame": {"x":818,"y":1016,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1906,7 +1906,7 @@
 },
 "Cow0238.png":
 {
-	"frame": {"x":378,"y":1092,"w":57,"h":78},
+	"frame": {"x":818,"y":1016,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1914,7 +1914,7 @@
 },
 "Cow0239.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1922,7 +1922,7 @@
 },
 "Cow0240.png":
 {
-	"frame": {"x":898,"y":866,"w":57,"h":78},
+	"frame": {"x":936,"y":1005,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1930,7 +1930,7 @@
 },
 "Cow0241.png":
 {
-	"frame": {"x":957,"y":891,"w":57,"h":78},
+	"frame": {"x":877,"y":1064,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1938,7 +1938,7 @@
 },
 "Cow0242.png":
 {
-	"frame": {"x":759,"y":867,"w":57,"h":78},
+	"frame": {"x":936,"y":1085,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1946,7 +1946,7 @@
 },
 "Cow0243.png":
 {
-	"frame": {"x":818,"y":873,"w":57,"h":78},
+	"frame": {"x":957,"y":226,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1954,7 +1954,7 @@
 },
 "Cow0244.png":
 {
-	"frame": {"x":559,"y":894,"w":57,"h":78},
+	"frame": {"x":957,"y":306,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1962,7 +1962,7 @@
 },
 "Cow0245.png":
 {
-	"frame": {"x":618,"y":892,"w":57,"h":78},
+	"frame": {"x":957,"y":386,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1970,7 +1970,7 @@
 },
 "Cow0246.png":
 {
-	"frame": {"x":556,"y":998,"w":57,"h":78},
+	"frame": {"x":957,"y":466,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1978,7 +1978,7 @@
 },
 "Cow0247.png":
 {
-	"frame": {"x":437,"y":1092,"w":57,"h":78},
+	"frame": {"x":957,"y":546,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1986,7 +1986,7 @@
 },
 "Cow0248.png":
 {
-	"frame": {"x":496,"y":1078,"w":57,"h":78},
+	"frame": {"x":957,"y":626,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -1994,7 +1994,7 @@
 },
 "Cow0249.png":
 {
-	"frame": {"x":555,"y":1078,"w":57,"h":78},
+	"frame": {"x":318,"y":1177,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2002,7 +2002,7 @@
 },
 "Cow0250.png":
 {
-	"frame": {"x":318,"y":1177,"w":57,"h":78},
+	"frame": {"x":317,"y":1257,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2010,7 +2010,7 @@
 },
 "Cow0251.png":
 {
-	"frame": {"x":317,"y":1257,"w":57,"h":78},
+	"frame": {"x":317,"y":1337,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2018,7 +2018,7 @@
 },
 "Cow0252.png":
 {
-	"frame": {"x":317,"y":1337,"w":57,"h":78},
+	"frame": {"x":317,"y":1417,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2026,7 +2026,7 @@
 },
 "Cow0253.png":
 {
-	"frame": {"x":317,"y":1417,"w":57,"h":78},
+	"frame": {"x":317,"y":1497,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2034,7 +2034,7 @@
 },
 "Cow0254.png":
 {
-	"frame": {"x":317,"y":1497,"w":57,"h":78},
+	"frame": {"x":498,"y":998,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2042,7 +2042,7 @@
 },
 "Cow0255.png":
 {
-	"frame": {"x":677,"y":892,"w":57,"h":78},
+	"frame": {"x":501,"y":918,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2050,7 +2050,7 @@
 },
 "Cow0256.png":
 {
-	"frame": {"x":614,"y":1078,"w":57,"h":78},
+	"frame": {"x":560,"y":894,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2058,7 +2058,7 @@
 },
 "Cow0257.png":
 {
-	"frame": {"x":376,"y":1257,"w":57,"h":78},
+	"frame": {"x":619,"y":892,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2066,7 +2066,7 @@
 },
 "Cow0258.png":
 {
-	"frame": {"x":376,"y":1337,"w":57,"h":78},
+	"frame": {"x":557,"y":998,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2074,7 +2074,7 @@
 },
 "Cow0259.png":
 {
-	"frame": {"x":376,"y":1417,"w":57,"h":78},
+	"frame": {"x":438,"y":1092,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2082,7 +2082,7 @@
 },
 "Cow0260.png":
 {
-	"frame": {"x":376,"y":1497,"w":57,"h":78},
+	"frame": {"x":497,"y":1078,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2090,7 +2090,7 @@
 },
 "Cow0261.png":
 {
-	"frame": {"x":377,"y":1175,"w":57,"h":78},
+	"frame": {"x":556,"y":1078,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2098,7 +2098,7 @@
 },
 "Cow0262.png":
 {
-	"frame": {"x":436,"y":1172,"w":57,"h":78},
+	"frame": {"x":376,"y":1257,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2106,7 +2106,7 @@
 },
 "Cow0263.png":
 {
-	"frame": {"x":495,"y":1172,"w":57,"h":78},
+	"frame": {"x":376,"y":1337,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2114,7 +2114,7 @@
 },
 "Cow0264.png":
 {
-	"frame": {"x":554,"y":1158,"w":57,"h":78},
+	"frame": {"x":376,"y":1417,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2122,7 +2122,7 @@
 },
 "Cow0265.png":
 {
-	"frame": {"x":613,"y":1158,"w":57,"h":78},
+	"frame": {"x":376,"y":1497,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2130,7 +2130,7 @@
 },
 "Cow0266.png":
 {
-	"frame": {"x":672,"y":1158,"w":57,"h":78},
+	"frame": {"x":377,"y":1177,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2138,7 +2138,7 @@
 },
 "Cow0267.png":
 {
-	"frame": {"x":435,"y":1255,"w":57,"h":78},
+	"frame": {"x":436,"y":1172,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2146,7 +2146,7 @@
 },
 "Cow0268.png":
 {
-	"frame": {"x":435,"y":1335,"w":57,"h":78},
+	"frame": {"x":495,"y":1172,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2154,7 +2154,7 @@
 },
 "Cow0269.png":
 {
-	"frame": {"x":435,"y":1415,"w":57,"h":78},
+	"frame": {"x":554,"y":1158,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2162,7 +2162,7 @@
 },
 "Cow0270.png":
 {
-	"frame": {"x":435,"y":1495,"w":57,"h":78},
+	"frame": {"x":613,"y":1158,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2170,7 +2170,7 @@
 },
 "Cow0271.png":
 {
-	"frame": {"x":494,"y":1252,"w":57,"h":78},
+	"frame": {"x":615,"y":1078,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2178,7 +2178,7 @@
 },
 "Cow0272.png":
 {
-	"frame": {"x":494,"y":1332,"w":57,"h":78},
+	"frame": {"x":672,"y":1158,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2186,7 +2186,7 @@
 },
 "Cow0273.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2194,7 +2194,7 @@
 },
 "Cow0274.png":
 {
-	"frame": {"x":376,"y":1257,"w":57,"h":78},
+	"frame": {"x":619,"y":892,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2202,7 +2202,7 @@
 },
 "Cow0275.png":
 {
-	"frame": {"x":494,"y":1412,"w":57,"h":78},
+	"frame": {"x":700,"y":949,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2210,7 +2210,7 @@
 },
 "Cow0276.png":
 {
-	"frame": {"x":494,"y":1492,"w":57,"h":78},
+	"frame": {"x":759,"y":1027,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2218,7 +2218,7 @@
 },
 "Cow0277.png":
 {
-	"frame": {"x":553,"y":1252,"w":57,"h":78},
+	"frame": {"x":700,"y":1029,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2226,7 +2226,7 @@
 },
 "Cow0278.png":
 {
-	"frame": {"x":553,"y":1332,"w":57,"h":78},
+	"frame": {"x":818,"y":1096,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2234,7 +2234,7 @@
 },
 "Cow0279.png":
 {
-	"frame": {"x":553,"y":1412,"w":57,"h":78},
+	"frame": {"x":759,"y":1107,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2242,7 +2242,7 @@
 },
 "Cow0280.png":
 {
-	"frame": {"x":553,"y":1492,"w":57,"h":78},
+	"frame": {"x":877,"y":1144,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2250,7 +2250,7 @@
 },
 "Cow0281.png":
 {
-	"frame": {"x":612,"y":1238,"w":57,"h":78},
+	"frame": {"x":936,"y":1165,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2258,7 +2258,7 @@
 },
 "Cow0282.png":
 {
-	"frame": {"x":612,"y":1318,"w":57,"h":78},
+	"frame": {"x":818,"y":1176,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2266,7 +2266,7 @@
 },
 "Cow0283.png":
 {
-	"frame": {"x":671,"y":1238,"w":57,"h":78},
+	"frame": {"x":877,"y":1224,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2274,7 +2274,7 @@
 },
 "Cow0284.png":
 {
-	"frame": {"x":612,"y":1398,"w":57,"h":78},
+	"frame": {"x":936,"y":1245,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2282,7 +2282,7 @@
 },
 "Cow0285.png":
 {
-	"frame": {"x":671,"y":1318,"w":57,"h":78},
+	"frame": {"x":731,"y":1187,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2290,7 +2290,7 @@
 },
 "Cow0286.png":
 {
-	"frame": {"x":612,"y":1478,"w":57,"h":78},
+	"frame": {"x":435,"y":1257,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2306,7 +2306,7 @@
 },
 "Cow0288.png":
 {
-	"frame": {"x":612,"y":1478,"w":57,"h":78},
+	"frame": {"x":435,"y":1257,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2314,7 +2314,7 @@
 },
 "Cow0289.png":
 {
-	"frame": {"x":671,"y":1318,"w":57,"h":78},
+	"frame": {"x":731,"y":1187,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2322,7 +2322,7 @@
 },
 "Cow0290.png":
 {
-	"frame": {"x":612,"y":1398,"w":57,"h":78},
+	"frame": {"x":936,"y":1245,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2330,7 +2330,7 @@
 },
 "Cow0291.png":
 {
-	"frame": {"x":671,"y":1398,"w":57,"h":78},
+	"frame": {"x":435,"y":1337,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2338,7 +2338,7 @@
 },
 "Cow0292.png":
 {
-	"frame": {"x":671,"y":1478,"w":57,"h":78},
+	"frame": {"x":435,"y":1417,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2346,7 +2346,7 @@
 },
 "Cow0293.png":
 {
-	"frame": {"x":730,"y":1238,"w":57,"h":78},
+	"frame": {"x":435,"y":1497,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2354,7 +2354,7 @@
 },
 "Cow0294.png":
 {
-	"frame": {"x":671,"y":1478,"w":57,"h":78},
+	"frame": {"x":435,"y":1417,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2362,7 +2362,7 @@
 },
 "Cow0295.png":
 {
-	"frame": {"x":730,"y":1318,"w":57,"h":78},
+	"frame": {"x":494,"y":1252,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2370,7 +2370,7 @@
 },
 "Cow0296.png":
 {
-	"frame": {"x":730,"y":1398,"w":57,"h":78},
+	"frame": {"x":494,"y":1332,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2378,7 +2378,7 @@
 },
 "Cow0297.png":
 {
-	"frame": {"x":730,"y":1478,"w":57,"h":78},
+	"frame": {"x":494,"y":1412,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2386,7 +2386,7 @@
 },
 "Cow0298.png":
 {
-	"frame": {"x":618,"y":972,"w":57,"h":78},
+	"frame": {"x":494,"y":1492,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2394,7 +2394,7 @@
 },
 "Cow0299.png":
 {
-	"frame": {"x":677,"y":972,"w":57,"h":78},
+	"frame": {"x":553,"y":1252,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2402,7 +2402,7 @@
 },
 "Cow0300.png":
 {
-	"frame": {"x":618,"y":972,"w":57,"h":78},
+	"frame": {"x":494,"y":1492,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2410,7 +2410,7 @@
 },
 "Cow0301.png":
 {
-	"frame": {"x":736,"y":947,"w":57,"h":78},
+	"frame": {"x":553,"y":1332,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2418,7 +2418,7 @@
 },
 "Cow0302.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2426,7 +2426,7 @@
 },
 "Cow0303.png":
 {
-	"frame": {"x":854,"y":953,"w":56,"h":78},
+	"frame": {"x":612,"y":1478,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -2434,7 +2434,7 @@
 },
 "Cow0304.png":
 {
-	"frame": {"x":886,"y":1382,"w":24,"h":60},
+	"frame": {"x":995,"y":765,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":35,"w":24,"h":60},
@@ -2442,7 +2442,7 @@
 },
 "Cow0305.png":
 {
-	"frame": {"x":771,"y":1558,"w":24,"h":61},
+	"frame": {"x":995,"y":925,"w":24,"h":61},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":34,"w":24,"h":61},
@@ -2450,7 +2450,7 @@
 },
 "Cow0306.png":
 {
-	"frame": {"x":886,"y":1444,"w":24,"h":60},
+	"frame": {"x":674,"y":1096,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":33,"w":24,"h":60},
@@ -2458,7 +2458,7 @@
 },
 "Cow0307.png":
 {
-	"frame": {"x":797,"y":1516,"w":24,"h":59},
+	"frame": {"x":788,"y":1267,"w":24,"h":59},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":31,"w":24,"h":59},
@@ -2466,7 +2466,7 @@
 },
 "Cow0308.png":
 {
-	"frame": {"x":901,"y":1506,"w":24,"h":57},
+	"frame": {"x":957,"y":706,"w":24,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":30,"w":24,"h":57},
@@ -2474,7 +2474,7 @@
 },
 "Cow0309.png":
 {
-	"frame": {"x":823,"y":1516,"w":24,"h":59},
+	"frame": {"x":967,"y":1325,"w":24,"h":59},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":31,"w":24,"h":59},
@@ -2482,7 +2482,7 @@
 },
 "Cow0310.png":
 {
-	"frame": {"x":889,"y":1320,"w":24,"h":60},
+	"frame": {"x":995,"y":1177,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":33,"w":24,"h":60},
@@ -2490,7 +2490,7 @@
 },
 "Cow0311.png":
 {
-	"frame": {"x":971,"y":971,"w":24,"h":61},
+	"frame": {"x":995,"y":988,"w":24,"h":61},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":34,"w":24,"h":61},
@@ -2498,7 +2498,7 @@
 },
 "Cow0312.png":
 {
-	"frame": {"x":912,"y":1382,"w":24,"h":60},
+	"frame": {"x":995,"y":1239,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":35,"w":24,"h":60},
@@ -2506,7 +2506,7 @@
 },
 "Cow0313.png":
 {
-	"frame": {"x":854,"y":1033,"w":56,"h":78},
+	"frame": {"x":671,"y":1398,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -2514,7 +2514,7 @@
 },
 "Cow0314.png":
 {
-	"frame": {"x":673,"y":1052,"w":57,"h":78},
+	"frame": {"x":553,"y":1412,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2522,7 +2522,7 @@
 },
 "Cow0315.png":
 {
-	"frame": {"x":912,"y":1051,"w":56,"h":78},
+	"frame": {"x":670,"y":1478,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -2530,7 +2530,7 @@
 },
 "Cow0316.png":
 {
-	"frame": {"x":912,"y":1444,"w":24,"h":60},
+	"frame": {"x":995,"y":1301,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":35,"w":24,"h":60},
@@ -2538,7 +2538,7 @@
 },
 "Cow0317.png":
 {
-	"frame": {"x":970,"y":1051,"w":24,"h":61},
+	"frame": {"x":995,"y":1051,"w":24,"h":61},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":34,"w":24,"h":61},
@@ -2546,7 +2546,7 @@
 },
 "Cow0318.png":
 {
-	"frame": {"x":915,"y":1320,"w":24,"h":60},
+	"frame": {"x":790,"y":1187,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":33,"w":24,"h":60},
@@ -2554,7 +2554,7 @@
 },
 "Cow0319.png":
 {
-	"frame": {"x":849,"y":1516,"w":24,"h":59},
+	"frame": {"x":728,"y":1478,"w":24,"h":59},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":31,"w":24,"h":59},
@@ -2562,7 +2562,7 @@
 },
 "Cow0320.png":
 {
-	"frame": {"x":927,"y":1506,"w":24,"h":57},
+	"frame": {"x":983,"y":706,"w":24,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":30,"w":24,"h":57},
@@ -2570,7 +2570,7 @@
 },
 "Cow0321.png":
 {
-	"frame": {"x":875,"y":1516,"w":24,"h":59},
+	"frame": {"x":729,"y":1398,"w":24,"h":59},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":31,"w":24,"h":59},
@@ -2578,7 +2578,7 @@
 },
 "Cow0322.png":
 {
-	"frame": {"x":938,"y":1382,"w":24,"h":60},
+	"frame": {"x":674,"y":972,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":33,"w":24,"h":60},
@@ -2586,7 +2586,7 @@
 },
 "Cow0323.png":
 {
-	"frame": {"x":973,"y":1114,"w":24,"h":61},
+	"frame": {"x":995,"y":1114,"w":24,"h":61},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":34,"w":24,"h":61},
@@ -2594,7 +2594,7 @@
 },
 "Cow0324.png":
 {
-	"frame": {"x":938,"y":1444,"w":24,"h":60},
+	"frame": {"x":674,"y":1034,"w":24,"h":60},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":52,"y":35,"w":24,"h":60},
@@ -2602,7 +2602,7 @@
 },
 "Cow0325.png":
 {
-	"frame": {"x":732,"y":1107,"w":56,"h":78},
+	"frame": {"x":730,"y":1267,"w":56,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":37,"y":36,"w":56,"h":78},
@@ -2610,7 +2610,7 @@
 },
 "Cow0326.png":
 {
-	"frame": {"x":258,"y":1417,"w":57,"h":78},
+	"frame": {"x":936,"y":925,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -2618,7 +2618,7 @@
 },
 "Cow0327.png":
 {
-	"frame": {"x":795,"y":953,"w":57,"h":78},
+	"frame": {"x":553,"y":1492,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":34,"y":36,"w":57,"h":78},
@@ -2626,7 +2626,7 @@
 },
 "Cow0328.png":
 {
-	"frame": {"x":736,"y":1027,"w":57,"h":78},
+	"frame": {"x":612,"y":1238,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":33,"y":36,"w":57,"h":78},
@@ -3322,7 +3322,7 @@
 },
 "Cow0415.png":
 {
-	"frame": {"x":352,"y":1577,"w":49,"h":42},
+	"frame": {"x":865,"y":1348,"w":49,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":45,"w":49,"h":42},
@@ -3330,7 +3330,7 @@
 },
 "Cow0416.png":
 {
-	"frame": {"x":718,"y":1558,"w":51,"h":43},
+	"frame": {"x":358,"y":1577,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":43,"w":51,"h":43},
@@ -3338,7 +3338,7 @@
 },
 "Cow0417.png":
 {
-	"frame": {"x":894,"y":1176,"w":49,"h":43},
+	"frame": {"x":916,"y":1325,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":42,"w":49,"h":43},
@@ -3346,7 +3346,7 @@
 },
 "Cow0418.png":
 {
-	"frame": {"x":840,"y":1292,"w":47,"h":43},
+	"frame": {"x":807,"y":1479,"w":47,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":41,"w":47,"h":43},
@@ -3354,7 +3354,7 @@
 },
 "Cow0419.png":
 {
-	"frame": {"x":891,"y":1221,"w":46,"h":42},
+	"frame": {"x":973,"y":1483,"w":46,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":40,"w":46,"h":42},
@@ -3362,7 +3362,7 @@
 },
 "Cow0420.png":
 {
-	"frame": {"x":789,"y":1381,"w":47,"h":43},
+	"frame": {"x":856,"y":1480,"w":47,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":41,"w":47,"h":43},
@@ -3370,7 +3370,7 @@
 },
 "Cow0421.png":
 {
-	"frame": {"x":789,"y":1203,"w":49,"h":43},
+	"frame": {"x":916,"y":1370,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":42,"w":49,"h":43},
@@ -3378,7 +3378,7 @@
 },
 "Cow0422.png":
 {
-	"frame": {"x":790,"y":1113,"w":51,"h":43},
+	"frame": {"x":411,"y":1577,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":43,"w":51,"h":43},
@@ -3386,7 +3386,7 @@
 },
 "Cow0423.png":
 {
-	"frame": {"x":403,"y":1577,"w":49,"h":42},
+	"frame": {"x":858,"y":1392,"w":49,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":45,"w":49,"h":42},
@@ -3418,7 +3418,7 @@
 },
 "Cow0427.png":
 {
-	"frame": {"x":789,"y":1293,"w":49,"h":42},
+	"frame": {"x":909,"y":1415,"w":49,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":45,"w":49,"h":42},
@@ -3426,7 +3426,7 @@
 },
 "Cow0428.png":
 {
-	"frame": {"x":843,"y":1113,"w":51,"h":43},
+	"frame": {"x":700,"y":1109,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":43,"w":51,"h":43},
@@ -3434,7 +3434,7 @@
 },
 "Cow0429.png":
 {
-	"frame": {"x":840,"y":1203,"w":49,"h":43},
+	"frame": {"x":807,"y":1389,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":42,"w":49,"h":43},
@@ -3442,7 +3442,7 @@
 },
 "Cow0430.png":
 {
-	"frame": {"x":789,"y":1426,"w":47,"h":43},
+	"frame": {"x":905,"y":1503,"w":47,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":41,"w":47,"h":43},
@@ -3450,7 +3450,7 @@
 },
 "Cow0431.png":
 {
-	"frame": {"x":939,"y":1228,"w":46,"h":42},
+	"frame": {"x":973,"y":1527,"w":46,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":40,"w":46,"h":42},
@@ -3458,7 +3458,7 @@
 },
 "Cow0432.png":
 {
-	"frame": {"x":789,"y":1471,"w":47,"h":43},
+	"frame": {"x":802,"y":1524,"w":47,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":41,"w":47,"h":43},
@@ -3466,7 +3466,7 @@
 },
 "Cow0433.png":
 {
-	"frame": {"x":789,"y":1248,"w":49,"h":43},
+	"frame": {"x":807,"y":1434,"w":49,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":42,"w":49,"h":43},
@@ -3474,7 +3474,7 @@
 },
 "Cow0434.png":
 {
-	"frame": {"x":790,"y":1158,"w":51,"h":43},
+	"frame": {"x":464,"y":1577,"w":51,"h":43},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":43,"w":51,"h":43},
@@ -3482,7 +3482,7 @@
 },
 "Cow0435.png":
 {
-	"frame": {"x":840,"y":1248,"w":49,"h":42},
+	"frame": {"x":858,"y":1436,"w":49,"h":42},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":35,"y":45,"w":49,"h":42},
@@ -3506,7 +3506,7 @@
 },
 "Cow0438.png":
 {
-	"frame": {"x":818,"y":696,"w":78,"h":57},
+	"frame": {"x":877,"y":706,"w":78,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":26,"y":53,"w":78,"h":57},
@@ -3514,7 +3514,7 @@
 },
 "Cow0439.png":
 {
-	"frame": {"x":818,"y":755,"w":78,"h":57},
+	"frame": {"x":679,"y":831,"w":78,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":26,"y":53,"w":78,"h":57},
@@ -3522,7 +3522,7 @@
 },
 "Cow0440.png":
 {
-	"frame": {"x":818,"y":814,"w":78,"h":57},
+	"frame": {"x":599,"y":833,"w":78,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":26,"y":53,"w":78,"h":57},
@@ -3530,7 +3530,7 @@
 },
 "Cow0441.png":
 {
-	"frame": {"x":679,"y":831,"w":78,"h":57},
+	"frame": {"x":519,"y":835,"w":78,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":26,"y":53,"w":78,"h":57},
@@ -3538,7 +3538,7 @@
 },
 "Cow0442.png":
 {
-	"frame": {"x":599,"y":833,"w":78,"h":57},
+	"frame": {"x":877,"y":845,"w":78,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":26,"y":53,"w":78,"h":57},
@@ -3546,7 +3546,7 @@
 },
 "Cow0443.png":
 {
-	"frame": {"x":519,"y":835,"w":78,"h":57},
+	"frame": {"x":679,"y":890,"w":78,"h":57},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":26,"y":53,"w":78,"h":57},
@@ -3562,7 +3562,7 @@
 },
 "Cow0445.png":
 {
-	"frame": {"x":759,"y":467,"w":57,"h":78},
+	"frame": {"x":671,"y":1238,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":38,"w":57,"h":78},
@@ -3570,7 +3570,7 @@
 },
 "Cow0446.png":
 {
-	"frame": {"x":795,"y":1033,"w":57,"h":78},
+	"frame": {"x":612,"y":1318,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":41,"w":57,"h":78},
@@ -3578,7 +3578,7 @@
 },
 "Cow0447.png":
 {
-	"frame": {"x":759,"y":467,"w":57,"h":78},
+	"frame": {"x":671,"y":1238,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":38,"w":57,"h":78},
@@ -3586,7 +3586,7 @@
 },
 "Cow0448.png":
 {
-	"frame": {"x":912,"y":971,"w":57,"h":78},
+	"frame": {"x":612,"y":1398,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -3594,7 +3594,7 @@
 },
 "Cow0449.png":
 {
-	"frame": {"x":898,"y":546,"w":57,"h":78},
+	"frame": {"x":671,"y":1318,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":34,"w":57,"h":78},
@@ -3602,7 +3602,7 @@
 },
 "Cow0450.png":
 {
-	"frame": {"x":912,"y":971,"w":57,"h":78},
+	"frame": {"x":612,"y":1398,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -3682,7 +3682,7 @@
 },
 "Cow0460.png":
 {
-	"frame": {"x":612,"y":1398,"w":57,"h":78},
+	"frame": {"x":936,"y":1245,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -3690,7 +3690,7 @@
 },
 "Cow0461.png":
 {
-	"frame": {"x":671,"y":1398,"w":57,"h":78},
+	"frame": {"x":435,"y":1337,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":34,"w":57,"h":78},
@@ -3706,7 +3706,7 @@
 },
 "Cow0463.png":
 {
-	"frame": {"x":671,"y":1398,"w":57,"h":78},
+	"frame": {"x":435,"y":1337,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":34,"w":57,"h":78},
@@ -3722,7 +3722,7 @@
 },
 "Cow0465.png":
 {
-	"frame": {"x":730,"y":1478,"w":57,"h":78},
+	"frame": {"x":494,"y":1412,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":38,"w":57,"h":78},
@@ -3738,7 +3738,7 @@
 },
 "Cow0467.png":
 {
-	"frame": {"x":612,"y":1398,"w":57,"h":78},
+	"frame": {"x":936,"y":1245,"w":57,"h":78},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":36,"w":57,"h":78},
@@ -3813,8 +3813,8 @@
 	"version": "1.0",
 	"image": "Cow.png",
 	"format": "RGBA8888",
-	"size": {"w":1015,"h":1620},
+	"size": {"w":1020,"h":1621},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:cde8084e9fc5b3586505335de49715ed:016ef2090e584c0b295655344a70be2f:54c325015e19fa20c57ea17cffd92683$"
+	"smartupdate": "$TexturePacker:SmartUpdate:5f9c3762d1380ef795db5e40ef40b209:1809b9bbaa3c2f8230b2408dfe8f9fd4:54c325015e19fa20c57ea17cffd92683$"
 }
 }

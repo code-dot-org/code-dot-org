@@ -26,6 +26,20 @@ var TestResults = studioApp.TestResults;
 var MEDIA_URL = '/blockly/media/craft/';
 const IS_EVENT_LEVEL = false;
 
+var ArrowIds = {
+  LEFT: 'leftButton',
+  UP: 'upButton',
+  RIGHT: 'rightButton',
+  DOWN: 'downButton'
+};
+
+var FacingDirection = Object.freeze({
+  Up: 0,
+  Right: 1,
+  Down: 2,
+  Left: 3,
+});
+
 /**
  * Create a namespace for the application.
  */
@@ -287,6 +301,32 @@ Craft.init = function (config) {
           var visualizationColumn = document.getElementById('visualizationColumn');
           visualizationColumn.style.width = this.nativeVizWidth + 'px';
         }
+
+        for (var btn in ArrowIds) {
+          console.log("Button is");
+          console.log(btn);
+          dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+              function(btn) {
+                return () => {
+                  Craft.onArrowButtonUp(ArrowIds[btn]);
+                }
+              }(btn));
+          dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
+              function(btn) {
+                return () => {
+                  Craft.onArrowButtonDown(ArrowIds[btn]);
+                }
+              }(btn));
+        }
+
+        dom.addMouseDownTouchEvent(document.getElementById('actionButton'),
+            function() {
+              return () => {
+                Craft.gameController.codeOrgAPI.destroyBlock(() => {});
+              }
+            }());
+        $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 5);
+
       },
       twitter: {
         text: "Share on Twitter",
@@ -328,6 +368,24 @@ Craft.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+var directionToFacing = {
+  'upButton': FacingDirection.Up,
+  'downButton': FacingDirection.Down,
+  'leftButton': FacingDirection.Left,
+  'rightButton': FacingDirection.Right,
+};
+
+Craft.onArrowButtonDown = function (btn) {
+  console.log("down");
+  console.log(btn);
+  Craft.gameController.codeOrgAPI.moveDirection(function () { }, directionToFacing[btn]);
+};
+
+Craft.onArrowButtonUp = function (btn) {
+  console.log("up");
+  console.log(btn);
 };
 
 var preloadImage = function (url) {

@@ -411,7 +411,8 @@ export default class AssetLoader {
         'zombie',
         'cow',
         'chicken',
-        'ironGolem'
+        'ironGolem',
+        'burningInSun'
       ],
       playerSteve: [
         'playerSteve'

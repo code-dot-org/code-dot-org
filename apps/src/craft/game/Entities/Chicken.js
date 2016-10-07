@@ -20,7 +20,8 @@ export default class Chicken extends BaseEntity {
         var frameList = [];
         var frameName = "chicken"
         this.sprite = actionPlane.create(0, 0, 'chicken', 'chicken0001.png');
-        // for normal sheep
+        let stillFrameName = ['chicken0222.png','chicken0111.png','chicken0001.png','chicken0333.png'];
+        let idleDelayFrame = 8;
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump],[eat]]
         var frameListPerDirection = [[[259,275],[225,227],[224,226],[285,287],[276,281],[291,302],[303,313],[314,326],[327,332],[460,467],[240,249]], // down
             [[148,164],[114,116],[113,115],[174,176],[165,170],[180,191],[192,202],[203,215],[216,221],[452,459],[129,138]], // right
@@ -31,6 +32,8 @@ export default class Chicken extends BaseEntity {
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 4);
+            for(var j = 0 ; j < idleDelayFrame ; j++)
+                frameList.push(stillFrameName[i]);
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });
@@ -90,7 +93,7 @@ export default class Chicken extends BaseEntity {
             });
             // take damage
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][7][0], frameListPerDirection[i][7][1], ".png", 4);
-            this.sprite.animations.add("takeDamage" + facingName, frameList, frameRate, false).onComplete.add(() => {
+            this.sprite.animations.add("hurt" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });
             // die

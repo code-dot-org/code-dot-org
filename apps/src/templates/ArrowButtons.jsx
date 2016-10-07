@@ -6,21 +6,25 @@ var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
  */
 var ArrowButtons = function (props) {
   return (
-    <ProtectedStatefulDiv id="soft-buttons" className="soft-buttons-none">
-      <button id="leftButton" disabled className="arrow">
+    <ProtectedStatefulDiv id="soft-buttons" className="soft-buttons-4">
+      <button id="leftButton" style="display:inline" className="arrow">
         <img src="/blockly/media/1x1.gif" className="left-btn icon21"/>
       </button>
       {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-      <button id="rightButton" disabled className="arrow">
+      <button id="rightButton" style="display:inline" className="arrow">
         <img src="/blockly/media/1x1.gif" className="right-btn icon21"/>
       </button>
       {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-      <button id="upButton" disabled className="arrow">
+      <button id="upButton" style="display:inline" className="arrow">
         <img src="/blockly/media/1x1.gif" className="up-btn icon21"/>
       </button>
       {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-      <button id="downButton" disabled className="arrow">
+      <button id="downButton" style="display:inline" className="arrow">
         <img src="/blockly/media/1x1.gif" className="down-btn icon21"/>
+      </button>
+      {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
+      <button id="actionButton" style="display:inline" className="arrow">
+        <img src="/blockly/media/1x1.gif" className="action-btn icon21"/>
       </button>
     </ProtectedStatefulDiv>
   );

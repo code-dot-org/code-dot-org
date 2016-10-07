@@ -43,6 +43,44 @@ var blocksToDisplayText = {
   '': i18n.blockTypeEmpty()
 };
 
+var miniBlocks = [
+  'dirt',
+  'dirtCoarse',
+  'sand',
+  'gravel',
+  'bricks',
+  'logAcacia',
+  'logBirch',
+  'logJungle',
+  'logOak',
+  'logSpruce',
+  'planksAcacia',
+  'planksBirch',
+  'planksJungle',
+  'planksOak',
+  'planksSpruce',
+  'cobblestone',
+  'sandstone',
+  'wool',
+  'redstoneDust',
+  'lapisLazuli',
+  'ingotIron',
+  'ingotGold',
+  'emerald',
+  'diamond',
+  'coal',
+  'bucketWater',
+  'bucketLava',
+  'gunPowder',
+  'wheat',
+  'potato',
+  'carrots',
+  'milk',
+  'egg',
+  'poppy',
+  'sheep'
+]
+
 var allBlocks = [
   'bedrock',
   'bricks',
@@ -447,7 +485,7 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  dropdownEntityBlock('drop', 'drop', ['wool'])
+  dropdownEntityBlock('drop', 'drop', miniBlocks);
   simpleEntityBlock('destroyEntity', 'destroy it');
   simpleEntityBlock('flashEntity', 'flash it');
   simpleEntityBlock('moveEntityForward', 'move it forward');

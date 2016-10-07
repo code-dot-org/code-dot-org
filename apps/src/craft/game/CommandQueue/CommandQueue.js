@@ -7,6 +7,8 @@ export default class CommandQueue {
     this.game = gameController.game;
     this.reset();
     this.repeatCommands = [];
+    this.setUnshiftState = false;
+    this.highPriorityCommands = [];
   }
 
   addCommand(command) {
@@ -14,7 +16,10 @@ export default class CommandQueue {
     if (this.whileCommandQueue) {
       this.whileCommandQueue.addCommand(command);
     } else {
-      this.commandList_.push(command);
+      if(this.setUnshiftState)
+        this.highPriorityCommands.push(command);
+      else
+        this.commandList_.push(command);
     }
   }
 
@@ -33,10 +38,24 @@ export default class CommandQueue {
     this.state = CommandState.NOT_STARTED;
     this.currentCommand = null;
     this.commandList_ = [];
+    this.highPriorityCommands = [];
     if (this.whileCommandQueue) {
       this.whileCommandQueue.reset();
     }
     this.whileCommandQueue = null;
+  }
+
+  startPushHighpriorityCommands() {
+    this.setUnshiftState = true;
+    // clear existing highPriorityCommands
+    this.highPriorityCommands = [];
+  }
+
+  endPushHighpriorityCommands() {
+      // unshift highPriorityCommands to the command list
+      for(var i = this.highPriorityCommands.length - 1 ; i >= 0 ; i--)
+        this.commandList_.unshift(this.highPriorityCommands[i]);
+      this.setUnshiftState = false;
   }
 
   tick() {

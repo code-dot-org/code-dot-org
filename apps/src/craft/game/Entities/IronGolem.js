@@ -15,12 +15,11 @@ export default class IronGolem extends BaseEntity {
         let getRandomSecondBetween = function (min, max) {
             return (Math.random() * (max - min) + min) * 1000;
         }
-        let frameRate = 12, pauseFrame = 30, randomPauseMin = 0.2, randomPauseMax = 1;
+        let frameRate = 8, pauseFrame = 20, randomPauseMin = 0.2, randomPauseMax = 1;
         let actionPlane = this.controller.levelView.actionPlane;
         var frameList = [];
         var frameName = "Iron_Golem_Anims"
         this.sprite = actionPlane.create(0, 0, 'ironGolem', 'Iron_Golem_Anims001.png');
-        // for normal sheep
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump]]
         var frameListPerDirection = [[[1, 1], [2, 4], [6, 8], [14, 16], [10, 12], [18, 26], [27, 30], [33, 37], [38, 44], [177, 184]], // down
             [[133, 133], [134, 136], [138, 140], [146, 148], [142, 144], [150, 158], [159, 162], [165, 169], [170, 176], [201, 208]], // right
@@ -31,7 +30,7 @@ export default class IronGolem extends BaseEntity {
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 3);
-            for(var j = 0 ; j < 6 ; j++)
+            for(var j = 0 ; j < 12 ; j++)
                 frameList.push(frameList[0]);
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
@@ -78,32 +77,38 @@ export default class IronGolem extends BaseEntity {
             // look down
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][4][0], frameListPerDirection[i][4][1], ".png", 3);
             this.sprite.animations.add("lookDown" + facingName, frameList, frameRate, false).onComplete.add(() => {
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookDown_2" + this.controller.levelView.getDirectionName(this.facing));
+            });
+
+            
+            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][4][1], frameListPerDirection[i][4][0], ".png", 3);
+            this.sprite.animations.add("lookDown_2" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // walk
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][5][0], frameListPerDirection[i][5][1], ".png", 3);
             this.sprite.animations.add("walk" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // attack
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][6][0], frameListPerDirection[i][6][1], ".png", 3);
             this.sprite.animations.add("attack" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // take damage
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][7][0], frameListPerDirection[i][7][1], ".png", 3);
-            this.sprite.animations.add("takeDamage" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+            this.sprite.animations.add("hurt" + facingName, frameList, frameRate, false).onComplete.add(() => {
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // die
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 3);
             this.sprite.animations.add("die" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // bump
             frameList = this.controller.levelView.generateReverseFrames(frameName, frameListPerDirection[i][9][0], frameListPerDirection[i][9][1], ".png", 3);
             this.sprite.animations.add("bump" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
         }
         // initialize
