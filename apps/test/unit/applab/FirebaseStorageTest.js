@@ -127,6 +127,33 @@ describe('FirebaseStorage', () => {
     });
   });
 
+  describe('getKeyValue', () => {
+    it('warns and succeeds on keys with invalid characters', done => {
+      let didWarn = false;
+      FirebaseStorage.setKeyValue(
+        'key/slash',
+        'value7',
+        getKeyValue,
+        () => {});
+
+      function getKeyValue() {
+        FirebaseStorage.getKeyValue(
+          'key/slash',
+          verifyGetKeyValue,
+          error => {
+            expect(error).to.include('renamed');
+            didWarn = true;
+          });
+      }
+
+      function verifyGetKeyValue(actualValue) {
+        expect(didWarn).to.be.true;
+        expect(actualValue).to.equal('value7');
+        done();
+      }
+    });
+  });
+
   describe('createRecord', () => {
     it('creates a record', done => {
       FirebaseStorage.createRecord(
