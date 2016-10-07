@@ -178,6 +178,13 @@ class BucketHelper
     @s3.delete_object(bucket: @bucket, key: key)
   end
 
+  def delete_multiple(encrypted_channel_id, filenames)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    objects = filenames.map { |filename| { key: s3_path(owner_id, channel_id, filename) } }
+
+    @s3.delete_objects(bucket: @bucket, delete: { objects: objects, quiet: true})
+  end
+
   def list_versions(encrypted_channel_id, filename)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename

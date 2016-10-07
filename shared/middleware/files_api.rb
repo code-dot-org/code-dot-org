@@ -380,7 +380,7 @@ class FilesApi < Sinatra::Base
       #   "files": [
       #     {
       #       "filename": "name.jpg",
-      #        "category": "image",
+      #       "category": "image",
       #       "size": 100,
       #       "versionId": "asldfklsakdfj"
       #     }
@@ -478,7 +478,7 @@ class FilesApi < Sinatra::Base
   #
   # DELETE /v3/files/<channel-id>/<filename>?files-version=<project-version-id>
   #
-  # Delete a file.
+  # Delete a file. If filename is '*', all files are deleted.
   #
   delete %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
@@ -490,8 +490,24 @@ class FilesApi < Sinatra::Base
     # read the manifest
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, 'manifest.json')
-    not_found if manifest_result[:status] == 'NOT_FOUND'
+    if manifest_result[:status] == 'NOT_FOUND'
+      if filename == '*'
+        return { filesVersionId: "unused" }.to_json
+      else
+        not_found
+      end
+    end
     manifest = JSON.load manifest_result[:body]
+
+    if filename == '*'
+      # overwrite the manifest file with an empty list
+      response = bucket.create_or_replace(encrypted_channel_id, 'manifest.json', [].to_json, params['files-version'])
+
+      # delete the files
+      bucket.delete_multiple(encrypted_channel_id, manifest.map { |e| e['filename'] }) unless manifest.empty?
+
+      return { filesVersionId: response.version_id }.to_json
+    end
 
     # remove the file from the manifest
     reject_result = manifest.reject! { |e| e['filename'].downcase == filename.downcase }
