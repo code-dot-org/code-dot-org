@@ -88,7 +88,6 @@ const DebugWatch = React.createClass({
 
   onKeyDown(e: DOMEvent) {
     if (e.key === 'Enter') {
-      console.log('Hit enter');
       this.props.dispatch(add(e.target.value));
       this.setState({
         editing: false,
@@ -97,7 +96,6 @@ const DebugWatch = React.createClass({
       this.refs.debugInput.blur();
     }
     if (e.key === 'Escape') {
-      console.log('Hit escape');
       this.setState({
         editing: false,
       });
@@ -178,8 +176,6 @@ const DebugWatch = React.createClass({
             </div>
             <input
                 ref="debugInput"
-                onBlur={() => console.log("Blurred")}
-                onClick={() => console.log("Editing")}
                 onKeyDown={this.onKeyDown}
                 onChange={this.onChange}
                 value={this.state.text}
