@@ -22,10 +22,6 @@ var ArrowButtons = function (props) {
       <button id="downButton" style="display:inline" className="arrow">
         <img src="/blockly/media/1x1.gif" className="down-btn icon21"/>
       </button>
-      {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-      <button id="actionButton" style="display:inline" className="arrow">
-        <img src="/blockly/media/1x1.gif" className="action-btn icon21"/>
-      </button>
     </ProtectedStatefulDiv>
   );
 };

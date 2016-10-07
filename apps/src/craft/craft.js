@@ -319,13 +319,13 @@ Craft.init = function (config) {
               }(btn));
         }
 
-        dom.addMouseDownTouchEvent(document.getElementById('actionButton'),
-            function() {
-              return () => {
-                Craft.gameController.codeOrgAPI.destroyBlock(() => {});
-              }
-            }());
-        $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 5);
+        //dom.addMouseDownTouchEvent(document.getElementById('actionButton'),
+        //    function() {
+        //      return () => {
+        //        Craft.gameController.codeOrgAPI.destroyBlock(() => {});
+        //      }
+        //    }());
+        $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
 
       },
       twitter: {
