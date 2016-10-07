@@ -61,7 +61,7 @@ $debug-area-initial-height: 120px;
 
 $debug-commands-column-width: 270px;
 $debug-console-min-column-width: 130px;
-$debug-watch-max-column-width: 150px;
+$debug-watch-max-column-width: 200px;
 $debug-header-border-width: 1px;
 
 #debug-commands-header {
@@ -109,8 +109,10 @@ $debug-header-border-width: 1px;
 }
 
 .debug-watch-item {
-  margin: 0 5px;
+  margin: 0;
   line-height: 14px;
+  clear: both;
+  margin-bottom: 1px;
 
   .watch-variable, .watch-separator {
     color: purple;
