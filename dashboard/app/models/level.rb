@@ -180,8 +180,8 @@ class Level < ActiveRecord::Base
 
   def update_level_in_cache
     return unless Script.should_cache?
-    level_cache[id] = self if level_cache.key? id
-    level_cache[name] = self if level_cache.key? name
+    Level.level_cache[id] = self if Level.level_cache.key? id
+    Level.level_cache[name] = self if Level.level_cache.key? name
   end
 
   def delete_level_from_cache
