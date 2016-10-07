@@ -1018,6 +1018,8 @@ export default class LevelView {
   }
 
   playItemAcquireAnimation(playerPosition, facing, sprite, completionHandler, blockType) {
+    console.log('acquire');
+    console.log(blockType);
     var tween;
 
     tween = this.addResettableTween(sprite).to({
@@ -1612,6 +1614,7 @@ export default class LevelView {
   }
 
   createMiniBlock(x, y, blockType) {
+    console.log(blockType);
     var frame = "",
       sprite = null,
       frameList,
@@ -1669,6 +1672,11 @@ export default class LevelView {
     let frameEnd = this.miniBlocks[frame][2];
     let xOffset = -10 - 20 + Math.random() * 40;
     let yOffset = 0 - 20 + Math.random() * 40;
+
+    console.log('frame');
+    console.log(xOffset, yOffset);
+    console.log(framePrefix, frameStart, frameEnd);
+    console.log(frame);
 
     frameList = Phaser.Animation.generateFrameNames(framePrefix, frameStart, frameEnd, ".png", 3);
 
@@ -1801,7 +1809,7 @@ export default class LevelView {
         };
         break;
       // It's not able to create sheep as a block since it's an entity
-      /* 
+      /*
       case "sheep":
         var sFrames = 10;
         // Facing Left: Eat Grass: 199-216

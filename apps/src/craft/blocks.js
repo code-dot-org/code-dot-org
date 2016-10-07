@@ -393,10 +393,12 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(entityID);
   }
 
-  createEventBlockForEntity('creeper', 'Creeper');
   createEventBlockForEntity('cow', 'Cow');
-  createEventBlockForEntity('zombie', 'Zombie');
   createEventBlockForEntity('sheep', 'Sheep');
+  createEventBlockForEntity('zombie', 'Zombie');
+  createEventBlockForEntity('ironGolem', 'Iron Golem');
+  createEventBlockForEntity('creeper', 'Creeper');
+  createEventBlockForEntity('chicken', 'Chicken');
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
@@ -481,7 +483,9 @@ exports.install = function (blockly, blockInstallOptions) {
     };
 
     blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
-      return `${simpleFunctionName}('${this.getTitleValue('TYPE')}', event.targetIdentifier, 'block_id_${this.id}');\n`;
+      const thingToDrop = this.getTitleValue('TYPE');
+      console.log(thingToDrop);
+      return `${simpleFunctionName}('${thingToDrop}', event.targetIdentifier, 'block_id_${this.id}');\n`;
     };
   }
 

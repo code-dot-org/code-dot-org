@@ -605,10 +605,11 @@ Craft.foldInEntities = function (houseBlockMap, levelConfig) {
   planesToCustomize.forEach(function (plane) {
     for (var i = 0; i < plane.length; i++) {
       var item = plane[i];
-      if (item.match(/sheep/)) {
+
+      if (item.match(/sheep|zombie|ironGolem|creeper|cow|chicken/)) {
         levelConfig.entities = levelConfig.entities || [];
         // TODO: separate map, or allow for non-10-size map.
-        levelConfig.entities.push(['sheep', i % 10, Math.floor(i / 10), 1]);
+        levelConfig.entities.push([item, i % 10, Math.floor(i / 10), 1]);
         plane[i] = '';
       }
     }

@@ -279,10 +279,12 @@ class Craft < Blockly
 <category name="Events">
   <block type="craft_drop"></block>
   <block type="craft_forever"></block>
+  <block type="craft_sheep"></block>
+  <block type="craft_zombie"></block>
+  <block type="craft_ironGolem"></block>
   <block type="craft_creeper"></block>
   <block type="craft_cow"></block>
-  <block type="craft_zombie"></block>
-  <block type="craft_sheep"></block>
+  <block type="craft_chicken"></block>
   <block type="craft_onTouched"></block>
   <block type="craft_onPlayerMoved"></block>
   <block type='craft_playSound'></block>

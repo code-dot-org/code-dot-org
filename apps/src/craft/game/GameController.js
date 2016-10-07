@@ -277,7 +277,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveAwayFrom (entity identifier)
-   * 
+   *
    * @memberOf GameController
    */
   moveAway(commandQueueItem, moveAwayFrom) {
@@ -320,7 +320,7 @@ class GameController {
           }
         }
         entity.moveAway(commandQueueItem, moveAwayFromEntities[closestTarget[1]]);
-      } else 
+      } else
         commandQueueItem.succeeded();
     }
     // move away type from type
@@ -349,7 +349,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveTowardTo (entity identifier)
-   * 
+   *
    * @memberOf GameController
    */
   moveToward(commandQueueItem, moveTowardTo) {
@@ -457,7 +457,7 @@ class GameController {
           }
         }
         entity.moveTo(commandQueueItem, moveTowardToEntities[closestTarget[1]]);
-      } else 
+      } else
         commandQueueItem.succeeded();
     }
     // move toward type to type
@@ -730,7 +730,7 @@ class GameController {
       // push use command to execute general use behavior of the entity before executing the event
       this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
         var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
-        
+
         frontEntity.queue.startPushHighpriorityCommands();
         frontEntity.addCommand(useCommand);
         frontEntity.queue.endPushHighpriorityCommands();
@@ -1014,6 +1014,7 @@ class GameController {
   }
 
   drop(commandQueueItem, itemType) {
+    console.log(itemType);
     var target = commandQueueItem.target;
     if (!this.isType(target)) {
       var entity = this.getEntity(target);
@@ -1118,14 +1119,14 @@ class GameController {
       return;
     if(startTime === "day" || startTime === "Day")
     {
-      setTimeout(()=>{ 
+      setTimeout(()=>{
         this.startDay(null);
         this.setDayNightCycle(delayInSecond, "night");
       }, delayInSecond*1000)
     }
     else if(startTime === "night" || startTime === "Night")
     {
-      setTimeout(()=>{ 
+      setTimeout(()=>{
         this.startNight(null);
         this.setDayNightCycle(delayInSecond, "day");
       }, delayInSecond*1000)
