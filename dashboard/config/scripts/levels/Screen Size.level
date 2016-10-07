@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-10-07T15:38:40.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Screen Size\r\n\r\nOpen an example student website in full size browser window and begin shrinking the size of the window by dragging from the corner. Ask students at what point the content becomes hard to view on a smaller screen.\r\n\r\nCheck for hardware accessibility.\r\n\r\n# Do This\r\n\r\n* Use the dragger to resize your preview area to see how your website adapts.",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

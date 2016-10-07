@@ -24,7 +24,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. \r\n\r\n(Each line is 100 pixels long)\r\n\r\n<br>  \r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)",
+    "markdown_instructions": "*\"Let's make a cage for my pet monster!\"*\r\n\r\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.  \r\n(Each line is 100 pixels long)\r\n\r\n<br>  \r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
