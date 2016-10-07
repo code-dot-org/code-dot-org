@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {changeInterfaceMode} from './actions';
 var commonMsg = require('@cdo/locale');
 var msg = require('@cdo/gamelab/locale');
 var levels = require('./levels');
@@ -25,6 +26,7 @@ var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
+var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
 import {
   animationSourceUrl,
@@ -255,6 +257,10 @@ GameLab.prototype.init = function (config) {
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
   });
+
+  if (config.level.startInAnimationTab) {
+    this.studioApp_.reduxStore.dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+  }
 
   // Push project-sourced animation metadata into store
   const initialAnimationList = config.initialAnimationList || this.startAnimations;
