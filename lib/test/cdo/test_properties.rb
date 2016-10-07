@@ -45,5 +45,6 @@ class PropertiesTest < Minitest::Test
 
   def teardown
     DB[:properties].where(key: KEY).delete
+    (1..5).each {|i| DB[:properties].where(key: "key#{i}").delete}
   end
 end
