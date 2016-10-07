@@ -52,21 +52,21 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
 function fixKeyName(key, onError) {
   const newKey = fixFirebaseKey(key);
   if (newKey !== key) {
-    onError(`Key "${key}" renamed to "${newKey}" because the characters ` +
-      '".", "$", "#", "[", "]", and "/" are not allowed.');
+    onError(`The key was renamed from "${key}" to "${newKey}" because the characters ` +
+      '".", "$", "#", "[", "]", and "/" are not allowed in key names.');
     key = newKey;
   }
   return key;
 }
 
-function fixTableName(key, onError) {
-  const newKey = fixFirebaseKey(key);
-  if (newKey !== key) {
-    onError(`Table "${key}" renamed to "${newKey}" because the characters ` +
-      '".", "$", "#", "[", "]", and "/" are not allowed.');
-    key = newKey;
+function fixTableName(tableName, onError) {
+  const newTableName = fixFirebaseKey(tableName);
+  if (newTableName !== tableName) {
+    onError(`The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
+      '".", "$", "#", "[", "]", and "/" are not allowed in table names.');
+    tableName = newTableName;
   }
-  return key;
+  return tableName;
 }
 
 /**
