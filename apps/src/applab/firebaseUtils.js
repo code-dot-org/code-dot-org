@@ -97,7 +97,7 @@ function getFirebase() {
   return fb;
 }
 
-const ILLEGAL_CHARACTERS = '.$#[]/';
+// The following characters are illegal in firebase paths: .#$[]/
 const ILLEGAL_CHARACTERS_REGEX = /[\.\$#\[\]\/]/g;
 
 /**
@@ -123,7 +123,7 @@ export function validateFirebaseKey(key) {
     throw new Error(`The name "${key}" is too long.`);
   }
   for (let i = 0; i < key.length; i++) {
-    if (ILLEGAL_CHARACTERS.includes(key.charAt(i))) {
+    if (ILLEGAL_CHARACTERS_REGEX.test(key.charAt(i))) {
       throw new Error(`The name "${key}" contains an illegal character "${key.charAt(i)}".` +
       ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.');
     }
