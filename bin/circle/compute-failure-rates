@@ -2,6 +2,7 @@
 # A script to analyze a range of CircleCI builds for known failures.
 # For available options, run ./search-circle-builds -h
 
+require 'active_support/time'
 require 'optparse'
 require_relative './circle_project'
 
@@ -68,7 +69,7 @@ end
 
 # Group the builds by date
 builds_by_date = build_infos.compact.group_by do |build_info|
-  build_info[:queued_at].to_time.localtime.strftime('%Y-%m-%d')
+  build_info[:queued_at].to_time.in_time_zone('Pacific Time (US & Canada)').strftime('%Y-%m-%d')
 end
 
 # Define columns - each maps to a lambda that filters builds
