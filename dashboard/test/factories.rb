@@ -551,14 +551,14 @@ FactoryGirl.define do
   factory :school_info do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
-    school_district_id {create(:school_district).id}
+    association :school_district
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
-    school_info_id {create(:school_info).id}
+    association :school_info
     school {'Example School'}
   end
 
@@ -568,14 +568,14 @@ FactoryGirl.define do
   end
 
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
-    district {create :district}
+    association :school_district
     course Pd::Workshop::COURSES.first
     rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
     rate 10
   end
 
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
-    facilitator {create :facilitator}
+    association :facilitator
     course Pd::Workshop::COURSES.first
   end
 
