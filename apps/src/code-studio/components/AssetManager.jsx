@@ -75,8 +75,9 @@ var AssetManager = React.createClass({
     }
   },
 
-  onUploadStart: function () {
+  onUploadStart: function (data) {
     this.setState({statusMessage: 'Uploading...'});
+    data.submit();
   },
 
   onUploadDone: function (result) {

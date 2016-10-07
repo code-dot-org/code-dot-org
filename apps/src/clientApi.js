@@ -82,6 +82,10 @@ class AssetsApi extends CollectionsApi {
   makeUploadDoneCallback(callback) {
     return callback;
   }
+
+  makeUploadStartCallback(callback) {
+    return callback;
+  }
 }
 
 class FilesApi extends CollectionsApi {
@@ -104,7 +108,7 @@ class FilesApi extends CollectionsApi {
     return ajaxInternal('PUT', path, success, error);
   }
 
-  renameFile(oldFilename, newFilename, success, error) {
+  _renameFileInternal(oldFilename, newFilename, success, error) {
     var path = this.basePath(newFilename);
     var params = {
       src: oldFilename,
@@ -124,6 +128,18 @@ class FilesApi extends CollectionsApi {
       error);
   }
 
+  renameFile(oldFilename, newFilename, success, error) {
+    if (this._beforeWriteHook) {
+      this._beforeWriteHook(err => {
+        // continuing regardless of error status from hook...
+        this._renameFileInternal(oldFilename, newFilename, success, error);
+      });
+      this._beforeWriteHook = null;
+    } else {
+      this._renameFileInternal(oldFilename, newFilename, success, error);
+    }
+  }
+
   basePathWithFilesVersion(filename) {
     var path = this.basePath(filename);
     if (dashboard.project.filesVersionId) {
@@ -132,7 +148,7 @@ class FilesApi extends CollectionsApi {
     return path;
   }
 
-  deleteFile(filename, success, error) {
+  _deleteFileInternal(filename, success, error) {
     return ajaxInternal('DELETE', this.basePathWithFilesVersion(filename), xhr => {
         var response = JSON.parse(xhr.response);
         dashboard.project.filesVersionId = response.filesVersionId;
@@ -141,6 +157,60 @@ class FilesApi extends CollectionsApi {
         }
       },
       error);
+  }
+
+  deleteFile(filename, success, error) {
+    if (this._beforeWriteHook) {
+      this._beforeWriteHook(err => {
+        // continuing regardless of error status from hook...
+        this._deleteFileInternal(filename, success, error);
+      });
+      this._beforeWriteHook = null;
+    } else {
+      this._deleteFileInternal(filename, success, error);
+    }
+  }
+
+  _putFileInternal(filename, fileData, success, error) {
+    return ajaxInternal('PUT', this.basePathWithFilesVersion(filename), xhr => {
+        var response = JSON.parse(xhr.response);
+        dashboard.project.filesVersionId = response.filesVersionId;
+        if (success) {
+          success(xhr, dashboard.project.filesVersionId);
+        }
+      },
+      error,
+      fileData);
+  }
+
+  putFile(filename, fileData, success, error) {
+    if (this._beforeWriteHook) {
+      this._beforeWriteHook(err => {
+        // continuing regardless of error status from hook...
+        this._putFileInternal(filename, fileData, success, error);
+      });
+      this._beforeWriteHook = null;
+    } else {
+      this._putFileInternal(filename, fileData, success, error);
+    }
+  }
+
+  deleteAll(success, error) {
+    // Note: just reset the beforeWriteHook, but don't call it
+    // since we're deleting everything:
+    this._beforeWriteHook = null;
+    return ajaxInternal('DELETE', this.basePathWithFilesVersion('*'), xhr => {
+        var response = JSON.parse(xhr.response);
+        dashboard.project.filesVersionId = response.filesVersionId;
+        if (success) {
+          success(xhr, dashboard.project.filesVersionId);
+        }
+      },
+      error);
+  }
+
+  registerBeforeWriteHook(hook) {
+    this._beforeWriteHook = hook;
   }
 
   getUploadUrl() {
@@ -152,6 +222,20 @@ class FilesApi extends CollectionsApi {
       dashboard.project.filesVersionId = result.filesVersionId;
       if (callback) {
         callback(result);
+      }
+    };
+  }
+
+  makeUploadStartCallback(callback) {
+    return data => {
+      if (this._beforeWriteHook) {
+        this._beforeWriteHook(err => {
+          // continuing regardless of error status from hook...
+          callback(data);
+        });
+        this._beforeWriteHook = null;
+      } else {
+        callback(data);
       }
     };
   }
