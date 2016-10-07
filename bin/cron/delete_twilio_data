@@ -29,7 +29,7 @@ def main
         # another execution of this script.
         # Per customer ticket #712102, it is also an error to delete a message
         # in state sent, despite not seeing public documentation of this.
-        if %w(accepted queued sending sent receiving).include? message.status
+        if %w(accepted queued sending sent SENT receiving).include? message.status
           next
         end
 
