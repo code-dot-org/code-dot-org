@@ -2,7 +2,7 @@ import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {add, update} from '../redux/watchedExpressions'
+import {add, update, remove} from '../redux/watchedExpressions'
 
 const WATCH_TIMER_PERIOD = 50;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
@@ -120,24 +120,77 @@ const DebugWatch = React.createClass({
                   const varValue = wv.get('lastValue');
                   return (
                   <div className="debug-watch-item" key={wv.get('uuid')}>
-                    <span
-                        className="watch-variable">{varName}</span>
-                    <span
-                        className="watch-separator">: </span>
-                    {this.renderValue(varValue)}
+                    <div
+                        style={{
+                          fontSize: '18px',
+                          float: 'right',
+                          cursor: 'pointer',
+                          width: '25px',
+                          backgroundColor: '#be0712',
+                          color: 'white',
+                          padding: '6px',
+                          paddingRight: '0px',
+                          paddingLeft: '10px'
+                        //  style="font-size: 18px;
+                        // float: right;
+                        // width: 25px;
+                        // background-color: red;
+                        // color: white;
+                        // padding: 6px;padding-right: 0px;padding-left: 10px;"
+                        }}
+                        onClick={()=>this.props.dispatch(remove(wv.get('expression')))}>
+                      x
+                    </div>
+                    <div style={{
+                      float: 'left',
+                      marginTop: '7px',
+                      marginLeft: '2px',
+                      whiteSpace: 'nowrap',
+                      overflow: 'scroll',
+                      width: '160px',
+                      height: '21px',
+                    }}>
+                      <span
+                          className="watch-variable">{varName}</span>
+                      <span
+                          className="watch-separator">: </span>
+                      {this.renderValue(varValue)}
+                    </div>
                   </div>
                       );
                   })
               }
-          <input
-              ref="debugInput"
-              onBlur={() => console.log("Blurred")}
-              onClick={() => console.log("Editing")}
-              onKeyDown={this.onKeyDown}
-              onChange={this.onChange}
-              value={this.state.text}
-          >
-          </input>
+          <div style={{clear: 'both'}}>
+            <div
+                style={{
+                          fontSize: '18px',
+                          float: 'right',
+                          cursor: 'pointer',
+                          width: '25px',
+                          backgroundColor: '#1e93cd',
+                          color: 'white',
+                          padding: '6px',
+                          paddingRight: '0px',
+                          paddingLeft: '10px'
+                        }}
+                onClick={()=>this.props.dispatch(remove(wv.get('expression')))}>
+              +
+            </div>
+            <input
+                ref="debugInput"
+                onBlur={() => console.log("Blurred")}
+                onClick={() => console.log("Editing")}
+                onKeyDown={this.onKeyDown}
+                onChange={this.onChange}
+                value={this.state.text}
+                style={{
+                  width: '159px',
+                  marginTop: '0px',
+                  height: '25px',
+                }}
+            >
+            </input>
+          </div>
         </div>
     );
   }
