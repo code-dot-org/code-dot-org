@@ -30,6 +30,7 @@ var AssetUploader = React.createClass({
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     let url = api.getUploadUrl();
     let uploadDone = api.makeUploadDoneCallback(this.props.onUploadDone);
+    let uploadStart = api.makeUploadStartCallback(this.props.onUploadStart);
     return (
       <span>
         <HiddenUploader
@@ -37,7 +38,7 @@ var AssetUploader = React.createClass({
           toUrl={url}
           allowedExtensions={this.props.allowedExtensions}
           useFilesApi={this.props.useFilesApi}
-          onUploadStart={this.props.onUploadStart}
+          onUploadStart={uploadStart}
           onUploadDone={uploadDone}
           onUploadError={this.props.onUploadError}
         />
