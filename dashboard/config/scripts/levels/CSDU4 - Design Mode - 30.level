@@ -40,7 +40,8 @@
     "instructions": "Show different die images for the random number generated. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "RdR6BYVv7pwWYBSvzEiALHodSKLHUc5BvP8ahauVZT0OqU/TPUn44dnkTC2H\nfnFG\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
