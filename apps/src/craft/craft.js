@@ -319,12 +319,12 @@ Craft.init = function (config) {
               }(btn));
         }
 
-        //dom.addMouseDownTouchEvent(document.getElementById('actionButton'),
-        //    function() {
-        //      return () => {
-        //        Craft.gameController.codeOrgAPI.destroyBlock(() => {});
-        //      }
-        //    }());
+        dom.addMouseDownTouchEvent(document.getElementById('phaser-game'),
+            function() {
+              return () => {
+                Craft.gameController.codeOrgAPI.destroyBlock(() => {});
+              }
+            }());
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
 
       },
