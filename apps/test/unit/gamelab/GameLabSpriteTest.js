@@ -2,7 +2,10 @@
 /* global p5 */
 import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import createGameLabP5, {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
+import createGameLabP5, {
+  createStatefulGameLabP5,
+  expectAnimationsAreClones
+} from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabSprite', function () {
   let gameLabP5, createSprite;
@@ -300,6 +303,86 @@ describe('GameLabSprite', function () {
     });
   });
 
+  describe('setAnimation', function () {
+    const ANIMATION_LABEL = 'animation1',
+          SECOND_ANIMATION_LABEL = 'animation2';
+    let sprite, projectAnimations;
+
+    beforeEach(function () {
+      sprite = createSprite(0, 0);
+
+      // We manually preload animations onto p5.projectAnimations for the use of
+      // setAnimation.
+      projectAnimations = {
+        [ANIMATION_LABEL]: createTestAnimation(8),
+        [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
+      };
+      gameLabP5.p5.projectAnimations = projectAnimations;
+    });
+
+    it('throws if the named animation is not found in the project', function () {
+      expect(() => {
+        sprite.setAnimation('fakeAnimation');
+      }).to.throw(`Unable to find an animation named "fakeAnimation".  Please make sure the animation exists.`);
+    });
+
+    it('makes the named animaiton the current animation, if the animation is found', function () {
+      sprite.setAnimation(ANIMATION_LABEL);
+
+      // Current animation label should be animation label
+      expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+
+      // Current animation will be a clone of the project animation:
+      expectAnimationsAreClones(sprite.animation, projectAnimations[ANIMATION_LABEL]);
+    });
+
+    it('changes the animation to first frame and plays it by default', function () {
+      sprite.setAnimation(ANIMATION_LABEL);
+
+      // Animation is at frame 1
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      // Animation is playing
+      expect(sprite.animation.playing).to.be.true;
+    });
+
+    it('changing to a new animation resets to first frame and starts playing', function () {
+      // Set first animation, advance a few frames
+      sprite.setAnimation(ANIMATION_LABEL);
+      expect(sprite.animation.getFrame()).to.equal(0);
+      expect(sprite.animation.playing).to.be.true;
+      sprite.animation.nextFrame();
+      sprite.animation.nextFrame();
+      sprite.animation.nextFrame();
+      expect(sprite.animation.getFrame()).to.equal(3);
+      sprite.pause();
+      expect(sprite.animation.playing).to.be.false;
+
+      // Set second animation, observe that we are back on first frame
+      sprite.setAnimation(SECOND_ANIMATION_LABEL);
+      expect(sprite.animation.getFrame()).to.equal(0);
+      expect(sprite.animation.playing).to.be.true;
+    });
+
+    it('calling setAnimation with the current animation does not reset frame or play state', function () {
+      // Set first animation, advance a few frames
+      sprite.setAnimation(ANIMATION_LABEL);
+      expect(sprite.animation.getFrame()).to.equal(0);
+      expect(sprite.animation.playing).to.be.true;
+      sprite.animation.nextFrame();
+      sprite.animation.nextFrame();
+      sprite.animation.nextFrame();
+      expect(sprite.animation.getFrame()).to.equal(3);
+      sprite.pause();
+      expect(sprite.animation.playing).to.be.false;
+
+      // Set second animation, observe that we are back on first frame
+      sprite.setAnimation(ANIMATION_LABEL);
+      expect(sprite.animation.getFrame()).to.equal(3);
+      expect(sprite.animation.playing).to.be.false;
+    });
+  });
+
   describe('collision types using AABBOps', function () {
     let sprite, spriteTarget;
 
@@ -585,10 +668,13 @@ describe('GameLabSprite', function () {
     });
   });
 
-  function createTestAnimation() {
-    var image = new p5.Image(100, 100, gameLabP5.p5);
-    var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-    var sheet = new gameLabP5.p5.SpriteSheet(image, frames);
+  function createTestAnimation(frameCount = 1) {
+    let image = new p5.Image(100, 100, gameLabP5.p5);
+    let frames = [];
+    for (var i = 0; i < frameCount; i++) {
+      frames.push({name: i, frame: {x: 0, y: 0, width: 50, height: 50}});
+    }
+    let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
     return new gameLabP5.p5.Animation(sheet);
   }
 });
