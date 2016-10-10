@@ -14,8 +14,6 @@ import {
   Col,
   ButtonToolbar,
   Button,
-  OverlayTrigger,
-  Tooltip,
   Tabs,
   Tab
 } from 'react-bootstrap';

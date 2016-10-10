@@ -2,7 +2,6 @@
  */
 
 import React from 'react';
-import FilterSet from './filterSet';
 import Tutorial from './tutorial';
 import shapes from './shapes';
 

@@ -5,7 +5,6 @@ import React from 'react';
 import {
   Row,
   Col,
-  Button
 } from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshopConstants';
