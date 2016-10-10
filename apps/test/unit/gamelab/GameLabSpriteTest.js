@@ -2,6 +2,7 @@
 /* global p5 */
 import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
+import {forEveryBooleanPermutation} from '../../util/testUtils';
 import createGameLabP5, {
   createStatefulGameLabP5,
   expectAnimationsAreClones
@@ -346,40 +347,71 @@ describe('GameLabSprite', function () {
       expect(sprite.animation.playing).to.be.true;
     });
 
-    it('changing to a new animation resets to first frame and starts playing', function () {
-      // Set first animation, advance a few frames
-      sprite.setAnimation(ANIMATION_LABEL);
-      expect(sprite.animation.getFrame()).to.equal(0);
-      expect(sprite.animation.playing).to.be.true;
-      sprite.animation.nextFrame();
-      sprite.animation.nextFrame();
-      sprite.animation.nextFrame();
-      expect(sprite.animation.getFrame()).to.equal(3);
-      sprite.pause();
-      expect(sprite.animation.playing).to.be.false;
+    describe('repeat call', function () {
+      beforeEach(function () {
+        // Set first animation and advance a few frames, to simulate an
+        // animation in the middle of playback.
+        sprite.setAnimation(ANIMATION_LABEL);
+        sprite.animation.changeFrame(3);
+      });
 
-      // Set second animation, observe that we are back on first frame
-      sprite.setAnimation(SECOND_ANIMATION_LABEL);
-      expect(sprite.animation.getFrame()).to.equal(0);
-      expect(sprite.animation.playing).to.be.true;
-    });
+      it('resets the current frame if called with a new animation', function () {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
 
-    it('calling setAnimation with the current animation does not reset frame or play state', function () {
-      // Set first animation, advance a few frames
-      sprite.setAnimation(ANIMATION_LABEL);
-      expect(sprite.animation.getFrame()).to.equal(0);
-      expect(sprite.animation.playing).to.be.true;
-      sprite.animation.nextFrame();
-      sprite.animation.nextFrame();
-      sprite.animation.nextFrame();
-      expect(sprite.animation.getFrame()).to.equal(3);
-      sprite.pause();
-      expect(sprite.animation.playing).to.be.false;
+        sprite.setAnimation(SECOND_ANIMATION_LABEL);
 
-      // Set second animation, observe that we are back on first frame
-      sprite.setAnimation(ANIMATION_LABEL);
-      expect(sprite.animation.getFrame()).to.equal(3);
-      expect(sprite.animation.playing).to.be.false;
+        expect(sprite.getAnimationLabel()).to.equal(SECOND_ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(0);
+      });
+
+      it('does not reset the current frame if called with the current animation', function () {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+
+        sprite.setAnimation(ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+      });
+
+      it('unpasuses a paused sprite if called with a new animation', function () {
+        sprite.pause();
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+
+        sprite.setAnimation(SECOND_ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(SECOND_ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.true;
+      });
+
+      it('does not unpause a paused sprite if called with the current animation', function () {
+        expect(sprite.animation.playing).to.be.true;
+        sprite.pause();
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+
+        sprite.setAnimation(ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+      });
+
+      // Applies to both cases, so unify them
+      forEveryBooleanPermutation(same => {
+        const description = `called with ${same ? 'the current' : 'a new'} animation`;
+        const label = same ? ANIMATION_LABEL : SECOND_ANIMATION_LABEL;
+        it(`does not pause a playing sprite if ${description}`, function () {
+          expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+          expect(sprite.animation.playing).to.be.true;
+
+          sprite.setAnimation(label);
+
+          expect(sprite.getAnimationLabel()).to.equal(label);
+          expect(sprite.animation.playing).to.be.true;
+        });
+      });
     });
   });
 
