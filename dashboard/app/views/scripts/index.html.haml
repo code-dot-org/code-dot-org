@@ -16,6 +16,6 @@
         %tr
           %td= link_to script.name, script
           - if script_level
-            %td= link_to 'Play', script_level_path(script, script_level)
+            %td= link_to 'Play', script_next_path(script)
           %td= link_to(t('crud.edit'), edit_script_path(script))
           %td= link_to t('crud.destroy'), script, method: :delete, data: { confirm: t('crud.confirm') }
