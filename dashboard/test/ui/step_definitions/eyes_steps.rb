@@ -9,7 +9,6 @@ require 'json'
 MATCH_TIMEOUT = 5
 
 When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
-  return if CDO.ignore_eyes_mismatches
   ensure_eyes_available
 
   batch = Applitools::Base::BatchInfo.new(ENV['BATCH_NAME'])
@@ -38,14 +37,12 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
 end
 
 And(/^I close my eyes$/) do
-  return if CDO.ignore_eyes_mismatches
   @browser = @original_browser
   fail_on_mismatch = !CDO.ignore_eyes_mismatches
   @eyes.close(fail_on_mismatch)
 end
 
 And(/^I see no difference for "([^"]*)"$/) do |identifier|
-  return if CDO.ignore_eyes_mismatches
   @eyes.check_window(identifier, MATCH_TIMEOUT)
 end
 
