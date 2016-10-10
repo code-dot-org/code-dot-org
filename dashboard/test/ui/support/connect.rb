@@ -1,21 +1,14 @@
 require 'selenium/webdriver'
+require 'selenium/webdriver/remote/http/persistent'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../deployment'
 require 'active_support/core_ext/object/blank'
+require_relative '../utils/selenium_browser'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
 MAX_CONNECT_RETRIES = 3
-
-def local_browser
-  browser = Selenium::WebDriver.for :chrome, url: "http://127.0.0.1:9515"
-  if ENV['MAXIMIZE_LOCAL']
-    max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
-    browser.manage.window.resize_to(max_width, max_height)
-  end
-  browser
-end
 
 def slow_browser?
   ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
@@ -30,7 +23,8 @@ def saucelabs_browser
     raise "Please define CDO.saucelabs_authkey"
   end
 
-  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@ondemand.saucelabs.com:80/wd/hub"
+  is_tunnel = ENV['CIRCLE_BUILD_NUM']
+  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
   browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
@@ -40,8 +34,10 @@ def saucelabs_browser
   end
 
   capabilities[:javascript_enabled] = 'true'
+  capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   capabilities[:name] = ENV['TEST_RUN_NAME']
-  capabilities[:build] = ENV['BUILD']
+  capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
+  capabilities[:idleTimeout] = 180
 
   puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
@@ -52,7 +48,7 @@ def saucelabs_browser
       browser = Selenium::WebDriver.for(:remote,
         url: url,
         desired_capabilities: capabilities,
-        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
+        http_client: Selenium::WebDriver::Remote::Http::Persistent.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
       puts 'Failed to get browser, retrying...'
@@ -80,7 +76,7 @@ end
 def get_browser
   if ENV['TEST_LOCAL'] == 'true'
     # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
-    local_browser
+    SeleniumBrowser.local_browser
   else
     saucelabs_browser
   end
@@ -129,8 +125,18 @@ After do |scenario|
   log_result all_passed
 end
 
+def check_for_page_errors
+  js_errors = @browser.execute_script('return window.detectedJSErrors;')
+  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
+
+  # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
+  # js_errors.should eq nil
+end
+
 After do |_s|
   unless @browser.nil?
+    check_for_page_errors
+
     # clear session state (or get a new browser)
     if slow_browser?
       unless @browser.current_url.include?('studio')

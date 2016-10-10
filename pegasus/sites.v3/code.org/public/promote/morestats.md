@@ -1,14 +1,15 @@
 ---
 chart: true
 ---
-# Other Advocacy Materials
+# Make Your Own Advocacy Materials
 
-This page contains numerous resources to assist in advocacy. You can find links to some of our popular blog posts, related documents, studies, and resources outside of Code.org.  
+Do you need to create a slide deck or one-pager to advocate for computer science in your state or city? The blog posts and links below contain resources and statistics that you can use to make your own custom materials! 
 
 
 ## Code.org blog posts
 ### Miscellaneous
 
+* AP Computer Science A is the [fastest-growing](http://blog.code.org/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
 * [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
 * Computing occupations are the [#1 source of new wages](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://blog.code.org/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968).
@@ -39,8 +40,10 @@ We are interested in seeing what's happening in computer science education inter
 
 ## Outside resources
 
+- A [report](http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf) by the Education Commission of the States provides details on computer science in high school graduatoin requirements.  
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education"
-- [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in the report by [Burning Glass](http://burning-glass.com/research/coding-skills/).
+- Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
+- [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in [the report](http://burning-glass.com/research/coding-skills/) by Burning Glass.
 - 91% of open software jobs are [outside Silicon Valley](http://www.inc.com/salvador-rodriguez/act-software-developers-map.html). 
 - BSA released a report on the [economic impact of software](http://softwareimpact.bsa.org/). 
 - On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.

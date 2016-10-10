@@ -1,10 +1,8 @@
 /**
  * @overview Simulated client node.
  */
-'use strict';
-
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NodeType = require('./NetSimConstants').NodeType;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');
@@ -104,9 +102,9 @@ NetSimClientNode.prototype.getAddress = function () {
  */
 NetSimClientNode.prototype.getOutgoingWire = function () {
   var cachedWireRows = this.shard_.wireTable.readAll();
-  var outgoingWireRow = _.find(cachedWireRows, function (wireRow) {
+  var outgoingWireRow = _.find(cachedWireRows, wireRow => {
     return wireRow.localNodeID === this.entityID;
-  }, this);
+  });
   if (outgoingWireRow) {
     return new NetSimWire(this.shard_, outgoingWireRow);
   }

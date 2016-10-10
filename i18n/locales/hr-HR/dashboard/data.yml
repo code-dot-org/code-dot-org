@@ -1,545 +1,476 @@
 hr:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Uvod u informatički tečaj za učenike nižih razreda osnovne škole
-          Unplug1: Nivo 1
-          Maze: Nivo 2
-          Unplug2: Nivo 3
-          Unplug3: Nivo 4
-          Artist: Nivo 5
-          Unplug4: Nivo 6
-          Artist2: Nivo 7
-          Unplug5: Nivo 8
-          Farmer: Nivo 9
-          Unplug6: Nivo 10
-          Artist3: Nivo 11
-          Unplug7: Nivo 12
-          Farmer2: Nivo 13
-          Unplug8: Nivo 14
-          Artist4: Nivo 15
-          Unplug9: Nivo 16
-          Farmer3: Nivo 17
-          Unplug10: Nivo 18
-          Artist5: Nivo 19
-          Unplug11: Nivo 20
-        Hour of Code:
-          desc: Hour of Code
-          Maze: Nivo 1
-        Edit Code:
-          desc: Uređivanje kôda (beta)
-          MazeEC: Nivo 1
-        2014 Levels:
-          desc: Odskok (beta)
-          Bounce: Nivo 1
-        Builder Levels:
-          desc: Korisničke mozgalice (beta)
-          Custom: Nivo 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Nivo 1
-        Jigsaw Levels:
-          desc: Slagalica (beta)
-          Jigsaw: Nivo 1
-        Step Levels:
-          desc: Labirint (beta)
-          MazeStep: Naredni korak
-        edit-code:
-          desc: Uređivanje kôda (beta)
-          MazeEC: Nivo 1
-          Applab: Nivo 2
-          ArtistEC: Nivo 3
-          StudioEC: Nivo 4
-        events:
-          desc: Odskok (beta)
-          Bounce: Nivo 1
-          Studio: Nivo 2
-        builder:
-          desc: Korisničke mozgalice (beta)
-          Custom: Nivo 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Nivo 1
-        jigsaw:
-          desc: Slagalica (beta)
-          Jigsaw: Nivo 1
-        step:
-          desc: Labirint (beta)
-          MazeStep: Naredni korak
-        wordsearch:
-          desc: Slovkanje (beta)
-          WordSearch: Nivo 1
     game:
       name:
-        Unplug1: Uvod u računalstvo
-        Maze: Labirint
-        Multi: Materijali za višestruki izbor
-        Unplug2: Razmišljati poput računala
-        Unplug3: Grafičko programiranje
-        Artist: Umjetnik
-        Unplug4: Algoritmi
-        Artist2: Umjetnik 2
-        Unplug5: Funkcije
-        Farmer: Farmer
-        Unplug6: Uvjeti
-        Artist3: Umjetnik 3
-        Unplug7: Skladanje pjesama
-        Farmer2: Farmer 2
-        Unplug8: Apstrakcija
-        Artist4: Umjetnik 4
-        Unplug9: Programiranje u smjenama
-        Farmer3: Farmer 3
-        Unplug10: Internet
-        Artist5: Umjetnik 5
-        Unplug11: Zamotavanje
-        MazeEC: Labirint
-        Bounce: Odskok
-        Flappy: Flappy Bird
-        Jigsaw: Slagalica
-        MazeStep: Labirint korak po korak
-        Wordsearch: Traženje riječi
-        Webapp: Laboratorij aplikacija
-        ArtistEC: Umjetnik
-        TextMatch: Spajanje riječi
-        StudioEC: Laboratorij igara
-        Applab: Laboratorij aplikacija
-        NetSim: Internetski Simulator
-        Custom: Umjetnik
-        CustomStudio: Laboratorij igara
+        'Unplug1': Uvod u računalstvo
+        'Maze': Labirint
+        'Multi': Materijali za višestruki izbor
+        'Unplug2': Razmišljati poput računala
+        'Unplug3': Grafičko programiranje
+        'Artist': Umjetnik
+        'Unplug4': Algoritmi
+        'Artist2': Umjetnik 2
+        'Unplug5': Funkcije
+        'Farmer': Farmer
+        'Unplug6': Uvjeti
+        'Artist3': Umjetnik 3
+        'Unplug7': Skladanje pjesama
+        'Farmer2': Farmer 2
+        'Unplug8': Apstrakcija
+        'Artist4': Umjetnik 4
+        'Unplug9': Programiranje u smjenama
+        'Farmer3': Farmer 3
+        'Unplug10': Internet
+        'Artist5': Umjetnik 5
+        'Unplug11': Zamotavanje
+        'MazeEC': Labirint
+        'Bounce': Odskok
+        'Flappy': Flappy Bird
+        'Jigsaw': Slagalica
+        'MazeStep': Labirint korak po korak
+        'Wordsearch': Traženje riječi
+        'Webapp': Laboratorij aplikacija
+        'ArtistEC': Umjetnik
+        'TextMatch': Spajanje riječi
+        'StudioEC': Laboratorij igara
+        'Applab': Laboratorij aplikacija
+        'NetSim': Internetski Simulator
+        'Custom': Umjetnik
+        'CustomStudio': Laboratorij igara
     trophy:
       name:
-        Bronze: Bronca
-        Silver: Srebro
-        Gold: Zlato
+        'Bronze': Bronca
+        'Silver': Srebro
+        'Gold': Zlato
     concept:
       description:
-        sequence: Slijed
-        if: 'Blok "Ako"'
-        if_else: 'Blok "Ako-inače"'
-        loop_times: 'Blok "Ponavljaj"'
-        loop_until: 'Blok "Ponavljaj dok ne bude"'
-        loop_while: 'Blok "Dok"'
-        loop_for: 'Blok "Brojač"'
-        function: Funkcije
-        parameters: Funkcije s parametrima
+        'sequence': Slijed
+        'if': 'Blok "Ako"'
+        'if_else': 'Blok "Ako-inače"'
+        'loop_times': 'Blok "Ponavljaj"'
+        'loop_until': 'Blok "Ponavljaj dok ne bude"'
+        'loop_while': 'Blok "Dok"'
+        'loop_for': 'Blok "Brojač"'
+        'function': Funkcije
+        'parameters': Funkcije s parametrima
     level:
       instructions:
-        maze_2_2: 'Možeš li mi pomoći da uhvatim zločestu svinju? Spoji nekoliko "pomakni naprijed" blokova zajedno i pritisni tipku "Pokreni program" da me dovedeš do tamo. '
-        maze_2_1: Ova svinja mi je nakostriješila perje. Pomozi mi ga pronaći!
-        maze_2_2_5: Prati stazu i odvedi me do šašave svinje. Zaobiđi TNT ili će perje letjeti na sve strane!
-        maze_2_3: Vodi me do zelene zloće! (Pazi se TNT-a)
-        maze_2_4: Ostani smiren i pomozi mi pronaći zločestu svinju inače bih se mogao naljutiti !
-        maze_2_5: Postoji način kako da dođem do šašave svinje koristeći samo 2 bloka. Možeš li doći do rješenja ?
-        maze_2_6: Pokušaj me dovesti do zelenog uljeza koristeći samo tri bloka.
-        maze_2_7: Pomogni mi otjerati ovu zločestu svinju korištenjem što je moguće manje blokova. Pokušaj koristiti više od jednog bloka ponavljanja.
-        maze_2_8: 'Kada blok je siv, to znači da ga ne možeš izbrisati. Riješi ovaj zadatak koristeći blok "ponovi" koji ponavlja 3 puta. Pokušaj staviti ova 3 bloka unutar sivog "ponovi" bloka: idi, idi, okreni se.'
-        maze_2_9: 'U redu, probaj sada "ponavljaj dok" naredbu - ona će se ponavljati dok ne dođem do dosadne svinje.'
-        maze_2_10: 'OK, posljednji put za vježbu - možeš li riješiti ovaj zadatak koristeći samo 4 bloka?'
-        maze_2_11: Dragi čovječe. Ja zombij. Ja gladan. Moram... otići ... do suncokreta... Možeš li me odvesti tamo koristeći samo 5 naredbi?
-        maze_2_12: OK, ovo je slično, ali malo drugačije. Možeš li to riješiti sa samo 5 blokova?
-        maze_2_13: 'Koristi novi blok "ako" da bih mogao odlučiti kada da skrenem. Savjet: trebaš još samo jedan blok, ali zapamti kako smo sve postavili tako da to sljedeći put možeš učiniti samostalno.'
-        maze_2_14: 'OK, ovo je slično prošlom zadatku, samo se trebaš sjetiti kako si koristio blokove "ako" i "ponovi" zajedno.'
-        maze_2_15: 'Ja željeti suncokret! Koristi blok "ako" da me dovedeš do njega sa što je moguće manje blokova.'
-        maze_2_16: 'OK, za vježbu to napravi još jednom - ovo nije puno drugačije, ali pazi na mesožderke!'
-        maze_2_17: 'Blok "ako-inače" provjerava uvjet, a onda napravi ILI jedno ILI drugo. Da bi me doveo do suncokreta, probaj koristiti ovaj novi blok.'
-        maze_2_18: 'Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?'
-        maze_2_19: Možeš li dodati samo 3 bloka da bi mi pomogao proći kroz složeniji labirint? Ako to napraviš kako treba, mogu hodati po svakom krivudavom putu bez obzira na dužinu.
-        turtle_1_1: Zdravo, ja sam umjetnik. Možeš napisati kôd da mogu nacrtati gotovo sve. Iskoristi nekoliko blokova da bih crtao po sivim linijama na slici.
-        turtle_1_2: 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju omiljenu boje tako da je odabereš na novom bloku "postavi boju".'
-        turtle_1_3: Napravi kvadrat koristeći samo 3 bloka.
-        turtle_1_4: 'Nactaj trokut čije su stranice u različitim bojama koristeći opciju "nasumično odabrana boja" koja svaki put bira drugu boju. Savjet: sam ćeš morati otkriti koliko se treba okrenuti tako da klikneš na broj na bloku okretanja.'
-        turtle_1_5: Sada, za vježbu, nacrtajte trokut, a onda i kvadrat kako biste nacrtali omotnicu.
-        turtle_1_6: 'Možeš li riješiti kako nacrtati ovaj trokut i kvadrat? Savjet: Prvo nacrtaj trokut, a zatim zaključi koliko se umjetnik treba okrenuti prije crtanja kvadrata.'
-        turtle_1_7: 'OK, hajdemo sad malo teže - možeš li nacrtati ove zelene naočale? Stranice kvadrata su dugačke 100 piksela, a razmaknuti su 50 piksela. Nemoj ih zaboraviti crtati zelenom bojom!'
-        turtle_1_8: 'OK, pokušaj zaključiti što će se dogoditi ako pokreneš ovaj program (ili klikni na "Pokreni" da ga isprobaš). Zatim ga ponovi dovoljan broj puta da dovršiš crtež. Boje će svaki put biti drugačije.'
-        turtle_1_9: Možeš li otkriti s kojim brojem treba zamijeniti upitnik da bi nacrtao krug?
-        turtle_1_10: 'Uspio si! Sad možeš nacrtati sve što poželiš. Evo nekih zgodnih ideja: štapićasti čovječuljak, pahuljica ili spirala. Također isprobaj novi blok "postavi širinu". Dobro se zabavi!'
-        turtle_4_1: 'Možeš li nacrtati trokut (sa stranicama od 100 piksela) sa samo 3 bloka? Savjet: koristi blok "ponovi".'
-        turtle_4_2: 'Da bi nacrtao ove trokute, dodaj blok "okreni desno za 90 stupnjeva" negdje u sredini programa. Naći ćeš ga već postavljenog na radnu površinu.'
-        turtle_4_3: 'OK, ovdje je kôd za crtanje jednog trokuta koji si napravio. Možeš li dodati blokove "ponovi" i "okreni" da bi dobio lijepi cvijet?'
-        turtle_4_4: 'Ovdje je isti kôd iz prethodnog zadatka, ali se ovaj put nakon što nacrta trokut okreće za samo 36 stupnjeva. Koliko puta se to treba ponoviti? (Savjet: nakon okreta od 360 stupnjeva će crtež imati puni krug)'
-        turtle_4_5: 'Ovdje je isti kôd iz prethodnog zadatka, ali se ovaj put ponavlja 36 puta. Koliko stupnjeva se svaki put treba okrenuti? (Savjet: nakon okreta od 360 stupnjeva će crtež imati puni krug)'
-        turtle_4_6: Koristeći samo 3 bloka, možeš li nacrtati kvadrat sa stranicama duljine 20 piksela?
-        turtle_4_7: 'Ovdje je kôd za crtanje kvadrata iz prethodnog zadatka. Možeš li ga ponoviti tako da nacrta 10 kvadrata jedan do drugog tako da dobiješ ljestve? Savjet: trebaš dodati još samo dva bloka.'
-        turtle_4_8: Ovdje je rješenje prethodnog zadatka. Možeš li dodati još samo 2 bloka da dovršiš sliku?
-        turtle_4_9: Ovdje je rješenje prethodnog zadatka. Za koliko se stupnjeva trebaš okretati da dovršiš crtež? (Vjerojatno ćeš trebati pogađati nekoliko puta)
-        turtle_4_10: Ovo je rješenje prethodnog zadatka. Koliko puta to trebaš ponoviti da dovršiš crtež?
-        turtle_4_11: 'Pokušaj promijeniti brojeve u blokovima "okreni" i "ponovi" da bi dobio različite uzorke. Ili eksperimentiraj s izmjenama u ostatku koda da bi nacrtao što god želiš.'
-        maze_karel_1_1: 'Zdravo, ja sam farmer. Trebam tvoju pomoć da poravnam zemlju na farmi da bude spremna za sadnju. Pomakni me do hrpe zemlje i koristi blok "ukloni" da bi je uklonio.'
-        maze_karel_1_2: 'Zatim me pomakni do rupe i ispuni je s DVIJE lopate zemlje koristeći blok "ispuni".'
-        maze_karel_1_3: Pomakni me do hrpe zemlje i reci mi koliko lopata zemlje trebam ukloniti koristeći što je moguće manje blokova.
-        maze_karel_1_4: 'Možeš li mi pomoći ukloniti sve hrpe zemlje? Savjet: ako možeš, koristi blok "ponovi".'
-        maze_karel_1_5: 'Pomozi mi ispuniti sve ove rupe sa po 5 lopata zemlje. Savjet: možeš staviti blok "ponovi" unutar bloka "dok".'
-        maze_karel_1_6: 'Ukloni sve hrpe zemlje koristeći što je moguće manje blokova. Nova opcija na padajućem izborniku na bloku "dok" će mi reći stojim li pred hrpom ili pred rupom.'
-        maze_karel_1_7: Oh, našao sam stvarno duboku rupu! Ne znam koliko će mi lopata zemlje trebati da je napunim. Možeš li napisati program koji će je puniti dok se zemlja ne izravna?
-        maze_karel_1_8: Pomozi mi napuniti rupu na kraju polja koristeći što je moguće manje blokova.
-        maze_karel_1_9: 'Napravi da uklonim sve hrpe zemlje. Pokušaj koristiti što je moguće manje blokova. Savjet: koristi blok "dok".'
-        maze_karel_1_10: 'Kasno je i spustio se mrak. Ne mogu reći koliko su velike hrpe zemlje. Sad nemam sve opcije na koje sam navikao na bloku "dok". Pomiči me po polju i ako se tu nalazi hrpa, ukloni je.'
-        maze_karel_1_11: 'Još uvijek je vani mračno. Pomiči me po polju. Ako se tu nalazi hrpa, ukloni je, a ako se nalazi rupa, ispuni je. Savjet: koristi padajući izbornik na bloku "ako".'
-        turtle_2_1: 'Zdravo! Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi nacrtati kvadrat u posebnoj boji. Važna napomena: imaš na raspolaganju iste blokove, ali su sada grupirani u kategorije.'
-        turtle_2_2: 'Dobrodošao u korištenje funkcija! One ti omogućavaju da definiraš nove blokove! Isprobaj novi blok "nacrtaj kvadrat", kojeg možeš naći u kategoriji "Funkcije", da bi nacrtao mali zeleni 50x50 kvadrat.'
-        turtle_2_3: 'Koristi blok "ponovi" (u kategoriji "Petlje") da nacrtaš 3 kvadrata veličine 100, s pomakom od 120 stupnjeva. Nacrtaj ih u tri različite, nasumično odabrane boje.'
-        turtle_2_4: 'Sad ćemo postati maštoviti. Promijeni kôd tako da nacrtaš 36 kvadrata, veličine 100 pixela, svaki zakrenut za 10 stupnjeva. Savjet: možeš koristiti klizač da bih crtao brže.'
-        turtle_2_5: 'Nacrtaj kvadrate sa stranicama duljine 50, 60, 70, 80 i 90 piksela. Trebat ćeš pet puta koristiti funkciju "nacrtaj kvadrat".'
-        turtle_2_6: 'Ovaj program će koristiti brojač, a crta iste kvadrate kao i prošli put. Želimo da kvadrat bude iste veličine kao i brojač, pa zato koristimo blok "brojač". Savjet: Nalazi se u kategoriji Varijable.'
-        turtle_2_7: 'Ovo je program koji crta spiralu, ali blokovi su isključeni pa program ne radi. Napravi novi program koristeći blok "broji s" (u kategoriji Petlje") i blok "brojač" (u kategoriji Varijable) da bi nacrtao istu spiralu.'
-        turtle_2_7_5: 'Ovdje je nova funkcija "nacrtaj snjegovića" (u kategoriji "Funkcije"). Nacrtaj dva snjegovića, visine 250 i 100.'
-        turtle_2_8: 'Ovo je malo zahtjevnije. Koristi funkciju "nacrtaj snjegovića" i novi blok "skoči naprijed" (u kategoriji Akcije). Nacrtaj 3 snjegovića u različitim bojama, razmaknute za 100 piksela.'
-        turtle_2_9: 'Koristi petlju "broji s" da bi nacrtao obitelj snjegovića visokih 110, 100, 90, 80 i 70 piksela. Snjegovići trebaju biti razmaknuti 60 piksela.'
-        turtle_2_10: Ovdje je nekakav kôd da eksperimentiraš s različitim spiralama. Što će se dogoditi ako promijeniš veličinu okreta? Ili ako u petlju staviš nasumični odabir boje? Nacrtaj što god želiš.
-        maze_karel_2_1: 'Korištenjem blokova mi pomogni ukloniti sva hrpe i ispuniti sve rupe na zemlji. Pokušaj koristiti petlje umjesto krištenja previše blokova. Savjet: možeš staviti petlju unutar druge petlje.'
-        maze_karel_2_2: 'Definirali smo vlastiti blok i nazvali ga "ispuni 5", a sad se nalazi u kategoriji Funkcije. Koristi ga da mi pomogneš ispuniti ovu rupu.'
-        maze_karel_2_3: 'Koristi novi blok funkcije "ispuni 5" da bih ispunio sve rupe. Trebat ćeš blok "ispuni 5" dovući iz kategorije Funkcije.'
-        maze_karel_2_4: Definiraj novu funkciju koja će uklanjati 7 lopata zemlje. Zatim je iskoristi u pisanju programa kojim ćeš mi pomoći ukloniti sve hrpe.
-        maze_karel_2_5: Napravi novu funkciju koja uklanja 6 lopata zemlje s hrpe i iskoristi je da mi pomogneš izravnati sve hrpe.
-        maze_karel_2_6: 'Koristeći dvije nove funkcije, "ispuni 8" i "ukloni 8", pomogni mi da izravnam hrpu i ispunim rupu.'
-        maze_karel_2_7: Na mojem polju je krava! Napiši novu funkciju koja će mi pomoći da izbjegnem kravu i uklonim hrpu. Postavi sve svoje blokove unutar nove funkcije.
-        maze_karel_2_8: 'Koristeći ovu novu funkciju, "izbjegni kravu i ukloni 1", pomogni mi ukloniti sve hrpe.'
-        maze_karel_2_9: Ovdje je funkcija koja uklanja 4 različite hrpe zemlje u okomitom stupcu. Probaj staviti tu funkciju unutar petlje, tako da ukloniš sve hrpe zemlje koristeći svega nekoliko novih blokova.
-        maze_karel_2_10: Pomiči me po polju i koristeći ove dvije funkcije pomogni mi ukloniti sve hrpe i ispuniti sve rupe.
-        turtle_3_1: 'Ovaj zadatak ti pokazuje kako su definirane funkcije "nacrtaj kvadrat" i "nacrtaj krug". Definiranje funkcija ne pokreće njihove blokove. Trebat ćeš izvući blok "nacrtaj kvadrat" da bi stvarno nacrtao kvadrat.'
-        turtle_3_2: 'Korištenjem funkcije "nacrtaj kvadrat" kao primjera, napravi funkciju "nacrtaj trokut" i iskoristi je.'
-        turtle_3_3: 'Nacrtaj trokutastu ogradu oko mačaka i kvadratnu oko krave. Savjet: često testiraj program da vidiš kako ti ide.'
-        turtle_3_4: 'Pokušaj smisliti kako iskoristiti "nacrtaj kvadrat" i "nacrtaj trokut" (i par drugih blokova) da nacrtaš kuću oko lava.'
-        turtle_3_5: 'Sada napravi novu funkciju "nacrtaj kuću" i iskoristi je da udomiš dvije mačke. Savjet: napravi novu funkciju koristeći blok "uradi nešto" i upiši vlastiti tekst da bi dao ime bloku.'
-        turtle_3_6: 'Koristeći "nacrtaj kvadrat" kao primjer, dodaj unos nazvan "duljina" u funkciju "nacrtaj trokut". Potom nacrtaj trokute različitih veličina. (Savjet: klikni na zvjezicu da dodaš unos u funkciju)'
-        turtle_3_7: 'Dodaj unos zvan "duljina" u "nacrtaj kuću" i napravi veliku kuću za slona (sa stranicama duljine 150 piksela)'
-        turtle_3_8: 'Izmijeni "nacrtaj kuću" tako da se nakon crtanja nove kuće nalazim na njenom donjem desnom kutu. Iskoristi tu izmijenjenu funkciju da nacrtaš tri kuće.'
-        turtle_3_9: 'Možeš li ponovno napraviti funkciju "nacrtaj kuću" bez ičije pomoći? Pokušaj, a zatim nacrtaj niz kuća.'
-        turtle_3_10: Puno si naučio! Sada to iskoristi da nacrtaš što god želiš. Pokušaj nacrtati zvijezdu, spiralu ili kitnjastu pahuljicu.
-        maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati zemljište i pripremiti ga za sadnju?
-        maze_karel_debug_seq_2: Što je krivo u ovom programu? Kako bi ga ti popravio tako da ja mogu ukloniti ovu hrpu?
-        maze_karel_debug_repeat: Ukloni mi greške u ovom programu tako da moje polje bude poravnato.
-        maze_karel_debug_while: Kako bi ti izmijenio ovaj program i pomogao mi da zatrpam rupu?
-        maze_karel_debug_if: Upomoć! Popravi program tako da moje polje bude posve poravnato.
-        maze_karel_debug_if_else: Ispravi greške u ovom programu tako da ja mogu zatrpati rupe i ukloniti sve hrpe.
-        maze_karel_debug_function_1: Koja izmjena u ovom programu bi mi pomogla ukloniti sve hrpe?
-        maze_karel_debug_function_2: Možeš li ukloniti greške u ovom programu tako da ja mogu poravnati svoje polje?
-        maze_karel_debug_function_3: 'Uredi ovaj program tako da uklonim sve hrpe na polju. '
-        turtle_5_1: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
-        turtle_5_2: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
-        turtle_5_3: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
-        turtle_5_4: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
-        turtle_5_5: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
-        turtle_5_6: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
-        maze_3_1: Trebam doći do te svinje! Natipkaj nekoliko poziva funkcije move(); tako da mogu dobiti svoja jaja natrag.
-        maze_3_2: Napiši mi program tako da mogu stići skroz do svinje.
-        maze_3_3: Kako da dođem do svinje? Potrudi se da se ne zaletim u kutiju TNT-a!
-        maze_3_4: Aaah! Napiši mi program koji će me voditi oko TNT-a i do svinje.
-        bounce_1: 'Dodaj blok na blok "kad lijeva strelica" i klikni na "Pokreni". Pomakni reket koristeći lijevu strelicu da dođeš do cilja.'
-        bounce_2: 'Dodaj blok na blokove "kad desna strelica" i "kad lijeva strelica". Pomiči reket da dođeš do oba cilja.'
-        bounce_3: 'Sad pokušaj nešto slično s blokom "kad strelica gore". Pomiči reket do cilja na vrhu.'
-        bounce_4: Ovaj put trebaš dodati četiri bloka. Pomiči reket do sva četiri cilja da bi ispunio ovaj zadatak.
-        bounce_5: 'Ispustit ćemo lopticu da pada prema reketu. Na blok "kada lopta pogodi reket" dodaj odgovarajući blok koji će osigurati da lopta dođe do cilja.'
-        bounce_6: 'Sada je cilj na vrhu. Da bi riješio ovaj zadatak, trebaš dodati blokove na oba "kada lopta pogodi" bloka.'
-        bounce_7: 'Dodaj blokove na svaki "kada" blok. Odbijaj lopticu dok god ne pogodi cilj.'
-        bounce_10: 'Sada je gol na vrhu. Dodaj blokove "dodaj bod" i "dodaj bod protivniku" na blokove "kada je lopta u golu" i "kada lopta promaši reket" da bi napravio igru. Isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.'
-        bounce_11: 'Sada možeš blokove prikačiti na blok "pri pokretanju". Trebaš dodati novi blok "ubaci novu loptu" na više mjesta. Također, pokušaj promijeniti scenu ili brzinu reketa i lopte te isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.'
-        bounce_12: Napravi vlastitu igru Odbijanja. Možeš promijeniti sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima da isprobaju tvoju igru na svojim mobitelima.
-        Custom_builder: 'Dovuci blokove s alatne trake na radnu površinu da bi nacrtao nivo koji želiš napraviti. Kad budeš spreman klikni na "Pokreni".'
-        flappy_1: 'Bloku "na klik" prikači odgovarajući blok pa klikni na "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.'
-        flappy_2: |-
+        'maze_2_2': 'Možeš li mi pomoći da uhvatim zločestu svinju? Spoji nekoliko "pomakni naprijed" blokova zajedno i pritisni tipku "Pokreni program" da me dovedeš do tamo. '
+        'maze_2_1': Ova svinja mi je nakostriješila perje. Pomozi mi ga pronaći!
+        'maze_2_2_5': Prati stazu i odvedi me do šašave svinje. Zaobiđi TNT ili će perje letjeti na sve strane!
+        'maze_2_3': Vodi me do zelene zloće! (Pazi se TNT-a)
+        'maze_2_4': Ostani smiren i pomozi mi pronaći zločestu svinju inače bih se mogao naljutiti !
+        'maze_2_5': Postoji način kako da dođem do šašave svinje koristeći samo 2 bloka. Možeš li doći do rješenja ?
+        'maze_2_6': Pokušaj me dovesti do zelenog uljeza koristeći samo tri bloka.
+        'maze_2_7': Pomogni mi otjerati ovu zločestu svinju korištenjem što je moguće manje blokova. Pokušaj koristiti više od jednog bloka ponavljanja.
+        'maze_2_8': 'Kada blok je siv, to znači da ga ne možeš izbrisati. Riješi ovaj zadatak koristeći blok "ponovi" koji ponavlja 3 puta. Pokušaj staviti ova 3 bloka unutar sivog "ponovi" bloka: idi, idi, okreni se.'
+        'maze_2_9': 'U redu, probaj sada "ponavljaj dok" naredbu - ona će se ponavljati dok ne dođem do dosadne svinje.'
+        'maze_2_10': 'OK, posljednji put za vježbu - možeš li riješiti ovaj zadatak koristeći samo 4 bloka?'
+        'maze_2_11': Dragi čovječe. Ja zombij. Ja gladan. Moram... otići ... do suncokreta... Možeš li me odvesti tamo koristeći samo 5 naredbi?
+        'maze_2_12': OK, ovo je slično, ali malo drugačije. Možeš li to riješiti sa samo 5 blokova?
+        'maze_2_13': 'Koristi novi blok "ako" da bih mogao odlučiti kada da skrenem. Savjet: trebaš još samo jedan blok, ali zapamti kako smo sve postavili tako da to sljedeći put možeš učiniti samostalno.'
+        'maze_2_14': 'OK, ovo je slično prošlom zadatku, samo se trebaš sjetiti kako si koristio blokove "ako" i "ponovi" zajedno.'
+        'maze_2_15': 'Ja željeti suncokret! Koristi blok "ako" da me dovedeš do njega sa što je moguće manje blokova.'
+        'maze_2_16': 'OK, za vježbu to napravi još jednom - ovo nije puno drugačije, ali pazi na mesožderke!'
+        'maze_2_17': 'Blok "ako-inače" provjerava uvjet, a onda napravi ILI jedno ILI drugo. Da bi me doveo do suncokreta, probaj koristiti ovaj novi blok.'
+        'maze_2_18': 'Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?'
+        'maze_2_19': Možeš li dodati samo 3 bloka da bi mi pomogao proći kroz složeniji labirint? Ako to napraviš kako treba, mogu hodati po svakom krivudavom putu bez obzira na dužinu.
+        'turtle_1_1': Zdravo, ja sam umjetnik. Možeš napisati kôd da mogu nacrtati gotovo sve. Iskoristi nekoliko blokova da bih crtao po sivim linijama na slici.
+        'turtle_1_2': 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju omiljenu boje tako da je odabereš na novom bloku "postavi boju".'
+        'turtle_1_3': Napravi kvadrat koristeći samo 3 bloka.
+        'turtle_1_4': 'Nactaj trokut čije su stranice u različitim bojama koristeći opciju "nasumično odabrana boja" koja svaki put bira drugu boju. Savjet: sam ćeš morati otkriti koliko se treba okrenuti tako da klikneš na broj na bloku okretanja.'
+        'turtle_1_5': Sada, za vježbu, nacrtajte trokut, a onda i kvadrat kako biste nacrtali omotnicu.
+        'turtle_1_6': 'Možeš li riješiti kako nacrtati ovaj trokut i kvadrat? Savjet: Prvo nacrtaj trokut, a zatim zaključi koliko se umjetnik treba okrenuti prije crtanja kvadrata.'
+        'turtle_1_7': 'OK, hajdemo sad malo teže - možeš li nacrtati ove zelene naočale? Stranice kvadrata su dugačke 100 piksela, a razmaknuti su 50 piksela. Nemoj ih zaboraviti crtati zelenom bojom!'
+        'turtle_1_8': 'OK, pokušaj zaključiti što će se dogoditi ako pokreneš ovaj program (ili klikni na "Pokreni" da ga isprobaš). Zatim ga ponovi dovoljan broj puta da dovršiš crtež. Boje će svaki put biti drugačije.'
+        'turtle_1_9': Možeš li otkriti s kojim brojem treba zamijeniti upitnik da bi nacrtao krug?
+        'turtle_1_10': 'Uspio si! Sad možeš nacrtati sve što poželiš. Evo nekih zgodnih ideja: štapićasti čovječuljak, pahuljica ili spirala. Također isprobaj novi blok "postavi širinu". Dobro se zabavi!'
+        'turtle_4_1': 'Možeš li nacrtati trokut (sa stranicama od 100 piksela) sa samo 3 bloka? Savjet: koristi blok "ponovi".'
+        'turtle_4_2': 'Da bi nacrtao ove trokute, dodaj blok "okreni desno za 90 stupnjeva" negdje u sredini programa. Naći ćeš ga već postavljenog na radnu površinu.'
+        'turtle_4_3': 'OK, ovdje je kôd za crtanje jednog trokuta koji si napravio. Možeš li dodati blokove "ponovi" i "okreni" da bi dobio lijepi cvijet?'
+        'turtle_4_4': 'Ovdje je isti kôd iz prethodnog zadatka, ali se ovaj put nakon što nacrta trokut okreće za samo 36 stupnjeva. Koliko puta se to treba ponoviti? (Savjet: nakon okreta od 360 stupnjeva će crtež imati puni krug)'
+        'turtle_4_5': 'Ovdje je isti kôd iz prethodnog zadatka, ali se ovaj put ponavlja 36 puta. Koliko stupnjeva se svaki put treba okrenuti? (Savjet: nakon okreta od 360 stupnjeva će crtež imati puni krug)'
+        'turtle_4_6': Koristeći samo 3 bloka, možeš li nacrtati kvadrat sa stranicama duljine 20 piksela?
+        'turtle_4_7': 'Ovdje je kôd za crtanje kvadrata iz prethodnog zadatka. Možeš li ga ponoviti tako da nacrta 10 kvadrata jedan do drugog tako da dobiješ ljestve? Savjet: trebaš dodati još samo dva bloka.'
+        'turtle_4_8': Ovdje je rješenje prethodnog zadatka. Možeš li dodati još samo 2 bloka da dovršiš sliku?
+        'turtle_4_9': Ovdje je rješenje prethodnog zadatka. Za koliko se stupnjeva trebaš okretati da dovršiš crtež? (Vjerojatno ćeš trebati pogađati nekoliko puta)
+        'turtle_4_10': Ovo je rješenje prethodnog zadatka. Koliko puta to trebaš ponoviti da dovršiš crtež?
+        'turtle_4_11': 'Pokušaj promijeniti brojeve u blokovima "okreni" i "ponovi" da bi dobio različite uzorke. Ili eksperimentiraj s izmjenama u ostatku koda da bi nacrtao što god želiš.'
+        'maze_karel_1_1': 'Zdravo, ja sam farmer. Trebam tvoju pomoć da poravnam zemlju na farmi da bude spremna za sadnju. Pomakni me do hrpe zemlje i koristi blok "ukloni" da bi je uklonio.'
+        'maze_karel_1_2': 'Zatim me pomakni do rupe i ispuni je s DVIJE lopate zemlje koristeći blok "ispuni".'
+        'maze_karel_1_3': Pomakni me do hrpe zemlje i reci mi koliko lopata zemlje trebam ukloniti koristeći što je moguće manje blokova.
+        'maze_karel_1_4': 'Možeš li mi pomoći ukloniti sve hrpe zemlje? Savjet: ako možeš, koristi blok "ponovi".'
+        'maze_karel_1_5': 'Pomozi mi ispuniti sve ove rupe sa po 5 lopata zemlje. Savjet: možeš staviti blok "ponovi" unutar bloka "dok".'
+        'maze_karel_1_6': 'Ukloni sve hrpe zemlje koristeći što je moguće manje blokova. Nova opcija na padajućem izborniku na bloku "dok" će mi reći stojim li pred hrpom ili pred rupom.'
+        'maze_karel_1_7': Oh, našao sam stvarno duboku rupu! Ne znam koliko će mi lopata zemlje trebati da je napunim. Možeš li napisati program koji će je puniti dok se zemlja ne izravna?
+        'maze_karel_1_8': Pomozi mi napuniti rupu na kraju polja koristeći što je moguće manje blokova.
+        'maze_karel_1_9': 'Napravi da uklonim sve hrpe zemlje. Pokušaj koristiti što je moguće manje blokova. Savjet: koristi blok "dok".'
+        'maze_karel_1_10': 'Kasno je i spustio se mrak. Ne mogu reći koliko su velike hrpe zemlje. Sad nemam sve opcije na koje sam navikao na bloku "dok". Pomiči me po polju i ako se tu nalazi hrpa, ukloni je.'
+        'maze_karel_1_11': 'Još uvijek je vani mračno. Pomiči me po polju. Ako se tu nalazi hrpa, ukloni je, a ako se nalazi rupa, ispuni je. Savjet: koristi padajući izbornik na bloku "ako".'
+        'turtle_2_1': 'Zdravo! Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi nacrtati kvadrat u posebnoj boji. Važna napomena: imaš na raspolaganju iste blokove, ali su sada grupirani u kategorije.'
+        'turtle_2_2': 'Dobrodošao u korištenje funkcija! One ti omogućavaju da definiraš nove blokove! Isprobaj novi blok "nacrtaj kvadrat", kojeg možeš naći u kategoriji "Funkcije", da bi nacrtao mali zeleni 50x50 kvadrat.'
+        'turtle_2_3': 'Koristi blok "ponovi" (u kategoriji "Petlje") da nacrtaš 3 kvadrata veličine 100, s pomakom od 120 stupnjeva. Nacrtaj ih u tri različite, nasumično odabrane boje.'
+        'turtle_2_4': 'Sad ćemo postati maštoviti. Promijeni kôd tako da nacrtaš 36 kvadrata, veličine 100 pixela, svaki zakrenut za 10 stupnjeva. Savjet: možeš koristiti klizač da bih crtao brže.'
+        'turtle_2_5': 'Nacrtaj kvadrate sa stranicama duljine 50, 60, 70, 80 i 90 piksela. Trebat ćeš pet puta koristiti funkciju "nacrtaj kvadrat".'
+        'turtle_2_6': 'Ovaj program će koristiti brojač, a crta iste kvadrate kao i prošli put. Želimo da kvadrat bude iste veličine kao i brojač, pa zato koristimo blok "brojač". Savjet: Nalazi se u kategoriji Varijable.'
+        'turtle_2_7': 'Ovo je program koji crta spiralu, ali blokovi su isključeni pa program ne radi. Napravi novi program koristeći blok "broji s" (u kategoriji Petlje") i blok "brojač" (u kategoriji Varijable) da bi nacrtao istu spiralu.'
+        'turtle_2_7_5': 'Ovdje je nova funkcija "nacrtaj snjegovića" (u kategoriji "Funkcije"). Nacrtaj dva snjegovića, visine 250 i 100.'
+        'turtle_2_8': 'Ovo je malo zahtjevnije. Koristi funkciju "nacrtaj snjegovića" i novi blok "skoči naprijed" (u kategoriji Akcije). Nacrtaj 3 snjegovića u različitim bojama, razmaknute za 100 piksela.'
+        'turtle_2_9': 'Koristi petlju "broji s" da bi nacrtao obitelj snjegovića visokih 110, 100, 90, 80 i 70 piksela. Snjegovići trebaju biti razmaknuti 60 piksela.'
+        'turtle_2_10': Ovdje je nekakav kôd da eksperimentiraš s različitim spiralama. Što će se dogoditi ako promijeniš veličinu okreta? Ili ako u petlju staviš nasumični odabir boje? Nacrtaj što god želiš.
+        'maze_karel_2_1': 'Korištenjem blokova mi pomogni ukloniti sva hrpe i ispuniti sve rupe na zemlji. Pokušaj koristiti petlje umjesto krištenja previše blokova. Savjet: možeš staviti petlju unutar druge petlje.'
+        'maze_karel_2_2': 'Definirali smo vlastiti blok i nazvali ga "ispuni 5", a sad se nalazi u kategoriji Funkcije. Koristi ga da mi pomogneš ispuniti ovu rupu.'
+        'maze_karel_2_3': 'Koristi novi blok funkcije "ispuni 5" da bih ispunio sve rupe. Trebat ćeš blok "ispuni 5" dovući iz kategorije Funkcije.'
+        'maze_karel_2_4': Definiraj novu funkciju koja će uklanjati 7 lopata zemlje. Zatim je iskoristi u pisanju programa kojim ćeš mi pomoći ukloniti sve hrpe.
+        'maze_karel_2_5': Napravi novu funkciju koja uklanja 6 lopata zemlje s hrpe i iskoristi je da mi pomogneš izravnati sve hrpe.
+        'maze_karel_2_6': 'Koristeći dvije nove funkcije, "ispuni 8" i "ukloni 8", pomogni mi da izravnam hrpu i ispunim rupu.'
+        'maze_karel_2_7': Na mojem polju je krava! Napiši novu funkciju koja će mi pomoći da izbjegnem kravu i uklonim hrpu. Postavi sve svoje blokove unutar nove funkcije.
+        'maze_karel_2_8': 'Koristeći ovu novu funkciju, "izbjegni kravu i ukloni 1", pomogni mi ukloniti sve hrpe.'
+        'maze_karel_2_9': Ovdje je funkcija koja uklanja 4 različite hrpe zemlje u okomitom stupcu. Probaj staviti tu funkciju unutar petlje, tako da ukloniš sve hrpe zemlje koristeći svega nekoliko novih blokova.
+        'maze_karel_2_10': Pomiči me po polju i koristeći ove dvije funkcije pomogni mi ukloniti sve hrpe i ispuniti sve rupe.
+        'turtle_3_1': 'Ovaj zadatak ti pokazuje kako su definirane funkcije "nacrtaj kvadrat" i "nacrtaj krug". Definiranje funkcija ne pokreće njihove blokove. Trebat ćeš izvući blok "nacrtaj kvadrat" da bi stvarno nacrtao kvadrat.'
+        'turtle_3_2': 'Korištenjem funkcije "nacrtaj kvadrat" kao primjera, napravi funkciju "nacrtaj trokut" i iskoristi je.'
+        'turtle_3_3': 'Nacrtaj trokutastu ogradu oko mačaka i kvadratnu oko krave. Savjet: često testiraj program da vidiš kako ti ide.'
+        'turtle_3_4': 'Pokušaj smisliti kako iskoristiti "nacrtaj kvadrat" i "nacrtaj trokut" (i par drugih blokova) da nacrtaš kuću oko lava.'
+        'turtle_3_5': 'Sada napravi novu funkciju "nacrtaj kuću" i iskoristi je da udomiš dvije mačke. Savjet: napravi novu funkciju koristeći blok "uradi nešto" i upiši vlastiti tekst da bi dao ime bloku.'
+        'turtle_3_6': 'Koristeći "nacrtaj kvadrat" kao primjer, dodaj unos nazvan "duljina" u funkciju "nacrtaj trokut". Potom nacrtaj trokute različitih veličina. (Savjet: klikni na zvjezicu da dodaš unos u funkciju)'
+        'turtle_3_7': 'Dodaj unos zvan "duljina" u "nacrtaj kuću" i napravi veliku kuću za slona (sa stranicama duljine 150 piksela)'
+        'turtle_3_8': 'Izmijeni "nacrtaj kuću" tako da se nakon crtanja nove kuće nalazim na njenom donjem desnom kutu. Iskoristi tu izmijenjenu funkciju da nacrtaš tri kuće.'
+        'turtle_3_9': 'Možeš li ponovno napraviti funkciju "nacrtaj kuću" bez ičije pomoći? Pokušaj, a zatim nacrtaj niz kuća.'
+        'turtle_3_10': Puno si naučio! Sada to iskoristi da nacrtaš što god želiš. Pokušaj nacrtati zvijezdu, spiralu ili kitnjastu pahuljicu.
+        'maze_karel_debug_seq_1': Dobrodošao u ispravljanje grešaka! Moj kôd ne radi ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati zemljište i pripremiti ga za sadnju?
+        'maze_karel_debug_seq_2': Što je krivo u ovom programu? Kako bi ga ti popravio tako da ja mogu ukloniti ovu hrpu?
+        'maze_karel_debug_repeat': Ukloni mi greške u ovom programu tako da moje polje bude poravnato.
+        'maze_karel_debug_while': Kako bi ti izmijenio ovaj program i pomogao mi da zatrpam rupu?
+        'maze_karel_debug_if': Upomoć! Popravi program tako da moje polje bude posve poravnato.
+        'maze_karel_debug_if_else': Ispravi greške u ovom programu tako da ja mogu zatrpati rupe i ukloniti sve hrpe.
+        'maze_karel_debug_function_1': Koja izmjena u ovom programu bi mi pomogla ukloniti sve hrpe?
+        'maze_karel_debug_function_2': Možeš li ukloniti greške u ovom programu tako da ja mogu poravnati svoje polje?
+        'maze_karel_debug_function_3': 'Uredi ovaj program tako da uklonim sve hrpe na polju. '
+        'turtle_5_1': Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        'turtle_5_2': Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        'turtle_5_3': Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        'turtle_5_4': Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        'turtle_5_5': Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        'turtle_5_6': Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        'maze_3_1': Trebam doći do te svinje! Natipkaj nekoliko poziva funkcije move(); tako da mogu dobiti svoja jaja natrag.
+        'maze_3_2': Napiši mi program tako da mogu stići skroz do svinje.
+        'maze_3_3': Kako da dođem do svinje? Potrudi se da se ne zaletim u kutiju TNT-a!
+        'maze_3_4': Aaah! Napiši mi program koji će me voditi oko TNT-a i do svinje.
+        'bounce_1': 'Dodaj blok na blok "kad lijeva strelica" i klikni na "Pokreni". Pomakni reket koristeći lijevu strelicu da dođeš do cilja.'
+        'bounce_2': 'Dodaj blok na blokove "kad desna strelica" i "kad lijeva strelica". Pomiči reket da dođeš do oba cilja.'
+        'bounce_3': 'Sad pokušaj nešto slično s blokom "kad strelica gore". Pomiči reket do cilja na vrhu.'
+        'bounce_4': Ovaj put trebaš dodati četiri bloka. Pomiči reket do sva četiri cilja da bi ispunio ovaj zadatak.
+        'bounce_5': 'Ispustit ćemo lopticu da pada prema reketu. Na blok "kada lopta pogodi reket" dodaj odgovarajući blok koji će osigurati da lopta dođe do cilja.'
+        'bounce_6': 'Sada je cilj na vrhu. Da bi riješio ovaj zadatak, trebaš dodati blokove na oba "kada lopta pogodi" bloka.'
+        'bounce_7': 'Dodaj blokove na svaki "kada" blok. Odbijaj lopticu dok god ne pogodi cilj.'
+        'bounce_10': 'Sada je gol na vrhu. Dodaj blokove "dodaj bod" i "dodaj bod protivniku" na blokove "kada je lopta u golu" i "kada lopta promaši reket" da bi napravio igru. Isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.'
+        'bounce_11': 'Sada možeš blokove prikačiti na blok "pri pokretanju". Trebaš dodati novi blok "ubaci novu loptu" na više mjesta. Također, pokušaj promijeniti scenu ili brzinu reketa i lopte te isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.'
+        'bounce_12': Napravi vlastitu igru Odbijanja. Možeš promijeniti sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        'Custom_builder': 'Dovuci blokove s alatne trake na radnu površinu da bi nacrtao nivo koji želiš napraviti. Kad budeš spreman klikni na "Pokreni".'
+        'flappy_1': 'Bloku "na klik" prikači odgovarajući blok pa klikni na "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.'
+        'flappy_2': |-
           Sada smo dodali tlo. Prikači odgovarajući blok na blok "kada padne na tlo". Kad Flappy padne, tvoj kôd treba označiti 'KRAJ IGRE'.
-        flappy_3: 'Blok "pri pokretanju" ti omogućuje da pokreneš svoj program kad igra počne. Isprobaj postaviti brzinu za taj nivo i odletjeti do mete.'
-        flappy_4: |-
+        'flappy_3': 'Blok "pri pokretanju" ti omogućuje da pokreneš svoj program kad igra počne. Isprobaj postaviti brzinu za taj nivo i odletjeti do mete.'
+        'flappy_4': |-
           Flappy će letjeti kroz prepreke sve dok ne napišeš kôd da se s njima sudara. Na blok "kada udari u prepreku" prikači odgovarajući blok. Kad Flappy udari u pvi set cijevi, program treba označiti 'KRAJ IGRE'.
-        flappy_5: 'Hajdemo dodati bodovnu listu i dodavati bodove kad god Flappy uspješno prođe prepreku. Dodaj to na blok "kada prođe prepreku", a onda zaradi bod tako da uspješno provedeš Flappyja kroz prvi set cijevi.'
-        flappy_6: Vidi možeš li još uvijek zaraditi bod nakon što napraviš da Flappy jače ili slabije maše krilima.
-        flappy_7: 'A sad pokušaj promijeniti scenu tako da prikačiš odgovarajući blok na blok "pri pokretanju".'
-        flappy_8: Promjenu grafičkih elemenata možeš napraviti bilo kad, ne samo kad igra počne. Probaj staviti NASUMIČNI ODABIR scene kad se dogodi neki drugi događaj, na primjer, kad prođe prepreku.
-        flappy_9: 'Da izmijenimo pravila: napravi da se, kad udariš u prepreku, broj bodova vrati na 0 umjesto da igra završi.'
-        flappy_11: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke elemente i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
-        flappy_k1_1: Igraj Flappy
-        flappy_k1_2: 'Bloku "na klik" prikači odgovarajući blok pa klikni na "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.'
-        flappy_k1_3: |-
+        'flappy_5': 'Hajdemo dodati bodovnu listu i dodavati bodove kad god Flappy uspješno prođe prepreku. Dodaj to na blok "kada prođe prepreku", a onda zaradi bod tako da uspješno provedeš Flappyja kroz prvi set cijevi.'
+        'flappy_6': Vidi možeš li još uvijek zaraditi bod nakon što napraviš da Flappy jače ili slabije maše krilima.
+        'flappy_7': 'A sad pokušaj promijeniti scenu tako da prikačiš odgovarajući blok na blok "pri pokretanju".'
+        'flappy_8': Promjenu grafičkih elemenata možeš napraviti bilo kad, ne samo kad igra počne. Probaj staviti NASUMIČNI ODABIR scene kad se dogodi neki drugi događaj, na primjer, kad prođe prepreku.
+        'flappy_9': 'Da izmijenimo pravila: napravi da se, kad udariš u prepreku, broj bodova vrati na 0 umjesto da igra završi.'
+        'flappy_11': Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke elemente i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        'flappy_k1_1': Igraj Flappy
+        'flappy_k1_2': 'Bloku "na klik" prikači odgovarajući blok pa klikni na "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.'
+        'flappy_k1_3': |-
           Sada smo dodali tlo. Prikači odgovarajući blok na blok "kada padne na tlo". Kad Flappy padne, tvoj kôd treba označiti 'KRAJ IGRE'.
-        flappy_k1_4: 'Blok "pri pokretanju" ti omogućuje da pokreneš svoj program kad igra počne. Isprobaj postaviti brzinu za taj nivo i odletjeti do mete.'
-        flappy_k1_5: |-
+        'flappy_k1_4': 'Blok "pri pokretanju" ti omogućuje da pokreneš svoj program kad igra počne. Isprobaj postaviti brzinu za taj nivo i odletjeti do mete.'
+        'flappy_k1_5': |-
           Flappy će letjeti kroz prepreke sve dok ne napišeš kôd da se s njima sudara. Na blok "kada udari u prepreku" prikači odgovarajući blok. Kad Flappy udari u pvi set cijevi, program treba označiti 'KRAJ IGRE'.
-        flappy_k1_6: 'Hajdemo dodati bodovnu listu i dodavati bodove kad god Flappy uspješno prođe prepreku. Dodaj to na blok "kada prođe prepreku", a onda zaradi bod tako da uspješno provedeš Flappyja kroz prvi set cijevi.'
-        flappy_k1_7: Probaj možeš li osvojiti više bodova kad prođeš prepreku
-        flappy_k1_8: 'A sad pokušaj promijeniti scenu tako da prikačiš odgovarajući blok na blok "pri pokretanju".'
-        flappy_k1_9: 'Probaj promijeniti igrača tako da dodaš blok "postavi igrača" na blok "pri pokretanju".'
-        jigsaw_1: Klikni na blok
-        jigsaw_2: Dovuci blok do cilja
-        jigsaw_3: Složi blokove tako da formiraju sliku
-        jigsaw_4: Složi blokove tako da formiraju sliku
-        jigsaw_5: Složi blokove tako da formiraju sliku
-        jigsaw_6: Složi blokove tako da formiraju sliku
-        jigsaw_7: Složi blokove tako da formiraju sliku
-        jigsaw_8: Složi blokove tako da formiraju sliku
-        jigsaw_9: Složi blokove tako da formiraju sliku
-        jigsaw_10: Složi blokove tako da formiraju sliku
-        jigsaw_11: Složi blokove tako da formiraju sliku
-        jigsaw_12: Složi blokove tako da formiraju sliku
-        jigsaw_13: Riješi zadatak!
-        mazestep_1: Ovdje je opis labirinta
-        mazestep_2: Ovdje je opis labirinta
-        mazestep_3: Ovdje je opis labirinta
-        mazestep_4: Ovdje je opis labirinta
-        mazestep_5: Ovdje je opis labirinta
-        studio_c2_1: 'Možeš li napraviti da ovaj pas kaže "zdravo, svijete"?'
-        studio_c2_2: Možeš li napraviti da pas nešto kaže, a poslije njega da mačka nešto kaže?
-        studio_c2_3: Možeš li napisati program tako da pas dođe do mačke?
-        studio_c2_4: 'Možeš li napisati program tako da pas dođe do mačke, i da mačka kaže "Zdravo" kad pas dođe do nje?'
-        studio_c2_5: 'Možeš li napisati program tako da hobotnica kaže "Zdravo" kad se klikne na nju?'
-        studio_c2_6: Možeš li napisati program tako da se ovaj pingvin kreće pomoću tipki gore / dolje / lijevo / desno da bi dosegao sve ciljeve?
-        studio_c2_7: 'Blok "ponavljaj zauvijek" ti omogućava da se program stalno ponavlja. Možeš li dodati blokove tako da se ovaj dinosaur stalno miče gore-dolje?'
-        studio_c2_8: 'Možeš li napraviti da pingvin kaže "Jao!" i da se čuje zvuk "pogodak" kad natrči na dinosaura, a zatim ga pomoću tipki sa strelicama pomaknuti da se to dogodi?'
-        studio_c2_9: Možeš li dodati blok za dodavanje boda kad pingvin natrči na hobotnicu, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
-        studio_c2_10: Možeš li dodati blokove za promjenu pozadine i brzine kretanja pingvina, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
-        studio_c2_11: Napravi svoju priču. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju priču na svojim mobitelima.
-        studio_c3_story_1: 'Možeš li napraviti da ovaj pas kaže "zdravo, svijete"?'
-        studio_c3_story_2: Možeš li napraviti da pas nešto kaže, a poslije njega da mačka nešto kaže?
-        studio_c3_story_3: Možeš li napisati program tako da pas dođe do mačke?
-        studio_c3_story_4: 'Možeš li napisati program tako da pas dođe do mačke, i da mačka kaže "Zdravo" kad pas dođe do nje?'
-        studio_c3_story_5: Možeš li dodati blok tako da hobotnica bude sretna?
-        studio_c3_story_6: Napravi svoju priču. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju priču na svojim mobitelima.
-        studio_c3_game_1: 'Možeš li napisati program tako da hobotnica kaže "Zdravo" kad se klikne na nju?'
-        studio_c3_game_2: Možeš li napisati program tako da se ovaj pingvin kreće pomoću tipki gore / dolje / lijevo / desno da bi dosegao sve ciljeve?
-        studio_c3_game_3: 'Blok "ponavljaj zauvijek" ti omogućava da se program stalno ponavlja. Možeš li dodati blokove tako da se ovaj dinosaur stalno miče gore-dolje?'
-        studio_c3_game_4: 'Možeš li napraviti da pingvin kaže "Jao!" i da se čuje zvuk "pogodak" kad natrči na dinosaura, a zatim ga pomoću tipki sa strelicama pomaknuti da se to dogodi?'
-        studio_c3_game_5: Možeš li dodati blok za dodavanje boda kad pingvin natrči na hobotnicu, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
-        studio_c3_game_6: Možeš li dodati blokove za promjenu pozadine i brzine kretanja pingvina, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
-        studio_c3_game_7: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
-        studio_playlab_1: 'Pingvin želi reći "zdravo" - možeš li mu pomoći?'
-        studio_playlab_2: 'Špiljski dječak (lik 1) i Špiljska Djevojčica (lik 2) žele reći "zdravo" jedan drugome. Možeš li im pomoći tako da blok "reći" upotrijebiš dvaput?'
-        studio_playlab_3: Možeš li pomoći Tenisačici da dođe do zastave?
-        studio_playlab_4: Možeš li pomoći Tenisaču (lik 1) da dođe do Tenisačice (lik 2) i pustiti zvuk kad stigne tamo?
-        studio_playlab_5: 'Možeš li pomoći Svemircu da kaže "pozdrav zemljanima" kad se klikne? Nemoj zaboraviti kliknuti nakon što klikneš na "Pokreni"'
-        studio_playlab_6: Možeš li pomoći Vještici da se miče uokolo pomoću tipki sa strelicama gore/dolje/lijevo/desno i da prikupi sve čarobne vatrene kugle?
-        studio_playlab_7: 'Blok "ponavljaj zauvijek" ti omogućava da se program stalno ponavlja. Možeš li dodati blokove tako da se čarobnjak stalno miče lijevo-desno?'
-        studio_playlab_8: Možeš li dodati blok za dodavanje boda i blok za puštanje zvuka kad jednorog natrči na čarobnjaka, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
-        studio_playlab_9: Postavi pozadinu za ovu invaziju vanzemaljaca i pomogni Spacebotu da brže stigne do njih tako da mu promijeniš brzinu. Zatim ga pomoću tipki sa strelicama pomakni da dođe do njih i upozori ostale
-        studio_playlab_10: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
-        studio_iceage_hello1: |-
+        'flappy_k1_6': 'Hajdemo dodati bodovnu listu i dodavati bodove kad god Flappy uspješno prođe prepreku. Dodaj to na blok "kada prođe prepreku", a onda zaradi bod tako da uspješno provedeš Flappyja kroz prvi set cijevi.'
+        'flappy_k1_7': Probaj možeš li osvojiti više bodova kad prođeš prepreku
+        'flappy_k1_8': 'A sad pokušaj promijeniti scenu tako da prikačiš odgovarajući blok na blok "pri pokretanju".'
+        'flappy_k1_9': 'Probaj promijeniti igrača tako da dodaš blok "postavi igrača" na blok "pri pokretanju".'
+        'jigsaw_1': Klikni na blok
+        'jigsaw_2': Dovuci blok do cilja
+        'jigsaw_3': Složi blokove tako da formiraju sliku
+        'jigsaw_4': Složi blokove tako da formiraju sliku
+        'jigsaw_5': Složi blokove tako da formiraju sliku
+        'jigsaw_6': Složi blokove tako da formiraju sliku
+        'jigsaw_7': Složi blokove tako da formiraju sliku
+        'jigsaw_8': Složi blokove tako da formiraju sliku
+        'jigsaw_9': Složi blokove tako da formiraju sliku
+        'jigsaw_10': Složi blokove tako da formiraju sliku
+        'jigsaw_11': Složi blokove tako da formiraju sliku
+        'jigsaw_12': Složi blokove tako da formiraju sliku
+        'jigsaw_13': Riješi zadatak!
+        'mazestep_1': Ovdje je opis labirinta
+        'mazestep_2': Ovdje je opis labirinta
+        'mazestep_3': Ovdje je opis labirinta
+        'mazestep_4': Ovdje je opis labirinta
+        'mazestep_5': Ovdje je opis labirinta
+        'studio_c2_1': 'Možeš li napraviti da ovaj pas kaže "zdravo, svijete"?'
+        'studio_c2_2': Možeš li napraviti da pas nešto kaže, a poslije njega da mačka nešto kaže?
+        'studio_c2_3': Možeš li napisati program tako da pas dođe do mačke?
+        'studio_c2_4': 'Možeš li napisati program tako da pas dođe do mačke, i da mačka kaže "Zdravo" kad pas dođe do nje?'
+        'studio_c2_5': 'Možeš li napisati program tako da hobotnica kaže "Zdravo" kad se klikne na nju?'
+        'studio_c2_6': Možeš li napisati program tako da se ovaj pingvin kreće pomoću tipki gore / dolje / lijevo / desno da bi dosegao sve ciljeve?
+        'studio_c2_7': 'Blok "ponavljaj zauvijek" ti omogućava da se program stalno ponavlja. Možeš li dodati blokove tako da se ovaj dinosaur stalno miče gore-dolje?'
+        'studio_c2_8': 'Možeš li napraviti da pingvin kaže "Jao!" i da se čuje zvuk "pogodak" kad natrči na dinosaura, a zatim ga pomoću tipki sa strelicama pomaknuti da se to dogodi?'
+        'studio_c2_9': Možeš li dodati blok za dodavanje boda kad pingvin natrči na hobotnicu, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
+        'studio_c2_10': Možeš li dodati blokove za promjenu pozadine i brzine kretanja pingvina, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
+        'studio_c2_11': Napravi svoju priču. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju priču na svojim mobitelima.
+        'studio_c3_story_1': 'Možeš li napraviti da ovaj pas kaže "zdravo, svijete"?'
+        'studio_c3_story_2': Možeš li napraviti da pas nešto kaže, a poslije njega da mačka nešto kaže?
+        'studio_c3_story_3': Možeš li napisati program tako da pas dođe do mačke?
+        'studio_c3_story_4': 'Možeš li napisati program tako da pas dođe do mačke, i da mačka kaže "Zdravo" kad pas dođe do nje?'
+        'studio_c3_story_5': Možeš li dodati blok tako da hobotnica bude sretna?
+        'studio_c3_story_6': Napravi svoju priču. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju priču na svojim mobitelima.
+        'studio_c3_game_1': 'Možeš li napisati program tako da hobotnica kaže "Zdravo" kad se klikne na nju?'
+        'studio_c3_game_2': Možeš li napisati program tako da se ovaj pingvin kreće pomoću tipki gore / dolje / lijevo / desno da bi dosegao sve ciljeve?
+        'studio_c3_game_3': 'Blok "ponavljaj zauvijek" ti omogućava da se program stalno ponavlja. Možeš li dodati blokove tako da se ovaj dinosaur stalno miče gore-dolje?'
+        'studio_c3_game_4': 'Možeš li napraviti da pingvin kaže "Jao!" i da se čuje zvuk "pogodak" kad natrči na dinosaura, a zatim ga pomoću tipki sa strelicama pomaknuti da se to dogodi?'
+        'studio_c3_game_5': Možeš li dodati blok za dodavanje boda kad pingvin natrči na hobotnicu, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
+        'studio_c3_game_6': Možeš li dodati blokove za promjenu pozadine i brzine kretanja pingvina, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
+        'studio_c3_game_7': Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        'studio_playlab_1': 'Pingvin želi reći "zdravo" - možeš li mu pomoći?'
+        'studio_playlab_2': 'Špiljski dječak (lik 1) i Špiljska Djevojčica (lik 2) žele reći "zdravo" jedan drugome. Možeš li im pomoći tako da blok "reći" upotrijebiš dvaput?'
+        'studio_playlab_3': Možeš li pomoći Tenisačici da dođe do zastave?
+        'studio_playlab_4': Možeš li pomoći Tenisaču (lik 1) da dođe do Tenisačice (lik 2) i pustiti zvuk kad stigne tamo?
+        'studio_playlab_5': 'Možeš li pomoći Svemircu da kaže "pozdrav zemljanima" kad se klikne? Nemoj zaboraviti kliknuti nakon što klikneš na "Pokreni"'
+        'studio_playlab_6': Možeš li pomoći Vještici da se miče uokolo pomoću tipki sa strelicama gore/dolje/lijevo/desno i da prikupi sve čarobne vatrene kugle?
+        'studio_playlab_7': 'Blok "ponavljaj zauvijek" ti omogućava da se program stalno ponavlja. Možeš li dodati blokove tako da se čarobnjak stalno miče lijevo-desno?'
+        'studio_playlab_8': Možeš li dodati blok za dodavanje boda i blok za puštanje zvuka kad jednorog natrči na čarobnjaka, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
+        'studio_playlab_9': Postavi pozadinu za ovu invaziju vanzemaljaca i pomogni Spacebotu da brže stigne do njih tako da mu promijeniš brzinu. Zatim ga pomoću tipki sa strelicama pomakni da dođe do njih i upozori ostale
+        'studio_playlab_10': Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        'studio_iceage_hello1': |-
           Sid želi sve okupiti za novu pustolovinu. Možeš li mu pomoći s pozdravljanjem povlačenjem bloka 'reci' na radnu površinu i upisavanjem riječi "Zdravo" unutar bloka?
-        studio_iceage_hello2: 'Sid (lik 1) je pronašao Mannyja (lik 2) i želi ga pozvati u avanturu. Pomozi im da se pozdrave koristeći blok "reci" dva puta.'
-        studio_iceage_move_to_flag: 'Scrat traži svoj žir! Pomozi mu da prijeđe posljednjih 200 pixela koristeći blok "pomakni".'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
+        'studio_iceage_hello2': 'Sid (lik 1) je pronašao Mannyja (lik 2) i želi ga pozvati u avanturu. Pomozi im da se pozdrave koristeći blok "reci" dva puta.'
+        'studio_iceage_move_to_flag': 'Scrat traži svoj žir! Pomozi mu da prijeđe posljednjih 200 pixela koristeći blok "pomakni".'
+        'studio_iceage_move_to_actor': 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        'studio_iceage_repeat': 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        'studio_iceage_click_hello': Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        'studio_iceage_move_events': 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
+        'studio_iceage_sound_and_points': 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        'studio_iceage_warn_ice_age': Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
+        'studio_iceage_throw_hearts': |-
           Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_full_sandbox: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
-        studio_k1_1: 'Možeš li napraviti da ovaj pas kaže "zdravo, svijete"?'
-        studio_k1_2: Možeš li napraviti da pas nešto kaže, a poslije njega da mačka nešto kaže?
-        studio_k1_3: Možeš li napisati program tako da pas dođe do mačke?
-        studio_k1_4: 'Napravi da pas ide prema mački, a mačka da kaže "zdravo" kad on dođe do nje.'
-        studio_k1_5: Možeš li dodati blok tako da hobotnica bude sretna?
-        studio_k1_6: Napravi vlastitu priču! Pomiči psa i mačku uokolo i napravi da kažu razne stvari.
-        maze_wordsearch_k_1: Pokreni me da slovkam riječ EAST (ISTOK)
-        maze_wordsearch_k_2: Pokreni me da slovkam riječ SOUTH (JUG)
-        maze_wordsearch_k_3: Pokreni me da slovkam riječ WEST (ZAPAD)
-        maze_wordsearch_k_4: Pokreni me da slovkam riječ NORTH (SJEVER)
-        maze_wordsearch_k_6: Pokreni me na istok a zatim na jug da slovkam riječ JUMP (SKOK)
-        maze_wordsearch_k_9: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ CODE (KOD)
-        maze_wordsearch_k_13: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ DEBUG (ISPRAVAK)
-        maze_wordsearch_k_15: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ ABOVE (IZNAD)
-        maze_wordsearch_k_16: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ BELOW (ISPOD)
-        maze_wordsearch_k_20: Ovo je test! Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ STORY (PRIČA)
-        applab_ec_simple: Napravi vlastitu aplikaciju koristeći blokove s alatne trake.
-        turtle_ec_1_2: 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju najdražu boju tako da je odabereš na novom bloku "boja Olovke".'
-        turtle_ec_1_10: 'Uspio si! Sad nacrtaj što god želiš. Zgodne ideje: štapićasti čovječuljak, pahuljica ili spirala. Također isprobaj novi blok "širina olovke". Uživaj!'
-        studio_ec_sandbox: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        'studio_iceage_free_play': "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        'studio_gumball_hello1': 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        'studio_gumball_hello2': 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
+        'studio_gumball_move_to_flag': 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        'studio_gumball_move_to_actor': 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        'studio_gumball_repeat': 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        'studio_gumball_click_hello': 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        'studio_gumball_move_events': 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        'studio_gumball_sound_and_points': 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        'studio_gumball_warn_food_fight': 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        'studio_gumball_join_food_fight': 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        'studio_gumball_free_play': "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        'studio_full_sandbox': Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        'studio_k1_1': 'Možeš li napraviti da ovaj pas kaže "zdravo, svijete"?'
+        'studio_k1_2': Možeš li napraviti da pas nešto kaže, a poslije njega da mačka nešto kaže?
+        'studio_k1_3': Možeš li napisati program tako da pas dođe do mačke?
+        'studio_k1_4': 'Napravi da pas ide prema mački, a mačka da kaže "zdravo" kad on dođe do nje.'
+        'studio_k1_5': Možeš li dodati blok tako da hobotnica bude sretna?
+        'studio_k1_6': Napravi vlastitu priču! Pomiči psa i mačku uokolo i napravi da kažu razne stvari.
+        'maze_wordsearch_k_1': Pokreni me da slovkam riječ EAST (ISTOK)
+        'maze_wordsearch_k_2': Pokreni me da slovkam riječ SOUTH (JUG)
+        'maze_wordsearch_k_3': Pokreni me da slovkam riječ WEST (ZAPAD)
+        'maze_wordsearch_k_4': Pokreni me da slovkam riječ NORTH (SJEVER)
+        'maze_wordsearch_k_6': Pokreni me na istok a zatim na jug da slovkam riječ JUMP (SKOK)
+        'maze_wordsearch_k_9': Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ CODE (KOD)
+        'maze_wordsearch_k_13': Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ DEBUG (ISPRAVAK)
+        'maze_wordsearch_k_15': Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ ABOVE (IZNAD)
+        'maze_wordsearch_k_16': Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ BELOW (ISPOD)
+        'maze_wordsearch_k_20': Ovo je test! Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ STORY (PRIČA)
+        'applab_ec_simple': Napravi vlastitu aplikaciju koristeći blokove s alatne trake.
+        'turtle_ec_1_2': 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju najdražu boju tako da je odabereš na novom bloku "boja Olovke".'
+        'turtle_ec_1_10': 'Uspio si! Sad nacrtaj što god želiš. Zgodne ideje: štapićasti čovječuljak, pahuljica ili spirala. Također isprobaj novi blok "širina olovke". Uživaj!'
+        'studio_ec_sandbox': Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
     video:
       name:
-        maze_intro: Uvod u Labirint
-        artist_intro: Uvod u Umjetnika
-        farmer_intro: Uvod u Farmera
-        flappy_intro: Uvod u Flappy
-        loop_times: 'Blok "Ponavljaj"'
-        loop_until: 'Blok "Ponavljaj dok"'
-        if: 'Blok "Ako"'
-        if_else: 'Blok "Ako/Inače"'
-        if_else_scrat: 'Blok "Ako/Inače"'
-        function: Funkcije
-        loop_while: 'Blok "Dok"'
-        loop_for: 'Blok "Brojač"'
-        parameters: Funkcije s parametrima
-        hoc_wrapup: Sažetak Sata Kodiranja
-        Unplug1: Što je informatika?
-        Unplug2: Razmišljati poput računala
-        Unplug3: Grafičko programiranje
-        Unplug4: Algoritmi
-        Unplug5: Funkcije
-        Unplug6: Uvjeti
-        Unplug7: Pisanje pjesama
-        Unplug8: Apstrakcija
-        Unplug9: Odnosno programiranje
-        Unplug10: Internet
-        Unplug11: Zamotavanje
-        C1_happy_maps_unplugged: Vesele karte
-        C1_moveitmoveit_unplugged: Pomakni, pomakni
-        C1_bigevent_unplugged: Veliki događaj
-        C1_getting_loopy: Zapetljancije
-        C1_pair_programming: Programiranje u paru
-        C1_maze_intro_sequencing: Uvod u rješavanje Labirinta
-        C1_maze_debugging: Ispravljanje grešaka u Labirintu
-        C1_bee_level_intro: 'Pčela - Uvod'
-        C1_artist_intro: Uvod u Umjetnika
-        C1_spelling_bee_intro: Uvod u Slovkanje
-        C1_zuck_repeat_loop: 'Labirint: Petlje'
-        C1_bee_loops: 'Pčela: Petlje'
-        C1_maze_loops: 'Labirint: Petlje'
-        C1_playlab_storytelling: 'Laboratorij igara - Napravi priču'
-        C1_planting_seed: Posadi sjeme
-        C1_building_foundation: Izrada temelja
-        C1_going_places_safely: Sigurna putovanja
-        C2_maze_intro: Uvod u Labirint
-        C2_artist_intro: Uvod u Umjetnika
-        C2_zuck_repeat_loop: 'Labirint: Petlje'
-        C2_artist_loops: 'Umjetnik: Petlje'
-        C2_artist_debugging: 'Umjetnik: Ispravljanje grešaka'
-        C2_bee_loops: 'Pčela: Petlje'
-        C2_bee_debugging: 'Pčela: Ispravljanje pogrešaka'
-        C2_bee_conditionals: 'Pčela: Uvjeti'
-        C2_playlab_createstory: 'Laboratorij igara - Napravi priču'
-        C2_graph_paper: Grafičko programiranje
-        C2_conditionals_with_cards: Uvjeti
-        C2_binary_bracelets: Binarne narukvice
-        C2_relay_programming: Programiranje u smjenama
-        C2_paper_airplanes: Papirnati avioni
-        C2_digital_footprint: Tvoj digitalni trag
-        C2_digital_footprint_v2: Tvoj digitalni trag
-        C3_maze_level_4: 'Labirint: Petlje'
-        C3_artist_intro: Uvod u Umjetnika
-        C3_artist_functions: 'Umjetnik: Funkcije'
-        C3_bee_functions: 'Pčela: Funkcije'
-        C3_bee_conditionals: 'Pčela: Uvjeti'
-        C3_maze_conditionals: 'Labirint: Uvjeti'
-        C3_artist_nested_loops: Ugniježđene petlje
-        C3_farmer_while: Petlje s uvjetom
-        C3_bee_nested_loops: Ugniježđene petlje
-        C3_bee_debugging: 'Pčela: Ispravljanje pogrešaka'
-        C3_bounce: Odskok
-        C3_playlab_create_game: 'Laboratorij igara - Napravi igricu'
-        C3_computational_thinking: Razmišljati poput računala
-        C3_dice_race: Utrka kockom
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Funkcionalni ukrasi
-        C3_songwriting_with_parameters: Pisanje pjesama s parametrima
-        C4_intro: Uvod
-        C4_loops_zombie: Petlje
-        C4_bee_conditional: 'Pčela: Uvjeti'
-        C4_variables_artist: 'Varijable - Umjetnik'
-        C4_variables_playlab: 'Varijable - Laboratorij igara'
-        C4_for_loops: Petlja brojača
-        C4_for_loops_bee: Petlja brojača
-        C4_for_loops_no_bee: Petlja brojača
-        C4_math_artist: Programiranje Umjetnika s matematikom
-        C4_function_edit: Uređivanje funkcija
-        C4_function_create: Stvaranje funkcija
-        C4_function_parameters: Funkcije s parametrima
-        C4_conditionals: Uvjeti
-        C4_unplugged_algorithms: Algoritmi s Tangramom
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Varijable u kovertama
-        C4_unplugged_forloops: Petlja brojača
-        C4_unplugged_parameters: Pisanje pjesama s parametrima
-        C4_unplugged_binary: Binarno
-        frozen_intro: Uvod u Sat Kodiranja
-        frozen_loops: Uvod u petlje
-        frozen_functions: Uvod u funkcije
-        playlab_intro: Uvod u Laboratorij igara
-        playlab_events: Događaji u Laboratoriju igara
-        playlab_repeat_forever: Beskonačno ponavljanje u Laboratoriju igara
-        tutorial_puzzle_challenge: Tutorijal za Izazov Slagalice
-        infinity_playlab_intro: 'Laboratorij igrara - Uvod'
-        infinity_playlab_events: 'Play Lab - događaji'
-        infinity_playlab_repeat_forever: 'Laboratorij igara - beskonačno ponavljanje'
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: 'Introduction to Databases - Part 1'
-        csp_applab_databases_2: 'Introduction to Databases - Part 2'
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: 'Introduction to Lists - Part 1'
-        csp_applab_lists_2: 'Introduction to Lists - Part 2'
-        csp_applab_lists_3: 'Introduction to Lists - Part 3'
-        csp_applab_lists_4: 'Introduction to Lists - Part 4'
-        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
-        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
-        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: 'Introduction to Variables - Part 1'
-        csp_applab_variables_2: 'Introduction to Variables - Part 2'
-        csp_applab_functions: Uvod u funkcije
-        csp_applab_functions_parameters: Funkcije s parametrima
-        csp_applab_loops: Petlje
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: 'Data & Medicine'
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: Malo o pikselima
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
-        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
-        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: 'Internet Simulator - Part 1'
-        csp_internetsimulator_2: 'Internet Simulator - Part 2'
-        csp_internetsimulator_3: 'Internet Simulator - Part 3'
-        alg_1_intro: 'Informatika u algebri - Uvod'
-        alg_2_eval_block: 'Informatika u algebri - Evaluacijski blokovi'
-        alg_3_pemdas: 'Informatika u algebri - Redoslijed operacija'
-        alg_4_data_types: 'Informatika u algebri - Tipovi podataka'
-        alg_5_contracts: 'Informatika u algebri - Ugovori'
-        alg_6_variables: 'Informatika u algebri - Varijable'
-        alg_7_function: 'Informatika u algebri - Funkcije'
-        alg_8_design_recipe: 'Informatika u algebri - Stvaranje recepta'
-        alg_9_booleans: 'Informatika u algebri - Logičke varijable'
-        alg_10_conditionals: 'Informatika u algebri - Uvjeti'
-        alg_11_coordinate_plane: 'Informatika u algebri - Koordinatna ravnina'
-        alg_12_biggame_variables: 'Informatika u algebri - Velika Igra - Varijable'
-        alg_13_biggame_animation: 'Informatika u algebri - Velika Igra - Animacija'
-        alg_14_biggame_booleans: 'Informatika u algebri - Velika Igra - Logičke varijable'
-        alg_15_biggame_update_player: 'Informatika u algebri - Velika Igra - Obnavljanje igrača'
-        alg_16_biggame_collision_detection: 'Informatika u algebri - Velika Igra - Detekcija sudara'
-        alg_17_sambat_compound_booleans: 'Informatika u algebri - Složene logičke varijable'
-        hoc2015_preview_blocks: Napravi vlastite blokove za igru
-        hoc2015_preview_typing: Napravi vlastitu igru tipkanja
-        hoc2015_preview_conclusion: Napravi vlastiti kraj igre
-        starwars_intro: 'Star Wars: Izgradnja galaksije pomoću koda - Uvod'
-        starwars_typing: 'Star Wars: Izgradnja galaksije pomoću koda - JavaScript'
-        starwars_events: 'Star Wars: Izgradnja galaksije pomoću koda - Događaji'
-        starwars_congrats: 'Star Wars: Izgradnja galaksije pomoću koda - Čestitke'
-        starwars_blocks_intro: 'Star Wars: Izgradnja galaksije pomoću koda - Uvod'
-        starwars_blocks_events: 'Star Wars: Izgradnja galaksije pomoću koda - Događaji'
-        starwars_blocks_congrats: 'Star Wars: Izgradnja galaksije pomoću koda - Čestitke'
-        mc_intro: 'Minecraft - Uvod'
-        mc_repeat: 'Minecraft - Ponavljanje'
-        mc_if_statements: 'Minecraft - "Ako" naredbe'
-        mc_congrats_share: 'Minecraft - Čestitamo'
-        mc_congrats_no_share: 'Minecraft - Čestitamo'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        'maze_intro': Uvod u Labirint
+        'artist_intro': Uvod u Umjetnika
+        'farmer_intro': Uvod u Farmera
+        'flappy_intro': Uvod u Flappy
+        'loop_times': 'Blok "Ponavljaj"'
+        'loop_until': 'Blok "Ponavljaj dok"'
+        'if': 'Blok "Ako"'
+        'if_else': 'Blok "Ako/Inače"'
+        'if_else_scrat': 'Blok "Ako/Inače"'
+        'function': Funkcije
+        'loop_while': 'Blok "Dok"'
+        'loop_for': 'Blok "Brojač"'
+        'parameters': Funkcije s parametrima
+        'hoc_wrapup': Sažetak Sata Kodiranja
+        'Unplug1': Što je informatika?
+        'Unplug2': Razmišljati poput računala
+        'Unplug3': Grafičko programiranje
+        'Unplug4': Algoritmi
+        'Unplug5': Funkcije
+        'Unplug6': Uvjeti
+        'Unplug7': Pisanje pjesama
+        'Unplug8': Apstrakcija
+        'Unplug9': Odnosno programiranje
+        'Unplug10': Internet
+        'Unplug11': Zamotavanje
+        'C1_happy_maps_unplugged': Vesele karte
+        'C1_moveitmoveit_unplugged': Pomakni, pomakni
+        'C1_bigevent_unplugged': Veliki događaj
+        'C1_getting_loopy': Zapetljancije
+        'C1_pair_programming': Programiranje u paru
+        'C1_maze_intro_sequencing': Uvod u rješavanje Labirinta
+        'C1_maze_debugging': Ispravljanje grešaka u Labirintu
+        'C1_bee_level_intro': 'Pčela - Uvod'
+        'C1_artist_intro': Uvod u Umjetnika
+        'C1_spelling_bee_intro': Uvod u Slovkanje
+        'C1_zuck_repeat_loop': 'Labirint: Petlje'
+        'C1_bee_loops': 'Pčela: Petlje'
+        'C1_maze_loops': 'Labirint: Petlje'
+        'C1_playlab_storytelling': 'Laboratorij igara - Napravi priču'
+        'C1_planting_seed': Posadi sjeme
+        'C1_building_foundation': Izrada temelja
+        'C1_going_places_safely': Sigurna putovanja
+        'C2_maze_intro': Uvod u Labirint
+        'C2_artist_intro': Uvod u Umjetnika
+        'C2_zuck_repeat_loop': 'Labirint: Petlje'
+        'C2_artist_loops': 'Umjetnik: Petlje'
+        'C2_artist_debugging': 'Umjetnik: Ispravljanje grešaka'
+        'C2_bee_loops': 'Pčela: Petlje'
+        'C2_bee_debugging': 'Pčela: Ispravljanje pogrešaka'
+        'C2_bee_conditionals': 'Pčela: Uvjeti'
+        'C2_playlab_createstory': 'Laboratorij igara - Napravi priču'
+        'C2_graph_paper': Grafičko programiranje
+        'C2_conditionals_with_cards': Uvjeti
+        'C2_binary_bracelets': Binarne narukvice
+        'C2_relay_programming': Programiranje u smjenama
+        'C2_paper_airplanes': Papirnati avioni
+        'C2_digital_footprint': Tvoj digitalni trag
+        'C2_digital_footprint_v2': Tvoj digitalni trag
+        'C3_maze_level_4': 'Labirint: Petlje'
+        'C3_artist_intro': Uvod u Umjetnika
+        'C3_artist_functions': 'Umjetnik: Funkcije'
+        'C3_bee_functions': 'Pčela: Funkcije'
+        'C3_bee_conditionals': 'Pčela: Uvjeti'
+        'C3_maze_conditionals': 'Labirint: Uvjeti'
+        'C3_artist_nested_loops': Ugniježđene petlje
+        'C3_farmer_while': Petlje s uvjetom
+        'C3_bee_nested_loops': Ugniježđene petlje
+        'C3_bee_debugging': 'Pčela: Ispravljanje pogrešaka'
+        'C3_bounce': Odskok
+        'C3_playlab_create_game': 'Laboratorij igara - Napravi igricu'
+        'C3_computational_thinking': Razmišljati poput računala
+        'C3_dice_race': Utrka kockom
+        'C3_internet': Internet
+        'C3_crowdsourcing': Crowdsourcing
+        'C3_functional_suncatchers': Funkcionalni ukrasi
+        'C3_songwriting_with_parameters': Pisanje pjesama s parametrima
+        'C4_intro': Uvod
+        'C4_loops_zombie': Petlje
+        'C4_bee_conditional': 'Pčela: Uvjeti'
+        'C4_variables_artist': 'Varijable - Umjetnik'
+        'C4_variables_playlab': 'Varijable - Laboratorij igara'
+        'C4_for_loops': Petlja brojača
+        'C4_for_loops_bee': Petlja brojača
+        'C4_for_loops_no_bee': Petlja brojača
+        'C4_math_artist': Programiranje Umjetnika s matematikom
+        'C4_function_edit': Uređivanje funkcija
+        'C4_function_create': Stvaranje funkcija
+        'C4_function_parameters': Funkcije s parametrima
+        'C4_conditionals': Uvjeti
+        'C4_unplugged_algorithms': Algoritmi s Tangramom
+        'C4_unplugged_madlibs': Mad Libs
+        'C4_unplugged_variables': Varijable u kovertama
+        'C4_unplugged_forloops': Petlja brojača
+        'C4_unplugged_parameters': Pisanje pjesama s parametrima
+        'C4_unplugged_binary': Binarno
+        'frozen_intro': Uvod u Sat Kodiranja
+        'frozen_loops': Uvod u petlje
+        'frozen_functions': Uvod u funkcije
+        'playlab_intro': Uvod u Laboratorij igara
+        'playlab_events': Događaji u Laboratoriju igara
+        'playlab_repeat_forever': Beskonačno ponavljanje u Laboratoriju igara
+        'tutorial_puzzle_challenge': Tutorijal za Izazov Slagalice
+        'infinity_playlab_intro': 'Laboratorij igrara - Uvod'
+        'infinity_playlab_events': 'Play Lab - događaji'
+        'infinity_playlab_repeat_forever': 'Laboratorij igara - beskonačno ponavljanje'
+        'csp_applab_objects': Introduction to Objects
+        'csp_applab_databases_1': 'Introduction to Databases - Part 1'
+        'csp_applab_databases_2': 'Introduction to Databases - Part 2'
+        'csp_applab_processing_lists': Processing Lists with Loops
+        'csp_applab_lists_1': 'Introduction to Lists - Part 1'
+        'csp_applab_lists_2': 'Introduction to Lists - Part 2'
+        'csp_applab_lists_3': 'Introduction to Lists - Part 3'
+        'csp_applab_lists_4': 'Introduction to Lists - Part 4'
+        'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
+        'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
+        'csp_applab_design': Introduction to Design Mode
+        'csp_applab_variables_1': 'Introduction to Variables - Part 1'
+        'csp_applab_variables_2': 'Introduction to Variables - Part 2'
+        'csp_applab_functions': Uvod u funkcije
+        'csp_applab_functions_parameters': Funkcije s parametrima
+        'csp_applab_loops': Petlje
+        'csp_applab_turtle': Turtle Programming
+        'csp_concept_bigdata_medicine': 'Data & Medicine'
+        'csp_concept_cybercrime': 'The Internet: Cybersecurity & Crime'
+        'csp_concept_encryption': 'The Internet: Encryption & Public Keys'
+        'csp_concept_http_html': 'The Internet: HTTP & HTML'
+        'csp_concept_what_is_internet': What is the Internet?
+        'csp_concept_internet_ip_dns': 'The Internet: IP Addresses & DNS'
+        'csp_concept_internet_packets_reliability': 'The Internet: Packets, Routing & Reliability'
+        'csp_concept_internet_wires_cables_wifi': 'The Internet: Wires, Cables & Wifi'
+        'csp_concept_rgb': Malo o pikselima
+        'csp_cs_is_changing_everything': Computer Science is Changing Everything
+        'csp_pixelation_color_1': 'Color pixelation widget - Part 1'
+        'csp_pixelation_color_2': 'Color pixelation widget - Part 2'
+        'csp_pixelation_color_3': 'Color pixelation widget - Part 3'
+        'csp_pixelation_bw': Black and white pixelation widget
+        'csp_U1L14_tipstricks': 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        'csp_textcompression': Text compression widget
+        'csp_textcompression_new': Text compression widget
+        'csp_internetsimulator_1': 'Internet Simulator - Part 1'
+        'csp_internetsimulator_2': 'Internet Simulator - Part 2'
+        'csp_internetsimulator_3': 'Internet Simulator - Part 3'
+        'alg_1_intro': 'Informatika u algebri - Uvod'
+        'alg_2_eval_block': 'Informatika u algebri - Evaluacijski blokovi'
+        'alg_3_pemdas': 'Informatika u algebri - Redoslijed operacija'
+        'alg_4_data_types': 'Informatika u algebri - Tipovi podataka'
+        'alg_5_contracts': 'Informatika u algebri - Ugovori'
+        'alg_6_variables': 'Informatika u algebri - Varijable'
+        'alg_7_function': 'Informatika u algebri - Funkcije'
+        'alg_8_design_recipe': 'Informatika u algebri - Stvaranje recepta'
+        'alg_9_booleans': 'Informatika u algebri - Logičke varijable'
+        'alg_10_conditionals': 'Informatika u algebri - Uvjeti'
+        'alg_11_coordinate_plane': 'Informatika u algebri - Koordinatna ravnina'
+        'alg_12_biggame_variables': 'Informatika u algebri - Velika Igra - Varijable'
+        'alg_13_biggame_animation': 'Informatika u algebri - Velika Igra - Animacija'
+        'alg_14_biggame_booleans': 'Informatika u algebri - Velika Igra - Logičke varijable'
+        'alg_15_biggame_update_player': 'Informatika u algebri - Velika Igra - Obnavljanje igrača'
+        'alg_16_biggame_collision_detection': 'Informatika u algebri - Velika Igra - Detekcija sudara'
+        'alg_17_sambat_compound_booleans': 'Informatika u algebri - Složene logičke varijable'
+        'hoc2015_preview_blocks': Napravi vlastite blokove za igru
+        'hoc2015_preview_typing': Napravi vlastitu igru tipkanja
+        'hoc2015_preview_conclusion': Napravi vlastiti kraj igre
+        'starwars_intro': 'Star Wars: Izgradnja galaksije pomoću koda - Uvod'
+        'starwars_typing': 'Star Wars: Izgradnja galaksije pomoću koda - JavaScript'
+        'starwars_events': 'Star Wars: Izgradnja galaksije pomoću koda - Događaji'
+        'starwars_congrats': 'Star Wars: Izgradnja galaksije pomoću koda - Čestitke'
+        'starwars_blocks_intro': 'Star Wars: Izgradnja galaksije pomoću koda - Uvod'
+        'starwars_blocks_events': 'Star Wars: Izgradnja galaksije pomoću koda - Događaji'
+        'starwars_blocks_congrats': 'Star Wars: Izgradnja galaksije pomoću koda - Čestitke'
+        'mc_intro': 'Minecraft - Uvod'
+        'mc_repeat': 'Minecraft - Ponavljanje'
+        'mc_if_statements': 'Minecraft - "Ako" naredbe'
+        'mc_congrats_share': 'Minecraft - Čestitamo'
+        'mc_congrats_no_share': 'Minecraft - Čestitamo'
+        'gumball_intro': 'Gumball Hour of Code - Introduction'
+        'gumball_events': 'Gumball Hour of Code - Events'
+        'gumball_repeat': 'Gumball Hour of Code - Repeat statements'
+        'iceage_intro': 'Ice Age Hour of Code - Introduction'
+        'iceage_events': 'Ice Age Hour of Code - Events'
+        'iceage_repeat': 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Dovuci blok "idi" i zakači ga ispod drugog bloka'

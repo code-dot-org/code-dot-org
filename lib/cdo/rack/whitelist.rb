@@ -97,7 +97,7 @@ module Rack
             request_cookies = request.cookies
             request_cookies.slice!(*cookies)
             request_cookies.keys.each do |key|
-              response.add_header 'Vary', "X-COOKIE-#{key.gsub('_', '-')}"
+              response.add_header 'Vary', "X-COOKIE-#{key.tr('_', '-')}"
             end
         end
         response.finish

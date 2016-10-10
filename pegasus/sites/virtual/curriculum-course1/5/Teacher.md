@@ -111,8 +111,7 @@ Have students go back through previous levels, purposefully adding bugs to their
 
 ### Next-Gen Science Standards
 
-- K.G.A.1 - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
-- K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem. 
+- K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
 
 ### Common Core Mathematical Practices
  

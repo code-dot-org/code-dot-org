@@ -1,10 +1,10 @@
 require 'sinatra/base'
+require 'cdo/sinatra'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'json'
 
 class PropertiesApi < Sinatra::Base
-
   # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for
   # items sized 4K and under. Due to the other metadata we store, the
   # largest observed property size (key.length + value.to_json.length) which stays under
@@ -26,7 +26,7 @@ class PropertiesApi < Sinatra::Base
     end
   end
 
-  PropertyType = CDO.use_dynamo_properties ? DynamoPropertyBag : PropertyBag
+  PROPERTY_TYPE = CDO.use_dynamo_properties ? DynamoPropertyBag : PropertyBag
 
   #
   # GET /v3/(shared|user)-properties/<channel-id>
@@ -38,7 +38,7 @@ class PropertiesApi < Sinatra::Base
     content_type :json
     not_authorized unless owns_channel? channel_id
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
-    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).to_hash.to_json
+    PROPERTY_TYPE.new(decrypted_channel_id, storage_id(endpoint)).to_hash.to_json
   end
 
   #
@@ -50,7 +50,7 @@ class PropertiesApi < Sinatra::Base
     dont_cache
     content_type :json
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
-    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).get(name).to_json
+    PROPERTY_TYPE.new(decrypted_channel_id, storage_id(endpoint)).get(name).to_json
   end
 
   #
@@ -61,7 +61,7 @@ class PropertiesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
-    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).delete(name)
+    PROPERTY_TYPE.new(decrypted_channel_id, storage_id(endpoint)).delete(name)
     no_content
   end
 
@@ -88,7 +88,7 @@ class PropertiesApi < Sinatra::Base
     property_size = name.length + body.length
     property_too_large(property_size) if property_size > max_property_size
     parsed_value = PropertyBag.parse_value(body)
-    value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
+    value = PROPERTY_TYPE.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
     too_large if value.is_a?(Hash) && value[:status] == 'TOO_LARGE'
 
@@ -120,7 +120,7 @@ class PropertiesApi < Sinatra::Base
     overwrite = request.GET['overwrite'] == '1'
 
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
-    bag = PropertyType.new(decrypted_channel_id, storage_id(endpoint))
+    bag = PROPERTY_TYPE.new(decrypted_channel_id, storage_id(endpoint))
     bag_hash = nil
     json_data.each do |k, v|
       unless overwrite

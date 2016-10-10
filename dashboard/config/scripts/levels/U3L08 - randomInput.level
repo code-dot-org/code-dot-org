@@ -123,13 +123,14 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
     "embed": "false",
     "instructions": "Use the randomNumber() blocks to test the functions you designed with random input. (Click to see full instructions)",
-    "markdown_instructions": "# Random Input\r\n\r\nYou have two new blocks that allow you to generate **pseudo-random** values. You can use them in the place of selecting a fixed value every time you call a function.\r\n\r\n![](https://images.code.org/70a3e3dca95d743827e4b67b28d64bd9-image-1442609204491.46.14 PM.png)\r\n\r\n**Read the documentation** for these blocks.\r\n\r\n**Use them to provide random input** to your functions. This is a great way to **test** out functions and also get some **interesting looking images**. Every time you run the program you can get slightly different looking scenes like the ones below.\r\n\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)",
+    "markdown_instructions": "# Random Input\r\n\r\nYou have a new block that allows you to generate a random number. You can use this instead of hard-coding in values every time you call a function.\r\n\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\r\n\r\n**Read the documentation** for the randomNumber block.\r\n\r\n# Do This\r\n**Use randomNumber to provide random input** to *all three* of your drawing functions.  Just insert the call to randomNumber where you would otherwise put numbers.  \r\n\r\nLike this:\r\n![](https://images.code.org/ad87d7d122ac585a6de9e46a49736228-image-1470146652402.png)\r\n\r\nUse randomNumber in calls to all three of your drawing functions:\r\n\r\n* drawStarfish\r\n* drawSeagrass\r\n* drawFish\r\n\r\nThis is a great way to **test** out functions and also get some **interesting looking images**. Every time you run the program you can get slightly different looking scenes like the ones below.\r\n\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -161,7 +162,66 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawFish:4"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to add 3 parameters to drawFish (for a total of 4 parameters) to help control the color of the fish. Call it at least twice to create two fish of different sizes and different colors."
+      },
+      {
+        "entries": [
+          "drawSeaGrass:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to add a parameter to drawSeaGrass, and to call it at least twice to create two strands of seagrass of different sizes."
+      },
+      {
+        "entries": [
+          "drawStarfish:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to modify drawStarfish to add a parameter and call it at least twice to create two star fish of different sizes."
+      },
+      {
+        "entries": [
+          "randomNumber:2",
+          "drawStarfish:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawStarfish."
+      },
+      {
+        "entries": [
+          "randomNumber:2",
+          "drawSeaGrass:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawSeaGrass."
+      },
+      {
+        "entries": [
+          "randomNumber:2",
+          "drawFish:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "The task asks you to use a call to randomNumber(min,max) as a parameter to drawFish - try using it in place of the value for size."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

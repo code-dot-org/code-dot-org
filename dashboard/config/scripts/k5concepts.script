@@ -1,0 +1,51 @@
+stage 'Events'
+level 'BigEvent'
+assessment '2-3 Big Event Match 1'
+
+stage 'Loops'
+level 'GettingLoopy'
+assessment '2-3 Getting Loopy Multi 1'
+
+stage 'Nested Loops'
+level 'comingSoon'
+
+stage 'Conditionals'
+level 'Conditionals'
+assessment '2-3 Conditionals Multi 1'
+
+stage 'While Loops'
+level 'comingSoon'
+
+stage 'Functions'
+level 'SongwritingParameters'
+assessment '4-5 Songwriting Multi 1'
+
+stage 'Variables'
+level 'EnvelopeVariables'
+level 'MadGlibs'
+
+stage 'For Loops'
+level 'ForLoopFun'
+level 'grade5_bee_for_loops3'
+level 'grade5_bee_for_loops5'
+level 'grade5_bee_for_loops9'
+
+stage 'Functions with Parameters'
+level 'SongwritingWithParameters'
+level 'grade5_artist_parameters_triangles3'
+level 'grade5_artist_parameters_squares2'
+level 'grade5_artist_functionparameters8'
+level 'grade5_playlab_variables12'
+level 'grade5_artist_functionparameters11' 
+
+
+stage 'Binary'
+level 'BinaryBracelets'
+assessment '2-3 Binary Match 1'
+level 'BinaryImages'
+level 'grade5_pixelation'
+level 'grade5_artist_binary5'
+level 'grade5_artist_binary4'
+level 'grade5_artist_binary8'
+level 'grade5_artist_binary9'
+level 'grade5_artist_binary11'

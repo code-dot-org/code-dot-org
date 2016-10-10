@@ -125,7 +125,110 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U1 Eval q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U1 Eval q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U1 Eval q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U1 Eval q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U1 Eval q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U1 Eval q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U1 eval q1:
+        Brand new!: Brand new!
+        How experienced would you say you are with computer science?: How experienced would you say you are with computer science?
+        Somewhat Experienced: Somewhat Experienced
+        Very Experienced: Very Experienced
+      U1 eval q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Are you comfortable with the underlying concepts behind how non-decimal number systems work?
+        I have no idea what you're talking about!: I have no idea what you're talking about!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: I know how to convert between number systems, but I don't know about the underlying rules of how they work
+        Yes!: Yes!
+      U1 eval q3:
+        Are you comfortable with HTML or Markdown?: Are you comfortable with HTML or Markdown?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q4:
+        Do you know how IP addresses work?: Do you know how IP addresses work?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q5:
+        Do you know how messages are broken down and routed on the internet?: Do you know how messages are broken down and routed on the internet?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q1:
+        Brand new!: Brand new!
+        How experienced would you say you are with computer science?: How experienced would you say you are with computer science?
+        Somewhat Experienced: Somewhat Experienced
+        Very Experienced: Very Experienced
+      U1 evaluation q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U1 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U1 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U1 evaluation q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Are you comfortable with the underlying concepts behind how non-decimal number systems work?
+        I have no idea what you're talking about!: I have no idea what you're talking about!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: I know how to convert between number systems, but I don't know about the underlying rules of how they work
+        Yes!: Yes!
+      U1 evaluation q3:
+        Are you comfortable with HTML or Markdown?: Are you comfortable with HTML or Markdown?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q4:
+        Do you know how IP addresses work?: Do you know how IP addresses work?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q5:
+        Do you know how messages are broken down and routed on the internet?: Do you know how messages are broken down and routed on the internet?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U1 evaluation q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U1 evaluation q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
+      'Addressing in the Game of Battleship ': {}
       AlgPD Break:
         Before you move on...: Before you move on...
       Algo How Routers Learn Student Lesson Introduction:
@@ -142,8 +245,34 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Assessing Student Learning in Unit 1: {}
+      Balancing Teacher and Tools in Unit 1: {}
+      Begin planning your project:
+        description here: description here
+        title: title
+      Binary as an Encoding Scheme: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD Creating Debugging Strat: {}
+      CSD Design Instructions Site: {}
+      CSD Hobbies Example: {}
+      CSD L04 Wrap Up Debug Example: {}
+      CSD Recipe Stop: {}
+      CSD U1 Input Output C1:
+        Challenge 1: Challenge 1
+        description here: description here
+      CSD U1 Input Output C2:
+        description here: description here
+        title: title
+      CSD U1 Input Output C3:
+        description here: description here
+        title: title
+      CSD U1 Input Output C4:
+        description here: description here
+        title: title
+      CSD U1 Input Output Intro:
+        description here: description here
+        title: title
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -153,6 +282,7 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
+      CSD U3 Functions Introduction: {}
       CSD U3 Keypress Stop: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
@@ -169,11 +299,72 @@ en:
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
       CSD U3 Variables2 STOP variables in expressions: {}
+      CSD U3 abstraction intro:
+        description here: description here
+        title: title
+      CSD U3 collisions STOP isTouching:
+        STOP: STOP
+        description here: description here
+      CSD U3 platform intro:
+        Build a Platform Jumper: Build a Platform Jumper
+        description here: description here
+      CSD U3 setSpeed STOP:
+        Stop Here: Stop Here
+        description here: description here
+      CSD U4L01 SFLP: {}
+      CSD U4L02 SFLP: {}
+      CSD U4L03 SFLP: {}
+      CSD U4L04 SFLP: {}
+      CSD U4L05 SFLP: {}
+      CSD U4L06 SFLP: {}
+      CSD U4L07 SFLP: {}
+      CSD U4L08 SFLP: {}
+      CSD U4L09 SFLP: {}
+      CSD U4L10 SFLP: {}
+      CSD U4L11 SFLP: {}
+      CSD U4L12 SFLP: {}
+      CSD U4L13 SFLP: {}
+      CSD U4L14 SFLP: {}
+      CSD U4L15 SFLP: {}
+      CSD U4L16 SFLP: {}
+      CSD U4L17 SFLP: {}
+      CSD U4L18 SFLP: {}
+      CSD U4L19 SFLP: {}
+      CSD U4L20 SFLP: {}
+      CSD U4L21 SFLP: {}
+      CSD U4L22 SFLP: {}
+      CSD U4L23 SFLP: {}
+      CSD U4L24 SFLP: {}
+      CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
+      CSD-U1-SFLP Exploring Problem Solving: {}
+      CSD-U1-SFLP Human vs. Computer Processing: {}
+      CSD-U1-SFLP Intro to Problem Solving: {}
+      CSD-U1-SFLP Processing Bits: {}
+      CSD-U1-SFLP Processing with Apps: {}
+      CSD-U1-SFLP Project Apps and Problem Solving: {}
+      CSD-U1-SFLP Representing Information: {}
+      CSD-U1-SFLP The Problem Solving Process: {}
+      CSD-U1-SFLP What is a Computer?: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      CSDU2 - Fundamentals Videos: {}
+      CSDU2 - Pick Elements Styled: {}
+      CSDU2 - Rating Quality Websites: {}
+      CSDU2 - further styling suggestions: {}
+      CSDU2 IP Fair Use:
+        Fair Use: Fair Use
+        description here: description here
+      CSDU2 L07 SFLP: {}
+      CSDU2 images stop level: {}
+      CSDU2- home page examples: {}
+      CSDU2L01 SFLP:
+        description here: description here
+        title: title
+      CSDU2L02 SFLP: {}
+      CSDU2L04 - Stop: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -182,12 +373,16 @@ en:
         title: title
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Pre-survey: {}
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
       CSP U4 - Basic Terms: {}
       CSP Unit 3 - Learning JavaScript Resources:
         Learning JavaScript Resources: Learning JavaScript Resources
+        description here: description here
+      CSP assessment Hex interstitial:
+        Hexadecimal: Hexadecimal
         description here: description here
       CSP-mod1-unit1overview: {}
       CSPPD PD Phases:
@@ -362,6 +557,22 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
+      Categorizing Data: {}
+      Check for Internet Accessibility: {}
+      Cleaning Data: {}
+      'Collection A: Good and Bad Visualizations': {}
+      'Collection B: Good and Bad Visualizations': {}
+      Digital Footprint Chirpr johnsnow:
+        Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint Chirpr solmoon: {}
+      Digital Footprint FaceSpace John:
+        FaceSpace - John T: FaceSpace - John T
+      Digital Footprint FaceSpace Soleil: {}
+      Digital Footprint instantframe:
+        instantframe - johnsnow: instantframe - johnsnow
+      Digital Footprint instantframe moonbeam: {}
+      Discovery Learning in Unit 1: {}
+      Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
       ECS PD1 teaching strategies:
@@ -374,7 +585,6 @@ en:
       ECS Phase 3 Unit4 Welcome: {}
       ECS Phase 3 Welcome: {}
       ECSD3-u5 do the challenge: {}
-      ECSPD 1 page template: {}
       ECSPD Challenge Intro: {}
       ECSPD Challenge Reflection: {}
       ECSPD Challenge Rubric:
@@ -588,6 +798,7 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD-unit2 What is the Challenge: {}
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
       ECSPD1 Code Studio:
@@ -666,7 +877,7 @@ en:
       ECSPD3-u5 day 9-12: {}
       ECSPD3-u5 intro to u5: {}
       ECSPD3-u5 lesson overview: {}
-      'ECSPD3-u5 list of challenges ': {}
+      ECSPD3-u5 list of challenges: {}
       ECSPD3-u5 overview: {}
       ECSPD3-u5 plan: {}
       ECSPD3-u5 post survey: {}
@@ -706,6 +917,7 @@ en:
       ECSPD3-u6 share out overview: {}
       ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
+      Editing Chart Appearance: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Empty Markdown Level: {}
@@ -729,22 +941,30 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
       External level test (will):
         first computer program: first computer program
+      Favicon Instructions: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
         description here: description here
         title: title
       GoodBadVisualizations_v2:
         description here: description here
         title: title
+      Group Work and Peer Learning in Unit 1: {}
+      Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Secure Is Your Password?:
+        description here: description here
+        title: title
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -756,17 +976,38 @@ en:
         description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      Introduction to Unit 1: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      Lesson 1.10 Overview: {}
+      Lesson 1.11 Overview: {}
+      Lesson 1.12 Overview: {}
+      Lesson 1.13 Overview: {}
+      Lesson 1.2 Overview: {}
+      Lesson 1.3 Overview: {}
       Lesson 1.4 Overview: {}
+      Lesson 1.5 Overview: {}
+      Lesson 1.6 Overview: {}
+      Lesson 1.7 Overview: {}
+      Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Making Pivot Tables Part 1 - The Basics: {}
+      Making Pivot Tables Part 2 - Manipulation and Visualization: {}
+      Making a Bar Chart: {}
+      Making a Line Chart: {}
+      Making a Scatter Plot: {}
       MarbleMaze:
         Marble Maze: Marble Maze
         Marble Maze Activity for K Level: Marble Maze Activity for K Level
       MarbleMaze2:
         Marble Maze 2: Marble Maze 2
         Second Marble Maze K Activity: Second Marble Maze K Activity
+      Modulo Clock Instructions: {}
+      Modulo Clock Recap: {}
+      New Challenge Introduction:
+        description here: description here
+        title: title
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -989,6 +1230,8 @@ en:
       PDSci commitment:
         CS in Science PD commitments: CS in Science PD commitments
         overview of program commitments: overview of program commitments
+      PLC- check your progress: {}
+      Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
@@ -1021,17 +1264,46 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Practice Performance Tasks in Unit 1: {}
+      Prepare for your presentation:
+        description here: description here
+        title: title
+      Rating Websites: {}
+      SFLP - Web - Describing Webpages: {}
+      SFLP - Web - Designing Code for Computers: {}
+      SFLP - Web - Designing Webpages: {}
+      SFLP - Web - Digital Footprint: {}
+      SFLP - Web - Images on the Web: {}
+      SFLP - Web - Quality Websites: {}
+      SFLP - Web - Text on the Web: {}
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
+      'Sending Numbers: The Big Picture': {}
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
+      'Stop: Classes': {}
+      'Stop: Common Styles Warm Up': {}
+      'Stop: External Style Sheets': {}
+      'Stop: Hobbies Page': {}
+      'Stop: Images': {}
+      'Stop: Intro to CSS': {}
+      'Stop: Personal Home Page Warm Up': {}
+      'Stop: Validator': {}
+      'Stop: Website Navigation': {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
         TLO in Practice: TLO in Practice
       TeacherCon Agenda: {}
+      Teaching with the Internet Simulator: {}
+      'Technique: Frequency Analysis':
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
+      Terminology Recap:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
@@ -1104,6 +1376,7 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U2 - Website Comparison: {}
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1319,6 +1592,7 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      U3_assessment_loop_vs_function: {}
       U4 - Cleaning Data - Activity Guide:
         description here: description here
         title: title
@@ -1358,6 +1632,12 @@ en:
         description here: description here
         title: title
       U4 Inspirational Data Video: {}
+      U4 caesar cipher interstitial:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
+      U4 how to crack substitution cipher:
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
       U4L01 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1389,7 +1669,16 @@ en:
       U4L06v2 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L07 Public Key Crypto Interstitial:
+        Onto the Public Key Cryptography Widget: Onto the Public Key Cryptography Widget
+        description here: description here
+      U4L07 Student Introduction public key crypto:
+        description here: description here
+        title: title
       U4L07 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L08 - mod clock instructions:
         description here: description here
         title: title
       U4L08 Student Lesson Introduction:
@@ -1405,6 +1694,9 @@ en:
         description here: description here
         title: title
       U4L08v2 Student Intro:
+        description here: description here
+        title: title
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
         description here: description here
         title: title
       U4L09 Student Lesson Introduction:
@@ -1458,6 +1750,9 @@ en:
       U4L24 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L5 random subst challenge page:
+        description here: description here
+        title: title
       U5 - Create PT - Student Introduction:
         description here: description here
         title: title
@@ -1488,8 +1783,59 @@ en:
       U6 - updateRecord - Student Introduction:
         description here: description here
         title: title
+      Understanding Communication Protocols: {}
+      Unit 1 Lesson 1 Overview: {}
+      Unit 1 Lesson 2 Overview: {}
+      Unit 1 Lesson 3 Overview: {}
+      Unit 1 Lesson 4 Overview: {}
+      Unit 1 Lesson 5 Overview: {}
+      Unit 1 Lesson 6 Overview: {}
+      Unit 1 Lesson 7 Overview: {}
+      Unit 1 Lesson 8 Overview: {}
+      Unit 1 Lesson 9 Overview: {}
+      Unit 1 Overview: {}
+      Unit 1 Teaching Philosophy and Commentary: {}
+      Unit 2 Lesson 1 Overview: {}
+      Unit 2 Lesson 10 Overview: {}
+      Unit 2 Lesson 11 Overview: {}
+      Unit 2 Lesson 12 Overview: {}
+      Unit 2 Lesson 13 Overview: {}
+      Unit 2 Lesson 14 Overview: {}
+      Unit 2 Lesson 15 Overview: {}
+      Unit 2 Lesson 16 Overview: {}
+      Unit 2 Lesson 17 Overview: {}
+      Unit 2 Lesson 2 Overview: {}
+      Unit 2 Lesson 3 Overview: {}
+      Unit 2 Lesson 4 Overview: {}
+      Unit 2 Lesson 5 Overview: {}
+      Unit 2 Lesson 6 Overview: {}
+      Unit 2 Lesson 7 Overview: {}
+      Unit 2 Lesson 8 Overview: {}
+      Unit 2 Lesson 9 Overview: {}
       Unit 3 Survey 2: {}
+      Unit 4 Lesson 1 Introduction:
+        description here: description here
+        title: title
+      Unit 4 Lesson 2 Introduction:
+        description here: description here
+        title: title
+      Unit 4 Lesson 3 Introduction: {}
+      Unit 4 Lesson 4 Introduction: {}
+      Unit 4 Lesson 5 Introduction:
+        description here: description here
+        title: title
+      Unit 4 Lesson 6 Introduction:
+        Cracking the Code: Cracking the Code
+      Unit 4 Lesson 7 Introduction: {}
+      Unit 4 Lesson 8 Introduction: {}
+      Unit 4 Lesson 9 Introduction: {}
+      Video - The Future of Big Data: {}
+      'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
+      What is ASCII?: {}
+      What is HTML?: {}
+      What's inside and how is it organized?: {}
+      Why Teach Number Systems?: {}
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
@@ -1517,6 +1863,9 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      csp_unit_assessment_overview:
+        description here: description here
+        title: title
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -1533,6 +1882,7 @@ en:
         duino music: duino music
       duino pov:
         duino pov: duino pov
+      ecs unit 2 introduction: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
@@ -1568,10 +1918,49 @@ en:
       grade1_story_theGreatTowerTopple:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
+      grade1_unplugged_behavingInLab: {}
+      grade2_maze_intro1:
+        description here: description here
+        title: title
+      grade2_unplugged_bigEvent: {}
+      grade2_unplugged_buildAblock:
+        Build a Block: Build a Block
+      grade2_unplugged_neighborhood:
+        description here: description here
+        title: title
+      grade2_unplugged_rlAlgorithms:
+        Real Life Algorithms: Real Life Algorithms
+      grade3_Unplugged_ConditionalsLoops:
+        Conditionals with Loops: Conditionals with Loops
+      grade3_farmer_stage13_placeholder: {}
+      grade4_project_design:
+        description here: description here
+        title: title
+      grade4_project_design_image:
+        description here: description here
+        title: title
+      grade4_project_presentation:
+        description here: description here
+        title: title
+      grade4_unplugged_FunkyFunctions:
+        Funky Functions: Funky Functions
+        Illustrate the power of functions: Illustrate the power of functions
+      grade5_project_design:
+        description here: description here
+        title: title
+      grade5_project_presentation:
+        description here: description here
+        title: title
       gradeK_external_FrustrationWorksheet:
         Frustration Worksheet: Frustration Worksheet
+      gradeK_unplugged_events:
+        Big Event: Big Event
+      gradeK_unplugged_loops:
+        Loops Unplugged: Loops Unplugged
+      gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
+      intro to self assessment: {}
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
@@ -1585,6 +1974,9 @@ en:
       plc csp1 introduction to unit: {}
       plc csp1 netsim setup: {}
       plc csp1 philosophy and commentary: {}
+      pre-assessment survey heading1: {}
+      pre-assessment survey heading2: {}
+      pre-assessment survey heading3: {}
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -1757,6 +2149,25 @@ en:
         Timeline of PD Phases: Timeline of PD Phases
       sciPD2 wiggle:
         Walk with a Wiggle: Walk with a Wiggle
+      sciPD2Part4_S1_L2: {}
+      sciPD2Part4_S1_L3:
+        description here: description here
+        title: title
+      sciPD2Part4_S2_L1:
+        description here: description here
+        title: title
+      sciPD2Part4_S2_L2:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L1:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L2:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L3:
+        description here: description here
+        title: title
       sciPD2b end:
         Thank You!: Thank You!
       sciPD2b intro:
@@ -1818,6 +2229,9 @@ en:
       sciPD3pre1 thanks:
         Thank You: Thank You
         Thanks for your time: Thanks for your time
+      sciPDpart4_S1_L1:
+        description here: description here
+        title: title
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
       seqAlg:
@@ -1953,11 +2367,24 @@ en:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: description here
+        title: title
+      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
+        Cracking the Code: Cracking the Code
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
       name:
         CSP Culminating Assessment: {}
+        CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
+        CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch2 Cumulative Assessment MC: {}
+        CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
+        CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
@@ -1969,6 +2396,7 @@ en:
         Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        Unit 1 Self-Assessment: {}
         brendan test survey: {}
     match:
       2-3 Big Event Match 1:
@@ -2153,6 +2581,17 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD validator Matching:
+        "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
+        "&lt;head&gt;": "&lt;head&gt;"
+        "&lt;html&gt;": "&lt;html&gt;"
+        "&lt;title&gt;": "&lt;title&gt;"
+        Defines high level information about web page: Defines high level information about web page
+        'Matching: Web Page Fundamentals': 'Matching: Web Page Fundamentals'
+        Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.: Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -2596,35 +3035,35 @@ en:
         Node: Node
         Weight: Weight
       U2L14 Assessment:
-        'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Terminology Matching: Terminology Matching
+        Vigenère Cipher: Vigenère Cipher
+        a problem that cannot be solved in a reasonable amount of time: a problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
-        character frequency: character frequency
         cipher: cipher
         decrypt: decrypt
         encrypt: encrypt
-        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
-        heuristic: heuristic
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption that shifts the alphabet differently per character: encryption that shifts the alphabet differently per character
         random substitution cipher: random substitution cipher
-        technique used to find an approximate solution: technique used to find an approximate solution
-        the distribution of letters in a language: the distribution of letters in a language
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L14 Assessment4:
-        AMKZMB UMAAIOM APPPP: AMKZMB UMAAIOM APPPP
-        'Assessment: Question 5': 'Assessment: Question 5'
-        Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
-        GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
         ? |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         : |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         Random Substitution Cipher: Random Substitution Cipher
-        TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
+        SECRFULF_UGEUHWN: SECRFULF_UGEUHWN
+        SSSSFFFFXXXXTTTT: SSSSFFFFXXXXTTTT
+        TTTTUUUUVVVVWWWW: TTTTUUUUVVVVWWWW
+        The Caesar Cipher: The Caesar Cipher
         Vigenere Cipher: Vigenere Cipher
+        Which encryption technique?: Which encryption technique?
       U2L17 - Vocabulary matching:
         " <br>Brute force": " <br>Brute force"
         "<br>Computationally hard": "<br>Computationally hard"
@@ -3199,6 +3638,11 @@ en:
         L: L
         V: V
         Y: Y
+      CB_Question_3update:
+        'ASCII Character: <code> A </code>': 'ASCII Character: <code> A </code>'
+        'ASCII Character: <code> B </code>': 'ASCII Character: <code> B </code>'
+        'ASCII Character: <code> D </code>': 'ASCII Character: <code> D </code>'
+        The table does not contain the value represented by the binary number <code>0100  0010</code>: The table does not contain the value represented by the binary number <code>0100  0010</code>
       CB_Question_4:
         Input A can be either true or false: Input A can be either true or false
         Input A must be false: Input A must be false
@@ -3229,25 +3673,190 @@ en:
         Deleting entries from data: Deleting entries from data
         Searching through data: Searching through data
         Sorting data: Sorting data
+      CPS Unit2 Ch 1 MC lossless compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossy compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
+      CSD Header Size Prediction:
+        ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
+        : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
+      CSD Headers Prediction:
+        ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        Option 1: Option 1
+        'Option 2 ': 'Option 2 '
+        Option 3: Option 3
+        Option 4: Option 4
+      CSD Prediction Header Size:
+        Question: Question
+        right answer: right answer
+        wrong answer: wrong answer
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
         The x and y value are the center of a sprite and in the upper right corner of a rectangle: The x and y value are the center of a sprite and in the upper right corner of a rectangle
         There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
         What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
+      CSD U3 Functions Prediction define first:
+        Both squares will be drawn. You can create functions anywhere you like in your code.: Both squares will be drawn. You can create functions anywhere you like in your code.
+        ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        : Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
+        The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
+        The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
         A 30 will be displayed. Variables grow as you add more to them: A 30 will be displayed. Variables grow as you add more to them
         An error will be generated.: An error will be generated.
+      CSD U3 displace Prediction:
+        The feather will continue up for a while, then start to fall again.: The feather will continue up for a while, then start to fall again.
+        The feather will continue up.: The feather will continue up.
+        The feather will start to fall again.: The feather will start to fall again.
+        The feather will stop moving: The feather will stop moving
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
         wrong answer: wrong answer
+      CSP Unit 1 Ch 1 MC binary def:
+        ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.: It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.
+        It's impossible to build a computing machine that uses anything but binary to represent numbers: It's impossible to build a computing machine that uses anything but binary to represent numbers
+        The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
+        What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
+        What's Binary?: What's Binary?
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+        Decimal to Binary: Decimal to Binary
+        What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?: What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?
+      CSP Unit 1 Ch 1 MC bits to make 512:
+        10 bits: 10 bits
+        16 bits: 16 bits
+        17 bits: 17 bits
+        8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?: 8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?
+        9 bits: 9 bits
+        How Many Bits?: How Many Bits?
+      CSP Unit 1 Ch 2 MC internet layers:
+        " ": " "
+        DNS relies on TCP/IP: DNS relies on TCP/IP
+        HTTP relies on TCP/IP: HTTP relies on TCP/IP
+        Layers of Protocols: Layers of Protocols
+        TCP/IP relies on DNS: TCP/IP relies on DNS
+        TCP/IP relies on HTTP: TCP/IP relies on HTTP
+      CSP Unit 1 Ch 2 MC packets:
+        Messages are broken into packets to improve reliability of the internet: Messages are broken into packets to improve reliability of the internet
+        Packets: Packets
+        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
+        Packets can be routed on different paths from sender to receiver.: Packets can be routed on different paths from sender to receiver.
+        TCP guarantees that no packets are ever dropped: TCP guarantees that no packets are ever dropped
+        Which of the following is NOT true about TCP/IP packets?: Which of the following is NOT true about TCP/IP packets?
+      CSP Unit 2 Ch 1 MC kilo v mega:
+        1,000 times bigger: 1,000 times bigger
+        1,000,000 times bigger: 1,000,000 times bigger
+        1,000,000,000 times bigger: 1,000,000,000 times bigger
+        100,000 times bigger: 100,000 times bigger
+        Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
+        How much bigger?: How much bigger?
+      CSP Unit 2 Ch 1 metadata:
+        " ": " "
+        data: data
+        megadata: megadata
+        metadata: metadata
+        predata: predata
+        superdata: superdata
+      CSP Unit 2 Ch 2 MC IETF:
+        A collection of the leaders of the Tier 1 Internet service providers.: A collection of the leaders of the Tier 1 Internet service providers.
+        A loosely organized collection of citizens and engineers.: A loosely organized collection of citizens and engineers.
+        An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
+        Political leaders and heads of state.: Political leaders and heads of state.
+        The IETF: The IETF
+        ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
+      CSP Unit 2 Ch 2 MC data bias:
+        " ": " "
+        Data Bias: Data Bias
+        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
+        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
+        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
+      CSP Unit 2 Ch 2 MC google trends:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
+      CSP Unit 2 Ch 2 MC routing simple:
+        A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".: A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".
+        Protocols ensure that a single path between two computers is established before sending packets over it.: Protocols ensure that a single path between two computers is established before sending packets over it.
+        'Routers act independently and route packets as they see fit. ': 'Routers act independently and route packets as they see fit. '
+        ? Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        : Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        Routing: Routing
+        Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.: Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.
+      CSP Unit 2 Ch 2 MC worst viz:
+        " ": " "
+        Chart A (Line Chart): Chart A (Line Chart)
+        Chart B (Vertical Bar Chart): Chart B (Vertical Bar Chart)
+        Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
+        Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
+        Which is the Best?: Which is the Best?
+      CSP Unit 2 Ch2 MC data cleaning:
+        " ": " "
+        Data Cleaning: Data Cleaning
+        ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        : 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        Removing the entire row with home state "adsfas" and recomputing: Removing the entire row with home state "adsfas" and recomputing
+        Round up all non-integer values for "Likelihood of staying in state": Round up all non-integer values for "Likelihood of staying in state"
+        Translate all states into their two-letter state code: Translate all states into their two-letter state code
+      CSP Unit 2 ch 2 MC trends as predictors:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit2 Ch 1 MC hex rgb:
+        " ": " "
+        00F: 00F
+        12-bit Red: 12-bit Red
+        F00: F00
+        FF00: FF00
+        FF0000: FF0000
+      CSP Unit2 Ch1 MC megabyte:
+        How big is it?: How big is it?
+        Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
+        gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
+        gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
+        kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
+        megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
-        Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
+        Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
         Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
       CSPFinal_Question_10:
         I and II only: I and II only
@@ -3390,6 +3999,14 @@ en:
         It displays the smallest number in the list.: It displays the smallest number in the list.
         Which of the following best describes the result after the program is executed on a given list?: Which of the following best describes the result after the program is executed on a given list?
       CSPFinal_Question_4:
+        ? 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        : 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        32-bit addresses could not ensure that every internet-connected device can receive a unique IP address: 32-bit addresses could not ensure that every internet-connected device can receive a unique IP address
+        IPv4 proved unreliable in some cases where network redundancy could not be ensured: IPv4 proved unreliable in some cases where network redundancy could not be ensured
+        IPv6 will allow problems with IPv4's address hierarchy to be resolved: IPv6 will allow problems with IPv4's address hierarchy to be resolved
+        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+      CSPFinal_Question_4_original:
         'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)': 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
         'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)': 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
         'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)': 'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)'
@@ -3414,6 +4031,16 @@ en:
         'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+      CSPFinal_Question_8update:
+        " ": " "
+        ? 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+        : 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+        ? 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+        : 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+        ? 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+        : 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+        ? 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
+        : 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
@@ -3423,6 +4050,14 @@ en:
         : Hexadecimal is used to represent digital data because hexadecimal representation uses only 1 digit to represent groups of 4 binary digits.
         ? 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
         : 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
+      CSPFinal_Question_9update:
+        ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        The number system you use to view data has no effect on the underlying digital data.: The number system you use to view data has no effect on the underlying digital data.
+        ? When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+        : When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
       CSPPD2 pixel video 1:
         How many different light channels make up a single pixel on a standard monitor?: How many different light channels make up a single pixel on a standard monitor?
         four: four
@@ -3979,6 +4614,15 @@ en:
         right answer: right answer
         wrong answer: wrong answer
         you are so smart!: you are so smart!
+      PS MC test 7-22:
+        "<b>A.</b>  wrong answer": "<b>A.</b>  wrong answer"
+        "<b>B.</b> right answer": "<b>B.</b> right answer"
+        "<b>C.</b> another wrong answer": "<b>C.</b> another wrong answer"
+        "<b>D.</b>yet another wrong answer": "<b>D.</b>yet another wrong answer"
+        Here is a description: Here is a description
+        Here is a question.: Here is a question.
+        Here is a title: Here is a title
+        feedback for this wrong answer.: feedback for this wrong answer.
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
@@ -4131,11 +4775,11 @@ en:
         7 bits: 7 bits
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
         ? |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
         : |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
       U1L11 Assessment 1:
@@ -4152,7 +4796,7 @@ en:
         097 108 108 111 119: 097 108 108 111 119
         097 112 112 108 101: 097 112 112 108 101
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
-        'The word "Apple" translated into its ASCII number equivalent is:': 'The word "Apple" translated into its ASCII number equivalent is:'
+        'The word "Apple" translated into its ASCII number (decimal) equivalent is:': 'The word "Apple" translated into its ASCII number (decimal) equivalent is:'
       U1L2 Multiple Choice Assessment Question:
         'A binary question is defined as:': 'A binary question is defined as:'
         A message which has two possible states: A message which has two possible states
@@ -4182,7 +4826,7 @@ en:
         '4': '4'
         '6': '6'
         '8': '8'
-        If you just had a circle and a square, how many 3-shape permutations could you make?: If you just had a circle and a square, how many 3-shape permutations could you make?
+        If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?: If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
       U1L8 Multiple Choice:
         '10': '10'
@@ -4190,8 +4834,8 @@ en:
         '14': '14'
         '16': '16'
         'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
-        ? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
-        : You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+        ? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
+        : You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
       U2L01 Assessment 1:
         A loosely organized collection of citizens and engineers who communicate mostly by email.: A loosely organized collection of citizens and engineers who communicate mostly by email.
         An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
@@ -4366,17 +5010,31 @@ en:
         26^26: 26^26
         'Assessment: Question 3': 'Assessment: Question 3'
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
+      U2L13 Cleaning Data MC:
+        Cleaning and Filtering Data: Cleaning and Filtering Data
+        Filtering and cleaning data is a fully automated process that should not require human input or intervention: Filtering and cleaning data is a fully automated process that should not require human input or intervention
+        Filtering and cleaning data is a human process that does not require the use of computers: Filtering and cleaning data is a human process that does not require the use of computers
+        Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process: Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process
+        Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions: Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions
+        Which of the following is the most accurate statement about cleaning and filtering data?: Which of the following is the most accurate statement about cleaning and filtering data?
       U2L14 Assessment3:
         'Assessment: Question 4': 'Assessment: Question 4'
         True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
         'false': 'false'
         'true': 'true'
+      U2L14 Summary Tables MC:
+        Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
+        Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
+        Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
+        Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
+        What's it good for?: What's it good for?
+        Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
-        'Assessment: Question 1': 'Assessment: Question 1'
-        Long keys create exponential growth possibilities.: Long keys create exponential growth possibilities.
         One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
         The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
+        The key length is variable and potentially very long: The key length is variable and potentially very long
+        Vigenere Cipher: Vigenere Cipher
         Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
       U2L15 Assessment3:
         'Assessment: Question 3': 'Assessment: Question 3'
@@ -4447,6 +5105,33 @@ en:
         hierarchy: hierarchy
         packet: packet
         protocol: protocol
+      U2L5 Color Pixel MC Question:
+        " ": " "
+        1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
+        1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
+        3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
+        3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
+        30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
+        How many bytes does it take...?: How many bytes does it take...?
+        How many bytes?: How many bytes?
+      U2L8 google trends MC:
+        " ": " "
+        People like dogs more than cats: People like dogs more than cats
+        People search for "dogs" more frequently than "cats": People search for "dogs" more frequently than "cats"
+        The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
+        There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
+        What does the visualization actually show?: What does the visualization actually show?
+      U2L9 What is digital divide MC:
+        ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
+        ? "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        : "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        ? "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        : "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        What is the digital divide?: What is the digital divide?
+        ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
+        : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
       U3L01 Assessment2:
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
         : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
@@ -5088,6 +5773,118 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      cspu3_assess1_callfunction:
+        <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
+        <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
+        <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
+        <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
+        <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
+      cspu3_assess1_codeoutcome:
+        It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
+        The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
+        The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
+        The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
+      cspu3_assess1_collaboration:
+        Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
+        In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
+        ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        : Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        Programmers can write functions without needing to know what they do or how they should work.: Programmers can write functions without needing to know what they do or how they should work.
+        Team members can rely on one another to explain their code.: Team members can rely on one another to explain their code.
+      cspu3_assess1_functionsfalse:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+      cspu3_assess1_loop_or_function1:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function2:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function3:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function4:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_namingconvention:
+        A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
+        A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
+        Function names should be organized alphabetically.: Function names should be organized alphabetically.
+        The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
+        Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
+      cspu3_assess1_naturallanguage:
+        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
+        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
+        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
+        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      cspu3_assess1_outputdrawing:
+        <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
+        <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
+        <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
+        <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">: <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">
+        <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
+      cspu3_assess1_parameters:
+        Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
+        Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
+        Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
+        Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
+      cspu3_assess1_removeline:
+        Line 3 and Line 4: Line 3 and Line 4
+        Line 8 and Line 9: Line 8 and Line 9
+        Line 9: Line 9
+        Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
+      cspu3_assess1_robotpath:
+        <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
+        <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
+        <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
+        <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
+        <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
+      cspu3_assess1_truefunctions:
+        A function can change names over the course of a program.: A function can change names over the course of a program.
+        Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
+        Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
+        Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
+        Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu5_assess1_additem:
+        cart total = 1;: cart total = 1;
+        cartTotal + 1;: cartTotal + 1;
+        cartTotal = cartTotal +1;: cartTotal = cartTotal +1;
+        var cartTotal + 1;: var cartTotal + 1;
+        var cartTotal = cartTotal + 1;: var cartTotal = cartTotal + 1;
+      cspu5_assess1_codevalues:
+        <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>: <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>
+        <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>: <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>
+        <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>: <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>
+        <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>: <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>
+        <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>: <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>
+      cspu5_assess1_debugging:
+        Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.: Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.
+        Change the names of variables within the program and run the program again.: Change the names of variables within the program and run the program again.
+        Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
+        Display the value of variables at various points during the program.: Display the value of variables at various points during the program.
+      cspu5_assess1_elementid:
+        ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
+        : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
+        An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
+        IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
+        Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
+        While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
+      cspu5_assess1_eventprograms:
+        An event-driven program cannot implement an algorithm.: An event-driven program cannot implement an algorithm.
+        ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
+        Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
+        The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
+      cspu5_assess1_swap:
+        <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
+        <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
+        <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
+        <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
+        <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
@@ -5175,6 +5972,238 @@ en:
         What is f(2)?: What is f(2)?
         f(x) = x + 3: f(x) = x + 3
         x: x
+      pre-assessment survey q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q10:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be better at computer science than most of the other kids at my school.: I think I will be better at computer science than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q11:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be  very good at computer science.: I think I will be  very good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q12:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.: I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q13:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q14:
+        Agree: Agree
+        Disagree: Disagree
+        I think computer science is interesting.: I think computer science is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q15:
+        Agree: Agree
+        Disagree: Disagree
+        I like (or think I will like) doing computer science activities.: I like (or think I will like) doing computer science activities.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q17:
+        Agree: Agree
+        Disagree: Disagree
+        Kids like me do computer science.: Kids like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q18:
+        Agree: Agree
+        Disagree: Disagree
+        I like (or think I will like) computer science more than other kids at my school.: I like (or think I will like) computer science more than other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q19:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q20:
+        Agree: Agree
+        Disagree: Disagree
+        I do computer science in my free time.: I do computer science in my free time.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q21:
+        Agree: Agree
+        Disagree: Disagree
+        I use computer science skills in my daily life.: I use computer science skills in my daily life.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q22:
+        Agree: Agree
+        'Computer science applies to most aspects of real life. ': 'Computer science applies to most aspects of real life. '
+        Disagree: Disagree
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q23:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q24:
+        Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
+        'No': 'No'
+        'Yes': 'Yes'
+      pre-assessment survey q26:
+        ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        'No': 'No'
+        'Yes': 'Yes'
+      pre-assessment survey q27:
+        After school program at my school: After school program at my school
+        After school program somewhere else (e.g., Boys and Girls Club, etc.): After school program somewhere else (e.g., Boys and Girls Club, etc.)
+        ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        N/A: N/A
+        Online program: Online program
+        Other: Other
+        Summer program/camp: Summer program/camp
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Other
+        What grade are you in?: What grade are you in?
+      pre-assessment survey q29:
+        Female: Female
+        'I identify my gender as:': 'I identify my gender as:'
+        Male: Male
+        Other: Other
+        Prefer not to answer: Prefer not to answer
+      pre-assessment survey q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q30:
+        American Indian or Alaska Native: American Indian or Alaska Native
+        Asian: Asian
+        Black or African American: Black or African American
+        Hispanic or Latino/Latina: Hispanic or Latino/Latina
+        Native Hawaiian or Other Pacific Islander: Native Hawaiian or Other Pacific Islander
+        Other: Other
+        Prefer not to answer: Prefer not to answer
+        Two or more races: Two or more races
+        Which of the following best represents your racial and/or ethnic identity?: Which of the following best represents your racial and/or ethnic identity?
+        White: White
+      pre-assessment survey q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q5:
+        Agree: Agree
+        Disagree: Disagree
+        I like my schoolwork.: I like my schoolwork.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q6:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q7:
+        Agree: Agree
+        Disagree: Disagree
+        I enjoy my time at school.: I enjoy my time at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q8:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my school work.: It is important for me to be good at my school work.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q9:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      sarah_test_maggie:
+        <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>
+        Question: Question
+        right answer: right answer
+        test: test
       sciPD PreQ 1:
         Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
         'No': 'No'
@@ -5297,6 +6326,12 @@ en:
         Neutral: Neutral
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      test me:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -5306,10 +6341,14 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        Answer 1: Answer 1
-        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
-        Make a prediction and hit run: Make a prediction and hit run
-        Question: Question
+        "<!DOCTYPE html>": "<!DOCTYPE html>"
+        "<head>": "<head>"
+        "<html>": "<html>"
+        "<title>": "<title>"
+        Defines high level information about web page: Defines high level information about web page
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

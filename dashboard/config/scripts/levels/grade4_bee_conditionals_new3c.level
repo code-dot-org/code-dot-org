@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Help the bee collect all of the nectar and make all of the honey! Hint: Try using a nested loop!",
+    "instructions": "Help the bee collect all of the nectar and make all of the honey! Hint: Try using one loop inside of another loop.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",

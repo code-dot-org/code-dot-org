@@ -11,4 +11,8 @@
 class Plc::Course < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', foreign_key: 'plc_course_id', dependent: :destroy
   has_many :plc_course_units, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_id', dependent: :destroy
+
+  def get_url_name
+    name.downcase.tr(' ', '-')
+  end
 end

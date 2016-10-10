@@ -124,5 +124,4 @@ class XhrProxyControllerTest < ActionController::TestCase
     get :get, u: XHR_URI
     assert_response 403
   end
-
 end

@@ -1,4 +1,4 @@
-class DeleteNewCoursesScriptLevelsAndStages < ActiveRecord::Migration
+class DeleteNewCoursesScriptLevelsAndStages < ActiveRecord::Migration[4.2]
   def change
     # one time migration. not to be run again
 

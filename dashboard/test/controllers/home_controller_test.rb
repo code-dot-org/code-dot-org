@@ -3,7 +3,7 @@ require 'test_helper'
 require 'time'
 
 class HomeControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     # stub properties so we don't try to hit pegasus db
@@ -21,7 +21,7 @@ class HomeControllerTest < ActionController::TestCase
   test "language is set with cookies" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 
-    request.host = "learn.code.org"
+    request.host = "studio.code.org"
 
     get :set_locale, :return_to => "http://blahblah", :locale => "es-ES"
 
@@ -35,7 +35,7 @@ class HomeControllerTest < ActionController::TestCase
   test "handle nonsense in return_to" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 
-    request.host = "learn.code.org"
+    request.host = "studio.code.org"
 
     get :set_locale, :return_to => ["blah"], :locale => "es-ES"
 
@@ -43,9 +43,9 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "if return_to in set_locale is nil redirects to homepage" do
-    request.host = "learn.code.org"
+    request.host = "studio.code.org"
     get :set_locale, :return_to => nil, :locale => "es-ES"
-    assert_redirected_to '/'
+    assert_redirected_to ''
   end
 
   test "should get index with edmodo header" do
@@ -266,9 +266,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'no more debug' do
     # this action is now in AdminReportsController and requires admin privileges
-    assert_raises AbstractController::ActionNotFound do
+    assert_raises ActionController::UrlGenerationError do
       get :debug
     end
   end
-
 end

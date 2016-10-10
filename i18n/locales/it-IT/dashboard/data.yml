@@ -1,582 +1,513 @@
 it:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Corso introduttivo di informatica per scuole elementari e medie inferiori
-          Unplug1: Lezione 1
-          Maze: Lezione 2
-          Unplug2: Lezione 3
-          Unplug3: Lezione 4
-          Artist: Lezione 5
-          Unplug4: Lezione 6
-          Artist2: Lezione 7
-          Unplug5: Lezione 8
-          Farmer: Lezione 9
-          Unplug6: Lezione 10
-          Artist3: Lezione 11
-          Unplug7: Lezione 12
-          Farmer2: Lezione 13
-          Unplug8: Lezione 14
-          Artist4: Lezione 15
-          Unplug9: Lezione 16
-          Farmer3: Lezione 17
-          Unplug10: Lezione 18
-          Artist5: Lezione 19
-          Unplug11: Lezione 20
-        Hour of Code:
-          desc: "L'Ora del Codice"
-          Maze: Lezione 1
-        Edit Code:
-          desc: Modifica il codice (versione provvisoria)
-          MazeEC: Fase 1
-        2014 Levels:
-          desc: Ping-Pong (versione provvisoria)
-          Bounce: Lezione 1
-        Builder Levels:
-          desc: "Esercizi creati dall'utente (versione provvisoria)"
-          Custom: Lezione 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Lezione 1
-        Jigsaw Levels:
-          desc: Puzzle (versione provvisoria)
-          Jigsaw: Lezione 1
-        Step Levels:
-          desc: Labirinto (versione provvisoria)
-          MazeStep: Passo della lezione
-        edit-code:
-          desc: Modifica il codice (versione provvisoria)
-          MazeEC: Lezione 1
-          Applab: Lezione 2
-          ArtistEC: Lezione 3
-          StudioEC: Lezione 4
-        events:
-          desc: Ping-Pong (versione provvisoria)
-          Bounce: Lezione 1
-          Studio: Lezione 2
-        builder:
-          desc: "Esercizi creati dall'utente (versione provvisoria)"
-          Custom: Lezione 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Lezione 1
-        jigsaw:
-          desc: Puzzle (versione provvisoria)
-          Jigsaw: Lezione 1
-        step:
-          desc: Labirinto (versione provvisoria)
-          MazeStep: Passo della lezione
-        wordsearch:
-          desc: Ape Sapiente (versione provvisoria)
-          WordSearch: Lezione 1
     game:
       name:
-        Unplug1: "Cos'è l'informatica"
-        Maze: Il labirinto
-        Multi: Materiale con Risposte Multiple
-        Unplug2: Pensiero computazionale
-        Unplug3: Programmazione su carta a quadretti
-        Artist: "L'artista"
-        Unplug4: Algoritmi
-        Artist2: "L'artista 2"
-        Unplug5: Funzioni
-        Farmer: La Contadina
-        Unplug6: Istruzioni condizionali
-        Artist3: "L'artista 3"
-        Unplug7: Composizione di canzoni
-        Farmer2: La Contadina 2
-        Unplug8: Astrazione
-        Artist4: "L'artista 4"
-        Unplug9: Programmazione a Staffetta
-        Farmer3: La Contadina 3
-        Unplug10: Internet
-        Artist5: "L'artista 5"
-        Unplug11: Conclusione
-        MazeEC: Il Labirinto
-        Bounce: Ping-Pong
-        Flappy: Flappy Bird
-        Jigsaw: Puzzle
-        MazeStep: 'Modalità "a passi" del Labirinto'
-        Wordsearch: Ricerca di parole
-        Webapp: Laboratorio per le App
-        ArtistEC: "L'artista"
-        TextMatch: Esercizio di Verifica (Associazioni)
-        StudioEC: Laboratorio
-        Applab: Laboratorio per le App
-        NetSim: Simulatore di Internet
-        Custom: 'Artista: Sequenze e Cicli'
-        CustomStudio: Laboratorio
+        'Unplug1': "Cos'è l'informatica"
+        'Maze': Il labirinto
+        'Multi': Materiale con Risposte Multiple
+        'Unplug2': Pensiero computazionale
+        'Unplug3': Programmazione su carta a quadretti
+        'Artist': "L'artista"
+        'Unplug4': Algoritmi
+        'Artist2': "L'artista 2"
+        'Unplug5': Funzioni
+        'Farmer': La Contadina
+        'Unplug6': Istruzioni condizionali
+        'Artist3': "L'artista 3"
+        'Unplug7': Composizione di canzoni
+        'Farmer2': La Contadina 2
+        'Unplug8': Astrazione
+        'Artist4': "L'artista 4"
+        'Unplug9': Programmazione a Staffetta
+        'Farmer3': La Contadina 3
+        'Unplug10': Internet
+        'Artist5': "L'artista 5"
+        'Unplug11': Conclusione
+        'MazeEC': Il Labirinto
+        'Bounce': Ping-Pong
+        'Flappy': Flappy Bird
+        'Jigsaw': Puzzle
+        'MazeStep': 'Modalità "a passi" del Labirinto'
+        'Wordsearch': Ricerca di parole
+        'Webapp': Laboratorio per le App
+        'ArtistEC': "L'artista"
+        'TextMatch': Esercizio di Verifica (Associazioni)
+        'StudioEC': Laboratorio
+        'Applab': Laboratorio per le App
+        'NetSim': Simulatore di Internet
+        'Custom': Artista
+        'CustomStudio': Laboratorio
     trophy:
       name:
-        Bronze: Bronzo
-        Silver: Argento
-        Gold: Oro
+        'Bronze': Bronzo
+        'Silver': Argento
+        'Gold': Oro
     concept:
       description:
-        sequence: Sequenza
-        if: 'Blocco "se"'
-        if_else: 'Blocco "se-altrimenti"'
-        loop_times: 'Blocco "ripeti ... volte"'
-        loop_until: 'Blocco "ripeti fino a che"'
-        loop_while: 'Blocco "Mentre"'
-        loop_for: 'Blocco "ripeti con contatore"'
-        function: Funzioni
-        parameters: Funzioni con parametri
+        'sequence': Sequenza
+        'if': 'Blocco "se"'
+        'if_else': 'Blocco "se-altrimenti"'
+        'loop_times': 'Blocco "ripeti ... volte"'
+        'loop_until': 'Blocco "ripeti fino a che"'
+        'loop_while': 'Blocco "Mentre"'
+        'loop_for': 'Blocco "ripeti con contatore"'
+        'function': Funzioni
+        'parameters': Funzioni con parametri
     level:
       instructions:
-        maze_2_2: |-
+        'maze_2_2': |-
           Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi "vai avanti" uno sopra l'altro e poi premi "Esegui" per aiutarmi a raggiungerlo. 
-        maze_2_1: Questo maialino mi fa arricciare le penne. Aiutami a prenderlo!
-        maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
-        maze_2_3: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
-        maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!
-        maze_2_5: "C'è un modo per arrivare a quello sciocco maiale aggiungendo solo due blocchi. Riesci a trovarlo?"
-        maze_2_6: "Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi."
-        maze_2_7: 'Aiutami a catturare questo maialaccio utilizzando il minor numero possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".'
-        maze_2_8: 'Quando un blocco è grigio, significa che non puoi eliminarlo. In questo esercizio il blocco grigio "ripeti 3 volte" fa ripetere per 3 volte le azioni che contiene. Prova ad inserire in esso questi blocchi: "vai avanti", "vai avanti", "gira a destra".'
-        maze_2_9: 'Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maiale.'
-        maze_2_10: "Ok, un'ultima volta per fare pratica: riesci a risolvere questo esercizio aggiungendo solo 4 blocchi?"
-        maze_2_11: Caro umano. Io zombie. Io affamato. Devo ... arrivare ... al girasole. Riesci a farmi arrivare là aggiungendo solo 5 blocchi?
-        maze_2_12: Ok, questo esercizio è simile, ma leggermente diverso. Riesci a farlo aggiungendo solo cinque blocchi?
-        maze_2_13: 'Qui il nuovo blocco "se" viene usato per farmi decidere quando girare. Fai attenzione: adesso hai bisogno di inserire un solo blocco, ma capisci bene il procedimento in modo che puoi farlo tutto da solo la prossima volta.'
-        maze_2_14: |-
+        'maze_2_1': Questo maialino mi fa arricciare le penne. Aiutami a prenderlo!
+        'maze_2_2_5': Fammi fare il percorso per arrivare a quello sciocco maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
+        'maze_2_3': Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
+        'maze_2_4': Mantieni la calma e aiutami a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!
+        'maze_2_5': "C'è un modo per arrivare a quello sciocco maiale aggiungendo solo due blocchi. Riesci a trovarlo?"
+        'maze_2_6': "Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi."
+        'maze_2_7': 'Aiutami a catturare questo maialaccio utilizzando il minor numero possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".'
+        'maze_2_8': 'Quando un blocco è grigio, significa che non puoi eliminarlo. In questo esercizio il blocco grigio "ripeti 3 volte" fa ripetere per 3 volte le azioni che contiene. Prova ad inserire in esso questi blocchi: "vai avanti", "vai avanti", "gira a destra".'
+        'maze_2_9': 'Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maiale.'
+        'maze_2_10': "Ok, un'ultima volta per fare pratica: riesci a risolvere questo esercizio aggiungendo solo 4 blocchi?"
+        'maze_2_11': Caro umano. Io zombie. Io affamato. Devo ... arrivare ... al girasole. Riesci a farmi arrivare là aggiungendo solo 5 blocchi?
+        'maze_2_12': Ok, questo esercizio è simile, ma leggermente diverso. Riesci a farlo aggiungendo solo cinque blocchi?
+        'maze_2_13': 'Qui il nuovo blocco "se" viene usato per farmi decidere quando girare. Fai attenzione: adesso hai bisogno di inserire un solo blocco, ma capisci bene il procedimento in modo che puoi farlo tutto da solo la prossima volta.'
+        'maze_2_14': |-
           Ok, questo è quasi come l'esercizio precedente, ma devi ricordarti come hai usato insieme i blocchi "se" e "ripeti".
-        maze_2_15: |-
+        'maze_2_15': |-
           Me ... volere ... girasole! Usa un blocco "se c'è strada" per farmi arrivare là utilizzando il minor numero possibile di blocchi.
-        maze_2_16: 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio non è molto diverso, ma stai attento alle piante carnivore!'
-        maze_2_17: |-
+        'maze_2_16': 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio non è molto diverso, ma stai attento alle piante carnivore!'
+        'maze_2_17': |-
           Il blocco "se-altrimenti" controlla una condizione: SE è vera fa una cosa ALTRIMENTI ne fa un'altra. Prova ad usare questo nuovo blocco per farmi arrivare al girasole.
-        maze_2_18: 'Ancora un esercizio con il blocco "se-altrimenti": riesci a risolverlo correttamente al primo tentativo?'
-        maze_2_19: Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso tortuoso di qualsiasi lunghezza.
-        turtle_1_1: "Ciao, io sono un artista. Puoi scrivere del codice per farmi disegnare quasi qualunque cosa. Usa i blocchi per farmi disegnare lungo le linee grigie dell'immagine."
-        turtle_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore preferito scegliendolo col nuovo blocco "imposta colore".'
-        turtle_1_3: 'Disegna un quadrato usando solo 3 blocchi. Nota: puoi farmi andare più veloce o più lento spostando il cursore qua sopra verso la lepre o verso la tartaruga.'
-        turtle_1_4: |-
+        'maze_2_18': 'Ancora un esercizio con il blocco "se-altrimenti": riesci a risolverlo correttamente al primo tentativo?'
+        'maze_2_19': Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso tortuoso di qualsiasi lunghezza.
+        'turtle_1_1': "Ciao, io sono un artista. Puoi scrivere del codice per farmi disegnare quasi qualunque cosa. Usa i blocchi per farmi disegnare lungo le linee grigie dell'immagine."
+        'turtle_1_2': 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore preferito scegliendolo col nuovo blocco "imposta colore".'
+        'turtle_1_3': 'Disegna un quadrato usando solo 3 blocchi. Nota: puoi farmi andare più veloce o più lento spostando il cursore qua sopra verso la lepre o verso la tartaruga.'
+        'turtle_1_4': |-
           Disegna un triangolo i cui lati sono tutti di colori diversi, usando l'opzione "colore scelto a caso" che ogni volta sceglie a caso un colore. Suggerimento: devi capire di quanto girare cliccando sul numero nel blocco "gira".
-        turtle_1_5: Ora, per fare esercizio, disegna un triangolo e poi un quadrato in modo da riprodurre una busta.
-        turtle_1_6: 'Riesci a capire come disegnare il triangolo e il quadrato? Suggerimento: disegna prima il triangolo, poi cerca di capire di quanto devi girare prima di iniziare a disegnare il quadrato.'
-        turtle_1_7: "Ok, ora è un po' più difficile: vedi se riesci a disegnare questi occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!"
-        turtle_1_8: 'Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o premi "Esegui" per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
-        turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi per disegnare un cerchio?
-        turtle_1_10: |-
+        'turtle_1_5': Ora, per fare esercizio, disegna un triangolo e poi un quadrato in modo da riprodurre una busta.
+        'turtle_1_6': 'Riesci a capire come disegnare il triangolo e il quadrato? Suggerimento: disegna prima il triangolo, poi cerca di capire di quanto devi girare prima di iniziare a disegnare il quadrato.'
+        'turtle_1_7': "Ok, ora è un po' più difficile: vedi se riesci a disegnare questi occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!"
+        'turtle_1_8': 'Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o premi "Esegui" per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
+        'turtle_1_9': Riesci a capire con quale numero devi sostituire i punti interrogativi per disegnare un cerchio?
+        'turtle_1_10': |-
           Ce l'hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune idee divertenti: una figura stilizzata, un fiocco di neve o una spirale. Prova anche il nuovo blocco "imposta la larghezza". Buon divertimento!
-        turtle_4_1: 'Riesci a disegnare un triangolo (con lati di 100 pixel) usando solo 3 blocchi? Suggerimento: usa il blocco "ripeti". Ricorda che puoi usare il cursore qua sopra per variare la velocità di disegno.'
-        turtle_4_2: |-
+        'turtle_4_1': 'Riesci a disegnare un triangolo (con lati di 100 pixel) usando solo 3 blocchi? Suggerimento: usa il blocco "ripeti". Ricorda che puoi usare il cursore qua sopra per variare la velocità di disegno.'
+        'turtle_4_2': |-
           Per disegnare questi triangoli aggiungi un blocco "gira a destra di 90 gradi" in qualche punto del programma già presente nell'area di lavoro.
-        turtle_4_3: 'Ok, ecco il codice che serve per disegnare un singolo triangolo. Riesci ad aggiungere i blocchi "ripeti" e "gira" per disegnare un bel fiore?'
-        turtle_4_4: "Ecco lo stesso codice dell'esercizio precedente, ma girando solo di 36 gradi dopo aver disegnato ogni triangolo. Quante volte lo devi ripetere? Suggerimento: dopo 360 gradi di rotazione il disegno diventerà un cerchio completo."
-        turtle_4_5: "Ecco lo stesso codice dell'esercizio precedente, ma ripetendo i giri 36 volte. Di quanti gradi dovrebbe essere ogni giro? Suggerimento: dopo 360 gradi di rotazione il disegno diventerà un cerchio completo."
-        turtle_4_6: Usando solo 3 blocchi, riesci a disegnare un quadratino con i lati lunghi 20 pixel?
-        turtle_4_7: |-
+        'turtle_4_3': 'Ok, ecco il codice che serve per disegnare un singolo triangolo. Riesci ad aggiungere i blocchi "ripeti" e "gira" per disegnare un bel fiore?'
+        'turtle_4_4': "Ecco lo stesso codice dell'esercizio precedente, ma girando solo di 36 gradi dopo aver disegnato ogni triangolo. Quante volte lo devi ripetere? Suggerimento: dopo 360 gradi di rotazione il disegno diventerà un cerchio completo."
+        'turtle_4_5': "Ecco lo stesso codice dell'esercizio precedente, ma ripetendo i giri 36 volte. Di quanti gradi dovrebbe essere ogni giro? Suggerimento: dopo 360 gradi di rotazione il disegno diventerà un cerchio completo."
+        'turtle_4_6': Usando solo 3 blocchi, riesci a disegnare un quadratino con i lati lunghi 20 pixel?
+        'turtle_4_7': |-
           Ecco il codice dell'esercizio precedente per disegnare il quadratino da 20 pixel. Come puoi "ripeterlo" per disegnare 10 quadratini vicini che formano una scaletta? Suggerimento: hai bisogno solo di altri 2 blocchi.
-        turtle_4_8: "Questa era la soluzione dell'esercizio precedente. Riesci ad aggiungere solo 2 blocchi in più per completare il disegno?"
-        turtle_4_9: "Questa era la soluzione dell'esercizio precedente. Di quanti gradi devi girare adesso dopo aver disegnato una scaletta per completare il disegno? (Probabilmente devi provare ad indovinare un paio di volte)"
-        turtle_4_10: "Questa era la soluzione dell'esercizio precedente. Inserisci il numero giusto di ripetizioni per eseguire tutto il disegno."
-        turtle_4_11: 'Prova a cambiare i numeri nei blocchi "gira" e "ripeti" per disegnare forme diverse. Oppure, prova a cambiare il resto del codice per disegnare tutto ciò che vuoi.'
-        maze_karel_1_1: 'Ciao, io sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina. Spostami verso i mucchi di terra e usa il blocco "rimuovi 1" per rimuoverli.'
-        maze_karel_1_2: 'Adesso, spostami verso la buca e riempila con 2 palate di terra, usando il blocco "riempi 1".'
-        maze_karel_1_3: Spostami verso il mucchio di terra e fammelo rimuovere usando il minor numero possibile di blocchi.
-        maze_karel_1_4: 'Riesci ad aiutarmi a rimuovere tutti e quattro i mucchi di terra? Suggerimento: prova ad usare un blocco "ripeti".'
-        maze_karel_1_5: |-
+        'turtle_4_8': "Questa era la soluzione dell'esercizio precedente. Riesci ad aggiungere solo 2 blocchi in più per completare il disegno?"
+        'turtle_4_9': "Questa era la soluzione dell'esercizio precedente. Di quanti gradi devi girare adesso dopo aver disegnato una scaletta per completare il disegno? (Probabilmente devi provare ad indovinare un paio di volte)"
+        'turtle_4_10': "Questa era la soluzione dell'esercizio precedente. Inserisci il numero giusto di ripetizioni per eseguire tutto il disegno."
+        'turtle_4_11': 'Prova a cambiare i numeri nei blocchi "gira" e "ripeti" per disegnare forme diverse. Oppure, prova a cambiare il resto del codice per disegnare tutto ciò che vuoi.'
+        'maze_karel_1_1': 'Ciao, io sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina. Spostami verso i mucchi di terra e usa il blocco "rimuovi 1" per rimuoverli.'
+        'maze_karel_1_2': 'Adesso, spostami verso la buca e riempila con 2 palate di terra, usando il blocco "riempi 1".'
+        'maze_karel_1_3': Spostami verso il mucchio di terra e fammelo rimuovere usando il minor numero possibile di blocchi.
+        'maze_karel_1_4': 'Riesci ad aiutarmi a rimuovere tutti e quattro i mucchi di terra? Suggerimento: prova ad usare un blocco "ripeti".'
+        'maze_karel_1_5': |-
           Aiutami a riempire ognuna di queste buche con 5 palate di terra. Suggerimento: puoi mettere un blocco "ripeti" all'interno del blocco "mentre".
-        maze_karel_1_6: 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere se sto sopra un mucchio.'
-        maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato? Suggerimento: usa le opzioni nel menu a discesa del blocco "mentre".'
-        maze_karel_1_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando il minor numero possibile di blocchi.
-        maze_karel_1_9: 'Fammi rimuovere tutti questi mucchi di terra. Prova ad usare il minor numero possibile di blocchi. Ce la fai usando il blocco "mentre" e senza usare il blocco "ripeti"?'
-        maze_karel_1_10: |-
+        'maze_karel_1_6': 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere se sto sopra un mucchio.'
+        'maze_karel_1_7': 'Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato? Suggerimento: usa le opzioni nel menu a discesa del blocco "mentre".'
+        'maze_karel_1_8': Aiutami a riempire la buca alla fine del mio terreno, utilizzando il minor numero possibile di blocchi.
+        'maze_karel_1_9': 'Fammi rimuovere tutti questi mucchi di terra. Prova ad usare il minor numero possibile di blocchi. Ce la fai usando il blocco "mentre" e senza usare il blocco "ripeti"?'
+        'maze_karel_1_10': |-
           Sto lavorando di sera, fuori è buio e non posso dire quanto grandi sono i mucchi. Questa volta non ho a disposizione le opzioni che avevo prima sul blocco "mentre". Spostami lungo il campo e se c'è un mucchio rimuovilo.
-        maze_karel_1_11: |-
+        'maze_karel_1_11': |-
           È ancora buio fuori. Spostami lungo il terreno. Se c'è un mucchio, rimuovilo e se c'è una buca, riempila. Suggerimento: usa il menu a discesa delle opzioni del blocco "se".
-        turtle_2_1: 'Ciao. Io artista zombie. Mi piace disegnare! Aiutami a disegnare un quadrato con un colore speciale. Attenzione: ci sono sempre gli stessi blocchi, ma ora sono stati organizzati in categorie.'
-        turtle_2_2: |-
+        'turtle_2_1': 'Ciao. Io artista zombie. Mi piace disegnare! Aiutami a disegnare un quadrato con un colore speciale. Attenzione: ci sono sempre gli stessi blocchi, ma ora sono stati organizzati in categorie.'
+        'turtle_2_2': |-
           Benvenuto all'uso di funzioni che consentono di definire nuovi blocchi! Prova il nuovo blocco "disegna un quadrato", che si trova nella categoria "Funzioni", per disegnare un quadratino verde con 50 pixel per lato.
-        turtle_2_3: 'Usa il blocco di ripetizione "ripeti ... volte" (nella categoria "Ripetizioni") per disegnare 3 quadrati ognuno con 100 pixel per lato, a distanza di 120 gradi tra loro. Prova a farlo anche usando 3 diversi colori scelti a caso.'
-        turtle_2_4: "Ora saremo un po' fantasiosi. Modifica il codice per disegnare 36 quadrati, di 100 pixel per lato e distanti 10 gradi tra loro. Ricorda che puoi spostare il cursore verso la lepre per farmi andare più veloce."
-        turtle_2_5: 'Disegna dei quadrati con lati di 50, 60, 70, 80 e 90 pixel.  Dovrai usare 5 volte la funzione "disegna un quadrato".'
-        turtle_2_6: 'Questo programma userà un blocco "ripeti con contatore" per disegnare gli stessi quadrati come nel disegno precedente. Il quadrato deve avere la stessa dimensione del contatore, quindi usa il blocco "contatore". Suggerimento: è nella categoria "Variabili".'
-        turtle_2_7: 'Ecco un programma per disegnare una spirale, ma i blocchi sono disabilitati quindi non vengono eseguiti. Costruisci un nuovo programma per disegnare la stessa spirale usando il blocco di ripetizione "ripeti con contatore" (nella categoria "Ripetizioni") e il blocco "contatore" (nella categoria "Variabili").'
-        turtle_2_7_5: |-
+        'turtle_2_3': 'Usa il blocco di ripetizione "ripeti ... volte" (nella categoria "Ripetizioni") per disegnare 3 quadrati ognuno con 100 pixel per lato, a distanza di 120 gradi tra loro. Prova a farlo anche usando 3 diversi colori scelti a caso.'
+        'turtle_2_4': "Ora saremo un po' fantasiosi. Modifica il codice per disegnare 36 quadrati, di 100 pixel per lato e distanti 10 gradi tra loro. Ricorda che puoi spostare il cursore verso la lepre per farmi andare più veloce."
+        'turtle_2_5': 'Disegna dei quadrati con lati di 50, 60, 70, 80 e 90 pixel.  Dovrai usare 5 volte la funzione "disegna un quadrato".'
+        'turtle_2_6': 'Questo programma userà un blocco "ripeti con contatore" per disegnare gli stessi quadrati come nel disegno precedente. Il quadrato deve avere la stessa dimensione del contatore, quindi usa il blocco "contatore". Suggerimento: è nella categoria "Variabili".'
+        'turtle_2_7': 'Ecco un programma per disegnare una spirale, ma i blocchi sono disabilitati quindi non vengono eseguiti. Costruisci un nuovo programma per disegnare la stessa spirale usando il blocco di ripetizione "ripeti con contatore" (nella categoria "Ripetizioni") e il blocco "contatore" (nella categoria "Variabili").'
+        'turtle_2_7_5': |-
           C'è una nuova funzione "disegna un pupazzo di neve" (nella categoria "Funzioni"). Disegna 2 pupazzi di neve, di altezza 250 e 100 pixel.
-        turtle_2_8: |-
+        'turtle_2_8': |-
           Questo è un po' complicato. Usa la funzione "disegna un pupazzo di neve" e il nuovo blocco "salta in avanti" (nella categoria "Azioni"). Disegna 3 pupazzi di neve in differenti colori, distanti tra loro 100 pixel.
-        turtle_2_9: 'Usa il blocco "ripeti con contatore" per disegnare una famiglia di pupazzi di neve con altezze di 110, 100, 90, 80, 70 pixel. I pupazzi di neve dovranno essere distanti tra loro 60 pixel. Suggerimento: si può contare anche con numeri negativi.'
-        turtle_2_10: "Ecco del codice per sperimentare con il disegno di diverse spirali.  Cosa succede se modifichi quanto gira? O se imposti la scelta di un colore a caso all'interno del blocco di ripetizione?  Disegna qualcosa che ti piace."
-        maze_karel_2_1: "Prova ad usare dei blocchi per rimuovere tutti i mucchi e riempire tutte le buche del terreno. Prova ad usare dei blocchi di ripetizione invece di usare molti blocchi. Suggerimento: si può mettere un blocco di ripetizione all'interno di un altro blocco di ripetizione."
-        maze_karel_2_2: 'Abbiamo definito il nuovo blocco "riempi 5", che ora è nella categoria "Funzioni". Usalo per aiutarmi a riempire questa buca.'
-        maze_karel_2_3: |-
+        'turtle_2_9': 'Usa il blocco "ripeti con contatore" per disegnare una famiglia di pupazzi di neve con altezze di 110, 100, 90, 80, 70 pixel. I pupazzi di neve dovranno essere distanti tra loro 60 pixel. Suggerimento: si può contare anche con numeri negativi.'
+        'turtle_2_10': "Ecco del codice per sperimentare con il disegno di diverse spirali.  Cosa succede se modifichi quanto gira? O se imposti la scelta di un colore a caso all'interno del blocco di ripetizione?  Disegna qualcosa che ti piace."
+        'maze_karel_2_1': "Prova ad usare dei blocchi per rimuovere tutti i mucchi e riempire tutte le buche del terreno. Prova ad usare dei blocchi di ripetizione invece di usare molti blocchi. Suggerimento: si può mettere un blocco di ripetizione all'interno di un altro blocco di ripetizione."
+        'maze_karel_2_2': 'Abbiamo definito il nuovo blocco "riempi 5", che ora è nella categoria "Funzioni". Usalo per aiutarmi a riempire questa buca.'
+        'maze_karel_2_3': |-
           Usa il nuovo blocco "riempi 5" per farmi riempire tutte le buche. E' stato inserito nella categoria "Funzioni" e devi quindi prenderlo da là.
-        maze_karel_2_4: Definisci una nuova funzione che rimuove 7 palate di terra. Quindi usala per scrivere un programma che rimuove tutti i mucchi.
-        maze_karel_2_5: Definisci una nuova funzione che rimuove 6 palate da un mucchio di terra e usala per rimuovere tutti i mucchi.
-        maze_karel_2_6: 'Usa le due nuove funzioni, "rimuovi 8" e "riempi 8", per rimuovere il mucchio e riempire la buca.'
-        maze_karel_2_7: "C'è una mucca nel mio campo! Scrivi una nuova funzione per evitare la mucca e rimuovere il mucchio. Metti tutti i blocchi all'interno della nuova funzione."
-        maze_karel_2_8: 'Usa questa nuova funzione, "evita la mucca e rimuovi 1", per rimuovere tutti i mucchi.'
-        maze_karel_2_9: "Qui trovi una nuova funzione che rimuove una colonna verticale di 4 mucchi di terra. Prova a metterla all'interno di un blocco di ripetizione, in modo da rimuovere tutti i mucchi di terra usando pochi blocchi."
-        maze_karel_2_10: Spostami attraverso il campo e usa queste due funzioni per rimuovere tutti i mucchi e riempire tutte le buche.
-        turtle_3_1: |-
+        'maze_karel_2_4': Definisci una nuova funzione che rimuove 7 palate di terra. Quindi usala per scrivere un programma che rimuove tutti i mucchi.
+        'maze_karel_2_5': Definisci una nuova funzione che rimuove 6 palate da un mucchio di terra e usala per rimuovere tutti i mucchi.
+        'maze_karel_2_6': 'Usa le due nuove funzioni, "rimuovi 8" e "riempi 8", per rimuovere il mucchio e riempire la buca.'
+        'maze_karel_2_7': "C'è una mucca nel mio campo! Scrivi una nuova funzione per evitare la mucca e rimuovere il mucchio. Metti tutti i blocchi all'interno della nuova funzione."
+        'maze_karel_2_8': 'Usa questa nuova funzione, "evita la mucca e rimuovi 1", per rimuovere tutti i mucchi.'
+        'maze_karel_2_9': "Qui trovi una nuova funzione che rimuove una colonna verticale di 4 mucchi di terra. Prova a metterla all'interno di un blocco di ripetizione, in modo da rimuovere tutti i mucchi di terra usando pochi blocchi."
+        'maze_karel_2_10': Spostami attraverso il campo e usa queste due funzioni per rimuovere tutti i mucchi e riempire tutte le buche.
+        'turtle_3_1': |-
           Questo esercizio ti mostra come definire le funzioni "disegna un quadrato" e "disegna un cerchio".  Definire una funzione non vuol dire eseguire i suoi blocchi. Per disegnare effettivamente un quadrato devi prendere il blocco "disegna un quadrato" e spostarlo nell'area di lavoro.
-        turtle_3_2: 'Usando la funzione "disegna un quadrato" come esempio, crea una funzione "disegna un triangolo" e usala per disegnare un triangolo.'
-        turtle_3_3: 'Disegna delle recinzioni triangolari intorno ai gatti e un recinto quadrato intorno alla mucca.  Suggerimento: verifica il funzionamento del programma mentre lo stai costruendo.'
-        turtle_3_4: 'Vedi se riesci a capire come usare "disegna un quadrato" e "disegna un triangolo" (e altri blocchi) per disegnare una casa intorno al leone.'
-        turtle_3_5: 'Ora crea una nuova funzione "disegna una casa" e usala per dare un alloggio a due gatti. Suggerimento: crea una nuova funzione usando il blocco "per fare qualcosa" e digita il testo che vuoi usare per dare il nome al blocco della funzione.'
-        turtle_3_6: 'Usando "disegna un quadrato" come esempio, aggiungi un parametro chiamato "lunghezza" alla funzione "disegna un triangolo" in modo da ottenere una funzione in grado di disegnare triangoli di diverse dimensioni. Suggerimento: fai clic sulla stella per aggiungere un parametro ad una funzione.'
-        turtle_3_7: |-
+        'turtle_3_2': 'Usando la funzione "disegna un quadrato" come esempio, crea una funzione "disegna un triangolo" e usala per disegnare un triangolo.'
+        'turtle_3_3': 'Disegna delle recinzioni triangolari intorno ai gatti e un recinto quadrato intorno alla mucca.  Suggerimento: verifica il funzionamento del programma mentre lo stai costruendo.'
+        'turtle_3_4': 'Vedi se riesci a capire come usare "disegna un quadrato" e "disegna un triangolo" (e altri blocchi) per disegnare una casa intorno al leone.'
+        'turtle_3_5': 'Ora crea una nuova funzione "disegna una casa" e usala per dare un alloggio a due gatti. Suggerimento: crea una nuova funzione usando il blocco "per fare qualcosa" e digita il testo che vuoi usare per dare il nome al blocco della funzione.'
+        'turtle_3_6': 'Usando "disegna un quadrato" come esempio, aggiungi un parametro chiamato "lunghezza" alla funzione "disegna un triangolo" in modo da ottenere una funzione in grado di disegnare triangoli di diverse dimensioni. Suggerimento: fai clic sulla stella per aggiungere un parametro ad una funzione.'
+        'turtle_3_7': |-
           Aggiungi un parametro chiamato "lunghezza" alla funzione "disegna una casa" e costruisci una casa grande per l'elefante (con lati lunghi 150 pixel)
-        turtle_3_8: |-
+        'turtle_3_8': |-
           Modifica "disegna una casa" così da finire nell'angolo inferiore destro dopo aver disegnato una nuova casa. Utilizza questa funzione modificata per disegnare tre case.
-        turtle_3_9: 'Riesci a ricreare la funzione "disegna una casa" senza aiuto? Provaci e poi disegna una fila di case.'
-        turtle_3_10: Hai imparato molto! Ora utilizza ciò che hai imparato per disegnare quello che vuoi. Prova a disegnare una stella, o una spirale o un fiocco di neve stravagante.
-        maze_karel_debug_seq_1: Benvenuto alla correzione del codice (debug)! Il mio codice non funziona correttamente. Riesci ad individuare il problema e a risolverlo in modo da livellare il campo e prepararlo per la semina?
-        maze_karel_debug_seq_2: "Che cosa c'è di sbagliato in questo programma? Come dovresti sistemarlo in modo da riuscire a rimuovere quel mucchio?"
-        maze_karel_debug_repeat: Correggi questo programma, in modo che il mio campo sia livellato e pronto.
-        maze_karel_debug_while: Come dovresti cambiare questo programma per riempire la buca?
-        maze_karel_debug_if: Aiuto! Correggi il programma in modo che il mio campo sia completamente livellato.
-        maze_karel_debug_if_else: Correggi questo programma in modo da riempire le buche e rimuovere tutti i mucchi.
-        maze_karel_debug_function_1: Cosa dovresti cambiare in questo programma per rimuovere tutti i mucchi?
-        maze_karel_debug_function_2: Riesci a correggere questo programma in modo da livellare il mio terreno?
-        maze_karel_debug_function_3: 'Modifica questo programma in modo da rimuovere tutti i mucchi sul mio terreno. '
-        turtle_5_1: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
-        turtle_5_2: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
-        turtle_5_3: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
-        turtle_5_4: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
-        turtle_5_5: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
-        turtle_5_6: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
-        maze_3_1: |-
+        'turtle_3_9': 'Riesci a ricreare la funzione "disegna una casa" senza aiuto? Provaci e poi disegna una fila di case.'
+        'turtle_3_10': Hai imparato molto! Ora utilizza ciò che hai imparato per disegnare quello che vuoi. Prova a disegnare una stella, o una spirale o un fiocco di neve stravagante.
+        'maze_karel_debug_seq_1': Benvenuto alla correzione del codice (debug)! Il mio codice non funziona correttamente. Riesci ad individuare il problema e a risolverlo in modo da livellare il campo e prepararlo per la semina?
+        'maze_karel_debug_seq_2': "Che cosa c'è di sbagliato in questo programma? Come dovresti sistemarlo in modo da riuscire a rimuovere quel mucchio?"
+        'maze_karel_debug_repeat': Correggi questo programma, in modo che il mio campo sia livellato e pronto.
+        'maze_karel_debug_while': Come dovresti cambiare questo programma per riempire la buca?
+        'maze_karel_debug_if': Aiuto! Correggi il programma in modo che il mio campo sia completamente livellato.
+        'maze_karel_debug_if_else': Correggi questo programma in modo da riempire le buche e rimuovere tutti i mucchi.
+        'maze_karel_debug_function_1': Cosa dovresti cambiare in questo programma per rimuovere tutti i mucchi?
+        'maze_karel_debug_function_2': Riesci a correggere questo programma in modo da livellare il mio terreno?
+        'maze_karel_debug_function_3': 'Modifica questo programma in modo da rimuovere tutti i mucchi sul mio terreno. '
+        'turtle_5_1': Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+        'turtle_5_2': Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+        'turtle_5_3': Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+        'turtle_5_4': Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+        'turtle_5_5': Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+        'turtle_5_6': Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+        'maze_3_1': |-
           Ho bisogno di arrivare a quel maiale! Digita un paio di volte l'istruzione "avanza()" in modo da riprendere le mie uova.
-        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maiale.
-        maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere contro la cassetta di dinamite (TNT)!
-        maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della dinamite (TNT) ed arrivare al maiale.
-        bounce_1: 'Attacca un blocco al blocco verde "quando si preme la freccia verso sinistra" e premi "Esegui". Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.'
-        bounce_2: 'Attacca un blocco ai blocchi verdi "quando si preme la freccia verso destra" e "quando si preme la freccia verso sinistra". Poi sposta la racchetta per raggiungere entrambe le bandierine.'
-        bounce_3: |-
+        'maze_3_2': Scrivi un programma che mi fa fare tutta la strada verso il maiale.
+        'maze_3_3': Come posso arrivare al maiale? Assicurati che non vada a sbattere contro la cassetta di dinamite (TNT)!
+        'maze_3_4': Argh! Scrivi un programma che mi faccia girare alla larga della dinamite (TNT) ed arrivare al maiale.
+        'bounce_1': 'Attacca un blocco al blocco verde "quando si preme la freccia verso sinistra" e premi "Esegui". Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.'
+        'bounce_2': 'Attacca un blocco ai blocchi verdi "quando si preme la freccia verso destra" e "quando si preme la freccia verso sinistra". Poi sposta la racchetta per raggiungere entrambe le bandierine.'
+        'bounce_3': |-
           Ora fai qualcosa di simile con il blocco "quando si preme la freccia verso l'alto". Poi sposta la racchetta verso la bandierina in alto.
-        bounce_4: Questa volta devi aggiungere quattro blocchi. Sposta la racchetta verso tutti e quattro le bandierine per completare questo esercizio.
-        bounce_5: 'Faremo volare una palla verso il basso incontro alla racchetta. Attacca un blocco al blocco verde "quando la palla colpisce la racchetta" per far sì che la palla raggiunga la bandierina.'
-        bounce_6: 'Ora la bandierina è in alto. Per risolvere questo esercizio è necessario attaccare dei blocchi ad entrambi i blocchi verdi "quando la palla colpisce".'
-        bounce_7: 'Attacca dei blocchi a ciascuno dei blocchi verdi "quando ...". Poi fai rimbalzare la palla fino a quando colpisce la bandierina.'
-        bounce_10: |-
+        'bounce_4': Questa volta devi aggiungere quattro blocchi. Sposta la racchetta verso tutti e quattro le bandierine per completare questo esercizio.
+        'bounce_5': 'Faremo volare una palla verso il basso incontro alla racchetta. Attacca un blocco al blocco verde "quando la palla colpisce la racchetta" per far sì che la palla raggiunga la bandierina.'
+        'bounce_6': 'Ora la bandierina è in alto. Per risolvere questo esercizio è necessario attaccare dei blocchi ad entrambi i blocchi verdi "quando la palla colpisce".'
+        'bounce_7': 'Attacca dei blocchi a ciascuno dei blocchi verdi "quando ...". Poi fai rimbalzare la palla fino a quando colpisce la bandierina.'
+        'bounce_10': |-
           Ora in alto c'è una porta da calcio. Per costruire il gioco attacca il blocco "aggiungi un punto" al blocco verde "quando la palla va in rete" e quello "aggiungi un punto all'avversario" al blocco verde "quando la palla manca la racchetta". Vedi quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due.
-        bounce_11: |-
+        'bounce_11': |-
           Adesso puoi predisporre il gioco come vuoi attaccando dei blocchi "imposta ..." al blocco "quando si clicca su 'Esegui' ". Devi poi attaccare a quest'ultimo il blocco "lancia una nuova palla", che devi attaccare anche ad altri blocchi verdi "quando ...". Quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due?
-        bounce_12: Crea la tua versione del Ping-Pong. È possibile modificare tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
-        Custom_builder: |-
+        'bounce_12': Crea la tua versione del Ping-Pong. È possibile modificare tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
+        'Custom_builder': |-
           Sposta i blocchi dalla cassetta degli attrezzi all'area di lavoro per disegnare il livello che vuoi creare. Premi "Esegui" quando hai fatto.
-        flappy_1: 'Attacca un blocco al blocco "quando si clicca" e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.'
-        flappy_2: |-
+        'flappy_1': 'Attacca un blocco al blocco "quando si clicca" e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.'
+        'flappy_2': |-
           Ora nello scenario c'è anche il terreno.  Attacca un blocco di azione al blocco di evento "quando precipita a terra".  Il tuo codice ha bisogno del blocco "fine del gioco" quando Flappy precipita a terra.
-        flappy_3: |-
+        'flappy_3': |-
           Il blocco "quando si clicca su 'Esegui' " permette di eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità con cui Flappy vola verso il bersaglio.
-        flappy_4: 'Scrivi del codice per aiutare Flappy a volare attraverso i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco "fine del gioco" quando Flappy si schianta contro i tubi.'
-        flappy_5: 'Aggiungiamo un segna-punti per contare i punti quando Flappy supera gli ostacoli. Aggiungi al blocco "quando supera un ostacolo" il blocco per segnare un punto. Guadagna un punto facendo volare Flappy attraverso la prima serie di tubi.'
-        flappy_6: Vedi se, cambiando di quanto Flappy ogni volta sbatte le ali, riesci ancora a segnare un punto.
-        flappy_7: |-
+        'flappy_4': 'Scrivi del codice per aiutare Flappy a volare attraverso i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco "fine del gioco" quando Flappy si schianta contro i tubi.'
+        'flappy_5': 'Aggiungiamo un segna-punti per contare i punti quando Flappy supera gli ostacoli. Aggiungi al blocco "quando supera un ostacolo" il blocco per segnare un punto. Guadagna un punto facendo volare Flappy attraverso la prima serie di tubi.'
+        'flappy_6': Vedi se, cambiando di quanto Flappy ogni volta sbatte le ali, riesci ancora a segnare un punto.
+        'flappy_7': |-
           Adesso, prova a cambiare la scena attaccando un altro blocco al blocco "quando si clicca su 'Esegui' ".
-        flappy_8: Puoi impostare le scene in qualsiasi momento, non solo quando il gioco inizia. Prova a impostare una scena scelta a caso quando accadono altri eventi, per esempio quando si supera un ostacolo o si colpisce qualcosa. Puoi anche impostare il tipo di giocatore.
-        flappy_9: Per rendere lo sviluppo più interessante, prova a riportare il punteggio a 0 quando si colpisce un ostacolo invece di finire il gioco.
-        flappy_11: Crea la tua versione del gioco Flappy. È possibile modificare tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
-        flappy_k1_1: Gioca a Flappy
-        flappy_k1_2: 'Attacca un blocco al blocco "quando si clicca" e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.'
-        flappy_k1_3: |-
+        'flappy_8': Puoi impostare le scene in qualsiasi momento, non solo quando il gioco inizia. Prova a impostare una scena scelta a caso quando accadono altri eventi, per esempio quando si supera un ostacolo o si colpisce qualcosa. Puoi anche impostare il tipo di giocatore.
+        'flappy_9': Per rendere lo sviluppo più interessante, prova a riportare il punteggio a 0 quando si colpisce un ostacolo invece di finire il gioco.
+        'flappy_11': Crea la tua versione del gioco Flappy. È possibile modificare tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
+        'flappy_k1_1': Gioca a Flappy
+        'flappy_k1_2': 'Attacca un blocco al blocco "quando si clicca" e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.'
+        'flappy_k1_3': |-
           Ora nello scenario c'è anche il terreno.  Attacca un blocco di quelli a sinistra al blocco "quando precipita a terra".  Il tuo codice ha bisogno del blocco "fine del gioco" quando Flappy precipita a terra.
-        flappy_k1_4: |-
+        'flappy_k1_4': |-
           Il blocco "quando si clicca su 'Esegui' " permette di eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità con cui Flappy vola verso il bersaglio.
-        flappy_k1_5: 'Scrivi del codice per aiutare Flappy a volare attraverso i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco "fine del gioco" quando Flappy si schianta contro i tubi.'
-        flappy_k1_6: 'Aggiungiamo un segna-punti per contare i punti quando Flappy supera gli ostacoli. Aggiungi al blocco "quando supera un ostacolo" il blocco per segnare un punto. Guadagna un punto facendo volare Flappy attraverso la prima serie di tubi.'
-        flappy_k1_7: Vedi se riesci a segnare più punti quando Flappy supera un ostacolo
-        flappy_k1_8: |-
+        'flappy_k1_5': 'Scrivi del codice per aiutare Flappy a volare attraverso i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco "fine del gioco" quando Flappy si schianta contro i tubi.'
+        'flappy_k1_6': 'Aggiungiamo un segna-punti per contare i punti quando Flappy supera gli ostacoli. Aggiungi al blocco "quando supera un ostacolo" il blocco per segnare un punto. Guadagna un punto facendo volare Flappy attraverso la prima serie di tubi.'
+        'flappy_k1_7': Vedi se riesci a segnare più punti quando Flappy supera un ostacolo
+        'flappy_k1_8': |-
           Adesso, prova a cambiare la scena attaccando un altro blocco al blocco "quando si clicca su 'Esegui' ".
-        flappy_k1_9: 'Provare a cambiare il giocatore attaccando un blocco "imposta il giocatore" al blocco "quando inizia il fioco".'
-        jigsaw_1: Clicca sul blocco
-        jigsaw_2: Sposta il blocco verso la destinazione
-        jigsaw_3: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_4: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_5: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_6: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_7: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_8: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_9: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_10: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_11: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_12: "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
-        jigsaw_13: "Questo è un esercizio di riepilogo -- Sistema i blocchi nell'ordine corretto per formare l'immagine indicata."
-        mazestep_1: "Qui c'è la descrizione del passo del labirinto"
-        mazestep_2: "Qui c'è la descrizione del passo del labirinto"
-        mazestep_3: "Qui c'è la descrizione del passo del labirinto"
-        mazestep_4: "Qui c'è la descrizione del passo del labirinto"
-        mazestep_5: "Qui c'è la descrizione del passo del labirinto"
-        studio_c2_1: 'Riesci a far dire a questo cane "Ciao a tutti"?'
-        studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
-        studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
-        studio_c2_4: 'Riesci a scrivere un programma che fa arrivare questo cane fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?'
-        studio_c2_5: 'Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?'
-        studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?
-        studio_c2_7: 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro in continuazione in su e in giù?'
-        studio_c2_8: 'Riesci a far dire "Ahi!" al pinguino e a riprodurre il "suono di un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?'
-        studio_c2_9: Aggiungi un blocco che segna un punto quando il pinguino sbatte contro il polpo. Poi sposta il pinguino con i tasti freccia fino a che fai un punto.
-        studio_c2_10: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
-        studio_c2_11: 'Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.'
-        studio_c3_story_1: 'Riesci a far dire a questo cane "Ciao a tutti"?'
-        studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
-        studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
-        studio_c3_story_4: 'Riesci a scrivere un programma che fa arrivare questo cane fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?'
-        studio_c3_story_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
-        studio_c3_story_6: 'Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.'
-        studio_c3_game_1: 'Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?'
-        studio_c3_game_2: Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?
-        studio_c3_game_3: 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro in continuazione in su e in giù?'
-        studio_c3_game_4: 'Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono di "un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?'
-        studio_c3_game_5: Aggiungi un blocco che segna un punto quando il pinguino sbatte contro il polpo. Poi sposta il pinguino con i tasti freccia fino a che fai un punto.
-        studio_c3_game_6: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
-        studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_playlab_1: 'Il pinguino vuole dire "ciao" - puoi aiutarlo?'
-        studio_playlab_2: 'Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio 2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il personaggio ... dice"?'
-        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandierina?
-        studio_playlab_4: Puoi aiutare il tennista (personaggio 1) a raggiungere la tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
-        studio_playlab_5: 'Puoi aiutare il robot spaziale a dire "salve terrestri" quando clicchi su di lui? Dopo aver cliccato su "Esegui", ricordati di cliccare sul robot spaziale!'
-        studio_playlab_6: Puoi aiutare la Strega a muoversi usando i tasti freccia in alto / in basso / a sinistra / a destra per raggiungere le palle di fuoco magiche?
-        studio_playlab_7: 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il mago in continuazione a destra e a sinistra?'
-        studio_playlab_8: "Aggiungi dei blocchi in modo che quando l'unicorno incontra il mago si segna un punto e si riproduce un suono. Poi usa le frecce per spostare l'unicorno fino a che fai un punto."
-        studio_playlab_9: "Imposta lo sfondo per questa invasione aliena e aiuta il robot spaziale a raggiungere più velocemente l'alieno modificando la propria velocità. Poi sposta il robot spaziale con i tasti freccia per arrivare fino all'alieno ed avvisare tutti."
-        studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_iceage_hello1: |-
+        'flappy_k1_9': 'Provare a cambiare il giocatore attaccando un blocco "imposta il giocatore" al blocco "quando inizia il fioco".'
+        'jigsaw_1': Clicca sul blocco
+        'jigsaw_2': Sposta il blocco verso la destinazione
+        'jigsaw_3': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_4': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_5': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_6': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_7': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_8': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_9': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_10': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_11': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_12': "Sistema i blocchi nell'ordine corretto per formare l'immagine indicata"
+        'jigsaw_13': "Questo è un esercizio di riepilogo -- Sistema i blocchi nell'ordine corretto per formare l'immagine indicata."
+        'mazestep_1': "Qui c'è la descrizione del passo del labirinto"
+        'mazestep_2': "Qui c'è la descrizione del passo del labirinto"
+        'mazestep_3': "Qui c'è la descrizione del passo del labirinto"
+        'mazestep_4': "Qui c'è la descrizione del passo del labirinto"
+        'mazestep_5': "Qui c'è la descrizione del passo del labirinto"
+        'studio_c2_1': 'Riesci a far dire a questo cane "Ciao a tutti"?'
+        'studio_c2_2': Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
+        'studio_c2_3': Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
+        'studio_c2_4': 'Riesci a scrivere un programma che fa arrivare questo cane fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?'
+        'studio_c2_5': 'Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?'
+        'studio_c2_6': Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?
+        'studio_c2_7': 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro in continuazione in su e in giù?'
+        'studio_c2_8': 'Riesci a far dire "Ahi!" al pinguino e a riprodurre il "suono di un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?'
+        'studio_c2_9': Aggiungi un blocco che segna un punto quando il pinguino sbatte contro il polpo. Poi sposta il pinguino con i tasti freccia fino a che fai un punto.
+        'studio_c2_10': Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
+        'studio_c2_11': 'Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.'
+        'studio_c3_story_1': 'Riesci a far dire a questo cane "Ciao a tutti"?'
+        'studio_c3_story_2': Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
+        'studio_c3_story_3': Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
+        'studio_c3_story_4': 'Riesci a scrivere un programma che fa arrivare questo cane fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?'
+        'studio_c3_story_5': Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
+        'studio_c3_story_6': 'Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.'
+        'studio_c3_game_1': 'Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?'
+        'studio_c3_game_2': Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?
+        'studio_c3_game_3': 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro in continuazione in su e in giù?'
+        'studio_c3_game_4': 'Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono di "un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?'
+        'studio_c3_game_5': Aggiungi un blocco che segna un punto quando il pinguino sbatte contro il polpo. Poi sposta il pinguino con i tasti freccia fino a che fai un punto.
+        'studio_c3_game_6': Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
+        'studio_c3_game_7': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
+        'studio_playlab_1': 'Il pinguino vuole dire "ciao" - puoi aiutarlo?'
+        'studio_playlab_2': 'Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio 2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il personaggio ... dice"?'
+        'studio_playlab_3': Puoi aiutare la tennista a raggiungere la bandierina?
+        'studio_playlab_4': Puoi aiutare il tennista (personaggio 1) a raggiungere la tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
+        'studio_playlab_5': 'Puoi aiutare il robot spaziale a dire "salve terrestri" quando clicchi su di lui? Dopo aver cliccato su "Esegui", ricordati di cliccare sul robot spaziale!'
+        'studio_playlab_6': Puoi aiutare la Strega a muoversi usando i tasti freccia in alto / in basso / a sinistra / a destra per raggiungere le palle di fuoco magiche?
+        'studio_playlab_7': 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il mago in continuazione a destra e a sinistra?'
+        'studio_playlab_8': "Aggiungi dei blocchi in modo che quando l'unicorno incontra il mago si segna un punto e si riproduce un suono. Poi usa le frecce per spostare l'unicorno fino a che fai un punto."
+        'studio_playlab_9': "Imposta lo sfondo per questa invasione aliena e aiuta il robot spaziale a raggiungere più velocemente l'alieno modificando la propria velocità. Poi sposta il robot spaziale con i tasti freccia per arrivare fino all'alieno ed avvisare tutti."
+        'studio_playlab_10': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
+        'studio_iceage_hello1': |-
           Sid vuole riunire tutti per una nuova avventura. Puoi aiutarlo a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro e digitando la parola "Ciao" al suo interno?
-        studio_iceage_hello2: |-
+        'studio_iceage_hello2': |-
           Sid (il personaggio 1) incontra Manny (il personaggio 2) e vuole invitarlo ad unirsi all'avventura. Puoi aiutarli a salutarsi usando due volte il blocco "il personaggio ... dice"?
-        studio_iceage_move_to_flag: 'Scrat è alla ricerca della sua ghianda! Aiutalo a percorrere gli ultimi 200 pixel usando il blocco "sposta".'
-        studio_iceage_move_to_actor: |-
+        'studio_iceage_move_to_flag': 'Scrat è alla ricerca della sua ghianda! Aiutalo a percorrere gli ultimi 200 pixel usando il blocco "sposta".'
+        'studio_iceage_move_to_actor': |-
           Diego (il personaggio 1) è alla ricerca di Manny (il personaggio 2). Aiuta Diego ad avvicinarsi a Manny di 200 pixel usando il blocco "sposta il personaggio". Poi unisci un blocco all'evento "quando un personaggio tocca ..." per riprodurre un suono quando si incontrano.
-        studio_iceage_repeat: |-
+        'studio_iceage_repeat': |-
           Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare la Nonnina a fare un po' di esercizio muovendosi in continuazione a destra e a sinistra?
-        studio_iceage_click_hello: 'Puoi aiutare Sid a fare un ultimo invito ai suoi amici quando si clicca su di lui? Non dimenticarti di cliccare su di lui dopo aver premuto "Esegui".'
-        studio_iceage_move_events: 'Scrat è ancora alla ricerca di ghiande! Aiutalo a scorrazzare in giro attaccando il blocco "sposta ..." a ciascuno degli eventi e cambiando la direzione di marcia in base al tasto freccia. Quando hai finito, clicca su "Esegui" per raccogliere tutte le ghiande.'
-        studio_iceage_sound_and_points: |-
+        'studio_iceage_click_hello': 'Puoi aiutare Sid a fare un ultimo invito ai suoi amici quando si clicca su di lui? Non dimenticarti di cliccare su di lui dopo aver premuto "Esegui".'
+        'studio_iceage_move_events': 'Scrat è ancora alla ricerca di ghiande! Aiutalo a scorrazzare in giro attaccando il blocco "sposta ..." a ciascuno degli eventi e cambiando la direzione di marcia in base al tasto freccia. Quando hai finito, clicca su "Esegui" per raccogliere tutte le ghiande.'
+        'studio_iceage_sound_and_points': |-
           Ti abbiamo dato del codice già scritto che permette alla Nonnina di muoversi a destra e a sinistra, e permette a Sid di muoversi sullo schermo. Puoi completare questo codice aggiungendo dei blocchi all'evento "quando i personaggi si toccano" per fare in modo che entrambi i personaggi riproducano un suono e guadagnino un punto quando Sid e la Nonnina si scontrano? Clicca su "Esegui" per lanciare il gioco.
-        studio_iceage_warn_ice_age: |-
+        'studio_iceage_warn_ice_age': |-
           Tutti devono muoversi più velocemente perché l'era glaciale sta arrivando! Cambia lo sfondo impostando uno sfondo con ghiaccio e imposta la velocità di Sid a veloce, quindi premi "Esegui" per farlo correre da Diego ad avvertirlo.
-        studio_iceage_throw_hearts: |-
+        'studio_iceage_throw_hearts': |-
           Sid vuol far sapere a sua nonna, la Nonnina, che la ama. Usa l'istruzione "il personaggio lancia" per far lanciare a Sid (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore della Nonnina a felice quando viene colpita dai cuori.
-        studio_iceage_free_play: È il momento di creare un gioco o una storia per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!
-        studio_gumball_hello1: |-
+        'studio_iceage_free_play': 'È il momento di creare un gioco o una storia per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!'
+        'studio_gumball_hello1': |-
           Anais vuole farsi nuovi amici. Puoi aiutarla a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro e digitando la parola "Ciao" al suo interno?
-        studio_gumball_hello2: 'Darwin (personaggio 1) e suo fratello Gumball (personaggio 2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il blocco "il personaggio ... dice"?'
-        studio_gumball_move_to_flag: |-
+        'studio_gumball_hello2': 'Darwin (personaggio 1) e suo fratello Gumball (personaggio 2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il blocco "il personaggio ... dice"?'
+        'studio_gumball_move_to_flag': |-
           Banana Joe sta per vincere in una giornata di gare all'aperto! Aiutalo a percorrere gli ultimi 200 pixel usando il blocco "sposta".
-        studio_gumball_move_to_actor: |-
+        'studio_gumball_move_to_actor': |-
           Gumball (personaggio 1) e Darwin (personaggio 2) sono in ritardo per una giornata di gare all'aperto. Aiuta Gumball ad avvicinarsi a Darwin di 200 pixel usando il blocco "sposta il personaggio". Poi unisci un blocco all'evento "quando un personaggio tocca ..." per riprodurre un suono quando si incontrano.
-        studio_gumball_repeat: 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra e a sinistra?'
-        studio_gumball_click_hello: 'Puoi aiutare Anton a dare inizio alla gara dicendo le parole "Ai posti, pronti, via!"? Non dimenticarti di cliccare su Anton dopo aver cliccato su "Esegui", altrimenti non riuscirai a provare il tuo programma!'
-        studio_gumball_move_events: 'Darwin partecipa alla gara di raccolta delle bandierine. Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..." a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare tutte le bandierine.'
-        studio_gumball_sound_and_points: |-
+        'studio_gumball_repeat': 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra e a sinistra?'
+        'studio_gumball_click_hello': 'Puoi aiutare Anton a dare inizio alla gara dicendo le parole "Ai posti, pronti, via!"? Non dimenticarti di cliccare su Anton dopo aver cliccato su "Esegui", altrimenti non riuscirai a provare il tuo programma!'
+        'studio_gumball_move_events': 'Darwin partecipa alla gara di raccolta delle bandierine. Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..." a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare tutte le bandierine.'
+        'studio_gumball_sound_and_points': |-
           Ti abbiamo dato del codice già scritto che permette ad Anton (il personaggio 2) di muoversi a destra e a sinistra, e permette a Banana Joe (il personaggio 1) di muoversi sullo schermo. Puoi completare questo codice aggiungendo dei blocchi all'evento "quando il personaggio ... tocca" per fare in modo che entrambi i personaggi riproducano un suono e guadagnino un punto quando Banana Joe e Anton si scontrano? Clicca su "Esegui" per lanciare il gioco.
-        studio_gumball_warn_food_fight: 'Darwin è appena sfuggito a una battaglia del cibo! Cambia lo sfondo impostando quello con personaggi e imposta la velocità di Darwin a veloce, quindi premi "Esegui" per farlo correre da Penny ad avvertirla.'
-        studio_gumball_join_food_fight: |-
+        'studio_gumball_warn_food_fight': 'Darwin è appena sfuggito a una battaglia del cibo! Cambia lo sfondo impostando quello con personaggi e imposta la velocità di Darwin a veloce, quindi premi "Esegui" per farlo correre da Penny ad avvertirla.'
+        'studio_gumball_join_food_fight': |-
           Unisciti alla battaglia del cibo! Usa l'istruzione "il personaggio lancia l'oggetto a destra" per far buttare a Banana Joe (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore di Anton ad arrabbiato quando viene colpito.
-        studio_gumball_free_play: Crea un gioco o una storia per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!
-        studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_k1_1: 'Riesci a far dire a questo cane "Ciao a tutti"?'
-        studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
-        studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
-        studio_k1_4: 'Fai arrivare il cane fino al gatto e fai dire "ciao" al gatto quando il cane arriva là.'
-        studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
-        studio_k1_6: Crea una storia tutta tua! Sposta il cane e il gatto in tutte le direzioni e fai dire loro ciò che desideri.
-        maze_wordsearch_k_1: Spostami per scrivere le lettere della parola EAST.
-        maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH.
-        maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST.
-        maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH.
-        maze_wordsearch_k_6: Spostami a Est e poi a Sud per scrivere le lettere della parola JUMP.
-        maze_wordsearch_k_9: "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola CODE."
-        maze_wordsearch_k_13: "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola DEBUG."
-        maze_wordsearch_k_15: "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola ABOVE."
-        maze_wordsearch_k_16: "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola BELOW."
-        maze_wordsearch_k_20: "Questo è un esercizio di riepilogo -- Spostami in una direzione e poi in un'altra per scrivere le lettere della parola STORY."
-        applab_ec_simple: Crea la tua App usando i blocchi nella cassetta degli attrezzi.
-        turtle_ec_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore preferito scegliendolo col nuovo blocco "imposta colore".'
-        turtle_ec_1_10: |-
+        'studio_gumball_free_play': 'Crea un gioco o una storia per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!'
+        'studio_full_sandbox': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
+        'studio_k1_1': 'Riesci a far dire a questo cane "Ciao a tutti"?'
+        'studio_k1_2': Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
+        'studio_k1_3': Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
+        'studio_k1_4': 'Fai arrivare il cane fino al gatto e fai dire "ciao" al gatto quando il cane arriva là.'
+        'studio_k1_5': Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
+        'studio_k1_6': Crea una storia tutta tua! Sposta il cane e il gatto in tutte le direzioni e fai dire loro ciò che desideri.
+        'maze_wordsearch_k_1': Spostami per scrivere le lettere della parola EAST.
+        'maze_wordsearch_k_2': Spostami per scrivere le lettere della parola SOUTH.
+        'maze_wordsearch_k_3': Spostami per scrivere le lettere della parola WEST.
+        'maze_wordsearch_k_4': Spostami per scrivere le lettere della parola NORTH.
+        'maze_wordsearch_k_6': Spostami a Est e poi a Sud per scrivere le lettere della parola JUMP.
+        'maze_wordsearch_k_9': "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola CODE."
+        'maze_wordsearch_k_13': "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola DEBUG."
+        'maze_wordsearch_k_15': "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola ABOVE."
+        'maze_wordsearch_k_16': "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola BELOW."
+        'maze_wordsearch_k_20': "Questo è un esercizio di riepilogo -- Spostami in una direzione e poi in un'altra per scrivere le lettere della parola STORY."
+        'applab_ec_simple': Crea la tua App usando i blocchi nella cassetta degli attrezzi.
+        'turtle_ec_1_2': 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore preferito scegliendolo col nuovo blocco "imposta colore".'
+        'turtle_ec_1_10': |-
           Ce l'hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune idee divertenti: una figura stilizzata, un fiocco di neve o una spirale. Prova anche il nuovo blocco "larghezza della penna". Buon divertimento!
-        studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        'studio_ec_sandbox': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
     video:
       name:
-        maze_intro: 'Introduzione a "Il Labirinto"'
-        artist_intro: |-
+        'maze_intro': 'Introduzione a "Il Labirinto"'
+        'artist_intro': |-
           Introduzione a "L'Artista"
-        farmer_intro: 'Introduzione a "La Contadina"'
-        flappy_intro: 'Introduzione a "Flappy"'
-        loop_times: 'Blocco "ripeti ... volte"'
-        loop_until: 'Blocco "ripeti fino a che"'
-        if: 'Blocco "se"'
-        if_else: 'Blocco "se-altrimenti"'
-        if_else_scrat: 'Blocco "se-altrimenti"'
-        function: Funzioni
-        loop_while: 'Blocco "Mentre"'
-        loop_for: 'Blocco "ripeti con contatore"'
-        parameters: Funzioni con parametri
-        hoc_wrapup: "Conclusione dell'Ora del Codice"
-        Unplug1: "Cos'è l'Informatica?"
-        Unplug2: Pensiero computazionale
-        Unplug3: Programmazione su carta a quadretti
-        Unplug4: Algoritmi
-        Unplug5: Funzioni
-        Unplug6: Istruzioni condizionali
-        Unplug7: Composizione di canzoni
-        Unplug8: Astrazione
-        Unplug9: Programmazione a Staffetta
-        Unplug10: Internet
-        Unplug11: Conclusione
-        C1_happy_maps_unplugged: Mappe Felici
-        C1_moveitmoveit_unplugged: Muovilo, muovilo
-        C1_bigevent_unplugged: Il Grande Evento
-        C1_getting_loopy: Diventare Ripetitivi
-        C1_pair_programming: Programmazione in Coppia
-        C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
-        C1_maze_debugging: 'Labirinto: Correzione di Errori'
-        C1_bee_level_intro: 'Ape: Introduzione'
-        C1_artist_intro: 'Artista - Corso 1: Introduzione'
-        C1_spelling_bee_intro: 'Ape Sapiente: Introduzione'
-        C1_zuck_repeat_loop: 'Labirinto: Cicli'
-        C1_bee_loops: 'Ape: Cicli'
-        C1_maze_loops: 'Labirinto: Cicli'
-        C1_playlab_storytelling: 'Laboratorio: Crea una Storia'
-        C1_planting_seed: Piantare un seme
-        C1_building_foundation: Costruire le Fondamenta
-        C1_going_places_safely: Visitare Luoghi in Modo Sicuro
-        C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
-        C2_artist_intro: 'Artista - Corso 2: Introduzione'
-        C2_zuck_repeat_loop: 'Labirinto: Cicli'
-        C2_artist_loops: 'Artista: Cicli'
-        C2_artist_debugging: 'Artista: Correzione di Errori'
-        C2_bee_loops: 'Ape: Cicli'
-        C2_bee_debugging: 'Ape: Correzione di Errori'
-        C2_bee_conditionals: 'Ape: Istruzioni Condizionali'
-        C2_playlab_createstory: 'Laboratorio: Crea una Storia'
-        C2_graph_paper: Programmazione su carta a quadretti
-        C2_conditionals_with_cards: Istruzioni condizionali
-        C2_binary_bracelets: Braccialetti Binari
-        C2_relay_programming: Programmazione a Staffetta
-        C2_paper_airplanes: Aeroplani di Carta
-        C2_digital_footprint: La tua Impronta Digitale
-        C2_digital_footprint_v2: La tua Impronta Digitale
-        C3_maze_level_4: 'Labirinto: Cicli'
-        C3_artist_intro: 'Artista - Corso 3: Introduzione'
-        C3_artist_functions: 'Artista: Funzioni'
-        C3_bee_functions: 'Ape: Funzioni'
-        C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
-        C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
-        C3_artist_nested_loops: Cicli Annidati
-        C3_farmer_while: 'Cicli "Mentre"'
-        C3_bee_nested_loops: Cicli annidati
-        C3_bee_debugging: 'Ape: Correzione di Errori'
-        C3_bounce: Ping-Pong
-        C3_playlab_create_game: 'Laboratorio: Crea un Gioco'
-        C3_computational_thinking: Pensiero computazionale
-        C3_dice_race: Gara con i Dadi
-        C3_internet: Internet
-        C3_crowdsourcing: Intelligenza Collettiva
-        C3_functional_suncatchers: Acchiappa-sole Funzionale
-        C3_songwriting_with_parameters: 'Composizione di Canzoni - Parametri'
-        C4_intro: Introduzione
-        C4_loops_zombie: Ripetizioni
-        C4_bee_conditional: 'Ape: Istruzioni Condizionali'
-        C4_variables_artist: 'Artista: Variabili'
-        C4_variables_playlab: 'Laboratorio: Variabili'
-        C4_for_loops: Cicli con Contatore
-        C4_for_loops_bee: Cicli con Contatore
-        C4_for_loops_no_bee: Cicli con Contatore
-        C4_math_artist: "Programmare l'Artista usando la matematica"
-        C4_function_edit: Modifica di funzioni
-        C4_function_create: Creazione di funzioni
-        C4_function_parameters: Funzioni con parametri
-        C4_conditionals: Istruzioni condizionali
-        C4_unplugged_algorithms: Algoritmi per il Tangram
-        C4_unplugged_madlibs: Mad-Libs
-        C4_unplugged_variables: Variabili della Busta
-        C4_unplugged_forloops: Cicli con Contatore
-        C4_unplugged_parameters: 'Composizione di Canzoni - Parametri'
-        C4_unplugged_binary: Binario
-        frozen_intro: "Introduzione all'Ora del Codice"
-        frozen_loops: Introduzione ai Cicli
-        frozen_functions: Introduzione alle Funzioni
-        playlab_intro: Introduzione al Laboratorio
-        playlab_events: 'Laboratorio: Eventi'
-        playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
-        tutorial_puzzle_challenge: 'Corso "Esercitazione Puzzle"'
-        infinity_playlab_intro: 'Laboratorio - Introduzione'
-        infinity_playlab_events: 'Laboratorio - Eventi'
-        infinity_playlab_repeat_forever: 'Laboratorio - Ripeti per sempre'
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: 'Introduction to Databases - Part 1'
-        csp_applab_databases_2: 'Introduction to Databases - Part 2'
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: 'Introduction to Lists - Part 1'
-        csp_applab_lists_2: 'Introduction to Lists - Part 2'
-        csp_applab_lists_3: 'Introduction to Lists - Part 3'
-        csp_applab_lists_4: 'Introduction to Lists - Part 4'
-        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
-        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
-        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: 'Introduction to Variables - Part 1'
-        csp_applab_variables_2: 'Introduction to Variables - Part 2'
-        csp_applab_functions: Introduzione alle Funzioni
-        csp_applab_functions_parameters: Funzioni con parametri
-        csp_applab_loops: Ripetizioni
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: 'Data & Medicine'
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: "Un po ' sui pixel"
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: 'Color pixelation widget - parte 1'
-        csp_pixelation_color_2: 'Color pixelation widget - parte 2'
-        csp_pixelation_color_3: 'Color pixelation widget - parte 3'
-        csp_pixelation_bw: Bianco e nero pixelation widget
-        csp_U1L14_tipstricks: "Unità 1 Lezione 14 consigli per l'insegnante"
-        csp_textcompression: Widget di compressione del testo
-        csp_textcompression_new: Widget di compressione del testo
-        csp_internetsimulator_1: 'Internet Simulator - Part 1'
-        csp_internetsimulator_2: 'Internet Simulator - Part 2'
-        csp_internetsimulator_3: 'Internet Simulator - Part 3'
-        alg_1_intro: 'CS in Algebra - introduzione'
-        alg_2_eval_block: 'CS in Algebra - -Blocchi di valutazione'
-        alg_3_pemdas: 'CS in Algebra - ordine delle operazioni'
-        alg_4_data_types: 'CS in Algebra - Tipi di dato'
-        alg_5_contracts: 'CS in Algebra - Contratti'
-        alg_6_variables: 'CS in Algebra - Variabili'
-        alg_7_function: 'CS in Algebra - Funzioni'
-        alg_8_design_recipe: 'CS in Algebra - ricetta di Design'
-        alg_9_booleans: 'CS in Algebra - Valori booleani'
-        alg_10_conditionals: 'CS in Algebra - Condizioni'
-        alg_11_coordinate_plane: 'CS in Algebra - Piano Cartesiano'
-        alg_12_biggame_variables: 'CS in Algebra - Big Game Variabili'
-        alg_13_biggame_animation: 'CS in Algebra - Big Game Animazioni'
-        alg_14_biggame_booleans: 'CS in Algebra - Big Game booleani'
-        alg_15_biggame_update_player: 'CS in Algebra - Big Game Player Update'
-        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Rilevamento delle collisioni'
-        alg_17_sambat_compound_booleans: 'CS in Algebra - Booleani composti'
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Guerre Stellari: Costruisci una galassia con il codice - Introduzione'
-        starwars_typing: 'Guerre Stellari: Costruisci una galassia con il codice - JavaScript'
-        starwars_events: 'Guerre Stellari: Costruisci una galassia con il codice - Eventi'
-        starwars_congrats: 'Guerre Stellari: Costruisci una galassia con il codice - Complimenti'
-        starwars_blocks_intro: 'Guerre Stellari: Costruisci una galassia con il codice - Introduzione'
-        starwars_blocks_events: 'Guerre Stellari: Costruisci una galassia con il codice - Eventi'
-        starwars_blocks_congrats: 'Guerre Stellari: Costruisci una galassia con il codice - Complimenti'
-        mc_intro: 'Minecraft - Introduzione'
-        mc_repeat: 'Minecraft - Ripetizione'
-        mc_if_statements: 'Minecraft - Istruzione "se"'
-        mc_congrats_share: 'Minecraft - Complimenti'
-        mc_congrats_no_share: 'Minecraft - Complimenti'
-        gumball_intro: "L'Ora del Codice di Gumball - introduzione"
-        gumball_events: "L'Ora del Codice di Gumball - Eventi"
-        gumball_repeat: "L'Ora del Codice di Gumball - Ripetizione"
-        iceage_intro: "L'Ora del Codice con L'Era Glaciale - Introduzione"
-        iceage_events: "L'Ora del Codice con L'Era Glaciale - Eventi"
-        iceage_repeat: "L'Ora del Codice con L'Era Glaciale - Ripetizione"
+        'farmer_intro': 'Introduzione a "La Contadina"'
+        'flappy_intro': 'Introduzione a "Flappy"'
+        'loop_times': 'Blocco "ripeti ... volte"'
+        'loop_until': 'Blocco "ripeti fino a che"'
+        'if': 'Blocco "se"'
+        'if_else': 'Blocco "se-altrimenti"'
+        'if_else_scrat': 'Blocco "se-altrimenti"'
+        'function': Funzioni
+        'loop_while': 'Blocco "Mentre"'
+        'loop_for': 'Blocco "ripeti con contatore"'
+        'parameters': Funzioni con parametri
+        'hoc_wrapup': "Conclusione dell'Ora del Codice"
+        'Unplug1': "Cos'è l'Informatica?"
+        'Unplug2': Pensiero computazionale
+        'Unplug3': Programmazione su carta a quadretti
+        'Unplug4': Algoritmi
+        'Unplug5': Funzioni
+        'Unplug6': Istruzioni condizionali
+        'Unplug7': Composizione di canzoni
+        'Unplug8': Astrazione
+        'Unplug9': Programmazione a Staffetta
+        'Unplug10': Internet
+        'Unplug11': Conclusione
+        'C1_happy_maps_unplugged': Mappe Felici
+        'C1_moveitmoveit_unplugged': Muovilo, muovilo
+        'C1_bigevent_unplugged': Il Grande Evento
+        'C1_getting_loopy': Diventare Ripetitivi
+        'C1_pair_programming': Programmazione in Coppia
+        'C1_maze_intro_sequencing': 'Labirinto - Corso 1: Introduzione'
+        'C1_maze_debugging': 'Labirinto: Correzione di Errori'
+        'C1_bee_level_intro': 'Ape: Introduzione'
+        'C1_artist_intro': 'Artista - Corso 1: Introduzione'
+        'C1_spelling_bee_intro': 'Ape Sapiente: Introduzione'
+        'C1_zuck_repeat_loop': 'Labirinto: Cicli'
+        'C1_bee_loops': 'Ape: Cicli'
+        'C1_maze_loops': 'Labirinto: Cicli'
+        'C1_playlab_storytelling': 'Laboratorio: Crea una Storia'
+        'C1_planting_seed': Piantare un seme
+        'C1_building_foundation': Costruire le Fondamenta
+        'C1_going_places_safely': Visitare Luoghi in Modo Sicuro
+        'C2_maze_intro': 'Labirinto - Corso 2: Introduzione'
+        'C2_artist_intro': 'Artista - Corso 2: Introduzione'
+        'C2_zuck_repeat_loop': 'Labirinto: Cicli'
+        'C2_artist_loops': 'Artista: Cicli'
+        'C2_artist_debugging': 'Artista: Correzione di Errori'
+        'C2_bee_loops': 'Ape: Cicli'
+        'C2_bee_debugging': 'Ape: Correzione di Errori'
+        'C2_bee_conditionals': 'Ape: Istruzioni Condizionali'
+        'C2_playlab_createstory': 'Laboratorio: Crea una Storia'
+        'C2_graph_paper': Programmazione su carta a quadretti
+        'C2_conditionals_with_cards': Istruzioni condizionali
+        'C2_binary_bracelets': Braccialetti Binari
+        'C2_relay_programming': Programmazione a Staffetta
+        'C2_paper_airplanes': Aeroplani di Carta
+        'C2_digital_footprint': La tua Impronta Digitale
+        'C2_digital_footprint_v2': La tua Impronta Digitale
+        'C3_maze_level_4': 'Labirinto: Cicli'
+        'C3_artist_intro': 'Artista - Corso 3: Introduzione'
+        'C3_artist_functions': 'Artista: Funzioni'
+        'C3_bee_functions': 'Ape: Funzioni'
+        'C3_bee_conditionals': 'Ape: Istruzioni Condizionali'
+        'C3_maze_conditionals': 'Labirinto: Istruzioni Condizionali'
+        'C3_artist_nested_loops': Cicli Annidati
+        'C3_farmer_while': 'Cicli "Mentre"'
+        'C3_bee_nested_loops': Cicli annidati
+        'C3_bee_debugging': 'Ape: Correzione di Errori'
+        'C3_bounce': Ping-Pong
+        'C3_playlab_create_game': 'Laboratorio: Crea un Gioco'
+        'C3_computational_thinking': Pensiero computazionale
+        'C3_dice_race': Gara con i Dadi
+        'C3_internet': Internet
+        'C3_crowdsourcing': Intelligenza Collettiva
+        'C3_functional_suncatchers': Acchiappa-sole Funzionale
+        'C3_songwriting_with_parameters': 'Composizione di Canzoni - Parametri'
+        'C4_intro': Introduzione
+        'C4_loops_zombie': Ripetizioni
+        'C4_bee_conditional': 'Ape: Istruzioni Condizionali'
+        'C4_variables_artist': 'Artista: Variabili'
+        'C4_variables_playlab': 'Laboratorio: Variabili'
+        'C4_for_loops': Cicli con Contatore
+        'C4_for_loops_bee': Cicli con Contatore
+        'C4_for_loops_no_bee': Cicli con Contatore
+        'C4_math_artist': "Programmare l'Artista usando la matematica"
+        'C4_function_edit': Modifica di funzioni
+        'C4_function_create': Creazione di funzioni
+        'C4_function_parameters': Funzioni con parametri
+        'C4_conditionals': Istruzioni condizionali
+        'C4_unplugged_algorithms': Algoritmi per il Tangram
+        'C4_unplugged_madlibs': Mad-Libs
+        'C4_unplugged_variables': Variabili della Busta
+        'C4_unplugged_forloops': Cicli con Contatore
+        'C4_unplugged_parameters': 'Composizione di Canzoni - Parametri'
+        'C4_unplugged_binary': Binario
+        'frozen_intro': "Introduzione all'Ora del Codice"
+        'frozen_loops': Introduzione ai Cicli
+        'frozen_functions': Introduzione alle Funzioni
+        'playlab_intro': Introduzione al Laboratorio
+        'playlab_events': 'Laboratorio: Eventi'
+        'playlab_repeat_forever': 'Laboratorio: Ripeti per Sempre'
+        'tutorial_puzzle_challenge': 'Corso "Esercitazione Puzzle"'
+        'infinity_playlab_intro': 'Laboratorio - Introduzione'
+        'infinity_playlab_events': 'Laboratorio - Eventi'
+        'infinity_playlab_repeat_forever': 'Laboratorio - Ripeti per sempre'
+        'csp_applab_objects': Introduction to Objects
+        'csp_applab_databases_1': 'Introduction to Databases - Part 1'
+        'csp_applab_databases_2': 'Introduction to Databases - Part 2'
+        'csp_applab_processing_lists': Processing Lists with Loops
+        'csp_applab_lists_1': 'Introduction to Lists - Part 1'
+        'csp_applab_lists_2': 'Introduction to Lists - Part 2'
+        'csp_applab_lists_3': 'Introduction to Lists - Part 3'
+        'csp_applab_lists_4': 'Introduction to Lists - Part 4'
+        'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
+        'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
+        'csp_applab_design': Introduction to Design Mode
+        'csp_applab_variables_1': 'Introduction to Variables - Part 1'
+        'csp_applab_variables_2': 'Introduction to Variables - Part 2'
+        'csp_applab_functions': Introduzione alle Funzioni
+        'csp_applab_functions_parameters': Funzioni con parametri
+        'csp_applab_loops': Ripetizioni
+        'csp_applab_turtle': Turtle Programming
+        'csp_concept_bigdata_medicine': 'Data & Medicine'
+        'csp_concept_cybercrime': 'The Internet: Cybersecurity & Crime'
+        'csp_concept_encryption': 'The Internet: Encryption & Public Keys'
+        'csp_concept_http_html': 'The Internet: HTTP & HTML'
+        'csp_concept_what_is_internet': What is the Internet?
+        'csp_concept_internet_ip_dns': 'The Internet: IP Addresses & DNS'
+        'csp_concept_internet_packets_reliability': 'The Internet: Packets, Routing & Reliability'
+        'csp_concept_internet_wires_cables_wifi': 'The Internet: Wires, Cables & Wifi'
+        'csp_concept_rgb': "Un po ' sui pixel"
+        'csp_cs_is_changing_everything': Computer Science is Changing Everything
+        'csp_pixelation_color_1': 'Color pixelation widget - parte 1'
+        'csp_pixelation_color_2': 'Color pixelation widget - parte 2'
+        'csp_pixelation_color_3': 'Color pixelation widget - parte 3'
+        'csp_pixelation_bw': Bianco e nero pixelation widget
+        'csp_U1L14_tipstricks': "Unità 1 Lezione 14 consigli per l'insegnante"
+        'csp_textcompression': Widget di compressione del testo
+        'csp_textcompression_new': Widget di compressione del testo
+        'csp_internetsimulator_1': 'Internet Simulator - Part 1'
+        'csp_internetsimulator_2': 'Internet Simulator - Part 2'
+        'csp_internetsimulator_3': 'Internet Simulator - Part 3'
+        'alg_1_intro': 'CS in Algebra - introduzione'
+        'alg_2_eval_block': 'CS in Algebra - -Blocchi di valutazione'
+        'alg_3_pemdas': 'CS in Algebra - ordine delle operazioni'
+        'alg_4_data_types': 'CS in Algebra - Tipi di dato'
+        'alg_5_contracts': 'CS in Algebra - Contratti'
+        'alg_6_variables': 'CS in Algebra - Variabili'
+        'alg_7_function': 'CS in Algebra - Funzioni'
+        'alg_8_design_recipe': 'CS in Algebra - ricetta di Design'
+        'alg_9_booleans': 'CS in Algebra - Valori booleani'
+        'alg_10_conditionals': 'CS in Algebra - Condizioni'
+        'alg_11_coordinate_plane': 'CS in Algebra - Piano Cartesiano'
+        'alg_12_biggame_variables': 'CS in Algebra - Big Game Variabili'
+        'alg_13_biggame_animation': 'CS in Algebra - Big Game Animazioni'
+        'alg_14_biggame_booleans': 'CS in Algebra - Big Game booleani'
+        'alg_15_biggame_update_player': 'CS in Algebra - Big Game Player Update'
+        'alg_16_biggame_collision_detection': 'CS in Algebra - Big Game Rilevamento delle collisioni'
+        'alg_17_sambat_compound_booleans': 'CS in Algebra - Booleani composti'
+        'hoc2015_preview_blocks': Make your own game blocks
+        'hoc2015_preview_typing': Make your own game typing
+        'hoc2015_preview_conclusion': Make your own game conclusion
+        'starwars_intro': 'Guerre Stellari: Costruisci una galassia con il codice - Introduzione'
+        'starwars_typing': 'Guerre Stellari: Costruisci una galassia con il codice - JavaScript'
+        'starwars_events': 'Guerre Stellari: Costruisci una galassia con il codice - Eventi'
+        'starwars_congrats': 'Guerre Stellari: Costruisci una galassia con il codice - Complimenti'
+        'starwars_blocks_intro': 'Guerre Stellari: Costruisci una galassia con il codice - Introduzione'
+        'starwars_blocks_events': 'Guerre Stellari: Costruisci una galassia con il codice - Eventi'
+        'starwars_blocks_congrats': 'Guerre Stellari: Costruisci una galassia con il codice - Complimenti'
+        'mc_intro': 'Minecraft - Introduzione'
+        'mc_repeat': 'Minecraft - Ripetizione'
+        'mc_if_statements': 'Minecraft - Istruzione "se"'
+        'mc_congrats_share': 'Minecraft - Complimenti'
+        'mc_congrats_no_share': 'Minecraft - Complimenti'
+        'gumball_intro': "L'Ora del Codice di Gumball - introduzione"
+        'gumball_events': "L'Ora del Codice di Gumball - Eventi"
+        'gumball_repeat': "L'Ora del Codice di Gumball - Ripetizione"
+        'iceage_intro': "L'Ora del Codice con L'Era Glaciale - Introduzione"
+        'iceage_events': "L'Ora del Codice con L'Era Glaciale - Eventi"
+        'iceage_repeat': "L'Ora del Codice con L'Era Glaciale - Ripetizione"
     callout:
       text:
         drag_blocks: |-

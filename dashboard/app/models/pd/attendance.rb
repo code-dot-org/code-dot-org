@@ -15,17 +15,15 @@
 #
 
 class Pd::Attendance < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
   belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
 
   has_one :workshop, class_name: 'Pd::Workshop', through: :session
 
   def self.for_teacher(teacher)
-    self.joins(:workshop).where(teacher_id: teacher.id)
-  end
-
-  def self.for_district(district)
-    self.joins(teacher: {districts_users: :district}).where(districts_users: {district_id: district.id})
+    self.where(teacher_id: teacher.id)
   end
 
   def self.for_workshop(workshop)

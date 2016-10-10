@@ -45,7 +45,32 @@
     "debugger_disabled": "true",
     "encrypted_examples": "XIyDFfwYBokeTqvZrNoM0bBCcTCdyPqtuvHbdqthQ7mpnUQ52qo0SN08r38A\nJXlH\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "turnLeft:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "For this exercise you only need to move forward.  Try to find the edge of the screen."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to give the moveForward command a parameter like moveForward(100)"
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

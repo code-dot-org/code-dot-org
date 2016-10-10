@@ -13,7 +13,13 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      if script_level.stage.lockable?
+        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      else
+        puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      end
+    elsif script_level.stage.lockable?
+      script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -60,8 +66,8 @@ module LevelsHelper
   end
 
   def use_firebase
-    !!@level.game.use_firebase_for_new_project? ||
-        !!(request.parameters && request.parameters['useFirebase'])
+    !!@level.game.use_firebase_for_new_project? &&
+        !(request.parameters && request.parameters['noUseFirebase'])
   end
 
   def select_and_track_autoplay_video
@@ -131,7 +137,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.stage.position,
+        stage_position: @script_level.stage.absolute_position,
         level_position: @script_level.position
       )
     end
@@ -177,6 +183,8 @@ module LevelsHelper
 
     if @level.is_a? Blockly
       @app_options = blockly_options
+    elsif @level.is_a? Weblab
+      @app_options = weblab_options
     elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
       @app_options = question_options
     elsif @level.is_a? Widget
@@ -210,8 +218,9 @@ module LevelsHelper
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
+    use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim
+    use_blockly = !use_droplet && !use_netsim && !use_weblab
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
            locals: {
@@ -221,6 +230,7 @@ module LevelsHelper
                use_blockly: use_blockly,
                use_applab: use_applab,
                use_gamelab: use_gamelab,
+               use_weblab: use_weblab,
                use_phaser: use_phaser,
                use_makerlab: use_makerlab,
                hide_source: hide_source,
@@ -234,6 +244,27 @@ module LevelsHelper
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  # Options hash for Weblab
+  def weblab_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! @level.properties.camelize_keys
+
+    # ScriptLevel-dependent option
+    script_level = @script_level
+    app_options[:level]['puzzle_number'] = script_level ? script_level.position : 1
+    app_options[:level]['stage_total'] = script_level ? script_level.stage_total : 1
+
+    # Ensure project_template_level allows start_sources to be overridden
+    app_options[:level]['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
+
+    app_options.merge! view_options.camelize_keys
+    app_options[:app] = 'weblab'
+    app_options[:baseUrl] = Blockly.base_url
+
     app_options
   end
 
@@ -277,21 +308,9 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
-    # Locale-dependent option
-    # Fetch localized strings
-    if l.custom?
-      loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.en? || loc_val.nil?
-        level_options['instructions'] = loc_val
-      end
-    else
-      %w(instructions).each do |label|
-        val = [l.game.app, l.game.name].map { |name|
-          data_t("level.#{label}", "#{name}_#{l.level_num}")
-        }.compact.first
-        level_options[label] ||= val unless val.nil?
-      end
-    end
+    # Locale-depdendant option
+    loc_instructions = l.localized_instructions
+    level_options['instructions'] = loc_instructions unless loc_instructions.nil?
 
     # Script-dependent option
     script = @script
@@ -318,14 +337,14 @@ module LevelsHelper
       # puzzle-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
         puzzle: script_level.position
       }, default: nil)
 
       # stage-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
       }, default: nil) if enabled.nil?
 
       # script-specific
@@ -352,6 +371,13 @@ module LevelsHelper
     if @level.game.uses_pusher?
       app_options['usePusher'] = CDO.use_pusher
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
+    end
+
+    # TTS
+    # TTS is currently only enabled for k1
+    if script && script.is_k1?
+      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file}"
+      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file}"
     end
 
     if @level.is_a? NetSim
@@ -388,6 +414,7 @@ module LevelsHelper
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:firebaseName] = CDO.firebase_name if @game == Game.applab
     app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
+    app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
@@ -515,7 +542,7 @@ module LevelsHelper
     all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
   end
 
-  def instruction_gif_asset_path filename
+  def instruction_gif_asset_path(filename)
     File.join('/', instruction_gif_relative_path, filename)
   end
 
@@ -576,21 +603,41 @@ module LevelsHelper
     generator.create_token(payload, options)
   end
 
-  # If this is a restricted level (i.e., applab) and user is under 13, redirect
-  # with a flash alert.
-  def redirect_under_13(level)
+  # If this is a restricted level (i.e., applab), the user is under 13, and the
+  # user has no teacher that has accepted our (August 2016) terms of service,
+  # redirect with a flash alert.
+  # Also redirect if the user is pairing with a user who would receive a
+  # redirect.
+  # @return [boolean] whether a (privacy) redirect happens.
+  def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Lab.
-    return unless level.game == Game.applab || level.game == Game.gamelab
+    return false unless level.game == Game.applab || level.game == Game.gamelab
 
-    if current_user && current_user.under_13?
-      redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+    if current_user && current_user.under_13? && current_user.terms_version.nil?
+      error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
+      redirect_to '/', :flash => { :alert => error_message }
       return true
     end
+
+    pairings.each do |paired_user|
+      if paired_user.under_13? && paired_user.terms_version.nil?
+        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.pair_programmer") }
+        return true
+      end
+    end
+
+    false
   end
 
   def can_view_solution?
     if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions?
       Ability.new(current_user).can? :view_level_solutions, @script
     end
+  end
+
+  # Should the multi calling on this helper function include answers to be rendered into the client?
+  # Caller indicates whether the level is standalone or not.
+  def include_multi_answers?(standalone)
+    standalone || current_user.try(:should_see_inline_answer?, @script_level)
   end
 end

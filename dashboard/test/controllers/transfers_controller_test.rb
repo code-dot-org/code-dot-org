@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TransfersControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     @teacher = create(:teacher)
@@ -67,15 +67,27 @@ class TransfersControllerTest < ActionController::TestCase
     assert_response 302
   end
 
-  test "students should stay enrolled in the current section if stay_enrolled_in_current_section is true" do
+  test "when the new section belongs to the same teacher, students should no longer be in the current section if stay_enrolled_in_current_section is false" do
+    post :create, new_section_code: @picture_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: false
+    assert_not Follower.exists?(student_user: @word_user_1, section: @word_section)
+  end
+
+  test "when the new section belongs to the same teacher, students should no longer be in the current section even if stay_enrolled_in_current_section is true" do
+    post :create, new_section_code: @picture_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: true
+    assert_not Follower.exists?(student_user: @word_user_1, section: @word_section)
+  end
+
+  test "when the new section belongs to a different teacher, students should stay enrolled in the current section if stay_enrolled_in_current_section is true" do
     new_section = create(:section, user: create(:teacher), login_type: 'word')
 
     post :create, new_section_code: new_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: true
     assert Follower.exists?(student_user: @word_user_1, section: @word_section)
   end
 
-  test "students should no longer be in the current section if stay_enrolled_in_current_section is false" do
-    post :create, new_section_code: @picture_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: false
+  test "when the new section belongs to a different teacher, students should no longer be in the current section if stay_enrolled_in_current_section is false" do
+    new_section = create(:section, user: create(:teacher), login_type: 'word')
+
+    post :create, new_section_code: new_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: false
     assert_not Follower.exists?(student_user: @word_user_1, section: @word_section)
   end
 

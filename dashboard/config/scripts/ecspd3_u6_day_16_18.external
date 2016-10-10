@@ -1,34 +1,32 @@
 name 'ECSPD3-u6 day 16-18'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css"> 
- 
-## Unit 6 Lessons > Days 16-18 
- 
-#### Concepts Covered  
+# Unit 6 Lessons > Days 16-18 
+
+## Concepts Covered
+
 Rubric for Dancing Robot Challenge, Design, Build, Write a Dance Program (using loops, jumps, conditionals, etc.) for the Robot, Reflect on the Dance Challenge
 
-#### Lesson Overview 
+## Lesson Overview
+
 You will be starting off the lesson with an explanation of the dancing robot challenge.  Students have the challenge to build a robot that dances to music for 1-2 minutes.  
 
-<br>
 Remind students of the problem solving process, when deciding on the music, costume, choreography, construction, entertainment value and creativity.  They will need to print out their program and hand it in at the time they compete.  Each group/team will be graded on their ability to cooperate on the challenge as a whole while playing fair.
-<br><br> 
  
-#### Lesson Resources 
-##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=288" target=_blank>Lesson Plan Link>> </a>
- 
+## Lesson Resources
+#### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=288" target=_blank>Lesson Plan Link>> </a>
+
 - <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=289" target=_blank>Dancing Robot Activity</a>  
 - <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=291" target=_blank>Dancing Robot Sample Rubric</a>
 - <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=292)" target=_blank>Project Reflection</a>
 
->#### Hints from an ECS Teacher: 
+> ## Hints from an ECS Teacher: 
 Look over the activity well in advance so you know how to help facilitate your students' experience
 
 ***Dancing Robot Activity***: The dancing robot assignment is based on the first level of RoboCupJunior, an international competition
-<br><br>
+
 ***Task***: Build a robot that dances to music for 1-2 minutes. 
-<br><br>
+
 ***Requirements***: 
 
 - The robot should not take any input, only have output in the form of various dance moves. 
@@ -41,7 +39,6 @@ Look over the activity well in advance so you know how to help facilitate your s
 - Each team must print out its program and hand it in at the same time that they compete. 
 - Fair play is an important part of the RoboCup competition. Teams are expected to help other teams as needed and not deliberately interfere with or damage other teams’ work. 
 - All students are expected to respectfully watch all other teams compete. 
-
 
 ***Process***:
 
@@ -62,13 +59,11 @@ You will have two class periods to build and program the robot, and then you wil
 - Cooperation between teams 
 - Dance stage will be a flat area. Official RobocupJunior stage size is 6X4 m. Official RoboCupJunior Dance Challenge rules (2008): http://rcj.robocup.org/dance.html 
 
-#### Things to keep in mind 
-Because there are multiple things the students need to keep in mind for this project, help them organize their project and roles so they are able to manage the music, costume, choreography, construction of the robot, entertainment offered and creativity.
-<br><br> 
- 
-Click “Continue” below to learn about the next lesson.  
- 
-<br/><br/> 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+## Things to keep in mind
 
+Because there are multiple things the students need to keep in mind for this project, help them organize their project and roles so they are able to manage the music, costume, choreography, construction of the robot, entertainment offered and creativity.
+
+Click “Continue” below to learn about the next lesson.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

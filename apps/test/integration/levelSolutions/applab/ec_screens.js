@@ -25,6 +25,9 @@ function validateElementSelect(expected, assert) {
   assert.deepEqual(actual, expected);
 }
 
+const orange = 'rgb(255, 164, 0)';
+const white = 'rgb(255, 255, 255)';
+
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -56,8 +59,6 @@ module.exports = {
         $(designModeButton).click();
         assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
 
-        var orange = 'rgb(255, 160, 0)';
-        var white = 'rgb(255, 255, 255)';
         assert.equal(orange, $("#designModeButton").css('background-color'),
           'expected Design button (active) to have orange background.');
         assert.equal(white, $("#codeModeButton").css('background-color'),
@@ -313,8 +314,6 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $("#designModeButton").click();
-        var orange = 'rgb(255, 160, 0)';
-        var white = 'rgb(255, 255, 255)';
         assert.equal(orange, $("#designModeButton").css('background-color'),
           'expected Design button (active) to have orange background.');
         assert.equal(white, $("#codeModeButton").css('background-color'),
@@ -377,8 +376,6 @@ module.exports = {
         assert.equal($('#divApplab #screen2')[0].style.display === 'none', true, 'screen 2 hidden');
 
         // design toggle row still shows design mode
-        var orange = 'rgb(255, 160, 0)';
-        var white = 'rgb(255, 255, 255)';
         assert.equal(orange, $("#designModeButton").css('background-color'),
           'expected Design button (active) to have orange background.');
         assert.equal(white, $("#codeModeButton").css('background-color'),
@@ -548,6 +545,47 @@ module.exports = {
 
         var screenElement = document.getElementById('design_screen1');
         assert.include(screenElement.style.backgroundImage, assetUrl);
+
+        assert.equal(screenElement.style.backgroundSize, '320px 450px', 'image stretched');
+
+        // make sure dimensions didn't change
+        assert.equal(screenElement.style.width, '320px');
+        assert.equal(screenElement.style.height, '450px');
+
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "add a background with spaces",
+      editCode: true,
+      xml: "",
+      runBeforeClick: function (assert) {
+        // enter design mode
+        var designModeButton = document.getElementById('designModeButton');
+
+        $("#design_screen1").click();
+
+        validatePropertyRow(0, 'id', 'screen1', assert);
+
+        // take advantage of the fact that we expose the filesystem via
+        var assetUrl = '/base/static/flappy promo.png';
+        var encodedAssetUrl = '/base/static/flappy%20promo.png';
+        var imageInput = $("#design-properties input").eq(2)[0];
+
+        ReactTestUtils.Simulate.change(imageInput, {
+          target: { value: assetUrl }
+        });
+
+        var screenElement = document.getElementById('design_screen1');
+        assert.include(screenElement.style.backgroundImage, encodedAssetUrl);
 
         assert.equal(screenElement.style.backgroundSize, '320px 450px', 'image stretched');
 

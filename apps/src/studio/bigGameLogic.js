@@ -1,10 +1,8 @@
-var CustomGameLogic = require('./customGameLogic');
-var studioConstants = require('./constants');
-var Direction = studioConstants.Direction;
-var Position = studioConstants.Position;
-var codegen = require('../codegen');
-var api = require('./api');
-var utils = require('../utils'); // Provides Function.prototype.inherits
+import CustomGameLogic from './customGameLogic';
+import api from './api';
+import codegen from '../codegen';
+import { valueOr } from '../utils';
+import { Direction, Position } from './constants';
 
 
 /**
@@ -23,7 +21,7 @@ var BigGameLogic = function (studio, options) {
 
   this.finished = false;
   // If set to true, player always faces forward
-  this.staticPlayer = utils.valueOr(options.staticPlayer, false);
+  this.staticPlayer = valueOr(options.staticPlayer, false);
 };
 BigGameLogic.inherits(CustomGameLogic);
 
@@ -123,7 +121,7 @@ BigGameLogic.prototype.reset = function () {
  * When game starts logic
  */
 BigGameLogic.prototype.onFirstTick_ = function () {
-  var func = function (StudioApp, Studio, Globals) {
+  var func = function (Studio, Globals) {
     Studio.setBackground(null, this.getVar_('background'));
     Studio.setSpritePosition(null, this.playerSpriteIndex, Position.MIDDLECENTER);
     Studio.setSprite(null, this.playerSpriteIndex, this.getVar_('player'));
@@ -184,7 +182,7 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   // reinvertY
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;
   if (this.staticPlayer) {
-    playerSprite.dir = studioConstants.Direction.NONE;
+    playerSprite.dir = Direction.NONE;
   }
 };
 

@@ -1,10 +1,14 @@
 - if @enrollment.errors.any?
   #error_explanation
-    %h2= "#{pluralize(@enrollment.errors.count, 'error')}:"
+    %h2 Error
     %ul
+      - school_info_error_shown = false
       - @enrollment.errors.each do |name, message|
-        - if name == :school_district
-          %li= "School district or school ZIP is required"
+        - if name.to_s.start_with?("school_info")
+          -# Just show one error for any errors inside the district dropdown.
+          - if !school_info_error_shown
+            %li= "District information required."
+            - school_info_error_shown = true
         - else
           %li= raw @enrollment.errors.full_message(name, message).html_safe
 
@@ -36,14 +40,19 @@
   %div.control-group
     %label
       District
-    - error_class = (@enrollment.errors.include? :school_district) ? "field_with_errors_div" : ""
+      %span.form-required-field
+        *
+    -# Manually wrap an error highlight around the entire district dropdown.
+    - error_class = (@enrollment.errors.include?(:"school_info.school_district")) ? "field_with_errors_div" : ""
     #school_district.span5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
       %div.controls
-        = render partial: 'shared/district_dropdown', locals: {form_name: "pd_enrollment"}
+        = render partial: 'shared/district_dropdown', locals: {form_name: "school_info", existing_school_info: @enrollment.school_info}
     %div{style: "clear: both"}
   %div.control-group
     %label
-      School
+      School Name
+      %span.form-required-field
+        *
     %div.controls
       =form.text_field :school, class: 'span5'
     %div.control-group

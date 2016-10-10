@@ -47,6 +47,7 @@
     "never_autoplay_video": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
     "contained_level_names": null
   },
   "published": true,
@@ -413,20 +414,37 @@
             <block type="studio_saySpriteParams" inline="true">
               <title name="SPRITE">1</title>
               <value name="TEXT">
-                <block type="text_join" inline="false">
-                  <mutation items="2"/>
-                  <value name="ADD0">
-                    <block type="text">
-                      <title name="TEXT">Your current jump power is </title>
-                    </block>
-                  </value>
-                  <value name="ADD1">
-                    <block type="variables_get">
-                      <title name="VAR">jumpPower</title>
+                <block type="variables_get">
+                  <title name="VAR">jumpPowerMessage</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_wait" uservisible="false">
+              <title name="VALUE">500</title>
+              <next>
+                <block type="variables_set" inline="false" uservisible="false">
+                  <title name="VAR">jumpPowerMessage</title>
+                  <value name="VALUE">
+                    <block type="text_join" inline="false" uservisible="false">
+                      <mutation items="2"/>
+                      <value name="ADD0">
+                        <block type="text" uservisible="false">
+                          <title name="TEXT">Your current jump power is </title>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="variables_get" uservisible="false">
+                          <title name="VAR">jumpPower</title>
+                        </block>
+                      </value>
                     </block>
                   </value>
                 </block>
-              </value>
+              </next>
             </block>
           </next>
         </block>

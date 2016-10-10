@@ -1,4 +1,5 @@
 require 'aws-sdk'
+require 'sinatra'
 
 #
 # DynamoTable
@@ -20,6 +21,10 @@ class DynamoTable
     @metadata_hash = "#{@channel_id}:#{@table_name}:#{@table_type}:metadata"
   end
 
+  def self.pre_initialize
+    @@dynamo_db ||= Aws::DynamoDB::Client.new
+  end
+
   def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new
   end
@@ -32,7 +37,7 @@ class DynamoTable
     ).item
 
     # only return the parts we care about
-    @metadata_item.select{|k,_| k == "column_list"} if @metadata_item
+    @metadata_item.select{|k, _| k == "column_list"} if @metadata_item
   end
 
   def set_column_list_metadata(column_list)
@@ -344,5 +349,4 @@ class DynamoTable
 
     results.keys
   end
-
 end

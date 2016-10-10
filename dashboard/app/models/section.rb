@@ -37,13 +37,19 @@ class Section < ActiveRecord::Base
 
   belongs_to :script
 
+  has_many :section_hidden_stages
+
   LOGIN_TYPE_PICTURE = 'picture'
   LOGIN_TYPE_WORD = 'word'
 
   TYPES = [
-    TYPE_PD_WORKSHOP = 'pd_workshop'
-  ]
+    # Insert non-workshop section types here.
+  ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  def workshop_section?
+    Pd::Workshop::SECTION_TYPES.include? self.section_type
+  end
 
   def user_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
@@ -73,7 +79,7 @@ class Section < ActiveRecord::Base
       # new one
       follower.update_attributes!(section: self)
     else
-      follower = Follower.create!(user_id: self.user_id, student_user: student, section: self)
+      follower = Follower.find_or_create_by!(user_id: self.user_id, student_user: student, section: self)
     end
     follower
   end

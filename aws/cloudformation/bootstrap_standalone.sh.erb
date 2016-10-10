@@ -17,8 +17,10 @@ sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
 
 ENVIRONMENT=<%=environment%>
 
+HOME_DIR=/home/ubuntu/${ENVIRONMENT}
+
 # Workaround to delete any locally-modified files
-(cd /home/ubuntu/${ENVIRONMENT} && git reset --hard --quiet &)
+(cd ${HOME_DIR} && git reset --hard --quiet &)
 
 # Bootstrap prerequisites
 apt-get -qq update
@@ -78,7 +80,6 @@ jq "." <<JSON > ${FIRST_BOOT}
   },
   "cdo-secrets": {
 <% if local_mode %>
-    "build_blockly_core": true,
     "build_code_studio": true,
     "use_my_code_studio": true,
     "build_apps": true,
@@ -98,9 +99,11 @@ jq "." <<JSON > ${FIRST_BOOT}
 }
 JSON
 
+# TODO move these run-once notifications somewhere more appropriate
 # Bootstrap the first cdo-apps Rakefile build on a new instance.
-# TODO move this run-once notification somewhere more appropriate
 rm -f /etc/init.d/{dashboard,pegasus}
+# Bootstrap the npm builds on a new instance.
+rm -rf ${HOME_DIR}/{apps/build}
 
 OPTIONS="<%=local_mode ? '-z' : ''%> -b ${BRANCH} -n ${NODE_NAME}"
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"

@@ -1,0 +1,14 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-07-23T00:31:52.163Z",
+  "level_num": "custom",
+  "user_id": 53,
+  "properties": {
+    "link_title": "Kodable Conditionals",
+    "url": "https://dashboard.kodable.com/#/curriculum/2/4"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</ExternalLink>

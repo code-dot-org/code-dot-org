@@ -106,8 +106,8 @@ $wide-column-width: 121px;
     margin: 0;
   }
 
-  #router-log-modal {
-    display: none; // Initial state
+  .old-router-log-modal {
+    display: none;
     width: 90%;
     margin-left: -45%;
 
@@ -277,7 +277,7 @@ $wide-column-width: 121px;
       padding: 7px 14px;
     }
 
-    &.secondary {
+    &.netsim-button-secondary {
       background-color: $light_cyan;
     }
 
@@ -509,6 +509,11 @@ $wide-column-width: 121px;
         color: $black;
       }
     }
+  }
+
+  .netsim-lobby-buttons {
+    text-align: center;
+    padding-top: 4px;
   }
 
   // NetSim Panel
@@ -1011,6 +1016,31 @@ $wide-column-width: 121px;
     border: outset #ff7f04 3px;
     color: black;
     font-weight:bold;
+  }
+
+  .lobby-hint {
+    display: block;
+    padding: 20px 40px 40px 40px;
+
+    .fa-info-circle {
+      float: left;
+      margin: 0 20px;
+      font-size: 40px;
+    }
+
+    p {
+      margin-left: 80px;
+    }
+
+    ul {
+      margin-left: 100px;
+    }
+  }
+  .netsim-shard-selection-panel .lobby-hint {
+    clear: both;
+  }
+  .netsim-lobby-panel .lobby-hint {
+    clear: right;
   }
 }
 

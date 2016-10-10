@@ -1,20 +1,18 @@
 name 'ECSPD U4 D 7-8 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 7-8: Scratch – Event Driven Programming
+# Day 7-8: Scratch &mdash; Event Driven Programming
 
 First, let's explore the fifth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 146-148.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=146)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will create an alphabet learning game and will use event driven programming to have a program that responds to user created events from the mouse or keyboard using the "when sprite clicked" block, "when\_key pressed" block, "switch to costume\_" block and "say\_for\_sec" block.
 - Students also get to create new costumes by clicking on the Costumes Tab and downloading  their own .gif or jpg, using import or paint to make a second costume to show animation.
 
-#### Common Difficulties
+## Common Difficulties
 
 This lesson was one that was presented at the in person workshop. It is a fun lesson in which students get to have the sprite respond to certain events.
 <br><br>
@@ -22,7 +20,7 @@ Due to the countless ideas that can be incorporated into their program, students
 <br><br>
 For this lesson you need – [alphabet learning.sb](http://www.exploringcs.org/curriculum) file
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -45,6 +43,6 @@ For this lesson you need – [alphabet learning.sb](http://www.exploringcs.org/c
 - Mouse and Keyboard Control - [http://learnscratch.org/sc2-u4/sc2-l17](http://learnscratch.org/sc2-u4/sc2-l17)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -1,18 +1,21 @@
-- cta_url = "http://blog.code.org/post/147243645493/"
+- pp_url = 'http://teacherblog.code.org/post/147349807334/try-pair-programmingtrack-the-progress-of'
+- csp_widgets_url = 'http://teacherblog.code.org/post/148059231974/explore-cs-concepts-in-any-classroom-with-these-4'
+- unused_code_url = 'http://teacherblog.code.org/post/145866947074/help-test-our-new-unused-code-feature'
+- teacher_blog_url = 'http://teacherblog.code.org/'
 
-%div.teacher-announce
-  %a.announce-heading-link{href: 'http://teacherblog.code.org/'}
-    %div.announce-heading
-      = I18n.t(:dashboard_announcements)
-      %div.heading-view-all
-        = I18n.t(:dashboard_announce_view_all)
-        >>
-  %div.announce-content
-    %a{href: cta_url, target: '_blank'}
-      %div.content-img-container
-        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/privacy-policy.png'), width: '100px'}
-    %div.content-text
-      = I18n.t(:dashboard_announce_message)
-    %div.announce-learn-more
-      %a{href: cta_url, target: '_blank'}
-        %button= I18n.t(:dashboard_announce_learn_more_button)
+.teacher-announce
+  .announce-heading
+    = I18n.t(:dashboard_announcements)
+  .announce-content
+    %a{href: teacher_blog_url, target: '_blank'}
+      .content-img-container
+        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/summer-features.jpg'), width: '200px'}
+    .content-text
+      = I18n.t(:dashboard_announce_message_fall2016_features, pp_url: pp_url, csp_widgets_url: csp_widgets_url, unused_code_url: unused_code_url)
+    .announce-learn-more
+      %a{href: teacher_blog_url, target: '_blank'}
+        %button.primary= I18n.t(:dashboard_announce_learn_more_button)
+  .mini-announcement
+    .content-text
+      %i.fa.fa-hand-o-right
+      = I18n.t(:dashboard_announce_all, teacher_blog_url: teacher_blog_url)

@@ -1,10 +1,12 @@
+# TODO: (Brad) Fix and re-enable on Firefox
+@no_firefox
 @no_mobile
 @no_circle
-@as_student
+@as_taught_student
 Feature: Level Group
 
 Background:
-  Given I am on "http://learn.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true&force_submittable=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
@@ -41,11 +43,14 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And I wait for 2 seconds
 
   # Go back to the first page to see that correct options are selected.
-  Then I am on "http://learn.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true&force_submittable=true"
+  Then I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true"
   And element ".level-group-content:nth(0) #checked_2" is visible
   And element ".level-group-content:nth(1) #checked_1" is visible
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
+
+  Then I reload the page
+  And I wait to see ".react_stage"
 
   # Verify the three dots in the header are 1. some, 2. none, 3. all questions answered.
   And I verify progress in the header of the current page is "perfect" for level 2

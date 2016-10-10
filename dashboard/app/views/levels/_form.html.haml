@@ -1,5 +1,5 @@
 - content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder'
+  %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
 #validation-error.validation-error{style: 'background-color: yellow'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
@@ -13,6 +13,7 @@
   - unless @level.new_record? && @level.is_a?(Blockly)
     = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/md_instructions', locals: {f: f} unless @level.is_a? DSLDefined
+    = render partial: 'levels/editors/tts', locals: {f: f} unless @level.is_a? DSLDefined
 
     = render partial: 'levels/editors/authored_hints', locals: {f: f} unless @level.is_a? DSLDefined
 
@@ -25,6 +26,7 @@
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a? Gamelab
+    = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
     = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
     = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
@@ -36,6 +38,7 @@
     = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
+    = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
   .field
     = f.hidden_field :published
   .actions
@@ -46,12 +49,33 @@
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
   window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
+  var saving = false;
   $(document).ready(function () {
     $('#saveProgress').click(function() {
+      saving = true;
       $('#level_published').val(false);
     });
 
     $('#publishLevel').click(function() {
+      saving = true;
       $('#level_published').val(true);
     });
+  });
+
+  var inputs = $('.edit_level *[id]:visible');
+  var form_values = {};
+  for (var i = 0; i < inputs.length; i++) {
+    form_values[inputs[i].id] = inputs[i].value;
+  }
+
+  $(window).bind('beforeunload', function () {
+    if (saving) {
+      return;
+    }
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].value !== form_values[inputs[i].id]) {
+        // prompt before navigating away
+        return "You have unsaved changes, are you sure you want to leave?";
+      }
+    }
   });

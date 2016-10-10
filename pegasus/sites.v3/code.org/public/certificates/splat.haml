@@ -3,7 +3,7 @@
   row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first
   raise Sinatra::NotFound unless row
 %>
-title: "Certificate for Completion of One Hour of Code for <%= row[:name] %>"
+title: "Certificate for Completion of One Hour of Code"
 theme: responsive
 social:
   "twitter:card": photo
@@ -28,7 +28,7 @@ social:
 -row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first || {name:'', session:''}
 #hoc-certificate
   %a{:href=>"/printcertificate/#{row[:session]}"}
-    %img{:src=>"/api/hour/certificate/#{row[:session]}.jpg", :alt=>"Certificate for Completion of One Hour of Code for #{row[:name]}"}
+    %img{:src=>"/api/hour/certificate/#{row[:session]}.jpg", :alt=>"Certificate for Completion of One Hour of Code"}
 #index
   #gap.feature-codeorg
 

@@ -1,8 +1,5 @@
-title 'Computer Science in Science PD Phase 2b'
-description "Phase 2 Online Blended Summer Study"
-description_short "Phase 2 Online Blended Summer Study"
+professional_learning_course 'CS in Science Support'
 login_required 'true'
-pd 'true'
 
 stage 'Welcome!'
 level 'sciPD2b intro'

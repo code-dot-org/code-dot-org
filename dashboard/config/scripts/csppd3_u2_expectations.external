@@ -1,18 +1,12 @@
 name 'CSPPD3-u2 expectations'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Challenge Overview > Challenge Expectations
 
-### Challenge Overview > Challenge Expectations
-
-<br/>
-
-#### What are the expectations for this challenge? 
+## What are the expectations for this challenge? 
 
 In order to receive credit for your challenge submission, you should strive to meet or exceed the following criteria:
-<br/><br/>
+
 ![](https://images.code.org/3571bc01cf80b68eab047aa496a298d5-image-1443829850178.45.42 PM.png)
 
-<br/><br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

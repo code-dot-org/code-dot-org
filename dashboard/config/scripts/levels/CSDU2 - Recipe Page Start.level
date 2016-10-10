@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-09T16:27:29.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Recipe Page\r\n\r\nYou are going to start a new web page. This will be a favorite recipe page. It will take a couple levels to build the page.  Use your knowledge from earlier in class to start getting it set up.\r\n\r\n# Do This\r\n\r\n* Take out your recipe you picked.\r\n* Using a large header tag, put the name of the recipe at the top of the page.\r\n* Create three smaller headers: Description, Ingredients, and Instructions.\r\n* Add a paragraph enclosed in a `<p>` element under the \"Description\" describing the dish the recipe creates.",
+    "project_template_level_name": "CSDU2 - Recipe Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -69,6 +69,10 @@ function addStyleguideExamples(subcomponent) {
   }
 }
 
+const BLACKLIST = [
+  "code-studio/levels/contract_match.jsx",
+];
+
 function loadStories() {
   require('./about');
   require('./colors');
@@ -76,19 +80,24 @@ function loadStories() {
   var context = require.context("../src/", true, /\.jsx$/);
   context.keys().forEach(key => {
     var component;
+    for (const path of BLACKLIST) {
+      if (key.indexOf(path) >=0) {
+        return;
+      }
+    }
     try {
       component = context(key);
     } catch (e) {
       console.error("failed to load", key, e);
+      console.error(e.stack);
+      return;
     }
     var path = key.slice(2);
-    if (component) {
-      addStyleguideExamples(component);
-      Object.keys(component).forEach(componentKey => {
-        var subcomponent = component[componentKey];
-        addStyleguideExamples(subcomponent);
-      });
-    }
+    addStyleguideExamples(component);
+    Object.keys(component).forEach(componentKey => {
+      var subcomponent = component[componentKey];
+      addStyleguideExamples(subcomponent);
+    });
   });
 }
 

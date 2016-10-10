@@ -32,7 +32,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "fast_get_nectar_animation": "false"
+    "fast_get_nectar_animation": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -60,8 +61,19 @@
     </initialization_blocks>
     <start_blocks>
       <xml>
-
-</xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" editable="false" uservisible="false">
+          <mutation/>
+          <title name="NAME">get 2 nectar</title>
+          <statement name="STACK">
+            <block type="maze_nectar" editable="false">
+              <next>
+                <block type="maze_nectar" editable="false"/>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>

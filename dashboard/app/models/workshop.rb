@@ -133,5 +133,4 @@ class Workshop < ActiveRecord::Base
     send_3_day_reminders
     send_exit_surveys
   end
-
 end

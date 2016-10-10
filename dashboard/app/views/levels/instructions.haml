@@ -1,0 +1,38 @@
+-#
+  This is a view for rendering a summary of all of the levels/instructions in a given
+  script, that should only be visible in levelbuilder mode
+:scss
+  .instructions_summary {
+    h1 {
+      margin-top: 30px
+    }
+    .script_level {
+      border: 1px dashed black;
+      padding: 10px;
+    }
+  }
+
+- stages = local_assigns[:stages]
+
+.instructions_summary
+  - stages.each_with_index do |stage, index|
+    %h1= stage.localized_title
+    - stage.script_levels.each do |script_level|
+      - level = script_level.level
+      .script_level
+        = link_to "Level #{script_level.position}: #{script_level.level.name}", build_script_level_path(script_level)
+        %div= "type: #{script_level.level.class}"
+        - levels = level.is_a?(LevelGroup) ? level.levels : [level]
+        - levels.each do |level|
+          - if level.is_a?(External)
+            =render partial: 'levels/content', locals: {app: 'external', data: level.properties}
+          - if level.properties['title']
+            %div= "Title: #{level.properties['title']}"
+          - if level.properties['markdown_instructions']
+            - markdown = level.properties['markdown_instructions']
+            =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
+          - if level.properties['questions']
+            %div= "Questions: #{level.properties['questions']}"
+          - if level.properties['answers']
+            %div= "Answers: #{level.properties['answers']}"
+          %br

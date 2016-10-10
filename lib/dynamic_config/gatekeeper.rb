@@ -134,8 +134,8 @@ class GatekeeperBase
         unless conditions.empty?
           where_clause = {}
           rule['where'] = where_clause
-          conditions.each do |property, value|
-            where_clause[property] = value
+          conditions.each do |property, property_value|
+            where_clause[property] = property_value
           end
         end
         rule['value'] = value

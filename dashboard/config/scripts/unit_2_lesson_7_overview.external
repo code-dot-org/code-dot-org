@@ -1,0 +1,45 @@
+name 'Unit 2 Lesson 7 Overview'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The Internet - Web Development: Lesson 7 - Introduction to Styling with CSS
+
+## Background
+
+This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rules and then explore color properties, text properties, image properties and border properties. They work on a HTML page about Guinness World Record holders, adding additional style properties in each level. In the last level, students are given a checklist to use as they apply what theyâ€™ve learned to their About Me page.
+# Vocabulary
+
+* **CSS** - CSS stands for Cascading Style Sheets. CSS allows each HTML element to be styled according to certain set of rules.
+* **CSS Selector** - Specifies the part of the code which the style should be applied to.
+* **Documentation** - a description of the behavior of a command, function, library, API, etc.
+
+
+# New Blocks
+
+## HTML
+
+* **Head** - `<head></head>`
+* **Body** - `<body></body>`
+* **Style** - `<style></style>`
+* **Title** - `<title></title>`
+
+## CSS
+* **Color** - `color: value;`
+* **Background Color** - `background-color: value;`
+* **Text Align** - `text-align: value;`
+* **Text Decoration** - `text-decoration: value;`
+* **Width** - `width: value;`
+* **Height** - `height: value;`
+* **Border Color** - `border-color: value;`
+* **Border Style** - `border-style: value;`
+* **Border Width** - `border-width: value;`
+
+# Resources
+
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+* [W3 Schools - CSS Colors](http://www.w3schools.com/cssref/css_colors.asp) - Documentation
+* [W3 Schools - CSS font-family](http://www.w3schools.com/cssref/pr_font_font-family.asp) - Documentation
+* [W3 Schools - CSS text-align](http://www.w3schools.com/cssref/pr_text_text-align.asp) - Documentation
+* [W3 Schools - CSS text-decoration](http://www.w3schools.com/cssref/pr_text_text-decoration.asp) - Documentation
+* [W3 Schools - CSS font-size](http://www.w3schools.com/cssref/pr_font_font-size.asp) - Documentation
+* [W3 Schools - CSS Borders](http://www.w3schools.com/css/css_border.as) - Documentation
+MARKDOWN

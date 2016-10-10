@@ -1,3 +1,4 @@
+import React from 'react';
 import * as storybook from '@kadira/storybook';
 import color from '../src/color';
 

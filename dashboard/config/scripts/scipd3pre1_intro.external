@@ -5,13 +5,11 @@ css 'unplugged'
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+# Welcome to Phase 3 Online!
 
-### Welcome to Phase 3 Online!
+<img src="https://images.code.org/841239d176283b292ce9ee0f780f72b9-image-1440784064200.47.24.png" class="level-image">
 
-<img src="https://images.code.org/841239d176283b292ce9ee0f780f72b9-image-1440784064200.47.24.png" width="320" style="float:right; margin-left:30px">
-
-#### <i>Phase 3: Academic Year Development - Online Prep</i>
+## <i>Phase 3: Academic Year Development - Online Prep</i>
 
 Welcome to the online prep for your first Phase 3 in-person meetup!
 
@@ -25,8 +23,5 @@ As part of your next in-person, you will be placed in a group to teach one of th
 
 To complete these activities you'll need to think back to your CS in Science Phase 2 In-Person PD. In this prep, we'll balance our time between reflection on your previous experience as a learner, and planning to teach these TLOs to your peers.
 
-<br/>
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

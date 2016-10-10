@@ -1,6 +1,6 @@
 .field
   = f.label :instructions
-  = f.text_area :instructions, placeholder: 'Instructions', rows: 4
+  = f.text_area :instructions, placeholder: 'Instructions', rows: 4, class:"input-block-level"
 .field
   = f.label :markdown_instructions
   %p When specified, these instructions will render in the instructions popup.
@@ -15,7 +15,7 @@
     localStorage.setItem('markdown_' + '#{@level.id || params[:type]}', editor.getValue());
 
     $('#markdown-instructions-preview')
-      .html(marked(editor.getValue()))
+      .html(marked(editor.getValue(), {renderer: renderer}))
       .children('details').details();
   }, true);
 
@@ -25,5 +25,5 @@
   }
 
   $('#markdown-instructions-preview')
-      .html(marked(mdEditor.getValue()))
+      .html(marked(mdEditor.getValue(), {renderer: renderer}))
       .children('details').details();

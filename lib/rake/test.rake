@@ -16,11 +16,6 @@ namespace :test do
     TestRunUtils.run_local_ui_test
   end
 
-  desc 'Runs blockly-core tests.'
-  task :blockly_core do
-    TestRunUtils.run_blockly_core_tests
-  end
-
   desc 'Runs dashboard tests.'
   task :dashboard do
     TestRunUtils.run_dashboard_tests
@@ -36,18 +31,16 @@ namespace :test do
     TestRunUtils.run_shared_tests
   end
 
+  desc 'Runs lib tests.'
+  task :lib do
+    TestRunUtils.run_lib_tests
+  end
+
   namespace :changed do
     desc 'Runs apps tests if apps might have changed from staging.'
     task :apps do
-      run_tests_if_changed('apps', ['apps/**/*', 'blockly-core/**/*', 'shared/**/*.js', 'shared/**/*.css']) do
+      run_tests_if_changed('apps', ['apps/**/*', 'shared/**/*.js', 'shared/**/*.css']) do
         TestRunUtils.run_apps_tests
-      end
-    end
-
-    desc 'Runs blockly-core tests if blockly-core might have changed from staging.'
-    task :blockly_core do
-      run_tests_if_changed('blockly-core', ['blockly-core/**/*']) do
-        TestRunUtils.run_blockly_core_tests
       end
     end
 
@@ -72,12 +65,19 @@ namespace :test do
       end
     end
 
-    task all: [:apps, :blockly_core, :dashboard, :pegasus, :shared]
+    desc 'Runs lib tests if lib might have changed from staging.'
+    task :lib do
+      run_tests_if_changed('lib', ['lib/**/*']) do
+        TestRunUtils.run_lib_tests
+      end
+    end
+
+    task all: [:apps, :dashboard, :pegasus, :shared, :lib]
   end
 
   task changed: ['changed:all']
 
-  task all: [:apps, :blockly_core, :dashboard, :pegasus, :shared]
+  task all: [:apps, :dashboard, :pegasus, :shared, :lib]
 end
 task test: ['test:changed']
 

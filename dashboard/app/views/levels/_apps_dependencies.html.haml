@@ -6,6 +6,7 @@
 - use_netsim ||= false
 - use_applab ||= false
 - use_gamelab ||= false
+- use_weblab ||= false
 - hide_source ||= false
 - use_phaser ||= false
 - use_makerlab ||= false
@@ -26,10 +27,10 @@
 
 -# Gamelab script dependencies
 - if use_makerlab
-  = javascript_include_tag 'js/makerlab'
+  %script{src: minifiable_asset_path('js/makerlab.js')}
 
 -# Droplet script dependencies (all editCode - regardless of editor)
-- if use_droplet
+- if use_droplet || use_blockly
   %script{src: minifiable_asset_path('js/jsinterpreter/acorn.js')}
   %script{src: minifiable_asset_path('js/jsinterpreter/interpreter.js')}
 -# Droplet script dependencies (only when editor present)
@@ -37,13 +38,15 @@
   %script{src: "#{static_asset_base_path}js/ace/ace.js"}
   %script{src: "#{static_asset_base_path}js/ace/mode-javascript.js"}
   %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
-  %script{src: asset_path('js/droplet/droplet-full.js')}
-  %script{src: asset_path('js/tooltipster/jquery.tooltipster.js')}
-  %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
-  %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
+  %script{src: minifiable_asset_path('js/droplet/droplet-full.js')}
+  %script{src: minifiable_asset_path('js/tooltipster/jquery.tooltipster.js')}
+-# Asset uploader script dependencies (not in share mode)
+- if (use_applab || use_gamelab || use_weblab) && !hide_source
+  %script{src: minifiable_asset_path('js/fileupload/jquery.iframe-transport.js')}
+  %script{src: minifiable_asset_path('js/fileupload/jquery.fileupload.js')}
 
 - if use_phaser
-  %script{src: asset_path('js/phaser/phaser.js')}
+  %script{src: minifiable_asset_path('js/phaser/phaser.js')}
 
 -# Blockly script dependencies
 - if use_blockly
@@ -51,16 +54,12 @@
   %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
 
 -# Common script dependencies
-%script{src: asset_path('js/marked/marked.js')}
-%script{src: asset_path('js/initApp/initApp.js')}
+%script{src: minifiable_asset_path('js/marked/marked.js')}
+%script{src: minifiable_asset_path('js/initApp/initApp.js')}
 %script{src: minifiable_asset_path('js/common.js')}
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+-# common_locale is included in application.html.haml
 %script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
 %script{src: minifiable_asset_path("js/#{app}.js")}
-
--# NetSim external script dependencies
-- if use_netsim
-  %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
 
 -# Applab external script dependencies
 - if use_applab

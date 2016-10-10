@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "birds",
-    "instructions": "Move me around the TNT to get to the pig.",
+    "instructions": "Challenge: Move me around the TNT to get to the pig.",
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",
@@ -28,6 +28,7 @@
     "examples_required": "false",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're having trouble, try writing down the steps on a piece of paper first.\",\r\n  \"hint_id\": \"grade1_maze_sequence10_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "**Challenge:** Move me around the TNT to get to the pig.",
     "contained_level_names": null
   },
   "published": true,
@@ -47,7 +48,7 @@
     <recommended_blocks>
       <xml>
         <block type="maze_moveSouth"/>
-        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
         <block type="maze_moveNorth"/>
       </xml>
     </recommended_blocks>

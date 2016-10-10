@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Api::V1::Pd::TeacherProgressReportDataTableSerializerTest < ::ActionController::TestCase
-
   setup do
     @admin = create :admin
     @teacher = create :teacher, email: "teacher#{SecureRandom.hex(4)}@example.net"

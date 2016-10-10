@@ -1,6 +1,5 @@
 /** @file Test of consoleShim.js which makes console functions safer to use
  *  on older browsers by filling in no-op functions. */
-'use strict';
 
 var assert = require('assert');
 var consoleShim = require('@cdo/apps/code-studio/consoleShim');

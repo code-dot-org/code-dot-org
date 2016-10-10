@@ -2,7 +2,7 @@
 require 'test_helper'
 
 class ScriptsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     @admin = create(:admin)
@@ -213,33 +213,6 @@ class ScriptsControllerTest < ActionController::TestCase
   test "edit forbidden if not on levelbuilder" do
     sign_in @levelbuilder
     get :edit, id: 'course1'
-    assert_response :forbidden
-  end
-
-  def create_admin_script
-    create(:script, admin_required: true)
-  end
-
-  test "should not get show of admin script if not signed in" do
-    admin_script = create_admin_script
-
-    get :show, id: admin_script.name
-    assert_redirected_to_sign_in
-  end
-
-  test "should not get show of admin script if signed in as not admin" do
-    admin_script = create_admin_script
-
-    sign_in @not_admin
-    get :show, id: admin_script.name
-    assert_response :forbidden
-  end
-
-  test "should not get show of admin script if signed in as admin" do
-    admin_script = create_admin_script
-
-    sign_in @admin
-    get :show, id: admin_script.name
     assert_response :forbidden
   end
 end

@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-08-03T00:30:20.000Z",
+  "level_num": "custom",
+  "user_id": 53,
+  "properties": {
+    "link_title": "Common Sense Media - The Power of Words",
+    "url": "https://www.commonsensemedia.org/educators/lesson/power-words-4-5"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</ExternalLink>

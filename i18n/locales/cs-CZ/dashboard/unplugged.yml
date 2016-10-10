@@ -1,196 +1,196 @@
 cs:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Úvod do počítačové vědy
         desc: Tato lekce představí koncept informatiky a vysvětlí, co dělá počítačový vědec. Také dá studentům možnost zkusit si roli počítačového vědce. Na konci lekce každý student shrne to, co se naučil. Možná, že nebudete chtít dětem vysvětlovat pojmy, které se vyskytují v lekcích, ale když jim to představíte zábavně a hravě, bude to mnohem lepší, než když budete čekat na pozdější příležitost.
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Aritmetické Myšlení
         desc: S ničím jiným než s papírem a zvýrazňovači se studenti naučí čtyři kroky počítačového myšlení. Po krátkém úvodu by měli být studenti rozděleni do skupin, kde budou muset vytvářet návody pro ostatní studenty k nakreslení konkrétního monstra (výběr z katalogu monster). Celý úkol si musí rozložit tak, aby týmy analyzovaly všechny příšery v katalogu podle vzorů, abstrahovaly různé detaily z Monster, informace pak použily k vytvoření algoritmu (pokyny) pro další tým k nakreslení daného monstra. Týmy pak si vymění algoritmy s jiným skupinami a nakreslí monstrum, založené na tom co označuje algoritmus. Je kresba to, co původní tým zamýšlel?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Programování Na Milimetrovém Papíru
         desc: 'Programováním jeden s druhým pro nakreslení obrázků, studenti začnou chápat, o čem v programování opravdu jde. Třída začne se  vzájemnou instruktáží studentů  k barevným čtvercům na milimetrovém papíru ve snaze reprodukovat existující obrázek.  Když zbude čas, lze probrat  obrázky, které studenti vytvořili.'
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algoritmy
         desc: 'Tato lekce pokrývá algoritmy.  Pomocí tangram tvarů  a milimetrového papíru si v prvním cvičení ukážeme, jak je důležité udělat, aby každá instrukce byla jasná a jednoznačná, jak je to možné.  Třídy, budou zkoumat, kolika způsoby lze složit papír do obdélníku, vezmou na vědomí, jak některé metody mohou mít více nebo méně přeložení  než jiné.'
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Funkce
         desc: 'V této lekci studenti udělají náhrdelník z provázku, korálků a zvláštního kouzla. Studenti budou dodržovat řadu opakovaných kroků a pak jsou vyzváni k identifikaci určité sady "dovednosti", které se několikrát opakují. Jakmile jsou definovány tyto dovednosti, nazve se to hlavní program a nádherný proces tvorby bude zaznamenán na jeden list papíru. Konečný program bude zaměřen na celou třídu bez ohledu na typ provázku, korálků a přívěsků. aby Studenti se musí Účinně "abstrahovat" od podrobností o specifických materiálech a vytváření vágních pojmů pro individuální zásoby.  Toto použití přirozených zástupných symbolů je skvělý úvod do pojmu proměnné.'
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Podmínky
         desc: 'To je hra třídy.  Po zavedení pojmu podmínek, if příkazů a cyklů, třída si procvičí spolu s použitím předem napsaného programu balíček karet a štěstí v losování.'
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Psaní Písně
         desc: 'Čtení textů písní je docela intuitivní dobrodružství pro většinu studentů.  Vezmeme nějakou činnost, která je již všeobecně známo a posuneme ji do solidního vzdělání na definování a volání funkcí. Jakmile se studenti se obeznámí s procesem definování/volání, přidáváme zvláštní schopnosti, které přicházejí spolu s předáváním parametrů do volání těchto funkcí.'
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstrakce
         desc: Tato činnost kombinuje každodenní rutinu studentů a Mad Lib styl uvažování hry pomoci třídy, dozvědět se o účinnosti abstrakce.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Štafetové Programování
         desc: 'V této lekci vezmeme myšlenku z předchozí aktivity (4. programování s milimetrovým papírem) a využití těchto dovednost ke zdůraznění významu dokončení programů, které fungují v posloupnosti a často kontrolních programů pro "chyby".'
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: Internet
         desc: V této lekci studenti předstírají tok přes internet po celou dobu učení o webové adresy, IP a DNS.
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Rekapitulace
         desc: Závěrečná rekapitulace v první 20 hodin řadách pomohou prožít všechny své oblíbené momenty třídy, zatímco další kroky jim dávají, že mohou mít jejich vlastní kroky. pokud mají zájem pokračovali na cestě počítačové vědy.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Šťastné mapy
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy bludištěm pomocí jediného příkazu.
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Přesuň to, Přesuň to
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy bludištěm pomocí jediného příkazu.
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Algoritmy ze života: Zasadit semínko'
         desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Budování nadace
         desc: Studenti vytváří strukturu jen s pomocí poskytnutých zásob. Struktury musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost), a studenti diskutují představu, že je trvalá, když věci se komplikují.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Bláznit
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou instruováni to opakovat.
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Relay programování
         desc: 'Studenti běží štafetový závod, kde kreslí pomlčky přes dvůr, aby napsali algoritmus založený na obrázku "programování s milimetrovým papírem". Mohou psát pouze jednu instrukci v době, a pokud je někde chyba, budou muset vymazat vše zpět do tohoto bodu.'
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Podmínky
         desc: 'Další informace o podmíněných příkazy, studenti hrají karetní hru a vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod" a "Vytáhnu-li černou kartu, dostanu bod."'
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Velká událost
         desc: 'Studenti jsou seznámeni s programovacím pojetím "události", které jsou akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.'
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Cestování bezpečně
         desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak zůstat v bezpečí při procházení Internetu.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Programování Na Milimetrovém Papíru
         desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných příkazů k řízení svých spolužáků k reprodukci výkresu.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Algoritmy ze života: Papírová letadla'
         desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě, konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Binární náramky
         desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než jedním způsobem.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Tvé digitální stopy
         desc: 'Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.'
         video: C2_digital_footprint
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Aritmetické Myšlení
         desc: Studenti používají kroky počítačového myšlení (rozklad, souhlas se vzorem, abstrakce, algoritmus), aby přišli na to jak hrát hru bez instrukcí.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: Funkční náhrdelníky
         desc: Studenti vytvoří algoritmus s proměnnými a funkcemi (kusy kódu, který chcete použít znovu a znovu) k vytvoření náhrdelníku pomocí provázku a korálků.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Psaní písniček s parametry
         desc: Studenti používají koncept sboru v písni, aby se naučili předávání parametrů (které přizpůsobují funkce bez nutnosti celé funkce přepisovat).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Algoritmy z reálného života: kostkový závod'
         desc: V této lekci vyhledáváme způsoby,, jak používáme algoritmy v našem každodenním životě. V rámci toho studenti identifikují a zapíší algoritmus pro závodní kostkovou hru.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internet
         desc: Studenti si posílají zprávy představující různé metody přenosu Internetu pomocí papíru.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Crowdsourcing
         desc: Studenti používají crowdsourcing, problém-řešící techniku v informatice, dokončení úkolu společně s třídou je mnohem efektivněji, než když student se o to pokusí sám.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Digitální občanství
         desc: Studenti zkoumají rozdíl mezi privátními a osobními informacemi, rozlišovat, co je bezpečné a nebezpečné sdílet online.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Tangram algoritmy
         desc: Tato lekce nám ukazuje něco důležitého o algoritmech. Pokud se budete držet algoritmus jednoduchý, existuje mnoho způsobů, jak jej použít. Pokud se chcete ujistit, že všichni skončí na stejné věcí, pak algoritmus potřebuje více detailů.
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Obálkové proměnné
         desc: 'Proměnné umožňují spoustu svobody v informatice.  Tato lekce pomáhá vysvětlit, co jsou proměnné a jak je lze použít mnoha různými způsoby. Použij tuto aktivitu před (nebo spolu s) lekcí abstrakce, aby si se opravdu strefil hit do jádra myšlenky.'
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: Šílená Glibs hra
         desc: 'Abstrakce je jednou z nejdůležitějších dovedností pro počítačového vědce, aby pochopil.  Tato aktivita bude mít vaše studenty analýzu příběhů o rozdíly, které lze  abstrahovat pryč. Tyto abstrahované příběhy se stávají šablony pro zábavu a šílené nové příběhy.'
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: For cyklus zábavy
         desc: Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se musíme naučit používat cykly s extra strukturou zabudovanou přímo v nich.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Psaní písniček s parametry
         desc: 'Jednou z nejkrásnějších konstrukcí ve světě informatiky je funkce.  Funkce (někdy volané procedury) jsou mini-programy, které můžete použít znova a znova ve větším programu. Tato lekce vám pomůže studentům intuitivně pochopit, proč kombinace kousky kódu do funkce je užitečnou praxí.  '
         video: C4_unplugged_parameters
-      BinaryImages:
+      'BinaryImages':
         title: Binární obrázky
         desc: 'Ačkoli mnoho lidí si myslí binárně, doslovně jako  nuly a jedničky, naše předchozí kurzy učí studenty, že informace lze znázornit v různých binárních volbách.  V této lekci tento koncept posuneme jeden krok dále, jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace (např. obrázky a barvy).'
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Videohry a souřadnicové roviny
         desc: Objevte, jak jsou video hry, které rádi hrajete, ve skutečnosti řízené algebrou! Prozkoumejte jak algebraické výrazy a souřadnicové letadlo nám mohou pomohou pochopit video hry a začít plánování pro video hry, kterou chcete vytvořit.
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Kontrakty, doména a rozsah
         desc: Kontrakty nám dávají cestu porozumět a diskutovat funkce. V této lekci se podíváme na to, jak Kontrakty nám pomáhají a dávají smysl novému programovacímu jazyku nebo funkci.
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Návrhový předpis
         desc: 'V poslední fázi studenti napsali některé velmi jednoduché funkce - ale propracovanější funkce vyžadují promyšlenější přístup. Návrhový předpis je strukturovaný přístup k psaní funkcí zahrnující psaní testovacích případů k zajištění, že funkce pracuje podle očekávání.'
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Booleovské hodnoty a logika
         desc: Logické hodnoty, booleovské, jsou čtvrtým a posledním datovým typem, který se dozvíte v tomto kurzu. V této činnosti se dozvíte o tom, co jsou logické hodnoty a jak mohou nám pomoci psát funkce, které logicky myslí
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Podmínky a funkce po částech
         desc: Parametry, které předáváme funkcím, způsobí, že výstupy se mění v závislosti na velmi přísném vzoru. Předpokládejme, že chceme parametry s některé hodnoty k vytvoření výstupů pomocí jednoho vzoru, ale jiné hodnoty k použití jiného vzoru. To je, kde je zapotřebí podmínek...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Detekce kolizí a Pythagorova věta
         desc: Určení, kdy objekty na obrazovce se dotýkají, je důležitým aspektem většiny her. V této lekci se budeme zabývat, jak Pythagorova věta a vzorec vzdálenosti slouží k měření vzdálenosti mezi dvěma body v rovině a pak se rozhodnout, zda tyto dva body (nebo postavy her) se dotýkají.
         video: alg_16_biggame_collision_detection

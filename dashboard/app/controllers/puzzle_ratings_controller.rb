@@ -6,7 +6,7 @@ class PuzzleRatingsController < ApplicationController
   def create
     return head :unauthorized unless PuzzleRating.enabled?
 
-    valid_request = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    valid_request = Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       PuzzleRating.create(
         script_id: params[:script_id],
         level_id: params[:level_id],

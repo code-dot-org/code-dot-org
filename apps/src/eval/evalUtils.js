@@ -22,7 +22,7 @@ module.exports.ensureStyle = function (val) {
     if (opacity >= 0 && opacity <= 1.0) {
       return;
     }
-  } if (_.contains(['outline', 'solid'], val)) {
+  } if (_.includes(['outline', 'solid'], val)) {
     return;
   }
   throw new CustomEvalError(CustomEvalError.Type.BadStyle, val);

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class VideoTest < ActiveSupport::TestCase
-
   test "check_i18n_names" do
     # does not raise exception ..
     Video.check_i18n_names

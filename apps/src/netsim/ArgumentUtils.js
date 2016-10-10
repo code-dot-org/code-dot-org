@@ -1,7 +1,6 @@
 /**
  * @overview Utilities for validating and retrieving arguments to a method.
  */
-'use strict';
 
 /**
  * Makes sure the given argument is provided and passes the validation check.

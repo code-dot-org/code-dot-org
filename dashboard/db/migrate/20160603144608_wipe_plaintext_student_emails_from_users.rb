@@ -1,4 +1,4 @@
-class WipePlaintextStudentEmailsFromUsers < ActiveRecord::Migration
+class WipePlaintextStudentEmailsFromUsers < ActiveRecord::Migration[4.2]
   def up
     User.with_deleted.
       where(user_type: 'student').

@@ -1,0 +1,119 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2016-08-05T17:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n    return (Studio.background != \"cave\") && (Studio.sprite[0].value != \"hidden\") && (Studio.sprite[0].lastMove != Infinity) && (Studio.sprite[1].value != \"hidden\") && (Studio.sprite[1].lastMove != Infinity) && (Studio.sprite[2].value != \"hidden\") && (Studio.sprite[2].lastMove != Infinity) && (Studio.tickCount > 500);\r\n}",
+    "failure_condition": "function () {\r\n  return ((Studio.sprite[1].value == \"hidden\") || (Studio.sprite[2]..value == \"hidden\")) && (Studio.tickCount > 5);\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "true",
+    "coordinate_grid_background": "false",
+    "free_play": "false",
+    "disable_sharing": "true",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "instructions": "Now that your game has a hero, it's time to start adding other actors and assigning them behaviors. \r\n\r\nAdd two or more additional actors to your game and make them move. Do you want to have an actor patrol back and forth? Try using a these new blocks to bring these other components of your game to life!",
+    "project_template_level_name": "grade4_scaffolded_template",
+    "first_sprite_index": "0",
+    "markdown_instructions": "Now that your game has a hero, it's time to start adding other actors and assigning them behaviors. \r\n\r\nAdd two or more additional actors to your game and make them move. Do you want to have an actor patrol back and forth? Try using a these new blocks to bring these other components of your game to life!\r\n\r\n![](https://images.code.org/4cfffd476c6129891eb8bde246a711a8-image-1472065288448.00.42 PM.png)\r\n\r\n**NOTE:** Chasing and fleeing behavior commands are coming soon!",
+    "failure_message_override": "You must add two or more new actors that move to your game.",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml/>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_setSprite">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">500</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">???</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">1</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">25</title>
+        </block>
+        <block type="studio_repeatForever"/>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_stop">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">???</title>
+        </block>
+        <block type="studio_showTitleScreen">
+          <title name="TITLE">type title here</title>
+          <title name="TEXT">type text here</title>
+        </block>
+        <block type="studio_setSpriteSize">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSize.NORMAL</title>
+        </block>
+        <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

@@ -1,25 +1,31 @@
 /**
  * Reducer and actions for progress
  */
-
-import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
+import _ from 'lodash';
+import {
+  LOCKED_RESULT,
+  LevelStatus,
+  mergeActivityResult,
+  activityCssClass
+} from './activityUtils';
 
 // Action types
-const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
-const SHOW_LESSON_PLANS = 'progress/SHOW_LESSON_PLANS';
+const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 
 const initialState = {
   currentLevelId: null,
   professionalLearningCourse: null,
   // a mapping of level id to result
-  progress: {},
+  levelProgress: {},
   focusAreaPositions: [],
   saveAnswersBeforeNavigation: null,
   stages: null,
   peerReviewsRequired: {},
-  peerReviewsPerformed: []
+  peerReviewsPerformed: [],
+  showTeacherInfo: false,
 };
 
 /**
@@ -27,32 +33,43 @@ const initialState = {
  */
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
+    // Re-initializing with full set of stages shouldn't blow away currentStageId
+    const currentStageId = state.currentStageId ||
+      (action.stages.length === 1 ? action.stages[0].id : undefined);
     // extract fields we care about from action
     return Object.assign({}, state, {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: action.stages
+      stages: action.stages.map(stage => _.omit(stage, 'hidden')),
+      scriptName: action.scriptName,
+      currentStageId
     });
   }
 
   if (action.type === MERGE_PROGRESS) {
     // TODO: _.mergeWith after upgrading to Lodash 4+
-    let newProgress = {};
-    Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
-      newProgress[key] = mergeActivityResult(state.progress[key], action.progress[key]);
+    let newLevelProgress = {};
+    const combinedLevels = Object.keys(Object.assign({}, state.levelProgress, action.levelProgress));
+    combinedLevels.forEach(key => {
+      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
     });
 
     return Object.assign({}, state, {
-      progress: newProgress,
+      levelProgress: newLevelProgress,
       stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        let id = level.uid || bestResultLevelId(level.ids, newProgress);
+        if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
+          return Object.assign({}, level, { status: LevelStatus.locked });
+        }
 
+        const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
         if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
           Object.assign(level, action.peerReviewsPerformed[index]);
         }
 
-        return Object.assign({}, level, level.kind !== 'peer_review' && {status: activityCssClass(newProgress[id])});
+        return Object.assign({}, level, level.kind !== 'peer_review' && {
+          status: activityCssClass(newLevelProgress[id])
+        });
       })}))
     });
   }
@@ -64,9 +81,9 @@ export default function reducer(state = initialState, action) {
     });
   }
 
-  if (action.type === SHOW_LESSON_PLANS) {
+  if (action.type === SHOW_TEACHER_INFO) {
     return Object.assign({}, state, {
-      showLessonPlanLinks: true
+      showTeacherInfo: true
     });
   }
 
@@ -108,18 +125,19 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewsRequired}) => ({
+    saveAnswersBeforeNavigation, stages, scriptName, peerReviewsRequired}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  scriptName,
   peerReviewsRequired
 });
 
-export const mergeProgress = (progress, peerReviewsPerformed) => ({
+export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
   type: MERGE_PROGRESS,
-  progress,
+  levelProgress,
   peerReviewsPerformed
 });
 
@@ -129,7 +147,7 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
   focusAreaPositions
 });
 
-export const showLessonPlans = () => ({ type: SHOW_LESSON_PLANS });
+export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

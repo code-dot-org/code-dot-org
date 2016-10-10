@@ -26,7 +26,7 @@
   -# Pass special parameters to Blockly partial for embedded level type.
   = render partial: 'levels/blockly'
 - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink)
-  %script{src: asset_path('js/initApp/initApp.js')}
+  %script{src: minifiable_asset_path('js/initApp/initApp.js')}
   :javascript
     var appOptions = #{app_options.to_json};
     dashboard.createCallouts(appOptions.callouts);
@@ -48,8 +48,5 @@
 
 = render partial: 'levels/admin'
 
--#
-  HACK: The respond_to? test below is to workaround a bug where a server
-  instance will sometimes fail to define that method.
-- if @script && current_user.try(:teacher?) && (!@script.respond_to?('professional_course?') || !@script.professional_course?)
+- if @script && current_user.try(:teacher?) && !@script.professional_learning_course?
   = render partial: 'levels/teacher'

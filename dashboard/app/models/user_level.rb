@@ -25,6 +25,8 @@ require 'cdo/activity_constants'
 # Summary information about a User's Activity on a Level in a Script.
 # Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ActiveRecord::Base
+  AUTOLOCK_PERIOD = 1.day
+
   belongs_to :user
   belongs_to :level
   belongs_to :script
@@ -32,11 +34,19 @@ class UserLevel < ActiveRecord::Base
 
   before_save :handle_unsubmit
 
+  validate :readonly_requires_submitted
+
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> { where.not(best_result: nil) }
   scope :passing, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
   scope :perfect, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
+
+  def readonly_requires_submitted
+    if readonly_answers? && !submitted?
+      errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
+    end
+  end
 
   def best?
     Activity.best? best_result
@@ -85,5 +95,35 @@ class UserLevel < ActiveRecord::Base
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
     end
+  end
+
+  def has_autolocked?(stage)
+    return false unless stage.lockable?
+    self.unlocked_at && self.unlocked_at < AUTOLOCK_PERIOD.ago
+  end
+
+  def locked?(stage)
+    return false unless stage.lockable?
+    return false if user.authorized_teacher?
+    self.submitted? && !self.readonly_answers? || self.has_autolocked?(stage)
+  end
+
+  def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
+    user_level = UserLevel.find_or_initialize_by(
+      user_id: user_id,
+      level_id: level_id,
+      script_id: script_id
+    )
+
+    # no need to create a level if it's just going to be locked
+    return if !user_level.persisted? && locked
+
+    user_level.update!(
+      submitted: locked || readonly_answers,
+      readonly_answers: !locked && readonly_answers,
+      unlocked_at: locked ? nil : Time.now,
+      # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
+      best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
+    )
   end
 end

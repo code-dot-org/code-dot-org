@@ -5,12 +5,12 @@
  * @license Use it if you like it
  */
 
- // hex regular expressions updated to require [0-9a-f] (cpirich)
- // channels declared as local variable to avoid conflicts (cpirich)
- // cleanup jshint errors (cpirich)
- // add rgba support (davidsbailey)
- // cleanup eslint errors (bbuchanan)
-module.exports = function (color_string) {
+// hex regular expressions updated to require [0-9a-f] (cpirich)
+// channels declared as local variable to avoid conflicts (cpirich)
+// cleanup jshint errors (cpirich)
+// add rgba support (davidsbailey)
+// cleanup eslint errors (bbuchanan)
+export default function (color_string) {
     this.ok = false;
 
     // strip any leading #
@@ -262,4 +262,4 @@ module.exports = function (color_string) {
         if (b.length === 1) { b = '0' + b; }
         return '#' + r + g + b;
     };
-};
+}

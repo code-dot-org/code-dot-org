@@ -1,25 +1,16 @@
-title 'Grade 1'
-description_short "Planning Script for CSF 2.0"
-description "Planning Script for CSF 2.0"
-description_audience "Ages 5-18"
-
-
 stage 'Debugging'
 level 'grade1_activity_whatDoesItDo'
-level 'grade1_story_spottedBugs'
-level 'grade1_activity_whatGoesWrong'
-
+#level 'grade1_story_spottedBugs'
+#level 'grade1_activity_whatGoesWrong'
 
 stage 'Persistence & Frustration'
 #level 'grade1_story_theGreatTowerTopple'
 level 'grade1_video_frustrationRainbow'
-level 'grade1_activity_groupTower'
+#level 'grade1_activity_groupTower'
 level 'grade1_activity_frustration'
-
 
 stage 'Sequences & Algorithms'
 level 'seqAlg'
-
 
 stage 'Jigsaw: Learn to drag and drop'
 skin 'jigsaw'
@@ -73,10 +64,22 @@ level 'grade1_maze_sequenceB'
 level 'grade1_maze_sequenceC'
 level 'grade1_maze_sequenceD'
 
-
 stage 'Loops Unplugged'
 level 'comingSoon'
 
+stage 'Loops Intro'
+level 'grade1_adventurer_loopsPre'
+level 'grade1_adventurer_loops1'
+level 'grade1_adventurer_loops2'
+level 'grade1_adventurer_loops3'
+level 'grade1_adventurer_loops4'
+level 'grade1_adventurer_loops5'
+level 'grade1_adventurer_loops6'
+level 'grade1_adventurer_loops7_challenge'
+level 'grade1_adventurer_loops8_challenge'
+level 'grade1_adventurer_loops9'
+level 'grade1_adventurer_loops10'
+level 'grade1_adventurer_loopsFP'
 
 stage 'Loops'
 level 'ArtistIntro'
@@ -90,7 +93,7 @@ level 'grade1_artist_loops5'
 level 'grade1_artist_loops6'
 level 'grade1_artist_loops7b'
 level 'grade1_artist_loops8'
-level 'grade1_artist_loops9'
+#level 'grade1_artist_loops9'
 #level 'grade1_artist_loopsA'
 #level 'grade1_artist_loopsB'
 level 'grade1_artist_loopsFP'
@@ -100,16 +103,14 @@ level 'comingSoon'
 
 stage 'Events'
 level 'eventsIntro'
-#level 'grade1_playlab_events1'
-#level 'grade1_playlab_events2'
-#level 'grade1_playlab_events3'
-#level 'grade1_playlab_events4'
-level 'grade1_playlab_events5'
-level 'grade1_playlab_events6'
-level 'grade1_playlab_events7'
-level 'grade1_playlab_events8'
-level 'grade1_playlab_events9'
-level 'grade1_playlab_eventsFP'
+level 'grade1_playlab_events1'
+level 'courseB_playlab_events2'
+level 'courseB_playlab_events3'
+level 'courseB_playlab_events4'
+level 'courseB_playlab_events5'
+level 'courseB_playlab_events6'
+level 'courseB_playlab_events7'
+level 'courseB_playlab_eventsFP'
 
 stage 'More Computer Science'
-level 'comingSoon'
+level 'grade1_partner_foos_link'

@@ -1,10 +1,8 @@
 /** @file Tests for clientState.js */
 
-'use strict';
 
 var assert = require('assert');
-window.$ = require('jquery');
-require('jquery.cookie');
+var cookies = require('js-cookie');
 var state = require('@cdo/apps/code-studio/clientState');
 var chai = require('chai');
 
@@ -111,13 +109,13 @@ describe("clientState#trackProgress", function () {
   });
 
   it("handles malformed cookies for level progress", function () {
-    $.cookie('progress', null, {expires: 365, path: '/'});
+    cookies.set('progress', null, {expires: 365, path: '/'});
     state.levelProgress('sample', 1).should.equal(0);
 
-    $.cookie('progress', '', {expires: 365, path: '/'});
+    cookies.set('progress', '', {expires: 365, path: '/'});
     state.levelProgress('sample', 1).should.equal(0);
 
-    $.cookie('progress', '{\'malformed_json\':true', {expires: 365, path: '/'});
+    cookies.set('progress', '{\'malformed_json\':true', {expires: 365, path: '/'});
     state.levelProgress('sample', 1).should.equal(0);
 
   });
@@ -143,7 +141,7 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function () {
   });
 
   it("Does not record line counts when level progress does not have a line count", function () {
-    $.cookie('lines', 50, {expires: 365, path: '/'});
+    cookies.set('lines', 50, {expires: 365, path: '/'});
     state.lines().should.equal(50);
     state.trackProgress(true, undefined, 100, 1);
     state.lines().should.equal(50);
@@ -158,11 +156,11 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function () {
   });
 
   it("Handled malformed line counts in cookie", function () {
-    $.cookie('lines', NaN, {expires: 365, path: '/'});
+    cookies.set('lines', NaN, {expires: 365, path: '/'});
     state.lines().should.equal(0);
     state.trackProgress(true, 50, 100, 1);
     state.lines().should.equal(50);
-    $.cookie('lines').should.equal('50');
+    cookies.get('lines').should.equal('50');
   });
 
   it("records video progress", function () {

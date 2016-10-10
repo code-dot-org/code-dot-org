@@ -16,18 +16,17 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # this is needed to avoid devise breaking on email param
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  around_filter :with_locale
+  around_action :with_locale
 
   before_action :fix_crawlers_with_bad_accept_headers
 
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
-
     if request.formats.include?("image/*") &&
         (request.user_agent.include?("Edmodo") || request.user_agent.include?("weebly-agent"))
-      request.formats.append Mime::HTML
+      request.formats.append Mime[:html]
     end
   end
 
@@ -35,7 +34,7 @@ class ApplicationController < ActionController::Base
   if Rails.env.development?
     # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
     # pp='disabled' will disable it; any other value will enable it.
-    before_filter :maybe_enable_profiler
+    before_action :maybe_enable_profiler
     def maybe_enable_profiler
       pp = params['pp']
       if pp
@@ -43,7 +42,7 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    before_filter :configure_web_console
+    before_action :configure_web_console
     # Enable the Rails web console if params['dbg'] is set, or disable it
     # if params['dbg'] is 'off'.
     def configure_web_console
@@ -102,12 +101,12 @@ class ApplicationController < ActionController::Base
   PERMITTED_USER_FIELDS = [:name, :username, :email, :password, :password_confirmation,
                            :locale, :gender, :login,
                            :remember_me, :age, :school, :full_address, :user_type,
-                           :hashed_email]
+                           :hashed_email, :terms_of_service_version]
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.for(:sign_up) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.for(:sign_in) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:sign_up) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:sign_in) do |u| u.permit PERMITTED_USER_FIELDS end
   end
 
   def with_locale
@@ -135,7 +134,6 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
-        response[:trophy_updates] = options[:trophy_updates] unless options[:trophy_updates].blank?
         response[:new_level_completed] = options[:new_level_completed]
         response[:level_path] = build_script_level_path(script_level)
         script_level_solved_response(response, script_level)
@@ -179,25 +177,6 @@ class ApplicationController < ActionController::Base
         response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
       end
     end
-
-    unless options[:solved?]
-      # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity.determine_hint({
-                                                         level_source: options[:level_source],
-                                                         current_user: current_user,
-                                                         enable_external_hints: Rails.env.production?,
-                                                         ip: request.remote_ip,
-                                                         uri: request.referer,
-                                                         activity: options[:activity]})
-      response[:hint] = hint_details[:hint] if hint_details[:hint]
-      response[:hint_request_placement] = hint_details[:hint_request_placement] if
-        hint_details[:hint_request_placement]
-      response[:hint_requested_url] =
-        activity_hint_path(hint_details[:activity_hint]) if hint_details[:activity_hint]
-    end
-
-    # Set up the background design
-    response[:design] = ExperimentActivity::TYPE_FEEDBACK_DESIGN_WHITE
 
     response[:activity_id] = options[:activity] && options[:activity].id
 
@@ -249,5 +228,12 @@ class ApplicationController < ActionController::Base
     return [] if session[:pairings].blank?
 
     User.find(session[:pairings])
+  end
+
+  # @return [Array of Integers] an array of user IDs of users paired with the
+  #   current user.
+  def pairing_user_ids
+    # TODO(asher): Determine whether we need to guard against it being nil.
+    session[:pairings].nil? ? [] : session[:pairings]
   end
 end

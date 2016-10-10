@@ -1,196 +1,196 @@
 de:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Einführung in die Informatik
         desc: 'In dieser Lektion wird erläutert, was Informatik ist und was die Aufgaben eines Informatikers sind.  Schüler haben die Möglichkeit, selbst die Rolle eines Informatikers zu übernehmen.  Am Ende der Aktivität nimmt jeder Schüler eine Erinnerung nach Hause, die das Gelernte ins Gedächtnis ruft.  Sie könnten versucht sein, die Terminologie, die in den folgenden Lektionen vorgestellt wird, bei sehr jungen Schülern zu überspringen. Es ist allerdings produktiver, diese Begriffe bereits jetzt spielerisch einzuführen, anstatt auf spätere Gelegenheiten zu warten.'
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Computerorientiertes Denken
         desc: Die Schüler lernen mit nichts als Papier und Stiften die vier Schritte des computerbezogenen Denkens kennen. Nach einer kurzen Einführung sollte die Klasse in Gruppen aufgeteilt werden. Diese Gruppen erstellen Anweisungen für andere Schüler, ein bestimmtes Monster aus einer Vorauswahl von Monstern zu zeichnen. Die Aufgabe muss in Einzelschritte aufgeteilt werden. Danach analysieren die Teams alle Monster der Vorauswahl und suchen nach Mustern und anderen Details. Diese Informationen werden für die Erstellung eines Algorithmus (Anweisungen) verwendet, den ein anderes Team zum Zeichnen verwendet. Die Teams tauschen ihre Algorithmen mit einer anderen Gruppe und zeichnen das Monster nach den Vorgaben der Anweisung. Entspricht die Zeichnung den Vorstellungen des Teams, das die Anweisungen erstellt hat?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Millimeterpapier Programmierung
         desc: 'Schüler „programmieren“ einander, um Bilder zu zeichnen. Bei dieser Aktivität beginnen Schüler zu verstehen, worum es beim Programmieren geht. Der Unterricht beginnt damit, dass Schüler einander anweisen, Quadrate auf Millimeterpapier farbig anzumalen, um ein vorhandenes Bild zu reproduzieren.  Wenn Zeit dafür ist, können die Schüler am Ende der Stunde selbst Bilder erstellen.'
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algorithmen
         desc: 'In dieser Lektion geht es um Algorithmen.  Mit Tangram-Formen und Millimeterpapier wird in der ersten Übung gezeigt, wie wichtig es ist, jede Anweisung so klar und eindeutig wie möglich zu machen.  Danach erforscht die Klassen, auf welche Weise ein Papier zu einem Rechteck gefaltet werden kann. Dabei wird angesprochen, dass einige Methoden mehr Faltvorgänge erfordern als andere.'
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Funktionen
         desc: 'In dieser Lektion basteln Schüler ein Fensterbild aus Faden, Perlen und einem besonderen Glücksbringer. Die Schüler folgen einer Reihe von sich wiederholenden Schritten und werden dann gebeten, bestimmte Gruppen von „Fähigkeiten“ zu identifizieren, die mehrmals wiederholt werden. Nachdem diese Fähigkeiten definiert wurden, werden sie von einem Hauptprogramm aufgerufen und der Schöpfungsprozess wird auf einem Blatt Papier aufgezeichnet. Das endgültige Programm richtet sich an die gesamte Klasse, unabhängig der verwendeten Materialien. Damit dies möglich ist, müssen Schüler von den Einzelheiten ihrer Materialien „abstrahieren“ und vage Begriffe für die einzelnen Bastelmaterialien erfinden.  Diese Verwendung allgemeiner Platzhalter ist eine wunderbare Einführung in Variablen.'
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Bedingungen
         desc: 'Dies ist ein Spiel für die gesamte Klasse.  Nach der Einführung von Bedingungen, Wenn-Anweisungen und Schleifen kann die Klasse gemeinsam üben, und zwar mit einem zuvor erstellten Programm, einem Kartenspiel und ein bisschen Glück.'
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Lieder schreiben
         desc: 'Liedtexte lesen ist für die meisten Schüler eine ziemlich intuitive Aktivität.  Wir nehmen eine Aktivität, die vielen Schülern bereits bekannt ist, und nutzen sie, um die Definition und den Aufruf von Funktionen zu erläutern. Nachdem Schüler mit dem Definieren/Aufrufen von Funktionen vertraut sind, kommen die zusätzlichen Möglichkeiten hinzu, die durch die Weitergabe von Parametern beim Aufrufen einer Funktion entstehen.'
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstraktion
         desc: Diese Aktivität kombiniert den Alltag der Schüler und ein Denkspiel nach Art von Onkel-Otto-Lückentexten, um der Klasse die Wirksamkeit von Abstraktion zu demonstrieren.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Relais-Programmierung
         desc: Diese Lektion greift eine Idee von einer vorhergehenden Aktivität auf (4. Programmieren auf Millimeterpapier) und nutzt die dort erlernten Fähigkeiten, um Schülern die Notwendigkeit der Sequenzierung und des Debuggens zu vermitteln.
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: das Internet
         desc: In dieser Lektion unternehmen die Schüler einen virtuellen Ausflug durch das Internet und lernen dabei über Internetadressen, IPs und DNS.
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Zusammenfassung
         desc: Als Abschluss der ersten 20-stündigen Serie durchlebt die Klasse ihre Lieblingsmomente. Außerdem wird darüber gesprochen, wie Schüler bei Interesse ihre Informatikkenntnisse selbstständig weiter ausbauen und vertiefen können.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Glücklich Karten
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Achtung, fertig, LOS
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Grundlagen aufbauen
         desc: Die Schüler nutzen bereitgestellte Materialien, um eine Struktur zu bauen. Die Struktur muss eine bestimmte Eigenschaft aufweisen (eine bestimmte Höhe erreichen oder ein Gewicht tragen). Dabei wird die Ausdauer beim Lösen schwieriger Aufgaben diskutiert.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Schöne Schleifen
         desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine einfache Choreografie und werden angewiesen, diese zu wiederholen.
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Relais-Programmierung
         desc: Die Schüler machen einen Staffellauf, bei der sie über den Schulhof laufen, um einen Algorithmus basierend auf einem „Millimeterpapier-Programm-Bild“ zu schreiben. Sie können jedes Mal nur eine Anweisung schreiben. Wenn ein Fehler auftritt, müssen sie alle geschriebenen Anweisungen bis zu diesem Punkt löschen.
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Bedingungen
         desc: 'Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.'
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren auf die verschiedenen Tasten.
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer erklären, wie Schüler sicher im Internet navigieren.
         video: C1_sicher_wohin_gehen
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Programmieren auf Millimeterpapier
         desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden anweisen, ein Bild zu reproduzieren.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Alltagsalgorithmen: Papierflieger'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Binäre Armbänder
         desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise repräsentiert und gespeichert werden können.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Dein digitaler Fußabdruck
         desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins Internet stellt, und erläutern mögliche Konsequenzen.
         video: C2_digitaler_Fußabdruck
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Computerorientiertes Denken
         desc: Die Schüler benutzen die Schritte computerorentierten Denkens (Zerlegung, Musterabgleich, Abstraktion, Algorithmus) um herauszufinden, wie man ein Spiel spielt, für das keine Anleitung vorliegt.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: Funktionale Sonnenfänger
         desc: Die Schüler erstellen einen Algorithmus mit Variablen und Funktionen (wiederverwendbarer Code), um ein Fensterbild aus Faden und Perlen zu machen.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Songschreiben mit Parametern
         desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird, ohne dass die gesamte Funktion neu geschrieben werden muss).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Algorithmen in der realen Welt: Würfelrennen'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Dazu identifizieren und schreiben die Schüler den Algorithmus für ein Würfelrennen.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internet
         desc: Die Schüler senden Nachrichten mithilfe von Papierstücken und simulieren damit unterschiedliche Internet-Übertragungsmethoden.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Crowdsourcing
         desc: Schüler nutzen Crowdsourcing, eine Problemlösungstechnik, die häufig in Informatik und Technik angewendet wird, um gemeinsam eine Aufgabe zu lösen, die für einzelne Schüler zu schwierig wäre.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Digitalen Staatsbürgerschaft
         desc: Schüler entdecken den Unterschied zwischen privaten und persönlichen Informationen, und lernen, welche Informationen im Netz geteilt werden können und welche nicht geteilt werden sollten.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Tangram-Algorithmen
         desc: In dieser Lektion werden wichtige Kenntnisse über Algorithmen vermittelt. Einfache Algorithmen können flexibler genutzt werden. Wenn alle Ergebnisse genau gleich sein sollen, benötigt der Algorithmus mehr Details.
         video: C4_unverfälscht_Algorithmen
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Umschlag-Variablen
         desc: 'Variablen bieten in der Informatik unzählige Möglichkeiten.  In dieser Lektion wird erläutert, was Variablen sind und wie sie auf verschiedene Weise verwendet werden können. Diese Aktivität sollte vor oder zusammen mit der Lektion über Abstraktion stattfinden, damit Schüler das Konzept verstehen.'
         video: C4_unverfälscht_Variablen
-      MadGlibs:
+      'MadGlibs':
         title: Lückentexte
         desc: 'Die Fähigkeit zur Abstraktion ist eine der wichtigsten Fähigkeiten des Informatikers.  Bei dieser Aktivität analysieren die Schüler Geschichten, und suchen Unterschiede, die sie dann abstrahieren. Die entstehenden Lückentexte werden zu Vorlagen für verrückte, neue Geschichten.'
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: „Zähle mit“-Schleifenspaß
         desc: Wir wissen bereits, dass Schleifen uns ermöglichen, Dinge wieder und wieder zu tun. Jetzt lernen wir, wie Schleifen mit integrierten Zusatzfunktionen verwendet werden.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Komponieren mit Parametern
         desc: 'Eines der nützlichsten Elemente der Informatik ist die Funktion.  Funktionen (manchmal als Prozeduren bezeichnet) sind Miniprogramme, die in größeren Programmen wieder und wieder verwendet werden können. In dieser Lektion lernen Schüler intuitiv, warum die Kombination von einzelnen Codeelementen zu Funktionen so nützlich ist.  '
         video: C4_unverfälscht_Parameter
-      BinaryImages:
+      'BinaryImages':
         title: Binärbilder
         desc: 'Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen binären Techniken repräsentiert werden können.  Diese Lektion entwickelt das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie Bilder und Farben als Binärcode speichern können.'
         video: C4_unverfälscht_Binärdatei
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Videospiele und Koordinatensysteme
         desc: Erfahre, wie deine Lieblingsspiele von Algebra angetrieben werden! Erkunde, wie algebraische Ausdrücke und das Koordinatensystem helfen, die Funktion von Videospielen zu verstehen. Beginne mit der Planung für das Videospiel, das du selbst erstellen wirst.
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Verträge, Domäne und Bereich
         desc: Über Verträge kann das Konzept der Funktionen besser vermittelt und besprochen werden. In dieser Lektion helfen uns Verträge, eine neue Programmiersprache oder Funktion besser zu verstehen.
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Das Design-Rezept
         desc: Im letzten Teil haben Studenten einige einfache Funktionen geschrieben. Komplexere Funktionen erfordern eine bessere Planung. Das Design-Rezept ist ein strukturierter Ansatz für die Erstellung von Funktionen. Es umfasst das Schreiben von Testfällen, um sicherzustellen, dass die Funktion wie erwartet funktioniert.
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Boolesche Werte und Logik
         desc: Boolesche Werte sind der vierte und letzte Datentyp, den du in diesem Kurs kennen lernst. Bei dieser Aktivität lernst du, was Boolesche Werte sind, und wie sie dabei helfen können, logisch denkende Funktionen zu schreiben.
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Bedingungen und stückweise Funktionen
         desc: Die Parameter, die wir an Funktionen weitergeben, führen zu Rückgabewerten, die auf einem starren Muster basieren. Stell dir vor, wir möchten Parameter, , bei denen einige Werte Ausgaben nach einem Muster bewirken und andere Werte ein unterschiedliches Muster erstellen. Dafür werden Bedingungen verwendet…
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Kollisionserkennung und der Satz des Pythagoras
         desc: Bei vielen Spielen ist es erforderlich, zu bestimmen, wann sich Objekte auf dem Bildschirm berühren. In dieser Lektion finden wir heraus, wie der Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden, ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
         video: alg_16_biggame_collision_detection

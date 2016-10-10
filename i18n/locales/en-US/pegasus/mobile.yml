@@ -1,4 +1,4 @@
-en-US:
+"en-US":
   hour_of_code: crwdns54655:0crwdne54655:0
   hello: crwdns3593:0crwdne3593:0
   "yes": crwdns56982:0crwdne56982:0
@@ -45,7 +45,7 @@ en-US:
   csedweek_map_legend_cs_tech_jam: crwdns51607:0crwdne51607:0
   cded_sign_up: crwdns50047:0crwdne50047:0
   cded_try_it: crwdns50048:0crwdne50048:0
-  twentyhours_trynow: crwdns4531:0crwdne4531:0
+  try_now: crwdns57865:0crwdne57865:0
   california_heading: crwdns5133:0crwdne5133:0
   california_text: crwdns8839:0crwdne8839:0
   california_button: crwdns5135:0crwdne5135:0
@@ -271,6 +271,10 @@ en-US:
   homepage_banner_20k_teachers_link: crwdns55901:0crwdne55901:0
   homepage_banner_congress: crwdns56702:0crwdne56702:0
   homepage_banner_congress_link: crwdns56703:0crwdne56703:0
+  homepage_banner_emailprivacy: crwdns57908:0crwdne57908:0
+  homepage_banner_emailprivacy_link: crwdns57909:0crwdne57909:0
+  homepage_banner_40k_teachers: crwdns60159:0crwdne60159:0
+  homepage_banner_40k_teachers_link: crwdns60160:0crwdne60160:0
   homepage_slot_text_title_hoc: crwdns35767:0crwdne35767:0
   homepage_slot_text_blurb_hoc: crwdns35768:0crwdne35768:0
   homepage_slot_text_link_hoc: crwdns35769:0crwdne35769:0
@@ -348,14 +352,9 @@ en-US:
   starwars_javascript_title: crwdns54483:0crwdne54483:0
   starwars_javascript_description: crwdns51619:0crwdne51619:0
   starwars_javascript_specs: crwdns51620:0crwdne51620:0
-  starwars_javascript_start_button: crwdns51621:0crwdne51621:0
   starwars_blocks_title: crwdns51622:0crwdne51622:0
   starwars_blocks_description: crwdns51623:0crwdne51623:0
   starwars_blocks_specs: crwdns55288:0crwdne55288:0
-  starwars_blocks_start_button: crwdns51625:0crwdne51625:0
-  starwars_watch_videos: crwdns51626:0crwdne51626:0
-  starwars_speak_languages: crwdns51627:0crwdne51627:0
-  starwars_help_translate: crwdns51628:0crwdne51628:0
   starwars_platform_text: crwdns54656:0crwdne54656:0
   mc_name: crwdns51629:0crwdne51629:0
   mc_longdescription: crwdns51630:0crwdne51630:0
@@ -364,6 +363,13 @@ en-US:
   mc_platformtext: crwdns51633:0crwdne51633:0
   mc_specs: crwdns55289:0crwdne55289:0
   minecraft_subtitle: crwdns51634:0crwdne51634:0
+  watch_inspirational_videos: crwdns57866:0crwdne57866:0
+  speak_another_language: crwdns57867:0crwdne57867:0
+  help_translate: crwdns57868:0crwdne57868:0
+  no_internet: crwdns57869:0crwdne57869:0
+  download_offline: crwdns57870:0crwdne57870:0
+  are_you_teacher: crwdns58021:0crwdne58021:0
+  review_lesson_plan: crwdns58022:0crwdne58022:0
   volunteer_engineer_submission_title: crwdns54486:0crwdne54486:0
   volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
   volunteer_engineer_submission_subtitle_specific: 'crwdns54487:0%{num_teachers}crwdnd54487:0%{num_volunteers}crwdne54487:0'
@@ -486,11 +492,14 @@ en-US:
   dashboard_action_remove_confirm: crwdns27795:0crwdne27795:0
   dashboard_action_done: crwdns7793:0crwdne7793:0
   dashboard_action_required: crwdns7794:0crwdne7794:0
+  dashboard_action_print_certificates: crwdns58278:0crwdne58278:0
   dashboard_assessments_view: crwdns56489:0crwdne56489:0
   dashboard_assessments_none: crwdns56490:0crwdne56490:0
   dashboard_assessments_none_part2: crwdns56924:0crwdne56924:0
   dashboard_assessments_summaries: crwdns56839:0crwdne56839:0
   dashboard_assessments_answers: crwdns56840:0crwdne56840:0
+  dashboard_surveys_answers: crwdns57871:0crwdne57871:0
+  dashboard_percent: crwdns57872:0crwdne57872:0
   dashboard_filter_by_stage: crwdns56491:0crwdne56491:0
   dashboard_filter_all: crwdns56492:0crwdne56492:0
   dashboard_download_csv: crwdns56493:0crwdne56493:0
@@ -505,6 +514,7 @@ en-US:
   dashboard_navigation_view_progress: crwdns57068:0crwdne57068:0
   dashboard_navigation_view_text_responses: crwdns57069:0crwdne57069:0
   dashboard_navigation_view_assessments: crwdns56256:0crwdne56256:0
+  dashboard_navigation_view_assessments_surveys: crwdns58023:0crwdne58023:0
   dashboard_navigation_add_students: crwdns7798:0crwdne7798:0
   dashboard_navigation_manage_students: crwdns7799:0crwdne7799:0
   dashboard_navigation_lesson_plans_resources: crwdns22278:0crwdne22278:0
@@ -652,13 +662,18 @@ en-US:
   dashboard_faq: crwdns23313:0crwdne23313:0
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
-  dashboard_announce_view_all: crwdns50093:0crwdne50093:0
-  dashboard_announce_message: crwdns57071:0crwdne57071:0
-  dashboard_announce_button_text: crwdns57072:0crwdne57072:0
+  dashboard_announce_message_fall2016_features: 'crwdns58393:0%{pp_url}crwdnd58393:0%{csp_widgets_url}crwdnd58393:0%{unused_code_url}crwdne58393:0'
+  dashboard_announce_csp_widgets_message: crwdns57874:0crwdne57874:0
+  dashboard_announce_learn_more_button: crwdns57875:0crwdne57875:0
+  dashboard_announce_try_now_button: crwdns57876:0crwdne57876:0
   dashboard_announce_petition: crwdns56705:0crwdne56705:0
   dashboard_announce_petition_button: crwdns56706:0crwdne56706:0
+  dashboard_announce_all: 'crwdns58242:0%{teacher_blog_url}crwdne58242:0'
   code_hoc_coming: crwdns25713:0crwdne25713:0
   code_sign_up: crwdns23315:0crwdne23315:0
+  host_an_hour: crwdns60161:0crwdne60161:0
+  learn_banner_title: crwdns60162:0crwdne60162:0
+  learn_banner_desc: 'crwdns60163:0%{how_to_url}crwdnd60163:0%{videos_url}crwdne60163:0'
   learn_more: crwdns23316:0crwdne23316:0
   learn_sign_up_description: crwdns48533:0crwdne48533:0
   learn_sign_up_button: crwdns48534:0crwdne48534:0
@@ -1187,9 +1202,8 @@ en-US:
   processing_beyond_longdescription: crwdns21771:0crwdne21771:0
   alice_beyond_longdescription: crwdns21772:0crwdne21772:0
   sphero_beyond_longdescription: crwdns23593:0crwdne23593:0
-  compatibility_https_header: crwdns41674:0crwdne41674:0
-  compatibility_https_message: 'crwdns41675:0%{https_date}crwdnd41675:0%{it_requirements_url}crwdne41675:0'
-  compatibility_https_hide_this_warning: crwdns41676:0crwdne41676:0
+  compatibility_hide_this_warning: crwdns57877:0crwdne57877:0
+  compatibility_unsupported_browser: 'crwdns57878:0%{supported_browsers_url}crwdne57878:0'
   starwars_shortcode: crwdns55294:0crwdne55294:0
   mc_shortcode: crwdns54722:0crwdne54722:0
   frozen_shortcode: crwdns54723:0crwdne54723:0

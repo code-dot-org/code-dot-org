@@ -1,31 +1,31 @@
-var studioApp = require('../StudioApp').singleton;
-var apiTimeoutList = require('../timeoutList');
-var ChartApi = require('./ChartApi');
-var EventSandboxer = require('./EventSandboxer');
-var RGBColor = require('./rgbcolor.js');
-var codegen = require('../codegen');
-var sanitizeHtml = require('./sanitizeHtml');
-var utils = require('../utils');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var setPropertyDropdown = require('./setPropertyDropdown');
-var assetPrefix = require('../assetManagement/assetPrefix');
-
-var errorHandler = require('../errorHandler');
+import {singleton as studioApp} from '../StudioApp';
+import apiTimeoutList from '../timeoutList';
+import ChartApi from './ChartApi';
+import EventSandboxer from './EventSandboxer';
+import RGBColor from './rgbcolor.js';
+import codegen from '../codegen';
+import sanitizeHtml from './sanitizeHtml';
+import * as utils from '../utils';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import * as setPropertyDropdown from './setPropertyDropdown';
+import assetPrefix from '../assetManagement/assetPrefix';
+import errorHandler from '../errorHandler';
 var ErrorLevel = errorHandler.ErrorLevel;
-var applabTurtle = require('./applabTurtle');
-var ChangeEventHandler = require('./ChangeEventHandler');
-var color = require('../color');
-var logToCloud = require('../logToCloud');
+import applabTurtle from './applabTurtle';
+import ChangeEventHandler from './ChangeEventHandler';
+import color from '../color';
+import logToCloud from '../logToCloud';
 
 var OPTIONAL = true;
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-var ICON_PREFIX_REGEX = require('./constants').ICON_PREFIX_REGEX;
+import {ICON_PREFIX_REGEX} from './constants';
 
-var applabCommands = module.exports;
+var applabCommands = {};
+export default applabCommands;
 
 /**
  * Lookup table of asset URLs. If an asset isn't listed here, initiate a
@@ -52,6 +52,15 @@ function outputError(errorString) {
   errorHandler.outputError(errorString, ErrorLevel.ERROR, line);
 }
 
+/**
+ * Returns an error handler which prints warnings to the applab console,
+ * with line numbers which are accurate even for async callbacks.
+ * @returns {function(*)}
+ */
+function getAsyncErrorHandler() {
+  const line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
+  return error => errorHandler.outputError(String(error), ErrorLevel.WARNING, line);
+}
 
 /**
  * @param value
@@ -229,7 +238,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -1098,7 +1107,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
     return true;
   }
   return false;
@@ -1491,7 +1500,7 @@ applabCommands.createRecord = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncErrorHandler();
   Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
@@ -1507,7 +1516,7 @@ applabCommands.getKeyValue = function (opts) {
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncErrorHandler();
   Applab.storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
@@ -1531,7 +1540,7 @@ var handleGetKeyValueSync = function (opts, value) {
 var handleGetKeyValueSyncError = function (opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.setKeyValue = function (opts) {
@@ -1541,7 +1550,7 @@ applabCommands.setKeyValue = function (opts) {
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncErrorHandler();
   Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
@@ -1567,7 +1576,7 @@ var handleSetKeyValueSync = function (opts) {
 var handleSetKeyValueSyncError = function (opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.readRecords = function (opts) {
@@ -1583,7 +1592,7 @@ applabCommands.readRecords = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncErrorHandler();
   Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
@@ -1613,7 +1622,7 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncErrorHandler();
   Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1643,7 +1652,7 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncErrorHandler();
   Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1656,8 +1665,8 @@ applabCommands.handleDeleteRecord = function (opts, success) {
 applabCommands.onRecordEvent = function (opts) {
   apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
   apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
-  var onError = errorHandler.handleError.bind(this, opts);
-  Applab.storage.onRecordEvent(opts.table, opts.onRecord, onError);
+  apiValidateType(opts, 'onRecordEvent', 'includeAll', opts.includeAll, 'boolean', OPTIONAL);
+  Applab.storage.onRecordEvent(opts.table, opts.onRecord, getAsyncErrorHandler(), opts.includeAll);
 };
 
 applabCommands.getUserId = function (opts) {

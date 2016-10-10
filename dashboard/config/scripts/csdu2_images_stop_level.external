@@ -1,0 +1,7 @@
+name 'CSDU2 images stop level'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Please stop and wait for instructions from your teacher before moving on.
+MARKDOWN

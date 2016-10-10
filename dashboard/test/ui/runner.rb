@@ -23,14 +23,19 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 require 'parallel'
+require 'securerandom'
+require 'socket'
+
+require_relative './utils/selenium_browser'
 
 require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
+GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = GitUtils.current_branch
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
 # Upload the given log to the cucumber-logs s3 bucket.
@@ -61,6 +66,7 @@ $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
 $options.parallel_limit = 1
+$options.abort_when_failures_exceed = Float::INFINITY
 
 # start supporting some basic command line filtering of which browsers we run against
 opt_parser = OptionParser.new do |opts|
@@ -132,6 +138,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("--magic_retry", "Magically retry tests based on how flaky they are") do
     $options.magic_retry = true
   end
+  opts.on("--abort_when_failures_exceed Limit", Numeric, "Maximum allowed feature failures before the whole test run is aborted (default is infinity)") do |max_failures|
+    $options.abort_when_failures_exceed = max_failures
+  end
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
   end
@@ -171,15 +180,11 @@ $suite_success_count = 0
 $suite_fail_count = 0
 # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
 $total_flaky_reruns = 0
+$total_flaky_successful_reruns = 0
 $failures = []
 
 if $options.local
-  # Verify that chromedriver is actually running
-  unless `ps`.include?('chromedriver')
-    puts "You cannot run with the --local flag unless you are running chromedriver. Automatically running
-chromedriver found at #{`which chromedriver`}"
-    system("chromedriver &")
-  end
+  SeleniumBrowser.ensure_chromedriver_running
   $browsers = [{:browser => "local"}]
 end
 
@@ -213,10 +218,10 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(arguments)
+def run_tests(env, arguments)
   start_time = Time.now
   puts "cucumber #{arguments}"
-  Open3.popen3("cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, "cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
@@ -226,6 +231,9 @@ def run_tests(arguments)
 end
 
 if $options.force_db_access
+  $options.pegasus_db_access = true
+  $options.dashboard_db_access = true
+elsif ENV['CI']
   $options.pegasus_db_access = true
   $options.dashboard_db_access = true
 elsif rack_env?(:development)
@@ -240,16 +248,23 @@ all_features = Dir.glob('features/**/*.feature')
 features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
-git_branch = `git rev-parse --abbrev-ref HEAD`.strip
-ENV['BATCH_NAME'] = "#{git_branch} | #{Time.now}"
+ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
+applitools_batch_url = nil
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
 if test_type == 'Eyes'
-  HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
-  print "Batching eyes tests as #{ENV['BATCH_NAME']}"
+  # Generate a batch ID, unique to this test run.
+  # Each Eyes instance will use the same one so that tests from this
+  # run get grouped together. This gets used in eyes_steps.rb.
+  # See "Aggregating tests from different processes"
+  # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
+  ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
+  applitools_batch_url = "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
+  HipChat.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
 end
 
+status_page_url = nil
 if $options.with_status_page
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
@@ -259,8 +274,10 @@ if $options.with_status_page
   File.open(status_page_filename, 'w') do |file|
     file.write haml_engine.render(Object.new, {
       api_origin: CDO.studio_url('', scheme),
+      s3_bucket: S3_LOGS_BUCKET,
+      s3_prefix: S3_LOGS_PREFIX,
       type: test_type,
-      git_branch: git_branch,
+      git_branch: GIT_BRANCH,
       commit_hash: COMMIT_HASH,
       start_time: $suite_start_time,
       browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
@@ -270,10 +287,67 @@ if $options.with_status_page
   HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
-  feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
-  browser_name = browser['name'] || 'UnknownBrowser'
-  test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+def test_run_identifier(browser, feature)
+  feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
+  browser_name = browser_name_or_unknown(browser)
+  "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+end
+
+def browser_name_or_unknown(browser)
+  browser['name'] || 'UnknownBrowser'
+end
+
+$calculate_flakiness = true
+# Retrieves / calculates flakiness for given test run identifier, giving up for
+# the rest of this script execution if an error occurs during calculation.
+# returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
+def flakiness_for_test(test_run_identifier)
+  return nil unless $calculate_flakiness
+  TestFlakiness.test_flakiness[test_run_identifier]
+rescue Exception => e
+  puts "Error calculating flakinesss: #{e.message}. Will stop calculating test flakiness for this run."
+  $calculate_flakiness = false
+  nil
+end
+
+# Sort by flakiness (most flaky at end of array, will get run first)
+browser_features.sort! do |browser_feature_a, browser_feature_b|
+  (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
+    (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
+end
+
+# We track the number of failed features in this test run so we can abort the run
+# if we exceed a certain limit.  See $options.abort_when_failures_exceed.
+failed_features = 0
+
+# This lambda function is called by Parallel.map each time it needs a new work
+# item.  It should return Parallel::Stop when there is no more work to do.
+next_feature = lambda do
+  if failed_features > $options.abort_when_failures_exceed
+    message = "Abandoning test run; passed limit of #{$options.abort_when_failures_exceed} failed features."
+    HipChat.log message, color: 'red'
+    return Parallel::Stop
+  end
+  return Parallel::Stop if browser_features.empty?
+  browser_features.pop
+end
+
+parallel_config = {
+    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+    in_threads: ENV['CI'] ? $options.parallel_limit : nil,
+    in_processes: ENV['CI'] ? nil : $options.parallel_limit,
+
+    # This 'finish' lambda runs on the main thread after each Parallel.map work
+    # item is completed.
+    finish: lambda do |_, _, result|
+      succeeded, _, _ = result
+      # Count failures so we can abort the whole test run if we exceed the limit
+      failed_features += 1 unless succeeded
+    end
+}
+run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
+  browser_name = browser_name_or_unknown(browser)
+  test_run_string = test_run_identifier(browser, feature)
 
   if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
@@ -295,21 +369,22 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   # HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
-  ENV['BROWSER_CONFIG'] = browser_name
+  run_environment = {}
+  run_environment['BROWSER_CONFIG'] = browser_name
 
-  ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
-  ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
-  ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
-  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
-  ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
-  ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
-  ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
-  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
-  ENV['TEST_RUN_NAME'] = test_run_string
+  run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
+  run_environment['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
+  run_environment['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  run_environment['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
+  run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
+  run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
+  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
+  run_environment['TEST_RUN_NAME'] = test_run_string
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
+  run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     if $options.out
@@ -327,6 +402,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_circle" if $options.is_circle
+  arguments += " -t ~@no_circle_ie" if $options.is_circle && browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
@@ -369,8 +445,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     elsif $options.auto_retry
       return 1
     elsif $options.magic_retry
-      # ask saucelabs how flaky the test is
-      flakiness = TestFlakiness.test_flakiness[test_run_string]
+      flakiness = flakiness_for_test(test_run_string)
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
         return 1
@@ -379,8 +454,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         return 1
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
-        max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
-                      1].max # rerun at least once even if not flaky
+        recommended_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+        max_reruns = [1, [recommended_reruns, 5].min].max # Clamp rerun count to range 1-5
 
         confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
         flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
@@ -410,7 +485,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   FileUtils.rm rerun_filename, force: true
 
   reruns = 0
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments)
   log_link = upload_log_and_get_public_link(html_output_filename, {
       commit: COMMIT_HASH,
       success: succeeded.to_s,
@@ -427,7 +502,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments)
     log_link = upload_log_and_get_public_link(html_output_filename, {
         commit: COMMIT_HASH,
         duration: test_duration.to_s,
@@ -473,7 +548,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
-    message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
+    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if rack_env?(:test)
   end
@@ -503,25 +578,42 @@ EOS
   end
 
   [succeeded, message, reruns]
-end.each do |succeeded, message, reruns|
+end
+
+$logfile.close
+$errfile.close
+$errbrowserfile.close
+
+# Produce a final report if we aborted due to excess failures
+if failed_features > $options.abort_when_failures_exceed
+  abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
+  HipChat.log abandoned_message, color: 'red'
+end
+
+# If we aborted for some reason we may have no run results, and should
+# exit with a failure code.
+exit 1 if run_results.nil?
+
+run_results.each do |succeeded, message, reruns|
   $total_flaky_reruns += reruns
   if succeeded
+    $total_flaky_successful_reruns += reruns
     $suite_success_count += 1
   else
     $suite_fail_count += 1
     $failures << message
   end
 end
-$logfile.close
-$errfile.close
-$errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
   "Test count: #{($suite_success_count + $suite_fail_count)}. " \
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
-  "Total reruns of flaky tests: #{$total_flaky_reruns}."
+  "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
+  "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
+  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

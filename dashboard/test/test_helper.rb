@@ -2,8 +2,10 @@ if ENV['COVERAGE'] # set this environment variable when running tests if you wan
   require 'simplecov'
   SimpleCov.start :rails
 elsif ENV['CI'] # this is set by circle
-  require 'coveralls'
-  Coveralls.wear!('rails')
+  # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
+  # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
+  # require 'coveralls'
+  # Coveralls.wear!('rails')
 end
 
 require 'minitest/reporters'
@@ -19,7 +21,7 @@ ENV["RACK_ENV"] = "test"
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
 CDO.rack_env = "test" if defined? CDO
-Rails.application.reload_routes! if defined? Rails
+Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
@@ -45,6 +47,7 @@ class ActiveSupport::TestCase
     # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
+    AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
 
     set_env :test
 
@@ -205,7 +208,7 @@ end
 
 # Helpers for all controller test cases
 class ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
@@ -215,7 +218,7 @@ class ActionController::TestCase
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    @html_document ||= if @response.content_type === Mime::XML
+    @html_document ||= if @response.content_type === Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
                          Nokogiri::HTML::Document.parse(@response.body, &:strict)
@@ -318,8 +321,11 @@ class ActionController::TestCase
 end
 
 class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     https!
+    host! CDO.canonical_hostname('studio.code.org')
   end
 end
 
@@ -382,4 +388,19 @@ end
 
 def json_response
   JSON.parse @response.body
+end
+
+# Increase the 2-second hardcoded start timeout for FakeSQS::TestIntegration to 30 seconds.
+# With the original timeout we were getting periodic "FakeSQS didn't start in time" errors.
+# See https://github.com/iain/fake_sqs/blob/master/lib/fake_sqs/test_integration.rb#L89
+module FakeSQS
+  module TestIntegrationExtensions
+    def wait_until_up(deadline = Time.now + 30)
+      super(deadline)
+    end
+  end
+
+  class TestIntegration
+    prepend TestIntegrationExtensions
+  end
 end

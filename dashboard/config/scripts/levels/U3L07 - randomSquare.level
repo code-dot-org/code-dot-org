@@ -85,6 +85,27 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]",
+          "drawSquare:1",
+          "moveForward:1",
+          "turnRight:1",
+          "moveForward:1",
+          "turnRight:1",
+          "moveForward:1",
+          "turnRight:1",
+          "moveForward:1",
+          "turnRight:1",
+          "turnRight:1",
+          "[forUpdate]"
+        ],
+        "matchType": "exact",
+        "minTimes": 72,
+        "message": "App Lab is expecting you to have a loop that runs 72 times and calls drawSquare each time in the loop."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

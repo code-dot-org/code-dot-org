@@ -1,4 +1,4 @@
-class AddIndexes < ActiveRecord::Migration
+class AddIndexes < ActiveRecord::Migration[4.2]
   def change
     add_index :activities, :level_source_id unless index_exists?(:activities, :level_source_id)
     add_index :concepts, :video_id

@@ -2,11 +2,10 @@ require 'cdo/google_drive'
 #require src_dir 'database'
 
 class CsvToSqlTable
-
   def initialize(path, params={})
     @db = params[:db] || DB
     @path = path
-    @table = File.basename(@path, File.extname(@path)).gsub('-','_').to_sym
+    @table = File.basename(@path, File.extname(@path)).tr('-', '_').to_sym
   end
 
   def up_to_date?
@@ -114,11 +113,9 @@ class CsvToSqlTable
       seed_info.insert(table: @table.to_s, mtime: mtime)
     end
   end
-
 end
 
 class GSheetToCsv
-
   @@gdrive = nil
 
   def initialize(path)
@@ -190,7 +187,6 @@ class GSheetToCsv
 
     return @csv_path
   end
-
 end
 
 $gdrive_ = nil
@@ -238,11 +234,11 @@ namespace :seed do
     tutorials: 'Data/HocTutorials.gsheet'
   }
 
-  imports.each_pair do |table,path|
+  imports.each_pair do |table, path|
     extname = File.extname(path)
     if extname == '.gsheet'
       gsheet = path[0..-(extname.length + 1)]
-      path = "cache/#{path.gsub(File::SEPARATOR,'_')}.csv"
+      path = "cache/#{path.gsub(File::SEPARATOR, '_')}.csv"
 
       sync = "sync:#{table}"
       task sync do

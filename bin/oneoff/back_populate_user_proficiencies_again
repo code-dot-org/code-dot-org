@@ -1,0 +1,364 @@
+#!/usr/bin/env ruby
+#
+# This script back populates the user_proficiencies table with data from the
+# user_levels table. The impetus is corrections in the
+# level_concept_difficulties table, causing existing data in the
+# user_proficiencies to be wiped at 2016-08-27 10:32:20.
+#
+# The data was generated via the query (replacing the dates appropriately)
+#
+#   CREATE TABLE user_proficiencies_2016_01 AS
+#   SELECT
+#     user_levels.user_id,
+#
+#     SUM(IF(level_concept_difficulties.sequencing = 1, 1, 0)) AS sequencing_d1_count,
+#     SUM(IF(level_concept_difficulties.sequencing = 2, 1, 0)) AS sequencing_d2_count,
+#     SUM(IF(level_concept_difficulties.sequencing = 3, 1, 0)) AS sequencing_d3_count,
+#     SUM(IF(level_concept_difficulties.sequencing = 4, 1, 0)) AS sequencing_d4_count,
+#     SUM(IF(level_concept_difficulties.sequencing = 5, 1, 0)) AS sequencing_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.debugging = 1, 1, 0)) AS debugging_d1_count,
+#     SUM(IF(level_concept_difficulties.debugging = 2, 1, 0)) AS debugging_d2_count,
+#     SUM(IF(level_concept_difficulties.debugging = 3, 1, 0)) AS debugging_d3_count,
+#     SUM(IF(level_concept_difficulties.debugging = 4, 1, 0)) AS debugging_d4_count,
+#     SUM(IF(level_concept_difficulties.debugging = 5, 1, 0)) AS debugging_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.repeat_loops = 1, 1, 0)) AS repeat_loops_d1_count,
+#     SUM(IF(level_concept_difficulties.repeat_loops = 2, 1, 0)) AS repeat_loops_d2_count,
+#     SUM(IF(level_concept_difficulties.repeat_loops = 3, 1, 0)) AS repeat_loops_d3_count,
+#     SUM(IF(level_concept_difficulties.repeat_loops = 4, 1, 0)) AS repeat_loops_d4_count,
+#     SUM(IF(level_concept_difficulties.repeat_loops = 5, 1, 0)) AS repeat_loops_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.repeat_until_while = 1, 1, 0)) AS repeat_until_while_d1_count,
+#     SUM(IF(level_concept_difficulties.repeat_until_while = 2, 1, 0)) AS repeat_until_while_d2_count,
+#     SUM(IF(level_concept_difficulties.repeat_until_while = 3, 1, 0)) AS repeat_until_while_d3_count,
+#     SUM(IF(level_concept_difficulties.repeat_until_while = 4, 1, 0)) AS repeat_until_while_d4_count,
+#     SUM(IF(level_concept_difficulties.repeat_until_while = 5, 1, 0)) AS repeat_until_while_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.for_loops = 1, 1, 0)) AS for_loops_d1_count,
+#     SUM(IF(level_concept_difficulties.for_loops = 2, 1, 0)) AS for_loops_d2_count,
+#     SUM(IF(level_concept_difficulties.for_loops = 3, 1, 0)) AS for_loops_d3_count,
+#     SUM(IF(level_concept_difficulties.for_loops = 4, 1, 0)) AS for_loops_d4_count,
+#     SUM(IF(level_concept_difficulties.for_loops = 5, 1, 0)) AS for_loops_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.events = 1, 1, 0)) AS events_d1_count,
+#     SUM(IF(level_concept_difficulties.events = 2, 1, 0)) AS events_d2_count,
+#     SUM(IF(level_concept_difficulties.events = 3, 1, 0)) AS events_d3_count,
+#     SUM(IF(level_concept_difficulties.events = 4, 1, 0)) AS events_d4_count,
+#     SUM(IF(level_concept_difficulties.events = 5, 1, 0)) AS events_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.variables = 1, 1, 0)) AS variables_d1_count,
+#     SUM(IF(level_concept_difficulties.variables = 2, 1, 0)) AS variables_d2_count,
+#     SUM(IF(level_concept_difficulties.variables = 3, 1, 0)) AS variables_d3_count,
+#     SUM(IF(level_concept_difficulties.variables = 4, 1, 0)) AS variables_d4_count,
+#     SUM(IF(level_concept_difficulties.variables = 5, 1, 0)) AS variables_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.functions = 1, 1, 0)) AS functions_d1_count,
+#     SUM(IF(level_concept_difficulties.functions = 2, 1, 0)) AS functions_d2_count,
+#     SUM(IF(level_concept_difficulties.functions = 3, 1, 0)) AS functions_d3_count,
+#     SUM(IF(level_concept_difficulties.functions = 4, 1, 0)) AS functions_d4_count,
+#     SUM(IF(level_concept_difficulties.functions = 5, 1, 0)) AS functions_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.functions_with_params = 1, 1, 0)) AS functions_with_params_d1_count,
+#     SUM(IF(level_concept_difficulties.functions_with_params = 2, 1, 0)) AS functions_with_params_d2_count,
+#     SUM(IF(level_concept_difficulties.functions_with_params = 3, 1, 0)) AS functions_with_params_d3_count,
+#     SUM(IF(level_concept_difficulties.functions_with_params = 4, 1, 0)) AS functions_with_params_d4_count,
+#     SUM(IF(level_concept_difficulties.functions_with_params = 5, 1, 0)) AS functions_with_params_d5_count,
+#
+#     SUM(IF(level_concept_difficulties.conditionals = 1, 1, 0)) AS conditionals_d1_count,
+#     SUM(IF(level_concept_difficulties.conditionals = 2, 1, 0)) AS conditionals_d2_count,
+#     SUM(IF(level_concept_difficulties.conditionals = 3, 1, 0)) AS conditionals_d3_count,
+#     SUM(IF(level_concept_difficulties.conditionals = 4, 1, 0)) AS conditionals_d4_count,
+#     SUM(IF(level_concept_difficulties.conditionals = 5, 1, 0)) AS conditionals_d5_count,
+#
+#     MAX(user_levels.updated_at) AS max_updated_at
+#   FROM user_levels
+#   LEFT OUTER JOIN authored_hint_view_requests
+#     ON authored_hint_view_requests.user_id = user_levels.user_id
+#       AND authored_hint_view_requests.script_id = user_levels.script_id
+#       AND authored_hint_view_requests.level_id = user_levels.level_id
+#   LEFT OUTER JOIN hint_view_requests
+#     ON hint_view_requests.user_id = user_levels.user_id
+#       AND hint_view_requests.script_id = user_levels.script_id
+#       AND hint_view_requests.level_id = user_levels.level_id
+#   INNER JOIN level_concept_difficulties
+#     ON level_concept_difficulties.level_id = user_levels.level_id
+#   WHERE user_levels.best_result = 100
+#     AND user_levels.script_id IN (1, 18, 19, 23)
+#     AND user_levels.created_at > "2016-01-01"
+#     AND user_levels.updated_at > "2016-01-01"
+#     AND user_levels.updated_at < "2016-02-01"
+#     AND authored_hint_view_requests.id IS NULL
+#     AND hint_view_requests.id IS NULL
+#   GROUP BY user_levels.user_id;
+#
+# saved to a table with the following MySQL definition
+#
+#   CREATE TABLE `user_proficiencies_2016_01` (
+#     `user_id` int(11) NOT NULL,
+#     `sequencing_d1_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d2_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d3_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d4_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d5_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d1_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d2_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d3_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d4_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d5_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d1_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d2_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d3_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d4_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d5_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d1_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d2_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d3_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d4_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d5_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d1_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d2_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d3_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d4_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d5_count` decimal(23,0) DEFAULT NULL,
+#     `events_d1_count` decimal(23,0) DEFAULT NULL,
+#     `events_d2_count` decimal(23,0) DEFAULT NULL,
+#     `events_d3_count` decimal(23,0) DEFAULT NULL,
+#     `events_d4_count` decimal(23,0) DEFAULT NULL,
+#     `events_d5_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d1_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d2_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d3_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d4_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d5_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d1_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d2_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d3_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d4_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d5_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d1_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d2_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d3_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d4_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d5_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d1_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d2_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d3_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d4_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d5_count` decimal(23,0) DEFAULT NULL,
+#     `max_updated_at` datetime DEFAULT NULL
+#   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+#
+# exported via the mysqldump command
+#
+#   mysqldump dashboard_production user_proficiencies_2016_01
+#     --host=rds-reporting.ceidnfhvpbck.us-east-1.rds.amazonaws.com
+#     --user=db
+#     --password
+#     --result-file=user_proficiencies_2016_01
+#
+# and imported by this script.
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+SUFFIXES = %w(
+  _2016_01
+  _2016_02
+  _2016_03
+  _2016_04
+  _2016_05
+  _2016_06
+  _2016_07
+  _2016_08
+).freeze
+
+# @param line [Array] an array giving UserProficiency values
+# @return [Boolean] a boolean indicating whether basic proficiency has been
+#   achieved.
+def proficient?(line)
+  concept_count = 0
+
+  # Sequencing.
+  if line[3] + line[4] + line[5] >= 3
+    concept_count += 1
+  end
+
+  # Loops.
+  if line[13] + line[14] + line[15] >= 3 ||
+    line[18] + line[19] + line[20] >= 3 ||
+    line[23] + line[24] + line[25] >= 3
+    concept_count += 1
+  end
+
+  # Events.
+  if line[28] + line[29] + line[30] >= 3
+    concept_count += 1
+  end
+
+  # Variables.
+  if line[33] + line[34] + line[35] >= 3
+    concept_count += 1
+  end
+
+  # Functions.
+  if line[38] + line[39] + line[40] >= 3 ||
+    line[43] + line[44] + line[45] >= 3
+    concept_count += 1
+  end
+
+  # Conditionals.
+  if line[48] + line[49] + line[50] >= 3
+    concept_count += 1
+  end
+
+  concept_count >= 3
+end
+
+# @param historical_line [Array] an array giving historical UserProficiency
+#   values
+# @param incremental_line [Array] an array giving incremental UserProficiency
+#   values
+# @return [Array] an array representing the sum of historical_line and
+#   incremental_line
+def increment_user_proficiency(historical_line, incremental_line)
+  sum = historical_line.clone
+
+  # Add the incremental level counts to the historical level counts.
+  (1..50).each do |index|
+    sum[index] += incremental_line[index]
+  end
+  # Update last_progress_at, if there was progress in the incremental.
+  unless incremental_line[51].nil?
+    sum[51] = incremental_line[51]
+  end
+  # Update basic_proficiency_at, if we became proficient via the incremental.
+  if sum[52].nil? && proficient?(sum)
+    sum[52] = incremental_line[51]
+  end
+
+  sum
+end
+
+# A to-be-populated hash from user_ids to user_proficiency data.
+user_proficiency_hash = {}
+
+# Process the CSV files, populating user_proficiency_hash from their data.
+SUFFIXES.each do |suffix|
+  filename = "/tmp/user_proficiencies#{suffix}"
+
+  puts "PROCESSING #{filename}..."
+
+  CSV.foreach(filename).with_index do |line, line_num|
+    if line_num % 100_000 == 0
+      puts "  LINE #{line_num}..."
+    end
+
+    # Convert the user_id and level counts from strings to integers.
+    (0..50).each do |index|
+      line[index] = line[index].to_i
+    end
+    # Add a nil value for basic_proficiency_at.
+    line << nil
+
+    user_id = line[0]
+    historical = if user_proficiency_hash.key?(user_id)
+                   user_proficiency_hash[user_id]
+                 else
+                   empty_historical = Array.new(52, 0)
+                   empty_historical[0] = user_id
+                   empty_historical[51] = nil
+                   empty_historical[52] = nil
+                   empty_historical
+                 end
+
+    user_proficiency_hash[user_id] = increment_user_proficiency(historical, line)
+  end
+
+  puts "PROCESSED #{filename}."
+end
+
+slice_count = 0
+puts "UPDATING DB..."
+# Update the DB with the data in user_proficiency_hash.
+begin
+  user_proficiency_hash.values.each_slice(1000) do |slice|
+    puts "  SLICE_COUNT: #{slice_count}..."
+
+    ActiveRecord::Base.transaction do
+      slice.each do |proficiency|
+        db_proficiency = UserProficiency.find_or_create_by(user_id: proficiency[0])
+
+        db_proficiency.sequencing_d1_count += proficiency[1]
+        db_proficiency.sequencing_d2_count += proficiency[2]
+        db_proficiency.sequencing_d3_count += proficiency[3]
+        db_proficiency.sequencing_d4_count += proficiency[4]
+        db_proficiency.sequencing_d5_count += proficiency[5]
+
+        db_proficiency.debugging_d1_count += proficiency[6]
+        db_proficiency.debugging_d2_count += proficiency[7]
+        db_proficiency.debugging_d3_count += proficiency[8]
+        db_proficiency.debugging_d4_count += proficiency[9]
+        db_proficiency.debugging_d5_count += proficiency[10]
+
+        db_proficiency.repeat_loops_d1_count += proficiency[11]
+        db_proficiency.repeat_loops_d2_count += proficiency[12]
+        db_proficiency.repeat_loops_d3_count += proficiency[13]
+        db_proficiency.repeat_loops_d4_count += proficiency[14]
+        db_proficiency.repeat_loops_d5_count += proficiency[15]
+
+        db_proficiency.repeat_until_while_d1_count += proficiency[16]
+        db_proficiency.repeat_until_while_d2_count += proficiency[17]
+        db_proficiency.repeat_until_while_d3_count += proficiency[18]
+        db_proficiency.repeat_until_while_d4_count += proficiency[19]
+        db_proficiency.repeat_until_while_d5_count += proficiency[20]
+
+        db_proficiency.for_loops_d1_count += proficiency[21]
+        db_proficiency.for_loops_d2_count += proficiency[22]
+        db_proficiency.for_loops_d3_count += proficiency[23]
+        db_proficiency.for_loops_d4_count += proficiency[24]
+        db_proficiency.for_loops_d5_count += proficiency[25]
+
+        db_proficiency.events_d1_count += proficiency[26]
+        db_proficiency.events_d2_count += proficiency[27]
+        db_proficiency.events_d3_count += proficiency[28]
+        db_proficiency.events_d4_count += proficiency[29]
+        db_proficiency.events_d5_count += proficiency[30]
+
+        db_proficiency.variables_d1_count += proficiency[31]
+        db_proficiency.variables_d2_count += proficiency[32]
+        db_proficiency.variables_d3_count += proficiency[33]
+        db_proficiency.variables_d4_count += proficiency[34]
+        db_proficiency.variables_d5_count += proficiency[35]
+
+        db_proficiency.functions_d1_count += proficiency[36]
+        db_proficiency.functions_d2_count += proficiency[37]
+        db_proficiency.functions_d3_count += proficiency[38]
+        db_proficiency.functions_d4_count += proficiency[39]
+        db_proficiency.functions_d5_count += proficiency[40]
+
+        db_proficiency.functions_with_params_d1_count += proficiency[41]
+        db_proficiency.functions_with_params_d2_count += proficiency[42]
+        db_proficiency.functions_with_params_d3_count += proficiency[43]
+        db_proficiency.functions_with_params_d4_count += proficiency[44]
+        db_proficiency.functions_with_params_d5_count += proficiency[45]
+
+        db_proficiency.conditionals_d1_count += proficiency[46]
+        db_proficiency.conditionals_d2_count += proficiency[47]
+        db_proficiency.conditionals_d3_count += proficiency[48]
+        db_proficiency.conditionals_d4_count += proficiency[49]
+        db_proficiency.conditionals_d5_count += proficiency[50]
+
+        db_proficiency.last_progress_at = proficiency[51] unless db_proficiency.last_progress_at
+        db_proficiency.basic_proficiency_at = proficiency[52] if proficiency[52]
+
+        db_proficiency.save!
+      end
+    end
+    slice_count += 1
+  end
+rescue Exception => e
+  puts "EXCEPTION: PROCESSING #{slice_count}..."
+  raise e
+end
+puts "UPDATED DB."

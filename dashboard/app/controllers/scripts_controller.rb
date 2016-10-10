@@ -1,6 +1,6 @@
 class ScriptsController < ApplicationController
-  before_filter :require_levelbuilder_mode, except: :show
-  before_filter :authenticate_user!, except: :show
+  before_action :require_levelbuilder_mode, except: :show
+  before_action :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
   authorize_resource
@@ -18,18 +18,15 @@ class ScriptsController < ApplicationController
     rake if params[:rake] == '1'
     # Show all the scripts that a user has created.
     @scripts = Script.all
-    @script_file_exists = {}
   end
 
   def new
   end
 
   def create
-    @script_text = params[:script_text]
     @script = Script.new(script_params)
-    if @script.save
-      File.write("config/scripts/#{@script.name}.script", @script_text)
-      redirect_to @script
+    if @script.save && @script.update_text(script_params, params[:script_text], i18n_params)
+      redirect_to @script, notice: I18n.t('crud.created', model: Script.model_name.human)
     else
       render 'new'
     end
@@ -49,16 +46,20 @@ class ScriptsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      script_text = params[:script_text]
-      if @script.update_text(script_params, script_text)
-        format.html { redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human) }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @script.errors, status: :unprocessable_entity }
-      end
+    script_text = params[:script_text]
+    if @script.update_text(script_params, script_text, i18n_params)
+      redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human)
+    else
+      render action: 'edit'
     end
+  end
+
+  def instructions
+    require_levelbuilder_mode
+
+    script = Script.get_from_cache(params[:script_id])
+
+    render 'levels/instructions', locals: { stages: script.stages }
   end
 
   private
@@ -89,4 +90,13 @@ class ScriptsController < ApplicationController
     params.require(:script).permit(:name)
   end
 
+  def i18n_params
+    params.permit(
+      :name,
+      :title,
+      :description_audience,
+      :description_short,
+      :description,
+    ).to_h
+  end
 end

@@ -1,0 +1,21 @@
+name 'Unit 2 Lesson 8 Overview'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The Internet - Web Development: Lesson 8 - Multi-Page Websites
+
+## Background
+
+Students embark on finally creating their personal website as they pull together all the previous pages they have created into one file, create a home page, and add navigation betwen the pages.  All of their navigation will be contained inside a div as they begin to see how elements can be grouped together.
+# Vocabulary
+
+* **Hyperlink** - A link from a HTML file to another location or file, typically activated by clicking on a highlighted word or image on the screen.
+
+# New Blocks
+
+* **Div** - `<div></div>`
+* **Hyperlink** - `<a href=""></a>`
+
+# Resources
+
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+MARKDOWN

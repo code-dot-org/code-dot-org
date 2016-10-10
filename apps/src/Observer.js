@@ -1,5 +1,4 @@
 /** @file Helper for consuming ObservableEvents. */
-'use strict';
 
 /**
  * Helper object for consuming ObservableEvents, designed for composition into

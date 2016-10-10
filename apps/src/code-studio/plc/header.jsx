@@ -8,7 +8,9 @@ import color from '../../color';
 var PlcHeader = React.createClass({
   propTypes: {
     unit_name: React.PropTypes.string,
-    course_view_path: React.PropTypes.string
+    unit_view_path: React.PropTypes.string,
+    course_view_path: React.PropTypes.string,
+    page_name: React.PropTypes.string
   },
 
   render: function () {
@@ -31,9 +33,24 @@ var PlcHeader = React.createClass({
           My Learning Plan
         </a>
         <span className="fa fa-caret-right" style={breadcrumbStyle.icon}/>
-        <span style={breadcrumbStyle.currentPage}>
-          {this.props.unit_name}
-        </span>
+        {
+          this.props.page_name ? (
+            <span>
+              <a href={this.props.unit_view_path}>
+                {this.props.unit_name}
+              </a>
+              <span className="fa fa-caret-right" style={breadcrumbStyle.icon}/>
+              <span style={breadcrumbStyle.currentPage}>
+                {this.props.page_name}
+              </span>
+            </span>
+          ) : (
+            <span style={breadcrumbStyle.currentPage}>
+              {this.props.unit_name}
+            </span>
+          )
+        }
+
       </div>
     );
   }

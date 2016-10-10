@@ -37,6 +37,7 @@ module ScriptConstants
   CSP17_UNIT1_NAME = 'csp1'
   CSP17_UNIT2_NAME = 'csp2'
   CSP17_UNIT3_NAME = 'csp3'
+  CSP17_UNIT4_NAME = 'csp4'
 
   CSP_ASSESSMENT_NAME = 'cspassessment'
   CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'
@@ -86,7 +87,8 @@ module ScriptConstants
     csp17: [
       CSP17_UNIT1_NAME,
       CSP17_UNIT2_NAME,
-      CSP17_UNIT3_NAME
+      CSP17_UNIT3_NAME,
+      CSP17_UNIT4_NAME
     ],
     cspexams: [
       CSP_ASSESSMENT_NAME,
@@ -103,6 +105,13 @@ module ScriptConstants
     minecraft: [MINECRAFT_NAME]
   }
 
+  # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
+  # This can be used to override that, with lower numbers ordered sooner, and higher numbers
+  # ordered later.
+  CATEGORY_ORDERING_PRIORITY = {
+    csp: 1,
+  }
+
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
@@ -114,6 +123,10 @@ module ScriptConstants
 
   def self.position_in_category(script, category)
     CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
+  end
+
+  def self.category_priority(category)
+    CATEGORY_ORDERING_PRIORITY[category.to_sym] || 0
   end
 
   def self.teacher_dashboard_name(script)

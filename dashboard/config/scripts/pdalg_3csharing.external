@@ -3,8 +3,6 @@ skip_dialog true
 
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
 # Sharing Student Work > Finding Projects to Share
 
 ## Things that can be shared
@@ -32,8 +30,7 @@ To share out your student artifacts, you'll need to grab a shareable link. Progr
 
 ![Share Link](/script_assets/pd/share.gif)
 
-<br><br>
 Click the “Continue” button below once you have gathered at least 3-5 student artifacts.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

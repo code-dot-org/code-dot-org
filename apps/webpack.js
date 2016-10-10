@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 // Our base config, on which other configs are derived
 var baseConfig = {
@@ -10,26 +11,18 @@ var baseConfig = {
     extensions: ["", ".js", ".jsx"],
     alias: {
       '@cdo/locale': path.resolve(__dirname, 'src', 'locale-do-not-import.js'),
+      '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
+      '@cdo/applab/locale': path.resolve(__dirname, 'src', 'applab', 'locale-do-not-import.js'),
+      '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       repl: path.resolve(__dirname, 'src/noop'),
     }
-  },
-  externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
-    "marked": "var marked",
-    "blockly": "this Blockly",
-    "react": "var React",
-    "react-dom": "var ReactDOM",
-    "jquery": "var $",
-    "radium": "var Radium",
-    "bindings": true
   },
   module: {
     loaders: [
       {test: /\.json$/, loader: 'json'},
       {test: /\.ejs$/, loader: 'ejs-compiled'},
+      {test: /\.css$/, loader: 'style-loader!css-loader'},
     ],
     preLoaders: [
       {
@@ -44,11 +37,14 @@ var baseConfig = {
         ],
         loader: "babel",
         query: {
-          cacheDirectory: true,
-          sourceMaps: true,
+          cacheDirectory: path.resolve(__dirname, '.babel-cache'),
+          compact: false,
         }
       },
     ],
+  },
+  node: {
+    fs: 'empty',
   },
 };
 
@@ -79,12 +75,36 @@ if (envConstants.COVERAGE) {
   ];
 }
 
+var storybookConfig = _.extend({}, baseConfig, {
+  devtool: 'inline-source-map',
+  externals: {
+    "johnny-five": "var JohnnyFive",
+    "playground-io": "var PlaygroundIO",
+    "chrome-serialport": "var ChromeSerialport",
+    "blockly": "this Blockly",
+  },
+  plugins: [
+    new webpack.ProvidePlugin({React: 'react'}),
+    new webpack.DefinePlugin({
+      IN_UNIT_TEST: JSON.stringify(false),
+      'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
+      'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
+      BUILD_STYLEGUIDE: JSON.stringify(true),
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
+    }),
+  ]
+});
+
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-source-map',
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
+      '@cdo/netsim/locale': path.resolve(__dirname, 'test', 'util', 'netsim', 'locale-do-not-import.js'),
+      '@cdo/applab/locale': path.resolve(__dirname, 'test', 'util', 'applab', 'locale-do-not-import.js'),
+      '@cdo/gamelab/locale': path.resolve(__dirname, 'test', 'util', 'gamelab', 'locale-do-not-import.js'),
+      'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
     }),
   }),
   externals: {
@@ -106,8 +126,8 @@ var karmaConfig = _.extend({}, baseConfig, {
       IN_UNIT_TEST: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-      BUILD_STYLEGUIDE: JSON.stringify(true),
-      PISKEL_DEVELOPMENT_MODE: false
+      BUILD_STYLEGUIDE: JSON.stringify(false),
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
   ]
 });
@@ -115,81 +135,56 @@ var karmaConfig = _.extend({}, baseConfig, {
 /**
  * Generate the appropriate webpack config based off of our base config and
  * some input options
- * @param {string} uniqueName - Unique name for the bundle. Used by a webpack
- *   option to make sure our different bundles don't end up sharing webpack runtimes
  * @param {object} options
  * @param {string} options.output
  * @param {string[]} options.entries - list of input source files
- * @param {string} commonFile
  * @param {bool} options.minify
  * @param {bool} options.watch
  * @param {string} options.piskelDevMode
- * @param {string[]} options.provides - list of "external" modules that this
- *   bundle actually provides (and thus should not be external here)
+ * @param {Array} options.plugins - list of additional plugins to use
+ * @param {Array} options.externals - list of webpack externals
  */
 function create(options) {
-  var uniqueName = options.uniqueName;
   var outputDir = options.output;
   var entries = options.entries;
-  var commonFile = options.commonFile;
   var minify = options.minify;
   var watch = options.watch;
   var piskelDevMode = options.piskelDevMode;
-  var provides = options.provides;
-
-  // Note: In a world where we have a single webpack config instead of an array
-  // of them, this becomes unnecessary.
-  if (!uniqueName) {
-    throw new Error('Must specify uniqueName for bundle');
-  }
+  var plugins = options.plugins;
+  var externals = options.externals;
 
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       filename: "[name]." + (minify ? "min." : "") + "js",
-      // This option is needed so that if we have two different bundles included
-      // on one page, they're smart enough to differentiate themselves
-      jsonpFunction: 'jsonp_' + uniqueName
     },
-    devtool: options.minify ? 'source-map' : 'inline-source-map',
+    devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',
     entry: entries,
+    externals: externals,
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
-        PISKEL_DEVELOPMENT_MODE: piskelDevMode
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
-    ],
+    ].concat(plugins),
     watch: watch,
     keepalive: watch,
     failOnError: !watch
   });
 
-  if (provides) {
-    config.externals = _.clone(baseConfig.externals);
-    provides.forEach(function (providedModule) {
-      delete config.externals[providedModule];
-    });
-  }
-
-  if (commonFile) {
-    config.plugins = config.plugins.concat(
-      new webpack.optimize.CommonsChunkPlugin({
-        name: commonFile,
-        minChunks: 2
-      })
-    );
-  }
-
   if (minify) {
     config.plugins = config.plugins.concat(
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      })
+      [
+        new webpack.optimize.UglifyJsPlugin({
+          compressor: {
+            warnings: false
+          }
+        }),
+        new UnminifiedWebpackPlugin(),
+      ]
     );
   }
 
@@ -208,5 +203,6 @@ function create(options) {
 module.exports = {
   config: baseConfig,
   karmaConfig: karmaConfig,
+  storybookConfig: storybookConfig,
   create: create
 };

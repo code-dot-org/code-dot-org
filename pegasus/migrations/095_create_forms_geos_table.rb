@@ -10,8 +10,8 @@ Sequel.migration do
       String :state
       String :country
       String :postal_code
-      Decimal :latitude, size: [8,6]
-      Decimal :longitude, size: [9,6]
+      Decimal :latitude, size: [8, 6]
+      Decimal :longitude, size: [9, 6]
     end
   end
 end

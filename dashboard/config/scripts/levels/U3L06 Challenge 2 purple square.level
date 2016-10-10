@@ -65,6 +65,71 @@
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft() or turnRight() without any loops."
+      },
+      {
+        "entries": [
+          "penWidth:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "To complete the task you need to set the pen width"
+      },
+      {
+        "entries": [
+          "penColor:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "To complete the task you need to set the pen color."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "To draw a square you need to moveForward(pixels) at least 4 times."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "maxTimes": 0,
+        "message": "App Lab is expecting you draw this square using a combination of turnRight and moveForward. You can, of course, draw a square with turnLeft as well, but for now use turnRight."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "To draw the square you need to turnRight at least 3 times -- 4 if you want to end up where you started."
+      },
+      {
+        "entries": [
+          "moveForward:1",
+          "turnRight",
+          "moveForward:1",
+          "turnRight",
+          "moveForward:1",
+          "turnRight",
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to set the pen width and color, and then draw a square with a combination of moveForward and turnRight."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

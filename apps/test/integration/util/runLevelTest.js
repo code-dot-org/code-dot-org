@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
+import { getConfigRef, getDatabase } from '@cdo/apps/applab/firebaseUtils';
+
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -90,22 +92,6 @@ StubDialog.prototype.show = function () {
 StubDialog.prototype.hide = function () {
 };
 
-// Hack to compile files into browserify. Don't call this function!
-// TODO (brent) : this can probably be replaced using require-globify and/or
-// making use of data.js
-function ಠ_ಠ() {
-  require('@cdo/apps/maze/main');
-  require('@cdo/apps/flappy/main');
-  require('@cdo/apps/turtle/main');
-  require('@cdo/apps/eval/main');
-  require('@cdo/apps/studio/main');
-  require('@cdo/apps/calc/main');
-  require('@cdo/apps/bounce/main');
-  require('@cdo/apps/applab/main');
-  require('@cdo/apps/gamelab/main');
-  require('@cdo/apps/craft/main');
-}
-
 function runLevel(app, skinId, level, onAttempt, testData) {
   require('@cdo/apps/' + app + '/main');
 
@@ -116,6 +102,10 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
+  window.dashboard.project.useFirebase = function () {
+    return Boolean(testData.useFirebase);
+  };
+
   var main = window[app + 'Main'];
   main({
     skinId: skinId,
@@ -125,12 +115,31 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
+    // Fail fast if firebase is used without testData.useFirebase being specified.
+    firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
+    firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
     isAdmin: true,
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
       if (level.editCode && !studioApp.editor) {
+        timeout = 500;
+      }
+
+      // Avoid unnecessary delay for tests which don't use firebase.
+      if (testData.useFirebase) {
+        getDatabase(Applab.channelId).autoFlush();
+        getConfigRef().set({
+          limits: {
+            '15': 5,
+            '60': 10
+          },
+          maxRecordSize: 100,
+          maxPropertySize: 100,
+          maxTableRows: 20,
+          maxTableCount: 10,
+        });
         timeout = 500;
       }
 

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
-
   setup do
     AuthoredHintViewRequest.stubs(:enabled?).returns true
     @script = create :script

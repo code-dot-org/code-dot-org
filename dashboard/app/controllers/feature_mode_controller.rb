@@ -3,7 +3,7 @@
 # feature modes.
 
 class FeatureModeController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   # Max time in seconds for settings updates to take effect.
   MAX_UPDATE_TIME = 30

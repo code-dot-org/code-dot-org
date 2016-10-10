@@ -1,5 +1,4 @@
 class HocSurvey2015
-
   def self.normalize(data)
     result = {}
 
@@ -109,5 +108,4 @@ class HocSurvey2015
       'No - I’d prefer something completely different as the centerpiece activity for CS Education Week.'
     ]
   end
-
 end

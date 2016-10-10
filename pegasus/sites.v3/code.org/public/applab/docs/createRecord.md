@@ -103,7 +103,7 @@ createRecord(table, record, function(record){
 [returns]
 
 ### Returns
-When *createRecord()* is finished executing, the callback function is automatically called and is returned as a parameter the created record object as a parameter.
+When *createRecord()* is finished executing, the callback function is automatically called and the created record object is returned as a parameter.
 
 [/returns]
 

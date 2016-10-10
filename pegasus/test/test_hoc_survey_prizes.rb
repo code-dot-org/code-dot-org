@@ -3,7 +3,6 @@ require_relative '../../pegasus/helpers/prize_helpers'
 require 'securerandom'
 
 class HocSurveyPrizeTest < SequelTestCase
-
   TYPE1 = 'apple'
   TYPE2 = 'orange'
   USER1 = 'user1@code.org'
@@ -58,9 +57,9 @@ class HocSurveyPrizeTest < SequelTestCase
     claim2 = claim_prize_code TYPE1, USER1, PURPOSE2
     claim3 = claim_prize_code TYPE1, USER2, PURPOSE1
     claim4 = claim_prize_code TYPE1, USER1, PURPOSE2 # should return claim2 again
-    assert_equal expected(TYPE1,0), claim1
-    assert_equal expected(TYPE1,1), claim2
-    assert_equal expected(TYPE1,2), claim3
+    assert_equal expected(TYPE1, 0), claim1
+    assert_equal expected(TYPE1, 1), claim2
+    assert_equal expected(TYPE1, 2), claim3
     assert_equal claim2, claim4
   end
 

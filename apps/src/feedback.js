@@ -4,13 +4,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
-var HINT_REQUEST_PLACEMENT = {
-  NONE: 0,  // This value must not be changed.
-  LEFT: 1,  // Hint request button is on left.
-  RIGHT: 2  // Hint request button is on right.
-};
-
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
 var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];
@@ -30,7 +23,6 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
 var _ = require('lodash');
 var codegen = require('./codegen');
@@ -83,7 +75,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
 
   options.level = options.level || {};
-  options.numTrophies = this.numTrophiesEarned_(options);
 
   var hadShareFailure = (options.response && options.response.share_failure);
   // options.response.level_source is the url that we are sharing; can't
@@ -111,10 +102,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
-  }
-  if (options.numTrophies) {
-    var trophies = this.getTrophiesElement_(options);
-    feedback.appendChild(trophies);
   }
   if (feedbackBlocks && feedbackBlocks.div) {
     if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
@@ -168,13 +155,14 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
-  var hasNeitherBackButton = !againButton && !previousLevelButton;
-  var onlyContinue = continueButton && (hasNeitherBackButton || options.defaultToContinue);
+  const hasNeitherBackButton = !againButton && !previousLevelButton;
+  const onlyContinue = continueButton && hasNeitherBackButton;
+  const defaultContinue = onlyContinue || options.defaultToContinue;
 
   // get the topmost missing recommended block, if it exists, to be
   // added to the queue of contextual hints. If the user views the block
   // in the dialog, mark it as seen and add it to the list as such.
-  var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks);
+  var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks, options.level.isK1);
   var markContextualHintsAsSeen = function () {
     missingRecommendedBlockHints.filter(function (hint) {
       return feedbackBlocks && feedbackBlocks.xml && feedbackBlocks.xml.indexOf(hint.blockDisplayXML) > -1;
@@ -191,7 +179,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (!options.hideIcon) {
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   }
-  var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
+  const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = this.createModalDialog({
     Dialog: options.Dialog,
@@ -442,8 +430,7 @@ FeedbackUtils.prototype.getShareFailure_ = function (options) {
  */
 FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  return options.response &&
-        options.response.design &&
-        options.response.hint;
+        options.response.design;
 };
 
 /**
@@ -451,11 +438,10 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  * The message will be one of the following, from highest to lowest precedence:
  * 0. Failure override message specified on level (options.level.failureMessageOverride)
  * 1. Message passed in by caller (options.message).
- * 2. Message from dashboard database (options.response.hint).
- * 3. Header message due to dashboard text check fail (options.response.share_failure).
- * 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+ * 2. Header message due to dashboard text check fail (options.response.share_failure).
+ * 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
  *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
- * 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+ * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
  *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * @return {string} message
  */
@@ -470,9 +456,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
     message = options.message;
   } else if (options.response && options.response.share_failure) {
     message = msg.shareFailure();
-  } else if (options.response && options.response.hint) {
-    // Otherwise, if there's a dashboard database hint, use that.
-    message = options.response.hint;
   } else {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
@@ -590,7 +573,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
           stageCompleted = options.response.stage_changing.previous.name;
         }
         var msgParams = {
-          numTrophies: options.numTrophies,
           stageNumber: 0, // TODO: remove once localized strings have been fixed
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
@@ -605,11 +587,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
             message = finalLevel ? (msg.finalStage(msgParams) + ' ') : '';
             message = message + reinfFeedbackMsg;
           }
-        } else if (options.numTrophies > 0) {
-          message = finalLevel ? msg.finalStageTrophies(msgParams) :
-                                 stageCompleted ?
-                                    msg.nextStageTrophies(msgParams) :
-                                    msg.nextLevelTrophies(msgParams);
         } else {
           var nextLevelMsg = (options.appStrings && options.appStrings.nextLevelMsg) ||
               msg.nextLevel(msgParams);
@@ -776,33 +753,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   }
 
   return sharingDiv;
-};
-
-/**
- *
- */
-FeedbackUtils.prototype.numTrophiesEarned_ = function (options) {
-  if (options.response && options.response.trophy_updates) {
-    return options.response.trophy_updates.length;
-  } else {
-    return 0;
-  }
-};
-
-/**
- *
- */
-FeedbackUtils.prototype.getTrophiesElement_ = function (options) {
-  var html = "";
-  for (var i = 0; i < options.numTrophies; i++) {
-    html += trophy({
-      img_url: options.response.trophy_updates[i][2],
-      concept_name: options.response.trophy_updates[i][0]
-    });
-  }
-  var trophies = document.createElement('div');
-  trophies.innerHTML = html;
-  return trophies;
 };
 
 /**
@@ -1224,11 +1174,12 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
  * be presented to the user as hints.
  * @param {!TestableBlock[]} blocks
  */
-FeedbackUtils.prototype.getMissingBlockHints = function (blocks) {
+FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
   return this.getMissingBlocks_(blocks, 1)
     .blocksToDisplay
     .map(function (block) {
-      block.alreadySeen = false;
+      // in K1, we default to already seen
+      block.alreadySeen = isK1;
       return block;
     });
 };

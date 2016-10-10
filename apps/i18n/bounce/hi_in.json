@@ -34,7 +34,7 @@
   "moveUp": "ऊपर चले",
   "moveUpTooltip": "चप्पू को ऊपर चलाइए।",
   "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
+  "no": "नहीं",
   "noPathAhead": "path is blocked",
   "noPathLeft": "no path to the left",
   "noPathRight": "no path to the right",
@@ -91,8 +91,8 @@
   "setPaddleSpeedTooltip": "चप्पू गति निर्धारित करें",
   "shareBounceTwitter": "मेरा बनाया गया उछाल का खेल देखे।मैने खुद @codeorg से लिखा है",
   "shareGame": "Share your game:",
-  "turnLeft": "turn left",
-  "turnRight": "turn right",
+  "turnLeft": "बाएँ मुड़ें",
+  "turnRight": "दाएँ मुड़ें",
   "turnTooltip": "Turns me left or right by 90 degrees.",
   "whenBallInGoal": "जब गेंद लक्ष्य में हो",
   "whenBallInGoalTooltip": "जब गेंद लक्ष्य में हो तो नीचे दिये गएे कार्यों का संचालन करे।",
@@ -114,5 +114,5 @@
   "whenWallCollidedTooltip": "जब गेंद दीवार सेे टकराये तब नीचे दिये गएे कार्यों का संचालन करे।",
   "whileMsg": "जबकि",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes"
+  "yes": "हाँ"
 }

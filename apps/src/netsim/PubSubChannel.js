@@ -1,7 +1,6 @@
 /**
  * @overview Wrapped pub/sub service channel APIs (like Pusher's Channel)
  */
-'use strict';
 
 /**
  * Javascript interface for a publish/subscribe channel.

@@ -17,3 +17,4 @@ driver:
 #  price: 3 # Use spot instance ($/hour bid)
   retryable_tries: 60
   retryable_sleep: 10
+  iam_profile_name: <%=ENV['IAM_PROFILE_NAME']%>

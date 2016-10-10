@@ -3,6 +3,8 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
+=view :answer_dash
+
 %div
   %br/
   %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
@@ -65,7 +67,7 @@ content-type: text/ng-template
       %td
         %span{"ng-hide" => "section.editing"} {{course_list | getNameById:section.course.id}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.course.id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category', 'position', 'name']"}
+          %select{"ng-model" => "section.course.id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category_priority', 'category', 'position', 'name']"}
             %option{value: ''}
       %td
         %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
@@ -88,7 +90,7 @@ content-type: text/ng-template
         %form{:action=>"/certificates", :method=>"POST"}
           %input{"ng-repeat" => "student in section.students", :type=>'hidden', :name=>'names[]', :value=>'{{student.name}}'}
           %input{:type=>'hidden', :name=>'course', :value=>'{{section.course.name}}'}
-          %input.btn.btn-white{type:"submit", value:"Print Certificates", style:"margin-top:10px; width:100%"}
+          %input.btn.btn-white{type:"submit", value: I18n.t('dashboard_action_print_certificates'), style:"margin-top:10px; width:100%"}
 
   %br/
   %br/

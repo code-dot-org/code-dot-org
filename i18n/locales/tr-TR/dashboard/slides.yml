@@ -430,17 +430,17 @@ tr:
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+          Ana Karşılaşma için izliyoruz o "Güncelleştirme" için doğrulama oluyor. Ve biz doğrulama için joystick'i denetliyoruz. Yani biz, "Oh, var birisi düğmeye bu çerçeve? Evet ya da Hayır?" Olaylar, olmadan oyuncu hareket ettiremedim, seni atlamak olamaz, ne olup bittiğini kontrol etmek mümkün değil. Video oyunun da bir şey hareketlendirmek mümkün olmaz.
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: Kum heykel bu başarısızlık öğrenmem lazım programın bir parçasıdır. Ama sen devam edersen, hiçbir şey alamayacaksın ama daha iyi ve daha heyecanlı olmalısın. Oyunun adı kalıcıdır. Kalıcılığını seveceksin.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: Bu ders temel inşa etme olarak adlandırılır. Bu derste, biz gerçekten zor olacak görevlerde çalışacağız. Siz bu bardaklardan en azından birinin uzunluğu kadar olan yapının nasıl yapılacağını ve bu yapı bir kitabın ağırlığını kaldıracak kadar yeterince güçlü olması gerektiğini anlayacaksınız.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: Eserimizin istenilen sonucu vermediği zamanlar olabilir. Hayal kırıklığına uğradığımız ve pes etmek istediğimiz zamanlar olabilir. Böyle zamanlar çok fazla olabilir. Ama biz çalışmaya devam edersek ve elimizden gelenin en iyisini tekrar tekrar yaparsak, o zaman biz çok geçmeden karşılığını alacağımızdan eminiz.
       4:
         image: notes/C1_building_foundation_4.jpg
         text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
@@ -531,14 +531,13 @@ tr:
         text: "Dün, hayvanat bahçesini ziyaret ettim. Bebek zebra gördüm. Ben onun resmini çektim. Çizgilerinin rengini değiştirdim ve sonra şapka koydum. Sonrada tuhaf hayvanlar koleksiyonuma ekledim. Harika! Daha sonra çok çok uzak bir yere gittim. Kenyayı ziyaret ettim. Afrika'da bir ülkedir. Orada Zebralar sürü olarak yaşıyor."
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: "Bazen internette tanıdığım insanlarla konuşurum, başka eyalette yaşayan büyük annem gibi. Mehaba büyükanne! Büyükannem şimdi doğum günüm için göndereceği kurabiyelerden yapıyor. ''Lezzetli, İnternet keşke smelloramaya sahip olsaydı!'' İnternette farklı insanlarla konuşabilirim, kuzenim gibi ama sadece tanıdığım insanlarla konuşurum."
       5:
         image: notes/C1_going_places_safely_5.png
         text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'İnternet süper eğlenceli bir yer. Mahallede karşıdan karşıya geçerken olduğu gibi, ayrıca çevrimiçi olduğun zamanda çok dikkatli olmalısın. Burada hatırlaman için üç kural. Kural 1: Her zaman ilk başta anne babana sor. Kural 2: Sadece tanıdığın kişilerle konuş. Kural 3: Senin sadece doğru olan yerlerde kal.'
       7:
         image: notes/C1_going_places_safely_7.png
         text: Vay canına! Bu çok eğlenceliydi! Şimdi yemek vakti. Oturumu kapatın. Sonraki ziyaretinizi görmek için sabırsızlanıyorum.
@@ -561,7 +560,7 @@ tr:
         text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: Bilgisayarlar gerçekten akıllı olabilirler fakat sadece adım adım ne söylemek istediğini tam anlamıyla ona söylersen seni anlayabilirler. Algoritmalar hakkında harika şey eğer sırayla talimatları uyarsan zamanın ötesinde nasıl yapıldığını bilmediğin bir şeyi yapabilirsin. Tıpkı tarife uymak gibi.
       3:
         image: notes/C1_planting_seed_3.png
         text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
@@ -891,7 +890,7 @@ tr:
         text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
       5:
         image: notes/C3_computational_thinking_5.png
-        text: "After I have figured out the steps to solving a problem, I can put those steps in a specific order called an algorithm so that anyone can use my directions to solve that problem. We're going to use these four steps to figure out how to play the game with no rules. By the end of the game, you'll be able to play something that looks like this!"
+        text: Problemi çözme aşamalarını çözdükten sonra, bu aşamaları algoritma denilen belirli sıraya koyabilirim böylece herhangi biri problemi çözmek için benim talimatlarımı kullanabilir. Biz bu dört aşamayı kuralsız oyunun nasıl oynancağını çözmek için kullanacağız. Oyunun sonunda, buna benzer bir şeyi oynayabileceksin!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png

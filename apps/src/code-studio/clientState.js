@@ -2,9 +2,7 @@
  * @file Helper functions for accessing client state. This state is stored in a
  *       combination of cookies and HTML5 web storage.
  */
-'use strict';
-
-var $ = require('jquery');
+import cookies from 'js-cookie';
 var sessionStorage = window.sessionStorage;
 
 import { mergeActivityResult } from './activityUtils';
@@ -40,7 +38,7 @@ var COOKIE_OPTIONS = {
 
 clientState.reset = function () {
   try {
-    $.removeCookie('lines', {path: '/'});
+    cookies.remove('lines', {path: '/'});
     sessionStorage.clear();
   } catch (e) {}
 };
@@ -172,7 +170,7 @@ clientState.allLevelsProgress = function () {
  * @returns {number}
  */
 clientState.lines = function () {
-  var linesStr = $.cookie('lines');
+  var linesStr = cookies.get('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
 
@@ -183,7 +181,7 @@ clientState.lines = function () {
 function addLines(addedLines) {
   var newLines = Math.min(clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
 
-  $.cookie('lines', String(newLines), COOKIE_OPTIONS);
+  cookies.set('lines', String(newLines), COOKIE_OPTIONS);
 }
 
 /**

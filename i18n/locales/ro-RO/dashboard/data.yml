@@ -1,541 +1,472 @@
 ro:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Introducerea K-8 la cursul de Informatică
-          Unplug1: Etapa 1
-          Maze: Etapa 2
-          Unplug2: Etapa 3
-          Unplug3: Etapa 4
-          Artist: Etapa 5
-          Unplug4: Etapa 6
-          Artist2: Etapa 7
-          Unplug5: Etapa 8
-          Farmer: Etapa 9
-          Unplug6: Etapa 10
-          Artist3: Etapa 11
-          Unplug7: Etapa 12
-          Farmer2: Etapa 13
-          Unplug8: Etapa 14
-          Artist4: Etapa 15
-          Unplug9: Etapa 16
-          Farmer3: Etapa 17
-          Unplug10: Etapa 18
-          Artist5: Etapa 19
-          Unplug11: Etapa 20
-        Hour of Code:
-          desc: Ora de Programare
-          Maze: Etapa 1
-        Edit Code:
-          desc: Editează codul (beta)
-          MazeEC: Etapa 1
-        2014 Levels:
-          desc: Sări (beta)
-          Bounce: Etapa 1
-        Builder Levels:
-          desc: Puzzle-uri create de utilizator (beta)
-          Custom: Etapa 1
-        Flappy Levels:
-          desc: Pasărea Flappy
-          Flappy: Etapa 1
-        Jigsaw Levels:
-          desc: Puzzle (beta)
-          Jigsaw: Etapa 1
-        Step Levels:
-          desc: Labirint (beta)
-          MazeStep: Pas de Etapă
-        edit-code:
-          desc: Editează codul (beta)
-          MazeEC: Etapa 1
-          Applab: Etapa 2
-          ArtistEC: Etapa 3
-          StudioEC: Etapa 4
-        events:
-          desc: Sări (beta)
-          Bounce: Etapa 1
-          Studio: Etapa 2
-        builder:
-          desc: Puzzle-uri create de utilizator (beta)
-          Custom: Etapa 1
-        flappy:
-          desc: Pasărea Flappy
-          Flappy: Etapa 1
-        jigsaw:
-          desc: Puzzle (beta)
-          Jigsaw: Etapa 1
-        step:
-          desc: Labirint (beta)
-          MazeStep: Pas de Etapă
-        wordsearch:
-          desc: Albina ortografiind (beta)
-          WordSearch: Etapa 1
     game:
       name:
-        Unplug1: Introducere în Informatică
-        Maze: Labirintul
-        Multi: Opțiuni Multiple
-        Unplug2: Gândire de Calcul
-        Unplug3: Programare pe Hârtie Milimetrică
-        Artist: Artistul
-        Unplug4: Algoritmi
-        Artist2: Artistul 2
-        Unplug5: Funcţii
-        Farmer: Fermierul
-        Unplug6: Condiţionale
-        Artist3: Artistul 3
-        Unplug7: Compunerea muzicală
-        Farmer2: Fermierul 2
-        Unplug8: Abstractizare
-        Artist4: Artistul 4
-        Unplug9: Programare de releu
-        Farmer3: Fermierul 3
-        Unplug10: Internetul
-        Artist5: Artistul 5
-        Unplug11: Încheiere
-        MazeEC: Labirintul
-        Bounce: Săritură
-        Flappy: Pasărea Flappy
-        Jigsaw: Puzzle
-        MazeStep: Modul Pas Labirint
-        Wordsearch: Cautare de cuvinte
-        Webapp: Laboratului Aplicației
-        ArtistEC: Artistul
-        TextMatch: Potrivire de text
-        StudioEC: Laborator de Joacă
-        Applab: Laboratului Aplicației
-        NetSim: Simulator Internet
-        Custom: Artist
-        CustomStudio: Laborator de Joacă
+        'Unplug1': Introducere în Informatică
+        'Maze': Labirintul
+        'Multi': Opțiuni Multiple
+        'Unplug2': Gândire de Calcul
+        'Unplug3': Programare pe Hârtie Milimetrică
+        'Artist': Artistul
+        'Unplug4': Algoritmi
+        'Artist2': Artistul 2
+        'Unplug5': Funcţii
+        'Farmer': Fermierul
+        'Unplug6': Condiţionale
+        'Artist3': Artistul 3
+        'Unplug7': Compunerea muzicală
+        'Farmer2': Fermierul 2
+        'Unplug8': Abstractizare
+        'Artist4': Artistul 4
+        'Unplug9': Programare de releu
+        'Farmer3': Fermierul 3
+        'Unplug10': Internetul
+        'Artist5': Artistul 5
+        'Unplug11': Încheiere
+        'MazeEC': Labirintul
+        'Bounce': Săritură
+        'Flappy': Pasărea Flappy
+        'Jigsaw': Puzzle
+        'MazeStep': Modul Pas Labirint
+        'Wordsearch': Cautare de cuvinte
+        'Webapp': Laboratului Aplicației
+        'ArtistEC': Artistul
+        'TextMatch': Potrivire de text
+        'StudioEC': Laborator de Joacă
+        'Applab': Laboratului Aplicației
+        'NetSim': Simulator Internet
+        'Custom': Artist
+        'CustomStudio': Laborator de Joacă
     trophy:
       name:
-        Bronze: Bronz
-        Silver: Argint
-        Gold: Aur
+        'Bronze': Bronz
+        'Silver': Argint
+        'Gold': Aur
     concept:
       description:
-        sequence: Secvenţă
-        if: Bloc Dacă
-        if_else: bloc Dacă-altfel
-        loop_times: Bloc Repetă ori
-        loop_until: Bloc Repetă Până La
-        loop_while: Bloc În timp ce
-        loop_for: Bloc Contor
-        function: Funcţii
-        parameters: Funcții cu Parametrii
+        'sequence': Secvenţă
+        'if': Bloc Dacă
+        'if_else': bloc Dacă-altfel
+        'loop_times': Bloc Repetă ori
+        'loop_until': Bloc Repetă Până La
+        'loop_while': Bloc În timp ce
+        'loop_for': Bloc Contor
+        'function': Funcţii
+        'parameters': Funcții cu Parametrii
     level:
       instructions:
-        maze_2_2: 'Mă poți ajuta să prind porcușorul buclucaș? Grupează o pereche de blocuri "mută înainte" şi apasă "Rulează" pentru a mă ajuta să ajung acolo. '
-        maze_2_1: Acest porcușor îmi zburlește penele. Ajută-mă să-l găsesc!
-        maze_2_2_5: Trasează calea și du-mă la porcușorul nătâng. Evită TNT-ul sau penele-mi vor zbura!
-        maze_2_3: Ghidează-mă la răutatea verde! (Atenție la TNT)
-        maze_2_4: Păstrează-ți calmul și ajută-mă să găsesc porcușorul rău. Altfel s-ar putea să mă enervez!
-        maze_2_5: Există o modalitate prin care pot ajunge la porcușorul nătâng folosind doar 2 blocuri. Poți să-ți dai seama cum?
-        maze_2_6: Încearcă să mă duci la intrusul verde folosind doar trei blocuri.
-        maze_2_7: 'Ajută-mă să alung acest purceluş rău folosind cel mai mic număr de blocuri. Încearcă să folosești mai mult de un bloc "repetă ori".'
-        maze_2_8: 'Când un bloc este gri, inseamnă că nu poți să-l ștergi. Rezolvă acest puzzle utilizând blocul ”repetă” care repetă de 3 ori. Încearcă să pui aceste 3 blocuri în interiorul blocului gri ”repetă”: mută, mută, întoarce.'
-        maze_2_9: 'Ok, încearcă noul bloc "repetă până la" - va repeta până când am ajuns la porcușorul enervant.'
-        maze_2_10: 'OK, ultima dată pentru practică - poți rezolva acest lucru folosind doar 4 blocuri?'
-        maze_2_11: Dragă persoană. Eu zombie. Mie foame. Trebuie... să ajung... la floarea soarelui... Poți să mă duci acolo cu doar 5 blocuri?
-        maze_2_12: OK, această situație este similară, dar uşor diferită. Poți s-o faci în doar 5 blocuri?
-        maze_2_13: 'Utilizează noul bloc "dacă" pentru a mă lăsa să decid când să întorc. Sugestie: mai ai nevoie doar un singur bloc, dar învață cum am aranjat noi așa încât să o poți face pe cont propriul data viitoare.'
-        maze_2_14: 'Ok, această situație este la fel ca și în ultimul puzzle, dar trebuie să îți amintești cum ai folosit împreună blocul "dacă" şi blocul "repetă".'
-        maze_2_15: 'Eu vreau floarea soarelui! Utilizează un bloc "dacă" pentru a mă duce acolo folosind cel mai mic număr de blocuri.'
-        maze_2_16: 'OK, hai să mai facem din nou acest lucru pentru practică - nu este foarte diferit, dar fii atent la chompers!'
-        maze_2_17: 'Blocurile "Dacă-altfel" verifică o condiţie, şi apoi fac un lucru sau altul. Pentru a mă duce la floarea-soarelui încearcă să utilizezi acest bloc nou.'
-        maze_2_18: 'Încă un exercițiu de practică cu blocul "dacă-altfel", poate reușești chiar prima încercare?'
-        maze_2_19: Poţi adăuga doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faci corect, eu pot merge pe orice cale curbată indiferent de lungime.
-        turtle_1_1: Bună, eu sunt un artist. Poți scrie un cod care să mă facă să desenez aproape orice. Folosește câteva blocuri care să mă facă sa desenez peste liniile gri din imagine.
-        turtle_1_2: 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată selectând-o în noul bloc "setează culoare".'
-        turtle_1_3: Fă un pătrat utilizând doar 3 blocuri.
-        turtle_1_4: 'Desenează un triunghi ale cărui laturi sunt toate în culori diferite, folosind opţiunea "culoare aleatoare" care selectează o culoare diferită de fiecare dată. Sugestie: va trebui să-ți dai seama cât de departe să te întorci făcând clic pe numărul în blocul de întoarcere.'
-        turtle_1_5: Acum, pentru antrenament , desenează un triunghi, pe urmă un pătrat pentru a obține un plic.
-        turtle_1_6: 'Îți poți da seama cum să desenezi acest triunghi și acest pătrat? Indiciu: Desenează mai întâi triunghiul, apoi dă-ți seama cât de mult să întorci înainte de a desena pătratul.'
-        turtle_1_7: 'În regulă, hai să facem lucrurile un pic mai complicate - vezi dacă poți desena acești ochelari verzi. Pătratele au 100 de pixeli pe fiecare parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!'
-        turtle_1_8: 'Ok, încearcă să îți dai seama ce se întamplă dacă rulezi acest cod (sau apasă "Rulează" pentru a-l încerca). Apoi repetă-l de câte ori e nevoie ca să completezi desenul. Culorile vor fi diferite de fiecare dată.'
-        turtle_1_9: Poți să îți dai seama cu ce număr să înlocuiești semnele de întrebare pentru a desena un cerc?
-        turtle_1_10: 'Ai reușit! Acum, desenează orice vrei. Câteva idei nostime: un om din 5 bețe si un cerc , fulg de zăpadă sau spirală. Încearcă, de asemenea, și noul bloc "setează lățimea". Distrează-te!'
-        turtle_4_1: 'Poţi desena un triunghi (cu margini de 100 pixeli) cu numai 3 blocuri? Sugestie: utilizează un bloc "repetă".'
-        turtle_4_2: 'Adaugă un bloc "întoarce la dreapta cu 90 de grade" undeva în mijlocul programului din spațiul de lucru pentru a desena aceste triunghiuri.'
-        turtle_4_3: 'OK, aici ai codul pe care l-ai scris așa încât să traseze un singur triunghi. Poți să adăugi un bloc "repetă" şi unul "întoarce" pentru a face o floricică drăguță?'
-        turtle_4_4: 'Aici ai acelaşi cod de la puzzle-ul anterior, dar cu o întoarcere de numai 36 de grade după trasarea fiecărui triunghi. De câte ori trebuie să se repete acesta? (Sugestie: după o întoarcere de 360 de grade desenul va deveni cerc complet)'
-        turtle_4_5: 'Aici ai acelaşi cod de la puzzle-ul anterior, dar repetarea cotiturilor se va face de 36 de ori. La câte grade trebuie să fie întoarcerile? (Sugestie: după o întoarcere de 360 de grade desenul va deveni cerc complet)'
-        turtle_4_6: Folosind numai 3 blocuri, ai putea desena un pătrat cu muchii de 20 de pixeli?
-        turtle_4_7: 'Aici este codul pentru desenul pătrat din ultimul puzzle. Poți să-l repeți astfel încât să trasezi 10 pătrate adiacente cum ar fi o scară? Sugestie: ai nevoie doar de încă 2 blocuri.'
-        turtle_4_8: Aici este soluţia pentru puzzle-ul anterior. Mai poți adăuga doar 2 blocuri pentru a finaliza desenul?
-        turtle_4_9: Aici este soluţia de la puzzle-ul precedent. Cu câte grade ar trebui să cotești pentru a finaliza desenul? (Probabil vei avea nevoie să ghicești de câteva ori)
-        turtle_4_10: Aici ai soluţia de la puzzle-ul anterior. De câte ori trebuie să repeţi pentru a finaliza desenul?
-        turtle_4_11: 'Încearcă să schimbi numerele în blocurile "întoarce" şi "repetă" pentru a crea modele diferite. Sau, experimentează schimbarea restului de cod pentru a desena orice ce vrei tu.'
-        maze_karel_1_1: 'Bună, eu sunt un fermier. Am nevoie de ajutorul tău să netezesc terenul fermei mele ca să fie gata de plantare. Mută-mă la o stivă de pământ şi folosește blocul "elimină" pentru a o înlătura.'
-        maze_karel_1_2: 'Apoi, mută-mă la groapă si umple-o cu DOUĂ lopeţi de pământ folosind blocul "umple".'
-        maze_karel_1_3: Mută-mă lângă o stivă de pământ și spune-mi de cât de multe lopeți pline am nevoie astfel incât să o elimin folosind cât mai puține blocuri cu putință.
-        maze_karel_1_4: 'Mă poți ajuta să elimin toate cele patru mormane de pământ? Indiciu: folosește un bloc "repetă" dacă poți.'
-        maze_karel_1_5: 'Ajută-mă să umplu aceste gropi cu 5 lopeți pline de pământ. Indiciu: poți pune un bloc "repetă" în interiorul unui bloc "în timp ce".'
-        maze_karel_1_6: 'Elimină toate grămezile de pământ, folosind cât mai puține blocuri posibile. Noile opțiuni din meniul vertical de pe blocul "în timp ce" îmi spun dacă stau pe un morman sau pe o groapă.'
-        maze_karel_1_7: Wow, am găsit o groapă foarte adâncă! Nu ştiu de cât de multe lopeți de pământ e nevoie să se umple. Puteţi scrie un program care o umple până când solul este drept?
-        maze_karel_1_8: Ajută-mă să umplu groapa de la capătul terenului, folosind cât mai puține blocuri posibile.
-        maze_karel_1_9: 'Fă-mă să înlătur toate aceste mormane de pământ. Încearcă să utilizezi cât mai puţine blocuri posibil. Sugestie: încearcă să utilizezi un bloc de "în timp ce".'
-        maze_karel_1_10: 'Lucrez până târziu, așa că e întuneric afară, și nu-mi pot da seama cât de mari sunt grămezile. Acum nu mai am toate opțiunile pe care le aveam la blocul "în timp ce". Mută-mă de-a lungul câmpului și dacă există pe-acolo vreo gramadă, înlătur-o.'
-        maze_karel_1_11: 'Încă e întuneric afară. Mută-mă de-a lungul câmpului. Dacă găsești o grămadă, înlătur-o și dacă găsești o groapă, umple-o. Indiciu: folosește meniul vertical de opțiuni din blocul "dacă".'
-        turtle_2_1: 'Salut. Eu artist zombie. Eu iubesc desenez! Ajută-mă să desenez un pătrat într-o culoare specială. Notă importantă: ai aceleași blocuri dar acum sunt aranjate pe categorii.'
-        turtle_2_2: 'Bine ai venit la utilizarea funcțiilor, care te lasă să definești blocuri noi! Încearcă noul bloc "desenează un pătrat" care se găsește în categoria "Funcții", ca să desenezi un pătrat mic verde de dimensiuni 50x50.'
-        turtle_2_3: 'Folosește blocul "repetă" (în categoria "Bucle") ca să desenezi 3 pătrate cu latura de 100, fiecare la 120 de grade distanță unul de altul. Fă acest lucru folosind 3 culori diferite alese la întâmplare.'
-        turtle_2_4: 'Acum avem să devenim creativi. Schimbă codul ca să desenez 36 de pătrate, largi de 100 de pixeli și la 10 grade departare unul de altul. Indiciu: e posibil să vrei să folosești cursorul ca să mă determini să mă mișc mai repede.'
-        turtle_2_5: 'Desenează pătrate cu laturile de 50, 60, 70, 80, și 90 de pixeli. Vei avea nevoie să folosești de cinci ori funcția "deseneză un pătrat".'
-        turtle_2_6: 'Ok, acest program va folosi un numărător, pentru a desena aceleași pătrate ca și ultima oară. Vrei ca pătratul să fie de aceași mărime cu numărătorul, așa că folosește blocul "numărător". Indiciu: Se găsește în categoria Variabile.'
-        turtle_2_7: 'Aici este un program pentru a desena o spirală, dar blocurile sunt dezactivate și nu vor rula. Fă un nou program folosind un bloc de tipul "numără cu" (în categoria Bucle) și un bloc "numărător (în categoria Variabile) pentru a desena aceași spirală.'
-        turtle_2_7_5: 'Există o nouă funcție "desenează un om de zăpadă" (în categoria Funcţii). Desenează doi oameni de zăpadă, de înalțime 250 şi 100.'
-        turtle_2_8: 'Aceasta este puțin mai delicată. Folosește funcția "desenează un om de zăpadă" și noul bloc "sări înainte" (în categoria Acțiuni). Desenează 3 oameni de zăpadă în culori diferite, la departare de 100 de pixeli între ei.'
-        turtle_2_9: 'Folosește o buclă "numără cu" pentru a desena o familie de oameni de zăpadă cu înălțimi de 110, 100, 90, 80 și 70. Oamenii de zăpadă ar trebui să fie la 60 de pixeli distanță unul de altul.'
-        turtle_2_10: Aici ai un cod ca să încerci să experimentezi cu diferite spirale. Ce se întamplă dacă schimbi cu cât se face întoarcerea? Sau dacă setezi o culoare la întâmplare în buclă? Desenează orice îți place.
-        maze_karel_2_1: 'Încearcă să folosești blocurile ca să mă ajuţi să elimin toate grămezile şi să umplu toate gropile din pământ. Încearcă să folosești bucle în loc să utilizezi prea multe blocuri. Sugestie: poți amplasa o buclă în interiorul altei bucle.'
-        maze_karel_2_2: 'Ne-am definit propriul nostru bloc numit "umple 5", care este acum în categoria Funcţiilor. Foloseşte-l ca să mă ajuţi să umplu această groapă.'
-        maze_karel_2_3: 'Utilizează din nou blocul-funcţie "umple 5" ca să mă faci să umplu toate gropile. Vei avea de tras înafară blocul "umple 5" din categoria Funcţiilor.'
-        maze_karel_2_4: Definește o nouă funcție ce înlătură 7 lopeți. Apoi folosește-o pentru a scrie un program ce mă poate ajuta să elimin toate grămezile.
-        maze_karel_2_5: Creează o nouă funcție ce înlătură 6 lopeți pline dintr-o grămadă, și folosește-o pentru a mă ajuta să nivelez mormanele.
-        maze_karel_2_6: 'Folosește două funcţii noi, "umple 8" şi "elimină 8", pentru a mă ajuta să nivelez grămada şi să umplu groapa.'
-        maze_karel_2_7: E o vacă pe câmpul meu! Scrie o funcţie nouă care mă ajută să evit vaca şi să elimin grămada. Pune toate blocurile tale în interiorul noii funcţii.
-        maze_karel_2_8: 'Folosește această funcţie nouă, "evită vaca și elimină 1", ca să mă ajuți să elimin toate grămezile.'
-        maze_karel_2_9: Ok, iată aici o funcţie care elimină 4 grămezi de pământ diferite în coloana verticală. Încearcă să pui această funcţie într-o buclă, astfel încât să elimini toate mormanele de pământ folosind doar câteva blocuri.
-        maze_karel_2_10: Mişcă-mă de-a lungul câmpului şi folosește aceste două funcţii ca să mă ajuţi să elimin toate grămezile şi să umplu gropile.
-        turtle_3_1: 'Acest puzzle îți arată cum funcţiile "desenează un pătrat" şi "desenează un cerc" sunt definite.  Definirea unei funcţii nu execută blocurile sale. Trebuie să tragi afară blocul "desenează un pătrat" pentru a desena în fapt un pătrat.'
-        turtle_3_2: 'Folosind drept exemplu funcţia "desenează un pătrat", creează o funcţie "desenează un triunghi" şi folosește-o.'
-        turtle_3_3: 'Desenează garduri triungulare în jurul pisicilor şi un gard pătrat în jurul văcii.  Sfat: testează programul de-a lungul lucrului.'
-        turtle_3_4: 'Vezi dacă poţi să-ți dai seama cum să utilizezi "desenează un pătrat" şi "desenează un triunghi" (şi alte blocuri) pentru a desena o casă în jurul leului.'
-        turtle_3_5: 'Acum creează o nouă funcție "desenează o casă" şi utilizeaz-o pentru a găzdui două pisici. Sugestie: creează o nouă funcţie folosind blocul "fă ceva" şi introdu propriul text pentru a denumi blocul.'
-        turtle_3_6: 'Folosind "desenează un pătrat" de exemplu, adaugă un input numit "lungime" la "desenează un triunghi". Apoi, desenează triunghiuri în dimensiuni diferite. (Sugestie: fă clic pe stea pentru a adăuga o intrare la o funcție)'
-        turtle_3_7: 'Adaugă un input numit "lungime" la "desenează o casă" și contruiește o casă mare pentru elefant (cu margini de 150 de pixeli lungime)'
-        turtle_3_8: 'Modifică funcția "desenează o casă" astfel încât să ajung la colţul din dreapta jos, după ce desenez o casa nouă. Utilizează această funcţie modificată pentru a desena trei case.'
-        turtle_3_9: 'Poţi re-crea funcţia "desenează o casă" fără ajutor? Încearc-o, și apoi desenează un rând de case.'
-        turtle_3_10: Ai învăţat o mulţime! Acum folosește-ți cunoștințele pentru a desena tot ce vrei. Încercă să deseni o stea, sau o spirală sau un fulg de nea sofisticat.
-        maze_karel_debug_seq_1: Bine ai venit la depanare! Codul meu nu funcţionează corect. Poţi descoperi problema şi să o repari astfel încât să pot obţine un teren plat şi gata de plantare?
-        maze_karel_debug_seq_2: Ce e în neregulă cu acest program? Cum ar trebui să îl repari ca eu să pot elimina acea grămadă?
-        maze_karel_debug_repeat: Depanează acest program pentru mine în aşa fel încât terenul va fi frumos şi plat.
-        maze_karel_debug_while: Cum ar trebui să schimbi acest program ca să mă ajute să umplu groapa?
-        maze_karel_debug_if: Ajutor! Repară programul în aşa mod încât câmpul meu va fi complet plan.
-        maze_karel_debug_if_else: Găsește erorile în acest program, astfel încât să pot umple găurile şi elimina toate grămezile.
-        maze_karel_debug_function_1: Ce ar trebui să modifici la acest program pentru a mă ajuta să elimin toate grămezile?
-        maze_karel_debug_function_2: Poți depana acest program pentru mine ca să pot să-mi fac câmpul plat?
-        maze_karel_debug_function_3: 'Editează acest program, astfel incât să elimin toate grămezile de pe domeniul meu. '
-        turtle_5_1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        turtle_5_2: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        turtle_5_3: Încearcă să execuți acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        turtle_5_4: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        turtle_5_5: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        turtle_5_6: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        maze_3_1: Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare(); să-mi recuperez ouălele.
-        maze_3_2: Scrie-mi un program, ca să reușesc să ajung până la porcușor.
-        maze_3_3: Cum să ajung la porcușor? Asigură-te că nu intru în cutia cu TNT!
-        maze_3_4: Argh! Scrie-mi un program care mă duce de jur împrejurul minelor de TNT şi până la porcușor.
-        bounce_1: 'Atașează un bloc la blocul "când săgeată stânga" şi apasă "Rulează programul". Mută paleta folosind săgeata stânga pentru a ajunge la ţinta finală.'
-        bounce_2: 'Atașează un bloc la blocurile "când săgeată dreapta" și "când săgeată stânga". Mută paleta pentru a atinge ambele ținte finale.'
-        bounce_3: 'Acum, încearcă ceva similar cu blocul "când săgeata în sus". Mută padela până la obiectivul final din partea de sus.'
-        bounce_4: De data aceasta ai nevoie să adăugi patru blocuri. Mută paletele la toate cele patru obiective pentru a finaliza acest puzzle.
-        bounce_5: 'Vom trimite o bilă sa zboare în jos spre palete. Ataşează un bloc la blocul "când bila lovește paleta" pentru a garanta ca bila atinge obiectivul țintă.'
-        bounce_6: 'Acum obiectivul țintă se află în partea de sus. Ai nevoie să atașezi blocuri la ambele blocuri "când bila lovește" pentru a rezolva puzzle-ul.'
-        bounce_7: 'Atașează blocuri la fiecare din blocurile "când". Fă bila să ricoșeze până ajunge la țintă.'
-        bounce_10: 'Există un acum un gol în partea de sus. Atașează blocurile "scor" și "scor oponent" la blocurile "când bilă in gaură" și "când bila ratează paleta" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul tău să realizeze scor de două ori.'
-        bounce_11: 'Acum poți atașa blocuri la blocul "rulează". Trebuie să atașezi noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza paletei și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori.'
-        bounce_12: Crează propriul tău joc Țopăială. Poți modifica toate imaginile şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
-        Custom_builder: 'Folosește blocuri din caseta de instrumente în spațiul de lucru pentru a putea desena nivelul dorit. Apasă "Rulează Programul" atunci când ești gata.'
-        flappy_1: 'Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul". Fă clic sau atinge ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.'
-        flappy_2: 'Acum am adăugat și ceva teren.  Ataşează un bloc la blocul "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy se prăbușește.'
-        flappy_3: 'Blocul "când rulează" îți permite să rulezi codul atunci când îți începe jocul.  Încearcă să setezi nivelul vitezei şi a datului din aripi către ţintă.'
-        flappy_4: 'Flappy va zbura printre obstacole dacă nu scrii codul pentru a-l face să se accidenteze. Ataşează un bloc la blocul "când lovește un obstacol". Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy s-a prăbuşit în primul set de conducte.'
-        flappy_5: 'Hai să adăugăm un tabel de scor, și numărător puncte atunci când Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol", și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de conducte.'
-        flappy_6: Verifică dacă încă mai poți înscrie un punct după ce-l faci pe Flappy să dea din aripi mai mult sau mai puțin.
-        flappy_7: 'Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc la blocul "atunci când rulaţi".'
-        flappy_8: Poți seta vizuale oricând, nu doar atunci când începe jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
-        flappy_9: Pentru diversitate, în locul opririi jocului, încearcă setarea scorului la 0 atunci când lovești un obstacol.
-        flappy_11: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
-        flappy_k1_1: Joacă Flappy
-        flappy_k1_2: 'Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul". Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.'
-        flappy_k1_3: 'Acum am adăugat și ceva teren.  Ataşează un bloc la blocul "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy se prăbușește.'
-        flappy_k1_4: 'Blocul "când rulează" îți permite să rulezi codul atunci când îți începe jocul.  Încearcă să setezi nivelul vitezei şi a datului din aripi către ţintă.'
-        flappy_k1_5: 'Flappy va zbura printre obstacole dacă nu scrii codul pentru a-l face să se accidenteze. Ataşează un bloc la blocul "când lovește un obstacol". Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy s-a prăbuşit în primul set de conducte.'
-        flappy_k1_6: 'Hai să adăugăm un tabel de scor, și numărător puncte atunci când Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol", și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de conducte.'
-        flappy_k1_7: Vedeți dacă puteţi înscrie mai multe puncte pentru a-l face să treacă un obstacol
-        flappy_k1_8: 'Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc la blocul "atunci când rulaţi".'
-        flappy_k1_9: 'Încercaţi schimbarea jucătorului prin ataşarea un bloc "setare jucător" la blocul "atunci când rulează".'
-        jigsaw_1: Fă clic pe bloc
-        jigsaw_2: Trage blocul către ţintă
-        jigsaw_3: Aranjează blocurile pentru a forma imaginea
-        jigsaw_4: Aranjează blocurile pentru a forma imaginea
-        jigsaw_5: Aranjează blocurile pentru a forma imaginea
-        jigsaw_6: Aranjează blocurile pentru a forma imaginea
-        jigsaw_7: Aranjează blocurile pentru a forma imaginea
-        jigsaw_8: Aranjează blocurile pentru a forma imaginea
-        jigsaw_9: Aranjează blocurile pentru a forma imaginea
-        jigsaw_10: Aranjează blocurile pentru a forma imaginea
-        jigsaw_11: Aranjează blocurile pentru a forma imaginea
-        jigsaw_12: Aranjează blocurile pentru a forma imaginea
-        jigsaw_13: Rezolva puzzle-ul!
-        mazestep_1: Pas Labirint descriere
-        mazestep_2: Pas Labirint descriere
-        mazestep_3: Pas Labirint descriere
-        mazestep_4: Pas Labirint descriere
-        mazestep_5: Pas Labirint descriere
-        studio_c2_1: 'Poți face acest câine să spună "Bună ziua lume"?'
-        studio_c2_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
-        studio_c2_3: Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
-        studio_c2_4: 'Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?'
-        studio_c2_5: 'Puteţi scrie un program pentru a face caracatiţa să spună "hello", atunci când se dă clic pe ea?'
-        studio_c2_6: Puteţi scrie un program pentru a face acest pinguin să se deplaseze folosind tastele sus / jos / stânga/dreapta pentru a lovi toate obiectivele?
-        studio_c2_7: 'Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod repetat?'
-        studio_c2_8: 'Puteți face acest pinguin să spună "Ouch!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?'
-        studio_c2_9: Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
-        studio_c2_10: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza pinguinului, şi apoi să îl mutaţi cu săgeţile până când marcați?
-        studio_c2_11: Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
-        studio_c3_story_1: 'Poți face acest câine să spună "Bună ziua lume"?'
-        studio_c3_story_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
-        studio_c3_story_3: Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
-        studio_c3_story_4: 'Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?'
-        studio_c3_story_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
-        studio_c3_story_6: Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
-        studio_c3_game_1: 'Puteţi scrie un program pentru a face caracatiţa să spună "hello", atunci când se dă clic pe ea?'
-        studio_c3_game_2: Puteţi scrie un program pentru a face acest pinguin să se deplaseze folosind tastele sus / jos / stânga/dreapta pentru a lovi toate obiectivele?
-        studio_c3_game_3: 'Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod repetat?'
-        studio_c3_game_4: 'Puteți face acest pinguin să spună "Ouch!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?'
-        studio_c3_game_5: Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
-        studio_c3_game_6: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza pinguinului, şi apoi să îl mutaţi cu săgeţile până când marcați?
-        studio_c3_game_7: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-        studio_playlab_1: 'Pinguinul vrea să spună "Bună ziua" - îl puteți ajuta?'
-        studio_playlab_2: 'Băiatul din peşteră (actor 1) şi Fata din peşteră (actor 2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune" de două ori?'
-        studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
-        studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
-        studio_playlab_5: 'Îl puteți ajuta pe robotul spatial să spună "Salutări pamantenilor" când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe Rulare'
-        studio_playlab_6: O puteți ajuta pe Vrăjitoare să se miște împrejur folosind tastele săgeți sus/jos/dreapta/stânga pentru a prinde toate mingile de foc magice?
-        studio_playlab_7: 'Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a ajuta Expertul să se miște la dreapta şi la stânga în mod repetat?'
-        studio_playlab_8: Puteţi adăuga un bloc pentru a marca un punct și un bloc pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl mutaţi cu săgeţile până când marcați?
-        studio_playlab_9: 'Setați fundalul pentru această invazie extraterestră şi ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i alerteze pe toți ceilalți'
-        studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-        studio_iceage_hello1: 'Sid vrea să adune pe toată lumea pentru o nouă aventură. Poți să îl ajuți să spună "Bună ziua" glisând blocul "spune" în zona de lucru şi tastând cuvintele "Bună ziua" în interiorul lui?'
-        studio_iceage_hello2: 'Sid (actorul 1) l-a găsit pe Manny (actorul 2) şi vrea să-l invite într-o aventură.  Ajută-i să se salute reciproc folosind blocul "actorul spune" de două ori.'
-        studio_iceage_move_to_flag: 'Scrat este în căutarea ghindei lui! Ajută-l să parcurgă ultimii 200 de pixeli folosind blocul "mergi".'
-        studio_iceage_move_to_actor: 'Diego (actorul 1) este în căutarea lui Manny (actorul 2). Ajută-l pe Diego să meargă 200 pixeli în jos către Manny folosind blocul "mutare actor". Apoi, conectează un bloc la evenimentul "când actorul atinge" pentru a reda un sunet atunci când se vor găsi unul pe celălalt.'
-        studio_iceage_repeat: 'Blocul "repetă la nesfârșit" iți permite să rulezi codul în mod continuu. Poți atașa blocuri pentru a-l ajuta pe Granny să se antreneze mișcându-se la stânga și la dreapta în mod repetat?'
-        studio_iceage_click_hello: "Poți să îl ajuți pe Sid să facă o ultimă strigare pentru prieteni când faci click pe el? Nu uita să faci click pe el după ce ai apăsat 'Rulează'."
-        studio_iceage_move_events: |-
+        'maze_2_2': 'Mă poți ajuta să prind porcușorul buclucaș? Grupează o pereche de blocuri "mută înainte" şi apasă "Rulează" pentru a mă ajuta să ajung acolo. '
+        'maze_2_1': Acest porcușor îmi zburlește penele. Ajută-mă să-l găsesc!
+        'maze_2_2_5': Trasează calea și du-mă la porcușorul nătâng. Evită TNT-ul sau penele-mi vor zbura!
+        'maze_2_3': Ghidează-mă la răutatea verde! (Atenție la TNT)
+        'maze_2_4': Păstrează-ți calmul și ajută-mă să găsesc porcușorul rău. Altfel s-ar putea să mă enervez!
+        'maze_2_5': Există o modalitate prin care pot ajunge la porcușorul nătâng folosind doar 2 blocuri. Poți să-ți dai seama cum?
+        'maze_2_6': Încearcă să mă duci la intrusul verde folosind doar trei blocuri.
+        'maze_2_7': 'Ajută-mă să alung acest purceluş rău folosind cel mai mic număr de blocuri. Încearcă să folosești mai mult de un bloc "repetă ori".'
+        'maze_2_8': 'Când un bloc este gri, inseamnă că nu poți să-l ștergi. Rezolvă acest puzzle utilizând blocul ”repetă” care repetă de 3 ori. Încearcă să pui aceste 3 blocuri în interiorul blocului gri ”repetă”: mută, mută, întoarce.'
+        'maze_2_9': 'Ok, încearcă noul bloc "repetă până la" - va repeta până când am ajuns la porcușorul enervant.'
+        'maze_2_10': 'OK, ultima dată pentru practică - poți rezolva acest lucru folosind doar 4 blocuri?'
+        'maze_2_11': Dragă persoană. Eu zombie. Mie foame. Trebuie... să ajung... la floarea soarelui... Poți să mă duci acolo cu doar 5 blocuri?
+        'maze_2_12': OK, această situație este similară, dar uşor diferită. Poți s-o faci în doar 5 blocuri?
+        'maze_2_13': 'Utilizează noul bloc "dacă" pentru a mă lăsa să decid când să întorc. Sugestie: mai ai nevoie doar un singur bloc, dar învață cum am aranjat noi așa încât să o poți face pe cont propriul data viitoare.'
+        'maze_2_14': 'Ok, această situație este la fel ca și în ultimul puzzle, dar trebuie să îți amintești cum ai folosit împreună blocul "dacă" şi blocul "repetă".'
+        'maze_2_15': 'Eu vreau floarea soarelui! Utilizează un bloc "dacă" pentru a mă duce acolo folosind cel mai mic număr de blocuri.'
+        'maze_2_16': 'OK, hai să mai facem din nou acest lucru pentru practică - nu este foarte diferit, dar fii atent la chompers!'
+        'maze_2_17': 'Blocurile "Dacă-altfel" verifică o condiţie, şi apoi fac un lucru sau altul. Pentru a mă duce la floarea-soarelui încearcă să utilizezi acest bloc nou.'
+        'maze_2_18': 'Încă un exercițiu de practică cu blocul "dacă-altfel", poate reușești chiar prima încercare?'
+        'maze_2_19': Poţi adăuga doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faci corect, eu pot merge pe orice cale curbată indiferent de lungime.
+        'turtle_1_1': Bună, eu sunt un artist. Poți scrie un cod care să mă facă să desenez aproape orice. Folosește câteva blocuri care să mă facă sa desenez peste liniile gri din imagine.
+        'turtle_1_2': 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată selectând-o în noul bloc "setează culoare".'
+        'turtle_1_3': Fă un pătrat utilizând doar 3 blocuri.
+        'turtle_1_4': 'Desenează un triunghi ale cărui laturi sunt toate în culori diferite, folosind opţiunea "culoare aleatoare" care selectează o culoare diferită de fiecare dată. Sugestie: va trebui să-ți dai seama cât de departe să te întorci făcând clic pe numărul în blocul de întoarcere.'
+        'turtle_1_5': Acum, pentru antrenament , desenează un triunghi, pe urmă un pătrat pentru a obține un plic.
+        'turtle_1_6': 'Îți poți da seama cum să desenezi acest triunghi și acest pătrat? Indiciu: Desenează mai întâi triunghiul, apoi dă-ți seama cât de mult să întorci înainte de a desena pătratul.'
+        'turtle_1_7': 'În regulă, hai să facem lucrurile un pic mai complicate - vezi dacă poți desena acești ochelari verzi. Pătratele au 100 de pixeli pe fiecare parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!'
+        'turtle_1_8': 'Ok, încearcă să îți dai seama ce se întamplă dacă rulezi acest cod (sau apasă "Rulează" pentru a-l încerca). Apoi repetă-l de câte ori e nevoie ca să completezi desenul. Culorile vor fi diferite de fiecare dată.'
+        'turtle_1_9': Poți să îți dai seama cu ce număr să înlocuiești semnele de întrebare pentru a desena un cerc?
+        'turtle_1_10': 'Ai reușit! Acum, desenează orice vrei. Câteva idei nostime: un om din 5 bețe si un cerc , fulg de zăpadă sau spirală. Încearcă, de asemenea, și noul bloc "setează lățimea". Distrează-te!'
+        'turtle_4_1': 'Poţi desena un triunghi (cu margini de 100 pixeli) cu numai 3 blocuri? Sugestie: utilizează un bloc "repetă".'
+        'turtle_4_2': 'Adaugă un bloc "întoarce la dreapta cu 90 de grade" undeva în mijlocul programului din spațiul de lucru pentru a desena aceste triunghiuri.'
+        'turtle_4_3': 'OK, aici ai codul pe care l-ai scris așa încât să traseze un singur triunghi. Poți să adăugi un bloc "repetă" şi unul "întoarce" pentru a face o floricică drăguță?'
+        'turtle_4_4': 'Aici ai acelaşi cod de la puzzle-ul anterior, dar cu o întoarcere de numai 36 de grade după trasarea fiecărui triunghi. De câte ori trebuie să se repete acesta? (Sugestie: după o întoarcere de 360 de grade desenul va deveni cerc complet)'
+        'turtle_4_5': 'Aici ai acelaşi cod de la puzzle-ul anterior, dar repetarea cotiturilor se va face de 36 de ori. La câte grade trebuie să fie întoarcerile? (Sugestie: după o întoarcere de 360 de grade desenul va deveni cerc complet)'
+        'turtle_4_6': Folosind numai 3 blocuri, ai putea desena un pătrat cu muchii de 20 de pixeli?
+        'turtle_4_7': 'Aici este codul pentru desenul pătrat din ultimul puzzle. Poți să-l repeți astfel încât să trasezi 10 pătrate adiacente cum ar fi o scară? Sugestie: ai nevoie doar de încă 2 blocuri.'
+        'turtle_4_8': Aici este soluţia pentru puzzle-ul anterior. Mai poți adăuga doar 2 blocuri pentru a finaliza desenul?
+        'turtle_4_9': Aici este soluţia de la puzzle-ul precedent. Cu câte grade ar trebui să cotești pentru a finaliza desenul? (Probabil vei avea nevoie să ghicești de câteva ori)
+        'turtle_4_10': Aici ai soluţia de la puzzle-ul anterior. De câte ori trebuie să repeţi pentru a finaliza desenul?
+        'turtle_4_11': 'Încearcă să schimbi numerele în blocurile "întoarce" şi "repetă" pentru a crea modele diferite. Sau, experimentează schimbarea restului de cod pentru a desena orice ce vrei tu.'
+        'maze_karel_1_1': 'Bună, eu sunt un fermier. Am nevoie de ajutorul tău să netezesc terenul fermei mele ca să fie gata de plantare. Mută-mă la o stivă de pământ şi folosește blocul "elimină" pentru a o înlătura.'
+        'maze_karel_1_2': 'Apoi, mută-mă la groapă si umple-o cu DOUĂ lopeţi de pământ folosind blocul "umple".'
+        'maze_karel_1_3': Mută-mă lângă o stivă de pământ și spune-mi de cât de multe lopeți pline am nevoie astfel incât să o elimin folosind cât mai puține blocuri cu putință.
+        'maze_karel_1_4': 'Mă poți ajuta să elimin toate cele patru mormane de pământ? Indiciu: folosește un bloc "repetă" dacă poți.'
+        'maze_karel_1_5': 'Ajută-mă să umplu aceste gropi cu 5 lopeți pline de pământ. Indiciu: poți pune un bloc "repetă" în interiorul unui bloc "în timp ce".'
+        'maze_karel_1_6': 'Elimină toate grămezile de pământ, folosind cât mai puține blocuri posibile. Noile opțiuni din meniul vertical de pe blocul "în timp ce" îmi spun dacă stau pe un morman sau pe o groapă.'
+        'maze_karel_1_7': Wow, am găsit o groapă foarte adâncă! Nu ştiu de cât de multe lopeți de pământ e nevoie să se umple. Puteţi scrie un program care o umple până când solul este drept?
+        'maze_karel_1_8': Ajută-mă să umplu groapa de la capătul terenului, folosind cât mai puține blocuri posibile.
+        'maze_karel_1_9': 'Fă-mă să înlătur toate aceste mormane de pământ. Încearcă să utilizezi cât mai puţine blocuri posibil. Sugestie: încearcă să utilizezi un bloc de "în timp ce".'
+        'maze_karel_1_10': 'Lucrez până târziu, așa că e întuneric afară, și nu-mi pot da seama cât de mari sunt grămezile. Acum nu mai am toate opțiunile pe care le aveam la blocul "în timp ce". Mută-mă de-a lungul câmpului și dacă există pe-acolo vreo gramadă, înlătur-o.'
+        'maze_karel_1_11': 'Încă e întuneric afară. Mută-mă de-a lungul câmpului. Dacă găsești o grămadă, înlătur-o și dacă găsești o groapă, umple-o. Indiciu: folosește meniul vertical de opțiuni din blocul "dacă".'
+        'turtle_2_1': 'Salut. Eu artist zombie. Eu iubesc desenez! Ajută-mă să desenez un pătrat într-o culoare specială. Notă importantă: ai aceleași blocuri dar acum sunt aranjate pe categorii.'
+        'turtle_2_2': 'Bine ai venit la utilizarea funcțiilor, care te lasă să definești blocuri noi! Încearcă noul bloc "desenează un pătrat" care se găsește în categoria "Funcții", ca să desenezi un pătrat mic verde de dimensiuni 50x50.'
+        'turtle_2_3': 'Folosește blocul "repetă" (în categoria "Bucle") ca să desenezi 3 pătrate cu latura de 100, fiecare la 120 de grade distanță unul de altul. Fă acest lucru folosind 3 culori diferite alese la întâmplare.'
+        'turtle_2_4': 'Acum avem să devenim creativi. Schimbă codul ca să desenez 36 de pătrate, largi de 100 de pixeli și la 10 grade departare unul de altul. Indiciu: e posibil să vrei să folosești cursorul ca să mă determini să mă mișc mai repede.'
+        'turtle_2_5': 'Desenează pătrate cu laturile de 50, 60, 70, 80, și 90 de pixeli. Vei avea nevoie să folosești de cinci ori funcția "deseneză un pătrat".'
+        'turtle_2_6': 'Ok, acest program va folosi un numărător, pentru a desena aceleași pătrate ca și ultima oară. Vrei ca pătratul să fie de aceași mărime cu numărătorul, așa că folosește blocul "numărător". Indiciu: Se găsește în categoria Variabile.'
+        'turtle_2_7': 'Aici este un program pentru a desena o spirală, dar blocurile sunt dezactivate și nu vor rula. Fă un nou program folosind un bloc de tipul "numără cu" (în categoria Bucle) și un bloc "numărător (în categoria Variabile) pentru a desena aceași spirală.'
+        'turtle_2_7_5': 'Există o nouă funcție "desenează un om de zăpadă" (în categoria Funcţii). Desenează doi oameni de zăpadă, de înalțime 250 şi 100.'
+        'turtle_2_8': 'Aceasta este puțin mai delicată. Folosește funcția "desenează un om de zăpadă" și noul bloc "sări înainte" (în categoria Acțiuni). Desenează 3 oameni de zăpadă în culori diferite, la departare de 100 de pixeli între ei.'
+        'turtle_2_9': 'Folosește o buclă "numără cu" pentru a desena o familie de oameni de zăpadă cu înălțimi de 110, 100, 90, 80 și 70. Oamenii de zăpadă ar trebui să fie la 60 de pixeli distanță unul de altul.'
+        'turtle_2_10': Aici ai un cod ca să încerci să experimentezi cu diferite spirale. Ce se întamplă dacă schimbi cu cât se face întoarcerea? Sau dacă setezi o culoare la întâmplare în buclă? Desenează orice îți place.
+        'maze_karel_2_1': 'Încearcă să folosești blocurile ca să mă ajuţi să elimin toate grămezile şi să umplu toate gropile din pământ. Încearcă să folosești bucle în loc să utilizezi prea multe blocuri. Sugestie: poți amplasa o buclă în interiorul altei bucle.'
+        'maze_karel_2_2': 'Ne-am definit propriul nostru bloc numit "umple 5", care este acum în categoria Funcţiilor. Foloseşte-l ca să mă ajuţi să umplu această groapă.'
+        'maze_karel_2_3': 'Utilizează din nou blocul-funcţie "umple 5" ca să mă faci să umplu toate gropile. Vei avea de tras înafară blocul "umple 5" din categoria Funcţiilor.'
+        'maze_karel_2_4': Definește o nouă funcție ce înlătură 7 lopeți. Apoi folosește-o pentru a scrie un program ce mă poate ajuta să elimin toate grămezile.
+        'maze_karel_2_5': Creează o nouă funcție ce înlătură 6 lopeți pline dintr-o grămadă, și folosește-o pentru a mă ajuta să nivelez mormanele.
+        'maze_karel_2_6': 'Folosește două funcţii noi, "umple 8" şi "elimină 8", pentru a mă ajuta să nivelez grămada şi să umplu groapa.'
+        'maze_karel_2_7': E o vacă pe câmpul meu! Scrie o funcţie nouă care mă ajută să evit vaca şi să elimin grămada. Pune toate blocurile tale în interiorul noii funcţii.
+        'maze_karel_2_8': 'Folosește această funcţie nouă, "evită vaca și elimină 1", ca să mă ajuți să elimin toate grămezile.'
+        'maze_karel_2_9': Ok, iată aici o funcţie care elimină 4 grămezi de pământ diferite în coloana verticală. Încearcă să pui această funcţie într-o buclă, astfel încât să elimini toate mormanele de pământ folosind doar câteva blocuri.
+        'maze_karel_2_10': Mişcă-mă de-a lungul câmpului şi folosește aceste două funcţii ca să mă ajuţi să elimin toate grămezile şi să umplu gropile.
+        'turtle_3_1': 'Acest puzzle îți arată cum funcţiile "desenează un pătrat" şi "desenează un cerc" sunt definite.  Definirea unei funcţii nu execută blocurile sale. Trebuie să tragi afară blocul "desenează un pătrat" pentru a desena în fapt un pătrat.'
+        'turtle_3_2': 'Folosind drept exemplu funcţia "desenează un pătrat", creează o funcţie "desenează un triunghi" şi folosește-o.'
+        'turtle_3_3': 'Desenează garduri triungulare în jurul pisicilor şi un gard pătrat în jurul văcii.  Sfat: testează programul de-a lungul lucrului.'
+        'turtle_3_4': 'Vezi dacă poţi să-ți dai seama cum să utilizezi "desenează un pătrat" şi "desenează un triunghi" (şi alte blocuri) pentru a desena o casă în jurul leului.'
+        'turtle_3_5': 'Acum creează o nouă funcție "desenează o casă" şi utilizeaz-o pentru a găzdui două pisici. Sugestie: creează o nouă funcţie folosind blocul "fă ceva" şi introdu propriul text pentru a denumi blocul.'
+        'turtle_3_6': 'Folosind "desenează un pătrat" de exemplu, adaugă un input numit "lungime" la "desenează un triunghi". Apoi, desenează triunghiuri în dimensiuni diferite. (Sugestie: fă clic pe stea pentru a adăuga o intrare la o funcție)'
+        'turtle_3_7': 'Adaugă un input numit "lungime" la "desenează o casă" și contruiește o casă mare pentru elefant (cu margini de 150 de pixeli lungime)'
+        'turtle_3_8': 'Modifică funcția "desenează o casă" astfel încât să ajung la colţul din dreapta jos, după ce desenez o casa nouă. Utilizează această funcţie modificată pentru a desena trei case.'
+        'turtle_3_9': 'Poţi re-crea funcţia "desenează o casă" fără ajutor? Încearc-o, și apoi desenează un rând de case.'
+        'turtle_3_10': Ai învăţat o mulţime! Acum folosește-ți cunoștințele pentru a desena tot ce vrei. Încercă să deseni o stea, sau o spirală sau un fulg de nea sofisticat.
+        'maze_karel_debug_seq_1': Bine ai venit la depanare! Codul meu nu funcţionează corect. Poţi descoperi problema şi să o repari astfel încât să pot obţine un teren plat şi gata de plantare?
+        'maze_karel_debug_seq_2': Ce e în neregulă cu acest program? Cum ar trebui să îl repari ca eu să pot elimina acea grămadă?
+        'maze_karel_debug_repeat': Depanează acest program pentru mine în aşa fel încât terenul va fi frumos şi plat.
+        'maze_karel_debug_while': Cum ar trebui să schimbi acest program ca să mă ajute să umplu groapa?
+        'maze_karel_debug_if': Ajutor! Repară programul în aşa mod încât câmpul meu va fi complet plan.
+        'maze_karel_debug_if_else': Găsește erorile în acest program, astfel încât să pot umple găurile şi elimina toate grămezile.
+        'maze_karel_debug_function_1': Ce ar trebui să modifici la acest program pentru a mă ajuta să elimin toate grămezile?
+        'maze_karel_debug_function_2': Poți depana acest program pentru mine ca să pot să-mi fac câmpul plat?
+        'maze_karel_debug_function_3': 'Editează acest program, astfel incât să elimin toate grămezile de pe domeniul meu. '
+        'turtle_5_1': Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        'turtle_5_2': Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        'turtle_5_3': Încearcă să execuți acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        'turtle_5_4': Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        'turtle_5_5': Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        'turtle_5_6': Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        'maze_3_1': Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare(); să-mi recuperez ouălele.
+        'maze_3_2': Scrie-mi un program, ca să reușesc să ajung până la porcușor.
+        'maze_3_3': Cum să ajung la porcușor? Asigură-te că nu intru în cutia cu TNT!
+        'maze_3_4': Argh! Scrie-mi un program care mă duce de jur împrejurul minelor de TNT şi până la porcușor.
+        'bounce_1': 'Atașează un bloc la blocul "când săgeată stânga" şi apasă "Rulează programul". Mută paleta folosind săgeata stânga pentru a ajunge la ţinta finală.'
+        'bounce_2': 'Atașează un bloc la blocurile "când săgeată dreapta" și "când săgeată stânga". Mută paleta pentru a atinge ambele ținte finale.'
+        'bounce_3': 'Acum, încearcă ceva similar cu blocul "când săgeata în sus". Mută padela până la obiectivul final din partea de sus.'
+        'bounce_4': De data aceasta ai nevoie să adăugi patru blocuri. Mută paletele la toate cele patru obiective pentru a finaliza acest puzzle.
+        'bounce_5': 'Vom trimite o bilă sa zboare în jos spre palete. Ataşează un bloc la blocul "când bila lovește paleta" pentru a garanta ca bila atinge obiectivul țintă.'
+        'bounce_6': 'Acum obiectivul țintă se află în partea de sus. Ai nevoie să atașezi blocuri la ambele blocuri "când bila lovește" pentru a rezolva puzzle-ul.'
+        'bounce_7': 'Atașează blocuri la fiecare din blocurile "când". Fă bila să ricoșeze până ajunge la țintă.'
+        'bounce_10': 'Există un acum un gol în partea de sus. Atașează blocurile "scor" și "scor oponent" la blocurile "când bila este in gaură" și "când bila ratează paleta" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul tău să înscrie de două ori.'
+        'bounce_11': 'Acum poți atașa blocuri la blocul "rulează". Trebuie să atașezi noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza paletei și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori.'
+        'bounce_12': Crează propriul tău joc Țopăială. Poți modifica toate imaginile şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
+        'Custom_builder': 'Folosește blocuri din caseta de instrumente în spațiul de lucru pentru a putea desena nivelul dorit. Apasă "Rulează Programul" atunci când ești gata.'
+        'flappy_1': 'Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul". Fă clic sau atinge ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.'
+        'flappy_2': 'Acum am adăugat și ceva teren.  Ataşează un bloc la blocul "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy se prăbușește.'
+        'flappy_3': 'Blocul "când rulează" îți permite să rulezi codul atunci când îți începe jocul.  Încearcă să setezi nivelul vitezei şi a datului din aripi către ţintă.'
+        'flappy_4': 'Flappy va zbura printre obstacole dacă nu scrii codul pentru a-l face să se accidenteze. Ataşează un bloc la blocul "când lovește un obstacol". Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy s-a prăbuşit în primul set de conducte.'
+        'flappy_5': 'Hai să adăugăm un tabel de scor, și numărător puncte atunci când Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol", și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de conducte.'
+        'flappy_6': Verifică dacă încă mai poți înscrie un punct după ce-l faci pe Flappy să dea din aripi mai mult sau mai puțin.
+        'flappy_7': 'Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc la blocul "atunci când rulaţi".'
+        'flappy_8': Poți seta vizuale oricând, nu doar atunci când începe jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
+        'flappy_9': Pentru diversitate, în locul opririi jocului, încearcă setarea scorului la 0 atunci când lovești un obstacol.
+        'flappy_11': Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
+        'flappy_k1_1': Joacă Flappy
+        'flappy_k1_2': 'Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul". Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.'
+        'flappy_k1_3': 'Acum am adăugat și ceva teren.  Ataşează un bloc la blocul "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy se prăbușește.'
+        'flappy_k1_4': 'Blocul "când rulează" îți permite să rulezi codul atunci când îți începe jocul.  Încearcă să setezi nivelul vitezei şi a datului din aripi către ţintă.'
+        'flappy_k1_5': 'Flappy va zbura printre obstacole dacă nu scrii codul pentru a-l face să se accidenteze. Ataşează un bloc la blocul "când lovește un obstacol". Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy s-a prăbuşit în primul set de conducte.'
+        'flappy_k1_6': 'Hai să adăugăm un tabel de scor, și numărător puncte atunci când Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol", și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de conducte.'
+        'flappy_k1_7': Vedeți dacă puteţi înscrie mai multe puncte pentru a-l face să treacă un obstacol
+        'flappy_k1_8': 'Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc la blocul "atunci când rulaţi".'
+        'flappy_k1_9': 'Încercaţi schimbarea jucătorului prin ataşarea un bloc "setare jucător" la blocul "atunci când rulează".'
+        'jigsaw_1': Fă clic pe bloc
+        'jigsaw_2': Trage blocul către ţintă
+        'jigsaw_3': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_4': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_5': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_6': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_7': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_8': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_9': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_10': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_11': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_12': Aranjează blocurile pentru a forma imaginea
+        'jigsaw_13': Rezolva puzzle-ul!
+        'mazestep_1': Pas Labirint descriere
+        'mazestep_2': Pas Labirint descriere
+        'mazestep_3': Pas Labirint descriere
+        'mazestep_4': Pas Labirint descriere
+        'mazestep_5': Pas Labirint descriere
+        'studio_c2_1': 'Poți face acest câine să spună "Bună ziua lume"?'
+        'studio_c2_2': Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
+        'studio_c2_3': Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
+        'studio_c2_4': 'Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?'
+        'studio_c2_5': 'Puteţi scrie un program pentru a face caracatiţa să spună "hello", atunci când se dă clic pe ea?'
+        'studio_c2_6': Puteţi scrie un program pentru a face acest pinguin să se deplaseze folosind tastele sus / jos / stânga/dreapta pentru a lovi toate obiectivele?
+        'studio_c2_7': 'Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod repetat?'
+        'studio_c2_8': 'Puteți face acest pinguin să spună "Ouch!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?'
+        'studio_c2_9': Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
+        'studio_c2_10': Puteţi adăuga blocuri pentru a schimba fundalul şi viteza pinguinului, şi apoi să îl mutaţi cu săgeţile până când marcați?
+        'studio_c2_11': Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
+        'studio_c3_story_1': 'Poți face acest câine să spună "Bună ziua lume"?'
+        'studio_c3_story_2': Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
+        'studio_c3_story_3': Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
+        'studio_c3_story_4': 'Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?'
+        'studio_c3_story_5': Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
+        'studio_c3_story_6': Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
+        'studio_c3_game_1': 'Puteţi scrie un program pentru a face caracatiţa să spună "hello", atunci când se dă clic pe ea?'
+        'studio_c3_game_2': Puteţi scrie un program pentru a face acest pinguin să se deplaseze folosind tastele sus / jos / stânga/dreapta pentru a lovi toate obiectivele?
+        'studio_c3_game_3': 'Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod repetat?'
+        'studio_c3_game_4': 'Puteți face acest pinguin să spună "Ouch!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?'
+        'studio_c3_game_5': Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
+        'studio_c3_game_6': Puteţi adăuga blocuri pentru a schimba fundalul şi viteza pinguinului, şi apoi să îl mutaţi cu săgeţile până când marcați?
+        'studio_c3_game_7': Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
+        'studio_playlab_1': 'Pinguinul vrea să spună "Bună ziua" - îl puteți ajuta?'
+        'studio_playlab_2': 'Băiatul din peşteră (actor 1) şi Fata din peşteră (actor 2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune" de două ori?'
+        'studio_playlab_3': O puteți ajuta pe tenismenă să ajungă la pavilion?
+        'studio_playlab_4': Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
+        'studio_playlab_5': 'Îl puteți ajuta pe robotul spatial să spună "Salutări pamantenilor" când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe Rulare'
+        'studio_playlab_6': O puteți ajuta pe Vrăjitoare să se miște împrejur folosind tastele săgeți sus/jos/dreapta/stânga pentru a prinde toate mingile de foc magice?
+        'studio_playlab_7': 'Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a ajuta Expertul să se miște la dreapta şi la stânga în mod repetat?'
+        'studio_playlab_8': Puteţi adăuga un bloc pentru a marca un punct și un bloc pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl mutaţi cu săgeţile până când marcați?
+        'studio_playlab_9': 'Setați fundalul pentru această invazie extraterestră şi ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i alerteze pe toți ceilalți'
+        'studio_playlab_10': Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
+        'studio_iceage_hello1': 'Sid vrea să adune pe toată lumea pentru o nouă aventură. Poți să îl ajuți să spună "Bună ziua" glisând blocul "spune" în zona de lucru şi tastând cuvintele "Bună ziua" în interiorul lui?'
+        'studio_iceage_hello2': 'Sid (actorul 1) l-a găsit pe Manny (actorul 2) şi vrea să-l invite într-o aventură.  Ajută-i să se salute reciproc folosind blocul "actorul spune" de două ori.'
+        'studio_iceage_move_to_flag': 'Scrat este în căutarea ghindei lui! Ajută-l să parcurgă ultimii 200 de pixeli folosind blocul "mergi".'
+        'studio_iceage_move_to_actor': 'Diego (actorul 1) este în căutarea lui Manny (actorul 2). Ajută-l pe Diego să meargă 200 pixeli în jos către Manny folosind blocul "mutare actor". Apoi, conectează un bloc la evenimentul "când actorul atinge" pentru a reda un sunet atunci când se vor găsi unul pe celălalt.'
+        'studio_iceage_repeat': 'Blocul "repetă la nesfârșit" iți permite să rulezi codul în mod continuu. Poți atașa blocuri pentru a-l ajuta pe Granny să se antreneze mișcându-se la stânga și la dreapta în mod repetat?'
+        'studio_iceage_click_hello': "Poți să îl ajuți pe Sid să facă o ultimă strigare pentru prieteni când faci click pe el? Nu uita să faci click pe el după ce ai apăsat 'Rulează'."
+        'studio_iceage_move_events': |-
           Scrat caută încă ghinde! Ajută-l să alerge prin zonă atașând blocul "mută" la fiecare eveniment și schimbând direcția pentru fiecare săgeată. Când ai terminat, fă clic pe 'Rulează' și încearcă să aduni toate ghindele.
-        studio_iceage_sound_and_points: |-
+        'studio_iceage_sound_and_points': |-
           Am furnizat deja cea mai mare parte din codul ce o menține pe Granny să se miște la stânga și dreapta, precum și codul care îl mișcă pe Sid de-a lungul ecranului. Poți termina codul și adăuga blocuri evenimentului "cand actorul atinge" pentru ca amandoi să emită un sunet și să marcheze un punct atunci când Sid și Granny se lovesc? Apasă 'Rulează' pentru a juca jocul.
-        studio_iceage_warn_ice_age: 'Toată lumea trebuie să se mişte mai repede, pentru că vine o epocă de gheaţă! Schimbă fundalul cu "ghețari" şi setează-i viteza lui Sid la rapid, apoi apasă Rulează şi mută-l lângă Diego pentru a-l avertiza.'
-        studio_iceage_throw_hearts: 'Sid vrea ca bunica lui, Granny, să știe că o iubește. Folosește comanda "actorul aruncă" pentru a-l face pe Sid (actorul 1) să arunce inimi către Granny (actorul 2)! Setează starea lui Granny la fericită când este lovită cu inimi.'
-        studio_iceage_free_play: "E timpul să îți creezi propriul joc sau poveste! Când termini, apasă 'Terminat' pentru a-i lăsa pe prietenii tăi să testeze jocul tău pe telefoanele, tabletele sau calculatoarele lor!"
-        studio_gumball_hello1: 'Anais vrea sa isi faca noi prieteni. O poti ajuta sa spuna "buna" folosind blocul "spune" in spatiul de lucru si scriind inauntru cuvantul "buna"?'
-        studio_gumball_hello2: 'Darwin (actorul 1) și fratele său, Gumball (actorul 2), se îndreaptă către școală. Ajută-i să se salute reciproc folosind blocul "actorul spune" de două ori.'
-        studio_gumball_move_to_flag: 'Banana Joe este cat pe ce sa castige o cursa! Ajuta-l sa mearga cel putin 200 de pixeli folosind blocul "mergi".'
-        studio_gumball_move_to_actor: 'Gumball (actorul 1) si Darwin (actorul 2) au intarziat la ora! Ajuta-l pe Gumball sa mearga 200 de pixeli in jos catre Darwin folosind blocul "muta actor". Apoi, conecteaza un bloc la evenimentul "cand actorul" pentru a rula un sunet de cate ori se gasesc unul pe altul.'
-        studio_gumball_repeat: 'Blocul "repeta mereu" iti permite sa rulezi continuu. Poti atasa blocuri la el ca sa il ajuti pe Gumball sa faca incalzirea pentru cursa lui miscandu-se in stanga si in dreapta continuu?'
-        studio_gumball_click_hello: 'Poti sa il ajuti pe Anton sa anunte start-ul cursei spunand "Pe locuri, fiti gata, start!"? Pentru a-ti testa programul, nu uita sa apesi pe Anton dupa de apesi "ruleaza"!'
-        studio_gumball_move_events: 'Darwin este la concursul de strans steaguri! Ajuta-l sa alerge de colo colo atasand blocul "mergi" la fiecare eveniment. Cand esti gata, apasa ruleaza si incearca sa strangi toate stegurile.'
-        studio_gumball_sound_and_points: 'Am notat majoritatea codului care il tine pe Anton ( actorul 2) sa alerge din stanga in dreapta, la fel ca si codul care il muta pe Banana Joe (actorul 1) de-a lungul ecranului. Poti termina codul si adauga blocuri la evenimentul "cand actorii se ating" pentru a-i face sa ruleze un sunet apoi sa inscrie cate un punct cand Banana Joe si Anton se lovesc? Apasa Ruleaza pentru a juca jocul.'
-        studio_gumball_warn_food_fight: 'Darvin a scapat de o lupta cu alimente! Schimba fundalul la "caractere" si seteaza viteza lui Darwin la rapid, apoi apasa Ruleaza si muta-l catre Penny pentru a o avertiza.'
-        studio_gumball_join_food_fight: 'Alaturati-va luptei cu mancare! Foloseste comanda "actorul arunca elementul in dreapta" pentru ca Banana Joe (actorul 1) sa arunce cu mancare in Anton (actorul 2)! Seteaza-l pe Anton sa fie nervos cand este lovit.'
-        studio_gumball_free_play: 'Creeaza-ti propria poveste a jocului. Cand e gata, apasa "terminare"si spune-le prietenilor tai sa incerce jocul pe telefoane, tablete sau calculatoare!'
-        studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-        studio_k1_1: 'Poți face acest câine să spună "Bună ziua lume"?'
-        studio_k1_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
-        studio_k1_3: Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
-        studio_k1_4: 'Faceți câinele să se miște spre pisică și pe aceasta să spună "hello", atunci când el ajunge acolo.'
-        studio_k1_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
-        studio_k1_6: Creați-vă propria poveste! Deplasați împrejur pisica şi câinele şi făceți-le să spună ceva.
-        maze_wordsearch_k_1: Mutați-mă ca să spun literele cuvântului EST
-        maze_wordsearch_k_2: Mutați-mă ca să spun literele cuvântului SUD
-        maze_wordsearch_k_3: Mutați-mă ca să spun literele cuvântului VEST
-        maze_wordsearch_k_4: Mutați-mă ca să spun literele cuvântului NORD
-        maze_wordsearch_k_6: Mutați-mă spre Est, apoi spre Sud ca să spun literele cuvântului SALT
-        maze_wordsearch_k_9: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului COD
-        maze_wordsearch_k_13: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEPANARE
-        maze_wordsearch_k_15: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEASUPRA
-        maze_wordsearch_k_16: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEDESUBT
-        maze_wordsearch_k_20: Acesta este un test! Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului POVESTE
-        applab_ec_simple: Crează-ți propria aplicație folosind blocurile din bara de unelte.
-        turtle_ec_1_2: 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată selectând-o în noul bloc "penColor".'
-        turtle_ec_1_10: 'Ați reușit! Acum, desenați orice doriți. Unele idei distractive: o figură băţ, fulg de nea sau spirală. Încercați, de asemenea, noul bloc "penWidth". Distracţie plăcută!'
-        studio_ec_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
+        'studio_iceage_warn_ice_age': 'Toată lumea trebuie să se mişte mai repede, pentru că vine o epocă de gheaţă! Schimbă fundalul cu "ghețari" şi setează-i viteza lui Sid la rapid, apoi apasă Rulează şi mută-l lângă Diego pentru a-l avertiza.'
+        'studio_iceage_throw_hearts': 'Sid vrea ca bunica lui, Granny, să știe că o iubește. Folosește comanda "actorul aruncă" pentru a-l face pe Sid (actorul 1) să arunce inimi către Granny (actorul 2)! Setează starea lui Granny la fericită când este lovită cu inimi.'
+        'studio_iceage_free_play': "E timpul să îți creezi propriul joc sau poveste! Când termini, apasă 'Terminat' pentru a-i lăsa pe prietenii tăi să testeze jocul tău pe telefoanele, tabletele sau calculatoarele lor!"
+        'studio_gumball_hello1': 'Anais vrea sa isi faca noi prieteni. O poti ajuta sa spuna "buna" folosind blocul "spune" in spatiul de lucru si scriind inauntru cuvantul "buna"?'
+        'studio_gumball_hello2': 'Darwin (actorul 1) și fratele său, Gumball (actorul 2), se îndreaptă către școală. Ajută-i să se salute reciproc folosind blocul "actorul spune" de două ori.'
+        'studio_gumball_move_to_flag': 'Banana Joe este cat pe ce sa castige o cursa! Ajuta-l sa mearga cel putin 200 de pixeli folosind blocul "mergi".'
+        'studio_gumball_move_to_actor': 'Gumball (actorul 1) si Darwin (actorul 2) au intarziat la ora! Ajuta-l pe Gumball sa mearga 200 de pixeli in jos catre Darwin folosind blocul "muta actor". Apoi, conecteaza un bloc la evenimentul "cand actorul" pentru a rula un sunet de cate ori se gasesc unul pe altul.'
+        'studio_gumball_repeat': 'Blocul "repeta mereu" iti permite sa rulezi continuu. Poti atasa blocuri la el ca sa il ajuti pe Gumball sa faca incalzirea pentru cursa lui miscandu-se in stanga si in dreapta continuu?'
+        'studio_gumball_click_hello': 'Poti sa il ajuti pe Anton sa anunte start-ul cursei spunand "Pe locuri, fiti gata, start!"? Pentru a-ti testa programul, nu uita sa apesi pe Anton dupa de apesi "ruleaza"!'
+        'studio_gumball_move_events': 'Darwin este la concursul de strans steaguri! Ajuta-l sa alerge de colo colo atasand blocul "mergi" la fiecare eveniment. Cand esti gata, apasa ruleaza si incearca sa strangi toate stegurile.'
+        'studio_gumball_sound_and_points': 'Am notat majoritatea codului care il tine pe Anton ( actorul 2) sa alerge din stanga in dreapta, la fel ca si codul care il muta pe Banana Joe (actorul 1) de-a lungul ecranului. Poti termina codul si adauga blocuri la evenimentul "cand actorii se ating" pentru a-i face sa ruleze un sunet apoi sa inscrie cate un punct cand Banana Joe si Anton se lovesc? Apasa Ruleaza pentru a juca jocul.'
+        'studio_gumball_warn_food_fight': 'Darvin a scapat de o lupta cu alimente! Schimba fundalul la "caractere" si seteaza viteza lui Darwin la rapid, apoi apasa Ruleaza si muta-l catre Penny pentru a o avertiza.'
+        'studio_gumball_join_food_fight': 'Alaturati-va luptei cu mancare! Foloseste comanda "actorul arunca elementul in dreapta" pentru ca Banana Joe (actorul 1) sa arunce cu mancare in Anton (actorul 2)! Seteaza-l pe Anton sa fie nervos cand este lovit.'
+        'studio_gumball_free_play': 'Creeaza-ti propria poveste a jocului. Cand e gata, apasa "terminare"si spune-le prietenilor tai sa incerce jocul pe telefoane, tablete sau calculatoare!'
+        'studio_full_sandbox': Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
+        'studio_k1_1': 'Poți face acest câine să spună "Bună ziua lume"?'
+        'studio_k1_2': Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
+        'studio_k1_3': Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
+        'studio_k1_4': 'Faceți câinele să se miște spre pisică și pe aceasta să spună "hello", atunci când el ajunge acolo.'
+        'studio_k1_5': Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
+        'studio_k1_6': Creați-vă propria poveste! Deplasați împrejur pisica şi câinele şi făceți-le să spună ceva.
+        'maze_wordsearch_k_1': Mutați-mă ca să spun literele cuvântului EST
+        'maze_wordsearch_k_2': Mutați-mă ca să spun literele cuvântului SUD
+        'maze_wordsearch_k_3': Mutați-mă ca să spun literele cuvântului VEST
+        'maze_wordsearch_k_4': Mutați-mă ca să spun literele cuvântului NORD
+        'maze_wordsearch_k_6': Mutați-mă spre Est, apoi spre Sud ca să spun literele cuvântului SALT
+        'maze_wordsearch_k_9': Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului COD
+        'maze_wordsearch_k_13': Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEPANARE
+        'maze_wordsearch_k_15': Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEASUPRA
+        'maze_wordsearch_k_16': Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEDESUBT
+        'maze_wordsearch_k_20': Acesta este un test! Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului POVESTE
+        'applab_ec_simple': Crează-ți propria aplicație folosind blocurile din bara de unelte.
+        'turtle_ec_1_2': 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată selectând-o în noul bloc "penColor".'
+        'turtle_ec_1_10': 'Ați reușit! Acum, desenați orice doriți. Unele idei distractive: o figură băţ, fulg de nea sau spirală. Încercați, de asemenea, noul bloc "penWidth". Distracţie plăcută!'
+        'studio_ec_sandbox': Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
     video:
       name:
-        maze_intro: Intro Labirint
-        artist_intro: 'Intro Artist '
-        farmer_intro: Intro Fermier
-        flappy_intro: Introducere Flappy
-        loop_times: Bloc Repetă ori
-        loop_until: Bloc Repetă Până La
-        if: Bloc Dacă
-        if_else: Bloc Dacă/Altfel
-        if_else_scrat: Bloc Dacă/Altfel
-        function: Funcţii
-        loop_while: Bloc În timp ce
-        loop_for: Bloc Contor
-        parameters: Funcții cu Parametrii
-        hoc_wrapup: Încheierea Orei de Programare
-        Unplug1: Ce este informatica?
-        Unplug2: Gândire de Calcul
-        Unplug3: Programare pe Hârtie Milimetrică
-        Unplug4: Algoritmi
-        Unplug5: Funcţii
-        Unplug6: Condiţionale
-        Unplug7: Compunând Cântece
-        Unplug8: Abstractizare
-        Unplug9: Programare de releu
-        Unplug10: Internet
-        Unplug11: Încheiere
-        C1_happy_maps_unplugged: Hărţi Fericite
-        C1_moveitmoveit_unplugged: Mutaţi-l, mutați-l
-        C1_bigevent_unplugged: Marele eveniment
-        C1_getting_loopy: Să ne buclăm
-        C1_pair_programming: Programare în perechi
-        C1_maze_intro_sequencing: Introducere în secvențierea unui labirint
-        C1_maze_debugging: Labirint Depanare
-        C1_bee_level_intro: 'Albină Nivel - Introducere'
-        C1_artist_intro: 'Intro Artist '
-        C1_spelling_bee_intro: Introducere în Albina ortografiind
-        C1_zuck_repeat_loop: Bucle de Labirint
-        C1_bee_loops: Bucle de Ortografie
-        C1_maze_loops: Bucle de Labirint
-        C1_playlab_storytelling: 'Rulare laborator - Creează o poveste'
-        C1_planting_seed: Plantarea unei semințe
-        C1_building_foundation: Construirea unei Fundaţii
-        C1_going_places_safely: Să mergem oriunde în siguranţă
-        C2_maze_intro: Intro Labirint
-        C2_artist_intro: 'Intro Artist '
-        C2_zuck_repeat_loop: Bucle de Labirint
-        C2_artist_loops: Bucle de Artist
-        C2_artist_debugging: Depanare Artist
-        C2_bee_loops: Bucle de Albină
-        C2_bee_debugging: Depanarea Albinei
-        C2_bee_conditionals: Condiţii de Ortografie
-        C2_playlab_createstory: 'Rulare laborator - Creează o poveste'
-        C2_graph_paper: Programare pe Hârtie Milimetrică
-        C2_conditionals_with_cards: Condiţionale
-        C2_binary_bracelets: Brăţări Binare
-        C2_relay_programming: Programare de releu
-        C2_paper_airplanes: Avioane de hârtie
-        C2_digital_footprint: Amprenta ta Digitală
-        C2_digital_footprint_v2: Amprenta ta Digitală
-        C3_maze_level_4: Bucle de Labirint
-        C3_artist_intro: 'Intro Artist '
-        C3_artist_functions: Funcţii de Artist
-        C3_bee_functions: Funcţii de Ortografie
-        C3_bee_conditionals: Condiţii de Ortografie
-        C3_maze_conditionals: Condiţionale de Labirint
-        C3_artist_nested_loops: Repetiții imbricate
-        C3_farmer_while: Repetiții While
-        C3_bee_nested_loops: Repetiții imbricate
-        C3_bee_debugging: Depanarea Ortografiei
-        C3_bounce: Săritură
-        C3_playlab_create_game: 'Rulare laborator - Creează un joc'
-        C3_computational_thinking: Gândire de Calcul
-        C3_dice_race: Cursă de Zaruri
-        C3_internet: Internet
-        C3_crowdsourcing: Obţinând Informaţii/Critici
-        C3_functional_suncatchers: Prinzători ai Soarelui Funcţionali
-        C3_songwriting_with_parameters: Compozitie cu parametri
-        C4_intro: Introducere
-        C4_loops_zombie: Bucle
-        C4_bee_conditional: 'Albină: Condiţionale'
-        C4_variables_artist: 'Variabile - Artist'
-        C4_variables_playlab: 'Variabile - Joc Laborator'
-        C4_for_loops: Bucle Pentru
-        C4_for_loops_bee: Bucle Pentru
-        C4_for_loops_no_bee: Bucle Pentru
-        C4_math_artist: Programarea Artistului cu matematică
-        C4_function_edit: Editare de funcții
-        C4_function_create: Crearea de funcții
-        C4_function_parameters: Funcții cu Parametrii
-        C4_conditionals: Condiţionale
-        C4_unplugged_algorithms: Algoritmi cu Tangrame
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variabile în plicuri
-        C4_unplugged_forloops: Bucle Pentru
-        C4_unplugged_parameters: Compoziții muzicale cu parametri
-        C4_unplugged_binary: Binar
-        frozen_intro: Introducere în Ora de Programare
-        frozen_loops: Introducere în Bucle
-        frozen_functions: Introducere în Funcții
-        playlab_intro: Introducere in Play Lab
-        playlab_events: Joaca Lab Events
-        playlab_repeat_forever: 'Laboratorul de joacă: Repetă la nesfârșit'
-        tutorial_puzzle_challenge: Tutorial Puzzle de provocare
-        infinity_playlab_intro: 'Atelier de Joacă - Introducere'
-        infinity_playlab_events: 'Atelier de Joacă - Evenimente'
-        infinity_playlab_repeat_forever: 'Atelier de Joacă - Repetare la nesfârșit'
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: 'Introduction to Databases - Part 1'
-        csp_applab_databases_2: 'Introduction to Databases - Part 2'
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: 'Introduction to Lists - Part 1'
-        csp_applab_lists_2: 'Introduction to Lists - Part 2'
-        csp_applab_lists_3: 'Introduction to Lists - Part 3'
-        csp_applab_lists_4: 'Introduction to Lists - Part 4'
-        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
-        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
-        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: 'Introduction to Variables - Part 1'
-        csp_applab_variables_2: 'Introduction to Variables - Part 2'
-        csp_applab_functions: Introducere în Funcții
-        csp_applab_functions_parameters: Funcții cu Parametrii
-        csp_applab_loops: Bucle
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: 'Data & Medicine'
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
-        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
-        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: 'Internet Simulator - Part 1'
-        csp_internetsimulator_2: 'Internet Simulator - Part 2'
-        csp_internetsimulator_3: 'Internet Simulator - Part 3'
-        alg_1_intro: 'CS in Algebra - Introduction'
-        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
-        alg_3_pemdas: 'CS in Algebra - Order of Operations'
-        alg_4_data_types: 'CS in Algebra - Data Types'
-        alg_5_contracts: 'CS in Algebra - Contracts'
-        alg_6_variables: 'CS in Algebra - Variables'
-        alg_7_function: 'CS in Algebra - Functions'
-        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
-        alg_9_booleans: 'CS in Algebra - Booleans'
-        alg_10_conditionals: 'CS in Algebra - Conditionals'
-        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
-        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
-        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
-        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
-        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
-        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
-        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Programarea unei galaxii - Introducere'
-        starwars_typing: 'Star Wars: Programarea unei galaxii - JavaScript'
-        starwars_events: 'Star Wars: Programarea unei galaxii - Evenimente'
-        starwars_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
-        starwars_blocks_intro: 'Star Wars: Programarea unei galaxii - Introducere'
-        starwars_blocks_events: 'Star Wars: Programarea unei galaxii - Evenimente'
-        starwars_blocks_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
-        mc_intro: 'Minecraft - introducere'
-        mc_repeat: 'Minecraft - Structuri repetitive'
-        mc_if_statements: 'Minecraft - Structuri de decizie'
-        mc_congrats_share: 'Minecraft - Felicitari'
-        mc_congrats_no_share: 'Minecraft - Felicitari'
-        gumball_intro: 'Gumball Hour of Code - Introducere'
-        gumball_events: 'Gumball Hour of Code - Evenimente'
-        gumball_repeat: 'Gumball Hour of Code - Declaratiile de repetare'
-        iceage_intro: 'Ora de programare Epoca de Gheata - Introducere'
-        iceage_events: 'Ora de programare Epoca de Gheata - Evenimente'
-        iceage_repeat: 'Ora de cod Epoca de Gheata - Repetarea declaratiilor'
+        'maze_intro': Intro Labirint
+        'artist_intro': 'Intro Artist '
+        'farmer_intro': Intro Fermier
+        'flappy_intro': Introducere Flappy
+        'loop_times': Bloc Repetă ori
+        'loop_until': Bloc Repetă Până La
+        'if': Bloc Dacă
+        'if_else': Bloc Dacă/Altfel
+        'if_else_scrat': Bloc Dacă/Altfel
+        'function': Funcţii
+        'loop_while': Bloc În timp ce
+        'loop_for': Bloc Contor
+        'parameters': Funcții cu Parametrii
+        'hoc_wrapup': Încheierea Orei de Programare
+        'Unplug1': Ce este informatica?
+        'Unplug2': Gândire de Calcul
+        'Unplug3': Programare pe Hârtie Milimetrică
+        'Unplug4': Algoritmi
+        'Unplug5': Funcţii
+        'Unplug6': Condiţionale
+        'Unplug7': Compunând Cântece
+        'Unplug8': Abstractizare
+        'Unplug9': Programare de releu
+        'Unplug10': Internet
+        'Unplug11': Încheiere
+        'C1_happy_maps_unplugged': Hărţi Fericite
+        'C1_moveitmoveit_unplugged': Mutaţi-l, mutați-l
+        'C1_bigevent_unplugged': Marele eveniment
+        'C1_getting_loopy': Transformând în Buclă
+        'C1_pair_programming': Programare în perechi
+        'C1_maze_intro_sequencing': Introducere în secvențierea unui labirint
+        'C1_maze_debugging': Labirint Depanare
+        'C1_bee_level_intro': 'Albină Nivel - Introducere'
+        'C1_artist_intro': 'Intro Artist '
+        'C1_spelling_bee_intro': Introducere în Albina ortografiind
+        'C1_zuck_repeat_loop': Bucle de Labirint
+        'C1_bee_loops': Bucle de Ortografie
+        'C1_maze_loops': Bucle de Labirint
+        'C1_playlab_storytelling': 'Rulare laborator - Creează o poveste'
+        'C1_planting_seed': Plantarea unei semințe
+        'C1_building_foundation': Construirea unei Fundaţii
+        'C1_going_places_safely': Mergând în locuri în siguranţă
+        'C2_maze_intro': Intro Labirint
+        'C2_artist_intro': 'Intro Artist '
+        'C2_zuck_repeat_loop': Bucle de Labirint
+        'C2_artist_loops': Bucle de Artist
+        'C2_artist_debugging': Depanare Artist
+        'C2_bee_loops': Bucle de Ortografie
+        'C2_bee_debugging': Depanarea Ortografiei
+        'C2_bee_conditionals': Condiţii de Ortografie
+        'C2_playlab_createstory': 'Rulare laborator - Creează o poveste'
+        'C2_graph_paper': Programare pe Hârtie Milimetrică
+        'C2_conditionals_with_cards': Condiţionale
+        'C2_binary_bracelets': Brăţări Binare
+        'C2_relay_programming': Programare de releu
+        'C2_paper_airplanes': Avioane de hârtie
+        'C2_digital_footprint': Amprenta ta Digitală
+        'C2_digital_footprint_v2': Amprenta ta Digitală
+        'C3_maze_level_4': Bucle de Labirint
+        'C3_artist_intro': 'Intro Artist '
+        'C3_artist_functions': Funcţii de Artist
+        'C3_bee_functions': Funcţii de Ortografie
+        'C3_bee_conditionals': Condiţii de Ortografie
+        'C3_maze_conditionals': Condiţionale de Labirint
+        'C3_artist_nested_loops': Repetiții imbricate
+        'C3_farmer_while': Repetiții While
+        'C3_bee_nested_loops': Repetiții imbricate
+        'C3_bee_debugging': Depanarea Ortografiei
+        'C3_bounce': Săritură
+        'C3_playlab_create_game': 'Rulare laborator - Creează un joc'
+        'C3_computational_thinking': Gândire de Calcul
+        'C3_dice_race': Cursă de Zaruri
+        'C3_internet': Internet
+        'C3_crowdsourcing': Obţinând Informaţii/Critici
+        'C3_functional_suncatchers': Prinzători ai Soarelui Funcţionali
+        'C3_songwriting_with_parameters': Compozitie cu parametri
+        'C4_intro': Introducere
+        'C4_loops_zombie': Bucle
+        'C4_bee_conditional': Condiţii de Ortografie
+        'C4_variables_artist': 'Variabile - Artist'
+        'C4_variables_playlab': 'Variabile - Joc Laborator'
+        'C4_for_loops': Bucle Pentru
+        'C4_for_loops_bee': Bucle Pentru
+        'C4_for_loops_no_bee': Bucle Pentru
+        'C4_math_artist': Programarea Artistului cu matematică
+        'C4_function_edit': Editare de funcții
+        'C4_function_create': Crearea de funcții
+        'C4_function_parameters': Funcții cu Parametrii
+        'C4_conditionals': Condiţionale
+        'C4_unplugged_algorithms': Algoritmi cu Tangrame
+        'C4_unplugged_madlibs': Mad Libs
+        'C4_unplugged_variables': Variabile în plicuri
+        'C4_unplugged_forloops': Bucle Pentru
+        'C4_unplugged_parameters': Compoziții muzicale cu parametri
+        'C4_unplugged_binary': Binar
+        'frozen_intro': Introducere în Ora de Programare
+        'frozen_loops': Introducere în Bucle
+        'frozen_functions': Introducere în Funcții
+        'playlab_intro': Introducere in Play Lab
+        'playlab_events': Joaca Lab Events
+        'playlab_repeat_forever': 'Laboratorul de joacă: Repetă la nesfârșit'
+        'tutorial_puzzle_challenge': Tutorial Puzzle de provocare
+        'infinity_playlab_intro': 'Atelier de Joacă - Introducere'
+        'infinity_playlab_events': 'Atelier de Joacă - Evenimente'
+        'infinity_playlab_repeat_forever': 'Atelier de Joacă - Repetare la nesfârșit'
+        'csp_applab_objects': Introduction to Objects
+        'csp_applab_databases_1': 'Introduction to Databases - Part 1'
+        'csp_applab_databases_2': 'Introduction to Databases - Part 2'
+        'csp_applab_processing_lists': Processing Lists with Loops
+        'csp_applab_lists_1': 'Introduction to Lists - Part 1'
+        'csp_applab_lists_2': 'Introduction to Lists - Part 2'
+        'csp_applab_lists_3': 'Introduction to Lists - Part 3'
+        'csp_applab_lists_4': 'Introduction to Lists - Part 4'
+        'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
+        'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
+        'csp_applab_design': Introduction to Design Mode
+        'csp_applab_variables_1': 'Introduction to Variables - Part 1'
+        'csp_applab_variables_2': 'Introduction to Variables - Part 2'
+        'csp_applab_functions': Introducere în Funcții
+        'csp_applab_functions_parameters': Funcții cu Parametrii
+        'csp_applab_loops': Bucle
+        'csp_applab_turtle': Turtle Programming
+        'csp_concept_bigdata_medicine': 'Data & Medicine'
+        'csp_concept_cybercrime': 'The Internet: Cybersecurity & Crime'
+        'csp_concept_encryption': 'The Internet: Encryption & Public Keys'
+        'csp_concept_http_html': 'The Internet: HTTP & HTML'
+        'csp_concept_what_is_internet': What is the Internet?
+        'csp_concept_internet_ip_dns': 'The Internet: IP Addresses & DNS'
+        'csp_concept_internet_packets_reliability': 'The Internet: Packets, Routing & Reliability'
+        'csp_concept_internet_wires_cables_wifi': 'The Internet: Wires, Cables & Wifi'
+        'csp_concept_rgb': A Little Bit About Pixels
+        'csp_cs_is_changing_everything': Computer Science is Changing Everything
+        'csp_pixelation_color_1': 'Color pixelation widget - Part 1'
+        'csp_pixelation_color_2': 'Color pixelation widget - Part 2'
+        'csp_pixelation_color_3': 'Color pixelation widget - Part 3'
+        'csp_pixelation_bw': Black and white pixelation widget
+        'csp_U1L14_tipstricks': 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        'csp_textcompression': Text compression widget
+        'csp_textcompression_new': Text compression widget
+        'csp_internetsimulator_1': 'Internet Simulator - Part 1'
+        'csp_internetsimulator_2': 'Internet Simulator - Part 2'
+        'csp_internetsimulator_3': 'Internet Simulator - Part 3'
+        'alg_1_intro': 'CS in Algebra - Introduction'
+        'alg_2_eval_block': 'CS in Algebra - Evaluation Blocks'
+        'alg_3_pemdas': 'CS in Algebra - Order of Operations'
+        'alg_4_data_types': 'CS in Algebra - Data Types'
+        'alg_5_contracts': 'CS in Algebra - Contracts'
+        'alg_6_variables': 'CS in Algebra - Variables'
+        'alg_7_function': 'CS in Algebra - Functions'
+        'alg_8_design_recipe': 'CS in Algebra - Design Recipe'
+        'alg_9_booleans': 'CS in Algebra - Booleans'
+        'alg_10_conditionals': 'CS in Algebra - Conditionals'
+        'alg_11_coordinate_plane': 'CS in Algebra - Coordinate Plane'
+        'alg_12_biggame_variables': 'CS in Algebra - Big Game Variables'
+        'alg_13_biggame_animation': 'CS in Algebra - Big Game Animation'
+        'alg_14_biggame_booleans': 'CS in Algebra - Big Game Booleans'
+        'alg_15_biggame_update_player': 'CS in Algebra - Big Game Update Player'
+        'alg_16_biggame_collision_detection': 'CS in Algebra - Big Game Collision Detection'
+        'alg_17_sambat_compound_booleans': 'CS in Algebra - Compound Booleans'
+        'hoc2015_preview_blocks': Make your own game blocks
+        'hoc2015_preview_typing': Make your own game typing
+        'hoc2015_preview_conclusion': Make your own game conclusion
+        'starwars_intro': 'Star Wars: Programarea unei galaxii - Introducere'
+        'starwars_typing': 'Star Wars: Programarea unei galaxii - JavaScript'
+        'starwars_events': 'Star Wars: Programarea unei galaxii - Evenimente'
+        'starwars_congrats': 'Star Wars: Programarea unei galaxii - Felicitări'
+        'starwars_blocks_intro': 'Star Wars: Programarea unei galaxii - Introducere'
+        'starwars_blocks_events': 'Star Wars: Programarea unei galaxii - Evenimente'
+        'starwars_blocks_congrats': 'Star Wars: Programarea unei galaxii - Felicitări'
+        'mc_intro': 'Minecraft - introducere'
+        'mc_repeat': 'Minecraft - Structuri repetitive'
+        'mc_if_statements': 'Minecraft - Structuri de decizie'
+        'mc_congrats_share': 'Minecraft - Felicitari'
+        'mc_congrats_no_share': 'Minecraft - Felicitari'
+        'gumball_intro': 'Gumball Hour of Code - Introducere'
+        'gumball_events': 'Gumball Hour of Code - Evenimente'
+        'gumball_repeat': 'Gumball Hour of Code - Declaratiile de repetare'
+        'iceage_intro': 'Ora de programare Epoca de Gheata - Introducere'
+        'iceage_events': 'Ora de programare Epoca de Gheata - Evenimente'
+        'iceage_repeat': 'Ora de cod Epoca de Gheata - Repetarea declaratiilor'
     callout:
       text:
         drag_blocks: 'Trage un bloc "mutare" şi fixează-l sub alt bloc'

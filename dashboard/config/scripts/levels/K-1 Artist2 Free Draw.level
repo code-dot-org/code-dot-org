@@ -13,9 +13,28 @@
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "free_play": "true",
-    "slider_speed": "0.4"
+    "slider_speed": "0.4",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "contained_level_names": null
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -26,10 +45,18 @@
         <block type="simple_move_down"/>
         <block type="simple_move_right"/>
         <block type="simple_move_left"/>
+        <block type="simple_move_up_left"/>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_down_left"/>
+        <block type="simple_move_down_right"/>
         <block type="simple_jump_up"/>
         <block type="simple_jump_down"/>
         <block type="simple_jump_right"/>
         <block type="simple_jump_left"/>
+        <block type="simple_jump_up_left"/>
+        <block type="simple_jump_up_right"/>
+        <block type="simple_jump_down_left"/>
+        <block type="simple_jump_down_right"/>
         <block type="draw_colour_simple">
           <title name="COLOUR">#ff0000</title>
         </block>

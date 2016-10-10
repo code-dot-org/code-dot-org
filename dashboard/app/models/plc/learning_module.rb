@@ -39,11 +39,11 @@ class Plc::LearningModule < ActiveRecord::Base
   scope :content, -> { where(module_type: CONTENT_MODULE) }
   scope :practice, -> { where(module_type: PRACTICE_MODULE) }
 
-  def is_required?
+  def required?
     module_type == REQUIRED_MODULE
   end
 
   def name_with_required_tag
-    "#{name}#{' - Required' if is_required?}"
+    "#{name}#{' - Required' if required?}"
   end
 end

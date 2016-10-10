@@ -18,7 +18,8 @@ var ImagePicker = React.createClass({
     assetChosen: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
     channelId: React.PropTypes.string.isRequired,
-    uploadsEnabled: React.PropTypes.bool.isRequired
+    uploadsEnabled: React.PropTypes.bool.isRequired,
+    showUnderageWarning: React.PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
@@ -61,7 +62,12 @@ var ImagePicker = React.createClass({
       divider: {
         borderColor: color.purple,
         margin: '5px 0'
-      }
+      },
+      warning: {
+        color: color.red,
+        fontSize: 13,
+        fontWeight: 'bold',
+      },
     };
 
     var modeSwitch, title = this.props.assetChosen ?
@@ -89,6 +95,11 @@ var ImagePicker = React.createClass({
     return (
       <div className="modal-content" style={styles.root}>
         {title}
+        {this.props.showUnderageWarning && (
+          <p style={styles.warning}>
+            Warning: Do not upload anything that contains personal information.
+          </p>
+        )}
         {modeSwitch}
         {body}
       </div>
@@ -96,3 +107,23 @@ var ImagePicker = React.createClass({
   }
 });
 module.exports = ImagePicker;
+
+
+
+
+if (BUILD_STYLEGUIDE) {
+  const Dialog = require('@cdo/apps/templates/Dialog').default;
+  const Body = require('@cdo/apps/templates/Dialog').Body;
+  ImagePicker.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('ImagePicker', module)
+      .addStoryTable([
+        {
+          name: 'with warning',
+          story: () => (
+            <ImagePicker showWarning channelId="some-channel" uploadsEnabled />
+          )
+        },
+      ]);
+  };
+}

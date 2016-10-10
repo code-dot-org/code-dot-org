@@ -10,7 +10,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "ideal": "8",
+    "ideal": "10",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,8 +30,8 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "start_direction": "90",
-    "instructions": "You just created a nested loop! Let's repeat all of these commands with another repeat block to draw windows on this house. Don't forget the jump block!",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>You just created a nested loop! Let's repeat all of these commands with **another** `repeat` block to draw windows on this house. Don't forget to `jump`!",
+    "instructions": "If you can draw one window, you can draw three! Try using your choice of a nested loop or a function here. Don't forget the jump block!",
+    "markdown_instructions": "You just created a nested loop! Let's repeat all of these commands with **another** `repeat` block to draw windows on this house. Don't forget to `jump`!",
     "contained_level_names": null
   },
   "published": true,
@@ -104,10 +104,10 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">do something</title>
+          <title name="NAME">draw a window</title>
         </block>
         <block type="procedures_callnoreturn">
-          <mutation name="do something"/>
+          <mutation name="draw a window"/>
         </block>
       </xml>
     </toolbox_blocks>
@@ -191,71 +191,136 @@
                                 </block>
                               </statement>
                               <next>
-                                <block type="controls_for_counter" inline="true">
-                                  <mutation counter="counter"/>
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <title name="NUM">300</title>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <title name="NUM">10</title>
-                                    </block>
-                                  </value>
-                                  <value name="BY">
-                                    <block type="math_number">
-                                      <title name="NUM">10</title>
-                                    </block>
-                                  </value>
-                                  <statement name="DO">
-                                    <block type="draw_move" inline="true">
-                                      <title name="DIR">moveForward</title>
-                                      <value name="VALUE">
-                                        <block type="math_arithmetic" inline="true">
-                                          <title name="OP">MINUS</title>
-                                          <value name="A">
-                                            <block type="variables_get">
-                                              <title name="VAR">counter</title>
-                                            </block>
-                                          </value>
-                                          <value name="B">
-                                            <block type="math_number">
-                                              <title name="NUM">0</title>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">115</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnLeft</title>
+                                      <title name="VALUE">90</title>
                                       <next>
-                                        <block type="draw_move" inline="true">
-                                          <title name="DIR">moveBackward</title>
-                                          <value name="VALUE">
-                                            <block type="math_arithmetic" inline="true">
-                                              <title name="OP">MINUS</title>
-                                              <value name="A">
-                                                <block type="variables_get">
-                                                  <title name="VAR">counter</title>
-                                                </block>
-                                              </value>
-                                              <value name="B">
-                                                <block type="math_number">
-                                                  <title name="NUM">5</title>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
+                                        <block type="jump_by_constant">
+                                          <title name="DIR">jumpBackward</title>
+                                          <title name="VALUE">300</title>
                                           <next>
-                                            <block type="draw_turn_by_constant">
-                                              <title name="DIR">turnLeft</title>
-                                              <title name="VALUE">90</title>
-                                              <next>
+                                            <block type="controls_repeat">
+                                              <title name="TIMES">2</title>
+                                              <statement name="DO">
                                                 <block type="draw_move_by_constant">
                                                   <title name="DIR">moveForward</title>
-                                                  <title name="VALUE">2</title>
+                                                  <title name="VALUE">125</title>
                                                   <next>
                                                     <block type="draw_turn_by_constant">
                                                       <title name="DIR">turnRight</title>
                                                       <title name="VALUE">90</title>
+                                                      <next>
+                                                        <block type="draw_move_by_constant">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">70</title>
+                                                          <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">90</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </statement>
+                                              <next>
+                                                <block type="jump_by_constant">
+                                                  <title name="DIR">jumpForward</title>
+                                                  <title name="VALUE">300</title>
+                                                  <next>
+                                                    <block type="draw_turn_by_constant">
+                                                      <title name="DIR">turnRight</title>
+                                                      <title name="VALUE">90</title>
+                                                      <next>
+                                                        <block type="jump_by_constant">
+                                                          <title name="DIR">jumpBackward</title>
+                                                          <title name="VALUE">115</title>
+                                                          <next>
+                                                            <block type="controls_for_counter" inline="true">
+                                                            <mutation counter="counter"/>
+                                                            <value name="FROM">
+                                                            <block type="math_number">
+                                                            <title name="NUM">300</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TO">
+                                                            <block type="math_number">
+                                                            <title name="NUM">10</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="BY">
+                                                            <block type="math_number">
+                                                            <title name="NUM">10</title>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="draw_move" inline="true">
+                                                            <title name="DIR">moveForward</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_arithmetic" inline="true">
+                                                            <title name="OP">MINUS</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">counter</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_move" inline="true">
+                                                            <title name="DIR">moveBackward</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_arithmetic" inline="true">
+                                                            <title name="OP">MINUS</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">counter</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">5</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <title name="VALUE">90</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">2</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">90</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -265,7 +330,7 @@
                                         </block>
                                       </next>
                                     </block>
-                                  </statement>
+                                  </next>
                                 </block>
                               </next>
                             </block>

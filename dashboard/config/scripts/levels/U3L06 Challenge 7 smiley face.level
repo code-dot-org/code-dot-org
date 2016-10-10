@@ -88,6 +88,65 @@
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem"
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "App Lab is expecting you to draw at least 2 dots - one for the background and one for the yellow face. You can use dots for the eyes as well, but there are other ways, too."
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "App Lab is expecting you to draw at least 2 dots - one for the background and one for the yellow face. You can use dots for the eyes as well, but there are other ways, too."
+      },
+      {
+        "entries": [
+          "moveTo:2"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to use moveTo at least once. You probably want to use it more."
+      },
+      {
+        "entries": [
+          "turnTo:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to use turnTo at least once - just to try it out."
+      },
+      {
+        "entries": [
+          "penUp:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to use penUp at least once to complete this task - just to try it out."
+      },
+      {
+        "entries": [
+          "penDown:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to use penDown at least once to complete this task - just to try it out."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

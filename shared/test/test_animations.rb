@@ -2,7 +2,6 @@ require_relative 'files_api_test_base' # Must be required first to establish loa
 require_relative 'files_api_test_helper'
 
 class AnimationsTest < FilesApiTestBase
-
   def setup
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'animations', @channel_id)
@@ -216,5 +215,4 @@ class AnimationsTest < FilesApiTestBase
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
-
 end

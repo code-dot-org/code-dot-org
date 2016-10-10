@@ -9,15 +9,22 @@ import { DataView } from '../constants';
 const ADD_TABLE_NAME = 'data/ADD_TABLE_NAME';
 const CHANGE_VIEW = 'data/CHANGE_VIEW';
 const DELETE_TABLE_NAME = 'data/DELETE_TABLE_NAME';
+const UPDATE_TABLE_COLUMNS = 'data/UPDATE_TABLE_COLUMNS';
 const UPDATE_TABLE_RECORDS = 'data/UPDATE_TABLE_RECORDS';
 const UPDATE_KEY_VALUE_DATA = 'data/UPDATE_KEY_VALUE_DATA';
+const SHOW_WARNING = 'data/SHOW_WARNING';
+const CLEAR_WARNING = 'data/CLEAR_WARNING';
 
 const DataState = Record({
   view: DataView.OVERVIEW,
   tableListMap: {},
   tableName: '',
+  tableColumns: [],
   tableRecords: {},
-  keyValueData: {}
+  keyValueData: {},
+  warningTitle: '',
+  warningMsg: '',
+  isWarningDialogOpen: false,
 });
 
 const initialState = new DataState();
@@ -42,8 +49,26 @@ export default function (state = initialState, action) {
     }
     case UPDATE_KEY_VALUE_DATA:
       return state.set('keyValueData', action.keyValueData);
+    case UPDATE_TABLE_COLUMNS:
+      if (state.tableName === action.tableName) {
+        return state.set('tableColumns', action.tableColumns);
+      }
+      return state;
     case UPDATE_TABLE_RECORDS:
-      return state.set('tableRecords', action.tableRecords);
+      if (state.tableName === action.tableName) {
+        return state.set('tableRecords', action.tableRecords);
+      }
+      return state;
+    case SHOW_WARNING:
+      return state
+        .set('warningMsg', action.warningMsg)
+        .set('warningTitle', action.warningTitle)
+        .set('isWarningDialogOpen', true);
+    case CLEAR_WARNING:
+      return state
+        .set('warningMsg', '')
+        .set('warningTitle', '')
+        .set('isWarningDialogOpen', false);
     default:
       return state;
   }
@@ -79,7 +104,24 @@ export const updateKeyValueData = keyValueData => ({
   keyValueData
 });
 
-export const updateTableRecords = tableRecords => ({
+export const updateTableColumns = (tableName, tableColumns) => ({
+  type: UPDATE_TABLE_COLUMNS,
+  tableName,
+  tableColumns
+});
+
+export const updateTableRecords = (tableName, tableRecords) => ({
   type: UPDATE_TABLE_RECORDS,
+  tableName,
   tableRecords
+});
+
+export const showWarning = (warningMsg, warningTitle) => ({
+  type: SHOW_WARNING,
+  warningMsg,
+  warningTitle,
+});
+
+export const clearWarning = () => ({
+  type: CLEAR_WARNING,
 });

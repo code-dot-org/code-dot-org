@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return (Studio.Globals.counter === 103) && (Studio.sayComplete > 49) && (Studio.sayComplete <= 51)  ;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 51;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "This time, let's try counting only the odd numbers from 1 to 101.",
+    "instructions": "This time, help Olive the Cat count only the odd numbers from 1 to 101.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,7 +39,8 @@
     "first_sprite_index": "1",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "timeout_failure_tick": "400"
+    "timeout_failure_tick": "400",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

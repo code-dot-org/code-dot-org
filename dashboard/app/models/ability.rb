@@ -15,14 +15,13 @@ class Ability
       Prize,
       TeacherPrize,
       TeacherBonusPrize,
-      LevelSourceHint,
-      FrequentUnsuccessfulLevelSource,
       :reports,
       User,
       UserPermission,
       Follower,
       PeerReview,
       Section,
+      SectionHiddenStage,
       # Ops models
       District,
       Workshop,
@@ -36,9 +35,7 @@ class Ability
       Plc::CourseUnit,
       # PD models
       Pd::Workshop,
-      Pd::Attendance,
       Pd::DistrictPaymentTerm,
-      Pd::DistrictReport,
       Pd::WorkshopOrganizerReport,
       Pd::TeacherProgressReport,
       Pd::CourseFacilitator
@@ -57,10 +54,7 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-
-      if user.teacher? || (user.persisted? && user.permission?(UserPermission::HINT_ACCESS))
-        can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
-      end
+      can :read, SectionHiddenStage
 
       if user.teacher?
         can :read, Section, user_id: user.id
@@ -76,6 +70,9 @@ class Ability
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
+        can :manage, SectionHiddenStage do |hidden_stage|
+          userid == hidden_stage.section.user_id
+        end
       end
 
       if user.facilitator?
@@ -90,8 +87,8 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
-        can [:read, :start, :end], Pd::Workshop, facilitators: {id: user.id}
-        can :manage, Pd::Attendance, workshop: {facilitators: {id: user.id}}
+        can [:read, :start, :end, :workshop_survey_report], Pd::Workshop, facilitators: {id: user.id}
+        can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
       end
 
       if user.district_contact?
@@ -101,18 +98,16 @@ class Ability
             district.contact_id == user.id
           end
         end
-        can :read, Pd::TeacherProgressReport
         can :group_view, Plc::UserCourseEnrollment
         can :manager_view, Plc::UserCourseEnrollment do |enrollment|
           DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id).pluck(:id))
         end
-        can :read, Pd::DistrictReport
       end
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
-        can :manage, Pd::Workshop, organizer_id: user.id
-        can :manage, Pd::Attendance, workshop: {organizer_id: user.id}
+        can [:read, :start, :end, :update, :destroy], Pd::Workshop, organizer_id: user.id
+        can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
         can :read, Pd::WorkshopOrganizerReport
         can :read, Pd::TeacherProgressReport
         can :read, Pd::CourseFacilitator
@@ -120,35 +115,15 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if user.persisted? && user.admin?
+    if user.persisted?
       can :read, Script
       can :read, ScriptLevel
-    elsif user.persisted? && user.student_of_admin? # logged in, not admin, is student of admin
+    else
       can :read, Script do |script|
-        !script.admin_required?
+        !script.login_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.admin_required?
-      end
-    elsif user.persisted? # logged in, not admin, not student of admin
-      can :read, Script do |script|
-        !script.admin_required? &&
-            !script.student_of_admin_required?
-      end
-      can :read, ScriptLevel do |script_level|
-        !script_level.script.admin_required? &&
-            !script_level.script.student_of_admin_required?
-      end
-    else # not logged in
-      can :read, Script do |script|
-        !script.admin_required? &&
-            !script.student_of_admin_required? &&
-            !script.login_required?
-      end
-      can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required? &&
-            !script_level.script.student_of_admin_required? &&
-            !script_level.script.admin_required?
+        !script_level.script.login_required?
       end
     end
 
@@ -157,12 +132,8 @@ class Ability
     # through ProjectsController and their view/edit requirements are defined
     # there.
     ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
-      if project_type_props[:admin_required]
-        can :load_project, project_type_key if user.admin?
-      elsif project_type_props[:student_of_admin_required]
-        can :load_project, project_type_key if user.admin? || user.student_of_admin?
-      elsif project_type_props[:login_required]
-        can :load_project, project_type_key if user.id
+      if project_type_props[:login_required]
+        can :load_project, project_type_key if user.persisted?
       else
         can :load_project, project_type_key
       end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LtiProviderControllerTest < ActionController::TestCase
+class LtiProviderControllerTest < ActionDispatch::IntegrationTest
   include Mocha::API
 
   TEST_PROVIDER_KEY = "dc3872a4b605f1f36242a837172ce2c0"
@@ -13,7 +13,7 @@ class LtiProviderControllerTest < ActionController::TestCase
   def lti_consumer_params(consumer_key, consumer_secret, test_name, *args)
     # match URL used by MiniTest post :sso call
     tc = IMS::LTI::ToolConfig.new(title: 'Test LTI Provider',
-                                  launch_url: 'http://test.host/auth/lti')
+                                  launch_url: auth_lti_url)
 
     @consumer = IMS::LTI::ToolConsumer.new(
       consumer_key,
@@ -34,8 +34,7 @@ class LtiProviderControllerTest < ActionController::TestCase
   # For MiniTest need to have params passed through both query params and
   # request body
   def lti_post(action, params)
-    @request.headers['Content-Type'] = 'application/x-www-form-urlencoded'
-    post action, params.to_param, params
+    post auth_lti_path, params: params.to_param, headers: {'Content-Type' => 'application/x-www-form-urlencoded'}
   end
 
   test "LTI sign-in with existing CDO account, signs in" do
@@ -167,7 +166,7 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to new_user_registration_url
     assert_match "[user_id] missing", session['flash'].to_s
   end
 
@@ -184,7 +183,7 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to new_user_registration_url
     assert_match /launch request outside of time window/, session['flash'].to_s
   end
 
@@ -200,7 +199,7 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to new_user_registration_url
     assert_match "[custom_age] missing", session['flash'].to_s
   end
 end

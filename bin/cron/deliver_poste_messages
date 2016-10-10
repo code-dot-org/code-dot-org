@@ -39,7 +39,6 @@ end
 
 module Poste
   class Template
-
     def initialize(body, engine=TextRender::MarkdownEngine)
       if match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
         @header = TextRender::YamlEngine.new(match[:header].strip)
@@ -94,12 +93,10 @@ eos
       end
       doc.to_html
     end
-
   end
 end
 
 class Deliverer
-
   def initialize(params)
     @params = params.dup
     @smtp = reset_connection
@@ -239,9 +236,9 @@ class Deliverer
     email = defaults[:temporary_email] if email.blank?
     return nil if email.blank?
 
-    {email: email}.tap do |address|
+    {email: email}.tap do |name_and_email|
       name = defaults[:name].to_s.strip
-      address[:name] = name unless name.empty?
+      name_and_email[:name] = name unless name.empty?
     end
   end
 
@@ -251,7 +248,6 @@ class Deliverer
       smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
     end
   end
-
 end
 
 def create_threads(count)

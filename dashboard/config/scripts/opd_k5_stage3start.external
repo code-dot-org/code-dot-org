@@ -1,11 +1,9 @@
 name 'OPD-K5 Stage3Start'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
+# Sequencing > Stage Overview
 
-### SEQUENCING > Stage Overview
-<img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
-<br><br>
+<img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px">
 
 By completing Stage 4, you will:
 
@@ -13,11 +11,7 @@ By completing Stage 4, you will:
 - Use the Code Studio visual programming engine to write simple programs
 - Reflect on classroom application
 
->***What to Expect in this Stage:*** In the levels that follow, we'll provide you with video instruction on algorithms and programs. Then we'll introduce a series of puzzles and ask you to apply your learning. In order to complete a puzzle, you'll need to write code using visual programming. We'll close with an opportunity to review Code Studio resources and to reflect on how you might teach this concept to your students. You should spend between 10-30 minutes on this stage.
+> ***What to Expect in this Stage:*** In the levels that follow, we'll provide you with video instruction on algorithms and programs. Then we'll introduce a series of puzzles and ask you to apply your learning. In order to complete a puzzle, you'll need to write code using visual programming. We'll close with an opportunity to review Code Studio resources and to reflect on how you might teach this concept to your students. You should spend between 10-30 minutes on this stage.
 
-<br><br>
-#### Ready? Let's go!
-
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+Ready? Let's go!
 MARKDOWN

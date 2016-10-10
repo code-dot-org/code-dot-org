@@ -22,23 +22,44 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# How Do Events Work?\r\nEvent-driven apps are made up of elements that can trigger events (such as buttons) and pieces of code called **event handlers**. Event handlers are commands that \"watch\" for certain events to occur in your program, and then run some function when an event occurs.\r\n\r\n<img src=\"https://images.code.org/96abf7d54a0be221a8b8eda80c696bf4-image-1444142010683.png\" style=\"float: right; width: 250px\">The `onEvent(id, type, callback)` command creates an **event handler** in your app. The three parameters are:\r\n* **id** - the ID of the element in the app you want to \"watch\", one that might trigger an event\r\n* **type** - the type of event to \"watch\" for (e.g. a click, a key press, a mousemove, etc.)\r\n* **callback** - a **callback function** is only different from a normal function in that you don't call it directly from your code. Instead it gets *called by the system at the time the specified event occurs*. You put the code into this function just like you would any other, and it will run when the event occurs.\r\n\r\nOnce created, the event handler will always \"watch\" that element as long as it exists. \r\n\r\nNot all event types will work with buttons but it's fun to play a little bit.",
+    "markdown_instructions": "# How Do Events Work?\r\nEvent-driven apps are made up of elements that can trigger events (such as buttons) and pieces of code called **event handlers**. Event handlers are commands that \"watch\" for certain events to occur in your program, and then run some function when an event occurs.\r\n\r\n<img src=\"https://images.code.org/96abf7d54a0be221a8b8eda80c696bf4-image-1444142010683.png\" style=\"float: right; width: 250px\">The `onEvent(id, type, callback)` command creates an **event handler** in your app. The three parameters are:\r\n* **id** - the ID of the element in the app you want to \"watch\", one that might trigger an event\r\n* **type** - the type of event to \"watch\" for (e.g. a click, a key press, a mousemove, etc.)\r\n* **callback** - a **callback function** is only different from a normal function in that you don't call it directly from your code. Instead it gets *called by the system at the time the specified event occurs*. You put the code into this function just like you would any other, and it will run when the event occurs.\r\n\r\nOnce created, the event handler will always \"watch\" that element as long as it exists. \r\n\r\n# Do This\r\n\r\nThe toolbox has a new block called `setText` which allows you to change the text of an element on the screen. You're going to modify the button event handler so that it changes the title text when clicked.\r\n\r\n* Drag out a `setText` block to the _inside_ of the `onEvent` callback function (where the `console.log` block currently is)\r\n* From the block's dropdown, select \"titleLabel\" (the id of the element you want to change)\r\n* In the block's second input, replace \"text\" with a new title for the app\r\n* Run your program and click the button to see it work",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true",
+    "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "true",
+    "hide_design_mode": "false",
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "instructions": "Add an event handler to the button to move the turtle forward. (Click to see full instructions)",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Use the setText block to change the text of titleLabel\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"setText\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "project_template_level_name": "CSD U4 - Events Template",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "button": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "setText": null,
+      "console.log": null,
+      "comment": null
+    },
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

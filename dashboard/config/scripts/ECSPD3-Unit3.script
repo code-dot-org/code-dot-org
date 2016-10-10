@@ -1,8 +1,5 @@
-title 'Exploring Computer Science PD: Academic Year Development'
-description 'Academic Year Development'
-description_short 'Academic Year Development'
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'ECS Phase 3 Unit3 Welcome'
@@ -23,8 +20,6 @@ level 'ECSPD Phase 3 - Unit 3 - Teaching Practice'
 level 'ECSPD jsfiddle'
 level 'ECSPD Unit 3 Strategy Review'
 level 'ECSPD strategies'
-
-
 
 stage 'Unit 3 Day-by-Day'
 level 'ECSPD Unit 3 Stage 6 Overview'
@@ -49,6 +44,3 @@ level 'ECSU3 Challenge Submission'
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
 level 'Unit 3 Survey 2'
-
-
-stage 'Unit 3 Challenge Preview'

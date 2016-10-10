@@ -1,12 +1,11 @@
 /**
  * @overview Static helper methods for NetSim.
  */
-'use strict';
 
 import $ from 'jquery';
 var utils = require('../utils'); // Provides String.prototype.repeat
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimGlobals = require('./NetSimGlobals');
 
@@ -238,7 +237,7 @@ exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
  * @private
  */
 exports.scrubLevelConfiguration_ = function (levelConfig) {
-  var scrubbedLevel = _.clone(levelConfig, true);
+  var scrubbedLevel = _.cloneDeep(levelConfig);
 
   // Convert old header spec format to new header spec format
   scrubbedLevel.routerExpectsPacketHeader =
@@ -379,4 +378,40 @@ exports.makeContinueButton = function (onPanel) {
         secondary: false,
         classes: ['submitButton']
       });
+};
+
+/**
+ * @param {DashboardUser} user
+ * @param {string} shardID
+ * @returns {boolean}
+ */
+exports.doesUserOwnShard = function (user, shardID) {
+  if (!user) {
+    return false;
+  } else if (user.isAdmin) {
+    return true;
+  }
+
+  // Find a section ID in the current shard ID
+  var matches = /_(\d+)$/.exec(shardID);
+  if (!matches) {
+    return false;
+  }
+
+  // matches[1] is the first capture group (\d+), the numeric section ID.
+  var sectionID = parseInt(matches[1], 10);
+  return user.ownsSection(sectionID);
+};
+
+/**
+ * Given a location (e.g. `window.location`), create a URL-friendly
+ * level 'slug' that we can use as part of the shard ID.
+ * @param {!Location|HTMLHyperlinkElementUtils} loc
+ * @return {string} a level 'slug' like 's-csp1-stage-3-puzzle-2'
+ */
+exports.getUniqueLevelKeyFromLocation = function (loc) {
+  return loc.pathname     // something like '/s/csp1/stage/3/puzzle/2'
+    .replace(/^\//, '')   // Strip leading slash from pathname
+    .replace(/\/$/, '')   // Strip trailing slash (if it exists)
+    .replace(/\W/g, '-'); // Replace non-word characters with dashes
 };

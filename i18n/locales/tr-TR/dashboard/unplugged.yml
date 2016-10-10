@@ -1,196 +1,196 @@
 tr:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Bilgisayar Bilimine Giriş
         desc: 'Bu ders Bilgisayar Bilimleri konseptini ve bir Bilgisayar Bilimcisinin neler yaptığını tanıtacak, yanı sıra öğrencilere bir bilgisayar bilimcisinin rolünü üstlenme fırsatı sunacaktır. Aktivite sonunda öğrenciler, öğrendiklerini içeren ve  götürebilecekleri anımsatıcılara sahip olacaktır. Genç çocuklara gördükleri derslerle ilgili sözcükleri öğretmekten vazgeçmek isteyebilirsin, ama bunu eğlenceli ve oyun olarak anlatabilmek daha gelişmiş yöntemler sunan fırsatları beklemekten çok daha verimlidir.'
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Sayısal Düşünme
         desc: Yalnızca kalem ve işaretleyiciler kullanarak öğrenciler sayısal düşünmenin dört adımını öğrenecekler. Kısa bir tanıtımın ardından gruplara ayrılarak her biri diğerini yönlendirecek belli canavarlar çizerler (önceden seçilmiş olan canavarların bulunduğu bir katalogdan). Görevin tüm süreci ayrıştırılabilir olmalıdır. Takımlar katalogda bulunan canavarları ve onlara ait dokuları analiz edebilir, farklılıkları gözetebilir ve bu bilgileri kullanarak bir sonraki grubun belli bir canavarı oluştururken ihtiyaç duyacağı algoritmayı (yönlendirmeleri) kullanabilirler. Takımlar daha sonra diğer gruplar ile kullandıkları algoritmaları değiş tokuş ederek o algoritmada belirtilenlerden yola çıkarak belirlenen canavarı çizerler. Ortaya çıkan çizim, ilk takımın yeltendiği çizim midir?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Grafik Kağıdıyla Programlama
         desc: Resimler çizmek için diğerlerini programlamak neticesinde öğrenciler programlamanın gerçekte nasıl bir şey olduğunu anlamaya başlarlar. Sınıf, öğrencilerin arkadaşlarını kareleri boyayarak var olan resmi ortaya çıkarmaları konusunda uğraş vermeleri ile başlar. Eğer daha zaman kalırsa, öğrencilere kendi çizdiği resimlerle çalışma imkanı da verilir.
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algoritmalar
         desc: 'Bu ders algoritmaları kapsar.  Tangram şekilleri ve grafik kağıt kullanarak ilk egzersiz, her yönergenin mümkün olduğunca net ve kesin olarak uygulanabilir olmasının ne kadar önemli olduğunu gösterir.  Daha sonra sınıf, bir kağıdı dikdörtgen olarak katlayabilmenin kaç yolu olduğunu keşfetmeye çalışır, nasıl bazı metotların diğerlerinden daha az veya daha fazla katlama gerektirdiği incelenir.'
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Fonksiyonlar
         desc: Bu derste, öğrenciler güneş avcısı(suncatcher) yapacaklar; bunu yaparken ip, boncuklar ve özel bir büyü(pişirme yöntemi) kullanacaklar. Öğrenciler bir dizi işi adım adım yapacaklar, daha sonra tekrar eden bazı adımları tanımlamaları istenecek. Bu adımlar tanımlandığında, ana program onların isimlerini kullanacak ve tüm bu mükemmel işlem tek bir sayfada kodlanacak. Son program tüm sınıf tarafından donatılacak; kullandıkları iplerin, boncukların ve büyünün cinsi ne olursa olsun. Bunu etkili bir şekilde yapabilmeleri için, öğrencilerin kullandıkları malzemeleri soyut olarak kodlamaları ve kişisel katkıları için bulanık(özel) terimler yaratmaları gerekecek. Genel kod yerleştirme için değişkenlerin bu şekilde kullanılması mükemmel.
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Koşullar
         desc: Bu bir sınıf oyunudur. Koşullamalar, if durumları ve döngüler hakkında fikir sahibi olduktan sonra, sınıf önceden yazılmış programla, bir deste kartla veya çekiliş şansıyla deneme yapabilir.
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Şarkı yazma
         desc: Şarkı sözleri okuma oldukça sezgisel bir girişimdir. Biz zaten bilinen bir bilgiyi alıp onu fonksiyon tanımlama ve kullanma bilgisine çevireceğiz. Öğrenciler bir defa tanımlama ve çağırma işlemi ile aşina olduktan sonra parametre kullanma kabiliyetini öğrenecekler.
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Soyutlama
         desc: Bu etkinlik günlük hayatımızda Mad-Lib stili düşünmeyi birleştirecek. Öğrencilere soyut düşünmenin avantajları hakkında bilgi verecek.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Röle programlama
         desc: Bu ders bir önceki faaliyetteki (4. grafik kağıdı programlama) fikri kullanacak ve sırayla çalışan programları ve hatayı kontrol etmenin önemini görecek.
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: İnternet
         desc: Bu derste öğrenciler IPs ve DNS web adresleri hakkındaki her şeyi öğrenirken,internetteki akışı taklit edecekler.
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: paketlemek
         desc: İlk 20 saatlik dersin son kısmı öğrencilerin dersler boyunca en sevdiği kısımları canlandıracak ve kendilerinin bilgisayar bilimleri macerasında yol almak isteyip istemeyeceklerine karar vermelerine destek olacak.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Mutlu Haritalar
         desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek bir komutla bir karakteri labirentte hareket ettirirler.
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Oynat, Oynat
         desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek bir komutla bir karakteri labirentte hareket ettirirler.
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
         video: C1_dikmek_tohum
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Bir Temel Oluşturma
         desc: Öğrenciler verilen malzemelerle yapıyı oluşturur. Yapılar görevi tamamlamalı ve öğrenciler işler karmaşıkolduğunda ısrarcı olmayı tartışmalı.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Döngüselleşme
         desc: 'Bu ders dans aktivitesi ile döngülerin(tekrarlanan komutlar) programlama konsepti hakkında bilgilendirme yapar.Öğrenciler  basit planlama yı ve inşa edilenleri tekrar etmeyi öğrenecekler.'
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Röle Programlama
         desc: 'Öğrenciler bayrak yarışı ile koşturup "Grafik kağıdı programlama" algoritma yazıyorlar. Her seferinde yalnız bir komut yazabilirler. Eğer biryerde hata varsa o yere kadarki herşeyi siliyorlar.'
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Koşullar
         desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir puan alırsın gibi kurallar yaratacaklar
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Büyük Olay
         desc: Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve öğrenciler basılan tuşa göre eylemde bulunacak.
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Biryerlere Güvenle Gitmek
         desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette gezinirken nasıl güvende olunabileceğine dair bilgi verir.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Grafik Kağıdı Programlama
         desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut kullanarak sınfı bir çizim oluşturmaya yönlendirir.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
         desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: İkilik Bileklikler
         desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Dijital İziniz
         desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını tartışacaklar.
         video: C2_digital_footprint
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Sayısal Düşünme
         desc: Öğrencilerin sayısal düşünme adımları kullanır (parçalama, desen eşleştirme, soyutlama, algoritma) ve talimatları olmayan bir oyunu nasıl oynayacağını anlar.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: Fonksiyonel Güneş Avcıları
         desc: Öğrenciler algoritma oluşturmak için değişkenleri ve fonksiyonları (tekrar tekrar kullanmak istediğiniz kod parçalarını) kullanıyorlar. İp ve boncuk kullanarak kolye yapın.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Parametrelerle Şarkı Yazmak
         desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
         video: C3_parametreler_ile_şarkıyazımı
-      DiceRace:
+      'DiceRace':
         title: 'Gerçek yaşam algoritması: Zar Yarışı'
         desc: Bu ders algoritmaları günlük hayatımızda kullanmamız için bizi yönlendiriyor.Bunun bir parçası olarak,öğrenciler zar yarışı oyunu için algoritmaları tanımlayıp kaydedecekler.
         video: C3_zar_yarışı
-      Internet:
+      'Internet':
         title: İnternet
         desc: Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını mesajlar yollayarak gösterecekler.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: "Kalabalık Kaynaklandırma 'Crowdsourcing'"
         desc: Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler. Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Sayısal Vatandaşlık
         desc: Öğrenciler kişisel bilgilerle gizli bilgiler arasındaki farkı keşif edecekler. Hangi bilgilerin internetten paylaşılması gerektiğini keşif edecekler.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Tangram Algoritmaları
         desc: 'Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer algoritmayı basit tutacaksanız bunun bir çok yolu var.Eğer herkesin aynı şey ile sonlandırdığından emin olmak istiyorsanız,algoritmanız daha çok detaya ihtiyaç duyacaktır.'
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Zarf değişkenleri
         desc: 'Değişkenleri Bilgisayar Biliminde esneklik sağlar.  Bu derste değişkenler nedir ve biz onları nasıl çok farklı şekillerde kullanabilirsiniz onları açıklayacağız.. Önce bu aktiviteyi kullanın ve fikri anlayın.'
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: Kızgın konuşkan
         desc: Soyutlama bir bilgisayar bilimcisinin sahip olması gereken en önemli yeteneklerden biridir. Bu aktivite, öğrencilerinizin hikayelerin farklılıklarını analiz etmesini, böylece onları soyutlamasını sağlayacak. Bu soyutlanmış hikayeler ise daha bir çok eğlenceli hikayeye yol gösterici olacak.
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: Eğlenceli tekrar için
         desc: 'Biliyoruzki döngüler bize bazı şeyleri tekrar ve tekrar yapmamız için olanak sağlıyor,fakat şimdi   ekstra yapıları döngüler ile nasıl doğru kullanacağımızı öğreneceğiz.'
         video: C4_bağımsız_looplar_için
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Değiştirgenlerle Şarkı Yazma
         desc: 'Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.  '
         video: C4_tıkanmamış_parametreler
-      BinaryImages:
+      'BinaryImages':
         title: İkili resimler
         desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir. Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu öğretecek.
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Video oyunları ve kordinat düzlemleri
         desc: Oynamaya bayıldığınız oyunların ne kadar cebir içerdiğini keşif edin. Cebirsel ifadelerin koordinat uzayında nasıl çalıştığını kesif edin. Sonra kendi video oyununuzu tasarlamaya hazır olun.
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Sözleşmeler, etki alanı ve aralığı
         desc: Teknikler bizim fonksiyonları anlama ve tartışmamıza olanak sağlar. Bu derste Tekniklere bakacağız ve bunların yeni fonksiyon yada dili öğrenmemize nasıl katkı sağlayacağını göreceğiz.
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Tasarım Tarifi
         desc: Öğrenciler bazı basit fonksiyonlar geliştirdiler. Daha karmaşık fonksiyonlar daha karmaşık düşünce gerektirir. Tasarım tarifi fonkiyon yazmak için yapısal bir yöntemdir. Buna fonksiyonun doğru çalıştığından emin olan testlerde dahildir.
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Boolean (olumlu veya olumsuz)) ve mantık
         desc: Boolean (ikili sistem, olumlu veya olumsuz) bu derste öğreneceğimiz son veri tipidir. Bu etkinlikte Boolean (ikili sistem, olumlu veya olumsuz) nedir öğreneceksiniz. Bunlarla nasıl mantıksal fonksiyonlar yazarız onları göreceğiz
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Koşullar ve Parçalı Fonksiyonlar
         desc: Fonksiyonlara geçtiğimiz parametreler onların çıktısını değiştir. Eğer bazı parametre değerleri ile bir durum farklı parametre değerleri ile farklı durum oluşmasını isteyebiliriz. Koşullar burada devreye girer...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Çarpışmanın algılanması ve Pisagor teoremi
         desc: Ekrandaki nesnelerin dokunduklarını belirleme oyunların önemli bir yönüdür. Bu derste, Pisagor teoremi ve uzaklık formülü ile iki nokta arasındaki mesafeyi ölçmeye bakacağız. Daha sonra bunu iki nokta (veya oyun karakterleri) arası mesafe ölçek için kullanıp dokunup dokunmadığına karar için kullanılabilir bakacağız.
         video: alg_16_biggame_collision_detection

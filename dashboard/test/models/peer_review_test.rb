@@ -24,7 +24,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       user_id: user.id,
       level_id: @script_level.level_id,
       script_id: @script_level.script_id,
-      new_result: Activity::UNSUBMITTED_RESULT,
+      new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
       submitted: true,
       level_source_id: level_source_id,
       pairing_user_ids: nil
@@ -59,17 +59,17 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'approving both reviews should mark the corresponding UserLevel as accepted' do
     level_source = create :level_source, data: 'My submitted answer'
 
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
     track_progress level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
     user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review1.update! reviewer: create(:user), status: 'accepted'
     user_level.reload
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review2.update! reviewer: create(:user), status: 'accepted'
     user_level.reload
@@ -79,17 +79,17 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'rejecting both reviews should mark the corresponding UserLevel as rejected' do
     level_source = create :level_source, data: 'My submitted answer'
 
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
     track_progress level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
     user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review1.update! reviewer: create(:user), status: 'rejected'
     user_level.reload
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review2.update! reviewer: create(:user), status: 'rejected'
     user_level.reload
@@ -97,13 +97,12 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'pull review from pool' do
-    reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
-      3.times { teachers << create(:teacher) }
-    end
+    reviewer_1 = create :teacher
+    reviewer_2 = create :teacher
 
     level_source = create(:level_source, data: 'Some answer')
 
-    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
+    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
 
     assert_equal [nil, nil], PeerReview.all.map(&:reviewer)
@@ -117,7 +116,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     end
 
     3.times do
-      assert_nil PeerReview.pull_review_from_pool(@script_level.script, reviewer_3)
+      assert_nil PeerReview.pull_review_from_pool(@script_level.script, @user)
     end
 
     assert_equal Set.new([reviewer_1, reviewer_2]), Set.new(PeerReview.all.map(&:reviewer))
@@ -130,7 +129,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     level_source = create(:level_source, data: 'Some answer')
 
-    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
+    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
 
     first_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
@@ -144,6 +143,51 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal first_review.id, new_review.id
     assert_equal reviewer_3, new_review.reviewer
     assert_equal Set.new([reviewer_2, reviewer_3]), Set.new(PeerReview.all.map(&:reviewer))
+  end
+
+  test 'pull review from the pool clones reviews if necessary' do
+    @script.update(peer_reviews_to_complete: 2)
+    Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
+    reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
+      3.times { teachers << create(:teacher) }
+    end
+
+    level_source = create(:level_source, data: 'Some answer')
+
+    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
+    track_progress(level_source.id)
+
+    first_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
+    second_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_2)
+
+    # Complete both reviews
+    [first_review, second_review].each do |review|
+      review.update(status: 0, data: 'lgtm')
+    end
+
+    # When the third reviewer goes to the page, they should get a link
+    review_summary = PeerReview.get_peer_review_summaries(reviewer_3, @script_level.script)
+    expected_review = {
+      status: 'not_started',
+      name: I18n.t('peer_review.review_new_submission'),
+      result: ActivityConstants::UNSUBMITTED_RESULT,
+      icon: '',
+      locked: false
+    }
+
+    assert_equal expected_review, review_summary.first
+
+    # When the third reviewer tries to pull, there are no reviews for them to do. So they should get a clone
+    third_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_3)
+    assert_equal 3, PeerReview.count
+    assert_nil third_review.data
+    assert_nil third_review.status
+    assert_equal reviewer_3.id, third_review.reviewer_id
+  end
+
+  test 'pull review from the pool returns nothing if there are no reviews' do
+    reviewer_1 = create :teacher
+    assert_nil PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
   end
 
   test 'Merging peer review progress does not merge progress with no user, script nor enrollment' do
@@ -204,5 +248,32 @@ class PeerReviewTest < ActiveSupport::TestCase
     ]
 
     assert_equal expected_reviews, PeerReview.get_peer_review_summaries(@user, @script)
+  end
+
+  test 'peer review section status' do
+    @script.update(peer_reviews_to_complete: 2)
+    Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
+
+    PeerReview.stubs(:where).returns([0, 0]) # Just need to return an array of size two
+    assert_equal Plc::EnrollmentModuleAssignment::COMPLETED, PeerReview.get_review_completion_status(@user, @script)
+
+    PeerReview.stubs(:where).returns([0])
+    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, PeerReview.get_review_completion_status(@user, @script)
+
+    PeerReview.stubs(:where).returns([])
+    assert_equal Plc::EnrollmentModuleAssignment::NOT_STARTED, PeerReview.get_review_completion_status(@user, @script)
+  end
+
+  test 'peer review section status edge cases' do
+    assert_nil PeerReview.get_review_completion_status(nil, @script)
+
+    @script.update(peer_reviews_to_complete: nil)
+    assert_nil PeerReview.get_review_completion_status(@user, @script)
+
+    @script.update(peer_reviews_to_complete: 0)
+    assert_nil PeerReview.get_review_completion_status(@user, @script)
+
+    @script.update(peer_reviews_to_complete: 2)
+    assert_nil PeerReview.get_review_completion_status(@user, @script)
   end
 end

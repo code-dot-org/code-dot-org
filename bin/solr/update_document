@@ -62,7 +62,7 @@ def update_document_type_form(db_id, solr_id)
     return
   end
 
-  SOLR.update([solr_doc])
+  SOLR.update([solr_form_doc])
   DB[:forms].where(id: db_id).update(indexed_at: DateTime.now)
 end
 
@@ -95,7 +95,7 @@ def update_document_type_user(db_id, solr_id)
 end
 
 def delete_document(type, db_id)
-  solr_id = get_solr_id_from_db_id(db_id)
+  solr_id = get_solr_id_from_db_id(type, db_id)
   unless solr_id.nil?
     puts "DELETING SOLR DOCUMENT: #{solr_id}..."
     begin

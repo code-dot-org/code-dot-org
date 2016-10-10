@@ -8,13 +8,6 @@ var applabCommands = require('@cdo/apps/applab/commands');
 var errorHandler = require('@cdo/apps/errorHandler');
 var AppStorage = require('@cdo/apps/applab/appStorage');
 
-// used in design mode
-window.Applab = {
-  appWidth: 320,
-  appHeight: 480,
-  storage: AppStorage
-};
-
 
 describe('createRecord callbacks', function () {
   var xhr;
@@ -25,6 +18,17 @@ describe('createRecord callbacks', function () {
     xhr = sinon.useFakeXMLHttpRequest();
     xhr.onCreate = function (req) {
       lastRequest = req;
+    };
+    window.Applab = {
+      // used in design mode
+      appWidth: 320,
+      appHeight: 480,
+      storage: AppStorage,
+
+      // used in error reporting when no onError provided
+      JSInterpreter: {
+        getNearestUserCodeLine: () => 0
+      },
     };
   });
 

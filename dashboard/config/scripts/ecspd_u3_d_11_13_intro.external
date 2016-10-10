@@ -18,7 +18,7 @@ First, let's explore the sixth lesson in the curriculum. To begin, find your ECS
 
 This lesson is intended to further students understanding of separating style from structure by keeping separate html and css files which means you as the teacher needs to know this distinction as well so that you can guide them.
 
-You may need to refer to the resources listed such as [http://www.georgebenainous.com/web](http://www.georgebenainous.com/web)to feel comfortable leading the discussions for this lesson.
+You may need to refer to the resources listed such as [http://www.georgebenainous.com/web](http://www.georgebenainous.com/web) to feel comfortable leading the discussions for this lesson.
 
 #### All Resources for This Lesson
 
@@ -31,13 +31,10 @@ You may need to refer to the resources listed such as [http://www.georgebenainou
 
 #### Supplies
 
-* [http://www.georgebenainous.com/web](http://www.georgebenainous.com/web) (html/css—reusable code)
-* Intro to CSS Styles - [http://www.w3schools.com/html/html\_css.asp](http://www.w3schools.com/html/html_css.asp)
-* Khan Academy - [https://www.khanacademy.org/computing/computer-programming/html-css](https://www.khanacademy.org/computing/computer-programming/html-css)
-* CodeCademy - [https://www.codecademy.com/courses/web-beginner-en-TlhFi/0/3?curriculum\_id=50579fb998b470000202dc8b](https://www.codecademy.com/courses/web-beginner-en-TlhFi/0/3?curriculum_id=50579fb998b470000202dc8b) [(separate style from structure)](https://www.codecademy.com/tracks/web)
+* [html/css—reusable code](http://www.georgebenainous.com/web)
+* [Intro to CSS Styles](http://www.w3schools.com/html/html_css.asp)
+* [Khan Academy - HTML/CSS](https://www.khanacademy.org/computing/computer-programming/html-css)
+* [CodeCademy - separating form from function](https://www.codecademy.com/courses/web-beginner-en-TlhFi/0/3?curriculum_id=50579fb998b470000202dc8b)
 
-Click "Continue" below to move on to the next stage.
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

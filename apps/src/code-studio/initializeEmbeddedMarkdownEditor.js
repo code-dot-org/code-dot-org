@@ -2,9 +2,12 @@
  * @file Defines a function for initializing an embedded markdown editor using
  *       CodeMirror and marked.
  */
-'use strict';
 var marked = require("marked");
 var initializeCodeMirror = require("./initializeCodeMirror");
+
+marked.setOptions({
+  sanitize: true
+});
 
 /**
  * Initializes a live preview markdown editor that spits its contents out into

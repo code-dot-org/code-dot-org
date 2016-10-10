@@ -1,0 +1,5 @@
+name 'gradeK_unplugged_events'
+title 'Big Event'
+markdown <<MARKDOWN
+Essentially The Big Event, but with blocks for the teacher to "program" students.
+MARKDOWN

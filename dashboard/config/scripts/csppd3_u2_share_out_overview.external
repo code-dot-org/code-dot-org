@@ -1,13 +1,10 @@
 name 'CSPPD3-u2 share out overview'
 css' unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Share Out and Submit > What’s Inside
 
-### Share Out and Submit > What’s Inside
+## What have we done so far?
 
-<br/>
-
-#### What have we done so far?
 By now you should have completed Stages 1-4, and accomplished the following learning objectives:
 
 - Developed a deeper understanding of the core concepts covered in CSP Unit 2
@@ -15,17 +12,13 @@ By now you should have completed Stages 1-4, and accomplished the following lear
 - Considered how you would teach that lesson 
 - Connected with the Code.org CSP community for addtional support throughout Unit 2
 
-#### What will we do now? 
+> ## What will we do now? 
 
->- Share your lesson artifact, the resource you created, and your feedback and thoughts on the lesson in the forums 
+> - Share your lesson artifact, the resource you created, and your feedback and thoughts on the lesson in the forums 
 - Submit a link to your forum post for review
 - Check out the work other Piloters produced in their Challenges
 
-<br>
 Take a moment to reflect on your learning. If you like, you can go back and review any stages and levels that you wish to spend more time on. When you’re ready, click “Continue” below to share your Unit 2 Challenge.
-<br>
 
-
-<br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

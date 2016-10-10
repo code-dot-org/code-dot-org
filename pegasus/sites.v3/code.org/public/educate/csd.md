@@ -1,12 +1,13 @@
 ---
 title: CS Discoveries
 nav: educate_nav
+video_player: true
 ---
 
 # Our newest course: CS Discoveries #
 
 ## <a name="what"></a>What is CS Discoveries?
-CS Discoveries is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
+CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
 
 <img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
 
@@ -25,8 +26,38 @@ CS Discoveries aims to introduce students to tools and programming languages tha
 ### <a name="flexible"></a>Designed for flexible implementation options
 CS Discoveries will be designed primarily for students in grades 7-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
+<hr/>
+
+[col-33]
+
+<center><img src="/images/animated-examples/lessonplans_csd.png" width="90%"></center>
+
+<div style="margin-top: 5px;">Daily lesson plans come with detailed instructions, activity guides, and assessments</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/tennis_jump.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in Game Lab</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/circuitplayground.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and App Lab</div>
+
+[/col-33]
+
+<p style="clear:both"></p>
+
+<hr/>
+
 ## <a name="content"></a>Course Overview
-Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
+Computer Science encompasses far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
 ### Semester 1: CS Discoveries: Exploration and Expression
 
@@ -90,34 +121,34 @@ By exploring innovative computing devices from a variety of fields, students wil
 
 ## <a name="involved"></a>Get Involved
 
-<div style="float:left; padding:10px; width:33%">
+<div style="float:left; padding:25px; width:33%">
 
-<h4> Help us write the CS Discoveries curriculum </h4>
+<h4>Try out and give feedback on drafted lessons</h4>
 
-We're looking to assemble a summer writing cohort from June 27 - Aug 19, 2016 to help develop the CS Discoveries curriculum. If you're a K-12 CS or STEM educator with curriculum writing experience, please consider applying!
+We post lesson drafts as soon as they're ready, and are eager to have teachers try them in classrooms and provide feedback. Because the whole course is not finished, this is a good option if you have an existing CS or tech ed class and would like to pick up a few lessons or a unit and integrate it into your existing curriculum.
 <br><br>
 
-<a href="/about/jobs#summercohort"> <button>Learn more</button> </a>
+<a href="#lessons"> <button>View drafted lesson plans</button> </a>
 
 </div>
 
-<div style="float:left; padding:10px; width:33%">
+<div style="float:left; padding:25px; width:33%">
 
-<h4> Pilot the curriculum in your classroom </h4>
+<h4>Get on the interest list for professional learning</h4>
 
-If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through April 2016.
+Are you interested in teaching CS Discoveries and want to take part in our professional learning program? While applications for our CS Discoveries professional learning program are not open yet, you can learn more about program commitments and get on the interest list.
 
 <br><br>
 
-<a href="/educate/csd/pilot"> <button>Apply now</button> </a>
+<a href="/educate/professional-learning/cs-discoveries"> <button>Learn more</button> </a>
 
 </div>
 
-<div style="float:left; padding:10px; width:33%">
+<div style="float:left; padding:25px; width:33%">
 
 <h4> Stay up to date on our progress </h4>
 
-Want to know when we've posted lesson drafts and have tools that are ready to experiment with? Sign up for our monthly status emails, which will contain the latest news and links to beta lesson plans, tools, and videos for CS Discoveries. Even if you're not an official pilot teacher, we'd love to hear your feedback as an early adopter.
+Want to know when we've posted new lesson drafts and have tools that are ready to experiment with? Sign up for our monthly emails, which contain the latest news and links to beta lesson plans, tools, videos, and other important updates for the CS Discoveries project.
 
 <br><br>
 
@@ -125,6 +156,17 @@ Want to know when we've posted lesson drafts and have tools that are ready to ex
 
 </div>
 
+<div style="clear:both"></div>
+
+
+## <a name="lessons"></a>Lesson Drafts
+We are releasing drafts of CS Discoveries units as they are finished, and would love for teachers and others in the CS education community to try them out and provide feedback. On the first page of every lesson plan, there is a Give Us Feedback! button that will open up a quick survey you can fill out with your thoughts and feedback. We really appreciate it!
+
+
+| Unit | Lesson Plans | Code Studio |
+| :------------------:|-----------|------|
+|**Unit 1 - Problem Solving: Computers and Logic**| [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1)|
+|**Unit 3 - Programming: Interactive Games and Animations** *Chapter 1 only* | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3)|
 
 
 

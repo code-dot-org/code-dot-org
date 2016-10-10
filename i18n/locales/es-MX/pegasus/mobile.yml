@@ -45,7 +45,7 @@ es-MX:
   csedweek_map_legend_cs_tech_jam: Eventos Especiales de Ciencias de la Computación
   cded_sign_up: Registrarse
   cded_try_it: Pruébalo
-  twentyhours_trynow: Probar ahora
+  try_now: Probar ahora
   california_heading: Pídele a tu escuela que enseñe ciencias de la computación
   california_text: "Cualquier maestro puede ofrecer nuestros <a href='http://studio.code.org/'>cursos gratuitos</a>. Cualquier primaria puede <a href='http://code.org/educate/k5'>enseñar la ciencias de la computación</a>. Pide a escuelas secundarias que <a href='http://code.org/educate/districts'> se asocien con nosotros."
   california_button: Aprenda más
@@ -122,7 +122,7 @@ es-MX:
   third_party_curriculum: Currículum
   third_party_pricing: Precios
   third_party_cost_free: Gratis para los estudiantes y profesores
-  third_party_cost_5permonth: $5USD al mes por cada clase
+  third_party_cost_5permonth: $5USD al mes por cada clas
   third_party_cost_299: $2.99USD por descarga
   third_party_cost_free_399: Plazo Gratis, $399USD por salón
   third_party_cost_free_2: Plazo Gratis, $2USD por estudiante
@@ -271,6 +271,10 @@ es-MX:
   homepage_banner_20k_teachers_link: Aprende más
   homepage_banner_congress: Líderes de Estados Unidos están pidiendo al Congreso financiar la informática K-12.
   homepage_banner_congress_link: Añadir su apoyo
+  homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
+  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Código
   homepage_slot_text_blurb_hoc: Todos podemos aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -348,14 +352,9 @@ es-MX:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Arrastra y suelta los bloques y utiliza JavaScript.
   starwars_javascript_specs: Sólo en inglés | Navegadores Actuales | Mayores de 11 años
-  starwars_javascript_start_button: Prueba ahora
   starwars_blocks_title: Bloques
   starwars_blocks_description: Arrastra y suelta los bloques.
   starwars_blocks_specs: Muchos lenguajes|Smartphones, tablets, navegadores actuales | Edad 6-106
-  starwars_blocks_start_button: Probar ahora
-  starwars_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
-  starwars_speak_languages: ¿Hablas otro idioma?
-  starwars_help_translate: Ayúdanos a traducir a tu idioma
   starwars_platform_text: Navegadores modernos, smartphones, tabletas
   mc_name: Hora de Código de Minecraft
   mc_longdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
@@ -364,6 +363,13 @@ es-MX:
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
   mc_specs: Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106
   minecraft_subtitle: Hora de Código de Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
+  are_you_teacher: ¿Eres un maestro/a?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspirar a estudiantes y voluntarios para la Hora de Código.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a llevar a cabo una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015. ¡Y necesitan tu ayuda! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros quieren a voluntarios apasionados por la enseñanza de ciencias de la computación para ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios se han inscripto. Únete a ellos.'
@@ -487,11 +493,14 @@ es-MX:
   dashboard_action_remove_confirm: ¿Eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: 'Mayoría de los maestros medir el progreso de sus estudiantes usando la pestaña de "Ver avances". Si usted está interesado en dar a sus estudiantes evaluaciones adicionales, usted puede encontrar preguntas recomendadas y áreas en los planes de lección. Estos son realizados fuera de estudio código.'
   dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso de la secundaria, tenemos preguntas de evaluación disponibles como parte del Code Studio para ayudar a sus estudiantes a prepararse para el examen de AP. Para utilizar estas evaluaciones, primero asigne el curso a su clase y luego escoge el curso desde el desplegable de arriba y aquí verás las respuestas de sus estudiantes.
   dashboard_assessments_summaries: Sumarios
   dashboard_assessments_answers: Todas las respuestas
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
@@ -506,6 +515,7 @@ es-MX:
   dashboard_navigation_view_progress: Progreso
   dashboard_navigation_view_text_responses: Respuestas de texto
   dashboard_navigation_view_assessments: Evaluaciones
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
@@ -653,13 +663,19 @@ es-MX:
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_view_all: Ver todo
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
-  dashboard_announce_button_text: Compruebe la función de
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
+  dashboard_announce_learn_more_button: Aprende más
+  dashboard_announce_try_now_button: Probar ahora
   dashboard_announce_petition: Como profesor, usted está liderando un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender computación. Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes de la educación, 28 gobernadores y CEOs de las compañías más grandes de América se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para financiar en la educacion de K-12 informática.
   dashboard_announce_petition_button: Agrega tu nombre
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Aprenda más
   learn_sign_up_description: Regístrate para participar en la Hour of Code durante la Semana de Educación en Ciencias de la Computación
   learn_sign_up_button: Registrarse
@@ -1190,9 +1206,8 @@ es-MX:
   processing_beyond_longdescription: Processing es un lenguaje de programación, un entorno de desarrollo y una comunidad online. Desde 2001 Processing ha promovido el aprendizaje de programación dentro de las artes visuales y la literatura visual dentro de la tecnología. Creado inicialmente para servir como medio de prototipado rápido de software y para enseñar conceptos fundamentales de programación en un entorno visual, Processing se transformó en una herramienta de desarrollo para profesionales. Hoy hay miles de estudiantes, artistas, diseñadores, investigadores y entusiastas que utilizan Processing para aprender, prototipar y producir.
   alice_beyond_longdescription: Usando un innovador entorno de programación que permite la creación de animaciones 3D, el proyecto Alice provee herramientas y materiales para aprender y enseñar pensamiento computacional, solución de problemas y programación de computadoras a un amplio espectro de edades y niveles escolares.
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK proveen a los niños un divertido curso intensivo de programación de robots, y permite mejorar habilidades en matemáticas y ciencias.
-  compatibility_https_header: Habilitar HTTPS para Code.org.
-  compatibility_https_message: "Para aumentar la seguridad, nos cambió a HTTPS en %{https_date}. Usted no podrá acceder a Code.org después de esta fecha. <a href='%{it_requirements_url}'> Haga clic aquí</a> para aprender cómo activar HTTPS para Code.org."
-  compatibility_https_hide_this_warning: Ocultar esta advertencia
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Su navegador no es compatible. Por favor, actualice su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una funcionalidad rota."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

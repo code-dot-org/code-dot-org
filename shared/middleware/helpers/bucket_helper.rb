@@ -1,8 +1,9 @@
+require 'addressable'
+
 #
 # BucketHelper
 #
 class BucketHelper
-
   def initialize(bucket, base_dir)
     @bucket = bucket
     @base_dir = base_dir
@@ -85,6 +86,9 @@ class BucketHelper
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
+      {status: 'NOT_FOUND'}
+    rescue Aws::S3::Errors::InvalidArgument
+      # Can happen when passed an invalid S3 version id
       {status: 'NOT_FOUND'}
     end
   end
@@ -189,6 +193,6 @@ class BucketHelper
   protected
 
   def s3_path(owner_id, channel_id, filename = nil)
-    "#{@base_dir}/#{owner_id}/#{channel_id}/#{filename}"
+    "#{@base_dir}/#{owner_id}/#{channel_id}/#{Addressable::URI.unencode(filename)}"
   end
 end

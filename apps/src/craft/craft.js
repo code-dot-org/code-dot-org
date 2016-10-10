@@ -1,6 +1,4 @@
 /* global trackEvent */
-
-'use strict';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -692,13 +690,14 @@ Craft.executeUserCode = function () {
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
-  if (studioApp.initializationCode) {
-    code += studioApp.initializationCode;
+  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  if (studioApp.initializationBlocks) {
+    codeBlocks = studioApp.initializationBlocks.concat(codeBlocks);
   }
 
   // For each top-level event block,
   //code += // Get [userCallback] the user's code and [eventType], [blockType] the type this is scoped for
-      // e.g. eventType = whenTouched, blockType = logOak, userCallback = (blockReference) => { moveItForward(blockReference); moveItForward(blockReference); }
+  // e.g. eventType = whenTouched, blockType = logOak, userCallback = (blockReference) => { moveItForward(blockReference); moveItForward(blockReference); }
   var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
       'JavaScript',
       'craft_onTouched');
@@ -729,8 +728,7 @@ Craft.executeUserCode = function () {
    *    });
    *  }
    */
-
-  code += Blockly.Generator.blockSpaceToCode('JavaScript');
+  code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   codegen.evalWith(code, {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
@@ -883,7 +881,7 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.placeInFront(studioApp.highlight.bind(studioApp, blockID),
         blockType);
     }
-  });
+  }, true);
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
     if (Craft.level.freePlay) {
       return;

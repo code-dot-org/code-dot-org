@@ -1,0 +1,7 @@
+name 'Stop: Classes'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Wait for instructions from your teacher before moving on.
+MARKDOWN

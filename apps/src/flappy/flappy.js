@@ -5,8 +5,6 @@
  *
  */
 
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
@@ -343,7 +341,7 @@ Flappy.activeTicks = function () {
  */
 Flappy.callUserGeneratedCode = function (fn) {
   try {
-    fn.call(Flappy, studioApp, api);
+    fn.call(Flappy, api);
   } catch (e) {
     // swallow error. should we also log this somewhere?
     if (console) {
@@ -405,7 +403,7 @@ Flappy.onTick = function () {
 
       if (!obstacle.hitAvatar && checkForObstacleCollision(obstacle)) {
         obstacle.hitAvatar = true;
-        try {Flappy.whenCollideObstacle(studioApp, api); } catch (e) { }
+        try {Flappy.whenCollideObstacle(api); } catch (e) { }
       }
 
       // If obstacle moves off left side, repurpose as a new obstacle to our right
@@ -738,68 +736,26 @@ Flappy.onReportComplete = function (response) {
  * Execute the user's code.  Heaven help us...
  */
 Flappy.execute = function () {
-  var code;
   Flappy.result = ResultType.UNSET;
   Flappy.testResults = TestResults.NO_TESTS_RUN;
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
-  if (level.editCode) {
-    code = dropletUtils.generateCodeAliases(null, 'Flappy');
-    code += studioApp.editor.getValue();
-  }
+  // Map event handler hooks (e.g. Flappy.whenClick) to the generated code.
+  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+  const events = {
+    whenClick: {code: generator('flappy_whenClick')},
+    whenCollideGround: {code: generator('flappy_whenCollideGround')},
+    whenEnterObstacle: {code: generator('flappy_whenEnterObstacle')},
+    whenCollideObstacle: {code: generator('flappy_whenCollideObstacle')},
+    whenRunButton: {code: generator('when_run')}
+  };
 
-  var codeClick = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenClick');
-  var whenClickFunc = codegen.functionFromCode(
-                                      codeClick, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeCollideGround = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenCollideGround');
-  var whenCollideGroundFunc = codegen.functionFromCode(
-                                      codeCollideGround, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenEnterObstacle');
-  var whenEnterObstacleFunc = codegen.functionFromCode(
-                                      codeEnterObstacle, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenCollideObstacle');
-  var whenCollideObstacleFunc = codegen.functionFromCode(
-                                      codeCollideObstacle, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'when_run');
-  var whenRunButtonFunc = codegen.functionFromCode(
-                                      codeWhenRunButton, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
+  codegen.evalWithEvents({Flappy: api}, events).forEach(hook => {
+    Flappy[hook.name] = hook.func;
+  });
 
   studioApp.playAudio('start');
-
-  // studioApp.reset(false);
-
-  // Set event handlers and start the onTick timer
-  Flappy.whenClick = whenClickFunc;
-  Flappy.whenCollideGround = whenCollideGroundFunc;
-  Flappy.whenEnterObstacle = whenEnterObstacleFunc;
-  Flappy.whenCollideObstacle = whenCollideObstacleFunc;
-  Flappy.whenRunButton = whenRunButtonFunc;
 
   Flappy.tickCount = 0;
   Flappy.firstActiveTick = -1;
@@ -987,24 +943,8 @@ Flappy.setGround = function (value) {
   }
 };
 
-var checkTickLimit = function () {
-  if (!level.tickLimit) {
-    return false;
-  }
-
-  if ((Flappy.tickCount - Flappy.firstActiveTick) >= level.tickLimit &&
-    (Flappy.gameState === Flappy.GameStates.ACTIVE ||
-    Flappy.gameState === Flappy.GameStates.OVER)) {
-    // We'll ignore tick limit if we're ending so that we fully finish ending
-    // sequence
-    return true;
-  }
-
-  return false;
-};
-
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
+  // if we have a success condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
     Flappy.result = ResultType.SUCCESS;
     return true;

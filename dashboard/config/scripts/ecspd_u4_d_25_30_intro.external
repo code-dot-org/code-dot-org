@@ -1,24 +1,23 @@
 name 'ECSPD U4 D 25-30 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 25-30 Scratch -- Final Project
+# Day 25-30 Scratch &mdash; Final Project
 
 First, let's explore the fifteenth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 183-190.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=183)
 
-#### Key Concepts
+## Key Concepts
+
 - Students are going to create a final game that will use all of the blocks they've learned so far in Unit 4.
 
-#### Common Difficulties
+## Common Difficulties
 
 You will want to walk through your expectations for the project.  You can use the rubric provided or create your own.
-<br><br>
+
 When students have the opportunity to create their own program, I'd recommend having them start small.  Have them make a storyboard of their idea and an algorithm for what they want their program to do.  They may want to have another person in the class be their peer helper to check their project at different stages, ask questions, and to be a second set of eyes on how to create the program they are thinking of.
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -38,6 +37,6 @@ When students have the opportunity to create their own program, I'd recommend ha
 - [http://scratch.mit.edu](http://scratch.mit.edu/)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

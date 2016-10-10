@@ -1,6 +1,5 @@
 /** @file Helper for getting or creating image filters by name (so we can
  *        specify them in plain level definitions or skins) */
-'use strict';
 
 var GlowFilter = require('./GlowFilter');
 var PulseFilter = require('./PulseFilter');

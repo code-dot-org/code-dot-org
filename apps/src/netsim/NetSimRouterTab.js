@@ -1,7 +1,6 @@
 /**
  * @overview UI controller for the "Router" tab in the left column.
  */
-'use strict';
 
 import $ from 'jquery';
 var markup = require('./NetSimRouterTab.html.ejs');
@@ -18,6 +17,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {function} callbacks.bandwidthSliderStopCallback
  * @param {function} callbacks.memorySliderChangeCallback
  * @param {function} callbacks.memorySliderStopCallback
+ * @param {function} callbacks.showRouterLogCallback
  * @constructor
  */
 var NetSimRouterTab = module.exports = function (rootDiv, callbacks) {
@@ -51,6 +51,12 @@ var NetSimRouterTab = module.exports = function (rootDiv, callbacks) {
    * @private
    */
   this.memorySliderStopCallback_ = callbacks.memorySliderStopCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.showRouterLogCallback_ = callbacks.showRouterLogCallback;
 
   /**
    * @type {NetSimRouterStatsTable}
@@ -95,6 +101,7 @@ NetSimRouterTab.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
   this.routerStatsTable_ = new NetSimRouterStatsTable(
       this.rootDiv_.find('.router-stats'));
+  this.rootDiv_.find('#show-router-log-modal-two').click(this.showRouterLogCallback_);
   if (levelConfig.showRouterBandwidthControl) {
     this.bandwidthControl_ = new NetSimBandwidthControl(
         this.rootDiv_.find('.bandwidth-control'),

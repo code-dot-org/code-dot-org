@@ -4,8 +4,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   setup do
     @organizer = create :workshop_organizer
-    @workshop = create :pd_workshop, organizer: @organizer
-    @workshop.sessions << create(:pd_session)
+    @workshop = create :pd_workshop, organizer: @organizer, num_sessions: 1
     @facilitator = create :facilitator
     @workshop.facilitators << @facilitator
 
@@ -85,7 +84,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'enrollments can be created' do
     assert_creates(Pd::Enrollment) do
-      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params
+      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params, school_info: school_info_params
     end
     enrollment = Pd::Enrollment.last
     refute_nil enrollment.code
@@ -141,7 +140,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       name: '',
       confirmation_email: nil
     })
-    post :create, workshop_id: @workshop.id, pd_enrollment: params
+    post :create, workshop_id: @workshop.id, pd_enrollment: params, school_info: school_info_params
     assert_template :new
   end
 
@@ -249,7 +248,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     create :pd_enrollment, name: teacher.name, email: teacher.email
 
     assert_creates(Follower) do
-      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher)
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
     end
 
     # Make sure the new follower is for our expected teacher and workshop section
@@ -265,7 +264,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in teacher
 
     assert_creates(Pd::Enrollment, Follower) do
-      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher)
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
     end
     enrollment = Pd::Enrollment.last
     assert_equal teacher.id, enrollment.user_id
@@ -285,7 +284,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in student
 
     assert_creates(Pd::Enrollment, Follower) do
-      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params, school_info: school_info_params
     end
 
     student.reload
@@ -301,7 +300,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in create(:teacher)
 
     params = enrollment_test_params.merge({email: 'mismatched_email@example.net'})
-    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params
+    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params, school_info: school_info_params
     assert_template :join_section
   end
 
@@ -309,8 +308,32 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     # start to create section
     @workshop.start!
     sign_in create(:teacher)
-    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: {email: nil}
+    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: {email: nil}, school_info: school_info_params
     assert_template :join_section
+  end
+
+  test 'confirm_join for a single-day workshop also marks attendance' do
+    @workshop.start!
+    teacher = create(:teacher)
+    sign_in teacher
+
+    assert_creates Pd::Attendance do
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
+    end
+    assert Pd::Attendance.for_workshop(@workshop).for_teacher(teacher).exists?
+  end
+
+  test 'confirm_join for a multi-day workshop does not mark attendance' do
+    @workshop.sessions << create(:pd_session, start: Date.today + 1.day)
+    @workshop.start!
+
+    teacher = create(:teacher)
+    sign_in teacher
+
+    assert_does_not_create Pd::Attendance do
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
+    end
+    refute Pd::Attendance.for_workshop(@workshop).for_teacher(teacher).exists?
   end
 
   private
@@ -327,10 +350,16 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       name: name,
       email: email,
       email_confirmation: email,
-      school: 'test enrollment school',
+      school: 'test enrollment school'
+    }
+  end
+
+  def school_info_params
+    {
       school_type: 'public',
       school_state: 'WA',
-      school_district_id: create(:school_district).id
+      school_district_id: create(:school_district).id,
+      school_district_other: false
     }
   end
 end

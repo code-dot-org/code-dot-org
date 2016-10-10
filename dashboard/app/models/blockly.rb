@@ -25,6 +25,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
+  before_save :fix_examples
 
   serialized_attrs %w(
     level_url
@@ -67,6 +68,7 @@ class Blockly < Level
     droplet_tooltips_disabled
     lock_zero_param_functions
     contained_level_names
+    encrypted_examples
   )
 
   before_save :update_ideal_level_source
@@ -170,7 +172,7 @@ class Blockly < Level
       end
     end
     default_category.remove if default_category.element_children.empty?
-    xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
   def self.convert_category_to_toolbox(xml_string)
@@ -188,7 +190,7 @@ class Blockly < Level
       xml << category.children
       #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
-    xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
   # for levels with solutions
@@ -298,6 +300,20 @@ class Blockly < Level
     options.freeze
   end
 
+  def localized_instructions
+    if self.custom?
+      loc_val = I18n.t("data.instructions").try(:[], "#{self.name}_instruction".to_sym)
+      unless I18n.en? || loc_val.nil?
+        return loc_val
+      end
+    else
+      val = [self.game.app, self.game.name].map { |name|
+        I18n.t("data.level.instructions").try(:[], "#{name}_#{self.level_num}".to_sym)
+      }.compact.first
+      return val unless val.nil?
+    end
+  end
+
   def self.base_url
     "#{Blockly.asset_host_prefix}/blockly/"
   end
@@ -312,5 +328,11 @@ class Blockly < Level
   def autoplay_blocked_by_level?
     # Wrapped since we store our serialized booleans as strings.
     self.never_autoplay_video == 'true'
+  end
+
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
   end
 end

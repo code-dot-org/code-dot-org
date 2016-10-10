@@ -1,196 +1,196 @@
 lv:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Ievads datorzinātnēs
         desc: Šī nodarbība iepazīstinās Jūs ar datorzinātnes jēdzienu un izskaidros ar ko nodarbojas datorspeciālisti. Tā arī sniegs izglītojamajam iespēju uzņemties datorspeciālista lomu. Pēc dalības šajā nodarbībā, katrs izglītojamais paturēs atmiņā to, ko viņš būs iemācījies. Jums var rasties kārdinājums izlaist terminu apgūšanu mazākiem bērniem, bet pasniegt tos jautrā un rotaļīgā gaisotnē ir labāk nekā atlikt to uz vēlāku laiku.
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Algoritmiska domāšana
         desc: Ar vienīgi papīru un zīmuli skolēni četros solos apgūs algoritmisku domāšanu. Pēc īsa ievada skolēnus būtu jāsadala grupās, kurās tiem būs jāizstrādā instrukcija citiem skolēniem, kā uzzīmēt briesmonīti (no iepriekš izvēlēto briesmonīšu kataloga). Uzdevumam ir jāveic dekompozīcija, tad komandas analizēs visus briesmonīšus katalogā un noskaidros to raksturiezīmes, nodalīs dažādas briesmonīšu detaļas, un tad izmantos šo informāciju, lai izstrādātu algoritmu (norādes) citai komandai, kas zīmēs noteiktu briesmonīti. Komandas tad apmainīsies ar algoritmiem un mēģinās restaurēt šo briesmonīti izmantojot tikai algoritmu, zīmuli un papīru. Vai gala zīmējums atbilst tam, ko sākotnējā komanda iedomājās?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Rūtiņpapīra programmēšana
         desc: Vienam otru ieprogrammējot zīmēt zīmējumus, skolēni sāks izprast, ko īsti nozīmē programmēšana. Nodarība sāksies ar to, ka skolēni viens otram dos norādes izkrāsot kvadrātiņus uz milimetru papīra cenšoties atdarināt esošu zīmējumu. Ja pietiks laiks, tad nodarbība var noslēgties ar skolēnu izstrādātiem zīmējumiem.
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algoritmi
         desc: Šī mācību stunda aptver algoritmus. Izmantojot Tangrama figūras un rūtiņu paoīru, pirmais uzdevums parādīs, cik svarīgi katru instrukciju padarīt pēc iespējas skaidrāku un nepārprotamāku. Pēc tam klase pētīs, cik veidos var izlocīt no papīra taisnstūri, ievērojot, ka dažām metodēm nepieciešams mazāk locījumu kā citām.
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Funkcijas
         desc: Šajā nodarbībā skolēni izveidos saules ķērāju no auklas, pērlītēm un īpaša piekariņa. Skolēniem būs jāveic atkārtotas darbības, pēc tam jānosaka tādu iemaņu kopumu, kas procesā izmantots vairākas reizes. Kad šīs iemaņas ir noteiktas, tās tiks izsauktas no galvenās programmas un viss skaistais process tiks uzrakstīts uz vienas papīra lapas. Gala programma būs vērsta uz visu klases, neatkarīgi no auklu, pērlīšu un piekariņu veidiem. Skolēniem vajadzēs vispārināt viņu specifisko materiālu detaļas un izdomāt plašākus jēdzienus saviem materiāliem. Vispārīgo jēdzienu izmantošana ir lielisks ievads par mainīgajiem.
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Apstākļi
         desc: Šī ir spēle klasei. Pēc kondicionāļu, IF-nosacījumu un ciklu idejas iepazīstināšanas, klase var vingrināties, lietojot iepriekš uzrakstītas programmas, kāršu kavu un veiksmīgu dalījumu.
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Dziesmas rakstīšana
         desc: Liriku lasīšana ir diezgan intuitīvs piedzīvojums studentiem. Mēs izmantosim jau iepriekš gūtas zināšanas, lietojot tās funkciju definēšanā un izsaukšanā. Kad skolēni būs apraduši ar definēšanas un izsaukšanas procesiem, mēs pievienosim papildus iespējas, kas seko parametru padošanai.
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstrakcija
         desc: Šī aktivitāte apvieno Tavu skolēna ikdienas rutīnu ar unikālu domāšanu, lai palīdzētu apgūt abstrakcijas efektivitāti Tavā klasē.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Releju programmēšana
         desc: Šī nodarbība ir balstīta uz iepriekšējās aktivitātes, (4. Programmēšana uz Milimetrpapīra) un tajā tiks lietotas iepriekš gūtās zināšanas, lai uzsvērtu nozīmīgumu pabeigt līdz galam programmas, kas darbojas secīgi un pastāvīgi pārbaudīt programmas kļūdas.
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: Internets
         desc: 'Šajā nodarbībā skolēni izliksies, ka "plūst" cauri internetam, vienlaikus mācoties par tīmekļa vietnēm, IP adresēm un DNS serveriem.'
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Kopsavilkums
         desc: Beidzamais 20-stundu sērijas kopsavilkums palīdzēs klasei vēlreiz izdzīvot viņu mīļākos brīžus, vienlaikus sniedzot tiem turpmākos soļus, lai turpinātu datorzinātņu ceļojumu pašu spēkiem.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Laimīgās kartes
         desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu tēlu labirintā, lietojot vienu komandu.
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Pārvieto to, pārvieto to
         desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu tēlu labirintā, lietojot vienu komandu.
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
         desc: Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru rādot sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz lielāku priekšstatu par datorzinātnēm kā kopumu.
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Veidot pamatus
         desc: Skolēni veido struktūras, lietojot tikai sniegtos materiālus. Ir nepieciešams izpildīt uzdevumus, lietojot struktūras (sasniegt noteiktu augstumu vai panest noteiktu svaru). Skolēni apspriež neatlaidību, kad uzdevumi kļūst sarežģītāki.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Kļūst ciklisks
         desc: Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems norādījumus to atkārtot.
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Releju programmēšana
         desc: Šajā stafetē skolēni raksta algortimu uz milimetru papīra. Ir atļauts uzzīmēt tikai vienu instrukciju, un ja ir kļūda, tad viss līdz tai ir jānodzēš.
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Sazarojumi
         desc: 'Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle un jāizveido tās noteikumi, piemēram, "Ja es izvelku sarkanu kārti, es iegūstu punktu" un "Ja es izvelku melnu kārti, tu iegūsti punktu."'
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Lielais notikums
         desc: 'Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event), kas ir aktivitāte, kam dators visu laiku seko līdzi. Skolotājs spiež pogas uz papīra pults un skolēni reaģē atkarībā no tā, kāda poga ir piespiesta.'
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Nokļūst galamērķos droši
         desc: Internets ir iespējām bagāta, bet reizēm bīstama vieta. Skolotāji iepazīstina, kā būt drošiem, kamēr lieto internetu.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Rūtiņpapīra programmēšana
         desc: Skolēni raksta algoritmu (darbību secību), izmantojot noteiktas komandas, lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
         desc: 'Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē, šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību kopējo ainu un kādu lomu tajā spēlē algoritmi.'
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Binārās aproces
         desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni apgūst, ka dati ir attēlojami un uzglabājāmi vairāk kā vienā veidā.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Tavs digitālais nospiedums
         desc: Skolotājs liek skolēniem apzināties, ka informācija, ko par sevi publicējam tiešsaistē veido digitālu pēdas nospiedumu vai asti, kas var arī radīt sekas.
         video: C2_digital_footprint
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Algoritmiska domāšana
         desc: Skolēni izmanto datororientētas domāšanas (sadalīšana, līdzību meklēšana, abstrakcija, algoritms), lai uzzinātu, kā spēlēt spēli, kurai nav pamācības.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: funkcionālie saulķērāji
         desc: Skolēni veido algoritmu ar mainīģajiem un funkcijām (koda fragmenti, ko var izmantot atkal un atkal), lai izveidotu saules ķērājus, izmantojot diegus un krelles.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Dziesmu rakstīšana ar Parametriem
         desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Algoritmi dzīvē: Metamo kauliņu sacīkstes'
         desc: Šī nodarbība izceļ algoritmu lietošanas veidus ikdienā. Tā sevī ietver algoritma identificēšanu, ko skolēni izmantos metamo kauliņu spēlē.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internets
         desc: Skolēni sūta ziņojumus, pārstāvot dažādas pārraides metodes, lietojot papīra lapas.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Pūļa ieguve
         desc: Skolēni sadarbojas (crowdsourcing, tā ir programmēšanā labi zināma problēmu risināšanas metode), lai pabeigtu uzdevumu kopā klasē daudz efektīgāk, nekā to darītu skolēns vienatnē.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Digitālā pilsonība
         desc: Skolēni atklāj atšķirību starp personīgu un privātu informāciju, sašķirojot, ko ir un ko nav droši publicēt tiešsaistē.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Tangram Algoritms
         desc: Šajā nodarbībā ir pateikts kas svarīgs par algoritmiem. Ja algoritms ir vienkāršs, tad ir daudz iespēju to izmantot. Ja vēlies, ka visi izdara vienu un to pašu, algoritmam jābūt pēc iespējas precīzākam.
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Aplokšņu mainīgie
         desc: Mainīgie datorzinātnēs sniedz lielu brīvību. Šī nodarbība palīdz izskaidrot mainīgos un to, kā tos izmantot vairākos dažādos veidos. Izmantojiet šo aktivitāti pirms vai kopā ar nodarbību par abstrahešanu (vispārināšanu), lai veiksmīgāk uztvertu domu.
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: Mad Glibs spēle
         desc: Abstrakcija ir viena no nozīmīgākajām prasmēm, kurām jāpiemīt programmēšanas speciālistam. Šajā nodarbībā skolēni analizēs stāstus, meklējot atšķirības, lai varētu tos uztvert abstrakti. Un tad šie abstraktie stāsti kļūs par sagatavi jauniem.
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: 'Jautrība ar "For" Cikliem'
         desc: Mēz zinām, ka cikli ļauj mums atkārtot darbības vairākas reizes, taču tagad mēs mācīsimies kā lietot ciklus ar papildus iebūvētu struktūru.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Dziesmu rakstīšana ar parametriem
         desc: Viena no lieliskākajām struktūrām programmēšanā ir funkcijas. Funkcijas (tās reizēm sauc arī par procedūrām) ir nelielas programmas, kuras var atkal un atkal izmantot lielākā programmā. Šī nodarbība palīdzēs skolēniem intuitīvi saprast, kādēļ apvienot koda fragmentus funkcijās ir labā prakse.
         video: C4_unplugged_parameters
-      BinaryImages:
+      'BinaryImages':
         title: Binārie Attēli
         desc: Lai arī daudzi domā par bināro kodu tikai kā par vieniniekiem un nullītēm, mūsu iepriekšējās nodarbības iemācīja skolēniem to, ka informācija var tikt bināri atspoguļota dažādos veidos. Šajā nodarbība parādīts, kā dators arī sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā kodā.
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Video spēles un koordinātu plakne
         desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Contracts, Domain, and Range
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Dizaina recepte
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Booleans and Logic
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Nosacījumi un hibrīdfunkcijas
         desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Collision Detection and the Pythagorean Theorem
         desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
         video: alg_16_biggame_collision_detection

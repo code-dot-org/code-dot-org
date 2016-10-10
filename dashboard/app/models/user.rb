@@ -91,11 +91,11 @@ class User < ActiveRecord::Base
 
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
 
-  # :user_type is locked/deprecated. Use the :permissions property for more granular user permissions.
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
   USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
@@ -123,8 +123,8 @@ class User < ActiveRecord::Base
   belongs_to :invited_by, :polymorphic => true
 
   # TODO: I think we actually want to do this.
-  # you can be associated with distrits through cohorts
-#   has_many :districts, through: :cohorts
+  # You can be associated with districts through cohorts
+  # has_many :districts, through: :cohorts.
 
   def facilitator?
     permission? UserPermission::FACILITATOR
@@ -135,16 +135,28 @@ class User < ActiveRecord::Base
   end
 
   def delete_permission(permission)
+    @permissions = nil
     permission = permissions.find_by(permission: permission)
     permissions.delete permission if permission
   end
 
   def permission=(permission)
+    @permissions = nil
     permissions << permissions.find_or_create_by(user_id: id, permission: permission)
   end
 
+  # @param permission [UserPermission] the permission to query.
+  # @return [Boolean] whether the User has permission granted.
+  # TODO(asher): Determine whether request level caching is sufficient, or
+  #   whether a memcache or otherwise should be employed.
   def permission?(permission)
-    permissions.exists?(permission: permission)
+    if @permissions.nil?
+      # The user's permissions have not yet been cached, so do the DB query,
+      # caching the results.
+      @permissions = UserPermission.where(user_id: id).pluck(:permission)
+    end
+    # Return the cached results.
+    return @permissions.include? permission
   end
 
   def district_contact?
@@ -203,13 +215,10 @@ class User < ActiveRecord::Base
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
-  has_many :user_levels, -> {order 'id desc'}
+  has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
   has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
-
-  has_many :user_trophies
-  has_many :trophies, through: :user_trophies, source: :trophy
 
   # student/teacher relationships where I am the teacher
   has_many :followers
@@ -257,6 +266,8 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
+  # When adding a new version, append to the end of the array
+  # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
   ]
@@ -495,77 +506,50 @@ class User < ActiveRecord::Base
                         level_id: level.id)
   end
 
+  def user_level_locked?(script_level, level)
+    return false unless script_level.stage.lockable?
+    return false if authorized_teacher?
+    user_level = user_level_for(script_level, level)
+    user_level.nil? || user_level.locked?(script_level.stage)
+  end
+
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.detect do |script_level|
-      user_level = user_levels_by_level[script_level.level_id]
-      is_unpassed_progression_level(script_level, user_level)
+      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      unpassed_progression_level?(script_level, user_levels)
     end
   end
 
-  def is_unpassed_progression_level(script_level, user_level)
-    is_passed = (user_level && user_level.passing?)
-    script_level.valid_progression_level? && !is_passed
-  end
-
-  def progress(script)
-    #trophy_id summing is a little hacky, but efficient. It takes advantage of the fact that:
-    #broze id: 1, silver id: 2 and gold id: 3
-    User.connection.select_one(<<SQL)
-select
-  (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
-  (select count(*) * 3 from concepts) as max_trophies
-from script_levels sl
-left outer join levels_script_levels lsl on lsl.script_level_id = sl.id
-left outer join user_levels ul on ul.level_id = lsl.level_id and ul.user_id = #{self.id}
-where sl.script_id = #{script.id}
-SQL
-  end
-
-  def concept_progress(script = Script.twenty_hour_script)
-    # TODO: Cache everything but the user's progress.
-    user_levels_map = self.user_levels.includes([{level: :concepts}]).index_by(&:level_id)
-    user_trophy_map = self.user_trophies.includes(:trophy).index_by(&:concept_id)
-    result = Hash.new{|h,k| h[k] = {obj: k, current: 0, max: 0}}
-
-    script.levels.includes(:concepts).each do |level|
-      level.concepts.each do |concept|
-        result[concept][:current] += 1 if user_levels_map[level.id].try(:best_result).to_i >= Activity::MINIMUM_PASS_RESULT
-        result[concept][:max] += 1
-        result[concept][:trophy] ||= user_trophy_map[concept.id]
-      end
+  # Return true if script_level is a valid_progression_level and every
+  # user_level is either missing or not passing
+  def unpassed_progression_level?(script_level, user_levels)
+    script_level.valid_progression_level? && user_levels.all? do |user_level|
+      !(user_level && user_level.passing?)
     end
-    result
   end
 
+  # Returns the most recent (via updated_at) user_level for the specified
+  # level.
   def last_attempt(level)
-    Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
+    UserLevel.where(user_id: self.id, level_id: level.id).
+      order('updated_at DESC').
+      first
   end
 
-  def last_attempt_for_any(levels)
-    Activity.where(user_id: self.id, level_id: levels.map(&:id)).order('id desc').first
-  end
-
-  def average_student_trophies
-    User.connection.select_value(<<SQL)
-select coalesce(avg(num), 0)
-from (
-    select coalesce(sum(trophy_id), 0) as num
-    from followers f
-    left outer join user_trophies ut on f.student_user_id = ut.user_id
-    where f.user_id = #{self.id}
-    group by f.student_user_id
-    ) trophy_counts
-SQL
-  end
-
-  def trophy_count
-    User.connection.select_value(<<SQL)
-select coalesce(sum(trophy_id), 0) as num
-from user_trophies
-where user_id = #{self.id}
-SQL
+  # Returns the most recent (via updated_at) user_level for any of the specified
+  # levels.
+  def last_attempt_for_any(levels, script_id: nil)
+    level_ids = levels.map(&:id)
+    conditions = {
+      user_id: self.id,
+      level_id: level_ids
+    }
+    conditions[:script_id] = script_id unless script_id.nil?
+    UserLevel.where(conditions).
+      order('updated_at DESC').
+      first
   end
 
   def student?
@@ -576,13 +560,14 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
-  def student_of_admin?
-    teachers.any?(&:admin?)
+  def authorized_teacher?
+    # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
+    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?)) ||
+      permission?(UserPermission::LEVELBUILDER)
   end
 
-  def authorized_teacher?
-    # you are "really" a teacher if you are in any cohort for an ops workshop
-    admin? || cohorts.present?
+  def student_of_authorized_teacher?
+    teachers.any?(&:authorized_teacher?)
   end
 
   def student_of?(teacher)
@@ -720,7 +705,9 @@ SQL
   end
 
   def in_progress_and_completed_scripts
-    [working_on_user_scripts, completed_user_scripts].compact.flatten
+    backfill_user_scripts if needs_to_backfill_user_scripts?
+
+    user_scripts.compact
   end
 
   def all_advertised_scripts_completed?
@@ -729,7 +716,8 @@ SQL
 
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
-    user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
+    return false unless user_script
+    user_script.completed_at || next_unpassed_progression_level(script).nil?
   end
 
   def not_started?(script)
@@ -755,18 +743,16 @@ SQL
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
-  def completed_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
-    scripts.where('user_scripts.completed_at is not null').map(&:cached)
-  end
-
+  # NOTE: Changes to this method should be mirrored in
+  # in_progress_and_completed_scripts.
   def working_on_user_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
     user_scripts.where('user_scripts.completed_at is null')
   end
 
+  # NOTE: Changes to this method should be mirrored in
+  # in_progress_and_completed_scripts.
   def completed_user_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
@@ -794,7 +780,7 @@ SQL
       script = follower.section && follower.section.script
       next unless script
 
-      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         user_script.assigned_at = follower.created_at if
           follower.created_at &&
@@ -806,7 +792,7 @@ SQL
 
     # backfill progress in scripts
     Script.all.each do |script|
-      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         ul_map = user_levels_by_level(script)
         script.script_levels.each do |sl|
@@ -834,7 +820,7 @@ SQL
   end
 
   def self.track_script_progress(user_id, script_id)
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
       time_now = Time.now
 
@@ -849,12 +835,10 @@ SQL
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
   def self.track_proficiency(user_id, script_id, level_id)
-    level_concept_difficulty = LevelConceptDifficulty.where(level_id: level_id).first
-    unless level_concept_difficulty
-      return
-    end
+    level_concept_difficulty = Script.cache_find_level(level_id).level_concept_difficulty
+    return unless level_concept_difficulty
 
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
       time_now = Time.now
       user_proficiency.last_progress_at = time_now
@@ -877,7 +861,7 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairings:)
+  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
     level_id = level.id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(
@@ -895,7 +879,7 @@ SQL
       'new_result' => new_result,
       'level_source_id' => level_source_id,
       'submitted' => submitted,
-      'pairing_user_ids' => pairings ? pairings.map(&:id) : nil
+      'pairing_user_ids' => pairing_user_ids
     }
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
@@ -910,18 +894,19 @@ SQL
   # The synchronous handler for the track_level_progress helper.
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
-    new_level_perfected = false
+    new_csf_level_perfected = false
 
     user_level = nil
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
       new_level_completed = true if !user_level.passing? &&
         Activity.passing?(new_result)
-      new_level_perfected = true if !user_level.perfect? &&
+      new_csf_level_perfected = true if !user_level.perfect? &&
         new_result == 100 &&
+        Script.get_from_cache(script_id).csf? &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty? &&
@@ -934,7 +919,9 @@ SQL
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
-      user_level.level_source_id = level_source_id unless is_navigator
+      if level_source_id && !is_navigator
+        user_level.level_source_id = level_source_id
+      end
 
       user_level.save!
     end
@@ -951,7 +938,7 @@ SQL
           pairing_user_ids: nil,
           is_navigator: true
         )
-        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(
             navigator_user_level_id: navigator_user_level.id,
             driver_user_level_id: user_level.id
@@ -969,7 +956,7 @@ SQL
       User.track_script_progress(user_id, script_id)
     end
 
-    if new_level_perfected && pairing_user_ids.blank? && !is_navigator
+    if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
     user_level
@@ -994,7 +981,7 @@ SQL
   end
 
   def assign_script(script)
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
       user_script.assigned_at = Time.now
 
@@ -1013,33 +1000,6 @@ SQL
 
   def can_pair_with?(other_user)
     self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
-  end
-
-  # make some random-ish fake progress for a user. As you may have
-  # guessed, this is for developer testing purposes and should not be
-  # used by any user-facing features.
-  def hack_progress(options = {})
-    options[:script_id] ||= Script.twenty_hour_script.id
-    script = Script.get_from_cache(options[:script_id])
-
-    options[:levels] ||= script.script_levels.count / 2
-
-    script.script_levels[0..options[:levels]].each do |sl|
-      # create some fake testresults
-      test_result = rand(100)
-
-      Activity.create!(user: self, level: sl.level, test_result: test_result)
-
-      if test_result > 10 # < 10 will be not attempted
-        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-          user_level = UserLevel.where(user: self, level: sl.level, script: sl.script).first_or_create
-          user_level.attempts += 1 unless user_level.best?
-          user_level.best_result = test_result
-          user_level.save!
-        end
-      end
-    end
-    User.track_script_progress(self.id, script.id)
   end
 
   def self.csv_attributes
@@ -1079,9 +1039,30 @@ SQL
     if teacher?
       return terms_of_service_version
     end
+    # As of August 2016, it may be the case that the `followed` exists but
+    # `followed.user` does not as the result of user deletion. In this case, we
+    # ignore any terms of service versions associated with deleted teacher
+    # accounts.
     followeds.
-      collect{|followed| followed.user.terms_of_service_version}.
+      collect{|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
+  end
+
+  # Returns whether the user has accepted the latest major version of the Terms of Service
+  def accepted_latest_terms?
+    terms_of_service_version == TERMS_OF_SERVICE_VERSIONS.last
+  end
+
+  # Returns the latest major version of the Terms of Service
+  def latest_terms_version
+    TERMS_OF_SERVICE_VERSIONS.last
+  end
+
+  def should_see_inline_answer?(script_level)
+    script = script_level.try(:script)
+
+    (authorized_teacher? && script && !script.professional_learning_course?) ||
+      (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 end

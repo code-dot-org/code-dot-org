@@ -2,18 +2,16 @@ name 'StevieMarbles'
 title 'Stevie and the Marbles'
 description 'Story for K Level about Frustration'
 markdown <<MARKDOWN
-<a href="https://docs.google.com/a/code.org/document/d/1V_hnCjnuviwJPUZq2-jYQbze9M1gDvwna9GWcYJj3GY/edit?usp=sharing" target="_new">Stevie and the Marbles</a>  
+# Stevie and the Marbles
+  
+<br/><br/>    
+    
+<a href="https://docs.google.com/document/d/10nozKSxZPkL9k-LFj4Lw97B89b_UYuYMDMDFoWwcRo4/edit?usp=sharing" target="_new">
+<button>
+Go to lesson plan
+</button> 
+</a>
 
-Stevie gets a project that seems like it’s going to be hard  
-Stevie looks at the project like it’s something she can never ever do  
-Stevie takes a long time to start trying, then her first attempt fails  
-Stevie damages her whole project out of anger  
-Jorge comes over and points out that Stevie looks “frustrated”  
-Stevie argues that she’s not frustrated, she’s mad at this project because it’s stupid  
-Jorge teaches tells that frustration can be hard to recognize, because it likes to disguise itself as sadness or anger, but if you find yourself mad at your teacher, your project, or even yourself, chances are that you’re feeling frustrated  
-Jorge teaches Stevie that frustration is a sign that you’re learning something and that you shouldn’t be afraid of frustration or try to avoid it, you just need to learn to recognize it and push through it, then you will learn something  
-Princess Pria comes around and shares her secret for persistence, even in the face of frustration.  
-Stevie persists, recognizes when she gets frustrated, pushes through, then succeeds at finishing her project!  
-
-
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

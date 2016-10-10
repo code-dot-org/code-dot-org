@@ -3,7 +3,9 @@
 :ruby
   reactProps = {
     i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
+    privacyPolicyInBase: true,
     copyrightInBase: true,
+    basePrivacyPolicyString: I18n.t('footer.privacy'),
     baseCopyrightString: I18n.t('footer.copyright'),
     baseMoreMenuString: I18n.t('footer.more'),
     menuItems: [
@@ -25,11 +27,6 @@
       {
         text: I18n.t('footer.tos'),
         link: "https://code.org/tos",
-        newWindow: true
-      },
-      {
-        text: I18n.t('footer.privacy'),
-        link: "https://code.org/privacy",
         newWindow: true
       }
     ],

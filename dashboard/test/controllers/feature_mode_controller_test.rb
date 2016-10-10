@@ -2,7 +2,7 @@
 require 'test_helper'
 
 class FeatureModeControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     @admin = create(:admin)
@@ -52,5 +52,4 @@ class FeatureModeControllerTest < ActionController::TestCase
       assert_select '#normal[checked="checked"]'
     end
   end
-
 end

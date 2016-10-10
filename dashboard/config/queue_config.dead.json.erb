@@ -1,0 +1,14 @@
+{
+  "description": "Queue processors for async user level progress",
+  "queues": [
+    {
+      "name": "ActivityQueueDLQConsumer",
+      "handler_class": "AsyncProgressHandler",
+      "queue_url": "https://sqs.us-east-1.amazonaws.com/475661607190/activities_dead-production",
+      "num_processors": 1,
+      "num_workers_per_processor": 10,
+      "initial_max_rate": 50,
+      "dcdo_max_rate_key": "activity_max_rate"
+    }
+  ]
+}

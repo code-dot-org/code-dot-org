@@ -3,7 +3,7 @@ var Maze = require('@cdo/apps/maze/maze');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
 var Cell = require('@cdo/apps/maze/cell');
-var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
+var Farmer = require('@cdo/apps/maze/farmer');
 
 describe("Maze", function () {
   var dirtMap = [
@@ -22,13 +22,18 @@ describe("Maze", function () {
     beforeEach(function () {
       document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
       Maze.map = MazeMap.deserialize(dirtMap, Cell);
-      Maze.gridItemDrawer = new DirtDrawer(Maze.map, "http://fakedirt.png");
+      Maze.subtype = new Farmer(Maze, {}, {
+        skin: {
+          dirt: 'dirt.png'
+        }
+      });
+      Maze.subtype.createDrawer();
       Maze.pegmanX = 0;
       Maze.pegmanY = 0;
     });
 
     it("can cycle through all types", function () {
-      var dirtId = cellId('dirt', Maze.pegmanX, Maze.pegmanY);
+      var dirtId = DirtDrawer.cellId('', Maze.pegmanX, Maze.pegmanY);
       var image;
 
       assert.equal(document.getElementById(dirtId), null, 'image starts out nonexistent');

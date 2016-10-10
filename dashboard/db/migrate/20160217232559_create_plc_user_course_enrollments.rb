@@ -1,4 +1,4 @@
-class CreatePlcUserCourseEnrollments < ActiveRecord::Migration
+class CreatePlcUserCourseEnrollments < ActiveRecord::Migration[4.2]
   def change
     create_table :plc_user_course_enrollments do |t|
       t.string :status

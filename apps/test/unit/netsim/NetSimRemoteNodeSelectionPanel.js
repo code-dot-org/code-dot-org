@@ -1,5 +1,4 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
-'use strict';
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
@@ -42,7 +41,9 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       addRouterCallback: function () {},
       cancelButtonCallback: function () {},
       joinButtonCallback: function () {},
-      resetShardCallback: function () {}
+      resetShardCallback: function () {},
+      showRouterLogCallback: function () {},
+      showTeacherLogCallback: function () {}
     };
   });
 

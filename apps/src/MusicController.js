@@ -1,7 +1,5 @@
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
-'use strict';
-
 var utils = require('./utils');
 var _ = require('lodash');
 

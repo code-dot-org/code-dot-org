@@ -2,7 +2,6 @@ require 'json'
 
 module Solr
   class Server
-
     def initialize(params={})
       @host, @port = params[:host].to_s.split(':').map(&:strip)
       @port ||= '8983'

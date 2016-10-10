@@ -1,3 +1,6 @@
+require 'json_value'
+require 'encryption'
+
 # Defines methods to access properties in a property bag via a serialized_attrs declaration
 module SerializedProperties
   extend ActiveSupport::Concern
@@ -24,6 +27,13 @@ module SerializedProperties
   def init_internals
     self.class.init_internals
     super
+  end
+
+  def property_changed?(key)
+    changes = self.changed_attributes['properties']
+    return false if changes.nil?
+
+    changes[key] != self.properties[key]
   end
 
   module ClassMethods

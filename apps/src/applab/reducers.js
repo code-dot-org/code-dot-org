@@ -1,7 +1,5 @@
 /** @file Redux reducer functions for App Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-'use strict';
-
 import { ActionType } from './actions';
 import { ApplabInterfaceMode } from './constants';
 import data from './redux/data';
@@ -18,7 +16,7 @@ function interfaceMode(state, action) {
   }
 }
 
-export {
+export default {
   data,
   interfaceMode,
   screens

@@ -9,7 +9,7 @@ SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'
 def filter_grunt_jshint(modified_files)
   modified_files.select do |f|
     (f.end_with?(".js", ".jsx")) &&
-      !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\//) || f.match(/apps\/lib\//) || f.match(/shared\//))
+      !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/apps\/lib\//) || f.match(/shared\//))
   end
 end
 
@@ -19,7 +19,7 @@ def filter_rubocop(modified_files)
     RUBY_EXTENSIONS.any? {|ext| f.end_with? ext }
   end
   modified_ruby_scripts = modified_files.select do |f|
-    first_line = File.open(f).first
+    first_line = File.exist?(f) ? File.open(f).first : nil
     first_line && first_line.ascii_only? && first_line.match(/#!.*ruby/)
   end
   modified_ruby_scripts + modified_rb_rake_files

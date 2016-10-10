@@ -24,7 +24,6 @@
 
 class Applab < Blockly
   before_save :update_json_fields
-  before_save :fix_examples
 
   serialized_attrs %w(
     free_play
@@ -36,7 +35,6 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
-    encrypted_examples
     submittable
     log_conditions
     data_tables
@@ -77,6 +75,7 @@ class Applab < Blockly
     if self.code_functions.present? && self.code_functions.is_a?(String)
       self.code_functions = JSON.parse(self.code_functions)
     end
+    true
   rescue JSON::ParserError => e
     errors.add(:code_functions, "#{e.class.name}: #{e.message}")
     return false
@@ -87,6 +86,7 @@ class Applab < Blockly
     if value.present? && value.is_a?(String)
       self.properties[property_field] = JSON.parse value
     end
+    true
   rescue JSON::ParserError => e
     errors.add(property_field, "#{e.class.name}: #{e.message}")
     return false
@@ -96,7 +96,8 @@ class Applab < Blockly
     palette_result = update_palette
     log_conditions_result = parse_json_property_field('log_conditions')
 
-    return palette_result && log_conditions_result
+    success = palette_result && log_conditions_result
+    throw :abort unless success
   end
 
   def self.palette
@@ -162,6 +163,7 @@ class Applab < Blockly
         "readRecords": null,
         "updateRecord": null,
         "deleteRecord": null,
+        "onRecordEvent": null,
         "getUserId": null,
         "drawChart": null,
         "drawChartFromRecords": null,
@@ -250,11 +252,5 @@ class Applab < Blockly
         "comment": null
       }
     JSON
-  end
-
-  def fix_examples
-    # remove nil and empty strings from examples
-    return if examples.nil?
-    self.examples = examples.select(&:present?)
   end
 end

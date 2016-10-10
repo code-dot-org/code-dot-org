@@ -46,6 +46,7 @@ class Level < ActiveRecord::Base
 
   include StiFactory
   include SerializedProperties
+  include TextToSpeech
 
   serialized_attrs %w(
     video_key
@@ -230,6 +231,7 @@ class Level < ActiveRecord::Base
      'Applab', 'Gamelab', # all applab and gamelab are freeplay
      'EvaluationQuestion', # plc evaluation
      'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation',
+     'PublicKeyCryptography'
     ] # widgets
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
@@ -273,7 +275,7 @@ class Level < ActiveRecord::Base
   def channel_backed?
     return false if self.try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation || free_response_upload
+    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.weblab || self.game == Game.pixelation || free_response_upload
   end
 
   def key
@@ -324,5 +326,4 @@ class Level < ActiveRecord::Base
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
-
 end

@@ -134,7 +134,7 @@ describe('functional_cond_number', function () {
     // })()
 
     var codegen = require('@cdo/apps/codegen');
-    var result = codegen.evalWith('return ' + code, {});
+    var result = codegen.evalWith('return ' + code, {}, true);
     assert(result === 3);
   });
 

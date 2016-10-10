@@ -16,23 +16,37 @@ end
 
 And /^Applab HTML has a button$/ do
   code = @browser.execute_script "return Applab.levelHtml"
-  /button/.match(code).nil?.should eq false
+  expect(/button/.match(code).nil?).to be(false)
 end
 
 And /^Applab HTML has no button$/ do
   code = @browser.execute_script "return Applab.levelHtml"
-  /button/.match(code).nil?.should eq true
+  expect(/button/.match(code).nil?).to be(true)
 end
 
 Given /^I start a new Applab project$/ do
   steps <<-STEPS
-    And I am on "http://learn.code.org/projects/applab/new"
+    And I am on "http://studio.code.org/projects/applab/new?noUseFirebase=1"
     And I rotate to landscape
     And I wait to see "#runButton"
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#viewDataButton" is visible
+    And Firebase is disabled
+  STEPS
+end
+
+Given /^I start a new Applab project with Firebase$/ do
+  steps <<-STEPS
+    And I am on "http://studio.code.org/projects/applab/new"
+    And I rotate to landscape
+    And I wait to see "#runButton"
+    And element "#runButton" is visible
+    And element "#codeModeButton" is visible
+    And element "#designModeButton" is visible
+    And element "#dataModeButton" is visible
+    And Firebase is enabled
   STEPS
 end
 
@@ -40,6 +54,13 @@ When /^I switch to design mode$/ do
   steps <<-STEPS
     When I press "designModeButton"
     And I wait to see Applab design mode
+  STEPS
+end
+
+When /^I switch to data mode$/ do
+  steps <<-STEPS
+    When I press "dataModeButton"
+    And I wait to see Applab data mode
   STEPS
 end
 
@@ -60,6 +81,11 @@ end
 And /^I wait to see Applab design mode$/ do
   wait = Selenium::WebDriver::Wait.new(:timeout => 10)
   wait.until { @browser.execute_script("return $('#designWorkspace').css('display') == 'block';") }
+end
+
+And /^I wait to see Applab data mode$/ do
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  wait.until { @browser.execute_script("return $('#dataWorkspaceWrapper').css('display') == 'block';") }
 end
 
 And /^I wait to see Applab code mode$/ do
@@ -116,12 +142,13 @@ end
 
 Then(/^the droplet code is "([^"]*)"$/) do |code|
   code.gsub!("\\n", "\n")
-  @browser.execute_script("return Applab.getCode()").should eq code
+  expect(@browser.execute_script("return Applab.getCode()")).to eq(code)
 end
 
 And /^I append text to droplet "([^"]*)"$/ do |text|
   script = %Q{
     var aceEditor = window.__TestInterface.getDroplet().aceEditor;
+    aceEditor.navigateFileEnd();
     aceEditor.textInput.focus();
     aceEditor.onTextInput("#{text}");
   }
@@ -328,9 +355,9 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
 end
 
 And /^Firebase is enabled$/ do
-  @browser.execute_script("return dashboard.project.useFirebase()").should eq true
+  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(true)
 end
 
 And /^Firebase is disabled$/ do
-  @browser.execute_script("return dashboard.project.useFirebase()").should eq false
+  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(false)
 end

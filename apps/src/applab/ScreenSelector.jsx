@@ -1,14 +1,14 @@
 /** @file Dropdown for selecting design mode screens */
 /* global Applab */
 import experiments from '../experiments';
-var React = require('react');
-var Radium = require('radium');
-var color = require('../color');
-var commonStyles = require('../commonStyles');
-var constants = require('./constants');
-var connect = require('react-redux').connect;
-var elementUtils = require('./designElements/elementUtils');
-var screens = require('./redux/screens');
+import React from 'react';
+import Radium from 'radium';
+import color from '../color';
+import commonStyles from '../commonStyles';
+import * as constants from './constants';
+import {connect} from 'react-redux';
+import * as elementUtils from './designElements/elementUtils';
+import * as screens from './redux/screens';
 
 var styles = {
   dropdown: {
@@ -84,14 +84,16 @@ var ScreenSelector = React.createClass({
         disabled={Applab.isRunning()}
       >
         {options}
-        {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
         {experiments.isEnabled('applab-import') &&
+         canAddScreen &&
          <option>{constants.IMPORT_SCREEN}</option>}
+        {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
       </select>
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
+
+export default connect(function propsFromStore(state) {
   return {
     currentScreenId: state.screens.currentScreenId,
     interfaceMode: state.interfaceMode,
@@ -109,4 +111,4 @@ module.exports = connect(function propsFromStore(state) {
   };
 })(Radium(ScreenSelector));
 
-module.exports.styles = styles;
+export {styles};

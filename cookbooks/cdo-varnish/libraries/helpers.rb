@@ -37,11 +37,11 @@ def normalize_paths(paths)
   paths.map(&:dup).map do |path|
     raise ArgumentError.new("Invalid path: #{path}") unless valid_path?(path)
     # Strip leading slash from extension path
-    path.gsub!(/^\/(?=\*.)/,'')
+    path.gsub!(/^\/(?=\*.)/, '')
     # Escape some valid special characters
     path.gsub!(/[.+$"]/){|s| '\\' + s}
     # Replace * wildcards with .* regex fragment
-    path.gsub!(/\*/,'.*')
+    path.gsub!(/\*/, '.*')
     "^#{path}#{END_URL_REGEX}"
   end
 end

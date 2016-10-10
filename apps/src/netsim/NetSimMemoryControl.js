@@ -1,8 +1,6 @@
 /**
  * @overview UI slider used to control router memory size.
  */
-'use strict';
-
 require('../utils'); // Provides Function.prototype.inherits
 var NetSimConstants = require('./NetSimConstants');
 var NetSimUtils = require('./NetSimUtils');

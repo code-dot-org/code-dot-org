@@ -1,6 +1,4 @@
-title 'All the Things!'
-description 'All the level types for UI testing'
-description_short 'All the level types for UI testing'
+hideable_stages true
 
 stage 'Jigsaw'
 level 'blockly:Jigsaw:3'
@@ -182,5 +180,13 @@ endvariants
 stage 'Anonymous student survey'
 assessment 'Test anonymous student survey'
 
-stage 'Anonymous student survey 2'
-assessment 'PS pre-assessment all'
+stage 'Anonymous student survey 2',
+lockable: true
+assessment 'CSP pre-assessment survey'
+
+stage 'Public Key Cryptography'
+level 'AllTheThings Modulo Clock'
+level 'AllThethings Public Key Cryptography'
+
+stage 'Web Lab'
+level 'Web Lab 1'

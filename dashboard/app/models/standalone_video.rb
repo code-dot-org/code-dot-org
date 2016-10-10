@@ -34,9 +34,9 @@ class StandaloneVideo < Level
     self.skip_sound = true
   end
 
-  validate :has_video_key
+  validate :has_video_key?
 
-  def has_video_key
+  def has_video_key?
     unless video_key.present?
       errors.add :video_key, :blank
     end
