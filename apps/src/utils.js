@@ -1,4 +1,4 @@
-/* global define, $ */
+import $ from 'jquery';
 import Immutable from 'immutable';
 import constants from './constants';
 
@@ -289,7 +289,7 @@ export function browserSupportsCssMedia() {
     try {
       if (rules.length > 0) {
         // see if we can access media
-        var media = rules[0].media;
+        rules[0].media;
       }
     } catch (e) {
       return false;
