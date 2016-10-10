@@ -10,7 +10,7 @@ const FeatureType = {
   NONE: 0,
   CORN: 1,
   PUMPKIN: 2,
-  BEAN: 3,
+  LETTICE: 3,
 };
 
 export default class HarvesterCell extends Cell {
@@ -118,7 +118,7 @@ export default class HarvesterCell extends Cell {
 
     const feature = this.possibleFeatures_[0];
 
-    return ['none', 'corn', 'pumpkin', 'bean'][feature];
+    return ['none', 'corn', 'pumpkin', 'lettice'][feature];
   }
 
   isCorn() {
@@ -129,8 +129,8 @@ export default class HarvesterCell extends Cell {
     return this.possibleFeatures_.includes(FeatureType.PUMPKIN);
   }
 
-  isBean() {
-    return this.possibleFeatures_.includes(FeatureType.BEAN);
+  isLettice() {
+    return this.possibleFeatures_.includes(FeatureType.LETTICE);
   }
 
   /**
