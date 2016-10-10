@@ -10,7 +10,7 @@ window.requirejs.config({
 });
 
 // This is needed to support jQuery binary downloads
-var download = require('../assetManagement/download');
+import '../assetManagement/download';
 
 // the main Bramble object -- used to access file system
 let bramble_ = null;
@@ -133,7 +133,6 @@ function resetBrambleChangesAndProjectVersion(projectVersion) {
 
 function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
   const fs = bramble_.getFileSystem();
-  const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
   const Buffer = bramble_.Filer.Buffer;
   fileEntries = fileEntries || [];
