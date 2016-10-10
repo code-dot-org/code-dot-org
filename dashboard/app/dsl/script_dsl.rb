@@ -138,17 +138,37 @@ class ScriptDSL < BaseDSL
   def self.serialize(script, filename)
     s = []
 
-    s << "hidden: 'false'" unless script.hidden
-    s << "login_required: 'true'" if script.login_required
-    s << "hideable_stages: 'true'" if script.hideable_stages
-    s << "wrapup_video: '#{wrapup_video}'" if script.wrapup_video
+    s << "hidden 'false'" unless script.hidden
+    s << "login_required 'true'" if script.login_required
+    s << "hideable_stages 'true'" if script.hideable_stages
+    s << "wrapup_video '#{wrapup_video}'" if script.wrapup_video
 
-    s << "professional_learning_course: '#{script.professional_learning_course}'" if script.professional_learning_course
-    s << "peer_reviews_to_complete: #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete
+    s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
+    s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete
 
     s << '' unless s.empty?
 
-    # TODO: stages
+    script.stages.each do |stage|
+      s << "stage '#{stage.name}'"
+      stage.script_levels.each do |sl|
+        if sl.levels.count > 1
+          # TODO: variants
+        else
+          if sl.level.key.start_with? 'blockly:'
+            s << "skin '#{sl.level.skin}'" if sl.level.skin
+
+            unless sl.level.concepts.empty?
+              s << "concepts #{sl.level.concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')}"
+            end
+
+            concept_difficulty = sl.level.level_concept_difficulty.try(:serializable_hash) || {}
+            s << "level_concept_difficulty '#{concept_difficulty.to_json}'"
+          end
+          s << "level '#{sl.level.key}'"
+        end
+      end
+      s << ''
+    end
 
     File.write(filename, s.join("\n"))
   end
