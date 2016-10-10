@@ -16,6 +16,10 @@
   = boolean_check_box f, :hide_animation_mode
 
 .field
+  = f.label :start_in_animation_tab, 'Start in the Animation Tab'
+  = boolean_check_box f, :start_in_animation_tab
+
+.field
   = f.label :all_animations_single_frame, 'All animations should be a single frame. If it has multiple frames, only show the first frame as a still image.'
   = boolean_check_box f, :all_animations_single_frame
 
