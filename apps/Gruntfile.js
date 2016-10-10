@@ -173,8 +173,11 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
-          cwd: piskelRoot,
-          src: '**',
+          // For some reason, if we provide piskel root as an absolute path here,
+          // our dest ends up with an empty set of directories matching the path
+          // If we provide it as a relative path, that does not happen
+          cwd: './' + path.relative(process.cwd(), piskelRoot),
+          src: ['**'],
           dest: 'build/package/js/piskel/'
         },
         {

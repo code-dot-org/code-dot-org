@@ -6,16 +6,16 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Free-play! Draw anything you'd like.",
-    "x": "200",
-    "y": "200",
+    "instructions": "Challenge: This tag is a special one!  Can you figure out how to draw the outline?",
+    "x": "125",
+    "y": "150",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "free_play": "true",
+    "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "Free-play! Draw anything you'd like.\r\n<hr/>\r\n<h3>Here are some ideas you could try if you get stuck:</h3>\r\n<table>\r\n<tr>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/dcf7ffafff9c79fd82c31b904512b255-image-1471040023478.07.05 PM.png\" width=\"300\"/><br/>\r\n<h4>A Street</h4><br/><br/>\r\n</td>\r\n\r\n\r\n<td>\r\n<img src=\"https://images.code.org/f1f7b364b4c470398bbe19ed417f6615-image-1471040011212.03.32 PM.png\" width=\"150\"/><br/>\r\n<h4>A Present</h4><br/><br/>\r\n</td>\r\n\r\n\r\n</tr>\r\n</table>\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n",
+    "markdown_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>\r\n",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,6 +32,9 @@
     "disable_sharing": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
+    "images": "[{\"filename\": \"https://images.code.org/6a7dceb79594082a2039a398edc86b93-image-1475812516200.png\", \"position\": [0,0]}]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Every angle is either 45 or 90 degrees.\",\r\n  \"hint_id\": \"grade2_MakeDogTag_6a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Does it work at the first step?  \\nHow about the second?  \\nWhere does it go wrong?\",\r\n  \"hint_id\": \"grade2_MakeDogTag_6b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "12",
     "contained_level_names": null
   },
   "published": true,
@@ -46,20 +49,17 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="45,90">90</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="45,90">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
         </block>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
@@ -73,21 +73,8 @@
             <block type="colour_random"/>
           </value>
         </block>
-        <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-            <block type="math_number_dropdown">
-              <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_width_inline">
-          <title name="WIDTH">1</title>
-        </block>
-        <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-        </block>
-        <block type="sticker">
-          <title name="VALUE">Elephant</title>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -95,7 +82,76 @@
       <xml/>
     </required_blocks>
     <solution_blocks>
-      <xml/>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">150</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="45,60,90,120,180">45</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">75</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">75</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE" config="45,60,90,120,180">45</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">150</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant_dropdown">
+                                          <title name="DIR">turnRight</title>
+                                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                                          <next>
+                                            <block type="draw_move_by_constant">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">75</title>
+                                              <next>
+                                                <block type="draw_turn_by_constant_dropdown">
+                                                  <title name="DIR">turnRight</title>
+                                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                                  <next>
+                                                    <block type="draw_move_by_constant">
+                                                      <title name="DIR">moveForward</title>
+                                                      <title name="VALUE">75</title>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
     </solution_blocks>
   </blocks>
 </Artist>

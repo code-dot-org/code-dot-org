@@ -647,6 +647,7 @@ en:
             Sam the Bat: Sam the Bat
             Strings and Images: Strings and Images
             The Design Recipe: The Design Recipe
+          description_audience: ''
         allthethings:
           title: All the Things!
           description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
@@ -1606,6 +1607,28 @@ en:
             Adding Functionality (optional): Adding Functionality (optional)
             Design Mode: Design Mode
             Making it Interactive: Making it Interactive
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            UCD Micro Activity: UCD Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Re-designing a Space: Re-designing a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            User Research: User Research
+            Low Fidelity Prototyping: Low Fidelity Prototyping
+            Preparing for Prototype Testing: Preparing for Prototype Testing
+            Prototype Testing: Prototype Testing
+            Preparing for App Testing: Preparing for App Testing
+            App Testing: App Testing
+            Planning for Improvements: Planning for Improvements
+            Improving and Iterating: Improving and Iterating
+            App Presentation Prep: App Presentation Prep
+            App Presentation: App Presentation
+          description_audience: ''
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description: Temp place to work on U1 of Disco
@@ -1643,6 +1666,7 @@ en:
             Multi-Page Websites: Multi-Page Websites
             Classes: Classes
             External Style Sheets: External Style Sheets
+            Usability and Accessibility: Usability and Accessibility
           description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
@@ -1758,6 +1782,7 @@ en:
             Programming: Programming
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            Unspotted Bugs: Unspotted Bugs
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
@@ -1823,6 +1848,7 @@ en:
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -1834,6 +1860,7 @@ en:
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -1893,6 +1920,8 @@ en:
             Lesson 2,10: Lesson 2,10
             Lesson 2,2: Lesson 2,2
             Lesson 2,3: Lesson 2,3
+            Test stage with bubbles: Test stage with bubbles
+          description_audience: ''
         csd3:
           title: CSD Unit 3 - Interactive Games and Animations
           description: U3 of Discoveries
@@ -2010,6 +2039,14 @@ en:
             'Lessons 10 - 11: Redundancy and Packets': 'Lessons 10 - 11: Redundancy and Packets'
             'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction on the Internet'
             'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 11: Interpreting Visual Data': 'Lessons 7 - 11: Interpreting Visual Data'
+            'Lessons 12 - 15: Communicating with Visualizations': 'Lessons 12 - 15: Communicating with Visualizations'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
+          description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
           description_short: TeacherSupports for CSP unit 1

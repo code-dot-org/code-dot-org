@@ -1,5 +1,5 @@
 import { expect } from '../../util/configuredChai';
-import { validateFirebaseKey } from '@cdo/apps/applab/firebaseUtils';
+import { fixFirebaseKey, validateFirebaseKey } from '@cdo/apps/applab/firebaseUtils';
 
 describe('firebaseUtils', () => {
   describe('validateFirebaseKey', () => {
@@ -49,6 +49,24 @@ describe('firebaseUtils', () => {
 
     it('allows unicode', () => {
       validateFirebaseKey('☃');
+    });
+  });
+
+  describe('fixFirebaseKey', () => {
+    it('preserves legal characters', () => {
+      expect(fixFirebaseKey('foo')).to.equal('foo');
+    });
+
+    it('preserves url escape sequences', () => {
+      expect(fixFirebaseKey('foo%20bar')).to.equal('foo%20bar');
+    });
+
+    it('replaces illegal characters', () => {
+      expect(fixFirebaseKey('foo.bar')).to.equal('foo-bar');
+    });
+
+    it('replaces multiple illegal characters', () => {
+      expect(fixFirebaseKey('a.b#c$d[e]f/g')).to.equal('a-b-c-d-e-f-g');
     });
   });
 });
