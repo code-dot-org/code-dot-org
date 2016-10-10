@@ -2,13 +2,9 @@
  * Blocks specific to Planter
  */
 var msg = require('./locale');
-var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
 exports.install = function (blockly, blockInstallOptions) {
-  var skin = blockInstallOptions.skin;
-  var isK1 = blockInstallOptions.isK1;
-
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 
