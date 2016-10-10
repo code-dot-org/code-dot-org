@@ -2,7 +2,8 @@
 title: training materials
 nav: plp_playbook_nav
 ---
-
+---
+<a id="top"></a>
 # Training Materials
 
 ## Table of Contents
@@ -138,8 +139,5 @@ October 2016:
 - Supplies for Counselor and Administrator PD - [Video](http://videos.code.org/plp/counselor_administrator_supplies.mp4)
 - Supplies for Counselor and Administrator PD - [Slides](https://docs.google.com/presentation/d/1RQeBL7rTcWnqzM48xNv8f1J3da5OVboekLJyw3_WeSk/edit#slide=id.gb846b8ce1_0_5)
 
-
-
-
-
-
+[**Back to the top**](#top)
+<br/>

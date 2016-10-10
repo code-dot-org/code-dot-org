@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Create a Platform Sprite\r\n\r\nNow that you have your background and your variables, it's time to start creating sprites.  Usually, it will be easiest to create the sprites that are part of the environment, such as your platforms, first.  In our game, we used three platform sprites, but we're going to make only one first, then test it before copying and pasting the code to make the rest.\r\n\r\n# Do This\r\n\r\n* Look at your worksheet and choose a platform sprite to create.\r\n* In the \"create sprites\" area of your code, create your new sprite, giving it the correct position and label (name).\r\n* Use the `velocityY` and `setAnimation` blocks to give your sprite the correct image and downward velocity.\r\n* Test the sprite to make sure that it's moving in the correct way.",
+    "markdown_instructions": "# Create a Platform Sprite\r\n\r\nNow that you have your background and your variables, it's time to create your sprites.  Usually, it will be easiest to start with the sprites that are part of the environment, such as your platforms.  The sample game had two platform sprites, but you'll make just one first, then test it before copying and pasting the code to make the second.\r\n\r\n# Do This\r\n\r\n* Look at your worksheet and choose a platform sprite to create.\r\n* In the \"Create sprites\" area at the top of your code, create your new sprite with the `createSprite` block, giving it the correct position and label (name). (Show me the block)\r\n* Use the `setAnimation` and `velocityY` blocks to give your sprite the correct image and downward velocity.\r\n* Test the sprite to make sure that it's moving in the correct way.  You might need to adjust its velocity.\r\n\r\n_Hint: The sprite will go off the screen and not come back.  You'll make it loop back around in the next level._",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,6 +34,7 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
+    "palette_category_at_start": "sprites",
     "contained_level_names": null
   },
   "published": true,

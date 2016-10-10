@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Player Interactions\r\n\r\nNow you can add the interactions between the player sprite and the other sprites.\r\n\r\n# Do This\r\n\r\n* Create a function that makes your player collide with the platforms, then use it in the draw loop.\r\n* Run the code to test your function.\r\n* Create a function that checks whether your player sprite is touching an item.  If the player has touched the item, use the counter pattern to increase the score by 1, and reset the item to the top of the screen.\r\n",
+    "markdown_instructions": "# Player Interactions\r\n\r\nThe last part of making your game is programming the player interactions with the other sprites.  First, your player needs to land on the platforms.\r\n\r\n# Do This\r\n\r\n* Create a `playerLands` function and add it to the \"functions\" area of your code.\r\n* Inside the function, use the `collide` block so that your player can land on both the platforms.\r\n* Call the function inside the draw loop.\r\n* Run the code to test your function.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -21,6 +21,10 @@ class DynamoTable
     @metadata_hash = "#{@channel_id}:#{@table_name}:#{@table_type}:metadata"
   end
 
+  def self.pre_initialize
+    @@dynamo_db ||= Aws::DynamoDB::Client.new
+  end
+
   def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new
   end

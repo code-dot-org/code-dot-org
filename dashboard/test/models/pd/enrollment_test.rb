@@ -101,4 +101,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute Pd::Enrollment.exists? enrollment.attributes
     assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
   end
+
+  test 'for_school_district' do
+    school_district = create :school_district
+    school_info = create :school_info, school_district: school_district
+    enrollment_in_district = create :pd_enrollment, school_info: school_info
+    _enrollment_out_of_district = create :pd_enrollment
+
+    assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_district)
+  end
 end
