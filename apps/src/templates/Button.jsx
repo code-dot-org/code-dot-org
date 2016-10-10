@@ -1,7 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
 
-import msg from '@cdo/locale';
 import color from '../color';
 
 const ARROW_WIDTH = 58;
@@ -104,11 +103,6 @@ const BUTTON_TYPES = {
   action: {
     style: buttonStyle(color.purple),
   },
-};
-
-const ARROW_URLS = {
-  left: '/blockly/media/tryagain-arrow-head.png',
-  right: '/blockly/media/next-arrow-head.png',
 };
 
 const BaseButton = Radium(function BaseButton({type, children, size, ...props}) {
