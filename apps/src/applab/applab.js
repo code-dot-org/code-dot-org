@@ -770,7 +770,7 @@ Applab.init = function (config) {
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: useFirebase,
+    hasDataMode: useFirebase && !config.level.hideViewDataButton,
     hasDesignMode: !config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,

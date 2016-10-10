@@ -111,7 +111,7 @@ To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a h
 
 **Internship Summary:**
 
-We are looking for an intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+We are looking for a Fall/Winter intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
 
 Responsibilities of the may position include: 
 
