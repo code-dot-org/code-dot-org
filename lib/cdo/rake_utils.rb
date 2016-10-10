@@ -186,9 +186,7 @@ module RakeUtils
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
     commands << 'sudo' if CDO.npm_use_sudo
-    commands << 'npm'
-    commands << 'install'
-    commands << '--quiet'
+    commands += 'npm prune && npm update --quiet'.split(' ')
     commands += args
     RakeUtils.system(*commands)
   end
