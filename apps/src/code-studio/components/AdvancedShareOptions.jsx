@@ -51,6 +51,10 @@ const AdvancedShareOptions = Radium(React.createClass({
     expanded: React.PropTypes.bool.isRequired,
     i18n: React.PropTypes.object.isRequired,
     channelId: React.PropTypes.string.isRequired,
+    embedOptions: React.PropTypes.shape({
+      iframeHeight: React.PropTypes.number.isRequired,
+      iframeWidth: React.PropTypes.number.isRequired,
+    }).isRequired,
   },
 
   getInitialState() {
@@ -90,10 +94,9 @@ const AdvancedShareOptions = Radium(React.createClass({
           .join('')
       ) + '?nosource';
     }
-    // If you change this width and height, make sure to update the
-    // #visualizationColumn.wireframeShare css
-    var iframeHtml = '<iframe width="352" height="612" style="border: 0px;" src="' +
-          url + '"></iframe>';
+    const {iframeWidth, iframeHeight} = this.props.embedOptions;
+    var iframeHtml =
+      `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
       <div>
         <p style={style.p}>

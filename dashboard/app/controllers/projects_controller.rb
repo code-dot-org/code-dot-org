@@ -123,7 +123,7 @@ class ProjectsController < ApplicationController
       callouts: [],
       channel: params[:channel_id],
       no_footer: no_footer,
-      code_studio_logo: @is_legacy_share,
+      code_studio_logo: @is_legacy_share && !iframe_embed,
       no_header: sharing,
       is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
