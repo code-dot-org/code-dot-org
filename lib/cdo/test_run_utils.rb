@@ -66,4 +66,10 @@ module TestRunUtils
       end
     end
   end
+
+  def self.run_lib_tests
+    Dir.chdir(lib_dir) do
+      RakeUtils.rake_stream_output 'test'
+    end
+  end
 end

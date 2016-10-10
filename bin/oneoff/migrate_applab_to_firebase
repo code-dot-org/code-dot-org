@@ -5,6 +5,7 @@ require 'cdo/db'
 require 'cdo/hip_chat'
 require 'net/http'
 require 'parallel'
+require 'time'
 require 'uri'
 
 require_relative '../../shared/middleware/helpers/storage_id'
@@ -14,6 +15,8 @@ require_relative '../../shared/middleware/helpers/property_bag'
 MAX_THREADS = 50
 LOG_INCREMENT = 10_000
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+# The following characters are illegal in firebase path names: .$#[]/
+ILLEGAL_CHAR_REGEX = %r{[\.#\$\[\]/]}
 
 def put_with_auth(url, data)
   uri = URI.parse("#{url}?auth=#{CDO.firebase_secret}")
@@ -48,8 +51,21 @@ end
 # @param encrypted_channel_id [String]
 # @param properties_data [Hash] Map from property name to JSON-encoded value
 def set_firebase_properties(encrypted_channel_id, properties_data)
+  #puts "set_firebase_properties #{encrypted_channel_id} #{properties_data.keys}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
   properties_url = "#{channel_url}/storage/keys.json"
+
+  original_keys = properties_data.keys
+  original_keys.each do |key|
+    if ILLEGAL_CHAR_REGEX.match(key)
+      # TODO(dave): remove this line and reenable this block once data blocks / data browser handle illegal characters
+      raise "skipping key name containing illegal characters: #{key}"
+      # legal_key = key.gsub(ILLEGAL_CHAR_REGEX, '-')
+      # puts "renaming key #{key} to #{legal_key} in channel #{encrypted_channel_id}"
+      # properties_data[legal_key] = properties_data[key]
+      # properties_data.delete(key)
+    end
+  end
   put_with_auth(properties_url, properties_data.to_json)
 end
 
@@ -60,13 +76,23 @@ end
 # @param table_records [Hash] Map from record id to json-encoded record
 # @params table_columns [Array] Array of column names
 def set_firebase_table(encrypted_channel_id, table_name, table_records, table_columns)
+  #puts "set_firebase_table #{encrypted_channel_id} #{table_name} #{table_records.size} #{table_columns}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
 
-  storage_url = "#{channel_url}/storage/tables/#{table_name}/records.json"
+  if ILLEGAL_CHAR_REGEX.match(table_name)
+    # TODO(dave): remove this line and reenable this block once data blocks / data browser handle illegal characters
+    raise "skipping table name containing illegal characters: #{table_name}"
+    # legal_table_name = table_name.gsub(ILLEGAL_CHAR_REGEX, '-')
+    # puts "renaming table name #{table_name} to #{legal_table_name} in channel #{encrypted_channel_id}"
+    # table_name = legal_table_name
+  end
+
+  escaped_table_name = URI.escape(table_name, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+  storage_url = "#{channel_url}/storage/tables/#{escaped_table_name}/records.json"
   storage_data = table_records.to_json
   put_with_auth(storage_url, storage_data)
 
-  counters_url = "#{channel_url}/counters/tables/#{table_name}.json"
+  counters_url = "#{channel_url}/counters/tables/#{escaped_table_name}.json"
   counters_data = {
     lastId: table_records.keys.map(&:to_i).max,
     rowCount: table_records.size
@@ -74,7 +100,7 @@ def set_firebase_table(encrypted_channel_id, table_name, table_records, table_co
   put_with_auth(counters_url, counters_data)
 
   if table_columns
-    metadata_url = "#{channel_url}/metadata/tables/#{table_name}/columns.json"
+    metadata_url = "#{channel_url}/metadata/tables/#{escaped_table_name}/columns.json"
     put_with_auth(metadata_url, 'null')
     table_columns = ['id'] + (table_columns - ['id'])
     table_columns.each do |column_name|
@@ -95,6 +121,17 @@ def fetch_applab_channels
   end
 end
 
+# Raises an exception if the list contains duplicates after
+# @param names [Array] list of names to detect collisions within
+# @param msg [String] message to include in the raised exception
+def ensure_no_collisions(list, msg)
+  list.combination(2).each do |item1, item2|
+    renamed1 = item1.gsub(ILLEGAL_CHAR_REGEX, '-')
+    renamed2 = item2.gsub(ILLEGAL_CHAR_REGEX, '-')
+    raise "#{msg}: '#{item1}' and '#{item2}' collide after being renamed to '#{renamed1}'" if renamed1 == renamed2
+  end
+end
+
 def migrate_channel(owner_storage_id, channel_id)
   encrypted_channel_id = storage_encrypt_channel_id(owner_storage_id, channel_id)
 
@@ -103,9 +140,12 @@ def migrate_channel(owner_storage_id, channel_id)
   return if sql_row[:state] == 'deleted' || sql_row_value['useFirebase']
 
   properties = Hash[DynamoPropertyBag.new(channel_id, nil).to_hash.map { |k, v| [k, v.to_json] }]
+  ensure_no_collisions(properties.keys, "property key collision")  unless properties.empty?
   set_firebase_properties(encrypted_channel_id, properties) unless properties.empty?
 
-  DynamoTable.table_names(channel_id).each do |table_name|
+  table_names = DynamoTable.table_names(channel_id)
+  ensure_no_collisions(table_names, "table name collision") unless table_names.empty?
+  table_names.each do |table_name|
     dynamo_table = DynamoTable.new(encrypted_channel_id, nil, table_name)
     # A hash from record id to json-encoded records
     table_records = Hash[dynamo_table.to_a.map { |row| [row['id'].to_s, row.to_json] }]
@@ -130,17 +170,22 @@ rescue => e
 end
 
 def migrate_all
-  puts 'Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately '\
+  puts "[#{Time.now}] Initializing DynamoDB client"
+  # avoid initializing DynamoDB client many times from different threads
+  DynamoPropertyBag.pre_initialize
+  DynamoTable.pre_initialize
+
+  puts "[#{Time.now}] Fetching a list of applab apps from Pegasus Reporting DB. This step may take approximately "\
     '15 minutes to run over ~4.5M rows in storage_apps in production...'
   channels = fetch_applab_channels
 
-  puts "Searching for #{channels.length} applab projects in DynamoDB using #{MAX_THREADS} threads..."
+  puts "[#{Time.now}] Searching for #{channels.length} applab projects in DynamoDB using #{MAX_THREADS} threads..."
   Parallel.each_with_index(channels, in_threads: MAX_THREADS) do |channel_data, channel_index|
     owner_storage_id, channel_id = channel_data
     migrate_channel(owner_storage_id, channel_id)
-    puts "#{channel_index} of #{channels.size} projects scanned..." if channel_index % LOG_INCREMENT == 0
+    puts "[#{Time.now}] #{channel_index} of #{channels.size} projects scanned..." if channel_index % LOG_INCREMENT == 0
   end
-  puts "#{channels.size} projects scanned total"
+  puts "[#{Time.now}] #{channels.size} projects scanned total"
 end
 
 def rollback

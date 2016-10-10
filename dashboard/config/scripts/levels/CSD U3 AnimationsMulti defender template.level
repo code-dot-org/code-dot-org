@@ -1,0 +1,47 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-10-06T22:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "markdown_instructions": "# Play and Pause\r\n\r\nYou can use the `sprite.play` and `sprite.pause` commands to play and pause a sprite's animation. If the animation is already playing or paused, using these commands twice in a row has no effect.  There's one important exception, however, which is that **play will restart a non-looping animation if it has finished**. We're going to look at some cool behavior this lets us create.\r\n\r\n# Do This\r\n\r\n* Use the `sprite.play` command after each of your `setAnimation` commands. This will restart the walk animations as long as the keys are pressed.",
+    "submittable": "false",
+    "start_blocks": "// Variables\r\nvar score = 0;\r\n// Create Sprites\r\nvar cake = createSprite(350,200);\r\n\r\nvar player = createSprite(200,200);\r\n\r\nvar enemy1 = createSprite(0,200);\r\n\r\nvar enemy2 = createSprite(0,200);\r\n\r\nfunction draw() {\r\n  // draw the background\r\n  gameBackground();\r\n  // update the sprites\r\n  enemiesTouchCake();\r\n  movePlayer();\r\n  displaceEnemies();\r\n  enemiesTouchWater();\r\n  showScore();\r\n  drawSprites();\r\n}\r\n\r\n// Functions\r\nfunction gameBackground() {\r\n  noStroke();\r\n  background(color(0,100,255));\r\n  fill(color(100,100,100));\r\n  rect(0,150,400,100);\r\n  fill(color(80,80,80));\r\n  rect(0,140,400,10);\r\n  rect(0,250,400,10);\r\n}\r\n\r\nfunction enemiesTouchCake(){\r\n  \r\n}\r\n\r\nfunction movePlayer(){\r\n  \r\n}\r\n\r\nfunction dispalceEnemies(){\r\n\r\n}\r\n\r\nfunction enemiesTouchWater(){\r\n  \r\n}\r\n\r\nfunction showScore() {\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"Score: \" + score,10, 10, 80, 20);\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "show_d_pad": "false",
+    "pause_animations_by_default": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"3ec2fdba-154c-495f-99dc-0857897e0c90\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"3ec2fdba-154c-495f-99dc-0857897e0c90\": {\r\n      \"name\": \"alienPink_walk_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr/alienPink_walk.png\",\r\n      \"frameSize\": {\r\n        \"x\": 130,\r\n        \"y\": 258\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr\"\r\n    }\r\n  }\r\n}",
+    "all_animations_single_frame": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "Need to add gif of what it should look like.",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -113,6 +113,14 @@ describe('GameLabSprite', function () {
       testSprite.lifetime = newValue;
       expect(testSprite.life).to.equal(testSprite.lifetime).to.equal(newValue);
     });
+
+    it('aliases restitution to bounciness', function () {
+      testSprite.restitution = 1;
+      expect(testSprite.restitution).to.equal(testSprite.bounciness);
+      const newValue = 2;
+      testSprite.bounciness = newValue;
+      expect(testSprite.restitution).to.equal(testSprite.bounciness).to.equal(newValue);
+    });
   });
 
   describe('isTouching', function () {

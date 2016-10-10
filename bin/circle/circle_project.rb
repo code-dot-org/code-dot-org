@@ -1,9 +1,12 @@
+require 'fileutils'
 require 'json'
 require 'memoist'
 require 'open-uri'
 require 'parallel'
+require 'zlib'
 
 GITHUB_PROJECT_API_BASE = 'https://circleci.com/api/v1.1/project/github'.freeze
+CACHE_DIRECTORY = File.expand_path('~/.circle-cli/builds').freeze
 
 # Abstracted access to a Circle CI project builds via their REST API
 class CircleProject
@@ -20,8 +23,40 @@ class CircleProject
   # @return [Object] build descriptor object from the CircleCI API
   #   Example output JSON: https://gist.github.com/bcjordan/02f7c2906b524fa86ec75b19f9a72cd2
   def get_build(build_num, ensure_full_summary = false)
-    (!ensure_full_summary && get_recent_builds.find {|b| b['build_num'] == build_num}) ||
-        JSON.parse(open("#{@project_api_base}/#{build_num}").read)
+    # First, check local cache
+    if File.exist? cache_file_name(build_num)
+      Zlib::GzipReader.open(cache_file_name(build_num)) do |file|
+        return JSON.parse(file.read)
+      end
+    end
+
+    # Second, try pulling from the build summary
+    unless ensure_full_summary
+      short_summary = get_recent_builds.find {|b| b['build_num'] == build_num}
+      return short_summary if short_summary
+    end
+
+    # Finally, download the whole thing
+    body = nil
+    download_attempts_remaining = 3
+    while body.nil? && download_attempts_remaining > 0
+      begin
+        body = open("#{@project_api_base}/#{build_num}").read
+      rescue
+        download_attempts_remaining -= 1
+        sleep(0.25)
+      end
+    end
+
+    # Parse build and return it, saving to local cache if the build outcome is determined
+    build_summary = JSON.parse(body)
+    if build_summary && !build_summary['outcome'].nil?
+      FileUtils.mkdir_p(CACHE_DIRECTORY)
+      Zlib::GzipWriter.open(cache_file_name(build_num)) do |file|
+        file.write body
+      end
+    end
+    build_summary
   end
 
   # @param [Fixnum] build_num The build ID #
@@ -91,5 +126,10 @@ class CircleProject
   # @param [String] grep_for_step The build step to search for (e.g. "rake install")
   def build_step_output_url(build_object, container_id, grep_for_step)
     build_object['steps'].select { |o| o['name'].include? grep_for_step }[0]['actions'][container_id]['output_url']
+  end
+
+  # @return [String] Location of cache file for build
+  def cache_file_name(build_num)
+    "#{CACHE_DIRECTORY}/#{build_num}.json.gz"
   end
 end

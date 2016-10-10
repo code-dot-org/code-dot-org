@@ -1,5 +1,16 @@
 name 'onlineNeighbors'
 title 'Your Online Neighborhood'
 markdown <<MARKDOWN
-Your PlayLab friends want to share their Marble Mazes online.  Help them decide what information they can and can't share along with their entries.
+# Common Sense Media - Keep it Private
+  
+<br/><br/>    
+    
+<a href="https://d2e111jq13me73.cloudfront.net/sites/default/files/k-2-unit1-keepitprivate.pdf" target="_new">
+<button>
+Go to lesson plan
+</button> 
+</a>
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

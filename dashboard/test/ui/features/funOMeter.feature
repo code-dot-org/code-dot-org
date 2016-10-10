@@ -3,7 +3,7 @@ Feature: Fun-O-Meter
 
 @no_circle
 Scenario: Rate a Puzzle
-  Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I close the dialog
@@ -28,10 +28,10 @@ Scenario: Rate a Puzzle
   And I press "continue-button"
 
   Then I wait to see a dialog titled "Puzzle 5 of 5"
-  And check that I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/5"
+  And check that I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/5"
   And I wait until "puzzleRatings" in localStorage equals "[]"
 
-  Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I close the dialog

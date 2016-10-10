@@ -1,0 +1,17 @@
+name 'courseB_unplugged_mrfLoops'
+title 'Looping with My Robotic Friends'
+
+markdown <<MARKDOWN
+# Looping with My Robotic Friends
+  
+<br/><br/>    
+    
+<a href="https://drive.google.com/open?id=14EqSoZFButNBm0Q-xtlWXStS3V7-VQPfaWknjtbCius" target="_new">
+<button>
+Go to lesson plan
+</button> 
+</a>
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
