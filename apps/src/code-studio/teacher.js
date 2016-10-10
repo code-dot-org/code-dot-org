@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import debounce from 'lodash/debounce';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -7,7 +8,7 @@ import { getStore } from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import { fullyLockedStageMapping } from './stageLockRedux';
-import { setSections } from './sectionsRedux';
+import { setSections, selectSection } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
 
 function resizeScrollable() {
@@ -73,6 +74,10 @@ function queryLockStatus(store, scriptId) {
       }
     ).done(data => {
       store.dispatch(setSections(data));
+      const query = queryString.parse(location.search);
+      if (query.section_id) {
+        store.dispatch(selectSection(query.section_id));
+      }
       resolve();
     });
   });
