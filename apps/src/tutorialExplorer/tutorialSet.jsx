@@ -63,40 +63,43 @@ const TutorialSet = React.createClass({
           return false;
         }
 
-        // If we miss any filter group, then we don't show the tutorial.
-        let filterGroupMiss = false;
+        // If we miss any active filter group, then we don't show the tutorial.
+        let filterGroupsSatisfied = true;
 
         for (const filterGroupName in filters) {
-
           const tutorialTags = tutorial["tags_" + filterGroupName];
-          if (tutorialTags && tutorialTags.length > 0) {
-            const tutorialTagsSplit = tutorialTags.split(',');
+          const filterGroup = filters[filterGroupName];
 
-            // Now check all the filter group's tags.
-            const filterGroup = filters[filterGroupName];
-
-            // For this filter group, we've not yet found a matching tag between
-            // user selected otions and tutorial tags.
-            let filterHit = false;
-
-            for (const filterName of filterGroup) {
-              if (tutorialTagsSplit.includes(filterName)) {
-                // The tutorial had a matching tag.
-                filterHit = true;
-              }
-            }
-
-            // The filter group needs at least one user-selected filter to hit
-            // on the tutorial.
-            if (filterGroup.length !== 0 && !filterHit) {
-              filterGroupMiss = true;
+          if (filterGroup.length !== 0 && tutorialTags && tutorialTags.length > 0) {
+            if (!TutorialSet.findMatchingTag(filterGroup, tutorialTags)) {
+              filterGroupsSatisfied = false;
             }
           }
         }
 
-        return !filterGroupMiss;
+        return filterGroupsSatisfied;
       });
+    },
+
+    // Given a filter group, and the tutorial's relevant tag for that filter group,
+    // see if there's at least a single match.
+    findMatchingTag(filterGroup, tutorialTags) {
+      const tutorialTagsSplit = tutorialTags.split(',');
+
+      // For this filter group, we've not yet found a matching tag between
+      // user selected options and tutorial tags.
+      let matchingTag = false;
+
+      for (const filterName of filterGroup) {
+        if (tutorialTagsSplit.includes(filterName)) {
+          // The tutorial had a matching tag.
+          matchingTag = true;
+        }
+      }
+
+      return matchingTag;
     }
+
   },
 
   render() {
