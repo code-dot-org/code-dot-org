@@ -1090,7 +1090,7 @@ GameLab.prototype.getExportableAnimationList = function (callback) {
       let props = list.propsByKey[key];
       props.sourceUrl = document.location.protocol + '//' +
           document.location.host +
-          animationSourceUrl(key, props);
+          animationSourceUrl(key, props, true);
     });
     callback(list);
   }));
