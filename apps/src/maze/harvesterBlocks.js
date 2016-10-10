@@ -6,7 +6,7 @@ var msg = require('./locale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
-const CROPS = ['corn', 'pumpkin', 'lettice'];
+const CROPS = ['corn', 'pumpkin', 'lettuce'];
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
