@@ -67,7 +67,6 @@ const serializedAnimationPropsShape = {
   frameDelay: React.PropTypes.number.isRequired,
   version: React.PropTypes.string
 };
-const SerializedAnimationProps = React.PropTypes.shape(serializedAnimationPropsShape);
 
 /**
  * @typedef {Object} AnimationProps
@@ -128,16 +127,6 @@ function getSerializedAnimationProps(animation) {
 export const AnimationList = React.PropTypes.shape({
   orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
   propsByKey: React.PropTypes.objectOf(AnimationProps).isRequired
-});
-
-/**
- * @typedef {Object} SerializedAnimationList
- * @property {AnimationKey[]} orderedKeys - Animations in project order
- * @property {Object.<AnimationKey, SerializedAnimationProps>} propsByKey
- */
-const SerializedAnimationList = React.PropTypes.shape({
-  orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
-  propsByKey: React.PropTypes.objectOf(SerializedAnimationProps).isRequired
 });
 
 /**
