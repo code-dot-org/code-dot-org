@@ -1374,4 +1374,32 @@ class UserTest < ActiveSupport::TestCase
     assert user.permission?(UserPermission::FACILITATOR)
     assert !user.permission?(UserPermission::LEVELBUILDER)
   end
+
+  test 'should_see_inline_answer? returns true in levelbuilder' do
+    user = create :user
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    assert user.should_see_inline_answer?(nil)
+    assert user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns false for non teachers' do
+    user = create :student
+    assert_not user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns true for authorized teachers in csp' do
+    user = create :teacher
+    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
+    assert user.should_see_inline_answer?((create :script_level))
+  end
+
+  test 'should_see_inline_answer? returns false for authorized teachers in professional learning' do
+    user = create :teacher
+    course = create :plc_course
+    course_unit = create(:plc_course_unit, plc_course: course)
+    script_level = create(:script_level, script: course_unit.script)
+    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
+    assert_not user.should_see_inline_answer?(script_level)
+  end
 end
