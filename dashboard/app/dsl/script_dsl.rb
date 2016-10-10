@@ -138,6 +138,17 @@ class ScriptDSL < BaseDSL
   def self.serialize(script, filename)
     s = []
 
+    # Legacy script IDs
+    legacy_script_ids = {
+      :'20-hour' => 1,
+      :'Hour of Code' => 2,
+      :'edit-code' => 3,
+      events: 4,
+      flappy: 6,
+      jigsaw: 7,
+    }.with_indifferent_access
+    s << "id '#{legacy_script_ids[script.name]}'" if legacy_script_ids[script.name]
+
     s << "hidden 'false'" unless script.hidden
     s << "login_required 'true'" if script.login_required
     s << "hideable_stages 'true'" if script.hideable_stages
