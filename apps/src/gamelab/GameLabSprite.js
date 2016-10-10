@@ -43,6 +43,10 @@ module.exports.createSprite = function (x, y, width, height) {
   s._verticalStretch = 1;
 
   s.setAnimation = function (animationName) {
+    if (animationName === s.getAnimationLabel()) {
+      return;
+    }
+
     var animation = p5Inst.projectAnimations[animationName];
     if (typeof animation === 'undefined') {
       throw new Error('Unable to find an animation named "' + animationName +
