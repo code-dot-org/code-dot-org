@@ -42,10 +42,11 @@ end
 def create_session_row(row, weight: 1.0)
   retries = 3
 
-  begin
+  loop do
     row[:session] = create_session_id(weight)
     row[:id] = DB[:hoc_activity].insert(row)
-  end while row[:id] == 0 && (retries -= 1) > 0
+    break unless row[:id] == 0 && (retries -= 1) > 0
+  end
 
   raise "Couldn't create a unique session row." if row[:id] == 0
   set_hour_of_code_cookie_for_row(row)
