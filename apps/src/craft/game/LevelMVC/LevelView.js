@@ -369,14 +369,11 @@ export default class LevelView {
   }
 
   playExplodingCreeperAnimation(position, facing, destroyPosition, isOnBlock, completionHandler) {
-    let direction = this.getDirectionName(facing);
-
     let blockIndex = (this.yToIndex(destroyPosition[1])) + destroyPosition[0];
     let blockToExplode = this.actionPlaneBlocks[blockIndex];
 
     var creeperExplodeAnimation = blockToExplode.animations.getAnimation("explode");
     creeperExplodeAnimation.onComplete.add(() => {
-      var borderingPositions;
       blockToExplode.kill();
       this.playExplosionAnimation(position, facing, destroyPosition, isOnBlock, () => {
         this.controller.delayBy(100, () => {
@@ -405,8 +402,7 @@ export default class LevelView {
   }
 
   playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed) {
-    var animation,
-        tween;
+    var tween;
 
     //if we loop the sfx that might be better?
     this.audioPlayer.play("minecart");
@@ -501,8 +497,7 @@ export default class LevelView {
     //Add house blocks
     //fade out of white
     //Play success animation on player.
-    var tweenToW,
-        tweenWToC;
+    var tweenToW;
 
     tweenToW = this.playLevelEndAnimation(position, facing, isOnBlock, () => {
       this.controller.delayBy(4000, completionHandler);
@@ -757,7 +752,6 @@ export default class LevelView {
   }
 
   playShearSheepAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler) {
-    let direction = this.getDirectionName(facing);
     this.setSelectionIndicatorPosition(destroyPosition[0], destroyPosition[1]);
 
     this.onAnimationEnd(this.playPlayerAnimation("punch", playerPosition, facing, false), () => {
@@ -802,7 +796,6 @@ export default class LevelView {
   playBlockDestroyOverlayAnimation(playerPosition, facing, destroyPosition, blockType, newShadingPlaneData, newFowPlaneData, completionHandler) {
     let blockIndex = (this.yToIndex(destroyPosition[1])) + destroyPosition[0];
     let blockToDestroy = this.actionPlaneBlocks[blockIndex];
-    let direction = this.getDirectionName(facing);
 
     let destroyOverlay = this.actionPlane.create(-12 + 40 * destroyPosition[0], -22 + 40 * destroyPosition[1], "destroyOverlay", "destroy1");
     destroyOverlay.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
@@ -852,8 +845,7 @@ export default class LevelView {
   }
 
   playExplosionAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler, placeBlock) {
-    var signalBinding,
-        explodeAnim = this.actionPlane.create(-36 + 40 * destroyPosition[0], -30 + 40 * destroyPosition[1], "blockExplode", "BlockBreakParticle0");
+    var explodeAnim = this.actionPlane.create(-36 + 40 * destroyPosition[0], -30 + 40 * destroyPosition[1], "blockExplode", "BlockBreakParticle0");
 
     //explodeAnim.tint = 0x324bff;
     if (this.controller.canUseTints()) {
@@ -994,9 +986,7 @@ export default class LevelView {
     var sprite,
         x,
         y,
-        i,
-        blockType,
-        frameList;
+        blockType;
 
     this.groundPlane.removeAll(true);
     this.actionPlane.removeAll(true);
@@ -1268,10 +1258,8 @@ export default class LevelView {
 
   preparePlayerSprite(playerName) {
     var frameList,
-        genFrames,
         i,
         singlePunch,
-        jumpCelebrateFrames,
         idleFrameRate = 10;
 
     let frameRate = 20;
@@ -1286,7 +1274,7 @@ export default class LevelView {
 
     this.selectionIndicator = this.shadingPlane.create(24, 44, 'selectionIndicator');
 
-    jumpCelebrateFrames = Phaser.Animation.generateFrameNames("Player_", 285, 296, "", 3);
+    Phaser.Animation.generateFrameNames("Player_", 285, 296, "", 3);
 
     frameList = [];
 
@@ -1519,8 +1507,7 @@ export default class LevelView {
   createMiniBlock(x, y, blockType) {
     var frame = "",
         sprite = null,
-        frameList,
-        i, len;
+        frameList;
 
     switch (blockType) {
       case "treeAcacia":

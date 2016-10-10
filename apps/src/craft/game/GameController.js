@@ -1,11 +1,4 @@
 import CommandQueue from "./CommandQueue/CommandQueue.js";
-import BaseCommand from "./CommandQueue/BaseCommand.js";
-import DestroyBlockCommand from "./CommandQueue/DestroyBlockCommand.js";
-import MoveForwardCommand from "./CommandQueue/MoveForwardCommand.js";
-import TurnCommand from "./CommandQueue/TurnCommand.js";
-import WhileCommand from "./CommandQueue/WhileCommand.js";
-import IfBlockAheadCommand from "./CommandQueue/IfBlockAheadCommand.js";
-
 import LevelModel from "./LevelMVC/LevelModel.js";
 import LevelView from "./LevelMVC/LevelView.js";
 import AssetLoader from "./LevelMVC/AssetLoader.js";
@@ -255,7 +248,6 @@ class GameController {
   // command processors
   moveForward(commandQueueItem) {
     var player = this.levelModel.player,
-      allFoundCreepers,
       groundType,
       jumpOff;
 
@@ -273,9 +265,6 @@ class GameController {
 
       this.levelView.playMoveForwardAnimation(player.position, player.facing, jumpOff, player.isOnBlock, groundType, () => {
         this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
-
-      //First arg is if we found a creeper
-        allFoundCreepers = this.levelModel.isPlayerStandingNearCreeper();
 
         if (this.levelModel.isPlayerStandingInWater()) {
             this.levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
