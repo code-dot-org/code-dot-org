@@ -16,6 +16,9 @@ var createCategory = blockUtils.createCategory;
  * @property {?boolean} hideAnimationMode - If true, the animation tab should be
  *           inaccessible to the student on this level.
  *
+ * @property {?boolean} startInAnimationTab - If true, the animation tab should be
+ *           selected on page load.
+ *
  * @property {?boolean} allAnimationsSingleFrame - If true, the library animations
  *           should all be shortened to their first frame so they are still images.
  *

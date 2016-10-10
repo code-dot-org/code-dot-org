@@ -4,11 +4,6 @@ title: How to help
 
 # How to Help
 
-## Make a generous donation
-We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
-
-[<button>Please consider a donation</button>](/donate)
-
 ## Ask your school to teach computer science
 Encourage local elementary schools to teach our [elementary curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
  
@@ -19,10 +14,6 @@ Petition your state to allow computer science to count towards math or science h
 
 [<button>Add your support</button>](/promote)
 
-## Translate our tutorials
-Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
-
-[<button>Translate tutorials</button>](/translate)
 
 ## Buy a CODE hat or t-shirt
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
@@ -38,6 +29,18 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 Millions of people of all ages have learned an [Hour of Code](http://code.org/learn), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
 
 [<button>Start today</button>](https://code.org/learn)
+
+## Translate our tutorials
+Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
+
+[<button>Translate tutorials</button>](/translate)
+
+
+## Make a generous donation
+We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
+
+[<button>Please consider a donation</button>](/donate)
+
 
 ---
 <a name="engineer"></a>
