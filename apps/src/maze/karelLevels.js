@@ -118,9 +118,6 @@ var WHILE_OPT_PATH_AHEAD = {
   'titles': {'DIR': 'isPathForward'}
 };
 
-// This tests for and creates the "karel_if" block.
-var IF = {'test': 'if', 'type': 'karel_if'};
-
 // This tests for and creates the "karel_if" block with the option "pilePresent" selected.
 var IF_OPT_PILE_PRESENT = {
   'test': 'if (Maze.pilePresent',
@@ -164,15 +161,6 @@ var AVOID_OBSTACLE_AND_REMOVE = {
   },
   'type': 'procedures_callnoreturn',
   'titles': {'NAME': msg.avoidCowAndRemove()}
-};
-
-// This tests for and creates the "remove 1 and avoid the cow" block.
-var REMOVE_AND_AVOID_OBSTACLE = {
-  'test': function (block) {
-    return block.getTitleValue('NAME') === msg.removeAndAvoidTheCow();
-  },
-  'type': 'procedures_callnoreturn',
-  'titles': {'NAME': msg.removeAndAvoidTheCow()}
 };
 
 // This tests for and creates the "remove piles" block.
