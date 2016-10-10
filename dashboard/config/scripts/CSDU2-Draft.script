@@ -101,12 +101,13 @@ level 'CSDU2 Make Your Logo'
 level 'CSDU2 - PW - Image as A Link'
 level 'CSDU2 - PW - Favicon'
 
-stage 'Personal Website: Midway Check'
+stage 'Usability and Accessibility'
 named_level 'Unit 2 Lesson 11 Overview'
-named_level 'Validator'
 named_level 'Color Blindness Filter'
 named_level 'Color Contrast Checker'
 named_level 'Check for Internet Accessibility'
+named_level 'Validator'
+named_level 'Screen Size'
 
 stage 'Box Model and Page Layout'
 named_level 'Unit 2 Lesson 12 Overview'
@@ -130,10 +131,8 @@ level 'CSDU2 - PW - Pre Publishing 5'
 level 'CSDU2 - PW - Pre Publishing 6'
 level 'CSDU2 - PW - Publish It'
 
-
 stage 'Sources and Search Engines'
 named_level 'Unit 2 Lesson 15 Overview'
-
 
 stage 'Intellectual Property'
 named_level 'Unit 2 Lesson 16 Overview'
@@ -148,12 +147,6 @@ stage 'Personal Website: Finalizing Site'
 named_level 'Unit 2 Lesson 17 Overview'
 named_level 'Final Personal Website'
 
-
-
-
-
-
-#not in use
 stage 'Introduction to HTML'
 stage 'Headers and Lists'
 stage 'Designing Web Pages'
@@ -161,3 +154,4 @@ stage 'Designing Code for Computers'
 stage 'Personal Website: Connecting Pages'
 stage 'Classes and External Style Sheets'
 stage 'Holding'
+stage 'Personal Website: Midway Check'

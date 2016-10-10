@@ -21,7 +21,7 @@ class HomeControllerTest < ActionController::TestCase
   test "language is set with cookies" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 
-    request.host = "learn.code.org"
+    request.host = "studio.code.org"
 
     get :set_locale, :return_to => "http://blahblah", :locale => "es-ES"
 
@@ -35,7 +35,7 @@ class HomeControllerTest < ActionController::TestCase
   test "handle nonsense in return_to" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 
-    request.host = "learn.code.org"
+    request.host = "studio.code.org"
 
     get :set_locale, :return_to => ["blah"], :locale => "es-ES"
 
@@ -43,7 +43,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "if return_to in set_locale is nil redirects to homepage" do
-    request.host = "learn.code.org"
+    request.host = "studio.code.org"
     get :set_locale, :return_to => nil, :locale => "es-ES"
     assert_redirected_to ''
   end

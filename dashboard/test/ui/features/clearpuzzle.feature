@@ -1,7 +1,7 @@
 Feature: Clear Puzzle
 
 Background:
-  Given I am on "http://learn.code.org/hoc/1?noautoplay=true"
+  Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 20"
   And I close the dialog

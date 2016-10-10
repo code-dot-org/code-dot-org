@@ -12,7 +12,6 @@ class ScriptDSL < BaseDSL
     @stages = []
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
-    @prompt = nil
     @hidden = true
     @login_required = false
     @hideable_stages = false
@@ -62,10 +61,7 @@ class ScriptDSL < BaseDSL
   end
 
   string :skin
-
   string :video_key_for_next_level
-
-  string :prompt
 
   def assessment(name, properties = {})
     properties[:assessment] = true
@@ -78,9 +74,6 @@ class ScriptDSL < BaseDSL
 
   def level(name, properties = {})
     active = properties.delete(:active)
-    buttontext = properties.delete(:buttontext)
-    imageurl = properties.delete(:imageurl)
-    level_description = properties.delete(:description)
     level = {
       :name => name,
       :stage_flex_category => @stage_flex_category,
@@ -96,9 +89,6 @@ class ScriptDSL < BaseDSL
 
       levelprops = {}
       levelprops[:active] = active if active == false
-      levelprops[:buttontext] = buttontext if buttontext
-      levelprops[:imageurl] = imageurl if imageurl
-      levelprops[:description] = level_description if level_description
       unless levelprops.empty?
         @current_scriptlevel[:properties][name] = levelprops
       end
@@ -115,11 +105,8 @@ class ScriptDSL < BaseDSL
   end
 
   def endvariants
-    @current_scriptlevel[:properties][:prompt] = @prompt if @prompt
     @scriptlevels << @current_scriptlevel
-
     @current_scriptlevel = nil
-    @prompt = nil
   end
 
   def i18n_strings

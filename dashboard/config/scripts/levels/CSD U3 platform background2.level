@@ -1,13 +1,13 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-10-03T22:35:43.000Z",
+  "created_at": "2016-10-03T22:41:56.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# More Backgrounds\r\n\r\nNow that you've created one background, you will need to put it into a function so that it doesn't get confused with the other backgrounds you are making.  Then, you can create new functions with your new backgrounds.\r\n\r\n# Do this\r\n\r\n* Put the code to create your background into a new function block, and name the function.\r\n* Create the code for any other backgrounds and put them into their own functions.",
+    "markdown_instructions": "# Choosing your Background\r\n\r\nNow that you have your score variable, you can use it to choose the right background for your game.  You can see an example of changing your background according to your score in [Stage 13 Level 10](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/13/puzzle/10)\r\n\r\n# Do This\r\n\r\n* Inside the draw loop, use an `if` statement and your two background functions to draw your background according to your score level.\r\n* Test your code by changing the start score to 100, then running to code to see whether the background changes.\r\n\r\n_Challenge: If you have a third background, you can click the plus sign at the bottom of the `if` block.  Another space will appear for your third background function, as well as a place to check the score again._",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,6 +34,7 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
+    "palette_category_at_start": "control",
     "contained_level_names": null
   },
   "published": true,

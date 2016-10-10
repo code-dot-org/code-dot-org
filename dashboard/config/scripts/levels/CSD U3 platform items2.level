@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Add Looping and Interactions\r\n\r\nNow that your items are falling, you can add code to loop them back to the top.\r\n\r\n# Do This\r\n\r\n* Create a function that checks whether the sprite is off the bottom of the screen, and loops it back to the top of the screen if it is.  (Look at [Stage 11 Bubble 16](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/11/puzzle/16) to see an example of code that loops a sprite.)\r\n* Use the function inside the draw loop.\r\n* Run the code to test your sprite.\r\n* Once one item is working properly, copy and paste the code to use for the other item sprites.\r\n\r\nChallenge: \r\n\r\n* Create a function that causes your items to interact with the platforms, then call it from the draw loop.\r\n* Run the code to test your sprite.",
+    "markdown_instructions": "# Loop your Item\r\n\r\nNow that your item is falling, you can add code to loop it back to the top.  This is similar to what you did for the platform sprite, but the item sprite will loop back to a random x and y location when it goes to the top of the screen.\r\n\r\n# Do This\r\n\r\n* Create a `loopItems` function that uses an `if` block to check whether the item sprite is off the bottom of the screen, then sends the item back to a random x and y position, just as it did when you first created the sprite.\r\n* Call the function inside the draw loop\r\n* Run the code to test your sprite.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,6 +34,7 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
+    "palette_category_at_start": "functions",
     "contained_level_names": null
   },
   "published": true,

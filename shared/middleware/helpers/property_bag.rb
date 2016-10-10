@@ -1,3 +1,5 @@
+require 'aws-sdk'
+
 #
 # PropertyBag
 #
@@ -79,6 +81,10 @@ class DynamoPropertyBag
     @storage_id = storage_id
 
     @hash = "#{@channel_id}:#{storage_id}"
+  end
+
+  def self.pre_initialize
+    @@dynamo_db ||= Aws::DynamoDB::Client.new
   end
 
   def db
