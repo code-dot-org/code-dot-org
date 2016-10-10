@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play: Try making some drawings of your own using \"for loops\". We've added a few useful variables for you as well.",
+    "instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play:** Try making some drawings of your own using `for loops`. We've added a few useful variables for you as well.\r\n\r\n\r\n<h5>\r\n<details>\r\n<summary>More About Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\r\n\r\n![](https://images.code.org/7910db8adf2ec7e4c5fdad0101c68368-image-1475911466143.24.03.png)\r\n\r\n<br/><br/>\r\n<h5>\r\n<details>\r\n<summary>More About Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n</details>\r\n</h5>\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The image in the drawing uses a turn of 61 degrees.\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Want to know how the sample image was done?\\n\\n![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
   "notes": "",

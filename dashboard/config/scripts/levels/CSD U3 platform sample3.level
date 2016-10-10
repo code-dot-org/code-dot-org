@@ -36,10 +36,7 @@
     "markdown_instructions": "# Bunny Jumper\r\n\r\nHere's another example of a jumper.  In this one, the items get faster when they fall, and bounce off the platforms.\r\n\r\nChoose one or more of the following changes and add them to your game.\r\n* Make your player's animation change direction when the player changes direction.\r\n* Change the player to only jump when it is on a platform.\r\n* Add another background and make it appear when the score gets even higher.\r\n* Make your items interact with the platforms in some way.\r\n\r\n",
     "start_animations": "{\r\n  \"orderedKeys\": [\"bunnyLeft\", \"bunnyRight\", \"carrot\", \"platform\"],\r\n  \"propsByKey\": {\r\n    \"bunnyLeft\": {\r\n      \"name\": \"bunnyLeft\",\r\n      \"sourceUrl\": \"https://images.code.org/33064fe9b3899c9b0dfd0616a32706ee-image-1475478186181.png\",\r\n      \"frameSize\": {\"x\":40, \"y\": 67},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"bunnyRight\": {\r\n      \"name\": \"bunnyRight\",\r\n      \"sourceUrl\": \"https://images.code.org/c56605216886c0c318b2470438b03666-image-1475478186182.png\",\r\n      \"frameSize\": {\"x\":40, \"y\": 67},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"carrot\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://images.code.org/160430b9b29cc80ab667174045a91c15-image-1475478186183.png\",\r\n      \"frameSize\": {\"x\":20, \"y\": 18},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"platform\": {\r\n      \"name\": \"platform\",\r\n      \"sourceUrl\": \"https://images.code.org/4282bf2423f3815b66731ede0c6386f9-image-1475478186183.png\",\r\n      \"frameSize\": {\"x\":100, \"y\": 25},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    }\r\n  }\r\n}",
     "all_animations_single_frame": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
