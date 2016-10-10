@@ -2,7 +2,7 @@
 Feature: Authored Hints
 
 Scenario: View Authored Hints
-  Given I am on "http://learn.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
   And I rotate to landscape
 
   # The initial instructions dialog has no hint prompt button
