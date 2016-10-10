@@ -208,8 +208,7 @@ class Level < ActiveRecord::Base
     field = level_identifier.to_i.to_s == level_identifier.to_s ? :id : :name
     level = Level.find_by!(field => level_identifier)
     # Cache the level by ID and by name, unless it wasn't found.
-    @@level_cache[level.id] = level if level && Script.should_cache?
-    @@level_cache[level.name] = level if level && Script.should_cache?
+    level.update_level_in_cache if level
     level
   end
 
