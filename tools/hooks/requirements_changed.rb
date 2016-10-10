@@ -4,7 +4,7 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 # of these are currently used, but are included for future-proofing.
 REQUIREMENTS = {
   "requirements.txt" => "pip install -r requirements.txt",
-  "package.json" => "npm install",
+  "package.json" => "npm prune && npm update",
   "bower.json" => "bower install",
   "Gemfile" => "bundle install",
   "Berksfile" => "berks install"
