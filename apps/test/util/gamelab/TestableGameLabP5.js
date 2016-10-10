@@ -79,6 +79,5 @@ export function expectSpriteSheetsAreClones(sheet1, sheet2) {
   expect(sheet1.image).to.equal(sheet2.image);
   expect(sheet1.frame_width).to.equal(sheet2.frame_width);
   expect(sheet1.frame_height).to.equal(sheet2.frame_height);
-  expect(sheet1.frame_height).to.equal(sheet2.frame_height);
   expect(sheet1.num_frames).to.equal(sheet2.num_frames);
 }
