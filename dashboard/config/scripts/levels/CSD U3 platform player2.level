@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# User Controls\r\n\r\nNext, you should add user controls so that you can move your player around.  Your player needs to move to the left when the left arrow key is pressed, to the right when the right arrow key is pressed, and jump when the space bar is pressed.\r\n\r\n# Do This\r\n\r\n* Create a new `controlPlayer` function in the \"functions\" area of your code.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `sprite.x` blocks to make your player move to the left and right according to the arrow keys.  Look at [Stage 8 Puzzle 15](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/8/puzzle/15) for examples.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `velocityY` blocks to make your player jump when the up arrow is pressed.  Look at [Stage 11 Puzzle 15](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/11/puzzle/15) for an example.\r\n* Call the `controlPlayer` function inside the draw loop.\r\n* Run the game and test your code.\r\n\r\n_Challenge: Use an `if` statement to make the player jump only when it is standing on a platform, but not in mid air._\r\n",
+    "markdown_instructions": "# User Controls\r\n\r\nNext, you should add user controls so that you can move your player around.  Your player needs to move to the left when the left arrow key is pressed, to the right when the right arrow key is pressed, and jump when the space bar is pressed.\r\n\r\n# Do This\r\n\r\n* Create a new `controlPlayer` function in the \"functions\" area of your code.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `sprite.x` blocks to make your player move to the left and right according to the arrow keys.  Look at [Stage 8 Puzzle 15](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/8/puzzle/15) for examples.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `velocityY` blocks to make your player jump when the up arrow is pressed.  Look at [Stage 11 Puzzle 15](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/11/puzzle/15) for an example.\r\n* Call the `controlPlayer` function inside the draw loop.\r\n* Run the game and test your code.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,7 +34,11 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "all_animations_single_frame": "false"
   },
   "published": true,
   "notes": "",
