@@ -1,4 +1,3 @@
-/* global Dialog, appOptions, CDOSounds */
 import $ from 'jquery';
 import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
