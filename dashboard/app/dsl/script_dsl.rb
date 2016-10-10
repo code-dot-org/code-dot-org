@@ -163,24 +163,36 @@ class ScriptDSL < BaseDSL
       s << "stage '#{stage.name}'"
       stage.script_levels.each do |sl|
         if sl.levels.count > 1
-          # TODO: variants
-        else
-          if sl.level.key.start_with? 'blockly:'
-            s << "skin '#{sl.level.skin}'" if sl.level.skin
-
-            unless sl.level.concepts.empty?
-              s << "concepts #{sl.level.concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')}"
-            end
-
-            concept_difficulty = sl.level.level_concept_difficulty.try(:serializable_hash) || {}
-            s << "level_concept_difficulty '#{concept_difficulty.to_json}'"
+          s << 'variants'
+          sl.levels.each do |level|
+            s.concat(self.serialize_level(level, sl.active?(level)).map{ |l| l.indent(2) })
           end
-          s << "level '#{sl.level.key}'"
+          s << 'endvariants'
+        else
+          s.concat(self.serialize_level(sl.level))
         end
       end
       s << ''
     end
 
     File.write(filename, s.join("\n"))
+  end
+
+  def self.serialize_level(level, active = nil)
+    s = []
+    if level.key.start_with? 'blockly:'
+      s << "skin '#{level.skin}'" if level.try(:skin)
+
+      unless level.concepts.empty?
+        s << "concepts #{level.concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')}"
+      end
+
+      concept_difficulty = level.level_concept_difficulty.try(:serializable_hash) || {}
+      s << "level_concept_difficulty '#{concept_difficulty.to_json}'"
+    end
+    l = "level '#{level.key}'"
+    l += ", active: #{active}" unless active.nil?
+    s << l
+    s
   end
 end
