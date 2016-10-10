@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-10-09T07:19:03.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "markdown_instructions": "A _pseudocode_ program is started below that asks the user for input and stores the value in a variable.  Continue writing pseudocode to accomplish this task: \r\n\r\nIf the hour is within the school day (8 to 15) then display  “Nice to see you!”, Otherwise, display “It’s time to go home!\r\n\r\n    DISPLAY (“Enter the hour of day (0-23)”)\r\n    hour <- INPUT ()",
+    "encrypted_solution": "lrLUf0/0VjGH5C1g2x06S70v4m9rkZkaLsB8Q75AHW4HAbmVmJ1gcT/ru9L7\nFI0ma6MtEumXiiH+KpPITS0SCOp+dcJkheMTNtZMEGa7WvXLe1Gu+kgoV0s+\n3jO6Y/tz\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

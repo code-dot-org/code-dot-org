@@ -1,0 +1,12 @@
+name 'courseB_story_unspottedBugs18'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<h3>
+JD has made Jasmine so proud.<br/>
+Now the whole town knows that when things go wrong, it's time to put the Debuggers to work!
+</h3>
+
+![](https://images.code.org/7f6aa6767fed27ceb9179b5f2ef41a32-image-1476003102310.png)
+MARKDOWN
