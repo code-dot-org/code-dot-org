@@ -94,9 +94,9 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === FINISH_SAVE) {
-    const { sections, selectedSection } = state;
-    const { lockStatus: nextLockStatus, stageId } = action;
-    const nextStage = _.cloneDeep(sections[selectedSection].stages[stageId]);
+    const { sections } = state;
+    const { lockStatus: nextLockStatus, sectionId, stageId } = action;
+    const nextStage = _.cloneDeep(sections[sectionId].stages[stageId]);
 
     // Update locked/readonly_answers in stages based on the new lockStatus provided
     // by our dialog.
@@ -112,7 +112,7 @@ export default function reducer(state = initialState, action) {
     });
 
     const nextState = _.cloneDeep(state);
-    nextState.sections[selectedSection].stages[stageId] = nextStage;
+    nextState.sections[sectionId].stages[stageId] = nextStage;
     return Object.assign(nextState, {
       lockStatus: nextLockStatus,
       saving: false
@@ -157,10 +157,11 @@ export const openLockDialog = (sectionId, stageId) => ({
 });
 
 export const beginSave = () => ({ type: BEGIN_SAVE });
-export const finishSave = (newLockStatus, stageId) => ({
+export const finishSave = (sectionId, stageId, newLockStatus) => ({
   type: FINISH_SAVE,
-  lockStatus: newLockStatus,
-  stageId
+  sectionId,
+  stageId,
+  lockStatus: newLockStatus
 });
 
 /**
@@ -170,6 +171,8 @@ export const finishSave = (newLockStatus, stageId) => ({
 const performSave = (newLockStatus, stageId, onComplete) => {
   return (dispatch, getState) => {
     const oldLockStatus = getState().stageLock.lockStatus;
+    // TODO - pass in?
+    const sectionId = getState().sections.selectedSection;
 
     const saveData = newLockStatus.filter((item, index) => {
       // Only need to save items that changed
@@ -193,7 +196,7 @@ const performSave = (newLockStatus, stageId, onComplete) => {
       contentType: 'application/json',
       data: JSON.stringify({updates: saveData})
     }).done(() => {
-      dispatch(finishSave(newLockStatus, stageId));
+      dispatch(finishSave(sectionId, stageId, newLockStatus));
       onComplete();
     })
     .fail(err => {
