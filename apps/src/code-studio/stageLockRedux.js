@@ -22,8 +22,8 @@ const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
 export const initialState = {
   viewAs: ViewType.Student,
+  // TODO - rename bySection?
   sections: {},
-  selectedSection: null,
   lockDialogStageId: null,
   // The locking info for the currently selected section/stage
   lockStatus: [],
@@ -51,8 +51,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sectionId = Object.keys(action.sections)[0];
     return Object.assign({}, state, {
-      sections: action.sections,
-      selectedSection: sectionId,
+      sections: action.sections
     });
   }
 
@@ -66,7 +65,6 @@ export default function reducer(state = initialState, action) {
     const { lockDialogStageId, lockStatus } = state;
     return {
       ...state,
-      selectedSection: sectionId,
       lockStatus: lockDialogStageId ?
         lockStatusForStage(state.sections[sectionId], lockDialogStageId) : lockStatus
     };
@@ -248,14 +246,11 @@ const lockStatusForStage = (section, stageId) => {
  * in the current section. A stage is fully locked if and only if it is locked
  * for all of the students in the section
  */
-export const fullyLockedStageMapping = (state) => {
-  const { sections, selectedSection }  = state;
-
-  if (!selectedSection) {
+export const fullyLockedStageMapping = (section) => {
+  if (!section) {
     return {};
   }
 
-  const section = sections[selectedSection];
   const stageIds = Object.keys(section.stages);
 
   return stageIds.reduce((obj, stageId) => {
