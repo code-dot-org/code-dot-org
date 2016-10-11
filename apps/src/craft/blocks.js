@@ -1,6 +1,6 @@
-var i18n = require('./locale');
+const i18n = require('./locale');
 
-var blocksToDisplayText = {
+const blocksToDisplayText = {
   bedrock: i18n.blockTypeBedrock(),
   bricks: i18n.blockTypeBricks(),
   clay: i18n.blockTypeClay(),
@@ -41,7 +41,7 @@ var blocksToDisplayText = {
   '': i18n.blockTypeEmpty()
 };
 
-var miniBlocks = [
+const miniBlocks = [
   'dirt',
   'dirtCoarse',
   'sand',
@@ -77,9 +77,9 @@ var miniBlocks = [
   'egg',
   'poppy',
   'sheep'
-]
+];
 
-var allBlocks = [
+const allBlocks = [
   'bedrock',
   'bricks',
   'clay',
@@ -116,7 +116,7 @@ var allBlocks = [
   'tree',
   'wool'];
 
-var allSounds = [
+const allSounds = [
   'dig_wood1',
   'stepGrass',
   'stepWood',
@@ -366,23 +366,31 @@ exports.install = function (blockly, blockInstallOptions) {
 
   function generatorFor(type) {
     return function () {
-      var whenUsedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_USED");
-      var whenTouchedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_TOUCHED");
-      var whenSpawnedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_SPAWNED");
-      var whenAttackedCode = blockly.Generator.get('JavaScript').statementToCode(this, "WHEN_ATTACKED");
-      var blockType = type;
-      return `
-        console.log('triggered 1');
-        onEventTriggered("${blockType}", 1, function(event) {
-          console.log(event);
+      const eventTypes = Object.freeze({
+        WhenTouched: 0,
+        WhenUsed: 1,
+        WhenSpawned: 2,
+        WhenAttacked: 3,
+        WhenNight: 4,
+        WhenDay: 5
+      });
+      const statementNameToEvent = {
+        WHEN_USED: eventTypes.WhenUsed,
+        WHEN_TOUCHED: eventTypes.WhenTouched,
+        WHEN_SPAWNED: eventTypes.WhenSpawned,
+        WHEN_ATTACKED: eventTypes.WhenAttacked,
+        WHEN_NIGHT: eventTypes.WhenNight,
+        WHEN_DAY: eventTypes.WhenDay,
+      };
 
-          ${whenUsedCode}
+      var blockType = type;
+
+      return Object.keys(statementNameToEvent).map((statementName) => {
+        return `
+        onEventTriggered("${blockType}", ${statementNameToEvent[statementName]}, function(event) {
+          ${blockly.Generator.get('JavaScript').statementToCode(this, statementName)}
         }, 'block_id_${this.id}');`;
-      //return console.log(`Running ${type} code.`) +
-      //    whenUsedCode +
-      //    whenTouchedCode +
-      //    whenSpawnedCode +
-      //    whenAttackedCode;
+      }).join("\n");
     }
   }
 

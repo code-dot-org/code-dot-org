@@ -760,19 +760,15 @@ Craft.executeUserCode = function () {
           });
     },
     onEventTriggered: function (type, eventType, callback, blockID) {
-      console.log("sup");
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
           function (event) {
-              console.log("Called 1");
-              if (event.eventType !== eventType) {
-                return;
-              }
-              if (event.targetType !== type) {
-                return;
-              }
-
-              console.log("Called");
-              callback(event);
+            if (event.eventType !== eventType) {
+              return;
+            }
+            if (event.targetType !== type) {
+              return;
+            }
+            callback(event);
           });
     },
     destroyEntity: function (blockReference, blockID) {
