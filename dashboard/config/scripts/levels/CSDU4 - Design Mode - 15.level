@@ -41,8 +41,8 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "project_template_level_name": "U3 - Design Mode 1",
-    "contained_level_names": null,
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

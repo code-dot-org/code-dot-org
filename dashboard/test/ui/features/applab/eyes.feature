@@ -27,7 +27,7 @@ Scenario: App Lab UI elements from initial code and html
   And I rotate to landscape
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
   And I wait to see "#runButton"
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -77,7 +77,7 @@ Scenario: Text area with multiple lines, radio button, checkbox
 
 Scenario: Applab visualization scaling
   When I open my eyes to test "Applab visualization scaling"
-  And I am on "http://learn.code.org/projects/applab/new"
+  And I am on "http://studio.code.org/projects/applab/new"
   And I rotate to landscape
   And I wait to see "#runButton"
   And I switch to design mode
@@ -103,14 +103,14 @@ Scenario: Applab visualization scaling
 
 Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/12"
   And I rotate to landscape
   And I see no difference for "embedded level"
   Then I close my eyes
 
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on standard level"
   Then I click selector ".fa-chevron-circle-up"
@@ -120,18 +120,18 @@ Scenario: Applab Instructions in Top Pane
   Then I click selector "#hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
 
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/10"
+  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on instructionless level"
 
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
+  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/12"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on embed level"
   Then I close my eyes
 
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels

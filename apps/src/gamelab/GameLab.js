@@ -1,7 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {viewAnimationJson} from './actions';
+import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {startInAnimationTab} from './stateQueries';
+import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 var commonMsg = require('@cdo/locale');
 var msg = require('@cdo/gamelab/locale');
 var levels = require('./levels');
@@ -37,7 +39,6 @@ var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import {GAME_WIDTH} from './constants';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -258,8 +259,13 @@ GameLab.prototype.init = function (config) {
     showDebugWatch: true,
     showDebugSlider: false,
     showAnimationMode: !config.level.hideAnimationMode,
+    startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
   });
+
+  if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
+    this.studioApp_.reduxStore.dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+  }
 
   // Push project-sourced animation metadata into store
   const initialAnimationList = config.initialAnimationList || this.startAnimations;
