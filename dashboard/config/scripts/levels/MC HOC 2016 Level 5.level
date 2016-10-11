@@ -1,0 +1,76 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2016-10-10T20:32:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"flowerDandelion\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"treeSpruce\",\"\"]",
+    "player_start_position": "[4, 7]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "is_daytime": "true",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "player_start_direction": "0",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "Puzzle 5: Restore the Sheep\r\nNow that we can make entities move and drop items, let’s go back and finish our sheep. Make the sheep wander, around, drop wool when you use it, and follow you if you touch it by using a move toward player command in the when touched slot.\r\n\r\nSolution:               \r\nSheep\r\n§  When spawned: Give them this code\r\n·       Repeat Forever\r\no   Repeat Random\r\n§  Move Forward\r\no   Turn Random\r\n§  When Touched\r\nRepeat forever\r\n·       Move Toward Player\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nSuccess criteria: Sheep follows player; Wool drops when sheared.\r\n\r\nTeaches: Building a full entity, Events, reinforce loops",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false" uservisible="false"/>
+        <block type="craft_sheep"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="craft_drop">
+              <title name="TYPE">wool</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false"/>
+        <block type="craft_sheep">
+          <statement name="WHEN_USED">
+            <block type="craft_drop">
+              <title name="TYPE">wool</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Craft>
