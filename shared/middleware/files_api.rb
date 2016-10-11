@@ -561,8 +561,8 @@ class FilesApi < Sinatra::Base
 
     # save the new manifest
     manifest_json = manifest.to_json
-    bucket.create_or_replace(encrypted_channel_id, 'manifest.json', manifest_json)
+    result = bucket.create_or_replace(encrypted_channel_id, 'manifest.json', manifest_json)
 
-    manifest_json
+    { "filesVersionId": result[:version_id], "files": manifest }.to_json
   end
 end
