@@ -1,7 +1,19 @@
 import Immutable from 'immutable';
 
-// TODO: these probably belong here
-import { SET_SECTIONS, SELECT_SECTION } from './stageLockRedux';
+// Action types
+export const SET_SECTIONS = 'stageLock/SET_SECTIONS';
+export const SELECT_SECTION = 'stageLock/SELECT_SECTION';
+
+// Action Creators
+export const setSections = sections => ({
+  type: SET_SECTIONS,
+  sections
+});
+
+export const selectSection = sectionId => ({
+  type: SELECT_SECTION,
+  sectionId
+});
 
 const SectionData = Immutable.Record({
   selectedSection: null,
@@ -9,6 +21,7 @@ const SectionData = Immutable.Record({
   sectionIds: []
 });
 
+// Reducer
 export default function reducer(state = new SectionData(), action) {
   if (action.type === SET_SECTIONS) {
     const firstSectionId = Object.keys(action.sections)[0];

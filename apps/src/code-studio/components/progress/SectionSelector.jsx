@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectSection } from '../../stageLockRedux';
+import { selectSection } from '../../sectionsRedux';
 
 const styles = {
   select: {
