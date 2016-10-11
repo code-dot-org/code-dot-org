@@ -41,10 +41,10 @@ describe('animationListModule', function () {
       expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png');
     });
 
-    it(`appends version query param if props has a version id`, function () {
+    it(`appends version query param if props has a version id and version flag is passed`, function () {
       setExternalGlobals();
       const props = {sourceUrl: null, version: 'baz'};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=baz');
+      expect(animationSourceUrl(key, props, true)).to.equal('/v3/animations/fake_id/foo.png?version=baz');
     });
   });
 

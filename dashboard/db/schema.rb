@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007172920) do
+ActiveRecord::Schema.define(version: 20161011013910) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -753,6 +753,22 @@ ActiveRecord::Schema.define(version: 20161007172920) do
     t.integer  "conditionals_d5_count",          default: 0
     t.datetime "basic_proficiency_at"
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree
+  end
+
+  create_table "user_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_id",                        null: false
+    t.integer "updated_by"
+    t.string  "other_user_ids"
+    t.string  "other_emails"
+    t.boolean "csf_pd",         default: false
+    t.boolean "csd_pd",         default: false
+    t.boolean "csp_pd",         default: false
+    t.boolean "ecs_pd",         default: false
+    t.boolean "csf_pd_manual",  default: false
+    t.boolean "csd_pd_manual",  default: false
+    t.boolean "csp_pd_manual",  default: false
+    t.boolean "ecs_pd_manual",  default: false
+    t.index ["user_id"], name: "index_user_profiles_on_user_id", using: :btree
   end
 
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

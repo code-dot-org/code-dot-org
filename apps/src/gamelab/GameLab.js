@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode} from './actions';
+import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 var commonMsg = require('@cdo/locale');
@@ -102,10 +102,10 @@ var GameLab = function () {
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
 
-  /** Expose for levelbuilder */
-  window.printSerializedAnimationList = () => {
+  /** Expose for levelbuilders (usable on prod) */
+  window.viewExportableAnimationList = () => {
     this.getExportableAnimationList(list => {
-      console.log(JSON.stringify(list, null, 2));
+      this.studioApp_.reduxStore.dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
     });
   };
 };
@@ -1097,7 +1097,7 @@ GameLab.prototype.getExportableAnimationList = function (callback) {
       let props = list.propsByKey[key];
       props.sourceUrl = document.location.protocol + '//' +
           document.location.host +
-          animationSourceUrl(key, props);
+          animationSourceUrl(key, props, true);
     });
     callback(list);
   }));
