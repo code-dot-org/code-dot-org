@@ -24,6 +24,15 @@ describe('reducer tests', () => {
       assert.equal(nextState.selectedSection, section1Id,
         'arbitrarily select the first section as selected');
       assert.deepEqual(nextState.sectionIds, sectionIds);
+      assert.deepEqual(nextState.bySection.toJS(), {
+        [section1Id]: {
+          name: 'My Section'
+        },
+        [section2Id]: {
+          name: 'My Other Section'
+        }
+      });
+
     });
   });
 

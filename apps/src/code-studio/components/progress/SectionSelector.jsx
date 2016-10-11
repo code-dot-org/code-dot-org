@@ -11,9 +11,10 @@ const styles = {
 
 const SectionSelector = React.createClass({
   propTypes: {
-    sections: React.PropTypes.objectOf(
+    sections: React.PropTypes.arrayOf(
       React.PropTypes.shape({
-        section_name: React.PropTypes.string.isRequired
+        name: React.PropTypes.string.isRequired,
+        id: React.PropTypes.string.isRequired
       })
     ).isRequired,
     selectedSection: React.PropTypes.string,
@@ -33,9 +34,9 @@ const SectionSelector = React.createClass({
         value={selectedSection}
         onChange={this.handleSelectChange}
       >
-        {Object.keys(sections).map(id => (
+        {sections.map(({id, name}) => (
           <option key={id} value={id}>
-            {sections[id].section_name}
+            {name}
           </option>
         ))}
       </select>
@@ -45,8 +46,10 @@ const SectionSelector = React.createClass({
 
 export default connect(state => ({
   selectedSection: state.sections.selectedSection,
-  // TODO - i should be using sectionRedux
-  sections: state.stageLock.bySection
+  sections: state.sections.sectionIds.map(id => ({
+    name: state.sections.bySection.get(id).get('name'),
+    id
+  }))
 }), dispatch => ({
   selectSection(sectionId) {
     dispatch(selectSection(sectionId));
