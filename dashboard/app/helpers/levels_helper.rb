@@ -576,7 +576,8 @@ module LevelsHelper
 
   # Unique, consistent ID for a user of an applab app.
   def applab_user_id
-    Digest::SHA1.base64digest("#{@view_options[:channel]}:#{user_or_session_id}").tr('=', '')
+    channel_id = "1337" # Stub value, until storage for channel_id's is available.
+    Digest::SHA1.base64digest("#{channel_id}:#{user_or_session_id}").tr('=', '')
   end
 
   # Assign a firebase authentication token based on the firebase secret,
