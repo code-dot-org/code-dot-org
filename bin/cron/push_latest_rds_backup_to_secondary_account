@@ -72,7 +72,7 @@ end
 
 def share_snapshot_with_account(credentials_backup, latest_snapshot)
   # Copy the automated backup into a shareable manual one
-  temp_snapshot_name = 'temp-snapshot-' + Time.now.to_i.to_s
+  temp_snapshot_name = "temp-snapshot-#{Time.now.to_i}"
   copied_snapshot = latest_snapshot.copy({ target_db_snapshot_identifier: temp_snapshot_name })
 
   wait_for_snapshot_copy(copied_snapshot)
