@@ -63,11 +63,12 @@ export default function reducer(state = initialState, action) {
     // If we have a lockStatus (i.e. from an open dialog) we need to update
     // it with the new section
     const { lockDialogStageId, lockStatus } = state;
-    return {
-      ...state,
-      lockStatus: lockDialogStageId ?
-        lockStatusForStage(state.sections[sectionId], lockDialogStageId) : lockStatus
-    };
+    if (lockDialogStageId) {
+      return {
+        ...state,
+        lockStatus: lockStatusForStage(state.sections[sectionId], lockDialogStageId)
+      };
+    }
   }
 
   if (action.type === OPEN_LOCK_DIALOG) {
