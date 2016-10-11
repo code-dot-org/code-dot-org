@@ -619,8 +619,6 @@
     cursus afronden
   dashboard_landing_educator_blog: Lees over nieuws en updates voor onze materialen
     op onze Leerkracht-Blog
-  dashboard_landing_smart_hints: Help ons alsjeblieft om slimme tips aan de Code.org-opdrachten
-    toe te voegen
   dashboard_landing_video_player: Test de nieuwe video-speler op uw school
   dashboard_landing_progress_title: Hoofd les vooruitgang
   dashboard_landing_progress_biggest: Dit is de vooruitgang voor uw grootste onderdeel.
@@ -1060,6 +1058,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test deel 1-25 vragen
   cspexam2-AKwgAh1ac5_name: Test deel 2 -25 vragen

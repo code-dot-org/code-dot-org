@@ -4,10 +4,10 @@
   'yes': Sí
   'no': 'No'
   select_language: Seleccioneu l'idioma
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org aviat eliminar el suport per a Internet Explorer 8,
+    9 i 10. Si us plau, actualitzeu a un navegador modern.
+  upgrade_ie_message_csedweek: CSEdWeek.org aviat eliminar el suport per a Internet
+    Explorer 8, 9 i 10. Si us plau, actualitzeu a un navegador modern.
   upgrade_ie_link: Aprèn més
   en: Informàtica
   computer_science_edweek: Setmana de l'Educació en Informàtica
@@ -602,8 +602,6 @@
     acabin aquest curs
   dashboard_landing_educator_blog: Llegiu notícies i actualitzacions sobre els nostres
     materials al nostre Blog d'educació
-  dashboard_landing_smart_hints: Si us plau, ajuda'ns a afegir pistes als tutorials
-    de Code.org
   dashboard_landing_video_player: Prova el nostre nou reproductor de vídeo a la teva
     escola
   dashboard_landing_progress_title: Progrés de la classe principal
@@ -1054,6 +1052,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

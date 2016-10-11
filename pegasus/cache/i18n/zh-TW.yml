@@ -476,7 +476,6 @@
   dashboard_landing_office_hours: "面對面提問！請訪問我們每月的視頻辦公時間。"
   dashboard_landing_print_certificates: "為完成此課程的學生列印證書"
   dashboard_landing_educator_blog: "在Educator Blog閱讀我們的最新資訊"
-  dashboard_landing_smart_hints: "請協助我們添加小提示到Code.org 的教程"
   dashboard_landing_video_player: "在您的學校測試我們新的影片"
   dashboard_landing_progress_title: "主要課程進度"
   dashboard_landing_progress_biggest: "這是您最大的分區進度"
@@ -853,6 +852,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
