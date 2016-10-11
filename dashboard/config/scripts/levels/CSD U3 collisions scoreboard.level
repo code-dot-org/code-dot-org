@@ -61,12 +61,9 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "callout_json": "[\r\n \r\n {\r\n  \"localization_key\": \"CSD_U3_L12_S8_C1\",\r\n  \"callout_text\": \"These blocks display the score.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// draw score\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "all_animations_single_frame": "false"
+    "all_animations_single_frame": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
