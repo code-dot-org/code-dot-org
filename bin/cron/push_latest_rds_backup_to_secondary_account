@@ -39,21 +39,57 @@ def get_aws_account_id(credentials)
 end
 
 def wait_for_snapshot_copy(snapshot)
-  waited = 0
-  until snapshot.status == 'available'
-    snapshot.reload
-    puts "Snapshot status for #{snapshot.snapshot_id}: " + snapshot.status + ' - ' + Time.now.to_s
-    sleep(5)
-    waited += 5
-    if waited > 10 * 60
-      HipChat.developers "Timed out waiting for RDS snapshot #{snapshot.snapshot_id} to be available, aborting snapshot backup"
-      exit(1)
+  snapshot.wait_until(max_attempts: 120, delay: 5) { |snap|
+    snap.status == 'available'
+  }
+rescue Aws::Waiters::Errors::WaiterFailed
+  HipChat.developers "Timed out waiting for RDS snapshot #{snapshot.snapshot_id} to be available, aborting snapshot backup"
+  exit(1)
+end
+
+class SnapshotNotSharedError < StandardError
+end
+
+def find_shared_snapshot_on_backup(rds_backup, temp_snapshot_name)
+  shared_snapshots = []
+  attempts = 0
+  max_attempts = 60
+  until shared_snapshots.count > 0
+    sleep(1)
+    attempts += 1
+    if attempts > max_attempts
+      raise SnapshotNotSharedError, 'Could not find shared snapshot after 60 seconds'
     end
+    shared_snapshots = rds_backup.db_snapshots({
+      max_records: 100,
+      include_shared: true,
+    }).select { |snap|
+      snap.snapshot_id.start_with?('arn:aws:rds:') && snap.snapshot_id.end_with?(temp_snapshot_name)
+    }
   end
+  shared_snapshots.first
+end
+
+def share_snapshot_with_account(credentials_backup, latest_snapshot)
+  # Copy the automated backup into a shareable manual one
+  temp_snapshot_name = 'temp-snapshot-' + Time.now.to_i.to_s
+  copied_snapshot = latest_snapshot.copy({ target_db_snapshot_identifier: temp_snapshot_name })
+
+  wait_for_snapshot_copy(copied_snapshot)
+  puts "Temporary snapshot #{copied_snapshot.snapshot_id} is ready - #{Time.now}"
+
+  # Share the new snapshot with the backup account
+  backup_account_id = get_aws_account_id(credentials_backup).first
+  restore_attribute = copied_snapshot.attributes.find { |attr| attr.name == 'restore' }
+  restore_attribute.modify({
+      values_to_add: [backup_account_id],
+      values_to_remove: []
+  })
+  return copied_snapshot, temp_snapshot_name
 end
 
 def main
-  HipChat.developers "Beginning cross-account RDS backup"
+  HipChat.developers 'Beginning cross-account RDS backup'
   credentials_primary = Aws::SharedCredentials.new(profile_name: 'default')
   rds_primary = Aws::RDS::Resource.new(credentials: credentials_primary)
   credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
@@ -67,53 +103,25 @@ def main
       sort{ |a, b| a.snapshot_create_time <=> b.snapshot_create_time }
   latest_snapshot = sorted_snapshots.last
 
-  # Copy the automated backup into a shareable manual one
-  temp_snapshot_name = 'temp-snapshot-' + Time.now.to_i.to_s
-  copied_snapshot = latest_snapshot.copy({
-    target_db_snapshot_identifier: temp_snapshot_name
-  })
-
-  wait_for_snapshot_copy(copied_snapshot)
-  puts "Temporary snapshot #{copied_snapshot.snapshot_id} is ready" + ' - ' + Time.now.to_s
-
-  # Share the new snapshot with the backup account
-  backup_account_id = get_aws_account_id(credentials_backup).first
-  restore_attribute = copied_snapshot.attributes.find{ |attr| attr.name == 'restore' }
-  restore_attribute.modify({
-      values_to_add: [backup_account_id],
-      values_to_remove: []
-  })
-
-  # Find the shared snapshot on the backup account, tolerate a propagation delay
-  shared_snapshots = []
-  until shared_snapshots.count > 0
-    sleep(1)
-    shared_snapshots = rds_backup.db_snapshots({
-      max_records: 100,
-      include_shared: true,
-    }).select{ |snap|
-      snap.snapshot_id.start_with?('arn:aws:rds:') && snap.snapshot_id.end_with?(temp_snapshot_name)
-    }
-  end
-  shared_snapshot = shared_snapshots.first
-
-  # On the backup account, copy the shared snapshot
   begin
-    backed_up_snapshot = shared_snapshot.copy({
-      target_db_snapshot_identifier: latest_snapshot.snapshot_id.sub('rds:', '')
-    })
-  rescue Aws::RDS::Errors::DBSnapshotAlreadyExists
-    HipChat.developers "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
+    copied_snapshot, temp_snapshot_name = share_snapshot_with_account(credentials_backup, latest_snapshot)
+    shared_snapshot = find_shared_snapshot_on_backup(rds_backup, temp_snapshot_name)
+
+    # On the backup account, copy the shared snapshot
+    begin
+      backed_up_snapshot = shared_snapshot.copy({
+        target_db_snapshot_identifier: latest_snapshot.snapshot_id.sub('rds:', '')
+      })
+      wait_for_snapshot_copy(backed_up_snapshot)
+      HipChat.developers "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
+    rescue Aws::RDS::Errors::DBSnapshotAlreadyExists
+      HipChat.developers "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
+    end
+  ensure
+    # Clean up the temporary snapshot
+    puts "Deleting temporary backup snapshot #{copied_snapshot.snapshot_id}"
     copied_snapshot.delete
-    exit(1)
   end
-
-  wait_for_snapshot_copy(backed_up_snapshot)
-
-  # We're done now, we just need to clean up the temporary snapshot
-  copied_snapshot.delete
-
-  HipChat.developers "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
 end
 
 main
