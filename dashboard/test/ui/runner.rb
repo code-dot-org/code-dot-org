@@ -518,7 +518,6 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   end
   HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
 
-
   $lock.synchronize do
     if succeeded
       log_success prefix_string(Time.now, log_prefix)
