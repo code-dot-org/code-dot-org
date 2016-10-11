@@ -611,8 +611,6 @@
     закончили этот курс"
   dashboard_landing_educator_blog: "Знакомтесь с новостями и обновлениями наших материалов
     на нашем Учебном Блоге"
-  dashboard_landing_smart_hints: "Пожалуйста, помогите нам добавить умные подсказки
-    к учебникам Code.org"
   dashboard_landing_video_player: "Протестировать наш новый видео-плеер в вашей школе"
   dashboard_landing_progress_title: "Главные успехи класса"
   dashboard_landing_progress_biggest: "Это успехи самого вашего крупнейшего отделения."
@@ -933,8 +931,8 @@
     учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
   code_sign_up: "Зарегистрируйтесь для участия в неделе информатики"
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
+  host_an_hour: "Провести час"
+  learn_banner_title: "Присоединяйтесь к нам на часе кода"
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
     Code event. Help us give every student the opportunity to learn computer science!
@@ -1072,6 +1070,7 @@
   csp1_name: "Урок 1: Интернет"
   csp2_name: "Урок 2: Цифровая информация"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "Полный тест - 50 вопросов"
   cspexam1-mWU7ilDYM9_name: "Тест: часть 1 (25 вопросов)"
   cspexam2-AKwgAh1ac5_name: "Тест: часть 2 (25 вопросов)"

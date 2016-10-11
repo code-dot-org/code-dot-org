@@ -4,7 +4,7 @@ hr-HR:
   "yes": Da
   "no": Ne
   select_language: Odaberite svoj jezik
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org će uskoro ukloniti podršku za Internet Explorer 8, 9 i 10. Nadogradite računalo na moderniji preglednik.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: Doznaj više
   en: Računalna znanost
@@ -186,7 +186,7 @@ hr-HR:
   learn_next_level: Prijeđi na sljedeći nivo
   learn_online: Isprobajte druge online tečajeve
   learn_classes: Pronađi lokalne nastave
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Upravo sam završio #HourOfCode - pogledaj! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -475,7 +475,6 @@ hr-HR:
   dashboard_landing_office_hours: Postavite pitanje uživo! Posjetite naše mjesečne sate video pristupa.
   dashboard_landing_print_certificates: Ispišite potvrde za učenike koji su završili ovaj tečaj
   dashboard_landing_educator_blog: Pročitajte o novostima i ažuriranjima materijala na našem pedagoškom blogu
-  dashboard_landing_smart_hints: Pomozite da dodamo pametne savjete na Code.org tutorijale
   dashboard_landing_video_player: Isprobajte naš novi video player u školi
   dashboard_landing_progress_title: Napredak u glavnom tečaju
   dashboard_landing_progress_biggest: Ovo je napredak u vašem najvećem odjeljenju.
@@ -819,6 +818,7 @@ hr-HR:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

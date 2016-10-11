@@ -4,8 +4,8 @@ pl-PL:
   "yes": Tak
   "no": Nie
   select_language: Wybierz język
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org wkrótce zaprzestanie wsparcia dla Internet Explorer 8, 9 i 10. Zaktualizuj swoją przeglądarkę.
+  upgrade_ie_message_csedweek: CSEdWeek.org wkrótce zaprzestanie wsparcia dla Internet Explorer 8, 9 i 10. Zaktualizuj swoją przeglądarkę.
   upgrade_ie_link: Ucz się więcej
   en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
@@ -102,12 +102,12 @@ pl-PL:
   third_party_tynker_btn_curriculum: Wypróbuj Tynker program nauczania dla początkujących
   third_party_tynker_btn_site: Odwiedź Tynker
   third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_curriculum: Pobierz Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Odwiedź Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Pobierz Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: Odwiedź Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
   third_party_lightbot_btn_site: Visit Lightbot
@@ -189,7 +189,7 @@ pl-PL:
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   just_did_course1: 'Właśnie skończyłem Kurs 1 - sprawdź to! @codeorg'
   just_did_course2: 'Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg'
@@ -396,10 +396,10 @@ pl-PL:
   watch_inspirational_videos: Before you get started, watch one of these inspirational videos
   speak_another_language: Speak another language?
   help_translate: Help us translate.
-  no_internet: "Don't have Internet?"
+  no_internet: Nie masz internetu?
   download_offline: Download the offline version.
   are_you_teacher: Czy jesteś nauczycielem?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Przejrzyj plan lekcji i inne materiały dla nauczycieli.
   volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują Twojej pomocy! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} nauczycieli potrzebuje wolontariuszy. <br>%{num_volunteers} zarejestrowanych wolontariuszy. Dołącz do nich.'
@@ -475,11 +475,10 @@ pl-PL:
   dashboard_landing_new_beta: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5.
   dashboard_landing_new_k5courses: Nowość! Wypróbuj nasze kursy dla uczniów w K-5.
   dashboard_landing_useful_links: Inne przydatne linki
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Materiały dla Twojej klasy
   dashboard_landing_office_hours: Zapytaj osobiście! Odwiedź nasze co miesięczne wideo godziny.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy ukończyli ten kurs
   dashboard_landing_educator_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym blogu pedagogicznym
-  dashboard_landing_smart_hints: Pomóż nam dodać wskazówki do samouczków Code.org
   dashboard_landing_video_player: Sprawdź nasz nowy odtwarzacz wideo w swojej szkole
   dashboard_landing_progress_title: Zasadnicze postępy klasy
   dashboard_landing_progress_biggest: To jest postęp dla Twojego największego działu.
@@ -489,10 +488,10 @@ pl-PL:
   dashboard_landing_available_courses: 'Tutaj są kursy dostępne obecnie dla Ciebie i dla  Twoich uczniów.'
   dashboard_landing_more_tutorials: Chcesz zobaczyć jeszcze więcej poradników/samouczków?
   dashboard_landing_more_tutorials_desc: 'Dostępnych jest więcej poradników <a href="/learn/beyond"> oferowanych przez naszych partnerów.</a> Naucz się programować z robotami, twórz strony w sieci, utwórz własną aplikację, poznaj inne języki programowania, jak C++, Ruby i Python!'
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_inspire: Zainspiruj swoich uczniów plakatami, filmami i innymi.
   dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_report_bug: Poddaj pomysł lub zgłoś błąd.
+  dashboard_landing_teacher_forum: Dołącz do społeczności profesjonalnego nauczania.
   dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
   dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych samouczków!
   dashboard_hoc_courses_desc_and_cta: 'Wypróbuj te krótkie, jednogodzinne samouczki ze swoimi uczniami. <a href="https://hourofcode.com">Przyłącz się do inicjatywy Godzina Kodowania</a> w czasie Tygodnia Nauczania Informatyki.'
@@ -523,8 +522,8 @@ pl-PL:
   dashboard_action_remove_confirm: Usunąć?
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
-  dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_action_print_certificates: Drukuj certyfikaty
+  dashboard_assessments_view: 'Zobacz oceny w:'
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
@@ -823,6 +822,7 @@ pl-PL:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

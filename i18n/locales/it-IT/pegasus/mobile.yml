@@ -284,7 +284,7 @@ it-IT:
   homepage_hero_text_stat_served: "L'Ora del Codice: ne hanno già fatte #served"
   homepage_slot_text_hoc: "L'Ora del Codice"
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: "Cruscotto dell'Insegnante"
   homepage_slot_text_studio: Tutti i nostri corsi
   homepage_slot_text_course4: Corso 4
   homepage_slot_text_shop: Negozio
@@ -492,7 +492,6 @@ it-IT:
   dashboard_landing_office_hours: "Fai una domanda di persona! Visita il nostro ufficio di assistenza. L'assistenza viene fornita in inglese dal personale di code.org."
   dashboard_landing_print_certificates: Stampa gli attestati per gli studenti che completano questo corso
   dashboard_landing_educator_blog: 'Leggi notizie e aggiornamenti relativi al nostro materiale didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>'
-  dashboard_landing_smart_hints: Per favore aiutaci ad aggiungere suggerimenti intelligenti ai corsi di Code.org (solo in inglese, al momento)
   dashboard_landing_video_player: 'Prova nella tua scuola  il nostro nuovo visualizzatore di video'
   dashboard_landing_progress_title: Progressi della classe principale
   dashboard_landing_progress_biggest: Questo è la situazione per la tua classe principale.
@@ -724,8 +723,8 @@ it-IT:
   dashboard_announce_all: "Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti (in inglese)</a>."
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
   code_sign_up: "Iscriviti per partecipare durante la Settimana di Educazione all'Informatica"
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
+  host_an_hour: "Ospita un'ora"
+  learn_banner_title: "Unisciti a noi per l'Ora del Codice"
   learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Ulteriori informazioni
   learn_sign_up_description: "Iscriviti per partecipare all'Ora del Codice durante la Settimana di Educazione all'Informatica"
@@ -851,6 +850,7 @@ it-IT:
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Test completo - 50 domande'
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande

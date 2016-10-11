@@ -289,6 +289,7 @@ pl:
       unsubmit: Nieprzesłane
       worked_with: Pracował/a z
       update_lock_settings: Tutaj zaktualizujesz ustawienia blokady.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'

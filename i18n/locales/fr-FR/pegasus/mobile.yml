@@ -451,7 +451,6 @@ fr-FR:
   dashboard_landing_office_hours: Posez une question en personne ! Regardez notre vidéo mensuelle durant les heures de bureau.
   dashboard_landing_print_certificates: Imprimer les certificats pour les élèves ayant terminé ce cours
   dashboard_landing_educator_blog: "Lisez l'actualité et les mises à jour de notre matériel sur notre Blog Enseignant"
-  dashboard_landing_smart_hints: Aidez-nous à ajouter des astuces pertinentes aux tutoriels de Code.org
   dashboard_landing_video_player: Essayez notre nouveau lecteur vidéo dans votre école
   dashboard_landing_progress_title: Progression de la classe principale
   dashboard_landing_progress_biggest: Il s’agit de la progression de votre plus grande section.
@@ -804,6 +803,7 @@ fr-FR:
   csp1_name: 'Unité 1: Internet'
   csp2_name: 'Unité 2: L’Information numérique'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Test complet - 50 questions'
   cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
   cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions

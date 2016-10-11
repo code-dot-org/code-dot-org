@@ -334,6 +334,7 @@
       unsubmit: Neodoslať
       worked_with: Pracoval/a s
       update_lock_settings: Tu aktualizujte nastavenie zámku.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'E-mailová adresa nebola potvrdená:'
     email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'

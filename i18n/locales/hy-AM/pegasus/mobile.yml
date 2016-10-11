@@ -487,7 +487,6 @@ hy-AM:
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
   dashboard_landing_print_certificates: Տպագիր վկայականներ ուսանողների համար, ովքեր ավարտել այս դասընթացը
   dashboard_landing_educator_blog: Կարդալ մասին նորություններից եւ թարմացումներից մեր նյութերի մեր մանկավարժ Օրագիր
-  dashboard_landing_smart_hints: Խնդրում ենք օգնել մեզ է ավելացնել խելացի ակնարկներ Code.org ճանապարհները
   dashboard_landing_video_player: Test մեր նոր տեսամագնիտոֆոն ձեր դպրոցում
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
@@ -830,6 +829,7 @@ hy-AM:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

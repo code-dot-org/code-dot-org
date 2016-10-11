@@ -697,7 +697,7 @@
   "throwSpriteN": "исполнитель {spriteIndex} кидает",
   "throwTooltip": "Кидает снаряд от указанного исполнителя.",
   "toSet": "присвоить",
-  "toTouchedSpriteName": "to touched {spriteName}",
+  "toTouchedSpriteName": "коснувшегося {spriteName}",
   "toWander": "блуждать",
   "unicorn": "единорог",
   "vanish": "исчезнуть",

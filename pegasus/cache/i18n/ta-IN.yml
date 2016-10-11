@@ -4,10 +4,10 @@
   'yes': "ஆம்"
   'no': "இல்லை"
   select_language: "உங்கள் மொழியை தேர்ந்தெடுக்கவும்"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org விரைவில் Internet Explorer 8, 9 மற்றும் 10 ஆதரவு நீக்கிவிடும்.
+    தயவுசெய்து ஒரு நவீன உலாவி மேம்படுத்தல்.
+  upgrade_ie_message_csedweek: Code.org விரைவில் Internet Explorer 8, 9 மற்றும் 10
+    ஆதரவு நீக்கிவிடும். தயவுசெய்து ஒரு நவீன உலாவி மேம்படுத்தல்.
   upgrade_ie_link: Learn more
   en: "கணினி அறிவியல்"
   computer_science_edweek: "கணினி அறிவியல் கல்வி வாரம்"
@@ -603,7 +603,6 @@
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
@@ -1023,7 +1022,7 @@
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
-  course1_name: Course 1
+  course1_name: "கோர்ஸ் 1"
   course2_name: Course 2
   course3_name: Course 3
   course4_name: Course 4
@@ -1037,6 +1036,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1116,7 +1116,7 @@
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
-  course1_gradelevel: Ages 4-6
+  course1_gradelevel: "வயது 4-6"
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ages 8-18
   course4_gradelevel: Ages 10-18

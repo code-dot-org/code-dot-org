@@ -250,7 +250,7 @@ nl:
       already_registered: Al aangemeld?
       pair_programming: Programmeren in Tweetallen
       team: Team
-      driver: Driver
+      driver: Stuurprogramma
       navigator: Navigator
     popup:
       progress_for_user: '%{name} de vooruitgang'
@@ -277,7 +277,7 @@ nl:
     user_not_found: De leerkracht is niet gevonden.
     student_teacher_disassociated: 'Je hebt %{teacher_name} verwijderd als jouw leerkracht.'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: Leraar Paneel
       student: Leerling
       viewing_solution: Oplossing bekijken
       try_it_yourself: Probeer het zelf
@@ -286,8 +286,9 @@ nl:
       example_with_number: 'Voorbeeld uitkomst getal %{solution_number}'
       submitted_on: 'Ingeleverd op %{date}'
       unsubmit: Intrekken
-      worked_with: Worked With
+      worked_with: Werkte samen met
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -581,7 +582,7 @@ nl:
     privacy: Privacybeleid
     privacy_notice: Privacy Notice
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
+    accept: Accepteren
     print: Afdrukken
     later: Later
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

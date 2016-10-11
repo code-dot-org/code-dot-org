@@ -2,17 +2,17 @@
   errors:
     messages:
       not_saved: 'Te rog să corectezi următoarele greșeli:'
-      too_young: Acest conținut are restricţii de vârstă şi nu este disponibilă pentru
-        elevi mai tineri.
-      teacher_must_accept_terms: Acest conținut are restricţii de vârstă în loc şi
-        nu este disponibilă pentru elevi mai tineri. Cere profesorului tău să accepte
-        termenii actualizați şi pentru a vă oferi acces la acest conţinut. Profesorul
-        tău poate face acest lucru prin conectarea studioul cod şi făcând clic pe
-        butonul "Revizuire termenii actualizați" în partea de sus a paginii de pornire
-        a stufioului cod.
-      pair_programmer: Sunteţi în prezent pereche de programare cu un student care
-        nu are acces la acest conţinut. Pentru a accesa acest conținut, opriți pereche
-        de programare și încercați din nou.
+      too_young: Acest conținut are restricţii de vârstă şi nu este disponibil pentru
+        elevii mai mici.
+      teacher_must_accept_terms: Acest conținut are restricţii de vârstă şi nu este
+        disponibil pentru elevi mai mici. Cere-i profesorului tău să accepte termenii
+        seviciului actualizați pentru a-ți oferi acces la acest conţinut. Profesorul
+        tău poate face acest lucru prin conectarea la Platforma Code Studio şi făcând
+        clic pe butonul "Revizuire termenii actualizați" în partea de sus a paginii
+        de pornire a Studio Code.
+      pair_programmer: In momentul de fata realizati programarea in echipa cu un elev
+        care nu are acces la acest continut. Pentru a accesa continutul, opreste programarea
+        pereche si incepe din nou.
   activerecord:
     errors:
       messages:
@@ -34,7 +34,7 @@
   hello: Salutare lume
   welcome_back: Bine ai revenit, %{name}
   your_professional_learning_plan: Planul tău de învățare profesională
-  see_your_learning_plan: Vezi planul tău de invățare
+  see_your_learning_plan: Vezi planul tău de învățare
   submit: Trimite
   unsubmit: Retrage
   previous_page: Pagina anterioară
@@ -288,10 +288,10 @@
       finished_hoc: Am terminat Ora mea de Programare
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
-        playlab: Creare aplicație
+        playlab: Creează o aplicație "Play Lab"
         artist: Desenează ceva
         calculate: Calculate Something
-        applab: Creare aplicație
+        applab: Creează o aplicație
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
@@ -344,6 +344,7 @@
       unsubmit: Retrage
       worked_with: A lucrat cu
       update_lock_settings: Actualizează setările de blocare aici.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
@@ -416,14 +417,15 @@
       de mai jos"
     print_certificate: Tipărește certificatul
     announcement_title: Anunțuri
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
+    announcement_message_fall2016_features: Ne-am petrecut vara transformând feedback-ul
+      vostru în noi caracteristici. Acum, puteţi <a href="%{pp_url}" target="_blank">
+      urmări progresul multiplilor elevilor </a> chiar dacă aceștia sunt o pereche
+      de programare pe un singur dispozitiv. Utilizaţi <a href="%{csp_widgets_url}"
+      target="_blank"> cele mai bune instrumente interactive</a> la cursul nostru
+      de CS Principles în <i>orice</i> clasă. Şi elevii pot <a href="%{unused_code_url}"
+      target="_blank"> păstra neutilizate codul</a> în spaţiu lor de lucru pentru
+      a încuraja experimentarea! Încearcă toate caracteristicile noastre noi şi spuneţi-ne
+      ce credeţi.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -709,7 +711,7 @@
     correct_body: Acela este răspunsul corect.
   dialog:
     ok: OK
-    startover_title: Ești sigur că dorești să reîncepi?
+    startover_title: Ești sigur că vrei să începi din nou?
     startover_body: Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge
       tot ce ai adăugat sau modificat.
     startover_ok: Reîncepe
@@ -875,8 +877,8 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Cauta o icoana...
-      no_icons_found: Nu s-au găsit icoane
+      search_placeholder_text: Cauta o pictograma...
+      no_icons_found: Nu s-au găsit icons
     playzone:
       artist_description: Desenează poze şi proiecte mişto cu Artistul!
       artist_title: Desen nou
@@ -938,6 +940,6 @@
   locked_stage: Conţinutul de acest stadiu nu este vizibil deoarece aceasta etapa
     este blocată momentan. Profesorul poate debloca acest stadiu atunci când este
     timpul să lucrezi la el sau de a revizui raspunsurile.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  hidden_stage: Profesorul tău nu te așteaptă aici. Te rugăm întreabă-l ce lecție
+    ar trebui să urmezi.
+  return_course_overview: Mergi la unitatea de ansamblu

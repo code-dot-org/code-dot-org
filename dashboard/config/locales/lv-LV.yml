@@ -322,6 +322,7 @@
       unsubmit: Atcelt iesniegšanu
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
     email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'

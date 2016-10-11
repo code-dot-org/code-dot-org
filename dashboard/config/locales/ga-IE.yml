@@ -340,6 +340,7 @@
       unsubmit: Dísheol
       worked_with: In éineacht le
       update_lock_settings: Athraigh na socruithe glasála anseo.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
     email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'

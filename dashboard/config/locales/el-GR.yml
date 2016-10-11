@@ -346,6 +346,7 @@
       unsubmit: "Ανακλήθηκε"
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "Η διεύθυνση email δεν έχει επιβεβαιωθεί:"
     email_confirm_needed_required: "Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου

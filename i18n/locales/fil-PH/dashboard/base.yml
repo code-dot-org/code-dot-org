@@ -290,6 +290,7 @@ fil:
       unsubmit: Unsubmit
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -715,7 +716,7 @@ fil:
     download_message: 'Download %{app_name} for offline use (136MB)'
     download_in_english: 'Download in English:'
     download_in_spanish: 'Download in Spanish:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

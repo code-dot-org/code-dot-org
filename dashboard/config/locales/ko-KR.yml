@@ -310,6 +310,7 @@
       unsubmit: "제출 취소"
       worked_with: "~와 협력합니다."
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "이메일 주소가 확인되지 않았습니다:"
     email_confirm_needed_required: "당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:"

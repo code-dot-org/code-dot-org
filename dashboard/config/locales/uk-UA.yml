@@ -333,6 +333,7 @@
       unsubmit: "Відкликати"
       worked_with: "У співпраці з"
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "Адресу електронної пошти не підтверджено:"
     email_confirm_needed_required: "Ваша адреса електронної пошти %{email} не підтверджена:"
@@ -585,9 +586,9 @@
     starwars:
       title: "Зоряні війни"
     infinity:
-      title: "Ігрова лабораторія Infiinty"
+      title: "Ігрова лабораторія Infinity"
       body: "За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів
-        Діснея Infiinty."
+        Діснея Infinity."
     minecraft:
       title: "Майнкрафт"
       body: "Дослідимо світ Майнкрафту через код."

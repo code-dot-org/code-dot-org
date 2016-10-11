@@ -325,6 +325,7 @@
       unsubmit: Peruuta lähetys
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
     email_confirm_needed_required: 'Sinun sähköpostiosoitettasi %{email} ei ole vahvistettu:'

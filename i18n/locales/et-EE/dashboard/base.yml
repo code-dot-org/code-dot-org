@@ -2,7 +2,7 @@ et:
   errors:
     messages:
       not_saved: 'Palun parandage järgmised vead:'
-      too_young: This content has age restrictions in place and is not available for younger students.
+      too_young: Sellel sisul on vanusepiirang ning see ei ole kättesaadav noorematele õpilastele.
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
       pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
@@ -83,7 +83,7 @@ et:
     teacher_count: '%{count} õpetajat on juba registreerunud.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Vaata õpetajate juhendit
-    title: Sign up for Code.org
+    title: Registreerumine Code.org-i
     school_name: Kooli nimi (ei ole kohustuslik)
     school_address: Kooli aadress (ei ole kohustuslik)
     address_placeholder: aadress, linn, riik, postiindeks
@@ -102,7 +102,7 @@ et:
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
-    user_type_label: Account Type
+    user_type_label: Konto tüüp
     user_type_teacher: Õpetaja
     user_type_student: Õpilane
     field_is_required: on nõutud
@@ -239,10 +239,10 @@ et:
       prizes: Auhinnad
       logout: Logi välja
       signin: Logi sisse
-      signup: Create an account
+      signup: Loo konto
       already_registered: Oled juba liitunud?
       pair_programming: Paarisprogrammeerimine
-      team: Team
+      team: Meeskond
       driver: Driver
       navigator: Navigator
     popup:
@@ -270,7 +270,7 @@ et:
     user_not_found: Õpetajat ei leitud.
     student_teacher_disassociated: 'Olete eemaldanud %{teacher_name} oma õpetajate nimekirjast.'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: Õpetaja paneel
       student: Õpilane
       viewing_solution: Lahenduse vaatamine
       try_it_yourself: Proovi seda ise
@@ -281,6 +281,7 @@ et:
       unsubmit: Võta vastus tagasi
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'E posti aadress on kinnitamata:'
     email_confirm_needed_required: 'Teie e-posti aadress %{email} ei ole kinnitatud:'
@@ -345,7 +346,7 @@ et:
     announcement_learn_more_button: Lisateave
     announcement_try_now_button: Proovi nüüd
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition_button: Lisa oma nimi
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   move_students:
     new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
@@ -355,7 +356,7 @@ et:
     students_not_yours: You cannot move students from a section that does not belong to you.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
+    student_not_found: Ühte või mitut õpilast ei leitud.
     all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
@@ -375,7 +376,7 @@ et:
     help_from_html_old: "Insenerid Google'st, Microsoft'st, Facebook'st ja Twitter'st aitasid luua neid materjale."
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused kaitstud.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Kõik õigused kaitstud.<br />Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused kaitstud.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused kaitstud.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Kõik õigused kaitstud.<br />The Amazing World of Gumball on kaubamärk ja &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused kaitstud. Star Wars&#8482; &copy; %{current_year} Disney ja Lucasfilm. Kõik õigused kaitstud. Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused kaitstud. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused kaitstud. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball on kaubamärk ja &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org kasutab p5.play, mis on litsenseeritud vastavalt <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: Amazoni poolt toetatud
     trademark: '&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg; on Code.org kaubamärgid.'
     copyright: Autoriõigus
@@ -447,8 +448,8 @@ et:
       title: App Lab
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      audience: Vanus 13+
+      cta: Õpi nüüd
     hoc:
       title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
@@ -477,7 +478,7 @@ et:
       body: Uuri Minecrafti maailma koodi kaudu.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 4+
+      audience: Vanusele 4+
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
@@ -500,7 +501,7 @@ et:
     report_bug: Raporteeri veast
     support: Abi saamine
     support_url: //support.code.org
-    help_resources: Help and Resources
+    help_resources: Abiinfo ja ressursid
   multi:
     wrong_title: Vale vastus
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
@@ -608,7 +609,7 @@ et:
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
     share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
-    advanced_share: Show advanced options
+    advanced_share: Kuva täpsemad valikud
     close: Sulge
     more: Veel
     name: Nimi
@@ -651,15 +652,15 @@ et:
         acknowledge: 'Selle informatsiooni esitamisel nõustute, et seda käsitletakse vastavalt %{link_start_privacy} privaatsuse tingimustele %{link_end}ja %{link_start_tos} kasutajatingimustele %{link_end}'
   peer_review:
     accepted:
-      name: Accepted
+      name: Nõustutud
       description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
     rejected:
-      name: Rejected
+      name: Tagasi lükatud
       description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
+    instructor_feedback: Õpetaja tagasiside
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
     review_in_progress: Ready to review
@@ -672,25 +673,25 @@ et:
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Otsi ikooni...
+      no_icons_found: Ikoone ei leitud
     playzone:
       artist_description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Uus joonistus
+      continue_button: Mine järgmisse etappi
       playlab_description: 'Loo lugu või mäng "Play Lab"iga!'
-      playlab_title: New App
-      primary_header: 'Congratulations! You finished %{stageName}!'
+      playlab_title: Uus App
+      primary_header: 'Õnnitlused! Lõpetasid %{stageName} taseme!'
       projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      projects_title: Ava projekt
+      secondary_header: Küsi oma õpetajalt, mida teha edasi
   flex_category:
     required: Ülevaade
-    content: Content
-    practice: Teaching Practices
-    peer_review: Peer Review
+    content: Sisu
+    practice: Õpetamise tavad
+    peer_review: Vastastikune hindamine
   external_links:
-    disclaimer: Disclaimer
+    disclaimer: Lahtiütlemine
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
     disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
@@ -705,7 +706,7 @@ et:
     download_message: 'Download %{app_name} for offline use (136MB)'
     download_in_english: 'Download in English:'
     download_in_spanish: 'Download in Spanish:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

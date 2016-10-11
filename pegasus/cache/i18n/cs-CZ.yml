@@ -606,8 +606,6 @@
     dokončili tento kurz
   dashboard_landing_educator_blog: Přečti si o novinkách a aktualizacích našich materiálů
     na našem blogu Educator
-  dashboard_landing_smart_hints: Prosím, pomozte nám s přidáním chytrých tipů na Code.org
-    výukové programy
   dashboard_landing_video_player: Vyzkoušejte náš nový video přehrávač ve vaší škole
   dashboard_landing_progress_title: Hlavní postup ve třídě
   dashboard_landing_progress_biggest: To je postup pro váš největší oddíl.
@@ -1053,6 +1051,7 @@
   csp1_name: '1. lekce: Internet'
   csp2_name: '2. lekce: Digitální informace'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "Úplný test - 50 otázek"
   cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
   cspexam2-AKwgAh1ac5_name: 2. část testu - 25 otázek

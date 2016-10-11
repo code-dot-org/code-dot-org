@@ -277,7 +277,7 @@ pt:
     user_not_found: O professor não foi encontrado.
     student_teacher_disassociated: 'Você removeu %{teacher_name} como seu professor.'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: Painel do Professor
       student: Aluno
       viewing_solution: Visualizar solução
       try_it_yourself: Tente você mesmo
@@ -288,6 +288,7 @@ pt:
       unsubmit: Remover submissão
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'

@@ -600,8 +600,6 @@
     këtë kurs
   dashboard_landing_educator_blog: Lexo rreth të rejave dhe përditësimeve të materialeve
     tona në Blogun Educator
-  dashboard_landing_smart_hints: Ju lutem na ndihmoni të shtojmë ndihma më të goditura
-    tek tutorialet e Code.org
   dashboard_landing_video_player: Testoni video playerin e ri në shkollën tuaj
   dashboard_landing_progress_title: Ecuria e klasës kryesore
   dashboard_landing_progress_biggest: Ecuria për seksionin tuaj më të madh.
@@ -1054,6 +1052,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

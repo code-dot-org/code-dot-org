@@ -4,8 +4,8 @@ ca-ES:
   "yes": Sí
   "no": 'No'
   select_language: "Seleccioneu l'idioma"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org aviat eliminar el suport per a Internet Explorer 8, 9 i 10. Si us plau, actualitzeu a un navegador modern.
+  upgrade_ie_message_csedweek: CSEdWeek.org aviat eliminar el suport per a Internet Explorer 8, 9 i 10. Si us plau, actualitzeu a un navegador modern.
   upgrade_ie_link: Aprèn més
   en: Informàtica
   computer_science_edweek: "Setmana de l'Educació en Informàtica"
@@ -187,7 +187,7 @@ ca-ES:
   learn_next_level: Continua al següent nivell
   learn_online: Prova altres cursos online
   learn_classes: Troba classes locals
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Acabo de fer la #HourOfCode - Fes-ho! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -473,7 +473,6 @@ ca-ES:
   dashboard_landing_office_hours: "Fes una pregunta en persona! Visita el nostre vídeo mensual en horari d'oficina."
   dashboard_landing_print_certificates: Imprimeix certificats per als estudiants que acabin aquest curs
   dashboard_landing_educator_blog: "Llegiu notícies i actualitzacions sobre els nostres materials al nostre Blog d'educació"
-  dashboard_landing_smart_hints: "Si us plau, ajuda'ns a afegir pistes als tutorials de Code.org"
   dashboard_landing_video_player: Prova el nostre nou reproductor de vídeo a la teva escola
   dashboard_landing_progress_title: Progrés de la classe principal
   dashboard_landing_progress_biggest: Aquest és el progrés per a la teva secció més gran.
@@ -822,6 +821,7 @@ ca-ES:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

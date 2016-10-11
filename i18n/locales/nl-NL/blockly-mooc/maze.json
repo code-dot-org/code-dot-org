@@ -96,7 +96,7 @@
   "repeatUntil":"herhaal totdat",
   "repeatUntilBlocked":"zolang er een pad recht vooruit is",
   "repeatUntilFinish":"herhaal tot je klaar bent",
-  "soil":"soil",
+  "soil":"grond",
   "sprout":"sprout",
   "step":"Stap",
   "totalHoney":"totaal honing",
@@ -109,7 +109,7 @@
   "whileMsg":"terwijl",
   "whileTooltip":"Herhaal de acties totdat je de finish hebt bereikt.",
   "word":"Zoek het woord",
-  "wrongCropError":"I can't harvest that crop from here.",
+  "wrongCropError":"Ik kan dat gewas vanaf hier niet oogsten.",
   "yes":"Ja",
   "youSpelled":"Jij spelde"
 }

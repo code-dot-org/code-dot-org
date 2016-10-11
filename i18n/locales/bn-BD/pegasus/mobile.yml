@@ -185,7 +185,7 @@ bn-BD:
   learn_next_level: পরবর্তী ধাপে যান
   learn_online: অনলাইনে অন্যান্য কোর্স করুন
   learn_classes: স্থানীয় শ্রেণি খুঁজুন
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: '#HourOfCode সম্পন্ন করেছি @codeorg'
   just_did_course1: ' দেখ আমি কেবল কোর্স ১ শেষ করছে! @codeorg'
   just_did_course2: ' দেখ আমি কেবল কোর্স ২ শেষ করছে! @codeorg'
@@ -455,7 +455,6 @@ bn-BD:
   dashboard_landing_office_hours: স্বতন্ত্রভাবে প্রশ্ন করন! আমাদের মাসিক ভিডিও অফিস সময়ে ভিজিট করুন।
   dashboard_landing_print_certificates: Print certificates for students who finish this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: মূল শ্রেণী অগ্রগতি
   dashboard_landing_progress_biggest: এটি হল আপনার সবচেয়ে বড় অংশের অগ্রগতি।
@@ -801,6 +800,7 @@ bn-BD:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

@@ -2,9 +2,9 @@ sv:
   errors:
     messages:
       not_saved: 'Rätta följande fel:'
-      too_young: This content has age restrictions in place and is not available for younger students.
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
-      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
+      too_young: Detta innehåll har åldersgränser och är inte tillgängligt för yngre elever.
+      teacher_must_accept_terms: 'Detta innehåll har åldersgränser och är inte tillgängligt för yngre elever. Fråga din lärare att acceptera de uppdaterade användarvillkoren för att ge dig tillgång till detta innehåll. Din lärare kan göra detta genom att logga in på sin användare i Code Studio och klicka på "Granskning av uppdaterade villkor"-knappen nära toppen av hemsidan.'
+      pair_programmer: Du parprogrammerar för närvarande med en elev som inte har tillgång till detta innehåll. För att få tillgång till innehållet, avbryt parprogrammeringen och försök igen.
   activerecord:
     errors:
       messages:
@@ -83,7 +83,7 @@ sv:
   signup_form:
     student_count: '%{count} elever har redan kommit med.'
     teacher_count: '%{count} lärare har redan kommit med.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
+    overview: 'Registrera ett konto för att spåra dina framsteg eller hantera ditt klassrum. <a href="/"> Du kan bläddra mellan de olika stadierna och pussel</a> som finns utan ett konto, men du kommer att behöva registrera dig för att spara dina framsteg och projekt.'
     teacher_educator_guide: Se pedagogguiden
     title: Skapa konto på Code.org
     school_name: Skolans namn (valfritt)
@@ -101,8 +101,8 @@ sv:
     valid_password: Giltigt lösenord!
     invalid_password: Lösenordet måste vara minst 6 tecken långt
     mismatch_password: De två lösenord du skrev matchar inte varandra
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
+    student_terms: "Jag har läst och godkänner Code.org <a href='http://code.org/tos'>användarvillkor</a>. Om jag är under 13 år gammal, så bekräftar jag, genom att skicka in det här formuläret, att jag har min vårdnadshavares godkännande för att använda mig utav siten code.org. <br/><br/> Mejladresser sparas inte på ett sådant sätt att vi kan kontakta elever. Elever kommer aldrig att få mejl utav oss, om det inte gäller lösenordsåterställande. Se vår <a href='http://code.org/privacy'>sekretesspolicy</a> för mer information."
+    teacher_terms: "Jag godkänner Code.orgs användarvillkor. För mer information, se vår <a href='http://code.org/privacy'>sekretesspolicy</a>."
     additional_information: 'Vi behöver  ytterligare information att fortsätta registrera dig.'
     user_type_label: Kontotyp
     user_type_teacher: Lärare
@@ -130,7 +130,7 @@ sv:
   password:
     reset_form:
       title: Glömt ditt lösenord?
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: Ange din e-postadress här nedan och vi skickar dig återställningsinstruktioner för lösenordsåterställning.
       email: E-postadress
       submit: Skicka in
     change_form:
@@ -255,7 +255,7 @@ sv:
       already_registered: Redan registrerad?
       pair_programming: Par-programmering
       team: Team
-      driver: Driver
+      driver: Förare
       navigator: Navigator
     popup:
       progress_for_user: '%{name}s framsteg'
@@ -292,7 +292,8 @@ sv:
       submitted_on: 'Inlämnad den %{date} '
       unsubmit: Ångra Inlämnad
       worked_with: Arbetat med
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Uppdatera låsinställningar här.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
@@ -717,7 +718,7 @@ sv:
     download_message: 'Download %{app_name} for offline use (136MB)'
     download_in_english: 'Download in English:'
     download_in_spanish: 'Download in Spanish:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

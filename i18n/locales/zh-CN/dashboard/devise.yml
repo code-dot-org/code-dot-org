@@ -1,4 +1,4 @@
-zh:
+zh-CN:
   devise:
     confirmations:
       confirmed: 你的电子邮件地址已验证成功。

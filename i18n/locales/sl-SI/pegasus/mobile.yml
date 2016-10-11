@@ -184,7 +184,7 @@ sl-SI:
   learn_next_level: Nadaljujte na naslednjo stopnjo
   learn_online: Poskusite druge spletne tečaje
   learn_classes: Poišči lokalne tečaje
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -479,7 +479,6 @@ sl-SI:
   dashboard_landing_office_hours: Zastavite vprašanje v živo! Obiščite naše mesečne video uradne ure.
   dashboard_landing_print_certificates: Tiskanje potrdila za študente ki so opravili tečaj
   dashboard_landing_educator_blog: Preberi o novicah in posodobitvah našega gradiva na našem blogu Izobraževalcev
-  dashboard_landing_smart_hints: Prosimo, pomagajte nam dodati bistre namige v vaje na Code.org
   dashboard_landing_video_player: Preizkusite naš novi video predvajalnik na vaši šoli
   dashboard_landing_progress_title: Napredek glavnega razreda
   dashboard_landing_progress_biggest: To je napredek za največji razdelek.
@@ -823,6 +822,7 @@ sl-SI:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

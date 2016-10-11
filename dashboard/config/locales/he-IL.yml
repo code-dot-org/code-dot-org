@@ -325,6 +325,7 @@
       unsubmit: "בטל הגשה"
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
     email_confirm_needed_required: "כתובת האימייל שלך %{email} לא אושרה:"

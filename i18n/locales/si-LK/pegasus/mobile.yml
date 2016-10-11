@@ -174,7 +174,7 @@ si-LK:
   print_ice_art: ඔබේ අයිස් කලා මුද්රණය කරන්න
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: මම
-  never_spam: "We'll never spam you"
+  never_spam: අපි ඔබව කිසිදාක ස්පෑම් කරන්නේ නෑ
   enter_country: එක්සත් ජනපදයෙන් පිටත නම් රට ඇතුල් කරන්න
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
@@ -213,7 +213,7 @@ si-LK:
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_title_nolink: Explore Code Studio
-  studiobar_elementary_title: Elementary courses
+  studiobar_elementary_title: මූලික පාඨමාලා
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
   studiobar_hoc_title: පැයක කේතය
   studiobar_hoc_body: Learn to code with Angry Birds
@@ -284,7 +284,7 @@ si-LK:
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: පැයක කේතය
   homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: ගුරු උපකරණ පුවරුව
   homepage_slot_text_studio: අපගේ සියලු නිබන්ධන
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: සාප්පුව
@@ -323,7 +323,7 @@ si-LK:
   homepage_slot_text_link_hocserved: '# කට මෙහෙවර කරයි'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: සිසුන්
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students: අපගේ සියලු නිබන්ධන ගවේෂණය කරන්න
   homepage_slot_text_blurb_students_courses: අපගේ පාඨමාලා ගවේෂණය කරන්න
   homepage_slot_text_link_codestudio: කේත ස්ටූඩියෝව උත්සාහ කරන්න
   homepage_slot_text_link_local: දේශීය පන්තියක් සොයාගන්න
@@ -361,20 +361,20 @@ si-LK:
   class_submission_in_school_daily_programming_course: Daily programming course
   class_submission_in_school_ap_computer_science: AP computer science
   class_submission_in_school_full_university_cs_curriculum: පූර්ණ විශ්ව විද්යාල CS විෂය මාලාව
-  class_submission_in_school_robotics_club: Robotics club
+  class_submission_in_school_robotics_club: රොබෝ සමාජය
   class_submission_in_school_programming_integrated_in_other_classes: Programming integrated in other classes (math, science, etc)
   class_submission_in_school_summer_school_cs_program: Summer school CS program
   class_submission_in_school_exploring_computer_science: Exploring Computer Science
   class_submission_in_school_other: Other in school
-  class_submission_out_of_school: Out of school
+  class_submission_out_of_school: පාසලින් පිටත
   class_submission_out_of_school_summer_camp: ගිම්හාන කඳවුර
   class_submission_out_of_school_afterschool_program: පාසලෙන් පසුව පැවැත්වෙන වැඩසටහන
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: Other out of school
+  class_submission_out_of_school_other: පාසලින් පිටත වෙනත්
   class_submission_online: අන්තර්ජාලය හරහා
   class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: Online teacher resource
+  class_submission_online_teacher_resource: අන්තර්ජාල ගුරු සම්පත්
   class_submission_online_other: වෙනත් අන්තර්ජාලයේ ඇති
   class_submission_level_preschool: පෙර පාසල
   class_submission_level_elementary: මූලික
@@ -387,7 +387,7 @@ si-LK:
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: පැරණි
   playlab_gumball_title: The Amazing World of Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title: 'අයිස් යුගය - ළඟදීම බලාපොරොත්තු වන්න'
   playlab_iceage_title_live: හිම යුගය
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: ජාවා ස්ක්‍රිප්ට්
@@ -451,10 +451,10 @@ si-LK:
   volunteer_engineer_submission_commitment_one_hr_per_week: සතියකට පැයක්
   volunteer_engineer_submission_commitment_three_hrs_per_week: සතියකට පැය 3ක්
   volunteer_engineer_submission_commitment_five_hrs_per_week: සතියකට පැය 5ක්
-  volunteer_engineer_submission_commitment_now_and_then: Every now and then
+  volunteer_engineer_submission_commitment_now_and_then: හැම තිස්සෙම
   volunteer_engineer_submission_commitment_annually: වසරකට දෙතුන් වතාවක්
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_monthly: මසකට පෑය කිහිපයක්
+  volunteer_engineer_submission_commitment_weekly: සතියකට පෑය කිහිපයක්
   volunteer_engineer_submission_commitment_more: තවදුරටත්
   volunteer_engineer_submission_location_flexibility_onsite: visiting on-site at a school (1-2 hours in a classroom or a school assembly)
   volunteer_engineer_submission_location_flexibility_remote: 'having a Q&A with students remotely (via short video conference)'
@@ -475,10 +475,10 @@ si-LK:
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: වයස
-  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_title: ගුරු මුල් පිටුව
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: මෙම වීඩියෝව නරඹන්න
-  dashboard_landing_watch_video: for a tour of the new features!
+  dashboard_landing_watch_video: නව අංග සංචාරයක් සඳහා!
   dashboard_landing_view_as_student: මෙම වෙබ් අඩවිය සිසුවෙකු ලෙස බලන්න
   dashboard_landing_students_title: ඔබේ සිසුන්
   dashboard_landing_students_manage: View and manage your students
@@ -490,12 +490,11 @@ si-LK:
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
   dashboard_landing_print_certificates: පාඨමාලාව අවසන් කල සිසුන් සඳහා සහතිකපත් මුද්‍රණය කරන්න
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: අපට Code.org නිබන්ධන සඳහා ස්මාර්ට් ඉඟි එකතු කිරීමට උදව් කරන්න
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: ප්‍රධාන පන්තියේ ප්‍රගතිය
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: මුද්රණ ප්රගතිය
   dashboard_landing_available_title: දැනට ඇති පාඨමාලා
   dashboard_landing_available_courses: Here are the courses currently available for you and your students.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
@@ -521,7 +520,7 @@ si-LK:
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: AP® Computer Science Principles
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_loading: පුර්ණය වෙමින්...
   dashboard_action_edit: සංස්කරණය කරන්න
   dashboard_action_save: සුරකින්න
   dashboard_action_save_all: සියලුම දේ සුරකින්න
@@ -535,7 +534,7 @@ si-LK:
   dashboard_action_done: හරි
   dashboard_action_required: අවශ්‍යයි
   dashboard_action_print_certificates: සහතික මුද්‍රණය කරන්න
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_view: 'ඇගයීම් දැක්ම:'
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
@@ -554,12 +553,12 @@ si-LK:
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: Student Accounts and Progress
-  dashboard_navigation_view_progress: Progress
-  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_progress: ප්රගතිය
+  dashboard_navigation_view_text_responses: පාඨමය ප්රතිචාර
   dashboard_navigation_view_assessments: ඇගයීම්
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: ශිෂ්‍යයින් ඇතුලත්කරන්න
-  dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_manage_students: ශිෂ්යයන් කළමනාකරණය
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: සංඛ්‍යාන
   dashboard_navigation_section: 'Section: %{section_name}'
@@ -571,7 +570,7 @@ si-LK:
   dashboard_progress_completed_perfect: සාර්ථකව සම්පූර්ණ කර ඇත
   dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_progress_submitted: ඉදිරිපත් කලා
-  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_view: 'ප්රගතිය දැක්ම:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
   dashboard_progress_pair_programming: යුගල වශයෙන් ක්‍රමලේඛනය
   dashboard_responses_view: 'View text responses in:'
@@ -579,7 +578,7 @@ si-LK:
   dashboard_sections_new_section: නව කොටසක්
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: අංශය
-  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_secret: පිවිසුම් වර්ගය
   dashboard_sections_table_grade: ශේණිය
   dashboard_sections_table_course: පාඨමාලාව
   dashboard_sections_table_stage_extras: Stage Extras
@@ -602,7 +601,7 @@ si-LK:
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
-  dashboard_sections_move_students: Move students
+  dashboard_sections_move_students: සිසුන් ගෙන යන්න
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: සිසුවෙක් එක් කරන්න
@@ -611,7 +610,7 @@ si-LK:
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: සිසුවාගේ නම
   dashboard_students_name: නම
-  dashboard_students_progress: Progress
+  dashboard_students_progress: ප්රගතිය
   dashboard_students_age: වයස
   dashboard_students_gender: ලිංගභේදය
   dashboard_students_male: පිරිමි
@@ -623,7 +622,7 @@ si-LK:
   dashboard_students_completed_levels: සම්පූර්ණ කර ඇති මට්ටම්
   dashboard_students_total_lines: කේත පේලි
   dashboard_students_show_secret: රහස පෙන්වන්න
-  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_auto_generated: ස්වයංක්රීය-ජනනය
   dashboard_students_reset_secret: රහස තිබූ පරිදිම සකසන්න
   dashboard_students_reset_password: මුර පදය නැවත සකස් කරන්න
   dashboard_students_share_section: "Share this section's sign in page with your students:"
@@ -647,7 +646,7 @@ si-LK:
   dashboard_course1: 'පාඨමාලා අංක 1:'
   dashboard_course2: 'පාඨමාලා අංක 2:'
   dashboard_course3: 'පාඨමාලා අංක 3:'
-  dashboard_course4: 'Course 4: '
+  dashboard_course4: 'පාඨමාලා 4: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: '	විෂයමාලාව'
   dashboard_curriculum_overview: K-5 Curriculum Overview
@@ -658,10 +657,10 @@ si-LK:
   dashboard_implementation_guide: Implementation Guide
   dashboard_glossary: '	පදමාලාව'
   dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
+  dashboard_debugging: 'දෝෂ හරණයේ:'
   dashboard_puzzle_solving: 'ප්‍රහේලිකා විසඳීම:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_student_worksheet: ශිෂ්ය කාර්ය පත්රිකාව
+  dashboard_teacher_worksheet: ගුරු කාර්ය පත්රිකාව
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computer Science in Science:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
@@ -677,12 +676,12 @@ si-LK:
   dashboard_question: ප්‍රශ්නය
   dashboard_response: ප්‍රතිචාරය
   dashboard_correctness: නිරවද්‍යතාවය
-  dashboard_correctness_free_response: Free response
+  dashboard_correctness_free_response: නිදහස් ප්රතිචාර
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: නිවැරදියි
   dashboard_correctness_incorrect: වැරදියි
   dashboard_submission_submitted: ඉදිරිපත් කරන ලදි
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_in_progress: ප්රගතියේ
   dashboard_status: තත්වය
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -756,7 +755,7 @@ si-LK:
   carousel_heading_webpages: වෙබ් පිටු සකසන්න පුරුදු වන්න
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
+  educator_notes: අධ්යාපක සටහන්
   teach_led_lesson_plans: Teacher Led Lesson Plans
   learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: How to Teach an Hour of Code
@@ -834,6 +833,7 @@ si-LK:
   csp1_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'පූර්ණ පරීක්ෂණය - 50 ප්රශ්න'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

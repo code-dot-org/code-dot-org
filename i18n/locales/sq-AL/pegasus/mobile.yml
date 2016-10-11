@@ -184,7 +184,7 @@ sq-AL:
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_online: Provo kurse të tjera online
   learn_classes: Gjej klasa lokale
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -479,7 +479,6 @@ sq-AL:
   dashboard_landing_office_hours: Bëni një pyetje privatisht! Vizitoni orën tonë mujore të pyetjeve.
   dashboard_landing_print_certificates: Printo çertifikatat për studentët që mbarojnë këtë kurs
   dashboard_landing_educator_blog: Lexo rreth të rejave dhe përditësimeve të materialeve tona në Blogun Educator
-  dashboard_landing_smart_hints: Ju lutem na ndihmoni të shtojmë ndihma më të goditura tek tutorialet e Code.org
   dashboard_landing_video_player: Testoni video playerin e ri në shkollën tuaj
   dashboard_landing_progress_title: Ecuria e klasës kryesore
   dashboard_landing_progress_biggest: Ecuria për seksionin tuaj më të madh.
@@ -824,6 +823,7 @@ sq-AL:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

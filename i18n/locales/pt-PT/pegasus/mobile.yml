@@ -184,7 +184,7 @@ pt-PT:
   learn_next_level: Experimentar outro curso do Code Studio
   learn_online: Experimentar outros cursos online
   learn_classes: Encontrar aulas perto de ti
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
   just_did_course1: Vejam! Acabei de concluir o curso 1! @codeorg
   just_did_course2: Vejam! Acabei de concluir o curso 2! @codeorg
@@ -490,7 +490,6 @@ pt-PT:
   dashboard_landing_office_hours: Faz uma pergunta pessoalmente! Estabelece uma vídeochamada com os nossos assistentes (em inglês) todos os meses.
   dashboard_landing_print_certificates: Imprima certificados para os alunos que terminarem esse curso
   dashboard_landing_educator_blog: Leia sobre notícias e atualizações nos materiais disponíveis em nosso Blog do Professor
-  dashboard_landing_smart_hints: Ajude-nos a acrescentar dicas inteligentes nos tutoriais da Code.org
   dashboard_landing_video_player: Teste nosso novo player de vídeo na sua escola
   dashboard_landing_progress_title: Progresso da turma principal
   dashboard_landing_progress_biggest: Este é o progresso da tua maior turma.
@@ -834,6 +833,7 @@ pt-PT:
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 1: Informação Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Teste Completo - 50 questões'
   cspexam1-mWU7ilDYM9_name: 'Teste Parte 1 - 25 perguntas'
   cspexam2-AKwgAh1ac5_name: 'Teste Parte 2 - 25 perguntas'

@@ -129,12 +129,12 @@
             Artist: Artista
         course4:
           title: Curso 4
-          description: O Curso 4 é projetado para estudantes que já fizeram os cursos
-            2 e 3. Os alunos irão resolver quebra-cabeças com uma complexidade maior,
-            na medida que aprendem a combinar vários conceitos em cada desafio. No
-            fim deste curso, os alunos criarão programas que os permitam utilizar
-            habilidades múltiplas, incluindo laços e funções com parâmetros. Recomendado
-            para idades entre 4 e 8 anos.
+          description: O Curso 4 foi desenvolvido para os alunos que já concluíram
+            os Cursos 2 e 3. Eles aprenderão a resolver desafios de maior complexidade,
+            à medida que aprenderem a combinar vários conceitos ao resolver cada desafio.
+            No fim deste curso, os alunos criarão programas que permitirão a demonstração
+            de diversas habilidades, incluindo laços e funções com parâmetros. Recomendado
+            para alunos de 4º a 8º ano.
           description_short: Os alunos do Curso 4 já deverão ter concluído os Cursos
             2 e 3.
           description_audience: 10-18 anos de idade
@@ -189,6 +189,7 @@
             Functions and Functions with Parameters: Funções e funções com parâmetros
             Intro: Introdução
             Variables: Variáveis
+          description_audience: ''
         algebra:
           title: Ciência da computação em álgebra
           description: Aprenda programação funcional com álgebra
@@ -218,6 +219,7 @@
             'Unplugged: The Design Recipe': 'Offline: a receita de design'
             'Unplugged: Video Games and Coordinate Planes': 'Offline: video games
               e planos de coordenadas'
+          description_audience: ''
         infinity:
           title: Laboratório Infinito Disney
           description: Use o Laboratório para criar uma história ou um jogo usando
@@ -408,6 +410,7 @@
             Teacher Dashboard: Painel de controle do professor
             Why Computer Science belongs in Algebra: Por que a ciência da computação
               faz parte da álgebra
+          description_audience: ''
         algPDmiami:
           title: Ciência da computação em álgebra PD
           description: Ensine álgebra com programação funcional
@@ -424,6 +427,7 @@
             Your Game - Booleans: Seu jogo - booleanos
             Your Game - Collision Detection: Seu jogo - detecção de colisão
             Your Game - Player Movement: Seu jogo - movimento do jogador
+          description_audience: ''
         text-compression:
           title: Compressão de texto
           description: Comprima o texto identificando padrões repetidos.
@@ -450,6 +454,7 @@
           stage:
             Lesson 14: Lição 14
             Lesson 15: Lição 15
+          description_audience: ''
         ECSPD:
           title: Explorando o DP em Ciência da Computação
           description: Introdução on-line a ECS
@@ -482,6 +487,7 @@
             Using Computer Models in Science: Usando modelos de computadores em ciência
             Using Models in the Classroom: Usando modelos na sala de aula
             What to Expect: O que esperar
+          description_audience: ''
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -533,6 +539,7 @@
             Using Simple Commands: Usando comandos simples
             Using Variables in Apps: Using Variables in Apps
             While Loops: Laços enquanto
+          description_audience: ''
         algebraPD3:
           title: DP - Fase 3
           description: Ensine álgebra com programação funcional com base em blocos
@@ -721,6 +728,7 @@
             Sam the Bat: O morcego Sam
             Strings and Images: Strings e imagens
             The Design Recipe: A receita de design
+          description_audience: ''
         allthethings:
           title: Todas as coisas!
           description: Todos os tipos de nível para testar UI
@@ -777,6 +785,7 @@
             Strings and Images: Strings e imagens
             Teacher Dashboard: Painel de controle do professor
             Writing Contracts: Escrevendo contratos
+          description_audience: ''
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -851,6 +860,7 @@
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: A receita de design
             Welcome!: Bem-vindo!
+          description_audience: ''
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -882,6 +892,7 @@
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Bem-vindo!
             Wrap-Up: Resumo
+          description_audience: ''
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with
@@ -1036,6 +1047,7 @@
             Prep With Your Modules: Prep With Your Modules
             The TLO: The TLO
             Welcome Back!: Welcome Back!
+          description_audience: ''
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies
@@ -1055,6 +1067,7 @@
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Estratégias de ensino
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: ''
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1066,6 +1079,7 @@
             Teaching Strategies: Estratégias de ensino
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1077,6 +1091,7 @@
             Teaching Strategies: Estratégias de ensino
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1136,6 +1151,7 @@
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: What Data Can Tell Us
             Why Make Apps?: Why Make Apps?
+          description_audience: ''
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description: Phase 3 Academic Year Development
@@ -1169,6 +1185,7 @@
             Getting Started: Getting Started
             Share out and Submit: Share out and Submit
             Unit 2 Overview: Unit 2 Overview
+          description_audience: ''
         duino:
           title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
@@ -1235,6 +1252,7 @@
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
             While Loops: Laços enquanto
+          description_audience: ''
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1331,6 +1349,7 @@
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+          description_audience: ''
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description: Online Support for CSP Unit 4
@@ -1405,6 +1424,7 @@
             'Unplugged: Contracts': 'Offline: contratos'
             'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
             'Unplugged: The Design Recipe': 'Offline: a receita de design'
+          description_audience: ''
         AlgebraB:
           title: Ciência da computação em álgebra
           description: Aprenda programação funcional com álgebra
@@ -1426,6 +1446,7 @@
               e funções definidas por partes'
             'Unplugged: Video Games and Coordinate Planes': 'Offline: video games
               e planos de coordenadas'
+          description_audience: ''
         gamelab-hackathon:
           title: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -1444,6 +1465,7 @@
             Teacher Dashboard: Painel de controle do professor
             Why Computer Science belongs in Algebra: Por que a ciência da computação
               faz parte da álgebra
+          description_audience: ''
         algebraPD3c:
           title: Ciência da computação em álgebra PD
           description: CS in Algebra end of year reflection
@@ -1530,6 +1552,8 @@
             The Need For Programming Languages: A necessidade de linguagens de programação
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Usando comandos simples
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: ''
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -1550,6 +1574,10 @@
             Simple Encryption: Simple Encryption
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+            Rapid Research - Cybercrime: Rapid Research - Cybercrime
+            Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and
+              Security Dilemmas
+          description_audience: ''
         csp5:
           title: CS Principles Unit 5 - Building Apps
           description: 'This unit continues the introduction of foundational concepts
@@ -1609,6 +1637,10 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Functions: Funções
+            Platform Jumper: Platform Jumper
+            Defender: Defender
+          description_audience: ''
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description: In Partnership with Project GUTS
@@ -1630,6 +1662,7 @@
             Using Computer Models in Science: Usando modelos de computadores em ciência
             Using Models in the Classroom: Usando modelos na sala de aula
             What to Expect: O que esperar
+          description_audience: ''
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
@@ -1664,6 +1697,7 @@
             Teacher Dashboard: Painel de controle do professor
             Why Computer Science belongs in Algebra: Por que a ciência da computação
               faz parte da álgebra
+          description_audience: ''
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -1685,6 +1719,7 @@
             Using Computer Models in Science: Usando modelos de computadores em ciência
             Using Models in the Classroom: Usando modelos na sala de aula
             What to Expect: O que esperar
+          description_audience: ''
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles
@@ -1700,6 +1735,16 @@
               in the Real World
             Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the
               Real World
+            Unit 1 - Algorithms Detour - Minimum Spanning Tree: Unit 1 - Algorithms
+              Detour - Minimum Spanning Tree
+            Unit 1 - Algorithms Detour - Shortest Path: Unit 1 - Algorithms Detour
+              - Shortest Path
+            Unit 1 - How Routers Learn: Unit 1 - How Routers Learn
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem: Unit 4 - Hard
+              Problems - The Traveling Salesperson Problem
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem: Unit 4 - One-Way
+              Functions - The WiFi Hotspot Problem
+          description_audience: ''
         cspunit1-support:
           title: Online Support for CSP Unit 1
           description: This is a test Professional Learning Course
@@ -1785,6 +1830,28 @@
             Adding Functionality (optional): Adding Functionality (optional)
             Design Mode: Design Mode
             Making it Interactive: Making it Interactive
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            UCD Micro Activity: UCD Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Re-designing a Space: Re-designing a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            User Research: User Research
+            Low Fidelity Prototyping: Low Fidelity Prototyping
+            Preparing for Prototype Testing: Preparing for Prototype Testing
+            Prototype Testing: Prototype Testing
+            Preparing for App Testing: Preparing for App Testing
+            App Testing: App Testing
+            Planning for Improvements: Planning for Improvements
+            Improving and Iterating: Improving and Iterating
+            App Presentation Prep: App Presentation Prep
+            App Presentation: App Presentation
+          description_audience: ''
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description: Temp place to work on U1 of Disco
@@ -1818,6 +1885,12 @@
             Headers and Lists: Headers and Lists
             Designing Web Pages: Designing Web Pages
             Holding: Holding
+            Describing Web pages: Describing Web pages
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Usability and Accessibility: Usability and Accessibility
+          description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1939,6 +2012,7 @@
             Programming: Programação
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            Unspotted Bugs: Unspotted Bugs
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
@@ -2000,6 +2074,7 @@
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Estratégias de ensino
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: ''
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -2011,6 +2086,7 @@
             Teaching Strategies: Estratégias de ensino
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -2022,6 +2098,7 @@
             Teaching Strategies: Estratégias de ensino
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -2084,6 +2161,8 @@
             Lesson 2,10: Lesson 2,10
             Lesson 2,2: Lesson 2,2
             Lesson 2,3: Lesson 2,3
+            Test stage with bubbles: Test stage with bubbles
+          description_audience: ''
         csd3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
@@ -2099,6 +2178,7 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+          description_audience: ''
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -2152,20 +2232,17 @@
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: A receita de design
             Welcome!: Bem-vindo!
+          description_audience: ''
         csp-pre-survey:
           title: CS Principles Pre-Survey
           stage:
             Anonymous student pre-survey: Anonymous student pre-survey
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
-        sciencepd3-2016:
-          title: CS in Science PD3 Before 1st In-Person
-          description_short: 'Phase 3: Academic Year Development Pre 1'
-          description: 'Phase 3: Academic Year Development (Segment One)'
-          stage:
-            Welcome Back!: Welcome Back!
-            The TLO: The TLO
-            Prep With Your Modules: Prep With Your Modules
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: Problem Solving
@@ -2181,6 +2258,7 @@
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+          description_audience: ''
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -2209,3 +2287,40 @@
               and Packets'
             'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
               on the Internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 -
+              2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lesson
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 11: Interpreting Visual Data': 'Lessons 7 - 11: Interpreting
+              Visual Data'
+            'Lessons 12 - 15: Communicating with Visualizations': 'Lessons 12 - 15:
+              Communicating with Visualizations'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting
+              Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15:
+              Communicating with Visualizations'
+          description_audience: ''
+        csp1-support:
+          title: CSP Unit 1 Online Support
+          description_short: TeacherSupports for CSP unit 1
+          description: This is a set of online supports of CSP teachers preparing
+            to teach Unit 1.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding
+              and Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending
+              Text'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
+              on the Internet'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning

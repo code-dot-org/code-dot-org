@@ -2,14 +2,8 @@ pt-BR:
   data:
     instructions:
       2-3 Artist 1 new_instruction: Oi, eu sou um artista. Você pode escrever códigos para me fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
-      2-3 Artist 11_instruction: |
-        Faça uma borda na placa de pare criando um octógono
-        com 8 lados, com 100 pixels de comprimento cada. Quantos graus você deve virar? (Dica:
-        quanto é 360 divido por 8?) 
-      2-3 Artist 12_instruction: |
-        Configure o bloco "repita vezes" para que ele crie
-        um "círculo" para terminar o globo ocular. Se cada movimento virar um grau para a direita,
-        quantas vezes você precisa repetir para completar o círculo? 180? 360? 500?
+      2-3 Artist 11_instruction: "Faça uma borda na placa de pare criando um octógono\ncom os lados medindo 100 pixels. \r\n\r\n"
+      2-3 Artist 12_instruction: "Crie um círculo para terminar o globo ocular!\r\n\r\nSe\no artista virar 1 grau com cada laço, quantas vezes você precisará repetir\no código para desenhar um círculo? 180? 360? 500?"
       2-3 Artist 2 new_instruction: |
         Esta casa tem uma parede inacabada. Cada lado
         tem 100 pixels de comprimento, mas a parede inacabada tem apenas 50. Complete a parede. 
@@ -17,107 +11,74 @@ pt-BR:
         Esta casa tem uma parede inacabada. Cada lado tem
         100 pixels de comprimento, mas a parede inacabada tem apenas 50. Complete a parede. 
       2-3 Artist 3.4_instruction: |
-        O bloco pule move o artista sem desenhar.
-        Desenhe a linha tracejada usando os bloco pule e desenhe.
+        O bloco "pule" move o artista sem desenhar.
+        Desenhe a linha tracejada usando os blocos "pule para a frente" e "avance".
+        Cada linha tem 50 pixels de comprimento.
       2-3 Artist 3_instruction: Esse chapéu tem 100 pixels de altura. Desenhe um chapéu que tenha 70 pixels a menos.
-      2-3 Artist 3new_instruction: |
-        O chapéu vermelho tem 100 pixels de altura. Termine o desenho
-        de um chapéu preto que seja 70 pixels menor. A largura do chapéu preto é de 50 pixels.
+      2-3 Artist 3new_instruction: "O chapéu vermelho tem 100 pixels de altura. Termine o desenho\nde um chapéu preto que seja 70 pixels menor. \r\n(Observação: a largura de cada chapéu é\nde 50 pixels)."
       2-3 Artist 4_instruction: Ajude-me a completar a casa para o gato.
       2-3 Artist 5_instruction: |
         Substitua esse código por um bloco "repita vezes"
         para desenhar a mesma casa usando apenas 3 blocos.
       2-3 Artist 6_instruction: 'Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
       2-3 Artist 7_instruction: |
-        Termine de desenhar a metade direita da última janela.
-        Cada quadrado da janela tem 25 pixels. 
-      2-3 Artist 8_instruction: |2
-        Complete os quartos para cada um dos animais dividindo
-         o retângulo em 2 quadrados de mesmo tamanho. O retângulo tem 200 pixels de largura
-        e 100 pixels de altura.
+        Termine de desenhar o último conjunto de janelas da escola
+        para que todos na sala de aula possam ver a parte de fora. Os lados de cada janela quadrada
+        medem 25 pixels de comprimento. 
+      2-3 Artist 8_instruction: |
+        Complete os quartos para cada animal dividindo
+        o retângulo em 2 quadrados de mesmo tamanho. O retângulo tem 200 pixels de largura
+        e 100 pixels de altura. Há várias maneiras diferentes de resolver este desafio, então,
+        divirta-se!
       2-3 Artist 9 NEW_instruction: Termine esta pipa
       2-3 Artist 9 REPLACEMENT_instruction: Conclua o desenho destas escadas!
       2-3 Artist 9_instruction: Termine esta pipa
-      2-3 Artist Assessment 1_instruction: 'Avaliação: termine de desenhar o último dente, 25 pixels de largura e 25 pixels de altura.'
-      2-3 Artist Debugging 1_instruction: Você consegue fazer esse chapéu com 100 pixels de altura?
-      2-3 Artist Debugging 10_instruction: |
-        O controlador de direção do controle do meu jogo
-        é muito estreito. Dica: faça-o 10 pixels mais largo
-      2-3 Artist Debugging 11_instruction: 'Ajude-me a terminar meu lindo floco de neve. Quantas vezes preciso "repetir" para terminá-lo?'
+      2-3 Artist Assessment 1_instruction: |
+        Avaliação: termine de desenhar o último dente.
+        Ele tem 25 pixels de largura e 25 pixels de altura.
+      2-3 Artist Debugging 1_instruction: |
+        Este chapéu precisa ter apenas 50 pixels de largura. Você
+        consegue arrumá-lo?
+      2-3 Artist Debugging 10_instruction: "O controlador de direção do controle do meu jogo\né muito estreito. \r\n\r\nVocê consegur aumentar a largura dele em 10 pixels?\r\n\r\nExecute\no código primeiro para ver o que está errado."
+      2-3 Artist Debugging 11_instruction: "Meu floco de neve está se desfazendo!\r\n\r\nVocê\nconsegue descobrir o que há de errado?"
       2-3 Artist Debugging 12_instruction: Eu devo adicionar uma onda do mar nessa cena. Você pode me ajudar?
-      2-3 Artist Debugging 2_instruction: 'O código para os três bigodes que você vê está errado. Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para desenhar os bigodes.'
-      2-3 Artist Debugging 3_instruction: |
-        Meu barco tem um buraco! Você consegue corrigi-lo
-        alterando o ângulo da linha? Dica: o último ângulo está 15 graus fora de lugar.
+      2-3 Artist Debugging 2_instruction: "O código dos bigodes do gato está errado.\n\r\n\r\nCorrija o código para desenhar os bigodes, todos com o mesmo tamanho."
+      2-3 Artist Debugging 3_instruction: "Meu barco tem um buraco! \r\n\r\nO que você\nprecisa corrigir para unir as extremidades?"
       2-3 Artist Debugging 4_instruction: |
         Qual é a imagem que estamos tentando
         desenhar? Termine de conectar os pontos usando as linhas e ângulos apropriados.
-      2-3 Artist Debugging 5_instruction: |
-        O código para a perna e para o pé que você vê
-        está errado. Dica: o pé está muito comprido, pode ser necessário excluir um passo (pé... passo... trocadilho)
-      2-3 Artist Debugging 6_instruction: |
-        Parece que estou sentado em uma cadeira
-        sem uma perna. Edite os blocos para desenhar a perna.
-      2-3 Artist Debugging 7_instruction: |
-        Parece que o C no código está desenhado ao contrário.
-        Você consegue fazê-lo parecer com um C?
-      2-3 Artist Debugging 8_instruction: |
-        Meu cata-vento não está pronto. Quantas
-        vezes eu preciso repetir para terminá-lo?
-      2-3 Artist Debugging 9_instruction: |
-        O código para este caule está incorreto. Dica:
-        o ângulo está 60 graus fora de lugar
-      2-3 Artist Debugging Assessment 1_instruction: |
-        Esta forma é muito pequena. Você
-        pode fazê-la maior? Dica: ela deve ter 75 pixels a mais de cada lado.
+      2-3 Artist Debugging 5_instruction: "O código para a perna e\npara o pé está errado. \r\n\r\nVocê consegue corrigi-lo?"
+      2-3 Artist Debugging 6_instruction: "Parece que estou sentado em uma cadeira\nsem uma perna!\r\n\r\nEdite o código para desenhar a última perna."
+      2-3 Artist Debugging 7_instruction: "Parece que o C no código está desenhado ao contrário!\r\n\r\nVocê\nconsegue fazê-lo parecer com um C de novo?"
+      2-3 Artist Debugging 8_instruction: "Meu professor diz que eu devo terminar o que\ncomecei!\r\n\r\nAjude-me a terminar meu cata-vento. Você consegue descobrir o que há de errado?"
+      2-3 Artist Debugging 9_instruction: "Algo está estranho!\r\n\r\nO código deste\ncaule está errado. Você consegue descobrir como fazer o artista traçar o\ncaule da maneira certa?"
+      2-3 Artist Debugging Assessment 1_instruction: "Avaliação: Por que este quadrado\nacaba ficando com 75 pixels a menos em cada lado?\r\n\r\nOnde está o erro\ndo código?"
       2-3 Artist Free Play_instruction: Atividade livre! Desenhe o que você quiser.
-      2-3 Artist Functions 1_instruction: |
-        Olá. Mim artista zumbi. Mim ama desenhar!
-        Me ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é
-        25 pixels menor que o comprimento do quadrado.
+      2-3 Artist Functions 1_instruction: "\"Mim artista zumbi. Mim ama desenhar!\" \r\n\r\nAjude\no zumbi a desenhar os óculos quadrados. \r\n\r\nA haste entre as lentes é\n25 pixels menor que a largura dos quadrados, que é igual a 100 pixels."
       2-3 Artist Functions 10_instruction: |
-        Aqui temos duas funções, uma para desenhar uma
-        engrenagem grande e outra para desenhar uma engrenagem pequena. Use-as para desenhar o interior de uma máquina!
-      2-3 Artist Functions 11.5_instruction: |
-        Aqui está a mesma função "Desenhe um hexágono".
-        O que acontece se você virar apenas 60 graus a cada repetição?
-      2-3 Artist Functions 11_instruction: |
-        Renomeamos a função "desenhe um quadrado"
-        como "desenhe um hexágono", mas ela ainda desenha apenas quadrados! Você consegue
-        modificar a função "desenhe um hexágono" para desenhar um hexágono com lados de 50 pixels, e
-        desenhar a imagem usando a função?
-      2-3 Artist Functions 12 Mike_instruction: |
-        Funções são ótimas para desenhar
-        coisas complexas várias vezes. Você consegue usar a função "desenhe uma flor"
-        para preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas
-        por um comprimento de 100 pixels)  
-      2-3 Artist Functions 12_instruction: |
-        Funções são ótimas para desenhar
-        coisas complexas várias vezes. Você consegue usar a função "desenhe uma flor"
-        para preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas
-        por um comprimento de 100 pixels)  
+        Atividade livre: Aqui temos duas funções, uma
+        para desenhar uma engrenagem grande e outra para desenhar uma engrenagem pequena. Use-as para desenhar o interior
+        de uma máquina!
+      2-3 Artist Functions 11.5_instruction: "Aqui está a mesma função\n\"Desenhe um hexágono\". \r\n\r\nO que acontece se você repetir o programa principal 6 vezes, virando\n60 graus a cada repetição?"
+      2-3 Artist Functions 11_instruction: "Renomeamos a função \"desenhe um quadrado\"\ncomo \"desenhe um hexágono\", mas ela ainda desenha apenas quadrados! Você consegue mudar a\nfunção \"desenhe um hexágono\" para desenhar um hexágono com lados de 50 pixels? \r\n\r\nDesenhe\na imagem usando a nova função!"
+      2-3 Artist Functions 12 Mike_instruction: "Funções são ótimas para desenhar\ncoisas complexas várias vezes. \r\n\r\nVocê consegue usar a função \"desenhe uma flor\"\npara preencher o resto do canteiro de plantas?\r\nAs plantas estão todas separadas por uma distância de 100 pixels."
+      2-3 Artist Functions 12_instruction: "Funções são ótimas para desenhar\ncoisas complexas várias vezes. \r\n\r\nVocê consegue usar a função \"desenhe uma flor\"\npara preencher o resto do canteiro de plantas?\r\nAs plantas estão todas separadas por uma distância de 100 pixels."
       2-3 Artist Functions 13_instruction: |
         Fornecemos quatro funções para você.
         Use-as da forma que quiser dentro de um ou mais laços para criar imagens que
         você pode compartilhar com seus amigos. Pressione "Executar" para ver um exemplo.
-      2-3 Artist Functions 2_instruction: |
-        As funções permitem que você defina novos blocos! Movemos
-        os blocos para desenhar um quadrado para dentro de uma função chamada "desenhe um quadrado".
-        Você consegue usar a função "desenhe um quadrado" para criar os óculos? Os quadrados são separados
-        por 75 pixels.
-      2-3 Artist Functions 3_instruction: |
-        Edite a função para desenhar um quadrado com
-        lados de 115 pixels de comprimento e desenhe os óculos maiores. Agora, os quadrados estão separados por 45 pixels.
+      2-3 Artist Functions 2_instruction: "As funções permitem que você defina novos blocos! \r\n\r\nMovemos\nos blocos necessários para desenhar um quadrado para dentro de uma função chamada \"desenhe\num quadrado\". Desta vez, use a função \"desenhe um quadrado\" para criar os óculos.\n\r\n\r\nOs quadrados estão separados por uma distância de 75 pixels."
+      2-3 Artist Functions 3_instruction: "Edite a função para desenhar um quadrado com\nlados de 115 pixels, para desenhar os óculos maiores. \r\n\r\nAgora, os quadrados\nestão separados por 45 pixels."
       2-3 Artist Functions 4_instruction: |
-        Use o bloco "repita" para desenhar esses
-        3 quadrados.
+        Agora coloque a função dentro de um laço
+        para desenhar esses três quadrados.
       2-3 Artist Functions 7_instruction: |
         Use a função "desenhe uma casa" para desenhar
         duas casas usando dois parâmetros diferentes. (Dica: a primeira casa tem 100 pixels).
       2-3 Artist Functions 9_instruction: |
-        Esta é uma função para flocos de neve. Experimente
-        usá-la para criar uma cena de inverno! Esse nível é livre, então não há
-        desafios para resolver. Divirta-se!
+        Atividade livre: Esta é uma função para flocos de neve.
+        Experimente usá-la para criar uma cena de inverno! Essa é uma atividade livre, então
+        não há desafios para resolver. Divirta-se!
       2-3 Artist Loops 1_instruction: |
         Você consegue fazer um hexágono com lados de
         100 pixels de comprimento para terminar a célula? Lembre-se, isso significa que você só vai
@@ -149,30 +110,32 @@ pt-BR:
         Vamos desenhar a cabeça do robô! Você pode
         fazer um quadrado com lados de 100 pixels?
       2-3 Artist Loops New 10_instruction: |
-        Agora vamos conectar um monte de V's,
-        desenhando-os em um laço.
+        Agora vamos conectar um monte de "V"
+        em um laço.
       2-3 Artist Loops New 11_instruction: |
-        Dessa vez, vamos desenhar 24 vezes. Adicione
-        uma ação de virar à esquerda em 30 graus ao código e coloque tudo em um bloco repita.
+        Reconstrua o código do último desafio,
+        mas, dessa vez, adicione uma ação de virar à esquerda em 30 graus dentro do laço. Agora repita
+        a ação 24 vezes, em vez de 8.
       2-3 Artist Loops New 12_instruction: |
         Desenhe um diamante com lados de 100 pixels.
         
-      2-3 Artist Loops New 13_instruction: Agora, desenhe o diamante 3 vezes em um laço.
+      2-3 Artist Loops New 13_instruction: "Você vai conhecer alguns códigos\n(em cinza) para fazer um diamante. \r\n\r\nRepita o código cinza para criar um padrão\ndivertido!"
       2-3 Artist Loops New 14_instruction: |
-        Agora, vamos desenhar o diamante 10 vezes,
-        mas vamos rotacionar 90 graus entre cada diamante.
-      2-3 Artist Loops New 15_instruction: Desenhe algo divertido.
-      2-3 Artist Loops New 2_instruction: |
-        Aqui temos alguns dos códigos que você usou para desenhar
-        aquele quadrado. O que acontece se você usar o bloco repita para executar esse código 4 vezes?
+        Brinque um pouco com o código do diamante
+        e veja que outros padrões você consegue fazer. Tente mudar quantos graus você
+        vira e o número de repetições.
+      2-3 Artist Loops New 15_instruction: Agora desenhe o que você quiser!
+      2-3 Artist Loops New 2_instruction: "Aqui temos o mesmo desafio que acabamos de resolver,\nmas só podemos usar os blocos \"avance\" e \"vire\"\ndesta vez.\r\n\r\nVocê pode usar um bloco \"repita\" para resolver este desafio?"
       2-3 Artist Loops New 9_instruction: |
-        Desenhe um V simples com ambos os lados com 50
-        pixels para completar a seta.
+        Desenhe um V simples (com ambos os lados com
+        50 pixels) para completar a seta.
       2-3 Artist Match Hex Pic_instruction: 'Correspondência: ajude a terminar o hexágono.'
       2-3 Artist Match Rho Pic_instruction: 'Correspondência: termine o código que falta.'
       2-3 Artist Match Sq Pic_instruction: 'Correspondência: complete o código que falta'
       2-3 Artist Match Tri pic_instruction: 'Correspondência: preencha o código que falta.'
-      2-3 Artist Nested Loops 1_instruction: "Você usou laços para desenhar formas antes,\nmas você sabia que pode colocar um laço dentro de outro laço?\r\nRepita este bloco\nde código inteiro 3 vezes para desenhar o padrão."
+      2-3 Artist Nested Loops 1_instruction: |
+        Coloque um bloco "repita" ao redor de toda
+        esta pilha de código para desenhar o padrão.
       2-3 Artist Nested Loops 10_instruction: |
         Repita este código 12 vezes para completar
         o padrão.
@@ -182,36 +145,14 @@ pt-BR:
       2-3 Artist Nested Loops 12_instruction: |
         Repita este código 12 vezes para completar
         as espirais.
-      2-3 Artist Nested Loops 2_instruction: |
-        Agora, repita o triângulo 6 vezes. Depois
-        de cada triângulo, você precisa virar 60 graus antes de desenhar o próximo.
-      2-3 Artist Nested Loops 3_instruction: |
-        Você vai precisar repetir o triângulo 12
-        vezes para desenhar este padrão. Divida o número de graus em um círculo (360)
-        pelo número de formas que você está desenhando (12) para descobrir quanto virar
-        depois de cada forma.
-      2-3 Artist Nested Loops 4_instruction: |
-        Repita este diamante 12 vezes para desenhar
-        uma flor. Dica: 12 diamantes são como os 12 triângulos que você fez - quanto
-        você precisa virar depois de cada forma?
-      2-3 Artist Nested Loops 5_instruction: |
-        Preencha as janelas deste edifício com
-        um laço aninhado. As janelas têm 20 pixels de comprimento e são separadas por 20 pixels.
-      2-3 Artist Nested Loops 6_instruction: |
-        Esse dinossauro tem 8 espinhos ao longo
-        de sua cauda. Cada espinho tem 30 pixels de comprimento. Repita o triângulo 8 vezes, mas
-        lembre-se de avançar depois de cada um.
-      2-3 Artist Nested Loops 7_instruction: |
-        Repita esse triângulo 10 vezes para desenhar
-        o sol. Você vai precisar mover e virar depois de cada triângulo. Você pode descobrir
-        quanto virar dividindo o número de graus em um círculo pelo
-        número de formas que o compõem.
-      2-3 Artist Nested Loops 8_instruction: |
-        Agora, vamos adicionar um pouco de grama à imagem.
-        Cada tufo de grama é separado por 50 pixels.
-      2-3 Artist Nested Loops 9_instruction: |
-        Vamos terminar essa imagem adicionando
-        uma flor. Repita o diamante 12 vezes para desenhar sua flor.
+      2-3 Artist Nested Loops 2_instruction: "Agora, repita o triângulo 6 vezes. \r\n\r\nDepois\nde cada triângulo, você precisa virar 60 graus antes de desenhar o próximo."
+      2-3 Artist Nested Loops 3_instruction: "Você vai precisar repetir o triângulo 12\nvezes para desenhar este padrão. \r\n\r\nDivida o número de graus em um círculo\n(360) pelo número de formas que você está desenhando (12) para descobrir quanto virar\ndepois de cada forma."
+      2-3 Artist Nested Loops 4_instruction: "Repita este diamante 12 vezes para desenhar\numa flor!\r\n\r\nObservação: vamos usar o mesmo ângulo para repetir 12 diamantes,\ncomo fizemos com os 12 triângulos.  \r\nQuanto você precisa virar depois de cada forma?"
+      2-3 Artist Nested Loops 5_instruction: "Preencha as janelas deste edifício com\num laço aninhado. \r\n\r\nAs janelas têm 20 pixels de comprimento e são separadas por 20 pixels."
+      2-3 Artist Nested Loops 6_instruction: "Esse dinossauro tem 8 espinhos ao longo\nde sua cauda.\r\nCada espinho tem 30 pixels de comprimento. Repita o triângulo 8 vezes, mas\nlembre-se de saltar para a frente depois de cada um!"
+      2-3 Artist Nested Loops 7_instruction: "Repita esse triângulo 10 vezes para desenhar\no Sol. \r\n\r\nVocê vai precisar mover e virar depois de cada triângulo. \r\n\r\nVocê\npode descobrir quanto virar dividindo o número de graus em um círculo\npelo número de triângulos que o compõem."
+      2-3 Artist Nested Loops 8_instruction: "Agora vamos adicionar um pouco de grama à imagem.\n\r\n\r\nCada tufo de grama é separado por 50 pixels."
+      2-3 Artist Nested Loops 9_instruction: "Vamos terminar essa imagem adicionando\numa flor. \r\n\r\nRepita o diamante 12 vezes para desenhar a flor."
       2-3 Artist Nested Loops Free Play_instruction: |
         Atividade livre. Desenhe algo legal
         com laços aninhados.
@@ -219,38 +160,25 @@ pt-BR:
         Olá! Eu sou uma abelha. Ajude-me a coletar o néctar
         da flor.
       2-3 Bee Conditionals 10_instruction: "As flores roxas podem ter 1 ou 0 néctar.\nTenha cuidado para não coletar néctar de uma flor roxa se ela não\ntiver néctar.\r\n"
-      2-3 Bee Conditionals 11_instruction: Colete néctar onde as flores têm néctar.
+      2-3 Bee Conditionals 11_instruction: "O que será que tem por aí!\r\n\r\nAjude-me\na voar pelo jardim e coletar o néctar apenas das flores que têm\nnéctar para oferecer. "
       2-3 Bee Conditionals 12_instruction: |
-        Use um laço para verificar e coletar o néctar
-        de todas essas flores.
-      2-3 Bee Conditionals 13_instruction: |
-        Colete néctar e produza mel. Dica:
-        o que acontece se você usar a condição "se houver néctar" em uma flor vermelha? Você pode
-        completar isso com um laço?
-      2-3 Bee Conditionals 14_instruction: |
-        Colete néctar e produza mel. Tenha cuidado
-        para não coletar néctar de uma flor roxa se ela não tiver néctar.
-      2-3 Bee Conditionals 15_instruction: Colete néctar das quatro flores.
-      2-3 Bee Conditionals 2_instruction: |
-        Olá, eu sou uma abelha! Ajude-me a coletar todo
-        o néctar das flores. Use um laço.
-      2-3 Bee Conditionals 3_instruction: |
-        Ajude-me a coletar todo o néctar das
-        flores e a produzir mel. Use um laço.
+        Ajude-me a encontrar todo o néctar usando
+        o menor número possível de blocos!
+      2-3 Bee Conditionals 13_instruction: "Há muita coisa acontecendo por aqui!\r\n\r\nUse\no que você aprendeu para coletar todo o néctar e, então, produza o mel."
+      2-3 Bee Conditionals 14_instruction: "Vamos unir todas as informações!\r\n\r\nUse\no que você aprendeu para me ajudar a coletar néctar apenas das flores que têm\nnéctar para oferecer, usando o menor número possível de blocos. Não se esqueça de produzir o mel para terminar."
+      2-3 Bee Conditionals 15_instruction: "Este padrão de degrau deve ser familiar.  \r\n\r\nVocê\nconsegue coletar néctar apenas das flores que têm néctar para oferecer, usando o menor número de\nblocos possível?"
+      2-3 Bee Conditionals 2_instruction: "Sou uma abelha faminta! \r\nAjude-me a coletar\ntodo o néctar das flores usando o menor número possível de blocos."
+      2-3 Bee Conditionals 3_instruction: "Olhe só todo esse néctar!\r\n\r\nAjude-me\na coletar todo o néctar e produzir mel usando o menor número possível de blocos.  "
       2-3 Bee Conditionals 4_instruction: |
         Ajude-me a coletar todo o néctar das
         flores e a produzir todo o mel.
-      2-3 Bee Conditionals 5_instruction: |
-        As flores roxas podem ter 1 ou 0
-        néctar, mas você não sabe quanto! Tenha cuidado para não coletar néctar de
-        uma flor roxa se ela não tiver néctar. Verifique se o néctar é igual a 1
-        usando o bloco se.
+      2-3 Bee Conditionals 5_instruction: "Tenha cuidado para não coletar néctar das\nflores roxas que não o têm. \r\nPrimeiro, veja se o néctar\né igual a 1 usando o bloco \"se néctar\"."
       2-3 Bee Conditionals 6_instruction: |
         Verifique essa flor com um bloco "se"
         para ver se há algum néctar disponível.
       2-3 Bee Conditionals 7_instruction: |
-        Colete o néctar de cada flor que
-        tiver néctar disponível.
+        Colete o néctar de cada flor, apenas se
+        ela tiver néctar disponível.
       2-3 Bee Conditionals 8_instruction: |
         Este campo tem flores vermelhas e roxas.
         As flores vermelhas têm uma quantidade de néctar conhecida, mas o néctar das flores roxas é desconhecido.
@@ -258,59 +186,33 @@ pt-BR:
       2-3 Bee Conditionals 9_instruction: Colete todo o néctar de cada flor.
       2-3 Bee Conditionals Assessment 1_instruction: |
         Avaliação: Colete todo o
-        néctar. Tenha cuidado para não coletar néctar de uma flor roxa se ela não
-        tiver néctar.
+        néctar. Tenha cuidado para não coletar néctar das flores roxas que
+        não o tiverem.
       2-3 Bee Debugging 1_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging 10_instruction: |
-        Esses blocos estão me incomodando. Conserte
-        o(s) erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging 2_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging 3_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging 4_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging 5_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel. Agora você pode
-        usar os botões Executar e Passo.
-      2-3 Bee Debugging 6_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
+        Esses blocos estão me incomodando. Corrija o(s)
         erro(s) para coletar todo o néctar.
+      2-3 Bee Debugging 10_instruction: "Este desafio está me deixando lelé! \r\nCorrija\no(s) erro(s) para coletar todo o néctar e produzir todo o mel."
+      2-3 Bee Debugging 2_instruction: "Você consegue encontrar o problema aqui?\r\nCorrija o(s)\nerro(s) para coletar todo o néctar."
+      2-3 Bee Debugging 3_instruction: "Nossa, que ferroada!\r\n\r\nCorrija o(s) erro(s)\npara coletar todo o néctar."
+      2-3 Bee Debugging 4_instruction: |
+        Esses blocos estão me incomodando. Corrija o(s)
+        erro(s) para coletar todo o néctar e produzir todo o mel.
+      2-3 Bee Debugging 5_instruction: "Essa flor parece deliciosa! \r\n\r\nCorrija o(s)\nerro(s) para coletar todo o néctar. Agora você pode usar os botões \"Executar\" e \"Passo\"."
+      2-3 Bee Debugging 6_instruction: "Que doce desafio!\r\n\r\nCorrija o(s) erro(s)\npara coletar todo o néctar."
       2-3 Bee Debugging 7_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging 8_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging 9_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Avaliação:  Esses blocos estão
-        me incomodando. Conserte o(s) erro(s) para coletar todo o néctar e produzir
-        todo o mel.
+        Corrija o(s) erro(s) para coletar todo o néctar
+        e produzir todo o mel.
+      2-3 Bee Debugging 8_instruction: "Quantas flores lindas!\r\n\r\nCorrija o(s)\nerro(s) para coletar todo o néctar."
+      2-3 Bee Debugging 9_instruction: "Uau, que ferroada!\r\n\r\nVocê\nterá que corrigir algumas coisas neste programa para coletar todo o\nnéctar e produzir todo o mel."
+      2-3 Bee Debugging Assessment 1_instruction: "Avaliação:  Agora é hora de\nmostrar o que você sabe!\r\n\r\nCorrija o(s) erro(s) para coletar todo o néctar e\nproduzir todo o mel."
       2-3 Bee Functions 1_instruction: |
         Funções são blocos de código que realizam
         uma tarefa. Use a função "obtenha 2 néctares" para coletar o néctar de cada
         flor.
-      2-3 Bee Functions 10_instruction: |
-        As flores roxas podem ter 1 ou 0 néctar.  Crie
-        uma função que coleta néctar apenas das flores que têm néctar.
-      2-3 Bee Functions 2_instruction: |
-        As funções são blocos de código que realizam
-        uma tarefa. Use a função "obtenha 5" para obter 5 néctares por vez. Lembre-se também
-        de usar um laço para obter um bloco contador ideal.
+      2-3 Bee Functions 10_instruction: "As flores roxas variam entre 1 ou\n0 néctar a cada vez que você executa o desafio.   \r\n\r\nCrie uma função que coleta\nnéctar apenas das flores que o têm."
+      2-3 Bee Functions 2_instruction: "As funções são blocos de código que realizam\numa tarefa. \r\n\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       2-3 Bee Functions 3_instruction: Colete todo o néctar de cada flor.
-      2-3 Bee Functions 4_instruction: |
-        A função "mova e obtenha néctar" vira
-        a abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use
-        a função para coletar todo o néctar.
+      2-3 Bee Functions 4_instruction: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \r\n\r\nUse\na função para coletar todo o néctar."
       2-3 Bee Functions 5_instruction: |
         Agora há mais néctar nas flores.
         Edite a função dada para que ela colete 4 néctares e use-a para coletar
@@ -334,10 +236,9 @@ pt-BR:
         para coletar o néctar de cada flor.
       2-3 Bee Functions Assessment 2_instruction: |
         Avaliação: Crie uma função
-        para produzir 3 unidades de mel de uma vez.
-      2-3 Bee Loops 1_instruction: |
-        Cada flor contém uma unidade de néctar. Colete
-        o néctar de cada uma das flores. 
+        para virar, avançar e produzir 3 unidades de mel, então retorne a abelha para o local onde ela começou
+        e vire-a de volta.
+      2-3 Bee Loops 1_instruction: "Essas flores parecem deliciosas!\r\n\r\nColete o néctar\nde cada uma das flores usando o menor número possível de blocos."
       2-3 Bee Loops 10_instruction: |
         Você pode usar um laço enquanto dentro de outros dois
         laços para coletar todo o néctar?
@@ -348,49 +249,42 @@ pt-BR:
         Use laços enquanto para coletar todo o néctar
         das flores desse campo.
       2-3 Bee Loops 13_instruction: |
-        Avaliação: use o bloco repita para coletar
-        todo o néctar.
+        Avaliação: Colete todo o néctar usando
+        o menor número possível de blocos.
       2-3 Bee Loops 1A_instruction: |
         Olá, eu sou uma abelha. Você pode me ajudar a coletar
         o néctar dessas flores? 
       2-3 Bee Loops 2_instruction: |
-        Use um laço para coletar o néctar e produzir o
-        mel.
-      2-3 Bee Loops 2A_instruction: |
-        Você consegue realizar a mesma tarefa mais facilmente
-        com um laço?
+        Colete todo o néctar e produza todo o mel
+        usando o menor número possível de blocos.
+      2-3 Bee Loops 2A_instruction: Desta vez, use um laço para juntar todo o néctar.
       2-3 Bee Loops 3_instruction: |
         Colete o néctar de cada flor e produza mel
-        em cada colmeia.
-      2-3 Bee Loops 3A_instruction: Você consegue usar um laço para coletar todo o néctar?
-      2-3 Bee Loops 3B_instruction: Agora, use o novo bloco repita para coletar todo o néctar e produzir todo o mel.
-      2-3 Bee Loops 4_instruction: |
-        Use um laço parecido com o do último desafio, mas realize
-        uma ação de virar dentro dele.
-      2-3 Bee Loops 4A_instruction: O que acontece se você repetir esta sequência 3 vezes? Não se esqueça de fazer o mel no final!
-      2-3 Bee Loops 5_instruction: |
-        Use um laço para descer as escadas e coletar o
-        néctar.
+        em cada colmeia usando o menor número possível de blocos.
+      2-3 Bee Loops 3A_instruction: 'Use um laço "repita" para coletar todo o néctar.'
+      2-3 Bee Loops 3B_instruction: |
+        Agora, use o bloco "repita" para coletar todo o
+        néctar e produzir todo o mel.
+      2-3 Bee Loops 4_instruction: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
+      2-3 Bee Loops 4A_instruction: "Quantas vezes os laços ajudaram você neste desafio?  \r\n\r\nOs laços\nsão seus amigos! Use alguns deles para completar este desafio com o menor número\nde blocos possível."
+      2-3 Bee Loops 5_instruction: "O formato deste caminho é diferente dos\ndemais. \r\n\r\nVocê consegue coletar todo o néctar usando o menor número possível de blocos?"
       2-3 Bee Loops 6_instruction: |
-        Use um laço para coletar o néctar de cada flor
-        e produzir mel em cada colmeia.
+        Você consegue encontrar a maneira mais rápida para a abelha
+        coletar todo o néctar e produzir todo o mel?
       2-3 Bee Loops 7_instruction: |
-        Coloque esses blocos em um laço para coletar o néctar
-        de cada flor.
-      2-3 Bee Loops 8_instruction: |
-        Essas flores roxas têm uma quantidade desconhecida de
-        néctar. Use o laço "enquanto houver néctar" para coletar todo o néctar. Esse laço
-        será executado enquanto a condição for verdadeira, neste caso, enquanto néctar > 0.
+        Que lindo campo florido!  Ajude a
+        abelha a visitar cada flor. Você consegue achar uma maneira de fazer isso com menos de 7 blocos?
+      2-3 Bee Loops 8_instruction: "Essas flores roxas têm uma quantidade diferente de\nnéctar a cada vez que você executa o desafio. \r\n\r\nUse o laço \"enquanto houver néctar\" para\ncoletar todo o néctar. \r\n\r\nEsse laço será executado enquanto a condição\nfor verdadeira, neste caso, enquanto \"néctar > 0\"."
       2-3 Bee Loops 9_instruction: |
         O laço enquanto pode realizar a mesma ação que
         um comando se em um laço. Adicione um laço enquanto a esse código para realizar a mesma
         tarefa.
       2-3 Bee Loops Assessment 1_instruction: |
-        Avaliação - use um laço enquanto para coletar
-        todo o néctar dessa flor.
+        Avaliação: Use um laço "enquanto" para
+        coletar todo o néctar dessas flores.
       2-3 Maze 1_instruction: |
         Você pode me ajudar a pegar o porco malvado? Junte alguns
-        blocos "avance" e clique em "Executar". 
+        blocos "avance" abaixo do bloco "quando executar" e clique em "Executar". 
       2-3 Maze 10_instruction: Leve-me até a maldade verde! (Cuidado com a dinamite)
       2-3 Maze 11_instruction: |
         Estou com fome, leve-me até a flor! Quantas vezes
@@ -404,23 +298,34 @@ pt-BR:
       2-3 Maze 12 (old)_instruction: |
         Leve-me até o porco, agora com o bloco repita
         vezes!
-      2-3 Maze 12 - One Move Block_instruction: "Vá para o porco! Mas desta vez, você só pode usar um bloco 'Avançar'. Você vê outros blocos que poderiam ajudá-lo?"
+      2-3 Maze 12 - One Move Block_instruction: |
+        Pegue o porco! Mas, desta vez, você
+        só pode usar um bloco "avance". Você está vendo mais algum bloco que poderia
+        ajudar?
       2-3 Maze 12_instruction: |
-        Você pode substituir esses cinco blocos por apenas dois blocos?
-        (Dica: você precisa criar um laço usando um bloco "repita" para passar deste nível.)
+        Você consegue pegar o porco criando um laço que usa
+        apenas um bloco "avance" dentro de um bloco "repita"?
       2-3 Maze 13 (old)_instruction: |
         Leve-me até o porco, agora com o bloco repita
         até!
-      2-3 Maze 13_instruction: "Leve-me até o porco usando apenas dois blocos.\r\n(Dica:\nvocê precisa usar o bloco \"repita\" para passar deste nível)"
+      2-3 Maze 13_instruction: |
+        Leve-me até o porco! Você só pode usar um bloco
+        "avance" desta vez
       2-3 Maze 14 (old)_instruction: Leve-me até o porco com o bloco repita até!
       2-3 Maze 14_instruction: |
         Leve-me até o girassol! (Onde está o bloco "repita
         vezes" quando eu preciso dele?)
       2-3 Maze 15 (old)_instruction: Leve-me até o porco com o bloco repita até!
-      2-3 Maze 15_instruction: 'Use dois laços "repita" para chegar até o porco usando o menor número de blocos.'
+      2-3 Maze 15_instruction: |
+        Neste desafio, dois laços "repita" ajudarão você
+        a pegar o porco com o menor número possível de blocos!
       2-3 Maze 16 (old)_instruction: Leve-me até o porco com o bloco repita até!
-      2-3 Maze 16 before_instruction: Leve-me até o porco.
-      2-3 Maze 16_instruction: Leve-me até o girassol. Repita a sequência!
+      2-3 Maze 16 before_instruction: |
+        Você consegue descobrir a maneira mais rápida de me
+        levar até o porco?
+      2-3 Maze 16_instruction: |
+        Os laços funcionam inclusive com mais de um bloco dentro! Você
+        consegue repetir essa sequência para levar o zumbi até o girassol?
       2-3 Maze 2_instruction: Esse porco está me irritando. Ajude-me a chegar até ele!
       2-3 Maze 3_instruction: |
         Trace o caminho e leve-me até o porco bobalhão. Desvie
@@ -434,11 +339,15 @@ pt-BR:
       2-3 Maze 8_instruction: Leve-me até o porco!
       2-3 Maze 9_instruction: Leve-me até a maldade verde! (Cuidado com a dinamite)
       2-3 Maze Loops 1_instruction: Você pode me levar até o porco usando 5 blocos?
-      2-3 Maze Loops 17_instruction: Leve-me até o girassol!
-      2-3 Maze Loops 18_instruction: "Leve-me até o girassol!\r\n(Dica: você\nterá de usar um laço \"repita\" dentro de outro\npara passar deste nível.)"
-      2-3 Maze Loops 19_instruction: Leve-me até o girassol!
-      2-3 Maze Loops 20_instruction: Leve-me até o girassol!
-      2-3 Maze Loops 21_instruction: Leve-me até o girassol!
+      2-3 Maze Loops 17_instruction: Use o que você aprendeu para me levar até o girassol!
+      2-3 Maze Loops 18_instruction: "Leve-me até o girassol usando o menor número de blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
+      2-3 Maze Loops 19_instruction: "Vamos subir o nível! \r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
+      2-3 Maze Loops 20_instruction: |
+        Leve-me até o girassol usando o menor número
+        possível de blocos!
+      2-3 Maze Loops 21_instruction: |
+        Leve-me até o girassol usando o menor número possível
+        de blocos!
       2-3 Maze Loops Assessment 1_instruction: |
         Avaliação: Leve-me até o girassol
         usando apenas 5 blocos! 
@@ -595,32 +504,35 @@ pt-BR:
       4-5 Artist 11_instruction: |
         Complete as retas verdes. As retas têm 300 pixels
         de comprimento e são separadas por 15 pixels.
-      4-5 Artist 2_instruction: Você pode repetir esse código para completar o quadrado?
+      4-5 Artist 2_instruction: |
+        Repita esse código usando o bloco "repita" para completar
+        o quadrado.
       4-5 Artist 3.5_instruction: |
-        Ok, tente descobrir o que acontece se você executar
-        esse código (ou pressione "Executar" para testar o código). Em seguida, repita o código o número suficiente de vezes para completar
-        o desenho. As cores serão (provavelmente) diferentes toda vez.
+        Tente descobrir o que acontece se você executar esse
+        código (ou pressione "Executar" para testar o código). Em seguida, repita o código o número suficiente de vezes
+        para completar o desenho!
       4-5 Artist 3_instruction: |
         Esse canteiro de flores retangular tem um perímetro de 600.
-        O lado comprido tem 200 de comprimento. Desenhe o retângulo.
+        O lado comprido tem 200 de comprimento. Desenhe o retângulo usando o menor número possível
+        de blocos.
       4-5 Artist 4_instruction: |
         Quantos graus há em um círculo? Repita os blocos
         para criar um círculo de cores.
-      4-5 Artist 5_instruction: Que ângulo você usa?
+      4-5 Artist 5_instruction: |
+        O que podemos usar para substituir "???" para garantir que
+        o zumbi complete este desenho usando o laço dado?
       4-5 Artist 6_instruction: |
         Esse triângulo equilátero tem ângulos de 60, 60
         e 60 graus. Cada lado tem 200 pixels. Complete o desenho.
       4-5 Artist 7_instruction: |
-        O triângulo reto tem ângulos de 30, 60 e 90
-        graus. O comprimento do lado inclinado é o dobro da altura de 100 pixels. Complete
-        o desenho.
-      4-5 Artist 8_instruction: |
-        A linha do meio-campo em um campo de futebol é perpendicular
-        às linhas laterais. O campo tem um perímetro de 800 pixels e tem 240 pixels
-        de comprimento. Qual é sua largura? Desenhe as bordas e a linha do meio-campo.
+        Este triângulo retângulo tem ângulos de 30, 60 e 90
+        graus. O comprimento do lado inclinado (comprimento da hipotenusa) é de 200 pixels.
+        Complete o desenho.
+      4-5 Artist 8_instruction: "A linha do meio-campo em um campo de futebol é perpendicular\nàs linhas laterais.  \r\nEste retângulo tem um perímetro de 800 pixels no total,\ne 240 pixels de comprimento. Qual é sua altura?  \r\n\r\nDesenhe as bordas e a\nlinha do meio-campo."
       4-5 Artist 9_instruction: |
-        Desenhe a outra metade de forma que o design seja simétrico.
-        Os triângulos são equiláteros e têm 50 pixels de comprimento.
+        Desenhe a metade da direita desta imagem de forma que o desenho
+        seja simétrico. Os triângulos são equiláteros e têm lados de 50 pixels
+        de comprimento.
       4-5 Artist Assessment 1_instruction: |
         Avaliação: Use um laço para desenhar o triângulo
         equilátero. Cada lado tem 300 pixels.
@@ -646,7 +558,11 @@ pt-BR:
         Alguém começou o código, mas então percebeu que
         deve haver uma forma mais rápida! Use um bloco "para" para substituir os blocos e
         complete a espiral hexagonal. (Dica: a última linha tem 200 pixels).
-      4-5 Artist For Loops 2_instruction: 'Este é um bloco de "para". Em vez de digitar 1, 2,3... 10, o bloco "para" pode repetir os blocos dentro dele e contar os números para você. Coloque o número 10 na seção "a" do bloco "para".'
+      4-5 Artist For Loops 2_instruction: |
+        Este é um bloco "para". Em vez de digitar
+        1, 2, 3... 10, o bloco "para" pode repetir os blocos dentro dele e contar os
+        números para você. Coloque o número 10 na seção "até" do bloco
+        "para".
       4-5 Artist For Loops 3_instruction: |
         Como podemos contar de 1 até 50? Edite o
         bloco "para".
@@ -737,29 +653,16 @@ pt-BR:
         Desenhe essas 3 flores. A altura da primeira
         é 100 e a próxima flor sempre tem 50 pixels de altura a mais que
         a anterior. As flores também são separadas por 100 pixels.
-      4-5 Artist Patterns 1_instruction: |
-        Você pode desenhar esse quadrado usando um laço?
-        Cada lado tem 20 pixels de comprimento.
-      4-5 Artist Patterns 10_instruction: |
-        O código desenha duas fileiras de hexágonos -
-        repita todo o código 4 vezes para desenhar a colmeia inteira. Dica: você vai precisar
-        recuar 120 pixels no laço mais externo para garantir que o artista não
-        desenhe fora da tela.
+      4-5 Artist Patterns 1_instruction: "Desenhe esse quadrado usando um laço.\r\n\r\nCada\nlado tem 20 pixels de comprimento."
+      4-5 Artist Patterns 10_instruction: "Este código desenha duas fileiras de hexágonos -\nrepita todo o código 4 vezes para desenhar a colmeia inteira. \r\n\r\nVocê vai\nprecisar recuar 120 pixels no laço mais externo para garantir que o artista\nnão desenhe fora da tela.\r\n"
       4-5 Artist Patterns 11_instruction: |
         Quantas vezes você precisa repetir isso
-        para desenhar um semicírculo? Dica: se há 360 graus em um círculo e cada
-        repetição move 3 graus, quantas vezes você precisaria repetir para desenhar um círculo completo?
-      4-5 Artist Patterns 12_instruction: |
-        Se você copiar esse laço e virar para a esquerda ao invés
-        da direita, o que acontece? Você pode repetir isso para desenhar essa onda?
-      4-5 Artist Patterns 13_instruction: |
-        Agora vamos repetir tudo quatro
-        vezes para criar a moldura dessa imagem. Preste atenção aos cantos - você não pode
-        simplesmente virar 90 graus! Se repetir uma ação de virar 3 graus 60 vezes faz um semicírculo,
-        qual desses blocos de código vai fazer um quarto de círculo para os cantos?
+        para desenhar um semicírculo? 
+      4-5 Artist Patterns 12_instruction: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés da direita, o que acontece? \r\n\r\nVocê pode repetir tudo\nisso para desenhar essa onda?"
+      4-5 Artist Patterns 13_instruction: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \r\n\r\nSe repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
       4-5 Artist Patterns 2_instruction: |
-        Se você colocar seu laço do quadrado dentro
-        de outro laço, o chamamos de laço aninhado. O que você precisa adicionar ao seu laço externo
+        Se você colocar seu laço do quadrado dentro de outro
+        laço, o chamamos de laço aninhado. O que você precisa adicionar como um laço externo
         para garantir que todos os 15 quadrados fiquem alinhados?
       4-5 Artist Patterns 3_instruction: |
         Agora, vamos nos aprofundar mais um nível!
@@ -772,10 +675,7 @@ pt-BR:
       4-5 Artist Patterns 5.5_instruction: |
         Quantas vezes você precisa repetir
         esse bloco para desenhar toda a grade de diamantes?
-      4-5 Artist Patterns 5_instruction: |
-        Vamos repetir isso para fazer uma fileira de 6 diamantes.
-        Perceba que alteramos nosso código do diamante para repetir 3 vezes ao invés de 2 - por que
-        você acha que fizemos isso?
+      4-5 Artist Patterns 5_instruction: "Repita este código para fazer uma fileira de 6 diamantes.\n\r\n\r\nPerceba que alteramos nosso código do diamante para repetir 3 vezes ao invés\nde 2 - por que você acha que fizemos isso?\r\n"
       4-5 Artist Patterns 6_instruction: |
         Quantas vezes você precisa repetir esse
         bloco para desenhar toda a grade de diamantes?
@@ -790,10 +690,7 @@ pt-BR:
       4-5 Artist Patterns 9.5_instruction: |
         Vamos repetir esse código para desenhar duas fileiras
         de hexágonos. Perceba como nossa segunda fileira está deslocada para a direita.
-      4-5 Artist Patterns 9_instruction: |
-        Agora, repita o código 3 vezes para desenhar a
-        a linha inteira. Dica: cada hexágono tem 80 pixels de largura da extrema esquerda
-        à extrema direita.
+      4-5 Artist Patterns 9_instruction: "Agora, repita o código 3 vezes e desenhe a\na fileira inteira. \r\n\r\nCada hexágono tem 80 pixels de largura da extrema esquerda\nà extrema direita."
       4-5 Artist Patterns Free Play_instruction: |
         Atividade livre - experimente criar
         seu próprio padrão!
@@ -806,66 +703,43 @@ pt-BR:
         uma flor ou uma colmeia. Colete néctar apenas das flores, mas primeiro verifique
         se o objeto é uma flor ou uma colmeia.
       4-5 Bee Conditionals 1_instruction: |
-        A abelha não sabe se isso é uma flor ou
-        uma colmeia. Colete néctar apenas das flores, mas primeiro verifique se o objeto é
-        uma flor ou uma colmeia.
+        Esta nuvem está tapando minha visão! Veja
+        se há uma flor atrás da nuvem, e só colete néctar se houver
+        uma flor. Cuidado, isso pode mudar!
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         Agora a abelha só quer néctar.
         Lembre-se, nem todos os objetos são flores, então faça a verificação para coletar néctar apenas
         das flores.
-      4-5 Bee Conditionals 2_instruction: |
-        Agora a abelha só quer néctar. Lembre-se,
-        nem todos os objetos são flores, então veja se o objeto abaixo da nuvem é
-        uma flor. Se ele for, então você pode coletar o néctar.
+      4-5 Bee Conditionals 2_instruction: "Mais nuvens! \r\n\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       4-5 Bee Conditionals 3_instruction: |
-        Agora a abelha só quer produzir mel.
-        Faça a verificação para produzir mel apenas nas colmeias.
+        Agora só quero produzir mel. Algumas
+        dessas nuvens podem ter colmeias atrás delas. Não se esqueça de procurar em todas as nuvens!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         O objeto desconhecido pode ser
         uma flor ou uma colmeia. Use o bloco se/senão para coletar néctar se ele for
         uma flor, senão para produzir mel (porque ele é, então, uma colmeia).
       4-5 Bee Conditionals 4_instruction: |
-        O objeto desconhecido pode ser uma flor
-        ou uma colmeia. Use o bloco se/senão para coletar néctar se ele for uma flor,
-        senão para produzir mel (porque ele é, então, uma colmeia).
-      4-5 Bee Conditionals 5_instruction: |
-        Deve haver uma flor ou uma colmeia
-        sob essas nuvens. Use o bloco se/senão para coletar néctar se houver uma
-        uma flor, senão para produzir mel (porque há, então, uma colmeia).
+        Às vezes esta nuvem esconde uma flor
+        e outras vezes uma colmeia! Use o bloco "se/senão" para coletar néctar
+        se for uma flor, senão para produzir mel (porque é uma colmeia).
+      4-5 Bee Conditionals 5_instruction: "Deve haver uma flor ou uma colmeia\natrás de cada uma dessas nuvens!\r\n\r\nUse o bloco \"se/senão\" para coletar néctar\nse houver uma flor.\r\nCaso contrário, produza mel (porque há uma colmeia)."
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         Essa flor roxa pode ter
         1, 2 ou 3 néctares. Aqui um bloco se-senão está combinado com outro bloco
         se-senão para criar um bloco se, senão-se, senão. Complete a solução para coletar
         a quantidade desconhecida de néctar.
-      4-5 Bee Conditionals 6_instruction: |
-        Essa flor roxa pode ter 1,
-        2 ou 3 néctares. Aqui um bloco se-senão está combinado com outro bloco se-senão
-        para criar um bloco se, senão-se, senão. Complete a solução para coletar a
-        quantidade desconhecida de néctar.
-      4-5 Bee Conditionals 7_instruction: |
-        Lembre-se de que as flores roxas podem ter
-        1, 2 ou 3 néctares. Complete a função "verifique a flor roxa" e use-a
-        para coletar todo o néctar das flores.
-      4-5 Bee Conditionals 8_instruction: |
-        Escreva dentro da função "verifique flor e
-        produza mel". Sua função deve verificar se a flor roxa tem 3, 2 ou
-        1 néctar e coletar todo o néctar. Então, siga em frente e produza mel.
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Avaliação: esse código está errado.
-        Complete a função "colete néctar ou produza mel" e então chame-a para coletar
-        todo o néctar e produzir o mel. Lembre-se, as flores roxas podem ter 1, 2 ou 3 néctares.
-      4-5 Bee Debugging 1_instruction: |
-        Estes blocos estão me incomodando. Você pode
-        consertá-los?
+      4-5 Bee Conditionals 6_instruction: "Não tenho certeza de quanto néctar esta flor\ntem, mas sei que ela tem 1, 2 ou 3 unidades de néctar. \r\n\r\nCombine os blocos\ncondicionais (\"se\" e/ou \"se/senão\") para coletar apenas a quantidade de néctar que a flor tiver.\n\r\n\r\nLembre-se de que a quantidade de néctar pode mudar a cada vez que você executar o desafio!"
+      4-5 Bee Conditionals 7_instruction: "Essas flores podem ter 3, 2 ou 1 néctar.\n\r\n\r\nComplete a função \"verifique a flor roxa\" e use-a para coletar\ntodo o néctar das flores."
+      4-5 Bee Conditionals 8_instruction: "Escreva a função \"verifique flor e\nproduza mel\". \r\n\r\nSua função deve verificar se a flor roxa tem 3, 2\nou 1 néctar e coletar todo o néctar. \r\nEntão, avance e produza mel."
+      4-5 Bee Conditionals Assessment 1_instruction: "**Avaliação:** esta nuvem\nesconde uma flor com um néctar ou uma colmeia que precisa de um mel.  \r\n\r\nComplete\na função \"colete néctar ou produza mel\" e então, chame-a para coletar o néctar\nou o mel.  \r\n"
+      4-5 Bee Debugging 1_instruction: "Esses blocos estão me incomodando. \r\n\r\nVocê\npode consertá-los?"
       4-5 Bee Debugging 10_instruction: Encontre os erros e corrija-os.
       4-5 Bee Debugging 11_instruction: Isso conta corretamente?
       4-5 Bee Debugging 2_instruction: Ajude a abelha a coletar o néctar e fabricar o mel.
       4-5 Bee Debugging 3_instruction: Encontre os erros e corrija-os.
       4-5 Bee Debugging 4_instruction: Esses blocos não funcionam. Qual é o padrão?
       4-5 Bee Debugging 5_instruction: Algo não está certo aqui...
-      4-5 Bee Debugging 6_instruction: |
-        A flor roxa tem uma quantidade desconhecida de
-        néctar. Conserte os blocos para coletar todo o néctar da flor.
+      4-5 Bee Debugging 6_instruction: "A flor roxa tem uma quantidade diferente\nde néctar a cada vez que você executa o desafio. \r\n\r\nCorrija os blocos para coletar todo\no néctar da flor em todas as vezes."
       4-5 Bee Debugging 7_instruction: Está faltando alguma coisa na função...
       4-5 Bee Debugging 8_instruction: |
         Essa função está certa, mas não é usada
@@ -878,10 +752,8 @@ pt-BR:
         Use um laço aninhado. 
       4-5 Bee Nested Loops 3_instruction: |
         Colete todo o néctar colocando o
-        código inicial dentro de um laço aninhado.
-      4-5 Bee Nested Loops 4_instruction: |
-        Colete todo o néctar de cada flor
-        e produza mel em cada colmeia. Use um laço aninhado. 
+        código inicial dentro de outro laço.
+      4-5 Bee Nested Loops 4_instruction: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \r\n\r\nUse um laço aninhado. "
       4-5 Bee Nested Loops 5_instruction: |
         Colete todo o néctar criando
         um laço aninhado.
@@ -897,7 +769,7 @@ pt-BR:
         Colete todo o néctar dessas flores
         aninhando um laço enquanto dentro de um bloco repita.
       4-5 Bee Nested Loops Assessment 1_instruction: |
-        Avaliação - colete todo o
+        **Avaliação:** colete todo o
         néctar e produza todo o mel usando laços.
       4-5 Bee Nested Loops Rows_instruction: |
         Colete o néctar das fileiras de flores!
@@ -933,46 +805,37 @@ pt-BR:
       4-5 Maze 6_instruction: |
         Você pode resolver esse desafio usando o menor número
         possível de blocos?
-      4-5 Maze 7_instruction: Querida pessoa. Mim zumbi. Precisa... chegar... girassol.
-      4-5 Maze 8_instruction: |
-        Use o bloco "repita" para levar o zumbi até o
-        girassol. (Desvie das carnívoras!)
-      4-5 Maze 9_instruction: 'Crie um laço com o bloco "repita até".'
-      4-5 Maze Assessment 1_instruction: 'Avaliação: chegue até o girassol.'
+      4-5 Maze 7_instruction: |
+        Leve o zumbi até o girassol sem demora! Você consegue
+        resolver o desafio com menos de 11 blocos?
+      4-5 Maze 8_instruction: "Leve o zumbi até o girassol usando o menor número possível\nde blocos.  \r\n(Desvie das carnívoras!)"
+      4-5 Maze 9_instruction: "Agora temos um novo bloco chamado \"repita até\". \r\nIsso\nnos permitirá repetir comandos até o zumbi chegar no girassol. \r\n\r\nUse\no novo bloco \"repita até\" para resolver este desafio com o menor número possível de comandos."
+      4-5 Maze Assessment 1_instruction: |
+        Avaliação: chegue até o girassol usando
+        o menor número possível de blocos.
       4-5 Maze Conditionals 1_instruction: |
-        Use o bloco repita até para levar o
+        Use o bloco "repita até" para levar o
         zumbi até o girassol.
-      4-5 Maze Conditionals 10_instruction: "Você pode adicionar apenas 3 blocos para ajudar o zumbi a resolver um labirinto mais completo? \r\n\r\nSe você fizer isso certo, ele pode andar em qualquer caminho com curvas, não importa o comprimento!"
+      4-5 Maze Conditionals 10_instruction: "Você pode adicionar apenas 3 blocos para ajudar\no zumbi a resolver um labirinto mais complexo? \r\n\r\nSe fizer isso certo, ele poderá andar\nem qualquer caminho com curvas, não importa o tamanho!"
       4-5 Maze Conditionals 2_instruction: |
-        Use o bloco repita até para levar o
+        Use o bloco "repita até" para levar o
         zumbi até o girassol.
-      4-5 Maze Conditionals 3_instruction: |
-        Use o bloco "se" para me deixar decidir
-        quando virar. Dica: você precisa de somente mais um bloco, mas aprenda como o configuramos
-        para que você possa fazer isso sozinho na próxima vez.
+      4-5 Maze Conditionals 3_instruction: "Use o bloco \"se\" para me ajudar a decidir\nquando virar. \r\n"
       4-5 Maze Conditionals 4_instruction: |
-        Ok, esse desafio é como o último,
-        mas você precisa se lembrar de como usou o bloco "se" e o bloco "repita"
+        Ok, resolva este desafio como resolveu
+        o último, mas você precisa se lembrar de como usou os blocos "se" e "repita até"
         juntos.
-      4-5 Maze Conditionals 5_instruction: |
-        Mim querer girassol! Use um bloco "se"
-        para que eu chegue lá com o menor número de blocos possível.
-      4-5 Maze Conditionals 6_instruction: |
-        Mim querer girassol! Use um bloco "se"
-        para que eu chegue lá com o menor número de blocos possível.
+      4-5 Maze Conditionals 5_instruction: "\"Mim querer girassol!\"  \r\n\r\nUse um\nbloco \"se\" para levar o zumbi até o girassol com o menor número de blocos\npossível."
+      4-5 Maze Conditionals 6_instruction: "\"Mim comer girassol!\"\r\n\r\nUse um bloco\n\"se\" para levar o zumbi até o girassol com o menor número de blocos possível."
       4-5 Maze Conditionals 7_instruction: |
-        Ok, vamos praticar mais uma vez
-        - essa parte não é muito diferente, mas fique de olho nas carnívoras!
-      4-5 Maze Conditionals 8_instruction: |
-        O bloco "se-senão" verifica uma condição
-        e, em seguida, faz uma coisa OU outra. Para me levar ao girassol, tente
-        usar esse novo bloco.
-      4-5 Maze Conditionals 9_instruction: |
-        Vamos praticar o uso do bloco "se-senão" mais uma
-        vez, você consegue fazer corretamente na primeira tentativa?
+        A solução deste desafio não é muito
+        diferente, mas fique de olho nas carnívoras!
+      4-5 Maze Conditionals 8_instruction: "O bloco \"se/senão\" verifica uma condição\ne, em seguida, faz uma coisa OU outra. \r\n\r\nUse este novo bloco para me levar até\no girassol."
+      4-5 Maze Conditionals 9_instruction: "Mais um desafio com o bloco\n\"se/senão\"\r\n\r\nFaça o caminho com seu dedo para ver se consegue descobrir a solução\nna sua primeira tentativa."
       4-5 Maze Conditionals Assessment 1_instruction: |
-        Use um bloco "repita até" e
-        um bloco "se-senão" para me levar até o girassol no menor número de blocos possível.
+        **Avaliação:** use um bloco
+        "repita até" e um bloco "se/senão" para me levar até o girassol com o menor número de blocos
+        possível.
       4-5 Nested Loops 1_instruction: |
         Complete o código para desenhar esses triângulos. O
         primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
@@ -987,38 +850,27 @@ pt-BR:
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
       4-5 Nested Loops 2_instruction: |
-        Agora, aninhe esse laço dentro de outro laço para desenhar
-        10 triângulos. Isso se chama laço aninhado. Dica: todos os 10 triângulos completam
-        uma rotação de 360 graus.  
-      4-5 Nested Loops 3_instruction: "Crie um sol aninhando o código inicial\ndentro de outro laço. Chamamos isso de laço aninhado.\r\n"
+        Agora, aninhe esse laço dentro de outro laço para
+        desenhar 10 triângulos. Isso se chama laço "aninhado".  
+      4-5 Nested Loops 3_instruction: "Crie um sol aninhando o código inicial em\noutro laço.\r\n\r\nPara conseguir este desenho legal com um centro vazio, você terá que\ndar um pulo para a frente do tamanho do triângulo antes de virar."
       4-5 Nested Loops 5_instruction: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6_instruction: |
         Você pode desenhar um hexágono repetindo o
         código do triângulo?
-      4-5 Nested Loops 7_instruction: |
-        Repita esse design 10 vezes. Quanto
-        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
-      4-5 Nested Loops 8_instruction: |
-        Repita esse design 6 vezes. Quanto
-        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 6?)
+      4-5 Nested Loops 7_instruction: "Repita esse desenho 10 vezes. \r\n\r\nQuanto\nvocê precisa virar a cada repetição?"
+      4-5 Nested Loops 8_instruction: "Repita essa forma 6 vezes. \r\n\r\nQuanto\nvocê precisa virar a cada repetição? "
       4-5 Nested Loops 9_instruction: Desenhe o dente na boca do crocodilo!
       4-5 Nested Loops Assessment 1_instruction: |
-        Use um laço aninhado para completar
-        o design.
+        Avaliação: use um laço aninhado para
+        completar o desenho.
       4-5 While Loops 1_instruction: |
-        Mova-me para o buraco e preencha-o com
-        duas pás cheias de terra, usando o bloco "preencha".
+        Mova-me para o buraco e preencha-o com duas pás cheias
+        de terra, usando o bloco "preencha".
       4-5 While Loops 2_instruction: |
-        Mova-me para o monte de terra e remova-o
-        com 5 pás de terra, usando o bloco "remova".
-      4-5 While Loops 3_instruction: |
-        Mova-me para o monte e remova toda a
-        terra, então mova-me para o buraco e preencha-o completamente. Dica: use o menor número de
-        blocos possível.
-      4-5 While Loops 4_instruction: |
-        Uau, eu encontrei um buraco realmente fundo! Eu não
-        sei quantas pás de terra são necessárias. Você pode escrever um programa que preencha-o
-        até que o solo fique nivelado? Dica: dessa vez, tente usar o laço enquanto.
+        Mova-me para o monte de terra e remova-o com
+        5 pás, usando o bloco "remova 1".
+      4-5 While Loops 3_instruction: "Use o menor número possível de blocos para completar\neste desafio!  \r\n\r\nMova-me para o monte e remova toda a terra, então mova-me para\no buraco e preencha-o completamente."
+      4-5 While Loops 4_instruction: "Uau, que demais! \r\n\r\nEu não sei de quantas\npás cheias de terra esse buraco precisa.  \r\nVocê pode escrever um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
       4-5 While Loops 5_instruction: |
         Uau, agora há dois buracos profundos! Você
         pode escrever um programa que os preencha até o que o solo fique nivelado?
@@ -1030,8 +882,8 @@ pt-BR:
         Você pode escrever um programa que remova cada um deles até que o solo fique nivelado?
       4-5 While Loops 8_instruction: |2
          Há um buraco realmente fundo e um monte de terra
-        realmente grande. Quantas pás de terra são necessárias para
-        tornar o solo plano? Dica: use o laço enquanto para ambos.
+        realmente grande. Quantas pás cheias de terra são necessárias para
+        tornar o solo plano?
       4-5 While Loops Assessment 1_instruction: |
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
@@ -1606,19 +1458,18 @@ pt-BR:
       Course 4 Artist 1_instruction: |
         Ajude-me a desenhar uma caixa. (Cada linha tem
         200 pixels de comprimento) 
-      Course 4 Artist 10_instruction: "Clique aqui para ver as dicas novamente!\r\n\r\nApresentamos\naqui um código para uma forma interessante. O que acontece quando você o repete várias\nvezes, virando a cada iteração? Observe que as viradas nessa forma\nsomam 420 graus, o que significa que quando seu artista terminar de desenhar,\nele estará apontando para uma direção diferente do que quando você começou. Essa nova direção\né exatamente 60 graus à direita de onde você iniciou."
+      Course 4 Artist 10_instruction: "Clique aqui para ver as instruções completas novamente!\r\n\r\nApresentamos\naqui um código para uma forma interessante. O que acontece quando você o repete várias\nvezes, virando a cada repetição? Observe que as viradas nessa forma\nsomam 420 graus, o que significa que quando seu artista terminar de desenhar,\nele estará de frente para uma direção diferente do que quando você começou. Essa nova direção\né exatamente 60 graus à direita de onde você iniciou."
       Course 4 Artist 11_instruction: |
-        Agora um desafio!  Temos aqui um design que
-        usa apenas blocos que já foram mostrados. Você consegue descobrir como
-        recriá-lo? Fique à vontade para usar tentativa e erro. Não esperamos que você
-        seja perfeito na primeira vez. Quer ver mais dicas? Clique aqui!
+        Agora um desafio! Fique à vontade para usar tentativa
+        e erro. Não esperamos que você seja perfeito na primeira vez. Quer
+        ver mais dicas? Clique aqui!
       Course 4 Artist 12_instruction: "Quer ver o design de inspiração ou as\ndicas? Clique aqui!\r\n\r\nCaso contrário, crie um design você mesmo!"
       Course 4 Artist 13_instruction: |
         Ainda jogando?  Temos aqui uma tela em branco
         na qual você pode projetar o que quiser!
       Course 4 Artist 2_instruction: |
-        Você consegue repetir este código para desenhar
-        o quadrado em cinza?
+        Você consegue usar um laço para desenhar o quadrado em cinza? (Cada
+        lado mede 300 pixels de comprimento)
       Course 4 Artist 20_instruction: |
         Ainda jogando?  Temos aqui uma tela em branco na qual
         você pode criar o que quiser!
@@ -1635,9 +1486,8 @@ pt-BR:
         talvez você precise executar o código várias vezes para descobrir quais blocos
         precisam ser adicionados.
       Course 4 Artist 6_instruction: |
-        Complete o código para desenhar esses triângulos.
-        Dica: há 3 triângulos em uma rotação de 360 graus... quantas vezes o número
-        3 cabe em 360?
+        Complete o código para desenhar esses três triângulos
+        equiláteros.
       Course 4 Artist 7_instruction: |
         Agora, aninhe esse laço dentro de outro laço para desenhar
         10 triângulos. Isso se chama laço aninhado. Dica: todos os 10 triângulos completam
@@ -1645,19 +1495,18 @@ pt-BR:
       Course 4 Artist 8_instruction: |
         Desenhe esse sol repetindo todo este bloco de código
         várias vezes.
-      Course 4 Artist 8a_instruction: "Lembra-se dessa forma? Agora vamos deixar\nvocê construí-la sem dar nenhum bloco inicial!\r\nDica: há\n3 triângulos dentro da rotação de 360 graus... quantas vezes 3 cabe em\n360?"
-      Course 4 Artist 9_instruction: |
-        Repita esse design 10 vezes e certifique-se de virar
-        a cada figura desenhada. Uma dica sobre o quanto você
-        precisa virar: quanto é 360 dividido por 10?
+      Course 4 Artist 8a_instruction: |
+        Lembra-se dessa forma? Agora vamos deixar
+        você construí-la sem dar nenhum bloco inicial!
+      Course 4 Artist 9_instruction: "Repita esse desenho 10 vezes e certifique-se de\nvirar a cada forma desenhada. \r\n"
       Course 4 Artist Binary 1_instruction: "Temos aqui uma função que recebe uma string\nbinária de 1's e 0's e instrui o artista a mover-se da esquerda para\na direita, de cima para baixo. O artista vai preencher os quadrados nos quais vir um 1 e ignorar\nos que tiverem um 0.\r\n\r\nExecute este código para ver como\no artista usa números binários para desenhar este padrão."
       Course 4 Artist Binary 1a_instruction: "Temos aqui uma função que recebe uma string\nbinária de 1's e 0's e instrui o artista a mover-se da esquerda para\na direita, de cima para baixo. O artista vai preencher os quadrados nos quais vir um 1 e ignorar\nos que tiverem um 0.\r\n\r\nExecute este código para ver como\no artista usa números binários para desenhar este padrão."
       Course 4 Artist Binary 2_instruction: |
         Qual dessas strings binárias você poderia
         repetir 8 vezes para desenhar esta imagem?
       Course 4 Artist Binary 3_instruction: |
-        Você consegue desenhar este padrão usando
-        a repetição de uma string binária de 3 dígitos?
+        Você consegue desenhar este padrão repetindo
+        apenas três dígitos binários? (0 e 1)?
       Course 4 Artist Binary 4_instruction: |
         Cada string binária representa uma linha dessa
         imagem. Você consegue reorganizá-las de forma que elas desenhem um rostinho feliz
@@ -1688,19 +1537,18 @@ pt-BR:
         você consegue desenhar uma forma de estrela usando a função "desenhe uma linha de quadrados"?
         Boa sorte!
       Course 4 Artist For Loops 1_instruction: |
-        Desenhe este triângulo que tem 50 pixels.
-        Dica: use um bloco repita.
+        Use um bloco "repita" para desenhar este triângulo
+        que tem 50 pixels de largura.
       Course 4 Artist For Loops 10_instruction: |
         Atividade livre! Divirta-se desenhando
         o que quiser com os blocos que você aprendeu a usar
       Course 4 Artist For Loops 11_instruction: |
         Você se lembra de quando usamos
         uma variável para controlar o número de lados de uma forma em uma fase anterior? Faremos
-        a mesma coisa com a variável "contador" agora. Esse padrão
-        começa com um triângulo e adiciona um lado de cada vez até que seja desenhado um decágono
-        (10 lados). Cada lado deve ter 100 pixels de comprimento. Dica: 360 dividido pelo
-        número de lados que uma forma possui é o número de graus que você precisará girar.
-      Course 4 Artist For Loops 11a_instruction: "Vamos juntar tudo!  Usando\nseu conhecimento em \"laços para\" e o \"contador\", crie este desenho no qual\ncada forma tem dois lados a mais que a anterior. Lembre-se de que cada lado é\n10 vezes maior que o número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo código foi fornecida para você."
+        a mesma coisa com a variável "contador" agora. Esse padrão começa
+        com um triângulo e adiciona um lado de cada vez até que seja desenhado um decágono (10 lados).
+        Cada lado deve ter 100 pixels de comprimento. 
+      Course 4 Artist For Loops 11a_instruction: "Vamos juntar tudo!  Usando\nseu conhecimento sobre laços \"para\" e sobre variável \"contador\", crie este desenho\nno qual cada forma tem dois lados a mais que a anterior. Garanta que cada lado\nseja 10 vezes maior que o número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo código foi fornecida para você."
       Course 4 Artist For Loops 12_instruction: |
         Isso foi muito legal, mas agora
         eu gostaria de desenhar uma forma do lado da outra. Desta vez, cada lado tem
@@ -1888,9 +1736,7 @@ pt-BR:
         Aqui está o algoritmo para desenhar um triângulo.
         Modifique-o para que ele use a variável "lados". Substitua o número 3
         pela variável "lados". Dica: lembre-se de usar o bloco "defina os lados para".
-      Course 4 Artist Vars 1_instruction: |
-        Você pode me ajudar a desenhar um triângulo equilátero?
-        Ele deve ter exatamente 100 pixels de comprimento em cada lado.
+      Course 4 Artist Vars 1_instruction: "Vamos desenhar um triângulo equilátero. \r\n\r\nEle\ndeve ter exatamente 100 pixels de comprimento em cada lado."
       Course 4 Artist Vars 10_instruction: |
         Aqui temos um algoritmo que desenha um triângulo
         a partir de triângulos menores. Você pode modificá-lo para que ele use a variável "lados"
@@ -1935,18 +1781,15 @@ pt-BR:
         Modifique esse algoritmo para que ele use a variável
         "lados" ao invés de um número fixo para desenhar um triângulo. Não deixe de usar
         o bloco "defina os lados para".
-      Course 4 Bee 1_instruction: |
-        A abelha não sabe o que há atrás da nuvem! Primeiro, 
-        use o bloco "se" para verificar se há uma flor atrás da nuvem, em seguida,
-        colete néctar apenas se for uma flor. 
+      Course 4 Bee 1_instruction: "A abelha não sabe o que há atrás da nuvem! \r\n\r\nUse o bloco \"se\" para verificar se há uma flor atrás da nuvem. \r\n\r\nColete\nnéctar uma vez, APENAS se for uma flor."
       Course 4 Bee 2_instruction: |
         Use o bloco "se/senão" para verificar cada objeto
-        e ver se ele é uma flor ou uma colmeia. Se for uma flor, colete néctar... caso contrário,
-        produza mel!
+        e ver se ele é uma flor ou uma colmeia. Se for uma flor, colete um néctar... caso contrário,
+        produza um mel!
       Course 4 Bee 3_instruction: |
         O objeto desconhecido pode ser uma flor ou uma colmeia.
-        Desta vez, use o bloco se/senão para coletar néctar se for uma flor, senão produza mel
-        (porque então ele seria uma colmeia).
+        Desta vez, use o bloco "se/senão" para coletar um néctar se for uma flor,
+        senão, produza mel (porque então ele seria uma colmeia).
       Course 4 Bee 4_instruction: |
         Essa flor roxa pode ter 1, 2 ou 3
         néctares. Aqui um bloco se/senão é combinado com outro bloco se/senão para criar
@@ -2012,9 +1855,9 @@ pt-BR:
         todo o néctar em seu caminho até a colmeia com o menor número de blocos possível. Quando
         chegar lá, não se esqueça de produzir mel!
       Course 4 Bee Params 1_instruction: |
-        Use a função "obtenha 3 néctares" que
-        vira, move-se para coletar o néctar e então retorna à posição original.
-        Escreva uma sequência para coletar todo o néctar usando "obtenha 3 néctares".
+        Escreva uma sequência para coletar todo o
+        néctar usando a função "obtenha 3 néctares", que vira, move-se para coletar o néctar e
+        então retorna à posição original.
       Course 4 Bee Params 2_instruction: |
         Modifique a função "obtenha 2 néctares" para
         que ela me faça virar para a direita ao invés da esquerda para chegar às flores.
@@ -2053,8 +1896,8 @@ pt-BR:
       Course 4 Bee Params 6_instruction: |
         Não seria legal se pudéssemos coletar
         todo o néctar com uma única função? Tente adicionar um novo parâmetro
-        à função chamado "unidades de néctar" para controlar a quantidade de néctar
-        a coletar. Você provavelmente vai querer renomear a função também!
+        à função chamado "unidades de néctar" para controlar a quantidade de néctar a coletar.
+        Você provavelmente vai querer renomear a função também!
       Course 4 Bee Params 7 (copy 1)_instruction: |
         Tente usar sua nova função para
         coletar todo o néctar.
@@ -2142,18 +1985,17 @@ pt-BR:
         os números ímpares de 1 até 100.
       Course 4 Play Lab Params 1_instruction: |
         Aqui temos uma função chamada "pule"
-        que faz seu personagem principal pular 100 pixels. Use a função pule
-        para coletar todas as bandeiras.
-      Course 4 Play Lab Params 10_instruction: "Adicionamos uma última função para\nque você use.\r\n\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número. \r\n\r\nPor\nexemplo: \"pontos_jogador\" > 6\r\n\r\nJogue o jogo e chegue até o nível\n4 para ir para o próximo desafio. "
-      Course 4 Play Lab Params 2_instruction: "Agora temos bandeiras que estão altas\ndemais para nosso pulo atual! Vamos usar as setas \"para cima\" e \"para baixo\"\npara termos diversas alturas de pulos. \r\n\r\nPrecisamos adicionar um parâmetro\nà função pule chamado \"altura\". A seta para cima deve fazer o cão\npular 200 pixels, e a seta para baixo deve fazê-lo pular somente 100 pixels.\n\r\n\r\nDica: clique em \"editar\" na função pule e atualize-a para que\nela use o parâmetro \"altura\"."
+        que faz seu personagem principal pular 100 pixels. Execute o programa e use
+        a função "pule" para coletar todas as bandeiras movendo o cachorro com as setas
+        do teclado.
+      Course 4 Play Lab Params 10_instruction: "Adicionamos uma última função para\nvocê.\r\n\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número.\r\n\r\nPor\nexemplo: \"pontos_jogador\" > 6\r\n\r\nJogue e chegue até o nível 3\npara ir para o próximo desafio. "
+      Course 4 Play Lab Params 2_instruction: "Agora temos bandeiras que estão altas\ndemais para nosso pulo atual! Vamos usar as setas \"para cima\" e \"para baixo\"\npara termos diversas alturas de pulos. \r\n\r\nPrecisamos adicionar um parâmetro\nà função \"pule\" chamado \"altura\". A seta para cima deve fazer o cão\npular 200 pixels, e a seta para baixo deve fazê-lo pular somente 100 pixels.\n"
       Course 4 Play Lab Params 3_instruction: |
         Adicionamos outro parâmetro à
         função pule para que possamos usá-la com outros personagens. Cada personagem é representado
         por um número, começando em um. Edite a função "pule" para que
         use o parâmetro "personagem" para fazer o personagem certo pular. 
-      Course 4 Play Lab Params 4_instruction: |
-        Aqui temos uma função chamada "patrulhe".
-        Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
+      Course 4 Play Lab Params 4_instruction: "Aqui temos uma função chamada \"patrulhe\".\n\r\n\r\nEdite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
       Course 4 Play Lab Params 5_instruction: |
         Edite a função chamada "patrulhe" para
         adicionar um parâmetro "personagem", assim podemos chamá-la para todos os personagens
@@ -2163,24 +2005,23 @@ pt-BR:
         à função "patrulhe". Tente usar um bloco "defina velocidade" com o novo parâmetro "velocidade"
         para ajudar o Pinguim a pegar as duas bandeiras antes que os outros personagens peguem
         uma.
-      Course 4 Play Lab Params 7_instruction: "Vamos nos divertir! Analise o\ncódigo fornecido para ver se você consegue descobrir o que cada bloco faz.  \r\n\r\nQuando terminar, use as\nsetas do teclado para controlar o cão e coletar todas as bandeiras."
+      Course 4 Play Lab Params 7_instruction: "Vamos nos divertir! Analise o\ncódigo fornecido para ver se você consegue descobrir o que cada bloco faz.  \r\nQuando\nterminar, use as setas do teclado para controlar o cão e coletar todas as bandeiras.\r\nOBSERVAÇÃO:\nVocê não precisa fazer nenhuma alteração no programa"
       Course 4 Play Lab Params 8_instruction: |
-        Use um bloco "quando o personagem tocar" para enviar
-        o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
-      Course 4 Play Lab Params 9_instruction: "Temos aqui nosso jogo de uma fase anterior, mas\na maior parte do código está oculta. Há uma nova função chamada \"marcar_pontos\".\r\n\r\nEdite\na função para que um parâmetro \"pontos\" seja adicionado à variável \"pontos_do_jogador\".\n\r\n\r\nA variável \"pontos_do_jogador\" deve aumentar toda vez\nque o cão marcar o gato com corações e diminuir toda vez que o gato marcar o cão com corações.\r\n\r\nObservação:\nQuando estiver pronto, clique em \"Executar\" para jogar. Quando o cão marcar 6 pontos, você\nvai para o próximo desafio. "
+        Use o bloco "quando o personagem tocar"
+        para enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
+      Course 4 Play Lab Params 9_instruction: "Temos aqui nosso jogo de uma fase anterior,\nmas a maior parte do código está oculta. Há uma nova função chamada \"marcar_pontos\".\r\n\r\nEdite\na função para que um novo parâmetro \"pontos\" seja adicionado à variável \"pontos_jogador\".\n\r\n\r\nA variável \"pontos_jogador\" deve aumentar toda vez que o cão atingir o gato\ncom uma torta e diminuir toda vez que o gato atingir o cão com um sanduíche.\r\n\r\nObservação:\nQuando terminar, clique em \"Executar\" para jogar. Quando o cão marcar 6 pontos, você\nvai para o próximo desafio. "
       Course 4 Play Lab Vars 1_instruction: |
         Desta vez você não precisa escrever código algum, apenas
         clique em "Executar" para jogar! Nesse jogo, você é o cão que está tentando
         coletar mais bandeiras do que o gato. Use a seta para baixo para controlar o cão.
         Pressione "Terminar" quando você terminar de jogar.
       Course 4 Play Lab Vars 2_instruction: |
-        A corrida do último desafio não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
-        gato. O primeiro a coletar 10 bandeiras vence!
+        A corrida do último desafio não foi
+        muito justa! Altere a variável "velocidade_cão" para garantir que você possa coletar mais
+        bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
       Course 4 Play Lab Vars 3_instruction: |
-        Temos aqui um novo tipo de jogo! Use as
-        setas para a esquerda e para a direita para se mover e a seta para cima para pular. Veja se você
-        consegue coletar todas as bandeiras.
+        Use as setas para a esquerda e para a direita para se mover,
+        e a seta para cima para pular. Veja se você consegue coletar todas as bandeiras.
       Course 4 Play Lab Vars 4_instruction: |
         Agora estamos usando uma variável chamada "altura"
         para controlar a altura que o cão pode pular. Atualize a variável "altura" para que
@@ -2196,12 +2037,12 @@ pt-BR:
         "quando o personagem 2 tocar em alguma coisa" para disparar uma atualização para a pontuação
         quando sua bola de fogo atingir o gato. Você pode incrementar a pontuação fazendo pontuação
         = pontuação + 1. Faça sua pontuação chegar até 10 (um ponto por vez!) para passar de nível.
-      Course 4 Play Lab Vars 6_instruction: "Use a seta para a direita para atirar corações.\r\n\r\nEm\nem nosso jogo, como podemos marcar pontos? Adicione 1 a sua variável \"pontos\" toda\nvez que o cão atingir o gato com um coração. Use o evento \"quando o personagem 2 tocar em alguma coisa\"\npara disparar uma atualização em sua pontuação. Você pode incrementar sua variável\ndefinindo \"pontos = pontos + 1.\" Aumente sua pontuação até 10 (um ponto\nde cada vez!) para passar de nível."
+      Course 4 Play Lab Vars 6_instruction: "Use a seta para a direita para atirar tortas.\r\n\r\nEm\nnosso jogo, como podemos marcar pontos? Adicione 1 à variável \"pontos\" toda\nvez que o cão atingir o gato com um pedaço de torta. Use o evento \"quando o personagem 2 tocar em alguma coisa\"\npara acionar uma atualização em sua pontuação. Você pode incrementar sua variável\ndefinindo \"pontos = pontos + 1\". Aumente sua pontuação até 10 (um ponto\nde cada vez!) para passar de nível."
       Course 4 Play Lab Vars 7_instruction: |
         Legal, agora vamos garantir que esse jogo
-        não seja muito fácil - sempre que o cão (personagem 1) for atingido por uma bola de fogo
-        do gato (personagem 2), você deve perder um ponto. Comece com 10 pontos para que o jogo não seja muito difícil. Faça sua
-        pontuação cair de 10 para 0 para passar de nível.
+        não seja muito fácil. Sempre que o cão (personagem 1) for atingido por um sanduíche
+        do gato (personagem 2), você deve perder um ponto. Comece com 10 pontos para que
+        o jogo não seja muito difícil. Faça sua pontuação cair de 10 para 0 para passar de nível.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Certo, uma última coisa para
         esse jogo - vamos configurá-lo para que o jogador possa ganhar (ou perder). Use um laço infinito
@@ -2222,15 +2063,15 @@ pt-BR:
         desaparecer. Se a pontuação for menor que 0, faça o jogador desaparecer.
       Course 4 Play Labs For Loops 1_instruction: |
         Vamos fazer o cão falar todos
-        os números de 1 a 100. Use um laço para e o bloco contador para que ele fale o valor da variável
-        contador a cada vez que o laço for executado.
+        os números de 1 a 100. Use um laço "para" e o bloco "contador" para que ele fale o
+        a variável "contador" toda vez que o laço for executado.
       Course 4 Play Labs For Loops 2_instruction: |
-        Dessa vez, vamos tentar contar
-        os números ímpares de 1 até 100.
+        Dessa vez, ajude Olívia, a gata,
+        a contar apenas os números ímpares de 1 até 101.
       Course 4 Play Labs For Loops 3_instruction: |
-        Se contarmos usando números maiores,
-        podemos contar até números ainda maiores no mesmo intervalo de tempo. Tente fazer o cão
-        contar de 10 até 1000, contando de 10 em 10.
+        Se contarmos números maiores,
+        poderemos contar até números ainda maiores no mesmo intervalo de tempo. Tente fazer o pirata Perna de Pau
+        contar de 10 até 1.000, contando de 10 em 10.
       Course 4 Play Labs For Loops 4_instruction: |
         Alterar o incremento pode ser
         útil, mas ainda estamos contando linearmente (cada número está separado pela mesma
@@ -2254,10 +2095,14 @@ pt-BR:
       Course 4 Play Labs For Loops 7a_instruction: "Agora estamos chegando em algum lugar! E\nse começarmos a contar quantas vezes conseguimos clicar no mago antes do cão chegar\naté 30?  \r\n\r\nTermine adicionando blocos ao mago para que toda vez que ele for\nclicado a variável \"clicado\" aumente por um. Você pode ignorar \"incremento\"\npor enquanto.\r\n\r\nO cão vai começar a contar quando você clicar em \"Executar\"."
       Course 4 Play Labs For Loops 8_instruction: "Agora, ajude os personagens a se moverem enquanto\ncontam  \r\n\r\nO cão deve se mover e contar adicionando 2 (contador + 2) a cada vez. O gato\nvai se mover e contar multiplicando por 2 (contador * 2)  a cada vez. O pinguim\nvai se mover e contar fazendo a potência de 2 (contador ^ 2) a cada vez.  Quem vai chegar\nprimeiro à bandeira?"
       Course 4 Play Labs For Loops 8a_instruction: "Para terminar nosso jogo, precisamos\ntrazer de volta a variável \"incremento\"!    Vamos relacioná-la ao nível do\njogo.\r\n\r\n1) Guarde o número de vezes que o mago é clicado.\r\n2)\nSe o mago for clicado pelo menos 10 vezes antes do cão contar até 30, aumente\n\"incremento\" em 1 unidade e comece de novo.\r\n3) Se o mago não for clicado\npelo menos 10 vezes, o jogo acaba."
-      Course 4 Playlab For Loop Freeplay_instruction: "Freeplay: Use tudo que você aprendeu até agora para fazer um jogo que inclua um laço 'for'!"
-      Course 4 Playlab For Loops 4b_instruction: "Agora, esses dois personagens vão correr! \r \r\nCada um deles irá dar passos de acordo com o contador, mas seus contadores terão valores diferentes por causa dos laços 'for'. \r \r\nVocê pode mudar o incremento em um dos laços para que a corrida seja um empate?"
-      Course 4 Playlab For Loops 5b_instruction: "Ajuste o intervalo nestes laços 'for' para que os dois personagens terminem exatamente no mesmo lugar."
-      Course 4 Playlab For Loops 6b_instruction: "Edite este laço 'for' para criar\num jogo que é divertido de jogar!\r\n\r\nAperte \"Executar\" e clique em Madame\nUnicorn 4 vezes para ganhar. "
+      Course 4 Playlab For Loop Freeplay_instruction: |
+        Atividade livre: use tudo que você
+        aprendeu até agora para fazer um jogo que inclua um laço "para"!
+      Course 4 Playlab For Loops 4b_instruction: "Agora, esses dois personagens vão\ncorrer! \r \n\r\nCada um deles dará um passo de \"contador\" de cada vez, mas seus\ncontadores terão valores diferentes por causa dos laços \"para\".  \r\n\r\nVocê\npode mudar o incremento em um dos laços para que a corrida termine empatada?"
+      Course 4 Playlab For Loops 5b_instruction: |
+        Ajuste o intervalo nestes laços "para"
+        para que os dois personagens terminem exatamente no mesmo lugar.
+      Course 4 Playlab For Loops 6b_instruction: "Edite este laço \"para\" para criar\num jogo que seja divertido!\r\n\r\nPressione \"Executar\" e clique na Madame\nUnicórnio 4 vezes para vencer. "
       Course 4 SCF 1_instruction: |
         Use as funções sugeridas para desenhar quatro
         linhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?
@@ -2304,7 +2149,7 @@ pt-BR:
         por y pixels (usando números positivos e negativos).
       Course 4 SCV 1_instruction: Clique aqui para ver as instruções novamente.
       Course 4 SCV 2_instruction: Clique aqui para ver as instruções novamente.
-      Course 4 SCV 3_instruction: "Agora um jogo de pega-pega! Pegue o gato para ganhar 2 pontos.\nPegue o pinguim para ganhar 3 pontos. Chegue a 10 pontos para ganhar!\r\nMas atenção, quando\no gato e o pinguim se encontram, eles tiram seus pontos.\r\n\r\nAdicione os blocos\nnecessários para fazer esse jogo funcionar como foi explicado. Como você vai\nfazer o cão se mover em todas as direções usando as setas do teclado? Como você vai\nadicionar pontos quando o cão pega o gato ou o pinguim? Como você vai subtrair pontos\nquando o gato e o pinguim se tocam?"
+      Course 4 SCV 3_instruction: "Agora um jogo de pega-pega! Pegue o gato para ganhar 2 pontos.\nPegue o pinguim para ganhar 3 pontos. Conquiste 10 pontos para ganhar!\r\nMas atenção,\nquando o gato e o pinguim se encontram, eles tiram seus pontos.\r\n\r\nAdicione os\nblocos necessários para fazer esse jogo funcionar como foi explicado. Como\nvocê vai fazer o cão se mover em todas as direções usando as setas do teclado? Como\nvocê vai adicionar pontos quando o cão pegar o gato ou o pinguim? Como você vai subtrair pontos\nquando o gato e o pinguim se tocarem?"
       Course 4 SCV 4_instruction: |
         Resolva este desafio com o menor número de blocos
         possível.
@@ -2323,37 +2168,113 @@ pt-BR:
       Course1MazeAssessment1_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco"
       Course1MazeAssessment2_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco."
       course2_playlab_stage17_1_instruction: |
-        Can you make Jorge the Dog (actor 1)
-        say "Hi"?
-      course2_playlab_stage17_10_instruction: Você pode adicionar blocos para mudar o plano de fundo e a velocidade dos pinguins, e então movê-los com as setas antes que você pontue no jogo?
-      course2_playlab_stage17_11_instruction: Crie sua própria história. Quando terminar, clique em encerrar para que seus amigos testem sua história em seus telefones.
-      course2_playlab_stage17_2_instruction: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
-      course2_playlab_stage17_3_instruction: Você consegue escrever um programa para fazer este cachorro se mover em direção ao gato?
-      course2_playlab_stage17_4_instruction: 'Você consegue escrever um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "olá" quando o cachorro o alcançar?'
-      course2_playlab_stage17_5_instruction: 'Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?'
-      course2_playlab_stage17_6_instruction: Você pode escrever um programa que faça os Waddles se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
+        Você pode fazer Jorge, o cachorro (personagem 1),
+        dizer "Olá"?
+      course2_playlab_stage17_10_instruction: "Adicione blocos ao evento \"quando correr\"\npara mudar o plano de fundo e a velocidade de Valfredo.\r\n\r\nJogue e\nmova Valfredo com as setas até marcar pontos."
+      course2_playlab_stage17_11_instruction: |
+        Crie sua própria história. Quando terminar,
+        clique em "Concluir" para que seus amigos testem sua história em seus celulares.
+      course2_playlab_stage17_2_instruction: |
+        Você pode fazer Jorge (personagem 1) dizer alguma coisa e,
+        depois, fazer a gata Olívia (personagem 2) dizer alguma coisa?
+      course2_playlab_stage17_3_instruction: |
+        Você consegue escrever um programa para fazer Jorge
+        (personagem 1) se mover em direção à gata Olívia?
+      course2_playlab_stage17_4_instruction: |
+        Você consegue escrever um programa que faça 
+        Jorge (personagem 1) se mover até Olívia, a gata, e fazer Olívia dizer "Olá" quando Jorge
+        a alcançar?
+      course2_playlab_stage17_5_instruction: |
+        Você pode escrever um programa para fazer Otávia
+        dizer "Olá" quando clicarem nela?
+      course2_playlab_stage17_6_instruction: |
+        Agora escreva um programa que faça Valfredo
+        se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!
       course2_playlab_stage17_7_instruction: |
         The `repeat forever` block allows you
         to run code over and over forever. Can you attach blocks to move Chomp the
         Dino (actor 2) up and down forever?
-      course2_playlab_stage17_8_instruction: 'Você pode fazer com que os Waddles diga "Ai!" e reproduza um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas para fazer isso acontecer?'
-      course2_playlab_stage17_9_instruction: Você pode adicionar um bloco que some um ponto quando os Waddles se encontrar com o polvo, e então movê-lo até que você consiga o ponto?
+      course2_playlab_stage17_8_instruction: "Você pode fazer Valfredo (personagem 1) dizer\n\"Ai!\" e reproduzir um som de \"batida\" se ele encontrar Chomp? \r\n\r\nQuando\nterminar, jogue para que isso aconteça."
+      course2_playlab_stage17_9_instruction: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com Otávia (personagem 3)? \r\nJogue e mova Valfredo\ncom as setas do teclado até marcar ponto!"
       course3_playlab_stage16_1_instruction: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
-      course3_playlab_stage16_2_instruction: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
-      course3_playlab_stage16_3_instruction: Você consegue escrever um programa para fazer este cachorro se mover em direção ao gato?
-      course3_playlab_stage16_4_instruction: 'Você consegue escrever um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "olá" quando o cachorro o alcançar?'
-      course3_playlab_stage16_5_instruction: Você pode adicionar um bloco para deixar o polvo feliz?
-      course3_playlab_stage16_6_instruction: Crie sua própria história. Quando terminar, clique em encerrar para que seus amigos testem sua história em seus telefones.
-      course3_playlab_stage17_1_instruction: 'Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?'
-      course3_playlab_stage17_2_instruction: Você pode escrever um programa que faça os Waddles se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
+      course3_playlab_stage16_2_instruction: |
+        Você pode fazer o cachorro dizer alguma coisa e,
+        depois, fazer a gata dizer alguma coisa?
+      course3_playlab_stage16_3_instruction: |
+        Você consegue escrever um programa para fazer este
+        cachorro se mover até o gato?
+      course3_playlab_stage16_4_instruction: |
+        Você consegue escrever um programa que faça
+        o cachorro se mover até o gato e que faça o gato dizer "Olá" quando o cachorro o
+        alcançar?
+      course3_playlab_stage16_5_instruction: |
+        Você pode adicionar um bloco para deixar o polvo
+        feliz?
+      course3_playlab_stage16_6_instruction: |
+        Crie sua própria história. Quando terminar,
+        clique em "Concluir" para que seus amigos testem sua história em seus celulares.
+      course3_playlab_stage17_1_instruction: |
+        Você pode escrever um programa para fazer
+        o polvo dizer "Olá" quando clicarem nele?
+      course3_playlab_stage17_2_instruction: |
+        Você pode escrever um programa que faça Valfredo
+        se mover usando as as setas para cima / para baixo / à esquerda / à direita do teclado, para atingir todos os alvos?
       course3_playlab_stage17_3_instruction: |
-        The "repeat forever" block allows
-        you to run code continuously. Can you attach blocks to move this dinosaur
-        up and down repeatedly?
-      course3_playlab_stage17_4_instruction: 'Você pode fazer com que os Waddles diga "Ai!" e reproduza um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas para fazer isso acontecer?'
-      course3_playlab_stage17_5_instruction: Você pode adicionar um bloco que some um ponto quando os Waddles se encontrar com o polvo, e então movê-lo até que você consiga o ponto?
-      course3_playlab_stage17_6_instruction: Você pode adicionar blocos para mudar o plano de fundo e a velocidade dos pinguins, e então movê-los com as setas antes que você pontue no jogo?
-      course3_playlab_stage17_7_instruction: Crie sua própria história. Quando terminar, clique em encerrar para que seus amigos testem sua história em seus telefones.
+        O bloco "repita infinitamente" permite
+        que você execute o código de maneira contínua. Você consegue conectar blocos para mover este dinossauro
+        para cima e para baixo repetidamente?
+      course3_playlab_stage17_4_instruction: |
+        Você pode fazer Valfredo dizer "Ai!"
+        e reproduzir um som de "batida" se ele encontrar o dinossauro, e então movê-lo com
+        as setas to teclado para fazer isso acontecer?
+      course3_playlab_stage17_5_instruction: |
+        Você pode adicionar um bloco para marcar um ponto
+        quando Valfredo se encontrar com o polvo, e então movê-lo com as setas do teclado até
+        marcar pontos?
+      course3_playlab_stage17_6_instruction: |
+        Você pode adicionar blocos para mudar o plano de fundo
+        e a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?
+      course3_playlab_stage17_7_instruction: |
+        Crie sua própria história. Quando terminar,
+        clique em "Concluir" para que seus amigos testem sua história em seus celulares.
+      courseA_maze_seq1_instruction: |
+        Play with these blocks to see if you can get
+        me to the pig!
+      courseA_maze_seq2_instruction: Altere o código para me levar até o porco!
+      courseB_playlab_events2_instruction: |
+        Have Daisy the Dragon say something when
+        you click "Run".
+      courseB_playlab_events3_instruction: |
+        Use an event to make Daisy the Dragon
+        switch to a random mood when you click on her.
+      courseB_playlab_events4_instruction: |
+        Knight time!  Add an event so that the
+        knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events5_instruction: |
+        Now add an event so that the knight runs
+        away from the dragon when you press the right arrow.
+      courseB_playlab_events6_instruction: "Help your knight get all of the flags!\r\n\r\nTo\ndo this, you'll need to add events to help the knight move up and down."
+      courseB_playlab_events7_instruction: |
+        Make this game fun by setting the knight
+        to vanish when he runs into the dragon!  Play a sound when they collide to
+        make it feel more real.
+      courseB_playlab_events8_instruction: |
+        Use your imagination. What can you do
+        to make this game more fun?
+      courseB_playlab_eventsFP_instruction: |
+        Use your imagination. What can you do
+        to make this game more fun?
+      courseB_playlab_eventsToolbox_instruction: |
+        Finish by playing a sound and making
+        the knight vanish when he runs into the dragon!
+      courseC_puppy_loops10_instruction: You are doing great! Keep it up!
+      courseC_puppy_loops11_instruction: |
+        You are almost there! This time, choose
+        any path you like!
+      courseC_puppy_loops8_instruction: |
+        Challenge puzzle! Combine ideas from the
+        last few puzzles to complete this.
+      courseC_puppy_loops9_instruction: You are doing great! Keep it up!
       Crack a Caesar Cipher_instruction: Instruções
       Crack Random Substitution_instruction: Instruções
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
@@ -3131,33 +3052,57 @@ pt-BR:
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_10_instruction: |
+        You're almost done! Collect all of the coins
+        to finish the stage!
+      grade2_collector_2_instruction: |
+        I love to chase the ball, but what should
+        I do when I get to it?
+      grade2_collector_3_instruction: |
+        Sequence matters! The blocks you need are
+        already in the workspace, but not connected.  Order these blocks to solve
+        the puzzle.
+      grade2_collector_4_instruction: |
+        Sequence matters! The blocks you need are
+        already in the workspace, but not connected.  Order these blocks to solve
+        the puzzle.
+      grade2_collector_5_instruction: |
+        These blocks are in the wrong order! Help
+        me collect each coin by putting the commands in the right order.
+      grade2_collector_6_instruction: |
+        These blocks are in the wrong order! Help
+        me collect each coin by putting the commands in the right order.
+      grade2_collector_7_instruction: |
+        Challenge puzzle! What is going on here? Even
+        if we put these in the right order, there will still be some missing.
+      grade2_collector_8_instruction: |
+        Keep up the good work! Help me collect all
+        of the coins.
+      grade2_collector_9_instruction: "Let's get the coins!"
       grade2_collector_pre1_instruction: |
         Ruff! Can you help me collect some tennis
         balls?
       grade2_MakeDogTag_1_instruction: |
-        Hi, I'm an artist. You can write code to
-        make me draw almost anything. Use a few blocks to make me draw over the grey
-        lines in the picture. (Each line is 100 pixels long)
-      grade2_MakeDogTag_10_instruction: Desenhe algo divertido.
-      grade2_MakeDogTag_2_instruction: |
-        This house has a half-finished wall. Each
-        side is 100, but the half-finished wall is only 50. Complete the wall. 
+        Drag blocks onto the screen to have the artist
+        draw over the grey lines in the picture. (Each line is 100 pixels long)
+      grade2_MakeDogTag_10_instruction: Agora desenhe o que você quiser!
+      grade2_MakeDogTag_2_instruction: "This spaceship needs a window!\r\n\r\nEach\nside is 100 pixels and all of the angles are 90 degrees."
       grade2_MakeDogTag_3_instruction: Ajude-me a completar a casa para o gato.
       grade2_MakeDogTag_4_instruction: 'Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
-      grade2_MakeDogTag_5_instruction: |
-        Complete the rooms for each of the animals
-        by splitting the rectangle into 2 equal-sized squares. The rectangle is 200
-        pixels wide and 100 pixels tall. There are many different ways to solve this
-        puzzle, so have some fun!
+      grade2_MakeDogTag_5_instruction: "\"Now a tag for Belle!\"\r\n\r\nDraw this\ndiamond with 200 pixel sides."
       grade2_MakeDogTag_6_instruction: Atividade livre! Desenhe o que você quiser.
-      grade2_MakeDogTag_7_instruction: "Give the stop sign a border by making an\noctagon with 100 pixels sides. \r\n\r\n"
+      grade2_MakeDogTag_7_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each\nside is 150 pixels)"
       grade2_MakeDogTag_8_instruction: |
-        Agora vamos conectar um monte de V's,
-        desenhando-os em um laço.
+        Agora vamos conectar um monte de "V"
+        em um laço.
       grade2_MakeDogTag_9_instruction: |
         Rebuild the code from the last puzzle, but
         this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
         times instead of 8.
+      grade2_MakeDogTag_BFP_instruction: "\"Hi, I'm an artist. You can write code\nto make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox\nto see what they do!"
+      grade2_MakeDogTag_FP_instruction: |
+        Freeplay: What shape will you make the tag
+        for your pet?
       grade2_maze_debuggingFP_instruction: |
         Now, help me sneak up on the pig any
         way you want to!
@@ -3165,6 +3110,16 @@ pt-BR:
         Play with these blocks to see what they
         make the bird do!
       grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro2_instruction: |
+        Welcome to Code Studio! Here you will learn
+        to use blocks to build programs. Press `Run` to run a program now!
+      grade2_maze_intro3_instruction: |
+        The `workspace` is where you will create all
+        of your programs. Can you guess what this program does? Press the “Run” button
+        to find out.
+      grade2_maze_intro4_instruction: |
+        Drag a block from the toolbox into the workspace.
+        Connect it to the other blocks.
       grade2_maze_intro6_instruction: |
         That’s it!  Now we’re ready to try to solve
         a few puzzles. 
@@ -3175,30 +3130,57 @@ pt-BR:
         solve it after several tries, don’t worry!  It will be in the Play Zone at
         the end of the stage and you can try it again when you’ve had more practice.
       grade2_maze_intro9_instruction: Solve this puzzle.
+      grade2_playlab_project_1_instruction: |
+        Agora escreva um programa que faça Valfredo
+        se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!
+      grade2_playlab_project_2_instruction: |
+        The `repeat forever` block allows you
+        to run code over and over forever. Can you attach blocks to move Chomp the
+        Dino (actor 2) up and down forever?
+      grade2_playlab_project_3_instruction: "Can you have Waddles (actor 1) say \"Ouch!\"\nand play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen you're done,\nplay the game to make that happen."
+      grade2_playlab_project_4_instruction: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com Otávia (personagem 3)? \r\nJogue e mova Valfredo\ncom as setas do teclado até marcar ponto!"
+      grade2_playlab_project_5_instruction: "Add blocks to the `when run` event to\nchange the background and the speed of Waddles.\r\n\r\nPlay the game and move\nWaddles with the arrows until you score."
+      grade2_playlab_project_6_instruction: |
+        Crie sua própria história. Quando terminar,
+        clique em "Concluir" para que seus amigos testem sua história em seus celulares.
+      grade2_puppy_loops2_instruction: |
+        Can you get to the pig by creating a loop
+        that uses only one `move forward` block inside of a `repeat`?
+      grade2_puppy_loops3_instruction: |
+        Get me to the pig! Solve this puzzle by creating
+        a loop!
+      grade2_puppy_loops4_instruction: |
+        In this puzzle, two `repeat` loops will help
+        you get to the pig with the fewest number of blocks!
+      grade2_puppy_loops5_instruction: |
+        Você consegue descobrir a maneira mais rápida de me
+        levar até o porco?
+      grade2_puppy_loops6_instruction: |
+        Loops even work with more than one block
+        inside!  Can you loop this sequence to get me to the pig?
+      grade2_puppy_loops7_instruction: Use what you learned to get me to the pig!
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?
-      grade2_PuppyLoops_10_instruction: |
-        Meu cata-vento não está pronto. Quantas
-        vezes eu preciso repetir para terminá-lo?
+      grade2_PuppyLoops_10_instruction: "Meu professor diz que eu devo terminar o que\ncomecei!\r\n\r\nAjude-me a terminar meu cata-vento. Você consegue descobrir o que há de errado?"
       grade2_PuppyLoops_2_instruction: |
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
       grade2_PuppyLoops_3_instruction: |
-        Get me to the pig! You can only use one move
-        forward block this time
+        Get me to the pig! Solve this puzzle by creating
+        a loop!
       grade2_PuppyLoops_4_instruction: |
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_5_instruction: Leve-me até o porco.
+      grade2_PuppyLoops_5_instruction: |
+        Você consegue descobrir a maneira mais rápida de me
+        levar até o porco?
       grade2_PuppyLoops_6_instruction: |
         Loops even work with more than one block
-        inside!  Can you loop this sequence to get the zombie to the sunflower?
-      grade2_PuppyLoops_7_instruction: Leve-me até o girassol!
-      grade2_PuppyLoops_8_instruction: 'O código para os três bigodes que você vê está errado. Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para desenhar os bigodes.'
-      grade2_PuppyLoops_9_instruction: |
-        Parece que o C no código está desenhado ao contrário.
-        Você consegue fazê-lo parecer com um C?
+        inside!  Can you loop this sequence to get me to the pig?
+      grade2_PuppyLoops_7_instruction: Use o que você aprendeu para me levar até o girassol!
+      grade2_PuppyLoops_8_instruction: "O código dos bigodes do gato está errado.\n\r\n\r\nCorrija o código para desenhar os bigodes, todos com o mesmo tamanho."
+      grade2_PuppyLoops_9_instruction: "Parece que o C no código está desenhado ao contrário!\r\n\r\nVocê\nconsegue fazê-lo parecer com um C de novo?"
       grade3_AboutMyRobot_1_instruction: |
         Make your robot say "Hello!" when the
         button is clicked.
@@ -3255,10 +3237,7 @@ pt-BR:
         This cloud is blocking my view!
         Check to see if there's a flower under the cloud, and only get nectar if
         there's a flower. Be careful, it can change!
-      grade3_bee_conditionals_quantum2_instruction: |
-        Agora a abelha só quer néctar. Lembre-se,
-        nem todos os objetos são flores, então veja se o objeto abaixo da nuvem é
-        uma flor. Se ele for, então você pode coletar o néctar.
+      grade3_bee_conditionals_quantum2_instruction: "Mais nuvens! \r\n\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade3_bee_conditionals_quantum3_instruction: |
         Now I just want to make honey.
         Some of these clouds might have honeycombs under them. The way we've been
@@ -3270,43 +3249,34 @@ pt-BR:
         nectar if it is a flower, else to make honey (because it is a honeycomb).
       grade3_bee_conditionals_quantum5_instruction: "There will be either a flower\nor a honeycomb under each of those clouds!\r\n\r\nUse the `if/else` block\nto collect nectar if there is a flower.\r\nOtherwise, make honey (because\nthere is a honeycomb)."
       grade3_Conditionals_1 BAD_instruction: Use um laço para coletar todo o néctar.
-      grade3_Conditionals_1_instruction: |
-        Olá, eu sou uma abelha! Ajude-me a coletar todo
-        o néctar das flores. Use um laço.
+      grade3_Conditionals_1_instruction: "Sou uma abelha faminta! \r\nAjude-me a coletar\ntodo o néctar das flores usando o menor número possível de blocos."
       grade3_Conditionals_10 BAD_instruction: |
         Colete o néctar das fileiras de flores!
         Use um laço aninhado.
-      grade3_Conditionals_10_instruction: |
-        Colete néctar e produza mel. Dica:
-        o que acontece se você usar a condição "se houver néctar" em uma flor vermelha? Você pode
-        completar isso com um laço?
+      grade3_Conditionals_10_instruction: "Há muita coisa acontecendo por aqui!\r\n\r\nUse\no que você aprendeu para coletar todo o néctar e, então, produza o mel."
       grade3_Conditionals_11 BAD_instruction: |
-        Avaliação - use um laço enquanto para coletar
-        todo o néctar dessa flor.
-      grade3_Conditionals_11_instruction: |
-        Colete néctar e produza mel. Tenha cuidado
-        para não coletar néctar de uma flor roxa se ela não tiver néctar.
-      grade3_Conditionals_12_instruction: Colete néctar das quatro flores.
+        Avaliação: Use um laço "enquanto" para
+        coletar todo o néctar dessas flores.
+      grade3_Conditionals_11_instruction: "Vamos unir todas as informações!\r\n\r\nUse\no que você aprendeu para me ajudar a coletar néctar apenas das flores que têm\nnéctar para oferecer, usando o menor número possível de blocos. Não se esqueça de produzir o mel para terminar."
+      grade3_Conditionals_12_instruction: "Este padrão de degrau deve ser familiar.  \r\n\r\nVocê\nconsegue coletar néctar apenas das flores que têm néctar para oferecer, usando o menor número de\nblocos possível?"
       grade3_Conditionals_13_instruction: |
         Assessment: Collect all of the nectar.
         Be careful not to try to collect nectar from a purple flower if it doesn't
         have any.
-      grade3_Conditionals_2_instruction: |
-        Ajude-me a coletar todo o néctar das
-        flores e a produzir mel. Use um laço.
+      grade3_Conditionals_2_instruction: "Olhe só todo esse néctar!\r\n\r\nAjude-me\na coletar todo o néctar e produzir mel usando o menor número possível de blocos.  "
       grade3_Conditionals_3_instruction: "Be careful not to collect nectar from a\npurple flower if it doesn't have any. \r\nYou must first check if the nectar\nis equal to 1 using the `if nectar` block."
       grade3_Conditionals_4_instruction: |
         Verifique essa flor com um bloco "se"
         para ver se há algum néctar disponível.
       grade3_Conditionals_5_instruction: |
-        Colete o néctar de cada flor que
-        tiver néctar disponível.
+        Colete o néctar de cada flor, apenas se
+        ela tiver néctar disponível.
       grade3_Conditionals_6_instruction: |
         Este campo tem flores vermelhas e roxas.
         As flores vermelhas têm uma quantidade de néctar conhecida, mas o néctar das flores roxas é desconhecido.
         Colete todo o néctar.
       grade3_Conditionals_7_instruction: Colete todo o néctar de cada flor.
-      grade3_Conditionals_8_instruction: Colete néctar onde as flores têm néctar.
+      grade3_Conditionals_8_instruction: "O que será que tem por aí!\r\n\r\nAjude-me\na voar pelo jardim e coletar o néctar apenas das flores que têm\nnéctar para oferecer. "
       grade3_Conditionals_9_instruction: |
         Help me find all of the nectar using as
         few blocks as possible!
@@ -3314,91 +3284,67 @@ pt-BR:
         Check this flower with an "if"
         block to see if there is any nectar available.
       grade3_ConditionalsElse_1_instruction: |
-        A abelha não sabe se isso é uma flor ou
-        uma colmeia. Colete néctar apenas das flores, mas primeiro verifique se o objeto é
-        uma flor ou uma colmeia.
-      grade3_ConditionalsElse_2_instruction: |
-        Agora a abelha só quer néctar. Lembre-se,
-        nem todos os objetos são flores, então veja se o objeto abaixo da nuvem é
-        uma flor. Se ele for, então você pode coletar o néctar.
+        Esta nuvem está tapando minha visão! Veja
+        se há uma flor atrás da nuvem, e só colete néctar se houver
+        uma flor. Cuidado, isso pode mudar!
+      grade3_ConditionalsElse_2_instruction: "Mais nuvens! \r\n\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade3_ConditionalsElse_3_instruction: |
         Now I just want to make honey. Some
         of these clouds might have honeycombs under them. Be sure to check each cloud!
       grade3_ConditionalsElse_4_instruction: |
-        O objeto desconhecido pode ser uma flor
-        ou uma colmeia. Use o bloco se/senão para coletar néctar se ele for uma flor,
-        senão para produzir mel (porque ele é, então, uma colmeia).
+        Às vezes esta nuvem esconde uma flor
+        e outras vezes uma colmeia! Use o bloco "se/senão" para coletar néctar
+        se for uma flor, senão para produzir mel (porque é uma colmeia).
       grade3_ConditionalsElse_5_instruction: "There will be either a flower or a\nhoneycomb under each of those clouds!\r\n\r\nUse the `if/else` block to collect\nnectar if there is a flower.\r\nOtherwise, make honey (because there is a\nhoneycomb)."
       grade3_ConditionalsElse_6_instruction: "I am not sure how much nectar this\nflower has, but I know it has either 1, 2, or 3 nectar. \r\n\r\nCombine the\nconditional blocks (`if` and/or `if/else`) to only get as much nectar as the\nflower has. \r\n\r\nRemember, the amount of nectar can change each time you\nrun the puzzle!"
-      grade3_ConditionalsElse_7_instruction: |
-        Lembre-se de que as flores roxas podem ter
-        1, 2 ou 3 néctares. Complete a função "verifique a flor roxa" e use-a
-        para coletar todo o néctar das flores.
+      grade3_ConditionalsElse_7_instruction: "Essas flores podem ter 3, 2 ou 1 néctar.\n\r\n\r\nComplete a função \"verifique a flor roxa\" e use-a para coletar\ntodo o néctar das flores."
       grade3_ConditionalsElse_8_instruction: "Write the function for `check flower\nmake honey`. \r\n\r\nYour function should check if the purple flower has 3,\n2, or 1 nectar and get all of the nectar. \r\nThen, move forward and make\nhoney."
       grade3_ConditionalsElse_9_instruction: "**Assessment:** This cloud is either\nhiding a flower with one nectar or a honeycomb that needs one honey.  \r\n\r\nComplete\nthe `get nectar or make honey` function, then call it to collect the nectar\nor honey. \r\n"
       grade3_ConditionalsElse_TeacherIDo_instruction: "There will be either a flower\nor a honeycomb under each of those clouds!\r\n\r\nUse the `if/else` block\nto collect nectar if there is a flower.\r\nOtherwise, make honey (because\nthere is a honeycomb)."
       grade3_Debugging_1_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
+        Esses blocos estão me incomodando. Corrija o(s)
+        erro(s) para coletar todo o néctar.
       grade3_Debugging_10_instruction: "This puzzle is making me loopy! \r\nFix the\nerror(s) to collect all of the nectar and make all of the honey."
       grade3_Debugging_11_instruction: "Assessment:  Now it's time to show what\nyou know!\r\n\r\nFix the error(s) to collect all of the nectar and make all\nof the honey."
-      grade3_Debugging_2_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      grade3_Debugging_3_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
+      grade3_Debugging_2_instruction: "Esses blocos estão me incomodando!\r\n\r\nCorrija\no(s) erro(s) para coletar todo o néctar."
+      grade3_Debugging_3_instruction: "Nossa, que ferroada!\r\n\r\nCorrija o(s) erro(s)\npara coletar todo o néctar."
       grade3_Debugging_4_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
+        Esses blocos estão me incomodando. Corrija o(s)
         erro(s) para coletar todo o néctar e produzir todo o mel.
       grade3_Debugging_5_instruction: "That flower looks tasty! \r\n\r\nFix the error(s)\nto collect all of the nectar.  You can now use both run and step."
-      grade3_Debugging_6_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar.
+      grade3_Debugging_6_instruction: "Que doce desafio!\r\n\r\nCorrija o(s) erro(s)\npara coletar todo o néctar."
       grade3_Debugging_7_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      grade3_Debugging_8_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
-      grade3_Debugging_9_instruction: |
-        Esses blocos estão me incomodando. Conserte o(s)
-        erro(s) para coletar todo o néctar e produzir todo o mel.
+        Corrija o(s) erro(s) para coletar todo o néctar
+        e produzir todo o mel.
+      grade3_Debugging_8_instruction: "Quantas flores lindas!\r\n\r\nCorrija o(s)\nerro(s) para coletar todo o néctar."
+      grade3_Debugging_9_instruction: "Uau, que ferroada!\r\n\r\nVocê\nterá que corrigir algumas coisas neste programa para coletar todo o\nnéctar e produzir todo o mel."
       grade3_Debugging_TeacherIDo_instruction: |
         These blocks are really bugging me.
         Fix the error(s) to collect all of the nectar and make all of the honey.
       grade3_Loops_1_instruction: |
         Can you help me collect the nectar from these
         flowers? 
-      grade3_Loops_10_instruction: |
-        Use um laço parecido com o do último desafio, mas realize
-        uma ação de virar dentro dele.
-      grade3_Loops_11_instruction: |
-        Use um laço para descer as escadas e coletar o
-        néctar.
+      grade3_Loops_10_instruction: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
+      grade3_Loops_11_instruction: "O formato deste caminho é diferente dos\ndemais. \r\n\r\nVocê consegue coletar todo o néctar usando o menor número possível de blocos?"
       grade3_Loops_12_instruction: |
-        Use um laço para coletar o néctar de cada flor
-        e produzir mel em cada colmeia.
-      grade3_Loops_2_instruction: |
-        Você consegue realizar a mesma tarefa mais facilmente
-        com um laço?
-      grade3_Loops_3_instruction: Você consegue usar um laço para coletar todo o néctar?
+        Você consegue encontrar a maneira mais rápida para a abelha
+        coletar todo o néctar e produzir todo o mel?
+      grade3_Loops_2_instruction: Desta vez, use um laço para juntar todo o néctar.
+      grade3_Loops_3_instruction: 'Use um laço "repita" para coletar todo o néctar.'
       grade3_Loops_4_instruction: |
         Now use the `repeat` block to collect all of the
         nectar and make all of the honey.
       grade3_Loops_5_instruction: |
-        Coloque esses blocos em um laço para coletar o néctar
-        de cada flor.
-      grade3_Loops_6_instruction: O que acontece se você repetir esta sequência 3 vezes? Não se esqueça de fazer o mel no final!
-      grade3_Loops_7_instruction: |
-        Cada flor contém uma unidade de néctar. Colete
-        o néctar de cada uma das flores. 
+        Que lindo campo florido!  Ajude a
+        abelha a visitar cada flor. Você consegue achar uma maneira de fazer isso com menos de 7 blocos?
+      grade3_Loops_6_instruction: "Quantas vezes os laços ajudaram você neste desafio?  \r\n\r\nOs laços\nsão seus amigos! Use alguns deles para completar este desafio com o menor número\nde blocos possível."
+      grade3_Loops_7_instruction: "Essas flores parecem deliciosas!\r\n\r\nColete o néctar\nde cada uma das flores usando o menor número possível de blocos."
       grade3_Loops_8_instruction: |
-        Use um laço para coletar o néctar e produzir o
-        mel.
+        Colete todo o néctar e produza todo o mel
+        usando o menor número possível de blocos.
       grade3_Loops_9_instruction: |
         Colete o néctar de cada flor e produza mel
-        em cada colmeia.
+        em cada colmeia usando o menor número possível de blocos.
       grade3_Loops_TeacherIDo_instruction: "Those flowers look tasty!\r\n\r\nCollect\nnectar from each of the flowers using the fewest blocks possible."
       grade3_maze_Loop1_instruction: |
         Assessment:  Get me to the sunflower using
@@ -3406,10 +3352,14 @@ pt-BR:
       grade3_maze_loops1_instruction: |
         Assessment:  Get me to the sunflower using
         only 5 blocks! 
-      grade3_maze_loops2_instruction: "Leve-me até o girassol!\r\n(Dica: você\nterá de usar um laço \"repita\" dentro de outro\npara passar deste nível.)"
-      grade3_maze_loops3_instruction: Leve-me até o girassol!
-      grade3_maze_loops4_instruction: Leve-me até o girassol!
-      grade3_maze_loops5_instruction: Leve-me até o girassol!
+      grade3_maze_loops2_instruction: "Leve-me até o girassol usando o menor número de blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
+      grade3_maze_loops3_instruction: "Vamos subir o nível! \r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
+      grade3_maze_loops4_instruction: |
+        Leve-me até o girassol usando o menor número
+        possível de blocos!
+      grade3_maze_loops5_instruction: |
+        Leve-me até o girassol usando o menor número possível
+        de blocos!
       grade3_maze_nestedLoops1_instruction: |
         Can you get me to the pig using 5 of
         the same kind of blocks?
@@ -3597,10 +3547,7 @@ pt-BR:
         the functions you used in this stage or try this new function that will automatically
         give your image a beautiful background color! This creation will be saved
         to your Projects dashboard so that you can easily edit it any time!
-      grade4_artist_functions1_instruction: |
-        Olá. Mim artista zumbi. Mim ama desenhar!
-        Me ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é
-        25 pixels menor que o comprimento do quadrado.
+      grade4_artist_functions1_instruction: "\"Mim artista zumbi. Mim ama desenhar!\"  \r\n\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100 pixels de comprimento.  \r\n\r\nA\nhaste entre as lentes tem 75 pixels de comprimento."
       grade4_artist_functions2_instruction: "Functions let you define new blocks!\n\r\n\r\nWe've moved the blocks needed for drawing a square into a function\ncalled `draw a square`. This time, use the `draw a square` function to create\nthe glasses. \r\n\r\nThe squares are 75 pixels apart."
       grade4_artist_functions_challenge_instruction: |
         Use the suggested functions
@@ -3734,10 +3681,7 @@ pt-BR:
         This cloud is blocking my view!
         Check to see if there's a flower under the cloud, and only get nectar if
         there's a flower. Be careful, it can change!
-      grade4_bee_conditionals_quantum2_instruction: |
-        Agora a abelha só quer néctar. Lembre-se,
-        nem todos os objetos são flores, então veja se o objeto abaixo da nuvem é
-        uma flor. Se ele for, então você pode coletar o néctar.
+      grade4_bee_conditionals_quantum2_instruction: "Mais nuvens! \r\n\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade4_bee_conditionals_quantum3_instruction: |
         Now I just want to make honey.
         Some of these clouds might have honeycombs under them. The way we've been
@@ -3763,14 +3707,8 @@ pt-BR:
         Funções são blocos de código que realizam
         uma tarefa. Use a função "obtenha 2 néctares" para coletar o néctar de cada
         flor.
-      grade4_bee_functions3_instruction: |
-        As funções são blocos de código que realizam
-        uma tarefa. Use a função "obtenha 5" para obter 5 néctares por vez. Lembre-se também
-        de usar um laço para obter um bloco contador ideal.
-      grade4_bee_functions4_instruction: |
-        A função "mova e obtenha néctar" vira
-        a abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use
-        a função para coletar todo o néctar.
+      grade4_bee_functions3_instruction: "As funções são blocos de código que realizam\numa tarefa. \r\n\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
+      grade4_bee_functions4_instruction: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \r\n\r\nUse\na função para coletar todo o néctar."
       grade4_bee_functions5_instruction: This puzzle will be deleted!
       grade4_bee_functions6_instruction: |
         Now write the function to collect nectar
@@ -3794,9 +3732,7 @@ pt-BR:
       grade4_bee_nestedLoops3_instruction: |
         Colete todo o néctar criando
         um laço aninhado.
-      grade4_bee_nestedLoops4_instruction: |
-        Colete todo o néctar de cada flor
-        e produza mel em cada colmeia. Use um laço aninhado. 
+      grade4_bee_nestedLoops4_instruction: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \r\n\r\nUse um laço aninhado. "
       grade4_bee_nestedLoops5_instruction: "Challenge time!\r\n\r\nCollect all of\nthe nectar from each flower and make honey at each honeycomb. \r\n\r\nHint:\nYou will need 4 repeat blocks!"
       grade4_bee_nestedLoops_assess_instruction: "**Assessment:** Collect all of\nthe nectar and make all of the honey using loops.\r\n\r\nHint: There are several\npossible solutions!"
       grade4_designProcess_vid_instruction: |
@@ -3888,7 +3824,7 @@ pt-BR:
       grade4_playLab_proj_example2a_instruction: |
         Take a look at this project.  Do
         you see how it was made?
-      grade4_playlab_test_instruction: "Use a seta para a direita para atirar corações.\r\n\r\nEm\nem nosso jogo, como podemos marcar pontos? Adicione 1 a sua variável \"pontos\" toda\nvez que o cão atingir o gato com um coração. Use o evento \"quando o personagem 2 tocar em alguma coisa\"\npara disparar uma atualização em sua pontuação. Você pode incrementar sua variável\ndefinindo \"pontos = pontos + 1.\" Aumente sua pontuação até 10 (um ponto\nde cada vez!) para passar de nível."
+      grade4_playlab_test_instruction: "Use a seta para a direita para atirar tortas.\r\n\r\nEm\nnosso jogo, como podemos marcar pontos? Adicione 1 à variável \"pontos\" toda\nvez que o cão atingir o gato com um pedaço de torta. Use o evento \"quando o personagem 2 tocar em alguma coisa\"\npara acionar uma atualização em sua pontuação. Você pode incrementar sua variável\ndefinindo \"pontos = pontos + 1\". Aumente sua pontuação até 10 (um ponto\nde cada vez!) para passar de nível."
       grade4_playlab_test2_instruction: |
         Here's a function called `jump` that causes
         your main character to jump up 100 pixels. Run the program and use the jump
@@ -3908,10 +3844,8 @@ pt-BR:
         of the nectar and make all of the honey.
       grade4_review_bee2_instruction: |
         Colete o néctar de cada flor e produza mel
-        em cada colmeia.
-      grade4_review_bee3_instruction: |
-        Use um laço parecido com o do último desafio, mas realize
-        uma ação de virar dentro dele.
+        em cada colmeia usando o menor número possível de blocos.
+      grade4_review_bee3_instruction: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
       grade4_scaffolded_project1_instruction: |
         It is amazing how much you have learned!
         Let's put them together to make a game, step by step.
@@ -3960,8 +3894,8 @@ pt-BR:
       grade5_artist_binary8_instruction: Termine o desenho.
       grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw\non - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get\ncreative with the bits?"
       grade5_artist_for_loops1_instruction: |
-        Desenhe este triângulo que tem 50 pixels.
-        Dica: use um bloco repita.
+        Use um bloco "repita" para desenhar este triângulo
+        que tem 50 pixels de largura.
       grade5_artist_for_loops10_instruction: "Can you figure out how to use all of\nthe things you've learned to create this image?\r\n\r\nNeed a hint? Click\nhere."
       grade5_artist_for_loops1a_instruction: |
         Try using a `for loop`to create this
@@ -3969,21 +3903,18 @@ pt-BR:
         puzzle. As long as you turn by the right number of degrees, the artist will
         make the correct shape!
       grade5_artist_for_loops1b_instruction: |
-        *Free Play:* Experiment with the `for
-        loop` and the `counter` variable.
+        Experiment with the `for` loop and
+        play with the `counter` variable.
       grade5_artist_for_loops2_instruction: |
-        I've put the code for drawing a triangle
-        inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look
-        at the code before you hit "Run".
+        Use a `repeat` inside of a `for` loop
+        to create this stack of triangles that goes from 50 pixels to 100 pixels.
       grade5_artist_for_loops3_instruction: |
-        Use the last puzzle as a reference to
-        complete this one.  The smallest triangle has 20 pixel sides, the largest
-        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
-        
+        These triangles go from 20 pixel sides
+        to 200 pixel sides, and each triangle is 20 pixels larger than the last. 
       grade5_artist_for_loops4_instruction: |
-        How would you modify what you've learned
-        to draw these squares? They start at 15 pixels long, the largest is 300 pixels
-        long, and each square is 15 pixels larger than the last. 
+        These squares start at 15 pixels long,
+        the largest is 300 pixels long, and each square is 15 pixels larger than the
+        last. 
       grade5_artist_for_loops5_instruction: "Just one little change to the code from\nthe last image can create this drawing. Can you figure out what that change\nis?\r\n\r\nHint:  You need to remove something!"
       grade5_artist_for_loops6_instruction: |
         If you turn a little bit more or less
@@ -3993,6 +3924,10 @@ pt-BR:
       grade5_artist_for_loops7_instruction: |
         Make three small changes to the code
         from the last level to get this!
+      grade5_artist_for_loops7a_instruction: |
+        Take the angle down to 72 degrees to
+        get a spiraled pentagon.
+      grade5_artist_for_loops7b_instruction: "Use the counter inside the `set alpha`\nblock to get this faded center.\r\n(This hexagon pattern was made using a\n60 degree turn.)"
       grade5_artist_for_loops8_instruction: |
         Remember back in a previous stage when
         we used a variable to control the number of sides in a shape? We are going
@@ -4002,9 +3937,8 @@ pt-BR:
       grade5_artist_for_loops9_instruction: "Let's put it all together!  Using your\nknowledge of `for` loops and the `counter` variable, create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
       grade5_artist_for_loopsfreeplay11_instruction: "Atividade livre - Inspiração: agora você\naprendeu tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n\r\nPrecisa de uma dica? Clique aqui."
       grade5_artist_for_loopsfreeplay12_instruction: |
-        Free Play: Try making some
-        drawings of your own using "for loops". We've added a few useful variables
-        for you as well.
+        Free Play: Try using the `counter`
+        variable with other drawing elements to make magical images like this one.
       grade5_artist_freeplay_instruction: |
         Create your own project! This creation
         will be saved to your Projects dashboard so that you can easily edit it any
@@ -4017,7 +3951,7 @@ pt-BR:
       grade5_artist_functionparameters7_instruction: |
         This image is similar to the
         last. Can you use a `for` loop with your function to make this design?
-      grade5_artist_functionparameters8_instruction: "Vamos editar a função \"desenhe um polígono\".\nEla já tem um parâmetro \"lados\". Agora, vamos adicionar um parâmetro\n\"comprimento\". \r \nDica: O perímetro de cada forma tem 200 pixels de comprimento. Você\nse lembra da equação para fazer as formas ficarem do mesmo tamanho quando elas têm\num número diferente de lados?"
+      grade5_artist_functionparameters8_instruction: "Vamos editar a função \"desenhe um\npolígono\". Ela já tem um parâmetro \"lados\". Agora, vamos adicionar um parâmetro\n\"comprimento\". \r \nO perímetro de cada forma tem 200 pixels de comprimento. Você se lembra\nda equação para fazer as formas ficarem do mesmo tamanho quando elas têm um número diferente\nde lados?"
       grade5_artist_functionparameters9_instruction: |
         Edit "draw a spiral edge"
         to use "length" and "sides" parameters, then recreate these shapes.
@@ -4200,39 +4134,36 @@ pt-BR:
         à função "patrulhe". Tente usar um bloco "defina velocidade" com o novo parâmetro "velocidade"
         para ajudar o Pinguim a pegar as duas bandeiras antes que os outros personagens peguem
         uma.
-      grade5_playlab_variables12_instruction: "Vamos nos divertir! Analise o\ncódigo fornecido para ver se você consegue descobrir o que cada bloco faz.  \r\n\r\nQuando terminar, use as\nsetas do teclado para controlar o cão e coletar todas as bandeiras."
+      grade5_playlab_variables12_instruction: "Vamos nos divertir! Analise o\ncódigo fornecido para ver se você consegue descobrir o que cada bloco faz.  \r\nQuando\nterminar, use as setas do teclado para controlar o cão e coletar todas as bandeiras.\r\nOBSERVAÇÃO:\nVocê não precisa fazer nenhuma alteração no programa"
       grade5_playlab_variables13_instruction: |
-        Use um bloco "quando o personagem tocar" para enviar
-        o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
+        Use o bloco "quando o personagem tocar"
+        para enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
       grade5_playlab_variables14_instruction: |
         It's free play time! Have fun with
         all the blocks in your tool box. 
       grade5_playlab_variables1ask_instruction: "This time, when you press 'run',\nyou will see a 'prompt' asking you for a number. This number will be stored\nin a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how\nthis program is written!"
       grade5_playlab_variables2_instruction: |
-        A corrida do último desafio não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
-        gato. O primeiro a coletar 10 bandeiras vence!
+        A corrida do último desafio não foi
+        muito justa! Altere a variável "velocidade_cão" para garantir que você possa coletar mais
+        bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
       grade5_playlab_variables3_instruction: |
-        Temos aqui um novo tipo de jogo! Use as
-        setas para a esquerda e para a direita para se mover e a seta para cima para pular. Veja se você
-        consegue coletar todas as bandeiras.
+        Use as setas para a esquerda e para a direita para se mover,
+        e a seta para cima para pular. Veja se você consegue coletar todas as bandeiras.
       grade5_playlab_variables4_instruction: |
         Now we're using a variable called
         "height" to control how high the dog can jump. Update the "height" variable
         so that the dog can jump high enough to reach all the flags.
       grade5_playlab_variables5_instruction: "You've seen now how a variable can\nbe used to set the height of an actor's jump. How else could  you use a variable?\r\n\r\nLet's\nbuild a game! First we'll need a score. Try setting the 'points' variable\nto give yourself 10 free points!"
-      grade5_playlab_variables6_instruction: "Use a seta para a direita para atirar corações.\r\n\r\nEm\nem nosso jogo, como podemos marcar pontos? Adicione 1 a sua variável \"pontos\" toda\nvez que o cão atingir o gato com um coração. Use o evento \"quando o personagem 2 tocar em alguma coisa\"\npara disparar uma atualização em sua pontuação. Você pode incrementar sua variável\ndefinindo \"pontos = pontos + 1.\" Aumente sua pontuação até 10 (um ponto\nde cada vez!) para passar de nível."
+      grade5_playlab_variables6_instruction: "Use a seta para a direita para atirar tortas.\r\n\r\nEm\nnosso jogo, como podemos marcar pontos? Adicione 1 à variável \"pontos\" toda\nvez que o cão atingir o gato com um pedaço de torta. Use o evento \"quando o personagem 2 tocar em alguma coisa\"\npara acionar uma atualização em sua pontuação. Você pode incrementar sua variável\ndefinindo \"pontos = pontos + 1\". Aumente sua pontuação até 10 (um ponto\nde cada vez!) para passar de nível."
       grade5_playlab_variables6ask_instruction: "This time, you need 100 points to\nwin!  Don't worry though, you can choose how many points you earn each time\nyou score a hit!\r\nTry adding the `ask` block and changing the number 1 out\nfor the variable `value`."
       grade5_playlab_variables7_instruction: |
         Legal, agora vamos garantir que esse jogo
-        não seja muito fácil - sempre que o cão (personagem 1) for atingido por uma bola de fogo
-        do gato (personagem 2), você deve perder um ponto. Comece com 10 pontos para que o jogo não seja muito difícil. Faça sua
-        pontuação cair de 10 para 0 para passar de nível.
-      grade5_playlab_variables71_instruction: "Temos aqui nosso jogo de uma fase anterior, mas\na maior parte do código está oculta. Há uma nova função chamada \"marcar_pontos\".\r\n\r\nEdite\na função para que um parâmetro \"pontos\" seja adicionado à variável \"pontos_do_jogador\".\n\r\n\r\nA variável \"pontos_do_jogador\" deve aumentar toda vez\nque o cão marcar o gato com corações e diminuir toda vez que o gato marcar o cão com corações.\r\n\r\nObservação:\nQuando estiver pronto, clique em \"Executar\" para jogar. Quando o cão marcar 6 pontos, você\nvai para o próximo desafio. "
-      grade5_playlab_variables81_instruction: "Adicionamos uma última função para\nque você use.\r\n\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número. \r\n\r\nPor\nexemplo: \"pontos_jogador\" > 6\r\n\r\nJogue o jogo e chegue até o nível\n4 para ir para o próximo desafio. "
-      grade5_playlab_variables9_instruction: |
-        Aqui temos uma função chamada "patrulhe".
-        Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
+        não seja muito fácil. Sempre que o cão (personagem 1) for atingido por um sanduíche
+        do gato (personagem 2), você deve perder um ponto. Comece com 10 pontos para que
+        o jogo não seja muito difícil. Faça sua pontuação cair de 10 para 0 para passar de nível.
+      grade5_playlab_variables71_instruction: "Temos aqui nosso jogo de uma fase anterior,\nmas a maior parte do código está oculta. Há uma nova função chamada \"marcar_pontos\".\r\n\r\nEdite\na função para que um novo parâmetro \"pontos\" seja adicionado à variável \"pontos_jogador\".\n\r\n\r\nA variável \"pontos_jogador\" deve aumentar toda vez que o cão atingir o gato\ncom uma torta e diminuir toda vez que o gato atingir o cão com um sanduíche.\r\n\r\nObservação:\nQuando terminar, clique em \"Executar\" para jogar. Quando o cão marcar 6 pontos, você\nvai para o próximo desafio. "
+      grade5_playlab_variables81_instruction: "Adicionamos uma última função para\nvocê.\r\n\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número.\r\n\r\nPor\nexemplo: \"pontos_jogador\" > 6\r\n\r\nJogue e chegue até o nível 3\npara ir para o próximo desafio. "
+      grade5_playlab_variables9_instruction: "Aqui temos uma função chamada \"patrulhe\".\n\r\n\r\nEdite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
       grade5_playlab_variables_freeplay_instruction: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \r\n\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \r\n\r\nHint: scroll down to see all the commands\nin the workspace."
       grade5_playlab_variables_jump1_instruction: |
         This puzzle uses a hidden function
@@ -4433,7 +4364,7 @@ pt-BR:
       K-1 artist 1 level 10_instruction: Desenhe linhas tracejadas usando os blocos pule e desenhe
       K-1 artist 1 level 9_instruction: Faça o desenho usando três retas
       K-1 Artist Loops 1_instruction: Desenhe esta reta usando o movimento para o leste 4 vezes.
-      K-1 Artist Loops 2_instruction: Você pode desenhar a mesma reta usando um laço?
+      K-1 Artist Loops 2_instruction: Agora, desenhe a mesma reta usando um laço.
       K-1 Artist Loops 3_instruction: Você pode repetir esses blocos para desenhar 6 retas?
       K-1 Artist Loops 4_instruction: |
         Um laço poderia nos ajudar a desenhar o topo desse
@@ -4442,9 +4373,9 @@ pt-BR:
       K-1 Artist Loops 6_instruction: |
         São necessários dois laços: um para subir as
         escadas e outro para descer.
-      K-1 Artist Loops 7_instruction: Você pode terminar este padrão com dois laços?
+      K-1 Artist Loops 7_instruction: Laços podem ajudar você a terminar este padrão.
       K-1 Artist Loops 8_instruction: Esta escada tem degraus mais longos.
-      K-1 Artist Loops 9_instruction: 'Avaliação: use um laço para desenhar as escadas'
+      K-1 Artist Loops 9_instruction: Qual é a maneira mais fácil de desenhar as escadas?
       K-1 Artist Loops Free Play_instruction: Atividade livre, desenhe algo divertido!
       K-1 Artist1 1_instruction: Desenhe o pé do homem com uma reta
       K-1 Artist1 10_instruction: |
@@ -4490,7 +4421,7 @@ pt-BR:
       K-1 Bee 13_instruction: Colete três néctares e então fabrique uma unidade de mel!
       K-1 Bee 14_instruction: |
         Leve-me até o néctar e colete-o, leve-me até o mel
-        e produza mel
+        e produza mel!
       K-1 Bee 15_instruction: Colete dois néctares para fabricar duas unidades de mel!
       K-1 Bee 2_instruction: |
         Mova-me até a flor, colete o néctar e então mova-me
@@ -4643,7 +4574,7 @@ pt-BR:
         Play with these blocks to see if you can get
         me to the pig!
       kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      kikiTesting_instruction: Click here to open the lesson plan for this level!
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |
         Trace the path and lead me to the silly pig. Avoid TNT
@@ -4889,28 +4820,25 @@ pt-BR:
       NEW Course 4 Artist Functions 10_instruction: |
         Clique em "editar" para preencher
         os blocos na definição da função para fazer um quadrado de 40 pixels.
-      NEW Course 4 Artist Functions 11_instruction: "Agora, queremos criar uma nova\nfunção chamada \"desenhe uma linha de quadrados\" que desenha seis quadrados em sequência. Você consegue criar essa função usando a função \"desenhe um quadrado 20\"\nque já criamos? Observação: alteramos a caneta para que ela fique muito mais\nfina. Clique em \"editar\" na função \"desenhe um quadrado 20\" para ver como!\r\n"
+      NEW Course 4 Artist Functions 11_instruction: |
+        Agora, queremos criar uma nova
+        função chamada "desenhe uma fileira de quadrados", que desenha seis quadrados em sequência. Você
+        consegue criar essa função usando a função "desenhe um quadrado 20" que já criamos
+        para você?
       NEW Course 4 Artist Functions 12_instruction: |
-        Use a função "desenhe uma linha de quadrados"
-        do último desafio para desenhar esse padrão."
+        Use a função "desenhe uma fileira de quadrados"
+        do último desafio para desenhar esse padrão.
       NEW Course 4 Artist Functions 13_instruction: |
         Você consegue desenhar uma forma de estrela usando
-        a função "desenhe uma linha de quadrados"? Dica: Edite a função "desenhe uma linha de quadrados"
-        para que você não precise chamá-la duas vezes.  Observe que você terá de avançar
-        um certo número de pixels e virar 144 graus.
+        a função "desenhe uma fileira de quadrados"?  
       NEW Course 4 Artist Functions 14_instruction: 'Atividade livre! '
       NEW Course 4 Artist Functions 2_instruction: |
         Você consegue desenhar 3 quadrados com 20 pixels de distância
         entre cada um? Dica: cada quadrado tem 100 pixels de tamanho
-      NEW Course 4 Artist Functions 3_instruction: |
-        Temos aqui um novo tipo de bloco.
-        Ele é chamado de "bloco de função". Clique em "editar" e então preencha-o com o código
-        para desenhar um quadrado com lados de 100 pixels. Quando você terminar de editar a função,
-        clique em "Fechar" para retornar ao seu programa.
+      NEW Course 4 Artist Functions 3_instruction: "Temos aqui um novo tipo de bloco.\nEle é chamado de \"função\". Clique em \"editar\" e então preencha-o com o código\npara desenhar um quadrado com lados de 100 pixels. \r\n\r\nQuando terminar de editar\na função, clique em \"Fechar\" para retornar ao seu programa."
       NEW Course 4 Artist Functions 4_instruction: |
         Use a função "desenhe um quadrado"
-        para desenhar esse padrão. Dica: você vai precisar usar um bloco "vire 120 graus à direita"
-        após cada quadrado.
+        para desenhar esse padrão.
       NEW Course 4 Artist Functions 5_instruction: |
         Como o bloco "desenhe um quadrado"
         sabia que comandos executar? Clique em "editar" no bloco de função "desenhe um quadrado".
@@ -4919,10 +4847,10 @@ pt-BR:
         e Fechar" e então em "Executar".
       NEW Course 4 Artist Functions 6_instruction: "Usando o bloco de função \"desenhe um quadrado\",\nvocê pode desenhar esta imagem? Dica: cada quadrado está separado por 20 pixels.\r\n"
       NEW Course 4 Artist Functions 7_instruction: |
-        Você está pegando o jeito de como usar os blocos de função? 
-        Vamos modificar esse quadrado para que ele tenha 200 pixels
-        de tamanho. Dica: clique em "editar" para acessar o editor da função "desenhe um quadrado".
-        Lembre-se de clicar em "Fechar" para sair do editor da função. 
+        Você está pegando o jeito de como
+        usar os blocos de função? Vamos modificar esse quadrado para que ele tenha 200 pixels
+        de tamanho. Clique em "editar" para acessar o editor da função "desenhe um quadrado". Lembre-se
+        de clicar em "Fechar" para sair do editor da função. 
       NEW Course 4 Artist Functions 8_instruction: |
         Criamos uma nova função
         para você chamada "desenhe um triângulo". Você consegue editar a definição da função
@@ -4940,9 +4868,9 @@ pt-BR:
         Vamos definir essa função para desenhar
         um quadrado com lados de 50 pixels. Clique em "editar" para começar.
       NEW Course 4 Artist Params 10_instruction: |
-        Crie um bloco de função "desenhe um hexágono"
-        com um parâmetro comprimento. Dica: esse hexágono tem lados de 100 pixels
-        de tamanho. 
+        Crie um bloco de função "desenhe
+        um hexágono" com um parâmetro "comprimento". Esse hexágono tem lados de 100 pixels
+        de comprimento. 
       NEW Course 4 Artist Params 11_instruction: |
         Você consegue descobrir como desenhar
         essa forma? Edite a função para usar o parâmetro "lados".
@@ -4951,8 +4879,8 @@ pt-BR:
         Os lados de todas as formas têm 100 pixels de comprimento.
       NEW Course 4 Artist Params 12a_instruction: |
         Esta imagem é semelhante à anterior.
-        Você consegue usar um "laço para" com sua função para criar deste design?
-      NEW Course 4 Artist Params 13_instruction: "Vamos editar a função \"desenhe um polígono\".\nEla já tem um parâmetro \"lados\". Agora, vamos adicionar um parâmetro\n\"comprimento\". \r \nDica: O perímetro de cada forma tem 200 pixels de comprimento. Você\nse lembra da equação para fazer as formas ficarem do mesmo tamanho quando elas têm\num número diferente de lados?"
+        Você consegue usar um laço "para" com sua função para criar deste desenho?
+      NEW Course 4 Artist Params 13_instruction: "Vamos editar a função \"desenhe um\npolígono\". Ela já tem um parâmetro \"lados\". Agora, vamos adicionar um parâmetro\n\"comprimento\". \r \nO perímetro de cada forma tem 200 pixels de comprimento. Você se lembra\nda equação para fazer as formas ficarem do mesmo tamanho quando elas têm um número diferente\nde lados?"
       NEW Course 4 Artist Params 14_instruction: |
         Edite "desenhe uma borda espiral" para
         usar os parâmetros "comprimento" e "lados" e então recrie essas formas.
@@ -4962,22 +4890,22 @@ pt-BR:
         Brinque com a largura da caneta para ver como seus desenhos ficam diferentes!
       NEW Course 4 Artist Params 2_instruction: |
         Crie uma função "desenhe um triângulo"
-        com lados de 50 pixels desde o início
-      NEW Course 4 Artist Params 3_instruction: "Agora, vamos usar a função para desenhar\n5 triângulos em uma linha. Dica: cada triângulo está separado por 30 pixels.\r\n"
+        desde o início, para fazer um triângulo com lados de 50 pixels.
+      NEW Course 4 Artist Params 3_instruction: "Vamos usar a função para desenhar\n5 triângulos em sequência. Cada triângulo está separado por 30 pixels.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
       NEW Course 4 Artist Params 5_instruction: |
-        Preencha o ??? no bloco de entrada
-        do parâmetro comprimento. Dica: o tamanho do pentágono é de 100 pixels. 
+        Preencha "???" no bloco
+        do parâmetro "comprimento". O pentágono tem lados de 100 pixels. 
       NEW Course 4 Artist Params 6_instruction: |
         Preencha o parâmetro "comprimento"
         para desenhar essa formas substituindo o "???" pelos números corretos. O
         quadrado e o triângulo têm lados de 100 pixels, enquanto o hexágono tem lados de
         75 pixels.
       NEW Course 4 Artist Params 7_instruction: |
-        Você consegue completar este desenho? Dica:
-        cada triângulo é 25 pixels maior que o anterior. O primeiro triângulo
+        Você consegue completar este desenho? Os
+        lados de cada triângulo têm 25 pixels a mais que o anterior. O primeiro triângulo
         tem lados de 25 pixels de comprimento.
       NEW Course 4 Artist Params 8_instruction: |
         O código da função deste triângulo
@@ -5001,17 +4929,15 @@ pt-BR:
         ver como o bloco "defina o comprimento" e o bloco "comprimento" funcionam juntos? Clique
         em "Executar" para vê-los em ação. 
       NEW Course 4 Artist Vars 2_instruction: |
-        Arraste um bloco numérico para o bloco "defina o comprimento"
-        para desenhar um conjunto de triângulos de 50 pixels. 
+        Arraste um bloco numérico para os blocos "defina
+        o comprimento" e "repita_vezes" para desenhar um conjunto de triângulos de 50 pixels.
+        
       NEW Course 4 Artist Vars 4 5_instruction: |
         Belo trabalho no último desafio,
         vamos tentar novamente. Desta vez, vamos fazer esse design bacana com hexágonos
         de 60 pixels.
-      NEW Course 4 Artist Vars 4_instruction: |
-        Vamos tentar novamente. Você consegue definir
-        a variável "comprimento" para fazer este design bacana com hexágonos? Dica: é um
-        múltiplo de 10.
-      NEW Course 4 Artist Vars 6_instruction: "Desenhe esse padrão colocando a\nvariável comprimento nos lugares corretos e definindo o valor correto para\ncomprimento. (Dica: é um múltiplo de 10).  \r\n\r\nPercebe como você define o valor de\ncomprimento apenas uma vez e o código usa o valor correto em todos os lugares?\r\n\r\n\r\n"
+      NEW Course 4 Artist Vars 4_instruction: "Vamos tentar de novo! \r\n\r\nVocê consegue\ndefinir a variável \"comprimento\" em 60 para fazer este design bacana com hexágonos?"
+      NEW Course 4 Artist Vars 6_instruction: "Desenhe esse padrão de pentágonos com\nlados de 100 pixels definindo o valor correto para \"comprimento\" e colocando a variável\n\"comprimento\" em todos os lugares corretos. \r\n\r\nVocê percebeu que só precisa\ndefinir o valor de \"comprimento\" uma vez, e o código usa o valor correto em todos os lugares?"
       NEW Course 4 Bee For Loops 1_instruction: |
         Use um laço para coletar o néctar
         de cada flor.
@@ -5019,7 +4945,7 @@ pt-BR:
         Use a variável "contador" do seu laço "para"
         para controlar a distância do movimento horizontal.
       NEW Course 4 Bee For Loops 10a_instruction: |
-        Pronto para um desafio? Pegue o que
+        Pronto para um desafio? Use o que
         você aprendeu sobre laços e tente resolver esse problema. Lembre-se: você pode
         ter que executar sua solução várias vezes antes de descobrir todas as
         etapas.
@@ -5053,7 +4979,9 @@ pt-BR:
         é alterada de acordo com o incremento. Tente coletar essas flores usando
         um incremento de 2.
       NEW Course 4 Bee For Loops 7_instruction: "Agora, vamos combinar a variável \"contador\"\ncom um bloco matemático! Como você pode usar a variável \"contador\" para navegar\npor esse jardim com o menor número de blocos possível? O que você precisa fazer para\ncoletar 3, 6, 9, 12 ou 15 néctares dessa vez? O segredo está na variável\n\"contador\"!\r\n\r\nLembre-se: se seu laço estiver contando de forma crescente, o incremento é adicionado\nà variável \"contador\" a cada repetição."
-      NEW Course 4 Bee For Loops 8_instruction: "Você conseguiu! Qual deve ser seu incremento\npara coletar 3, 6, 9, 12, 15 néctares?\r\nDica: quanto você precisa\nadicionar a cada número para obter o número seguinte?"
+      NEW Course 4 Bee For Loops 8_instruction: |
+        Você conseguiu! Qual deve ser seu
+        incremento para coletar 3, 6, 9, 12, 15 néctares?
       NEW Course 4 Bee For Loops 9_instruction: |
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
@@ -5220,7 +5148,7 @@ pt-BR:
         menor que o comprimento do quadrado.
       PDK5 Functions 2_instruction: |
         As funções permitem que você defina novos blocos! Movemos
-        os blocos para desenhar um quadrado para dentro de uma função chamada "desenhe um quadrado".
+        os blocos para desenhar um quadrado dentro de uma função chamada "desenhe um quadrado".
         Você consegue usar a função "desenhe um quadrado" para criar os óculos? Os quadrados são separados
         por 75 pixels.
       PDK5 Loops 1_instruction: |

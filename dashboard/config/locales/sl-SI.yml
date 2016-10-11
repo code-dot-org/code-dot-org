@@ -327,6 +327,7 @@
       unsubmit: Unsubmit
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'

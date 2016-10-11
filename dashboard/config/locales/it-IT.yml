@@ -3,7 +3,7 @@
     messages:
       not_saved: 'Per favore correggi i seguenti errori:'
       too_young: Questo contenuto ha attivi dei limiti di età e non è disponibile
-        per gli studenti più giovani
+        per gli studenti più giovani.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -92,11 +92,11 @@
   signup_form:
     student_count: "%{count} studenti si sono già iscritti."
     teacher_count: "%{count} insegnanti si sono già iscritti."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: Iscriviti per un account tenere traccia dei progressi o gestire la tua
+      classe. <a href="/"> Puoi sfogliare le varie fasi e puzzle</a> senza un account,
+      ma dovrai iscriverti per salvare i tuoi progressi e progetti.
     teacher_educator_guide: Vedi la guida per l'insegnante
-    title: Sign up for Code.org
+    title: Iscriviti per Code.org
     school_name: Nome della scuola (facoltativo)
     school_address: Indirizzo della scuola (facoltativo)
     address_placeholder: Indirizzo, città, stato, CAP
@@ -126,7 +126,7 @@
     user_type_teacher: Insegnante
     user_type_student: Studente
     field_is_required: "è un dato obbligatorio"
-    accept_terms: You must agree to create an account
+    accept_terms: Devi accettare le condizioni per creare un account
   signin_form:
     title: Sei già iscritto con un account? Accedi
     login: Indirizzo di posta elettronica
@@ -148,8 +148,8 @@
   password:
     reset_form:
       title: Hai dimenticato la tua password?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Inserisci il tuo indirizzo email qui sotto e provvederemo ad inviarti
+        le istruzioni per resettare la password.
       email: Indirizzo di posta elettronica
       submit: Invia
     change_form:
@@ -300,7 +300,7 @@
       prizes: Premi
       logout: Esci
       signin: Accedi
-      signup: Iscriviti
+      signup: Crea un account
       already_registered: Sei già iscritto?
       pair_programming: Programmazione in Coppia
       team: Squadra
@@ -341,7 +341,8 @@
       submitted_on: 'Risposte inviate:'
       unsubmit: Annulla l'invio delle risposte
       worked_with: Ha lavorato in coppia con
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Aggiorna le impostazioni di blocco qui.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}
@@ -733,7 +734,7 @@
       non affitterà, venderà o condividerà mai queste informazioni con terze parti.
     sign_out: Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
+    title: Aggiornati i termini e le condizioni della privacy
     intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
       The changes are effective as of August 24, 2016.  The biggest change: we will
       <i>no longer store email addresses for student accounts on Code Studio.</i>
@@ -748,18 +749,18 @@
       educational programs such as Code Studio.
     tos: Termini di servizio
     privacy: Informativa sulla privacy
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: Informativa sulla privacy
+    accept_label: Accetto i <a href="%{tos_url}" target="_blank"> Termini di servizio</a>
+      e <a href="%{privacy_url}" target="_blank"> Privacy Policy</a> aggiornati
+    accept: Accetto
     print: Stampa
-    later: Later
+    later: Più tardi
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: Review updated terms
+    review_terms: Rivedi i termini dell'aggiornamento
   zendesk_too_young_message: Siamo spiacenti, gli utenti più giovani non possono accedere
     al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su
     <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai
@@ -943,4 +944,4 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
-  return_course_overview: Go to unit overview
+  return_course_overview: Vai alla visualizzazione delle unità

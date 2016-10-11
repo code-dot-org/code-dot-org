@@ -184,7 +184,7 @@ gl-ES:
   learn_next_level: Probar outro curso do Code Studio
   learn_online: Proba outros cursos online
   learn_classes: Atopa clases preto de ti
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Eu xa rematei unha #HourofCode - Dalle un vistazo! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -486,7 +486,6 @@ gl-ES:
   dashboard_landing_office_hours: Fai a túa pregunta persoalmente! Marca unha conferencia con vídeo no noso horario comercial (soamente en inglés).
   dashboard_landing_print_certificates: Imprima certificados para os alumnos que terminaron este curso
   dashboard_landing_educator_blog: Lea sobre noticias e actualizacións nos materiais dispoñíbeis no noso Blog do Profesor
-  dashboard_landing_smart_hints: Axúdenos a aumentar pistas útiles nos titoriais da Code.org
   dashboard_landing_video_player: Probe o noso novo reprodutor de vídeo na súa escola
   dashboard_landing_progress_title: Progreso da clase principal
   dashboard_landing_progress_biggest: Este é o progreso para a túa sección maior.
@@ -830,6 +829,7 @@ gl-ES:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

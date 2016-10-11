@@ -297,15 +297,15 @@
     คุณสามารถเปลี่ยนแปลงโลกของเรา &rdquo;
     Susan, ประธานกรรมการบริหาร YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;อย่าเพียงแค่เล่นบนโทรศัพท์ของคุณ
-    ลองเขียนโปรแกรมให้มัน&rdquo;
-    บารักโอบามา
+    &ldquo;อย่าเพียงแค่เล่นเกมบนโทรศัพท์ของคุณ
+    ลองสร้างโปรแกรมดูสิ&rdquo;
+    ประธานาธิบดีสหรัฐ บารัก โอบามา
   homepage_hero_text_sheryl: |
-    &ldquo;เด็กๆของเรา &mdash; รวมไปถึงผู้หญิง &mdash;
-    ต้องการโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์ &rdquo;
+    &ldquo;เด็กๆของพวกเรา &mdash; รวมไปถึงเด็กผู้หญิง &mdash;
+    ต้องการโอกาสที่จะได้เรียนรู้วิชาวิทยาการคอมพิวเตอร์ &rdquo;
     Sheryl, ประธานฝ่ายปฎิบัติการ Facebook
   homepage_hero_text_satya: |
-    &ldquo;วิทยาการคอมพิวเตอร์สามารถปลดล็อค
+    &ldquo;วิทยาการคอมพิวเตอร์สามารถสร้าง
     โอกาสที่ดีที่สุดในโลกนี้ &rdquo;
     Satya, ประธานกรรมการบริหาร Microsoft
   homepage_hero_text_bosh: |
@@ -589,7 +589,6 @@
   dashboard_landing_office_hours: "ถามคำถามแบบตัวต่อตัว! ดูคลิปวิดีโอประจำเดือนของเรา"
   dashboard_landing_print_certificates: "พิมพ์ใบรับรองสำหรับนักเรียนที่จบหลักสูตรนี้"
   dashboard_landing_educator_blog: "อ่านข่าวสารและการอัพเดทเกี่ยวกับสื่อต่าง ๆ ได้ที่บล็อกนักการศึกษา"
-  dashboard_landing_smart_hints: "ช่วยเราเพิ่มคำใบ้ในบทเรียนของ Code.org"
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: "ความคืบหน้าในการเรียน"
   dashboard_landing_progress_biggest: "นี่คือความคืบหน้าในส่วนที่ใหญ่ที่สุดของคุณ"
@@ -1009,6 +1008,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

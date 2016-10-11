@@ -291,6 +291,7 @@ id:
       unsubmit: Unsubmit
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'

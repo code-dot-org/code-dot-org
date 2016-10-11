@@ -118,7 +118,7 @@
       khoản Dịch vụ</a> Code.org.
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
-    user_type_label: Account Type
+    user_type_label: Loại tài khoản
     user_type_teacher: Giáo viên
     user_type_student: học sinh
     field_is_required: là bắt buộc
@@ -338,6 +338,7 @@
       unsubmit: Ngưng gửi
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "Địa chỉ email chưa được xác nhận:"
     email_confirm_needed_required: "Địa chỉ email của bạn %{email} chưa được xác nhận:"

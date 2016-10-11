@@ -332,6 +332,7 @@
       unsubmit: Bidalketa ezeztatu
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Email helbidea ez da baieztatu:'
     email_confirm_needed_required: "%{email} zure emaila ez da baieztatu:"

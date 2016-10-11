@@ -3,39 +3,39 @@
     unplugged:
       Unplug1:
         title: "கணினி அறிவியலின் அறிமுகம்"
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: "இந்த பாடம் உங்களுக்கு கருத்துப்படிவத்தை கணினி அறிவியல் மற்றும் கணினி
+          விஞ்ஞானி என்ன செய்யும் விளக்குக.  அது கூட உன்னுடைய மாணவர்கள் ஒரு கணினி விஞ்ஞானி
+          வேடத்தில் கருத ஒரு வாய்ப்பு.  அந்த நடவடிக்கையை இறுதிக்குள் நடவடிக்கை-முகப்பு
+          நினைவுபடுத்தி என்ன அவர் அல்லது அவள் கிடக்கின்றனர், ஒவ்வொரு மாணவர் வேண்டிவரும்.
+          \ நீங்கள் செலவு செய்ய நேரிடும் கற்பித்தல் இளம் குழந்தைகள் உடன் கலந்துகொள்ள
+          பாடங்கள் vocabulary சொற்களை புறக்கணிக்க, ஆனால் இதுவரை அதிக உற்பத்தி விட
+          மேலும் மேம்பட்ட வாய்ப்புகள் காத்திருக்கிறது என்பது சந்தித்துத் தாம் எதிர்கொள்ளும்
+          அவற்றை உள்ள ஒரு சந்தோஷமும் மகிழ்ச்சியும் விளையாட்டுத்தனமான ஒளி இப்போது."
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
         title: "கணினிபூர்வமான சிந்தனை"
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: "எதுவும் ஆனால் காகிதம் மற்றும் குறியிடுனர்களைக், computational சிந்தனை,
+          நான்கு நடவடிக்கைகளை மாணவர்கள் கற்றுக்கொள்வீர்கள். பிறகு ஒரு சுருக்கமான அறிமுகம்,
+          மாணவர்கள் வேண்டும் பிரிக்க குழுக்கள் எங்கே அவர்கள் செலுத்த (சமமாகும், முன்-தேர்ந்தெடுத்த
+          monsters) ஒரு குறிப்பிட்ட அசுரன் வரைய மற்ற மாணவர்களுக்கு அம்பும் உருவாக்க.
+          முழு பணி வேண்டும் இருக்க decomposed, பின் குழுக்களை ஏற்படும் வடிவங்கள் வரிசைப்பட்டியல்
+          உள்ள அனைத்து monsters பகுப்பாய்வு, ஞாபகச்சக்தி இருந்து, monsters வேறு விவரங்கள்,
+          பிறகு அந்த தகவலை பயன்படுத்தி ஒரு அல்கோரிதம் (அம்பும்) உருவாக்கலாம்-ஒரு சில
+          அசுரன் வரைய மற்றொரு அணி. பின் பொத்தான் வழிமுறைகளும் கொண்ட மற்றொரு குழு மற்றும்
+          அந்த அல்கோரிதம் என்ன குறிக்கிறது அடிப்படையில் அசுரன் வரைய குழுக்கள் இருக்கும்.
+          அந்த வரைதல் என்ன மூல அணி நன்மையடையும் என்றால்?"
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: "வரைதாள் செய்நிரல்"
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: "வேறு படங்கள் வரைய நிரலாக்க, மூலம் மாணவர்கள் தொடங்க உள்ளது என்ன நிரலமைத்தல்
+          என்பது உண்மையிலேயே சுமார் புரிந்துகொள்ள. Instructing ஒருவருக்கொருவர் செய்ய
+          graph காகித வண்ணம் எண்களுள்ள தற்போதுள்ள படம் கொணர முயற்சியாக மாணவர்கள் உள்ள
+          வகுப்பு தொடங்க உள்ளது.  தேவைப்பட்டால் நேரம், விளக்கவும் முடியும் எடுக்கப்பட்ட
+          உடன் படிமங்கள் என்று மாணவர்களை உருவாக்க தங்களை."
         pdfs:
         - unplug3
         video: Unplug3

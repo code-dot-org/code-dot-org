@@ -2,7 +2,7 @@
   errors:
     messages:
       not_saved: 'Opravte prosím následující chyby:'
-      too_young: Tento obsah má věkové omezení a je nedostupné pro mladší studenty
+      too_young: Tento content je věkově omezen a není dostupný pro mladší studenty.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -93,7 +93,7 @@
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Viz přiručka pedagoga
-    title: Sign up for Code.org
+    title: Registrace na Code.org
     school_name: Název školy (volitelné)
     school_address: Adresa školy (volitelné)
     address_placeholder: adresa, město, stát, PSČ
@@ -137,7 +137,7 @@
     words: Nyní zadejte utajená slova
     login: Přihlásit
     invalid_login: Neplatné přihlašovací jméno, zkuste to prosím znovu
-    pair_programming: I have a partner at my computer
+    pair_programming: Mám partnera u počítače
   password:
     reset_form:
       title: Zapomněl jsi heslo?
@@ -283,7 +283,7 @@
       prizes: Ceny
       logout: Odhlásit se
       signin: Přihlásit
-      signup: Registrace
+      signup: Vytvořit účet
       already_registered: Už jste zaregistrováni?
       pair_programming: Párové programování
       team: Tým
@@ -314,7 +314,7 @@
     user_not_found: Učitel nebyl nalezen.
     student_teacher_disassociated: Odebrali jste %{teacher_name} jako svého učitele.
     panel:
-      answer_viewer: Odpověď diváka
+      answer_viewer: Učitelský panel
       student: student
       viewing_solution: Zobrazení řešení
       try_it_yourself: Vyzkoušejte to sami
@@ -325,6 +325,7 @@
       unsubmit: Neodesláno
       worked_with: Pracoval s
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
     email_confirm_needed_required: 'Vaše e-mailová adresa %{email} nebyla potvrzena:'
@@ -718,7 +719,7 @@
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    accept: Přijmout
     print: Tisk
     later: Later
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms

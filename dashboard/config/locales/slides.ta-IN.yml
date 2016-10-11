@@ -11,8 +11,8 @@
           கணினி நிரல்களை எழுதுவோம்."
       3:
         image: notes/hoc1_3.jpg
-        text: Most code is typed, but Blockly is visual. Each blocks corresponds to
-          a line of "real" code.
+        text: பெரும்பாலான குறியீட்டை தட்டச்சு செய்த, ஆனால் Blockly பார்வை உள்ளது.
+          "உண்மையான" குறியீடு கோட்டை ஒவ்வொரு தடுப்புகள் குறிக்கிறது.
       4:
         image: notes/hoc1_4.jpg
         text: "கைப்பொறி பயன்பாடுகள் முதல் செவ்வாய் ரோவரை கட்டுபடுதவதில் உதவும் கணிப்பொறி

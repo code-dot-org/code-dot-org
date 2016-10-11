@@ -289,6 +289,7 @@ gl:
       unsubmit: Cancelar envío
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'O enderezo de email non foi confirmado:'
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'
@@ -713,7 +714,7 @@ gl:
     download_message: 'Download %{app_name} for offline use (136MB)'
     download_in_english: 'Download in English:'
     download_in_spanish: 'Download in Spanish:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
