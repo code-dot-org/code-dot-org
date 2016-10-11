@@ -5,6 +5,7 @@
   "animationMode": "Animasi",
   "answersVisible": "Answers visible (read-only)",
   "assessmentSteps": "Steps to give assessment for",
+  "assessmentSettings": "Assessment Settings",
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "Kembali ke tahap yang sebelumnya",
   "blocklyMessage": "Blockly",
@@ -185,7 +186,7 @@
   "loading": "Sila tunggu...",
   "locked": "Locked",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
-  "lockSettings": "Lock settings",
+  "lockAssessment": "Lock assessment",
   "lockStage": "Lock stage",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Lock as soon as students are done",
@@ -304,7 +305,5 @@
   "when": "apabila",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Ya",
-  "assessmentSettings": "Assessment Settings",
-  "lockAssessment": "Lock assessment"
+  "yes": "Ya"
 }

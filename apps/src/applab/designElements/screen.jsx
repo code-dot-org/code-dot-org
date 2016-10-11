@@ -1,14 +1,12 @@
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
-var ImagePickerPropertyRow = require('./ImagePickerPropertyRow');
-var BooleanPropertyRow = require('./BooleanPropertyRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow');
-var applabConstants = require('../constants');
-
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import ImagePickerPropertyRow from './ImagePickerPropertyRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
+import * as applabConstants from '../constants';
+import * as elementUtils from './elementUtils';
 
 var ScreenProperties = React.createClass({
   propTypes: {
@@ -132,7 +130,7 @@ var ScreenEvents = React.createClass({
   }
 });
 
-module.exports = {
+export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
 

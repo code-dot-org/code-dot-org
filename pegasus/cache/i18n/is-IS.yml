@@ -894,14 +894,14 @@
   dashboard_faq: Algengar spurningar
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Við eyddum sumrinu í að búa til nýjungar
+    úr endurgjöfinni frá ykkur notendunum. Nú er hægt að <a href="%{pp_url}" target="_blank">fylgjast
+    með framvindu margra nemenda</a> jafnvel þó þeir séu í félagaforritun á einu tæki.
+    Einnig nota <a href="%{csp_widgets_url}" target="_blank">bestu gagnvirku tækin</a>
+    af námskeiðinu CS Principles með <i>hvaða bekk sem er</i>. Og nemendur þína geta
+    <a href="%{unused_code_url}" target="_blank">geymt ónotaðan kóða</a> á vinnusvæði
+    sínu til að ýta undir að þeir geri tilraunir! Kannaðu þessar nýjungar og láttu
+    okkur vita hvað þér finnst.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -918,14 +918,14 @@
     kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: Sjá um klukkustund
+  learn_banner_title: Vertu með í Klukkustund kóðunar
+  learn_banner_desc: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til meira en
+    100 miljón nemenda í yfir 180 löndum. Hver og einn, hvar sem er, getur skipulagt
+    viðburð með Klukkustund kóðunar. Hjálpaðu okkur að gefa sérhverjum nemanda tækifæri
+    til að tölvunarfræði! Skipuleggjendur geta fylgt <a href='%{how_to_url}' target='_blank'>leiðarvísi</a>
+    okkar um það að kenna Klukkustund kóðunar og veitt nemendum hvatningu með <a href='%{videos_url}'
+    target='_blank'>þessum myndskeiðum</a>.
   learn_more: Prófaðu núna
   learn_sign_up_description: Skráðu þig til að taka þátt í Klukkustund kóðunar í Viku
     tölvufræðikennslu

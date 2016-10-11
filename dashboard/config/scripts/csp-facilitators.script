@@ -1,8 +1,5 @@
-title 'CSP Tool Overview'
-description 'A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to'
-description_short 'Introduction to CS Principles for new Facilitators'
+professional_learning_course 'CS Principles Support'
 login_required 'true'
-pd 'true'
 
 stage 'Introduction to Text Compression'
 level 'text compression intro'

@@ -13,8 +13,8 @@ end
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
+    raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
     url = url.
-      gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/").
       gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
@@ -291,6 +291,11 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I click selector "([^"]*)" once I see it$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+  @browser.execute_script("$(\"#{selector}\")[0].click();")
+end
+
 When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
   # normal a href links can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\", $(\"#{parent_selector}\").contents())[0].click();")
@@ -556,6 +561,10 @@ Then /^I see jquery selector (.*)$/ do |selector|
   expect(exists).to eq(true)
 end
 
+Then /^I wait until I see selector "(.*)"$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+end
+
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
   expect(exists).to eq(true)
@@ -680,7 +689,7 @@ def generate_user(name)
   return email, password
 end
 
-And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
+def generate_teacher_student(name, teacher_authorized)
   email, password = generate_user(name)
 
   steps %Q{
@@ -688,7 +697,7 @@ And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   }
 
   # enroll in a plc course as a way of becoming an authorized teacher
-  enroll_in_plc_course(@users["Teacher_#{name}"][:email])
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
@@ -715,11 +724,19 @@ And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   }
 end
 
+And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, false)
+end
+
+And(/^I create an authorized teacher-associated student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, true)
+end
+
 And(/^I create a student named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 
   steps %Q{
-    Given I am on "http://learn.code.org/users/sign_up"
+    Given I am on "http://studio.code.org/users/sign_up"
     And I wait to see "#user_name"
     And I select the "Student" option in dropdown "user_user_type"
     And I type "#{name}" into "#user_name"
@@ -736,7 +753,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 
   steps %Q{
-    Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
     And I wait to see "#schoolname-block"
     And I type "#{name}" into "#user_name"
@@ -747,6 +764,12 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I click selector "#signup-button"
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
+end
+
+And(/^I give user "([^"]*)" hidden script access$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
 end
 
 And(/^I save the section url$/) do

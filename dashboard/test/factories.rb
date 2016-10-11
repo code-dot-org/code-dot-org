@@ -98,13 +98,6 @@ FactoryGirl.define do
       birthday Time.zone.today - 10.years
     end
 
-    factory :student_of_admin do
-      after(:create) do |user|
-        section = create(:section, user: create(:admin_teacher))
-        create(:follower, section: section, student_user: user)
-      end
-    end
-
     factory :young_student_with_tos_teacher do
       after(:create) do |user|
         section = create(:section, user: create(:terms_of_service_teacher))
@@ -375,11 +368,6 @@ FactoryGirl.define do
     student_user { create :student }
   end
 
-  factory :level_source_hint do
-    level_source
-    sequence(:hint) { |n| "Hint #{n}" }
-  end
-
   factory :user_level do
     user {create :student}
     level {create :applab}
@@ -548,7 +536,7 @@ FactoryGirl.define do
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
-    sessions {[create(:pd_session)]}
+    num_sessions 1
     section {create(:section)}
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
@@ -563,14 +551,14 @@ FactoryGirl.define do
   factory :school_info do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
-    school_district_id {create(:school_district).id}
+    association :school_district
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
-    school_info_id {create(:school_info).id}
+    association :school_info
     school {'Example School'}
   end
 
@@ -580,14 +568,14 @@ FactoryGirl.define do
   end
 
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
-    district {create :district}
+    association :school_district
     course Pd::Workshop::COURSES.first
     rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
     rate 10
   end
 
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
-    facilitator {create :facilitator}
+    association :facilitator
     course Pd::Workshop::COURSES.first
   end
 

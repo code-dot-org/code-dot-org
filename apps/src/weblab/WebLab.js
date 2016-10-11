@@ -191,8 +191,6 @@ WebLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
-
-  this.studioApp_.notifyInitialRenderComplete(config);
 };
 
 WebLab.prototype.getCodeAsync = function () {

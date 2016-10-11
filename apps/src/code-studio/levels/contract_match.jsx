@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { registerGetResult } from './codeStudioLevels';
 var React = require('react');
 var ReactDOM = require('react-dom');
 
@@ -295,7 +296,8 @@ $(window).load(function () {
    * Set the getResult used by _dialog.html.haml
    * @return {Object} response, result, error type
    */
-  window.getResult = generateGetResultFunction(contractForm, window.levelData);
+  const getResult = generateGetResultFunction(contractForm, window.levelData);
+  registerGetResult(getResult);
 
   /**
    * Given the user's submission and a correct answer, returns the error type,

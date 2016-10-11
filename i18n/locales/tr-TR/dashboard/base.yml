@@ -2,8 +2,9 @@ tr:
   errors:
     messages:
       not_saved: 'Lütfen aşağıdaki hataları düzeltiniz:'
-      too_young: This content has age restrictions in place and is not available for younger students.
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      too_young: Bu içerik yaş sınırlamasına tabîdir ve genç öğrenciler için uygun değildir.
+      teacher_must_accept_terms: |-
+        Bu içerik yaş sınırlamasına tabîdir ve genç öğrenciler için uygun değildir. Bu içerik yaş sınırlaması vardır ve daha genç öğrenciler için kullanılamaz. Bu içeriğe girmek için öğretmeninizden Hizmet ve Gizlilik politikasını kabul etmesini söyleyin. Öğretmeniniz Code Studio'ya girip sonrasında anasayfanın başında bulunan "Yenilenen Hizmet ve Gizlilik politikasını göster" butonuna basarak gerçekleştirebilir.
       pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
@@ -83,7 +84,7 @@ tr:
     teacher_count: '%{count}öğrenciler zaten giriş yaptı.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Eğitim rehberine bakın
-    title: Sign up for Code.org
+    title: Code.org için kayıt ol
     school_name: Okul Adı (isteğe bağlı)
     school_address: Okul Adresi (isteğe bağlı)
     address_placeholder: adres, şehir, eyalet, posta kodu
@@ -100,13 +101,13 @@ tr:
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
+    teacher_terms: "Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum. Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik politikamıza göz atın</a>."
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız.
     user_type_label: Hesap Türü
     user_type_teacher: Öğretmen
     user_type_student: öğrenci
     field_is_required: gerekli
-    accept_terms: You must agree to create an account
+    accept_terms: Hesap oluşturmak için zorunlu olarak kabul etmelisiniz
   signin_form:
     title: Zaten bir hesabınız var mı? Oturum Aç
     login: E-posta
@@ -128,7 +129,7 @@ tr:
   password:
     reset_form:
       title: Şifrenizi mi unuttunuz?
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: E-mail adresinizi aşağıya yazın bu sayede size parola sıfırlama yönergeleri göndeririz.
       email: E-posta adresi
       submit: Gönder
     change_form:
@@ -245,7 +246,7 @@ tr:
       prizes: Ödüller
       logout: Çıkış Yap
       signin: Giriş Yap
-      signup: Create an account
+      signup: Hesap oluştur
       already_registered: Zaten hesabınız var mı?
       pair_programming: Eşli Programlama
       team: Takım
@@ -276,7 +277,7 @@ tr:
     user_not_found: Öğretmen bulunamadı.
     student_teacher_disassociated: 'Öğretmenin %{teacher_name} olmayacak şekilde çıkartıldı.'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: Öğretmen Paneli
       student: öğrenci
       viewing_solution: Çözüme Bak
       try_it_yourself: kendini dene
@@ -286,7 +287,7 @@ tr:
       submitted_on: '%{date} tarihinde gönderildi'
       unsubmit: Gönderme
       worked_with: İle çalıştı
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Kilit ayarlarını burada değiştirin.
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -576,18 +577,18 @@ tr:
     message: 'Size daha güçlü gizlilik koruması sağlamak konusunda güncellemelerimizi sürdürmekteyiz. Bunu yapabilmek için mevcut kullanıcıların buraya yaşlarını girmesi gerekmektedir.<br/>Herzaman olduğu gibi code.org özel bilgilerinizi asla kiralamaz, satmaz veya üçüncü partilerle paylaşmaz.'
     sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
+    title: Güncellenen Hizmet ve Gizlilik Politikası şartları
     intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: Şartlar
     privacy: Gizlilik Politikası
-    privacy_notice: Privacy Notice
+    privacy_notice: Gizlilik Politikası
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
+    accept: Kabul et
     print: Yazdır
-    later: Later
+    later: Sonra
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: Review updated terms
+    review_terms: Güncellenen Hizmet ve Gizlilik politikasını göster
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
   progress:
     not_started: Başlatılmadı
@@ -729,6 +730,6 @@ tr:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
-  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: Go to unit overview
+  locked_stage: Bu sahnenin içeriği görünmemektedir çünkü bu sahne şu anda kilitlidir. Öğretmeniniz bu sahneyi size çalışmak veya yanıtlarınızı gözden geçirmek için zamanında açacaktır.
+  hidden_stage: Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi derste olman gerektiğini sor.
+  return_course_overview: Ünite genel bakışına git

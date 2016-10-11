@@ -33,7 +33,7 @@
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
   your_professional_learning_plan: Seu plano de aprendizagem profissional
-  see_your_learning_plan: Ver o seu plano de aprendizagem
+  see_your_learning_plan: Veja seu plano de aprendizagem
   submit: Enviar
   unsubmit: Cancelar envio
   previous_page: Página anterior
@@ -42,13 +42,13 @@
   done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
-  heading_x_of_y: "%{heading} (página %{y} de %{x})"
+  heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
       placeholder: Código da seção (ABCDEF)
-      instructions: Por favor insira o código compartilhado com você por seu professor.
-        É um código de 6 letras como "ABCDEF".
+      instructions: Insira o código que seu professor compartilhou com você. É um
+        código de 6 letras, como "ABCDEF".
     submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
@@ -142,8 +142,8 @@
     picture: Agora encontre sua foto secreta
     words: Agora digite suas palavras secretas
     login: Entrar
-    invalid_login: Login incorreto, por favor, tente novamente
-    pair_programming: Estou trabalhando em parceria
+    invalid_login: Login incorreto, tente novamente
+    pair_programming: Estou trabalhando em parceria no computador
   password:
     reset_form:
       title: Esqueceu sua senha?
@@ -284,10 +284,10 @@
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Entre para salvar o progresso
       free_play:
-        playlab: Crie um aplicativo Play Lab
-        artist: Desenhe alguma coisa
+        playlab: Criar um aplicativo do Laboratório
+        artist: Desenhar algo
         calculate: Calculate Something
-        applab: Crie um aplicativo Play Lab
+        applab: Criar um aplicativo do Laboratório
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -300,7 +300,7 @@
       signup: Inscreva-se
       already_registered: Já se cadastrou?
       pair_programming: Programação em duplas
-      team: Grupo
+      team: Equipe
       driver: Líder
       navigator: Navegador
     popup:
@@ -338,7 +338,7 @@
       example_with_number: Solução do Exemplo %{solution_number}
       submitted_on: 'Enviado em:'
       unsubmit: Cancelar envio
-      worked_with: Feito em parceria com
+      worked_with: Trabalhou com
       update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
@@ -427,33 +427,34 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Saiba mais
     announcement_try_now_button: Experimente agora
-    announcement_petition: Como professor, você está liderando o caminho em um movimento
-      para dar a cada aluno em todas as escolas a oportunidade de aprender informática.
-      Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes
-      de educação, 28 governadores e maiores empresas de CEOs da América se uniram
-      em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de
-      ciência de computador K-12.
-    announcement_petition_button: Adicione o seu nome
+    announcement_petition: Como professor, você está abrindo as portas de um movimento
+      que dará a cada aluno de todas as escolas a oportunidade de aprender ciência
+      da computação. Agora chegou a hora de seus representantes ouvirem o que você
+      tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes
+      das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo
+      que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola
+      ao Ensino médio.
+    announcement_petition_button: Adicione seu nome
     announcement_all: Fique por dentro dos novos recursos e atualizações em nosso
-      blog de professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas
-      novidades.</a>
+      blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as
+      últimas novidades.</a>
   move_students:
-    new_section_dne: Desculpe, mas não existe secção %{new_section_code}. Por favor
-      insira um código de seção diferente.
-    section_code_not_entered: Forneça por favor current_section_code.
-    section_code_cant_be_current_section: A seção atual não pode ser o mesmo que a
-      nova seção.
-    current_section_dne: Desculpe, mas a seção %{current_section_code} não existe.
-      Por favor insira um código de seção diferente.
-    students_not_yours: Você não pode mover os alunos de uma seção que não pertence
+    new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
+      seção.
+    section_code_not_entered: Forneça o current_section_code.
+    section_code_cant_be_current_section: A seção atual não pode ser igual à nova
+      seção.
+    current_section_dne: A seção %{current_section_code} não existe. Insira outro
+      código de seção.
+    students_not_yours: Não é possível mover alunos de uma seção que não pertence
       a você.
-    stay_enrolled_not_entered: Por favor, forneça stay_enrolled_in_current_section.
-    student_ids_not_entered: Por favor, forneça students_ids.
-    student_not_found: Um ou mais alunos não podem ser encontrados.
-    all_students_must_be_in_current_section: Todos os alunos, atualmente, devem estar
-      inscrito em sua seção.
-    already_enrolled_in_new_section: Você não pode mover estes estudantes porque este
-      professor já os tem em outra seção.
+    stay_enrolled_not_entered: Forneça stay_enrolled_in_current_section.
+    student_ids_not_entered: Forneça students_ids.
+    student_not_found: Não foi possível encontrar um ou mais alunos.
+    all_students_must_be_in_current_section: Todos os alunos devem estar inscritos
+      em sua seção atualmente.
+    already_enrolled_in_new_section: Não é possível mover esses alunos porque eles
+      já estão em outra seção deste professor.
   share:
     title: Aprenda no Code Studio
     description: Qualquer pessoa pode aprender ciência da computação. Crie jogos,
@@ -867,8 +868,8 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Procure por um ícone...
-      no_icons_found: Nenhum ícone foi encontrado
+      search_placeholder_text: Procurar um ícone...
+      no_icons_found: Nenhum ícone encontrado
     playzone:
       artist_description: Faça desenhos e figuras legais com o Artista!
       artist_title: Novo Desenho

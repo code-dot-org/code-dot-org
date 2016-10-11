@@ -50,20 +50,8 @@
   = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: @level.start_html
   :javascript
     levelbuilder.initializeCodeMirror('level_start_html', 'html');
-.field.examples
-  = f.label :examples, 'Example solutions'
-  %p
-    Go to
-    = link_to applab_project_projects_url(host: 'studio.code.org', port: 443, protocol: :https), applab_project_projects_url(host: 'studio.code.org', port: 443, protocol: :https)
-    to build your example, then copy the channel token (the sequence of letters and numbers after /applab)
-    Need more help? View this
-    = link_to 'screencast', 'https://www.dropbox.com/s/zpmszi9eenvwql7/applab%20example%20screencast.mp4?dl=0', target: '_blank'
-  - unless f.object.examples.blank?
-    - f.object.examples.each do |example|
-      - next if example.blank?
-      = text_field_tag "level[examples][]", example
-  - 5.times do
-    = text_field_tag "level[examples][]"
+
+= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'applab'}
 
 .field
   = f.label 'Log Conditions'
@@ -117,7 +105,7 @@
     levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
 .field
-  = f.label 'Hide View Data Button'
+  = f.label 'Hide Data Button'
   = boolean_check_box f, :hide_view_data_button
 
 .field

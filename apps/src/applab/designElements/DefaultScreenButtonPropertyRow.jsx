@@ -1,7 +1,6 @@
-var React = require('react');
-var color = require('../../color');
-var rowStyle = require('./rowStyle');
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import color from '../../color';
+import * as elementUtils from './elementUtils';
 
 var DefaultScreenButtonPropertyRow = React.createClass({
   propTypes: {
@@ -42,4 +41,4 @@ var DefaultScreenButtonPropertyRow = React.createClass({
   }
 });
 
-module.exports = DefaultScreenButtonPropertyRow;
+export default DefaultScreenButtonPropertyRow;

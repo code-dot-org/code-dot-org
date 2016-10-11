@@ -2,7 +2,6 @@
  */
 
 import React from 'react';
-import FilterSet from './filterSet';
 import Tutorial from './tutorial';
 import shapes from './shapes';
 
@@ -10,69 +9,91 @@ const TutorialSet = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    locale: React.PropTypes.string.isRequired
+    locale: React.PropTypes.string.isRequired,
+    specificLocale: React.PropTypes.bool
   },
 
-  /**
-   * Returns true if we should show this item based on current filter settings.
-   * It goes through all active filter categories.  If no filters are set for
-   * a filter group, then that item will default to showing, so long as no other
-   * filter group prevents it from showing.
-   * But if we do have a filter set for a filter group, and the tutorial is tagged
-   * for that filter group, then at least one of the active filters must match a tag.
-   * e.g. If the user chooses two platforms, then at least one of the platforms
-   * must match a platform tag on the tutorial.
-   * A similar check for language is done first.
-   *
-   * @param {object} tutorial - Single tutorial, containing a variety of
-   *   strings, each of which is a list of tags separated by commas, no spaces.
-   */
-  filterFn(tutorial) {
+  statics: {
+    /**
+     * Filters a given array of tutorials by the given filter props.
+     *
+     * It goes through all active filter categories.  If no filters are set for
+     * a filter group, then that item will default to showing, so long as no other
+     * filter group prevents it from showing.
+     * But if we do have a filter set for a filter group, and the tutorial is tagged
+     * for that filter group, then at least one of the active filters must match a tag.
+     * e.g. If the user chooses two platforms, then at least one of the platforms
+     * must match a platform tag on the tutorial.
+     * A similar check for language is done first.
+     * In the case that filterProps.specificLocale is true, we do something slightly
+     * different.  We don't show tutorials that don't have any language tags, and we
+     * reject tutorials that don't have the current locale explicitly listed.  This
+     * allows us to return a set of tutorials that have explicit support for the
+     * current locale.
+     *
+     * @param {Array} tutorials - Array of tutorials.  Each contains a variety of
+     *   strings, each of which is a list of tags separated by commas, no spaces.
+     * @param {object} filterProps - Object containing filter properties.
+     * @param {string} filterProps.locale - The current locale.
+     * @param {bool} filterProps.specificLocale - Whether we filter to only allow
+     *   through tutorials matching the current locale.
+     * @param {object} filterProps.filters - Contains arrays of strings identifying
+     *   the currently active filters.  Each array is named for its filter group.
+     */
+    filterTutorials(tutorials, filterProps) {
+      const { locale, specificLocale, filters } = filterProps;
 
-    // First check that the tutorial language doesn't exclude it immediately.
-    // If the tags contain some languages, and we don't have a match, then
-    // hide the tutorial.
-    if (tutorial.languages_supported) {
-      const languageTags = tutorial.languages_supported.split(',');
-      const currentLocale = this.props.locale;
-      if (languageTags.length > 0 &&
-        !languageTags.includes(currentLocale) &&
-        !languageTags.includes(currentLocale.substring(0,2))) {
-        return false;
-      }
-    }
+      return tutorials.filter(tutorial => {
+        // First check that the tutorial language doesn't exclude it immediately.
+        // If the tags contain some languages, and we don't have a match, then
+        // hide the tutorial.
+        if (tutorial.languages_supported) {
+          const languageTags = tutorial.languages_supported.split(',');
+          const currentLocale = locale;
+          if (languageTags.length > 0 &&
+            !languageTags.includes(currentLocale) &&
+            !languageTags.includes(currentLocale.substring(0,2))) {
+            return false;
+          }
+        } else if (specificLocale) {
+          // If the tutorial doesn't have language tags, but we're only looking
+          // for specific matches to our current locale, then don't show this
+          // tutorial.  i.e. don't let non-locale-specific tutorials through.
+          return false;
+        }
 
-    // If we miss any filter group, then we don't show the tutorial.
-    let filterGroupMiss = false;
+        // If we miss any active filter group, then we don't show the tutorial.
+        let filterGroupsSatisfied = true;
 
-    for (const filterGroupName in this.props.filters) {
-      const tutorialTags = tutorial["tags_" + filterGroupName];
-      if (tutorialTags && tutorialTags.length > 0) {
-        const tutorialTagsSplit = tutorialTags.split(',');
+        for (const filterGroupName in filters) {
+          const tutorialTags = tutorial["tags_" + filterGroupName];
+          const filterGroup = filters[filterGroupName];
 
-        // Now check all the filter group's tags.
-        const filterGroup = this.props.filters[filterGroupName];
-
-        // For this filter group, we've not yet found a matching tag between
-        // user selected otions and tutorial tags.
-        let filterHit = false;
-
-        for (const filterName of filterGroup) {
-          if (tutorialTagsSplit.includes(filterName)) {
-            // The tutorial had a matching tag.
-            filterHit = true;
+          if (filterGroup.length !== 0 &&
+              tutorialTags &&
+              tutorialTags.length > 0 &&
+              !TutorialSet.findMatchingTag(filterGroup, tutorialTags)) {
+            filterGroupsSatisfied = false;
           }
         }
 
-        // The filter group needs at least one user-selected filter to hit
-        // on the tutorial.
-        if (filterGroup.length !== 0 && !filterHit) {
-          filterGroupMiss = true;
-        }
-      }
+        return filterGroupsSatisfied;
+      });
+    },
+
+    /* Given a filter group, and the tutorial's relevant tags for that filter group,
+     * see if there's at least a single match.
+     * @param {Array} filterGroup - Array of strings, each of which is a selected filter
+     *   for the group.  e.g. ["beginner", "experienced"].
+     * @param {string} tutorialTags - Comma-separated tags for a tutorial.
+     *   e.g. "beginner,experienced".
+     * @return {bool} - true if the tutorial had at least one tag matching at least
+     *   one of the filterGroup's values.
+     */
+    findMatchingTag(filterGroup, tutorialTags) {
+      return filterGroup.some(filterName => tutorialTags.split(',').includes(filterName));
     }
 
-    return !filterGroupMiss;
   },
 
   render() {
@@ -81,7 +102,7 @@ const TutorialSet = React.createClass({
         className="col-80"
         style={{float: 'left'}}
       >
-        {this.props.tutorials.filter(this.filterFn, this).map(item => (
+        {TutorialSet.filterTutorials(this.props.tutorials, this.props).map(item => (
           <Tutorial
             item={item}
             filters={this.props.filters}

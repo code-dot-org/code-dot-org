@@ -153,7 +153,7 @@ export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
     courseOverviewPage: React.PropTypes.bool,
-    stageId: React.PropTypes.number.isRequired,
+    stageId: React.PropTypes.number,
 
     // redux provdied
     overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
@@ -258,7 +258,8 @@ export default connect((state, ownProps) => {
   const stageId = ownProps.stageId;
   let overrideLevelStatus;
   const fullyLocked = fullyLockedStageMapping(state.stageLock);
-  if (state.stageLock.viewAs === ViewType.Student && !!fullyLocked[stageId]) {
+  if (stageId !== undefined && state.stageLock.viewAs === ViewType.Student &&
+      !!fullyLocked[stageId]) {
     overrideLevelStatus = LevelStatus.locked;
   }
   return {

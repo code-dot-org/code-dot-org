@@ -114,8 +114,6 @@ module.exports = ImagePicker;
 
 
 if (BUILD_STYLEGUIDE) {
-  const Dialog = require('@cdo/apps/templates/Dialog').default;
-  const Body = require('@cdo/apps/templates/Dialog').Body;
   ImagePicker.styleGuideExamples = storybook => {
     storybook
       .storiesOf('ImagePicker', module)

@@ -219,8 +219,6 @@ export default class BeeItemDrawer extends Drawer {
    * Create the cloud animation element, and perform the animation if necessary
    */
   displayCloudAnimation_(row, col, animate) {
-    let id = Drawer.cellId('cloudAnimation', row, col);
-
     let cloudAnimation = this.getOrCreateImage_('cloudAnimation', row, col, false);
 
     // We want to create the element event if we're not animating yet so that we

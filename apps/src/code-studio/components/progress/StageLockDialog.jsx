@@ -2,7 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import progressStyles from './progressStyles';
 import { LockStatus, saveLockDialog } from '../../stageLockRedux';
 import color from '../../../color';

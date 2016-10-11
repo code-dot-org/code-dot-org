@@ -1,22 +1,24 @@
 name 'Unit 2 Lesson 6 Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Internet - Web Development: Lesson 6 - Images in HTML
+# The Internet - Web Development: Lesson 6 - Clean Code and Debugging
 
 ## Background
 
-Students will work through levels where they add images to a pre-built site. Then they will make a new About Me page for their portfolio that includes three images that show their dream super power, their spirit animal, and a ice cream flavor that describes them. 
+Students will work to debug web pages. The difficulty of the pages students are debugging increase as they go. In the process, the importance of comments, whitespace and indentation are demonstrated in different web pages students are debugging.  Students work to create a list of strategies for debugging as well as ways to write more easily maintainable web pages in the future.
 # Vocabulary
 
-* **File Path** - A path is the route through a file system to a particular file.
-* **HTML Attribute** - Provide additional information about HTML elements.
+* **Bug** - Part of a program that does not work correctly.
+* **Comment** - A comment is a programmer-readable note in the source code of a computer program.
+* **Debugging** - Finding and fixing problems in your algorithm or program.
+* **Indentation** - The placement of text farther to the right, or left, to separate it from surrounding text which helps to convey the program's structure.
+* **Whitespace** - A white space or spacing is any section of a document that is unused or space around an object. White spaces help separate paragraphs of text, graphics, and other portions of a document, and helps a document look less crowded.
 
 # New Blocks
 
-* **Image** - `<img src="" alt="">`
+* **Comment** - `<!--comment-->`
 
 # Resources
 
-* [Finding Images](https://docs.google.com/document/d/1cm0WmTL04UviiiKDHC3CyoYG7EIle-mo6djfM004mIw/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1cm0WmTL04UviiiKDHC3CyoYG7EIle-mo6djfM004mIw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1cm0WmTL04UviiiKDHC3CyoYG7EIle-mo6djfM004mIw/export?format=doc))
 * [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
 MARKDOWN

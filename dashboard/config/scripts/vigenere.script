@@ -1,6 +1,2 @@
-title 'Viginere Cipher Widget'
-description 'Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher'
-description_short 'Vigenere Cipher Widget'
-
 stage 'Vigenere'
 level 'Vigenere'

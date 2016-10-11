@@ -1,8 +1,5 @@
+professional_learning_course 'CS in Science Support'
 login_required 'true'
-pd 'true'
-title 'CS in Science: Part 3'
-description "Academic Year Support - Semester 1"
-description_short "Academic Year Support - Semester 1"
 
 stage 'Welcome Back!'
 level 'sciPDpart4_S1_L1'

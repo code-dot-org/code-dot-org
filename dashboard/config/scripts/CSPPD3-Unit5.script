@@ -1,7 +1,4 @@
-pd 'true'
-title 'Computer Science Principles: Unit 5 PD'
-description ‘Online Support for CSP Unit 5’
-description_short ‘Support for CSP Unit 5'
+professional_learning_course 'CS Principles Support'
 login_required 'true'
 
 stage 'Getting Started'

@@ -85,12 +85,12 @@ class NetSim < Blockly
 
   # DNS modes, used by levelbuilder
   def self.dns_modes
-    %w( none manual automatic )
+    %w(none manual automatic)
   end
 
   # Message granularity options, used by levelbuilder
   def self.message_granularity_options
-    %w( bits packets )
+    %w(bits packets)
   end
 
   def self.create_from_level_builder(params, level_params)

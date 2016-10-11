@@ -1,6 +1,4 @@
 import CustomGameLogic from './customGameLogic';
-import api from './api';
-import codegen from '../codegen';
 import { valueOr } from '../utils';
 import { Direction, Position } from './constants';
 

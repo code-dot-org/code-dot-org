@@ -6,10 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 11
-Lint/AmbiguousOperator:
-  Enabled: false
-
 # Offense count: 248
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
@@ -23,10 +19,6 @@ Lint/IneffectiveAccessModifier:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: runtime_error, standard_error
 Lint/InheritException:
-  Enabled: false
-
-# Offense count: 9
-Lint/Loop:
   Enabled: false
 
 # Offense count: 24
@@ -130,15 +122,6 @@ Style/CommentIndentation:
 # Configuration parameters: EnforcedStyle, SupportedStyles, SingleLineConditionsOnly.
 # SupportedStyles: assign_to_condition, assign_inside_condition
 Style/ConditionalAssignment:
-  Enabled: false
-
-# Offense count: 3
-Style/ConstantName:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/EmptyCaseCondition:
   Enabled: false
 
 # Offense count: 7
@@ -281,11 +264,6 @@ Style/RescueModifier:
 Style/SpaceAroundEqualsInParameterDefault:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/SpaceAroundKeyword:
-  Enabled: false
-
 # Offense count: 265
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -310,11 +288,6 @@ Style/SpaceInsideBlockBraces:
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
 # SupportedStyles: space, no_space, compact
 Style/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/SpaceInsidePercentLiteralDelimiters:
   Enabled: false
 
 # Offense count: 20

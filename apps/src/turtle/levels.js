@@ -1,5 +1,4 @@
 var levelBase = require('../level_base');
-var Colours = require('./colours');
 var answer = require('./answers').answer;
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
@@ -44,8 +43,6 @@ var turnLeft = req.turnLeft;
 var move = req.move;
 var drawTurnRestricted = req.drawTurnRestricted;
 var drawTurn = req.drawTurn;
-var SET_COLOUR_PICKER = req.SET_COLOUR_PICKER;
-var SET_COLOUR_RANDOM = req.SET_COLOUR_RANDOM;
 var defineWithArg = req.defineWithArg;
 
 var blocks = {
@@ -173,7 +170,6 @@ var levels = module.exports = {
     startBlocks: startBlocks(1, 7),
     requiredBlocks: [
       [drawTurnRestricted(90)],
-      [MOVE_FORWARD_INLINE],
       [repeat(4)],
       [MOVE_BACKWARD_INLINE, MOVE_FORWARD_INLINE]
     ],

@@ -1,7 +1,4 @@
-pd 'true'
-title "Teaching Computer Science Basics"
-description "Learn how to teach computer science using Code.org's Computer Science Basics with this free, self-paced online course."
-description_short "Learn how to teach computer science basics with this free, self-paced online course."
+professional_learning_course 'K5 Support'
 
 stage 'Getting Started'
 level 'OPD-K5 Welcome'

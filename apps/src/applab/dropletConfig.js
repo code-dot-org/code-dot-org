@@ -1,16 +1,14 @@
 /* global dashboard */
 import $ from 'jquery';
-var api = require('./api');
-var dontMarshalApi = require('./dontMarshalApi');
-var consoleApi = require('../consoleApi');
-var getAssetDropdown = require('../assetManagement/getAssetDropdown');
-var ChartApi = require('./ChartApi');
-var elementUtils = require('./designElements/elementUtils');
-var setPropertyDropdown = require('./setPropertyDropdown').setPropertyDropdown;
-
-const studioApp = require('../StudioApp').singleton;
-
-var applabConstants = require('./constants');
+import * as api from './api';
+import * as dontMarshalApi from './dontMarshalApi';
+import consoleApi from '../consoleApi';
+import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import ChartApi from './ChartApi';
+import * as elementUtils from './designElements/elementUtils';
+import {setPropertyDropdown} from './setPropertyDropdown';
+import {singleton as studioApp} from '../StudioApp';
+import * as applabConstants from './constants';
 
 var DEFAULT_WIDTH = "320";
 var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
@@ -63,7 +61,7 @@ var ID_DROPDOWN_PARAM_0 = {
 
 // NOTE : format of blocks detailed at top of apps/src/dropletUtils.js
 
-module.exports.blocks = [
+export var blocks = [
   {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], dropdown: { 0: idDropdownWithSelector(), 1: ['"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"'] } },
   {func: 'button', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
   {func: 'textInput', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
@@ -180,7 +178,7 @@ module.exports.blocks = [
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"]},
 ];
 
-module.exports.categories = {
+export var categories = {
   'UI controls': {
     id: 'uicontrols',
     color: 'yellow',
@@ -217,10 +215,10 @@ module.exports.categories = {
  * Set the showExamplesLink config value so that the droplet tooltips will show
  * an 'Examples' link that opens documentation in a lightbox:
  */
-module.exports.showExamplesLink = true;
+export var showExamplesLink = true;
 
 /*
  * Set the showParamDropdowns config value so that ace autocomplete dropdowns
  * will appear for each parameter based on the dropdown properties above:
  */
-module.exports.showParamDropdowns = true;
+export var showParamDropdowns = true;

@@ -34,10 +34,10 @@ def saucelabs_browser
   end
 
   capabilities[:javascript_enabled] = 'true'
-  circle_run_identifier = ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
-  capabilities[:tunnelIdentifier] = circle_run_identifier if circle_run_identifier
+  capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   capabilities[:name] = ENV['TEST_RUN_NAME']
-  capabilities[:build] = circle_run_identifier || ENV['BUILD']
+  capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
+  capabilities[:idleTimeout] = 180
 
   puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 

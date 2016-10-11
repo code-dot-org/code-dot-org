@@ -1,4 +1,4 @@
-/* global trackEvent, Blockly, ace:true, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, droplet, dashboard, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -24,7 +24,6 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
@@ -32,14 +31,13 @@ import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
-var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
+import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
 import {
-  substituteInstructionImages,
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
@@ -322,6 +320,8 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
+  this.hasContainedLevels = config.hasContainedLevels;
+
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -481,7 +481,7 @@ StudioApp.prototype.init = function (config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
+    var ResizeSensor = require("./third-party/ResizeSensor");
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
@@ -631,63 +631,6 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
 
       dialog.show();
     }).bind(this));
-  }
-};
-
-StudioApp.prototype.getFirstContainedLevelResult_ = function () {
-  var results = this.getContainedLevelResults();
-  if (results.length !== 1) {
-    throw "Exactly one contained level result is currently required.";
-  }
-  return results[0];
-};
-
-StudioApp.prototype.hasValidContainedLevelResult_ = function () {
-  var firstResult = this.getFirstContainedLevelResult_();
-  return firstResult.result.valid;
-};
-
-/**
- * @param {!AppOptionsConfig} config
- */
- StudioApp.prototype.notifyInitialRenderComplete = function (config) {
-  if (config.hasContainedLevels && config.containedLevelOps) {
-    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
-    this.getContainedLevelResults = config.containedLevelOps.getResults;
-
-    $('#containedLevel0').appendTo($('#containedLevelContainer'));
-
-    if (this.hasValidContainedLevelResult_()) {
-      // We already have an answer, don't allow it to be changed, but allow Run
-      // to be pressed so the code can be run again.
-      this.lockContainedLevelAnswers();
-    } else {
-      // No answers yet, disable Run button until there is an answer
-      $('#runButton').prop('disabled', true);
-
-      config.containedLevelOps.registerAnswerChangedFn(levelId => {
-        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
-      });
-    }
-  }
-};
-
-StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.getContainedLevelResults) {
-    var firstResult = this.getFirstContainedLevelResult_();
-    var containedResult = firstResult.result;
-    var testResults = utils.valueOr(firstResult.testResult,
-        containedResult.result ? this.TestResults.ALL_PASS :
-          this.TestResults.GENERIC_FAIL);
-    return {
-      app: firstResult.app,
-      level: firstResult.id,
-      callback: firstResult.callback,
-      result: containedResult.result,
-      testResults: testResults,
-      program: containedResult.response,
-      feedback: firstResult.feedback
-    };
   }
 };
 
@@ -968,8 +911,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
-  if (this.lockContainedLevelAnswers) {
-    this.lockContainedLevelAnswers();
+  if (this.hasContainedLevels) {
+    lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');
@@ -1688,23 +1631,6 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 */
 StudioApp.prototype.report = function (options) {
 
-  if (options.containedLevelResultsInfo) {
-    // If we have contained level results, just submit those directly and return
-    this.onAttempt({
-      callback: options.containedLevelResultsInfo.callback,
-      app: options.containedLevelResultsInfo.app,
-      level: options.containedLevelResultsInfo.level,
-      serverLevelId: options.containedLevelResultsInfo.level,
-      result: options.containedLevelResultsInfo.result,
-      testResult: options.containedLevelResultsInfo.testResults,
-      submitted: options.submitted,
-      program: options.containedLevelResultsInfo.program,
-      onComplete: options.onComplete
-    });
-    this.enableShowLinesCount = false;
-    return;
-  }
-
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
@@ -1878,7 +1804,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
-  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false &&
+    !config.hasContainedLevels);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -2091,11 +2018,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     return;
   }
 
-  var displayMessage, examplePrograms, messageElement, onChange, startingText;
-
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
+  /* eslint-disable */
   ace = window.ace;
+  /* eslint-enable */
 
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
   // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
@@ -2744,7 +2671,6 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
   var increment = options.increment;
 
   var CANVAS_HEIGHT = 400;
-  var CANVAS_WIDTH = 400;
 
   var svg = document.getElementById(svgName);
 

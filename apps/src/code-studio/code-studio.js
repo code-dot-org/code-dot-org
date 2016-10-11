@@ -10,7 +10,6 @@
 require("babel-polyfill");
 
 import $ from 'jquery';
-var _ = require('lodash');
 
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
@@ -49,6 +48,10 @@ window.dashboard.videos = require('./videos');
 window.dashboard.assets = require('./assets');
 window.dashboard.pairing = require('./pairing');
 window.dashboard.teacher = require('./teacher');
+
+// only stick the necessary methods onto dashboard.codeStudioLevels
+import { registerGetResult, registerLevel, onAnswerChanged } from './levels/codeStudioLevels';
+window.dashboard.codeStudioLevels = { registerGetResult, registerLevel, onAnswerChanged };
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio

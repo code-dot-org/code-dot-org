@@ -1,14 +1,7 @@
-title 'Computer Science in Algebra PD'
-description "Teach Algebra through Functional Programming"
-description_short "Teach Algebra through Functional Programming"
-pd 'true'
+professional_learning_course 'CS in Algebra Support'
 login_required 'true'
 
 stage 'Evaluation Blocks'
-#level 'Calc Circles of Eval .1'
-#level 'Calc Circles of Eval .2'
-#level 'Calc Circles of Eval .3'
-#level 'Calc Circles of Eval .4'
 level 'Calc Circles of Eval 1'
 level 'Calc Circles of Eval 2'
 level 'Calc Circles of Eval 3'
@@ -76,11 +69,6 @@ level 'Sam the Butterfly 2'
 level 'Sam the Butterfly 3'
 level 'Sam the Butterfly 4'
 level 'Sam the Butterfly 5'
-#level 'Sam the Butterfly 6'
-#level 'Sam the Butterfly 7'
-#level 'MSM Play Lab Butterfly 1'
-#level 'MSM Play Lab Butterfly 2'
-#level 'MSM Play Lab Butterfly 3'
 
 stage 'Your Game - Booleans'
 level 'Big Game Booleans 1'

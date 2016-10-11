@@ -1,0 +1,14 @@
+name 'courseB_story_unspottedBugs5'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<h3>
+“If we don’t collect all of the bugs by three o’clock, the program will be ruined!”  
+
+<br/>
+
+“This should be easy,” JD said, looking around. “I see a few here, and a few over there.” </h3>
+
+![](https://images.code.org/42ace4c5bedc527a99e79fa09efce4cb-image-1475981546158.jpg)
+MARKDOWN

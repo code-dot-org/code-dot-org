@@ -1,8 +1,5 @@
-title 'Exploring Computer Science PD: Academic Year Development'
-description 'Academic Year Development'
-description_short 'Academic Year Development'
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'ECS Phase 3 Welcome'

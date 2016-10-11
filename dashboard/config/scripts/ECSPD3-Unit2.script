@@ -1,8 +1,5 @@
-title 'Exploring Computer Science PD Unit 2'
-description 'Online Professional Development Course'
-description_short 'Unit 2 Online PD'
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'ECS Phase 3 Welcome'
@@ -51,4 +48,3 @@ level 'ECSU2 Challenge Submission'
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
-# level 'ECSPD 1 page template'

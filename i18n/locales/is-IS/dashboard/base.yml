@@ -100,13 +100,13 @@ is:
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
     student_terms: "Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a> Code.org. Ef ég er yngri en 13 ára, staðfest ég með því að senda inn þetta form að ég hef leyfi foreldra eða löglegs forráðamanns til að nota þjónustu Code.org.<br/><br/>Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a> okkar."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
+    teacher_terms: "Ég samþykki að hlíta þjónustuskilmálum Code.org. Nánari upplýsingar um persónuvernd má finna í <a href='http://code.org/privacy'>persónuverndarstefnu</a> okkar."
     additional_information: Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig.
     user_type_label: Tegund aðgangs
     user_type_teacher: Kennari
     user_type_student: nemandi
     field_is_required: er nauðsynlegt
-    accept_terms: You must agree to create an account
+    accept_terms: Þú verður að samþykkja að stofna aðgang
   signin_form:
     title: Þegar skráð(ur)? Skrá inn
     login: Netfang
@@ -128,7 +128,7 @@ is:
   password:
     reset_form:
       title: Gleymdir þú lykilorðinu þínu ?
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: Skrifaðu netfangið þitt hér fyrir neðan til að fá leiðbeiningar varðandi endurstillingu aðgangsorðs.
       email: Netfang
       submit: Senda inn
     change_form:
@@ -246,7 +246,7 @@ is:
       prizes: Verðlaun
       logout: Skrá út
       signin: Innskráning
-      signup: Create an account
+      signup: Búa til aðgang
       already_registered: Þegar skráð/ur?
       pair_programming: Félagaforritun
       team: Félagar
@@ -287,7 +287,7 @@ is:
       submitted_on: 'Sent inn dags. %{date}'
       unsubmit: Afturkalla innsendingu
       worked_with: vann með
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Uppfærðu stillingar fyrir læsingu hér.
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -346,8 +346,7 @@ is:
     choose_next_course: Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan
     print_certificate: Prenta skírteini
     announcement_title: Tilkynningar
-    announcement_message_fall2016_features: |-
-      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+    announcement_message_fall2016_features: 'Við eyddum sumrinu í að búa til nýjungar úr endurgjöfinni frá ykkur notendunum. Nú er hægt að <a href="%{pp_url}" target="_blank">fylgjast með framvindu margra nemenda</a> jafnvel þó þeir séu í félagaforritun á einu tæki. Einnig nota <a href="%{csp_widgets_url}" target="_blank">bestu gagnvirku tækin</a> af námskeiðinu CS Principles með <i>hvaða bekk sem er</i>. Og nemendur þína geta <a href="%{unused_code_url}" target="_blank">geymt ónotaðan kóða</a> á vinnusvæði sínu til að ýta undir að þeir geri tilraunir! Kannaðu þessar nýjungar og láttu okkur vita hvað þér finnst.'
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Læra meira
     announcement_try_now_button: Prófa núna
@@ -574,18 +573,18 @@ is:
     message: 'Við erum að uppfæra gögn okkar til að geta veitt þér enn betri persónuvernd. Til að geta það þurfum við að biðja núverandi notendur að gefa upp aldur sinn hér.<br/>Sem fyrr mun code.org aldrei leigja, selja eða deila þessum upplýsingum með nokkrum þriðja aðila.'
     sign_out: 'Viljir þú ekki gefa upp aldur getur þú <a href="%{url}">skráð þig út</a>.'
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
-    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    title: Nýjungar í þjónustuskilmálum og persónuverndarstefnu
+    intro_desc: 'Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin er að við munum <i>ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið.</i> Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra breytinga í tölvupósti.'
+    intro_instructions: Þú þarft að samþykkja þessa nýju skilmála fyrir nemendur þína yngri en 13 ára til að þeir fái fullan aðgang að því allra nýjasta í Kóðastúdíóinu. Þegar aðgangur er skráður fyrir nemanda undir 13 ára aldri, verður þú beðin/n að staðfesta að skólinn hafi fengið samþykki forráðamanns fyrir því að safna megi persónulegum gögnum um nemandann til notkunar og hagsbóta fyrir skólann, þar á meðal í kennsluverkefnum eins og Kóðastúdíóinu.
     tos: Skilmálar
     privacy: Persónuvernd
-    privacy_notice: Privacy Notice
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
+    privacy_notice: Tilkynning um persónuvernd
+    accept_label: 'Ég samþykki hina breyttu <a href="%{tos_url}" target="_blank">þjónustuskilmála</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a>'
+    accept: Samþykkja
     print: Prenta
-    later: Later
-    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: Review updated terms
+    later: Seinna
+    reminder_desc: 'Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a> okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.'
+    review_terms: Skoða uppfærða skilmála
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
   progress:
     not_started: ekki byrjað
@@ -723,6 +722,6 @@ is:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
-  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: Go to unit overview
+  locked_stage: Innihald þessa áfanga er ekki sýnilegt eins og er vegna þess að áfanginn er læstur. Kennarinn þinn getur aflæst áfanganum þegar tími er kominn til að vinna með hann eða til að fara yfir svörin.
+  hidden_stage: Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu kennarann í hvaða verkefni þú ættir að vera.
+  return_course_overview: Fara í yfirlit kafla

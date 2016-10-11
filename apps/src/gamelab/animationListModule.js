@@ -164,6 +164,47 @@ function animationPropsReducer(state, action) {
 }
 
 /**
+ * Given a name and animationList, determine if the name is unique
+ * @param {string} name
+ * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
+ */
+export function isNameUnique(name, animationListProps) {
+  for (let animation in animationListProps) {
+    if (animationListProps[animation].name === name) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Given a baseName and a animationList, provide a unique name
+ * @param {string} baseName - the original name for the animation (without numbers)
+ * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
+ */
+function generateAnimationName(baseName, animationList) {
+  let unavailableNumbers = [];
+  // Match names with the form baseName_#
+  const re = new RegExp(`^${baseName}_(\\d+)$`);
+  for (let animation in animationList) {
+    let match = re.exec(animationList[animation].name);
+    if (match !== null) {
+      unavailableNumbers.push(parseInt(match[1]));
+    }
+  }
+  unavailableNumbers.sort((a, b) => a - b);
+  let availableNumber = 1;
+  for (let i = 0; i < unavailableNumbers.length; i++) {
+    if (availableNumber === unavailableNumbers[i]) {
+      availableNumber++;
+    } else {
+      break;
+    }
+  }
+  return baseName + '_' + availableNumber.toString();
+}
+
+/**
  * @param {!SerializedAnimationList} serializedAnimationList
  * @returns {function()}
  */
@@ -221,7 +262,7 @@ export function setInitialAnimationList(serializedAnimationList) {
 
 export function addBlankAnimation() {
   const key = createUuid();
-  return dispatch => {
+  return (dispatch, getState) => {
     // Special behavior here:
     // By pushing an animation that is "loadedFromSource" but has a null
     // blob and dataURI, Piskel will know to create a new document with
@@ -230,7 +271,7 @@ export function addBlankAnimation() {
       type: ADD_ANIMATION,
       key,
       props: {
-        name: 'New animation', // TODO: Better generated name?
+        name: generateAnimationName('animation', getState().animationList.propsByKey),
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
@@ -257,7 +298,7 @@ export function addBlankAnimation() {
 export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
-  return dispatch => {
+  return (dispatch, getState) => {
     dispatch({
       type: ADD_ANIMATION,
       key,
@@ -266,6 +307,8 @@ export function addAnimation(key, props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
+    let name = generateAnimationName(props.name, getState().animationList.propsByKey);
+    dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
 }
@@ -275,7 +318,7 @@ export function addAnimation(key, props) {
  * @param {!SerializedAnimation} props
  */
 export function addLibraryAnimation(props) {
-  return dispatch => {
+  return (dispatch, getState) => {
     const key = createUuid();
     dispatch({
       type: ADD_ANIMATION,
@@ -285,6 +328,8 @@ export function addLibraryAnimation(props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
+    let name = generateAnimationName(props.name, getState().animationList.propsByKey);
+    dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
 }
@@ -418,14 +463,7 @@ function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState().animationList;
-    // Figure out where to get the animation from.
-    // 1. If the animation has a sourceUrl it's external (from the library
-    //    or some other outside source, not the animation API)
-    // 2. Otherwise use the animation key to look it up in the animations API
-    // TODO: Take version ID into account here...
-
-    const rawSourceUrl = state.propsByKey[key].sourceUrl;
-    const sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
+    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -456,6 +494,34 @@ function loadAnimationFromSource(key, callback) {
       });
     });
   };
+}
+
+/**
+ * Given a key/serialized-props pair for an animation, work out where to get
+ * the spritesheet.
+ * @param {!AnimationKey} key
+ * @param {!SerializedAnimationProps} props
+ * @param {boolean} withVersion - Whether to request a specific version of the
+ *        animation if pulling from the local project.
+ * @returns {string}
+ */
+export function animationSourceUrl(key, props, withVersion = false) {
+  // TODO: (Brad) We want to get to where the client doesn't know much about
+  //       animation versions, by switching to Chris' new Files API.
+  //       in the meantime, be able to request versions only when we export
+  //       JSON for levelbuilders to use.
+
+  // 1. If the animation has a sourceUrl it's external (from the library
+  //    or some other outside source, not the animation API) - and we may need
+  //    to run it through the media proxy.
+  if (props.sourceUrl) {
+    return assetPrefix.fixPath(props.sourceUrl);
+  }
+
+  // 2. Otherwise it's local to this project, and we should use the animation
+  //    key to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png' +
+      ((withVersion && props.version) ? '?version=' + props.version : '');
 }
 
 /**
@@ -524,4 +590,11 @@ function saveAnimation(animationKey, animationProps) {
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
     xhr.send(animationProps.blob);
   });
+}
+
+/**
+  * Selector for allAnimationsSingleFrame
+  */
+export function allAnimationsSingleFrameSelector(state) {
+  return state.pageConstants.allAnimationsSingleFrame;
 }

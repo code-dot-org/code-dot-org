@@ -7,8 +7,8 @@ social:
   "og:image": "https://csedweek.org/images/cs-is-everything-thumbnail.png"
   "og:image:width": "1200"
   "og:image:height": "627"
-  "og:video:url": "http://youtube.com/v/xJqSu1IbcHg"
-  "og:video:secure_url": "https://youtube.com/v/xJqSu1IbcHg"
+  "og:video:url": "http://youtube.com/v/QvyTEx1wyOY"
+  "og:video:secure_url": "https://youtube.com/v/QvyTEx1wyOY"
   "og:video:type": "application/x-shockwave-flash"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -18,7 +18,7 @@ social:
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
   "twitter:image:src": "https://csedweek.org/images/cs-is-everything-thumbnail.png"
-  "twitter:player": "https://youtube.com/v/xJqSu1IbcHg"
+  "twitter:player": "https://youtube.com/v/QvyTEx1wyOY"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 video_player: true
@@ -39,7 +39,7 @@ video_player: true
 
   #top
     #video.col-63.desktop-pad-right
-      = view :display_video_thumbnail, id: "cs_is_everything", video_code: "xJqSu1IbcHg", play_button: 'center', download_path: "//videos.code.org/social/cs-is-everything.mp4"
+      = view :display_video_thumbnail, id: "cs_is_everything", video_code: "QvyTEx1wyOY", play_button: 'center', download_path: "//videos.code.org/social/cs-is-everything.mp4"
 
     #start.col-36
       %div.desktop-feature{:style=>'height: 25px;'}
@@ -59,8 +59,6 @@ video_player: true
           %a#trybutton{:href=>'/learn'}
             %button.optionbutton{:style=>'min-width: 100px;'}
               =I18n.t :homepage_action_text_learn
-        %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
-          =I18n.t :homepage_action_text_volunteers
 
     -download_filename = 'cs-is-everything.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}

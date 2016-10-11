@@ -149,7 +149,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "instructions": "Display the conversation onto the \"text_area\" element. Optional: clear the user's input after every \"change\" event.",
-    "markdown_instructions": "<style>\r\ncode {color:black}\r\n</style>\r\n\r\nNow we need to control what gets displayed onto the screen.\r\n\r\n### Instructions\r\n\r\n* Display the conversation onto the <code>text_area</code> element\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nYou may need the <code>setText</code> block\r\n</details>\r\n\r\n<br/>\r\n**Going Further**\r\n\r\nAfter the use types a prompt and hits \"enter/return\", the prompt should disappear from the <code>text_input</code> element; otherwise, the user will have to erase the input every time s/he types a prompt.\r\n\r\n* Add one block to the end of your event handler that will clear the <code>text_input</code>\r\n\r\n<br/>",
+    "markdown_instructions": "Now we need to control what gets displayed onto the screen.\r\n\r\n### Instructions\r\n\r\n* Display the conversation onto the `text_area` element\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nYou may need the `setText` block\r\n</details>\r\n\r\n<br/>\r\n**Going Further**\r\n\r\nAfter the use types a prompt and hits \"enter/return\", the prompt should disappear from the `text_input` element; otherwise, the user will have to erase the input every time s/he types a prompt.\r\n\r\n* Add one block to the end of your event handler that will clear the `text_input`\r\n\r\n<br/>",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",

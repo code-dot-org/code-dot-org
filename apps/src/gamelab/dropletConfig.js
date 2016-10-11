@@ -1,6 +1,5 @@
 /* global dashboard */
 
-var msg = require('./locale');
 var api = require('./apiJavascript.js');
 var consoleApi = require('../consoleApi');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
@@ -9,12 +8,7 @@ var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_RED = '#F78183';
 var COLOR_CYAN = '#4DD0E1';
 var COLOR_YELLOW = '#FFF176';
-var COLOR_PINK = '#F57AC6';
-var COLOR_PURPLE = '#BB77C7';
-var COLOR_GREEN = '#68D995';
-var COLOR_WHITE = '#FFFFFF';
 var COLOR_BLUE = '#64B5F6';
-var COLOR_ORANGE = '#FFB74D';
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
@@ -159,6 +153,7 @@ module.exports.blocks = [
   {func: 'sprite.previousPosition.y', category: 'Sprites', modeOptionName: 'sprite_previousPosition_y', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-previousPosition" },
   {func: 'removed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.removed', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-removed" },
   {func: 'restitution', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.restitution', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-restitution" },
+  {func: 'bounciness', category: 'Sprites', blockPrefix: spriteBlockPrefix, modeOptionName: '*.bounciness', type: 'property'},
   {func: 'rotateToDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotateToDirection', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-rotateToDirection" },
   {func: 'rotation', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotation', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-rotation" },
   {func: 'rotationSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotationSpeed', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-rotationSpeed" },

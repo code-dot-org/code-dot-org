@@ -1,8 +1,5 @@
-title 'CS Principles Facilitator Workshop '
-description 'Online levels for PD workshop'
-description_short 'Online levels for PD workshop'
+professional_learning_course 'CS Principles Support'
 login_required 'true'
-pd 'true'
 
 stage 'Welcome!'
 level 'CSPfac intro'

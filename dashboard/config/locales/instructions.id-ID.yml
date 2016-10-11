@@ -840,23 +840,22 @@
       4-5 Maze 5 (copy 1)_instruction: |
         Bisakah kamu memecahkan teka-teki ini dengan
         menggunakan sesedikit balok mungkin?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 5_instruction: Apakah kamu bisa menggunakan blok seminimal mungkin
+        untuk memecahkan puzzle berikut?
       4-5 Maze 6 (copy 1)_instruction: |
         Bisakah kamu memecahkan teka-teki ini dengan
         menggunakan sesedikit balok mungkin?
-      4-5 Maze 6_instruction: |
-        Get me to the sunflower using the fewest number of
-        blocks possible!
+      4-5 Maze 6_instruction: Antarkan aku ke Bunga Matahari dengan menggunakan blok
+        seminimal mungkin!
       4-5 Maze 7_instruction: |
         Cepat bawa si zombie ke bunga matahari! Bisakah
         kamu memecahkan teka-teki di bawah 11 balok?
-      4-5 Maze 8_instruction: "Get the zombie to the sunflower using as few blocks\nas
-        you can.  \r\n(Avoid the chompers!)"
-      4-5 Maze 9_instruction: "Now we have a new block called `repeat until`.  \r\nThis\nwill
-        let us keep looping commands until the zombie gets the sunflower.  \r\n\r\nUse\nthe
-        new `repeat until` block to solve this puzzle in as few commands as possible."
+      4-5 Maze 8_instruction: "Antarkan zombie ke bunga matahari dengan menggunakan
+        blok seminimal yang anda bisa. \r\n(Hindari chompers!)"
+      4-5 Maze 9_instruction: "Sekarang kita mempunyai balok yang disebut 'ulangi
+        hingga' \r\nBalok itu akan membantu kita untuk mengiterasi perintah hingga
+        si zombie mendapatkan bunga matahari \r\n\r\nGunakan balok baru ini untuk
+        memecahkan teka-teki dengan perintah seminimal mungkin."
       4-5 Maze Assessment 1_instruction: |
         Assessment: Get to the sunflower using
         as few blocks as possible.
@@ -2100,12 +2099,10 @@
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
         when solving this puzzle...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 5_instruction: Apakah kamu bisa menggunakan blok seminimal mungkin
+        untuk memecahkan puzzle berikut?
+      Course 4 Maze 6_instruction: Apakah kamu bisa menggunakan blok seminimal mungkin
+        untuk memecahkan puzzle berikut?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -3226,6 +3223,9 @@
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_pre1_instruction: |
+        Ruff! Can you help me collect some tennis
+        balls?
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -3260,6 +3260,16 @@
       grade2_maze_debuggingPre_instruction: |
         Play with these blocks to see what they
         make the bird do!
+      grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro6_instruction: "That’s it!  Now we’re ready to try to solve\na
+        few puzzles. \n"
+      grade2_maze_intro7_instruction: This time, try something a bit more challenging.
+      grade2_maze_intro8_instruction: |
+        This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice.
+      grade2_maze_intro9_instruction: Solve this puzzle.
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?

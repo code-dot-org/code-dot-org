@@ -1,9 +1,5 @@
 professional_learning_course 'ECS Support'
-title 'ECS Unit 2'
-description 'Unit 2: Problem Solving'
-description_short 'Unit 2: Problem Solving'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'ECS Phase 3 Welcome'
@@ -55,4 +51,3 @@ named_level 'ECS Unit 2 Challenge Submission'
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
-# level 'ECSPD 1 page template'

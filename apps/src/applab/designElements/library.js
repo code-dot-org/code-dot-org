@@ -1,6 +1,6 @@
 import $ from 'jquery';
-var utils = require('../../utils');
-var elementUtils = require('./elementUtils');
+import * as utils from '../../utils';
+import * as elementUtils from './elementUtils';
 
 /**
  * A map from prefix to the next numerical suffix to try to
@@ -42,7 +42,7 @@ elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
 
-module.exports = {
+export default {
   ElementType: ElementType,
   /**
    * Returns an element id with the given prefix which is unused within

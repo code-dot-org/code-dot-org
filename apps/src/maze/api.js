@@ -4,7 +4,6 @@ var MoveDirection = tiles.MoveDirection;
 var TurnDirection = tiles.TurnDirection;
 var SquareType = tiles.SquareType;
 var utils = require('../utils');
-var Bee = require('./bee');
 
 /**
  * Only call API functions if we haven't yet terminated execution

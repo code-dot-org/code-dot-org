@@ -1,7 +1,7 @@
-var React = require('react');
-var elementUtils = require('./designElements/elementUtils.js');
+import React from 'react';
+import * as elementUtils from './designElements/elementUtils.js';
 
-module.exports = React.createClass({
+export default React.createClass({
   propTypes: {
     onChangeElement: React.PropTypes.func.isRequired,
     elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
