@@ -4,7 +4,11 @@ require 'json'
 
 DIR = '/mnt/backups/'
 FILE = DIR + 'milestone_cache'
-sum_cache = (File.open(FILE, 'r') { |f| Marshal.load(f.read) }) rescue {}
+sum_cache = begin
+              (File.open(FILE, 'r') { |f| Marshal.load(f.read) })
+            rescue
+              {}
+            end
 today_sum = archive_sum = 0
 results = {}
 

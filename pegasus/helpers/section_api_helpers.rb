@@ -192,7 +192,12 @@ class DashboardSection
     return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
 
     # don't crash when loading environment before database has been created
-    return {} unless (Dashboard.db[:scripts].count rescue nil)
+    script_count = begin
+                     Dashboard.db[:scripts].count
+                   rescue
+                     nil
+                   end
+    return {} unless script_count
 
     where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
 

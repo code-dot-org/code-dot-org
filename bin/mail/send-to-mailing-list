@@ -109,7 +109,11 @@ def main
   params[:threads].times do
     workers << Thread.new do
       until queue.empty?
-        item = queue.pop(true) rescue nil
+        item = begin
+                 queue.pop(true)
+               rescue
+                 nil
+               end
         send_message params[:template], item if item
       end
     end

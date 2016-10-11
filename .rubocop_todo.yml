@@ -252,11 +252,6 @@ Style/RedundantSelf:
 Style/RegexpLiteral:
   Enabled: false
 
-# Offense count: 32
-# Cop supports --auto-correct.
-Style/RescueModifier:
-  Enabled: false
-
 # Offense count: 220
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.

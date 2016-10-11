@@ -80,7 +80,11 @@ def threaded_each(array, thread_count=2)
 
   threads = create_threads(thread_count) do
     until queue.empty?
-      next unless item = queue.pop(true) rescue nil
+      next unless item = begin
+                           queue.pop(true)
+                         rescue
+                           nil
+                         end
       yield item if block_given?
     end
   end

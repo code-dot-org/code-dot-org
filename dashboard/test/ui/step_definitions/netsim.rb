@@ -3,7 +3,11 @@ When /^I load netsim in DNS mode$/ do
     And I am on "http://studio.code.org/s/allthethings/stage/14/puzzle/4?noautoplay=true"
     And I wait to see "#netsim-lobby-name"
   STEPS
-  steps "And I close the dialog" if @browser.find_element(:id => 'x-close') rescue false
+  begin
+    steps "And I close the dialog" if @browser.find_element(:id => 'x-close')
+  rescue
+    false
+  end
 end
 
 When /^I load netsim in bit-sending mode$/ do
@@ -11,7 +15,11 @@ When /^I load netsim in bit-sending mode$/ do
     And I am on "http://studio.code.org/s/allthethings/stage/14/puzzle/1?noautoplay=true"
     And I wait to see "#netsim-lobby-name"
   STEPS
-  steps "And I close the dialog" if @browser.find_element(:id => 'x-close') rescue false
+  begin
+    steps "And I close the dialog" if @browser.find_element(:id => 'x-close')
+  rescue
+    false
+  end
 end
 
 When /^I enter the netsim name "([^"]*)"$/ do |username|

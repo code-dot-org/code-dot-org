@@ -40,7 +40,11 @@ skipped_emails = Set.new
 # Empty string and nil return 0. Otherwise it should be an int or a string that parses to an int.
 def parse_int_or_nil(value)
   return 0 if value.nil? || value == ''
-  Integer(value) rescue nil
+  begin
+    Integer(value)
+  rescue
+    nil
+  end
 end
 
 def valid?(data)

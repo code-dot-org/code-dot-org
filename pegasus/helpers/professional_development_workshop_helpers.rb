@@ -22,8 +22,16 @@ def generate_professional_development_workshop_payment_report(from=nil, to=nil)
   end
 
   DB[:forms].where(kind: "ProfessionalDevelopmentWorkshop").map do |row|
-    data = JSON.parse(row[:data]) rescue {}
-    processed_data = JSON.parse(row[:processed_data]) rescue {}
+    data = begin
+             JSON.parse(row[:data])
+           rescue
+             {}
+           end
+    processed_data = begin
+                       JSON.parse(row[:processed_data])
+                     rescue
+                       {}
+                     end
 
     stopped_at = Chronic.parse(data['stopped_dt'])
 
@@ -54,7 +62,11 @@ def generate_professional_development_workshop_teachers_report
 
   # generate a report about the teachers trained by affiliates and their students' progress
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map do |affiliate|
-    data = JSON.parse(affiliate[:data]) rescue {}
+    data = begin
+             JSON.parse(affiliate[:data])
+           rescue
+             {}
+           end
 
     section_id = data['section_id_s']
     next unless section_id
@@ -93,7 +105,11 @@ def generate_professional_development_workshop_signup_report(secret)
   workshop = PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop', secret: secret).first
 
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshopSignup', parent_id: workshop[:id]).map do |row|
-    data = JSON.parse(row[:data]) rescue {}
+    data = begin
+             JSON.parse(row[:data])
+           rescue
+             {}
+           end
     if data['status_s'] == 'cancelled'
       nil
     else
@@ -118,7 +134,11 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
   to = Chronic.parse(to.to_s)
 
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map do |workshop|
-    data = JSON.parse(workshop[:data]) rescue {}
+    data = begin
+             JSON.parse(workshop[:data])
+           rescue
+             {}
+           end
 
     if first_date = data['dates'].first
       first_date = first_date['date_s']
@@ -134,7 +154,11 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
       where(kind: 'ProfessionalDevelopmentWorkshopSignup').
       and(parent_id: workshop[:id]).
       map do |signup|
-        signup_data = JSON.parse(signup[:data]) rescue {}
+        signup_data = begin
+                        JSON.parse(signup[:data])
+                      rescue
+                        {}
+                      end
         signup_count += 1 unless signup_data['status_s'] == 'cancelled'
       end
 

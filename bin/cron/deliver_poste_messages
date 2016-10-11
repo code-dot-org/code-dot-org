@@ -275,7 +275,11 @@ def main
     deliverer = Deliverer.new SMTP_OPTIONS
 
     until queue.empty?
-      next unless delivery = queue.pop(true) rescue nil
+      next unless delivery = begin
+                               queue.pop(true)
+                             rescue
+                               nil
+                             end
 
       sent_at = DateTime.now
 

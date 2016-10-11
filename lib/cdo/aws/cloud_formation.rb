@@ -20,8 +20,12 @@ module AWS
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
     # Use [DOMAIN] wildcard SSL certificate for ELB and CloudFront, if available.
-    IAM_METADATA = Aws::IAM::Client.new.get_server_certificate(server_certificate_name: DOMAIN).
-      server_certificate.server_certificate_metadata rescue nil
+    IAM_METADATA = begin
+                     Aws::IAM::Client.new.get_server_certificate(server_certificate_name: DOMAIN).
+                           server_certificate.server_certificate_metadata
+                   rescue
+                     nil
+                   end
 
     IAM_CERTIFICATE_ID = IAM_METADATA && IAM_METADATA.server_certificate_id
 
@@ -216,7 +220,11 @@ module AWS
         }
         log_config[:next_token] = @@log_token unless @@log_token.nil?
         # Return silently if we can't get the log events for any reason.
-        resp = logs.get_log_events(log_config) rescue return
+        resp = begin
+                 logs.get_log_events(log_config)
+               rescue
+                 return
+               end
         resp.events.each do |event|
           CDO.log.info(event.message) unless quiet
         end
@@ -351,7 +359,11 @@ module AWS
           `zip -qr - *.js node_modules`
         end
         key = "lambdajs-#{Digest::MD5.hexdigest(code_zip)}.zip"
-        object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
+        object_exists = begin
+                          Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key)
+                        rescue
+                          nil
+                        end
         AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true) unless object_exists
         {
           S3Bucket: S3_BUCKET,

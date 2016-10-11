@@ -352,7 +352,9 @@ class Script < ActiveRecord::Base
   end
 
   def logo_image
-    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true) rescue nil
+    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true)
+  rescue
+    nil
   end
 
   def k5_course?

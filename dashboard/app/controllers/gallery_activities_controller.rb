@@ -11,7 +11,11 @@ class GalleryActivitiesController < ApplicationController
   MAX_PAGE = 100
 
   def index
-    page = params[:page].to_i rescue 0
+    page = begin
+             params[:page].to_i
+           rescue
+             0
+           end
     if page < 0 || page > MAX_PAGE
       redirect_to gallery_activities_path
       return
