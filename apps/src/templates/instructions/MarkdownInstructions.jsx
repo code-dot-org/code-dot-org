@@ -97,7 +97,6 @@ const MarkdownInstructions = React.createClass({
     const {
       inTopPane,
       renderedMarkdown,
-      noInstructionsWhenCollapsed
     } = this.props;
 
     // In cases where we have a full-size image (as opposed to the inline images we use in

@@ -14,6 +14,11 @@ dashboard_enable_pegasus: true
 #levelbuilder_mode: true
 
 
+# Run dashboard-server without disabling the script and level cache. Slows down
+# server startup and class reloading, so not recommended for dev environments.
+#disable_script_cache: false
+
+
 # Whether rake:build should rebuild the apps package
 #build_apps: true
 

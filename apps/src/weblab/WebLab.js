@@ -1,15 +1,9 @@
 /* global dashboard */
 
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
-import utils from '../utils';
-import _ from 'lodash';
-import assetPrefix from '../assetManagement/assetPrefix';
 import errorHandler from '../errorHandler';
-import dom from '../dom';
-import experiments from '../experiments';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
 var assetsApi = require('@cdo/apps/clientApi').assets;

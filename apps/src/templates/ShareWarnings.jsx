@@ -10,7 +10,8 @@ var commonMsg = require('@cdo/locale');
  * it will ask your age. If the app stores data, it will also alert you to
  * that.
  */
-var SharingWarnings = module.exports = React.createClass({
+module.exports = React.createClass({
+  displayName: 'ShareWarnings',
   propTypes: {
     is13Plus: React.PropTypes.bool.isRequired,
     showStoreDataAlert: React.PropTypes.bool.isRequired,

@@ -3,7 +3,6 @@
  * the course overview page, and the stage locking dialog.
  */
 import $ from 'jquery';
-import { INIT_PROGRESS } from './progressRedux';
 import experiments from '@cdo/apps/experiments';
 import Immutable from 'immutable';
 

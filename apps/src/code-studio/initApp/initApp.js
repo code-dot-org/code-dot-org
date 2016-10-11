@@ -1,5 +1,5 @@
 // TODO (brent) - way too many globals
-/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
+/* global script_path, CDOSounds, appOptions, trackEvent, Applab, Blockly */
 import $ from 'jquery';
 import PlayZone from '../components/playzone';
 import React from 'react';

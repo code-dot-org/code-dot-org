@@ -1,6 +1,3 @@
-
-import CommandState from "./CommandState.js";
-import CommandQueue from "./CommandQueue.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class CheckSolutionCommand extends BaseCommand {
@@ -23,8 +20,7 @@ export default class CheckSolutionCommand extends BaseCommand {
         if (this.GameController.DEBUG) {
             console.log("Solve command: BEGIN");
         }
-        var result = this.GameController.checkSolution(this);
+        this.GameController.checkSolution(this);
     }
 
 }
-
