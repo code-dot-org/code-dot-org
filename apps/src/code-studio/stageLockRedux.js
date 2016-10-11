@@ -7,13 +7,13 @@ import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
+import { SET_SECTIONS, SELECT_SECTION } from './sectionsRedux';
+
 export const ViewType = makeEnum('Student', 'Teacher');
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
 // Action types
 const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
-export const SET_SECTIONS = 'stageLock/SET_SECTIONS';
-export const SELECT_SECTION = 'stageLock/SELECT_SECTION';
 const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
 export const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
 export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
@@ -137,16 +137,6 @@ export const setViewType = viewType => {
     viewAs: viewType
   };
 };
-
-export const setSections = sections => ({
-  type: SET_SECTIONS,
-  sections
-});
-
-export const selectSection = sectionId => ({
-  type: SELECT_SECTION,
-  sectionId
-});
 
 export const openLockDialog = (sectionId, stageId) => ({
   type: OPEN_LOCK_DIALOG,

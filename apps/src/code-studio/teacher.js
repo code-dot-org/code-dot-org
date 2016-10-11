@@ -6,7 +6,8 @@ import { Provider } from 'react-redux';
 import { getStore } from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
-import { setSections, fullyLockedStageMapping } from './stageLockRedux';
+import { fullyLockedStageMapping } from './stageLockRedux';
+import { setSections } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
 
 function resizeScrollable() {
