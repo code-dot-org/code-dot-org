@@ -186,6 +186,7 @@ class ScriptDSL < BaseDSL
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
+      s << "video_key_for_next_level '#{level.video_key}'" if level.video_key
 
       unless level.concepts.empty?
         s << "concepts #{level.concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')}"
