@@ -51,7 +51,6 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === SET_SECTIONS) {
     const sectionId = Object.keys(action.sections)[0];
-    const currentSection = action.sections[sectionId];
     return Object.assign({}, state, {
       sections: action.sections,
       sectionsLoaded: true,

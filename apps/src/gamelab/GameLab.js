@@ -1,15 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var commonMsg = require('@cdo/locale');
-var msg = require('./locale');
-var levels = require('./levels');
+import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {startInAnimationTab} from './stateQueries';
+import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
@@ -18,21 +17,27 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-var assetPrefix = require('../assetManagement/assetPrefix');
 var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
-var experiments = require('../experiments');
 
-import {setInitialAnimationList, saveAnimations} from './animationListModule';
+import {
+  animationSourceUrl,
+  setInitialAnimationList,
+  saveAnimations
+} from './animationListModule';
 import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import {GAME_WIDTH} from './constants';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -90,6 +95,13 @@ var GameLab = function () {
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
+
+  /** Expose for levelbuilders (usable on prod) */
+  window.viewExportableAnimationList = () => {
+    this.getExportableAnimationList(list => {
+      this.studioApp_.reduxStore.dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
+    });
+  };
 };
 
 module.exports = GameLab;
@@ -133,6 +145,10 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
+  this.skin.smallStaticAvatar = null;
+  this.skin.staticAvatar = null;
+  this.skin.winAvatar = null;
+  this.skin.failureAvatar = null;
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
@@ -185,7 +201,11 @@ GameLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  var breakpointsEnabled = !config.level.debuggerDisabled;
+  // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug
+  // features are fixed.
+  var breakpointsEnabled = false;
+  config.enableShowCode = true;
+  config.enableShowLinesCount = false;
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
@@ -215,7 +235,10 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
+
+  // TODO(caleybrock): re-enable based on (!config.hideSource && !config.level.debuggerDisabled)
+  // when debug features are fixed.
+  var showDebugButtons = false;
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
@@ -228,8 +251,15 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
-    showAnimationMode: !config.level.hideAnimationMode
+    showDebugSlider: false,
+    showAnimationMode: !config.level.hideAnimationMode,
+    startInAnimationTab: config.level.startInAnimationTab,
+    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
   });
+
+  if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
+    this.studioApp_.reduxStore.dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+  }
 
   // Push project-sourced animation metadata into store
   const initialAnimationList = config.initialAnimationList || this.startAnimations;
@@ -243,8 +273,6 @@ GameLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
-
-  this.studioApp_.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -408,7 +436,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit) {
+GameLab.prototype.onPuzzleComplete = function () {
   if (this.executionError) {
     this.result = this.studioApp_.ResultType.ERROR;
   } else {
@@ -417,22 +445,22 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   }
 
   // If we know they succeeded, mark levelComplete true
-  var levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+  const levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
 
   if (this.executionError) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
-  } else if (!submit) {
+  } else {
     this.testResults = this.studioApp_.TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
   this.reset();
 
-  var program;
-  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
-
+  let program;
+  const containedLevelResultsInfo = this.studioApp_.hasContainedLevels &&
+    getContainedLevelResultInfo();
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
@@ -457,26 +485,33 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
 
   this.waitingForReport = true;
 
-  var sendReport = function () {
-    this.studioApp_.report({
-      app: 'gamelab',
-      level: this.level.id,
-      result: levelComplete,
-      testResult: this.testResults,
-      submitted: submit,
-      program: program,
-      image: this.encodedFeedbackImage,
-      containedLevelResultsInfo: containedLevelResultsInfo,
-      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
-    });
+  const sendReport = () => {
+    const onComplete = this.onReportComplete.bind(this);
+
+    if (containedLevelResultsInfo) {
+      // We already reported results when run was clicked. Make sure that call
+      // finished, then call onCompelte
+      runAfterPostContainedLevel(onComplete);
+    } else {
+      this.studioApp_.report({
+        app: 'gamelab',
+        level: this.level.id,
+        result: levelComplete,
+        testResult: this.testResults,
+        program: program,
+        image: this.encodedFeedbackImage,
+        submitted: false,
+        onComplete
+      });
+    }
 
     if (this.studioApp_.isUsingBlockly()) {
       // reenable toolbox
       Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     }
-  }.bind(this);
+  };
 
-  var divGameLab = document.getElementById('divGameLab');
+  const divGameLab = document.getElementById('divGameLab');
   if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
     sendReport();
   } else {
@@ -523,6 +558,8 @@ GameLab.prototype.runButtonClick = function () {
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
+
+  postContainedLevelAttempt(this.studioApp_);
 };
 
 function p5KeyCodeFromArrow(idBtn) {
@@ -1033,11 +1070,30 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
- * @return {AnimationList}
+ * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getSerializedAnimationList = function (callback) {
   this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
     callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  }));
+};
+
+/**
+ * Get the project's animation metadtaa, this time for use in a level
+ * configuration.  The major difference with SerializedAnimationList is that
+ * it includes a sourceUrl for local project animations.
+ * @param {function(SerializedAnimationList)} callback
+ */
+GameLab.prototype.getExportableAnimationList = function (callback) {
+  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
+    let list = getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
+    list.orderedKeys.forEach(key => {
+      let props = list.propsByKey[key];
+      props.sourceUrl = document.location.protocol + '//' +
+          document.location.host +
+          animationSourceUrl(key, props, true);
+    });
+    callback(list);
   }));
 };
 

@@ -1,0 +1,15 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-10-08T17:26:46.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "## Setting up your copy of the Class Data Tracker\r\n\r\nThe second chapter of unit 2 dives into data collection, analysis, and visualization. Starting in lesson 7 you will set up and use a class data tracker, which students will fill out each day until lesson 13, when they start cleaning the data they've been collecting.\r\n\r\nLesson 7 includes the following detailed guide that walks you through setting up your shared data tracker from the template provided in the curriculum. Feel free to check out this instructions and setup your tracker now! ",
+    "link_title": "Teacher Setup for “Data Tracker” Project",
+    "url": "https://docs.google.com/document/d/1T57_zt-oGU3TtOyDWFhdaR5bsmez_gBxi2O2f24uFZQ/edit"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</ExternalLink>

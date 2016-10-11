@@ -1,9 +1,8 @@
-var React = require('react');
-var applabMsg = require('@cdo/applab/locale');
-var DesignModeBox = require('./DesignModeBox');
-var DesignModeHeaders = require('./DesignModeHeaders');
+import React from 'react';
+import DesignModeBox from './DesignModeBox';
+import DesignModeHeaders from './DesignModeHeaders';
 
-module.exports = React.createClass({
+export default React.createClass({
   propTypes: {
     handleManageAssets: React.PropTypes.func.isRequired,
     handleDragStart: React.PropTypes.func,

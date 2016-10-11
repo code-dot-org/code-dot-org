@@ -167,7 +167,7 @@ module RakeUtils
   def self.ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      system 'rm', '-f', target if(current || File.file?(target))
+      system 'rm', '-f', target if current || File.file?(target)
       system 'ln', '-s', source, target
     end
   end
@@ -183,14 +183,12 @@ module RakeUtils
   end
 
   def self.npm_install(*args)
+    sudo = CDO.npm_use_sudo ? 'sudo' : ''
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands << 'sudo' if CDO.npm_use_sudo
-    commands << 'npm'
-    commands << 'install'
-    commands << '--quiet'
+    commands += "#{sudo} npm prune && #{sudo} npm update --quiet".split
     commands += args
-    RakeUtils.system *commands
+    RakeUtils.system(*commands)
   end
 
   # Installs list of global npm packages if not already installed
@@ -227,7 +225,7 @@ module RakeUtils
   def self.sudo_ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      sudo 'rm', '-f', target if(current || File.file?(target))
+      sudo 'rm', '-f', target if current || File.file?(target)
       sudo 'ln', '-s', source, target
     end
   end

@@ -10,7 +10,6 @@ import {
   GoButton,
   KeywordPublicModulus,
   KeywordPublicKey,
-  KeywordPrivateKey,
   KeywordPublicNumber,
   KeywordSecretNumber
 } from './cryptographyFields';

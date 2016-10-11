@@ -2,7 +2,7 @@
 Feature: Puzzle share page
 
 Background:
-  Given I am on "http://learn.code.org/flappy/10?noautoplay=true"
+  Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
   And I wait to see "#x-close"
   And I've initialized the workspace with my flappy puzzle.
 

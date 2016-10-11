@@ -66,8 +66,8 @@ module LevelsHelper
   end
 
   def use_firebase
-    !!@level.game.use_firebase_for_new_project? ||
-        !!(request.parameters && request.parameters['useFirebase'])
+    !!@level.game.use_firebase_for_new_project? &&
+        !(request.parameters && request.parameters['noUseFirebase'])
   end
 
   def select_and_track_autoplay_video
@@ -414,6 +414,7 @@ module LevelsHelper
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:firebaseName] = CDO.firebase_name if @game == Game.applab
     app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
+    app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
@@ -563,11 +564,20 @@ module LevelsHelper
     ]
   end
 
+  def session_id
+    # session.id may not be available on the first visit unless we write to the session first.
+    session['init'] = true
+    session.id
+  end
+
+  def user_or_session_id
+    current_user ? current_user.id.to_s : session_id
+  end
+
   # Unique, consistent ID for a user of an applab app.
   def applab_user_id
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
-    user_id = current_user ? current_user.id.to_s : session.id
-    Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
+    Digest::SHA1.base64digest("#{channel_id}:#{user_or_session_id}").tr('=', '')
   end
 
   # Assign a firebase authentication token based on the firebase secret,
@@ -580,16 +590,8 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    if current_user
-      user_id = current_user.id.to_s
-    elsif session.id
-      user_id = session.id.to_s
-    else
-      # a signed-out user may not have a session id on their first visit
-      user_id = 'anon'
-    end
     payload = {
-      :uid => user_id,
+      :uid => user_or_session_id,
       :is_dashboard_user => !!current_user
     }
     options = {}

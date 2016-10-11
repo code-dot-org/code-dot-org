@@ -1,7 +1,6 @@
 /** @overview Component for editing a key/value pair row. */
 
 import FirebaseStorage from '../firebaseStorage';
-import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
@@ -19,7 +18,7 @@ const EditKeyRow = React.createClass({
       isDeleting: false,
       isEditing: false,
       isSaving: false,
-      newValue: undefined
+      newValue: ''
     };
   },
 
@@ -32,13 +31,13 @@ const EditKeyRow = React.createClass({
   },
 
   handleChange(event) {
-    this.setState({newValue: castValue(event.target.value)});
+    this.setState({newValue: event.target.value});
   },
 
   handleEdit() {
     this.setState({
       isEditing: true,
-      newValue: this.props.value
+      newValue: editableValue(this.props.value)
     });
   },
 
@@ -46,7 +45,7 @@ const EditKeyRow = React.createClass({
     this.setState({isSaving: true});
     FirebaseStorage.setKeyValue(
       this.props.keyName,
-      this.state.newValue,
+      castValue(this.state.newValue),
       this.resetState,
       msg => console.warn(msg));
   },
@@ -77,12 +76,12 @@ const EditKeyRow = React.createClass({
   render() {
     return (
       <tr style={dataStyles.row}>
-        <td style={dataStyles.cell}>{this.props.keyName}</td>
+        <td style={dataStyles.cell}>{JSON.stringify(this.props.keyName)}</td>
         <td style={dataStyles.cell}>
           {this.state.isEditing ?
             <input
               style={dataStyles.input}
-              value={editableValue(this.state.newValue)}
+              value={this.state.newValue || ''}
               onChange={this.handleChange}
               onKeyUp={this.handleKeyUp}
             /> :

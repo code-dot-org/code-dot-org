@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import color from '../../color';
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
-import { setColumnSizes, selectedAnimation } from './animationTabModule';
+import { setColumnSizes } from './animationTabModule';
 import AnimationList from './AnimationList';
 import ResizablePanes from './ResizablePanes';
 import PiskelEditor from './PiskelEditor';
@@ -86,7 +86,7 @@ const AnimationTab = React.createClass({
             <PiskelEditor style={styles.piskelEl}/>
             <div style={[hidePiskelStyle, styles.emptyPiskelEl]}>
               <div style={styles.helpText}>
-                Add a new sequence on the left to begin
+                Add a new animation on the left to begin
               </div>
             </div>
           </div>

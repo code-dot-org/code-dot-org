@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
@@ -8,6 +6,7 @@ import { stageShape } from './types';
 import StageProgress from './stage_progress';
 import TeacherStageInfo from './TeacherStageInfo';
 import { ViewType } from '../../stageLockRedux';
+import { isHiddenFromState } from '../../hiddenStageRedux';
 import color from '../../../color';
 
 const styles = {
@@ -99,18 +98,21 @@ const CourseProgressRow = React.createClass({
     isFocusArea: React.PropTypes.bool,
 
     // redux provided
-    isHidden: React.PropTypes.bool,
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    sectionId: React.PropTypes.string,
+    hiddenStageMap: React.PropTypes.object.isRequired,
     showTeacherInfo: React.PropTypes.bool,
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lockableAuthorized: React.PropTypes.bool.isRequired,
     changeFocusAreaPath: React.PropTypes.string,
   },
 
   render() {
-    const { stage } = this.props;
-    if (this.props.stage.lockable && !this.props.lockableAuthorized) {
+    const { stage, sectionId, hiddenStageMap, lockableAuthorized } = this.props;
+    if (stage.lockable && !lockableAuthorized) {
       return null;
     }
+
+    const isHidden = isHiddenFromState(hiddenStageMap, sectionId, stage.id);
 
     return (
       <div
@@ -118,8 +120,8 @@ const CourseProgressRow = React.createClass({
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},
           this.props.isFocusArea && styles.focusAreaRow,
-          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenRow,
-          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.teacherHiddenRow,
+          isHidden && this.props.viewAs === ViewType.Student && styles.hiddenRow,
+          isHidden && this.props.viewAs === ViewType.Teacher && styles.teacherHiddenRow,
           this.props.viewAs === ViewType.Teacher && styles.teacherRow
         ]}
       >
@@ -147,6 +149,7 @@ const CourseProgressRow = React.createClass({
           />
         </div>
         {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
+            this.props.sectionId &&
           <div style={styles.teacherInfo}>
             <TeacherStageInfo stage={stage}/>
           </div>
@@ -156,10 +159,10 @@ const CourseProgressRow = React.createClass({
   }
 });
 
-export default connect((state, ownProps) => {
-  const isHidden = state.hiddenStage[ownProps.stage.id];
+export default connect(state => {
   return {
-    isHidden,
+    sectionId: state.stageLock.selectedSection,
+    hiddenStageMap: state.hiddenStage.get('bySection'),
     showTeacherInfo: state.progress.showTeacherInfo,
     viewAs: state.stageLock.viewAs,
     lockableAuthorized: state.stageLock.lockableAuthorized,

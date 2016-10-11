@@ -1,5 +1,5 @@
 module ViewOptionsHelper
-  AppViewOptions = Struct.new *%i(
+  AppViewOptions = Struct.new(*%i(
     full_width
     no_header
     no_footer
@@ -25,7 +25,7 @@ module ViewOptionsHelper
     public_caching
     is_13_plus
     has_contained_levels
-  )
+  ))
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
     @view_options ||= AppViewOptions.new

@@ -74,8 +74,7 @@
     return this;
   };
 
-  $(function()
-  {
+  $(function () {
     $(".mainblock #answers li").draggable({ revert: "invalid", stack: ".answer" });
 
     // set up the central list of empty slots.
@@ -147,41 +146,37 @@
     });
   });
 
-  function getResult() {
-    var wrongAnswer = false;
+  window.dashboard.codeStudioLevels.registerGetResult(
+    function getResult() {
+      var wrongAnswer = false;
 
-    var elements = $("#slots li");
+      var elements = $("#slots li");
 
-    var response = [];
+      var response = [];
 
-    for (index = 0; index < elements.length; index++)
-    {
-      value = elements[index];
+      for (index = 0; index < elements.length; index++) {
+        value = elements[index];
 
-      var originalIndex = value.getAttribute("originalIndex");
-      response.push(originalIndex);
-      if (originalIndex == null)
-      {
-        // nothing dragged in this slot yet
-        wrongAnswer = true;
+        var originalIndex = value.getAttribute("originalIndex");
+        response.push(originalIndex);
+        if (originalIndex == null) {
+          // nothing dragged in this slot yet
+          wrongAnswer = true;
 
-        $("#xmark_" + index).hide();
+          $("#xmark_" + index).hide();
+        } else if (originalIndex != String(index)) {
+          // wrong answer
+          wrongAnswer = true;
+
+          $("#xmark_" + index).show();
+        } else {
+          // correct answer
+          $("#xmark_" + index).hide();
+        }
       }
-      else if (originalIndex != String(index))
-      {
-        // wrong answer
-        wrongAnswer = true;
-
-        $("#xmark_" + index).show();
-      }
-      else
-      {
-        // correct answer
-        $("#xmark_" + index).hide();
-      }
+      return {
+        response: response,
+        result: !wrongAnswer
+      };
     }
-    return {
-      "response": response,
-      "result": !wrongAnswer
-    };
-  }
+  );

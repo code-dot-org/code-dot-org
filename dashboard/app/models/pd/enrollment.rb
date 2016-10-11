@@ -46,6 +46,10 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_presence_of :school, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
 
+  def self.for_school_district(school_district)
+    self.joins(:school_info).where(school_infos: {school_district_id: school_district.id})
+  end
+
   def has_user?
     self.user_id
   end

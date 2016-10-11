@@ -1,6 +1,5 @@
 import React from 'react';
 import Radium from 'radium';
-import color from '../../color';
 import { connect } from 'react-redux';
 
 const ChatBubbleTip = ({ isRtl, color, background }) => {

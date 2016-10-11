@@ -893,9 +893,9 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
-  def track_progress(student, script_level, result, pairings = nil)
+  def track_progress(user_id, script_level, result, pairings: nil)
     User.track_level_progress_sync(
-      user_id: student.id,
+      user_id: user_id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
       new_result: result,
@@ -905,62 +905,74 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
-  test 'track_level_progress_sync calls track_proficiency if new perfect score' do
-    script_level = create :script_level
-    student = create :student
+  test 'track_level_progress_sync calls track_proficiency if new perfect csf score' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).once
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if new perfect non-csf score' do
+    user = create :user
+    non_csf_script_level = create :script_level
+
+    User.expects(:track_proficiency).never
+    track_progress(user.id, non_csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
-    script_level = create :script_level
-    student = create :student
-    create :user_level, user_id: student.id, script_id: script_level.script_id, level_id: script_level.level_id, best_result: 100
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    create :user_level,
+      user_id: user.id,
+      script_id: csf_script_level.script_id,
+      level_id: csf_script_level.level_id,
+      best_result: 100
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if new passing score' do
-    script_level = create :script_level
-    student = create :student
+  test 'track_level_progress_sync does not call track_proficiency if new passing csf score' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 25)
+    track_progress(user.id, csf_script_level, 25)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if hint used' do
-    script_level = create :script_level
-    student = create :student
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :hint_view_request,
-      user_id: student.id,
-      level_id: script_level.level_id,
-      script_id: script_level.script_id
+      user_id: user.id,
+      level_id: csf_script_level.level_id,
+      script_id: csf_script_level.script_id
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
-    script_level = create :script_level
-    student = create :student
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     AuthoredHintViewRequest.create(
-      user_id: student.id,
-      level_id: script_level.level_id,
-      script_id: script_level.script_id
+      user_id: user.id,
+      level_id: csf_script_level.level_id,
+      script_id: csf_script_level.script_id
     )
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency when pairing' do
-    script_level = create :script_level
-    student = create :student
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100, [create(:user).id])
+    track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
   end
 
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
@@ -1221,33 +1233,6 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair_with?(student)
   end
 
-  test 'student_of_admin?' do
-    teacher = create :teacher
-    section1 = create :section, user_id: teacher.id
-
-    admin_teacher = create :admin_teacher
-    section2 = create :section, user_id: admin_teacher.id
-
-    student_of_none = create :student
-
-    student_of_normal_teacher = create :student
-    create :follower, section: section1, student_user: student_of_normal_teacher
-
-    student_of_admin_teacher = create :student
-    create :follower, section: section2, student_user: student_of_admin_teacher
-
-    student_of_both_teachers = create :student
-    create :follower, section: section1, student_user: student_of_both_teachers
-    create :follower, section: section2, student_user: student_of_both_teachers
-
-    assert !teacher.student_of_admin?
-    assert !admin_teacher.student_of_admin?
-    assert !student_of_none.student_of_admin?
-    assert !student_of_normal_teacher.student_of_admin?
-    assert student_of_admin_teacher.student_of_admin?
-    assert student_of_both_teachers.student_of_admin?
-  end
-
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
     fake_teacher = create :teacher
@@ -1388,5 +1373,24 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.permission?(UserPermission::FACILITATOR)
     assert !user.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  test 'should_see_inline_answer? returns true in levelbuilder' do
+    user = create :user
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    assert user.should_see_inline_answer?(nil)
+    assert user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns false for non teachers' do
+    user = create :student
+    assert_not user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns true for authorized teachers in csp' do
+    user = create :teacher
+    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
+    assert user.should_see_inline_answer?((create :script_level))
   end
 end

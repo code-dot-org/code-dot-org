@@ -1,8 +1,5 @@
-title 'Computer Science in Algebra PD Phase 2'
-description "Teach Algebra through Functional Programming"
-description_short "	School Year Online Support"
+professional_learning_course 'CS in Algebra Support'
 login_required 'true'
-pd 'true'
 
 stage 'Welcome!'
 level 'PDAlg P2 Welcome'
@@ -24,13 +21,8 @@ level 'PDAlg DR Match 1'
 stage 'The Design Recipe'
 level 'PDAlg Design Recipe Video'
 level 'Eval Design Recipe 3'
-#level 'Eval Design Recipe 4'
 level 'Eval Design Recipe 5'
-#level 'Eval Design Recipe 6'
 level 'Calc Design Recipe 1'
-#level 'Calc Design Recipe 2'
-#level 'Calc Design Recipe 3'
-#level 'Calc Design Recipe 4'
 level 'Eval Design Recipe Free Play'
 
 stage 'Teacher Dashboard'

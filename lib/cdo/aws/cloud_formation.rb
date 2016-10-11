@@ -72,10 +72,11 @@ module AWS
           )).id
 
           begin
-            begin
+            loop do
               sleep 1
               change_set = cfn.describe_change_set(change_set_name: change_set_id)
-            end while %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+              break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+            end
             change_set.changes.each do |change|
               c = change.resource_change
               str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"

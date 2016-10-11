@@ -360,16 +360,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
-  test "show redirects to canonical url for 20 hour" do
-    sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
-    get :show, script_id: sl.script, chapter: sl.chapter
-
-    assert_redirected_to build_script_level_path(sl)
-  end
-
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, script_id: Script.twenty_hour_script, chapter: '99999999999999999999999999'
+      get :show, script_id: Script.twenty_hour_script, stage_position: '99999999999999999999999999', id: '1'
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, script_id: Script.twenty_hour_script, stage_position: '1', id: '99999999999999999999999999'
     end
   end
 
@@ -420,9 +417,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "next routing for custom scripts" do
-    assert_routing({method: "get", path: "/s/laurel/puzzle/next"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', chapter: "next"})
-    assert_equal "/s/laurel/puzzle/next", script_puzzle_path(@custom_script, 'next')
+    assert_routing({method: "get", path: "/s/laurel/next"},
+      {controller: "script_levels", action: "next", script_id: 'laurel'})
+    assert_equal "/s/laurel/next", script_next_path(@custom_script)
   end
 
   test "next redirects to next level for custom scripts" do
@@ -481,8 +478,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for hoc" do
-    hoc_level = Script.find_by_name(Script::HOC_NAME).script_levels.second
-    get :show, script_id: Script::HOC_NAME, id: hoc_level.id
+    get :show, script_id: Script::HOC_NAME, stage_position: '1', id: '2'
 
     assert_response 301 # moved permanently
     assert_redirected_to '/hoc/2'
@@ -499,8 +495,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for special scripts" do
-    flappy_level = Script.get_from_cache(Script::FLAPPY_NAME).script_levels.second
-    get :show, script_id: Script::FLAPPY_NAME, id: flappy_level.id
+    get :show, script_id: Script::FLAPPY_NAME, stage_position: '1', id: '2'
 
     assert_response 301 # moved permanently
     assert_redirected_to '/flappy/2'
@@ -533,13 +528,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
 
     assert_equal script_level, assigns(:script_level)
-  end
-
-  test "show redirects to canonical url for custom scripts" do
-    get :show, script_id: @custom_script.id, id: @custom_s2_l1.id
-
-    assert_response 301 # moved permanently
-    assert_redirected_to '/s/laurel/stage/2/puzzle/1'
   end
 
   test "show with the reset param should reset session when not logged in" do
@@ -719,12 +707,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
   end
 
-  test "should 404 for invalid script level for twenty hour" do
-    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, script_id: Script::TWENTY_HOUR_NAME, id: 40000
-    end
-  end
-
   test "should 404 for invalid chapter for flappy" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
       get :show, script_id: 'flappy', chapter: 40000
@@ -737,7 +719,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
   end
 
-  test "should 404 for invalid script id for course1" do
+  test "should 404 for invalid puzzle for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
       get :show, script_id: 'course1', stage_position: 1, id: 4000
     end
@@ -807,7 +789,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, script_id: script_level.script, stage_position: script_level.stage, id: script_level.position, user_id: @teacher.id
 
-    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab.min')
+    assert_select 'script[src*=makerlab]'
   end
 
   test 'excludes makerlab javascript dependencies when applab level' do
@@ -818,7 +800,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, script_id: script_level.script, stage_position: script_level.stage, id: script_level.position, user_id: @teacher.id
 
-    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
+    assert_select 'script[src*=makerlab]', false
   end
 
   test 'shows expanded teacher panel when student is chosen' do
@@ -881,8 +863,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     script = Script.find_by_name('ECSPD')
-    assert script.pd?
-    assert script.professional_course?
+    assert script.professional_learning_course?
 
     get :show, params: {script_id: script, stage_position: 1, id: 1}
     assert_select '.teacher-panel', 0
@@ -894,7 +875,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
-    assert script.professional_course?
 
     get :show, script_id: script, stage_position: 1, id: 1
     assert_select '.teacher-panel', 0
@@ -986,43 +966,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal true, assigns(:level_view_options_map)[level.id][:submitted]
     assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options_map)[level.id][:unsubmit_url]
-  end
-
-  def create_student_of_admin_script
-    create(:script, student_of_admin_required: true).tap do |script|
-      create :script_level, script: script
-    end
-  end
-
-  test "should not get show of student_of_admin script if not signed in" do
-    script = create_student_of_admin_script
-
-    get :show, script_id: script.name, stage_position: 1, id: 1
-    assert_redirected_to_sign_in
-  end
-
-  test "should not get show of student_of_admin script if signed in but not admin or student of admin" do
-    script = create_student_of_admin_script
-
-    sign_in create(:student)
-    get :show, script_id: script.name, stage_position: 1, id: 1
-    assert_response :forbidden
-  end
-
-  test "should get show of student_of_admin script if signed in as student of admin" do
-    script = create_student_of_admin_script
-
-    sign_in create(:student_of_admin)
-    get :show, script_id: script.name, stage_position: 1, id: 1
-    assert_response :success
-  end
-
-  test "should not get show of student_of_admin script if signed in as admin" do
-    script = create_student_of_admin_script
-
-    sign_in create(:admin)
-    get :show, script_id: script.name, stage_position: 1, id: 1
-    assert_response :forbidden
   end
 
   test "should have milestone posting disabled if Milestone is set" do
@@ -1252,21 +1195,31 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in teacher
 
     teacher_owner_section = put_student_in_section(student, teacher, @script)
+    teacher_owner_section2 = put_student_in_section(student, teacher, @script)
     teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
 
     stage1 = @script.stages[0]
     stage2 = @script.stages[1]
+    stage3 = @script.stages[2]
 
-    # stage 1 is hidden in the section owned by the teacher
+    # stage 1 is hidden in the first section owned by the teacher
     SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: stage1.id)
 
-    # stage 2 is hidden in the section in which the teacher is a member
-    SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: stage2.id)
+    # stage 1 and 2 are hidden in the second section owned by the teacher
+    SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: stage2.id)
+
+    # stage 3 is hidden in the section in which the teacher is a member
+    SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: stage3.id)
 
     response = get_hidden(@script)
     hidden = JSON.parse(response.body)
     # only the stages hidden in the owned section are considered hidden
-    assert_equal [stage1.id.to_s], hidden
+    expected = {
+      teacher_owner_section.id.to_s => [stage1.id],
+      teacher_owner_section2.id.to_s => [stage1.id, stage2.id]
+    }
+    assert_equal expected, hidden
   end
 
   test "teacher can hide and unhide stages in sections they own" do

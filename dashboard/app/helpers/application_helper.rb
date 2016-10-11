@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
@@ -57,7 +58,7 @@ module ApplicationHelper
     # For definitions of the result values, see /app/src/constants.js.
     user_level = user_levels.
         select {|ul| ul.try(:best_result) && ul.best_result != 0}.
-        max_by &:best_result ||
+        max_by(&:best_result) ||
         user_levels.first
     result = user_level.try(:best_result)
 
@@ -202,7 +203,7 @@ module ApplicationHelper
   end
 
   def minifiable_asset_path(path)
-    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
+    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs || params[:pretty_sharedjs]
     asset_path(path)
   end
 

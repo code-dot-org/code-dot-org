@@ -1,0 +1,11 @@
+name 'courseB_story_unspottedBugs1'
+title 'UnspottedBugs'
+markdown <<MARKDOWN
+<h1>
+Unspotted Bugs
+</h1>  
+
+![](https://images.code.org/4009a0cfaf029e326129d99b3d48ed4f-image-1475978566432.png)
+
+
+MARKDOWN

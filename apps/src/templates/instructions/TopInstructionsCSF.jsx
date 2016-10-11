@@ -4,21 +4,18 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import processMarkdown from 'marked';
+import renderer from '../../StylelessRenderer';
 import { connect } from 'react-redux';
-var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
-var processMarkdown = require('marked');
 
 var Instructions = require('./Instructions');
-var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
-var constants = require('../../constants');
-var msg = require('@cdo/locale');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -36,8 +33,6 @@ import {
   shouldDisplayChatTips
 } from './utils';
 
-const VERTICAL_PADDING = 10;
-const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
@@ -128,9 +123,6 @@ const styles = {
     // is managed outside of React
     marginBottom: 0
   },
-  containedLevelContainer: {
-    minHeight: 200,
-  },
   instructions: {
     padding: '5px 0',
   },
@@ -157,7 +149,6 @@ var TopInstructions = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
@@ -222,7 +213,6 @@ var TopInstructions = React.createClass({
 
     if (this.refs && this.refs.instructions) {
       const contentContainer = this.refs.instructions.parentElement;
-      const contentHeight = contentContainer.scrollHeight;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
         // see comment above
@@ -356,8 +346,6 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
-    const contentContainer = this.props.hasContainedLevels ?
-        this.refs.containedLevelContainer : this.refs.instructions;
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = getOuterHeight(instructionsContent, true) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
@@ -472,14 +460,15 @@ var TopInstructions = React.createClass({
       this.props.isMinecraft && craftStyles.main
     ];
 
-    const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
-      this.props.shortInstructions : this.props.longInstructions);
+    const markdown = (this.props.collapsed || !this.props.longInstructions) ?
+      this.props.shortInstructions : this.props.longInstructions;
+    const renderedMarkdown = processMarkdown(markdown, { renderer });
     const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
 
     // Only used by star wars levels
-    const instructions2 = this.props.shortInstructions2 ? processMarkdown(
-      this.props.shortInstructions2) : undefined;
+    const instructions2 = this.props.shortInstructions2 ?
+      processMarkdown(this.props.shortInstructions2, { renderer }) : undefined;
 
     const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
@@ -522,27 +511,21 @@ var TopInstructions = React.createClass({
             ]}
           >
             <ChatBubble>
-              {this.props.hasContainedLevels &&
-                <ProtectedStatefulDiv
-                  id="containedLevelContainer"
-                  ref="containedLevelContainer"
-                  style={styles.containedLevelContainer}
-                />}
-              {!this.props.hasContainedLevels &&
-                <Instructions
-                  ref="instructions"
-                  renderedMarkdown={renderedMarkdown}
-                  acapelaSrc={acapelaSrc}
-                  onResize={this.adjustMaxNeededHeight}
-                  inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                  aniGifURL={this.props.aniGifURL}
-                  inTopPane
-                />}
-              {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
+              <Instructions
+                ref="instructions"
+                renderedMarkdown={renderedMarkdown}
+                acapelaSrc={acapelaSrc}
+                onResize={this.adjustMaxNeededHeight}
+                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                aniGifURL={this.props.aniGifURL}
+                inTopPane
+              />
+              {this.props.collapsed && instructions2 &&
                 <div
                   className="secondary-instructions"
                   dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />}
+                />
+              }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
@@ -603,7 +586,6 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
-    hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,

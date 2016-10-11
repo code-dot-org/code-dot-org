@@ -1,4 +1,4 @@
-/* global trackEvent, appOptions */
+/* global trackEvent */
 
 import $ from 'jquery';
 import React from 'react';
@@ -24,11 +24,9 @@ module.exports = FeedbackUtils;
 //   Blockly
 
 var utils = require('./utils');
-var _ = require('lodash');
 var codegen = require('./codegen');
 var msg = require('@cdo/locale');
 var dom = require('./dom');
-var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
 var constants = require('./constants');
 var TestResults = constants.TestResults;

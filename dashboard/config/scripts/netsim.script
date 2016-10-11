@@ -1,6 +1,3 @@
-title 'Internet Simulator'
-description_short "This course contains a variety of configurations for the Internet Simulator that can be used in your classroom if you don't intend to follow the activities in Code.org's Computer Science curriculum (found at code.org/csp)."
-description "This course contains a variety of configurations for the Internet Simulator that can be used in your classroom if you don't intend to follow the activities in Code.org's Computer Science curriculum (found at code.org/csp). Please read through the overview and setup instructions in Stage 1 to get started!"
 hidden 'true'
 
 stage 'Overview and Setup Instructions'

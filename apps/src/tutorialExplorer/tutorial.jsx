@@ -2,7 +2,6 @@
  */
 
 import React from 'react';
-import FilterSet from './filterSet';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import getTagString from './util';

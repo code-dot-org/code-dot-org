@@ -1,8 +1,3 @@
-title 'CS Principles Unit 4 - Data'
-description 'Collect, analyze, and extract knowledge from data by programming and
-building apps. Process data imported from other sources and also pull
-data from live data APIs.'
-description_short 'Data'
 login_required 'true'
 
 #1new
@@ -32,7 +27,6 @@ level 'U4 - Making Data Visualizations - Free Play'
 stage 'Discover a Data Story'
 level 'U4L06v2 Student Lesson Introduction'
 
-
 #7new
 stage 'Cleaning Data'
 level 'U4L16 Student Lesson Introduction'
@@ -51,15 +45,12 @@ level 'U4L08v2 Making Pivot Tables Part 3'
 stage 'Rapid Research - Data Innovations'
 level 'U4L12 - Student Introduction'
 
-
 #1old
 stage 'Why Make Apps?'
 level 'U4L01 Student Lesson Introduction'
-
 assessment 'U4L01 Free Response'
 assessment 'U4L01 Choose 2'
 assessment 'U4L01 Multiple Choice'
-
 
 #2
 stage 'Creating Javascript Objects'
@@ -233,8 +224,6 @@ level 'U4L19 Student Lesson Introduction'
 assessment 'U4L19 Free Response'
 assessment 'U4L19 Choose 2'
 assessment 'U4L19 Multiple Choice'
-
-
 
 stage 'What Data Can Tell Us'
 level 'CSP Data Unit -Counting Records - Hard Way'

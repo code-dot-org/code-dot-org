@@ -1,6 +1,4 @@
-pd 'true'
-description 'Professional Development for K5 Courses'
-description_short 'Professional Development for K5 Courses'
+professional_learning_course 'K5 Support'
 
 stage 'Introduction to PD'
 level 'PDK5 Intro C'

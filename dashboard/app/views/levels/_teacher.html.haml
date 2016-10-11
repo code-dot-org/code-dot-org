@@ -46,6 +46,15 @@
                   .timestamp= @user_level.updated_at.iso8601
                   %button.btn.btn-info#unsubmit{"data-user-level-url" => url_for(@user_level)}
                     = t('teacher.panel.unsubmit')
+        - if @level && @level.contained_levels.any?
+          - contained_level = @level.contained_levels.first
+          -# if we have a student user, show their level. otherwise show teacher's
+          - user = @user || current_user
+          - if user.last_attempt(contained_level).try(:level_source).try(:data)
+            - contained_user_level = user.user_level_for(@script_level, contained_level)
+            .level
+              %button.btn.btn-info#clear-response{"data-user-level-url" => url_for(contained_user_level)}
+                = t('teacher.panel.clear_response')
         .level
           - if @level && @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
             - if @ideal_level_source
@@ -55,7 +64,8 @@
                 %button.btn.btn-info= t('reference_area.teacher')
           - if @level.try(:examples).present? && current_user.try(:authorized_teacher?) # 'solutions' for applab-type levels
             - @level.examples.each_with_index do |example, index|
-              = link_to applab_project_view_projects_url(channel_id: example, host: 'studio.code.org', port: 443, protocol: :https), target: "_blank" do
+              - example_link = send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+              = link_to example_link, target: "_blank" do
                 %button.btn.btn-info
                   - if @level.examples.many?
                     = t('teacher.panel.example_with_number', solution_number: index + 1)

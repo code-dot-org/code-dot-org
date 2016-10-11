@@ -1,7 +1,8 @@
-var studioApp = require('../StudioApp').singleton;
-var applabCommands = require('./commands');
+import {singleton as studioApp} from '../StudioApp';
+import applabCommands from './commands';
 
-var applabTurtle = module.exports;
+var applabTurtle = {};
+export default applabTurtle;
 
 // These offset are used to ensure that the turtle image is centered over
 // its x,y coordinates. The image is currently 48x48, rendered at 24x24.
@@ -19,7 +20,6 @@ applabTurtle.getTurtleContext = function () {
 
     // And create the turtle (defaults to visible):
     Applab.turtle.visible = true;
-    var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
     turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';

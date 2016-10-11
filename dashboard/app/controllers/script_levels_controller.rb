@@ -64,7 +64,7 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if stage_hidden?(current_user, @script_level)
+    if stage_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/hidden_stage'
       return
@@ -100,7 +100,7 @@ class ScriptLevelsController < ApplicationController
   def hidden
     authorize! :read, ScriptLevel
 
-    stage_ids = get_hidden_stage_ids(current_user, params[:script_id])
+    stage_ids = get_hidden_stage_ids(params[:script_id])
 
     render json: stage_ids
   end
@@ -125,6 +125,23 @@ class ScriptLevelsController < ApplicationController
     end
 
     render json: []
+  end
+
+  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # build lesson plans
+  def summary_for_lesson_plans
+    require_levelbuilder_mode
+    authorize! :read, ScriptLevel
+
+    script = Script.get_from_cache(params[:script_id])
+
+    if params[:stage_position]
+      stage = script.stages.select{|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
+    else
+      stage = script.stages.select{|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
+    end
+
+    render json: stage.summary_for_lesson_plans
   end
 
   private
@@ -312,27 +329,13 @@ class ScriptLevelsController < ApplicationController
     render 'levels/show', formats: [:html]
   end
 
-  # Returns a set of sections for the current user, and a filter set of which of
-  # those sections use the given script_id. For teachers, looks at sections they
-  # teacher, for students it's sections they are in.
-  def user_sections(script_id)
-    if current_user.try(:teacher?)
-      sections = current_user.sections.select{|s| s.deleted_at.nil?}
-    elsif current_user.try(:student?)
-      sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
-    end
+  def stage_hidden?(script_level)
+    return false if !current_user || current_user.try(:teacher?)
 
-    if sections.nil? || sections.empty?
-      return [[], []]
-    end
-
-    script_sections = sections.select{|s| s.script.try(:name) == script_id}
-    [sections, script_sections]
-  end
-
-  def stage_hidden?(current_user, script_level)
-    sections, script_sections = user_sections(script_level.script.id)
+    sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
     return false if sections.empty?
+
+    script_sections = sections.select{|s| s.script.try(:name) == script_level.script.id}
 
     if script_sections.empty?
       # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
@@ -345,10 +348,26 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def get_hidden_stage_ids(current_user, script_id)
-    sections, script_sections = user_sections(script_id)
+  def get_hidden_stage_ids(script_id)
+    return [] unless current_user
 
+    # If we're a teacher, we want to go through each of our sections and return
+    # a mapping from section id to hidden stages in that section
+    if current_user.try(:teacher?)
+      sections = current_user.sections.select{|s| s.deleted_at.nil?}
+      hidden_by_section = {}
+      sections.each do |section|
+        hidden_by_section[section.id] = section.section_hidden_stages.map(&:stage_id)
+      end
+      return hidden_by_section
+    end
+
+    # if we're a student, we want to look through each of the sections in which
+    # we're a member, and use those to figure out which stages should be hidden
+    # for us
+    sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
     return [] if sections.empty?
+    script_sections = sections.select{|s| s.script.try(:name) == script_id}
 
     if script_sections.empty?
       # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one

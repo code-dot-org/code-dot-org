@@ -5,10 +5,10 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,4,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,3,4,0,0],[0,0,0,0,1,0,0,0],[0,0,4,2,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "This pig is ruffling my feathers. Help me get to him!",
-    "start_direction": "2",
+    "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
@@ -56,9 +56,14 @@
           <next>
             <block type="maze_moveForward">
               <next>
-                <block type="maze_moveForward">
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
                   <next>
-                    <block type="maze_moveForward"/>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward"/>
+                      </next>
+                    </block>
                   </next>
                 </block>
               </next>

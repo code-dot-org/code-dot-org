@@ -11,6 +11,31 @@ module.exports = {
   levelId: "ec_simple",
   tests: [
     {
+      description: "Data button hidden when hideViewDataButton is specified",
+      editCode: true,
+      useFirebase: true,
+      hideViewDataButton: true,
+
+      runBeforeClick: function (assert) {
+        assert.equal($("#codeModeButton").is(':visible'), true, 'code mode button is visible');
+        assert.equal($("#designModeButton").is(':visible'), true, 'design mode button is visible');
+        assert.equal($("#dataModeButton").is(':visible'), false, 'data mode button is hidden');
+
+        Applab.onPuzzleComplete();
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "Data Browser shows records and key value pairs",
       editCode: true,
       useFirebase: true,
@@ -106,12 +131,16 @@ module.exports = {
               // add new column
               ReactTestUtils.Simulate.click($('#addColumnButton')[0]);
               setTimeout(() => {
+                let tableNames = dataTable.find('th .test-tableNameDiv').get().map(div => div.innerHTML);
+                assert.equal(tableNames.join(','), 'id,firstname,column2', 'column order correct before column2 renamed');
                 const column2NameInput = dataTable.find('th > input[value="column2"]');
                 assert.equal(column2NameInput.is(':visible'), true, 'column2 name input is visible');
                 ReactTestUtils.Simulate.change(column2NameInput[0], { target: { value: 'age' } });
                 ReactTestUtils.Simulate.keyUp(column2NameInput[0], enterKeyEvent);
                 setTimeout(() => {
                   assert.equal(dataTable.find('th > div:contains(age)').is(':visible'), true, 'column1 renamed to age');
+                  tableNames = dataTable.find('th .test-tableNameDiv').get().map(div => div.innerHTML);
+                  assert.equal(tableNames.join(','), 'id,firstname,age', 'column order correct after column2 renamed');
 
                   // add new row
                   const addRow = $('#dataTable').find('tr:contains(Add Row)');

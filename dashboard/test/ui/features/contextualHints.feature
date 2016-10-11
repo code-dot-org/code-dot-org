@@ -2,7 +2,7 @@
 Feature: Contextual Hints
 
 Scenario: Hints viewed in feedback don't become contextual hints
-  Given I am on "http://learn.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   And I wait to see "#prompt-table"
@@ -39,7 +39,7 @@ Scenario: Hints viewed in feedback don't become contextual hints
   Then the hint lightbulb shows 3 hints available
 
 Scenario: Blocks render in contextual hints
-  Given I am on "http://learn.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   And I wait to see "#prompt-table"
@@ -65,7 +65,7 @@ Scenario: Blocks render in contextual hints
   And I see jquery selector .authored-hints ol .block-space:eq(0) svg
 
 Scenario: Contextual hints in level without Authored Hints
-  Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
 
