@@ -160,7 +160,9 @@ class ScriptDSL < BaseDSL
     s << '' unless s.empty?
 
     script.stages.each do |stage|
-      s << "stage '#{stage.name}'"
+      t = "stage '#{stage.name}'"
+      t += ", flex_category: '#{stage.flex_category}'" if stage.flex_category
+      s << t
       stage.script_levels.each do |sl|
         type = 'level'
         type = 'assessment' if sl.assessment
