@@ -35,6 +35,7 @@ const StageLock = React.createClass({
     stage: stageShape,
 
     // redux provided
+    sectionId: React.PropTypes.string.isRequired,
     sectionsLoaded: React.PropTypes.bool.isRequired,
     unlocked: React.PropTypes.bool.isRequired,
     saving: React.PropTypes.bool.isRequired,
@@ -44,11 +45,11 @@ const StageLock = React.createClass({
   },
 
   openLockDialog() {
-    this.props.openLockDialog(this.props.stage.id);
+    this.props.openLockDialog(this.props.sectionId, this.props.stage.id);
   },
 
   lockStage() {
-    this.props.lockStage(this.props.stage.id);
+    this.props.lockStage(this.props.sectionId, this.props.stage.id);
   },
 
   render() {
@@ -93,7 +94,8 @@ const StageLock = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { sectionsLoaded, sections, selectedSection, saving } = state.stageLock;
+  const { sections, selectedSection, saving } = state.stageLock;
+  const { sectionsLoaded } = state.sections;
   let unlocked = false;
   if (sectionsLoaded) {
     const currentSection = sections[selectedSection];
@@ -104,18 +106,19 @@ export default connect((state, ownProps) => {
   }
 
   return {
+    sectionId: selectedSection,
     unlocked,
     sectionsLoaded,
     saving
   };
 }, dispatch => ({
-  openLockDialog(stageId) {
-    dispatch(openLockDialog(stageId));
+  openLockDialog(sectionId, stageId) {
+    dispatch(openLockDialog(sectionId, stageId));
   },
   closeLockDialog() {
     dispatch(closeLockDialog());
   },
-  lockStage(stageId) {
-    dispatch(lockStage(stageId));
+  lockStage(sectionId, stageId) {
+    dispatch(lockStage(sectionId, stageId));
   }
 }))(Radium(StageLock));

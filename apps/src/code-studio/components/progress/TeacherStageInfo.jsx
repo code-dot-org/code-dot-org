@@ -105,7 +105,7 @@ export default connect(state => {
     hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     hiddenStageMap: state.hiddenStage.get('bySection'),
     scriptName: state.progress.scriptName,
-    hasNoSections: state.stageLock.sectionsLoaded &&
+    hasNoSections: state.sections.sectionsLoaded &&
       Object.keys(state.stageLock.sections).length === 0
     };
 }, dispatch => ({
