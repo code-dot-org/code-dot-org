@@ -192,8 +192,7 @@ class ScriptDSL < BaseDSL
         s << "concepts #{level.concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')}"
       end
 
-      concept_difficulty = level.level_concept_difficulty.try(:serializable_hash) || {}
-      s << "level_concept_difficulty '#{concept_difficulty.to_json}'"
+      s << "level_concept_difficulty '#{level.level_concept_difficulty.serializable_hash.to_json}'" if level.level_concept_difficulty
     end
     l = "#{type} '#{level.key.gsub("'"){ "\\'" }}'"
     l += ", active: #{active}" unless active.nil?
