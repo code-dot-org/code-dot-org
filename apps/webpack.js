@@ -169,6 +169,7 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
+      new webpack.optimize.OccurrenceOrderPlugin(true)
     ].concat(plugins),
     watch: watch,
     keepalive: watch,

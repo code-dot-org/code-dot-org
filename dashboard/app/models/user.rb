@@ -1060,6 +1060,8 @@ class User < ActiveRecord::Base
   end
 
   def should_see_inline_answer?(script_level)
+    return true if Rails.application.config.levelbuilder_mode
+
     script = script_level.try(:script)
 
     (authorized_teacher? && script && !script.professional_learning_course?) ||

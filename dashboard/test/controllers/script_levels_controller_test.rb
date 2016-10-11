@@ -360,16 +360,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
-  test "show redirects to canonical url for 20 hour" do
-    sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
-    get :show, script_id: sl.script, chapter: sl.chapter
-
-    assert_redirected_to build_script_level_path(sl)
-  end
-
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, script_id: Script.twenty_hour_script, chapter: '99999999999999999999999999'
+      get :show, script_id: Script.twenty_hour_script, stage_position: '99999999999999999999999999', id: '1'
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, script_id: Script.twenty_hour_script, stage_position: '1', id: '99999999999999999999999999'
     end
   end
 
@@ -420,9 +417,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "next routing for custom scripts" do
-    assert_routing({method: "get", path: "/s/laurel/puzzle/next"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', chapter: "next"})
-    assert_equal "/s/laurel/puzzle/next", script_puzzle_path(@custom_script, 'next')
+    assert_routing({method: "get", path: "/s/laurel/next"},
+      {controller: "script_levels", action: "next", script_id: 'laurel'})
+    assert_equal "/s/laurel/next", script_next_path(@custom_script)
   end
 
   test "next redirects to next level for custom scripts" do
@@ -481,8 +478,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for hoc" do
-    hoc_level = Script.find_by_name(Script::HOC_NAME).script_levels.second
-    get :show, script_id: Script::HOC_NAME, id: hoc_level.id
+    get :show, script_id: Script::HOC_NAME, stage_position: '1', id: '2'
 
     assert_response 301 # moved permanently
     assert_redirected_to '/hoc/2'
@@ -499,8 +495,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for special scripts" do
-    flappy_level = Script.get_from_cache(Script::FLAPPY_NAME).script_levels.second
-    get :show, script_id: Script::FLAPPY_NAME, id: flappy_level.id
+    get :show, script_id: Script::FLAPPY_NAME, stage_position: '1', id: '2'
 
     assert_response 301 # moved permanently
     assert_redirected_to '/flappy/2'
@@ -533,13 +528,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
 
     assert_equal script_level, assigns(:script_level)
-  end
-
-  test "show redirects to canonical url for custom scripts" do
-    get :show, script_id: @custom_script.id, id: @custom_s2_l1.id
-
-    assert_response 301 # moved permanently
-    assert_redirected_to '/s/laurel/stage/2/puzzle/1'
   end
 
   test "show with the reset param should reset session when not logged in" do
@@ -719,12 +707,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
   end
 
-  test "should 404 for invalid script level for twenty hour" do
-    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, script_id: Script::TWENTY_HOUR_NAME, id: 40000
-    end
-  end
-
   test "should 404 for invalid chapter for flappy" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
       get :show, script_id: 'flappy', chapter: 40000
@@ -737,7 +719,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
   end
 
-  test "should 404 for invalid script id for course1" do
+  test "should 404 for invalid puzzle for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
       get :show, script_id: 'course1', stage_position: 1, id: 4000
     end

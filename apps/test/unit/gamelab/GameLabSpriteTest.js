@@ -2,7 +2,11 @@
 /* global p5 */
 import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import createGameLabP5, {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
+import {forEveryBooleanPermutation} from '../../util/testUtils';
+import createGameLabP5, {
+  createStatefulGameLabP5,
+  expectAnimationsAreClones
+} from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabSprite', function () {
   let gameLabP5, createSprite;
@@ -300,6 +304,117 @@ describe('GameLabSprite', function () {
     });
   });
 
+  describe('setAnimation', function () {
+    const ANIMATION_LABEL = 'animation1',
+          SECOND_ANIMATION_LABEL = 'animation2';
+    let sprite, projectAnimations;
+
+    beforeEach(function () {
+      sprite = createSprite(0, 0);
+
+      // We manually preload animations onto p5.projectAnimations for the use of
+      // setAnimation.
+      projectAnimations = {
+        [ANIMATION_LABEL]: createTestAnimation(8),
+        [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
+      };
+      gameLabP5.p5.projectAnimations = projectAnimations;
+    });
+
+    it('throws if the named animation is not found in the project', function () {
+      expect(() => {
+        sprite.setAnimation('fakeAnimation');
+      }).to.throw(`Unable to find an animation named "fakeAnimation".  Please make sure the animation exists.`);
+    });
+
+    it('makes the named animaiton the current animation, if the animation is found', function () {
+      sprite.setAnimation(ANIMATION_LABEL);
+
+      // Current animation label should be animation label
+      expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+
+      // Current animation will be a clone of the project animation:
+      expectAnimationsAreClones(sprite.animation, projectAnimations[ANIMATION_LABEL]);
+    });
+
+    it('changes the animation to first frame and plays it by default', function () {
+      sprite.setAnimation(ANIMATION_LABEL);
+
+      // Animation is at frame 1
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      // Animation is playing
+      expect(sprite.animation.playing).to.be.true;
+    });
+
+    describe('repeat call', function () {
+      beforeEach(function () {
+        // Set first animation and advance a few frames, to simulate an
+        // animation in the middle of playback.
+        sprite.setAnimation(ANIMATION_LABEL);
+        sprite.animation.changeFrame(3);
+      });
+
+      it('resets the current frame if called with a new animation', function () {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+
+        sprite.setAnimation(SECOND_ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(SECOND_ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(0);
+      });
+
+      it('does not reset the current frame if called with the current animation', function () {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+
+        sprite.setAnimation(ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+      });
+
+      it('unpasuses a paused sprite if called with a new animation', function () {
+        sprite.pause();
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+
+        sprite.setAnimation(SECOND_ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(SECOND_ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.true;
+      });
+
+      it('does not unpause a paused sprite if called with the current animation', function () {
+        expect(sprite.animation.playing).to.be.true;
+        sprite.pause();
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+
+        sprite.setAnimation(ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+      });
+
+      // Applies to both cases, so unify them
+      forEveryBooleanPermutation(same => {
+        const description = `called with ${same ? 'the current' : 'a new'} animation`;
+        const label = same ? ANIMATION_LABEL : SECOND_ANIMATION_LABEL;
+        it(`does not pause a playing sprite if ${description}`, function () {
+          expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+          expect(sprite.animation.playing).to.be.true;
+
+          sprite.setAnimation(label);
+
+          expect(sprite.getAnimationLabel()).to.equal(label);
+          expect(sprite.animation.playing).to.be.true;
+        });
+      });
+    });
+  });
+
   describe('collision types using AABBOps', function () {
     let sprite, spriteTarget;
 
@@ -585,10 +700,13 @@ describe('GameLabSprite', function () {
     });
   });
 
-  function createTestAnimation() {
-    var image = new p5.Image(100, 100, gameLabP5.p5);
-    var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-    var sheet = new gameLabP5.p5.SpriteSheet(image, frames);
+  function createTestAnimation(frameCount = 1) {
+    let image = new p5.Image(100, 100, gameLabP5.p5);
+    let frames = [];
+    for (var i = 0; i < frameCount; i++) {
+      frames.push({name: i, frame: {x: 0, y: 0, width: 50, height: 50}});
+    }
+    let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
     return new gameLabP5.p5.Animation(sheet);
   }
 });

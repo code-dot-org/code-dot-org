@@ -36,6 +36,9 @@ exports.load = function (assetUrl, id) {
     paddle: skin.assetUrl('retro_paddle.png'),
     ball: skin.assetUrl('retro_ball.png')
   };
+  skin.hand_2 = {
+    paddle: skin.assetUrl('hand_2.png'),
+  };
 
   // Images
   skin.tiles = skin.assetUrl(config.tiles ||'tiles_wall.png');
