@@ -1,9 +1,7 @@
 hidden 'false'
 
 stage 'Hour of Code 2015'
-
 skin 'hoc2015x'
-
 video_key_for_next_level 'starwars_intro'
 level 'blockly:StudioEC:js_hoc2015_move_right'
 level 'blockly:StudioEC:js_hoc2015_move_right_down'
@@ -12,19 +10,15 @@ video_key_for_next_level 'starwars_typing'
 level 'blockly:StudioEC:js_hoc2015_move_diagonal'
 level 'blockly:StudioEC:js_hoc2015_move_around'
 level 'blockly:StudioEC:js_hoc2015_move_finale'
-
 skin 'hoc2015'
-
 video_key_for_next_level 'starwars_events'
 level 'blockly:StudioEC:js_hoc2015_event_two_items'
 level 'blockly:StudioEC:js_hoc2015_event_four_items'
 level 'blockly:StudioEC:js_hoc2015_score'
 level 'blockly:StudioEC:js_hoc2015_win_lose'
-
 level 'blockly:StudioEC:js_hoc2015_add_characters'
 level 'blockly:StudioEC:js_hoc2015_chain_characters'
 level 'blockly:StudioEC:js_hoc2015_multiply_characters'
 level 'blockly:StudioEC:js_hoc2015_change_setting'
-
 video_key_for_next_level 'starwars_congrats'
 level 'blockly:StudioEC:js_hoc2015_event_free'
