@@ -29,8 +29,6 @@ module.exports = EvalMulti;
 
 EvalMulti.prototype.draw = function (parent) {
   if (!this.element_) {
-    var deltaX, deltaY;
-
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
     parent.appendChild(this.element_);
   }

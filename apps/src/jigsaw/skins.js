@@ -4,17 +4,8 @@
 
 var skinsBase = require('../skins');
 
-var CONFIGS = {
-
-  jigsaw: {
-  }
-
-};
-
 exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
-  var config = CONFIGS[skin.id];
-
 
   skin.artist = skin.assetUrl('artist.png');
   skin.blocks = skin.assetUrl('blocks.png');

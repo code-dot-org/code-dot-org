@@ -6,17 +6,14 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from '../../StylelessRenderer';
-var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
-var ProtectedStatefulDiv = require('../ProtectedStatefulDiv');
 var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
-var constants = require('../../constants');
 var msg = require('@cdo/locale');
 var PaneButton = require('../PaneHeader').PaneButton;
 import ContainedLevel from '../ContainedLevel';

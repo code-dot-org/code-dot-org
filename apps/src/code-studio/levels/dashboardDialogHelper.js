@@ -1,4 +1,4 @@
-/* globals dashboard, appOptions */
+/* globals appOptions */
 
 import {
   showDialog,

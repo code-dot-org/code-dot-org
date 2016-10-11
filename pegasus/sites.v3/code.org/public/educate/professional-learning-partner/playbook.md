@@ -20,11 +20,14 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Ordering Supplies', description_t: "Guidance on ordering swag and materials and access to the Mimeo Marketplace", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/ordering-supplies"), button_s: "Learn more"} %>
 
+
+<%= view :educate_box, item: {title_s: 'Payment Information', description_t: "Coming soon!"} %>
+
 <%= view :educate_box, item: {title_s: 'Professional Learning Partner Directory', description_t: "Browse the list of Professional Learning Partners supporting the K-12 CS Education movement", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/directory"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
-
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "All you need to know about annual reports, workshop surveys, and the PLP Roadmap", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
+
+<%= view :educate_box, item: {title_s: 'Teacher & District Recruitment', description_t: "Coming soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "Resources for teachers such as course supports, online supports, classroom materials, and technology", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>
 

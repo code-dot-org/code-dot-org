@@ -1,6 +1,5 @@
 import api from './api';
 import codegen from '../codegen';
-import { Direction, Position } from './constants';
 
 /**
  * Interface for a set of custom game logic for playlab

@@ -1,5 +1,4 @@
 var levelBase = require('../level_base');
-var Colours = require('./colours');
 var answer = require('./answers').answer;
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
@@ -44,8 +43,6 @@ var turnLeft = req.turnLeft;
 var move = req.move;
 var drawTurnRestricted = req.drawTurnRestricted;
 var drawTurn = req.drawTurn;
-var SET_COLOUR_PICKER = req.SET_COLOUR_PICKER;
-var SET_COLOUR_RANDOM = req.SET_COLOUR_RANDOM;
 var defineWithArg = req.defineWithArg;
 
 var blocks = {
