@@ -53,11 +53,7 @@ ViewAsToggle.propTypes = {
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    sections: React.PropTypes.objectOf(
-      React.PropTypes.shape({
-        section_name: React.PropTypes.string.isRequired
-      })
-    ).isRequired,
+    hasSections: React.PropTypes.bool.isRequired,
     sectionsLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
     scriptHasHideableStages: React.PropTypes.bool.isRequired,
@@ -68,14 +64,13 @@ const ScriptTeacherPanel = React.createClass({
   render() {
     const {
       viewAs,
-      sections,
+      hasSections,
       sectionsLoaded,
       setViewType,
       scriptHasLockableStages,
       scriptHasHideableStages,
       unlockedStageNames
     } = this.props;
-    const hasSections = Object.keys(sections).length > 0;
 
     return (
       <TeacherPanel>
@@ -115,9 +110,9 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { viewAs, sections, lockableAuthorized } = state.stageLock;
-  const { sectionsLoaded, selectedSection } = state.sections;
-  const currentSection = sections[selectedSection];
+  const { viewAs, bySection, lockableAuthorized } = state.stageLock;
+  const { sectionsLoaded, selectedSection, sectionIds } = state.sections;
+  const currentSection = bySection[selectedSection];
   const stages = currentSection ? currentSection.stages : {};
 
   const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSection]);
@@ -134,7 +129,7 @@ export default connect((state, ownProps) => {
 
   return {
     viewAs,
-    sections,
+    hasSections: sectionIds.length > 0,
     sectionsLoaded,
     scriptHasLockableStages,
     scriptHasHideableStages: state.hiddenStage.get('initialized'),

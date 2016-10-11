@@ -1,8 +1,8 @@
 import Immutable from 'immutable';
 
 // Action types
-export const SET_SECTIONS = 'stageLock/SET_SECTIONS';
-export const SELECT_SECTION = 'stageLock/SELECT_SECTION';
+export const SET_SECTIONS = 'sections/SET_SECTIONS';
+export const SELECT_SECTION = 'sections/SELECT_SECTION';
 
 // Action Creators
 export const setSections = sections => ({

@@ -51,7 +51,7 @@ const fakeSectionData = {
     section_id: section2Id,
     section_name: 'My Other Section',
     stages: {
-      [stage2Id]: [
+      [stage1Id]: [
         {
           locked: true,
           name: 'student4',

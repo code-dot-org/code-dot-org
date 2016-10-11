@@ -106,7 +106,7 @@ export default connect(state => {
     hiddenStageMap: state.hiddenStage.get('bySection'),
     scriptName: state.progress.scriptName,
     hasNoSections: state.sections.sectionsLoaded &&
-      Object.keys(state.stageLock.sections).length === 0
+      state.sections.sectionIds.length === 0
     };
 }, dispatch => ({
   toggleHidden(scriptName, sectionId, stageId, hidden) {

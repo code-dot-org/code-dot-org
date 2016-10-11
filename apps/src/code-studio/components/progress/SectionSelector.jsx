@@ -45,7 +45,8 @@ const SectionSelector = React.createClass({
 
 export default connect(state => ({
   selectedSection: state.sections.selectedSection,
-  sections: state.stageLock.sections
+  // TODO - i should be using sectionRedux
+  sections: state.stageLock.bySection
 }), dispatch => ({
   selectSection(sectionId) {
     dispatch(selectSection(sectionId));
