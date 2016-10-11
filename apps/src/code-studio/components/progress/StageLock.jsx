@@ -94,11 +94,11 @@ const StageLock = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { sections, saving } = state.stageLock;
+  const { bySection, saving } = state.stageLock;
   const { sectionsLoaded, selectedSection } = state.sections;
   let unlocked = false;
   if (sectionsLoaded) {
-    const currentSection = sections[selectedSection];
+    const currentSection = bySection[selectedSection];
     if (currentSection) {
       const stageStudents = currentSection.stages[ownProps.stage.id];
       unlocked = stageStudents.some(student => !student.locked);
