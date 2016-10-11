@@ -116,7 +116,8 @@ export default connect((state, ownProps) => {
   const stages = currentSection ? currentSection.stages : {};
 
   const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSection]);
-  const unlockedStageIds = Object.keys(stages).filter(stageId => !fullyLocked[stageId]);
+  const unlockedStageIds = Object.keys(currentSection || {})
+    .filter(stageId => !fullyLocked[stageId]);
 
   let stageNames = {};
   state.progress.stages.forEach(stage => {

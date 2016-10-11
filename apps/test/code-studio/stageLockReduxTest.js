@@ -48,7 +48,10 @@ describe('stageLockRedux reducer tests', () => {
       const action = setSections(fakeSectionData);
       const nextState = reducer({}, action);
 
-      assert.deepEqual(nextState.bySection, fakeSectionData);
+      assert.deepEqual(nextState.bySection, {
+        [section1Id]: fakeSectionData[section1Id].stages,
+        [section2Id]: fakeSectionData[section2Id].stages
+      });
     });
   });
 
@@ -143,9 +146,9 @@ describe('stageLockRedux reducer tests', () => {
       assert.equal(student1LockStatus, LockStatus.Locked);
       assert.equal(student2LockStatus, LockStatus.Editable);
       assert.equal(student3LockStatus, LockStatus.ReadonlyAnswers);
-      const student1 = state.bySection[section1Id].stages[stage1Id][0];
-      const student2 = state.bySection[section1Id].stages[stage1Id][1];
-      const student3 = state.bySection[section1Id].stages[stage1Id][2];
+      const student1 = state.bySection[section1Id][stage1Id][0];
+      const student2 = state.bySection[section1Id][stage1Id][1];
+      const student3 = state.bySection[section1Id][stage1Id][2];
       assert.equal(student1.locked, true);
       assert.equal(student1.readonly_answers, false);
       assert.equal(student2.locked, false);
@@ -166,9 +169,9 @@ describe('stageLockRedux reducer tests', () => {
       assert.equal(nextStudent1LockStatus, LockStatus.Locked);
       assert.equal(nextStudent2LockStatus, LockStatus.ReadonlyAnswers);
       assert.equal(nextStudent3LockStatus, LockStatus.Editable);
-      const nextStudent1 = nextState.bySection[section1Id].stages[stage1Id][0];
-      const nextStudent2 = nextState.bySection[section1Id].stages[stage1Id][1];
-      const nextStudent3 = nextState.bySection[section1Id].stages[stage1Id][2];
+      const nextStudent1 = nextState.bySection[section1Id][stage1Id][0];
+      const nextStudent2 = nextState.bySection[section1Id][stage1Id][1];
+      const nextStudent3 = nextState.bySection[section1Id][stage1Id][2];
       assert.equal(nextStudent1.locked, true);
       assert.equal(nextStudent1.readonly_answers, false);
       assert.equal(nextStudent3.locked, false);
@@ -295,71 +298,59 @@ describe('fullyLockedStageMapping', () => {
   const sections = {
     // all stages fully locked
     "11": {
-      section_id: 11,
-      section_name: "fully locked",
-      stages: {
-        "1360": [{
-          // Note: Actual state has more fields, I've filtered to just those
-          // that we care about, for simplicity
-          name: 'student1',
-          locked: true
-        }, {
-          name: 'student2',
-          locked: true
-        }],
-        "1361": [{
-          name: 'student1',
-          locked: true
-        }, {
-          name: 'student2',
-          locked: true
-        }],
-      }
+      "1360": [{
+        // Note: Actual state has more fields, I've filtered to just those
+        // that we care about, for simplicity
+        name: 'student1',
+        locked: true
+      }, {
+        name: 'student2',
+        locked: true
+      }],
+      "1361": [{
+        name: 'student1',
+        locked: true
+      }, {
+        name: 'student2',
+        locked: true
+      }],
     },
     // no stages fully locked
     "12": {
-      section_id: 12,
-      section_name: "not fully locked",
-      stages: {
-        // some students are locked, others arent
-        "1360": [{
-          name: 'student1',
-          locked: false
-        }, {
-          name: 'student2',
-          locked: true
-        }],
-        // entirely unlocked
-        "1361": [{
-          name: 'student1',
-          locked: false
-        }, {
-          name: 'student2',
-          locked: false
-        }]
-      }
+      // some students are locked, others arent
+      "1360": [{
+        name: 'student1',
+        locked: false
+      }, {
+        name: 'student2',
+        locked: true
+      }],
+      // entirely unlocked
+      "1361": [{
+        name: 'student1',
+        locked: false
+      }, {
+        name: 'student2',
+        locked: false
+      }]
     },
     // mix of fully locked stages and not
     "13": {
-      section_id: 12,
-      section_name: "not fully locked",
-      stages: {
-        "1360": [{
-          name: 'student1',
-          locked: true
-        }, {
-          name: 'student2',
-          locked: true
-        }],
-        // entirely unlocked
-        "1361": [{
-          name: 'student1',
-          locked: true
-        }, {
-          name: 'student2',
-          locked: false
-        }]
-      }
+      "1360": [{
+        name: 'student1',
+        locked: true
+      }, {
+        name: 'student2',
+        locked: true
+      }],
+      // entirely unlocked
+      "1361": [{
+        name: 'student1',
+        locked: true
+      }, {
+        name: 'student2',
+        locked: false
+      }]
     }
   };
 

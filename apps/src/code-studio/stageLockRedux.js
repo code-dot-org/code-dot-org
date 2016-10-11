@@ -49,10 +49,10 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === SET_SECTIONS) {
     const sectionId = Object.keys(action.sections)[0];
-    return Object.assign({}, state, {
-      // TODO - only extract bits we need
-      bySection: action.sections
-    });
+    return {
+      ...state,
+      bySection: _.mapValues(action.sections, section => section.stages)
+    };
   }
 
   if (action.type === SELECT_SECTION) {
@@ -95,7 +95,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === FINISH_SAVE) {
     const { bySection } = state;
     const { lockStatus: nextLockStatus, sectionId, stageId } = action;
-    const nextStage = _.cloneDeep(bySection[sectionId].stages[stageId]);
+    const nextStage = _.cloneDeep(bySection[sectionId][stageId]);
 
     // Update locked/readonly_answers in stages based on the new lockStatus provided
     // by our dialog.
@@ -111,7 +111,7 @@ export default function reducer(state = initialState, action) {
     });
 
     const nextState = _.cloneDeep(state);
-    nextState.bySection[sectionId].stages[stageId] = nextStage;
+    nextState.bySection[sectionId][stageId] = nextStage;
     return Object.assign(nextState, {
       lockStatus: nextLockStatus,
       saving: false
@@ -221,7 +221,7 @@ export const closeLockDialog = () => ({
 
 // Helpers
 const lockStatusForStage = (section, stageId) => {
-  const students = section.stages[stageId];
+  const students = section[stageId];
   return students.map(student => ({
     userLevelData: student.user_level_data,
     name: student.name,
@@ -240,10 +240,8 @@ export const fullyLockedStageMapping = (section) => {
     return {};
   }
 
-  const stageIds = Object.keys(section.stages);
-
-  return stageIds.reduce((obj, stageId) => {
-    const students = section.stages[stageId];
+  return Object.keys(section).reduce((obj, stageId) => {
+    const students = section[stageId];
     const fullyLocked = !students.some(student => !student.locked);
     return {
       ...obj,

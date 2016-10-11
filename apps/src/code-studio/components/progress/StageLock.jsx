@@ -100,7 +100,7 @@ export default connect((state, ownProps) => {
   if (sectionsLoaded) {
     const currentSection = bySection[selectedSection];
     if (currentSection) {
-      const stageStudents = currentSection.stages[ownProps.stage.id];
+      const stageStudents = currentSection[ownProps.stage.id];
       unlocked = stageStudents.some(student => !student.locked);
     }
   }
