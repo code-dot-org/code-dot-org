@@ -27,9 +27,10 @@ export default function reducer(state = new SectionData(), action) {
     const firstSectionId = Object.keys(action.sections)[0];
     return state.merge({
       selectedSection: firstSectionId,
-      sectionsLoaded: true,
-      sectionIds: Object.keys(action.sections)
-    });
+      sectionsLoaded: true
+    // we want sectionIds to be a native array, which is why we dont put them
+    // in the merge
+    }).set('sectionIds', Object.keys(action.sections));
   }
 
   if (action.type === SELECT_SECTION) {
