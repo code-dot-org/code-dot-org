@@ -76,8 +76,8 @@ class HipChat
       return
     end
 
-    if options.wrap_with_tag
-      message = "<#{wrap_with_tag}>#{message}</#{wrap_with_tag}>"
+    if options[:wrap_with_tag]
+      message = "<#{options[:wrap_with_tag]}>#{message}</#{options[:wrap_with_tag]}>"
     end
 
     # Make the initial request synchronously.
