@@ -162,14 +162,18 @@ class ScriptDSL < BaseDSL
     script.stages.each do |stage|
       s << "stage '#{stage.name}'"
       stage.script_levels.each do |sl|
+        type = 'level'
+        type = 'assessment' if sl.assessment
+        type = 'named_level' if sl.named_level
+
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(self.serialize_level(level, sl.active?(level)).map{ |l| l.indent(2) })
+            s.concat(self.serialize_level(level, type, sl.active?(level)).map{ |l| l.indent(2) })
           end
           s << 'endvariants'
         else
-          s.concat(self.serialize_level(sl.level))
+          s.concat(self.serialize_level(sl.level, type))
         end
       end
       s << ''
@@ -178,7 +182,7 @@ class ScriptDSL < BaseDSL
     File.write(filename, s.join("\n"))
   end
 
-  def self.serialize_level(level, active = nil)
+  def self.serialize_level(level, type, active = nil)
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
@@ -190,7 +194,7 @@ class ScriptDSL < BaseDSL
       concept_difficulty = level.level_concept_difficulty.try(:serializable_hash) || {}
       s << "level_concept_difficulty '#{concept_difficulty.to_json}'"
     end
-    l = "level '#{level.key}'"
+    l = "#{type} '#{level.key}'"
     l += ", active: #{active}" unless active.nil?
     s << l
     s
