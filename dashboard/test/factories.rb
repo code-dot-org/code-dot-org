@@ -439,7 +439,7 @@ FactoryGirl.define do
 
   factory :plc_course_unit, class: 'Plc::CourseUnit' do
     plc_course {create(:plc_course)}
-    script {create(:script, professional_learning_course: true)}
+    script {create(:script)}
     unit_name "MyString"
     unit_description "MyString"
     unit_order 1
