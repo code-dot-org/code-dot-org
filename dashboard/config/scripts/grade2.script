@@ -154,3 +154,6 @@ level 'grade2_link_RunMarco_partner'
 
 #stage 'More CS with Scratch'
 #level 'grade2_link_RunMarco_partner'
+
+stage 'Binary Bracelets'
+level 'BinaryBracelets'
