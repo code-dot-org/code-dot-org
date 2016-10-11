@@ -1,4 +1,5 @@
 import Immutable from 'immutable';
+import _ from 'lodash';
 
 // Action types
 export const SET_SECTIONS = 'sections/SET_SECTIONS';
@@ -18,7 +19,8 @@ export const selectSection = sectionId => ({
 const SectionData = Immutable.Record({
   selectedSection: null,
   sectionsLoaded: false,
-  sectionIds: []
+  sectionIds: [],
+  bySection: {}
 });
 
 // Reducer
@@ -27,7 +29,10 @@ export default function reducer(state = new SectionData(), action) {
     const firstSectionId = Object.keys(action.sections)[0];
     return state.merge({
       selectedSection: firstSectionId,
-      sectionsLoaded: true
+      sectionsLoaded: true,
+      bySection: _.mapValues(action.sections, section => ({
+        name: section.section_name
+      }))
     // we want sectionIds to be a native array, which is why we dont put them
     // in the merge
     }).set('sectionIds', Object.keys(action.sections));

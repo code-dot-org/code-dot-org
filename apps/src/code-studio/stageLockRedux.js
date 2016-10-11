@@ -50,6 +50,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sectionId = Object.keys(action.sections)[0];
     return Object.assign({}, state, {
+      // TODO - only extract bits we need
       bySection: action.sections
     });
   }
