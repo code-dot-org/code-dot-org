@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+# Send to contacts from the following lists:
+#   HocHardwarePrizes2014
+#   HocHardwarePrizes2015
+#   CSEdWeekEvent2013
+#   HocSignup2014
+#   HocSignup2015
+#   HocSurvey2014
+#   HocSurvey2015
+#   HocSignup2016
+#   Code Studio teachers
+
+query = <<SOLR
+  kind_s:HocHardwarePrizes2014 ||
+  kind_s:HocHardwarePrizes2015 ||
+  kind_s:CSEdWeekEvent2013 ||
+  kind_s:HocSignup2014 ||
+  kind_s:HocSignup2015 ||
+  kind_s:HocSurvey2014 ||
+  kind_s:HocSurvey2015 ||
+  kind_s:HocSignup2016 ||
+  (
+    kind_s:user && role_s:teacher
+  )
+SOLR
+
+results = query_subscribed_contacts(q: query)
+puts "#{results.count} contacts"
+export_contacts_to_csv results, 'contacts.csv'
