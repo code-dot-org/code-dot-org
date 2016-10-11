@@ -54,9 +54,9 @@ const fakeSectionData = {
       [stage2Id]: [
         {
           locked: true,
-          name: 'student3',
+          name: 'student4',
           user_level_data: {
-            user_id: 1003,
+            user_id: 1004,
             level_id: 2000,
             script_id: 3000
           },
