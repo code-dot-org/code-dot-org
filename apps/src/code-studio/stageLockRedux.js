@@ -156,11 +156,9 @@ export const finishSave = (sectionId, stageId, newLockStatus) => ({
  * Action asynchronously dispatches a set of actions around saving our
  * lock status.
  */
-const performSave = (newLockStatus, stageId, onComplete) => {
+const performSave = (sectionId, stageId, newLockStatus, onComplete) => {
   return (dispatch, getState) => {
     const oldLockStatus = getState().stageLock.lockStatus;
-    // TODO - pass in?
-    const sectionId = getState().sections.selectedSection;
 
     const saveData = newLockStatus.filter((item, index) => {
       // Only need to save items that changed
@@ -194,10 +192,10 @@ const performSave = (newLockStatus, stageId, onComplete) => {
   };
 };
 
-export const saveLockDialog = (newLockStatus) => {
+export const saveLockDialog = (sectionId, newLockStatus) => {
   return (dispatch, getState) => {
     const stageId = getState().stageLock.lockDialogStageId;
-    dispatch(performSave(newLockStatus, stageId, () => {
+    dispatch(performSave(sectionId, stageId, newLockStatus, () => {
       dispatch(closeLockDialog());
     }));
   };
@@ -212,7 +210,7 @@ export const lockStage = (sectionId, stageId) => {
       ...student,
       lockStatus: LockStatus.Locked
     }));
-    dispatch(performSave(newLockStatus, stageId, () => {}));
+    dispatch(performSave(sectionId, stageId, newLockStatus, () => {}));
   };
 };
 

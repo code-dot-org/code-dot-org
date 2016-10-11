@@ -137,7 +137,7 @@ const StageLockDialog = React.createClass({
   },
 
   handleSave() {
-    this.props.saveDialog(this.state.lockStatus);
+    this.props.saveDialog(this.props.selectedSection, this.state.lockStatus);
   },
 
   render() {
@@ -307,7 +307,7 @@ export default connect(state => ({
   saving: state.stageLock.saving,
   selectedSection: state.sections.selectedSection
 }), dispatch => ({
-  saveDialog(lockStatus) {
-    dispatch(saveLockDialog(lockStatus));
+  saveDialog(sectionId, lockStatus) {
+    dispatch(saveLockDialog(sectionId, lockStatus));
   }
 }))(Radium(StageLockDialog));

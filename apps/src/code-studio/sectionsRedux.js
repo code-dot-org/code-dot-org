@@ -34,7 +34,7 @@ export default function reducer(state = new SectionData(), action) {
 
   if (action.type === SELECT_SECTION) {
     const sectionId = action.sectionId;
-    if (!state.includes(sectionId)) {
+    if (!state.sectionIds.includes(sectionId)) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
     return state.set('selectedSection', sectionId);
