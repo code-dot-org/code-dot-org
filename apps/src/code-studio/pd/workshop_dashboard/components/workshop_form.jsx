@@ -432,6 +432,10 @@ const WorkshopForm = React.createClass({
     this.context.router.goBack();
   },
 
+  shouldShowFacilitators() {
+    return !['Counselor', 'Admin'].includes(this.state.course);
+  },
+
   renderFormButtons() {
     if (this.props.readOnly) {
       return null;
@@ -621,13 +625,17 @@ const WorkshopForm = React.createClass({
               </FormGroup>
             </Col>
           </Row>
-          <FacilitatorListFormPart
-            availableFacilitators={this.state.availableFacilitators}
-            facilitators={this.state.facilitators}
-            course={this.state.course}
-            onChange={this.handleFacilitatorsChange}
-            readOnly={this.props.readOnly}
-          />
+          {
+            this.shouldShowFacilitators() && (
+              <FacilitatorListFormPart
+                availableFacilitators={this.state.availableFacilitators}
+                facilitators={this.state.facilitators}
+                course={this.state.course}
+                onChange={this.handleFacilitatorsChange}
+                readOnly={this.props.readOnly}
+              />
+            )
+          }
           {this.renderFormButtons()}
           {this.props.children}
         </form>
