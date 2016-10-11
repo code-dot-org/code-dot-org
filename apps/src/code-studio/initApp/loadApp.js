@@ -11,15 +11,6 @@ import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityU
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
-// Loads the given app stylesheet.
-function loadStyle(name) {
-  $('body').append($('<link>', {
-    rel: 'stylesheet',
-    type: 'text/css',
-    href: appOptions.baseUrl + 'css/' + name + '.css'
-  }));
-}
-
 module.exports = function (callback) {
   var lastAttemptLoaded = false;
 
