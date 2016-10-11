@@ -20,7 +20,7 @@ export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
 export const FINISH_SAVE = 'stageLock/FINISH_SAVE';
 const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
-export const initialState = {
+const initialState = {
   viewAs: ViewType.Student,
   // TODO - rename bySection?
   sections: {},
