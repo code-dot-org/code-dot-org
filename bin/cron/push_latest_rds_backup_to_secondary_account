@@ -5,18 +5,9 @@ require_relative '../../dashboard/config/environment'
 require 'aws-sdk'
 require 'cdo/hip_chat'
 
-# This script pushes backup snapshots of our production database into a
-# write-only backup account, with the following steps:
-#
-# 1) Copy the latest automated snapshot to a temporary manual one
-# 2) Wait until ready, and share the manual snapshot with the backup acct
-# 3) On the backup account, copy the shared snapshot to a manual one
-# 4) Wait until ready, and finally go back to the main account and delete the temp snapshot
-#
-# Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
-# which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
-#
-
+# Get the AWS account ID for a set of credentials
+# @param credentials [SharedCredentials] the AWS credentials
+# @return Array(String, String) the account id, and username, respectively
 def get_aws_account_id(credentials)
   # based on https://gist.github.com/thomaswitt/3952303, updated for new Aws SDK
   begin
@@ -38,6 +29,8 @@ def get_aws_account_id(credentials)
   [id, user]
 end
 
+# Wait for an RDS snapshot to be in the 'available' state
+# @param snapshot [DBSnapshot] the snapshot to wait for
 def wait_for_snapshot_copy(snapshot)
   snapshot.wait_until(max_attempts: 120, delay: 5) { |snap|
     snap.status == 'available'
@@ -47,9 +40,16 @@ rescue Aws::Waiters::Errors::WaiterFailed
   exit(1)
 end
 
+# Raised when a snapshot that we expected to show up in the backup account
+# is not found within the timeout period (60 seconds)
 class SnapshotNotSharedError < StandardError
 end
 
+# Find a shared snapshot by name
+# @param rds_backup [Aws::RDS::Resource] the RDS resource
+# @param temp_snapshot_name [String] The name of the snapshot to look for. Note that
+# this is a suffix lookup, and assumes that the prefix will be 'arn:aws:rds:' for a
+# shared snapshot
 def find_shared_snapshot_on_backup(rds_backup, temp_snapshot_name)
   shared_snapshots = []
   attempts = 0
@@ -70,6 +70,14 @@ def find_shared_snapshot_on_backup(rds_backup, temp_snapshot_name)
   shared_snapshots.first
 end
 
+# Share an automated RDS snapshot with the account specified by the passed credentials.
+# This method will copy the automate snapshot to a manual one, and it should be deleted
+# later, outside this method.
+# @param credentials_backup [SharedCredentials] backup account credentials, created by
+# Aws::SharedCredentials.new
+# @param latest_snapshot [DBSnapshot] snapshot to copy and share
+# @return Array(DBSnapshot, String) the temporary copied snapshot, and the name of the
+# temporary snapshot
 def share_snapshot_with_account(credentials_backup, latest_snapshot)
   # Copy the automated backup into a shareable manual one
   temp_snapshot_name = "temp-snapshot-#{Time.now.to_i}"
@@ -88,6 +96,16 @@ def share_snapshot_with_account(credentials_backup, latest_snapshot)
   return copied_snapshot, temp_snapshot_name
 end
 
+# This script pushes backup snapshots of our production database into a
+# write-only backup account, with the following steps:
+#
+# 1) Copy the latest automated snapshot to a temporary manual one
+# 2) Wait until ready, and share the manual snapshot with the backup acct
+# 3) On the backup account, copy the shared snapshot to a manual one
+# 4) Wait until ready, and finally go back to the main account and delete the temp snapshot
+#
+# Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
+# which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
 def main
   HipChat.developers 'Beginning cross-account RDS backup'
   credentials_primary = Aws::SharedCredentials.new(profile_name: 'default')
