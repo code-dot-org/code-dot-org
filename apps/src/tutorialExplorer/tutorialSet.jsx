@@ -70,10 +70,11 @@ const TutorialSet = React.createClass({
           const tutorialTags = tutorial["tags_" + filterGroupName];
           const filterGroup = filters[filterGroupName];
 
-          if (filterGroup.length !== 0 && tutorialTags && tutorialTags.length > 0) {
-            if (!TutorialSet.findMatchingTag(filterGroup, tutorialTags)) {
-              filterGroupsSatisfied = false;
-            }
+          if (filterGroup.length !== 0 &&
+              tutorialTags &&
+              tutorialTags.length > 0 &&
+              !TutorialSet.findMatchingTag(filterGroup, tutorialTags)) {
+            filterGroupsSatisfied = false;
           }
         }
 
@@ -81,23 +82,17 @@ const TutorialSet = React.createClass({
       });
     },
 
-    // Given a filter group, and the tutorial's relevant tag for that filter group,
-    // see if there's at least a single match.
+    /* Given a filter group, and the tutorial's relevant tags for that filter group,
+     * see if there's at least a single match.
+     * @param {Array} filterGroup - Array of strings, each of which is a selected filter
+     *   for the group.  e.g. ["beginner", "experienced"].
+     * @param {string} tutorialTags - Comma-separated tags for a tutorial.
+     *   e.g. "beginner,experienced".
+     * @return {bool} - true if the tutorial had at least one tag matching at least
+     *   one of the filterGroup's values.
+     */
     findMatchingTag(filterGroup, tutorialTags) {
-      const tutorialTagsSplit = tutorialTags.split(',');
-
-      // For this filter group, we've not yet found a matching tag between
-      // user selected options and tutorial tags.
-      let matchingTag = false;
-
-      for (const filterName of filterGroup) {
-        if (tutorialTagsSplit.includes(filterName)) {
-          // The tutorial had a matching tag.
-          matchingTag = true;
-        }
-      }
-
-      return matchingTag;
+      return filterGroup.some(filterName => tutorialTags.split(',').includes(filterName));
     }
 
   },
