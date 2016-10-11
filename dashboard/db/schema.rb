@@ -756,18 +756,20 @@ ActiveRecord::Schema.define(version: 20161011013910) do
   end
 
   create_table "user_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "user_id",                        null: false
-    t.integer "updated_by"
-    t.string  "other_user_ids"
-    t.string  "other_emails"
-    t.boolean "csf_pd",         default: false
-    t.boolean "csd_pd",         default: false
-    t.boolean "csp_pd",         default: false
-    t.boolean "ecs_pd",         default: false
-    t.boolean "csf_pd_manual",  default: false
-    t.boolean "csd_pd_manual",  default: false
-    t.boolean "csp_pd_manual",  default: false
-    t.boolean "ecs_pd_manual",  default: false
+    t.integer  "user_id",                        null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "updated_by"
+    t.string   "other_user_ids"
+    t.string   "other_emails"
+    t.boolean  "csf_pd",         default: false
+    t.boolean  "csd_pd",         default: false
+    t.boolean  "csp_pd",         default: false
+    t.boolean  "ecs_pd",         default: false
+    t.boolean  "csf_pd_manual",  default: false
+    t.boolean  "csd_pd_manual",  default: false
+    t.boolean  "csp_pd_manual",  default: false
+    t.boolean  "ecs_pd_manual",  default: false
     t.index ["user_id"], name: "index_user_profiles_on_user_id", using: :btree
   end
 
