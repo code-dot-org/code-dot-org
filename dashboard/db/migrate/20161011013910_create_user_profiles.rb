@@ -4,7 +4,7 @@ class CreateUserProfiles < ActiveRecord::Migration[5.0]
   def change
     create_table :user_profiles do |t|
       t.belongs_to :user, {null: false}
-      t.timestamp
+      t.timestamps
       # The user ID of the user who last (manually) set any of the values for
       # this user profile.
       t.integer :updated_by, default: nil
