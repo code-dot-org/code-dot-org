@@ -93,10 +93,6 @@ namespace :circle do
   end
 end
 
-def pipeline_branch?
-  ['staging', 'test', 'production'].include?(GitUtils.current_branch)
-end
-
 # @return [Array<String>] names of browser configurations for this test run
 def browsers_to_run
   browsers = []
@@ -108,8 +104,7 @@ def browsers_to_run
 end
 
 def test_eyes?
-  !CircleUtils.tagged?(SKIP_EYES) &&
-      (pipeline_branch? || CircleUtils.tagged?(TEST_EYES))
+  CircleUtils.tagged?(TEST_EYES)
 end
 
 def start_sauce_connect
