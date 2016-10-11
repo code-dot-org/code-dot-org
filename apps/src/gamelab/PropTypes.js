@@ -130,6 +130,12 @@ export const AnimationList = React.PropTypes.shape({
 });
 
 /**
+ * @typedef {Object} SerializedAnimationList
+ * @property {AnimationKey[]} orderedKeys - Animations in project order
+ * @property {Object.<AnimationKey, SerializedAnimationProps>} propsByKey
+ */
+
+/**
  * Converts the full AnimationList to the serializable subset of itself.
  * Two transformations happen when we serialize animations out.
  * 1. We only save a subset of animation attributes - see getSerializedAnimation
