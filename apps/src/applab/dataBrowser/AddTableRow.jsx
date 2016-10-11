@@ -2,7 +2,7 @@ import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
 import React from 'react';
-import { castValue, editableValue } from './dataUtils';
+import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 

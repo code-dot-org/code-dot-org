@@ -4,7 +4,7 @@ import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBro
 import parseCsv from 'csv-parse';
 import { loadConfig, fixFirebaseKey, getDatabase, validateFirebaseKey } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
-import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
+import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnsRef } from './firebaseMetadata';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -331,7 +331,6 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
 
     recordsRef.on('child_added', childSnapshot => {
       const record = JSON.parse(childSnapshot.val());
-  let recordsRef = getRecordsRef(Applab.channelId, tableName);
       if (includeAll || (record.id > lastId)) {
         onRecord(record, 'create');
       }
