@@ -14,6 +14,7 @@ class Hash
 end
 
 options = {
+  output_format: 'human-readable',
   custom_columns: []
 }
 OptionParser.new do |opts|
@@ -46,6 +47,9 @@ OptionParser.new do |opts|
   end
   opts.on('--group branchName,branchName', Array, 'Add a column aggregating results for the listed branches.') do |a|
     options[:custom_columns] << a
+  end
+  opts.on('--csv', 'Display results in CSV format.') do
+    options[:output_format] = 'csv'
   end
   opts.on_tail('-h', '--help', 'Show this message') do
     puts opts
@@ -97,10 +101,17 @@ end
 
 # Print build stats
 puts "Failure rates for builds #{build_range} by date (1.0 = 100% failures)"
-puts "%-10s#{' %16s' * columns.size}" % (['Date'] + columns.keys.map {|k| k[0, 14]})
-stats_by_date.each do |date, stats|
-  puts "%-10s#{'  %7s = %5.3f' * columns.size}" %
+if options[:output_format] == 'csv'
+  puts "%s#{',%s' * columns.size}" % (['Date'] + columns.keys)
+  stats_by_date.each do |date, stats|
+    puts "%s#{',%.3f' * columns.size}" % ([date] + stats.map {|_, v| v[:failure_rate].round(3)})
+  end
+else
+  puts "%-10s#{' %16s' * columns.size}" % (['Date'] + columns.keys.map {|k| k[0, 14]})
+  stats_by_date.each do |date, stats|
+    puts "%-10s#{'  %7s = %5.3f' * columns.size}" %
            ([date] + stats.map {|_, v| ["%s/%s" % [v[:failed_builds], v[:total_builds]], v[:failure_rate].round(3)]}.flatten)
+  end
 end
 
 exit(0)

@@ -21,6 +21,10 @@ class DynamoTable
     @metadata_hash = "#{@channel_id}:#{@table_name}:#{@table_type}:metadata"
   end
 
+  def self.pre_initialize
+    @@dynamo_db ||= Aws::DynamoDB::Client.new
+  end
+
   def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new
   end
@@ -108,7 +112,7 @@ class DynamoTable
     last_evaluated_key = nil
 
     [].tap do |results|
-      begin
+      loop do
         page = db.query(
           table_name: CDO.dynamo_tables_table,
           key_conditions: {
@@ -126,7 +130,9 @@ class DynamoTable
         end
 
         last_evaluated_key = page[:last_evaluated_key]
-      end while last_evaluated_key
+
+        break unless last_evaluated_key
+      end
     end
   end
 
@@ -262,7 +268,7 @@ class DynamoTable
     last_evaluated_key = nil
 
     [].tap do |results|
-      begin
+      loop do
         page = db.query(
           table_name: CDO.dynamo_tables_table,
           consistent_read: true,
@@ -280,7 +286,9 @@ class DynamoTable
         end
 
         last_evaluated_key = page[:last_evaluated_key]
-      end while last_evaluated_key
+
+        break unless last_evaluated_key
+      end
     end
   end
 
@@ -300,7 +308,7 @@ class DynamoTable
     @dynamo_db ||= Aws::DynamoDB::Client.new
     last_evaluated_key = nil
     results = {}
-    begin
+    loop do
       page = @dynamo_db.query(
         table_name: CDO.dynamo_tables_table,
         index_name: CHANNEL_TABLE_NAME_INDEX,
@@ -319,10 +327,12 @@ class DynamoTable
       end
 
       last_evaluated_key = page[:last_evaluated_key]
-    end while last_evaluated_key
+
+      break unless last_evaluated_key
+    end
 
     # now same thing for metadata
-    begin
+    loop do
       page = @dynamo_db.query(
         table_name: CDO.dynamo_table_metadata_table,
         index_name: CHANNEL_TABLE_NAME_INDEX,
@@ -341,7 +351,9 @@ class DynamoTable
       end
 
       last_evaluated_key = page[:last_evaluated_key]
-    end while last_evaluated_key
+
+      break unless last_evaluated_key
+    end
 
     results.keys
   end

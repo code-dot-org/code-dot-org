@@ -36,7 +36,7 @@ const AddKeyRow = React.createClass({
         castValue(this.state.value),
         () => this.setState(this.getInitialState()),
         msg => {
-          if (msg.includes('The key is invalid')) {
+          if (msg.includes('The key is invalid') || msg.includes('The key was renamed')) {
             this.props.onShowWarning(msg);
           } else {
             console.warn(msg);

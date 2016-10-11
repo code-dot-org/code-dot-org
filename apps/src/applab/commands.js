@@ -1540,7 +1540,7 @@ var handleGetKeyValueSync = function (opts, value) {
 var handleGetKeyValueSyncError = function (opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.setKeyValue = function (opts) {
@@ -1576,7 +1576,7 @@ var handleSetKeyValueSync = function (opts) {
 var handleSetKeyValueSyncError = function (opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.readRecords = function (opts) {

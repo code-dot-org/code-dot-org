@@ -5,7 +5,7 @@ Feature: Stage Locking
 
 Scenario: Stage Locking Dialog
   When I open my eyes to test "stage locking"
-  Given I create a teacher-associated student named "bobby"
+  Given I create an authorized teacher-associated student named "bobby"
   And I sign out
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/s/allthethings"

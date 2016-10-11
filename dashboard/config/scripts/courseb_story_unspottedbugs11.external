@@ -1,0 +1,12 @@
+name 'courseB_story_unspottedBugs11'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<h3>
+“Trace your trail step-by-step until something goes wrong.” Jasmine advised.
+“That’s where the bug is hiding!”
+</h3>
+
+![](https://images.code.org/d2206a0853a5547dbfcbae39b574b5b0-image-1475999444156.png)
+MARKDOWN
