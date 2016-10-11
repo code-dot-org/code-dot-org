@@ -44,7 +44,7 @@ const SectionSelector = React.createClass({
 });
 
 export default connect(state => ({
-  selectedSection: state.stageLock.selectedSection,
+  selectedSection: state.sections.selectedSection,
   sections: state.stageLock.sections
 }), dispatch => ({
   selectSection(sectionId) {
