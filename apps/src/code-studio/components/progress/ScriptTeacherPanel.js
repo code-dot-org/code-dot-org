@@ -114,7 +114,8 @@ export default connect((state, ownProps) => {
   const { sectionsAreLoaded, selectedSectionId, sectionIds } = state.sections;
   const currentSection = stagesBySectionId[selectedSectionId];
 
-  const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSectionId]);
+  // TODO - not getting this right?
+  const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
   const unlockedStageIds = Object.keys(currentSection || {})
     .filter(stageId => !fullyLocked[stageId]);
 

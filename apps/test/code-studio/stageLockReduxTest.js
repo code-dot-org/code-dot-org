@@ -5,7 +5,7 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import fakeSectionData from './fakeSectionData';
 
-import { setSections, selectSection } from '@cdo/apps/code-studio/sectionsRedux';
+import { NO_SECTION, setSections, selectSection } from '@cdo/apps/code-studio/sectionsRedux';
 
 import reducer, {
   ViewType,
@@ -73,6 +73,21 @@ describe('stageLockRedux reducer tests', () => {
         lockStatus: LockStatus.Locked,
         userLevelData: fakeSectionData[section2Id].stages[stage1Id][0].user_level_data
       }]);
+    });
+
+    it('clears lockStatus when selecting NO_SECTION', () => {
+      let action, nextState;
+      const sectionState = reducer(undefined, setSections(fakeSectionData));
+
+      // Open dialog, such that lockStatus represents section1
+      action = openLockDialog(section1Id, stage1Id);
+      nextState = reducer(sectionState, action);
+      assert.equal(nextState.lockStatus.length, 3);
+
+      // Now switch to NO_SECTION
+      action = selectSection(NO_SECTION);
+      nextState = reducer(nextState, action);
+      assert.deepEqual(nextState.lockStatus, []);
     });
   });
 
