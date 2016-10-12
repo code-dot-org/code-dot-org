@@ -14,7 +14,8 @@ import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 const MAX_SEARCH_RESULTS = 32;
 const allAnimationsStyle = {
   color: color.purple,
-  fontFamily: "'Gotham 7r', sans-serif, sans-serif"
+  fontFamily: "'Gotham 7r', sans-serif, sans-serif",
+  cursor: "pointer"
 };
 const breadCrumbsStyle = {
   margin: "8px 0",
@@ -149,13 +150,24 @@ function searchAnimations(searchQuery, categoryQuery) {
   const searchRegExp = new RegExp('(?:\\b|_)' + searchQuery, 'i');
 
   // Generate the set of all results associated with all matched aliases
-  const resultSet = Object.keys(animationLibrary.aliases)
-      .filter(alias => {
-        return categoryQuery === '' ? searchRegExp.test(alias) : (categoryQuery === alias);
-      })
+  let resultSet = Object.keys(animationLibrary.aliases)
+      .filter(alias => searchRegExp.test(alias))
       .reduce((resultSet, nextAlias) => {
         return resultSet.union(animationLibrary.aliases[nextAlias]);
       }, Immutable.Set());
+
+  const categoryResultSet = Object.keys(animationLibrary.aliases)
+      .filter(alias => alias === categoryQuery)
+      .reduce((resultSet, nextAlias) => {
+        return resultSet.union(animationLibrary.aliases[nextAlias]);
+      }, Immutable.Set());
+
+
+  if (categoryQuery !== '' && searchQuery !== '') {
+    resultSet = resultSet.intersect(categoryResultSet.toArray());
+  } else if (categoryQuery !== '') {
+    resultSet = categoryResultSet;
+  }
 
   // Finally alphabetize the results (for stability), take only the first
   // MAX_SEARCH_RESULTS so we don't load too many images at once, and return
