@@ -18,11 +18,15 @@ const SectionSelector = React.createClass({
       })
     ).isRequired,
     selectedSectionId: React.PropTypes.string,
-    selectSection: React.PropTypes.func.isRequired
+    selectSection: React.PropTypes.func.isRequired,
+    onChange: React.PropTypes.func
   },
 
   handleSelectChange(event) {
     this.props.selectSection(event.target.value);
+    if (this.props.onChange) {
+      this.props.onChange(event.target.value);
+    }
   },
 
   render() {
