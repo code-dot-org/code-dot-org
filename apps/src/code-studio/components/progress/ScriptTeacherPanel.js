@@ -110,9 +110,9 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { viewAs, bySection, lockableAuthorized } = state.stageLock;
+  const { viewAs, stagesBySectionId, lockableAuthorized } = state.stageLock;
   const { sectionsAreLoaded, selectedSectionId, sectionIds } = state.sections;
-  const currentSection = bySection[selectedSectionId];
+  const currentSection = stagesBySectionId[selectedSectionId];
 
   const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSectionId]);
   const unlockedStageIds = Object.keys(currentSection || {})
