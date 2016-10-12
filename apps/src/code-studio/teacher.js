@@ -148,9 +148,9 @@ function renderIntoLessonTeacherPanel() {
  * Changes the url to navigate to the new section
  * @param {string} newSectionId - section id of the section we want to change to
  */
-function changeSection(newSectionId) {
-  location.search = queryString.stringify({
-    ...queryString.parse(location.search),
-    section_id: newSectionId
-  });
+function changeSection() {
+  // Depend on the fact that SectionSelector already changed the URL for us
+  // via pushState. We actually want to do a reload though, so that we hit the
+  // server with the new section_id
+  window.location.reload();
 }

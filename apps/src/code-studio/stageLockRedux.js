@@ -7,7 +7,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
-import { SET_SECTIONS, SELECT_SECTION } from './sectionsRedux';
+import { NO_SECTION, SET_SECTIONS, SELECT_SECTION } from './sectionsRedux';
 
 export const ViewType = makeEnum('Student', 'Teacher');
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
@@ -56,6 +56,12 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === SELECT_SECTION) {
     const sectionId = action.sectionId;
+    if (sectionId === NO_SECTION) {
+      return {
+        ...state,
+        lockStatus: initialState.lockStatus
+      };
+    }
     if (!state.stagesBySectionId[sectionId]) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
@@ -81,7 +87,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === CLOSE_LOCK_DIALOG) {
     return Object.assign({}, state, {
       lockDialogStageId: null,
-      lockStatus: []
+      lockStatus: initialState.lockStatus
     });
   }
 

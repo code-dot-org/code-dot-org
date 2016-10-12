@@ -1,6 +1,8 @@
 import Immutable from 'immutable';
 import _ from 'lodash';
 
+export const NO_SECTION = '';
+
 // Action types
 export const SET_SECTIONS = 'sections/SET_SECTIONS';
 export const SELECT_SECTION = 'sections/SELECT_SECTION';
@@ -17,7 +19,7 @@ export const selectSection = sectionId => ({
 });
 
 const SectionData = Immutable.Record({
-  selectedSectionId: null,
+  selectedSectionId: NO_SECTION,
   sectionsAreLoaded: false,
   sectionIds: [],
   nameById: {}
@@ -26,9 +28,7 @@ const SectionData = Immutable.Record({
 // Reducer
 export default function reducer(state = new SectionData(), action) {
   if (action.type === SET_SECTIONS) {
-    const firstSectionId = Object.keys(action.sections)[0];
     return state.merge({
-      selectedSectionId: firstSectionId,
       sectionsAreLoaded: true,
       nameById: _.mapValues(action.sections, section => section.section_name)
     // we want sectionIds to be a native array, which is why we dont put them
@@ -38,7 +38,7 @@ export default function reducer(state = new SectionData(), action) {
 
   if (action.type === SELECT_SECTION) {
     const sectionId = action.sectionId;
-    if (!state.sectionIds.includes(sectionId)) {
+    if (sectionId !== NO_SECTION && !state.sectionIds.includes(sectionId)) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
     return state.set('selectedSectionId', sectionId);
