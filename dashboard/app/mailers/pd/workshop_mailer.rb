@@ -30,6 +30,14 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
   }
 
+  def teacher_enrollment_subject(enrollment)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
+      "Your upcoming #{enrollment.workshop.course_name} workshop"
+    else
+      'Your upcoming Code.org workshop and next steps'
+    end
+  end
+
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
@@ -39,7 +47,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
+      subject: teacher_enrollment_subject(enrollment),
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -82,7 +90,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
+      subject: teacher_enrollment_subject(enrollment),
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
