@@ -110,8 +110,8 @@ describe("Applab Screens Reducer", function () {
         beforeEach(() => {
           [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
           [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
-          [, , existingAssetsSuccess, existingAssetsFail] = assetsApi.getFiles.firstCall.args;
-          [, , assetsSuccess, assetsFail] = assetsApi.getFiles.secondCall.args;
+          [existingAssetsSuccess, existingAssetsFail] = assetsApi.getFiles.firstCall.args;
+          [assetsSuccess, assetsFail] = assetsApi.getFiles.secondCall.args;
         });
 
         describe("and sources fail", () => {
@@ -132,8 +132,8 @@ describe("Applab Screens Reducer", function () {
           beforeEach(() => {
             channelsSuccess({response: '"bar"'});
             sourcesSuccess({response: '"foo"'});
-            assetsSuccess({response: '{files:[]}'});
-            existingAssetsSuccess({response: '{files:[]}'});
+            assetsSuccess({files: []});
+            existingAssetsSuccess({files: []});
           });
           it("will set isFetchingProject=false and fetchedProject=the fetched results", () => {
             expect(store.getState().importProject.isFetchingProject).to.be.false;
