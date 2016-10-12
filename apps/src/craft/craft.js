@@ -17,6 +17,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 var experiments = require('../experiments');
+import {entityActionBlocks, entityActionTargetDropdownBlocks} from './blocks';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -772,51 +773,6 @@ Craft.executeUserCode = function () {
     drop: function (blockType, targetEntity, blockID) {
       appCodeOrgAPI.drop(studioApp.highlight.bind(studioApp, blockID), blockType, targetEntity);
     },
-    destroyEntity: function (blockReference, blockID) {
-      appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    explodeEntity: function (blockReference, blockID) {
-      appCodeOrgAPI.explodeEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityNorth: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityNorth(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntitySouth: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntitySouth(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityEast: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityEast(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityWest: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityWest(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    flashEntity: function (blockReference, blockID) {
-      appCodeOrgAPI.flashEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityForward: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityForward(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityTowardPlayer: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityTowardPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityAwayFromPlayer: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityAwayFromPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntity: function (blockReference, direction, blockID) {
-      appCodeOrgAPI.turnEntity(studioApp.highlight.bind(studioApp, blockID), blockReference, direction);
-    },
-    turnEntityRight: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityRight(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntityLeft: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityLeft(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntityRandom: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityRandom(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntityToPlayer: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityToPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
     turnLeft: function (blockID) {
       appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "left");
     },
@@ -874,16 +830,18 @@ Craft.executeUserCode = function () {
     placeBlockAhead: function (blockType, blockID) {
       appCodeOrgAPI.placeInFront(studioApp.highlight.bind(studioApp, blockID),
           blockType);
+    },
+    moveDirection: function (direction, targetEntity, blockID) {
+      const dirStringToDirection = {
+        up: FacingDirection.Up,
+        down: FacingDirection.Down,
+        left: FacingDirection.Left,
+        right: FacingDirection.Right,
+      };
+      appCodeOrgAPI.moveDirection(studioApp.highlight.bind(studioApp, blockID),
+          dirStringToDirection[direction], targetEntity);
     }
   };
-
-  const entityActionBlocks = [
-      'moveEntityForward',
-      'destroyEntity',
-      'attack',
-      'flashEntity',
-      'explodeEntity'
-  ];
 
   entityActionBlocks.forEach((methodName) => {
     evalApiMethods[methodName] = function (targetEntity, blockID) {
@@ -891,23 +849,11 @@ Craft.executeUserCode = function () {
     };
   });
 
-  const entityTargetDropdownBlocks = [
-    'moveToward',
-    'moveTo',
-    'moveAway'
-  ];
-
-  entityTargetDropdownBlocks.forEach((methodName) => {
+  entityActionTargetDropdownBlocks.forEach((methodName) => {
     evalApiMethods[methodName] = function (targetEntity, moveTo, blockID) {
       appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity, moveTo);
     };
   });
-
-  // with target player
-  // moveToward
-  // moveTo
-  // moveAway
-  //
 
   codegen.evalWith(code, evalApiMethods, true);
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
