@@ -264,7 +264,7 @@ class FilesApi extends CollectionsApi {
    */
   putFile(filename, fileData, success, error) {
     this._withBeforeFirstWriteHook(() => {
-      this._putFileInternal(filename, success, error);
+      this._putFileInternal(filename, fileData, success, error);
     });
   }
 
