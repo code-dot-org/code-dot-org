@@ -1,5 +1,5 @@
 // TODO (brent) - way too many globals
-/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
+/* global script_path, CDOSounds, appOptions, trackEvent, Applab, Blockly */
 import $ from 'jquery';
 import PlayZone from '../components/playzone';
 import React from 'react';
@@ -14,7 +14,7 @@ var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
-import { getLevelIds, getLevel, lockContainedLevelAnswers } from '../levels/codeStudioLevels';
+import { lockContainedLevelAnswers } from '../levels/codeStudioLevels';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;

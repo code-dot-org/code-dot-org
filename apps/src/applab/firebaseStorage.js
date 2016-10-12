@@ -2,9 +2,9 @@
 
 import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
-import { loadConfig, getDatabase, validateFirebaseKey } from './firebaseUtils';
+import { loadConfig, fixFirebaseKey, getDatabase, validateFirebaseKey } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
-import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
+import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnsRef } from './firebaseMetadata';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -34,6 +34,8 @@ function getRecordsRef(channelId, tableName) {
  * @param {function (string, number)} onError Function to call on error with error msg and http status.
  */
 FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
+  key = fixKeyName(key, onError);
+
   const keyRef = getKeysRef(Applab.channelId).child(key);
   keyRef.once("value", snapshot => {
     // Return undefined if the key was not found, otherwise return the decoded value.
@@ -41,6 +43,31 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
     onSuccess(value);
   }, onError);
 };
+
+// Some projects which were created on DynamoDB attempt to write to keys or table names
+// which contain characters which are illegal in firebase paths. Rename these keys and
+// tables so that these apps don't break. Also warn because this behavior is dangerous
+// as it could lead to unintentional data collisions.
+
+function fixKeyName(key, onError) {
+  const newKey = fixFirebaseKey(key);
+  if (newKey !== key) {
+    onError(`The key was renamed from "${key}" to "${newKey}" because the characters ` +
+      '".", "$", "#", "[", "]", and "/" are not allowed in key names.');
+    key = newKey;
+  }
+  return key;
+}
+
+function fixTableName(tableName, onError) {
+  const newTableName = fixFirebaseKey(tableName);
+  if (newTableName !== tableName) {
+    onError(`The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
+      '".", "$", "#", "[", "]", and "/" are not allowed in table names.');
+    tableName = newTableName;
+  }
+  return tableName;
+}
 
 /**
  * Saves the value associated with the key, accessible to all users of the app.
@@ -51,6 +78,8 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  *    http status.
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
+  key = fixKeyName(key, onError);
+
   // Store the value as a string representing a JSON value, or delete the key if the
   // value is undefined. For compatibility with parsers
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
@@ -103,6 +132,8 @@ function getRecordExistsPromise(tableName, recordId) {
  *    and http status in case of failure.
  */
 FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) {
+  tableName = fixTableName(tableName, onError);
+
   // Assign a unique id for the new record.
   const updateNextId = true;
 
@@ -174,6 +205,8 @@ function validateRecord(record, hasId) {
  *     and http status in case of failure.
  */
 FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onError) {
+  tableName = fixTableName(tableName, onError);
+
   let recordsRef = getRecordsRef(Applab.channelId, tableName);
 
   // Get all records in the table and filter them on the client.
@@ -203,6 +236,8 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
+  tableName = fixTableName(tableName, onError);
+
   const recordJson = JSON.stringify(record);
   const recordRef = getDatabase(Applab.channelId)
     .child(`storage/tables/${tableName}/records/${record.id}`);
@@ -236,6 +271,8 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
+  tableName = fixTableName(tableName, onError);
+
   const recordRef = getDatabase(Applab.channelId)
     .child(`storage/tables/${tableName}/records/${record.id}`);
 
@@ -294,7 +331,6 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
 
     recordsRef.on('child_added', childSnapshot => {
       const record = JSON.parse(childSnapshot.val());
-  let recordsRef = getRecordsRef(Applab.channelId, tableName);
       if (includeAll || (record.id > lastId)) {
         onRecord(record, 'create');
       }

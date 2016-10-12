@@ -1,6 +1,5 @@
 /* global dashboard */
 
-var msg = require('@cdo/gamelab/locale');
 var api = require('./apiJavascript.js');
 var consoleApi = require('../consoleApi');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
@@ -9,12 +8,7 @@ var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_RED = '#F78183';
 var COLOR_CYAN = '#4DD0E1';
 var COLOR_YELLOW = '#FFF176';
-var COLOR_PINK = '#F57AC6';
-var COLOR_PURPLE = '#BB77C7';
-var COLOR_GREEN = '#68D995';
-var COLOR_WHITE = '#FFFFFF';
 var COLOR_BLUE = '#64B5F6';
-var COLOR_ORANGE = '#FFB74D';
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';

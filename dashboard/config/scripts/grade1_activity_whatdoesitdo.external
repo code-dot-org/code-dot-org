@@ -1,5 +1,16 @@
 name 'grade1_activity_whatDoesItDo'
 title 'What does it do'
 markdown <<MARKDOWN
-Students should make a prediction as to what is going to happen when the teacher does something.
+# Debugging with "Spotted Bugs"
+  
+<br/><br/>    
+    
+<a href="https://drive.google.com/open?id=1Ydx7-Nb4IG56e3VAG0VdPqyWE3qRZm--iWAWCz5VjQ4" target="_new">
+<button>
+Go to lesson plan
+</button> 
+</a>
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

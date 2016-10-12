@@ -193,11 +193,6 @@ export default class Projectile extends Collidable {
    * Display our projectile at it's current location, rotating as necessary
    */
   display() {
-    var topLeft = {
-      x: this.x - this.width / 2,
-      y: this.y - this.height / 2
-    };
-
     this.animation_.redrawCenteredAt({
           x: this.x,
           y: this.y

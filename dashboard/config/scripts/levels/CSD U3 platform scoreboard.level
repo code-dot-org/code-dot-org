@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Make the Scoreboard\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. (Show me where)  You can see an example of a working scoreboard in [Stage 12 Puzzle 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8).\r\n\r\n# Do this\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.\r\n\r\n_Challenge: If you have other variables, you can create functions to display them on the screen, too._",
+    "markdown_instructions": "# Make the Scoreboard\r\n\r\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\" style=\"float:right;\">\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. (Show me where)  You can see an example of a working scoreboard in [Stage 12 Puzzle 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8).\r\n\r\n# Do this\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,6 +34,8 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
     "contained_level_names": null
   },
   "published": true,

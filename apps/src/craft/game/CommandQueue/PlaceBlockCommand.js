@@ -1,5 +1,3 @@
-
-import CommandState from "./CommandState.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class PlaceBlockCommand extends BaseCommand {
@@ -18,4 +16,3 @@ export default class PlaceBlockCommand extends BaseCommand {
         this.GameController.placeBlock(this, this.BlockType);
     }
 }
-

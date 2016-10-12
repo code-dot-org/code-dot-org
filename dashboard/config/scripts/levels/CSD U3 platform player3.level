@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Player Interactions\r\n\r\nThe last part of making your game is programming the player interactions with the other sprites.  Your player will need to land on the platforms and collect the items.\r\n\r\n# Do This\r\n\r\n* Create a `playerInteractions` function and add it to the \"functions\" area of your code.\r\n* Inside the function, use the `collide` block so that your player can land on both the platforms.\r\n* Call the function inside the draw loop.\r\n* Run the code to test your function.\r\n* Inside the function, use the `if` and `isTouching` blocks to change the x and y position of the items when the player touches them.  You can look at the `loopItem` function for clues in how to reset the item position.\r\n* Inside your `if` statement, add a counter pattern that will increase the score every time the player touches an item.  Look at [Stage 12 Puzzle 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8) for an example.\r\n* Run the code to test your function.\r\n",
+    "markdown_instructions": "# Player Interactions\r\n\r\nThe last part of making your game is programming the player interactions with the other sprites.  First, your player needs to land on the platforms.\r\n\r\n# Do This\r\n\r\n* Create a `playerLands` function and add it to the \"functions\" area of your code.\r\n* Inside the function, use the `collide` block so that your player can land on both the platforms.\r\n* Call the function inside the draw loop.\r\n* Run the code to test your function.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

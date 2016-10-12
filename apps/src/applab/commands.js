@@ -3,7 +3,6 @@ import apiTimeoutList from '../timeoutList';
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import RGBColor from './rgbcolor.js';
-import codegen from '../codegen';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
 import elementLibrary from './designElements/library';
@@ -437,17 +436,14 @@ applabCommands.arcLeft = function (opts) {
 };
 
 applabCommands.getX = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.x;
 };
 
 applabCommands.getY = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.y;
 };
 
 applabCommands.getDirection = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.heading;
 };
 
@@ -728,8 +724,6 @@ applabCommands.drawImage = function (opts) {
  * drawImageURL(url, x, y, width, height, [callback])
  */
 applabCommands.drawImageURL = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
   apiValidateActiveCanvas(opts, 'drawImageURL');
   apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
   apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
@@ -738,7 +732,6 @@ applabCommands.drawImageURL = function (opts) {
   apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
   apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
 
-  var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
     if (opts.callback) {
       opts.callback.call(null, success);
@@ -1540,7 +1533,7 @@ var handleGetKeyValueSync = function (opts, value) {
 var handleGetKeyValueSyncError = function (opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.setKeyValue = function (opts) {
@@ -1576,7 +1569,7 @@ var handleSetKeyValueSync = function (opts) {
 var handleSetKeyValueSyncError = function (opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.readRecords = function (opts) {
