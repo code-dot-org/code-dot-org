@@ -197,7 +197,7 @@ class ScriptDSL < BaseDSL
       s << "level_concept_difficulty '#{level.level_concept_difficulty.serializable_hash.to_json}'" if level.level_concept_difficulty
     end
     l = "#{type} '#{level.key.gsub("'"){ "\\'" }}'"
-    l += ", active: #{active}" unless active.nil?
+    l += ', active: false' unless active.nil? || active
     s << l
     s
   end
