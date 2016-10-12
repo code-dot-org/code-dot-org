@@ -132,6 +132,27 @@ class DashboardTest < Minitest::Test
       end
     end
 
+    describe 'get_followed_bys' do
+      it 'returns an appropriate subarray' do
+        assert_equal [@student.id],
+          @teacher.get_followed_bys([@admin.id, @student.id, @teacher.id])
+      end
+
+      it 'ignores deleted followers' do
+        assert_equal [],
+          @teacher_with_deleted.get_followed_bys(
+            [FakeDashboard::SELF_STUDENT[:id]]
+          )
+      end
+
+      it 'ignores deleted students' do
+        assert_equal [],
+          @teacher_with_deleted.get_followed_bys(
+            FakeDashboard::DELETED_STUDENT[:id]
+          )
+      end
+    end
+
     describe 'owned_sections' do
       it 'returns no sections for a student' do
         assert_equal 0, @student.owned_sections.count

@@ -63,6 +63,10 @@ Dashboard::Application.configure do
 #  config.action_mailer.raise_delivery_errors = true
 #  config.action_mailer.delivery_method = :smtp
 
+  # Show mail previews (rails/mailers).
+  # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
+  config.action_mailer.show_previews = true
+
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = true
 
@@ -93,8 +97,4 @@ Dashboard::Application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
-
-  # enable script cache by default. This is overridden in models/script.rb for
-  # unit tests and CI environments
-  config.disable_script_cache = CDO.with_default(false).disable_script_cache
 end
