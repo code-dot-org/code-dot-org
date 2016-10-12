@@ -74,7 +74,7 @@ const AnimationPickerListItem = React.createClass({
       this.props.icon && styles.labelIcon
     ];
 
-    const iconImageSrc = this.props.category ? `/blockly/media/gamelab/animation-previews/category_preview_${this.props.category}.png` : '';
+    const iconImageSrc = this.props.category ? `/blockly/media/gamelab/animation-previews/${this.props.category}.png` : '';
 
     return (
       <div style={styles.root} onClick={this.props.onClick}>

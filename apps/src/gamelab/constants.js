@@ -25,11 +25,11 @@ module.exports.PlayBehavior = utils.makeEnum(
 );
 
 module.exports.AnimationCategories = [
-	'animals',
-	'generic_items'
+	'category_animals',
+	'category_generic_items'
 ];
 
 module.exports.AnimationCategoryNames = {
-	'animals': 'Animals',
-	'generic_items': 'Generic items'
+	'category_animals': 'Animals',
+	'category_generic_items': 'Generic items'
 };

@@ -12,6 +12,14 @@ import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 
 const MAX_SEARCH_RESULTS = 32;
+const allAnimationsStyle = {
+  color: color.purple,
+  fontFamily: "'Gotham 7r', sans-serif, sans-serif"
+};
+const breadCrumbsStyle = {
+  margin: "8px 0",
+  fontSize: 14
+};
 
 const AnimationPickerBody = React.createClass({
   propTypes: {
@@ -34,7 +42,7 @@ const AnimationPickerBody = React.createClass({
   },
 
   onCategoryChange(category) {
-    this.setState({categoryQuery: 'category_' + category});
+    this.setState({categoryQuery: category});
   },
 
   onClearCategories() {
@@ -44,7 +52,7 @@ const AnimationPickerBody = React.createClass({
   animationCategoriesRendering() {
     return AnimationCategories.map(category =>
       <AnimationPickerListItem
-        key={"category_" + category}
+        key={category}
         label={AnimationCategoryNames[category]}
         category={category}
         onClick={() => this.onCategoryChange(category)}
@@ -52,8 +60,19 @@ const AnimationPickerBody = React.createClass({
     );
   },
 
-  render() {
+  animationItemsRendering() {
     var pageOfResults = searchAnimations(this.state.searchQuery, this.state.categoryQuery);
+    return pageOfResults.map(animationProps =>
+      <AnimationPickerListItem
+        key={animationProps.sourceUrl}
+        label={animationProps.name}
+        animationProps={animationProps}
+        onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
+        playAnimations={this.props.playAnimations}
+      />);
+  },
+
+  render() {
     return (
       <div>
         <h1 style={styles.title}>
@@ -68,7 +87,12 @@ const AnimationPickerBody = React.createClass({
           value={this.state.searchQuery}
           onChange={this.onSearchQueryChange}
         />
-        {this.state.categoryQuery !== '' && <div onClick={this.onClearCategories}>Clear categories</div>}
+        {this.state.categoryQuery !== '' &&
+          <div style={breadCrumbsStyle}>
+            <span onClick={this.onClearCategories} style={allAnimationsStyle}>{"All categories > "}</span>
+            <span>{AnimationCategoryNames[this.state.categoryQuery]}</span>
+          </div>
+        }
         <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
           {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
             <AnimationPickerListItem
@@ -87,15 +111,9 @@ const AnimationPickerBody = React.createClass({
           {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
             this.animationCategoriesRendering()
           }
-          {pageOfResults.map(animationProps =>
-            <AnimationPickerListItem
-              key={animationProps.sourceUrl}
-              label={animationProps.name}
-              animationProps={animationProps}
-              onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
-              playAnimations={this.props.playAnimations}
-            />
-          )}
+          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+            this.animationItemsRendering()
+          }
         </ScrollableList>
       </div>
     );
