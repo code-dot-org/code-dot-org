@@ -87,6 +87,12 @@ exports.BeeTerminationValue = {
   DID_NOT_COLLECT_EVERYTHING: 9 // For quantum levels, didn't try to collect all available honey/nectar
 };
 
+exports.HarvesterTerminationValue = {
+  WRONG_CROP : 1,
+  EMPTY_CROP : 2,
+  DID_NOT_COLLECT_EVERYTHING: 3
+};
+
 exports.KeyCodes = {
   BACKSPACE: 8,
   ENTER: 13,
@@ -98,6 +104,34 @@ exports.KeyCodes = {
   COPY: 67,
   PASTE: 86,
   DELETE: 127
+};
+
+exports.Position = {
+  OUTTOPOUTLEFT:    1,
+  OUTTOPLEFT:       2,
+  OUTTOPCENTER:     3,
+  OUTTOPRIGHT:      4,
+  OUTTOPOUTRIGHT:   5,
+  TOPOUTLEFT:       6,
+  TOPLEFT:          7,
+  TOPCENTER:        8,
+  TOPRIGHT:         9,
+  TOPOUTRIGHT:      10,
+  MIDDLEOUTLEFT:    11,
+  MIDDLELEFT:       12,
+  MIDDLECENTER:     13,
+  MIDDLERIGHT:      14,
+  MIDDLEOUTRIGHT:   15,
+  BOTTOMOUTLEFT:    16,
+  BOTTOMLEFT:       17,
+  BOTTOMCENTER:     18,
+  BOTTOMRIGHT:      19,
+  BOTTOMOUTRIGHT:   20,
+  OUTBOTTOMOUTLEFT: 21,
+  OUTBOTTOMLEFT:    22,
+  OUTBOTTOMCENTER:  23,
+  OUTBOTTOMRIGHT:   24,
+  OUTBOTTOMOUTRIGHT:25
 };
 
 /** @const {string} SVG element namespace */

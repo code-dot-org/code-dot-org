@@ -28,7 +28,8 @@ const PiskelEditor = React.createClass({
     animationList: PropTypes.AnimationList.isRequired,
     selectedAnimation: PropTypes.AnimationKey,
     channelId: React.PropTypes.string.isRequired,
-    editAnimation: React.PropTypes.func.isRequired
+    editAnimation: React.PropTypes.func.isRequired,
+    allAnimationsSingleFrame: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
@@ -100,7 +101,7 @@ const PiskelEditor = React.createClass({
       this.piskel.createNewPiskel(
           animationProps.frameSize.x,
           animationProps.frameSize.y,
-          animationProps.frameRate,
+          animationProps.frameDelay,
           () => {
             this.loadedAnimation_ = key;
             this.isLoadingAnimation_ = false;
@@ -110,7 +111,7 @@ const PiskelEditor = React.createClass({
           animationProps.dataURI,
           animationProps.frameSize.x,
           animationProps.frameSize.y,
-          animationProps.frameRate,
+          animationProps.frameDelay,
           () => {
             this.loadedAnimation_ = key;
             this.isLoadingAnimation_ = false;
@@ -131,6 +132,9 @@ const PiskelEditor = React.createClass({
 
   onPiskelReady() {
     this.isPiskelReady_ = true;
+    if (this.props.allAnimationsSingleFrame) {
+      this.piskel.toggleFrameColumn(true);
+    }
     this.loadSelectedAnimation_(this.props);
   },
 
@@ -144,7 +148,7 @@ const PiskelEditor = React.createClass({
       sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
       frameSize: {x: message.frameSizeX, y: message.frameSizeY},
       frameCount: message.frameCount,
-      frameRate: message.frameRate
+      frameDelay: message.frameRate
     });
   },
 
@@ -161,7 +165,8 @@ const PiskelEditor = React.createClass({
 export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
   animationList: state.animationList,
-  channelId: state.pageConstants.channelId
+  channelId: state.pageConstants.channelId,
+  allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame
 }), dispatch => ({
   editAnimation: (key, props) => dispatch(editAnimation(key, props))
 }))(PiskelEditor);

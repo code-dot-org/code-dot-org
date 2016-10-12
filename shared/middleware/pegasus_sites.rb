@@ -1,7 +1,6 @@
 require pegasus_dir('router')
 
 class PegasusSites
-
   def initialize(app=nil, params={})
     @app = app
 
@@ -27,11 +26,10 @@ class PegasusSites
       env['HTTP_HOST'] = canonical_hostname('code.org') + (CDO.https_development ? '' : ":#{CDO.pegasus_port}")
     end
 
-    if @pegasus_hosts.include?(request.host)
+    if @pegasus_hosts.any? {|host| host.include? request.host}
       @pegasus_app.call(env)
     else
       @app.call(env)
     end
   end
-
 end

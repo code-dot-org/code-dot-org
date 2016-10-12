@@ -24,7 +24,6 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -47,6 +46,7 @@ var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var experiments = require('../experiments');
+var constants = require('../constants');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -403,7 +403,13 @@ Artist.prototype.placeImage = function (filename, position, scale) {
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
-    img.src = this.studioApp_.assetUrl('media/turtle/' + filename);
+    // This is necessary when loading images from image.code.org to
+    // request the image with ACAO headers so that canvas will not flag
+    // it as tainted
+    img.crossOrigin = "anonymous";
+    img.src = filename.startsWith('http') ?
+        filename :
+        this.studioApp_.assetUrl('media/turtle/' + filename);
   }
 };
 
@@ -648,7 +654,7 @@ Artist.prototype.display = function () {
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxDisplay.globalAlpha = 0.4;
   } else {
-    this.ctxDisplay.globalAlpha = 0.15;
+    this.ctxDisplay.globalAlpha = 0.3;
   }
   this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
   this.ctxDisplay.globalAlpha = 1;
@@ -689,10 +695,10 @@ Artist.prototype.evalCode = function (code) {
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
+    // stop further execution, animate what occurred before the infinite loop,
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
+    if (e !== 'Infinity') {
       // call window.onerror so that we get new relic collection.  prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
@@ -757,13 +763,12 @@ Artist.prototype.execute = function () {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    this.code = '';
-
-    if (this.studioApp_.initializationCode) {
-      this.code += this.studioApp_.initializationCode;
+    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    if (this.studioApp_.initializationBlocks) {
+      codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
     }
 
-    this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
+    this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
     this.evalCode(this.code);
   }
 
@@ -982,6 +987,9 @@ Artist.prototype.step = function (command, values, options) {
       this.setHeading_(heading);
       this.moveForward_(result.distance);
       break;
+    case 'JT':  // Jump To Location
+      this.jumpTo_(values[0]);
+      break;
     case 'MD':  // Move diagonally (use longer steps if showing joints)
       distance = values[0];
       heading = values[1];
@@ -1107,6 +1115,18 @@ Artist.prototype.setPattern = function (pattern) {
     this.currentPathPattern = new Image();
     this.isDrawingWithPattern = false;
   }
+};
+
+Artist.prototype.jumpTo_ = function (pos) {
+  let x, y;
+  if (Array.isArray(pos)) {
+    [x, y] = pos;
+  } else {
+    x = utils.xFromPosition(pos, CANVAS_WIDTH);
+    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
+  }
+  this.x = Number(x);
+  this.y = Number(y);
 };
 
 Artist.prototype.jumpForward_ = function (distance) {
@@ -1485,7 +1505,7 @@ Artist.prototype.checkAnswer = function () {
   // Get the canvas data for feedback.
   if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = this.getFeedbackImage_().split(',')[1];
+    reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
   }
 
   this.studioApp_.report(reportData);

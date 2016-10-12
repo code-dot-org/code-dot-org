@@ -1,7 +1,6 @@
 /**
  * @overview Interface to dashboard user data API.
  */
-'use strict';
 import $ from 'jquery';
 
 /**

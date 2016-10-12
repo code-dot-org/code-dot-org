@@ -32,9 +32,9 @@ import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
-var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
+import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -322,6 +322,8 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
+  this.hasContainedLevels = config.hasContainedLevels;
+
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -481,7 +483,7 @@ StudioApp.prototype.init = function (config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
+    var ResizeSensor = require("./third-party/ResizeSensor");
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
@@ -564,7 +566,7 @@ StudioApp.prototype.init = function (config) {
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
-      utils.showUnusedBlockQtip(e.srcElement);
+      utils.showUnusedBlockQtip(e.target);
     });
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
@@ -586,24 +588,7 @@ StudioApp.prototype.init = function (config) {
     }).bind(this));
   }
 
-  // Bind listener to 'Version History' button
-  var versionsHeader = document.getElementById('versions-header');
-  if (versionsHeader) {
-    dom.addClickTouchEvent(versionsHeader, (function () {
-      var codeDiv = document.createElement('div');
-      var dialog = this.createModalDialog({
-        Dialog: this.Dialog,
-        contentDiv: codeDiv,
-        defaultBtnSelector: 'again-button',
-        id: 'showVersionsModal'
-      });
-      ReactDOM.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
-      }), codeDiv);
-
-      dialog.show();
-    }).bind(this));
-  }
+  this.initVersionHistoryUI(config);
 
   if (this.isUsingBlockly() && Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
@@ -629,60 +614,24 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.getFirstContainedLevelResult_ = function () {
-  var results = this.getContainedLevelResults();
-  if (results.length !== 1) {
-    throw "Exactly one contained level result is currently required.";
-  }
-  return results[0];
-};
-
-StudioApp.prototype.hasValidContainedLevelResult_ = function () {
-  var firstResult = this.getFirstContainedLevelResult_();
-  return firstResult.result.valid;
-};
-
-/**
- * @param {!AppOptionsConfig} config
- */
- StudioApp.prototype.notifyInitialRenderComplete = function (config) {
-  if (config.hasContainedLevels && config.containedLevelOps) {
-    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
-    this.getContainedLevelResults = config.containedLevelOps.getResults;
-
-    $('#containedLevel0').appendTo($('#containedLevelContainer'));
-
-    if (this.hasValidContainedLevelResult_()) {
-      // We already have an answer, don't allow it to be changed, but allow Run
-      // to be pressed so the code can be run again.
-      this.lockContainedLevelAnswers();
-    } else {
-      // No answers yet, disable Run button until there is an answer
-      $('#runButton').prop('disabled', true);
-
-      config.containedLevelOps.registerAnswerChangedFn(levelId => {
-        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
+StudioApp.prototype.initVersionHistoryUI = function (config) {
+  // Bind listener to 'Version History' button
+  var versionsHeader = document.getElementById('versions-header');
+  if (versionsHeader) {
+    dom.addClickTouchEvent(versionsHeader, (function () {
+      var codeDiv = document.createElement('div');
+      var dialog = this.createModalDialog({
+        Dialog: this.Dialog,
+        contentDiv: codeDiv,
+        defaultBtnSelector: 'again-button',
+        id: 'showVersionsModal'
       });
-    }
-  }
-};
+      ReactDOM.render(React.createElement(VersionHistory, {
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+      }), codeDiv);
 
-StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.getContainedLevelResults) {
-    var firstResult = this.getFirstContainedLevelResult_();
-    var containedResult = firstResult.result;
-    var testResults = utils.valueOr(firstResult.testResult,
-        containedResult.result ? this.TestResults.ALL_PASS :
-          this.TestResults.GENERIC_FAIL);
-    return {
-      app: firstResult.app,
-      level: firstResult.id,
-      callback: firstResult.callback,
-      result: containedResult.result,
-      testResults: testResults,
-      program: containedResult.response,
-      feedback: firstResult.feedback
-    };
+      dialog.show();
+    }).bind(this));
   }
 };
 
@@ -779,8 +728,10 @@ StudioApp.prototype.setIconsFromSkin = function (skin) {
  * Reset the puzzle back to its initial state.
  * Search aliases: "Start Over", startOver
  * @param {AppOptionsConfig}- same config object passed to studioApp.init().
+ * @return {Promise} to express that the async operation is complete.
  */
 StudioApp.prototype.handleClearPuzzle = function (config) {
+  var promise;
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
@@ -790,7 +741,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
-  } else {
+  } else if (this.editCode) {
     var resetValue = '';
     if (config.level.startBlocks) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
@@ -807,8 +758,15 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     annotationList.clearRuntimeAnnotations();
   }
   if (config.afterClearPuzzle) {
-    config.afterClearPuzzle();
+    promise = config.afterClearPuzzle(config);
   }
+  if (!promise) {
+    // If a promise wasn't returned from config.afterClearPuzzle(), we create
+    // on here that returns immediately since the operation must have completed
+    // synchronously.
+    promise = new Promise(function (resolve, reject) { resolve(); });
+  }
+  return promise;
 };
 
 /**
@@ -954,8 +912,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
-  if (this.lockContainedLevelAnswers) {
-    this.lockContainedLevelAnswers();
+  if (this.hasContainedLevels) {
+    lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');
@@ -1176,14 +1134,6 @@ StudioApp.prototype.onReportComplete = function (response) {
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
   }
-
-  if (response.trophy_updates) {
-    response.trophy_updates.forEach(update => {
-      const concept_name = update[0];
-      const trophy_name = update[1];
-      trackEvent('Trophy', concept_name, trophy_name);
-    });
-  }
 };
 
 /**
@@ -1347,15 +1297,21 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var playSpaceHeader = document.getElementById('playSpaceHeader');
-  var visualization = document.getElementById('visualization');
-  var gameButtons = document.getElementById('gameButtons');
-
   var top = 0;
-  if (playSpaceHeader) {
-    top += $(playSpaceHeader).outerHeight(true);
-  }
 
+  var possibleBelowVisualizationElements = [
+    'playSpaceHeader',
+    'spelling-table-wrapper',
+    'gameButtons'
+  ];
+  possibleBelowVisualizationElements.forEach(id => {
+    let element = document.getElementById(id);
+    if (element) {
+      top += $(element).outerHeight(true);
+    }
+  });
+
+  var visualization = document.getElementById('visualization');
   if (visualization) {
     var parent = $(visualization).parent();
     if (parent.attr('id') === 'phoneFrame') {
@@ -1366,10 +1322,6 @@ function resizePinnedBelowVisualizationArea() {
     } else {
       top += $(visualization).outerHeight(true);
     }
-  }
-
-  if (gameButtons) {
-    top += $(gameButtons).outerHeight(true);
   }
 
   var bottom = 0;
@@ -1452,9 +1404,14 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
 };
 
 /**
- * Resize the visualization to the given width
+ * Resize the visualization to the given width. If no width is provided, the
+ * scale of child elements is updated to the current width.
  */
 StudioApp.prototype.resizeVisualization = function (width) {
+  if ($('#visualizationColumn').hasClass('wireframeShare')) {
+    return;
+  }
+
   var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
@@ -1462,7 +1419,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
-                         Math.min(this.maxVisualizationWidth, width));
+                         Math.min(this.maxVisualizationWidth, width || oldVizWidth));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -1598,7 +1555,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_, options.level.isK1);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
@@ -1674,23 +1631,6 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 * {function} onComplete Function to be called upon completion.
 */
 StudioApp.prototype.report = function (options) {
-
-  if (options.containedLevelResultsInfo) {
-    // If we have contained level results, just submit those directly and return
-    this.onAttempt({
-      callback: options.containedLevelResultsInfo.callback,
-      app: options.containedLevelResultsInfo.app,
-      level: options.containedLevelResultsInfo.level,
-      serverLevelId: options.containedLevelResultsInfo.level,
-      result: options.containedLevelResultsInfo.result,
-      testResult: options.containedLevelResultsInfo.testResults,
-      submitted: options.submitted,
-      program: options.containedLevelResultsInfo.program,
-      onComplete: options.onComplete
-    });
-    this.enableShowLinesCount = false;
-    return;
-  }
 
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
@@ -1860,12 +1800,13 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
-    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+    this.initializationBlocks = Blockly.Generator.xmlToBlocks('JavaScript', xml);
   }
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
-  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false &&
+    !config.hasContainedLevels);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -1918,7 +1859,7 @@ StudioApp.prototype.configureDom = function (config) {
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
-  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -2084,6 +2025,22 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // (important because they can be different in our test environment)
   ace = window.ace;
 
+  // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
+  // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
+  // was initialized, so include it initially, and conditionally remove it here.
+  if (!window.dashboard.project.useFirebase()) {
+    // Remove onRecordEvent from the palette
+    delete config.level.codeFunctions.onRecordEvent;
+
+    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
+    const block = config.dropletConfig.blocks.find(block => {
+      return block.func === 'onRecordEvent';
+    });
+    if (block) {
+      block.noAutocomplete = true;
+    }
+  }
+
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
   this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
@@ -2197,6 +2154,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     try {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
+      // When adding content via setValue, the aceEditor cursor gets set to be
+      // at the end of the file. For mysterious reasons we've been unable to
+      // understand, we end up with some pretty funky render issues if the first
+      // time we switch to text mode the cursor is out of view beyond the bottom
+      // of the editor. Navigate to the start so that this doesn't happen.
+      this.editor.aceEditor.navigateFileStart();
     } catch (err) {
       // catch errors without blowing up entirely. we may still not be in a
       // great state
@@ -2444,7 +2407,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
+    showUnusedBlocks: utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
@@ -2911,6 +2874,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
+    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
+    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
@@ -2924,6 +2889,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
+    versionHistoryInInstructionsHeader: config.versionHistoryInInstructionsHeader,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,

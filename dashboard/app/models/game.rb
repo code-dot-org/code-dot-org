@@ -41,6 +41,7 @@ class Game < ActiveRecord::Base
   STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   GAMELAB = 'gamelab'
+  WEBLAB = 'weblab'
   NETSIM = 'netsim'
   CRAFT = 'craft'
   MAZE = 'maze'
@@ -48,6 +49,7 @@ class Game < ActiveRecord::Base
   EVAL = 'eval'
   TEXT_COMPRESSION = 'text_compression'
   LEVEL_GROUP = 'level_group'
+  PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -77,6 +79,10 @@ class Game < ActiveRecord::Base
     @@game_gamelab ||= find_by_name("Gamelab")
   end
 
+  def self.weblab
+    @@game_weblab ||= find_by_name("Weblab")
+  end
+
   def self.netsim
     @@game_netsim ||= find_by_name("NetSim")
   end
@@ -103,6 +109,10 @@ class Game < ActiveRecord::Base
 
   def self.frequency_analysis
     @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
+  end
+
+  def self.public_key_cryptography
+    @@game_public_key_cryptography ||= find_by_name("PublicKeyCryptography")
   end
 
   def self.multi
@@ -158,7 +168,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB
+    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB || app == WEBLAB
   end
 
   # True if the app takes responsibility for showing footer info
@@ -171,7 +181,7 @@ class Game < ActiveRecord::Base
   end
 
   def use_firebase_for_new_project?
-    app == APPLAB && CDO.use_firebase_for_new_applab_projects
+    app == APPLAB
   end
 
   def self.setup
@@ -236,6 +246,8 @@ class Game < ActiveRecord::Base
         StandaloneVideo:standalone_video
         ExternalLink:external_link
         EvaluationMulti:evaluation_multi
+        PublicKeyCryptography:public_key_cryptography
+        Weblab:weblab
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

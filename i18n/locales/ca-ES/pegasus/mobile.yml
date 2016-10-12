@@ -47,7 +47,7 @@ ca-ES:
   csedweek_map_legend_cs_tech_jam: Esdeveniment especial
   cded_sign_up: "Inscriure's"
   cded_try_it: Proveu-ho
-  twentyhours_trynow: Intenteu-ho ara
+  try_now: Intenteu-ho ara
   california_heading: Demaneu a la vostra escola que ensenyin informàtica
   california_text: "Qualsevol mestre pot oferir els nostres<a href='http://studio.code.org/'>cursos gratuïts</a>. Qualsevol escola de primària pot<a href='http://code.org/educate/k5'>ensenyar informàtica</a>. Demana als instituts<a href='http://code.org/educate/districts'>que ens acompanyin."
   california_button: Més informació
@@ -295,6 +295,10 @@ ca-ES:
   homepage_banner_20k_teachers_link: Aprèn més
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: Add your support
+  homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
+  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Aprèn més
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: "Proveu l'Hora de programació"
@@ -372,14 +376,9 @@ ca-ES:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: Només en anglès | Navegadors moderns | Edats 11 +
-  starwars_javascript_start_button: Intenteu-ho ara
   starwars_blocks_title: Blocs
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
-  starwars_blocks_start_button: Intenteu-ho ara
-  starwars_watch_videos: "Abans de començar, mira un d'aquests vídeos d'inspiració"
-  starwars_speak_languages: Parles una altra llengua?
-  starwars_help_translate: "Ajuda'ns amb les traduccions"
   starwars_platform_text: Navegadors moderns, mòbils i tablets
   mc_name: Hora del Codi de Minecraft
   mc_longdescription: "Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft."
@@ -388,6 +387,13 @@ ca-ES:
   mc_platformtext: Navegadors moderns, mòbils i tablets
   mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Hora del Codi de Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
+  are_you_teacher: Sou mestre?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: "Inspira alumnes i voluntaris per a l'Hora del Codi."
   volunteer_engineer_submission_subtitle_generic: '100.000 professors organitzaran una Hora del Codi a la seva aula enguany, del 7 al 13 de desembre de 2015. Ells volen la teva ajuda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} mestres volen voluntaris apassionats de l'educació de les ciències de la informàtica per ajudar amb la seva Hora del Codi aquest mes de desembre. <br>%{num_volunteers} voluntaris ja s'han inscrit. Uneix-te a ells."
@@ -514,12 +520,15 @@ ca-ES:
   dashboard_action_remove_confirm: Esborrar?
   dashboard_action_done: Fet
   dashboard_action_required: obligatori
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_answers: All assessment answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -534,6 +543,7 @@ ca-ES:
   dashboard_navigation_view_progress: Progrés
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Afegeix estudiants
   dashboard_navigation_manage_students: Gestiona els alumnes
   dashboard_navigation_lesson_plans_resources: Plans docents i recursos
@@ -682,14 +692,19 @@ ca-ES:
   dashboard_faq: Preguntes freqüents
   dashboard_faq_k5: Preguntes freqüents sobre K-5
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
+  dashboard_announce_learn_more_button: Aprèn més
+  dashboard_announce_try_now_button: Intenteu-ho ara
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Més informació
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: "Inscriure's"
@@ -798,11 +813,11 @@ ca-ES:
   course3_name: Curs 3
   course4_name: Curs 4
   accelerated_name: Curs Accelerat
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit1_name: '(old) Unit 1: Digital Information'
+  cspunit2_name: '(old) Unit 2: The Internet'
+  cspunit3_name: '(old) Unit 3: Programming'
+  cspunit4_name: '(old) Unit 4: Data'
+  cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
@@ -1222,9 +1237,8 @@ ca-ES:
   processing_beyond_longdescription: "El Processing és un llenguatge de programació, un entorn de desenvolupament i una comunitat en línia. Des del 2001, el Processing ha promogut alfabetització del programari dins de les arts visuals i l'alfabetització visual dins la tecnologia. Creat inicialment per provar maquetes i ensenyar els fonaments de la programació en un entorn visual, el Processing ha evolucionat i s'ha convertit en una eina de desenvolupament per als professionals. Avui dia, hi ha desenes de milers d'estudiants, artistes, dissenyadors, investigadors i aficionats que utilitza Processing per a l'aprenentatge, el prototipatge i la producció."
   alice_beyond_longdescription: "El projecte Alice utilitzant un entorn de programació innovadora per donar suport a la creació d'animacions 3D, proporciona eines i materials d'ensenyament i aprenentatge de pensament computacional, resolució de problemes i la programació informàtica a través d'un espectre d'edats i nivells de qualificació."
   sphero_beyond_longdescription: 'Si ets educador o un pare, les lliçons SPRK donen als nens un divertit curs accelerat a la programació de robots de mentre  milloren les seves habilitats en matemàtiques i ciències.'
-  compatibility_https_header: Si us plau accepta HTTPS per a Code.org.
-  compatibility_https_message: "Per augmentar la seguretat, estem canviant a HTTPS en %{https_date}.  No podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'> feu clic aquí</a> per aprendre com permetre HTTPS per Code.org."
-  compatibility_https_hide_this_warning: Amaga aquest avís
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

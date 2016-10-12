@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class WorkshopAttendanceTest < ActiveSupport::TestCase
-
   test "has notes" do
     workshop_attendance = create :attendance
     workshop_attendance.notes = "The notes"

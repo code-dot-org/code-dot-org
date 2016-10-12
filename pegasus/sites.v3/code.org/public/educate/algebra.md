@@ -19,7 +19,7 @@ The first 10 hour course provides students with the foundational skills and know
 For classes that wish to go further, the second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will delve deeper into the intersection of Math and CS by studying topics such as boolean logic, piecewise functions, and collision detection with the Pythagorean Theorem, using these concepts to build supporting functions that will eventually drive the logic in their culminating game.
 
 ## Aligned to Standards
-Both CS in Algebra courses are aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](/curriculum/docs/algebra/standards).
+Both CS in Algebra courses are aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](<%= CDO.code_org_url('/curriculum/docs/algebra/standards') %>).
 
 <a name="start"><a/>
 ## How do I start teaching CS in Algebra?
@@ -140,9 +140,9 @@ None of the lessons from the original version of CS in Algebra have been removed
 ### Additional Support Documents
 [Teacher Manual](/curriculum/docs/algebra/teacher_manual.pdf)<br/>
 [Student Workbook](/curriculum/docs/algebra/student_workbook.pdf)<br/>
-[Course Overview](/curriculum/docs/algebra/overview)<br/>
-[Course Framework](/curriculum/docs/algebra/framework)<br/>
-[Standards Alignment](/curriculum/docs/algebra/standards)
+[Course Overview](<%= CDO.code_org_url('/curriculum/docs/algebra/overview') %>)<br/>
+[Course Framework](<%= CDO.code_org_url('/curriculum/docs/algebra/framework') %>)<br/>
+[Standards Alignment](<%= CDO.code_org_url('/curriculum/docs/algebra/standards') %>)
 
 <h2>Videos</h2>
 

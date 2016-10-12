@@ -1,8 +1,7 @@
-var experiments = require('./experiments');
-
 /** @file Code.org configured store-creation method.
  *  @see http://redux.js.org/docs/api/createStore.html */
-'use strict';
+import Immutable from 'immutable';
+import experiments from './experiments';
 
 var redux = require('redux');
 var reduxThunk = require('redux-thunk').default;
@@ -25,7 +24,22 @@ module.exports.createStore = function (reducer, initialState) {
   var enableReduxDebugging = experiments.isEnabled('reduxLogging');
   if (process.env.NODE_ENV !== "production" && enableReduxDebugging) {
     var reduxLogger = createLogger({
-      collapsed: true
+      collapsed: true,
+      // convert immutable.js objects to JS for logging (code copied from
+      // redux-logger readme)
+      stateTransformer: (state) => {
+        let newState = {};
+
+        for (var i of Object.keys(state)) {
+          if (Immutable.Iterable.isIterable(state[i])) {
+            newState[i] = state[i].toJS();
+          } else {
+            newState[i] = state[i];
+          }
+        }
+
+        return newState;
+      }
     });
 
     // window.devToolsExtension is a Redux middleware function that must be

@@ -7,13 +7,13 @@ nav: about_nav
 <img src='<%= avatar_image('Hadi Partovi') %>'/ width='320px'>
 <br/>
 <br/>
-Hadi is a tech entrepreneur and investor, and the founder of education non-profit Code.org as well as the international [Hour of Code](http://hourofcode.com) campaign. As an entrepreneur, he was on the founding teams of Tellme and iLike. As a tech investor and startup advisor, Hadi’s portfolio includes [Facebook](http://www.facebook.com), [Dropbox](http://www.dropbox.com), [airbnb](http://airbnb.com), and other companies.
+Hadi Partovi is a tech entrepreneur and investor, and CEO of the education non-profit Code.org. 
 
-A graduate of Harvard University, Hadi began his career during the browser wars in the 1990s, when he was Microsoft’s Group Program Manager for Internet Explorer. After the release of IE 5.0, Hadi co-founded [Tellme Networks](http://en.wikipedia.org/wiki/Tellme_Networks), which was acquired by Microsoft. Hadi ran the MSN.com portal, where he delivered 30% annual growth.
+Born in Tehran, Iran, Hadi grew up during the Iran-Iraq war. His school did not offer computer science classes, so he taught himself to code at home on a Commodore 64. After immigrating to the United States, he spent his summers working as a software engineer to help pay his way through high school and college. Upon graduating from Harvard University with a computer science degree, Hadi pursued a career as a technologist at Microsoft, then as an entrepreneur at two startups – one which succeeded and one which failed, and finally as a tech investor.
 
-After leaving Microsoft a second time, Hadi co-founded [iLike](http://en.wikipedia.org/wiki/Ilike) with twin brother Ali Partovi, and together they built the leading music application on the Facebook platform. in 2009, iLike was acquired by MySpace where both Partovis worked as Senior Vice Presidents.
+In 2013 Hadi and his twin brother Ali launched the education nonprofit Code.org, which Hadi continues to lead full-time as CEO. Code.org has established computer science classes in 15% of US classrooms, created the most broadly used curriculum platform for K-12 computer science, and launched the global [Hour of Code](http://hourofcode.com) movement that has reached over 100 million students.
 
-Hadi has been a strategic advisor to numerous startups including Facebook, Dropbox, and OPOWER, and serves on the board of [TASER International](http://www.taser.com/). 
+Hadi has served as an early advisor to numerous startups including [Facebook](http://www.facebook.com) and [Dropbox](http://www.dropbox.com), and as a tech investor his portfolio also includes [airbnb](http://www.airbnb.com), [Uber](http://www.uber.com), [Zappos](http://www.zappos.com), [IndieGogo](http://www.indiegogo.com), [Change.org](http://change.org), and others. Hadi also serves as a Director on the boards of [TASER International](http://taser.com) and [Convoy](http://www.convoy.com).
 
 <hr/>
 Educators: [Request a visit to your school assembly](/visit)

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Distribute downloaded translations from i18n/locales
-# back to blockly-core, apps, pegasus, and dashboard.
+# back to blockly, apps, pegasus, and dashboard.
 
 set -e
 
@@ -18,13 +18,21 @@ for locale in $locales; do
   en_dir=i18n/locales/source/dashboard
 
   # Special case the un-prefixed Yaml file.
-  ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/base.yml $loc_dir/base.yml $orig_dir/$locale.yml
+  if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+    ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $loc_dir/base.yml $orig_dir/$locale.yml
+  else
+    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/base.yml $loc_dir/base.yml $orig_dir/$locale.yml
+  fi
   perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/$locale.yml
 
   # Merge in all the other Yaml files.
   for file in $(find $loc_dir -name '*.yml' -and -not -name 'base.yml'); do
     relname=${file#$loc_dir}
-    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir$relname $file $orig_dir${relname%.yml}.${locale}.yml
+    if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+      ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $file $orig_dir${relname%.yml}.${locale}.yml
+    else
+      ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir$relname $file $orig_dir${relname%.yml}.${locale}.yml
+    fi
     perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir${relname%.yml}.${locale}.yml
   done
 
@@ -38,12 +46,16 @@ for locale in $locales; do
   # Copy JSON files.
   for file in $(find $loc_dir -name '*.json'); do
     relname=${file#$loc_dir}
-    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
+    if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+      ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "json" $file $orig_dir${relname%.json}/${js_locale}.json
+    else
+      ruby ./bin/i18n-codeorg/lib/merge-translation.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
+    fi
   done
 
 
   ### Blockly Core
-  orig_dir=blockly-core/i18n/locales/$locale
+  orig_dir=apps/node_modules/@code-dot-org/blockly/i18n/locales/$locale
   loc_dir=i18n/locales/$locale/blockly-core
   en_dir=i18n/locales/source/blockly-core
   mkdir -p $orig_dir
@@ -51,7 +63,11 @@ for locale in $locales; do
   # Copy JSON files.
   for file in $(find $loc_dir -name '*.json'); do
     relname=${file#$loc_dir}
-    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "json" $en_dir$relname $file $orig_dir$relname
+    if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+      ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "json" $file $orig_dir$relname
+    else
+      ruby ./bin/i18n-codeorg/lib/merge-translation.rb "json" $en_dir$relname $file $orig_dir$relname
+    fi
   done
 
 
@@ -61,8 +77,11 @@ for locale in $locales; do
   en_dir=i18n/locales/source/pegasus
 
   # Merge YML file.
-  ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/mobile.yml $loc_dir/mobile.yml $orig_dir/$locale.yml
+  if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+    ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $loc_dir/mobile.yml $orig_dir/$locale.yml
+  else
+    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/mobile.yml $loc_dir/mobile.yml $orig_dir/$locale.yml
+  fi
   perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/$locale.yml
-
 
 done

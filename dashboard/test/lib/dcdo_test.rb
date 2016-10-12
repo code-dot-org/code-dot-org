@@ -30,7 +30,7 @@ class DCDOTest < ActiveSupport::TestCase
   test 'storing hashes' do
     to_store = {
       'b' => 'yo dude',
-      'c' => [1,2,3]
+      'c' => [1, 2, 3]
     }
     key = 'random'
     DCDO.set(key, to_store)

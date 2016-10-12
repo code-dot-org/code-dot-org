@@ -1,8 +1,8 @@
 Feature: Complete a complicated maze level
 
 Background:
-  Given I am on "http://learn.code.org/reset_session"
-  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
+  Given I am on "http://studio.code.org/reset_session"
+  Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 15 of 20"
   And element ".modal-content p:nth-child(2)" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
@@ -17,7 +17,7 @@ Scenario: Submit an invalid solution
   Then element "#runButton" is hidden
   And element "#resetButton" is visible
   Then I wait until element ".congrats" is visible
-  # Skipping due to failing on test.learn.code.org environment
+  # Skipping due to failing on test.studio.code.org environment
   #   TODO (espertus/bjordan): fix or change level this applies to
   # And element ".congrats" has text "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."
   # todo (brent): could also try the back button, and validate that clicking outside of the dialog closes it
@@ -44,7 +44,6 @@ Scenario: Submit a valid solution
 
   # todo (brent) : could test show code
   And I press "continue-button"
-  And I wait for 2 seconds
-  Then check that I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16"
+  Then I wait until I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/16"
   Then check that level 16 on this stage is done
   Then check that level 15 on this stage is not done

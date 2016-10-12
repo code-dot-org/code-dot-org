@@ -83,6 +83,6 @@ module ProxyHelper
   # ensure that the response will not be cached by clients or proxies.
   def render_error_response(status, text)
     prevent_caching
-    render text: text, status: status
+    render plain: text, status: status
   end
 end

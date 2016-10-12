@@ -1,13 +1,9 @@
-pd 'true'
-title 'Computer Science Principles: Unit 2 PD'
-description 'Online Exploration of CSP Unit 2'
-description_short 'Online Exploration of CSP Unit 2'
+professional_learning_course 'CS Principles Support'
 login_required 'true'
 
 stage 'Getting Started'
 level 'CSPPD3-u2 Welcome'
 level 'CSPPD3-u2 overivew'
-level 'PD check your progress'
 level 'CSPPD3-u2 tips for prep'
 level 'CSPPD3-u2 plan'
 

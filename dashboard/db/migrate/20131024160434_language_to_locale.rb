@@ -1,5 +1,4 @@
-class LanguageToLocale < ActiveRecord::Migration
-
+class LanguageToLocale < ActiveRecord::Migration[4.2]
   def up
     execute "ALTER TABLE users CHANGE language locale VARCHAR(10)"
     execute "UPDATE users SET locale = 'en-US' WHERE locale IS NULL;"
@@ -11,5 +10,4 @@ class LanguageToLocale < ActiveRecord::Migration
     execute "UPDATE users SET locale = 'en' WHERE locale = 'en-US';"
     execute "ALTER TABLE users CHANGE locale language VARCHAR(2);"
   end
-
 end

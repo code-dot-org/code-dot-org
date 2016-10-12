@@ -5,7 +5,6 @@
  * @see NetSimRouterTab
  * @see NetSimDnsTab
  */
-'use strict';
 
 import $ from 'jquery';
 var buildMarkup = require('./NetSimTabsComponent.html.ejs');
@@ -30,6 +29,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {function} callbacks.routerMemorySliderStopCallback
  * @param {function} callbacks.dnsModeChangeCallback
  * @param {function} callbacks.becomeDnsCallback
+ * @param {function} callbacks.showRouterLogCallback
  * @constructor
  */
 var NetSimTabsComponent = module.exports = function (rootDiv, runLoop, callbacks) {
@@ -103,6 +103,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv, runLoop, callbacks
    * @private
    */
   this.becomeDnsCallback_ = callbacks.becomeDnsCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.showRouterLogCallback_ = callbacks.showRouterLogCallback;
 
   /**
    * @type {NetSimRouterTab}
@@ -180,7 +186,8 @@ NetSimTabsComponent.prototype.render = function () {
           bandwidthSliderChangeCallback: this.routerBandwidthSliderChangeCallback_,
           bandwidthSliderStopCallback: this.routerBandwidthSliderStopCallback_,
           memorySliderChangeCallback: this.routerMemorySliderChangeCallback_,
-          memorySliderStopCallback: this.routerMemorySliderStopCallback_
+          memorySliderStopCallback: this.routerMemorySliderStopCallback_,
+          showRouterLogCallback: this.showRouterLogCallback_
         });
   }
 

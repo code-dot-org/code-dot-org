@@ -9,8 +9,8 @@ Dir.chdir REPO_DIR
 branchname = `git rev-parse --abbrev-ref HEAD`.strip
 
 exit(0) unless branchname == 'levelbuilder'
-modified_files = HooksUtils.get_modified_files
+staged_files = HooksUtils.get_staged_files
 
-modified_files.each do |filename|
+staged_files.each do |filename|
   raise "#{ERROR_MESSAGE}\nFile blocked: #{filename}" unless filename.start_with?(LEVELS_DIR) || WHITELISTED_FILES.include?(filename)
 end

@@ -3,7 +3,15 @@
     messages:
       not_saved: "Коригирайте следните грешки:"
       too_young: "Това съдържание има възрастови ограничения и не е достъпно за по-малките
-        ученици"
+        ученици."
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -83,20 +91,11 @@
   signup_form:
     student_count: "%{count} ученици вече са се регистрирали."
     teacher_count: "%{count} учители вече са се регистрирали."
-    overview_student: Регистрирайте се, за да следите напредъка си. Вашият имейл се
-      използва само при влизане в сайта и за възстановяване на парола. За повече информация
-      вижте нашата <a href="http://code.org/privacy"> Политика за поверителност</a>.
-    overview_teacher: "Преподавайте компютърни науки в класната ви стая като се регистрирате.
-      <p/> Вие ще можете да добавите вашите ученици и да проследявате тяхното развитие."
-    no_signup_message: Можете да <a target="_blank" href="http://learn.code.org">
-      сърфирате в различните етапи и пъзели</a>, но ще трябва да се регистрирате,
-      за да запишете вашия прогрес.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: "Виж ръководството за възпитатели"
-    teacher_pitch: "регистрация като Учител в Code.org"
-    teacher_title: "Регистрация за Учители/Възпитатели"
-    student_pitch: "регистрация като ученик в Code.org"
-    student_title: "регистрация"
-    signup_title: "Абонирайте се за Code.org"
+    title: Sign up for Code.org
     school_name: "Име на училище (по желание)"
     school_address: "Адрес на училището (по избор)"
     address_placeholder: "адрес, град, държава, пощенски код"
@@ -124,9 +123,11 @@
     user_type_label: "Тип акаунт"
     user_type_teacher: "Учител"
     user_type_student: "Ученик"
+    field_is_required: "е задължително"
+    accept_terms: You must agree to create an account
   signin_form:
     title: "Вече имате профил? Влизане"
-    login: "Имейл или потребителско име"
+    login: "Имейл"
     password: "Парола"
     remember: "Запомни ме"
     submit: "Вход"
@@ -140,11 +141,15 @@
     picture: "Сега намерете вашата тайна картина"
     words: "Сега въведете вашите тайни думи"
     login: "Вход"
+    invalid_login: "Невалидна влизане, моля опитайте отново"
+    pair_programming: "Имам партньор на моя компютър"
   password:
     reset_form:
       title: "Забравена парола?"
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: "Имейл адрес"
-      submit: "Изпрати ми инструкции за смяна на парола"
+      submit: "Изпрати"
     change_form:
       title: "Смяна на паролата"
       new_password: "Нова парола"
@@ -286,6 +291,10 @@
       signin: "Вход"
       signup: "Регистрирайте се"
       already_registered: "Вече сте регистриран?"
+      pair_programming: "Програмиране по двойки"
+      team: "Екип"
+      driver: "Шофьор"
+      navigator: "Навигатор"
     popup:
       progress_for_user: "на %{name} в прогрес"
       progress: "Вашият напредък"
@@ -311,7 +320,7 @@
     user_not_found: "Учителят не може да бъде намерен."
     student_teacher_disassociated: "Премахнали сте %{teacher_name} като ваш учител."
     panel:
-      answer_viewer: "Преглед на отговора"
+      answer_viewer: "Учителски панел"
       student: "Ученик"
       viewing_solution: "Показване на решението"
       try_it_yourself: "Опитайте сами"
@@ -320,6 +329,8 @@
       example_with_number: "Примерно решение %{solution_number}"
       submitted_on: "Добавено на %{date}"
       unsubmit: "Не е добавено"
+      worked_with: "Работи с"
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: "Имейл адресът не е потвърден:"
     email_confirm_needed_required: "Вашият email адрес не е потвърден %{email} :"
@@ -392,13 +403,20 @@
     choose_next_course: "Опитайте курс като си изберете един от тези по-долу"
     print_certificate: "Печат на сертификат"
     announcement_title: "Съобщения"
-    announcement_view_all: "Преглед на всички"
-    announcement_message: "<b>22 април 2016</b> - Дейностите без компютър са важна
-      част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите
-      може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
-      всички ресурси без компютър на една целева страница. Свържете уроците с всеки
-      Кн клас, или използвайте самостоятелно като независим курс."
-    announcement_button: "Тестване на функцията"
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
+    announcement_csp_widgets_message: "Търсите забавни начини да покажете на своя
+      клас как работи интернет, как криптографията запазва данни и други концепции?
+      Вземете най-добрите интерактивни инструменти от нашата учебна програма Принципи
+      на компютърните науки и използвайте инструментите по всяко време!"
+    announcement_learn_more_button: "Научете повече"
+    announcement_try_now_button: "Опитайте сега"
     announcement_petition: "Като учител, Вие трябва да намерите подход, така че да
       дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
       Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
@@ -406,6 +424,9 @@
       зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
       образование."
     announcement_petition_button: "Добавете името си"
+    announcement_all: "Получавайте информация за нови функции и актуализации на нашия
+      учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните
+      съобщения.</a>"
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля,
       въведете код за друг раздел."
@@ -498,10 +519,6 @@
         си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите
         поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е
         възможно да не функционира както трябва."
-      ie_message: Code.org скоро ще спре поддръжката за Internet Explorer 8, 9 и 10.
-        Надстройте до модерен браузър.
-      ie_message_csedweek: CSEdWeek.org скоро ще спре да поддръжа Internet Explorer
-        8, 9 и 10. Надстройте до модерен браузър.
       link: "Научете повече"
   slow_loading: "Това отнема повече време от обичайното..."
   try_reloading: "Опитайте да презаредите страницата"
@@ -631,13 +648,16 @@
     wrong_body: "Благодаря Ви, че подадохте отговор."
     correct_title: "Благодаря"
     correct_body: "Благодаря Ви, че подадохте отговор."
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    toofew_title: "Твърде малко отговори."
+    toofew_body: "Изберете два отговора преди изпращане."
   level_group:
     wrong_title: "Благодаря"
     wrong_body: "Благодаря Ви, че подадохте отговор"
     correct_title: "Благодаря"
     correct_body: "Благодаря Ви, че подадохте отговор"
+    hide_survey_last_answer: "Това анкета е анонимна.  Моля, посетете учителското
+      таблото за обобщени резултати.  Имайте предвид, че резултатите ще се виждат
+      само ако най-малко пет ученици са направили анкетата."
   level_group-submittable:
     wrong_title: "Благодаря"
     wrong_body: "Благодаря Ви, че подадохте отговор"
@@ -684,40 +704,6 @@
     hour: 1 час
     day: "ден"
     week: "седмица"
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 въведение в компютърните науки (15-25 часа)
-          description: "Този 20-часов курс, представя основните компютърни науки,
-            концепции и термини в програмирането. Курсът е предназначен най-вече за
-            използване в класните стаи за учениците в 7-8 клас, но е забавен за всички
-            възрасти."
-        Hour of Code:
-          title: "Час на кодирането 2013"
-          description: ''
-        edit-code:
-          title: "Редактиране на кода"
-          description: ''
-        events:
-          title: "Събития"
-          description: ''
-        builder:
-          title: "Строител"
-          description: ''
-        flappy:
-          title: Flappy код
-          description: "Искате ли да напишете своя собствена игра за по-малко от 10
-            минути? Опитайте нашите Flappy код уроци!"
-        jigsaw:
-          title: "Мозайка"
-          description: ''
-        step:
-          title: "Стъпка"
-          description: ''
-        sample_level_builder:
-          title: "Строител на примерно ниво"
-          description: ''
   age_interstitial:
     age: "Вашата възраст"
     header: "Актуализиране на информацията за акаунта"
@@ -727,6 +713,34 @@
       няма да продава или споделя тази информация с трети страни."
     sign_out: Ако не искате да предоставите информация за вашата възраст, може да
       <a href="%{url}"> излезете</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: "Термини"
+    privacy: "Защита на личните данни"
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: "Печат"
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Съжаляваме, но малки потребители не може да влизат в
     нашия сайт за поддръжка. Може да разглеждате <a href="http://support.code.org">
     support.code.org</a> без регистрация или попитайте вашия родител или учител да
@@ -758,6 +772,8 @@
     share_copy_link: "Копиране на връзката:"
     share_embed_description: "Можете да поставите кода за вграждане в HTML страница
       за показване на проекта в уеб сайт."
+    share_u13_warning: "Попитай учителя си преди да споделиш. Споделяй само с други
+      ученици от твоето училище."
     embed: "За вграждане"
     advanced_share: "Показване на разширените опции"
     close: "Затваряне"
@@ -789,6 +805,9 @@
     abuse:
       tos: "Този проект нарушава Code.org <a href='http://code.org/tos'> Условията
         за ползване</a> и не може да бъде споделен с други потребители."
+      policy_violation: "Този проект съдържа информация, която не може да бъде споделена
+        с други потребители. Обърнете се към собственика на приложението да промени
+        съдържанието."
       contact_us: "Ако смятате, че това е грешка, моля <a href='https://code.org/contact'>
         свържете се с нас.</a>"
       go_to_code_studio: "Отидете в Code Studio"
@@ -832,6 +851,15 @@
     instructor_feedback: "Инструктор: обратна връзка"
     peer_feedback: "Изпрати обратна връзка"
     outdated: "Тази обратна връзка е добавена в по-ранна версия"
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: "Търси икона..."
@@ -850,14 +878,15 @@
     required: "Общ преглед"
     content: "Съдържание"
     practice: "Учителски практики"
+    peer_review: "Вашаят отзив"
   external_links:
-    disclaimer_md: "<strong>Отказ от отговорност: Вие сте на път да напуснете Code.org
-      и да преминете към сайт, който не се управлява от Code.org.</strong> Този сайт
-      може да има политика за поверителност, която се различава от тази на Code.org
-      в. <br/> <br/> Ние сме избрали тези партньорски ресурси, защото смятаме, че
-      те ще бъдат полезни за Вас. Но ние не сме пряко отговорни за съдържанието на
-      този сайт, моля, <a href='%{support_url}'>contact support</a>свържете се с поддръжката</a>
-      ако откриете, че съдържанието е нежелателно, или ако свързания сайт вече не
+    disclaimer: "Отказ от отговорност"
+    leaving_domain: "Сега напускате този домейн, преминавайки към сайт, който не се
+      управлява от Code.org."
+    disclaimer_text: "Този сайт може да има политика за поверителност, която се различава
+      от тази на Code.org. Ние не сме пряко отговорни за съдържанието на този сайт,
+      моля, <a href='%{support_url}'>contact support</a>свържете се с поддръжката
+      ако откриете, че съдържанието е нежелателно, или ако линка към сайта вече не
       е достъпен."
   hoc_download:
     title: "Часът на кода за сваляне"
@@ -892,3 +921,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

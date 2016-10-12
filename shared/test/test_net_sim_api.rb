@@ -1,6 +1,14 @@
+# Unit tests for NetSimApi
+# This uses a fake Redis service by default, but can be configured to use a
+# real instance on localhost by setting the USE_REAL_REDIS environment variable;
+# e.g. "USE_REAL_REDIS=true ruby test_redis_property_bag.rb".
+# Caution: This test is destructive, clears the whole Redis instance between
+# tests, so be careful when using real redis.
+
 require_relative 'test_helper'
+require 'fakeredis' unless use_real_redis?
+require 'redis-slave-read'
 require 'net_sim_api'
-require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
 class NetSimApiTest < Minitest::Test
@@ -20,8 +28,10 @@ class NetSimApiTest < Minitest::Test
     # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
 
-    # Always use a fake Redis.
-    NetSimApi.override_redis_for_test(FakeRedisClient.new)
+    # Redis - delete everything before each test
+    test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: Redis.new({host: 'localhost'}))
+    test_redis.flushall
+    NetSimApi.override_redis_for_test(test_redis)
 
     # Every test should start with an empty table.
     assert read_records.first.nil?, 'Table did not begin empty'
@@ -69,6 +79,50 @@ class NetSimApiTest < Minitest::Test
     delete_record(record_id || 1)
     delete_record(record_id2 || 2)
     assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  def test_distribute_reads
+    master = MiniTest::Mock.new
+    slave1 = MiniTest::Mock.new
+    slave2 = MiniTest::Mock.new
+    test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
+    NetSimApi.override_redis_for_test(test_redis)
+
+    # Operations distribute evenly across all three nodes
+    master.expect :hgetall, {}, [String]
+    slave1.expect :hgetall, {}, [String]
+    slave2.expect :hgetall, {}, [String]
+
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
+    master.verify
+    slave1.verify
+    slave2.verify
+  end
+
+  def test_not_distribute_writes
+    master = MiniTest::Mock.new
+    slave1 = MiniTest::Mock.new
+    slave2 = MiniTest::Mock.new
+    test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
+    NetSimApi.override_redis_for_test(test_redis)
+
+    # All operations go to master node
+    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :multi, []
+    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :multi, []
+    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :multi, []
+
+    create_record([{name: 'alice', age: 7, male: false}])
+    create_record([{name: 'alice', age: 7, male: false}])
+    create_record([{name: 'alice', age: 7, male: false}])
+
+    master.verify
+    slave1.verify
+    slave2.verify
   end
 
   def test_create_multiple_records
@@ -131,6 +185,7 @@ class NetSimApiTest < Minitest::Test
     assert_equal 200, @net_sim_api.last_response.status
 
     result = JSON.parse(@net_sim_api.last_response.body)
+    result['table1']['rows'].sort! {|a, b| a['id'] <=> b['id']}
     assert_equal(
       {'table1' => {'rows' => [t1_row1, t1_row2]},
        'table2' => {'rows' => [t2_row2]},
@@ -813,5 +868,4 @@ class NetSimApiTest < Minitest::Test
   def last_error_details
     JSON.parse(@net_sim_api.last_response.body)['details']
   end
-
 end

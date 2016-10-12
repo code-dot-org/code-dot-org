@@ -23,9 +23,14 @@
 #
 
 class FrequencyAnalysis < Widget
-
   before_validation do
     self.href = 'frequency/frequency.html'
+  end
+
+  serialized_attrs :cipher, :texts
+
+  def self.ciphers
+    %w(default caesar substitution)
   end
 
   def self.create_from_level_builder(params, level_params)

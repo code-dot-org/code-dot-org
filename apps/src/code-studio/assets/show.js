@@ -13,7 +13,7 @@ var Dialog = require('../dialog');
  *   uploaded.
  * @param onClose {Function} Called when the user closes the asset manager.
  */
-module.exports = function (assetChosen, typeFilter, onClose) {
+module.exports = function (assetChosen, typeFilter, onClose, showUnderageWarning) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = new Dialog({
@@ -21,6 +21,7 @@ module.exports = function (assetChosen, typeFilter, onClose) {
     id: 'manageAssetsModal',
     onHidden: onClose
   });
+
   ReactDOM.render(React.createElement(ImagePicker, {
     typeFilter: typeFilter,
     channelId: dashboard.project.getCurrentId(),
@@ -28,7 +29,8 @@ module.exports = function (assetChosen, typeFilter, onClose) {
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);
-    } : null
+    } : null,
+    showUnderageWarning,
   }), codeDiv);
 
   dialog.show();

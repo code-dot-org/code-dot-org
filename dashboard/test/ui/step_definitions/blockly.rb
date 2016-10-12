@@ -51,8 +51,8 @@ end
 
 Then /^block "([^"]*)" is at offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
-  point.x.should eq x.to_i
-  point.y.should eq y.to_i
+  expect(point.x).to eq(x.to_i)
+  expect(point.y).to eq(y.to_i)
 end
 
 Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly )?)location "([^"]*)"$/ do |block, negation, is_blockly, location_identifier|
@@ -106,13 +106,27 @@ Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
   @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  @parent_item.should eq @actual_parent_item
+
+  # Applitools wraps the webdriver and breaks element equality; this is a workaround.
+  # Should be removable after we have this fix:
+  # https://github.com/applitools/Eyes.Selenium.Ruby/pull/46
+  @parent_item = @parent_item.web_element if @parent_item.respond_to?(:web_element)
+  @actual_parent_item = @actual_parent_item.web_element if @actual_parent_item.respond_to?(:web_element)
+
+  @parent_item.should eql @actual_parent_item
 end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
   @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
+
+  # Applitools wraps the webdriver and breaks element equality; this is a workaround.
+  # Should be removable after we have this fix:
+  # https://github.com/applitools/Eyes.Selenium.Ruby/pull/46
+  @parent_item = @parent_item.web_element if @parent_item.respond_to?(:web_element)
+  @actual_parent_item = @actual_parent_item.web_element if @actual_parent_item.respond_to?(:web_element)
+
   @parent_item.should_not eq @actual_parent_item
 end
 

@@ -123,5 +123,4 @@ class Eval < Blockly
     embed_xml = match[1] if match && match[1]
     return embed_xml
   end
-
 end

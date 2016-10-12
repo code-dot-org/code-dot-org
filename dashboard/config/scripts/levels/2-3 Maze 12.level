@@ -27,10 +27,11 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "7/26: Added limit on move forwards and removed 5 starting move forwards - Ryan",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 1
@@ -39,28 +40,12 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="maze_moveForward">
-          <next>
-            <block type="maze_moveForward">
-              <next>
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="maze_moveForward"/>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_moveForward" limit="1"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>

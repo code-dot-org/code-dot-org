@@ -1,8 +1,6 @@
 /**
  * @overview Simulation entity for a message between two nodes.
  */
-'use strict';
-
 var utils = require('../utils'); // Provides Function.prototype.inherits
 var NetSimEntity = require('./NetSimEntity');
 var DataConverters = require('./DataConverters');

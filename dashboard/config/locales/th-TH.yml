@@ -3,6 +3,14 @@
     messages:
       not_saved: "โปรดแก้ไขข้อผิดพลาดต่อไปนี้:"
       too_young: "เนื้อหานี้อาจไม่เหมาะสมกับกับผู้ที่มีอายุน้อยเกินไป"
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -33,7 +41,7 @@
   done_with_module: Done with this Learning Module
   cancel: "ยกเลิก"
   okay: "ตกลง"
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (หน้า %{x} จาก %{y})"
   add_teacher_form:
     code:
       label: "เพิ่มครู:"
@@ -80,18 +88,11 @@
   signup_form:
     student_count: "%{count} นักเรียนได้ลงทะเบียนไว้แล้ว"
     teacher_count: "ครู %{count} ได้ลงทะเบียนไว้แล้ว"
-    overview_student: สมัครเป็นสมาชิกเพื่อติดตามความคืบหน้าของคุณ อีเมล์ของคุณส่วนใหญ่ไว้เพื่อให้คุณสามารถเข้าสู่ระบบ
-      และ สำหรับการกู้คืนรหัสผ่าน สำหรับข้อมูลเพิ่มเติม ดู<a href="http://code.org/privacy">นโยบายความเป็นส่วนตัว</a>ของเรา
-    overview_teacher: "สอนวิทยาศาสตร์คอมพิวเตอร์ในชั้นเรียน โดยลงนามในบัญชี. <p/>
-      คุณจะสามารถเพิ่มนักเรียนของคุณ และติดตามความคืบหน้าของพวกเขา"
-    no_signup_message: คุณสามารถ<a target="_blank" href="http://learn.code.org">เรียกดูระยะและปริศนาต่าง
-      ๆ</a> แต่คุณจะต้องลงทะเบียนเพื่อบันทึกความคืบหน้าของคุณ
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: "ดูคำแนะนำสำหรับผู้ฝึกสอน"
-    teacher_pitch: "คุณครูสมัคร Code.org"
-    teacher_title: "สมัครเป็นครู"
-    student_pitch: "สมัครเป็นนักเรียนสำหรับ code.org"
-    student_title: "สมัครเป็นนักเรียน"
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: "ชื่อโรงเรียน (ถ้ามี)"
     school_address: "ที่อยู่โรงเรียน (ถ้ามี)"
     address_placeholder: "ที่อยู่, อำเภอ, จังหวัด, รหัสไปรษณีย์"
@@ -113,12 +114,14 @@
     teacher_terms: "ฉันยอมรับ<a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>ของ
       Code.org"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
-    user_type_label: Account Type
+    user_type_label: "ประเภทบัญชี"
     user_type_teacher: "ครู"
     user_type_student: "นักเรียน"
+    field_is_required: "จำเป็น"
+    accept_terms: You must agree to create an account
   signin_form:
     title: "มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ"
-    login: "อีเมล หรือ ชื่อผู้ใช้งาน"
+    login: "อีเมล"
     password: "รหัสผ่าน"
     remember: "จำฉัน"
     submit: "เข้าสู่ระบบ"
@@ -132,11 +135,15 @@
     picture: "หารูปภาพลับ"
     words: "ป้อนคำศัพท์ลับของคุณ"
     login: "เข้าสู่ระบบ"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "ลืมรหัสผ่าน?"
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: "ที่อยู่อีเมล"
-      submit: "ส่งคำแนะนำการเปลี่ยนรหัสผ่านมาให้ฉัน"
+      submit: "ส่ง"
     change_form:
       title: "เปลี่ยนรหัสผ่านของคุณ"
       new_password: "รหัสผ่านใหม่"
@@ -251,7 +258,7 @@
     edit: "แก้ไข"
     edit_model: "แก้ไข %{model}"
     update: "อัพเดท"
-    destroy: Destroy
+    destroy: "ทำลาย"
     back: "กลับ"
     confirm: "คุณแน่ใจหรือไม่?"
     created: "%{model} สร้างเสร็จแล้ว"
@@ -266,26 +273,30 @@
         playlab: "สร้างแอพห้องทดลองหรรษา"
         artist: "วาดอะไรสักอย่างสิ"
         calculate: Calculate Something
-        applab: Make an App
+        applab: สร้างแอพ "ห้องทดลองแอพ"
     user:
       classroom: "หน้าแรกของคุณครู"
       district_dashboard: District Dashboard
       label: "สวัสดี %{username}"
-      stats: My progress
+      stats: "โค้ดสูดิโอ"
       settings: "บัญชีของฉัน"
       prizes: "รางวัล"
       logout: "ออกจากระบบ"
       signin: "เข้าสู่ระบบ"
       signup: "สมัครสมาชิก"
-      already_registered: Already registered?
+      already_registered: "ลงทะเบียนแล้วหรือยัง?"
+      pair_programming: Pair Programming
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}'s progress"
       progress: "ความคืบหน้าของคุณ"
-      lines: 'Total lines of code: %{lines}'
+      lines: "จำนวนบรรทัดของโค้ด: %{lines}"
       close: "ปิด"
       mastery: "แนวคิด"
       puzzle_map: "ขั้นตอน"
-      prizes: Collect all %{total_trophies} trophies and win prizes!
+      prizes: "สะสมถ้วยรางวัลได้ %{total_trophies} แถมยังได้รับรางวัลด้วย"
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: "(เฉพาะนักเรียนในสหรัฐอเมริกาเท่านั้น)"
       prizes_link: "ข้อมูลเพิ่มเติม"
@@ -312,6 +323,8 @@
       example_with_number: Example Solution %{solution_number}
       submitted_on: "ส่งให้:"
       unsubmit: "ไม่ส่ง"
+      worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: "อีเมล์นี้ยังไม่ได้ยืนยันตัว:"
     email_confirm_needed_required: "อีเมล์ %{email} ของคุณยังไม่ได้รับการยืนยัน："
@@ -328,42 +341,40 @@
     completed: "สมบูรณ์"
     tried: Tried
   home:
-    title: Code Studio
+    title: "โค้ดสูดิโอ"
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
     lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
       MILLION STUDENTS"
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
-    signin_message: Already registered? %{link}
+    all_courses: "ภาพรวมของคอร์ส 1, 2 และ 3"
+    lesson_plans: "แผนการสอน"
+    signin_message: "ลงทะเบียนแล้วหรือยัง? %{link}"
     student_reg_link: "ลงทะเบียนนักเรียน"
     teacher_reg_link: "ลงทะเบียนครู"
-    signin_directions: Use an account to track progress.<br/> Teachers, track your
-      entire class.
-    teacher_dashboard: See progress dashboard
+    signin_directions: "ใช้บัญชีเพื่อติดตามความก้าวหน้า <br/> สำหรับคุณครูสำหรับตรวจชั้นเรียนทั้งหมดของคุณ"
+    teacher_dashboard: "ดูตารางสรุปความก้าวหน้า"
     teacher_student_count_one: "คุณมีนักเรียน %{count} คน"
     teacher_student_count: "คุณมีนักเรียน %{count} คน."
-    teacher_averages: On average your students have earned %{trophy_average} out of
-      %{trophy_max} "Concept Mastery" trophies.
+    teacher_averages: นักเรียนของคุณได้รับถ้วยรางวัล "ความเชี่ยวชาญแนวคิด" โดยเฉลี่ย
+      %{trophy_average} จาก%{trophy_max}
     teacher_print_certificates: "พิมพ์ใบรับรองสำหรับนักเรียนที่จบหลักสูตรนี้"
-    teacher_read_blog: Read about news and updates to our materials at our Educator
-      Blog
+    teacher_read_blog: "อ่านข่าวสารและการอัพเดทเกี่ยวกับสื่อต่าง ๆ ได้ที่บล็อกนักการศึกษา"
     classroom: "ห้องเรียนของคุณ"
     student_progress: "พัฒนาการเรียนรู้ของคุณ"
-    student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
-      trophies.
-    student_left_off: 'Where you left off:'
-    student_finished: You've completed all tutorials, pick another class %{online_link}
-      or at a %{local_school_link}
-    local_school: local school
-    online: online
-    see_details: See details
-    view_course: View Course
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
-      $1,000 in classroom rewards.'
-    tryfirst: 'Or, you can try it first, and sign up later:'
+    student_stats: คุณได้ถ้วยรางวัล "ความเชี่ยวชาญแนวคิด" จำนวน %{trophy_count} จาก
+      %{trophy_max}
+    student_left_off: "ตำแหน่งที่คุณเพิ่งจากมา:"
+    student_finished: "คุณผ่านบทเรียนทั้งหมดของ Code.org แล้ว เลือกชั้นเรียนอื่น %{online_link}
+      หรือ %{local_school_link}"
+    local_school: "ภายในโรงเรียน"
+    online: "ออนไลน์"
+    see_details: "ดูรายละเอียด"
+    view_course: "ดูคอร์สเรียน"
+    prize_info: "รางวัลการมีส่วนร่วม (เฉพาะครูโรงเรียนรัฐบาลในสหรัฐฯ เท่านั้น): รางวัลแก่ห้องเรียนมากกว่า
+      $1,000"
+    tryfirst: "หรือคุณจะแค่ทดลองก่อนก็ได้ แล้วค่อยสมัครสมาชิกภายหลัง"
     trynow: "ลองตอนนี้"
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: "ช่วยเราเพิ่มคำใบ้ในบทเรียนของ Code.org"
     20hour_overview: This 20-hour course introduces core computer science and programming
       concepts. The course is designed for use in classrooms for grades K-8, but it
       is fun to learn at all ages.
@@ -382,19 +393,28 @@
     choose_next_course: "ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้"
     print_certificate: "พิมพ์ใบรับรอง"
     announcement_title: "ประกาศ"
-    announcement_view_all: "ดูทั้งหมด"
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class
+      how the Internet works, how cryptography keeps data secure, and other concepts?
+      We’ve taken the best interactive tools from our Computer Science Principles
+      curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    announcement_try_now_button: "ลองตอนนี้"
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Add your name
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -454,33 +474,28 @@
     privacy: "นโยบายความเป็นส่วนตัว"
     secure: Secure Version
     report_abuse: "รายงานการละเมิด"
-    built_on_code_studio: Built on Code Studio
+    built_on_code_studio: "สร้างด้วย Code Studio"
     make_my_own_app: "สร้าง app ของฉันเอง"
     how_it_works: "มันทำงานได้อย่างไร"
     try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: "ต้องการความช่วยเหลือเหรอ?"
     subtitle: "ดูวิดีโอและคำใบ้พวกนี้"
-    teacher: See the solution
-    auth_error: You are not authorized to see the solution.
+    teacher: "ดูทางเลือก"
+    auth_error: "คุณไม่ได้รับสิทธิ์ให้ดูทางเลือกแก้ปัญหา"
     submit: Update Artist Location
     direction: Start Direction (in degrees)
   video:
     tab: "วิดีโอ"
-    notes: No video? Show notes.
-    notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: Autoplay videos
+    notes: "ไม่มีวิดีโอเหรอ? แสดงบันทึกย่อแทนซิ"
+    notes_coming_soon: "เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้"
+    autoplay_option: "วิดีโอเริ่มเล่นอัตโนมัติ"
     download: "ดาวน์โหลดวิดีโอ"
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
+      unsupported_message: "เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน กรุณาอัพเกรดเบราเซอร์เป็น
+        <a href='%{supported_browsers_url}', target='_blank'> ซึ่งเป็นหนึ่งในเบาร์เซอร์ที่เราแนะนำ</a>
+        คุณอาจจะลองดูหน้าเพจได้ แต่การทำงานบางอย่างจะไม่สมบูรณ์"
       link: "สิ่งที่น่าเรียนรู้ยังมีอีก"
   slow_loading: "นี่ดูจะใช้เวลานานเกินไป..."
   try_reloading: Try reloading the page
@@ -614,6 +629,9 @@
     wrong_body: Thank you for submitting answers.
     correct_title: "ขอบคุณ"
     correct_body: Thank you for submitting an answer
+    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
+      for aggregate results.  Note that results are only visible if at least five
+      students submitted the survey.
   level_group-submittable:
     wrong_title: "ขอบคุณ"
     wrong_body: Thank you for submitting answers.
@@ -660,39 +678,6 @@
     hour: 1 hour
     day: day
     week: week
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
-        Hour of Code:
-          title: "ชั่วโมงแห่ง Code"
-          description: ''
-        edit-code:
-          title: "แก้ไข Code"
-          description: ''
-        events:
-          title: "เหตุการณ์"
-          description: ''
-        builder:
-          title: Builder
-          description: ''
-        flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
-        jigsaw:
-          title: Jigsaw
-          description: ''
-        step:
-          title: "ขั้นตอน"
-          description: ''
-        sample_level_builder:
-          title: Sample Level Builder
-          description: ''
   age_interstitial:
     age: Your age
     header: Account Information Update
@@ -702,6 +687,34 @@
       with any third parties.
     sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
       out</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Terms of Service
+    privacy: "นโยบายความเป็นส่วนตัว"
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: "พิมพ์"
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
@@ -732,6 +745,8 @@
     share_copy_link: 'Copy the link:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Close
@@ -760,6 +775,8 @@
     abuse:
       tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
         of Service</a> and cannot be shared with others.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
         us.</a>
       go_to_code_studio: Go to Code Studio
@@ -801,6 +818,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: "ค้นหาไอคอน..."
@@ -819,14 +845,16 @@
     required: "ภาพรวม"
     content: Content
     practice: Teacher Practices
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -860,3 +888,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

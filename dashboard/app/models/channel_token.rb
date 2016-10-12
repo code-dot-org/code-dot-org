@@ -21,7 +21,7 @@ class ChannelToken < ActiveRecord::Base
   def self.find_or_create_channel_token(level, user, ip, storage_app, data = {})
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       # your own channel
       find_or_create_by!(level: level.host_level, user: user) do |ct|
         # Get a new channel_id.
@@ -53,5 +53,4 @@ class ChannelToken < ActiveRecord::Base
     timestamp = Time.now
     storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), ip)
   end
-
 end

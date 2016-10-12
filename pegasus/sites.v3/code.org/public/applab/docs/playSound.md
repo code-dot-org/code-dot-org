@@ -26,7 +26,7 @@ Plays the MP3 sound file from the specified URL.
 Today's apps play sounds to make them more engaging. You can add sounds to your apps that are triggered by events on UI elements, or based on turtle movements, or just based on other app code. There are two ways to fill in the url string for the parameter.
 
 **1. Copy the URL of a sound on the web.**
-In most browsers you can simply *right-click (ctrl+click on a Mac)* on a sound file and you'll see a menu with a few option. One will be to copy the URL of the sound.
+In most browsers you can simply *right-click (ctrl+click on a Mac)* on a sound file and you'll see a menu with a few option. One will be to copy the URL of the sound.  Note: We have listed some existing audio files that you can use in your app below.
 
 **2. Upload your own sound file to App Lab.**
 You can upload sound files saved on your computer to your app in App Lab.
@@ -105,6 +105,23 @@ onEvent("owl", "click", function(event) {
 [/example]
 ____________________________________________________
 
+### Sample sounds
+| Sound  | URL | 
+|-----------------|------|
+| Start 1 | https://audio.code.org/start1.mp3 |
+| Start 2 | https://audio.code.org/start2.mp3 |
+| Goal 1 | https://audio.code.org/goal1.mp3 |
+| Goal 2 | https://audio.code.org/goal2.mp3 |
+| Win point 1 | https://audio.code.org/winpoint1.mp3 |
+| Win point 2 | https://audio.code.org/winpoint2.mp3 |
+| Lose point 1 | https://audio.code.org/losepoint1.mp3 |
+| Lose point 2 | https://audio.code.org/losepoint2.mp3 |
+| Win 1 | https://audio.code.org/win1.mp3 |
+| Win 2 | https://audio.code.org/win2.mp3 |
+| Win 3 | https://audio.code.org/win3.mp3 |
+| Failure 1 | https://audio.code.org/failure1.mp3 |
+| Failure 2 | https://audio.code.org/failure2.mp3 |
+| Failure 3 | https://audio.code.org/failure3.mp3 |
 
 [syntax]
 

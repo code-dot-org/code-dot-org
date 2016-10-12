@@ -1,6 +1,4 @@
 /** @file Vertical scrolling list of animation sequences */
-'use strict';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import color from '../../color';
@@ -13,11 +11,13 @@ import ScrollableList from './ScrollableList';
 const styles = {
   root: {
     flex: '1 0 0',
-    borderTop: 'solid thin ' + color.light_purple,
-    borderBottom: 'solid thin ' + color.light_purple,
-    borderLeft: 'solid thin ' + color.light_purple,
+    borderTop: 'solid thin ' + color.light_gray,
+    borderBottom: 'solid thin ' + color.light_gray,
+    borderLeft: 'solid thin ' + color.light_gray,
     borderRight: 'none',
-    backgroundColor: color.white
+    backgroundColor: color.lightest_gray,
+    paddingRight: 10,
+    paddingLeft: 10
   }
 };
 
@@ -40,11 +40,12 @@ const AnimationList = React.createClass({
               animationKey={key}
               animationProps={this.props.animationList.propsByKey[key]}
               isSelected={key === this.props.selectedAnimation}
+              animationList={this.props.animationList}
             />
           )}
           <NewListItem
             key="new_animation"
-            label="new sequence"
+            label="new animation"
             onClick={this.props.onNewItemClick}
           />
         </ScrollableList>

@@ -14,6 +14,10 @@ allow_post: true
     %img{:src=>small_certificate_image_url}
   %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
     Enter up to 30 names, <strong>one per line</strong>. A printable page with #{personalized} #{course_name} certificates will be generated.
+  %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
+    Want a blank certificate template to write in your students' names?
+    %a{href: '/images/hour_of_code_certificate.jpg', target: '_blank'} Print one here.
+%br
 %form{:method=>"post", :action=>'/printcertificates'}
   -if course
     %input{:type=>"hidden", :name=>'course', :value=>course}

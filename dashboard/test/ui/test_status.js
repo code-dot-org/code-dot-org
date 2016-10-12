@@ -9,11 +9,12 @@
 /* global _ */
 
 // Gather metadata for the run
-const GIT_BRANCH = document.querySelector('#git-branch').dataset.branch;
 const COMMIT_HASH = document.querySelector('#commit-hash').dataset.hash;
 const RUN_START_TIME = new Date(document.querySelector('#start-time').textContent);
 const TEST_TYPE = document.querySelector('#test-type').value;
 const API_ORIGIN = document.querySelector('#api-origin').value;
+const S3_BUCKET = document.querySelector('#s3-bucket').value;
+const S3_PREFIX = document.querySelector('#s3-prefix').value;
 
 // Simple constants
 const STATUS_PENDING = 'PENDING';
@@ -137,11 +138,11 @@ Test.prototype.s3Key = function () {
   const featureRegex = /features\/(.*)\.feature/i;
   let result = featureRegex.exec(this.feature);
   let featureName = result[1].replace('/', '_');
-  return `${GIT_BRANCH}/${this.browser}_${featureName}${S3_KEY_SUFFIX}`;
+  return `${S3_PREFIX}/${this.browser}_${featureName}${S3_KEY_SUFFIX}`;
 };
 
 Test.prototype.publicLogUrl = function () {
-  return `https://cucumber-logs.s3.amazonaws.com/${this.s3Key()}?versionId=${this.versionId}`;
+  return `https://${S3_BUCKET}.s3.amazonaws.com/${this.s3Key()}?versionId=${this.versionId}`;
 };
 
 // Build a cache of tests for this run.
@@ -154,8 +155,9 @@ rows.forEach(row => {
 });
 
 function testFromS3Key(key) {
+  let escapedPrefix = S3_PREFIX.replace(/\//g, '\/');
   let escapedSuffix = S3_KEY_SUFFIX.replace(/\./g, '\\.');
-  var result = new RegExp(`[^/]+\/([^_]+)_(.*)${escapedSuffix}`, 'i').exec(key);
+  var result = new RegExp(`${escapedPrefix}\/([^_]+)_(.*)${escapedSuffix}`, 'i').exec(key);
   // Ignore tests with a different suffix (from other runs, e.g. eyes vs. non-eyes).
   if (!result) {
     return undefined;
@@ -283,7 +285,7 @@ function refresh() {
   };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
-  fetch(`${API_BASEPATH}/${GIT_BRANCH}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
+  fetch(`${API_BASEPATH}/${S3_PREFIX}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
     .then(response => response.json())
     .then(json => {
       json.forEach(object => {
@@ -330,7 +332,7 @@ function toggleHideSucceeded() {
   hideSucceeded = !hideSucceeded;
   hideSucceededButton.textContent = `${hideSucceeded ? 'Show' : 'Hide'} Succeeded`;
   let sheet = document.styleSheets[document.styleSheets.length - 1];
-  let display = hideSucceeded ? 'none' : 'inherit';
+  let display = hideSucceeded ? 'none' : 'table-row';
   let rule = _.findLast(sheet.rules, rule => rule.selectorText === '.SUCCEEDED');
   if (rule) {
     rule.style.display = display;

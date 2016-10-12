@@ -1,0 +1,71 @@
+@import 'color';
+
+.contract select {
+  color: $white;
+  background-color: $light_gray;
+  margin-top: 10px;
+}
+
+#functionNameText {
+  margin-top: 10px;
+}
+
+.domainItem {
+  height: 36px;
+  color: $white;
+  border-radius: 5px;
+  float: left;
+  margin-right: 5px;
+}
+
+#domainItemText {
+  margin-top: 10px;
+}
+
+.domainItem .domainItemText {
+  font-size: 16px;
+  padding: 10px;
+  color: $white;
+  overflow: hidden;
+}
+
+.contract .buttons {
+  margin-top: 8px;
+}
+
+#sectionTitle {
+  font-size: 20px;
+  margin-top: 11px;
+}
+
+#contractForm {
+  .ui-selectmenu-button {
+    margin-top: 13px;
+    margin-bottom: -13px;
+  }
+
+  .domain-add-button {
+    margin-left: 0;
+    margin-top: 13px;
+  }
+
+  .domain-x-button {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  margin-bottom: 20px;
+}
+
+.color-square-icon {
+  float: left;
+  width: 21px;
+  height: 19px;
+  margin-right: 7px;
+}
+
+.section-type-hint {
+  font-size: 12px;
+  color: $light_gray;
+  margin-top: 3px;
+}

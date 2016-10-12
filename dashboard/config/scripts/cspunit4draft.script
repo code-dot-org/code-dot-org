@@ -1,8 +1,3 @@
-title 'CS Principles Unit 4 - Data'
-description 'Collect, analyze, and extract knowledge from data by programming and
-building apps. Process data imported from other sources and also pull
-data from live data APIs.'
-description_short 'Data'
 login_required 'true'
 
 #1new
@@ -32,7 +27,6 @@ level 'U4 - Making Data Visualizations - Free Play'
 stage 'Discover a Data Story'
 level 'U4L06v2 Student Lesson Introduction'
 
-
 #7new
 stage 'Cleaning Data'
 level 'U4L16 Student Lesson Introduction'
@@ -51,15 +45,12 @@ level 'U4L08v2 Making Pivot Tables Part 3'
 stage 'Rapid Research - Data Innovations'
 level 'U4L12 - Student Introduction'
 
-
 #1old
 stage 'Why Make Apps?'
 level 'U4L01 Student Lesson Introduction'
-
 assessment 'U4L01 Free Response'
 assessment 'U4L01 Choose 2'
 assessment 'U4L01 Multiple Choice'
-
 
 #2
 stage 'Creating Javascript Objects'
@@ -234,8 +225,6 @@ assessment 'U4L19 Free Response'
 assessment 'U4L19 Choose 2'
 assessment 'U4L19 Multiple Choice'
 
-
-
 stage 'What Data Can Tell Us'
 level 'CSP Data Unit -Counting Records - Hard Way'
 level 'CSP Data Unit -Counting Records - Easy Way'
@@ -252,29 +241,3 @@ level 'U3L17 - getKeyValue'
 assessment 'U3L22 Free Response Getting Started'
 assessment 'U3L22 Assessment'
 assessment 'U3L22 Reflection'
-
-
-# not used stages
-stage 'Data is the Secret Ingredient'
-stage 'Finding Data'
-stage 'Building Apps Using Structured Data'
-stage 'Data App Part 1: Brainstorm'
-stage 'APIs and Access to Large Data Sets'
-stage 'Structuring Data with JSON'
-stage 'Data App Part 2: Data Design'
-stage 'Data App Part 3: Code'
-stage 'Identifying People with Data'
-stage 'Collecting Personal Information'
-stage 'Privacy Policy'
-#do not use this stage vvv
-stage 'Debate: Privacy vs. Utility'
-#do not use this stage ^^^
-stage 'Debate: Privacy vs Utility'
-stage 'Data App Part 4: App Permissions'
-stage 'Data App Part 5: Clean Data'
-stage 'Reading Data'
-stage 'Sorting'
-stage 'Searching'
-stage 'Data App Part 6: Sort and Search'
-stage 'Data App Part 7: Read Data'
-

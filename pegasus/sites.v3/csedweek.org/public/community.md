@@ -36,9 +36,9 @@ offline)
 Print these posters (ideally on a color printer, or on nice, large poster paper at Kinko's), and hang it up where participants can see it.
 
 <div class="clear">
-  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Zuckerberg_poster.pdf"><img style="width: 100%" src="/images/zuckerberg_poster.png" alt="Zuckerberg poster"></a></div>
-  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Bosh_poster.pdf"><img style="width: 100%" src="/images/bosh_poster.png" alt=""></a></div>
-  <div style="float: left; width: 200px;"><a href="/files/susan_poster.pdf"><img style="width: 100%" src="/images/susan_poster.png" alt=""></a></div>
+  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Zuckerberg_poster.pdf"><img style="width: 100%" src="/images/Zuckerberg_poster.png" alt="Zuckerberg poster"></a></div>
+  <div style="float: left; width: 200px; margin-right: 30px;"><a href="/files/Bosh_poster.pdf"><img style="width: 100%" src="/images/Bosh_poster.png" alt=""></a></div>
+  <div style="float: left; width: 200px;"><a href="/files/susan_poster.pdf"><img style="width: 100%" src="/images/Susan_poster.png" alt=""></a></div>
 </div>
 
 ## Show this video to participants
@@ -85,5 +85,5 @@ Here is a [sample Op-Ed](/files/CSEW%20Op-ed.docx) that you can edit and submit 
 - 1-pager: [What is computer science, and how does it impact careers and other fields of study?](https://www.dropbox.com/s/o1mafeosi0xuwb0/What_is_CS_and_Careers.pdf)
 - [Infographic with more stats about the shortage of Computer Science education](http://code.org/stats)
 - [NCWIT outreach guide for introducing students to computer science](http://www.ncwit.org/resources/outreach-box-discovering-it) and [fact-sheet about participation by women](http://www.ncwit.org/infographic/3435)
-- Learn about [what Congress is doing for K-12 CS Education](http://www.computinginthecore.org/newsroom) and how you can support the [Computer Science Education Act](http://www.computinginthecore.org/csea)
+- [Tell Congress](http://www.congressweb.com/code/21) you support K-12 Computer Science!
 

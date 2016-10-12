@@ -18,10 +18,12 @@ Each of our Professional learning partners is listed below in alphabetical order
 - **[Idaho](#id)**<br/>
 - **[Illinois](#il)**<br/>
 - **[Indiana](#in)**<br/>
+- **[Kentucky](#ky)**<br/>
 - **[Maryland](#md)**<br/>
 - **[New York](#ny)**<br/>
 - **[North Carolina](#nc)**<br/>
 - **[Ohio](#oh)**<br/>
+- **[Oklahoma](#ok)**<br/>
 - **[Texas](#tx)**<br/>
 - **[Utah](#ut)**<br/>
 - **[Viriginia](#va)**<br/>
@@ -87,8 +89,12 @@ ________________
 ### [9 Dots Community Learning Center](http://www.9dots.org)<br/>
 Los Angeles and Orange County, California<br/>
 
+9 Dots is a nonprofit collaborative of engineers and educators committed to creating an education culture that gives more kids the chance to choose their own futures.
+
 **Programs**<br/>
 CS Principles<br/>
+
+**Contact us for adivce on:** Community outreach to schools, teachers and students.<br/>
 
 **Contact Information** <br/>
 Laura Lee	<br/>
@@ -129,14 +135,36 @@ Inland Empire, California	<br/>
 **Programs**<br/>
 CS Principles<br/>
 
+**Contact us for advice on:** CS Principles Workshop planning, networking, community relations<br/>
+
 **Contact Information**<br/>
-Tim Downey<br/>
-tdowney@rcoe.us
+Dennis Large<br/>
+dlarge@rcoe.us
 
 <br/>
 
 [**Back to the top**](#top)
 <br/>
+
+### [Silicon Valley Education Foundation](http://svefoundation.org/)<br/>
+San Jose, California	<br/>
+
+Silicon Valley Education Foundation (SVEF) was founded on the belief that a new kind of organization is needed – one with a different philosophy and approach to the challenges in legacy systems. A nonprofit resource and advocate for students and educators, SVEF is dedicated to putting all students on track for college and careers, focusing on the critical areas of science, technology, engineering, and math (STEM).
+
+**Programs**<br/>
+CS Principles<br/>
+
+**Contact us for advice on:** In partnership with the business, high tech communities and school districts, SVEF disseminates tools and resources for innovation to ensure all students gain the skills they need to succeed in the 21st century economy. <br/>
+
+**Contact Information**<br/>
+Casey Agena<br/>
+casey@svefoundation.org
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+
 _________
 <a id="fl"></a>
 
@@ -145,24 +173,30 @@ _________
 ### [Broward County Public Schools](http://www.browardschools.com/)<br/>
 Broward, Florida<br/>
 
+Broward County Public Schools (BCPS), the nation’s sixth largest public school district with a diverse population of greater than 275,000 students, has several models of integration of computer science into the curriculum, with deliberate attention to providing computer science instruction and extracurricular opportunities for all students.
+
+BCPS has learned that the engagement of the entire community is essential to effectively implementing large curricular change, such as implementation of computer science. In order to move forward with computer science education district-wide, we are driven by the goals to educate, advocate and cultivate:
+
+- Educate - provide students well-trained, supported teachers.
+- Advocate - afford every student the opportunities provided by high-quality, rigorous Computer Science instruction.
+- Cultivate - build a community of support for Computer Science that bridges and connects schools to careers.
+More information is available [here.](http://browardschools.com/browardcodes)
+
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
-**Contact Information** <br/>
-Rebecca Malones<br/>
-rmalones@browardschools.com
+**Contact us for advice on:** Implementation in a large, diverse district focused on CSforAll.<br/>
 
-Ted Myers<Br/> 
-ted.myers@browardschools.com
+**Contact Information** <br/>
+
+Lisa Milenkovic (Primary)<br/>
+lisa.milenkovic@browardschools.com<br/>
 
 Christine Semisch<br/>
 christine.semisch@browardschools.com<br/>
-
-Lisa Milenkovic<br/>
-lisa.milenkovic@browardschools.com<br/>
 
 
 <br/>
@@ -181,36 +215,22 @@ jborland@fscj.edu
 
 <br/>
 
-### [Patricia and Phillip Frost Museum of Science](http://www.frostscience.org/blog/)<br/>
-Miami, Florida<br/>
-
-**Programs**<br/>
-CS Principles<br/>
-Exploring Computer Science<br/>
-CS in Science<br/>
-CS in Algebra<br/>
-
-**Contact Information**<br/>
-Isabel Leeder<br/>
-ileeder@frostscience.org 
-
-<br/>
-
 ### [Orlando Science Center](https://www.osc.org/)<br/>
 Orlando, Florida<br/>
 
+Orlando Science Center is one of America’s top hands-on science centers where learning is always fun.  A beautiful, 207,000 sq. ft. facility that is architecturally distinctive and built for the future with spacious exhibit halls, nature habitats, classrooms, a theatre, an observatory and visitor amenities such as a science store and cafe.  The Science Center is a private non-profit organization with 501c(3) status. 
+
 **Programs**<br/>
 CS Principles<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
+**Contact us for advice on:** Working with school districts, engaging community partners, hosting professional development workshops <br/>
+
 **Contact Information**<br/>
-Emily Duguid<br/>
-eduguid@osc.org
 
 Heather Norton<br/>
-hnorton@osc.org<br/>
-
+classes@osc.org<br/>
 
 <br/>
 
@@ -221,30 +241,20 @@ ________________
 
 ## Georgia
 ### [Georgia Tech Center for Education Integrating Science, Mathematics, and Computing](https://www.ceismc.gatech.edu/)<br/>
-North Georgia<br/>
+Georgia<br/>
+
+Georgia Tech Center for Education Integrating Science, Mathematics, and Computing is a STEM+C Outreach and Research Center based in Atlanta, GA. 
 
 **Programs**<br/>
 CS Principles<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
-**Contact Information**<br/>
-Chris Thompson	<br/>
-chris.thompson@ceismc.gatech.edu
-
-<br/>
-
-### [Savannah Campus of Georgia Tech CEISMC](https://www.ceismc.gatech.edu/ceismc-savannah)<br/>
-Middle Georgia
-
-**Programs**<Br/>
-CS Principles<br/>
-CS in Science<br/>
-
+**Contact us for advice on:** Working with state departments of education, university administration <br/>
 
 **Contact Information**<br/>
-Chris Thompson<Br/>
-chris.thompson@ceismc.gatech.edu
+Tamara Pearson<br/>
+tamara.pearson@ceismc.gatech.edu
 
 <br/>
 
@@ -302,12 +312,13 @@ lucia@cdm.depaul.edu
 Chicago <br/>
 
 **Programs**<br/>
+CS Principles<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information**<br/>
-Angela Acevedo	<Br/>
-Aacevedo@Lumity.org
+Janet Morris	<Br/>
+jmorris@lumity.org
 
 <br/>
 
@@ -320,11 +331,15 @@ ________________
 ### [Nextech](http://nextech.org/)<br/>
 Indiana	
 
+Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap between Indiana’s technology-related employment opportunities and the number of high school graduates pursuing them.  Our mission is to connect educators, innovative nonprofits, and entrepreneurs to deliver best-in-class education and work-based learning programs that inspireand enable young people from all backgrounds to pursue careers in technology.
+
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
 CS in Science<br/>
 CS in Algebra<br/>
+
+**Contact us for advice on:** Recruiting districts, running workshops, CS Ed Week events<br/>
 
 **Contact Information**<br/>
 Stephanie Zircher<Br/>
@@ -334,6 +349,30 @@ stephanie@nextech.org
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="ky"></a>
+
+## Kentucky
+### [AdvanceKentucky](www.advanceky.com)<br/>
+Kentucky	
+
+AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
+
+**Programs**<br/>
+CS Principles<br/>
+
+**Contact us for advice on:** AP program, NMSI model, organizing professional development <br/>
+
+**Contact Information**<br/>
+Monique Morton<Br/>
+mmorton@kstc.com<Br/>
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+
 ________________
 <a id="md"></a>
 
@@ -380,9 +419,14 @@ ________________
 ### [Code/Interactive](http://www.weare.ci/)<br/>
 New York<br/>
 
+Code/Interactive is a not-for-profit organization that cultivates the potential of America’s youth by ensuring that all students have access to a high-caliber computer science education, entrepreneurship opportunities, and industry exposure.
+
+C/I focuses on eliminating the representation gap in technology careers across lines of ethnicity, income, and gender/expression.
+
 **Programs**<br/>
 CS Principles<br/>
 
+**Contact us for advice on:** Organizing impactful student opportunities for industry exposure such as hackathons (with a CSP Create Performance Task component), tech office visits with career panels, and mentorship programs; teacher coaching; professional development for Computer Science Principles, Exploring Computer Science, and our own Creative Web Development and Programming.<br/>
 
 **Contact Information**<br/>
 Jen Noborikawa<br/>
@@ -399,15 +443,19 @@ ________________
 ### [The Friday Institute](http://www.fi.ncsu.edu/)	<Br/>
 Durham, North Carolina	
 
+The Friday Institute is helping to create the next generation education system by advancing innovations in teaching, learning, and leadership. Bringing together educational professionals, researchers, policy-makers, and other community members, the Friday Institute is a center for fostering collaborations to improve education. We conduct research, develop educational resources, provide professional learning programs for educators and leaders, advocate to improve teaching and learning, and help inform local, state and national education policy.
+
 **Programs**<br/>
 CS Principles<br/>
+
+**Contact us for advice on:** Ideas for funding and partnerships, facilitator capacity building, instructional strategy pedagogy, strategic planning in districts, approaches to state-wide policy change, ways to partner with faculty and universities, online and blended learning models.<br/>
 
 **Contact Information**<br/>
 Dave Frye	<Br/>
 dafrye@ncsu.edu
 
-Alison Graham<br/>
-abgraha3@ncsu.edu
+Greg Garner<br/>
+greg_garner@ncsu.edu
 
 <br/>
 
@@ -426,6 +474,29 @@ CS Principles<br/>
 **Contact Information**<br/>
 Kelly Gaier Evans 	<br/>
 gaierk@battelle.org
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="ok"></a>
+
+## Oklahoma
+### [The Div](http://thediv.org/)<br/>
+Oklahoma	
+
+The Div is a nonprofit dedicated helping the next generation thrive through access to technology education.  
+
+**Programs**<br/>
+CS Principles<br/>
+
+**Contact us for advice on:** Hosting youth after-school computer science learning programs<br/>
+
+**Contact Information**<br/>
+McKalyn Danner<Br/>
+mckalyn@thediv.org<Br/>
 
 <br/>
 
@@ -452,6 +523,11 @@ This includes communications/social media, recruitment of teacher participants, 
 
 
 **Contact Information** 
+Main Contact:
+Susan Boone<br/>
+susan.boone@rice.edu<br/>
+
+Additional Contacts:
 Alice Fisher<br/>
 afisher@rice.edu<br/>
 
@@ -461,9 +537,21 @@ apapa@rice.edu<br/>
 Richard Parr<br/>
 rparr@rice.edu<br/>
 
-Susan Boone<br/>
-susan.boone@rice.edu<br/>
+<br/>
 
+### [The University of Texas at Dallas](http://www.instructionalexcellence.org/)<br/>
+Dallas, Texas<Br/>
+
+The Institute for Instructional Excellence (TIIE) at UT Dallas is part of the Department of Science and Mathematics Education housed within the School of Natural Sciences and Mathematics.  Leveraging partnerships across UT Dallas,  our focus is to assist campuses and districts in building teacher capacity to design, implement, and assess inquiry-based learning environments across all grade levels, content areas and audiences. <br/> 
+
+**Programs**<br/>
+CS Principles<br/>
+
+**Contact us for advice on:** Inquiry-Based Learning, STEM, Computer Science, Informal Science Experiences, Robotics
+
+**Contact Information**
+Dr. Joseph Ferrara<br/>
+joe.ferrara@utdallas.edu<br/>
 
 <br/>
 
@@ -476,14 +564,18 @@ ________________
 ### [Utah STEM Action Center](http://stem.utah.gov/)<br/>
 Utah
 
+Utah STEM Action Center is a state agency under the Governor's Office of Economic Development based in Salt Lake City, UT.
+
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
 CS in Science<br/>
 
+**Contact us for information on:** Utah's Efforts, CS/IT Pathway, Legislative initiatives and partnerships
+
 **Contact Information**<br/>
-Sarah Young	/>
-sarah.young@schools.utah.gov
+Vatsala Kaul<br/>
+vkaul@utah.gov<br/>
 
 <br/>
 
@@ -525,10 +617,21 @@ ________________
 ###[ NorthEast Washington Education Service District 101](http://www.esd101.net/) <br/>	
 Spokane, Washington	
 
+At NEWESD 101 we are most fortunate and very proud to serve and support 59 public school districts and 46 state-approved private schools in seven counties in northeastern Washington. We promote and support educational excellence by delivering essential, cooperative services to schools and other learning communities. Our commitments include:
+
+- Assisting schools and other learning communities in preparing students for success.
+- Maintaining strong, supportive, mutually beneficial relationships with schools and other educational partners.
+- Providing quality service and value.
+- Blending entrepreneurial imagination and public service spirit.
+
+We take seriously the opportunity and responsibility we have to help schools and districts serve the most valuable resource in our nation - our youth. It is the children of our region, and the educators who serve them, who are the reason for our existence and who inspire the quality of work and service we strive to deliver.
+
 **Programs**<br/>
 CS Principles<br/>
 CS in Science<br/>
 CS in Algebra<br/>
+
+**Contact us for information on:**Implementing Computer Science; Gamification implementation; Working with all size districts from 45 students to 3,000 students.
 
 **Contact Information**<br/>
 Tammie Schrader	<Br/>
@@ -538,17 +641,24 @@ tschrader@esd101.net
 ### [Puget Sound Educational Service District](https://www.psesd.org/)<br/>
 Puget Sound, Washington	<br/>
 
+PSESD is the regional education service agency that serves 35 school districts and more than 200 private schools in King and Pierce counties as well as Bainbridge Island in Washington state.
+
+Educational Service Districts improve the quality, equity, and efficiency of educational programs through partnerships with K-12 education, early learning, higher education, and public and private organizations. Together, we save schools money through regional efficiencies, centralized services, pooled resources to:
+
+- Improve the effectiveness of educational programs
+- Deliver specialized services otherwise unavailable
+- Provide leadership for innovative and effective educational practices
+- Build networks and partnerships among districts and other agencies
+- Link schools with regional, state and national educational resources
+
 **Programs**<br/>
 CS Principles<br/>
 
-**Contact us for advice on:** Professional development facilitation
+**Contact us for advice on:** Professional development facilitation, what to do when you're just getting started. 
 
 **Contact Information**
 Cheryl Lydon, Program Manager<br/>
 CLydon@psesd.org
-
-Lauren Brown, Participant Support
-
 
 <br/>
 

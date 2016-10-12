@@ -12,7 +12,6 @@ def remove_dates(string)
 end
 
 class SectionApiHelperTest < Minitest::Test
-
   describe SectionHelpers do
     describe 'random code' do
       it 'does not generate the same code twice' do

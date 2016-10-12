@@ -31,7 +31,6 @@ const PUZZLE_PAGE_NONE = -1;
  *   title: string,
  *   finishLink: string,
  *   finishText: string,
- *   trophies: Object,
  *   levels: Array.<{
  *     id: number,
  *     position: number,

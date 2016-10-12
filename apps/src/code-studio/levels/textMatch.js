@@ -1,6 +1,5 @@
 import $ from 'jquery';
-
-window.levelGroup = window.levelGroup || {levels: {}};
+import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
 var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
 
@@ -30,21 +29,17 @@ TextMatch.prototype.ready = function () {
   $("#" + this.id + " textarea.response").val(this.lastAttempt);
 
   // If we are relying on the containing page's submission buttons/dialog, then
-  // we need to provide a window.getResult function.
+  // we need to provide a getResult function.
   if (this.standalone) {
-    window.getResult = $.proxy(this.getResult, this);
+    registerGetResult(this.getResult.bind(this));
   }
 
   var textarea = $("#" + this.id + " textarea.response");
   textarea.blur(() => {
-    if (window.levelGroup && window.levelGroup.answerChangedFn) {
-      window.levelGroup.answerChangedFn(this.levelId, true);
-    }
+    onAnswerChanged(this.levelId, true);
   });
   textarea.on("input", null, null, () => {
-    if (window.levelGroup && window.levelGroup.answerChangedFn) {
-      window.levelGroup.answerChangedFn(this.levelId);
-    }
+    onAnswerChanged(this.levelId, false);
   });
 };
 
@@ -61,14 +56,16 @@ TextMatch.prototype.getResult = function () {
       return response === element.replace(/\s+/g, '');
     });
     return {
-      response: encodeURIComponent(response),
+      // Note: embedded version of this level shouldn't encode response.
+      response: this.standalone ? encodeURIComponent(response) : response,
       result: result,
       valid: response.length > 0
     };
   } else {
     // Always succeed for any non-empty response to open-ended question without answer(s)
     return {
-      response: encodeURIComponent(response),
+      // Note: embedded version of this level shouldn't encode response.
+      response: this.standalone ? encodeURIComponent(response) : response,
       result: response.length > 0,
       valid: response.length > 0
     };

@@ -1,0 +1,6 @@
+name 'grade2_unplugged_buildAblock'
+title 'Build a Block'
+
+markdown <<MARKDOWN
+![](https://images.code.org/eb9dbf9421bb54178f46df4d5e60ecae-image-1469572851784.38.48 PM.png)
+MARKDOWN

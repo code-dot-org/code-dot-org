@@ -1,0 +1,20 @@
+name 'CSDU2- home page examples'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Personal Home Page Examples
+
+## Prompt
+Explore __*at least 4 websites*__ and answer the following questions on your worksheet.
+
+* What new content and style features do you notice that could be added to high quality feature list from last class?
+* What common elements do you notice across all the websites? For example does every page have a title?
+
+## Links
+1. <a href="http://www.arch4blind.com/index.html "> Personal Website 1</a>
+1. <a href="http://www.danawoodwriter.com/"> Personal Website 2</a>
+1. <a href="http://www.strangelove.me/"> Personal Website 3</a>
+1. <a href="http://chris-steib.squarespace.com/"> Personal Website 4</a>
+1. <a href="http://www.krisblack.com/"> Personal Website 5</a>
+1. <a href="http://davidpogue.com/"> Personal Website 6</a>
+1. <a href="http://www.brittanywitkin.com/"> Personal Website 7</a>
+MARKDOWN

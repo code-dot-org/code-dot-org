@@ -11,6 +11,7 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 require 'net_sim_api'
+require 'animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -21,7 +22,6 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-
     if Rails.env.development?
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
@@ -54,6 +54,7 @@ module Dashboard
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
+    config.middleware.insert_after NetSimApi, AnimationLibraryApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
@@ -98,6 +99,7 @@ module Dashboard
 
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
+    config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
@@ -129,7 +131,11 @@ module Dashboard
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
 
-    if Rails.env.production?
+    # Make sure dependency auto loading is enabled across all environments.
+    # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
+    config.enable_dependency_loading = true
+
+    if CDO.newrelic_logging
       require 'newrelic_rpm'
       require 'newrelic_ignore_downlevel_browsers'
     end

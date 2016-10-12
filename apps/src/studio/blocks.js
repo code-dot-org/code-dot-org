@@ -4,59 +4,59 @@
  * Copyright 2014 Code.org
  *
  */
-'use strict';
 /* global Studio */
 
-var studioApp = require('../StudioApp').singleton;
-var msg = require('./locale');
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('@cdo/locale');
-var codegen = require('../codegen');
-var constants = require('./constants');
-var utils = require('../utils');
-var _ = require('lodash');
-var paramLists = require('./paramLists');
+import _ from 'lodash';
+import codegen from '../codegen';
+import commonMsg from '@cdo/locale';
+import msg from './locale';
+import paramLists from './paramLists';
+import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
+import { singleton as studioApp } from '../StudioApp';
+import { stripQuotes, valueOr } from '../utils';
+import {
+  CardinalDirections,
+  Direction,
+  Emotions,
+  Position,
+  CLICK_VALUE,
+  HIDDEN_VALUE,
+  RANDOM_VALUE,
+  VISIBLE_VALUE
+} from './constants';
 
-var Direction = constants.Direction;
-var Position = constants.Position;
-var Emotions = constants.Emotions;
-
-var RANDOM_VALUE = constants.RANDOM_VALUE;
-var HIDDEN_VALUE = constants.HIDDEN_VALUE;
-var CLICK_VALUE = constants.CLICK_VALUE;
-var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 // 9 possible positions in playspace (+ random):
-var POSITION_VALUES = [[msg.positionRandom(), RANDOM_VALUE],
-    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
+var POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
+    [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
 
 // Still a slightly reduced set of 17 out of 25 possible positions (+ random):
-var POSITION_VALUES_EXTENDED = [[msg.positionRandom(), RANDOM_VALUE],
-    [msg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
-    [msg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
-    [msg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
-    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-    [msg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
-    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-    [msg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
-    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
-    [msg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
-    [msg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
-    [msg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
+var POSITION_VALUES_EXTENDED = [[commonMsg.positionRandom(), RANDOM_VALUE],
+    [commonMsg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
+    [commonMsg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
+    [commonMsg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
+    [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [commonMsg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
+    [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [commonMsg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
+    [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
+    [commonMsg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
+    [commonMsg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
+    [commonMsg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
 
 var generateSetterCode = function (opts) {
   var value = opts.value || opts.ctx.getTitleValue('VALUE');
@@ -322,12 +322,30 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       if (spriteCount > 1) {
-        this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
-                       'SPRITE');
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
+                         'SPRITE');
+        }
       } else {
-        this.appendDummyInput()
-          .appendTitle(msg.whenSpriteClicked());
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(new blockly.FieldImage(
+                skin[startAvatars[0]].dropdownThumbnail,
+                skin.dropdownThumbnailWidth,
+                skin.dropdownThumbnailHeight
+            ));
+        } else {
+          this.appendDummyInput()
+            .appendTitle(msg.whenSpriteClicked());
+        }
       }
       this.setPreviousStatement(false);
       this.setInputsInline(true);
@@ -1000,7 +1018,7 @@ exports.install = function (blockly, blockInstallOptions) {
         // a factor of sqrt(2), so that a move north followed by a move west
         // takes you to the same spot as a single move northwest.
         var defaultDistance =
-          constants.CardinalDirections.includes(directionConfig.studioValue) ?
+          CardinalDirections.includes(directionConfig.studioValue) ?
           SimpleMove.DEFAULT_MOVE_DISTANCE :
           SimpleMove.DEFAULT_MOVE_DISTANCE * Math.sqrt(2);
         var distance = this.getTitleValue('DISTANCE') || defaultDistance;
@@ -1227,12 +1245,12 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   function onSoundSelected(soundValue) {
-    var lowercaseSound = utils.stripQuotes(soundValue).toLowerCase().trim();
+    var lowercaseSound = stripQuotes(soundValue).toLowerCase().trim();
 
     if (lowercaseSound === RANDOM_VALUE) {
       return;
     }
-    var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+    var skinSoundMetadata = valueOr(skin.soundMetadata, []);
     var playbackOptions = Object.assign({
       volume: 1.0
     }, _.find(skinSoundMetadata, function (metadata) {
@@ -1362,6 +1380,87 @@ exports.install = function (blockly, blockInstallOptions) {
     // Generate JavaScript for removing points.
     return 'Studio.removePoints(\'block_id_' + this.id + '\', \'' +
                 (this.getTitleValue('VALUE') || '1') + '\');\n';
+  };
+
+  blockly.Blocks.studio_setScore = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      this.appendValueInput('VALUE')
+        .appendTitle(msg.setScore());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setScoreTooltip());
+    }
+  };
+
+  generator.studio_setScore = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'VALUE',
+       Blockly.JavaScript.ORDER_NONE) || '0';
+   return 'Studio.setScore(' + arg + ');\n';
+  };
+
+  blockly.Blocks.studio_getScore = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      this.appendDummyInput()
+          .appendTitle(msg.score());
+      this.setOutput(true, Blockly.BlockValueType.NUMBER);
+      this.setTooltip(msg.getScoreTooltip());
+    }
+  };
+
+  generator.studio_getScore = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'VALUE',
+       Blockly.JavaScript.ORDER_NONE) || '0';
+   return ['Studio.getScore()', 0];
+  };
+
+  blockly.Blocks.studio_addNumPoints = {
+    // Block for adding arbitrary number of points
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('NUM')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.add());
+      this.appendDummyInput().appendTitle(msg.points());
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addPointsTooltip());
+    }
+  };
+
+  generator.studio_addNumPoints = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_NONE) || '1';
+    return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+        arg + '\');\n';
+  };
+
+  blockly.Blocks.studio_removeNumPoints = {
+    // Block for adding arbitrary number of points
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('NUM').appendTitle(msg.remove());
+      this.appendDummyInput().appendTitle(msg.points());
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.removePointsTooltip());
+    }
+  };
+
+  generator.studio_removeNumPoints = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_NONE) || '1';
+    return 'Studio.removePoints(\'block_id_' + this.id + '\', \'' +
+        arg + '\');\n';
   };
 
   blockly.Blocks.studio_setScoreText = {
@@ -1578,6 +1677,178 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   /**
+   * Blocks for managing a bunch of sprites as a group.
+   */
+  function createSpriteGroupDropdown(createMsg, changeCallback) {
+    const values = skin.spriteChoices.filter(
+        opt => opt[1] !== HIDDEN_VALUE && opt[1] !== RANDOM_VALUE
+    ).map(opt => {
+      const spriteName = stripQuotes(opt[1]);
+      return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
+    });
+    const dropdown = new blockly.FieldDropdown(values, changeCallback);
+    dropdown.setValue(values[0][1]);
+    return dropdown;
+  }
+
+  blockly.Blocks.studio_setSpritesWander = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameWander);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesWanderTooltip());
+    }
+  };
+
+  generator.studio_setSpritesWander = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesWander',
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesStop = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.stopEverySpriteName);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesStopTooltip());
+    }
+  };
+
+  generator.studio_setSpritesStop = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesStop',
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesChase = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameChaseActor);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesChaseTooltip());
+    }
+  };
+
+  generator.studio_setSpritesChase = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesChase',
+      extraParams: getSpriteIndex(this),
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesFlee = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameFleeActor);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesFleeTooltip());
+    }
+  };
+
+  generator.studio_setSpritesFlee = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesFlee',
+      extraParams: getSpriteIndex(this),
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesSpeed = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameSpeed);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPEED')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteSpeedTooltip());
+    }
+  };
+
+  generator.studio_setSpritesSpeed = function () {
+    var speed = blockly.JavaScript.valueToCode(this, 'SPEED',
+      Blockly.JavaScript.ORDER_NONE);
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesSpeed',
+      extraParams: speed,
+    });
+  };
+
+  blockly.Blocks.studio_whenSpriteAndGroupCollide = {
+    // Block to handle event when the Left arrow button is pressed.
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+
+      var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var dropdown2 = createSpriteGroupDropdown(
+          msg.collidesWithAnySpriteName,
+          value => endLabel.setText(msg.toTouchedSpriteName(
+              {spriteName: stripQuotes(value)})));
+      this.appendDummyInput()
+          .appendTitle(dropdown1, 'SPRITE')
+          .appendTitle(dropdown2, 'SPRITENAME');
+      this.appendDummyInput();
+      this.appendValueInput('GROUPMEMBER')
+          .setInline(true)
+          .appendTitle(msg.set());
+      var endLabel = new Blockly.FieldLabel(msg.toTouchedSpriteName(
+              {spriteName: stripQuotes(dropdown2.getValue())}));
+      this.appendDummyInput()
+          .setInline(true)
+          .appendTitle(endLabel);
+
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+    },
+  };
+
+  generator.studio_whenSpriteAndGroupCollide = function () {
+    var varName = Blockly.JavaScript.valueToCode(this, 'GROUPMEMBER',
+        Blockly.JavaScript.ORDER_NONE);
+    // Sprite index vars need to be 1-indexed, but the callback arg will be
+    // 0-indexed, so add 1.
+    return `${varName} = touchedSpriteIndex + 1;\n`;
+  };
+
+
+  /**
    * setBackground
    */
   blockly.Blocks.studio_setBackground = {
@@ -1646,9 +1917,11 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(312, 0.32, 0.62);
-      this.VALUES = skin.mapChoices;
+      // 'random' is a special value, don't put it in quotes
+      this.VALUES = skin.mapChoices.map(
+          opt => [opt[0], opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`]);
 
-      var dropdown = new blockly.FieldDropdown(skin.mapChoices);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
@@ -1792,47 +2065,47 @@ exports.install = function (blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
-
-    blockly.Blocks.studio_setSpriteParams = {
-      helpUrl: '',
-      init: function () {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
-        this.setHSV(312, 0.32, 0.62);
-        this.appendValueInput('SPRITE')
-            .setCheck(blockly.BlockValueType.NUMBER)
-            .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-        this.appendDummyInput()
-            .appendTitle(dropdown, 'VALUE');
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(msg.setSpriteTooltip());
-      }
-    };
-
-    blockly.Blocks.studio_setSpriteParamValue = {
-      helpUrl: '',
-      init: function () {
-        this.setHSV(312, 0.32, 0.62);
-        if (spriteCount > 1) {
-          this.appendDummyInput()
-            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
-        } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
-        }
-        this.appendValueInput('VALUE');
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(msg.setSpriteTooltip());
-      }
-    };
   }
+
+  blockly.Blocks.studio_setSpriteParams = {
+    helpUrl: '',
+    init: function () {
+      this.VALUES = skin.spriteChoices;
+      var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+      // default to first item after random/hidden
+      dropdown.setValue(skin.spriteChoices[2][1]);
+
+      this.setHSV(312, 0.32, 0.62);
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER)
+          .appendTitle(msg.setSpriteN({spriteIndex: ''}));
+      this.appendDummyInput()
+          .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setSpriteParamValue = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
+      this.appendValueInput('VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteTooltip());
+    }
+  };
 
   generator.studio_setSprite = function () {
     var indexString = this.getTitleValue('SPRITE') || '0';
@@ -2060,11 +2333,22 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.waitSeconds());
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to half second
+        if (isK1) {
+          let dropdown = new blockly.FieldDropdown([1, 2, 3, 4, 5].map(
+                (val) => [val.toString(), (val * 1000).toString()]));
+          dropdown.setValue('1000');
+          this.appendDummyInput()
+            .appendTitle(msg.wait())
+            .appendTitle(new blockly.FieldImage(skin.clockIcon))
+            .appendTitle(dropdown, 'VALUE')
+            .appendTitle(msg.waitSeconds());
+        } else {
+          let dropdown = new blockly.FieldDropdown(this.VALUES);
+          dropdown.setValue(this.VALUES[2][1]);  // default to half second
 
-        this.appendDummyInput()
-          .appendTitle(dropdown, 'VALUE');
+          this.appendDummyInput()
+            .appendTitle(dropdown, 'VALUE');
+        }
       }
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -2446,14 +2730,26 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+      // This block handles generation of nextConnection descendants (in order
+      // to wrap them in a callback).
+      this.skipNextBlockGeneration = true;
+    },
+    getVars: Blockly.Blocks.variables_get.getVars,
+    renameVar: Blockly.Blocks.variables_get.renameVar,
+    removeVar: Blockly.Blocks.variables_get.removeVar
   };
 
   generator.studio_ask = function () {
-    // Variable setter.
-    var argument0 = `prompt("${this.getTitleValue('TEXT')}")`;
+    var blockId = `block_id_${this.id}`;
+    var question = this.getTitleValue('TEXT');
     var varName = Blockly.JavaScript.translateVarName(this.getTitleValue('VAR'));
-    return varName + ' = ' + argument0 + ';\n';
+
+    var nextBlock = this.nextConnection && this.nextConnection.targetBlock();
+    var nextCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+    nextCode = Blockly.Generator.prefixLines(`${varName} = value;\n${nextCode}`, '  ');
+    var callback = `function (value) {\n${nextCode}}`;
+
+    return `Studio.askForInput("${blockId}", "${question}", ${callback});\n`;
   };
 };
 

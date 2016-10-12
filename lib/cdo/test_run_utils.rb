@@ -34,14 +34,6 @@ module TestRunUtils
     end
   end
 
-  def self.run_code_studio_tests
-    Dir.chdir(code_studio_dir) do
-      with_hipchat_logging('code studio tests') do
-        RakeUtils.system 'npm run test'
-      end
-    end
-  end
-
   def self.run_blockly_core_tests
     Dir.chdir(blockly_core_dir) do
       with_hipchat_logging('blockly core tests') do
@@ -53,7 +45,7 @@ module TestRunUtils
   def self.run_dashboard_tests
     Dir.chdir(dashboard_dir) do
       with_hipchat_logging('dashboard tests') do
-        RakeUtils.rake_stream_output 'test'
+        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
         RakeUtils.rake_stream_output 'konacha:run'
       end
     end
@@ -72,6 +64,12 @@ module TestRunUtils
       with_hipchat_logging('shared tests') do
         RakeUtils.rake_stream_output 'test'
       end
+    end
+  end
+
+  def self.run_lib_tests
+    Dir.chdir(lib_dir) do
+      RakeUtils.rake_stream_output 'test'
     end
   end
 end

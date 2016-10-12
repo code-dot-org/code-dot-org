@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class HintViewRequestTest < ActiveSupport::TestCase
-
   setup do
     @student = create :student
     @script = create :script

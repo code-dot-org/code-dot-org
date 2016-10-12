@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-21T18:00:17.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Paragraphs\r\n\r\nOn the last level you separated the header from the paragraphs but the two paragraphs are still clumped together.  In order to separate the paragraphs we need to use the paragraph HTML element.\r\n\r\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. All of your text in your web page should be contained in an HTML element (headers or paragraphs).\r\n\r\n<pre>\r\n\t&lt;p&gt;\r\n    \tThis is a paragraph.\r\n    &lt;p&gt;\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Put the paragraph about your favorite animal in a pargraph element\r\n* Put the paragraph about your least favorite animal in a different paragraph element",
+    "project_template_level_name": "CSDU2 - Paragraphs and headers Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -31,13 +31,14 @@ banner_privacy,banner,homepage_banner_privacy_main,homepage_banner_privacy_link,
 banner_hoc,banner,homepage_banner_text_prizes,homepage_banner_link_prizes,https://hourofcode.com,,,,,code.org,nah,all
 banner_20k_teachers,banner,homepage_banner_20k_teachers,homepage_banner_20k_teachers_link,/educate,,,,,code.org,nah,en
 banner_congress,banner,homepage_banner_congress,homepage_banner_congress_link,https://bit.ly/computersciencepetition,,,,,code.org,nah,en
-banner_emailprivacy,banner,homepage_banner_emailprivacy,homepage_banner_emailprivacy_link,http://blog.code.org/post/147243645493/,,,,,code.org,show,en
+banner_emailprivacy,banner,homepage_banner_emailprivacy,homepage_banner_emailprivacy_link,http://blog.code.org/post/147243645493/,,,,,code.org,nah,en
+banner_40k_teachers,banner,homepage_banner_40k_teachers,homepage_banner_40k_teachers_link,http://blog.code.org/post/150312492108/the-biggest-year-yet-for-computer-science,,,,,code.org,show,en
 block_hoc_frozen,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",https://hourofcode.com,,/shared/images/courses/logo_tall_hoc.jpg,code.org,nah,en
 block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students_courses,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
 block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,en
 block_advocates,block,homepage_slot_text_title_advocates,homepage_slot_text_blurb_advocates,"185, 191, 21","209, 213, 103",/promote,,/shared/images/courses/logo_tall_map.jpg,code.org,show,en
-blocklink_hoc,blocklink,block_hoc,homepage_slot_text_link_hoc,/learn,,,,,code.org,show,en
+blocklink_hoc,blocklink,block_hoc,homepage_slot_text_link_hoc,https://hourofcode.com/,,,,,code.org,show,en
 blocklink_host,blocklink,block_hoc,homepage_slot_text_link_host,https://hourofcode.com/how-to,,,,,code.org,show,en
 blocklink_hocserved,blocklink,block_hoc,homepage_slot_text_link_hocserved,/leaderboards,,,,,code.org,show,en
 blocklink_codestudio,blocklink,block_students,homepage_slot_text_link_codestudio,http://studio.code.org/,,,,,code.org,show,en

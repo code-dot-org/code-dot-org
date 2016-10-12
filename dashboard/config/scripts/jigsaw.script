@@ -1,7 +1,4 @@
 id '7'
-title 'Jigsaw'
-description 'Try our Jigsaw tutorial'
-description_short 'Try our Jigsaw tutorial'
 hidden 'true'
 
 stage 'Jigsaw'

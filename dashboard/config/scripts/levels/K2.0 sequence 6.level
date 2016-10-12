@@ -5,13 +5,12 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,4,1,4,0,0,0],[0,0,4,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Figure out what is missing and then add blocks to get me to the pig!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "skip_instructions_popup": "false",
     "ideal": "5",
     "disable_param_editing": "true",
@@ -27,8 +26,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There is 1 block that you need to add to move the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nFigure out what is missing and then add blocks to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif\" width=\"300\"/>\r\n",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There is 1 block that you need to add to move the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.\",\r\n  \"hint_id\": \"K2.0_sequence_6_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "Figure out what is missing and then add blocks to get me to the pig!\r\n\r\n![](https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif)",
     "contained_level_names": null
   },
   "published": true,
@@ -39,11 +38,15 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="maze_moveWest">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveNorth">
+            <block type="maze_moveWest" movable="false">
               <next>
-                <block type="maze_moveNorth"/>
+                <block type="maze_moveNorth" deletable="false" editable="false">
+                  <next>
+                    <block type="maze_moveNorth" deletable="false" editable="false"/>
+                  </next>
+                </block>
               </next>
             </block>
           </next>

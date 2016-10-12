@@ -1,4 +1,4 @@
-class CreatePlcEvaluationAnswers < ActiveRecord::Migration
+class CreatePlcEvaluationAnswers < ActiveRecord::Migration[4.2]
   def up
     drop_table :plc_evaluation_answers if ActiveRecord::Base.connection.table_exists? :plc_evaluation_answers
 

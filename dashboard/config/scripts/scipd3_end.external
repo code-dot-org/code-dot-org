@@ -3,18 +3,11 @@ title 'Thank You!'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+# Thank You!
 
-### Thank You!
+<img src="https://images.code.org/0ec2a36a634bf1cf61af22b45a0e869c-image-1435858371999.jpeg">
 
-<br/>
-
-<img src="https://images.code.org/0ec2a36a634bf1cf61af22b45a0e869c-image-1435858371999.jpeg" width="600px" class="roundedPic">
-
-Thank you for completing Phase 3! 
+Thank you for completing Phase 3!
 
 Click the "Continue" button below to head back out to the teacher dashboard.
-
-<br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

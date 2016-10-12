@@ -123,13 +123,14 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
     "embed": "false",
     "instructions": "Add three parameters to your drawFish function to accept red, green and blue values to make your fish different colors. (Click to see full instructions)",
-    "markdown_instructions": "# Multiple Parameters\r\n\r\nLet's make our drawings even more interesting by adding some variety to the color.\r\n\r\n**Add** three more parameters called `red` , `green` , and `blue` to your function definition for `drawFish` which allow you to set the color of the fish when you call the function. Remember to separate them with commas!\r\n\r\n**Change** the function calls at the top your code to draw different colored fish.\r\n\r\n![](https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30 PM.png)",
+    "markdown_instructions": "# Multiple Parameters\r\n\r\nLet's make our drawings even more interesting by adding some variety to the color.\r\n\r\n**Add** three more parameters called `red` , `green` , and `blue` to your function definition for `drawFish` which allow you to set the color of the fish when you call the function. Remember to separate them with commas!\r\n\r\n**Note:** this means that drawFish will now have 4 parameters total: size, red, green, and blue.\r\n\r\n**HINT:** inside drawFish just replace the numbers of the penRGB values with the parameters of your function.\r\n\r\n**Change** the function calls at the top your code to draw different colored fish.\r\n\r\n![](https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -161,7 +162,39 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawFish:4"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to add 3 parameters to drawFish (for a total of 4 parameters) to help control the color of the fish. Call it at least twice to create two fish of different sizes and different colors."
+      },
+      {
+        "entries": [
+          "drawSeaGrass:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to add a parameter to drawSeaGrass, and to call it at least twice to create two strands of seagrass of different sizes."
+      },
+      {
+        "entries": [
+          "drawStarfish:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to modify drawStarfish to add a parameter and call it at least twice to create two star fish of different sizes."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

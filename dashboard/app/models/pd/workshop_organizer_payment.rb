@@ -1,5 +1,4 @@
 class Pd::WorkshopOrganizerPayment
-
   PAYMENT_CSF_PER_QUALIFIED_TEACHER = 50
 
   PAYMENT_PER_TEACHER_PER_DAY = 40
@@ -158,7 +157,7 @@ class Pd::WorkshopOrganizerPayment
   def evaluate(rule_part, default = 0)
     return default unless rule_part
     if rule_part.respond_to?(:call)
-      instance_exec &rule_part
+      instance_exec(&rule_part)
     else
       rule_part
     end

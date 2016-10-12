@@ -1,7 +1,6 @@
 /**
  * @overview Wires in the visualization.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;

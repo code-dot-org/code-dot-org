@@ -45,7 +45,7 @@
   hoc2014_teachers: Múinteoirí
   hoc2014_host: "Óstáil an Uair Chódála"
   hoc2014_everyone: Gach Duine
-  hoc2014_support: Tacaigh léi &#x25BE;
+  hoc2014_support: Sínigh an achainí &#x25BE;
   hoc2014_whatishoc: Cad é An Uair Chódála?
   csedweek_map_header: "Ócáidí #CSEdWeek / Uair Chódála ar fud an domhain"
   csedweek_map_signup: Cláraigh d'imeacht féin
@@ -57,7 +57,7 @@
   csedweek_map_legend_cs_tech_jam: "Ócáid Speisialta"
   cded_sign_up: Cláraigh
   cded_try_it: Bain triail as
-  twentyhours_trynow: Bain triail as anois
+  try_now: Bain triail as anois
   california_heading: Iarr ar do scoil an ríomheolaíocht a mhúineadh
   california_text: Is féidir le haon mhúinteoir ár gcuid <a href='http://studio.code.org/'>cúrsaí
     saor in aisce</a> a mhúineadh. Is féidir le haon bhunscoil <a href='http://code.org/educate/k5'>an
@@ -383,6 +383,11 @@
   homepage_banner_congress: Tá ceannairí Mheiriceá ag impí ar Chomhdháil chun ríomheolaíocht
     K-12 a mhaoiniú.
   homepage_banner_congress_link: Cuir do chuid tacaíochta leis seo
+  homepage_banner_emailprivacy: Seo é athrú tábhachtach ar an gcaoi a gcosnaímid príobháideachas
+    na ndaltaí.
+  homepage_banner_emailprivacy_link: Tuilleadh eolais
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Tuilleadh eolais
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
@@ -396,7 +401,7 @@
   homepage_slot_text_link_local: Aimsigh rang áitiúil
   homepage_slot_text_link_othercourses: Cúrsaí eile ar líne
   homepage_slot_text_title_educators: Múinteoirí
-  homepage_slot_text_blurb_educators: Múin do chuid daltaí
+  homepage_slot_text_blurb_educators: Acmhainní do mhúinteoirí
   homepage_slot_text_link_elementary: Bunscoil
   homepage_slot_text_link_middle: Meánscoil
   homepage_slot_text_link_high: Scoil dara leibhéal
@@ -463,16 +468,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: "Úsáid blocanna tarraingt-is-scaoileadh agus JavaScript."
   starwars_javascript_specs: Béarla amháin | Brabhsálaithe nua-aimseartha | Aois 11+
-  starwars_javascript_start_button: Bain triail as anois
   starwars_blocks_title: Blocanna
   starwars_blocks_description: "Úsáid blocanna tarraingt-is-scaoileadh."
   starwars_blocks_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha, gutháin
     chliste, táibléid | Aois 6-106
-  starwars_blocks_start_button: Bain triail as anois
-  starwars_watch_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla
-    seo
-  starwars_speak_languages: An bhfuil teanga eile agat?
-  starwars_help_translate: Cabhraigh leis an aistriúchán
   starwars_platform_text: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_name: An Uair Chódála Minecraft
   mc_longdescription: "Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan
@@ -484,6 +483,14 @@
   mc_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid | Aois
     6-106
   minecraft_subtitle: An Uair Chódála Minecraft
+  watch_inspirational_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla
+    seo
+  speak_another_language: An bhfuil teanga eile agat?
+  help_translate: Cabhraigh leis an aistriúchán.
+  no_internet: Gan cheangal Idirlín?
+  download_offline: "Íoslódáil an leagan as líne."
+  are_you_teacher: An múinteoir thú?
+  review_lesson_plan: Féach ar an bplean ceachta agus ar acmhainní eile do mhúinteoirí.
   volunteer_engineer_submission_title: Bí i do shaorálaí agus spreag daltaí
   volunteer_engineer_submission_subtitle_generic: 'Beidh 100,000 múinteoir ag óstáil
     An Uair Chódála ina seomra ranga i mbliana, 7-13 Mí na Nollag, 2015. Cabhraigh
@@ -687,6 +694,7 @@
   dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
+  dashboard_action_print_certificates: Priontáil teastais
   dashboard_assessments_view: 'Féach measúnuithe i:'
   dashboard_assessments_none: Baineann go leor múinteoirí úsáid as an gcluaisín "Féach
     Dul Chun Cinn" le dul chun cinn a gcuid daltaí a leanúint. Má tá tú ag iarraidh
@@ -697,8 +705,10 @@
     dhaltaí a dhéanfaidh an scrúdú AP. Chun na measúnuithe seo a úsáid, tabhair an
     cúrsa do do rang, ansin roghnaigh an cúrsa ón roghchlár anuas agus feicfidh tú
     freagraí do chuid daltaí anseo.
-  dashboard_assessments_summaries: Achoimrí
-  dashboard_assessments_answers: Na freagraí go léir
+  dashboard_assessments_summaries: Achoimrí ar mheasúnuithe
+  dashboard_assessments_answers: Na freagraí measúnaithe go léir
+  dashboard_surveys_answers: Suirbhéanna
+  dashboard_percent: Céatadán
   dashboard_filter_by_stage: 'Scagadh de réir na céime:'
   dashboard_filter_all: Uile
   dashboard_download_csv: "Íoslódáil CSV"
@@ -713,6 +723,7 @@
   dashboard_navigation_view_progress: Dul chun cinn
   dashboard_navigation_view_text_responses: Freagraí Téacs
   dashboard_navigation_view_assessments: Measúnuithe
+  dashboard_navigation_view_assessments_surveys: Measúnuithe/Suirbhéanna
   dashboard_navigation_add_students: Cuir Daltaí Leis
   dashboard_navigation_manage_students: Bainistigh Daltaí
   dashboard_navigation_lesson_plans_resources: Pleananna Ceachta agus Acmhainní
@@ -908,13 +919,20 @@
   dashboard_faq: Ceisteanna Coitianta
   dashboard_faq_k5: 'Bunscoil: Ceisteanna Coitianta'
   dashboard_announcements: Fógraí
-  dashboard_announce_view_all: Féach uile
-  dashboard_announce_message: Ar mhaith leat cabhrú linn chun gné nua a thástáil?
-    Tuigimid go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail,
-    mar sin beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta
-    a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh
-    do chuid aiseolais sula gcraolfaimid an gné go poiblí.
-  dashboard_announce_button_text: Tástáil an ghné
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Tuilleadh eolais
+  dashboard_announce_try_now_button: Bain triail as anois
   dashboard_announce_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
     chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
     Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
@@ -922,8 +940,19 @@
     is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na
     Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
   dashboard_announce_petition_button: Cuir d'ainm leis
+  dashboard_announce_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár
+    mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
+    ar fhógraí roimhe seo.</a>
   code_hoc_coming: Tá an Uair Chódála anseo - 8-14 Nollaig!
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Bain triail as anois
   learn_sign_up_description: Cláraigh chun páirt a ghlacadh san Uair Chódála le linn
     Sheachtain an Oideachais Ríomheolaíochta
@@ -1815,12 +1844,11 @@
   sphero_beyond_longdescription: Is cuma an múinteoir nó tuismitheoir thú, tugann
     na ceachtanna SPRK dianchúrsa ríomhchláraithe le róbait do pháistí a ghéaraíonn
     a scileanna sa matamaitic agus san eolaíocht ag an am céanna.
-  compatibility_https_header: Ba chóir duit HTTPS a chumasú le haghaidh code.org.
-  compatibility_https_message: Le do shlándáil a chosaint, athróidh an suíomh seo
-    ó HTTP go HTTPS ar %{https_date}. Ní bheidh tú in ann cuairt a thabhairt ar http://code.org
-    tar éis an dáta seo. <a href='%{it_requirements_url}'>Cliceáil anseo</a> chun
-    tuilleadh eolais a fháil faoi úsáid HTTPS ar Code.org.
-  compatibility_https_hide_this_warning: Folaigh an rabhadh seo
+  compatibility_hide_this_warning: Folaigh an rabhadh seo
+  compatibility_unsupported_browser: Ní thacaímid le do bhrabhsálaí. Ba chóir duit
+    <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe
+    tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans
+    go mbeidh roinnt gnéithe ar an leathanach briste.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1829,27 +1857,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  try_now: Try now
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

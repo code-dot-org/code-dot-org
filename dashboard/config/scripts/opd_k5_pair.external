@@ -1,27 +1,20 @@
 name 'OPD-K5 Pair'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
+# Best Practices > Pair Programming
 
-### BEST PRACTICES > Pair Programming
-<br><br>
 One important classroom management strategy many educators use is strategic grouping. At code.org, we suggest trying the strategic grouping strategy used in the real-world offices of the top tech firms: pair programming.
-<br><br>
+
 >**Pair programming** is when two students use one computer to write a program together. The National Center for Women & Information Technology (NCWIT) has a [great resource about the benefits of pair programming](http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
-<br><br>
 
 Research shows that pair programming:
 
 - Leads to higher-quality student programs relative to non-paired students' programs
 - Reduces the so-called "confidence gap" between female and male students, while increasing the programming confidence of all students
 
-<br><br>
 Not only is pair programming beneficial for students, it is also something that is practiced by some professional computer programmers. Watch this video to learn how to introduce pair programming to your students.
-<br><br>
+
 <iframe width="640" height="390" src="https://www.youtube.com/embed/sxToW3ixrwo" frameborder="0" allowfullscreen></iframe>
-
-<br>
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

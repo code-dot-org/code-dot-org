@@ -1,0 +1,20 @@
+name 'sciPD2Part4_S2_L2'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Observation in Practice
+
+<img src="https://s16.postimg.io/tdbne8jcl/Spacleand.jpg" class="level-image">
+
+Now it's time to make your observations!
+Make sure you have a copy of the Model Observation Form ready to go and open the SL Nova Mystery Model <a href="http://www.slnova.org/GUTS/projects/36743/" target="_blank"> HERE</a>.  
+
+Fill out your Model Observation form as you experiment with the model, and remember--try not to peek at the code...yet!
+
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

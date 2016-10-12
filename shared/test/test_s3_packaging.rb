@@ -20,7 +20,9 @@ class S3PackagingTest < Minitest::Test
       File.open('build/output.js', 'w') { |file| file.write("output") }
     end
     packager = RakeUtils.stub(:git_folder_hash, commit_hash) do
-      S3Packaging.new('test-package', source_location, target_location)
+      S3Packaging.new('test-package', source_location, target_location).tap do |s3|
+        s3.instance_variable_get(:@logger).level = Logger::Severity::WARN
+      end
     end
     [source_location, target_location, packager]
   end
@@ -32,10 +34,12 @@ class S3PackagingTest < Minitest::Test
 
   def setup
     @source_location, @target_location, @packager = create_packager
+    CDO.log.level = Logger::Severity::WARN
   end
 
   def teardown
     cleanup_packager(@source_location, @target_location)
+    CDO.log.level = Logger::Severity::INFO
   end
 
   def test_s3_key
@@ -176,7 +180,7 @@ class S3PackagingTest < Minitest::Test
     end
     @packager.send(:upload_package, package)
     # Stub blank AWS credentials in packager's S3 client
-    @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil,nil)))
+    @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil, nil)))
     downloaded = @packager.send(:download_package)
     assert @packager.send(:packages_equivalent, package, downloaded)
   end

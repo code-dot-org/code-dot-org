@@ -1,4 +1,4 @@
-class CreateOpsTables < ActiveRecord::Migration
+class CreateOpsTables < ActiveRecord::Migration[4.2]
   def change
     create_table :districts do |t|
       t.string :name, null: false
@@ -9,7 +9,7 @@ class CreateOpsTables < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :cohorts do |t|
+    create_table :cohorts do |t|  # rubocop:disable Style/SymbolProc
       t.timestamps
     end
 
@@ -61,6 +61,5 @@ class CreateOpsTables < ActiveRecord::Migration
       t.index [:district_id, :cohort_id]
       t.index [:cohort_id, :district_id]
     end
-
   end
 end

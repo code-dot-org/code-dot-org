@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
 

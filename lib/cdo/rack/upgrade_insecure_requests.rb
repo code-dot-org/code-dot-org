@@ -7,7 +7,6 @@ require 'dynamic_config/dcdo'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml
-
     # Hash of domains we want to rewrite links from http-explicit to protocol-relative urls.
     # Most of the time, switching scheme from http to https will work, but we can add any exceptions to this list.
     # Only the first match is rewritten
@@ -44,11 +43,12 @@ module Rack
           # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
           policies += [
               "default-src 'self' https:",
-              "script-src 'self' https: 'unsafe-inline' 'unsafe-eval'",
+              "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
               "style-src 'self' https: 'unsafe-inline'",
               "img-src 'self' https: data: blob:",
               "font-src 'self' https: data:",
               "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com",
+              "media-src 'self' https: http://vaas.acapela-group.com https://cdo-tts.s3.amazonaws.com",
               "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
         end

@@ -4,7 +4,6 @@
 # However, if the caller can correct the count by calling set_approximate_row_count
 # when an approximate value is known (e.g. after a the client reads the full table).
 class TableLimits
-
   def initialize(redis, endpoint, channel_id, table)
     @redis = redis
     @row_count_key = "#{endpoint}.#{channel_id}.#{table}.approx_row_count"

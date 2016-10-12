@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class PuzzleRatingTest < ActiveSupport::TestCase
-
   setup do
     @student = create :student
     @script = create :script
@@ -34,5 +33,4 @@ class PuzzleRatingTest < ActiveSupport::TestCase
     assert_equal false, PuzzleRating.exists?(script: @script, level: @level, user: @student)
     assert_equal false, PuzzleRating.can_rate?(@script, @level, @student)
   end
-
 end

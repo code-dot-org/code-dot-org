@@ -30,7 +30,7 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "start_direction": "90",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nLet's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \r\n\r\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\" width=\"450px\"/>\r\n\r\n\r\n<br/>\r\n\r\n\r\n\r\nTry solving this puzzle by defining a new `function`, then calling it five times. You can solve this without adding any new loops!",
+    "markdown_instructions": "Let's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \r\n\r\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\" width=\"450px\"/>\r\n\r\n\r\n<br/>\r\n\r\n\r\n\r\nTry solving this puzzle by defining a new `function`, then calling it five times. You can solve this without adding any new loops!",
     "instructions": "Can you figure out how to add these windows? Watch out for the door!",
     "contained_level_names": null
   },
@@ -108,6 +108,42 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a house</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

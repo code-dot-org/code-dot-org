@@ -3,34 +3,10 @@ title 'Introduction to the TLO'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<style>
-.outerText{
-	padding: 15px 15px 15px 40px; 
-    background-color:#eeeeee; 
-    border-radius:10px;
-}
-.innerText{
-	padding: 15px 15px 15px 15px; 
-    background-color:#FFFFFF; 
-    border-radius:10px;
-}
+# The TLO
 
-img{
-	border-radius: 10px;
-    mix-blend-mode: multiply;
-}
+<img src="https://images.code.org/320a5e0b9da76bf2a7ff4f335114c4e5-image-1440794595752.jpg" width="600px">  
 
-</style>
-
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
-
-### The TLO
-
-<br/>
-
-<img src="https://images.code.org/320a5e0b9da76bf2a7ff4f335114c4e5-image-1440794595752.jpg" width="600px" class="roundedPic">  
-
-<br/><br/>
 Code.org believes that Teacher/Learner/Observer (TLO) activities are a vital part of the professional development experience.  
 
 Learning curriculum is one thing, learning to teach curriculum requires more.  That's why we like to give our teachers opportunities to practice teaching as they're experiencing the lessons themselves.
@@ -39,30 +15,16 @@ A TLO is designed to encourage a teacher to practice preparing a lesson in earne
 
 The final step is for the facilitator of the PD to bring the small groups back together and discuss the details of the lesson and potential pitfalls that teachers and students might experience.
 
-<br/>
-<div class="outerText">
-<h4><strong>
-Quick Guide to TLO
-</strong></h4>
-    <div class="innerText">
-    1)  Break up into small groups, ideally between 2 & 4 people. <br/> <br/>
-    2)  Use the curriculum to authentically prepare a lesson (or version of a lesson) to teach to your peers. <br/> <br/>
-    3)  Come together with another group (ideally one that is teaching a different lesson) and acknowledge the different roles that you have to play. (We suggest putting on your **Teacher** and **Learner** "hats".)  <br/> <br/>
-    4)  Present your lesson to the **Learners** as if you were teaching to your own classroom. <br/> <br/> 
-    5)  When you're finished, the PD facilitator will chime in to guide the entire class in a discussion about the lesson. <br/> <br/> 
-    6)  Once the lesson review is complete, it's time for the **Teachers** to become the **Learners** and the **Learners** to become **Teachers**. <br/> <br/> <br/> 
+## Quick Guide to TLO
+
+1. Break up into small groups, ideally between 2 & 4 people.
+2. Use the curriculum to authentically prepare a lesson (or version of a lesson) to teach to your peers.
+3. Come together with another group (ideally one that is teaching a different lesson) and acknowledge the different roles that you have to play. (We suggest putting on your **Teacher** and **Learner** "hats".)
+4. Present your lesson to the **Learners** as if you were teaching to your own classroom.
+5. When you're finished, the PD facilitator will chime in to guide the entire class in a discussion about the lesson.
+6. Once the lesson review is complete, it's time for the **Teachers** to become the **Learners** and the **Learners** to become **Teachers**.
 
 For more information on TLO, you can download this <a href="https://drive.google.com/file/d/0B-uvt08wYSQqZFdGZ21VLVpsSFE/view?usp=sharing" target="_new">TLO Handout</a>.
 
-  </div>
-</div>
-
-    
-    
-
-
-<br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

@@ -1,30 +1,28 @@
 name 'OPD-K5 Stage6Go'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
-
-### FUNCTIONS > Reflection
-<br><br>
+# Functions > Reflection
 
 In this stage, we explored how functions can make you a faster programmer by allowing you to reuse segments of your code. In the next stage, we’ll look at the core concept of “events” and put your coding skills to the test.**Take a moment now to review how functions are introduced in the code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
 
-#### Unplugged Lesson Plans
+## Unplugged Lesson Plans
 
 **1. Review "Functional Suncatchers" Lesson Plan:** [Course 3](https://code.org/curriculum/course3/4/Teacher)
-<br><br>
 
 **2. Watch the student video: Funcitonal Suncatchers**
+
 <iframe width="640" height="390" src="https://www.youtube.com/embed/d1MdyeXy0v0" frameborder="0" allowfullscreen></iframe>
-<br><br>
+
 [Can't see the video? Click here](http://videos.code.org/2014/C3-functional-suncatchers.mp4)
-<br><br>
 
 **3. Watch a teacher model this lesson: "Functional Suncatchers"**
+
 <iframe width="640" height="390" src="https://www.youtube.com/embed/Rb5DNYhLb7I" frameborder="0" allowfullscreen></iframe>
-<br><br>
+
 **4. Review other unplugged activities for teaching funcations:** [Course 3: Songwriting](https://code.org/curriculum/course3/9/Teacher)
 
-#### Code Studio Activities
+## Code Studio Activities
+
 Explore Course 3 functions stages:
 
 - [Stage 4](https://studio.code.org/s/course3/stage/4/puzzle/1)
@@ -32,16 +30,10 @@ Explore Course 3 functions stages:
 - [Stage 6](https://studio.code.org/s/course3/stage/6/puzzle/1)
 - [Stage 9](https://studio.code.org/s/course3/stage/9/puzzle/1)
 
-<br><br>
+> ## Reflect
+> How would you explain the concept of functions to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank">our Professional Learning Community (PLC) forum</a>.
 
->## Reflect
-How would you explain the concept of functions to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank">our Professional Learning Community (PLC) forum</a>.
-<br><br>
-<a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"><button class="plc">Discuss in the forums >></button></a><br>
-<br><br>
+> <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"><button class="plc">Discuss in the forums >></button></a>
 
 After commenting in the forum, return here and click below to move on to the next stage.
-<br><br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

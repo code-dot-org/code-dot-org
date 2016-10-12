@@ -1,196 +1,196 @@
 pl:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Wprowadzenie do informatyki
         desc: Na tej lekcji zostanie wprowadzone pojęcie informatyki i wyjaśnione, czym zajmuje się informatyk. Będzie to okazją dla uczniów, by wcielili się w rolę informatyka. Po zakończeniu tych zajęć każdy uczeń zabierze ze sobą do domu to, czego się nauczył. Możesz ulec pokusie, by pominąć nauczenia dzieci określeń, pojawiających w czasie lekcji, które są przed nami, prezentując je jednak teraz w sposób zabawny i przyjemny może okazać się bardziej owocne, niż oczekiwanie na okazję bardziej odpowiednią.
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Myślenie komputacyjne
         desc: Potrzebne będą jedynie papier i markery, gdy uczniowie będą poznawać cztery kroki myślenia komputacyjnego. Po krótkim wprowadzeniu, uczniowie powinni zostać podzieleni na grupy, które będą miały utworzyć wskazówki dla innych uczniów, jak rysować konkretnego potwora (z katalogu wstępnie wybranych potworów). Całe zadanie musi być rozłożone między zespoły, które będą analizować wszystkie potwory w katalogu doszukując się charakterystycznych podobieństw i różnic w potworach, by następnie użyć tych informacji do utworzenia algorytmu (wskazówek) dla innego zespołu, by mógł narysować danego potwora. Następnie, zespoły będą zamieniać się algorytmami i rysować potwory na podstawie otrzymanych algorytmów. Czy rysunek jest taki, jak tego chciał zespół?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Programowanie na papierze milimetrowym
         desc: 'Pomagając sobie, jak tworzyć rysunki, uczniowie będą zaczynali rozumieć, czym rzeczywiście jest programowanie. Zajęcia rozpoczynają uczniowie instruując się nawzajem, jak pokolorować kwadraciki na papierze milimetrowym, starając się odtworzyć istniejące rysunki.  Jeśli jest czas, lekcja może się zakończyć prezentacją rysunków, które uczniowie utworzyli samodzielnie.'
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algorytmy
         desc: 'Ta lekcja dotyczy algorytmów.  Za pomocą tangramów i papieru milimetrowego, pierwsze ćwiczenie pokaże, jak ważne jest, aby każda instrukcja była jak najbardziej jasna i jednoznaczna. Później, klasa zbada, na jak wiele sposobów można złożyć papier w prostokąt, zwracając uwagę, że niektóre metody mogą wymagać więcej lub mniej zgięć niż inni.'
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Funkcje
         desc: 'Na tej lekcji uczniowie będą tworzyć łapacze słońca z łańcuszków i koralików, o szczególnym uroku. Będą przy tym naśladować szereg powtarzających się kroków, a następnie zostaną poproszeni o wskazanie pewnych zestawów "umiejętności", które są wielokrotnie powielane. Po tym, jak te umiejętności są zdefiniowane, zostaną poproszeni przez główny program i cały piękny proces tworzenia zostanie utrwalony na pojedynczej kartce papieru. Ostateczny program będzie skierowany do całej klasy, niezależnie od typu łańcuszków, koralików i uroku. Aby osiągnąć to skutecznie, uczniowie będą musieli "wyabstrahować" szczegóły ich konkretnych materiałów i utworzyć ogólnikowe opisy poszczególnych materiałów.  To użycie ogólnych symboli zastępczych jest wspaniałym wprowadzeniem do zmiennych.'
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Warunki
         desc: 'Jest to gra dla klasy. Po wprowadzeniu warunków, instrukcji warunkowych "jeśli" i pętli, klasa może razem ćwiczyć korzystając z wcześniej napisanego programu, talii kart i szczęścia w losowaniu.'
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Pisanie piosenek
         desc: 'Czytanie liryk (tekstów piosenek) jest dość intuicyjnym zajęciem dla większości uczniów. Posłużymy się powszechnie znanymi działaniami, które użyjemy do  zaznajomienia ich z definiowaniem i wywołaniem funkcji. Gdy tylko uczniowie to opanują, dodamy dodatkowe możliwości, które pojawiają się wraz z przekazywaniem parametrów w ramach wywołań funkcji.'
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstrakcja
         desc: Te zajęcia są połączeniem codziennych rutynowych działań Twoich uczniów z grą polegającą na myśleniu w stylu Mad-Lib, aby pomóc Twojej klasie dowiedzieć się o efektywności (skuteczności) abstrakcji.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Sztafeta programowania
         desc: Na tej lekcji weźmiemy pomysł z poprzedniej aktywności (4. Programowanie na papierze milimetrowym) i wykorzystamy tamte umiejętności dla podkreślenia znaczenia zakończenia programów działających liniowo i częstego sprawdzania, czy programy nie zawierają błędów (bugs).
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: Internet
         desc: Na tej lekcji uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się o adresach sieciowych IP i DNS.
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Podsumowanie
         desc: Końcowe podsumowanie pierwszej 20-godzinnej serii pomoże ponownie przeżyć ulubione momenty, jednocześnie umożliwiając podjęcie następnych kroków, jeśli jesteście zainteresowani kontynuacją podróży w świat informatyki.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Szczęśliwe Mapy (Happy Maps)
         desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić postać przez labirynt posługując się pojedynczym poleceniem.
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Przenieś go, Przenieś go
         desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić postać przez labirynt posługując się pojedynczym poleceniem.
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Algorytmy z życia wzięte: sadź nasiona'
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym życiu, posługując się przykładem sadzenia nasion. Koncentruje się również na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają algorytmy.
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Kładąc podwaliny (Building a Foundation)
         desc: Uczniowie budują struktury przy użyciu tylko dostępnych zasobów. Struktury muszą kończyć zadanie (dotrzeć do pewnej wysokości lub osiągnąć pewną wagę), a uczniowie dyskutują o pomysłach, wytrwałe, gdy sprawy się komplikują.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Poznając pętle
         desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania, z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie są proszeni o powtarzanie jej.
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Sztafeta programowania
         desc: 'Uczniowie tworzą sztafetę, w której biegną przez trawnik, aby zapisać algorytm oparty na obrazie pochodzącym z "Programowania na papierze". Każdy uczeń może zapisywać tylko jedną instrukcję i jeśli w jakimś punkcie pojawia się błąd, to należy wymazać wszystko do tego punktu.'
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Warunkowe
         desc: 'Aby dowiedzieć się o instrukcjach warunkowych, uczniowie grają w karty i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Wielkie Wydarzenie
         desc: 'Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał przyciski na papierze a uczniowie będą reagować w zależności od tego, który przycisk został naciśnięty.'
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Bezpiecznie dotrzeć na miejsce
         desc: Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Nauczyciele przedstawiają, jak bezpiecznie nawigować po Internecie.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Programowanie na papierze milimetrowym
         desc: Uczniowie piszą algorytm (zestaw instrukcji) korzystając ze zbioru wcześniej zdefiniowanych poleceń, aby kierować innymi uczniami przy odtworzeniu rysunku.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Rzeczywiste algorytmy: Papierowe samoloty'
         desc: Ta lekcja jest poświęcona sposobom wykorzystania algorytmów w naszym codziennym życiu, w szczególności przy tworzeniu papierowych samolotów. Uwaga jest skupiona na znaczeniu algorytmów w informatyce.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Binarne bransoletki
         desc: Uczniowie tworzą bransoletki jako binarne reprezentacje pierwszej litery swoich nazwiska. Dowiadują się przy tym, że dane mogą być reprezentowane i przechowywane na wiele sposobów.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Twój cyfrowy ślad
         desc: 'Nauczycieli przedstawia uczniom, że umieszczenie informacji o sobie online tworzy cyfrowy ślad lub "szlak", co może mieć konsekwencje.'
         video: C2_digital_footprint
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Myślenie komputacyjne
         desc: Uczniowie wykonują podstawowe kroki myślenia komputacyjnego (dekomponują, dostosowują wzorce, abstrahują, stosują algorytmy), aby odkryć, jak grać w grę, którą otrzymali bez instrukcji.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: 'Łapacze Słońca (Suncatchers): Funkcje'
         desc: Uczniowie tworzą algorytm ze zmiennymi i funkcjami (czyli fragmentami kodu, które mogą być wielokrotnie używane) do tworzenia łapaczy słońca (suncatchers) przy użyciu łańcuszka i koralików.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Pisanie piosenek z parametrami
         desc: Uczniowie używają pojęcia refren w piosence, aby zapoznać się z przekazywaniem parametrów (dzięki czemu można dostosować funkcję bez konieczności przepisywania jej).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Algorytmy z życia wzięte: Gra w kości'
         desc: Ta lekcja odwołuje się do sposobów korzystania z algorytmów w naszym codziennym życiu. W ramach tego, uczniowie definiują i zapisują algorytm do gry w kości.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internet
         desc: Uczniowie przesyłają wiadomości reprezentując różne metody internetowej transmisji przy użyciu kawałków papieru.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Praca w grupie (Crowdsourcing)
         desc: Uczniowie używają crowdsourcing (działania w grupie), popularną w informatyce technikę rozwiązywania problemów, do ukończenia zadania razem całą klasą, bardziej efektywnie, niż gdyby jeden uczeń próbował wykonać to sam.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Cyfrowe obywatelstwo
         desc: Uczniowie poznają różnicę między informacjami prywatnymi i osobistymi rozróżniając, co jest bezpieczne, a co jest niebezpieczne dzieląc się nimi online.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Algorytmy na tangramach
         desc: Ta lekcja demonstruje coś ważnego o algorytmach. Jeśli Twój algorytm jest prosty, to istnieje wiele sposobów jego wykorzystania. Jeśli chcesz mieć pewność, że każdy kończy tak samo, Twój algorytm wymaga więcej szczegółów.
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Zmienne w kopertach
         desc: 'Zmienne umożliwiają wiele swobody w informatyce.  Ta lekcja służy wyjaśnieniu, czym są zmienne i jak możemy posługiwać się nimi na wiele różnych sposobów. Wykorzystaj tę zajęcia przed (lub w powiązaniu z) lekcją na temat abstrakcji, by naprawdę poznać ideę domu.'
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: Mad Glibs
         desc: 'Abstrakcja jest jednym z najważniejszych pojęć, jakie informatyk powinien rozumieć i umieć stosować. W tej aktywności uczniowie analizują historyjki, by wykryć w nich różnice a następnie wyabstrahować je. Te wyabstrahowane opowieści stają  się szablonami dla zabawnych i szalonych nowych opowieści.'
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: 'Zabawa z pętlą "dla"'
         desc: Wiemy, że pętle służą do wykonywania tych samych rzeczy w kółko, ale teraz mamy zamiar dowiedzieć się, jak stosować pętle z wbudowanymi w nie dodatkowymi strukturami.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Pisanie Piosenek z parametrami
         desc: 'Jedną z najwspanialszych struktur w informatyce jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami, które można wielokrotnie używać wewnątrz większych programów. Ta lekcja pomoże uczniom intuicyjnie zrozumieć, dlaczego połączenie fragmentów kodu w funkcje jest tak dobrą praktyką.  '
         video: C4_unplugged_parameters
-      BinaryImages:
+      'BinaryImages':
         title: Binarne obrazy (Binary Images)
         desc: 'Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, w naszych poprzednich kursach uczniowie mogli się dowiedzieć, że informacja może być reprezentowana na różne binarne sposoby.  Na tej lekcji to pojęcie jest rozwijane jeszcze dalej i ilustrowane jest, jak komputer może przechowywać bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.'
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Gry Wideo i Płaszczyzny Współrzędnych
         desc: Odkryj, jak gry wideo, w które uwielbiasz grać, są tworzone z wykorzystaniem algebry! Poznaj, jak wyrażenia algebraiczne i płaszczyzna współrzędnych pomagają zrozumieć, jak działają gry wideo, a następnie zacznij planować swoją grę wideo, którą wykonasz.
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Umowy, Domena i Zakres
         desc: Kontrakty są sposobem na zrozumienie i omówienie funkcji. Na tej lekcji przyjrzymy się, jak kontrakty mogą pomóc nam zrozumieć nowy język programowania lub funkcję.
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Przepisy projektowe
         desc: 'Na ostatnim etapie uczniowie napisali kilka bardzo prostych funkcji - ale bardziej złożone funkcje wymagają bardziej przemyślanego podejścia. Przepisy projektowe są strukturalnym podejściem do pisania funkcji, które obejmuje pisanie testów dla zapewnienia, że funkcja działa zgodnie z oczekiwaniami.'
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Wartości logiczne i logika
         desc: Wartości logiczne są czwartym i ostatnim typem danych, który poznasz w tym kursie. Dowiesz się, co to są wartości logiczne i, jak mogą pomóc w pisaniu funkcji, które myślą logicznie.
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Warunki i funkcje częściowe
         desc: Parametry, które przekazujemy do funkcji powodują, że wyjście (wyniki) zależy ściśle od ustalonych wzorców. Załóżmy, że chcemy, by parametry z niektórymi wartościami tworzyły wyjście z użyciem jednego wzorca, ale inne wartości parametrów powodowały użycie innego wzorca. To jest sytuacja, w której potrzebne są instrukcje warunkowe...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Wykrywanie kolizji i twierdzenie Pitagorasa
         desc: Określanie, kiedy obiekty na ekranie dotykaj się jest ważnym aspektem większości gier. Na tej lekcji przyjrzymy się, jak twierdzenie Pitagorasa i wzór na odległość mogą być użyte do pomiaru odległości między dwoma punktami na płaszczyźnie, a następnie określenia, czy te dwa punkty (lub postacie w grze) dotykają się.
         video: alg_16_biggame_collision_detection

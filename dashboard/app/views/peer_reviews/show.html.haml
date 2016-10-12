@@ -1,9 +1,26 @@
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/plc.js')}
 .peer-review
-  %h1 Peer Review
-  %p Please review the peer submission in the grey box below.
+  - reviewed = !!@peer_review.status
+
+  - if @peer_review.script.professional_learning_course?
+    #breadcrumb
+    - course_unit = @peer_review.script.plc_course_unit
+    - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.get_url_name), page_name: t('flex_category.peer_review')}
+    :javascript
+      ReactDOM.render(
+        React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
+        document.getElementById('breadcrumb')
+      );
+
+  %h1
+    =t('flex_category.peer_review')
+
+  - unless reviewed
+    %p Please review the peer submission in the grey box below.
 
   .submitted_readonly{style: 'padding: 8px;'}
-    %script{src: asset_path('js/initApp/initApp.js')}
+    %script{src: minifiable_asset_path('js/initApp/initApp.js')}
     :javascript
       var appOptions = #{app_options.to_json};
     = render partial: 'levels/free_response', locals: {in_level_group: true}
@@ -18,20 +35,20 @@
         %ul
           - @peer_review.errors.full_messages.each do |msg|
             %li= msg
-
     .field
       %label
-        = f.radio_button :status, :accepted
+        = f.radio_button :status, :accepted, disabled: reviewed, checked: ['accepted', nil].include?(@peer_review.status)
         != t('peer_review.accepted.description')
       %label
-        = f.radio_button :status, :rejected
+        = f.radio_button :status, :rejected, disabled: reviewed
         != t('peer_review.rejected.description')
       %label
-        = f.radio_button :status, :escalated
+        = f.radio_button :status, :escalated, disabled: reviewed
         %span{style: 'font-size: 0.8em;'}
           != t('peer_review.escalated.description')
     .field
       %p Review notes:
-      = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;'
-    .actions
-      = f.submit 'Submit', class: 'btn btn-large btn-primary'
+      = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;', disabled: reviewed
+    - unless reviewed
+      .actions
+        = f.submit 'Submit', class: 'btn btn-large btn-primary'

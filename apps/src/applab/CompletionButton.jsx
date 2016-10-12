@@ -1,9 +1,8 @@
-var msg = require('@cdo/locale');
-
-var React = require('react');
-var connect = require('react-redux').connect;
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var experiments = require('../experiments');
+import msg from '@cdo/locale';
+import React from 'react';
+import {connect} from 'react-redux';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
+import experiments from '../experiments';
 
 const styles = {
   main: {
@@ -74,7 +73,7 @@ var CompletionButton = React.createClass({
   }
 });
 
-module.exports = connect(function propsFromStore(state) {
+export default connect(function propsFromStore(state) {
   return {
     isProjectLevel: state.pageConstants.isProjectLevel,
     isSubmittable: state.pageConstants.isSubmittable,
@@ -83,8 +82,8 @@ module.exports = connect(function propsFromStore(state) {
   };
 })(CompletionButton);
 
-module.exports.styles = styles;
+export {styles};
 
-module.exports.__TestInterface__ = {
+export var __TestInterface__ = {
   UnconnectedCompletionButton: CompletionButton
 };

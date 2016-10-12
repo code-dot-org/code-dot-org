@@ -1,4 +1,5 @@
-'use strict';
+import {singleton as studioApp} from '../StudioApp';
+import {allAnimationsSingleFrameSelector} from './animationListModule';
 var animationsApi = require('../clientApi').animations;
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
@@ -202,7 +203,7 @@ GameLabP5.prototype.init = function (options) {
     }
 
     if (sprite.collider instanceof this.CircleCollider) {
-      return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
+      return this.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
     } else if (sprite.collider instanceof this.AABB) {
       return mousePosition.x > sprite.collider.left() &&
           mousePosition.y > sprite.collider.top() &&
@@ -348,6 +349,42 @@ GameLabP5.prototype.init = function (options) {
     this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
   }.bind(this);
 
+  // Returns a constant for a mouse state given a string.
+  GameLabP5.prototype._clickKeyFromString = function (buttonCode) {
+    if (this.CLICK_KEY[buttonCode]) {
+      return this.CLICK_KEY[buttonCode];
+    } else {
+      return buttonCode;
+    }
+  };
+
+  // Map of strings to constants for mouse states.
+  GameLabP5.prototype.CLICK_KEY = {
+    'leftButton': window.p5.prototype.LEFT,
+    'rightButton': window.p5.prototype.RIGHT,
+    'centerButton': window.p5.prototype.CENTER
+  };
+
+  // Overrride p5.play so we can use strings in addition to constants.
+  const p5IsMouseButtonInState = window.p5.prototype._isMouseButtonInState;
+  window.p5.prototype._isMouseButtonInState = function (buttonCode, state) {
+    return p5IsMouseButtonInState.call(this.p5, this._clickKeyFromString(buttonCode), state);
+  }.bind(this);
+
+  window.p5.prototype.createEdgeSprites = function () {
+    this.leftEdge = this.createSprite(-50, 200, 100, 400);
+    this.rightEdge = this.createSprite(450, 200, 100, 400);
+    this.topEdge = this.createSprite(200, -50, 400, 100);
+    this.bottomEdge = this.createSprite(200, 450, 400, 100);
+
+    this.edges = this.createGroup();
+    this.edges.add(this.leftEdge);
+    this.edges.add(this.rightEdge);
+    this.edges.add(this.topEdge);
+    this.edges.add(this.bottomEdge);
+
+    return this.edges;
+  };
 };
 
 /**
@@ -610,7 +647,12 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
     rotationZ: this.p5,
     pRotationX: this.p5,
     pRotationY: this.p5,
-    pRotationZ: this.p5
+    pRotationZ: this.p5,
+    leftEdge: this.p5,
+    rightEdge: this.p5,
+    topEdge: this.p5,
+    bottomEdge: this.p5,
+    edges: this.p5
   };
 };
 
@@ -727,14 +769,17 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
   this.p5.projectAnimations = {};
   animationList.orderedKeys.forEach(key => {
     const props = animationList.propsByKey[key];
+    const frameCount = allAnimationsSingleFrameSelector(studioApp.reduxStore.getState()) ? 1 : props.frameCount;
     const image = this.p5.loadImage(props.dataURI, () => {
       const spriteSheet = this.p5.loadSpriteSheet(
           image,
           props.frameSize.x,
           props.frameSize.y,
-          props.frameCount
+          frameCount
       );
       this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
+      this.p5.projectAnimations[props.name].looping = props.looping;
+      this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
     });
   });
 };

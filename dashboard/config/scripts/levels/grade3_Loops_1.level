@@ -6,7 +6,7 @@
   "user_id": 5,
   "properties": {
     "skin": "bee",
-    "instructions": "Hi, I'm a bee. Can you help me collect the nectar from these flowers? ",
+    "instructions": "Can you help me collect the nectar from these flowers? ",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

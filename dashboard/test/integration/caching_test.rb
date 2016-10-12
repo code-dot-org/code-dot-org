@@ -1,13 +1,12 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
-
   def setup
+    Script.stubs(:should_cache?).returns true
     Script.clear_cache
     # turn on the cache (off by default in test env so tests don't confuse each other)
-    Dashboard::Application.config.action_controller.perform_caching = true
-    Dashboard::Application.config.cache_store = :memory_store, { size: 64.megabytes }
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    Rails.application.config.action_controller.perform_caching = true
+    Rails.application.config.cache_store = :memory_store, { size: 64.megabytes }
 
     Rails.cache.clear
   end
@@ -109,7 +108,6 @@ class CachingTest < ActionDispatch::IntegrationTest
   #   assert_response 200
   # end
 
-  # course1 is not caching yet
   test "should get show of course1 level 1 twice" do
     get '/s/course1/stage/3/puzzle/1'
     assert_response :success
@@ -142,5 +140,4 @@ class CachingTest < ActionDispatch::IntegrationTest
     post "/milestone/0/#{sl.id}", params
     assert_response 200
   end
-
 end

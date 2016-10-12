@@ -1,6 +1,6 @@
 class PairingsController < ApplicationController
   before_action :authenticate_user!
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
   def show
     render json: {pairings: pairings_summary, sections: sections_summary}

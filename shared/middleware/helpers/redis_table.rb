@@ -10,9 +10,9 @@
 
 require_relative 'redis_property_bag'
 require 'securerandom' unless defined?(SecureRandom)
+require 'sinatra/base'
 
 class RedisTable
-
   # Suffix appended to special row id columns.
   ROW_ID_SUFFIX = '_row_id'
 
@@ -245,5 +245,4 @@ class RedisTable
   def internal_key?(k)
     self.class.internal_key?(k)
   end
-
 end

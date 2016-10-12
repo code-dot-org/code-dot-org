@@ -42,6 +42,7 @@
     "never_autoplay_video": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
     "contained_level_names": null
   },
   "published": true,
@@ -81,11 +82,11 @@
             </block>
           </next>
         </block>
-        <block type="studio_repeatForever" uservisible="false">
+        <block type="studio_repeatForever">
           <statement name="DO">
-            <block type="studio_setScoreText" inline="true" uservisible="false">
+            <block type="studio_setScoreText" inline="true">
               <value name="TEXT">
-                <block type="variables_get" uservisible="false">
+                <block type="variables_get">
                   <title name="VAR">points</title>
                 </block>
               </value>

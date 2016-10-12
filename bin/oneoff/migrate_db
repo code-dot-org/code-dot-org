@@ -18,7 +18,7 @@ def update_endpoints(new_hostname, environment)
       environment_json['override_attributes']['cdo-secrets']["db_#{db}"] = uri.to_s
     end
   end
-  Tempfile.open(['environment','.json']) do |tmp|
+  Tempfile.open(['environment', '.json']) do |tmp|
     File.write(tmp.path, environment_json.to_json)
     `knife environment from file #{tmp.path} -E #{environment}`
   end

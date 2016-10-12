@@ -5,11 +5,9 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimLogPanel for the component used in packet-sending mode.
  */
-'use strict';
-
 require('../utils'); // For Function.prototype.inherits()
 import $ from 'jquery';
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var markup = require('./NetSimBitLogPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');

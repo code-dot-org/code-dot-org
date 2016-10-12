@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class LevelsHelperTest < ActionView::TestCase
-  include Devise::TestHelpers
-  include LocaleHelper
+  include Devise::Test::ControllerHelpers
 
   def sign_in(user)
     # override the default sign_in helper because we don't actually have a request or anything here
@@ -333,7 +332,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create(:level, :blockly, :with_ideal_level_source)
     @script = create(:script)
     @script.update(professional_learning_course: 'Professional Learning Course')
-    @script_level = create(:script_level, level: @level, script: @script)
+    @script_level = create(:script_level, levels: [@level], script: @script)
     assert_not can_view_solution?
 
     sign_out user
@@ -348,7 +347,7 @@ class LevelsHelperTest < ActionView::TestCase
     @script_level = nil
     assert_not can_view_solution?
 
-    @script_level = create(:script_level, level: @level, script: @script)
+    @script_level = create(:script_level, levels: [@level], script: @script)
     @level.update(ideal_level_source_id: nil)
     assert_not can_view_solution?
   end
@@ -356,7 +355,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'show solution link shows link for appropriate users' do
     @level = create(:level, :blockly, :with_ideal_level_source)
     @script = create(:script)
-    @script_level = create(:script_level, level: @level, script: @script)
+    @script_level = create(:script_level, levels: [@level], script: @script)
 
     user = create :levelbuilder
     sign_in user
@@ -374,5 +373,102 @@ class LevelsHelperTest < ActionView::TestCase
 
     sign_out user
     assert_not can_view_solution?
+  end
+
+  test 'build_script_level_path differentiates lockable and non-lockable' do
+    # (position 1) Lockable 1
+    # (position 2) Non-Lockable 1
+    # (position 3) Lockable 2
+    # (position 4) Lockable 3
+    # (position 5) Non-Lockable 2
+
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Lockable1',
+        lockable: true;
+      assessment 'LockableAssessment1';
+
+      stage 'Nonockable1'
+      assessment 'NonLockableAssessment1';
+
+      stage 'Lockable2',
+        lockable: true;
+      assessment 'LockableAssessment2';
+
+      stage 'Lockable3',
+        lockable: true;
+      assessment 'LockableAssessment3';
+
+      stage 'Nonockable2'
+      assessment 'NonLockableAssessment2';
+    DSL
+
+    create :level, name: 'LockableAssessment1'
+    create :level, name: 'NonLockableAssessment1'
+    create :level, name: 'LockableAssessment2'
+    create :level, name: 'LockableAssessment3'
+    create :level, name: 'NonLockableAssessment2'
+
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+
+    stage = script.stages[0]
+    assert_equal 1, stage.absolute_position
+    assert_equal 1, stage.relative_position
+    assert_equal '/s/test_script/lockable/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[1]
+    assert_equal 2, stage.absolute_position
+    assert_equal 1, stage.relative_position
+    assert_equal '/s/test_script/stage/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/stage/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[2]
+    assert_equal 3, stage.absolute_position
+    assert_equal 2, stage.relative_position
+    assert_equal '/s/test_script/lockable/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[3]
+    assert_equal 4, stage.absolute_position
+    assert_equal 3, stage.relative_position
+    assert_equal '/s/test_script/lockable/3/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/3/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[4]
+    assert_equal 5, stage.absolute_position
+    assert_equal 2, stage.relative_position
+    assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+  end
+
+  test 'standalone multi should include answers for student' do
+    sign_in create(:student)
+
+    @script = create(:script)
+    @level = create :multi
+    @stage = create :stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
+
+    @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
+
+    standalone = true
+    assert include_multi_answers?(standalone)
+  end
+
+  test 'non-standalone multi should not include answers for student' do
+    sign_in create(:student)
+
+    @script = create(:script)
+    @level = create :multi
+    @stage = create :stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
+
+    @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
+
+    standalone = false
+    assert_not include_multi_answers?(standalone)
   end
 end

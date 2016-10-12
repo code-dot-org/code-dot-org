@@ -1,0 +1,46 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-10-03T19:01:41.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "markdown_instructions": "# Background\r\n\r\nThe first thing that you will create for your game is the background.   The sample game had two different backgrounds that were chosen according to the user's score.  The first background has already been created for you.  Look at the `background1` function in the code below to see how it works. (Show me where)\r\n\r\nIn order for the background function to do something, you have to call it inside the draw loop. (Show me where)\r\n\r\nThere is also an empty function named `background2`. (Show me where)  You will need to fill that function with new code to make a different background, then test the code by calling the function inside the draw loop.\r\n\r\n# Do this\r\n\r\n* Read the code for `background1`\r\n* Fill the `background2` function with new code for a second background.\r\n* Test your `background2` function by calling it inside the draw loop.\r\n\r\n_Hint: It's much easier to copy, paste, and make small changes to your code in text mode._",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "show_d_pad": "false",
+    "pause_animations_by_default": "false",
+    "project_template_level_name": "CSD U3 platform template",
+    "start_blocks": "var score = 0;\r\nvar player = createSprite(200, -50);\r\nplayer.setAnimation(\"alien\");\r\nvar platform1 = createSprite(300, -12);\r\nplatform1.setAnimation(\"platform\");\r\nplatform1.velocityY = 0.5;\r\nvar platform2 = createSprite(100, 200);\r\nplatform2.setAnimation(\"platform\");\r\nplatform2.velocityY = 0.5;\r\nvar item1 = createSprite(randomNumber(50,350), randomNumber(-10, -310));\r\nitem1.setAnimation(\"star\");\r\nitem1.velocityY = 4;\r\nvar item2 = createSprite(randomNumber(50,350), randomNumber(-10, -310));\r\nitem2.setAnimation(\"star\");\r\nitem2.velocityY = 4;\r\nfunction draw() {\r\n  // draw the background according to the score\r\n  background1();\r\n\r\n  showScore();\r\n  loopPlatforms();\r\n  loopItems();\r\n  controlPlayer();\r\n  playerFall();\r\n  catchItems();\r\n  drawSprites();\r\n}\r\nfunction background1() {\r\n  background(\"darkblue\");\r\n  noStroke();\r\n  fill(\"yellow\");\r\n  ellipse(random(0,400), random(0,400), 3,3);\r\n  ellipse(random(0,400), random(0,400), 3,3);\r\n}\r\nfunction background2() {\r\n  \r\n}\r\nfunction loopPlatforms() {\r\n  if (platform1.y > 410) {\r\n    platform1.y = -10;\r\n  }\r\n  if (platform2.y > 410) {\r\n    platform2.y = -10;\r\n  }\r\n}\r\nfunction loopItems() {\r\n  if (item1.y > 415) {\r\n    item1.y = randomNumber(-60,-30);\r\n    item1.x = randomNumber(50,350);\r\n  }  \r\n  if (item2.y > 415) {\r\n    item2.y = randomNumber(-60,-30);\r\n    item2.x = randomNumber(50,350);\r\n  }\r\n}\r\nfunction controlPlayer() {\r\n  if (keyDown(\"left\")) {\r\n    player.x = player.x - 5;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    player.x = player.x + 5;\r\n  }\r\n  if (keyDown(\"up\")) {\r\n    player.velocityY = -4;\r\n  }\r\n}\r\nfunction playerFall() {\r\n  player.velocityY = player.velocityY + 0.1;\r\n  player.collide(platform1);\r\n  player.collide(platform2);\r\n}\r\nfunction catchItems() {\r\n  if (player.isTouching(item1)) {\r\n    score = score + 1;\r\n    item1.y = randomNumber(-100,-30);\r\n    item1.x = randomNumber(50,350);\r\n  }\r\n  if (player.isTouching(item2)) {\r\n    score = score + 1;\r\n    item2.y = randomNumber(-100,-30);\r\n    item2.x = randomNumber(50,350);\r\n  }\r\n}\r\nfunction showScore() {\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"Score: \", 10,10,50,20);\r\n  text(score, 80, 10, 30,20);\r\n}\r\n",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -602,10 +602,10 @@
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: Aren't bees super cool? In this next set of puzzles, your goal is to
-          help the bee get to the flowers and get nectar from the flowers and fly
-          over to the honeycomb to make honey. You'll need to use the "get nectar"
-          and the "make honey" blocks for this exercise.
+        text: Kerenkan? Pada teka-teki selanjutnya, target kamu adalah membantu lebah
+          menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke
+          sarang lebah untuk membuat madu. Kamu akan memakai balok "dapatkan nektar"
+          dan balok "buat madu" untuk latihan ini.
       2:
         image: notes/C1_bee_level_intro_2.png
         text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We

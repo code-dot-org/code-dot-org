@@ -1,15 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {setupLocale} from '../../../util/testUtils';
-
-// We have to setup the gamelab locale before importing AnimationPickerBody
-// TODO: Make testUtils exports Babel-ES6-friendly
-let testUtils = require('../../../util/testUtils');
-const gamelabMsg = require('@cdo/apps/gamelab/locale');
-
-// We use `require` here because imports get hoisted, and we have to run
-// setupLocale before importing AnimationPickerBody.
+const gamelabMsg = require('@cdo/gamelab/locale');
 const moduleUnderTest = require('@cdo/apps/gamelab/AnimationPicker/AnimationPickerBody');
 const AnimationPickerBody = moduleUnderTest.default;
 const WarningLabel = moduleUnderTest.WarningLabel;

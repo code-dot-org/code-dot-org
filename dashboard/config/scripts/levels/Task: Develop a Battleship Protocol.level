@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-09-19T16:55:42.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "# Task: Create a Battleship Protocol\r\n\r\nOne of the best ways to prepare to teach a lesson is by actually doing the activity yourself.  As you complete the activity, consider the misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.  \r\n<br>\r\nWhile completing this activity, note: \r\n<ol>\r\n<li>There are many 'correct' answers as long as the rules are used consistently. </li>\r\n<li> Challenge yourself to develop an *efficient* protocol.  In this case, this means you should consider the fewest number of bits necessary to encode the whole message. </li>\r\n<li> If you have already looked at the exemplar protocol in this lesson, try to create your own unique protocol.  This will help you empathize with students as you think about the design process necessary to develop the protocol.</li></ol>\r\n<br>\r\n\r\n><a href=”https://docs.google.com/document/d/1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI/edit” target=_blank> Click here for the Battleship Protocols Activity Guide >> </a>\r\n<br>\r\n><a href= \"https://code.org/curriculum/docs/csp/U2L03-battleship-exemplar.png\" target=_blank > Click here for an exemplar solution >> </a>\r\n\r\n<br><br>\r\n\r\nUse the space below to share your protocol.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

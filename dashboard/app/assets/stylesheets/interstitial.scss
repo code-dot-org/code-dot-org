@@ -1,0 +1,71 @@
+@import 'color';
+@import 'font';
+
+#terms-modal {
+  text-align: left;
+  top: 20px;
+}
+#terms-modal .modal-content {
+  margin: 0 20px;
+  padding: 0 15px;
+}
+#terms-modal .modal-content p {
+  font-size: 12px;
+  color: $default_text;
+  line-height: 18px;
+}
+#terms-modal .left {
+  float: left;
+}
+#terms-modal .right {
+  float: right;
+}
+#terms-modal .scroll-box {
+  height: 350px;
+  border: 1px solid $border_gray;
+  padding: 20px;
+  resize: vertical;
+  overflow: auto;
+  overflow-y: scroll;
+}
+#terms-modal .terms-checkbox {
+  margin: 0 5px 0 0;
+}
+#terms-modal .primary-button {
+  background-color: $orange;
+  border: 1px solid $orange;
+  color: $white;
+  border-radius: 4px;
+  height: 34px;
+  text-shadow: none;
+  box-shadow: none;
+  background-image: none;
+  margin-top: 10px;
+}
+#terms-modal .disabled-button {
+  background-color: $lighter_gray;
+  border-color: $lighter_gray;
+  color: $dark_charcoal;
+}
+#terms-modal .custom-h1 {
+  margin-top: 25px;
+}
+#terms-modal .right-margin-5 {
+  margin-right: 5px;
+}
+#terms-modal .dismiss-link {
+  font-size: 14px;
+  font-family: $gotham-regular;
+  line-height: 20px;
+}
+
+@media (max-width: 600px) {
+  #terms-modal {
+    width: 400px;
+    left: 70%;
+  }
+
+  #terms-modal .scroll-box {
+    height: 200px;
+  }
+}

@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/cdo/git_utils'
+require_relative '../../lib/cdo/eyes_utils'
+
+# Temporarily disable eyes branch merging on non-main-pipeline branches
+exit(0) unless ['staging', 'test', 'production'].include?(GitUtils.current_branch)
+exit(0) unless ['staging', 'test', 'production'].include?(GitUtils.get_latest_commit_merged_branch)
+
+begin
+  commit_merges_branch = GitUtils.get_latest_commit_merged_branch
+  if commit_merges_branch
+    puts "Commit appears to merge #{commit_merges_branch} into #{GitUtils.current_branch}"
+    puts "Attempting to merge eyes baselines from #{commit_merges_branch} into #{GitUtils.current_branch}"
+    EyesUtils.merge_eyes_baselines(commit_merges_branch, GitUtils.current_branch)
+  else
+    puts 'Latest commit does not appear to be a merge commit, not performing any baseline copying.'
+  end
+rescue => e
+  puts "Eyes baseline not merged: #{e.message}"
+end
+
+exit(0)

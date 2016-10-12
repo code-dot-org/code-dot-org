@@ -93,5 +93,4 @@ STR
       assert behavior_count <= 50, "#{app} has #{behavior_count} cache behaviors (max is 50)"
     end
   end
-
 end

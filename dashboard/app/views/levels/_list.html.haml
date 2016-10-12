@@ -1,7 +1,11 @@
 - content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder'
+  %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
 %h1 Levels
+= form_tag levels_path, method: :get do
+  = label_tag 'Filter by name:'
+  = text_field_tag :name, params[:name]
+= paginate @levels
 %table
   %thead
     %tr
@@ -24,6 +28,7 @@
                 = label_tag 'New name:'
                 = text_field_tag :name, level.name
                 = submit_tag 'Clone'
+= paginate @levels
 %br/
 - if can? :create, Level
   = link_to t('crud.new_model', model: Level.model_name.human), new_level_path

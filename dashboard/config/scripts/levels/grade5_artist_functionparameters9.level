@@ -32,8 +32,8 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"It's okay to run the program a few times to figure out how the function works with different parameters.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Params_14_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

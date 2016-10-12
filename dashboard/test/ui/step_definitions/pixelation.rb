@@ -30,5 +30,5 @@ end
 
 Then /^pixelation data has text "([^"]*)"$/ do |input_text|
   pixel_data = @browser.execute_script("return $('#pixel_data').val()")
-  pixel_data.gsub(/[ \n]/, '').should eq input_text.gsub(/[ \n]/, '')
+  expect(pixel_data.gsub(/[ \n]/, '')).to eq(input_text.gsub(/[ \n]/, ''))
 end

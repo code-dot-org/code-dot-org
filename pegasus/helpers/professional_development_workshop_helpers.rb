@@ -45,6 +45,13 @@ def generate_professional_development_workshop_payment_report(from=nil, to=nil)
 end
 
 def generate_professional_development_workshop_teachers_report
+  # Grab the script IDs for the CSF scripts.
+  csf_script_ids = DASHBOARD_DB[:scripts].
+    where('name IN ("20-hour", "course1", "course2", "course3", "course4")').
+    select(:id).
+    map(&:values).
+    flatten
+
   # generate a report about the teachers trained by affiliates and their students' progress
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map do |affiliate|
     data = JSON.parse(affiliate[:data]) rescue {}
@@ -61,33 +68,22 @@ def generate_professional_development_workshop_teachers_report
       teacher_user_id = teacher[:id]
       next unless teacher_user_id
 
-      students = DASHBOARD_DB[:followers].
+      students_count = DASHBOARD_DB[:followers].
         where(user_id: teacher_user_id).
         join(:users, id: :student_user_id).
-        select(:users__id___id, :users__created_at___created_at)
+        count
 
-      if students.count > 0
-        lifetime = students.map{|s| (Time.now - s[:created_at]) / (60 * 60 * 24)}.reduce(:+) / students.count.to_f
-
-        levels = students.map do |s|
-          DASHBOARD_DB[:user_levels].
-            where(user_id: s[:id]).
-            and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
-            count
-        end.reduce(:+) / students.count.to_f
-      else
-        lifetime = 0
-        levels = 0
-      end
+      students_with_progress_count = DASHBOARD_DB[:followers].
+        where(followers__user_id: teacher_user_id).
+        join(:users, id: :student_user_id).
+        join(:user_scripts, user_id: :id).
+        where(script_id: csf_script_ids).
+        count
 
       {
-        teacher_name: teacher[:name],
-        teacher_email: teacher[:email],
-        affiliate_name: affiliate[:name],
-        affiliate_email: affiliate[:user_id],
-        students_count: students.count,
-        students_average_lifetime_days: lifetime.round,
-        students_average_levels_completed: levels.round(2)
+        teacher_id: teacher_user_id,
+        students_count: students_count,
+        students_with_progress_count: students_with_progress_count
       }
     end.compact
   end.compact.flatten

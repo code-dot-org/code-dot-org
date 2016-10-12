@@ -1,4 +1,3 @@
-'use strict';
 
 var React = require('react');
 var RotateContainer = require('../templates/RotateContainer');

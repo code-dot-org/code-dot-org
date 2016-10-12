@@ -1,4 +1,5 @@
 @import "codemirror/lib/codemirror";
+@import "codemirror-spell-checker/src/css/spell-checker";
 @import 'json_editor';
 @import 'plc/content_creation';
 @import 'plc/common';
@@ -15,21 +16,12 @@
   background: rgba(255, 150, 0, .3);
 }
 
+.cm-trailingspace {
+  border-bottom: 1px dotted #c00;
+}
+
 .contract-editor-config td {
   text-align: center;
-}
-
-h2, h3 {
-  margin: 0;
-  border-top: 2px solid #EEE;
-}
-
-h2 {
-  padding-top: 2em;
-}
-
-h3 {
-  padding-top: 1em;
 }
 
 table.checkboxes {

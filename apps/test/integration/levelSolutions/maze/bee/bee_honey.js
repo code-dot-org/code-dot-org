@@ -43,7 +43,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 2 && Maze.bee.honey_ === 2;
+        return Maze.subtype.nectars_.length === 2 && Maze.subtype.honey_ === 2;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -61,7 +61,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 0 && Maze.bee.honey_ === 2;
+        return Maze.subtype.nectars_.length === 0 && Maze.subtype.honey_ === 2;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -77,7 +77,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 3 && Maze.bee.honey_ === 2;
+        return Maze.subtype.nectars_.length === 3 && Maze.subtype.honey_ === 2;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -96,7 +96,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 2 && Maze.bee.honey_ === 1 &&
+        return Maze.subtype.nectars_.length === 2 && Maze.subtype.honey_ === 1 &&
           Maze.executionInfo.terminationValue() === TerminationValue.INSUFFICIENT_HONEY;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
@@ -114,7 +114,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 2 && Maze.bee.honey_ === 0 &&
+        return Maze.subtype.nectars_.length === 2 && Maze.subtype.honey_ === 0 &&
           Maze.executionInfo.terminationValue() === TerminationValue.NOT_AT_HONEYCOMB;
       },
       xml: '<xml>' + blockUtils.blocksFromList([

@@ -1,10 +1,8 @@
 /**
  * @overview A base class for all simulation node entities.
  */
-'use strict';
-
 require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 

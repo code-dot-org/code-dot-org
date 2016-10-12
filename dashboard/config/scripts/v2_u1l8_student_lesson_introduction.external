@@ -1,35 +1,69 @@
 name 'v2 U1L8 Student Lesson Introduction'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-# Unit 1: Lesson 7 - Encoding and Sending Formatted Text
-
-## Background
-
-Since all information sent by a computer is encoded in bits, we need protocols to help us interpret these bits as meaningful information. In previous lessons we learned how to use the binary number system to allow us to represent numbers in bits. We now address the challenge of encoding text in bits and find that we can reuse and build upon much of the work we did to encode numbers. This pattern of reusing solutions to other problems arises frequently in computer science and allows the development of more complex systems.
-
-ASCII encoding is the standard number-to-text encoding scheme used in computers and on the Internet. This protocol is 7 bits long and so can encode 128 different symbols, each corresponding to one of the binary numbers between 0 and 127. Originally the encoding was designed for older printers and so the codes associated with the numbers 0-31 were designated as "control codes" which instruct the printer to perform certain actions. These codes are now largely out of use. Codes 32-126, however, contain many of the most commonly used symbols you use on the internet, including the lowercase and capital letters, the numbers 0-9, and most commonly-used punctuation marks. Perhaps more remarkably, this printable character set is also used to represent all of the text formatting we use to add variety and emphasis to "plain-text" documents. The ability to represent formatting using only ASCII symbols is the result of cleverly designed protocols.
-
-## Vocabulary
-
-* **ASCII** - ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.
-* **code** - (v) to write code, or to write instructions for a computer.
-* **Protocol** - A set of rules governing the exchange or transmission of data between devices.
-
-## Lesson
-
-* Learn about the ASCII encoding scheme.
-* Invent a text formatting language
-* Design a protocol for sending formatted text.
-* Discover the challenges of encoding meta-information.
-
-## Resources
-
-* <a href='https://docs.google.com/document/d/15VJXucAcWWkp5L1Uq03SQvecUIp2lTLK0gf8L0HF92A/edit?usp=sharing' target='_blank' class='print_link'>Sending Formatted Text</a> - Activity Guide (<a href='https://docs.google.com/document/d/15VJXucAcWWkp5L1Uq03SQvecUIp2lTLK0gf8L0HF92A/export?format=pdf' class='print_link'>download</a>)
-* <a href='https://docs.google.com/document/d/1eDbEX3Rk_4EAIrE-26so4DGIpGRH0vjNw7w8U5filrM/edit?usp=sharing' target='_blank' class='print_link'>Rubric - Sending Formatted Text</a> - Rubric (<a href='https://docs.google.com/document/d/1eDbEX3Rk_4EAIrE-26so4DGIpGRH0vjNw7w8U5filrM/export?format=pdf' class='print_link'>download</a>)
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted '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
+'

@@ -84,15 +84,15 @@ var PaneHeader = React.createClass({
   },
 
   render: function () {
-    var props = this.props;
+    var {hasFocus, readOnly, style, ...props} = this.props;
 
     // TODO: AnimationTab should likely use components from PaneHeader, at
     // which point purpleHeader style should move in here.
-    var style = [
-      props.style,
+    style = [
+      style,
       commonStyles.purpleHeader,
-      !props.hasFocus && commonStyles.purpleHeaderUnfocused,
-      props.readOnly && commonStyles.purpleHeaderReadOnly,
+      !hasFocus && commonStyles.purpleHeaderUnfocused,
+      readOnly && commonStyles.purpleHeaderReadOnly,
     ];
 
     return (

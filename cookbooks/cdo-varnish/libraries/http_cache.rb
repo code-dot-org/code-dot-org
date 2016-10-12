@@ -2,7 +2,6 @@
 #
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
-
   # Paths for files that are always cached based on their extension.
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map{|ext| "/*.#{ext}"}
 
@@ -56,7 +55,7 @@ class HttpCache
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /assets/* /fonts/* ),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /assets/* /fonts/*),
             headers: [],
             cookies: 'none'
           },

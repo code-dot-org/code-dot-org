@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-07-19T19:01:38.000Z",
+  "created_at": "2016-08-22T17:35:53.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -11,17 +11,22 @@
       "drawSprites": null,
       "comment_GameLab": null,
       "var sprite = createSprite": null,
+      "background": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "color": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "rect": null,
+      "comment_Drawing": null,
       "setAnimation": null,
-      "x": null,
-      "y": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "rotation": null,
       "velocityX": null,
       "velocityY": null,
-      "comment_Sprites": null,
-      "console.log": null,
-      "comment_Variables": null
+      "comment_Sprites": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -49,12 +54,16 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\"dragonfly\"],\r\n  \"propsByKey\": {\r\n    \"dragonfly\": {\r\n      \"name\": \"dragonfly\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\r\n      \"frameSize\": {\"x\":150, \"y\": 91},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
-    "start_blocks": "var sprite = createSprite(200, 350);\r\nsprite.setAnimation(\"dragonfly\");\r\n// make the dragonfly move here\r\n\r\nfunction draw() {\r\n  background(color(150,50,250));\r\n  drawSprites();\r\n}\r\n",
+    "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"feather\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"feather\": {\r\n            \"name\": \"feather\",\r\n            \"sourceUrl\": \"https://images.code.org/fb739254c4d2f6745977a26e0481162a-image-1470316780326.png\",\r\n            \"frameSize\": {\r\n                \"x\": 100,\r\n                \"y\": 35\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
+    "start_blocks": "var feather = createSprite(200, 50);\r\nfeather.setAnimation(\"feather\");\r\n\r\nfunction draw() {\r\n  background(color(\"skyblue\"));\r\n  drawSprites();\r\n}\r\n",
+    "markdown_instructions": "# Moving Down\r\n\r\nHere is a feather sprite that should be floating down the screen.  If `velocityX` makes a sprite move to the right, can you find the block that will make the feather move down?\r\n\r\n#Do This\r\n\r\nFind the block that will make the feather sprite go down the screen, and use it outside the draw loop.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)",
+    "palette_category_at_start": "sprites",
+    "pause_animations_by_default": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L11_S5_C1\",\r\n  \"callout_text\": \"Add your block here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"feather.setAnimation(\\\"feather\\\");\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
-  "notes": "# velocityY\r\n\r\n`velocityY` is like `velocityX`, but it moved things up and down.  Can you use it to make the dragonfly walk up the screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY` to make the sprite go up the screen.",
+  "notes": "",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -66,7 +66,7 @@ module Poste
   end
 
   def self.template_extnames
-    ['.md','.haml','.html']
+    ['.md', '.haml', '.html']
   end
 
   # Unsubscribes the specified hashed email.
@@ -147,15 +147,17 @@ module Poste2
       end
     else
       sanitized_email = Poste.dashboard_student?(hashed_email) ? '' : email
-      id = POSTE_DB[:contacts].insert({}.tap do |contact|
-        contact[:email] = sanitized_email
-        contact[:hashed_email] = hashed_email
-        contact[:name] = name if name
-        contact[:created_at] = now
-        contact[:created_ip] = ip_address
-        contact[:updated_at] = now
-        contact[:updated_ip] = ip_address
-      end)
+      id = POSTE_DB[:contacts].insert(
+        {}.tap do |new_contact|
+          new_contact[:email] = sanitized_email
+          new_contact[:hashed_email] = hashed_email
+          new_contact[:name] = name if name
+          new_contact[:created_at] = now
+          new_contact[:created_ip] = ip_address
+          new_contact[:updated_at] = now
+          new_contact[:updated_ip] = ip_address
+        end
+      )
       contact = {id: id}
     end
 
@@ -174,15 +176,17 @@ module Poste2
     contact = POSTE_DB[:contacts].where(hashed_email: hashed_email).first
     unless contact
       sanitized_email = Poste.dashboard_student?(hashed_email) ? '' : email
-      id = POSTE_DB[:contacts].insert({}.tap do |contact|
-        contact[:email] = sanitized_email
-        contact[:hashed_email] = hashed_email
-        contact[:name] = name if name
-        contact[:created_at] = now
-        contact[:created_ip] = ip_address
-        contact[:updated_at] = now
-        contact[:updated_ip] = ip_address
-      end)
+      id = POSTE_DB[:contacts].insert(
+        {}.tap do |new_contact|
+          new_contact[:email] = sanitized_email
+          new_contact[:hashed_email] = hashed_email
+          new_contact[:name] = name if name
+          new_contact[:created_at] = now
+          new_contact[:created_ip] = ip_address
+          new_contact[:updated_at] = now
+          new_contact[:updated_ip] = ip_address
+        end
+      )
       contact = {id: id}
     end
 

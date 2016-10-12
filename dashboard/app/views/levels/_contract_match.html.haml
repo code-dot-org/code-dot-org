@@ -2,7 +2,7 @@
 :javascript
   window.levelData = #{data.to_json};
 
-= javascript_include_tag 'js/levels/contract_match'
+%script{src: minifiable_asset_path('js/levels/contract_match.js')}
 = stylesheet_link_tag 'levels/contract_match'
 = render partial: 'levels/common_audio'
 
@@ -29,5 +29,5 @@
           %p
             =t("contract_match.#{error_type}")
           .farSide
-            %button#ok-button.secondary
+            %button#ok-button
               =t('dialog.ok')

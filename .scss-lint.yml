@@ -1,4 +1,4 @@
-scss_files: 'dashboard/app/**/*.css.scss'
+scss_files: 'dashboard/app/**/*.scss'
 
 linters:
   LeadingZero:
@@ -24,10 +24,6 @@ linters:
   # Rules we should either ignore or fix (but are currently failing).
   BorderZero:
     enabled: false
-  ColorKeyword:
-    enabled: false
-  ColorVariable:
-    enabled: false
   Comment:
     enabled: false
   DeclarationOrder:
@@ -49,6 +45,4 @@ linters:
   UnnecessaryParentReference:
     enabled: false
   VendorPrefix:
-    enabled: false
-  ZeroUnit:
     enabled: false

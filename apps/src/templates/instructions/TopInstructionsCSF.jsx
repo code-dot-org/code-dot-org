@@ -4,7 +4,9 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
-import {connect} from 'react-redux';
+import processMarkdown from 'marked';
+import renderer from '../../StylelessRenderer';
+import { connect } from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
@@ -12,7 +14,6 @@ var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
-var processMarkdown = require('marked');
 
 var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
@@ -91,6 +92,12 @@ const styles = {
     left: 0,
     marginLeft: 0
   },
+  leftColRtl: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    marginRight: 0
+  },
   embedView: {
     height: undefined,
     bottom: 0
@@ -106,6 +113,11 @@ const styles = {
     top: 50,
     left: 25
   },
+  scrollButtonsRtl: {
+    position: 'relative',
+    top: 50,
+    right: 25
+  },
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
     cursor: 'default',
@@ -117,15 +129,16 @@ const styles = {
     // is managed outside of React
     marginBottom: 0
   },
-  containedLevelContainer: {
-    minHeight: 200,
-  },
   instructions: {
     padding: '5px 0',
   },
   instructionsWithTips: {
     width: 'calc(100% - 20px)',
     float: 'right'
+  },
+  instructionsWithTipsRtl: {
+    width: 'calc(100% - 20px)',
+    float: 'left'
   },
 };
 
@@ -137,11 +150,11 @@ var TopInstructions = React.createClass({
       content: React.PropTypes.string.isRequired,
       block: React.PropTypes.object, // XML
     })).isRequired,
+    hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
@@ -162,6 +175,9 @@ var TopInstructions = React.createClass({
     ),
     noVisualization: React.PropTypes.bool.isRequired,
 
+    acapelaInstructionsSrc: React.PropTypes.string,
+    acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
+
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
@@ -171,7 +187,7 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 10,
+      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 0,
       promptForHint: false,
       displayScrollButtons: true
     };
@@ -184,7 +200,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -217,7 +233,7 @@ var TopInstructions = React.createClass({
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
       const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
-      for (const image of images) {
+      for (let i = 0, image; (image = images[i]); i++) {
         image.onload = image.onload || this.scrollInstructionsToBottom;
       }
     }
@@ -337,8 +353,6 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
-    const contentContainer = this.props.hasContainedLevels ?
-        this.refs.containedLevelContainer : this.refs.instructions;
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = getOuterHeight(instructionsContent, true) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
@@ -404,8 +418,8 @@ var TopInstructions = React.createClass({
    * Handle a click to the hint display bubble (lightbulb)
    */
   handleClickBubble() {
-    // If we don't have authored hints, clicking bubble shouldnt do anything
-    if (this.props.hasAuthoredHints) {
+    // If we don't have authored hints to display, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.setState({
         promptForHint: true
       });
@@ -453,12 +467,15 @@ var TopInstructions = React.createClass({
       this.props.isMinecraft && craftStyles.main
     ];
 
-    const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
-      this.props.shortInstructions : this.props.longInstructions);
+    const markdown = (this.props.collapsed || !this.props.longInstructions) ?
+      this.props.shortInstructions : this.props.longInstructions;
+    const renderedMarkdown = processMarkdown(markdown, { renderer });
+    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
+      this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
 
     // Only used by star wars levels
-    const instructions2 = this.props.shortInstructions2 ? processMarkdown(
-      this.props.shortInstructions2) : undefined;
+    const instructions2 = this.props.shortInstructions2 ?
+      processMarkdown(this.props.shortInstructions2, { renderer }) : undefined;
 
     const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
@@ -468,11 +485,12 @@ var TopInstructions = React.createClass({
         <ThreeColumns
           styles={{
             container: [styles.body, this.props.isMinecraft && craftStyles.body],
-            left: styles.leftCol
+            left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
           }}
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
           height={this.props.height - resizerHeight}
+          allowScrolling={!this.props.isMinecraft}
         >
           <div
             style={[
@@ -493,34 +511,32 @@ var TopInstructions = React.createClass({
           <div
             ref="instructions"
             className="csf-top-instructions"
-            style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
+            style={[
+              styles.instructions,
+              shouldDisplayChatTips(this.props.skinId) &&
+                (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
+            ]}
           >
-            <ChatBubble isMinecraft={this.props.isMinecraft}>
-              {this.props.hasContainedLevels &&
-                <ProtectedStatefulDiv
-                  id="containedLevelContainer"
-                  ref="containedLevelContainer"
-                  style={styles.containedLevelContainer}
-                />}
-              {!this.props.hasContainedLevels &&
-                <Instructions
-                  ref="instructions"
-                  renderedMarkdown={renderedMarkdown}
-                  onResize={this.adjustMaxNeededHeight}
-                  inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                  aniGifURL={this.props.aniGifURL}
-                  inTopPane
-                />}
-              {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
+            <ChatBubble>
+              <Instructions
+                ref="instructions"
+                renderedMarkdown={renderedMarkdown}
+                acapelaSrc={acapelaSrc}
+                onResize={this.adjustMaxNeededHeight}
+                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                aniGifURL={this.props.aniGifURL}
+                inTopPane
+              />
+              {this.props.collapsed && instructions2 &&
                 <div
                   className="secondary-instructions"
                   dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />}
+                />
+              }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
                 key={hint.hintId}
-                isMinecraft={this.props.isMinecraft}
                 borderColor={color.yellow}
                 content={hint.content}
                 block={hint.block}
@@ -528,7 +544,6 @@ var TopInstructions = React.createClass({
             )}
             {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
               <InlineFeedback
-                isMinecraft={this.props.isMinecraft}
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
               />}
@@ -549,7 +564,7 @@ var TopInstructions = React.createClass({
             />
             {!this.props.collapsed &&
               <ScrollButtons
-                style={styles.scrollButtons}
+                style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
@@ -569,13 +584,15 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
+    acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
     hints: state.authoredHints.seenHints,
+    hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
     embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
-    hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,

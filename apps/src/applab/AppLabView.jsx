@@ -1,11 +1,11 @@
 /** @file Top-level view for App Lab */
-'use strict';
-
-var React = require('react');
-var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var StudioAppWrapper = require('../templates/StudioAppWrapper');
-var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
+import ImportProjectDialog from './ImportProjectDialog';
+import ImportScreensDialog from './ImportScreensDialog';
+import React from 'react';
+import ApplabVisualizationColumn from './ApplabVisualizationColumn';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
+import StudioAppWrapper from '../templates/StudioAppWrapper';
+import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import { ApplabInterfaceMode } from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from './dataBrowser/DataWorkspace';
@@ -40,6 +40,8 @@ var AppLabView = React.createClass({
     const codeWorkspaceVisible = (ApplabInterfaceMode.CODE === this.props.interfaceMode);
     return (
       <StudioAppWrapper>
+        <ImportProjectDialog />
+        <ImportScreensDialog />
         <ApplabVisualizationColumn
           isEditingProject={this.props.isEditingProject}
           screenIds={this.props.screenIds}
@@ -59,7 +61,7 @@ var AppLabView = React.createClass({
   }
 });
 
-module.exports = connect(state => ({
+export default connect(state => ({
   hasDataMode: state.pageConstants.hasDataMode || false,
   hasDesignMode: state.pageConstants.hasDesignMode || false,
   interfaceMode: state.interfaceMode

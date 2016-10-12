@@ -7,19 +7,20 @@ class AuthoredHintViewRequestsController < ApplicationController
     return head :unauthorized unless AuthoredHintViewRequest.enabled?
     return head :bad_request unless params.key?("hints") && params["hints"].respond_to?(:to_a)
 
-    hints = params["hints"].to_a.map do |hint|
+    hints = params.permit(hints: [:scriptId, :levelId, :hintId]).require(:hints)
+    hints.each do |hint|
       # add :user
       hint[:user] = current_user
       # convert camelCase strings to snake_case symbols
-      hint.map{|key, value| {key.underscore.to_sym => value}}.reduce(:merge)
+      hint.transform_keys!{|key| key.underscore.to_sym}
     end
 
     objects = AuthoredHintViewRequest.create(hints)
     all_valid = objects.all?(&:valid?)
 
-    pairings.each do |paired_user|
+    pairing_user_ids.each do |paired_user_id|
       # Ignore errors here.
-      AuthoredHintViewRequest.create(hints.map{ |hint| hint.merge(user: paired_user) })
+      AuthoredHintViewRequest.create(hints.map{ |hint| hint.merge(user_id: paired_user_id) })
     end
 
     status_code = all_valid ? :created : :bad_request

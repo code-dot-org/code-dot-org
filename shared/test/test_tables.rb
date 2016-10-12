@@ -8,7 +8,7 @@ class TablesTest < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
+  TABLE_TYPE = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
   def build_rack_mock_session
     @session = Rack::MockSession.new(ChannelsApi.new(TablesApi), "studio.code.org")
@@ -93,8 +93,8 @@ class TablesTest < Minitest::Test
     id = create_record(record).to_i
     create_record(record2, 413)
 
-    actual_created_record = read_records.find do |record|
-      record['id'] == id
+    actual_created_record = read_records.find do |created_record|
+      created_record['id'] == id
     end
     assert_equal id, actual_created_record['id'], 'actual created record has correct id'
 
@@ -283,6 +283,30 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  # channel id suffix, used by firebase in development and circleci environments
+  TEST_SUFFIX = '-test-suffix'
+
+  def test_firebase_export
+    create_channel
+
+    records_data = {
+      '1' => '{"id":1,"name":"alice","age":7,"male":false}',
+      '2' => '{"id":2,"name":"bob","age":8,"male":true}'
+    }
+
+    response = MiniTest::Mock.new
+    response.expect(:body, records_data)
+
+    firebase_path = "/v3/channels/#{@channel_id}#{TEST_SUFFIX}/storage/tables/#{@table_name}/records"
+    Firebase::Client.any_instance.expects(:get).with(firebase_path).returns(response)
+
+    expected_csv_data = "id,name,age,male\n1,alice,7,false\n2,bob,8,true\n"
+
+    assert_equal export_firebase.body, expected_csv_data
+
+    delete_channel
+  end
+
   def test_table_names
     create_channel
 
@@ -291,7 +315,7 @@ class TablesTest < Minitest::Test
     delete_table 'table1'
     delete_table 'table2'
     delete_table 'new_table'
-    assert_equal [], TableType.table_names(decrypted_channel_id)
+    assert_equal [], TABLE_TYPE.table_names(decrypted_channel_id)
 
     data1 = {
       'table1' => [{'name' => 'trevor'}, {'name' => 'alex'}],
@@ -300,11 +324,11 @@ class TablesTest < Minitest::Test
 
     populate_table(data1, true)
 
-    assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
+    assert_equal ['table1', 'table2'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     # Now add a data that has no records (but should have metadata)
     populate_table({ 'new_table' => [] }, false)
-    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+    assert_equal ['table1', 'table2', 'new_table'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     delete_channel
   end
@@ -415,6 +439,16 @@ class TablesTest < Minitest::Test
     get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
   end
 
+  def export_firebase
+    CDO.stub(:firebase_name, 'my-firebase-name') do
+      CDO.stub(:firebase_secret, 'my-firebase-secret') do
+        CDO.stub(:firebase_channel_id_suffix, TEST_SUFFIX) do
+          get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+        end
+      end
+    end
+  end
+
   def delete_column(column)
     delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{column}"
   end
@@ -436,5 +470,4 @@ class TablesTest < Minitest::Test
     url += "?overwrite=1" if overwrite
     post url, JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   end
-
 end

@@ -6,6 +6,8 @@ var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 var ALLOWED_KEYS = utils.makeEnum(
   'skinId',
   'showNextHint',
+  'acapelaInstructionsSrc',
+  'acapelaMarkdownInstructionsSrc',
   'assetUrl',
   'channelId',
   'hasDataMode',
@@ -26,6 +28,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
+  'showDebugSlider',
   'localeDirection',
   'hasContainedLevels',
   'isDroplet',
@@ -40,9 +43,11 @@ var ALLOWED_KEYS = utils.makeEnum(
   'aniGifURL',
   'inputOutputTable',
   'showAnimationMode',
+  'allAnimationsSingleFrame',
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
-  'isSignedIn'
+  'isSignedIn',
+  'versionHistoryInInstructionsHeader'
 );
 
 const initialState = {

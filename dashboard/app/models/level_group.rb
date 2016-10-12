@@ -23,7 +23,6 @@
 #
 
 class LevelGroup < DSLDefined
-
   def dsl_default
     <<ruby
 name 'unique level name here'
@@ -99,16 +98,11 @@ ruby
       case sublevel
       when TextMatch, FreeResponse
         sublevel_result[:result] = sublevel_response
-        sublevel_result[:type] = "free_response"
       when Multi
         student_result = sublevel_response.split(",").sort.join(",")
         # unless unsubmitted
         unless student_result == "-1"
-          answer_text = sublevel.properties.try(:[], "answers").try(:[], student_result.to_i).try(:[], "text")
-          sublevel_result[:result_text] = answer_text
-          # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-          sublevel_result[:result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
-          sublevel_result[:type] = "multi"
+          sublevel_result[:answer_index] = student_result.to_i
         end
       end
     end
@@ -132,9 +126,14 @@ ruby
         get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))
       end.compact.shuffle
 
+      answers = sublevel.properties.try(:[], "answers")
+      answer_texts = answers.map{|answer| answer["text"]} if answers
+
       {
+        type: sublevel.type.underscore,
         question: question_text,
-        results: results
+        results: results,
+        answer_texts: answer_texts
       }
     end
   end
@@ -149,24 +148,26 @@ ruby
   # intermingled with real results.
   # [
   #   { stage: "Stage 30: Anonymous student survey",
-  #     puzzle: 1,
   #     levelgroup_results: [
   #       {
+  #         type: "multi",
+  #         question: "Computer science is fun",
   #         results: [
-  #           {result_text: "Strongly agree", result: "A", type: "multi"},
+  #           {answer_index: 0},
   #           {},
-  #           {result_text: "Strongly agree", result: "A", type: "multi"}] },
-  #         question: "Computer science is fun." },
+  #           {answer_index: 0}],
+  #         answer_texts: ["Agree", "Disagree", "Not sure"]}},
   #       {
-  #         results:
-  #           {result: "", type: "free_response"},
-  #           {result: "I like making games, and I also like the lifestyle.", type: "free_response"},
-  #           {}],
-  #         question: "Why are you doing this class?  Give at least two reasons."}}}]
+  #         type: "free_response",
+  #         question: "Why are you doing this class?  Give at least two reasons.",
+  #         results: [
+  #           {result: ""},
+  #           {result: "I like making games, and I also like the lifestyle."},
+  #           {}]}]}]
   #
 
   def self.get_survey_results(script, section)
-    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
     # Go through each anonymous long-assessment LevelGroup.
     level_group_script_levels.map do |script_level|
@@ -183,7 +184,6 @@ ruby
         # All the results for one LevelGroup for a group of students.
         {
           stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
           levelgroup_results: levelgroup_results
         }
       else
@@ -191,5 +191,4 @@ ruby
       end
     end.compact
   end
-
 end

@@ -21,7 +21,7 @@
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "markdown_instructions": "The last number in your for loop is called the `increment`.  Each time the loop is run, the counter variable changes by the value of the increment. \r\n\r\nTry collecting these flowers using an increment of 2.",
+    "markdown_instructions": "The last number in your for loop is called the `increment`.  Each time the loop is run, the counter variable changes by the value of the increment.\r\n\r\nTry collecting these flowers using an increment of 2.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

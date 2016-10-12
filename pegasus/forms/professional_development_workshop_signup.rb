@@ -1,5 +1,4 @@
 class ProfessionalDevelopmentWorkshopSignup
-
   def self.normalize(data)
     result = {}
 
@@ -98,5 +97,4 @@ class ProfessionalDevelopmentWorkshopSignup
 
     data
   end
-
 end

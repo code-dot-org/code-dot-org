@@ -3,8 +3,7 @@ title 'Preface to the Guided Introduction to StarLogo Nova'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-### A Refresher in Wiggle Walk
-
+# A Refresher in Wiggle Walk
 
 **Step 1**
 
@@ -12,20 +11,11 @@ You may have decided you want your doctors to stay still, and that’s cool.  We
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/QHcx2DimjwI" frameborder="0" allowfullscreen></iframe>
 
-<br>
 **[Can't see the video? Click here.](https://docs.google.com/document/d/13Hy2cTst-ZMtwZ_YxY-_ww68IdcHyRA9HqByLPBmKmM/edit?usp=sharing)**
-
-<br>
 
 **Step 2**
 
 Save and run your code.  When you click "Setup" and "Forever" your doctor agents should be moving around just like the other agents.  If not, please refer to the <a href="http://www.projectguts.org/files/StarlogoNova-DebuggingTips.docx"> TroubleShooting Guide</a>.
 
-
-<br>
-
-<br>
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

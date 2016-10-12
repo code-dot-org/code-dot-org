@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'cdo/sinatra'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
@@ -7,7 +8,6 @@ require_relative './helpers/table_coerce'
 require_relative './helpers/table_limits'
 
 class TablesApi < Sinatra::Base
-
   DEFAULT_MAX_TABLE_ROWS = 1000
 
   # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for
@@ -35,12 +35,13 @@ class TablesApi < Sinatra::Base
       'core.rb',
       'storage_id.rb',
       'table.rb',
+      'firebase_helper.rb',
     ].each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
+  TABLE_TYPE = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
@@ -50,7 +51,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    rows = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
+    rows = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).to_a
 
     # Remember the number of rows in the table since we now have an accurate estimate.
     limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
@@ -67,7 +68,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    table_metadata = TableType.new(channel_id, storage_id(endpoint), table_name).metadata
+    table_metadata = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).metadata
 
     no_content if table_metadata.nil?
     table_metadata.to_json
@@ -82,7 +83,7 @@ class TablesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+    table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
 
     # create metadata from records if we don't have any
     table.ensure_metadata
@@ -106,7 +107,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     content_type :json
-    TableType.new(channel_id, storage_id(endpoint), table_name).fetch(id.to_i).to_json
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).fetch(id.to_i).to_json
   end
 
   #
@@ -116,7 +117,7 @@ class TablesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
-    TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
 
     # Decrement the row count only after the delete succeeds, to avoid a spurious
     # decrement if the record isn't present or in other failure cases.
@@ -136,7 +137,7 @@ class TablesApi < Sinatra::Base
       halt 400, {}, "Column name cannot be empty"
     end
 
-    TableType.new(channel_id, storage_id(endpoint), table_name).delete_column(column_name, request.ip)
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).delete_column(column_name, request.ip)
     no_content
   end
 
@@ -150,7 +151,7 @@ class TablesApi < Sinatra::Base
     if new_name.empty?
       halt 400, {}, "New column name cannot be empty"
     end
-    TableType.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
     no_content
   end
 
@@ -164,7 +165,7 @@ class TablesApi < Sinatra::Base
     if column_name.empty?
       halt 400, {}, "New column name cannot be empty"
     end
-    TableType.new(channel_id, storage_id(endpoint), table_name).add_columns([column_name])
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).add_columns([column_name])
     no_content
   end
 
@@ -175,7 +176,7 @@ class TablesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
-    TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).delete_all
     #TODO: Delete metadata.
 
     # Zero out the approximate row count just in case the user creates a new table
@@ -225,7 +226,7 @@ class TablesApi < Sinatra::Base
 
     record_size = get_approximate_record_size(table_name, record.to_json)
     record_too_large(record_size) if record_size > max_record_size
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(record, request.ip)
+    value = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).insert(record, request.ip)
 
     dont_cache
     content_type :json
@@ -252,7 +253,7 @@ class TablesApi < Sinatra::Base
     record_size = get_approximate_record_size(table_name, new_value.to_json)
     record_too_large(record_size) if record_size > max_record_size
 
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
+    value = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
 
     dont_cache
     content_type :json
@@ -277,7 +278,20 @@ class TablesApi < Sinatra::Base
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
-    return TableType.new(channel_id, storage_id(endpoint), table_name).to_csv
+    return TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).to_csv
+  end
+
+  # GET /v3/export-firebase-tables/<channel-id>/table-name
+  #
+  # Exports a csv file from a table where the first row is the column names
+  # and additional rows are the column values.
+  #
+  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name|
+    dont_cache
+    content_type :csv
+    response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
+
+    return FirebaseHelper.new(channel_id, table_name).table_as_csv
   end
 
   #
@@ -292,7 +306,7 @@ class TablesApi < Sinatra::Base
     max_records = max_table_rows
     table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
-    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+    table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
     tempfile = params[:import_file][:tempfile]
     records = []
 
@@ -355,7 +369,7 @@ class TablesApi < Sinatra::Base
   post %r{/v3/coerce-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     content_type :json
 
-    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+    table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
 
     column = request.GET['column_name']
     type = request.GET['type']
@@ -397,7 +411,7 @@ class TablesApi < Sinatra::Base
 
     overwrite = request.GET['overwrite'] == '1'
     json_data.keys.each do |table_name|
-      table = TableType.new(channel_id, storage_id(endpoint), table_name)
+      table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
       if table.exists? && !overwrite
         next
       end

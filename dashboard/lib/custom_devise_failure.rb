@@ -10,5 +10,4 @@ class CustomDeviseFailure < Devise::FailureApp
     options[:locale] = locale
     options
   end
-
 end

@@ -2,7 +2,15 @@
   errors:
     messages:
       not_saved: 'Ceartaigh na hearráidí seo a leanas:'
-      too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga
+      too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga.
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -83,22 +91,11 @@
   signup_form:
     student_count: Tá %{count} dalta cláraithe cheana.
     teacher_count: Tá %{count} múinteoir cláraithe cheana.
-    overview_student: Cruthaigh cuntas le do dhul chun cinn a shábháil. Baintear úsáid
-      as do sheoladh ríomhphoist nuair a dhéanann tú logáil isteach, agus chun focal
-      faire a athshocrú. Chun tuilleadh eolais a fháil, féach an <a href="http://code.org/privacy">Polasaí
-      Príobháideachais</a>.
-    overview_teacher: Cruthaigh do chuntas féin agus múin an ríomheolaíocht i do sheomra
-      ranga.<p/> Beidh tú in ann do chuid daltaí a chur le do rang agus an dul chun
-      cinn atá déanta acu a leanúint.
-    no_signup_message: Tá fáilte romhat <a target="_blank" href="http://learn.code.org">na
-      céimeanna agus na dúshláin éagsúla a bhrabhsáil</a>, ach caithfidh tú clárú
-      chun do dhul chun cinn a shábháil.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Féach an lámhleabhar do mhúinteoirí
-    teacher_pitch: Cláraigh le Code.org mar mhúinteoir
-    teacher_title: Clárú mar mhúinteoir
-    student_pitch: Cláraigh le Code.org mar dhalta
-    student_title: Clárú mar dhalta
-    signup_title: Cláraigh le Code.org
+    title: Cláraigh le Code.org
     school_name: Ainm do Scoile (roghnach)
     school_address: Seoladh do Scoile (roghnach)
     address_placeholder: seoladh, cathair, stát, cód poist
@@ -116,19 +113,23 @@
     mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
     student_terms: Glacaim le <a href='http://code.org/tos'>téarmaí seirbhíse</a>
       Code.org. Má tá mé níos óige ná 13 bliain d'aois, deimhním gur thug tuismitheoir
-      nó caomhnóir cead dom seirbhísí Code.org a úsáid.<br/>Má tá úsáideoir níos óige
-      ná 13 bliain d'aois, ní stórálaimid a s(h)eoladh ríomhphoist in aon fhoirm a
-      ligfeadh dúinn dul i dteagmháil leis nó léi.
-    teacher_terms: Glacaim le <a href='http://code.org/tos'>téarmaí seirbhíse</a>
-      Code.org.
+      nó caomhnóir cead dom seirbhísí Code.org a úsáid.<br/><br/>Ní stórálaimid seoltaí
+      ríomhphoist in aon fhoirm a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh
+      daltaí ríomhphost ó Code.org seachas teachtaireachtaí chun focal faire a athshocrú.
+      Léigh an <a href='http://code.org/privacy'>polasaí príobháideachais</a> chun
+      tuilleadh eolais a fháil.
+    teacher_terms: Glacaim le téarmaí seirbhíse Code.org. Féach an <a href='http://code.org/privacy'>polasaí
+      príobháideachais</a> chun tuilleadh eolais a fháil.
     additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
       a chlárú.
     user_type_label: Sórt cuntais
     user_type_teacher: Múinteoir
     user_type_student: Dalta
+    field_is_required: riachtanach
+    accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
   signin_form:
     title: An bhfuil cuntas agat cheana? Logáil isteach
-    login: Seoladh ríomhphoist nó ainm úsáideora
+    login: Seoladh ríomhphoist
     password: Focal faire
     remember: Cuimhnigh orm
     submit: Logáil isteach
@@ -142,11 +143,15 @@
     picture: Anois, aimsigh do phictiúr rúnda
     words: Anois, cuir isteach na focail rúnda atá agat
     login: Logáil isteach
+    invalid_login: Theip ar an logáil isteach, bain triail eile as
+    pair_programming: Tá comhpháirtí in éineacht liom anseo
   password:
     reset_form:
       title: Focal faire dearmadta?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: Seoladh ríomhphoist
-      submit: Seol treoracha chugam maidir le hathshocrú m'fhocail faire
+      submit: Seol
     change_form:
       title: Athraigh d'fhocal faire
       new_password: Focal faire nua
@@ -293,8 +298,12 @@
       prizes: Duaiseanna
       logout: Logáil amach
       signin: Logáil isteach
-      signup: Cláraigh
+      signup: Cruthaigh cuntas
       already_registered: Cláraithe cheana?
+      pair_programming: Códáil Bheirte
+      team: Foireann
+      driver: Tiománaí
+      navigator: Stiúrthóir
     popup:
       progress_for_user: Dul chun cinn %{name}
       progress: Do dhul chun cinn
@@ -320,7 +329,7 @@
     user_not_found: Níor aimsíodh an múinteoir seo.
     student_teacher_disassociated: Ní hé/hí %{teacher_name} do mhúinteoir a thuilleadh.
     panel:
-      answer_viewer: Amharcán Freagraí
+      answer_viewer: Painéal an Mhúinteora
       student: Dalta
       viewing_solution: Réiteach á Thaispeáint
       try_it_yourself: Bain triail as
@@ -329,6 +338,8 @@
       example_with_number: Réiteach Samplach a %{solution_number}
       submitted_on: 'Seolta:'
       unsubmit: Dísheol
+      worked_with: In éineacht le
+      update_lock_settings: Athraigh na socruithe glasála anseo.
   user:
     email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
     email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
@@ -400,13 +411,20 @@
     choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
     print_certificate: Priontáil Teastas
     announcement_title: Fógraí
-    announcement_view_all: Féach uile
-    announcement_message: Ar mhaith leat cabhrú linn chun gné nua a thástáil? Tuigimid
-      go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail, mar sin
-      beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta
-      a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh
-      do chuid aiseolais sula gcraolfaimid an gné go poiblí.
-    announcement_button: Tástáil an ghné
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class
+      how the Internet works, how cryptography keeps data secure, and other concepts?
+      We’ve taken the best interactive tools from our Computer Science Principles
+      curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: Tuilleadh eolais
+    announcement_try_now_button: Bain triail as anois
     announcement_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
       chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
       Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
@@ -414,6 +432,9 @@
       is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil
       na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
     announcement_petition_button: Cuir d'ainm leis
+    announcement_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag
+      le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
+      ar fhógraí roimhe seo.</a>
   move_students:
     new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
       eile.
@@ -509,10 +530,6 @@
         target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is
         féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe
         ar an leathanach briste.
-      ie_message: Stopfaidh Code.org ag tacú le hInternet Explorer 8, 9, agus 10 go
-        luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
-      ie_message_csedweek: Stopfaidh CSEdWeek.org ag tacú le hInternet Explorer 8,
-        9, agus 10 go luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
       link: Tuilleadh eolais
   slow_loading: Moill as an ngnáth air seo...
   try_reloading: Déan iarracht an leathanach a lódáil arís
@@ -631,9 +648,9 @@
     help_resources: Cabhair agus Acmhainní
   multi:
     wrong_title: Freagra mícheart
-    wrong_body: Chuir tú freagra mícheart isteach. Déan iarracht eile!
+    wrong_body: Faraor, ní é sin an freagra ceart. Déan iarracht eile!
     correct_title: Ceart
-    correct_body: Is é sin an freagra ceart.
+    correct_body: Maith thú! Sin é an freagra ceart.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
@@ -648,6 +665,9 @@
     wrong_body: Go raibh maith agat as do fhreagraí.
     correct_title: Go raibh maith agat
     correct_body: Go raibh maith agat as do fhreagraí.
+    hide_survey_last_answer: Suirbhé gan ainm é seo. Tabhair cuairt ar phainéal na
+      múinteoirí chun torthaí comhbhailithe a fháil. Ní bheidh na torthaí ar fáil
+      go dtí go ndéanfaidh ar a laghad cúigear daltaí an suirbhé.
   level_group-submittable:
     wrong_title: Go raibh maith agat
     wrong_body: Go raibh maith agat as do fhreagraí.
@@ -666,7 +686,7 @@
     wrong_title: Réiteach mícheart
     wrong_body: Chuir tú réiteach mícheart isteach. Déan iarracht eile!
     correct_title: Ceart
-    correct_body: Is é sin an freagra ceart.
+    correct_body: Maith thú! Sin é an freagra ceart.
   contract_match:
     wrong_title: Freagra mícheart
     badname: Ainm mícheart ar do chonradh.
@@ -682,7 +702,7 @@
     open_response_title: Go raibh maith agat
     open_response_body: Go raibh maith agat as do fhreagra!
     correct_title: Ceart
-    correct_body: Is é sin an freagra ceart.
+    correct_body: Maith thú! Sin é an freagra ceart.
   dialog:
     ok: OK
     startover_title: An bhfuil tú cinnte gur mhaith leat tosú arís?
@@ -694,40 +714,6 @@
     hour: Uair an chloig
     day: lá
     week: seachtain
-  data:
-    script:
-      name:
-        20-hour:
-          title: Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna
-            (15-25 uair an chloig)
-          description: Múineann an cúrsa 20 uair an chloig seo bunchoincheapa na ríomheolaíochta
-            agus an ríomhchlárú. Tá an cúrsa dírithe ar dhaltaí bunscoile agus meánscoile,
-            ach bhainfeadh daltaí níos sine nó fiú daoine fásta taitneamh as freisin.
-        Hour of Code:
-          title: An Uair Chódála 2013
-          description: ''
-        edit-code:
-          title: Cuir an Cód in Eagar
-          description: ''
-        events:
-          title: Teagmhais
-          description: ''
-        builder:
-          title: Tógálaí
-          description: ''
-        flappy:
-          title: Cód Flappy
-          description: Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad?
-            Bain triail as ár gcúrsa Flappy Code!
-        jigsaw:
-          title: Míreanna Mearaí
-          description: ''
-        step:
-          title: Céim
-          description: ''
-        sample_level_builder:
-          title: Tógálaí Leibhéal Samplach
-          description: ''
   age_interstitial:
     age: Cén aois thú?
     header: Nuashonrú an Chuntais
@@ -737,6 +723,35 @@
       an fhaisnéis seo le haon tríú páirtí, ná í a chur ar cíos.
     sign_out: Mura bhfuil tú sásta d'aois a nocht, fáilte romhat <a href="%{url}">logáil
       amach</a> anois.
+  terms_interstitial:
+    title: Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Téarmaí Seirbhíse
+    privacy: Polasaí Príobháideachais
+    privacy_notice: Polasaí Príobháideachais
+    accept_label: Glacaim leis na <a href="%{tos_url}" target="_blank">Téarmaí Seirbhíse</a>
+      nua agus leis <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>
+      nua
+    accept: Glacaim Leo
+    print: Priontáil
+    later: Níos Déanaí
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Léigh na téarmaí seirbhíse nua
   zendesk_too_young_message: Ár leithscéal, ach níl cead ag úsáideoirí óga logáil
     isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a>
     gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil
@@ -768,6 +783,8 @@
     share_copy_link: 'Cóipeáil an nasc:'
     share_embed_description: Is féidir an cód leabaithe a ghreamú isteach i leathanach
       HTML chun an togra a chur ar taispeáint ar leathanach Gréasáin.
+    share_u13_warning: Lorg cead ó do mhúinteoir sula bhfoilseoidh tú é. Ná comhroinn
+      é ach le daoine eile i do scoil.
     embed: Leabaigh
     advanced_share: Taispeáin na hardroghanna
     close: Dún
@@ -797,6 +814,8 @@
     abuse:
       tos: Tuairiscíodh an togra seo agus dúradh go sáraíonn sé <a href='http://code.org/tos'>Téarmaí
         Seirbhíse</a> Code.org. Dá bharr sin, ní féidir é a chomhroinnt.
+      policy_violation: Tá eolas sa togra seo nach féidir comhroinnt le daoine eile.
+        Téigh i dteagmháil le húinéir na haipe leis an ábhar seo a réiteach.
       contact_us: Má chreideann tú gur botún é seo, <a href='https://code.org/contact'>téigh
         i dteagmháil linn.</a>
       go_to_code_studio: Téigh go dtí an Stiúideo Códála
@@ -835,6 +854,15 @@
     instructor_feedback: Aiseolas ó Mhúinteoir
     peer_feedback: Aiseolas ó Scoláirí Eile
     outdated: Baineann an t-aiseolas seo le seanleagan
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Lorg deilbhín...
@@ -853,14 +881,17 @@
     required: Foramharc
     content: "Ábhar"
     practice: Cleachtais Mhúinteoireachta
+    peer_review: Athbhreithniú Comhghleacaithe
   external_links:
-    disclaimer_md: "<strong>Séanadh: Tá tú ar tí an fearann seo a fhágáil, chun cuairt
-      a thabhairt ar shuíomh nach bhfuil faoi stiúir Code.org.</strong> Seans nach
-      ionann na polasaithe príobháideachais ar an suíomh seo agus ar Code.org.<br/><br/>Roghnaigh
-      muid na hacmhainní tríú páirtí seo toisc go gceapaimid go mbainfidh tú tairbhe
-      astu. Cé nach bhfuilimid freagrach as an ábhar atá ar an suíomh, bheadh fáilte
-      romhat <a href='%{support_url}'>dul i dteagmháil linn</a> dá mbeadh ábhar gránna
-      nó maslach air, nó dá mbeadh an nasc leis an suíomh briste."
+    disclaimer: Séanadh
+    leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt
+      ar shuíomh nach bhfuil faoi stiúir Code.org.
+    disclaimer_text: Seans nach ionann na polasaithe príobháideachais ar an suíomh
+      seo agus ar Code.org. Roghnaigh muid na hacmhainní tríú páirtí seo toisc go
+      gceapaimid go mbainfidh tú tairbhe astu. Cé nach bhfuilimid freagrach as an
+      ábhar atá ar an suíomh, bheadh fáilte romhat <a href='%{support_url}'>dul i
+      dteagmháil linn</a> dá mbeadh ábhar gránna nó maslach air, nó dá mbeadh an nasc
+      leis an suíomh briste.
   hoc_download:
     title: "Íoslódálacha: An Uair Chódála"
     capsule_title: An bhfuil tú ceangailte leis an Idirlíon?
@@ -895,3 +926,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

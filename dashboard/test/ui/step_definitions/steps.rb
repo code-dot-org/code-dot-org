@@ -13,8 +13,8 @@ end
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
+    raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
     url = url.
-      gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/").
       gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
@@ -25,9 +25,9 @@ def replace_hostname(url)
   end
 
   # Convert http to https
-  url = url.gsub(/^http:\/\//,'https://') unless url.start_with? 'http://localhost'
+  url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org
-  url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
+  url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
 end
 
 # Get the SCSS color constant for a given status.
@@ -46,6 +46,22 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to url
+  install_js_error_recorder
+end
+
+def install_js_error_recorder
+  @browser.execute_script(<<-JS
+  // Wrap existing window onerror handler with a script error recorder.
+  var windowOnError = window.onerror;
+  window.onerror = function (msg) {
+    window.detectedJSErrors = window.detectedJSErrors || [];
+    window.detectedJSErrors.push(msg);
+    if (windowOnError) {
+      return windowOnError.apply(this, arguments);
+    }
+  };
+  JS
+  )
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -115,7 +131,7 @@ end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  @browser.current_url.should eq url
+  expect(@browser.current_url).to eq(url)
 end
 
 Then /^I wait until current URL contains "([^"]*)"$/ do |url|
@@ -130,7 +146,7 @@ end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
   url = replace_hostname(url)
-  @browser.current_url.should include url
+  expect(@browser.current_url).to include(url)
 end
 
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
@@ -309,9 +325,18 @@ When /^I hold key "([^"]*)"$/ do |key_code|
 end
 
 When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
-  @browser.execute_script("$('" + selector + "').val('" + input_text + "')")
-  @browser.execute_script("$('" + selector + "').keyup()")
-  @browser.execute_script("$('" + selector + "').change()")
+  type_into_selector("\"#{input_text}\"", selector)
+end
+
+When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
+  type_into_selector("\'#{input_text}\'", selector)
+end
+
+# The selector should be wrapped in appropriate quotes when passed into here.
+def type_into_selector(input_text, selector)
+  @browser.execute_script("$('#{selector}').val(#{input_text})")
+  @browser.execute_script("$('#{selector}').keyup()")
+  @browser.execute_script("$('#{selector}').change()")
 end
 
 When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
@@ -319,11 +344,11 @@ When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
-  @browser.title.should eq title
+  expect(@browser.title).to eq(title)
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}").should eq true
+  expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
 Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
@@ -432,9 +457,17 @@ Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
   element_value_is(selector, expected_value)
 end
 
+Then /^element "([^"]*)" has escaped value "([^"]*)"$/ do |selector, expected_value|
+  element_value_is(selector, YAML.load(%Q(---\n"#{expected_value}"\n)))
+end
+
+Then /^element "([^"]*)" has escaped value '([^']*)'$/ do |selector, expected_value|
+  element_value_is(selector, YAML.load(%Q(---\n"#{expected_value.gsub('"', '\"')}"\n)))
+end
+
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value = @browser.execute_script("return $(\"#{selector}\").is(':checked');")
-  value.should eq negation.nil?
+  expect(value).to eq(negation.nil?)
 end
 
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
@@ -450,7 +483,7 @@ end
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
   visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  visible.should eq (negation.nil?)
+  expect(visible).to eq(negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
@@ -460,7 +493,7 @@ end
 Then /^element "([^"]*)" is hidden$/ do |selector|
   visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
   visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  visible.should eq false
+  expect(visible).to eq(false)
 end
 
 def has_class?(selector, class_name)
@@ -468,17 +501,17 @@ def has_class?(selector, class_name)
 end
 
 Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
-  has_class?(selector, class_name).should eq true
+  expect(has_class?(selector, class_name)).to eq(true)
 end
 
 Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, class_name|
-  has_class?(selector, class_name).should eq false
+  expect(has_class?(selector, class_name)).to eq(false)
 end
 
 Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |selector, parent_selector, class_name|
   # Can't use jQuery hasClass here, due to limited SVG support
   class_list = @browser.execute_script("return $(\"#{selector}\", $(\"#{parent_selector}\").contents())[0].getAttribute(\"class\")")
-  class_list.should include class_name
+  expect(class_list).to include(class_name)
 end
 
 def disabled?(selector)
@@ -486,11 +519,11 @@ def disabled?(selector)
 end
 
 Then /^element "([^"]*)" is (?:enabled|not disabled)$/ do |selector|
-  disabled?(selector).should eq false
+  expect(disabled?(selector)).to eq(false)
 end
 
 Then /^element "([^"]*)" is disabled$/ do |selector|
-  disabled?(selector).should eq true
+  expect(disabled?(selector)).to eq(true)
 end
 
 And /^output url$/ do
@@ -503,7 +536,7 @@ end
 
 Then /^there's an image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
@@ -520,28 +553,28 @@ end
 
 Then /^I see jquery selector (.*)$/ do |selector|
   exists = @browser.execute_script("return $(\"#{selector}\").length != 0;")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^there's an SVG image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('image').filter('[xlink\\\\:href*=\"#{path}\"]').length != 0")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^there's not an SVG image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('image').filter('[xlink\\\\:href*=\"#{path}\"]').length != 0")
-  exists.should eq false
+  expect(exists).to eq(false)
 end
 
 Then(/^"([^"]*)" should be in front of "([^"]*)"$/) do |selector_front, selector_behind|
   front_z_index = @browser.execute_script("return $('#{selector_front}').css('z-index')").to_i
   behind_z_index = @browser.execute_script("return $('#{selector_behind}').css('z-index')").to_i
-  front_z_index.should be > behind_z_index
+  expect(front_z_index).to be > behind_z_index
 end
 
 Then(/^I set slider speed to medium/) do
@@ -576,7 +609,7 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
     @parent_item = @browser.find_element(:css, parent)
   }
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  @parent_item.should eq @actual_parent_item
+  expect(@parent_item).to eq(@actual_parent_item)
 end
 
 And(/^I set the language cookie$/) do
@@ -603,7 +636,7 @@ Given(/^I sign in as "([^"]*)"/) do |name|
     Then I click selector "#signin_button"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
-    And I click selector "input[type=submit][value='Sign in']"
+    And I click selector "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -615,12 +648,16 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   }
 end
 
-Given(/^I am enrolled in a plc course$/) do
+def enroll_in_plc_course(user_email)
   require_rails_env
-  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  user = User.find_by_email_or_hashed_email(user_email)
   course = Plc::Course.find_by(name: 'All The PLC Things')
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+end
+
+Given(/^I am enrolled in a plc course$/) do
+  enroll_in_plc_course(@users.first[1][:email])
 end
 
 Then(/^I fake completion of the assessment$/) do
@@ -643,18 +680,62 @@ def generate_user(name)
   return email, password
 end
 
-And(/^I create a student named "([^"]*)"$/) do |name|
+def generate_teacher_student(name, teacher_authorized)
   email, password = generate_user(name)
 
   steps %Q{
-    Given I am on "http://learn.code.org/users/sign_up"
+    Given I create a teacher named "Teacher_#{name}"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
+
+  steps %Q{
+    Then I am on "http://code.org/teacher-dashboard#/sections"
+    And I wait to see ".jumbotron"
+    And I click selector ".close"
+    And I wait for 3 seconds
+    And I click selector ".btn-white:contains('New section')"
+    Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
+    Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
+    And I click selector ".btn-primary:contains('Save')"
+    And I wait for 3 seconds
+    And I click selector "a:contains('Manage Students')"
+    And I save the section url
+    Then I sign out
+    And I navigate to the section url
     And I wait to see "#user_name"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
+    And I select the "16" option in dropdown "user_age"
+    And I click selector "input[type=submit]"
+    And I wait until I am on "http://studio.code.org/"
+  }
+end
+
+And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, false)
+end
+
+And(/^I create an authorized teacher-associated student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, true)
+end
+
+And(/^I create a student named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_up"
+    And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
-    And I click selector "input[type=submit][value='Sign up']"
+    And I click selector "#signup-button"
     And I wait until I am on "http://studio.code.org/"
   }
 end
@@ -663,17 +744,33 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 
   steps %Q{
-    Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
-    And I select the "Teacher" option in dropdown "user_user_type"
     And I wait to see "#schoolname-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I click selector "input[type=submit][value='Sign up']"
+    And I click selector "#user_terms_of_service_version"
+    And I click selector "#signup-button"
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
+end
+
+And(/^I save the section url$/) do
+  wait_with_short_timeout.until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
+  steps %Q{
+    And I wait to see ".jumbotron"
+  }
+  wait_with_short_timeout.until { "" != @browser.execute_script("return $('.jumbotron a').text().trim()") }
+  @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
+end
+
+And(/^I navigate to the section url$/) do
+  steps %Q{
+    Given I am on "#{@section_url}"
+  }
+  wait_with_short_timeout.until { /^\/join/.match(@browser.execute_script("return location.pathname")) }
 end
 
 # TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
@@ -786,7 +883,7 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
   elsif redirect_source == 'dashboard' || redirect_source == 'none'
     state = nil
   end
-  @browser.execute_script("return window.history.state").should eq state
+  expect(@browser.execute_script("return window.history.state")).to eq(state)
 end
 
 last_shared_url = nil
@@ -812,17 +909,17 @@ end
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(class_name).should eq true
+  expect(classes.include?(class_name)).to eq(true)
 end
 
 Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(class_name).should eq false
+  expect(classes.include?(class_name)).to eq(false)
 end
 
 Then /^there is no horizontal scrollbar$/ do
-  @browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth').should eq true
+  expect(@browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth')).to eq(true)
 end
 
 # Place files in dashboard/test/fixtures
@@ -845,4 +942,21 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   unless ENV['TEST_LOCAL'] == 'true'
     @browser.file_detector = nil
   end
+end
+
+Then /^I scroll our lockable stage into view$/ do
+  wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+end
+
+Then /^I open the stage lock dialog$/ do
+  wait_with_short_timeout.until { @browser.execute_script("return $('.uitest-locksettings').length") > 0 }
+  @browser.execute_script("$('.uitest-locksettings').click()")
+end
+
+Then /^I unlock the stage for students$/ do
+  # allow editing
+  @browser.execute_script("$('.modal-body button').first().click()")
+  # save
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end

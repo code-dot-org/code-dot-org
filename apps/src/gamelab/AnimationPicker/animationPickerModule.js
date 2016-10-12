@@ -1,6 +1,4 @@
 /** @file Redux reducer and actions for the Animation Picker */
-'use strict';
-
 import _ from 'lodash';
 import {addBlankAnimation, addAnimation, addLibraryAnimation} from '../animationListModule';
 import { makeEnum } from '../../utils';
@@ -140,7 +138,7 @@ function loadImageMetadata(sourceUrl, callback) {
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},
       frameCount: 1,
-      frameRate: 15
+      frameDelay: 4
     });
   });
   image.src = sourceUrl;

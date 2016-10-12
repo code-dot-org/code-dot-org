@@ -5,9 +5,9 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[1,1,1,4,1,1,1,1],[1,1,1,1,1,3,1,4],[3,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[4,1,1,1,1,1,3,1],[1,1,1,1,1,1,1,1],[1,1,1,1,2,1,1,1],[1,3,1,1,1,1,1,4]]",
+    "maze": "[[1,1,1,4,1,1,1,1],[1,1,1,1,1,1,1,4],[3,1,1,1,1,1,1,1],[1,1,1,1,4,1,1,1],[4,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,2,1],[1,1,1,1,1,1,1,4]]",
     "skin": "birds",
-    "instructions": "It's a pig party!  Get those pigs! ",
+    "instructions": "Now head any which way to get that pig!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
@@ -39,6 +39,9 @@
         <block type="maze_moveSouth"/>
         <block type="maze_moveEast"/>
         <block type="maze_moveWest"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>

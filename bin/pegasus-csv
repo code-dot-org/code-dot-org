@@ -6,7 +6,6 @@ require_relative '../deployment'
 PegasusDbUri = URI.parse CDO.pegasus_db_reader
 
 class DB < ActiveRecord::Base
-
   establish_connection(
     adapter:  'mysql2',
     host:     PegasusDbUri.host,
@@ -15,7 +14,6 @@ class DB < ActiveRecord::Base
     database: PegasusDbUri.path[1..-1],
     strict:   true
   )
-
 end
 
 def main

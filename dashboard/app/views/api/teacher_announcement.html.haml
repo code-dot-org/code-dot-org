@@ -1,20 +1,23 @@
-- cta_url = "http://blog.code.org/post/147243645493/"
+- pp_url = 'http://teacherblog.code.org/post/147349807334/try-pair-programmingtrack-the-progress-of'
+- csp_widgets_url = 'http://teacherblog.code.org/post/148059231974/explore-cs-concepts-in-any-classroom-with-these-4'
+- unused_code_url = 'http://teacherblog.code.org/post/145866947074/help-test-our-new-unused-code-feature'
+- teacher_blog_url = 'http://teacherblog.code.org/'
 
-%div.teacher-announce
-  %a.announce-heading-link{href: 'http://teacherblog.code.org/'}
-    %div.announce-heading
-      = t('home.announcement_title')
-      %div.heading-view-all
-        = t('home.announcement_view_all')
-        >>
-  %div.announce-content
-    %a{href: cta_url, target: '_blank'}
-      %div.content-img-container
-        = image_tag(CDO.shared_image_url('/teacher-announcement/privacy-policy.png'), width: '100px')
-    %div.content-text
-      != t('home.announcement_message')
-    %div.announce-learn-more
-      %a{href: cta_url, target: '_blank'}
+.teacher-announce
+  .announce-heading{style: 'height: 20px;'}
+    = t('home.announcement_title')
+  .announce-content
+    %a{href: teacher_blog_url, target: '_blank'}
+      .content-img-container
+        = image_tag(CDO.shared_image_url('/teacher-announcement/summer-features.jpg'), width: '200px')
+    .content-text
+      != t('home.announcement_message_fall2016_features', pp_url: pp_url, csp_widgets_url: csp_widgets_url, unused_code_url: unused_code_url)
+    .announce-learn-more
+      %a{href: teacher_blog_url, target: '_blank'}
         %button.primary= t('home.announcement_learn_more_button')
+  .mini-announcement
+    .content-text
+      %i.fa.fa-hand-o-right
+      != t('home.announcement_all', teacher_blog_url: teacher_blog_url)
 
 #clearboth{style: 'clear: both;'}

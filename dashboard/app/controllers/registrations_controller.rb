@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-
   respond_to :json
 
   def update
@@ -24,12 +23,12 @@ class RegistrationsController < Devise::RegistrationsController
       if successfully_updated
         set_locale_cookie(@user.locale)
         # Sign in the user bypassing validation in case his password changed
-        sign_in @user, :bypass => true
+        bypass_sign_in @user
 
         format.html do
           set_flash_message :notice, @user.pending_reconfirmation? ? :update_needs_confirmation : :updated
           begin
-            redirect_to :back
+            redirect_back fallback_location: after_update_path_for(@user)
           rescue ActionController::RedirectBackError
             redirect_to after_update_path_for(@user)
           end
@@ -43,7 +42,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
     end
   end

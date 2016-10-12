@@ -1,5 +1,4 @@
-'use strict';
-import {assert} from '../../util/configuredChai';
+import {assert, expect} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 
@@ -138,6 +137,59 @@ describe("NetSimUtils", function () {
                 {'key':'packetCount', 'bits':4},
                 {'key':'packetIndex', 'bits':4}
               ]));
+    });
+  });
+
+  describe('getUniqueLevelKeyFromLocation', function () {
+    const getUniqueLevelKeyFromLocation = NetSimUtils.getUniqueLevelKeyFromLocation;
+
+    /**
+     * Given a full URL, generates an anchor element which implements the
+     * HTMLHyperlinkElementUtils interface, which happens to be an
+     * exact subset of the Location interface - so we can use it to test our
+     * method that will normally take window.location.
+     *
+     * @param {string} url
+     * @return {HTMLHyperlinkElementUtils}
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/Location
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils
+     * @see http://stackoverflow.com/questions/3213531/creating-a-new-location-object-in-javascript
+     */
+    function urlToLocation(url) {
+      let anchor = document.createElement('a');
+      anchor.href = url;
+      return anchor;
+    }
+
+    function urlToKey(url) {
+      return getUniqueLevelKeyFromLocation(urlToLocation(url));
+    }
+
+    it('Omits protocol, origin and port from key', function () {
+      expect(urlToKey('http://code.org:3000/key'))
+          .to.equal('key');
+      expect(urlToKey('https://studio.code.org/key'))
+          .to.equal('key');
+    });
+
+    it('Omits search and hash from key', function () {
+      expect(urlToKey('https://code.org/key?foo=bar&baz=false'))
+          .to.equal('key');
+      expect(urlToKey('https://code.org/key#anchor'))
+          .to.equal('key');
+    });
+
+    it('Replaces non-word characters with dashes', function () {
+      expect(urlToKey('https://studio.code.org/one/thing/at/a/time'))
+          .to.equal('one-thing-at-a-time');
+      expect(urlToKey('https://code.org/What%20s%20That'))
+          .to.equal('What-20s-20That');
+    });
+
+    it('ignores trailing slash in the URL', function () {
+      expect('s-csp1-stage-3-puzzle-2')
+          .to.equal(urlToKey('https://studio.code.org/s/csp1/stage/3/puzzle/2'))
+          .to.equal(urlToKey('https://studio.code.org/s/csp1/stage/3/puzzle/2/'));
     });
   });
 

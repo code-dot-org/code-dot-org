@@ -4,7 +4,7 @@ module ScriptLevelsHelper
 
     if script_level.has_another_level_to_go_to?
       if script_level.end_of_stage?
-        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.position}}
+        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.absolute_position}}
 
         # End-of-Stage Experience is only enabled for:
         # stages except for the last stage of a script
@@ -60,8 +60,14 @@ module ScriptLevelsHelper
   end
 
   def section_options
-    current_user.sections.map do |section|
-      content_tag 'option', section.name, value: url_for(params.merge(section_id: section.id, user_id: nil))
+    # TODO(asher): remove check for deleted_at when possible.
+    current_user.sections.where(deleted_at: nil).map do |section|
+      content_tag 'option', section.name, value: url_for(
+        action: params[:action],
+        controller: params[:controller],
+        section_id: section.id,
+        user_id: nil
+      )
     end.join(" ").html_safe
   end
 end

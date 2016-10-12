@@ -1,75 +1,5 @@
 "kk":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Информатика пәніне кіріспе
-          Unplug1: "Деңгей 1"
-          Maze: "Деңгей 2"
-          Unplug2: "Деңгей 3"
-          Unplug3: "Деңгей 4"
-          Artist: "Деңгей 5"
-          Unplug4: "Деңгей 6"
-          Artist2: "Деңгей 7"
-          Unplug5: "Деңгей 8"
-          Farmer: "Деңгей 9"
-          Unplug6: "Деңгей 10"
-          Artist3: "Деңгей 11"
-          Unplug7: "Деңгей 12"
-          Farmer2: "Деңгей 13"
-          Unplug8: "Деңгей 14"
-          Artist4: "Деңгей 15"
-          Unplug9: "Деңгей 16"
-          Farmer3: "Деңгей 17"
-          Unplug10: "Деңгей 18"
-          Artist5: "Деңгей 19"
-          Unplug11: "Деңгей 20"
-        Hour of Code:
-          desc: "Код Жазу Сағаты"
-          Maze: "Деңгей 1"
-        Edit Code:
-          desc: "Кодты өзгерту (бета)"
-          MazeEC: "Деңгей 1"
-        2014 Levels:
-          desc: "Шар (бета)"
-          Bounce: "Деңгей 1"
-        Builder Levels:
-          desc: "Қолданушылар жасаған басқатырғыш (бета)"
-          Custom: "Деңгей 1"
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: "Деңгей 1"
-        Jigsaw Levels:
-          desc: Jigsaw (бета)
-          Jigsaw: "Деңгей 1"
-        Step Levels:
-          desc: "Лабиринт (бета)"
-          MazeStep: "Қадам деңгейі"
-        edit-code:
-          desc: "Кодты өзгерту (бета)"
-          MazeEC: "Деңгей 1"
-          Applab: "Деңгей 2"
-          ArtistEC: "Деңгей 3"
-          StudioEC: "Деңгей 4"
-        events:
-          desc: "Шар (бета)"
-          Bounce: "Деңгей 1"
-          Studio: "Деңгей 2"
-        builder:
-          desc: "Қолданушылар жасаған басқатырғыш (бета)"
-          Custom: "Деңгей 1"
-        flappy:
-          desc: Flappy Bird
-          Flappy: "Деңгей 1"
-        jigsaw:
-          desc: Jigsaw (бета)
-          Jigsaw: "Деңгей 1"
-        step:
-          desc: "Лабиринт (бета)"
-          MazeStep: "Қадам деңгейі"
-        wordsearch:
-          desc: "Ара Анықтамасы (бета)"
-          WordSearch: "Деңгей 1"
     game:
       name:
         Unplug1: "Информатика пәніне кіріспе"
@@ -756,6 +686,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

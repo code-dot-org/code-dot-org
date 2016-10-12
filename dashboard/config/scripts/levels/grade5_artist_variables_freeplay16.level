@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Still playing?  \r\n\r\nHere is a blank canvas where you can create whatever you want!\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Still playing?  \r\n\r\nHere is a blank canvas where you can create whatever you want!\r\n\r\n<hr/>\r\n<h3>If you're looking for ideas, try one of these:</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img src=\"https://images.code.org/2e8a6853ccb3ffe9bc6d25aaeea75514-image-1471047821651.10.45 PM.png\" width=\"200\"/><br/>\r\n</td>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/0b63705c28ac282637a3a5b3cede8608-image-1471047826162.18.02 PM.png\" width=\"200\"/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

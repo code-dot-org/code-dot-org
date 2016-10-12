@@ -13,7 +13,7 @@
     "is_k1": "true",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/07_V2.gif",
     "skip_instructions_popup": "true",
-    "ideal": "2",
+    "ideal": "3",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

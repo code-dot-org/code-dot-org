@@ -10,7 +10,6 @@ $fake_sqs_service = FakeSQS::TestIntegration.new(
 )
 
 class Pd::AsyncWorkshopHandlerTest < ActiveSupport::TestCase
-
   setup do
     @sqs = Aws::SQS::Client.new
 

@@ -1,8 +1,6 @@
 name 'ECSPD P3Unit2 Go'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Getting Started > Ready? Set? Go!
+# Getting Started > Ready? Set? Go!
 
 By completing this stage, you should have:
 
@@ -12,9 +10,4 @@ By completing this stage, you should have:
 In the next stage, we will:
 
 - Get a high-level overview of the next Unit in the ECS version 5 curriculum.
-
-<br><br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

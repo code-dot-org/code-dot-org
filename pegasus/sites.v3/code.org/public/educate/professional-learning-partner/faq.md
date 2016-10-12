@@ -16,6 +16,7 @@ Still have questions? See below for answers to commonly asked questions or email
 - [If we are selected as the Code.org professional learning partner in our region, can we publish a press release?](#press)
 - [If we become a Professional Learning Partner can we run other CS education workshops in addition to the Code.org programs?](#cs)
 - [Can several organizations submit a joint application to be a Professional Learning Partner in a region?](#joint)
+- [Do you accept international applications?](#international)
 
 
 **Questions about in-person workshops:**<br/>
@@ -72,6 +73,18 @@ ________________
 ### **Can several organizations submit a joint application to be a Professional Learning Partner in a region?**
 
 Yes, some of our current partners have a joint partnership where one organization is the funding arm and the other focuses on professional learning and outreach. 
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="international"></a>
+<br/>
+<br/>
+
+### **Do you accept international applications?**
+
+No, at this time, the Professional Learning Partner Program is only open to organizations in the United States.
 <br/>
 
 [**Back to the top**](#top)

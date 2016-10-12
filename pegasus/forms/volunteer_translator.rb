@@ -1,5 +1,4 @@
 class VolunteerTranslator
-
   def self.normalize(data)
     result = {}
 
@@ -83,5 +82,4 @@ class VolunteerTranslator
     data['language_ss'].concat(data['language_other_ss'] || []).sort.uniq
     data
   end
-
 end

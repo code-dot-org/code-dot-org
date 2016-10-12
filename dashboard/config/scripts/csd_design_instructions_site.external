@@ -1,0 +1,5 @@
+name 'CSD Design Instructions Site'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<iframe src="https://thimbleprojects.org/danimcavoy/99813" width="960px" height="1200px" />
+MARKDOWN

@@ -1,6 +1,6 @@
 module Ops
   class CohortsController < OpsControllerBase
-    after_filter :notify_district_contact, only: [:update, :destroy_teacher]
+    after_action :notify_district_contact, only: [:update, :destroy_teacher]
 
     load_and_authorize_resource except: [:index, :create]
 

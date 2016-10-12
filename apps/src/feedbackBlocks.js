@@ -7,10 +7,7 @@ var TestResults = constants.TestResults;
 var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommendedBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
-  var embeddedBlocks = options.response && options.response.hint &&
-      options.response.hint.indexOf("[{") !== 0;
-  if (!embeddedBlocks &&
-      options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
+  if (options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
       options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED &&
       options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED &&
       options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED) {
@@ -18,22 +15,7 @@ var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommende
   }
 
   var blocksToDisplay = [];
-  if (embeddedBlocks) {
-    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
-    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
-    // Note that double quotes are required by the JSON parser.
-    var parts = options.response.hint.match(/(.*)(\[.*\])/);
-    if (!parts) {
-      return;
-    }
-    options.response.hint = parts[1].trim(); // Remove blocks from hint.
-    try {
-      blocksToDisplay = JSON.parse(parts[2]);
-    } catch (err) {
-      // The blocks could not be parsed.  Ignore them.
-      return;
-    }
-  } else if (missingRequiredBlocks.blocksToDisplay.length) {
+  if (missingRequiredBlocks.blocksToDisplay.length) {
     handleMissingBlocks(missingRequiredBlocks);
   } else {
     handleMissingBlocks(missingRecommendedBlocks);

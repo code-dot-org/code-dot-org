@@ -200,7 +200,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { }, format: :json
+      post :create, gallery_activity: { stub: nil }, format: :json
     end
 
     assert_response :forbidden
@@ -216,5 +216,4 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     # pretend to succeed
     assert_response :created
   end
-
 end

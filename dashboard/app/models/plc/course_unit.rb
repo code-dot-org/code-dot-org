@@ -26,6 +26,10 @@ class Plc::CourseUnit < ActiveRecord::Base
 
   validates :plc_course, presence: true
 
+  def has_evaluation?
+    script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? { |level| level.class == EvaluationMulti }
+  end
+
   def determine_preferred_learning_modules(user)
     evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}
 
@@ -59,7 +63,7 @@ class Plc::CourseUnit < ActiveRecord::Base
     Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
       module_to_assign = sorted_learning_modules.find{|learning_module| learning_module.module_type == module_type}
       next if module_to_assign.nil?
-      default_module_assignments << module_to_assign.id
+      default_module_assignments << module_to_assign
     end
 
     default_module_assignments

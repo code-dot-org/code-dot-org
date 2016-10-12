@@ -1,6 +1,5 @@
 professional_learning_course 'true'
-title 'PLC Test'
-description 'PLC test fixture script'
 
-stage 'Sample Module', 'bad_module_type'
+stage 'Sample Module',
+  flex_category: 'bad_module_type'
 level 'Level 1'

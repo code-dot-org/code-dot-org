@@ -1,0 +1,4 @@
+name 'pre-assessment survey q26'
+question 'Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+right 'Yes'
+right 'No'

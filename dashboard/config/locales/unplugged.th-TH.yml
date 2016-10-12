@@ -15,16 +15,13 @@
         video: Unplug1
       Unplug2:
         title: "คิดคำนวณ"
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: "โดยใช้เพียงแค่กระดาษและปากกา นักเรียนจะได้เรียนรู้เกี่ยวกับสี่ขั้นตอนของการคิดเชิงคำนวณอย่างเป็นระบบ
+          (Computational Thinking) หลังจากบทนำสั้นๆ นักเรียนจะได้แบ่งกลุ่ม และออกคำสั่งให้นักเรียนคนอื่นๆ
+          วาดมอนสเตอร์ตัวใดตัวหนึ่งจากรายการของมอนสเตอร์ที่มีจัดไว้ให้ กิจกรรมนี้จะถูกแยกออกเป็นส่วนๆ
+          แต่ละกลุ่มจะวิเคราะห์มอนสเตอร์ในรายการ จากรูปแบบและรายละเอียดนามธรรมต่างๆของมอนสเตอร์
+          แล้วนำข้อมูลที่ได้มาสร้างเป็นอัลกอริทึม (Algorithm) เพื่อให้อีกทีมหนึ่งวาด
+          แต่ละทีมจะเปลี่ยนอัลกอริทึมเมื่อเปลี่ยนกลุ่มที่เล่นด้วย และวาดมอนสเตอร์ตามอัลกอริทึมที่ได้รับ
+          ภาพที่วาดออกมาจะเหมือนกับที่ทีมที่ออกคำสั่งต้องการหรือไม่"
         pdfs:
         - unplug2
         video: Unplug2
@@ -99,8 +96,8 @@
         video: Unplug9
       Unplug10:
         title: "อินเทอร์เน็ต"
-        desc: In this lesson, students will pretend to flow through the Internet,
-          all the while learning about web addresses, IPs and the DNS.
+        desc: "ในบทเรียนนี้ นักเรียนจะสมมติตัวเองว่าไหลผ่านอินเทอร์เน็ต ในระหว่างที่เรียนรู้เรื่อง
+          web address, IPs และ DNS"
         pdfs:
         - unplug10
         video: Unplug10

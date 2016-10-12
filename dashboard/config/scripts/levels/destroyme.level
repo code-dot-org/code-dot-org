@@ -124,7 +124,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "drawImageURL": null
+      "drawImageURL": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -153,7 +154,15 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

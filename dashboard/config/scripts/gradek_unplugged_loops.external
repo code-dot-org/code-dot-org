@@ -1,0 +1,16 @@
+name 'gradeK_unplugged_loops'
+title 'Loops Unplugged'
+markdown <<MARKDOWN
+# Stuffy Loops
+  
+<br/><br/>    
+    
+<a href="https://drive.google.com/open?id=12cQ0SLtvaqKIPtnKtABzPtTudadMdylPMQr4PglSsJI" target="_new">
+<button>
+Go to lesson plan
+</button> 
+</a>
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

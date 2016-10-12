@@ -6,7 +6,6 @@
  * @see http://jsperf.com/console-polyfill
  * @see https://getfirebug.com/wiki/index.php/Console_API
  */
-'use strict';
 
 /**
  * Call this method, passing in the window object, to fill missing console

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SurveyResultsControllerTest < ActionController::TestCase
-
   setup do
     @teacher = create(:teacher)
   end
@@ -16,8 +15,8 @@ class SurveyResultsControllerTest < ActionController::TestCase
     survey_result = SurveyResult.where(user: @teacher).first
     assert survey_result
     assert_equal 'Diversity2016', survey_result.kind
-    assert_equal 22, survey_result["properties"]["survey2016_ethnicity_asian"]
-    assert_equal 3, survey_result["properties"]["survey2016_foodstamps"]
+    assert_equal 22, survey_result["properties"]["survey2016_ethnicity_asian"].to_i
+    assert_equal 3, survey_result["properties"]["survey2016_foodstamps"].to_i
   end
 
   test 'post net promoter score survey results' do
@@ -32,7 +31,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
     survey_result = SurveyResult.where(user: @teacher).first
     assert survey_result
     assert_equal 'NetPromoterScore2015', survey_result.kind
-    assert_equal nps_value, survey_result.properties['nps_value']
+    assert_equal nps_value, survey_result.properties['nps_value'].to_i
     assert_equal nps_comment, survey_result.properties['nps_comment']
   end
 
@@ -48,5 +47,4 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert_equal 'Diversity2016', survey_result.kind
     assert survey_result['properties']['nonwhitelisted'].nil?
   end
-
 end

@@ -3,27 +3,11 @@ title 'Reviewing StarLogo Nova'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
-
-### Interactions Between Agents
-
-<br/>
+# Interactions Between Agents
 
 Okay, now your doctors move (if you decided to make the changes from the last stage). So far the doctor agents don't do much more than move, though.  Think about this question before moving on:  What interactions should your doctors and turtles have?
 
-
-<br>
-<br>
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Doctor_takes_blood_pressure.jpg" height="200px" width="200px" style="border-radius:10px"/>
-<br>
-
-
-
-<br>
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

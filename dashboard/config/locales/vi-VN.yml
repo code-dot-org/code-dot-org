@@ -3,6 +3,14 @@
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
       too_young: Nội dung này không dành cho học sinh nhỏ tuổi
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -23,17 +31,17 @@
           future: không thể trong tương lai
   hello: Xin chào thế giới
   welcome_back: Chào mừng trở lại, %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
+  your_professional_learning_plan: Kế hoạch học tập chuyên nghiệp của bạn
   see_your_learning_plan: Xem kế hoạch học tập của bạn
   submit: Chấp nhận
   unsubmit: Ngưng gửi
   previous_page: Trang trước
   next_page: Trang tiếp theo
-  next_resource: Next resource
+  next_resource: Tài nguyên tiếp theo
   done_with_module: Done with this Learning Module
   cancel: Huỷ
   okay: "Đồng ý"
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (trang %{x} của %{y})"
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
@@ -81,22 +89,11 @@
   signup_form:
     student_count: "%{count} sinh viên đã đăng ký."
     teacher_count: "%{count} giáo viên đã đăng ký."
-    overview_student: Đăng ký cho một tài khoản để theo dõi tiến độ của bạn. Email
-      của bạn chủ yếu được sử dụng để cho phép bạn đăng nhập vào và phục hồi mật khẩu.
-      Để biết thêm chi tiết, xem <a href="http://code.org/privacy">Chính sách bảo
-      mật</a> của chúng tôi .
-    overview_teacher: Dạy môn khoa học máy tính trong lớp học của bạn bằng cách đăng
-      ký một tài khoản. <p/> Bạn sẽ có thể thêm học sinh của bạn và theo dõi sự tiến
-      bộ của họ.
-    no_signup_message: Bạn có thể dùng mã <a target="_blank" href="http://learn.code.org">
-      để duyệt các màn và các câu đố khác nhau</a>,nhưng bạn cần đăng ký để lưu lại
-      tiến trình của bạn.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Hãy xem chỉ dẫn
-    teacher_pitch: Giáo viên đăng ký Code.org
-    teacher_title: Giáo viên đăng ký
-    student_pitch: Sinh viên đăng ký Code.org
-    student_title: Sinh viên đăng ký
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: Tên trường (tùy chọn)
     school_address: "Địa chỉ trường (không bắt buộc)"
     address_placeholder: "địa chỉ, thành phố, tỉnh, mã bưu điện"
@@ -124,9 +121,11 @@
     user_type_label: Account Type
     user_type_teacher: Giáo viên
     user_type_student: học sinh
+    field_is_required: là bắt buộc
+    accept_terms: You must agree to create an account
   signin_form:
     title: "Đã có một tài khoản? Đăng nhập"
-    login: Email hoặc tên người dùng
+    login: "Địa chỉ email"
     password: Mật khẩu
     remember: Nhớ mật khẩu
     submit: "Đăng nhập"
@@ -140,11 +139,15 @@
     picture: Bây giờ tìm hình ảnh bí mật của bạn
     words: Bây giờ nhập từ bí mật của bạn
     login: "Đăng nhập"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Quên mật khẩu?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: "Địa chỉ Email"
-      submit: Gửi cho tôi hướng dẫn đặt lại mật khẩu
+      submit: Chấp nhận
     change_form:
       title: Thay đổi mật khẩu của bạn
       new_password: Mật khẩu mới
@@ -294,6 +297,10 @@
       signin: "Đăng nhập"
       signup: "Đăng ký"
       already_registered: Bạn đã đăng ký?
+      pair_programming: Lập trình đôi
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: sự tiến bộ của %{name}
       progress: Qua trình của bạn
@@ -329,6 +336,8 @@
       example_with_number: Ví dụ giải pháp %{solution_number}
       submitted_on: 'Gửi lên ngày:'
       unsubmit: Ngưng gửi
+      worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: "Địa chỉ email chưa được xác nhận:"
     email_confirm_needed_required: "Địa chỉ email của bạn %{email} chưa được xác nhận:"
@@ -402,13 +411,20 @@
     choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
     print_certificate: In giấy chứng nhận
     announcement_title: Announcements
-    announcement_view_all: Tất cả
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Tìm hiểu thêm
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class
+      how the Internet works, how cryptography keeps data secure, and other concepts?
+      We’ve taken the best interactive tools from our Computer Science Principles
+      curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: Tìm hiểu thêm
+    announcement_try_now_button: Thử ngay bây giờ
     announcement_petition: Là một giáo viên, bạn đang dẫn đầu trong phong trào để
       trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây
       giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh
@@ -416,6 +432,8 @@
       cùng nhau trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục
       khoa học máy tính.
     announcement_petition_button: Add your name
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -510,10 +528,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Tìm hiểu thêm
   slow_loading: "Điều này mất nhiều thời gian hơn bình thường..."
   try_reloading: Hãy thử tải lại trang
@@ -654,6 +668,9 @@
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
     correct_title: Cảm ơn bạn
     correct_body: Cảm ơn bạn đã gửi câu trả lời.
+    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
+      for aggregate results.  Note that results are only visible if at least five
+      students submitted the survey.
   level_group-submittable:
     wrong_title: Cảm ơn bạn
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
@@ -701,40 +718,6 @@
     hour: 1 giờ
     day: ngày
     week: tuần
-  data:
-    script:
-      name:
-        20-hour:
-          title: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25
-            giờ)
-          description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
-            và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên
-            nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
-        Hour of Code:
-          title: Giờ Lập trình 2013
-          description: ''
-        edit-code:
-          title: Hiệu chỉnh mã
-          description: ''
-        events:
-          title: Các sự kiện
-          description: ''
-        builder:
-          title: Xây dựng
-          description: ''
-        flappy:
-          title: Lập trình Flappy
-          description: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút?
-            Hãy thử lớp học lập trình Flappy của chúng tôi!
-        jigsaw:
-          title: Ghép hình
-          description: ''
-        step:
-          title: Bước/ từng bước thực hiện
-          description: ''
-        sample_level_builder:
-          title: Máy tạo Trình độ Mẫu
-          description: ''
   age_interstitial:
     age: Tuổi của bạn
     header: Cập nhật thông tin tài khoản
@@ -744,6 +727,34 @@
       chia sẻ thông tìn này với bất kì bên thứ 3 nào.
     sign_out: Nếu bạn không muốn cung cấp tuổi của mình, bạn có thể đăng nhập vào
       <a href="%{url}">sign out</a>
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Các điều khoản của Code.org
+    privacy: Chính sách riêng tư
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: In
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang
     web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a>
     mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên
@@ -775,6 +786,8 @@
     share_copy_link: 'Sao chép liên kết:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: "Đóng"
@@ -804,6 +817,8 @@
     abuse:
       tos: Dự án này đã bị báo cáo vi phạm <a href='http://code.org/tos'>điều khoản
         của Code.org</a> và không thể chia sẻ với những người khác.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Nếu bạn tin rằng đây là một lỗi, xin vui lòng <a href='https://code.org/contact'>
         liên hệ với chúng tôi.</a>
       go_to_code_studio: "Đi đến Code Studio"
@@ -848,6 +863,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Tìm kiếm một biểu tượng...
@@ -867,14 +891,16 @@
     required: Tổng quan
     content: Content
     practice: Teacher Practices
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -908,3 +934,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

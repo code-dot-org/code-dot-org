@@ -1,7 +1,6 @@
 /**
  * @overview Base type for visible elements in the visualization.
  */
-'use strict';
 
 var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
 var tweens = require('./tweens');

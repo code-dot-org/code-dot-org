@@ -1,22 +1,39 @@
-/*
-  Display and edit attendance for a workshop.
-  It has a tab for each session which lists all enrolled teachers and their status.
-  Route: /workshops/:workshopId/attendance(/:sessionIndex)
+/**
+ * Display and edit attendance for a workshop.
+ * It has a tab for each session which lists all enrolled teachers and their status.
+ * Route: /workshops/:workshopId/attendance(/:sessionIndex)
  */
 
 import $ from 'jquery';
-var _ = require('lodash');
+import _ from 'lodash';
 import React from 'react';
-var SessionTime = require('../components/session_time');
-var SessionAttendance = require('./session_attendance');
-var Row = require('react-bootstrap').Row;
-var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
-var Button = require('react-bootstrap').Button;
-var Tabs = require('react-bootstrap').Tabs;
-var Tab = require('react-bootstrap').Tab;
-var Col = require('react-bootstrap').Col;
+import SessionTime from '../components/session_time';
+import SessionAttendance from './session_attendance';
+import {
+  Row,
+  Col,
+  ButtonToolbar,
+  Button,
+  OverlayTrigger,
+  Tooltip,
+  Tabs,
+  Tab
+} from 'react-bootstrap';
 
-var WorkshopAttendance = React.createClass({
+const styles = {
+  adminOverride: {
+    true: {
+      cursor: 'pointer',
+      backgroundColor: '#f5f5dc' // Light green
+    },
+    false: {
+      cursor: 'pointer',
+      backgroundColor: '#f5f5f5' // Light gray
+    }
+  }
+};
+
+const WorkshopAttendance = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -28,17 +45,26 @@ var WorkshopAttendance = React.createClass({
     }).isRequired
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       loading: true,
       workshopState: undefined,
       sessionAttendances: undefined,
-      adminActions: undefined,
-      adminOverride: false
+      adminOverride: false,
+      saving: false,
+      isModified: false
     };
   },
 
-  componentDidMount: function () {
+  isAdmin() {
+    return window.dashboard.workshop.permission === "admin";
+  },
+
+  hasWorkshopEnded() {
+    return this.state.workshopState === 'Ended';
+  },
+
+  componentDidMount() {
     // Response format:
     // [
     //   state: _workshop state_,
@@ -49,17 +75,16 @@ var WorkshopAttendance = React.createClass({
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`,
       dataType: "json"
-    }).done(function (data) {
+    }).done(data => {
       this.setState({
         loading: false,
         workshopState: data.state,
-        sessionAttendances: data.session_attendances,
-        adminActions: data.admin_actions
+        sessionAttendances: data.session_attendances
       });
-    }.bind(this));
+    });
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
@@ -68,37 +93,45 @@ var WorkshopAttendance = React.createClass({
     }
   },
 
-  handleNavSelect: function (sessionIndex) {
+  handleNavSelect(sessionIndex) {
     this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionIndex}`);
   },
 
-  handleCancelClick: function (e) {
+  handleBackClick() {
     this.context.router.push(`/workshops/${this.props.params.workshopId}`);
   },
 
-  handleSaveClick: function (e) {
-    var url = `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`;
-    var data = this.prepareDataForApi();
+  handleSaveClick() {
+    this.setState({saving: true});
+    const url = `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`;
+    const data = this.prepareDataForApi();
     this.saveRequest = $.ajax({
       method: 'PATCH',
       url: url ,
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify({pd_workshop: data})
-    }).done(function () {
-      this.context.router.push('/workshops/' + this.props.params.workshopId);
-    }.bind(this));
+    }).done(() => {
+      this.setState({
+        saving: false,
+        isModified: false
+      });
+    });
   },
 
-  prepareDataForApi: function () {
+  handleDownloadCsvClick() {
+    window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`);
+  },
+
+  prepareDataForApi() {
     // Convert to {session_attendances: [session_id, attendances: [user_id or email]]}
     return {
-      session_attendances: this.state.sessionAttendances.map(function (sessionAttendance) {
+      session_attendances: this.state.sessionAttendances.map(sessionAttendance => {
         return {
           session_id: sessionAttendance.session.id,
-          attendances: sessionAttendance.attendance.filter(function (attendance) {
+          attendances: sessionAttendance.attendance.filter(attendance => {
             return attendance.attended;
-          }).map(function (attendance) {
+          }).map(attendance => {
             if (attendance.user_id) {
               return {id: attendance.user_id};
             }
@@ -111,51 +144,53 @@ var WorkshopAttendance = React.createClass({
     };
   },
 
-  handleAttendanceChange: function (i, value) {
-    var clonedAttendances = _.cloneDeep(this.state.sessionAttendances);
+  handleAttendanceChange(i, value) {
+    const clonedAttendances = _.cloneDeep(this.state.sessionAttendances);
     clonedAttendances[this.activeSessionIndex()].attendance[i].attended = value;
-    this.setState({sessionAttendances: clonedAttendances});
+    this.setState({
+      sessionAttendances: clonedAttendances,
+      isModified: true
+    });
   },
 
-  activeSessionIndex: function () {
+  activeSessionIndex() {
     return parseInt(this.props.params.sessionIndex, 10) || 0;
   },
 
-  handleAdminOverrideClick: function () {
+  handleAdminOverrideClick() {
     this.setState({adminOverride: !this.state.adminOverride});
   },
 
-  renderAdminControls: function () {
-    if (!this.state.adminActions) {
+  renderAdminControls() {
+    if (!this.isAdmin()) {
       return null;
     }
-    var toggleClass;
-    var style;
-    if (this.state.adminOverride) {
-      toggleClass = "fa fa-toggle-on fa-lg";
-      style = {backgroundColor: '#f5f5dc'}; // Light green
-    } else {
-      toggleClass = "fa fa-toggle-off fa-lg";
-      style = {backgroundColor: '#f5f5f5'}; // Light gray
-    }
+    const toggleClass = this.state.adminOverride ? "fa fa-toggle-on fa-lg" : "fa fa-toggle-off fa-lg";
+    const style = styles.adminOverride[!!this.state.adminOverride];
     return (
       <Row>
         <Col sm={10} style={{padding: 10}}>
-          <span style={style}>Admin: allow counting attendance for teachers not in the section? &nbsp;</span>
-          <i className={toggleClass} style={{cursor:'pointer'}} onClick={this.handleAdminOverrideClick} />
+          <span style={style}>
+            Admin: allow counting attendance for teachers not in the section? &nbsp;
+          </span>
+          <i
+            className={toggleClass}
+            style={style}
+            onClick={this.handleAdminOverrideClick}
+          />
         </Col>
       </Row>
     );
   },
 
-  render: function () {
+  render() {
     if (this.state.loading) {
       return <i className="fa fa-spinner fa-pulse fa-3x" />;
     }
 
-    let isReadOnly = this.state.workshopState === 'Ended';
-    let sessionTabs = this.state.sessionAttendances.map(function (sessionAttendance, i) {
-      var session = sessionAttendance.session;
+    const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin();
+    const sessionTabs = this.state.sessionAttendances.map((sessionAttendance, i) => {
+      const session = sessionAttendance.session;
       return (
         <Tab key={i} eventKey={i} title={<SessionTime session={session}/>}>
           <SessionAttendance
@@ -167,13 +202,20 @@ var WorkshopAttendance = React.createClass({
           />
         </Tab>
       );
-    }.bind(this));
+    });
 
     let intro = null;
     if (isReadOnly) {
       intro = (
         <p>
           This workshop has ended. The attendance view is now read-only.
+        </p>
+      );
+    } else if (this.hasWorkshopEnded() && this.isAdmin()) {
+      intro = (
+        <p>
+          This workshop has ended. As an admin, you can still update attendance.
+          Note this will not be reflected in the payment report if it's already gone out.
         </p>
       );
     }
@@ -185,15 +227,27 @@ var WorkshopAttendance = React.createClass({
         </h1>
         {intro}
         {isReadOnly ? null : this.renderAdminControls()}
-        <Tabs activeKey={this.activeSessionIndex()} onSelect={this.handleNavSelect}>
+        <Tabs activeKey={this.activeSessionIndex()} onSelect={this.handleNavSelect} id="attendance-tabs">
           {sessionTabs}
         </Tabs>
         <br />
         <Row>
-          <Col sm={4}>
+          <Col sm={10}>
             <ButtonToolbar>
-              <Button bsStyle="primary" onClick={this.handleSaveClick}>Save</Button>
-              <Button onClick={this.handleCancelClick}>Cancel</Button>
+              <Button
+                disabled={!this.state.isModified && !this.state.saving}
+                bsStyle="primary"
+                onClick={this.handleSaveClick}
+              >
+                Save
+              </Button>
+              <Button
+                disabled={this.state.isModified}
+                onClick={this.handleDownloadCsvClick}
+              >
+                Download CSV
+              </Button>
+              <Button onClick={this.handleBackClick}>Back</Button>
             </ButtonToolbar>
           </Col>
         </Row>
@@ -201,4 +255,4 @@ var WorkshopAttendance = React.createClass({
     );
   }
 });
-module.exports = WorkshopAttendance;
+export default WorkshopAttendance;

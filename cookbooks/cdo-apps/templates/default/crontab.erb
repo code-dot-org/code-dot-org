@@ -75,11 +75,10 @@
     cronjob at:'35 * * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'deliver_poste_messages')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
     cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
     cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
-    cronjob at:'40 4 * * *', do:deploy_dir('bin', 'cron', 'funometer')
-    cronjob at:'30 6 * * *', do:deploy_dir('bin', 'cron', 'admin_progress')
-    cronjob at:'10 7 * * *', do:deploy_dir('bin', 'cron', 'retention_stats')
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
   end
 
@@ -92,6 +91,11 @@
   cronjob at:"#{rand(20)} */8 * * *", do:'service dashboard upgrade && service pegasus upgrade'
 
   cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
+
+  # report memory and disk space utilization to CloudWatch every five minutes
+  # we do not use the cronjob helper method because this should not execute with
+  # bundle.
+  $crontab << "*/5 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
 %>
 #
 # node: <%= node.name %>

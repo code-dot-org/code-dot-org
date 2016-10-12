@@ -840,6 +840,48 @@ module.exports = {
         assert.equal(Studio.message, commonMsg.unnamedFunction());
         return true;
       },
+    },
+    {
+      description: "Set and read score var",
+      xml: '<xml>' +
+        '  <block type="when_run" deletable="false">' +
+        '    <next>' +
+        '      <block type="studio_setScore" inline="false">' +
+        '        <value name="VALUE">' +
+        '          <block type="math_number">' +
+        '            <title name="NUM">50</title>' +
+        '          </block>' +
+        '        </value>' +
+        '        <next>' +
+        '          <block type="studio_setSprite">' +
+        '            <title name="SPRITE">0</title>' +
+        '            <title name="VALUE">"dog"</title>' +
+        '            <next>' +
+        '              <block type="studio_moveDistanceParams" inline="true">' +
+        '                <title name="SPRITE">0</title>' +
+        '                <title name="DIR">4</title>' +
+        '                <value name="DISTANCE">' +
+        '                  <block type="studio_getScore"/>' +
+        '                </value>' +
+        '              </block>' +
+        '            </next>' +
+        '          </block>' +
+        '        </next>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '</xml>',
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
+          assert(Studio.sprite[0].y === 50, "Actor 1 moved by score amount");
+          assert(Studio.playerScore === 50, "Score set to 50");
+          Studio.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     }
   ]
 };

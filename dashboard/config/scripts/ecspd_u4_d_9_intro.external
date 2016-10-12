@@ -1,27 +1,25 @@
 name 'ECSPD U4 D 9 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 9: Scratch – Broadcasting Role Play
+# Day 9: Scratch &mdash; Broadcasting Role Play
 
 First, let's explore the sixth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 149-157.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=149)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will be introduced to a broadcasting event by role playing.   One sprite will broadcast an event and another sprite will receive the event and perform a script.
 - They will use the switch to costume" block, "say" block, "broadcast" block, "when I receive" block, "show" block, "hide" block, and "switch background" block.
 - Students will need to finish the [Summer Story Project](http://code.org/ecs#page=156) using the new blocks.
 
-#### Common Difficulties
+## Common Difficulties
 
 This lesson presents some blocks that can be hard to use, "switch to costume" block, "broadcast" block, "when I receive" block, "show" block, "hide" block, "switch background" block.
 <br><br>
 This lesson has multiple things happening on and off the screen at the same time.  You will need to keep track of 1 main sprite, three additional sprites showing or hiding, three backgrounds to be switched out with the particular character and conversation.
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -48,9 +46,7 @@ This lesson has multiple things happening on and off the screen at the same time
 
 **After viewing the video, consider:** how was the broadcasting block used? What other blocks are necessary when you use the broadcasting block?
 
-<br> <br>
-
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

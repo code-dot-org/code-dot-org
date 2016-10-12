@@ -1,0 +1,26 @@
+name 'CSD U1 Input Output Intro'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Input / Output
+
+Look at the picture below.
+
+
+![](https://images.code.org/508aa98718310afbb5951ff08c6376cc-image-1473443588812.jpg)
+
+
+## Discussion Questions
+
+* What problem does this piece of software address?
+
+* What information is input to the smartphone?
+* What information is stored in the smartphone?
+* What information is processed by the smartphone?
+* What information is output by the smartphone?
+
+
+* What other types of input are available to the smartphone?
+
+MARKDOWN

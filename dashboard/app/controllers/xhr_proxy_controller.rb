@@ -25,14 +25,18 @@ class XhrProxyController < ApplicationController
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     accuweather.com
     api.data.gov
+    api.open-notify.org
     api.openweathermap.org
+    api.pegelalarm.at
     api.randomuser.me
     api.spotify.com
     api.zippopotam.us
     code.org
     data.cityofchicago.org
+    data.gv.at
     googleapis.com
     herokuapp.com
+    lakeside-cs.org
     query.yahooapis.com
     noaa.gov
     rhcloud.com

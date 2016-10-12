@@ -6,12 +6,12 @@
   "user_id": 302,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.background === \"city\";\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":16,\"sprite\":7},{\"tileType\":0},{\"tileType\":16,\"sprite\":7},{\"tileType\":0},{\"tileType\":16,\"sprite\":7},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":14},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "When the third bird is clicked, the background should change. Can you add code to make this happen?",
+    "instructions": "When the third bird is clicked, the background should change to a city. Can you add code to make this happen?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -39,7 +39,7 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "Level marked as success if the background is a city, therefore kids have to not only write code, but also click bird to make level succeed.\r\nCan change to just checking whether all event handlers have something under them, but cannot check for city in that case.",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -78,7 +78,7 @@
           <title name="SOUND">random</title>
         </block>
         <block type="studio_setBackground">
-          <title name="VALUE">"underwater"</title>
+          <title name="VALUE">"city"</title>
         </block>
       </xml>
     </toolbox_blocks>

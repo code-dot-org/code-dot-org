@@ -1,4 +1,5 @@
 - @page_title = t('redeem_prizes.title', name: current_user.name)
+- trophy_max = 27
 
 %h1= @page_title
 
@@ -26,12 +27,12 @@
       %br/
 
   - if current_user.teacher_prize
-    %h4= t('redeem_prizes.msg.teacher.earned', num_trophies: Trophy::TROPHY_MAX)
+    %h4= t('redeem_prizes.msg.teacher.earned', num_trophies: trophy_max)
     = render partial: 'shared/redeemed_prize', locals: { prize: current_user.teacher_prize }
     %br/
 
   - if current_user.teacher_bonus_prize
-    %h4= t('redeem_prizes.msg.teacher.bonus.earned', num_trophies: Trophy::TROPHY_MAX)
+    %h4= t('redeem_prizes.msg.teacher.bonus.earned', num_trophies: trophy_max)
     = render partial: 'shared/redeemed_prize', locals: { prize: current_user.teacher_bonus_prize }
     %br/
 - else

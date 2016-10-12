@@ -1,0 +1,33 @@
+name 'SFLP - Web - Designing Code for Computers'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The Internet - Web Development: Lesson 5 - Developing Code for Computers
+
+## Background
+
+Students will learn about the group of tags that help a web page function consistently across many web browsers and computers. They will learn how to use the validator to check that these tags exist on the pages they create. They will then add these tags to their own pages they created in the previous lesson and check their work with the validator.
+
+# Vocabulary
+
+* **HTML Validator** - Checks the markup validity of Web documents 
+
+# New Blocks
+
+* **Doctype** - `<!DOCTYPE html>`
+* **Head** - `<head></head>`
+* **HTML** - `<html></html>`
+* **Title** - `<title></title>`
+
+# Resources
+
+* [Figuring Out The Fundamentals](https://docs.google.com/document/d/19KViRBh2aISXak3w1EXwTnb4D_mM6sZ5tcuxjlz7SoI/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/19KViRBh2aISXak3w1EXwTnb4D_mM6sZ5tcuxjlz7SoI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19KViRBh2aISXak3w1EXwTnb4D_mM6sZ5tcuxjlz7SoI/export?format=doc))
+* [Validator](https://validator.w3.org/) - Website
+* [Full Court Basketball Shot](https://www.youtube.com/watch?v=9lpYmyoGjCs) - Video
+* [Underhand Basketball Free Throw](https://www.youtube.com/watch?v=sLcHw8tysYc) - Video
+* [Standard Form Basketball Free Throw](https://www.youtube.com/watch?v=Pf0lAO21AZk) - Video
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Trivia Game](https://drive.google.com/open?id=1o4FLtPzlV4mWcEEgHo8-57AC6g0KEVqgGbMMWlUBEBc) - Answer Key
+MARKDOWN

@@ -27,7 +27,7 @@
       %p
         =t("#{app == 'match' ? 'match' : 'multi'}.wrong_body")
       .farSide
-        %button#ok-button.secondary
+        %button#ok-button
           =t('dialog.ok')
 
   #toofew-dialogcontent
@@ -37,7 +37,7 @@
       %p
         =t("multi.toofew_body")
       .farSide
-        %button#ok-button.secondary
+        %button#ok-button
           =t('dialog.ok')
 
   #pre-dialogcontent
@@ -50,7 +50,7 @@
         .aniGif.example-image{style: 'overflow: hidden;'}
           != string_or_image(app, data['pre_ani'])
       .farSide
-        %button#ok-button.secondary
+        %button#ok-button
           =t('dialog.ok')
 
   #success-dialogcontent
@@ -76,7 +76,7 @@
           - else
             =t("#{app}.correct_body")
       .farSide
-        %button#ok-button.secondary
+        %button#ok-button
           =t('dialog.ok')
 
   #startover-dialogcontent
@@ -108,21 +108,21 @@
     .modal-content.no-modal-icon
       %p.dialog-title= t('level_group-submittable.submit-incomplete-title')
       %p.dialog-body=  t('level_group-submittable.submit-incomplete-body')
-      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#cancel-button{style: "float: left"}= t('cancel')
       %button#ok-button{style: "float: right"}= t('okay')
 
   #levelgroup-submit-complete-dialogcontent
     .modal-content.no-modal-icon
       %p.dialog-title= t('level_group-submittable.submit-complete-title')
       %p.dialog-body=  t('level_group-submittable.submit-complete-body')
-      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#cancel-button{style: "float: left"}= t('cancel')
       %button#ok-button{style: "float: right"}= t('okay')
 
   #unsubmit-dialogcontent
     .modal-content.no-modal-icon
       %p.dialog-title= t('level_group-submittable.unsubmit-title')
       %p.dialog-body=  t('level_group-submittable.unsubmit-body')
-      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#cancel-button{style: "float: left"}= t('cancel')
       %button#ok-button{style: "float: right"}= t('okay')
 
-=javascript_include_tag 'js/levels/dialogHelper'
+%script{src: minifiable_asset_path('js/levels/dashboardDialogHelper.js')}

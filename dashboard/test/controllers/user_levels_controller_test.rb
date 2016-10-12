@@ -50,4 +50,46 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert user_level.submitted?
   end
 
+  test "students teacher can clear response for user level" do
+    follower = create :follower
+    student = follower.student_user
+    teacher = follower.user
+
+    user_level = create :user_level, user: student
+
+    sign_in teacher
+
+    post :destroy, id: user_level.id
+    assert_response :success
+
+    assert UserLevel.find_by(id: user_level.id).nil?
+  end
+
+  test "student cannot clear response for own user level" do
+    follower = create :follower
+    student = follower.student_user
+
+    user_level = create :user_level, user: student
+
+    sign_in student
+
+    post :destroy, id: user_level.id
+    assert_response 403
+
+    assert !UserLevel.find_by(id: user_level.id).nil?
+  end
+
+  test "teacher cannot clear response for random user level" do
+    follower = create :follower
+    teacher = follower.user
+
+    user_level = create :user_level, user: create(:user)
+
+    sign_in teacher
+
+    post :destroy, id: user_level.id
+    assert_response 403
+
+    assert !UserLevel.find_by(id: user_level.id).nil?
+  end
 end

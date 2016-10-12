@@ -2,7 +2,6 @@
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.
  */
-'use strict';
 
 import $ from 'jquery';
 var NetSimTable = require('./NetSimTable');

@@ -3,6 +3,11 @@
  */
 import {combineReducers} from 'redux';
 import {createUuid} from '../utils';
+import {
+  fetchURLAsBlob,
+  blobToDataURI,
+  dataURIToSourceSize
+} from '../imageUtils';
 import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
@@ -17,7 +22,7 @@ import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList
-const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
+export const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {AnimationProps} props
 export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
 // Args: {number} index, {AnimationKey} key, {AnimationProps} props
@@ -26,6 +31,10 @@ export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
+// Args: {AnimationKey} key, {bool} looping
+const SET_ANIMATION_LOOPING = 'AnimationList/SET_ANIMATION_LOOPING';
+// Args: {AnimationKey} key, {number} frameDelay
+const SET_ANIMATION_FRAME_DELAY = 'AnimationList/SET_ANIMATION_FRAME_DELAY';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
@@ -78,6 +87,8 @@ function propsByKey(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
+    case SET_ANIMATION_LOOPING:
+    case SET_ANIMATION_FRAME_DELAY:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
@@ -117,6 +128,16 @@ function animationPropsReducer(state, action) {
         name: action.name
       });
 
+    case SET_ANIMATION_FRAME_DELAY:
+      return Object.assign({}, state, {
+        frameDelay: action.frameDelay
+      });
+
+    case SET_ANIMATION_LOOPING:
+      return Object.assign({}, state, {
+        looping: action.looping
+      });
+
     case START_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: false
@@ -143,6 +164,47 @@ function animationPropsReducer(state, action) {
 }
 
 /**
+ * Given a name and animationList, determine if the name is unique
+ * @param {string} name
+ * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
+ */
+export function isNameUnique(name, animationListProps) {
+  for (let animation in animationListProps) {
+    if (animationListProps[animation].name === name) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Given a baseName and a animationList, provide a unique name
+ * @param {string} baseName - the original name for the animation (without numbers)
+ * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
+ */
+function generateAnimationName(baseName, animationList) {
+  let unavailableNumbers = [];
+  // Match names with the form baseName_#
+  const re = new RegExp(`^${baseName}_(\\d+)$`);
+  for (let animation in animationList) {
+    let match = re.exec(animationList[animation].name);
+    if (match !== null) {
+      unavailableNumbers.push(parseInt(match[1]));
+    }
+  }
+  unavailableNumbers.sort((a, b) => a - b);
+  let availableNumber = 1;
+  for (let i = 0; i < unavailableNumbers.length; i++) {
+    if (availableNumber === unavailableNumbers[i]) {
+      availableNumber++;
+    } else {
+      break;
+    }
+  }
+  return baseName + '_' + availableNumber.toString();
+}
+
+/**
  * @param {!SerializedAnimationList} serializedAnimationList
  * @returns {function()}
  */
@@ -164,6 +226,21 @@ export function setInitialAnimationList(serializedAnimationList) {
     };
   }
 
+  // Convert frameRates to frameDelays.
+  for (let key in serializedAnimationList.propsByKey) {
+    let animation = serializedAnimationList.propsByKey[key];
+    if (!animation.frameDelay) {
+      if (typeof animation.frameRate === 'number' && !isNaN(animation.frameRate) && animation.frameRate !== 0) {
+        animation.frameDelay = Math.round(30 / animation.frameRate);
+      } else {
+        animation.frameDelay = 2;
+      }
+    }
+    if (animation.looping === undefined) {
+      animation.looping = true;
+    }
+  }
+
   try {
     throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
   } catch (err) {
@@ -176,6 +253,7 @@ export function setInitialAnimationList(serializedAnimationList) {
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
+    dispatch(selectAnimation(serializedAnimationList.orderedKeys[0] || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
@@ -184,7 +262,7 @@ export function setInitialAnimationList(serializedAnimationList) {
 
 export function addBlankAnimation() {
   const key = createUuid();
-  return dispatch => {
+  return (dispatch, getState) => {
     // Special behavior here:
     // By pushing an animation that is "loadedFromSource" but has a null
     // blob and dataURI, Piskel will know to create a new document with
@@ -193,11 +271,12 @@ export function addBlankAnimation() {
       type: ADD_ANIMATION,
       key,
       props: {
-        name: 'New animation', // TODO: Better generated name?
+        name: generateAnimationName('animation', getState().animationList.propsByKey),
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
-        frameRate: 15,
+        looping: true,
+        frameDelay: 4,
         version: null,
         loadedFromSource: true,
         saved: false,
@@ -219,7 +298,7 @@ export function addBlankAnimation() {
 export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
-  return dispatch => {
+  return (dispatch, getState) => {
     dispatch({
       type: ADD_ANIMATION,
       key,
@@ -228,6 +307,8 @@ export function addAnimation(key, props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
+    let name = generateAnimationName(props.name, getState().animationList.propsByKey);
+    dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
 }
@@ -237,7 +318,7 @@ export function addAnimation(key, props) {
  * @param {!SerializedAnimation} props
  */
 export function addLibraryAnimation(props) {
-  return dispatch => {
+  return (dispatch, getState) => {
     const key = createUuid();
     dispatch({
       type: ADD_ANIMATION,
@@ -247,6 +328,8 @@ export function addLibraryAnimation(props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
+    let name = generateAnimationName(props.name, getState().animationList.propsByKey);
+    dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
 }
@@ -301,6 +384,40 @@ export function setAnimationName(key, name) {
 }
 
 /**
+ * Set the frameDelay of the specified animation.
+ * @param {string} key
+ * @param {number} frameDelay
+ * @returns {{type: ActionType, key: string, frameDelay: number}}
+ */
+export function setAnimationFrameDelay(key, frameDelay) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_FRAME_DELAY,
+      key,
+      frameDelay
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
+ * Set the looping value of the specified animation.
+ * @param {string} key
+ * @param {bool} looping
+ * @returns {{type: ActionType, key: string, looping: bool}}
+ */
+export function setAnimationLooping(key, looping) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_LOOPING,
+      key,
+      looping
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
  * Modifies the animation props, capturing changes to its spritesheet.
  * @param {!AnimationKey} key
  * @param {object} props - needs a more detailed shape
@@ -322,8 +439,12 @@ export function editAnimation(key, props) {
  * @returns {function}
  */
 export function deleteAnimation(key) {
-  return dispatch => {
-    dispatch(selectAnimation(null));
+  return (dispatch, getState) => {
+    const orderedKeys = getState().animationList.orderedKeys;
+    const currentSelectionIndex = orderedKeys.indexOf(key);
+    let keyToSelect = (currentSelectionIndex === 0) ? 1 : (currentSelectionIndex - 1);
+    dispatch(selectAnimation(orderedKeys[keyToSelect] || null));
+
     dispatch({type: DELETE_ANIMATION, key});
     dashboard.project.projectChanged();
     animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {
@@ -342,19 +463,12 @@ function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState().animationList;
-    // Figure out where to get the animation from.
-    // 1. If the animation has a sourceUrl it's external (from the library
-    //    or some other outside source, not the animation API)
-    // 2. Otherwise use the animation key to look it up in the animations API
-    // TODO: Take version ID into account here...
-
-    const rawSourceUrl = state.propsByKey[key].sourceUrl;
-    const sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
+    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
     });
-    fetchUrlAsBlob(sourceUrl, (err, blob) => {
+    fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
         // Brute-force recovery step: Remove the animation from our redux state;
@@ -382,34 +496,25 @@ function loadAnimationFromSource(key, callback) {
   };
 }
 
-function fetchUrlAsBlob(url, onComplete) {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'blob';
-  xhr.onload = e => {
-    if (e.target.status === 200) {
-      onComplete(null, e.target.response);
-    } else {
-      onComplete(new Error(`URL ${url} responded with code ${e.target.status}`));
-    }
-  };
-  xhr.onerror = e => onComplete(new Error(`Error ${e.target.status} occurred while receiving the document.`));
-  xhr.send();
-}
+/**
+ * Given a key/serialized-props pair for an animation, work out where to get
+ * the spritesheet.
+ * @param {!AnimationKey} key
+ * @param {!SerializedAnimationProps} props
+ * @returns {string}
+ */
+export function animationSourceUrl(key, props) {
+  // 1. If the animation has a sourceUrl it's external (from the library
+  //    or some other outside source, not the animation API) - and we may need
+  //    to run it through the media proxy.
+  if (props.sourceUrl) {
+    return assetPrefix.fixPath(props.sourceUrl);
+  }
 
-function blobToDataURI(blob, onComplete) {
-  let fileReader = new FileReader();
-  fileReader.onload = e => onComplete(e.target.result);
-  fileReader.readAsDataURL(blob);
-}
-
-function dataURIToSourceSize(dataURI) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => resolve({x: image.width, y: image.height});
-    image.onerror = err => reject(err);
-    image.src = dataURI;
-  });
+  // 2. Otherwise it's local to this project, and we should use the animation
+  //    key to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png' +
+      (props.version ? '?version=' + props.version : '');
 }
 
 /**
@@ -478,4 +583,11 @@ function saveAnimation(animationKey, animationProps) {
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
     xhr.send(animationProps.blob);
   });
+}
+
+/**
+  * Selector for allAnimationsSingleFrame
+  */
+export function allAnimationsSingleFrameSelector(state) {
+  return state.pageConstants.allAnimationsSingleFrame;
 }

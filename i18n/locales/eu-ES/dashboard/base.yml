@@ -2,7 +2,9 @@ eu:
   errors:
     messages:
       not_saved: 'Zuzendu hurrengo akatsak mesedez:'
-      too_young: Eduki honek adin murriztapenak ditu eta ikasle gazteenentzat ez dago eskuragarri
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ eu:
   signup_form:
     student_count: '%{count} ikasleek izena eman dute.'
     teacher_count: '%{count} irakaslek izena eman dute.'
-    overview_student: 'Zure aurrerapena jarraitzeko ireki kontu bat. Zure email helbidea batez ere saioa hasteko eta pasahitza berreskuratzeko erabiliko dugu. Informazio gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun Araua</a>.'
-    overview_teacher: 'Irakats ezazu informatika zure ikasgelan kontu bat irekita. <p/>Zure ikasleak gehitu eta beraien aurrerapena jarraitu ahal izango duzu.'
-    no_signup_message: '<a target="_blank" href="http://learn.code.org">en ikastaro eta ariketa desberdinak egin ditzakezu</a>, baina izena eman beharko duzu zure aurrerapenak gordetzeko.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Ikusi hezitzailearen gida
-    teacher_pitch: Irakasleen sarbidea Code.org-rako
-    teacher_title: Irakasle bezala sartu
-    student_pitch: Ikasle bezala sartu Code.org-n
-    student_title: Ikasle bezala sartu
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: Ikastetxearen izena (aukerakoa)
     school_address: Ikastetxearen helbidea (aukerakoa)
     address_placeholder: Helbidea, hiria, herrialdea, posta kodea
@@ -103,15 +99,17 @@ eu:
     valid_password: Pasahitza zuzena!
     invalid_password: Pasahitzak gutxienez 6 karaktere izan behar ditu
     mismatch_password: Idatzitako bi pasahitzak ez dira berdinak
-    student_terms: "Ados nago Code.org-k <a href='http://code.org/tos'> ezarrita dituen zerbitzu baldintzekin</a>. 13 urte azpikoa banaiz, Code.org-k ematen dituen zerbitzuak erabiltzeko, gurasoen edota legezko tutorearen baimena dudala egiaztatzen dut. <br/>13 urte azpikoen e-mail helbideak ezin izango ditugu erabili haiekin harremanetan jartzeko."
-    teacher_terms: "Ados nago eta onartzen ditut Code.org <a href='http://code.org/tos'> erabiltzeko baldintzak </a>."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Informazio gehiago behar dugu izen-ematearekin jarraitzeko.
     user_type_label: Account Type
     user_type_teacher: Irakaslea
     user_type_student: Ikaslea
+    field_is_required: beharrezkoa da
+    accept_terms: You must agree to create an account
   signin_form:
     title: Kontua daukazu? Hasi saioa
-    login: Emaila edo erabiltzailea
+    login: E-posta
     password: Pasahitza
     remember: Kontua daukazu? Hasi saioa
     submit: Hasi saioa
@@ -125,11 +123,14 @@ eu:
     picture: Orain bila ezazu zure irudi sekretua
     words: Orain sar itzazu zure hitz sekretuak
     login: Hasi saioa
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Pasahitza ahaztu duzu?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: Email helbidea
-      submit: Bidal iezazkidazue pasahitza berrezartzeko argibideak
+      submit: Bidali
     change_form:
       title: Aldatu zure pasahitza
       new_password: Pasahitz berria
@@ -245,8 +246,12 @@ eu:
       prizes: Sariak
       logout: Amaitu saioa
       signin: Hasi saioa
-      signup: Eman izena
+      signup: Create an account
       already_registered: Dagoeneko izena emanda?
+      pair_programming: Bikoteka programatzen
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena
@@ -272,7 +277,7 @@ eu:
     user_not_found: Irakaslea ezin izan da aurkitu.
     student_teacher_disassociated: '%{teacher_name} zure irakasleetatik ezabatu duzu.'
     panel:
-      answer_viewer: Erantzun Ikusgailua
+      answer_viewer: Teacher Panel
       student: Ikaslea
       viewing_solution: Ikusi emaitza
       try_it_yourself: Probatu zuk zeuk
@@ -281,6 +286,8 @@ eu:
       example_with_number: 'Emaitza adibidea %{solution_number}'
       submitted_on: '%{date}-n bidalia'
       unsubmit: Bidalketa ezeztatu
+      worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Email helbidea ez da baieztatu:'
     email_confirm_needed_required: '%{email} zure emaila ez da baieztatu:'
@@ -339,12 +346,14 @@ eu:
     choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
     print_certificate: Inprimatu ziurtagiria
     announcement_title: Berriak
-    announcement_view_all: Guztiak ikusi
-    announcement_message: |-
-      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: Ikasi gehiago
+    announcement_try_now_button: Saiatu orain
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
+    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   move_students:
     new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
     section_code_not_entered: Please provide current_section_code.
@@ -407,8 +416,6 @@ eu:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: Ikasi gehiago
   slow_loading: Normalean baino denbora gehiago behar izaten ari da...
   try_reloading: Saiatu webgunea eguneratzen
@@ -522,6 +529,7 @@ eu:
     wrong_body: Thank you for submitting answers.
     correct_title: Mila esker
     correct_body: Thank you for submitting answers.
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Mila esker
     wrong_body: Thank you for submitting answers.
@@ -562,41 +570,24 @@ eu:
     hour: Ordu bat
     day: eguna
     week: astea
-  data:
-    script:
-      name:
-        20-hour:
-          title: Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
-          description: 20 orduko ikastaro honek informatikaren eta programazioaren oinarrizko kontzeptuak aurkezten ditu. Ikastaroa DBH2ko ikasleentzat prestatuta dago, baina edozein adinetan ikasteko dibertigarria da.
-        Hour of Code:
-          title: Kodearen ordua 2013
-          description: ""
-        edit-code:
-          title: Editatu kodea
-          description: ""
-        events:
-          title: Gertaerak
-          description: ""
-        builder:
-          title: Eraikitzailea
-          description: ""
-        flappy:
-          title: Flappy Code
-          description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
-        jigsaw:
-          title: Buruhaustea
-          description: ""
-        step:
-          title: Pauso
-          description: ""
-        sample_level_builder:
-          title: Mailak eraikitzeko adibidea
-          description: ""
   age_interstitial:
     age: Zure adina
     header: Kontuaren Informazioa Eguneratu
     message: 'Gure zerbitzua eguneratzen ari gara pribatasun babes handiagoa eskaintzeko. Horretarako, erabiltzaileek adina sar dezaten behar dugu.<br/>Betiko legez, code.org-ek ez die sekula informazio hori bitartekoei alokatuko, ez salduko eta ez konpartituko.'
     sign_out: 'Zure adina eman nahi ez baduzu <a href="%{url}">deskonektatu</a> zaitezke.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: Erabilera baldintzak
+    privacy: Pribatutasun politika
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Inprimatu
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: 'Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan jartzeko.'
   progress:
     not_started: hasi gabe
@@ -624,6 +615,7 @@ eu:
     share_title: Partekatu zure proiektuak
     share_copy_link: 'Esteka kopiatu:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Itxi
@@ -647,6 +639,7 @@ eu:
     edit_project: Editatu Proiektua
     abuse:
       tos: "Proiektu honek Code.org-en <a href='http://code.org/tos'>Zerbitzuaren Baldintzak</a> hautsi ditu eta ezin da konpartitu."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Hau errorea dela uste baduzu, mesedez <a href='https://code.org/contact'>jarri harremanetan gurekin.</a>"
       go_to_code_studio: Joan Code Sudio-ra
       report_abuse_form:
@@ -678,10 +671,18 @@ eu:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Ikono bat bilatu...
+      no_icons_found: Ez da ikonorik aurkitu
     playzone:
       artist_description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
       artist_title: New Drawing
@@ -696,8 +697,11 @@ eu:
     required: Bista orokorra
     content: Content
     practice: Teaching Practices
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -721,3 +725,6 @@ eu:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

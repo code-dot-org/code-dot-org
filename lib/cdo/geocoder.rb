@@ -38,17 +38,6 @@ module Geocoder
   end
 end
 
-module ReplaceFreegeoipHostModule
-  def self.included base
-    base.class_eval do
-      def query_url(query)
-        "#{protocol}://#{CDO.freegeoip_host}/json/#{query.sanitized_text}"
-      end
-    end
-  end
-end
-Geocoder::Lookup::Freegeoip.send(:include,ReplaceFreegeoipHostModule) if CDO.freegeoip_host
-
 def geocoder_config
   {
     cache: Hash.new,
@@ -56,11 +45,11 @@ def geocoder_config
     units: :km,
   }.tap do |config|
     config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
-
     if CDO.google_maps_client_id && CDO.google_maps_secret
       config[:lookup] = :google_premier
       config[:api_key] = [CDO.google_maps_secret, CDO.google_maps_client_id, 'pegasus']
     end
+    config[:freegeoip] = {host: CDO.freegeoip_host} if CDO.freegeoip_host
   end
 end
 

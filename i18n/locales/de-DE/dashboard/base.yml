@@ -2,7 +2,9 @@ de:
   errors:
     messages:
       not_saved: 'Bitte korrigiere die folgenden Fehler:'
-      too_young: Dieser Inhalt ist altersbeschränkt und für jüngere Schüler nicht verfügbar
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -29,7 +31,7 @@ de:
   unsubmit: Zurücknehmen
   previous_page: Vorherige Seite
   next_page: Nächste Seite
-  next_resource: Next resource
+  next_resource: Nächste Ressource
   done_with_module: Done with this Learning Module
   cancel: Abbrechen
   okay: Okay
@@ -79,15 +81,9 @@ de:
   signup_form:
     student_count: '%{count} Schüler haben sich bereits angemeldet.'
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
-    overview_student: 'Melde Dich an, um Deinen Fortschritt zu speichern. Deine E-Mail wird hauptsächlich zum Anmelden und Zurücksetzen des Passworts verwendet. Weitere Informationen findest du in unseren  <a href="http://code.org/privacy">Datenschutzrichtlinien</a>.'
-    overview_teacher: 'Registrieren Sie sich, um Ihren Schülern die ersten Schritte in der Informatik  zu vermitteln.<p/>Sie können Schüler hinzufügen und ihren Lernfortschritt verfolgen.'
-    no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Aufgaben</a> durchsuchen, aber um Deinen Fortschritt zu speichern, musst Du dich anmelden.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Siehe Lehrer-Handbuch
-    teacher_pitch: Lehrer-Registrierung für Code.org
-    teacher_title: Registrierung für Lehrer
-    student_pitch: Schüler-Registrierung für Code.org
-    student_title: Registrierung für Schüler
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
     address_placeholder: Adresse, Ort, Bundesland, PLZ
@@ -103,15 +99,17 @@ de:
     valid_password: Gültiges Passwort!
     invalid_password: Das Passwort muss mindestens 6 Zeichen lang sein
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
-    student_terms: "Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a> von Code.org einverstanden. Ich akzeptiere die <a href='http://code.org/tos'>AGB</a> von Code.org. Wenn ich unter 13 Jahre alt bin, bestätige ich, dass ich die Erlaubnis meiner Eltern/Erziehungsberechtigten habe, Code.org zu benutzen.<br/>Für unter 13 jährige Nutzer: E-Mail Adressen werden nicht so gespeichert, dass wir mit ihnen Kontakt herstellen könnten."
-    teacher_terms: "Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a> von Code.org einverstanden."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Wir benötigen noch ein paar weitere Informationen, um mit deiner Anmeldung fortzufahren.
-    user_type_label: Account Type
+    user_type_label: Kontentyp
     user_type_teacher: Lehrer
     user_type_student: Schüler
+    field_is_required: ist erforderlich
+    accept_terms: You must agree to create an account
   signin_form:
     title: Hast du bereits einen Account? Anmelden
-    login: E-Mail oder Benutzername
+    login: E-Mail
     password: Passwort
     remember: Merken
     submit: Anmelden
@@ -125,11 +123,14 @@ de:
     picture: Finde nun das versteckte Bild
     words: Gib jetzt deine geheimen Wörter ein
     login: Anmelden
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Passwort vergessen?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: E-Mail-Adresse
-      submit: Sende mir Anweisungen, um das Passwort zurückzusetzen
+      submit: Absenden
     change_form:
       title: Ändere dein Passwort
       new_password: Neues Passwort
@@ -245,8 +246,12 @@ de:
       prizes: Gewinne
       logout: Abmelden
       signin: Anmelden
-      signup: Registrieren
+      signup: Create an account
       already_registered: Bereits registriert?
+      pair_programming: Paarprogrammierung
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: Dein Fortschritt
@@ -272,15 +277,17 @@ de:
     user_not_found: Lehrerin oder Lehrer konnte nicht gefunden werden.
     student_teacher_disassociated: 'Du hast %{teacher_name} als Lehrerin/Lehrer entfernt.'
     panel:
-      answer_viewer: Antwortenansicht
+      answer_viewer: Teacher Panel
       student: Schüler
       viewing_solution: Lösung anzeigen
-      try_it_yourself: Probieren Sie es selbst
+      try_it_yourself: Versuche es selbst
       section: Lerngruppe
       example: Lösungsbeispiel
       example_with_number: 'Lösungsbeispiel %{solution_number}'
       submitted_on: 'Eingereicht am:'
       unsubmit: Zurücknehmen
+      worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine E-Mail-Adresse %{email} ist noch nicht bestätigt:'
@@ -291,7 +298,7 @@ de:
     delete: Account löschen
     delete_text: Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen.
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen Ihres Accounts löscht nicht die Accounts Ihrer Schüler.'
-    delete_confirm: Bist du sicher, dass du deinen Account löschen willst?
+    delete_confirm: Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -339,11 +346,14 @@ de:
     choose_next_course: Wähle einen der Code-Studio-Kurse unten aus
     print_certificate: Zertifikat drucken
     announcement_title: Ankündigungen
-    announcement_view_all: Alle anzeigen
-    announcement_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet werden, werden voraussichtlich verspätet beantwortet.'
-    announcement_button: Test the feature
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: Mehr erfahren
+    announcement_try_now_button: Probiere es jetzt aus
     announcement_petition: 'Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von "K-12 computer science education" zu erbitten.'
     announcement_petition_button: Fügen Sie Ihren Namen ein
+    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   move_students:
     new_section_dne: 'Entschuldigung, aber die Sektion %{new_section_code} existiert nicht. Bitte geben Sie einen anderen Sektionscode ein.'
     section_code_not_entered: Bitte current_section_code angeben.
@@ -406,8 +416,6 @@ de:
   compatibility:
     upgrade:
       unsupported_message: "Ihr Browser wird nicht unterstützt. Bitte aktualisieren Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten, aber es können Fehler auftreten."
-      ie_message: Code.org wird bald aufhören Internet Explorer 8, 9 und 10 zu unterstützen. Bitte installieren Sie einen modernen Browser.
-      ie_message_csedweek: CSEdWeek.org wird bald aufhören Internet Explorer 8, 9 und 10 zu unterstützen. Bitte installieren Sie einen modernen Browser.
       link: Mehr erfahren
   slow_loading: Das benötigt länger als normal...
   try_reloading: Versuche die Seite neu zu laden
@@ -519,6 +527,7 @@ de:
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
     correct_title: Vielen Dank
     correct_body: Vielen Dank für das Einsenden Ihrer Fragen.
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Vielen Dank
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
@@ -559,41 +568,24 @@ de:
     hour: 1 Stunde
     day: Tag
     week: Woche
-  data:
-    script:
-      name:
-        20-hour:
-          title: Einführung in die Informatik (15-25 Stunden)
-          description: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
-        Hour of Code:
-          title: Hour of Code 2013
-          description: ""
-        edit-code:
-          title: Code bearbeiten
-          description: ""
-        events:
-          title: Ereignisse
-          description: ""
-        builder:
-          title: Generator
-          description: ""
-        flappy:
-          title: Flappy Code
-          description: Willst du dein eigenes Spiel in weniger als 10 Minuten schreiben? Probiere unser Flappy Code-Tutorial!
-        jigsaw:
-          title: Puzzle
-          description: ""
-        step:
-          title: Schritt
-          description: ""
-        sample_level_builder:
-          title: Beispiellevel-Generator
-          description: ""
   age_interstitial:
     age: Dein Alter
     header: Aktualisieren der Kontoinformationen
     message: 'Wir arbeiten daran, in der Zukunft einen noch besseren Schutz der Privatsphäre zu bieten. Dafür müssen wir vorhandene Benutzer bitten, ihr Alter hier einzugeben.<br/>Selbstverständlich gibt Code.org diese Informationen nicht an Drittparteien weiter.'
     sign_out: 'Solltest du dein Alter nicht angeben wollen, kannst du dich <a href="%{url}">abmelden</a>.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: AGBs
+    privacy: Datenschutzerklärung
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Drucken
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: 'Tut uns leid, jüngere Benutzer dürfen sich für unsere Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a> durchsuchen, ohne dich anzumelden, oder deine Eltern oder Lehrer bitten, uns zu kontaktieren.'
   progress:
     not_started: nicht angefangen
@@ -621,6 +613,7 @@ de:
     share_title: Teile Dein Projekt
     share_copy_link: 'Kopiere den Link:'
     share_embed_description: Sie können den embed code in eine HTML Seite einfügen, um das Projekt auf einer anderen Webseite darzustellen.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Einbetten
     advanced_share: Erweiterte Optionen anzeigen
     close: Schließen
@@ -644,6 +637,7 @@ de:
     edit_project: Projekt bearbeiten
     abuse:
       tos: "Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'> Nutzungsbedingungen </a> von Code.org gemeldet und kann nicht mit anderen geteilt werden."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Wenn Sie glauben, dies ist ein Fehler, dann <a href='https://code.org/contact'> kontaktieren Sie uns bitte.</a>"
       go_to_code_studio: Gehe zu Code Studio
       report_abuse_form:
@@ -675,6 +669,14 @@ de:
     instructor_feedback: Rückmeldung von der Lehrperson
     peer_feedback: Rückmeldung von Mitschülern
     outdated: Dieses Feedback wurde für eine frühere Version hinzugefügt
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Suche für ein Symbol...
@@ -693,15 +695,18 @@ de:
     required: Übersicht
     content: Inhalt
     practice: Lehrer Übungen
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
-    title: Hour of Code downloads
+    title: '"Hour of Code" Downloads'
     capsule_title: Haben Sie eine Internetverbindung?
     capsule_desc: 'Verwenden Sie die online, Web-basierte <a href="%{url}">%{app_name}</a>.'
     instructions_headline: Keine Internetverbindung?
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
+    minecraft_name: 'Minecraft "Hour of Code"'
     starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
     starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
     download_message: '%{app_name} zur Offline-Nutzung (136MB) herunterladen'
@@ -718,3 +723,6 @@ de:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

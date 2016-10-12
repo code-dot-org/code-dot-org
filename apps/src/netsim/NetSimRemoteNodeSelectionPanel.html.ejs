@@ -1,7 +1,7 @@
 <%
 var utils = require('../utils');
 var _ = require('lodash')
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimGlobals = require('./NetSimGlobals');
 var NodeType = require('./NetSimConstants').NodeType;
 
@@ -176,7 +176,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
     } else if (buttonType === 'accept-button') {
       button = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
     } else if (buttonType === 'cancel-button') {
-      button = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': row.nodeID });
+      button = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'netsim-button-secondary'], { 'data-node-id': row.nodeID });
     } else if (buttonType === 'full-button') {
       button = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
     }
@@ -242,7 +242,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
     <%
       // Primary lobby list
       writeBeginTable("nomargin");
-      writeHeader(i18n.lobby());
+      writeHeader(i18n.lobbyForShard({shard: shardDisplayName}));
       writeEndTable();
     %>
     <div id="netsim-scrolling-lobby">
@@ -261,32 +261,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         writeNodeRow(row, row.status, buttonType, row.classAttr);
       });
 
-      var buttons = [];
-
-      if (controller.canAddRouter()) {
-        var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
-        buttons.push(buttonMarkup(
-            buttonText,
-            'netsim-lobby-add-router',
-            ['secondary']
-        ));
-      }
-
-      if (levelConfig.showLogBrowserButton) {
-        buttons.push(buttonMarkup(
-            i18n.logBrowserButton(),
-            'show-router-log-modal',
-            ['secondary'],
-            {
-              'data-toggle':'modal',
-              'data-target':'#router-log-modal'
-            }
-        ));
-      }
-
-      if (buttons.length > 0) {
-        writeEmptyRow(buttons.join(' '));
-      } else if (lobbyRows.length === 0) {
+      if (lobbyRows.length === 0) {
         writeEmptyRow(i18n.lobbyIsEmpty());
       }
 
@@ -294,6 +269,80 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
       writeEndTable();
     %>
     </div>
+
+    <%
+      var buttons = [];
+
+      if (controller.canAddRouter()) {
+        var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
+        buttons.push(buttonMarkup(
+            buttonText,
+            'netsim-lobby-add-router',
+            ['netsim-button-secondary']
+        ));
+      }
+
+      if (levelConfig.showLogBrowserButton) {
+        buttons.push(buttonMarkup(
+            i18n.logBrowserButton(),
+            'show-router-log-modal',
+            ['netsim-button-secondary']
+        ));
+      }
+
+      if (canSeeTeacherLog) {
+        buttons.push(buttonMarkup(
+            i18n.teacherLogButton(),
+            'show-teacher-log-modal',
+            ['netsim-button-secondary']
+        ));
+      }
+
+      if (buttons.length > 0) {
+        %>
+          <div class="netsim-lobby-buttons">
+            <%- buttons.join(' ') %>
+          </div>
+        <%
+      }
+    %>
+
+    <% if (controller.isUserAlone()) { %>
+    <div class="lobby-hint">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+      <p>
+        You're the only one here!  If you were expecting to see other people
+        here, you might have accidentally joined the wrong simulator.
+        Follow these steps to make sure you're in the right place:
+      </p>
+      <ul>
+        <li><strong>Are you signed in?</strong>
+        To use the simulator with your class, you must be
+        signed in to a Code Studio account that is in the same class section as
+        the other students.  Have your teacher confirm that your account is
+        in the class section.</li>
+        <li><strong>Are you on the right level?</strong>
+        You'll only be able to see other students in your class if you are on the
+        same simulator level.  Make sure everyone is on
+        <pre><%= window.location %></pre></li>
+        <% if (controller.isUserInMultipleSections()) { %>
+          <li><strong>Are you in the right section?</strong>
+          You were given a choice of class sections when you loaded this level.
+          Are you sure you picked the right one?
+          <a href="javascript:location.reload()">Reload this page</a> to select
+          a different section and see if anyone is there.</li>
+        <% } %>
+      </ul>
+      <p>
+        These resources may also be helpful:
+      </p>
+      <ul>
+        <li><a href="/s/netsim/stage/1/puzzle/2">Setup Instructions for Teachers</a></li>
+        <li><a href="/s/netsim/stage/1/puzzle/3">Frequently Asked Questions</a></li>
+        <li><a href="https://code.org/educate/it">IT Requirements</a></li>
+      </ul>
+    </div>
+    <% } %>
 
   </div>
   <div class="clear"></div>

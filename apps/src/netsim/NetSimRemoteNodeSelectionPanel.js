@@ -2,12 +2,11 @@
  * @overview Lobby table UI component.
  * @see NetSimLobby for usage.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 import $ from 'jquery';
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./NetSimConstants').NodeType;
@@ -33,6 +32,8 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @param {Object} options
  * @param {DashboardUser} options.user
  * @param {string} options.shardID
+ * @param {string} options.shardDisplayName
+ * @param {boolean} options.isUserInMultipleSections
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
@@ -44,6 +45,8 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @param {function} callbacks.cancelButtonCallback
  * @param {function} callbacks.joinButtonCallback
  * @param {function} callbacks.resetShardCallback
+ * @param {function} callbacks.showRouterLogCallback
+ * @param {function} callbacks.showTeacherLogCallback
  *
  * @constructor
  * @augments NetSimPanel
@@ -62,6 +65,18 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    * @private
    */
   this.shardID_ = options.shardID;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.shardDisplayName_ = options.shardDisplayName;
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isUserInMultipleSections_ = !!options.isUserInMultipleSections;
 
   /**
    * @type {NetSimNode[]}
@@ -96,31 +111,39 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
 
   /**
    * Handler for "Add Router" button
-   * @type {function}
-   * @private
+   * @private {function}
    */
   this.addRouterCallback_ = buttonDebounce(callbacks.addRouterCallback);
 
   /**
    * Handler for cancel button (backs out of non-mutual connection)
-   * @type {function}
-   * @private
+   * @private {function}
    */
   this.cancelButtonCallback_ = buttonDebounce(callbacks.cancelButtonCallback);
 
   /**
    * Handler for "join" button next to each connectable node.
-   * @type {function}
-   * @private
+   * @private {function}
    */
   this.joinButtonCallback_ = buttonDebounce(callbacks.joinButtonCallback);
 
   /**
    * Handler for "reset shard" button click.
-   * @type {function}
-   * @private
+   * @private {function}
    */
   this.resetShardCallback_ = buttonDebounce(callbacks.resetShardCallback);
+
+  /**
+   * Handler for "Router Log" button click.
+   * @private {function}
+   */
+  this.showRouterLogCallback_ = buttonDebounce(callbacks.showRouterLogCallback);
+
+  /**
+   * Handler for "Teacher View" button click
+   * @private {function}
+   */
+  this.showTeacherLogCallback_ = buttonDebounce(callbacks.showTeacherLogCallback);
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -145,12 +168,16 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Create boilerplate panel markup
   NetSimRemoteNodeSelectionPanel.superPrototype.render.call(this);
 
+  const levelConfig = NetSimGlobals.getLevelConfig();
+
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
+    shardDisplayName: this.shardDisplayName_,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
-    remoteNode: this.remoteNode_
+    remoteNode: this.remoteNode_,
+    canSeeTeacherLog: levelConfig.showAddRouterButton && this.canCurrentUserSeeTeacherLog_()
   }));
   this.getBody().html(newMarkup);
 
@@ -167,8 +194,14 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Button that takes you to the next level.
   NetSimUtils.makeContinueButton(this);
 
-  this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
-  this.addRouterButton_.click(unlessDisabled(this.addRouterCallback_));
+  var addRouterButton = this.getBody().find('#netsim-lobby-add-router');
+  addRouterButton.click(unlessDisabled(this.addRouterCallback_));
+
+  var showRouterLogButton = this.getBody().find('#show-router-log-modal');
+  showRouterLogButton.click(unlessDisabled(this.showRouterLogCallback_));
+
+  var showTeacherLogButton = this.getBody().find('#show-teacher-log-modal');
+  showTeacherLogButton.click(unlessDisabled(this.showTeacherLogCallback_));
 
   this.getBody().find('.join-button').click(
       unlessDisabled(this.onJoinClick_.bind(this)));
@@ -202,12 +235,12 @@ NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function () {
   var container = this.getBody().closest('#netsim-disconnected');
 
   if (lobbyTable.is(':visible')) {
-    lobbyTable.height("none");
+    lobbyTable.height('auto');
     var overflow = container.prop('scrollHeight') - container.prop('clientHeight');
 
     if (overflow > 0) {
       var newHeight = lobbyTable.height() - overflow;
-      var minHeight = lobbyTable.find('tr').first().outerHeight(true);
+      var minHeight = 1.1 * lobbyTable.find('tr').first().outerHeight(true);
       lobbyTable.height(Math.max(newHeight, minHeight));
     }
   }
@@ -326,26 +359,32 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 };
 
 /**
+ * @returns {boolean} TRUE if the current user is the only client node connected
+ *          to the shard right now.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.isUserAlone = function () {
+  return !this.nodesOnShard_.some(node =>
+      !this.isMyNode(node) && node.getNodeType() === NodeType.CLIENT);
+};
+
+/**
+ * @returns {boolean} TRUE if the current user has a choice of sections to join.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.isUserInMultipleSections = function () {
+  return this.isUserInMultipleSections_;
+};
+
+/**
  * @returns {boolean} TRUE if we expect the current user to have permission to
  *          perform a shard reset.  Only governs display of shard reset button,
  *          actual reset is authenticated on the server.
  */
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () {
-  if (!this.user_) {
-    return false;
-  } else if (this.user_.isAdmin) {
-    return true;
-  }
+  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+};
 
-  // Find a section ID in the current shard ID
-  var matches = /_(\d+)$/.exec(this.shardID_);
-  if (!matches) {
-    return false;
-  }
-
-  // matches[1] is the first capture group (\d+), the numeric section ID.
-  var sectionID = parseInt(matches[1], 10);
-  return this.user_.ownsSection(sectionID);
+NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserSeeTeacherLog_ = function () {
+  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
 };
 
 /**

@@ -8,7 +8,6 @@ require 'cdo/section_helpers'
 #   remain (e.g., if the user making the API call is soft-deleted). Fix these
 #   and make the API more consistent in its edge case handling.
 class DashboardStudent
-
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
     Dashboard.db[:users].
@@ -162,7 +161,6 @@ class DashboardStudent
 end
 
 class DashboardSection
-
   def initialize(row)
     @row = row
   end
@@ -213,13 +211,15 @@ class DashboardSection
           name = ScriptConstants.teacher_dashboard_name(course[:name])
           first_category = ScriptConstants.categories(course[:name])[0] || 'other'
           position = ScriptConstants.position_in_category(name, first_category)
+          category_priority = ScriptConstants.category_priority(first_category)
           name = I18n.t("#{name}_name", default: name, locale: course_locale)
           name += " *" if course[:hidden]
           {
             id: course[:id],
             name: name,
             category: I18n.t("#{first_category}_category_name", default: first_category, locale: course_locale),
-            position: position
+            position: position,
+            category_priority: category_priority
           }
         end
   end
@@ -465,7 +465,6 @@ class DashboardSection
       :sections__user_id___teacher_id
     ]
   end
-
 end
 
 class DashboardUserScript
