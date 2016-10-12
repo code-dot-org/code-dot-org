@@ -26,10 +26,20 @@ module.exports.PlayBehavior = utils.makeEnum(
 
 module.exports.AnimationCategories = [
 	'category_animals',
-	'category_generic_items'
+	'category_generic_items',
+	'category_vehicles',
+	'category_characters',
+	'category_platforms',
+	'category_gameplay',
+	'category_obstacles'
 ];
 
 module.exports.AnimationCategoryNames = {
 	'category_animals': 'Animals',
-	'category_generic_items': 'Generic items'
+	'category_generic_items': 'Generic items',
+	'category_vehicles': 'Vehicles',
+	'category_characters': 'Characters',
+	'category_platforms': 'Platforms',
+	'category_gameplay': 'Game play',
+	'category_obstacles': 'Obstacles'
 };
