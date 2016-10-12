@@ -54,7 +54,7 @@ const ScriptTeacherPanel = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasSections: React.PropTypes.bool.isRequired,
-    sectionsLoaded: React.PropTypes.bool.isRequired,
+    sectionsAreLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
     scriptHasHideableStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
@@ -65,7 +65,7 @@ const ScriptTeacherPanel = React.createClass({
     const {
       viewAs,
       hasSections,
-      sectionsLoaded,
+      sectionsAreLoaded,
       setViewType,
       scriptHasLockableStages,
       scriptHasHideableStages,
@@ -77,7 +77,7 @@ const ScriptTeacherPanel = React.createClass({
         <h3>{commonMsg.teacherPanel()}</h3>
         <div className="content">
           <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
-          {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
+          {!sectionsAreLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
           {hasSections && (scriptHasLockableStages || scriptHasHideableStages) &&
             <SectionSelector/>}
           {hasSections && scriptHasLockableStages && this.props.viewAs === ViewType.Teacher &&
@@ -111,10 +111,10 @@ const ScriptTeacherPanel = React.createClass({
 
 export default connect((state, ownProps) => {
   const { viewAs, bySection, lockableAuthorized } = state.stageLock;
-  const { sectionsLoaded, selectedSection, sectionIds } = state.sections;
-  const currentSection = bySection[selectedSection];
+  const { sectionsAreLoaded, selectedSectionId, sectionIds } = state.sections;
+  const currentSection = bySection[selectedSectionId];
 
-  const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSection]);
+  const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSectionId]);
   const unlockedStageIds = Object.keys(currentSection || {})
     .filter(stageId => !fullyLocked[stageId]);
 
@@ -130,7 +130,7 @@ export default connect((state, ownProps) => {
   return {
     viewAs,
     hasSections: sectionIds.length > 0,
-    sectionsLoaded,
+    sectionsAreLoaded,
     scriptHasLockableStages,
     scriptHasHideableStages: state.hiddenStage.get('initialized'),
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])

@@ -17,10 +17,10 @@ export const selectSection = sectionId => ({
 });
 
 const SectionData = Immutable.Record({
-  selectedSection: null,
-  sectionsLoaded: false,
+  selectedSectionId: null,
+  sectionsAreLoaded: false,
   sectionIds: [],
-  bySection: {}
+  nameById: {}
 });
 
 // Reducer
@@ -28,11 +28,9 @@ export default function reducer(state = new SectionData(), action) {
   if (action.type === SET_SECTIONS) {
     const firstSectionId = Object.keys(action.sections)[0];
     return state.merge({
-      selectedSection: firstSectionId,
-      sectionsLoaded: true,
-      bySection: _.mapValues(action.sections, section => ({
-        name: section.section_name
-      }))
+      selectedSectionId: firstSectionId,
+      sectionsAreLoaded: true,
+      nameById: _.mapValues(action.sections, section => section.section_name)
     // we want sectionIds to be a native array, which is why we dont put them
     // in the merge
     }).set('sectionIds', Object.keys(action.sections));
@@ -43,7 +41,7 @@ export default function reducer(state = new SectionData(), action) {
     if (!state.sectionIds.includes(sectionId)) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
-    return state.set('selectedSection', sectionId);
+    return state.set('selectedSectionId', sectionId);
   }
   return state;
 }

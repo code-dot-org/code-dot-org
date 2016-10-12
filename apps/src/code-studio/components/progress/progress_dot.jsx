@@ -257,8 +257,8 @@ export default connect((state, ownProps) => {
   // over level.status
   const stageId = ownProps.stageId;
   let overrideLevelStatus;
-  const { selectedSection } = state.sections;
-  const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSection]);
+  const { selectedSectionId } = state.sections;
+  const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSectionId]);
   if (stageId !== undefined && state.stageLock.viewAs === ViewType.Student &&
       !!fullyLocked[stageId]) {
     overrideLevelStatus = LevelStatus.locked;

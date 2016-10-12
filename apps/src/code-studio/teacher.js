@@ -111,8 +111,8 @@ function setStageLockedText() {
     const state = store.getState();
 
     const { currentStageId } = state.progress;
-    const { selectedSection } = state.sections;
-    const fullyLocked = fullyLockedStageMapping(state.stageLock.bySection[selectedSection]);
+    const { selectedSectionId } = state.sections;
+    const fullyLocked = fullyLockedStageMapping(state.stageLock.bySection[selectedSectionId]);
 
     if (fullyLocked[currentStageId]) {
       element.text(commonMsg.stageLocked());

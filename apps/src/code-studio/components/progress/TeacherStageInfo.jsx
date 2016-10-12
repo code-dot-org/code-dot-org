@@ -101,11 +101,11 @@ const TeacherStageInfo = Radium(React.createClass({
 
 export default connect(state => {
   return {
-    sectionId: state.sections.selectedSection,
+    sectionId: state.sections.selectedSectionId,
     hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     hiddenStageMap: state.hiddenStage.get('bySection'),
     scriptName: state.progress.scriptName,
-    hasNoSections: state.sections.sectionsLoaded &&
+    hasNoSections: state.sections.sectionsAreLoaded &&
       state.sections.sectionIds.length === 0
     };
 }, dispatch => ({
