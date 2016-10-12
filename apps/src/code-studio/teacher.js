@@ -8,7 +8,8 @@ import { getStore } from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
-import { fullyLockedStageMapping } from './stageLockRedux';
+import ViewAsToggle from './components/progress/ViewAsToggle';
+import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
 
@@ -107,8 +108,13 @@ export function renderTeacherPanel(store, scriptId) {
  * Handle those here.
  */
 function renderIntoLessonTeacherPanel() {
+  const teacherPanelViewAs = document.getElementById('teacher-panel-viewas');
   const stageLockedText = document.getElementById('stage-locked-text');
   const teacherPanelSections = document.getElementById('teacher-panel-sections');
+  if (teacherPanelViewAs) {
+    renderViewAsToggle(teacherPanelViewAs);
+  }
+
   if (!stageLockedText && !teacherPanelSections) {
     return;
   }
@@ -120,26 +126,11 @@ function renderIntoLessonTeacherPanel() {
   // these
   queryLockStatus(store, scriptId).then(() => {
     if (teacherPanelSections) {
-      ReactDOM.render(
-        <Provider store={getStore()}>
-          <SectionSelector onChange={changeSection}/>
-        </Provider>,
-        teacherPanelSections
-      );
+      renderTeacherPanelSections(teacherPanelSections);
     }
 
     if (stageLockedText) {
-      const state = store.getState();
-
-      const { currentStageId } = state.progress;
-      const { selectedSectionId } = state.sections;
-      const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
-
-      if (fullyLocked[currentStageId]) {
-        stageLockedText.text(commonMsg.stageLocked());
-      } else {
-        stageLockedText.text(commonMsg.stageNotFullyLocked());
-      }
+      renderStageLockedText(stageLockedText);
     }
   });
 }
@@ -153,4 +144,39 @@ function changeSection() {
   // via pushState. We actually want to do a reload though, so that we hit the
   // server with the new section_id
   window.location.reload();
+}
+
+function renderViewAsToggle(element) {
+  // Start viewing as teacher
+  getStore().dispatch(setViewType(ViewType.Teacher));
+
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <ViewAsToggle/>
+    </Provider>,
+    element
+  );
+}
+
+function renderTeacherPanelSections(element) {
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <SectionSelector onChange={changeSection}/>
+    </Provider>,
+    element
+  );
+}
+
+function renderStageLockedText(element) {
+  const state = getStore().getState();
+
+  const { currentStageId } = state.progress;
+  const { selectedSectionId } = state.sections;
+  const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
+
+  if (fullyLocked[currentStageId]) {
+    element.text(commonMsg.stageLocked());
+  } else {
+    element.text(commonMsg.stageNotFullyLocked());
+  }
 }
