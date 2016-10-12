@@ -17,7 +17,7 @@ max_age: 60
 
 -facebook = {:u=>"#{share_link}"}
 
--twitter = {:url=>"#{share_link}", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 7-13, 2015'}
+-twitter = {:url=>"#{share_link}", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 5-11, 2016'}
 -twitter[:hashtags] = 'HourOfCode'
 
 -pass unless form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
