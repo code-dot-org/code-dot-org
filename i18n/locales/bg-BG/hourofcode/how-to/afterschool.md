@@ -4,12 +4,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Как да преподавате Hour of Code след училище
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) Избери урок:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [ Изпробвайте ги!](%= resolve_url()
 
 **Всички уроци на Hour of Code:**
 
@@ -18,15 +20,15 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 3) Promote your Hour of Code
+## Промотирайте своя Hour of Code
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+Промотирайте Вашия час на кода [ с тези инструменти](%= resolve_url('/promote') %) и насърчете другите да направят техни собствени събития.
 
 ## 4) планирай нужните ти технологии - компютрите не са задължителни
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Най-добрият Час на кодирането се провежда с Интернет свързани компютри. Но вие **не** се нуждаете от компютър за всяко дете, и можете дори да проведете часът на кода без компютър за всички.
 
-**Plan Ahead!** Do the following before your event starts:
+**Предварителен план!** Направете следното, преди вашето събитие да започне:
 
   * Тествайте уроците на компютри или устройства. Уверете се, че те работят правилно в браузърите със звук и видео.
   * Предоставете слушалки за класа си, или помолете учениците да си донесат, ако изберете уроци за начинаещи -най-добре е със звук.
@@ -35,7 +37,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) Започнете Вашия час на кода с вдъхновяващо видео
 
 Преди началото на събитието, вдъхновете децата с обсъждане как компютърните науки влияят върху всяка част от живота ни.
 
@@ -56,7 +58,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Искате повече идеи?** Вижте [ най-добрите практики](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от опитни педагози.
 
-## 6) Кодене!
+## 6) Код!
 
 **Пряко участие в дейността**
 
@@ -127,3 +129,5 @@ Hour of Code е само първата стъпка в пътешествиет
 
   * Насърчете учениците да продължават да [ учат онлайн](%= resolve_url('https://code.org/learn/beyond') %).
   * [Да се присъединят](%= resolve_url('https://code.org/professional-development-workshops') %) към 1-деневен уоркшоп, за да получат обучение от опитни фасилитатори. (Само за учители от САЩ)
+
+<%= view :signup_button %>

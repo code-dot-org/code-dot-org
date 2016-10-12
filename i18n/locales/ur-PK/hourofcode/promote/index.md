@@ -4,9 +4,11 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-ٹویٹر = = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # How to get involved
 
@@ -31,3 +33,5 @@ Tell your friends about the **#HourOfCode**!
 ## 5. آور آف کوڈ کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
 
 [ یہ ای-میل بھیجیں ](%= resolve_url('/promote/resources#sample-emails') %) اپنے مقامی نمائندگان کو، سٹی کونسل، یا اسکول بورڈ اور انہیں دعوت دیں کہ وہ آور-آف-کوڈ کے لیے آپ کے اسکول کا دورہ کرنے آئیں۔ یہ آپ کے علاقہ میں کمپیوٹر سائنس کے لیے سپورٹ بنانے میں ایک گھنٹہ سے بڑھ کر مددگار ہوگا۔
+
+<%= view :signup_button %>

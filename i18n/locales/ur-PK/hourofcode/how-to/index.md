@@ -4,11 +4,13 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # ایک گھنٹے کے کوڈ کو تعلیم دینے کا طریقہ
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## ١) اس ویڈیو کو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
@@ -25,13 +27,13 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 3) Promote your Hour of Code
+## ٣) اپنے آور-آف-کوڈ کو پروموٹ کریں
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+اپنے آور-آف-کوڈ کو [ان ٹولز کے ساتھ](%= resolve_url('/promote') %) فروغ دیں اور دوسروں کو اپنی تقریبات ہوسٹ کرنے پر حوصلہ افزائی کریں.
 
 ## 4) اپنی ٹیکنالوجی کی ضروریات کا پلان کریں – کمپیوٹرز آپشنل ہیں
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 **Plan Ahead!** Do the following before your event starts:
 
@@ -138,3 +140,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

@@ -4,6 +4,7 @@ zh:
   language: 繁體字
   front_title: '加入史上最大的學習活動，%{campaign_date} 2015'
   coming_soon: 敬請期待
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 12月7日
   campaign_date_start_long: 12月7日
   campaign_date_short: 12月7日～12月13日
@@ -18,7 +19,6 @@ zh:
   front_start_learning: Start learning
   header_menu_resources: 資源
   header_menu_faq: 常見問題與解答
-  header_menu_prizes: 獎勵
   header_menu_how_to: 活動指南
   header_menu_promote: 推廣
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ zh:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: 給所有活動組織者的獎勵
-  prizes_every_organizer: 所有舉辦 Hour of Code 的組織者都將會收到 Dropbox 或 Skype 點數作為謝禮
-  prizes_technology: 在美國各州（包括華盛頓特區）各會有一所公立學校贏得價值 10,000 美元的科技資金
-  prizes_tech_chats: '# classrooms 個班級將贏得與特別嘉賓視訊通話的獎勵。'
-  prizes_robots: 將有100 個班級可贏得一組可用程式控制的機器人
-  prizes_brilliant: 在每個省和地區將各會有一所學校收到 $2000 美元作為卓越專案的獎勵
-  prizes_actua: 包含加拿大在內，會有 15 所學校，由 Actua 的成員前往主持 2 場動手做 STEM 工作坊。
-  prizes_details: 詳細資訊
   nav_back_to_resources: 回到資源
   how_to_nav_educators: 給教育工作者
   how_to_nav_after_school: 針對學生的課後課程
@@ -163,23 +155,6 @@ zh:
   how_to_nav_companies: 針對企業
   how_to_nav_afterschool_educators: 針對課後的教育者
   how_to_nav_volunteers: 針對志工
-  prizes_nav_title: 獎勵
-  prizes_nav_home: 所有的獎勵
-  prizes_nav_hardware: 硬體獎項的報名
-  prizes_nav_terms: 條款及細則
-  prizes_nav_faq: 常見問題與解答
-  prizes_nav_dc: 去華盛頓特區的神秘之旅
-  prizes_nav_technology: 給予你的學校價值 $10,000 美元的科技資金
-  prizes_nav_video_chat: 與科技鉅子進行視頻聊天
-  prizes_nav_skype_dropbox: 提供Skype credit和Dropbox space給每一個組織者
-  prizes_nav_brilliant: 提供 2000 美元的獎勵給卓越的專案
-  prizes_nav_actua: 實際的工作坊
-  prizes_nav_kids_code: 小孩子們的代碼新青年
-  prizes_header: 給教育工作者的獎勵
-  prizes_10k: 在美國各州（包括華盛頓特區）各會有一所公立學校贏得價值 10,000 美元的科技資金
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>每個</i>活動組織者將會收到<b>十美元到亞馬遜商城，蘋果線上商店或微軟網路商店消費的獎金</b>作為感謝你的禮物!'
-  prizes_more: More exciting prizes
   whats_next_header: 下一步是什麼?
   whats_next_description: "我們會針對你的活動寄給你一些素材和有用的提示。2015 新的課程不久將會出來，每一種瀏覽器或智慧型手機都可以用 -- 甚至也有不用電腦的課程！<a href='http://code.org/learn'>試試目前的課程</a>"
   whats_next_how_to: "<a href='/how-to'>如何舉辦一小時的程式設計課程活動</a>"
@@ -196,6 +171,7 @@ zh:
   share_on_facebook: 在Facebook分享
   share_on_twitter: 在Twitter分享
   front_join_us_heading: 為每個學生設計的一小時程式設計課程
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: 資訊科學對每一個學生而言都應該是個基礎學問。請協助我們將它介紹給一億個學生。
   front_join_us_description_short: 資訊科學對每一個學生而言都應該是個基礎學問。
   front_join_us_button: 加入我們
@@ -243,12 +219,13 @@ zh:
   signup_send_posters_address_label: 學校或組織的地址
   signup_whole_school_flag_label: 這個活動是給整間學校參與的
   signup_your_event: 註冊您的活動
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: 幫助我找到一位在地的軟體工程師來引導我的學生
   signup_multiple_event_warning: 如果你同時舉辦多場活動，請每場活動提供一個不重複的姓名或電子郵件信箱。我們一個活動只會算入一個姓名和電子郵件信箱。
   signup_name_placeholder: 您的姓名
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 例如：交通大學
-  signup_event_location_placeholder: "郵遞區號與國家，或是完整地址。\\r\n（我們要使用這資訊在我們的地圖上放上你的大頭針）"
+  signup_event_location_placeholder: "郵遞區號與國家，或是完整地址。\r\n（我們要使用這資訊在我們的地圖上放上你的大頭針）"
   signup_special_event_details_placeholder: 描述為什麼這是一個特殊的活動
   signup_send_posters_address_placeholder: 這個地址不會被分享在我們的地圖上
   signup_event_type_in_school: 在學校內
@@ -273,28 +250,6 @@ zh:
   meta_tag_twitter_title: 一小時編程就要開始了
   meta_tag_twitter_description: 一小時程式設計是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
   twitter_default_text: '我將要參加今年的 #HourOfCode，你呢？@codeorg'
-  hardware_prizes_form_name_label: 您的姓名
-  hardware_prizes_form_name_placeholder: 您的姓名
-  hardware_prizes_form_email_label: 您的電子信箱
-  hardware_prizes_form_email_placeholder: 您的電子信箱
-  hardware_prizes_form_school_name_label: 學校名稱
-  hardware_prizes_form_school_name_placeholder: 學校名稱
-  hardware_prizes_form_school_address_label: 學校地址
-  hardware_prizes_form_school_address_placeholder: 學校地址
-  hardware_prizes_form_school_type_label: 學校類型
-  hardware_prizes_form_school_type_option_elementary: 小學
-  hardware_prizes_form_school_type_option_middle_school: 中學
-  hardware_prizes_form_school_type_option_high_school: 高中
-  hardware_prizes_form_qualifying_school_label: 這是一所 K-12 的美國公立學校
-  hardware_prizes_form_title_I_school_label: 這個學校符合美國 Title I Funding 的資格
-  hardware_prizes_form_title_I_school_help_text: Title I 學校是指是學校有大量或高百分比的成員來自低收入家庭。他們接受國家的資金幫助並確保所有的孩童能夠達到應有的課業知識水準。
-  hardware_prizes_form_number_students_label: 參加的學生人數
-  hardware_prizes_form_number_students_placeholder: 學生人數
-  hardware_prizes_form_technology_plan_label: 在學校，你會如何使用新的技術來推廣資訊科學？
-  hardware_prizes_form_technology_plan_placeholder: 使用新技術的計畫
-  hardware_prizes_form_plan_file_label: 上傳您的一小時的程式設計課程的後勤計劃
-  hardware_prizes_form_plan_file_description: '提交一份簡單的計畫，告訴我們您如何讓每個學生在您的學校參與一小時的程式設計課程活動。這裡有一些計畫樣本：#PDF# | #Word#'
-  hardware_prizes_form_submit_label: 提交
   hoc_faq_title: 常見問題與回答
   hoc_faq_what_is_hoc_q: 什麼是「一小時的程式設計課程」？
   hoc_faq_what_is_hoc_a: "Hour of Code 是一個一小時介紹電腦科學的活動，旨在揭秘程式設計並說明它是任何人都可以學習的基礎知識。<a href='http://code.org/learn'>查看教學課程</a>。"
@@ -402,11 +357,6 @@ zh:
   title_proclamation: 瀏覽電腦科學教育週的革新和一個小時學習程式設計
   title_stats: 簡介和統計資料
   title_partners: 合作夥伴
-  title_prizes_faq: 獎項的相關常見問題
-  title_prizes_terms: 獎項的條件
-  title_prizes_thanks: 謝謝
-  title_prizes: 獎勵
-  title_hardware_prize_form: 報名來贏得硬體獎項
   title_resources: 資源
   title_signup_thanks: 謝謝您報名舉辦Hour of Code!
   title_tutorial_guidelines: 教學指南

@@ -4,11 +4,12 @@ ms:
   language: Bahasa Melayu
   front_title: 'Sertai acara pembelajaran terbesar dalam sejarah, %{campaign_date}, 2016'
   coming_soon: akan datang
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 Dis.
   campaign_date_start_long: 7 Disember
   campaign_date_short: 7-13 Dis.
   campaign_date_full: 7-13 Disember
-  campaign_date_year: "2016"
+  campaign_date_year: file:///storage/emulated/0/Download/BRAZIL. txt1/BRAZIL. txt1. txt
   campaign_date_full_year: December 5-11, 2016
   front_header_banner: Sertai acara pembelajaran yang terbesar dalam sejarah, 07-13 Disember 2016
   front_intro_default: 'Hour of Code adalah pergerakan global menjangkau puluhan juta pelajar dari lebih 180+ negara. Sesiapapun, di mana-mana boleh menganjur acara Hour of Code. Tutorial selama satu jam disediakan dalam 40 bahasa. Tiada pengalaman diperlukan.<strong> Usia dari 4 ke 104.</strong>'
@@ -18,7 +19,6 @@ ms:
   front_start_learning: Start learning
   header_menu_resources: Sumber
   header_menu_faq: Soalan lazim
-  header_menu_prizes: Hadiah
   header_menu_how_to: Cara untuk
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ ms:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Hadiah untuk setiap penganjur
-  prizes_every_organizer: Setiap penganjur Hour of Code akan menerima kredit Dropbox atau Skype sebagai tanda terima kasih
-  prizes_technology: 'Sebuah sekolah awam di setiap negeri di Amerika Syarikat (& Washington DC) akan memenangi teknologi bernilai $10,000'
-  prizes_tech_chats: '# kelas akan dipilih untuk memenangi bualan video dengan tetamu istimewa'
-  prizes_robots: 100 bilik darjah akan memenangi satu set robot boleh atur cara
-  prizes_brilliant: Satu sekolah di setiap daerah dan wilayah akan menerima $2000 bagi Projek Terbaik
-  prizes_actua: 15 sekolah dari seluruh Canada akan memenerima 2 bengkel STEM secara pratikal oleh salah seorang ahli Actua
-  prizes_details: Butiran
   nav_back_to_resources: Kembali ke Sumber
   how_to_nav_educators: Untuk warga pendidik
   how_to_nav_after_school: Untuk program lepas sekolah
@@ -163,23 +155,6 @@ ms:
   how_to_nav_companies: Untuk syarikat swata
   how_to_nav_afterschool_educators: Untuk pendidik program lepas sekolah
   how_to_nav_volunteers: Untuk sukarelawan
-  prizes_nav_title: Hadiah
-  prizes_nav_home: Semua hadiah
-  prizes_nav_hardware: Pendaftaran hadiah perkakasan
-  prizes_nav_terms: Peraturan dan Syarat
-  prizes_nav_faq: Soalan lazim
-  prizes_nav_dc: Lawatan misteri ke Washington DC.
-  prizes_nav_technology: Teknologi bernilai $10,000 untuk sekolah anda
-  prizes_nav_video_chat: Sembang video dengan Tech Titan
-  prizes_nav_skype_dropbox: Kredit Skype atau ruang Dropbox untuk setiap penganjur
-  prizes_nav_brilliant: Dana $2,000 bagi projek Brilliant Labs
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Hadiah bagi setiap pendidik
-  prizes_10k: Satu sekolah awam di setiap negeri Amerika Syarikat (dan Washington D.C.) akan memenangi teknologi bernilai $10,000
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Setiap</i> penganjur akan menerima <b>$10 dari Amazon.com, iTunes atau Windows Store</b> sebagai hadiah penghargaan! Sementara stok ada.'
-  prizes_more: More exciting prizes
   whats_next_header: Apakah seterusnya?
   whats_next_description: "Kami akan menghantar bahan dan tip berguna kepada anda untuk acara tersebut. Tutorial baru 2015 akan datang tidak lama untuk mana-mana pelayar, telefon pintar - malah tanpa komputer pun!<a href='http://code.org/learn'>Sila cuba tutorial sedia ada</a>"
   whats_next_how_to: "<a href='/how-to'>Bagaimana mengendalikan acara Hour of Code</a>"
@@ -188,7 +163,7 @@ ms:
   whats_next_how_to_promote_link: "<a href='/promote'>Bagaimana mempromosikan Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Cubalah tutorial</a>"
   whats_next_try_button: Cuba tutorial
-  n_have_learned_an_hoc: '<h1>Cuba </h1><h2>Hour of Code</h2><h3># berkhidmet</h3>'
+  n_have_learned_an_hoc: file:///storage/emulated/0/Download/Brazil. txt1/Brazil. txt1. txt
   anybody_can_learn: Sesiapa pun boleh belajar.
   get_started: Mula
   beyond_an_hour: Selepas Hour of Code
@@ -196,6 +171,7 @@ ms:
   share_on_facebook: Kongsikan di Facebook
   share_on_twitter: Kongsikan di Twitter
   front_join_us_heading: Satu jam kod bagi setiap pelajar.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Sains komputer adalah asas bagi setiap pelajar. Bantu kami memperkenalkannya kepada 100 juta.
   front_join_us_description_short: Sains komputer adalah asas bagi setiap pelajar.
   front_join_us_button: Sertai kami
@@ -243,12 +219,13 @@ ms:
   signup_send_posters_address_label: Alamat sekolah atau organisasi
   signup_whole_school_flag_label: Acara ini adalah untuk sekolah keseluruhannya
   signup_your_event: Daftar acara anda
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Nama anda
   signup_email_placeholder: Anda@contoh.com
   signup_organization_name_placeholder: Sebagai contoh, Lincoln High School
-  signup_event_location_placeholder: "Poskod dan negara ATAU alamat penuh .\\r (Kami akan menggunakan ini untuk meletakkan pin di peta kami)"
+  signup_event_location_placeholder: "Poskod dan negara ATAU alamat penuh .\r (Kami akan menggunakan ini untuk meletakkan pin di peta kami)"
   signup_special_event_details_placeholder: Jelaskan apa yang menjadikan ia acara khas
   signup_send_posters_address_placeholder: Alamat ini tidak akan dikongsi pada peta kami
   signup_event_type_in_school: Di sekolah
@@ -273,28 +250,6 @@ ms:
   meta_tag_twitter_title: Hour of Code akan datang
   meta_tag_twitter_description: Hour of Code adalah adalah gerakan global mencapai puluhan juta pelajar di 180 + negara dan lebih daripada 30 bahasa. Usia 4 hingga 104.
   twitter_default_text: 'Saya menyertai #HourOfCode tahun ini, bagaimana dengan anda? @codeorg'
-  hardware_prizes_form_name_label: Nama anda
-  hardware_prizes_form_name_placeholder: Nama anda
-  hardware_prizes_form_email_label: E-mel Anda
-  hardware_prizes_form_email_placeholder: E-mel Anda
-  hardware_prizes_form_school_name_label: Nama sekolah
-  hardware_prizes_form_school_name_placeholder: Nama sekolah
-  hardware_prizes_form_school_address_label: Alamat sekolah
-  hardware_prizes_form_school_address_placeholder: Alamat sekolah
-  hardware_prizes_form_school_type_label: Jenis sekolah
-  hardware_prizes_form_school_type_option_elementary: Sekolah rendah
-  hardware_prizes_form_school_type_option_middle_school: Sekolah Menengah Rendah
-  hardware_prizes_form_school_type_option_high_school: Sekolah menengah tinggi
-  hardware_prizes_form_qualifying_school_label: Ini adalah sekolah awam K-12 AS
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: Bilangan pelajar yang mengambil bahagian
-  hardware_prizes_form_number_students_placeholder: Bilangan pelajar
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: Muat naik pelan logistik Hour of Code anda
-  hardware_prizes_form_plan_file_description: 'Hantar jadual ringkas bagaimana anda merancang untuk menganjurkan setiap pelajar untuk melakukan Hour of Code di sekolah anda.  Sila Lihat pelan contoh: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Hantar
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Apakah Hour of Code?
   hoc_faq_what_is_hoc_a: |-
@@ -401,14 +356,9 @@ ms:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Rakan kongsi
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Thank you
-  title_prizes: Hadiah
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Sumber
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events
   events_nav_all: Semua acara

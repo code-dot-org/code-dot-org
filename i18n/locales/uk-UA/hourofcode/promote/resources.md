@@ -4,12 +4,14 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Рекламуйте Годину коду
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Проводите Годину коду? [Перегляньте інструкції](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -29,7 +31,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Використайте логотип Години коду для поширення інформації
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
@@ -47,7 +49,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Надрукуйте ці наклейки і роздайте учням
 
 (Stickers are 1" diameter, 63 per sheet)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
@@ -82,25 +84,25 @@ With the Hour of Code, computer science has been on homepages of Google, MSN, Ya
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Я хочу запросити Вас відвідати наші вступні збори і побачити, як діти починають роботу [DATE].
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Приєднуйтеся.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**Контакт:** [YOUR NAME], [TITLE], тел.: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**Коли:** [Дата і час Вашого заходу]
+**When:** [DATE and TIME of your event]
 
-**Де:** [Адреса і вказівки з добирання]
+**Where:** [ADDRESS and DIRECTIONS]
 
-Якщо є питання, будь ласка, звертайтесь.
+I look forward to being in touch.
 
 <a id="parents"></a>
 
 ## Повідомте батьків про заходи у вашій школі:
 
-Шановні батьки,
+Dear Parents,
 
-Ми живемо у світі, наповненому технологіями. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
 But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
@@ -133,3 +135,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

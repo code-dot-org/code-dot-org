@@ -6,15 +6,17 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Si-të Udhëzues për Vullnetarët
 
 ## 1. Regjistrohu për vullnetarë
 
-Vizito një klasë vendore për të inspiruar studentët të vazhdojnë mësimin në Shkenca Kompjuterike. [ Vullnetarë për një orë](https://code.org/volunteer/engineer).
+Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
 ## 2. Join a volunteer info session
 
-We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Ne do të diskutojmë si të koordinohemi më mësimdhënës përpara ngjarjes së Orës së tyre të Kodimit dhe gjithashtu çfarë duhet të bëni në ditën e ngjarjes për tu pregaditur. Ju lutem ejani me pytjet e juaja! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
@@ -46,19 +48,19 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 ## 3. Shpenzoni 30 minuta duke provuar tutorilet më përpara
 
-Provo tutorialet e Orës së Kodimit në [code.org/learn](https://code.org/learn). Zgjedh disa nga tutorialet më të famshme dhe shpenzo ca kohë për tu familjarizuar me secilin prej tyre. Kjo do të të marrë kohë rreth 5-10 minuta për tutorial për të kuptuar se si funksionon.
+Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Rekruto kolegët tuaj për vullnetarë
 
-Tregoji shokëve dhe kolegëve tuaj rreth Orës së Kodimit. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Email mostër:**
+**Sample email:**
 
-**Rreshti për temë**: Bashkohu me mua në vullnetarizimin për Orën e Kodimit
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Nese e kujtoni rreshtin tuaj të parë të kodimit, e dini që i ka dhënë formë pjesës tjetër të jetës.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-Ajo është rreth çka bën fjalë Ora e Kodimit. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
 **I signed up to volunteer in a local classroom, and you can, too!**   
 Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
@@ -80,7 +82,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 6. Promovo Orën e Kodimit në komunitetin tuaj
 
-Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Prepare before you visit a classroom.
 
@@ -97,3 +99,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Fillo [ videon e Orës së Kodimit](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Lejo studentët të zhyten në tutoriale. Ec përreth klasës duke u përgjigjur në çfarëdo pyetje dhe duke udhëzuar ata përmes kuizeve të vështira. Provo të mos ju japësh studentëve zgjidhjen menjëherë. Në vend të kësaj provo duke u bërë atyre pyetje kështu që ata mund ti përgjigjen vetes se çka ka shkuar keq.
+
+<%= view :signup_button %>

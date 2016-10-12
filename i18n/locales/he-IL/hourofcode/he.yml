@@ -2,15 +2,16 @@ he:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: עברית
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: בקרוב
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: Dec. 5
   campaign_date_start_long: December 5
   campaign_date_short: Dec. 5-11
   campaign_date_full: December 5-11
   campaign_date_year: "2016"
   campaign_date_full_year: December 5-11, 2016
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: צפה בסרטון החדש
   front_watch_regular_video: Watch the video
@@ -18,7 +19,6 @@ he:
   front_start_learning: Start learning
   header_menu_resources: מקורות
   header_menu_faq: שאלות ותשובות
-  header_menu_prizes: פרסים
   header_menu_how_to: How-To
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ he:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: פרסים לכל מארגן
-  prizes_every_organizer: כל מארגן של שעה של קוד יקבל אשראי מ-Dropbox או סקייפ, כאות תודה
-  prizes_technology: 'בית ספר ציבורי אחד בתוך כל ארה"ב יזכה במוצרי טכנולוגיה בשווי $10,000'
-  prizes_tech_chats: '# כיתות יזכו לשיחות וידאו עם אורחים מיוחדים'
-  prizes_robots: 100 כיתות יזכו בסט של רובוטים ניתנים לתכנות
-  prizes_brilliant: בית ספר אחד בכל מחוז יקבל 2000 דולר עבור פרוייקט מבריק
-  prizes_actua: 15 בתי-ספר ברחבי קנדה יקבלו 2 סדנאות STEM מעשית על ידי אחד החברים של Actua
-  prizes_details: פרטים
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -163,25 +155,8 @@ he:
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   how_to_nav_volunteers: For volunteers
-  prizes_nav_title: פרסים
-  prizes_nav_home: All prizes
-  prizes_nav_hardware: Hardware prize signup
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: שאלות ותשובות
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
   whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
@@ -196,6 +171,7 @@ he:
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   front_join_us_heading: שעה של קוד לכל תלמיד.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: מדעי המחשב הוא בסיס לכל תלמיד. עזרו לנו להציג את זה למאה מיליון.
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: הצטרפו אלינו
@@ -243,12 +219,13 @@ he:
   signup_send_posters_address_label: כתובת בית הספר או הארגון
   signup_whole_school_flag_label: אירוע זה הוא עבור כל בית הספר
   signup_your_event: הירשם האירוע שלכם
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: שמך
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: לדוגמה, בית הספר תיכון לינקולן
-  signup_event_location_placeholder: "מיקוד והמדינה או כתובת מלא ה. \\r (נשתמש בזה כדי למקום סיכה על המפה שלנו)"
+  signup_event_location_placeholder: "מיקוד והמדינה או כתובת מלא ה. \r (נשתמש בזה כדי למקום סיכה על המפה שלנו)"
   signup_special_event_details_placeholder: לתאר מה הופך את זה אירוע מיוחד
   signup_send_posters_address_placeholder: כתובת זו לא ישותף על המפה שלנו
   signup_event_type_in_school: בבית הספר
@@ -273,28 +250,6 @@ he:
   meta_tag_twitter_title: Hour of Code מגיע
   meta_tag_twitter_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
   twitter_default_text: 'אני משתתפת בתערוכה של השנה #HourOfCode, האם אתה? @codeorg'
-  hardware_prizes_form_name_label: שמך
-  hardware_prizes_form_name_placeholder: שמך
-  hardware_prizes_form_email_label: 'הדוא"ל שלך'
-  hardware_prizes_form_email_placeholder: 'הדוא"ל שלך'
-  hardware_prizes_form_school_name_label: שם בית הספר
-  hardware_prizes_form_school_name_placeholder: שם בית הספר
-  hardware_prizes_form_school_address_label: כתובת בית הספר
-  hardware_prizes_form_school_address_placeholder: כתובת בית הספר
-  hardware_prizes_form_school_type_label: סוג בית הספר
-  hardware_prizes_form_school_type_option_elementary: בית ספר יסודי
-  hardware_prizes_form_school_type_option_middle_school: חטיבת הביניים
-  hardware_prizes_form_school_type_option_high_school: בית ספר תיכון
-  hardware_prizes_form_qualifying_school_label: '. זה ספר ציבורי K-12 של ארה"ב'
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: מספר התלמידים המשתתפים
-  hardware_prizes_form_number_students_placeholder: מספר התלמידים
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: 'להעלות את התוכנית לוגיסטיקה ל Hour of Code '
-  hardware_prizes_form_plan_file_description: 'להגיש לוח זמנים של איך אתה מתכוון לארגן עבודה של לכל תלמיד בHour of Code בבית הספר שלך. ראה תוכנית דגימה: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: שלח
   hoc_faq_title: שאלות נפוצות
   hoc_faq_what_is_hoc_q: מהו Hour of Code?
   hoc_faq_what_is_hoc_a: |-
@@ -403,14 +358,9 @@ he:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: שותפים
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Thank you
-  title_prizes: פרסים
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: מקורות
   title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events
   events_nav_all: כל האירועים
