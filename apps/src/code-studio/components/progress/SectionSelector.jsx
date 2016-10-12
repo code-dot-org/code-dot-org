@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectSection } from '../../sectionsRedux';
+import queryString from 'query-string';
+import { selectSection, NO_SECTION } from '../../sectionsRedux';
+import i18n from '@cdo/locale';
+
 
 const styles = {
   select: {
@@ -11,6 +14,10 @@ const styles = {
 
 const SectionSelector = React.createClass({
   propTypes: {
+    requireSelection: React.PropTypes.bool,
+    onChange: React.PropTypes.func,
+
+    // redux provided
     sections: React.PropTypes.arrayOf(
       React.PropTypes.shape({
         name: React.PropTypes.string.isRequired,
@@ -22,11 +29,27 @@ const SectionSelector = React.createClass({
   },
 
   handleSelectChange(event) {
-    this.props.selectSection(event.target.value);
+    const newSectionId = event.target.value;
+    this.props.selectSection(newSectionId);
+    const newQueryString = queryString.stringify({
+      ...queryString.parse(location.search),
+      section_id: newSectionId === NO_SECTION ? undefined : newSectionId
+    });
+
+    // Push section_id update to query string (but don't do a navigation)
+    let newLocation = window.location.pathname;
+    if (newQueryString) {
+      newLocation += '?' + newQueryString;
+    }
+    window.history.pushState(null, document.title, newLocation);
+
+    if (this.props.onChange) {
+      this.props.onChange(newSectionId);
+    }
   },
 
   render() {
-    const { sections, selectedSectionId } = this.props;
+    const { requireSelection, sections, selectedSectionId } = this.props;
     return (
       <select
         name="sections"
@@ -34,6 +57,9 @@ const SectionSelector = React.createClass({
         value={selectedSectionId}
         onChange={this.handleSelectChange}
       >
+        {!requireSelection &&
+          <option key={''} value={''}>{i18n.selectSection()}</option>
+        }
         {sections.map(({id, name}) => (
           <option key={id} value={id}>
             {name}
