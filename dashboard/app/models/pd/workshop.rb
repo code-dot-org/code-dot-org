@@ -183,6 +183,10 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  def course_name
+    course == Pd::Workshop::COURSE_ADMIN ? 'Administrator' : course
+  end
+
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     course_subject = subject ? "#{course} #{subject}" : course
