@@ -1,4 +1,4 @@
-/* global trackEvent, Blockly, ace:true, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, droplet, dashboard, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -24,7 +24,6 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
@@ -39,7 +38,6 @@ import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels
 var redux = require('./redux');
 import { Provider } from 'react-redux';
 import {
-  substituteInstructionImages,
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
@@ -2019,11 +2017,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     return;
   }
 
-  var displayMessage, examplePrograms, messageElement, onChange, startingText;
-
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
+  /* eslint-disable */
   ace = window.ace;
+  /* eslint-enable */
 
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
   // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
@@ -2672,7 +2670,6 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
   var increment = options.increment;
 
   var CANVAS_HEIGHT = 400;
-  var CANVAS_WIDTH = 400;
 
   var svg = document.getElementById(svgName);
 

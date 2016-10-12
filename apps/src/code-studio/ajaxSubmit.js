@@ -14,7 +14,7 @@ module.exports = function ajaxSubmit(form_selector) {
       }
     });
     $(form_selector).on("ajax:error", function (evt, xhr, status, error) {
-      var errors, errorText;
+      var errors;
       try {
         errors = $.parseJSON(xhr.responseText);
       } catch (err) {

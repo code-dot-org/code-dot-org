@@ -1,4 +1,3 @@
-var msg = require('./locale');
 var api = require('./apiJavascript.js');
 var paramLists = require('./paramLists.js');
 

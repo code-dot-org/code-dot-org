@@ -291,6 +291,11 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I click selector "([^"]*)" once I see it$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+  @browser.execute_script("$(\"#{selector}\")[0].click();")
+end
+
 When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
   # normal a href links can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\", $(\"#{parent_selector}\").contents())[0].click();")
@@ -556,6 +561,10 @@ Then /^I see jquery selector (.*)$/ do |selector|
   expect(exists).to eq(true)
 end
 
+Then /^I wait until I see selector "(.*)"$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+end
+
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
   expect(exists).to eq(true)
@@ -755,6 +764,12 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I click selector "#signup-button"
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
+end
+
+And(/^I give user "([^"]*)" hidden script access$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
 end
 
 And(/^I save the section url$/) do

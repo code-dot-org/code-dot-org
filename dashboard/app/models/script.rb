@@ -49,6 +49,8 @@ class Script < ActiveRecord::Base
   include SerializedProperties
 
   after_save :generate_plc_objects
+  after_save :update_script_cache
+  after_destroy :delete_from_script_cache
 
   def generate_plc_objects
     if professional_learning_course?
@@ -155,9 +157,9 @@ class Script < ActiveRecord::Base
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
 
-  # Caching is disabled when editing scripts and levels or running unit tests.
+  # Caching is disabled when in dev mode or running unit tests.
   def self.should_cache?
-    return false if Rails.application.config.levelbuilder_mode
+    return false if Rails.application.config.disable_script_cache
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -177,18 +179,7 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([
-          {
-            script_levels: [
-              {levels: [:game, :concepts, :level_concept_difficulty]},
-              :stage,
-              :callouts
-            ]
-          },
-          {
-            stages: [{script_levels: [:levels]}]
-          }
-        ]).find(script_id)
+        script = get_cacheable_script(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -196,75 +187,45 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def self.get_cacheable_script(script_id)
+    Script.includes([
+      {
+        script_levels: [
+          {levels: [:game, :concepts, :level_concept_difficulty]},
+          :stage,
+          :callouts
+        ]
+      },
+      {
+        stages: [{script_levels: [:levels]}]
+      }
+    ]).find(script_id)
+  end
+
+  def update_script_cache
+    return unless Script.should_cache?
+
+    script = Script.get_cacheable_script(id)
+    Script.script_cache[name] = script
+    Script.script_cache[id.to_s] = script
+
+    ScriptLevel.script_level_cache.merge!(script.script_levels.index_by(&:id))
+    script.script_levels.each do |script_level|
+      level = script_level.level
+      next unless level
+      Level.level_cache[level.id] = level unless Level.level_cache.key? level.id
+      Level.level_cache[level.name] = level unless Level.level_cache.key? level.name
+    end
+  end
+
+  def delete_from_script_cache
+    Script.script_cache.except!(name, id.to_s)
+  end
+
   def self.script_cache
     return nil unless self.should_cache?
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
-  end
-
-  # Returns a cached map from script level id to script_level, or nil if in level_builder mode
-  # which disables caching.
-  def self.script_level_cache
-    return nil unless self.should_cache?
-    @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |script|
-        cache.merge!(script.script_levels.index_by(&:id))
-      end
-    end
-  end
-
-  # Returns a cached map from level id and level name to level, or nil if in
-  # level_builder mode which disables caching.
-  def self.level_cache
-    return nil unless self.should_cache?
-    @@level_cache ||= {}.tap do |cache|
-      script_level_cache.values.each do |script_level|
-        level = script_level.level
-        next unless level
-        cache[level.id] = level unless cache.key? level.id
-        cache[level.name] = level unless cache.key? level.name
-      end
-    end
-  end
-
-  # Find the script level with the given id from the cache, unless the level build mode
-  # is enabled in which case it is always fetched from the database. If we need to fetch
-  # the script and we're not in level mode (for example because the script was created after
-  # the cache), then an entry for the script is added to the cache.
-  def self.cache_find_script_level(script_level_id)
-    script_level = script_level_cache[script_level_id] if self.should_cache?
-
-    # If the cache missed or we're in levelbuilder mode, fetch the script level from the db.
-    if script_level.nil?
-      script_level = ScriptLevel.find(script_level_id)
-      # Cache the script level, unless it wasn't found.
-      @@script_level_cache[script_level_id] = script_level if script_level && self.should_cache?
-    end
-    script_level
-  end
-
-  # Find the level with the given id or name from the cache, unless the level
-  # build mode is enabled in which case it is always fetched from the database.
-  # If we need to fetch the level and we're not in level mode (for example
-  # because the level was created after the cache), then an entry for the level
-  # is added to the cache.
-  # @param level_identifier [Integer | String] the level ID or level name to
-  #   fetch
-  # @return [Level] the (possibly cached) level
-  # @raises [ActiveRecord::RecordNotFound] if the level cannot be found
-  def self.cache_find_level(level_identifier)
-    level = level_cache[level_identifier] if self.should_cache?
-    return level unless level.nil?
-
-    # If the cache missed or we're in levelbuilder mode, fetch the level from
-    # the db. Note the field trickery is to allow passing an ID as a string,
-    # which some tests rely on (unsure about non-tests).
-    field = level_identifier.to_i.to_s == level_identifier.to_s ? :id : :name
-    level = Level.find_by!(field => level_identifier)
-    # Cache the level by ID and by name, unless it wasn't found.
-    @@level_cache[level.id] = level if level && self.should_cache?
-    @@level_cache[level.name] = level if level && self.should_cache?
-    level
   end
 
   def cached
@@ -333,7 +294,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code'
+    name == 'edit-code' || name == 'gradeKinder' || name == 'grade1' || name == 'grade2' || name == 'grade3' || name == 'grade4' || name == 'grade5'
   end
 
   # TODO(asher): Rename this method to k1?, removing the need to disable lint.
@@ -368,7 +329,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
+    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd3 text-compression netsim pixelation frequency_analysis vigenere gradeKinder grade1 grade2 grade3 grade4 grade5).include?(self.name)
   end
 
   def has_banner?

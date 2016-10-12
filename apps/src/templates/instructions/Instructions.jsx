@@ -1,7 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
 import ReactDOM from 'react-dom';
-import {connect} from 'react-redux';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';

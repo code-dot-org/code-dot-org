@@ -1,5 +1,4 @@
 /** @file Button that continues to the next puzzle when clicked */
-/* global dashboard */
 import React from 'react';
 import i18n from '@cdo/locale';
 import processResults from '../code-studio/levels/dialogHelper';

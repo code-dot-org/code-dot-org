@@ -1,6 +1,4 @@
 import $ from 'jquery';
-var selectize;
-var selected_state;
 
 window.DistrictDropdownManager = function (existingOptions) {
 
