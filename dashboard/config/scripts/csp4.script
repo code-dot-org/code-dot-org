@@ -1,23 +1,23 @@
-login_required 'true'
 hidden 'false'
+login_required 'true'
 
 stage 'What is Big Data?'
-named_level ‘Unit 4 Lesson 1 Introduction’
+named_level 'Unit 4 Lesson 1 Introduction'
 
 stage 'Rapid Research - Data Innovations'
-named_level ‘Unit 4 Lesson 2 Introduction’
+named_level 'Unit 4 Lesson 2 Introduction'
 named_level 'Video - Data and Medicine'
 named_level 'Video - CS is Changing Everything'
 
 stage 'Identifying People with Data'
-named_level ‘Unit 4 Lesson 3 Introduction’
+named_level 'Unit 4 Lesson 3 Introduction'
 
 stage 'The Cost of Free'
-named_level ‘Unit 4 Lesson 4 Introduction’
-named_level ‘Video - The Future of Big Data’
+named_level 'Unit 4 Lesson 4 Introduction'
+named_level 'Video - The Future of Big Data'
 
 stage 'Simple Encryption'
-named_level ‘Unit 4 Lesson 5 Introduction’
+named_level 'Unit 4 Lesson 5 Introduction'
 named_level 'Crack a Caesar Cipher'
 named_level 'Terminology Recap'
 named_level 'New Challenge Introduction'
@@ -31,7 +31,7 @@ assessment 'U2L13 Free Response Wrap Up'
 assessment 'U2L14 Free Response Wrap Up'
 
 stage 'Encryption with Keys and Passwords'
-named_level ‘Unit 4 Lesson 6 Introduction’
+named_level 'Unit 4 Lesson 6 Introduction'
 named_level 'The Vigenere Cipher Widget'
 named_level 'How Secure Is Your Password?'
 named_level 'Video - Encryption and Public Keys'
@@ -46,9 +46,9 @@ assessment 'U2L15 Assessment1'
 #level 'U2L16 Student Lesson Introduction'
 
 stage 'Public Key Crypto'
-named_level ‘Unit 4 Lesson 7 Introduction’
+named_level 'Unit 4 Lesson 7 Introduction'
 named_level 'Video - Encryption and Public Keys'
-named_level  'Modulo Clock Instructions'
+named_level 'Modulo Clock Instructions'
 named_level 'The Modulo Clock'
 named_level 'Modulo Clock Recap'
 named_level 'Public Key Cryptography Widget'
@@ -62,11 +62,11 @@ assessment 'U2L19 Assessment'
 assessment 'U2L19 Free Response Wrap Up'
 
 stage 'Rapid Research - Cybercrime'
-named_level ‘Unit 4 Lesson 8 Introduction’
+named_level 'Unit 4 Lesson 8 Introduction'
 named_level 'Video - Cybersecurity and Crime'
 
 stage 'Practice PT - Big Data and Security Dilemmas'
-named_level 'Unit 4 Lesson 9 Introduction’
+named_level 'Unit 4 Lesson 9 Introduction'
 
 stage 'Alice and Bob and Asymmetric Keys'
 stage 'Practice PT - Propose an Innovation'
