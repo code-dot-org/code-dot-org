@@ -32,6 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
+    "instructions": "The sheep has forgotten what to do when you sheer it! Make it drop wool when you walk over to it and press the button.",
     "contained_level_names": null
   },
   "published": true,
@@ -47,7 +48,14 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_playSound">
+          <title name="TYPE">stepGrass</title>
+        </block>
+      </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
