@@ -145,7 +145,13 @@ class ScriptDSL < BaseDSL
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
 
     s << '' unless s.empty?
+    s << self.serialize_stages(script)
 
+    File.write(filename, s.join("\n"))
+  end
+
+  def self.serialize_stages(script)
+    s = []
     script.stages.each do |stage|
       t = "stage '#{stage.name}'"
       t += ', lockable: true' if stage.lockable
@@ -168,8 +174,7 @@ class ScriptDSL < BaseDSL
       end
       s << ''
     end
-
-    File.write(filename, s.join("\n"))
+    s.join("\n")
   end
 
   def self.serialize_level(level, type, active = nil)
