@@ -1,10 +1,8 @@
 class BaseDSL
+  attr_writer :name
+
   def initialize
     @hash = {}
-  end
-
-  def name(text)
-    @name = text
   end
 
   def encrypted(text)
