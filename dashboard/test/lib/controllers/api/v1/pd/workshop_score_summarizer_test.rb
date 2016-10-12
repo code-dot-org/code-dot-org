@@ -35,8 +35,25 @@ class Api::V1::Pd::WorkshopScoreSummarizerTest < ActiveSupport::TestCase
         number_teachers: 1,
         response_count: 1,
         facilitator_effectiveness: 5,
+        how_much_learned_s: 5,
+        how_motivating_s: 5,
+        how_clearly_presented_s: 5,
+        how_interesting_s: 5,
+        how_often_given_feedback_s: 5,
+        how_comfortable_asking_questions_s: 5,
+        how_often_taught_new_things_s: 5,
         teacher_engagement: 5,
-        overall_success: 6
+        how_much_participated_s: 5,
+        how_often_talk_about_ideas_outside_s: 5,
+        how_often_lost_track_of_time_s: 5,
+        how_excited_before_s: 5,
+        overall_how_interested_s: 5,
+        overall_success: 6,
+        more_prepared_than_before_s: 6,
+        know_where_to_go_for_help_s: 6,
+        suitable_for_my_experience_s: 6,
+        would_recommend_s: 6,
+        part_of_community_s: 6
     }
 
     assert_equal expected_results, get_score_for_workshops(@workshops)
@@ -45,6 +62,6 @@ class Api::V1::Pd::WorkshopScoreSummarizerTest < ActiveSupport::TestCase
   private
 
   def get_best_response_for_question(question, answers)
-    WorkshopScoreSummarizer::INVERTED_RESPONSE_QUESTIONS.include?(question) ? answers[question].first : answers[question].last
+    answers[question].last
   end
 end
