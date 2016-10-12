@@ -629,11 +629,16 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      hidden: hidden,
+      loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_stages: hideable_stages?,
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
+
+    summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
+    summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
     summary
   end
