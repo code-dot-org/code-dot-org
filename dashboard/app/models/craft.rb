@@ -289,6 +289,8 @@ class Craft < Blockly
   <block type="craft_moveRandom"></block>
   <block type="craft_moveTo"></block>
   <block type="craft_moveToward"></block>
+  <block type="craft_spawnEntity"></block>
+  <block type="craft_spawnEntityRandom"></block>
   <block type="craft_turnLeft"></block>
   <block type="craft_turnRandom"></block>
   <block type="craft_turnRight"></block>
