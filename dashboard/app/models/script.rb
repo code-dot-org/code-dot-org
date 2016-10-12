@@ -538,8 +538,8 @@ class Script < ActiveRecord::Base
   end
 
   def update_text(script_params, script_text, metadata_i18n)
+    script_name = script_params[:name]
     begin
-      script_name = script_params[:name]
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
         Script.add_script({
@@ -558,7 +558,7 @@ class Script < ActiveRecord::Base
     begin
       # write script to file
       filename = "config/scripts/#{script_params[:name]}.script"
-      File.write(filename, script_text)
+      ScriptDSL.serialize(Script.find_by_name(script_name), filename)
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
