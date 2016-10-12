@@ -139,6 +139,25 @@ const allSounds = [
   'sheepBaa'
 ];
 
+const ENTITY_TYPES = [
+  'Player', // TODO(bjordan): other entity types
+  'sheep',
+  'zombie',
+  'ironGolem',
+  'creeper',
+  'cow',
+  'chicken',
+];
+
+const SPAWNABLE_ENTITY_TYPES = [
+  'sheep',
+  'zombie',
+  'ironGolem',
+  'creeper',
+  'cow',
+  'chicken',
+];
+
 function keysToDropdownOptions(keysList) {
   return keysList.map(function (key) {
     var displayText = (blocksToDisplayText[key] || key);
@@ -514,15 +533,7 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
       init: function () {
-        var dropdownOptions = keysToDropdownOptions([
-            'Player', // TODO(bjordan): other entity types
-            'sheep',
-            'zombie',
-            'ironGolem',
-            'creeper',
-            'cow',
-            'chicken',
-        ]);
+        var dropdownOptions = keysToDropdownOptions(ENTITY_TYPES);
         var dropdown = new blockly.FieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
 
@@ -557,6 +568,60 @@ exports.install = function (blockly, blockInstallOptions) {
   //simpleEntityBlock('turnEntityLeft', 'turn it left');
   //simpleEntityBlock('turnEntityRandom', 'turn it random');
   //simpleEntityBlock('turnEntityToPlayer', 'turn toward player');
+
+  blockly.Blocks[`craft_spawnEntity`] = {
+    helpUrl: '',
+    init: function () {
+      var locationOptions = keysToDropdownOptions([
+        'up',
+        'middle',
+        'down',
+        'left',
+        'right',
+      ]);
+      const entityTypeDropdownOptions = keysToDropdownOptions(SPAWNABLE_ENTITY_TYPES);
+      var entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
+      entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
+      var locationDropdown = new blockly.FieldDropdown(locationOptions);
+      locationDropdown.setValue(locationOptions[0][1]);
+
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('spawn'))
+          .appendTitle(entityTypeDropdown, 'TYPE')
+          .appendTitle(new blockly.FieldLabel(' '))
+          .appendTitle(locationDropdown, 'DIRECTION');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript')[`craft_spawnEntity`] = function () {
+    const type = this.getTitleValue('TYPE');
+    const direction = this.getTitleValue('DIRECTION');
+    return `spawnEntity('${type}', '${direction}', 'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks[`craft_spawnEntityRandom`] = {
+    helpUrl: '',
+    init: function () {
+      const entityTypeDropdownOptions = keysToDropdownOptions(ENTITY_TYPES);
+      var entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
+      entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
+
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('spawn'))
+          .appendTitle(entityTypeDropdown, 'TYPE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript')[`craft_spawnEntityRandom`] = function () {
+    const type = this.getTitleValue('TYPE');
+    return `spawnEntityRandom('${type}', 'block_id_${this.id}');\n`;
+  };
 
   blockly.Blocks.craft_moveEntityNorth = {
     helpUrl: '',

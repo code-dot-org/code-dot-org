@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import _ from 'lodash';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
@@ -840,6 +841,23 @@ Craft.executeUserCode = function () {
       };
       appCodeOrgAPI.moveDirection(studioApp.highlight.bind(studioApp, blockID),
           dirStringToDirection[direction], targetEntity);
+    },
+    spawnEntity: function (type, direction, blockID) {
+      appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
+          type, direction);
+    },
+    spawnEntityRandom: function (type, blockID) {
+      var locationOptions = [
+        'up',
+        'middle',
+        'right',
+        'down',
+        'left',
+      ];
+      const direction = _.sample(locationOptions);
+
+      appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
+          type, direction);
     }
   };
 
