@@ -305,5 +305,6 @@
   "when": "cando",
   "whenRun": "cando se executa",
   "workspaceHeaderShort": "Espazo de traballo: ",
-  "yes": "Si"
+  "yes": "Si",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }
