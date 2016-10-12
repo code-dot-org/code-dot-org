@@ -430,7 +430,7 @@ class DashboardSection
     @teachers ||= [{
       id: @row[:teacher_id],
       location: "/v2/users/#{@row[:teacher_id]}",
-                   }]
+    }]
   end
 
   def course
@@ -450,13 +450,13 @@ class DashboardSection
 
   def to_member_hash
     {
-        id: @row[:id],
-        location: "/v2/sections/#{@row[:id]}",
-        name: @row[:name],
-        login_type: @row[:login_type],
-        grade: @row[:grade],
-        code: @row[:code],
-        stage_extras: @row[:stage_extras],
+      id: @row[:id],
+      location: "/v2/sections/#{@row[:id]}",
+      name: @row[:name],
+      login_type: @row[:login_type],
+      grade: @row[:grade],
+      code: @row[:code],
+      stage_extras: @row[:stage_extras],
     }
   end
 

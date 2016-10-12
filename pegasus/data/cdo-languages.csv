@@ -10,7 +10,7 @@ da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish,En Time af Kode,TRUE,TRUE,TRUE
 de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German,Die Stunde des Codes,TRUE,TRUE,TRUE
 el,el,el,el-GR,Ελληνικά,Greek,TRUE,TRUE,el,Greek,Ώρα του Κώδικα,TRUE,TRUE,TRUE
 en-GB,gb,en,en-GB,Engish (UK),Engish (UK),FALSE,TRUE,en-GB,"English, United Kingdom",Hour of Code,FALSE,FALSE,FALSE
-en,en,en,en-US,English,English,TRUE,TRUE,en,English,Hour of Code,TRUE,TRUE,TRUE
+en,en,en,en-US,English,English,TRUE,TRUE,en,"English, United States",Hour of Code,TRUE,TRUE,TRUE
 es,es,es,es-ES,Español,Spanish,TRUE,TRUE,es-ES,Spanish,La Hora del Código,TRUE,TRUE,TRUE
 es-MX,la,es,es-MX,Español (México),Spanish (Mexico),FALSE,TRUE,es-MX,"Spanish, Mexico",La Hora del Código,FALSE,FALSE,FALSE
 et,et,et,et-EE,Eesti,Estonian,TRUE,FALSE,et,Estonian,,TRUE,TRUE,TRUE
