@@ -1,10 +1,12 @@
 ---
 
-title: <%= hoc_s(:title_how_to_volunteers) %>
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 
 ---
+
+<%= view :signup_button %>
 
 # Hoe kunt u een CodeUur evenement organiseren
 
@@ -54,3 +56,5 @@ nav: how_to_nav
 | 10:30-10:40 | Studenten doen een demo van CodeUur voor de school. Misschien kunnen zij het leren aan de directeur, aan de politicus of aan andere studenten. |
 | 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                         |
 | 11:00-11:05 | De leraar die de evenement heeft georganiseerd sluit af.                                                                                       |
+
+<%= view :signup_button %>

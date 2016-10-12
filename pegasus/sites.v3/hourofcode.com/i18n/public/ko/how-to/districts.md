@@ -6,7 +6,9 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your entire school district
+<%= view :signup_button %>
+
+# 지역 학교와 Hour of Code를 진행 하는 방법
 
 ## 모든 학교들이 참여해서, 모든 학생들이 배워볼 수 있도록!
 
@@ -26,3 +28,5 @@ Hour of Code 는 컴퓨터과학기술이 어떻게 동작하고, 응용프로�
 
   * 학생들에게 다음 온라인 과정들을 살펴보고 참여하도록 해주세요. [온라인 학습과정들](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [참여해보세요](<%= resolve_url('https://code.org/professional-development-workshops') %>) 컴퓨터과학 전문가와 함께 여러가지들을 배울 수 있는 하루 짜리 워크숍들에 개인적으로 참여할 수 있습니다. (US educators only)
+
+<%= view :signup_button %>

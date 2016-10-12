@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Inspire students and volunteer for the Hour of Code
@@ -32,7 +34,7 @@ nav: how_to_nav
 ## 2) Se denne øvelses video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) vælge en øvelse:
 
-Vi holder en bred vifte af [sjove, timelange øvelser](<%= resolve_url('https://code.org/learn') %>) for elever i alle aldre, som er lavet af en lang række forskellige partnere. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
 
 **Alle Hour of Code øvelser:**
 
@@ -138,4 +140,6 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 ## Hvad er næste skridt efter Hour of Code?
 
-Hour of Code er blot det første skridt på en lang rejse for at lære mere om, hvordan teknologi fungerer, og hvordan du kan lave dine egne programmer. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

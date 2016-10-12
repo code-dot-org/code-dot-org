@@ -6,39 +6,47 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Contoh siaran pers untuk pejabat terpilih
 
-Untuk penerbitan segera  
-[**TANGGAL**]  
-Contact: [**INFORMASI KONTAK**]  
+For Immediate Release  
+[**DATE**]  
+Contact: [**CONTACT INFORMATION**]  
   
 
 
 **
 
 <center>
-  Pemerintah/Gubernur/Anggota Parlemen/Perwakilan Rakyat/Walikota/ Anggota parlemen [masukkan nama][berpartisipasi dalam Hour of Code bersama siswa-siswa loka]</strong><br /> Komunitas berkumpul bersama untuk meningkatkan kesadaran mengenai pentingnya edukasi ilmu komputer dengan berkompetisi dalam Minggu Edukasi Ilmu Komputer
+  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
 </center>
 
   
   
 </p> 
 
-**TANGGAL** - [**MASUKKAN NAMA**] menggabungkan kepala sekolah dan member fakultas dari [**MASUKKAN NAMA SEKOLAH**], pemimpin bisnis dan keluarga setempat hari ini untuk [**NAMA EVENT**] untuk berpartisipasi dalam Hour of Code sebagai bagian dari Pekan Edukasi Ilmu Komputer. [MASUKKAN NAMA] dan anggota komunitas adalah bagian dari puluhan juta orang di seluruh penjuru dunia untuk ambil bagian dalam acara pembelajaran terbesar dalam sejarah.
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
 
-[**MASUKKAN DETIL EVENT, GUNAKAN BAHASA YANG DESKRIPTIF DAN DAPAT DIUKUR. SEBAGAI CONTOH:**  
-"Daniel menjalankan sekolah dasar untuk menjalankan event Hour of Code sesekolah untuk mengenalkan siswanya kepada ilmu komputer. Lebih dari 700 siswa dari segala tingkatan melakukan satu jam dari Hour of Code. Dan selusin orang tua dan relawan dari komunitas membantu di hari itu dan menyatukan anak bersama-sama untuk menampilkan mengapa ilmu komputer penting dalam hidup siswa-siswa ini."
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
 
-[**CONTOH TEKS KONTEKS**]  
-Komputer ada dimana-mana, tetapi sedikit sekolah yang mengjarkan ilmu komputer dibandingkan 10 tahun lalu. Perepuan dan siswa-siswi berkulit non-putih sangat kurang terwakili. Kabar baiknya adalah kita mengubah ini untuk menjadi lebih baik. Hour of Code adalah gerbang menuju ketersediaan akses untuk siswa kepada edukasi ilmu komputer berkualitas tinggi.
+[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Berkat Hour of Code, ilmu komputer telah ditampilkan pada homepage dari Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua memulaikan Hour of Code dengan video. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! dan Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-[**MASUKKAN KUTIPAN DARI JURU BICARA, CONTOH DI BAWAH INI:**]   
-"Kita perlu untuk mendorong dan merangkul minat siswa kami untuk ilmu komputer," kata [**Masukkan nama**]. "Setiap siswa berhakmendapatkan kesempatan untuk belajar ilmu komputer untuk mengakses karir terbaik di abad ke-21."
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
 
-[**MASUKKAN INFORMASI LEBIH LANJUT TENTANG ACARA ANDA DAN/ATAU ORGANISASI ANDA**]
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
 
-[**MASUKKAN KUTIPAN DARI ORGANISASI LAIN ATAU ORANG YANG HADIR DI ACARA**]
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
-Untuk informasi lebih lanjut tentang [**EVENT/PROGRAM/ETC**], kunjungi [**Masukkan WEBSITE**] atau hubungi [**Masukkan CONTACT INFORMATION**]
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+  
+  
+
+
+<%= view :signup_button %>

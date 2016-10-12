@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your entire school district
 
 ## Fai que cada colexio participe, e que cada estudante aprenda!
@@ -26,3 +28,5 @@ A Hora do Código é só o primeiro paso dunha viaxe para aprender máis sobre c
 
   * Anime os alunos a continuar a [aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Asista](<%= resolve_url('https://code.org/professional-development-workshops') %>) a uha clase presencial, de un día, para recibir instrucións de unha persoa con experiencia en informática. (Sómente para educadores dos EUA)
+
+<%= view :signup_button %>

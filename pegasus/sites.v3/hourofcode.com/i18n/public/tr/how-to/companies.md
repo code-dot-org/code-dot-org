@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Inspire students and volunteer for the Hour of Code
@@ -32,7 +34,7 @@ nav: how_to_nav
 ## 2) Nasıl Yapılır videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Bir öğretici seçin:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Bunları deneyin!](<%= resolve_url("https://code.org/learn") %>)
 
 **Tüm Kodlama Zamanı öğreticileri:**
 
@@ -43,9 +45,9 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 ## 4) Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanımı isteğe bağlı
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+En iyi Kodlama Saati deneyimi internete bağlı olan bilgisayarları içerir. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**Önceden planla!** Etkinlik başlamadan önce aşağıdakileri yapın:
 
   * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
@@ -56,9 +58,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## 5) Start your Hour of Code off with an inspiring video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
+Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın. Share more about what inspired you to pursue computer science and your role at your company.
 
-**Show an inspirational video:**
+**İlham verici bir video gösterin:**
 
   * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
@@ -138,4 +140,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Kodlama Zamanından sonra ne olacak?
 
-Kodlama Zamanı, teknolojinin nasıl çalıştığı hakkında daha fazla bilgi edinme ve uygulama yazılımı oluşturmayı öğrenme yolculuğunda sadece ilk basamaktır. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>
