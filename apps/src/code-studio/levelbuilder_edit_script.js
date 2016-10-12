@@ -66,11 +66,11 @@ var ScriptEditor = React.createClass({
         </label>
         <h2>Basic Settings</h2>
         <label>
-          Hidden
+          Visible to Teachers
           <input
-            name="hidden"
+            name="visible_to_teachers"
             type="checkbox"
-            defaultChecked={this.props.scriptData.hidden}
+            defaultChecked={!this.props.scriptData.hidden}
             style={styles.checkbox}
           />
         </label>
