@@ -22,7 +22,7 @@ const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
 const initialState = {
   viewAs: ViewType.Student,
-  bySection: {},
+  stagesBySectionId: {},
   lockDialogStageId: null,
   // The locking info for the currently selected section/stage
   lockStatus: [],
@@ -50,13 +50,13 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_SECTIONS) {
     return {
       ...state,
-      bySection: _.mapValues(action.sections, section => section.stages)
+      stagesBySectionId: _.mapValues(action.sections, section => section.stages)
     };
   }
 
   if (action.type === SELECT_SECTION) {
     const sectionId = action.sectionId;
-    if (!state.bySection[sectionId]) {
+    if (!state.stagesBySectionId[sectionId]) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
     // If we have a lockStatus (i.e. from an open dialog) we need to update
@@ -65,7 +65,7 @@ export default function reducer(state = initialState, action) {
     if (lockDialogStageId) {
       return {
         ...state,
-        lockStatus: lockStatusForStage(state.bySection[sectionId], lockDialogStageId)
+        lockStatus: lockStatusForStage(state.stagesBySectionId[sectionId], lockDialogStageId)
       };
     }
   }
@@ -74,7 +74,7 @@ export default function reducer(state = initialState, action) {
     const { sectionId, stageId } = action;
     return Object.assign({}, state, {
       lockDialogStageId: stageId,
-      lockStatus: lockStatusForStage(state.bySection[sectionId], stageId)
+      lockStatus: lockStatusForStage(state.stagesBySectionId[sectionId], stageId)
     });
   }
 
@@ -92,9 +92,9 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === FINISH_SAVE) {
-    const { bySection } = state;
+    const { stagesBySectionId } = state;
     const { lockStatus: nextLockStatus, sectionId, stageId } = action;
-    const nextStage = _.cloneDeep(bySection[sectionId][stageId]);
+    const nextStage = _.cloneDeep(stagesBySectionId[sectionId][stageId]);
 
     // Update locked/readonly_answers in stages based on the new lockStatus provided
     // by our dialog.
@@ -110,7 +110,7 @@ export default function reducer(state = initialState, action) {
     });
 
     const nextState = _.cloneDeep(state);
-    nextState.bySection[sectionId][stageId] = nextStage;
+    nextState.stagesBySectionId[sectionId][stageId] = nextStage;
     return Object.assign(nextState, {
       lockStatus: nextLockStatus,
       saving: false
@@ -204,7 +204,7 @@ export const saveLockDialog = (sectionId, newLockStatus) => {
 export const lockStage = (sectionId, stageId) => {
   return (dispatch, getState) => {
     const state = getState();
-    const section = state.stageLock.bySection[sectionId];
+    const section = state.stageLock.stagesBySectionId[sectionId];
     const oldLockStatus = lockStatusForStage(section, stageId);
     const newLockStatus = oldLockStatus.map(student => ({
       ...student,

@@ -48,7 +48,7 @@ describe('stageLockRedux reducer tests', () => {
       const action = setSections(fakeSectionData);
       const nextState = reducer({}, action);
 
-      assert.deepEqual(nextState.bySection, {
+      assert.deepEqual(nextState.stagesBySectionId, {
         [section1Id]: fakeSectionData[section1Id].stages,
         [section2Id]: fakeSectionData[section2Id].stages
       });
@@ -146,9 +146,9 @@ describe('stageLockRedux reducer tests', () => {
       assert.equal(student1LockStatus, LockStatus.Locked);
       assert.equal(student2LockStatus, LockStatus.Editable);
       assert.equal(student3LockStatus, LockStatus.ReadonlyAnswers);
-      const student1 = state.bySection[section1Id][stage1Id][0];
-      const student2 = state.bySection[section1Id][stage1Id][1];
-      const student3 = state.bySection[section1Id][stage1Id][2];
+      const student1 = state.stagesBySectionId[section1Id][stage1Id][0];
+      const student2 = state.stagesBySectionId[section1Id][stage1Id][1];
+      const student3 = state.stagesBySectionId[section1Id][stage1Id][2];
       assert.equal(student1.locked, true);
       assert.equal(student1.readonly_answers, false);
       assert.equal(student2.locked, false);
@@ -169,9 +169,9 @@ describe('stageLockRedux reducer tests', () => {
       assert.equal(nextStudent1LockStatus, LockStatus.Locked);
       assert.equal(nextStudent2LockStatus, LockStatus.ReadonlyAnswers);
       assert.equal(nextStudent3LockStatus, LockStatus.Editable);
-      const nextStudent1 = nextState.bySection[section1Id][stage1Id][0];
-      const nextStudent2 = nextState.bySection[section1Id][stage1Id][1];
-      const nextStudent3 = nextState.bySection[section1Id][stage1Id][2];
+      const nextStudent1 = nextState.stagesBySectionId[section1Id][stage1Id][0];
+      const nextStudent2 = nextState.stagesBySectionId[section1Id][stage1Id][1];
+      const nextStudent3 = nextState.stagesBySectionId[section1Id][stage1Id][2];
       assert.equal(nextStudent1.locked, true);
       assert.equal(nextStudent1.readonly_answers, false);
       assert.equal(nextStudent3.locked, false);
