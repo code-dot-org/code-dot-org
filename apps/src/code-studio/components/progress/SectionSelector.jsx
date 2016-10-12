@@ -17,7 +17,7 @@ const SectionSelector = React.createClass({
         id: React.PropTypes.string.isRequired
       })
     ).isRequired,
-    selectedSection: React.PropTypes.string,
+    selectedSectionId: React.PropTypes.string,
     selectSection: React.PropTypes.func.isRequired
   },
 
@@ -26,12 +26,12 @@ const SectionSelector = React.createClass({
   },
 
   render() {
-    const { sections, selectedSection } = this.props;
+    const { sections, selectedSectionId } = this.props;
     return (
       <select
         name="sections"
         style={styles.select}
-        value={selectedSection}
+        value={selectedSectionId}
         onChange={this.handleSelectChange}
       >
         {sections.map(({id, name}) => (
@@ -45,9 +45,9 @@ const SectionSelector = React.createClass({
 });
 
 export default connect(state => ({
-  selectedSection: state.sections.selectedSection,
+  selectedSectionId: state.sections.selectedSectionId,
   sections: state.sections.sectionIds.map(id => ({
-    name: state.sections.bySection.get(id).get('name'),
+    name: state.sections.nameById.get(id),
     id
   }))
 }), dispatch => ({

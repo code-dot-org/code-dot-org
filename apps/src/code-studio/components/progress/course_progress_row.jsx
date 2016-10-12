@@ -161,7 +161,7 @@ const CourseProgressRow = React.createClass({
 
 export default connect(state => {
   return {
-    sectionId: state.sections.selectedSection,
+    sectionId: state.sections.selectedSectionId,
     hiddenStageMap: state.hiddenStage.get('bySection'),
     showTeacherInfo: state.progress.showTeacherInfo,
     viewAs: state.stageLock.viewAs,

@@ -36,7 +36,7 @@ const StageLock = React.createClass({
 
     // redux provided
     sectionId: React.PropTypes.string.isRequired,
-    sectionsLoaded: React.PropTypes.bool.isRequired,
+    sectionsAreLoaded: React.PropTypes.bool.isRequired,
     unlocked: React.PropTypes.bool.isRequired,
     saving: React.PropTypes.bool.isRequired,
     openLockDialog: React.PropTypes.func.isRequired,
@@ -53,7 +53,7 @@ const StageLock = React.createClass({
   },
 
   render() {
-    if (!this.props.sectionsLoaded) {
+    if (!this.props.sectionsAreLoaded) {
       return <div>{commonMsg.loading()}</div>;
     }
     return (
@@ -95,10 +95,10 @@ const StageLock = React.createClass({
 
 export default connect((state, ownProps) => {
   const { bySection, saving } = state.stageLock;
-  const { sectionsLoaded, selectedSection } = state.sections;
+  const { sectionsAreLoaded, selectedSectionId } = state.sections;
   let unlocked = false;
-  if (sectionsLoaded) {
-    const currentSection = bySection[selectedSection];
+  if (sectionsAreLoaded) {
+    const currentSection = bySection[selectedSectionId];
     if (currentSection) {
       const stageStudents = currentSection[ownProps.stage.id];
       unlocked = stageStudents.some(student => !student.locked);
@@ -106,9 +106,9 @@ export default connect((state, ownProps) => {
   }
 
   return {
-    sectionId: selectedSection,
+    sectionId: selectedSectionId,
     unlocked,
-    sectionsLoaded,
+    sectionsAreLoaded,
     saving
   };
 }, dispatch => ({

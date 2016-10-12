@@ -14,23 +14,19 @@ describe('reducer tests', () => {
   describe('setSections', () => {
     it('sets section data we receive from the server', () => {
       const initialState = reducer(undefined, {});
-      assert.equal(initialState.sectionsLoaded, false);
-      assert.equal(initialState.selectedSection, null);
+      assert.equal(initialState.sectionsAreLoaded, false);
+      assert.equal(initialState.selectedSectionId, null);
 
       const action = setSections(fakeSectionData);
 
       const nextState = reducer(initialState, action);
-      assert.equal(nextState.sectionsLoaded, true);
-      assert.equal(nextState.selectedSection, section1Id,
+      assert.equal(nextState.sectionsAreLoaded, true);
+      assert.equal(nextState.selectedSectionId, section1Id,
         'arbitrarily select the first section as selected');
       assert.deepEqual(nextState.sectionIds, sectionIds);
-      assert.deepEqual(nextState.bySection.toJS(), {
-        [section1Id]: {
-          name: 'My Section'
-        },
-        [section2Id]: {
-          name: 'My Other Section'
-        }
+      assert.deepEqual(nextState.nameById.toJS(), {
+        [section1Id]: 'My Section',
+        [section2Id]: 'My Other Section'
       });
 
     });
@@ -40,11 +36,11 @@ describe('reducer tests', () => {
     it('can change the selected section', () => {
       const sectionState = reducer(undefined, setSections(fakeSectionData));
 
-      assert.equal(sectionState.selectedSection, section1Id);
+      assert.equal(sectionState.selectedSectionId, section1Id);
 
       const action = selectSection(section2Id);
       const nextState = reducer(sectionState, action);
-      assert.equal(nextState.selectedSection, section2Id);
+      assert.equal(nextState.selectedSectionId, section2Id);
     });
 
     it('fails if we have no sections', () => {
