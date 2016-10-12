@@ -1,17 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import { ViewType } from '../../stageLockRedux';
+import { ViewType, setViewType } from '../../stageLockRedux';
 
 const styles = {
+  main: {
+    textAlign: 'center'
+  },
+  viewAs: {
+    fontSize: 16,
+    margin: 10
+  },
   toggleGroup: {
     margin: 10,
-    textAlign: 'center'
   },
 };
 
 const ViewAsToggle = ({viewAs, setViewType}) => (
-  <div className="non-scrollable-wrapper">
+  /*{ className used by some code that looks at this element to determine sizing}*/
+  <div className="non-scrollable-wrapper" style={styles.main}>
     <div style={styles.viewAs}>
       {commonMsg.viewPageAs()}
     </div>
@@ -31,4 +39,10 @@ ViewAsToggle.propTypes = {
   setViewType: React.PropTypes.func.isRequired,
 };
 
-export default ViewAsToggle;
+export default connect(state => ({
+  viewAs: state.stageLock.viewAs
+}), dispatch => ({
+  setViewType(viewAs) {
+    dispatch(setViewType(viewAs));
+  }
+}))(ViewAsToggle);
