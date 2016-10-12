@@ -68,6 +68,7 @@ var ScriptEditor = React.createClass({
         <label>
           Hidden
           <input
+            name="hidden"
             type="checkbox"
             defaultChecked={this.props.scriptData.hidden}
             style={styles.checkbox}
@@ -76,6 +77,7 @@ var ScriptEditor = React.createClass({
         <label>
           Login Required
           <input
+            name="login_required"
             type="checkbox"
             defaultChecked={this.props.scriptData.loginRequired}
             style={styles.checkbox}
@@ -84,6 +86,7 @@ var ScriptEditor = React.createClass({
         <label>
           Hideable Stages
           <input
+            name="hideable_stages"
             type="checkbox"
             defaultChecked={this.props.scriptData.hideable_stages}
             style={styles.checkbox}
