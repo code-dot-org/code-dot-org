@@ -83,7 +83,7 @@ const ScriptTeacherPanel = React.createClass({
           {hasSections && scriptHasLockableStages && this.props.viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
-                {commonMsg.selectSection()}
+                {commonMsg.selectSectionInstructions()}
               </div>
               {unlockedStageNames.length > 0 &&
                 <div>
