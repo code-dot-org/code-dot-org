@@ -154,7 +154,7 @@ class ScriptDSL < BaseDSL
 
     s << "hidden 'false'" unless script.hidden
     s << "login_required 'true'" if script.login_required
-    s << "hideable_stages 'true'" if script.hideable_stages
+    s << 'hideable_stages true' if script.hideable_stages
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
 
     s << '' unless s.empty?
