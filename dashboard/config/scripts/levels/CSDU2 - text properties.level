@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-17T23:29:54.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Text Properties\r\n\r\nColor properties are just one type of property. Another is text properties. Text properties can be used on an text element (`<p>`, `<h1>` to `<h6>`, `<ul>`, `<ol>`, `<li>`).\r\n\r\n* text-align - sets the horizontal (side to side) position of the text within each line\r\n* text-decoration - can add a line above, below or through the text\r\n\r\nFor more details on text properties go to <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3 Schools - Text Decoration</a> or <a href=\"http://www.w3schools.com/cssref/pr_text_text-align.asp\">W3 Schools - Text Align</a>.\r\n\r\nExample:\r\n\r\nThe below example will make all the paragraphs be right aligned with a green text color and a line through all the text.\r\n<pre>\r\np {\r\n\ttext-decoration: line-through;\r\n\tcolor: green;\r\n    text-align: right;\r\n}\r\n</pre>\r\n\r\n# Do This\r\nRead the W3 resources and figure out how to add the following styles on your page.\r\n\r\n* Add an underline to all of the smaller headers by using the text-decoration property.\r\n* Use the “text-align” property on paragraphs to align them on the page so that each line has the same width.",
+    "project_template_level_name": "CSDU2 - Guinness Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

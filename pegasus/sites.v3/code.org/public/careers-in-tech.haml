@@ -1,0 +1,31 @@
+---
+title: Careers in Tech
+theme: responsive
+video_player: true
+---
+
+%link{href: "/css/jumbotron-banner.css", rel: "stylesheet"}
+
+= view :jumbotron_banner, img: CDO.code_org_url("/images/girls-trying-vr.png"), title: "Careers in Tech", desc: "Careers in computer science and technology can be fun and rewarding. But what does a person working in these fields really do? With a vast variety of jobs and companies, there's not just one answer to this question. Explore the videos and resources below to meet some of the people who are tackling big problems in creative ways.", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Video Library', url: '#videos'}]
+
+#resources.responsive-body
+  .col-50.soft-padding
+    %h2 What Most Schools Don't Teach
+    = view :display_video_thumbnail, id: "what_most_schools_dont_teach", video_code: "nKIu9yen5nc", play_button: 'center'
+  .col-50.soft-padding
+    %h2 CS is Changing Everything
+    = view :display_video_thumbnail, id: "cs_changing_everything", video_code: "QvyTEx1wyOY", play_button: 'center'
+  .clear
+
+#videos
+  %h1.responsive-body Video library
+  .col-33.soft-padding
+    %h2 My name is Brina
+    = view :display_video_thumbnail, id: 'brina_instagram', video_code: 't0-Z_LfGwUM', caption: 'Meet Brina: Brina has worked as a software engineer on Instagram.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .col-33.soft-padding
+    %h2 My name is Federico
+    = view :display_video_thumbnail, id: 'jerome_microsoft', video_code: 'EUF2mad21jo', caption: 'Meet Federico: Federico is a technical program manager at Microsoft.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .clear
+

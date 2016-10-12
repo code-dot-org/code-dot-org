@@ -11,7 +11,7 @@ class AdminUsersController < ApplicationController
     user ||= User.find_by_email_or_hashed_email(params[:user_id])
 
     if user
-      sign_in user, :bypass => true
+      bypass_sign_in user
       redirect_to '/'
     else
       flash[:alert] = 'User not found'

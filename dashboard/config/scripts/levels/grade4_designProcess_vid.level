@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2016-08-02T14:25:24.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "video_key": "Unplug11",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions": "Prepare to build a project within some given parameters."
+  },
+  "published": true,
+  "notes": "Eventually, a new video will need to be created to explain the design process for this project.",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

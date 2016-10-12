@@ -6,18 +6,21 @@ EMPTY_XML = '<xml></xml>'
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_filter :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
-  before_filter :require_levelbuilder_mode, except: [:show, :index, :embed_blocks, :embed_level]
-  skip_before_filter :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
+  before_action :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
+  before_action :require_levelbuilder_mode, except: [:show, :index, :embed_blocks, :embed_level]
   load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
+  LEVELS_PER_PAGE = 100
+
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.all
+    levels = Level.order(updated_at: :desc)
+    levels = levels.where('name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/1
@@ -105,9 +108,7 @@ class LevelsController < ApplicationController
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       render json: @level.errors, status: :unprocessable_entity
-      return
-    end
-    if @level.update(level_params)
+    elsif @level.update(level_params)
       render json: { redirect: level_url(@level, show_callouts: 1) }
     else
       render json: @level.errors, status: :unprocessable_entity
@@ -121,7 +122,7 @@ class LevelsController < ApplicationController
     type_class = level_params[:type].constantize
 
     # Set some defaults.
-    params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
+    params[:level][:skin] ||= type_class.skins.first if type_class <= Blockly
     if type_class <= Grid
       default_tile = type_class == Karel ? {"tileType": 0} : 0
       start_tile = type_class == Karel ? {"tileType": 2} : 2
@@ -180,6 +181,8 @@ class LevelsController < ApplicationController
         @game = Game.netsim
       elsif @type_class == Craft
         @game = Game.craft
+      elsif @type_class == Weblab
+        @game = Game.weblab
       end
       @level = @type_class.new
       render :edit

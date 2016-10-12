@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ScriptLevelsHelperTest < ActionView::TestCase
-
   include LocaleHelper
   include ApplicationHelper
   include LevelsHelper
@@ -44,8 +43,8 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'show stage name in header for multi-stage script' do
     self.stubs(:current_user).returns(nil)
     script = Script.find_by_name(Script::COURSE4_NAME)
-    script_level = script.get_script_level_by_stage_and_position 3, 1
-    assert_equal 'Stage 3: ' + I18n.t("data.script.name.#{script.name}.#{script_level.stage.name}"), script_level.stage.summarize[:title]
+    script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
+    assert_equal 'Stage 3: ' + I18n.t("data.script.name.#{script.name}.stage.#{script_level.stage.name}"), script_level.stage.summarize[:title]
   end
 
   test 'show stage position in header for default script' do
@@ -57,7 +56,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'get End-of-Stage experience when enabled' do
     self.stubs(:current_user).returns(@student)
     script = @section.script
-    script_level = script.get_script_level_by_stage_and_position 2, 9
+    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
     assert script_level.end_of_stage?, 'bad script_level selected for test'
     @section.stage_extras = true
     @section.save
@@ -70,7 +69,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'do not get End-of-Stage experience when disabled' do
     self.stubs(:current_user).returns(@student)
     script = @section.script
-    script_level = script.get_script_level_by_stage_and_position 2, 9
+    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
     assert script_level.end_of_stage?, 'bad script_level selected for test'
     @section.stage_extras = false
     @section.save
@@ -83,7 +82,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'get End-of-Stage experience only for end of stage' do
     self.stubs(:current_user).returns(@student)
     script = @section.script
-    script_level = script.get_script_level_by_stage_and_position 2, 8
+    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 8, false
     assert_equal false, script_level.end_of_stage?, 'bad script_level selected for test'
     @section.stage_extras = true
     @section.save
@@ -95,7 +94,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'get End-of-Stage experience only for student of teacher' do
     script = @section.script
-    script_level = script.get_script_level_by_stage_and_position 2, 9
+    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
     assert script_level.end_of_stage?, 'bad script_level selected for test'
     @section.stage_extras = true
     @section.save

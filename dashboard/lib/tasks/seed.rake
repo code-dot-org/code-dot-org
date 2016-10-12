@@ -7,21 +7,6 @@ namespace :seed do
     Video.setup
   end
 
-  STANFORD_HINTS_FILE = 'config/stanford-hints-bestPath1.tsv'
-  STANFORD_HINTS_IMPORTED = 'config/scripts/.hints_imported'
-  file STANFORD_HINTS_IMPORTED => [STANFORD_HINTS_FILE, :environment] do
-    LevelSourceHint.transaction do
-      source_name = LevelSourceHint::STANFORD
-      LevelSourceHint.delete_all(['source=?', source_name])
-      CSV.read(STANFORD_HINTS_FILE, { col_sep: "\t" }).each do |row|
-        LevelSourceHint.create!(
-          level_source_id: row[0], hint: row[1],
-          status: 'experiment', source: source_name)
-      end
-    end
-    touch STANFORD_HINTS_IMPORTED
-  end
-
   task concepts: :environment do
     Concept.setup
   end
@@ -116,16 +101,6 @@ namespace :seed do
       # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
       # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
       SchoolDistrict.find_or_create_all_from_tsv!('config/school_districts.tsv')
-    end
-  end
-
-  task trophies: :environment do
-    # code in user.rb assumes that broze id: 1, silver id: 2 and gold id: 3.
-    Trophy.transaction do
-      Trophy.reset_db
-      %w(Bronze Silver Gold).each_with_index do |trophy, id|
-        Trophy.create!(id: id + 1, name: trophy, image_name: "#{trophy.downcase}trophy.png")
-      end
     end
   end
 
@@ -267,10 +242,10 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
+  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]
 end

@@ -4,5 +4,4 @@ class Api::V1::SchoolDistrictsController < ApplicationController
   def index
     render json: ActiveModel::Serializer.new(SchoolDistrict.where(state: params[:state]), each_serializer: Api::V1::SchoolDistrictSerializer)
   end
-
 end

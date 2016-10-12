@@ -9,13 +9,14 @@ require 'timecop'
 # actual SQS service.
 unless ENV['USE_REAL_SQS']
   Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
-  $fake_sqs_service = FakeSQS::TestIntegration.new(database: ':memory:',
-                                                   sqs_endpoint: 'localhost', sqs_port: 4568)
-  sleep(2) # add a sleep to fix test failures with 'RuntimeError: FakeSQS didn't start in time'
+  $fake_sqs_service = FakeSQS::TestIntegration.new(
+    database: ':memory:',
+    sqs_endpoint: 'localhost',
+    sqs_port: 4568
+  )
 end
 
 class ActivityTest < ActiveSupport::TestCase
-
   def setup
     @sqs = Aws::SQS::Client.new
 
@@ -107,5 +108,4 @@ class ActivityTest < ActiveSupport::TestCase
     response = @sqs.receive_message(queue_url: queue_url, wait_time_seconds: 10)
     handler.handle(response.messages.map {|msg| SQS::Message.new(msg.body)})
   end
-
 end

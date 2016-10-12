@@ -1,117 +1,216 @@
-/*
-  Table displaying workshop summaries based on a supplied query.
+/**
+ * Table displaying workshop summaries based on a supplied query.
  */
 
-import $ from 'jquery';
-var _ = require('lodash');
+import _, {orderBy} from 'lodash';
 import React from 'react';
-var WorkshopTableRow = require('./workshop_table_row');
-var Table = require('react-bootstrap').Table;
+import {Button} from 'react-bootstrap';
+import {Table, sort} from 'reactabular';
+import color from '../../../../color';
+import SessionTimesList from './session_times_list';
+import FacilitatorsList from './facilitators_list';
+import WorkshopManagement from './workshop_management';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import { workshopShape } from '../types.js';
 
-var WorkshopTable = React.createClass({
-  contextTypes: {
-    router: React.PropTypes.object.isRequired
-  },
-
+const WorkshopTable = React.createClass({
   propTypes: {
-    queryUrl: React.PropTypes.string.isRequired,
+    workshops: React.PropTypes.arrayOf(workshopShape),
     canEdit: React.PropTypes.bool,
-    canDelete: React.PropTypes.bool
+    onDelete: React.PropTypes.func,
+    showSignupUrl: React.PropTypes.bool,
+    showOrganizer: React.PropTypes.bool
   },
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
       canEdit: false,
-      canDelete: false
+      onDelete: null,
+      showSignupUrl: false,
+      showOrganizer: false
     };
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {
-      loading: true
+      sortingColumns: {
+        0: {
+          direction: 'asc',
+          position: 0
+        }
+      }
     };
   },
 
-  componentDidMount: function () {
-    this.loadRequest = $.ajax({
-        method: 'GET',
-        url: this.props.queryUrl,
-        dataType: 'json'
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
+  },
+
+  onSort(selectedColumn) {
+    const sortingColumns = sort.byColumn({
+      sortingColumns: this.state.sortingColumns,
+      // Custom sortingOrder removes 'no-sort' from the cycle
+      sortingOrder: {
+        FIRST: 'asc',
+        asc: 'desc',
+        desc: 'asc'
+      },
+      selectedColumn
+    });
+
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns
       })
-      .done(function (data) {
-        this.setState({
-          loading: false,
-          workshops: data
-        });
-      }.bind(this));
+    });
   },
 
-  componentWillUnmount: function () {
-    if (this.loadRequest) {
-      this.loadRequest.abort();
-    }
-    if (this.deleteRequest) {
-      this.deleteRequest.abort();
-    }
+  formatSessions(_ignored, {rowData}) {
+    return <SessionTimesList sessions={rowData.sessions}/>;
   },
 
-  handleView: function (workshop) {
-    this.context.router.push('/workshops/' + workshop.id);
-  },
-  handleEdit: function (workshop) {
-    this.context.router.push('/workshops/' + workshop.id + '/edit');
-  },
-  handleDelete: function (workshop_index, workshop) {
-    this.deleteRequest = $.ajax({
-        method: 'DELETE',
-        url: '/api/v1/pd/workshops/' + workshop.id
-      })
-      .done(function () {
-        var workshops = _.cloneDeep(this.state.workshops);
-        workshops.splice(workshop_index, 1);
-        this.setState({workshops: workshops});
-      }.bind(this));
+  formatOrganizer(organizer) {
+    return `${organizer.name} (${organizer.email})`;
   },
 
-  render: function () {
-    if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
-    }
+  formatFacilitators(facilitators) {
+    return <FacilitatorsList facilitators={facilitators} />;
+  },
 
-    if (this.state.workshops.length === 0) {
-      return <p>None.</p>;
-    }
-
-    var tableRows = this.state.workshops.map(function (workshop, i) {
-      return (
-        <WorkshopTableRow
-          workshop={workshop}
-          key={workshop.id}
-          onView={this.handleView}
-          onEdit={this.props.canEdit ? this.handleEdit : null}
-          onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
-        />
-      );
-    }.bind(this));
+  formatSignupUrl(workshopId) {
+    const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
     return (
-      <Table striped bordered condensed hover>
-        <thead>
-        <tr>
-          <th>Date and Time</th>
-          <th>Location</th>
-          <th>Type</th>
-          <th>Course</th>
-          <th>Signups</th>
-          <th>Facilitators</th>
-          <th>Current State</th>
-          <th>Manage</th>
-        </tr>
-        </thead>
-        <tbody>
-        {tableRows}
-        </tbody>
-      </Table>
+      <a href={signupUrl} target="_blank">
+        {signupUrl}
+      </a>
+    );
+  },
+
+  formatManagement(workshopId) {
+    return (
+      <WorkshopManagement
+        workshopId={workshopId}
+        viewUrl={`/workshops/${workshopId}`}
+        editUrl={this.props.canEdit ? `/workshops/${workshopId}/edit` : null}
+        onDelete={this.props.onDelete}
+      />
+    );
+  },
+
+  render() {
+    const rows = _.map(this.props.workshops,
+      row => _.merge(row, {
+        signups: `${row.enrolled_teacher_count} / ${row.capacity}`,
+        firstSessionStart: row.sessions[0].start
+      })
+    );
+
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      {
+        default: {color: color.light_gray}
+      }
+    );
+
+    let columns = [];
+    columns.push({
+      property: 'firstSessionStart', // for sorting
+      header: {
+        label: 'Date and Time',
+        transforms: [sortable]
+      },
+      cell: {
+        format: this.formatSessions
+      }
+    }, {
+      property: 'location_name',
+      header: {
+        label: 'Location',
+        transforms: [sortable]
+      }
+    }, {
+      property: 'workshop_type',
+      header: {
+        label: 'Type',
+        transforms: [sortable]
+      }
+    }, {
+      property: 'course',
+      header: {
+        label: 'Course',
+        transforms: [sortable]
+      }
+    }, {
+      property: 'signups',
+      header: {
+        label: 'Signups',
+        transforms: [sortable]
+      }
+    });
+
+    if (this.props.showOrganizer) {
+      columns.push({
+        property: 'organizer',
+        header: {
+          label: 'Organizer',
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatOrganizer
+        }
+      });
+    }
+
+    columns.push({
+      property: 'facilitators',
+      header: {
+        label: 'Facilitators',
+        transforms: [sortable]
+      },
+      cell: {
+        format: this.formatFacilitators
+      }
+    });
+
+    if (this.props.showSignupUrl) {
+      columns.push({
+        property: 'id',
+        header: {
+          label: 'Signup Url'
+        },
+        cell: {
+          format: this.formatSignupUrl
+        }
+      });
+    }
+
+    columns.push({
+      property: 'id',
+      header: {
+        label: 'Manage'
+      },
+      cell: {
+        format: this.formatManagement
+      }
+    });
+
+    const {sortingColumns} = this.state;
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: orderBy
+    })(rows);
+
+    return (
+      <Table.Provider
+        className="table table-striped table-condensed"
+        columns={columns}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id"/>
+      </Table.Provider>
     );
   }
 });
-module.exports = WorkshopTable;
+export default WorkshopTable;

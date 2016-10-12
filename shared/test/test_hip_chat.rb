@@ -4,7 +4,6 @@ require 'webmock/minitest'
 require 'cdo/hip_chat'
 
 class HipchatTest < Minitest::Test
-
   # Use a short retry backoff for this test to keep the test fast.
   BACKOFF = 0.02
 
@@ -113,5 +112,4 @@ class HipchatTest < Minitest::Test
     assert_equal "*dashboard* tests failed <https://a-link.to/somewhere|html output>\n_rerun: bundle exec ./runner.rb -c iPhone -f features/applab/sharedApps.feature --html_",
       HipChat.slackify('<b>dashboard</b> tests failed <a href="https://a-link.to/somewhere">html output</a><br/><i>rerun: bundle exec ./runner.rb -c iPhone -f features/applab/sharedApps.feature --html</i>')
   end
-
 end

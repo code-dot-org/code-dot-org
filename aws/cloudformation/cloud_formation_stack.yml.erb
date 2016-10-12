@@ -4,14 +4,17 @@ unless dry_run
   update_bootstrap_script.call
   update_certs.call unless cdn_enabled
 end
+commit = '521b9fa4942aded6733afd98bc17079d4c23c457'
+#commit = (ENV['COMMIT'] || `git ls-remote origin #{branch} | cut -f1`.strip)
+
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
-  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
-  AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
+  VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
+  IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
+  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
@@ -43,17 +46,14 @@ Resources:
         Timeout: 300
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
-    UpdatePolicy:
-      AutoScalingReplacingUpdate:
-        WillReplace: true
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT25M
+        Timeout: PT50M
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 2
-      MaxSize: 12
+      MaxSize: 20
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
@@ -66,23 +66,23 @@ Resources:
       AutoScalingGroupName: {Ref: WebServer}
       MetricAggregationType: Average
       MinAdjustmentMagnitude: 1
-      EstimatedInstanceWarmup: 300
+      EstimatedInstanceWarmup: 600
       PolicyType: StepScaling
       StepAdjustments:
-        # 60-70% cpu, +20% instances
+        # 50-60% cpu, +20% instances
         - MetricIntervalLowerBound: 0
           MetricIntervalUpperBound: 10
           ScalingAdjustment: 20
-        # 70-80% cpu, +40% instances
+        # 60-70% cpu, +40% instances
         - MetricIntervalLowerBound: 10
           MetricIntervalUpperBound: 20
           ScalingAdjustment: 40
-        # 80-90% cpu, +60% instances
+        # 70-90% cpu, +60% instances
         - MetricIntervalLowerBound: 20
-          MetricIntervalUpperBound: 30
+          MetricIntervalUpperBound: 40
           ScalingAdjustment: 60
         # 90-100% cpu, +80% instances
-        - MetricIntervalLowerBound: 30
+        - MetricIntervalLowerBound: 40
           ScalingAdjustment: 80
   ScaleDownPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
@@ -90,41 +90,57 @@ Resources:
       AdjustmentType: PercentChangeInCapacity
       AutoScalingGroupName: {Ref: WebServer}
       MetricAggregationType: Average
+      MinAdjustmentMagnitude: 1
       EstimatedInstanceWarmup: 300
       PolicyType: StepScaling
       StepAdjustments:
-        # 60-40% cpu, no adjustment
+        # 30-25% cpu, -10% instances
         - MetricIntervalUpperBound: 0
-          MetricIntervalLowerBound: -20
-          ScalingAdjustment: 0
-        # 40-30% cpu, -20% instances
-        - MetricIntervalUpperBound: -20
-          MetricIntervalLowerBound: -30
+          MetricIntervalLowerBound: -5
+          ScalingAdjustment: -10
+        # 25-20% cpu, -15% instances
+        - MetricIntervalUpperBound: -5
+          MetricIntervalLowerBound: -10
+          ScalingAdjustment: -15
+        # 20-15% cpu, -20% instances
+        - MetricIntervalUpperBound: -10
+          MetricIntervalLowerBound: -15
           ScalingAdjustment: -20
-        # 30-20% cpu, -30% instances
-        - MetricIntervalUpperBound: -30
-          MetricIntervalLowerBound: -40
-          ScalingAdjustment: -30
-        # 20-10% cpu, -40% instances
-        - MetricIntervalUpperBound: -40
-          MetricIntervalLowerBound: -50
+        # 15-10% cpu, -30% instances
+        - MetricIntervalUpperBound: -15
+          MetricIntervalLowerBound: -20
           ScalingAdjustment: -40
         # 10-0% cpu, -50% instances
-        - MetricIntervalUpperBound: -50
+        - MetricIntervalUpperBound: -20
           ScalingAdjustment: -50
   ScaleUpAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmDescription: Scale-up if average CPU is greater than 60% for 10 minutes
+      AlarmDescription: Scale-up if average CPU is greater than 50% for 10 minutes
       AlarmActions: [Ref: ScaleUpPolicy]
-      OKActions: [Ref: ScaleDownPolicy]
+#      OKActions: [Ref: ScaleDownPolicy]
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
       Period: 300
       EvaluationPeriods: 2
-      Threshold: 60
+      Threshold: 50
       ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: AutoScalingGroupName
+          Value: {Ref: WebServer}
+  ScaleDownAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Scale-down if average CPU is less than 30% for 10 minutes
+      AlarmActions: [Ref: ScaleDownPolicy]
+      MetricName: CPUUtilization
+      Namespace: AWS/EC2
+      Statistic: Average
+      Period: 300
+      EvaluationPeriods: 2
+      Threshold: 30
+      ComparisonOperator: LessThanOrEqualToThreshold
       Dimensions:
         - Name: AutoScalingGroupName
           Value: {Ref: WebServer}
@@ -146,17 +162,39 @@ Resources:
           resource_id: 'WebServer',
           node_name: 'fe-${INSTANCE_ID}',
           run_list: ['role[front-end]'],
-          commit: `git ls-remote origin #{branch} | cut -f1`.strip )%>
+          commit: commit )%>
   WebServerHook:
     Type: AWS::AutoScaling::LifecycleHook
     Properties:
       AutoScalingGroupName: {Ref: WebServer}
       LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
       DefaultResult: ABANDON
-      HeartbeatTimeout: 1800 # seconds = 30 minutes
+      HeartbeatTimeout: 3000 # seconds = 50 minutes
       NotificationTargetARN: {Ref: WebServerHookTopic}
       RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
   WebServerHookTopic: {Type: 'AWS::SNS::Topic'}
+
+  # Scale up min instances at 4AM PDT (=11:00 UTC)
+  ClassroomTrafficBegin:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      MinSize: 5
+      Recurrence: "0 11 * * MON-FRI"
+  # Scale down min instances at 1PM PDT (=20:00 UTC)
+  ClassroomTrafficEnd:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      MinSize: 3
+      Recurrence: "0 20 * * MON-FRI"
+  # Further scale down min instances at 8PM PDT (=3:00+1day UTC)
+  Overnight:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      MinSize: 2
+      Recurrence: "0 3 * * TUE-SAT"
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = "#{app == 'Dashboard' ? 'dashboard-' : ''}#{subdomain}"
@@ -192,7 +230,7 @@ Resources:
       )%>
 <%   end -%>
 <% end -%>
-<% if cdn_enabled%>
+<% if cdn_enabled -%>
   OriginDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:

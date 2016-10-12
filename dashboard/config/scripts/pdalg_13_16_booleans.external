@@ -1,19 +1,16 @@
 name 'PDAlg 13-16 Booleans'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
-### Lessons 13-16 > Booleans
+# Lessons 13-16 > Booleans
 
 From this point until the end of the course our focus shifts towards looking at more CS focused concepts, the first of which is booleans. To support students in practicing booleans we again defer to [Bootstrap](http://www.bootstrapworld.org) for some supplemental worksheets.
 
-#### Supplemental Worksheets
+## Supplemental Worksheets
 
-The following worksheets refer to converting Circles of Evaluation to code, but because we use the circles _as_ the code you can use these to have students translate from circles to function notation
+The following worksheets refer to converting Circles of Evaluation to code, but because we use the circles _as_ the code you can use these to have students translate from circles to function notation.
+
 - [Boolean Circles of Evaluation 1](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit6/exercises/AndOr/boolean-coe-to-code1.html)
 - [Boolean Circles of Evaluation 2](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit6/exercises/AndOr/boolean-coe-to-code2.html)
-
-<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -1,0 +1,117 @@
+#!/usr/bin/env ruby
+# A script to analyze a range of CircleCI builds for known failures.
+# For available options, run ./search-circle-builds -h
+
+require 'active_support/time'
+require 'optparse'
+require_relative './circle_project'
+
+class Hash
+  # Like Enumerable::map but returns a Hash instead of an Array
+  def hmap(&block)
+    Hash[self.map {|k, v| yield k, v }]
+  end
+end
+
+options = {
+  output_format: 'human-readable',
+  custom_columns: []
+}
+OptionParser.new do |opts|
+  opts.banner = 'Usage: ./compute-failure-rates [options]'
+
+  opts.separator <<-EXAMPLES
+
+  Examples:
+
+    Default behavior, view stats for the last 30 builds:
+    ./compute-failure-rates
+
+    View stats for 30 builds ending at build 123:
+    ./compute-failure-rates --end 123
+
+    View stats for all builds since (and including) build 123:
+    ./compute-failure-rates --start 123
+
+    View status for builds in range 123-456 inclusive:
+    ./compute-failure-rates --start 123 --end 456
+
+  Options:
+  EXAMPLES
+
+  opts.on('--start StartBuildNumber', String, 'Start searching at build #. Default: Get 30 builds.') do |n|
+    options[:start_build] = n.to_i
+  end
+  opts.on('--end EndBuildNumber', String, 'End searching at build #. Default: Latest build.') do |n|
+    options[:end_build] = n.to_i
+  end
+  opts.on('--group branchName,branchName', Array, 'Add a column aggregating results for the listed branches.') do |a|
+    options[:custom_columns] << a
+  end
+  opts.on('--csv', 'Display results in CSV format.') do
+    options[:output_format] = 'csv'
+  end
+  opts.on_tail('-h', '--help', 'Show this message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+@project = CircleProject.new('code-dot-org/code-dot-org')
+
+# Download and format the build information we need
+build_range = @project.build_range_from_options(options)
+build_infos = @project.get_builds(build_range).map do |build|
+  next if build['queued_at'].nil? || build['branch'].nil? || build['outcome'].nil?
+  {
+    build_num: build['build_num'],
+    queued_at: DateTime.parse(build['queued_at']),
+    branch: build['branch'],
+    succeeded: build['outcome'] == 'success'
+  }
+end
+
+# Group the builds by date
+builds_by_date = build_infos.compact.group_by do |build_info|
+  build_info[:queued_at].to_time.in_time_zone('Pacific Time (US & Canada)').strftime('%Y-%m-%d')
+end
+
+# Define columns - each maps to a lambda that filters builds
+columns = {
+  'Total' => -> (builds) {builds},
+  'Pipeline' => -> (builds) {builds.select {|i| %w(staging test production).include?(i[:branch])}},
+  'Branch' => -> (builds) {builds.reject {|i| %w(staging test production).include?(i[:branch])}}
+}
+options[:custom_columns].each do |branches|
+  columns[branches.join(',')] = -> (builds) {builds.select{|i| branches.include?(i[:branch])}}
+end
+
+# Compute map of stats for each date
+stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
+  [date, columns.hmap do |name, column|
+    builds = column.call build_infos_for_date
+    failed_builds = builds.reject {|i| i[:succeeded]}
+    [name, {
+        total_builds: builds.size,
+        failed_builds: failed_builds.size,
+        failure_rate: Float(failed_builds.size) / builds.size
+    }]
+  end]
+end
+
+# Print build stats
+puts "Failure rates for builds #{build_range} by date (1.0 = 100% failures)"
+if options[:output_format] == 'csv'
+  puts "%s#{',%s' * columns.size}" % (['Date'] + columns.keys)
+  stats_by_date.each do |date, stats|
+    puts "%s#{',%.3f' * columns.size}" % ([date] + stats.map {|_, v| v[:failure_rate].round(3)})
+  end
+else
+  puts "%-10s#{' %16s' * columns.size}" % (['Date'] + columns.keys.map {|k| k[0, 14]})
+  stats_by_date.each do |date, stats|
+    puts "%-10s#{'  %7s = %5.3f' * columns.size}" %
+           ([date] + stats.map {|_, v| ["%s/%s" % [v[:failed_builds], v[:total_builds]], v[:failure_rate].round(3)]}.flatten)
+  end
+end
+
+exit(0)

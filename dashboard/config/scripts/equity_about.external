@@ -1,11 +1,9 @@
 name 'Equity About'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Getting Started: About the Course
 
-### GETTING STARTED: About the Course
-
-#### Learning Objectives 
+## Learning Objectives 
 
 Through completing this online course, participants will:
 
@@ -14,7 +12,7 @@ Through completing this online course, participants will:
 - Identify resources for further discussion and study
 - Develop strategies for meeting your own goals around equity
 
-#### Course Outline
+## Course Outline
 
 **Stage 1: Getting Started**
 
@@ -37,19 +35,17 @@ Through completing this online course, participants will:
 - Identify next steps
 - Access resources and your digital certificate
 
-#### Pre-requisites
+## Pre-requisites
 
 No previous experience with coding or computer science education is assumed. This is a beginner's course.
-<br/><br/>
 
-#### Course Duration
+## Course Duration
+
 Completing this online course should take between 1-2 hours, depending on your prior knowledge and how deep you want to dive into the Code.org resources.
 
-#### Course Certification
+## Course Certification
 
 After completing this course, you'll have access to a digital certificate of completion.
-<br/><br/>
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

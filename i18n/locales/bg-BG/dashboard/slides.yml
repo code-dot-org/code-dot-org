@@ -3,7 +3,7 @@ bg:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Добре дошли в първия си час по програмиране! Нека да се потопим направо в първото си предизвикателство.
+        text: Добре дошли в първия си час на кода! Нека да се потопим в първото си предизвикателство.
       2:
         image: notes/hoc1_2.jpg
         text: 'Ние ще  използваме Blockly. Това е визуален език за програмиране, където трябва само да плъзнете и пуснете блоковете за да напишете код.'
@@ -703,10 +703,10 @@ bg:
           защото в нета дебнат опасности и страхове!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
+        text: 'И така, мисли с главата си и чувствай със сърцето си, балансирай с ръцете и слушай с интуицията си - онлайн. Използвай краката си за да тичаш и риташ, и да скачаш, и подскачаш с "пого стик", и да танцуваш около блока, и да си подскачаш с миризливите чорапи. Използвай краката си докато си онлайн, за да се изправиш срещу побойниците, които прекаляват. И запомни бъди горд и бъди дружелюбен със създания малки и създания големи.'
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online! So think with your head, and feel with your heart, balance with your arms, listen to your gut, stand up with your legs. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!
+        text: От главата до пръстите на краката, пауза, мисли за това. От краката си до носа, спри и мисли онлайн! Така че, помисли с главата си и почувствай със сърцето си, балансирай с ръце, вслушай се в червата, изправи се на крака. От главата до пръстите на краката, пауза, мисли за това. От краката си до носа, спри и помисли онлайн!
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
@@ -915,7 +915,7 @@ bg:
         text: Този урок се нарича сазтезание с зарове. Почти всеки обича да играе компютърни игри. Замисляли ли сте се за това как компютърни програмисти превращат стъпките на игра в една програма? Първата стъпка в създаване на компютърни игри и при решаването на всеки проблем изисква мислене и планиране.
       2:
         image: notes/C3_dice_race_2.png
-        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+        text: Когато мислиш за решаването на даден проблем, ти създаваш алгоритъм, който е стъпка по стъпка план за решаване на подобни проблеми или завършване на задача. В този урок вие ще създадете алгоритъм за игра на зарове. Когато сте готови, изпробвайте го с вашите приятели, за да видите дали те могат да следват стъпките, за да играят играта. Когато програмиста е сигурен, че стъпките са правилни, е време да се преведе алгоритъма на програмен език, така че компютърът да може да го разбере.
       3:
         image: notes/C3_dice_race_3.png
         text: Почти всичко, което правим всеки ден изисква алгоритъм, списък от стъпки, който можете да следвате за да завършиет дадена задача. Помислете за оправянето за училище или планиране на забавен ден с вашите приятели или фиксиране на лека закуска. За да изпълните някоя от тези задачи, ще трябва да го раздобите на по-малки стъпки и понякога стъпките трябва да бъдат в определен ред.
@@ -924,43 +924,43 @@ bg:
         text: Помислете за правенето на един сандвич. Няма значение коя съставка сйставка извадите от шкафа първа. Но не може да намажете фъстъченото масло, докато не сте отворили буркана. Компютрите използват алгоритми и програми, за да им покажете какво да направя дори прости неща, които ние можем да направим и без да мислим за тях.
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
+        text: 'Алгоритъмът - това е мисълта за това какво трябва да се случи, докато програмата са конкретните инструкции дадени на компютъра, за да го направят да се случи. Алгоритмите трябва да бъдат "преведени" в програма, преди компютъра да може да ги изпълни. Разделянето на дадена задача на малки стъпки, наречени алгоритъм понякога е трудна задача. Но като всяко ново умение, с практиката става все по-лесно.'
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: "While loops are pretty similar to what you do in everyday life. Imagine you are washing your car, you'll keep scrubbing until it's clean. While it's not clean, continue to scrub. You're evaluating these things all the time."
+        text: '"Докато" циклите са доста подобни на това, което правиш в ежедневния живот. Представи си че миеш колата, и трябва да я търкаш до пълно почистване. Докато не е чисто, ти трябва да продължиш да търкаш. Ти преценяваш това през цялото време.'
       2:
         image: notes/C3_farmer_while_2.png
-        text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
+        text: Трябва ни нов поглед, за да помогнем на фермера. Той се нарича докато-блок. Всъщност е доста лесно. Докато твърдението в горната част е вярно, трябва да се направи нещо. Например, докато има купчина извършвай действие премахване. Давай напред и да го пробваме с фермера.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: Този урок е за функционални слънцеотразители. Вие ще създавате много такива с помощта на функции. Има няколко стъпки в създаването на един слънцеотразител. Някои от стъпките, които правите, трябва да се повтарят много пъти.
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+        text: Първата стъпка в опростяване на процеса на правене на suncatcher е да разберем какво се повтаря отново и отново. Ние може да групирате тези стъпки в това, което ние наричаме функция.
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+        text: Но има нещо повече за създаването на красиви suncatcher отколкото следване на точните стъпки. Понякога искаме да бъдем креативни и ще използваме промяна на цвета на мънистата. Можем да направим всеки suncatcher уникален, ако използваме различни цветни мъниста.
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: Вашият слънцеотрозител ще бъде уникален, когато се научите да мислите за мънистата като за променливи, които са контейнери за информация, която може да променяме. Забавлявайте се докато създавате красиви слънцеотразители, използвайки функции и променливи!
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: This lesson is all about the internet. The internet is a very busy place and similar to this busy road. Messages like cars are zooming along to get to their destinations. Messages move through the internet very quickly.
+        text: В този урок става въпрос за интернет. Интернет е много оживено място и наподобява на този оживен път. Съобщенията са като автомобилите, които се стремят да стигнат до техните дестинации. Съобщенията се движат през интернет много бързо.
       2:
         image: notes/C3_internet_2.png
-        text: "Acting out how the internet works will help you understand what's happening when you use the internet. You'll learn how messages get from your computer to a favorite website or from a friend to an email inbox. Just like it's easier to navigate busy roads when you know the roads and can read the signs, traveling the internet is not so complicated when you know what goes on behind the scenes."
+        text: Представата как работи интернет ще ви помогне да разберете какво се случва, когато го използвате. Ще научите как съобщенията от вашия компютър достигат до любимите уеб сайтове или до приятел по електронната поща. Точно както е по-лесно да избягвате задръстванията, когато знаете пътищата, така и пътуването в интернет не е толкова сложно, когато знаете какво се случва зад кулисите.
       3:
         image: notes/C3_internet_3.png
-        text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
+        text: Изпращането на съобщения по интернет наподобява изпращане на писмо по пощата, но с няколко различия. Аз съм тук в Google.com. IP адресът за този сайт е този номер. Може да мислите за IP адреса като обратен адрес по пощата. Представете си, че аз искам да изпратя съобщение по пощата някой в офиса там долу. Виждате ли URL и IP адреса на тази врата? Аз съм пиша съобщението и натискам Изпрати.
       4:
         image: notes/C3_internet_4.png
-        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+        text: За разлика от пощенските услуги първото нещо, което се случва е, че интернет накъсва съобщението по-малки части, така че то да може да бъде изпратено по-лесно. Тези малки части се наричат пакети. Всеки пакет на съобщението се доставя до местоназначението, един по един. Тези пакети, всички, се събират заедно в правилния ред, така че приемникът може да прочете съобщението правилно. Разбира се има още много неща, свързани с това как работи интернет, но това е едно чудесно начало. Вие сте на път да станете знаещ интернет потребител! Не забравяйте да кажете на семейството и приятелите си какво сте научили!
       5:
         image: notes/C3_internet_5.png
-        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+        text: Моето име е Аманда Камп и съм софтуерен инженер в Google. Работя в екипа, отговарящ за сървъра, на който съхраняват профили и контакти. В моята работа се налага да се обмислят варианти за прехвърляне на контакти от едно на друго устройство, като телефона. Повечето хора имат много контакти, понякога дори 1000 и ние не искаме да изпратите всички тези контакти наведнъж в телефона си, защото се получава твърде голямо съобщение. Подобно на начина, по който интернет се разпада големи съобщения на пакети, ние използваме концепция, която се нарича страниране където може да изпратите до телефона само 100 контакта наведнъж, а след това телефона ви да поиска следващите 100.
       6:
         image: notes/C3_internet_6.png
         text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
@@ -1273,7 +1273,7 @@ bg:
         text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
       3:
         image: notes/unplug2_3.png
-        text: "First groups will decompose the task which means make a game plan. Then they'll look for patterns between all the monsters in the catalog. When they come across differences between the monsters, they'll abstract or remove those details. For instance, one monster in the catalog has vegitas eyes and another has spritem eyes. But they both have eyes so we can write a line that says the monster has blank eyes."
+        text: Първите групи ще имат за задача да направят план на игра. След това те ще търсят модели между всички чудовища в каталога. Когато намерят разлики между чудовищата, те ще трябва да ги отделят. Например едно чудовище в каталога има vegitas очи и друго е с spritem очи. Но те и двете имат очи, така че ние можем да напишем, че чудовището има празни очи.
       4:
         image: notes/unplug2_4.png
         text: "So students will be able to write a set of instructions, called an algorithm, that list the monsters' parts with blanks for what the styles should be. This is the set of instructions they'll pass to other students to recreate their very own monster."

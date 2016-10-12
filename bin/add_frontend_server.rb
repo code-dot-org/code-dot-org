@@ -98,11 +98,9 @@ def determine_frontend_instance_distribution
 
   frontend_instances.flatten!
 
-  instance_distribution = frontend_instances.each_with_object(Hash.new(0)) { |(instance, _), instance_distribution|
+  frontend_instances.each_with_object(Hash.new(0)) { |(instance, _), instance_distribution|
     instance_distribution[instance.placement.availability_zone] += 1
   }
-
-  instance_distribution
 end
 
 # Return an array of objects that have the names and zones of instances to create
@@ -277,7 +275,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
                             ],
                         })
 
-  instance_info = @ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
+  instance_info = @ec2client.describe_instances({instance_ids: [instance_id]}).reservations[0].instances[0]
   private_dns_name = instance_info.private_dns_name
   public_dns_name = instance_info.public_dns_name
   instance_provisioning_info.private_dns = private_dns_name

@@ -1,8 +1,7 @@
 name 'OPD-K5 Stage2Go'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
-### CS FUNDAMENTALS > Looking Ahead
+# CS Fundamentals > Looking Ahead
 
 We hope this stage gave you a good introduction to computer science.
 
@@ -13,10 +12,7 @@ By completing this stage, you should be able to:
 - Differentiate between "coding" and "computer science"
 - Explain the benefits of beginning to code using visual programming
 
->**Teaching Tip:** While computer science can be a rich and complex discipline, at code.org we recognize that teachers and students need to master the basics before diving in to higher-level projects. This online course teaches you, the teacher, those basics so that you can support your students in doing so as well.
+> **Teaching Tip:** While computer science can be a rich and complex discipline, at code.org we recognize that teachers and students need to master the basics before diving in to higher-level projects. This online course teaches you, the teacher, those basics so that you can support your students in doing so as well.
 
 In the next stage, we'll briefly introduce you to some frameworks for thinking about the rest of the content in this course. Then, we'll dive right in and start learning computer science.
-<br><br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -147,12 +147,15 @@ module.exports = {
     {
       description: 'extra top block',
       expected: {
-        result: false,
-        testResult: TestResults.EXTRA_TOP_BLOCKS_FAIL
+        result: true,
+        testResult: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS
       },
       xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_times', [
+          blockUtils.calcBlockXml('functional_plus', [1, 2]),
+          blockUtils.calcBlockXml('functional_plus', [3, 4])
+        ]) +
         blockUtils.calcBlockXml('functional_plus', [1, 2]) +
-        blockUtils.calcBlockXml('functional_plus', [3, 2]) +
       '</xml>'
     },
     {

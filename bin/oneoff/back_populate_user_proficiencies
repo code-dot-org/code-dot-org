@@ -1,0 +1,215 @@
+#!/usr/bin/env ruby
+#
+# This script reads a file of user proficiencies (one per line). For each, it
+# checks to see if there is an existing row. If there is, it adds the values to
+# the row, setting timestamps appropriately. If not, it creates a row.
+#
+# Note that this script assumes a list of user proficiencies within the file
+# /tmp/user_proficiencies.csv. Since this file contains non-public data, it will
+# live only temporarily (also not within source control) at that location.
+#
+# Note that another approach would be to save this data to a temporary DB
+# table, then combining the DB tables. This seems inferior, as disk load is
+# preferred to DB load.
+#
+# There are 2_208_750 rows in the production /tmp/user_proficiencies.csv.
+
+# The CSV was generated from a mysqldump of a MySQL table with the following
+# definition:
+#   CREATE TABLE `historical_proficiency` (
+#     `user_id` int(11) NOT NULL DEFAULT '0',
+#     `user_type` varchar(16) CHARACTER SET utf8 NOT NULL DEFAULT '',
+#     `gender` varchar(1) CHARACTER SET utf8 NOT NULL DEFAULT '',
+#     `has_teacher` int(11) NOT NULL DEFAULT '0',
+#     `sequencing_d1_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d2_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d3_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d4_count` decimal(23,0) DEFAULT NULL,
+#     `sequencing_d5_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d1_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d2_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d3_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d4_count` decimal(23,0) DEFAULT NULL,
+#     `debugging_d5_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d1_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d2_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d3_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d4_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_loops_d5_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d1_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d2_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d3_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d4_count` decimal(23,0) DEFAULT NULL,
+#     `repeat_until_while_d5_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d1_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d2_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d3_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d4_count` decimal(23,0) DEFAULT NULL,
+#     `for_loops_d5_count` decimal(23,0) DEFAULT NULL,
+#     `events_d1_count` decimal(23,0) DEFAULT NULL,
+#     `events_d2_count` decimal(23,0) DEFAULT NULL,
+#     `events_d3_count` decimal(23,0) DEFAULT NULL,
+#     `events_d4_count` decimal(23,0) DEFAULT NULL,
+#     `events_d5_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d1_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d2_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d3_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d4_count` decimal(23,0) DEFAULT NULL,
+#     `variables_d5_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d1_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d2_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d3_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d4_count` decimal(23,0) DEFAULT NULL,
+#     `functions_d5_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d1_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d2_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d3_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d4_count` decimal(23,0) DEFAULT NULL,
+#     `functions_with_params_d5_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d1_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d2_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d3_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d4_count` decimal(23,0) DEFAULT NULL,
+#     `conditionals_d5_count` decimal(23,0) DEFAULT NULL
+#   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+TIME_NOW = DateTime.now.freeze
+# The time at which we started tracking incremental user proficiency.
+TIME_CUTOFF = DateTime.new(2016, 4, 27).freeze
+
+# @param proficiency [UserProficiency] a UserProficiency populated with level
+#   counts
+# @param line [Array] an array giving historical UserProficiency values
+# @return [UserProficiency] proficiency, after incrementing the level counts by
+#   the values given in line
+# Given a user_proficiency and a CSV line, adds level counts to all the
+# concept-difficulties. Returns the mutated (not persisted) user_proficiency.
+# Does not mutate the user_id, basic_proficiency_at, or timestamp columns.
+def increment_user_proficiency(proficiency, line)
+  proficiency.sequencing_d1_count += line[4].to_i
+  proficiency.sequencing_d2_count += line[5].to_i
+  proficiency.sequencing_d3_count += line[6].to_i
+  proficiency.sequencing_d4_count += line[7].to_i
+  proficiency.sequencing_d5_count += line[8].to_i
+
+  proficiency.debugging_d1_count += line[9].to_i
+  proficiency.debugging_d2_count += line[10].to_i
+  proficiency.debugging_d3_count += line[11].to_i
+  proficiency.debugging_d4_count += line[12].to_i
+  proficiency.debugging_d5_count += line[13].to_i
+
+  proficiency.repeat_loops_d1_count += line[14].to_i
+  proficiency.repeat_loops_d2_count += line[15].to_i
+  proficiency.repeat_loops_d3_count += line[16].to_i
+  proficiency.repeat_loops_d4_count += line[17].to_i
+  proficiency.repeat_loops_d5_count += line[18].to_i
+
+  proficiency.repeat_until_while_d1_count += line[19].to_i
+  proficiency.repeat_until_while_d2_count += line[20].to_i
+  proficiency.repeat_until_while_d3_count += line[21].to_i
+  proficiency.repeat_until_while_d4_count += line[22].to_i
+  proficiency.repeat_until_while_d5_count += line[23].to_i
+
+  proficiency.for_loops_d1_count += line[24].to_i
+  proficiency.for_loops_d2_count += line[25].to_i
+  proficiency.for_loops_d3_count += line[26].to_i
+  proficiency.for_loops_d4_count += line[27].to_i
+  proficiency.for_loops_d5_count += line[28].to_i
+
+  proficiency.events_d1_count += line[29].to_i
+  proficiency.events_d2_count += line[30].to_i
+  proficiency.events_d3_count += line[31].to_i
+  proficiency.events_d4_count += line[32].to_i
+  proficiency.events_d5_count += line[33].to_i
+
+  proficiency.variables_d1_count += line[34].to_i
+  proficiency.variables_d2_count += line[35].to_i
+  proficiency.variables_d3_count += line[36].to_i
+  proficiency.variables_d4_count += line[37].to_i
+  proficiency.variables_d5_count += line[38].to_i
+
+  proficiency.functions_d1_count += line[39].to_i
+  proficiency.functions_d2_count += line[40].to_i
+  proficiency.functions_d3_count += line[41].to_i
+  proficiency.functions_d4_count += line[42].to_i
+  proficiency.functions_d5_count += line[43].to_i
+
+  proficiency.functions_with_params_d1_count += line[44].to_i
+  proficiency.functions_with_params_d2_count += line[45].to_i
+  proficiency.functions_with_params_d3_count += line[46].to_i
+  proficiency.functions_with_params_d4_count += line[47].to_i
+  proficiency.functions_with_params_d5_count += line[48].to_i
+
+  proficiency.conditionals_d1_count += line[49].to_i
+  proficiency.conditionals_d2_count += line[50].to_i
+  proficiency.conditionals_d3_count += line[51].to_i
+  proficiency.conditionals_d4_count += line[52].to_i
+  proficiency.conditionals_d5_count += line[53].to_i
+
+  proficiency
+end
+
+# @param proficiency [UserProficiency] a UserProficiency populated with
+#   historical timestamps and the sum of historical and incremental level counts
+# @param line [Array] an array giving historical UserProficiency values
+# @return [DateTime | nil] the best available datetime at which basic
+#   proficiency was obtained (nil if not yet obtained)
+def compute_basic_proficiency_at(proficiency, line)
+  # Determine whether the historical behavior (specified in line) sufficed to
+  # obtain basic proficiency.
+  proficiency_from_history = increment_user_proficiency(
+    UserProficiency.new, line
+  ).basic_proficiency?
+  # If it did, return TIME_CUTOFF.
+  return TIME_CUTOFF if proficiency_from_history
+  # Otherwise, if the incremental behavior sufficed by itself - as observed
+  # through proficiency.basic_proficiency_at - return the existing timestamp.
+  return proficiency.basic_proficiency_at if proficiency.basic_proficiency_at
+  # Otherwise, if the historical and incremental behavior together suffice,
+  # return last_progress_at.
+  return proficiency.last_progress_at if proficiency.basic_proficiency?
+  # Otherwise, basic proficiency has not been obtained, so return nil.
+  return nil
+end
+
+line_num = 0
+user_id = 0
+
+begin
+  CSV.foreach('/tmp/user_proficiency.csv').with_index do |line, csv_line_num|
+    line_num = csv_line_num
+    puts "PROCESSING: line #{line_num}..." if line_num % 1000 == 0
+
+    user_id = line[0].to_i
+
+    proficiency = UserProficiency.find_or_create_by(user_id: user_id)
+
+    # The level counts are the sum of historical level counts (given by line)
+    # and incremental level counts (given by proficiency).
+    proficiency = increment_user_proficiency(proficiency, line)
+    # We set basic_proficiency_at before the other timestamps, as it can depend
+    # on historical timestamp values.
+    proficiency.basic_proficiency_at = compute_basic_proficiency_at(
+      proficiency, line)
+    proficiency.created_at = TIME_NOW unless proficiency.created_at
+    proficiency.updated_at = TIME_NOW
+    # Though not accurate, TIME_CUTOFF is the most accurate estimate we have.
+    proficiency.last_progress_at = TIME_CUTOFF unless proficiency.last_progress_at
+
+    proficiency.save!
+  end
+rescue Exception => e
+  # Since exceptions may happen naturally, we simply log the relevant
+  # information to the console and give the executing user a chance to abort
+  # the script.
+  puts "EXCEPTION:"
+  puts "  USER: #{user_id}"
+  puts "  LINE_NUM: #{line_num}"
+  puts "  MESSAGE: #{e.message}"
+  sleep(10)
+ensure
+  puts "DONE, PROCESSING: line #{line_num}..."
+end

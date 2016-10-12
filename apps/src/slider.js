@@ -21,7 +21,6 @@
  * @fileoverview A slider control in SVG.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 var SVG_NS = require('./constants').SVG_NS;
 var dom = require('./dom');
 

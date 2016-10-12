@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Pd::EnrollmentTest < ActiveSupport::TestCase
-
   test 'code' do
     enrollment1 = create :pd_enrollment
     enrollment2 = create :pd_enrollment
@@ -35,67 +34,80 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_nil enrollment_with_no_user.resolve_user
   end
 
-  # For enrollment form: user-supplied fields without an account.
-  test 'validations without user' do
+  test 'required field validations' do
     enrollment = Pd::Enrollment.new
     refute enrollment.valid?
     assert_equal [
       'Name is required',
-      'Email is required'
+      'Email is required',
+      'School is required',
+      'School info is required'
     ], enrollment.errors.full_messages
 
     enrollment.name = 'name'
     enrollment.email = 'teacher@example.net'
+    enrollment.school = 'test school'
+    enrollment.school_info = create(:school_info)
     assert enrollment.valid?
   end
 
-  # For automatic enrollments for unenrolled attendees with a user account.
-  test 'validations with user' do
-    teacher = create :teacher
-    enrollment = Pd::Enrollment.new user: teacher
-    refute enrollment.valid?
-    assert_equal [
-      'Name is required',
-      'Email is required'
-    ], enrollment.errors.full_messages
+  test 'emails are stored in lowercase and stripped' do
+    enrollment = build :pd_enrollment, email: ' MixedCase@Example.net '
+    assert_equal 'mixedcase@example.net', enrollment.email
 
-    enrollment.name = teacher.name
-    enrollment.email = teacher.email
-    assert enrollment.valid?
+    # Also accepts nil
+    enrollment.email = nil
+    assert_nil enrollment.email
   end
 
-  test 'create_for_unenrolled_attendees' do
+  test 'in_section?' do
     workshop = create :pd_workshop
-    workshop.section = create :section
+    workshop.sessions << create(:pd_session, workshop: workshop)
 
-    enrolled_attendee = create :teacher
-    enrollment = create :pd_enrollment, workshop: workshop, name: enrolled_attendee.name, email: enrolled_attendee.email
-    workshop.section.add_student enrolled_attendee
+    # no section, no user: false
+    enrollment = create :pd_enrollment, workshop: workshop
+    refute enrollment.in_section?
 
-    unenrolled_attendee = create :teacher
-    workshop.section.add_student unenrolled_attendee
+    # section, no user: false
+    workshop.start! # Start to create section.
+    refute enrollment.in_section?
 
-    new_enrollments = Pd::Enrollment.create_for_unenrolled_attendees(workshop)
-    refute_nil new_enrollments
-    assert_equal 1, new_enrollments.length
-    assert_equal unenrolled_attendee, new_enrollments.first.user
-    assert_equal [enrollment.id, new_enrollments.first.id], workshop.enrollments.all.map(&:id)
+    # section with disconnected user: false
+    teacher = create :teacher, name: enrollment.name, email: enrollment.email
+    refute enrollment.in_section?
+
+    # in section: true
+    workshop.section.add_student teacher
+    assert enrollment.in_section?
   end
 
-  test 'create_for_unenrolled_attendees with no email logs warning' do
-    workshop = create :pd_ended_workshop
-    workshop.sessions << create(:pd_session)
+  test 'skip_school_validation' do
+    enrollment = create :pd_enrollment
 
-    unenrolled_attendee_no_email = create :student
-    workshop.section.add_student unenrolled_attendee_no_email
-    create :pd_attendance, session: workshop.sessions.first, teacher: unenrolled_attendee_no_email
+    enrollment.school = nil
+    enrollment.school_info = nil
+    refute enrollment.valid?
+    assert 2, enrollment.errors.count
 
-    mock_logger = mock
-    mock_logger.expects(:warn).with(
-      "Unable to create an enrollment for workshop attendee with no email. User Id: #{unenrolled_attendee_no_email.id}"
-    )
-    CDO.expects(:log).returns(mock_logger)
+    enrollment.skip_school_validation = true
+    assert enrollment.valid?
+  end
 
-    Pd::Enrollment.create_for_unenrolled_attendees(workshop)
+  test 'soft delete' do
+    enrollment = create :pd_enrollment
+    enrollment.destroy!
+
+    assert enrollment.reload.deleted?
+    refute Pd::Enrollment.exists? enrollment.attributes
+    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+  end
+
+  test 'for_school_district' do
+    school_district = create :school_district
+    school_info = create :school_info, school_district: school_district
+    enrollment_in_district = create :pd_enrollment, school_info: school_info
+    _enrollment_out_of_district = create :pd_enrollment
+
+    assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_district)
   end
 end

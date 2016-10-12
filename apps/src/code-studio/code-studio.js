@@ -6,8 +6,6 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
-'use strict';
-
 // Require this first at each bundle entry point for full ES6 support.
 require("babel-polyfill");
 
@@ -38,7 +36,7 @@ require('./components/Attachments');
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('./clientState.js');
+window.dashboard.clientState = require('./clientState');
 window.dashboard.createCallouts = require('./callouts');
 window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
@@ -46,14 +44,15 @@ window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
-window.dashboard.utils = {
-  debounce: _.debounce,
-  throttle: _.throttle
-};
 window.dashboard.header = require('./header');
 window.dashboard.videos = require('./videos');
 window.dashboard.assets = require('./assets');
 window.dashboard.pairing = require('./pairing');
+window.dashboard.teacher = require('./teacher');
+
+// only stick the necessary methods onto dashboard.codeStudioLevels
+import { registerGetResult, registerLevel, onAnswerChanged } from './levels/codeStudioLevels';
+window.dashboard.codeStudioLevels = { registerGetResult, registerLevel, onAnswerChanged };
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio

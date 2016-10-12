@@ -128,7 +128,7 @@ var round = p5.prototype.round;
 * @type {Group}
 */
 
-defineLazyP5Property('allSprites', function() { return new Group(); });
+defineLazyP5Property('allSprites', function() { return new p5.prototype.Group(); });
 
 p5.prototype.spriteUpdate = true;
 
@@ -1037,6 +1037,22 @@ function Sprite(pInst, _x, _y, _w, _h) {
   */
   this._internalHeight = _h;
 
+  /*
+   * _internalWidth and _internalHeight are used for all p5.play
+   * calculations, but width and height can be extended. For example,
+   * you may want users to always get and set a scaled width:
+      Object.defineProperty(this, 'width', {
+        enumerable: true,
+        configurable: true,
+        get: function() {
+          return this._internalWidth * this.scale;
+        },
+        set: function(value) {
+          this._internalWidth = value / this.scale;
+        }
+      });
+   */
+
   /**
   * Width of the sprite's current image.
   * If no images or animations are set it's the width of the
@@ -1177,23 +1193,21 @@ function Sprite(pInst, _x, _y, _w, _h) {
     //the animation wasn't loaded. if the animation is not a 1x1 image
     //it means it just finished loading
     if(this.colliderType === 'default' &&
-      animations[currentAnimation].getWidth() !== 1 &&
-       animations[currentAnimation].getHeight() !== 1
-      )
+      animations[currentAnimation].getWidth() !== 1 && animations[currentAnimation].getHeight() !== 1)
     {
-    this.collider = this.getBoundingBox();
-    this.colliderType = 'image';
-    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
-    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
-    //quadTree.insert(this);
+      this.collider = this.getBoundingBox();
+      this.colliderType = 'image';
+      this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+      this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+      //quadTree.insert(this);
     }
 
     //update size and collider
     if(animations[currentAnimation].frameChanged || this.width === undefined || this.height === undefined)
     {
-    //this.collider = this.getBoundingBox();
-    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
-    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+      //this.collider = this.getBoundingBox();
+      this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+      this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
     }
   };
 
@@ -1261,7 +1275,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
           this.collider.extents.x = this.collider.originalExtents.x * abs(this._getScaleX()) * abs(cos(t)) +
           this.collider.originalExtents.y * abs(this._getScaleY()) * abs(sin(t));
 
-          this.collider.extents.y = this.collider.originalExtents.x * abs(this.this._getScaleX()) * abs(sin(t)) +
+          this.collider.extents.y = this.collider.originalExtents.x * abs(this._getScaleX()) * abs(sin(t)) +
           this.collider.originalExtents.y * abs(this._getScaleY()) * abs(cos(t));
           }
         else if(this.colliderType === 'default')
@@ -1423,7 +1437,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
           else
             print('Warning: onMousePressed should be a function');
 
-        if(mouseWasPressed && !this.mouseIsPressed && this.onMouseReleased !== undefined)
+        if(mouseWasPressed && !pInst.mouseIsPressed && !this.mouseIsPressed && this.onMouseReleased !== undefined)
           if(typeof(this.onMouseReleased) === 'function')
             this.onMouseReleased.call(this, this);
           else
@@ -3499,7 +3513,7 @@ function Animation(pInst) {
   else if (frameArguments.length === 1 && (frameArguments[0] instanceof SpriteSheet))
   {
     this.spriteSheet = frameArguments[0];
-    this.images = this.spriteSheet.frames.map(function (f) {
+    this.images = this.spriteSheet.frames.map( function(f) {
       return f.frame;
     });
   }
@@ -3778,22 +3792,32 @@ function Animation(pInst) {
 
   /**
   * Returns the current frame width in pixels.
+  * If there is no image loaded, returns 1.
   *
   * @method getWidth
   * @return {Number} Frame width
   */
   this.getWidth = function() {
-    return this.images[frame].width;
+    if (this.images[frame]) {
+      return this.images[frame].width;
+    } else {
+      return 1;
+    }
   };
 
   /**
   * Returns the current frame height in pixels.
+  * If there is no image loaded, returns 1.
   *
   * @method getHeight
   * @return {Number} Frame height
   */
   this.getHeight = function() {
-    return this.images[frame].height;
+    if (this.images[frame]) {
+      return this.images[frame].height;
+    } else {
+      return 1;
+    }
   };
 
 }

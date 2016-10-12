@@ -3,60 +3,28 @@ title 'TLO in Practice'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<style>
-.outerText{
-	padding: 15px 15px 15px 40px; 
-    background-color:#eeeeee; 
-    border-radius:10px;
-}
-.innerText{
-	padding: 15px 15px 15px 15px; 
-    background-color:#FFFFFF; 
-    border-radius:10px;
-}
+# TLO in Practice
 
-img{
-	border-radius: 10px;
-    mix-blend-mode: multiply;
-    padding-bottom:20px;
-}
+<img src="https://images.code.org/4d06be3cd5f0c9fffd7ed547d8308b73-image-1440798745281.jpg" class="level-image">
 
-</style>
-
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
-
-### TLO in Practice
-
-<br/>
-
-<img src="https://images.code.org/4d06be3cd5f0c9fffd7ed547d8308b73-image-1440798745281.jpg" width="400px" class="lefted rounded" />
-
-Now it's time to prepare *your* lesson for TLO.  
+Now it's time to prepare *your* lesson for TLO.
 
 Think back to the Phase 2 In-Person session.  Which module did you get the most experience with?
 
-<p style="margin:20px 20px 20px 475px;">
-<!--<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_1.pdf" target="_new">* Module 1: Introduction to Computer Modeling and Simulation</a> -->
+<!--
+<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_1.pdf" target="_new">Module 1: Introduction to Computer Modeling and Simulation</a>
+-->
 
-<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_2.pdf" target="_new"> - Module 2: Water as a Shared Resource </a>
-<br/>
-<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_3.pdf" target="_new"> - Module 3: Ecosystems as Complex Systems</a>
-<br/>
+<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_2.pdf" target="_new">Module 2: Water as a Shared Resource</a>
 
-<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_4.pdf" target="_new"> - Module 4: Chemical Reactions</a>
-</p>
+<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_3.pdf" target="_new">Module 3: Ecosystems as Complex Systems</a>
 
-<p>
-In the next section, you will do an in-depth review of that module as you <strong>prepare lessons 2 and 3 for sharing</strong>.
-</p>
+<a href="https://code.org/curriculum/science/files/CS_in_Science_Module_4.pdf" target="_new">Module 4: Chemical Reactions</a>
 
-<p>
-<br/>
-Note: Teachers in Miami will be preparing lessons 2 & 3 from <a href="https://code.org/curriculum/science/files/CS_in_Science_Module_1.pdf" target="_new">* Module 1: Introduction to Computer Modeling and Simulation</a>
-</p>
+In the next section, you will do an in-depth review of that module as you **prepare lessons 2 and 3 for sharing**.
 
-<br/>
+Note: Teachers in Miami will be preparing lessons 2 &amp; 3 from <a href="https://code.org/curriculum/science/files/CS_in_Science_Module_1.pdf" target="_new">Module 1: Introduction to Computer Modeling and Simulation</a>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 
 MARKDOWN

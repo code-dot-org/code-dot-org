@@ -13,6 +13,14 @@ module Honeybadger
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
     return if stderr.to_s.empty? && status == 0
+    ENV['HONEYBADGER_LOGGING_LEVEL'] = 'error'
+
+    # Configure and start Honeybadger
+    honeybadger_config = Honeybadger::Config.new(
+      env: ENV['RACK_ENV'],
+      api_key: CDO.cronjobs_honeybadger_api_key
+    )
+    Honeybadger.start(honeybadger_config)
 
     error_message, backtrace = parse_exception_dump stderr
 
@@ -47,9 +55,9 @@ module Honeybadger
     # Honeybadger::Backtrace::Line fails to parse the first line due to the message
     #   See regex here: https://github.com/honeybadger-io/honeybadger-ruby/blob/2072d85532b7effd8032707faa01b5ac83d9f36d/lib/honeybadger/backtrace.rb#L9
     # The following addition will parse the message from the end of the first line
-    corrected_input_format = Regexp.new(Honeybadger::Backtrace::Line::INPUT_FORMAT.source.sub(/\$$/,'(?:: (.+))?$')).freeze
+    corrected_input_format = Regexp.new(Honeybadger::Backtrace::Line::INPUT_FORMAT.source.sub(/\$$/, '(?:: (.+))?$')).freeze
 
-    error_lines = error.lines.map &:strip
+    error_lines = error.lines.map(&:strip)
     _, _file, _number, _method, error_message = error_lines[0].match(corrected_input_format).to_a
     error_lines[0].chomp!(": #{error_message}")
 

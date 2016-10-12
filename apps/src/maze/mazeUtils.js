@@ -1,9 +1,3 @@
-/**
- * Generalized function for generating ids for cells in a table
- */
-exports.cellId = function (prefix, row, col) {
-  return prefix + '_' + row + '_' + col;
-};
 
 /**
  * Is skin either bee or bee_night
@@ -24,4 +18,16 @@ exports.isCollectorSkin = function (skinId) {
  */
 exports.isScratSkin = function (skinId) {
   return (/scrat/).test(skinId);
+};
+
+exports.isPlanterSkin = function (skinId) {
+  return (/planter/).test(skinId);
+};
+
+exports.isHarvesterSkin = function (skinId) {
+  return (/harvester/).test(skinId);
+};
+
+exports.isWordSearchSkin = function (skinId) {
+  return skinId === 'letters';
 };

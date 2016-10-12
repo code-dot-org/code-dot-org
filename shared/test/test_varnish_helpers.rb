@@ -3,7 +3,6 @@ require_relative '../../cookbooks/cdo-varnish/libraries/helpers'
 
 # Unit tests for cdo-varnish/libraries/helpers.rb
 class VarnishHelperTest < Minitest::Test
-
   def test_paths_to_regex
     ext_regex = paths_to_regex('/*.jpg')
     assert_equal "req.url ~ \"^.*\\.jpg#{END_URL_REGEX}\"", ext_regex

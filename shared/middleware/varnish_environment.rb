@@ -1,7 +1,6 @@
 require 'sinatra/base'
 
 class VarnishEnvironment < Sinatra::Base
-
   def self.load_supported_locales
     Dir.glob(pegasus_dir('cache', 'i18n', '*.yml')).map do |i|
       File.basename(i, '.yml').downcase
@@ -48,5 +47,4 @@ class VarnishEnvironment < Sinatra::Base
       end
     end
   end
-
 end

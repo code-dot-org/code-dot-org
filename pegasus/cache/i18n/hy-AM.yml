@@ -18,7 +18,7 @@
     font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>"
+  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: "Բոլորը կարող են սովորել։"
   learn_now: "Սովորել հիմա"
   petition_message: "Յուրաքանչյուր աշակերտ յուրաքանչյուր դպրոցում պետք է հնարավորություն
@@ -35,7 +35,7 @@
     and programming concepts in this follow-up course.
   og_title: Every child deserves opportunity
   og_description: Every student in every school deserves the opportunity to study
-    computer science.
+    computer science. It's changing everything.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: "Ուսանողներ"
@@ -49,13 +49,13 @@
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
-  csedweek_map_search_reset: "տեղավորել"
+  csedweek_map_search_reset: "Վերականգնել"
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: Special Event
   cded_sign_up: "Գրանցվել"
   cded_try_it: Try it
-  twentyhours_trynow: "Փորձել հիմա"
+  try_now: "Փորձել հիմա"
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
     courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
@@ -88,7 +88,7 @@
   congratulations_on_completing_course4: Congratulations on completing Course 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
-  congrats_next_tutorials_title: Try these courses next
+  congrats_next_tutorials_title: Graduate to the next level
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Get a certificate of achievement
@@ -164,10 +164,10 @@
   third_party_appinv_btn_site: Visit App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+    fun and accessible for beginners. For schools and teachers CodeHS provides curriculum,
+    teacher tools and PD. For individual learners, you can get the help you need along
+    the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -177,7 +177,7 @@
   third_party_organization: Organization
   third_party_curriculum: Curriculum
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/download"
   third_party_cost_free_399: Free to try, $399/classroom
@@ -199,17 +199,17 @@
   enter_valid_age: Please select a valid age
   enter_valid_email: Please enter a valid email address
   get_a_certificate_message: We'll send you a certificate and information about how
-    to <a href='/learn/beyond'>Learn beyond One Hour</a>
+    to <a href='/learn/beyond'>Learn beyond an Hour</a>
   get_a_certificate_message_after: Click on the certificate to download or print it.
     Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or
-    see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
+    see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
   thanks_for_submitting: Thanks for submitting!
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
   personalize_certificate: Personalize your certificate
   share_achievement: Share your achievement
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
-    courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
+    courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
   support_url: http://support.code.org/
   country: "Երկիր"
@@ -242,23 +242,23 @@
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
   petition_thankyou: Thank you for signing the petition
-  continue_learning_header: Continue learning beyond One Hour
+  continue_learning_header: Continue learning beyond an Hour
   continue_learning_body: There are lots of options.  You can learn online, or at
     a local school, or summer camp.
-  learn_next_level: Continue to the next level
+  learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
   learn_classes: Find local classes
-  hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science.
+    http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Learn an Hour of Code
-  beyond_hoc: Beyond One Hour
+  beyond_hoc: Beyond an Hour
   what_gender: What gender are you?
   girl: Girl
   boy: Boy
@@ -362,11 +362,11 @@
   homepage_action_text_try_it: Try it
   homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
+  homepage_action_text_teachervideo: Watch the video
   homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: "Սկսել սովորել"
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_signpetition_dropdown: I agree &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
@@ -382,6 +382,11 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
+  homepage_banner_emailprivacy: We’re making an important change to how we support
+    student privacy.
+  homepage_banner_emailprivacy_link: "Կարդալ ավելին"
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "Սովորել ավելին"
   homepage_slot_text_title_hoc: "Կոդի ժամ"
   homepage_slot_text_blurb_hoc: "Յուրաքանչյուրը կարող է սովորել. Սկսիր այսօր."
   homepage_slot_text_link_hoc: "Փորձիր Կոդի Ժամը"
@@ -405,7 +410,7 @@
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support diversity in computing
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Code Studio student creations
@@ -454,56 +459,55 @@
     videos</a> by role models and celebrities
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: The Amazing World of Gumball
   playlab_iceage_title: Ice Age - Coming soon
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: "Փորձել հիմա"
   starwars_blocks_title: Blocks
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: "Փորձել հիմա"
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+    Ages 6-106
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: Ages 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
-    of Code.
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: "Խոսում եք այլ լեզվո՞վ:"
+  help_translate: "Օգնեք թարգմանել:"
+  no_internet: "Չունե՞ք ինտերնետ:"
+  download_offline: "Ներբեռնել անցանց տարբերակը:"
+  are_you_teacher: "Դուք ուսուցիչ եք?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
+  volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want
-    volunteers passionate about computer science education to help with their Hour
-    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them."
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need
+    volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
+  volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody
+    <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer
+    science education</span> who can help in the classroom, or for somebody who can
+    <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students
+    by talking about the breadth of possibilities with computer science (which could
+    be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Are you a teacher looking for volunteers?
+    Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
@@ -513,25 +517,28 @@
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Experience level
   volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
+  volunteer_engineer_submission_field_location_desc: Your location will be used to
+    allow teachers to search for nearby volunteers and will be shown as a pin on the
+    map. If you are concerned about privacy, please use your work/school address or
+    your city only.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
     or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
+  volunteer_engineer_submission_field_location_flexibility: I can volunteer by...
+    (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+    year-round
+  volunteer_engineer_submission_field_time_commitment: Time commitment
   volunteer_engineer_submission_field_linkedin: LinkedIn profile
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: "Նկարագիր"
   volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
+    experience or technical background and how you would like to participate as a
+    volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
+    and/or participation. If you speak language(s) other than English, be sure to
+    include it here.
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
   volunteer_engineer_submission_field_email: "Էլեկտրոնային հասցե"
@@ -545,9 +552,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: "Հաստատել"
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
@@ -557,16 +564,18 @@
   volunteer_engineer_submission_commitment_monthly: A couple hours per month
   volunteer_engineer_submission_commitment_weekly: A couple hours per week
   volunteer_engineer_submission_commitment_more: More
-  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
-  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
-    or students)
-  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
-    to open-source curriculum projects
+  volunteer_engineer_submission_location_flexibility_onsite: visiting on-site at a
+    school (1-2 hours in a classroom or a school assembly)
+  volunteer_engineer_submission_location_flexibility_remote: having a Q&A with students
+    remotely (via short video conference)
+  volunteer_engineer_submission_location_flexibility_curriculum: contributing to open-source
+    curriculum projects
   volunteer_engineer_submission_experience_unspecified: Unspecified
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: Current
-    university student (or researcher)
-  volunteer_engineer_submission_experience_software_professional: Software Engineer
+  volunteer_engineer_submission_experience_university_student_or_researcher: University
+    computer science student
+  volunteer_engineer_submission_experience_software_professional: Software engineer
+    or technical specialist
   volunteer_engineer_submission_distance_8: 5 miles
   volunteer_engineer_submission_distance_16: 10 miles
   volunteer_engineer_submission_distance_24: 15 miles
@@ -592,7 +601,7 @@
   dashboard_landing_news_title: K-5 Educator Resources (in English only)
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links (in English only)
+  dashboard_landing_useful_links: Other useful links
   dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
     office hours.
@@ -670,15 +679,18 @@
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
+  dashboard_action_print_certificates: "Տպել վկայականը"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none_part2: If you are teaching a middle or high school course,
+    we have assessment questions available as part of Code Studio to help your students
+    prepare for the AP test. To use these assessments, first assign the course to
+    your class and then pick the course from the drop down above and you'll see your
+    students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: "Հարցումներ"
+  dashboard_percent: "Տոկոս"
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -690,13 +702,14 @@
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_progress: Progress
+  dashboard_navigation_view_text_responses: "Տեքստային պատասխաններ"
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments_surveys: "Թեստեր/Հարցումներ"
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_view_stats: "Վիճակագրություն"
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: "չի սկսվել"
@@ -750,7 +763,7 @@
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
-  dashboard_sections_move_students: Move Students
+  dashboard_sections_move_students: Move students
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -783,12 +796,18 @@
     students:'
   dashboard_students_print_info: Print out cards with your students' login information.
   dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_secret_picture: This section uses <b>picture</b> as its secret
+    type.  It means that each of your students has a secret picture used in place
+    of a password to sign in.  Students should use the sign in web address given above
+    to sign in.
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
   dashboard_students_secret_word_title: Secret Word
-  dashboard_students_secret_word: Secret Word
+  dashboard_students_secret_word: This section uses <b>word</b> as its secret type.  It
+    means that each of your students has a pair of secret words used in place of a
+    password to sign in.  Students should use the sign in web address given above
+    to sign in.
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
     words will be generated for that student to use when they sign in. '
@@ -870,13 +889,20 @@
   dashboard_faq: Frequently Asked Questions
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_message: 'We''ve started to measure student learning in Courses
-    1-4 and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-    so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-    concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-    the user experience</a> to answer the big question: <i>What can students do?</i>'
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your
+    class how the Internet works, how cryptography keeps data secure, and other concepts?
+    We’ve taken the best interactive tools from our Computer Science Principles curriculum
+    and released standalone widgets you can use at any time!
+  dashboard_announce_learn_more_button: "Սովորել ավելին"
+  dashboard_announce_try_now_button: "Փորձել հիմա"
   dashboard_announce_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ
     յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային
     գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ,
@@ -884,8 +910,18 @@
     ընկերությունները միացել միասին բաց նամակ, խնդրելով ԱՄՆ Կոնգրեսին է ֆինանսավորել
     K-12 համակարգչային գիտության կրթություն:"
   dashboard_announce_petition_button: "Հավելեք ձեր անունը"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "Սովորել ավելին"
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -904,7 +940,7 @@
   learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
     for teaching one Hour of Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
+    prizes for every educator, while supplies last
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
@@ -915,16 +951,16 @@
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
-  carousel_heading_international: Tutorials in your language
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Grades K-8
+  carousel_heading_international: Partner tutorials in your language
+  carousel_heading_domestic: Partner tutorials available in English
+  carousel_heading_beginners: Partner tutorials for Grades K-8
   carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Partner tutorials that teach JavaScript
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
+  carousel_heading_devices: Partner tutorial apps for phones and tablets
   carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
+  carousel_heading_languages: Partner tutorials in other programming languages
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
@@ -932,7 +968,7 @@
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Teacher Led Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
@@ -946,15 +982,15 @@
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
-  older_systems: Tutorials that work on older systems
+  older_systems: Partner tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  mobile_devices: Partner tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Write your first computer program
-  codeintl_name: Write your first computer program
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -990,7 +1026,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Classic Maze
   playlab_name: Play Lab
   infinity_name: Infinity Խաղալ Lab
   artist_name: "Արտիստ"
@@ -1072,7 +1108,7 @@
   kodable_gradelevel: Elementary
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 4-104
+  flappy_gradelevel: Ages 6-106
   bitsbox_gradelevel: Elementary
   makeschool_gradelevel: High school
   touchdevelop_gradelevel: High school
@@ -1081,12 +1117,12 @@
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
-  hourofcode_gradelevel: Ages 4-104
-  frozen_gradelevel: Ages 8+
-  starwars_gradelevel: Ages 6+
-  playlab_gradelevel: Ages 4-104
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
+  hourofcode_gradelevel: Ages 6-106
+  frozen_gradelevel: Ages 8-108
+  starwars_gradelevel: Ages 6-106
+  playlab_gradelevel: Ages 6-14
+  infinity_gradelevel: Ages 6-14
+  artist_gradelevel: Ages 8-108
   monstercoding_gradelevel: Ages 5-13
   allcancode_gradelevel: Ages 5-10
   csfirst_gradelevel: Ages 9-14
@@ -1112,7 +1148,7 @@
   scratch_platformtext: Desktop-only web browsers (not tablets)
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
-  condcards_platformtext: Unuplugged
+  condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (or web browser)
   codehs_platformtext: Modern browsers. (Follow-on course requires  $$)
   codecademy_platformtext: Modern web browsers. iOS, Android apps
@@ -1193,7 +1229,7 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
@@ -1376,7 +1412,7 @@
     by the Hour of Code. They get introduced to sequencing commands, iteration and
     conditions without even noticing it.
   csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
+    water, and customize the scenery to add your own flair. Use code to tell the story
     you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
@@ -1710,40 +1746,16 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: "Թաքցնել այս նախազգուշացումը"
-  starwars_shortcode: sw
+  compatibility_hide_this_warning: "Թաքցնել այս նախազգուշացումը"
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: "տատանվել"
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: lab
   artist_shortcode: art
-  try_now: Try now
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

@@ -37,7 +37,7 @@ var DialogButtons = React.createClass({
     if (this.props.ok) {
       okButton = (
         <div className="farSide">
-          <Button type="primary" id="ok-button" className="secondary">
+          <Button type="primary" id="ok-button">
             {msg.dialogOK()}
           </Button>
         </div>

@@ -19,7 +19,11 @@ class Stage < ActiveRecord::Base
   has_many :script_levels, -> { order('position ASC') }, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
-  acts_as_list scope: :script
+
+  # A stage has an absolute position and a relative position. The difference between the two is that relative_position
+  # only accounts for other stages that have the same lockable setting, so if we have two lockable stages followed
+  # by a non-lockable stage, the third stage will have an absolute_position of 3 but a relative_position of 1
+  acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :name, scope: :script_id
 
@@ -29,7 +33,7 @@ class Stage < ActiveRecord::Base
   end
 
   def to_param
-    position.to_s
+    relative_position.to_s
   end
 
   def unplugged?
@@ -39,8 +43,12 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_title
+    # The standard case for localized_title is something like "Stage 1: Maze".
+    # In the case of lockable stages, we don't want to include the Stage 1
+    return I18n.t("data.script.name.#{script.name}.stage.#{name}") if lockable
+
     if script.stages.to_a.many?
-      I18n.t('stage_number', number: position) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
+      I18n.t('stage_number', number: relative_position) + ': ' + I18n.t("data.script.name.#{script.name}.stage.#{name}")
     else # script only has one stage/game, use the script name
       script.localized_title
     end
@@ -48,7 +56,7 @@ class Stage < ActiveRecord::Base
 
   def localized_name
     if script.stages.many?
-      I18n.t "data.script.name.#{script.name}.#{name}"
+      I18n.t "data.script.name.#{script.name}.stage.#{name}"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
@@ -67,7 +75,7 @@ class Stage < ActiveRecord::Base
   end
 
   def lesson_plan_base_url
-    CDO.code_org_url "/curriculum/#{script.name}/#{position}"
+    CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
   def summarize
@@ -78,10 +86,11 @@ class Stage < ActiveRecord::Base
           script_stages: script.stages.to_a.size,
           freeplay_links: script.freeplay_links,
           id: id,
-          position: position,
+          position: absolute_position,
           name: localized_name,
           title: localized_title,
           flex_category: localized_category,
+          lockable: !!lockable,
           # Ensures we get the cached ScriptLevels, vs hitting the db
           levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
       }
@@ -102,7 +111,8 @@ class Stage < ActiveRecord::Base
         end
       end
 
-      if script.has_lesson_plan?
+      # Don't want lesson plans for lockable levels
+      if !lockable && script.has_lesson_plan?
         stage_data[:lesson_plan_html_url] = lesson_plan_html_url
         stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end
@@ -115,5 +125,62 @@ class Stage < ActiveRecord::Base
       stage_data
     end
     stage_summary.freeze
+  end
+
+  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # build lesson plans
+  def summary_for_lesson_plans
+    {
+      stageName: localized_name,
+      lockable: lockable?,
+      levels: script_levels.map do |script_level|
+        level = script_level.level
+        level_json = {
+          id: script_level.id,
+          position: script_level.position,
+          named_level: script_level.named_level?,
+          path: script_level.path,
+          level_id: level.id,
+          type: level.class.to_s,
+          name: level.name
+        }
+
+        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
+          level_json[key] = level.properties[key] if level.properties[key]
+        end
+        if level.video_key
+          level_json[:video_youtube] = level.specified_autoplay_video.youtube_url
+          level_json[:video_download] = level.specified_autoplay_video.download
+        end
+
+        level_json
+      end
+    }
+  end
+
+  def lockable_state(students)
+    return unless self.lockable?
+
+    # assumption that lockable selfs have a single (assessment) level
+    if self.script_levels.length > 1
+      raise 'Expect lockable stages to have a single script_level'
+    end
+    script_level = self.script_levels[0]
+    return students.map do |student|
+      user_level = student.last_attempt_for_any script_level.levels, script_id: self.script.id
+      # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
+      # don't yet have a user_level, and need to provide enough data to create one
+      {
+        user_level_data: {
+          user_id: student.id,
+          level_id: user_level.try(:level).try(:id) || script_level.oldest_active_level.id,
+          script_id: script_level.script.id
+        },
+        name: student.name,
+        # if we don't have a user level, consider ourselves locked
+        locked: user_level ? user_level.locked?(self) : true,
+        readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
+      }
+    end
   end
 end

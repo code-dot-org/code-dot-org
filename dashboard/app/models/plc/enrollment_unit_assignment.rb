@@ -65,7 +65,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   end
 
   def focus_area_positions
-    plc_module_assignments.map{ |a| a.plc_learning_module.stage.position unless a.plc_learning_module.is_required? }.compact
+    plc_module_assignments.map{ |a| a.plc_learning_module.stage.absolute_position unless a.plc_learning_module.required? }.compact
   end
 
   def summarize_progress
@@ -73,7 +73,8 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
     categories_for_stage = plc_course_unit.script.stages.map(&:flex_category).uniq
 
-    if plc_course_unit.script.professional_learning_course?
+    # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
+    if plc_course_unit.has_evaluation?
       Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
         summary << {
             category: flex_category || Plc::LearningModule::CONTENT_MODULE,
@@ -81,7 +82,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         }
       end
     else
-      # Legacy PD courses don't have learning modules. So determine completeness by looking at stage completion
+      # Otherwise, status is determined by the completion of stages
       categories_for_stage.each do |category|
         summary << {
             category: category || 'content',
@@ -92,6 +93,14 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
             )
         }
       end
+    end
+
+    # If there are peer reviews, summarize that progress as well
+    if plc_course_unit.script.has_peer_reviews?
+      summary << {
+          category: 'peer_review',
+          status: PeerReview.get_review_completion_status(user, plc_course_unit.script)
+      }
     end
 
     summary

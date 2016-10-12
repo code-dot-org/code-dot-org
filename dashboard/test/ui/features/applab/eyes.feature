@@ -27,7 +27,7 @@ Scenario: App Lab UI elements from initial code and html
   And I rotate to landscape
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
   And I wait to see "#runButton"
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -77,7 +77,7 @@ Scenario: Text area with multiple lines, radio button, checkbox
 
 Scenario: Applab visualization scaling
   When I open my eyes to test "Applab visualization scaling"
-  And I am on "http://learn.code.org/projects/applab/new"
+  And I am on "http://studio.code.org/projects/applab/new"
   And I rotate to landscape
   And I wait to see "#runButton"
   And I switch to design mode
@@ -103,35 +103,35 @@ Scenario: Applab visualization scaling
 
 Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/12"
   And I rotate to landscape
   And I see no difference for "embedded level"
   Then I close my eyes
 
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on standard level"
-  Then I click selector ".fa-chevron-circle-down"
-  And I see no difference for "top instructions collapsed"
   Then I click selector ".fa-chevron-circle-up"
+  And I see no difference for "top instructions collapsed"
+  Then I click selector ".fa-chevron-circle-down"
   And I see no difference for "top instructions uncollapsed"
   Then I click selector "#hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
 
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/10"
+  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on instructionless level"
 
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
+  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/12"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on embed level"
   Then I close my eyes
 
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels
@@ -172,5 +172,59 @@ Scenario: Drag to delete
   When I drag element "#design_button1" 100 horizontally and 100 vertically
   And I wait until element "#design_button1" is gone
   Then I see no difference for "dragging out of app deletes button"
+
+  And I close my eyes
+
+Scenario: Data Browser
+  Given I open my eyes to test "Applab Data Browser"
+
+  When I start a new Applab project with Firebase
+  Then I see no difference for "initial load"
+
+  When I switch to data mode
+  Then I see no difference for "data overview"
+
+  When I press keys "foo" for element "#dataOverview input"
+  And I click selector "#dataOverview button:contains(Add)"
+  And I wait until element "#dataTable" is visible
+  Then I see no difference for "data table"
+
+  When I press enter key
+  And I wait until element "th .test-tableNameDiv:contains(column1)" is visible
+  And I click selector "#addColumnButton"
+  And I press enter key
+  And I press keys "foo" for element "#addDataTableRow :nth-child(2) input"
+  And I press keys "bar" for element "#addDataTableRow :nth-child(3) input"
+  And element "#addDataTableRow button:contains(Add Row)" is visible
+  And I click selector "#addDataTableRow button:contains(Add Row)"
+  And I wait until element "button:contains(Edit)" is visible
+  Then I see no difference for "data table with one row of data"
+
+  When I click selector "#dataTable button:contains(Clear table)"
+  And I wait until element "#dataTable .modal-body" is visible
+  Then I see no difference for "clear table confirmation dialog"
+
+  When element ".modal-body button:contains(Cancel)" is visible
+  And I click selector ".modal-body button:contains(Cancel)"
+  And I click selector "#uitest-tableDebugLink"
+  Then I see no difference for "data table debug view"
+
+  And I click selector "#tableBackToOverview"
+  And I wait until element "#dataOverview" is visible
+  And element "#dataOverview a:contains(Key/value pairs)" is visible
+  And I click selector "#dataOverview a:contains(Key/value pairs)"
+  And I wait until element "#dataProperties" is visible
+  And element "tr:contains(Add pair)" is visible
+  Then I see no difference for "empty data properties"
+
+  When I press keys "foo" for element "#uitest-addKeyValuePairRow :nth-child(1) input"
+  And I press keys "bar" for element "#uitest-addKeyValuePairRow :nth-child(2) input"
+  And I click selector "button:contains(Add pair)"
+  And I wait until element "button:contains(Edit)" is visible
+  Then I see no difference for "data properties with one row"
+
+  When element "#uitest-propertiesDebugLink" is visible
+  And I click selector "#uitest-propertiesDebugLink"
+  Then I see no difference for "data properties debug view"
 
   And I close my eyes

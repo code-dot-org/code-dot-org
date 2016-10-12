@@ -1,29 +1,14 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
+import sinon from 'sinon';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
-/**
- * Helper method for introducing a delay in your test method.
- * @param {number} delayMs - Number of milliseconds to wait before continuing.
- * @param {function} testDone - Chai's "done" callback.
- * @param {function} nextStep - Function to call after the delay.
- */
-function delayTest(delayMs, testDone, nextStep) {
-  setTimeout(function () {
-    try {
-      nextStep();
-    } catch (e) {
-      testDone(e);
-    }
-  }, delayMs);
-}
-
 describe("NetSimTable", function () {
-  var apiTable, netsimTable, callback, notified, notifyCount, fakeChannel;
+  let clock, apiTable, netsimTable, callback, notified, notifyCount, fakeChannel;
 
   beforeEach(function () {
+    clock = sinon.useFakeTimers(Date.now());
     fakeChannel = {
       subscribe: function () {}
     };
@@ -44,6 +29,10 @@ describe("NetSimTable", function () {
       notified = true;
       notifyCount++;
     });
+  });
+
+  afterEach(function () {
+    clock.restore();
   });
 
   it("throws if constructed with missing arguments", function () {
@@ -486,82 +475,76 @@ describe("NetSimTable", function () {
     assert.equal(notifyCount, 1);
   });
 
-  it("polls table on tick", function () {
-    // Initial tick always triggers a poll event.
-    netsimTable.tick();
-    assert.equal(apiTable.log(), 'readAll');
+  describe('polling', function () {
+    it("polls table on tick", function () {
+      // Initial tick always triggers a poll event.
+      netsimTable.tick();
+      clock.tick(0);
+      assert.equal(apiTable.log(), 'readAll');
 
-    // Additional tick does not trigger poll event...
-    apiTable.log('');
-    netsimTable.tick();
-    assert.equal(apiTable.log(), '');
+      // Additional tick does not trigger poll event...
+      apiTable.log('');
+      netsimTable.tick();
+      clock.tick(0);
+      assert.equal(apiTable.log(), '');
 
-    // Until poll interval is reached.
-    netsimTable.lastRefreshTime_ = Date.now() - (netsimTable.pollingInterval_);
-    netsimTable.tick();
-    assert.equal(apiTable.log(), 'readAll');
+      // Until poll interval is reached.
+      clock.tick(netsimTable.pollingInterval_);
+      netsimTable.tick();
+      clock.tick(0);
+      assert.equal(apiTable.log(), 'readAll');
+    });
   });
 
   describe("initial delay coalescing", function () {
-    var COALESCE_WINDOW = 100; // ms
+    const COALESCE_WINDOW = 100; // ms
 
     beforeEach(function () {
       // Re-enable 100ms before-refresh delay to coalesce messages
       netsimTable.setMinimumDelayBeforeRefresh(COALESCE_WINDOW);
     });
 
-    it("does not read until minimum delay passes", function (testDone) {
+    it("does not read until minimum delay passes", function () {
       netsimTable.refreshTable_(callback);
       assert.equal('', apiTable.log());
-      delayTest(COALESCE_WINDOW, testDone, function () {
-        assert.equal('readAll', apiTable.log());
-        testDone();
-      });
+      clock.tick(COALESCE_WINDOW);
+      assert.equal('readAll', apiTable.log());
     });
 
-    it("coalesces multiple rapid requests", function (testDone) {
+    it("coalesces multiple rapid requests", function () {
       netsimTable.refreshTable_(callback);
       netsimTable.refreshTable_(callback);
       netsimTable.refreshTable_(callback);
       assert.equal('', apiTable.log());
 
-      delayTest(COALESCE_WINDOW / 2, testDone, function () {
-        netsimTable.refreshTable_(callback);
-        netsimTable.refreshTable_(callback);
-        netsimTable.refreshTable_(callback);
-        assert.equal('', apiTable.log());
+      clock.tick(COALESCE_WINDOW / 2);
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      assert.equal('', apiTable.log());
 
-        delayTest(COALESCE_WINDOW / 2, testDone, function () {
-          // Only one request at initial delay
-          assert.equal('readAll', apiTable.log());
+      clock.tick(COALESCE_WINDOW / 2);
+      // Only one request at initial delay
+      assert.equal('readAll', apiTable.log());
 
-          delayTest(COALESCE_WINDOW / 2, testDone, function () {
-            // Still only one request has occurred - the calls at 50ms
-            // were coalesced into the initial call.
-            assert.equal('readAll', apiTable.log());
-
-            testDone();
-          });
-        });
-      });
+      clock.tick(COALESCE_WINDOW / 2);
+      // Still only one request has occurred - the calls at 50ms
+      // were coalesced into the initial call.
+      assert.equal('readAll', apiTable.log());
     });
 
-    it("does not coalesce if requests are far enough apart", function (testDone) {
+    it("does not coalesce if requests are far enough apart", function () {
       netsimTable.refreshTable_(callback);
-      delayTest(COALESCE_WINDOW, testDone, function () {
-        assert.equal('readAll', apiTable.log());
+      clock.tick(COALESCE_WINDOW);
+      assert.equal('readAll', apiTable.log());
 
-        // This kicks off another delayed request
-        netsimTable.refreshTable_(callback);
-        assert.equal('readAll', apiTable.log());
+      // This kicks off another delayed request
+      netsimTable.refreshTable_(callback);
+      assert.equal('readAll', apiTable.log());
 
-        delayTest(COALESCE_WINDOW, testDone, function () {
-          // Both requests occur
-          assert.equal('readAllreadAll', apiTable.log());
-
-          testDone();
-        });
-      });
+      clock.tick(COALESCE_WINDOW);
+      // Both requests occur
+      assert.equal('readAllreadAll', apiTable.log());
     });
   });
 
@@ -573,6 +556,7 @@ describe("NetSimTable", function () {
 
     it("still reads immediately on first request", function () {
       netsimTable.refreshTable_(callback);
+      clock.tick(0);
       assert.equal(apiTable.log(), 'readAll');
     });
 
@@ -580,62 +564,56 @@ describe("NetSimTable", function () {
       for (var i = 0; i < 5; i++) {
         netsimTable.refreshTable_(callback);
       }
+      clock.tick(0);
       assert.equal(apiTable.log(), 'readAll');
     });
 
-    it("does not issue trailing request when only one request occurred", function (testDone) {
+    it("does not issue trailing request when only one request occurred", function () {
       netsimTable.refreshTable_(callback);
-      delayTest(50, testDone, function () {
-        assert.equal(apiTable.log(), 'readAll');
-        testDone();
-      });
+      clock.tick(50);
+      assert.equal(apiTable.log(), 'readAll');
     });
 
-    it("issues trailing request when multiple requests occurred", function (testDone) {
+    it("issues trailing request when multiple requests occurred", function () {
       for (var i = 0; i < 5; i++) {
         netsimTable.refreshTable_(callback);
       }
       assert.equal('readAll', apiTable.log());
-      delayTest(10, testDone, function () {
-        assert.equal('readAll', apiTable.log());
-        delayTest(40, testDone, function () {
-          // See the second request come in by 50ms of delay
-          assert.equal('readAllreadAll', apiTable.log());
-          testDone();
-        });
-      });
+      clock.tick(10);
+      assert.equal('readAll', apiTable.log());
+      clock.tick(40);
+      // See the second request come in by 50ms of delay
+      assert.equal('readAllreadAll', apiTable.log());
     });
 
-    it("throttles requests", function (testDone) {
+
+    it("throttles requests", function () {
       assert.equal('', apiTable.log());
-      delayTest(10, testDone, function () {
+      clock.tick(10);
 
-        // Call at 10ms happens immediately, even when delayed
-        assert.equal('', apiTable.log());
-        netsimTable.refreshTable_(callback);
-        assert.equal('readAll', apiTable.log());
-        delayTest(10, testDone, function () {
+      // Call at 10ms happens immediately, even when delayed
+      assert.equal('', apiTable.log());
+      netsimTable.refreshTable_(callback);
+      clock.tick(0);
 
-          // Call at 20ms causes no request (yet)
-          assert.equal('readAll', apiTable.log());
-          netsimTable.refreshTable_(callback);
-          assert.equal('readAll', apiTable.log());
-          delayTest(40, testDone, function () {
+      assert.equal('readAll', apiTable.log());
+      clock.tick(10);
 
-            // Trailing request from second call has already happened, but
-            // third call does not cause immediate request.
-            assert.equal('readAllreadAll', apiTable.log());
-            netsimTable.refreshTable_(callback);
-            assert.equal('readAllreadAll', apiTable.log());
-            delayTest(60, testDone, function () {
+      // Call at 20ms causes no request (yet)
+      assert.equal('readAll', apiTable.log());
+      netsimTable.refreshTable_(callback);
+      assert.equal('readAll', apiTable.log());
+      clock.tick(40);
 
-              // Trailing request from third call has arrived
-              assert.equal('readAllreadAllreadAll', apiTable.log());
-              testDone();
-            });
-          });
-        });
-      });
+      // Trailing request from second call has already happened, but
+      // third call does not cause immediate request.
+      assert.equal('readAllreadAll', apiTable.log());
+      netsimTable.refreshTable_(callback);
+      assert.equal('readAllreadAll', apiTable.log());
+      clock.tick(60);
+
+      // Trailing request from third call has arrived
+      assert.equal('readAllreadAllreadAll', apiTable.log());
     });
   });
 
@@ -645,35 +623,30 @@ describe("NetSimTable", function () {
       netsimTable.setMaximumJitterDelay(50);
     });
 
-    it("waits a random amount of time before reading on each request", function (testDone) {
+    it("waits a random amount of time before reading on each request", function () {
       NetSimGlobals.setRandomSeed('Jitter test 1');
       // With this seed, the refresh fires sometime between 30-40ms.
 
       netsimTable.refresh();
-      delayTest(30, testDone, function () {
-        assert.equal('', apiTable.log());
+      clock.tick(30);
+      assert.equal('', apiTable.log());
 
-        delayTest(10, testDone, function () {
-          assert.equal('readAll', apiTable.log());
-          testDone();
-        });
-      });
+      clock.tick(10);
+      assert.equal('readAll', apiTable.log());
     });
 
-    it("second example (different random seed)", function (testDone) {
+    it("second example (different random seed)", function () {
       NetSimGlobals.setRandomSeed('Jitter test 2');
       // With this seed, the refresh fires almost immediately - in under 10 ms.
 
       netsimTable.refresh();
       assert.equal('', apiTable.log());
 
-      delayTest(10, testDone, function () {
-        assert.equal('readAll', apiTable.log());
-        testDone();
-      });
+      clock.tick(10);
+      assert.equal('readAll', apiTable.log());
     });
 
-    it("recalculated for every refresh", function (testDone) {
+    it("recalculated for every refresh", function () {
       NetSimGlobals.setRandomSeed('Jitter test 3');
       // Without request coalescing, we start two requests at the same time,
       // but they will actually fire with different random delays.
@@ -685,20 +658,16 @@ describe("NetSimTable", function () {
       assert.equal('', apiTable.log());
 
       // First one has fired after 20ms
-      delayTest(20, testDone, function () {
-        assert.equal('readAll', apiTable.log());
+      clock.tick(20);
+      assert.equal('readAll', apiTable.log());
 
         // Second has fired after 20ms more
-        delayTest(20, testDone, function () {
-          assert.equal('readAllreadAll', apiTable.log());
-          testDone();
-        });
-      });
+      clock.tick(20);
+      assert.equal('readAllreadAll', apiTable.log());
     });
   });
 
   describe("incremental update", function () {
-
     beforeEach(function () {
       // New table configured for incremental refresh
       netsimTable = NetSimTestUtils.overrideNetSimTableApi(
@@ -716,6 +685,7 @@ describe("NetSimTable", function () {
     it("Initially requests from row 1", function () {
       assert.equal('', apiTable.log());
       netsimTable.refreshTable_(callback);
+      clock.tick(0);
       assert.equal('readAllFromID[1]', apiTable.log());
       assert.deepEqual([], netsimTable.readAll());
 
@@ -723,6 +693,7 @@ describe("NetSimTable", function () {
       apiTable.clearLog();
       assert.equal('', apiTable.log());
       netsimTable.refreshTable_(callback);
+      clock.tick(0);
       assert.equal('readAllFromID[1]', apiTable.log());
     });
 
@@ -735,6 +706,7 @@ describe("NetSimTable", function () {
 
       apiTable.clearLog();
       netsimTable.refreshTable_(callback);
+      clock.tick(0);
       // Intentionally "1" here - we update our internal "latestRowID"
       // until after an incremental or full read.
       assert.equal('readAllFromID[1]', apiTable.log());
@@ -743,11 +715,11 @@ describe("NetSimTable", function () {
       apiTable.clearLog();
       netsimTable.create({}, function (err, result) { row4 = result; });
       netsimTable.refreshTable_(callback);
+      clock.tick(0);
       // Got 1, 2, 3 in last refresh, so we read all from 4 this time.
       assert.equal('create[{}]readAllFromID[4]', apiTable.log());
       assert.deepEqual([row1, row2, row3, row4], netsimTable.readAll());
     });
-
   });
 
 });

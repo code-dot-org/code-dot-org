@@ -1,16 +1,25 @@
-title 'Grade 5'
-description_short "Planning Script for CSF 2.0"
-description "Planning Script for CSF 2.0"
-description_audience "Ages 10-110"
+professional_learning_course "Other plc course"
 
-stage 'Mixed Review (Ramp Up)'
-#Ramp up module will be addressed after the conclusion of the summer writing cohort.
+
+stage 'Digital Citizenship',
+  flex_category: 'required'
+level 'grade5_link_commonSense_powerOfWords'
 
 stage 'Unplugged: Envelope Variables'
 level 'EnvelopeVariables'
 
-stage 'Unplugged: Madlibs'
-level 'MadGlibs'
+stage 'Play Lab: Variables'
+level 'grade5_playlab_variables1'
+level 'grade5_playlab_variables1ask'
+#level 'grade5_playlab_variables2'
+#level 'grade5_playlab_variables_jump1'
+#level 'grade5_playlab_variables5'
+level 'grade5_playlab_variables6'
+level 'grade5_playlab_variables6ask'
+level 'grade5_playlab_variables7'
+level 'grade5_prompt_test'
+level 'Prompt Test'
+level 'grade5_playlab_variables14'
 
 stage 'Artist: Variables'
 level 'grade5_artist_variables_triangles1'
@@ -30,9 +39,6 @@ level 'grade5_artist_variables_freeplay14'
 level 'grade5_artist_variables_freeplay15'
 level 'grade5_artist_variables_freeplay16'
 
-stage 'Play Lab: Variables'
-
-
 stage 'Unplugged: For Loop Fun'
 level 'ForLoopFun'
 
@@ -47,11 +53,12 @@ level 'grade5_bee_for_loops7'
 level 'grade5_bee_for_loops8' 
 level 'grade5_bee_for_loops9'
 level 'grade5_bee_for_loops10'
-
 level 'grade5_bee_for_loops11'
 
 stage 'Artist: For Loops'
 level 'grade5_artist_for_loops1'
+level 'grade5_artist_for_loops1a' 
+level 'grade5_artist_for_loops1b' 
 level 'grade5_artist_for_loops2' 
 level 'grade5_artist_for_loops3' 
 level 'grade5_artist_for_loops4' 
@@ -64,28 +71,81 @@ level 'grade5_artist_for_loops10'
 level 'grade5_artist_for_loopsfreeplay11'
 level 'grade5_artist_for_loopsfreeplay12' 
 
-
 stage 'Unplugged: Songwriting with Parameters'
 level 'SongwritingWithParameters'
 
-stage 'Play Lab: Functions with Parameters'
-level 'grade5_playlab_variables1'
-level 'grade5_playlab_variables2'
-level 'grade5_playlab_variables_jump1'
-level 'grade5_playlab_variables5'
-level 'grade5_playlab_variables6'
-level 'grade5_playlab_variables7'
-level 'grade5_playlab_variables71'
-level 'grade5_playlab_variables81'
-level 'grade5_playlab_variables9'
-level 'grade5_playlab_variables10'
-level 'grade5_playlab_variables11'
-level 'grade5_playlab_variables12'
-level 'grade5_playlab_variables13' 
-level 'grade5_playlab_variables14'
+stage 'Bee: Functions with Parameters'
+level 'grade5_bee_parameters_new1'
+level 'grade5_bee_parameters_new2'
+level 'grade5_bee_parameters_new3'
+level 'grade5_bee_parameters_new4'
+level 'grade5_bee_parameters_new5'
+level 'grade5_bee_parameters_new6'
+level 'grade5_bee_parameters_new7'
+level 'grade5_bee_parameters_new8'
+level 'grade5_bee_parameters_new9'
 
+stage 'Explore project ideas',
+  flex_category: 'practice'
+named_level 'Inspirational Artwork'
+named_level 'Food Fight'
+named_level 'Guess The Number'
+named_level 'Rock Paper Scissors'
 
+stage 'Final Project - Unplugged: Design Process',
+  flex_category: 'practice'
+named_level 'Begin planning your project'
+named_level 'The Design Process (Teacher Lesson Plan)'
 
+stage 'Final Project - Work Day: Build Project Online',
+  flex_category: 'practice'
+named_level 'New Artist Project'
+named_level 'New Play Lab Project'
+named_level 'Project Building (Teacher Lesson Plan)'
+
+stage 'Final Project - Review/Revise Day',
+  flex_category: 'practice'
+named_level 'New Artist Project'
+named_level 'New Play Lab Project'
+named_level 'Project Iteration (Teacher Lesson Plan)'
+
+stage 'Final Project - Presentation Day',
+  flex_category: 'practice'
+named_level 'Prepare for your presentation'
+named_level 'Project Presentations (Teacher Lesson Plan)'
+
+stage 'Try programming with Khan Academy',
+  flex_category: 'practice'
+named_level 'Learn Javascript with Khan Academy!'
+
+#stage 'Unplugged: Binary Images'
+#level 'BinaryImages'
+
+#stage 'Pixelation: Binary Exploration'
+#level 'grade5_pixelation'
+
+#stage 'Artist Binary'
+#level 'grade5_artist_binary1'
+#level 'grade5_artist_binary2'
+#level 'grade5_artist_binary3'
+#level 'grade5_artist_binary4'
+#level 'grade5_artist_binary5'
+#level 'grade5_artist_binary6'
+#level 'grade5_artist_binary7'
+#level 'grade5_artist_binary8'
+#level 'grade5_artist_binary9'
+#level 'grade5_artist_binary10'
+#level 'grade5_artist_binary11'
+
+#stage 'Play Lab: Functions with Parameters'
+#level 'grade5_playlab_variables71'
+#level 'grade5_playlab_variables81'
+#level 'grade5_playlab_variables9'
+#level 'grade5_playlab_variables10'
+#level 'grade5_playlab_variables11'
+#level 'grade5_playlab_variables12'
+#level 'grade5_playlab_variables13' 
+#level 'grade5_playlab_variables14'
 
 stage 'Artist: Functions with Parameters'
 level 'grade5_artist_parameters_triangles1'
@@ -100,62 +160,6 @@ level 'grade5_artist_functionparameters9'
 level 'grade5_artist_functionparameters10' 
 level 'grade5_artist_functionparameters11' 
 
-stage 'Bee: Functions with Parameters'
-level 'grade5_bee_parameters_new1'
-level 'grade5_bee_parameters_new2'
-level 'grade5_bee_parameters_new3'
-level 'grade5_bee_parameters_new4'
-level 'grade5_bee_parameters_new5'
-level 'grade5_bee_parameters_new6'
-level 'grade5_bee_parameters_new7'
-level 'grade5_bee_parameters_new8'
-level 'grade5_bee_parameters_new9'
-
-stage 'Play Lab: Events and Conditionals'
-#level 'comingSoon'
-
-stage 'Project: Chase/Collect Game'
-level 'grade5_starwars_events_video'
-video_key_for_next_level 'starwars_blocks_events'
-level 'blockly:Studio:hoc2015_blockly_7'
-level 'blockly:Studio:hoc2015_blockly_8'
-level 'blockly:Studio:hoc2015_blockly_9'
-level 'blockly:Studio:hoc2015_blockly_10'
-
-level 'blockly:Studio:hoc2015_blockly_11'
-level 'blockly:Studio:hoc2015_blockly_12'
-level 'blockly:Studio:hoc2015_blockly_13'
-level 'blockly:Studio:hoc2015_blockly_14'
-
-video_key_for_next_level 'starwars_blocks_congrats'
-level 'blockly:Studio:hoc2015_blockly_15'
-
-
-stage 'Scratch (Optional Third-Party Stage)'
-level 'comingSoon'
-
-stage 'Unplugged: Binary Images'
-level 'BinaryImages'
-
-stage 'Pixelation: Binary Exploration'
-level 'grade5_pixelation'
-
-stage 'Artist Binary'
-level 'grade5_artist_binary1'
-level 'Course 4 Artist Binary 1'
-level 'Course 4 Artist Binary 2'
-level 'Course 4 Artist Binary 3'
-level 'Course 4 Artist Binary 4'
-level 'grade5_artist_binary5'
-level 'grade5_artist_binary6'
-level 'grade5_artist_binary7'
-level 'grade5_artist_binary8'
-level 'grade5_artist_binary9'
-level 'grade5_artist_binary10'
-level 'grade5_artist_binary11'
-
-
-
 #Commented out levels previously found in this script:
 #level 'NEW Course 4 Bee For Loops 95'
 #level 'NEW Course 4 Bee For Loops 5 5'
@@ -169,3 +173,5 @@ level 'grade5_artist_binary11'
 #level 'Course 4 Play Lab Params 3'
 #level 'grade5_artist_parameters_triangles4'
 #level 'grade5_artist_parameters_assessment1' 
+#stage 'Unplugged: Madlibs'
+#level 'MadGlibs'

@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Using the two functions we just wrote, write the function profit, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.",
+    "instructions": "Using the two functions we just wrote, write the function profit, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.\r\n\r\nTest your function by calculating the total profit for 15 cookies.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,8 +22,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Using the two functions we just wrote, write the function `profit`, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.",
-    "examples_required": "true"
+    "markdown_instructions": "Using the two functions we just wrote, write the function `profit`, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.\r\n\r\n_Test your function by calculating the total profit for 15 cookies_",
+    "examples_required": "true",
+    "never_autoplay_video": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

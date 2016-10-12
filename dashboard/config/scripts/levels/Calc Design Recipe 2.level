@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite the function cost, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.",
+    "instructions": "Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\n\r\nWrite the function cost, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.\r\n\r\nTest your function by calculating the cost of 42 cookies",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,8 +24,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite the function `cost`, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.",
-    "examples_required": "true"
+    "markdown_instructions": "Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite the function `cost`, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.\r\n\r\n_Test your function by calculating the cost of 42 cookies_",
+    "examples_required": "true",
+    "never_autoplay_video": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

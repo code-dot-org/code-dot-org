@@ -2,23 +2,26 @@ require 'cdo/db'
 require 'cdo/properties'
 
 class Tutorials
-
   def initialize(table)
     @table = table
     @contents = DB[@table].all
   end
 
-  def launch_url_for(code,domain)
+  def contents
+    @contents
+  end
+
+  def launch_url_for(code, domain)
     return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
-    api_domain = domain.gsub('csedweek.org','code.org')
-    api_domain = api_domain.gsub('ar.code.org','code.org')
-    api_domain = api_domain.gsub('br.code.org','code.org')
-    api_domain = api_domain.gsub('ro.code.org','code.org')
-    api_domain = api_domain.gsub('sg.code.org','code.org')
-    api_domain = api_domain.gsub('tr.code.org','code.org')
-    api_domain = api_domain.gsub('uk.code.org','code.org')
-    api_domain = api_domain.gsub('za.code.org','code.org')
+    api_domain = domain.gsub('csedweek.org', 'code.org')
+    api_domain = api_domain.gsub('ar.code.org', 'code.org')
+    api_domain = api_domain.gsub('br.code.org', 'code.org')
+    api_domain = api_domain.gsub('ro.code.org', 'code.org')
+    api_domain = api_domain.gsub('sg.code.org', 'code.org')
+    api_domain = api_domain.gsub('tr.code.org', 'code.org')
+    api_domain = api_domain.gsub('uk.code.org', 'code.org')
+    api_domain = api_domain.gsub('za.code.org', 'code.org')
     "http://#{api_domain}/api/hour/begin/#{code}"
   end
 
@@ -39,7 +42,7 @@ class Tutorials
       next unless tags.include?(tag)
 
       languages = CSV.parse_line(i[:languages_supported].to_s)
-      next unless languages.nil_or_empty? || languages.include?(language) || languages.include?(language[0,2])
+      next unless languages.nil_or_empty? || languages.include?(language) || languages.include?(language[0, 2])
 
       results[i[:code]] = i
     end
@@ -89,7 +92,6 @@ require 'securerandom'
 require 'json'
 
 class Form2 < OpenStruct
-
   def initialize(params={})
     params = params.dup
     params[:data] = JSON.load(params[:data])
@@ -101,5 +103,4 @@ class Form2 < OpenStruct
     return nil unless row
     self.new row
   end
-
 end

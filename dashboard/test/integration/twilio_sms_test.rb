@@ -2,7 +2,6 @@ require 'test_helper'
 require 'twilio-ruby'
 
 class TwilioSmsTest < ActionDispatch::IntegrationTest
-
   # Required magic 'number' for test API.
   # See: https://www.twilio.com/docs/api/rest/test-credentials
   TEST_PHONE_FROM = '+15005550006'

@@ -23,6 +23,8 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
   end
 
   test 'Enrolling user in a course creates other assignment objects' do
+    skip 'Run this test manually with TEST_PLC=1' unless ENV['TEST_PLC']
+
     module_assignments = @unit_enrollment.plc_module_assignments
     assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, @unit_enrollment.status
     assert_equal 1, module_assignments.count
@@ -41,6 +43,11 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal @content_learning_module, module_assignments.second.plc_learning_module
     assert_equal @practice_learning_module, module_assignments.third.plc_learning_module
 
+    Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(true)
+
+    @script.update(peer_reviews_to_complete: 2)
+    PeerReview.stubs(:get_review_completion_status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
+
     assert_equal [
       {
         category: Plc::LearningModule::REQUIRED_MODULE,
@@ -53,6 +60,29 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
       {
         category: Plc::LearningModule::PRACTICE_MODULE,
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      },
+      {
+          category: 'peer_review',
+          status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      }
+    ], @unit_enrollment.summarize_progress
+  end
+
+  test 'Enrolling user in a course without an evaluation returns status appropriately' do
+    Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(false)
+
+    assert_equal [
+      {
+         category: Plc::LearningModule::PRACTICE_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
+      },
+      {
+         category: Plc::LearningModule::CONTENT_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
+      },
+      {
+         category: Plc::LearningModule::REQUIRED_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
       }
     ], @unit_enrollment.summarize_progress
   end

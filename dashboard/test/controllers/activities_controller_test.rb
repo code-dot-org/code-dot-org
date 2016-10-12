@@ -2,7 +2,7 @@
 require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
   include LevelsHelper
   include UsersHelper
 
@@ -90,7 +90,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       previous_level: build_script_level_path(@script_level_prev),
       total_lines: 35,
       redirect: build_script_level_path(@script_level_next),
-      design: 'white_background',
     }.merge options
   end
 
@@ -99,7 +98,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       previous_level: build_script_level_path(@script_level_prev),
       message: 'try again',
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      design: 'white_background',
     }.merge options
   end
 
@@ -120,8 +118,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # do all the logging
     @controller.expects :log_milestone
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -163,7 +159,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "successful milestone does not require script_level_id" do
     params = @milestone_params
-    params[:script_level_id] = nil
+    params.delete(:script_level_id)
     params[:level_id] = @script_level.level.id
     params[:result] = 'true'
 
@@ -173,7 +169,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "unsuccessful milestone does not require script_level_id" do
     params = @milestone_params
-    params[:script_level_id] = nil
+    params.delete(:script_level_id)
     params[:level_id] = @script_level.level.id
     params[:result] = 'false'
 
@@ -214,8 +210,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
@@ -236,8 +230,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
@@ -270,8 +262,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -295,8 +285,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone does not allow negative lines of code" do
     expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -322,8 +310,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expect_controller_logs_milestone_regexp(/9999999/)
 
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -359,8 +345,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     # existing level
     script_start_date = Time.now - 5.days
@@ -401,23 +385,22 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone should save to gallery when passing an impressive level" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: false)
+      async_activity_writes: false
+    )
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: true)
+      async_activity_writes: true
+    )
   end
 
-  def  _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes:)
+  def _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(async_activity_writes:)
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     expect_s3_upload
 
@@ -443,8 +426,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     expect_s3_upload
 
@@ -472,8 +453,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -496,8 +475,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
@@ -529,28 +506,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
-  end
-
-  test "logged in milestone not passing with hint" do
-    # do all the logging
-    @controller.expects :log_milestone
-
-    # set up hint
-    level_source = LevelSource.find_identical_or_create(@script_level.level, @milestone_params[:program])
-    hint = LevelSourceHint.create!(level_source_id: level_source.id, status: 'experiment', source: 'crowdsourced', hint: 'This is the hint')
-
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource, GalleryActivity) do
-        assert_no_difference('@user.reload.total_lines') do # don't update total lines
-          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
-        end
-      end
-    end
-
-    assert_response :success
-
-    expected_response = build_try_again_response(hint: hint.hint)
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "logged in milestone with image not passing" do
@@ -585,8 +540,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check)
 
     expect_s3_upload
 
@@ -630,8 +583,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check)
 
     program = "<whatever>"
 
@@ -761,7 +712,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-    @controller.expects(:trophy_check).with(@user)
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
@@ -806,6 +756,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  test "logged in milestone with undefined submitted" do
+    post :milestone, @milestone_params.merge(submitted: 'undefined')
+    assert_response :success
+
+    assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
+  end
+
   test "Milestone with milestone posts disabled returns 503 status" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     post :milestone, @milestone_params
@@ -818,8 +775,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -845,8 +800,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -897,8 +850,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
     expect_s3_upload
 
     assert_creates(LevelSource, LevelSourceImage) do
@@ -925,8 +876,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     expect_s3_upload_failure
 
@@ -1134,19 +1083,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal true, new_level
   end
 
-  test 'trophy_check only on script with trophies' do
-    script_level_no_trophies = Script.where(trophies: false).first.script_levels.first
-    script_level_with_trophies = Script.where(trophies: true).first.script_levels.first
-
-    @controller.expects(:trophy_check).never
-    post :milestone, @milestone_params.merge(script_level_id: script_level_no_trophies.id)
-    assert_response :success
-
-    @controller.expects(:trophy_check).with(@user)
-    post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
-    assert_response :success
-  end
-
   test 'does not backfill new users who submit unsuccessful first attempt' do
     assert !@user.needs_to_backfill_user_scripts?
 
@@ -1198,7 +1134,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     user_level = UserLevel.find_by(user_id: @user.id, script_id: @script.id, level_id: @level.id)
     pairings.each do |pairing|
       pairing_user_level = UserLevel.find_by(user_id: pairing.id, script_id: @script.id, level_id: @level.id)
-      assert PairedUserLevel.find_by(driver_user_level_id: user_level, navigator_user_level_id: pairing_user_level),
+      assert PairedUserLevel.find_by(driver_user_level_id: user_level.id, navigator_user_level_id: pairing_user_level.id),
         "could not find PairedUserLevel"
     end
   end
@@ -1241,5 +1177,70 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_driver_user_level.best_result
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
+  end
+
+  test "milestone fails to update locked/readonly level" do
+    teacher = create(:teacher)
+
+    # make them an authorized_teacher
+    cohort = create(:cohort)
+    cohort.teachers << teacher
+    cohort.save!
+
+    section = create(:section, user: teacher, login_type: 'word')
+    student_1 = create(:follower, section: section).student_user
+    sign_in student_1
+
+    script = create :script
+
+    # Create a LevelGroup level.
+    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level.properties['submittable'] = true
+    level.save!
+
+    stage = create :stage, name: 'Stage1', script: script, lockable: true
+
+    # Create a ScriptLevel joining this level to the script.
+    script_level = create :script_level, script: script, levels: [level], assessment: true, stage: stage
+
+    milestone_params = {
+      user_id: student_1,
+      script_level_id: script_level.id,
+      level_id: level.id,
+      program: '<hey>',
+      app: 'level_group',
+      level: nil,
+      result: 'true',
+      pass: 'true',
+      testResult: '100',
+      submitted: 'true'
+    }
+
+    # milestone post should fail because there's no user_level, and it is thus locked by implication
+    post :milestone, milestone_params
+    assert_response 403
+
+    # explicity create a user_level that is unlocked
+    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+
+    # should now succeed
+    post :milestone, milestone_params
+    assert_response :success
+
+    # milestone post should cause it to become locked again
+    user_level = UserLevel.find(user_level.id)
+    assert user_level.locked?(stage)
+
+    # milestone post should also fail when we have an existing user_level that is locked
+    post :milestone, milestone_params
+    assert_response 403
+
+    user_level.delete
+    # explicity create a user_level that is readonly_answers
+    create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
+    post :milestone, milestone_params
+    assert_response 403
   end
 end

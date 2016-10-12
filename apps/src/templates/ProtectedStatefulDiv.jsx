@@ -1,7 +1,7 @@
-'use strict';
 
-var React = require('react');
-var Radium = require('radium');
+import _ from 'lodash';
+import React from 'react';
+import Radium from 'radium';
 
 /**
  * A div DOM element that will never update its contents and will throw an
@@ -32,7 +32,7 @@ var ProtectedStatefulDiv = React.createClass({
   },
 
   render: function () {
-    return <div {...this.props} ref="root"></div>;
+    return <div {..._.omit(this.props, ['contentFunction'])} ref="root"/>;
   }
 });
 module.exports = Radium(ProtectedStatefulDiv);

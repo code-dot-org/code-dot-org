@@ -53,7 +53,7 @@ class MilestoneParser
     hosts = s3_client.list_objects(bucket: 'cdo-logs', prefix: 'hosts/', delimiter: '/').data.common_prefixes.map(&:prefix)
     hosts.select! do |prefix|
       match = prefix.match /^hosts\/(?<host>[^\/]+)\//
-      match && !(IGNORE_HOSTS.include? match[:host])
+      match && !(Regexp.union(IGNORE_HOSTS).match match[:host])
     end
     logs = Parallel.map(hosts, in_threads: 16) do |host|
       s3_resource.bucket('cdo-logs').objects(prefix: "#{host}dashboard/milestone.log")
@@ -117,6 +117,9 @@ class MilestoneParser
     FileUtils.rm path
     debug "Count: #{count}"
     response
+  rescue => e
+    debug "Error counting #{log.key}: #{e.message}"
+    {'count' => 0, 'error' => e.message}
   end
 
   def stub_fetch(key, path, bytes); end

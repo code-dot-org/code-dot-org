@@ -11,7 +11,7 @@ content-type: text/ng-template
 
 %div{'ng-show' => 'assessmentsLoaded'}
   = I18n.t('dashboard_assessments_view')
-  %select{"ng-model" => "course_id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category', 'position', 'name']", 'ng-change' => 'changeScript(course_id)'}
+  %select{"ng-model" => "course_id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(course_id)'}
 
 :ruby
   surveys_filtered = "surveyLevels | orderBy:orderSurveyAnswers | filter:(stageFilterSurveyAnswers && {stage: stageFilterSurveyAnswers}):true"
@@ -22,21 +22,20 @@ content-type: text/ng-template
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'surveys.length', "ng-form" => "allForm"}
     %colgroup
       %col{width: "250"}/
-      %col{width: "75"}/
-      %col{width: "250"}/
+      %col{width: "300"}/
       %col{width: "225"}/
-      %col{width: "75"}/
+      %col{width: "100"}/
 
     %tr
-      %th.manage-th{colspan: 5}
+      %th.manage-th{colspan: 4}
         %div{'ng-show' => 'surveyStages && surveyStages.length > 1', style: 'float: left; line-height: 35px'}
           = I18n.t('dashboard_filter_by_stage')
           %select{'ng-model' => 'stageFilterSurveyAnswers', "ng-options" => "stage for stage in surveyStages", "ng-show" => 'surveyStages'}
             %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => surveys_filtered,
                 filename: "survey_levels.csv",
-                'csv-header' => "['Stage', 'Puzzle', 'Question', 'Response', 'Percent']",
-                'csv-column-order' => "['stage', 'puzzle', 'questionText', 'resultText', 'percent']",
+                'csv-header' => "['Stage', 'Question', 'Response', 'Percent']",
+                'csv-column-order' => "['stage', 'questionText', 'resultText', 'percent']",
                 style: 'float: right'}
           %i.fa.fa-download
           = I18n.t('dashboard_download_csv')
@@ -44,8 +43,6 @@ content-type: text/ng-template
     %tr
       %th.manage-th
         %a{href: "", "ng-click" => "orderSurveyAnswers = 'stage'"}= I18n.t('dashboard_stage')
-      %th.manage-th
-        %a{href: "", "ng-click" => "orderSurveyAnswers = 'puzzle'"}= I18n.t('dashboard_puzzle')
       %th.manage-th
         %a{href: "", "ng-click" => "orderSurveyAnswers = 'question'"}= I18n.t('dashboard_question')
       %th.manage-th
@@ -56,8 +53,6 @@ content-type: text/ng-template
     %tr{"ng-repeat" => "level in #{surveys_filtered}", "ng-form" => "form"}
       %td
         {{level.stage}}
-      %td
-        {{level.puzzle}}
       %td
         {{level.questionText}}
       %td

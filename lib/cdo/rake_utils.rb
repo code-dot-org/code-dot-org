@@ -4,7 +4,6 @@ require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/hip_chat'
 require 'digest'
-require 'sprockets-derailleur'
 
 module RakeUtils
   def self.system__(command)
@@ -31,6 +30,10 @@ module RakeUtils
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
 
+  def self.restart_service(id)
+    sudo 'service', id.to_s, 'restart' if OS.linux? && CDO.chef_managed
+  end
+
   def self.system_(*args)
     status, _ = system__(command_(*args))
     status
@@ -43,6 +46,8 @@ module RakeUtils
   end
 
   def self.system(*args)
+    return system_stream_output(*args) if ENV['RAKE_VERBOSE']
+
     command = command_(*args)
     status, output = system__ command
     unless status == 0
@@ -95,7 +100,8 @@ module RakeUtils
   end
 
   def self.nproc
-    SprocketsDerailleur.worker_count
+    # TODO: Replace with system processor count.
+    1
   end
 
   def self.bundle_install(*args)
@@ -154,14 +160,14 @@ module RakeUtils
   # full revision history needed to find the original commit SHA.
   def self.git_folder_hash(dir)
     Dir.chdir(File.expand_path(dir)) do
-      Digest::SHA2.hexdigest(`git ls-tree -r HEAD`)
+      Digest::SHA2.hexdigest(`git ls-tree -r HEAD 2>/dev/null`)
     end
   end
 
   def self.ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      system 'rm', '-f', target if(current || File.file?(target))
+      system 'rm', '-f', target if current || File.file?(target)
       system 'ln', '-s', source, target
     end
   end
@@ -184,7 +190,7 @@ module RakeUtils
     commands << 'install'
     commands << '--quiet'
     commands += args
-    RakeUtils.system *commands
+    RakeUtils.system(*commands)
   end
 
   # Installs list of global npm packages if not already installed
@@ -221,7 +227,7 @@ module RakeUtils
   def self.sudo_ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      sudo 'rm', '-f', target if(current || File.file?(target))
+      sudo 'rm', '-f', target if current || File.file?(target)
       sudo 'ln', '-s', source, target
     end
   end

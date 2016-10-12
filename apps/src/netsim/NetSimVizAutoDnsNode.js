@@ -1,7 +1,6 @@
 /**
  * @overview Visualization auto-dns node.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var NetSimGlobals = require('./NetSimGlobals');

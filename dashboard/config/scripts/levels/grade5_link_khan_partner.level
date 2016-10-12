@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-08-03T00:17:26.000Z",
+  "level_num": "custom",
+  "user_id": 53,
+  "properties": {
+    "link_title": "Khan Academy Java Script Tutorials",
+    "url": "https://www.khanacademy.org/computing/computer-programming/programming/drawing-basics/p/making-drawings-with-code#"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</ExternalLink>

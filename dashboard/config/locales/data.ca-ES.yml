@@ -1,75 +1,5 @@
 "ca":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 introducció al curs d'Informàtica
-          Unplug1: Etapa 1
-          Maze: Etapa 2
-          Unplug2: Etapa 3
-          Unplug3: Etapa 4
-          Artist: Etapa 5
-          Unplug4: Etapa 6
-          Artist2: Etapa 7
-          Unplug5: Etapa 8
-          Farmer: Etapa 9
-          Unplug6: Etapa 10
-          Artist3: Etapa 11
-          Unplug7: Etapa 12
-          Farmer2: Etapa 13
-          Unplug8: Etapa 14
-          Artist4: Etapa 15
-          Unplug9: Etapa 16
-          Farmer3: Etapa 17
-          Unplug10: Etapa 18
-          Artist5: Etapa 19
-          Unplug11: Etapa 20
-        Hour of Code:
-          desc: Hora del codi
-          Maze: Etapa 1
-        Edit Code:
-          desc: Edita codi (beta)
-          MazeEC: Etapa 1
-        2014 Levels:
-          desc: Rebot (beta)
-          Bounce: Etapa 1
-        Builder Levels:
-          desc: Puzzles creats pels usuaris (beta)
-          Custom: Etapa 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Etapa 1
-        Jigsaw Levels:
-          desc: Trencaclosques (beta)
-          Jigsaw: Etapa 1
-        Step Levels:
-          desc: Laberint (beta)
-          MazeStep: Pas d'Etapa
-        edit-code:
-          desc: Edita codi (beta)
-          MazeEC: Etapa 1
-          Applab: Etapa 2
-          ArtistEC: Etapa 3
-          StudioEC: Etapa 4
-        events:
-          desc: Rebot (beta)
-          Bounce: Etapa 1
-          Studio: Etapa 2
-        builder:
-          desc: Puzzles creats pels usuaris (beta)
-          Custom: Etapa 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Etapa 1
-        jigsaw:
-          desc: Trencaclosques (beta)
-          Jigsaw: Etapa 1
-        step:
-          desc: Laberint (beta)
-          MazeStep: Pas d'Etapa
-        wordsearch:
-          desc: Abella d'Ortografia (beta)
-          WordSearch: Etapa 1
     game:
       name:
         Unplug1: Introducció a la informàtica
@@ -399,10 +329,10 @@
           dos blocs "quan toca la bola " per resoldre aquest puzle.
         bounce_7: Uneix blocs a cadascun dels blocs "quan". Bota la pilota fins que
           arribi a l'objectiu final.
-        bounce_10: Ara hi ha un objectiu a la part superior. Uneix els blocs "anotar
-          punt" i "qnotar punt a l' oponent"  als blocs "quan bola arriba a la meta"
-          i "quan bola passa de llarg" per fer un joc. Mira quants punts pots anotar
-          abans que el seu oponent anoti dues vegades.
+        bounce_10: Ara hi ha un objectiu a la part superior. Uneix els blocs "puntuació"
+          i "puntuació oponent"  als blocs "quan bola arriba a la meta" i "quan bola
+          passa de llarg" per fer un joc. Mira quants punts pots anotar abans que
+          el seu oponent anoti dues vegades.
         bounce_11: Ara pots unir blocs al bloc "En executar". Has de col·locar el
           nou bloc "Llança nova pilota" a més d'un lloc. A més a més, prova de canviar
           l'escena o la velocitat de la pala i la pilota i mira quants punts pots
@@ -781,6 +711,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

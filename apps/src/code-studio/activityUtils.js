@@ -2,14 +2,32 @@
  * A set of utility functions made for dealing with activities easier.
  */
 
+import { makeEnum } from '@cdo/apps/utils';
+
 /**
  * See ActivityConstants.
  */
 const MINIMUM_PASS_RESULT = 20;
 const MINIMUM_OPTIMAL_RESULT = 30;
 export const SUBMITTED_RESULT = 1000;
+export const LOCKED_RESULT = 1001;
 const REVIEW_REJECTED_RESULT = 1500;
 const REVIEW_ACCEPTED_RESULT = 2000;
+
+/**
+ * Different possibilites for level.status. Note, these values are also used
+ * in dashboard in various places and should not be changed.
+ */
+export const LevelStatus = makeEnum(
+  'not_tried',
+  'submitted',
+  'locked',
+  'perfect',
+  'passed',
+  'attempted',
+  'review_accepted',
+  'review_rejected'
+);
 
 /**
  * See ApplicationHelper#activity_css_class.
@@ -18,24 +36,27 @@ const REVIEW_ACCEPTED_RESULT = 2000;
  */
 export const activityCssClass = result => {
   if (!result) {
-    return 'not_tried';
+    return LevelStatus.not_tried;
   }
   if (result === REVIEW_ACCEPTED_RESULT) {
-    return 'perfect';
+    return 'review_accepted';
   }
   if (result === REVIEW_REJECTED_RESULT) {
     return 'review_rejected';
   }
   if (result === SUBMITTED_RESULT) {
-    return 'submitted';
+    return LevelStatus.submitted;
+  }
+  if (result === LOCKED_RESULT) {
+    return LevelStatus.locked;
   }
   if (result >= MINIMUM_OPTIMAL_RESULT) {
-    return 'perfect';
+    return LevelStatus.perfect;
   }
   if (result >= MINIMUM_PASS_RESULT) {
-    return 'passed';
+    return LevelStatus.passed;
   }
-  return 'attempted';
+  return LevelStatus.attempted;
 };
 
 

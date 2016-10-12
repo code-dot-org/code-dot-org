@@ -84,29 +84,31 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
 
     @evaluation = LevelGroup.create_from_level_builder({name: 'evaluation'}, {dsl_text: levelgroup_dsl})
     create(:script_level, script: @course_unit.script, levels: [@evaluation])
+    @user_level = create(:user_level, user: @user, script: @course_unit.script, level: @evaluation)
     @activity = create(:activity, user: @user, level: @evaluation)
+    @user_level = create(:user_level, user: @user, level: @evaluation)
   end
 
   test 'submit evaluation enrolls user in appropriate modules' do
-    assert_equal [@module_blue.id, @module_honesty.id], get_preferred_modules_for_answers([
+    assert_equal [@module_blue, @module_honesty], get_preferred_modules_for_answers([
       [@evaluation_multi1, 'Sir Lancelot'],
       [@evaluation_multi2, 'I seek the grail'],
       [@evaluation_multi3, 'Blue']
     ])
 
-    assert_equal [@module_ignorance.id, @module_no_nickname.id], get_preferred_modules_for_answers([
+    assert_equal [@module_ignorance, @module_no_nickname], get_preferred_modules_for_answers([
       [@evaluation_multi1, 'Sir Robin'],
       [@evaluation_multi2, 'Yes, yes, I seek the Grail'],
       [@evaluation_multi4, 'I dont know that!']
     ])
 
-    assert_equal [@module_cliffs.id, @module_honesty.id], get_preferred_modules_for_answers([
+    assert_equal [@module_cliffs, @module_honesty], get_preferred_modules_for_answers([
       [@evaluation_multi1, 'Sir Galahad'],
       [@evaluation_multi2, 'I seek the grail'],
       [@evaluation_multi3, 'Yellow - no, blue']
     ])
 
-    assert_equal [@module_ornithology.id, @module_honesty.id], get_preferred_modules_for_answers([
+    assert_equal [@module_ornithology, @module_honesty], get_preferred_modules_for_answers([
      [@evaluation_multi1, 'King Arthur'],
      [@evaluation_multi2, 'I seek the grail'],
      [@evaluation_multi5, 'What do you mean, an African or European Swallow?']
@@ -127,7 +129,9 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     end
 
     level_source = create(:level_source, level: @evaluation, data: answers_data.to_json)
+    @user_level.update(level_source: level_source)
     @activity.update(level_source: level_source)
+    @user_level.update(level_source: level_source)
     @course_unit.determine_preferred_learning_modules @user
   end
 end

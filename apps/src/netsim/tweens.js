@@ -1,7 +1,6 @@
 /**
  * @overview Tween functions used to animate visualization elements.
  */
-'use strict';
 
 var valueOr = require('../utils').valueOr;
 

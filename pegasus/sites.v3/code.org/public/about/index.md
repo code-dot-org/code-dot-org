@@ -1,6 +1,7 @@
 ---
 title: About Us
 nav: about_nav
+video_player: true
 ---
 
 <%
@@ -9,7 +10,22 @@ nav: about_nav
 
 # About Us
 
+<div style="float: left; width: 280px;">
+
+<% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
+<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>'Meet the team at @codeorg and see how much they’ve done in just a few years!'} %>
+
+<%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
+
+</div>
+
+<div style="margin-left: 300px;">
+
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
+
+</div>
+
+<div style="clear: both;"></div>
 
 ## Diversity of students in our courses
 ![image](/images/infographics/fit-800/diversity-courses.png)
@@ -18,34 +34,32 @@ Code.org increases diversity in computer science by reaching students of all bac
 
 <br />
 
-[col-50]
+## Code.org in the News
+See all past [news and announcements](/about/news).
 
-**Code.org's work covered by CBS This Morning:**
+<div style="float: left; width: 50%; padding-right: 10px;">
 
-<iframe width="375" height="246" src="//www.youtube.com/embed/sUXfjzzHO5g?controls=2" frameborder="0" allowfullscreen></iframe>
+<%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
 
-[/col-50]
+</div>
 
-[col-50]
+<div style="float: left; width: 50%; padding-left: 10px;">
 
-**President Obama does the Hour of Code:**
+<%=view :display_video_thumbnail, id: "obama_hour_of_code", video_code: "AI_dayIQWV4", caption: "President Obama does the Hour of Code. Hour of Code has won the support of both <a href='https://www.youtube.com/watch?v=Vgn_YbSmHnw'>Republicans and Democrats</a>, and <a href='https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_'>many celebrities</a>", play_button: "center", letterbox: "false" %>
 
-<iframe width="375" height="210" src="//www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
-Hour of Code has won the support of both [Republicans and Democrats](https://www.youtube.com/watch?v=Vgn_YbSmHnw), and [many celebrities](https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_)
+</div>
 
-<br/><br/>
-
-[/col-50]
+<div style="clear: both;"></div>
 
 ## Our goals and metrics
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Improve diversity in CS | In our online courses, 45% of students are girls and 45% are black or Hispanic. In our high school classrooms, 37% are girls, and 56% African American or Hispanic. |
+| Improve diversity in CS | In our online courses, 45% of students are girls and 48% are underrepresented minorities. In our high school classrooms, 37% are girls, and 56% African American or Hispanic. |
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 35,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
+| Prep new CS teachers | We've prepared 43,700 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
 | Change school district curriculum | We've partnered with [100 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [20 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 45+ languages, used in all 180+ countries. |

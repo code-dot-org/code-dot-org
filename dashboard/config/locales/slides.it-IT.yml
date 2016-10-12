@@ -54,7 +54,7 @@
       12:
         image: notes/hoc1_12.jpg
         text: Se dopo aver eseguito un programma vuoi cambiarlo ed eseguirlo di nuovo,
-          premi "Riprova".
+          clicca su "Riprova".
       13:
         image: notes/hoc1_13.jpg
         text: Andiamo a prendere quei maiali!
@@ -610,7 +610,7 @@
           l'artista e farlo disegnare sulle linee grigie.
       2:
         image: notes/C1_artist_intro_2.png
-        text: Questi sono i blocchi per saltare (jump). Quando usi questi blocchi,
+        text: Questi sono i blocchi per saltare (<i>jump</i>). Quando usi questi blocchi,
           l'artista si sposta ma non disegna. Usali per saltare alla prossima linea
           grigia senza disegnare.
     C1_bee_level_intro:
@@ -1534,12 +1534,12 @@
       4:
         image: notes/C3_bee_functions_4.png
         text: In questo esempio, la nostra funzione si chiama "prendi 2 dosi di nettare"
-          (get 2 nectar) ed è il blocco verde. Puoi sapere cosa fa "prendi 2 dosi
-          di nettare" osservando questo blocco grigio che è la definizione della funzione.
-          Se guardi al suo interno ti accorgi che "prendi 2 dosi di nettare" è formata
-          da un blocco "prendi il nettare" (get nectar) seguito da un altro blocco
-          "prendi il nettare". Guarda sempre cosa c'è nel blocco grigio per sapere
-          cosa possono fare i blocchi verdi delle funzioni.
+          (<i>get 2 nectar</i>) ed è il blocco verde. Puoi sapere cosa fa "prendi
+          2 dosi di nettare" osservando questo blocco grigio che è la definizione
+          della funzione. Se guardi al suo interno ti accorgi che "prendi 2 dosi di
+          nettare" è formata da un blocco "prendi il nettare" (<i>get nectar</i>)
+          seguito da un altro blocco "prendi il nettare". Guarda sempre cosa c'è nel
+          blocco grigio per sapere cosa possono fare i blocchi verdi delle funzioni.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png

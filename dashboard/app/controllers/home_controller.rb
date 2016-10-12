@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_user!, only: :gallery_activities
+  before_action :authenticate_user!, only: :gallery_activities
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -48,5 +48,11 @@ class HomeController < ApplicationController
 
   def certificate_link_test
     render 'certificate_link_test', formats: [:html]
+  end
+
+  # This static page combines TOS and Privacy partials all in one page
+  # for easy printing.
+  def terms_and_privacy
+    render partial: 'home/tos_and_privacy'
   end
 end

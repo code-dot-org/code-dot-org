@@ -11,6 +11,7 @@ var BaseDialog = React.createClass({
     isOpen: React.PropTypes.bool,
     handleClose: React.PropTypes.func,
     uncloseable: React.PropTypes.bool,
+    handleKeyDown: React.PropTypes.func,
     hideBackdrop: React.PropTypes.bool,
     fullWidth: React.PropTypes.bool,
     useDeprecatedGlobalStyles: React.PropTypes.bool,
@@ -25,10 +26,11 @@ var BaseDialog = React.createClass({
     this.focusDialog();
   },
 
-  closeOnEscape: function (event) {
+  handleKeyDown: function (event) {
     if (event.key === 'Escape') {
       this.closeDialog();
     }
+    this.props.handleKeyDown && this.props.handleKeyDown(event);
   },
 
   closeDialog: function () {
@@ -37,8 +39,17 @@ var BaseDialog = React.createClass({
     }
   },
 
+  /** @returns {Array.<Element>} */
+  getTabbableElements() {
+    return [].slice.call(this.refs.dialog.querySelectorAll('a,button,input'));
+  },
+
   focusDialog: function () {
-    if (this.props.isOpen) {
+    // Don't steal focus if the active element is already a descendant of the
+    // dialog - prevents focus loss on updates of open BaseDialog components.
+    const descendantIsActive = document.activeElement && this.refs.dialog &&
+        this.refs.dialog.contains(document.activeElement);
+    if (this.props.isOpen && !descendantIsActive) {
       this.refs.dialog.focus();
     }
   },
@@ -77,7 +88,7 @@ var BaseDialog = React.createClass({
         tabIndex="-1"
         className={modalClassNames}
         ref="dialog"
-        onKeyDown={this.closeOnEscape}
+        onKeyDown={this.handleKeyDown}
       >
         <div className={modalBodyClassNames}>
           {!this.props.uncloseable &&

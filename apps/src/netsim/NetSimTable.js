@@ -1,7 +1,6 @@
 /**
  * @overview Wraps remote storage interface and polling behavior.
  */
-'use strict';
 
 import $ from 'jquery';
 var _ = require('lodash');

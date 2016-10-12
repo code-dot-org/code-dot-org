@@ -43,7 +43,6 @@ def load_configuration
     'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
-    'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_code_studio'           => false,
@@ -52,7 +51,7 @@ def load_configuration
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
     'dashboard_honeybadger_api_key' => '00000000',
-    'dashboard_host'              => 'localhost',
+    'dashboard_host'              => '0.0.0.0',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
     'dashboard_enable_pegasus'    => rack_env == :development,
@@ -93,8 +92,11 @@ def load_configuration
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
+    'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
+    'firebase_max_table_count'    => 10,
     'firebase_max_table_rows'     => 1000,
     'firebase_max_record_size'    => 4096,
     'firebase_max_property_size'  => 4096,
@@ -151,7 +153,6 @@ end
 ##########
 
 class CDOImpl < OpenStruct
-
   @slog = nil
 
   def initialize
@@ -184,6 +185,18 @@ class CDOImpl < OpenStruct
 
   def hourofcode_hostname
     canonical_hostname('hourofcode.com')
+  end
+
+  def circle_run_identifier
+    ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
+  end
+
+  # provide a unique path for firebase channels data for development and circleci,
+  # to avoid conflicts in channel ids.
+  def firebase_channel_id_suffix
+    return "-#{circle_run_identifier}" if ENV['CI']
+    return "-DEVELOPMENT-#{ENV['USER']}" if CDO.firebase_name == 'cdo-v3-dev'
+    ''
   end
 
   def site_url(domain, path = '', scheme = '')
@@ -296,14 +309,13 @@ class CDOImpl < OpenStruct
   # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
   # appending to the static list already provided by configuration files.
   def app_servers
-    return super unless CDO.chef_managed
-    require 'cdo/rake_utils'
-    servers = RakeUtils.with_bundle_dir(cookbooks_dir) do
-      knife_cmd = "knife search node 'roles:front-end AND chef_environment:#{rack_env}' --format json --attribute cloud_v2"
-      JSON.parse(`#{knife_cmd}`)['rows'].map do |key|
-        [key.keys.first, key.values.first['cloud_v2']['local_hostname']]
-      end.to_h
-    end
+    return super unless CDO.chef_managed && rack_env?(:production)
+    require 'aws-sdk'
+    servers = Aws::EC2::Client.new.describe_instances(filters: [
+        { name: 'tag:aws:cloudformation:stack-name', values: ['autoscale-prod'] },
+        { name: 'tag:aws:cloudformation:logical-id', values: ['WebServer'] },
+        { name: 'instance-state-name', values: ['running']}
+    ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
     servers.merge(super)
   end
 end
@@ -337,10 +349,6 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
-def blockly_core_dir(*dirs)
-  deploy_dir('blockly-core', *dirs)
-end
-
 def cookbooks_dir(*dirs)
   deploy_dir('cookbooks', *dirs)
 end
@@ -357,6 +365,6 @@ def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
 end
 
-def code_studio_dir(*dirs)
-  deploy_dir('code-studio', *dirs)
+def lib_dir(*dirs)
+  deploy_dir('lib', *dirs)
 end

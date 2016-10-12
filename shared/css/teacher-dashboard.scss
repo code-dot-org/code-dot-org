@@ -340,62 +340,7 @@ td.studentname {
 .signin_card dl dd {
 }
 
-.teacher-announce {
-  position: relative;
-
-  .announce-heading {
-    background-color: $purple;
-    border-radius: 4px;
-    color: #fff;
-    height: 40px;
-    overflow: hidden;
-    padding: 10px;
-    text-transform: uppercase;
-
-    .heading-view-all {
-      float: right;
-    }
-  }
-
-  .announce-content {
-    background-color: $lightest_purple;
-    border-radius: 4px;
-    margin-top: 3px;
-    overflow: hidden;
-    padding: 10px;
-
-    .content-img-container {
-      float: left;
-    }
-
-    .content-img {
-      border-radius: 4px;
-      max-height: 145px;
-    }
-
-    .content-text {
-      color: $dark_charcoal;
-      float: left;
-      max-height: 100px;
-      overflow: hidden;
-      padding-left: 10px;
-      line-height: 20px;
-      width: 610px;
-
-      b {
-        font-family: 'Gotham 5r', sans-serif;
-      }
-    }
-
-  }
-
-  .announce-learn-more {
-    bottom: 10px;
-    position: absolute;
-    right: 10px;
-  }
-}
-
+/* MOVING STUDENTS */
 
 .move-students-modal {
   .modal-header {

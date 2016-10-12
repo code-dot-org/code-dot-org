@@ -1,3 +1,5 @@
+require 'sqs/sqs_queue'
+
 # An SQS messages handler for asynchronous workshop jobs,
 # notably wrapping up a workshop when it ends (sending emails, generating reports, etc.)
 class Pd::AsyncWorkshopHandler
@@ -45,6 +47,13 @@ class Pd::AsyncWorkshopHandler
       else
         raise "Unexpected action #{op[:action]} in #{op}"
     end
+  rescue Exception => exception
+    # Notify honeybadger when an error occurs.
+    Honeybadger.notify(exception,
+      error_message: "Error processing Pd workshop: #{exception.message}",
+      context: {op: op}
+    )
+    raise exception
   end
 
   def handle(messages)

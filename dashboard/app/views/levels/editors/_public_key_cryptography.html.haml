@@ -1,0 +1,4 @@
+.field
+  = f.label :cryptography_widget_view, 'Cryptography widget view'
+  %p Indicates which view of the public key cryptography widget to use.
+  = f.select :cryptography_widget_view, options_for_select([['The Modulo Clock', 1], ['Alice, Eve and Bob', 2]], @level.cryptography_widget_view)

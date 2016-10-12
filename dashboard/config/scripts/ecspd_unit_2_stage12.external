@@ -1,8 +1,6 @@
 name 'ECSPD Unit 2 Stage12'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 17 > About this stage
+# Day 17 > About this stage
 
 In this stage, you will:
 
@@ -10,8 +8,6 @@ In this stage, you will:
 - Share your own supplemental materials you’ve created for Day 17, if applicable
 
 Review the content provided in the levels that follow. Each level provides important background and support that will help you plan and deliver lessons from the ECS Version 5 curriculum. As you work your way through, remember to always click “Continue” at the bottom of each page in order to earn your green dot for each level.
-<br><br>
+
 Refer back to this stage whenever you need a refresher on Lesson 17. And keep in mind, you can always [connect with other ECS teachers on the forum](http://forum.code.org/c/ecs) if you have questions or need additional support with these lessons.
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

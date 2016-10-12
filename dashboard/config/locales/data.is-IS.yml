@@ -1,75 +1,5 @@
 "is":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Inngangur að tölvunarfræði 13-14 ára
-          Unplug1: "Áfangi 1"
-          Maze: "Áfangi 2"
-          Unplug2: "Áfangi 3"
-          Unplug3: "Áfangi 4"
-          Artist: "Áfangi 5"
-          Unplug4: "Áfangi 6"
-          Artist2: "Áfangi 7"
-          Unplug5: "Áfangi 8"
-          Farmer: "Áfangi 9"
-          Unplug6: "Áfangi 10"
-          Artist3: "Áfangi 11"
-          Unplug7: "Áfangi 12"
-          Farmer2: "Áfangi 13"
-          Unplug8: "Áfangi 14"
-          Artist4: "Áfangi 15"
-          Unplug9: "Áfangi 16"
-          Farmer3: "Áfangi 17"
-          Unplug10: "Áfangi 18"
-          Artist5: "Áfangi 19"
-          Unplug11: "Áfangi 20"
-        Hour of Code:
-          desc: Klukkustund kóðunar
-          Maze: Stig 1
-        Edit Code:
-          desc: Breyta kóða (beta)
-          MazeEC: Stig 1
-        2014 Levels:
-          desc: Skopp (beta)
-          Bounce: Stig 1
-        Builder Levels:
-          desc: "Þrautir gerðar af notendum (beta)"
-          Custom: Stig 1
-        Flappy Levels:
-          desc: Fuglinn Flappy
-          Flappy: Stig 1
-        Jigsaw Levels:
-          desc: Púsl (beta)
-          Jigsaw: Stig 1
-        Step Levels:
-          desc: Völundarhús (beta)
-          MazeStep: "Þrep í áfanga"
-        edit-code:
-          desc: Breyta kóða (beta)
-          MazeEC: Stig 1
-          Applab: "Áfangi 2"
-          ArtistEC: "Áfangi 3"
-          StudioEC: "Áfangi 4"
-        events:
-          desc: Skopp (beta)
-          Bounce: Stig 1
-          Studio: Stig 2
-        builder:
-          desc: "Þrautir gerðar af notendum (beta)"
-          Custom: Stig 1
-        flappy:
-          desc: Fuglinn Flappy
-          Flappy: Stig 1
-        jigsaw:
-          desc: Púsl (beta)
-          Jigsaw: Stig 1
-        step:
-          desc: Völundarhús (beta)
-          MazeStep: "Þrep í áfanga"
-        wordsearch:
-          desc: Stafsetning (beta)
-          WordSearch: Stig 1
     game:
       name:
         Unplug1: Kynning á tölvunarfræði
@@ -677,8 +607,8 @@
         C2_zuck_repeat_loop: Lykkjur völundarhúss
         C2_artist_loops: Listamaður - lykkjur
         C2_artist_debugging: Villuleit listamanns
-        C2_bee_loops: Lykkjur býflugu
-        C2_bee_debugging: Villuleit býflugu
+        C2_bee_loops: Býfluga - lykkjur
+        C2_bee_debugging: Býfluga - villuleit
         C2_bee_conditionals: Skilyrði býflugu
         C2_playlab_createstory: Leikjasmiðja - búa til sögu
         C2_graph_paper: Forritun rúðublaða
@@ -688,7 +618,7 @@
         C2_paper_airplanes: Pappírsflaugar
         C2_digital_footprint: Stafræna fótsporið þitt
         C2_digital_footprint_v2: Stafræna fótsporið þitt
-        C3_maze_level_4: Lykkjur völundarhúss
+        C3_maze_level_4: Völundarhús - lykkjur
         C3_artist_intro: Kynning á listamanni
         C3_artist_functions: Listamaður - föll
         C3_bee_functions: Býfluga - föll
@@ -757,6 +687,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

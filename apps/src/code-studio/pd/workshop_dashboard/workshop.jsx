@@ -1,28 +1,35 @@
-/* global TEACHER_DASHBOARD_URL */
-
-/*
-  Workshop view / edit. Displays and optionally edits details for a workshop.
-  Routes:
-    /workshops/:workshopId
-    /Workshops/:workshopId/edit
+/**
+ * Workshop view / edit. Displays and optionally edits details for a workshop.
+ * Routes:
+ *   /workshops/:workshopId
+ *   /Workshops/:workshopId/edit
  */
 
 import $ from 'jquery';
-var _ = require('lodash');
+import _ from 'lodash';
 import React from 'react';
-var moment = require('moment');
-var ConfirmationDialog = require('./components/confirmation_dialog');
-var WorkshopForm = require('./components/workshop_form');
-var WorkshopEnrollment = require('./components/workshop_enrollment');
-var Grid = require('react-bootstrap').Grid;
-var Row = require('react-bootstrap').Row;
-var Col = require('react-bootstrap').Col;
-var Panel = require('react-bootstrap').Panel;
-var ButtonGroup = require('react-bootstrap').ButtonGroup;
-var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
-var Button = require('react-bootstrap').Button;
+import moment from 'moment';
+import {
+  Grid,
+  Row,
+  Col,
+  Panel,
+  ButtonGroup,
+  ButtonToolbar,
+  Button
+} from 'react-bootstrap';
+import {DATE_FORMAT} from './workshopConstants';
+import ConfirmationDialog from './components/confirmation_dialog';
+import WorkshopForm from './components/workshop_form';
+import WorkshopEnrollment from './components/workshop_enrollment';
 
-var Workshop = React.createClass({
+const styles = {
+  linkButton: {
+    color:'inherit'
+  }
+};
+
+const Workshop = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -36,7 +43,7 @@ var Workshop = React.createClass({
     }).isRequired,
   },
 
-  getInitialState: function () {
+  getInitialState() {
     if (this.props.params.workshopId) {
       return {
         loadingWorkshop: true,
@@ -45,12 +52,12 @@ var Workshop = React.createClass({
     }
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.loadWorkshop();
     this.loadEnrollments();
   },
 
-  shouldComponentUpdate: function () {
+  shouldComponentUpdate() {
     // Don't allow editing a workshop that has been started.
     if (this.props.route.view === 'edit' && this.state.workshop && this.state.workshop.state !== 'Not Started') {
       this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
@@ -59,12 +66,12 @@ var Workshop = React.createClass({
     return true;
   },
 
-  loadWorkshop: function () {
+  loadWorkshop() {
     this.loadWorkshopRequest = $.ajax({
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}`,
       dataType: "json"
-    }).done(function (data) {
+    }).done(data => {
       this.setState({
         loadingWorkshop: false,
         workshop: _.pick(data, [
@@ -85,15 +92,16 @@ var Workshop = React.createClass({
           'state'
         ])
       });
-    }.bind(this));
+    });
   },
 
-  loadEnrollments: function () {
+  loadEnrollments() {
+    this.setState({loadingEnrollments: true});
     this.loadEnrollmentsRequest = $.ajax({
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments`,
       dataType: "json"
-    }).done(function (data) {
+    }).done(data => {
       this.setState({
         loadingEnrollments: false,
         enrollments: data,
@@ -101,16 +109,29 @@ var Workshop = React.createClass({
           enrolled_teacher_count: data.length
         })
       });
-    }.bind(this));
+    });
   },
 
+  handleDeleteEnrollment(id) {
+    this.deleteEnrollmentRequest = $.ajax({
+      method: 'DELETE',
+      url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments/${id}`,
+      dataType: "json"
+    }).done(() => {
+      // reload
+      this.loadEnrollments();
+    });
+  },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     if (this.loadWorkshopRequest) {
       this.loadWorkshopRequest.abort();
     }
     if (this.loadEnrollmentsRequest) {
       this.loadEnrollmentsRequest.abort();
+    }
+    if (this.deleteEnrollmentRequest) {
+      this.deleteEnrollmentRequest.abort();
     }
     if (this.startRequest) {
       this.startRequest.abort();
@@ -120,20 +141,20 @@ var Workshop = React.createClass({
     }
   },
 
-  handleStartWorkshopClick: function () {
+  handleStartWorkshopClick() {
     this.setState({showStartWorkshopConfirmation: true});
   },
 
-  handleStartWorkshopCancel: function () {
+  handleStartWorkshopCancel() {
     this.setState({showStartWorkshopConfirmation: false});
   },
 
-  handleStartWorkshopConfirmed: function (e) {
+  handleStartWorkshopConfirmed() {
     this.startRequest = $.ajax({
       method: "POST",
       url: "/api/v1/pd/workshops/" + this.props.params.workshopId + "/start",
       dataType: "json"
-    }).done(function (data) {
+    }).done(data => {
       this.setState({
         showStartWorkshopConfirmation: false,
         workshop: _.merge(_.cloneDeep(this.state.workshop), {
@@ -142,76 +163,85 @@ var Workshop = React.createClass({
           section_code: data.section_code
         })
       });
-    }.bind(this));
+    });
   },
 
-  handleEndWorkshopClick: function () {
+  handleEndWorkshopClick() {
     this.setState({showEndWorkshopConfirmation: true});
   },
 
-  handleEndWorkshopCancel: function () {
+  handleEndWorkshopCancel() {
     this.setState({showEndWorkshopConfirmation: false});
   },
 
-  handleEndWorkshopConfirmed: function (e) {
+  handleEndWorkshopConfirmed() {
     this.endRequest = $.ajax({
       method: "POST",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/end`,
       dataType: "json"
-    }).done(function () {
+    }).done(() => {
       this.setState({
         workshop: _.merge(_.cloneDeep(this.state.workshop), {
           state: 'Ended'
         })
       });
-    }.bind(this));
+    });
   },
 
-  handleTakeAttendanceClick: function (i) {
-    this.context.router.push(`/workshops/${this.props.params.workshopId}/attendance/${i}`);
+  getAttendanceUrl(index) {
+    return `/workshops/${this.props.params.workshopId}/attendance/${index}`;
   },
 
-  handleEditClick: function () {
+  handleTakeAttendanceClick(event) {
+    event.preventDefault();
+    const index = event.currentTarget.dataset.index;
+    this.context.router.push(this.getAttendanceUrl(index));
+  },
+
+  handleEditClick() {
     this.context.router.push(`/workshops/${this.props.params.workshopId}/edit`);
   },
 
-  handleBackClick: function () {
+  handleBackClick() {
     this.context.router.push('/workshops');
   },
 
-  handleWorkshopSaved: function (workshop) {
+  handleWorkshopSaved(workshop) {
     this.setState({workshop: workshop});
     this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
   },
 
-  handleSaveClick: function () {
+  handleSaveClick() {
     // This button is just a shortcut to click the Save button in the form component,
     // which will handle the logic.
     $('#workshop-form-save-btn').trigger('click');
   },
 
-  handleEnrollmentRefreshClick: function () {
+  handleEnrollmentRefreshClick() {
     this.loadEnrollments();
-    this.setState({loadingEnrollments: true});
   },
 
-  getSectionUrl: function () {
-    return `${window.dashboard.workshop.TEACHER_DASHBOARD_URL}#/sections/${this.state.workshop.section_id}/manage`;
+  handleEnrollmentDownloadClick() {
+    window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`);
   },
 
-  renderSignupPanel: function () {
+  getSectionUrl() {
+    return `${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.state.workshop.section_id}/manage`;
+  },
+
+  renderSignupPanel() {
     if (this.state.workshop.state !== 'Not Started') {
       return null;
     }
 
-    let header = (
+    const header = (
       <div>
         Your workshop sign-up link:
       </div>
     );
 
-    let signupUrl = `${location.origin}/pd/workshops/${this.props.params.workshopId}/enroll`;
-    let content = (
+    const signupUrl = `${location.origin}/pd/workshops/${this.props.params.workshopId}/enroll`;
+    const content = (
       <div>
         <p>Share this link with teachers who need to sign up for your workshop.</p>
         <a href={signupUrl} target="_blank">
@@ -223,8 +253,8 @@ var Workshop = React.createClass({
     return this.renderPanel(header, content);
   },
 
-  renderIntroPanel: function () {
-    let header = (
+  renderIntroPanel() {
+    const header = (
       <div>
         Workshop State: {this.state.workshop.state}
       </div>
@@ -251,9 +281,9 @@ var Workshop = React.createClass({
           </div>
         );
         break;
-      case 'In Progress':
-        var joinUrl = location.origin + "/join/" + this.state.workshop.section_code;
-        var joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
+      case 'In Progress': {
+        const joinUrl = location.origin + "/join/" + this.state.workshop.section_code;
+        const joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
         contents = (
           <div>
             <p>
@@ -284,6 +314,7 @@ var Workshop = React.createClass({
           </div>
         );
         break;
+      }
       default:
         contents = (
           <div>
@@ -319,27 +350,32 @@ var Workshop = React.createClass({
     return this.renderPanel(header, contents);
   },
 
-  renderAttendancePanel: function () {
+  renderAttendancePanel() {
     if (this.state.workshop.state === 'Not Started') {
       return null;
     }
 
-    let header = (
+    const header = (
       <div>
         Take Attendance:
       </div>
     );
 
-    let attendanceButtons = this.state.workshop.sessions.map(function (session, i) {
-      let date = moment.utc(session.start).format('MM/DD/YY');
+    const attendanceButtons = this.state.workshop.sessions.map((session, i) => {
+      const date = moment.utc(session.start).format(DATE_FORMAT);
       return (
-        <Button key={i} onClick={this.handleTakeAttendanceClick.bind(null,i)}>
+        <Button
+          key={i}
+          data-index={i}
+          href={this.context.router.createHref(this.getAttendanceUrl(i))}
+          onClick={this.handleTakeAttendanceClick}
+        >
           {date}
         </Button>
       );
-    }.bind(this));
+    });
 
-    let contents = (
+    const contents = (
       <div>
         <p>
           Every day of the workshop, you must take attendance in order for teachers to
@@ -356,30 +392,30 @@ var Workshop = React.createClass({
     return this.renderPanel(header, contents);
   },
 
-  renderEndWorkshopPanel: function () {
+  renderEndWorkshopPanel() {
     if (this.state.workshop.state !== 'In Progress') {
       return null;
     }
 
-    let header = (
+    const header = (
       <div>
         End Workshop:
       </div>
     );
 
-    let contents = (
+    const contents = (
       <div>
         <p>
           After the last day of your workshop, you must end the workshop.
           This will generate a report to Code.org as well as email teachers
           a survey regarding the workshop.
         </p>
-        <Button onClick={this.handleEndWorkshopClick}>End Workshop</Button>
+        <Button onClick={this.handleEndWorkshopClick}>End Workshop and Send Survey</Button>
         <ConfirmationDialog
           show={this.state.showEndWorkshopConfirmation}
           onOk={this.handleEndWorkshopConfirmed}
           onCancel={this.handleEndWorkshopCancel}
-          headerText="End Workshop"
+          headerText="End Workshop and Send Survey"
           bodyText="Are you sure? Once ended, the workshop cannot be restarted."
         />
       </div>
@@ -388,7 +424,7 @@ var Workshop = React.createClass({
     return this.renderPanel(header, contents);
   },
 
-  renderDetailsPanelHeader: function () {
+  renderDetailsPanelHeader() {
     let button = null;
     if (this.state.workshop.state === 'Not Started') {
       if (this.props.route.view === 'edit') {
@@ -405,7 +441,7 @@ var Workshop = React.createClass({
     );
   },
 
-  renderDetailsPanelContent: function () {
+  renderDetailsPanelContent() {
     if (this.props.route.view === 'edit' ) {
       return (
         <div>
@@ -440,17 +476,20 @@ var Workshop = React.createClass({
     );
   },
 
-  renderDetailsPanel: function () {
+  renderDetailsPanel() {
     return this.renderPanel(this.renderDetailsPanelHeader(), this.renderDetailsPanelContent());
   },
 
-  renderEnrollmentsPanel: function () {
-    let header = (
+  renderEnrollmentsPanel() {
+    const header = (
       <div>
         Workshop Enrollment:{' '}
         {this.state.workshop.enrolled_teacher_count}/{this.state.workshop.capacity}
-        <Button bsStyle="link" style={{color:'inherit'}} onClick={this.handleEnrollmentRefreshClick}>
+        <Button bsStyle="link" style={styles.linkButton} onClick={this.handleEnrollmentRefreshClick}>
           <i className="fa fa-refresh" />
+        </Button>
+        <Button bsStyle="link" style={styles.linkButton} onClick={this.handleEnrollmentDownloadClick}>
+          <i className="fa fa-arrow-circle-down" />
         </Button>
       </div>
     );
@@ -463,6 +502,7 @@ var Workshop = React.createClass({
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
           enrollments={this.state.enrollments}
+          onDelete={this.handleDeleteEnrollment}
         />
       );
     }
@@ -470,7 +510,7 @@ var Workshop = React.createClass({
     return this.renderPanel(header, contents);
   },
 
-  renderPanel: function (header, content) {
+  renderPanel(header, content) {
     return (
       <Row>
         <Col sm={12}>
@@ -482,11 +522,11 @@ var Workshop = React.createClass({
     );
   },
 
-  renderSpinner: function () {
+  renderSpinner() {
     return <i className="fa fa-spinner fa-pulse fa-3x" />;
   },
 
-  render: function () {
+  render() {
     if (this.state.loadingWorkshop) {
       return this.renderSpinner();
     }
@@ -502,4 +542,4 @@ var Workshop = React.createClass({
     );
   }
 });
-module.exports = Workshop;
+export default Workshop;

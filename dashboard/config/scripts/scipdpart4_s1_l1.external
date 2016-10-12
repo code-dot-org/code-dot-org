@@ -1,0 +1,25 @@
+name 'sciPDpart4_S1_L1'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+
+markdown <<MARKDOWN
+# Welcome to CS in Science Online Part 3!
+
+<img src="https://images.code.org/841239d176283b292ce9ee0f780f72b9-image-1440784064200.47.24.png" class="level-image">
+
+## <i>Phase 3:  Prepare for the Semester 1 Workshop</i>
+
+Welcome to the online prep for your first Phase 3 in-person meetup!
+
+After listening to feedback surrounding your experiences so far, we have developed an online program that is intended to give you additional practice in using models to conduct investigations.
+
+> Note: Part 3 online must be completed prior to your first Phase 3 - Semester 1 in-person workshop.
+
+This online experience is here to help you prepare to use models in your classroom in a broad variety of ways.  During this phase you will practice developing observations and inferences about models, as well as "decoding" them.  Our veteran teachers have found that framing the activity in the context of a "mystery" helps get students get even more excited about figuring out what's going on, and we think you'll enjoy it, too!
+
+
+To complete these activities you'll need to think back to your CS in Science Phase 2 In-Person PD, and you may want to dust off your StarLogo Nova blocks sheet. Have fun!
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

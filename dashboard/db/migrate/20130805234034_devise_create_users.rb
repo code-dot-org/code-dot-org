@@ -1,4 +1,4 @@
-class DeviseCreateUsers < ActiveRecord::Migration
+class DeviseCreateUsers < ActiveRecord::Migration[4.2]
   def change
     create_table(:users) do |t|
       ## Database authenticatable
@@ -32,7 +32,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       ## Token authenticatable
       # t.string :authentication_token
-
 
       t.timestamps
     end

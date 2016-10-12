@@ -1,75 +1,5 @@
 "da":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Grundskole-intro til programmeringskurset
-          Unplug1: Trin 1
-          Maze: Fase 2
-          Unplug2: Trin 3
-          Unplug3: Trin 4
-          Artist: Trin 5
-          Unplug4: Trin 6
-          Artist2: Trin 7
-          Unplug5: Trin 8
-          Farmer: Trin 9
-          Unplug6: Trin 10
-          Artist3: Trin 11
-          Unplug7: Trin 12
-          Farmer2: Trin 13
-          Unplug8: Trin 14
-          Artist4: Trin 15
-          Unplug9: Trin 16
-          Farmer3: Trin 17
-          Unplug10: Trin 18
-          Artist5: Trin 19
-          Unplug11: Trin 20
-        Hour of Code:
-          desc: Hour of Code
-          Maze: Trin 1
-        Edit Code:
-          desc: Rediger program (beta)
-          MazeEC: Trin 1
-        2014 Levels:
-          desc: Hoppe (beta)
-          Bounce: Trin 1
-        Builder Levels:
-          desc: Brugeroprettede opgaver (beta)
-          Custom: Trin 1
-        Flappy Levels:
-          desc: Flappy fuglen
-          Flappy: Trin 1
-        Jigsaw Levels:
-          desc: Puslespil (beta)
-          Jigsaw: Trin 1
-        Step Levels:
-          desc: Labyrint (beta)
-          MazeStep: Fase trin
-        edit-code:
-          desc: Rediger program (beta)
-          MazeEC: Trin 1
-          Applab: Fase 2
-          ArtistEC: Trin 3
-          StudioEC: Trin 4
-        events:
-          desc: Hoppe (beta)
-          Bounce: Trin 1
-          Studio: Trin 2
-        builder:
-          desc: Brugeroprettede opgaver (beta)
-          Custom: Trin 1
-        flappy:
-          desc: Flappy fuglen
-          Flappy: Trin 1
-        jigsaw:
-          desc: Puslespil (beta)
-          Jigsaw: Trin 1
-        step:
-          desc: Labyrint (beta)
-          MazeStep: Fase trin
-        wordsearch:
-          desc: Stavebien (beta)
-          WordSearch: Trin 1
     game:
       name:
         Unplug1: Introduktion til datalogi
@@ -769,6 +699,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

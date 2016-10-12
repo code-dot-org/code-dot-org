@@ -2,9 +2,6 @@ name 'PDAlg 3CBootstrap'
 skip_dialog true
 
 markdown <<MARKDOWN
-
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
 # Planning For the Future > Bringing more CS to your Algebra Class
 
 ## What to do if I want to do more!
@@ -128,6 +125,6 @@ You bet! Because we worked with the folks at Bootstrap to develop CS in Algebra,
 ### Bootstrap II
 [Bootstrap II](http://www.bootstrapworld.org/materials/spring2016/courses/bs2/index.shtml) builds on Bootstrap I (and therefore CS in Algebra) to introduce students to more advanced programming concepts, such as data structures, which enable them to create more sophisticated programs and games.
 
-<br><br>
-<a class="btn btn-large btn-info" target="_blank" href="http://www.bootstrapworld.org/">Learn More</a><a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+<a class="btn btn-large btn-info" target="_blank" href="http://www.bootstrapworld.org/">Learn More</a>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

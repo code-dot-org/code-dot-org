@@ -1,6 +1,6 @@
 class TransfersController < ApplicationController
-  before_filter :authenticate_user!
-  skip_before_filter :verify_authenticity_token
+  before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
 
   # POST /sections/:id/transfers
   def create
@@ -54,7 +54,7 @@ class TransfersController < ApplicationController
     if new_section.user == current_user
       stay_enrolled_in_current_section = false
     elsif params.key?(:stay_enrolled_in_current_section)
-      stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section]
+      stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] && params[:stay_enrolled_in_current_section] != 'false'
     else
       render json: {
         error: I18n.t('move_students.stay_enrolled_not_entered')

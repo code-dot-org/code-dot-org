@@ -1,0 +1,24 @@
+name 'CSDU2L01 SFLP'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The Internet - Web Development: Lesson 1 - Quality Websites
+
+## Background
+
+In this lesson, students will identify key features of a website that contribute to its levels of quality and functionality. Students will break up into pairs to analyze and rate a collection of six additional websites with the ultimate goal of identifying a list of common features that contribute to a website being high quality. Students will use this list of features to develop a High-Quality Feature List as the first element in an ongoing Web Development Practices document. 
+
+
+# Vocabulary
+
+* **Website** - A location connected to the Internet that maintains one or more pages on the World Wide Web.
+* **Website Content** - The information on a website.
+* **Website Style** - The look and feel of a website.
+
+
+# Resources
+
+* [Rating the Quality of Websites](https://docs.google.com/a/code.org/document/d/142JHEyv364UESk6S0e3ctZyapsJ2f3fXEx8DzIo2D50/) - Activity Guide ([PDF](https://docs.google.com/a/code.org/document/d/142JHEyv364UESk6S0e3ctZyapsJ2f3fXEx8DzIo2D50/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/142JHEyv364UESk6S0e3ctZyapsJ2f3fXEx8DzIo2D50/export?format=doc))
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+MARKDOWN

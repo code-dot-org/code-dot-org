@@ -1,7 +1,7 @@
 require 'test_helper'
 module Ops
   class DistrictsControllerTest < ::ActionController::TestCase
-    include Devise::TestHelpers
+    include Devise::Test::ControllerHelpers
     API = ::OPS::API
 
     setup do

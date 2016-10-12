@@ -3,35 +3,22 @@ title 'Thinking Ahead'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+# Implementation Questions and Answers
 
-### Implementation Questions and Answers
+<!--img src="https://pixabay.com/static/uploads/photo/2014/05/03/16/05/pencil-337120_640.png" class="level-image"-->
 
-<br/>
+What did you realize while you were completing your implementation document?
 
-<img src="https://pixabay.com/static/uploads/photo/2014/05/03/16/05/pencil-337120_640.png" class="righted roundedPic" width="450px" style="margin-right:40px;"/>
-<br/>
-What did you realize while you were completing your implementation document?  
-
-<ul>
-	<li>Are there any areas where you feel completely ready and confident?</li>
-	<li>Are there any areas where you could use more time and experience?</li>
-    <li>Is there anywhere that you could use extra help from Code.org?</li>
-    <li>How did this time feel compared to the last time that you worked with the implementation document?</li>
-</ul>
-
-
-<br/><br/>
+1. Are there any areas where you feel completely ready and confident?
+2. Are there any areas where you could use more time and experience?
+3. Is there anywhere that you could use extra help from Code.org?
+4. How did this time feel compared to the last time that you worked with the implementation document?
 
 Take some time to discuss your implementation plan (along with your answers to these questions) on the PLC discussion forum.
 
 Make sure to read over responses from others and see if you can contribute anything positive to their experience. Remember, if you help your cohorts, there is a greater chance that they will be able to help you as well!
 
-<a href="http://forum.code.org/t/phase-3-implementation-planning/2132" target="_new"><button>
-	Visit Implementation Forum >>
-</button></a>
+<a href="http://forum.code.org/t/phase-3-implementation-planning/2132" target="_new"><button>Visit Implementation Forum >></button></a>
 
 After you have posted on and responded to someone on the forum, return here and click "continue" to move on to the next stage.
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

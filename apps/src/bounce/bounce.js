@@ -4,9 +4,6 @@
  * Copyright 2013 Code.org
  *
  */
-
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
@@ -20,7 +17,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
-var Hammer = require('../hammer');
+var Hammer = require("../third-party/hammer");
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var constants = require('../constants');
@@ -118,8 +115,8 @@ var loadLevel = function () {
   Bounce.BALL_Y_OFFSET = skin.ballYOffset;
   Bounce.PADDLE_Y_OFFSET = skin.paddleYOffset;
   // Height and width of the goal and obstacles.
-  Bounce.MARKER_HEIGHT = 43;
-  Bounce.MARKER_WIDTH = 50;
+  Bounce.MARKER_HEIGHT = skin.markerHeight;
+  Bounce.MARKER_WIDTH = skin.markerWidth;
 
   Bounce.MAZE_WIDTH = Bounce.SQUARE_SIZE * Bounce.COLS;
   Bounce.MAZE_HEIGHT = Bounce.SQUARE_SIZE * Bounce.ROWS;
@@ -460,7 +457,7 @@ var delegate = function (scope, func, data) {
  */
 Bounce.callUserGeneratedCode = function (fn) {
   try {
-    fn.call(Bounce, studioApp, api);
+    fn.call(Bounce, api);
   } catch (e) {
     // swallow error. should we also log this somewhere?
     if (console) {
@@ -1057,107 +1054,32 @@ Bounce.onReportComplete = function (response) {
  * Execute the user's code.  Heaven help us...
  */
 Bounce.execute = function () {
-  var code = '';
-  if (studioApp.initializationCode) {
-    code += studioApp.initializationCode;
-  }
-  code += Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
   Bounce.result = ResultType.UNSET;
   Bounce.testResults = TestResults.NO_TESTS_RUN;
   Bounce.waitingForReport = false;
   Bounce.response = null;
 
-  if (level.editCode) {
-    code = dropletUtils.generateCodeAliases(null, 'Bounce');
-    code += studioApp.editor.getValue();
-  }
-
-  var codeWallCollided = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenWallCollided');
-  var whenWallCollidedFunc = codegen.functionFromCode(
-                                     codeWallCollided, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codeBallInGoal = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenBallInGoal');
-  var whenBallInGoalFunc = codegen.functionFromCode(
-                                     codeBallInGoal, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codeBallMissesPaddle = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenBallMissesPaddle');
-  var whenBallMissesPaddleFunc = codegen.functionFromCode(
-                                     codeBallMissesPaddle, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codePaddleCollided = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenPaddleCollided');
-  var whenPaddleCollidedFunc = codegen.functionFromCode(
-                                     codePaddleCollided, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codeLeft = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenLeft');
-  var whenLeftFunc = codegen.functionFromCode(
-                                     codeLeft, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codeRight = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenRight');
-  var whenRightFunc = codegen.functionFromCode(
-                                     codeRight, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codeUp = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenUp');
-  var whenUpFunc = codegen.functionFromCode(
-                                     codeUp, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codeDown = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'bounce_whenDown');
-  var whenDownFunc = codegen.functionFromCode(
-                                     codeDown, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
-
-  var codeGameStarts = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'when_run');
-  var whenGameStartsFunc = codegen.functionFromCode(
-                                     codeGameStarts, {
-                                      StudioApp: studioApp,
-                                      Bounce: api } );
+  // Map event handler hooks (e.g. Bounce.whenLeft) to the generated code.
+  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+  const events = {
+    whenWallCollided: {code: generator('bounce_whenWallCollided')},
+    whenBallInGoal: {code: generator('bounce_whenBallInGoal')},
+    whenBallMissesPaddle: {code: generator('bounce_whenBallMissesPaddle')},
+    whenPaddleCollided: {code: generator('bounce_whenPaddleCollided')},
+    whenLeft: {code: generator('bounce_whenLeft')},
+    whenRight: {code: generator('bounce_whenRight')},
+    whenUp: {code: generator('bounce_whenUp')},
+    whenDown: {code: generator('bounce_whenDown')},
+    whenGameStarts: {code: generator('when_run')}
+  };
 
   studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
-
   studioApp.reset(false);
 
-  // Set event handlers and start the onTick timer
-  Bounce.whenWallCollided = whenWallCollidedFunc;
-  Bounce.whenBallInGoal = whenBallInGoalFunc;
-  Bounce.whenBallMissesPaddle = whenBallMissesPaddleFunc;
-  Bounce.whenPaddleCollided = whenPaddleCollidedFunc;
-  Bounce.whenLeft = whenLeftFunc;
-  Bounce.whenRight = whenRightFunc;
-  Bounce.whenUp = whenUpFunc;
-  Bounce.whenDown = whenDownFunc;
-  Bounce.whenGameStarts = whenGameStartsFunc;
+  codegen.evalWithEvents({Bounce: api}, events).forEach(hook => {
+    Bounce[hook.name] = hook.func;
+  });
+
   Bounce.tickCount = 0;
   Bounce.intervalId = window.setInterval(Bounce.onTick, Bounce.scale.stepSpeed);
 };

@@ -72,9 +72,9 @@ end
 def threaded_each(array, thread_count=2)
   # NOTE: Queue is used here because it is threadsafe - it is the ONLY threadsafe datatype in base ruby!
   #   Without Queue, the array would need to be protected using a Mutex.
-  queue = Queue.new.tap do |queue|
+  queue = Queue.new.tap do |q|
     array.each do |i|
-      queue << i
+      q << i
     end
   end
 
@@ -86,27 +86,6 @@ def threaded_each(array, thread_count=2)
   end
 
   threads.each(&:join)
-end
-
-#
-# Define the BLOCKLY[-CORE] BUILD task
-#
-BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
-BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
-BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
-BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
-  # only let staging build/commit blockly-core
-  if rack_env?(:staging)
-    apps_sentinel = apps_dir('/lib/blockly/sentinel')
-    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
-    HipChat.log 'Committing updated <b>blockly core</b> files...', color: 'purple'
-    message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
-    RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
-    RakeUtils.system 'echo', "\"#{Time.new}\" >| #{apps_sentinel}"
-    RakeUtils.system 'git', 'add', apps_sentinel
-    RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-    RakeUtils.git_push
-  end
 end
 
 task :apps_task do
@@ -138,19 +117,10 @@ task :apps_task do
   packager.decompress_package(package)
 end
 
-# TODO: This is a temporary task meant to cleanup old code-studio packages.
-# It should go away in the nearish future
-task :code_studio_task do
-  HipChat.log 'Cleaning code-studio package'
-  # get rid of any symlink to a built package
-  RakeUtils.system 'rm', dashboard_dir('public/code-studio') if File.exist?(dashboard_dir('public/code-studio'))
-  # also delete the package itself
-  RakeUtils.system 'rm -rf', dashboard_dir('public/code-studio-package') if File.exist?(dashboard_dir('public/code-studio-package'))
-end
-
 task :firebase_task do
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:upload_rules'
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:set_config'
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:clear_test_channels'
 end
 
 file deploy_dir('rebuild') do
@@ -288,10 +258,8 @@ end
 
 $websites = build_task('websites', [
   deploy_dir('rebuild'),
-  BLOCKLY_CORE_TASK,
   :apps_task,
   :firebase_task,
-  :code_studio_task,
   :build_with_cloudfront,
   :deploy
 ])
@@ -321,7 +289,10 @@ task :dashboard_unit_tests do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'db:test:prepare'
-      RakeUtils.rake 'test'
+      ENV['DISABLE_SPRING'] = '1'
+      ENV['UNIT_TEST'] = '1'
+      RakeUtils.bundle_exec 'rails', 'test'
+      ENV.delete 'UNIT_TEST'
       RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end

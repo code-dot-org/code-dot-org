@@ -1,7 +1,6 @@
 require 'cdo/db'
 
 class Languages
-
   @@table = PEGASUS_DB[:cdo_languages]
 
   def self.get_crowdin_languages

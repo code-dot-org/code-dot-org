@@ -1,6 +1,6 @@
 {
   "bounceBall": "ressaltar a bola",
-  "bounceBallTooltip": "Fazer ressaltar a bola de um objeto.",
+  "bounceBallTooltip": "Fazer ressaltar a bola quando for contra um objeto.",
   "continue": "Continuar",
   "dirE": "E",
   "dirN": "N",

@@ -1,7 +1,6 @@
 /**
  * @overview base class for all simulation entities.
  */
-'use strict';
 
 /**
  * Client model of simulated network entity, which lives in a shard table.

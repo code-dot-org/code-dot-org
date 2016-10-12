@@ -1,13 +1,11 @@
 name 'PDAlg 13-16 Simple Sam'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
-### Lessons 13-16 > Sam and Simple Functions
+# Lessons 13-16 > Sam and Simple Functions
 
 Sam the Bat is obviously a project intended to teach the use of booleans in a program, but there's a subtle, yet no less important, learning opportunity there as well. Why is it that we don't just ask students to write one single `onscreen?` function to check both sides of the screen? What's the purpose of writing the smaller `safe-left?` and `safe-right?` functions?
 
-#### The Need for Simplicity
+## The Need for Simplicity
 
 Students will likely wonder why we bother with a process that looks like more work when there seems to be an easier route. The answer is that there's a big difference between the _easiest_ way to write a program and the _simplest_. The use of the smaller left and right functions simplifies our programming in a number of ways:
 
@@ -17,8 +15,6 @@ Students will likely wonder why we bother with a process that looks like more wo
 - Simpler to update: 0 and 400 work fine for our current screen, but what happens when we want to port this game to a larger screen? Keeping the location of those numbers in a single reusable function makes it really simple to update them once instead of every place where we want to check the edges of the screen.
 
 As your students pursue writing programs of their own, it's helpful to return to this lesson and remind them that simple reusable functions can make your life easier in the long term than if you were to just cram everything into one monolithic function.
-
-<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

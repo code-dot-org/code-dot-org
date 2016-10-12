@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 
 /**
  * A component that lays out children in three columns (left, center, right),
@@ -8,39 +9,48 @@ import Radium from 'radium';
  */
 
 const ThreeColumns = (props) => {
-  const { styles, leftColWidth, rightColWidth, height, children } = props;
+  const { isRtl, styles, leftColWidth, rightColWidth, height, children, allowScrolling } = props;
 
   const defaultStyles = {
     container: {
-      paddingLeft: leftColWidth,
-      paddingRight: rightColWidth,
-      float: 'left',
+      paddingLeft: isRtl ? rightColWidth : leftColWidth,
+      paddingRight: isRtl ? leftColWidth: rightColWidth,
+      float: isRtl ? 'right' : 'left',
       width: '100%',
       boxSizing: 'border-box'
     },
     middle: {
       width: '100%',
       position: 'relative',
-      marginRight: -300,
-      paddingRight: 300,
-      float: 'left',
-      overflowY: 'scroll',
+      float: isRtl ? 'right' : 'left',
       height
     },
     left: {
       position: 'relative',
-      float: 'left',
+      float: isRtl ? 'right' : 'left',
       width: leftColWidth,
       right: leftColWidth,
-      marginLeft: '-100%',
+      marginLeft: isRtl ? 0 : '-100%',
+      marginRight: isRtl ? '-100%' : 0,
     },
     right: {
       position: 'relative',
-      float: 'left',
+      float: isRtl ? 'right' : 'left',
       width: rightColWidth,
-      marginRight: -rightColWidth
+      marginRight: isRtl ? 0 : -rightColWidth,
+      marginLeft: isRtl ? -rightColWidth : 0,
     }
   };
+
+  if (allowScrolling) {
+    Object.assign(defaultStyles.middle, {
+      marginRight: isRtl ? undefined : -300,
+      paddingRight: isRtl ? undefined : 300,
+      marginLeft: isRtl ? -300 : undefined,
+      paddingLeft: isRtl ? 300 : undefined,
+      overflowY: 'scroll',
+    });
+  }
 
   return (
     <div style={[defaultStyles.container, styles.container]}>
@@ -56,6 +66,8 @@ ThreeColumns.propTypes = {
   leftColWidth: React.PropTypes.number,
   rightColWidth: React.PropTypes.number,
   height: React.PropTypes.number,
+  isRtl: React.PropTypes.bool.isRequired,
+  allowScrolling: React.PropTypes.bool,
   children: React.PropTypes.node,
   customProp: (props) => {
     if (props.children.length !== 3) {
@@ -65,4 +77,8 @@ ThreeColumns.propTypes = {
   }
 };
 
-export default Radium(ThreeColumns);
+export default connect(state => {
+  return {
+    isRtl: state.pageConstants.localeDirection === 'rtl',
+  };
+})(Radium(ThreeColumns));

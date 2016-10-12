@@ -1,0 +1,8 @@
+name 'pre-assessment survey q17'
+question 'Kids like me do computer science.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'

@@ -1,12 +1,12 @@
 <%
-  var i18n = require('./locale');
+  var i18n = require('@cdo/netsim/locale');
   var MessageGranularity = require('./NetSimConstants').MessageGranularity;
 %>
 <div class="send-panel-packets"></div>
 <div class="panel-footer">
   <div class="right-side-controls">
     <% if (locals.level.showAddPacketButton) { %>
-      <span class="netsim-button secondary large-button" id="add-packet-button"><%= i18n.addPacket() %></span>
+      <span class="netsim-button netsim-button-secondary large-button" id="add-packet-button"><%= i18n.addPacket() %></span>
     <% } %>
     <% if (locals.level.messageGranularity === MessageGranularity.PACKETS) { %>
       <span class="netsim-button large-button" id="send-button"><%= i18n.send() %></span>

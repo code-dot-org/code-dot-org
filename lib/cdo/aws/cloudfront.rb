@@ -7,7 +7,6 @@ require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFront
-
     ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH)
     CACHED_METHODS = %w(HEAD GET OPTIONS)
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
@@ -158,16 +157,18 @@ module AWS
     # Returns the distribution ID for a given hostname.
     # Uses cached id-to-hostname mappings if cached=true.
     def self.get_distribution_id(cached, cloudfront, hostname)
-      mapping =
-        # Use cached value first if available.
-        cached && File.file?(alias_cache) && JSON.parse(IO.read(alias_cache)) ||
-        # Fallback to API call.
-        cloudfront.list_distributions.distribution_list.items.map do |dist|
+      # Use cached value first if available.
+      mapping = JSON.parse(IO.read(alias_cache)) if cached && File.file?(alias_cache)
+      # Otherwise fall back to API call.
+      unless mapping
+        dists = cloudfront.list_distributions.distribution_list.items.map do |dist|
           [dist.id, dist.aliases.items]
-        end.to_h.tap do |out|
+        end
+        mapping = dists.to_h.tap do |out|
           # Write result to cache.
           IO.write(alias_cache, JSON.pretty_generate(out))
         end
+      end
       mapping.select{ |_, v| v.include? hostname }.keys.first
     end
 
@@ -263,7 +264,8 @@ module AWS
             quantity: 0 # required
           },
         },
-        web_acl_id: ''
+        web_acl_id: '',
+        http_version: 'http2'
       }.tap do |cf|
         cf[:caller_reference] = reference || Digest::MD5.hexdigest(Marshal.dump(config)) # required
       end
@@ -366,6 +368,9 @@ module AWS
           headers: {
             quantity: headers.length, # required
             items: headers.empty? ? nil : headers,
+          },
+          query_string_cache_keys: {
+            quantity: 0
           },
         },
         trusted_signers: {# required

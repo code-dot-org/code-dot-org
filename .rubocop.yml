@@ -5,13 +5,12 @@ inherit_from:
 AllCops:
   Exclude:
     - 'apps/**/*'
-    - 'code-studio/**/*'
-    - 'dashboard/db/**/*'
-    - 'dashboard/db/*'
+    - 'dashboard/db/schema.rb'
+    - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
-# Code.org style overrides.
+# BEGIN CODE.ORG OVERRIDES
 
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
@@ -37,8 +36,26 @@ Style/Semicolon:
 Style/WordArray:
   MinSize: 5
 
-# Listed below are rules we don't plan to enable in the foreseeable future.
-# Add rules we plan to fix (but are currently failing) to .rubocop_todo.yml.
+# END CODE.ORG OVERRIDES
+
+# BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
+# future. Rules we plan to fix (but are currently failing) belong in
+# .rubocop_todo.yml.
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
 
 Style/BarePercentLiterals:
   Enabled: false
@@ -55,20 +72,13 @@ Style/IdenticalConditionalBranches:
 Style/IfInsideElse:
   Enabled: false
 
+Style/NumericPredicate:
+  Enabled: false
+
 Style/RedundantReturn:
   Enabled: false
 
-Metrics/AbcSize:
+Style/StringLiterals:
   Enabled: false
 
-Metrics/LineLength:
-  Enabled: false
-
-Metrics/ModuleLength:
-  Enabled: false
-
-Metrics/BlockNesting:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
+# END BLACKLIST

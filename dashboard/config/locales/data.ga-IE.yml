@@ -1,80 +1,10 @@
 "ga":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna
-          Unplug1: Céim 1
-          Maze: Céim 2
-          Unplug2: Céim 3
-          Unplug3: Céim 4
-          Artist: Céim 5
-          Unplug4: Céim 6
-          Artist2: Céim 7
-          Unplug5: Céim 8
-          Farmer: Céim 9
-          Unplug6: Céim 10
-          Artist3: Céim 11
-          Unplug7: Céim 12
-          Farmer2: Céim 13
-          Unplug8: Céim 14
-          Artist4: Céim 15
-          Unplug9: Céim 16
-          Farmer3: Céim 17
-          Unplug10: Céim 18
-          Artist5: Céim 19
-          Unplug11: Céim 20
-        Hour of Code:
-          desc: An Uair Chódála
-          Maze: Céim 1
-        Edit Code:
-          desc: Cuir Cód in Eagar (béite)
-          MazeEC: Céim 1
-        2014 Levels:
-          desc: Preabadh (béite)
-          Bounce: Céim 1
-        Builder Levels:
-          desc: Dúshláin déanta ag úsáideoirí (béite)
-          Custom: Céim 1
-        Flappy Levels:
-          desc: "Éan Flapach"
-          Flappy: Céim 1
-        Jigsaw Levels:
-          desc: Míreanna Mearaí (béite)
-          Jigsaw: Céim 1
-        Step Levels:
-          desc: Cathair ghríobháin (béite)
-          MazeStep: Céim
-        edit-code:
-          desc: Cuir Cód in Eagar (béite)
-          MazeEC: Céim 1
-          Applab: Céim 2
-          ArtistEC: Céim 3
-          StudioEC: Céim 4
-        events:
-          desc: Preabadh (béite)
-          Bounce: Céim 1
-          Studio: Céim 2
-        builder:
-          desc: Dúshláin déanta ag úsáideoirí (béite)
-          Custom: Céim 1
-        flappy:
-          desc: "Éan Flapach"
-          Flappy: Céim 1
-        jigsaw:
-          desc: Míreanna Mearaí (béite)
-          Jigsaw: Céim 1
-        step:
-          desc: Cathair ghríobháin (béite)
-          MazeStep: Céim
-        wordsearch:
-          desc: Comórtas Litrithe (béite)
-          WordSearch: Céim 1
     game:
       name:
         Unplug1: Buntús na Ríomheolaíochta
         Maze: An Chathair Ghríobháin
-        Multi: Multiple Choice Stuffs
+        Multi: Stuif Ilroghnach
         Unplug2: Smaointeoireacht Ríomhaireachtúil
         Unplug3: Ríomhchlárú ar Ghrafpháipéar
         Artist: An tEalaíontóir
@@ -97,16 +27,16 @@
         Bounce: Preabadh
         Flappy: "Éan Flapach"
         Jigsaw: Míreanna Mearaí
-        MazeStep: Maze Step Mode
+        MazeStep: 'Cathair Ghríobháin: Mód Céime'
         Wordsearch: Cuardach focal
         Webapp: Saotharlann Aipeanna
         ArtistEC: An tEalaíontóir
         TextMatch: Meaitseáil Téacs
-        StudioEC: Súgradh is Dáiríre
+        StudioEC: Spraotharlann
         Applab: Saotharlann Aipeanna
         NetSim: Ionsamhlóir an Idirlín
         Custom: Ealaíontóir
-        CustomStudio: Súgradh is Dáiríre
+        CustomStudio: Spraotharlann
     trophy:
       name:
         Bronze: Cré-umha
@@ -116,11 +46,11 @@
       description:
         sequence: Seicheamh
         if: Bloc "má"
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
+        if_else: Bloc "má/i ngach cás eile"
+        loop_times: Bloc "athdhéan N uair"
+        loop_until: Bloc "athdhéan go dtí"
+        loop_while: Lúb "chomh fada is"
+        loop_for: Bloc áirimh
         function: Feidhmeanna
         parameters: Feidhmeanna a ghlacann le Paraiméadair
     level:
@@ -141,40 +71,42 @@
           lú blocanna. Bain triail as níos mó ná bloc amháin "athdhéan".
         maze_2_8: 'Ní féidir bloc liath a scriosadh. Críochnaigh an dúshlán seo le
           bloc "athdhéan" a dhéanann trí atriall. Cuir na trí bhloc seo taobh istigh
-          den bhloc liath "athdhéan": aistrigh, aistrigh, cas.'
-        maze_2_9: Ok, try the new "repeat until" block - it will repeat until I reach
-          the annoying pig.
-        maze_2_10: Ok, one last time for practice - can you solve this one using only
-          4 blocks?
+          den bhloc liath "athdhéan": téigh ar aghaidh, téigh ar aghaidh, cas.'
+        maze_2_9: Ok, bain triail as an mbloc nua "athdhéan go dtí" - athdhéanann
+          sé orduithe go dtí go sroichfidh mé an muc bhearránach.
+        maze_2_10: Ok, uair amháin eile le coinneáil ina chleachtadh - an féidir leat
+          an ceann seo a réiteach gan ach ceithre bhloc a úsáid?
         maze_2_11: A dhuine. Zombaí mé. Ocras orm. Gá... lus na gréine... a shroicheadh...
           An féidir leat mise a thabhairt ansin gan ach 5 bhloc a úsáid?
         maze_2_12: Ok, tá an ceann seo mar an gcéanna, le difríochtaí beaga. An féidir
           leat é a dhéanamh gan ach 5 bhloc a úsáid?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you
-          only need one more block, but learn how we set it up so you can do it on
-          your own next time.'
-        maze_2_14: Ok, this is just like the last puzzle, but you need to remember
-          how you used the "if" block and the "repeat" block together.
+        maze_2_13: 'Úsáid an bloc nua "má" chun ligean domsa an tráth a gcasfaidh
+          mé a roghnú. Leid: ní theastaíonn uait ach bloc amháin eile, ach ba chóir
+          duit leagan amach na mblocanna a thuiscint don chéad dúshlán eile.'
+        maze_2_14: Ok, tá an dúshlán seo go díreach cosúil leis an gceann is déanaí,
+          ach anois tá sé ortsa an bloc "má" agus an bloc "athdhéan" a leagan amach
+          le chéile.
         maze_2_15: Lus na gréine uaim! Úsáid bloc "má" chun mé a threorú ansin leis
           an líon is lú blocanna agus is féidir.
         maze_2_16: Déanaimis é sin arís le coinneáil ina chleachtadh - níl an ceann
           seo ródhifriúil, ach seachain na fiacla!
-        maze_2_17: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the sunflower try to use this new block.
-        maze_2_18: One more practice of the "if-else" block, can you get it right
-          on your first try?
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length.
+        maze_2_17: Seiceálann bloc "má/i ngach cás eile" coinníoll éigin, ansin déanann
+          sé rud amháin NÓ rud eile. Bain triail as an mbloc nua seo chun cabhrú liom
+          an lus gréine a bhaint amach.
+        maze_2_18: Cleachtadh amháin eile leis an mbloc "má/i ngach cás eile". An
+          féidir leat é a dhéanamh ar an gcéad iarracht?
+        maze_2_19: An féidir leat cabhrú liom cosán níos casta a leanúint gan ach
+          trí bhloc nua a chur leis? Má dhéanann tú mar is ceart é, beidh mé in ann
+          aon chosán cuarach a leanúint, is cuma cé chomh fada.
         turtle_1_1: Dia dhuit! Is ealaíontóir mé. Is féidir leat cód a scríobh le
           tabhairt orm beagnach aon phictiúr a tharraingt. Úsáid cúpla bloc le tarraingt
           ar na línte liatha sa phictiúr.
         turtle_1_2: 'Anois, tarraing cearnóg. NÓTA: úsáid an dath is ansa leat leis
-          an mbloc nua "socraigh dath".'
+          an mbloc nua "socraigh an dath".'
         turtle_1_3: Déan cearnóg gan ach trí bhloc a úsáid.
-        turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
-          the "random color" option that picks a different color each time. Hint:
-          you''ll have to figure out how far to turn by clicking on the number in
-          the turn block.'
+        turtle_1_4: 'Tarraing triantán le dath difriúil ar gach taobh. Bain úsáid
+          as an rogha "dath randamach" a athraíonn an dath go randamach. Leid: caithfidh
+          tú an líon céimeanna le casadh a chur isteach sa mbloc "cas...".'
         turtle_1_5: Anois, le coinneáil ina chleachtadh, tarraing triantán, ansin
           cearnóg chun clúdach litreach a dhéanamh.
         turtle_1_6: 'An féidir leat an triantán agus an chearnóg seo a tharraingt?
@@ -183,11 +115,12 @@
         turtle_1_7: Ok, ceann níos deacra anois. An féidir leat na spéaclaí uaine
           seo a tharraingt? Tá na cearnóga 100 picteilín ar fad ar gach taobh, agus
           tá 50 picteilín eatarthu. Ná déan dearmad uaine a úsáid!
-        turtle_1_8: Ok, try to figure out what happens if you run this code (or press
-          "Run" to try it). Then, repeat it enough times to complete the drawing.
-          The colors will be different every time.
-        turtle_1_9: Can you figure out what number to replace the question marks with
-          to draw a circle?
+        turtle_1_8: Ok, an dtuigeann tú cad a tharlóidh nuair a rithfidh tú an cód
+          seo? (Mura dtuigeann tú, cliceáil "Rith" agus bain triail as!). Ansin, athdhéan
+          an cód seo chun an líníocht a chur i gcrích. Beidh na dathanna difriúil
+          gach uair.
+        turtle_1_9: Cén uimhir a chuirfeá in áit na gcomharthaí ceiste chun ciorcal
+          a dhéanamh?
         turtle_1_10: 'Rinne tú é! Anois, tarraing cibé rud is mian leat. Mar shampla:
           fear cipín, calóg shneachta, nó bís. Agus bain triail as an mbloc nua "socraigh
           an leithead". Bain taitneamh as!'
@@ -228,83 +161,89 @@
           sluasaid ba chóir dom a bhaint, leis an méid is lú blocanna agus is féidir.
         maze_karel_1_4: 'An féidir leat cabhrú liom na ceithre charn ithreach a bhaint?
           Leid: bain úsáid as bloc "athdhéan".'
-        maze_karel_1_5: 'Cabhraigh liom na pollta seo go léir a líonadh le cúig shluasaid
-          ithreach. Leid: is féidir leat bloc "athdhéan" a chur isteach sa bhloc "agus...".'
-        maze_karel_1_6: Remove all the piles of dirt, using as few blocks as possible.
-          The new options in the dropdown menu on the "while" block tell me if I'm
-          standing on a pile or a hole.
+        maze_karel_1_5: 'Cabhraigh liom na poill seo go léir a líonadh le cúig shluasaid
+          ithreach. Leid: is féidir leat bloc "athdhéan" a chur isteach sa bhloc "chomh
+          fada is...".'
+        maze_karel_1_6: Bain na cairn ithreach go léir leis an líon is lú blocanna
+          agus is féidir. Inseoidh na roghanna nua sa roghchlár anuas duit má tá tú
+          ag seasamh ar charn nó i bpoll.
         maze_karel_1_7: Muise, d'aimsigh mé poll thar a bheith domhain! Níl a fhios
           agam cé mhéad sluasaid a theastaíonn uaim lena líonadh. An féidir leat clár
           a scríobh a líonfaidh an poll go dtí go mbeidh an talamh réidh?
         maze_karel_1_8: Cabhraigh liom an poll ag deireadh an ghoirt a líonadh, leis
           an méid is lú blocanna.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few
-          blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: I'm working late, so it's dark out, and I can't tell how
-          large the piles are. Now I don't have all the options I used to have on
-          the while block. Move me along the field, and if there is a pile, remove
-          it.
-        maze_karel_1_11: 'It''s still dark outside. Move me along the field. If there
-          is a pile, remove it, and if there is a hole, fill it in. Hint: use the
-          dropdown menu of options on the "if" block.'
+        maze_karel_1_9: 'Tabhair orduithe dom chun na cairn ithreach go léir a bhaint.
+          Déan iarracht an líon is lú blocanna agus is féidir a úsáid. Leid: bain
+          triail as lúb "chomh fada is".'
+        maze_karel_1_10: Tá mé ag obair go mall san oíche agus tá sé dorcha. Mar sin,
+          ní féidir liom feiceáil cé chomh mór atá na cairn. Anois, níl na roghanna
+          go léir a bhí agam roimhe seo sa lúb "chomh fada is". Aistrigh tríd an ngort
+          mé, agus má thagaim ar charn, bain é.
+        maze_karel_1_11: 'Tá sé dorcha fós. Aistrigh tríd an ngort mé. Má thagaim
+          ar charn, bain é, agus má thagaim ar pholl, líon é. Leid: bain úsáid as
+          na roghanna sa roghchlár anuas ar an mbloc "má".'
         turtle_2_1: 'Dia dhuit. Ealaíontóir zombaí mé. Maith liom pictiúir! Cabhraigh
           liom cearnóg a tharraingt le dath speisialta. Tábhachtach: tá na blocanna
           céanna ar fáil, ach anois tá siad leagtha amach ina gcatagóirí.'
-        turtle_2_2: Welcome to using functions, which let you define new blocks! Try
-          the new "draw a square" block, found in the "Functions" category, to draw
-          a small 50x50 green square.
-        turtle_2_3: Use the "repeat" block (in the "Loops" category) to draw 3 squares
-          of size 100, each 120 degrees apart. And do it in 3 different, random colors.
-        turtle_2_4: 'Now we''re going to get fancy. Change the code to draw 36 squares,
-          100 pixels wide, and each 10 degrees apart. Hint: you may want to use the
-          slider to make me go faster.'
-        turtle_2_5: Tarraing cúig chearnóg a bhfuil taoibh 50, 60, 70, 80, agus 90
-          picteilín ar fad acu. Caithfidh tú an fheidhm "tarraing cearnóg" a úsáid
+        turtle_2_2: Le feidhmeanna, is féidir leat blocanna nua a chruthú! Bain triail
+          as an mbloc nua "tarraing cearnóg", sa chatagóir "Feidhmeanna", chun cearnóg
+          bheag uaine 50x50 a tharraingt.
+        turtle_2_3: Úsáid an bloc "athdhéan" (sa chatagóir "Lúba") chun trí chearnóg
+          a tharraingt, 100 picteilín ar gach taobh, agus 120 céim ó chéile. Agus
+          bain úsáid as trí dhath randamach.
+        turtle_2_4: 'Anois, rud éigin níos casta! Athraigh an cód chun 36 cearnóg
+          a tharraingt, 100 picteilín ar leithead, agus 10 gcéim ó chéile. Leid: is
+          féidir leat mise a bhrostú leis an sleamhnán.'
+        turtle_2_5: Tarraing cúig chearnóg a bhfuil taobhanna 50, 60, 70, 80, agus
+          90 picteilín ar fad acu. Caithfidh tú an fheidhm "tarraing cearnóg" a úsáid
           cúig huaire.
-        turtle_2_6: 'Ok, this program will use a counter, to draw the same squares
-          as last time. You want the square to be the same size as the counter, so
-          use the "counter" block. Hint: It''s in the Variables category.'
-        turtle_2_7: Here's a program to draw a spiral, but the blocks are disabled
-          so they won't run. Make a new program using a "count with" block (in the
-          Loops category) and "counter" block (in the Variables category) to draw
-          the same spiral.
+        turtle_2_6: 'Ok, bainfidh an cód seo úsáid as áiritheoir chun na cearnóga
+          céanna a tharraingt. Ní mór do na cearnóga a bheith ar cóimhéid leis an
+          áiritheoir, mar sin ba chóir duit an bloc "áiritheoir" a úsáid. Leid: Tá
+          sé sa chatagóir Athróga.'
+        turtle_2_7: Tarraingíonn an cód seo bís, ach díchumasaíodh na blocanna agus
+          ní fheidhmeoidh siad. Déan do leagan féin den chód seo a úsáideann bloc
+          "áirigh le" (sa chatagóir "Lúba") agus bloc "áiritheoir" (sa chatagóir "Athróga")
+          a tharraingíonn an bhís chéanna.
         turtle_2_7_5: Gheobhaidh tú feidhm nua "tarraing fear sneachta" (sa gcatagóir
           Feidhmeanna). Tarraing dhá fhear sneachta, 250 agus 100 picteilín ar airde.
-        turtle_2_8: This one's a bit tricky. Use the "draw a snowman" function and
-          the new "jump forward" block (in the Actions category). Draw 3 snowmen in
-          different colors, 100 pixels apart.
-        turtle_2_9: Use a "count with" loop to draw a family of snowmen with heights
-          of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.
-        turtle_2_10: Here's some code to try experimenting with different spirals.  What
-          happens if you change the turn amount? Or set a random color in the loop?  Draw
-          anything you like.
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and
-          fill in all the holes on the ground. Try to use loops instead of using too
-          many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: We've defined our own block called "fill 5", which is now
-          in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: Use the new "fill 5" function block to make me fill in all
-          the holes. You'll have to drag out the "fill 5" block out from the Functions
-          category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use
-          it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile,
-          and use it to help me level out all the piles.
-        maze_karel_2_6: Use two new functions, "fill 8" and "remove 8", to help me
-          level out the pile and fill in the hole.
+        turtle_2_8: Tá an ceann seo measartha casta. Úsáid an fheidhm "tarraing fear
+          sneachta" agus an bloc nua "léim ar aghaidh" (sa chatagóir "Gníomhartha").
+          Tarraing trí fhear sneachta le dathanna difriúla, 100 picteilín ó chéile.
+        turtle_2_9: Úsáid lúb "áirigh le" chun clann fear sneachta a tharraingt, iad
+          110, 100, 90, 80, agus 70 picteilín ar airde. Ba chóir dóibh a bheith 60
+          picteilín ó chéile.
+        turtle_2_10: Seo é cód lenar féidir bíseanna éagsúla a tharraingt. Cad a tharlaíonn
+          nuair a athraíonn tú an uillinn? Nó má úsáideann tú dath randamach laistigh
+          den lúb? Déan cibé rud is rogha leat.
+        maze_karel_2_1: "Úsáid na blocanna chun cabhrú liom na cairn go léir a bhaint
+          agus na poill go léir a líonadh. Déan iarracht lúba a úsáid in áit go leor
+          blocanna. Leid: is féidir lúb amháin a chur isteach i lúb eile!"
+        maze_karel_2_2: Chruthaíomar ár mbloc féin darb ainm "líon 5", atá sa chatagóir
+          "Feidhmeanna" anois. Bain úsáid aisti chun cabhrú liom an poll seo a líonadh.
+        maze_karel_2_3: Úsáid an fheidhm nua "líon 5" le tabhairt orm na poill go
+          léir a líonadh. Caithfidh tú an bloc "líon 5" a tharraingt amach as an gcatagóir
+          "Feidhmeanna".
+        maze_karel_2_4: Cruthaigh feidhm nua a bhaineann 7 sluasaid ithreach. Ansin,
+          úsáid an fheidhm i ríomhchlár a chabhróidh liom na cairn go léir a bhaint.
+        maze_karel_2_5: Cruthaigh feidhm nua a bhaineann 6 shluasaid ithreach ó charn,
+          agus úsáid í chun cabhrú liom na cairn go léir a chur ar leibhéal.
+        maze_karel_2_6: Úsáid dhá fheidhm nua, "líon 8" agus "bain 8", chun cabhrú
+          liom an carn a chur ar leibhéal agus an poll a líonadh.
         maze_karel_2_7: Tá bó i mo ghort! Scríobh feidhm nua a chabhróidh liom an
           bhó a sheachaint agus an carn a bhaint. Cuir do chuid blocanna taobh istigh
           den fheidhm nua.
         maze_karel_2_8: Úsáid an fheidhm nua seo, "seachain an bhó agus bain ceann
           amháin", le cabhrú liom na cairn go léir a bhaint.
-        maze_karel_2_9: Ok, here's a function that removes 4 different piles of dirt
-          in a vertical column. Try putting this function inside a loop, so that you
-          remove all the piles of dirt using only a few new blocks.
+        maze_karel_2_9: Ok, seo é feidhm a bhaineann ceithre charn ithreach i gcolún
+          ingearach. Cuir an fheidhm seo isteach i lúb, sa chaoi gur féidir leat na
+          cairn ithreach go léir a bhaint gan ach cúpla bloc nua a úsáid.
         maze_karel_2_10: Aistrigh trasna an ghoirt mé, ansin úsáid an dá fheidhm seo
-          chun cabhrú liom na cairn go léir a bhaint agus na pollta go léir a líonadh.
-        turtle_3_1: This puzzle shows you how the "draw a square" and "draw a circle"
-          functions are defined.  Defining a function doesn't run its blocks.  You
-          have to pull out the "draw a square" block to actually draw a square.
+          chun cabhrú liom na cairn go léir a bhaint agus na poill go léir a líonadh.
+        turtle_3_1: Taispeánann an dúshlán seo duit conas a cruthaíodh na feidhmeanna
+          "tarraing cearnóg" agus "tarraing ciorcal". Ní leor feidhm a chruthú - caithfidh
+          tú í a úsáid i do chód! Ceangail an bloc "tarraing cearnóg" chun cearnóg
+          a tharraingt.
         turtle_3_2: Cruthaigh feidhm "tarraing triantán" bunaithe ar an bhfeidhm "tarraing
           cearnóg" mar shampla.
         turtle_3_3: 'Tarraing claíocha triantánacha timpeall na gcat agus claí cearnógach
@@ -327,9 +266,9 @@
           Bain triail as, ansin tarraing sraith tithe.
         turtle_3_10: D'fhoghlaim tú mórán! Anois, is féidir leat aon rud a tharraingt.
           Bain triail as réalta, nó bís, nó calóg shneachta.
-        maze_karel_debug_seq_1: Welcome to debugging! My code doesn't work right.
-          Can you spot the problem and fix it so that I can get my field flat and
-          ready for planting?
+        maze_karel_debug_seq_1: Seo é dífhabhtú - fáilte romhat! Níl mo chód ag feidhmiú
+          mar is ceart. An féidir leat an fhadhb a aithint agus a réiteach sa chaoi
+          go mbeidh mé in ann mo ghort a chur ar leibhéal agus síolta a chur?
         maze_karel_debug_seq_2: Cad atá cearr leis an ríomhchlár seo? An féidir leat
           é a cheartú sa chaoi go mbeidh mé in ann an carn sin a bhaint?
         maze_karel_debug_repeat: Ceartaigh an clár seo sa chaoi go mbeidh mo ghort
@@ -339,7 +278,7 @@
         maze_karel_debug_if: Cabhair! Ceartaigh an ríomhchlár sa chaoi go mbeidh mo
           ghort go hiomlán réidh.
         maze_karel_debug_if_else: Ceartaigh an clár seo sa chaoi go mbeidh mé in ann
-          na pollta a líonadh agus na cairn go léir a bhaint.
+          na poill a líonadh agus na cairn go léir a bhaint.
         maze_karel_debug_function_1: Cad a d'athrófá sa ríomhchlár seo chun cabhrú
           liom na cairn go léir a bhaint?
         maze_karel_debug_function_2: An féidir leat an clár seo a cheartú sa chaoi
@@ -378,25 +317,28 @@
         bounce_2: Ceangail bloc nua leis na blocanna "nuair a bhrúitear an tsaighead
           dheas" agus "nuair a bhrúitear an tsaighead chlé". Bog an slacán chun an
           dá sprioc a bhaint amach.
-        bounce_3: Now try something similar with the "when up arrow" block. Move the
-          paddle to the finish target at the top.
-        bounce_4: This time you need to add four blocks. Move the paddle to all four
-          finish targets to complete this puzzle.
-        bounce_5: We're going to send a ball flying down towards the paddle. Attach
-          a block to the "when ball hits paddle" block to ensure the ball reaches
-          the finish target.
-        bounce_6: Now the finish target is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
+        bounce_3: Anois déan rud éigin mar an gcéanna leis an mbloc "nuair a bhrúitear
+          an tsaighead suas". Aistrigh an slacán go dtí an sprioc ag an mbarr.
+        bounce_4: Anois caithfidh tú ceithre bhloc a chur leis. Ansin, aistrigh an
+          slacán go dtí na ceithre sprioc chun an dúshlán a chríochnú.
+        bounce_5: Caithfimid liathróid anuas i dtreo an tslacáin. Ceangail bloc leis
+          an mbloc "nuair a bhuaileann liathróid slacán" le cinntiú go sroichfidh
+          an liathróid an sprioc.
+        bounce_6: Anois tá an sprioc ag barr an scáileáin. Caithfidh tú blocanna a
+          cheangal leis an dá bhloc "nuair a bhuaileann liathróid..." chun an dúshlán
+          a réiteach.
         bounce_7: Ceangail blocanna le gach bloc "nuair...". Preab an liathróid go
           dtí go sroichfidh sí an sprioc.
-        bounce_10: There is a now a goal at the top. Attach the "score point" and
-          "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses paddle" blocks to make a game. See how many points you can score
-          before your opponent scores twice.
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
+        bounce_10: Anois tá báire ag barr an scáileáin. Ceangail blocanna "tabhair
+          pointe don imreoir" agus "tabhair pointe don chéile comhraic" leis na blocanna
+          "nuair a théann liathróid i mbáire" agus "nuair a théann liathróid thar
+          slacán" chun cluiche a chruthú. Cé mhéad pointe an féidir leatsa a fháil
+          sula bhfaighidh do chéile comhraic dhá phointe?
+        bounce_11: Anois is féidir leat blocanna a cheangal leis an mbloc "nuair a
+          ritear é". Caithfidh tú an bloc nua "tosaigh liathróid nua" a cheangal i
+          níos mó ná áit amháin. Athraigh an radharc nó luas an tslacáin freisin,
+          agus féach cé mhéad pointe is féidir leat a fháil sula bhfaighidh do chéile
+          comhraic dhá phointe.
         bounce_12: Cruthaigh do chluiche liathróide féin. Is féidir leat an leagan
           amach agus na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe,
           cliceáil "Críochnaigh" agus lig do chairde an cluiche a imirt ar a nguthán.
@@ -404,46 +346,56 @@
           leibhéal nua a chruthú. Cliceáil "Rith" nuair a bheidh tú réidh.
         flappy_1: Ceangail bloc leis an mbloc "nuair a chliceáiltear", ansin cliceáil
           "Rith". Cliceáil nó tapáil an scáileán le Flappy a threorú chuig an sprioc.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the
-          game try setting the score back to 0.
-        flappy_11: Create your own Flappy game. You can change all the visuals and
-          all the rules, even the gravity. When you're done, click Finish to let friends
-          try your game on their phones.
+        flappy_2: Tá an talamh ann anois. Ceangail bloc leis an mbloc "nuair a bhuailtear
+          an talamh". Ní mór duit deireadh a chur leis an gcluiche nuair a bhuaileann
+          Flappy leis an talamh.
+        flappy_3: Is féidir cód a rith nuair a thosaíonn an cluiche trí bhlocanna
+          a cheangal leis an mbloc "nuair a ritear é". Socraigh luas an leibhéil,
+          ansin eitil go dtí an sprioc.
+        flappy_4: Eitleoidh Flappy trí chonstaicí go dtí go scríobhfaidh tú cód a
+          dhéanann a mhalairt. Ceangail bloc leis an mbloc "nuair a bhuailtear in
+          éadan constaice". Caithfidh tú deireadh a chur leis an gcluiche nuair a
+          bhuaileann Flappy leis an chéad dá phíopa.
+        flappy_5: Cuirimis scórchlár leis an gcluiche. Tabhair pointí do Flappy nuair
+          a ghlanann sé constaicí, trí bhloc nua a cheangal leis an mbloc "nuair a
+          ghlantar constaic". Ansin, gnóthaigh pointe amháin trí Flappy a eitilt trí
+          an chéad dá phíopa.
+        flappy_6: An féidir leat pointe a ghnóthú fós má ghreadann Flappy a sciatháin
+          níos laige nó níos láidre?
+        flappy_7: Anois, athraigh an radharc trí bhloc eile a cheangal leis an mbloc
+          "nuair a ritear é".
+        flappy_8: Is féidir leat an radharc a athrú nuair a thosaíonn an cluiche nó
+          am ar bith tar éis sin. Bain triail as radharc randamach a shocrú nuair
+          a ghlanann Flappy constaic, mar shampla.
+        flappy_9: Mar athrú, nuair a bhuaileann Flappy le constaic, athraigh an scór
+          go 0, in áit deireadh a chur leis an gcluiche.
+        flappy_11: Cruthaigh do chluiche Flappy féin. Is féidir leat an leagan amach
+          agus na rialacha go léir a athrú, an domhantarraingt san áireamh! Nuair
+          a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde an
+          cluiche a imirt ar a nguthán.
         flappy_k1_1: Imir Flappy
         flappy_k1_2: Ceangail bloc leis an mbloc "nuair a chliceáiltear", ansin cliceáil
           "Rith". Cliceáil nó tapáil an scáileán le Flappy a threorú chuig an sprioc.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
+        flappy_k1_3: Tá an talamh ann anois. Ceangail bloc leis an mbloc "nuair a
+          bhuailtear an talamh". Ní mór duit deireadh a chur leis an gcluiche nuair
+          a bhuaileann Flappy leis an talamh.
+        flappy_k1_4: Is féidir cód a rith nuair a thosaíonn an cluiche trí bhlocanna
+          a cheangal leis an mbloc "nuair a ritear é". Socraigh luas an leibhéil,
+          ansin eitil go dtí an sprioc.
+        flappy_k1_5: Eitleoidh Flappy trí chonstaicí go dtí go scríobhfaidh tú cód
+          a dhéanann a mhalairt. Ceangail bloc leis an mbloc "nuair a bhuailtear in
+          éadan constaice". Caithfidh tú deireadh a chur leis an gcluiche nuair a
+          bhuaileann Flappy leis an chéad dá phíopa.
+        flappy_k1_6: Cuirimis scórchlár leis an gcluiche. Tabhair pointí do Flappy
+          nuair a ghlanann sé constaicí, trí bhloc nua a cheangal leis an mbloc "nuair
+          a ghlantar constaic". Ansin, gnóthaigh pointe amháin trí Flappy a eitilt
+          trí an chéad dá phíopa.
+        flappy_k1_7: An féidir leat níos mó ná pointe amháin a ghnóthú nuair a ghlanann
+          tú constaic?
+        flappy_k1_8: Anois, athraigh an radharc trí bhloc eile a cheangal leis an
+          mbloc "nuair a ritear é".
+        flappy_k1_9: Anois, athraigh an t-imreoir trí bhloc "socraigh imreoir" a cheangal
+          leis an mbloc "nuair a ritear é".
         jigsaw_1: Cliceáil an bloc
         jigsaw_2: Tarraing an bloc go dtí an sprioc
         jigsaw_3: Leag amach na blocanna ar an bpictiúr
@@ -457,117 +409,138 @@
         jigsaw_11: Leag amach na blocanna ar an bpictiúr
         jigsaw_12: Leag amach na blocanna ar an bpictiúr
         jigsaw_13: Ceartaigh an puzal!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
+        mazestep_1: Cur síos ar chéim sa chathair ghríobháin anseo
+        mazestep_2: Cur síos ar chéim sa chathair ghríobháin anseo
+        mazestep_3: Cur síos ar chéim sa chathair ghríobháin anseo
+        mazestep_4: Cur síos ar chéim sa chathair ghríobháin anseo
+        mazestep_5: Cur síos ar chéim sa chathair ghríobháin anseo
+        studio_c2_1: An féidir leat tabhairt ar an madra seo "dia dhaoibh" a rá?
+        studio_c2_2: An féidir leat tabhairt ar an madra seo rud éigin a rá, ansin
+          an cat rud éigin eile a rá ina dhiaidh?
         studio_c2_3: An féidir leat clár a scríobh chun an madra a aistriú go dtí
           an cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make Waddles move around using the
-          up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have Waddles say "Ouch!" and play a "hit" sound if he
-          runs into the dinosaur, and then move him with the arrows to make that happen?
-        studio_c2_9: Can you add a block to score a point when Waddles runs into the
-          octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          Waddles, and then move him with the arrows until you score?
+        studio_c2_4: An féidir leat ríomhchlár a scríobh a aistríonn an madra go dtí
+          an cat, agus a thugann ar an gcat "dia dhuit" a rá nuair a shroicheann an
+          madra é?
+        studio_c2_5: An féidir leat ríomhchlár a scríobh a thugann ar an ochtapas
+          "dia dhuit" a rá nuair a chliceáiltear é?
+        studio_c2_6: An féidir leat ríomhchlár a scríobh a aistríonn an phiongain
+          timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na
+          spriocanna go léir a bhaint amach?
+        studio_c2_7: Is féidir leat an bloc "go deo na ndeor" a úsáid chun cód a rith
+          go leanúnach. An féidir leat blocanna a cheangal leis chun cabhrú leis an
+          dineasár dul suas agus síos arís agus arís eile?
+        studio_c2_8: An féidir leat tabhairt ar an bpiongain "Aigh!" a rá agus fuaim
+          "buille" a sheinm má bhuaileann sé leis an dineasár? Ansin aistrigh leis
+          na saighde é sa chaoi go dtarlóidh sé sin.
+        studio_c2_9: An féidir leat bloc a cheangal a thabharfaidh pointe don imreoir
+          nuair a bhuailfidh an phiongain leis an ochtapas? Ansin treoraigh an phiongain
+          leis na saighde go dtí go ngnóthóidh tú pointe.
+        studio_c2_10: An féidir leat dhá bhloc a cheangal a athróidh an cúlra agus
+          luas na piongaine? Ansin treoraigh leis na saighde é go dtí go ngnóthóidh
+          tú pointe.
         studio_c2_11: Scríobh do scéal féin. Nuair a bheidh tú críochnaithe, cliceáil
           "Críochnaigh" agus lig do chairde do scéal a fheiceáil ar a nguthán.
-        studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat
-          say something afterwards?
+        studio_c3_story_1: An féidir leat tabhairt ar an madra seo "dia dhaoibh" a
+          rá?
+        studio_c3_story_2: An féidir leat tabhairt ar an madra seo rud éigin a rá,
+          ansin an cat rud éigin eile a rá ina dhiaidh?
         studio_c3_story_3: An féidir leat clár a scríobh chun an madra a aistriú go
           dtí an cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_4: An féidir leat ríomhchlár a scríobh a aistríonn an madra
+          go dtí an cat, agus a thugann ar an gcat "dia dhuit" a rá nuair a shroicheann
+          an madra é?
+        studio_c3_story_5: An féidir leat bloc a chur leis ionas go mbeidh an t-ochtapas
+          sona sásta?
         studio_c3_story_6: Scríobh do scéal féin. Nuair a bheidh tú críochnaithe,
           cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil ar a nguthán.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make Waddles move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have Waddles say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when Waddles runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of Waddles, and then move him with the arrows until you score?
+        studio_c3_game_1: An féidir leat ríomhchlár a scríobh a thugann ar an ochtapas
+          "dia dhuit" a rá nuair a chliceáiltear é?
+        studio_c3_game_2: An féidir leat ríomhchlár a scríobh a aistríonn an phiongain
+          timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na
+          spriocanna go léir a bhaint amach?
+        studio_c3_game_3: Is féidir leat an bloc "go deo na ndeor" a úsáid chun cód
+          a rith go leanúnach. An féidir leat blocanna a cheangal leis chun cabhrú
+          leis an dineasár dul suas agus síos arís agus arís eile?
+        studio_c3_game_4: An féidir leat tabhairt ar an bpiongain "Aigh!" a rá agus
+          fuaim "buille" a sheinm má bhuaileann sé leis an dineasár? Ansin aistrigh
+          leis na saighde é sa chaoi go dtarlóidh sé sin.
+        studio_c3_game_5: An féidir leat bloc a cheangal a thabharfaidh pointe don
+          imreoir nuair a bhuailfidh an phiongain leis an ochtapas? Ansin treoraigh
+          an phiongain leis na saighde go dtí go ngnóthóidh tú pointe.
+        studio_c3_game_6: An féidir leat dhá bhloc a cheangal a athróidh an cúlra
+          agus luas na piongaine? Ansin treoraigh leis na saighde é go dtí go ngnóthóidh
+          tú pointe.
         studio_c3_game_7: Scríobh do chluiche féin. Nuair a bheidh tú críochnaithe,
           cliceáil "Críochnaigh" agus lig do chairde triail a bhaint as do chluiche
           ar a nguthán.
-        studio_playlab_1: Ba mhaith le Waddles "dia dhuit" a rá - an féidir leat cabhrú
-          leis?
-        studio_playlab_2: Cave Boy (actor 1) and Jasmine (actor 2) would like to say
-          "hello" to each other. Can you help them by using the "say" block twice?
-        studio_playlab_3: An féidir leat cabhrú le Cailín na Leadóige an bhratach
+        studio_playlab_1: Ba mhaith leis an bpiongain "dia dhuit" a rá - an féidir
+          leat cabhrú leis?
+        studio_playlab_2: Ba mhaith leis an mBuachaill Pluaise (aisteoir 1) agus Jasmine
+          (aisteoir 2) "dia dhuit" a rá lena chéile. An féidir leat cabhrú leo, trí
+          dhá bhloc "deir..." a úsáid?
+        studio_playlab_3: An féidir leat cabhrú leis an gCailín Leadóige an bhratach
           a shroicheadh?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
-          2) and play a sound when he gets there?
-        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
-          it is clicked? Don’t forget to click it after you click Run
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
-          arrow keys to get to all the magical fireballs?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help the wizard move right and left repeatedly?
-        studio_playlab_8: Can you add a block to score a point and a block to play
-          a sound when the unicorn runs into the wizard, and then move him with the
-          arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the
-          Spacebot get to the alien faster by changing its speed. Then move him with
-          the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_4: An féidir leat cabhrú leis an mBuachaill Leadóige (aisteoir
+          1) an Cailín Leadóige (aisteoir 2) a shroicheadh, agus fuaim a sheinm nuair
+          a chasann sé léi?
+        studio_playlab_5: An féidir leat cabhrú leis an Spásbat "dia dhaoibh a dhaoine
+          saolta" a rá nuair a chliceáiltear é? Ná déan dearmad é a chliceáil tar
+          éis "Rith" a chliceáil
+        studio_playlab_6: An féidir leat cabhrú leis an gCailleach na meallta tine
+          go léir a shroicheadh leis na saighde suas/síos/ar dheis/ar chlé?
+        studio_playlab_7: Is féidir leat an bloc "go deo na ndeor" a úsáid chun cód
+          a rith go leanúnach. An féidir leat blocanna a cheangal leis chun cabhrú
+          leis an draoi dul suas agus síos arís agus arís eile?
+        studio_playlab_8: An féidir leat dhá bhloc a cheangal a thabharfaidh pointe
+          don imreoir agus a sheinnfidh fuaim nuair a bhuailfidh an t-aonbheannach
+          leis an draoi? Ansin rialaigh an t-aonbheannach leis na saighde go dtí go
+          ngnóthóidh tú pointe.
+        studio_playlab_9: Socraigh an cúlra don ionradh eachtardhomhanda seo, agus
+          athraigh luas an Spásbait chun cabhrú leis teacht ar an eachtrán níos tapúla.
+          Ansin, rialaigh an Spásbat leis na saighde agus tabhair rabhadh don domhan
         studio_playlab_10: Scríobh do chluiche féin. Nuair a bheidh tú críochnaithe,
           cliceáil "Críochnaigh" agus lig do chairde triail a bhaint as do chluiche
           ar a nguthán.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
+        studio_iceage_hello1: Ba mhaith le Sid gach duine a bhailiú le chéile le haghaidh
+          eachtra nua. An féidir leat cabhrú leis "dia dhuit" a rá trí bhloc "abair"
+          a tharraingt go dtí an spás oibre agus "dia dhuit" a chlóscríobh ann?
+        studio_iceage_hello2: Chas Manny (aisteoir 1) le Sid (aisteoir 2) agus ba
+          mhaith leis cuireadh a thabhairt dó chun teacht leis ar an eachtra. Bain
+          úsáid as dhá bhloc "deir aisteoir..." chun cabhrú leo beannú dá chéile.
         studio_iceage_move_to_flag: Tá Scrat ag lorg a dhearcáin! Cabhraigh leis na
-          200 picteilín deireanach a thaisteal leis an mbloc "aistrigh".
+          200 picteilín deireanach a thaisteal leis an mbloc "téigh".
         studio_iceage_move_to_actor: Tá Diego (aisteoir 1) ar lorg Manny (aisteoir
           2). Úsáid an bloc "aistrigh aisteoir" chun cabhrú le Diego siúl 200 picteilín
           síos chuig Manny. Ansin, ceangail bloc eile le "nuair a theagmhaíonn aisteoir"
           chun fuaim a sheinm nuair a chasann siad le chéile.
-        studio_iceage_repeat: Is féidir leat an bloc "athdhéan go deo" a úsáid chun
+        studio_iceage_repeat: Is féidir leat an bloc "go deo na ndeor" a úsáid chun
           cód a rith go leanúnach. An féidir leat cabhrú le Mamó aclaíocht a dhéanamh
           trí bhogadh ar dheis agus ar chlé arís is arís eile?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Is mithid do chluiche féin nó do scéal féin a chruthú!
-          Nuair a bheidh tú réidh, cliceáil "Críochnaigh" agus lig do chairde triail
-          a bhaint as ar a nguthán, ar a dtáibléad, nó ar a ríomhaire!
+        studio_iceage_click_hello: An féidir leat cabhrú le Sid gairm dheiridh ar
+          chairde a chur amach nuair a chliceálfaidh tú é? Ná déan dearmad Sid a chliceáil
+          tar éis duit "Rith" a chliceáil.
+        studio_iceage_move_events: Tá Scrat ag lorg dearcán fós! Cabhraigh leis rith
+          timpeall na háite trí bhlocanna "téigh..." a cheangal leis na blocanna "nuair
+          a bhrúitear...", ag baint úsáide as an treo ceart i ngach cás. Nuair a bheidh
+          tú réidh, cliceáil "Rith" agus déan iarracht na dearcáin go léir a bhailiú.
+        studio_iceage_sound_and_points: Sholáthraíomar an chuid is mó den chód a choinníonn
+          Mamó ag dul ar chlé agus ar dheis, chomh maith leis an gcód a aistríonn
+          Sid timpeall an scáileáin. An féidir leat an cód a chríochnú agus blocanna
+          a cheangal leis an mbloc "nuair a theagmhaíonn aisteoir..." chun fuaim a
+          sheinm agus pointe a ghnóthú nuair a bhuaileann Sid agus Mamó le chéile?
+          Cliceáil "Rith" chun an cluiche a imirt.
+        studio_iceage_warn_ice_age: Ní mór do gach duine dul níos tapúla toisc go
+          bhfuil oighearaois ag teannadh linn! Socraigh cúlra oighreata agus socraigh
+          luas Sid mar "sciobtha", ansin cliceáil "Rith" agus aistrigh Sid i dtreo
+          Diego chun rabhadh a thabhairt dó.
+        studio_iceage_throw_hearts: Ba mhaith le Sid cur in iúl dá mhamó go bhfuil
+          grá mór aige uirthi. Bain úsáid as an mbloc "ó aisteoir... caith..." le
+          tabhairt ar Sid (aisteoir 1) croíthe a chaitheamh le Mamó (aisteoir 2)!
+          Socraigh meon Mhamó mar "sona sásta" nuair a bhuaileann na croíthe í.
+        studio_iceage_free_play: Is mithid duit do chluiche féin nó do scéal féin
+          a chruthú! Nuair a bheidh tú réidh, cliceáil "Críochnaigh" agus lig do chairde
+          triail a bhaint as ar a nguthán, ar a dtáibléad, nó ar a ríomhaire!
         studio_gumball_hello1: Ba mhaith le hAnais cairdeas a dhéanamh le daoine nua.
           An féidir leat cabhrú léi "dia dhuit" a rá trí bhloc "abair" a tharraingt
           go dtí an spás oibre agus "dia dhuit" a chlóscríobh ann?
@@ -575,60 +548,72 @@
           2) ag dul chun na scoile. Cabhraigh leo beannú dá chéile trí dhá bhloc "abair"
           a úsáid.
         studio_gumball_move_to_flag: Tá Banana Joe ar tí rás a bhuachan ar an lá spóirt!
-          Cabhraigh leis na 200 picteilín deireanach a thaisteal trí bhloc "aistrigh"
+          Cabhraigh leis na 200 picteilín deireanach a thaisteal trí bhloc "téigh"
           a úsáid.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: Is féidir leat an bloc "athdhéan go deo" a úsáid chun
-          cód a rith go leanúnach. An féidir leat cabhrú le Gumball ullmhú dá rás
-          trí bhogadh ar dheis agus ar chlé arís is arís eile?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_gumball_move_to_actor: Tá Gumball (aisteoir 1) agus Darwin (aisteoir
+          2) mall ag an lá spóirt! Cabhraigh le Gumball dul síos 200 picteilín chuig
+          Darwin leis an mbloc "aistrigh aisteoir...". Ansin, ceangal bloc nua leis
+          an mbloc "nuair a theagmhaíonn aisteoir..." chun fuaim a sheinm nuair a
+          chasfaidh siad le chéile.
+        studio_gumball_repeat: Is féidir leat an bloc "go deo na ndeor" a úsáid chun
+          cód a rith go leanúnach. An féidir leat blocanna a cheangal leis chun cabhrú
+          le Gumball ullmhú dá rás trí bhogadh ar dheis agus ar chlé arís is arís
+          eile?
+        studio_gumball_click_hello: An féidir leat cabhrú le hAnton tús an ráis a
+          fhógairt trí "Ar an marc, réidh, gabh!" a rá? Ná déan dearmad Anton a chliceáil
+          tar éis duit "Rith" a chliceáil!
+        studio_gumball_move_events: Tá Darwin ag glacadh páirte sa chomórtas bailithe
+          bratacha! Cabhraigh leis trí na blocanna "téigh..." a cheangal leis na teagmhais.
+          Nuair a bheidh tú críochnaithe, cliceáil "Rith" agus déan iarracht na bratacha
+          go léir a bhailiú.
+        studio_gumball_sound_and_points: Sholáthraíomar an chuid is mó den chód a
+          aistríonn Anton (aisteoir 2) ar chlé agus ar dheis, chomh maith leis an
+          gcód a aistríonn Banana Joe (aisteoir 1) timpeall an scáileáin. An féidir
+          leat an cód a chríochnú agus blocanna a cheangal leis an mbloc "nuair a
+          theagmhaíonn aisteoir..." chun fuaim a sheinm agus pointe a ghnóthú nuair
+          a bhuaileann Banana Joe agus Anton le chéile? Cliceáil "Rith" chun an cluiche
+          a imirt.
+        studio_gumball_warn_food_fight: Tá Darwin tar éis éalú ó chogadh bia! Athraigh
+          an cúlra go dtí "carachtair" agus socraigh luas Darwin mar "sciobtha", ansin
+          cliceáil "Rith" agus treoraigh chuig Penny é le rabhadh a thabhairt di.
+        studio_gumball_join_food_fight: Glac páirt sa chogadh bia! Úsáid an bloc "ó
+          aisteoir... caith rud éigin ar dheis" le tabhairt ar Banana Joe (aisteoir
+          1) bia a chaitheamh le hAnton (aisteoir 2)! Socraigh meon Anton go "feargach"
+          má tá sé buailte le bia.
+        studio_gumball_free_play: Is mithid duit do chluiche féin nó do scéal féin
+          a chruthú! Nuair a bheidh tú réidh, cliceáil "Críochnaigh" agus lig do chairde
+          triail a bhaint as ar a nguthán, ar a dtáibléad, nó ar a ríomhaire!
         studio_full_sandbox: Scríobh do chluiche féin. Nuair a bheidh tú críochnaithe,
           cliceáil "Críochnaigh" agus lig do chairde triail a bhaint as do chluiche
           ar a nguthán.
-        studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say
-          something afterwards?
+        studio_k1_1: An féidir leat tabhairt ar an madra seo "dia dhaoibh" a rá?
+        studio_k1_2: An féidir leat tabhairt ar an madra seo rud éigin a rá, ansin
+          an cat rud éigin eile a rá ina dhiaidh?
         studio_k1_3: An féidir leat clár a scríobh chun an madra a aistriú go dtí
           an cat?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make
-          them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        studio_k1_4: Aistrigh an madra go dtí an cat, ansin tabhair ar an gcat "dia
+          dhuit" a rá nuair a shroicheann an madra é.
+        studio_k1_5: An féidir leat bloc a chur leis ionas go mbeidh an t-ochtapas
+          sona sásta?
+        studio_k1_6: Inis do scéal féin! Aistrigh an cat agus an madra timpeall an
+          scáileáin, agus déan comhrá eatarthu.
+        maze_wordsearch_k_1: Cabhraigh liom an focal Béarla EAST a litriú
+        maze_wordsearch_k_2: Cabhraigh liom an focal Béarla SOUTH a litriú
+        maze_wordsearch_k_3: Cabhraigh liom an focal Béarla WEST a litriú
+        maze_wordsearch_k_4: Cabhraigh liom an focal Béarla NORTH a litriú
+        maze_wordsearch_k_6: Aistrigh soir mé, ansin ó dheas, chun an focal Béarla
+          JUMP a litriú
+        maze_wordsearch_k_9: Aistrigh i dtreo amháin mé, ansin i dtreo eile, chun
+          an focal Béarla CODE a litriú
+        maze_wordsearch_k_13: Aistrigh i dtreo amháin mé, ansin i dtreo eile, chun
+          an focal Béarla DEBUG a litriú
+        maze_wordsearch_k_15: Aistrigh i dtreo amháin mé, ansin i dtreo eile, chun
+          an focal Béarla ABOVE a litriú
+        maze_wordsearch_k_16: Aistrigh i dtreo amháin mé, ansin i dtreo eile, chun
+          an focal Béarla BELOW a litriú
+        maze_wordsearch_k_20: Is scrúdú é seo! Aistrigh i dtreo amháin mé, ansin i
+          dtreo eile, chun an focal Béarla STORY a litriú
+        applab_ec_simple: Cruthaigh d'aip ó na blocanna sa mbosca uirlisí.
         turtle_ec_1_2: 'Anois, tarraing cearnóg. NÓTA: úsáid an dath is ansa leat
           leis an mbloc nua "penColor".'
         turtle_ec_1_10: 'Rinne tú é! Anois, tarraing cibé rud is mian leat. Mar shampla:
@@ -643,16 +628,16 @@
         artist_intro: 'Ealaíontóir: Réamhrá'
         farmer_intro: 'Feirmeoir: Réamhrá'
         flappy_intro: 'Flappy: Réamhrá'
-        loop_times: Repeat Times Block
-        loop_until: Repeat Until Block
-        if: If Block
-        if_else: If/else Block
-        if_else_scrat: If/else Block
+        loop_times: Bloc "athdhéan N uair"
+        loop_until: Bloc "athdhéan go dtí"
+        if: Bloc "má"
+        if_else: Bloc "má/i ngach cás eile"
+        if_else_scrat: Bloc "má/i ngach cás eile"
         function: Feidhmeanna
-        loop_while: While Block
-        loop_for: Counter Block
-        parameters: Functions with Parameters
-        hoc_wrapup: Hour of Code Wrapup
+        loop_while: Lúb "Chomh fada is"
+        loop_for: Bloc Áirimh
+        parameters: Feidhmeanna a ghlacann le Paraiméadair
+        hoc_wrapup: 'An Uair Chódála: Críoch'
         Unplug1: Cad is Ríomheolaíocht ann?
         Unplug2: Smaointeoireacht Ríomhaireachtúil
         Unplug3: Ríomhchlárú ar Ghrafpháipéar
@@ -669,9 +654,9 @@
         C1_bigevent_unplugged: An Teagmhas Mór
         C1_getting_loopy: Bí Lúbach
         C1_pair_programming: Códáil Bheirte
-        C1_maze_intro_sequencing: Maze Sequencing Intro
+        C1_maze_intro_sequencing: 'Cathair Ghríobháin: Buneolas ar Sheicheamhú'
         C1_maze_debugging: 'Cathair Ghríobháin: Dífhabhtú'
-        C1_bee_level_intro: Bee Level - Intro
+        C1_bee_level_intro: Beach - Buneolas
         C1_artist_intro: 'Ealaíontóir: Réamhrá'
         C1_spelling_bee_intro: Comórtas Litrithe - Réamhrá
         C1_zuck_repeat_loop: 'Cathair Ghríobháin: Lúba'
@@ -689,7 +674,7 @@
         C2_bee_loops: 'Beach: Lúba'
         C2_bee_debugging: 'Beach: Dífhabhtú'
         C2_bee_conditionals: 'Beach: Coinníollacha'
-        C2_playlab_createstory: 'Súgradh is Dáiríre: Cruthaigh Scéal'
+        C2_playlab_createstory: 'Spraotharlann: Cruthaigh Scéal'
         C2_graph_paper: Ríomhchlárú ar Ghrafpháipéar
         C2_conditionals_with_cards: Coinníollacha
         C2_binary_bracelets: Bráisléid Dhénártha
@@ -704,7 +689,7 @@
         C3_bee_conditionals: 'Beach: Coinníollacha'
         C3_maze_conditionals: 'Cathair Ghríobháin: Coinníollacha'
         C3_artist_nested_loops: Lúba Neadaithe
-        C3_farmer_while: While Loops
+        C3_farmer_while: Lúba "Chomh fada is"
         C3_bee_nested_loops: Lúba Neadaithe
         C3_bee_debugging: 'Beach: Dífhabhtú'
         C3_bounce: Preabadh
@@ -714,25 +699,25 @@
         C3_internet: An tIdirlíon
         C3_crowdsourcing: Sluafhoinsiú
         C3_functional_suncatchers: Móibílí Gréine
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_songwriting_with_parameters: Ceapadh Ceoil le Paraiméadair
         C4_intro: Réamhrá
         C4_loops_zombie: Lúba
         C4_bee_conditional: 'Beach: Coinníollacha'
         C4_variables_artist: Athróga - Ealaíontóir
         C4_variables_playlab: Athróga - Súgradh is Dáiríre
-        C4_for_loops: Lúba "For"
-        C4_for_loops_bee: Lúba "For"
-        C4_for_loops_no_bee: Lúba "For"
-        C4_math_artist: Programming the Artist with Math
+        C4_for_loops: Lúba "Do Gach"
+        C4_for_loops_bee: Lúba "Do Gach"
+        C4_for_loops_no_bee: Lúba "Do Gach"
+        C4_math_artist: An tEalaíontóir a Uathoibriú leis an Mata
         C4_function_edit: Feidhmeanna a chur in eagar
         C4_function_create: Feidhmeanna a chruthú
-        C4_function_parameters: Functions with Parameters
+        C4_function_parameters: Feidhmeanna a ghlacann le Paraiméadair
         C4_conditionals: Coinníollacha
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algartaim le Tangraim
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Athróga i gClúdaigh Litreacha
-        C4_unplugged_forloops: Lúba "For"
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_forloops: Lúba "Do Gach"
+        C4_unplugged_parameters: Ceapadh Ceoil le Paraiméadair
         C4_unplugged_binary: Dénártha
         frozen_intro: An Uair Chódála - Réamhrá
         frozen_loops: Buneolas ar Lúba
@@ -740,7 +725,7 @@
         playlab_intro: Buneolas Súgradh is Dáiríre
         playlab_events: 'Súgradh is Dáiríre: Teagmhais'
         playlab_repeat_forever: 'Súgradh is Dáiríre: Athdhéan go deo'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        tutorial_puzzle_challenge: Dúshlán an Chúrsa
         infinity_playlab_intro: Súgradh is Dáiríre - Réamhrá
         infinity_playlab_events: Súgradh is Dáiríre - Teagmhais
         infinity_playlab_repeat_forever: Súgradh is Dáiríre - Athdhéan go deo
@@ -759,13 +744,14 @@
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Buneolas ar Fheidhmeanna
-        csp_applab_functions_parameters: Functions with Parameters
+        csp_applab_functions_parameters: Feidhmeanna a ghlacann le Paraiméadair
         csp_applab_loops: Lúba
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'
@@ -822,17 +808,17 @@
         iceage_repeat: Uair Chódála Ice Age - Athdhéanamh
     callout:
       text:
-        drag_blocks: Tarraing bloc "aistrigh" agus ceangail faoin bhloc eile é
+        drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile
+          é
         run: Cliceáil "Rith" chun triail a bhaint as
         watch_again: Cliceáil anseo le féachaint ar an bhfíseán arís
         gray_block_explanation: Ní féidir blocanna liatha a scriosadh. An féidir leat
           an dúshlán a chríochnú mar sin féin?
         show_code_explanation: Cliceáil anseo chun an cód taobh thiar de do chlár
           a fheiceáil
-        instructions_repeat_explanation: The instructions for each puzzle are repeated
-          here
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
+        instructions_repeat_explanation: Taispeántar na treoracha i gcónaí anseo
+        category_explanation: Tá na blocanna céanna agat fós, ach tá siad leagtha
+          amach ina gcatagóirí anois
         set_sprite_image: Ceangail bloc "socraigh aisteoir" leis an mbloc "nuair a
           thosaíonn an scéal" chun aisteoir a roghnú don scéal seo
         studio_say_text: Cuir an rud ba chóir don aisteoir a rá laistigh de na comharthaí
@@ -840,13 +826,12 @@
         jigsaw_click: Cliceáil an bloc seo!
         move_elsa_forward: Tarraing bloc "téigh ar aghaidh" agus ceangail leis an
           mbloc "nuair a ritear é" é chun Elsa a chur ar aghaidh
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
+        turn_elsa: Bain úsáid as an mbloc "cas..." chun Elsa a chasadh. Is féidir
+          an uillinn a shocrú leis an uimhir sa roghchlár anuas
+        replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
+        replace_questions_degree: Úsáid an roghchlár anuas chun an uillinn cheart
+          a chur in áit "???"
+        repeat_blocks: Cuir bloc "athdhéan" timpeall na mblocanna atá sa spás oibre
         repeat_blocks_1: "(1) Cuir an bloc seo timpeall na mblocanna liatha sa spás
           oibre"
         repeat_blocks_2: (2) Tarraing an bloc "athdhéan" anseo, agus cuir na blocanna
@@ -855,11 +840,11 @@
           a chruthú!"
         degrees_per_side: Roinn 360 ar líon na dtaobhanna le teacht ar mhéid gach
           uillinne (céimeanna).
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
+        set_sides: "Úsáid an bloc seo chun líon na dtaobh a shocrú agus an dúshlán
+          a chríochnú."
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
+        which_equation: Cén chothromóid a dhéanfaidh na taobhanna níos giorra i gcruthanna
+          a bhfuil níos mó taobhanna acu?
         get_nectar: Úsáid an bloc nua "faigh neachtar".
         actions_category: Tá cuma nua ar an mbosca uirlisí! Gheobhaidh tú na blocanna
           "Gníomhartha" anseo anois.
@@ -883,26 +868,26 @@
           gach ciorcal a tharraingt.
         frozen_circle_function_with_parameter_circle: Úsáid an bloc "cruthaigh ciorcal"
           agus athraigh an mhéid.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Tarraing an bloc "deir" anseo agus cuir "dia dhuit" isteach
+        frozen_snowflake_branch: Úsáid an bloc "cruthaigh craobh de chalóg shneachta"
+        frozen_create_square: Ceangail níos mó blocanna anseo le cearnóg a chruthú
+        playlab_drag_say: Tarraing an bloc "abair" anseo agus cuir "dia dhuit" isteach
           ann
         playlab_use_twice: "Úsáid an bloc seo faoi dhó, agus ná dearmad uimhir an
           aisteora a athrú"
-        playlab_move_girl: Úsáid an bloc "aistrigh ar dheis" chun an Cailín Leadóige
+        playlab_move_girl: Úsáid an bloc "téigh ar dheis" chun an Cailín Leadóige
           a aistriú
         playlab_play_sound: Cuir bloc "seinn fuaim" anseo
         playlab_arrow_keys: Úsáid iad seo chun an chailleach a aistriú tar éis duit
           "Rith" a chliceáil
-        playlab_add_move: Cuir blocanna "aistrigh" taobh istigh den bhloc "athdhéan"
-          seo
+        playlab_add_move: Cuir blocanna "téigh ar aghaidh" taobh istigh den bhloc
+          "athdhéan" seo
         playlab_add_score: Cuir blocanna scóir anseo
         playlab_add_blocks: Cuir do chuid blocanna anseo
         set_variable: Tarraing bloc uimhreach anseo chun an athróg a shocrú
         place_variable: Tarraing d'athróg taobh istigh den bhloc seo
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
+        bee_for_loop: Tarraing an líon is mó neachtar is féidir leis an mbeach a bhailiú
+          anseo
+        place_counter_variable: Tarraing d'athróg taobh istigh den bhloc seo
         function_editor_draw_square: Seo é sainmhíniú na feidhme. Rithfear na blocanna
           seo gach uair a úsáidfidh tú an bloc "tarraing cearnóg"
         change_here: Déan d'athrú anseo
@@ -917,22 +902,23 @@
           2, agus 3) in ionad na ???
         repeat: Cuir blocanna taobh istigh den lúb chun orduithe a dhéanamh arís is
           arís eile
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
+        if_bee_nectar: Úsáid an bloc "má" le cinneadh an bhfaighidh an beach aon neachtar
+        if_else_bee: Úsáid an bloc "má/i ngach cás eile" chun cabhrú leis an mBeach
+          neachtar a fháil más bláth é, agus mil a dhéanamh murar bláth é
+        repeat_full_circle: Cé mhéad uair a chaithfidh tú an zombaí a aistriú chun
+          ciorcal iomlán a dhéanamh
         place_length_variable: Tarraing an athróg "fad" anseo agus cuir in ionad na
           gcomharthaí ceiste í
         arrows_move_actor: "Úsáid na saighde chun an t-aisteoir a aistriú"
         right_arrow_fireball: "Úsáid an tsaighead dheas chun meallta tine a chaitheamh"
         name_function: Scríobh ainm na feidhme anseo
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
+        Infinity_move_right_runbutton: Cuir bloc "téigh" anseo
+        Infinity_move_directions_callout: Cén bloc a aistreoidh Baymax suas nuair
+          a bhrúifear an tsaighead suas?
         Infinity_move_directions_callout_arrow: "Úsáid na saighde seo le stiúradh"
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_collide_callout: Seinn fuaim nuair a tharlaíonn an teagmhas
+          seo.
+        Infinity_repeat_callout: Cuir blocanna Téigh isteach anseo
         craft_run_button_callout: Cliceáil "Rith" chun triail a bhaint as
         craft_drag_block_callout: Tarraing bloc "moveForward();" agus ceangail leis
           an mbloc eile é

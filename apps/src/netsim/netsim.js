@@ -5,14 +5,13 @@
 /* global -Blockly */
 /* global dashboard */
 /* global confirm */
-'use strict';
 
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var utils = require('../utils');
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var Provider = require('react-redux').Provider;
@@ -277,14 +276,6 @@ NetSim.prototype.tick = function (clock) {
 };
 
 /**
- * Pull an identifier from the URL that separates this level's shard from others.
- * @returns {string}
- */
-NetSim.prototype.getUniqueLevelKey = function () {
-  return location.pathname.substr(1).replace(/\W/g, '-');
-};
-
-/**
  * Extracts query parameters from a full URL and returns them as a simple
  * object.
  * @returns {*}
@@ -358,7 +349,9 @@ NetSim.prototype.initWithUser_ = function (user) {
         disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
-  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'), {
+    user
+  });
 
   this.visualization_ = new NetSimVisualization($('#netsim-visualization'),
       this.runLoop_);
@@ -368,8 +361,10 @@ NetSim.prototype.initWithUser_ = function (user) {
       $('.lobby-panel'),
       this, {
         user: user,
-        levelKey: this.getUniqueLevelKey(),
-        sharedShardSeed: this.getOverrideShardID()
+        levelKey: NetSimUtils.getUniqueLevelKeyFromLocation(location),
+        sharedShardSeed: this.getOverrideShardID(),
+        showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false),
+        showTeacherLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, true)
       });
 
   // Tab panel - contains instructions, my device, router, dns
@@ -386,7 +381,8 @@ NetSim.prototype.initWithUser_ = function (user) {
           routerMemorySliderChangeCallback: this.setRouterMemory.bind(this),
           routerMemorySliderStopCallback: this.changeRemoteRouterMemory.bind(this),
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
-          becomeDnsCallback: this.becomeDnsNode.bind(this)
+          becomeDnsCallback: this.becomeDnsNode.bind(this),
+          showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
   }
@@ -525,6 +521,9 @@ NetSim.prototype.synchronousDisconnectFromShard_ = function () {
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
+  // Attempt to unsubscribe from Pusher as we navigate away
+  this.shard_.disconnect();
+  this.shard_ = null;
   // Don't notify observers, this should only be used when navigating away
   // from the page.
 };

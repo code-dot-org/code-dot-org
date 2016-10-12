@@ -27,7 +27,9 @@
           - last_level_id = level[:ids][0]
           .level
             - p = level_progress[level[:ids][0]]
-            - if p.try(:[], :pages_completed)
+            - if p.try(:[], :submitted)
+              - status = "submitted"
+            - elsif p.try(:[], :pages_completed)
               - pages_completed = p[:pages_completed]
               - status = activity_css_class(pages_completed[level_repeat])
             - else

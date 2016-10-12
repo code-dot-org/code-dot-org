@@ -1,26 +1,21 @@
 name 'ECSPD Challenge Reflection'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-## Close & Next Steps > Keep Learning
-<br><br>
-**Congratulations on completing this online PD!**
-<br><br>
+# Close & Next Steps > Keep Learning
+
+**Congratulations on completing this online module!**
+
 Here’s what you can do to continue your learning:
 
-**Plan to attend the next in-person training in your region:** [Dates and times are available here](http://code.org/educate/pd/15-16/). During the in-person training, you’ll be referring to this online PD.
+**Plan to attend the next in-person training in your region:** If you have not yet received a registration link, reach out to teacher@code.org. 
 
 **Move on to the next online PDs for ECS:**
-When you’re ready to start preparing to teach the following units in the ECS version 5 curriculum, be sure to review the online PD.
+When you’re ready to start preparing to teach the following units in the ECS version 5 curriculum, be sure to review the online modules.
 
-- Unit 2 - October 1st
-- Unit 3 - November 3rd
-- Unit 4 - November 3rd
-- Unit 5 - Coming in February 2016
-- Unit 6 - Coming in March 2016
+- Unit 1 - 3 -- Available now! 
+- Unit 4 - Coming in October
+- Unit 5 - Coming in November
+- Unit 6 - Coming in November
 
-**Join an upcoming ECS meeting:** During the year, CS10K is hosting a free, online webinar for ECS teachers. [You can find a list of dates and times here](https://cs10kcommunity.org/exploring-computer-science).
-<br><br>
-**Continue participating in the Code.org teacher Professiona Learning Community (PLC):** The Professional Learning Community (PLC) forum you’ve been using throughout this course will be a great resource for you moving forward. You can use it not only to refer back to your learning from this course, but to find support as you continue your journey, or even to offer support to others who need your expertise. Be sure to bookmark it now and visit often: [http://forum.code.org/c/ecs](http://forum.code.org/c/ecs)
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+**Continue participating in the Code.org teacher Professional Learning Community (PLC):** The Professional Learning Community (PLC) forum you’ve been using throughout this course will be a great resource for you moving forward. You can use it not only to refer back to your learning from this course, but to find support as you continue your journey, or even to offer support to others who need your expertise. Be sure to bookmark it now and visit often: [http://forum.code.org/c/ecs](http://forum.code.org/c/ecs)
+
 MARKDOWN

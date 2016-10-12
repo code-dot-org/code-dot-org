@@ -1,31 +1,63 @@
 name 'v2 U2L6 Student Lesson Introduction'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-markdown <<MARKDOWN
-# Unit 2: Lesson 6 - Encode an Experience
-
-## Background
-
-Throughout this unit you have learned a sequence of increasingly complex encodings of information, with higher level encodings like images and formatted text making use of lower level encodings like binary numbers, ASCII characters, and even lower still the bits themselves. When creating a binary encoding scheme, we do not always have to consider the actual bits. When we say a pixel is composed of three numbers, it is not actually important that those numbers are encoded in bits, just that there exists some way to represent numbers. This practice of temporarily ignoring details which are unnecessary for the problem at hand is referred to as abstraction, and is the source of the complex computational systems we use everyday. Making use of this tool it is possible to encode practically any object, system, event, or idea. For this project you will be designing your own encoding and responding to associated reflection questions. This project serves both as a review of the material covered in the first unit, and as a practice AP Performance Task in anticipation of the two you will complete later this year.
-
-## Vocabulary
-
-* **Abstraction:** Removing unnecessary details to focus on the essential characteristics. To break problems up into separate parts which can then be solved separately and recombined to form a complete solution. To focus on and use something based only on what it does and without concern for how that functionality is accomplished.
-
-## Lesson
-
-* Select a personally meaningful experience to encode.
-* Design a way to encode it into bits.
-* Consult with a peer to check you thinking.
-* Create a visual representation of your idea.
-* Complete a project description and respond to reflection questions.
-
-## Resources
-
-* <a href='https://docs.google.com/document/d/1kmIJlEyS4V6kU47vzyZMlENsdgLJoV-ZLyYQ2RIjuN8/edit?usp=sharing' target='_blank' class='print_link'>Encode an Experience</a> - Activity Guide (includes Rubric) (<a href='https://docs.google.com/document/d/1kmIJlEyS4V6kU47vzyZMlENsdgLJoV-ZLyYQ2RIjuN8/export?format=pdf' class='print_link'>download</a>)
-* <a href='https://docs.google.com/document/d/1Qao_Qq5Z4Ta1ns_K3T7wip53MLQvJOouwFHIP2zmKsE/edit?usp=sharing' target='_blank' class='print_link'>Encode and Experience Templates</a> - Project Templates (<a href='https://docs.google.com/document/d/1Qao_Qq5Z4Ta1ns_K3T7wip53MLQvJOouwFHIP2zmKsE/export?format=pdf' class='print_link'>download</a>)
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted '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
+'

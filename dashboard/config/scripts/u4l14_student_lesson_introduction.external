@@ -4,25 +4,34 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-# Unit 4: Lesson 14 - Practice PT - Propose an Innovation
+# Unit 4: Lesson 8 - Rapid Research - Cybercrime
 
 ## Background
 
-To conclude the unit you will propose a technological solution that could address a need or problem that's important for you.  For this proposal you must specifically account for what data your innovation will produce and consume and the privacy and security concerns that arise as a result.
+Learn about various types of cyber attacks and cyber crimes and do a small amount of research to learn more about one. The lesson caps off learning about encryption by taking a moment to look at the kinds of attacks and threats encryption (among other things) is intended to thwart.
+
+## Vocabulary
+
+* Phishing Scam
+* DDoS Attack
+* Virus / Anti-virus
+* Firewall
+* SSL/TLS (assoicated with HTTPS)
 
 ## Lesson
 
-* Form groups.
-* Select problem and audience.
-* Research current solutions and complete Research Guide.
-* Propose an innovation.
-* Complete one-pager.
+* Watch Video - Cybersecurity & Crime
+* Read *How Not to Get Hacked*
+* Reseach one type of cybercrime
+* Share findings with another group
+* Review cybersecurity terms
+
 
 ## Resources
 
-* PT Activity Guide: <a href="https://docs.google.com/document/d/1b5EhBSRFyZbcb2E5tg0-TrkdOijAPMefrSrYFMa0s4o/edit?usp=sharing" target="_blank">Practice PT - Propose an Innovation</a>
- 
- (**NOTE:** The Activity Guide also contains a **one-pager template** and **rubric**)
+* Video: [Cybersecurity & Crime](https://youtu.be/AuYNXgO_f3Y) (also embeded on next level, click continue)
+* Article: [How Not To Get Hacked](https://code.org/curriculum/csp/docs/hownottogethacked)
+* Activity Guide: [Rapid Research - Cybersecurity & Crime](https://docs.google.com/document/d/1PHOND-ZUzevI6A02E7PhNUAAfbhOt5250YwXz4KWtpM/edit)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

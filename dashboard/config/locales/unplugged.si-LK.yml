@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Graph Paper Programming
+        title: "ප්‍රස්තාර රටා වැඩසටහන්"
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares on graph paper in an effort to reproduce
@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: "කොන්දේසි"
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -106,7 +106,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: "අවසන් කරන්න"
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -115,7 +115,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: "සතුටු සිතියම්"
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_happy_maps_unplugged
@@ -168,7 +168,7 @@
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Graph Paper Programming
+        title: "ප්‍රස්තාර රටා වැඩසටහන්"
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -202,7 +202,7 @@
           string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
+        title: "පරාමිතීන් සමඟ ගීත ලිවීම"
         desc: Students use the concept of the chorus in a song to learn about passing
           parameters (which customize a function without having to rewrite the entire
           function).
@@ -214,7 +214,7 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: "අන්තර්ජාලය"
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet
@@ -263,7 +263,7 @@
           functions is such a helpful practice.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
+        title: "ද්විමය පින්තූර"
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it

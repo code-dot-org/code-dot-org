@@ -2,7 +2,9 @@ et:
   errors:
     messages:
       not_saved: 'Palun parandage järgmised vead:'
-      too_young: Sellel sisul on vanusepiirang ning see ei ole kättesaadav noorematele õpilastele
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ et:
   signup_form:
     student_count: '%{count} õpilast on juba registreerunud.'
     teacher_count: '%{count} õpetajat on juba registreerunud.'
-    overview_student: 'Registreeri kasutajakonto, et oma progressi jälgida. Sinu meiliaadress on primaarselt sisselogimiseks ja parooli lähtestamiseks. Rohkema info jaoks vaata <a href="http://code.org/privacy">Privaatsuspoliitikat</a>.'
-    overview_teacher: 'Õpeta arvutiteadust oma klassiruumis registreerides endale konto. <p/> Sa saad lisada õpilasi ja jälgida nende progressi.'
-    no_signup_message: 'Saad aadressil <a target="_blank" href="http://learn.code.org"> sirvida erinevaid tasemeid ja puslesid</a>, kuid oma progressi salvestamiseks on vajalik eelnev registreerumine.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Vaata õpetajate juhendit
-    teacher_pitch: Õpetaja registreerumine Code.org-i
-    teacher_title: Õpetaja registreerumine
-    student_pitch: Õpilase registreerumine Code.org-i
-    student_title: Õpilase registreerumine
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: Kooli nimi (ei ole kohustuslik)
     school_address: Kooli aadress (ei ole kohustuslik)
     address_placeholder: aadress, linn, riik, postiindeks
@@ -103,15 +99,17 @@ et:
     valid_password: Sobilik salasõna!
     invalid_password: Salasõna peab olema vähemalt 6 tähemärgi pikkune
     mismatch_password: Sinu poolt sisestatud salasõnad ei ühti
-    student_terms: "Nõustun Code.org <a href='http://code.org/tos'> teenusetingimustega</a>. Kui ma olen alla 13-aastane, kinnitan selle vormiga, et mul on mu vanema või seadusliku eestkostja luba kasutada Code.org teenuseid.<br/>Alla 13-aastaste kasutajate meiliaadresse ei salvestata sellisel kujul, et me saaksime kasutajatega ühendust võtta."
-    teacher_terms: "Nõustun Code.org <a href='http://code.org/tos'> teenusetingimustega</a>."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
     user_type_label: Account Type
     user_type_teacher: Õpetaja
     user_type_student: Õpilane
+    field_is_required: on nõutud
+    accept_terms: You must agree to create an account
   signin_form:
     title: Sul juba on konto? Logi sisse
-    login: Meiliaadress või kasutajanimi
+    login: E-post
     password: Salasõna
     remember: Jäta mind meelde
     submit: Logi sisse
@@ -125,11 +123,14 @@ et:
     picture: Nüüd leia oma salajane pilt
     words: Nüüd sisestage oma salajased sõnad
     login: Logi sisse
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Unustasid oma salasõna?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: E-posti aadress
-      submit: Saada mulle juhised parooli lähtesamiseks
+      submit: Esita
     change_form:
       title: Muuda salasõna
       new_password: Uus salasõna
@@ -238,8 +239,12 @@ et:
       prizes: Auhinnad
       logout: Logi välja
       signin: Logi sisse
-      signup: Liitu
+      signup: Create an account
       already_registered: Oled juba liitunud?
+      pair_programming: Paarisprogrammeerimine
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: '%{name} edusammud'
       progress: Sinu progress
@@ -265,7 +270,7 @@ et:
     user_not_found: Õpetajat ei leitud.
     student_teacher_disassociated: 'Olete eemaldanud %{teacher_name} oma õpetajate nimekirjast.'
     panel:
-      answer_viewer: Vastuse Vaataja
+      answer_viewer: Teacher Panel
       student: Õpilane
       viewing_solution: Lahenduse vaatamine
       try_it_yourself: Proovi seda ise
@@ -274,6 +279,8 @@ et:
       example_with_number: 'Näidislahend %{solution_number}'
       submitted_on: 'Esitatud:'
       unsubmit: Võta vastus tagasi
+      worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'E posti aadress on kinnitamata:'
     email_confirm_needed_required: 'Teie e-posti aadress %{email} ei ole kinnitatud:'
@@ -332,12 +339,14 @@ et:
     choose_next_course: Proovige Code Studio kursuseid. Selleks valige üks altpoolt
     print_certificate: Prindi tunnistus
     announcement_title: Teated
-    announcement_view_all: Vaata kõiki
-    announcement_message: |-
-      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: Lisateave
+    announcement_try_now_button: Proovi nüüd
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
+    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   move_students:
     new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
     section_code_not_entered: Please provide current_section_code.
@@ -400,8 +409,6 @@ et:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: Lisateave
   slow_loading: See võtab tavapärasest rohkem aega...
   try_reloading: Proovige lehte uuendada
@@ -513,6 +520,7 @@ et:
     wrong_body: Thank you for submitting answers.
     correct_title: Aitäh
     correct_body: Thank you for submitting answers.
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Aitäh
     wrong_body: Thank you for submitting answers.
@@ -553,41 +561,24 @@ et:
     hour: 1 tund
     day: päev
     week: nädal
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 Sissejuhatus Arvutiteadusesse kursusele (15-25 tundi)
-          description: See 20-tunnine kursus tutvustab arvutiteaduse ja programmeerimise põhilisi aspekte ja mõisteid. Kursus on mõeldud õpilastele kuni 8, klassini, aga sellest on lõbus õppida igas vanuses.
-        Hour of Code:
-          title: KoodiTund 2013
-          description: ""
-        edit-code:
-          title: Muuda koodi
-          description: ""
-        events:
-          title: Sündmused
-          description: ""
-        builder:
-          title: Ehitaja
-          description: ""
-        flappy:
-          title: Flappy kood
-          description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi meie Flappy Code õpetusvideot!
-        jigsaw:
-          title: Pusle
-          description: ""
-        step:
-          title: samm
-          description: ""
-        sample_level_builder:
-          title: Näidis tasandi ehitaja
-          description: ""
   age_interstitial:
     age: Sinu vanus
     header: Konto teabe värskendamine
     message: 'Me uuendame praegu oma kogemust, et tagada teie turvalisus veel suuremal määral. Selle jaoks vajame me, et kasutajad sisestaks siia oma vanuse.<br/>Nagu alati, code.org ei rendi, müü ega jaga kasutajalt saadud informatsiooni kolmanda osapoolega.'
     sign_out: 'Kui te ei soovi oma vanust avaldada, võite <a href="%{url}">välja logida</a>.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: Teenuse tingimused
+    privacy: Privaatsuspoliitika
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Trüki välja
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: 'Vabandame, nooremad kasutajad ei saa meie kasutajatoe lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a> ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.'
   progress:
     not_started: pole alustatud
@@ -615,6 +606,7 @@ et:
     share_title: Jaga oma projekti
     share_copy_link: 'Kopeeri link:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Sulge
@@ -638,6 +630,7 @@ et:
     edit_project: Muuda projekti
     abuse:
       tos: "Selle projekti kohta on teada antud, et see rikub code.org <a href='http://code.org/tos'> kasutajatingimusi</a>ja seda ei saa teistega jagada."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Kui sa arvad, et tegemist on veaga, palun <a href='https://code.org/contact'> kontakteeru meiega </a>"
       go_to_code_studio: Mine koodistuudiosse
       report_abuse_form:
@@ -669,6 +662,14 @@ et:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
@@ -687,8 +688,11 @@ et:
     required: Ülevaade
     content: Content
     practice: Teaching Practices
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -712,3 +716,6 @@ et:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

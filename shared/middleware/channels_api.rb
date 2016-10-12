@@ -1,10 +1,10 @@
 require 'sinatra/base'
+require 'cdo/sinatra'
 require 'base64'
 require 'cdo/db'
 require 'cdo/rack/request'
 
 class ChannelsApi < Sinatra::Base
-
   helpers do
     %w(
       core.rb
@@ -173,10 +173,11 @@ class ChannelsApi < Sinatra::Base
   #
   # DELETE /v3/channels/<channel-id>/abuse
   #
-  # Clear an abuse score. Admin only.
+  # Clear an abuse score. Requires reset_abuse permission
   #
   delete %r{/v3/channels/([^/]+)/abuse$} do |id|
-    not_authorized unless admin?
+    # UserPermission::RESET_ABUSE
+    not_authorized unless has_permission?('reset_abuse')
 
     dont_cache
     content_type :json

@@ -1,28 +1,21 @@
 name 'ECSPD U3 Challenges'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
 ## Unit 3 Challenge Preview > Challenge Options
 <br><br>
 While you are required to submit a challenge for each unit, you will always be able to choose the challenge that is most valuable to you, as an educator. Here are the choices for Unit 3. Preview the list now, and choose one, if you like. Or, you can make a list of your top three choices and decide later. It’s up to you! 
-<br><br>
-As a reminder, a challenge is a focused activity that provides you with a chance to try out a lesson from the Exploring Computer Science (ECS) curriculum and prepare to teach it. After preparing the lesson, you will be asked to share your plan with the Code.org ECS cohort via the forums. There is one challenge for each unit in the ECS curriculum. You may work individually or with a partner.
 
 <br>
 
 **To make a copy in Google Docs:**
 File > Make Copy
 
-<br>
-
 <object src="https://docs.google.com/document/d/17LzhMFhs5VSxuKR4J4UPdvifvyshDZcrm90P2Qgtnmo/edit?usp=sharing" width="100%" height="700">
     <embed src="https://docs.google.com/document/d/17LzhMFhs5VSxuKR4J4UPdvifvyshDZcrm90P2Qgtnmo/edit?usp=sharing"  width="100%" height="700">
     </embed>
 </object>
 
-### <a href="https://docs.google.com/document/d/17LzhMFhs5VSxuKR4J4UPdvifvyshDZcrm90P2Qgtnmo/edit?usp=sharing" target="_blank">Access the Google Document Here >>></a>
+#### <a href="https://docs.google.com/document/d/17LzhMFhs5VSxuKR4J4UPdvifvyshDZcrm90P2Qgtnmo/edit?usp=sharing" target="_blank">Access the Google Document Here >>></a>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

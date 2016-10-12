@@ -21,7 +21,8 @@ module.exports = {
     "ecmaFeatures": {
       "jsx": true,
       "modules": true,
-      "ecmaVersion": 6
+      "ecmaVersion": 6,
+      "experimentalObjectRestSpread": true
     }
   },
   "rules": {
@@ -36,6 +37,7 @@ module.exports = {
     "keyword-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",
+    "no-duplicate-imports": "error",
     "no-empty": "off",
     "no-eval": "error",
     "no-extra-boolean-cast": "off",
@@ -58,6 +60,7 @@ module.exports = {
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
-    }]
+    }],
+    "strict": "error",
   }
 };

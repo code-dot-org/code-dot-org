@@ -23,7 +23,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\n**Debugging:** As you write more complex event-driven programs, you'll need to polish your **debugging** skills. Debugging involves locating and correcting errors within a program. It is a critical (and generally unavoidable) step when writing code.<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 200px\">\r\n\r\n**Checking IDs:** Your first debugging task will be to verify that the button IDs match the event-handlers. **Remember that IDs are case-sensitive**.",
+    "markdown_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\n**Debugging:** As you write more complex event-driven programs, you'll need to polish your **debugging** skills. Debugging involves locating and correcting errors within a program. It is a critical (and generally unavoidable) step when writing code.<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 200px\">\r\n\r\n**Checking IDs:** Your first debugging task will be to verify that the button IDs match the IDs in the event-handlers. **Remember that IDs are case-sensitive**.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "true",
@@ -38,7 +38,8 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

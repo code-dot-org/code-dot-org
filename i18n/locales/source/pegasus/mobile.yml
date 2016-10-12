@@ -300,6 +300,8 @@
   homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "We’re making an important change to how we support student privacy."
   homepage_banner_emailprivacy_link: "Read more"
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: "Learn more"
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Anybody can learn. Start today"
   homepage_slot_text_link_hoc: "Try the Hour of Code"
@@ -393,6 +395,8 @@
   help_translate: "Help us translate."
   no_internet: "Don't have Internet?"
   download_offline: "Download the offline version."
+  are_you_teacher: "Are you a teacher?"
+  review_lesson_plan: "Review the lesson plan and other teacher resources."
   volunteer_engineer_submission_title: "Inspire students and volunteer"
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
@@ -515,11 +519,12 @@
   dashboard_action_remove_confirm: "Remove?"
   dashboard_action_done: "Done"
   dashboard_action_required: "required"
+  dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
-  dashboard_assessments_summaries: "Summaries"
-  dashboard_assessments_answers: "All answers"
+  dashboard_assessments_summaries: "Assessment summaries"
+  dashboard_assessments_answers: "All assessment answers"
   dashboard_surveys_answers: "Surveys"
   dashboard_percent: "Percent"
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -536,7 +541,7 @@
   dashboard_navigation_view_progress: "Progress"
   dashboard_navigation_view_text_responses: "Text Responses"
   dashboard_navigation_view_assessments: "Assessments"
-  dashboard_navigation_view_surveys: "Surveys"
+  dashboard_navigation_view_assessments_surveys: "Assessments/Surveys"
   dashboard_navigation_add_students: "Add Students"
   dashboard_navigation_manage_students: "Manage Students"
   dashboard_navigation_lesson_plans_resources: "Lesson Plans and Resources"
@@ -684,15 +689,18 @@
   dashboard_faq: "Frequently Asked Questions"
   dashboard_faq_k5: "K-5 Frequently Asked Questions"
   dashboard_announcements: "Announcements"
-  dashboard_announce_view_all: "View all"
-  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
-  dashboard_announce_csp_widgets_message: "CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course."
+  dashboard_announce_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
+  dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
   dashboard_announce_learn_more_button: "Learn more"
-  dashboard_announce_try_now_button: "Try it now"
+  dashboard_announce_try_now_button: "Try now"
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: "Add your name"
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: "The Hour of Code is here - December 8-14!"
   code_sign_up: "Sign up to participate during CS Education Week"
+  host_an_hour: "Host an hour"
+  learn_banner_title: "Join us for the Hour of Code"
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: "Try now"
   learn_sign_up_description: "Sign up to participate in the Hour of Code during CS Education Week"
   learn_sign_up_button: "Sign up"
@@ -800,11 +808,11 @@
   course3_name: "Course 3"
   course4_name: "Course 4"
   accelerated_name: "Accelerated Course"
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'

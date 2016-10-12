@@ -69,6 +69,65 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "penWidth:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete the task the penWidth should be set explicitly on at least two occasions - it should be done as part of the drawTriangle definition."
+      },
+      {
+        "entries": [
+          "moveTo:2",
+          "drawTriangle:2",
+          "moveTo:2",
+          "drawTriangle:2"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "App Lab is expecting the code to move the turtle to a specific location, then call drawTriangle(size, penWidth), then move to another location, and draw another triangle with a differnt size and line thickness"
+      },
+      {
+        "entries": [
+          "drawTriangle:2",
+          "penWidth:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 2,
+        "message": "To complete the task you need to define a function called drawTriangle with two parameters - for the size and pen width.  The function should first make sure to set the given penWidth and then draw a triangle by moving forward and turning left."
+      },
+      {
+        "entries": [
+          "drawTriangle:2",
+          "penWidth:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveTo:2",
+          "drawTriangle:2",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "To complete the task you need to define a function called drawTriangle with two parameters.  The function should make sure to set teh given penWidth and then draw a triangle by moving forward and turning left."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

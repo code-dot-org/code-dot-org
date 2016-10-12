@@ -9,7 +9,8 @@ Translations for video captions are done through Amara. To get started, choose a
 If they are not completed, go ahead and Add a New Language and complete translations. Then, click "Publish" to save your work and mark as complete. Finally, e-mail translations@code.org with the title, link to the video, and your language so that we can publish your translation to YouTube. Please check back in 48 hours to verify that your translation was uploaded correctly.
 
 ## Top priority videos to finish first
-* [CS is Changing Everything](https://amara.org/en/videos/sve4MYv5Btdn/info/computer-science-is-changing-everything/)
+* [Computer Science is Changing Everything](https://www.amara.org/en/videos/atEXdPApYAO8/info/computer-science-is-changing-everything/)
+* [The Hour of Code Worldwide (2016)](https://www.amara.org/en/videos/mbBjcLLwypIT/info/hour-of-code-worldwide/)
 * [Computer Science Principles videos](#cspvideos)
 
 ## Star Wars: Building a Galaxy with Code

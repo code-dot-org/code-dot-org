@@ -1,0 +1,10 @@
+.accept-terms-reminder
+  = t('terms_interstitial.reminder_desc', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+  %br
+  %br
+  %button#review-terms.primary= t('terms_interstitial.review_terms')
+
+:javascript
+  $("#review-terms").click(function () {
+    $("#terms-modal").modal('show');
+  });

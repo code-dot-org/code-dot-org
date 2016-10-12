@@ -16,36 +16,56 @@
 
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       = f.hidden_field :hashed_email
+
+      -# Email
       .itemblock
         .labelblock
           = t('signin_form.login')
         = f.text_field :login, autofocus: true
-      %br/
+
+      -# Password
       .itemblock
         .labelblock
           = t('signin_form.password')
         = f.password_field :password
-      %br/
+        -# Forgot password?
+        - if devise_mapping.recoverable?
+          &nbsp;
+          = link_to t('auth.forgot_password'), new_password_path(resource_name)
+
+      -# Sign in button
+      .singleitemblock
+        %button#signin-button.primary= t('signin_form.submit')
+
+      -# Remember me
       - if devise_mapping.rememberable?
-        %label
-          = f.check_box :remember_me, { style: 'margin: 0;'}
-          = t('signin_form.remember')
-      %p
-        &nbsp;
-      = f.submit t('signin_form.submit'), class: "btn btn-primary btn-large"
+        .singleitemblock
+          %label.rememberme
+            = f.check_box :remember_me
+            = t('signin_form.remember')
 
-    %br/
-
-    %h3= t('signin.try_heading')
-    .row{style: 'margin: 0px;'}
-      = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: false }
-      = render partial: 'shared/course_tall_block', locals: { id: second_tutorial, showState: false }
-    .row{style: 'margin: 20px 0px 0px 0px;'}
-      = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
+      -# Not yet signed up?  Sign up
+      .singleitemblock
+        = t('auth.notyet_signedup')
+      - if devise_mapping.registerable?
+        .singleitemblock
+          %button#signup-button.secondary{type: 'button'}= t('nav.user.signup')
 
   .span4
-    %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }= render "devise/shared/links"
+    .sidebar= render "devise/shared/links"
+
+%br/
+%br/
+
+.row
+  .span12
+    %h3= t('signin.try_heading')
+.row
+  = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: second_tutorial, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
+
 
 %br/
 %br/
@@ -55,15 +75,18 @@
 %br/
 
 :javascript
-  $( "#user_login" ).placeholder();
+  $("#user_login").placeholder();
 
-
-  $( ".edit_user" ).on("submit", function(e){
-  });
-
-  $( "#new_user" ).on("submit", function(e){
-    window.dashboard.hashEmail({ email_selector: '#user_login',
-      hashed_email_selector: '#user_hashed_email'});
+  $("#new_user").on("submit", function (e) {
+    window.dashboard.hashEmail({
+      email_selector: '#user_login',
+      hashed_email_selector: '#user_hashed_email'
+    });
 
     dashboard.clientState.reset();
+  });
+
+  $("#signup-button").click(function (e) {
+    window.location.href = "#{new_user_registration_path}";
+    return false;
   });

@@ -1,547 +1,478 @@
 nl:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Informaticacursus op basisschool-niveau
-          Unplug1: Niveau 1
-          Maze: Niveau 2
-          Unplug2: Niveau 3
-          Unplug3: Niveau 4
-          Artist: Niveau 5
-          Unplug4: Niveau 6
-          Artist2: Niveau 7
-          Unplug5: Niveau 8
-          Farmer: Niveau 9
-          Unplug6: Niveau 10
-          Artist3: Niveau 11
-          Unplug7: Niveau 12
-          Farmer2: Niveau 13
-          Unplug8: Niveau 14
-          Artist4: Niveau 15
-          Unplug9: Niveau 16
-          Farmer3: Niveau 17
-          Unplug10: Niveau 18
-          Artist5: Niveau 19
-          Unplug11: Niveau 20
-        Hour of Code:
-          desc: Een Uur Code
-          Maze: Niveau 1
-        Edit Code:
-          desc: Bewerk Code (bèta)
-          MazeEC: Niveau 1
-        2014 Levels:
-          desc: Bounce (bèta)
-          Bounce: Niveau 1
-        Builder Levels:
-          desc: Door gebruikers gemaakte puzzels (bèta)
-          Custom: Niveau 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Niveau 1
-        Jigsaw Levels:
-          desc: Legpuzzel (bèta)
-          Jigsaw: Niveau 1
-        Step Levels:
-          desc: Doolhof (bèta)
-          MazeStep: Niveau Onderdeel
-        edit-code:
-          desc: Bewerk Code (bèta)
-          MazeEC: Niveau 1
-          Applab: Niveau 2
-          ArtistEC: Niveau 3
-          StudioEC: Niveau 4
-        events:
-          desc: Bounce (bèta)
-          Bounce: Niveau 1
-          Studio: Niveau 2
-        builder:
-          desc: Door gebruikers gemaakte puzzels (bèta)
-          Custom: Niveau 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Niveau 1
-        jigsaw:
-          desc: Legpuzzel (bèta)
-          Jigsaw: Niveau 1
-        step:
-          desc: Doolhof (bèta)
-          MazeStep: Niveau Onderdeel
-        wordsearch:
-          desc: Spellingswedstrijd (beta)
-          WordSearch: Niveau 1
     game:
       name:
-        Unplug1: Inleiding Informatica
-        Maze: Het Doolhof
-        Multi: Meerkeuze dingen
-        Unplug2: Rekenend Denken
-        Unplug3: Programmeren op Ruitjespapier
-        Artist: De Artiest
-        Unplug4: Algoritmen
-        Artist2: De Artiest 2
-        Unplug5: Functies
-        Farmer: De Boer
-        Unplug6: Voorwaardelijke instructies
-        Artist3: De Artiest 3
-        Unplug7: Liedjes Schrijven
-        Farmer2: De Boer 2
-        Unplug8: Abstractie
-        Artist4: De Artiest 4
-        Unplug9: Estafette Programmeren
-        Farmer3: De Boer 3
-        Unplug10: Het Internet
-        Artist5: De Artiest 5
-        Unplug11: Einde
-        MazeEC: Het Doolhof
-        Bounce: Stuiter
-        Flappy: Flappy Bird
-        Jigsaw: Legpuzzel
-        MazeStep: Doolhof stap voor stap
-        Wordsearch: Woordzoeken
-        Webapp: App Lab
-        ArtistEC: De Artiest
-        TextMatch: Tekst overeenstemming
-        StudioEC: Speel Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
-        Custom: Kunstenaar
-        CustomStudio: Speel Lab
+        'Unplug1': Inleiding Informatica
+        'Maze': Het Doolhof
+        'Multi': Meerkeuze dingen
+        'Unplug2': Rekenend Denken
+        'Unplug3': Programmeren op Ruitjespapier
+        'Artist': De Artiest
+        'Unplug4': Algoritmen
+        'Artist2': De Artiest 2
+        'Unplug5': Functies
+        'Farmer': De Boer
+        'Unplug6': Voorwaardelijke instructies
+        'Artist3': De Artiest 3
+        'Unplug7': Liedjes Schrijven
+        'Farmer2': De Boer 2
+        'Unplug8': Abstractie
+        'Artist4': De Artiest 4
+        'Unplug9': Estafette Programmeren
+        'Farmer3': De Boer 3
+        'Unplug10': Het Internet
+        'Artist5': De Artiest 5
+        'Unplug11': Einde
+        'MazeEC': Het Doolhof
+        'Bounce': Stuiter
+        'Flappy': Flappy Bird
+        'Jigsaw': Legpuzzel
+        'MazeStep': Doolhof stap voor stap
+        'Wordsearch': Woordzoeken
+        'Webapp': App Lab
+        'ArtistEC': De Artiest
+        'TextMatch': Tekst overeenstemming
+        'StudioEC': Speel Lab
+        'Applab': App Lab
+        'NetSim': Internet Simulator
+        'Custom': Kunstenaar
+        'CustomStudio': Speel Lab
     trophy:
       name:
-        Bronze: Brons
-        Silver: Zilver
-        Gold: Goud
+        'Bronze': Brons
+        'Silver': Zilver
+        'Gold': Goud
     concept:
       description:
-        sequence: Rij
-        if: Als Blok
-        if_else: Als-anders blok
-        loop_times: Herhaal Keer blok
-        loop_until: Herhaal Totdat Blok
-        loop_while: Zolang blok
-        loop_for: Teller Blok
-        function: Functies
-        parameters: Functies met Parameters
+        'sequence': Rij
+        'if': Als Blok
+        'if_else': Als-anders blok
+        'loop_times': Herhaal Keer blok
+        'loop_until': Herhaal Totdat Blok
+        'loop_while': Zolang blok
+        'loop_for': Teller Blok
+        'function': Functies
+        'parameters': Functies met Parameters
     level:
       instructions:
-        maze_2_2: 'Kun je me helpen het ondeugende biggetje te pakken? Stapel een paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij te laten komen. '
-        maze_2_1: Het biggetje werkt me op mijn zenuwen. Help me het te vinden!
-        maze_2_2_5: Volg het pad en breng me bij het gekke biggetje. Blijf weg bij de TNT of er zullen veertjes dwarrelen!
-        maze_2_3: Breng me naar de groene slechterik! (Pas op voor TNT)
-        maze_2_4: Rustig blijven, help me het slechte biggetje te vinden. Anders word ik misschien nog boos!
-        maze_2_5: Er is een manier om bij het biggetje te komen met maar 2 blokken. Lukt het jou?
-        maze_2_6: Breng me naar de groene indringer door maar drie blokken te gebruiken.
-        maze_2_7: 'Help me dit gemene biggetje te verbannen met zo weinig mogelijk blokken. Gebruik meer dan een "herhaal"-blokken.'
-        maze_2_8: 'Als een blok grijs is, betekent dat je het niet kunt verwijderen. Los deze puzzel op door het  "herhaal" blok 3 keer te herhalen. Probeer deze 3 blokken binnen het grijs "herhaal" blok: verplaatsen, verplaatsen, draaien.'
-        maze_2_9: 'Ok, probeer het nieuwe "herhalen tot"-blok eens - het herhaalt tot ik het eerste groene biggetje bereik.'
-        maze_2_10: 'Ok, nog een laatste keer om te oefenen - kun je deze oplossen met maar 4 blokken?'
-        maze_2_11: Hallo mens. Ik zombie. Ik honger. Moet... naar... zonnebloem... Kun je me met maar 5 blokken naar de zonnebloem krijgen?
-        maze_2_12: Ok, dit lijkt op de vorige, maar ietsjes anders. Kun je het met maar 5 blokken?
-        maze_2_13: 'Gebruik het nieuwe "als"-blok om me te laten beslissen wanneer ik kan omdraaien. Tip: je hebt maar één blok meer nodig, maar kijk goed hoe we het hebben klaargezet zodat je het de volgende keer zelf kunt.'
-        maze_2_14: 'Ok, deze is net als de vorige puzzel. Weet je nog hoe je het "als"-blok en het "herhaal"-blok samen kunt gebruiken?'
-        maze_2_15: 'Wil zonnebloem! Gebruik een "als"-blok om me daar met zo weinig mogelijk blokken heen te brengen.'
-        maze_2_16: 'Ok, nog een keer om te oefenen - deze is niet zo anders, maar pas op voor de happers!'
-        maze_2_17: 'Het "als anders"-blok kijkt naar een voorwaarde, en doet het één OF het ander. Probeer dit blok te gebruiken om me naar de zonnebloem te brengen.'
-        maze_2_18: 'Nog een oefening met het "als anders"-blok - lukt deze in één keer?'
-        maze_2_19: Lukt het om een moeilijker doolhof op te lossen door maar 3 blokken toe te voegen? Als je het goed doet kan ik ieder kronkelend pad volgen, hoe lang het ook is.
-        turtle_1_1: Hallo, ben ik een kunstenaar. Je kunt code schrijven om me bijna alles te laten tekenen. Gebruik een paar blokken om me de grijze lijnen in de tekening te laten overtrekken.
-        turtle_1_2: 'Teken nu een vierkant. Let op: gebruik je favoriete kleur door hem uit te kiezen in het "kies kleur"-blok.'
-        turtle_1_3: Maak een vierkant met maar 3 blokken.
-        turtle_1_4: 'Teken een driehoek met 3 verschillende kleuren, met de "willekeurige kleur" optie die elke keer een andere kleur voor je uitkiest. Hint: je zult zelf uit moeten vinden hoe ver je moet draaien door op het nummer in het draai blok te klikken.'
-        turtle_1_5: Als oefening, teken een driehoek en dan een vierkant om een envelop te tekenen.
-        turtle_1_6: 'Kan je uitvinden hoe je deze driehoek en vierkant tekent? Hint: Doe de driehoek eerst, dan kun je daarna uitvinden hoeveel je moet draaien om het vierkant te tekenen.'
-        turtle_1_7: 'Ok, dan maken we het nu een beetje moeilijker - kijk of je deze groene bril kunt tekenen. De lijnen van de vierkanten zijn 100 pixels en ze staan 50 pixels uit elkaar. Vergeet niet om in groen te tekenen!'
-        turtle_1_8: 'Ok, kijk nu of je kunt uitvinden wat er gebeurt als je deze code uit zou voeren (of druk op "Uitvoeren" om het uit te voeren). Dan moet je het vaak genoeg herhalen om de tekening af te maken. De kleuren zijn iedere keer anders.'
-        turtle_1_9: Kun je uitvinden welk nummer je moet vervangen met het vraagteken om een cirkel te tekenen?
-        turtle_1_10: 'Je hebt het gehaald! Nu kun je tekenen wat je wilt. Wat leuke ideëen: een stick poppetje, sneeuwvlok of een spiraal. Je kunt nu ook het nieuwe "dikte instellen" blok gebruiken. Veel plezier!'
-        turtle_4_1: 'Kun je een driehoek tekenen (met randen van 100 pixels) met maar 3 blokken? Tip: gebruik een "herhalen"-blok.'
-        turtle_4_2: 'Voeg om deze driehoeken te tekenen een blok "Draai 90 graden rechtsom" ergens aan het programma toe.'
-        turtle_4_3: "OK, hier is de code die je hebt geschreven om een enkele driehoek te tekenen. Kun je een 'herhalen'- en 'draai'-blok toevoegen om een bloemetje te maken?"
-        turtle_4_4: 'Hier is dezelfde code van de vorige puzzel, maar nu draaien we maar 36 graden na het tekenen van iedere driehoek. Hoe vaak moeten we dit herhalen? (Tip: na 360 graden draaien hebben we een heel rondje gemaakt)'
-        turtle_4_5: 'Hier is dezelfde code als de vorige puzzel, maar nu herhalen we 36 keer. Hoeveel graden moeten we draaien? (Tip: na 360 graden hebben we een heel rondje gedraaid)'
-        turtle_4_6: Kun je met maar 3 blokken een vierkant tekenen met randen van 20 pixels?
-        turtle_4_7: 'Hier is de code om het vierkant uit de vorige puzzel te tekeken. Kun je deze herhalen om 10 vierkanten tegen elkaar aan te zetten, als een ladder? Tip: je hebt maar 2 extra blokken nodig.'
-        turtle_4_8: Hier is de oplossing voor de vorige puzzel. Kun je nog 2 blokken toevoegen om de tekening compleet te maken?
-        turtle_4_9: Hier is de oplossing voor de vorige puzzel. Hoeveel graden moet je draaien om de tekening compleet te maken? (Je moet waarschijnlijk een paar keer gokken)
-        turtle_4_10: Hier is de oplossing voor de vorige puzzel. Hoe vaak moet je herhalen om de tekening compleet te maken?
-        turtle_4_11: 'Verander de nummers in de "draai"- en "herhaal"-blokken om verschillende patronen te maken. Of experimenteer met het veranderen van de rest van de code om alles te tekenen wat je maar wilt.'
-        maze_karel_1_1: 'Hoi, ik ben een boer. Ik heb je hulp nodig om mijn veld plat te maken zodat ik erop kan verbouwen. Beweeg me naar de hoop modder en gebruik het "verwijder" blok om hem te verwijderen.'
-        maze_karel_1_2: 'Beweeg me naar het gat en vul hem met TWEE scheppen modder, door het "vul" blok te gebruiken.'
-        maze_karel_1_3: Beweeg me naar de hoop modder en vertel me hoeveel scheppen ik moet verwijderen, met zo weinig blokken mogelijk.
-        maze_karel_1_4: 'Kun je me helpen om alle vier modderhopen te verwijderen? Hint: gebruik een herhaal blok als dat nodig is.'
-        maze_karel_1_5: 'Help me om al deze gaten te vullen met 5 scheppen modder. Hint: je kunt een "herhaal" blok in het "terwijl" blok zetten.'
-        maze_karel_1_6: 'Verwijder alle hopen modder met zo weinig blokken mogelijk. De nieuwe opties in het menu van het "terwijl" blok vertellen met of ik op een hoop of een gat sta.'
-        maze_karel_1_7: Wow, ik heb een superdiep gat gevonden! Ik weet niet hoeveel scheppen ervoor nodig zijn. Kun je een programma schrijven die het gat vult totdat hij opgevuld is?
-        maze_karel_1_8: Help me om het gat aan het einde van het veld te vullen, met zo weinig blokken mogelijk.
-        maze_karel_1_9: 'Zorg dat ik alle hopen modder weghaal. Gebruik zo weinig mogelijk blokken te gebruiken. Tip: probeer een "herhaal zolang"-blok te gebruiken.'
-        maze_karel_1_10: 'Ik moet tot laat werken, dus het is donker buiten, en ik kan zo niet zien hoe hoog de hopen zijn. Ik heb niet alle opties meer die ik had op het "while" blok. Beweeg me over het veld, en als er een heuvel is, verwijder hem.'
-        maze_karel_1_11: 'Het is nog steeds donker buiten. Beweeg me over het veld. Als er een heuvel is, haal hem weg, en als ereen gat is, vul hem op. Hint: gebruik het menu van opties bij het "if" blok.'
-        turtle_2_1: 'Hallo. Ik zombie artist. Ik gek op tekenen! Help me om een vierkant in een speciale kleur te tekenen. Belangrijk: je hebt dezelfde blokken maar ze zijn nu opgedeeld in categorieën.'
-        turtle_2_2: 'Welkom bij het gebruiken van functies, die je nieuwe blokken laten maken! Gebruik het nieuwe "teken een vierkant" blok, die je kunt vinden in de "Functies" categorie, om een klein 50x50 groen vierkant te tekenen.'
-        turtle_2_3: 'Gebruik het "herhaal" blok (in de "Lussen" categorie) om 3 vierkanten te tekenen van grootte 100, 120 graden uit elkaar. En doe het met 3 verschillende, willekeurige kleuren.'
-        turtle_2_4: 'Nu gaan we echt iets leuks doen. Verander de code om 36 vierkanten te tekenen, 100 pixels breed en 10 graden uit elkaar. Hint: je kunt de schuifregelaar gebruiken om me sneller te laten gaan.'
-        turtle_2_5: 'Teken vierkanten met zijdes van 50, 60, 70, 80 en 90 pixels. Je hebt de "teken een vierkant" functie 5 keer nodig.'
-        turtle_2_6: 'Ok, dit programma gebruikt een teller om dezelfde vierkanten te tekenen als de laatste keer. Je wilt dat het vierkant dezelfde grootte is als de teller, dus gebruik het "teller" blok. Hint: Hij staat in de "Variabelen" categorie.'
-        turtle_2_7: 'Hier is een programma om een spiraal te tekenen, maar de blokken zijn uitgeschakeld dus ze werken niet. Maak een nieuw programma met het "tel met" blok (in de Lussen categorie) en het "teller" blok (in de Variabelen categorie) om dezelfde spiraal te tekenen.'
-        turtle_2_7_5: 'Er is een nieuwe "teken een sneeuwman" functie (in de Functies categorie). Teken 2 sneeuwmannen, met hoogte 250 en 100.'
-        turtle_2_8: 'Deze is al wat lastiger. Gebruik de "teken een sneeuwman" functie en het nieuwe "spring vooruit" blok (in de Acties categorie). Teken 3 sneeuwmannen in verschillende kleuren, 100 pixels uit elkaar.'
-        turtle_2_9: 'Gebruik een "tel met" lus om een familie van sneeuwmannen te tekenen met hoogtes 110, 100, 90, 80 en 70. De sneeuwmannen moeten 60 pixels uit elkaar staan.'
-        turtle_2_10: Hier is wat code om te experimenteren met verschillende spiralen. Wat gebeurt er als je de draaihoek verandert? Of als je een willekeurige kleur toewijst in de lus? Teken wat je maar wilt.
-        maze_karel_2_1: 'Probeer om de blokken te gebruiken om alle hopen te verwijderen en de gaten op te vullen. Probeer om lussen te gebruiken in plaats van teveel blokken. Hint: je kunt een lus in een lus gebruiken.'
-        maze_karel_2_2: 'We hebben ons eigen blok gemaakt die "vul 5" heet, die nu in de Functies categorie staat. Gebruik deze om dit gat op te vullen.'
-        maze_karel_2_3: 'Gebruik het nieuwe "vul 5" functie blok om me alle gaten in te laten vullen. Je moet het "vul 5" blok uit de Functies categorie slepen.'
-        maze_karel_2_4: Maak een nieuwe functie die 7 scheppen verwijdert. Daarna kun je deze gebruiken om een programma te schrijven om al deze hopen op te verwijderen.
-        maze_karel_2_5: Maak een nieuwe functie die 6 scheppen verwijdert van een hoop, en gebruik deze om alle hopen vlak te maken.
-        maze_karel_2_6: 'Gebruik 2 nieuwe functies, "vul 8" en "verwijder 8", om de hoop vlak te maken en het gat op te vullen.'
-        maze_karel_2_7: Er staat een koe in mijn veld! Schrijf een nieuwe functie de me helpt om de koe te vermijden en de hoop te verwijderen. Stop al je blokken in deze nieuwe functie.
-        maze_karel_2_8: 'Gebruik deze nieuwe functie, "vermijd de koe en verwijder 1", om me te helpen om alle hopen te verwijderen.'
-        maze_karel_2_9: Ok, hier is een functie die 4 verschillende hopen in een verticale kolom verwijdert. Probeer om deze functie in een lus te zetten, zodat je alle modderhopen kunt verwijderen met slechts een paar blokken.
-        maze_karel_2_10: Beweeg me over het veld en gebruik deze 2 functies om me te helpen om alle hopen af te vlakken en om alle gaten op te vullen.
-        turtle_3_1: 'Deze puzzel laat je zien hoe de "teken een vierkant" en "teken een cirkel" functies werken. Als je een functie maakt, worden zijn blokken niet uitgevoerd. Je moet het "teken een vierkant" blok eruit slepen om daadwerkelijk een vierkant te tekenen.'
-        turtle_3_2: 'Gebruik de "teken een vierkant" functie als een voorbeeld om een "teken een driehoek" functie te maken en te gebruiken.'
-        turtle_3_3: 'Teken driehoekige hekken rond de katten en een vierkant hek rondom de koe. Tip: test het programma terwijl je bezig bent.'
-        turtle_3_4: 'Kijk of je uit kan vinden hoe je "teken een vierkant" en "teken een driehoek" (en wat andere blokken) kunt gebruiken om een huis om de leeuw te tekenen.'
-        turtle_3_5: 'Maak nu een "teken een huis" functie en gebruik hem om deze 2 katten een huis te geven. Hint: maak een nieuwe functie met behulp van het "doe iets" blok, en typ je eigen naam om het blok een naam te geven.'
-        turtle_3_6: 'Gebruik "teken een vierkant" als een voorbeeld om een invoer genaamd "lengte" toe te voegen om "teken een driehoek" te maken. Maak vervolgens driehoeken in verschillende groottes. (Hint: klik op de ster om een invoer aan een functie toe te voegen)'
-        turtle_3_7: 'Voeg een input met de naam "lengte" toe aan "teken een huis" en teken een groot huis voor de olifant (met randen van 150 pixels lang)'
-        turtle_3_8: 'Pas "teken een huis" aan zodat ik in de hoek linksonder beland na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie huizen te tekenen.'
-        turtle_3_9: 'Kan je deze "teken een huis" functie namaken zonder hulp? Probeer het, en teken daarna een rijtje huizen.'
-        turtle_3_10: Je hebt al een heleboel geleerd! Nu kun je het gebruiken om te tekenen wat je maar wilt. Probeer bijvoorbeeld eens om een ster, spiraal of coole sneeuwvlok te tekenen.
-        maze_karel_debug_seq_1: Welkom bij foutopsporing! Mijn code doet het niet helemaal goed. Kan jij het probleem vinden en oplossen zodat ik mijn veld vlak kan maken voor het verbouwen?
-        maze_karel_debug_seq_2: Wat is er mis met dit programma? Hoe kun je de fout oplossen zodat ik die hoop kan verwijderen?
-        maze_karel_debug_repeat: Los de fouten in dit programma op zodat mijn veld mooi vlak wordt.
-        maze_karel_debug_while: Hoe kun je dit programma bewerken zodat je me kunt helpen om dit gat te vullen?
-        maze_karel_debug_if: Help! Maak het programma zodat mijn veld helemaal vlak wordt.
-        maze_karel_debug_if_else: Los de fouten op in het programma zodat ik alle gaten kan opvullen en de modderhopen kan verwijderen.
-        maze_karel_debug_function_1: Wat kun je veranderen aan dit programma om alle hopen te verwijderen?
-        maze_karel_debug_function_2: Kan je dit programma maken zodat ik mijn veld mooi vlak kan maken?
-        maze_karel_debug_function_3: 'Bewerk dit programma zodat ik alle hopen op mijn veld verwijder. '
-        turtle_5_1: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
-        turtle_5_2: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
-        turtle_5_3: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
-        turtle_5_4: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
-        turtle_5_5: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
-        turtle_5_6: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
-        maze_3_1: Ik moet naar dat biggetje toe! Tiep een paar aanroepen van move(); in zodat ik mijn eieren terug kan krijgen.
-        maze_3_2: Schrijf een programma zodat ik helemaal naar het biggetje kan komen.
-        maze_3_3: Hoe kom ik bij het biggetje? Pas op dat ik niet tegen de doos dynamiet aan loop!
-        maze_3_4: Argh! Schrijf een programma dat me om de dynamiet heen krijgt en naar het biggetje.
-        bounce_1: |-
+        'maze_2_2': 'Kun je me helpen het ondeugende biggetje te pakken? Stapel een paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij te laten komen. '
+        'maze_2_1': Het biggetje werkt me op mijn zenuwen. Help me het te vinden!
+        'maze_2_2_5': Volg het pad en breng me bij het gekke biggetje. Blijf weg bij de TNT of er zullen veertjes dwarrelen!
+        'maze_2_3': Breng me naar de groene slechterik! (Pas op voor TNT)
+        'maze_2_4': Rustig blijven, help me het slechte biggetje te vinden. Anders word ik misschien nog boos!
+        'maze_2_5': Er is een manier om bij het biggetje te komen met maar 2 blokken. Lukt het jou?
+        'maze_2_6': Breng me naar de groene indringer door maar drie blokken te gebruiken.
+        'maze_2_7': 'Help me dit gemene biggetje te verbannen met zo weinig mogelijk blokken. Gebruik meer dan een "herhaal"-blokken.'
+        'maze_2_8': 'Als een blok grijs is, betekent dat je het niet kunt verwijderen. Los deze puzzel op door het  "herhaal" blok 3 keer te herhalen. Probeer deze 3 blokken binnen het grijs "herhaal" blok: verplaatsen, verplaatsen, draaien.'
+        'maze_2_9': 'Ok, probeer het nieuwe "herhalen tot"-blok eens - het herhaalt tot ik het eerste groene biggetje bereik.'
+        'maze_2_10': 'Ok, nog een laatste keer om te oefenen - kun je deze oplossen met maar 4 blokken?'
+        'maze_2_11': Hallo mens. Ik zombie. Ik honger. Moet... naar... zonnebloem... Kun je me met maar 5 blokken naar de zonnebloem krijgen?
+        'maze_2_12': Ok, dit lijkt op de vorige, maar ietsjes anders. Kun je het met maar 5 blokken?
+        'maze_2_13': 'Gebruik het nieuwe "als"-blok om me te laten beslissen wanneer ik kan omdraaien. Tip: je hebt maar één blok meer nodig, maar kijk goed hoe we het hebben klaargezet zodat je het de volgende keer zelf kunt.'
+        'maze_2_14': 'Ok, deze is net als de vorige puzzel. Weet je nog hoe je het "als"-blok en het "herhaal"-blok samen kunt gebruiken?'
+        'maze_2_15': 'Wil zonnebloem! Gebruik een "als"-blok om me daar met zo weinig mogelijk blokken heen te brengen.'
+        'maze_2_16': 'Ok, nog een keer om te oefenen - deze is niet zo anders, maar pas op voor de happers!'
+        'maze_2_17': 'Het "als anders"-blok kijkt naar een voorwaarde, en doet het één OF het ander. Probeer dit blok te gebruiken om me naar de zonnebloem te brengen.'
+        'maze_2_18': 'Nog een oefening met het "als anders"-blok - lukt deze in één keer?'
+        'maze_2_19': Lukt het om een moeilijker doolhof op te lossen door maar 3 blokken toe te voegen? Als je het goed doet kan ik ieder kronkelend pad volgen, hoe lang het ook is.
+        'turtle_1_1': Hallo, ben ik een kunstenaar. Je kunt code schrijven om me bijna alles te laten tekenen. Gebruik een paar blokken om me de grijze lijnen in de tekening te laten overtrekken.
+        'turtle_1_2': 'Teken nu een vierkant. Let op: gebruik je favoriete kleur door hem uit te kiezen in het "kies kleur"-blok.'
+        'turtle_1_3': Maak een vierkant met maar 3 blokken.
+        'turtle_1_4': 'Teken een driehoek met 3 verschillende kleuren, met de "willekeurige kleur" optie die elke keer een andere kleur voor je uitkiest. Hint: je zult zelf uit moeten vinden hoe ver je moet draaien door op het nummer in het draai blok te klikken.'
+        'turtle_1_5': Als oefening, teken een driehoek en dan een vierkant om een envelop te tekenen.
+        'turtle_1_6': 'Kan je uitvinden hoe je deze driehoek en vierkant tekent? Hint: Doe de driehoek eerst, dan kun je daarna uitvinden hoeveel je moet draaien om het vierkant te tekenen.'
+        'turtle_1_7': 'Ok, dan maken we het nu een beetje moeilijker - kijk of je deze groene bril kunt tekenen. De lijnen van de vierkanten zijn 100 pixels en ze staan 50 pixels uit elkaar. Vergeet niet om in groen te tekenen!'
+        'turtle_1_8': 'Ok, kijk nu of je kunt uitvinden wat er gebeurt als je deze code uit zou voeren (of druk op "Uitvoeren" om het uit te voeren). Dan moet je het vaak genoeg herhalen om de tekening af te maken. De kleuren zijn iedere keer anders.'
+        'turtle_1_9': Kun je uitvinden welk nummer je moet vervangen met het vraagteken om een cirkel te tekenen?
+        'turtle_1_10': 'Je hebt het gehaald! Nu kun je tekenen wat je wilt. Wat leuke ideëen: een stick poppetje, sneeuwvlok of een spiraal. Je kunt nu ook het nieuwe "dikte instellen" blok gebruiken. Veel plezier!'
+        'turtle_4_1': 'Kun je een driehoek tekenen (met randen van 100 pixels) met maar 3 blokken? Tip: gebruik een "herhalen"-blok.'
+        'turtle_4_2': 'Voeg om deze driehoeken te tekenen een blok "Draai 90 graden rechtsom" ergens aan het programma toe.'
+        'turtle_4_3': "OK, hier is de code die je hebt geschreven om een enkele driehoek te tekenen. Kun je een 'herhalen'- en 'draai'-blok toevoegen om een bloemetje te maken?"
+        'turtle_4_4': 'Hier is dezelfde code van de vorige puzzel, maar nu draaien we maar 36 graden na het tekenen van iedere driehoek. Hoe vaak moeten we dit herhalen? (Tip: na 360 graden draaien hebben we een heel rondje gemaakt)'
+        'turtle_4_5': 'Hier is dezelfde code als de vorige puzzel, maar nu herhalen we 36 keer. Hoeveel graden moeten we draaien? (Tip: na 360 graden hebben we een heel rondje gedraaid)'
+        'turtle_4_6': Kun je met maar 3 blokken een vierkant tekenen met randen van 20 pixels?
+        'turtle_4_7': 'Hier is de code om het vierkant uit de vorige puzzel te tekeken. Kun je deze herhalen om 10 vierkanten tegen elkaar aan te zetten, als een ladder? Tip: je hebt maar 2 extra blokken nodig.'
+        'turtle_4_8': Hier is de oplossing voor de vorige puzzel. Kun je nog 2 blokken toevoegen om de tekening compleet te maken?
+        'turtle_4_9': Hier is de oplossing voor de vorige puzzel. Hoeveel graden moet je draaien om de tekening compleet te maken? (Je moet waarschijnlijk een paar keer gokken)
+        'turtle_4_10': Hier is de oplossing voor de vorige puzzel. Hoe vaak moet je herhalen om de tekening compleet te maken?
+        'turtle_4_11': 'Verander de nummers in de "draai"- en "herhaal"-blokken om verschillende patronen te maken. Of experimenteer met het veranderen van de rest van de code om alles te tekenen wat je maar wilt.'
+        'maze_karel_1_1': 'Hoi, ik ben een boer. Ik heb je hulp nodig om mijn veld plat te maken zodat ik erop kan verbouwen. Beweeg me naar de hoop modder en gebruik het "verwijder" blok om hem te verwijderen.'
+        'maze_karel_1_2': 'Beweeg me naar het gat en vul hem met TWEE scheppen modder, door het "vul" blok te gebruiken.'
+        'maze_karel_1_3': Beweeg me naar de hoop modder en vertel me hoeveel scheppen ik moet verwijderen, met zo weinig blokken mogelijk.
+        'maze_karel_1_4': 'Kun je me helpen om alle vier modderhopen te verwijderen? Hint: gebruik een herhaal blok als dat nodig is.'
+        'maze_karel_1_5': 'Help me om al deze gaten te vullen met 5 scheppen modder. Hint: je kunt een "herhaal" blok in het "terwijl" blok zetten.'
+        'maze_karel_1_6': 'Verwijder alle hopen modder met zo weinig blokken mogelijk. De nieuwe opties in het menu van het "terwijl" blok vertellen met of ik op een hoop of een gat sta.'
+        'maze_karel_1_7': Wow, ik heb een superdiep gat gevonden! Ik weet niet hoeveel scheppen ervoor nodig zijn. Kun je een programma schrijven die het gat vult totdat hij opgevuld is?
+        'maze_karel_1_8': Help me om het gat aan het einde van het veld te vullen, met zo weinig blokken mogelijk.
+        'maze_karel_1_9': 'Zorg dat ik alle hopen modder weghaal. Gebruik zo weinig mogelijk blokken te gebruiken. Tip: probeer een "herhaal zolang"-blok te gebruiken.'
+        'maze_karel_1_10': 'Ik moet tot laat werken, dus het is donker buiten, en ik kan zo niet zien hoe hoog de hopen zijn. Ik heb niet alle opties meer die ik had op het "while" blok. Beweeg me over het veld, en als er een heuvel is, verwijder hem.'
+        'maze_karel_1_11': 'Het is nog steeds donker buiten. Beweeg me over het veld. Als er een heuvel is, haal hem weg, en als ereen gat is, vul hem op. Hint: gebruik het menu van opties bij het "if" blok.'
+        'turtle_2_1': 'Hallo. Ik zombie artist. Ik gek op tekenen! Help me om een vierkant in een speciale kleur te tekenen. Belangrijk: je hebt dezelfde blokken maar ze zijn nu opgedeeld in categorieën.'
+        'turtle_2_2': 'Welkom bij het gebruiken van functies, die je nieuwe blokken laten maken! Gebruik het nieuwe "teken een vierkant" blok, die je kunt vinden in de "Functies" categorie, om een klein 50x50 groen vierkant te tekenen.'
+        'turtle_2_3': 'Gebruik het "herhaal" blok (in de "Lussen" categorie) om 3 vierkanten te tekenen van grootte 100, 120 graden uit elkaar. En doe het met 3 verschillende, willekeurige kleuren.'
+        'turtle_2_4': 'Nu gaan we echt iets leuks doen. Verander de code om 36 vierkanten te tekenen, 100 pixels breed en 10 graden uit elkaar. Hint: je kunt de schuifregelaar gebruiken om me sneller te laten gaan.'
+        'turtle_2_5': 'Teken vierkanten met zijdes van 50, 60, 70, 80 en 90 pixels. Je hebt de "teken een vierkant" functie 5 keer nodig.'
+        'turtle_2_6': 'Ok, dit programma gebruikt een teller om dezelfde vierkanten te tekenen als de laatste keer. Je wilt dat het vierkant dezelfde grootte is als de teller, dus gebruik het "teller" blok. Hint: Hij staat in de "Variabelen" categorie.'
+        'turtle_2_7': 'Hier is een programma om een spiraal te tekenen, maar de blokken zijn uitgeschakeld dus ze werken niet. Maak een nieuw programma met het "tel met" blok (in de Lussen categorie) en het "teller" blok (in de Variabelen categorie) om dezelfde spiraal te tekenen.'
+        'turtle_2_7_5': 'Er is een nieuwe "teken een sneeuwman" functie (in de Functies categorie). Teken 2 sneeuwmannen, met hoogte 250 en 100.'
+        'turtle_2_8': 'Deze is al wat lastiger. Gebruik de "teken een sneeuwman" functie en het nieuwe "spring vooruit" blok (in de Acties categorie). Teken 3 sneeuwmannen in verschillende kleuren, 100 pixels uit elkaar.'
+        'turtle_2_9': 'Gebruik een "tel met" lus om een familie van sneeuwmannen te tekenen met hoogtes 110, 100, 90, 80 en 70. De sneeuwmannen moeten 60 pixels uit elkaar staan.'
+        'turtle_2_10': Hier is wat code om te experimenteren met verschillende spiralen. Wat gebeurt er als je de draaihoek verandert? Of als je een willekeurige kleur toewijst in de lus? Teken wat je maar wilt.
+        'maze_karel_2_1': 'Probeer om de blokken te gebruiken om alle hopen te verwijderen en de gaten op te vullen. Probeer om lussen te gebruiken in plaats van teveel blokken. Hint: je kunt een lus in een lus gebruiken.'
+        'maze_karel_2_2': 'We hebben ons eigen blok gemaakt die "vul 5" heet, die nu in de Functies categorie staat. Gebruik deze om dit gat op te vullen.'
+        'maze_karel_2_3': 'Gebruik het nieuwe "vul 5" functie blok om me alle gaten in te laten vullen. Je moet het "vul 5" blok uit de Functies categorie slepen.'
+        'maze_karel_2_4': Maak een nieuwe functie die 7 scheppen verwijdert. Daarna kun je deze gebruiken om een programma te schrijven om al deze hopen op te verwijderen.
+        'maze_karel_2_5': Maak een nieuwe functie die 6 scheppen verwijdert van een hoop, en gebruik deze om alle hopen vlak te maken.
+        'maze_karel_2_6': 'Gebruik 2 nieuwe functies, "vul 8" en "verwijder 8", om de hoop vlak te maken en het gat op te vullen.'
+        'maze_karel_2_7': Er staat een koe in mijn veld! Schrijf een nieuwe functie de me helpt om de koe te vermijden en de hoop te verwijderen. Stop al je blokken in deze nieuwe functie.
+        'maze_karel_2_8': 'Gebruik deze nieuwe functie, "vermijd de koe en verwijder 1", om me te helpen om alle hopen te verwijderen.'
+        'maze_karel_2_9': Ok, hier is een functie die 4 verschillende hopen in een verticale kolom verwijdert. Probeer om deze functie in een lus te zetten, zodat je alle modderhopen kunt verwijderen met slechts een paar blokken.
+        'maze_karel_2_10': Beweeg me over het veld en gebruik deze 2 functies om me te helpen om alle hopen af te vlakken en om alle gaten op te vullen.
+        'turtle_3_1': 'Deze puzzel laat je zien hoe de "teken een vierkant" en "teken een cirkel" functies werken. Als je een functie maakt, worden zijn blokken niet uitgevoerd. Je moet het "teken een vierkant" blok eruit slepen om daadwerkelijk een vierkant te tekenen.'
+        'turtle_3_2': 'Gebruik de "teken een vierkant" functie als een voorbeeld om een "teken een driehoek" functie te maken en te gebruiken.'
+        'turtle_3_3': 'Teken driehoekige hekken rond de katten en een vierkant hek rondom de koe. Tip: test het programma terwijl je bezig bent.'
+        'turtle_3_4': 'Kijk of je uit kan vinden hoe je "teken een vierkant" en "teken een driehoek" (en wat andere blokken) kunt gebruiken om een huis om de leeuw te tekenen.'
+        'turtle_3_5': 'Maak nu een "teken een huis" functie en gebruik hem om deze 2 katten een huis te geven. Hint: maak een nieuwe functie met behulp van het "doe iets" blok, en typ je eigen naam om het blok een naam te geven.'
+        'turtle_3_6': 'Gebruik "teken een vierkant" als een voorbeeld om een invoer genaamd "lengte" toe te voegen om "teken een driehoek" te maken. Maak vervolgens driehoeken in verschillende groottes. (Hint: klik op de ster om een invoer aan een functie toe te voegen)'
+        'turtle_3_7': 'Voeg een input met de naam "lengte" toe aan "teken een huis" en teken een groot huis voor de olifant (met randen van 150 pixels lang)'
+        'turtle_3_8': 'Pas "teken een huis" aan zodat ik in de hoek linksonder beland na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie huizen te tekenen.'
+        'turtle_3_9': 'Kan je deze "teken een huis" functie namaken zonder hulp? Probeer het, en teken daarna een rijtje huizen.'
+        'turtle_3_10': Je hebt al een heleboel geleerd! Nu kun je het gebruiken om te tekenen wat je maar wilt. Probeer bijvoorbeeld eens om een ster, spiraal of coole sneeuwvlok te tekenen.
+        'maze_karel_debug_seq_1': Welkom bij foutopsporing! Mijn code doet het niet helemaal goed. Kan jij het probleem vinden en oplossen zodat ik mijn veld vlak kan maken voor het verbouwen?
+        'maze_karel_debug_seq_2': Wat is er mis met dit programma? Hoe kun je de fout oplossen zodat ik die hoop kan verwijderen?
+        'maze_karel_debug_repeat': Los de fouten in dit programma op zodat mijn veld mooi vlak wordt.
+        'maze_karel_debug_while': Hoe kun je dit programma bewerken zodat je me kunt helpen om dit gat te vullen?
+        'maze_karel_debug_if': Help! Maak het programma zodat mijn veld helemaal vlak wordt.
+        'maze_karel_debug_if_else': Los de fouten op in het programma zodat ik alle gaten kan opvullen en de modderhopen kan verwijderen.
+        'maze_karel_debug_function_1': Wat kun je veranderen aan dit programma om alle hopen te verwijderen?
+        'maze_karel_debug_function_2': Kan je dit programma maken zodat ik mijn veld mooi vlak kan maken?
+        'maze_karel_debug_function_3': 'Bewerk dit programma zodat ik alle hopen op mijn veld verwijder. '
+        'turtle_5_1': Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
+        'turtle_5_2': Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
+        'turtle_5_3': Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
+        'turtle_5_4': Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
+        'turtle_5_5': Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
+        'turtle_5_6': Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
+        'maze_3_1': Ik moet naar dat biggetje toe! Tiep een paar aanroepen van move(); in zodat ik mijn eieren terug kan krijgen.
+        'maze_3_2': Schrijf een programma zodat ik helemaal naar het biggetje kan komen.
+        'maze_3_3': Hoe kom ik bij het biggetje? Pas op dat ik niet tegen de doos dynamiet aan loop!
+        'maze_3_4': Argh! Schrijf een programma dat me om de dynamiet heen krijgt en naar het biggetje.
+        'bounce_1': |-
           Plak een blok aan het "als pijltje naar links" blok en druk op 'Uitvoeren'. Verplaats het batje met behulp van de pijl naar links om het doel te bereiken.
-        bounce_2: |-
+        'bounce_2': |-
           Plak een blok aan de "als pijltje naar rechts"  en "als pijltje naar links" blokken en druk op 'Uitvoeren'. Verplaats het batje om de doelen te bereiken.
-        bounce_3: 'Probeer nu iets gelijks met "als pijltje naar boven" blok. Verplaats het badje met behulp van de pijl naar boven om het doel te bereiken.'
-        bounce_4: Dit keer moet je vier blokken toevoegen. Verplaats het batje naar alle richtingen om de puzzel op te lossen.
-        bounce_5: 'We gaan een bal naar het batjel laten vliegen. Plak een blok aan het blok "als de bal de het batje raakt" om ervoor te zorgen dat de bal het doel bereikt.'
-        bounce_6: 'Nu is het doel boven. Om deze puzzel op te lossen moet je blokken plakken aan het "Als de bal raakt" blok.'
-        bounce_7: 'Plak blokken aan elk "als" blok. Laat de bal stuiteren totdat hij het doel raakt.'
-        bounce_10: 'Nu is het doel boven. Plak het "Punten" en "Punten tegenstander" blok aan het "als bal het doel raakt" en "als de bal het batje mist" blok om er een spel van te maken. Zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt.'
-        bounce_11: 'Je kan nu blokken plakken aan het "als het spel start" blok. Je moet het nieuwe "nieuwe bal" blok op meerdere plaatsen plakken. Probeer ook de achtergrond of de snelheid van het batje en de bal te veranderen. En zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt.'
-        bounce_12: Maak je eigen stuiterspel. Je kan alle plaatjes en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te laten proberen op hun telefoons.
-        Custom_builder: 'Sleep blokken van de gereedschapskist naar de werkplaats om het level dat je wilt te tekenen. Drop op "Uitvoeren" als je klaar bent.'
-        flappy_1: 'Plak een blok aan het "bij een klik" blok, klik dan op "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.'
-        flappy_2: |-
+        'bounce_3': 'Probeer nu iets gelijks met "als pijltje naar boven" blok. Verplaats het badje met behulp van de pijl naar boven om het doel te bereiken.'
+        'bounce_4': Dit keer moet je vier blokken toevoegen. Verplaats het batje naar alle richtingen om de puzzel op te lossen.
+        'bounce_5': 'We gaan een bal naar het batjel laten vliegen. Plak een blok aan het blok "als de bal de het batje raakt" om ervoor te zorgen dat de bal het doel bereikt.'
+        'bounce_6': 'Nu is het doel boven. Om deze puzzel op te lossen moet je blokken plakken aan het "Als de bal raakt" blok.'
+        'bounce_7': 'Plak blokken aan elk "als" blok. Laat de bal stuiteren totdat hij het doel raakt.'
+        'bounce_10': 'Nu is het doel boven. Plak het "Punten" en "Punten tegenstander" blok aan het "als bal het doel raakt" en "als de bal het batje mist" blok om er een spel van te maken. Zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt.'
+        'bounce_11': 'Je kan nu blokken plakken aan het "als het spel start" blok. Je moet het nieuwe "nieuwe bal" blok op meerdere plaatsen plakken. Probeer ook de achtergrond of de snelheid van het batje en de bal te veranderen. En zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt.'
+        'bounce_12': Maak je eigen stuiterspel. Je kan alle plaatjes en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te laten proberen op hun telefoons.
+        'Custom_builder': 'Sleep blokken van de gereedschapskist naar de werkplaats om het level dat je wilt te tekenen. Drop op "Uitvoeren" als je klaar bent.'
+        'flappy_1': 'Plak een blok aan het "bij een klik" blok, klik dan op "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.'
+        'flappy_2': |-
           Nu hebben we wat grond toegevoegd. Plak een blok aan het "bij het raken van de grond" blok. Je code moet 'Stop spel' als Flappy neerstort.
-        flappy_3: 'Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer je spel start. Probeer de niveausnelheid en het fladderen naar het doel in te stellen.'
-        flappy_4: |-
+        'flappy_3': 'Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer je spel start. Probeer de niveausnelheid en het fladderen naar het doel in te stellen.'
+        'flappy_4': |-
           Flappy zal door obstakels vliegen zolang je geen code schrijft die hem laat neerstorten. Plak een blok aan het "bij het raken van een obstakel" blok. Je code moet 'Stop spel' als Flappy tegen de eerste reeks buizen stort.
-        flappy_5: 'Laten we een puntentelling toevoegen en punten geven als Flappy langs obstakels vliegt. Plak een blok aan het "bij het raken van een obstakel" blok en geef een punt als Flappy door de eerst reeks buizen vliegt.'
-        flappy_6: Kijk of je nog steeds punten geeft als Flappy meer of minder flappert.
-        flappy_7: 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
-        flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
-        flappy_9: Probeer voor de verandering eens de score op 0 te zetten in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
-        flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om je vrienden je spel te laten spelen op hun telefoons.
-        flappy_k1_1: Speel Flappy
-        flappy_k1_2: 'Plak een blok aan het "bij een klik" blok, klik dan op "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.'
-        flappy_k1_3: |-
+        'flappy_5': 'Laten we een puntentelling toevoegen en punten geven als Flappy langs obstakels vliegt. Plak een blok aan het "bij het raken van een obstakel" blok en geef een punt als Flappy door de eerst reeks buizen vliegt.'
+        'flappy_6': Kijk of je nog steeds punten geeft als Flappy meer of minder flappert.
+        'flappy_7': 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
+        'flappy_8': Je kan de vormgeving altijd veranderen, niet alleen als het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
+        'flappy_9': Probeer voor de verandering eens de score op 0 te zetten in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
+        'flappy_11': Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om je vrienden je spel te laten spelen op hun telefoons.
+        'flappy_k1_1': Speel Flappy
+        'flappy_k1_2': 'Plak een blok aan het "bij een klik" blok, klik dan op "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.'
+        'flappy_k1_3': |-
           Nu hebben we wat grond toegevoegd. Plak een blok aan het "bij het raken van de grond" blok. Je code moet 'Stop spel' als Flappy neerstort.
-        flappy_k1_4: 'Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer je spel start. Probeer de niveausnelheid en het fladderen naar het doel in te stellen.'
-        flappy_k1_5: |-
+        'flappy_k1_4': 'Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer je spel start. Probeer de niveausnelheid en het fladderen naar het doel in te stellen.'
+        'flappy_k1_5': |-
           Flappy zal door obstakels vliegen zolang je geen code schrijft die hem laat neerstorten. Plak een blok aan het "bij het raken van een obstakel" blok. Je code moet 'Stop spel' als Flappy tegen de eerste reeks buizen stort.
-        flappy_k1_6: 'Laten we een puntentelling toevoegen en punten geven als Flappy langs obstakels vliegt. Plak een blok aan het "bij het raken van een obstakel" blok en geef een punt als Flappy door de eerst reeks buizen vliegt.'
-        flappy_k1_7: Kijk of je meerdere punten kan scoren voor het omzeilen van het obstakel
-        flappy_k1_8: 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
-        flappy_k1_9: 'Probeer de speler te wijzigen door een blok "speler instellen" te plakken aan het blok "bij uitvoeren".'
-        jigsaw_1: Klik het blok
-        jigsaw_2: Sleep het blok naar het doel
-        jigsaw_3: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_4: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_5: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_6: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_7: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_8: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_9: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_10: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_11: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_12: Plaats de blokken zodat het plaatje zichtbaar wordt
-        jigsaw_13: Maak de puzzel!
-        mazestep_1: Doolhof stap beschrijving hier
-        mazestep_2: Doolhof stap beschrijving hier
-        mazestep_3: Doolhof stap beschrijving hier
-        mazestep_4: Doolhof stap beschrijving hier
-        mazestep_5: Doolhof stap beschrijving hier
-        studio_c2_1: 'Kan je deze hond "hallo wereld" laten zeggen?'
-        studio_c2_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
-        studio_c2_3: Kun je een programma schrijven dat de hond naar de kat verplaatst?
-        studio_c2_4: 'Kun je een programma maken die de hond naar de kat verplaatst, en de kat "hallo" laat zeggen wanneer de hond bij de kat is?'
-        studio_c2_5: 'Kun je een programma schrijven die de octopus "hallo" laat zeggen wanneer op hem geklikt wordt?'
-        studio_c2_6: Kun je een programma maken dat de pinguïn laat bewegen met de boven / onder / links / rechts pijltjes zodat je alle doelen kunt raken?
-        studio_c2_7: 'Het "blijven herhalen" blok zorgt er voor dat je code blijft herhalen. Kan je blokken aan elkaar plakken die er voor zorgen dat deze dinosaurus op en neer blijft bewegen?'
-        studio_c2_8: 'Kan je de pinguïn "Auw!" laten zeggen en een "raak" geluid afspelen als hij tegen de dinosaurus botst, en hem dan verplaatsen met de pijltjes zodat dat gebeurd?'
-        studio_c2_9: Kan je een blok toevoegen die een punt toevoegt wanneer de pinguïn met de octopus botst, en hem dan verplaatsen met de pijltjes totdat je scoort?
-        studio_c2_10: Kan je blokken toevoegen die de achtergrond en de snelheid van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat je scoort?
-        studio_c2_11: Maak je eigen Verhaal, klik als je klaar bent op Afronden om je vrienden je verhaal te laten proberen op hun telefoons.
-        studio_c3_story_1: 'Kan je deze hond "hallo wereld" laten zeggen?'
-        studio_c3_story_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
-        studio_c3_story_3: Kun je een programma schrijven dat de hond naar de kat verplaatst?
-        studio_c3_story_4: 'Kun je een programma maken die de hond naar de kat verplaatst, en de kat "hallo" laat zeggen wanneer de hond bij de kat is?'
-        studio_c3_story_5: Kan je een blok toevoegen zodat de octopus blij wordt?
-        studio_c3_story_6: 'Maak je eigen verhaal. Klik als je klaar bent op voltooien om je vrienden het verhaal  te laten proberen op hun telefoons.'
-        studio_c3_game_1: 'Kun je een programma schrijven die de octopus "hallo" laat zeggen wanneer op hem geklikt wordt?'
-        studio_c3_game_2: Kun je een programma maken dat de pinguïn laat bewegen met de boven / onder / links / rechts pijltjes zodat je alle doelen kunt raken?
-        studio_c3_game_3: 'Het "blijven herhalen" blok zorgt er voor dat je code blijft herhalen. Kan je blokken aan elkaar plakken die er voor zorgen dat deze dinosaurus op en neer blijft bewegen?'
-        studio_c3_game_4: 'Kan je de pinguïn "Auw!" laten zeggen en een "raak" geluid afspelen als hij tegen de dinosaurus botst, en hem dan verplaatsen met de pijltjes zodat dat gebeurd?'
-        studio_c3_game_5: Kan je een blok toevoegen die een punt toevoegt wanneer de pinguïn met de octopus botst, en hem dan verplaatsen met de pijltjes totdat je scoort?
-        studio_c3_game_6: Kan je blokken toevoegen die de achtergrond en de snelheid van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat je scoort?
-        studio_c3_game_7: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
-        studio_playlab_1: 'Pinguïn wil "Hallo" zeggen - kan je hem helpen?'
-        studio_playlab_2: 'Grot Jongen (acteur 1) en Grot Meisje (acteur 2) willen "Hallo"  zeggen tegen elkaar. Kan je hen helpen door het blok "Zeg" twee maal te gebruiken?'
-        studio_playlab_3: Kan je Tennis meisje helpen om de vlag te pakken?
-        studio_playlab_4: 'Kan je Tennis jongen (acteur 1) helpen om tot bij Tennis Girl (acteur 2)  te raken en een geluid af te spelen wanneer hij er is?'
-        studio_playlab_5: 'Kan je Spacebot helpen om "Gegroet aardbewoners" te zeggen wanneer hij wordt aangeklikt? Niet vergeten hem aan te klikken nadat je op uitvoeren klikte'
-        studio_playlab_6: Kan je de heks helpen bewegen met de omhoog/omlaag/links/rechts pijltjes-toetsen en zo alle magische vuurballen bemachtigen?
-        studio_playlab_7: 'Met de "Herhaal voor altijd" blok kan je je code onafgebroken uitvoeren. Kan je er blokken aan vastmaken om de tovenaar herhaaldelijk naar links en naar echts te laten bewegen?'
-        studio_playlab_8: kan je een blok toevoegen om een punt te scoren en een geluid af te spelen wanneer de eenhoorn de tovenaar raakt en deze vervolgens besturen met de pijltjestoetsen totdat je scoort?
-        studio_playlab_9: Stel de achtergrond in voor deze alien invasie en help Spacebot om sneller bij de alien invasie te raken door zijn snelheid te veranderen. Beweeg hem met de pijltjes-toetsen om bij de Spacebot te raken en iedereen te waarschuwen
-        studio_playlab_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
-        studio_iceage_hello1: 'Sid wil iedereen verzamelen voor een nieuw avontuur. Kan je hem helpen "hallo" te zeggen door het "zeg" blok in het werkgebied te slepen en het woord "hallo" erin te typen?'
-        studio_iceage_hello2: 'Sid (speler 1) heeft Manny (speler 2) gevonden en wil hem op zijn avontuur uitnodigen. Help hun elkaar te groeten door het "speler zeg" blok twee keer te gebruiken.'
-        studio_iceage_move_to_flag: 'Scrat zoekt naar zijn eikel! Help hem de laatste 200 pixels te gaan door het "beweeg" blok te gebruiken.'
-        studio_iceage_move_to_actor: 'Diego (speler 1) zoekt naar Manny (speler 2). Help Diego 200 pixels naar beneden richting Manny te bewegen met het "beweeg speler" blok. Daarna, verbind een blok met het "wanneer speler raakt" gebeurtenis om een geluid te spelen wanneer ze elkaar vinden.'
-        studio_iceage_repeat: 'Het "blijven herhalen" blok kan je code continue uitvoeren. Kan jij blokken aan het verbinden om Granny te helpen wat meer beweging te krijgen door hem herhaaldelijk links en rechts te laten bewegen?'
-        studio_iceage_click_hello: 'Kan jij Sid helpen een laatste oproep voor vrienden te doen wanneer er wordt geklikt? Vergeet niet om op hem te klikken nadat je op "Uitvoeren" hebt geklikt.'
-        studio_iceage_move_events: 'Scrat is nog steeds opzoek naar eikels! Help hem rond te bewegen door het "beweeg" blok te koppelen aan elke gebeurtenis en de richtingen te veranderen zodat het werkt voor elke pijltjestoets. Wanneer je klaar bent, klik op Uitvoeren en probeer alle eikels te verzamelen.'
-        studio_iceage_sound_and_points: 'We hebben de meeste code dat Granny links en rechts laat bewegen voor je klaar gezet, net zoals de code om Sid het scherm rond te laten bewegen. Kan jij de code afmaken en blokken toevoegen aan het "wanneer speler raakt" gebeurtenis zodat er een geluid afspeelt en je een punt scoort wanneer Sid en Granny elkaar aanraken? Druk op Uitvoeren om het spel te spelen.'
-        studio_iceage_warn_ice_age: "Iedereen moet sneller bewegen, omdat er een ijstijd komt! Verander de achtergrond naar een ijzige achtergrond en verander Sid's snelheid naar snel, klik dan op Uitvoeren en beweeg hem naar Diego om hem te waarschuwen."
-        studio_iceage_throw_hearts: |-
+        'flappy_k1_6': 'Laten we een puntentelling toevoegen en punten geven als Flappy langs obstakels vliegt. Plak een blok aan het "bij het raken van een obstakel" blok en geef een punt als Flappy door de eerst reeks buizen vliegt.'
+        'flappy_k1_7': Kijk of je meerdere punten kan scoren voor het omzeilen van het obstakel
+        'flappy_k1_8': 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
+        'flappy_k1_9': 'Probeer de speler te wijzigen door een blok "speler instellen" te plakken aan het blok "bij uitvoeren".'
+        'jigsaw_1': Klik het blok
+        'jigsaw_2': Sleep het blok naar het doel
+        'jigsaw_3': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_4': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_5': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_6': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_7': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_8': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_9': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_10': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_11': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_12': Plaats de blokken zodat het plaatje zichtbaar wordt
+        'jigsaw_13': Maak de puzzel!
+        'mazestep_1': Doolhof stap beschrijving hier
+        'mazestep_2': Doolhof stap beschrijving hier
+        'mazestep_3': Doolhof stap beschrijving hier
+        'mazestep_4': Doolhof stap beschrijving hier
+        'mazestep_5': Doolhof stap beschrijving hier
+        'studio_c2_1': 'Kan je deze hond "hallo wereld" laten zeggen?'
+        'studio_c2_2': Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
+        'studio_c2_3': Kun je een programma schrijven dat de hond naar de kat verplaatst?
+        'studio_c2_4': 'Kun je een programma maken die de hond naar de kat verplaatst, en de kat "hallo" laat zeggen wanneer de hond bij de kat is?'
+        'studio_c2_5': 'Kun je een programma schrijven die de octopus "hallo" laat zeggen wanneer op hem geklikt wordt?'
+        'studio_c2_6': Kun je een programma maken dat de pinguïn laat bewegen met de boven / onder / links / rechts pijltjes zodat je alle doelen kunt raken?
+        'studio_c2_7': 'Het "blijven herhalen" blok zorgt er voor dat je code blijft herhalen. Kan je blokken aan elkaar plakken die er voor zorgen dat deze dinosaurus op en neer blijft bewegen?'
+        'studio_c2_8': 'Kan je de pinguïn "Auw!" laten zeggen en een "raak" geluid afspelen als hij tegen de dinosaurus botst, en hem dan verplaatsen met de pijltjes zodat dat gebeurd?'
+        'studio_c2_9': Kan je een blok toevoegen die een punt toevoegt wanneer de pinguïn met de octopus botst, en hem dan verplaatsen met de pijltjes totdat je scoort?
+        'studio_c2_10': Kan je blokken toevoegen die de achtergrond en de snelheid van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat je scoort?
+        'studio_c2_11': Maak je eigen Verhaal, klik als je klaar bent op Afronden om je vrienden je verhaal te laten proberen op hun telefoons.
+        'studio_c3_story_1': 'Kan je deze hond "hallo wereld" laten zeggen?'
+        'studio_c3_story_2': Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
+        'studio_c3_story_3': Kun je een programma schrijven dat de hond naar de kat verplaatst?
+        'studio_c3_story_4': 'Kun je een programma maken die de hond naar de kat verplaatst, en de kat "hallo" laat zeggen wanneer de hond bij de kat is?'
+        'studio_c3_story_5': Kan je een blok toevoegen zodat de octopus blij wordt?
+        'studio_c3_story_6': 'Maak je eigen verhaal. Klik als je klaar bent op voltooien om je vrienden het verhaal  te laten proberen op hun telefoons.'
+        'studio_c3_game_1': 'Kun je een programma schrijven die de octopus "hallo" laat zeggen wanneer op hem geklikt wordt?'
+        'studio_c3_game_2': Kun je een programma maken dat de pinguïn laat bewegen met de boven / onder / links / rechts pijltjes zodat je alle doelen kunt raken?
+        'studio_c3_game_3': 'Het "blijven herhalen" blok zorgt er voor dat je code blijft herhalen. Kan je blokken aan elkaar plakken die er voor zorgen dat deze dinosaurus op en neer blijft bewegen?'
+        'studio_c3_game_4': 'Kan je de pinguïn "Auw!" laten zeggen en een "raak" geluid afspelen als hij tegen de dinosaurus botst, en hem dan verplaatsen met de pijltjes zodat dat gebeurd?'
+        'studio_c3_game_5': Kan je een blok toevoegen die een punt toevoegt wanneer de pinguïn met de octopus botst, en hem dan verplaatsen met de pijltjes totdat je scoort?
+        'studio_c3_game_6': Kan je blokken toevoegen die de achtergrond en de snelheid van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat je scoort?
+        'studio_c3_game_7': Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
+        'studio_playlab_1': 'Pinguïn wil "Hallo" zeggen - kan je hem helpen?'
+        'studio_playlab_2': 'Grot Jongen (acteur 1) en Grot Meisje (acteur 2) willen "Hallo"  zeggen tegen elkaar. Kan je hen helpen door het blok "Zeg" twee maal te gebruiken?'
+        'studio_playlab_3': Kan je Tennis meisje helpen om de vlag te pakken?
+        'studio_playlab_4': 'Kan je Tennis jongen (acteur 1) helpen om tot bij Tennis Girl (acteur 2)  te raken en een geluid af te spelen wanneer hij er is?'
+        'studio_playlab_5': 'Kan je Spacebot helpen om "Gegroet aardbewoners" te zeggen wanneer hij wordt aangeklikt? Niet vergeten hem aan te klikken nadat je op uitvoeren klikte'
+        'studio_playlab_6': Kan je de heks helpen bewegen met de omhoog/omlaag/links/rechts pijltjes-toetsen en zo alle magische vuurballen bemachtigen?
+        'studio_playlab_7': 'Met de "Herhaal voor altijd" blok kan je je code onafgebroken uitvoeren. Kan je er blokken aan vastmaken om de tovenaar herhaaldelijk naar links en naar echts te laten bewegen?'
+        'studio_playlab_8': kan je een blok toevoegen om een punt te scoren en een geluid af te spelen wanneer de eenhoorn de tovenaar raakt en deze vervolgens besturen met de pijltjestoetsen totdat je scoort?
+        'studio_playlab_9': Stel de achtergrond in voor deze alien invasie en help Spacebot om sneller bij de alien invasie te raken door zijn snelheid te veranderen. Beweeg hem met de pijltjes-toetsen om bij de Spacebot te raken en iedereen te waarschuwen
+        'studio_playlab_10': Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
+        'studio_iceage_hello1': 'Sid wil iedereen verzamelen voor een nieuw avontuur. Kan je hem helpen "hallo" te zeggen door het "zeg" blok in het werkgebied te slepen en het woord "hallo" erin te typen?'
+        'studio_iceage_hello2': 'Sid (speler 1) heeft Manny (speler 2) gevonden en wil hem op zijn avontuur uitnodigen. Help hun elkaar te groeten door het "speler zeg" blok twee keer te gebruiken.'
+        'studio_iceage_move_to_flag': 'Scrat zoekt naar zijn eikel! Help hem de laatste 200 pixels te gaan door het "beweeg" blok te gebruiken.'
+        'studio_iceage_move_to_actor': 'Diego (speler 1) zoekt naar Manny (speler 2). Help Diego 200 pixels naar beneden richting Manny te bewegen met het "beweeg speler" blok. Daarna, verbind een blok met het "wanneer speler raakt" gebeurtenis om een geluid te spelen wanneer ze elkaar vinden.'
+        'studio_iceage_repeat': 'Het "blijven herhalen" blok kan je code continue uitvoeren. Kan jij blokken aan het verbinden om Granny te helpen wat meer beweging te krijgen door hem herhaaldelijk links en rechts te laten bewegen?'
+        'studio_iceage_click_hello': 'Kan jij Sid helpen een laatste oproep voor vrienden te doen wanneer er wordt geklikt? Vergeet niet om op hem te klikken nadat je op "Uitvoeren" hebt geklikt.'
+        'studio_iceage_move_events': 'Scrat is nog steeds opzoek naar eikels! Help hem rond te bewegen door het "beweeg" blok te koppelen aan elke gebeurtenis en de richtingen te veranderen zodat het werkt voor elke pijltjestoets. Wanneer je klaar bent, klik op Uitvoeren en probeer alle eikels te verzamelen.'
+        'studio_iceage_sound_and_points': 'We hebben de meeste code dat Granny links en rechts laat bewegen voor je klaar gezet, net zoals de code om Sid het scherm rond te laten bewegen. Kan jij de code afmaken en blokken toevoegen aan het "wanneer speler raakt" gebeurtenis zodat er een geluid afspeelt en je een punt scoort wanneer Sid en Granny elkaar aanraken? Druk op Uitvoeren om het spel te spelen.'
+        'studio_iceage_warn_ice_age': "Iedereen moet sneller bewegen, omdat er een ijstijd komt! Verander de achtergrond naar een ijzige achtergrond en verander Sid's snelheid naar snel, klik dan op Uitvoeren en beweeg hem naar Diego om hem te waarschuwen."
+        'studio_iceage_throw_hearts': |-
           Sid wil zijn oma, Granny, laten weten dat hij van haar houdt. Gebruik het "speler geef" commando om Sid (speler 1) hartjes te geven aan Granny (speler 2)! Verander Granny's stemming in blij wanneer ze wordt geraakt met de hartjes.
-        studio_iceage_free_play: Het is tijd om je eigen spel of verhaal te maken! Wanneer je klaar bent, klik op Klaar om je vrienden jouw spel te laten proberen op hun telefoons, tablets of computers!
-        studio_gumball_hello1: 'Anais wil nieuwe vrienden maken. Kan jij haar "hallo" helpen te zeggen door het "zeg" blok te verplaatsen naar het werkgebied en het woord "hallo" erin te typen?'
-        studio_gumball_hello2: 'Darwin (speler 1) en zijn broer Gumball (speler 2) gaan naar school. Help hun elkaar te groeten door het "speler zeg" blok twee keer te gebruiken.'
-        studio_gumball_move_to_flag: 'Banana Joe wint bijna een velddag race! Help hem naar de laatste 200 pixels te gan met het "beweeg" blok.'
-        studio_gumball_move_to_actor: 'Gumball (speler 1) en Darwin (speler 2) zijn laat voor de velddag! Help Gumball 200 pixels naar beneden richting Darwin te bewegen door het "beweeg speler" blok. Daarna, verbind een blok aan de "wanneer speler raakt" gebeurtenis om een geluid te spelen wanneer ze elkaar vinden.'
-        studio_gumball_repeat: 'Het "oneindig herhalen" blok geeft je de mogelijkheid om programmeercode steeds opnieuw uit te voeren. Kun je er blokken aan vastmaken om Gumball te helpen om zich op te warmen voor zijn wedstrijd door zich herhaaldelijk naar links en rechts te bewegen?'
-        studio_gumball_click_hello: 'Kun je Anton helpen om de start van een wedstrijd aan te kondigen door hem "Klaar voor de start? Ga!" te laten zeggen? Om je programma te kunnen testen, vergeet niet om op Anton te klikken nadat je op Uitvoeren hebt geklikt!'
-        studio_gumball_move_events: 'Darwin doet mee aan de vlaggenverzamelwedstrijd! Help hem om rond te rennen door het "beweeg" blok vast te maken aan alle gebeurtenissen. Klik als je klaar bent op Uitvoeren om te proberen alle vlaggen te verzamelen.'
-        studio_gumball_sound_and_points: 'Het grootste deel van de code die ervoor zorgt dat Anton (speler 2) naar links en rechts beweegt, hebben wij alvast klaargezet, evenals de code om Banana Joe (speler 1) over het scherm te bewegen. Kun jij de code afmaken en blokken toevoegen aan de gebeurtenis "wanneer speler raakt", zodat zowel een geluid wordt afgespeeld en je een punt verdient wanneer Banana Joe en Anton elkaar raken? Druk op Uitvoeren om het spel te spelen.'
-        studio_gumball_warn_food_fight: 'Darwin is zojuist ontsnapt aan een voedselgevecht! Verander de achtergrond naar "figuren" en stel Darwins snelheid in op snel, druk vervolgens op Uitvoeren en verplaats hem naar Penny om haar te waarschuwen.'
-        studio_gumball_join_food_fight: |-
+        'studio_iceage_free_play': Het is tijd om je eigen spel of verhaal te maken! Wanneer je klaar bent, klik op Klaar om je vrienden jouw spel te laten proberen op hun telefoons, tablets of computers!
+        'studio_gumball_hello1': 'Anais wil nieuwe vrienden maken. Kan jij haar "hallo" helpen te zeggen door het "zeg" blok te verplaatsen naar het werkgebied en het woord "hallo" erin te typen?'
+        'studio_gumball_hello2': 'Darwin (speler 1) en zijn broer Gumball (speler 2) gaan naar school. Help hun elkaar te groeten door het "speler zeg" blok twee keer te gebruiken.'
+        'studio_gumball_move_to_flag': 'Banana Joe wint bijna een velddag race! Help hem naar de laatste 200 pixels te gan met het "beweeg" blok.'
+        'studio_gumball_move_to_actor': 'Gumball (speler 1) en Darwin (speler 2) zijn laat voor de velddag! Help Gumball 200 pixels naar beneden richting Darwin te bewegen door het "beweeg speler" blok. Daarna, verbind een blok aan de "wanneer speler raakt" gebeurtenis om een geluid te spelen wanneer ze elkaar vinden.'
+        'studio_gumball_repeat': 'Het "oneindig herhalen" blok geeft je de mogelijkheid om programmeercode steeds opnieuw uit te voeren. Kun je er blokken aan vastmaken om Gumball te helpen om zich op te warmen voor zijn wedstrijd door zich herhaaldelijk naar links en rechts te bewegen?'
+        'studio_gumball_click_hello': 'Kun je Anton helpen om de start van een wedstrijd aan te kondigen door hem "Klaar voor de start? Ga!" te laten zeggen? Om je programma te kunnen testen, vergeet niet om op Anton te klikken nadat je op Uitvoeren hebt geklikt!'
+        'studio_gumball_move_events': 'Darwin doet mee aan de vlaggenverzamelwedstrijd! Help hem om rond te rennen door het "beweeg" blok vast te maken aan alle gebeurtenissen. Klik als je klaar bent op Uitvoeren om te proberen alle vlaggen te verzamelen.'
+        'studio_gumball_sound_and_points': 'Het grootste deel van de code die ervoor zorgt dat Anton (speler 2) naar links en rechts beweegt, hebben wij alvast klaargezet, evenals de code om Banana Joe (speler 1) over het scherm te bewegen. Kun jij de code afmaken en blokken toevoegen aan de gebeurtenis "wanneer speler raakt", zodat zowel een geluid wordt afgespeeld en je een punt verdient wanneer Banana Joe en Anton elkaar raken? Druk op Uitvoeren om het spel te spelen.'
+        'studio_gumball_warn_food_fight': 'Darwin is zojuist ontsnapt aan een voedselgevecht! Verander de achtergrond naar "figuren" en stel Darwins snelheid in op snel, druk vervolgens op Uitvoeren en verplaats hem naar Penny om haar te waarschuwen.'
+        'studio_gumball_join_food_fight': |-
           Doe mee aan het voedselgevecht! Gebruik de opdracht "speler gooi object naar rechts" om Banana Joe (speler 1) voedsel te laten gooien naar Anton (speler 2)! Stel Anton's stemming in op boos wanneer hij wordt geraakt.
-        studio_gumball_free_play: Maak je eigen spel of verhaal. Klik op Klaar wanneer je klaar bent om jouw vrienden jouw spel te laten uitproberen op hun telefoons, tablets of computers!
-        studio_full_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
-        studio_k1_1: 'Kan je deze hond "hallo wereld" laten zeggen?'
-        studio_k1_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
-        studio_k1_3: Kun je een programma schrijven dat de hond naar de kat verplaatst?
-        studio_k1_4: Maak een programma dat de hond naar de kat laat verplaatst en de kat hallo laat zeggen als hij aankomt.
-        studio_k1_5: Kan je een blok toevoegen zodat de octopus blij wordt?
-        studio_k1_6: Maak je eigen verhaal! Beweeg de kat en de hond en laat ze praten.
-        maze_wordsearch_k_1: Verplaats me zodat het woord EAST (oost) gespeld wordt
-        maze_wordsearch_k_2: Verplaats me zodat het woord SOUTH (zuid) gespeld wordt
-        maze_wordsearch_k_3: Verplaats me zodat het woord WEST gespeld wordt
-        maze_wordsearch_k_4: Verplaats me zodat het woord NORTH (noord) gespeld wordt
-        maze_wordsearch_k_6: Verplaats me Oost en dan Zuid zodat het woord JUMP (spring) gespeld wordt
-        maze_wordsearch_k_9: Verplaats me in een richting, dan in een andere richting zodat CODE gespeld wordt
-        maze_wordsearch_k_13: Verplaats me in een richting, dan in een andere richting zodat DEBUG gespeld wordt
-        maze_wordsearch_k_15: Verplaats me in een richting, dan in een andere richting zodat ABOVE (boven) gespeld wordt
-        maze_wordsearch_k_16: Verplaats me in een richting, dan in een andere richting zodat BELOW (onder) gespeld wordt
-        maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in een andere richting zodat STORY (verhaal) gespeld wordt
-        applab_ec_simple: Maak jouw app door de blokken in de gereedschapskist te gebruiken.
-        turtle_ec_1_2: 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur door deze te kiezen in het nieuwe "Penkleur" blok.'
-        turtle_ec_1_10: 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën: een stok poppetje, sneeuwvlok of spiraal. Probeer ook het nieuwe "penWidth" block. Veel plezier!'
-        studio_ec_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
+        'studio_gumball_free_play': Maak je eigen spel of verhaal. Klik op Klaar wanneer je klaar bent om jouw vrienden jouw spel te laten uitproberen op hun telefoons, tablets of computers!
+        'studio_full_sandbox': Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
+        'studio_k1_1': 'Kan je deze hond "hallo wereld" laten zeggen?'
+        'studio_k1_2': Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
+        'studio_k1_3': Kun je een programma schrijven dat de hond naar de kat verplaatst?
+        'studio_k1_4': Maak een programma dat de hond naar de kat laat verplaatst en de kat hallo laat zeggen als hij aankomt.
+        'studio_k1_5': Kan je een blok toevoegen zodat de octopus blij wordt?
+        'studio_k1_6': Maak je eigen verhaal! Beweeg de kat en de hond en laat ze praten.
+        'maze_wordsearch_k_1': Verplaats me zodat het woord EAST (oost) gespeld wordt
+        'maze_wordsearch_k_2': Verplaats me zodat het woord SOUTH (zuid) gespeld wordt
+        'maze_wordsearch_k_3': Verplaats me zodat het woord WEST gespeld wordt
+        'maze_wordsearch_k_4': Verplaats me zodat het woord NORTH (noord) gespeld wordt
+        'maze_wordsearch_k_6': Verplaats me Oost en dan Zuid zodat het woord JUMP (spring) gespeld wordt
+        'maze_wordsearch_k_9': Verplaats me in een richting, dan in een andere richting zodat CODE gespeld wordt
+        'maze_wordsearch_k_13': Verplaats me in een richting, dan in een andere richting zodat DEBUG gespeld wordt
+        'maze_wordsearch_k_15': Verplaats me in een richting, dan in een andere richting zodat ABOVE (boven) gespeld wordt
+        'maze_wordsearch_k_16': Verplaats me in een richting, dan in een andere richting zodat BELOW (onder) gespeld wordt
+        'maze_wordsearch_k_20': Dit is een test! Verplaats me in een richting, dan in een andere richting zodat STORY (verhaal) gespeld wordt
+        'applab_ec_simple': Maak jouw app door de blokken in de gereedschapskist te gebruiken.
+        'turtle_ec_1_2': 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur door deze te kiezen in het nieuwe "Penkleur" blok.'
+        'turtle_ec_1_10': 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën: een stok poppetje, sneeuwvlok of spiraal. Probeer ook het nieuwe "penWidth" block. Veel plezier!'
+        'studio_ec_sandbox': Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
     video:
       name:
-        maze_intro: Doolhof Intro
-        artist_intro: Artiest Intro
-        farmer_intro: Boer Intro
-        flappy_intro: Flappy Intro
-        loop_times: Herhaal Keer blok
-        loop_until: Herhaal Totdat Blok
-        if: Als Blok
-        if_else: Als/anders Blok
-        if_else_scrat: Als/anders Blok
-        function: Functies
-        loop_while: Zolang Blok
-        loop_for: Teller Blok
-        parameters: Functies met Parameters
-        hoc_wrapup: CodeUur Samenvatting
-        Unplug1: Wat is CS?
-        Unplug2: Rekenend Denken
-        Unplug3: Programmeren op Ruitjespapier
-        Unplug4: Algoritmen
-        Unplug5: Functies
-        Unplug6: Voorwaardelijke instructies
-        Unplug7: Songwriting
-        Unplug8: Abstractie
-        Unplug9: Estafette Programmeren
-        Unplug10: Internet
-        Unplug11: Einde
-        C1_happy_maps_unplugged: Vrolijke Routes
-        C1_moveitmoveit_unplugged: verplaats het, verplaats het
-        C1_bigevent_unplugged: De grote gebeurtenis
-        C1_getting_loopy: Mooie linten
-        C1_pair_programming: Programmeren in Tweetallen
-        C1_maze_intro_sequencing: Doolhof volgorde introductie
-        C1_maze_debugging: Doolhof Foutopsporing
-        C1_bee_level_intro: 'Bij Niveau - Introductie'
-        C1_artist_intro: Artiest Intro
-        C1_spelling_bee_intro: Spelling Bij Introductie
-        C1_zuck_repeat_loop: Doolhof lussen
-        C1_bee_loops: Bij lussen
-        C1_maze_loops: Doolhof lussen
-        C1_playlab_storytelling: 'Play Lab - Maak een Verhaal'
-        C1_planting_seed: Poot een Zaadje
-        C1_building_foundation: Een Basis Bouwen
-        C1_going_places_safely: Veilig Reizen
-        C2_maze_intro: Doolhof Intro
-        C2_artist_intro: Artiest Intro
-        C2_zuck_repeat_loop: Doolhof lussen
-        C2_artist_loops: Kustenaar lussen
-        C2_artist_debugging: Kunstenaar foutopsporing
-        C2_bee_loops: Bij lussen
-        C2_bee_debugging: Bij foutopsporing
-        C2_bee_conditionals: Bij voorwaardelijke instructies
-        C2_playlab_createstory: 'Play Lab - Maak een Verhaal'
-        C2_graph_paper: Programmeren op Ruitjespapier
-        C2_conditionals_with_cards: Voorwaardelijke instructies
-        C2_binary_bracelets: Binaire armbanden
-        C2_relay_programming: Estafette Programmeren
-        C2_paper_airplanes: Papieren Vliegtuigjes
-        C2_digital_footprint: Je Digitale Voetafdruk
-        C2_digital_footprint_v2: Je Digitale Voetafdruk
-        C3_maze_level_4: Doolhof lussen
-        C3_artist_intro: Artiest Intro
-        C3_artist_functions: Kunstenaar functies
-        C3_bee_functions: Bij functies
-        C3_bee_conditionals: Bij voorwaardelijke instructies
-        C3_maze_conditionals: Doolhof voorwaardelijke instructies
-        C3_artist_nested_loops: Geneste lussen
-        C3_farmer_while: Zolang-lussen
-        C3_bee_nested_loops: Genestelde lussen
-        C3_bee_debugging: Bij foutopsporing
-        C3_bounce: Stuiter
-        C3_playlab_create_game: 'Play Lab - Maak een Spel'
-        C3_computational_thinking: Rekenend Denken
-        C3_dice_race: Dobbelstenen Race
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functionele Zonnevangers
-        C3_songwriting_with_parameters: Songwriting met Parameters
-        C4_intro: Introductie
-        C4_loops_zombie: Lussen
-        C4_bee_conditional: Bij voorwaardelijke instructies
-        C4_variables_artist: 'Variabelen - Kunstenaar'
-        C4_variables_playlab: 'Variabelen - Play Lab'
-        C4_for_loops: For-lussen
-        C4_for_loops_bee: For-lussen
-        C4_for_loops_no_bee: For-lussen
-        C4_math_artist: Programmeer de Kunstenaar met Math
-        C4_function_edit: Bewerken van Functies
-        C4_function_create: Maken van functies
-        C4_function_parameters: Functies met Parameters
-        C4_conditionals: Voorwaardelijke instructies
-        C4_unplugged_algorithms: Algoritmen met Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variabelen in Enveloppen
-        C4_unplugged_forloops: For-lussen
-        C4_unplugged_parameters: Liedjes schrijven met Parameters
-        C4_unplugged_binary: Binaire
-        frozen_intro: Uur Code Intro
-        frozen_loops: Inleiding tot Lussen
-        frozen_functions: Inleiding tot Functies
-        playlab_intro: Inleiding tot Play Lab
-        playlab_events: Play Lab evenenementen
-        playlab_repeat_forever: Play Lab Herhaal voor altijd
-        tutorial_puzzle_challenge: Handleiding voor de Puzzel Opdracht
-        infinity_playlab_intro: 'Play Lab - Inleiding'
-        infinity_playlab_events: 'Play Lab - Gebeurtenissen'
-        infinity_playlab_repeat_forever: 'Play Lab - Oneindig Herhalen'
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: 'Introduction to Databases - Part 1'
-        csp_applab_databases_2: 'Introduction to Databases - Part 2'
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: 'Introduction to Lists - Part 1'
-        csp_applab_lists_2: 'Introduction to Lists - Part 2'
-        csp_applab_lists_3: 'Introduction to Lists - Part 3'
-        csp_applab_lists_4: 'Introduction to Lists - Part 4'
-        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
-        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
-        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: 'Introduction to Variables - Part 1'
-        csp_applab_variables_2: 'Introduction to Variables - Part 2'
-        csp_applab_functions: Inleiding tot Functies
-        csp_applab_functions_parameters: Functies met Parameters
-        csp_applab_loops: Lussen
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: 'Data & Medicine'
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: Iets over pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: 'Kleur pixelation widget - Deel 1'
-        csp_pixelation_color_2: 'Kleur pixelation widget - Deel 2'
-        csp_pixelation_color_3: 'Kleur pixelation widget - Deel 3'
-        csp_pixelation_bw: Zwart-wit pixelation widget
-        csp_U1L14_tipstricks: 'Deel 1 Les 14 Tips & Trucs voor de Leraar'
-        csp_textcompression: Tekst compressie widget
-        csp_textcompression_new: Tekst compressie widget
-        csp_internetsimulator_1: 'Internet Simulator - Part 1'
-        csp_internetsimulator_2: 'Internet Simulator - Part 2'
-        csp_internetsimulator_3: 'Internet Simulator - Part 3'
-        alg_1_intro: 'CS in de Algebra - Inleiding'
-        alg_2_eval_block: 'CS in de Algebra - evaluatie blokken'
-        alg_3_pemdas: 'CS in de Algebra - volgorde van bewerkingen'
-        alg_4_data_types: 'CS in de Algebra - gegevenstypen'
-        alg_5_contracts: 'CS in de Algebra - contracten'
-        alg_6_variables: 'CS in de Algebra - variabelen'
-        alg_7_function: 'CS in de Algebra - functies'
-        alg_8_design_recipe: 'CS in de Algebra - ontwerp recept'
-        alg_9_booleans: 'CS in de Algebra - Booleans'
-        alg_10_conditionals: 'CS in de Algebra - Conditionals'
-        alg_11_coordinate_plane: 'CS in de Algebra - coördinaat vliegtuig'
-        alg_12_biggame_variables: 'CS in de Algebra - Big Game variabelen'
-        alg_13_biggame_animation: 'CS in de Algebra - Big Game animatie'
-        alg_14_biggame_booleans: 'CS in de Algebra - Big Game Booleans'
-        alg_15_biggame_update_player: 'CS in de Algebra - Big Game Update speler'
-        alg_16_biggame_collision_detection: 'CS in de Algebra - Big Game botsingdetectie'
-        alg_17_sambat_compound_booleans: 'CS in de Algebra - samengestelde Booleans'
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Bouw een Heelal met Code - Inleiding'
-        starwars_typing: 'Star Wars: Bouw een Heelal met Code - JavaScript'
-        starwars_events: 'Star Wars: Bouw een Heelal met Code - Gebeurtenissen'
-        starwars_congrats: 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
-        starwars_blocks_intro: 'Star Wars: Bouw een Heelal met Code - Inleiding'
-        starwars_blocks_events: 'Star Wars: Bouw een Heelal met Code - Gebeurtenissen'
-        starwars_blocks_congrats: 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
-        mc_intro: 'Minecraft - Introductie'
-        mc_repeat: 'Minecraft - Herhalen'
-        mc_if_statements: 'Minecraft - Als-instructies'
-        mc_congrats_share: 'Minecraft - Gefeliciteerd'
-        mc_congrats_no_share: 'Minecraft - Gefeliciteerd'
-        gumball_intro: 'Gumball Uur Code - Inleiding'
-        gumball_events: 'Gumball Uur Code - Gebeurtenissen'
-        gumball_repeat: 'Gumball Uur Code - Herhaalinstructies'
-        iceage_intro: 'Ice Age Uur Code - Inleiding'
-        iceage_events: 'Ice Age Uur Code - Gebeurtenissen'
-        iceage_repeat: 'Ice Age Uur Code - Herhaalinstructies'
+        'maze_intro': Doolhof Intro
+        'artist_intro': Artiest Intro
+        'farmer_intro': Boer Intro
+        'flappy_intro': Flappy Intro
+        'loop_times': Herhaal Keer blok
+        'loop_until': Herhaal Totdat Blok
+        'if': Als Blok
+        'if_else': Als/anders Blok
+        'if_else_scrat': Als/anders Blok
+        'function': Functies
+        'loop_while': Zolang Blok
+        'loop_for': Teller Blok
+        'parameters': Functies met Parameters
+        'hoc_wrapup': CodeUur Samenvatting
+        'Unplug1': Wat is CS?
+        'Unplug2': Rekenend Denken
+        'Unplug3': Programmeren op Ruitjespapier
+        'Unplug4': Algoritmen
+        'Unplug5': Functies
+        'Unplug6': Voorwaardelijke instructies
+        'Unplug7': Songwriting
+        'Unplug8': Abstractie
+        'Unplug9': Estafette Programmeren
+        'Unplug10': Internet
+        'Unplug11': Einde
+        'C1_happy_maps_unplugged': Vrolijke Routes
+        'C1_moveitmoveit_unplugged': verplaats het, verplaats het
+        'C1_bigevent_unplugged': De grote gebeurtenis
+        'C1_getting_loopy': Rondjes lopen
+        'C1_pair_programming': Programmeren in Tweetallen
+        'C1_maze_intro_sequencing': Doolhof volgorde introductie
+        'C1_maze_debugging': Doolhof Foutopsporing
+        'C1_bee_level_intro': 'Bij Niveau - Introductie'
+        'C1_artist_intro': Artiest Intro
+        'C1_spelling_bee_intro': Spelling Bij Introductie
+        'C1_zuck_repeat_loop': Doolhof lussen
+        'C1_bee_loops': Bij lussen
+        'C1_maze_loops': Doolhof lussen
+        'C1_playlab_storytelling': 'Play Lab - Maak een Verhaal'
+        'C1_planting_seed': Poot een Zaadje
+        'C1_building_foundation': Een Basis Bouwen
+        'C1_going_places_safely': Veilig Reizen
+        'C2_maze_intro': Doolhof Intro
+        'C2_artist_intro': Artiest Intro
+        'C2_zuck_repeat_loop': Doolhof lussen
+        'C2_artist_loops': Kustenaar lussen
+        'C2_artist_debugging': Kunstenaar foutopsporing
+        'C2_bee_loops': Bij lussen
+        'C2_bee_debugging': Bij foutopsporing
+        'C2_bee_conditionals': Bij voorwaardelijke instructies
+        'C2_playlab_createstory': 'Play Lab - Maak een Verhaal'
+        'C2_graph_paper': Programmeren op Ruitjespapier
+        'C2_conditionals_with_cards': Voorwaardelijke instructies
+        'C2_binary_bracelets': Binaire armbanden
+        'C2_relay_programming': Estafette Programmeren
+        'C2_paper_airplanes': Papieren Vliegtuigjes
+        'C2_digital_footprint': Jouw Digitale Voetafdruk
+        'C2_digital_footprint_v2': Jouw Digitale Voetafdruk
+        'C3_maze_level_4': Doolhof lussen
+        'C3_artist_intro': Artiest Intro
+        'C3_artist_functions': Kunstenaar functies
+        'C3_bee_functions': Bij functies
+        'C3_bee_conditionals': Bij voorwaardelijke instructies
+        'C3_maze_conditionals': Doolhof voorwaardelijke instructies
+        'C3_artist_nested_loops': Geneste lussen
+        'C3_farmer_while': Zolang-lussen
+        'C3_bee_nested_loops': Genestelde lussen
+        'C3_bee_debugging': Bij foutopsporing
+        'C3_bounce': Stuiter
+        'C3_playlab_create_game': 'Play Lab - Maak een Spel'
+        'C3_computational_thinking': Rekenend Denken
+        'C3_dice_race': Dobbelstenen Race
+        'C3_internet': Internet
+        'C3_crowdsourcing': Crowdsourcing
+        'C3_functional_suncatchers': Functionele Zonnevangers
+        'C3_songwriting_with_parameters': Songwriting met Parameters
+        'C4_intro': Introductie
+        'C4_loops_zombie': Lussen
+        'C4_bee_conditional': Bij voorwaardelijke instructies
+        'C4_variables_artist': 'Variabelen - Kunstenaar'
+        'C4_variables_playlab': 'Variabelen - Play Lab'
+        'C4_for_loops': For-lussen
+        'C4_for_loops_bee': For-lussen
+        'C4_for_loops_no_bee': For-lussen
+        'C4_math_artist': Programmeer de Kunstenaar met Math
+        'C4_function_edit': Bewerken van Functies
+        'C4_function_create': Maken van functies
+        'C4_function_parameters': Functies met Parameters
+        'C4_conditionals': Voorwaardelijke instructies
+        'C4_unplugged_algorithms': Algoritmen met Tangrams
+        'C4_unplugged_madlibs': Mad Libs
+        'C4_unplugged_variables': Variabelen in Enveloppen
+        'C4_unplugged_forloops': For-lussen
+        'C4_unplugged_parameters': Liedjes schrijven met Parameters
+        'C4_unplugged_binary': Binaire
+        'frozen_intro': Uur Code Intro
+        'frozen_loops': Inleiding tot Lussen
+        'frozen_functions': Inleiding tot Functies
+        'playlab_intro': Inleiding tot Play Lab
+        'playlab_events': Play Lab evenenementen
+        'playlab_repeat_forever': Play Lab Herhaal voor altijd
+        'tutorial_puzzle_challenge': Handleiding voor de Puzzel Opdracht
+        'infinity_playlab_intro': 'Play Lab - Inleiding'
+        'infinity_playlab_events': 'Play Lab - Gebeurtenissen'
+        'infinity_playlab_repeat_forever': 'Play Lab - Oneindig Herhalen'
+        'csp_applab_objects': Introduction to Objects
+        'csp_applab_databases_1': 'Introduction to Databases - Part 1'
+        'csp_applab_databases_2': 'Introduction to Databases - Part 2'
+        'csp_applab_processing_lists': Processing Lists with Loops
+        'csp_applab_lists_1': 'Introduction to Lists - Part 1'
+        'csp_applab_lists_2': 'Introduction to Lists - Part 2'
+        'csp_applab_lists_3': 'Introduction to Lists - Part 3'
+        'csp_applab_lists_4': 'Introduction to Lists - Part 4'
+        'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
+        'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
+        'csp_applab_design': Introduction to Design Mode
+        'csp_applab_variables_1': 'Introduction to Variables - Part 1'
+        'csp_applab_variables_2': 'Introduction to Variables - Part 2'
+        'csp_applab_functions': Inleiding tot Functies
+        'csp_applab_functions_parameters': Functies met Parameters
+        'csp_applab_loops': Lussen
+        'csp_applab_turtle': Turtle Programming
+        'csp_concept_bigdata_medicine': 'Data & Medicine'
+        'csp_concept_cybercrime': 'The Internet: Cybersecurity & Crime'
+        'csp_concept_encryption': 'The Internet: Encryption & Public Keys'
+        'csp_concept_http_html': 'The Internet: HTTP & HTML'
+        'csp_concept_what_is_internet': What is the Internet?
+        'csp_concept_internet_ip_dns': 'The Internet: IP Addresses & DNS'
+        'csp_concept_internet_packets_reliability': 'The Internet: Packets, Routing & Reliability'
+        'csp_concept_internet_wires_cables_wifi': 'The Internet: Wires, Cables & Wifi'
+        'csp_concept_rgb': Iets over pixels
+        'csp_cs_is_changing_everything': Computer Science is Changing Everything
+        'csp_pixelation_color_1': 'Kleur pixelation widget - Deel 1'
+        'csp_pixelation_color_2': 'Kleur pixelation widget - Deel 2'
+        'csp_pixelation_color_3': 'Kleur pixelation widget - Deel 3'
+        'csp_pixelation_bw': Zwart-wit pixelation widget
+        'csp_U1L14_tipstricks': 'Deel 1 Les 14 Tips & Trucs voor de Leraar'
+        'csp_textcompression': Tekst compressie widget
+        'csp_textcompression_new': Tekst compressie widget
+        'csp_internetsimulator_1': 'Internet Simulator - Part 1'
+        'csp_internetsimulator_2': 'Internet Simulator - Part 2'
+        'csp_internetsimulator_3': 'Internet Simulator - Part 3'
+        'alg_1_intro': 'CS in de Algebra - Inleiding'
+        'alg_2_eval_block': 'CS in de Algebra - evaluatie blokken'
+        'alg_3_pemdas': 'CS in de Algebra - volgorde van bewerkingen'
+        'alg_4_data_types': 'CS in de Algebra - gegevenstypen'
+        'alg_5_contracts': 'CS in de Algebra - contracten'
+        'alg_6_variables': 'CS in de Algebra - variabelen'
+        'alg_7_function': 'CS in de Algebra - functies'
+        'alg_8_design_recipe': 'CS in de Algebra - ontwerp recept'
+        'alg_9_booleans': 'CS in de Algebra - Booleans'
+        'alg_10_conditionals': 'CS in de Algebra - Conditionals'
+        'alg_11_coordinate_plane': 'CS in de Algebra - coördinaat vliegtuig'
+        'alg_12_biggame_variables': 'CS in de Algebra - Big Game variabelen'
+        'alg_13_biggame_animation': 'CS in de Algebra - Big Game animatie'
+        'alg_14_biggame_booleans': 'CS in de Algebra - Big Game Booleans'
+        'alg_15_biggame_update_player': 'CS in de Algebra - Big Game Update speler'
+        'alg_16_biggame_collision_detection': 'CS in de Algebra - Big Game botsingdetectie'
+        'alg_17_sambat_compound_booleans': 'CS in de Algebra - samengestelde Booleans'
+        'hoc2015_preview_blocks': Make your own game blocks
+        'hoc2015_preview_typing': Make your own game typing
+        'hoc2015_preview_conclusion': Make your own game conclusion
+        'starwars_intro': 'Star Wars: Bouw een Heelal met Code - Inleiding'
+        'starwars_typing': 'Star Wars: Bouw een Heelal met Code - JavaScript'
+        'starwars_events': 'Star Wars: Bouw een Heelal met Code - Gebeurtenissen'
+        'starwars_congrats': 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
+        'starwars_blocks_intro': 'Star Wars: Bouw een Heelal met Code - Inleiding'
+        'starwars_blocks_events': 'Star Wars: Bouw een Heelal met Code - Gebeurtenissen'
+        'starwars_blocks_congrats': 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
+        'mc_intro': 'Minecraft - Introductie'
+        'mc_repeat': 'Minecraft - Herhalen'
+        'mc_if_statements': 'Minecraft - Als-instructies'
+        'mc_congrats_share': 'Minecraft - Gefeliciteerd'
+        'mc_congrats_no_share': 'Minecraft - Gefeliciteerd'
+        'gumball_intro': 'Gumball Uur Code - Inleiding'
+        'gumball_events': 'Gumball Uur Code - Gebeurtenissen'
+        'gumball_repeat': 'Gumball Uur Code - Herhaalinstructies'
+        'iceage_intro': 'Ice Age Uur Code - Inleiding'
+        'iceage_events': 'Ice Age Uur Code - Gebeurtenissen'
+        'iceage_repeat': 'Ice Age Uur Code - Herhaalinstructies'
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'

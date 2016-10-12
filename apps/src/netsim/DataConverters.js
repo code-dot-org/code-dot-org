@@ -4,7 +4,6 @@
  *           hex, decimal, ASCII.  "A and B" is a special encoding that is
  *           just binary with "A" sub'd for 0 and "B" sub'd for 1.
  */
-'use strict';
 /* global window, require, exports */
 
 var utils = require('../utils'); // For String.prototype.repeat polyfill

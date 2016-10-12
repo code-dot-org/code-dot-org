@@ -1,24 +1,15 @@
 name 'CSPPD3-u2 create your extension'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Complete the Challenge  > Extend the Lesson
 
-### Complete the Challenge  > Extend the Lesson
-
-<br/>
-#### Create a Lesson Extension or an Assessment Question 
+## Create a Lesson Extension or an Assessment Question 
 
 **NOTE:** You should have already read the lesson plan, and completed the activity from the lesson. Now, it's time to build on the lesson and create your own materials to supplement it. 
-<br>
 
->-  **Create your own** Extension Activity or Assessment Question that could be used with this lesson
+> - **Create your own** Extension Activity or Assessment Question that could be used with this lesson
 - Develop a short **write-up** explaining to another teacher how to use your Extension or Assessment item 
 
-##### Hold on to your resource and your write-up-- you will post both of these to the forum.
-<br>
-Once you're finished creating your extension, come back and click 'Continue'
+Hold on to your resource and your write-up &mdash; you will post both of these to the forum.
 
-
-<br/><br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

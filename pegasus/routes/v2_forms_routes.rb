@@ -2,7 +2,7 @@ Sinatra::Verbs.custom :review
 
 post '/v2/forms/:kind' do |kind|
   dont_cache
-  pass if kind == 'HocSignup2014'
+  pass if kind == 'HocSignup2014' || kind == 'HocSignup2015'
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
 
@@ -62,8 +62,10 @@ end
 review '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
   case kind
-  when "HocSignup2015"
-    forbidden! unless dashboard_user && dashboard_user[:user_type] == 'teacher'
+  when "HocSignup2016"
+    unless dashboard_user && (dashboard_user[:user_type] == 'teacher' || dashboard_user[:admin])
+      forbidden!
+    end
   else
     forbidden! unless dashboard_user && dashboard_user[:admin]
   end
@@ -75,7 +77,7 @@ review '/v2/forms/:kind/:secret' do |kind, secret|
 
   forms = DB[:forms].where(kind: kind, secret: secret)
   forbidden! if forms.empty?
-  forms.update(review: review, reviewed_by: dashboard_user[:id], reviewed_at: DateTime.now, reviewed_ip: request.ip,indexed_at: nil)
+  forms.update(review: review, reviewed_by: dashboard_user[:id], reviewed_at: DateTime.now, reviewed_ip: request.ip, indexed_at: nil)
 
   content_type :json
   ({review: review}).to_json
@@ -86,7 +88,7 @@ end
 
 get '/v2/forms/ProfessionalDevelopmentWorkshopSignup/:secret/status/cancelled' do |secret|
   def send_receipts(form)
-    templates = ['workshop_signup_cancel_receipt','workshop_signup_cancel_notice']
+    templates = ['workshop_signup_cancel_receipt', 'workshop_signup_cancel_notice']
     recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
     templates.each do |template|
       Poste2.send_message(template, recipient, form_id: form[:id])

@@ -1,8 +1,5 @@
-title 'Exploring Computer Science PD'
-description 'Online Introduction to ECS'
-description_short 'Online Introduction to ECS'
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Introduction to PD'
 level 'ECSPD presurvey'

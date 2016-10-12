@@ -1,8 +1,5 @@
-title 'CS in Science PD3 Before 1st In-Person'
-description "Phase 3: Academic Year Development (Segment One)"
-description_short "Phase 3: Academic Year Development Pre 1"
+professional_learning_course 'CS in Science Support'
 login_required 'true'
-pd 'true'
 
 stage 'Welcome Back!'
 level 'sciPD3pre1 intro'
@@ -15,7 +12,5 @@ level 'TLO practical'
 
 stage 'Prep With Your Modules'
 level 'sciPD3pre1 prep'
-#level 'sciPD2 mods'
 level 'sciPD3pre1 remember'
-#level 'sciPD3pre1 challenge'
 level 'sciPD3pre1 thanks'

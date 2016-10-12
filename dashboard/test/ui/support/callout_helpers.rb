@@ -10,7 +10,7 @@ module CalloutHelpers
   def callout_has_text?(callout_id, expected_text)
     expected_text.gsub!('\"', '"')
     text = @browser.execute_script("return $('.cdo-qtips').eq('#{callout_id}').text();")
-    text.should eq expected_text
+    expect(text).to eq(expected_text)
   end
 end
 

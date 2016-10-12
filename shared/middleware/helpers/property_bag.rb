@@ -1,8 +1,9 @@
+require 'aws-sdk'
+
 #
 # PropertyBag
 #
 class PropertyBag
-
   class NotFound < Sinatra::NotFound
   end
 
@@ -72,7 +73,6 @@ end
 require 'aws-sdk'
 
 class DynamoPropertyBag
-
   class NotFound < Sinatra::NotFound
   end
 
@@ -83,6 +83,10 @@ class DynamoPropertyBag
     @hash = "#{@channel_id}:#{storage_id}"
   end
 
+  def self.pre_initialize
+    @@dynamo_db ||= Aws::DynamoDB::Client.new
+  end
+
   def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new
   end
@@ -91,7 +95,7 @@ class DynamoPropertyBag
     begin
       db.delete_item(
         table_name: CDO.dynamo_properties_table,
-        key: {'hash' => @hash,name: name},
+        key: {'hash' => @hash, name: name},
         expected: name_exists(name),
       )
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
@@ -160,5 +164,4 @@ class DynamoPropertyBag
   def name_exists(id)
     { "name" => { value: id, comparison_operator: 'EQ', } }
   end
-
 end

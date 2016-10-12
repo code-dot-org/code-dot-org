@@ -3,7 +3,7 @@ Feature: Visiting a studio page
 @new_courses
 @no_mobile
 Scenario: Using a studio dropdown
-  Given I am on "http://learn.code.org/s/course1/stage/16/puzzle/2"
+  Given I am on "http://studio.code.org/s/course1/stage/16/puzzle/2"
   And I rotate to landscape
   And I close the dialog
   Then there's an SVG image "studio/dog_thumb.png"
@@ -20,7 +20,7 @@ Scenario: Using a studio dropdown
   And element ".congrats" is visible
 
 Scenario: Resizing Sprites
-  Given I am on "http://learn.code.org/s/allthethings/stage/22/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/22/puzzle/1?noautoplay=true"
   And I rotate to landscape
   #And I close the dialog
 

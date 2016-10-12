@@ -1,0 +1,8 @@
+name 'pre-assessment survey q15'
+question 'I like (or think I will like) doing computer science activities.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'

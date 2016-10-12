@@ -57,5 +57,4 @@ class CohortSerializer < ActiveModel::Serializer
   def district_contact?
     scope && !scope.admin? && scope.district_contact?
   end
-
 end

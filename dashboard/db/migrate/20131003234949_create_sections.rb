@@ -1,4 +1,4 @@
-class CreateSections < ActiveRecord::Migration
+class CreateSections < ActiveRecord::Migration[4.2]
   def change
     create_table :sections do |t|
       t.references :user, null: false

@@ -1,5 +1,4 @@
 class CompanyProfile
-
   def self.normalize(data)
     {}.tap do |result|
       result[:email_s] = 'anonymous@code.org'
@@ -24,5 +23,4 @@ class CompanyProfile
       end
     end
   end
-
 end

@@ -15,7 +15,7 @@ nav: hoc_teacher_resources_nav
 
 - [Code with Anna and Elsa](/files/hoc-frozen-lp.pdf)
 - [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
-- OPTIONAL: [The Drawing Machine](/curriculum/misc/hocunplugged/Teacher)
+- OPTIONAL: [The Drawing Machine](<%= CDO.code_org_url('/curriculum/misc/hocunplugged/Teacher') %>)
 
 ### Extension Activities:
 
@@ -24,7 +24,7 @@ nav: hoc_teacher_resources_nav
 
 ### Other Teacher Resources:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/us/en/resources/how-to)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/resources/how-to)
 - [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 

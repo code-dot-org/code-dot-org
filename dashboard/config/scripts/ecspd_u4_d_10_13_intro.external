@@ -1,26 +1,24 @@
 name 'ECSPD U4 D 10-13 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 10-13 Scratch -- Broadcasting
+# Day 10-13 Scratch &mdash; Broadcasting
 
 First, let's explore the seventh lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 158-161.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=158)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will use all of the blocks they have learned so far to create a story of their choice.
 - They will start with a storyboard and then create an algorithm for their program.
 
-#### Common Difficulties
+## Common Difficulties
 
 This lesson is building off of the previous lesson where they learned about broadcasting.  It may still be unclear how to use the blocks, so you may need to review through role play or do something to help students grasp the concept.
-<br><br>
+
 For this lesson you need – [catstory.sb](http://www.exploringcs.org/curriculum)
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -43,6 +41,6 @@ For this lesson you need – [catstory.sb](http://www.exploringcs.org/curriculum
 - Broadcasting - [http://learnscratch.org/sc2-u3/sc2-l14](http://learnscratch.org/sc2-u3/sc2-l14)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

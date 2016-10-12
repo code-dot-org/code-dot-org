@@ -1,33 +1,32 @@
 name 'ECSPD3-u6 day 19-23'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css"> 
+# Unit 6 Lessons > Days 19-23
  
-## Unit 6 Lessons > Days 19-23 
- 
-#### Concepts Covered  
+## Concepts Covered
+
 Rubric for Rescue Challenge, Design, Build, Write a Rescue Program.
 
-#### Lesson Overview 
+## Lesson Overview
+
 This lesson is based on the second level of RoboCupJunior, in which they will need to build a robot simulate a robot that are sent to rescue people (victims) along a path through each “room” and avoid obstacles during a natural disaster.  Remind students of the problem solving process, when deciding on the victims, gaps, debris, room, construction, programming and creativity.  They will need to print out their program and hand it in at the time they compete.  Each group/team will be graded on their ability to cooperate on the challenge as a whole while playing fair.
-<br><br> 
- 
-#### Lesson Resources 
-##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=293" target=_blank>Lesson Plan Link>> </a> 
- 
+
+## Lesson Resources
+
+#### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=293" target=_blank>Lesson Plan Link>> </a> 
+
 - <a href="http://rcj.robocup.org/rescue.html" target=_blank>Official RoboCup Junior Rescue Robot Challenge Rules (2008)</a>
 - <a href="http://rcj.sci.brooklyn.cuny.edu/rcj2010/rescue_suggestedbuildinginstructions.pdf" target=_blank>Instructions For Building the Modules for the Rescue Robot Challenge</a>
 - <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=295" target=_blank>Rescue Robot Activity</a>
 - <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=296" target=_blank>Official RoboCupJunior Rescue Challenge</a> 
 - <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=297" target=_blank>Rescue Robot Sample Rubric</a>
 
->#### Hints from an ECS Teacher: 
-Look over the activity well in advance so you know how to help facilitate your students experience.
+> ## Hints from an ECS Teacher: 
+> Look over the activity well in advance so you know how to help facilitate your students experience.
 
 ***Rescue Robot Activity***: The rescue robot assignment is based on the second level of RoboCupJunior, an international competition.  This robot simulates one sent to rescue victims during natural disasters. It must find “victims” along the path through each “room” and avoid obstacles. The goal is to program a robot that uses sensors to respond to different stimuli. 
- <br><br>
+
 ***Task***: Build a robot that follows a black line on a white background, counts green or metallic “people” and avoids obstacles. 
-<br><br>
 
 ***Requirements***: 
 
@@ -49,16 +48,13 @@ Look over the activity well in advance so you know how to help facilitate your s
 
 You will have three and a half class periods to build and program the robot; then you will present it in class. Official Rules available http://rcj.robocup.org/rescue.html
 
->#### Hints from an ECS Teacher: 
-You will want to use white butcher paper or a clear shower curtain on the floor with black electrical tape as a path.  Use green electrical tape to indicate victims.
+> ## Hints from an ECS Teacher: 
+> You will want to use white butcher paper or a clear shower curtain on the floor with black electrical tape as a path.  Use green electrical tape to indicate victims.
 
-#### Things to keep in mind 
+## Things to keep in mind 
 Have students map out what the rooms might look and how they might navigate through the obstacles using a dry erase board or other means to work it out.
-<br>
  
 Click “Continue” below to learn about the next lesson.  
- 
-<br/><br/> 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

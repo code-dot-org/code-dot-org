@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Api::V1::Pd::WorkshopOrganizerReportDataTableSerializerTest < ::ActionController::TestCase
-
   setup do
     @admin = create :admin
     @organizer = create :workshop_organizer, email: "organizer#{SecureRandom.hex(4)}@example.net"

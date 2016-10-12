@@ -137,7 +137,6 @@
 "ga-IE":
   english: "Irish (Gaelic)"
   native: "Gaeilge"
-  debug: true
 
 "gl": "gl-ES"
 "gl-ES":

@@ -2,12 +2,9 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @title = nil
-    @description_short = nil
-    @description = nil
-    @description_audience = nil
     @stage = nil
     @stage_flex_category = nil
+    @stage_lockable = false
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
@@ -15,37 +12,27 @@ class ScriptDSL < BaseDSL
     @stages = []
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
-    @prompt = nil
     @hidden = true
     @login_required = false
-    @admin_required = false
-    @student_of_admin_required = false
-    @trophies = false
-    @pd = false
+    @hideable_stages = false
     @wrapup_video = nil
   end
 
   integer :id
-  string :title
-  string :description_short
-  string :description
-  string :description_audience
   string :professional_learning_course
   integer :peer_reviews_to_complete
 
   boolean :hidden
   boolean :login_required
-  boolean :admin_required
-  boolean :student_of_admin_required
-  boolean :trophies
-  boolean :pd
+  boolean :hideable_stages
 
   string :wrapup_video
 
-  def stage(name, flex = nil)
+  def stage(name, properties = {})
     @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
     @stage = name
-    @stage_flex_category = flex
+    @stage_flex_category = properties[:flex_category]
+    @stage_lockable = properties[:lockable]
     @scriptlevels = []
     @concepts = []
     @skin = nil
@@ -57,12 +44,9 @@ class ScriptDSL < BaseDSL
       id: @id,
       stages: @stages,
       hidden: @hidden,
-      trophies: @trophies,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
-      admin_required: @admin_required,
-      pd: @pd,
-      student_of_admin_required: @student_of_admin_required,
+      hideable_stages: @hideable_stages,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete
     }
@@ -77,13 +61,11 @@ class ScriptDSL < BaseDSL
   end
 
   string :skin
-
   string :video_key_for_next_level
 
-  string :prompt
-
-  def assessment(name)
-    level(name, {assessment: true})
+  def assessment(name, properties = {})
+    properties[:assessment] = true
+    level(name, properties)
   end
 
   def named_level(name)
@@ -92,12 +74,10 @@ class ScriptDSL < BaseDSL
 
   def level(name, properties = {})
     active = properties.delete(:active)
-    buttontext = properties.delete(:buttontext)
-    imageurl = properties.delete(:imageurl)
-    level_description = properties.delete(:description)
     level = {
       :name => name,
       :stage_flex_category => @stage_flex_category,
+      :stage_lockable => @stage_lockable,
       :skin => @skin,
       :concepts => @concepts.join(','),
       :level_concept_difficulty => @level_concept_difficulty || {},
@@ -109,9 +89,6 @@ class ScriptDSL < BaseDSL
 
       levelprops = {}
       levelprops[:active] = active if active == false
-      levelprops[:buttontext] = buttontext if buttontext
-      levelprops[:imageurl] = imageurl if imageurl
-      levelprops[:description] = level_description if level_description
       unless levelprops.empty?
         @current_scriptlevel[:properties][name] = levelprops
       end
@@ -128,20 +105,14 @@ class ScriptDSL < BaseDSL
   end
 
   def endvariants
-    @current_scriptlevel[:properties][:prompt] = @prompt if @prompt
     @scriptlevels << @current_scriptlevel
-
     @current_scriptlevel = nil
-    @prompt = nil
   end
 
   def i18n_strings
-    @i18n_strings['title'] = @title if @title
-    @i18n_strings['description_short'] = @description_short if @description_short
-    @i18n_strings['description'] = @description if @description
-    @i18n_strings['description_audience'] = @description_audience if @description_audience
+    @i18n_strings['stage'] = {}
     @stages.each do |stage|
-      @i18n_strings[stage[:stage]] = stage[:stage]
+      @i18n_strings['stage'][stage[:stage]] = stage[:stage]
     end
 
     {'name' => {@name => @i18n_strings}}

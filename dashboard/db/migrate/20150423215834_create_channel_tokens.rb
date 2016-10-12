@@ -1,5 +1,4 @@
-class CreateChannelTokens < ActiveRecord::Migration
-
+class CreateChannelTokens < ActiveRecord::Migration[4.2]
   def up
     create_table :channel_tokens do |t|
       t.string :channel, null: false

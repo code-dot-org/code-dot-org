@@ -94,19 +94,43 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Workshop must have at least one session to start.', e.message
   end
 
-  test 'start stop' do
+  test 'start end' do
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
 
-    @workshop.start!
+    returned_section = @workshop.start!
+    assert returned_section
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
     assert @workshop.section
-    assert_equal Section::TYPE_PD_WORKSHOP, @workshop.section.section_type
+    assert_equal returned_section, @workshop.section
+    assert @workshop.section.workshop_section?
+    assert_equal @workshop.section_type, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload
     assert_equal 'Ended', @workshop.state
+  end
+
+  test 'start is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    returned_section = @workshop.start!
+    assert returned_section
+    started_at = @workshop.reload.started_at
+
+    returned_section_2 = @workshop.start!
+    assert returned_section_2
+    assert_equal returned_section, returned_section_2
+    assert_equal started_at, @workshop.reload.started_at
+  end
+
+  test 'end is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+    @workshop.end!
+    ended_at = @workshop.reload.ended_at
+    @workshop.end!
+    assert_equal ended_at, @workshop.reload.ended_at
   end
 
   test 'sessions must start on separate days' do
@@ -205,8 +229,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teachers = [
       create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true),
       create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true),
-      create(:pd_workshop_participant, workshop: workshop, enrolled: false, in_section: true),
-      create(:pd_workshop_participant, workshop: workshop, enrolled: false, in_section: true, attended: true)
     ]
 
     mock_mail = stub(deliver_now: nil)
@@ -218,30 +240,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
-  test 'send_exit_surveys turns accidental students accounts into teacher accounts' do
-    workshop = create :pd_ended_workshop
-
-    accidental_student_email = 'i-should-be-a-teacher@example.net'
-    accidental_student_attendee = create :student, email: accidental_student_email
-    create :pd_enrollment, workshop: workshop,
-      name: accidental_student_attendee.name, email: accidental_student_email
-    workshop.section.add_student accidental_student_attendee
-    create :pd_attendance, session: workshop.sessions.first, teacher: accidental_student_attendee
-
-    assert_empty accidental_student_attendee.email
-    mock_mail = stub(deliver_now: nil)
-    Pd::WorkshopMailer.expects(:exit_survey).with(
-      workshop, accidental_student_attendee, instance_of(Pd::Enrollment)
-    ).returns(mock_mail)
-
-    workshop.send_exit_surveys
-
-    accidental_student_attendee.reload
-    refute_empty accidental_student_attendee.email
-    assert accidental_student_attendee.teacher?
-    assert_equal accidental_student_email, accidental_student_attendee.email
-  end
-
   test 'find_by_section_code' do
     section = create :section
     assert_nil Pd::Workshop.find_by_section_code(section.code)
@@ -249,6 +247,93 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :pd_workshop, section: section
     assert_equal workshop, Pd::Workshop.find_by_section_code(section.code)
     assert_nil Pd::Workshop.find_by_section_code('nonsense code')
+  end
+
+  test 'soft delete' do
+    session = create :pd_session, workshop: @workshop
+    enrollment = create :pd_enrollment, workshop: @workshop
+    @workshop.reload.destroy!
+
+    assert @workshop.reload.deleted?
+    refute Pd::Workshop.exists? @workshop.attributes
+    assert Pd::Workshop.with_deleted.exists? @workshop.attributes
+
+    # Make sure dependent sessions and enrollments are also soft-deleted.
+    assert session.reload.deleted?
+    refute Pd::Session.exists? session.attributes
+    assert Pd::Session.with_deleted.exists? session.attributes
+
+    assert enrollment.reload.deleted?
+    refute Pd::Enrollment.exists? enrollment.attributes
+    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+  end
+
+  test 'friendly name' do
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF, location_name: 'Code.org',
+      sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
+
+    # no subject
+    assert_equal 'CS Fundamentals workshop on 09/01/16 at Code.org', workshop.friendly_name
+
+    # with subject
+    workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
+    assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org', workshop.friendly_name
+
+    # truncated at 255 chars
+    workshop.update!(location_name: "blah" * 60)
+    assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'
+    assert workshop.friendly_name.length == 255
+  end
+
+  test 'date filters' do
+    pivot_date = Date.today
+    workshop_before = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
+    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date)]
+    workshop_after = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
+
+    # on or before
+    assert_equal [workshop_before, workshop_pivot].map(&:id).sort,
+      Pd::Workshop.start_on_or_before(pivot_date).pluck(:id).sort
+
+    # on or after
+    assert_equal [workshop_pivot, workshop_after].map(&:id).sort,
+      Pd::Workshop.start_on_or_after(pivot_date).pluck(:id).sort
+
+    # combined
+    assert_equal [workshop_pivot.id],
+      Pd::Workshop.start_on_or_after(pivot_date).start_on_or_before(pivot_date).pluck(:id)
+  end
+
+  test 'time constraints' do
+    # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
+    workshop_2_3_18 = create :pd_workshop,
+      course: Pd::Workshop::COURSE_ECS,
+      subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
+      num_sessions: 2
+    assert_equal 2, workshop_2_3_18.min_attendance_days
+    assert_equal 2, workshop_2_3_18.effective_num_days
+    assert_equal 12, workshop_2_3_18.effective_num_hours
+
+    # Add 2 more sessions for a total of 4. It should cap at 3 days / 18 hours
+    workshop_2_3_18.sessions << [create(:pd_session), create(:pd_session)]
+    assert_equal 3, workshop_2_3_18.effective_num_days
+    assert_equal 18, workshop_2_3_18.effective_num_hours
+
+    # No entry: min 1, max unlimited
+    workshop_no_constraint = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, num_sessions: 2
+    assert_equal 1, workshop_no_constraint.min_attendance_days
+    assert_equal 2, workshop_no_constraint.effective_num_days
+    assert_equal 12, workshop_no_constraint.effective_num_hours
+  end
+
+  test 'plp' do
+    assert_nil @workshop.professional_learning_partner
+
+    # Now create a plp associated with the organizer
+    plp = create :professional_learning_partner, contact: @organizer
+
+    assert @workshop.professional_learning_partner
+    assert_equal plp, @workshop.professional_learning_partner
   end
 
   private

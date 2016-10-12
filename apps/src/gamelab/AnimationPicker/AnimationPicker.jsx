@@ -2,7 +2,7 @@ import React from 'react';
 import {createUuid} from '../../utils';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
-import gamelabMsg from '../locale';
+import gamelabMsg from '@cdo/gamelab/locale';
 import styles from './styles';
 import { hide, pickNewAnimation, pickLibraryAnimation, beginUpload,
     handleUploadComplete, handleUploadError } from './animationPickerModule';
@@ -39,7 +39,8 @@ const AnimationPicker = React.createClass({
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
-    onUploadError: React.PropTypes.func.isRequired
+    onUploadError: React.PropTypes.func.isRequired,
+    playAnimations: React.PropTypes.bool.isRequired
   },
 
   onUploadClick() {
@@ -58,6 +59,7 @@ const AnimationPicker = React.createClass({
           onDrawYourOwnClick={this.props.onPickNewAnimation}
           onPickLibraryAnimation={this.props.onPickLibraryAnimation}
           onUploadClick={this.onUploadClick}
+          playAnimations={this.props.playAnimations}
         />
     );
   },
@@ -92,7 +94,8 @@ export default connect(state => ({
   visible: state.animationPicker.visible,
   uploadInProgress: state.animationPicker.uploadInProgress,
   uploadError: state.animationPicker.uploadError,
-  is13Plus: state.pageConstants.is13Plus
+  is13Plus: state.pageConstants.is13Plus,
+  playAnimations: !state.pageConstants.allAnimationsSingleFrame
 }), dispatch => ({
   onClose() {
     dispatch(hide());

@@ -1,97 +1,27 @@
 "ku":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Intro to Computer Science Course
-          Unplug1: "قۆناغی 1"
-          Maze: "قۆناغی 2"
-          Unplug2: "قۆناغی 3"
-          Unplug3: "قۆناغی 4"
-          Artist: "قۆناغی 5"
-          Unplug4: "قۆناغی 6"
-          Artist2: "قۆناغی 7"
-          Unplug5: "قۆناغی 8"
-          Farmer: "قۆناغی 9"
-          Unplug6: "قۆناغی 10"
-          Artist3: "قۆناغی 11"
-          Unplug7: "قۆناغی 12"
-          Farmer2: "قۆناغی 13"
-          Unplug8: "قۆناغی 14"
-          Artist4: "قۆناغی 15"
-          Unplug9: "قۆناغی 16"
-          Farmer3: "قۆناغی 17"
-          Unplug10: "قۆناغی 18"
-          Artist5: "قۆناغی 19"
-          Unplug11: "قۆناغی 20"
-        Hour of Code:
-          desc: "كاژێری كۆدنووسی"
-          Maze: "قۆناغی 1"
-        Edit Code:
-          desc: Edit Code (beta)
-          MazeEC: "قۆناغی 1"
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: "قۆناغی 1"
-        Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: "قۆناغی 1"
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: "قۆناغی 1"
-        Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: "قۆناغی 1"
-        Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        edit-code:
-          desc: Edit Code (beta)
-          MazeEC: "قۆناغی 1"
-          Applab: "قۆناغی 2"
-          ArtistEC: "قۆناغی 3"
-          StudioEC: "قۆناغی 4"
-        events:
-          desc: Bounce (beta)
-          Bounce: "قۆناغی 1"
-          Studio: "قۆناغی 2"
-        builder:
-          desc: User-Created Puzzles (beta)
-          Custom: "قۆناغی 1"
-        flappy:
-          desc: Flappy Bird
-          Flappy: "قۆناغی 1"
-        jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: "قۆناغی 1"
-        step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: "قۆناغی 1"
     game:
       name:
-        Unplug1: Introduction to Computer Science
+        Unplug1: "پێسەكی زانستی كۆمپیتەر"
         Maze: The Maze
         Multi: Multiple Choice Stuffs
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
-        Artist: The Artist
+        Artist: "هونەرەكە"
         Unplug4: Algorithms
-        Artist2: The Artist 2
+        Artist2: "هونەرەكە ٢"
         Unplug5: Functions
-        Farmer: The Farmer
+        Farmer: "جوتیارەكە"
         Unplug6: Conditionals
-        Artist3: The Artist 3
-        Unplug7: Song Writing
+        Artist3: "هونەرەكە ٣"
+        Unplug7: "گۆرانی نووسین"
         Farmer2: The Farmer 2
         Unplug8: Abstraction
-        Artist4: The Artist 4
+        Artist4: "هونەرەكە ٤"
         Unplug9: Relay Programming
-        Farmer3: The Farmer 3
-        Unplug10: The Internet
-        Artist5: The Artist 5
+        Farmer3: "جووتیارەكە ٣"
+        Unplug10: "ئینترنێت"
+        Artist5: "هونەرەكە ٥"
         Unplug11: Wrap-up
         MazeEC: The Maze
         Bounce: Bounce
@@ -100,7 +30,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: App Lab
-        ArtistEC: The Artist
+        ArtistEC: "هونەرەكە"
         TextMatch: Text Match
         StudioEC: Play Lab
         Applab: App Lab
@@ -644,7 +574,7 @@
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Wrap-up
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: "نەخشەی دڵخۆش"
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -746,6 +676,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

@@ -1,7 +1,5 @@
 /** @file Helper that generates sanitized, standardized event objects. */
-'use strict';
-
-var keyEvent = require('./keyEvent');
+import keyEvent from './keyEvent';
 
 /**
  * Helper that generates sanitized, standardized event objects.
@@ -19,7 +17,7 @@ var keyEvent = require('./keyEvent');
  *     studentClickHandler(sandboxer.sandboxEvent(e));
  *   }
  */
-var EventSandboxer = module.exports = function () {
+export default function EventSandboxer() {
   /** @private {number} */
   this.xScale_ = 1;
 
@@ -38,7 +36,7 @@ var EventSandboxer = module.exports = function () {
    * for browsers which do not support it natively.
    */
   this.lastMouseMoveEventMap_ = {};
-};
+}
 
 /**
  * Updates the sandboxer's internal transform according to the position and

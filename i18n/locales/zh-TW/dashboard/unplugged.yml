@@ -1,196 +1,196 @@
 zh:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: 電腦科學導論
         desc: 本課程將介紹電腦科學的概念並解釋一個電腦科學家的工作是什麼。它也將給學生一個扮演電腦科學家角色的機會。在課程活動結束後，每位學生將會有一份可帶回家的清單提醒他或她所學會的東西。你可能會想略過以下針對年輕學生教學所需相關的詞彙，但現在提供他們的有趣和好玩的方向比慢慢等待更好的學習機會將更有效率。
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: 電腦計算式思維
         desc: 我們只需要紙和筆，學生就可以學習到電腦式的思考模式。在簡短的介紹之後，學生們將會被分組以繪出一隻怪物(從預先發下的樣本中選取)。這整個任務必須要分工，小組才能夠將這隻怪物分析為一種特定的畫法，包括怪物身上的不同細節。然後他們會需要把圖像轉換成演算法(畫圖的技巧、指示)寫在紙上並交給別組讓他們畫出一樣的怪物來。學生們的組別將會相互交換演算法並畫出那隻建構在演算法基礎上的怪物。畫圖是小組最初的目標嗎？
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: 圖畫紙程式設計
         desc: 藉由彼此設計程式來繪製圖片，學生會真正了解程式設計的面貌。在學生指示彼此在以最有效率重現照片的方式於正方形上色，這課程才真正開始。如果時間允許，此課程亦可以學生自我創作的圖片作結。
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: 演算法
         desc: 這個課程將介紹演算法。第一個實驗使用七巧板與方格紙，將展現盡可能提供清晰指令是多麼的重要。其後，此課程將探討有多少種將紙折成長方形的方法，部分方法又比其他方法少對折次數。
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: 函數類別
         desc: 在此課程中，學生將以細繩、珠子以及特別的風格製作吊飾。學生將依照一連串重複的指示進行，之後已重複數次的方式判斷學生是否具備特定的技巧。一旦技巧養成後，他們便會被主程式呼叫，之後整個美妙的製成會被單一張紙張記錄起來。最終的程式將會提供給整個class ，無論他們細繩、珠子及風格的型態。為了有效地達成，學生將需要將材質細節抽象的表達出來並製作含糊地術語。此章節意在介紹美妙的泛型與變數。
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: 條件
         desc: 這是class 的遊戲。在介紹完陳述式、if 語句和迴圈之後，class 可以預先寫好的程式，一副撲克牌與運氣實作。
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: 歌曲創作
         desc: 讀歌詞對於大部分的學生都相當簡單。我們將以大家的常識進行活動，並轉化為對定義和呼叫function 扎實的教育。在學生都熟知function的定義及呼叫之後，我們將加入額外的功能讓function能夠傳入傳出參數。
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: 抽象
         desc: 這個活動結合了學生們的日常及 Mad-Lib 的思考風格，以幫助你的班級更有效率的學習抽象的觀念。
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: 接力式程式設計
         desc: '這個課程將以先前的活動 ( 4. 格子紙程式 ) 為觀念，並使用先前的技巧來強調程式完成性以及反覆檢查 "bug" 的重要性。'
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: 網際網路
         desc: '在這個課程中，學生將假裝流進網際網路，學習網路位置，IPs  及 DNS 等知識'
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: 總結
         desc: 最終總結先前的20小時，這將幫助學生重溫他們最愛的時光，並給他們向下一步邁進的興趣，使他們可自行繼續學習電腦科學的旅程。
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: 快樂地圖
         desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: 移動它，移動它
         desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: '生活中的演算法: 種一棵種子'
         desc: 這個課程將在我們的日常中使用演算法，並以種植種子為例。我們亦會專注在電腦科學的大鋼以及演算法的重要性。
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: 建立基礎
         desc: 學生將以僅提供的物品建構一個結構，這個結構必須能夠達成一項任務 ( 抅到指定高度或是承受指定重量 ) ， 當一切越演複雜學生更能夠討論彼此的想法。
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: 愈來愈糟
         desc: 這個課程將以舞蹈介紹程式設計的迴圈概念 ( 重複的指令 )。學生將學到簡單的編舞，並被要求重複之。
         video: C1_getting_loopy
-      RelayProgramming:
-        title: Relay programming
+      'RelayProgramming':
+        title: 接力程式設計
         desc: '學生將進行一場接力賽，合力撰寫 " 格子紙程式" 的演算法。但他們一次僅能撰寫一道指令，如果某處出現錯誤，便必須要將其後的指令全部清除。'
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: 流程類別
         desc: 要了解條件陳述式，學生將打一場牌，並創建規則，例如「如果出紅色牌，將可以得到一點」或「如果出黑色牌，他人將得到一點」。
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: 大事件
         desc: 我們會介紹程式概念中的「事件」，也是就是電腦不斷監控的指令。老師會在按下遠端按鈕，學生會根據哪個按鍵被按下而有不同的反應。
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: 安全的到達地點
         desc: 網路是個很強大，但同時也很危險的地方。老師會介紹如何翱翔在網路世界的同時，保護自己的安全。
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: 圖畫紙程式設計
         desc: 學生用一組已經定義的指令寫一個演算法(一組指令)來讓同學重新製造一張圖片。
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: '真實生活裡的演算法: 紙飛機'
         desc: 這個課程列出我們在日常生活中使用演算法的方法，並專注於做紙飛機這件事情上。這堂課也著重於資訊科學的更大的願景以及演算法是如何扮演重要的角色。
         video: C2_paper_airplanes
-      BinaryBracelets:
-        title: Binary Bracelets
+      'BinaryBracelets':
+        title: 二進位的手環
         desc: 學生用二進制表示法創造一個代表他們名字的第一個字母的手環。學生會學到資料可以用多於一種方法來呈現和儲存。
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: 你的數位足跡
         desc: 老師會告訴學生，把自己的資訊放在網路上會產生有後果的數位足跡或是「線索」。
         video: C2_數位_足跡
-      ComputationalThinking:
+      'ComputationalThinking':
         title: 電腦計算式思維
         desc: 學生用計算科學思維的步驟(分解、樣式匹配、抽象化、演算法)來找出要如何玩一個沒有指示的遊戲。
         video: C3_computational_thinking
-      FunctionalSuncatchers:
-        title: Functional Suncatchers
+      'FunctionalSuncatchers':
+        title: 實用漸進式的學習
         desc: 學生創造一個有變數和函式的演算法(一塊你想要一直重複使用的程式碼) 來創造有珠珠和線組成的玻璃飾品。
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: 用參數作曲
         desc: 學生使用一首歌的副歌的概念來學習要怎麼傳參數(也就是會不需重寫整個函式就能客製化一個函式)。
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: '現實生活中的演算法: 骰子比賽遊戲'
         desc: 這個課程呈現我們如何在日常生活中使用演算法。其中，學生將辨認並寫下骰子比賽遊戲的演算法。
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: 互聯網
         desc: 學生用紙傳送訊息來表示不同的網路傳輸方法。
         video: C3_網際網路
-      Crowdsourcing:
-        title: Crowdsourcing
+      'Crowdsourcing':
+        title: 互聯網的資源
         desc: 學生利用在資訊科學常見的群眾外包的解題技巧，以一個教室為單位，相較於一個學生獨自完成更有效率的完成一個任務。
         video: C3_crowdsourcing
-      DigitalCitizenship:
-        title: Digital Citizenship
+      'DigitalCitizenship':
+        title: 數位公民(對於信息技術使用有適當且負責任的行為規範與參與）
         desc: 學生探討私人資訊和個人資訊的差異，辨別哪些東西是在可以在網路上安全的分享，哪些不是。
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: 七巧板演算法
         desc: 這堂課告訴我們演算法的一些重點。如果你讓一個演算法保持得很簡單，你就有很多可以使用他們的方法。如果你想要確保每個人都有相同的結果，那你的演算法就要有更多的細節。
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: 信封變數
         desc: 變數帶給資訊科學更多的自由。這堂課有助於解釋甚麼是變數以及我們如何用不同的方法使用他們。在上抽象的課之前(或是同時) 使用這個活動來真正理解這個概念。
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: 瘋狂資料庫
         desc: 抽象是一個資訊電腦科學家最需要了解的重要技巧之一。這個活動會讓你的學生分析故事間的差異性，進而讓他們把故事抽象化。這些被抽象化的故事就會變成有趣又瘋狂的新故事的範本。
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: For迴圈的樂趣
         desc: 我們知道迴圈可以讓我們重複的做事情，但現在我們要學習如何使用本身有多一些額外的結構的迴圈。
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: 用參數作曲
         desc: '函式是電腦科學中最盛大的結構。函式(有時候也被叫做步驟) 是可以在你的大程式中被重複使用的小程式。這堂課將幫助學生直觀的了解為甚麼把很多小塊的程式碼合併成函式是很有幫助的作法。  '
         video: C4_unplugged_parameters
-      BinaryImages:
+      'BinaryImages':
         title: 二進位圖形
         desc: 雖然很多人認為二進制單單只是零和一，我們前面的課程教導學生資訊是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的資訊(例如影像和色彩)。
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: 電玩遊戲和座標平面
         desc: 一起來發現你愛玩的電動玩具是怎麼用代數驅動的! 探索如何運用代數運算式和座標平面來幫助我們理解電動玩具是怎麼運轉的，並且開始計畫你將要創造的電動玩具。
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: 合約、值域和範圍
         desc: 合約提供我們一個了解和討論函式的方法。在這堂課中，我們將看看合約可以怎麼幫我們理解一個新的程式語言或是函式。
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: 設計程序
         desc: 在上一個的階段，學生寫了一些很簡單的函式，但是更複雜的函式需要更週到的手法。設計程序是一個結構化的寫函式的方法，它包含了編寫測試項目來確保函式的運作是我們期待的。
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: 布林值和邏輯
         desc: 布林值是第四個也是最後一個我們要在課程裡告訴你的資料類型。在這堂中你會學到何謂布林值，以及他如何幫助我們在程式設計和邏輯思考。
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: 條件和分段函數
         desc: 我們傳給函式的參數會讓結果根據一個既定的規則而改變。假設我們想要有某些特定值的參數使用這個模型產生結果，但其他值的時候就用不同的模型。這就是條件上場的時候...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: 碰撞偵測和畢氏定理
         desc: 判斷在螢幕上的物件有沒有碰撞是大多數遊戲中很重要的一環。在這堂課中，我們將看看畢氏定理和距離公式是怎麼用來量平面上兩點間的距離，以及判斷這兩點(或遊戲角色) 有沒有碰在一起。
         video: alg_16_biggame_collision_detection

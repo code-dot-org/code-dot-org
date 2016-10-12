@@ -39,9 +39,9 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveEast">
+            <block type="maze_moveEast" movable="false">
               <next>
-                <block type="maze_moveEast">
+                <block type="maze_moveEast" movable="false">
                   <next>
                     <block type="maze_moveEast">
                       <next>

@@ -4,6 +4,14 @@
       not_saved: 'Ver snill og endre fylgjande feil:'
       too_young: Dette innhaldet har aldersgrense, og er dermed ikkje tilgjengeleg
         for yngre elevar
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -30,7 +38,7 @@
   unsubmit: Trekk tilbake
   previous_page: Forrige side
   next_page: Neste side
-  next_resource: Next resource
+  next_resource: Neste ressurs
   done_with_module: Done with this Learning Module
   cancel: Avbryt
   okay: OK
@@ -82,21 +90,11 @@
   signup_form:
     student_count: "%{count} studentar har allereie registrert seg."
     teacher_count: "%{count} lærarar har allereie registrert seg."
-    overview_student: Registrer ein konto for å følgje med på framgangen din. Epostadressa
-      di blir hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette
-      passord. For meir informasjon, sjå våre <a href="http://code.org/privacy">retningsliner
-      for personvern</a>.
-    overview_teacher: Lær informatikk i klasserommet ved å registrere deg med ein
-      konto. <p/> Du vil kunne legge til elevane og følge framdrifta deira.
-    no_signup_message: Du kan <a target="_blank" href="http://learn.code.org">bla
-      gjennom dei ulike nivåa og oppgåvene</a>, men du må registrere deg for å lagre
-      kor langt du har nådd.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Sjå veiledning for lærar
-    teacher_pitch: Registrering for lærar på code.org
-    teacher_title: Registrering for lærar
-    student_pitch: Registrering for elevar på code.org
-    student_title: Registrering for elev
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: Namnet på skulen (valfritt)
     school_address: Adressa til skulen (valfritt)
     address_placeholder: adresse, by, fylke, postnummer
@@ -124,9 +122,11 @@
     user_type_label: Account Type
     user_type_teacher: Lærar
     user_type_student: Elev
+    field_is_required: er påkreva
+    accept_terms: You must agree to create an account
   signin_form:
     title: Har du alt ein konto? Logg på
-    login: E-post eller brukarnamn
+    login: E-post
     password: Passord
     remember: Hugs meg
     submit: Logg inn
@@ -140,11 +140,15 @@
     picture: Finn ditt hemmelege bilde
     words: Skriv inn hemmeleg ord
     login: Logg inn
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Har du gløymt passordet ditt?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: E-postadresse
-      submit: Send meg instruksjonar for å tilbakestille passordet
+      submit: Send
     change_form:
       title: Endre passordet ditt
       new_password: Nytt passord
@@ -286,6 +290,10 @@
       signin: Logg inn
       signup: Meld deg på
       already_registered: Alt registrert?
+      pair_programming: Parprogrammering
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: Framgangen til %{name}
       progress: Framgangen din
@@ -320,6 +328,8 @@
       example_with_number: Løysingsframlegg %{solution_number}
       submitted_on: 'Sendt inn:'
       unsubmit: Trekk tilbake
+      worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'E-postadressa di %{email} er ikkje blitt stadfesta:'
@@ -388,19 +398,28 @@
     choose_next_course: Prøv eit kurs frå Code Studio ved å velje eit nedanfor
     print_certificate: Skriv ut sertifikat
     announcement_title: Kunngjeringar
-    announcement_view_all: Sjå alle
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Lær mer
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class
+      how the Internet works, how cryptography keeps data secure, and other concepts?
+      We’ve taken the best interactive tools from our Computer Science Principles
+      curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: Lær meir
+    announcement_try_now_button: Prøv no
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Legg til navnet ditt
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn
       en annen seksjonskode.
@@ -494,10 +513,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Lær meir
   slow_loading: Dette tar lengre tid enn vanleg...
   try_reloading: Last sida på nytt
@@ -628,6 +643,9 @@
     wrong_body: Thank you for submitting answers.
     correct_title: Takk
     correct_body: Thank you for submitting an answer
+    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
+      for aggregate results.  Note that results are only visible if at least five
+      students submitted the survey.
   level_group-submittable:
     wrong_title: Takk
     wrong_body: Thank you for submitting answers.
@@ -674,39 +692,6 @@
     hour: 1 time
     day: dag
     week: veke
-  data:
-    script:
-      name:
-        20-hour:
-          title: Barneskuleintroduksjon til informatikkurs (15-25 timar)
-          description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
-            og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse
-            og oppover, men det er morosamt å lære for alle aldersgruppe.
-        Hour of Code:
-          title: Kodetimen 2013
-          description: ''
-        edit-code:
-          title: Rediger kode
-          description: ''
-        events:
-          title: Hendingar
-          description: ''
-        builder:
-          title: Bygger
-          description: ''
-        flappy:
-          title: Flakse-kode
-          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa
-            i Flaksekode!
-        jigsaw:
-          title: Puslespill
-          description: ''
-        step:
-          title: Steg
-          description: ''
-        sample_level_builder:
-          title: Nivåbygge eksempel
-          description: ''
   age_interstitial:
     age: Din alder
     header: Oppdatering av kontoinformasjon
@@ -715,6 +700,34 @@
       vil aldri leie ut, selge eller dele denne informasjonen med noen andre.
     sign_out: Dersom du ikkje ynskjer å oppgi din alder, kan du <a href="%{url}">
       avslutte</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Vilkår
+    privacy: Personvern
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Skriv ut
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Beklager, yngre brukarar kan ikkje logge inn på nettstaden
     for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a>
     uten å logge på eller be ein forelder eller lærer om å kontakte oss for deg.
@@ -745,6 +758,8 @@
     share_copy_link: 'Kopier lenkja:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Lukk
@@ -773,6 +788,8 @@
     abuse:
       tos: Dette prosjektet er blitt rapportert for brot på Code.org sine <a href='http://code.org/tos'>Vilkår
         for bruk</a> og kan ikkje bli delt med andre.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Om du trur dette er ein feil, kan du <a href='https://code.org/contact'>kontakte
         oss.</a>
       go_to_code_studio: Gå til Code Studio
@@ -812,6 +829,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Søk etter et ikon...
@@ -830,14 +856,16 @@
     required: Oversyn
     content: Content
     practice: Teacher Practices
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -871,3 +899,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

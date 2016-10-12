@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-10-02T01:02:14.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "submittable": "false",
+    "encrypted_solution": "h8Qo6ovctaEJ32B+5Tdjc6byvvKCXrWjGzG6fEZ25AeZIteS50eSjGev1yjG\npHBdTcydz8JTT6idTCmvdexvFBMr9wndhFlso0z9OkZ3ZCpg+mjM8CvE6ITU\n05XzstMPnzo+k1gfrDwnl0bv1ysDVeWyI3JVrODNsRp3bS5ndL5X30n0IT2J\nPScuIAHpTCBLSlp1kTPS9bAirH3g1zKLTen5EKtxbptzFHATkVL6J5yQoDUT\nznWYQGH3wVBQT3f6jb8eyYijSLK0viABjw7m8eJLYoj3loIiwphfmcCYSEiU\nPJzMdOw+++UxRONHe7C2JMK//vaGBLn9B3FKQ91bTtSx1TMy53Lsmhac7bY2\nQrfHObyh+mjTERSMEbn8R6UlsPY/i1LasmvGvb7PZiZVt6hSFjV7Y5qpBgTM\n09g8I53TYG3ttL/Qd5asN7JotNLD0+Moy83+VYFf/WEtX4KYUW/ejq+V5Wa/\nU7RZ8IY7pE9PsLn7Bjoh7q73yen4bqheaSuAbKbePZaqxbrrfvOb25OHUgjT\n/ltn4kdDH13Vtb8DpPIZj0nVc7ky9LsQMEu6kvonSQ9PgaMF7i4m8Suj+LdA\npv7zvDpbMwUbRLl5Fkr1gI8GShuD0Aan9rrIBfcQ\n",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "**Short Response:** \r\n\r\nTwo students, Kaleb and Hunter, are arguing in class about an App Lab project. Kaleb states, “Huh, a button and an image are basically the same thing!”.  Hunter replies, “That doesn’t make any sense at all!”.\r\n\tExplain what Kaleb may have meant by that statement."
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

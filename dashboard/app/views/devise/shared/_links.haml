@@ -1,26 +1,15 @@
-- if controller_name != 'sessions'
+-# Unless we're already on the Sign in page, show a Sign in link
+- unless controller_name == 'sessions'
   = t('auth.already_signedup')
   = link_to t('nav.user.signin'), new_session_path(resource_name)
   %br/
   %br/
-- if devise_mapping.registerable? && controller_name != 'registrations'
-  = t('auth.notyet_signedup')
-  = link_to t('nav.user.signup'), new_user_registration_path
-  %br/
-  %br/
-- if devise_mapping.recoverable? && controller_name != 'passwords'
-  = link_to t('auth.forgot_password'), new_password_path(resource_name)
-  %br/
-  %br/
--#
-  - if devise_mapping.confirmable? && controller_name != 'confirmations'
-  = link_to t('auth.need_confirmation'), new_confirmation_path(resource_name)
-  %br/
-  %br/
+
 - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
   = link_to t('auth.need_unlock'), new_unlock_path(resource_name)
   %br/
   %br/
+
 - if devise_mapping.omniauthable?
   - if !Rails.env.production?
     .alert
@@ -28,10 +17,12 @@
       %strong= Rails.env
       %a{href: 'http://wiki.code.org/display/PROD/Developer+Oauth+setup'}
         check the wiki.
+
   - [:google_oauth2, :facebook, :windowslive].each do |provider|
     = link_to image_tag("auth/#{provider}.png"), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT)
     = link_to t('auth.sign_in_with', provider: t("auth.#{provider}")), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT), class: "oauth_sign_in with_#{provider}"
     %br/
     %br/
+
 :javascript
   $('.oauth_sign_in').click(dashboard.clientState.reset);

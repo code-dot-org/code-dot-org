@@ -103,7 +103,7 @@ A list of steps that you can follow to finish a task
 
 
 ### <a name="GetStarted"></a>3) Intro to Tangrams
-Your students may or may not have played with [tangrams](http://www.techitoutuk.com/projects/tangrams/rules.html) before.  If they have, you can skip this portion, and move right to explaining the Algorithms activity.
+Your students may or may not have played with tangrams before.  If they have, you can skip this portion, and move right to explaining the Algorithms activity.
 
 Usually, Tangrams are used to solve puzzles. You receive a set of seven Tans and must use them all (without overlapping any) to recreate an image that has been given to you.  Often, this is done as an individual activity, and the player is allowed to see the image that they are trying to recreate. Many times, you can lay your pieces right on top of the image silhouette to be sure that the solution is just right. 
 

@@ -88,5 +88,4 @@ class FilesApiTestBase < Minitest::Test
   def unsupported_media_type?
     last_response.status == 415
   end
-
 end

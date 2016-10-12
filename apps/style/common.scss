@@ -329,6 +329,9 @@ $dpad-red: #F78183;
   min-width: 204px;
 }
 
+/* Set z-index to zero here so that .droplet-dropdown (z-index 10000) appears in front of
+ * other droplet elements, but behind anything with z-index > 1 outside of #codeTextbox,
+ * such as dialogs. */
 #codeTextbox {
   position: absolute;
   left: 0px;
@@ -339,6 +342,7 @@ $dpad-red: #F78183;
   overflow: hidden;
   min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
   direction: ltr;
+  z-index: 0;
 }
 
 #codeTextbox.pin_bottom {
@@ -757,18 +761,6 @@ input[type="radio"] {
   left: 0;
   z-index: -1;
 }
-.trophy {
-  min-width:100px;
-  text-align:center;
-  vertical-align:top;
-  display:inline-block;
-  max-width:100px;
-  margin-bottom:10px;
-}
-.trophyimg {
-  width:80px;
-  height:80px;
-}
 #dialog button {
   min-width: 4em;
 }
@@ -879,6 +871,17 @@ input[type="radio"] {
     #lightbulb {
       position: absolute;
       left: 40px;
+    }
+  }
+}
+
+html[dir="RTL"] .prompt-icon-cell {
+  padding-right: 0px;
+  padding-left: 10px;
+  &.authored_hints {
+    #lightbulb {
+      right: 40px;
+      left: auto;
     }
   }
 }

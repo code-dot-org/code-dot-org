@@ -84,6 +84,24 @@ var CONFIGS = {
     danceOnLoad: true
   },
 
+  harvester: {
+    obstacleIdle: 'obstacle.png',
+
+    corn: 'corn.png',
+    pumpkin: 'pumpkin.png',
+    sprout: 'sprout.png',
+    bean: 'bean.png',
+
+    harvestSound: 'dig.mp3',
+
+    look: '#000',
+    transparentTileEnding: true,
+    nonDisappearingPegmanHittingObstacle: true,
+    background: 'background' + _.sample([0, 1, 2, 3]) + '.png',
+    pegmanYOffset: -8,
+    danceOnLoad: true
+  },
+
   pvz: {
     goalIdle: 'goalIdle.gif',
     obstacleIdle: 'obstacleIdle.gif',
@@ -163,6 +181,10 @@ var CONFIGS = {
 // in their respective folders blockly/static/skins/<skin name>
 CONFIGS.bee_night = CONFIGS.bee;
 CONFIGS.farmer_night = CONFIGS.farmer;
+
+CONFIGS.planter = Object.assign({}, CONFIGS.harvester, {
+  soil: 'soil.png',
+});
 
 /**
  * Given the mp3 sound, generates a list containing both the mp3 and ogg sounds

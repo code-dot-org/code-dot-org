@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 import {expect} from '../../util/configuredChai';
 
-import ImportProjectDialog from '@cdo/apps/applab/ImportProjectDialog';
+import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
   sources as sourcesApi,
   channels as channelsApi,

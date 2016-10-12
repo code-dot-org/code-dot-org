@@ -1,7 +1,6 @@
 name 'ECSPD U2 Challenges'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ## Unit 2 Challenge Preview > Challenge Options
 <br><br>
@@ -20,7 +19,5 @@ File > Make Copy
 </object>
 
 ### <a href="https://docs.google.com/document/d/1EnqsedseMFSshtZCmIaTOMACdTcLIFeJswix6LRTUhE/edit?usp=sharing" target="_blank">Access the Google Document Here >>></a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

@@ -456,10 +456,10 @@ pl:
         text: Ta lekcja nazywa się szczęśliwe mapy. Dzisiaj mamy zamiar pomóc naszemu futrzanemu przyjacielowi dostać sie Flurb się do jej owoców.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: '"Spraw, aby Twój Flurb dotarł do owocu. Aby to zrobić, ustal, w którą stronę musi pójść i nakieruj go tam za pomocą strzałek. W którą stronę Flurb musi pójść, aby dotrzeć do jabłka?".'
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Aby się tam dostać, musisz zakreślić kierunek, w którym ma pójść.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
         text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."

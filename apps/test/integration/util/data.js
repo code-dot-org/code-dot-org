@@ -90,8 +90,7 @@ module.exports = function (app) {
         skins: require('@cdo/apps/applab/skins'),
         levels: {
           levels: require('@cdo/apps/applab/levels')
-        },
-        blocks: require('@cdo/apps/applab/blocks')
+        }
       };
     };
   } else if (app === 'gamelab') {
@@ -100,8 +99,7 @@ module.exports = function (app) {
         skins: require('@cdo/apps/gamelab/skins'),
         levels: {
           levels: require('@cdo/apps/gamelab/levels')
-        },
-        blocks: require('@cdo/apps/gamelab/blocks')
+        }
       };
     };
   }

@@ -19,5 +19,6 @@ const stageShape = React.PropTypes.shape({
   lesson_plan_html_url: React.PropTypes.string,
   flex_category: React.PropTypes.string,
   levels: stageProgressShape,
+  lockable: React.PropTypes.bool.isRequired
 });
 module.exports.stageShape = stageShape;

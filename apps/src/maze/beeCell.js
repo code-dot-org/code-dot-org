@@ -9,49 +9,152 @@
  * not static but can in fact be randomized between runs.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
-var Cell = require('./cell');
+import Cell from './cell';
+import tiles from './tiles';
+const SquareType = tiles.SquareType;
 
-var tiles = require('./tiles');
-var SquareType = tiles.SquareType;
+export default class BeeCell extends Cell {
+  constructor(tileType, featureType, value, cloudType, flowerColor, range) {
 
-var BeeCell = function (tileType, featureType, value, cloudType, flowerColor, range) {
+    // BeeCells require features to have values
+    if (featureType === BeeCell.FeatureType.NONE) {
+      value = undefined;
+      range = undefined;
+    }
 
-  // BeeCells require features to have values
-  if (featureType === BeeCell.FeatureType.NONE) {
-    value = undefined;
-    range = undefined;
+    super(tileType, value, range);
+
+    /**
+     * @type {Number}
+     */
+    this.featureType_ = featureType;
+
+    /**
+     * @type {Number}
+     */
+    this.flowerColor_ = flowerColor;
+
+    /**
+     * @type {Number}
+     */
+    this.cloudType_ = cloudType;
   }
 
-  Cell.call(this, tileType, value, range);
+  /**
+   * @return {boolean}
+   */
+  isFlower() {
+    return this.featureType_ === FeatureType.FLOWER;
+  }
 
   /**
-   * @type {Number}
+   * @return {boolean}
    */
-  this.featureType_ = featureType;
+  isHive() {
+    return this.featureType_ === FeatureType.HIVE;
+  }
 
   /**
-   * @type {Number}
+   * Flowers can be red, purple, or undefined.
+   * @return {boolean}
    */
-  this.flowerColor_ = flowerColor;
+  isRedFlower() {
+    return this.isFlower() && this.flowerColor_ === FlowerColor.RED;
+  }
 
   /**
-   * @type {Number}
+   * Flowers can be red, purple, or undefined.
+   * @return {boolean}
    */
-  this.cloudType_ = cloudType;
-};
+  isPurpleFlower() {
+    return this.isFlower() && this.flowerColor_ === FlowerColor.PURPLE;
+  }
 
-BeeCell.inherits(Cell);
-module.exports = BeeCell;
+  /**
+   * @return {boolean}
+   */
+  isStaticCloud() {
+    return this.cloudType_ === CloudType.STATIC;
+  }
 
-var FeatureType = BeeCell.FeatureType = {
+  /**
+   * @return {boolean}
+   */
+  isVariableCloud() {
+    if (this.cloudType_ === CloudType.NONE || this.cloudType_ === CloudType.STATIC) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * @return {boolean}
+   */
+  isVariable() {
+    return this.isVariableRange() || this.isVariableCloud();
+  }
+
+  /**
+   * Variable cells can represent multiple possible kinds of grid assets,
+   * whereas non-variable cells can represent only a single kind. This
+   * method returns an array of non-variable BeeCells based on this BeeCell's
+   * configuration.
+   * @return {BeeCell[]}
+   * @override
+   */
+  getPossibleGridAssets() {
+    let possibilities = [];
+    if (this.isVariableCloud()) {
+      const flower = new BeeCell(this.tileType_, FeatureType.FLOWER, this.originalValue_, CloudType.STATIC, this.flowerColor_);
+      const hive = new BeeCell(this.tileType_, FeatureType.HIVE, this.originalValue_, CloudType.STATIC);
+      const nothing = new BeeCell(this.tileType_, FeatureType.NONE, undefined, CloudType.STATIC);
+      switch (this.cloudType_) {
+        case CloudType.HIVE_OR_FLOWER:
+          possibilities = [flower, hive];
+          break;
+        case CloudType.FLOWER_OR_NOTHING:
+          possibilities = [flower, nothing];
+          break;
+        case CloudType.HIVE_OR_NOTHING:
+          possibilities = [hive, nothing];
+          break;
+        case CloudType.ANY:
+          possibilities = [flower, hive, nothing];
+          break;
+      }
+    } else if (this.isVariableRange()) {
+      for (let i = this.originalValue_; i <= this.range_; i++) {
+        possibilities.push(new BeeCell(this.tileType_, FeatureType.FLOWER, i, CloudType.NONE, FlowerColor.PURPLE));
+      }
+    } else {
+      possibilities.push(this);
+    }
+
+    return possibilities;
+  }
+
+  /**
+   * Serializes this BeeCell into JSON
+   * @return {Object}
+   * @override
+   */
+  serialize() {
+    return Object.assign({}, super.serialize(), {
+      featureType: this.featureType_,
+      cloudType: this.cloudType_,
+      flowerColor: this.flowerColor_,
+    });
+  }
+}
+
+const FeatureType = BeeCell.FeatureType = {
   NONE: undefined,
   HIVE: 0,
   FLOWER: 1,
   VARIABLE: 2
 };
 
-var CloudType = BeeCell.CloudType = {
+const CloudType = BeeCell.CloudType = {
   NONE: undefined,
   STATIC: 0,
   HIVE_OR_FLOWER: 1,
@@ -60,138 +163,10 @@ var CloudType = BeeCell.CloudType = {
   ANY: 4
 };
 
-var FlowerColor = BeeCell.FlowerColor = {
+const FlowerColor = BeeCell.FlowerColor = {
   DEFAULT: undefined,
   RED: 0,
   PURPLE: 1
-};
-
-/**
- * Returns a new BeeCell that's an exact replica of this one
- * @return {BeeCell}
- * @override
- */
-BeeCell.prototype.clone = function () {
-  var newBeeCell = new BeeCell(
-    this.tileType_,
-    this.featureType_,
-    this.originalValue_,
-    this.cloudType_,
-    this.flowerColor_,
-    this.range_
-  );
-  newBeeCell.setCurrentValue(this.currentValue_);
-  return newBeeCell;
-};
-
-/**
- * @return {boolean}
- */
-BeeCell.prototype.isFlower = function () {
-  return this.featureType_ === FeatureType.FLOWER;
-};
-
-/**
- * @return {boolean}
- */
-BeeCell.prototype.isHive = function () {
-  return this.featureType_ === FeatureType.HIVE;
-};
-
-/**
- * Flowers can be red, purple, or undefined.
- * @return {boolean}
- */
-BeeCell.prototype.isRedFlower = function () {
-  return this.isFlower() && this.flowerColor_ === FlowerColor.RED;
-};
-
-/**
- * Flowers can be red, purple, or undefined.
- * @return {boolean}
- */
-BeeCell.prototype.isPurpleFlower = function () {
-  return this.isFlower() && this.flowerColor_ === FlowerColor.PURPLE;
-};
-
-/**
- * @return {boolean}
- */
-BeeCell.prototype.isStaticCloud = function () {
-  return this.cloudType_ === CloudType.STATIC;
-};
-
-/**
- * @return {boolean}
- */
-BeeCell.prototype.isVariableCloud = function () {
-  if (this.cloudType_ === CloudType.NONE || this.cloudType_ === CloudType.STATIC) {
-    return false;
-  }
-  return true;
-};
-
-/**
- * @return {boolean}
- */
-BeeCell.prototype.isVariable = function () {
-  return this.isVariableRange() || this.isVariableCloud();
-};
-
-
-/**
- * Variable cells can represent multiple possible kinds of grid assets,
- * whereas non-variable cells can represent only a single kind. This
- * method returns an array of non-variable BeeCells based on this BeeCell's
- * configuration.
- * @return {BeeCell[]}
- * @override
- */
-BeeCell.prototype.getPossibleGridAssets = function () {
-  var possibilities = [];
-  if (this.isVariableCloud()) {
-    var flower = new BeeCell(this.tileType_, FeatureType.FLOWER, this.originalValue_, CloudType.STATIC, this.flowerColor_);
-    var hive = new BeeCell(this.tileType_, FeatureType.HIVE, this.originalValue_, CloudType.STATIC);
-    var nothing = new BeeCell(this.tileType_, FeatureType.NONE, undefined, CloudType.STATIC);
-    switch (this.cloudType_) {
-      case CloudType.HIVE_OR_FLOWER:
-        possibilities = [flower, hive];
-        break;
-      case CloudType.FLOWER_OR_NOTHING:
-        possibilities = [flower, nothing];
-        break;
-      case CloudType.HIVE_OR_NOTHING:
-        possibilities = [hive, nothing];
-        break;
-      case CloudType.ANY:
-        possibilities = [flower, hive, nothing];
-        break;
-    }
-  } else if (this.isVariableRange()) {
-    for (var i = this.originalValue_; i <= this.range_; i++) {
-      possibilities.push(new BeeCell(this.tileType_, FeatureType.FLOWER, i, CloudType.NONE, FlowerColor.PURPLE));
-    }
-  } else {
-    possibilities.push(this);
-  }
-
-  return possibilities;
-};
-
-/**
- * Serializes this BeeCell into JSON
- * @return {Object}
- * @override
- */
-BeeCell.prototype.serialize = function () {
-  return {
-    tileType: this.tileType_,
-    featureType: this.featureType_,
-    value: this.originalValue_,
-    cloudType: this.cloudType_,
-    flowerColor: this.flowerColor_,
-    range: this.range_,
-  };
 };
 
 /**
@@ -200,16 +175,14 @@ BeeCell.prototype.serialize = function () {
  * @return {BeeCell}
  * @override
  */
-BeeCell.deserialize = function (serialized) {
-  return new BeeCell(
-    serialized.tileType,
-    serialized.featureType,
-    serialized.value,
-    serialized.cloudType,
-    serialized.flowerColor,
-    serialized.range
-  );
-};
+BeeCell.deserialize = serialized => new BeeCell(
+  serialized.tileType,
+  serialized.featureType,
+  serialized.value,
+  serialized.cloudType,
+  serialized.flowerColor,
+  serialized.range
+);
 
 /**
  * @param {String|Number} mapCell
@@ -218,10 +191,10 @@ BeeCell.deserialize = function (serialized) {
  * @override
  * @see Cell.parseFromOldValues
  */
-BeeCell.parseFromOldValues = function (mapCell, initialDirtCell) {
+BeeCell.parseFromOldValues = (mapCell, initialDirtCell) => {
   mapCell = mapCell.toString();
   initialDirtCell = parseInt(initialDirtCell);
-  var tileType, featureType, value, cloudType, flowerColor;
+  let tileType, featureType, value, cloudType, flowerColor;
 
   if (!isNaN(initialDirtCell) && mapCell.match(/[1|R|P|FC]/) && initialDirtCell !== 0) {
     tileType = SquareType.OPEN;

@@ -1,4 +1,4 @@
-class RemovePlcForeignKeys < ActiveRecord::Migration
+class RemovePlcForeignKeys < ActiveRecord::Migration[4.2]
   def up
     remove_foreign_key_if_exists :professional_learning_tasks, :professional_learning_module_id
     remove_foreign_key_if_exists :user_professional_learning_course_enrollments, :user_id
@@ -11,11 +11,10 @@ class RemovePlcForeignKeys < ActiveRecord::Migration
   end
 
   def down
-
   end
 
-  #Come on Rails, can't you make an idempotent remove foreign key method?
+  # Come on Rails, can't you make an idempotent remove foreign key method?
   def remove_foreign_key_if_exists(table, key)
-    remove_foreign_key table, column: key if foreign_keys(table).find_index {|x| x.column == key.to_s} != nil
+    remove_foreign_key table, column: key unless foreign_keys(table).find_index {|x| x.column == key.to_s}.nil?
   end
 end

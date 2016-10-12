@@ -1,0 +1,7 @@
+name 'Stop: Common Styles Warm Up'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Wait for instructions from your teachers before going to the next level.
+MARKDOWN

@@ -1,9 +1,8 @@
 /* global trackEvent */
-
-'use strict';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import _ from 'lodash';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
@@ -19,6 +18,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 var experiments = require('../experiments');
+import {entityActionBlocks, entityActionTargetDropdownBlocks} from './blocks';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -303,8 +303,6 @@ Craft.init = function (config) {
         }
 
         for (var btn in ArrowIds) {
-          console.log("Button is");
-          console.log(btn);
           dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
               function(btn) {
                 return () => {
@@ -692,13 +690,14 @@ Craft.executeUserCode = function () {
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
-  if (studioApp.initializationCode) {
-    code += studioApp.initializationCode;
+  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  if (studioApp.initializationBlocks) {
+    codeBlocks = studioApp.initializationBlocks.concat(codeBlocks);
   }
 
   // For each top-level event block,
   //code += // Get [userCallback] the user's code and [eventType], [blockType] the type this is scoped for
-      // e.g. eventType = whenTouched, blockType = logOak, userCallback = (blockReference) => { moveItForward(blockReference); moveItForward(blockReference); }
+  // e.g. eventType = whenTouched, blockType = logOak, userCallback = (blockReference) => { moveItForward(blockReference); moveItForward(blockReference); }
   var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
       'JavaScript',
       'craft_onTouched');
@@ -729,101 +728,51 @@ Craft.executeUserCode = function () {
    *    });
    *  }
    */
-
-  code += Blockly.Generator.blockSpaceToCode('JavaScript');
-  codegen.evalWith(code, {
+  code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+  const evalApiMethods = {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
     },
     onTouched: function (type, callback, blockID) {
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
           function (event) {
-              if (event.eventType !== 'blockTouched') {
-                return;
-              }
-              if (event.blockType !== type) {
-                return;
-              }
+            if (event.eventType !== 'blockTouched') {
+              return;
+            }
+            if (event.blockType !== type) {
+              return;
+            }
 
-              callback(event.blockReference);
+            callback(event.blockReference);
           });
     },
     onPlayerMoved: function (type, callback, blockID) {
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
           function (event) {
-              if (event.eventType !== 'playerMoved') {
-                return;
-              }
-              if (event.blockType !== type) {
-                return;
-              }
+            if (event.eventType !== 'playerMoved') {
+              return;
+            }
+            if (event.blockType !== type) {
+              return;
+            }
 
-              callback(event.blockReference);
+            callback(event.blockReference);
           });
     },
     onEventTriggered: function (type, eventType, callback, blockID) {
-      console.log("sup");
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
           function (event) {
-              console.log("Called 1");
-              if (event.eventType !== eventType) {
-                return;
-              }
-              if (event.targetType !== type) {
-                return;
-              }
-
-              console.log("Called");
-              callback(event);
+            if (event.eventType !== eventType) {
+              return;
+            }
+            if (event.targetType !== type) {
+              return;
+            }
+            callback(event);
           });
-    },
-    destroyEntity: function (blockReference, blockID) {
-      appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },
     drop: function (blockType, targetEntity, blockID) {
       appCodeOrgAPI.drop(studioApp.highlight.bind(studioApp, blockID), blockType, targetEntity);
-    },
-    explodeEntity: function (blockReference, blockID) {
-      appCodeOrgAPI.explodeEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityNorth: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityNorth(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntitySouth: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntitySouth(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityEast: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityEast(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityWest: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityWest(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    flashEntity: function (blockReference, blockID) {
-      appCodeOrgAPI.flashEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityForward: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityForward(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityTowardPlayer: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityTowardPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    moveEntityAwayFromPlayer: function (blockReference, blockID) {
-      appCodeOrgAPI.moveEntityAwayFromPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntity: function (blockReference, direction, blockID) {
-      appCodeOrgAPI.turnEntity(studioApp.highlight.bind(studioApp, blockID), blockReference, direction);
-    },
-    turnEntityRight: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityRight(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntityLeft: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityLeft(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntityRandom: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityRandom(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
-    turnEntityToPlayer: function (blockReference, blockID) {
-      appCodeOrgAPI.turnEntityToPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },
     turnLeft: function (blockID) {
       appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "left");
@@ -852,6 +801,11 @@ Craft.executeUserCode = function () {
           blockType,
           callback);
     },
+    repeat: function (blockID, callback, iterations, targetEntity) {
+      // if resurrected, move blockID be last parameter to fix "Show Code"
+      appCodeOrgAPI.repeat(studioApp.highlight.bind(studioApp, blockID),
+          callback, iterations, targetEntity);
+    },
     ifLavaAhead: function (callback, blockID) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.ifBlockAhead(studioApp.highlight.bind(studioApp, blockID),
@@ -865,25 +819,70 @@ Craft.executeUserCode = function () {
     },
     placeBlock: function (blockType, blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-        blockType);
+          blockType);
     },
     playSound: function (soundID, blockID) {
       appCodeOrgAPI.playSound(studioApp.highlight.bind(studioApp, blockID),
-        soundID);
+          soundID);
     },
     plantCrop: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-        "cropWheat");
+          "cropWheat");
     },
     placeTorch: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-        "torch");
+          "torch");
     },
     placeBlockAhead: function (blockType, blockID) {
       appCodeOrgAPI.placeInFront(studioApp.highlight.bind(studioApp, blockID),
-        blockType);
+          blockType);
+    },
+    moveDirection: function (direction, targetEntity, blockID) {
+      const dirStringToDirection = {
+        up: FacingDirection.Up,
+        down: FacingDirection.Down,
+        left: FacingDirection.Left,
+        right: FacingDirection.Right,
+      };
+      appCodeOrgAPI.moveDirection(studioApp.highlight.bind(studioApp, blockID),
+          dirStringToDirection[direction], targetEntity);
+    },
+    spawnEntity: function (type, direction, blockID) {
+      appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
+          type, direction);
+    },
+    wait: function (time, targetEntity, blockID) {
+      appCodeOrgAPI.wait(studioApp.highlight.bind(studioApp, blockID),
+          time, targetEntity);
+    },
+    spawnEntityRandom: function (type, blockID) {
+      var locationOptions = [
+        'up',
+        'middle',
+        'right',
+        'down',
+        'left',
+      ];
+      const direction = _.sample(locationOptions);
+
+      appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
+          type, direction);
     }
+  };
+
+  entityActionBlocks.forEach((methodName) => {
+    evalApiMethods[methodName] = function (targetEntity, blockID) {
+      appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity);
+    };
   });
+
+  entityActionTargetDropdownBlocks.forEach((methodName) => {
+    evalApiMethods[methodName] = function (targetEntity, moveTo, blockID) {
+      appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity, moveTo);
+    };
+  });
+
+  codegen.evalWith(code, evalApiMethods, true);
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
     if (Craft.level.freePlay) {
       return;

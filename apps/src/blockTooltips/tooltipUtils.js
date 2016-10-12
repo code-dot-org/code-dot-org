@@ -1,6 +1,4 @@
 /* global ace */
-'use strict';
-
 var _ = require('lodash');
 
 /**
@@ -114,10 +112,10 @@ exports.findFunctionAndParamNumber = function (editor, position) {
         break;
       case "punctuation.operator":
         if (seenCloserStack.length === 0) {
-          if (_.contains(token.value, ';')) {
+          if (_.includes(token.value, ';')) {
             return null;
           }
-          if (_.contains(token.value, ',')) {
+          if (_.includes(token.value, ',')) {
             sameDepthPrecedingCommaCount += countNumberOfCharacter(token.value, ',');
           }
         }

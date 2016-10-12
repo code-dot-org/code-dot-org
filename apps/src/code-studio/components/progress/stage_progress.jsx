@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 import { stageProgressShape } from './types';
 import ProgressDot from './progress_dot.jsx';
@@ -24,6 +25,7 @@ const styles = {
  */
 const StageProgress = React.createClass({
   propTypes: {
+    stageId: React.PropTypes.number,
     levels: stageProgressShape,
     courseOverviewPage: React.PropTypes.bool
   },
@@ -32,6 +34,7 @@ const StageProgress = React.createClass({
     const progressDots = this.props.levels.map((level, index) =>
       <ProgressDot
         key={index}
+        stageId={this.props.stageId}
         level={level}
         courseOverviewPage={this.props.courseOverviewPage}
       />
@@ -44,7 +47,19 @@ const StageProgress = React.createClass({
     );
   }
 });
-export default connect((state, ownProps) => ({
-  // When rendering StageProgress directly (in the header) only show one stage.
-  levels: ownProps.levels || state.stages[0].levels
-}))(StageProgress);
+export default connect((state, ownProps) => {
+  let levels = ownProps.levels;
+  const stageId = ownProps.stageId || state.progress.currentStageId;
+  if (!levels) {
+    // When rendering in the context of a course page, we expect to have levels
+    // passed in to us directly. Otherwise, extract them by finding the current
+    // stageId
+    const currentStage = _.find(state.progress.stages, stage => stage.id === stageId);
+    levels = currentStage.levels;
+  }
+
+  return {
+    levels,
+    stageId
+  };
+})(StageProgress);

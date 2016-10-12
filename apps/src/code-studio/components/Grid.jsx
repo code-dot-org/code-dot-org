@@ -1,11 +1,11 @@
 import React from 'react';
+import { SquareType } from '@cdo/apps/studio/constants';
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
-var studioConstants = require('@cdo/apps/studio/constants');
 
 var studioTiles = {
-  [studioConstants.SquareType.OPEN]: 'none',
-  [studioConstants.SquareType.SPRITEFINISH]: 'goal',
-  [studioConstants.SquareType.SPRITESTART]: 'sprite',
+  [SquareType.OPEN]: 'none',
+  [SquareType.SPRITEFINISH]: 'goal',
+  [SquareType.SPRITESTART]: 'sprite',
 };
 
 // This list is duplicated in StudioCellEditor. See comment there for
@@ -54,7 +54,7 @@ var Cell = React.createClass({
     if (this.props.skin === 'playlab') {
       classNames.push('playlab', studioTiles[cell.getTileType()]);
 
-      if (cell.getTileType() === studioConstants.SquareType.SPRITESTART && cell.sprite_ !== undefined) {
+      if (cell.getTileType() === SquareType.SPRITESTART && cell.sprite_ !== undefined) {
         tdStyle.backgroundImage = "url('/blockly/media/skins/studio/" + studioAvatarList[cell.sprite_] + "_spritesheet_200px.png')";
       }
     } else {

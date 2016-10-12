@@ -2,9 +2,11 @@ import { ApplabInterfaceMode } from '../constants';
 import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
 import DataTable from './DataTable';
+import Dialog from '../../templates/Dialog';
 import React from 'react';
 import PaneHeader, { PaneSection } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
+import { clearWarning } from '../redux/data';
 import msg from '@cdo/locale';
 import color from '../../color';
 
@@ -26,10 +28,18 @@ const styles = {
 
 const DataWorkspace = React.createClass({
   propTypes: {
+    // from redux state
     localeDirection: React.PropTypes.string.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
-    isVisible: React.PropTypes.bool.isRequired
+    isVisible: React.PropTypes.bool.isRequired,
+    warningMsg: React.PropTypes.string.isRequired,
+    warningTitle: React.PropTypes.string.isRequired,
+    isWarningDialogOpen: React.PropTypes.bool.isRequired,
+
+    // from redux dispatch
+    onClearWarning: React.PropTypes.func.isRequired,
   },
+
   render() {
     var style = {
       display: this.props.isVisible ? 'block' : 'none'
@@ -56,6 +66,14 @@ const DataWorkspace = React.createClass({
           <DataProperties/>
           <DataTable/>
         </div>
+        <Dialog
+          body={this.props.warningMsg}
+          confirmText="Ok"
+          isOpen={this.props.isWarningDialogOpen}
+          handleClose={this.props.onClearWarning}
+          onConfirm={this.props.onClearWarning}
+          title={this.props.warningTitle}
+        />
       </div>
     );
   }
@@ -64,5 +82,12 @@ const DataWorkspace = React.createClass({
 export default connect(state => ({
   localeDirection: state.pageConstants.localeDirection,
   isRunning: !!state.runState.isRunning,
-  isVisible: ApplabInterfaceMode.DATA === state.interfaceMode
+  isVisible: ApplabInterfaceMode.DATA === state.interfaceMode,
+  warningMsg: state.data.warningMsg,
+  warningTitle: state.data.warningTitle || '',
+  isWarningDialogOpen: state.data.isWarningDialogOpen,
+}), dispatch => ({
+  onClearWarning() {
+    dispatch(clearWarning());
+  },
 }))(DataWorkspace);

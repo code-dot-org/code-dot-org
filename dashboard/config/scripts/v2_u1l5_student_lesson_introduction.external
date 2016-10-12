@@ -1,25 +1,35 @@
 name 'v2 U1L5 Student Lesson Introduction'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-markdown <<MARKDOWN
-# Unit 1: Lesson 5 - Binary Numbers
-
-## Background
-
-Binary number patterns occur over and over in computing contexts. A proper number system represents values and enables counting and arithmetic. Predictive rules for counting is one trademark of all number systems. Certain numbers occur over and over in computing (2, 4, 8, 16, 32, 64...). In a computer, numbers are represented as binary. The numbers listed earlier represent the highest value that can be represented with each additional binary digit.
-
-## Lesson
-
-* Represent numbers with patterns of only two symbols - 0 and 1.
-* Write numbers using 4 bits.
-* Convert between binary and decimal numbers.
-
-## Resources
-
-* <a href='https://docs.google.com/document/d/14Kd3TgqxTgjesmc6-8JwoFL4w-1tRnQWwLvbAzDBjIs/edit?usp=sharing' target='_blank' class='print_link'>Binary Practice</a> - Activity Guide (<a href='https://docs.google.com/document/d/14Kd3TgqxTgjesmc6-8JwoFL4w-1tRnQWwLvbAzDBjIs/export?format=pdf' class='print_link'>download</a>)
-* Binary Game: <a href="http://forums.cisco.com/CertCom/game/binary_game_page.htm" target=_blank> Binary Game </a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted 'VYXDZi3XG8LzqIjgO0CO2msq+FO/lBD+b2fcqHlryS1T5ILE+EVqodSQfCrB
+Sj8eeiqMkcwprXEzyVVh/QIWIbtPy5SZdgDLwXdcFp7T2TcDpAw+qx45YRcC
+/iiaBUGRCWnmkgJpTHdcL3HZ+mykCX9EsWoLRm4m0Z4W7mcYjc8c7nTXtOdm
+banP2XNUSWWiCtmLBtLt8/8rAM8dkD4FBKPIWWVtvpZkkD8w+UPKiJRZPyk7
+s7yme1lu+In/QII4dZJyx9T4B5J9/cwywHd8Ba3Y9onfkWHMvTpGSZRRsKc1
+rQ+Wf6RJlVME50VkB9G4acYSv6ftsKpjTEhBKrsRPv79ggU/IMK4TD0bhQIo
+ViJB0htr5xhjl8TTLyUSseJPvc42c8St3pabFIV5Swb+GlGJu5EjFCmO8il9
+JUjL5FKfmuWcOiP1T02FAeWEZx7cDNebFflUSrS7ZwryHXrOTFutPEIypAFA
+TIshVatMQbK+3T/O8WIguVZ/rGBLqDDC0wRcgzVCLuQs7BRyt6VS4HH8RgV4
+c3v10dqObeZRIo9yuQXnMXYKvmxkoMfgc42YuaV7DxakuUL1caGvhyDs/wLg
+EKWwVsbFhIiOULJ/4DtjUtDBtBw0jng3+5MRrSFrGeOoOIDy9V+v8PJQWbGs
+iow6RWD6wlAjk7/tdKWa+RZd9GxYdZrUckdntXsM4TFTzhuUQEMNqZfbzVoq
+P+L5PAkc62D9HtrZT7O0avYntwnS3i8GItefynmW8xT64bH/45EXNiw68yMr
+cYLUMYpNTD1XtzQHN9kT9L2poLeb8aVZsUmKOd0yPsRhVNisMayqDUnUrfAe
+HOJMrGjJU7g8yGx0aRkvJrhHXJyCIXjvyqFC45AQpMYffBAyWakCYBZMRSGh
+P7c92dF/wpJGYD/Zf8+BS30xK4LxDykEbfY+msg2i8dSBjUHHj/EzDMf128p
+aT19i7UZYlVPOfZPTK5BlGYhjrWC3kj3AAY0x9SMVO+3EiNoy5h68IFUwDYK
+7oDAYfuz9JTMA2q/g8quIQBdKR4rDL/fBgWI4gW7VHVXC1w+zk0A0Y6sq2ag
+TYIXIeWORgN1ASTtnWFN6bwLrIb7dwdeAdUQXhCnXP5j3+LgQke/HGG2wW0a
+TxhF0p/2iiDUtNDPcasKvUn1y9zE3Q+vaIqCNPO1DBza4MfTMM76OOt12qZ+
+CZv176jIq9Jm0wyNT3dLrvXJJ/2H7TH8jQg5wqQ4aY7/naxO7II2KDuC9DJ3
+0dVRMZVHBr9k6COPhCDx3Cyc5gNHEINsRtXYUyXaZSW5+hpIbnByb7x/vx2l
+F3ekYwlyaUr+V4JRPfEg0c7TutyC6euVB7KIVBW2O5UUFDXEffah6c2TIhY+
+Xl++cXH5sQOQxq7oK7xAArXnBBmU71UD0epS3aphg1VD6UPCEDdZGkOqZCPY
+doMynn+CWvBtJo4BffGBa232UhMhsY5FCcxHA6oxEzkao1eae0HXoVFteYlT
+uRFHnajFBSrQnCxJwU/CMbv9/rauh4OKk9SWAcqz2NJ7O7uEW93sZW7BZwGB
+8sxuXlPmlMwZ7sXLN37I+0mHkjhKjojCdetesUeziqMK+WjYoKpAJt+m5Ot1
+o+rDu6HRazQOPWCqkrceRSyoAoqYJQDs9hPmg08+eok2fz3pIwWtTKRM2ijl
+Sonj/aqRGCEV06wGYFZnq+iRwxnaMdO274E9wccnwIhOX5m2W5vfVl+J0RZ6
+mE7zOF1ZhoVeZ5P323v+jo56UsvO07oH7p/VDk4d1iS6Enzr2GyVi0nYjImh
+WmfGnadgZD2OCinVs8FbRhF0btqQlc5d6MEmWFn0GPgiP8YnWWx3cgK9bjju
+wrJk5RtPS1+c1nzz5TNcrERPAp+Dh15dsy71BqVOQ6sLZD3mEm26wSnckTlo
+PazGW9JfjEz2Okhx8b5ITQ==
+'

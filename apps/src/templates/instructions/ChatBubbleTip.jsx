@@ -1,15 +1,17 @@
 import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
+import { connect } from 'react-redux';
 
-const ChatBubbleTip = ({ color, background }) => {
+const ChatBubbleTip = ({ isRtl, color, background }) => {
   background = background || 'white';
-  color = color || background;
+  color = color || 'none';
 
   const styles = {
     svg: {
       position: 'absolute',
-      left: -24,
+      left: isRtl ? undefined : -24,
+      right: isRtl ? -24 : undefined,
       bottom: 5
     },
     polyline: {
@@ -21,14 +23,23 @@ const ChatBubbleTip = ({ color, background }) => {
 
   return (
     <svg height="30" width="30" style={styles.svg}>
-      <polyline points="25,25 5,25 25,5" style={styles.polyline} strokeDasharray="3,3"></polyline>
+      <polyline
+        points={isRtl ? "5,25 25,25 5,5" : "25,25 5,25 25,5"}
+        style={styles.polyline}
+        strokeDasharray="3,3"
+      />
     </svg>
   );
 };
 
 ChatBubbleTip.propTypes = {
   color: React.PropTypes.string,
-  background: React.PropTypes.string
+  background: React.PropTypes.string,
+  isRtl: React.PropTypes.bool.isRequired
 };
 
-export default Radium(ChatBubbleTip);
+export default connect(state => {
+  return {
+    isRtl: state.pageConstants.localeDirection === 'rtl',
+  };
+})(Radium(ChatBubbleTip));

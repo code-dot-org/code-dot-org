@@ -3,20 +3,22 @@ import $ from 'jquery';
 import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
 import ReactDOM from 'react-dom';
-var DesignWorkspace = require('./DesignWorkspace');
-var assetPrefix = require('../assetManagement/assetPrefix');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var studioApp = require('../StudioApp').singleton;
-var KeyCodes = require('../constants').KeyCodes;
-var applabConstants = require('./constants');
-var designMode = module.exports;
-var sanitizeHtml = require('./sanitizeHtml');
-var utils = require('../utils');
-var gridUtils = require('./gridUtils');
-var logToCloud = require('../logToCloud');
-var actions = require('./actions');
-var screens = require('./redux/screens');
+import DesignWorkspace from './DesignWorkspace';
+import assetPrefix from '../assetManagement/assetPrefix';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import {singleton as studioApp} from '../StudioApp';
+import {KeyCodes} from '../constants';
+import * as applabConstants from './constants';
+import sanitizeHtml from './sanitizeHtml';
+import * as utils from '../utils';
+import * as gridUtils from './gridUtils';
+import logToCloud from '../logToCloud';
+import * as actions from './actions';
+import * as screens from './redux/screens';
+
+var designMode = {};
+export default designMode;
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
@@ -280,7 +282,7 @@ designMode.updateProperty = function (element, name, value) {
         backgroundImage.onload = fitImage;
       }
       break;
-    case 'screen-image':
+    case 'screen-image': {
       element.setAttribute('data-canonical-image-url', value);
 
       // We stretch the image to fit the element
@@ -288,10 +290,18 @@ designMode.updateProperty = function (element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = ICON_PREFIX_REGEX.test(value) ? assetPrefix.renderIconToString(value, element) : assetPrefix.fixPath(value);
+      let url;
+      if (ICON_PREFIX_REGEX.test(value)) {
+        url = assetPrefix.renderIconToString(value, element);
+      } else {
+        const screenImage = new Image();
+        screenImage.src = assetPrefix.fixPath(value);
+        url = screenImage.src;
+      }
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
+    }
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -536,7 +546,7 @@ designMode.onDepthChange = function (element, depthDirection) {
 
 designMode.onInsertEvent = function (code) {
   Applab.appendToEditor(code);
-  $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
+  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
   Applab.scrollToEnd();
 };
 
@@ -639,7 +649,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   }
 
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
-  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml, true));
   var children = $(levelDom).children();
   children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
@@ -1126,7 +1136,7 @@ designMode.renderDesignWorkspace = function (element) {
  */
 designMode.addScreenIfNecessary = function (html) {
   var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
-  html = sanitizeHtml(html, reportUnsafeHtml);
+  html = sanitizeHtml(html, reportUnsafeHtml, true);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {

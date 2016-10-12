@@ -1,0 +1,96 @@
+@import 'color';
+@import 'font';
+
+.accept-terms-reminder {
+  background-color: $lightest_orange;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: $gotham-regular;
+  color: $dark_charcoal;
+  font-size: 14px;
+}
+
+.teacher-announce {
+  position: relative;
+  font-family: $gotham-regular;
+  color: $dark_charcoal;
+  font-size: 14px;
+
+  .announce-heading {
+    background-color: $cyan;
+    border-radius: 4px;
+    color: $white;
+    height: 40px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    font-family: $gotham-regular;
+    font-size: 20px;
+  }
+
+  .announce-content {
+    background-color: $lightest_cyan;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+    min-height: 110px;
+
+    .content-img-container {
+      float: left;
+    }
+
+    .content-img {
+      border-radius: 4px;
+      max-height: 145px;
+    }
+
+    .content-text {
+      float: left;
+      max-height: 100px;
+      overflow: hidden;
+      padding-left: 10px;
+      line-height: 20px;
+      width: 590px;
+
+      a {
+        color: $cyan;
+      }
+
+      b {
+        font-family: $gotham-bold;
+      }
+    }
+    .announce-learn-more {
+      position: relative;
+      float: right;
+      margin-top: 75px;
+    }
+    .announce-learn-more .primary {
+      background-color: $cyan;
+      border-color: $cyan;
+    }
+  }
+
+  .mini-announcement {
+    background-color: $lightest_cyan;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+    min-height: 20px;
+
+    .content-text {
+      width: 900px;
+
+      a {
+        color: $cyan;
+      }
+
+      .fa {
+        margin: 0 10px 0 5px;
+      }
+    }
+  }
+}

@@ -24,8 +24,7 @@ class ActivitiesController < ApplicationController
       @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
-      # TODO: do we need a cache_find for Level like we have for ScriptLevel?
-      @level = Level.find(params[:level_id].to_i)
+      @level = Script.cache_find_level(params[:level_id].to_i)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -53,6 +52,14 @@ class ActivitiesController < ApplicationController
       unless share_failure
         @level_source = LevelSource.find_identical_or_create(@level, params[:program])
         slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
+      end
+    end
+
+    if current_user && @script_level && @script_level.stage.lockable?
+      user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
+      # we have a lockable stage, and user_level is locked. disallow milestone requests
+      if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
+        return head 403
       end
     end
 
@@ -89,7 +96,6 @@ class ActivitiesController < ApplicationController
     render json: milestone_response(script_level: @script_level,
                                     level: @level,
                                     total_lines: total_lines,
-                                    trophy_updates: @trophy_updates,
                                     solved?: solved,
                                     level_source: @level_source.try(:hidden) ? nil : @level_source,
                                     level_source_image: @level_source_image,
@@ -97,11 +103,15 @@ class ActivitiesController < ApplicationController
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
 
-    slog(:tag => 'activity_finish',
-         :script_level_id => @script_level.try(:id),
-         :level_id => @level.id,
-         :user_agent => request.user_agent,
-         :locale => locale) if solved
+    if solved
+      slog(
+        :tag => 'activity_finish',
+        :script_level_id => @script_level.try(:id),
+        :level_id => @level.id,
+        :user_agent => request.user_agent,
+        :locale => locale
+      )
+    end
 
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
     log_milestone(@level_source, params)
@@ -151,10 +161,10 @@ class ActivitiesController < ApplicationController
       @new_level_completed = current_user.track_level_progress_async(
         script_level: @script_level,
         new_result: test_result,
-        submitted: params[:submitted],
+        submitted: params[:submitted] == "true",
         level_source_id: @level_source.try(:id),
         level: @level,
-        pairings: pairings
+        pairing_user_ids: pairing_user_ids
       )
     end
 
@@ -169,12 +179,6 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
-
-    begin
-      trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
-    rescue StandardError => e
-      Rails.logger.error "Error updating trophy exception: #{e.inspect}"
-    end
   end
 
   def track_progress_in_session
@@ -186,41 +190,6 @@ class ActivitiesController < ApplicationController
       @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
 
       client_state.add_script(@script_level.script_id)
-    end
-  end
-
-  def trophy_check(user)
-    @trophy_updates ||= []
-    # called after a new activity is logged to assign any appropriate trophies
-    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by(&:concept)
-    progress = user.concept_progress
-
-    progress.each_pair do |concept, counts|
-      current = current_trophies[concept]
-      pct = counts[:current].to_f / counts[:max]
-
-      new_trophy = Trophy.find_by_id(
-        case
-        when pct == Trophy::GOLD_THRESHOLD
-          Trophy::GOLD
-        when pct >= Trophy::SILVER_THRESHOLD
-          Trophy::SILVER
-        when pct >= Trophy::BRONZE_THRESHOLD
-          Trophy::BRONZE
-        end
-      )
-
-      if new_trophy
-        if new_trophy.id == current.try(:trophy_id)
-          # they already have the right trophy
-        elsif current
-          current.update_attributes!(trophy_id: new_trophy.id)
-          @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        else
-          UserTrophy.create!(user: user, trophy_id: new_trophy.id, concept: concept)
-          @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        end
-      end
     end
   end
 

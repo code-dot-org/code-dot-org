@@ -1,13 +1,10 @@
-'use strict';
-
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var commonMsg = require('@cdo/locale');
-var msg = require('./locale');
+var msg = require('@cdo/gamelab/locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
-var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -29,13 +26,22 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationList, saveAnimations} from './animationListModule';
+import {
+  animationSourceUrl,
+  setInitialAnimationList,
+  saveAnimations
+} from './animationListModule';
 import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import {GAME_WIDTH} from './constants';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -83,8 +89,6 @@ var GameLab = function () {
   this.setupInProgress = false;
   this.reportPreloadEventHandlerComplete_ = null;
   this.gameLabP5 = new GameLabP5();
-  this.api = api;
-  this.api.injectGameLab(this);
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
 
@@ -95,6 +99,13 @@ var GameLab = function () {
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
+
+  /** Expose for levelbuilder */
+  window.printSerializedAnimationList = () => {
+    this.getExportableAnimationList(list => {
+      console.log(JSON.stringify(list, null, 2));
+    });
+  };
 };
 
 module.exports = GameLab;
@@ -133,7 +144,15 @@ GameLab.prototype.init = function (config) {
     throw new Error("GameLab requires a StudioApp");
   }
 
+  if (!config.level.editCode) {
+    throw 'Game Lab requires Droplet';
+  }
+
   this.skin = config.skin;
+  this.skin.smallStaticAvatar = null;
+  this.skin.staticAvatar = null;
+  this.skin.winAvatar = null;
+  this.skin.failureAvatar = null;
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
@@ -146,6 +165,8 @@ GameLab.prototype.init = function (config) {
   }
 
   config.usesAssets = true;
+
+  gameLabSprite.injectLevel(this.level);
 
   this.gameLabP5.init({
     gameLab: this,
@@ -184,7 +205,11 @@ GameLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  var breakpointsEnabled = !config.level.debuggerDisabled;
+  // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug
+  // features are fixed.
+  var breakpointsEnabled = false;
+  config.enableShowCode = true;
+  config.enableShowLinesCount = false;
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
@@ -214,13 +239,14 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var showDebugButtons = (!config.hideSource &&
-                          config.level.editCode &&
-                          !config.level.debuggerDisabled);
-  var showDebugConsole = !config.hideSource && config.level.editCode;
+
+  // TODO(caleybrock): re-enable based on (!config.hideSource && !config.level.debuggerDisabled)
+  // when debug features are fixed.
+  var showDebugButtons = false;
+  var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
-    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
   }
 
   this.studioApp_.setPageConstants(config, {
@@ -229,7 +255,9 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
-    showAnimationMode: !config.level.hideAnimationMode
+    showDebugSlider: false,
+    showAnimationMode: !config.level.hideAnimationMode,
+    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
   });
 
   // Push project-sourced animation metadata into store
@@ -244,8 +272,6 @@ GameLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
-
-  this.studioApp_.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -409,7 +435,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit) {
+GameLab.prototype.onPuzzleComplete = function () {
   if (this.executionError) {
     this.result = this.studioApp_.ResultType.ERROR;
   } else {
@@ -418,28 +444,28 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   }
 
   // If we know they succeeded, mark levelComplete true
-  var levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+  const levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
 
   if (this.executionError) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
-  } else if (!submit) {
+  } else {
     this.testResults = this.studioApp_.TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
   this.reset();
 
-  var program;
-  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
-
+  let program;
+  const containedLevelResultsInfo = this.studioApp_.hasContainedLevels &&
+    getContainedLevelResultInfo();
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
     this.testResults = this.studioApp_.TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
-  } else if (this.level.editCode) {
+  } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -447,10 +473,6 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
     program = encodeURIComponent(this.studioApp_.getCode());
-    this.message = null;
-  } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = encodeURIComponent(Blockly.Xml.domToText(xml));
     this.message = null;
   }
 
@@ -462,26 +484,33 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
 
   this.waitingForReport = true;
 
-  var sendReport = function () {
-    this.studioApp_.report({
-      app: 'gamelab',
-      level: this.level.id,
-      result: levelComplete,
-      testResult: this.testResults,
-      submitted: submit,
-      program: program,
-      image: this.encodedFeedbackImage,
-      containedLevelResultsInfo: containedLevelResultsInfo,
-      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
-    });
+  const sendReport = () => {
+    const onComplete = this.onReportComplete.bind(this);
+
+    if (containedLevelResultsInfo) {
+      // We already reported results when run was clicked. Make sure that call
+      // finished, then call onCompelte
+      runAfterPostContainedLevel(onComplete);
+    } else {
+      this.studioApp_.report({
+        app: 'gamelab',
+        level: this.level.id,
+        result: levelComplete,
+        testResult: this.testResults,
+        program: program,
+        image: this.encodedFeedbackImage,
+        submitted: false,
+        onComplete
+      });
+    }
 
     if (this.studioApp_.isUsingBlockly()) {
       // reenable toolbox
       Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     }
-  }.bind(this);
+  };
 
-  var divGameLab = document.getElementById('divGameLab');
+  const divGameLab = document.getElementById('divGameLab');
   if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
     sendReport();
   } else {
@@ -528,6 +557,8 @@ GameLab.prototype.runButtonClick = function () {
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
+
+  postContainedLevelAttempt(this.studioApp_);
 };
 
 function p5KeyCodeFromArrow(idBtn) {
@@ -664,27 +695,6 @@ GameLab.prototype.onMouseUp = function (e) {
   this.resetDPad();
 };
 
-GameLab.prototype.evalCode = function (code) {
-  try {
-    codegen.evalWith(code, {
-      GameLab: this.api
-    });
-  } catch (e) {
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      window.alert(e);
-    }
-  }
-};
-
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -708,15 +718,10 @@ GameLab.prototype.execute = function () {
 
   this.gameLabP5.startExecution();
 
-  if (this.level.editCode) {
-    if (!this.JSInterpreter ||
-        !this.JSInterpreter.initialized() ||
-        this.executionError) {
-      return;
-    }
-  } else {
-    this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
-    this.evalCode(this.code);
+  if (!this.JSInterpreter ||
+      !this.JSInterpreter.initialized() ||
+      this.executionError) {
+    return;
   }
 
   this.studioApp_.playAudio('start');
@@ -731,10 +736,6 @@ GameLab.prototype.execute = function () {
 };
 
 GameLab.prototype.initInterpreter = function () {
-  if (!this.level.editCode) {
-    return;
-  }
-
   codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
 
   var self = this;
@@ -1068,11 +1069,30 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
- * @return {AnimationList}
+ * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getSerializedAnimationList = function (callback) {
   this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
     callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  }));
+};
+
+/**
+ * Get the project's animation metadtaa, this time for use in a level
+ * configuration.  The major difference with SerializedAnimationList is that
+ * it includes a sourceUrl for local project animations.
+ * @param {function(SerializedAnimationList)} callback
+ */
+GameLab.prototype.getExportableAnimationList = function (callback) {
+  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
+    let list = getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
+    list.orderedKeys.forEach(key => {
+      let props = list.propsByKey[key];
+      props.sourceUrl = document.location.protocol + '//' +
+          document.location.host +
+          animationSourceUrl(key, props);
+    });
+    callback(list);
   }));
 };
 

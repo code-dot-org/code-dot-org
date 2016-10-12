@@ -1,17 +1,22 @@
-/*
-  Main landing page and router for the workshop dashboard.
+/* global window */
+
+/**
+ * Main landing page and router for the workshop dashboard.
  */
 import React from 'react';
-const Router = require('react-router').Router;
-const Route = require('react-router').Route;
-const IndexRedirect = require('react-router').IndexRedirect;
-const useRouterHistory = require('react-router').useRouterHistory;
-const createHistory = require('history').createHistory;
-const NewWorkshop = require('./new_workshop');
-const Workshop = require('./workshop');
-const Header = require('./header');
-const WorkshopIndex = require('./workshop_index');
-const WorkshopAttendance = require('./attendance/workshop_attendance');
+import {
+  Router,
+  Route,
+  IndexRedirect,
+  useRouterHistory
+} from 'react-router';
+import {createHistory} from 'history';
+import NewWorkshop from './new_workshop';
+import Workshop from './workshop';
+import Header from './header';
+import SurveyResults from './survey_results.jsx';
+import WorkshopIndex from './workshop_index';
+import WorkshopAttendance from './attendance/workshop_attendance';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
@@ -26,6 +31,11 @@ const WorkshopDashboard = (
         path="workshops"
         breadcrumbs="Workshops"
         component={WorkshopIndex}
+      />
+      <Route
+        path="survey_results"
+        breadcrumbs="Survey Results"
+        component={SurveyResults}
       />
       <Route
         path="workshops/new"
@@ -53,5 +63,5 @@ const WorkshopDashboard = (
   </Router>
 );
 
-module.exports = WorkshopDashboard;
+export default WorkshopDashboard;
 window.WorkshopDashboard = WorkshopDashboard;

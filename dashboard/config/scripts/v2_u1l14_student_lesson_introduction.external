@@ -1,31 +1,32 @@
 name 'v2 U1L14 Student Lesson Introduction'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-# Unit 1: Lesson 14 - The Internet and Society
-
-## Background
-
-The Internet and the technologies built upon it have been immensely impactful on society. They have allowed people from across the world to communicate and collaborate at the speed of light. You've learned about the physical nature of networks: Internet Protocols, routing, packets, scaling, redundancy, reliability, DNS, and HTTP. Now you will get a chance to investigate how these technologies have connections to the social impacts of the internet.  You will research an area of focus under one of three major topics
-
-* Net Neutrality
-* Internet Censorship
-* Network Surveillance 
-
-You will research the topic and develop a 2-minute flash talk on an aspect that is personally meaningful. This lesson is essential practice for the Explore Performance Task later on in the school year.
-
-## Lesson
-
-* Pick and research a topic
-* Create (write) a flash talk
-* Present
-
-## Resources
-
-* Practice PT - <a href="https://docs.google.com/document/d/12xUM2C-exWlwQDZuxrlR0VjyiFyZql8Gj3Wu1FWHfc8/edit#" target="_blank"> Flash Talk: The Internet and Society</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted 'kVY7FLUn/9c29n0AHT0l152jrUi5OIrdsHYDVkKsqntmsfyTpnAZKBRKdb0g
+6WRzbqil0EfZmChtwtA6FqjEk0Q6jmTe855rXli/jxpXpyqB0Z4Z1Ag9arh8
+2Z2G5dk3L4Bl1zCkrPzWk/wJfAJHy9puHjjde/5Bo9q10Xs5kokNDj8lhD2c
+TLfVJaqQ7YJ1QuWPiNG8F6JXWkucY76dB+j4Ek9IepYTXxgx8aujmLmdslBM
+h+If4n+iLclAmySXcaPG14WTsP5m7T+E2k74PkdBdT5fX5izjVrPgTCJSFvE
+S73fKFboxElgnPIZgnD4YPJibzo1fnvzsLDXH0nEattdI+jgcNMmq77QC3tR
+W0BowNsZniL8gs7588GoKXqF/icdY200OGBWL06SNzoxj24Qd0IGPDIMfgTM
+oMQX3SdsW2SNmbtQmEQ65ccikQMSG1IHppJkv4yXZIszAxUbTVX6mrwkFQz5
+J4kvWfErrdI9JwAENfuP6JA1sJl/CXomuGtF7dVaxGxfGUcyLNy3Qu5mQ+Kv
+SkUaOa9h5fxCZe5T52nSpYidCZ3JsSImuY2h4tBAb3iooeAv4TRlKcDQS/R8
+02bciQMNN+79ILOqo0Flxl8A4byQ9Urcj4FGXXyJonujEdIuvAYCfU8OQ37W
+A9OjSmY4cDXPtI8nQYk9Pd7LeQcP7xMa2VTGc7jn01G0mYWqZoEVEDEnzrD6
+0B3OriIGdslYeBlyKwd7B8ocEpXUF35iPkkdfMgBTc3D07jcZJQqiEBieZvD
+SaXhJ5rgvb7IMPhbW/hCi3qZYEg/DK9LGSDL/6eFH6mhdOW4SJnLtxOSk1ZN
+8ZUR58T5PiFMsXG/FizuxeN3muIh8+1KJVRh9PuyOfDMVarGUNDhDEru9ImC
+4qeuV+lcgIfJS4Wf5okEOtVp5x6BxjAL6YxgyEXGX4YOhmSUKFSe+cb/+qkV
+0G1+4PKJ+uJkm2+JqDtg5eaGuROw+XZIZTBcUSIDGUt/rfFUvekwbAPf+Y7u
+wCtSNMDmo5YYE1BSzLW805rV4MvG3cpwAezwRnafZd5Lwtbqso5YjOt1RddE
+lmMmPWuRP3CrtjAMEOdorAYVc7uAWjwvLwZylakQ7BOM5BaJW4taBiXOHCgp
+3XEX2wSubRAsMjoTzeqkG4oklnsGF0bmbyXeEALySCrYLJ0FPHHBkFXi5j/Y
+Ga2/Gxs8w4+dLiigbmhRBzNWQFGRLtq/fu/tYAMHRurVc/Vr565MMZGqg4kw
+XXqGGYq+pcyJfIKiilBkGW/60rBsx4ufHb30pkPKfMXSQl/Mjorh6vcz7xZJ
+AjSGjNMBgQ4BVe54LL6nkw48iJ9AmWu5UjwCRS9PBqjBK3HsyNcexH9B5kgt
+WHTQo6o9k4u67SDYkWEIHsO+RFBqCjAOoEGfrwK6wkEQHQj6ecG0mFJPoPai
+31GPjUnknZ/N2SGSOBTha7ILiGmg6J2ISjTJMuYr0n8ak0VTHo7JiHehuQuZ
+g2cHLiqNHLMJByKDwAn7DRsvYBPI3XuEgyRZH++86SN9oH77c7nOQ7a+M2ak
+dTIBmUX0/IAa9u26FBGIPCplh04rKJqI/hx/N1TLu+feiHDGRJCh4vfcvMl6
+Z7J2yTGG+6fqjUqtnlvUzVHM8wjb4O4oXR1Uz3TmZsrApe90+JM4is2x3ce5
+NH/DWYloZOFNVIXF/zjTIRMNi45T6Zpv+C8lPx+98MjtOdBuYi8hFdDK8HLD
+U8V8ko0GcZLJgOuKYeIUnGE7Z84R5io=
+'

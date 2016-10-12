@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserHelpersTest < ActiveSupport::TestCase
-
   test 'UserHelpers.sponsor_message' do
     teacher = create :teacher
 

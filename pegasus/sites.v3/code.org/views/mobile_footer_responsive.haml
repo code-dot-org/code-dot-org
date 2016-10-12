@@ -3,6 +3,9 @@
 %footer#pagefooter
   .content{:style=>'width:100%'}
     .left{:style=>'float:left'}
-      &copy; Code.org, 2015
+      - if request.language == "en"
+        %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400;"} Privacy Policy
+      %br
+      !="&copy; Code.org, #{Time.now.year}"
     .right{:style=>'float:right'}
       =view :language

@@ -1,23 +1,21 @@
 name 'ECSPD U4 D 19 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 19 Scratch -- Timer
+# Day 19 Scratch &mdash; Timer
 
 First, let's explore the twelfth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 172-175.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=172)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will complete a timer project using the "set\_to\_" block, "change\_by\_" block, variable block, conditional block, and forever block.
 
-#### Common Difficulties
+## Common Difficulties
 
 Students will have to reset the game, stop the game, keep track of points and notify the user when the game is over.  There is more than one possible solution and algorithm involved. Students might need to work together to figure out how to solve this challenge. Smaller problems that can serve as examples may also be helpful.
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -40,6 +38,6 @@ Students will have to reset the game, stop the game, keep track of points and no
 - [http://scratch.mit.edu](http://scratch.mit.edu/)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

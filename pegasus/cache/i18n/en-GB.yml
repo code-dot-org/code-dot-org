@@ -1,6 +1,6 @@
 "en-GB":
   hour_of_code: Hour of Code
-  hello: Hello world
+  hello: Hello World
   'yes': 'Yes'
   'no': 'No'
   select_language: Please select your language
@@ -55,7 +55,7 @@
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Sign up
   cded_try_it: Try it
-  twentyhours_trynow: Try now
+  try_now: Try now
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
     courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
@@ -375,6 +375,11 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
+  homepage_banner_emailprivacy: We’re making an important change to how we support
+    student privacy.
+  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Learn more
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -454,16 +459,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: Try now
   starwars_blocks_title: Blocks
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
-  starwars_blocks_start_button: Try now
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
@@ -474,6 +473,14 @@
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  are_you_teacher: Are you a teacher?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -662,6 +669,7 @@
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -671,6 +679,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -685,6 +695,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -862,20 +873,38 @@
   dashboard_faq: Frequently Asked Questions
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_message: Want to help us test a new feature? We know it’s important
-    to encourage students to iterate and experiment, so we'll be adding an "unused
-    code" feature to allow students to run their code even when there are unattached
-    blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Add your name
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Learn more
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -996,11 +1025,11 @@
   course3_name: Course 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
@@ -1023,7 +1052,7 @@
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
-  math_category_name: Math
+  math_category_name: Mathematics
   hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
@@ -1700,11 +1729,11 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1713,27 +1742,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  try_now: Try now
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

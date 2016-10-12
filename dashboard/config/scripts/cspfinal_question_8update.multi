@@ -1,0 +1,21 @@
+name 'CSPFinal_Question_8update'
+question ' '
+
+wrong ‘b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+right 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+wrong ‘a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+wrong ‘c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>’
+
+markdown <<MARKDOWN
+Consider the following three binary numbers:
+
+a. <code style="color: black">01010</code>
+
+b. <code style="color: black">010000</code>
+
+c. <code style="color: black">1110</code>
+
+**NOTICE** values have different numbers of bits
+
+Which of the following lists the numbers in order from **least to greatest**?
+MARKDOWN
