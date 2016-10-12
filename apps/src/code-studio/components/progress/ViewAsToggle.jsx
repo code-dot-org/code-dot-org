@@ -17,27 +17,34 @@ const styles = {
   },
 };
 
-const ViewAsToggle = ({viewAs, setViewType}) => (
-  /*{ className used by some code that looks at this element to determine sizing}*/
-  <div className="non-scrollable-wrapper" style={styles.main}>
-    <div style={styles.viewAs}>
-      {commonMsg.viewPageAs()}
-    </div>
-    <div style={styles.toggleGroup}>
-      <ToggleGroup
-        selected={viewAs}
-        onChange={setViewType}
-      >
-        <button value={ViewType.Student}>{commonMsg.student()}</button>
-        <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
-      </ToggleGroup>
-    </div>
-  </div>
-);
-ViewAsToggle.propTypes = {
-  viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-  setViewType: React.PropTypes.func.isRequired,
-};
+const ViewAsToggle = React.createClass({
+  propTypes: {
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    setViewType: React.PropTypes.func.isRequired,
+  },
+
+  render() {
+    const { viewAs, setViewType } = this.props;
+
+    return (
+      /*{ className used by some code that looks at this element to determine sizing}*/
+      <div className="non-scrollable-wrapper" style={styles.main}>
+        <div style={styles.viewAs}>
+          {commonMsg.viewPageAs()}
+        </div>
+        <div style={styles.toggleGroup}>
+          <ToggleGroup
+            selected={viewAs}
+            onChange={setViewType}
+          >
+            <button value={ViewType.Student}>{commonMsg.student()}</button>
+            <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
+          </ToggleGroup>
+        </div>
+      </div>
+    );
+  }
+});
 
 export default connect(state => ({
   viewAs: state.stageLock.viewAs
