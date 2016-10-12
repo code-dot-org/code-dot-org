@@ -45,6 +45,17 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ADMIN = 'Admin'
   ]
 
+  COURSE_NAMES_MAP = {
+    COURSE_CSF => 'CS Fundamentals',
+    COURSE_CSP => 'CS Principles',
+    COURSE_ECS => 'Exploring Computer Science',
+    COURSE_CS_IN_A => 'CS in Algebra',
+    COURSE_CS_IN_S => 'CS in Science',
+    COURSE_CSD => 'CS Discoveries',
+    COURSE_COUNSELOR => 'Counselor',
+    COURSE_ADMIN => 'Administrator'
+  }
+
   STATES = [
     STATE_NOT_STARTED = 'Not Started',
     STATE_IN_PROGRESS = 'In Progress',
@@ -184,7 +195,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def course_name
-    course == Pd::Workshop::COURSE_ADMIN ? 'Administrator' : course
+    COURSE_NAMES_MAP[course]
   end
 
   def friendly_name
