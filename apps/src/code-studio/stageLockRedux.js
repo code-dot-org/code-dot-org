@@ -48,7 +48,6 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_SECTIONS) {
-    const sectionId = Object.keys(action.sections)[0];
     return {
       ...state,
       bySection: _.mapValues(action.sections, section => section.stages)
@@ -62,7 +61,7 @@ export default function reducer(state = initialState, action) {
     }
     // If we have a lockStatus (i.e. from an open dialog) we need to update
     // it with the new section
-    const { lockDialogStageId, lockStatus } = state;
+    const { lockDialogStageId } = state;
     if (lockDialogStageId) {
       return {
         ...state,

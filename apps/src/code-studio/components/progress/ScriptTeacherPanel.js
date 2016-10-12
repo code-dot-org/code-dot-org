@@ -113,7 +113,6 @@ export default connect((state, ownProps) => {
   const { viewAs, bySection, lockableAuthorized } = state.stageLock;
   const { sectionsLoaded, selectedSection, sectionIds } = state.sections;
   const currentSection = bySection[selectedSection];
-  const stages = currentSection ? currentSection.stages : {};
 
   const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSection]);
   const unlockedStageIds = Object.keys(currentSection || {})
