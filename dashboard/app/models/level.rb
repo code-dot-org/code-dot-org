@@ -179,9 +179,13 @@ class Level < ActiveRecord::Base
   end
 
   def update_level_in_cache
-    return unless Script.should_cache?
-    Level.level_cache[id] = self if Level.level_cache.key? id
-    Level.level_cache[name] = self if Level.level_cache.key? name
+    return unless Script.should_cache? && Level.level_cache.key?(id)
+    Level.level_cache[id] = self
+    Level.level_cache[name] = self
+    script_levels.each do |sl|
+      ScriptLevel.script_level_cache[sl.id].levels = ScriptLevel.includes(
+        {levels: [:game, :concepts, :level_concept_difficulty]}).find(sl.id).levels
+    end
   end
 
   def delete_level_from_cache
