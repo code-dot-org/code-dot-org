@@ -2129,9 +2129,9 @@ en:
         basketball:
           stage:
             Bounce: Bounce
-          title: ''
+          title: Basketball
           description_audience: ''
-          description_short: ''
+          description_short: Code your own basketball game
           description: ''
         sample-csp5:
           stage:
