@@ -161,6 +161,7 @@ class ScriptDSL < BaseDSL
 
     script.stages.each do |stage|
       t = "stage '#{stage.name}'"
+      t += ', lockable: true' if stage.lockable
       t += ", flex_category: '#{stage.flex_category}'" if stage.flex_category
       s << t
       stage.script_levels.each do |sl|
