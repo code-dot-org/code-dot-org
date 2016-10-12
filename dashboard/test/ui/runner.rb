@@ -203,6 +203,10 @@ $logfile = File.open("success.log", "w")
 $errfile = File.open("error.log", "w")
 $errbrowserfile = File.open("errorbrowsers.log", "w")
 
+def prefix_string(msg, prefix)
+  msg.to_s.lines.map { |line| "#{prefix}#{line}" }.join
+end
+
 def log_success(msg)
   $logfile.puts msg
   puts msg if $options.verbose
@@ -218,9 +222,9 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(env, arguments)
+def run_tests(env, arguments, log_prefix)
   start_time = Time.now
-  puts "cucumber #{arguments}"
+  puts "#{log_prefix}cucumber #{arguments}"
   Open3.popen3(env, "cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
@@ -253,6 +257,7 @@ ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
 applitools_batch_url = nil
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+puts
 if test_type == 'Eyes'
   # Generate a batch ID, unique to this test run.
   # Each Eyes instance will use the same one so that tests from this
@@ -348,6 +353,7 @@ parallel_config = {
 run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
+  log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
 
   if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
@@ -367,7 +373,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
 
   # Don't log individual tests because we hit HipChat rate limits
   # HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
-  print "Starting UI tests for #{test_run_string}\n"
+  puts "#{log_prefix}Starting UI tests for #{test_run_string}"
 
   run_environment = {}
   run_environment['BROWSER_CONFIG'] = browser_name
@@ -415,7 +421,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   arguments += " --format html --out #{html_output_filename} -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
   # return all text after "Failing Scenarios"
-  def output_synopsis(output_text)
+  def output_synopsis(output_text, log_prefix)
     # example output:
     # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
     #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
@@ -432,9 +438,9 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
 
     failing_scenarios = lines.rindex("Failing Scenarios:\n")
     if failing_scenarios
-      lines[failing_scenarios..-1].join
+      return lines[failing_scenarios..-1].map { |line| "#{log_prefix}#{line}" }.join
     else
-      lines.last(3).join
+      return lines.last(3).map { |line| "#{log_prefix}#{line}" }.join
     end
   end
 
@@ -485,7 +491,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   FileUtils.rm rerun_filename, force: true
 
   reruns = 0
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments, log_prefix)
   log_link = upload_log_and_get_public_link(html_output_filename, {
       commit: COMMIT_HASH,
       success: succeeded.to_s,
@@ -496,13 +502,13 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
-    HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
+    HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
     # Since output_stderr is empty, we do not log it to HipChat.
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments, log_prefix)
     log_link = upload_log_and_get_public_link(html_output_filename, {
         commit: COMMIT_HASH,
         duration: test_duration.to_s,
@@ -510,19 +516,20 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
         success: succeeded.to_s
     })
   end
+  HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
 
   $lock.synchronize do
     if succeeded
-      log_success Time.now
-      log_success browser.to_yaml
-      log_success output_stdout
-      log_success output_stderr
+      log_success prefix_string(Time.now, log_prefix)
+      log_success prefix_string(browser.to_yaml, log_prefix)
+      log_success prefix_string(output_stdout, log_prefix)
+      log_success prefix_string(output_stderr, log_prefix)
     else
-      log_error Time.now
-      log_error browser.to_yaml
-      log_error output_stdout
-      log_error output_stderr
-      log_browser_error browser.to_yaml
+      log_error prefix_string(Time.now, log_prefix)
+      log_error prefix_string(browser.to_yaml, log_prefix)
+      log_error prefix_string(output_stdout, log_prefix)
+      log_error prefix_string(output_stderr, log_prefix)
+      log_browser_error prefix_string(browser.to_yaml, log_prefix)
     end
   end
 
@@ -543,9 +550,9 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
-    HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
+    HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
+    HipChat.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
+    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
     message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
@@ -560,7 +567,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     else
       'failed'.red
     end
-  print "UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})\n"
+  puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})", log_prefix)
 
   if scenario_count == 0
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow

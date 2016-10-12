@@ -1,6 +1,5 @@
 import Subtype from './subtype';
 import WordSearchDrawer from './wordsearchDrawer';
-import _ from 'lodash';
 import { SquareType } from './tiles';
 import { randomValue } from '../utils';
 

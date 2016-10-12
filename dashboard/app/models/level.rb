@@ -40,7 +40,9 @@ class Level < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
   after_save :write_custom_level_file
+  after_save :update_level_in_cache
   after_destroy :delete_custom_level_file
+  after_destroy :delete_level_from_cache
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
@@ -160,6 +162,54 @@ class Level < ActiveRecord::Base
       return script_level.callouts
     end
     []
+  end
+
+  # Returns a cached map from level id and level name to level, or nil if in
+  # level_builder mode which disables caching.
+  def self.level_cache
+    return nil unless Script.should_cache?
+    @@level_cache ||= {}.tap do |cache|
+      ScriptLevel.script_level_cache.values.each do |script_level|
+        level = script_level.level
+        next unless level
+        cache[level.id] = level unless cache.key? level.id
+        cache[level.name] = level unless cache.key? level.name
+      end
+    end
+  end
+
+  def update_level_in_cache
+    return unless Script.should_cache?
+    Level.level_cache[id] = self if Level.level_cache.key? id
+    Level.level_cache[name] = self if Level.level_cache.key? name
+  end
+
+  def delete_level_from_cache
+    return unless Script.should_cache?
+    @@level_cache.except!(id, name)
+  end
+
+  # Find the level with the given id or name from the cache, unless the level
+  # build mode is enabled in which case it is always fetched from the database.
+  # If we need to fetch the level and we're not in level mode (for example
+  # because the level was created after the cache), then an entry for the level
+  # is added to the cache.
+  # @param level_identifier [Integer | String] the level ID or level name to
+  #   fetch
+  # @return [Level] the (possibly cached) level
+  # @raises [ActiveRecord::RecordNotFound] if the level cannot be found
+  def self.cache_find_level(level_identifier)
+    level = level_cache[level_identifier] if Script.should_cache?
+    return level unless level.nil?
+
+    # If the cache missed or we're in levelbuilder mode, fetch the level from
+    # the db. Note the field trickery is to allow passing an ID as a string,
+    # which some tests rely on (unsure about non-tests).
+    field = level_identifier.to_i.to_s == level_identifier.to_s ? :id : :name
+    level = Level.find_by!(field => level_identifier)
+    # Cache the level by ID and by name, unless it wasn't found.
+    level.update_level_in_cache if level
+    level
   end
 
   # Input: xml level file definition
@@ -307,7 +357,7 @@ class Level < ActiveRecord::Base
   end
 
   def self.cache_find(id)
-    Script.cache_find_level(id)
+    Level.cache_find_level(id)
   end
 
   def icon

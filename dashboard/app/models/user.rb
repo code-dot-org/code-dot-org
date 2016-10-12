@@ -835,7 +835,7 @@ class User < ActiveRecord::Base
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
   def self.track_proficiency(user_id, script_id, level_id)
-    level_concept_difficulty = Script.cache_find_level(level_id).level_concept_difficulty
+    level_concept_difficulty = Level.cache_find_level(level_id).level_concept_difficulty
     return unless level_concept_difficulty
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -1060,6 +1060,8 @@ class User < ActiveRecord::Base
   end
 
   def should_see_inline_answer?(script_level)
+    return true if Rails.application.config.levelbuilder_mode
+
     script = script_level.try(:script)
 
     (authorized_teacher? && script && !script.professional_learning_course?) ||

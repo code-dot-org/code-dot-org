@@ -9,8 +9,6 @@ window.requirejs.config({
   // DEVMODE: baseUrl: 'http://127.0.0.1:8000/src/'
 });
 
-var download = require('../assetManagement/download');
-
 // the main Bramble object -- used to access file system
 let bramble_ = null;
 // the Bramble proxy object -- used to access methods on the Bramble UI frame
@@ -115,7 +113,6 @@ function removeAllAssetsInBramble(callback) {
 
 function syncAssetsWithBramble(assets, callback) {
   const fs = bramble_.getFileSystem();
-  const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
   const Buffer = bramble_.Filer.Buffer;
   assets = assets || [];

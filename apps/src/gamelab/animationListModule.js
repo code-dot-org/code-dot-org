@@ -501,9 +501,16 @@ function loadAnimationFromSource(key, callback) {
  * the spritesheet.
  * @param {!AnimationKey} key
  * @param {!SerializedAnimationProps} props
+ * @param {boolean} withVersion - Whether to request a specific version of the
+ *        animation if pulling from the local project.
  * @returns {string}
  */
-export function animationSourceUrl(key, props) {
+export function animationSourceUrl(key, props, withVersion = false) {
+  // TODO: (Brad) We want to get to where the client doesn't know much about
+  //       animation versions, by switching to Chris' new Files API.
+  //       in the meantime, be able to request versions only when we export
+  //       JSON for levelbuilders to use.
+
   // 1. If the animation has a sourceUrl it's external (from the library
   //    or some other outside source, not the animation API) - and we may need
   //    to run it through the media proxy.
@@ -514,7 +521,7 @@ export function animationSourceUrl(key, props) {
   // 2. Otherwise it's local to this project, and we should use the animation
   //    key to look it up in the animations API.
   return animationsApi.basePath(key) + '.png' +
-      (props.version ? '?version=' + props.version : '');
+      ((withVersion && props.version) ? '?version=' + props.version : '');
 }
 
 /**

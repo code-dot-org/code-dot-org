@@ -6,6 +6,7 @@ import React from 'react';
 import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
+import AnimationJsonViewer from './AnimationJsonViewer';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 import GameLabVisualizationHeader from './GameLabVisualizationHeader';
 import GameLabVisualizationColumn from './GameLabVisualizationColumn';
@@ -96,6 +97,7 @@ const GameLabView = React.createClass({
         {this.renderCodeMode()}
         {this.renderAnimationMode()}
         <ErrorDialogStack/>
+        <AnimationJsonViewer/>
       </StudioAppWrapper>
     );
   }

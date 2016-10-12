@@ -1,5 +1,3 @@
-hidden 'true'
-
 stage 'Step'
 skin 'birds'
 level 'blockly:MazeStep:2_1_step'

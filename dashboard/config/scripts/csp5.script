@@ -1,7 +1,6 @@
 login_required 'true'
-hidden 'true'
 
-stage 'Events Unplugged’
+stage 'Events Unplugged'
 level 'U3L12 - Student Introduction 1'
 
 stage 'Event-Driven Programming and Debugging'
@@ -51,13 +50,13 @@ level 'U3L13 - Project'
 stage 'Controlling Memory with Variables'
 level 'U3L19 Student Lesson Intro'
 level 'U3L14 - Message - basic mechanics of variables'
-level 'U3L19 - three basic ops of variables’
-level 'U3L19 - fix the var name syntax error v2’
-level 'U3L19 - write var and string with same name v2’
+level 'U3L19 - three basic ops of variables'
+level 'U3L19 - fix the var name syntax error v2'
+level 'U3L19 - write var and string with same name v2'
 level 'U3- Variables - Create And Assign'
 level 'U3- Variables - Text Mode'
 level 'U3L14 - Message - Other ways to assign values'
-level 'U3 - Variables - Set to Expression' 
+level 'U3 - Variables - Set to Expression'
 level 'U3L14 - concatenate simple'
 level 'U3 - Variables - Set to Expression with Other Variables'
 level 'U3L14 - Assigning Random Value'

@@ -6,7 +6,6 @@
  */
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
-var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = require('lodash');
 var studioApp = require('../StudioApp').singleton;

@@ -228,6 +228,11 @@ en:
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
+      2.1 and 2.2 Lesson Connections: {}
+      2.11 - 15 Lesson Connections: {}
+      2.3 and 2.4 Lesson Connections: {}
+      2.5 and 2.6 Lesson Connections: {}
+      2.7 -  10 Lesson Connections: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -251,6 +256,7 @@ en:
         description here: description here
         title: title
       Binary as an Encoding Scheme: {}
+      Binary, Hex, and Images: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
@@ -278,6 +284,7 @@ en:
       CSD U3 - complex conditionals - SFLP: {}
       CSD U3 - images - pick your final work: {}
       CSD U3 -conditionals - stop booleans: {}
+      CSD U3 AnimationsMulti STOP project guide: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
@@ -311,6 +318,30 @@ en:
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD U4L01 SFLP: {}
+      CSD U4L02 SFLP: {}
+      CSD U4L03 SFLP: {}
+      CSD U4L04 SFLP: {}
+      CSD U4L05 SFLP: {}
+      CSD U4L06 SFLP: {}
+      CSD U4L07 SFLP: {}
+      CSD U4L08 SFLP: {}
+      CSD U4L09 SFLP: {}
+      CSD U4L10 SFLP: {}
+      CSD U4L11 SFLP: {}
+      CSD U4L12 SFLP: {}
+      CSD U4L13 SFLP: {}
+      CSD U4L14 SFLP: {}
+      CSD U4L15 SFLP: {}
+      CSD U4L16 SFLP: {}
+      CSD U4L17 SFLP: {}
+      CSD U4L18 SFLP: {}
+      CSD U4L19 SFLP: {}
+      CSD U4L20 SFLP: {}
+      CSD U4L21 SFLP: {}
+      CSD U4L22 SFLP: {}
+      CSD U4L23 SFLP: {}
+      CSD U4L24 SFLP: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U1-SFLP Exploring Problem Solving: {}
@@ -538,6 +569,7 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Data Tools in Unit 2 Chapter 2: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
       Digital Footprint Chirpr solmoon: {}
@@ -941,6 +973,8 @@ en:
       How Secure Is Your Password?:
         description here: description here
         title: title
+      How are Images Encoded?: {}
+      'How to: Make Charts from your Data': {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -952,6 +986,8 @@ en:
         description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      Introduction to Lossless Compression and the Text Compression Widget: {}
+      Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
@@ -968,6 +1004,7 @@ en:
       Lesson 1.7 Overview: {}
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Lossy vs. Lossless Compression: {}
       Making Pivot Tables Part 1 - The Basics: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
       Making a Bar Chart: {}
@@ -1036,6 +1073,7 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      Overview of File Sizes and Metrics: {}
       'Overview: Balancing Teachers and Tools': {}
       'Overview: Capturing Student Learning': {}
       'Overview: Discovery Learning': {}
@@ -1252,6 +1290,7 @@ en:
       SFLP - Web - Images on the Web: {}
       SFLP - Web - Quality Websites: {}
       SFLP - Web - Text on the Web: {}
+      Selecting an Appropriate Visualization for your Data: {}
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
@@ -1839,6 +1878,64 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      courseB_story_unspottedBugs1:
+        UnspottedBugs: UnspottedBugs
+      courseB_story_unspottedBugs10:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs11:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs12:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs13:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs14:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs15:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs16:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs17:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs18:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs2:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs3:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs4:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs5:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs6:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs7:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs8:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs9:
+        description here: description here
+        title: title
+      courseB_unplugged_mrfLoops:
+        Looping with My Robotic Friends: Looping with My Robotic Friends
+      courseB_unplugged_mrfProgramming:
+        description here: description here
+        title: title
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -1859,6 +1956,7 @@ en:
       duino pov:
         duino pov: duino pov
       ecs unit 2 introduction: {}
+      ecspd-unit 4 what is the challenge: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
@@ -2235,13 +2333,11 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      test123: {}
       text compression intro: {}
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -5830,6 +5926,12 @@ en:
         cartTotal = cartTotal +1;: cartTotal = cartTotal +1;
         var cartTotal + 1;: var cartTotal + 1;
         var cartTotal = cartTotal + 1;: var cartTotal = cartTotal + 1;
+      cspu5_assess1_algorithm:
+        Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
+        apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
       cspu5_assess1_codevalues:
         <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>: <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>
         <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>: <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>
@@ -5841,6 +5943,11 @@ en:
         Change the names of variables within the program and run the program again.: Change the names of variables within the program and run the program again.
         Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
         Display the value of variables at various points during the program.: Display the value of variables at various points during the program.
+      cspu5_assess1_drawingoutcome:
+        <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">: <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">
+        <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">: <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">
+        <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
+        <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
       cspu5_assess1_elementid:
         ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
         : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
@@ -5855,12 +5962,130 @@ en:
         Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
         Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
         The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+        'Error. Unknown Identifier: x': 'Error. Unknown Identifier: x'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+        Nothing will be displayed: Nothing will be displayed
+        a: a
+        b: b
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+        Error.  Cannot make a new variable x inside function increase(): Error.  Cannot make a new variable x inside function increase()
+      cspu5_assess1_snowman:
+        <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">: <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">
+        <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">: <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">
+        <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">: <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">
+        <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">: <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">
+        <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">: <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">
       cspu5_assess1_swap:
         <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
         <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
         <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
         <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
         <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
+      cspu5_assess1_turtle:
+        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">
+        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">
+        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">
+        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">
+        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">
+      cspu5_assess1_value:
+        'value is: 2': 'value is: 2'
+        'value is: 2.3333333': 'value is: 2.3333333'
+        'value is: 3': 'value is: 3'
+        'value is: 4': 'value is: 4'
+        'value is: c': 'value is: c'
+      cspu5_assess2_addstrings:
+        5 + hello: 5 + hello
+        5hello: 5hello
+        'error on num + str: type mismatch': 'error on num + str: type mismatch'
+        result: result
+      cspu5_assess2_appLabError:
+        Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
+        Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
+        Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
+        Line 5 - The setText on line 5 will override the setText on line 3: Line 5 - The setText on line 5 will override the setText on line 3
+      cspu5_assess2_boolean:
+        Any Integer: Any Integer
+        Any single character: Any single character
+        Integers between 1 and 10: Integers between 1 and 10
+        True/False: True/False
+        Yes/Maybe/No: Yes/Maybe/No
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        'error on str1 + str2: type mismatch': 'error on str1 + str2: type mismatch'
+        result: result
+      cspu5_assess2_false:
+        A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
+        Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
+        Strings cannot include numerical digits.: Strings cannot include numerical digits.
+        Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings sometimes include spaces.: Strings sometimes include spaces.
+      cspu5_assess2_goodbye:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed: Nothing will be printed
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
+      cspu5_assess2_hello:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed.: Nothing will be printed.
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
+      cspu5_assess2_numValues:
+        The code will always display the value stored in variable a: The code will always display the value stored in variable a
+        The code will display the largest of the three values: The code will display the largest of the three values
+        The code will display the middle of all three values: The code will display the middle of all three values
+        The code will display the smallest of the three values: The code will display the smallest of the three values
+        The code will not display anything due to an error: The code will not display anything due to an error
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        You are not old enough to be President.: You are not old enough to be President.
+        You are old enough to be President!: You are old enough to be President!
+        'false': 'false'
+        'true': 'true'
+      cspu5_assess2_pseudoCode:
+        " “Time to start studying again!” ": " “Time to start studying again!” "
+        " “You passed!” ": " “You passed!” "
+        " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
+        An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        Nothing will be displayed: Nothing will be displayed
+      cspu5_assess2_setAlarm:
+        "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
+        "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
+        day != “Monday”: day != “Monday”
+        day == “Saturday”: day == “Saturday”
+        day == “Sunday”: day == “Sunday”
+      cspu5_assess2_statementOutput:
+        console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
+        console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
+        console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
+        console.log(“Hello! \nl How are you?”);: console.log(“Hello! \nl How are you?”);
+        console.log(“Hello! \t How are you?”);: console.log(“Hello! \t How are you?”);
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_wrongLogic:
+        Any time between 0 and 20: Any time between 0 and 20
+        Any time between 10 and 19: Any time between 10 and 19
+        Any time between 6 and 9: Any time between 6 and 9
+        The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
+        There is no value of time that will result in “Good Morning” being displayed: There is no value of time that will result in “Good Morning” being displayed
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Loop your Item\r\n\r\nNow that your item falling, you can add code to loop it back to the top.  This is similar to what you did for the platform sprite, but the item sprite will loop back to a random x and y location when it goes to the top of the screen.\r\n\r\n# Do This\r\n\r\n* Create a function that uses an `if` block to check whether the item sprite is off the bottom of the screen, then sends the item back to a random x and y position, just as it did when you first created the sprite.\r\n* Call the function inside the draw loop\r\n* Run the code to test your sprite.\r\n\r\nChallenge: \r\n\r\n* Create a `loopItem` function that causes your item to interact with the platforms, then call it from the draw loop.\r\n* Run the code to test your sprite.",
+    "markdown_instructions": "# Loop your Item\r\n\r\n<img src=\"https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif\" style=\"float:right\">\r\nNow that your item is falling, you can add code to loop it back to the top.  This is similar to what you did for the platform sprite, but the item sprite will loop back to a random x and y location when it goes to the top of the screen.\r\n\r\n# Do This\r\n\r\n* Create a `loopItems` function that uses an `if` block to check whether the item sprite is off the bottom of the screen, then sends the item back to a random x and y position, just as it did when you first created the sprite.\r\n* Call the function inside the draw loop\r\n* Run the code to test your sprite.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,8 +34,10 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
-    "contained_level_names": null,
-    "palette_category_at_start": "functions"
+    "palette_category_at_start": "functions",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

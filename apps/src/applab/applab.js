@@ -4,33 +4,23 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global dashboard */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
-import skins from '../skins';
 import codegen from '../codegen';
-import * as api from './api';
-import * as dontMarshalApi from './dontMarshalApi';
 import AppLabView from './AppLabView';
-import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
-import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 import dom from '../dom';
-import {parseElement as parseXmlElement} from '../xml';
 import * as utils from '../utils';
-import dropletUtils from '../dropletUtils';
 import * as dropletConfig from './dropletConfig';
 import makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
 import FirebaseStorage from './firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
 import { getDatabase } from './firebaseUtils';
-import constants from '../constants';
 import experiments from '../experiments';
-import _ from 'lodash';
 import apiTimeoutList from '../timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -38,10 +28,8 @@ import applabCommands from './commands';
 import JSInterpreter from '../JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import JsDebuggerUi from '../JsDebuggerUi';
-import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
-import VisualizationOverlay, { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
 import DialogButtons from '../templates/DialogButtons';
 import executionLog from '../executionLog';
@@ -52,13 +40,16 @@ import reducers from './reducers';
 import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
-var setInstructionsInTopPane = actions.setInstructionsInTopPane;
-import {setPageConstants} from '../redux/pageConstants';
 import * as applabConstants from './constants';
 const { ApplabInterfaceMode, DataView } = applabConstants;
 import consoleApi from '../consoleApi';
 import BoardController from '../makerlab/BoardController';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from './redux/data';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -110,9 +101,6 @@ var copyrightStrings;
 studioApp.setCheckForEmptyBlocks(true);
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
-
-// For proxying non-https assets
-var MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // Default Scalings
 Applab.scale = {
@@ -765,7 +753,7 @@ Applab.init = function (config) {
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: useFirebase,
+    hasDataMode: useFirebase && !config.level.hideViewDataButton,
     hasDesignMode: !config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
@@ -947,8 +935,7 @@ Applab.toggleDivApplab = function (isVisible) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Applab.reset = function (first) {
-  var i;
+Applab.reset = function () {
   Applab.clearEventHandlersKillTickLoop();
 
   // Reset configurable variables
@@ -1049,10 +1036,6 @@ Applab.serializeAndSave = function (callback) {
  */
 // XXX This is the only method used by the templates!
 Applab.runButtonClick = function () {
-  var runButton = document.getElementById('runButton');
-  var resetButton = document.getElementById('resetButton');
-  // Ensure that Reset button is at least as wide as Run button.
-
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -1073,6 +1056,8 @@ Applab.runButtonClick = function () {
       app: 'applab'
     }, 1/100);
   }
+
+  postContainedLevelAttempt(studioApp);
 };
 
 /**
@@ -1126,7 +1111,6 @@ Applab.execute = function () {
   Applab.testResults = TestResults.NO_TESTS_RUN;
   Applab.waitingForReport = false;
   Applab.response = null;
-  var i;
 
   studioApp.reset(false);
   studioApp.clearAndAttachRuntimeAnnotations();
@@ -1325,7 +1309,7 @@ Applab.onPuzzleSubmit = function () {
 Applab.unsubmit = function () {
   $.post(level.unsubmitUrl,
          {"_method": 'PUT', user_level: {submitted: false}},
-         function ( data ) {
+         function () {
            location.reload();
          });
 };
@@ -1386,8 +1370,8 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
-  var containedLevelResultsInfo = studioApp.getContainedLevelResultsInfo();
-
+  const containedLevelResultsInfo = studioApp.hasContainedLevels &&
+    getContainedLevelResultInfo();
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
@@ -1405,18 +1389,26 @@ Applab.onPuzzleComplete = function (submit) {
 
   Applab.waitingForReport = true;
 
-  var sendReport = function () {
-    studioApp.report({
-      app: 'applab',
-      level: level.id,
-      result: levelComplete,
-      testResult: Applab.testResults,
-      submitted: !!submit,
-      program: encodeURIComponent(program),
-      image: Applab.encodedFeedbackImage,
-      containedLevelResultsInfo: containedLevelResultsInfo,
-      onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
-    });
+  const sendReport = function () {
+    const onComplete = (submit ? Applab.onSubmitComplete : Applab.onReportComplete);
+
+    if (containedLevelResultsInfo) {
+      // We already reported results when run was clicked. Make sure that call
+      // finished, then call onCompelte
+      runAfterPostContainedLevel(onComplete);
+    } else {
+      studioApp.report({
+        app: 'applab',
+        level: level.id,
+        result: levelComplete,
+        testResult: Applab.testResults,
+        submitted: !!submit,
+        program: encodeURIComponent(program),
+        image: Applab.encodedFeedbackImage,
+        containedLevelResultsInfo: containedLevelResultsInfo,
+        onComplete
+      });
+    }
   };
 
   var divApplab = document.getElementById('divApplab');

@@ -2,6 +2,7 @@
 # A script to analyze a range of CircleCI builds for known failures.
 # For available options, run ./search-circle-builds -h
 
+require 'active_support/time'
 require 'optparse'
 require_relative './circle_project'
 
@@ -12,7 +13,10 @@ class Hash
   end
 end
 
-options = {}
+options = {
+  output_format: 'human-readable',
+  custom_columns: []
+}
 OptionParser.new do |opts|
   opts.banner = 'Usage: ./compute-failure-rates [options]'
 
@@ -41,6 +45,12 @@ OptionParser.new do |opts|
   opts.on('--end EndBuildNumber', String, 'End searching at build #. Default: Latest build.') do |n|
     options[:end_build] = n.to_i
   end
+  opts.on('--group branchName,branchName', Array, 'Add a column aggregating results for the listed branches.') do |a|
+    options[:custom_columns] << a
+  end
+  opts.on('--csv', 'Display results in CSV format.') do
+    options[:output_format] = 'csv'
+  end
   opts.on_tail('-h', '--help', 'Show this message') do
     puts opts
     exit
@@ -63,34 +73,45 @@ end
 
 # Group the builds by date
 builds_by_date = build_infos.compact.group_by do |build_info|
-  build_info[:queued_at].strftime('%Y-%m-%d')
+  build_info[:queued_at].to_time.in_time_zone('Pacific Time (US & Canada)').strftime('%Y-%m-%d')
+end
+
+# Define columns - each maps to a lambda that filters builds
+columns = {
+  'Total' => -> (builds) {builds},
+  'Pipeline' => -> (builds) {builds.select {|i| %w(staging test production).include?(i[:branch])}},
+  'Branch' => -> (builds) {builds.reject {|i| %w(staging test production).include?(i[:branch])}}
+}
+options[:custom_columns].each do |branches|
+  columns[branches.join(',')] = -> (builds) {builds.select{|i| branches.include?(i[:branch])}}
 end
 
 # Compute map of stats for each date
 stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
-  total_builds = build_infos_for_date.size
-  total_failed_builds = build_infos_for_date.reject {|i| i[:succeeded]}.size
-
-  pipeline_builds = build_infos_for_date.select {|i| ['staging', 'test', 'production'].include?(i[:branch])}
-  total_pipeline_builds = pipeline_builds.size
-  total_failed_pipeline_builds = pipeline_builds.reject {|i| i[:succeeded]}.size
-
-  branch_builds = build_infos_for_date.reject {|i| ['staging', 'test', 'production'].include?(i[:branch])}
-  total_branch_builds = branch_builds.size
-  total_failed_branch_builds = branch_builds.reject {|i| i[:succeeded]}.size
-
-  [date, {
-    total_failure_rate: Float(total_failed_builds) / total_builds,
-    pipeline_failure_rate: Float(total_failed_pipeline_builds) / total_pipeline_builds,
-    branch_failure_rate: Float(total_failed_branch_builds) / total_branch_builds
-  }]
+  [date, columns.hmap do |name, column|
+    builds = column.call build_infos_for_date
+    failed_builds = builds.reject {|i| i[:succeeded]}
+    [name, {
+        total_builds: builds.size,
+        failed_builds: failed_builds.size,
+        failure_rate: Float(failed_builds.size) / builds.size
+    }]
+  end]
 end
 
 # Print build stats
 puts "Failure rates for builds #{build_range} by date (1.0 = 100% failures)"
-puts "%-10s %10s %10s %10s" % ['Date', 'Branch', 'Pipeline', 'Overall']
-stats_by_date.each do |date, stats|
-  puts "%-10s %10.3f %10.3f %10.3f" % [date, stats[:branch_failure_rate].round(3), stats[:pipeline_failure_rate].round(3), stats[:total_failure_rate].round(3)]
+if options[:output_format] == 'csv'
+  puts "%s#{',%s' * columns.size}" % (['Date'] + columns.keys)
+  stats_by_date.each do |date, stats|
+    puts "%s#{',%.3f' * columns.size}" % ([date] + stats.map {|_, v| v[:failure_rate].round(3)})
+  end
+else
+  puts "%-10s#{' %16s' * columns.size}" % (['Date'] + columns.keys.map {|k| k[0, 14]})
+  stats_by_date.each do |date, stats|
+    puts "%-10s#{'  %7s = %5.3f' * columns.size}" %
+           ([date] + stats.map {|_, v| ["%s/%s" % [v[:failed_builds], v[:total_builds]], v[:failure_rate].round(3)]}.flatten)
+  end
 end
 
 exit(0)

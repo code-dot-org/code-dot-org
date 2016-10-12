@@ -291,7 +291,6 @@ function installDrawASnowflake(blockly, generator, gensym) {
   generator.draw_a_snowflake = function () {
     var loopVar = gensym('count');
 
-    var color_random = generator.colour_random()[0];
     return [
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 8; ' + loopVar + '++) {',
       '  Turtle.penColour("#7fffd4");',

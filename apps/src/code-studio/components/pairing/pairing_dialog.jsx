@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import React from 'react';
 
 import Pairing from './pairing.jsx';

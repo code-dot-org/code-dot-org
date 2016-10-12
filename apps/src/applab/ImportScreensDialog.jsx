@@ -1,5 +1,4 @@
 /* eslint-disable react/no-danger */
-/* eslint no-unused-vars: "error" */
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
