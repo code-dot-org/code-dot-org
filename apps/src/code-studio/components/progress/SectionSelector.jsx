@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectSection } from '../../stageLockRedux';
+import { selectSection } from '../../sectionsRedux';
 
 const styles = {
   select: {
@@ -11,12 +11,13 @@ const styles = {
 
 const SectionSelector = React.createClass({
   propTypes: {
-    sections: React.PropTypes.objectOf(
+    sections: React.PropTypes.arrayOf(
       React.PropTypes.shape({
-        section_name: React.PropTypes.string.isRequired
+        name: React.PropTypes.string.isRequired,
+        id: React.PropTypes.string.isRequired
       })
     ).isRequired,
-    selectedSection: React.PropTypes.string,
+    selectedSectionId: React.PropTypes.string,
     selectSection: React.PropTypes.func.isRequired
   },
 
@@ -25,17 +26,17 @@ const SectionSelector = React.createClass({
   },
 
   render() {
-    const { sections, selectedSection } = this.props;
+    const { sections, selectedSectionId } = this.props;
     return (
       <select
         name="sections"
         style={styles.select}
-        value={selectedSection}
+        value={selectedSectionId}
         onChange={this.handleSelectChange}
       >
-        {Object.keys(sections).map(id => (
+        {sections.map(({id, name}) => (
           <option key={id} value={id}>
-            {sections[id].section_name}
+            {name}
           </option>
         ))}
       </select>
@@ -44,8 +45,11 @@ const SectionSelector = React.createClass({
 });
 
 export default connect(state => ({
-  selectedSection: state.stageLock.selectedSection,
-  sections: state.stageLock.sections
+  selectedSectionId: state.sections.selectedSectionId,
+  sections: state.sections.sectionIds.map(id => ({
+    name: state.sections.nameById.get(id),
+    id
+  }))
 }), dispatch => ({
   selectSection(sectionId) {
     dispatch(selectSection(sectionId));

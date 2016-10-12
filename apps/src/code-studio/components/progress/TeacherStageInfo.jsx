@@ -101,12 +101,12 @@ const TeacherStageInfo = Radium(React.createClass({
 
 export default connect(state => {
   return {
-    sectionId: state.stageLock.selectedSection,
+    sectionId: state.sections.selectedSectionId,
     hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     hiddenStageMap: state.hiddenStage.get('bySection'),
     scriptName: state.progress.scriptName,
-    hasNoSections: state.stageLock.sectionsLoaded &&
-      Object.keys(state.stageLock.sections).length === 0
+    hasNoSections: state.sections.sectionsAreLoaded &&
+      state.sections.sectionIds.length === 0
     };
 }, dispatch => ({
   toggleHidden(scriptName, sectionId, stageId, hidden) {
