@@ -1,5 +1,3 @@
-/* eslint no-unused-vars: "error" */
-
 import {PropTypes} from 'react';
 import $ from 'jquery';
 import designMode from './designMode';

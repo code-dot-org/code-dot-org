@@ -58,8 +58,6 @@ var CellEditor = React.createClass({
       }
     });
 
-    var spriteAttributes;
-
     return (
       <form className="span4 offset1">
         <header>

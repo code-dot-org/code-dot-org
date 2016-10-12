@@ -4,7 +4,6 @@
 
 import _, {orderBy} from 'lodash';
 import React from 'react';
-import {Button} from 'react-bootstrap';
 import {Table, sort} from 'reactabular';
 import color from '../../../../color';
 import SessionTimesList from './session_times_list';

@@ -1,5 +1,3 @@
-/* eslint no-unused-vars: "error" */
-
 import Immutable from 'immutable';
 import {
   sources as sourcesApi,

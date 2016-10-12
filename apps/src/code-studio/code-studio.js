@@ -10,7 +10,6 @@
 require("babel-polyfill");
 
 import $ from 'jquery';
-var _ = require('lodash');
 
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);

@@ -26,7 +26,7 @@ window.SignupManager = function (options) {
 
   function formError(err) {
     // Define the fields that can have specific errors attached to them.
-    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "age", "gender", "terms_of_service_version"];
+    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "schooladdress", "age", "gender", "terms_of_service_version"];
 
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
@@ -57,6 +57,7 @@ window.SignupManager = function (options) {
     $("#age-block").fadeIn();
     $("#gender-block").fadeIn();
     $("#schoolname-block").hide();
+    $("#schooladdress-block").hide();
 
     // Show correct terms below form.
     $("#student-terms").fadeIn();
@@ -71,6 +72,7 @@ window.SignupManager = function (options) {
     $("#age-block").hide();
     $("#gender-block").hide();
     $("#schoolname-block").fadeIn();
+    $("#schooladdress-block").fadeIn();
 
     // Show correct terms below form.
     $("#student-terms").hide();

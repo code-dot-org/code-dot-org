@@ -5,7 +5,6 @@ import color from '../../color';
 import Radium from 'radium';
 import SpeedSlider from '../../templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
-import * as PropTypes from '../PropTypes';
 
 var styles = {
   root: {

@@ -1,5 +1,3 @@
-/* globals dashboard  */
-
 import $ from 'jquery';
 import debounce from 'lodash/debounce';
 import React from 'react';
