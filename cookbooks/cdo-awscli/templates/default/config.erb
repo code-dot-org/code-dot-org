@@ -5,6 +5,6 @@ aws_secret_access_key = <%= node['cdo-awscli']['access_key_secret'] %>
 
 [backup]
 region = <%= node['cdo-awscli']['region'] || 'us-east-1' %>
-aws_access_key_id = <%= node['cdo-awscli']['backup_aws_access_key_id'] %>
+aws_access_key_id = <%= node['cdo-awscli']['backup_access_key_id'] %>
 aws_secret_access_key = <%= node['cdo-awscli']['backup_access_key_secret'] %>
 
