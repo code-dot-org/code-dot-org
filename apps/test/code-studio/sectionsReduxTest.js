@@ -2,6 +2,7 @@ import { assert } from 'chai';
 import fakeSectionData from './fakeSectionData';
 
 import reducer, {
+  NO_SECTION,
   setSections,
   selectSection
 } from '@cdo/apps/code-studio/sectionsRedux';
@@ -15,14 +16,13 @@ describe('reducer tests', () => {
     it('sets section data we receive from the server', () => {
       const initialState = reducer(undefined, {});
       assert.equal(initialState.sectionsAreLoaded, false);
-      assert.equal(initialState.selectedSectionId, null);
+      assert.equal(initialState.selectedSectionId, NO_SECTION);
 
       const action = setSections(fakeSectionData);
 
       const nextState = reducer(initialState, action);
       assert.equal(nextState.sectionsAreLoaded, true);
-      assert.equal(nextState.selectedSectionId, section1Id,
-        'arbitrarily select the first section as selected');
+      assert.equal(nextState.selectedSectionId, NO_SECTION);
       assert.deepEqual(nextState.sectionIds, sectionIds);
       assert.deepEqual(nextState.nameById.toJS(), {
         [section1Id]: 'My Section',
@@ -36,7 +36,7 @@ describe('reducer tests', () => {
     it('can change the selected section', () => {
       const sectionState = reducer(undefined, setSections(fakeSectionData));
 
-      assert.equal(sectionState.selectedSectionId, section1Id);
+      assert.equal(sectionState.selectedSectionId, NO_SECTION);
 
       const action = selectSection(section2Id);
       const nextState = reducer(sectionState, action);
