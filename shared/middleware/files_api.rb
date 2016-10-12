@@ -413,6 +413,8 @@ class FilesApi < Sinatra::Base
       new_entry_json = put_file('files', encrypted_channel_id, filename.downcase, body)
     end
     new_entry_hash = JSON.parse new_entry_json
+    # Replace downcased filename with original filename (to preserve case in the manifest)
+    new_entry_hash['filename'] = filename
     manifest_is_unchanged = false
 
     existing_entry = manifest.detect { |e| e['filename'].downcase == filename.downcase }
@@ -489,11 +491,9 @@ class FilesApi < Sinatra::Base
   #
   # Delete all files.
   #
-  delete %r{/v3/files/([^/]+)/*$} do |encrypted_channel_id, filename|
+  delete %r{/v3/files/([^/]+)/\*$} do |encrypted_channel_id|
     dont_cache
     content_type :json
-
-    bad_request if filename.downcase == MANIFEST_FILENAME
 
     owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     not_authorized unless owner_id == storage_id('user')
