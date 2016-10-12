@@ -3734,19 +3734,23 @@ function Animation(pInst) {
   };
 
   /**
-  * Plays the animation forward or backward toward a target frame.
-  *
-  * @method goToFrame
-  * @param {Number} targetFrame Frame number destination (starts from 0)
-  */
-  this.goToFrame = function(f) {
-    this.f = f;
+   * Plays the animation forward or backward toward a target frame.
+   *
+   * @method goToFrame
+   * @param {Number} toFrame Frame number destination (starts from 0)
+   */
+  this.goToFrame = function(toFrame) {
+    if(toFrame < 0 || toFrame >= this.images.length) {
+      return;
+    }
 
-    if(this.f>=0 && this.f<this.images.length)
-      targetFrame = this.f;
+    // targetFrame gets used by the update() method to decide what frame to
+    // select next.  When it's not being used it gets set to -1.
+    targetFrame = toFrame;
 
-    if(targetFrame !== frame)
+    if(targetFrame !== frame) {
       this.playing = true;
+    }
   };
 
   /**
