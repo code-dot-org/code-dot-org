@@ -140,7 +140,6 @@ WarningLabel.propTypes = {
  *         from the library that match the search query.
  */
 function searchAnimations(searchQuery, categoryQuery) {
-  console.log(categoryQuery);
   // Make sure to generate the search regex in advance, only once.
   // Search is case-insensitive
   // Match any word boundary or underscore followed by the search query.
