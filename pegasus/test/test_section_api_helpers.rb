@@ -77,6 +77,14 @@ class SectionApiHelperTest < Minitest::Test
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
       end
+
+      it 'rewrites mc as Minecraft, hourofcode as "Laberinto clásico" in Spanish"' do
+        I18n.locale = 'es-ES'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Laberinto clásico'
+        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
+        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
+      end
     end
 
     describe 'create' do
