@@ -495,10 +495,39 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
+  function simpleEntityActionBlock(simpleFunctionName, blockText) {
+    blockly.Blocks[`craft_${simpleFunctionName}`] = {
+      helpUrl: '',
+      init: function () {
+        this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldLabel(blockText));
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+      }
+    };
+
+    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
+      return `${simpleFunctionName}(event.targetIdentifier, 'block_id_${this.id}');\n`;
+    };
+  }
+
+  const entityActionBlocks = [
+    'moveEntityForward',
+    'destroyEntity',
+    'attack',
+    'flashEntity',
+    'explodeEntity'
+  ];
+
+  entityActionBlocks.forEach((name) => {
+    simpleEntityActionBlock(name, name);
+  });
+
   dropdownEntityBlock('drop', 'drop', miniBlocks);
-  simpleEntityBlock('destroyEntity', 'destroy it');
-  simpleEntityBlock('flashEntity', 'flash it');
-  simpleEntityBlock('moveEntityForward', 'move it forward');
+  //simpleEntityBlock('destroyEntity', 'destroy it');
+  //simpleEntityBlock('flashEntity', 'flash it');
+  //simpleEntityBlock('moveEntityForward', 'move it forward');
   simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
   simpleEntityBlock('moveEntityAwayFromPlayer', 'move away from player');
   simpleEntityBlock('turnEntityRight', 'turn it right');
@@ -565,21 +594,6 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Generator.get('JavaScript').craft_moveEntityWest = function () {
     return 'moveEntityWest(block, \'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_explodeEntity = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel('explode it'));
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_explodeEntity = function () {
-    return 'explodeEntity(block, \'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.craft_ifLavaAhead = {

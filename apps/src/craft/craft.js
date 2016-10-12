@@ -301,8 +301,6 @@ Craft.init = function (config) {
         }
 
         for (var btn in ArrowIds) {
-          console.log("Button is");
-          console.log(btn);
           dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
               function(btn) {
                 return () => {
@@ -729,34 +727,34 @@ Craft.executeUserCode = function () {
    *  }
    */
   code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-  codegen.evalWith(code, {
+  const evalApiMethods = {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
     },
     onTouched: function (type, callback, blockID) {
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
           function (event) {
-              if (event.eventType !== 'blockTouched') {
-                return;
-              }
-              if (event.blockType !== type) {
-                return;
-              }
+            if (event.eventType !== 'blockTouched') {
+              return;
+            }
+            if (event.blockType !== type) {
+              return;
+            }
 
-              callback(event.blockReference);
+            callback(event.blockReference);
           });
     },
     onPlayerMoved: function (type, callback, blockID) {
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
           function (event) {
-              if (event.eventType !== 'playerMoved') {
-                return;
-              }
-              if (event.blockType !== type) {
-                return;
-              }
+            if (event.eventType !== 'playerMoved') {
+              return;
+            }
+            if (event.blockType !== type) {
+              return;
+            }
 
-              callback(event.blockReference);
+            callback(event.blockReference);
           });
     },
     onEventTriggered: function (type, eventType, callback, blockID) {
@@ -771,11 +769,11 @@ Craft.executeUserCode = function () {
             callback(event);
           });
     },
-    destroyEntity: function (blockReference, blockID) {
-      appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    },
     drop: function (blockType, targetEntity, blockID) {
       appCodeOrgAPI.drop(studioApp.highlight.bind(studioApp, blockID), blockType, targetEntity);
+    },
+    destroyEntity: function (blockReference, blockID) {
+      appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },
     explodeEntity: function (blockReference, blockID) {
       appCodeOrgAPI.explodeEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
@@ -859,25 +857,47 @@ Craft.executeUserCode = function () {
     },
     placeBlock: function (blockType, blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-        blockType);
+          blockType);
     },
     playSound: function (soundID, blockID) {
       appCodeOrgAPI.playSound(studioApp.highlight.bind(studioApp, blockID),
-        soundID);
+          soundID);
     },
     plantCrop: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-        "cropWheat");
+          "cropWheat");
     },
     placeTorch: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-        "torch");
+          "torch");
     },
     placeBlockAhead: function (blockType, blockID) {
       appCodeOrgAPI.placeInFront(studioApp.highlight.bind(studioApp, blockID),
-        blockType);
+          blockType);
     }
-  }, true);
+  };
+
+  const entityActionBlocks = [
+      'moveEntityForward',
+      'destroyEntity',
+      'attack',
+      'flashEntity',
+      'explodeEntity'
+  ];
+
+  entityActionBlocks.forEach((methodName) => {
+    evalApiMethods[methodName] = function (targetEntity, blockID) {
+      appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity);
+    };
+  });
+
+  // with target player
+  // moveToward
+  // moveTo
+  // moveAway
+  //
+
+  codegen.evalWith(code, evalApiMethods, true);
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
     if (Craft.level.freePlay) {
       return;
