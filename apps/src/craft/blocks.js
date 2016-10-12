@@ -169,7 +169,7 @@ exports.install = function (blockly, blockInstallOptions) {
       allBlocks : craftBlockOptions.inventoryBlocks;
 
   var allOnTouchedBlocks = [].concat([
-    'sheep'
+    'sheep',
   ]).concat(allBlocks);
 
   blockly.Blocks.craft_moveForward = {
@@ -512,6 +512,37 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
+  function entityTargetActionBlock(simpleFunctionName, blockText) {
+    blockly.Blocks[`craft_${simpleFunctionName}`] = {
+      helpUrl: '',
+      init: function () {
+        var dropdownOptions = keysToDropdownOptions([
+            'Player', // TODO(bjordan): other entity types
+            'sheep',
+            'zombie',
+            'ironGolem',
+            'creeper',
+            'cow',
+            'chicken',
+        ]);
+        var dropdown = new blockly.FieldDropdown(dropdownOptions);
+        dropdown.setValue(dropdownOptions[0][1]);
+
+        this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldLabel(blockText))
+            .appendTitle(dropdown, 'TYPE');
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+      }
+    };
+
+    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
+      const thingToTarget = this.getTitleValue('TYPE');
+      return `${simpleFunctionName}(event.targetIdentifier, '${thingToTarget}', 'block_id_${this.id}');\n`;
+    };
+  }
+
   const entityActionBlocks = [
     'moveEntityForward',
     'destroyEntity',
@@ -524,10 +555,17 @@ exports.install = function (blockly, blockInstallOptions) {
     simpleEntityActionBlock(name, name);
   });
 
+  const entityActionTargetDropdownBlocks = [
+    'moveToward',
+    'moveTo',
+    'moveAway',
+  ];
+
+  entityActionTargetDropdownBlocks.forEach((name) => {
+    entityTargetActionBlock(name, name);
+  });
+
   dropdownEntityBlock('drop', 'drop', miniBlocks);
-  //simpleEntityBlock('destroyEntity', 'destroy it');
-  //simpleEntityBlock('flashEntity', 'flash it');
-  //simpleEntityBlock('moveEntityForward', 'move it forward');
   simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
   simpleEntityBlock('moveEntityAwayFromPlayer', 'move away from player');
   simpleEntityBlock('turnEntityRight', 'turn it right');

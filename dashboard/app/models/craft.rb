@@ -283,6 +283,9 @@ class Craft < Blockly
   <block type="craft_flashEntity"></block>
   <block type="craft_explodeEntity"></block>
   <block type="craft_drop"></block>
+  <block type="craft_moveToward"></block>
+  <block type="craft_moveTo"></block>
+  <block type="craft_moveAway"></block>
 </category>
 <category name="Events">
   <block type="craft_forever"></block>

@@ -891,6 +891,18 @@ Craft.executeUserCode = function () {
     };
   });
 
+  const entityTargetDropdownBlocks = [
+    'moveToward',
+    'moveTo',
+    'moveAway'
+  ];
+
+  entityTargetDropdownBlocks.forEach((methodName) => {
+    evalApiMethods[methodName] = function (targetEntity, moveTo, blockID) {
+      appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity, moveTo);
+    };
+  });
+
   // with target player
   // moveToward
   // moveTo
