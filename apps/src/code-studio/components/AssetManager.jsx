@@ -43,20 +43,16 @@ var AssetManager = React.createClass({
 
   componentWillMount: function () {
     let api = this.props.useFilesApi ? filesApi : assetsApi;
-    api.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
+    api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
   },
 
   /**
    * Called after the component mounts, when the server responds with the
    * current list of assets.
-   * @param xhr
+   * @param result
    */
-  onAssetListReceived: function (xhr) {
-    let parsedResponse = JSON.parse(xhr.responseText);
-    if (this.props.useFilesApi) {
-      parsedResponse = parsedResponse.files;
-    }
-    assetListStore.reset(parsedResponse);
+  onAssetListReceived: function (result) {
+    assetListStore.reset(result.files);
     if (this.isMounted()) {
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }

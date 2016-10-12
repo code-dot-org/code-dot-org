@@ -81,7 +81,7 @@ class FilesTest < FilesApiTestBase
     delete_all_mainfest_versions
   end
 
-  def test_extension_case_sensitivity
+  def test_case_insensitivity
     filename = @api.randomize_filename('casesensitive.PNG')
     different_case_filename = filename.gsub(/PNG$/, 'png')
     delete_all_file_versions(filename)
@@ -95,9 +95,9 @@ class FilesTest < FilesApiTestBase
     assert successful?
 
     @api.get_object(different_case_filename)
-    assert not_found?
+    assert successful?
 
-    @api.delete_object(filename)
+    @api.delete_object(different_case_filename)
     assert successful?
 
     delete_all_mainfest_versions
