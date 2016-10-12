@@ -79,7 +79,6 @@ class DashboardStudent
       where(users__id: allowed_ids, users__deleted_at: nil).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(*fields,
-        :users__birthday___birthday,
         :secret_pictures__name___secret_picture_name,
         :secret_pictures__path___secret_picture_path
       )
