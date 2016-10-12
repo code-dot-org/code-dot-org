@@ -25,10 +25,6 @@ module WorkshopScoreSummarizer
     :part_of_community_s
   ]
 
-  # In case there's a question where the high index response is a bad thing like "how frequently were you confused?"
-  INVERTED_RESPONSE_QUESTIONS = [
-  ]
-
   INDIVIDUAL_RESPONSE_QUESTIONS = [
     :how_much_learned_s,
     :how_motivating_s,
@@ -97,12 +93,6 @@ module WorkshopScoreSummarizer
   end
 
   def get_score_for_response(questions, question, answer)
-    score = questions[question].index(answer)
-
-    if INVERTED_RESPONSE_QUESTIONS.include?(question)
-      questions[question].size - score
-    else
-      score + 1
-    end
+    questions[question].index(answer) + 1
   end
 end
