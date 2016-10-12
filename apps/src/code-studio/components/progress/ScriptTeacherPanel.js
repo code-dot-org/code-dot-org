@@ -4,14 +4,10 @@ import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, setViewType, fullyLockedStageMapping } from '../../stageLockRedux';
+import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 import commonMsg from '@cdo/locale';
 
 const styles = {
-  viewAs: {
-    fontSize: 16,
-    margin: 10
-  },
   text: {
     margin: 10
   },
@@ -26,8 +22,6 @@ const styles = {
   }
 };
 
-
-
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -35,8 +29,7 @@ const ScriptTeacherPanel = React.createClass({
     sectionsAreLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
     scriptHasHideableStages: React.PropTypes.bool.isRequired,
-    unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    setViewType: React.PropTypes.func.isRequired,
+    unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   render() {
@@ -44,7 +37,6 @@ const ScriptTeacherPanel = React.createClass({
       viewAs,
       hasSections,
       sectionsAreLoaded,
-      setViewType,
       scriptHasLockableStages,
       scriptHasHideableStages,
       unlockedStageNames
@@ -54,11 +46,11 @@ const ScriptTeacherPanel = React.createClass({
       <TeacherPanel>
         <h3>{commonMsg.teacherPanel()}</h3>
         <div className="content">
-          <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
+          <ViewAsToggle/>
           {!sectionsAreLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
           {hasSections && (scriptHasLockableStages || scriptHasHideableStages) &&
             <SectionSelector/>}
-          {hasSections && scriptHasLockableStages && this.props.viewAs === ViewType.Teacher &&
+          {hasSections && scriptHasLockableStages && viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
                 {commonMsg.selectSectionInstructions()}
@@ -113,8 +105,4 @@ export default connect((state, ownProps) => {
     scriptHasHideableStages: state.hiddenStage.get('initialized'),
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
-}, dispatch => ({
-  setViewType(viewAs) {
-    dispatch(setViewType(viewAs));
-  }
-}))(ScriptTeacherPanel);
+})(ScriptTeacherPanel);
