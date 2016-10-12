@@ -29,6 +29,7 @@ crowdin.yaml
 /aws/.code-studio-commit-built
 /aws/.shared-built
 /aws/.shared-commit-built
+/bin/cron/log
 /build-started
 /coverage
 /crontab
