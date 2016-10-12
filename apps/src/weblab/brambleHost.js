@@ -24,8 +24,6 @@ let onProjectChangedCallback_ = null;
 let _recentBrambleChanges;
 // the version id of the project at the time of the last bramble file sync
 let _lastSyncedVersionId;
-// a flag to indicate that we have startSources in bramble, but haven't saved
-let _uploadEverythingToService;
 
 // Project root in file system
 const projectRoot = "/codedotorg/weblab";
@@ -34,7 +32,6 @@ const removeProjectRootRegex = /^\/codedotorg\/weblab\//g;
 function ensureProjectRootDirExists(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
-  const Path = bramble_.Filer.Path;
 
   // create project root directory
   sh.mkdirp(projectRoot, err => {
@@ -96,7 +93,6 @@ function putFilesInBramble(sources, callback) {
 function removeAllFilesInBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
-  const Path = bramble_.Filer.Path;
 
   sh.rm(projectRoot, {recursive: true}, err => {
     // create project root directory
@@ -128,7 +124,6 @@ function resetBrambleChangesAndProjectVersion(projectVersion) {
     fileChange: {},
   };
   _lastSyncedVersionId = projectVersion;
-  _uploadEverythingToService = false;
 }
 
 function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
@@ -234,7 +229,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
     resetBrambleChangesAndProjectVersion(currentProjectVersion);
     // Cancel any beforewrite hook that we may have registered, because we are
     // now treating the service as the source of truth:
-    webLab_.registerBeforeWriteHook(null);
+    webLab_.registerBeforeFirstWriteHook(null);
     // Changes on the server, rebuild from the fileEntries supplied:
     removeAllFilesInBramble(err => {
       if (err) {
@@ -273,7 +268,6 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
 function uploadAllFilesFromBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
-  const Path = bramble_.Filer.Path;
 
   // enumerate files in the file system off the project root
   sh.ls(projectRoot, function (err, entries) {
@@ -391,8 +385,7 @@ function startInitialFileSync(callback, forceResetToStartSources) {
             // startSources into bramble - there is no need to save these during
             // sync until a user-initiated change occurs
             resetBrambleChangesAndProjectVersion(currentProjectVersion);
-            webLab_.registerBeforeWriteHook(uploadAllFilesFromBramble);
-            _uploadEverythingToService = true;
+            webLab_.registerBeforeFirstWriteHook(uploadAllFilesFromBramble);
 
             // Start the initial files sync
             syncFiles(callback);

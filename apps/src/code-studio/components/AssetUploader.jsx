@@ -29,8 +29,8 @@ var AssetUploader = React.createClass({
   render: function () {
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     let url = api.getUploadUrl();
-    let uploadDone = api.makeUploadDoneCallback(this.props.onUploadDone);
-    let uploadStart = api.makeUploadStartCallback(this.props.onUploadStart);
+    let uploadDone = api.wrapUploadDoneCallback(this.props.onUploadDone);
+    let uploadStart = api.wrapUploadStartCallback(this.props.onUploadStart);
     return (
       <span>
         <HiddenUploader

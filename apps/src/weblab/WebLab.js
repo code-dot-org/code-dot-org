@@ -156,7 +156,7 @@ WebLab.prototype.init = function (config) {
   function onAddFileImage() {
     dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
       showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
-      useFilesApi: true
+      useFilesApi: config.useFilesApi
     });
   }
 
@@ -270,8 +270,8 @@ WebLab.prototype.changeProjectFile = function (filename, fileData, callback) {
  * @param {Function} hook to be called once before a filesApi write.
  *   hook should be hook(callback) and callback is callback(err)
  */
-WebLab.prototype.registerBeforeWriteHook = function (hook) {
-  filesApi.registerBeforeWriteHook(hook);
+WebLab.prototype.registerBeforeFirstWriteHook = function (hook) {
+  filesApi.registerBeforeFirstWriteHook(hook);
 };
 
 // Called by Bramble when project has changed
@@ -309,28 +309,20 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function () {
-  filesApi.ajax('GET', '', xhr => {
-    let parsedResponse;
-    try {
-      parsedResponse = JSON.parse(xhr.responseText);
-    } catch (e) {
-      console.error('files API parse failed, error: ' + e);
-      this.fileEntries = null;
-      return;
-    }
-    assetListStore.reset(parsedResponse.files);
+  filesApi.getFiles(result => {
+    assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
-      url: `/v3/files/${dashboard.project.getCurrentId()}/${fileEntry.filename}`
+      url: filesApi.basePath(fileEntry.filename)
     }));
-    var latestFilesVersionId = parsedResponse.filesVersionId;
+    var latestFilesVersionId = result.filesVersionId;
     this.initialFilesVersionId = this.initialFilesVersionId || latestFilesVersionId;
 
     if (latestFilesVersionId !== this.initialFilesVersionId) {
       // After we've detected the first change to the version, we store this
       // version id so that subsequent writes will continue to replace the
       // current version (until the browser page reloads)
-      dashboard.project.filesVersionId = parsedResponse.filesVersionId;
+      dashboard.project.filesVersionId = result.filesVersionId;
     }
     if (this.brambleHost) {
       this.brambleHost.syncFiles(() => {});

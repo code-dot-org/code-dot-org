@@ -140,20 +140,16 @@ export function fetchProject(url) {
       var projectId = match[1];
       dispatch({type: IMPORT.PROJECT.START_FETCHING, url});
 
-      assetsApi.ajax(
-        'GET',
-        '',
-        xhr => {
-          existingAssets = JSON.parse(xhr.response);
+      assetsApi.getFiles(
+        result => {
+          existingAssets = result.files;
           onSuccess();
         },
         onError
       );
-      assetsApi.withProjectId(projectId).ajax(
-        'GET',
-        '',
-        xhr => {
-          assets = JSON.parse(xhr.response);
+      assetsApi.withProjectId(projectId).getFiles(
+        result => {
+          assets = result.files;
           onSuccess();
         },
         onError

@@ -35,11 +35,11 @@ var Attachments = React.createClass({
   },
 
   componentWillMount: function () {
-    assetsApi.ajax('GET', '', this.onAssetListReceived);
+    assetsApi.getFiles(this.onAssetListReceived);
   },
 
-  onAssetListReceived: function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
+  onAssetListReceived: function (result) {
+    assetListStore.reset(result.files);
     if (this.isMounted()) {
       this.setState({loaded: true});
     }
@@ -54,8 +54,8 @@ var Attachments = React.createClass({
   render: function () {
     var attachmentList = <span style={{fontSize: '0.8em'}}>Loading...</span>;
     if (this.state.loaded) {
-      attachmentList = assetListStore.list().map(function (asset) {
-        var url = '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename;
+      attachmentList = assetListStore.list().map(asset => {
+        var url = assetsApi.basePath(asset.filename);
         return <a key={asset.filename} style={styles.attachment} href={url} target="_blank">{asset.filename}</a>;
       });
     }
