@@ -13,4 +13,7 @@
   = @workshop.subject
   workshop!
 
-= render partial: 'teacher_enrollment_details'
+-if @workshop.course == Pd::Workshop::COURSE_COUNSELOR
+  = render partial: 'teacher_enrollment_details_counselor'
+-else
+  = render partial: 'teacher_enrollment_details'
