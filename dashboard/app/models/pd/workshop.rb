@@ -272,13 +272,13 @@ class Pd::Workshop < ActiveRecord::Base
     end
 
     # Send the emails
-    self.enrollments.reload.each do |enrollment|
+    self.enrollments.each do |enrollment|
       next unless enrollment.user
 
       # Make sure user joined the section
       next unless section.students.exists?(enrollment.user.id)
 
-      Pd::WorkshopMailer.exit_survey(self, enrollment.user, enrollment).deliver_now
+      enrollment.send_exit_survey
     end
   end
 
