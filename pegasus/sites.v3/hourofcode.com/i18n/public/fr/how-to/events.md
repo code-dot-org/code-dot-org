@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Comment organiser Une Heure de Code
 
 ## 1) Préparez-vous pour votre évènement
@@ -54,3 +56,5 @@ nav: how_to_nav
 | 10 h 30 – 10 h 40 | Les élèves font une démo Une Heure de Code pour l'école. Renversement amusant : les faire enseigner au principal, à un homme politique ou à d'autres étudiants.    |
 | 10 h 40 – 11 h    | Les étudiants font une démonstration d'activité hors connexion et montrent comment l'informatique peut être enseignée sans utiliser d'ordinateur.                  |
 | 11 h – 11 h 5     | Les enseignants qui ont contribué à organiser l'événement dans toute l'école donnent une allocution de clôture.                                                    |
+
+<%= view :signup_button %>

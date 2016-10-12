@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Нижче наводиться зразок резолюції підтримки тижня інформатики та її цілей, який можуть використати органи державної та місцевої влади.
 
   
@@ -50,3 +52,5 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

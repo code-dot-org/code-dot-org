@@ -4,15 +4,17 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Návod pro dobrovolníky
 
 ## 1. Staňte se dobrovolníkem
 
-Navštivte třídu a inspirujte studenty, aby se věnovali počítačům. [Pomáhejte](https://code.org/volunteer/engineer).
+Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
 ## 2. připojte se do dobrovolnické info zasedání
 
-Budeme hostovat dvě info zasedání, abychom vysvětlili, jaký bude typický dobrovolnický zážitek. Budeme diskutovat, jak spolupracovat s učiteli před jejich Hodinou kódu a co na den, kdy bude probíhat, připravit. Přijďte s vašimi dotazy, prosím! Tyto info zasedání budou hostovány skrze Hangouty, takže pokuď zasedání nestihnete, stále se můžete podívat na záznam zasedání později. [podívejte se na denní program](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
@@ -44,19 +46,19 @@ Budeme hostovat dvě info zasedání, abychom vysvětlili, jaký bude typický d
 
 ## 3. Věnujte 30 minut před výukou
 
-Vyzkoušej výkové programy na [code.org/learn](https://code.org/learn). Vyberte si některé z nejpopulárnějších výukových programů a strávit nějaký čas na seznámení se s každým z nich. To bude trvat asi 5-10 minut za kurz, abys získal pocit, jak to funguje.
+Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Získejte vaše spolupracovníky pro dobrovolnictví
 
-Pověz svým přátelům a spolupracovníkům o Hodině kódu. Máme tisíce učitelů, kteří se připojují a hledají dobrovolníky, takže se jich zeptejte požádejte k [připojení jako dobrovolník](https://code.org/volunteer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Vzorové emaily:**
+**Sample email:**
 
-**Předmět:** Přidej se ke mně a staň se dobrovolníkem v Hodině kódu
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Pokud si pamatuješ svůj první řádek kódu, víš, že utvořil zbytek tvého života.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-To je přesně to, o čem je Hodina kódu. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
 **I signed up to volunteer in a local classroom, and you can, too!**   
 Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
@@ -78,7 +80,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 6. Propagujte Hodinu kódu ve své komunitě
 
-Naverbujte lokální skupinu - chlapecké/holčičí skautské kluby, kostely, univerzity, veteránské skupiny nebo pracovní svazy. Nebo hostujte Hodinu kódu "block party" pro vaše sousedství. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Připravte se dříve, než navštívíte třídu.
 
@@ -95,3 +97,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Přehrajte [video Hodiny kódu](https://www.youtube.com/watch?v=2DxWIxec6yo).
 
 ### 5. Nechte studenty, aby začali se cvičením. Choďte po třídě, odpovídejte na dotazy a pomáhejte jim s těžkými úkoly. Pokuste se nedávat studentům řešení ihned. Místo toho se ptejte tak aby si sami odpověděli, co je špatně.
+
+<%= view :signup_button %>

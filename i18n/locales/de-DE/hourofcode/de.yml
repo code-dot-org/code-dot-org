@@ -4,6 +4,7 @@ de:
   language: Deutsch
   front_title: 'Mach mit beim grössten Lern-Event aller Zeiten, %{campaign_date}, 2015'
   coming_soon: Demnächst
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7. Dez.
   campaign_date_start_long: 7. Dezember
   campaign_date_short: 7.-13. Dez.
@@ -18,7 +19,6 @@ de:
   front_start_learning: Start learning
   header_menu_resources: Ressourcen
   header_menu_faq: Häufige Fragen
-  header_menu_prizes: Preise
   header_menu_how_to: How-To
   header_menu_promote: Unterstützen
   company_4-H: 4-H Jugendentwicklung
@@ -144,14 +144,6 @@ de:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Preise für jeden Veranstalter
-  prizes_every_organizer: 'Jeder Hour of Code Veranstalter erhält Dropbox- oder Skype-Guthaben  als Dankeschön'
-  prizes_technology: In jedem US-Bundesstaat sowie in Washington DC gewinnt je eine staatliche Schule Preise im Wert von 10.000 US-Dollar
-  prizes_tech_chats: '# Klassen werden Video-Chats mit besonderen Gästen gewinnen'
-  prizes_robots: 100 Klassen werden einen Satz programmierbarer Roboten gewinnen
-  prizes_brilliant: 'Eine Schule in jeder Provinz und Territorium erhält $2000 für ein "Brillant Project"'
-  prizes_actua: 15 Schulen in ganz Kanada erhalten 2 Hands-on-STENGEL-Workshops von einem Actuas Mitglied
-  prizes_details: Details
   nav_back_to_resources: Zurück zu den Hilfsmitteln
   how_to_nav_educators: Für Lehrer
   how_to_nav_after_school: Für nach der Schule
@@ -163,23 +155,6 @@ de:
   how_to_nav_companies: Für Unternehmen
   how_to_nav_afterschool_educators: Für Erzieher der Nachmittagsbetreuung
   how_to_nav_volunteers: Für Volunteers
-  prizes_nav_title: Preise
-  prizes_nav_home: Alle Preise
-  prizes_nav_hardware: Anmeldung Hardware-Preis
-  prizes_nav_terms: Nutzungsbedingungen
-  prizes_nav_faq: Häufige Fragen
-  prizes_nav_dc: Abenteuerausflug nach Washington D.C.
-  prizes_nav_technology: Informatikmittel im Wert von $10.000 für die Schule
-  prizes_nav_video_chat: Video-Chat mit einem IT-Titan
-  prizes_nav_skype_dropbox: Skype-Guthaben oder Dropbox Speicherplatz für jeden Veranstalter
-  prizes_nav_brilliant: $2.000 Brilliant Labs Projekt
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Preise für jeden Lehrer
-  prizes_10k: In jedem US-Bundesstaat sowie in Washington D.C. gewinnt je eine staatliche Schule Preise im Wert von 10.000 US-Dollar
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Jeder</i> Veranstalter erhält <b>10 US-Dollar auf Amazon.com, iTunes oder im Windows Store</b> als ein Dankeschön Geschenk!'
-  prizes_more: More exciting prizes
   whats_next_header: Wie geht es weiter?
   whats_next_description: "Für Ihre Veranstaltung schicken wir Ihnen Materialien und hilfreiche Tipps. Neue Tutorials 2015 sind bald Online oder Mobile verfügbar – oder sogar ohne Computer! <a href='http://code.org/learn'>Probiere aktuelle Tutorials</a>"
   whats_next_how_to: "<a href='/how-to'>Wie führe ich eine Hour of Code durch</a>"
@@ -196,6 +171,7 @@ de:
   share_on_facebook: Auf Facebook teilen
   share_on_twitter: Auf Twitter teilen
   front_join_us_heading: Eine Hour of Code für jeden Schüler.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Informatik ist Grundlagenwissen für jeden Schüler. Helfen Sie uns, dieses Wissen 100 Millionen Schülern weiterzugeben.
   front_join_us_description_short: Informatik bildet eine Basis für jeden Schüler.
   front_join_us_button: Mach mit
@@ -243,12 +219,13 @@ de:
   signup_send_posters_address_label: Adresse der Schule oder Organisation
   signup_whole_school_flag_label: Diese Veranstaltung betrifft eine komplette Schule
   signup_your_event: Melde Deine Veranstaltung an
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Helfen Sie mir, einen lokalen Software-Ingenieur zu finden
   signup_multiple_event_warning: Sollten Sie mehrere Veranstaltungen anbieten, dann geben Sie bitte jeder einen eigenen Namen oder eine eigene E-Mail-Adresse. Wir können nur eine Veranstaltung pro Name und E-Mail zählen.
   signup_name_placeholder: Dein Name
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Z. B. Mittelschule Lohsa
-  signup_event_location_placeholder: "Postleitzahl und Land ODER vollständige Adresse.\\r\n(Wir nutzen dies um deinen Ort auf unserer Karte zu markieren)"
+  signup_event_location_placeholder: "Postleitzahl und Land ODER vollständige Adresse.\r\n(Wir nutzen dies um deinen Ort auf unserer Karte zu markieren)"
   signup_special_event_details_placeholder: Beschreibe was deine Veranstaltung zu einer besonderen Veranstaltung macht
   signup_send_posters_address_placeholder: Diese Adresse wird nicht auf unserer Karte angezeigt
   signup_event_type_in_school: In einer Schule
@@ -273,28 +250,6 @@ de:
   meta_tag_twitter_title: Die Hour of Code kommt
   meta_tag_twitter_description: Die Hour of Code ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104 Jahre.
   twitter_default_text: 'Ich nehme dieses Jahr an der #HourOfCode teil, und Du? @codeorg'
-  hardware_prizes_form_name_label: Dein Name
-  hardware_prizes_form_name_placeholder: Dein Name
-  hardware_prizes_form_email_label: Deine E-Mail
-  hardware_prizes_form_email_placeholder: Deine E-Mail
-  hardware_prizes_form_school_name_label: Name der Schule
-  hardware_prizes_form_school_name_placeholder: Name der Schule
-  hardware_prizes_form_school_address_label: Adresse der Schule
-  hardware_prizes_form_school_address_placeholder: Adresse der Schule
-  hardware_prizes_form_school_type_label: Schultyp
-  hardware_prizes_form_school_type_option_elementary: Grundschule
-  hardware_prizes_form_school_type_option_middle_school: Mittel-/Oberschule
-  hardware_prizes_form_school_type_option_high_school: Gymnasium
-  hardware_prizes_form_qualifying_school_label: Dies ist eine amerikanische staatliche Einheitsschule (K-12)
-  hardware_prizes_form_title_I_school_label: 'Diese Schule ist berechtigt "Title I"-Finanzmittel zu erhalten (gilt nur für die USA)'
-  hardware_prizes_form_title_I_school_help_text: '"Title I"-Schulen in den USA sind Schulen mit einem hohen Prozentsatz von Kindern aus Familien mit niedrigen Einkommen, die vom Staat unterstützt werden und so dabei helfen, dass alle Kinder die Chance haben eine ausreichende Bildung zu bekommen.'
-  hardware_prizes_form_number_students_label: Anzahl der teilnehmenden Schüler
-  hardware_prizes_form_number_students_placeholder: Anzahl der Schüler
-  hardware_prizes_form_technology_plan_label: Wie werden Sie neuen Technologie nutzen, zu erweitern die Computer-Wissenschaft-Unterricht in Ihrer Schule?
-  hardware_prizes_form_technology_plan_placeholder: Plan für den Einsatz neuer Technologien
-  hardware_prizes_form_plan_file_label: Laden Sie Ihr Hour of Code Logistik-Konzept hoch
-  hardware_prizes_form_plan_file_description: 'Schicken Sie uns Ihren Zeitplan, wie Sie jeden Schüler an Ihrer Schule in einer Hour-of-Code zu unterbringen gedenken. Siehe Beispiel-Plan: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Senden
   hoc_faq_title: Häufig gestellte Fragen
   hoc_faq_what_is_hoc_q: Was ist die Hour of Code?
   hoc_faq_what_is_hoc_a: "Hour of Code ist eine einstündige Einführung in die Informatik, entwickelt um hinter das Geheimnis der Programmierung zu schauen und die Grundlagen kennen zu lernen. <a href='%{codeorg_url}'>Probieren Sie die Tutorials aus</a>."
@@ -402,11 +357,6 @@ de:
   title_proclamation: Beispiel für einen Aufruf zur Unterstüzung einer Informatikwoche und der Hour of Code
   title_stats: Statistiken
   title_partners: Partner
-  title_prizes_faq: Preise FAQ
-  title_prizes_terms: Preise Konditionen
-  title_prizes_thanks: Vielen Dank
-  title_prizes: Preise
-  title_hardware_prize_form: Hardware-Preise Anmeldung
   title_resources: Ressourcen
   title_signup_thanks: Danke, dass Du Dich als Veranstalter für eine Hour of Code angemeldet hast!
   title_tutorial_guidelines: Tutorial Richtlinien

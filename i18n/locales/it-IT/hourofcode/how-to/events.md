@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Come organizzare un evento dell'Ora del Codice
 
 ## 1) Prepara il tuo evento
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30 - 10:40 am | Gli studenti svolgono una dimostrazione di un'Ora del Codice al resto della scuola. Scambio delle parti: lasciate che siano loro ad insegnare al dirigente scolastico, ai rappresentanti politici o agli altri alunni. |
 | 10:40 - 11:00 am | Alcuni studenti mostrano un'attività tradizionale e come l'informatica possa essere insegnata senza l'uso di computer.                                                                                                 |
 | 11:00 - 11:05 am | L'insegnante che ha aiutato ad organizzare l'evento terrà il discorso conclusivo.                                                                                                                                      |
+
+<%= view :signup_button %>

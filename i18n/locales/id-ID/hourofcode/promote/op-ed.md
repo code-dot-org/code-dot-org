@@ -4,41 +4,45 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Dibawah ini adalah contoh op-ed yang mendukung Pekan Edukasi Ilmu Komputer dan tujuan yang dapat digunakan oleh negara, legislator lokal, pemimpin bisnis, dll.
 
   
 
 
-Pergi ke [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) untuk informasi spesifik-ngeara mengenai ilmu komputer.
+Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
 
-**Judul: Komputasi... Dimana pekerjaan berada**
+**Title: Computing…Where the Jobs Are**
 
-**Oleh [NAME] dan [pertimbangkan Co-AUTHORING dengan pendidik, pengawas atau pemimpin bisnis]**
+**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Komputer ada di mana-mana. Mereka ada di kantong kita. Mereka ada di dinding kita. Mereka ada di mobil kita. Mereka adalah bagian penting dari infrastruktur kita, dari jaringan listrik untuk lampu lalu lintas hingga inti pasar keuangan kita. Dan semua komputer ini memiliki satu kesamaan. Mereka tergantung pada perangkat lunak untuk memberitahu mereka apa yang harus dilakukan.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Tapi siapa sebenarnya yang akan menulis software ini?
+But who exactly is going to write this software?
 
-Mengingat seberapa cepat dunia kita sedang diubah oleh teknologi, Anda mungkin mengharapkan jumlah siswa yang mempelajari ilmu komputer di K-12 pendidikan sekarang selalu tinggi. Anda mungkin salah. Pada kenyataannya, lebih sedikit siswa belajar ilmu komputer, dan lebih sedikit sekolah yang mengajarkan hal itu daripada satu dekade yang lalu.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-Pada waktu dimana permintaan untuk programer terampil sangat tinggi, kita kekurangan ilmuwan komputer. Bahkan pada saat dimana tingkat pengangguran tinggi, ribuan pekerjaan, banyak dari mereka terdapat di **[MASUKKAN negara/kota]**, akan tidak terisi karena kurangnya individu dengan keahlian yang tepat.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-Mengapa hal ini terjadi? Dan bagaimana kita bisa mengatasi ini?
+Why is this? And how can we address it?
 
-Masalahnya dimulai di sekolah menengah dan sekolah tinggi kita. Sembilan dari sepuluh sekolah kita tidak menawarkan kelas pemrograman komputer. Di **[** Kabupaten sekolah] tahun lalu, hanya **[NUMBER]** siswa yang mengambil ujian Advanced Placement (AP) ilmu komputer tingkat universitas, hanya **[%]** semua siswa yang mengambil AP di negara kita. Kita hanya tidak melakukan persiapan atau dorongan mahasiswa yang cukup untuk mengejar karir dengan bayaran tinggi ini.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Hampir semua inovasi komputasi besar diciptakan di negara ini, tetapi kita berada dalam risiko kehilangan kepemimpinan itu jika kita tidak melakukan sesuatu sekarang.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Kita perlu membuat beberapa perubahan.
+We need to make some changes.
 
-**[OPSIONAL UNTUK NEGARA-NEGARA DIMANA INI BERLAKU]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Salah satu perubahan positif mungkin terjadi adalah dengan mengijinkan program studi ilmu komputer untuk memenuhi persyaratan lulus sekolah tinggi matematika atau sains. Di **[MASUKKAN negara]**, kursus ilmu komputer adalah pilihan. Mengingat tuntutan akademik, siswa tidak mampu mengambil program studi ilmu komputer secara elektif. Dan membuat perubahan ini dapat memiliki dampak besar. Di negara-negara di mana pelajaran ilmu komputer dihitung sebagai persyaratan kelulusan, pelajaran menjadi lima puluh persen lebih besar dan dengan tingkat partisipasi yang lebih tinggi dari kaum minoritas ketimbang negara yang menjadikan pelajaran ilmu komputer sebagai pilihan.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Kita juga harus bekerja dengan siswa di usia muda untuk memicu minat mereka dalam ilmu komputer dan coding. Anak-anak kita tidak hanya harus tahu bagaimana menggunakan aplikasi dan bermain video game, mereka seharusnya tahu bagaimana untuk menciptakannya. Anak-anak dapat mempelajari dasar-dasar coding sedari kelas dua.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Kita perlu merekrut guru sains komputer lain dan mendorong pengembangan profesional dalam bidang mereka. Sekarang ada banyak sumber online yang dapat membantu guru mengakses dan tetap up to date dengan teknologi terbaru untuk siswa mereka.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Menurut Bureau of Labor Statistics, 2020 nanti, akan ada 9.2 juta pekerjaan dalam bidang STEM. Setengah dari pekerjaan-pekerjaan tersebut — 4,6 juta — adalah teknologi komputasi atau informasi. Dan ilmu komputer semakin menjadi dasar pengetahuan untuk abad 21. Siapa yang akan mengisi pekerjaan ini jika anak-anak kita tidak diberikan kesempatan untuk mendapatkan keahlian yang dibutuhkan?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-Minggu ini, <%= campaign_date('full') %>, adalah Pekan Edukasi Ilmu Komputer. Di sekolah di seluruh **[STATE]**, siswa kami akan berpartisipasi dalam Hour of Code nasional, menjelaskan tentang ilmu komputer dan mudah-mudahan menarik minat mereka untuk pergi pada dan belajar lebih banyak. Aku akan bergabung dengan mereka, dan saya mengundang Anda untuk bergabung juga. Semua orang harus belajar bagaimana coding. Kunjungi https://hourofcode.com/<%= @country %> untuk mempelajari lebih lanjut dan memulai. Dan dukung upaya kami untuk membawa ilmu komputer ke sekolah-sekolah lain di **[STATE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+
+<%= view :signup_button %>

@@ -1,18 +1,20 @@
 * * *
 
-Titel: < % = hoc_s(:title_how_to_volunteers) %> lay-out: breed nav: how_to_nav
+title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # How-to gids voor vrijwilligers
 
 ## 1. Meld u aan als vrijwilliger
 
-Bezoek een lokale klas om scholieren te inspireren om door te blijven leren programmeren. [Doe mee als een vrijwilliger voor een uur](https://code.org/volunteer/engineer).
+Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
 ## 2. Word lid van een vrijwilliger infosessie
 
-Wij zullen twee infosessies hosten om uit te leggen wat een typische vrijwilliger ervaring zal zijn. We zullen bespreken hoe je met leraren moet samenwerken voor hun CodeUur event en ook wat je een dag van te voren moet doen om je voor te bereiden. Kom met vragen! Deze webinars zal worden gehost via Hangouts on Air, dus als je er één mist kan je het alsnog later terug kijken. [Zie de agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
@@ -44,19 +46,19 @@ Wij zullen twee infosessies hosten om uit te leggen wat een typische vrijwillige
 
 ## Besteed 30 minuten van te voren aan de tutorials
 
-Probeer de CodeUur tutorials op [code.org/learn](https://code.org/learn). Kies een paar van de meest populaire tutorials en besteed enige tijd om vertrouwd te raken met elk van hen. Het duurt ongeveer 5-10 minuten per tutorial om een idee te krijgen van hoe het werkt.
+Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Moedig je medecollega's aan om ook mee te doen als een vrijwilliger
 
-Vertel uw vrienden en collega's over het CodeUur. We hebben duizenden leraren die zich al hebben aangemeld en op zoek zijn naar vrijwilligers, dus vraag hen om zich [aan te melden als vrijwilliger](https://code.org/volunteer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Voorbeeld e-mail:**
+**Sample email:**
 
-**Betreft**: doe samen met mij vrijwilligerswerk voor CodeUur
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Als u uw allereerste codering onthoudt, weet u dat het een rol heeft gespeeld in uw leven.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-Dat is waar CodeUur voor staat. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
 **I signed up to volunteer in a local classroom, and you can, too!**   
 Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
@@ -78,7 +80,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 4. Promoot the CodeUur in uw gemeenschap
 
-Werven een lokale groep — jongen/meisje scouts club, kerk, Universiteit, veteranen groep of vakbond. Of host een CodeUur "block party" in uw buurt. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Bereid u voor, voordat u een klaslokaal gaat bezoeken.
 
@@ -95,3 +97,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Bekijk de[CodeUur video](https://www.youtube.com/watch?v=2DxWIxec6yo) 
 
 ### 5. Laat de studenten duiken in de tutorials. Loop door de klas om vragen te beantwoorden en begeleid de leerlingen met moeilijke puzzels. Probeer de leerlingen niet regelrecht de oplossing te geven. Probeer in plaats daarvan hen vragen te stellen, zodat zij zelf kunnen beantwoorden wat er mis ging.
+
+<%= view :signup_button %>

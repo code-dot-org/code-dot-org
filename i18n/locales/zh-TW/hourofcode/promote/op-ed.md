@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### 下面是由電腦科學教育周支援的示例專欄，目標是它可以由國家、地方立法者、商界領袖等使用。
 
   
@@ -11,34 +13,36 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
 
-**標題: 計算...在哪裡工作**
+**Title: Computing…Where the Jobs Are**
 
-**由 [NAME] 和 [考慮與教育家、 院長或業務領導共同撰寫]**
+**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-到處都是電腦。 他們就在我們的口袋裡。 他們在我們的牆上。 他們在我們的汽車上。 他們就像一塊基礎設施的關鍵，從電網到紅綠燈直到我們金融市場的內部運作。 所有這些電腦都有一個共同點。 他們依靠軟體來告訴他們該怎麼做。
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-但實際上，誰打算來寫這個軟體嗎?
+But who exactly is going to write this software?
 
-考慮如何快速的技術正在改變我們的世界，你可能期望學生在今天的 k-12 教育學習電腦科學的學生數目要空前高漲。 你就錯了。 事實上，較少的學生學習電腦科學和更少的學校教它，比十年前。
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-當熟練的程式師的需求從來沒有更高的時候，我們可以培養出更少的電腦科學家。 即使在這一次的高失業率，數以千計的就業機會，其中許多人就在 **[插入國家/城市]**這裡，沒人來填補缺乏足夠具有適當技能的個人。
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-這是為甚麼?以及我們如何能解決它嗎?
+Why is this? And how can we address it?
 
-這一問題開始在我們的初中和高中。 十有八九的我們的學校不提供電腦程式設計課程。 在 **[學區]** 去年，只有 **[NUMBER]** 學生參加了院級先進 (AP) 電腦科學考試，只是 參加在我們國家AP的所有學生的**[%]** 。 我們一般只是準備不足或鼓勵學生去追求這些高薪的、重要的職業。
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-幾乎所有主要的計算創新誕生在這個國家，如果我們現在不做，我們會失去這樣的領導力的風險。
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-我們需要進行一些更改。
+We need to make some changes.
 
-**[在這國家可選適用]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-一個積極的改變會更嚴格的電腦科學課程，以滿足高中數學或科學畢業要求。 **[插入狀態]**，電腦科學的課程中選修課程。 鑒於學術要求，學生不能參加選修電腦科學課程。 並且此更改可以有很大的影響。 在國家在電腦科學的課程計入畢業要求，課程是百分之五十比對待電腦科學作為一門選修課的國家的缺醫少藥的少數群體參與的比率更高更大。
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-我們還應該與學生在年輕的時候，激發他們的興趣在電腦科學和編碼。 我們的孩子應該不知道如何使用應用程式和視頻遊戲 — — 他們應該知道如何創建它們。 孩子們可以早在小學二年級學習編碼的基礎知識。
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-我們需要招聘更多的電腦科學教師和鼓勵在其領域內的專業發展。 今天有許多的線上資源，可以幫助教師為他們的學生獲得和保持跟上最新的技術。
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-根據勞動統計局的資料，即到 2020 年，將有 920 萬工作崗位在專業領域。 一半的工作 — — 460 萬 — — 將在計算或資訊技術。 電腦科學是 21 世紀日益變為基礎知識。 如果我們不給予孩子機會獲得所需的技能，誰將填補這些工作呢?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. 在整個 **[STATE]** 的學校，我們的學生將參加國家代碼小時、 解密電腦科學學科和希望吸引他們瞭解更多。 我會加入他們，和我邀請你也加入行列。 每個人都應該學會如何編寫代碼。 Visit https://hourofcode.com/<%= @country %> to learn more and get started. 和支援我們的努力，即是把電腦科學帶進在 **[STATE]** 的更多學校。.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+
+<%= view :signup_button %>
