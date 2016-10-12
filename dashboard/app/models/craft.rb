@@ -276,8 +276,15 @@ class Craft < Blockly
   <block type='craft_tillSoil'></block>
   <block type='craft_placeBlockAhead'></block>
 </category>
-<category name="Events">
+<category name="EventActions">
+  <block type="craft_forever"></block>
+  <block type="craft_destroyEntity"></block>
+  <block type="craft_attack"></block>
+  <block type="craft_flashEntity"></block>
+  <block type="craft_explodeEntity"></block>
   <block type="craft_drop"></block>
+</category>
+<category name="Events">
   <block type="craft_forever"></block>
   <block type="craft_sheep"></block>
   <block type="craft_zombie"></block>
