@@ -290,6 +290,7 @@ class Craft < Blockly
   <block type="craft_moveTo"></block>
   <block type="craft_moveToward"></block>
   <block type='craft_playSound'></block>
+  <block type="craft_repeatTimes"></block>
   <block type="craft_spawnEntity"></block>
   <block type="craft_spawnEntityRandom"></block>
   <block type="craft_turnLeft"></block>

@@ -801,6 +801,11 @@ Craft.executeUserCode = function () {
           blockType,
           callback);
     },
+    repeat: function (blockID, callback, iterations, targetEntity) {
+      // if resurrected, move blockID be last parameter to fix "Show Code"
+      appCodeOrgAPI.repeat(studioApp.highlight.bind(studioApp, blockID),
+          callback, iterations, targetEntity);
+    },
     ifLavaAhead: function (callback, blockID) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.ifBlockAhead(studioApp.highlight.bind(studioApp, blockID),

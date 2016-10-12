@@ -313,30 +313,6 @@ exports.install = function (blockly, blockInstallOptions) {
         ');\n';
   };
 
-  blockly.Blocks.craft_forever = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(322, 0.90, 0.95);
-      this.appendDummyInput()
-          .appendTitle('forever')
-      this.appendStatementInput('DO')
-          .appendTitle(i18n.blockWhileXAheadDo());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_forever = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    var blockType = this.getTitleValue('TYPE');
-    return 'forever(\'block_id_' + this.id + '\',\n"' +
-            blockType + '", ' +
-        '  function() { '+
-            innerCode +
-        '  }' +
-        ');\n';
-  };
-
   blockly.Blocks.craft_ifBlockAhead = {
     helpUrl: '',
     init: function () {
@@ -588,6 +564,45 @@ exports.install = function (blockly, blockInstallOptions) {
   //simpleEntityBlock('turnEntityLeft', 'turn it left');
   //simpleEntityBlock('turnEntityRandom', 'turn it random');
   //simpleEntityBlock('turnEntityToPlayer', 'turn toward player');
+
+
+  blockly.Blocks.craft_forever = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(322, 0.90, 0.95);
+      this.appendDummyInput()
+          .appendTitle('forever');
+      this.appendStatementInput('DO')
+          .appendTitle(i18n.blockWhileXAheadDo());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_forever = function () {
+    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, -1, event.targetIdentifier);`
+  };
+
+  blockly.Blocks.craft_repeatTimes = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(322, 0.90, 0.95);
+      this.appendDummyInput()
+          .appendTitle('repeat')
+          .appendTitle(new blockly.FieldTextInput('5', blockly.FieldTextInput.nonnegativeIntegerValidator), 'TIMES');
+      this.appendStatementInput('DO')
+          .appendTitle(i18n.blockWhileXAheadDo());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_repeatTimes = function () {
+    const times = this.getTitleValue('TIMES');
+    const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`
+  };
 
   blockly.Blocks[`craft_spawnEntity`] = {
     helpUrl: '',
