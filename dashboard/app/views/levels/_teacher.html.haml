@@ -10,6 +10,8 @@
       = t('teacher.panel.answer_viewer')
     .content
       .non-scrollable-wrapper
+        -# This is rendered into by react
+        #teacher-panel-viewas
         - if @user
           .students
             %h4= t('teacher.panel.student')
