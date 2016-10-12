@@ -846,6 +846,10 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
           type, direction);
     },
+    wait: function (time, targetEntity, blockID) {
+      appCodeOrgAPI.wait(studioApp.highlight.bind(studioApp, blockID),
+          time, targetEntity);
+    },
     spawnEntityRandom: function (type, blockID) {
       var locationOptions = [
         'up',

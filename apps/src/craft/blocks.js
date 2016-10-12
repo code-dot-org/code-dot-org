@@ -512,6 +512,25 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
+  function numberEntryBlock(simpleFunctionName, blockText) {
+    blockly.Blocks[`craft_${simpleFunctionName}`] = {
+      helpUrl: '',
+      init: function () {
+        this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldLabel(blockText))
+            .appendTitle(new blockly.FieldTextInput('2', blockly.FieldTextInput.nonnegativeIntegerValidator), 'VALUE');
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+      }
+    };
+
+    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
+      const value = this.getTitleValue('VALUE');
+      return `${simpleFunctionName}('${value}', event.targetIdentifier, 'block_id_${this.id}');\n`;
+    };
+  }
+
   function simpleEntityActionBlock(simpleFunctionName, blockText) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
@@ -560,6 +579,7 @@ exports.install = function (blockly, blockInstallOptions) {
     entityTargetActionBlock(name, name);
   });
 
+  numberEntryBlock('wait', 'wait');
   dropdownEntityBlock('drop', 'drop', miniBlocks);
   dropdownEntityBlock('moveDirection', 'move', ['up', 'down', 'left', 'right']);
   //simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');

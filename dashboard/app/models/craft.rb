@@ -295,6 +295,7 @@ class Craft < Blockly
   <block type="craft_turnLeft"></block>
   <block type="craft_turnRandom"></block>
   <block type="craft_turnRight"></block>
+  <block type="craft_wait"></block>
 </category>
 <category name="Entities">
   <block type="craft_sheep"></block>
