@@ -538,6 +538,17 @@
     "campaign_date_short": "Dec. 5-11",
     "campaign_date_full": "December 5-11"
   },
+  "se": {
+    "full_name": "Sweden",
+    "default_language": "sv",
+    "partner_page": "code.org",
+    "campaign_date_year": "2016",
+    "campaign_date_full_year": "5-11 december 2016",
+    "campaign_date_start_short": "5:e December",
+    "campaign_date_start_long": "5 december",
+    "campaign_date_short": "5-11 december",
+    "campaign_date_full": "5-11 december"
+  },
   "tr": {
     "full_name": "Turkey",
     "default_language": "tr",
