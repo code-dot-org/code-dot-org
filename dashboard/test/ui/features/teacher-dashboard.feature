@@ -16,7 +16,7 @@ Feature: Using the teacher dashboard
   Scenario: Loading student progress
     Given I create a teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
-    And I complete the level on "http://learn.code.org/s/allthethings/stage/2/puzzle/1"
+    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
     And I sign out
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard"

@@ -7,7 +7,6 @@
 /* global Studio */
 
 import _ from 'lodash';
-import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import msg from './locale';
 import paramLists from './paramLists';
@@ -1412,8 +1411,6 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.studio_getScore = function () {
-    var arg = Blockly.JavaScript.valueToCode(this, 'VALUE',
-       Blockly.JavaScript.ORDER_NONE) || '0';
    return ['Studio.getScore()', 0];
   };
 

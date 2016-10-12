@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Using Multiframe Animations\r\n\r\nYou probably noticed in the last game that the sprites themselves were animated. Have some fun choosing some of the animations from the library.\r\n\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n",
+    "markdown_instructions": "# Using Multiframe Animations\r\n\r\nIn the sample defender game the sprites themselves were animated. Before getting started on programming this game take a minute to get familiar with this new way of animating sprites.\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n* Remember you can use `setAnimation` to give your sprites animations you've created in the Animation Tab\r\n",
     "submittable": "false",
     "start_blocks": "var sprite1, sprite2;\r\n\r\nsprite1 = createSprite(100,100);\r\nsprite2 = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
     "is_k1": "false",
@@ -36,6 +36,8 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"81ebaa85-e30c-4586-ac54-70af53ed0244\",\r\n    \"3fa83709-7269-4999-ac04-614e7d733fec\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"81ebaa85-e30c-4586-ac54-70af53ed0244\": {\r\n      \"name\": \"alienPink_walk_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr/alienPink_walk.png\",\r\n      \"frameSize\": {\r\n        \"x\": 130,\r\n        \"y\": 258\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr\"\r\n    },\r\n    \"3fa83709-7269-4999-ac04-614e7d733fec\": {\r\n      \"name\": \"ladybug_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E/ladybug.png\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 36\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E\"\r\n    }\r\n  }\r\n}",
     "project_template_level_name": "CSD U3 AnimationsMulti introducing multiframe template",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
     "contained_level_names": null
   },
   "published": true,

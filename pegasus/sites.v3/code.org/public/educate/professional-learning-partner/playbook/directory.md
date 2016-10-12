@@ -18,8 +18,10 @@ Each of our Professional learning partners is listed below in alphabetical order
 - **[Idaho](#id)**<br/>
 - **[Illinois](#il)**<br/>
 - **[Indiana](#in)**<br/>
+- **[Iowa](#ia)**<br/>
 - **[Kentucky](#ky)**<br/>
 - **[Maryland](#md)**<br/>
+- **[Michigan](#mi)**<br/>
 - **[New York](#ny)**<br/>
 - **[North Carolina](#nc)**<br/>
 - **[Ohio](#oh)**<br/>
@@ -63,6 +65,7 @@ To achieve its vision of an Arizona recognized globally for a qualified workforc
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -93,6 +96,7 @@ Los Angeles and Orange County, California<br/>
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for adivce on:** Community outreach to schools, teachers and students.<br/>
 
@@ -120,6 +124,7 @@ The Alameda County Office of Education:<br/>
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** Computer Science, Computer Science principles, budgeting for CS programs, curriculum design, outreach, community of practice building. <br/>
 
@@ -134,6 +139,7 @@ Inland Empire, California	<br/>
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** CS Principles Workshop planning, networking, community relations<br/>
 
@@ -153,6 +159,7 @@ Silicon Valley Education Foundation (SVEF) was founded on the belief that a new 
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** In partnership with the business, high tech communities and school districts, SVEF disseminates tools and resources for innovation to ensure all students gain the skills they need to succeed in the 21st century economy. <br/>
 
@@ -185,6 +192,7 @@ More information is available [here.](http://browardschools.com/browardcodes)
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -206,6 +214,7 @@ Northeast Florida<br/>
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -222,6 +231,7 @@ Orlando Science Center is one of America’s top hands-on science centers where 
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -247,6 +257,7 @@ Georgia Tech Center for Education Integrating Science, Mathematics, and Computin
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -272,6 +283,7 @@ Idaho Digital Learning provides innovative education methods through digital lea
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -313,6 +325,7 @@ Chicago <br/>
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -336,6 +349,7 @@ Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap bet
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -351,6 +365,29 @@ stephanie@nextech.org
 <br/>
 
 ________________
+<a id="ia"></a>
+
+## Iowa
+### [NewBoCo](Newbo.co)<br/>
+Iowa	
+
+New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and coworking.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and coworking<br/>
+
+**Contact Information**<br/>
+Kristine Sorensen<Br/>
+Kristine@newbo.co
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+________________
 <a id="ky"></a>
 
 ## Kentucky
@@ -361,6 +398,7 @@ AdvanceKentucky is a statewide math-science initiative of the Kentucky Science a
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** AP program, NMSI model, organizing professional development <br/>
 
@@ -382,7 +420,7 @@ Northern Maryland<br/>
 
 **Programs**<br/>
 CS Principles<br/>
-
+CS Discoveries<br/>
 
 **Contact Information**<br/>
 Heather Lageman <br/>
@@ -400,6 +438,7 @@ Southern Maryland<br/>
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -413,8 +452,30 @@ tchappelear@ccboe.com
 [**Back to the top**](#top)
 <br/>
 ________________
-<a id="ny"></a>
+<a id="mi"></a>
 
+## Michigan
+### [Michigan Mathematics and Science Centers Network](http://www.mimathandscience.org/)<br/>
+Michigan<br/>
+
+The Michigan Mathematics and Science Centers Network is comprised of 33 regional centers throughout Michigan. These centers provide leadership, curriculum support, professional development, and student services to educators in local school districts. The centers also serve as a resource clearinghouse for educational materials and information, and work to foster community involvement in the areas of mathematics and science. The Mathematics and Science Centers Network supports the delivery of high quality STEM education for the students of Michigan.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Statewide implementation of this opportunity<br/>
+
+**Contact Information**<br/>
+Kathy Surd<br/>
+ksurd@wsesd.org
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="ny"></a>
 ## New York
 ### [Code/Interactive](http://www.weare.ci/)<br/>
 New York<br/>
@@ -425,6 +486,7 @@ C/I focuses on eliminating the representation gap in technology careers across l
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** Organizing impactful student opportunities for industry exposure such as hackathons (with a CSP Create Performance Task component), tech office visits with career panels, and mentorship programs; teacher coaching; professional development for Computer Science Principles, Exploring Computer Science, and our own Creative Web Development and Programming.<br/>
 
@@ -439,7 +501,7 @@ jen@weare.ci
 ________________
 <a id="nc"></a>
 
-## North Carloina
+## North Carolina
 ### [The Friday Institute](http://www.fi.ncsu.edu/)	<Br/>
 Durham, North Carolina	
 
@@ -447,6 +509,7 @@ The Friday Institute is helping to create the next generation education system b
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** Ideas for funding and partnerships, facilitator capacity building, instructional strategy pedagogy, strategic planning in districts, approaches to state-wide policy change, ways to partner with faculty and universities, online and blended learning models.<br/>
 
@@ -470,6 +533,7 @@ Ohio<br/>
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact Information**<br/>
 Kelly Gaier Evans 	<br/>
@@ -491,6 +555,7 @@ The Div is a nonprofit dedicated helping the next generation thrive through acce
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** Hosting youth after-school computer science learning programs<br/>
 
@@ -514,6 +579,7 @@ The Rice University School Mathematics Project (RUSMP) was established in 1987 i
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -542,12 +608,13 @@ rparr@rice.edu<br/>
 ### [The University of Texas at Dallas](http://www.instructionalexcellence.org/)<br/>
 Dallas, Texas<Br/>
 
-The Institute for Instructional Excellence (TIIE) at UT Dallas is part of the Department of Science and Mathematics Education housed within the School of Natural Sciences and Mathematics.  Leveraging partnerships across UT Dallas,  our focus is to assist campuses and districts in building teacher capacity to design, implement, and assess inquiry-based learning environments across all grade levels, content areas and audiences. <br/> 
+The Institute for Instructional Excellence (TIIE) at UT Dallas is part of the Department of Science and Mathematics Education housed within the School of Natural Sciences and Mathematics.  Our focus is to assist campuses and districts in building teacher capacity in designing, implementing, and supporting inquiry-based learning environments across all grade levels and content areas.  We accomplish this through a unique instructional model, coaching, and developing teachers as leaders of instruction. <br/> 
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
-**Contact us for advice on:** Inquiry-Based Learning, STEM, Computer Science, Informal Science Experiences, Robotics
+**Contact us for advice on:** Instructional Coaching, STEM Best Practices, Standards-based Inquiry-Based Learning
 
 **Contact Information**
 Dr. Joseph Ferrara<br/>
@@ -569,6 +636,7 @@ Utah STEM Action Center is a state agency under the Governor's Office of Economi
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 
 **Contact us for information on:** Utah's Efforts, CS/IT Pathway, Legislative initiatives and partnerships
@@ -593,6 +661,7 @@ CodeVA is Virginia's computer science advocacy and teacher training/support orga
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
+CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -628,6 +697,7 @@ We take seriously the opportunity and responsibility we have to help schools and
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -653,6 +723,7 @@ Educational Service Districts improve the quality, equity, and efficiency of edu
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for advice on:** Professional development facilitation, what to do when you're just getting started. 
 

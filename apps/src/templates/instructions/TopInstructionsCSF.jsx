@@ -7,7 +7,6 @@ import Radium from 'radium';
 import processMarkdown from 'marked';
 import renderer from '../../StylelessRenderer';
 import { connect } from 'react-redux';
-var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
 var color = require('../../color');
@@ -16,10 +15,7 @@ var commonStyles = require('../../commonStyles');
 
 
 var Instructions = require('./Instructions');
-var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
-var constants = require('../../constants');
-var msg = require('@cdo/locale');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -37,8 +33,6 @@ import {
   shouldDisplayChatTips
 } from './utils';
 
-const VERTICAL_PADDING = 10;
-const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
@@ -219,7 +213,6 @@ var TopInstructions = React.createClass({
 
     if (this.refs && this.refs.instructions) {
       const contentContainer = this.refs.instructions.parentElement;
-      const contentHeight = contentContainer.scrollHeight;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
         // see comment above

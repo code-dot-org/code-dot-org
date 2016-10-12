@@ -1,11 +1,8 @@
-/* global dashboard */
-
 import api from './api';
 import _ from 'lodash';
 import {getFirstParam} from '../dropletUtils';
 import {
     N_COLOR_LEDS,
-    TOUCH_PINS,
     TOUCH_SENSOR_VARS,
     SENSOR_VARS,
     BUTTON_VARS,

@@ -10,8 +10,8 @@ level 'PDAlg Teacher Introduction'
 
 stage 'Course Overview'
 level 'PDAlg Scope'
-level 'PDAlg Implementation'
-level 'PDAlg Course Goals'
+level 'PDAlg implementation'
+level 'PDAlg course goals'
 level 'AlgPD Break'
 
 stage 'Why Computer Science belongs in Algebra'

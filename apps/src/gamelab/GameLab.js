@@ -4,15 +4,11 @@ import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
-var commonMsg = require('@cdo/locale');
 var msg = require('@cdo/gamelab/locale');
-var levels = require('./levels');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
@@ -21,13 +17,11 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-var assetPrefix = require('../assetManagement/assetPrefix');
 var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
-var experiments = require('../experiments');
 
 import {
   animationSourceUrl,
