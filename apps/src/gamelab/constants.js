@@ -23,3 +23,13 @@ module.exports.PlayBehavior = utils.makeEnum(
   'ALWAYS_PLAY',
   'NEVER_PLAY'
 );
+
+module.exports.AnimationCategories = [
+	'animals',
+	'generic_items'
+];
+
+module.exports.AnimationCategoryNames = {
+	'animals': 'Animals',
+	'generic_items': 'Generic items'
+};

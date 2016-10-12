@@ -47,6 +47,9 @@ const styles = {
   },
   labelIcon: {
     fontStyle: 'italic'
+  },
+  categoryImage: {
+    borderRadius: 10
   }
 };
 
@@ -56,7 +59,8 @@ const AnimationPickerListItem = React.createClass({
     icon: React.PropTypes.string,
     label: React.PropTypes.string.isRequired,
     onClick: React.PropTypes.func,
-    playAnimations: React.PropTypes.bool
+    playAnimations: React.PropTypes.bool,
+    category: React.PropTypes.string
   },
 
   render() {
@@ -69,6 +73,8 @@ const AnimationPickerListItem = React.createClass({
       styles.label,
       this.props.icon && styles.labelIcon
     ];
+
+    const iconImageSrc = this.props.category ? `/blockly/media/gamelab/animation-previews/category_preview_${this.props.category}.png` : '';
 
     return (
       <div style={styles.root} onClick={this.props.onClick}>
@@ -83,6 +89,9 @@ const AnimationPickerListItem = React.createClass({
               />
           }
           {this.props.icon && <i className={"fa fa-" + this.props.icon} />}
+          {this.props.category &&
+            <img style={styles.categoryImage} src={iconImageSrc}/>
+          }
         </div>
         <div style={labelStyle}>
           {this.props.label}
