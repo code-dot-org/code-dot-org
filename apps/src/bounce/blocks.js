@@ -5,7 +5,6 @@
  *
  */
 var msg = require('./locale');
-var codegen = require('../codegen');
 
 var generateSetterCode = function (ctx, name) {
   var value = ctx.getTitleValue('VALUE');

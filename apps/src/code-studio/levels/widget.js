@@ -1,7 +1,7 @@
 /**
  * @file JavaScript loaded in all Widget-type levels.
  */
-/* global apps, appOptions, dashboard */
+/* global apps, appOptions */
 import $ from 'jquery';
 import _ from 'lodash';
 import { showInstructionsDialog } from './dialogHelper';

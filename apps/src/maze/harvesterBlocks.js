@@ -3,7 +3,6 @@
  */
 
 var msg = require('./locale');
-var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
 const CROPS = ['corn', 'pumpkin', 'bean'];

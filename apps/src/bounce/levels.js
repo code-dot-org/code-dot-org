@@ -1,4 +1,3 @@
-var Direction = require('./tiles').Direction;
 var tb = require('../block_utils').createToolbox;
 
 /*

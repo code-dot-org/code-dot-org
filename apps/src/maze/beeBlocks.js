@@ -3,7 +3,6 @@
  */
 
 var msg = require('./locale');
-var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
 var OPERATORS = [
@@ -242,8 +241,6 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
     var argument1 = 'Maze.' + this.getTitleValue('ARG1') +
         '(\'block_id_' + this.id + '\')';
     var operator = this.getTitleValue('OP');
-    var order = (operator === '==' || operator === '!=') ?
-      Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
     var argument2 = this.getTitleValue('ARG2');
     var branch0 = generator.statementToCode(this, 'DO');
     var elseBlock = "";

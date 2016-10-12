@@ -1,6 +1,5 @@
 id '3'
 wrapup_video 'hoc_wrapup'
-hidden 'true'
 
 stage 'The Maze'
 skin 'birds'

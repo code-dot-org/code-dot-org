@@ -1,4 +1,4 @@
-/* global appOptions, Dialog */
+/* global appOptions */
 
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
@@ -43,7 +43,6 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
       var subLevelResult = subLevel.getResult(true);
       var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
       var result = subLevelResult.result;
-      var errorType = subLevelResult.errorType;
       var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
       var submitted = subLevelResult.submitted || false;
 

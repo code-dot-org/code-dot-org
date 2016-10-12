@@ -1,8 +1,6 @@
-professional_learning_course "Other plc course"
+professional_learning_course 'Other plc course'
 
-
-stage 'Digital Citizenship',
-  flex_category: 'required'
+stage 'Digital Citizenship', flex_category: 'required'
 level 'grade5_link_commonSense_powerOfWords'
 
 stage 'Unplugged: Envelope Variables'
@@ -89,37 +87,31 @@ level 'grade5_bee_parameters_new7'
 level 'grade5_bee_parameters_new8'
 level 'grade5_bee_parameters_new9'
 
-stage 'Explore project ideas',
-  flex_category: 'practice'
+stage 'Explore project ideas', flex_category: 'practice'
 named_level 'Inspirational Artwork'
 named_level 'Food Fight'
 named_level 'Guess The Number'
 named_level 'Rock Paper Scissors'
 
-stage 'Final Project - Unplugged: Design Process',
-  flex_category: 'practice'
+stage 'Final Project - Unplugged: Design Process', flex_category: 'practice'
 named_level 'Begin planning your project'
 named_level 'The Design Process (Teacher Lesson Plan)'
 
-stage 'Final Project - Work Day: Build Project Online',
-  flex_category: 'practice'
+stage 'Final Project - Work Day: Build Project Online', flex_category: 'practice'
 named_level 'New Artist Project'
 named_level 'New Play Lab Project'
 named_level 'Project Building (Teacher Lesson Plan)'
 
-stage 'Final Project - Review/Revise Day',
-  flex_category: 'practice'
+stage 'Final Project - Review/Revise Day', flex_category: 'practice'
 named_level 'New Artist Project'
 named_level 'New Play Lab Project'
 named_level 'Project Iteration (Teacher Lesson Plan)'
 
-stage 'Final Project - Presentation Day',
-  flex_category: 'practice'
+stage 'Final Project - Presentation Day', flex_category: 'practice'
 named_level 'Prepare for your presentation'
 named_level 'Project Presentations (Teacher Lesson Plan)'
 
-stage 'Try programming with Khan Academy',
-  flex_category: 'practice'
+stage 'Try programming with Khan Academy', flex_category: 'practice'
 named_level 'Learn Javascript with Khan Academy!'
 
 #stage 'Unplugged: Binary Images'

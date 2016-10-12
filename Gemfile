@@ -222,6 +222,5 @@ gem 'acmesmith'
 gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
-gem 'mail_view'
 gem 'bcrypt'
 gem 'addressable'

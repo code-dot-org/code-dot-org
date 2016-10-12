@@ -1,10 +1,7 @@
 /** @file Top-level view for GameLab */
 /* global dashboard */
 
-import classNames from 'classnames';
-import {connect} from 'react-redux';
 import React from 'react';
-import _ from 'lodash';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 
