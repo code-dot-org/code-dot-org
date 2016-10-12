@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { ViewType, setViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 import commonMsg from '@cdo/locale';
@@ -10,9 +10,6 @@ import commonMsg from '@cdo/locale';
 const styles = {
   viewAs: {
     fontSize: 16,
-    margin: 10
-  },
-  toggleGroup: {
     margin: 10
   },
   text: {
@@ -29,26 +26,7 @@ const styles = {
   }
 };
 
-const ViewAsToggle = ({viewAs, setViewType}) => (
-  <div className="non-scrollable-wrapper">
-    <div style={styles.viewAs}>
-      {commonMsg.viewPageAs()}
-    </div>
-    <div style={styles.toggleGroup}>
-      <ToggleGroup
-        selected={viewAs}
-        onChange={setViewType}
-      >
-        <button value={ViewType.Student}>{commonMsg.student()}</button>
-        <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
-      </ToggleGroup>
-    </div>
-  </div>
-);
-ViewAsToggle.propTypes = {
-  viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-  setViewType: React.PropTypes.func.isRequired,
-};
+
 
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
