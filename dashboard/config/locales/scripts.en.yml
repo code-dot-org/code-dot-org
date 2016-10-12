@@ -2136,3 +2136,10 @@ en:
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
+        hoc-encryption:
+          stage:
+            Simple Encryption: Simple Encryption
+          title: 'Hour of Code: Simple Encryption'
+          description_audience: ''
+          description_short: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
+          description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
