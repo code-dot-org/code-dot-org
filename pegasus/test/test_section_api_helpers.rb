@@ -31,6 +31,7 @@ class SectionApiHelperTest < Minitest::Test
       # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
       @fake_db = Sequel.connect "mock://mysql"
       @fake_db.server_version = 50616
+      I18n.locale = 'en-US'
       Dashboard.stubs(:db).returns(@fake_db)
     end
 
