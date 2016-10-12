@@ -17,6 +17,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF
   end
 
+  def teacher_enrollment_receipt__counselor
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_COUNSELOR
+  end
+
+  def teacher_enrollment_reminder__counselor
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
+  end
+
   def organizer_enrollment_receipt
     mail :organizer_enrollment_receipt
   end
