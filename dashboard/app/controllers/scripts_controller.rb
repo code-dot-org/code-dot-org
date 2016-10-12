@@ -4,7 +4,7 @@ class ScriptsController < ApplicationController
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
   authorize_resource
-  before_action :set_script_file, only: [:edit, :update, :destroy]
+  before_action :set_script_file, only: [:edit, :update]
 
   def show
     if request.path != (canonical_path = script_path(@script))
@@ -36,9 +36,7 @@ class ScriptsController < ApplicationController
     @script.destroy
     filename = "config/scripts/#{@script.name}.script"
     File.delete(filename) if File.exist?(filename)
-    respond_to do |format|
-      format.html { redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human) }
-    end
+    redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end
 
   def edit
@@ -65,10 +63,7 @@ class ScriptsController < ApplicationController
   private
 
   def set_script_file
-    Dir.chdir(Rails.root) do
-      filename = "config/scripts/#{@script.name}.script"
-      @script_file = File.exist?(filename) && File.read(filename)
-    end
+    @script_file = ScriptDSL.serialize_stages(@script)
   end
 
   def rake
