@@ -25,7 +25,7 @@ class ScriptsController < ApplicationController
 
   def create
     @script = Script.new(script_params)
-    if @script.save && @script.update_text(script_params, params[:script_text], i18n_params)
+    if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
       redirect_to @script, notice: I18n.t('crud.created', model: Script.model_name.human)
     else
       render 'new'
@@ -45,7 +45,7 @@ class ScriptsController < ApplicationController
 
   def update
     script_text = params[:script_text]
-    if @script.update_text(script_params, script_text, i18n_params)
+    if @script.update_text(script_params, script_text, i18n_params, general_params)
       redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human)
     else
       render action: 'edit'
@@ -83,6 +83,19 @@ class ScriptsController < ApplicationController
 
   def script_params
     params.require(:script).permit(:name)
+  end
+
+  def general_params
+    h = params.permit(
+      :hidden,
+      :login_required,
+      :hideable_stages,
+      :professional_learning_course,
+      :peer_reviews_to_complete,
+      :wrapup_video,
+    ).to_h
+    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
+    h
   end
 
   def i18n_params

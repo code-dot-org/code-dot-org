@@ -537,17 +537,17 @@ class Script < ActiveRecord::Base
     script
   end
 
-  def update_text(script_params, script_text, metadata_i18n)
+  def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
         Script.add_script({
           name: script_name,
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
-          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-          wrapup_video: script_data[:wrapup_video],
-          properties: Script.build_property_hash(script_data)
+          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+          wrapup_video: general_params[:wrapup_video],
+          properties: Script.build_property_hash(general_params)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
