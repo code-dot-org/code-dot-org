@@ -529,7 +529,7 @@ class Script < ActiveRecord::Base
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
+    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.find_by!(key: options[:wrapup_video])
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
