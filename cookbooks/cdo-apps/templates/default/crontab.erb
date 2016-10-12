@@ -68,6 +68,9 @@
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
+
+      # RDS backup window is 08:50-09:20, so by 09:50 backups should be ready
+      cronjob at:'50 9 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
     end
 
     # 'daemons' in all environments
