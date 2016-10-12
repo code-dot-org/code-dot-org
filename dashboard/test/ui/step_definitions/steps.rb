@@ -369,10 +369,12 @@ Then /^mark the current level as completed on the client/ do
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  # Sometimes there's a momentary delay loading progress (which updates the color)
+  # so allow a brief wait for the appropriate styling to show up.
   selector = ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child"
   steps %{
     And I wait until element "#{selector}" is in the DOM
-    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait up to 5 seconds for element "#{selector}" to have css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -418,6 +420,12 @@ end
 
 Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_value|
   element_has_css(selector, property, expected_value)
+end
+
+Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to have css property "([^"]*)" equal to "([^"]*)"$/ do |seconds, selector, property, expected_value|
+  Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
+    element_css_value(selector, property) == expected_value
+  end
 end
 
 Then /^elements "([^"]*)" have css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_values|
