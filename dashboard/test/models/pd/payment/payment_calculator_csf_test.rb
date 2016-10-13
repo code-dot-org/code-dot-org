@@ -22,33 +22,47 @@ module Pd::Payment
     end
 
     test 'payment_type' do
-      payment = PaymentCalculatorCSF.instance.calculate @workshop
-      assert_equal 'CSF Facilitator', payment.payment_type
+      payment = PaymentCalculatorCSF.instance.calculate(@workshop).payment
+      assert_equal 'CSF Facilitator', payment.type
     end
 
     test 'payment details' do
-      payment = PaymentCalculatorCSF.instance.calculate @workshop
+      summary = PaymentCalculatorCSF.instance.calculate(@workshop)
 
-      assert payment.qualified
-      assert_equal 2, payment.num_teachers
-      assert_equal 1, payment.num_qualified_teachers
-      assert_equal [2], payment.attendance_count_per_session
+      assert_equal 2, summary.num_teachers
+      assert_equal 1, summary.num_qualified_teachers
+      assert_equal [2], summary.attendance_count_per_session
 
-      assert_equal({
-        @qualified_teacher.id => TeacherAttendanceTotal.new(1, 0),
-        @unqualified_teacher.id => TeacherAttendanceTotal.new(1, 0)
-      }, payment.raw_teacher_attendance)
+      # Qualified
+      summary.teacher_summaries.find{|t| t.teacher == @qualified_teacher}.tap do |teacher_summary|
+        assert teacher_summary
+        assert teacher_summary.qualified?
+        assert_equal 1, teacher_summary.raw_days
+        assert_equal 6, teacher_summary.raw_hours
+        assert_equal 1, teacher_summary.days
+        assert_equal 6, teacher_summary.hours
+      end
 
-      assert_equal({
-        @qualified_teacher.id => TeacherAttendanceTotal.new(1, 0)
-      }, payment.adjusted_teacher_attendance)
-      assert_equal 1, payment.total_teacher_attendance_days
+      # Unqualified
+      summary.teacher_summaries.find{|t| t.teacher == @unqualified_teacher}.tap do |teacher_summary|
+        assert teacher_summary
+        refute teacher_summary.qualified?
+        assert_equal 1, teacher_summary.raw_days
+        assert_equal 6, teacher_summary.raw_hours
+        assert_equal 1, teacher_summary.days
+        assert_equal 6, teacher_summary.hours
+      end
+
+      assert_equal 1, summary.total_teacher_attendance_days
+      assert summary.qualified?
+      payment = summary.payment
+      assert payment
 
       assert_equal({
         food: 50
-      }, payment.payment_amounts)
+      }, payment.amounts)
 
-      assert_equal 50, payment.payment_total
+      assert_equal 50, payment.total
     end
   end
 end
