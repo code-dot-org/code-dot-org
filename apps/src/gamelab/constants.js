@@ -31,7 +31,8 @@ module.exports.AnimationCategories = [
 	'category_characters',
 	'category_platforms',
 	'category_gameplay',
-	'category_obstacles'
+	'category_obstacles',
+	'category_all'
 ];
 
 module.exports.AnimationCategoryNames = {
@@ -41,5 +42,6 @@ module.exports.AnimationCategoryNames = {
 	'category_characters': 'Characters',
 	'category_platforms': 'Platforms',
 	'category_gameplay': 'Game play',
-	'category_obstacles': 'Obstacles'
+	'category_obstacles': 'Obstacles',
+	'category_all': 'All'
 };
