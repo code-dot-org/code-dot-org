@@ -62,7 +62,7 @@ Both printed materials and swag can be ordered through [Mimeo](marketplace.mimeo
 
 Computer Science Education: Why it Matters
 
-- Demand for Computer Scinece - [gdoc](https://docs.google.com/document/d/1xd_wvNHVPxAkVL2krfc0hmZ-iEqCZriMRqzf89_YY18/edit)
+- Demand for Computer Science - [gdoc](https://docs.google.com/document/d/1xd_wvNHVPxAkVL2krfc0hmZ-iEqCZriMRqzf89_YY18/edit)
 - Who's Taking AP Computer Science - [gdoc](https://docs.google.com/document/d/1ZE-fwRtAJO56cYTJcmBh5G3huh6RBdAewgEhmvJA8Kc/edit)
 - Computer Science as a 21st Century Skill - [gdoc](https://docs.google.com/document/d/1pYGjAB3zJaqlk7Wdg8i1gkBoByg6VuX1FoKmA2rFxEQ/edit)
 - Impact of Computer Science - [gdoc](https://docs.google.com/document/d/1pZFipP4x2zS6y1IpNIYIO_z-CT-_nq7PCTdhW3F_aK8/edit)
