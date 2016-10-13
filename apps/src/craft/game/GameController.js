@@ -277,7 +277,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveAwayFrom (entity identifier)
-   *
+   * 
    * @memberOf GameController
    */
   moveAway(commandQueueItem, moveAwayFrom) {
@@ -320,7 +320,7 @@ class GameController {
           }
         }
         entity.moveAway(commandQueueItem, moveAwayFromEntities[closestTarget[1]]);
-      } else
+      } else 
         commandQueueItem.succeeded();
     }
     // move away type from type
@@ -349,7 +349,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveTowardTo (entity identifier)
-   *
+   * 
    * @memberOf GameController
    */
   moveToward(commandQueueItem, moveTowardTo) {
@@ -457,7 +457,7 @@ class GameController {
           }
         }
         entity.moveTo(commandQueueItem, moveTowardToEntities[closestTarget[1]]);
-      } else
+      } else 
         commandQueueItem.succeeded();
     }
     // move toward type to type
@@ -730,13 +730,15 @@ class GameController {
       // push use command to execute general use behavior of the entity before executing the event
       this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
         var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
-
-        frontEntity.queue.startPushHighpriorityCommands();
+        
+        frontEntity.queue.startPushHighPriorityCommands();
         frontEntity.addCommand(useCommand);
-        frontEntity.queue.endPushHighpriorityCommands();
+        frontEntity.queue.endPushHighPriorityCommands();
         this.levelView.playExplosionAnimation(player.position, player.facing, frontEntity.position, frontEntity.type, () => { }, false);
         this.levelView.playPlayerAnimation("idle", player.position, player.facing, false);
-        commandQueueItem.succeeded();
+        this.delayPlayerMoveBy(200, 600, () => {
+          commandQueueItem.succeeded();
+        });
         setTimeout(() => { this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]); }, 200);
       });
     } else {
@@ -997,24 +999,27 @@ class GameController {
   destroyEntity(commandQueueItem, target) {
     if (!this.isType(target)) {
       if (target !== 'Player') {
-        this.levelEntity.destroyEntity(target);
+        let entity = this.getEntity(target);
+        entity.healthPoint = 1;
+        entity.takeDamage(commandQueueItem);
       }
       else {
         this.printErrorMsg("Not able to destroy player\n");
+        commandQueueItem.succeeded();
       }
-      commandQueueItem.succeeded();
     }
     else {
       var entities = this.getEntities(target);
       for (var i = 0; i < entities.length; i++) {
-        this.levelEntity.destroyEntity(entities[i].identifier);
+        let entity = entities[i];
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.destroyEntity(callbackCommand, entity.identifier);}, entity.identifier);
+        entity.addCommand(callbackCommand);
       }
       commandQueueItem.succeeded();
     }
   }
 
   drop(commandQueueItem, itemType) {
-    console.log(itemType);
     var target = commandQueueItem.target;
     if (!this.isType(target)) {
       var entity = this.getEntity(target);
@@ -1119,14 +1124,14 @@ class GameController {
       return;
     if(startTime === "day" || startTime === "Day")
     {
-      setTimeout(()=>{
+      setTimeout(()=>{ 
         this.startDay(null);
         this.setDayNightCycle(delayInSecond, "night");
       }, delayInSecond*1000)
     }
     else if(startTime === "night" || startTime === "Night")
     {
-      setTimeout(()=>{
+      setTimeout(()=>{ 
         this.startNight(null);
         this.setDayNightCycle(delayInSecond, "day");
       }, delayInSecond*1000)

@@ -88,27 +88,25 @@ export default class Creeper extends BaseEntity {
             // walk
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][5][0], frameListPerDirection[i][5][1], ".png", 3);
             this.sprite.animations.add("walk" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // attack
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][6][0], frameListPerDirection[i][6][1], ".png", 3);
             this.sprite.animations.add("attack" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // take damage
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][7][0], frameListPerDirection[i][7][1], ".png", 3);
             this.sprite.animations.add("hurt" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // die
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 3);
-            this.sprite.animations.add("die" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
-            });
+            this.sprite.animations.add("die" + facingName, frameList, frameRate, false);
             // bump
             frameList = this.controller.levelView.generateReverseFrames(frameName, frameListPerDirection[i][9][0], frameListPerDirection[i][9][1], ".png", 3);
             this.sprite.animations.add("bump" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.playRandomIdle(this.facing);
+                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
         }
         // initialize

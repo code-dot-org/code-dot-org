@@ -103,9 +103,7 @@ export default class Cow extends BaseEntity {
             });
             // die
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 4);
-            this.sprite.animations.add("die" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
-            });
+            this.sprite.animations.add("die" + facingName, frameList, frameRate, false);
             // bump
             frameList = this.controller.levelView.generateReverseFrames(frameName, frameListPerDirection[i][9][0], frameListPerDirection[i][9][1], ".png", 4);
             this.sprite.animations.add("bump" + facingName, frameList, frameRate, false).onComplete.add(() => {

@@ -100,5 +100,17 @@ export default class Player extends BaseEntity {
       }
     }
   }
+
+  takeDamage(callbackCommand) {
+    let facingName = this.controller.levelView.getDirectionName(this.facing);
+    if (this.healthPoint > 1) {
+      this.controller.levelView.playScaledSpeed(this.sprite.animations, "hurt" + facingName);
+      this.healthPoint--;
+      callbackCommand.succeeded();
+    } else {
+      this.healthPoint--;
+      this.controller.levelView.playScaledSpeed(this.sprite.animations, "fail" + facingName);
+    }
+  }
 }
 

@@ -118,6 +118,59 @@ export default class LevelModel {
     return false;
   }
 
+  isEntityNextTo(entityType, blockType) {
+    var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
+    for (var i = 0; i < entityList.length; i++) {
+      var entity = entityList[i];
+      var position;
+      var result = false;
+
+      // above
+      position = [entity.position[0], entity.position[1] - 1];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+        return true;
+      }
+
+      // below
+      position = [entity.position[0], entity.position[1] + 1];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+        return true;
+      }
+
+      // left
+      position = [entity.position[0] + 1, entity.position[1]];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+        return true;
+      }
+
+      // Right
+      position = [entity.position[0] - 1, entity.position[1]];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  isEntityAt(entityType, position) {
+    var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
+    for (var i = 0; i < entityList.length; i++) {
+      var entity = entityList[i];
+      if(entity.position[0] == position[0] && entity.position[1] == position[1])
+        return true;
+    }
+    return false;
+  }
+
+  isEntityDied(entityType, count = 1) {
+    var deathCount = this.controller.levelEntity.entityDeathCount;
+    if(deathCount.has(entityType)) {
+      if(deathCount.get(entityType) >= count)
+        return true;
+    }
+    return false;
+  }
+
   getInventoryAmount(inventoryType) {
     return this.player.inventory[inventoryType] || 0;
   }

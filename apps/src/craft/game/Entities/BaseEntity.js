@@ -17,6 +17,7 @@ export default class BaseEntity {
         // offset for sprite position in grid
         this.offset = [-22, -12];
         this.identifier = identifier;
+        this.healthPoint = 3;
     }
 
     tick() {
@@ -276,9 +277,9 @@ export default class BaseEntity {
 
     use(commandQueueItem, userEntity) {
         // default behavior for use ?
-        this.queue.startPushHighpriorityCommands();
+        this.queue.startPushHighPriorityCommands();
         this.controller.events.forEach(e => e({ eventType: EventType.WhenUsed, targetType: this.type, eventSenderIdentifier: userEntity.identifier, targetIdentifier: this.identifier }));
-        this.queue.endPushHighpriorityCommands();
+        this.queue.endPushHighPriorityCommands();
         commandQueueItem.succeeded();
     }
 
@@ -292,20 +293,47 @@ export default class BaseEntity {
     attack(commandQueueItem) {
         let facingName = this.controller.levelView.getDirectionName(this.facing);
         this.controller.levelView.playScaledSpeed(this.sprite.animations, "attack" + facingName);
-        setTimeout(() => 
-        {
+        setTimeout(() => {
             let frontEntity = this.controller.levelEntity.getEntityAt(this.controller.levelModel.getMoveForwardPosition(this));
-            if (frontEntity !== null)
-                this.controller.levelView.playScaledSpeed(frontEntity.sprite.animations, "hurt" + facingName);
+            if (frontEntity) {
+                var callbackCommand = new CallbackCommand(this.controller, () => { }, () => { frontEntity.takeDamage(callbackCommand); }, frontEntity);
+                frontEntity.addCommand(callbackCommand);
+            }
             setTimeout(function (controller, entity, thisEntity) {
                 if (entity !== null) {
-                    frontEntity.queue.startPushHighpriorityCommands();
+                    frontEntity.queue.startPushHighPriorityCommands();
                     controller.events.forEach(e => e({ eventType: EventType.WhenAttacked, targetType: entity.type, eventSenderIdentifier: thisEntity.identifier, targetIdentifier: entity.identifier }))
-                    frontEntity.queue.endPushHighpriorityCommands();
+                    frontEntity.queue.endPushHighPriorityCommands();
                 }
                 commandQueueItem.succeeded();
             }, 300, this.controller, frontEntity, this);
         }, 200);
+    }
+
+    takeDamage(callbackCommand) {
+        let levelView = this.controller.levelView;
+        let facingName = levelView.getDirectionName(this.facing);
+        if (this.healthPoint > 1) {
+            levelView.playScaledSpeed(this.sprite.animations, "hurt" + facingName)
+            setTimeout(() => {
+                this.healthPoint--;
+                callbackCommand.succeeded();
+            }, 1500);
+        } else {
+            this.healthPoint--;
+            this.controller.levelView.playScaledSpeed(this.sprite.animations, "die" + facingName);
+            setTimeout(() => {
+
+                var tween = this.controller.levelView.addResettableTween(this.sprite).to({
+                    alpha: 0
+                }, 300, Phaser.Easing.Linear.None);
+                tween.onComplete.add(() => {
+
+                    this.controller.levelEntity.destroyEntity(this.identifier);
+                });
+                tween.start();
+            }, 1500);
+        }
     }
 
     playRandomIdle(facing) {

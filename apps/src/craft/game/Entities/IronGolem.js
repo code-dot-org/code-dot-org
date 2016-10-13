@@ -97,14 +97,12 @@ export default class IronGolem extends BaseEntity {
             });
             // take damage
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][7][0], frameListPerDirection[i][7][1], ".png", 3);
-            this.sprite.animations.add("hurt" + facingName, frameList, frameRate, false).onComplete.add(() => {
+            this.sprite.animations.add("hurt" + facingName, frameList, frameRate*2/3, false).onComplete.add(() => {
                 this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // die
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 3);
-            this.sprite.animations.add("die" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
-            });
+            this.sprite.animations.add("die" + facingName, frameList, frameRate*2/3, false);
             // bump
             frameList = this.controller.levelView.generateReverseFrames(frameName, frameListPerDirection[i][9][0], frameListPerDirection[i][9][1], ".png", 3);
             this.sprite.animations.add("bump" + facingName, frameList, frameRate, false).onComplete.add(() => {

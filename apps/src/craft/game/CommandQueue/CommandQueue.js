@@ -45,13 +45,13 @@ export default class CommandQueue {
     this.whileCommandQueue = null;
   }
 
-  startPushHighpriorityCommands() {
+  startPushHighPriorityCommands() {
     this.setUnshiftState = true;
     // clear existing highPriorityCommands
     this.highPriorityCommands = [];
   }
 
-  endPushHighpriorityCommands() {
+  endPushHighPriorityCommands() {
       // unshift highPriorityCommands to the command list
       for(var i = this.highPriorityCommands.length - 1 ; i >= 0 ; i--)
         this.commandList_.unshift(this.highPriorityCommands[i]);

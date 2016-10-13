@@ -73,10 +73,10 @@ export default class Sheep extends BaseEntity {
         let idleDelayFrame = 8;
         // for normal sheep
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[eat],[bump]]
-        var frameListPerDirection = [[[252, 261], [220, 222], [228, 231], [276, 279], [270, 275], [282, 293], [294, 305], [306, 317], [318, 324], [234, 243], [880, 887]], // up 
-            [[144, 153], [112, 114], [120, 123], [168, 171], [162, 167], [174, 185], [186, 197], [198, 209], [210, 216], [126, 135], [872, 879]], // right
-            [[36, 45], [3, 6], [12, 15], [60, 63], [54, 59], [66, 77], [78, 89], [90, 101], [102, 108], [18, 27], [864, 871]], // down
-            [[360, 369], [328, 330], [336, 339], [384, 387], [378, 383], [390, 401], [402, 413], [414, 425], [426, 432], [342, 351], [888, 895]]]; // left
+        var frameListPerDirection = [[[252, 261], [220, 222], [228, 231], [276, 279], [270, 275], [282, 293], [294, 305], [306, 317], [318, 323], [234, 243], [880, 887]], // up 
+            [[144, 153], [112, 114], [120, 123], [168, 171], [162, 167], [174, 185], [186, 197], [198, 209], [210, 215], [126, 135], [872, 879]], // right
+            [[36, 45], [3, 6], [12, 15], [60, 63], [54, 59], [66, 77], [78, 89], [90, 101], [102, 108], [18, 26], [864, 871]], // down
+            [[360, 369], [328, 330], [336, 339], [384, 387], [378, 383], [390, 401], [402, 413], [414, 425], [426, 431], [342, 351], [888, 895]]]; // left
         for (var i = 0; i < 4; i++) {
             var facingName = this.controller.levelView.getDirectionName(i);
 
@@ -159,9 +159,7 @@ export default class Sheep extends BaseEntity {
             });
             // die
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 3);
-            this.sprite.animations.add("die" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
-            });
+            this.sprite.animations.add("die" + facingName, frameList, frameRate, false);
             // eat
             frameList = this.controller.levelView.generateReverseFrames(frameName, frameListPerDirection[i][9][0], frameListPerDirection[i][9][1], ".png", 3);
             this.sprite.animations.add("eat" + facingName, frameList, frameRate, false).onComplete.add(() => {
@@ -175,10 +173,10 @@ export default class Sheep extends BaseEntity {
         }
         // for naked sheep
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[eat],[bump]]
-        frameListPerDirection = [[[684, 693], [652, 654], [660, 663], [708, 711], [702, 707], [714, 725], [726, 737], [738, 749], [750, 756], [666, 675], [912, 919]], // up 
-            [[576, 585], [544, 546], [552, 555], [600, 603], [594, 599], [606, 617], [618, 629], [630, 641], [642, 648], [558, 567], [904, 911]], // right
-            [[468, 477], [436, 438], [444, 447], [492, 495], [486, 491], [498, 509], [510, 521], [522, 533], [534, 540], [450, 459], [896, 903]], // down
-            [[792, 801], [760, 762], [768, 771], [816, 819], [810, 815], [822, 833], [834, 845], [846, 857], [858, 864], [774, 783], [920, 927]]]; // left
+        frameListPerDirection = [[[684, 693], [652, 654], [660, 663], [708, 711], [702, 707], [714, 725], [726, 737], [738, 749], [750, 755], [666, 675], [912, 919]], // up 
+            [[576, 585], [544, 546], [552, 555], [600, 603], [594, 599], [606, 617], [618, 629], [630, 641], [642, 647], [558, 567], [904, 911]], // right
+            [[468, 477], [436, 438], [444, 447], [492, 495], [486, 491], [498, 509], [510, 521], [522, 533], [534, 539], [450, 459], [896, 903]], // down
+            [[792, 801], [760, 762], [768, 771], [816, 819], [810, 815], [822, 833], [834, 845], [846, 857], [858, 863], [774, 783], [920, 927]]]; // left
         stillFrameName = ['ShadowSheep_2016649.png','ShadowSheep_2016541.png','ShadowSheep_2016433.png','ShadowSheep_2016757.png'];
         for (var i = 0; i < 4; i++) {
             var facingName = this.controller.levelView.getDirectionName(i);
@@ -252,9 +250,7 @@ export default class Sheep extends BaseEntity {
             });
             // die
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 3);
-            this.sprite.animations.add("naked_die" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "naked_idle" + this.controller.levelView.getDirectionName(this.facing));
-            });
+            this.sprite.animations.add("naked_die" + facingName, frameList, frameRate, false);
             // eat
             frameList = this.controller.levelView.generateReverseFrames(frameName, frameListPerDirection[i][9][0], frameListPerDirection[i][9][1], ".png", 3);
             this.sprite.animations.add("naked_eat" + facingName, frameList, frameRate, false).onComplete.add(() => {
@@ -343,6 +339,34 @@ export default class Sheep extends BaseEntity {
                 this.naked = true;
                 this.controller.levelView.playScaledSpeed(this.sprite.animations, "naked_idle" + direction, () => { });
             }
+        }
+    }
+
+       takeDamage(callbackCommand) {
+        let naked = this.naked ? "naked_" : "";
+        let levelView = this.controller.levelView;
+        let facingName = levelView.getDirectionName(this.facing);
+        if (this.healthPoint > 1) {
+            levelView.playScaledSpeed(this.sprite.animations, naked + "hurt" + facingName)
+            setTimeout(() => {
+                this.healthPoint--;
+                callbackCommand.succeeded();
+            }, 1500);
+        } else {
+            this.healthPoint--;
+            this.controller.levelView.playScaledSpeed(this.sprite.animations, naked + "die" + facingName);
+            setTimeout(() => {
+
+                var tween = this.controller.levelView.addResettableTween(this.sprite).to({
+                    alpha: 0
+                }, 500, Phaser.Easing.Linear.None);
+
+                tween.onComplete.add(() => {
+
+                    this.controller.levelEntity.destroyEntity(this.identifier);
+                });
+                tween.start();
+            }, 1500);
         }
     }
 }

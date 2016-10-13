@@ -15,6 +15,7 @@ export default class LevelEntity {
         this.controller = controller;
         this.game = controller.game;
         this.entityMap = new Map();
+        this.entityDeathCount = new Map();
         this.sprite = null;
         this.id = 0;
     }
@@ -198,6 +199,10 @@ export default class LevelEntity {
     destroyEntity(identifier) {
         if (this.entityMap.has(identifier)) {
             var entity = this.entityMap.get(identifier);
+            if(this.entityDeathCount.has(entity.type))
+                this.entityDeathCount.set(entity.type,this.entityDeathCount.get(entity.type) +1);
+            else
+                this.entityDeathCount.set(entity.type,1);
             entity.reset();
             entity.sprite.animations.stop(null, true);
             entity.sprite.destroy();
@@ -228,5 +233,6 @@ export default class LevelEntity {
 
     reset() {
         this.entityMap.clear();
+        this.entityDeathCount = new Map();
     }
 }
