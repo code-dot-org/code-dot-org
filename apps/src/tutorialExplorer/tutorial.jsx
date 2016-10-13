@@ -4,7 +4,7 @@
 import React from 'react';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
-import { getTutorialComboString } from './util';
+import { getTutorialDetailString } from './util';
 
 const styles = {
   tutorialName: {
@@ -65,7 +65,7 @@ const Tutorial = React.createClass({
                 {this.props.item.name}
               </div>
               <div style={styles.tutorialSub}>
-                {getTutorialComboString(this.props.item)}
+                {getTutorialDetailString(this.props.item)}
               </div>
             </div>
           </div>
