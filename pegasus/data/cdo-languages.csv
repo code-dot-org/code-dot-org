@@ -59,7 +59,7 @@ sk,sk,sk,sk-SK,Slovenčina,Slovak,FALSE,FALSE,sk,Slovak,Hodina kódovania,FALSE,
 sl,sl,sl,sl-SI,Slovenščina,Slovenian,TRUE,TRUE,sl,Slovenian,Ura za kodo,FALSE,TRUE,FALSE
 sq,sq,sq,sq-AL,Shqip,Albanian,TRUE,TRUE,sq,Albanian,Ora e kodimit,FALSE,TRUE,FALSE
 sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic),Час Кода,TRUE,TRUE,TRUE
-sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,FALSE,sv-SE,Swedish,En timme med kod,TRUE,TRUE,TRUE
+sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,TRUE,sv-SE,Swedish,En timme med kod,TRUE,TRUE,TRUE
 ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil,,FALSE,FALSE,FALSE
 th,th,th,th-TH,ไทย,Thai,FALSE,FALSE,th,Thai,ชั่วโมงแห่ง Code,FALSE,FALSE,FALSE
 tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish,Kod Saati,TRUE,TRUE,TRUE

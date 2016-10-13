@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -23,7 +25,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## انشر هذه على مواقع التواصل الاجتماعي
 
-[![الصورة](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![الصورة](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![الصورة](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -31,7 +33,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Use the Hour of Code logo to spread the word
 
-[![الصورة](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
@@ -50,7 +52,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 ## Print these stickers to give to your students
 
 (Stickers are 1" diameter, 63 per sheet)  
-[![الصورة](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -82,11 +84,11 @@ With the Hour of Code, computer science has been on homepages of Google, MSN, Ya
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-أنا أكتب لكم لأدعوكم لحضور افتتاحية هذا الحدث ولتشاهد الأطفال يبدؤون هذا النشاط في [DATE].
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. نرجو أن تنضم إلينا.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**للاتصال:**، [YOUR NAME]، [TITLE]، جوال: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
 **When:** [DATE and TIME of your event]
 
@@ -133,3 +135,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

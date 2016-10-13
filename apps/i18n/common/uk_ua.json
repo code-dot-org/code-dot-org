@@ -305,5 +305,6 @@
   "when": "коли",
   "whenRun": "коли гра починається",
   "workspaceHeaderShort": "Робоча область: ",
-  "yes": "Так"
+  "yes": "Так",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }

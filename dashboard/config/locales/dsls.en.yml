@@ -312,6 +312,9 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 game intro:
+        Create Your Own Game: Create Your Own Game
+        description here: description here
       CSD U3 platform intro:
         Build a Platform Jumper: Build a Platform Jumper
         description here: description here
@@ -556,6 +559,9 @@ en:
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
+      CSPU5_FirstTimeDesignMode:
+        description here: description here
+        title: title
       CSP_Final_instructions:
         description here: description here
         title: title
@@ -572,13 +578,22 @@ en:
       Data Tools in Unit 2 Chapter 2: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint Chirpr lillizard:
+        description here: description here
+        title: title
       Digital Footprint Chirpr solmoon: {}
       Digital Footprint FaceSpace John:
         FaceSpace - John T: FaceSpace - John T
+      Digital Footprint FaceSpace Lizzie:
+        description here: description here
+        title: title
       Digital Footprint FaceSpace Soleil: {}
       Digital Footprint instantframe:
         instantframe - johnsnow: instantframe - johnsnow
       Digital Footprint instantframe moonbeam: {}
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: description here
+        title: title
       Discovery Learning in Unit 1: {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
@@ -4211,6 +4226,13 @@ en:
         I feel like I could run this unit right now: I feel like I could run this unit right now
         I feel like I need to do A LOT of review of the tasks before I run this unit: I feel like I need to do A LOT of review of the tasks before I run this unit
         I feel like I need to do SOME review of the tasks before I run this unit: I feel like I need to do SOME review of the tasks before I run this unit
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Question
+        The code WILL run. But will crash as soon as the button is clicked.: The code WILL run. But will crash as soon as the button is clicked.
+        The code WILL run. When the button is clicked the turtle will move forward.: The code WILL run. When the button is clicked the turtle will move forward.
+        The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id": The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id"
+        The code will NOT run. When you click the button nothing will happen.: The code will NOT run. When you click the button nothing will happen.
+        title: title
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
@@ -6541,15 +6563,6 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-      unique level name here:
-        "<!DOCTYPE html>": "<!DOCTYPE html>"
-        "<head>": "<head>"
-        "<html>": "<html>"
-        "<title>": "<title>"
-        Defines high level information about web page: Defines high level information about web page
-        Shows the name of the page in a new tab: Shows the name of the page in a new tab
-        Starts and ends the HTML document: Starts and ends the HTML document
-        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
@@ -6715,7 +6728,6 @@ en:
         Enter prompt here: Enter prompt here
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
-        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U2L07 Assessment4:
         '43': '43'

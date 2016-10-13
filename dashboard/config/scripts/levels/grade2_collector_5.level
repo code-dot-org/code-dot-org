@@ -26,8 +26,8 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "These blocks are in the wrong order! Help me collect each coin by putting the commands in the right order.",
-    "markdown_instructions": "These blocks are in the wrong order! Help me collect each coin by putting the commands in the right order.",
+    "instructions": "\"Help me collect each gold coin!\"\r\n\r\nThese blocks are in the wrong order.",
+    "markdown_instructions": "*\"Help me collect each gold coin!\"*\r\n\r\nThese blocks are in the wrong order.",
     "ideal": "10",
     "contained_level_names": null
   },

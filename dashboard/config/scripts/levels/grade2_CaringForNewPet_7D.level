@@ -11,7 +11,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "instructions": "This code has a lot of bugs, you'll need to both remove and add blocks to get me to the pig.",
+    "instructions": "Challenge: This code has a lot of bugs. You'll need to remove blocks and add blocks.",
     "ideal": "13",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -27,7 +27,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Don't forget to use the \\\"Step\\\" button to go through block by block and look for errors.\",\r\n  \"hint_id\": \"grade2_CaringForNewPet_7D_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "*\"It's time to get angry!\"*\r\n\r\n**Challenge:** This code has a lot of bugs. You'll need to remove blocks and add blocks.",
+    "maze_data": null,
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade2_CaringForNewPet_7D\",\r\n  \"callout_text\": \"This is your first challenge puzzle! These are meant to be harder and may take several tries.\",\r\n  \"element_id\": \"#clear-puzzle-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": -100,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "",

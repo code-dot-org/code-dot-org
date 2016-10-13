@@ -1,8 +1,10 @@
 * * *
 
-title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
+शीर्षक: <%= hoc_s(:कशी_करायची_स्वयंसेवा) %> लेआऊट: रुंद न्यावं: न्यावं_कसे_करायचे
 
 * * *
+
+<%= view :signup_button %>
 
 # How-to Guide for Volunteers
 
@@ -95,3 +97,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright. Instead try asking them questions so they can answer themselves what went wrong.
+
+<%= view :signup_button %>

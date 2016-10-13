@@ -4,24 +4,26 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Khuthaza Ihora loKufingqwa
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Ukusingatha Ihora loKufingqwa? [Bheka indlela yokuqondisa](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Phanyeka amaphepha okwazisa esikoleni sakho
 
 <%= view :promote_posters %>
 
 <a id="social"></a>
 
-## Post these on social media
+## Faka lokhu kwezokusakaza
 
 [![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -29,7 +31,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Sebenzisa iphawu leHora loKufingqwa usakaza izwi
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
@@ -37,13 +39,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Isibonakaliso esibi: "Zama iHora loKufingqwa ngenkampani yeACME".
+  2. Sebenzisa umbhalo ongezansi we"TM" kuzindawo eziqavileyo lapho ukhuluma ngeHora loKufingqwa, kuwebhisayithi yakho kanye nakuncazelo yehlelo lakho.
   3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names.
+  4. Akusetshenziswa "iHora loKufingqwa" emagameni amahlelo okwenza.
 
 <a id="stickers"></a>
 
@@ -133,3 +135,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

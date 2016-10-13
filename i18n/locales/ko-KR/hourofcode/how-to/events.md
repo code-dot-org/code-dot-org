@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Hour of Code 이벤트를 준비하는 방법
 
 ## 1) 이벤트 준비하기
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 오전 10:30 - 10:40 | 학교 전체를 위해 학생들이 Hour of Code 의 데모를 시연한다. 재미있는 이벤트로 학생들이 교장, 정치인, 다른 학생들을 가르쳐 주도록 한다.            |
 | 오전 10:40 - 11:00 | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.             |
 | 오전 11:00 - 11:05 | 학교 전체 활동을 계획하고 주도한 선생님이 맺음말 한다.                                                                |
+
+<%= view :signup_button %>

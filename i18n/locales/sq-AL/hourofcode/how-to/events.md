@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Si të organizosh ngjarjen e Orës së Kodimit
 
 ## 1) Përgatitu për eventin tënd
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                              |
 | 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |
 | 11:00 - 11:05 paradite | Mësuesit që ndihmojnë në sjelljen e eventit në rrethin shkollor japin vërejtjet përmbyllëse.                                                                  |
+
+<%= view :signup_button %>

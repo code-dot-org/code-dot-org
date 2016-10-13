@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Sådan organiserer du en Hour of Code
 
 ## 1) Forbered dit arrangement
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokal politiker eller andre elever.                                   |
 | 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                                                  |
 | 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                                                              |
+
+<%= view :signup_button %>

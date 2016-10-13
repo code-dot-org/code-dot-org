@@ -15,7 +15,9 @@ var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  dashboard.assets.showAssetManager(callback, typeFilter, null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
+  dashboard.assets.showAssetManager(callback, typeFilter, null, {
+    showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
+  });
 }
 
 var COLOR_LIGHT_GREEN = '#D3E965';

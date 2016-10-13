@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -35,9 +37,9 @@ nav: promote_nav
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Téléchargez les versions haute résolution](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**Le nom anglais « Hour of Code » est une marque déposée. Nous ne voulons pas empêcher son utilisation, mais nous souhaitons nous assurer qu'elle respecte certaines limites :**
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
   1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Mauvais exemple : « Essayez Hour of Code par ACME Corp ».
   2. Placez un exposant « TM » aux emplacements principaux dans lesquels vous mentionnez « Hour of Code », aussi bien sur votre site web que dans les descriptions d'application.
@@ -51,7 +53,7 @@ nav: promote_nav
 
 ## Imprimez ces autocollants pour les donner à vos élèves
 
-(Il y a 63 autocollants d'un pouce de diamètre par feuille)  
+(Stickers are 1" diameter, 63 per sheet)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -64,45 +66,45 @@ nav: promote_nav
 
 Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. La bonne nouvelle, c'est nous sommes sur le point de changer cela. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Avec l'événement Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Commencez sur http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
 ## Invitez les médias à assister à votre événement :
 
-**Titre :** Une école locale se joint à la campagne de sensibilisation des élèves à l'informatique
+**Subject line:** Local school joins mission to introduce students to computer science
 
 Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. La bonne nouvelle, c'est nous sommes sur le point de changer cela.
 
-Avec Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo ! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Je vous écris pour vous inviter à assister au coup d'envoi de notre campagne et à voir les enfants commencer leur Heure de Code le [DATE].
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Rejoignez-nous.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**Contact :** [VOTRE NOM], [TITLE], portable : [NUMÉRO]
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**Quand :** [DATE et HEURE de votre événement]
+**When:** [DATE and TIME of your event]
 
-**Où :** [ADRESSE et DIRECTIONS]
+**Where:** [ADDRESS and DIRECTIONS]
 
-J'ai hâte d'échanger avec vous.
+I look forward to being in touch.
 
 <a id="parents"></a>
 
 ## Informez les parents d'élèves au sujet de l'événement dans votre école :
 
-Chers parents d'élèves,
+Dear Parents,
 
-Nous vivons dans un monde où la technologie est omniprésente. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
 But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
@@ -135,3 +137,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

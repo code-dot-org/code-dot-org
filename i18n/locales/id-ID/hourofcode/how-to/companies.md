@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Inspire students and volunteer for the Hour of Code
@@ -30,7 +32,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Lihat video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Pilih tutorial:
 
-Kita akan menyelenggarakan berbagai [tutorial satu jam yang menyenangkan](%= resolve_url('https://code.org/learn') %) bagi siswa dari segala usia, yang dibuat oleh berbagai mitra. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
 
 **Semua tutorial Hour of Code:**
 
@@ -136,4 +138,6 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
 ## Apa yang selanjutnya dilakukan setelah Hour of Code?
 
-The Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut tentang bagaimana teknologi bekerja dan bagaimana untuk membuat aplikasi perangkat lunak. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

@@ -6,12 +6,14 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # როგორ ჩავატაროთ კოდის ერთი საათი კლასგარეშე გარემოში
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) უყურეთ ამ ინსტრუქციის ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) აირჩიეთ ტუტორიალი:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [სცადეთ ისინი!](<%= resolve_url("https://code.org/learn") %>)
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
@@ -20,15 +22,15 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Promote your Hour of Code
+## 3) გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას [ამ ხელსაწყოებით](<%= resolve_url('/promote') %>) და წაახალისეთ სხვები, რომ საკუთარ ღონისძიებებს უმასპინძლონ.
 
 ## 4) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+კოდის ერთი საათის საუკეთესო გამოცდილება მოიცავს ინტერნეტთან დაკავშირებულ კომპიუტერებს. მაგრამ **არ** გჭირდებათ კომპიუტერი თითოეული ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
 
-**Plan Ahead!** Do the following before your event starts:
+**დაგეგმეთ წინასწარ!** ღონისძიების დაწყებამდე შეასრულეთ ჩამოთვლილი:
 
   * გატესტეთ ტუტორიალები მოსწავლეების კომპიუტერებსა ან დევაისებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში.
   * არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
@@ -37,7 +39,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) კოდის ერთი საათი დაიწყეთ შთამაგონებელი ვიდეოთი
 
 დაიწყეთ თქვენი ღონისძიება მონაწილეებთან ერთად იმის განხილვით, თუ როგორ გავლენას იქონიებს მათ ცხოვრებაზე კომპიუტერული მეცნიერებების ცოდნა.
 
@@ -129,3 +131,5 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
   * ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [დაესწარით ](<%= resolve_url('https://code.org/professional-development-workshops') %>) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
+
+<%= view :signup_button %>

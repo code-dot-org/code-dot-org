@@ -6,36 +6,38 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Как да преподаватe Hour of Code
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Самонасочващи Hour of Code уроци:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
   * Изискват минимална подготовка на учителите
   * Предвиждат смостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
 
-**[Учителско ръководство за Hour of Code уроците:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
   * Това са планове за уроци, които не изискват някаква предварителна подготовка на учителя
   * Ккатегоризирани са по класове *and* по предметна област(напр. математика, английски и др.)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Promote your Hour of Code
+## Промотирайте своя Hour of Code
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+Промотирайте Вашия час на кода [ с тези инструменти](<%= resolve_url('/promote') %>) и насърчете другите да направят техни собствени събития.
 
 ## 4) планирай нужните ти технологии - компютрите не са задължителни
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Най-добрият Час на кодирането се провежда с Интернет свързани компютри. Но вие **не** се нуждаете от компютър за всяко дете, и можете дори да проведете часът на кода без компютър за всички.
 
-**Plan Ahead!** Do the following before your event starts:
+**Предварителен план!** Направете следното, преди вашето събитие да започне:
 
   * Тествайте уроците на компютри или устройства. Уверете се, че те работят правилно в браузърите със звук и видео.
   * Предоставете слушалки за класа си, или помолете учениците да си донесат, ако изберете уроци за начинаещи -най-добре е със звук.
@@ -131,10 +133,8 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * Вижте [ най-добрите практики](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от миналите събития, споделени от учители. 
   * Гледайте запис от нашето [ ръководство за преподаватели за Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [ Присъствайте на живо Q & А](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) с нашия основател, Хади Partovi да се подготвите за Hour of Code.
-  * Посетете [ Hour of Code Форума](http://forum.code.org/c/plc/hour-of-code), за да получите съвети и подкрепа от други преподаватели. 
-  <% if @country == 'us' %>
-  * Прегледайте [ часът на кода често задавани въпроси](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). 
-  <% end %>
+  * Посетете [ Hour of Code Форума](http://forum.code.org/c/plc/hour-of-code), за да получите съвети и подкрепа от други преподаватели. <% if @country == 'us' %>
+  * Прегледайте [ часът на кода често задавани въпроси](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Какво идва след Hour of Code?
 
@@ -142,3 +142,5 @@ Hour of Code е само първата стъпка в пътешествиет
 
   * Насърчете учениците да продължават да [ учат онлайн](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Да се присъединят](<%= resolve_url('https://code.org/professional-development-workshops') %>)към 1-деневен уоркшоп, за да получат обучение от опитни фасилитатори. (Само за учители от САЩ)
+
+<%= view :signup_button %>

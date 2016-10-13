@@ -4,20 +4,22 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ## როგორ მოიზიდოთ მედიის წარმომადგენლები თქვენს კოდის ერთ საათზე
 
-*პრესასთან და მედიასთან დაკავშირებული კითხვებით მოგვმართეთ <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### ძირითადი მინიშნებები
 
   * დაუკავშირდით მედია-საშუალებებს ღონისძიებამდე ორი კვირით ადრე ელ. ფოსტით. თუ პასუხს არ მიიღებთ, კვლავ მისწერეთ ან ტელეფონით დაუკავშირდით.
   * სთხოვეთ სკოლის თანამშრომელს ან მოხალისეს გადაიღონ სურათები - ეს შემდგომ დაგჭირდებათ ონლაინ ან პრესისთვის გასაზიარებლად.
   * დაწერეთ კოდის ერთი საათის შესახებ თქვენი ვებ-საიტის მთავარ გვერდზე, ასევე სკოლის გაზეთში. დაპოსტეთ ღონისძიების დეტალები და მოსწავლეების აქტივობების ამსახველი სურათები.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * გააზიარეთ თვენი ახალი ამბები და გეგმები, ღონისძიებები და სურათები Facebook-სა და Twitter-ზე დეკემბრის 5-11 კვირის განმავლობაში. გამოიყენეთ ჰეშთეგი **#HourOfCode** - ასე Code.org დაინახავს და გაავრცელებს თქვენს ღონისძიებებს.
 
 ### დაწვრილებითი ინსტრუქცია:
 
-**1. დაგეგმეთ ღონისძიება**
+**1. Plan your event**
 
   * დაგეგმეთ, ვინ მიიღებს მონაწილეობას კოდის ერთი საათის გახსნაში.
   * გაუგავნეთ [წერილი](%= resolve_url('/promote/resources#sample-emails') %) მშობლებს. სთხოვეთ, გაავრცელონ ინფორმაცია.
@@ -25,35 +27,37 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * დაგეგმეთ ჯგუფური აქტივობები (მაგალითად, ოფლაინ-პროგრამირების აქტივობები) ან აჩვენეთ მოსწავლეების მიერ შექმნილი პროგრამები.
   * შთაგონებისთვის აჩვენეთ Code.org-ის [კოდის ერთი საათის ვიდეო](%= resolve_url('/') %) ან ერთ-ერთი [ამათგანი](%= resolve_url('/promote/resources#videos') %).
 
-**2. გაიგეთ, ადგილობრივი ჟურნალისტებიდან ვინ არის დაინტერესებული საგანმანათლებლო ან ადგილობრივი ღონისძიებებით.**
+**2. Identify specific local reporters that cover education or local events.**
 
-დაფიქრდით, ხომ არ დაინტერესდებოდა ამ ღონისძიებით ადგილობრივი გაზეთი, ტელევიზია, რადიო ან ბლოგი.
+Think a local newspaper, TV station, radio station or blog.
 
-მოიძიეთ ჟურნალისტის საკონტაქტო ინფორმაცია ონლაინ. თუ ვერ პოულობთ მას, დარეკეთ გამომცემლობაში და იკითხეთ ან მისწერეთ გამომცემლობას ზოგადი tips@PUBLICATIONNAME.com ელ.წერილი და სთხოვეთ, გადაამისამართონ თქვენი შეტყობინება შესაბამის ჟურნალისტთან.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. დაუკავშირდით ადგილობრივ მედიას**
+**3. Contact local media**
 
-კავშირის დამყარების საკუთესო გზა არის ელ. ფოსტა. წერილი უნდა იყოს მოკლე და მკაფიოდ ხსნიდეს: რატომ არის ეს ღონისძიება მნიშვნელოვანი სხვებისთვის? დაურთეთ საკონტაქტო ინფორმაცია (ტელეფონის ნომრის ჩათვლით) თქვენი და იმათი, ვინც ღონისძიებას დაესწრება. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
 
-**4. მოემზადეთ თქვენი სასკოლო ღონისძიების შესახებ კითხვებზე პასუხის გასაცემად. მოყვანილია მაგალითები:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*რატომ ატარებთ კოდის ერთ საათს თქვენს სკოლაში?*
+*Why is your school doing an Hour of Code?*
 
-ყველამ ვიცით, რამდენად მნიშვნელოვანია, რომ ჩვენმა მოსწავლეებმა შეძლონ თავის დამკვიდრება ტექნოლოგიების ამ ეპოქაში. ამავდროულად მასწავლებლების უმეტესობა არ ერკვევა კომპიუტერულ მეცნიერებაში და არც კი იცის, საიდან დაიწყოს სწავლა თუ სწავლება. ეს ღონისძიება ყველას მისცემს შანსს გაარკვიოს, თუ რა არის კომპიუტერული მეცნიერება.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-იმედი გვაქვს, რომ მოსწავლეები დაინტერესდებიან და გააგრძელებენ სწავლას. Research also shows that kids can pick up programming concepts before they know how to read and write. ფაქტობრივად, მათი ტვინი გაცილებით მარტივად აღიქვამს პროგრამირების ენებს - ისევე, როგორც უცხო ენებს.
+We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*რატომ არის ეს მნიშვნელოვანი?*
+*Why is this important?*
 
 Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
-**დამატებითი დეტალები და ციტატა, რომელიც შეგიძლიათ გამოიყენოთ პუბლიკაციაში**
+**More details and a quote you can use in materials**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "მსოფლიოს მასშტაბით 100 მილიონზე მეტმა მოსწავლემ მიიღო მონაწილეობა კოდის ერთ საათში. უსაზღვროა მოთხოვნა 21–ე საუკუნის შესაბამის განათლებაზე კომპიუტერული მეცნიერების დარგში."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**Code.org-ის შესახებ**
+**About Code.org**
 
-Code.org არის 501c3 არამომგებიანი ორგანიზაცია, რომლის მიზანიცაა ჩართოს პროგრამირების სწავლაში რაც შეიძლება მეტი მოსწავლე, მათ შორის ქალები და ეთნიკური უმცირესობები, რომლებიც დღეს განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას. ჩვენი ხედვა ასეთია: ყოველი სკოლის ყოველ მოსწავლეს უნდა შეეძლოს ისწავლოს პროგრამირება. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის ერთი საათის კამპანია შექმნა – რომელმაც კომპიუტერული მეცნიერება 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო რაიონთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org არსებობს კორპორაციების, ორგანიზაციებისა და ცალკეული პიროვნებების ფილანტროპული შემოწირულობის ხარჯზე. მათ შორისაა Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network და სხვა. მეტი ინფორმაციისთვის ეწვიეთ: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-მეტი სანიმუშო ელ. წერილი და რესურსი იხილეთ [აქ](%= resolve_url('/promote') %).
+Find more resources and sample emails [here](%= resolve_url('/promote') %).
+
+<%= view :signup_button %>
