@@ -8,7 +8,7 @@ module Pd::Payment
   end
 
   # Base class for Pd::Workshop payment calculator. It calculates workshop duration, attendance numbers,
-  # other general fields relevant to payment, and populates a #WorkshopPayment and one #TeacherPayment per teacher.
+  # other general fields relevant to payment, and populates a #WorkshopSummary.
   # The class is a singleton, and should be used via #.instance.calculate(workshop)
   # Derived classes can override to provide custom logic.
   class PaymentCalculatorBase
@@ -23,6 +23,7 @@ module Pd::Payment
       raise 'Workshop required.' unless workshop
       raise 'Workshop must be ended.' unless workshop.ended_at
 
+      workshop.resolve_enrolled_users
       WorkshopSummary.new.tap do |workshop_summary|
         workshop_summary.workshop = workshop
         workshop_summary.calculator_class = self.class
@@ -150,7 +151,7 @@ module Pd::Payment
       enrollments_by_teacher_id = {}
       enrolled_teachers_by_id = {}
       workshop_summary.workshop.enrollments.each do |enrollment|
-        teacher = enrollment.resolve_user
+        teacher = enrollment.user
         if teacher
           enrollments_by_teacher_id[teacher.id] = enrollment
           enrolled_teachers_by_id[teacher.id] = teacher

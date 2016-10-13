@@ -279,13 +279,15 @@ class Pd::Workshop < ActiveRecord::Base
     workshop.update!(processed_at: Time.zone.now)
   end
 
-  def send_exit_surveys
-    # Update enrollments with resolved users.
+  # Updates enrollments with resolved users.
+  def resolve_enrolled_users
     self.enrollments.each do |enrollment|
       # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
       enrollment.update!(user: enrollment.resolve_user, skip_school_validation: true) unless enrollment.user
     end
+  end
 
+  def send_exit_surveys
     # Send the emails
     self.enrollments.each do |enrollment|
       next unless enrollment.user
