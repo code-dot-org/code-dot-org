@@ -535,6 +535,9 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 };
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
+  // TODO(bjordan): remove and do real assets
+  return ['allAssetsMinusPlayer'];
+
   switch (levelNumber) {
     case 1:
       return ['levelOneAssets'];
@@ -548,6 +551,9 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
+  // TODO(bjordan): remove and do real assets
+  return ['allAssetsMinusPlayer'];
+
   // After level loads & player starts playing, kick off further asset downloads
   switch (levelNumber) {
     case 1:
