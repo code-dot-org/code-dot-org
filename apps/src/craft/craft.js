@@ -194,8 +194,9 @@ Craft.init = function (config) {
   }
 
   if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
-    // TODO(bjordan): re-add, disable for 2016 script
-    //Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);
+    if (!config.level.isEventLevel) {
+      Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);
+    }
   }
   Craft.initialConfig = config;
 
@@ -284,13 +285,14 @@ Craft.init = function (config) {
            * Won't matter for levels without delayed level initialization
            * (due to e.g. character / house select popups).
            */
-          // TODO(bjordan): re-add
-          //earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+          earlyLoadAssetPacks: config.level.isEventLevel ? null :
+              Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
           afterAssetsLoaded: function () {
             // preload music after essential game asset downloads completely finished
             Craft.musicController.preload();
           },
-          //earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
+          earlyLoadNiceToHaveAssetPacks: config.level.isEventLevel ? null:
+              Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
         });
 
         if (!config.level.showPopupOnLoad) {
@@ -337,9 +339,10 @@ Craft.init = function (config) {
     interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
 
     if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-      // TODO(bjordan): re-add, toggle for 2016 only
-      //interfaceImagesToLoad =
-      //    interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+      if (!config.level.isEventLevel) {
+        interfaceImagesToLoad =
+            interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+      }
     }
 
     interfaceImagesToLoad.forEach(function (url) {
@@ -510,7 +513,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
     entities: levelConfig.entities,
-    isEventLevel: true,
+    isEventLevel: levelConfig.isEventLevel,
     groundDecorationPlane: levelConfig.groundDecorationPlane,
     actionPlane: levelConfig.actionPlane,
     fluffPlane: fluffPlane,
@@ -534,8 +537,9 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 };
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
-  // TODO(bjordan): remove and do real assets
-  return ['allAssetsMinusPlayer'];
+  if (Craft.initialConfig.level.isEventLevel) {
+    return ['allAssetsMinusPlayer'];
+  }
 
   switch (levelNumber) {
     case 1:
@@ -550,8 +554,9 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
-  // TODO(bjordan): remove and do real assets
-  return ['allAssetsMinusPlayer'];
+  if (Craft.initialConfig.level.isEventLevel) {
+    return ['allAssetsMinusPlayer'];
+  }
 
   // After level loads & player starts playing, kick off further asset downloads
   switch (levelNumber) {
@@ -607,6 +612,9 @@ Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
 };
 
 Craft.foldInEntities = function (houseBlockMap, levelConfig) {
+  const [width, height] = levelConfig.gridWidth && levelConfig.gridHeight ?
+      [levelConfig.gridWidth, levelConfig.gridHeight] : [10, 10];
+
   var planesToCustomize = [levelConfig.actionPlane];
   planesToCustomize.forEach(function (plane) {
     for (var i = 0; i < plane.length; i++) {
@@ -614,8 +622,10 @@ Craft.foldInEntities = function (houseBlockMap, levelConfig) {
 
       if (item.match(/sheep|zombie|ironGolem|creeper|cow|chicken/)) {
         levelConfig.entities = levelConfig.entities || [];
-        // TODO: separate map, or allow for non-10-size map.
-        levelConfig.entities.push([item, i % 10, Math.floor(i / 10), 1]);
+        const x = i % width;
+        const y = Math.floor(i / height);
+
+        levelConfig.entities.push([item, x, y, 1]);
         plane[i] = '';
       }
     }
