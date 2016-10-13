@@ -42,6 +42,8 @@ class Craft < Blockly
     :special_level_type,
     :grid_width,
     :grid_height,
+    :day_night_cycle_start,
+    :day_night_cycle_time,
     :free_play
   )
 
