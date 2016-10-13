@@ -39,16 +39,16 @@ function getTagString(prefix, tagString) {
  * @return {string} - The detail string, e.g. "Grade 4 | C++ | Web" or "Grade 4 | C++".
  */
 
-function getTutorialComboString(item) {
+function getTutorialDetailString(item) {
   const grades = item.string_detail_grades;
   const programming_languages = item.string_detail_programming_languages;
   const platforms = item.string_detail_platforms;
 
-  var result = `${grades} | ${programming_languages}`;
+  let result = `${grades} | ${programming_languages}`;
   if (platforms) {
     result = result + ` | ${platforms}`;
   }
   return result;
 }
 
-export { getTagString, getTutorialComboString };
+export { getTagString, getTutorialDetailString };
