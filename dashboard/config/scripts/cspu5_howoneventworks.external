@@ -1,0 +1,52 @@
+name 'CSPU5_HowOnEventWorks'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Event-driven programming
+
+Apps work by adding code to respond to certain "events" that occur in a program.
+
+Examples of events:
+* Clicking a button
+* Moving the mouse
+* typing a key on the keyboard
+
+In order for your button to do more than just sit there all pretty-like you need to add an **Event Handler**.  In AppLab you do this with the onEvent block.
+
+onEvent is the *starting point* any code to run.
+
+onEvent specifies 3 things.  Here they are in plain english:
+	* Run some code (a function)..
+    * when a particular kind of event happens...
+    * on a particular element of the user interface.
+    
+However, the onEvent code block actually requires you to specify these things in reverse order.  See diagram.
+
+	* for **some** UI element
+    * when **some** event occurs
+    * run **some** function
+
+<hr>  BAKER NOTE: modify this vvv into a diagram and worked example.
+
+# How Do Events Work?
+Event-driven apps are made up of elements that can trigger events (such as buttons) and pieces of code called **event handlers**. Event handlers are commands that "watch" for certain events to occur in your program, and then run some function when an event occurs.
+
+<img src="https://images.code.org/96abf7d54a0be221a8b8eda80c696bf4-image-1444142010683.png" style="float: right; width: 250px">The `onEvent(id, type, callback)` command creates an **event handler** in your app. The three parameters are:
+* **id** - the ID of the element in the app you want to "watch", one that might trigger an event
+* **type** - the type of event to "watch" for (e.g. a click, a key press, a mousemove, etc.)
+* **callback** - a **callback function** is only different from a normal function in that you don't call it directly from your code. Instead it gets *called by the system at the time the specified event occurs*. You put the code into this function just like you would any other, and it will run when the event occurs.
+
+Once created, the event handler will always "watch" that element as long as it exists. 
+
+# Do This:
+The program you are going to see has a button with a new ID but no event handler that is attached to it.
+* **Add an `onEvent` handler** that watches for a click on the button and *moves the turtle forward* when it happens. 
+* **Run the program** to make sure it works.
+* **Try changing the event type** to something like "mouseover" and see what happens.  Not all event types will work with buttons but it's fun to play a little bit.
+
+Once you've got the program responding to some event, move on to the next problem.
+
+
+
+MARKDOWN

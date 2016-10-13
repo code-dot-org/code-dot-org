@@ -556,6 +556,12 @@ en:
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
+      CSPU5_FirstTimeDesignMode:
+        description here: description here
+        title: title
+      CSPU5_HowOnEventWorks:
+        description here: description here
+        title: title
       CSP_Final_instructions:
         description here: description here
         title: title
