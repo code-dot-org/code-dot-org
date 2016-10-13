@@ -1,0 +1,45 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-10-13T18:49:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "markdown_instructions": "# Create your Backgrounds\r\n\r\nNext, you'll create all of the background functions that you need for your game.  Some games only have one background, and others have more than one that's chosen according to user score or another aspect of gameplay.  You'll need to create a function for each separate background in your game.  You'll write the code to choose the correct background in the next level.\r\n\r\n* Show me the block to create a new function\r\n* Show me the area in the code to put my function\r\n\r\nAfter you create your functions, test them by calling them inside the draw loop, one background per test.\r\n\r\n* show me the block to call my function",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "CSD U3 game template",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "show_d_pad": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Gamelab>

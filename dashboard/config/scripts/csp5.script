@@ -1,7 +1,7 @@
 login_required 'true'
 
 stage 'Events Unplugged'
-level 'CSPU5_U3L12 - Student Introduction 1'
+# level 'CSPU5_U3L12 - Student Introduction 1'
 
 stage 'Buttons and Events'
 level 'CSPU5_FirstTimeDesignMode'
@@ -9,7 +9,7 @@ level 'CSPU5_U3 - Design Mode 1'
 
 
 stage 'Edited lessons ABOVE this line'
-#level 'CSPU5_U3L12 - Student Introduction 1'
+# level 'CSPU5_U3L12 - Student Introduction 1'
 
 stage 'Event-Driven Programming and Debugging'
 level 'CSPU5_U3L13 Student Lesson Introduction'
