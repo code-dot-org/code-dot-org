@@ -161,6 +161,13 @@ function searchAnimations(searchQuery, categoryQuery) {
         return resultSet.union(animationLibrary.aliases[nextAlias]);
       }, Immutable.Set());
 
+  if (categoryQuery === 'category_all') {
+    return resultSet
+      .sort()
+      .slice(0, MAX_SEARCH_RESULTS)
+      .map(result => animationLibrary.metadata[result])
+      .toArray();
+  }
 
   if (categoryQuery !== '' && searchQuery !== '') {
     resultSet = resultSet.intersect(categoryResultSet.toArray());
