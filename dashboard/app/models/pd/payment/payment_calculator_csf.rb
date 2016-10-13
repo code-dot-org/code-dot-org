@@ -3,6 +3,8 @@ module Pd::Payment
   class PaymentCalculatorCSF < PaymentCalculatorBase
     PAY_PER_QUALIFIED_TEACHER = 50
 
+    private
+
     # Determines the payment type.
     # @param workshop [Pd::Workshop]
     # @return [String] payment type: always 'CSF Facilitator'
@@ -18,8 +20,6 @@ module Pd::Payment
       true
     end
 
-    private
-
     # Gets session attendance summaries for a workshop.
     # CSF workshops have different attendance rules. Workshops are always exactly one day (session),
     # and every teacher in the section counts but only those who have solved >= 10 puzzles are qualified (see #teacher_qualified?)
@@ -29,23 +29,23 @@ module Pd::Payment
       # Anyone in the section counts as attended for CSF
       teacher_ids = workshop.section.students.pluck :id
 
-      # CSF workshops don't care about hours. Return exactly one session (day), with 0 hours.
-      [SessionAttendanceSummary.new(0, teacher_ids)]
+      # Return exactly one session (day), with the raw hours from the session.
+      [SessionAttendanceSummary.new(workshop.sessions.first.hours, teacher_ids)]
     end
 
     # Teachers must complete >= 10 puzzles to qualify.
-    # @param teacher_id [Integer]
+    # @param teacher [User]
     # @return [Boolean] whether or not the teacher is qualified for payment.
-    def teacher_qualified?(teacher_id)
-      UserLevel.where(user_id: teacher_id).passing.count >= 10
+    def teacher_qualified?(teacher)
+      UserLevel.where(user_id: teacher.id).passing.count >= 10
     end
 
     # Calculates payment amounts.
-    # @param payment [Payment] calculated workshop details that go into payment amount calculation.
+    # @param summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    def calculate_payment_amounts(payment)
+    def calculate_payment_amounts(summary)
       {
-        food: payment.num_qualified_teachers * PAY_PER_QUALIFIED_TEACHER
+        food: summary.num_qualified_teachers * PAY_PER_QUALIFIED_TEACHER
       }
     end
   end

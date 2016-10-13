@@ -41,6 +41,18 @@ module Pd::Payment
       assert_equal PaymentCalculatorStandard, PaymentFactory.get_calculator_class(workshop_cs_in_s)
     end
 
+    test 'counselor admin calculator' do
+      # Mix of public and private types
+      workshop_counselor = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PRIVATE,
+        course: Pd::Workshop::COURSE_COUNSELOR
+
+      workshop_admin = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PUBLIC,
+        course: Pd::Workshop::COURSE_ADMIN
+
+      assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_counselor)
+      assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_admin)
+    end
+
     test 'calculate payment' do
       # Use a standard payment for example:
       workshop_standard = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PUBLIC,
@@ -49,9 +61,9 @@ module Pd::Payment
       workshop_no_payment = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_DISTRICT,
         course: Pd::Workshop::COURSE_CSF
 
-      standard_payment = PaymentFactory.get_payment(workshop_standard)
-      assert standard_payment
-      assert_equal PaymentCalculatorStandard, standard_payment.calculator_class
+      standard_summary = PaymentFactory.get_payment(workshop_standard)
+      assert standard_summary
+      assert_equal PaymentCalculatorStandard, standard_summary.calculator_class
 
       assert_nil PaymentFactory.get_payment(workshop_no_payment)
     end

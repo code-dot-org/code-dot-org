@@ -11,9 +11,9 @@ module Pd::Payment
         course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
 
-      payment = PaymentCalculatorBase.instance.calculate empty_workshop
-      assert_equal 0, payment.num_teachers
-      refute payment.qualified
+      workshop_summary = PaymentCalculatorBase.instance.calculate empty_workshop
+      assert_equal 0, workshop_summary.num_teachers
+      assert_nil workshop_summary.payment
     end
 
     test 'pay_period' do
@@ -28,35 +28,29 @@ module Pd::Payment
       assert_equal '09/16/2016 - 09/30/2016', PaymentCalculatorBase.instance.get_pay_period(workshop_30)
     end
 
-    test 'default payment details' do
-      workshop = create(:pd_ended_workshop)
-      payment = PaymentCalculatorBase.instance.calculate(workshop)
-
-      # Payment details are supplied in derived classes.
-      assert_equal({}, payment.payment_amounts)
-      assert_equal 0, payment.payment_total
-    end
-
-    test 'payment_type and plp' do
+    test 'workshop payment type and plp' do
       workshop_no_plp = create :pd_ended_workshop
+      create :pd_workshop_participant, workshop: workshop_no_plp, enrolled: true, in_section: true, attended: true
 
       workshop_plp_urban = create :pd_ended_workshop
       plp_urban = create :professional_learning_partner, contact: workshop_plp_urban.organizer, urban: true
+      create :pd_workshop_participant, workshop: workshop_plp_urban, enrolled: true, in_section: true, attended: true
 
       workshop_plp_non_urban = create :pd_ended_workshop
       plp_non_urban = create :professional_learning_partner, contact: workshop_plp_non_urban.organizer, urban: false
+      create :pd_workshop_participant, workshop: workshop_plp_non_urban, enrolled: true, in_section: true, attended: true
 
-      payment_no_plp = PaymentCalculatorBase.instance.calculate workshop_no_plp
-      payment_plp_urban = PaymentCalculatorBase.instance.calculate workshop_plp_urban
-      payment_plp_non_urban = PaymentCalculatorBase.instance.calculate workshop_plp_non_urban
+      summary_no_plp = PaymentCalculatorBase.instance.calculate workshop_no_plp
+      summary_plp_urban = PaymentCalculatorBase.instance.calculate workshop_plp_urban
+      summary_plp_non_urban = PaymentCalculatorBase.instance.calculate workshop_plp_non_urban
 
-      assert_nil payment_no_plp.plp
-      assert_equal plp_urban, payment_plp_urban.plp
-      assert_equal plp_non_urban, payment_plp_non_urban.plp
+      assert_nil summary_no_plp.plp
+      assert_equal plp_urban, summary_plp_urban.plp
+      assert_equal plp_non_urban, summary_plp_non_urban.plp
 
-      assert_nil payment_no_plp.payment_type
-      assert_equal 'PLP Urban', payment_plp_urban.payment_type
-      assert_equal 'PLP Non-urban', payment_plp_non_urban.payment_type
+      assert_nil summary_no_plp.payment.type
+      assert_equal 'PLP Urban', summary_plp_urban.payment.type
+      assert_equal 'PLP Non-urban', summary_plp_non_urban.payment.type
     end
 
     test 'attendance' do
@@ -82,29 +76,126 @@ module Pd::Payment
       teacher_above_cap = create :pd_workshop_participant, workshop: workshop,
         enrolled: true, in_section: true, attended: workshop.sessions
 
-      payment = PaymentCalculatorBase.instance.calculate workshop
+      workshop_summary = PaymentCalculatorBase.instance.calculate workshop
 
-      assert payment.qualified
-      assert_equal 3, payment.num_days
-      assert_equal 4, payment.num_teachers
-      assert_equal 3, payment.num_qualified_teachers
+      assert workshop_summary.qualified?
+      assert_equal 3, workshop_summary.num_days
+      assert_equal 4, workshop_summary.num_teachers
+      assert_equal 3, workshop_summary.num_qualified_teachers
 
-      assert_equal [3, 2, 3, 2], payment.attendance_count_per_session
+      assert_equal [3, 2, 3, 2], workshop_summary.attendance_count_per_session
+      assert_equal 4, workshop_summary.teacher_summaries.count
 
-      assert_equal({
-        teacher_below_min_attendance.id => TeacherAttendanceTotal.new(1, 6),
-        teacher_last_2_days.id => TeacherAttendanceTotal.new(2, 12),
-        teacher_first_3_days.id => TeacherAttendanceTotal.new(3, 18),
-        teacher_above_cap.id => TeacherAttendanceTotal.new(4, 24)
-      }, payment.raw_teacher_attendance)
+      # Below min attendance
+      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_below_min_attendance}.tap do |teacher_summary|
+        assert teacher_summary
+        assert_equal 1, teacher_summary.raw_days
+        assert_equal 6, teacher_summary.raw_hours
+        assert_equal 0, teacher_summary.days
+        assert_equal 0, teacher_summary.hours
+      end
 
-      assert_equal({
-        teacher_last_2_days.id => TeacherAttendanceTotal.new(2, 12),
-        teacher_first_3_days.id => TeacherAttendanceTotal.new(3, 18),
-        teacher_above_cap.id => TeacherAttendanceTotal.new(3, 18)
-      }, payment.adjusted_teacher_attendance)
+      # Attend 2 days
+      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_last_2_days}.tap do |teacher_summary|
+        assert teacher_summary
+        assert_equal 2, teacher_summary.raw_days
+        assert_equal 12, teacher_summary.raw_hours
+        assert_equal 2, teacher_summary.days
+        assert_equal 12, teacher_summary.hours
+      end
 
-      assert_equal 8, payment.total_teacher_attendance_days
+      # Attend 3 days
+      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_first_3_days}.tap do |teacher_summary|
+        assert teacher_summary
+        assert_equal 3, teacher_summary.raw_days
+        assert_equal 18, teacher_summary.raw_hours
+        assert_equal 3, teacher_summary.days
+        assert_equal 18, teacher_summary.hours
+      end
+
+      # Above max attendance
+      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_above_cap}.tap do |teacher_summary|
+        assert teacher_summary
+        assert_equal 4, teacher_summary.raw_days
+        assert_equal 24, teacher_summary.raw_hours
+        assert_equal 3, teacher_summary.days
+        assert_equal 18, teacher_summary.hours
+      end
+
+      assert_equal 8, workshop_summary.total_teacher_attendance_days
+    end
+
+    test 'teacher summaries' do
+      workshop = create :pd_ended_workshop, num_sessions: 2
+
+      teacher_unqualified = create :pd_workshop_participant,
+        workshop: workshop, enrolled: true, in_section: true, attended: true
+
+      teacher_no_pay = create :pd_workshop_participant,
+        workshop: workshop, enrolled: true, in_section: true, attended: true
+
+      teacher_hourly = create :pd_workshop_participant,
+        workshop: workshop, enrolled: true, in_section: true, attended: true
+      district_hourly = Pd::Enrollment.last.school_info.school_district
+      term_hourly = create :pd_district_payment_term, course: workshop.course, school_district: district_hourly,
+        rate_type: Pd::DistrictPaymentTerm::RATE_HOURLY, rate: 2
+
+      teacher_daily = create :pd_workshop_participant,
+        workshop: workshop, enrolled: true, in_section: true, attended: true
+      district_daily = Pd::Enrollment.last.school_info.school_district
+      term_daily = create :pd_district_payment_term, course: workshop.course, school_district: district_daily,
+        rate_type: Pd::DistrictPaymentTerm::RATE_DAILY, rate: 10
+
+      workshop.resolve_enrolled_users
+
+      calculator = PaymentCalculatorBase.instance
+      calculator.stubs(:teacher_qualified?).returns true
+      calculator.expects(:teacher_qualified?).with(teacher_unqualified).returns false
+
+      workshop_summary = calculator.calculate(workshop)
+      teacher_summaries = workshop_summary.teacher_summaries
+      assert teacher_summaries
+      assert_equal 4, teacher_summaries.count
+
+      # Unqualified
+      teacher_summaries.find{|p| p.teacher == teacher_unqualified}.tap do |teacher_summary|
+        refute teacher_summary.qualified?
+        assert_equal 2, teacher_summary.days
+        assert_equal 12, teacher_summary.hours
+        assert_nil teacher_summary.payment
+      end
+
+      # No pay
+      teacher_summaries.find{|p| p.teacher == teacher_no_pay}.tap do |teacher_summary|
+        assert teacher_summary.qualified?
+        assert_equal 2, teacher_summary.days
+        assert_equal 12, teacher_summary.hours
+        assert teacher_summary.payment
+        assert_nil teacher_summary.payment.district_payment_term
+        assert_equal 0, teacher_summary.payment.amount
+      end
+
+      # Hourly pay
+      teacher_summaries.find{|p| p.teacher == teacher_hourly}.tap do |teacher_summary|
+        assert teacher_summary.qualified?
+        assert_equal 2, teacher_summary.days
+        assert_equal 12, teacher_summary.hours
+        assert teacher_summary.payment
+        assert term_hourly, teacher_summary.payment.district_payment_term
+        assert_equal 24, teacher_summary.payment.amount
+      end
+
+      # Daily pay
+      teacher_summaries.find{|p| p.teacher == teacher_daily}.tap do |teacher_summary|
+        assert teacher_summary.qualified?
+        assert_equal 2, teacher_summary.days
+        assert_equal 12, teacher_summary.hours
+        assert teacher_summary.payment
+        assert term_daily, teacher_summary.payment.district_payment_term
+        assert_equal 20, teacher_summary.payment.amount
+      end
+
+      assert_equal 6, workshop_summary.total_teacher_attendance_days
     end
   end
 end
