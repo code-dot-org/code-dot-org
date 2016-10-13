@@ -138,6 +138,9 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailDescription}>
                     {this.props.item.longdescription}
                   </div>
+                  <a href={this.props.item.launch_url} target="_blank">
+                    <button style={{marginTop: 20}}>Start</button>
+                  </a>
                 </div>
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
