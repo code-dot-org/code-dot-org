@@ -24,7 +24,7 @@ var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 var MEDIA_URL = '/blockly/media/craft/';
-const IS_EVENT_LEVEL = false;
+const IS_EVENT_LEVEL = true; // TODO(bjordan): make conditional
 
 var ArrowIds = {
   LEFT: 'leftButton',
@@ -919,6 +919,7 @@ Craft.executeUserCode = function () {
 
     trySetLocalStorageItem('craftPlayerInventory', JSON.stringify(Object.keys(newInventorySet)));
   }.bind(this));
+  appCodeOrgAPI.setDayNightCycle(5, 5);
 };
 
 Craft.getTestResultFrom = function (success, studioTestResults) {

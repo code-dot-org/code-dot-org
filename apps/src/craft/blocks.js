@@ -166,27 +166,26 @@ function keysToDropdownOptions(keysList) {
 }
 
 
-const entityActionBlocks = [
-  'moveEntityForward',
-  'destroyEntity',
-  'attack',
-  'flashEntity',
-  'moveForward',
-  'moveRandom',
-  'turnLeft',
-  'turnRight',
-  'turnRandom',
-  'explodeEntity'
-];
+const entityActionBlocks = {
+  'destroyEntity': 'disappear',
+  'attack': 'attack',
+  'flashEntity': 'flash entity',
+  'moveForward': 'move forward',
+  'moveRandom': 'move random',
+  'turnLeft': 'turn left',
+  'turnRight': 'turn right',
+  'turnRandom': 'turn random',
+  'explodeEntity': 'explode'
+};
 
-const entityActionTargetDropdownBlocks = [
-  'moveToward',
-  'moveTo',
-  'moveAway',
-];
+const entityActionTargetDropdownBlocks = {
+  'moveToward': 'move toward',
+  'moveTo': 'move to',
+  'moveAway': 'move away'
+};
 
-exports.entityActionBlocks = entityActionBlocks;
-exports.entityActionTargetDropdownBlocks = entityActionTargetDropdownBlocks;
+exports.entityActionBlocks = Object.keys(entityActionBlocks);
+exports.entityActionTargetDropdownBlocks = Object.keys(entityActionTargetDropdownBlocks);
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
@@ -339,47 +338,51 @@ exports.install = function (blockly, blockInstallOptions) {
     '}, \'block_id_' + this.id + '\');\n';
   };
 
-  function blockFor(displayName) {
+  const eventTypes = Object.freeze({
+    WhenTouched: 0,
+    WhenUsed: 1,
+    WhenSpawned: 2,
+    WhenAttacked: 3,
+    WhenNight: 4,
+    WhenDay: 5
+  });
+
+  const statementNameToEvent = {
+    WHEN_USED: eventTypes.WhenUsed,
+    WHEN_TOUCHED: eventTypes.WhenTouched,
+    WHEN_SPAWNED: eventTypes.WhenSpawned,
+    WHEN_ATTACKED: eventTypes.WhenAttacked,
+    WHEN_NIGHT: eventTypes.WhenNight,
+    WHEN_DAY: eventTypes.WhenDay,
+  };
+
+  const statementNameToDisplayName = {
+    WHEN_USED: "When Clicked",
+    WHEN_TOUCHED: "When Touched",
+    WHEN_SPAWNED: "When Spawned",
+    WHEN_ATTACKED: "When Attacked",
+    WHEN_NIGHT: "When Night",
+    WHEN_DAY: "When Day",
+  };
+
+  function blockFor(displayName, statementNames = Object.keys(statementNameToDisplayName)) {
     return {
       init: function () {
         this.appendDummyInput()
             .appendTitle(displayName);
-        this.appendStatementInput("WHEN_USED")
-            .appendTitle("When Used");
-        this.appendStatementInput("WHEN_TOUCHED")
-            .appendTitle("When Touched");
-        this.appendStatementInput("WHEN_SPAWNED")
-            .appendTitle("When Spawned");
-        this.appendStatementInput("WHEN_ATTACKED")
-            .appendTitle("When Attacked");
+        statementNames.forEach((name) => {
+          this.appendStatementInput(name)
+              .appendTitle(statementNameToDisplayName[name]);
+        });
         this.setColour(120);
         this.setTooltip('');
       }
     };
   }
 
-  function generatorFor(type) {
+  function generatorFor(blockType, statementNames = Object.keys(statementNameToEvent)) {
     return function () {
-      const eventTypes = Object.freeze({
-        WhenTouched: 0,
-        WhenUsed: 1,
-        WhenSpawned: 2,
-        WhenAttacked: 3,
-        WhenNight: 4,
-        WhenDay: 5
-      });
-      const statementNameToEvent = {
-        WHEN_USED: eventTypes.WhenUsed,
-        WHEN_TOUCHED: eventTypes.WhenTouched,
-        WHEN_SPAWNED: eventTypes.WhenSpawned,
-        WHEN_ATTACKED: eventTypes.WhenAttacked,
-        WHEN_NIGHT: eventTypes.WhenNight,
-        WHEN_DAY: eventTypes.WhenDay,
-      };
-
-      var blockType = type;
-
-      return Object.keys(statementNameToEvent).map((statementName) => {
+      return statementNames.map((statementName) => {
         return `
         onEventTriggered("${blockType}", ${statementNameToEvent[statementName]}, function(event) {
           ${blockly.Generator.get('JavaScript').statementToCode(this, statementName)}
@@ -393,12 +396,23 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(entityID);
   }
 
+  function createLimitedEventBlockForEntity(entityType, entityID, displayName, statementNames) {
+    blockly.Blocks[`craft_${entityID}`] = blockFor(displayName, statementNames);
+    blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(entityType, statementNames);
+  }
+
   createEventBlockForEntity('cow', 'Cow');
   createEventBlockForEntity('sheep', 'Sheep');
   createEventBlockForEntity('zombie', 'Zombie');
   createEventBlockForEntity('ironGolem', 'Iron Golem');
   createEventBlockForEntity('creeper', 'Creeper');
   createEventBlockForEntity('chicken', 'Chicken');
+  createLimitedEventBlockForEntity('sheep', 'sheepClicked', 'Sheep', ['WHEN_USED']);
+  createLimitedEventBlockForEntity('chicken', 'chickenSpawnedClicked', 'Chicken', ['WHEN_SPAWNED', 'WHEN_USED']);
+  /**/createLimitedEventBlockForEntity('sheep', 'sheepSpawnedTouchedClicked', 'Sheep', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('cow', 'cowSpawnedTouchedClicked', 'Cow', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+  /**/createLimitedEventBlockForEntity('zombie', 'zombieSpawnedTouchedClickedDay', 'Zombie', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
+  /**/createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClickedDay', 'Creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
@@ -524,11 +538,11 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  function entityTargetActionBlock(simpleFunctionName, blockText) {
-    blockly.Blocks[`craft_${simpleFunctionName}`] = {
+  function entityTargetActionBlock(simpleFunctionName, blockText, types = ENTITY_TYPES, blockName = simpleFunctionName) {
+    blockly.Blocks[`craft_${blockName}`] = {
       helpUrl: '',
       init: function () {
-        var dropdownOptions = keysToDropdownOptions(ENTITY_TYPES);
+        var dropdownOptions = keysToDropdownOptions(types);
         var dropdown = new blockly.FieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
 
@@ -541,19 +555,24 @@ exports.install = function (blockly, blockInstallOptions) {
       }
     };
 
-    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
+    blockly.Generator.get('JavaScript')[`craft_${blockName}`] = function () {
       const thingToTarget = this.getTitleValue('TYPE');
       return `${simpleFunctionName}(event.targetIdentifier, '${thingToTarget}', 'block_id_${this.id}');\n`;
     };
   }
 
-  entityActionBlocks.forEach((name) => {
-    simpleEntityActionBlock(name, name);
+  Object.keys(entityActionBlocks).forEach((name) => {
+    simpleEntityActionBlock(name, entityActionBlocks[name]);
   });
 
-  entityActionTargetDropdownBlocks.forEach((name) => {
-    entityTargetActionBlock(name, name);
+  Object.keys(entityActionTargetDropdownBlocks).forEach((name) => {
+    entityTargetActionBlock(name, entityActionTargetDropdownBlocks[name]);
   });
+
+  entityTargetActionBlock('moveToward',
+      entityActionTargetDropdownBlocks['moveToward'],
+      ['Player', 'sheep', 'chicken'],
+      'moveTowardSheepPlayerChicken');
 
   numberEntryBlock('wait', 'wait');
   dropdownEntityBlock('drop', 'drop', miniBlocks);
