@@ -2,13 +2,15 @@
 var React = require('react');
 var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
+var filesApi = require('../clientApi').files;
 
 /**
  * A component for viewing project version history.
  */
 var VersionHistory = React.createClass({
   propTypes: {
-    handleClearPuzzle: React.PropTypes.func.isRequired
+    handleClearPuzzle: React.PropTypes.func.isRequired,
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   /**
@@ -28,8 +30,12 @@ var VersionHistory = React.createClass({
   },
 
   componentWillMount: function () {
-    // TODO: Use Dave's client api when it's finished.
-    sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
+    if (this.props.useFilesApi) {
+      filesApi.getVersionHistory(this.onVersionListReceived, this.onAjaxFailure);
+    } else {
+      // TODO: Use Dave's client api when it's finished.
+      sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
+    }
   },
 
   /**
@@ -60,8 +66,12 @@ var VersionHistory = React.createClass({
    * @param versionId
    */
   onChooseVersion: function (versionId) {
-    // TODO: Use Dave's client api when it's finished.
-    sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
+    if (this.props.useFilesApi) {
+      filesApi.restorePreviousVersion(versionId, this.onRestoreSuccess, this.onAjaxFailure);
+    } else {
+      // TODO: Use Dave's client api when it's finished.
+      sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
+    }
 
     // Show the spinner.
     this.setState({showSpinner: true});
