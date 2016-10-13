@@ -278,9 +278,11 @@ class Craft < Blockly
 </category>
 <category name="Event Loops">
   <block type="craft_forever"></block>
+  <block type="craft_repeatDropdown"></block>
+  <block type="craft_repeatRandom"></block>
   <block type="craft_repeatTimes"></block>
 </category>
-<category name="Event Actions">
+<category name="Entity Actions">
   <block type="craft_attack"></block>
   <block type="craft_destroyEntity"></block>
   <block type="craft_drop"></block>
@@ -295,9 +297,8 @@ class Craft < Blockly
   <block type='craft_playSound'></block>
   <block type="craft_spawnEntity"></block>
   <block type="craft_spawnEntityRandom"></block>
-  <block type="craft_turnLeft"></block>
-  <block type="craft_turnRandom"></block>
-  <block type="craft_turnRight"></block>
+  <block type="craft_entityTurn"></block>
+  <block type="craft_entityTurnLR"></block>
   <block type="craft_wait"></block>
 </category>
 <category name="Limited Actions">

@@ -689,6 +689,49 @@ exports.install = function (blockly, blockInstallOptions) {
     return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`
   };
 
+  blockly.Blocks.craft_repeatRandom = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(322, 0.90, 0.95);
+      this.appendDummyInput()
+          .appendTitle('repeat random')
+      this.appendStatementInput('DO')
+          .appendTitle(i18n.blockWhileXAheadDo());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_repeatRandom = function () {
+    const times = this.getTitleValue('TIMES');
+    const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    return `repeatRandom('block_id_${this.id}', function() { ${innerCode} }, event.targetIdentifier);`
+  };
+
+  blockly.Blocks.craft_repeatDropdown = {
+    helpUrl: '',
+    init: function () {
+      var dropdownOptions = [2,3,4,5,6,7,8,9,10].map((k) => [k.toString(), k.toString()]);
+      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      dropdown.setValue(dropdownOptions[0][1]);
+
+      this.setHSV(322, 0.90, 0.95);
+      this.appendDummyInput()
+          .appendTitle('repeat')
+          .appendTitle(dropdown, 'TIMES');
+      this.appendStatementInput('DO')
+          .appendTitle(i18n.blockWhileXAheadDo());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_repeatDropdown = function () {
+    const times = this.getTitleValue('TIMES');
+    const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`
+  };
+
   blockly.Blocks[`craft_spawnEntity`] = {
     helpUrl: '',
     init: function () {

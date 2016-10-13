@@ -815,6 +815,11 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.repeat(studioApp.highlight.bind(studioApp, blockID),
           callback, iterations, targetEntity);
     },
+    repeatRandom: function (blockID, callback, targetEntity) {
+      // if resurrected, move blockID be last parameter to fix "Show Code"
+      appCodeOrgAPI.repeatRandom(studioApp.highlight.bind(studioApp, blockID),
+          callback, targetEntity);
+    },
     ifLavaAhead: function (callback, blockID) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.ifBlockAhead(studioApp.highlight.bind(studioApp, blockID),
