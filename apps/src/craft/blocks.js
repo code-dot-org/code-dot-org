@@ -1,5 +1,13 @@
 const i18n = require('./locale');
 
+const numbersToDisplayText = {
+  '0.4': 'very short',
+  '1.0': 'short',
+  '2.0': 'medium',
+  '4.0': 'long',
+  '8.0': 'very long'
+};
+
 const blocksToDisplayText = {
   bedrock: i18n.blockTypeBedrock(),
   bricks: i18n.blockTypeBricks(),
@@ -160,7 +168,7 @@ const SPAWNABLE_ENTITY_TYPES = [
 
 function keysToDropdownOptions(keysList) {
   return keysList.map(function (key) {
-    var displayText = (blocksToDisplayText[key] || key);
+    var displayText = (blocksToDisplayText[key] || numbersToDisplayText[key] || key);
     return [displayText, key];
   });
 }
@@ -574,7 +582,7 @@ exports.install = function (blockly, blockInstallOptions) {
       ['Player', 'sheep', 'chicken'],
       'moveTowardSheepPlayerChicken');
 
-  numberEntryBlock('wait', 'wait');
+  dropdownEntityBlock('wait', 'wait', Object.keys(numbersToDisplayText).sort());
   dropdownEntityBlock('drop', 'drop', miniBlocks);
   dropdownEntityBlock('moveDirection', 'move', ['up', 'down', 'left', 'right']);
   //simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
