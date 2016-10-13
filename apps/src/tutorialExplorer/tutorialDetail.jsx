@@ -3,7 +3,7 @@
 
 import React from 'react';
 import shapes from './shapes';
-import getTagString from './util';
+import { getTagString, getTutorialComboString } from './util';
 
 const styles = {
   tutorialDetailModalHeader: {
@@ -133,7 +133,7 @@ const TutorialDetail = React.createClass({
                     {this.props.item.name}
                   </div>
                   <div style={styles.tutorialDetailSub}>
-                    {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
+                    {getTutorialComboString(this.props.item)}
                   </div>
                   <div style={styles.tutorialDetailDescription}>
                     {this.props.item.longdescription}

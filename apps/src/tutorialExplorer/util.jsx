@@ -33,4 +33,22 @@ function getTagString(prefix, tagString) {
   return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
 }
 
-export default getTagString;
+/**
+ * Given a tutorial item, return the string to render for its details.
+ * @param {object} item - A tutorial item.
+ * @return {string} - The detail string, e.g. "Grade 4 | C++ | Web" or "Grade 4 | C++".
+ */
+
+function getTutorialComboString(item) {
+  const grades = item.string_detail_grades;
+  const programming_languages = item.string_detail_programming_languages;
+  const platforms = item.string_detail_platforms;
+
+  var result = `${grades} | ${programming_languages}`;
+  if (platforms) {
+    result = result + ` | ${platforms}`;
+  }
+  return result;
+}
+
+export { getTagString, getTutorialComboString };
