@@ -423,12 +423,12 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   const statementNameToDisplayName = {
-    WHEN_USED: "When Clicked",
-    WHEN_TOUCHED: "When Touched",
-    WHEN_SPAWNED: "When Spawned",
-    WHEN_ATTACKED: "When Attacked",
-    WHEN_NIGHT: "When Night",
-    WHEN_DAY: "When Day",
+    WHEN_USED: "when clicked",
+    WHEN_TOUCHED: "when touched",
+    WHEN_SPAWNED: "when spawned",
+    WHEN_ATTACKED: "when attacked",
+    WHEN_NIGHT: "when night",
+    WHEN_DAY: "when day",
   };
 
   function blockFor(displayName, statementNames = Object.keys(statementNameToDisplayName)) {
@@ -467,18 +467,18 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(entityType, statementNames);
   }
 
-  createEventBlockForEntity('cow', 'Cow');
-  createEventBlockForEntity('sheep', 'Sheep');
-  createEventBlockForEntity('zombie', 'Zombie');
-  createEventBlockForEntity('ironGolem', 'Iron Golem');
-  createEventBlockForEntity('creeper', 'Creeper');
-  createEventBlockForEntity('chicken', 'Chicken');
-  createLimitedEventBlockForEntity('sheep', 'sheepClicked', 'Sheep', ['WHEN_USED']);
-  createLimitedEventBlockForEntity('chicken', 'chickenSpawnedClicked', 'Chicken', ['WHEN_SPAWNED', 'WHEN_USED']);
-  /**/createLimitedEventBlockForEntity('sheep', 'sheepSpawnedTouchedClicked', 'Sheep', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
-  createLimitedEventBlockForEntity('cow', 'cowSpawnedTouchedClicked', 'Cow', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
-  /**/createLimitedEventBlockForEntity('zombie', 'zombieSpawnedTouchedClickedDay', 'Zombie', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
-  /**/createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClickedDay', 'Creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
+  createEventBlockForEntity('cow', 'cow');
+  createEventBlockForEntity('sheep', 'sheep');
+  createEventBlockForEntity('zombie', 'zombie');
+  createEventBlockForEntity('ironGolem', 'iron Golem');
+  createEventBlockForEntity('creeper', 'creeper');
+  createEventBlockForEntity('chicken', 'chicken');
+  createLimitedEventBlockForEntity('sheep', 'sheepClicked', 'sheep', ['WHEN_USED']);
+  createLimitedEventBlockForEntity('chicken', 'chickenSpawnedClicked', 'chicken', ['WHEN_SPAWNED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('sheep', 'sheepSpawnedTouchedClicked', 'sheep', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('cow', 'cowSpawnedTouchedClicked', 'cow', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('zombie', 'zombieSpawnedTouchedClickedDay', 'zombie', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
+  createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClickedDay', 'creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
@@ -711,7 +711,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_repeatDropdown = {
     helpUrl: '',
     init: function () {
-      var dropdownOptions = [2,3,4,5,6,7,8,9,10].map((k) => [k.toString(), k.toString()]);
+      var dropdownOptions = [2, 3, 4, 5, 6, 7, 8, 9, 10].map((k) => [k.toString(), k.toString()]);
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 

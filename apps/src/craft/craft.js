@@ -924,7 +924,7 @@ Craft.executeUserCode = function () {
 
     trySetLocalStorageItem('craftPlayerInventory', JSON.stringify(Object.keys(newInventorySet)));
   }.bind(this));
-  appCodeOrgAPI.setDayNightCycle(5, 5);
+  appCodeOrgAPI.setDayNightCycle(5, 'day');
 };
 
 Craft.getTestResultFrom = function (success, studioTestResults) {
