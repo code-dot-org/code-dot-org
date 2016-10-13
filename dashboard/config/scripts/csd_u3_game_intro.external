@@ -1,0 +1,19 @@
+name 'CSD U3 game intro'
+title 'Create Your Own Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Create your own game
+
+Now that you have all the skills you need, it's time to make your own game!
+
+With a partner, brainstorm some different ideas for your game.  You can think about the games you've already seen, or look at some more sample games to give you ideas.
+
+* Side scroller
+* Platform Jumper
+* Air Hockey
+* Another Game
+* Another Game
+
+Once you have settled on a type of game with your partner, fill out the Project Guide with the backgrounds, variables, sprites, and functions that you will need to make the game.  You'll spend the next few levels creating your game.
+MARKDOWN

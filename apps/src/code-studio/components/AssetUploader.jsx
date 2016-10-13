@@ -1,6 +1,9 @@
 /** @file Upload button wrapping a hidden uploader component. */
 var React = require('react');
 var HiddenUploader = require('./HiddenUploader.jsx');
+import clientApi from '@cdo/apps/clientApi';
+var assetsApi = clientApi.assets;
+var filesApi = clientApi.files;
 
 /**
  * A file upload component.
@@ -10,9 +13,9 @@ var AssetUploader = React.createClass({
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
     onUploadError: React.PropTypes.func,
-    channelId: React.PropTypes.string.isRequired,
     allowedExtensions: React.PropTypes.string,
-    uploadsEnabled: React.PropTypes.bool.isRequired
+    uploadsEnabled: React.PropTypes.bool.isRequired,
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   /**
@@ -24,14 +27,19 @@ var AssetUploader = React.createClass({
   },
 
   render: function () {
+    let api = this.props.useFilesApi ? filesApi : assetsApi;
+    let url = api.getUploadUrl();
+    let uploadDone = api.wrapUploadDoneCallback(this.props.onUploadDone);
+    let uploadStart = api.wrapUploadStartCallback(this.props.onUploadStart);
     return (
       <span>
         <HiddenUploader
           ref="uploader"
-          toUrl={'/v3/assets/' + this.props.channelId + '/'}
+          toUrl={url}
           allowedExtensions={this.props.allowedExtensions}
-          onUploadStart={this.props.onUploadStart}
-          onUploadDone={this.props.onUploadDone}
+          useFilesApi={this.props.useFilesApi}
+          onUploadStart={uploadStart}
+          onUploadDone={uploadDone}
           onUploadError={this.props.onUploadError}
         />
         <button
