@@ -217,8 +217,8 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'create' do
     expected_contents = <<-TEXT.strip_heredoc
-      hidden 'false'
-      login_required 'true'
+      hidden false
+      login_required true
       hideable_stages true
       wrapup_video 'hoc_wrapup'
 
