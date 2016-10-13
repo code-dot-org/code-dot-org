@@ -26,8 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Turns work from the bird's point of view. If he starts facing right, turning right will make him face downwards.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This path is a zig-zag. You need to move forward 3 times and turn 2 times.\",\r\n  \"hint_id\": \"hint2\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.\",\r\n  \"hint_id\": \"hint3\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -8,11 +8,18 @@ nav: plp_playbook_nav
 # Administrator and Counselor Workshops
 
 ## Table of Contents
+- [Process Document] (#process)
 - [Implementation Plan](#plan)
 - [Securing a Venue](#venue)
 - [Supplies](#supplies)
 - [Catering](#catering)
 
+________________
+<a id="plan"></a>
+<br/>
+
+## Process Document
+[This document](https://docs.google.com/document/d/1rO7h2K5Bv-ozD2AEopEdTFnPeEWykciiSsa-UKgabXY/edit#) contains detailed instructions on how to run a successful Administrator and Counselor professional development workshop. Including: how to get started, how to use Code Studio to set up your workshop, what to do the day of the workshop and payment information.
 ________________
 <a id="plan"></a>
 <br/>
@@ -55,7 +62,7 @@ Both printed materials and swag can be ordered through [Mimeo](marketplace.mimeo
 
 Computer Science Education: Why it Matters
 
-- Demand for Computer Scinece - [gdoc](https://docs.google.com/document/d/1xd_wvNHVPxAkVL2krfc0hmZ-iEqCZriMRqzf89_YY18/edit)
+- Demand for Computer Science - [gdoc](https://docs.google.com/document/d/1xd_wvNHVPxAkVL2krfc0hmZ-iEqCZriMRqzf89_YY18/edit)
 - Who's Taking AP Computer Science - [gdoc](https://docs.google.com/document/d/1ZE-fwRtAJO56cYTJcmBh5G3huh6RBdAewgEhmvJA8Kc/edit)
 - Computer Science as a 21st Century Skill - [gdoc](https://docs.google.com/document/d/1pYGjAB3zJaqlk7Wdg8i1gkBoByg6VuX1FoKmA2rFxEQ/edit)
 - Impact of Computer Science - [gdoc](https://docs.google.com/document/d/1pZFipP4x2zS6y1IpNIYIO_z-CT-_nq7PCTdhW3F_aK8/edit)

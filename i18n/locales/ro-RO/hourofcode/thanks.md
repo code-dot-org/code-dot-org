@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-Tu faci posibil pentru toti elevii din intreaga lume sa invete o Ora de Programare ce le poate *chimba tot resul vietii*, in timpul campaniei <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Ce poti face acum?
+Tu faci posibil pentru toti elevii din intreaga lume sa invete o Ora de Programare ce le poate *chimba tot resul vietii*, in timpul campaniei <%= campaign_date('full') %>. Vom afia in curand premiile, noile tutoriale si alte noutati distractive. Ce poti face acum?
 
 ## 1. Răspândește vestea
 
@@ -22,9 +22,9 @@ Doar ce te-ai alaturat miscarii Hour of Code. Spune-le si prietenilor cu **#Hour
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 1. Găsiți un voluntar pe plan local pentru a vă ajuta în organizarea evenimentului dumneavoastră.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Căutare pe harta noastră cu voluntari](https://code. org/volunteer/local) a voluntarilor care vă pot vizita în sala de clasă sau pot participa de la distanță prin video-chat pentru a vă inspira elevii cu privire la amploarea posibilităților cu Informatica.
 
 ## 2. Solicită întregii şcoli sa organizeze o Oră de Programare
 
@@ -42,8 +42,8 @@ Doar ce te-ai alaturat miscarii Hour of Code. Spune-le si prietenilor cu **#Hour
 
 [Trimite acest e-mail](%= resolve_url('/promote/resources#sample-emails') %) catre reprezentantii locali, consiliului local, inspectorilor scolari si invita-i sa iti viziteze scoala in timpul unui eveniment Hour of Code. Acestea te pot ajuta in construirea unei sustineri pentru tehnologia computerelor si programare si dincolo de tutorialele de o ora.
 
-## 7. Plan your Hour of Code
+## Planifică ora ta de programare
 
-Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+Alege o oră de cod ca activitate şi [acest tutorial](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

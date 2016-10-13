@@ -4,49 +4,53 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Veja abaixo um exemplo de resolução em apoio à Semana da Educação em Ciência da Computação e às suas metas, que pode ser usado pelos responsáveis pela legislação estadual e local.
 
   
-[RESOLUÇÃO OU PROCLAMAÇÃO ### DE ASSEMBLEIA, ESTADO, REGIÃO OU CIDADE] – Dado que a Semana da Educação em Ciência da Computação destaca o papel fundamental que a ciência da computação desempenha na transformação da nossa sociedade, e como a ciência da computação possibilita a inovação e cria oportunidades econômicas;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[### RESOLUÇÃO DE ASSEMBLEIA OU SENADO]
+[HOUSE OR SENATE RESOLUTION ###]
 
-[DATA]
+[DATE]
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Dado que a ciência da computação está transformando a indústria, criando novas áreas de comércio, conduzindo a inovação em todas as áreas da ciência e reforçando a produtividade nos setores econômicos estabelecidos;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Dado que a área da ciência da computação sustenta o setor da tecnologia da informação da nossa economia que, por sua vez, é um grande contribuidor para a produção econômica dos Estados Unidos;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Dado que a área da ciência da computação é uma ciência fundamental para a era digital;
+Whereas the field of computer science is a foundational science for the digital age;
 
-Dado que o setor da tecnologia da informação está exclusivamente posicionado para ajudar na recuperação econômica por meio da pesquisa e desenvolvimento de inovações;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
 Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Dado que fornecer aos alunos a oportunidade de participar de atividades de ciência da computação de alta qualidade os expõe às valiosas chances que a área oferece, além de proporcionar habilidades essenciais de raciocínio que serão úteis durante toda a vida;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Dado que todos os alunos merecem uma preparação eficiente para a educação em ciência da computação, e isso inclui o acesso a professores qualificados, tecnologias e currículo adequado à idade, necessários para aprender a ciência da computação nos níveis fundamentais e secundários da educação;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Dado que a ciência da computação precisa lidar com desafios, entre eles o de fazer as aulas de ciência da computação serem levadas em conta como requisitos de graduação do ensino médio e oferecer desenvolvimento profissional para os professores de ciência da computação;
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-Dado que participar de uma Hora do Código durante a Semana da Educação em Ciência da Computação pode ser útil para desmistificar a área dessa ciência e incentivar mais alunos a levar adiante os estudos da ciência da computação;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Dado que a área da ciência da computação deve enfrentar obstáculos significativos relacionados à desigualdade social, o que inclui atrair maior participação de representantes do sexo feminino e das minorias sociais para todos os níveis e divisões;
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-Dado que Grace Murray Hopper, uma das primeiras mulheres da área da ciência da computação, desenvolveu novas linguagens de programação e foi a pioneira nos padrões dos sistemas computacionais que constituíram o ponto de partida para muitos avanços da ciência da computação; e
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Dado que a semana de <%= campaign_date('start-long') %>, em homenagem ao aniversário de Grace Hopper, foi designada como a "Semana da Educação em Ciência da Computação": fica, portanto
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-resolvido que [ASSEMBLEIA OU SENADO, ESTADO, REGIÃO, CIDADE OU CONSELHO ESCOLAR] --
+Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) apoia a designação da Semana da Educação em Ciência da Computação (<%= campaign_date('full') %>);
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(2) incentiva escolas, educadores, pais e legisladores a participar da Semana da Educação em Ciência da Computação, permitindo que seus alunos participem da Hora do Código;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) incentiva escolas, professores, pesquisadores, universidades, líderes empresariais e legisladores a identificar mecanismos para que os professores recebam um desenvolvimento profissional avançado, a fim de oferecer experiências de aprendizado sustentáveis em ciência da computação para todos os níveis educacionais e estimular os alunos quanto à exposição aos conceitos da ciência da computação;
+(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) incentiva legisladores a remover os obstáculos que impedem que as aulas de ciência da computação sejam consideradas como créditos de ciências ou matemática para os requisitos de graduação;
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) incentiva oportunidades, entre elas os programas existentes de ciência da computação para representantes do sexo feminino e das minorias sociais.
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

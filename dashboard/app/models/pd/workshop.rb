@@ -45,6 +45,17 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ADMIN = 'Admin'
   ]
 
+  COURSE_NAMES_MAP = {
+    COURSE_CSF => 'CS Fundamentals',
+    COURSE_CSP => 'CS Principles',
+    COURSE_ECS => 'Exploring Computer Science',
+    COURSE_CS_IN_A => 'CS in Algebra',
+    COURSE_CS_IN_S => 'CS in Science',
+    COURSE_CSD => 'CS Discoveries',
+    COURSE_COUNSELOR => 'Counselor',
+    COURSE_ADMIN => 'Administrator'
+  }
+
   STATES = [
     STATE_NOT_STARTED = 'Not Started',
     STATE_IN_PROGRESS = 'In Progress',
@@ -183,6 +194,10 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  def course_name
+    COURSE_NAMES_MAP[course]
+  end
+
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     course_subject = subject ? "#{course} #{subject}" : course
@@ -272,13 +287,13 @@ class Pd::Workshop < ActiveRecord::Base
     end
 
     # Send the emails
-    self.enrollments.reload.each do |enrollment|
+    self.enrollments.each do |enrollment|
       next unless enrollment.user
 
       # Make sure user joined the section
       next unless section.students.exists?(enrollment.user.id)
 
-      Pd::WorkshopMailer.exit_survey(self, enrollment.user, enrollment).deliver_now
+      enrollment.send_exit_survey
     end
   end
 

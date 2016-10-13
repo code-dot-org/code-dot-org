@@ -6,36 +6,38 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Cómo enseñar una Hora de Código
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Mira este vídeo explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Tutoriales de la Hora del Código dirigidos por los estudiantes:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
   * Requieren un tiempo de preparación mínimo para los profesores
   * Son autoguiados, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
 
-**[Tutoriales de la Hora del Código dirigidos por los maestros:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
   * Son planes de lección que requieren de cierta preparación del docente
   * Se clasifican por grado *y* por materia (por ejemplo, matemáticas, inglés, etc.)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Promote your Hour of Code
+## 3) Promociona tu Hora de Código
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+Promociona tu Hora del Código [con estas herramientas](<%= resolve_url('/promote') %>) y anima a otros a organizar sus propios eventos.
 
 ## 4) Planificar sus necesidades de tecnología - los ordenadores son opcionales
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+La mejor experiencia de Hora de Código incluye ordenadores conectados a Internet. Pero **no** necesita un ordenador para cada niño y puede hacer la Hora del Código incluso sin ningún ordenador.
 
-**Plan Ahead!** Do the following before your event starts:
+**¡Planifique!** Haga lo siguiente antes de que su evento comience:
 
   * Pruebe los tutoriales en ordenadores o dispositivos de los estudiantes. Asegúrese de que funcionan correctamente en navegadores compatibles con sonido y video.
   * Proporcione auriculares para su clase, o pida a los estudiantes traer los suyos propios, si el tutorial que eligió funciona mejor con sonido.
@@ -140,3 +142,5 @@ La Hora del Código es sólo el primer paso de un viaje para aprender más de c�
 
   * Anime a los estudiantes a seguir [aprendiendo en línea](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Asista a](<%= resolve_url('https://code.org/professional-development-workshops') %>) un taller presencial de 1 día, para recibir entrenamiento por un facilitador experimentado en Ciencias de la Computación. (Sólo para educadores de Estados Unidos)
+
+<%= view :signup_button %>

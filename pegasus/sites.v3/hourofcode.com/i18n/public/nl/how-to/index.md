@@ -1,10 +1,12 @@
 ---
 
-title: <%= hoc_s(:title_how_to_volunteers) %>
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 
 ---
+
+<%= view :signup_button %>
 
 # Hoe begeleid je een CodeUur
 
@@ -15,12 +17,12 @@ Join the movement and introduce a group of students to their first hour of compu
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Student-geleide CodeUur tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
   * Minimale voorbereiding is vereist
   * Zij zijn zelf-geleid, die leerlingen toe laten om op hun eigen tempo en vaardigheidsniveau kunnen werken
 
-**[Leraar-geleide CodeUur tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
   * Zijn lesplannen voor leraren als voorbereiding
   * Worden gecategoriseerd door grade niveau *en* op gebied van (bijvoorbeeld wiskunde, Engels, etc)
@@ -140,3 +142,5 @@ Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe 
 
   * Moedig leerlingen aan om online te blijven [leren ](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Woon](<%= resolve_url('https://code.org/professional-development-workshops') %>) een 1-dag in-persoon workshop, om instructie te over programmeren van een ervaren programmeur. (Alleen VS opvoeders)
+
+<%= view :signup_button %>

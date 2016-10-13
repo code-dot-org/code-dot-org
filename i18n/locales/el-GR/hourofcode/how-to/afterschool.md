@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Πώς να διδάξεις την Ώρα του Κώδικα μετά το σχολείο
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -118,10 +120,8 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * Ελέγξτε έξω τις [βέλτιστες πρακτικές](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) από παλαιότερους διοργανωτές ώρας του Κώδικα. 
   * Παρακολουθήστε την βιντεοσκόπηση του [webinar "Οδηγός Εκπαιδευτικών για την Ώρα του Κώδικα"](https://youtu.be/EJeMeSW2-Mw).
   * [Συμμετοχή σε ζωντανές "Ερωτοαπαντήσεις"](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) με τον ιδρυτή μας, Hadi Partovi, για να προετοιμαστείτε για την Ώρα του Κώδικα.
-  * Επισκεφθείτε το [ φόρουμ](http://forum.code.org/c/plc/hour-of-code) για να πάρετε συμβουλές, προτάσεις και υποστήριξη από άλλους διοργανωτές.
-  <% if @country == 'us' %>
-  * Δείτε την [ώρα του κώδικα FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
-  <% end %>
+  * Επισκεφθείτε το [ φόρουμ](http://forum.code.org/c/plc/hour-of-code) για να πάρετε συμβουλές, προτάσεις και υποστήριξη από άλλους διοργανωτές. <% if @country == 'us' %>
+  * Δείτε την [ώρα του κώδικα FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Τι γίνεται μετά την Ώρα του Κώδικα;
 
@@ -129,3 +129,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Ενθαρρύνετε τους μαθητές να συνεχίσουν να [μαθαίνουν online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Συμμετέχετε](%= resolve_url('https://code.org/professional-development-workshops') %) σε ημερήσια workshop διαζώσης ώστε να λάβετε οδηγίες από κάποιο έμπειρο εισηγήτη της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές Η.Π.Α.)
+
+<%= view :signup_button %>

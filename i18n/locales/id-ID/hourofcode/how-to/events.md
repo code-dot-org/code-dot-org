@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Bagaimana cara mengadakan event Hour of Code
 
 ## 1) Persiapkan acaramu
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30-10:40 | Pelajar mendemostrasikan Hour of Code untuk sekolah. Usulan menyenangkan: biarkan mereka mengajarkan kepala sekolah, politisi atau pelajar lain.        |
 | 10:40-11:00 | Pelajar mendemostrasikan kegiatan tanpa komputer dan bagaimana ilmu komputer dapat diajarkan tanpa menggunakan komputer.                                |
 | 11:00-11:05 | Guru yang membantu mengadakan acara di sekolah memberikan pidato penutupan.                                                                             |
+
+<%= view :signup_button %>

@@ -4,6 +4,7 @@ ja:
   language: 日本語
   front_title: 2015年12月7-13日は、過去最大級のコンピュータサイエンス学習イベントに参加しよう！
   coming_soon: 近日公開
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 12月7日
   campaign_date_start_long: 12月7日
   campaign_date_short: 12月7−13日
@@ -18,7 +19,6 @@ ja:
   front_start_learning: Start learning
   header_menu_resources: 資料
   header_menu_faq: よくある質問
-  header_menu_prizes: 粗品
   header_menu_how_to: 開催ガイド
   header_menu_promote: 宣伝する
   company_4-H: 4-H 青少年クラブ
@@ -144,14 +144,6 @@ ja:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: 各主催者に送られる粗品
-  prizes_every_organizer: Hour of Codeの各主催者にはDropboxもしくは、 Skypeのクレジットが感謝の気持ちとして送られます。
-  prizes_technology: ワシントンD.C.を含めるアメリカの各州から公共学校が一つ選ばれて、10,000ドル分の製品やサービスが贈られます。
-  prizes_tech_chats: ＃ クラスはとても特別なゲストとのビデオチャットができる権利を獲得します
-  prizes_robots: プログラミング可能なロボットが100クラスに贈られます。
-  prizes_brilliant: 素晴らしいプロジェクト用に 2000 ドルが各県と各郡一校ずつに贈られます
-  prizes_actua: カナダ全土15 の学校には、Actuaメンバーの一人によるSTEM ハンズオンワーク ショップ 2回分の権利が手に入ります。
-  prizes_details: 詳細
   nav_back_to_resources: 資料に戻る
   how_to_nav_educators: 教育関係者向け
   how_to_nav_after_school: 課外活動関係者向け
@@ -163,23 +155,6 @@ ja:
   how_to_nav_companies: 企業の方向け
   how_to_nav_afterschool_educators: 放課後・課外教育関係者向け
   how_to_nav_volunteers: ボランティアの方向け
-  prizes_nav_title: 粗品
-  prizes_nav_home: 全ての粗品
-  prizes_nav_hardware: ハードウェア系の粗品への申し込み
-  prizes_nav_terms: 利用規約
-  prizes_nav_faq: FAQ
-  prizes_nav_dc: 謎のワシントン DC 旅行
-  prizes_nav_technology: あなたの学校のための 10,000 ドル分の製品やサービス
-  prizes_nav_video_chat: スーパーハッカーとのビデオチャット
-  prizes_nav_skype_dropbox: イベント企画者は、もれなくSkype クレジットまたは、 Dropbox の容量がもらえます。
-  prizes_nav_brilliant: $2,000 の華麗な研究プロジェクト
-  prizes_nav_actua: Actua ワーク ショップ
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: すべてのイベント主催者への粗品
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>全ての</i>イベント開催者へは粗品として、<b>10ドル相当のAmazon.comか、iTunes、Windowsストア</b>のギフトカードが贈られます。'
-  prizes_more: More exciting prizes
   whats_next_header: 次はどうすれば良い？
   whats_next_description: "イベントの運営を助ける資料をお送りします。2015年バージョンの新しいチュートリアルは、もうすぐ公開されますので、今しばらくお待ちください。どんなブラウザでも、どんなスマートフォンでも、またはコンピュータすら必要ありません！<a href='http://code.org/learn'>今のチュートリアルはこちら</a>"
   whats_next_how_to: "<a href='/how-to'>Hour of Codeのイベント開催ガイド</a>"
@@ -196,6 +171,7 @@ ja:
   share_on_facebook: Facebookでシェアする
   share_on_twitter: Twitterでシェアする
   front_join_us_heading: すべての生徒に、Hour of Codeを
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: コンピュータサイエンスはすべての生徒が学ぶべきです。多くの人にHour of Codeを広めるのを手助けしてください。
   front_join_us_description_short: コンピュータサイエンスは、これからの時代を生きる全ての生徒にとって重要です。
   front_join_us_button: あなたもやってみませんか？
@@ -243,6 +219,7 @@ ja:
   signup_send_posters_address_label: 学校や組織の住所
   signup_whole_school_flag_label: このイベントは、学校全体を対象に行われます。
   signup_your_event: イベントを登録
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: 日本で働くソフトウェアエンジニアを探すのを助けて欲しい
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: |
@@ -250,7 +227,7 @@ ja:
     
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 例えば、リンカーン ・ ハイスクール
-  signup_event_location_placeholder: "郵便番号と国名または住所。 \\r (地図上に位置情報を表示するのに使います。)"
+  signup_event_location_placeholder: "郵便番号と国名または住所。 \r (地図上に位置情報を表示するのに使います。)"
   signup_special_event_details_placeholder: なぜこのイベントが特別なのか説明をお願いします。
   signup_send_posters_address_placeholder: この住所は公開されません
   signup_event_type_in_school: 学校で
@@ -275,28 +252,6 @@ ja:
   meta_tag_twitter_title: Hour of Codeがやってきます
   meta_tag_twitter_description: Hour of Codeは、すでに180 以上の国々及び30 以上の言語で数千万人の生徒を対象に行われた、世界的な運動です。
   twitter_default_text: '私は今年#HourOfCodeに参加しています、あなたは? @codeorg'
-  hardware_prizes_form_name_label: お名前
-  hardware_prizes_form_name_placeholder: お名前
-  hardware_prizes_form_email_label: あなたのメール アドレス
-  hardware_prizes_form_email_placeholder: あなたのメール アドレス
-  hardware_prizes_form_school_name_label: 学校名
-  hardware_prizes_form_school_name_placeholder: 学校名
-  hardware_prizes_form_school_address_label: 学校の住所
-  hardware_prizes_form_school_address_placeholder: 学校の所在地
-  hardware_prizes_form_school_type_label: 学校の種類
-  hardware_prizes_form_school_type_option_elementary: 小学校
-  hardware_prizes_form_school_type_option_middle_school: 中学
-  hardware_prizes_form_school_type_option_high_school: 高校
-  hardware_prizes_form_qualifying_school_label: これは K 12 アメリカの公立学校です。
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: 参加した生徒数
-  hardware_prizes_form_number_students_placeholder: 生徒数
-  hardware_prizes_form_technology_plan_label: コンピュータサイエンスの授業を学校中で広めるために、どのようにテクノロジーを使いますか？
-  hardware_prizes_form_technology_plan_placeholder: 新しいテクノロジーを利用するプランを建てる
-  hardware_prizes_form_plan_file_label: Hour of Codeの物流計画をアップロードします。
-  hardware_prizes_form_plan_file_description: 'あなたの学校において、Hour of Codeを行う為にどのように生徒達をまとめるか計画している簡単なスケジュールを提出してください。サンプルプランの参照： #PDF ＃ |#Word ＃'
-  hardware_prizes_form_submit_label: 提出
   hoc_faq_title: よくあるご質問
   hoc_faq_what_is_hoc_q: Hour of Codeとは何ですか？
   hoc_faq_what_is_hoc_a: "Hour of Codeはアメリカで2013年から始まった、子どもたちにコンピュータサイエンス教育を普及させようという運動です。コンピュータサイエンスの基礎を学べる１時間のチュートリアルが準備されており、この教材を使って誰もがイベントやワークショップで子供達に教えたり、子供達が自習したりできるようになっています。<a href='%{codeorg_url}'>チュートリアルを見てみる</a>."
@@ -407,11 +362,6 @@ ja:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: 推薦と統計
   title_partners: パートナー
-  title_prizes_faq: 粗品に関するよくある質問
-  title_prizes_terms: 粗品の用語
-  title_prizes_thanks: ありがとうございます。
-  title_prizes: 粗品
-  title_hardware_prize_form: ハードウェアの粗品に応募します
   title_resources: 資料
   title_signup_thanks: Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
   title_tutorial_guidelines: チュートリアルのガイドライン

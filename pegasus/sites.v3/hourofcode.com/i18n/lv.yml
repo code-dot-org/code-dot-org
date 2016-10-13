@@ -2,15 +2,16 @@ lv:
   site_name: PROGRAMMĒŠANAS STUNDA
   hour_of_code: Hour of Code
   language: Latviešu valoda
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: Drīzumā
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: Dec. 5
   campaign_date_start_long: December 5
   campaign_date_short: Dec. 5-11
   campaign_date_full: December 5-11
   campaign_date_year: "2016"
   campaign_date_full_year: December 5-11, 2016
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Apskaties jauno video
   front_watch_regular_video: Watch the video
@@ -18,7 +19,6 @@ lv:
   front_start_learning: Start learning
   header_menu_resources: Resursi
   header_menu_faq: Biežāk uzdotie jautājumi
-  header_menu_prizes: Balvas
   header_menu_how_to: How-To
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ lv:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Balvas katram organizētājam
-  prizes_every_organizer: 'Katrs "Programmēšanas stundas" organizātors saņems Dropbox vai Skype kredītu kā pateicību'
-  prizes_technology: Viena publiska skola katrā US štatā (un Vašingtonas DC) laimēs tehniku $10,000 vērtībā
-  prizes_tech_chats: '# klases laimēs video zvanu ar īpašiem viesiem'
-  prizes_robots: 100 klases laimēs programmējamo robotu komplektus
-  prizes_brilliant: Viena skola katrā rajonā vai teritorijā laimēs $2000 Dimanta projektam
-  prizes_actua: 15 skolas Kanādā iegūs 2 praktiskās nodarbības, kuras vadīs organizācijas Actua pārstāvji
-  prizes_details: Sīkāka informācija
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -163,25 +155,8 @@ lv:
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   how_to_nav_volunteers: For volunteers
-  prizes_nav_title: Balvas
-  prizes_nav_home: All prizes
-  prizes_nav_hardware: Hardware prize signup
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: Biežāk uzdotie jautājumi
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
   whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
@@ -196,6 +171,7 @@ lv:
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   front_join_us_heading: '"Programmēšanas stunda" katram skolēnam.'
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Datorzinātnes ir liels ieguldījums katram skolēnam. Palīdzi mums iepazīstināt ar to 100 miljonus skolēnu.
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: Pievienojies mums
@@ -243,12 +219,13 @@ lv:
   signup_send_posters_address_label: Skolas vai organizācijas adrese
   signup_whole_school_flag_label: Šis pasākums ir paredzēts visai skolai
   signup_your_event: Piesaki savu pasākumu
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Jūsu vārds
   signup_email_placeholder: jūs@piemērs.com
   signup_organization_name_placeholder: Piemēram, Linkolna vidusskola
-  signup_event_location_placeholder: "Pasta kods un valsts vai pilna adrese.\\r\n(Mēs to izmantosim, lai novietotu karodziņu mūsu kartē)"
+  signup_event_location_placeholder: "Pasta kods un valsts vai pilna adrese.\r\n(Mēs to izmantosim, lai novietotu karodziņu mūsu kartē)"
   signup_special_event_details_placeholder: Apraksti, kas šo pasākumu padara īpašu
   signup_send_posters_address_placeholder: Šī adrese netiks parādīta mūsu mapē
   signup_event_type_in_school: Skolā
@@ -273,28 +250,6 @@ lv:
   meta_tag_twitter_title: Programmēšanas stunda tuvojas
   meta_tag_twitter_description: Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem.
   twitter_default_text: 'Es esmu šī gada #"Programmēšanas stunda" dalībnieks, vai tu esi? @codeorg'
-  hardware_prizes_form_name_label: Jūsu vārds
-  hardware_prizes_form_name_placeholder: Jūsu vārds
-  hardware_prizes_form_email_label: Tavs E-pasts
-  hardware_prizes_form_email_placeholder: Tavs E-pasts
-  hardware_prizes_form_school_name_label: Skolas nosaukums
-  hardware_prizes_form_school_name_placeholder: Skolas nosaukums
-  hardware_prizes_form_school_address_label: Skolas adrese
-  hardware_prizes_form_school_address_placeholder: Skolas adrese
-  hardware_prizes_form_school_type_label: Skolas tips
-  hardware_prizes_form_school_type_option_elementary: Pamatskola
-  hardware_prizes_form_school_type_option_middle_school: Vidusskola
-  hardware_prizes_form_school_type_option_high_school: Augstskola
-  hardware_prizes_form_qualifying_school_label: Šī ir K-12 US valsts skola
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: Skolēnu skaits, kas piedalās
-  hardware_prizes_form_number_students_placeholder: Skolēnu skaits
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: 'Augšupielādē Jūsu "Programmēšanas stunda" loģistikas plānu'
-  hardware_prizes_form_plan_file_description: 'Iesniedz vienkāršu grafiku, kā tu plāno organizēt katru skolēnu, lai viņi būtu spējīgi veikt "Programmēšanas stunda" savās skolās. Apskati vienkāršu plānu: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Iesniegt
   hoc_faq_title: Biežāk uzdotie jautājumi
   hoc_faq_what_is_hoc_q: 'Kas ir "Programmēšanas stunda"?'
   hoc_faq_what_is_hoc_a: "Programmēšanas stunda ir vienu stundu garš ievads datorzinībās, kas paredzēts, lai kodēšana kļūtu pieejamāka visiem un pierādītu, ka pamatus var iemācīties ikviens. <a href='http://code.org/learn'>Skati pamācības!</a>"
@@ -402,14 +357,9 @@ lv:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Partneri
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Paldies
-  title_prizes: Balvas
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Resursi
   title_signup_thanks: 'Paldies, ka uzņēmies vadīt "Programmēšanas stundu"!'
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events
   events_nav_all: Visi pasākumi

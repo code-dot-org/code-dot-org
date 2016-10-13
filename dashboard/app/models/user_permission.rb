@@ -14,6 +14,8 @@
 #
 
 class UserPermission < ActiveRecord::Base
+  belongs_to :user
+
   VALID_PERMISSIONS = [
     # Grants access to creating professional development workshops.
     CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP =

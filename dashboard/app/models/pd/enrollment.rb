@@ -76,6 +76,21 @@ class Pd::Enrollment < ActiveRecord::Base
     self.workshop.section.students.exists?(user.id)
   end
 
+  def send_exit_survey
+    return unless self.user
+
+    # In case the workshop is reprocessed, do not send duplicate exit surveys.
+    if survey_sent_at
+      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{self.id}"
+      return
+    end
+
+    Pd::WorkshopMailer.exit_survey(self).deliver_now
+
+    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
+    self.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
+  end
+
   protected
 
   # Returns true if the SchoolInfo already exists and we should reuse that.

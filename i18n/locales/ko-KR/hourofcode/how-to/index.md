@@ -4,36 +4,38 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # 1시간짜리 Hour of Code 교육 방법
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial for your hour:
+## 1) 이 설명 동영상을 시청하십시오. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) 튜토리얼을 선택하세요:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
 
-**[학생 자기주도 Hour of Code 튜토리얼들:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
 
   * 선생님들이 수업을 준비하는데 필요한 시간이 매우 적습니다.
   * 학생 자신의 진도와 수준에 맞추어 자기주도 학습이 가능합니다.
 
-**[선생님 주도 Hour of Code 튜토리얼들:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
 
   * 일부 전문 교사들을 위해 필요한 수업 계획입니다.
   * 학년별로 *그리고* 주제별(수학, 국어, 등) 로 분류되어있습니다.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 3) Promote your Hour of Code
+## 3) 당신의 Hour of Code를 알려주세요.
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+[이 도구들을 이용하여](%= resolve_url('/promote') %) 여러분의 Hour of Code를 알리고 다른 친구들이 자신만의 이벤트를 진행할 수 있도록 응원해주세요.
 
 ## 4) 컴퓨터과학기술/기기 필요사항 계획하기 - 컴퓨터는 선택 사항입니다.
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 하지만 모든 아이들이 컴퓨터가 필요한 것은 **아닙니다**, 그리고 Hour of Code는 컴퓨터 없이도 가능합니다.
 
-**Plan Ahead!** Do the following before your event starts:
+**계획을 먼저 하세요!** 여러분의 이벤트를 시작하기 전에 다음 순서를 따르세요.
 
   * 학생의 컴퓨터에서 튜토리얼을 테스트합니다. 웹브라우저에서 소리와 영상이 적절하게 나오는지 확인하십시오.
   * 소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
@@ -42,7 +44,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring speaker or video
+## 5) 격려해줄 수 있는 발표자나 비디오로 Hour of Code를 마무리하세요
 
 **Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
 
@@ -53,11 +55,11 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * 빌 게이츠(Bill Gates), 마크 주커버그(Mark Zuckerberg)와 NBA 농구 스타인 크리스 보쉬(Chris Bosh)의 원래 Code.org 소개 동영상이 있습니다.([ 1분 ](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5분 ](https://www.youtube.com/watch?v=nKIu9yen5nc), [ 9분 ](https://www.youtube.com/watch?v=dU1xS07N-FA) 버전들이 있습니다.)
   * [2013 Hour of Code 동영상](https://www.youtube.com/watch?v=FC5FbmsH4fw) 또는 <% if @country == 'uk' %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [오바마 대통령은 모든 학생들이 컴퓨터과학(정보과학)을 배울 수 있도록 도와달라고 요청하고 있습니다.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * 더 많은 영감을 주는 동영상들은 [여기에서](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) 찾아보세요..
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+  * 남학생, 여학생들 모두 관심을 가질만한 예를 가지고 기술이 우리의 삶에 영향을 미치는 방식에 대해 설명하세요. (생명을 살리고, 사람들을 돕고, 사람들을 연결하는 등등에 관해 이야기하세요)
   * 수업에서, 일상생활 속에서 코드를 사용하는 것들을 나열하세요.
   * 여학생들이 컴퓨터과학에 흥미를 갖도록 하기 위한 팁이 [여기](%= resolve_url('https://code.org/girls') %) 있습니다..
 
@@ -138,3 +140,5 @@ Hour of Code 는 컴퓨터과학기술이 어떻게 동작하고, 응용프로�
 
   * 학생들에게 다음 온라인 과정들을 살펴보고 참여하도록 해주세요. [온라인 학습과정들](%= resolve_url('https://code.org/learn/beyond') %).
   * [참여해보세요](%= resolve_url('https://code.org/professional-development-workshops') %) 컴퓨터과학 전문가와 함께 여러가지들을 배울 수 있는 하루 짜리 워크숍들에 개인적으로 참여할 수 있습니다. (US educators only)
+
+<%= view :signup_button %>

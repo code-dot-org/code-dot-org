@@ -39,7 +39,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
+      subject: teacher_enrollment_subject(enrollment),
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -82,24 +82,16 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
+      subject: teacher_enrollment_subject(enrollment),
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def exit_survey(workshop, teacher, enrollment)
-    # In case the workshop is reprocessed, do not send duplicate exit surveys.
-    if enrollment.survey_sent_at
-      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{enrollment.id}"
-      return
-    end
-    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-    enrollment.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
-
-    @workshop = workshop
-    @teacher = teacher
+  def exit_survey(enrollment)
+    @workshop = enrollment.workshop
+    @teacher = enrollment.user
     @enrollment = enrollment
-    @is_first_workshop = Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
+    @is_first_workshop = Pd::Workshop.attended_by(@teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
 
     @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
     @dash_code = CDO.pd_workshop_exit_survey_dash_code
@@ -151,5 +143,13 @@ class Pd::WorkshopMailer < ActionMailer::Base
     return 'csf' if course == Pd::Workshop::COURSE_CSF
     return DETAILS_PARTIALS[course][subject] if DETAILS_PARTIALS[course] && DETAILS_PARTIALS[course][subject]
     nil
+  end
+
+  def teacher_enrollment_subject(enrollment)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
+      "Your upcoming #{enrollment.workshop.course_name} workshop"
+    else
+      'Your upcoming Code.org workshop and next steps'
+    end
   end
 end

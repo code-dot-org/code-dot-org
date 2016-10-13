@@ -6,24 +6,26 @@ nav: promote_nav
 
 ---
 
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
+<%= view :signup_button %>
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+<%
+    facebook = {:u=>"http://#{request.host}/us"}
+
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # Как да се включите
 
 ## Разпространете новината
 
-Кажете на приятелите си за **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Попитайте във Вашето училище, дали се предлага участие в Часът на кодирането
 
-[ Изпратете този имейл](<%= resolve_url('/promote/resources#sample-emails') %>) на директора и предизвикайте всяка класна стая в училището да се регистрира. <% if @country == "us" %> Едно училище от *всеки* щат на Сащ (и Вашингтон) ще спечели $10,000 за технологии. <% end %>
+[ Изпратете този имейл](<%= resolve_url('/promote/resources#sample-emails') %>) на директора и предизвикайте всяка класна стая в училището да се регистрира. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## 3. Предложете на Вашия работодател да се включи в инициативата
 
@@ -36,3 +38,5 @@ nav: promote_nav
 ## 5 Предложете на Общинската Администрация да подкрепи програмата " Hour of Code "
 
 [ Изпратете този имейл](<%= resolve_url('/promote/resources#sample-emails') %>) на вашия местен представител, градския съвет или училищното настоятелство и ги поканете да посетят Вашето училище за Часът на кода. Те може да помогнат за изграждане на подкрепа за компютърни науки във Вашия район и след Hour of Code.
+
+<%= view :signup_button %>
