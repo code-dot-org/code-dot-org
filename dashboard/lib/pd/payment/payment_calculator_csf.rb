@@ -41,11 +41,11 @@ module Pd::Payment
     end
 
     # Calculates payment amounts.
-    # @param summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
+    # @param workshop_summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    def calculate_payment_amounts(summary)
+    def calculate_payment_amounts(workshop_summary)
       {
-        food: summary.num_qualified_teachers * PAY_PER_QUALIFIED_TEACHER
+        food: workshop_summary.num_qualified_teachers * PAY_PER_QUALIFIED_TEACHER
       }
     end
   end
