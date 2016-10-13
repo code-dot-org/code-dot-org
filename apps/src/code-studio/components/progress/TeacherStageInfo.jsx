@@ -45,7 +45,7 @@ const TeacherStageInfo = Radium(React.createClass({
     stage: stageShape,
 
     // redux provided
-    sectionId: React.PropTypes.string.isRequired,
+    sectionId: React.PropTypes.string,
     hiddenStagesInitialized: React.PropTypes.bool.isRequired,
     hiddenStageMap: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
@@ -69,30 +69,49 @@ const TeacherStageInfo = Radium(React.createClass({
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
     const lockable = stage.lockable && !hasNoSections;
-    if (!lockable && !lessonPlanUrl) {
+
+    const children = [];
+    if (lessonPlanUrl) {
+      children.push(
+        <button
+          key="lessonPlan"
+          style={styles.lessonPlanButton}
+          onClick={this.clickLessonPlan}
+        >
+          <FontAwesome icon="file-text"/>
+          <span style={styles.lessonPlanText}>
+            {dashboard.i18n.t('view_lesson_plan')}
+          </span>
+        </button>
+      );
+    }
+
+    if (sectionId) {
+      if (lockable) {
+        children.push(<StageLock key="stageLock" stage={stage}/>);
+      }
+
+      if (experiments.isEnabled('hiddenStages') && hiddenStagesInitialized &&
+          !hasNoSections) {
+        children.push(
+          <div key="hiddenStageToggle">
+            <HiddenStageToggle
+              hidden={!!isHidden}
+              onChange={this.onClickHiddenToggle}
+            />
+          </div>
+        );
+      }
+    }
+
+    if (children.length === 0) {
       return null;
     }
 
     return (
       <div style={styles.main}>
         <div style={styles.inner}>
-          {lessonPlanUrl &&
-            <button style={styles.lessonPlanButton} onClick={this.clickLessonPlan}>
-              <FontAwesome icon="file-text"/>
-              <span style={styles.lessonPlanText}>
-                {dashboard.i18n.t('view_lesson_plan')}
-              </span>
-            </button>
-          }
-          {lockable && <StageLock stage={stage}/>}
-          {experiments.isEnabled('hiddenStages') && hiddenStagesInitialized && !hasNoSections &&
-            <div>
-              <HiddenStageToggle
-                hidden={!!isHidden}
-                onChange={this.onClickHiddenToggle}
-              />
-            </div>
-          }
+          {children}
         </div>
       </div>
     );

@@ -975,3 +975,9 @@ Then /^I unlock the stage for students$/ do
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
+
+Then /^I select the first section$/ do
+  @browser.execute_script(
+    "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
+  )
+end
