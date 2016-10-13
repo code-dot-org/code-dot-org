@@ -276,6 +276,9 @@ level 'CSD U3 platform sample2'
 level 'CSD U3 platform sample3'
 level 'CSD U3 platform challenge'
 
+stage 'Project: Build a Game'
+
+
 
 
 stage 'Sprite Movement Methods'

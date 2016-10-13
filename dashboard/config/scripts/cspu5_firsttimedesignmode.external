@@ -1,0 +1,18 @@
+name 'CSPU5_FirstTimeDesignMode'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Design Mode is now a thing
+Design mode lets you drag and drop User Interface elements into the app.
+
+[Screen caps necessary]
+
+These are the things a user will interact with.
+
+In this lesson we'll learn how to add elements and then write code to respond when users interact with those elements.
+
+### vocab
+* User Interface UI
+
+MARKDOWN
