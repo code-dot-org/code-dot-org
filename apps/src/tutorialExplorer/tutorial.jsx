@@ -4,7 +4,7 @@
 import React from 'react';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
-import getTagString from './util';
+import { getTutorialComboString } from './util';
 
 const styles = {
   tutorialName: {
@@ -65,7 +65,7 @@ const Tutorial = React.createClass({
                 {this.props.item.name}
               </div>
               <div style={styles.tutorialSub}>
-                {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
+                {getTutorialComboString(this.props.item)}
               </div>
             </div>
           </div>
