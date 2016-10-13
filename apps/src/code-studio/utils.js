@@ -1,22 +1,50 @@
+import queryString from 'query-string';
+
 module.exports = {
   /**
    * Gets the URL querystring params.
    * @param name {string=} Optionally pull a specific param.
    * @return {object|string} Hash of params, or param string if `name` is specified.
    */
-  queryParams: function (name) {
-    var pairs = location.search.substr(1).split('&');
-    var params = {};
-    pairs.forEach(function (pair) {
-      var split = pair.split('=');
-      if (split.length === 2) {
-        params[split[0]] = split[1];
-      }
+  // TODO - validate this doesnt break existing usages
+  // queryParams: function (name) {
+  //   var pairs = location.search.substr(1).split('&');
+  //   var params = {};
+  //   pairs.forEach(function (pair) {
+  //     var split = pair.split('=');
+  //     if (split.length === 2) {
+  //       params[split[0]] = split[1];
+  //     }
+  //   });
+  //
+  //   if (name) {
+  //     return params[name];
+  //   }
+  //   return params;
+  // },
+  queryParams(name) {
+    const parsed = queryString.parse(window.location.search);
+    if (name) {
+      return parsed[name];
+    }
+    return parsed;
+  },
+
+  /**
+   * Updates a query parameter in the URL via pushState (i.e. doesn't force a
+   * reload).
+   */
+  updateQueryParam(param, value) {
+    const newString = queryString.stringify({
+      ...queryString.parse(location.search),
+      [param]: value
     });
 
-    if (name) {
-      return params[name];
+    let newLocation = window.location.pathname;
+    // Don't append ? unless we actually have a value
+    if (newString) {
+      newLocation += '?' + newString;
     }
-    return params;
+    window.history.pushState(null, document.title, newLocation);
   }
 };

@@ -13,7 +13,7 @@
         -# This is rendered into by react
         #teacher-panel-viewas
         - if @user
-          .students
+          .students.hide-as-student
             %h4= t('teacher.panel.student')
             = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
         - if @user_level
@@ -73,8 +73,6 @@
                     = t('teacher.panel.example_with_number', solution_number: index + 1)
                   - else
                     = t('teacher.panel.example')
-          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
-            %button.btn.btn-info= t('teacher.panel.try_it_yourself')
         - if @section
           .section
             %h4
@@ -90,7 +88,7 @@
               = link_to t('teacher.panel.update_lock_settings'), script_path(@script_level.script)
       - if @section
         .scrollable-wrapper
-          %table.section-students
+          %table.section-students.hide-as-student
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}

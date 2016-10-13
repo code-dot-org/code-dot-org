@@ -12,6 +12,7 @@ import ViewAsToggle from './components/progress/ViewAsToggle';
 import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
+import { queryParams, updateQueryParam } from './utils';
 
 function resizeScrollable() {
   var newHeight = $('.teacher-panel').innerHeight() -
@@ -80,6 +81,9 @@ function queryLockStatus(store, scriptId) {
       if (query.section_id) {
         store.dispatch(selectSection(query.section_id));
       }
+      if (query.viewAs) {
+        store.dispatch(setViewType(query.viewAs));
+      }
       resolve();
     });
   });
@@ -139,11 +143,23 @@ function renderIntoLessonTeacherPanel() {
  * Changes the url to navigate to the new section
  * @param {string} newSectionId - section id of the section we want to change to
  */
-function changeSection() {
+function sectionChanged() {
   // Depend on the fact that SectionSelector already changed the URL for us
   // via pushState. We actually want to do a reload though, so that we hit the
   // server with the new section_id
   window.location.reload();
+}
+
+// TODO - tie this to state instead of component so that it happens even on page load
+function viewAsChanged(viewAs) {
+  if (viewAs === ViewType.Student && queryParams('user_id')) {
+    updateQueryParam('user_id', undefined);
+    window.location.reload();
+  }
+  // Ideally all the things we would want to hide would be redux backed, and
+  // would just update automatically. However, we're not in such a world. Instead,
+  // explicitly hide or show elements with this class name based on new toggle state.
+  $(".hide-as-student").toggle(viewAs === ViewType.Teacher);
 }
 
 function renderViewAsToggle(element) {
@@ -152,7 +168,7 @@ function renderViewAsToggle(element) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ViewAsToggle/>
+      <ViewAsToggle onChange={viewAsChanged}/>
     </Provider>,
     element
   );
@@ -161,7 +177,7 @@ function renderViewAsToggle(element) {
 function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <SectionSelector onChange={changeSection}/>
+      <SectionSelector onChange={sectionChanged}/>
     </Provider>,
     element
   );

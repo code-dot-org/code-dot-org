@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import { ViewType, setViewType } from '../../stageLockRedux';
+import { updateQueryParam } from '../../utils';
 
 const styles = {
   main: {
@@ -21,10 +22,22 @@ const ViewAsToggle = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     setViewType: React.PropTypes.func.isRequired,
+    onChange: React.PropTypes.func
+  },
+
+  onChange(viewAs) {
+    const { setViewType, onChange } = this.props;
+
+    updateQueryParam('viewAs', viewAs);
+
+    setViewType(viewAs);
+    if (onChange) {
+      onChange(viewAs);
+    }
   },
 
   render() {
-    const { viewAs, setViewType } = this.props;
+    const { viewAs } = this.props;
 
     return (
       /*{ className used by some code that looks at this element to determine sizing}*/
@@ -35,7 +48,7 @@ const ViewAsToggle = React.createClass({
         <div style={styles.toggleGroup}>
           <ToggleGroup
             selected={viewAs}
-            onChange={setViewType}
+            onChange={this.onChange}
           >
             <button value={ViewType.Student}>{commonMsg.student()}</button>
             <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
