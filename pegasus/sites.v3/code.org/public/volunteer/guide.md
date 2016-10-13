@@ -54,7 +54,7 @@ Get the students excited! Pick out a video to show to help focus the class and g
 * Connect with the teacher to discuss what you plan to speak about during your session
 * If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand
 
-### **Day of - Hour of Code Event:**
+### **Day-of Hour of Code Event:**
 * Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
 * Spend 5 minutes talking about yourself, who inspired you to pursue a career in tech and/or computer science.
 	* Introduce yourself: who you are and what you do
