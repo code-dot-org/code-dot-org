@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ### Dưới đây là mẫu nghị quyết trợ giúp Tuần Khoa Học Máy Tính và các nhà lập pháp liên bang và địa phương có thể sử dụng những mục tiêu của nó.
 
   
@@ -52,3 +54,5 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

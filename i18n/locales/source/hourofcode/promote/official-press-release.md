@@ -4,6 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
+<%= view :signup_button %>
 
 # Sample press release for elected officials
 
@@ -39,3 +40,4 @@ For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] o
 <br />
 <br />
  
+<%= view :signup_button %>

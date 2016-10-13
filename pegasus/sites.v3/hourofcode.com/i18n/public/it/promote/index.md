@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -17,7 +19,7 @@ nav: promote_nav
 
 ## 1. Diffondi la notizia
 
-Parla ai tuoi amici di **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -36,3 +38,5 @@ Parla ai tuoi amici di **#HourOfCode**!
 ## 5. Proponi ad un amministratore locale di sostenere L'Ora del Codice
 
 [Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#sample-emails') %>) agli Amministratori Locali, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
+
+<%= view :signup_button %>

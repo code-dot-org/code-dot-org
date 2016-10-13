@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -17,13 +19,13 @@ nav: promote_nav
 
 ## 1. Corre la voz
 
-Dile a tus amigos acerca de **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Pídele a toda tu escuela que ofrezca una Hora del Código
 
-[Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a su director y desafíe a cada clase de su escuela para que se inscriba. <% if @country == 'us' %> Una escuela afortunada en *cada* estado de Estados Unidos (y D.C. Washington) va a ganar $10.000 en tecnología. <% end %>
+[Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a su director y desafíe a cada clase de su escuela para que se inscriba. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## 3. Pide a tu empresa que se involucre
 
@@ -36,3 +38,5 @@ Dile a tus amigos acerca de **#HourOfCode**!
 ## 5. Pídele a un funcionario local electo que apoye la Hora del Código
 
 [Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a sus representantes locales, Concejo Municipal o junta escolar e invítelos a visitar su escuela para la Hora de Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
+
+<%= view :signup_button %>

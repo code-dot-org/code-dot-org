@@ -118,6 +118,7 @@ class HttpCache
             path: %w(
               /v3/assets/*
               /v3/animations/*
+              /v3/files/*
             ),
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
