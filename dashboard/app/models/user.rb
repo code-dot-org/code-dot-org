@@ -73,6 +73,7 @@
 
 require 'digest/md5'
 require 'cdo/user_helpers'
+require 'cdo/code_timer'
 
 class User < ActiveRecord::Base
   include SerializedProperties
