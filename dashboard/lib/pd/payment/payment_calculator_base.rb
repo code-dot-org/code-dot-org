@@ -90,9 +90,9 @@ module Pd::Payment
     end
 
     # Calculates payment amounts. Override in derived classes.
-    # @param summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
+    # @param workshop_summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    def calculate_payment_amounts(summary)
+    def calculate_payment_amounts(workshop_summary)
       {}
     end
 
@@ -130,9 +130,9 @@ module Pd::Payment
 
     # Constructs workshop payment from a workshop summary
     # @param workshop_summary [WorkshopSummary]
-    # @return [WorkshopPayment]
+    # @return [WorkshopPayment, nil] Payment details, or nil if the workshop is not qualified for payment.
     def construct_workshop_payment(workshop_summary)
-      return unless qualified? workshop_summary.total_teacher_attendance_days
+      return nil unless qualified? workshop_summary.total_teacher_attendance_days
 
       WorkshopPayment.new.tap do |workshop_payment|
         workshop_payment.summary = workshop_summary
@@ -146,7 +146,7 @@ module Pd::Payment
     # @param workshop_summary [WorkshopSummary]
     # @param raw_teacher_attendance [Hash{Integer => TeacherAttendanceTotal}]
     #   Map of teacher id to raw attendance totals for that teacher.
-    # @return [Array<TeacherSummary>]
+    # @return [Array<TeacherSummary>] summary for each teacher.
     def construct_teacher_summaries(workshop_summary, raw_teacher_attendance)
       enrollments_by_teacher_id = {}
       enrolled_teachers_by_id = {}
@@ -188,7 +188,7 @@ module Pd::Payment
     end
 
     # Calculates adjusted teacher attendance, after applying min / max attendance and qualification rules.
-    # Applies the adjusted attendance directly to the supplied #TeacherSummary
+    # Mutates #TeacherSummary by setting the days and hours fields with the adjusted attendance numbers.
     # @param teacher_summary [TeacherSummary]
     # @param min_attendance_days [Integer] minimum days raw attendance to count at all.
     # @param num_days [Integer] max number of days.
