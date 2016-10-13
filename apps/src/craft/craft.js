@@ -780,6 +780,15 @@ Craft.executeUserCode = function () {
             callback(event);
           });
     },
+    onGlobalEventTriggered: function (eventType, callback, blockID) {
+      appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
+          function (event) {
+            if (event.eventType !== eventType) {
+              return;
+            }
+            callback(event);
+          });
+    },
     drop: function (blockType, targetEntity, blockID) {
       appCodeOrgAPI.drop(studioApp.highlight.bind(studioApp, blockID), blockType, targetEntity);
     },

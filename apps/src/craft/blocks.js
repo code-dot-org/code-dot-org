@@ -1,5 +1,14 @@
 const i18n = require('./locale');
 
+const eventTypes = Object.freeze({
+  WhenTouched: 0,
+  WhenUsed: 1,
+  WhenSpawned: 2,
+  WhenAttacked: 3,
+  WhenNight: 4,
+  WhenDay: 5
+});
+
 const numbersToDisplayText = {
   '0.4': 'very short',
   '1.0': 'short',
@@ -404,15 +413,6 @@ exports.install = function (blockly, blockInstallOptions) {
     '}, \'block_id_' + this.id + '\');\n';
   };
 
-  const eventTypes = Object.freeze({
-    WhenTouched: 0,
-    WhenUsed: 1,
-    WhenSpawned: 2,
-    WhenAttacked: 3,
-    WhenNight: 4,
-    WhenDay: 5
-  });
-
   const statementNameToEvent = {
     WHEN_USED: eventTypes.WhenUsed,
     WHEN_TOUCHED: eventTypes.WhenTouched,
@@ -479,6 +479,34 @@ exports.install = function (blockly, blockInstallOptions) {
   createLimitedEventBlockForEntity('cow', 'cowSpawnedTouchedClicked', 'cow', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
   createLimitedEventBlockForEntity('zombie', 'zombieSpawnedTouchedClickedDay', 'zombie', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
   createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClickedDay', 'creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
+
+
+  function makeGlobalEventBlock(functionName, text, eventType) {
+    blockly.Blocks[`craft_${functionName}`] = {
+      helpUrl: '',
+      init: function () {
+        var dropdownOptions = keysToDropdownOptions(allOnTouchedBlocks);
+        var dropdown = new blockly.FieldDropdown(dropdownOptions);
+        dropdown.setValue(dropdownOptions[0][1]);
+        this.setHSV(140, 1.00, 0.74);
+        this.appendDummyInput()
+            .appendTitle(text);
+        this.appendStatementInput('DO');
+        this.setPreviousStatement(false);
+        this.setNextStatement(false);
+      }
+    };
+
+    blockly.Generator.get('JavaScript')[`craft_${functionName}`] = function () {
+      return `
+        onGlobalEventTriggered(${eventType}, function(event) {
+          ${blockly.Generator.get('JavaScript').statementToCode(this, 'DO')}
+        }, 'block_id_${this.id}');`;
+    };
+  }
+
+  makeGlobalEventBlock('whenDay', 'when day', eventTypes.WhenDay);
+  makeGlobalEventBlock('whenNight', 'when night', eventTypes.WhenNight);
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',

@@ -282,6 +282,11 @@ class Craft < Blockly
   <block type="craft_repeatRandom"></block>
   <block type="craft_repeatTimes"></block>
 </category>
+<category name="Global Actions">
+  <block type='craft_playSound'></block>
+  <block type="craft_spawnEntity"></block>
+  <block type="craft_spawnEntityRandom"></block>
+</category>
 <category name="Entity Actions">
   <block type="craft_attack"></block>
   <block type="craft_destroyEntity"></block>
@@ -294,9 +299,6 @@ class Craft < Blockly
   <block type="craft_moveRandom"></block>
   <block type="craft_moveTo"></block>
   <block type="craft_moveToward"></block>
-  <block type='craft_playSound'></block>
-  <block type="craft_spawnEntity"></block>
-  <block type="craft_spawnEntityRandom"></block>
   <block type="craft_entityTurn"></block>
   <block type="craft_entityTurnLR"></block>
   <block type="craft_wait"></block>
@@ -320,9 +322,10 @@ class Craft < Blockly
   <block type="craft_cow"></block>
   <block type="craft_chicken"></block>
 </category>
-<category name="Events">
+<category name="Global Events">
   <block type="when_run"></block>
-  <block type="craft_onPlayerMoved"></block>
+  <block type="craft_whenDay"></block>
+  <block type="craft_whenNight"></block>
 </category>
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>
