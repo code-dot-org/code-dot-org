@@ -2985,26 +2985,32 @@ function CircleCollider(pInst, _center, _radius, _offset) {
     //square dist
     var r = this.radius + other.radius;
     r *= r;
-    var sqDist = pow(this.center.x - other.center.x, 2) + pow(this.center.y - other.center.y, 2);
+    var thisCenterX = this.center.x + this.offset.x;
+    var thisCenterY = this.center.y + this.offset.y;
+    var otherCenterX = other.center.x + other.offset.x;
+    var otherCenterY = other.center.y + other.offset.y;
+    var sqDist = pow(thisCenterX - otherCenterX, 2) + pow(thisCenterY - otherCenterY, 2);
     return r > sqDist;
   };
 
   //should be called only for circle vs circle
   this.collide = function(other)
   {
-
-    if(this.overlap(other))
-    {
-      var a = pInst.atan2(this.center.y-other.center.y, this.center.x-other.center.x);
+    if(this.overlap(other)) {
+      var thisCenterX = this.center.x + this.offset.x;
+      var thisCenterY = this.center.y + this.offset.y;
+      var otherCenterX = other.center.x + other.offset.x;
+      var otherCenterY = other.center.y + other.offset.y;
+      var a = pInst.atan2(thisCenterY-otherCenterY, thisCenterX-otherCenterX);
       var radii = this.radius+other.radius;
-      var intersection = abs(radii - dist(this.center.x, this.center.y, other.center.x, other.center.y));
+      var intersection = abs(radii - dist(thisCenterX, thisCenterY, otherCenterX, otherCenterY));
 
       var displacement = createVector(pInst.cos(a)*intersection, pInst.sin(a)*intersection);
 
       return displacement;
-    }
-    else
+    } else {
       return createVector(0, 0);
+    }
   };
 
   this.size = function()
