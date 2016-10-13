@@ -8,11 +8,18 @@ nav: plp_playbook_nav
 # Administrator and Counselor Workshops
 
 ## Table of Contents
+- [Process Document] (#process)
 - [Implementation Plan](#plan)
 - [Securing a Venue](#venue)
 - [Supplies](#supplies)
 - [Catering](#catering)
 
+________________
+<a id="plan"></a>
+<br/>
+
+## Process Document
+[This document](https://docs.google.com/document/d/1rO7h2K5Bv-ozD2AEopEdTFnPeEWykciiSsa-UKgabXY/edit#) contains detailed instructions on how to run a successful Administrator and Counselor professional development workshop. Including: how to get started, how to use Code Studio to set up your workshop, what to do the day of the workshop and payment information.
 ________________
 <a id="plan"></a>
 <br/>
