@@ -21,19 +21,15 @@ const styles = {
 const ViewAsToggle = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    setViewType: React.PropTypes.func.isRequired,
-    onChange: React.PropTypes.func
+    setViewType: React.PropTypes.func.isRequired
   },
 
   onChange(viewAs) {
-    const { setViewType, onChange } = this.props;
+    const { setViewType } = this.props;
 
     updateQueryParam('viewAs', viewAs);
 
     setViewType(viewAs);
-    if (onChange) {
-      onChange(viewAs);
-    }
   },
 
   render() {
