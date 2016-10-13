@@ -180,9 +180,6 @@ const entityActionBlocks = {
   'flashEntity': 'flash entity',
   'moveForward': 'move forward',
   'moveRandom': 'move random',
-  'turnLeft': 'turn left',
-  'turnRight': 'turn right',
-  'turnRandom': 'turn random',
   'explodeEntity': 'explode'
 };
 
@@ -248,6 +245,67 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setNextStatement(true);
     }
   };
+
+  blockly.Blocks.craft_turn.DIRECTIONS =
+      [[i18n.blockTurnLeft() + ' \u21BA', 'left'],
+       [i18n.blockTurnRight() + ' \u21BB', 'right']];
+
+  blockly.Generator.get('JavaScript').craft_entityTurn = function () {
+    // Generate JavaScript for turning left or right.
+    var dir = this.getTitleValue('DIR');
+    var methodCalls = {
+      left: 'turnLeft',
+      right: 'turnRight',
+      random: 'turnRandom'
+    };
+    return `${methodCalls[dir]}(event.targetIdentifier, 'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.craft_entityTurn = {
+    // Block for turning left or right.
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS), 'DIR');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS =
+      [[i18n.blockTurnLeft() + ' \u21BA', 'left'],
+        [i18n.blockTurnRight() + ' \u21BB', 'right'],
+        ['turn random', 'random']
+      ];
+
+  blockly.Generator.get('JavaScript').craft_entityTurnLR = function () {
+    // Generate JavaScript for turning left or right.
+    var dir = this.getTitleValue('DIR');
+    var methodCalls = {
+      left: 'turnLeft',
+      right: 'turnRight',
+      random: 'turnRandom'
+    };
+    return `${methodCalls[dir]}(event.targetIdentifier, 'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.craft_entityTurnLR = {
+    // Block for turning left or right.
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(blockly.Blocks.craft_entityTurnLR.ENTITY_DIRECTIONS), 'DIR');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Blocks.craft_entityTurnLR.ENTITY_DIRECTIONS =
+    [[i18n.blockTurnLeft() + ' \u21BA', 'left'],
+      [i18n.blockTurnRight() + ' \u21BB', 'right']
+  ];
 
   blockly.Blocks.craft_turn.DIRECTIONS =
       [[i18n.blockTurnLeft() + ' \u21BA', 'left'],

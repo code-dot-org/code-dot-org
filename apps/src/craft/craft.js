@@ -879,7 +879,7 @@ Craft.executeUserCode = function () {
     }
   };
 
-  entityActionBlocks.forEach((methodName) => {
+  entityActionBlocks.concat(['turnLeft', 'turnRight', 'turnRandom']).forEach((methodName) => {
     evalApiMethods[methodName] = function (targetEntity, blockID) {
       appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity);
     };
