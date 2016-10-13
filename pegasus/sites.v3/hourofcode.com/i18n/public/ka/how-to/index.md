@@ -6,36 +6,38 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # როგორ ვასწავლოთ კოდის ერთი საათის ფარგლებში
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial for your hour:
+## 1) უყურეთ ამ ინსტრუქციის ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) აირჩიეთ ტუტორიალი თქვენი საათისთვის:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
 
-**[კოდის ერთი საათის ტუტორიალები, რომელთაც წარუძღვება მოსწავლე:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
   * მასწავლებლისგან მომზადების მინიმალურ დროს მოითხოვს
   * აძლევს მოსწავლეს საშუალებას საკუთარი ტემპისა და უნარების მიხედვით იმეცადინოს
 
-**[კოდის ერთი საათის ტუტორიალები, რომელთაც წარუძღვება მასწავლებელი:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
   * გაკვეთილის გეგმები, რომლებიც მასწავლებლისგან გარკვეულ მომზადებას მოითხოვენ
   * განაწილებულია კლასებისა *და* თემების (მაგ. მათემატიკა, ინგლისური და ა.შ.) მიხედვით
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Promote your Hour of Code
+## 3) გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას [ამ ხელსაწყოებით](<%= resolve_url('/promote') %>) და წაახალისეთ სხვები, რომ საკუთარ ღონისძიებებს უმასპინძლონ.
 
 ## 4) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+კოდის ერთი საათის საუკეთესო გამოცდილება მოიცავს ინტერნეტთან დაკავშირებულ კომპიუტერებს. მაგრამ **არ** გჭირდებათ კომპიუტერი თითოეული ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
 
-**Plan Ahead!** Do the following before your event starts:
+**დაგეგმეთ წინასწარ!** ღონისძიების დაწყებამდე შეასრულეთ ჩამოთვლილი:
 
   * გატესტეთ ტუტორიალები მოსწავლეების კომპიუტერებსა ან დევაისებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში.
   * არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
@@ -44,7 +46,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring speaker or video
+## 5) კოდის ერთი საათი დაიწყეთ შთამაგონებელი მომხსენებლით ან ვიდეოთი
 
 **Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
 
@@ -55,11 +57,11 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [კოდის ერთი საათის პრომოვიდეო](https://www.youtube.com/watch?v=FC5FbmsH4fw), ან <% if @country == 'uk' %> [2015 წლის კოდის ერთი საათის ვიდეო ](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 წლის კოდის ერთი საათის ვიდეო](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * მეტი შთამაგონებელი ვიდეო იხილეთ [აქ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+  * ახსენით, რა გავლენას ახდენს ტექნოლოგია ჩვენს ცხოვრებაზე. გამოიყენეთ მაგალითები, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება (ესაუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, მათ ერთმანეთთან დაკავშირებაზე და ა. შ.).
   * კლასთან ერთად ჩამოწერეთ ყოველდღიური გამოყენების საგნები, რომლებიც იყენებენ პროგრამირებას.
   * გაიგეთ, როგორ დააინტერესოთ გოგონები პროგრამირებითა და ინფორმატიკით [აქ](<%= resolve_url('https://code.org/girls') %>).
 
@@ -140,3 +142,5 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
   * ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [დაესწარით ](<%= resolve_url('https://code.org/professional-development-workshops') %>) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
+
+<%= view :signup_button %>

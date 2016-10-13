@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -17,13 +19,13 @@ nav: promote_nav
 
 ## 1. Διαδώστε το
 
-Πείτε στους φίλους σας για το **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## Ζητήστε από όλο το σχολείο να προσφέρει μία Ώρα του Κώδικα
 
-[Στείλετε αυτό το μήνυμα](<%= resolve_url('/promote/resources#sample-emails') %>) στον Διευθυντή και προκαλέστε κάθε τάξη να εγγραφεί. <% if @country == 'us' %> Ένα τυχερό σχολείο σε *κάθε* πολιτεία των ΗΠΑ (και της Ουάσιγκτον) θα κερδίσει δώρα αξίας $10.000 σε τεχνολογία. <% end %>
+[Στείλετε αυτό το μήνυμα](<%= resolve_url('/promote/resources#sample-emails') %>) στον Διευθυντή και προκαλέστε κάθε τάξη να εγγραφεί. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## Ζήτησε από τον εργοδότη σου να συμμετάσχει
 
@@ -36,3 +38,5 @@ nav: promote_nav
 ## 5. Ζήτα από έναν τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
 
 [Στείλετε αυτό το μήνυμα](<%= resolve_url('/promote/resources#sample-emails') %>) σε τοπικούς αντιπροσώπους, Δημοτικό Συμβούλιο, ή Σχολική Εφορεία για να τους καλέσει να επισκεφτούν το σχολείο σας, για την ώρα του κώδικα. Βοηθά η δημιουργία υποστήριξης στην επιστήμη των υπολογιστών στην περιοχή σας πέρα της μίας ώρας.
+
+<%= view :signup_button %>

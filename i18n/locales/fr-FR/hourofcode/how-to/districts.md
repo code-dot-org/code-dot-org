@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your entire school district
 
 ## Faites participer chaque école, permettez à tout étudiant d'apprendre !
@@ -24,3 +26,5 @@ L'Heure de Code n'est que la première étape pour apprendre comment fonctionne 
 
   * Encouragez vos élèves à continuer d'[apprendre en ligne](%= resolve_url('https://code.org/learn/beyond') %).
   * [Participez](%= resolve_url('https://code.org/professional-development-workshops') %) à un atelier d'un jour en personne pour être formé par un animateur en informatique expérimenté. (Enseignants américains seulement)
+
+<%= view :signup_button %>

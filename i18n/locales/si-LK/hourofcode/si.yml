@@ -2,24 +2,24 @@ si:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: English
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
-  coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 5
-  campaign_date_start_long: December 5
-  campaign_date_short: Dec. 5-11
-  campaign_date_full: December 5-11
+  front_title: 'ඉතිහාසයේ දැවැන්තම අධ්‍යාපනික වැඩසටහණ සමඟ සම්බඳවන්න, %{campaign_date}, 2015'
+  coming_soon: ලගදීම බලාපොරොත්තුවන්න
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+  campaign_date_start_short: දෙසැ. 5
+  campaign_date_start_long: දෙසැම්බර් 5
+  campaign_date_short: දෙසැ. 5-11
+  campaign_date_full: දෙසැම්බර් 5-11
   campaign_date_year: "2016"
-  campaign_date_full_year: December 5-11, 2016
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
-  front_watch_video: Watch the new video
-  front_watch_regular_video: Watch the video
-  front_volunteers: Technical volunteers wanted
-  front_start_learning: Start learning
-  header_menu_resources: Resources
-  header_menu_faq: FAQ
-  header_menu_prizes: Prizes
-  header_menu_how_to: How-To
+  campaign_date_full_year: දෙසැම්බර් 5-11, 2016
+  front_header_banner: ඉතිහාසයේ දැවැන්තම අධ්‍යාපනික වැඩසටහණ සමඟ සම්බඳවන්න, Dec 7-13, 2015
+  front_intro_default: Hour of Code යනු රටවල් 180+ ක පමණ සුවහසක් සිසුන් වෙත පරිගණක අධ්‍යාපනය ලඟාකිරීමේ ගෝලීය ව්‍යාපාරයකි. ලොව ඕනෑම කෙනෙකුට, ඕනෑම තැනක, ඕනෑම ආයතනකය Hour of Code වැඩසටහනක් සංවිධානය කල හැකිය. පැය එකේ පාඨමාලා භාෂා 45කින් දැන් සමන්විතයි. කිසිම පලපුරුද්දක් අවශ්‍ය නොමැත. වයස අවුරුදු 4 සිට 104 දක්වා ඔනෑම අයෙක්ට
+  front_watch_video: අලුත්ම වීඩියෝව නරඹන්න
+  front_watch_regular_video: වීඩියෝව නරඹන්න
+  front_volunteers: තාක්ෂණික ස්වෙච්චා දායකයින් අවශ්‍යයි
+  front_start_learning: ඉගෙනගන්න පටන්ගන්න
+  header_menu_resources: සම්පත්
+  header_menu_faq: නිති අසන පැණ
+  header_menu_how_to: කොහොමද
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
@@ -144,175 +144,132 @@ si:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Prizes for every organizer
-  prizes_every_organizer: Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you, while supplies last.
-  prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: 100 classrooms will win a set of programmable robots
-  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
-  prizes_details: Details
-  nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
-  how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
-  how_to_nav_public_officials: For public officials
-  how_to_nav_districts: For districts
-  how_to_nav_assemblies: For school assemblies
-  how_to_nav_organizations: For organizations
-  how_to_nav_companies: For companies
-  how_to_nav_afterschool_educators: For after-school educators
-  how_to_nav_volunteers: For volunteers
-  prizes_nav_title: Prizes
-  prizes_nav_home: All prizes
-  prizes_nav_hardware: Hardware prize signup
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: Frequently asked questions
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
-  whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
-  whats_next_try_button: Try tutorials
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
-  anybody_can_learn: Anybody can learn.
-  get_started: Start
-  beyond_an_hour: Beyond an Hour of Code
-  register_now: Register Now
-  share_on_facebook: Share on Facebook
-  share_on_twitter: Share on Twitter
-  front_join_us_heading: An Hour of Code for every student.
-  front_join_us_description: Computer science is a foundation for every student. Help us introduce it to 100 million.
-  front_join_us_description_short: Computer science is a foundation for every student.
-  front_join_us_button: Join us
-  front_what_is_hoc: What is the Hour of Code?
-  front_join_us_header: Anyone can learn the basics, and have fun doing it!
-  front_join_us_volunteer_header: Volunteers for the Hour of Code
-  front_join_us_teacher: Are you a teacher?
-  front_join_us_inspire: Inspire students with
-  front_join_us_inspire_link: an Hour of Code in the classroom.
-  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
-  front_join_us_teacher_volunteer: Search for local volunteers who can visit your classroom or inspire your students remotely
-  front_join_us_parent: Are you a parent?
-  front_join_us_ask_link: Ask your local school
-  front_join_us_ask: to host an Hour of Code.
-  front_join_us_parent_link: Ask your local school to host an Hour of Code
-  front_join_us_computer_science: Just love computer science?
-  front_join_us_cs_volunteer: Passionate about computer science education?
-  front_join_us_spread: Spread the word.
-  front_join_us_spread_word: Spread the word in your community
-  front_join_us_spread_word_work: Spread the word in your community or workplace
-  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
-  front_join_us_organize: Or organize an Hour of Code event yourself.
-  front_join_us_how_to_run: "Here's how to run an Hour of Code"
-  front_join_us_help_promote: Help promote the Hour of Code
-  front_join_us_students: Students
-  front_join_us_teachers: Teachers
-  front_join_us_everyone: Everyone
-  front_join_us_try: Try it
-  front_join_us_sign_up: Sign up
-  front_join_us_host: Host it
-  front_join_us_support: Support it
-  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: '# served'
-  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
-  signup_name_label: Your name
-  signup_email_label: Your email
-  signup_organization_name_label: School or organization name
-  signup_event_type_label: Event type
-  signup_event_entire_school_label: My entire school is participating
-  signup_event_location_label: Event location (optional)
-  signup_special_event_flag_label: Highlight my special event
-  signup_special_event_details_label: Special event details
+  nav_back_to_resources: සම්පත්වෙත නැවතත්
+  how_to_nav_educators: අධ්‍යාපකයින් හට
+  how_to_nav_after_school: පාසල් අවන් අය හට
+  how_to_nav_parents: දෙමාපියන් හට
+  how_to_nav_public_officials: පොදු නිලධාරින් හට
+  how_to_nav_districts: දිස්ත්‍රික්ක සඳහා
+  how_to_nav_assemblies: පාසල් රැස්වීම් සඳහා
+  how_to_nav_organizations: ආයතන සඳහා
+  how_to_nav_companies: සමාඟම් හට
+  how_to_nav_afterschool_educators: පාසලෙන් පසු අධ්‍යාපකයන් හට
+  how_to_nav_volunteers: ස්වෙච්ඡා සේවකයන් සඳහා
+  whats_next_header: ඊලඟට කුමක්ද?
+  whats_next_description: |
+    ඔබට ඔබගේ වැඩසටහණ සඳහා අවශ්‍යවන අමුද්‍රව්‍ය හා උපකාරක අපවිසින් ඔබට එවනු ලැබේ.අලුත් පාඩම් ලඟදීම බලාපොරොත්තුවන්න.
+    <a href='http://code.org/learn'>දැනට තිබෙන පාඩම් උත්සාහ කරන්න </a>
+  whats_next_how_to: "<a href='/how-to'>Hour of Code වැඩසටහනක් සංවිධානය කරන්නේ කෙසේද</a>"
+  whats_next_promote: "<a href='/promote'>Hour of Code සඳහා අනුග්‍රහය දැක්වීම</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>සඳහා අනුග්‍රහය දක්වන්නේ කෙසේද</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>Hour of Code සඳහා අනුග්‍රහය දක්වන්නේ කෙසේද</a>"
+  whats_next_try: "<a href='http://code.org/learn'>පාඩම් උත්සාහකරන්න</a>"
+  whats_next_try_button: පාඩම් උත්සාහකරන්න
+  n_have_learned_an_hoc: '<h1></h1>Hour of Code උත්සාහකරන්න</h2><h3></h3>'
+  anybody_can_learn: ඕනෑම අයකුට ඉගෙනගන්න පුලුවන්.
+  get_started: පටන්ගන්න
+  beyond_an_hour: Hour of Code එකෙන් ඔබ්බට
+  register_now: දැන්ම ලියාපදිංචි වන්න
+  share_on_facebook: ෆේස්බුක් එකේ ශෙයාකරන්න
+  share_on_twitter: ට්විටර් එකේ ශෙයාකරන්න
+  front_join_us_heading: සෑම සිසුවෙකුටම Hour of Code.
+  front_join_us_anybody_can_learn: Anybody can learn
+  front_join_us_description: පරිගණක විද්‍යාව සෑම සිසුවකුගේම අධ්‍යාපනික පදනමයි. එය මිලියන 100 දක්වා රැගෙනයන්න අපට උපකාරවන්න.
+  front_join_us_description_short: පරිගණක විද්‍යාව සෑම සිසුවකුගේම අධ්‍යාපනික පදනමයි.
+  front_join_us_button: අප සමඟ එකතුවන්න
+  front_what_is_hoc: මොකක්ද මේ Hour of Code?
+  front_join_us_header: ඕනෑම අයකුට මූලික දැනුම ඉගෙනගත හැකි අතර, විනෝදයක් ලැබිය හැකිය!
+  front_join_us_volunteer_header: Hour of Code ස්වෙච්චා සෙවකයින්
+  front_join_us_teacher: ඔබ ගුරුවරයෙක්ද?
+  front_join_us_inspire: සමඟ සිසුන් දිරිමත් කරන්න
+  front_join_us_inspire_link: පන්තිකාමරය තුල Hour of Code එක.
+  front_join_us_teacher_link: පන්තිකාමරය තුලදී Hour of Code තුලින් සිසුන් දිරිමත් කරන්න
+  front_join_us_teacher_volunteer: ඔබේ පන්තිකාමරයට පැමිණ ඔබේ සිසුන් දිරිමත් කරන්න හෝ අන්තර්ජාලය හරහා සිසුන් දිරිමත් කරන්න ස්වෙච්චා සේවකයකු සොයන්න
+  front_join_us_parent: ඔබ දෙමාපියන්ද?
+  front_join_us_ask_link: ඔබ ප්‍රාදේශීය පාසලක්ද
+  front_join_us_ask: hour of Code වැඩසටහණක් පවත්වන්නට.
+  front_join_us_parent_link: ඔබේ පාසලෙන් Hour of Code වැඩසටහනක් පැවැත්වීමට ඉල්ලුම් කරන්න
+  front_join_us_computer_science: ඔබ පරිගණක විද්‍යාවට කැමතිද?
+  front_join_us_cs_volunteer: පරිගණකවිද්‍යා අධ්‍යාපනයට කැමතිද?
+  front_join_us_spread: හැමෝටම කියන්න.
+  front_join_us_spread_word: සමාජයේ සිටින හැමෝටම කියන්න
+  front_join_us_spread_word_work: ඔබේ සමාජයේ හෝ ඔබේ වැඩ ස්ථානයේ හැමෝටම කියන්න
+  front_join_us_sign_up_volunteer: පන්තිකාමරයක් හරහා හෝ විඩියෝ චැට් එකක් හරහා ස්වෙච්චාසේවකයෙකු සමඟ ලියාපදිංචිවන්න
+  front_join_us_organize: හෝ ඔබ ඔබේම Hour of Code වැඩසටහණක් සංවිධානය කරන්න.
+  front_join_us_how_to_run: වැඩසටහනක් දියත් කරන්නේ මෙහෙමයි
+  front_join_us_help_promote: Hour of Code පිළිබඳ ප්‍රචාරණයට උදවුවන්න
+  front_join_us_students: සිසුන්
+  front_join_us_teachers: ගුරුවරුන්
+  front_join_us_everyone: සැමටම
+  front_join_us_try: එය උත්සාහ කරන්න
+  front_join_us_sign_up: ලියාපදිංචි වන්න
+  front_join_us_host: 'එය උත්සාහ කරන්න '
+  front_join_us_support: එයට සහයෝගය දක්වන්න
+  front_join_us_more_info: "වැඩිදුර තොරතුරු සඳහා, පිවිසෙන්න <a href='https://code.org'>code.org</a>."
+  front_join_us_code_info: වැඩිදුර තොරතුරු සඳහා, පිවිසෙන්න code.org
+  front_join_us_n_students_served: '# සේවයකරනලදී'
+  signup_header: '%{campaign_date} යන දින කීපය තුලදී Hour of Code වැඩසටහණක් සංවිධානය කරන්න, සහ මෙතනින් ලියාපදිංචිවන්න.'
+  signup_name_label: ඔබේ නම
+  signup_email_label: ඔබේ ඊමේල්
+  signup_organization_name_label: පාසලේ හෝ සංවිධානයේ නම
+  signup_event_type_label: වැඩසටහනේ වර්ගය
+  signup_event_entire_school_label: මගේ සම්පූර්ණ පාසලම සභාගීවනවා
+  signup_event_location_label: වැඩසටහන පවත්වන ස්ථානය
+  signup_special_event_flag_label: මගේ විෂේශ වැඩසටහණ උලුප්පා දක්වන්න
+  signup_special_event_details_label: විෂේශ වැඩසටහනේ විස්තර
   signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
-  signup_send_posters_address_label: Address of school or organization
-  signup_whole_school_flag_label: This event is for a whole school
-  signup_your_event: Sign up your event
-  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_send_posters_address_label: පාසලේ හෝ සංවිධානයේ ලිපිනය
+  signup_whole_school_flag_label: වැඩසටහන මුලුපාසලටමයි
+  signup_your_event: ඔබේ වැඩසටහණ ලියාපදිංචි කරන්න
+  signup_host_an_hour: Host an hour
+  signup_match_volunteer: මාගේ සිසුන් දිරිමත් කරන්න මෙරට සිටින මෘදුකාංග ඉන්ජිනේරුවකු සොයන්න මට උදවු කරන්න.
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-  signup_name_placeholder: Your Name
+  signup_name_placeholder: ඔබේ නම
   signup_email_placeholder: you@example.com
-  signup_organization_name_placeholder: For example, Lincoln High School
-  signup_event_location_placeholder: Postal code and country OR full address.
-  signup_special_event_details_placeholder: Describe what makes this a special event
-  signup_send_posters_address_placeholder: This address will not be shared on our map
-  signup_event_type_in_school: In a school
-  signup_event_type_out_of_school: Outside of school
-  signup_submit_label: Sign up
-  signup_submit_error_message: An error occurred. Please check to make sure all required fields have been filled out properly.
-  signup_thank_you_header: Thank you for signing-up to host an Hour of Code event.
-  signup_thank_you_message: We sent you a confirmation email with information to help you get started.
-  map_title: Hour of Code map
-  map_header: '# Hour of Code events around the world'
-  see_all_events: See all events
+  signup_organization_name_placeholder: උදාහරණයක් ලෙස, මධ්‍ය මහා විද්‍යාලය පොළොන්නරුව
+  signup_event_location_placeholder: තැපැල් අංකය සහ රට හෝ සම්පූර්ණ ලිපිනය.
+  signup_special_event_details_placeholder: මෙය විශේෂ වැඩසටහණක් වීමට හෙතුව පහදන්න
+  signup_send_posters_address_placeholder: මෙම ලිපිනය අපගේ සිතියමේ ශෙයා නොවේ
+  signup_event_type_in_school: පාසල තුල
+  signup_event_type_out_of_school: පාසලෙන් පිටත
+  signup_submit_label: ලියාපදිංචි වන්න
+  signup_submit_error_message: සියලු දත්ත සම්පූර්ණකර ඇත්දැයි නැවත පරීක්ෂාකර බලන්න.
+  signup_thank_you_header: Hour of Code වැඩසටහනක් සංවිධානය කිරීම සඳහා ලියාපදිංචී වීම පිලිබඳ ඔබට ස්තුතියි.
+  signup_thank_you_message: ආරම්භකිරීමසඳහා අවශ්‍ය උපකාරක සමඟ තහවුරු කිරිමේ පණිවිඩයක් ඔබට අප විසින් එවන ලදී.
+  map_title: Hour of Code සිතියම
+  map_header: 'ලොවපුරා # Hour of Code වැඩසටහන්'
+  see_all_events: සෑම වැඩසටහණක්ම
   map_header_company: '# by company organizers'
-  map_header_country: '# in %{country}'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  map_legend_title: Legend
-  map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: Special Event
-  meta_tag_og_title: Every child deserves opportunity
+  map_header_country: '# හි %{country}'
+  map_search_placeholder: Hour of Code වැඩසටහන් සොයන්න
+  map_search_search: සොයන්න
+  map_search_reset: යලි පිහිටුවන්න
+  map_legend_title: පුරාවෘත්තය
+  map_legend_hoc_events: Hour of Code වැඩසටහණ
+  map_legend_cs_tech_jam: විෂේශ වැඩසටහණ
+  meta_tag_og_title: සැම දරුවකුම මේ අවස්ථාවට සුදුසුයි
   meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
-  meta_tag_twitter_title: Every child deserves opportunity
+  meta_tag_twitter_title: සැම දරුවකුම මේ අවස්ථාවට සුදුසුයි
   meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
-  twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
-  hardware_prizes_form_name_label: Your name
-  hardware_prizes_form_name_placeholder: Your name
-  hardware_prizes_form_email_label: Your email
-  hardware_prizes_form_email_placeholder: Your email
-  hardware_prizes_form_school_name_label: School name
-  hardware_prizes_form_school_name_placeholder: School name
-  hardware_prizes_form_school_address_label: School address
-  hardware_prizes_form_school_address_placeholder: School address
-  hardware_prizes_form_school_type_label: School type
-  hardware_prizes_form_school_type_option_elementary: Elementary
-  hardware_prizes_form_school_type_option_middle_school: Middle school
-  hardware_prizes_form_school_type_option_high_school: High school
-  hardware_prizes_form_qualifying_school_label: This is a K-12 US public school
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: Number of students participating
-  hardware_prizes_form_number_students_placeholder: Number of students
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: Upload your Hour of Code logistics plan
-  hardware_prizes_form_plan_file_description: 'Submit a simple schedule of how you plan to organize every student to do the Hour of Code at your school. See a sample plan: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Submit
-  hoc_faq_title: FAQs
-  hoc_faq_what_is_hoc_q: What is the Hour of Code?
+  twitter_default_text: 'මම මේ වර්ෂයේ #Hour of Code වැසටහනට සභාගී වෙමි ඔබ? @code. rg'
+  hoc_faq_title: නිති අසන පැණ
+  hoc_faq_what_is_hoc_q: මොකක්ද මේ Hour of Code?
   hoc_faq_what_is_hoc_a: |-
     The Hour of Code started as a one-hour introduction to computer science, designed to demystify "code", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide.
-  hoc_faq_last_year: Try the tutorials
-  hoc_faq_when_is_hoc_q: When is the Hour of Code?
+  hoc_faq_last_year: පාඩම් උත්සාහකරන්න
+  hoc_faq_when_is_hoc_q: කවද්ද Hour of Code?
   hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
-  hoc_faq_why_cs_q: Why computer science?
+  hoc_faq_why_cs_q: ඇයි මේ පරිගණක විද්‍යාව?
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats <a href='%{stats_url}'>here</a>."
-  hoc_faq_how_participate_q: How do I participate in the Hour of Code?
+  hoc_faq_how_participate_q: කොහොමද මම Hour of Code සඳහා සභාගී වන්නේ?
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
-  hoc_faq_behind_hoc_q: Who is behind the Hour of Code?
+  hoc_faq_behind_hoc_q: සාර්ථකත්වය පසුපස සිටින්නේ කවුරුන්ද?
   hoc_faq_behind_hoc_a: "The Hour of Code is organized by <a href='https://code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='%{codeorg_url}/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
-  hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
+  hoc_faq_host_q: මම පරිගණක ක්‍රමලේඛය (Coding) පිළිබඳ කිසිදු දෙයක් දන්නේනෑ. නමුත් තවමත් මට Hour of Code වැඩසටහනක් පැවැත්විය හැකිද?
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_devices_q: What devices should I use for my students?
   hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
-  hoc_faq_need_computers_q: Do I need computers for every participant?
+  hoc_faq_need_computers_q: සෑම සභාගිවන්නෙකුටම පරිගණකයක් තිබිය යුතුද?
   hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at all. </ul>"
   hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
@@ -324,13 +281,13 @@ si:
   hoc_faq_high_school_a: "Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
   hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
-  hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_count_hoc_q: Hour of Code ඔබ ගණන් කරනේ කෙසේද?
   hoc_faq_map_q: "Why don't I see my dot on the map?"
   hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   hoc_faq_one_hour_q: How much can one learn in an hour?
   hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
-  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_q: තවමත් ඔබට තවත් ගැටලු තිබේද?
   hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
@@ -371,7 +328,7 @@ si:
   resources_stickers: Stickers
   resources_how_to_guides: How-to guides
   resources_promote: Promote
-  resources_nav_tutorials: Try the tutorials
+  resources_nav_tutorials: පාඩම් උත්සාහකරන්න
   resources_nav_promote: Spread the word
   resources_nav_spread_word: How to get involved
   resources_banner_promote_text: Promote
@@ -401,14 +358,9 @@ si:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Partners
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Thank you
-  title_prizes: Prizes
-  title_hardware_prize_form: Sign up for Hardware Prizes
-  title_resources: Resources
+  title_resources: සම්පත්
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
@@ -425,7 +377,7 @@ si:
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
+  footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: Partners
   footer_menu_contact: Contact us

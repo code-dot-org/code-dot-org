@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Como organizar unha Hora do Código
 
 ## Prepara o teu evento
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10h30 - 10h40 | Os alumnos farán uma demonstración da Hora do Código para a escola. Inversión de papeis: eles deverán ensinarlle ao diretor, ao representante político ou a outros alumnos. |
 | 10h40 - 11h00 | Os alumnos farán a demostración de unha actividade offline para mostrar como a informática pode ser ensinada sen o uso de computadores.                                     |
 | 11h00 - 11h05 | O profesor que axudou a traer o evento para a escola fará os comentarios finais.                                                                                            |
+
+<%= view :signup_button %>

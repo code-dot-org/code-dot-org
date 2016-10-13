@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-Usted está haciendo posible que los estudiantes de todo el mundo aprendan una Hora del Código que puede *cambiar el resto de sus vidas*, durante <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. ¿Qué puedes hacer ahora?
+Usted está haciendo posible que los estudiantes de todo el mundo aprendan una Hora del Código que puede *cambiar el resto de sus vidas*, durante <%= campaign_date('full') %>. Estaremos en contacto sobre nuevos tutoriales y otras noticias interesantes. ¿Qué puedes hacer ahora?
 
 ## 1. Corre la voz
 

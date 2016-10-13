@@ -305,5 +305,6 @@
   "when": "quan",
   "whenRun": "quan s'executa",
   "workspaceHeaderShort": "Zona de treball: ",
-  "yes": "Sí"
+  "yes": "Sí",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }

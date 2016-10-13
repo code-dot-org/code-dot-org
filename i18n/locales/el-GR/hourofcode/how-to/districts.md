@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your entire school district
 
 ## Καλέστε όλα τα σχολεία να λάβουν μέρους, όλους τους μαθητές να μάθουν!
@@ -24,3 +26,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Ενθαρρύνετε τους μαθητές να συνεχίσουν να [μαθαίνουν online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Συμμετέχετε](%= resolve_url('https://code.org/professional-development-workshops') %) σε ημερήσια workshop διαζώσης ώστε να λάβετε οδηγίες από κάποιο έμπειρο εισηγήτη της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές Η.Π.Α.)
+
+<%= view :signup_button %>

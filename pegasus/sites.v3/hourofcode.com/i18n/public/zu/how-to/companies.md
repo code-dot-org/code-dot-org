@@ -6,33 +6,35 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your company
+<%= view :signup_button %>
 
-## Inspire students and volunteer for the Hour of Code
+# Indlela yoku letha Ihora loKufingqwa eKampanini yakho
+
+## Gqugquzela abafundi kanye nabazinikelayo ngeHora loKufingqwa
 
 **Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
-  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+  * [Coka](<%= resolve_url('https://code.org/volunteer') %>) ukuzinikela.
+  * Ngemilayelo ebanzi ngokuxhumanisa abasebenzi bakho namagumbi okufundela, xoxisana ne [ziluleko zabasebenzisana ngokwehwebo](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
 
-## Additional ways companies can support the Hour of Code:
+## Izindlela ezingezilwe izinkampani ezingaxasa ngayo iHora loKufingqwa:
 
-  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
-  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+  * Sebenzisa [amathulusi okwenza indali](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) ukuze udale isikhathi sokuxhumana kanye nokwabelana ngokuqukethwe ukukhangisa.
+  * Cela Umphathi Omkhulu wakho athumelele i-imeyili kububanzi bonke benkampani egcizelela ukubaluleka wekhompyutha sayensi iphinde ikhuthaze abasebenzi ukuthi basasaze nezwi. [Bheka le imeyili lena](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Hlela Ihora Lokuzithokozisa leHora loKufingqwa kanye nosebenzanabo ukuzama i [izifundiso](<%= resolve_url('https://code.org/learn') %>).
+  * Hlelela ikilasi labafundi bendawo umcimbi weHora loKufingqwa okanye uthole abalingani abanga funi inzuzo ukuba benze iHora loKufingqwa kukantolo yamahovizi akho. Bona indlela yokwenza lapha ezansi.
 
-## How to host an Hour of Code event
+## Umcimbi weHora loKufingqwa uholwa kanjani
 
-## 1) Promote your Hour of Code
+## 1) Khuthaza iHora loKufingqwa lwakho
 
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+  * Khuthaza wakho [iHora loKufingqwa](<%= resolve_url('/promote') %>) umcimbi ubese ukhuthaza obanye ukuba bahlele.
+  * Gqugquzela **onjiniyela besofthiwe** kunkampani yakho ukuba bavakashele ikilasi ledolobha ukuba basize ukuhola iHora loKufingqwa kanye nokufaka ugqozi kubafundi ukuba bafunde ikhompyutha sayensi. Banga [bhalisa](<%= resolve_url('https://code.org/volunteer/engineer') %>) ukuba baxhunyiswane nekilasi.
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2) Bukela levidiyo yendlela yokuqondisa <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) Khetha isifundiso:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Zizamele wona!](<%= resolve_url("https://code.org/learn") %>)
 
 **All Hour of Code tutorials:**
 
@@ -41,11 +43,11 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Hlela izidingo zakho zobuchwepheshe - amakhompyutha ayakhetheka
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhumana ngakhompyutha aneinternet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+** Lungiselela Phambilini!** Yenza lokhu ngaphambi kokucala komcimbi wakho:
 
   * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
@@ -139,3 +141,5 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## What comes after the Hour of Code?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

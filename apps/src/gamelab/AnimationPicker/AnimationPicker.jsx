@@ -108,6 +108,7 @@ export default connect(state => ({
   },
   onUploadStart(data) {
     dispatch(beginUpload(data.files[0].name));
+    data.submit();
   },
   onUploadDone(result) {
     dispatch(handleUploadComplete(result));

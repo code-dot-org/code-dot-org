@@ -6,13 +6,15 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your company
+<%= view :signup_button %>
 
-## Inspire students and volunteer for the Hour of Code
+# Как приблизить Час кода в Вашей компании
+
+## Вдохновляйте учеников и волонтеров
 
 **Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
-  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
+  * [Регистрация](<%= resolve_url('https://code.org/volunteer') %>)для добровольцев.
   * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
 
 ## Additional ways companies can support the Hour of Code:
@@ -32,7 +34,7 @@ nav: how_to_nav
 ## 2) Посмотрите видео с информацией <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Выберите урок:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Попробуйте!](<%= resolve_url("https://code.org/learn") %>)
 
 **Все уроки Часа Кода:**
 
@@ -43,9 +45,9 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 ## 4) Выберите, какую технику вы будете использовать. Наличие компьютеров не обязательно
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Наилучший вариант "Часа кода" - с компьютерами, подключенными к интернету. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**Планируйте Заранее!**Выполните следующие действия, прежде чем событие начнётся:
 
   * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
@@ -71,20 +73,20 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * If you are a tech company, demo fun, innovative products your company is working on.
   * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
   * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * Узнайте, как заинтересовать девочке в компьютерной науке [здесь](<%= resolve_url('https://code.org/girls') %>).
+  * Смотрите советы для девушек, интересующихся информатикой[здесь](<%= resolve_url('https://code.org/girls') %>).
 
 ## 6) Программируйте!
 
 **Предложите ученикам заняться программированием**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+  * Напишите ссылку на Учебное пособие на доске. Найти ссылку на[информация для учебника](<%= resolve_url('https://code.org/learn') %>)под количество участников.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * “Я не знаю. Давай разберемся вместе”
+  * “Технология не всегда работает так, как мы хотим”
+  * “Обучение на программе -это как изучение нового языка, Вы не будете свободно пользоваться прямо сейчас.”
 
 **Что делать, если кто-то справляется раньше всех?**
 
@@ -112,7 +114,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * Делитесь фотографиями и видео в социальных сетях. Используйте #HourOfCode и @codeorg чтобы вы могли подчеркнуть Ваш успех тоже!
 
 [col-33]
 
@@ -138,4 +140,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## Что происходит после "Часа программирования"?
 
-"Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>
