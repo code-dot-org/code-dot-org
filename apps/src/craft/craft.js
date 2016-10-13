@@ -786,6 +786,9 @@ Craft.executeUserCode = function () {
             if (event.eventType !== eventType) {
               return;
             }
+            if (event.targetIdentifier) {
+              return;
+            }
             callback(event);
           });
     },
