@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # 라틴 아메리카 파트너
@@ -141,3 +143,5 @@ title: <%= hoc_s(:title_partners) %>
 # 이외 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

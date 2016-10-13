@@ -4,21 +4,21 @@ ka:
   language: ქართული
   front_title: შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას, 2015 წლის 7-13 დეკემბრის განმავლობაში
   coming_soon: მალე
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 დეკ.
   campaign_date_start_long: 7 დეკემბერი
   campaign_date_short: დეკ. 7-13
   campaign_date_full: დეკემბრის 7-13
   campaign_date_year: "2016"
-  campaign_date_full_year: December 5-11, 2016
+  campaign_date_full_year: 5-11 დეკემბერი, 2016
   front_header_banner: შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას, 2015 წლის 7-13 დეკემბრის განმავლობაში
   front_intro_default: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან. კოდის ერთი საათის ორგანიზება შეუძლია ნებისმიერ ადამიანს, ნებისმიერ ადგილას. ერთსაათიანი ტუტორიალები 40 ენაზეა მისაწვდომი. გამოცდილება საჭირო არ არის. <strong>ასაკი: 4 წლიდან 104 წლამდე.</strong>'
   front_watch_video: უყურეთ ახალ ვიდეოს
   front_watch_regular_video: უყურეთ ვიდეოს
   front_volunteers: გვესაჭიროება ტექ–მოხალისეები
-  front_start_learning: Start learning
+  front_start_learning: სწავლის დაწყება
   header_menu_resources: რესურსები
   header_menu_faq: ხშირად დასმული კითხვები
-  header_menu_prizes: პრიზები
   header_menu_how_to: როგორ უნდა
   header_menu_promote: გაუწიეთ პოპულარიზაცია
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ ka:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: პრიზები ყოველი ორგანიზატორისთვის
-  prizes_every_organizer: ყოველი პროგრამირების საათის ორგანიზატორი მიიღებს Dropbox ან Skype კრედიტს მადლობის ნიშნად, მარაგის გამოლევამდე.
-  prizes_technology: აშშ-ის ყოველი შტატის თითო სკოლა მოიგებს 10, 000 დოლარის ღირებულების ტექნიკას
-  prizes_tech_chats: '# კლასი მოიგებს ჩატს გამორჩეულ სტუმრებთან'
-  prizes_robots: 100 კლასი მოიგებს დასაპროგრამებელი რობოტების ნაკრებს
-  prizes_brilliant: თითო სკოლა ყოველ ოლქში მიიღებს 2, 000 დოლარს საუკეთესო პროექტისთვის
-  prizes_actua: კანადაში 15 სკოლა მიიღებს საჩუქრად ორ-ორ სემინარს Actua-ს წევრის ხელმძღვანელობით
-  prizes_details: დეტალები
   nav_back_to_resources: რესურსებში დაბრუნება
   how_to_nav_educators: მასწავლებლებისთვის
   how_to_nav_after_school: სკოლის შემდგომი აქტივობისთვის
@@ -163,23 +155,6 @@ ka:
   how_to_nav_companies: კომპანიებს
   how_to_nav_afterschool_educators: სკოლის შემდგომი პერიოდის პედაგოგებისთვის
   how_to_nav_volunteers: მოხალისეებს
-  prizes_nav_title: პრიზები
-  prizes_nav_home: ყველა პრიზი
-  prizes_nav_hardware: რეგისტრაცია ტექნიკის პრიზებისთვის
-  prizes_nav_terms: ვადები და პირობები
-  prizes_nav_faq: ხშირად დასმული კითხვები
-  prizes_nav_dc: იდუმალი მოგზაურობა ვაშინგტონის ოლქში.
-  prizes_nav_technology: 10,000 დოლარის ღირებულების ტექნიკა თქვენი სკოლისთვის
-  prizes_nav_video_chat: ვიდეოჩატი ტექნოლოგიების ტიტანებთან
-  prizes_nav_skype_dropbox: Skype კრედიტები ან Dropbox სივრცე ყოველი ორგანიზატორისთვის
-  prizes_nav_brilliant: 2,000 დოლარი საუკეთესო პროექტებს
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: პრიზები ყოველი პედაგოგისთვის
-  prizes_10k: აშშ-ის ყოველი შტატისა და ვაშინგტონის ოლქის თითო სკოლა მოიგებს 10, 000 დოლარის ღირებულების ტექნიკას
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: 'მარაგის გამოლევამდე, კოდის ერთი საათის <i>ყოველი</i>ორგანიზატორი მადლობის ნიშნად მიიღებს 10$-იან სასაჩუქრე ბარათს Amazon, iTunes, ან Windows Store–ისგან.'
-  prizes_more: More exciting prizes
   whats_next_header: და შემდეგ?
   whats_next_description: "თქვენი ღონისძიებისთვის ჩვენ გამოგიგზავნით დამხმარე მასალებსა და სასარგებლო რჩევებს. 2015 წლის ახალი ტუტორიალები მალე დაიდება - და მათი გავლა შესაძლებელი იქნება ნებისმიერ ბრაუზერში, სმარტფონში - ან ყოველგვარი მოწყობილობის გარეშე! <a href='http://code.org/learn'>ნახეთ მიმდინარე ტუტორიალები</a>"
   whats_next_how_to: "<a href='/how-to'>როგორ ჩავატაროთ კოდის ერთი საათი</a>"
@@ -196,6 +171,7 @@ ka:
   share_on_facebook: გააზირეთ Facebook-ზე
   share_on_twitter: გააზიარეთ Twitter-ზე
   front_join_us_heading: კოდის ერთი საათი ყველა მოსწავლისთვის.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: კომპიუტერული მეცნიერებები ყოველი მოსწავლისთვის აუცილებელი ცოდნაა. დაგვეხმარეთ, რომ იგი 100 მილიონს გავუზიაროთ.
   front_join_us_description_short: კომპიუტერული მეცნიერებები ყოველი მოსწავლის საბაზისო ცოდნას წარმოადგენს.
   front_join_us_button: შემოგვიერთდით
@@ -243,12 +219,13 @@ ka:
   signup_send_posters_address_label: სკოლის ან ორგანიზაციის მისამართი
   signup_whole_school_flag_label: ეს ღონისძიება მთელი სკოლისთვისაა
   signup_your_event: დაარეგისტრირეთ თქვენი ღონისძიება
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: მაპოვნინეთ ადგილობრივი პროგრამისტი, მოსწავლეებისთვის მაგალითის საჩვენებლად
   signup_multiple_event_warning: თუ რამდნიმე ღონისძიებას ატარებთ, ყოველისთვის უნიკალური სახელი ან ელ. ფოსტა შეარჩიეთ. ჩვენ ვითვლით ღონისძიებებს სახელისა და ელ. ფოსტის უნიკალური კომბინაციებით.
   signup_name_placeholder: თქვენი სახელი
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: მაგალითად, ლინკოლნის სახელობის სკოლა
-  signup_event_location_placeholder: "საფოსტო ინდექსი და ქვეყანა ან სრული მისამართი. \\r\n(ამას ვიყენებთ ადგილის ჩვენს რუკაზე აღსანიშნად)"
+  signup_event_location_placeholder: "საფოსტო ინდექსი და ქვეყანა ან სრული მისამართი. \r\n(ამას ვიყენებთ ადგილის ჩვენს რუკაზე აღსანიშნად)"
   signup_special_event_details_placeholder: აღწერეთ, რით იქნება გამორჩეული ეს ღონისძიება
   signup_send_posters_address_placeholder: ამ მისამართს ჩვენს რუკაზე არ გავაზიარებთ
   signup_event_type_in_school: სკოლაში
@@ -257,7 +234,7 @@ ka:
   signup_submit_error_message: შეცდომაა. დარწმუნდით, რომ ყველა ველი სწორადაა შევსებული.
   signup_thank_you_header: მადლობა, რომ კოდის ერთი საათის ორგანიზატორად დარეგისტრირდით.
   signup_thank_you_message: ჩვენ გამოგიგზავნეთ დასტურის წერილი, სადაც მითითებულია დასაწყებად საჭირო ინფორმაცია.
-  map_title: Hour of Code map
+  map_title: 'კოდის ერთი საათი - რუკა'
   map_header: '#კოდის ერთი საათის ღონისძიებები მთელ მსოფლიოში'
   see_all_events: ყველა ღონისძიება
   map_header_company: '# by company organizers'
@@ -273,28 +250,6 @@ ka:
   meta_tag_twitter_title: კოდის ერთი საათი დაიწყო
   meta_tag_twitter_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   twitter_default_text: 'მე ვიღებ მონაწილეობას წლევანდელ #HourOfCode–ში, და შენ? @codeorg'
-  hardware_prizes_form_name_label: თქვენი სახელი
-  hardware_prizes_form_name_placeholder: თქვენი სახელი
-  hardware_prizes_form_email_label: თქვენი ელ.ფოსტა
-  hardware_prizes_form_email_placeholder: თქვენი ელ.ფოსტა
-  hardware_prizes_form_school_name_label: სკოლის სახელი
-  hardware_prizes_form_school_name_placeholder: სკოლის სახელი
-  hardware_prizes_form_school_address_label: სკოლის მისამართი
-  hardware_prizes_form_school_address_placeholder: სკოლის მისამართი
-  hardware_prizes_form_school_type_label: სკოლის ტიპი
-  hardware_prizes_form_school_type_option_elementary: დაწყებითი
-  hardware_prizes_form_school_type_option_middle_school: საშუალო სკოლა
-  hardware_prizes_form_school_type_option_high_school: საშუალო
-  hardware_prizes_form_qualifying_school_label: ეს არის K-12 საჯარო სკოლა
-  hardware_prizes_form_title_I_school_label: ეს სკოლა დარეგისტიტრდა Title I დაფინანსებისთვის
-  hardware_prizes_form_title_I_school_help_text: Title I სკოლები ესაა სკოლები, სადაც არის მაღალი რიცხვი ან პროცენტი ბავშვებისა დაბალშემოსავლიანი ოჯახებიდან, რომლებიც იღებენ ფერედალურ დახმარებას ყველა ბავშვის აკადემიური სტანდარტის მიხედვით გასანათლებლად.
-  hardware_prizes_form_number_students_label: მონაწილე მოსწავლეების რაოდენობა
-  hardware_prizes_form_number_students_placeholder: მოსწავლეების რაოდენობა
-  hardware_prizes_form_technology_plan_label: როგორ გამოიყენებთ ახალ ტექნოლოგიებს თქვენს სკოლაში კომპიუტერული მეცნიერების სწავლების გასაძლიერებლად?
-  hardware_prizes_form_technology_plan_placeholder: ახალი ტექნოლოგიების გამოყენების გეგმა
-  hardware_prizes_form_plan_file_label: ატვირთეთ კოდის ერთი საათის ლოგისტიკის თქვენი გეგმა
-  hardware_prizes_form_plan_file_description: 'გამოგვიგზავნეთ მარტივი განრიგი, რომლის მიხედვთაც გეგმავთ ჩაატაროთ კოდის ერთი საათი თქვენს სკოლაში ყველა მოსწავლის ჩართვით. ნახეთ მაგალითი: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: გაგზავნა
   hoc_faq_title: ხშირად დასმული კითხვები
   hoc_faq_what_is_hoc_q: რა რის კოდის ერთი საათი?
   hoc_faq_what_is_hoc_a: "კოდის ერთი საათი არის ერთსაათიანი შესავალი კურსი კომპიუტერულ მეცნიერებებში, რომლის მიზანიცაა აჩვენოს, რომ პროგრამირების საწყისების სწავლა შეუძლია ყველას. <a href='http://code.org/learn'>გაეცანით ტუტორიალებს</a>."
@@ -335,8 +290,8 @@ ka:
   hoc_faq_keep_learning_a: "კოდის ერთი საათის ჩატარება შეუძლია ნებისმიერ ადამიანს ნებისმიერ დროს. ტუტორიალები ჩვენს საიტზე მთელი წლის განმავლობაში არის წარდგენილი. გადადით <a href='/promote'>ჩვენი რესურსების</a> გვერდზე და გაიგეთ, როგორ უნდა ჩაატაროთ ღონისძიება."
   hoc_faq_certificates_q: სად ამოვბეჭდო სერტიფიკატები ჩემი სტუდენტებისთვის?
   hoc_faq_certificates_a: "გადადით ჩვენს <a href='%{codeorg_url}/certificates'>სერტიფიკატების გვერდზე</a>, სადაც წინასწარ შეძლებთ ამობეჭდოთ სერტიფიკატები მთელი თქვენი კლასისთვის. ასევე შეგიძლიათ ამობეჭდოთ <a href='%{codeorg_url}/certificates?course=mc'>სპეციალური სერტიფიკატები</a> იმ მოსწვლეებისთვის, რომლებიც მაინკრაფტის ტუტორიალს გაივლიან."
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
+  hoc_faq_logo_q: არის რამე შეზღუდვა იმის შესახებ, როგორ შემიძლია გამოვიყენო კოდის ერთი საათის ლოგო ან სახელი?
+  hoc_faq_logo_a: "Hour of Code (კოდის ერთი საათი) სასაქონლო ნიშანია. ჩვენ არ გვსურს მისი გამოყენების შეზღუდვა, მაგრამ გვინდა დავრწმუნდეთ, რომ იგი გარკვეულ წესებს შეესაბამება. გთხოვთ, ნახეთ<a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>მისი გამოყენების წესები</a>."
   stats_hoc_2013_image_alt: 2013 წლის კოდის ერთი საათის სტატისტიკა
   stats_growth: ჩვენ ყველაზე სწრაფად მივაწვდინეთ ხმა 15 მილიონ მომხმარებელს.
   stats_i18n: მოსწავლეები სწავლობენ 40 ენაზე
@@ -400,11 +355,6 @@ ka:
   title_proclamation: კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულისა და კოდის ერთი საათის მხარდამჭერი რეზოლუციის მაგალითი
   title_stats: მონაცემები და სტატისტიკა
   title_partners: პარტნიორები
-  title_prizes_faq: ხშირად დასმული კითხვები პრიზებთან დაკავშირებით
-  title_prizes_terms: პრიზების მოპოვების პირობები
-  title_prizes_thanks: მადლობა
-  title_prizes: პრიზები
-  title_hardware_prize_form: დარეგისტრირდით კომპიუტერული ტექნიკის პრიზებისთვის
   title_resources: რესურსები
   title_signup_thanks: მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!
   title_tutorial_guidelines: ტუტორიალების ინსტრუქციები
@@ -421,9 +371,9 @@ ka:
   events_orgs_title: კოდის ერთი საათის ყველა ღონისძიება ორგნიზებული პარტნიორი ორგანიზეციების მიერ
   event: ღონისძიება
   events: ღონისძიებები
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  highlights_title: მნიშვნელოვანი ნაწილები
+  highlights_header: კოდის ერთი საათის მნიშვნელოვანი მომენტები
+  highlights_description: ჩვენი საყვარელი მომენტები კოდის ერთი საათის კამპანიიდან.
   footer_copyright_message: 2015 Code.org-ის საავტორო უფლებები. ყველა უფლება დაცულია.
   footer_trademark_message: კოდის ერთი საათი™ არის Code.org-ის სავაჭრო ნიშანი.
   footer_menu_partners: პარტნიორები

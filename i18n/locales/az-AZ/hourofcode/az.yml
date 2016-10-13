@@ -4,6 +4,7 @@ az:
   language: Azərbaycan dili
   front_title: 'Tarixin ən böyük təhsil hadisəsinə qoşulun, %{campaign_date} 2015'
   coming_soon: Tezliklə
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 dek.
   campaign_date_start_long: 7 dekabr
   campaign_date_short: 7-13 dekabr
@@ -18,7 +19,6 @@ az:
   front_start_learning: Start learning
   header_menu_resources: Resurslar
   header_menu_faq: Tez-tez verilən suallar
-  header_menu_prizes: Hədiyyələr
   header_menu_how_to: Təlimatlar
   header_menu_promote: Təbliğat
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ az:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Hər bir təşkilatçı üçün hədiyyələr
-  prizes_every_organizer: 'Kod Saatı təşkil etmiş hər kəs təşəkkür hədiyyəsi olaraq "Dropbox" və ya "Skype" krediti qazanacaq'
-  prizes_technology: 'Hər bir ABŞ ştatında (və paytaxt Vaşinqtonda) bir dövlət məktəbi 10&nbsp;000 dollar dəyərində texnologiya qazanacaq'
-  prizes_tech_chats: '# sinif xüsusi qonaqlarla video söhbət imkanı qazanacaq'
-  prizes_robots: 100 sinif proqramlaşdırılan robot dəsti udacaq
-  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
-  prizes_details: Detallar
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: Təlimçilər üçün
   how_to_nav_after_school: For after school
@@ -163,25 +155,8 @@ az:
   how_to_nav_companies: Şirkətlər üçün
   how_to_nav_afterschool_educators: For after-school educators
   how_to_nav_volunteers: Könüllülər üçün
-  prizes_nav_title: Hədiyyələr
-  prizes_nav_home: Bütün hədiyyələr
-  prizes_nav_hardware: Hardware prize signup
-  prizes_nav_terms: Qaydalar və şərtlər
-  prizes_nav_faq: Tez-tez verilən suallar
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Hər bir təlimçı üçün hədiyyələr
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
   whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
@@ -196,6 +171,7 @@ az:
   share_on_facebook: '"Facebook"da bölüşün'
   share_on_twitter: '"Twitter"də bölüşün'
   front_join_us_heading: Hər bir şagird üçün Kod Saatı.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: İnformatika hər bir şagird üçün təməl bilikdir. Bunu 100 milyonlara çatdırmağımıza kömək edin.
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: Bizə qoşulun
@@ -243,12 +219,13 @@ az:
   signup_send_posters_address_label: Məktəb və ya təşkilatın ünvanı
   signup_whole_school_flag_label: Bu tədbir bütün məktəb üçündür
   signup_your_event: Tədbirinizi qeydiyyatdan keçirin
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Şagirdlərimi həvəsləndirmək üçün yerli bir proqramçı tapmağıma kömək edin
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Adınız
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Məsələn, Linkoln litseyi
-  signup_event_location_placeholder: "Poçt kodu VƏ YA tam ünvan.\\r\n(Bunu xəritəyə bir sancaq yerləşdirmək üçün istifadə edəcəyik)"
+  signup_event_location_placeholder: "Poçt kodu VƏ YA tam ünvan.\r\n(Bunu xəritəyə bir sancaq yerləşdirmək üçün istifadə edəcəyik)"
   signup_special_event_details_placeholder: Bu xüsusi hadisəni nəyin təşkil etdiyini təsvir edin
   signup_send_posters_address_placeholder: Bu ünvan bizim xəritədə paylaşdırılmayacaq
   signup_event_type_in_school: Məktəbdə
@@ -273,28 +250,6 @@ az:
   meta_tag_twitter_title: Kod Saatı gəlir
   meta_tag_twitter_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
   twitter_default_text: 'Mən builki #HourOfCode Kod Saatında iştirak edirəm, bəs siz? @codeorg'
-  hardware_prizes_form_name_label: Adınız
-  hardware_prizes_form_name_placeholder: Adınız
-  hardware_prizes_form_email_label: E-poçt ünvanınız
-  hardware_prizes_form_email_placeholder: E-poçt ünvanınız
-  hardware_prizes_form_school_name_label: Məktəbin adı
-  hardware_prizes_form_school_name_placeholder: Məktəbin adı
-  hardware_prizes_form_school_address_label: Məktəbin ünvanı
-  hardware_prizes_form_school_address_placeholder: Məktəbin ünvanı
-  hardware_prizes_form_school_type_label: Məktəbin tipi
-  hardware_prizes_form_school_type_option_elementary: İbtidai
-  hardware_prizes_form_school_type_option_middle_school: Orta məktəb
-  hardware_prizes_form_school_type_option_high_school: Tam orta məktəb
-  hardware_prizes_form_qualifying_school_label: Bu ümumtəhsil məktəbidir
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: İştirak edən şagirdlərin sayı
-  hardware_prizes_form_number_students_placeholder: Şagirdlərin sayı
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: Kod Saatı üçün tədbirlər planınızı yükləyin
-  hardware_prizes_form_plan_file_description: 'Məktəbinizdəki hər bir şagirdi Kod Saatına cəlb etmək üçün fəaliyyət planı qurun. Nümunə üçün bura baxa bilərsiniz: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Göndər
   hoc_faq_title: Tez-tez verilən suallar
   hoc_faq_what_is_hoc_q: 'Kod Saatı nədir? '
   hoc_faq_what_is_hoc_a: "Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. <a href='http://code.org/learn'>Dərslikləri nəzərdən keçirin</a>."
@@ -403,11 +358,6 @@ az:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Tərəfdaşlar
-  title_prizes_faq: Hədiyyələrlə bağlı suallar
-  title_prizes_terms: Hədiyyələrlə bağlı şərtlər
-  title_prizes_thanks: Çox sağ olun
-  title_prizes: Hədiyyələr
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Resurslar
   title_signup_thanks: Kod Saatı təşkili üçün qeydiyyatınıza görə təşəkkür edirik!
   title_tutorial_guidelines: Dərsliklər üzrə təlimatlar

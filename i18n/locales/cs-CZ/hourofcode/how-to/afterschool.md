@@ -4,12 +4,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Jak vyučovat jednu Hodinu kódu v mimoškolní aktivitě
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 2) Zvolte si výukový kurz:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Vyzkoušejte to!](%= resolve_url("https://code.org/learn") %)
 
 **Všechny výukové kurzy Hodiny kódu:**
 
@@ -18,15 +20,15 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 3) Promote your Hour of Code
+## 3) Propagujte vaši Hodinu kódu
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
 ## 4) Plánuj potřeby technologie - počítače nejsou povinné
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Ale **nepotřebujete** počítač pro každé dítě a Hodinu Kódu můžete provozovat i bez počítače.
 
-**Plan Ahead!** Do the following before your event starts:
+**Plánujte dopředu!** Udělejte následující kroky než akce započne:
 
   * Vyzkoušejte si výukové kurzy na počítačích nebo zařízeních. Ujistěte se, že fungují správně na prohlížečích se zvukem a videem.
   * Poskytněte sluchátka pro třídu, nebo požádejte studenty, aby si přinesli své vlastní, když kurz pracuje nejlépe se zvukem.
@@ -127,3 +129,5 @@ Hodina kódu je pouze první krok, na cestě k poučení o tom, jak technologie 
 
   * Povzbuďte studenty v pokračování [učit se online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Nvštivte](%= resolve_url('https://code.org/professional-development-workshops') %) jednodenní workshop, abyste získali instrukce od zkušeného moderátora informatiky. (Pouze USA pedagogové)
+
+<%= view :signup_button %>

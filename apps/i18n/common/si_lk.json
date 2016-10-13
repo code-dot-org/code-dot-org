@@ -305,5 +305,6 @@
   "when": "විට",
   "whenRun": "දුවන විට",
   "workspaceHeaderShort": "වැඩ අවකාශය: ",
-  "yes": "ඔව්"
+  "yes": "ඔව්",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }

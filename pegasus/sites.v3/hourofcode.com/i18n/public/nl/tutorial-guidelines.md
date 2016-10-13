@@ -1,7 +1,6 @@
 ---
 
-title: <%= hoc_s(:title_tutorial_guidelines) %>
-layout: wide
+titel: < % = hoc_s(:title_tutorial_guidelines) %> lay-out: breed
 
 ---
 

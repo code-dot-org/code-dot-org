@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Si ta sjellësh Orën e Kodimit në kompaninë tuaj
 
 ## Inspire students and volunteer for the Hour of Code
@@ -30,7 +32,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zgjidh një tutorial:
 
-Ne do të mirëpresim një llojllojshmëri të[knaqësisë, tutorialeve të gjata](%= resolve_url('https://code.org/learn') %) për pjesëmarrësit e të gjitha moshave, të krijuara nga një llojllojshmëri të partnerëve. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
 
 **Të gjitha tutorialet e Orës së Kodimit:**
 
@@ -136,4 +138,6 @@ Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar
 
 ## Çfarë vjen pas Orës së Kodimit?
 
-Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

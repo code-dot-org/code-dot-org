@@ -305,5 +305,6 @@
   "when": "kur",
   "whenRun": "kur vrapon",
   "workspaceHeaderShort": "Vendi i punës: ",
-  "yes": "Po"
+  "yes": "Po",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }

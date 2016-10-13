@@ -72,7 +72,7 @@ const StageLockDialog = React.createClass({
         lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
-    selectedSection: React.PropTypes.string.isRequired,
+    selectedSectionId: React.PropTypes.string.isRequired,
     saving: React.PropTypes.bool.isRequired,
     saveDialog: React.PropTypes.func.isRequired
   },
@@ -113,7 +113,7 @@ const StageLockDialog = React.createClass({
   },
 
   viewSection() {
-    window.open(`${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.props.selectedSection}/assessments`, '_blank');
+    window.open(`${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.props.selectedSectionId}/assessments`, '_blank');
   },
 
   handleRadioChange(event) {
@@ -137,7 +137,7 @@ const StageLockDialog = React.createClass({
   },
 
   handleSave() {
-    this.props.saveDialog(this.state.lockStatus);
+    this.props.saveDialog(this.props.selectedSectionId, this.state.lockStatus);
   },
 
   render() {
@@ -152,7 +152,7 @@ const StageLockDialog = React.createClass({
         <div style={[styles.main, responsiveHeight]}>
           <div>
             <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-            <SectionSelector/>
+            <SectionSelector requireSelection={true}/>
           </div>
           <table>
             <tbody>
@@ -305,9 +305,9 @@ export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
   saving: state.stageLock.saving,
-  selectedSection: state.stageLock.selectedSection
+  selectedSectionId: state.sections.selectedSectionId
 }), dispatch => ({
-  saveDialog(lockStatus) {
-    dispatch(saveLockDialog(lockStatus));
+  saveDialog(sectionId, lockStatus) {
+    dispatch(saveLockDialog(sectionId, lockStatus));
   }
 }))(Radium(StageLockDialog));

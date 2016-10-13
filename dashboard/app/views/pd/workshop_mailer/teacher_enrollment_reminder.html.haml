@@ -9,8 +9,11 @@
 
 %p
   This is a reminder about your upcoming Code.org
-  = @workshop.course
+  = @workshop.course_name
   = @workshop.subject
   workshop.
 
-= render partial: 'teacher_enrollment_details'
+-if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
+  = render partial: 'teacher_enrollment_details_counselor'
+-else
+  = render partial: 'teacher_enrollment_details'

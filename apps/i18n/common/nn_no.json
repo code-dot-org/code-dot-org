@@ -305,5 +305,6 @@
   "when": "når",
   "whenRun": "når den køyrer",
   "workspaceHeaderShort": "Arbeidsområde: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }
