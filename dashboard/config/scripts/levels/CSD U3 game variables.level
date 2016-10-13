@@ -6,10 +6,6 @@
   "user_id": 324,
   "properties": {
     "skin": "gamelab",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Create your Variables\r\n\r\nFirst, you'll need to create all of your variables and put them in the variables area of your code.\r\n* Show me the block\r\n* Show me the area in the code\r\n\r\nDon't forget, each variable needs a label (name) and a starting value.  You can change the value of the variable later in your code.",
     "is_k1": "false",
@@ -39,7 +35,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

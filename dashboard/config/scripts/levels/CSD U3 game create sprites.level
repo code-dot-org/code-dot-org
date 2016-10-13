@@ -1,13 +1,13 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-10-13T18:49:40.000Z",
+  "created_at": "2016-10-13T18:53:11.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Choose your Backgrounds\r\n\r\nNow that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Stage 13 Level 10](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/13/puzzle/10).\r\n\r\nAfter you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.\r\n",
+    "markdown_instructions": "# Create your Sprites\r\n\r\nNext you will create your sprites and give them starting properties in the \"Create Sprites\" area of your code.  For each sprite your should:\r\n\r\n* Create the sprite in the correct place on the screen\r\n* Set its animation (or color and size)\r\n* Set its velocity and rotation speed, if needed\r\n* Set its collider and bounciness, if needed\r\n\r\nAfter you create each sprite, test it before making the next one.  If your sprite starts off screen, first place it on the screen to test it, them move it back off screen once you know that it looks right.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

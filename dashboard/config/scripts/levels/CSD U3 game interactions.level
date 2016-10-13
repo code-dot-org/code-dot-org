@@ -1,13 +1,13 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-10-13T18:49:40.000Z",
+  "created_at": "2016-10-13T19:15:05.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Choose your Backgrounds\r\n\r\nNow that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Stage 13 Level 10](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/13/puzzle/10).\r\n\r\nAfter you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.\r\n",
+    "markdown_instructions": "# Sprite Interactions\r\n\r\nThe last step is to create the functions that make your sprites interact in the right ways.  You'll need a function for each type of sprite interaction. You can use the `collectItems` in [Stage 16 Puzzle 16](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/16/puzzle/16) and `displaceEnemies` in [Stage 15 Puzzle 13](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/15/puzzle/13) as examples.\r\n\r\nFor each interaction:\r\n* Create a function in the functions area of your code\r\n* Call the function inside the draw loop\r\n\r\nAfter you make each function, run the code to test it before making another.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
