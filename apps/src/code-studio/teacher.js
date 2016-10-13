@@ -150,11 +150,11 @@ function sectionChanged() {
   window.location.reload();
 }
 
-// TODO - tie this to state instead of component so that it happens even on page load
 function viewAsChanged(viewAs) {
   if (viewAs === ViewType.Student && queryParams('user_id')) {
     updateQueryParam('user_id', undefined);
     window.location.reload();
+    return;
   }
   // Ideally all the things we would want to hide would be redux backed, and
   // would just update automatically. However, we're not in such a world. Instead,
@@ -163,15 +163,29 @@ function viewAsChanged(viewAs) {
 }
 
 function renderViewAsToggle(element) {
+  const store = getStore();
+
   // Start viewing as teacher
-  getStore().dispatch(setViewType(ViewType.Teacher));
+  store.dispatch(setViewType(ViewType.Teacher));
 
   ReactDOM.render(
-    <Provider store={getStore()}>
-      <ViewAsToggle onChange={viewAsChanged}/>
+    <Provider store={store}>
+      <ViewAsToggle/>
     </Provider>,
     element
   );
+
+
+  let lastState = store.getState();
+  store.subscribe(() => {
+    const state = store.getState();
+
+    if (state.stageLock.viewAs !== lastState.stageLock.viewAs) {
+      viewAsChanged(state.stageLock.viewAs);
+    }
+
+    lastState = state;
+  });
 }
 
 function renderTeacherPanelSections(element) {
