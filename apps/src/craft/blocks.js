@@ -470,7 +470,7 @@ exports.install = function (blockly, blockInstallOptions) {
   createEventBlockForEntity('cow', 'cow');
   createEventBlockForEntity('sheep', 'sheep');
   createEventBlockForEntity('zombie', 'zombie');
-  createEventBlockForEntity('ironGolem', 'iron Golem');
+  createEventBlockForEntity('ironGolem', 'iron golem');
   createEventBlockForEntity('creeper', 'creeper');
   createEventBlockForEntity('chicken', 'chicken');
   createLimitedEventBlockForEntity('sheep', 'sheepClicked', 'sheep', ['WHEN_USED']);
@@ -796,7 +796,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks[`craft_spawnEntityRandom`] = {
     helpUrl: '',
     init: function () {
-      const entityTypeDropdownOptions = keysToDropdownOptions(ENTITY_TYPES);
+      const entityTypeDropdownOptions = keysToDropdownOptions(SPAWNABLE_ENTITY_TYPES);
       var entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
 
