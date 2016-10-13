@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -25,7 +27,7 @@ nav: promote_nav
 
 ## Постнете това в социалните медии
 
-[![изображение](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -33,11 +35,11 @@ nav: promote_nav
 
 ## Използвайте логото на часът на кода за разпространение на събитието
 
-[![изображение](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Изтегли версии с висока резолюция](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" е търговска марка. Ние не искаме да спираме това използване, но при няколко ограничения:**
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
   1. Всяко позоваване на "Часът на кодирането" трябва да се използва по начин, който не предполага, че това е ваша собствена търговска марка, но по-скоро да се разбира, че Часът на кодирането е вид масово движение. Добър пример: "Участвайте в Hour of Code на ACMECorp.com". Лош пример: "Опитайте Hour of Code от ACME Corp".
   2. Използвайте "ТМ" с горен индекс на най-видимите места, на които споменавате "Hour of Code", както на вашия уеб сайт така и в описанието на дейността си.
@@ -51,8 +53,8 @@ nav: promote_nav
 
 ## Разпечатайте тези стикери и ги раздайте на учениците си
 
-(Стикерите са 1' в диаметър, 63 на лист)  
-[![изображение](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+(Stickers are 1" diameter, 63 per sheet)  
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -64,45 +66,45 @@ nav: promote_nav
 
 Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Добрата новина е, че ние сме на път да променим това. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! и Дисни. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Първи стъпки в http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
 ## Поканете медии да присъстват на събитието:
 
-**Тема:** Местното училище се присъединява към мисията да въведе 100 милиона ученици в компютърните науки
+**Subject line:** Local school joins mission to introduce students to computer science
 
 Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Добрата новина е, че ние сме на път да променим това.
 
-С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! и Дисни. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Аз писмено ви каня да присъствате на нашето откриване и да видите как децата започват дейността на [DATE].
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Моля, присъединете се към нас.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**Контакт:** [Вашето име], [TITLE], мобилен: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**Дата:** [Дата и час на събитието си]
+**When:** [DATE and TIME of your event]
 
-**Място:** [Адрес ]
+**Where:** [ADDRESS and DIRECTIONS]
 
-С нетърпение очаквам да се свържем.
+I look forward to being in touch.
 
 <a id="parents"></a>
 
 ## Разкажете на родителите за Вашето училищно събитие:
 
-Уважаеми родители,
+Dear Parents,
 
-Ние живеем в един свят, заобиколени от технологиите. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
 But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
@@ -135,3 +137,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

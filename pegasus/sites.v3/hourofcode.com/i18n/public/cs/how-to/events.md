@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Jak organizovat událost Hodinu kódu
 
 ## 1) Připravte se pro Vaši událost
@@ -54,3 +56,5 @@ nav: how_to_nav
 | 10:30-10:40 am | Studenti demonstrují Hodinu kódu pro školu. Zábavný obrat: vyučují ředitele školy, politika nebo ostatní studenty.             |
 | 10:40-11:00 am | Studenti demonstrují nezapojenou aktivitu a jak lze učit informatiku bez použití počítačů.                                     |
 | 11:00-11:05 am | Učitel, který pomohl přinést celoškolní akci dává závěrečné poznámky.                                                          |
+
+<%= view :signup_button %>

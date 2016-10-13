@@ -1795,6 +1795,8 @@ en:
             Programming: Programming
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
+            'Programming Unplugged: Happy Maps': 'Programming Unplugged: Happy Maps'
         grade4:
           title: Grade 4
           description: Planning Script for CSF 2.0
@@ -2129,10 +2131,17 @@ en:
         basketball:
           stage:
             Bounce: Bounce
-          title: ''
+          title: Basketball
           description_audience: ''
-          description_short: ''
+          description_short: Code your own basketball game
           description: ''
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
+        hoc-encryption:
+          stage:
+            Simple Encryption: Simple Encryption
+          title: 'Hour of Code: Simple Encryption'
+          description_audience: ''
+          description_short: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
+          description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.

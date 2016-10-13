@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -36,3 +38,5 @@ Tell your friends about the **#HourOfCode**!
 ## xin phép chính quyền đìa phương để xác nhận hỗ trợ cho sự kiện "Hour of Code"
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+
+<%= view :signup_button %>

@@ -343,12 +343,6 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
-
-    # This is a developer aid that allows previewing rendered mail views with fixed test data.
-    # The route is restricted so it only exists in development mode.
-    if Rails.env.development?
-      mount Pd::MailPreviewController => 'mail_preview'
-    end
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

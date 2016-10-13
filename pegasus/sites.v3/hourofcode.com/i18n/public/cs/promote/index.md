@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -17,13 +19,13 @@ nav: promote_nav
 
 ## 1. Povídejte o tom
 
-Povězte svým přátelům o **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Požádejte, aby celá vaše škola nabídla akci Hodina kódu
 
-[Poslat tento email](<%= resolve_url('/promote/resources#sample-emails') %>) vašemu řediteli školy a vyzvat každou třídu ve škole se přihlásit. <% if @country == 'us' %> Jedna šťastná škola v *každém* státě U.S. (i Washington D.C.) vyhraje techniku v ceně $10,000. <% end %>
+[Poslat tento email](<%= resolve_url('/promote/resources#sample-emails') %>) vašemu řediteli školy a vyzvat každou třídu ve škole se přihlásit. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## 3. Požádejte svého zaměstnavatele, aby se zapojil
 
@@ -36,3 +38,5 @@ Povězte svým přátelům o **#HourOfCode**!
 ## 5. Požádejte místní zvolené politiky pro podporu akce Hodina kódu
 
 [Pošlete tento email](<%= resolve_url('/promote/resources#sample-emails') %>) vašim místním politikům, městské radě nebo školní radě a pozvěte je k návštěvě vaší školy pro Hodinu kódu. Může to pomoci rozvoji informatiky ve vašem regionu za jednu hodinu.
+
+<%= view :signup_button %>

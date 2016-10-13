@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -25,7 +27,7 @@ nav: promote_nav
 
 ## Post these on social media
 
-[![bilde](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![bilde](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![bilde](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -33,7 +35,7 @@ nav: promote_nav
 
 ## Use the Hour of Code logo to spread the word
 
-[![bilde](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
@@ -52,7 +54,7 @@ nav: promote_nav
 ## Print these stickers to give to your students
 
 (Stickers are 1" diameter, 63 per sheet)  
-[![bilde](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -84,25 +86,25 @@ With the Hour of Code, computer science has been on homepages of Google, MSN, Ya
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Jeg vil invitere deg til å delta bli med og se barna starte aktiviteten den [dato].
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Vennligst bli med oss.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**Kontakt:** [Ditt navn], [tittel], mobil: 55 55 55 55
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**Når:** [Dato og klokkeslett for hendelsen]
+**When:** [DATE and TIME of your event]
 
-**Hvor:** [Adresse og veibeskrivelse]
+**Where:** [ADDRESS and DIRECTIONS]
 
-Jeg ser frem til å snakke med dere.
+I look forward to being in touch.
 
 <a id="parents"></a>
 
 ## Informere foreldrene om skolens arrangement:
 
-Kjære foreldre!
+Dear Parents,
 
-Vi lever i en verden omgitt av teknologi. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
 But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
@@ -135,3 +137,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

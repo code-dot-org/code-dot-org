@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Comment enseigner Une Heure de Code
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
@@ -15,12 +17,12 @@ Join the movement and introduce a group of students to their first hour of compu
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Les tutoriels d'une Heure de Code dirigés par les élèves :](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
   * Nécessitent un minimum de préparation par les enseignants
   * Sont guidés, pour permettre aux élèves de travailler à leur rythme et à leur niveau
 
-**[Les tutoriels d'Une Heure de Code dirigés par les enseignants :](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
   * Sont des plans de cours qui requièrent de la préparation pour l'enseignant
   * Sont regroupés par niveau de classe *et* par matière (p. ex. maths, anglais, etc.)
@@ -140,3 +142,5 @@ L'Heure de Code n'est que la première étape pour apprendre comment fonctionne 
 
   * Encouragez vos élèves à continuer d'[apprendre en ligne](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Participez](<%= resolve_url('https://code.org/professional-development-workshops') %>) à un atelier d'un jour en personne pour être formé par un animateur en informatique expérimenté. (Enseignants américains seulement)
+
+<%= view :signup_button %>

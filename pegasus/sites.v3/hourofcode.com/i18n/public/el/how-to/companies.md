@@ -6,11 +6,13 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Εμπνεύστε μαθητές και εθελοντές για την Ώρα του Κώδικα
 
-**Το Code.org προσφέρει στους εργαζόμενους των εταιρειών της ευκαιρία να [συνδεθούν](<%= resolve_url('https://code.org/volunteer') %>) με τοπικές σχολικές αίθουσες που κάνουν την Ώρα του Κώδικα για να μοιραστούν την επαγγελματική τεχνολογική εμπειρία τους και να εμπνεύσουν τους μαθητές να σπουδάσουν την επιστήμη των υπολογιστών.**
+**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
   * [Εγγραφή](<%= resolve_url('https://code.org/volunteer') %>) εθελοντών.
   * Για περισσότερες πληροφορίες σχετικά με τη σύνδεση των εργαζομένων σας με τις σχολικές τάξεις, συμβουλευθείτε τον [οδηγό για εταιρικούς συνεργάτες](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>) μας.
@@ -32,7 +34,7 @@ nav: how_to_nav
 ## 2) Δες το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Επέλεξε ένα φροντιστήριο:
 
-Θα φιλοξενούμε μια ποικιλία από [διασκεδαστικά, ωριαία μαθήματα](<%= resolve_url('https://code.org/learn') %>) για τους συμμετέχοντες όλων των ηλικιών, που έχουν δημιουργηθεί από μια ποικιλία εταίρων. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
 
 **Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
 
@@ -138,4 +140,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## Τι γίνεται μετά την Ώρα του Κώδικα;
 
-Στην ώρα του κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι για να μάθετε περισσότερα σχετικά με το πώς λειτουργεί η τεχνολογία και πώς να δημιουργήσετε εφαρμογές λογισμικού. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

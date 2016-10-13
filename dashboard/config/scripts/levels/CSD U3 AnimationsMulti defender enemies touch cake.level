@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Touching the Cake\r\n\r\nYou'll keep working on writing code for your enemies behavior. If the enemies get all the way across to the cake you should place them back at the left side of the screen and decrease the score. You should write the code for one of your enemies first and then copy and paste to duplicate this behavior for the second enemy. Remember, it's usually easier to do this in **text mode**.\r\n\r\n# Do This\r\n\r\nInside the `enemiesTouchCake` function you'll need to write code that does the following\r\n\r\n* Uses `if` and `isTouching` to detect whether enemy1 has touched the cake.\r\n* If so you should...\r\n  * Move it back to the left side of the screen and to a new random position. \r\n  * _Hint: You can reuse some code you already wrote_\r\n  * Decrease the score by 2\r\n* Once you write this code for your first enemy you can copy-paste it and make minor changes to get your second sprite working as well",
+    "markdown_instructions": "# Touching the Cake\r\n\r\nIf the enemies get all the way across to the cake you should place them back at the left side of the screen and decrease the score. To star you'll **write code for only one of your enemies**.\r\n\r\n# Do This\r\n\r\nInside the `enemiesTouchCake` function you'll need to write code that checks when a ladybug is touching the cake, resets its position, and changes the score.\r\n\r\n* Use an `if` and `isTouching` to detect whether enemy1 has touched the cake.\r\n* Inside your `if` block place code that...\r\n  * Sets enemy1's x position back to 0\r\n  * Sets enemy1's y position to a random number between 150 and 250\r\n  * _Hint: You can reuse some code you already wrote_\r\n  * Use the counter pattern to decrease the score by 2\r\n  \r\nTest your code. One of your ladybugs should now reset when it gets across to the cake, and the score should go down by 2.",
     "submittable": "false",
     "start_blocks": "// Variables\r\nvar score = 0;\r\n// Create Sprites\r\nvar cake = createSprite(350,200);\r\n\r\nvar player = createSprite(200,200);\r\n\r\nvar enemy1 = createSprite(0,200);\r\n\r\nvar enemy2 = createSprite(0,200);\r\n\r\nfunction draw() {\r\n  // draw the background\r\n  gameBackground();\r\n  // update the sprites\r\n  movePlayer();\r\n  enemiesTouchCake();\r\n  enemiesTouchWater();\r\n  showScore();\r\n  drawSprites();\r\n}\r\n\r\n// Functions\r\nfunction gameBackground() {\r\n  noStroke();\r\n  background(color(0,100,255));\r\n  fill(color(100,100,100));\r\n  rect(0,150,400,100);\r\n  fill(color(80,80,80));\r\n  rect(0,140,400,10);\r\n  rect(0,250,400,10);\r\n}\r\n\r\nfunction movePlayer(){\r\n  \r\n}\r\n\r\nfunction enemiesTouchCake(){\r\n  \r\n}\r\n\r\nfunction enemiesTouchWater(){\r\n  \r\n}\r\n\r\nfunction showScore() {\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"Score: \" + score,10, 10, 80, 20);\r\n}",
     "is_k1": "false",
@@ -36,6 +36,7 @@
     "pause_animations_by_default": "false",
     "all_animations_single_frame": "false",
     "project_template_level_name": "CSD U3 AnimationsMulti defender template",
+    "start_in_animation_tab": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -1,6 +1,7 @@
 import { createStore } from '@cdo/apps/redux';
 import { combineReducers } from 'redux';
 import progress from './progressRedux';
+import sections from './sectionsRedux';
 import stageLock from './stageLockRedux';
 import hiddenStage from './hiddenStageRedux';
 
@@ -31,6 +32,7 @@ const createCodeStudioStore = () => {
 
   const reducers = combineReducers({
     progress,
+    sections,
     stageLock,
     hiddenStage
   });

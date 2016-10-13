@@ -139,8 +139,8 @@ class ScriptDSL < BaseDSL
     s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
-    s << "hidden 'false'" unless script.hidden
-    s << "login_required 'true'" if script.login_required
+    s << 'hidden false' unless script.hidden
+    s << 'login_required true' if script.login_required
     s << 'hideable_stages true' if script.hideable_stages
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
 
