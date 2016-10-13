@@ -195,7 +195,8 @@ Craft.init = function (config) {
   }
 
   if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
-    Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);
+    // TODO(bjordan): re-add, disable for 2016 script
+    //Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);
   }
   Craft.initialConfig = config;
 
@@ -284,12 +285,13 @@ Craft.init = function (config) {
            * Won't matter for levels without delayed level initialization
            * (due to e.g. character / house select popups).
            */
-          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+          // TODO(bjordan): re-add
+          //earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
           afterAssetsLoaded: function () {
             // preload music after essential game asset downloads completely finished
             Craft.musicController.preload();
           },
-          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
+          //earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
         });
 
         if (!config.level.showPopupOnLoad) {
@@ -336,8 +338,9 @@ Craft.init = function (config) {
     interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
 
     if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-      interfaceImagesToLoad =
-          interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+      // TODO(bjordan): re-add, toggle for 2016 only
+      //interfaceImagesToLoad =
+      //    interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
     }
 
     interfaceImagesToLoad.forEach(function (url) {
