@@ -32,7 +32,10 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "is_event_level": "true",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0"
   },
   "published": true,
   "notes": "Puzzle 4:\r\nThey’re moving now, but they look weird. Randomness helps multiple entities to move differently. Use a Repeat Random, a Turn Random or both to make your chickens look more natural. \r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever \r\no   Repeat Random\r\n§  Move Forward\r\no   Turn Random\r\n\r\n·       Teaches: Randomness, repeats loops with less scaffolding/instruction\r\n\r\nWhen Used:\r\nNo code required here\r\n\r\nSolution: only requires using random in turn or repeat - nothing in particular. Ok  if it doesn’t repeat forever.",

@@ -32,7 +32,10 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "is_event_level": "true",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0"
   },
   "published": true,
   "notes": "Puzzle 7:\r\nLook at this poor cow, it can’t move or make milk, and it’s being attacked by Zombies. Restore the cow, and get it to run away from Zombies with the When Attacked category, and Move Away.\r\n\r\nSolution:               \r\nCow\r\n§  When spawned\r\n·       Repeat Forever\r\no   Repeat Random\r\no       Move Forward\r\no   Turn Random\r\n§  When Touched\r\n·       Move Toward Player\r\n§  When Used\r\n·       Drop Milk\r\n§  When Attacked\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n\r\nTeachers: reinforces loops",
