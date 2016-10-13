@@ -6,7 +6,9 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your entire school district
+<%= view :signup_button %>
+
+# Cum poti aduce Hour of Code in scolile din cartierul tau
 
 ## Implică fiecare școală in eveniment, fiecare elev trebuie sa invete!
 
@@ -26,3 +28,5 @@ Ora de Cod este doar primul pas într-o călătorie pentru a afla mai multe desp
 
   * Încurajați elevii să continue să [înveţe online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Participați](<%= resolve_url('https://code.org/professional-development-workshops') %>) la un atelier de lucru de o zi, în persoană, pentru a primi instrucțiuni de la un facilitator experimentat în informatică. (Numai pentru educatori din SUA)
+
+<%= view :signup_button %>

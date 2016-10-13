@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ## एक घंटा कोड का में पत्रकारोंको आकर्षित करनेके कुछ तरीके
 
 *For all press and media inquiries, contact <press@code.org>*
@@ -59,3 +61,5 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+
+<%= view :signup_button %>

@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to organize an Hour of Code event
 
 ## 1) 活動準備工作
@@ -54,3 +56,5 @@ nav: how_to_nav
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | 學生演示不插電活動，如何在沒有電腦的情況下也可以教大家電腦科學。                                                                                                                |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+
+<%= view :signup_button %>
