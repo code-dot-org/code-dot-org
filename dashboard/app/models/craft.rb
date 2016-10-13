@@ -39,6 +39,7 @@ class Craft < Blockly
     :verification_function,
     :show_popup_on_load,
     :is_daytime,
+    :is_event_level,
     :special_level_type,
     :grid_width,
     :grid_height,

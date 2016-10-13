@@ -24,7 +24,6 @@ var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 var MEDIA_URL = '/blockly/media/craft/';
-const IS_EVENT_LEVEL = true; // TODO(bjordan): make conditional
 
 var ArrowIds = {
   LEFT: 'leftButton',
@@ -263,7 +262,7 @@ Craft.init = function (config) {
 
   var onMount = function () {
     studioApp.init(Object.assign({}, config, {
-      forceInsertTopBlock: IS_EVENT_LEVEL ? null : 'when_run',
+      forceInsertTopBlock: config.level.isEventLevel ? null : 'when_run',
       appStrings: {
         generatedCodeDescription: craftMsg.generatedCodeDescription(),
       },

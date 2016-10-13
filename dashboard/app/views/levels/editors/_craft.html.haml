@@ -12,6 +12,9 @@
   = f.label :is_daytime, 'Start level daytime'
   = boolean_check_box(f, :is_daytime)
 .field
+  = f.label :is_event_level, 'Is an "Events" (HoC 2016) level'
+  = boolean_check_box(f, :is_event_level)
+.field
   = f.label :day_night_cycle_time, 'Day/night cycle length (0 is no cycle)'
   = f.text_field :day_night_cycle_time, {value: @level.day_night_cycle_time || 0}
 .field
