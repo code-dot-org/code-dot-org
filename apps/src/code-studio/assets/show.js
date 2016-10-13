@@ -12,8 +12,12 @@ var Dialog = require('../dialog');
  * @param typeFilter {String} The type of assets to show and allow to be
  *   uploaded.
  * @param onClose {Function} Called when the user closes the asset manager.
+ * @param options {Object} Additional options.
+ * @param [options.showUnderageWarning] {boolean} Warn if underage.
+ * @param [options.useFilesApi] {boolean} Use files API instead of assets API.
  */
-module.exports = function (assetChosen, typeFilter, onClose, showUnderageWarning) {
+module.exports = function (assetChosen, typeFilter, onClose, options) {
+  options = options || {};
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = new Dialog({
@@ -24,13 +28,13 @@ module.exports = function (assetChosen, typeFilter, onClose, showUnderageWarning
 
   ReactDOM.render(React.createElement(ImagePicker, {
     typeFilter: typeFilter,
-    channelId: dashboard.project.getCurrentId(),
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
+    useFilesApi: options.useFilesApi,
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);
     } : null,
-    showUnderageWarning,
+    showUnderageWarning: options.showUnderageWarning,
   }), codeDiv);
 
   dialog.show();

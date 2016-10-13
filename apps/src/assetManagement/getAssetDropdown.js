@@ -18,7 +18,9 @@ module.exports = function (typeFilter) {
   var handleChooseClick = function (callback) {
     dashboard.assets.showAssetManager(function (filename) {
       callback(utils.quote(filename));
-    }, typeFilter, null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
+    }, typeFilter, null, {
+      showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
+    });
   };
   options.push({
     text: commonMsg.choosePrefix(),
