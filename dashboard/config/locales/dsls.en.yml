@@ -312,6 +312,9 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 game intro:
+        Create Your Own Game: Create Your Own Game
+        description here: description here
       CSD U3 platform intro:
         Build a Platform Jumper: Build a Platform Jumper
         description here: description here
