@@ -39,9 +39,12 @@ class Craft < Blockly
     :verification_function,
     :show_popup_on_load,
     :is_daytime,
+    :is_event_level,
     :special_level_type,
     :grid_width,
     :grid_height,
+    :day_night_cycle_start,
+    :day_night_cycle_time,
     :free_play
   )
 
@@ -276,27 +279,43 @@ class Craft < Blockly
   <block type='craft_tillSoil'></block>
   <block type='craft_placeBlockAhead'></block>
 </category>
-<category name="EventActions">
+<category name="Event Loops">
+  <block type="craft_forever"></block>
+  <block type="craft_repeatDropdown"></block>
+  <block type="craft_repeatRandom"></block>
+  <block type="craft_repeatTimes"></block>
+</category>
+<category name="Global Actions">
+  <block type='craft_playSound'></block>
+  <block type="craft_spawnEntity"></block>
+  <block type="craft_spawnEntityRandom"></block>
+</category>
+<category name="Entity Actions">
   <block type="craft_attack"></block>
   <block type="craft_destroyEntity"></block>
   <block type="craft_drop"></block>
   <block type="craft_explodeEntity"></block>
   <block type="craft_flashEntity"></block>
-  <block type="craft_forever"></block>
   <block type="craft_moveAway"></block>
   <block type="craft_moveDirection"></block>
   <block type="craft_moveForward"></block>
   <block type="craft_moveRandom"></block>
   <block type="craft_moveTo"></block>
   <block type="craft_moveToward"></block>
-  <block type='craft_playSound'></block>
-  <block type="craft_repeatTimes"></block>
-  <block type="craft_spawnEntity"></block>
-  <block type="craft_spawnEntityRandom"></block>
-  <block type="craft_turnLeft"></block>
-  <block type="craft_turnRandom"></block>
-  <block type="craft_turnRight"></block>
+  <block type="craft_entityTurn"></block>
+  <block type="craft_entityTurnLR"></block>
   <block type="craft_wait"></block>
+</category>
+<category name="Limited Actions">
+  <block type="craft_moveTowardSheepPlayerChicken"></block>
+</category>
+<category name="Limited Entities">
+  <block type="craft_sheepClicked"></block>
+  <block type="craft_chickenSpawnedClicked"></block>
+  <block type="craft_sheepSpawnedTouchedClicked"></block>
+  <block type="craft_cowSpawnedTouchedClicked"></block>
+  <block type="craft_zombieSpawnedTouchedClickedDay"></block>
+  <block type="craft_creeperSpawnedTouchedClickedDay"></block>
 </category>
 <category name="Entities">
   <block type="craft_sheep"></block>
@@ -305,7 +324,11 @@ class Craft < Blockly
   <block type="craft_creeper"></block>
   <block type="craft_cow"></block>
   <block type="craft_chicken"></block>
-  <block type="craft_onPlayerMoved"></block>
+</category>
+<category name="Global Events">
+  <block type="when_run"></block>
+  <block type="craft_whenDay"></block>
+  <block type="craft_whenNight"></block>
 </category>
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>
