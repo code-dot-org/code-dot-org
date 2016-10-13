@@ -358,7 +358,6 @@ StudioApp.prototype.init = function (config) {
       dashboard.assets.listStore.reset(result.files);
     }, xhr => {
       // Unable to load asset list
-      console.warn('assets getFiles API failed, status: ' +  xhr.status);
     });
   }
 
