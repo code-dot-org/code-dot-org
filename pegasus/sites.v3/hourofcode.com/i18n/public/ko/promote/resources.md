@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -35,9 +37,9 @@ nav: promote_nav
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[고해상도 버전들 다운로드](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code"는 공식 상표입니다. 이 상표를 사용하는 것을 금지하지는 않지만, 몇 가지 제한 사항을 지켜주셔야 합니다:**
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
   1. 의류 등 각종 패션 제품에 사용되는 "Hour of Code"라는 브랜드 이름으로서 사용되서는 안되며, Hour of Code 운동에 대한 참조를 달아야 합니다. 좋은 예시: "Hour of Code™ 에 함께 참여해보세요. ACMECorp.com". 나쁜 예시: "ACME Corp 가 만든 Hour of Code를 해보세요".
   2. "Hour of Code"를 언급하는 경우, 웹사이트에 게제하거나, 앱/프로그램에 설명하는 경우에는 윗 첨자 "TM"를 눈에 띄게 표시해 주세요.
@@ -51,7 +53,7 @@ nav: promote_nav
 
 ## 이 스티커들을 인쇄해서 학생들에게 나누어 주세요.
 
-(스티커들은 1인치 짜리가, 각 시트에 63개씩 있습니다.)  
+(Stickers are 1" diameter, 63 per sheet)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -64,45 +66,45 @@ nav: promote_nav
 
 Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Hour of Code는 구글, MSN, 야후 홈페이지에서 함께 진행되어왔습니다. 그리고 디즈니에도.. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 그리고 디즈니에도.. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-다음 링크에서 시작하면 됩니다. http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
 ## 여러분의 이벤트 행사에 언론매체를 초대하세요.
 
-**제목:** 우리 지역 학교가 학생들에게 컴퓨터과학(정보과학) 을 소개하기 위한 전세계적 캠페인에 참여합니다.
+**Subject line:** Local school joins mission to introduce students to computer science
 
 Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다.
 
-Hour of Code는 구글, MSN, 야후 홈페이지에서 함께 진행되어왔습니다. 그리고 디즈니에도.. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 그리고 디즈니에도.. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-우리의 킥오프 과정에 여러분들을 초대하기 위해 글을 씁니다. [DATE] 에 학생들이 활동을 시작하는 것을 살펴봐주세요.
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. 우리와 함께 해주세요.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**연락처:** [YOUR NAME], [TITLE], 휴대폰: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**행사일:** [DATE and TIME of your event]
+**When:** [DATE and TIME of your event]
 
-**장소:** [ADDRESS and DIRECTIONS]
+**Where:** [ADDRESS and DIRECTIONS]
 
-여러분의 연락을 기다리겠습니다.
+I look forward to being in touch.
 
 <a id="parents"></a>
 
 ## 부모님들에게 여러분의 학교 이벤트에 대해서 이야기 해주세요.
 
-친애하는 부모님들께,
+Dear Parents,
 
-우리는 컴퓨터과학기술에 둘러싸인 세상속에서 살아가고 있습니다. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
 But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
@@ -135,3 +137,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

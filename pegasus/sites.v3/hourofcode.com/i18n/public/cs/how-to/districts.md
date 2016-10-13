@@ -6,7 +6,9 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your entire school district
+<%= view :signup_button %>
+
+# Jak přinést Hodinu Kódu do vybraného okrsku škol
 
 ## Získejte, aby se každá škola zúčastnila, každý student se učil!
 
@@ -26,3 +28,5 @@ Hodina kódu je pouze první krok, na cestě k poučení o tom, jak technologie 
 
   * Povzbuďte studenty v pokračování [učit se online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Nvštivte](<%= resolve_url('https://code.org/professional-development-workshops') %>) jednodenní workshop, abyste získali instrukce od zkušeného moderátora informatiky. (Pouze USA pedagogové)
+
+<%= view :signup_button %>

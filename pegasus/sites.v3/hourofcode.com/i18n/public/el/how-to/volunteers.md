@@ -6,15 +6,17 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Οδηγός για εθελοντές βήμα-βήμα
 
 ## 1. εγγραφείτε για να γίνετε εθελοντές
 
-Επισκεφθείτε μια τοπική τάξη να εμπνεύσετε μαθητές να μαθαίνουν την επιστήμη των υπολογιστών. [Εθελοντής για μια ώρα](https://code.org/volunteer/engineer).
+Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
 ## 2. Join a volunteer info session
 
-We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Θα συζητήσουμε πώς να συντονιστείτε με καθηγητές πριν την εκδήλωση της ώρας του κώδικα καθώς και τι πρέπει να κάνετε την ημέρα της εκδήλωσης για προετοιμασία. Παρακαλούμε ρωτήστε μας οτιδήποτε! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
@@ -46,19 +48,19 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 ## 3. Διαθέστε μόλις 30 λεπτά δοκιμάζοντας τα μαθήματα εκ των προτέρων
 
-Δοκιμάστε τα tutorials στο [code.org/learn](https://code.org/learn). Πάρετε μερικά από τα δημοφιλέστερα tutorials και περάστε λίγο χρόνο για να εξοικειωθείτε με το καθένα από αυτά. Θα σας πάρει περίπου 5-10 λεπτά ανά σεμινάριο για να πάρετε μια αίσθηση του πώς λειτουργεί.
+Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Παρακινήστε τους συνεργάτες σας να εργαστούν εθελοντικά
 
-Πείτε στους φίλους και συνεργάτες σας για στην ώρα του κώδικα. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Δείγμα μηνυμάτων ηλεκτρονικού ταχυδρομείου:**
+**Sample email:**
 
-**Γραμμή θέματος**: έλα μαζί μου στον εθελοντισμό για την ώρα του κώδικα
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Αν θυμάστε σας την πολύ πρώτη γραμμή κώδικα που γράψατε, γνωρίζετε ότι επηρέασε το υπόλοιπο της ζωής σας.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-Αυτό είναι στην ουσία η Ώρα του Κώδικα. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
 **I signed up to volunteer in a local classroom, and you can, too!**   
 Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
@@ -80,7 +82,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 4. Προώθησε την Ώρα του Κώδικα στην κοινότητά σου
 
-Προσκάλεσε να αναμειχθούν μια τοπική ομάδα - αγόρια/κορίτσια πρόσκοποι, την Εκκλησία, μια πανεπιστημιακή ομάδα, μια ομάδα ατόμων τρίτης ηλικίας ή ένα σωματείο εργαζομένων. Ή φιλοξένησε μια Ώρα του Κώδικα "πάρτυ στην οικοδομή" για τη γειτονιά σου. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Prepare before you visit a classroom.
 
@@ -97,3 +99,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Παίξτε την [Ώρα του κώδικα βίντεο](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Αφήσετε τους μαθητές να δουν τα tutorials. Περπατήστε γύρω από την τάξη απαντώντας στις ερωτήσεις και καθοδηγώντας τους μέσα από τα δύσκολα παζλ. Μην τους δίνετε αμέσως την απάντηση και τις λύσεις. Αντίθετα προσπαθήστε μέσα από ερωτήσεις να τους υποδείξετε το λάθος τους.
+
+<%= view :signup_button %>

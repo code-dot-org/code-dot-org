@@ -279,7 +279,7 @@ class Level < ActiveRecord::Base
   end
 
   def key
-    if level_num == 'custom'
+    if level_num == 'custom' || level_num.nil?
       name
     else
       ["blockly", game.name, level_num].join(':')
