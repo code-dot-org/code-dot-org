@@ -45,11 +45,16 @@ module Pd::Payment
       summary_plp_non_urban = PaymentCalculatorBase.instance.calculate workshop_plp_non_urban
 
       assert_nil summary_no_plp.plp
-      assert_equal plp_urban, summary_plp_urban.plp
-      assert_equal plp_non_urban, summary_plp_non_urban.plp
-
       assert_nil summary_no_plp.payment.type
+
+      assert_equal plp_urban, summary_plp_urban.plp
+      assert summary_plp_urban.payment
+      assert_equal summary_plp_urban, summary_plp_urban.payment.summary
       assert_equal 'PLP Urban', summary_plp_urban.payment.type
+
+      assert_equal plp_non_urban, summary_plp_non_urban.plp
+      assert summary_plp_non_urban.payment
+      assert_equal summary_plp_non_urban, summary_plp_non_urban.payment.summary
       assert_equal 'PLP Non-urban', summary_plp_non_urban.payment.type
     end
 
@@ -89,6 +94,7 @@ module Pd::Payment
       # Below min attendance
       workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_below_min_attendance}.tap do |teacher_summary|
         assert teacher_summary
+        assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 1, teacher_summary.raw_days
         assert_equal 6, teacher_summary.raw_hours
         assert_equal 0, teacher_summary.days
@@ -98,6 +104,7 @@ module Pd::Payment
       # Attend 2 days
       workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_last_2_days}.tap do |teacher_summary|
         assert teacher_summary
+        assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 2, teacher_summary.raw_days
         assert_equal 12, teacher_summary.raw_hours
         assert_equal 2, teacher_summary.days
@@ -107,6 +114,7 @@ module Pd::Payment
       # Attend 3 days
       workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_first_3_days}.tap do |teacher_summary|
         assert teacher_summary
+        assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 3, teacher_summary.raw_days
         assert_equal 18, teacher_summary.raw_hours
         assert_equal 3, teacher_summary.days
@@ -116,6 +124,7 @@ module Pd::Payment
       # Above max attendance
       workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_above_cap}.tap do |teacher_summary|
         assert teacher_summary
+        assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 4, teacher_summary.raw_days
         assert_equal 24, teacher_summary.raw_hours
         assert_equal 3, teacher_summary.days
@@ -146,8 +155,6 @@ module Pd::Payment
       term_daily = create :pd_district_payment_term, course: workshop.course, school_district: district_daily,
         rate_type: Pd::DistrictPaymentTerm::RATE_DAILY, rate: 10
 
-      workshop.resolve_enrolled_users
-
       calculator = PaymentCalculatorBase.instance
       calculator.stubs(:teacher_qualified?).returns true
       calculator.expects(:teacher_qualified?).with(teacher_unqualified).returns false
@@ -171,6 +178,7 @@ module Pd::Payment
         assert_equal 2, teacher_summary.days
         assert_equal 12, teacher_summary.hours
         assert teacher_summary.payment
+        assert_equal teacher_summary, teacher_summary.payment.summary
         assert_nil teacher_summary.payment.district_payment_term
         assert_equal 0, teacher_summary.payment.amount
       end
@@ -181,6 +189,7 @@ module Pd::Payment
         assert_equal 2, teacher_summary.days
         assert_equal 12, teacher_summary.hours
         assert teacher_summary.payment
+        assert_equal teacher_summary, teacher_summary.payment.summary
         assert term_hourly, teacher_summary.payment.district_payment_term
         assert_equal 24, teacher_summary.payment.amount
       end
@@ -191,6 +200,7 @@ module Pd::Payment
         assert_equal 2, teacher_summary.days
         assert_equal 12, teacher_summary.hours
         assert teacher_summary.payment
+        assert_equal teacher_summary, teacher_summary.payment.summary
         assert term_daily, teacher_summary.payment.district_payment_term
         assert_equal 20, teacher_summary.payment.amount
       end
