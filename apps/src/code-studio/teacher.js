@@ -205,8 +205,8 @@ function renderStageLockedText(element) {
   const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
 
   if (fullyLocked[currentStageId]) {
-    element.text(commonMsg.stageLocked());
+    $(element).text(commonMsg.stageLocked());
   } else {
-    element.text(commonMsg.stageNotFullyLocked());
+    $(element).text(commonMsg.stageNotFullyLocked());
   }
 }
