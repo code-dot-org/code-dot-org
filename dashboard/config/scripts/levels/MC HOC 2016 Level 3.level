@@ -32,13 +32,28 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "contained_level_names": null,
-    "instructions": "Great, the chicken is moving! But he stopped. In games, entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n"
+    "instructions": "Great, the chicken is moving! But he stopped. In games, entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 3:\r\n\r\nGreat, the chicken is moving! But he stopped. In games entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\n§  When Clicked\r\nNo code necessary\r\n\r\n·       Teaches: Spawning. Loops.",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="craft_chicken"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_forever"/>
+        <block type="craft_moveForward"/>
+        <block type="craft_turnLeft"/>
+        <block type="craft_turnRight"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </Craft>

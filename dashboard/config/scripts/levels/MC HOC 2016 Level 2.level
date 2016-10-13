@@ -32,13 +32,27 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "contained_level_names": null,
-    "instructions": "This chicken has forgotten how to move! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot. When an entity is created it is called “spawning”, so the chicken will move as soon as it is created.\r\n"
+    "instructions": "This chicken has forgotten how to move! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot. When an entity is created it is called “spawning”, so the chicken will move as soon as it is created.\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 2: How did the Chicken Cross the Road?\r\nThis chicken has forgotten how to move! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot. When an entity is created it is called “spawning”, so the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\nWhen Used\r\nNo code needs to go here\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nVIDEO on how you’ve learned these CS concepts  and then go into how to make those part of the game (Lisa)",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="craft_chicken"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turnLeft"/>
+        <block type="craft_turnRight"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </Craft>
