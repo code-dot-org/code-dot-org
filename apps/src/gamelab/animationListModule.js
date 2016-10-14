@@ -1,6 +1,7 @@
 /**
  * @file Redux module for new format for tracking project animations.
  */
+import _ from 'lodash';
 import {combineReducers} from 'redux';
 import {createUuid} from '../utils';
 import {
@@ -522,6 +523,26 @@ export function animationSourceUrl(key, props, withVersion = false) {
   //    key to look it up in the animations API.
   return animationsApi.basePath(key) + '.png' +
       ((withVersion && props.version) ? '?version=' + props.version : '');
+}
+
+/**
+ * Static helper for converting a serialized animation list to an exportable one
+ * with absolute sourceUrls for the animations.
+ * Only used for a levelbuilder utility.
+ * @param {SerializedAnimationList} serializedList
+ * @return {SerializedAnimationList} with aboslute sourceUrls for every animation.
+ */
+export function withAbsoluteSourceUrls(serializedList) {
+  let list = _.cloneDeep(serializedList);
+  list.orderedKeys.forEach(key => {
+    let props = list.propsByKey[key];
+
+    const relativeUrl = animationSourceUrl(key, props, true);
+    const sourceLocation = document.createElement('a');
+    sourceLocation.href = relativeUrl;
+    props.sourceUrl = sourceLocation.href;
+  });
+  return list;
 }
 
 /**
