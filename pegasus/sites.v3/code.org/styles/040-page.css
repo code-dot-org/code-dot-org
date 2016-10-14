@@ -850,3 +850,7 @@ label {
 .assign-confirm-modal .close {
   margin-top: -10px;
 }
+
+.assign-confirm-modal .modal-buttons {
+  margin-top: 15px;
+}

@@ -172,6 +172,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.hocAssignWarningEnabled = #{Gatekeeper.allows('hoc_assign_warning', default: false)};
 
+    $scope.hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
+
     $scope.edit = function(section) {
       section.editing = true;
     };
@@ -186,7 +188,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       })
       if ($scope.hocAssignWarningEnabled &&
           !$scope.hocAssignWarningShown &&
-          course.category === "Hour of Code") {
+          course.category === $scope.hocCategoryName) {
         $scope.sectionToSave = $scope.sections.indexOf(section);
         $('#assign-confirm').modal('show');
         return;
