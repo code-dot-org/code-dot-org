@@ -54,6 +54,7 @@ export default class LevelModel {
 
     this.player = new Player(this.controller, "Player", x, y, this.initialLevelData.playerName || "Steve", !this.actionPlane[this.yToIndex(y) + x].getIsEmptyOrEntity(), levelData.playerStartDirection);
     this.controller.levelEntity.pushEntity(this.player);
+    this.controller.player = this.player;
 
     this.computeShadingPlane();
     this.computeFowPlane();

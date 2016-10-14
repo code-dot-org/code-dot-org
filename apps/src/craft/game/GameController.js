@@ -88,6 +88,7 @@ class GameController {
 
     this.playerDelayFactor = 1.0;
     this.dayNightCycle = false;
+    this.player = null;
 
     this.game.state.add('earlyLoad', {
       preload: () => {
@@ -130,6 +131,7 @@ class GameController {
     this.levelModel.reset();
     this.levelView.reset(this.levelModel);
     this.levelEntity.loadData(this.levelData);
+    this.player = this.levelModel.player;
     this.resettableTimers.forEach((timer) => {
       timer.stop(true);
     });
@@ -165,58 +167,73 @@ class GameController {
   update() {
     this.queue.tick();
     this.levelEntity.tick();
+    this.player.updateMovement();
     this.levelView.update();
-
-    if (this.queue.isFinished()) {
-      this.handleEndState();
-    }
   }
 
   addCheatKeys() {
-    if (!this.levelData.isEventLevel) {
-      return;
-    }
+    this.game.input.keyboard.addKey(Phaser.Keyboard.UP).onDown.add(() => {
+      this.player.movementState = FacingDirection.Up;
+    })
     this.game.input.keyboard.addKey(Phaser.Keyboard.UP).onUp.add(() => {
-      var dummyFunc = function () {
-        console.log("highlight move forward command.");
-      };
-      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Up);
+      if (this.player.movementState === FacingDirection.Up)
+        this.player.movementState = -1;
     });
-
+    this.game.input.keyboard.addKey(Phaser.Keyboard.W).onDown.add(() => {
+      this.player.movementState = FacingDirection.Up;
+    })
+    this.game.input.keyboard.addKey(Phaser.Keyboard.W).onUp.add(() => {
+      if (this.player.movementState === FacingDirection.Up)
+        this.player.movementState = -1;
+    });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onDown.add(() => {
+      this.player.movementState = FacingDirection.Right;
+    })
     this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onUp.add(() => {
-      var dummyFunc = function () {
-        console.log("highlight turn right command.");
-      };
-      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Right);
+      if (this.player.movementState === FacingDirection.Right)
+        this.player.movementState = -1;
     });
-
-    this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onUp.add(() => {
-      var dummyFunc = function () {
-        console.log("highlight turn left command.");
-      };
-      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Left);
-    });
-
-    this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onUp.add(() => {
-      var dummyFunc = function () {
-        console.log("highlight turn left command.");
-      };
-      this.codeOrgAPI.moveDirection(function () { }, FacingDirection.Down);
-    });
-    this.game.input.keyboard.addKey(Phaser.Keyboard.P).onUp.add(() => {
-      var dummyFunc = function () {
-        console.log("highlight placeBlock command.");
-      };
-      this.codeOrgAPI.placeBlock(dummyFunc, "wool");
-      this.queue.begin();
-    });
-
+    this.game.input.keyboard.addKey(Phaser.Keyboard.D).onDown.add(() => {
+      this.player.movementState = FacingDirection.Right;
+    })
     this.game.input.keyboard.addKey(Phaser.Keyboard.D).onUp.add(() => {
-      var dummyFunc = function () {
-        console.log("highlight destroy / use block command.");
-      };
-      this.codeOrgAPI.destroyBlock(dummyFunc);
-      this.queue.begin();
+      if (this.player.movementState === FacingDirection.Right)
+        this.player.movementState = -1;
+    });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onDown.add(() => {
+      this.player.movementState = FacingDirection.Down;
+    })
+    this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onUp.add(() => {
+      if (this.player.movementState === FacingDirection.Down)
+        this.player.movementState = -1;
+    });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.S).onDown.add(() => {
+      this.player.movementState = FacingDirection.Down;
+    })
+    this.game.input.keyboard.addKey(Phaser.Keyboard.S).onUp.add(() => {
+      if (this.player.movementState === FacingDirection.Down)
+        this.player.movementState = -1;
+    });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onDown.add(() => {
+      this.player.movementState = FacingDirection.Left;
+    })
+    this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onUp.add(() => {
+      if (this.player.movementState === FacingDirection.Left)
+        this.player.movementState = -1;
+    });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.A).onDown.add(() => {
+      this.player.movementState = FacingDirection.Left;
+    })
+    this.game.input.keyboard.addKey(Phaser.Keyboard.A).onUp.add(() => {
+      if (this.player.movementState === FacingDirection.Left)
+        this.player.movementState = -1;
+    });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onDown.add(() => {
+      this.player.movementState = -2;
+    })
+    this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onUp.add(() => {
+      if (this.player.movementState === -2)
+        this.player.movementState = -1;
     });
   }
 
@@ -320,7 +337,7 @@ class GameController {
           }
         }
         entity.moveAway(commandQueueItem, moveAwayFromEntities[closestTarget[1]]);
-      } else 
+      } else
         commandQueueItem.succeeded();
     }
     // move away type from type
@@ -457,7 +474,7 @@ class GameController {
           }
         }
         entity.moveTo(commandQueueItem, moveTowardToEntities[closestTarget[1]]);
-      } else 
+      } else
         commandQueueItem.succeeded();
     }
     // move toward type to type
@@ -730,7 +747,7 @@ class GameController {
       // push use command to execute general use behavior of the entity before executing the event
       this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
         var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
-        
+
         frontEntity.queue.startPushHighPriorityCommands();
         frontEntity.addCommand(useCommand);
         frontEntity.queue.endPushHighPriorityCommands();
@@ -980,10 +997,8 @@ class GameController {
     var spawnedEntity = this.levelEntity.spawnEntity(type, spawnDirection);
     if (spawnedEntity !== null) {
       this.events.forEach(e => e({ eventType: EventType.WhenSpawned, targetType: type, targetIdentifier: spawnedEntity.identifier }));
-      commandQueueItem.succeeded();
     }
-    else
-      commandQueueItem.failed();
+    commandQueueItem.succeeded();
   }
 
   spawnEntityAt(commandQueueItem, type, x, y, facing) {
@@ -1012,7 +1027,7 @@ class GameController {
       var entities = this.getEntities(target);
       for (var i = 0; i < entities.length; i++) {
         let entity = entities[i];
-        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.destroyEntity(callbackCommand, entity.identifier);}, entity.identifier);
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.destroyEntity(callbackCommand, entity.identifier); }, entity.identifier);
         entity.addCommand(callbackCommand);
       }
       commandQueueItem.succeeded();
@@ -1077,7 +1092,7 @@ class GameController {
 
   startDay(commandQueueItem) {
     if (this.levelModel.isDaytime) {
-      if(commandQueueItem)
+      if (commandQueueItem)
         commandQueueItem.succeeded();
       if (this.DEBUG)
         this.game.debug.text("Impossible to start day since it's already day time\n");
@@ -1086,20 +1101,24 @@ class GameController {
       this.levelModel.isDaytime = true;
       this.levelModel.clearFow();
       this.levelView.updateFowPlane(this.levelModel.fowPlane);
-      this.events.forEach(e => e({ eventType: EventType.WhenDay }));
+      this.events.forEach(e => e({ eventType: EventType.WhenDayGlobal }));
+      var entities = this.levelEntity.entityMap;
+      for (var value of entities) {
+        let entity = value[1];
+        this.events.forEach(e => e({ eventType: EventType.WhenDay, targetIdentifier: entity.identifier, targetType: entity.type }));
+      }
       var zombieList = this.levelEntity.getEntitiesOfType('zombie');
-      for(var i = 0 ; i < zombieList.length ; i++)
-      {
+      for (var i = 0; i < zombieList.length; i++) {
         zombieList[i].setBurn(true);
       }
-      if(commandQueueItem)
+      if (commandQueueItem)
         commandQueueItem.succeeded();
     }
   }
 
   startNight(commandQueueItem) {
     if (!this.levelModel.isDaytime) {
-      if(commandQueueItem)
+      if (commandQueueItem)
         commandQueueItem.succeeded();
       if (this.DEBUG)
         this.game.debug.text("Impossible to start night since it's already night time\n");
@@ -1108,33 +1127,54 @@ class GameController {
       this.levelModel.isDaytime = false;
       this.levelModel.computeFowPlane();
       this.levelView.updateFowPlane(this.levelModel.fowPlane);
-      this.events.forEach(e => e({ eventType: EventType.WhenNight }));
+      this.events.forEach(e => e({ eventType: EventType.WhenNightGlobal }));
+      var entities = this.levelEntity.entityMap;
+      for (var value of entities) {
+        let entity = value[1];
+        this.events.forEach(e => e({ eventType: EventType.WhenNight, targetIdentifier: entity.identifier, targetType: entity.type }));
+      }
       var zombieList = this.levelEntity.getEntitiesOfType('zombie');
-      for(var i = 0 ; i < zombieList.length ; i++)
-      {
+      for (var i = 0; i < zombieList.length; i++) {
         zombieList[i].setBurn(false);
       }
-      if(commandQueueItem)
+      if (commandQueueItem)
         commandQueueItem.succeeded();
     }
   }
 
-  setDayNightCycle(delayInSecond, startTime) {
-    if(!this.dayNightCycle)
-      return;
-    if(startTime === "day" || startTime === "Day")
-    {
-      setTimeout(()=>{ 
+  initiateDayNightCycle(firstDelay, delayInSecond, startTime) {
+    if (startTime === "day" || startTime === "Day") {
+      setTimeout(() => {
         this.startDay(null);
         this.setDayNightCycle(delayInSecond, "night");
-      }, delayInSecond*1000)
+      }, firstDelay * 1000)
     }
-    else if(startTime === "night" || startTime === "Night")
-    {
-      setTimeout(()=>{ 
+    else if (startTime === "night" || startTime === "Night") {
+      setTimeout(() => {
         this.startNight(null);
         this.setDayNightCycle(delayInSecond, "day");
-      }, delayInSecond*1000)
+      }, firstDelay * 1000)
+    }
+  }
+
+  setDayNightCycle(delayInSecond, startTime) {
+    if (!this.dayNightCycle)
+      return;
+    if (startTime === "day" || startTime === "Day") {
+      setTimeout(() => {
+        if (!this.dayNightCycle)
+          return;
+        this.startDay(null);
+        this.setDayNightCycle(delayInSecond, "night");
+      }, delayInSecond * 1000)
+    }
+    else if (startTime === "night" || startTime === "Night") {
+      setTimeout(() => {
+        if (!this.dayNightCycle)
+          return;
+        this.startNight(null);
+        this.setDayNightCycle(delayInSecond, "day");
+      }, delayInSecond * 1000)
     }
   }
 
@@ -1143,6 +1183,24 @@ class GameController {
       var entity = value[1];
       this.events.forEach(e => e({ eventType: EventType.WhenSpawned, targetType: entity.type, targetIdentifier: entity.identifier }));
     }
+  }
+
+  arrowDown(direction) {
+    this.player.movementState = direction;
+  }
+
+  arrowUp(direction) {
+    if (this.player.movementState === direction)
+      this.player.movementState = -1;
+  }
+
+  clickDown() {
+    this.player.movementState = -2;
+  }
+
+  clickUp() {
+    if (this.player.movementState === -2)
+      this.player.movementState = -1;
   }
 }
 

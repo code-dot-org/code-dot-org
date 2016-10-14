@@ -795,9 +795,6 @@ Craft.executeUserCode = function () {
             if (event.eventType !== eventType) {
               return;
             }
-            if (event.targetIdentifier) {
-              return;
-            }
             callback(event);
           });
     },
@@ -947,7 +944,8 @@ Craft.executeUserCode = function () {
   }.bind(this));
 
   if (Craft.initialConfig.level.dayNightCycleTime) {
-    appCodeOrgAPI.setDayNightCycle(Craft.initialConfig.level.dayNightCycleTime,
+    appCodeOrgAPI.setDayNightCycle(Craft.initialConfig.level.dayNightCycleStart,
+        Craft.initialConfig.level.dayNightCycleTime || 0,
         Craft.initialConfig.level.isDaytime ? 'day' : 'night');
   }
 };

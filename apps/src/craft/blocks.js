@@ -1,12 +1,14 @@
 const i18n = require('./locale');
 
 const eventTypes = Object.freeze({
-  WhenTouched: 0,
-  WhenUsed: 1,
-  WhenSpawned: 2,
-  WhenAttacked: 3,
-  WhenNight: 4,
-  WhenDay: 5
+  WhenTouched : 0,
+  WhenUsed : 1,
+  WhenSpawned : 2,
+  WhenAttacked : 3,
+  WhenNight : 4,
+  WhenDay : 5,
+  WhenNightGlobal : 6,
+  WhenDayGlobal : 7
 });
 
 const numbersToDisplayText = {
@@ -505,8 +507,8 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  makeGlobalEventBlock('whenDay', 'when day', eventTypes.WhenDay);
-  makeGlobalEventBlock('whenNight', 'when night', eventTypes.WhenNight);
+  makeGlobalEventBlock('whenDay', 'when day', eventTypes.WhenDayGlobal);
+  makeGlobalEventBlock('whenNight', 'when night', eventTypes.WhenNightGlobal);
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',

@@ -1,4 +1,5 @@
 import BaseEntity from "./BaseEntity.js"
+import CallbackCommand from "../CommandQueue/CallbackCommand.js";
 
 export default class Player extends BaseEntity {
   constructor(controller, type, x, y, name, isOnBlock, facing) {
@@ -6,6 +7,21 @@ export default class Player extends BaseEntity {
     this.name = name;
     this.isOnBlock = isOnBlock;
     this.inventory = {};
+    this.movementState = -1;
+  }
+
+  updateMovement() {
+    if ((this.queue.isFinished() || !this.queue.isStarted()) && this.movementState !== -1) {
+      // Arrow key
+      if(this.movementState >= 0) {
+        let direction = this.movementState;
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.controller.moveDirection(callbackCommand, direction) }, this.identifier);
+        this.addCommand(callbackCommand);
+      // Spacebar
+      } else {
+        this.controller.codeOrgAPI.destroyBlock(()=>{}, this.identifier);
+      }
+    }
   }
 
   moveForward(commandQueueItem) {
