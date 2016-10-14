@@ -1,4 +1,7 @@
 const i18n = require('./locale');
+import { singleton as studioApp } from '../StudioApp';
+import { stripQuotes, valueOr } from '../utils';
+import _ from 'lodash';
 
 const eventTypes = Object.freeze({
   WhenTouched : 0,
@@ -918,11 +921,16 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
 
+  function onSoundSelected(soundValue) {
+    var soundName = stripQuotes(soundValue).trim();
+    studioApp.playAudio(soundName);
+  }
+
   blockly.Blocks.craft_playSound = {
     helpUrl: '',
     init: function () {
       var dropdownOptions = keysToDropdownOptions(allSounds);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new blockly.FieldDropdown(dropdownOptions, onSoundSelected);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setHSV(184, 1.00, 0.74);
