@@ -14,53 +14,13 @@
           "function(){\n\n}"
         ]
       },
-      "button": null,
       "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
-      "getX": null,
-      "getY": null,
-      "getDirection": null,
-      "penUp": null,
-      "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "penRGB": {
-        "params": [
-          "0",
-          "0",
-          "0",
-          "1"
-        ],
-        "paletteParams": [
-          "r",
-          "g",
-          "b",
-          "a"
-        ]
-      },
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "forLoop_i_0_4": null,
-      "randomNumber_min_max": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "comment": null
+      "turnLeft": null
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Debug the program by verifying your IDs are being referenced properly. (Click to see full instructions)",
-    "start_blocks": "button(\"fwdBtn\",\"Go Forth!\");\r\nbutton(\"leftBtn\",\"Turn Left!\");\r\n\r\nonEvent(\"fwdBtn\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"leftbtn\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
+    "start_blocks": "onEvent(\"fwdBtn\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"leftbtn\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -75,7 +35,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\n**Debugging:** As you write more complex event-driven programs, you'll need to polish your **debugging** skills. Debugging involves locating and correcting errors within a program. It is a critical (and generally unavoidable) step when writing code.<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 200px\">\r\n\r\n**Target Application:** In the next three exercises, you'll debug this application (shown at right) which has two buttons, one for moving forward and one for turning left.\r\n\r\n**Debug the problem**:\r\nIn each problem, we've added various errors into the program and it does not work as intended. You will need to find the errors, debug the problems, and make corrections such that the program works correctly.\r\n\r\n**Checking IDs:** Your first debugging task will be to verify that the button IDs match the event-handlers. **Remember that IDs are case-sensitive**.\r\n\r\n# Do This:\r\n**Run the program** and inspect the warnings to find the error.\r\n\r\n**Debug ** the program and correct the errors so that it works as intended.\r\n\r\n**Run the program** and verify that both buttons have the intended functionality.\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "true",
@@ -91,9 +50,17 @@
     "encrypted_examples": "HkFAuxcHk7FrpOQl/NluL//zhJexv2BrW/GPj3EreveCfk9vsPDRo5c/dpNy\niy1Y\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null
+    "contained_level_names": [
+      "CSPU5_predict_mc_turtleDriverBadIDs"
+    ],
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"fwdBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 10px;\">Go Forth!</button><button id=\"leftBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 130px; top: 10px;\">Turn Left!</button></div></div>",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

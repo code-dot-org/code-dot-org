@@ -1,5 +1,5 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
-/* globals i18nData */
+/* globals scriptData, i18nData */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -12,6 +12,9 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
   }
 };
 
@@ -20,12 +23,14 @@ const styles = {
  */
 var ScriptEditor = React.createClass({
   propTypes: {
+    scriptData: React.PropTypes.object.isRequired,
     i18nData: React.PropTypes.object.isRequired
   },
 
   render() {
     return (
       <div>
+        <h2>I18n Strings</h2>
         <label>
           Title
           <input
@@ -59,12 +64,68 @@ var ScriptEditor = React.createClass({
             style={styles.input}
           />
         </label>
+        <h2>Basic Settings</h2>
+        <label>
+          Visible in Teacher Dashboard
+          <input
+            name="visible_to_teachers"
+            type="checkbox"
+            defaultChecked={!this.props.scriptData.hidden}
+            style={styles.checkbox}
+          />
+          <p>If checked this script will show up in the dropdown on the Teacher Dashboard, for teachers to assign to students.</p>
+        </label>
+        <label>
+          Login Required
+          <input
+            name="login_required"
+            type="checkbox"
+            defaultChecked={this.props.scriptData.loginRequired}
+            style={styles.checkbox}
+          />
+          <p>Require users to log in before viewing this script. This should be enabled on scripts that contain App Lab or Game Lab levels.</p>
+        </label>
+        <label>
+          Hideable Stages
+          <input
+            name="hideable_stages"
+            type="checkbox"
+            defaultChecked={this.props.scriptData.hideable_stages}
+            style={styles.checkbox}
+          />
+          <p>Allow teachers to toggle whether or not specific stages in this script are visible to students in their section.</p>
+        </label>
+        <label>
+          Professional Learning Course
+          <input
+            name="professional_learning_course"
+            defaultValue={this.props.scriptData.professionalLearningCourse}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Peer Reviews to Complete
+          <input
+            name="peer_reviews_to_complete"
+            defaultValue={this.props.scriptData.peerReviewsRequired}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Wrap-up Video
+          <input
+            name="wrapup_video"
+            defaultValue={this.props.scriptData.wrapupVideo}
+            style={styles.input}
+          />
+        </label>
+        <h2>Stages and Levels</h2>
       </div>
     );
   }
 });
 
 ReactDOM.render(
-  <ScriptEditor i18nData={i18nData} />,
+  <ScriptEditor scriptData={scriptData} i18nData={i18nData} />,
   document.querySelector('.edit_container')
 );
