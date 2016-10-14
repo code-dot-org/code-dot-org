@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,4,0,0,0],[0,0,0,1,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!",
+    "instructions": "\"Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!\"",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -26,6 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This path is a zig-zag. You need to move forward 3 times and turn 2 times.\",\r\n  \"hint_id\": \"hint2\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.\",\r\n  \"hint_id\": \"hint3\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "*\"Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!\"*",
     "contained_level_names": null
   },
   "published": true,

@@ -119,6 +119,10 @@ When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
+When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
+end
+
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
@@ -365,19 +369,27 @@ Then /^mark the current level as completed on the client/ do
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  # Sometimes there's a momentary delay loading progress (which updates the color)
+  # so allow a brief wait for the appropriate styling to show up.
+  selector = ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    And I wait to see ".header_level_container"
-    And I wait for 10 seconds
-    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait until element "#{selector}" is in the DOM
+    And I wait up to 5 seconds for element "#{selector}" to have css property "background-color" equal to "#{color_for_status(test_result)}"
+  }
+end
+
+Then /^I open the progress drop down of the current page$/ do
+  steps %{
+    Then I click selector ".header_popup_link"
+    And I wait to see ".user-stats-block"
   }
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
+  selector = ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    Then I click selector ".header_popup_link"
-    And I wait to see ".user-stats-block"
-    And I wait for 10 seconds
-    And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait until element "#{selector}" is in the DOM
+    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -385,12 +397,18 @@ Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, 
   element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
 end
 
-Then /^I navigate to the course page and verify progress for course "([^"]*)" stage (\d+) level (\d+) is "([^"]*)"/ do |course, stage, level, test_result|
+Then /^I navigate to the course page for "([^"]*)"$/ do |course|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
-    And I wait for 10 seconds
-    And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+  }
+end
+
+Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
+  selector = ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
+  steps %{
+    And I wait until element "#{selector}" is visible
+    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -402,6 +420,12 @@ end
 
 Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_value|
   element_has_css(selector, property, expected_value)
+end
+
+Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to have css property "([^"]*)" equal to "([^"]*)"$/ do |seconds, selector, property, expected_value|
+  Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
+    element_css_value(selector, property) == expected_value
+  end
 end
 
 Then /^elements "([^"]*)" have css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_values|
@@ -974,4 +998,10 @@ Then /^I unlock the stage for students$/ do
   @browser.execute_script("$('.modal-body button').first().click()")
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
+end
+
+Then /^I select the first section$/ do
+  @browser.execute_script(
+    "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
+  )
 end
