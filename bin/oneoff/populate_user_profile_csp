@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+def read_csv(filename)
+  data = []
+  CSV.foreach(filename, {headers: true, header_converters: :symbol}) do |csv|
+    data << csv
+  end
+  return data
+end
+
+def process_data(data)
+  time_now = DateTime.now
+
+  data.each do |datum|
+    user = User.with_deleted.find_by_email_or_hashed_email(datum[:email])
+    if user.nil?
+      puts "MISSING USER: #{datum[:email]}"
+      next
+    end
+    if user.user_type == 'student'
+      puts "STUDENT USER: #{datum[:email]}"
+      next
+    end
+
+    user_profile = UserProfile.find_or_create(
+      user: user,
+      course: UserProfile::CSP
+    )
+
+    datum[:other_emails].split(',').each do |email|
+      user_profile.add_other_email email
+    end
+    datum[:other_user_ids].split(',').each do |id_string|
+      user_profile.add_other_user_id id_string.to_i
+    end
+
+    user_profile.facilitator = true if datum[:facilitator]
+    user_profile.nmsi = true if datum[:nmsi]
+    user_profile.teals = true if datum[:teals]
+
+    if datum[:pd_manual]
+      if UserProfile::YEARS.include? datum[:manual]
+        user_profile.pd_manual = datum[:manual]
+      else
+        puts "MALFORMED USER: #{datum[:email]} #{datum[:manual]}"
+      end
+    end
+
+    user_profile.created_at = time_now unless user_profile.created_at
+    user_profile.updated_at = time_now
+
+    user_profile.save!
+  end
+end
+
+data = read_csv ARGV[0]
+process_data(data)
