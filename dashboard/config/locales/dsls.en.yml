@@ -1003,6 +1003,7 @@ en:
       Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Search Works: {}
       How Secure Is Your Password?:
         description here: description here
         title: title
@@ -2371,6 +2372,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -4245,10 +4249,15 @@ en:
         I feel like I need to do A LOT of review of the tasks before I run this unit: I feel like I need to do A LOT of review of the tasks before I run this unit
         I feel like I need to do SOME review of the tasks before I run this unit: I feel like I need to do SOME review of the tasks before I run this unit
       CSPU5_predict_mc_turtleDriverBadIDs:
+        Question: Question
         The turtle WILL NOT move forward when the "Go Forth" button is clicked: The turtle WILL NOT move forward when the "Go Forth" button is clicked
         The turtle WILL NOT turn left when the "Turn Left" button is clicked: The turtle WILL NOT turn left when the "Turn Left" button is clicked
         When you hit Run an error message will show that an event handler doesn't recognize an id: When you hit Run an error message will show that an event handler doesn't recognize an id
         When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.: When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.
+        When you hit run nothing will happen, there will be no error messages, until you click one of the buttons: When you hit run nothing will happen, there will be no error messages, until you click one of the buttons
+        When you hit run, an error message will show that an event handler doesn't recognize an id: When you hit run, an error message will show that an event handler doesn't recognize an id
+        description here: description here
+        title: title
       CSPU5_predict_mc_whichOfTwoEvents:
         '': ''
         Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
