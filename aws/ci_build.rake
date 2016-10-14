@@ -82,7 +82,7 @@ def threaded_each(array, thread_count=2)
     until queue.empty?
       next unless item = begin
                            queue.pop(true)
-                         rescue
+                         rescue ThreadError
                            nil
                          end
       yield item if block_given?

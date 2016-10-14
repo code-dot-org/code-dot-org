@@ -34,13 +34,13 @@ CSV.foreach(facilitators_csv, headers: true) do |row|
     if user_id.nil?
       begin
         User.find_by!(email: email)
-      rescue
+      rescue ActiveRecord::RecordNotFound
         raise "Unable to find user email #{email}"
       end
     else
       begin
         User.find_by!(id: user_id)
-      rescue
+      rescue ActiveRecord::RecordNotFound
         raise "Unable to find user id #{user_id}"
       end
     end

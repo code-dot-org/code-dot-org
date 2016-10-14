@@ -24,12 +24,12 @@ def generate_professional_development_workshop_payment_report(from=nil, to=nil)
   DB[:forms].where(kind: "ProfessionalDevelopmentWorkshop").map do |row|
     data = begin
              JSON.parse(row[:data])
-           rescue
+           rescue JSON::ParserError
              {}
            end
     processed_data = begin
                        JSON.parse(row[:processed_data])
-                     rescue
+                     rescue JSON::ParserError
                        {}
                      end
 
@@ -64,7 +64,7 @@ def generate_professional_development_workshop_teachers_report
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map do |affiliate|
     data = begin
              JSON.parse(affiliate[:data])
-           rescue
+           rescue JSON::ParserError
              {}
            end
 
@@ -107,7 +107,7 @@ def generate_professional_development_workshop_signup_report(secret)
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshopSignup', parent_id: workshop[:id]).map do |row|
     data = begin
              JSON.parse(row[:data])
-           rescue
+           rescue JSON::ParserError
              {}
            end
     if data['status_s'] == 'cancelled'
@@ -136,7 +136,7 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map do |workshop|
     data = begin
              JSON.parse(workshop[:data])
-           rescue
+           rescue JSON::ParserError
              {}
            end
 
@@ -156,7 +156,7 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
       map do |signup|
         signup_data = begin
                         JSON.parse(signup[:data])
-                      rescue
+                      rescue JSON::ParserError
                         {}
                       end
         signup_count += 1 unless signup_data['status_s'] == 'cancelled'

@@ -111,7 +111,7 @@ def main
       until queue.empty?
         item = begin
                  queue.pop(true)
-               rescue
+               rescue ThreadError
                  nil
                end
         send_message params[:template], item if item

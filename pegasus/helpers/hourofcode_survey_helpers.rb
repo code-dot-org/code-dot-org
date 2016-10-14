@@ -2,7 +2,7 @@ def generate_hoc_survey_report
   PEGASUS_DB[:forms].where(kind: 'HocSurvey2014').map do |row|
     data = begin
              JSON.parse(row[:data])
-           rescue
+           rescue JSON::ParserError
              {}
            end
 
