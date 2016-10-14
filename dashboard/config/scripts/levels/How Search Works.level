@@ -1,0 +1,16 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2016-10-14T18:11:54.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "maze_intro",
+    "markdown_instructions": "# How Search Works\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BNHR6IQJGZs\" frameborder=\"0\" allowfullscreen></iframe>",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>
