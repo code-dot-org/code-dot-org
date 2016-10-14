@@ -1,0 +1,91 @@
+---
+title: "Workshop Survey for Counselors and Administrators"
+---
+:ruby
+  dont_cache
+  enrollment_code = request.splat_path_info[1..-1]
+  enrollment = DASHBOARD_DB[:pd_enrollments].where(code: enrollment_code).first
+  pass unless enrollment
+
+  workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
+  pass unless workshop
+
+  teacher_id = enrollment[:user_id]
+  teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
+  name = teacher.nil? ? enrollment[:name] : teacher[:name]
+  email = teacher.nil? ? enrollment[:email] : teacher[:email]
+
+  plp = DASHBOARD_DB[:professional_learning_partners].where(contact_id: workshop[:organizer_id]).first
+  # Have they ever taken any pd-workshop-survey?
+  is_first_survey = teacher_id.nil? || DB[:forms].where(kind: 'PdWorkshopSurveyCounselorAdmin', user_id: teacher_id).count == 0
+
+  # Have they taken this particular survey?
+  previous_response = DB[:forms].where(kind: 'PdWorkshopSurveyCounselorAdmin', source_id: enrollment[:id]).first
+
+  course = workshop[:course]
+  pass unless ['Counselor', 'Admin'].include? course
+
+  def local_view(name, *params)
+    view "pd_workshop_survey/#{name.to_s}", *params
+  end
+
+:javascript
+  window.pdWorkshopSurvey = {
+    enrollmentCode: "#{enrollment_code}",
+    course: "#{course}"
+  };
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/js/pd-workshop-survey-counselor-admin.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+- if previous_response
+  %h1 Thank you
+  %h3 You have already completed this survey.
+
+- else
+
+  %form#pd-workshop-survey-form{role: 'form'}
+    %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
+    %input{name: 'email_s', type: 'hidden', value: email}
+    %input{name: 'name_s', type: 'hidden', value: name}
+
+    %input{name: 'enrollment_id_i', type:'hidden', value: enrollment[:id]}
+    %input{name: 'workshop_id_i', type: 'hidden', value: workshop[:id]}
+    %input{name: 'plp_b', type: 'hidden', value: plp.nil? ? '0' : '1'}
+    %input{name: 'include_demographics_b', type: 'hidden', value: is_first_survey ? '1' : '0'}
+
+    %h1
+      Satisfaction Survey for Code.org's
+      = course
+      Professional Development Workshop
+
+    #error-message{style: 'display: none'}
+
+    .main-section
+      .form-group
+        = local_view :yes_no_select,
+          name: 'consent_b',
+          label: 'Your participation is voluntary but strongly encouraged. Do you consent to completing this survey?'
+
+    .consent-only
+      .form-group
+        = local_view :yes_no_select,
+          name: 'will_teach_b',
+          label: "Will you be teaching/are you teaching #{course} in the 2016-17 school year?"
+      .form-group{id: 'will-teach-no-explain-wrapper', style: 'display: none;'}
+        %label.control-label{for: 'will_not_teach_explanation_s'}
+          %em{style: 'font-weight: normal;'} Please explain why not.
+        %div
+          %input.form-control{name: 'will_not_teach_explanation_s', placeholder: 'Why not?', type: 'text'}
+
+    .main-section
+      .form-group.submit-btn
+        %button#btn-submit.btn.btn-primary{type: "submit"} Submit
+
+  #thanks{style: 'display: none;'}
+    %h1 Thank you for your submission
+
