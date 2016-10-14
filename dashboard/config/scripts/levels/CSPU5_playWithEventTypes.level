@@ -15,12 +15,12 @@
         ]
       },
       "moveForward": null,
-      "turnLeft": null
+      "turnLeft": null,
+      "turnRight": null
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
-    "start_blocks": "onEvent(\"button1\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"button2\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -37,29 +37,31 @@
     "free_play": "true",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "show_turtle_before_run": "true",
+    "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "true",
+    "hide_design_mode": "false",
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
     "slider_speed": "1.0",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "QhkBlwDT6oYThweA4DaYpiBTHuwsxkHRoZ+9U7GegE9QLnf4ZmQmXVO++L/L\nvXWZ\n",
+    "encrypted_examples": [
+
+    ],
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": [
-      "CSPU5_predict_turtleDriver_logicError"
-    ],
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button2\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 10px;\">Go Forth!</button><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 130px; top: 10px;\">Turn Left!</button></div></div>",
+    "contained_level_names": null,
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "markdown_instructions": "\r\n# Play with different event types\r\n\r\n<img src=\"https://images.code.org/9f013bd84577eb2498061757e18a72f4-image-1444322870272.46.06 AM.png\" style=\"float: right\">\r\nIf you haven't yet, you should experiment with different event types with your `onEvent` blocks.  The ones that will work best here are mouse-related ones such as:\r\n  * click\r\n  * mousemove\r\n  * movedown\r\n  * mouseup\r\n  * mouseover\r\n\r\n*There are some events that capture keystrokes from the keyboard. These are interesting, but they do not work easily with buttons. We'll stick to mouse events for now, and get to keys later.*\r\n\r\n**Be sure** to experiment with each one.  The next exercise will quiz you on which one is which.\r\n\r\n\r\n"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
