@@ -1280,6 +1280,7 @@ en:
             Sample Apps: Sample Apps
             Updating Records: Updating Records
             Visualizing Data: Visualizing Data
+          description_audience: ''
         AlgebraA:
           title: 'Computer Science in Algebra: Course A'
           description: Learn Functional Programming through Algebra

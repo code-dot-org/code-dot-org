@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2016-10-12T17:57:33.000Z",
+  "created_at": "2016-10-13T21:34:13.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -15,12 +15,13 @@
         ]
       },
       "moveForward": null,
+      "moveBackward": null,
+      "turnRight": null,
       "turnLeft": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
-    "start_blocks": "onEvent(\"button1\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"button2\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
+    "instructions": "Debug the program by verifying your IDs are being referenced properly. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -35,28 +36,25 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
+    "markdown_instructions": "<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 200px\">\r\n\r\n# Practice! Add another button\r\nNow that you know the pattern try it out.\r\n\r\n**Add a 2nd button to the screen that turns the turtle to the left when clicked.**\r\n\r\n1. In Design Mode: drag another button onto the screen\r\n2. Switch to Code Mode: add an onEvent block to the code - make sure to set the correct id and event type\r\n3. Add code inside the function to make the turtle turn left\r\n\r\n## Baker NOTE: 1. change screen cap so buttons look like design mode buttons 2. this should pull through a project students are working on.\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "true",
+    "hide_design_mode": "false",
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "slider_speed": "1.0",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "QhkBlwDT6oYThweA4DaYpiBTHuwsxkHRoZ+9U7GegE9QLnf4ZmQmXVO++L/L\nvXWZ\n",
+    "encrypted_examples": "HkFAuxcHk7FrpOQl/NluL//zhJexv2BrW/GPj3EreveCfk9vsPDRo5c/dpNy\niy1Y\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": [
-      "CSPU5_predict_turtleDriver_logicError"
-    ],
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button2\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 10px;\">Go Forth!</button><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 130px; top: 10px;\">Turn Left!</button></div></div>",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
