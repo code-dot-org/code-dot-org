@@ -13,7 +13,7 @@ const TutorialExplorer = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.array.isRequired,
     filterGroups: React.PropTypes.array.isRequired,
-    initialFilters: React.PropTypes.array.isRequired,
+    initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
     locale: React.PropTypes.string.isRequired
   },
 
