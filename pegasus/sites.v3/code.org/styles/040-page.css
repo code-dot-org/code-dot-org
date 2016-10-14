@@ -842,3 +842,11 @@ label {
 .video_caption_link {
   font-family: 'Gotham 4r', sans-serif;
 }
+
+.assign-confirm-modal h2 {
+  margin-top: 10px;
+}
+
+.assign-confirm-modal .close {
+  margin-top: -10px;
+}
