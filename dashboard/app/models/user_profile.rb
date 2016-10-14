@@ -23,17 +23,20 @@ class UserProfile < ActiveRecord::Base
   belongs_to :user
 
   include SerializedProperties
+  # facilitator: True if the user is a Code.org facilitator.
+  # nmsi: True if the user was PDed through NMSI (https://www.nms.org/AboutNMSI.aspx).
+  # teals: True if the user was PDed through TEALS (www.tealsk12.org).
   serialized_attrs %w(facilitator nmsi teals)
 
   YEARS = [
-    YEAR_NONE = 'none'.freeze,
     YEAR_2013_2014 = '2013-2014'.freeze,
     YEAR_2014_2015 = '2014-2015'.freeze,
     YEAR_2015_2016 = '2015-2016'.freeze,
     YEAR_2016_2017 = '2016-2017'.freeze,
   ].freeze
+  NO_PD = 'no_pd'.freeze
   validates_inclusion_of :pd, in: YEARS, allow_nil: true
-  validates_inclusion_of :pd_manual, in: YEARS, allow_nil: true
+  validates_inclusion_of :pd_manual, in: YEARS + [NO_PD], allow_nil: true
 
   COURSES = [
     CSD = 'csd'.freeze,
@@ -60,8 +63,8 @@ class UserProfile < ActiveRecord::Base
   def add_other_user_id(alternate_user_id)
     existing_other_user_ids = get_other_user_ids
     return if existing_other_user_ids.include? alternate_user_id
-    self.other_user_ids = (existing_other_user_ids << alternate_user_id).join(',')
-    self.save!
+    other_user_ids = (existing_other_user_ids << alternate_user_id).join(',')
+    self.update!(other_user_ids: other_user_ids)
   end
 
   # The field other_emails is a comma-separated list of alternate email
@@ -77,17 +80,17 @@ class UserProfile < ActiveRecord::Base
   def add_other_email(email)
     existing_other_emails = get_other_emails
     return if existing_other_emails.include? email
-    self.other_emails = (existing_other_emails << email).join(',')
-    self.save!
+    other_emails = (existing_other_emails << email).join(',')
+    self.update!(other_emails: other_emails)
   end
 
   # Returns whether the user has been PDed in course, taking into account a
-  # manual answer if present.
+  # manual answer (which automatically overrides the automatic value) if
+  # present.
   # @return [String | nil] the academic year the user was PDed (if PDed) or nil
   #   (if not PDed)
   def get_pd
-    return pd unless pd_manual
     return nil if pd_manual == YEAR_NONE
-    return pd_manual
+    pd_manual || pd
   end
 end
