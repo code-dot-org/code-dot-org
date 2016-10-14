@@ -90,7 +90,7 @@ const AnimationPickerListItem = React.createClass({
           }
           {this.props.icon && <i className={"fa fa-" + this.props.icon} />}
           {this.props.category &&
-            <img style={styles.categoryImage} src={iconImageSrc}/>
+            <img className={this.props.category} style={styles.categoryImage} src={iconImageSrc}/>
           }
         </div>
         <div style={labelStyle}>
