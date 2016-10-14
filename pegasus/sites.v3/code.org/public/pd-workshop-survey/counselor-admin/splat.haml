@@ -24,6 +24,8 @@ title: "Workshop Survey for Counselors and Administrators"
 
   course = workshop[:course]
   pass unless ['Counselor', 'Admin'].include? course
+  # We can't access workshop.course_name here, but follow the same pattern anyway for consistency.
+  course_name = course == 'Admin' ? 'Administrator' : 'Counselor'
 
   def local_view(name, options = {})
     options[:form] = PdWorkshopSurveyCounselorAdmin
@@ -32,8 +34,7 @@ title: "Workshop Survey for Counselors and Administrators"
 
 :javascript
   window.pdWorkshopSurvey = {
-    enrollmentCode: "#{enrollment_code}",
-    course: "#{course}"
+    enrollmentCode: "#{enrollment_code}"
   };
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
@@ -61,7 +62,7 @@ title: "Workshop Survey for Counselors and Administrators"
 
     %h1
       Satisfaction Survey for Code.org's
-      = course
+      = course_name
       Professional Development Workshop
 
     #error-message{style: 'display: none'}
