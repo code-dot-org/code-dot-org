@@ -79,7 +79,7 @@ export default class Player extends BaseEntity {
           commandQueueItem.failed();
         });
       } else {
-        this.controller.delayPlayerMoveBy(30, 200, () => {
+        this.controller.delayPlayerMoveBy(0, 0, () => {
           commandQueueItem.succeeded();
         });
       }
