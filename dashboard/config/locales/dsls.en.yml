@@ -571,6 +571,9 @@ en:
       CSPU5_HowOnEventWorks_v2:
         description here: description here
         title: title
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: description here
+        title: title
       CSP_Final_instructions:
         description here: description here
         title: title
@@ -1000,6 +1003,7 @@ en:
       Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Search Works: {}
       How Secure Is Your Password?:
         description here: description here
         title: title
