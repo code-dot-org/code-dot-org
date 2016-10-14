@@ -91,7 +91,7 @@ class UserProfileTest < ActiveSupport::TestCase
 
   def test_get_pd_when_pded_with_manual_override_not_pded
     @user_profile.pd = UserProfile::YEAR_2015_2016
-    @user_profile.pd_manual = UserProfile::YEAR_NONE
+    @user_profile.pd_manual = UserProfile::NO_PD
     assert_equal nil, @user_profile.get_pd
   end
 end
