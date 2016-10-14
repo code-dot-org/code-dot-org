@@ -1,4 +1,3 @@
 source 'https://supermarket.chef.io'
 
 metadata
-cookbook 'nodejs_test', path: './test/cookbooks/nodejs_test'
