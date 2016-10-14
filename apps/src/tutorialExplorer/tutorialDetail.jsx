@@ -70,12 +70,13 @@ const TutorialDetail = React.createClass({
     $('body').css('overflow', 'hidden');
 
     const tableEntries = [
-      {key: 0, title: "Length",                  body: getTagString("length", this.props.item.tags_length)},
-      {key: 1, title: "Subjects",                body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 2, title: "Educator Experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
-      {key: 3, title: "Student Experience",      body: getTagString("student_experience", this.props.item.tags_student_experience)},
-      {key: 4, title: "Type of Activity",        body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      {key: 5, title: "International Languages", body: getTagString("international_languages", this.props.item.tags_international_languages)},
+      // Reserve key 0 for the optional teachers notes.
+      {key: 1, title: "Length",                  body: getTagString("length", this.props.item.tags_length)},
+      {key: 2, title: "Subjects",                body: getTagString("subject", this.props.item.tags_subject)},
+      {key: 3, title: "Educator Experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
+      {key: 4, title: "Student Experience",      body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 5, title: "Type of Activity",        body: getTagString("activity_type", this.props.item.tags_activity_type)},
+      {key: 6, title: "International Languages", body: getTagString("international_languages", this.props.item.tags_international_languages)},
     ];
 
     return (
@@ -138,10 +139,26 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailDescription}>
                     {this.props.item.longdescription}
                   </div>
+                  <a href={this.props.item.launch_url} target="_blank">
+                    <button style={{marginTop: 20}}>Start</button>
+                  </a>
                 </div>
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
+                  {this.props.item.teachers_notes &&
+                    <tr key={0}>
+                      <td style={styles.tutorialDetailsTableTitle}>
+                        More resources
+                      </td>
+                      <td style={styles.tutorialDetailsTableBody}>
+                        <a href={this.props.item.teachers_notes} target="_blank">
+                          <i className="fa fa-external-link" aria-hidden={true}></i>
+                          &nbsp;
+                          Teachers' notes
+                        </a>
+                      </td>
+                    </tr>}
                     {tableEntries.map(item =>
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>
