@@ -11,15 +11,31 @@ export default class Player extends BaseEntity {
   }
 
   updateMovement() {
-    if ((this.queue.isFinished() || !this.queue.isStarted()) && this.movementState !== -1) {
+    if (!this.controller.attemptRunning) {
+      return;
+    }
+    const queueIsEmpty = this.queue.isFinished() || !this.queue.isStarted();
+    const isMoving = this.movementState !== -1;
+    const queueHasOne = this.queue.currentCommand && this.queue.getLength() === 0;
+    const timeEllapsed = (+new Date() - this.lastMovement);
+    const movementAlmostFinished = timeEllapsed > 300;
+
+    if ((queueIsEmpty || (queueHasOne && movementAlmostFinished)) && isMoving) {
       // Arrow key
       if(this.movementState >= 0) {
         let direction = this.movementState;
-        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.controller.moveDirection(callbackCommand, direction) }, this.identifier);
+        let callbackCommand = new CallbackCommand(this, () => { }, () => {
+          this.lastMovement = +new Date();
+          this.controller.moveDirection(callbackCommand, direction);
+        }, this.identifier);
         this.addCommand(callbackCommand);
-      // Spacebar
+        // Spacebar
       } else {
-        this.controller.codeOrgAPI.destroyBlock(()=>{}, this.identifier);
+        let callbackCommand = new CallbackCommand(this, () => { }, () => {
+          this.lastMovement = +new Date();
+          this.controller.destroyBlock(callbackCommand);
+        }, this.identifier);
+        this.addCommand(callbackCommand);
       }
     }
   }

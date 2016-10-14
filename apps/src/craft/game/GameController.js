@@ -174,66 +174,84 @@ class GameController {
   addCheatKeys() {
     this.game.input.keyboard.addKey(Phaser.Keyboard.UP).onDown.add(() => {
       this.player.movementState = FacingDirection.Up;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.UP).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Up)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.W).onDown.add(() => {
       this.player.movementState = FacingDirection.Up;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.W).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Up)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onDown.add(() => {
       this.player.movementState = FacingDirection.Right;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Right)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.D).onDown.add(() => {
       this.player.movementState = FacingDirection.Right;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.D).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Right)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onDown.add(() => {
       this.player.movementState = FacingDirection.Down;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Down)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.S).onDown.add(() => {
       this.player.movementState = FacingDirection.Down;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.S).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Down)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onDown.add(() => {
       this.player.movementState = FacingDirection.Left;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Left)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.A).onDown.add(() => {
       this.player.movementState = FacingDirection.Left;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.A).onUp.add(() => {
       if (this.player.movementState === FacingDirection.Left)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
     this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onDown.add(() => {
       this.player.movementState = -2;
+      this.player.updateMovement();
     })
     this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onUp.add(() => {
       if (this.player.movementState === -2)
         this.player.movementState = -1;
+      this.player.updateMovement();
     });
   }
 
@@ -294,7 +312,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveAwayFrom (entity identifier)
-   * 
+   *
    * @memberOf GameController
    */
   moveAway(commandQueueItem, moveAwayFrom) {
@@ -366,7 +384,7 @@ class GameController {
   /**
    * @param {any} commandQueueItem
    * @param {any} moveTowardTo (entity identifier)
-   * 
+   *
    * @memberOf GameController
    */
   moveToward(commandQueueItem, moveTowardTo) {
@@ -1187,20 +1205,24 @@ class GameController {
 
   arrowDown(direction) {
     this.player.movementState = direction;
+    this.player.updateMovement();
   }
 
   arrowUp(direction) {
     if (this.player.movementState === direction)
       this.player.movementState = -1;
+    this.player.updateMovement();
   }
 
   clickDown() {
     this.player.movementState = -2;
+    this.player.updateMovement();
   }
 
   clickUp() {
     if (this.player.movementState === -2)
       this.player.movementState = -1;
+    this.player.updateMovement();
   }
 }
 

@@ -39,12 +39,14 @@ export function get(controller) {
       controller.setPlayerActionDelayByQueueLength();
       controller.queue.begin();
       controller.dispatchSpawnEventAtStart();
+      controller.attemptRunning = true;
     },
 
     resetAttempt: function () {
       controller.reset();
       controller.queue.reset();
       controller.OnCompleteCallback = null;
+      controller.attemptRunning = false;
     },
 
     /**
