@@ -17,59 +17,56 @@ social:
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
 
-- tutorialsContents = Tutorials.new(:tutorials).contents
+- tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
 - filters = []
 
 - entries = []
-- entries << {name: "pre", text: "Pre-reader"}
-- entries << {name: "2-5", text: "2-5"}
-- entries << {name: "6-8", text: "6-8"}
-- entries << {name: "9+", text: "9+"}
+- entries << {name: "pre", text: "Pre-reader (Ages 4-6)"}
+- entries << {name: "2-5", text: "Grades 2-5 (Ages 7-10)"}
+- entries << {name: "6-8", text: "Grades 6-8 (Ages 11-13)"}
+- entries << {name: "9+", text: "Grades 9+ (Ages 14+)"}
 - filters << {name: "grade", text: "Grades", entries: entries}
 
 - entries = []
 - entries << {name: "beginner", text: "Beginner"}
 - entries << {name: "comfortable", text: "Comfortable"}
 - entries << {name: "experienced", text: "Experienced"}
-- filters << {name: "teacher_experience", text: "Educator experience", entries: entries}
+- filters << {name: "teacher_experience", text: "Educator's CS experience", entries: entries}
 
 - entries = []
 - entries << {name: "beginner", text: "Beginner"}
+- entries << {name: "comfortable", text: "Comfortable"}
 - entries << {name: "experienced", text: "Experienced"}
-- filters << {name: "student_experience", text: "Student experience", entries: entries}
+- filters << {name: "student_experience", text: "Student's CS experience", entries: entries}
 
 - entries = []
-- entries << {name: "puzzle", text: "Puzzles"}
-- entries << {name: "open-ended", text: "Open-ended"}
-- entries << {name: "sandbox", text: "Sandbox"}
-- entries << {name: "lesson-plan", text: "Lesson plan"}
-- entries << {name: "unplugged", text: "Unplugged"}
-- entries << {name: "maker", text: "Maker"}
+- entries << {name: "online-tutorials", text: "Online tutorials"}
+- entries << {name: "lesson-plan", text: "Lesson plan "}
+- entries << {name: "offline-apps", text: "Offline apps (for poor or no internet)  "}
+- entries << {name: "unplugged", text: "Classroom activity with no technology"}
 - filters << {name: "activity_type", text: "Activity type", entries: entries}
 
 - entries = []
-- entries << {name: "cs", text: "Computer Science"}
 - entries << {name: "science", text: "Science"}
 - entries << {name: "math", text: "Math"}
 - entries << {name: "history", text: "Social Studies, History"}
 - entries << {name: "la", text: "Language Arts"}
 - entries << {name: "language", text: "World language"}
-- entries << {name: "art", text: "Art, design, media"}
-- entries << {name: "music", text: "Music"}
+- entries << {name: "art", text: "Art, Design, Media"}
 - entries << {name: "other", text: "Other"}
-- filters << {name: "subject", text: "Subject", entries: entries}
+- entries << {name: "cs", text: "Computer Science onyl"}
+- filters << {name: "subject", text: "Topics", entries: entries}
 
 - entries = []
-- entries << {name: "browser", text: "Cross platform (browsers)"}
-- entries << {name: "ipad", text: "iPads"}
-- entries << {name: "android-tablet", text: "Android Tablets"}
+- entries << {name: "all", text: "All devices"}
+- entries << {name: "browser", text: "Computers"}
+- entries << {name: "android-tablet", text: "Android Tablet"}
+- entries << {name: "ipad", text: "iPad"}
+- entries << {name: "android-phone", text: "Android phone"}
 - entries << {name: "iphone", text: "iPhones"}
-- entries << {name: "android-phone", text: "Android phones"}
-- entries << {name: "windows", text: "Windows"}
-- entries << {name: "mac", text: "Mac"}
-- entries << {name: "unplugged", text: "None (Unplugged lessons)"}
-- filters << {name: "platform", text: "Platform", entries: entries}
+- entries << {name: "unplugged", text: "No computers or devices"}
+- filters << {name: "platform", text: "Classroom technology", entries: entries}
 
 - entries = []
 - entries << {name: "1hour", text: "One hour"}
@@ -79,14 +76,23 @@ social:
 
 - entries = []
 - entries << {name: "blocks", text: "Blocks"}
-- entries << {name: "javascript", text: "JavaScript"}
-- entries << {name: "python", text: "Python" }
-- entries << {name: "coffeescript", text: "CoffeeScript"}
-- entries << {name: "java", text: "Java"}
 - entries << {name: "c", text: "C/C++"}
-- filters << {name: "programming_language", text: "Programming language", entries: entries}
+- entries << {name: "java", text: "Java"}
+- entries << {name: "javascript", text: "JavaScript"}
+- entries << {name: "ios", text: "iOS/Swift"}
+- entries << {name: "python", text: "Python" }
+- entries << {name: "ruby", text: "Ruby" }
+- entries << {name: "none", text: "Language independent" }
+- entries << {name: "other", text: "Other"}
+- filters << {name: "programming_language", text: "Language", entries: entries}
 
--# = tutorials.contents[0].to_json
+- initial_filters = {}
+- initial_filters[:platform] = ["all"]
+- initial_filters[:teacher_experience] = ["beginner"]
+- initial_filters[:student_experience] = ["beginner"]
+- initial_filters[:length] = ["1hour", "1hour-follow"]
+
+-# = tutorialsContents.to_json
 
 #tutorials
 
@@ -95,8 +101,9 @@ social:
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
-      tutorials: #{tutorialsContents.to_json},
+      tutorials: #{tutorials_contents.to_json},
       filters: #{filters.to_json},
+      initialFilters: #{initial_filters.to_json},
       locale: "#{request.locale}"
       }
     );
