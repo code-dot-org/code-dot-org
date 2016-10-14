@@ -1,0 +1,24 @@
+name 'CSPU5_predict_onEvent_withWrongID'
+title 'title'
+question 'Question'
+wrong 'The code WILL run. When the button is clicked the turtle will move forward.'
+wrong 'The code WILL run. But will crash as soon as the button is clicked.'
+right 'The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id"'
+wrong 'The code will NOT run. When you click the button nothing will happen.'
+
+markdown <<MARKDOWN
+# Making Predictions - Learning to Code Better, Faster
+Research has shown that when you encounter a new piece of code you learn faster by simply **making a prediction about what will happen before you run the program**. It's not actually important if your prediction is correct, but the simple act of forcing yourself to make a prediction actually helps you remember the answer.
+
+
+### Make a Prediction
+You are going to attempt to predict what will happen when you hit the run button, but you must **first** make a prediction.
+
+Use the possible answers below as hints and clues for things to investigate, study **both the code and the design mode** for the project.
+
+Here is a screen shot of design mode open, showing the properties for the button.
+
+*(Please note that this **is not a test** and **you are not expected to know** the answer. The only requirement is that you make a guess.)*
+
+![](https://images.code.org/67622eea9e9c9cdcb2e32201dd2860a5-image-1476388686999.png)
+MARKDOWN

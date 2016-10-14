@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Follow this path to get me to the pig!",
+    "instructions": "\"Follow this path to get me to the pig!\"",
     "start_direction": "0",
     "step_mode": "0",
     "is_k1": "false",
@@ -28,7 +28,9 @@
     "disable_examples": "false",
     "authored_hints": "[]",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"These blocks don't have a number on them. You can use as many as you want!\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "*\"Follow this path to get me to the pig!\"*",
+    "maze_data": null
   },
   "published": true,
   "notes": "",

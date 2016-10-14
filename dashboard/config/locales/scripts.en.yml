@@ -1448,6 +1448,8 @@ en:
             User Input and Strings: User Input and Strings
             Using Variables in Apps: Using Variables in Apps
             While Loops: While Loops
+            Edited lessons ABOVE this line: Edited lessons ABOVE this line
+            Buttons and Events: Buttons and Events
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1481,6 +1483,7 @@ en:
             Functions: Functions
             Platform Jumper: Platform Jumper
             Defender: Defender
+            'Project: Build a Game': 'Project: Build a Game'
           description_audience: ''
         2016_sciencePD_phase1:
           title: 'CS in Science: Part 1'
