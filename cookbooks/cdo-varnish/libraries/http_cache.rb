@@ -22,6 +22,16 @@ class HttpCache
     mc
     frozen
     gumball
+    20-hour
+    course1
+    course2
+    course3
+    course4
+    flappy
+    playlab
+    artist
+    infinity
+    iceage
   ).each do |script_name|
     CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
   end
