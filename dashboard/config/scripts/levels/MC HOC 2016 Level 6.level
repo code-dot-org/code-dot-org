@@ -46,6 +46,7 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="craft_whenNight"/>
         <block type="craft_zombieSpawnedTouchedClickedDay">
           <statement name="WHEN_TOUCHED">
             <block type="craft_wait">
@@ -66,14 +67,11 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="craft_attack"/>
-        <block type="craft_destroyEntity"/>
-        <block type="craft_drop">
-          <title name="TYPE">dirt</title>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">zombie</title>
+          <title name="DIRECTION">up</title>
         </block>
-        <block type="craft_flashEntity"/>
         <block type="craft_moveForward"/>
-        <block type="craft_moveRandom"/>
         <block type="craft_moveToward">
           <title name="TYPE">Player</title>
         </block>
@@ -83,20 +81,20 @@
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
         </block>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_flashEntity"/>
         <block type="craft_playSound">
           <title name="TYPE">dig_wood1</title>
         </block>
-        <block type="craft_spawnEntity">
-          <title name="TYPE">sheep</title>
-          <title name="DIRECTION">up</title>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
         </block>
+        <block type="craft_attack"/>
         <block type="craft_forever"/>
         <block type="craft_repeatDropdown">
           <title name="TIMES">2</title>
         </block>
         <block type="craft_repeatRandom"/>
-        <block type="craft_whenDay"/>
-        <block type="craft_whenNight"/>
       </xml>
     </toolbox_blocks>
   </blocks>

@@ -53,11 +53,19 @@
       <xml>
         <block type="craft_moveForward"/>
         <block type="craft_entityTurn">
-          <title name="DIR">left</title>
+          <title name="DIR">random</title>
         </block>
-        <block type="craft_moveRandom"/>
+        <block type="craft_wait">
+          <title name="TYPE">0.4</title>
+        </block>
         <block type="craft_forever"/>
         <block type="craft_repeatRandom"/>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

@@ -46,7 +46,6 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
         <block type="craft_chickenSpawnedClicked"/>
       </xml>
     </start_blocks>
@@ -55,6 +54,12 @@
         <block type="craft_moveForward"/>
         <block type="craft_entityTurnLR">
           <title name="DIR">left</title>
+        </block>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
+        <block type="craft_drop">
+          <title name="TYPE">egg</title>
         </block>
       </xml>
     </toolbox_blocks>
