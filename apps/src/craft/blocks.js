@@ -427,6 +427,17 @@ exports.install = function (blockly, blockInstallOptions) {
     WHEN_DAY: eventTypes.WhenDay,
   };
 
+  //When Spawned, When Touched, When Clicked, When Attacked, When Day, When Night
+
+  const defaultEventOrder = [
+    'WHEN_SPAWNED',
+    'WHEN_TOUCHED',
+    'WHEN_USED',
+    'WHEN_ATTACKED',
+    'WHEN_DAY',
+    'WHEN_NIGHT',
+  ];
+
   const statementNameToDisplayName = {
     WHEN_USED: "when clicked",
     WHEN_TOUCHED: "when touched",
@@ -436,7 +447,7 @@ exports.install = function (blockly, blockInstallOptions) {
     WHEN_DAY: "when day",
   };
 
-  function blockFor(displayName, statementNames = Object.keys(statementNameToDisplayName)) {
+  function blockFor(displayName, statementNames = defaultEventOrder) {
     return {
       init: function () {
         this.appendDummyInput()
@@ -451,7 +462,7 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  function generatorFor(blockType, statementNames = Object.keys(statementNameToEvent)) {
+  function generatorFor(blockType, statementNames = defaultEventOrder) {
     return function () {
       return statementNames.map((statementName) => {
         return `
