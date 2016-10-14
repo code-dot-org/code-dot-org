@@ -79,7 +79,7 @@ Resources:
       DistributionConfig: <%=AWS::CloudFront.config_cloudformation(app.downcase.to_sym, "origin-#{subdomain}", [app_domain],
         ACMCertificateArn: certificate_arn,
         MinimumProtocolVersion: 'TLSv1',
-        SSLSupportMethod: 'sni-only'
+        SslSupportMethod: 'sni-only'
       )%>
 <%  else%>
           TTL: 60
