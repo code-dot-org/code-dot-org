@@ -17,7 +17,7 @@ social:
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
 
-- tutorialsContents = Tutorials.new(:tutorials).contents
+- tutorialsContents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
 - filters = []
 
@@ -86,7 +86,7 @@ social:
 - entries << {name: "c", text: "C/C++"}
 - filters << {name: "programming_language", text: "Programming language", entries: entries}
 
--# = tutorials.contents[0].to_json
+-# = tutorialsContents.to_json
 
 #tutorials
 

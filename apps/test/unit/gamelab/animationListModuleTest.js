@@ -7,7 +7,8 @@ import reducer, {
     setInitialAnimationList,
     deleteAnimation,
     addBlankAnimation,
-    addLibraryAnimation
+    addLibraryAnimation,
+    withAbsoluteSourceUrls
 } from '@cdo/apps/gamelab/animationListModule';
 import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
@@ -341,6 +342,73 @@ describe('animationListModule', function () {
       store.dispatch(addLibraryAnimation(libraryAnimProps));
       let blankAnimationKey4 = store.getState().animationList.orderedKeys[2];
       expect(store.getState().animationList.propsByKey[blankAnimationKey4].name).to.equal('library_animation_2');
+    });
+  });
+
+  describe('withAbsoluteSourceUrls', function () {
+    function expectDeepEqual(a, b) {
+      expect(a).to.deep.equal(b,
+        "Expected to be deeply equal:\n" +
+        "<<<<<<<<\n" +
+        JSON.stringify(a, null, 2) + "\n" +
+        "--------\n" +
+        JSON.stringify(b, null, 2) + "\n" +
+        ">>>>>>>>\n");
+    }
+
+    it('generates absolute source URLs for animations with no source URL', function () {
+      const serializedList = {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {}
+        }
+      };
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {
+            sourceUrl: `${document.location.origin}/v3/animations/fake_id/foo.png`
+          }
+        }
+      });
+    });
+
+    it('converts relative source URLs to absolute URLs', function () {
+      const serializedList = {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {
+            sourceUrl: '/some-origin-relative-url'
+          }
+        }
+      };
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {
+            sourceUrl: `${document.location.origin}/some-origin-relative-url`
+          }
+        }
+      });
+    });
+
+    it('Uses media proxy for absolute URLs', function () {
+      const serializedList = {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {
+            sourceUrl: 'http://host.com/some-absolute-url'
+          }
+        }
+      };
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {
+            sourceUrl: `${document.location.origin}/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`
+          }
+        }
+      });
     });
   });
 });
