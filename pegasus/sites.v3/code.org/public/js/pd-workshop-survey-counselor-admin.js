@@ -9,8 +9,8 @@ $(document).ready(function () {
     PdWorkshopSurveyFormSubmit(event);
   });
 
-  $("input[name='how_heard_counselor_admin_ss[]']:checkbox").change(function () {
-    if ($("input[name='how_heard_counselor_admin_ss[]'][value='Other']").is(":checked")) {
+  $("input[name='how_heard_ss[]']:checkbox").change(function () {
+    if ($("input[name='how_heard_ss[]'][value='Other']").is(":checked")) {
       $('#how-heard-other-wrapper').show();
     } else {
       $('#how-heard-other-wrapper').hide();

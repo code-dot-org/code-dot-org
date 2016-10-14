@@ -1,4 +1,4 @@
--# Expected params: name, label, required (default: true)
+-# Expected params: name, label, form, required (default: true)
 
 -required = true unless defined? required
 
@@ -7,7 +7,7 @@
     = label
     -if required
       %span.form-required-field *
-  - PdWorkshopSurvey::options_for(name).map do |option|
+  - form.options_for(name).map do |option|
     .checkbox
       %label{style: 'font-family: inherit'}
         %input{name: name, type: 'checkbox', value: option}
