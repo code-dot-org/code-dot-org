@@ -1,0 +1,69 @@
+name 'External MD column Test bootstrap'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Here is an explanation
+
+Check out the diagram below
+
+<img src="https://images.code.org/8569ba3ab14ef36c9f0deef5e8f872de-image-1476451128076.gif">
+
+## CSS Columns
+Below, the text is actually represented in a **single div** using css: `column-count: 3; ...`
+
+<div style="column-count: 3; column-gap: 40px; column-rule: 0.5px solid #00adbc; width: 800px">
+
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+</div>
+
+## 3 Unique Column Test
+
+Below, each column is its own div.
+
+<div style="width: 25%; float: left; margin-right: 10px; padding: 10px; border-right: 0.5px solid #00adbc;">
+
+## first
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in.
+
+</div><div style="width: 25%; float: left; margin-right: 10px; padding: 10px; border-right: 0.5px solid #00adbc;">
+
+
+## second
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla fa
+
+</div><div style="width: 25%; float: left; margin-right: 10px; padding: 10px;">
+
+
+## third
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facil
+</div>
+
+<div style="clear: both">
+foo
+</div>
+
+## Bootstrap Test
+
+[row]
+
+### Column one
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facil
+
+
+
+[/row]
+
+## Normal Text
+
+* Do this
+* That 
+* And the other thing
+
+
+MARKDOWN

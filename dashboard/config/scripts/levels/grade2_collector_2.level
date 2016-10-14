@@ -26,8 +26,9 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "I love to chase the ball, but what should I do when I get to it?",
-    "markdown_instructions": "I love to chase the ball, but what should I do when I get to it?",
+    "instructions": "Move Laurel to the gold, then use `collect` to pick it up.",
+    "markdown_instructions": "Move Laurel to the gold, then use `collect` to pick it up.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,

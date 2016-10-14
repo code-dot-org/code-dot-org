@@ -16,10 +16,11 @@ var extensionFilter = {
 var ImagePicker = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
+    assetsChanged: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
-    channelId: React.PropTypes.string.isRequired,
     uploadsEnabled: React.PropTypes.bool.isRequired,
     showUnderageWarning: React.PropTypes.bool.isRequired,
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -86,9 +87,10 @@ var ImagePicker = React.createClass({
     var body = !this.props.assetChosen || this.state.mode === 'files' ?
       <AssetManager
         assetChosen={this.props.assetChosen}
+        assetsChanged={this.props.assetsChanged}
         allowedExtensions={extensionFilter[this.props.typeFilter]}
-        channelId={this.props.channelId}
         uploadsEnabled={this.props.uploadsEnabled}
+        useFilesApi={this.props.useFilesApi}
       /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
@@ -119,7 +121,7 @@ if (BUILD_STYLEGUIDE) {
         {
           name: 'with warning',
           story: () => (
-            <ImagePicker showWarning channelId="some-channel" uploadsEnabled />
+            <ImagePicker showWarning uploadsEnabled />
           )
         },
       ]);
