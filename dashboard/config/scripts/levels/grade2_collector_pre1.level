@@ -27,8 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "\"Hi, I'm Laurel! Help me collect some gold.\"",
-    "contained_level_names": null,
-    "markdown_instructions": "*\"Hi, I'm Laurel! Help me collect some gold.\"*"
+    "markdown_instructions": "*\"Hi, I'm Laurel! Help me collect some gold.\"*",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

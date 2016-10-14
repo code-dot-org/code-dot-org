@@ -17,6 +17,7 @@
         - else
           = f.hidden_field :name
         :javascript
+          const scriptData = #{(@script ? @script.summarize : {}).to_json};
           const i18nData = #{(@script ? @script.summarize_i18n : {}).to_json};
 
         .edit_container

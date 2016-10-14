@@ -559,7 +559,19 @@ en:
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
+      CSPU5_ChoosingGoodIds:
+        description here: description here
+        title: title
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: description here
+        title: title
       CSPU5_FirstTimeDesignMode:
+        description here: description here
+        title: title
+      CSPU5_HowOnEventWorks_v2:
+        description here: description here
+        title: title
+      CSPU5_goodbyeTurtle_setPosition:
         description here: description here
         title: title
       CSP_Final_instructions:
@@ -966,6 +978,12 @@ en:
       Equity Welcome: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
+      External MD column Test:
+        description here: description here
+        title: title
+      External MD column Test bootstrap:
+        description here: description here
+        title: title
       External level test (will):
         first computer program: first computer program
       Favicon Instructions: {}
@@ -4226,6 +4244,24 @@ en:
         I feel like I could run this unit right now: I feel like I could run this unit right now
         I feel like I need to do A LOT of review of the tasks before I run this unit: I feel like I need to do A LOT of review of the tasks before I run this unit
         I feel like I need to do SOME review of the tasks before I run this unit: I feel like I need to do SOME review of the tasks before I run this unit
+      CSPU5_predict_mc_turtleDriverBadIDs:
+        The turtle WILL NOT move forward when the "Go Forth" button is clicked: The turtle WILL NOT move forward when the "Go Forth" button is clicked
+        The turtle WILL NOT turn left when the "Turn Left" button is clicked: The turtle WILL NOT turn left when the "Turn Left" button is clicked
+        When you hit Run an error message will show that an event handler doesn't recognize an id: When you hit Run an error message will show that an event handler doesn't recognize an id
+        When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.: When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.
+      CSPU5_predict_mc_whichOfTwoEvents:
+        '': ''
+        Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
+        First onEvent block wins - the turtle will only move forward: First onEvent block wins - the turtle will only move forward
+        Last onEvent block wins - the turtle will only turn left: Last onEvent block wins - the turtle will only turn left
+        The program will crash when the button is clicked with an error stating it doesn't know which event handler to run: The program will crash when the button is clicked with an error stating it doesn't know which event handler to run
+        title: title
+      CSPU5_predict_mc_whichOfTwoEvents_2:
+        Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
+        First onEvent block wins - the turtle will only move forward: First onEvent block wins - the turtle will only move forward
+        Last onEvent block wins - the turtle will only turn left: Last onEvent block wins - the turtle will only turn left
+        The program will crash when the button is clicked with an error stating it doesn't know which event handler to run: The program will crash when the button is clicked with an error stating it doesn't know which event handler to run
+        question: question
       CSPU5_predict_onEvent_withWrongID:
         Question: Question
         The code WILL run. But will crash as soon as the button is clicked.: The code WILL run. But will crash as soon as the button is clicked.
@@ -4233,6 +4269,12 @@ en:
         The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id": The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id"
         The code will NOT run. When you click the button nothing will happen.: The code will NOT run. When you click the button nothing will happen.
         title: title
+      CSPU5_predict_turtleDriver_logicError:
+        ? Button IDs assigned to wrong event handlers. "Go Forth" button makes the turtle turn left, and "Turn Left" makes the turtle move forward.
+        : Button IDs assigned to wrong event handlers. "Go Forth" button makes the turtle turn left, and "Turn Left" makes the turtle move forward.
+        Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward: Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward
+        Buttons won't work because the button IDs are not descriptive enough: Buttons won't work because the button IDs are not descriptive enough
+        Trick Question! There actually are no errors.  The program will work as intended.: Trick Question! There actually are no errors.  The program will work as intended.
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
