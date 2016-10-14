@@ -11,8 +11,9 @@ import TutorialSet from './tutorialSet';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
-    filterGroups: React.PropTypes.array.isRequired,
     tutorials: React.PropTypes.array.isRequired,
+    filterGroups: React.PropTypes.array.isRequired,
+    initialFilters: React.PropTypes.array.isRequired,
     locale: React.PropTypes.string.isRequired
   },
 
@@ -21,6 +22,10 @@ const TutorialExplorer = React.createClass({
 
     for (const filterGroup of this.props.filterGroups) {
       filters[filterGroup.name] = [];
+      const initialFiltersForGroup = this.props.initialFilters[filterGroup.name];
+      if (initialFiltersForGroup) {
+        filters[filterGroup.name] = initialFiltersForGroup;
+      }
     }
     return {
       filters: filters
@@ -92,8 +97,9 @@ window.TutorialExplorerManager = function (options) {
   this.renderToElement = function (element) {
     ReactDOM.render(
       <TutorialExplorer
-        filterGroups={options.filters}
         tutorials={options.tutorials}
+        filterGroups={options.filters}
+        initialFilters={options.initialFilters}
         locale={options.locale}
       />,
       element
