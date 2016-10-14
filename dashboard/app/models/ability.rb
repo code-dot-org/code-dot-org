@@ -106,7 +106,7 @@ class Ability
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
-        can [:read, :start, :end, :update, :destroy], Pd::Workshop, organizer_id: user.id
+        can [:read, :start, :end, :update, :destroy, :workshop_organizer_survey_report], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
         can :read, Pd::WorkshopOrganizerReport
         can :read, Pd::TeacherProgressReport
