@@ -24,6 +24,8 @@ module.exports.PlayBehavior = utils.makeEnum(
   'NEVER_PLAY'
 );
 
+module.exports.AllAnimationsCategory = 'category_all';
+
 module.exports.AnimationCategories = {
 	'category_animals': 'Animals',
 	'category_generic_items': 'Generic items',

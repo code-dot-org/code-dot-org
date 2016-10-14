@@ -3,7 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from '../../color';
-import {AnimationCategories} from '../constants';
+import {AllAnimationsCategory, AnimationCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -12,14 +12,16 @@ import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 
 const MAX_SEARCH_RESULTS = 40;
-const allAnimationsStyle = {
-  color: color.purple,
-  fontFamily: "'Gotham 7r', sans-serif, sans-serif",
-  cursor: "pointer"
-};
-const breadCrumbsStyle = {
-  margin: "8px 0",
-  fontSize: 14
+const animationPickerStyles = {
+  allAnimations: {
+    color: color.purple,
+    fontFamily: "'Gotham 7r', sans-serif",
+    cursor: "pointer"
+  },
+  breadCrumbs: {
+    margin: "8px 0",
+    fontSize: 14
+  }
 };
 
 const AnimationPickerBody = React.createClass({
@@ -42,8 +44,8 @@ const AnimationPickerBody = React.createClass({
     this.setState({searchQuery: value});
   },
 
-  onCategoryChange(category) {
-    this.setState({categoryQuery: category});
+  onCategoryChange(event) {
+    this.setState({categoryQuery: event.target.className});
   },
 
   onClearCategories() {
@@ -56,13 +58,13 @@ const AnimationPickerBody = React.createClass({
         key={category}
         label={AnimationCategories[category]}
         category={category}
-        onClick={() => this.onCategoryChange(category)}
+        onClick={this.onCategoryChange}
       />
     );
   },
 
   animationItemsRendering() {
-    var pageOfResults = searchAnimations(this.state.searchQuery, this.state.categoryQuery);
+    const pageOfResults = searchAnimations(this.state.searchQuery, this.state.categoryQuery);
     return pageOfResults.map(animationProps =>
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
@@ -89,8 +91,8 @@ const AnimationPickerBody = React.createClass({
           onChange={this.onSearchQueryChange}
         />
         {this.state.categoryQuery !== '' &&
-          <div style={breadCrumbsStyle}>
-            <span onClick={this.onClearCategories} style={allAnimationsStyle}>{"All categories > "}</span>
+          <div style={animationPickerStyles.breadCrumbs}>
+            <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
             <span>{AnimationCategories[this.state.categoryQuery]}</span>
           </div>
         }
@@ -155,7 +157,7 @@ function searchAnimations(searchQuery, categoryQuery) {
         return resultSet.union(animationLibrary.aliases[nextAlias]);
       }, Immutable.Set());
 
-  if (categoryQuery !== '' && categoryQuery !== 'category_all') {
+  if (categoryQuery !== '' && categoryQuery !== AllAnimationsCategory) {
     let categoryResultSet = Object.keys(animationLibrary.aliases)
       .filter(alias => alias === categoryQuery)
       .reduce((resultSet, nextAlias) => {
