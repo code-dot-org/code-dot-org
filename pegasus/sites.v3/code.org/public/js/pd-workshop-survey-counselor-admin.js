@@ -9,19 +9,26 @@ $(document).ready(function () {
     PdWorkshopSurveyFormSubmit(event);
   });
 
-  $("input[name=consent_b]:radio").change(function () {
-    if ($("input[name=consent_b][value=1]").is(":checked")) {
-      $(".consent-only").show();
+  $("input[name='how_heard_counselor_admin_ss[]']:checkbox").change(function () {
+    if ($("input[name='how_heard_counselor_admin_ss[]'][value='Other']").is(":checked")) {
+      $('#how-heard-other-wrapper').show();
     } else {
-      $(".consent-only").hide();
+      $('#how-heard-other-wrapper').hide();
     }
   });
 
-  $("input[name=will_teach_b]:radio").change(function () {
-    if ($("input[name=will_teach_b][value=0]").is(":checked")) {
-      $("#will-teach-no-explain-wrapper").show();
+  $("input[name='attendee_type_s']").change(function () {
+    // These button groups are shared between the admin and counselor sections. Make sure
+    // we never submit a hidden answer after switching between Counselor and Admin.
+    $("input[name='understand_curricular_offerings_s']").prop('checked', false);
+    $("input[name='understand_professional_experiences_s']").prop('checked', false);
+
+    if ($("input[name='attendee_type_s'][value='Administrator']").is(':checked')) {
+      $('.counselor-section').hide();
+      $('.admin-section').show();
     } else {
-      $("#will-teach-no-explain-wrapper").hide();
+      $('.admin-section').hide();
+      $('.counselor-section').show();
     }
   });
 });

@@ -128,6 +128,11 @@ class PdWorkshopSurvey
     'Strongly Agree'
   ]
 
+  ATTENDEE_TYPE = {
+    ADMINISTRATOR: 'Administrator',
+    COUNSELOR: 'Counselor',
+  }
+
   OPTIONS = {
     reason_for_attending_ss: [
       'Personal interest',
@@ -147,6 +152,16 @@ class PdWorkshopSurvey
       'School district newsletter',
       'Workshop organizer’s website',
       'Education event/conference',
+      OTHER
+    ],
+
+    how_heard_counselor_admin_ss: [
+      'Email from the workshop organizer',
+      'Social media',
+      'Teacher at my school',
+      'From my principal or school district/administration',
+      'District meeting',
+      'Workshop organizer’s website',
       OTHER
     ],
 
@@ -247,6 +262,31 @@ class PdWorkshopSurvey
       'Somewhat excited',
       'Quite excited',
       'Extremely excited'
+    ],
+
+    how_interested_before_s: [
+      '1 - not at all interested',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6 - extremely interested',
+    ],
+
+    pacing_s: [
+      'too fast: there were too many activities packing in to the time we had together',
+      'just right',
+      'too slow: there was more time than necessary for the activities we completed',
+    ],
+
+    attendee_type_s: [
+      ATTENDEE_TYPE[:ADMINISTRATOR],
+      ATTENDEE_TYPE[:COUNSELOR]
+    ],
+
+    interested_in_offering_ss: [
+      'Computer Science Discoveries',
+      'Computer Science Principles'
     ],
 
     overall_how_interested_s: [
