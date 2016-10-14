@@ -514,6 +514,7 @@ Craft.initializeAppLevel = function (levelConfig) {
   };
 
   Craft.gameController.loadLevel({
+    levelVerificationTimeout: levelConfig.levelVerificationTimeout,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
     entities: levelConfig.entities,

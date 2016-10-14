@@ -15,10 +15,10 @@
   = f.label :is_event_level, 'Is an "Events" (HoC 2016) level'
   = boolean_check_box(f, :is_event_level)
 .field
-  = f.label :day_night_cycle_time, 'Day/night cycle length (0 is no cycle)'
+  = f.label :day_night_cycle_time, 'Day/night cycle length in seconds (0 is no cycle)'
   = f.text_field :day_night_cycle_time, {value: @level.day_night_cycle_time || 0}
 .field
-  = f.label :day_night_cycle_start, 'Time until first day/night cycle starts'
+  = f.label :day_night_cycle_start, 'Time until first day/night cycle starts (in seconds)'
   = f.text_field :day_night_cycle_start, {value: @level.day_night_cycle_start || 0}
 .field
   = f.label :show_popup_on_load, 'Show Popup on Level Start (work in progress)'
@@ -37,6 +37,9 @@
   = f.text_area :verification_function, rows: 10
   :javascript
     var verificationEditor = levelbuilder.initializeCodeMirror('level_verification_function', 'javascript');
+.field
+  = f.label :level_verification_timeout, 'Level verification timeout in milliseconds (failure if player does not succeed in allotted time)'
+  = f.text_field :level_verification_timeout, {value: @level.level_verification_timeout || 0}
 .field
   = f.label :available_blocks, 'Available Blocks in format ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"] (will eventually be multi-select)'
   %a{style:"cursor: pointer", onclick: "availableBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
