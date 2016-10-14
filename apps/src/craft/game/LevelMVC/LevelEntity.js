@@ -71,6 +71,7 @@ export default class LevelEntity {
                     entity = new BaseEntity(this.controller, type, identifier, x, y, facing);
 
             }
+            console.log('Create Entity type : ' + type + ' ' + x + ',' + y);
             this.entityMap.set(identifier, entity);
         }
         else if (this.controller.DEBUG) {
@@ -103,9 +104,9 @@ export default class LevelEntity {
             }
             if(!isSpawable)
                 return null;
-            var position = [getRandomInt(1, width - 2), getRandomInt(1, height - 2)];
+            var position = [getRandomInt(0, width -1), getRandomInt(0, height -1)];
             while (!levelModel.isPositionEmpty(position)[0]) {
-                position = [getRandomInt(1, width - 2), getRandomInt(1, height - 2)];
+                position = [getRandomInt(0, width -1), getRandomInt(0, height -1)];
             }
             return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
         } else if (spawnDirection === "left") {
@@ -114,17 +115,18 @@ export default class LevelEntity {
             while (xIndex < width && columnFull) {
                 columnFull = true;
                 for (var i = 0; i < height; i++) {
-                    if (levelModel.isPositionEmpty([xIndex, i])) {
+                    if (levelModel.isPositionEmpty([xIndex, i])[0]) {
                         columnFull = false;
                         break;
                     }
                 }
-                xIndex++;
+                if(columnFull)
+                    xIndex++;
             }
             if (xIndex < width) {
-                var position = [xIndex, getRandomInt(1, height - 2)];
+                var position = [xIndex, getRandomInt(0, height -1)];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [xIndex, getRandomInt(1, height - 2)];
+                    position = [xIndex, getRandomInt(0, height -1)];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
@@ -134,17 +136,18 @@ export default class LevelEntity {
             while (xIndex > -1 && columnFull) {
                 columnFull = true;
                 for (var i = 0; i < height; i++) {
-                    if (levelModel.isPositionEmpty([xIndex, i])) {
+                    if (levelModel.isPositionEmpty([xIndex, i])[0]) {
                         columnFull = false;
                         break;
                     }
                 }
-                xIndex--;
+                if(columnFull)
+                    xIndex--;
             }
             if (xIndex > -1) {
-                var position = [xIndex, getRandomInt(1, height - 2)];
+                var position = [xIndex, getRandomInt(0, height -1)];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [xIndex, getRandomInt(1, height - 2)];
+                    position = [xIndex, getRandomInt(0, height -1)];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
@@ -154,17 +157,18 @@ export default class LevelEntity {
             while (yIndex < height && rowFull) {
                 rowFull = true;
                 for (var i = 0; i < width; i++) {
-                    if (levelModel.isPositionEmpty([i,yIndex])) {
+                    if (levelModel.isPositionEmpty([i,yIndex])[0]) {
                         rowFull = false;
                         break;
                     }
                 }
-                yIndex++;
+                if(rowFull)
+                    yIndex++;
             }
             if (yIndex < height) {
-                var position = [getRandomInt(1, height - 2), yIndex];
+                var position = [getRandomInt(0, height -1), yIndex];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [getRandomInt(1, height - 2), yIndex];
+                    position = [getRandomInt(0, height -1), yIndex];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
@@ -174,17 +178,18 @@ export default class LevelEntity {
             while (yIndex > -1 && rowFull) {
                 rowFull = true;
                 for (var i = 0; i < width; i++) {
-                    if (levelModel.isPositionEmpty([i,yIndex])) {
+                    if (levelModel.isPositionEmpty([i,yIndex])[0]) {
                         rowFull = false;
                         break;
                     }
                 }
-                yIndex--;
+                if(rowFull)
+                    yIndex--;
             }
             if (yIndex > -1) {
-                var position = [getRandomInt(1, height - 2), yIndex];
+                var position = [getRandomInt(0, height -1), yIndex];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [getRandomInt(1, height - 2), yIndex];
+                    position = [getRandomInt(0, height -1), yIndex];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }

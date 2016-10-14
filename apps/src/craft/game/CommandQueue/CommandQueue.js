@@ -29,9 +29,6 @@ export default class CommandQueue {
 
   begin() {
     this.state = CommandState.WORKING;
-    if (this.gameController.DEBUG) {
-      console.log("Debug Queue: BEGIN");
-    }
   }
 
   reset() {

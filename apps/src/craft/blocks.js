@@ -1,12 +1,17 @@
 const i18n = require('./locale');
+import { singleton as studioApp } from '../StudioApp';
+import { stripQuotes, valueOr } from '../utils';
+import _ from 'lodash';
 
 const eventTypes = Object.freeze({
-  WhenTouched: 0,
-  WhenUsed: 1,
-  WhenSpawned: 2,
-  WhenAttacked: 3,
-  WhenNight: 4,
-  WhenDay: 5
+  WhenTouched : 0,
+  WhenUsed : 1,
+  WhenSpawned : 2,
+  WhenAttacked : 3,
+  WhenNight : 4,
+  WhenDay : 5,
+  WhenNightGlobal : 6,
+  WhenDayGlobal : 7
 });
 
 const numbersToDisplayText = {
@@ -422,6 +427,17 @@ exports.install = function (blockly, blockInstallOptions) {
     WHEN_DAY: eventTypes.WhenDay,
   };
 
+  //When Spawned, When Touched, When Clicked, When Attacked, When Day, When Night
+
+  const defaultEventOrder = [
+    'WHEN_SPAWNED',
+    'WHEN_TOUCHED',
+    'WHEN_USED',
+    'WHEN_ATTACKED',
+    'WHEN_DAY',
+    'WHEN_NIGHT',
+  ];
+
   const statementNameToDisplayName = {
     WHEN_USED: "when clicked",
     WHEN_TOUCHED: "when touched",
@@ -431,7 +447,7 @@ exports.install = function (blockly, blockInstallOptions) {
     WHEN_DAY: "when day",
   };
 
-  function blockFor(displayName, statementNames = Object.keys(statementNameToDisplayName)) {
+  function blockFor(displayName, statementNames = defaultEventOrder) {
     return {
       init: function () {
         this.appendDummyInput()
@@ -446,7 +462,7 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  function generatorFor(blockType, statementNames = Object.keys(statementNameToEvent)) {
+  function generatorFor(blockType, statementNames = defaultEventOrder) {
     return function () {
       return statementNames.map((statementName) => {
         return `
@@ -470,7 +486,7 @@ exports.install = function (blockly, blockInstallOptions) {
   createEventBlockForEntity('cow', 'cow');
   createEventBlockForEntity('sheep', 'sheep');
   createEventBlockForEntity('zombie', 'zombie');
-  createEventBlockForEntity('ironGolem', 'iron Golem');
+  createEventBlockForEntity('ironGolem', 'iron golem');
   createEventBlockForEntity('creeper', 'creeper');
   createEventBlockForEntity('chicken', 'chicken');
   createLimitedEventBlockForEntity('sheep', 'sheepClicked', 'sheep', ['WHEN_USED']);
@@ -505,8 +521,8 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  makeGlobalEventBlock('whenDay', 'when day', eventTypes.WhenDay);
-  makeGlobalEventBlock('whenNight', 'when night', eventTypes.WhenNight);
+  makeGlobalEventBlock('whenDay', 'when day', eventTypes.WhenDayGlobal);
+  makeGlobalEventBlock('whenNight', 'when night', eventTypes.WhenNightGlobal);
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
@@ -796,7 +812,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks[`craft_spawnEntityRandom`] = {
     helpUrl: '',
     init: function () {
-      const entityTypeDropdownOptions = keysToDropdownOptions(ENTITY_TYPES);
+      const entityTypeDropdownOptions = keysToDropdownOptions(SPAWNABLE_ENTITY_TYPES);
       var entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
 
@@ -916,11 +932,16 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
 
+  function onSoundSelected(soundValue) {
+    var soundName = stripQuotes(soundValue).trim();
+    studioApp.playAudio(soundName);
+  }
+
   blockly.Blocks.craft_playSound = {
     helpUrl: '',
     init: function () {
       var dropdownOptions = keysToDropdownOptions(allSounds);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new blockly.FieldDropdown(dropdownOptions, onSoundSelected);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setHSV(184, 1.00, 0.74);

@@ -323,7 +323,14 @@ Craft.init = function (config) {
         dom.addMouseDownTouchEvent(document.getElementById('phaser-game'),
             function() {
               return () => {
-                Craft.gameController.codeOrgAPI.destroyBlock(() => {});
+                Craft.gameController.codeOrgAPI.clickDown(() => {});
+              }
+            }());
+
+        dom.addMouseUpTouchEvent(document.getElementById('phaser-game'),
+            function() {
+              return () => {
+                Craft.gameController.codeOrgAPI.clickUp(() => {});
               }
             }());
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
@@ -381,14 +388,11 @@ var directionToFacing = {
 };
 
 Craft.onArrowButtonDown = function (btn) {
-  console.log("down");
-  console.log(btn);
-  Craft.gameController.codeOrgAPI.moveDirection(function () { }, directionToFacing[btn]);
+  Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[btn]);
 };
 
 Craft.onArrowButtonUp = function (btn) {
-  console.log("up");
-  console.log(btn);
+  Craft.gameController.codeOrgAPI.arrowUp(directionToFacing[btn]);
 };
 
 var preloadImage = function (url) {
@@ -795,9 +799,6 @@ Craft.executeUserCode = function () {
             if (event.eventType !== eventType) {
               return;
             }
-            if (event.targetIdentifier) {
-              return;
-            }
             callback(event);
           });
     },
@@ -947,7 +948,8 @@ Craft.executeUserCode = function () {
   }.bind(this));
 
   if (Craft.initialConfig.level.dayNightCycleTime) {
-    appCodeOrgAPI.setDayNightCycle(Craft.initialConfig.level.dayNightCycleTime,
+    appCodeOrgAPI.setDayNightCycle(Craft.initialConfig.level.dayNightCycleStart,
+        Craft.initialConfig.level.dayNightCycleTime || 0,
         Craft.initialConfig.level.isDaytime ? 'day' : 'night');
   }
 };

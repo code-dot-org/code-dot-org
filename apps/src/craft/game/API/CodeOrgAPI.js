@@ -39,12 +39,14 @@ export function get(controller) {
       controller.setPlayerActionDelayByQueueLength();
       controller.queue.begin();
       controller.dispatchSpawnEventAtStart();
+      controller.attemptRunning = true;
     },
 
     resetAttempt: function () {
       controller.reset();
       controller.queue.reset();
       controller.OnCompleteCallback = null;
+      controller.attemptRunning = false;
     },
 
     /**
@@ -261,11 +263,27 @@ export function get(controller) {
       controller.addCommand(callbackCommand);
     },
 
-    setDayNightCycle: function (delayInSecond, startTime) {
+    setDayNightCycle: function (firstDelay, delayInSecond,  startTime) {
       if (!controller.dayNightCycle) {
         controller.dayNightCycle = true;
-        controller.setDayNightCycle(delayInSecond, startTime);
+        controller.initiateDayNightCycle(firstDelay, delayInSecond, startTime);
       }
+    },
+
+    arrowDown: function (direction) {
+      controller.arrowDown(direction);
+    },
+
+    arrowUp: function (direction) {
+      controller.arrowUp(direction);
+    },
+
+    clickDown: function () {
+      controller.clickDown();
+    },
+
+    clickUp: function () {
+      controller.clickUp();
     }
   };
 }
