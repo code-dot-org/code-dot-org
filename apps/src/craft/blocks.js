@@ -191,7 +191,7 @@ function keysToDropdownOptions(keysList) {
 const entityActionBlocks = {
   'destroyEntity': 'disappear',
   'attack': 'attack',
-  'flashEntity': 'flash entity',
+  'flashEntity': 'flash',
   'moveForward': 'move forward',
   'moveRandom': 'move random',
   'explodeEntity': 'explode'
