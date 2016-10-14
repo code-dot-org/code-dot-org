@@ -90,7 +90,7 @@ class UserProfile < ActiveRecord::Base
   # @return [String | nil] the academic year the user was PDed (if PDed) or nil
   #   (if not PDed)
   def get_pd
-    return nil if pd_manual == YEAR_NONE
+    return nil if pd_manual == NO_PD
     pd_manual || pd
   end
 end
