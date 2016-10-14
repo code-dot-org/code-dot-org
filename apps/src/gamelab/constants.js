@@ -24,23 +24,12 @@ module.exports.PlayBehavior = utils.makeEnum(
   'NEVER_PLAY'
 );
 
-module.exports.AnimationCategories = [
-	'category_animals',
-	'category_generic_items',
-	'category_vehicles',
-	'category_characters',
-	'category_platforms',
-	'category_gameplay',
-	'category_obstacles',
-	'category_all'
-];
-
-module.exports.AnimationCategoryNames = {
+module.exports.AnimationCategories = {
 	'category_animals': 'Animals',
 	'category_generic_items': 'Generic items',
 	'category_vehicles': 'Vehicles',
 	'category_characters': 'Characters',
-	'category_platforms': 'Platforms',
+	'category_environment': 'Environment',
 	'category_gameplay': 'Game play',
 	'category_obstacles': 'Obstacles',
 	'category_all': 'All'

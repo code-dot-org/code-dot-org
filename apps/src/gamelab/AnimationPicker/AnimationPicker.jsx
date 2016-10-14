@@ -75,6 +75,7 @@ const AnimationPicker = React.createClass({
         useDeprecatedGlobalStyles
         handleClose={this.props.onClose}
         uncloseable={this.props.uploadInProgress}
+        fullWidth={true}
       >
         <HiddenUploader
           ref="uploader"

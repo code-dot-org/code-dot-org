@@ -3,7 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from '../../color';
-import {AnimationCategories, AnimationCategoryNames} from '../constants';
+import {AnimationCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -11,7 +11,7 @@ import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 
-const MAX_SEARCH_RESULTS = 32;
+const MAX_SEARCH_RESULTS = 40;
 const allAnimationsStyle = {
   color: color.purple,
   fontFamily: "'Gotham 7r', sans-serif, sans-serif",
@@ -51,10 +51,10 @@ const AnimationPickerBody = React.createClass({
   },
 
   animationCategoriesRendering() {
-    return AnimationCategories.map(category =>
+    return Object.keys(AnimationCategories).map(category =>
       <AnimationPickerListItem
         key={category}
-        label={AnimationCategoryNames[category]}
+        label={AnimationCategories[category]}
         category={category}
         onClick={() => this.onCategoryChange(category)}
       />
@@ -91,23 +91,23 @@ const AnimationPickerBody = React.createClass({
         {this.state.categoryQuery !== '' &&
           <div style={breadCrumbsStyle}>
             <span onClick={this.onClearCategories} style={allAnimationsStyle}>{"All categories > "}</span>
-            <span>{AnimationCategoryNames[this.state.categoryQuery]}</span>
+            <span>{AnimationCategories[this.state.categoryQuery]}</span>
           </div>
         }
         <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
           {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
-            <AnimationPickerListItem
-              label={gamelabMsg.animationPicker_drawYourOwn()}
-              icon="pencil"
-              onClick={this.props.onDrawYourOwnClick}
-            />
-          }
-          {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
-            <AnimationPickerListItem
-              label={gamelabMsg.animationPicker_uploadImage()}
-              icon="upload"
-              onClick={this.props.onUploadClick}
-            />
+            <div>
+              <AnimationPickerListItem
+                label={gamelabMsg.animationPicker_drawYourOwn()}
+                icon="pencil"
+                onClick={this.props.onDrawYourOwnClick}
+              />
+              <AnimationPickerListItem
+                label={gamelabMsg.animationPicker_uploadImage()}
+                icon="upload"
+                onClick={this.props.onUploadClick}
+              />
+            </div>
           }
           {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
             this.animationCategoriesRendering()
@@ -155,24 +155,17 @@ function searchAnimations(searchQuery, categoryQuery) {
         return resultSet.union(animationLibrary.aliases[nextAlias]);
       }, Immutable.Set());
 
-  const categoryResultSet = Object.keys(animationLibrary.aliases)
+  if (categoryQuery !== '' && categoryQuery !== 'category_all') {
+    let categoryResultSet = Object.keys(animationLibrary.aliases)
       .filter(alias => alias === categoryQuery)
       .reduce((resultSet, nextAlias) => {
         return resultSet.union(animationLibrary.aliases[nextAlias]);
       }, Immutable.Set());
-
-  if (categoryQuery === 'category_all') {
-    return resultSet
-      .sort()
-      .slice(0, MAX_SEARCH_RESULTS)
-      .map(result => animationLibrary.metadata[result])
-      .toArray();
-  }
-
-  if (categoryQuery !== '' && searchQuery !== '') {
-    resultSet = resultSet.intersect(categoryResultSet.toArray());
-  } else if (categoryQuery !== '') {
-    resultSet = categoryResultSet;
+    if (searchQuery !== '') {
+      resultSet = resultSet.intersect(categoryResultSet.toArray());
+    } else {
+      resultSet = categoryResultSet;
+    }
   }
 
   // Finally alphabetize the results (for stability), take only the first
