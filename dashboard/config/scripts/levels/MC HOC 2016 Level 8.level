@@ -8,7 +8,7 @@
     "skin": "craft",
     "ground_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"stone\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"gravel\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"gravel\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"gravel\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"torch\",\"\",\"torch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"creeper\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
+    "action_plane": "[\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"creeper\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
     "player_start_position": "[3, 1]",
     "grid_width": "10",
     "grid_height": "10",
@@ -32,15 +32,88 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "contained_level_names": null,
     "is_event_level": "true",
     "day_night_cycle_start": "0",
-    "day_night_cycle_time": "0"
+    "day_night_cycle_time": "0",
+    "instructions": "Oh no! The path to the village is blocked by a stone wall. Without any tools, we’re going to have to think outside of the box to get through. Perhaps that nearby Creeper can help! If we lure it to the wall, maybe we can make it explode and blast away the stone… ",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 8: Creeper breaking through wall to get to another part of the map\r\n\r\nOh no! The path to the village is blocked by a stone wall. Without any tools, we’re going to have to think outside of the box to get through. Perhaps that nearby Creeper can help! If we lure it to the wall, maybe it will explode and blast away the stone… But the Creeper explodes before it gets there! There’s gotta be a way! Let’s modify his attributes to get him to move faster or delay his explosion!\r\n\r\nSolution:               \r\n\r\nConstruct level so it would be easier to follow the player than to go left, right, left, etc.\r\n\r\nCreeper\r\nWhen spawned\r\nSet speed [slow]\r\nWhen Touched\r\nRepeat 5\r\nWait 1\r\nMove Toward [Player]\r\nExplode\r\n\r\nSuccess criteria: Steve enters the town\r\nTeaches: more emphasis on loops, possibly teaches them to set speed (optional)\r\n\r\nVIDEO about using all these concepts together (Melissa)",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="craft_creeperSpawnedTouchedClickedDay">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever">
+              <statement name="DO">
+                <block type="craft_moveRandom"/>
+              </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_moveToward">
+              <title name="TYPE">Player</title>
+              <next>
+                <block type="craft_wait">
+                  <title name="TYPE">1.0</title>
+                  <next>
+                    <block type="craft_explodeEntity"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">sheep</title>
+          <title name="DIRECTION">up</title>
+        </block>
+        <block type="craft_attack"/>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_explodeEntity"/>
+        <block type="craft_flashEntity"/>
+        <block type="craft_moveAway">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveRandom"/>
+        <block type="craft_moveToward">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_entityTurn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_wait">
+          <title name="TYPE">0.4</title>
+        </block>
+        <block type="craft_sheepSpawnedTouchedClicked"/>
+        <block type="craft_chickenSpawnedClicked"/>
+        <block type="craft_cowSpawnedTouchedClicked"/>
+        <block type="craft_zombieSpawnedTouchedClickedDay"/>
+        <block type="craft_creeperSpawnedTouchedClickedDay"/>
+        <block type="craft_forever"/>
+        <block type="craft_repeatDropdown">
+          <title name="TIMES">2</title>
+        </block>
+        <block type="craft_repeatRandom"/>
+        <block type="craft_whenDay"/>
+        <block type="craft_whenNight"/>
+        <block type="when_run"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </Craft>

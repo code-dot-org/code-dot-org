@@ -8,7 +8,7 @@
     "skin": "craft",
     "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\"]",
+    "action_plane": "[\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\"]",
     "player_start_position": "[4, 1]",
     "grid_width": "10",
     "grid_height": "10",
@@ -32,11 +32,11 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "Great, the chicken is moving! But he stopped. In games, entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n",
-    "contained_level_names": null,
+    "instructions": "Great, the chicken moved! But then he stopped. In games, entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
-    "day_night_cycle_time": "0"
+    "day_night_cycle_time": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 3:\r\n\r\nGreat, the chicken is moving! But he stopped. In games entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\n§  When Clicked\r\nNo code necessary\r\n\r\n·       Teaches: Spawning. Loops.",
@@ -46,8 +46,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="craft_chicken"/>
+        <block type="when_run" movable="false" deletable="false"/>
+        <block type="craft_chickenSpawnedClicked"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -57,5 +57,18 @@
         <block type="craft_entityTurn"/>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="craft_chickenSpawnedClicked">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever">
+              <statement name="DO">
+                <block type="craft_moveForward"/>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Craft>

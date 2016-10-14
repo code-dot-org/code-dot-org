@@ -6,13 +6,13 @@
   "user_id": 1,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"water\",\"water\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"gravel\",\"water\",\"water\",\"water\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"planksOak\",\"planksOak\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"grass\",\"water\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\"]",
     "player_start_position": "[5, 5]",
     "grid_width": "10",
     "grid_height": "10",
-    "is_daytime": "false",
+    "is_daytime": "true",
     "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
     "embed": "false",
     "is_k1": "false",
@@ -32,15 +32,72 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "contained_level_names": null,
     "is_event_level": "true",
-    "day_night_cycle_start": "0",
-    "day_night_cycle_time": "0"
+    "day_night_cycle_start": ".1",
+    "day_night_cycle_time": "10",
+    "instructions": "Nighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 6: \r\nNighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n\r\nSolution:              \r\n             Run\r\n§  When Night Falls\r\nRepeat(5)\r\nSpawn Zombie\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked\r\nDie\r\nWhen Day\r\nDie\r\n\r\n§  When Day?\r\nWhen Night\r\n\r\nTeaches: More loops: Repeat with a parameter and using that vs. repeat forever",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="craft_zombieSpawnedTouchedClickedDay">
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_wait">
+              <title name="TYPE">1.0</title>
+              <next>
+                <block type="craft_attack"/>
+              </next>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_destroyEntity"/>
+          </statement>
+          <statement name="WHEN_DAY">
+            <block type="craft_destroyEntity"/>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_attack"/>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_flashEntity"/>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveRandom"/>
+        <block type="craft_moveToward">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_entityTurn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_wait">
+          <title name="TYPE">0.4</title>
+        </block>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">sheep</title>
+          <title name="DIRECTION">up</title>
+        </block>
+        <block type="craft_forever"/>
+        <block type="craft_repeatDropdown">
+          <title name="TIMES">2</title>
+        </block>
+        <block type="craft_repeatRandom"/>
+        <block type="craft_whenDay"/>
+        <block type="craft_whenNight"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </Craft>

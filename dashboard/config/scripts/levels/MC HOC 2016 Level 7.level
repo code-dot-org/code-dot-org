@@ -6,13 +6,13 @@
   "user_id": 1,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"planksAcacia\",\"water\",\"water\",\"water\",\"water\",\"water\",\"planksAcacia\",\"planksAcacia\",\"water\",\"water\",\"planksAcacia\",\"water\",\"water\",\"water\",\"water\",\"water\",\"planksAcacia\",\"planksAcacia\",\"water\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"sand\",\"sand\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"cow\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "player_start_position": "[5, 7]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"treeAcacia\",\"\",\"\",\"\",\"\",\"treeAcacia\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"\",\"\",\"\",\"\",\"\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"cow\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\"]",
+    "player_start_position": "[5, 2]",
     "grid_width": "10",
     "grid_height": "10",
-    "is_daytime": "false",
+    "is_daytime": "true",
     "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
     "embed": "false",
     "is_k1": "false",
@@ -31,16 +31,75 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "false",
-    "player_start_direction": "0",
-    "contained_level_names": null,
+    "player_start_direction": "2",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
-    "day_night_cycle_time": "0"
+    "day_night_cycle_time": "0",
+    "instructions": "Look at this poor cow, it can’t move or make milk. Make the cow move like you did with the sheep. Lead it to the pasture and get it to drop milk.\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 7:\r\nLook at this poor cow, it can’t move or make milk, and it’s being attacked by Zombies. Restore the cow, and get it to run away from Zombies with the When Attacked category, and Move Away.\r\n\r\nSolution:               \r\nCow\r\n§  When spawned\r\n·       Repeat Forever\r\no   Repeat Random\r\no       Move Forward\r\no   Turn Random\r\n§  When Touched\r\n·       Move Toward Player\r\n§  When Used\r\n·       Drop Milk\r\n§  When Attacked\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n\r\nTeachers: reinforces loops",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
+        <block type="craft_sheep"/>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">sheep</title>
+          <title name="DIRECTION">up</title>
+        </block>
+        <block type="craft_attack"/>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_flashEntity"/>
+        <block type="craft_moveAway">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveRandom"/>
+        <block type="craft_moveToward">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_chicken"/>
+        <block type="craft_entityTurn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_wait">
+          <title name="TYPE">0.4</title>
+        </block>
+        <block type="craft_forever"/>
+        <block type="craft_whenDay"/>
+        <block type="craft_cow"/>
+        <block type="craft_repeatRandom"/>
+        <block type="craft_whenNight"/>
+        <block type="craft_repeatDropdown">
+          <title name="TIMES">2</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="craft_cow">
+          <statement name="WHEN_USED">
+            <block type="craft_drop">
+              <title name="TYPE">milk</title>
+            </block>
+          </statement>
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_moveToward">
+              <title name="TYPE">Player</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
 </Craft>

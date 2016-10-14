@@ -8,7 +8,7 @@
     "skin": "craft",
     "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\"]",
+    "action_plane": "[\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\"]",
     "player_start_position": "[4, 1]",
     "grid_width": "10",
     "grid_height": "10",
@@ -32,14 +32,14 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "This chicken has forgotten how to move! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot. When an entity is created it is called “spawning”, so the chicken will move as soon as it is created.\r\n",
-    "contained_level_names": null,
+    "instructions": "When an entity is created it is called “spawning\". This chicken has forgotten how to move after being spawned! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot so that the chicken will move as soon as it is created.\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
-    "day_night_cycle_time": "0"
+    "day_night_cycle_time": "0",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": "Puzzle 2: How did the Chicken Cross the Road?\r\nThis chicken has forgotten how to move! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot. When an entity is created it is called “spawning”, so the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\nWhen Used\r\nNo code needs to go here\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nVIDEO on how you’ve learned these CS concepts  and then go into how to make those part of the game (Lisa)",
+  "notes": "Puzzle 2: How did the Chicken Cross the Road?\r\nWhen an entity is created it is called “spawning\". This chicken has forgotten how to move after being spawned! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot so that the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\nWhen Used\r\nNo code needs to go here\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nVIDEO on how you’ve learned these CS concepts  and then go into how to make those part of the game (Lisa)",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -47,14 +47,31 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="craft_chicken"/>
+        <block type="craft_chickenSpawnedClicked"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="craft_moveForward"/>
-        <block type="craft_entityTurn"/>
+        <block type="craft_entityTurnLR">
+          <title name="DIR">left</title>
+        </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="craft_chickenSpawnedClicked">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_moveForward">
+              <next>
+                <block type="craft_turn">
+                  <title name="DIR">left</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Craft>
