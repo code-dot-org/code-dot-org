@@ -14,7 +14,15 @@ class HttpCache
       # We specify the "special case" routes here; standard routes are handled by the loop below.
       'hourofcode' => '/hoc/*'
   }
-  %w(starwars starwarsblocks mc frozen gumball).each do |script_name|
+
+  # Cached scripts
+  %w(
+    starwars
+    starwarsblocks
+    mc
+    frozen
+    gumball
+  ).each do |script_name|
     CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
   end
 
