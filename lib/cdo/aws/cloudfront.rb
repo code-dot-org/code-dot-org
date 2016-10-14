@@ -132,6 +132,7 @@ module AWS
 
       ids.map do |app, id|
         cloudfront.wait_until(:distribution_deployed, id: id) do |waiter|
+          waiter.max_attempts = 60 # wait up to an hour for CloudFront distribution to deploy
           waiter.before_wait { |_| puts "Waiting for #{app} distribution to deploy.." }
         end
         puts "#{app} distribution deployed!"
@@ -388,7 +389,7 @@ module AWS
         smooth_streaming: false,
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
-        compress: s3, # Serve gzip-compressed assets on s3 origins
+        compress: true, # Serve gzip-compressed assets
       }
       behavior[:path_pattern] = path if path
       behavior
@@ -413,7 +414,7 @@ module AWS
       {
         AllowedMethods: ALLOWED_METHODS,
         CachedMethods: CACHED_METHODS,
-        Compress: s3,
+        Compress: true,
         DefaultTTL: 0,
         ForwardedValues: {
           Cookies: cookie_config,
