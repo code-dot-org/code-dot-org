@@ -16,31 +16,6 @@ $callout-fallback-border-color: $very-dark-gray;
 
 $original-background-color: #F2F2F2;
 
-.arrow {
-  display: inline !important;
-}
-
-.left-btn {
-  background-position: -21px -42px;
-  margin-right: 3px;
-}
-.right-btn {
-  background-position: -42px -21px;
-  margin-right: 3px;
-}
-.up-btn {
-  background-position: 0px -63px;
-  margin-right: 3px;
-}
-.down-btn {
-  background-position: 0px -42px;
-  margin-right: 3px;
-}
-.action-btn {
-  background-position: 43px -673px;
-  margin-right: 3px;
-}
-
 @mixin mc-text-shadow {
   text-shadow: 2px 2px #565656 !important;
 }
@@ -49,6 +24,29 @@ $original-background-color: #F2F2F2;
   -webkit-box-shadow: $shadow;
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
+}
+
+@mixin gray-button() {
+  -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+
+
+  &:hover {
+    @include box-shadow(none);
+  }
+
+  &:active {
+    outline: none;
+
+    border-image-slice: 2 3 4 3 fill;
+    border-image-width: 10px 20px 20px 20px;
+    -moz-border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 fill stretch !important;
+  }
 }
 
 @mixin pixelated() {
@@ -79,6 +77,59 @@ $original-background-color: #F2F2F2;
     right: auto;
     left: -$button-centering-offset;
   }
+}
+
+.arrow {
+  display: inline !important;
+}
+
+@mixin flip-horizontal() {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: "FlipH";
+  filter: FlipH;
+}
+
+@mixin flip-vertical() {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
+  -ms-filter: "FlipV";
+  filter: FlipV;
+}
+
+@mixin arrow-icon($direction) {
+  scale: 2;
+  width: 25px !important;
+  height: 30px !important;
+  margin: 4px -15px -16px 11px !important;
+  padding-right: 0px !important;
+
+  background: url("#{$root}Sliced_Parts/MC_#{$direction}_Arrow_Icon.png") no-repeat 0 0 !important;
+
+  @include pixelated();
+}
+
+.left-btn {
+  @include arrow-icon("Run");
+  @include flip-horizontal();
+  margin: 4px 7px -17px -13px !important;
+}
+.right-btn {
+  @include arrow-icon("Run");
+}
+.down-btn {
+  @include arrow-icon("Down");
+  margin: 3px -11px -24px 9px !important;
+}
+.up-btn {
+  @include arrow-icon("Up");
+  margin: 3px -11px -24px 9px !important;
 }
 
 body {
@@ -390,10 +441,7 @@ $height-to-width: 434 / 477;
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
     @include pixelated();
-    -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+    @include gray-button();
     @include mc-text-shadow();
 
     color: #f1f1f1 !important;
@@ -573,10 +621,7 @@ $height-to-width: 434 / 477;
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
     @include pixelated();
-    -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+    @include gray-button();
     @include mc-text-shadow();
 
     color: #f1f1f1 !important;
@@ -625,11 +670,7 @@ $height-to-width: 434 / 477;
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
   @include pixelated();
-  -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-  -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-  -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-  border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
-
+  @include gray-button();
 
   $run-width: 16px;
   $reset-width: 40px;
@@ -663,14 +704,12 @@ $height-to-width: 434 / 477;
     }
 
     .run26 {
-      background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
-      width: $run-width;
+      scale: 2;
+      width: 6px;
       height: 34px;
-      margin-left: $run-left-margin;
-      margin-right: 3px;
-      margin-top: -2px;
-      margin-bottom: -1px;
+      margin: 16px -3px -18px 23px;
       padding-right: 13px;
+      background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
       @include pixelated();
     }
 
