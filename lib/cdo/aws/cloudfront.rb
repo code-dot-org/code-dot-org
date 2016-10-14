@@ -309,7 +309,8 @@ module AWS
           {
             Id: 'cdo',
             CustomOriginConfig: {
-              OriginProtocolPolicy: 'match-viewer'
+              OriginProtocolPolicy: 'match-viewer',
+              OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
             },
             DomainName: origin,
             OriginPath: '',
