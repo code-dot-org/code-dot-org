@@ -1,6 +1,7 @@
 ---
 title: Learn
-theme: responsive
+theme: responsive_wide
+layout: wide
 social:
   "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
   "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
@@ -13,6 +14,34 @@ social:
 ---
 
 = view 'mobilecheck.js'
+
+#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+  .thegap{style: "height: 1px"}
+    &nbsp;
+  #desktop-header.desktop-feature
+    = view :header, variant: "desktop"
+  #mobile-header.mobile-feature
+    = view :header, variant: "mobile"
+
+  .banner
+    .container_responsive{style: "color: white"}
+      .col-50{style: "text-align: center"}
+        %img{src: "images/learn/hour-of-code-logo-2016.png", style: "margin-top: 30px; margin-bottom: 30px"}
+        %br/
+        Two lines of descriptive text about the Hour of Code will go here.
+        %br/
+        %br/
+        %br/
+        %button
+          Host an Hour
+        %button
+          Teacher Guide
+        %br/
+        %br/
+      .col-50
+        %img{src: "images/learn/student1.png", style: "text-align: center"}
+
+%br/
 
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
@@ -94,7 +123,8 @@ social:
 
 -# = tutorialsContents.to_json
 
-#tutorials
+.container_responsive
+  #tutorials
 
 :javascript
 
