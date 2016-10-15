@@ -288,6 +288,8 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def send_exit_surveys
+    resolve_enrolled_users
+
     # Send the emails
     self.enrollments.each do |enrollment|
       next unless enrollment.user
