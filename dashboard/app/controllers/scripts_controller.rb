@@ -4,7 +4,6 @@ class ScriptsController < ApplicationController
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
   authorize_resource
-  before_action :set_script_file, only: [:edit, :update]
 
   def show
     if request.path != (canonical_path = script_path(@script))
@@ -61,10 +60,6 @@ class ScriptsController < ApplicationController
   end
 
   private
-
-  def set_script_file
-    @script_file = ScriptDSL.serialize_stages(@script)
-  end
 
   def rake
     @errors = []

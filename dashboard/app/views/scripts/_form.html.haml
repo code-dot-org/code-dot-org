@@ -22,9 +22,7 @@
 
         .edit_container
         = javascript_include_tag 'js/levelbuilder_edit_script'
-        .script_text
-          - rows = @script_file ? @script_file.lines.count + 10 : 5
-          = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
+
         .actions
           = f.submit
     %td(style='vertical-align: top;padding-left: 20px')
