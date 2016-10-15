@@ -3,6 +3,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import _ from 'lodash';
+import color from '../color';
 
 const styles = {
   input: {
@@ -15,13 +17,44 @@ const styles = {
   },
   checkbox: {
     margin: '0 0 0 7px'
+  },
+  groupHeader: {
+    fontSize: 18,
+    color: 'white',
+    background: color.cyan,
+    padding: 10
+  },
+  groupBody: {
+    background: color.lightest_cyan,
+    overflow: 'hidden',
+    padding: 10
+  },
+  stageCard: {
+    fontSize: 18,
+    background: 'white',
+    border: '1px solid #ccc',
+    borderRadius: 2,
+    padding: 20,
+    margin: 10
+  },
+  stageCardHeader: {
+    marginBottom: 15
+  },
+  levelToken: {
+    fontSize: 12,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    borderRadius: 2,
+    padding: 7,
+    margin: '5px 0'
   }
 };
 
 /**
  * Component for editing course scripts.
  */
-var ScriptEditor = React.createClass({
+const ScriptEditor = React.createClass({
   propTypes: {
     scriptData: React.PropTypes.object.isRequired,
     i18nData: React.PropTypes.object.isRequired
@@ -120,7 +153,61 @@ var ScriptEditor = React.createClass({
           />
         </label>
         <h2>Stages and Levels</h2>
+        <FlexGroupEditor stages={this.props.scriptData.stages} />
       </div>
+    );
+  }
+});
+
+const FlexGroupEditor = React.createClass({
+  propTypes: {
+    stages: React.PropTypes.array.isRequired
+  },
+
+  render() {
+    const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Default'));
+    let count = 1;
+
+    return (
+      <div>
+        {_.map(groups, (stages, group) => {
+          return (
+            <div key={group}>
+              <div style={styles.groupHeader}>Group {count++}: {group}</div>
+              <div style={styles.groupBody}>
+                {stages.map(stage => <StageEditor key={stage.id} stage={stage} />)}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+});
+
+const StageEditor = React.createClass({
+  propTypes: {
+    stage: React.PropTypes.object.isRequired
+  },
+
+  render() {
+    return (
+      <div style={styles.stageCard}>
+        <div style={styles.stageCardHeader}>Stage {this.props.stage.position}: {this.props.stage.name}</div>
+        {this.props.stage.levels.map(level => <LevelEditor key={level.position} level={level} />)}
+      </div>
+    );
+  }
+});
+
+const LevelEditor = React.createClass({
+  propTypes: {
+    level: React.PropTypes.object.isRequired
+  },
+
+  render() {
+    return (
+      <div style={styles.levelToken}>{this.props.level.key}</div>
     );
   }
 });
