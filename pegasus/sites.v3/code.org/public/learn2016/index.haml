@@ -26,7 +26,7 @@ social:
   .banner
     .container_responsive{style: "color: white"}
       .col-50{style: "text-align: center"}
-        %img{src: "images/learn/hour-of-code-logo-2016.png", style: "margin-top: 30px; margin-bottom: 30px"}
+        %img{src: "/images/learn/hour-of-code-logo-2016.png", style: "margin-top: 30px; margin-bottom: 30px"}
         %br/
         Two lines of descriptive text about the Hour of Code will go here.
         %br/
@@ -39,7 +39,7 @@ social:
         %br/
         %br/
       .col-50
-        %img{src: "images/learn/student1.png", style: "text-align: center"}
+        %img{src: "/images/learn/student1.png", style: "text-align: center"}
 
 %br/
 
@@ -70,9 +70,9 @@ social:
 - filters << {name: "student_experience", text: "Student's CS experience", entries: entries}
 
 - entries = []
-- entries << {name: "online-tutorials", text: "Online tutorials"}
-- entries << {name: "lesson-plan", text: "Lesson plan "}
-- entries << {name: "offline-apps", text: "Offline apps (for poor or no internet)  "}
+- entries << {name: "online-tutorial", text: "Online tutorials"}
+- entries << {name: "lesson-plan", text: "Lesson plan"}
+- entries << {name: "offline-app", text: "Offline apps (for poor or no internet)"}
 - entries << {name: "unplugged", text: "Classroom activity with no technology"}
 - filters << {name: "activity_type", text: "Activity type", entries: entries}
 
