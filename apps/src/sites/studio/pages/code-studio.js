@@ -12,10 +12,10 @@ require("babel-polyfill");
 import $ from 'jquery';
 
 // Shim window.console to be safe in IE
-require('./consoleShim')(window);
+require('@cdo/apps/code-studio/consoleShim')(window);
 
 var Sounds = require('@cdo/apps/Sounds');
-var activateReferenceAreaOnLoad = require('./reference_area');
+var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
@@ -23,46 +23,46 @@ window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
-require('./components/abuse_error');
-require('./components/report_abuse_form');
-require('./components/SendToPhone');
-require('./components/small_footer');
-require('./components/GridEditor');
-require('./components/Attachments');
+require('@cdo/apps/code-studio/components/abuse_error');
+require('@cdo/apps/code-studio/components/report_abuse_form');
+require('@cdo/apps/code-studio/components/SendToPhone');
+require('@cdo/apps/code-studio/components/small_footer');
+require('@cdo/apps/code-studio/components/GridEditor');
+require('@cdo/apps/code-studio/components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('./clientState');
-window.dashboard.createCallouts = require('./callouts');
-window.dashboard.hashEmail = require('./hashEmail');
-window.dashboard.funometer = require('./funometerPercentagesByDay');
-window.dashboard.levelCompletions = require('./levelCompletions');
-window.dashboard.popupWindow = require('./popup-window');
-window.dashboard.progress = require('./progress');
-window.dashboard.reporting = require('./reporting');
-window.dashboard.header = require('./header');
-window.dashboard.videos = require('./videos');
-window.dashboard.assets = require('./assets');
-window.dashboard.pairing = require('./pairing');
-window.dashboard.teacher = require('./teacher');
+window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
+window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts');
+window.dashboard.hashEmail = require('@cdo/apps/code-studio/hashEmail');
+window.dashboard.funometer = require('@cdo/apps/code-studio/funometerPercentagesByDay');
+window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
+window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
+window.dashboard.progress = require('@cdo/apps/code-studio/progress');
+window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
+window.dashboard.header = require('@cdo/apps/code-studio/header');
+window.dashboard.videos = require('@cdo/apps/code-studio/videos');
+window.dashboard.assets = require('@cdo/apps/code-studio/assets');
+window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
+window.dashboard.teacher = require('@cdo/apps/code-studio/teacher');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
-import { registerGetResult, registerLevel, onAnswerChanged } from './levels/codeStudioLevels';
+import { registerGetResult, registerLevel, onAnswerChanged } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 window.dashboard.codeStudioLevels = { registerGetResult, registerLevel, onAnswerChanged };
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio
-window.Dialog = require('./dialog');
+window.Dialog = require('@cdo/apps/code-studio/dialog');
 
 // When we were in browserify world, all modules in a bundle (i.e. code-studio-common)
 // would get preloaded. In webpack, they're only loaded as needed. We were
 // depending on these two modules being loaded when code-studio-common was
 // included, so force that load here.
-require('./levels/multi');
-require('./levels/textMatch');
+require('@cdo/apps/code-studio/levels/multi');
+require('@cdo/apps/code-studio/levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in New Relic.

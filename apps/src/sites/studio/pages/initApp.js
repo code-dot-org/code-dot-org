@@ -1,20 +1,20 @@
 // TODO (brent) - way too many globals
 /* global script_path, CDOSounds, appOptions, trackEvent, Applab, Blockly */
 import $ from 'jquery';
-import PlayZone from '../components/playzone';
+import PlayZone from '@cdo/apps/code-studio/components/playzone';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var timing = require('./timing');
-var chrome34Fix = require('./chrome34Fix');
-var loadApp = require('./loadApp');
-var project = require('./project');
-var userAgentParser = require('./userAgentParser');
-var clientState = require('../clientState');
-var createCallouts = require('../callouts');
-var reporting = require('../reporting');
-var Dialog = require('../dialog');
-var showVideoDialog = require('../videos').showVideoDialog;
-import { lockContainedLevelAnswers } from '../levels/codeStudioLevels';
+var timing = require('@cdo/apps/code-studio/initApp/timing');
+var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
+var loadApp = require('@cdo/apps/code-studio/initApp/loadApp');
+var project = require('@cdo/apps/code-studio/initApp/project');
+var userAgentParser = require('@cdo/apps/code-studio/initApp/userAgentParser');
+var clientState = require('@cdo/apps/code-studio/clientState');
+var createCallouts = require('@cdo/apps/code-studio/callouts');
+var reporting = require('@cdo/apps/code-studio/reporting');
+var Dialog = require('@cdo/apps/code-studio/dialog');
+var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
+import { lockContainedLevelAnswers } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
