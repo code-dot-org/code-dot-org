@@ -1316,12 +1316,14 @@ class GameController {
       this.events.forEach(e => e({ eventType: EventType.WhenSpawned, targetType: entity.type, targetIdentifier: entity.identifier }));
     }
     // set timeout for timeout
-    this.timeouts.push(setTimeout(() => {
-      let player = this.levelModel.player;
-      this.endLevel(this.timeoutResult(this.levelModel));
+    const isNumber = !isNaN(this.timeout);
+    if (isNumber && this.timeout > 0) {
+      this.timeouts.push(setTimeout(() => {
+        let player = this.levelModel.player;
+        this.endLevel(this.timeoutResult(this.levelModel));
+      }
+        , this.timeout));
     }
-      , this.timeout));
-
   }
 
   arrowDown(direction) {

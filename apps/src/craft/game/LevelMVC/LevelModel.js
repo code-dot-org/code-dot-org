@@ -94,25 +94,29 @@ export default class LevelModel {
 
     // above
     position = [this.player.position[0], this.player.position[1] - 1];
-    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+    blockIndex = this.yToIndex(position[1]) + position[0];
+    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
       return true;
     }
 
     // below
     position = [this.player.position[0], this.player.position[1] + 1];
-    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+    blockIndex = this.yToIndex(position[1]) + position[0];
+    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
       return true;
     }
 
     // left
     position = [this.player.position[0] + 1, this.player.position[1]];
-    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+    blockIndex = this.yToIndex(position[1]) + position[0];
+    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
       return true;
     }
 
     // Right
     position = [this.player.position[0] - 1, this.player.position[1]];
-    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+    blockIndex = this.yToIndex(position[1]) + position[0];
+    if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
       return true;
     }
 
@@ -123,41 +127,58 @@ export default class LevelModel {
     var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
     for (var i = 0; i < entityList.length; i++) {
       var entity = entityList[i];
-      var position;
+      var position, blockIndex;
       var result = false;
 
       // above
       position = [entity.position[0], entity.position[1] - 1];
-      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+      blockIndex = this.yToIndex(position[1]) + position[0];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
         return true;
       }
 
       // below
       position = [entity.position[0], entity.position[1] + 1];
-      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+      blockIndex = this.yToIndex(position[1]) + position[0];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
         return true;
       }
 
       // left
       position = [entity.position[0] + 1, entity.position[1]];
-      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+      blockIndex = this.yToIndex(position[1]) + position[0];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
         return true;
       }
 
       // Right
       position = [entity.position[0] - 1, entity.position[1]];
-      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType)) {
+      blockIndex = this.yToIndex(position[1]) + position[0];
+      if (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
         return true;
       }
     }
     return false;
   }
 
+  isEntityOnBlocktype(entityType, blockType, count = 1) {
+    var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
+    var resultCount = 0;
+    for (var i = 0; i < entityList.length; i++) {
+      var entity = entityList[i];
+      let blockIndex = this.yToIndex(entity.position[1]) + entity.position[0];
+      if (this.isBlockOfType(entity.position, blockType) || this.groundPlane[blockIndex].blockType === blockType) {
+        resultCount++;
+      }
+    }
+    return resultCount >= count;
+  }
+
   isEntityAt(entityType, position) {
     var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
     for (var i = 0; i < entityList.length; i++) {
       var entity = entityList[i];
-      if(entity.position[0] == position[0] && entity.position[1] == position[1])
+      if (entity.position[0] == position[0] && entity.position[1] == position[1])
         return true;
     }
     return false;
@@ -165,8 +186,8 @@ export default class LevelModel {
 
   isEntityDied(entityType, count = 1) {
     var deathCount = this.controller.levelEntity.entityDeathCount;
-    if(deathCount.has(entityType)) {
-      if(deathCount.get(entityType) >= count)
+    if (deathCount.has(entityType)) {
+      if (deathCount.get(entityType) >= count)
         return true;
     }
     return false;
@@ -319,7 +340,7 @@ export default class LevelModel {
 
   isEntityOfType(position, type) {
     var entities = this.controller.levelEntity.getEntitiesOfType(type);
-    for(var i = 0 ; i < entities.length ; i++) {
+    for (var i = 0; i < entities.length; i++) {
       var entity = entities[i];
       return (position[0] === entity.position[0]) && (position[1] === entity.position[1]);
     }

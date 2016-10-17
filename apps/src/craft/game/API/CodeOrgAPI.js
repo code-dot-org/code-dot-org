@@ -7,7 +7,6 @@ import MoveForwardCommand from "../CommandQueue/MoveForwardCommand.js";
 import TurnCommand from "../CommandQueue/TurnCommand.js";
 import WhileCommand from "../CommandQueue/WhileCommand.js";
 import IfBlockAheadCommand from "../CommandQueue/IfBlockAheadCommand.js";
-import CheckSolutionCommand from "../CommandQueue/CheckSolutionCommand.js";
 import CallbackCommand from "../CommandQueue/CallbackCommand.js";
 import RepeatCommand from "../CommandQueue/RepeatCommand.js";
 
@@ -220,7 +219,7 @@ export function get(controller) {
     destroyEntity: function (highlightCallback, targetEntity) {
       var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.destroyEntity(callbackCommand, targetEntity);
-      });
+      }, targetEntity);
       controller.addGlobalCommand(callbackCommand);
     },
 
