@@ -25,6 +25,8 @@ import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import experiments from '../../experiments';
+import InlineAudio from './InlineAudio';
 
 import {
   getOuterHeight,
@@ -134,6 +136,14 @@ const styles = {
     width: 'calc(100% - 20px)',
     float: 'left'
   },
+  instructionsWithAudio: {
+    paddingRight: 76
+  },
+  audioControls: {
+    position: 'absolute',
+    top: 7,
+    right: 12
+  }
 };
 
 var TopInstructions = React.createClass({
@@ -465,6 +475,7 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(markdown, { renderer });
     const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
+    const showAudioControls = experiments.isEnabled('tts') && acapelaSrc;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
@@ -511,20 +522,26 @@ var TopInstructions = React.createClass({
             ]}
           >
             <ChatBubble>
-              <Instructions
-                ref="instructions"
-                renderedMarkdown={renderedMarkdown}
-                acapelaSrc={acapelaSrc}
-                onResize={this.adjustMaxNeededHeight}
-                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                aniGifURL={this.props.aniGifURL}
-                inTopPane
-              />
-              {this.props.collapsed && instructions2 &&
-                <div
-                  className="secondary-instructions"
-                  dangerouslySetInnerHTML={{ __html: instructions2 }}
+              <div style={[showAudioControls && styles.instructionsWithAudio]}>
+                <Instructions
+                  ref="instructions"
+                  renderedMarkdown={renderedMarkdown}
+                  onResize={this.adjustMaxNeededHeight}
+                  inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                  aniGifURL={this.props.aniGifURL}
+                  inTopPane
                 />
+                {this.props.collapsed && instructions2 &&
+                  <div
+                    className="secondary-instructions"
+                    dangerouslySetInnerHTML={{ __html: instructions2 }}
+                  />
+                }
+              </div>
+              {showAudioControls &&
+                <div style={[styles.audioControls]}>
+                  <InlineAudio src={acapelaSrc} />
+                </div>
               }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
