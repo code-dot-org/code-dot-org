@@ -9,12 +9,14 @@ SLACK_TOKEN = CDO.slack_token.freeze
 PAGERDUTY_TOKEN = CDO.pagerduty_token.freeze
 CHANNEL_ID = CDO.developers_channel_id.freeze
 
-# @param user [Hash] PagerDuty information for a user
-# @return [Boolean] whether the user is the current DOTD primary oncall.
-def dotd?(user)
+# @param user [Hash] PagerDuty information for a user.
+# @param level [Integer] the oncall level to query.
+# @return [Boolean] whether the user is the current DOTD oncall at the specified
+#   level.
+def dotd?(user, level)
   return false unless user['on_call']
   user['on_call'].each do |on_call|
-    if on_call['level'] == 1 &&
+    if on_call['level'] == level &&
       on_call['escalation_policy']['name'] == 'Dev of the day issues'
       return true
     end
@@ -23,28 +25,34 @@ def dotd?(user)
 end
 
 def main
-  return unless only_one_running?(__FILE__)
+  # Get the current developers room topic.
+  slack_api_url = "https://slack.com/api/channels.info?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}"
+  channel_info = open(slack_api_url).read
+  current_topic = JSON.parse(channel_info)['channel']['topic']['value']
 
-  # Get current developers room topic.
-  channel_info = open("https://slack.com/api/channels.info?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}").read
-  current_topic = JSON.parse(channel_info)["channel"]["topic"]["value"]
-
-  # Get DOTD on call from PagerDuty.
+  # Get the primary and secondary site on-calls from PagerDuty.
   on_call = `curl -H "Content-type: application/json" -H "Authorization: Token token=#{PAGERDUTY_TOKEN}" -X GET -G "https://codeorg.pagerduty.com/api/v1/users/on_call"`
   on_call_parsed = JSON.parse(on_call)
-  dotd_email = nil
+  primary_dotd_email = nil
+  secondary_dotd_email = nil
   on_call_parsed['users'].each do |user|
-    dotd_email = user["email"] if dotd?(user)
+    primary_dotd_email = user['email'] if dotd?(user, 1)
+    secondary_dotd_email = user['email'] if dotd?(user, 2)
   end
 
   # Match PagerDuty email to Slack mention name.
   users_list = open("https://slack.com/api/users.list?token=#{SLACK_TOKEN}").read
-  dotd_user = JSON.parse(users_list)["members"].find { |member| dotd_email == member["profile"]["email"] }
-  dotd_mention = dotd_user ? "@#{dotd_user['name']} is DotD" : "(error: check schedule for DotD)"
+  primary_dotd_user = JSON.parse(users_list)['members'].
+    find { |member| primary_dotd_email == member['profile']['email'] }
+  primary_dotd_user = '(ERROR: check schedule)' unless primary_dotd_user
+  secondary_dotd_user = JSON.parse(users_list)['members'].
+    find { |member| secondary_dotd_email == member['profile']['email'] }
+  secondary_dotd_user = '(ERROR: check schedule)' unless secondary_dotd_user
 
   # Set the new developers room topic
-  new_topic = current_topic.gsub(/[^\s]* is DotD|^(?!.* is DotD)/, dotd_mention)
+  new_topic = current_topic.
+    sub(/^.+?;/, "DOTD: @#{primary_dotd_user}(@#{secondary_dotd_user});")
   open("https://slack.com/api/channels.setTopic?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}&topic=#{new_topic}")
 end
 
-main
+main unless only_one_running?(__FILE__)

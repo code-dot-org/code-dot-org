@@ -75,6 +75,7 @@ const AnimationPicker = React.createClass({
         useDeprecatedGlobalStyles
         handleClose={this.props.onClose}
         uncloseable={this.props.uploadInProgress}
+        fullWidth={true}
       >
         <HiddenUploader
           ref="uploader"
@@ -108,6 +109,7 @@ export default connect(state => ({
   },
   onUploadStart(data) {
     dispatch(beginUpload(data.files[0].name));
+    data.submit();
   },
   onUploadDone(result) {
     dispatch(handleUploadComplete(result));

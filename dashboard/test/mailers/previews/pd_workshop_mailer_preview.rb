@@ -50,6 +50,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_cancel_receipt
   end
 
+  def detail_change_notification__csf
+    mail :detail_change_notification, Pd::Workshop::COURSE_CSF
+  end
+
+  def detail_change_notification__admin
+    mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN
+  end
+
   # Exit survey has a variation for CSF. It's the same for all other courses.
   def exit_survey__general
     mail :exit_survey

@@ -250,6 +250,7 @@ level 'CSD U3 AnimationsMulti defender enemies touch cake'
 level 'CSD U3 AnimationsMulti defender enemies touch cake sprite2'
 level 'CSD U3 AnimationsMulti defender create set enemies'
 level 'CSD U3 AnimationsMulti defender move player'
+level 'CSD U3 AnimationsMulti defender move up down'
 level 'CSD U3 AnimationsMulti defender animate player'
 level 'CSD U3 AnimationsMulti defender displace enemies'
 level 'CSD U3 AnimationsMulti defender touch water'
@@ -275,6 +276,19 @@ level 'CSD U3 platform player4'
 level 'CSD U3 platform sample2'
 level 'CSD U3 platform sample3'
 level 'CSD U3 platform challenge'
+
+stage 'Project: Build a Game'
+level 'CSD U3 game intro'
+level 'CSD U3 game variables'
+level 'CSD U3 game backgrounds'
+level 'CSD U3 game display boards'
+level 'CSD U3 game choose background'
+level 'CSD U3 game animations'
+level 'CSD U3 game create sprites'
+level 'CSD U3 game sprite movement'
+level 'CSD U3 game user controls'
+level 'CSD U3 game interactions'
+
 
 
 

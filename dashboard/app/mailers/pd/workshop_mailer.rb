@@ -39,7 +39,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
+      subject: teacher_enrollment_subject(enrollment),
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -82,7 +82,19 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
+      subject: teacher_enrollment_subject(enrollment),
+      to: email_address(@enrollment.name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def detail_change_notification(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: detail_change_notification_subject(enrollment),
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -143,5 +155,21 @@ class Pd::WorkshopMailer < ActionMailer::Base
     return 'csf' if course == Pd::Workshop::COURSE_CSF
     return DETAILS_PARTIALS[course][subject] if DETAILS_PARTIALS[course] && DETAILS_PARTIALS[course][subject]
     nil
+  end
+
+  def teacher_enrollment_subject(enrollment)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
+      "Your upcoming #{enrollment.workshop.course_name} workshop"
+    else
+      'Your upcoming Code.org workshop and next steps'
+    end
+  end
+
+  def detail_change_notification_subject(enrollment)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
+      "Details for your upcoming #{enrollment.workshop.course_name} workshop have changed"
+    else
+      'Details for your upcoming Code.org workshop have changed'
+    end
   end
 end

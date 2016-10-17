@@ -149,7 +149,6 @@ const CourseProgressRow = React.createClass({
           />
         </div>
         {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
-            this.props.sectionId &&
           <div style={styles.teacherInfo}>
             <TeacherStageInfo stage={stage}/>
           </div>
