@@ -1,5 +1,6 @@
 name 'CSPU5_HowOnEventWorks_v2'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN

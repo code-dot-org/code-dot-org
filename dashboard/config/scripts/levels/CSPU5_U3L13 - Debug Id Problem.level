@@ -51,9 +51,9 @@
     "encrypted_examples": "JE05RBuHNIPkl6AYp36RP35JQ8hUFwAEfnqfjrILZF4RRmeMFvwKhNrkbAnS\nfpG/\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null,
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
