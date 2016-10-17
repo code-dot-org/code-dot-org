@@ -77,9 +77,12 @@ export default class BaseEntity {
         var facingName = this.controller.levelView.getDirectionName(this.facing);
         this.controller.levelView.playScaledSpeed(this.sprite.animations, animName + facingName);
         let forwardPosition = this.controller.levelModel.getMoveForwardPosition(this);
-        this.queue.startPushHighPriorityCommands();
-        this.controller.events.forEach(e => e({ eventType: EventType.WhenTouched, targetType: this.type, targetIdentifier: this.identifier, eventSenderIdentifier: this.controller.levelEntity.getEntityAt(forwardPosition).identifier }));
-        this.queue.endPushHighPriorityCommands();
+        let forwardEntity = this.controller.levelEntity.getEntityAt(forwardPosition);
+        if (forwardEntity !== null) {
+            this.queue.startPushHighPriorityCommands();
+            this.controller.events.forEach(e => e({ eventType: EventType.WhenTouched, targetType: this.type, targetIdentifier: this.identifier, eventSenderIdentifier: forwardEntity.identifier }));
+            this.queue.endPushHighPriorityCommands();
+        }
         this.controller.delayPlayerMoveBy(400, 800, () => {
             commandQueueItem.succeeded();
         });
