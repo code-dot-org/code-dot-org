@@ -56,7 +56,7 @@ namespace :circle do
       next
     end
     RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
-    start_sauce_connect
+    # start_sauce_connect
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
@@ -66,10 +66,10 @@ namespace :circle do
       unless ui_test_browsers.empty?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --feature #{container_features.join(',')}" \
-            " --config #{ui_test_browsers.join(',')}" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
+            " --local" \
             " --parallel 16" \
             " --abort_when_failures_exceed 10" \
             " --retry_count 2" \
@@ -79,10 +79,10 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
             " --feature #{container_eyes_features.join(',')}" \
-            " --config ChromeLatestWin7,iPhone" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
+            " --local" \
             " --parallel 10" \
             " --retry_count 1" \
             " --html"
