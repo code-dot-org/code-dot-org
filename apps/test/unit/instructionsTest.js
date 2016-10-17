@@ -133,6 +133,7 @@ describe('determineInstructionsConstants', () => {
     const hasInlineImages = false;
     const showInstructionsInTopPane = true;
     const hasContainedLevels = false;
+    const overlayVisible = false;
 
     it('sets longInstructions to markdownInstructions regardless of locale', () => {
       const locales = ['fr-fr', ENGLISH_LOCALE, undefined];
@@ -146,7 +147,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       }));
 
       results.forEach(result => {
@@ -165,7 +167,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
 
       assert.equal(result.longInstructions, 'non-markdown');
@@ -183,7 +186,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
 
       assert.equal(result.shortInstructions, undefined);
@@ -199,7 +203,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
 
       assert.equal(result2.shortInstructions, undefined);
@@ -215,7 +220,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
 
       assert.equal(result3.shortInstructions, undefined);
@@ -227,6 +233,7 @@ describe('determineInstructionsConstants', () => {
     const hasInlineImages = false;
     const showInstructionsInTopPane = true;
     const hasContainedLevels = false;
+    const overlayVisible = false;
 
     it('sets long and short instructions for english locale', () => {
       // en_us and undefined should both be treated as english
@@ -249,7 +256,8 @@ describe('determineInstructionsConstants', () => {
           shortInstructions: 'non-markdown',
           shortInstructions2: undefined,
           longInstructions: 'markdown',
-          hasContainedLevels
+          hasContainedLevels,
+          overlayVisible
         });
       });
     });
@@ -265,7 +273,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
@@ -273,7 +282,8 @@ describe('determineInstructionsConstants', () => {
         shortInstructions: 'non-markdown',
         shortInstructions2: undefined,
         longInstructions: undefined,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
     });
 
@@ -289,7 +299,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
@@ -297,7 +308,8 @@ describe('determineInstructionsConstants', () => {
         shortInstructions: 'non-markdown',
         shortInstructions2: undefined,
         longInstructions: undefined,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
     });
 
@@ -314,7 +326,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
       assert.equal(result.longInstructions, 'non-markdown');
 
@@ -329,7 +342,8 @@ describe('determineInstructionsConstants', () => {
         noInstructionsWhenCollapsed,
         hasInlineImages,
         showInstructionsInTopPane,
-        hasContainedLevels
+        hasContainedLevels,
+        overlayVisible
       });
       assert.equal(result2.longInstructions, 'markdown');
     });
@@ -350,7 +364,8 @@ describe('determineInstructionsConstants', () => {
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         hasInlineImages,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        overlayVisible
       });
 
       assert(/image1\.png/.test(result.shortInstructions), 'image 1 is replaced');
