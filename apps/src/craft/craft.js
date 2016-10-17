@@ -532,7 +532,9 @@ Craft.initializeAppLevel = function (levelConfig) {
         [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
     // eslint-disable-next-line no-eval
-    verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
+    verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0], // TODO(bjordan): add to utils
+    // eslint-disable-next-line no-eval
+    timeoutResult: eval('[' + (levelConfig.timeoutVerificationFunction || `function() { return false; }`) + ']')[0],
   });
 };
 

@@ -37,6 +37,7 @@ class Craft < Blockly
     :place_block_options,
     :player_start_direction,
     :verification_function,
+    :timeout_verification_function,
     :show_popup_on_load,
     :is_daytime,
     :is_event_level,
@@ -153,6 +154,24 @@ class Craft < Blockly
       treeOak: '/blockly/media/skins/craft/images/Leaves_Oak_Decay.png',
   }
 
+  SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS = {
+      fail:
+'function (verificationAPI) {
+  // Fail if we hit the end of the timeout.
+  return false;
+}',
+      turnRandomCount:
+'function(verificationAPI) {
+  return verificationAPI.getTurnRandomCount() >= 1;
+},',
+      playerSurvived:
+'function(verificationAPI) {
+  // if we have reached the timeout without fail, they succeeded.
+  return true;
+},',
+
+  }
+
   SAMPLE_VERIFICATION_FUNCTIONS = {
       mapMatches:
 'function (verificationAPI) {
@@ -195,7 +214,41 @@ class Craft < Blockly
 'function (verificationAPI) {
       // the player has collected at least 2 wool
       return verificationAPI.getInventoryAmount("wool") >= 2;
-}'
+}',
+      isEntityAt:
+'function (verificationAPI) {
+  // [5, 5]: grid coordinates, 0, 0 is top left
+  verificationAPI.isEntityAt("sheep", [5, 5]);
+}
+',
+      sheepOnGrassCount:
+'function (verificationAPI) {
+  var grassPositions = [[0, 0], [1, 1]]
+  Var sheepOnGrassCount = 0;
+  for(var i = 0 ; i < grassPositions.length ; i++ ) {
+    if(verificationAPI.isEntityAt("sheep", grassPositions[i]))
+      sheepOnGrassCount++;
+    }
+  return sheepOnGrassCount >= 2;
+}
+',
+      isEntityDied:
+'function (verificationAPI) {
+  // replace 3 with number of zombies in map
+  verificationAPI.isEntityDied("zombie", 3);
+}
+',
+      playerAtOneOfManyPositions:
+'function (verificationAPI) {
+  // List of x, y positions.
+  var successPositions = [[0, 0], [0, 1], [0, 2]];
+  for (var i = 0; i < successPositions.length; i++) {
+    if (verificationAPI.isEntityAt("Player", successPositions[i])) {
+      return true;
+    }
+  }
+}
+'
 
   }
 
@@ -230,12 +283,16 @@ class Craft < Blockly
     default_game_params[:ground_plane] = '[' + ([(['"grass"'] * 10).join(',')] * 10).join(",\n") + ']'
     default_game_params[:ground_decoration_plane] = '[' + ([(['""'] * 10).join(',')] * 10).join(",\n") + ']'
     default_game_params[:action_plane] = '[' + ([(['""'] * 10).join(',')] * 10).join(",\n") + ']'
-    default_game_params[:player_start_position] = '[0, 0]'
+    default_game_params[:player_start_position] = '[4, 4]'
     default_game_params[:grid_width] = '10'
     default_game_params[:grid_height] = '10'
+    default_game_params[:player_start_direction] = 1
     default_game_params[:is_daytime] = true
+    default_game_params[:is_event_level] = true
 
     default_game_params[:verification_function] = SAMPLE_VERIFICATION_FUNCTIONS[:isPlayerNextTo]
+    default_game_params[:timeout_verification_function] = SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS[:fail]
+    default_game_params[:level_verification_timeout] = '30000'
 
     create!(level_params.
                 merge(user: params[:user], game: Game.craft, level_num: 'custom').

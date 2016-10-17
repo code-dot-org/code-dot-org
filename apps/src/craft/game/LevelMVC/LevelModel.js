@@ -172,6 +172,10 @@ export default class LevelModel {
     return false;
   }
 
+  getTurnRandomCount() {
+    return this.controller.turnRandomCount;
+  }
+
   getInventoryAmount(inventoryType) {
     return this.player.inventory[inventoryType] || 0;
   }
@@ -314,8 +318,9 @@ export default class LevelModel {
   }
 
   isEntityOfType(position, type) {
-    if (this.controller.levelEntity.entityMap.has(type)) {
-      var entity = this.controller.levelEntity.entityMap.get(type);
+    var entities = this.controller.levelEntity.getEntitiesOfType(type);
+    for(var i = 0 ; i < entities.length ; i++) {
+      var entity = entities[i];
       return (position[0] === entity.position[0]) && (position[1] === entity.position[1]);
     }
     return false;

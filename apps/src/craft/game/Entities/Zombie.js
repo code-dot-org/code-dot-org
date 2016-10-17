@@ -31,6 +31,7 @@ export default class Zombie extends BaseEntity {
         levelView.playBlockSound(groundType);
         // play walk animation
         var animName = "walk" + this.controller.levelView.getDirectionName(this.facing);
+        var idleAnimName = "idle" + this.controller.levelView.getDirectionName(this.facing);
         levelView.playScaledSpeed(this.sprite.animations, animName);
         setTimeout(() => {
             // tween for position
@@ -38,6 +39,7 @@ export default class Zombie extends BaseEntity {
                 x: (this.offset[0] + 40 * position[0]), y: (this.offset[1] + 40 * position[1])
             }, 300, Phaser.Easing.Linear.None);
             tween.onComplete.add(() => {
+                levelView.playScaledSpeed(this.sprite.animations, idleAnimName);
                 commandQueueItem.succeeded();
             });
 
@@ -159,9 +161,7 @@ export default class Zombie extends BaseEntity {
             });
             // walk 
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][5][0], frameListPerDirection[i][5][1], ".png", 3);
-            this.sprite.animations.add("walk" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
-            });
+            this.sprite.animations.add("walk" + facingName, frameList, frameRate, true);
             // attack
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][6][0], frameListPerDirection[i][6][1], ".png", 3);
             this.sprite.animations.add("attack" + facingName, frameList, frameRate, false).onComplete.add(() => {

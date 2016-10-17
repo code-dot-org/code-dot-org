@@ -841,6 +841,16 @@ export default class LevelView {
     this.playExplosionAnimation(playerPosition, facing, entity.position, entity.type, completionHandler, false);
   }
 
+  destroyBlockWithoutPlayerInteraction(destroyPosition, newShadingPlaneData, newFowPlaneData) {
+    let blockIndex = (this.yToIndex(destroyPosition[1])) + destroyPosition[0];
+    let blockToDestroy = this.actionPlaneBlocks[blockIndex];
+    blockToDestroy.kill();
+    this.toDestroy.push(blockToDestroy);
+    this.updateShadingPlane(newShadingPlaneData);
+    this.updateFowPlane(newFowPlaneData);
+    this.audioPlayer.play('dig_wood1');
+  }
+
   playDestroyBlockAnimation(playerPosition, facing, destroyPosition, blockType, newShadingPlaneData, newFowPlaneData, completionHandler) {
     this.setSelectionIndicatorPosition(destroyPosition[0], destroyPosition[1]);
 
@@ -1687,7 +1697,7 @@ export default class LevelView {
         this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
       }
     });
-
+    this.playScaledSpeed(sprite.animations, "animate");
     return sprite;
   }
 

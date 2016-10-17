@@ -31,14 +31,10 @@ export function get(controller) {
      * false if unsuccessful (level not completed), and the current level model.
      */
     startAttempt: function (onAttemptComplete) {
-      if (!controller.levelData.isEventLevel) {
-        controller.OnCompleteCallback = onAttemptComplete;
-        controller.queue.addCommand(new CheckSolutionCommand(controller));
-      }
-
+      controller.OnCompleteCallback = onAttemptComplete;
       controller.setPlayerActionDelayByQueueLength();
       controller.queue.begin();
-      controller.dispatchSpawnEventAtStart();
+      controller.run();
       controller.attemptRunning = true;
     },
 
