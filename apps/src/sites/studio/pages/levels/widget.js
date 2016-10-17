@@ -4,8 +4,8 @@
 /* global apps, appOptions */
 import $ from 'jquery';
 import _ from 'lodash';
-import { showInstructionsDialog } from './dialogHelper';
-import { registerGetResult } from './codeStudioLevels';
+import { showInstructionsDialog } from '@cdo/apps/code-studio/levels/dialogHelper';
+import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 function setupWidgetLevel() {
   window.script_path = location.pathname;
