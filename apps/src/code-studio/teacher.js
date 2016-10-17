@@ -9,6 +9,7 @@ import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
+import TeacherLevelGroup from './components/TeacherLevelGroup';
 import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
@@ -136,6 +137,8 @@ function renderIntoLessonTeacherPanel() {
     if (stageLockedText) {
       renderStageLockedText(stageLockedText);
     }
+
+    renderLevelGroup();
   });
 }
 
@@ -160,6 +163,7 @@ function viewAsChanged(viewAs) {
   // would just update automatically. However, we're not in such a world. Instead,
   // explicitly hide or show elements with this class name based on new toggle state.
   $(".hide-as-student").toggle(viewAs === ViewType.Teacher);
+  $(".hide-as-teacher").toggle(viewAs === ViewType.Student);
 }
 
 function renderViewAsToggle(element) {
@@ -206,7 +210,25 @@ function renderStageLockedText(element) {
 
   if (fullyLocked[currentStageId]) {
     $(element).text(commonMsg.stageLocked());
+    $('.locked-stage-message').addClass('hide-as-teacher');
   } else {
     $(element).text(commonMsg.stageNotFullyLocked());
   }
+}
+
+function renderLevelGroup() {
+  // If we don't have a level gorup, theres nothing to do.
+  const levelGroup = $('.level-group');
+  if (levelGroup.length === 0) {
+    return;
+  }
+
+  const element = $('<div/>').insertAfter(levelGroup)[0];
+
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <TeacherLevelGroup/>
+    </Provider>,
+    element
+  );
 }

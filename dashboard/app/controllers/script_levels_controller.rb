@@ -64,6 +64,8 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
+    # TODO: we want to be able to show the hidden_stage info as a teacher if
+    # they toggle to it
     if stage_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/hidden_stage'
