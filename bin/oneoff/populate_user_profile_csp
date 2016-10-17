@@ -1,8 +1,26 @@
 #!/usr/bin/env ruby
 
+# A oneoff script to import data from a CSV into the user_profiles table.
+#
+#   USAGE: ./bin/oneoff/populate_user_profile_csp /tmp/user_profile.csv
+#
+# The CSV is expected to be in the following format.
+#
+#   email,other_emails,other_user_ids,facilitator,nmsi,teals,pd_manual
+#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y"
+#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y"
+#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y"
+#
+# Note that <other_emails> and <other_user_ids> need to be escaped with
+# quotation marks if they contain commas (to separate multiple emails or IDs).
+
 require 'csv'
 require_relative '../../dashboard/config/environment'
 
+# @param filename [String] the path to the CSV file to read. The format of the
+#   file is described in the file comment above.
+# @return [Array[Hash]] each array element gives the data associated with the
+#   UserProfile to create.
 def read_csv(filename)
   data = []
   CSV.foreach(filename, {headers: true, header_converters: :symbol}) do |csv|
@@ -11,6 +29,7 @@ def read_csv(filename)
   return data
 end
 
+# param data [Array[Hash]] the UserProfiles to create.
 def process_data(data)
   time_now = DateTime.now
 
@@ -25,16 +44,20 @@ def process_data(data)
       next
     end
 
-    user_profile = UserProfile.find_or_create(
+    user_profile = UserProfile.find_or_create_by(
       user: user,
       course: UserProfile::CSP
     )
 
-    datum[:other_emails].split(',').each do |email|
-      user_profile.add_other_email email
+    if datum[:other_emails]
+      datum[:other_emails].split(',').each do |email|
+        user_profile.add_other_email email.strip
+      end
     end
-    datum[:other_user_ids].split(',').each do |id_string|
-      user_profile.add_other_user_id id_string.to_i
+    if datum[:other_user_ids]
+      datum[:other_user_ids].split(',').each do |id_string|
+        user_profile.add_other_user_id id_string.to_i
+      end
     end
 
     user_profile.facilitator = true if datum[:facilitator]
@@ -42,10 +65,10 @@ def process_data(data)
     user_profile.teals = true if datum[:teals]
 
     if datum[:pd_manual]
-      if UserProfile::YEARS.include? datum[:manual]
-        user_profile.pd_manual = datum[:manual]
+      if UserProfile::YEARS.include? datum[:pd_manual]
+        user_profile.pd_manual = datum[:pd_manual]
       else
-        puts "MALFORMED USER: #{datum[:email]} #{datum[:manual]}"
+        puts "MALFORMED USER: #{datum[:email]} #{datum[:pd_manual]}"
       end
     end
 
