@@ -27,7 +27,7 @@ class HttpCache
     iceage
   ).map do |script_name|
     # Most scripts use the default route pattern.
-    [script_name, "s/#{script_name}/stage/*"]
+    [script_name, "/s/#{script_name}/stage/*"]
   end.to_h.merge(
     # Add the "special case" routes here.
     'hourofcode' => '/hoc/*',
