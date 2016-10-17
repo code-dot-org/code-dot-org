@@ -1,0 +1,32 @@
+name 'CSPU5_EventDrivenProgrammingPatterns'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Baker NOTE: add an annotated diagram/worked example to show along side these steps? or to show these steps all together.
+
+# Event-Driven Programming Patterns
+
+What you have just done once will become a familiar pattern to you.  When making apps in App Lab which are event driven you usually go through the following steps:
+
+1) Add a UI element to the screen
+ * set its visual properties, position, size, color, etc.
+ * note its ID
+    
+2) Add an onEvent block
+ * specify the *ID* of the screen element to you want the user to interact with
+ * specify the *type* of event you want to watch for
+ * ...
+    
+3) Write code in the function
+ * The code describes what you want the app to do *WHEN* the specified type of event happens on the specified ID
+
+4) Run - Test - Debug
+ * If the program doesn't work at first (this is very common) try try again
+ * You may run into **syntax** errors - things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say - fix these with careful reading.
+ * Or you may run into **logic** errors - the program runs but doesn't do what you think it should.
+
+# Don't Worry!
+
+Even for professionals, it's very common to go through several cycles of run-test-debug to get it right even for *very* small programs or pieces of code.  It's the nature of the business.
+MARKDOWN

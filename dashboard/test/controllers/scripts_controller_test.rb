@@ -1,4 +1,3 @@
-
 require 'test_helper'
 
 class ScriptsControllerTest < ActionController::TestCase
@@ -214,5 +213,36 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     get :edit, id: 'course1'
     assert_response :forbidden
+  end
+
+  test 'create' do
+    expected_contents = <<-TEXT.strip_heredoc
+      hidden false
+      login_required true
+      hideable_stages true
+      wrapup_video 'hoc_wrapup'
+
+    TEXT
+    File.stubs(:write).with{ |filename, _| filename.end_with? 'scripts.en.yml' }.once
+    File.stubs(:write).with('config/scripts/test-script-create.script', expected_contents).once
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    post :create,
+      script: {name: 'test-script-create'},
+      script_text: '',
+      visible_to_teachers: true,
+      login_required: true,
+      hideable_stages: true,
+      wrapup_video: 'hoc_wrapup'
+    assert_redirected_to script_path id: 'test-script-create'
+
+    script = Script.find_by_name('test-script-create')
+    assert_equal 'test-script-create', script.name
+    refute script.hidden
+    assert script.login_required
+    assert script.hideable_stages
+
+    File.unstub(:write)
   end
 end

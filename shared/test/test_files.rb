@@ -13,7 +13,7 @@ class FilesTest < FilesApiTestBase
     get "v3/files/#{@channel_id}"
     expected_empty_files = {
       'files' => [],
-      'filesVersionId' => 'unused'
+      'filesVersionId' => ''
     }
     assert_equal(expected_empty_files, JSON.parse(last_response.body))
     delete_channel(@channel_id)
