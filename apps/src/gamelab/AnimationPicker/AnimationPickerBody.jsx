@@ -10,6 +10,7 @@ import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
+import {Pagination} from "react-bootstrap";
 
 const MAX_SEARCH_RESULTS = 40;
 const animationPickerStyles = {
@@ -42,15 +43,19 @@ const AnimationPickerBody = React.createClass({
   },
 
   onSearchQueryChange(value) {
-    this.setState({searchQuery: value});
+    this.setState({searchQuery: value, currentPage: 0});
   },
 
   onCategoryChange(event) {
-    this.setState({categoryQuery: event.target.className});
+    this.setState({categoryQuery: event.target.className, currentPage: 0});
   },
 
   onClearCategories() {
-    this.setState({categoryQuery: '', searchQuery: ''});
+    this.setState({categoryQuery: '', searchQuery: '', currentPage: 0});
+  },
+
+  onChangePageNumber(number) {
+    this.setState({currentPage: number - 1});
   },
 
   animationCategoriesRendering() {
@@ -76,8 +81,7 @@ const AnimationPickerBody = React.createClass({
   },
 
   render() {
-    let {results, resultCount} = searchAnimations(this.state.searchQuery, this.state.categoryQuery, this.state.currentPage);
-    //Use resultCount to render the pagination navigation
+    let {results, pageCount} = searchAnimations(this.state.searchQuery, this.state.categoryQuery, this.state.currentPage);
     return (
       <div>
         <h1 style={styles.title}>
@@ -92,6 +96,9 @@ const AnimationPickerBody = React.createClass({
           value={this.state.searchQuery}
           onChange={this.onSearchQueryChange}
         />
+        {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+          <Pagination bsSize="small" items={pageCount} activePage={this.state.currentPage} onSelect={this.onChangePageNumber} maxButtons={10}/>
+        }
         {this.state.categoryQuery !== '' &&
           <div style={animationPickerStyles.breadCrumbs}>
             <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
@@ -181,7 +188,7 @@ function searchAnimations(searchQuery, categoryQuery, currentPage) {
       .map(result => animationLibrary.metadata[result])
       .toArray();
   return {
-    resultCount: results.length,
+    pageCount: Math.ceil(results.length / MAX_SEARCH_RESULTS),
     results: results.slice(currentPage*MAX_SEARCH_RESULTS, (currentPage+1)*MAX_SEARCH_RESULTS - 1)
   };
 }
