@@ -40,6 +40,7 @@ class Level < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
   after_save :write_custom_level_file
+  after_save :update_key_list
   after_destroy :delete_custom_level_file
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
@@ -86,6 +87,15 @@ class Level < ActiveRecord::Base
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
     @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
+  end
+
+  def self.key_list
+    @@all_level_keys ||= Level.all.map{ |l| [l.id, l.key] }.to_h
+    @@all_level_keys.map{ |k, v| {label: v, value: k} }
+  end
+
+  def update_key_list
+    @@all_level_keys[id] = key
   end
 
   def complete_toolbox(type)
