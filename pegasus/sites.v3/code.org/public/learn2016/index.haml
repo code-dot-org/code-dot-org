@@ -13,11 +13,7 @@ social:
   "og:video:type": ""
 ---
 
-= view 'mobilecheck.js'
-
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
-  .thegap{style: "height: 1px"}
-    &nbsp;
   #desktop-header.desktop-feature
     = view :header, variant: "desktop"
   #mobile-header.mobile-feature
@@ -28,16 +24,17 @@ social:
       .col-50{style: "text-align: center"}
         %img{src: "/images/learn/hour-of-code-logo-2016.png", style: "margin-top: 30px; margin-bottom: 30px"}
         %br/
-        Two lines of descriptive text about the Hour of Code will go here.
+        The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages.
         %br/
         %br/
-        %br/
-        %button
-          Host an Hour
+        %a{href: "https://hourofcode.com/#join", target: "_blank"}
+          %button
+            Host an Hour
         &nbsp;
         &nbsp;
-        %button
-          Teacher Guide
+        %a{href: "https://hourofcode.com/how-to", target: "_blank"}
+          %button
+            Teacher Guide
         %br/
         %br/
       .col-50
