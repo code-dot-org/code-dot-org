@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { registerGetResult } from './codeStudioLevels';
+import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 var React = require('react');
 var ReactDOM = require('react-dom');
 
