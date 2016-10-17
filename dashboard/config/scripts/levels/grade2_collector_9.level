@@ -26,8 +26,8 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Let's get the coins!",
-    "markdown_instructions": "Keep up the good work! Help me collect all of the coins.",
+    "instructions": "\"Let's get the coins!\"",
+    "markdown_instructions": "*\"Let's get the coins!\"*",
     "callout_json": "[]",
     "ideal": "10",
     "contained_level_names": null

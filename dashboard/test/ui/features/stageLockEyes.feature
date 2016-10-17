@@ -9,6 +9,7 @@ Scenario: Stage Locking Dialog
   And I sign out
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/s/allthethings"
+  And I select the first section
   Then I open the stage lock dialog
   And I see no difference for "stage lock dialog"
   Then I unlock the stage for students

@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,3,4,0,0],[0,0,0,0,1,0,0,0],[0,0,4,2,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "This pig is ruffling my feathers. Help me get to him!\r\n\r\nThere is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the tool box.",
+    "instructions": "\"This pig is ruffling my feathers. Help me get to him!\"\r\n\r\nThere is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the tool box.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,6 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade2_CaringForNewPet_2_1\",\r\n  \"callout_text\": \"Throw this extra block away so it doesn't cause problems.\",\r\n  \"element_id\": \"#extraBlock\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -95\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"grade2_CaringForNewPet_2_2\",\r\n  \"callout_text\": \"You can drag extra blocks to the toolbox to throw them away.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "markdown_instructions": "*\"This pig is ruffling my feathers. Help me get to him!\"*\r\n\r\nThere is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the tool box.",
     "contained_level_names": null
   },
   "published": true,

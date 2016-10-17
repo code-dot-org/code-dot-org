@@ -1,0 +1,37 @@
+name 'CSPU5_ChoosingGoodIds'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Choosing Good IDs
+
+<img src="https://images.code.org/f968ce4b09d2500b224af1bf9bacbacd-image-1444155536105.png" style="float: right">**Good IDs** are **meaningful and descriptive**.
+Just like good names for functions, you will want an ID to describe the intended purpose of the element.  For example, if you have many buttons in your program, you will want to give each an ID that describes what the button does. For example "forwardButton", "leftButton", etc.
+
+**IDs are also case-sensitive** which means you'll want to develop a style for capitalizing IDs. A common strategy is to use a style called **camelcase**.  In camelcase style, words are combined together with no spaces and each new word, after the first, is capitalized. itTypicallyLooksLikeThis.  
+
+**Why?** Many computer systems do not allow keywords like function names and IDs to contain spaces.  You've already seen several examples like this: `moveForward`, `onEvent`, `turnLeft`, etc.  It's important to realize that camelcase is a style convention, not a hard and fast rule. Sometimes you'll see other styles such as using underscores: `move_forward`, `turn_left`.  But in App Lab we typically use camelcase.
+
+# Rules About IDs
+In making descriptive and meaningful IDs there **are some rules about IDs** you need to know.  IDs...
+* cannot contain spaces.
+* *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters.
+* can contain hyphens ("-"), underscores ("_"), colons (":"), or periods (".").
+
+## Baker NOTES:
+ * Debugging stuff below was incorporated from different level - where first add two buttons
+ * probably remove all except debugging language.  Depends on flow from prev. levels.
+ * Could move problem into annotated diagram here?
+ * Q: show annotated diagram of where to look for this debugging?
+
+# Debugging Event-Driven Programs: IDs
+
+**Debugging:** As you write more complex event-driven programs, you'll need to polish your **debugging** skills. Debugging involves locating and correcting errors within a program. It is a critical (and generally unavoidable) step when writing code.<img src="https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif" style="float: right; width: 200px">
+
+**Target Application:** In the next three exercises, you'll debug this application (shown at right) which has two buttons, one for moving forward and one for turning left.
+
+**Debug the problem**:
+In each problem, we've added various errors into the program and it does not work as intended. You will need to find the errors, debug the problems, and make corrections such that the program works correctly.
+
+**Checking IDs:** Your first debugging task will be to verify that the button IDs match the event-handlers. **Remember that IDs are case-sensitive**.
+MARKDOWN

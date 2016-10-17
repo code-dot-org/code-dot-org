@@ -1330,12 +1330,94 @@ describe('GameLabSprite', function () {
     });
   });
 
-  function expectVectorsAreClose(vA, vB) {
-    var failMsg = 'Expected <' + vA.x + ', ' + vA.y + '> to equal <' +
-      vB.x + ', ' + vB.y + '>';
-    expect(vA.x).to.be.closeTo(vB.x, 0.00001, failMsg);
-    expect(vA.y).to.be.closeTo(vB.y, 0.00001, failMsg);
-  }
+  describe('setCollider()', function () {
+    var sprite;
+
+    beforeEach(function () {
+      // Position: (10, 20), Size: (30, 40)
+      sprite = createSprite(10, 20, 30, 40);
+    });
+
+    it('a newly-created sprite has no collider', function () {
+      expect(sprite.collider).to.be.undefined;
+    });
+
+    it('throws if first argument is not "circle" or "rectangle"', function () {
+      // Also throws if undefined
+      expect(function () {
+        sprite.setCollider();
+      }).to.throw(TypeError, 'setCollider expects the first argument to be either "circle" or "rectangle"');
+
+      // Note, it's case-sensitive
+      expect(function () {
+        sprite.setCollider('CIRCLE');
+      }).to.throw(TypeError, 'setCollider expects the first argument to be either "circle" or "rectangle"');
+    });
+
+    it('can construct a circle collider with default radius and offset', function () {
+      sprite.setCollider('circle');
+      expect(sprite.collider).to.be.an.instanceOf(gameLabP5.p5.CircleCollider);
+      expect(sprite.collider.center).to.eq(sprite.position);
+      expect(sprite.collider.offset).to.be.an.instanceOf(p5.Vector);
+      expect(sprite.collider.offset.x).to.eq(0);
+      expect(sprite.collider.offset.y).to.eq(0);
+      // Radius should be half of sprite's larger dimension.
+      expect(sprite.collider.radius).to.eq(20);
+    });
+
+    it('can construct a circle collider with explicit radius and offset', function () {
+      sprite.setCollider('circle', 1, 2, 3);
+      expect(sprite.collider).to.be.an.instanceOf(gameLabP5.p5.CircleCollider);
+      expect(sprite.collider.center).to.eq(sprite.position);
+      expect(sprite.collider.offset).to.be.an.instanceOf(p5.Vector);
+      expect(sprite.collider.offset.x).to.eq(1);
+      expect(sprite.collider.offset.y).to.eq(2);
+      expect(sprite.collider.radius).to.eq(3);
+    });
+
+    it('throws if creating a circle collider with 1, 2, or 4+ params', function () {
+      expect(function () {
+        sprite.setCollider('circle', 1);
+      }).to.throw(TypeError, 'Usage: setCollider("circle") or setCollider("circle", offsetX, offsetY, radius)');
+      expect(function () {
+        sprite.setCollider('circle', 1, 2);
+      }).to.throw(TypeError, 'Usage: setCollider("circle") or setCollider("circle", offsetX, offsetY, radius)');
+      // setCollider('circle', 1, 2, 3) is fine
+      expect(function () {
+        sprite.setCollider('circle', 1, 2, 3, 4);
+      }).to.throw(TypeError, 'Usage: setCollider("circle") or setCollider("circle", offsetX, offsetY, radius)');
+      expect(function () {
+        sprite.setCollider('circle', 1, 2, 3, 4, 5);
+      }).to.throw(TypeError, 'Usage: setCollider("circle") or setCollider("circle", offsetX, offsetY, radius)');
+    });
+
+    it('can construct a rectangle collider with explicit dimensions and offset', function () {
+      sprite.setCollider('rectangle', 1, 2, 3, 4);
+      expect(sprite.collider).to.be.an.instanceOf(gameLabP5.p5.AABB);
+    });
+
+    it('throws if creating a rectangle collider with 0, 1, 2, 3, or 5+ params', function () {
+      expect(function () {
+        sprite.setCollider('rectangle');
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      expect(function () {
+        sprite.setCollider('rectangle', 1);
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      expect(function () {
+        sprite.setCollider('rectangle', 1, 2);
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      expect(function () {
+        sprite.setCollider('rectangle', 1, 2, 3);
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      // setCollider('rectangle', 1, 2, 3, 4) is fine.
+      expect(function () {
+        sprite.setCollider('rectangle', 1, 2, 3, 4, 5);
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      expect(function () {
+        sprite.setCollider('rectangle', 1, 2, 3, 4, 5, 6);
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+    });
+  });
 
   function createTestAnimation(frameCount = 1) {
     let image = new p5.Image(100, 100, gameLabP5.p5);
@@ -1345,5 +1427,12 @@ describe('GameLabSprite', function () {
     }
     let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
     return new gameLabP5.p5.Animation(sheet);
+  }
+
+  function expectVectorsAreClose(vA, vB) {
+    var failMsg = 'Expected <' + vA.x + ', ' + vA.y + '> to equal <' +
+    vB.x + ', ' + vB.y + '>';
+    expect(vA.x).to.be.closeTo(vB.x, 0.00001, failMsg);
+    expect(vA.y).to.be.closeTo(vB.y, 0.00001, failMsg);
   }
 });

@@ -24,9 +24,9 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 
 import {
-  animationSourceUrl,
   setInitialAnimationList,
-  saveAnimations
+  saveAnimations,
+  withAbsoluteSourceUrls
 } from './animationListModule';
 import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
@@ -1079,21 +1079,17 @@ GameLab.prototype.getSerializedAnimationList = function (callback) {
 };
 
 /**
- * Get the project's animation metadtaa, this time for use in a level
+ * Get the project's animation metadata, this time for use in a level
  * configuration.  The major difference with SerializedAnimationList is that
  * it includes a sourceUrl for local project animations.
  * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getExportableAnimationList = function (callback) {
   this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
-    let list = getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
-    list.orderedKeys.forEach(key => {
-      let props = list.propsByKey[key];
-      props.sourceUrl = document.location.protocol + '//' +
-          document.location.host +
-          animationSourceUrl(key, props, true);
-    });
-    callback(list);
+    const list = this.studioApp_.reduxStore.getState().animationList;
+    const serializedList = getSerializedAnimationList(list);
+    const exportableList = withAbsoluteSourceUrls(serializedList);
+    callback(exportableList);
   }));
 };
 

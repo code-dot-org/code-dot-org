@@ -1,0 +1,46 @@
+name 'CSPU5_goodbyeTurtle_setPosition'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<img src="https://images.code.org/69a519dbe1999cb10c4978f1f82e942c-image-1476478015272.gif" style="float: right">
+# Goodbye, Turtle! 
+
+Using the turtle as a form of output was helpful as we learned about UI elements and event handlers.
+
+But it's time to move on.  **Goodbye, fair turtle!** We'll miss you.
+
+# setPosition and setSize
+
+Using the `setPosition` command (now added to the Toolbox) you can move and set the size of user interface elements.
+
+## Baker NOTE:
+ * new screencap / diagram? showing optional params and annotated?
+
+![](https://images.code.org/c3e42223cbcb096f992d758973d09f63-image-1444664597665.42.48 AM.png)
+
+**NOTE:**
+ * If you only want to set the size you can use the `setSize` function which looks like this: **[<-- UPDATE: THIS IS DIFFERENT NOW]**
+
+ ![](https://images.code.org/cb742ecf96c04477db0f8361ad5dcdaf-image-1448924017288.png)
+
+ * If you *only* want to set the position *without* changing the size of the element, you can omit the *width* and *height* parameters from the `setPosition` function.  To do that, you need to switch into text mode, like this:
+
+ <img src='https://images.code.org/5b565ef5b74b5cd657ba15c67be92b0d-image-1448924356253.gif' style="width: 400px">
+
+# Example
+
+In this example the button will respond to a click by changing its own position to a random location on the screen!
+
+[annonate this vvvvv .  Also consider moving to a static position and adding random in later.]
+
+```
+onEvent("button1","click", function(){
+   setPosition("button1", randomNumber(0,320), randomNumber(0,450));
+});
+```
+* **Remember:** in an app screen 0,0 is the top left corner and you specify a location by how many pixels from the left and how many down from the top of the screen it is.  The screen is **320 by 450 pixels**.
+
+
+
+MARKDOWN

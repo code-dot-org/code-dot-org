@@ -15,7 +15,7 @@ const FilterSet = React.createClass({
     return (
       <div>
         <div className="col-20">
-          <div style={{fontSize: 16}}>
+          <div style={{fontSize: 16, paddingLeft: 10}}>
             Filter By
           </div>
           {this.props.filterGroups.map(item => (
