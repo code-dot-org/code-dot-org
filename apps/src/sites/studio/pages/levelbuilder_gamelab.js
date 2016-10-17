@@ -1,6 +1,6 @@
 /** @file JavaScript run only on the gamelab level edit page. */
 import $ from 'jquery';
-import initializeCodeMirror from './initializeCodeMirror';
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/PropTypes';
 
 $(document).ready(function () {
@@ -27,4 +27,3 @@ $(document).ready(function () {
     validateAnimationJSON(codeMirror.getValue());
   });
 });
-
