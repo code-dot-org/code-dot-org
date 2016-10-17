@@ -37,7 +37,9 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Now you that you have the skills to create entities, use your imagination to make your heart's desire! Your creations can be helpful, harmful, or hilarious! You are the future of Minecraft! Have fun!",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
+    "level_verification_timeout": "120000"
   },
   "published": true,
   "notes": "Puzzle 10: Free Play - on 30x30 screen\r\n\r\nFree play! The player is given all the tools they have Clicked up until this point, and more.\r\n\r\n·       The player should be able to make a wide variety of scenarios and games. We can save out the level image and post it on social media like we did last year.\r\n",

@@ -13,7 +13,7 @@
     "grid_width": "20",
     "grid_height": "20",
     "is_daytime": "false",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n  // replace 3 with number of zombies in map\r\n  verificationAPI.isEntityDied(\"zombie\", 4);\r\n}\r\n",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -36,7 +36,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Zombies are attacking the village! Code the Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "level_verification_timeout": "60000"
   },
   "published": true,
   "notes": "Puzzle 9: Protect the town from Zombies\r\nYou need help killing all these zombies. Code the Iron Golem to fight them with you. Keep the village safe!\r\n\r\nWhen Run\r\nRepeat 5\r\nSpawn Zombie  North\r\nSpawn Zombie South\r\nSpawn Zombie West\r\nSpawn Zombie East\r\nWait 5 seconds\r\nSpawn Iron Golum\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked (used)\r\nDie\r\nWhen Day\r\nDie\r\n\r\nIron Golem\r\nWhen spawned\r\nRepeat Forever\r\nMove toward Zombie\r\nWhen touched\r\nAttack\r\n\r\nTeaches: Using multiple entities, practice loops",

@@ -32,10 +32,12 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "Great, the chicken moved! But then he stopped. In games, entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n",
+    "instructions": "Great, the chicken moved! But then he stopped. In games, entities like chickens wander around forever. Let’s use a loop to keep these chickens moving.\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
+    "level_verification_timeout": "7000",
+    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
     "contained_level_names": null
   },
   "published": true,
@@ -53,17 +55,23 @@
       <xml>
         <block type="craft_forever"/>
         <block type="craft_moveForward"/>
-        <block type="craft_turn">
+        <block type="craft_entityTurnLR">
           <title name="DIR">left</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
+          <title name="TYPE">sheepBaa</title>
         </block>
         <block type="craft_drop">
           <title name="TYPE">egg</title>
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="craft_forever"/>
+        <block type="craft_moveForward"/>
+      </xml>
+    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="craft_chickenSpawnedClicked">

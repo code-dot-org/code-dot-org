@@ -36,7 +36,9 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Look at this poor cow, it can’t move or make milk. Make the cow move like you did with the sheep. Lead it to the pasture and get it to drop milk.\r\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
+    "level_verification_timeout": "30000"
   },
   "published": true,
   "notes": "Puzzle 7:\r\nLook at this poor cow, it can’t move or make milk, and it’s being attacked by Zombies. Restore the cow, and get it to run away from Zombies with the When Attacked category, and Move Away.\r\n\r\nSolution:               \r\nCow\r\n§  When spawned\r\n·       Repeat Forever\r\no   Repeat Random\r\no       Move Forward\r\no   Turn Random\r\n§  When Touched\r\n·       Move Toward Player\r\n§  When Used\r\n·       Drop Milk\r\n§  When Attacked\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n\r\nTeachers: reinforces loops",

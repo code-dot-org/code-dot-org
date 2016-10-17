@@ -36,7 +36,9 @@
     "day_night_cycle_start": ".1",
     "day_night_cycle_time": "10",
     "instructions": "Nighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
+    "level_verification_timeout": "30000"
   },
   "published": true,
   "notes": "Puzzle 6: \r\nNighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n\r\nSolution:              \r\n             Run\r\n§  When Night Falls\r\nRepeat(5)\r\nSpawn Zombie\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked\r\nDie\r\nWhen Day\r\nDie\r\n\r\n§  When Day?\r\nWhen Night\r\n\r\nTeaches: More loops: Repeat with a parameter and using that vs. repeat forever",

@@ -36,7 +36,9 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Oh no! The path to the village is blocked by a stone wall. Without any tools, we’re going to have to think outside of the box to get through. Perhaps that nearby Creeper can help! If we lure it to the wall, maybe we can make it explode and blast away the stone… ",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "level_verification_timeout": "20000",
+    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},"
   },
   "published": true,
   "notes": "Puzzle 8: Creeper breaking through wall to get to another part of the map\r\n\r\nOh no! The path to the village is blocked by a stone wall. Without any tools, we’re going to have to think outside of the box to get through. Perhaps that nearby Creeper can help! If we lure it to the wall, maybe it will explode and blast away the stone… But the Creeper explodes before it gets there! There’s gotta be a way! Let’s modify his attributes to get him to move faster or delay his explosion!\r\n\r\nSolution:               \r\n\r\nConstruct level so it would be easier to follow the player than to go left, right, left, etc.\r\n\r\nCreeper\r\nWhen spawned\r\nSet speed [slow]\r\nWhen Touched\r\nRepeat 5\r\nWait 1\r\nMove Toward [Player]\r\nExplode\r\n\r\nSuccess criteria: Steve enters the town\r\nTeaches: more emphasis on loops, possibly teaches them to set speed (optional)\r\n\r\nVIDEO about using all these concepts together (Melissa)",
