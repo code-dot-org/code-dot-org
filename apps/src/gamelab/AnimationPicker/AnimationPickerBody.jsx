@@ -36,7 +36,8 @@ const AnimationPickerBody = React.createClass({
   getInitialState() {
     return {
       searchQuery: '',
-      categoryQuery: ''
+      categoryQuery: '',
+      currentPage: 0
     };
   },
 
@@ -63,9 +64,8 @@ const AnimationPickerBody = React.createClass({
     );
   },
 
-  animationItemsRendering() {
-    const pageOfResults = searchAnimations(this.state.searchQuery, this.state.categoryQuery);
-    return pageOfResults.map(animationProps =>
+  animationItemsRendering(animations) {
+    return animations.map(animationProps =>
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={animationProps.name}
@@ -76,6 +76,8 @@ const AnimationPickerBody = React.createClass({
   },
 
   render() {
+    let {results, resultCount} = searchAnimations(this.state.searchQuery, this.state.categoryQuery, this.state.currentPage);
+    //Use resultCount to render the pagination navigation
     return (
       <div>
         <h1 style={styles.title}>
@@ -115,7 +117,7 @@ const AnimationPickerBody = React.createClass({
             this.animationCategoriesRendering()
           }
           {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-            this.animationItemsRendering()
+            this.animationItemsRendering(results)
           }
         </ScrollableList>
       </div>
@@ -138,10 +140,11 @@ WarningLabel.propTypes = {
  * can be displayed and used to add an animation to the project.
  * @param {string} searchQuery - text entered by the user to find an animation
  * @param {string} categoryQuery - name of category user selected to filter animations
+ * @param {int} currentPage - current range of animations to display
  * @return {Array.<SerializedAnimationProps>} - Limited list of animations
  *         from the library that match the search query.
  */
-function searchAnimations(searchQuery, categoryQuery) {
+function searchAnimations(searchQuery, categoryQuery, currentPage) {
   // Make sure to generate the search regex in advance, only once.
   // Search is case-insensitive
   // Match any word boundary or underscore followed by the search query.
@@ -173,9 +176,12 @@ function searchAnimations(searchQuery, categoryQuery) {
   // Finally alphabetize the results (for stability), take only the first
   // MAX_SEARCH_RESULTS so we don't load too many images at once, and return
   // the associated metadata for each result.
-  return resultSet
+  const results = resultSet
       .sort()
-      .slice(0, MAX_SEARCH_RESULTS)
       .map(result => animationLibrary.metadata[result])
       .toArray();
+  return {
+    resultCount: results.length,
+    results: results.slice(currentPage*MAX_SEARCH_RESULTS, (currentPage+1)*MAX_SEARCH_RESULTS - 1)
+  };
 }
