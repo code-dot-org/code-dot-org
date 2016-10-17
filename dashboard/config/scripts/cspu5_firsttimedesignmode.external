@@ -1,5 +1,6 @@
 name 'CSPU5_FirstTimeDesignMode'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
@@ -15,4 +16,15 @@ In this lesson we'll learn how to add elements and then write code to respond wh
 ### vocab
 * User Interface UI
 
+
+# --- orig 100% ---
+![](https://images.code.org/fb3970596e5e6edf5d2736c9acb10f01-image-1476726340175.png)
+
+# ---- big 200% --
+
+![](https://images.code.org/8d8f49cc0d0f9a9e4c140f5988fc9ecd-image-1476726347579.png)
+
+# ---- Numbered ----
+
+![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
 MARKDOWN
