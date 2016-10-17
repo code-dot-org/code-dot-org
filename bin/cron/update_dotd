@@ -51,7 +51,7 @@ def main
 
   # Set the new developers room topic
   new_topic = current_topic.
-    sub(/^.+?;/, "DOTD: @#{primary_dotd_user} primary, @#{secondary_dotd_user} secondary;")
+    sub(/^.+?;/, "DOTD: @#{primary_dotd_user}(@#{secondary_dotd_user});")
   open("https://slack.com/api/channels.setTopic?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}&topic=#{new_topic}")
 end
 
