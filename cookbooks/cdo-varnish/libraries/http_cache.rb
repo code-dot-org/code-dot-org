@@ -10,14 +10,7 @@ class HttpCache
   LANGUAGE_COOKIES = %w(language_ pm)
 
   # A map from script name to script level URL pattern.
-  CACHED_SCRIPTS_MAP = {
-      # We specify the "special case" routes here; standard routes are handled by the loop below.
-      'hourofcode' => '/hoc/*',
-      'flappy' => '/flappy/*'
-  }
-
-  # Cached scripts
-  %w(
+  CACHED_SCRIPTS_MAP = %w(
     starwars
     starwarsblocks
     mc
@@ -32,9 +25,14 @@ class HttpCache
     artist
     infinity
     iceage
-  ).each do |script_name|
-    CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/*"
-  end
+  ).map do |script_name|
+    # Most scripts use the default route pattern.
+    [script_name, "s/#{script_name}/stage/*"]
+  end.to_h.merge(
+    # Add the "special case" routes here.
+    'hourofcode' => '/hoc/*',
+    'flappy' => '/flappy/*'
+  ).freeze
 
   def self.cached_scripts
     CACHED_SCRIPTS_MAP.keys
