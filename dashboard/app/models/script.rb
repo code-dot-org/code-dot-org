@@ -568,7 +568,7 @@ class Script < ActiveRecord::Base
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
+    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.find_by!(key: options[:wrapup_video])
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
@@ -576,17 +576,17 @@ class Script < ActiveRecord::Base
     script
   end
 
-  def update_text(script_params, script_text, metadata_i18n)
+  def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
         Script.add_script({
           name: script_name,
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
-          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-          wrapup_video: script_data[:wrapup_video],
-          properties: Script.build_property_hash(script_data)
+          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+          wrapup_video: general_params[:wrapup_video],
+          properties: Script.build_property_hash(general_params)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
@@ -668,11 +668,16 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      hidden: hidden,
+      loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_stages: hideable_stages?,
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
+
+    summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
+    summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
     summary
   end

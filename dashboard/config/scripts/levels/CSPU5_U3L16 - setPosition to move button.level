@@ -91,7 +91,9 @@
     "execute_palette_apis_only": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
