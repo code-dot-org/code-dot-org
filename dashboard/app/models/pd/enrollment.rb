@@ -10,6 +10,10 @@
 #  updated_at          :datetime
 #  school              :string(255)
 #  code                :string(255)
+#  school_district_id  :integer
+#  school_zip          :integer
+#  school_type         :string(255)
+#  school_state        :string(255)
 #  user_id             :integer
 #  survey_sent_at      :datetime
 #  completed_survey_id :integer
@@ -18,8 +22,9 @@
 #
 # Indexes
 #
-#  index_pd_enrollments_on_code            (code) UNIQUE
-#  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
+#  index_pd_enrollments_on_code                (code) UNIQUE
+#  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
+#  index_pd_enrollments_on_school_district_id  (school_district_id)
 #
 
 class Pd::Enrollment < ActiveRecord::Base
