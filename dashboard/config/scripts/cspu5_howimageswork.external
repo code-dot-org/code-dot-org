@@ -1,0 +1,12 @@
+name 'CSPU5_HowImagesWork'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How to add images in design mode
+
+* diagram diagram
+
+
+
+MARKDOWN
