@@ -7,7 +7,6 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "button": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -16,43 +15,12 @@
         ]
       },
       "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
       "turnRight": null,
       "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
-      "penUp": null,
-      "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "penRGB": {
-        "params": [
-          "0",
-          "0",
-          "0",
-          "1"
-        ],
-        "paletteParams": [
-          "r",
-          "g",
-          "b",
-          "a"
-        ]
-      },
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "forLoop_i_0_4": null,
+      "moveTo": null,
       "randomNumber_min_max": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "comment": null
+      "setPosition": null,
+      "setWidth": null
     },
     "edit_code": true,
     "embed": "false",
@@ -74,7 +42,7 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "encrypted_examples": "6dccbu4XDgsKwxtTGb8vO7XtATuCqkNkIK1+EVRGmf6yUcucrJUgUNmZPS4U\nzHDe\n",
-    "markdown_instructions": "# New Elements and Events: Moving Buttons with Events\r\n\r\nOver the next few exerises we will be exploring several new user interface elements and event types. Your code will be pulled forward as you progress through the exercises.\r\n\r\n**Moving Past Turtle:** We've been using buttons to move the turtle. For example, in the program you're about to see a button that moves the turtle to a random location on the screen. We're going to alter this program ** so that the button itself moves every time you click it**.\r\n\r\n**Notice** that this means that event handlers can affect the elements they are attached to, not just other elements!  This is an interesting technique for apps.  Now you're going to try it...\r\n\r\n# Do This:\r\n* **Change the ID** of the button to something descriptive and meaningful.\r\n* **Modify** your event handler so that **it no longer moves the turtle** but instead sets the position of the button itself to a random location on the screen.\r\n\t* TIP: add `setPosition` to the event handler, and just move the `randomNumber` calls from the turtle.\r\n\t* Recall the screen is **320 by 450 pixels**.\r\n\r\n**Before** | **After**\r\n---|---\r\n![](https://images.code.org/a4172e43b6707a3170e4eaf54a2a7b1d-image-1444335577799.gif) | <img src=\"https://images.code.org/4e17b077bd8fbdd43f960d26bb3d252d-image-1444335766972.gif\" style=\"width: 150px\">\r\n\r\n\r\n",
+    "markdown_instructions": "# Now you try it Moving Buttons with Events\r\n\r\n* The starting code makes a turtle jump around randomly.\r\n* **Modify** the code to:\r\n\t* use  [setPosition](#triggercallout=setPosHover) to set the position of the button itself to a random location when the button is clicked.\r\n    * use [randomNumber](#triggercallout=showRand) to set the x and y coordinates for setPosition\r\n    * This should replace the turtle code.\r\n    \r\n* Use the example from the previous page as reference.\r\n\t* Recall the screen is **320 by 450 pixels**.\r\n\r\n**Before** | **After**\r\n---|---\r\n![](https://images.code.org/a4172e43b6707a3170e4eaf54a2a7b1d-image-1444335577799.gif) | <img src=\"https://images.code.org/4e17b077bd8fbdd43f960d26bb3d252d-image-1444335766972.gif\" style=\"width: 150px\">\r\n\r\n\r\n",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -89,9 +57,13 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"firstTimeSetPosition\",\r\n  \"callout_text\": \"Drag this inside the event handler function\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"setPosition\\\"]\",\r\n  \"on\": \"setPosHover\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"UI Controls\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"randNumReminder\",\r\n  \"callout_text\": \"Use this as the the value for the x and y coordinates in setPosition.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"randomNumber_min_max\\\"]\",\r\n  \"on\": \"showRand\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"Math\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
   }
 }]]></config>

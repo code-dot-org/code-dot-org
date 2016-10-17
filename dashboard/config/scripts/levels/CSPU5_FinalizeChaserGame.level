@@ -1,0 +1,72 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-10-14T22:10:18.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "moveForward": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "moveTo": null,
+      "randomNumber_min_max": null,
+      "setPosition": null,
+      "setWidth": null,
+      "hideElement": null,
+      "showElement": null,
+      "setSize": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "markdown_instructions": "# Make a Chaser Game\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\" style=\"float: right\">\r\n\r\n**Change** the IDs in the `onEvent` handler and `setPosition` to respond to the image instead of the button! \r\n\r\nBoom.  Now you have a simple chaser game where an image runs away from your mouse. (*HINT: it's even more fun if you use  the `mouseover` event instead of `click`*)\r\n\r\n**Finalize your \"Chaser Game\"** which includes the following components:\r\n\r\n* **Text** on the top of the screen with a title or instructions for what to do.\r\n* **An image** that \"runs away\" (moves randomly) based on some mouse event.\r\n\r\nOnce you have the basic functionality down feel free to spend time adding more features to your application.  \r\n * Maybe another image that runs away.\r\n * see what happens with the commands `hideElement` and `showElement`\r\n * etc.\r\n<br><br><br>\r\n\r\n",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "U3L16 - projectTemplate",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>
