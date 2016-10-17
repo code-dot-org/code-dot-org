@@ -1,0 +1,82 @@
+#!/usr/bin/env ruby
+
+Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
+require_relative '../../dashboard/config/environment'
+require 'aws-sdk'
+require 'cdo/hip_chat'
+
+BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'
+S3S3MIRROR_DIR = '/home/ubuntu/s3s3mirror/'
+S3S3MIRROR_COMMAND = 's3s3mirror.sh'
+
+BUCKETS_TO_BACKUP = [
+  'audio.code.org',
+  'cdo-animation-library',
+  # 'cdo-art', # 120M elements, 7.1tb, definitely skip on the nightly!
+  'cdo-backups',
+  'cdo-build-logs',
+  'cdo-build-package',
+  'cdo-circle-utils',
+  'cdo-curriculum',
+  # 'cdo-dist', # 170k, 31gb
+  # 'cdo-dynamo-backup', # 81k, 15gb
+  'cdo-email-images',
+  'cdo-error',
+  'cdo-fetch', # 10k, 9gb
+  'cdo-form-uploads', # 10k, 1.2gb
+  'cdo-lib',
+  # 'cdo-logs', # 20M, 12tb, skip!
+  'cdo-map-reduce',
+  'cdo-offline-2',
+  'cdo-offline-hoc',
+  'cdo-offline',
+  'cdo-repo',
+  'cdo-temp', # 35k, 2mb
+  'cdo-travisci',
+  'cdo-tts', # 2.5k, 500mb
+  'cdo-v3-animations', # 4k, 190mb
+  # 'cdo-v3-assets', # 455k, 250gb
+  'cdo-v3-files',
+  'cdo-v3-prod-firebase-backups',
+  'cdo-v3-sources-contributors',
+  # 'cdo-v3-sources', # 5M, 30gb - ???
+  'cdo-videos',
+  'cf-templates-p9nfb0gyyrpf-us-east-1',
+  'codepipeline-us-east-1-418960518203',
+  # 'cucumber-logs', # 1.5M, 80gb
+  'deprecated-data',
+  'dms-cwnluin4utwebpwk33pew5qnem',
+  'downloads.code.org',
+  'hoc-static-all',
+  'hoc-static',
+  'images.code.org',
+  'learn.dev-code',
+  'offline-apps',
+  # 'pd-workshop-surveys',
+  'redshift-tableau', # 25k, 65gb
+  'tableau-connector',
+  'videos.code.org' # 714, 30gb
+]
+
+def main
+  start_time = Time.now
+  puts "Beginning S3 backup sync at #{Time.now}"
+  HipChat.log('Beginning S3 backup sync')
+
+  # s3s3mirror does not function properly if you're not in its root directory
+  Dir.chdir(S3S3MIRROR_DIR)
+  BUCKETS_TO_BACKUP.each do |bucket_name|
+    puts "Backing up #{bucket_name}"
+    puts "Running command: #{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/"
+    # -C marks this as a cross-account copy
+    result = `#{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/`
+    puts result
+  end
+
+  puts 'S3 backup sync complete'
+  end_time = Time.now
+  puts "Time elapsed: #{end_time - start_time}"
+  HipChat.log("S3 backup sync complete at #{Time.now}")
+end
+
+main #if only_one_running?(__FILE__)
