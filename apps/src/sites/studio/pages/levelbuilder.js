@@ -4,15 +4,15 @@
 import _ from 'lodash';
 import codemirror from 'codemirror';
 import marked from 'marked';
-import renderer from '../StylelessRenderer';
+import renderer from '@cdo/apps/StylelessRenderer';
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
-  initializeCodeMirror: require('./initializeCodeMirror'),
-  initializeBlockPreview: require('./initializeBlockPreview'),
-  jsonEditor: require('./jsonEditor'),
-  acapela: require('./acapela'),
-  ajaxSubmit: require('./ajaxSubmit')
+  initializeCodeMirror: require('@cdo/apps/code-studio/initializeCodeMirror'),
+  initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
+  jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
+  acapela: require('@cdo/apps/code-studio/acapela'),
+  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit')
 });
 
 window.levelbuilder.installBlocks = function (app, blockly, options) {
