@@ -486,7 +486,7 @@ const WorkshopForm = React.createClass({
   },
 
   validate(shouldValidate = true) {
-    let validation = {isValid: true, style: {}, help: {}};
+    const validation = {isValid: true, style: {}, help: {}};
     if (shouldValidate) {
       for (let i = 0; i < this.state.sessions.length; i++) {
         const session = this.state.sessions[i];
