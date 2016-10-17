@@ -12,7 +12,8 @@ class HttpCache
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = {
       # We specify the "special case" routes here; standard routes are handled by the loop below.
-      'hourofcode' => '/hoc/*'
+      'hourofcode' => '/hoc/*',
+      'flappy' => '/flappy/*'
   }
 
   # Cached scripts
@@ -27,7 +28,6 @@ class HttpCache
     course2
     course3
     course4
-    flappy
     playlab
     artist
     infinity
