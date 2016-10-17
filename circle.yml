@@ -24,13 +24,6 @@ checkout:
     - case $CIRCLE_NODE_INDEX in 0) echo "Skipping step." ;; *) ./bin/circle/merge-base ;; esac:
         parallel: true
 dependencies:
-  post:
-    # install chromedriver
-    - wget https://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip
-    - unzip chromedriver_linux64.zip
-    # run chromedriver
-    - ./chromedriver --url-base=wd/hub --port=9515  --verbose --log-path=$CIRCLE_ARTIFACTS/chromedriver.log:
-        background: true
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
