@@ -33,7 +33,7 @@ class HttpCache
     infinity
     iceage
   ).each do |script_name|
-    CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
+    CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/*"
   end
 
   def self.cached_scripts
