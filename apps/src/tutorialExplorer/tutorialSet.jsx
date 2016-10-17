@@ -78,6 +78,8 @@ const TutorialSet = React.createClass({
         }
 
         return filterGroupsSatisfied;
+      }).sort((tutorial1, tutorial2) => {
+        return tutorial2.displayweight - tutorial1.displayweight;
       });
     },
 
