@@ -251,8 +251,8 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
-  // TODO: Remove this (and the related style) when Game Lab is no longer in beta.
-  if ('gamelab' === appOptions.app) {
+  // TODO: Remove this (and the related style) when Game Lab and/or Web Lab are no longer in beta.
+  if ('gamelab' === appOptions.app || 'weblab' === appOptions.app) {
     $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
   }
 
