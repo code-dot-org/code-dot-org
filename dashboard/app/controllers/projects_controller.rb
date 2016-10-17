@@ -28,8 +28,8 @@ class ProjectsController < ApplicationController
       login_required: true
     },
     weblab: {
-        name: 'New Web Lab Project',
-        login_required: true
+      name: 'New Web Lab Project',
+      login_required: true
     },
     algebra_game: {
       name: 'New Algebra Project'

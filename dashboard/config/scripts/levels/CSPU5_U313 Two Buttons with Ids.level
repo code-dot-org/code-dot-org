@@ -14,53 +14,15 @@
           "function(){\n\n}"
         ]
       },
-      "button": null,
       "moveForward": null,
       "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
       "turnRight": null,
-      "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
-      "getX": null,
-      "getY": null,
-      "getDirection": null,
-      "penUp": null,
-      "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "penRGB": {
-        "params": [
-          "0",
-          "0",
-          "0",
-          "1"
-        ],
-        "paletteParams": [
-          "r",
-          "g",
-          "b",
-          "a"
-        ]
-      },
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "forLoop_i_0_4": null,
-      "randomNumber_min_max": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "comment": null
+      "turnLeft": null
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Predict what will happen. Once you've made a prediction, run the code to see what happens. (Click to see full instructions)",
-    "start_blocks": "button(\"fwd\", \"Forward\");\r\nonEvent(\"fwd\", \"click\", function(){\r\n  moveForward();\r\n});\r\nonEvent(\"fwd\", \"click\", function(){\r\n  turnLeft();\r\n});\r\n",
+    "start_blocks": "onEvent(\"button1\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"button1\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -91,9 +53,17 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null
+    "contained_level_names": [
+      "CSPU5_predict_mc_whichOfTwoEvents_2"
+    ],
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 40px; width: 115px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 90px; top: 20px;\">Click Me!</button></div></div>"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
