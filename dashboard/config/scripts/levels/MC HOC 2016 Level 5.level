@@ -6,9 +6,9 @@
   "user_id": 1,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"gravel\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"gravel\",\"gravel\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"gravel\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"water\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_plane": "[\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"gravel\",\"dirtCoarse\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"gravel\",\"gravel\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"gravel\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"water\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"sheep\",\"\",\"\",\"stone\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"grass\",\"grass\"]",
+    "action_plane": "[\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"sheep\",\"\",\"\",\"stone\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"grass\",\"grass\"]",
     "player_start_position": "[5,6]",
     "grid_width": "10",
     "grid_height": "10",
@@ -35,8 +35,8 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Now that we can make entities move and drop items, let’s go back and finish our sheep. Can you get both the sheep to the grass? Hint: try the Move Toward block\r\n\r\n\r\n",
-    "level_verification_timeout": "20000",
+    "instructions": "Now that we can make mobs move and drop items, let’s go back and finish our sheep. Can you get both the sheep to the grass? Hint: try the \"Move Toward\" block\r\n\r\n\r\n",
+    "level_verification_timeout": "40000",
     "contained_level_names": null
   },
   "published": true,
@@ -47,21 +47,35 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" uservisible="false" deletable="false" movable="false"/>
-        <block type="craft_sheepSpawnedTouchedClicked"/>
+        <block type="when_run" deletable="false" movable="false" uservisible="false"/>
+        <block type="craft_sheepSpawnedTouchedClicked">
+          <statement name="WHEN_USED">
+            <block type="craft_drop">
+              <title name="TYPE">wool</title>
+              <next>
+                <block type="craft_playSound">
+                  <title name="TYPE">sheepBaa</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="craft_moveForward"/>
+        <block type="craft_moveToward">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_moveAway">
+          <title name="TYPE">Player</title>
+        </block>
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
         </block>
         <block type="craft_drop">
           <title name="TYPE">dirt</title>
-        </block>
-        <block type="craft_moveToward">
-          <title name="TYPE">Player</title>
         </block>
         <block type="craft_playSound">
           <title name="TYPE">dig_wood1</title>

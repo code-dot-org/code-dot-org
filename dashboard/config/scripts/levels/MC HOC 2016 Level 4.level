@@ -57,17 +57,17 @@
         <block type="craft_entityTurn">
           <title name="DIR">random</title>
         </block>
-        <block type="craft_wait">
-          <title name="TYPE">0.4</title>
-        </block>
-        <block type="craft_forever"/>
-        <block type="craft_repeatRandom"/>
         <block type="craft_drop">
           <title name="TYPE">dirt</title>
         </block>
         <block type="craft_playSound">
           <title name="TYPE">dig_wood1</title>
         </block>
+        <block type="craft_wait">
+          <title name="TYPE">0.4</title>
+        </block>
+        <block type="craft_forever"/>
+        <block type="craft_repeatRandom"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>

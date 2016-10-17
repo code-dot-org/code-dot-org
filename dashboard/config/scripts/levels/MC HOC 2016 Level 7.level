@@ -36,9 +36,9 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Look at this poor cow, it can’t move or make milk. Make the cow move like you did with the sheep. Lead it to the pasture and get it to drop milk.\r\n",
-    "contained_level_names": null,
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
-    "level_verification_timeout": "30000"
+    "level_verification_timeout": "30000",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 7:\r\nLook at this poor cow, it can’t move or make milk, and it’s being attacked by Zombies. Restore the cow, and get it to run away from Zombies with the When Attacked category, and Move Away.\r\n\r\nSolution:               \r\nCow\r\n§  When spawned\r\n·       Repeat Forever\r\no   Repeat Random\r\no       Move Forward\r\no   Turn Random\r\n§  When Touched\r\n·       Move Toward Player\r\n§  When Used\r\n·       Drop Milk\r\n§  When Attacked\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n\r\nTeachers: reinforces loops",
@@ -46,45 +46,87 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="craft_cowSpawnedTouchedClicked"/>
+        <block type="craft_sheepSpawnedTouchedClicked" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever" uservisible="false">
+              <statement name="DO">
+                <block type="craft_wait" uservisible="false">
+                  <title name="TYPE">1.0</title>
+                  <next>
+                    <block type="craft_moveForward" uservisible="false">
+                      <next>
+                        <block type="craft_entityTurn" uservisible="false">
+                          <title name="DIR">random</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_drop" uservisible="false">
+              <title name="TYPE">wool</title>
+              <next>
+                <block type="craft_playSound" uservisible="false">
+                  <title name="TYPE">sheepBaa</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="craft_chickenSpawnedClicked" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever" uservisible="false">
+              <statement name="DO">
+                <block type="craft_moveForward" uservisible="false">
+                  <next>
+                    <block type="craft_entityTurn" uservisible="false">
+                      <title name="DIR">random</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_drop" uservisible="false">
+              <title name="TYPE">egg</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
-        </block>
-        <block type="craft_sheep"/>
-        <block type="craft_spawnEntity">
-          <title name="TYPE">sheep</title>
-          <title name="DIRECTION">up</title>
-        </block>
-        <block type="craft_attack"/>
-        <block type="craft_destroyEntity"/>
-        <block type="craft_drop">
-          <title name="TYPE">dirt</title>
-        </block>
-        <block type="craft_flashEntity"/>
-        <block type="craft_moveAway">
-          <title name="TYPE">Player</title>
-        </block>
         <block type="craft_moveForward"/>
-        <block type="craft_moveRandom"/>
         <block type="craft_moveToward">
           <title name="TYPE">Player</title>
         </block>
-        <block type="craft_chicken"/>
+        <block type="craft_moveAway">
+          <title name="TYPE">Player</title>
+        </block>
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
+        </block>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
         </block>
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
         </block>
         <block type="craft_forever"/>
-        <block type="craft_whenDay"/>
-        <block type="craft_cow"/>
-        <block type="craft_repeatRandom"/>
-        <block type="craft_whenNight"/>
         <block type="craft_repeatDropdown">
           <title name="TIMES">2</title>
         </block>
+        <block type="craft_repeatRandom"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

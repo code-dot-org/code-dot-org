@@ -53,7 +53,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="craft_forever"/>
         <block type="craft_moveForward"/>
         <block type="craft_entityTurnLR">
           <title name="DIR">left</title>
@@ -64,6 +63,7 @@
         <block type="craft_drop">
           <title name="TYPE">egg</title>
         </block>
+        <block type="craft_forever"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
