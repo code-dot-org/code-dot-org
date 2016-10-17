@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015135354) do
+ActiveRecord::Schema.define(version: 20161012121318) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -296,6 +296,10 @@ ActiveRecord::Schema.define(version: 20161015135354) do
     t.datetime "updated_at"
     t.string   "school"
     t.string   "code"
+    t.integer  "school_district_id"
+    t.integer  "school_zip"
+    t.string   "school_type"
+    t.string   "school_state"
     t.integer  "user_id"
     t.datetime "survey_sent_at"
     t.integer  "completed_survey_id"
@@ -303,6 +307,7 @@ ActiveRecord::Schema.define(version: 20161015135354) do
     t.datetime "deleted_at"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+    t.index ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
   end
 
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -886,6 +891,7 @@ ActiveRecord::Schema.define(version: 20161015135354) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "pd_enrollments", "school_districts"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"
