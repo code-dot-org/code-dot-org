@@ -6,65 +6,6 @@
   "user_id": 13,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "button": null,
-      "onEvent": {
-        "params": [
-          "\"id\"",
-          "\"click\"",
-          "function(){\n\n}"
-        ]
-      },
-      "setPosition": null,
-      "textLabel": {
-        "params": [
-          "\"id\"",
-          "\"text\""
-        ],
-        "paletteParams": [
-          "id",
-          "text"
-        ]
-      },
-      "image": null,
-      "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
-      "penUp": null,
-      "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "penRGB": {
-        "params": [
-          "0",
-          "0",
-          "0",
-          "1"
-        ],
-        "paletteParams": [
-          "r",
-          "g",
-          "b",
-          "a"
-        ]
-      },
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "forLoop_i_0_4": null,
-      "randomNumber_min_max": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Create your own \"Chaser App\". (Click to see full instructions)",
@@ -82,7 +23,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "button(\"id\", \"Move It Move It!\");\r\nonEvent(\"id\", \"click\", function(){\r\n  moveTo(randomNumber(0, 320), randomNumber(0, 450));\r\n});\r\n",
+    "start_blocks": "onEvent(\"moveBtn\", \"click\", function(){\r\n  moveTo(randomNumber(0, 320), randomNumber(0, 450));\r\n});\r\n",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
@@ -97,7 +38,20 @@
     "submittable": "true",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"moveBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 135px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 10px; top: 5px;\">Move it! Move it!</button></div></div>",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

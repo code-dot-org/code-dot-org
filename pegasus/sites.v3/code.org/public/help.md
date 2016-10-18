@@ -19,7 +19,7 @@ Encourage local elementary schools to teach our [elementary curriculum](/k5) or 
 ## Host an Hour of Code - at work, in your community, or local school
 Millions of people of all ages have learned an [Hour of Code](https://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
 
-[<button>Host an Hour of Code</button>](https://hourofcode.com/how-to)&nbsp;&nbsp; [<button>Volunteer for teachers</button>](/volunteer)
+[<button>Host an Hour of Code</button>](https://hourofcode.com/how-to)&nbsp;&nbsp; [<button>Volunteer in a classroom</button>](/volunteer)
 
 ## Want to inspire students? Offer help to local teachers
 Volunteer to teach our [Code Studio courses](http://studio.code.org) to local students with [this guide](/volunteer/guide). And sign up to hear about volunteer opportunities near you.

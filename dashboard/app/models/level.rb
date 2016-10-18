@@ -55,6 +55,7 @@ class Level < ActiveRecord::Base
     instructions
     markdown_instructions
     authored_hints
+    instructions_important
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
