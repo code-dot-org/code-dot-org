@@ -111,5 +111,8 @@
   "word": "ابحث عن الكلمة",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "نعم",
-  "youSpelled": "قمت بكتابة"
+  "youSpelled": "قمت بكتابة",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }
