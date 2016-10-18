@@ -9,7 +9,6 @@ export default class Player extends BaseEntity {
     this.inventory = {};
     this.movementState = -1;
   }
-
   updateMovement() {
     if (!this.controller.attemptRunning) {
       return;
@@ -33,15 +32,11 @@ export default class Player extends BaseEntity {
       } else {
         let callbackCommand = new CallbackCommand(this, () => { }, () => {
           this.lastMovement = +new Date();
-          this.controller.destroyBlock(callbackCommand);
+          this.controller.use(callbackCommand);
         }, this.identifier);
         this.addCommand(callbackCommand);
       }
     }
-  }
-
-  moveForward(commandQueueItem) {
-    super.moveForward(commandQueueItem);
   }
 
   doMoveForward(commandQueueItem) {
@@ -101,10 +96,6 @@ export default class Player extends BaseEntity {
         commandQueueItem.succeeded();
       });
     }
-  }
-
-  turn(commandQueueItem, direction) {
-    super.turn(commandQueueItem, direction);
   }
 
   updateDirection(direction) {

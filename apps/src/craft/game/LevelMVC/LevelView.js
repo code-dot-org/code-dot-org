@@ -98,11 +98,11 @@ export default class LevelView {
       "wool": ["blocks", "Wool_White", -13, 0],
       "wool_orange": ["blocks", "Wool_Orange", -13, 0],
 
-      "leavesAcacia": ["leavesAcacia", "Leaves0", -42, 80],
-      "leavesBirch": ["leavesBirch", "Leaves0", -100, -10],
-      "leavesJungle": ["leavesJungle", "Leaves0", -69, 43],
-      "leavesOak": ["leavesOak", "Leaves0", -100, 0],
-      "leavesSpruce": ["leavesSpruce", "Leaves0", -76, 60],
+      "leavesAcacia": ["leavesAcacia", "Leaves_Acacia0.png", -100, 0],
+      "leavesBirch": ["leavesBirch", "Leaves_Birch0.png", -100, 0],
+      "leavesJungle": ["leavesJungle", "Leaves_Jungle0.png", -100, 0],
+      "leavesOak": ["leavesOak", "Leaves_Oak0.png", -100, 0],
+      "leavesSpruce": ["leavesSpruce", "Leaves_Spruce0.png",-100, 0],
 
       "watering": ["blocks", "Water_0", -13, 0],
       "cropWheat": ["blocks", "Wheat0", -13, 0],
@@ -133,6 +133,15 @@ export default class LevelView {
     this.actionPlaneBlocks = [];
     this.toDestroy = [];
     this.resettableTweens = [];
+    this.treeFluffs = [];
+    this.treeFluffTypes = {
+      
+      "treeAcacia": [[0,0],[-1,0],[1,0],[-1,-1],[0,-1],[1,-1]],
+      "treeBirch":[],
+      "treeJungle":[],
+      "treeOak":[],
+      "treeSpruce":[]
+    };
   }
 
   yToIndex(y) {
@@ -152,6 +161,7 @@ export default class LevelView {
     });
     this.resettableTweens.length = 0;
     this.collectibleItems = [];
+    this.treeFluffs = [];
 
     this.resetPlanes(levelModel);
     this.preparePlayerSprite(this.player.name);
@@ -1377,9 +1387,9 @@ export default class LevelView {
     if (this.controller.followingPlayer()) {
       this.game.camera.follow(this.player.sprite);
     }
+    
     this.playerGhost = this.fluffPlane.create(0, 0, `player${playerName}`, 'Player_121');
-    this.playerGhost.parent = this.player.sprite;
-    this.playerGhost.alpha = 0.2;
+    this.player.sprite.addChild(this.playerGhost);
 
     this.selectionIndicator = this.shadingPlane.create(24, 44, 'selectionIndicator');
 
@@ -1800,9 +1810,11 @@ export default class LevelView {
       case "treeSpruce":
         sprite = this.createBlock(plane, x, y, "log" + blockType.substring(4));
         sprite.fluff = this.createBlock(this.fluffPlane, x, y, "leaves" + blockType.substring(4));
-
+        sprite.fluff.alpha = 0.8;
+        var spriteName = "Leaves_" + blockType.substring(4);
+        this.treeFluffs.push([sprite.fluff,blockType.substring(4),[x,y]]);
         sprite.onBlockDestroy = (logSprite) => {
-          logSprite.fluff.animations.add("despawn", Phaser.Animation.generateFrameNames("Leaves", 0, 6, "", 0), 10, false).onComplete.add(() => {
+          logSprite.fluff.animations.add("despawn", Phaser.Animation.generateFrameNames("Leaves", 0, 6, ".png", 0), 10, false).onComplete.add(() => {
             this.toDestroy.push(logSprite.fluff);
             logSprite.fluff.kill();
           });
@@ -1810,144 +1822,6 @@ export default class LevelView {
           this.playScaledSpeed(logSprite.fluff.animations, "despawn");
         };
         break;
-      // It's not able to create sheep as a block since it's an entity
-      /* 
-      case "sheep":
-        var sFrames = 10;
-        // Facing Left: Eat Grass: 199-216
-        sprite = plane.create(-22 + 40 * x, -12 + 40 * y, "sheep", "Sheep_199");
-        frameList = Phaser.Animation.generateFrameNames("Sheep_", 199, 215, "", 0);
-        for (i = 0; i < sFrames; ++i) {
-          frameList.push("Sheep_215");
-        }
-        sprite.animations.add("idle", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        //Look Right
-        frameList = Phaser.Animation.generateFrameNames("Sheep_", 184, 186, "", 0);
-        for (i = 0; i < sFrames; ++i) {
-          frameList.push("Sheep_186");
-        }
-        frameList.push("Sheep_188");
-        sprite.animations.add("lookRight", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        //Look Left
-        frameList = Phaser.Animation.generateFrameNames("Sheep_", 193, 195, "", 0);
-        for (i = 0; i < sFrames; ++i) {
-          frameList.push("Sheep_195");
-        }
-        frameList.push("Sheep_197");
-        sprite.animations.add("lookLeft", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        //Kick
-        frameList = Phaser.Animation.generateFrameNames("Sheep_", 217, 233, "", 0);
-        sprite.animations.add("kick", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        //Look At Camera
-        frameList = Phaser.Animation.generateFrameNames("Sheep_", 484, 485, "", 0);
-        for (i = 0; i < sFrames; ++i) {
-          frameList.push("Sheep_485");
-        }
-        frameList.push("Sheep_486");
-        sprite.animations.add("lookAtCam", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        frameList = [];
-        for (i = 0; i < 15; ++i) {
-          frameList.push("Sheep_215");
-        }
-        sprite.animations.add("idlePause", frameList, 15, false).onComplete.add(() => {
-          this.playRandomSheepAnimation(sprite);
-        });
-
-        // TODO(bjordan/gaallen) - update once updated Sheep.json
-        frameList = Phaser.Animation.generateFrameNames("Sheep_", 490, 491, "", 0);
-        stillFrames = Math.trunc(Math.random() * 3) + 3;
-        for (i = 0; i < stillFrames; ++i) {
-          frameList.push("Sheep_491");
-        }
-        this.onAnimationStart(sprite.animations.add("face", frameList, 2, true), () => {
-          this.audioPlayer.play("sheepBaa");
-        });
-
-        frameList = Phaser.Animation.generateFrameNames("Sheep_", 439, 455, "", 0);
-        for (i = 0; i < 3; ++i) {
-          frameList.push("Sheep_455");
-        }
-
-        sprite.animations.add("used", frameList, 15, true);
-        this.playAnimationWithOffset(sprite, "idle", 17, 199);
-        break;*/
-
-      case "creeper":
-        sprite = plane.create(-6 + 40 * x, 0 + plane.yOffset + 40 * y, "creeper", "Creeper_053");
-
-        frameList = Phaser.Animation.generateFrameNames("Creeper_", 37, 51, "", 3);
-        sprite.animations.add("explode", frameList, 10, false);
-
-        //Look Left
-        frameList = Phaser.Animation.generateFrameNames("Creeper_", 4, 7, "", 3);
-        for (i = 0; i < 15; ++i) {
-          frameList.push("Creeper_007");
-        }
-        frameList.push("Creeper_008");
-        frameList.push("Creeper_009");
-        frameList.push("Creeper_010");
-        frameList.push("Creeper_011");
-        sprite.animations.add("lookLeft", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        //Look Right
-        frameList = Phaser.Animation.generateFrameNames("Creeper_", 16, 19, "", 3);
-        for (i = 0; i < 15; ++i) {
-          frameList.push("Creeper_019");
-        }
-        frameList.push("Creeper_020");
-        frameList.push("Creeper_021");
-        frameList.push("Creeper_022");
-        frameList.push("Creeper_023");
-        sprite.animations.add("lookRight", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        //Look At Cam
-        frameList = Phaser.Animation.generateFrameNames("Creeper_", 244, 245, "", 3);
-        for (i = 0; i < 15; ++i) {
-          frameList.push("Creeper_245");
-        }
-        frameList.push("Creeper_246");
-        sprite.animations.add("lookAtCam", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-
-        frameList = [];
-        for (i = 0; i < 15; ++i) {
-          frameList.push("Creeper_004");
-        }
-        sprite.animations.add("idlePause", frameList, 15, false).onComplete.add(() => {
-          this.playRandomCreeperAnimation(sprite);
-        });
-
-        frameList = Phaser.Animation.generateFrameNames("Creeper_", 53, 59, "", 3);
-        stillFrames = Math.trunc(this.yToIndex(Math.random())) + 20;
-        for (i = 0; i < stillFrames; ++i) {
-          frameList.push("Creeper_004");
-        }
-        sprite.animations.add("idle", frameList, 15, false).onComplete.add(() => {
-          sprite.play("idlePause");
-        });
-        this.playAnimationWithOffset(sprite, "idle", 8, 52);
-        break;
-
       case "cropWheat":
         atlas = this.blocks[blockType][0];
         frame = this.blocks[blockType][1];

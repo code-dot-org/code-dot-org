@@ -7,8 +7,13 @@ export default class Zombie extends BaseEntity {
         super(controller, type, identifier, x, y, facing);
         this.offset = [-43, -45];
         this.burningSprite = [null, null];
+        this.burningSpriteGhost = [null, null];
         this.burningSpriteOffset = [47, 40];
         this.prepareSprite();
+    }
+
+    tick() {
+        super.tick();
     }
 
     reset() {
@@ -61,11 +66,13 @@ export default class Zombie extends BaseEntity {
 
     setBurn(burn) {
         if (burn) {
-            for (var i = 0; i < 2; i++)
+            for (var i = 0; i < 2; i++) {
                 this.burningSprite[i].alpha = 1;
+            }
         } else {
-            for (var i = 0; i < 2; i++)
+            for (var i = 0; i < 2; i++) {
                 this.burningSprite[i].alpha = 0;
+            }
         }
     }
 
@@ -85,7 +92,8 @@ export default class Zombie extends BaseEntity {
         this.sprite.y = this.offset[1] + 40 * this.position[1];
         // add burning sprite
         this.burningSprite = [actionPlane.create(this.sprite.x + this.burningSpriteOffset[0], this.sprite.y + this.burningSpriteOffset[1], 'burningInSun', "BurningFront_001.png"),
-            actionPlane.create(this.sprite.x + this.burningSpriteOffset[0], this.sprite.y + this.burningSpriteOffset[1], 'burningInSun', "BurningBehind_001.png")];
+        actionPlane.create(this.sprite.x + this.burningSpriteOffset[0], this.sprite.y + this.burningSpriteOffset[1], 'burningInSun', "BurningBehind_001.png")];
+
         frameList = Phaser.Animation.generateFrameNames("BurningFront_", 1, 15, ".png", 3);
         this.burningSprite[0].animations.add("burn", frameList, frameRate, true);
         frameList = Phaser.Animation.generateFrameNames("BurningBehind_", 1, 15, ".png", 3);
@@ -96,15 +104,13 @@ export default class Zombie extends BaseEntity {
         // update burning sprite's sort order
         this.burningSprite[0].sortOrder = this.sprite.sortOrder + 1;
         this.burningSprite[1].sortOrder = this.sprite.sortOrder - 1;
-        // turn off (default)
-        this.setBurn(this.controller.levelModel.isDaytime);
         var stillFrameName = ['Zombie_056.png', 'Zombie_166.png', 'Zombie_001.png', 'Zombie_111.png'];
         let idleDelayFrame = 8;
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump]]
         var frameListPerDirection = [[[73, 79], [57, 59], [61, 63], [69, 71], [65, 67], [80, 88], [89, 91], [93, 101], [102, 110], [229, 236]], // down
-            [[183, 189], [167, 169], [171, 173], [179, 181], [175, 177], [190, 198], [199, 201], [203, 211], [212, 220], [245, 252]], // right
-            [[18, 24], [2, 4], [6, 8], [14, 16], [10, 12], [25, 33], [34, 36], [38, 46], [47, 55], [221, 228]], // up 
-            [[128, 134], [112, 114], [116, 118], [124, 126], [120, 122], [135, 143], [144, 146], [148, 156], [158, 165], [237, 244]]]; // left
+        [[183, 189], [167, 169], [171, 173], [179, 181], [175, 177], [190, 198], [199, 201], [203, 211], [212, 220], [245, 252]], // right
+        [[18, 24], [2, 4], [6, 8], [14, 16], [10, 12], [25, 33], [34, 36], [38, 46], [47, 55], [221, 228]], // up 
+        [[128, 134], [112, 114], [116, 118], [124, 126], [120, 122], [135, 143], [144, 146], [148, 156], [158, 165], [237, 244]]]; // left
         for (var i = 0; i < 4; i++) {
             var facingName = this.controller.levelView.getDirectionName(i);
 
@@ -183,6 +189,8 @@ export default class Zombie extends BaseEntity {
         }
         // initialize
         this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+        // set burn
+        this.setBurn(this.controller.levelModel.isDaytime);
     }
 
 

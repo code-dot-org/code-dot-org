@@ -72,7 +72,6 @@ export default class BaseEntity {
     }
 
     bump(commandQueueItem) {
-        // TODO: bump animation
         var animName = "bump";
         var facingName = this.controller.levelView.getDirectionName(this.facing);
         this.controller.levelView.playScaledSpeed(this.sprite.animations, animName + facingName);
@@ -90,10 +89,6 @@ export default class BaseEntity {
 
     callBumpEvents(forwardPositionInformation) {
         for (var i = 1; i < forwardPositionInformation.length; i++) {
-            // no events for block this time
-            /*if (forwardPositionInformation[i] === 'notEmpty')
-                this.controller.events.forEach(e => e({ eventType: 'blockTouched', blockReference: this.controller.levelModel.getForwardBlock(), blockType: this.controller.levelModel.getForwardBlockType() }));
-            else*/
             if (forwardPositionInformation[i] === 'frontEntity') {
                 this.controller.events.forEach(e => e({ eventType: EventType.WhenTouched, targetType: forwardPositionInformation[i + 1].type, eventSenderIdentifier: this.identifier, targetIdentifier: forwardPositionInformation[i + 1].identifier }));
                 i++;
@@ -104,16 +99,16 @@ export default class BaseEntity {
     moveDirection(commandQueueItem, direction) {
         // update entity's direction
         this.controller.levelModel.turnToDirection(this, direction);
-        this.moveForward(commandQueueItem);
+        this.moveForward(commandQueueItem, false);
     }
 
-    moveForward(commandQueueItem) {
+    moveForward(commandQueueItem, record = true) {
+        if (record)
+            this.controller.addCommandRecord("moveForward", this.type);
         let forwardPosition = this.controller.levelModel.getMoveForwardPosition(this);
         var forwardPositionInformation = this.controller.levelModel.canMoveForward(this);
         if (forwardPositionInformation[0]) {
             this.doMoveForward(commandQueueItem, forwardPosition);
-            // not entity moved event
-            //this.controller.events.forEach(e => e({ eventType: 'entityMoved', entityIdentifier: this.identifier }));
         } else {
             this.bump(commandQueueItem);
             this.callBumpEvents(forwardPositionInformation);
@@ -129,6 +124,7 @@ export default class BaseEntity {
      * @memberOf BaseEntity
      */
     moveAway(commandQueueItem, moveAwayFrom) {
+        this.controller.addCommandRecord("moveAway", this.type);
         var moveAwayPosition = moveAwayFrom.position;
         var bestPosition = [];
         let absoluteDistanceSquare = function (position1, position2) {
@@ -180,6 +176,7 @@ export default class BaseEntity {
      * @memberOf BaseEntity
      */
     moveToward(commandQueueItem, moveTowardTo) {
+        this.controller.addCommandRecord("moveToward", this.type);
         var moveTowardPosition = moveTowardTo.position;
         var bestPosition = [];
         let absoluteDistanceSquare = function (position1, position2) {
@@ -267,7 +264,9 @@ export default class BaseEntity {
         }
     }
 
-    turn(commandQueueItem, direction) {
+    turn(commandQueueItem, direction, record = true) {
+        if (record)
+            this.controller.addCommandRecord("turn", this.type);
         // update entity direction
         if (direction === -1) {
             this.controller.levelModel.turnLeft(this);
@@ -283,6 +282,15 @@ export default class BaseEntity {
         });
     }
 
+    turnRandom(commandQueueItem) {
+        this.controller.addCommandRecord("turnRandom", this.type);
+        var getRandomInt = function (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var direction = getRandomInt(0, 1) === 0 ? 1 : -1;
+        this.turn(commandQueueItem, direction, false);
+    }
+
     use(commandQueueItem, userEntity) {
         // default behavior for use ?
         this.queue.startPushHighPriorityCommands();
@@ -292,6 +300,7 @@ export default class BaseEntity {
     }
 
     drop(commandQueueItem, itemType) {
+        this.controller.addCommandRecord("drop", this.type);
         var sprite = this.controller.levelView.createMiniBlock(this.position[0], this.position[1], itemType);
         sprite.sortOrder = this.controller.levelView.yToIndex(this.position[1]) + 2;
         this.controller.levelView.playScaledSpeed(sprite.animations, "animate");
@@ -299,6 +308,7 @@ export default class BaseEntity {
     }
 
     attack(commandQueueItem) {
+        this.controller.addCommandRecord("attack", this.type);
         let facingName = this.controller.levelView.getDirectionName(this.facing);
         this.controller.levelView.playScaledSpeed(this.sprite.animations, "attack" + facingName);
         setTimeout(() => {

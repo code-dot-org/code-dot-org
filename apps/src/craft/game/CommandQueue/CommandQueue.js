@@ -16,7 +16,7 @@ export default class CommandQueue {
     if (this.whileCommandQueue) {
       this.whileCommandQueue.addCommand(command);
     } else {
-      if(this.setUnshiftState)
+      if (this.setUnshiftState)
         this.highPriorityCommands.push(command);
       else
         this.commandList_.push(command);
@@ -49,10 +49,10 @@ export default class CommandQueue {
   }
 
   endPushHighPriorityCommands() {
-      // unshift highPriorityCommands to the command list
-      for(var i = this.highPriorityCommands.length - 1 ; i >= 0 ; i--)
-        this.commandList_.unshift(this.highPriorityCommands[i]);
-      this.setUnshiftState = false;
+    // unshift highPriorityCommands to the command list
+    for (var i = this.highPriorityCommands.length - 1; i >= 0; i--)
+      this.commandList_.unshift(this.highPriorityCommands[i]);
+    this.setUnshiftState = false;
   }
 
   tick() {
@@ -61,8 +61,9 @@ export default class CommandQueue {
       if (!this.currentCommand) {
         // if command list is empty
         if (this.commandList_.length === 0) {
-          // mark this queue as a success
-          this.state = CommandState.SUCCESS;
+          // mark this queue as a success if there is no repeat command
+          if (this.repeatCommands.length === 0)
+            this.state = CommandState.SUCCESS;
           // if there are repeat command for this queue, add them
           for (var i = 0; i < this.repeatCommands.length; i++) {
             if (this.repeatCommands[i][1] > 0) {
@@ -72,7 +73,7 @@ export default class CommandQueue {
             else if (this.repeatCommands[i][1] === -1)
               this.repeatCommands[i][0]();
             else
-              this.repeatCommands.splice(i,1);
+              this.repeatCommands.splice(i, 1);
           }
           return;
         }
@@ -134,6 +135,15 @@ export default class CommandQueue {
   }
 
   addRepeatCommands(codeBlock, iteration) {
+    // forever loop cancel existing forever loops
+    if (iteration === -1) {
+      for (var i = 0; i < this.repeatCommands.length; i++) {
+        if (this.repeatCommands[i][1] === -1) {
+          this.repeatCommands.splice(i, 1);
+          break;
+        }
+      }
+    }
     this.repeatCommands.push([codeBlock, iteration]);
     this.begin();
   }

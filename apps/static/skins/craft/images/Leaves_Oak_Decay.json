@@ -1,68 +1,68 @@
 {"frames": {
 
-"Leaves0":
+"Leaves_Oak0.png":
 {
-	"frame": {"x":0,"y":0,"w":146,"h":150},
+	"frame": {"x":0,"y":0,"w":155,"h":150},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":54,"y":60,"w":146,"h":150},
+	"spriteSourceSize": {"x":58,"y":60,"w":155,"h":150},
 	"sourceSize": {"w":240,"h":240}
 },
-"Leaves1":
+"Leaves_Oak1.png":
 {
-	"frame": {"x":146,"y":0,"w":146,"h":150},
+	"frame": {"x":155,"y":0,"w":155,"h":150},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":54,"y":60,"w":146,"h":150},
+	"spriteSourceSize": {"x":58,"y":60,"w":155,"h":150},
 	"sourceSize": {"w":240,"h":240}
 },
-"Leaves2":
+"Leaves_Oak2.png":
 {
-	"frame": {"x":292,"y":0,"w":146,"h":138},
+	"frame": {"x":0,"y":150,"w":155,"h":138},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":57,"y":72,"w":146,"h":138},
+	"spriteSourceSize": {"x":57,"y":72,"w":155,"h":138},
 	"sourceSize": {"w":240,"h":240}
 },
-"Leaves3":
+"Leaves_Oak3.png":
 {
-	"frame": {"x":438,"y":0,"w":146,"h":138},
+	"frame": {"x":155,"y":150,"w":155,"h":138},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":57,"y":72,"w":146,"h":138},
+	"spriteSourceSize": {"x":57,"y":72,"w":155,"h":138},
 	"sourceSize": {"w":240,"h":240}
 },
-"Leaves4":
+"Leaves_Oak4.png":
 {
-	"frame": {"x":584,"y":0,"w":146,"h":130},
+	"frame": {"x":0,"y":288,"w":155,"h":130},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":57,"y":80,"w":146,"h":130},
+	"spriteSourceSize": {"x":57,"y":80,"w":155,"h":130},
 	"sourceSize": {"w":240,"h":240}
 },
-"Leaves5":
+"Leaves_Oak5.png":
 {
-	"frame": {"x":730,"y":0,"w":138,"h":118},
+	"frame": {"x":155,"y":288,"w":155,"h":130},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":65,"y":92,"w":138,"h":118},
+	"spriteSourceSize": {"x":57,"y":80,"w":155,"h":130},
 	"sourceSize": {"w":240,"h":240}
 },
-"Leaves6":
+"Leaves_Oak6.png":
 {
-	"frame": {"x":868,"y":0,"w":107,"h":97},
+	"frame": {"x":310,"y":0,"w":114,"h":89},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":55,"y":92,"w":107,"h":97},
+	"spriteSourceSize": {"x":95,"y":120,"w":114,"h":89},
 	"sourceSize": {"w":240,"h":240}
 }},
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "Leaves_Decay",
+	"image": "Leaves_Oak_Decay.png",
 	"format": "RGBA8888",
-	"size": {"w":975,"h":150},
+	"size": {"w":424,"h":424},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:01240e0d565f9e79f888992935ac72d9:9578038f768e61b9b2b56e269ffaf511:a17d2d48a2645ff7da7bafa35b8edb19$"
+	"smartupdate": "$TexturePacker:SmartUpdate:6950bd9456ed79f266ba18e1d41df1b0:f2ae3be00b9a0b3e28d0893395bb452c:a17d2d48a2645ff7da7bafa35b8edb19$"
 }
 }

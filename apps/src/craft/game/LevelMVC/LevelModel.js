@@ -184,6 +184,18 @@ export default class LevelModel {
     return false;
   }
 
+  isEntityTypeRunning(entityType) {
+    var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
+    for (var i = 0; i < entityList.length; i++) {
+      var entity = entityList[i];
+      const notStarted = !entity.queue.isStarted();
+      const notFinished = !entity.queue.isFinished();
+      if((notStarted && entity.queue.commandList_.length > 0) || notFinished)
+        return true;
+    }
+    return false;
+  }
+
   isEntityDied(entityType, count = 1) {
     var deathCount = this.controller.levelEntity.entityDeathCount;
     if (deathCount.has(entityType)) {
@@ -191,6 +203,10 @@ export default class LevelModel {
         return true;
     }
     return false;
+  }
+
+  getCommandExecutedCount(commandName, targetType) {
+    return this.controller.getCommandCount(commandName,targetType);
   }
 
   getTurnRandomCount() {
@@ -565,12 +581,22 @@ export default class LevelModel {
       }
       if (!this.actionPlane[blockIndex].isEmpty)
         result.push("notEmpty");
+      if (this.groundPlane[blockIndex].blockType === "water")
+        result.push("water");
+      else if(this.groundPlane[blockIndex].blockType === "lava")
+        result.push("lava");
       var frontEntity = this.getEntityAt(position);
       if (frontEntity !== undefined) {
         result.push("frontEntity");
         result.push(frontEntity);
       }
-      result[0] = (this.actionPlane[blockIndex].isWalkable || ((frontEntity !== undefined && frontEntity.isOnBlock) && !this.actionPlane[blockIndex].isEmpty)) && (frontEntity === undefined);
+      result[0] = (this.actionPlane[blockIndex].isWalkable || ((frontEntity !== undefined && frontEntity.isOnBlock) 
+      // action plane is empty
+      && !this.actionPlane[blockIndex].isEmpty)) 
+      // there is no entity 
+      && (frontEntity === undefined)
+      // no lava or water
+      && (this.groundPlane[blockIndex].blockType !== "water" && this.groundPlane[blockIndex].blockType !== "lava");
     }
     else
       result.push("outBound");

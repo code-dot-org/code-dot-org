@@ -86,20 +86,6 @@ export function get(controller) {
       controller.addCommand(new MoveForwardCommand(controller, highlightCallback, targetEntity), targetEntity);
     },
 
-    moveRandom: function (highlightCallback, targetEntity) {
-      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveRandom(callbackCommand);
-      }, targetEntity);
-      controller.addCommand(callbackCommand);
-    },
-
-    moveDirection: function (highlightCallback, direction, targetEntity) {
-      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveDirection(callbackCommand, direction);
-      }, targetEntity);
-      controller.addCommand(callbackCommand);
-    },
-
     moveAway: function (highlightCallback, targetEntity, moveAwayFrom) {
       const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.moveAway(callbackCommand, moveAwayFrom);
@@ -110,13 +96,6 @@ export function get(controller) {
     moveToward: function (highlightCallback, targetEntity, moveTowardTo) {
       const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.moveToward(callbackCommand, moveTowardTo);
-      }, targetEntity);
-      controller.addCommand(callbackCommand);
-    },
-
-    moveTo: function (highlightCallback, targetEntity, moveTowardTo) {
-      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
-        controller.moveTo(callbackCommand, moveTowardTo);
       }, targetEntity);
       controller.addCommand(callbackCommand);
     },
@@ -206,12 +185,6 @@ export function get(controller) {
     spawnEntity: function (highlightCallback, type, spawnDirection) {
       var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.spawnEntity(callbackCommand, type, spawnDirection);
-      });
-      controller.addCommand(callbackCommand);
-    },
-    spawnEntityAt: function (highlightCallback, type, x, y, facing) {
-      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
-        controller.spawnEntityAt(callbackCommand, type, x, y, facing);
       });
       controller.addCommand(callbackCommand);
     },

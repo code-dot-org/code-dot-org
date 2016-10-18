@@ -20,19 +20,19 @@ export default class Chicken extends BaseEntity {
         var frameList = [];
         var frameName = "chicken"
         this.sprite = actionPlane.create(0, 0, 'chicken', 'chicken0001.png');
-        let stillFrameName = ['chicken0222.png','chicken0111.png','chicken0001.png','chicken0333.png'];
+        let stillFrameName = ['chicken0222.png', 'chicken0111.png', 'chicken0001.png', 'chicken0333.png'];
         let idleDelayFrame = 8;
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump],[eat]]
-        var frameListPerDirection = [[[259,275],[225,227],[224,226],[285,287],[276,281],[291,302],[303,313],[314,326],[327,332],[460,467],[240,249]], // down
-            [[148,164],[114,116],[113,115],[174,176],[165,170],[180,191],[192,202],[203,215],[216,221],[452,459],[129,138]], // right
-            [[37,53],[3,5],   [12,14], [63,65], [54,59],[69,80],[81,91],[92,104],[105,110],[444,451],[18,27]], // up 
-            [[370,386],[336,338],[335,337],[396,398],[387,392],[402,413],[414,424],[425,437],[438,443],[468,475],[351,360]]]; // left
+        var frameListPerDirection = [[[259, 275], [225, 227], [224, 226], [285, 287], [276, 281], [291, 302], [303, 313], [314, 326], [327, 332], [460, 467], [240, 249]], // down
+        [[148, 164], [114, 116], [113, 115], [174, 176], [165, 170], [180, 191], [192, 202], [203, 215], [216, 221], [452, 459], [129, 138]], // right
+        [[37, 53], [3, 5], [12, 14], [63, 65], [54, 59], [69, 80], [81, 91], [92, 104], [105, 110], [444, 451], [18, 27]], // up 
+        [[370, 386], [336, 338], [335, 337], [396, 398], [387, 392], [402, 413], [414, 424], [425, 437], [438, 443], [468, 475], [351, 360]]]; // left
         for (var i = 0; i < 4; i++) {
             var facingName = this.controller.levelView.getDirectionName(i);
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 4);
-            for(var j = 0 ; j < idleDelayFrame ; j++)
+            for (var j = 0; j < idleDelayFrame; j++)
                 frameList.push(stillFrameName[i]);
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
