@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function(verificationAPI) {\r\n     return false;\r\n   }",
+    "verification_function": "function(verificationAPI) {\r\n     return verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n   }",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

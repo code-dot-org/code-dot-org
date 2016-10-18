@@ -34,10 +34,10 @@
     "player_start_direction": "2",
     "is_event_level": "true",
     "day_night_cycle_start": "3",
-    "day_night_cycle_time": "30",
-    "instructions": "Nighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n",
-    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
-    "level_verification_timeout": "30000",
+    "day_night_cycle_time": "60",
+    "instructions": "Nighttime is boring with no zombies. Spawn at least 3 zombies when night falls, and get them to chase you. Survive until morning.",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"spawn\",\"zombie\") >= 3 && verificationAPI.getCommandExecutedCount(\"moveToward\") >= 1;\r\n}",
+    "level_verification_timeout": "34000",
     "callout_json": "[]",
     "contained_level_names": null
   },
@@ -49,8 +49,22 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_zombieSpawnedTouchedClickedDay" x="250px" y="25px" deletable="false"/>
-        <block type="craft_whenNight" x="25px" y="25px" deletable="false"/>
+        <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" movable="false">
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_forever" deletable="false" movable="false" editable="false">
+              <statement name="DO">
+                <block type="craft_attack" deletable="false" movable="false" editable="false"/>
+              </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_destroyEntity" deletable="false" movable="false" editable="false"/>
+          </statement>
+          <statement name="WHEN_DAY">
+            <block type="craft_destroyEntity" deletable="false" movable="false" editable="false"/>
+          </statement>
+        </block>
+        <block type="craft_whenNight" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

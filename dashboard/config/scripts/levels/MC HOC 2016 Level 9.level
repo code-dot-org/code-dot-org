@@ -31,7 +31,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "false",
-    "player_start_direction": "3",
+    "player_start_direction": "2",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
@@ -48,21 +48,21 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" x="15px" y="15px">
+        <block type="when_run" deletable="false" movable="false" editable="false" uservisible="false">
           <next>
-            <block type="craft_spawnEntity">
+            <block type="craft_spawnEntity" movable="false" editable="false" uservisible="false">
               <title name="TYPE">zombie</title>
               <title name="DIRECTION">up</title>
               <next>
-                <block type="craft_spawnEntity">
+                <block type="craft_spawnEntity" uservisible="false">
                   <title name="TYPE">zombie</title>
                   <title name="DIRECTION">down</title>
                   <next>
-                    <block type="craft_spawnEntity">
+                    <block type="craft_spawnEntity" uservisible="false">
                       <title name="TYPE">zombie</title>
                       <title name="DIRECTION">left</title>
                       <next>
-                        <block type="craft_spawnEntity">
+                        <block type="craft_spawnEntity" uservisible="false">
                           <title name="TYPE">zombie</title>
                           <title name="DIRECTION">right</title>
                         </block>
@@ -74,30 +74,30 @@
             </block>
           </next>
         </block>
-        <block type="craft_ironGolem" x="15px" y="190px" deletable="false"/>
-        <block type="craft_zombieSpawnedTouchedClickedDay" x="400px" y="190px" deletable="false">
+        <block type="craft_ironGolem" deletable="false"/>
+        <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" movable="false" editable="false">
           <statement name="WHEN_SPAWNED">
-            <block type="craft_forever">
+            <block type="craft_forever" movable="false" editable="false">
               <statement name="DO">
-                <block type="craft_moveToward">
+                <block type="craft_moveToward" deletable="false" movable="false" editable="false">
                   <title name="TYPE">Player</title>
                 </block>
               </statement>
             </block>
           </statement>
           <statement name="WHEN_TOUCHED">
-            <block type="craft_wait">
+            <block type="craft_wait" deletable="false" movable="false" editable="false">
               <title name="TYPE">0.4</title>
               <next>
-                <block type="craft_attack"/>
+                <block type="craft_attack" deletable="false" movable="false" editable="false"/>
               </next>
             </block>
           </statement>
           <statement name="WHEN_USED">
-            <block type="craft_destroyEntity"/>
+            <block type="craft_destroyEntity" deletable="false" movable="false" editable="false"/>
           </statement>
           <statement name="WHEN_DAY">
-            <block type="craft_destroyEntity"/>
+            <block type="craft_destroyEntity" deletable="false" movable="false" editable="false"/>
           </statement>
         </block>
       </xml>
