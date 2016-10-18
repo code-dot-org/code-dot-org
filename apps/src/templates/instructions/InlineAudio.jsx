@@ -72,7 +72,7 @@ const InlineAudio = React.createClass({
     }
 
     var audio = new Audio(this.props.src);
-    $(audio).on("ended", e => {
+    audio.addEventListener("ended", e => {
       this.setState({
         playing: false
       });
