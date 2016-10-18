@@ -111,5 +111,8 @@
   "word": "იპოვეთ სიტყვა",
   "wrongCropError": "არ შემიძლია აქედან სიმინდის მოსავლის აღება.",
   "yes": "დიახ",
-  "youSpelled": "თქვენ შეიყვანეთ"
+  "youSpelled": "თქვენ შეიყვანეთ",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

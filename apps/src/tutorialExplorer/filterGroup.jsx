@@ -8,7 +8,8 @@ import FilterChoice from './filterChoice';
 const styles = {
   filterGroupOuter: {
     paddingTop: 20,
-    paddingRight: 40
+    paddingRight: 40,
+    paddingLeft: 10
   },
   filterGroupText: {
     fontFamily: '"Gotham 5r", sans-serif',
