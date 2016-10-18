@@ -5,8 +5,8 @@ import {
   showStartOverDialog,
   showInstructionsDialog,
   processResults
-} from  './dialogHelper';
-import { getResult } from './codeStudioLevels';
+} from  '@cdo/apps/code-studio/levels/dialogHelper';
+import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 /**
  * This file injects some of our dialog related methods onto the dashboard namespace
