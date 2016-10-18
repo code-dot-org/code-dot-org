@@ -110,8 +110,6 @@ social:
 - initial_filters[:length] = ["1hour", "1hour-follow"]
 - initial_filters[:activity_type] = ["robotics"]
 
-
-
 .container_responsive
   #tutorials
 
@@ -124,8 +122,7 @@ social:
       filters: #{filters.to_json},
       initialFilters: #{initial_filters.to_json},
       locale: "#{request.locale}",
-      backButton: {text: "Back to all tutorials", url: "/learn2016"}
-      }
-    );
+      backButton: true
+    });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });
