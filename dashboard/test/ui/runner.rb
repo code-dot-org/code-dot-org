@@ -185,7 +185,12 @@ $failures = []
 
 if $options.local
   SeleniumBrowser.ensure_chromedriver_running
-  $browsers = [{:browser => "local"}]
+  $browsers = [{
+    "browser": "local",
+    "name": "ChromeDriver",
+    "browserName": "chrome",
+    "version": "latest"
+  }]
 end
 
 if $options.config
