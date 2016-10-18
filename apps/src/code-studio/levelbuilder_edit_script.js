@@ -1,8 +1,12 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
-/* globals scriptData, i18nData */
+/* globals scriptData, i18nData, levelKeyList */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import VirtualizedSelect from 'react-virtualized-select';
+import 'react-virtualized/styles.css';
+import 'react-select/dist/react-select.css';
+import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import color from '../color';
 
@@ -205,9 +209,41 @@ const LevelEditor = React.createClass({
     level: React.PropTypes.object.isRequired
   },
 
+  getInitialState() {
+    return {};
+  },
+
+  handleClick() {
+    this.setState({expanded: true});
+  },
+
+  handleValueSelected(value) {
+    console.log(value);
+  },
+
   render() {
     return (
-      <div style={styles.levelToken}>{this.props.level.key}</div>
+      <div style={styles.levelToken} onClick={this.handleClick}>
+        {this.state.expanded ?
+          <div>
+            {this.props.level.ids.map(id => {
+              return (
+                <VirtualizedSelect
+                  key={id}
+                  options={levelKeyList}
+                  value={id}
+                  onChange={this.handleValueSelected}
+                  autofocus={true}
+                />
+              );
+            })}
+          </div> :
+          <div>
+            {this.props.level.key}
+            {this.props.level.ids.length > 1 && ` (${this.props.level.ids.length} variants...)`}
+          </div>
+        }
+      </div>
     );
   }
 });
