@@ -28,6 +28,7 @@ var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
+import Overlay from './templates/Overlay';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
@@ -346,6 +347,13 @@ StudioApp.prototype.init = function (config) {
             this.showInstructionsDialog_(config.level, autoClose, showHints);
           }}
       />
+    </Provider>,
+    document.body.appendChild(document.createElement('div'))
+  );
+
+  ReactDOM.render(
+    <Provider store={this.reduxStore}>
+      <Overlay />
     </Provider>,
     document.body.appendChild(document.createElement('div'))
   );

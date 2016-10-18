@@ -568,6 +568,9 @@ en:
       CSPU5_FirstTimeDesignMode:
         description here: description here
         title: title
+      CSPU5_HowImagesWork:
+        description here: description here
+        title: title
       CSPU5_HowOnEventWorks_v2:
         description here: description here
         title: title
@@ -6058,11 +6061,11 @@ en:
         <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
         <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
       cspu5_assess1_turtle:
-        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">
-        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">
-        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">
-        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">
-        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">
+        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
+        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
+        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
       cspu5_assess1_value:
         'value is: 2': 'value is: 2'
         'value is: 2.3333333': 'value is: 2.3333333'

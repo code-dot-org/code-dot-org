@@ -1,6 +1,7 @@
 ---
 title: Learn
-theme: responsive
+theme: responsive_wide
+layout: wide
 social:
   "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
   "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
@@ -12,7 +13,34 @@ social:
   "og:video:type": ""
 ---
 
-= view 'mobilecheck.js'
+#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+  #desktop-header.desktop-feature
+    = view :header, variant: "desktop"
+  #mobile-header.mobile-feature
+    = view :header, variant: "mobile"
+
+  .banner
+    .container_responsive{style: "color: white"}
+      .col-50{style: "text-align: center"}
+        %img{src: "/images/learn/hour-of-code-logo-2016.png", style: "margin-top: 30px; margin-bottom: 30px"}
+        %br/
+        The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages.
+        %br/
+        %br/
+        %a{href: "https://hourofcode.com/#join", target: "_blank"}
+          %button
+            Host an Hour
+        &nbsp;
+        &nbsp;
+        %a{href: "https://hourofcode.com/how-to", target: "_blank"}
+          %button
+            Teacher Guide
+        %br/
+        %br/
+      .col-50
+        %img{src: "/images/learn/student1.png", style: "text-align: center"}
+
+%br/
 
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
@@ -41,9 +69,9 @@ social:
 - filters << {name: "student_experience", text: "Student's CS experience", entries: entries}
 
 - entries = []
-- entries << {name: "online-tutorials", text: "Online tutorials"}
-- entries << {name: "lesson-plan", text: "Lesson plan "}
-- entries << {name: "offline-apps", text: "Offline apps (for poor or no internet)  "}
+- entries << {name: "online-tutorial", text: "Online tutorials"}
+- entries << {name: "lesson-plan", text: "Lesson plan"}
+- entries << {name: "offline-app", text: "Offline apps (for poor or no internet)"}
 - entries << {name: "unplugged", text: "Classroom activity with no technology"}
 - filters << {name: "activity_type", text: "Activity type", entries: entries}
 
@@ -55,7 +83,7 @@ social:
 - entries << {name: "language", text: "World language"}
 - entries << {name: "art", text: "Art, Design, Media"}
 - entries << {name: "other", text: "Other"}
-- entries << {name: "cs", text: "Computer Science onyl"}
+- entries << {name: "cs-only", text: "Computer Science only"}
 - filters << {name: "subject", text: "Topics", entries: entries}
 
 - entries = []
@@ -94,7 +122,8 @@ social:
 
 -# = tutorialsContents.to_json
 
-#tutorials
+.container_responsive
+  #tutorials
 
 :javascript
 
@@ -104,7 +133,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       filters: #{filters.to_json},
       initialFilters: #{initial_filters.to_json},
-      locale: "#{request.locale}"
+      locale: "#{request.locale}",
+      roboticsButton: true
       }
     );
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
