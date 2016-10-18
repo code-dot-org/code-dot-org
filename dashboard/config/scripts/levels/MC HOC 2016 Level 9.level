@@ -36,8 +36,9 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Zombies are attacking the village! Code the Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r\n",
-    "contained_level_names": null,
-    "level_verification_timeout": "60000"
+    "level_verification_timeout": "60000",
+    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 9: Protect the town from Zombies\r\nYou need help killing all these zombies. Code the Iron Golem to fight them with you. Keep the village safe!\r\n\r\nWhen Run\r\nRepeat 5\r\nSpawn Zombie  North\r\nSpawn Zombie South\r\nSpawn Zombie West\r\nSpawn Zombie East\r\nWait 5 seconds\r\nSpawn Iron Golum\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked (used)\r\nDie\r\nWhen Day\r\nDie\r\n\r\nIron Golem\r\nWhen spawned\r\nRepeat Forever\r\nMove toward Zombie\r\nWhen touched\r\nAttack\r\n\r\nTeaches: Using multiple entities, practice loops",
@@ -47,7 +48,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
+        <block type="when_run" x="15px" y="15px">
           <next>
             <block type="craft_spawnEntity">
               <title name="TYPE">zombie</title>
@@ -73,8 +74,8 @@
             </block>
           </next>
         </block>
-        <block type="craft_ironGolem"/>
-        <block type="craft_zombieSpawnedTouchedClickedDay">
+        <block type="craft_ironGolem" x="15px" y="190px" deletable="false"/>
+        <block type="craft_zombieSpawnedTouchedClickedDay" x="400px" y="190px" deletable="false">
           <statement name="WHEN_SPAWNED">
             <block type="craft_forever">
               <statement name="DO">
@@ -85,9 +86,17 @@
             </block>
           </statement>
           <statement name="WHEN_TOUCHED">
-            <block type="craft_attack"/>
+            <block type="craft_wait">
+              <title name="TYPE">0.4</title>
+              <next>
+                <block type="craft_attack"/>
+              </next>
+            </block>
           </statement>
           <statement name="WHEN_USED">
+            <block type="craft_destroyEntity"/>
+          </statement>
+          <statement name="WHEN_DAY">
             <block type="craft_destroyEntity"/>
           </statement>
         </block>
@@ -95,48 +104,38 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="craft_forever"/>
-        <block type="craft_repeatDropdown">
-          <title name="TIMES">2</title>
-        </block>
-        <block type="craft_repeatRandom"/>
-        <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
-        </block>
         <block type="craft_spawnEntity">
           <title name="TYPE">sheep</title>
           <title name="DIRECTION">up</title>
         </block>
-        <block type="craft_attack"/>
-        <block type="craft_destroyEntity"/>
-        <block type="craft_drop">
-          <title name="TYPE">dirt</title>
-        </block>
-        <block type="craft_explodeEntity"/>
-        <block type="craft_flashEntity"/>
-        <block type="craft_moveAway">
+        <block type="craft_moveForward"/>
+        <block type="craft_moveToward">
           <title name="TYPE">Player</title>
         </block>
-        <block type="craft_moveForward"/>
-        <block type="craft_moveRandom"/>
-        <block type="craft_moveToward">
+        <block type="craft_moveAway">
           <title name="TYPE">Player</title>
         </block>
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
         </block>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
+        <block type="craft_drop">
+          <title name="TYPE">egg</title>
+        </block>
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
         </block>
-        <block type="craft_sheep"/>
-        <block type="craft_zombie"/>
-        <block type="craft_ironGolem"/>
-        <block type="craft_creeper"/>
-        <block type="craft_cow"/>
-        <block type="craft_chicken"/>
-        <block type="when_run"/>
-        <block type="craft_whenDay"/>
-        <block type="craft_whenNight"/>
+        <block type="craft_attack"/>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_explodeEntity"/>
+        <block type="craft_flashEntity"/>
+        <block type="craft_forever"/>
+        <block type="craft_repeatDropdown">
+          <title name="TIMES">2</title>
+        </block>
+        <block type="craft_repeatRandom"/>
       </xml>
     </toolbox_blocks>
   </blocks>

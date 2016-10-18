@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return false;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "Great, the chicken moved! But then he stopped. In games, entities like chickens wander around forever. Let’s use a loop to keep these chickens moving.\r\n",
+    "instructions": "Great, the chicken moved! But then he stopped. In games, mobs like chickens wander around forever. Let’s use a loop to keep these chickens moving.\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
@@ -48,7 +48,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_chickenSpawnedClicked"/>
+        <block type="craft_chickenSpawnedClicked" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

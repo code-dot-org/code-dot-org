@@ -13,7 +13,7 @@
     "grid_width": "25",
     "grid_height": "25",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return false;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -36,10 +36,10 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Now you that you have the skills to create entities, use your imagination to make your heart's desire! Your creations can be helpful, harmful, or hilarious! You are the future of Minecraft! Have fun!",
-    "contained_level_names": null,
+    "instructions": "Now you that you have the skills to create mobs, use your imagination to make your heart's desire! Your creations can be helpful, harmful, or hilarious! You are the future of Minecraft! Have fun!",
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
-    "level_verification_timeout": "120000"
+    "level_verification_timeout": "120000",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 10: Free Play - on 30x30 screen\r\n\r\nFree play! The player is given all the tools they have Clicked up until this point, and more.\r\n\r\n·       The player should be able to make a wide variety of scenarios and games. We can save out the level image and post it on social media like we did last year.\r\n",
@@ -49,59 +49,51 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false"/>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="craft_whenDay" deletable="false"/>
+        <block type="craft_whenNight" deletable="false"/>
+        <block type="craft_sheep" deletable="false"/>
+        <block type="craft_zombie" deletable="false"/>
+        <block type="craft_ironGolem" deletable="false"/>
+        <block type="craft_creeper" deletable="false"/>
+        <block type="craft_chicken" deletable="false"/>
+        <block type="craft_cow" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="craft_forever"/>
-        <block type="craft_repeatDropdown">
-          <title name="TIMES">2</title>
-        </block>
-        <block type="craft_repeatRandom"/>
-        <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
-        </block>
         <block type="craft_spawnEntity">
           <title name="TYPE">sheep</title>
           <title name="DIRECTION">up</title>
         </block>
-        <block type="craft_spawnEntityRandom">
-          <title name="TYPE">Player</title>
-        </block>
-        <block type="craft_attack"/>
-        <block type="craft_destroyEntity"/>
-        <block type="craft_drop">
-          <title name="TYPE">dirt</title>
-        </block>
-        <block type="craft_explodeEntity"/>
-        <block type="craft_flashEntity"/>
-        <block type="craft_moveAway">
-          <title name="TYPE">Player</title>
-        </block>
         <block type="craft_moveForward"/>
-        <block type="craft_moveRandom"/>
-        <block type="craft_moveDirection">
-          <title name="TYPE">up</title>
-        </block>
         <block type="craft_moveToward">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_moveAway">
           <title name="TYPE">Player</title>
         </block>
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
         </block>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
         </block>
-        <block type="craft_sheep"/>
-        <block type="craft_zombie"/>
-        <block type="craft_ironGolem"/>
-        <block type="craft_creeper"/>
-        <block type="craft_cow"/>
-        <block type="craft_chicken"/>
-        <block type="when_run"/>
-        <block type="craft_whenDay"/>
-        <block type="craft_whenNight"/>
+        <block type="craft_attack"/>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_explodeEntity"/>
+        <block type="craft_flashEntity"/>
+        <block type="craft_forever"/>
+        <block type="craft_repeatDropdown">
+          <title name="TIMES">2</title>
+        </block>
+        <block type="craft_repeatRandom"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return false;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -35,7 +35,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "They’re moving now, but they look weird. Randomness helps multiple entities to move differently. Use a \"Turn Random\" to make your chickens look more natural. \r\n",
+    "instructions": "They’re moving now, but they look weird. Randomness helps multiple mobs to move differently. Use a \"turn random\" to make your chickens look more natural. \r\n",
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
     "level_verification_timeout": "7000",
     "contained_level_names": null
