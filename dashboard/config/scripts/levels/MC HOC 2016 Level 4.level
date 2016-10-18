@@ -36,7 +36,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "They’re moving now, but they look weird. Randomness helps multiple mobs to move differently. Use a \"turn random\" to make your chickens look more natural. \r\n",
-    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"turnRandom\") >= 1 || verificationAPI.getCommandExecutedCount(\"repeatRandom\") >= 1 ;\r\n    },",
     "level_verification_timeout": "7000",
     "contained_level_names": null
   },
@@ -61,10 +61,10 @@
           <title name="TYPE">dirt</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
+          <title name="TYPE">sheepBaa</title>
         </block>
         <block type="craft_wait">
-          <title name="TYPE">0.4</title>
+          <title name="TYPE">random</title>
         </block>
         <block type="craft_forever"/>
         <block type="craft_repeatRandom"/>

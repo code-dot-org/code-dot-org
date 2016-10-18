@@ -66,8 +66,7 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="pick_one"/>
-      </xml>
+</xml>
     </required_blocks>
     <solution_blocks>
       <xml>
