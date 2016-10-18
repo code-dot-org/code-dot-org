@@ -9,7 +9,6 @@ class PdWorkshopSurveyCounselorAdmin
     result[:enrollment_id_i] = required integer data[:enrollment_id_i]
     result[:workshop_id_i] = required integer data[:workshop_id_i]
     result[:plp_b] = required data[:plp_b]
-    result[:include_demographics_b] = required data[:include_demographics_b]
 
     result[:how_heard_ss] = required_multi_enum data, :how_heard_ss
     if result[:how_heard_ss].class != FieldError && result[:how_heard_ss].include?(OTHER)
