@@ -9,7 +9,7 @@
     "submittable": "true",
     "title": "Personal Reflection",
     "allow_user_uploads": "false",
-    "peer_reviewable": "true",
+    "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true
   },

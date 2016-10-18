@@ -1448,42 +1448,52 @@ function Sprite(pInst, _x, _y, _w, _h) {
   };
 
   /**
-  * Sets a collider for the sprite.
-  *
-  * In p5.play a Collider is an invisible circle or rectangle
-  * that can have any size or position relative to the sprite and which
-  * will be used to detect collisions and overlapping with other sprites,
-  * or the mouse cursor.
-  *
-  * If the sprite is checked for collision, bounce, overlapping or mouse events a
-  * collider is automatically created from the width and height parameter passed at the
-  * creation of the sprite or the from the image dimension in case of animate sprites.
-  *
-  * Often the image bounding box is not appropriate as active area for
-  * a collision detection so you can set a circular or rectangular sprite with different
-  * dimensions and offset from the sprite's center.
-  *
-  * setCollider
-  * @method setCollider
-  * @param {String} type Either "rectangle" or "circle"
-  * @param {Number} offsetX Collider x position from the center of the sprite
-  * @param {Number} offsetY Collider y position from the center of the sprite
-  * @param {Number} width Collider width or radius
-  * @param {Number} height Collider height
-  *
-  */
+   * Sets a collider for the sprite.
+   *
+   * In p5.play a Collider is an invisible circle or rectangle
+   * that can have any size or position relative to the sprite and which
+   * will be used to detect collisions and overlapping with other sprites,
+   * or the mouse cursor.
+   *
+   * If the sprite is checked for collision, bounce, overlapping or mouse events a
+   * collider is automatically created from the width and height parameter passed at the
+   * creation of the sprite or the from the image dimension in case of animate sprites.
+   *
+   * Often the image bounding box is not appropriate as active area for
+   * a collision detection so you can set a circular or rectangular sprite with different
+   * dimensions and offset from the sprite's center.
+   *
+   * There are three ways to call this method:
+   *
+   * 1. setCollider("rectangle", offsetX, offsetY, width, height)
+   * 2. setCollider("circle", offsetX, offsetY, radius)
+   * 3. setCollider("circle") - will use no offset and guess radius
+   *
+   * @method setCollider
+   * @param {String} type Either "rectangle" or "circle"
+   * @param {Number} offsetX Collider x position from the center of the sprite
+   * @param {Number} offsetY Collider y position from the center of the sprite
+   * @param {Number} width Collider width or radius
+   * @param {Number} height Collider height
+   * @throws {TypeError} if given invalid parameters.
+   */
   this.setCollider = function(type, offsetX, offsetY, width, height) {
+    if (!(type === 'rectangle' || type === 'circle')) {
+      throw new TypeError('setCollider expects the first argument to be either "circle" or "rectangle"');
+    } else if (type === 'circle' && !(arguments.length === 1 || arguments.length === 4)) {
+      throw new TypeError('Usage: setCollider("circle") or setCollider("circle", offsetX, offsetY, radius)');
+    } else if (type === 'rectangle' && !(arguments.length === 5)) {
+      throw new TypeError('Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+    }
 
     this.colliderType = 'custom';
 
     var v = createVector(offsetX, offsetY);
-    if(type === 'rectangle' && arguments.length === 5) {
+    if (type === 'rectangle' && arguments.length === 5) {
       this.collider = new AABB(pInst, this.position, createVector(width, height), v);
-    } else if(type === 'circle') {
-      if(arguments.length !== 4) {
-        print('Warning: usage setCollider("circle", offsetX, offsetY, radius)');
-      }
-
+    } else if (type === 'circle' && arguments.length === 1) {
+      this.collider = new CircleCollider(pInst, this.position, Math.floor(Math.max(this.width, this.height) / 2));
+    } else if (type === 'circle' && arguments.length === 4) {
       this.collider = new CircleCollider(pInst, this.position, width, v);
     }
 
@@ -2985,26 +2995,32 @@ function CircleCollider(pInst, _center, _radius, _offset) {
     //square dist
     var r = this.radius + other.radius;
     r *= r;
-    var sqDist = pow(this.center.x - other.center.x, 2) + pow(this.center.y - other.center.y, 2);
+    var thisCenterX = this.center.x + this.offset.x;
+    var thisCenterY = this.center.y + this.offset.y;
+    var otherCenterX = other.center.x + other.offset.x;
+    var otherCenterY = other.center.y + other.offset.y;
+    var sqDist = pow(thisCenterX - otherCenterX, 2) + pow(thisCenterY - otherCenterY, 2);
     return r > sqDist;
   };
 
   //should be called only for circle vs circle
   this.collide = function(other)
   {
-
-    if(this.overlap(other))
-    {
-      var a = pInst.atan2(this.center.y-other.center.y, this.center.x-other.center.x);
+    if(this.overlap(other)) {
+      var thisCenterX = this.center.x + this.offset.x;
+      var thisCenterY = this.center.y + this.offset.y;
+      var otherCenterX = other.center.x + other.offset.x;
+      var otherCenterY = other.center.y + other.offset.y;
+      var a = pInst.atan2(thisCenterY-otherCenterY, thisCenterX-otherCenterX);
       var radii = this.radius+other.radius;
-      var intersection = abs(radii - dist(this.center.x, this.center.y, other.center.x, other.center.y));
+      var intersection = abs(radii - dist(thisCenterX, thisCenterY, otherCenterX, otherCenterY));
 
       var displacement = createVector(pInst.cos(a)*intersection, pInst.sin(a)*intersection);
 
       return displacement;
-    }
-    else
+    } else {
       return createVector(0, 0);
+    }
   };
 
   this.size = function()
@@ -3734,19 +3750,23 @@ function Animation(pInst) {
   };
 
   /**
-  * Plays the animation forward or backward toward a target frame.
-  *
-  * @method goToFrame
-  * @param {Number} targetFrame Frame number destination (starts from 0)
-  */
-  this.goToFrame = function(f) {
-    this.f = f;
+   * Plays the animation forward or backward toward a target frame.
+   *
+   * @method goToFrame
+   * @param {Number} toFrame Frame number destination (starts from 0)
+   */
+  this.goToFrame = function(toFrame) {
+    if(toFrame < 0 || toFrame >= this.images.length) {
+      return;
+    }
 
-    if(this.f>=0 && this.f<this.images.length)
-      targetFrame = this.f;
+    // targetFrame gets used by the update() method to decide what frame to
+    // select next.  When it's not being used it gets set to -1.
+    targetFrame = toFrame;
 
-    if(targetFrame !== frame)
+    if(targetFrame !== frame) {
       this.playing = true;
+    }
   };
 
   /**

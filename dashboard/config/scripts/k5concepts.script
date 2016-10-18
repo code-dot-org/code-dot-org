@@ -36,8 +36,7 @@ level 'grade5_artist_parameters_triangles3'
 level 'grade5_artist_parameters_squares2'
 level 'grade5_artist_functionparameters8'
 level 'grade5_playlab_variables12'
-level 'grade5_artist_functionparameters11' 
-
+level 'grade5_artist_functionparameters11'
 
 stage 'Binary'
 level 'BinaryBracelets'

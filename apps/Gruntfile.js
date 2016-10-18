@@ -173,8 +173,11 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
-          cwd: piskelRoot,
-          src: '**',
+          // For some reason, if we provide piskel root as an absolute path here,
+          // our dest ends up with an empty set of directories matching the path
+          // If we provide it as a relative path, that does not happen
+          cwd: './' + path.relative(process.cwd(), piskelRoot),
+          src: ['**'],
           dest: 'build/package/js/piskel/'
         },
         {
@@ -348,44 +351,41 @@ module.exports = function (grunt) {
     appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
   ));
   var codeStudioEntries = {
-    'code-studio': './src/code-studio/code-studio.js',
-    'levelbuilder': './src/code-studio/levelbuilder.js',
-    'levelbuilder_markdown': './src/code-studio/levelbuilder_markdown.js',
-    'levelbuilder_studio': './src/code-studio/levelbuilder_studio.js',
-    'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
-    'levelbuilder_applab': './src/code-studio/levelbuilder_applab.js',
-    'levelbuilder_edit_script': './src/code-studio/levelbuilder_edit_script.js',
-    'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
-    'districtDropdown': './src/code-studio/districtDropdown.js',
-    'signup': './src/code-studio/signup.js',
-    'termsInterstitial': './src/code-studio/termsInterstitial.js',
-    'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
-    'levels/widget': './src/code-studio/levels/widget.js',
-    'levels/external': './src/code-studio/levels/external.js',
-    // put these entry points in arrays so that they can be required elsewhere
-    // https://github.com/webpack/webpack/issues/300
-    'levels/multi': ['./src/code-studio/levels/multi.js'],
-    'levels/textMatch': ['./src/code-studio/levels/textMatch.js'],
-    'levels/levelGroup': './src/code-studio/levels/levelGroup.js',
-    'levels/dashboardDialogHelper': './src/code-studio/levels/dashboardDialogHelper.js',
-    'initApp/initApp': './src/code-studio/initApp/initApp.js'
+    'code-studio':                  './src/sites/studio/pages/code-studio.js',
+    'districtDropdown':             './src/sites/studio/pages/districtDropdown.js',
+    'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
+    'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
+    'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
+    'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
+    'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
+    'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
+    'levels/external':              './src/sites/studio/pages/levels/external.js',
+    'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
+    'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
+    'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
+    'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'signup':                       './src/sites/studio/pages/signup.js',
+    'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
+    'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
+    'initApp/initApp':              './src/sites/studio/pages/initApp.js',
   };
 
   var otherEntries = {
-    plc: './src/code-studio/plc/plc.js',
-
+    plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
     // (I wonder how much more we could slim it down by removing jQuery!)
     // @see embed.html.haml
-    embedVideo: './src/code-studio/embedVideo.js',
+    embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amound of stuff we need when loading blocks
     // in an iframe.
-    embedBlocks: './src/code-studio/embedBlocks.js',
+    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
@@ -642,6 +642,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
+  grunt.registerTask('preconcat', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+  ]);
+
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
@@ -657,25 +663,19 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('integrationTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:integration'
   ]);
 
   grunt.registerTask('codeStudioTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:codeStudio'
   ]);
 
   grunt.registerTask('test', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:all'
   ]);

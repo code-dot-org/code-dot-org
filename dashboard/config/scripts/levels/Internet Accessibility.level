@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-10-11T22:32:08.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Internet Accessibility: Internet Speed\r\n\r\nAnother difference in how people will experience your website is in the speed of their internet connection as they try to load the content on your web page. To check this we can use the Google Chrome Developer Tools to simulate a slow internet connection.\r\n\r\n# Do This\r\n\r\n* Open this page in the Google Chrome Web Browser\r\n* From the _View_ menu, find _Developer_ \r\n\r\n<img src=\"https://images.code.org/c6f91de459cec7ed561b11783ea833bd-image-1475634452345.png\" style=\"width:200px\">\r\n\r\n* In the _Developer_ submenu, select _Developer Tools_ \r\n\r\n<img src=\"https://images.code.org/fb8402f57f9121c729c0880d7bf06dfa-image-1475634452345.png\" style=\"width:200px\">\r\n\r\n* The _Developer Tools_ will open as a frame at the bottom of your browser window\r\n\r\n<img src=\"https://images.code.org/95be9a273afd32305a0bc4c20b530647-image-1475634452344.png\" style=\"width:400px\">\r\n\r\n* Click the menu that says \"No throttling\" and select \"GPRS\" \r\n\r\n<img src=\"https://images.code.org/07240b96943b01a80505ba6b3900b7da-image-1475634452344.png\" style=\"width:200px\">\r\n\r\n*  Hold down _Shift_ while reloading the page (this will delete cached files so the browser has to re download them while throttled)",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

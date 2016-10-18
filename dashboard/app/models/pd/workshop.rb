@@ -45,6 +45,17 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ADMIN = 'Admin'
   ]
 
+  COURSE_NAMES_MAP = {
+    COURSE_CSF => 'CS Fundamentals',
+    COURSE_CSP => 'CS Principles',
+    COURSE_ECS => 'Exploring Computer Science',
+    COURSE_CS_IN_A => 'CS in Algebra',
+    COURSE_CS_IN_S => 'CS in Science',
+    COURSE_CSD => 'CS Discoveries',
+    COURSE_COUNSELOR => 'Counselor',
+    COURSE_ADMIN => 'Administrator'
+  }
+
   STATES = [
     STATE_NOT_STARTED = 'Not Started',
     STATE_IN_PROGRESS = 'In Progress',
@@ -89,6 +100,29 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ADMIN => 'admin_workshop'
   }.freeze
   SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
+
+  # Time constrains for payment, per subject.
+  # Each subject has the following constraints:
+  # min_days: the minimum # of days a teacher must attend in order to be counted at all.
+  # max_days: the maximum # of days the workshop can be recognized for.
+  # max_hours: the maximum # of hours the workshop can be recognized for.
+  TIME_CONSTRAINTS_BY_SUBJECT = {
+    SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5, max_hours: 30},
+    SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
+  }
 
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
@@ -158,6 +192,10 @@ class Pd::Workshop < ActiveRecord::Base
       else
         raise "Unrecognized state: #{state}"
     end
+  end
+
+  def course_name
+    COURSE_NAMES_MAP[course]
   end
 
   def friendly_name
@@ -249,13 +287,13 @@ class Pd::Workshop < ActiveRecord::Base
     end
 
     # Send the emails
-    self.enrollments.reload.each do |enrollment|
+    self.enrollments.each do |enrollment|
       next unless enrollment.user
 
       # Make sure user joined the section
       next unless section.students.exists?(enrollment.user.id)
 
-      Pd::WorkshopMailer.exit_survey(self, enrollment.user, enrollment).deliver_now
+      enrollment.send_exit_survey
     end
   end
 
@@ -268,5 +306,36 @@ class Pd::Workshop < ActiveRecord::Base
       longitude: result.longitude,
       formatted_address: result.formatted_address
     }.to_json
+  end
+
+  # Min number of days a teacher must attend for it to count.
+  # @return [Integer]
+  def min_attendance_days
+    constraints = TIME_CONSTRAINTS_BY_SUBJECT[self.subject]
+    if constraints
+      constraints[:min_days]
+    else
+      1
+    end
+  end
+
+  # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
+  # @return [Integer] number of payment days, after applying constraints
+  def effective_num_days
+    max_days = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_days]}
+    [self.sessions.count, max_days].compact.min
+  end
+
+  # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
+  # @return [Integer] number of payment hours, after applying constraints
+  def effective_num_hours
+    actual_hours = sessions.map(&:hours).reduce(&:+)
+    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_hours]}
+    [actual_hours, max_hours].compact.min
+  end
+
+  # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
+  def professional_learning_partner
+    ProfessionalLearningPartner.find_by_contact_id self.organizer.id
   end
 end

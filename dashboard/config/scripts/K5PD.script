@@ -1,4 +1,5 @@
-pd 'true'
+professional_learning_course 'K5 Support'
+
 stage 'Introduction to PD'
 level 'PDK5 Intro C'
 level 'K5PD tour'
@@ -50,7 +51,7 @@ stage 'Computer Science Pedagogy'
 level 'PDK5 Strategies O'
 level 'PDK5 Pair Programming 1'
 level 'PDK5 Pair programming match'
-level 'PDK5 Problem solving'
+level 'PDK5 Problem Solving'
 level 'PDK5 Classroom Culture C'
 level 'PDK5 Strategies F'
 

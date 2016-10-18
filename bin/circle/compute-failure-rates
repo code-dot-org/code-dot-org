@@ -2,76 +2,21 @@
 # A script to analyze a range of CircleCI builds for known failures.
 # For available options, run ./search-circle-builds -h
 
-require 'pp'
-require 'json'
-require 'memoist'
-require 'open-uri'
+require 'active_support/time'
 require 'optparse'
-require 'parallel'
-require 'ruby-progressbar'
-
-CIRCLE_API_BASE = 'https://circleci.com/api/v1.1/project/github/code-dot-org/code-dot-org'
-
-extend Memoist
+require_relative './circle_project'
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
     Hash[self.map {|k, v| yield k, v }]
   end
-
-  # Drop a key from the hash, returning the hash (destructive)
-  def omit!(key)
-    self.tap {|hs| hs.delete(key)}
-  end
 end
 
-# @return [Hash<build_num:Integer, build_descriptor:Object>] 30 most recent
-#         build descriptors from the CircleCI API
-def get_recent_builds
-  builds = JSON.parse(open(CIRCLE_API_BASE).read)
-  Hash[builds.collect {|b| [b['build_num'], b]}]
-end
-
-# @return [Integer] The most recent build number in the project
-def latest_build_num
-  get_recent_builds.first[0]
-end
-
-memoize :get_recent_builds
-
-# @param [Fixnum] build_id The CircleCI build #
-# @return [Object] build descriptor object from the CircleCI API
-#   Example output JSON: https://gist.github.com/bcjordan/02f7c2906b524fa86ec75b19f9a72cd2
-def get_build(build_id)
-  JSON.parse(open("#{CIRCLE_API_BASE}/#{build_id}").read)
-end
-
-memoize :get_build
-
-# Returns the full output URL for a given build step
-# @param [Fixnum] build_object The build information object from the Circle API
-# @param [Fixnum] container_id The container ID #
-# @param [String] grep_for_step The build step to search for (e.g. "rake install")
-def build_step_output_url(build_object, container_id, grep_for_step)
-  build_object['steps'].select { |o| o['name'].include? grep_for_step }[0]['actions'][container_id]['output_url']
-end
-
-memoize :build_step_output_url
-
-# @param [Fixnum] build_id The build ID #
-# @param [Fixnum] container_id The container ID #
-# @param [String] grep_for_step The build step to search for (e.g. "rake install")
-# @return [Object, nil] full build output JSON object from CircleCI, or nil if error in retrieval
-#   Example output JSON: https://gist.github.com/bcjordan/8349fbb1edc284839b42ae53ad19b68a
-def get_output(build_id, container_id, grep_for_step)
-  JSON.parse(open(build_step_output_url(get_build(build_id), container_id, grep_for_step)).read)
-rescue => _
-end
-
-memoize :get_output
-
-options = {}
+options = {
+  output_format: 'human-readable',
+  custom_columns: []
+}
 OptionParser.new do |opts|
   opts.banner = 'Usage: ./compute-failure-rates [options]'
 
@@ -100,26 +45,26 @@ OptionParser.new do |opts|
   opts.on('--end EndBuildNumber', String, 'End searching at build #. Default: Latest build.') do |n|
     options[:end_build] = n.to_i
   end
+  opts.on('--group branchName,branchName', Array, 'Add a column aggregating results for the listed branches.') do |a|
+    options[:custom_columns] << a
+  end
+  opts.on('--csv', 'Display results in CSV format.') do
+    options[:output_format] = 'csv'
+  end
   opts.on_tail('-h', '--help', 'Show this message') do
     puts opts
     exit
   end
 end.parse!
 
-# Default end build should be the most recent build
-end_build = options[:end_build] || latest_build_num
-# Default start build should give us 30 builds up to the end build.
-# This allows us to make only one API call in the all-defaults case, since
-# the recent builds API call returns 30 builds.
-start_build = options[:start_build] || end_build - 29
-build_nums = (start_build..end_build).to_a
+@project = CircleProject.new('code-dot-org/code-dot-org')
 
-# Download the build information we need
-build_infos = Parallel.map(build_nums, progress: 'Downloading...', in_processes: 50) do |build_num|
-  build = get_recent_builds[build_num] || get_build(build_num)
+# Download and format the build information we need
+build_range = @project.build_range_from_options(options)
+build_infos = @project.get_builds(build_range).map do |build|
   next if build['queued_at'].nil? || build['branch'].nil? || build['outcome'].nil?
   {
-    build_num: build_num,
+    build_num: build['build_num'],
     queued_at: DateTime.parse(build['queued_at']),
     branch: build['branch'],
     succeeded: build['outcome'] == 'success'
@@ -128,34 +73,45 @@ end
 
 # Group the builds by date
 builds_by_date = build_infos.compact.group_by do |build_info|
-  build_info[:queued_at].strftime('%Y-%m-%d')
+  build_info[:queued_at].to_time.in_time_zone('Pacific Time (US & Canada)').strftime('%Y-%m-%d')
+end
+
+# Define columns - each maps to a lambda that filters builds
+columns = {
+  'Total' => -> (builds) {builds},
+  'Pipeline' => -> (builds) {builds.select {|i| %w(staging test production).include?(i[:branch])}},
+  'Branch' => -> (builds) {builds.reject {|i| %w(staging test production).include?(i[:branch])}}
+}
+options[:custom_columns].each do |branches|
+  columns[branches.join(',')] = -> (builds) {builds.select{|i| branches.include?(i[:branch])}}
 end
 
 # Compute map of stats for each date
 stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
-  total_builds = build_infos_for_date.size
-  total_failed_builds = build_infos_for_date.reject {|i| i[:succeeded]}.size
-
-  pipeline_builds = build_infos_for_date.select {|i| ['staging', 'test', 'production'].include?(i[:branch])}
-  total_pipeline_builds = pipeline_builds.size
-  total_failed_pipeline_builds = pipeline_builds.reject {|i| i[:succeeded]}.size
-
-  branch_builds = build_infos_for_date.reject {|i| ['staging', 'test', 'production'].include?(i[:branch])}
-  total_branch_builds = branch_builds.size
-  total_failed_branch_builds = branch_builds.reject {|i| i[:succeeded]}.size
-
-  [date, {
-    total_failure_rate: Float(total_failed_builds) / total_builds,
-    pipeline_failure_rate: Float(total_failed_pipeline_builds) / total_pipeline_builds,
-    branch_failure_rate: Float(total_failed_branch_builds) / total_branch_builds
-  }]
+  [date, columns.hmap do |name, column|
+    builds = column.call build_infos_for_date
+    failed_builds = builds.reject {|i| i[:succeeded]}
+    [name, {
+        total_builds: builds.size,
+        failed_builds: failed_builds.size,
+        failure_rate: Float(failed_builds.size) / builds.size
+    }]
+  end]
 end
 
 # Print build stats
-puts "Failure rates for builds #{start_build}..#{end_build} by date (1.0 = 100% failures)"
-puts "%-10s %10s %10s %10s" % ['Date', 'Branch', 'Pipeline', 'Overall']
-stats_by_date.each do |date, stats|
-  puts "%-10s %10.3f %10.3f %10.3f" % [date, stats[:branch_failure_rate].round(3), stats[:pipeline_failure_rate].round(3), stats[:total_failure_rate].round(3)]
+puts "Failure rates for builds #{build_range} by date (1.0 = 100% failures)"
+if options[:output_format] == 'csv'
+  puts "%s#{',%s' * columns.size}" % (['Date'] + columns.keys)
+  stats_by_date.each do |date, stats|
+    puts "%s#{',%.3f' * columns.size}" % ([date] + stats.map {|_, v| v[:failure_rate].round(3)})
+  end
+else
+  puts "%-10s#{' %16s' * columns.size}" % (['Date'] + columns.keys.map {|k| k[0, 14]})
+  stats_by_date.each do |date, stats|
+    puts "%-10s#{'  %7s = %5.3f' * columns.size}" %
+           ([date] + stats.map {|_, v| ["%s/%s" % [v[:failed_builds], v[:total_builds]], v[:failure_rate].round(3)]}.flatten)
+  end
 end
 
 exit(0)

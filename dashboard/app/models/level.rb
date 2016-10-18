@@ -55,6 +55,7 @@ class Level < ActiveRecord::Base
     instructions
     markdown_instructions
     authored_hints
+    instructions_important
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -279,7 +280,7 @@ class Level < ActiveRecord::Base
   end
 
   def key
-    if level_num == 'custom'
+    if level_num == 'custom' || level_num.nil?
       name
     else
       ["blockly", game.name, level_num].join(':')

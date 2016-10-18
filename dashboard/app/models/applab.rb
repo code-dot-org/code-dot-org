@@ -24,7 +24,6 @@
 
 class Applab < Blockly
   before_save :update_json_fields
-  before_save :fix_examples
 
   serialized_attrs %w(
     free_play
@@ -36,7 +35,6 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
-    encrypted_examples
     submittable
     log_conditions
     data_tables
@@ -254,11 +252,5 @@ class Applab < Blockly
         "comment": null
       }
     JSON
-  end
-
-  def fix_examples
-    # remove nil and empty strings from examples
-    return if examples.nil?
-    self.examples = examples.select(&:present?)
   end
 end

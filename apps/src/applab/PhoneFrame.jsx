@@ -2,10 +2,9 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../color';
 import * as applabConstants from './constants';
-import experiments from '../experiments';
 import ScreenSelector, {styles as ScreenSelectorStyles} from './ScreenSelector';
-import GameButtons, { RunButton, ResetButton } from '../templates/GameButtons';
-import CompletionButton, {styles as CompletionButtonStyles} from './CompletionButton';
+import { RunButton, ResetButton } from '../templates/GameButtons';
+import {styles as CompletionButtonStyles} from './CompletionButton';
 import FontAwesome from '../templates/FontAwesome';
 
 const RADIUS = 30;

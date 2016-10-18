@@ -13,9 +13,10 @@ require 'twilio-ruby'
 def main
   @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
 
-  # Since this script is cronned to run every five minutes, we offset by ten
-  # minutes to assure that we see every message twice.
-  date_to_delete = Time.now - 10 * 60
+  # We backtrack an hour as messages may not receive their final API state for
+  # an hour. We further backtrack five minutes, as this script is cronned to run
+  # every five minutes. We further backtrack a minute for rounding error.
+  date_to_delete = Time.now - (60 + 5 + 1) * 60
 
   messages_to_delete = @client.account.messages.list(
     date_sent: date_to_delete.strftime('%F'),
@@ -29,7 +30,7 @@ def main
         # another execution of this script.
         # Per customer ticket #712102, it is also an error to delete a message
         # in state sent, despite not seeing public documentation of this.
-        if %w(accepted queued sending sent receiving).include? message.status
+        if %w(accepted queued sending sent SENT receiving).include? message.status
           next
         end
 
@@ -46,8 +47,7 @@ def main
         # TODO(asher): Consider whether we should log the exception and continue to
         # attempt to delete further messages rather than stopping deletion.
         sanitized_error_message = e.message.sub CDO.twilio_sid, 'CDO.twilio_sid'
-        message_sid_string = message.sid ? "(Message SID: #{message.sid})" : ''
-        raise "Twilio::REST::RequestError #{message_sid_string}: #{sanitized_error_message}"
+        raise "Twilio::REST::RequestError (#{message.status}): #{sanitized_error_message}"
       end
     end
 

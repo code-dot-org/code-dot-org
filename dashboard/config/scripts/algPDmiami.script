@@ -1,11 +1,7 @@
-pd 'true'
+professional_learning_course 'CS in Algebra Support'
 login_required 'true'
 
 stage 'Evaluation Blocks'
-#level 'Calc Circles of Eval .1'
-#level 'Calc Circles of Eval .2'
-#level 'Calc Circles of Eval .3'
-#level 'Calc Circles of Eval .4'
 level 'Calc Circles of Eval 1'
 level 'Calc Circles of Eval 2'
 level 'Calc Circles of Eval 3'
@@ -73,11 +69,6 @@ level 'Sam the Butterfly 2'
 level 'Sam the Butterfly 3'
 level 'Sam the Butterfly 4'
 level 'Sam the Butterfly 5'
-#level 'Sam the Butterfly 6'
-#level 'Sam the Butterfly 7'
-#level 'MSM Play Lab Butterfly 1'
-#level 'MSM Play Lab Butterfly 2'
-#level 'MSM Play Lab Butterfly 3'
 
 stage 'Your Game - Booleans'
 level 'Big Game Booleans 1'
@@ -86,11 +77,11 @@ level 'Big Game Booleans 3'
 level 'Big Game Booleans 4'
 level 'Big Game Booleans 5'
 
-stage "Luigi's Pizza"
-level "Luigi's Pizza 1"
-level "Luigi's Pizza 2"
-level "Luigi's Pizza 3"
-level "Luigi's Pizza 4"
+stage 'Luigi\'s Pizza'
+level 'Luigi\'s Pizza 1'
+level 'Luigi\'s Pizza 2'
+level 'Luigi\'s Pizza 3'
+level 'Luigi\'s Pizza 4'
 
 stage 'Your Game - Player Movement'
 level 'Big Game Collision 1'

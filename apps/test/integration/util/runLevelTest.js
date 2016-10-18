@@ -33,6 +33,8 @@ module.exports = function (testCollection, testData, dataItem, done) {
   level.startBlocks = testData.xml;
   level.levelHtml = testData.levelHtml;
 
+  level.hideViewDataButton = testData.hideViewDataButton;
+
   // Validate successful solution.
   var validateResult = function (report) {
     assert(testData.expected, 'Have expectations');

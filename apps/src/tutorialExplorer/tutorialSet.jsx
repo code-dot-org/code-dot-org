@@ -2,7 +2,6 @@
  */
 
 import React from 'react';
-import FilterSet from './filterSet';
 import Tutorial from './tutorial';
 import shapes from './shapes';
 
@@ -63,40 +62,40 @@ const TutorialSet = React.createClass({
           return false;
         }
 
-        // If we miss any filter group, then we don't show the tutorial.
-        let filterGroupMiss = false;
+        // If we miss any active filter group, then we don't show the tutorial.
+        let filterGroupsSatisfied = true;
 
         for (const filterGroupName in filters) {
-
           const tutorialTags = tutorial["tags_" + filterGroupName];
-          if (tutorialTags && tutorialTags.length > 0) {
-            const tutorialTagsSplit = tutorialTags.split(',');
+          const filterGroup = filters[filterGroupName];
 
-            // Now check all the filter group's tags.
-            const filterGroup = filters[filterGroupName];
-
-            // For this filter group, we've not yet found a matching tag between
-            // user selected otions and tutorial tags.
-            let filterHit = false;
-
-            for (const filterName of filterGroup) {
-              if (tutorialTagsSplit.includes(filterName)) {
-                // The tutorial had a matching tag.
-                filterHit = true;
-              }
-            }
-
-            // The filter group needs at least one user-selected filter to hit
-            // on the tutorial.
-            if (filterGroup.length !== 0 && !filterHit) {
-              filterGroupMiss = true;
-            }
+          if (filterGroup.length !== 0 &&
+              tutorialTags &&
+              tutorialTags.length > 0 &&
+              !TutorialSet.findMatchingTag(filterGroup, tutorialTags)) {
+            filterGroupsSatisfied = false;
           }
         }
 
-        return !filterGroupMiss;
+        return filterGroupsSatisfied;
+      }).sort((tutorial1, tutorial2) => {
+        return tutorial2.displayweight - tutorial1.displayweight;
       });
+    },
+
+    /* Given a filter group, and the tutorial's relevant tags for that filter group,
+     * see if there's at least a single match.
+     * @param {Array} filterGroup - Array of strings, each of which is a selected filter
+     *   for the group.  e.g. ["beginner", "experienced"].
+     * @param {string} tutorialTags - Comma-separated tags for a tutorial.
+     *   e.g. "beginner,experienced".
+     * @return {bool} - true if the tutorial had at least one tag matching at least
+     *   one of the filterGroup's values.
+     */
+    findMatchingTag(filterGroup, tutorialTags) {
+      return filterGroup.some(filterName => tutorialTags.split(',').includes(filterName));
     }
+
   },
 
   render() {

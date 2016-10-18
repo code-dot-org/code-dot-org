@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 # The controller for seaching for and surfacing of internal admin data.
 class AdminSearchController < ApplicationController
   before_action :authenticate_user!
@@ -15,7 +17,8 @@ class AdminSearchController < ApplicationController
         users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
       end
       if params[:studentEmailFilter].present?
-        users = users.where("email LIKE ?", "%#{params[:studentEmailFilter]}%")
+        hashed_email = Digest::MD5.hexdigest(params[:studentEmailFilter])
+        users = users.where(hashed_email: hashed_email)
       end
       if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
         teachers = User.

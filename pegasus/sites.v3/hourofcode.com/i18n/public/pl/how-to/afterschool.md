@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Jak uczyć jednej Godziny Kodowania po szkole
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -129,3 +131,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Zachęcaj uczniów do kontynuowania [nauki online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Weź udział](<%= resolve_url('https://code.org/professional-development-workshops') %>) w jednodniowych warsztatach, aby otrzymać instrukcje od moderatora doświadczonego w dziedzinie informatyki. (Tylko edukatorów z USA)
+
+<%= view :signup_button %>

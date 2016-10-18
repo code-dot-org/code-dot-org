@@ -1,5 +1,5 @@
-login_required 'true'
 hidden 'false'
+login_required 'true'
 
 stage 'Intro to Problem Solving'
 named_level 'Unit 1 Lesson 1 Overview'

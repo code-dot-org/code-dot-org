@@ -143,12 +143,6 @@ Dashboard::Application.routes.draw do
 
     get 'instructions', to: 'scripts#instructions'
 
-    # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
-
-    # /s/xxx/puzzle/yyy
-    get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
-
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
@@ -349,12 +343,6 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
-
-    # This is a developer aid that allows previewing rendered mail views with fixed test data.
-    # The route is restricted so it only exists in development mode.
-    if Rails.env.development?
-      mount Pd::MailPreviewController => 'mail_preview'
-    end
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

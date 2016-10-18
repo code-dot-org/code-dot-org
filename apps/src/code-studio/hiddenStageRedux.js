@@ -3,7 +3,6 @@
  * the course overview page, and the stage locking dialog.
  */
 import $ from 'jquery';
-import { INIT_PROGRESS } from './progressRedux';
 import experiments from '@cdo/apps/experiments';
 import Immutable from 'immutable';
 
@@ -127,8 +126,11 @@ export function getHiddenStages(scriptName) {
  * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
 export function isHiddenFromState(bySection, sectionId, stageId) {
+  if (!stageId) {
+    return false;
+  }
   // if we don't have a sectionId, we must be a student
-  if (sectionId === null){
+  if (!sectionId){
     sectionId = STUDENT_SECTION_ID;
   }
   return !!bySection.getIn([sectionId, stageId.toString()]);

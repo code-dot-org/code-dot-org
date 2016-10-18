@@ -1,28 +1,28 @@
+hidden 'false'
 login_required 'true'
-hidden 'true'
 
 stage 'What is Big Data?'
-level 'U4L10 Student Lesson Introduction'
+named_level 'Unit 4 Lesson 1 Introduction'
 
 stage 'Rapid Research - Data Innovations'
-level 'U4L11 Student Lesson Introduction'
+named_level 'Unit 4 Lesson 2 Introduction'
 named_level 'Video - Data and Medicine'
 named_level 'Video - CS is Changing Everything'
 
 stage 'Identifying People with Data'
-level 'U4L12 Student Lesson Introduction'
+named_level 'Unit 4 Lesson 3 Introduction'
 
 stage 'The Cost of Free'
-level 'U4L13 Student Lesson Introduction'
-level 'U4 - Privacy Abandoned - Hot On Your Trail Video'
+named_level 'Unit 4 Lesson 4 Introduction'
+named_level 'Video - The Future of Big Data'
 
 stage 'Simple Encryption'
-level 'v2 U4L05 Student Lesson Intro Encryption Caesar'
+named_level 'Unit 4 Lesson 5 Introduction'
 named_level 'Crack a Caesar Cipher'
-level 'U4 caesar cipher interstitial'
-level 'U4L5 random subst challenge page'
+named_level 'Terminology Recap'
+named_level 'New Challenge Introduction'
 named_level 'Crack Random Substitution'
-level 'U4 how to crack substitution cipher'
+named_level 'Technique: Frequency Analysis'
 assessment 'U2L13 Free Response Getting Started'
 assessment 'U2L13 Assessment1'
 assessment 'U2L13 Assessment3'
@@ -31,7 +31,7 @@ assessment 'U2L13 Free Response Wrap Up'
 assessment 'U2L14 Free Response Wrap Up'
 
 stage 'Encryption with Keys and Passwords'
-level 'v2 U4L06 Student Lesson Introduction Encryption Vigenere'
+named_level 'Unit 4 Lesson 6 Introduction'
 named_level 'The Vigenere Cipher Widget'
 named_level 'How Secure Is Your Password?'
 named_level 'Video - Encryption and Public Keys'
@@ -43,17 +43,14 @@ assessment 'U2L15 Assessment1'
 
 #level 'U2L15 Student Lesson Introduction'
 
-
 #level 'U2L16 Student Lesson Introduction'
 
-
-
 stage 'Public Key Crypto'
-level 'U4L07 Student Introduction public key crypto'
+named_level 'Unit 4 Lesson 7 Introduction'
 named_level 'Video - Encryption and Public Keys'
-named_level 'U4L08 - mod clock instructions'
+named_level 'Modulo Clock Instructions'
 named_level 'The Modulo Clock'
-level 'U4L07 Public Key Crypto Interstitial'
+named_level 'Modulo Clock Recap'
 named_level 'Public Key Cryptography Widget'
 assessment 'U2L18 Free Response Assessment 1'
 assessment 'U2L18 Match terms to cups and beans analogy'
@@ -65,14 +62,12 @@ assessment 'U2L19 Assessment'
 assessment 'U2L19 Free Response Wrap Up'
 
 stage 'Rapid Research - Cybercrime'
-level 'U4L14 Student Lesson Introduction'
+named_level 'Unit 4 Lesson 8 Introduction'
 named_level 'Video - Cybersecurity and Crime'
 
 stage 'Practice PT - Big Data and Security Dilemmas'
-level 'U2L20 Student Lesson Introduction'
+named_level 'Unit 4 Lesson 9 Introduction'
 
-
-# Turds
 stage 'Alice and Bob and Asymmetric Keys'
 stage 'Practice PT - Propose an Innovation'
 stage 'Practice PT - Cybersecurity Innovations'

@@ -14,29 +14,28 @@
 #
 
 class UserPermission < ActiveRecord::Base
-  # Grants access to viewing all workshops in all cohorts in their district.
-  DISTRICT_CONTACT = 'district_contact'
+  belongs_to :user
 
-  # Grants access to managing workshops and workshop attendance.
-  FACILITATOR = 'facilitator'
+  VALID_PERMISSIONS = [
+    # Grants access to creating professional development workshops.
+    CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP =
+      'create_professional_development_workshop'.freeze,
+    # Grants access to viewing all workshops in all cohorts in their district.
+    DISTRICT_CONTACT = 'district_contact'.freeze,
+    # Grants access to managing workshops and workshop attendance.
+    FACILITATOR = 'facilitator'.freeze,
+    # Grants access to viewing hidden scripts.
+    HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'.freeze,
+    # Grants access to managing (e.g., editing) levels, stages, scripts, etc.
+    # Also grants access to viewing extra links related to editing these.
+    # Also makes the account satisfy authorized_teacher?.
+    LEVELBUILDER = 'levelbuilder'.freeze,
+    # Grants access to reseting (to 0) the abuse score for projects.
+    RESET_ABUSE = 'reset_abuse'.freeze,
+    # Grants access to managing professional development workshops and
+    # professional development workshop attendance.
+    WORKSHOP_ORGANIZER = 'workshop_organizer'.freeze,
+  ].freeze
 
-  # Grants access to viewing hidden scripts.
-  HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'
-
-  # Grants access to managing (e.g., editing) LevelSourceHint's and
-  # FrequentUnsuccessfulLevelSource's.
-  # TODO(asher): Deprecate this permission.
-  HINT_ACCESS = 'hint_access'
-
-  # Grants access to managing (e.g., editing) levels, stages, scripts, etc.
-  # Also grants access to viewing extra links related to editing these.
-  # Also makes the account satisfy authorized_teacher?.
-  LEVELBUILDER = 'levelbuilder'
-
-  # Grants access to reseting (to 0) the abuse score for projects.
-  RESET_ABUSE = 'reset_abuse'
-
-  # Grants access to managing professional development workshops and
-  # professional development workshop attendance.
-  WORKSHOP_ORGANIZER = 'workshop_organizer'
+  validates_inclusion_of :permission, in: VALID_PERMISSIONS
 end

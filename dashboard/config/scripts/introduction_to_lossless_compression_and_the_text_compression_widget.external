@@ -1,0 +1,45 @@
+name 'Introduction to Lossless Compression and the Text Compression Widget'
+markdown <<MARKDOWN
+# Introduction to Compression
+
+Compression is a powerful tool that allows computers to store or transmit large amounts of information in fewer bytes than its original form.  Some benefits include:
+
+- **Storage:** File compression increases the amount of information that can be stored on a computer hard drive because each file takes up less space than it would otherwise.
+- **Transmission:**  As we learned in unit 1, the speed at which a file is transmitted is limited by the available bandwidth and the bit rate used to send the file.  If files can be represented using fewer bits, the information can be transferred in a shorter amount of time.
+- **Digital TV:** Digital TV signals take up much less bandwidth than analog signals due to their use of compression.  This means a cleaner picture can be sent at a faster rate to the tv screen.
+
+<br><br>
+
+<img src="https://images.code.org/6a115cd6b489d43f43bdbd606912380e-image-1476028600637.png" style="float:right; margin-left:30px; width:175px">
+
+In the first chapter of unit 2, we’ll explore both lossless and lossy compression. Here in lesson 2, we look at lossless (lossy will be covered in lesson 5). 
+
+<br>
+
+## Lossless Compression
+
+Lossless compression is a form of compression that generally works by removing redundancy.  
+
+For example, in the picture on the right there is a stack of 14 lego blocks and a single lego person (information) with varying heights of colors. This same information can be compressed to the stack of blocks on the right.  The number of blocks is reduced to one, but written on the block of the number of redundant blocks that should be stacked on top.  In writing, this could look like:
+`OOOOYYYYYYYGGG   → 4O7Y3G`
+
+<br>
+
+<hr />
+## Introduction to the Text Compression Widget
+
+In lesson 2, we use the Text Compression widget, which allows students to make their own lossy compression structure in a similar way. Because we’re compressing poems instead of legos, the repetitive characters may not all be in a row like the colored blocks (the word ‘yellow’ could appear six times within the body of the text). With the widget, we can replace repetitive words, phrases, or character with a single symbol. We used a dictionary to keep track of the mapping of symbols to what they represent. Once the text is compressed, we can use the dictionary key to return the piece of text to its original state in order to read it. The image below shows a poem from the text compression widget that has been compressed: 
+<br><br>
+<img src="https://images.code.org/db07a888d6a60918aca462ec6aaa0970-image-1476028862436.png" style="width:70%;margin-left:15%">
+<br>
+## Using the Text Compression Widget
+
+As students look at a text, they should be looking for redundant patterns or structures that they can pull out and represent with a single dictionary character.  Images can also be compressed in a similar way.  For example, images with large blocks of the same color can all reference the same hue in a dictionary.  This is lossless because given the reduced file, it is possible to recreate the original product.
+
+
+## Lossless Compression in the Real World
+
+In the real world, there are quite a lot of different lossless file formats that use a range of different algorithms. PNG files for example, is a two step lossless compression process.  First, it stores a single number for each pixel, where the number represents the change in color level from the previous pixel (this is called “delta encoding”),  then it creates a dictionary of these changes in color level using what’s called the “deflate algorithm”. Read more about <a href=”https://en.wikipedia.org/wiki/Lossless_compression” target=_blank>lossless compression on wikipedia</a> if you’re interested!
+
+
+MARKDOWN

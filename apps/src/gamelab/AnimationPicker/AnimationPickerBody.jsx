@@ -3,6 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from '../../color';
+import {AllAnimationsCategory, AnimationCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -10,19 +11,32 @@ import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 
-const MAX_SEARCH_RESULTS = 18;
+const MAX_SEARCH_RESULTS = 40;
+const animationPickerStyles = {
+  allAnimations: {
+    color: color.purple,
+    fontFamily: "'Gotham 7r', sans-serif",
+    cursor: "pointer"
+  },
+  breadCrumbs: {
+    margin: "8px 0",
+    fontSize: 14
+  }
+};
 
 const AnimationPickerBody = React.createClass({
   propTypes: {
     is13Plus: React.PropTypes.bool,
     onDrawYourOwnClick: React.PropTypes.func.isRequired,
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
-    onUploadClick: React.PropTypes.func.isRequired
+    onUploadClick: React.PropTypes.func.isRequired,
+    playAnimations: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
     return {
-      searchQuery: ''
+      searchQuery: '',
+      categoryQuery: ''
     };
   },
 
@@ -30,8 +44,38 @@ const AnimationPickerBody = React.createClass({
     this.setState({searchQuery: value});
   },
 
+  onCategoryChange(event) {
+    this.setState({categoryQuery: event.target.className});
+  },
+
+  onClearCategories() {
+    this.setState({categoryQuery: '', searchQuery: ''});
+  },
+
+  animationCategoriesRendering() {
+    return Object.keys(AnimationCategories).map(category =>
+      <AnimationPickerListItem
+        key={category}
+        label={AnimationCategories[category]}
+        category={category}
+        onClick={this.onCategoryChange}
+      />
+    );
+  },
+
+  animationItemsRendering() {
+    const pageOfResults = searchAnimations(this.state.searchQuery, this.state.categoryQuery);
+    return pageOfResults.map(animationProps =>
+      <AnimationPickerListItem
+        key={animationProps.sourceUrl}
+        label={animationProps.name}
+        animationProps={animationProps}
+        onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
+        playAnimations={this.props.playAnimations}
+      />);
+  },
+
   render() {
-    var pageOfResults = searchAnimations(this.state.searchQuery);
     return (
       <div>
         <h1 style={styles.title}>
@@ -46,25 +90,33 @@ const AnimationPickerBody = React.createClass({
           value={this.state.searchQuery}
           onChange={this.onSearchQueryChange}
         />
+        {this.state.categoryQuery !== '' &&
+          <div style={animationPickerStyles.breadCrumbs}>
+            <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
+            <span>{AnimationCategories[this.state.categoryQuery]}</span>
+          </div>
+        }
         <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
-          <AnimationPickerListItem
-            label={gamelabMsg.animationPicker_drawYourOwn()}
-            icon="pencil"
-            onClick={this.props.onDrawYourOwnClick}
-          />
-          <AnimationPickerListItem
-            label={gamelabMsg.animationPicker_uploadImage()}
-            icon="upload"
-            onClick={this.props.onUploadClick}
-          />
-          {pageOfResults.map(animationProps =>
-            <AnimationPickerListItem
-              key={animationProps.sourceUrl}
-              label={`${animationProps.name} (${animationProps.frameCount})`}
-              animationProps={animationProps}
-              onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
-            />
-          )}
+          {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
+            <div>
+              <AnimationPickerListItem
+                label={gamelabMsg.animationPicker_drawYourOwn()}
+                icon="pencil"
+                onClick={this.props.onDrawYourOwnClick}
+              />
+              <AnimationPickerListItem
+                label={gamelabMsg.animationPicker_uploadImage()}
+                icon="upload"
+                onClick={this.props.onUploadClick}
+              />
+            </div>
+          }
+          {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
+            this.animationCategoriesRendering()
+          }
+          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+            this.animationItemsRendering()
+          }
         </ScrollableList>
       </div>
     );
@@ -85,10 +137,11 @@ WarningLabel.propTypes = {
  * Given a search query, generate a results list of animationProps objects that
  * can be displayed and used to add an animation to the project.
  * @param {string} searchQuery - text entered by the user to find an animation
+ * @param {string} categoryQuery - name of category user selected to filter animations
  * @return {Array.<SerializedAnimationProps>} - Limited list of animations
  *         from the library that match the search query.
  */
-function searchAnimations(searchQuery) {
+function searchAnimations(searchQuery, categoryQuery) {
   // Make sure to generate the search regex in advance, only once.
   // Search is case-insensitive
   // Match any word boundary or underscore followed by the search query.
@@ -98,11 +151,24 @@ function searchAnimations(searchQuery) {
   const searchRegExp = new RegExp('(?:\\b|_)' + searchQuery, 'i');
 
   // Generate the set of all results associated with all matched aliases
-  const resultSet = Object.keys(animationLibrary.aliases)
+  let resultSet = Object.keys(animationLibrary.aliases)
       .filter(alias => searchRegExp.test(alias))
       .reduce((resultSet, nextAlias) => {
         return resultSet.union(animationLibrary.aliases[nextAlias]);
       }, Immutable.Set());
+
+  if (categoryQuery !== '' && categoryQuery !== AllAnimationsCategory) {
+    let categoryResultSet = Object.keys(animationLibrary.aliases)
+      .filter(alias => alias === categoryQuery)
+      .reduce((resultSet, nextAlias) => {
+        return resultSet.union(animationLibrary.aliases[nextAlias]);
+      }, Immutable.Set());
+    if (searchQuery !== '') {
+      resultSet = resultSet.intersect(categoryResultSet.toArray());
+    } else {
+      resultSet = categoryResultSet;
+    }
+  }
 
   // Finally alphabetize the results (for stability), take only the first
   // MAX_SEARCH_RESULTS so we don't load too many images at once, and return

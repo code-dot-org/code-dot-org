@@ -1,9 +1,9 @@
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Welcome!'
 level 'ECSPD Online Welcome'
-level 'PDECS Tour'
+level 'PDECS tour'
 level 'ECSPD PD details'
 level 'ECSPD Online intro'
 level 'ECSPD course goals'

@@ -132,6 +132,7 @@ module AWS
 
       ids.map do |app, id|
         cloudfront.wait_until(:distribution_deployed, id: id) do |waiter|
+          waiter.max_attempts = 60 # wait up to an hour for CloudFront distribution to deploy
           waiter.before_wait { |_| puts "Waiting for #{app} distribution to deploy.." }
         end
         puts "#{app} distribution deployed!"
@@ -182,8 +183,6 @@ module AWS
       server_certificate_id = ssl_cert && Aws::IAM::Client.new.
         get_server_certificate(server_certificate_name: ssl_cert).
         server_certificate.server_certificate_metadata.server_certificate_id
-      # accepts sni-only, vip
-      ssl_support_method = (app == :hourofcode) ? 'sni-only' : 'vip'
       {
         aliases: {
           quantity: cloudfront[:aliases].length, # required
@@ -252,7 +251,7 @@ module AWS
           certificate: server_certificate_id,
           iam_certificate_id: server_certificate_id,
           certificate_source: 'iam',
-          ssl_support_method: ssl_support_method,
+          ssl_support_method: 'sni-only', # accepts sni-only, vip
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
           cloud_front_default_certificate: true,
@@ -311,7 +310,8 @@ module AWS
           {
             Id: 'cdo',
             CustomOriginConfig: {
-              OriginProtocolPolicy: 'match-viewer'
+              OriginProtocolPolicy: 'match-viewer',
+              OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
             },
             DomainName: origin,
             OriginPath: '',
@@ -390,7 +390,7 @@ module AWS
         smooth_streaming: false,
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
-        compress: s3, # Serve gzip-compressed assets on s3 origins
+        compress: true, # Serve gzip-compressed assets
       }
       behavior[:path_pattern] = path if path
       behavior
@@ -415,7 +415,7 @@ module AWS
       {
         AllowedMethods: ALLOWED_METHODS,
         CachedMethods: CACHED_METHODS,
-        Compress: s3,
+        Compress: true,
         DefaultTTL: 0,
         ForwardedValues: {
           Cookies: cookie_config,

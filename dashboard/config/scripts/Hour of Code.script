@@ -1,6 +1,5 @@
 id '2'
 wrapup_video 'hoc_wrapup'
-hidden 'true'
 
 stage 'Hour of Code 2013'
 skin 'birds'

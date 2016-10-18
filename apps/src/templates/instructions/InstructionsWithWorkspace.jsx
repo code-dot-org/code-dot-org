@@ -1,14 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
 import {connect} from 'react-redux';
-var utils = require('../../utils');
-var styleConstants = require('../../styleConstants');
 var CodeWorkspaceContainer = require('../CodeWorkspaceContainer');
 var TopInstructions = require('./TopInstructions');
 var instructions = require('../../redux/instructions');
-
-var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
-var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 /**
  * A component representing the right side of the screen in our app. In particular

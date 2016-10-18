@@ -185,7 +185,7 @@ Help the students see the game from a computer's point of view.  If they need to
 [together]
 
 ## Assessment (15 min)
-### <a name="Assessment"></a>6) Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf)
+### <a name="Assessment"></a>6) Assessment Worksheet: [Dice Race Assessment](/curriculum/course3/10/Assessment10-DiceRace.pdf)
 - Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 

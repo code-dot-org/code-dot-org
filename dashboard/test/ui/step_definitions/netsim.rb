@@ -1,6 +1,6 @@
 When /^I load netsim in DNS mode$/ do
   steps <<-STEPS
-    And I am on "http://learn.code.org/s/allthethings/stage/14/puzzle/4?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/stage/14/puzzle/4?noautoplay=true"
     And I wait to see "#netsim-lobby-name"
   STEPS
   steps "And I close the dialog" if @browser.find_element(:id => 'x-close') rescue false
@@ -8,7 +8,7 @@ end
 
 When /^I load netsim in bit-sending mode$/ do
   steps <<-STEPS
-    And I am on "http://learn.code.org/s/allthethings/stage/14/puzzle/1?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/stage/14/puzzle/1?noautoplay=true"
     And I wait to see "#netsim-lobby-name"
   STEPS
   steps "And I close the dialog" if @browser.find_element(:id => 'x-close') rescue false
