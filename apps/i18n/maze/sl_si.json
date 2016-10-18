@@ -111,5 +111,8 @@
   "word": "Poišči besedo",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Da",
-  "youSpelled": "Ti si črkoval"
+  "youSpelled": "Ti si črkoval",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

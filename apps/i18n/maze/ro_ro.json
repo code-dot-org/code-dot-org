@@ -111,5 +111,8 @@
   "word": "Găsește cuvântul",
   "wrongCropError": "Nu pot recolta această cultură de aici.",
   "yes": "Da",
-  "youSpelled": "Ai scris"
+  "youSpelled": "Ai scris",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

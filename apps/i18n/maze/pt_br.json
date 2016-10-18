@@ -111,5 +111,8 @@
   "word": "Encontre a palavra",
   "wrongCropError": "Não posso colher aqui.",
   "yes": "Sim",
-  "youSpelled": "Você escreveu"
+  "youSpelled": "Você escreveu",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }
