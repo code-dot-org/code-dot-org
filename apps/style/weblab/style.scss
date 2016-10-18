@@ -4,7 +4,13 @@
 
 div.editor-column {
   left: 0;
+  margin-left: 0;
 }
 html[dir='rtl'] div.editor-column {
   right: 0;
+  margin-right: 0;
+}
+
+iframe.weblab-host {
+  top: $workspace-headers-height
 }
