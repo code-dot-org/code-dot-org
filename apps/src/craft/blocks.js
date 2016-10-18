@@ -19,7 +19,8 @@ const numbersToDisplayText = {
   '1.0': 'short',
   '2.0': 'medium',
   '4.0': 'long',
-  '8.0': 'very long'
+  '8.0': 'very long',
+  'random': 'random',
 };
 
 const blocksToDisplayText = {

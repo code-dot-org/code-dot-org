@@ -893,8 +893,11 @@ Craft.executeUserCode = function () {
           type, direction);
     },
     wait: function (time, targetEntity, blockID) {
+      const randomMin = .1;
+      const randomMax = 3;
       appCodeOrgAPI.wait(studioApp.highlight.bind(studioApp, blockID),
-          time, targetEntity);
+          time === 'random' ? _.random(randomMin, randomMax, true) : time,
+          targetEntity);
     },
     spawnEntityRandom: function (type, blockID) {
       var locationOptions = [
