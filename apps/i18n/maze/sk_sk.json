@@ -111,5 +111,8 @@
   "word": "Nájdi slovo",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Áno",
-  "youSpelled": "Vyhláskovali ste"
+  "youSpelled": "Vyhláskovali ste",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

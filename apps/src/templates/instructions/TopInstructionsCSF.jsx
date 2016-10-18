@@ -24,9 +24,12 @@ import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
+import Button from '../Button';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import experiments from '../../experiments';
 import InlineAudio from './InlineAudio';
+import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
+import msg from '@cdo/locale';
 
 import {
   getOuterHeight,
@@ -69,6 +72,9 @@ const styles = {
     top: 0,
     left: 0,
     // right handled by media queries for .editor-column
+  },
+  withOverlay: {
+    zIndex: OVERLAY_Z_INDEX + 1
   },
   noViz: {
     left: 0,
@@ -148,6 +154,7 @@ const styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
+    overlayVisible: React.PropTypes.bool,
     skinId: React.PropTypes.string,
     hints: React.PropTypes.arrayOf(React.PropTypes.shape({
       hintId: React.PropTypes.string.isRequired,
@@ -467,7 +474,8 @@ var TopInstructions = React.createClass({
         left: this.props.embedViewLeftOffset
       }),
       this.props.noVisualization && styles.noViz,
-      this.props.isMinecraft && craftStyles.main
+      this.props.isMinecraft && craftStyles.main,
+      this.props.overlayVisible && styles.withOverlay
     ];
 
     const markdown = (this.props.collapsed || !this.props.longInstructions) ?
@@ -543,6 +551,11 @@ var TopInstructions = React.createClass({
                   <InlineAudio src={acapelaSrc} />
                 </div>
               }
+              {this.props.overlayVisible &&
+                <Button type="primary">
+                  {msg.dialogOK()}
+                </Button>
+              }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
@@ -594,6 +607,7 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    overlayVisible: state.instructions.overlayVisible,
     acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
     acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
     hints: state.authoredHints.seenHints,
