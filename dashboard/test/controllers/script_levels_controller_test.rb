@@ -25,6 +25,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                            stage: @custom_stage_2, :position => 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
+    create(:script_level, script: @custom_script, stage: @custom_stage_3, :position => 1)
     client_state.reset
 
     @script = @custom_script
