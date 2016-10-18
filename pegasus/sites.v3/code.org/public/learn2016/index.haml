@@ -83,7 +83,7 @@ social:
 - entries << {name: "language", text: "World language"}
 - entries << {name: "art", text: "Art, Design, Media"}
 - entries << {name: "other", text: "Other"}
-- entries << {name: "cs", text: "Computer Science onyl"}
+- entries << {name: "cs-only", text: "Computer Science only"}
 - filters << {name: "subject", text: "Topics", entries: entries}
 
 - entries = []
@@ -133,7 +133,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       filters: #{filters.to_json},
       initialFilters: #{initial_filters.to_json},
-      locale: "#{request.locale}"
+      locale: "#{request.locale}",
+      imageButton: {url: "/learn2016/robotics", imageUrl: "/images/learn/robotics-link.png"}
       }
     );
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
