@@ -79,16 +79,12 @@ $original-background-color: #F2F2F2;
   }
 }
 
-.arrow {
-  display: inline !important;
-}
-
-@mixin flip-horizontal() {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
+@mixin flip-horizontal($multiple) {
+  -moz-transform: scaleX(-1 * $multiple);
+  -o-transform: scaleX(-1 * $multiple);
+  -webkit-transform: scaleX(-1 * $multiple);
+  -ms-transform: scaleX(-1 * $multiple);
+  transform: scaleX(-1 * $multiple);
   -ms-filter: "FlipH";
   filter: FlipH;
 }
@@ -103,33 +99,50 @@ $original-background-color: #F2F2F2;
   filter: FlipV;
 }
 
-@mixin arrow-icon($direction) {
-  scale: 2;
-  width: 25px !important;
-  height: 30px !important;
-  margin: 4px -15px -16px 11px !important;
-  padding-right: 0px !important;
+@mixin scaleXBrowser($multiple) {
+  -moz-transform: scale($multiple);
+  -webkit-transform: scale($multiple);
+  transform: scale($multiple);
+}
 
-  background: url("#{$root}Sliced_Parts/MC_#{$direction}_Arrow_Icon.png") no-repeat 0 0 !important;
+@mixin scaleXBrowserTwoParam($multipleX, $multipleY) {
+  -moz-transform: scale($multipleX, $multipleY);
+  -webkit-transform: scale($multipleX, $multipleY);
+  transform: scale($multipleX, $multipleY);
+}
+
+.arrow {
+  display: inline !important;
+  padding: 0 !important;
+  margin-top: 5px !important;
+}
+
+@mixin arrow-icon($direction) {
+  background: url("#{$root}Sliced_Parts/MC_#{$direction}_Arrow_Icon.png") no-repeat !important;
+  background-position: center !important;
+  // TODO: for offset on click, background-position: calc(50% - 50px) 50%;
+  width: 40px !important;
+  height: 40px !important;
 
   @include pixelated();
 }
 
 .left-btn {
   @include arrow-icon("Run");
-  @include flip-horizontal();
-  margin: 4px 7px -17px -13px !important;
+  @include flip-horizontal(1);
+  background-size: 16px 32px !important;
 }
 .right-btn {
   @include arrow-icon("Run");
+  background-size: 16px 32px !important;
 }
 .down-btn {
   @include arrow-icon("Down");
-  margin: 3px -11px -24px 9px !important;
+  background-size: 28px 20px !important;
 }
 .up-btn {
   @include arrow-icon("Up");
-  margin: 3px -11px -24px 9px !important;
+  background-size: 28px 20px !important;
 }
 
 body {
@@ -704,7 +717,7 @@ $height-to-width: 434 / 477;
     }
 
     .run26 {
-      scale: 2;
+      @include scaleXBrowser(2);
       width: 6px;
       height: 34px;
       margin: 16px -3px -18px 23px;
