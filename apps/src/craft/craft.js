@@ -953,7 +953,7 @@ Craft.executeUserCode = function () {
   if (Craft.initialConfig.level.dayNightCycleTime) {
     appCodeOrgAPI.setDayNightCycle(Craft.initialConfig.level.dayNightCycleStart,
         Craft.initialConfig.level.dayNightCycleTime || 0,
-        Craft.initialConfig.level.isDaytime ? 'day' : 'night');
+        Craft.initialConfig.level.isDaytime ? 'night' : 'day');
   }
 };
 
