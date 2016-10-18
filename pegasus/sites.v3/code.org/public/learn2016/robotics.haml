@@ -1,0 +1,131 @@
+---
+title: Learn
+theme: responsive_wide
+layout: wide
+social:
+  "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
+  "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
+  "og:image:width": 520
+  "og:image:height": 391
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+  #desktop-header.desktop-feature
+    = view :header, variant: "desktop"
+  #mobile-header.mobile-feature
+    = view :header, variant: "mobile"
+
+  .banner
+    .container_responsive{style: "color: white"}
+      .col-50{style: "text-align: center"}
+        %br/
+        %br/
+        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 60px"}
+          ROBOTICS
+        %br/
+        %br/
+        Lines of text about Robotics.
+      .col-50
+        %img{src: "/images/learn/robotics.png", style: "text-align: center"}
+
+%br/
+
+-# Not ideal but we can pull the undigested file from /blockly.
+%script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
+
+- tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
+
+- filters = []
+
+- entries = []
+- entries << {name: "pre", text: "Pre-reader"}
+- entries << {name: "2-5", text: "Grades 2-5"}
+- entries << {name: "6-8", text: "Grades 6-8"}
+- entries << {name: "9+", text: "Grades 9+"}
+- filters << {name: "grade", text: "Grades", entries: entries}
+
+- entries = []
+- entries << {name: "beginner", text: "Beginner"}
+- entries << {name: "comfortable", text: "Comfortable"}
+- entries << {name: "experienced", text: "Experienced"}
+- filters << {name: "teacher_experience", text: "Educator's CS experience", entries: entries}
+
+- entries = []
+- entries << {name: "beginner", text: "Beginner"}
+- entries << {name: "comfortable", text: "Comfortable"}
+- entries << {name: "experienced", text: "Experienced"}
+- filters << {name: "student_experience", text: "Student's CS experience", entries: entries}
+
+- entries = []
+- entries << {name: "robotics", text: "Robotics"}
+- filters << {name: "activity_type", text: "Activity type", entries: entries, display: false}
+
+- entries = []
+- entries << {name: "science", text: "Science"}
+- entries << {name: "math", text: "Math"}
+- entries << {name: "history", text: "Social Studies, History"}
+- entries << {name: "la", text: "Language Arts"}
+- entries << {name: "language", text: "World language"}
+- entries << {name: "art", text: "Art, Design, Media"}
+- entries << {name: "other", text: "Other"}
+- entries << {name: "cs-only", text: "Computer Science only"}
+- filters << {name: "subject", text: "Topics", entries: entries}
+
+- entries = []
+- entries << {name: "all", text: "All devices"}
+- entries << {name: "browser", text: "Computers"}
+- entries << {name: "android-tablet", text: "Android Tablet"}
+- entries << {name: "ipad", text: "iPad"}
+- entries << {name: "android-phone", text: "Android phone"}
+- entries << {name: "iphone", text: "iPhones"}
+- entries << {name: "unplugged", text: "No computers or devices"}
+- filters << {name: "platform", text: "Classroom technology", entries: entries}
+
+- entries = []
+- entries << {name: "1hour", text: "One hour"}
+- entries << {name: "1hour-follow", text: "One hour with follow-on"}
+- entries << {name: "fewhours", text: "A few hours"}
+- filters << {name: "length", text: "Length", entries: entries}
+
+- entries = []
+- entries << {name: "blocks", text: "Blocks"}
+- entries << {name: "c", text: "C/C++"}
+- entries << {name: "java", text: "Java"}
+- entries << {name: "javascript", text: "JavaScript"}
+- entries << {name: "ios", text: "iOS/Swift"}
+- entries << {name: "python", text: "Python" }
+- entries << {name: "ruby", text: "Ruby" }
+- entries << {name: "none", text: "Language independent" }
+- entries << {name: "other", text: "Other"}
+- filters << {name: "programming_language", text: "Language", entries: entries}
+
+- initial_filters = {}
+- initial_filters[:platform] = ["all"]
+- initial_filters[:teacher_experience] = ["beginner"]
+- initial_filters[:student_experience] = ["beginner"]
+- initial_filters[:length] = ["1hour", "1hour-follow"]
+- initial_filters[:activity_type] = ["robotics"]
+
+
+
+.container_responsive
+  #tutorials
+
+:javascript
+
+  $(document).ready(function() {
+    // Send through some values that the JavaScript will need.
+    var tutorialExplorerManager = new window.TutorialExplorerManager({
+      tutorials: #{tutorials_contents.to_json},
+      filters: #{filters.to_json},
+      initialFilters: #{initial_filters.to_json},
+      locale: "#{request.locale}",
+      backButton: {text: "Back to all tutorials", url: "/learn2016"}
+      }
+    );
+    tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
+  });

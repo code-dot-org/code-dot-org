@@ -13,6 +13,16 @@ const shapes = {
     tags_international_languages: React.PropTypes.string,
     tags_grade: React.PropTypes.string,
     tags_programming_language: React.PropTypes.string
+  }),
+
+  backButton: React.PropTypes.shape({
+    url: React.PropTypes.string,
+    text: React.PropTypes.string
+  }),
+
+  imageButton: React.PropTypes.shape({
+    url: React.PropTypes.string,
+    imageUrl: React.PropTypes.string
   })
 };
 

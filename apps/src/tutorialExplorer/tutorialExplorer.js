@@ -8,13 +8,16 @@ import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
+import shapes from './shapes';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.array.isRequired,
     filterGroups: React.PropTypes.array.isRequired,
     initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    locale: React.PropTypes.string.isRequired
+    locale: React.PropTypes.string.isRequired,
+    backButton: shapes.backButton,
+    imageButton: shapes.imageButton
   },
 
   getInitialState() {
@@ -66,6 +69,8 @@ const TutorialExplorer = React.createClass({
           filterGroups={this.props.filterGroups}
           onUserInput={this.handleUserInput}
           selection={this.state.filters}
+          backButton={this.props.backButton}
+          imageButton={this.props.imageButton}
         />
 
         {!this.isLocaleEnglish() && (
@@ -101,6 +106,8 @@ window.TutorialExplorerManager = function (options) {
         filterGroups={options.filters}
         initialFilters={options.initialFilters}
         locale={options.locale}
+        backButton={options.backButton}
+        imageButton={options.imageButton}
       />,
       element
     );
