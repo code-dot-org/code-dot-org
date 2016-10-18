@@ -408,6 +408,7 @@ module LevelsHelper
     end
 
     # User/session-dependent options
+    app_options[:teacherMarkdown] = @level.teacher_markdown if current_user.try(:authorized_teacher?)
     app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
