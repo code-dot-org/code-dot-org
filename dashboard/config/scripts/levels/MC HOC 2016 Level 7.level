@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return false;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -35,7 +35,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Look at this poor cow, it can’t move or make milk. Make the cow move like you did with the sheep. Lead it to the pasture and get it to drop milk.\r\n",
+    "instructions": "Combine what you've learned to make the cow move like you did with the sheep. Lead it to the pasture and get it to drop milk.\r\n",
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
     "level_verification_timeout": "30000",
     "contained_level_names": null
@@ -48,7 +48,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_cowSpawnedTouchedClicked"/>
+        <block type="craft_cowSpawnedTouchedClicked" deletable="false"/>
         <block type="craft_sheepSpawnedTouchedClicked" uservisible="false">
           <statement name="WHEN_SPAWNED">
             <block type="craft_forever" uservisible="false">

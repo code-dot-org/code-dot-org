@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "false",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n    var successPositions = [[7,4] , [7,5]];\r\n\tfor(var i = 0 ; i < successPositions.length ; i++ ) {\r\n\t\tif(verificationAPI.isEntityAt(\"Player\" ,successPositions[i]))\r\n\t\t\treturn true;\r\n\t}\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -48,7 +48,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_creeperSpawnedTouchedClickedDay"/>
+        <block type="craft_creeperSpawnedTouchedClickedDay" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

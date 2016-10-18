@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return false;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -33,11 +33,12 @@
     "free_play": "false",
     "player_start_direction": "2",
     "is_event_level": "true",
-    "day_night_cycle_start": ".1",
-    "day_night_cycle_time": "10",
+    "day_night_cycle_start": "3",
+    "day_night_cycle_time": "30",
     "instructions": "Nighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n",
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
     "level_verification_timeout": "30000",
+    "callout_json": "[]",
     "contained_level_names": null
   },
   "published": true,
@@ -48,23 +49,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_whenNight"/>
-        <block type="craft_zombieSpawnedTouchedClickedDay">
-          <statement name="WHEN_TOUCHED">
-            <block type="craft_wait">
-              <title name="TYPE">1.0</title>
-              <next>
-                <block type="craft_attack"/>
-              </next>
-            </block>
-          </statement>
-          <statement name="WHEN_USED">
-            <block type="craft_destroyEntity"/>
-          </statement>
-          <statement name="WHEN_DAY">
-            <block type="craft_destroyEntity"/>
-          </statement>
-        </block>
+        <block type="craft_zombieSpawnedTouchedClickedDay" x="250px" y="25px" deletable="false"/>
+        <block type="craft_whenNight" x="25px" y="25px" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

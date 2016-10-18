@@ -32,15 +32,15 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "The sheep has forgotten what to do when you sheer it! Make it drop wool when you walk over to it and press the space bar or tap the game.",
+    "instructions": "The sheep has forgotten what to do when you shear it! Make it drop wool when you walk over to it and press Use.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "show_popup_on_load": "playerSelection",
-    "contained_level_names": null,
     "level_verification_timeout": "20000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 1: Wool for Sheep\r\nThe sheep has forgotten what to do when you sheer it! Make it drop wool when you walk over to it and press the space bar or tap the game to hit it.\r\n\r\nSolution:               \r\nSheep\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nTeaches: Blockley, Movement, Putting commands into the entity structure.",
@@ -50,8 +50,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" uservisible="false" deletable="false" movable="false"/>
-        <block type="craft_sheepClicked"/>
+        <block type="when_run" deletable="false" movable="false" uservisible="false"/>
+        <block type="craft_sheepClicked" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -66,13 +66,7 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="craft_drop">
-              <title name="TYPE">wool</title>
-            </block>
-          </statement>
-        </block>
+        <block type="pick_one"/>
       </xml>
     </required_blocks>
     <solution_blocks>

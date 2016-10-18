@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function(verificationAPI) {\r\n     return false;\r\n   }",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,13 +32,14 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "This chicken has forgotten how to move after being spawned! Get it moving around by putting \"Walk Forward\" and \"Turn\" commands in the \"When Spawned\" slot. When a mob is created it is called “spawning,\" so that the chicken will move as soon as it is created.\r\n",
+    "instructions": "This chicken has forgotten how to move! Get it moving around by putting some \"move forward\" and \"turn\" commands in the \"when spawned\" slot. \r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
+    "level_verification_timeout": "5000",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "contained_level_names": null,
-    "level_verification_timeout": "30000",
-    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}"
+    "failure_message_override": "Hi"
   },
   "published": true,
   "notes": "Puzzle 2: How did the Chicken Cross the Road?\r\nWhen an entity is created it is called “spawning\". This chicken has forgotten how to move after being spawned! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot so that the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\nWhen Used\r\nNo code needs to go here\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nVIDEO on how you’ve learned these CS concepts  and then go into how to make those part of the game (Lisa)",
@@ -48,7 +49,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_chickenSpawnedClicked"/>
+        <block type="craft_chickenSpawnedClicked" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
