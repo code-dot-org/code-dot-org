@@ -533,7 +533,7 @@ StudioApp.prototype.init = function (config) {
     }
   }
 
-  if (!!config.level.projectTemplateLevelName) {
+  if (!!config.level.projectTemplateLevelName && !config.level.isK1) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
