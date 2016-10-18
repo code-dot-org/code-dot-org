@@ -118,6 +118,13 @@ $original-background-color: #F2F2F2;
 }
 
 @mixin arrow-icon($direction) {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
   background: url("#{$root}Sliced_Parts/MC_#{$direction}_Arrow_Icon.png") no-repeat !important;
   background-position: center !important;
   // TODO: for offset on click, background-position: calc(50% - 50px) 50%;

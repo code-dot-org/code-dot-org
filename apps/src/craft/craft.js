@@ -320,16 +320,19 @@ Craft.init = function (config) {
               }(btn));
           dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
               function(btn) {
-                return () => {
-                  Craft.onArrowButtonDown(ArrowIds[btn]);
+                return (e) => {
+                  Craft.onArrowButtonDown(e, ArrowIds[btn]);
                 }
               }(btn));
         }
 
+        document.addEventListener('mouseup', Craft.onDocumentMouseUp, false);
+
         dom.addMouseDownTouchEvent(document.getElementById('phaser-game'),
             function() {
-              return () => {
+              return (e) => {
                 Craft.gameController.codeOrgAPI.clickDown(() => {});
+                e.preventDefault(); // Stop normal events so we see mouseup later.
               }
             }());
 
@@ -393,12 +396,23 @@ var directionToFacing = {
   'rightButton': FacingDirection.Right,
 };
 
-Craft.onArrowButtonDown = function (btn) {
+Craft.onArrowButtonDown = function (e, btn) {
   Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[btn]);
+  e.preventDefault(); // Stop normal events so we see mouseup later.
 };
 
 Craft.onArrowButtonUp = function (btn) {
   Craft.gameController.codeOrgAPI.arrowUp(directionToFacing[btn]);
+};
+
+Craft.onDocumentMouseUp = function () {
+  if (!Craft.phaserLoaded()) {
+    return;
+  }
+
+  for (var direction in directionToFacing) {
+    Craft.gameController.codeOrgAPI.arrowUp(directionToFacing[direction]);
+  }
 };
 
 var preloadImage = function (url) {
