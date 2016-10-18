@@ -2050,3 +2050,11 @@ en:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+        mc-events:
+          stage:
+            new stage: new stage
+            Minecraft Hour of Code 2016: Minecraft Hour of Code 2016
+          title: Minecraft Hour of Code 2016
+          description_audience: ''
+          description_short: Minecraft Hour of Code 2016
+          description: Minecraft Hour of Code 2016
