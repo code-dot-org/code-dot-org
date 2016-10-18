@@ -202,6 +202,31 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     put :update, id: @workshop.id, pd_workshop: params
   end
 
+  test 'updating with notify true sends detail change notification emails' do
+    sign_in @admin
+
+    # create some enrollments
+    5.times do
+      create :pd_enrollment, workshop: @workshop
+    end
+    mock_mail = stub(deliver_now: nil)
+    Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
+
+    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: true
+  end
+
+  test 'updating with notify false does not send detail change notification emails' do
+    sign_in @admin
+
+    # create some enrollments
+    5.times do
+      create :pd_enrollment, workshop: @workshop
+    end
+    Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).never
+
+    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: false
+  end
+
   # Update sessions via embedded attributes
 
   test 'organizers can add workshop sessions' do
