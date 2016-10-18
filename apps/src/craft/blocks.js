@@ -200,7 +200,7 @@ const entityActionBlocks = {
 const entityActionTargetDropdownBlocks = {
   'moveToward': 'move toward',
   'moveTo': 'move to',
-  'moveAway': 'move away'
+  'moveAway': 'move away from'
 };
 
 exports.entityActionBlocks = Object.keys(entityActionBlocks);
