@@ -70,7 +70,7 @@ namespace :circle do
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
             " --local" \
-            " --parallel 16" \
+            " --parallel 8" \
             " --abort_when_failures_exceed 10" \
             " --retry_count 2" \
             " --html"
@@ -83,7 +83,7 @@ namespace :circle do
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
             " --local" \
-            " --parallel 10" \
+            " --parallel 5" \
             " --retry_count 1" \
             " --html"
       end
