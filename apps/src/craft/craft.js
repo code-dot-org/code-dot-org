@@ -267,6 +267,8 @@ Craft.init = function (config) {
       appStrings: {
         generatedCodeDescription: craftMsg.generatedCodeDescription(),
       },
+      enableShowCode: !config.level.isEventLevel,
+      enableShowBlockCount: !config.level.isEventLevel,
       loadAudio: function () {},
       afterInject: function () {
         var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
