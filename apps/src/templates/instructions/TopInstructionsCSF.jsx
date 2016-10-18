@@ -31,7 +31,6 @@ import msg from '@cdo/locale';
 
 import {
   getOuterHeight,
-  scrollBy,
   scrollTo,
   shouldDisplayChatTips
 } from './utils';
@@ -41,8 +40,6 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
-
-const SCROLL_BY_PERCENT = 0.8;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -378,21 +375,10 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * Handle a click to our "scroll up" button
+   * @return {Element} scrollTarget
    */
-  handleScrollInstructionsUp() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
-  },
-
-  /**
-   * Handle a click to our "scroll down" button
-   */
-  handleScrollInstructionsDown() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
+  getScrollTarget() {
+    return this.refs.instructions.parentElement;
   },
 
   /**
@@ -572,8 +558,7 @@ var TopInstructions = React.createClass({
               <ScrollButtons
                 style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
-                onScrollUp={this.handleScrollInstructionsUp}
-                onScrollDown={this.handleScrollInstructionsDown}
+                getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
               />}

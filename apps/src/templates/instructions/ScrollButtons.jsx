@@ -1,10 +1,12 @@
 import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
-import { getOuterHeight } from './utils';
+import { getOuterHeight, scrollBy } from './utils';
 
 const WIDTH = 20;
 const HEIGHT = WIDTH;
+
+const SCROLL_BY_PERCENT = 0.8;
 
 const styles = {
   arrow: {
@@ -41,14 +43,48 @@ const ScrollButtons = React.createClass({
     style: React.PropTypes.object,
     visible: React.PropTypes.bool.isRequired,
     height: React.PropTypes.number.isRequired,
-    onScrollUp: React.PropTypes.func.isRequired,
-    onScrollDown: React.PropTypes.func.isRequired,
+    getScrollTarget: React.PropTypes.func.isRequired,
   },
 
   getMinHeight() {
     const scrollButtonsHeight = getOuterHeight(this.refs.scrollUp, true) +
         getOuterHeight(this.refs.scrollDown, true);
     return scrollButtonsHeight + (MARGIN * 2);
+  },
+
+  scrollStart(scrollingUp) {
+    // initial scroll in response to button click
+    const contentContainer = this.props.getScrollTarget();
+    const contentHeight = contentContainer.clientHeight;
+    let initialScroll = contentHeight * SCROLL_BY_PERCENT;
+    if (scrollingUp) {
+      initialScroll *= -1;
+    }
+    scrollBy(contentContainer, initialScroll);
+
+    // If mouse is held down for half a second, begin gradual continuous
+    // scroll
+    var timeout = setTimeout(function () {
+      var interval = setInterval(function () {
+        scrollBy(contentContainer, scrollingUp ? -2 : 2, false);
+      }.bind(this), 10);
+      this.setState({
+        scrollInterval: interval
+      });
+    }.bind(this), 500);
+
+    this.setState({
+      scrollTimeout: timeout
+    });
+  },
+
+  scrollStop() {
+    clearTimeout(this.state.scrollTimeout);
+    clearInterval(this.state.scrollInterval);
+    this.setState({
+      scrollTimeout: null,
+      scrollInterval: null
+    });
   },
 
   render() {
@@ -75,12 +111,14 @@ const ScrollButtons = React.createClass({
       <div style={this.props.style}>
         <div
           ref="scrollUp"
-          onClick={this.props.onScrollUp}
+          onMouseDown={this.scrollStart.bind(this, true)}
+          onMouseUp={this.scrollStop}
           style={scrollUpStyle}
         />
         <div
           ref="scrollDown"
-          onClick={this.props.onScrollDown}
+          onMouseDown={this.scrollStart.bind(this, false)}
+          onMouseUp={this.scrollStop}
           style={scrollDownStyle}
         />
       </div>
