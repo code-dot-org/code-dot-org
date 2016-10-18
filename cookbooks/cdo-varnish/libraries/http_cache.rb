@@ -16,15 +16,6 @@ class HttpCache
     mc
     frozen
     gumball
-    20-hour
-    course1
-    course2
-    course3
-    course4
-    playlab
-    artist
-    infinity
-    iceage
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/stage/*"]
