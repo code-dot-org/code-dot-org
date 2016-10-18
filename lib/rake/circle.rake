@@ -80,7 +80,7 @@ namespace :circle do
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
             " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
-            " --parallel #{use_saucelabs ? 16 : 12}" \
+            " --parallel #{use_saucelabs ? 16 : 8}" \
             " --abort_when_failures_exceed 10" \
             " --retry_count 2" \
             " --html"
@@ -93,7 +93,7 @@ namespace :circle do
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
             " --#{use_saucelabs ? 'config ChromeLatestWin7,iPhone' : 'local'}" \
-            " --parallel #{use_saucelabs ? 10 : 8}" \
+            " --parallel #{use_saucelabs ? 10 : 4}" \
             " --retry_count 1" \
             " --html"
       end
