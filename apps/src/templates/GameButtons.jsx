@@ -3,7 +3,6 @@ import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
-import experiments from '../experiments';
 import classNames from 'classnames';
 import Radium from 'radium';
 import { connect } from 'react-redux';

@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HoraDoCodigo' %>
@@ -12,13 +14,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. Divulgue
 
-Conte aos seus amigos sobre a **#HoraDoCodigo**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Envie esse e-mail](%= resolve_url('/promote/resources#sample-emails') %) para o seu diretor e incentive todas as salas de aula de sua escola a se cadastrarem. <% if @country == 'us' %> Uma escola sorteada de *cada* Estado dos EUA (e Washington D.C.) ganhará o equivalente a US$10.000 em tecnologia. <% end %>
+[Envie esse e-mail](%= resolve_url('/promote/resources#sample-emails') %) para o seu diretor e incentive todas as salas de aula de sua escola a se cadastrarem. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## 3. Peça para seu empregador para participar
 
@@ -30,4 +32,6 @@ Conte aos seus amigos sobre a **#HoraDoCodigo**!
 
 ## 5. Peça que um representante político apoie a Hora do Código
 
-[Envie este e-mail](%= resolve_url('/promote/resources#sample-emails') %) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola durante a Hora do Código. Isso pode ajudar a criar um suporte para a ciência da computação em sua área além de uma hora de programação.
+[Envie este e-mail](%= resolve_url('/promote/resources#sample-emails') %) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola durante a Hora do Código. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
+
+<%= view :signup_button %>

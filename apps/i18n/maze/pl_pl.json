@@ -111,5 +111,8 @@
   "word": "Znajdź słowa",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Tak",
-  "youSpelled": "Przeliterowałeś"
+  "youSpelled": "Przeliterowałeś",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# This script removes all rows in the user_permissions table with permission
+# type 'hint_access' (UserPermission::HINT_ACCESS), logging the number of
+# deleted rows to the console.
+
+require_relative '../../dashboard/config/environment'
+
+records_deleted = UserPermission.where(permission: 'hint_access').destroy_all
+
+puts "DELETED: #{records_deleted.count} rows..."

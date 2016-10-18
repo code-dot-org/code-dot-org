@@ -10,9 +10,11 @@ level 'StevieMarbles'
 #level 'gradeK_external_FrustrationWorksheet'
 
 
-stage 'Sequences & Algorithms'
-level 'seqAlg'
+stage 'Real-life Algorithms: Plant a Seed'
+level 'PlantASeed'
 
+#stage 'Sequences & Algorithms'
+#level 'seqAlg'
 
 stage 'Jigsaw: Learn to drag and drop'
 skin 'jigsaw'
@@ -43,13 +45,16 @@ level_concept_difficulty '{}'
 level 'blockly:Jigsaw:12'
 assessment 'blockly:Jigsaw:13'
 
-stage 'Programming Unplugged'
-level 'gradeK_unplugged_programming'
+#stage 'Programming Unplugged'
+#level 'gradeK_unplugged_programming'
+
+stage 'Programming Unplugged: Happy Maps'
+level 'UnplugHappyMaps'
 
 stage 'Programming'
-level 'K2.0 sequence pre'
+level 'courseA_maze_seq1'
 level 'DebuggingIntro'
-level 'K2.0 sequence 1'
+level 'courseA_maze_seq2'
 level 'K2.0 sequence 2'
 level 'K2.0 sequence 3'
 level 'gradeK_sequence_4'
@@ -66,7 +71,6 @@ level 'K2.0 sequence FP'
 
 stage 'Being Safe Online'
 level 'GoingPlacesSafely'
-assessment 'K-1 Keep it Private multi 1'
 
 
 stage 'Loops Unplugged'

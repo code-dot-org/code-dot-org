@@ -6,12 +6,14 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # 如何组织代码一小时活动
 
 ## 1) 你的活动准备
 
   * 确定地点，日期和时间
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * 发送 [一封邮件](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit)，邀请当地的市长， 国会议员、，州长或其他有影响力的商业人士发言。
   * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
 ## 2) 活动期间
@@ -54,3 +56,5 @@ nav: how_to_nav
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                                                                                                              |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+
+<%= view :signup_button %>

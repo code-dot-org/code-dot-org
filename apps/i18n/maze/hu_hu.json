@@ -111,5 +111,8 @@
   "word": "Ezt a szót keresd",
   "wrongCropError": "Nem tudom innen a termést betakarítani.",
   "yes": "Igen",
-  "youSpelled": "Amit találtál"
+  "youSpelled": "Amit találtál",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

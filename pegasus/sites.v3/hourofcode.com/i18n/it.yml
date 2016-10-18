@@ -4,6 +4,7 @@ it:
   language: Italiano
   front_title: "Partecipa all'evento didattico più popolare del mondo, %{campaign_date}, 2015"
   coming_soon: Sta arrivando
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 Dic.
   campaign_date_start_long: 7 Dicembre
   campaign_date_short: 7-13 Dic.
@@ -18,7 +19,6 @@ it:
   front_start_learning: Start learning
   header_menu_resources: Risorse
   header_menu_faq: FAQ
-  header_menu_prizes: Premi
   header_menu_how_to: Come
   header_menu_promote: Promuovi
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ it:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Premi per ogni organizzatore
-  prizes_every_organizer: "Ogni organizzatore dell'Ora del Codice riceverà un regalo di ringraziamento da Dropbox o Skype"
-  prizes_technology: Una scuola pubblica in ogni stato degli Stati Uniti (e Washington DC) vincerà 10.000$ in tecnologia
-  prizes_tech_chats: '# classi vinceranno delle video chiamate con ospiti molto speciali'
-  prizes_robots: 100 classi vinceranno un kit di robot programmabili
-  prizes_brilliant: Una scuola di ciascuna provincia e regione riceverà 2000$ destinati ad un Progetto Brillante
-  prizes_actua: 15 scuole in tutto il Canada parteciperanno a 2 laboratori realizzati dai membri di Actua
-  prizes_details: Dettagli
   nav_back_to_resources: Torna a Risorse
   how_to_nav_educators: Per insegnanti
   how_to_nav_after_school: Per il dopo scuola
@@ -163,23 +155,6 @@ it:
   how_to_nav_companies: Per le aziende
   how_to_nav_afterschool_educators: Per gli insegnanti del doposcuola
   how_to_nav_volunteers: Per i volontari
-  prizes_nav_title: Premi
-  prizes_nav_home: Tutti i premi
-  prizes_nav_hardware: Iscrizione al premio hardware
-  prizes_nav_terms: Termini e Condizioni
-  prizes_nav_faq: Domande Frequenti (FAQ)
-  prizes_nav_dc: Viaggio a sorpresa a Washington D.C.
-  prizes_nav_technology: 10.000$ di tecnologia per la tua scuola
-  prizes_nav_video_chat: Fai una video chiamata con un gigante della tecnologia
-  prizes_nav_skype_dropbox: Credito Skype o spazio extra su Dropbox per ogni organizzatore
-  prizes_nav_brilliant: $2.000 per un progetto brillante
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Premi per ogni insegnante
-  prizes_10k: Una scuola pubblica in ogni stato degli Stati Uniti (e Washington D.C.) vincerà 10.000$ in tecnologia
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: "<i>Ogni</i> organizzatore riceverà <b>un buono acquisto da 10$ per Amazon.com, iTunes o Microsoft's Windows Store</b> come regalo di ringraziamento!"
-  prizes_more: More exciting prizes
   whats_next_header: "Cosa c'è dopo?"
   whats_next_description: "Ti manderemo del materiale e consigli utili per il tuo evento. Nel 2015 ci sono nuove esercitazioni che funzionano su qualsiasi browser, smartphone e addirittura senza computer! <a href='http://code.org/learn'>Prova le esercitazioni disponibili </a>"
   whats_next_how_to: "<a href='/how-to'>Come eseguire un'Ora del Codice</a>"
@@ -196,6 +171,7 @@ it:
   share_on_facebook: Condividi su Facebook
   share_on_twitter: Condividi su Twitter
   front_join_us_heading: "Un'Ora del Codice per ogni studente."
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: "L'Informatica è fondamentale per ogni studente. Aiutaci a farla conoscere a 100 milioni di studenti."
   front_join_us_description_short: "L'informatica è fondamentale per ogni studente."
   front_join_us_button: Unisciti a noi
@@ -243,12 +219,13 @@ it:
   signup_send_posters_address_label: "Indirizzo della scuola o dell'organizzazione"
   signup_whole_school_flag_label: A questo evento partecipano tutti gli studenti della scuola
   signup_your_event: Iscriviti
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Aiutami a trovare un Ingegnere Informatico per stimolare i miei studenti (solo per gli USA)
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Il tuo nome
   signup_email_placeholder: Per esempio, nome@istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
-  signup_event_location_placeholder: "Codice postale e nome della nazione OPPURE indirizzo completo. \\r (Lo usiamo per mettere una bandierina sulla mappa)"
+  signup_event_location_placeholder: "Codice postale e nome della nazione OPPURE indirizzo completo. \r (Lo usiamo per mettere una bandierina sulla mappa)"
   signup_special_event_details_placeholder: "Descrivi cos'è che rende speciale questo evento"
   signup_send_posters_address_placeholder: Questo indirizzo non verrà mostrato sulla nostra mappa
   signup_event_type_in_school: In una scuola
@@ -273,28 +250,6 @@ it:
   meta_tag_twitter_title: "L'ora del codice è qui"
   meta_tag_twitter_description: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni e in più di 30 lingue. Da 4 a 104 anni."
   twitter_default_text: "Io partecipo all' #OradelCodice #HourOfCode quest'anno, e tu? @codeorg @programmafuturo"
-  hardware_prizes_form_name_label: Il tuo nome
-  hardware_prizes_form_name_placeholder: Il tuo nome
-  hardware_prizes_form_email_label: Il tuo indirizzo di posta elettronica
-  hardware_prizes_form_email_placeholder: Il tuo indirizzo di posta elettronica
-  hardware_prizes_form_school_name_label: Nome della scuola
-  hardware_prizes_form_school_name_placeholder: Nome della scuola
-  hardware_prizes_form_school_address_label: Indirizzo della scuola
-  hardware_prizes_form_school_address_placeholder: Indirizzo della scuola
-  hardware_prizes_form_school_type_label: Tipo di scuola
-  hardware_prizes_form_school_type_option_elementary: Primaria
-  hardware_prizes_form_school_type_option_middle_school: Secondaria inferiore
-  hardware_prizes_form_school_type_option_high_school: Secondaria superiore
-  hardware_prizes_form_qualifying_school_label: Scuola pubblica degli Stati Uniti
-  hardware_prizes_form_title_I_school_label: Questa scuola si qualifica per i finanziamenti del Titolo I
-  hardware_prizes_form_title_I_school_help_text: 'Le scuole "Titolo I" sono scuole con numeri alti o alte percentuali di bambini provenienti da famiglie a basso reddito che ricevono fondi federali per contribuire a garantire che tutti i bambini raggiungano gli standard educativi dello stato.'
-  hardware_prizes_form_number_students_label: Numero di studenti che partecipano
-  hardware_prizes_form_number_students_placeholder: Numero di studenti
-  hardware_prizes_form_technology_plan_label: "Come pensi di utilizzare le nuove tecnologie per aiutare ad espandere l'insegnamento dell'informatica nella tua scuola?"
-  hardware_prizes_form_technology_plan_placeholder: Piano di utilizzo delle nuove tecnologie
-  hardware_prizes_form_plan_file_label: "Carica il tuo piano organizzativo per l'Ora del Codice"
-  hardware_prizes_form_plan_file_description: "Invia una programmazione temporale di come hai pianificato la partecipazione di ogni studente all'Ora del Codice nella tua scuola. Vedi una pianificazione di esempio: #PDF# | #Word#"
-  hardware_prizes_form_submit_label: Invia
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: "Cosa è l'Ora del Codice?"
   hoc_faq_what_is_hoc_a: "L'Ora del Codice consiste in una lezione di introduzione all'informatica della durata di un'ora, progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi. <a href='%{codeorg_url}'> Guarda i corsi disponibili</a>."
@@ -401,11 +356,6 @@ it:
   title_proclamation: "Un esempio di delibera per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice"
   title_stats: Statistiche utili
   title_partners: Partner
-  title_prizes_faq: FAQ sui premi
-  title_prizes_terms: Condizioni per i Premi
-  title_prizes_thanks: Grazie
-  title_prizes: Premi
-  title_hardware_prize_form: Iscriviti per i Premi Hardware
   title_resources: Risorse
   title_signup_thanks: "Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!"
   title_tutorial_guidelines: Linee Guida per i Corsi

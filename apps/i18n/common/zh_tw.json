@@ -305,5 +305,6 @@
   "when": "當",
   "whenRun": "當按下\"執行\"時",
   "workspaceHeaderShort": "工作區:",
-  "yes": "是"
+  "yes": "是",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }

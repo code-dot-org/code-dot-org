@@ -4,6 +4,7 @@ sr:
   language: Енглески
   front_title: 'Прикључите се највећем едукативном догађају у историји, %{campaign_date}, 2015 године'
   coming_soon: Стиже ускоро
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7. Дец
   campaign_date_start_long: 7. децембра
   campaign_date_short: 7-13 децембра
@@ -18,7 +19,6 @@ sr:
   front_start_learning: Start learning
   header_menu_resources: Ресурси
   header_menu_faq: FAQ
-  header_menu_prizes: Награде
   header_menu_how_to: Како да
   header_menu_promote: Промовисање
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ sr:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Награде за све организаторе
-  prizes_every_organizer: Сваки Hour of Code организатор ће добити Дропбокс или Скајп кредит као знак захвалности
-  prizes_technology: По једна државна школа у свакој САД држави (и у округу Вашингтон) ће освојити технологију у вредности $10.000
-  prizes_tech_chats: '# разреда ће освојити видео разговоре са веома специјалним гостима'
-  prizes_robots: 100 учионоца ће добити сет програмабилних робота
-  prizes_brilliant: Једна школа у свакој провинцији или територији ће добити по $2000 за Brilliant Project
-  prizes_actua: 15 школа широм Канаде ће добити по две STEM радионоце од једног од чланова Actua-е
-  prizes_details: Детаљи
   nav_back_to_resources: Назад на ресурсе
   how_to_nav_educators: За наставнике
   how_to_nav_after_school: За после школе
@@ -163,25 +155,8 @@ sr:
   how_to_nav_companies: За компаније
   how_to_nav_afterschool_educators: За ваншколске активности
   how_to_nav_volunteers: За волонтере
-  prizes_nav_title: Награде
-  prizes_nav_home: Све награде
-  prizes_nav_hardware: Пријава на награду хардвера
-  prizes_nav_terms: Услови и одредбе
-  prizes_nav_faq: FAQ
-  prizes_nav_dc: Мистериозни пут у Washington D.C.
-  prizes_nav_technology: 10 000 долара за технологију за вашу школу
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
   whats_next_header: Шта је следеће?
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'> Како да организујем Сат Програмирања</a>"
   whats_next_promote: "<a href='/promote'> промовисање Сата Програмирања</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'> Како да промовишем Сат Програмирања</a>"
@@ -196,6 +171,7 @@ sr:
   share_on_facebook: Подели на Фејсбуку
   share_on_twitter: Подели на Твитеру
   front_join_us_heading: Hour of Code за сваког ученика.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Рачунарске науке су основа за сваког ученика. Помозите нам да их представимо за 100 милиона.
   front_join_us_description_short: Науке о рачунарима су основа за сваког студента.
   front_join_us_button: Придружите нам се
@@ -243,12 +219,13 @@ sr:
   signup_send_posters_address_label: Адреса школе или организације
   signup_whole_school_flag_label: Овај догађај је за целу школу
   signup_your_event: Пријавите ваше окупљање
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Ваш име
   signup_email_placeholder: vi@primer.rs
   signup_organization_name_placeholder: На пример, Средња школа Тесла
-  signup_event_location_placeholder: "Поштански број и земља ИЛИ комплетна адреса.\\r\n(Употребићемо ово како би ставили чиоду на нашу мапу)"
+  signup_event_location_placeholder: "Поштански број и земља ИЛИ комплетна адреса.\r\n(Употребићемо ово како би ставили чиоду на нашу мапу)"
   signup_special_event_details_placeholder: Опишите шта овај догађај чини посебним
   signup_send_posters_address_placeholder: Ова адреса неће бити постављена а нашој мапи
   signup_event_type_in_school: У школи
@@ -273,28 +250,6 @@ sr:
   meta_tag_twitter_title: Hour of Code се приближава
   meta_tag_twitter_description: Hour of Code је глобални покрет који досеже милионе ученика у 180+ земаља и на преко 30 језика. Узраста од 4 до 104.
   twitter_default_text: 'Ја учествујем у овогодишњем #HourOfCode, а ти? @codeorg'
-  hardware_prizes_form_name_label: Ваш име
-  hardware_prizes_form_name_placeholder: Ваш име
-  hardware_prizes_form_email_label: Ваш и-мејл
-  hardware_prizes_form_email_placeholder: Ваш и-мејл
-  hardware_prizes_form_school_name_label: Име школе
-  hardware_prizes_form_school_name_placeholder: Име школе
-  hardware_prizes_form_school_address_label: Адреса школе
-  hardware_prizes_form_school_address_placeholder: Адреса школе
-  hardware_prizes_form_school_type_label: Тип школе
-  hardware_prizes_form_school_type_option_elementary: Нижа основна школа
-  hardware_prizes_form_school_type_option_middle_school: Виша основна школа
-  hardware_prizes_form_school_type_option_high_school: Средња школа
-  hardware_prizes_form_qualifying_school_label: Ово је K-12 САД државна школа
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: Број ученика који учествују
-  hardware_prizes_form_number_students_placeholder: Број ученика
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: Поставите логистички план за свој Hour of Code
-  hardware_prizes_form_plan_file_description: 'Пошаљите једноставан распоред којим планирате да организујете сваког ученика да учествује у Hour of Code у Вашој школи. Погледајте пример плана: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Пошаљи
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: Шта је Hour of Code?
   hoc_faq_what_is_hoc_a: "Hour of Code је једносатни увод у рачунарску науку, који ће демистификовати програмирање и показати да свако може научити основе. <a href='http://code.org/learn'>Погледај курсеве</a>."
@@ -401,11 +356,6 @@ sr:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Партнери
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Хвала вам
-  title_prizes: Награде
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Ресурси
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: упутства за водиче

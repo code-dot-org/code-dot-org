@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-10-11T22:42:39.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Visual Accessibility: Color Contrast\r\n\r\nPeople need to be able to see and read the content on your web page for it to be useful. Not everyone will see your website the same way you do. Some people might have bad eye sight, others are color blind. How do you design with these differences in mind?\r\n\r\nOne of the easiest ways to insure that many people will be able to read the content on your website is to make sure their is enough contrast between the different colors you are using together on your site. Contrast is the state of being strikingly different from something else. Check out the below example of contrasting colors.\r\n\r\n| Example 1 | Example 2 |\r\n| --------- | --------- |\r\n|<img src=\"https://images.code.org/f4f8acab4c8fe45cddef0436c52084cf-image-1476231852248.jpg\" style=\"width:200px\"> | <img src=\"https://images.code.org/76ea7aba97b7a9717f8b784b0987a055-image-1476231855350.jpg\" style=\"width:200px\"> |\r\n\r\nStare at example 1 for a few seconds. You might notice that the edges of the text blur with the background or it feels like the image is pulsing. This is because the value of the colors is too close together. The second is definitely easier to look at because one color is dark and one is light.\r\n\r\nA way to test this is convert everything to grayscale. Notice how in the example below the example with contrasting colors is easier to view in grayscale.\r\n\r\n<img src=\"https://images.code.org/40be05f66945d5cf0fda69be95986a4a-image-1476232151166.jpg\" style=\"width:300px\">\r\n\r\nContrast can be a powerful tool to use in your website. You can direct a users eye to a certain part of the page using contrast. Check out this page. Where is your eye drawn?\r\n\r\n<img src=\"https://images.code.org/63af145760dc94d66dfff8791c1dfe65-image-1476232407521.32.15 PM.jpg\" style=\"width:500px\">\r\n\r\nYour answer is probably the orange buttons. Thats because those buttons have contrasting colors to the rest of the page which are lighter.\r\n\r\n# Do This\r\n\r\n* Use the <a href=\"http://contrastchecker.com/\"> color contrast checker </a> to see the difference in contrast of the different colors you are using together on your site. This website uses hex codes for colors. Remember that you can find the hex codes for your colors in your color information from lesson 10.\r\n* Click the \"See Grayscale\" button to see how well you can read the different text and background colors\r\n* Consider making changes to your color choices by darkening or lightening up certain colors to make them easier to read.\r\n\r\n** Images and examples from http://gomedia.com/zine/tutorials/rule-three-contrast-contrast-contrast/ **",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

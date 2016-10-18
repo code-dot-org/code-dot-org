@@ -1,9 +1,7 @@
 /** @file controls below an animation looping toggle */
 import React from 'react';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
-import color from '../../color';
 import Radium from 'radium';
-import * as PropTypes from '../PropTypes';
 
 var styles = {
   loopToggleStyle: {

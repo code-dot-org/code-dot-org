@@ -1,10 +1,10 @@
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'ECS Phase 3 Unit3 Welcome'
 level 'ECS Phase 3 Unit 3 Overview'
-level 'PDECS Tour'
+level 'PDECS tour'
 level 'PD check your progress'
 level 'ECSPD Unit 3 Outline'
 level 'ECSPD P3 Plan'
@@ -20,8 +20,6 @@ level 'ECSPD Phase 3 - Unit 3 - Teaching Practice'
 level 'ECSPD jsfiddle'
 level 'ECSPD Unit 3 Strategy Review'
 level 'ECSPD strategies'
-
-
 
 stage 'Unit 3 Day-by-Day'
 level 'ECSPD Unit 3 Stage 6 Overview'

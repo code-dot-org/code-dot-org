@@ -218,25 +218,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :pd_ended_workshop
 
     create :pd_workshop_participant, workshop: workshop, enrolled: true
-    Pd::WorkshopMailer.expects(:exit_survey).never
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
 
     workshop.send_exit_surveys
   end
 
   test 'send_exit_surveys teachers in the section get emails' do
     workshop = create :pd_ended_workshop
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true)
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
-    teachers = [
-      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true),
-      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true),
-    ]
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
 
-    mock_mail = stub(deliver_now: nil)
-    teachers.each do |teacher|
-      Pd::WorkshopMailer.expects(:exit_survey).with(
-        workshop, teacher, instance_of(Pd::Enrollment)
-      ).returns(mock_mail)
-    end
     workshop.send_exit_surveys
   end
 
@@ -302,6 +295,38 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # combined
     assert_equal [workshop_pivot.id],
       Pd::Workshop.start_on_or_after(pivot_date).start_on_or_before(pivot_date).pluck(:id)
+  end
+
+  test 'time constraints' do
+    # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
+    workshop_2_3_18 = create :pd_workshop,
+      course: Pd::Workshop::COURSE_ECS,
+      subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
+      num_sessions: 2
+    assert_equal 2, workshop_2_3_18.min_attendance_days
+    assert_equal 2, workshop_2_3_18.effective_num_days
+    assert_equal 12, workshop_2_3_18.effective_num_hours
+
+    # Add 2 more sessions for a total of 4. It should cap at 3 days / 18 hours
+    workshop_2_3_18.sessions << [create(:pd_session), create(:pd_session)]
+    assert_equal 3, workshop_2_3_18.effective_num_days
+    assert_equal 18, workshop_2_3_18.effective_num_hours
+
+    # No entry: min 1, max unlimited
+    workshop_no_constraint = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, num_sessions: 2
+    assert_equal 1, workshop_no_constraint.min_attendance_days
+    assert_equal 2, workshop_no_constraint.effective_num_days
+    assert_equal 12, workshop_no_constraint.effective_num_hours
+  end
+
+  test 'plp' do
+    assert_nil @workshop.professional_learning_partner
+
+    # Now create a plp associated with the organizer
+    plp = create :professional_learning_partner, contact: @organizer
+
+    assert @workshop.professional_learning_partner
+    assert_equal plp, @workshop.professional_learning_partner
   end
 
   private

@@ -6,9 +6,11 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ## メディアを Hour of Code イベントに惹きつけるには
 
-*報道・メディア関係のお問い合わせはすべて、<press@code.org>までご連絡ください。*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### 重要なヒント
 
@@ -19,7 +21,7 @@ nav: promote_nav
 
 ### ステップ・バイ・ステップ ガイド:
 
-**1. イベントを計画しましょう**
+**1. Plan your event**
 
   * Hour of Code を始める集まりを計画しましょう。
   * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
@@ -27,35 +29,37 @@ nav: promote_nav
   * （「電源のいらない」プログラミング活動の実演のような）グループ活動を準備したり、学生が作り主役となる活動を引き立たせたりしましょう。
   * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
-**2. 教育または地元のイベントを担当する地元の報道記者を探しましょう**
+**2. Identify specific local reporters that cover education or local events.**
 
-地元の新聞、テレビ局、ラジオ局やブログを探してみましょう。
+Think a local newspaper, TV station, radio station or blog.
 
-オンラインで報道記者の連絡先情報を探しましょう。 もし見つからなければ、広報に尋ねるか、tips@報道局名.comなどのメールアドレスにメールして、あなたのメッセージをしかるべき担当者に転送してもらうようお願いしましょう。
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. 地元のメディアに連絡する**
+**3. Contact local media**
 
-一番の方法はメールです。 メールでは「なぜこのイベントが重要なのか？」をわかりやすく手短に説明してください。 連絡先には、このイベントを現場でサポートする人の情報(携帯電話の番号を含む)を含めます。 **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
-**4. 学校のイベントへの質問に対して準備しましょう。例えば:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*なぜあなたの学校はHour of Codeをやっているのですか？*
+*Why is your school doing an Hour of Code?*
 
-今日の技術に満ちあふれた世界をどう生き抜てゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの教師はコンピューター科学の経験がなく、どこから始めればよいのか分かりません。 このイベントは私たち全てが「コンピューターサイエンスとはどのようなものか」を知る機会になるのです。
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-私たちはこれをきっかけに学生たちの興味が刺激されて学び続けることを願っています。 Research also shows that kids can pick up programming concepts before they know how to read and write. 実際に、若い時に外国語の学習が容易なように、子どもたちの脳はコンピューター言語の習得も早いのです。
+We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*なぜこれが重要なのですか？*
+*Why is this important?*
 
 Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
-**その他の引用句**
+**More details and a quote you can use in materials**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. 「すでに1億人を超す世界中の学生が Hour of Codeを行いました。 地球上すべての国で、21世紀型のコンピュータサイエンス教育が求められています。」
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**Code.org について**
+**About Code.org**
 
-Code.org は501(c)(3)法人です。コンピュータサイエンスに関わる人を増やし、そして女性や人種的マイノリティの方がコンピュータサイエンスに関わるための取り組みをしています。 全ての学校の全ての生徒がコンピュータープログラミングを学ぶ機会を得られるべきというビジョンを持っています。 Code.orgは2013年に設立された後、Hour of Codeのキャンペーンを行いました。キャンペーンでは1億人以上の学生にコンピュータサイエンスを紹介することができ、全国で 70 もの公立の学区とコンピュータサイエンスのプログラムを広げるための提携を結ぶことができました。 Code.org は、マイクロソフト、インフォシス財団、ザ・バルマー・ファミリー・ギビング、オミダイアネットワークなどを含む企業や組織、そして寛大な個人からの慈善の寄付によってサポートされています。 詳細については、以下を参照してください: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-さらに多くの資料やサンプルメールを探すには以下を参照してください。 [here](<%= resolve_url('/promote') %>) .
+Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+
+<%= view :signup_button %>

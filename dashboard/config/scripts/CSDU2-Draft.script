@@ -1,5 +1,4 @@
-login_required 'true'
-hidden 'true'
+login_required true
 
 stage 'Quality Websites'
 named_level 'Unit 2 Lesson 1 Overview'
@@ -52,6 +51,7 @@ level 'CSDU2 - Intro to CSS'
 level 'CSDU2 - Selector and Property'
 level 'CSDU2 - p tags'
 level 'CSDU2 - head body'
+level 'CSDU2 - title element in head'
 level 'CSDU2 - body tags'
 level 'CSDU2 - text properties'
 level 'CSDU2 - font properties'
@@ -73,6 +73,7 @@ level 'CSDU2 - Nav add to Personal Site'
 
 stage 'Classes'
 named_level 'Unit 2 Lesson 9 Overview'
+named_level 'Warm Up: Categories of Styles'
 level 'CSDU2 - Classes'
 level 'CSDU2 - Footer'
 named_level 'Stop: Classes'
@@ -84,44 +85,64 @@ level 'CSDU2 - PW - Class Style Personal Site'
 
 stage 'External Style Sheets'
 named_level 'Unit 2 Lesson 10 Overview'
-level 'CSDU2 - further styling suggestions'
+named_level 'Brand Book Example'
+level 'CSDU2 Pick Your Fonts'
+level 'CSDU2 Pick Your Colors'
 level 'CSDU2 - External Style Sheets'
 level 'CSDU2 - Link Tag'
+level 'CSDU2 - Using Your Font'
+level 'CSDU2 - Developing Brand Style'
 level 'CSDU2 - Separate Content and Style'
-level 'CSDU2 - Priority of CSS Rules'
-level 'CSDU2 - Classes on ESS'
-named_level 'Stop: External Style Sheets'
+level 'CSDU2 - PW - Divs to break up the page'
 level 'CSDU2 - PW - External Style Sheets'
 level 'CSDU2 - PW - Consistent Personal Site Style'
+level 'CSDU2 Make Your Logo'
+level 'CSDU2 - PW - Image as A Link'
+level 'CSDU2 - PW - Favicon'
 
+stage 'Usability and Accessibility'
+named_level 'Unit 2 Lesson 11 Overview'
+named_level 'Visual Accessibility'
+named_level 'Internet Accessibility'
+named_level 'Hardware Accessibility'
+named_level 'Software Accessibility'
+
+stage 'Peer Review'
+named_level 'Unit 2 Lesson 12 Overview'
+named_level 'Peer Review: Personal Website'
 
 stage 'Box Model and Page Layout'
-named_level 'Unit 2 Lesson 11 Overview'
-
-
-stage 'Personal Website: Midway Check'
-named_level 'Unit 2 Lesson 12 Overview'
-
+named_level 'Unit 2 Lesson 13 Overview'
 
 stage 'Digital Footprint'
-named_level 'Unit 2 Lesson 13 Overview'
-level 'Digital Footprint FaceSpace John'
+named_level 'Unit 2 Lesson 14 Overview'
+level 'Digital Footprint FaceSpace Lizzie'
 level 'Digital Footprint FaceSpace Soleil'
+level 'Digital Footprint FaceSpace John'
 level 'Digital Footprint Chirpr johnsnow'
 level 'Digital Footprint Chirpr solmoon'
+level 'Digital Footprint Chirpr lillizard'
 level 'Digital Footprint instantframe'
+level 'Digital Footprint instantframe wiz_kid_liz'
 level 'Digital Footprint instantframe moonbeam'
 
 stage 'Publishing a Website'
-named_level 'Unit 2 Lesson 14 Overview'
-
+named_level 'Unit 2 Lesson 15 Overview'
+level 'CSDU2 - PW - Pre Publishing Check'
+level 'CSDU2 - PW - Pre Publishing 2'
+level 'CSDU2 - PW - Pre Publishing 3'
+level 'CSDU2 - PW - Pre Publishing 4'
+level 'CSDU2 - PW - Pre Publishing Access'
+level 'CSDU2 - PW - Pre Publishing 5'
+level 'CSDU2 - PW - Pre Publishing 6'
 
 stage 'Sources and Search Engines'
-named_level 'Unit 2 Lesson 15 Overview'
-
+named_level 'Unit 2 Lesson 16 Overview'
+named_level 'How Search Works'
+level 'CSDU2 - SEO 1'
 
 stage 'Intellectual Property'
-named_level 'Unit 2 Lesson 16 Overview'
+named_level 'Unit 2 Lesson 17 Overview'
 level 'CSDU2 IP Fair Use'
 level 'CSDU2 IP Research Content'
 level 'CSDu2 IP CC Search'
@@ -130,19 +151,4 @@ level 'CSDU2 IP Final Touches'
 level 'CSDU2 IP Portfolio'
 
 stage 'Personal Website: Finalizing Site'
-named_level 'Unit 2 Lesson 17 Overview'
 named_level 'Final Personal Website'
-
-
-
-
-
-
-#not in use
-stage 'Introduction to HTML'
-stage 'Headers and Lists'
-stage 'Designing Web Pages'
-stage 'Designing Code for Computers'
-stage 'Personal Website: Connecting Pages'
-stage 'Classes and External Style Sheets'
-stage 'Holding'

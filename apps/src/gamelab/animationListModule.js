@@ -1,6 +1,7 @@
 /**
  * @file Redux module for new format for tracking project animations.
  */
+import _ from 'lodash';
 import {combineReducers} from 'redux';
 import {createUuid} from '../utils';
 import {
@@ -463,14 +464,7 @@ function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState().animationList;
-    // Figure out where to get the animation from.
-    // 1. If the animation has a sourceUrl it's external (from the library
-    //    or some other outside source, not the animation API)
-    // 2. Otherwise use the animation key to look it up in the animations API
-    // TODO: Take version ID into account here...
-
-    const rawSourceUrl = state.propsByKey[key].sourceUrl;
-    const sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
+    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -501,6 +495,54 @@ function loadAnimationFromSource(key, callback) {
       });
     });
   };
+}
+
+/**
+ * Given a key/serialized-props pair for an animation, work out where to get
+ * the spritesheet.
+ * @param {!AnimationKey} key
+ * @param {!SerializedAnimationProps} props
+ * @param {boolean} withVersion - Whether to request a specific version of the
+ *        animation if pulling from the local project.
+ * @returns {string}
+ */
+export function animationSourceUrl(key, props, withVersion = false) {
+  // TODO: (Brad) We want to get to where the client doesn't know much about
+  //       animation versions, by switching to Chris' new Files API.
+  //       in the meantime, be able to request versions only when we export
+  //       JSON for levelbuilders to use.
+
+  // 1. If the animation has a sourceUrl it's external (from the library
+  //    or some other outside source, not the animation API) - and we may need
+  //    to run it through the media proxy.
+  if (props.sourceUrl) {
+    return assetPrefix.fixPath(props.sourceUrl);
+  }
+
+  // 2. Otherwise it's local to this project, and we should use the animation
+  //    key to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png' +
+      ((withVersion && props.version) ? '?version=' + props.version : '');
+}
+
+/**
+ * Static helper for converting a serialized animation list to an exportable one
+ * with absolute sourceUrls for the animations.
+ * Only used for a levelbuilder utility.
+ * @param {SerializedAnimationList} serializedList
+ * @return {SerializedAnimationList} with aboslute sourceUrls for every animation.
+ */
+export function withAbsoluteSourceUrls(serializedList) {
+  let list = _.cloneDeep(serializedList);
+  list.orderedKeys.forEach(key => {
+    let props = list.propsByKey[key];
+
+    const relativeUrl = animationSourceUrl(key, props, true);
+    const sourceLocation = document.createElement('a');
+    sourceLocation.href = relativeUrl;
+    props.sourceUrl = sourceLocation.href;
+  });
+  return list;
 }
 
 /**
@@ -569,4 +611,11 @@ function saveAnimation(animationKey, animationProps) {
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
     xhr.send(animationProps.blob);
   });
+}
+
+/**
+  * Selector for allAnimationsSingleFrame
+  */
+export function allAnimationsSingleFrameSelector(state) {
+  return state.pageConstants.allAnimationsSingleFrame;
 }

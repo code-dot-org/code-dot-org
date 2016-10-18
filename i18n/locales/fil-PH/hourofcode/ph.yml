@@ -2,15 +2,16 @@ ph:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: Ingles
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: Malapit na
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: Dec. 5
   campaign_date_start_long: December 5
   campaign_date_short: Dec. 5-11
   campaign_date_full: December 5-11
   campaign_date_year: "2016"
   campaign_date_full_year: December 5-11, 2016
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Panoorin ang bagong video
   front_watch_regular_video: Watch the video
@@ -18,7 +19,6 @@ ph:
   front_start_learning: Start learning
   header_menu_resources: Mga pwedeng makatulong
   header_menu_faq: FAQ
-  header_menu_prizes: Mga Premyo
   header_menu_how_to: How-To
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ ph:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Mga premyo para sa mga mag oorganisa
-  prizes_every_organizer: Lahat ng mag-oorganisa ng Hour of Code ay makakatanggap ng Dropbox o Skype credit bilang pasasalamat
-  prizes_technology: Isa sa bawat pampublikong paaralan sa bawat estado ng US (at Washington DC) ay mananalo ng nagkakahalagang $10,000 na gamit pang teknolohiya
-  prizes_tech_chats: '# ang mga silid aralan ay mananalo ng mga video chat sa mga espesyal na panauhin'
-  prizes_robots: 100 na mga silid aralan ang mananalo ng isang set ng programmable na mga robots
-  prizes_brilliant: Isang paaralan sa bawat probinsiya at mga kasamang teritoryo ay makakatanggap ng $2000 para sa Brillian Project
-  prizes_actua: 15 na paaralan sa buong Canada ang makakatanggap ng 2 hands-on STEM workshop pa pangungunahan ng isa sa mga miyembro ng Actua
-  prizes_details: Mga detalye
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -163,25 +155,8 @@ ph:
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   how_to_nav_volunteers: For volunteers
-  prizes_nav_title: Mga Premyo
-  prizes_nav_home: All prizes
-  prizes_nav_hardware: Hardware prize signup
-  prizes_nav_terms: Gabay at Alituntunin
-  prizes_nav_faq: FAQ
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
   whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
@@ -196,6 +171,7 @@ ph:
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   front_join_us_heading: Hour of Code para sa bawat isang estudyante.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Ang pag-aaral ng computer ay pundasyon para sa lahat ng estudyante. Samahan nyo kaming ipamalas ito sa 100 million.
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: Samahan nyo kami
@@ -243,12 +219,13 @@ ph:
   signup_send_posters_address_label: Address ng paaralan or organisasyon
   signup_whole_school_flag_label: Ang kaganapang ito ay para sa buong paaralan
   signup_your_event: I sign up ang iyong event
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: iyong Pangalan
   signup_email_placeholder: pangalan@example.com
   signup_organization_name_placeholder: Halimbawa, Southville International School and Colleges
-  signup_event_location_placeholder: "Postal code at bansa O KAYA ay buong address.\\r (Gagamitin namin ito para lagyan ng tanda sa aming mapa)"
+  signup_event_location_placeholder: "Postal code at bansa O KAYA ay buong address.\r (Gagamitin namin ito para lagyan ng tanda sa aming mapa)"
   signup_special_event_details_placeholder: Ipaliwanag bakit ito ay isang espesyal na kaganapan
   signup_send_posters_address_placeholder: Ang inyong address ay hindi ipapakita sa aming mapa
   signup_event_type_in_school: Sa paaralan
@@ -273,28 +250,6 @@ ph:
   meta_tag_twitter_title: Parating na ang Hour of Code
   meta_tag_twitter_description: Ang Hour of Code ay isang pandaigdigang kilusan na umaabot sa halos sampung milyong mag-aaral sa 180+ na bansa at sa 30 mga wika. Edad 4-104.
   twitter_default_text: 'Sasali ako sa magaganap na #HourOfCode ngaung taon, Ikaw? @codeorg'
-  hardware_prizes_form_name_label: Iyong pangalan
-  hardware_prizes_form_name_placeholder: Iyong pangalan
-  hardware_prizes_form_email_label: Iyong email
-  hardware_prizes_form_email_placeholder: Iyong email
-  hardware_prizes_form_school_name_label: Pangalan ng Paaralan
-  hardware_prizes_form_school_name_placeholder: Pangalan ng Paaralan
-  hardware_prizes_form_school_address_label: Address ng Paaralan
-  hardware_prizes_form_school_address_placeholder: Address ng Paaralan
-  hardware_prizes_form_school_type_label: Tipo ng paaralan
-  hardware_prizes_form_school_type_option_elementary: Grade School
-  hardware_prizes_form_school_type_option_middle_school: Middle school
-  hardware_prizes_form_school_type_option_high_school: High school
-  hardware_prizes_form_qualifying_school_label: Ito ay K-12 pampublikong paaralan sa US
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: Bilang ng mga estudyanteng sasali
-  hardware_prizes_form_number_students_placeholder: Bilang ng mga estudyante
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: Ipasa ang inyong mga plano para sa Hour of Code
-  hardware_prizes_form_plan_file_description: 'Magpadala ng simpleng listahan ng aktibidad na nagpapakita kung paano makapag-eenganyo ng mga lalahok sa Hour of Code sa inyong paaralan. Ipagkita ang mga halimbawa: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Ipadala
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: Ano ba ang Hour of Code?
   hoc_faq_what_is_hoc_a: |-
@@ -401,14 +356,9 @@ ph:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Partners
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Salamat sa iyo
-  title_prizes: Mga Premyo
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Mga pwedeng makatulong
   title_signup_thanks: Maraming salamat sa pagsama bilang host ng Hour of Code!
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events
   events_nav_all: Lahat ng Event

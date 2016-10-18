@@ -1,22 +1,22 @@
-pd 'true'
+professional_learning_course 'ECS Support'
 login_required 'true'
 
-stage ‘Welcome to Phase 1!’
+stage 'Welcome to Phase 1!'
 level 'PDECS Welcome Video'
 level 'PDECS tour'
-level ‘ECSPD1 professional learning program phases’
+level 'ECSPD1 professional learning program phases'
 level 'ECS Matching Program Commitment'
 
 stage 'Background and Context'
 level 'ECSPD1 cs is about'
 level 'ECSPD1 dikjstra'
 level 'ECSPD1 equity in cs education'
-level 'ECSPD1 background reflection' 
+level 'ECSPD1 background reflection'
 
 stage 'ECS Curriculum'
 level 'ECSPD1 curriculum design'
 level 'ECSPD1 unit overviews'
-level 'ECSPD1 Matching Unit Descriptions and Numbers’
+level 'ECSPD1 Matching Unit Descriptions and Numbers'
 level 'ECSPD1 unit 1 overview'
 level 'ECSPD1 unit 2 overview'
 level 'ECSPD1 curriculum connections'

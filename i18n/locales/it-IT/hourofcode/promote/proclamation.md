@@ -4,28 +4,30 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 
   
-[DETERMINAZIONE O DECRETO ###] - Considerato che la Settimana dell'Educazione all'Informatica pone in evidenza il ruolo cruciale che l'informatica ha nel trasformare la nostra società e come l'informatica sia abilitante per l'innovazione e crei opportunità economiche;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[DETERMINAZIONE O DECRETO DELLA CAMERA O SENATO ###]
+[HOUSE OR SENATE RESOLUTION ###]
 
 [DATE]
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Visto che l'ingegneria informatica sta trasformando l'industria, creando nuovi ambiti di commercio, guidando l'innovazione in ogni campo della scienza e incrementando la produttività nei settori economici consolidati;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Visto che l'ambito dell'ingegneria informatica è alla base del settore della tecnologia dell'informazione della nostra economia, che è apporta un significativo contributo al prodotto economico dell'Italia;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Visto che il campo dell'ingegneria informatica è una scienza fondamentale per l'Era Digitale;
+Whereas the field of computer science is a foundational science for the digital age;
 
-Visto che il settore della tecnologia dell'informazione è unicamente posizionato per aiutare la ripresa economica attraverso la ricerca e lo sviluppo di nuove innovazioni;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
 Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Considerato che offrire agli studenti la possibilità di partecipare ad attività informatiche di alta qualità li espone alle ricche opportunità che il settore offre, e fornisce le abilità di pensiero critico che gli serviranno nel corso della loro vita;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
 Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
@@ -50,3 +52,5 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

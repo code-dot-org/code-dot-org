@@ -24,8 +24,8 @@ var HiddenUploader = React.createClass({
       // React does not like
       replaceFileInput: false,
       add: function (e, data) {
+        // onUploadStart method must call data.submit()
         props.onUploadStart(data);
-        data.submit();
       },
       done: function (e, data) {
         props.onUploadDone(data.result);

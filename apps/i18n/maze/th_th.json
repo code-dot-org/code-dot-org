@@ -111,5 +111,8 @@
   "word": "ค้นหาคำ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "ใช่",
-  "youSpelled": "คุณถูกสะกด"
+  "youSpelled": "คุณถูกสะกด",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

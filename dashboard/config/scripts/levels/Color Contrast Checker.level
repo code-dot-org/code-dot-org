@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-10-05T20:15:36.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Color Contrast\r\n\r\nPeople need to be able to see and read the content on your web page for it to be useful. Some people might have bad eye sight, others are color blind. How do you design with these differences in mind? \r\n\r\nOne of the easiest ways to insure that many people will be able to read the content on your website is to make sure their is enough contrast between the different colors you are using together on your site.\r\n\r\nhttp://gomedia.com/zine/tutorials/rule-three-contrast-contrast-contrast/\r\n\r\n\r\n# Do This\r\n\r\n* Use the color contrast checker to see the difference in contrast of the different colors you are using together on your site.",
+    "link_title": "Color Contrast Checker",
+    "url": "http://contrastchecker.com/"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</ExternalLink>

@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
@@ -12,13 +14,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. 널리 알려주세요.
 
-여러분들의 친구들에게 **#HourOfCode**에 대해 이야기해주세요.!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. 여러분 학교의 행사로 Hour of Code 를 열어달라고 요청하세요.
 
-교장선생님께 [이 이메일을 보내서](%= resolve_url('/promote/resources#sample-emails') %) 학교의 모든 학급이 참여할 수 있도록 도전해보세요. <% if @country == 'us' %> 주별로 한 학급, *모든* 미국 주(워싱턴D.C. 포함), 은 $10,000 상당의 지원을 받게 될 것입니다. <% end %>
+교장선생님께 [이 이메일을 보내서](%= resolve_url('/promote/resources#sample-emails') %) 학교의 모든 학급이 참여할 수 있도록 도전해보세요. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
@@ -31,3 +33,5 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 ## 5. 투표로 선출된 지역 의원들/공무원들에게 Hour of Code 행사 운영을 지원해달라고 요청하세요.
 
 지역대표, 시의회, 교육위원회, 교육청 등에 [이메일](%= resolve_url('/promote/resources#sample-emails') %)을 보내세요. 그리고 그들이 여러분 학교의 Hour of Code 행사를 방문할 수 있도록 초대하세요. 그렇게 하면 여러분 지역에서 한 시간의 Hour of Code 이후의 컴퓨터과학(정보과학) 수업이 이루어지는데 큰 도움이 될 수 있습니다.
+
+<%= view :signup_button %>

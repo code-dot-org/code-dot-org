@@ -184,7 +184,7 @@
   learn_next_level: "Try another Code Studio course"
   learn_online: "Try other courses online"
   learn_classes: "Find local classes"
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: "I just finished Course 1 - check it out! @codeorg"
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"
@@ -475,7 +475,6 @@
   dashboard_landing_office_hours: "Ask a question in person! Visit our monthly video office hours."
   dashboard_landing_print_certificates: "Print certificates for students who finish this course"
   dashboard_landing_educator_blog: "Read about news and updates to our materials at our Educator Blog"
-  dashboard_landing_smart_hints: "Please help us to add smart hints to Code.org tutorials"
   dashboard_landing_video_player: "Test our new video player at your school"
   dashboard_landing_progress_title: "Main class progress"
   dashboard_landing_progress_biggest: "This is the progress for your biggest section."
@@ -587,6 +586,9 @@
   dashboard_sections_yes_both: "Yes, I want to copy student(s) to be in this current section AND the new section"
   dashboard_sections_no_move: "No, I want to move student(s) to be in the new section only."
   dashboard_sections_move_students: "Move students"
+  dashbaord_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
+  dashbaord_sections_assign_hoc_script_msg: "Please note that we will not save progress in this course during the week of December 3-7, due to the unprecedented level of traffic our site will receive for the Hour of Code.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href=\"http://www.code.org/certificates\">print these in advance</a>.)<br/><br/>We are thrilled by the number of teachers and students participating and we're sorry we won't be able to save everything.  If your class wants to enjoy more coding, you can go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.  Our teacher dashboard will let you track your student's progress every other week of the year."
+  dashboard_sections_assign_activity: "Assign Course"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: "Add student"
@@ -817,6 +819,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "Full Test - 50 questions"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

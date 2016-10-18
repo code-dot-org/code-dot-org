@@ -44,14 +44,12 @@ FactoryGirl.define do
         name 'Facilitator Person'
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
-          facilitator.save
         end
       end
       factory :workshop_organizer do
         name 'Workshop Organizer Person'
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
-          workshop_organizer.save
         end
       end
       factory :district_contact do
@@ -61,7 +59,6 @@ FactoryGirl.define do
         admin false
         after(:create) do |district_contact|
           district_contact.permission = UserPermission::DISTRICT_CONTACT
-          district_contact.save
         end
       end
       # Creates a teacher optionally enrolled in a workshop,
@@ -519,25 +516,32 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
+  factory :user_profile do
+    user { create :teacher }
+    created_at { Time.zone.now }
+    updated_at { Time.zone.now }
+    course UserProfile::CSP
+  end
+
   factory :pd_workshop, class: 'Pd::Workshop' do
-    organizer {create(:workshop_organizer)}
+    association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
     transient do
       num_sessions 0
     end
-    after(:create) do |workshop, evaluator|
+    after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << create(:pd_session, workshop: workshop, start: Date.today + i.days)
+        workshop.sessions << build(:pd_session, workshop: workshop, start: Date.today + i.days)
       end
     end
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
-    sessions {[create(:pd_session)]}
-    section {create(:section)}
+    num_sessions 1
+    association :section
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
   end
@@ -551,14 +555,14 @@ FactoryGirl.define do
   factory :school_info do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
-    school_district_id {create(:school_district).id}
+    association :school_district
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
-    school_info_id {create(:school_info).id}
+    association :school_info
     school {'Example School'}
   end
 
@@ -568,14 +572,14 @@ FactoryGirl.define do
   end
 
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
-    district {create :district}
+    association :school_district
     course Pd::Workshop::COURSES.first
     rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
     rate 10
   end
 
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
-    facilitator {create :facilitator}
+    association :facilitator
     course Pd::Workshop::COURSES.first
   end
 

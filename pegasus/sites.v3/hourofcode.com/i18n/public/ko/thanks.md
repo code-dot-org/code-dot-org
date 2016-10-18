@@ -28,7 +28,7 @@
 
 # Hour of Code! 행사를 운영하는데 가입해 주셔서 감사합니다.
 
-여러분들은 전세계의 학생들에게 Hour of Code를 배워보도록 함으로서 *학생들의 인생을 바꿀 수도 있는 것입니다*, 다음 기간 동안에 <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. 지금 여러분들에게 필요한 것은?
+여러분들은 전세계의 학생들에게 Hour of Code를 배워보도록 함으로서 *학생들의 인생을 바꿀 수도 있는 것입니다*, 다음 기간 동안에 <%= campaign_date('full') %>. 우리는 계속해서 새로운 튜토리얼 들과 다른 흥미로운 것을 업데이트할 것입니다. 지금 여러분들에게 필요한 것은?
 
 ## 1. 널리 알려주세요.
 

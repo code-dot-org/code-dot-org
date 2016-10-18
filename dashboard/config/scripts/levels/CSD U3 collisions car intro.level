@@ -176,7 +176,7 @@
     },
     "show_d_pad": "true",
     "edit_code": true,
-    "embed": "true",
+    "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -194,7 +194,7 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "false",
+    "free_play": "true",
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
@@ -204,7 +204,12 @@
     "markdown_instructions": "# Horse Jump\r\n\r\nLook at the horse jumping game to the left.   It looks like the side scroller from the last lesson, but the horse knocks over the hay bales if it hits them.  What code do you think would help the computer to know whether two sprites are touching?\r\n\r\n[//]: #  (https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png)\r\n\r\n[//]: #  (https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png)\r\n\r\n[//]: #  (https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png)",
     "start_blocks": "// Create the hay bale\r\nvar bale = createSprite(450, 325);\r\nbale.setAnimation(\"bale\");\r\nbale.velocityX = -4;\r\n\r\n// Create the horse\r\nvar horse = createSprite(175, 325);\r\nhorse.setAnimation(\"horse\");\r\n\r\nfunction draw() {\r\n  background(\"green\");\r\n  \r\n  if (horse.isTouching(bale)) {\r\n    playSound(\"crash.mp3\");\r\n    bale.rotation = 30;\r\n  } else {\r\n    bale.rotation = 0;\r\n  }\r\n  \r\n  // if the horse is jumping keep it going until it's back to its start\r\n  if(horse.y < 325){\r\n    horse.velocityY = horse.velocityY + 0.1;\r\n  } else {\r\n    horse.velocityY = 0;\r\n    horse.y = 325;\r\n  }\r\n  // if the up key goes down start the horse jump\r\n  if(keyWentDown(\"up\") && horse.y == 325){\r\n    horse.velocityY = -5;\r\n  }\r\n  // if the hay bale has gone off the left hand side of the screen, \r\n  // move it to the right hand side of the screen\r\n  if (bale.x < -100) {\r\n    bale.x = 450;\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
     "pause_animations_by_default": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false"
   },
   "published": true,
   "notes": "",

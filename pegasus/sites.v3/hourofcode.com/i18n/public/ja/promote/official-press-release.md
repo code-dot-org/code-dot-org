@@ -6,39 +6,47 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 # 選出された議員の皆様への、プレスリリースのサンプル
 
-緊急リリースのため  
+For Immediate Release  
 [**DATE**]  
-連絡先: [**CONTACT INFORMATION**]  
+Contact: [**CONTACT INFORMATION**]  
   
 
 
 **
 
 <center>
-  総裁/議員/代表者/市長/審議委員 [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> コミュニティは、コンピュータサイエンス教育週間に参加することによって、コンピュータサイエンス教育の重要性についての意識を高めるために一体になります。
+  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
 </center>
 
   
   
 </p> 
 
-**日付** - コンピュータサイエンス教育週間のHour of Code に参加するため の[**NAME OF EVENT**] のために、本日 [**INSERT NAME**] が [**INSERT NAME OF SCHOOL**]の教員もしくは校長、ビジネスリーダー、地域の家族に加わります。 [INSERT NAME] とコミュニティメンバーは、歴史の中で最も大きな学習イベントに参加するために、世界中の数百万人の人々の中にいました。
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. 例えば、**]  
-「ダニエルズ・ラン小学校は、生徒にコンピュータサイエンスに触れてもらう機会を得るため、学校全体における Hour of Code のイベントを開催しました。 全ての学年から700人以上の生徒が、少なくとも１つのHour of Code を行いました。 そして、沢山の保護者様とコミュニティのボランティアの方々が、イベントを手伝って下さり、なぜコンピュータサイエンスが彼らの生活の中で重要なのかの展示のために子供達を集めてくださりました。」
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
 
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-コンピューターはありふれていますが、コンピューター科学を教える学校は10年前より少なくなっています。 そして女の子や有色人種の学生は深刻な過小評価をされています。 一方で、良いニュースもあります。私たちはこれを変えようとしているということです。 Hour of Code は、全ての生徒が高いクオリティのコンピュータサイエンス教育を受ける事ができるようになるための入り口なのです。
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-1億人を超す世界中の学生がすでにHour of Code を体験しています。 Hour of Codeのおかげで、コンピュータサイエンスはGoogle, MSN, Yahoo! に掲載されています。 ディズニーのホームページに掲載されました。 オバマ大統領やシャキーラ、アシュトン・カッチャーは動画で Hour of Code を始めました。 100 以上のパートナーが、この動きをサポートするために支援してくれました。
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! ディズニーのホームページに掲載されました。 President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-「私たちは学生たちを奨励し、コンピュータサイエンスに興味がある学生を受け入れる必要が有る。」 と [**INSERT NAME**]は言いました。 「全ての学生には、21世紀に築くキャリアのために、コンピュータサイエンスを学ぶ資格があります。」
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] 
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
 
-[**ここに、他の学校や組織、もしくはイベント参加者の感想を入れる**]
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
-[**イベント名**] に関するより詳しい情報を手にいれるために、サイト（ [**WEBサイトのアドレス**] ）を訪れるか、もしくはこちらへご連絡ください。 [**連絡先**]
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+  
+  
+
+
+<%= view :signup_button %>

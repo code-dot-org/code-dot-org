@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, trackEvent */
+/* global dashboard, appOptions */
 import $ from 'jquery';
 
 // Attempt to save projects every 30 seconds
@@ -14,7 +14,6 @@ var assets = require('./clientApi').create('/v3/assets');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
-import experiments from '../../experiments';
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
 var queryParams = require('../utils').queryParams;
@@ -608,7 +607,6 @@ var projects = module.exports = {
       executeCallback(callback);
       return;
     }
-    var destChannel = current.id;
     // TODO: Copy animation assets to new channel
     executeCallback(callback);
   },

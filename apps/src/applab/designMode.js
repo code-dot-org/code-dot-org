@@ -649,7 +649,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   }
 
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
-  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml, true));
   var children = $(levelDom).children();
   children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
@@ -733,15 +733,6 @@ function makeDraggable(jqueryElements) {
         // Set original element properties to update values in Property tab
         elm.outerWidth(dimensions.width);
         elm.outerHeight(dimensions.height);
-
-        var element = elm[0];
-        // canvas uses width/height. other elements use style.width/style.height
-        var widthProperty = 'style-width';
-        var heightProperty = 'style-height';
-        if (element.hasAttribute('width') || element.hasAttribute('height')) {
-          widthProperty = 'width';
-          heightProperty = 'height';
-        }
 
         // Re-render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);
@@ -1136,7 +1127,7 @@ designMode.renderDesignWorkspace = function (element) {
  */
 designMode.addScreenIfNecessary = function (html) {
   var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
-  html = sanitizeHtml(html, reportUnsafeHtml);
+  html = sanitizeHtml(html, reportUnsafeHtml, true);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {

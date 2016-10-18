@@ -91,6 +91,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
         <block type="studio_moveDistance">
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>

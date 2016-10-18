@@ -5,9 +5,7 @@ import ReactDOM from 'react-dom';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
-var skins = require('../skins');
 var codegen = require('../codegen');
-var api = require('./api');
 var GameController = require('./game/GameController');
 var dom = require('../dom');
 var houseLevels = require('./houseLevels');
@@ -18,7 +16,6 @@ var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 var experiments = require('../experiments');
 
-var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 var MEDIA_URL = '/blockly/media/craft/';
@@ -96,7 +93,6 @@ var MUSIC_METADATA = [
 var CHARACTER_STEVE = 'Steve';
 var CHARACTER_ALEX = 'Alex';
 var DEFAULT_CHARACTER = CHARACTER_STEVE;
-var AUTO_LOAD_CHARACTER_ASSET_PACK = 'player' + DEFAULT_CHARACTER;
 
 function trySetLocalStorageItem(key, value) {
   try {
