@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import shapes from './shapes';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -16,8 +15,8 @@ const TutorialExplorer = React.createClass({
     filterGroups: React.PropTypes.array.isRequired,
     initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
     locale: React.PropTypes.string.isRequired,
-    backButton: shapes.backButton,
-    imageButton: shapes.imageButton
+    backButton: React.PropTypes.bool,
+    roboticsButton: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -70,7 +69,7 @@ const TutorialExplorer = React.createClass({
           onUserInput={this.handleUserInput}
           selection={this.state.filters}
           backButton={this.props.backButton}
-          imageButton={this.props.imageButton}
+          roboticsButton={this.props.roboticsButton}
         />
 
         {!this.isLocaleEnglish() && (
@@ -107,7 +106,7 @@ window.TutorialExplorerManager = function (options) {
         initialFilters={options.initialFilters}
         locale={options.locale}
         backButton={options.backButton}
-        imageButton={options.imageButton}
+        roboticsButton={options.roboticsButton}
       />,
       element
     );

@@ -3,15 +3,16 @@
 
 import React from 'react';
 import FilterGroup from './filterGroup';
-import shapes from './shapes';
+import BackButton from './backButton';
+import RoboticsButton from './roboticsButton';
 
 const FilterSet = React.createClass({
   propTypes: {
     filterGroups: React.PropTypes.array.isRequired,
     onUserInput: React.PropTypes.func.isRequired,
     selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    backButton: shapes.backButton,
-    imageButton: shapes.imageButton
+    backButton: React.PropTypes.bool,
+    roboticsButton: React.PropTypes.bool
   },
 
   render() {
@@ -20,13 +21,7 @@ const FilterSet = React.createClass({
         <div className="col-20">
 
           {this.props.backButton && (
-            <a href={this.props.backButton.url}>
-              <button style={{marginTop: 7, marginBottom: 10}}>
-                <i className="fa fa-arrow-left" aria-hidden={true}/>
-                &nbsp;
-                {this.props.backButton.text}
-              </button>
-            </a>
+            <BackButton/>
           )}
 
           <div style={{fontSize: 16, paddingLeft: 10}}>
@@ -45,10 +40,8 @@ const FilterSet = React.createClass({
             )
           )}
 
-          {this.props.imageButton && (
-            <a href={this.props.imageButton.url}>
-              <img src={this.props.imageButton.imageUrl} style={{marginTop: 10}}/>
-            </a>
+          {this.props.roboticsButton && (
+            <RoboticsButton/>
           )}
 
         </div>
