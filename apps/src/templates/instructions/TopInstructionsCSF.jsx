@@ -215,7 +215,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -566,7 +566,7 @@ var TopInstructions = React.createClass({
                   aniGifURL={this.props.aniGifURL}
                   inTopPane
                 />
-                {this.props.collapsed && instructions2 &&
+                {instructions2 &&
                   <div
                     className="secondary-instructions"
                     dangerouslySetInnerHTML={{ __html: instructions2 }}
