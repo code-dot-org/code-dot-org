@@ -15,7 +15,6 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
-var PaneButton = require('../PaneHeader').PaneButton;
 import ContainedLevel from '../ContainedLevel';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
@@ -63,7 +62,6 @@ var TopInstructions = React.createClass({
     hasContainedLevels: React.PropTypes.bool,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
-    versionHistoryInInstructionsHeader: React.PropTypes.bool,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
@@ -172,14 +170,6 @@ var TopInstructions = React.createClass({
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
-          {this.props.versionHistoryInInstructionsHeader &&
-            <PaneButton
-              id="versions-header"
-              headerHasFocus={false}
-              iconClass="fa fa-clock-o"
-              label={msg.showVersionsHeader()}
-              isRtl={false}
-            />}
         </div>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
@@ -208,7 +198,6 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
-    versionHistoryInInstructionsHeader: state.pageConstants.versionHistoryInInstructionsHeader,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,
     height: state.instructions.renderedHeight,
