@@ -5,14 +5,15 @@ markdown <<MARKDOWN
 
 ## Background
 
-Students will work to debug web pages. The difficulty of the pages students are debugging increase as they go. In the process, the importance of comments, whitespace and indentation are demonstrated in different web pages students are debugging.  Students work to create a list of strategies for debugging as well as ways to write more easily maintainable web pages in the future.
+In this lesson students will common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages found on Code Studio. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
+
 # Vocabulary
 
 * **Bug** - Part of a program that does not work correctly.
-* **Comment** - A comment is a programmer-readable note in the source code of a computer program.
+* **Comment** - A programmer-readable note in the source code of a computer program.
 * **Debugging** - Finding and fixing problems in your algorithm or program.
 * **Indentation** - The placement of text farther to the right, or left, to separate it from surrounding text which helps to convey the program's structure.
-* **Whitespace** - A white space or spacing is any section of a document that is unused or space around an object. White spaces help separate paragraphs of text, graphics, and other portions of a document, and helps a document look less crowded.
+* **Whitespace** - Any section of a document that is unused or space around an object. White spaces help separate paragraphs of text, graphics, and other portions of a document, and helps a document look less crowded.
 
 # New Blocks
 
