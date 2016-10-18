@@ -36,6 +36,10 @@ import {
   shouldDisplayChatTips
 } from './utils';
 
+import {
+  levenshtein
+} from '../../utils';
+
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
@@ -446,10 +450,32 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
+    // Minecraft should never show the button
     if (this.props.isMinecraft) {
       return false;
     }
-    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+
+    // if we have "extra" (non-instruction) content, we should always
+    // give the option of collapsing it
+    if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
+      return true;
+    }
+
+    // Otherwise, only show the button if we have two versions of
+    // instruction we want to toggle between
+    return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
+  },
+
+  shouldIgnoreShortInstructions() {
+    // if short instructions and long instructions have a Levenshtein
+    // Edit Distance of less than or equal to 10, ignore short
+    // instructions and only show long.
+    let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
+    return dist <= 10;
+  },
+
+  shouldDisplayShortInstructions() {
+    return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
   render: function () {
@@ -468,10 +494,11 @@ var TopInstructions = React.createClass({
       this.props.overlayVisible && styles.withOverlay
     ];
 
-    const markdown = (this.props.collapsed || !this.props.longInstructions) ?
+    const markdown = this.shouldDisplayShortInstructions() ?
       this.props.shortInstructions : this.props.longInstructions;
     const renderedMarkdown = processMarkdown(markdown, { renderer });
-    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
+
+    const acapelaSrc = this.shouldDisplayShortInstructions() ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
 
     // Only used by star wars levels
