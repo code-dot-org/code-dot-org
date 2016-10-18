@@ -257,6 +257,7 @@ en:
         title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
+      Building a UI with Design Mode: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
@@ -575,6 +576,9 @@ en:
         description here: description here
         title: title
       CSPU5_goodbyeTurtle_setPosition:
+        description here: description here
+        title: title
+      CSPU5_makingPredictions_ref:
         description here: description here
         title: title
       CSP_Final_instructions:
@@ -979,6 +983,7 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
       External MD column Test:
@@ -2375,9 +2380,6 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -2484,7 +2486,6 @@ en:
         title: title
       v2 U4L06 Student Lesson Introduction Encryption Vigenere:
         Cracking the Code: Cracking the Code
-      width test: {}
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -4253,15 +4254,10 @@ en:
         I feel like I need to do A LOT of review of the tasks before I run this unit: I feel like I need to do A LOT of review of the tasks before I run this unit
         I feel like I need to do SOME review of the tasks before I run this unit: I feel like I need to do SOME review of the tasks before I run this unit
       CSPU5_predict_mc_turtleDriverBadIDs:
-        Question: Question
         The turtle WILL NOT move forward when the "Go Forth" button is clicked: The turtle WILL NOT move forward when the "Go Forth" button is clicked
         The turtle WILL NOT turn left when the "Turn Left" button is clicked: The turtle WILL NOT turn left when the "Turn Left" button is clicked
         When you hit Run an error message will show that an event handler doesn't recognize an id: When you hit Run an error message will show that an event handler doesn't recognize an id
         When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.: When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.
-        When you hit run nothing will happen, there will be no error messages, until you click one of the buttons: When you hit run nothing will happen, there will be no error messages, until you click one of the buttons
-        When you hit run, an error message will show that an event handler doesn't recognize an id: When you hit run, an error message will show that an event handler doesn't recognize an id
-        description here: description here
-        title: title
       CSPU5_predict_mc_whichOfTwoEvents:
         '': ''
         Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
@@ -6071,16 +6067,10 @@ en:
         <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
       cspu5_assess1_turtle:
         <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>
-        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">
         <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>
-        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=250>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=250>
-        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">
         <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
-        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">
         <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
-        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">
         <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
-        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">
       cspu5_assess1_value:
         'value is: 2': 'value is: 2'
         'value is: 2.3333333': 'value is: 2.3333333'
@@ -6093,7 +6083,6 @@ en:
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
         result: result
       cspu5_assess2_appLabError:
-        Line 1 - time should be written in quotation marks like this "time".: Line 1 - time should be written in quotation marks like this "time".
         Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
         Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
         Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
@@ -6141,31 +6130,18 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_pseudoCode:
-        ' "Time to start studying again!" ': ' "Time to start studying again!" '
-        ' "You passed!" ': ' "You passed!" '
-        ' "You passed!" and  "Time to start studying again!" ': ' "You passed!" and  "Time to start studying again!" '
         " “Time to start studying again!” ": " “Time to start studying again!” "
         " “You passed!” ": " “You passed!” "
         " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
         An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
-        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
-        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
         "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
-        day != "Monday": day != "Monday"
         day != “Monday”: day != “Monday”
-        day == "Saturday": day == "Saturday"
-        day == "Sunday": day == "Sunday"
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log("Hello! \b How are you?");: console.log("Hello! \b How are you?");
-        console.log("Hello! \n How are you?");: console.log("Hello! \n How are you?");
-        console.log("Hello! \newLine How are you?");: console.log("Hello! \newLine How are you?");
-        console.log("Hello! \nl How are you?");: console.log("Hello! \nl How are you?");
-        console.log("Hello! \t How are you?");: console.log("Hello! \t How are you?");
         console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
         console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
         console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
