@@ -193,6 +193,10 @@ Craft.init = function (config) {
     };
   }
 
+  if (config.level.isEventLevel) {
+    config.level.appSpecificFailError = config.level.temporaryFeedbackMessage;
+  }
+
   if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
     if (!config.level.isEventLevel) {
       Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);

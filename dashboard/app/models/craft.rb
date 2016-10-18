@@ -47,6 +47,7 @@ class Craft < Blockly
     :day_night_cycle_start,
     :day_night_cycle_time,
     :level_verification_timeout,
+    :temporary_feedback_message,
     :free_play
   )
 

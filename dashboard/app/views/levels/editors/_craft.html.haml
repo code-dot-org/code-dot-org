@@ -3,6 +3,9 @@
 %hr
 
 .field
+  = f.label :temporary_feedback_message, 'Failure feedback message (will be moved into code for i18n after prototyping.)'
+  = f.text_field :temporary_feedback_message, rows: 4, class:"input-block-level"
+.field
   = f.label :player_start_position, 'Player Start Position in format [x, y]'
   = f.text_field :player_start_position
 .field
