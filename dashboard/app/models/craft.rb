@@ -33,6 +33,8 @@ class Craft < Blockly
     :action_plane,
     :player_start_position,
     :available_blocks,
+    :drop_dropdown_options,
+    :play_sound_options,
     :if_block_options,
     :place_block_options,
     :player_start_direction,
@@ -108,7 +110,85 @@ class Craft < Blockly
       wool: true
   }
 
+  ALL_MINIBLOCKS = {
+      dirt: true,
+      dirtCoarse: true,
+      sand: true,
+      gravel: true,
+      bricks: true,
+      logAcacia: true,
+      logBirch: true,
+      logJungle: true,
+      logOak: true,
+      logSpruce: true,
+      planksAcacia: true,
+      planksBirch: true,
+      planksJungle: true,
+      planksOak: true,
+      planksSpruce: true,
+      cobblestone: true,
+      sandstone: true,
+      wool: true,
+      redstoneDust: true,
+      lapisLazuli: true,
+      ingotIron: true,
+      ingotGold: true,
+      emerald: true,
+      diamond: true,
+      coal: true,
+      bucketWater: true,
+      bucketLava: true,
+      gunPowder: true,
+      wheat: true,
+      potato: true,
+      carrots: true,
+      milk: true,
+      egg: true,
+      poppy: true,
+      sheep: true,
+  }
+
+  ALL_SOUNDS = {
+      dirt: true,
+      dirtCoarse: true,
+      sand: true,
+      gravel: true,
+      bricks: true,
+      logAcacia: true,
+      logBirch: true,
+      logJungle: true,
+      logOak: true,
+      logSpruce: true,
+      planksAcacia: true,
+      planksBirch: true,
+      planksJungle: true,
+      planksOak: true,
+      planksSpruce: true,
+      cobblestone: true,
+      sandstone: true,
+      wool: true,
+      redstoneDust: true,
+      lapisLazuli: true,
+      ingotIron: true,
+      ingotGold: true,
+      emerald: true,
+      diamond: true,
+      coal: true,
+      bucketWater: true,
+      bucketLava: true,
+      gunPowder: true,
+      wheat: true,
+      potato: true,
+      carrots: true,
+      milk: true,
+      egg: true,
+      poppy: true,
+      sheep: true,
+  }
+
   ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]"
+  ALL_MINIBLOCKS_ARRAY = "[\"#{ALL_MINIBLOCKS.keys[1..-1].join('", "')}\"]"
+  ALL_SOUNDS_ARRAY = "[\"#{ALL_SOUNDS.keys[1..-1].join('", "')}\"]"
 
   KNOWN_TILE_TYPES = {
     ground_plane: ALL_BLOCKS,
@@ -313,6 +393,8 @@ class Craft < Blockly
       available_blocks
       if_block_options
       place_block_options
+      drop_dropdown_options
+      play_sound_options
     ).map{ |x| x.camelize(:lower) }
   end
 

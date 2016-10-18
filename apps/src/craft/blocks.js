@@ -221,6 +221,8 @@ exports.install = function (blockly, blockInstallOptions) {
   var craftBlockOptions = {
     inventoryBlocks: Object.keys(dropdownBlockSet),
     ifBlockOptions: blockInstallOptions.level.ifBlockOptions,
+    playSoundOptions: blockInstallOptions.level.playSoundOptions,
+    dropDropdownOptions: blockInstallOptions.level.dropDropdownOptions,
     placeBlockOptions: blockInstallOptions.level.placeBlockOptions
   };
 
@@ -686,7 +688,7 @@ exports.install = function (blockly, blockInstallOptions) {
       'moveTowardSheepPlayerChicken');
 
   dropdownEntityBlock('wait', 'wait', Object.keys(numbersToDisplayText).sort());
-  dropdownEntityBlock('drop', 'drop', miniBlocks);
+  dropdownEntityBlock('drop', 'drop', craftBlockOptions.dropDropdownOptions || miniBlocks);
   dropdownEntityBlock('moveDirection', 'move', ['up', 'down', 'left', 'right']);
   //simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
   //simpleEntityBlock('moveEntityAwayFromPlayer', 'move away from player');
@@ -941,7 +943,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_playSound = {
     helpUrl: '',
     init: function () {
-      var dropdownOptions = keysToDropdownOptions(allSounds);
+      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.playSoundOptions || allSounds);
       var dropdown = new blockly.FieldDropdown(dropdownOptions, onSoundSelected);
       dropdown.setValue(dropdownOptions[0][1]);
 

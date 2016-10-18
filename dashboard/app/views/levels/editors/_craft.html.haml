@@ -55,6 +55,20 @@
   = f.label :level_verification_timeout, 'Level verification timeout in milliseconds (failure if player does not succeed in allotted time)'
   = f.text_field :level_verification_timeout, {value: @level.level_verification_timeout || 0}
 .field
+  = f.label :drop_dropdown_options, 'Available drop dropdown items in format ["wool", "milk", "clay"] (will eventually be multi-select)'
+  %a{style:"cursor: pointer", onclick: "dropBlocksEditor.getDoc().setValue('#{Craft::ALL_MINIBLOCKS_ARRAY}')"}= "Insert all"
+  = f.text_area :drop_dropdown_options, rows: 10
+  :javascript
+    var dropBlocksEditor = levelbuilder.initializeCodeMirror('level_drop_dropdown_options', 'javascript');
+
+.field
+  = f.label :play_sound_options, 'Available play sound sounds in format ["sheepBaa"] (will eventually be multi-select)'
+  %a{style:"cursor: pointer", onclick: "soundBlocksEditor.getDoc().setValue('#{Craft::ALL_SOUNDS_ARRAY}')"}= "Insert all"
+  = f.text_area :play_sound_options, rows: 10
+  :javascript
+    var soundBlocksEditor = levelbuilder.initializeCodeMirror('level_play_sound_options', 'javascript');
+
+.field
   = f.label :available_blocks, 'Available Blocks in format ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"] (will eventually be multi-select)'
   %a{style:"cursor: pointer", onclick: "availableBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
   = f.text_area :available_blocks, rows: 10
