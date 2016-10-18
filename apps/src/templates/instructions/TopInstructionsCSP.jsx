@@ -6,6 +6,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from '../../StylelessRenderer';
+import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 var instructions = require('../../redux/instructions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
@@ -183,13 +184,17 @@ var TopInstructions = React.createClass({
           <div style={styles.body}>
             {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
             {!this.props.hasContainedLevels &&
-              <Instructions
-                ref="instructions"
-                renderedMarkdown={processMarkdown(this.props.markdown,
-                    { renderer })}
-                onResize={this.adjustMaxNeededHeight}
-                inTopPane
-              />}
+              <div ref="instructions">
+                <Instructions
+                  ref="instructions"
+                  renderedMarkdown={processMarkdown(this.props.markdown,
+                      { renderer })}
+                  onResize={this.adjustMaxNeededHeight}
+                  inTopPane
+                />
+                <TeacherOnlyMarkdown/>
+              </div>
+            }
           </div>
           {!this.props.isEmbedView &&
             <HeightResizer
