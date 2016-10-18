@@ -111,5 +111,8 @@
   "word": "Hanapin ang salita",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Oo",
-  "youSpelled": "Ini-spell mo ang"
+  "youSpelled": "Ini-spell mo ang",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

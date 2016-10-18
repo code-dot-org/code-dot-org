@@ -111,5 +111,8 @@
   "word": "Tìm các từ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Đồng ý",
-  "youSpelled": "Bạn hãy đánh vần"
+  "youSpelled": "Bạn hãy đánh vần",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

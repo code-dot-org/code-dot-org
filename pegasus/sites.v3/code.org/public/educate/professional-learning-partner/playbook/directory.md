@@ -177,6 +177,19 @@ fnieto@acoe.org
 
 <br/>
 
+### [Contra Costa County Office of Education](http://www.cccoe.k12.ca.us/)<br/>
+East Bay, California	<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Hilary Dito<br/>
+hdito@cccoe.k12.ca.us<br/>
+
+<br/>
+
 ### [Elementary Institute of Science](http://www.eisca.org)<br/>
 San Diego, California	<br/>
 
@@ -448,7 +461,7 @@ ________________
 <a id="ia"></a>
 
 ## Iowa
-### [NewBoCo](Newbo.co)<br/>
+### [NewBoCo](http://Newbo.co)<br/>
 Iowa	
 
 New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and coworking.
@@ -471,7 +484,7 @@ ________________
 <a id="ky"></a>
 
 ## Kentucky
-### [AdvanceKentucky](www.advanceky.com)<br/>
+### [AdvanceKY](http://www.advanceky.com)<br/>
 Kentucky	
 
 AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
@@ -628,6 +641,25 @@ frankm@rpdp.net<Br/>
 [**Back to the top**](#top)
 <br/>
 ________________
+<a id="nj"></a>
+
+## New Jersey
+### TCNJ Center for Excellence in STEM Education(https://centerforstem.pages.tcnj.edu/)<br/>
+New Jersey
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Laura Doyle<br/>
+segedil1@tcnj.edu<br/>
+
+Henry Harms<br/>
+harms@tcnj.edu<br/>
+[**Back to the top**](#top)
+<br/>
+________________
 <a id="ny"></a>
 ## New York
 ### [Code/Interactive](http://www.weare.ci/)<br/>
@@ -733,6 +765,62 @@ mckalyn@thediv.org<Br/>
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="pa"></a>
+
+## Pennsylvania
+### [Delaware County Intermediate Unit](http://www.dciu.org/)<br/>
+Philadelphia, PA
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Lauren Poutasse<br/>
+lpoutasse@dciu.org <br/>
+
+Jon Regino<br/>
+jregino@dciu.org<br/>
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="sc"></a>
+
+## South Carolina
+### [The STEM Center of Excellence at The Citadel](http://www.citadel.edu/root/stemcenter)<br/>
+South Carolina<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Dr. Jennifer Albert<br/>
+jalbert@citadel.edu<br/>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="tn"></a>
+
+## Tennessee
+### [Tennessee Department of Education](https://www.tn.gov/education)<br/>
+Tennessee<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Jarrod Lockhart<br/>	jarrod.Lockhart@tn.gov<br/>
+
+[**Back to the top**](#top)
+<br/>
+
 ________________
 <a id="tx"></a>
 
@@ -907,15 +995,30 @@ CS Discoveries<br/>
 
 **Contact us for advice on:** Professional development facilitation, what to do when you're just getting started. 
 
-**Contact Information**
-Cheryl Lydon, Program Manager<br/>
-CLydon@psesd.org
-
-<br/>
+**Contact Information**<br/>
+Cheryl Lydon<br/>
+CLydon@psesd.org<br/>
 
 [**Back to the top**](#top)
 <br/>
 
+________________
+<a id="wi"></a>
+
+## Wisconsin
+### [Marquette University](http://marquette.edu/)<br/>
+Wisconsin<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Dennis Brylow<br/>
+brylow@pd.code.org<br/>
+
+[**Back to the top**](#top)
+<br/>
 
 
 

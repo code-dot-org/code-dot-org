@@ -111,5 +111,8 @@
   "word": "ことばを　みつけましょう",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "はい",
-  "youSpelled": "あなたのスペル"
+  "youSpelled": "あなたのスペル",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }
