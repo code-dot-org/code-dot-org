@@ -9,8 +9,8 @@
 window.$ = require('jquery');
 
 // Shim window.console to be safe in IE.
-require('./consoleShim')(window);
+require('@cdo/apps/code-studio/consoleShim')(window);
 
 // Provide video player functionality
 window.dashboard = window.dashboard || {};
-window.dashboard.videos = require('./videos');
+window.dashboard.videos = require('@cdo/apps/code-studio/videos');

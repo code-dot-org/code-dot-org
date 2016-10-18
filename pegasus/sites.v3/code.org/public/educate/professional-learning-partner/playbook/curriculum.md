@@ -9,6 +9,7 @@ Use the links below to find our program curriculum guides.
 
 ### CS Principles
 [AP CS Principles Curriculum (Web)](/educate/csp#lessons)<br/>
+[AP CS Principles One-Pager](
 [Overview of Code.org's Professional Learning Program](https://code.org/educate/professional-learning/cs-principles) 
 
 ### Computer Science Discoveries
