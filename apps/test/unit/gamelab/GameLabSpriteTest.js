@@ -1358,11 +1358,18 @@ describe('GameLabSprite', function () {
       sprite.setCollider('circle');
       expect(sprite.collider).to.be.an.instanceOf(gameLabP5.p5.CircleCollider);
       expect(sprite.collider.center).to.eq(sprite.position);
+      // Radius should be half of sprite's larger dimension.
+      expect(sprite.collider.radius).to.eq(sprite.height / 2);
+      // Offset should be zero
       expect(sprite.collider.offset).to.be.an.instanceOf(p5.Vector);
       expect(sprite.collider.offset.x).to.eq(0);
       expect(sprite.collider.offset.y).to.eq(0);
-      // Radius should be half of sprite's larger dimension.
-      expect(sprite.collider.radius).to.eq(20);
+    });
+
+    it('scaling sprite without animation does not affect default circle collider size', function () {
+      sprite.scale = 0.25;
+      sprite.setCollider('circle');
+      expect(sprite.collider.radius).to.eq(sprite.height / 2);
     });
 
     it('can construct a circle collider with explicit radius and offset', function () {
@@ -1370,9 +1377,9 @@ describe('GameLabSprite', function () {
       expect(sprite.collider).to.be.an.instanceOf(gameLabP5.p5.CircleCollider);
       expect(sprite.collider.center).to.eq(sprite.position);
       expect(sprite.collider.offset).to.be.an.instanceOf(p5.Vector);
+      expect(sprite.collider.radius).to.eq(3);
       expect(sprite.collider.offset.x).to.eq(1);
       expect(sprite.collider.offset.y).to.eq(2);
-      expect(sprite.collider.radius).to.eq(3);
     });
 
     it('throws if creating a circle collider with 1, 2, or 4+ params', function () {
@@ -1391,31 +1398,56 @@ describe('GameLabSprite', function () {
       }).to.throw(TypeError, 'Usage: setCollider("circle") or setCollider("circle", offsetX, offsetY, radius)');
     });
 
+    it('can construct a rectangle collider with default dimensions and offset', function () {
+      sprite.setCollider('rectangle');
+      expect(sprite.collider).to.be.an.instanceOf(gameLabP5.p5.AABB);
+      expect(sprite.collider.center).to.eq(sprite.position);
+      // Extents should be sprite dimensions
+      expect(sprite.collider.extents).to.be.an.instanceOf(p5.Vector);
+      expect(sprite.collider.extents.x).to.eq(sprite.width);
+      expect(sprite.collider.extents.y).to.eq(sprite.height);
+      // Offset should be zero
+      expect(sprite.collider.offset).to.be.an.instanceOf(p5.Vector);
+      expect(sprite.collider.offset.x).to.eq(0);
+      expect(sprite.collider.offset.y).to.eq(0);
+    });
+
+    it('scaling sprite without animation does not affect default rectangle collider size', function () {
+      sprite.scale = 0.25;
+      sprite.setCollider('rectangle');
+      expect(sprite.collider.extents.x).to.eq(sprite.width);
+      expect(sprite.collider.extents.y).to.eq(sprite.height);
+    });
+
     it('can construct a rectangle collider with explicit dimensions and offset', function () {
       sprite.setCollider('rectangle', 1, 2, 3, 4);
       expect(sprite.collider).to.be.an.instanceOf(gameLabP5.p5.AABB);
+      expect(sprite.collider.center).to.eq(sprite.position);
+      expect(sprite.collider.extents).to.be.an.instanceOf(p5.Vector);
+      expect(sprite.collider.extents.x).to.eq(3);
+      expect(sprite.collider.extents.y).to.eq(4);
+      expect(sprite.collider.offset).to.be.an.instanceOf(p5.Vector);
+      expect(sprite.collider.offset.x).to.eq(1);
+      expect(sprite.collider.offset.y).to.eq(2);
     });
 
-    it('throws if creating a rectangle collider with 0, 1, 2, 3, or 5+ params', function () {
-      expect(function () {
-        sprite.setCollider('rectangle');
-      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+    it('throws if creating a rectangle collider with 1, 2, 3, or 5+ params', function () {
       expect(function () {
         sprite.setCollider('rectangle', 1);
-      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle") or setCollider("rectangle", offsetX, offsetY, width, height)');
       expect(function () {
         sprite.setCollider('rectangle', 1, 2);
-      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle") or setCollider("rectangle", offsetX, offsetY, width, height)');
       expect(function () {
         sprite.setCollider('rectangle', 1, 2, 3);
-      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle") or setCollider("rectangle", offsetX, offsetY, width, height)');
       // setCollider('rectangle', 1, 2, 3, 4) is fine.
       expect(function () {
         sprite.setCollider('rectangle', 1, 2, 3, 4, 5);
-      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle") or setCollider("rectangle", offsetX, offsetY, width, height)');
       expect(function () {
         sprite.setCollider('rectangle', 1, 2, 3, 4, 5, 6);
-      }).to.throw(TypeError, 'Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+      }).to.throw(TypeError, 'Usage: setCollider("rectangle") or setCollider("rectangle", offsetX, offsetY, width, height)');
     });
   });
 
