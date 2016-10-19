@@ -637,6 +637,9 @@ en:
       CSPU5_makingPredictions_ref:
         description here: description here
         title: title
+      CSPU5_onEventBreakdown:
+        description here: description here
+        title: title
       CSP_Final_instructions:
         description here: description here
         title: title
@@ -1976,6 +1979,12 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      courseB_external_MRF:
+        description here: description here
+        title: title
+      courseB_external_loopMRF:
+        description here: description here
+        title: title
       courseB_story_unspottedBugs1:
         UnspottedBugs: UnspottedBugs
       courseB_story_unspottedBugs10:
@@ -5348,6 +5357,7 @@ en:
         32 users: 32 users
         6 users: 6 users
         64 users: 64 users
+        How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?: How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?
         How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
         IP Addresses and Bits: IP Addresses and Bits
       U2L3 Assessment 3:
