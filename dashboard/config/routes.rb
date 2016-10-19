@@ -322,7 +322,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_organizer_report, only: :index
       resources :teacher_progress_report, only: :index
       resources :course_facilitators, only: :index
-      get 'workshop_organizer_survey_report_for_course/:course', action: 'workshop_organizer_survey_report_for_course', controller: 'workshop_organizer_survey_report'
+      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
     end
   end
 
