@@ -18,7 +18,8 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showTeacherInfo
+  showTeacherInfo,
+  disableBubbleColors
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 
@@ -62,6 +63,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
   if (scriptData.hideable_stages) {
     store.dispatch(getHiddenStages(scriptData.name));
+  }
+
+  if (!scriptData.bubbleColorsEnabled) {
+    store.dispatch(disableBubbleColors());
   }
 
   $.ajax(
