@@ -39,27 +39,27 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="collector_collect"/>
-        <block type="maze_move">
+        <block type="collector_collect" deletable="false"/>
+        <block type="maze_move" deletable="false">
           <title name="DIR">moveForward</title>
         </block>
-        <block type="maze_move">
+        <block type="maze_move" deletable="false">
           <title name="DIR">moveForward</title>
         </block>
-        <block type="maze_turn">
+        <block type="maze_turn" deletable="false">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="collector_collect"/>
-        <block type="maze_move">
+        <block type="collector_collect" deletable="false"/>
+        <block type="maze_move" deletable="false">
           <title name="DIR">moveForward</title>
         </block>
-        <block type="maze_move">
+        <block type="maze_move" deletable="false">
           <title name="DIR">moveForward</title>
         </block>
-        <block type="maze_turn">
+        <block type="maze_turn" deletable="false">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_move">
+        <block type="maze_move" deletable="false">
           <title name="DIR">moveForward</title>
         </block>
       </xml>
@@ -97,10 +97,10 @@
                         <block type="maze_move">
                           <title name="DIR">moveForward</title>
                           <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnLeft</title>
+                            <block type="collector_collect">
                               <next>
-                                <block type="collector_collect">
+                                <block type="maze_turn">
+                                  <title name="DIR">turnLeft</title>
                                   <next>
                                     <block type="maze_move">
                                       <title name="DIR">moveForward</title>
