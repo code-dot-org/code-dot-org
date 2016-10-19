@@ -37,9 +37,9 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "level_verification_timeout": "7000",
-    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
-    "contained_level_names": null,
-    "failure_message_override": "Use a repeat block and Move Forward and Turn commands to keep your chicken wandering."
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.isEntityTypeRunning('chicken');\r\n }",
+    "failure_message_override": "Use a repeat block and Move Forward and Turn commands to keep your chicken wandering.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 3:\r\n\r\nGreat, the chicken is moving! But he stopped. In games entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\n§  When Clicked\r\nNo code necessary\r\n\r\n·       Teaches: Spawning. Loops.",
@@ -59,7 +59,7 @@
           <title name="DIR">left</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">sheepBaa</title>
+          <title name="TYPE">chickenBock</title>
         </block>
         <block type="craft_drop">
           <title name="TYPE">egg</title>

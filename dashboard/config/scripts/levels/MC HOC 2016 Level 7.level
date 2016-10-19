@@ -36,9 +36,10 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Now let’s combine what you've learned and create a new mob! Make a cow, lead it to the pasture, and get it to give you milk.",
-    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "level_verification_timeout": "30000",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "temporary_feedback_message": "Did you forget a step? The cow needs to get to the pasture AND give milk."
   },
   "published": true,
   "notes": "Puzzle 7:\r\nLook at this poor cow, it can’t move or make milk, and it’s being attacked by Zombies. Restore the cow, and get it to run away from Zombies with the When Attacked category, and Move Away.\r\n\r\nSolution:               \r\nCow\r\n§  When spawned\r\n·       Repeat Forever\r\no   Repeat Random\r\no       Move Forward\r\no   Turn Random\r\n§  When Touched\r\n·       Move Toward Player\r\n§  When Used\r\n·       Drop Milk\r\n§  When Attacked\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n·       Move Away from Zombie\r\n\r\nTeachers: reinforces loops",
@@ -114,10 +115,10 @@
           <title name="DIR">left</title>
         </block>
         <block type="craft_drop">
-          <title name="TYPE">dirt</title>
+          <title name="TYPE">milk</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
+          <title name="TYPE">cowMoo</title>
         </block>
         <block type="craft_wait">
           <title name="TYPE">0.4</title>

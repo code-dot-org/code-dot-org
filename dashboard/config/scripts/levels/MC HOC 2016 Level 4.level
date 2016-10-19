@@ -59,10 +59,10 @@
           <title name="DIR">random</title>
         </block>
         <block type="craft_drop">
-          <title name="TYPE">dirt</title>
+          <title name="TYPE">egg</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">sheepBaa</title>
+          <title name="TYPE">chickenBock</title>
         </block>
         <block type="craft_wait">
           <title name="TYPE">random</title>
