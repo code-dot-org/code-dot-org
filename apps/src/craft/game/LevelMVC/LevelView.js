@@ -854,11 +854,26 @@ export default class LevelView {
   destroyBlockWithoutPlayerInteraction(destroyPosition, newShadingPlaneData, newFowPlaneData) {
     let blockIndex = (this.yToIndex(destroyPosition[1])) + destroyPosition[0];
     let blockToDestroy = this.actionPlaneBlocks[blockIndex];
-    blockToDestroy.kill();
-    this.toDestroy.push(blockToDestroy);
-    this.updateShadingPlane(newShadingPlaneData);
-    this.updateFowPlane(newFowPlaneData);
-    this.audioPlayer.play('dig_wood1');
+    
+    let destroyOverlay = this.actionPlane.create(-12 + 40 * destroyPosition[0], -22 + 40 * destroyPosition[1], "destroyOverlay", "destroy1");
+    destroyOverlay.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
+    this.onAnimationEnd(destroyOverlay.animations.add("destroy", Phaser.Animation.generateFrameNames("destroy", 1, 12, "", 0), 30, false), () => {
+      this.actionPlaneBlocks[blockIndex] = null;
+
+      if (blockToDestroy.hasOwnProperty("onBlockDestroy")) {
+        blockToDestroy.onBlockDestroy(blockToDestroy);
+      }
+
+      blockToDestroy.kill();
+      destroyOverlay.kill();
+      this.toDestroy.push(blockToDestroy);
+      this.toDestroy.push(destroyOverlay);
+      this.updateShadingPlane(newShadingPlaneData);
+      this.updateFowPlane(newFowPlaneData);
+      this.audioPlayer.play('dig_wood1');
+    });
+    
+    this.playScaledSpeed(destroyOverlay.animations, "destroy");
   }
 
   playDestroyBlockAnimation(playerPosition, facing, destroyPosition, blockType, newShadingPlaneData, newFowPlaneData, completionHandler) {
@@ -1802,25 +1817,37 @@ export default class LevelView {
       yOffset,
       stillFrames;
 
-    switch (blockType) {
-      case "treeAcacia":
-      case "treeBirch":
-      case "treeJungle":
-      case "treeOak":
-      case "treeSpruce":
-        sprite = this.createBlock(plane, x, y, "log" + blockType.substring(4));
-        sprite.fluff = this.createBlock(this.fluffPlane, x, y, "leaves" + blockType.substring(4));
+      var buildTree = function(levelView,frame) {
+        sprite = levelView.createBlock(plane, x, y, "log" + blockType.substring(4));
+        sprite.fluff = levelView.createBlock(levelView.fluffPlane, x, y, "leaves" + blockType.substring(4));
         sprite.fluff.alpha = 0.8;
         var spriteName = "Leaves_" + blockType.substring(4);
-        this.treeFluffs.push([sprite.fluff,blockType.substring(4),[x,y]]);
+        levelView.treeFluffs.push([sprite.fluff,blockType.substring(4),[x,y]]);
         sprite.onBlockDestroy = (logSprite) => {
-          logSprite.fluff.animations.add("despawn", Phaser.Animation.generateFrameNames("Leaves", 0, 6, ".png", 0), 10, false).onComplete.add(() => {
-            this.toDestroy.push(logSprite.fluff);
+          logSprite.fluff.animations.add("despawn", Phaser.Animation.generateFrameNames("Leaves_" + blockType.substring(4), frame[0], frame[1], ".png", 0), 10, false).onComplete.add(() => {
+            levelView.toDestroy.push(logSprite.fluff);
             logSprite.fluff.kill();
           });
 
-          this.playScaledSpeed(logSprite.fluff.animations, "despawn");
+          levelView.playScaledSpeed(logSprite.fluff.animations, "despawn");
         };
+      };
+
+    switch (blockType) {
+      case "treeAcacia": //0,7
+        buildTree(this,[0,7]);
+        break;
+      case "treeBirch":  //0,8
+        buildTree(this,[0,8]);
+        break;
+      case "treeJungle": //0,9
+        buildTree(this,[0,9]);
+        break;
+      case "treeOak":
+        buildTree(this,[0,6]);
+        break;
+      case "treeSpruce": //0,8
+        buildTree(this,[0,8]);
         break;
       case "cropWheat":
         atlas = this.blocks[blockType][0];

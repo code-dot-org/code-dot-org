@@ -159,7 +159,20 @@ const allSounds = [
   'doorOpen',
   'houseSuccess',
   'minecart',
-  'sheepBaa'
+  'sheepBaa',
+  'chickenHurt',
+  'chickenBock',
+  'cowHuff',
+  'cowHurt',
+  'cowMoo',
+  'cowMooLong',
+  'creeperHiss',
+  'ironGolemHit',
+  'metalWhack',
+  'zombieBrains',
+  'zombieGroan',
+  'zombieHurt',
+  'zombieHurt2',
 ];
 
 const ENTITY_TYPES = [

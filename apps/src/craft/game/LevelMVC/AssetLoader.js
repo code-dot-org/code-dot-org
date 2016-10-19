@@ -287,6 +287,71 @@ export default class AssetLoader {
         mp3: `${this.assetRoot}audio/say3.mp3`,
         ogg: `${this.assetRoot}audio/say3.ogg`
       },
+      chickenHurt: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/chickenhurt2.mp3`,
+        ogg: `${this.assetRoot}audio/chickenhurt2.ogg`
+      },
+      chickenBock: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/chickensay3.mp3`,
+        ogg: `${this.assetRoot}audio/chickensay3.ogg`
+      },
+      cowHuff: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/cowhuff.mp3`,
+        ogg: `${this.assetRoot}audio/cowhuff.ogg`
+      },
+      cowHurt: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/cowhurt.mp3`,
+        ogg: `${this.assetRoot}audio/cowhurt.ogg`
+      },
+      cowMoo: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/cowmoo1.mp3`,
+        ogg: `${this.assetRoot}audio/cowmoo1.ogg`
+      },
+      cowMooLong: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/cowmoolong.mp3`,
+        ogg: `${this.assetRoot}audio/cowmoolong.ogg`
+      },
+      creeperHiss: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/creeper.mp3`,
+        ogg: `${this.assetRoot}audio/creeper.ogg`
+      },
+      ironGolemHit: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/irongolemhit.mp3`,
+        ogg: `${this.assetRoot}audio/irongolemhit.ogg`
+      },
+      metalWhack: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/metalwhack.mp3`,
+        ogg: `${this.assetRoot}audio/metalwhack.ogg`
+      },
+      zombieBrains: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/zombiebrains.mp3`,
+        ogg: `${this.assetRoot}audio/zombiebrains.ogg`
+      },
+      zombieGroan: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/zombiegroan.mp3`,
+        ogg: `${this.assetRoot}audio/zombiegroan.ogg`
+      },
+      zombieHurt: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/zombiehurt1.mp3`,
+        ogg: `${this.assetRoot}audio/zombiehurt1.ogg`
+      },
+      zombieHurt2: {
+        type: 'sound',
+        mp3: `${this.assetRoot}audio/zombiehurt2.mp3`,
+        ogg: `${this.assetRoot}audio/zombiehurt2.ogg`
+      },
     };
 
     this.assetPacks = {
@@ -412,7 +477,20 @@ export default class AssetLoader {
         'cow',
         'chicken',
         'ironGolem',
-        'burningInSun'
+        'burningInSun',
+        'chickenHurt',
+        'chickenBock',
+        'cowHuff',
+        'cowHurt',
+        'cowMoo',
+        'cowMooLong',
+        'creeperHiss',
+        'ironGolemHit',
+        'metalWhack',
+        'zombieBrains',
+        'zombieGroan',
+        'zombieHurt',
+        'zombieHurt2',
       ],
       playerSteve: [
         'playerSteve'

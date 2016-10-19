@@ -184,6 +184,20 @@ class Craft < Blockly
       egg: true,
       poppy: true,
       sheep: true,
+      sheepBaa: true,
+      chickenHurt: true,
+      chickenBock: true,
+      cowHuff: true,
+      cowHurt: true,
+      cowMoo: true,
+      cowMooLong: true,
+      creeperHiss: true,
+      ironGolemHit: true,
+      metalWhack: true,
+      zombieBrains: true,
+      zombieGroan: true,
+      zombieHurt: true,
+      zombieHurt2: true,
   }
 
   ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]"
