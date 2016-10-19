@@ -31,6 +31,12 @@ var styles = {
     right: 0,
     // left handled by media queries for .editor-column
   },
+  noViz: {
+    left: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 0
+  },
   header: {
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px',
@@ -67,6 +73,7 @@ var TopInstructions = React.createClass({
     maxHeight: React.PropTypes.number.isRequired,
     markdown: React.PropTypes.string,
     collapsed: React.PropTypes.bool.isRequired,
+    noVisualization: React.PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
@@ -153,6 +160,7 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - RESIZER_HEIGHT
       },
+      this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && Object.assign({}, styles.embedView, {
         left: this.props.embedViewLeftOffset
       })
@@ -205,6 +213,7 @@ module.exports = connect(function propsFromStore(state) {
     maxHeight: Math.min(state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight),
     markdown: state.instructions.longInstructions,
+    noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed
   };
 }, function propsFromDispatch(dispatch) {
