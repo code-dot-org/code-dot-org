@@ -72,6 +72,7 @@ ________________
 - All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
 - Each PLP is responsible for contracting with and paying any facilitators who run local workshops.
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
+- Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
 
 
 [**Back to the top**](#top)

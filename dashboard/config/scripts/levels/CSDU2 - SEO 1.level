@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Search Engines\r\n\r\n\r\n\r\n# Do This\r\n\r\n* Students update their site to optimize for finding it on a search engine - it probably still will not be found but still good thing.\r\n* Make sure you have a title (Reminder about the title element being what’s displays in the search results)\r\n* Meta name =”keywords” content=”blah” (http://searchengineland.com/meta-keywords-tag-101-how-to-legally-hide-words-on-your-pages-for-search-engines-12099)\r\n* Meta name = “description” content=”blah” (http://www.webpagemistakes.ca/meta-description/)\r\n* Run your site through SEO - http://www.seocentro.com/tools/seo/seo-analyzer-result.html",
+    "markdown_instructions": "# Personal Website: Search Engine Optimization\r\n\r\nYou are going to update your website to optimize for finding it on a search engine. It is important to know that your website is hosted by Code.org and so it might not be as ease to find as a website with its own special URL and storage area.\r\n\r\n# Do This\r\n\r\n* Run your website through the SEO\r\n* Write down the issues it highlights\r\n* We will learn how to fix some of those issues in the next couple levels however some may be things you want to investigate on your own later such as Social Media presence.",
     "project_template_level_name": "CSDU2 Portfolio Template"
   },
   "published": true,
