@@ -61,14 +61,11 @@
     "markdown_instructions": "# Draw()ing your street image\r\n\r\nHere's the street image you started working on in the last lesson. We're going to get it ready to add some animation.\r\n\r\nFor the animation to work you'll need to wrap all of your current code in the `draw()` loop, adding a call to `background()` at the top of the loop.\r\n\r\n# Do This\r\n\r\n* Add a `draw()` block and move all of your current code inside it\r\n* Replace the rectangle that draws your background with a call to the `background()` block",
     "start_blocks": "// Background\r\n\r\n// Grass\r\n\r\n// Road\r\n\r\n",
     "show_d_pad": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
