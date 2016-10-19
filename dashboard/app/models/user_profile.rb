@@ -19,6 +19,8 @@
 #  index_user_profiles_on_user_id  (user_id)
 #
 
+require 'digest/md5'
+
 class UserProfile < ActiveRecord::Base
   belongs_to :user
 
@@ -58,11 +60,15 @@ class UserProfile < ActiveRecord::Base
   end
 
   # @param alternate_user_id [Integer] an alternate user_id for the user.
-  # TODO(asher): Determine whether we should validate the existence of an
-  #   account with user_id of alternate_user_id.
   def add_other_user_id(alternate_user_id)
     existing_other_user_ids = get_other_user_ids
+
+    # Exit early if the ID does not make sense: the ID is already an alternate,
+    # the ID is invalid, or the ID is the user ID for this user.
     return if existing_other_user_ids.include? alternate_user_id
+    return unless User.find_by_id(alternate_user_id)
+    return if alternate_user_id == self.user.id
+
     other_user_ids = (existing_other_user_ids << alternate_user_id).join(',')
     self.update!(other_user_ids: other_user_ids)
   end
@@ -79,7 +85,12 @@ class UserProfile < ActiveRecord::Base
   # @param email [String] an alternate email address for the user.
   def add_other_email(email)
     existing_other_emails = get_other_emails
+
+    # Exit early if the email does not make sense: the email is already an
+    # alternate or the email is the email for this user.
     return if existing_other_emails.include? email
+    return if Digest::MD5.hexdigest(email) == self.user.hashed_email
+
     other_emails = (existing_other_emails << email).join(',')
     self.update!(other_emails: other_emails)
   end
