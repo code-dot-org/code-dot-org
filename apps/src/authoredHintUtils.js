@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import processMarkdown from 'marked';
 import renderer from './StylelessRenderer';
+import FeedbackBlocks from './feedbackBlocks';
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('@cdo/locale');
 
@@ -236,7 +237,7 @@ authoredHintUtils.submitHints = function (url) {
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
   var hints = blocks.map(function (block) {
-    var xmlBlock = parseXmlElement(block.blockDisplayXML);
+    var xmlBlock = parseXmlElement(FeedbackBlocks.generateXMLForBlocks([block]));
     var blockType = xmlBlock.firstChild.getAttribute("type");
     return {
       content: processMarkdown(msg.recommendedBlockContextualHintTitle(),
