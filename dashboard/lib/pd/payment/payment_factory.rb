@@ -20,6 +20,11 @@ module Pd::Payment
           Pd::Workshop::COURSE_CS_IN_A,
           Pd::Workshop::COURSE_CS_IN_S
         ].include?(workshop.course)
+
+        return PaymentCalculatorCounselorAdmin if [
+          Pd::Workshop::COURSE_COUNSELOR,
+          Pd::Workshop::COURSE_ADMIN
+        ].include?(workshop.course)
       end
 
       nil

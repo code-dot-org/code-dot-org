@@ -1,8 +1,7 @@
 require 'test_helper'
-require 'cdo/activity_constants'
 
 module Pd::Payment
-  class StandardPayTest < ActiveSupport::TestCase
+  class PaymentCalculatorStandardTest < ActiveSupport::TestCase
     setup do
       # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       @workshop = create :pd_ended_workshop,
@@ -32,21 +31,24 @@ module Pd::Payment
     end
 
     test 'small venue non-plp' do
-      payment = PaymentCalculatorStandard.instance.calculate @workshop
+      workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 
-      assert payment.qualified
-      assert_equal 11, payment.num_teachers
-      assert_equal 10, payment.num_qualified_teachers
-      assert_equal 29, payment.total_teacher_attendance_days
+      assert_nil workshop_summary.plp
+      assert_equal 11, workshop_summary.num_teachers
+      assert_equal 10, workshop_summary.num_qualified_teachers
+      assert_equal 29, workshop_summary.total_teacher_attendance_days
 
+      assert workshop_summary.qualified?
+      payment = workshop_summary.payment
+      assert payment
       expected_payment_amounts = {
         food: 1160,
         facilitator: 3000,
         staffer: 750,
         venue: 1200
       }
-      assert_equal expected_payment_amounts, payment.payment_amounts
-      assert_equal 6110, payment.payment_total
+      assert_equal expected_payment_amounts, payment.amounts
+      assert_equal 6110, payment.total
     end
 
     test 'large venue plp non-urban' do
@@ -56,41 +58,47 @@ module Pd::Payment
       create :pd_workshop_participant, workshop: @workshop,
         enrolled: true, in_section: true, attended: @workshop.sessions
 
-      payment = PaymentCalculatorStandard.instance.calculate @workshop
+      workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 
-      assert_equal plp, payment.plp
-      assert payment.qualified
-      assert_equal 11, payment.num_qualified_teachers
-      assert_equal 32, payment.total_teacher_attendance_days
+      assert_equal plp, workshop_summary.plp
+      assert_equal 12, workshop_summary.num_teachers
+      assert_equal 11, workshop_summary.num_qualified_teachers
+      assert_equal 32, workshop_summary.total_teacher_attendance_days
 
+      assert workshop_summary.qualified?
+      payment = workshop_summary.payment
+      assert payment
       expected_payment_amounts = {
         food: 1280,
         facilitator: 3000,
         staffer: 750,
         venue: 1350
       }
-      assert_equal expected_payment_amounts, payment.payment_amounts
-      assert_equal 6380, payment.payment_total
+      assert_equal expected_payment_amounts, payment.amounts
+      assert_equal 6380, payment.total
     end
 
     test 'small venue plp urban' do
       plp = create :professional_learning_partner, contact: @workshop.organizer, urban: true
 
-      payment = PaymentCalculatorStandard.instance.calculate @workshop
+      workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 
-      assert_equal plp, payment.plp
-      assert payment.qualified
-      assert_equal 10, payment.num_qualified_teachers
-      assert_equal 29, payment.total_teacher_attendance_days
+      assert_equal plp, workshop_summary.plp
+      assert_equal 11, workshop_summary.num_teachers
+      assert_equal 10, workshop_summary.num_qualified_teachers
+      assert_equal 29, workshop_summary.total_teacher_attendance_days
 
+      assert workshop_summary.qualified?
+      payment = workshop_summary.payment
+      assert payment
       expected_payment_amounts = {
         food: 1450,
         facilitator: 3000,
         staffer: 937.5,
         venue: 1500
       }
-      assert_equal expected_payment_amounts, payment.payment_amounts
-      assert_equal 6887.5, payment.payment_total
+      assert_equal expected_payment_amounts, payment.amounts
+      assert_equal 6887.5, payment.total
     end
   end
 end
