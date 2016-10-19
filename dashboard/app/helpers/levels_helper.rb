@@ -327,6 +327,7 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['final_level'] = script_level.final_level? if script_level
 
     # Unused Blocks option
     ## TODO (elijah) replace this with more-permanent level configuration

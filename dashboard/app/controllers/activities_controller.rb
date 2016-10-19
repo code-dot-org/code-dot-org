@@ -33,7 +33,7 @@ class ActivitiesController < ApplicationController
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     # Exception: Always post milestone if we are on the last level of the stage and have passed.
     # Keep this logic in sync with code-studio/reporting#sendReport on the client.
-    unless enabled || (solved && @script_level.try(:end_of_stage?))
+    unless enabled || (solved && @script_level.try(:final_level?))
       head 503
       return
     end
