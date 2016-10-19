@@ -31,7 +31,7 @@ class ActivitiesController < ApplicationController
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    # Exception: Always post milestone if we are on the last level of the stage and have passed.
+    # Exception: Always post milestone if we passed the last level of the script.
     # Keep this logic in sync with code-studio/reporting#sendReport on the client.
     unless enabled || (solved && @script_level.try(:final_level?))
       head 503
