@@ -48,12 +48,12 @@ module.exports = function (target, mode, callback, attachments) {
     // In markdown mode, look for a preview element (found by just appending
     // _preview to the target id), if it exists extend our callback to update
     // the preview element with the markdown contents
-    const previewElement = document.getElementById(target + '_preview');
-    if (previewElement) {
+    const previewElement = $(`#${target}_preview`);
+    if (previewElement.length > 0) {
       const originalCallback = callback;
       updatePreview = editor => {
-        $(previewElement).html(marked(editor.getValue()));
-        $(previewElement).children('details').details();
+        previewElement.html(marked(editor.getValue()));
+        previewElement.children('details').details();
       };
 
       callback = (editor, ...rest) => {
