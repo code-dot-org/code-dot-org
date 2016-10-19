@@ -1,0 +1,28 @@
+name 'Design a Screen for your App'
+markdown <<MARKDOWN
+# Mocking Up Your App
+
+Now that you have some practice laying out elements in App Lab you can start working on mocking your own app. With your group divvy up the screens so that everyone is working on a different screen.
+
+Because you'll be dividing the work up you'll want to do some planning ahead of time to decide on a common look and feel for your pages. For example, you'll want to agree on things such as:
+
+* Where do navigation buttons go?
+* What colors will you use for backgrounds, text, and buttons
+* What's the general style and layout?
+
+# Namespacing
+
+In the next lesson you will combine all of your team members' screens into one app. To make sure that 
+
+* Decide on a _namespace_ for your page, this will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together
+	* For example, if you are making the home page, you might use "home_" as your namespace - leading to ids such as:
+    	* "home_title"
+        * "home_loginButton"
+        * "home_logo"
+* Use the built in elements to lay out your app screen
+* For any components of your app that can't be recreated with the built in elements you can either:
+	* Redesign to utilize built in elements
+    * Find an image to use in place of your element
+    * Draw the element using your preferred image editor
+* Share your design regularly with your team mates to ensure consistent style
+MARKDOWN
