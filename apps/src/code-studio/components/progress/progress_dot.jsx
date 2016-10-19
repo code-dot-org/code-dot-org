@@ -263,6 +263,12 @@ export default connect((state, ownProps) => {
       !!fullyLocked[stageId]) {
     overrideLevelStatus = LevelStatus.locked;
   }
+  // TODO: test and/or storybook
+  // TODO: think about exceptions (i.e. we might want locked to take precedence
+  // over this)
+  if (!state.progress.bubbleColorsEnabled) {
+    overrideLevelStatus = LevelStatus.not_tried;
+  }
   return {
     currentLevelId: state.progress.currentLevelId,
     saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation,
