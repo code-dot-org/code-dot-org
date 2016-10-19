@@ -1562,7 +1562,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_, options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
