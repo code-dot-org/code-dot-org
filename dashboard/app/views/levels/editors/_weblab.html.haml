@@ -1,3 +1,10 @@
+:scss
+  .field.teacher-only-markdown {
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
 .field
   = f.label :start_sources, 'Starting sources'
   %p
@@ -11,3 +18,10 @@
     %li autocreate a project that is shared with all levels with the same project template level
   %p (Leave blank if you do not want all of this)
   = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
+
+.field.teacher-only-markdown
+  %p Edit Teacher Only Markdown:
+  = f.text_area 'teacher_markdown', placeholder: 'Enter teacher only markdown here', rows: 4, value: @level.teacher_markdown or ''
+  #level_teacher_markdown_preview
+  :javascript
+    levelbuilder.initializeCodeMirror('level_teacher_markdown', 'markdown');
