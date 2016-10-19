@@ -52,9 +52,11 @@ reporting.sendReport = function (report) {
 
   clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
-  // Post milestone iff the server tells us, or if we passed the last level of the script.
+  // Post milestone iff the server tells us.
+  // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  if (appOptions.postMilestone || (report.pass && appOptions.level.final_level)) {
+  if (appOptions.postMilestone ||
+    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
 
     var thisAjax = $.ajax({
       type: 'POST',

@@ -161,6 +161,8 @@ module LevelsHelper
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
+    post_final_milestone = @script ? Gatekeeper.allows('postFinalMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_final_milestone: post_final_milestone)
 
     @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
