@@ -31,7 +31,8 @@
     "disable_sharing": "false",
     "markdown_instructions": "Draw the other half of this design so it's symmetrical. \r\nThe triangles are equilateral and are 50 pixels long.  \r\n\r\nYou may have to run the code several times to figure out all of the blocks that need to be added.",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
