@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Here's a program that looks pretty similar to what you've been writing, but may behave quite differently. You'll want to stop and discuss with the class before moving on.",
-    "markdown_instructions": "# Draw()ing\r\nHere's a program that looks pretty similar to what you've been writing, but may behave quite differently. You'll want to **stop and discuss** with the class before moving on.\r\n\r\n# Do This Together\r\nYou will **not write any code** in this level, and you should be working as a whole class.\r\n* **Read** the provided program together\r\n* **Identify** elements that are different than those you have seen before\r\n* **Predict** what the provided program will do. **Be specific!**\r\n* **Run** the program several times and **record** the results.\r\n* **Discuss with a neighbor.** Was your prediction correct?\r\n* **Hypothesize** what is happening when this code is run.",
+    "markdown_instructions": "# Draw()ing\r\nHere's a program that looks pretty similar to what you've been writing, but may behave quite differently. You'll want to **stop and discuss** with the class before moving on.\r\n\r\n# Do This Together\r\nYou will **not write any code** in this level, and you should be working as a whole class.\r\n* **Read** the provided program together.\r\n* **Identify** elements that are different than those you have seen before.\r\n* **Predict** what the provided program will do. **Be specific!**\r\n* **Run** the program several times and **record** the results.\r\n* **Discuss with a neighbor.** Was your prediction correct?\r\n* **Hypothesize** what is happening when this code is run.",
     "start_blocks": "// Predict what this code will do\r\nstrokeWeight(randomNumber(2,10));\r\nstroke(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255));\r\n\r\nfunction draw() {\r\n  fill(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255));\r\n  rect(random(0, 300), random(0, 300), random(200), random(200));\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -51,11 +51,22 @@
       "textAlign": null,
       "textFont": null,
       "textSize": null,
-      "comment": null,
+      "comment_GameLab": null,
+      "comment_Drawing": null,
+      "comment_Variables": null,
+      "comment_Math": null,
       "draw": null,
       "randomNumber_min_max": null,
       "console.log": null
-    }
+    },
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false"
   },
   "published": true,
   "notes": "",

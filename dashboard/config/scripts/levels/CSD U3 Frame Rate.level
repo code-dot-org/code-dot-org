@@ -29,12 +29,13 @@
       "textFont": null,
       "textSize": null,
       "comment": null,
+      "randomNumber_min_max": null,
       "console.log": null
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Slow down Gamelab Gary's animation with frameRate()",
-    "markdown_instructions": "# Too Fast, Slow Down!\r\nGary is chattin' up a storm, but his animation would look better if it went a bit more slowly. We're flipping the pages in our virtual flipbook too often, so we'll need to slow that down.\r\n\r\nThe frequency that our draw loop is run is called the **frame rate** - the number of times per second the screen is refreshed.\r\n\r\nThe default frame rate for GameLab is 60 frames per second (or FPS), which is great for a video game, but not so good for our animation. We can slow down the frame rate using the `Game.frameRate` block.\r\n\r\n# Do This\r\n\r\n* Use the `Game.frameRate` block at the very beginning of your program, setting it to a number (frames per second) that slows Gary down a bit. \r\n* Test it out with different numbers to see which frame rate you like (the default is 60, and it can't go any higher than that).",
+    "markdown_instructions": "# Too Fast, Slow Down!\r\nGary is chattin' up a storm, but his animation would look better if it went a bit slower. We're flipping the pages in our virtual flipbook too often, so we'll need to slow that down.\r\n\r\nThe frequency that our draw loop is run is called the **frame rate** - the number of times per second the screen is refreshed.\r\n\r\nThe default frame rate for GameLab is 60 frames per second (or FPS), which is great for a video game, but not so good for our animation. We can slow down the frame rate using the `Game.frameRate` block.\r\n\r\n# Do This\r\n\r\n* Use the `Game.frameRate` block at the very beginning of your program, setting it to a number (frames per second) that slows Gary down a bit. \r\n* Test it out with different numbers to see which frame rate you like (the default is 60, and it can't go any higher than that).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -61,7 +62,12 @@
     "show_d_pad": "false",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
