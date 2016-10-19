@@ -1,16 +1,32 @@
 module Pd::Payment
   class WorkshopSummary
-    attr_accessor :workshop, :pay_period, :num_days, :num_hours, :min_attendance_days
+    def initialize(
+      workshop:,
+      pay_period:,
+      num_days:,
+      num_hours:,
+      min_attendance_days:,
+      calculator_class:,
+      session_attendance_summaries:
+    )
+      @workshop = workshop
+      @pay_period = pay_period
+      @num_days = num_days
+      @num_hours = num_hours
+      @min_attendance_days = min_attendance_days
+      @calculator_class = calculator_class
+      @session_attendance_summaries = session_attendance_summaries
+      @teacher_summaries = []
+    end
+
+    attr_reader :workshop, :pay_period, :num_days, :num_hours, :min_attendance_days
 
     # @return [Class] calculator class that was used to calculate this payment.
-    attr_accessor :calculator_class
+    attr_reader :calculator_class
 
     # @return [Array<SessionAttendanceSummary>] One per session.
     # This does not take into account min attendance or max sessions.
-    attr_accessor :session_attendance_summaries
-
-    # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).
-    attr_accessor :total_teacher_attendance_days
+    attr_reader :session_attendance_summaries
 
     # @return [Array<TeacherSummary>] teacher summaries for this workshop.
     attr_accessor :teacher_summaries
@@ -44,6 +60,11 @@ module Pd::Payment
 
     def attendance_count_per_session
       session_attendance_summaries.map(&:teacher_ids).map(&:count)
+    end
+
+    # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).
+    def total_teacher_attendance_days
+      teacher_summaries.select(&:qualified?).map(&:days).reduce(0, :+)
     end
   end
 end
