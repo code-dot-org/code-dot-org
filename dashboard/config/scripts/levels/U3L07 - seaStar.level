@@ -129,7 +129,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add 5 sea stars to the image by writing drawAllSeaStars with a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Add Sea Stars\r\n\r\nWe're now ready to add sea stars to our image by writing `drawAllSeaStars`. Recall that we've already written loops to draw much more complex stars. \r\n\r\n# Do This:\r\n\r\n* **Read** the `drawSeaStar` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Frist: Update** `drawSeaStar` to use a `for` loop \r\n\r\n\t* `drawSeaStar` has a portion of code that uses a longer sequence of repititious single commands.  \r\n    * Find the pattern and \"wrap a loop\" around it so that the repition is done with a loop rather than many lines of declarative function calls.\r\n\r\n* **Second: Add a loop** to `drawAllSeaStars`.\r\n    \r\n\t* **Place the commands already inside the function in your loop.** This way your code will **move the turtle randomly** around the **bottom pixels (y values between 360 and 450)** of the image.\r\n\r\n* **Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\r\n\r\n![](https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04 PM.png)",
+    "markdown_instructions": "# Add Sea Stars\r\n\r\nWe're now ready to add sea stars to our image by writing `drawAllSeaStars`. Recall that we've already written loops to draw much more complex stars. \r\n\r\n# Do This:\r\n\r\n* **Read** the `drawSeaStar` function to know how it works and what **parameters** it accepts.\r\n\r\n* **First: Update** `drawSeaStar` to use a `for` loop \r\n\r\n\t* `drawSeaStar` has a portion of code that uses a longer sequence of repetitious single commands.  \r\n    * Find the pattern and \"wrap a loop\" around it so that the repetition is done with a loop rather than many lines of declarative function calls.\r\n\r\n* **Second: Add a loop** to `drawAllSeaStars`.\r\n    \r\n\t* **Place the commands already inside the function in your loop.** This way your code will **move the turtle randomly** around the **bottom pixels (y values between 360 and 450)** of the image.\r\n\r\n* **Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\r\n\r\n![](https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -236,7 +236,8 @@
       }
     ],
     "fail_on_lint_errors": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",
