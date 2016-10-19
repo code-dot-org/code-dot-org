@@ -236,8 +236,8 @@
       }
     ],
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
