@@ -39,6 +39,7 @@ named_level 'Example App Types'
 level 'CSDU4 Quiz App Demo'
 level 'CSDU4 Decision App Demo'
 level 'CSDU4 List App Demo'
+level 'CSDU4 Crowdsource App Demo'
 
 stage 'Prototype Testing'
 named_level 'CSD U4L13 SFLP'
