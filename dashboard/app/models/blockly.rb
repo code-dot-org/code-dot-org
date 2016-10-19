@@ -294,7 +294,8 @@ class Blockly < Level
         level_prop.delete('fn_failureCondition')
       end
 
-      # This will be passed in outside of appOptions.level, since we don't want it cached (since it depends on user)
+      # We don't want this to be cached (as we only want it to be seen by authorized teachers), so
+      # set it to nil here and let other code put it in app_options
       level_prop['teacherMarkdown'] = nil
 
       # Set some values that Blockly expects on the root of its options string
