@@ -138,8 +138,13 @@ level 'CSDU2 - PW - Pre Publishing 6'
 
 stage 'Sources and Search Engines'
 named_level 'Unit 2 Lesson 16 Overview'
+named_level 'Search Engine Optimizer'
 named_level 'How Search Works'
 level 'CSDU2 - SEO 1'
+level 'CSDU2 - SEO 2'
+level 'CSDU2 - SEO 3'
+level 'CSDU2 - SEO 4'
+level 'CSDU2 - SEO 5'
 
 stage 'Intellectual Property'
 named_level 'Unit 2 Lesson 17 Overview'
