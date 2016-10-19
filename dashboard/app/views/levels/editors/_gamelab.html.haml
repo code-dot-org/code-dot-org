@@ -1,10 +1,3 @@
-:scss
-  .field.teacher-only-markdown {
-    border: 5px solid gray;
-    border-radius: 5px;
-    padding: 10px;
-  }
-
 -# Gamelab-only fields for level edit page on levelbuilder
 - content_for(:head) do
   :css
@@ -135,9 +128,4 @@
 
 = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
 
-.field.teacher-only-markdown
-  %p Edit Teacher Only Markdown:
-  = f.text_area 'teacher_markdown', placeholder: 'Enter teacher only markdown here', rows: 4, value: @level.teacher_markdown or ''
-  #level_teacher_markdown_preview
-  :javascript
-    levelbuilder.initializeCodeMirror('level_teacher_markdown', 'markdown');
+= render partial: 'levels/editors/teacher_only_markdown', locals: {f: f}
