@@ -128,6 +128,10 @@ class PdWorkshopSurvey
     'Strongly Agree'
   ]
 
+  def self.agree_scale_options
+    AGREE_SCALE_OPTIONS
+  end
+
   OPTIONS = {
     reason_for_attending_ss: [
       'Personal interest',

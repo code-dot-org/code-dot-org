@@ -514,9 +514,14 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
                     other.velocity.y = newVelY2*other.restitution;
                 }
               }
+            } else if (type === 'collide') {
+              // Here, expect the caller to treat the callee as immovable,
+              // and to simulate a totally inelastic collision,
+              // adopting the callee's velocity along the displacement axis
+              var thisVelocityAlongDisplacement = projectAontoB(this.velocity, displacement);
+              var otherVelocityAlongDisplacement = projectAontoB(other.velocity, displacement);
+              this.velocity.sub(thisVelocityAlongDisplacement).add(otherVelocityAlongDisplacement);
             }
-            //else if(type === "collide")
-              //this.velocity = createVector(0,0);
 
             if(callback !== undefined && typeof callback === 'function')
               callback.call(this, this, other);
@@ -540,6 +545,13 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
           if(displacement.x !== 0 || displacement.y !== 0 )
           {
             other.position.sub(displacement);
+
+            // Here, expect the callee to treat the caller as immovable,
+            // and to simulate a totally inelastic collision,
+            // adopting the caller's velocity along the displacement axis
+            var thisVelocityAlongDisplacement = projectAontoB(this.velocity, displacement);
+            var otherVelocityAlongDisplacement = projectAontoB(other.velocity, displacement);
+            other.velocity.sub(otherVelocityAlongDisplacement).add(thisVelocityAlongDisplacement);
 
             if(displacement.x > 0)
               this.touching.left = true;
@@ -566,6 +578,18 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
 
   return result;
 };
+
+/**
+ * Projects a vector onto the line parallel to a second vector, giving a third
+ * vector which is the orthogonal projection of that vector onto the line.
+ * @see https://en.wikipedia.org/wiki/Vector_projection
+ * @param {p5.Vector} a - vector being projected
+ * @param {p5.Vector} b - vector defining the projection target line.
+ * @returns {p5.Vector} projection of a onto the line parallel to b.
+ */
+function projectAontoB(a, b) {
+  return p5.Vector.mult(b, p5.Vector.dot(a, b) / p5.Vector.dot(b, b));
+}
 
 /* eslint-enable */
 

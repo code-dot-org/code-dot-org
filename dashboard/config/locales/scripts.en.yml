@@ -1485,6 +1485,7 @@ en:
             Platform Jumper: Platform Jumper
             Defender: Defender
             'Project: Build a Game': 'Project: Build a Game'
+            Velocity: Velocity
           description_audience: ''
         2016_sciencePD_phase1:
           title: 'CS in Science: Part 1'
@@ -1841,6 +1842,8 @@ en:
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
             Unspotted Bugs: Unspotted Bugs
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+            'Events Unplugged: The Big Event': 'Events Unplugged: The Big Event'
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0

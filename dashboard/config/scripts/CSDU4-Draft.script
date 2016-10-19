@@ -1,103 +1,92 @@
-login_required 'true'
-hidden 'true'
+login_required true
 
 stage 'Analysis of Design'
-level 'CSD U4L01 SFLP'
+named_level 'CSD U4L01 SFLP'
 
 stage 'Understanding Your User'
-level 'CSD U4L02 SFLP'
+named_level 'CSD U4L02 SFLP'
 
 stage 'Discovering Users'
-level 'CSD U4L03 SFLP'
+named_level 'CSD U4L03 SFLP'
 
 stage 'UCD Micro Activity'
-level 'CSD U4L04 SFLP'
+named_level 'CSD U4L04 SFLP'
 
 stage 'Designing for Social Impact'
-level 'CSD U4L05 SFLP'
+named_level 'CSD U4L05 SFLP'
 
 stage 'Conducting User-Centered Interviews'
-level 'CSD U4L06 SFLP'
+named_level 'CSD U4L06 SFLP'
 
 stage 'Analyzing Interviews'
-level 'CSD U4L07 SFLP'
+named_level 'CSD U4L07 SFLP'
 
 stage 'Re-designing a Space'
-level 'CSD U4L08 SFLP'
+named_level 'CSD U4L08 SFLP'
 
 stage 'Presenting Your Design'
-level 'CSD U4L09 SFLP'
+named_level 'CSD U4L09 SFLP'
 
 stage 'Designing Apps for Good'
-level 'CSD U4L10 SFLP'
+named_level 'CSD U4L10 SFLP'
 
 stage 'Market Research'
-level 'CSD U4L11 SFLP'
-
-stage 'User Research'
-level 'CSD U4L12 SFLP'
+named_level 'CSD U4L11 SFLP'
 
 stage 'Low Fidelity Prototyping'
-level 'CSD U4L13 SFLP'
-
-stage 'Preparing for Prototype Testing'
-level 'CSD U4L14 SFLP'
+named_level 'CSD U4L12 SFLP'
+named_level 'Example App Types'
+level 'CSDU4 Quiz App Demo'
+level 'CSDU4 Decision App Demo'
+level 'CSDU4 List App Demo'
+level 'CSDU4 Crowdsource App Demo'
 
 stage 'Prototype Testing'
-level 'CSD U4L15 SFLP'
+named_level 'CSD U4L13 SFLP'
 
 stage 'Design Mode'
-level 'CSD U4L16 SFLP'
-level 'CSDU4 - Design Mode - 15' # Intro design mode
-level 'CSDU4 - Design Mode - 4' # Change id, add second button
-level 'CSD U4 - Design Mode Text' # Add text header
-level 'CSD U4 - Design Mode Input Widgets' # Add input widgets
-level 'CSDU4 - Design Mode - 21' # Upload image
+named_level 'CSD U4L14 SFLP'
+named_level 'Building a UI with Design Mode'
+level 'CSDU4 - Design Mode - 15'
+level 'CSDU4 - Design Mode - 4'
+level 'CSD U4 - Design Mode Text'
+level 'CSD U4 - Design Mode Input Widgets'
+level 'CSDU4 - Design Mode - 21'
 level 'CSDU4 - Design Mode Icons'
-#level 'CSDU4 - Design Mode - 29' # Dropdown
-level 'CSDU4 - Design Mode - 18' # Debugging depth (rework)
-level 'CSD U4 - Design Mode Project' # Make your page
+level 'CSDU4 - Design Mode - 18'
+level 'CSD U4 - Design Mode Project'
 
 stage 'Making it Interactive'
-level 'CSD U4L17 SFLP'
-level 'CSDU4 - Design Mode - 16' # Wire up your button console.log (events stage)
-level 'CSDU4 - Design Mode - 3' # How do Events work? (events stage)
-level 'CSDU4 - Design Mode - 19' # Second screen (events stage)
-level 'CSDU4 - Design Mode - 20' # Set screen (events stage)
-level 'CSDU4 - Design Mode - 11' # New event types (events stage)
-level 'CSDU4 - Design Mode - 5' # Debugging IDs (events stage)
-level 'CSDU4 - Design Mode - 17' # Debugging IDs & console.log() (events stage)
+named_level 'CSD U4L15 SFLP'
+level 'CSDU4 - Design Mode - 16'
+level 'CSDU4 - Design Mode - 3'
+level 'CSDU4 - Design Mode - 19'
+level 'CSDU4 - Design Mode - 20'
+level 'CSDU4 - Design Mode - 11'
+level 'CSDU4 - Design Mode - 5'
+level 'CSDU4 - Design Mode - 17'
 
 stage 'Adding Functionality (optional)'
-level 'CSD U4L18 SFLP'
-level 'CSDU4 - Design Mode - 23' # Set text (advanced functionality stage)
-level 'CSDU4 - AppLab - 2' # User input (advanced functionality stage)
-level 'CSDU4 - Design Mode - 24' # Number input (advanced functionality stage)
-level 'CSDU4 - Design Mode - 25' # Text input (advanced functionality stage)
-level 'CSDU4 - Design Mode - 26' # Saving input (advanced functionality stage)
-level 'CSDU4 - Design Mode - 27' # Text output (advanced functionality stage)
-level 'CSDU4 - Design Mode - 28' # Change event (advanced functionality stage)
-level 'CSDU4 - Design Mode - 30' # Conditional (advanced functionality stage)
-level 'CSDU4 - Design Mode - 31' # Keypress (advanced functionality stage)
-level 'CSDU4 - Design Mode - 32' # Keyup/Keydown (advanced functionality stage)
-level 'CSDU4 - Design Mode - 33' # Sounds (advanced functionality stage)
-level 'CSDU4 - Design Mode - 8' # Moving buttons (advanced functionality stage)
-level 'CSDU4 - Design Mode - 12' # Text Label (advanced functionality stage)
-
-stage 'Preparing for App Testing'
-level 'CSD U4L19 SFLP'
+named_level 'CSD U4L16 SFLP'
+level 'CSDU4 - Design Mode - 23'
+level 'CSDU4 - AppLab - 2'
+level 'CSDU4 - Design Mode - 24'
+level 'CSDU4 - Design Mode - 25'
+level 'CSDU4 - Design Mode - 26'
+level 'CSDU4 - Design Mode - 27'
+level 'CSDU4 - Design Mode - 28'
+level 'CSDU4 - Design Mode - 30'
+level 'CSDU4 - Design Mode - 31'
+level 'CSDU4 - Design Mode - 32'
+level 'CSDU4 - Design Mode - 33'
+level 'CSDU4 - Design Mode - 8'
+level 'CSDU4 - Design Mode - 12'
 
 stage 'App Testing'
-level 'CSD U4L20 SFLP'
-
-stage 'Planning for Improvements'
-level 'CSD U4L21 SFLP'
+named_level 'CSD U4L17 SFLP'
 
 stage 'Improving and Iterating'
-level 'CSD U4L22 SFLP'
-
-stage 'App Presentation Prep'
-level 'CSD U4L23 SFLP'
+named_level 'CSD U4L18 SFLP'
 
 stage 'App Presentation'
-level 'CSD U4L24 SFLP'
+named_level 'CSD U4L19 SFLP'

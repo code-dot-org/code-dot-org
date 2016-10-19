@@ -105,7 +105,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @is_first_workshop = Pd::Workshop.attended_by(@teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
 
-    @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? @workshop.course
+      @survey_url = CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{enrollment.code}", 'https:'
+    else
+      @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
+    end
+
     @dash_code = CDO.pd_workshop_exit_survey_dash_code
 
     content_type = 'text/html'
