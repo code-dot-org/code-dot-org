@@ -111,5 +111,8 @@
   "word": "Trouver le mot",
   "wrongCropError": "Je ne peux pas récolter cette culture d’ici.",
   "yes": "Oui",
-  "youSpelled": "Tu as épelé"
+  "youSpelled": "Tu as épelé",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

@@ -36,7 +36,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 200px\">\r\n\r\n# Practice! Add another button\r\nNow that you know the pattern try it out.\r\n\r\n**Add a 2nd button to the screen that turns the turtle to the left when clicked.**\r\n\r\n1. In Design Mode: drag another button onto the screen\r\n2. Switch to Code Mode: add an onEvent block to the code - make sure to set the correct id and event type\r\n3. Add code inside the function to make the turtle turn left\r\n\r\n## Baker NOTE: 1. change screen cap so buttons look like design mode buttons 2. this should pull through a project students are working on.\r\n\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 200px\">\r\n\r\n# Practice! Add another button\r\n\r\nNow that you know the pattern try it out.  **Add a 2nd button to the screen that turns the turtle to the left when clicked.**  The finished product should look similar to the image shown here.\r\n\r\nRemember the steps:\r\n\r\n  1. **Design Mode**: drag another button onto the screen\r\n  2. Switch to Code Mode: **add an onEvent block** to the code\r\n  3. **Add code** inside the function to make the turtle turn left\r\n  4. Run. Test. Debug\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "true",

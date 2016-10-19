@@ -111,5 +111,8 @@
   "word": "වචනය සොයන්න",
   "wrongCropError": "මට ඒ වගාබිමේ අස්වැන්න මෙතැන සිට නෙලාගැනීමට නොහැක.",
   "yes": "ඔව්",
-  "youSpelled": "ඔයා කිව්වා"
+  "youSpelled": "ඔයා කිව්වා",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

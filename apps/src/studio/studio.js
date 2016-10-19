@@ -2853,9 +2853,15 @@ Studio.execute = function () {
     Studio.interpretedHandlers = {};
 
     if (studioApp.initializationBlocks) {
-      let initializationCode = Blockly.Generator.blocksToCode('JavaScript',
-          studioApp.initializationBlocks);
-      registerHandlersForCode(handlers, 'whenGameStarts', initializationCode);
+      studioApp.initializationBlocks.forEach(function (topBlock) {
+        // by default, blocks are queued to run once at game start.
+        // Repeat forever blocks, however, need their own handler.
+        const handlerType = (topBlock.type === 'studio_repeatForever') ?
+          'repeatForever' :
+          'whenGameStarts';
+        const code = Blockly.Generator.blocksToCode('JavaScript', [topBlock]);
+        registerHandlersForCode(handlers, handlerType, code);
+      });
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
