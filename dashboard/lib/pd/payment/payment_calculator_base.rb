@@ -24,20 +24,19 @@ module Pd::Payment
       raise 'Workshop must be ended.' unless workshop.ended_at
 
       workshop.resolve_enrolled_users
-      WorkshopSummary.new.tap do |workshop_summary|
-        workshop_summary.workshop = workshop
-        workshop_summary.calculator_class = self.class
-        workshop_summary.pay_period = get_pay_period workshop
+      session_attendance_summaries = get_session_attendance_summaries workshop
+      raw_teacher_attendance = calculate_raw_teacher_attendance session_attendance_summaries
 
-        workshop_summary.num_days = workshop.effective_num_days
-        workshop_summary.num_hours = workshop.effective_num_hours
-        workshop_summary.min_attendance_days = workshop.min_attendance_days
-
-        workshop_summary.session_attendance_summaries = get_session_attendance_summaries workshop
-        raw_teacher_attendance = calculate_raw_teacher_attendance workshop_summary.session_attendance_summaries
-
+      WorkshopSummary.new(
+        workshop: workshop,
+        pay_period: get_pay_period(workshop),
+        num_days: workshop.effective_num_days,
+        num_hours: workshop.effective_num_hours,
+        min_attendance_days: workshop.min_attendance_days,
+        calculator_class: self.class,
+        session_attendance_summaries: session_attendance_summaries
+      ).tap do |workshop_summary|
         workshop_summary.teacher_summaries = construct_teacher_summaries workshop_summary, raw_teacher_attendance
-        workshop_summary.total_teacher_attendance_days = workshop_summary.teacher_summaries.select(&:qualified?).map(&:days).reduce(0, :+)
         workshop_summary.payment = construct_workshop_payment workshop_summary
       end
     end
@@ -132,14 +131,13 @@ module Pd::Payment
     # @param workshop_summary [WorkshopSummary]
     # @return [WorkshopPayment, nil] Payment details, or nil if the workshop is not qualified for payment.
     def construct_workshop_payment(workshop_summary)
-      return nil unless qualified? workshop_summary.total_teacher_attendance_days
+      return nil unless qualified?(workshop_summary.total_teacher_attendance_days)
 
-      WorkshopPayment.new.tap do |workshop_payment|
-        workshop_payment.summary = workshop_summary
-        workshop_payment.type = get_payment_type workshop_summary.workshop
-        workshop_payment.amounts = calculate_payment_amounts workshop_summary
-        workshop_payment.total = workshop_payment.amounts.values.reduce(0, :+)
-      end
+      WorkshopPayment.new(
+        summary: workshop_summary,
+        type: get_payment_type(workshop_summary.workshop),
+        amounts: calculate_payment_amounts(workshop_summary)
+      )
     end
 
     # Constructs teacher summaries (including payment) for each teacher in the workshop.
@@ -162,24 +160,20 @@ module Pd::Payment
       raw_teacher_attendance.keys.map do |teacher_id|
         enrollment = enrollments_by_teacher_id[teacher_id]
         teacher = enrolled_teachers_by_id[teacher_id] || User.find(teacher_id)
+        raw_attendance = raw_teacher_attendance[teacher_id]
 
-        TeacherSummary.new.tap do |teacher_summary|
-          raw_attendance = raw_teacher_attendance[teacher_id]
+        days, hours = calculate_adjusted_teacher_attendance raw_attendance, workshop_summary.min_attendance_days,
+          workshop_summary.num_days, workshop_summary.num_hours
 
-          teacher_summary.workshop_summary = workshop_summary
-          teacher_summary.enrollment = enrollment
-          teacher_summary.teacher = teacher
-          teacher_summary.raw_days = raw_attendance.days
-          teacher_summary.raw_hours = raw_attendance.hours
-
-          adjust_teacher_attendance teacher_summary, workshop_summary.min_attendance_days,
-            workshop_summary.num_days, workshop_summary.num_hours
-
-          if enrollment
-            teacher_summary.school = teacher_summary.enrollment.school
-            teacher_summary.school_district = teacher_summary.enrollment.school_info.try(&:school_district)
-          end
-
+        TeacherSummary.new(
+          workshop_summary: workshop_summary,
+          teacher: teacher,
+          enrollment: enrollment,
+          raw_days: raw_attendance.days,
+          raw_hours: raw_attendance.hours,
+          days: days,
+          hours: hours,
+        ).tap do |teacher_summary|
           if teacher_summary.days > 0 && teacher_qualified?(teacher)
             teacher_summary.payment = construct_teacher_payment(teacher_summary)
           end
@@ -188,38 +182,40 @@ module Pd::Payment
     end
 
     # Calculates adjusted teacher attendance, after applying min / max attendance and qualification rules.
-    # Mutates #TeacherSummary by setting the days and hours fields with the adjusted attendance numbers.
-    # @param teacher_summary [TeacherSummary]
+    # @param raw_attendance [TeacherAttendanceTotal] raw attendance for the teacher
     # @param min_attendance_days [Integer] minimum days raw attendance to count at all.
     # @param num_days [Integer] max number of days.
     # @param num_hours [Integer] max number of hours.
-    def adjust_teacher_attendance(teacher_summary, min_attendance_days, num_days, num_hours)
-      if teacher_summary.raw_days < min_attendance_days
-        teacher_summary.days = teacher_summary.hours = 0
-      else
-        teacher_summary.days = [teacher_summary.raw_days, num_days].min
-        teacher_summary.hours = [teacher_summary.raw_hours, num_hours].min
+    # @return [Array<Integer, Integer>] - adjusted days and hours
+    def calculate_adjusted_teacher_attendance(raw_attendance, min_attendance_days, num_days, num_hours)
+      days = hours = 0
+      if raw_attendance.days >= min_attendance_days
+        days = [raw_attendance.days, num_days].min
+        hours = [raw_attendance.hours, num_hours].min
       end
-      nil
+      [days, hours]
     end
 
     # Constructs a teacher payment from a teacher summary.
     # @param teacher_summary [TeacherSummary]
     # @return [TeacherPayment]
     def construct_teacher_payment(teacher_summary)
-      TeacherPayment.new.tap do |teacher_payment|
-        teacher_payment.summary = teacher_summary
-
-        if teacher_summary.school_district
-          teacher_payment.district_payment_term = Pd::DistrictPaymentTerm.find_by(
-            course: teacher_summary.workshop_summary.workshop.course,
-            school_district_id: teacher_summary.school_district.id
-          )
-
-          teacher_payment.amount = calculate_teacher_payment_amount teacher_payment.district_payment_term,
-            teacher_summary.hours, teacher_summary.days
-        end
+      district_payment_term = nil
+      if teacher_summary.school_district
+        district_payment_term = Pd::DistrictPaymentTerm.find_by(
+          course: teacher_summary.workshop_summary.workshop.course,
+          school_district_id: teacher_summary.school_district.id
+        )
       end
+
+      amount = calculate_teacher_payment_amount district_payment_term,
+        teacher_summary.hours, teacher_summary.days
+
+      TeacherPayment.new(
+        summary: teacher_summary,
+        amount: amount,
+        district_payment_term: district_payment_term
+      )
     end
 
     # Calculates the amount for a teacher payment.

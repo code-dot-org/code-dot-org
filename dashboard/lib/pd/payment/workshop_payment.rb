@@ -1,14 +1,26 @@
 module Pd::Payment
   class WorkshopPayment
-    attr_accessor :summary
+    def initialize(
+      summary:,
+      type:,
+      amounts:
+    )
+      @summary = summary
+      @type = type
+      @amounts = amounts
+    end
+
+    attr_reader :summary
 
     # @return [String] payment type
-    attr_accessor :type
+    attr_reader :type
 
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    attr_accessor :amounts
+    attr_reader :amounts
 
     # @return [Numeric] Sum of all payment parts.
-    attr_accessor :total
+    def total
+      amounts.values.reduce(0, :+)
+    end
   end
 end
