@@ -672,6 +672,7 @@ class Script < ActiveRecord::Base
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_stages: hideable_stages?,
+      bubbleColorsEnabled: Gatekeeper.allows('postMilestone', where: {script_name: self.name}, default: true),
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
