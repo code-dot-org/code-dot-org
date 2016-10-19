@@ -9,13 +9,13 @@ content-type: text/ng-template
 .ops-workshops
   -if can_see_pd_workshop_dashboard?
     %h1
-      New Workshop Dashboard (beta)
+      Workshop Dashboard
     %a{href:CDO.studio_url('/pd/workshop_dashboard')}
       %h3
         Manage PD Workshops
   -if dashboard_admin? || have_permission?('create_professional_development_workshop')
     %h1
-      Affiliate Dashboard
+      Old CSF Workshop Dashboard
     %a{href:'/manage-professional-development-workshops'}
       %h3
         Manage Workshops
