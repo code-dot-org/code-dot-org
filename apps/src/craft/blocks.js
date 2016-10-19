@@ -455,7 +455,7 @@ exports.install = function (blockly, blockInstallOptions) {
   ];
 
   const statementNameToDisplayName = {
-    WHEN_USED: "when clicked",
+    WHEN_USED: "when used",
     WHEN_TOUCHED: "when touched",
     WHEN_SPAWNED: "when spawned",
     WHEN_ATTACKED: "when attacked",
