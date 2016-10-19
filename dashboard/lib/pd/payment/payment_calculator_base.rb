@@ -34,7 +34,7 @@ module Pd::Payment
         num_hours: workshop.effective_num_hours,
         min_attendance_days: workshop.min_attendance_days,
         calculator_class: self.class,
-        session_attendance_summaries: session_attendance_summaries
+        attendance_count_per_session: session_attendance_summaries.map(&:teacher_ids).map(&:count)
       ).tap do |workshop_summary|
         workshop_summary.teacher_summaries = construct_teacher_summaries workshop_summary, raw_teacher_attendance
         workshop_summary.payment = construct_workshop_payment workshop_summary

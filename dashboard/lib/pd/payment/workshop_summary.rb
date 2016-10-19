@@ -7,7 +7,7 @@ module Pd::Payment
       num_hours:,
       min_attendance_days:,
       calculator_class:,
-      session_attendance_summaries:
+      attendance_count_per_session:
     )
       @workshop = workshop
       @pay_period = pay_period
@@ -15,7 +15,7 @@ module Pd::Payment
       @num_hours = num_hours
       @min_attendance_days = min_attendance_days
       @calculator_class = calculator_class
-      @session_attendance_summaries = session_attendance_summaries
+      @attendance_count_per_session = attendance_count_per_session
       @teacher_summaries = []
     end
 
@@ -24,9 +24,9 @@ module Pd::Payment
     # @return [Class] calculator class that was used to calculate this payment.
     attr_reader :calculator_class
 
-    # @return [Array<SessionAttendanceSummary>] One per session.
+    # @return [Array<Integer>] Number of teachers marked attended for each session.
     # This does not take into account min attendance or max sessions.
-    attr_reader :session_attendance_summaries
+    attr_reader :attendance_count_per_session
 
     # @return [Array<TeacherSummary>] teacher summaries for this workshop.
     attr_accessor :teacher_summaries
@@ -56,10 +56,6 @@ module Pd::Payment
 
     def plp
       workshop.professional_learning_partner
-    end
-
-    def attendance_count_per_session
-      session_attendance_summaries.map(&:teacher_ids).map(&:count)
     end
 
     # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).

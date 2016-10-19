@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'cdo/activity_constants'
 
 # This tests the base payment functionality. Derived classes have more specific tests for the parts they change.
 
@@ -206,6 +205,21 @@ module Pd::Payment
       end
 
       assert_equal 6, workshop_summary.total_teacher_attendance_days
+    end
+
+    test 'unexpected payment term' do
+      workshop = create :pd_ended_workshop
+      create :pd_workshop_participant,
+        workshop: workshop, enrolled: true, in_section: true, attended: true
+      Pd::Enrollment.last.school_info.school_district
+
+      mock_term = stub(id: 1, rate: 1, rate_type: 'invalid')
+      Pd::DistrictPaymentTerm.expects(find_by: mock_term)
+
+      e = assert_raises do
+        PaymentCalculatorBase.instance.calculate(workshop)
+      end
+      assert e.message.start_with? 'Unexpected district payment term rate type'
     end
   end
 end

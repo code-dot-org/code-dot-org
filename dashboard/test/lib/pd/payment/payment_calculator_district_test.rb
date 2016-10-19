@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'cdo/activity_constants'
 
 module Pd::Payment
   class PaymentCalculatorDistrictTest < ActiveSupport::TestCase
