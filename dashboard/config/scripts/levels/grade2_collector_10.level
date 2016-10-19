@@ -30,8 +30,7 @@
     "markdown_instructions": "You're almost done!  \r\n\r\nCollect as many coins as you can to finish the stage!",
     "callout_json": "[]",
     "ideal": "0",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",

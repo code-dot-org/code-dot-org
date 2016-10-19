@@ -139,8 +139,8 @@
         "message": "It doesn't seem like you are calling turnAround() or moving forward enough times to draw the figure."
       }
     ],
-    "contained_level_names": null,
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
