@@ -46,17 +46,17 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```
      
   1. Pick up those changes: `source ~/.bash_profile`
-1. Install Node 6.2.0
-  1. These steps are necessary because of problems with the newest versions of node. We want to be on node 6.2.0 and npm 3.8.9.
-  1. `nvm install 6.2.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.2.0 (-> v6.2.0)`
+1. Install Node 6.9.0
+  1. These steps are necessary because of problems with the newest versions of node. We want to be on node 6.9.0 and npm 3.10.8.
+  1. `nvm install 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 1. Check that you have the correct versions of everything:
   1. Open a new Terminal window
   1. `ruby --version  # --> ruby 2.2.3`
-  1. `nvm ls          # --> v6.2.0`
-  1. `node --version  # --> v6.2.0`
-  1. `npm --version   # --> 3.8.9`
+  1. `nvm ls          # --> v6.9.0`
+  1. `node --version  # --> v6.9.0`
+  1. `npm --version   # --> 3.10.8`
 
 ### Ubuntu 14.04
 
@@ -128,7 +128,6 @@ The default dashboard install uses a static build of JS, but if you want to make
    # These enable the local apps build
    build_apps: true
    use_my_apps: true
-
    ```
 
 1. Run `rake package` for the changes to take effect.
