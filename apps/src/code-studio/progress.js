@@ -65,7 +65,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     store.dispatch(getHiddenStages(scriptData.name));
   }
 
-  if (!scriptData.bubbleColorsEnabled) {
+  if (scriptData.disablePostMilestone) {
     store.dispatch(disableBubbleColors());
   }
 

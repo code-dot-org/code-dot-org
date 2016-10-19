@@ -1,5 +1,7 @@
 /* global dashboard, appOptions, addToHome */
 import $ from 'jquery';
+import { getStore } from '../redux';
+import { disableBubbleColors } from '../progressRedux';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
@@ -109,6 +111,8 @@ module.exports = function (callback) {
       }
 
       if (data.disablePostMilestone) {
+        getStore().dispatch(disableBubbleColors());
+        // TODO - move this into React
         $("#progresswarning").show();
       }
     }).fail(loadLastAttemptFromSessionStorage);
