@@ -39,7 +39,7 @@
     "level_verification_timeout": "5000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "contained_level_names": null,
-    "failure_message_override": "Hi"
+    "failure_message_override": "Add at least one move and turn command to your chicken’s When Spawned event to make your chicken move."
   },
   "published": true,
   "notes": "Puzzle 2: How did the Chicken Cross the Road?\r\nWhen an entity is created it is called “spawning\". This chicken has forgotten how to move after being spawned! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot so that the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\nWhen Used\r\nNo code needs to go here\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nVIDEO on how you’ve learned these CS concepts  and then go into how to make those part of the game (Lisa)",

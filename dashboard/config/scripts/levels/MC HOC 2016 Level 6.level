@@ -51,11 +51,7 @@
       <xml>
         <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" movable="false">
           <statement name="WHEN_TOUCHED">
-            <block type="craft_forever" deletable="false" movable="false" editable="false">
-              <statement name="DO">
-                <block type="craft_attack" deletable="false" movable="false" editable="false"/>
-              </statement>
-            </block>
+            <block type="craft_attack" deletable="false" movable="false" editable="false"/>
           </statement>
           <statement name="WHEN_USED">
             <block type="craft_destroyEntity" deletable="false" movable="false" editable="false"/>

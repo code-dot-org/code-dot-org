@@ -36,8 +36,9 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "They’re moving now, but they look weird. Randomness helps multiple mobs to move differently. Use a \"turn random\" to make your chickens look more natural. \r\n",
-    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"turnRandom\") >= 1 || verificationAPI.getCommandExecutedCount(\"repeatRandom\") >= 1 ;\r\n    },",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"turnRandom\") >= 1;\r\n    }",
     "level_verification_timeout": "7000",
+    "failure_message_override": "If your chickens are all moving in the same direction, use “Turn random” to make your chickens turn randomly left or right.",
     "contained_level_names": null
   },
   "published": true,
@@ -67,20 +68,11 @@
           <title name="TYPE">random</title>
         </block>
         <block type="craft_forever"/>
-        <block type="craft_repeatRandom"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="craft_repeatRandom"/>
-            <block type="craft_entityTurn">
-              <title name="DIR">random</title>
-            </block>
-          </statement>
-        </block>
-      </xml>
+</xml>
     </required_blocks>
     <solution_blocks>
       <xml>

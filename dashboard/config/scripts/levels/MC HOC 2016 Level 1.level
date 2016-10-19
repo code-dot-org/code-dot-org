@@ -40,7 +40,8 @@
     "level_verification_timeout": "20000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "callout_json": "[]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "failure_message_override": "To go on, you’ll need to collect wool. To collect the wool, use the arrow keys to walk to the sheep and then press the spacebar or click the game to sheer the sheep. And, don’t forget to add the “Drop Wool” block to your code."
   },
   "published": true,
   "notes": "Puzzle 1: Wool for Sheep\r\nThe sheep has forgotten what to do when you sheer it! Make it drop wool when you walk over to it and press the space bar or tap the game to hit it.\r\n\r\nSolution:               \r\nSheep\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nTeaches: Blockley, Movement, Putting commands into the entity structure.",
