@@ -39,34 +39,20 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="maze_move">
+        <block type="maze_move" deletable="false" editable="false">
           <title name="DIR">moveForward</title>
         </block>
-        <block type="maze_turn">
+        <block type="maze_turn" deletable="false" editable="false">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="collector_collect"/>
-        <block type="maze_move">
+        <block type="collector_collect" deletable="false" editable="false"/>
+        <block type="maze_move" deletable="false" editable="false">
           <title name="DIR">moveForward</title>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="maze_move">
-          <title name="DIR">moveForward</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
-        </block>
-        <block type="collector_collect"/>
-      </xml>
+      <xml/>
     </toolbox_blocks>
     <solution_blocks>
       <xml>

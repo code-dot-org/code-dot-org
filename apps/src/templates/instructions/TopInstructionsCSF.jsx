@@ -26,6 +26,8 @@ import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import Button from '../Button';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import experiments from '../../experiments';
+import InlineAudio from './InlineAudio';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
 
@@ -35,6 +37,10 @@ import {
   scrollTo,
   shouldDisplayChatTips
 } from './utils';
+
+import {
+  levenshtein
+} from '../../utils';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -140,6 +146,14 @@ const styles = {
     width: 'calc(100% - 20px)',
     float: 'left'
   },
+  instructionsWithAudio: {
+    paddingRight: 76
+  },
+  audioControls: {
+    position: 'absolute',
+    top: 7,
+    right: 12
+  }
 };
 
 var TopInstructions = React.createClass({
@@ -201,7 +215,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -446,10 +460,32 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
+    // Minecraft should never show the button
     if (this.props.isMinecraft) {
       return false;
     }
-    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+
+    // if we have "extra" (non-instruction) content, we should always
+    // give the option of collapsing it
+    if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
+      return true;
+    }
+
+    // Otherwise, only show the button if we have two versions of
+    // instruction we want to toggle between
+    return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
+  },
+
+  shouldIgnoreShortInstructions() {
+    // if short instructions and long instructions have a Levenshtein
+    // Edit Distance of less than or equal to 10, ignore short
+    // instructions and only show long.
+    let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
+    return dist <= 10;
+  },
+
+  shouldDisplayShortInstructions() {
+    return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
   render: function () {
@@ -468,11 +504,13 @@ var TopInstructions = React.createClass({
       this.props.overlayVisible && styles.withOverlay
     ];
 
-    const markdown = (this.props.collapsed || !this.props.longInstructions) ?
+    const markdown = this.shouldDisplayShortInstructions() ?
       this.props.shortInstructions : this.props.longInstructions;
     const renderedMarkdown = processMarkdown(markdown, { renderer });
-    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
+
+    const acapelaSrc = this.shouldDisplayShortInstructions() ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
+    const showAudioControls = experiments.isEnabled('tts') && acapelaSrc;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
@@ -519,20 +557,26 @@ var TopInstructions = React.createClass({
             ]}
           >
             <ChatBubble>
-              <Instructions
-                ref="instructions"
-                renderedMarkdown={renderedMarkdown}
-                acapelaSrc={acapelaSrc}
-                onResize={this.adjustMaxNeededHeight}
-                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                aniGifURL={this.props.aniGifURL}
-                inTopPane
-              />
-              {this.props.collapsed && instructions2 &&
-                <div
-                  className="secondary-instructions"
-                  dangerouslySetInnerHTML={{ __html: instructions2 }}
+              <div style={[showAudioControls && styles.instructionsWithAudio]}>
+                <Instructions
+                  ref="instructions"
+                  renderedMarkdown={renderedMarkdown}
+                  onResize={this.adjustMaxNeededHeight}
+                  inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                  aniGifURL={this.props.aniGifURL}
+                  inTopPane
                 />
+                {instructions2 &&
+                  <div
+                    className="secondary-instructions"
+                    dangerouslySetInnerHTML={{ __html: instructions2 }}
+                  />
+                }
+              </div>
+              {showAudioControls &&
+                <div style={[styles.audioControls]}>
+                  <InlineAudio src={acapelaSrc} />
+                </div>
               }
               {this.props.overlayVisible &&
                 <Button type="primary">
