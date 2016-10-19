@@ -111,5 +111,8 @@
   "word": "מצא את המילה",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "כן",
-  "youSpelled": "אייתת"
+  "youSpelled": "אייתת",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }
