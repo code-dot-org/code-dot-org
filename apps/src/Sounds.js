@@ -56,18 +56,30 @@ var Sounds = module.exports = function () {
   this.audioUnlocked_ = false;
 
   if (window.AudioContext) {
-    try {
-      this.audioContext = new AudioContext();
-      this.initializeAudioUnlockState_();
-    } catch (e) {
-      /**
-       * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
-       * when iframes are open, potentially related to:
-       *    https://code.google.com/p/chromium/issues/detail?id=308784
-       * or https://code.google.com/p/chromium/issues/detail?id=160022
-       *
-       * In the Chrome case, this will fall-back to the `window.Audio` method
-       */
+    function unlockAudioWhenVisible() {
+      try {
+        this.initializeAudioUnlockState_();
+      } catch (e) {
+        /**
+         * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
+         * when iframes are open, potentially related to:
+         *    https://code.google.com/p/chromium/issues/detail?id=308784
+         * or https://code.google.com/p/chromium/issues/detail?id=160022
+         *
+         * In the Chrome case, this will fall-back to the `window.Audio` method
+         */
+      }
+    }
+    // In order to support prerender, disable unlocking audio until the page
+    // exits the "prerender" visibility state.
+    if (document.visibilityState !== "prerender") {
+      unlockAudioWhenVisible();
+    } else {
+      function handleVisibilityChange() {
+        document.removeEventListener("visibilitychange", handleVisibilityChange);
+        this.unlockAudioWhenVisible();
+      }
+      document.addEventListener("visibilitychange", handleVisibilityChange, false);
     }
   }
 
@@ -140,6 +152,8 @@ Sounds.prototype.whenAudioUnlocked = function (callback) {
  *        audio was unlocked successfully.
  */
 Sounds.prototype.unlockAudio = function (onComplete) {
+  this.audioContext = new AudioContext();
+
   if (this.isAudioUnlocked()) {
     return;
   }

@@ -137,6 +137,16 @@ function reportComplete(report, response) {
     lastServerResponse.videoInfo = response.video_info;
     lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
     lastServerResponse.previousStageInfo = response.stage_changing && response.stage_changing.previous;
+
+    if (response.redirect) {
+      // Add a "prerender" resource hint as soon as a `nextRedirect` URL is returned.
+      // Ref: https://www.w3.org/TR/resource-hints/#prerender
+      var myHead = document.getElementsByTagName('head')[0];
+      var myLink = document.createElement('link');
+      myLink.setAttribute('rel', 'prerender');
+      myLink.setAttribute('href', response.redirect);
+      myHead.appendChild(myLink);
+    }
   }
   if (report.onComplete) {
     report.onComplete(response);
