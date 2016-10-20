@@ -52,6 +52,8 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel",
     "contained_level_names": null
   },
   "published": true,

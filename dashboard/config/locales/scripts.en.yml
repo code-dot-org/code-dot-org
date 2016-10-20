@@ -2023,6 +2023,8 @@ en:
             How to behave in the lab_How to use Code_org puzzles: How to behave in the lab/How to use Code.org puzzles
             Programming at home with my pet: Programming at home with my pet
             Binary Bracelets: Binary Bracelets
+            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
+            The Big Event: The Big Event
         transferring-over:
           stage:
             20-hr Stage 2: 20-hr Stage 2
@@ -2152,3 +2154,12 @@ en:
           description_audience: ''
           description_short: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
           description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
+        fesbinary:
+          stage:
+            Binary Bracelets: Binary Bracelets
+            Binary Images: Binary Images
+            Binary Artist Puzzles: Binary Artist Puzzles
+          title: Binary
+          description_audience: ''
+          description_short: ''
+          description: ''

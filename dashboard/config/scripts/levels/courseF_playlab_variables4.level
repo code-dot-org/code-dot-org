@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2016-10-19T17:18:08.000Z",
+  "created_at": "2016-10-19T22:53:02.000Z",
   "level_num": "custom",
   "user_id": 16,
   "properties": {
@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":19},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "This is Pirate Pegleg.  He's awfully hard to understand these days!",
+    "instructions": "Can you find the correct variable in the toolbox to fill in the slot?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "This is Pirate Pegleg.  He's awfully hard to understand these days!  \r\n\r\nDecode his speech by changing these pieces of text in the code:\r\n- \"arrrg\" should be \"a\" \r\n- \"ye\" should be \"e\"\r\n\r\n",
+    "markdown_instructions": "Now we're going to join a variable to the beginning of Pegleg's next sentence using the `create text with` block. \r\n\r\nCan you find the correct variable in the toolbox to fill in the slot?\r\n\r\n",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -45,6 +45,8 @@
     "disable_examples": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
+    "callout_json": "[]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -57,112 +59,33 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="studio_saySpriteParamsTime" inline="true">
-              <value name="SPRITE">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <value name="TEXT">
-                <block type="text_join" inline="false">
-                  <mutation items="2"/>
-                  <value name="ADD0">
+            <block type="studio_ask">
+              <title name="TEXT">What is your name?</title>
+              <title name="VAR">ye</title>
+              <next>
+                <block type="studio_saySpriteParamsTime" inline="true">
+                  <value name="SPRITE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="TEXT">
                     <block type="text_join" inline="false">
                       <mutation items="2"/>
-                      <value name="ADD0">
-                        <block type="text">
-                          <title name="TEXT">arrg</title>
-                        </block>
-                      </value>
                       <value name="ADD1">
                         <block type="text">
-                          <title name="TEXT">ye</title>
+                          <title name="TEXT">, are ye me new first mate?</title>
                         </block>
                       </value>
                     </block>
                   </value>
-                  <value name="ADD1">
-                    <block type="text_join" inline="false">
-                      <mutation items="2"/>
-                      <value name="ADD0">
-                        <block type="text_join" inline="false">
-                          <mutation items="2"/>
-                          <value name="ADD0">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">ady to </title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">arrg</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">ye</title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">ad pi</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD1">
-                        <block type="text_join" inline="false">
-                          <mutation items="2"/>
-                          <value name="ADD0">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">arrg</title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">at</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">ye</title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">?</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
+                  <value name="TIME">
+                    <block type="math_number">
+                      <title name="NUM">10</title>
                     </block>
                   </value>
                 </block>
-              </value>
-              <value name="TIME">
-                <block type="math_number">
-                  <title name="NUM">10</title>
-                </block>
-              </value>
+              </next>
             </block>
           </next>
         </block>
@@ -322,6 +245,18 @@
             <title name="VAR">counter</title>
           </block>
         </category>
+        <category name="Text">
+          <block type="text">
+            <title name="TEXT"/>
+          </block>
+          <block type="text_join" inline="false">
+            <mutation items="2"/>
+          </block>
+          <block type="studio_ask">
+            <title name="TEXT"/>
+            <title name="VAR">i</title>
+          </block>
+        </category>
         <category name="Math">
           <block type="math_number">
             <title name="NUM">1</title>
@@ -359,8 +294,7 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-  </category>
+        <category name="Variables" custom="VARIABLE"/>
       </xml>
     </toolbox_blocks>
   </blocks>

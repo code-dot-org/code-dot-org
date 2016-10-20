@@ -7,7 +7,10 @@ stage 'Unplugged: Envelope Variables'
 level 'EnvelopeVariables'
 
 stage 'Play Lab: Variables'
-level 'course_playlab_variables1'
+level 'courseF_playlab_variables1'
+level 'courseF_playlab_variables2'
+level 'courseF_playlab_variables3'
+level 'courseF_playlab_variables4'
 level 'grade5_playlab_variables14'
 
 stage 'Artist: Variables'

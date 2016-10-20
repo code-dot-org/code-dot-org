@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2016-10-12T17:57:34.000Z",
+  "created_at": "2016-10-19T15:13:26.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -14,7 +14,6 @@
           "function(){\n\n}"
         ]
       },
-      "randomNumber_min_max": null,
       "setPosition": null
     },
     "edit_code": true,
@@ -37,7 +36,7 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "encrypted_examples": "6dccbu4XDgsKwxtTGb8vO7XtATuCqkNkIK1+EVRGmf6yUcucrJUgUNmZPS4U\nzHDe\n",
-    "markdown_instructions": "<img src=\"https://images.code.org/dc1f942b805f07b3581c678ed1669a27-image-1476892595302.gif\" style=\"float: right\">\r\n# Using setPosition and randomNumber\r\n\r\n<img src=\"https://images.code.org/a501391fac0c396a197aaaf357e73972-image-1476892143359.gif\">\r\n\r\n**Now you try it** - instead of using a fixed value, you use [randomNumber](#triggercallout=showRand) to set the x and y coordinates for setPosition.  Now you'll have to chase the button all over the screen!\r\n\r\n* Make it so that the button could jump *anywhere* on the visible screen each time it's clicked.\r\n* Extend it: if you want to get really nuts, you could add back in the *width* and *height* parameters of setPosition and make the size of the button *also* change randomly with each click!\r\n\r\nOnce you've got the button jumping around the screen.  Click **Finish** to move onto the next level.\r\n",
+    "markdown_instructions": "# Using setPosition\r\n\r\n<img src=\"https://images.code.org/b664824ffeb3347b2e0b6d12447b4e8b-image-1476891499229.gif\" style=\"width: 150px; float: right;\">\r\n\r\n**Now you try it** - use  [setPosition](#triggercallout=setPosHover) to **move the button to the middle of the screen when clicked**. \r\n\r\nWe've set up a small project for you with a button (id: `moveBtn`) already added in design mode.\r\n\r\n1. Add an `onEvent` block\r\n2. Drag a `setPosition` command into the event handler function\r\n3. Set the x,y coordinate so that the button ends up in the middle of the screen.\r\n * You'll need to experiment a little bit to find coordinates that work for you.\r\n * Hover over the screen to find a good starting point.\r\n\r\n**Tip**: when you see a command that is linked like this: [setPosition](#triggercallout=setPosHover) click it! -- it will show you other hints.\r\n\r\nOnce you've got the button moving to the middle of the screen click Finish to move on to the next challenge.\r\n",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -54,7 +53,7 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"randNumReminder\",\r\n  \"callout_text\": \"Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"randomNumber_min_max\\\"]\",\r\n  \"on\": \"showRand\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"Math\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"firstTimeSetPosition\",\r\n  \"callout_text\": \"Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"setPosition\\\"]\",\r\n  \"on\": \"setPosHover\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"UI Controls\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "contained_level_names": null
   },

@@ -12,17 +12,19 @@ Because you'll be dividing the work up you'll want to do some planning ahead of 
 
 # Namespacing
 
-In the next lesson you will combine all of your team members' screens into one app. To make sure that 
+In the next lesson you will combine all of your team members' screens into one app. To make sure that the IDs on one page don't conflict with another you'll need to include a unique _namespace_ for your page. This will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together. Your namespace should be the ID of your screen with an underscore at the end. For example, if you are making the home page, you might use "home_" as your namespace - leading to ids such as:
 
-* Decide on a _namespace_ for your page, this will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together
-	* For example, if you are making the home page, you might use "home_" as your namespace - leading to ids such as:
-    	* "home_title"
-        * "home_loginButton"
-        * "home_logo"
-* Use the built in elements to lay out your app screen
-* For any components of your app that can't be recreated with the built in elements you can either:
-	* Redesign to utilize built in elements
-    * Find an image to use in place of your element
-    * Draw the element using your preferred image editor
-* Share your design regularly with your team mates to ensure consistent style
+* "home_title"
+* "home_loginButton"
+* "home_logo"
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### Namespacing
+
+Ensuring that all students are both creating unique IDs for all elements and properly namespacing them will go a long way towards avoiding issues in the next lesson, so it pays to be a stickler here. You can provide students with the optional Screen Design Activity Guide to keep track of their element IDs.
+
+#### Working together, apart
+
+Even more so than the the paper prototyping activity, it is easy for students in this lesson to forget that they need to consider how their choices affect their team. Encourage active discussion among teams as they design screens to ensure that they are all working towards a common goal.
 MARKDOWN
