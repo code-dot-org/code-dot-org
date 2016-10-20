@@ -224,7 +224,9 @@ function renderContentToggle() {
 
   // TODO - right place for this?
   // TODO - name hardcoded :(
-  getStore().dispatch(getHiddenStages('allthethings'));
+  // setTimeout( () => {
+    getStore().dispatch(getHiddenStages('allthethings'));
+  // }, 10000);
 
   // TODO - rename TeacherLevelGroup
   ReactDOM.render(

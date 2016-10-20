@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Radium from 'radium';
 import { connect } from 'react-redux';
 import { ViewType, fullyLockedStageMapping } from '../stageLockRedux';
 import { isHiddenFromState } from '../hiddenStageRedux';
@@ -10,6 +11,7 @@ const styles = {
 };
 
 // TODO - make sure desc is accurate. probably rename this
+// TODO - probably want teacher/student toggle behind flag
 /**
  * When viewing a locked level group as a teacher, we want to be able to toggle
  * between what the student would see (a message about the level being locked)
@@ -18,10 +20,10 @@ const styles = {
  * hidden. This component moves both the locked stage message and content into
  * a new div, and then toggles which is visible.g
  */
-const TeacherLevelGroup = React.createClass({
+const TeacherLevelGroup = Radium(React.createClass({
   propTypes: {
-    isHidden: PropTypes.bool.isRequired,
-    isLocked: PropTypes.bool.isRequired
+    isHiddenStage: PropTypes.bool.isRequired,
+    isLockedStage: PropTypes.bool.isRequired
   },
 
   componentDidMount() {
@@ -29,45 +31,45 @@ const TeacherLevelGroup = React.createClass({
     $('#locked-stage').appendTo(this.refs.lockMessage).show();
     $('#hidden-stage').appendTo(this.refs.hiddenMessage).show();
     $('#level-body').appendTo(this.refs.content);
-
   },
-  render() {
-    const { isLocked, isHidden } = this.props;
 
-    let visibleFrame = 2;
-    if (isHidden) {
-      visibleFrame = 1;
-    } else if (isLocked) {
-      visibleFrame = 0;
-    }
+  render() {
+    const { isLockedStage, isHiddenStage } = this.props;
+
+    const frameStyle = {
+      position: 'relative',
+      zIndex: 1,
+      backgroundColor: getComputedStyle(document.body).backgroundColor,
+      height: window.screen.height
+    };
 
     return (
       <div>
-        <div style={(visibleFrame !== 0) && styles.hidden || {}} ref="lockMessage"/>
-        <div style={(visibleFrame !== 1) && styles.hidden || {}} ref="hiddenMessage"/>
-        <div style={(visibleFrame !== 2) && styles.hidden || {}} ref="content"/>
+        <div ref="content"/>
+        <div style={[frameStyle, !isLockedStage && styles.hidden]} ref="lockMessage"/>
+        <div style={[frameStyle, !isHiddenStage && styles.hidden]} ref="hiddenMessage"/>
       </div>
     );
   }
-});
+}));
 
 export default connect(state => {
   const { viewAs } = state.stageLock;
 
-  let isLocked = false;
-  let isHidden = false;
+  let isLockedStage = false;
+  let isHiddenStage = false;
   if (viewAs === ViewType.Student) {
     const { currentStageId } = state.progress;
     const { selectedSectionId } = state.sections;
     const hiddenStageMap = state.hiddenStage.get('bySection');
 
     const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
-    isLocked = !!fullyLocked[currentStageId];
-    isHidden = isHiddenFromState(hiddenStageMap, selectedSectionId, currentStageId);
+    isLockedStage = !!fullyLocked[currentStageId];
+    isHiddenStage = isHiddenFromState(hiddenStageMap, selectedSectionId, currentStageId);
   }
 
   return {
-    isHidden,
-    isLocked
+    isHiddenStage,
+    isLockedStage
   };
 })(TeacherLevelGroup);
