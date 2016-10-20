@@ -7,7 +7,7 @@
   %br/
   = submit_tag 'Go!'
 
-- if @section
+- if @section && @section.user
   %p= "Section code: #{@section.code}"
   %p{id: 'section_owner'}= "Owner: #{@section.user.email}"
   %a{href: teacher_dashboard_section_progress_url(@section)}
@@ -16,3 +16,6 @@
   %pre= @section.inspect
   %h3 Teacher dump
   %pre= @section.user.inspect
+- elsif @section
+  %p= "Section code: #{@section.code}"
+  %p{id: 'section_owner'}= "Owner: DELETED"

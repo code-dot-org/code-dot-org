@@ -34,10 +34,10 @@ def main
   on_call = `curl -H "Content-type: application/json" -H "Authorization: Token token=#{PAGERDUTY_TOKEN}" -X GET -G "https://codeorg.pagerduty.com/api/v1/users/on_call"`
   on_call_parsed = JSON.parse(on_call)
   primary_dotd_email = nil
-  secondary_dotd_email = nil
   on_call_parsed['users'].each do |user|
+    # Level 1 is the primary level, with level 2, level 3, and level 4 being
+    # waterfall levels for pages that fail to be ACK'ed by higher levels.
     primary_dotd_email = user['email'] if dotd?(user, 1)
-    secondary_dotd_email = user['email'] if dotd?(user, 2)
   end
 
   # Match PagerDuty email to Slack mention name.
@@ -45,14 +45,10 @@ def main
   primary_dotd_user = JSON.parse(users_list)['members'].
     find { |member| primary_dotd_email == member['profile']['email'] }
   primary_dotd_user = '(ERROR: check schedule)' unless primary_dotd_user
-  secondary_dotd_user = JSON.parse(users_list)['members'].
-    find { |member| secondary_dotd_email == member['profile']['email'] }
-  secondary_dotd_user = '(ERROR: check schedule)' unless secondary_dotd_user
 
   # Set the new developers room topic
-  new_topic = current_topic.
-    sub(/^.+?;/, "DOTD: @#{primary_dotd_user}(@#{secondary_dotd_user});")
+  new_topic = current_topic.sub(/^.+?;/, "DOTD: @#{primary_dotd_user};")
   open("https://slack.com/api/channels.setTopic?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}&topic=#{new_topic}")
 end
 
-main unless only_one_running?(__FILE__)
+main if only_one_running?(__FILE__)

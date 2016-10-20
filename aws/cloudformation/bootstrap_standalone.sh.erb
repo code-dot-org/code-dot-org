@@ -103,7 +103,7 @@ JSON
 # Bootstrap the first cdo-apps Rakefile build on a new instance.
 rm -f /etc/init.d/{dashboard,pegasus}
 # Bootstrap the npm builds on a new instance.
-rm -rf ${HOME_DIR}/{apps/build}
+rm -rf ${HOME_DIR}/apps/build
 
 OPTIONS="<%=local_mode ? '-z' : ''%> -b ${BRANCH} -n ${NODE_NAME}"
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
