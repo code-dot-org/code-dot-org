@@ -465,6 +465,9 @@ class Craft < Blockly
   <block type="craft_moveTowardSheepPlayerChicken"></block>
 </category>
 <category name="Limited Entities">
+  <block type="craft_chickenSpawned"></block>
+  <block type="craft_sheepSpawnedClicked"></block>
+  <block type="craft_creeperSpawnedTouchedClicked"></block>
   <block type="craft_sheepClicked"></block>
   <block type="craft_chickenSpawnedClicked"></block>
   <block type="craft_sheepSpawnedTouchedClicked"></block>

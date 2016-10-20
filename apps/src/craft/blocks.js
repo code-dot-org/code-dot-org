@@ -511,6 +511,10 @@ exports.install = function (blockly, blockInstallOptions) {
   createLimitedEventBlockForEntity('cow', 'cowSpawnedTouchedClicked', 'cow', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
   createLimitedEventBlockForEntity('zombie', 'zombieSpawnedTouchedClickedDay', 'zombie', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
   createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClickedDay', 'creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
+  createLimitedEventBlockForEntity('chicken', 'chickenSpawned', 'chicken', ['WHEN_SPAWNED']);
+  createLimitedEventBlockForEntity('sheep', 'sheepSpawnedClicked', 'sheep', ['WHEN_SPAWNED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClicked', 'creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+
 
 
   function makeGlobalEventBlock(functionName, text, eventType) {
