@@ -8,7 +8,7 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
-import color from '../color';
+import color from '../../../color';
 
 const borderRadius = 2;
 
