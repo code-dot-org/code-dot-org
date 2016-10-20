@@ -150,7 +150,7 @@ describe('GameLabSprite', function () {
       expect(isTouching5to6).to.equal(true).and.to.equal(isTouching5to6);
     });
 
-    it('does not affect the location or velocity of the sprite', function () {
+    it('does not affect the location of the sprite', function () {
       var sprite1 = createSprite(170, 170, 100, 100);
       var sprite2 = createSprite(200, 200, 100, 100);
       var isTouching1to2 = sprite1.isTouching(sprite2);
@@ -159,6 +159,21 @@ describe('GameLabSprite', function () {
       expect(sprite1.y).to.equal(170);
       expect(sprite2.x).to.equal(200);
       expect(sprite2.y).to.equal(200);
+    });
+
+    it('does not affect the velocity of the sprites', function () {
+      var sprite1 = createSprite(170, 170, 100, 100);
+      var sprite2 = createSprite(200, 200, 100, 100);
+      sprite1.velocityX = 1;
+      sprite1.velocityY = 1;
+      sprite2.velocityX = 0;
+      sprite2.velocityY = 0;
+      var isTouching1to2 = sprite1.isTouching(sprite2);
+      expect(isTouching1to2).to.equal(true);
+      expect(sprite1.velocityX).to.equal(1);
+      expect(sprite1.velocityY).to.equal(1);
+      expect(sprite2.velocityX).to.equal(0);
+      expect(sprite2.velocityY).to.equal(0);
     });
   });
 
