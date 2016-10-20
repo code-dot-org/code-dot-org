@@ -10,6 +10,8 @@ import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import color from '../color';
 
+const borderRadius = 2;
+
 const styles = {
   input: {
     width: '100%',
@@ -26,22 +28,28 @@ const styles = {
     fontSize: 18,
     color: 'white',
     background: color.cyan,
+    borderTopLeftRadius: borderRadius,
+    borderTopRightRadius: borderRadius,
     padding: 10
   },
   groupBody: {
     background: color.lightest_cyan,
+    borderBottomLeftRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
     overflow: 'hidden',
-    padding: 10
+    padding: 10,
+    marginBottom: 20
   },
   stageCard: {
     fontSize: 18,
     background: 'white',
     border: '1px solid #ccc',
-    borderRadius: 2,
+    borderRadius: borderRadius,
     padding: 20,
     margin: 10
   },
   stageCardHeader: {
+    color: '#5b6770',
     marginBottom: 15
   },
   levelToken: {
@@ -49,7 +57,7 @@ const styles = {
     background: '#eee',
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
-    borderRadius: 2,
+    borderRadius: borderRadius,
     padding: 7,
     margin: '5px 0'
   }
