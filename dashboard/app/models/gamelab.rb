@@ -39,6 +39,7 @@ class Gamelab < Blockly
     debugger_disabled
     pause_animations_by_default
     start_animations
+    teacher_markdown
   )
 
   # List of possible skins, the first is used as a default.
