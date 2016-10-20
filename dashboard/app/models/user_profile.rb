@@ -23,6 +23,7 @@ require 'digest/md5'
 
 class UserProfile < ActiveRecord::Base
   belongs_to :user
+  validates_presence_of :user
 
   include SerializedProperties
   # facilitator: True if the user is a Code.org facilitator.
