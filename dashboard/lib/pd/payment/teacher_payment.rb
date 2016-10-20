@@ -17,5 +17,13 @@ module Pd::Payment
 
     #@return [Numeric] total payment amount
     attr_reader :amount
+
+    def type
+      district_payment_term.try(&:rate_type)
+    end
+
+    def rate
+      district_payment_term.try(&:rate)
+    end
   end
 end

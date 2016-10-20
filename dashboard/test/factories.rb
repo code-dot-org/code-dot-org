@@ -530,11 +530,12 @@ FactoryGirl.define do
     capacity 10
     transient do
       num_sessions 0
+      sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << build(:pd_session, workshop: workshop, start: Date.today + i.days)
+        workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
       end
     end
   end

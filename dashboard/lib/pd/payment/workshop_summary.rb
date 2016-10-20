@@ -62,5 +62,53 @@ module Pd::Payment
     def total_teacher_attendance_days
       teacher_summaries.select(&:qualified?).map(&:days).reduce(0, :+)
     end
+
+    def generate_organizer_report_line_item(with_payment = false)
+      line_item = {
+        organizer_name: workshop.organizer.name,
+        organizer_id: workshop.organizer.id,
+        organizer_email: workshop.organizer.email,
+        workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
+        workshop_type: workshop.workshop_type,
+        section_url: section_url,
+        facilitators: workshop.facilitators.map(&:name).join(', '),
+        num_facilitators: workshop.facilitators.count,
+        workshop_id: workshop.id,
+        workshop_name: workshop.friendly_name,
+        course: workshop.course,
+        subject: workshop.subject,
+        num_registered: workshop.enrollments.count,
+        num_qualified_teachers: num_qualified_teachers,
+        days: num_days,
+      }
+
+      # Facilitator names and emails, 1-6
+      (1..6).each do |n|
+        line_item["facilitator_name_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:name)
+        line_item["facilitator_email_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:email)
+      end
+
+      # Attendance days 1-5
+      session_attendance_counts = attendance_count_per_session
+      (1..5).each do |n|
+        line_item["attendance_day_#{n}".to_sym] = session_attendance_counts[n - 1]
+      end
+
+      if with_payment
+        line_item.merge!({
+          pay_period: pay_period,
+          payment_type: payment.try(&:type),
+          qualified: qualified?,
+          teacher_attendance_days: total_teacher_attendance_days,
+          food_payment: payment.try{|p| p.amounts[:food]},
+          facilitator_payment: payment.try{|p| p.amounts[:facilitator]},
+          staffer_payment: payment.try{|p| p.amounts[:staffer]},
+          venue_payment: payment.try{|p| p.amounts[:venue]},
+          payment_total: payment.try(&:total)
+        })
+      end
+
+      line_item
+    end
   end
 end
