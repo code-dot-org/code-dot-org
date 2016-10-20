@@ -56,12 +56,31 @@ var Sounds = module.exports = function () {
   this.audioUnlocked_ = false;
 
   if (window.AudioContext) {
+    var tryUnlockAudio = function () {
+      try {
+        this.initializeAudioUnlockState_();
+      } catch (e) {
+        /**
+         * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
+         * when iframes are open, potentially related to:
+         *    https://code.google.com/p/chromium/issues/detail?id=308784
+         * or https://code.google.com/p/chromium/issues/detail?id=160022
+         *
+         * In the Chrome case, this will fall-back to the `window.Audio` method
+         */
+      }
+    }.bind(this);
+
     // In order to support prerender, wait until the page exits the
     // "prerender" visibility state before unlocking audio.
     if (document.visibilityState !== "prerender") {
-      this.tryUnlockAudio();
+      tryUnlockAudio();
     } else {
-      document.addEventListener("visibilitychange", this.handleVisibilityChange, false);
+      var handleVisibilityChange = function () {
+        document.removeEventListener("visibilitychange", handleVisibilityChange);
+        tryUnlockAudio();
+      }.bind(this);
+      document.addEventListener("visibilitychange", handleVisibilityChange, false);
     }
   }
 
@@ -69,26 +88,6 @@ var Sounds = module.exports = function () {
 
   /** @private {function[]} */
   this.whenAudioUnlockedCallbacks_ = [];
-};
-
-/**
- * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
- * when iframes are open, potentially related to:
- *    https://code.google.com/p/chromium/issues/detail?id=308784
- * or https://code.google.com/p/chromium/issues/detail?id=160022
- *
- * In the Chrome case, this will fall-back to the `window.Audio` method
- */
-Sounds.prototype.tryUnlockAudio = function () {
-  try {
-    this.initializeAudioUnlockState_();
-  } catch (e) {
-  }
-};
-
-Sounds.prototype.handleVisibilityChange = function () {
-  document.removeEventListener("visibilitychange", this.handleVisibilityChange);
-  this.tryUnlockAudio();
 };
 
 /**
@@ -125,7 +124,7 @@ Sounds.prototype.initializeAudioUnlockState_ = function () {
  */
 Sounds.prototype.isAudioUnlocked = function () {
   // Audio unlock doesn't make sense for the fallback player as used here.
-  return this.audioUnlocked_ || !this.audioContext;
+  return this.audioUnlocked_;
 };
 
 /**
@@ -250,7 +249,10 @@ Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
 Sounds.prototype.register = function (config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
-  sound.preload();
+  this.whenAudioUnlocked(function () {
+    sound.audioContext = this.audioContext;
+    sound.preload();
+  }.bind(this));
   return sound;
 };
 
