@@ -24,7 +24,9 @@ export default class LevelEntity {
         if (levelData.entities !== undefined) {
             for (var i = 0; i < levelData.entities.length; i++) {
                 let data = levelData.entities[i];
-                this.createEntity(data[0], this.id++, data[1], data[2], data[3]);
+                let entity = this.createEntity(data[0], this.id++, data[1], data[2], data[3]);
+                entity.updateHidingTree();
+                entity.updateHidingBlock();
             }
         }
     }

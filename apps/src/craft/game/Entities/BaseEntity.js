@@ -18,6 +18,7 @@ export default class BaseEntity {
         this.offset = [-22, -12];
         this.identifier = identifier;
         this.healthPoint = 3;
+        this.underTree = { state: false, treeIndex: -1 };
     }
 
     tick() {
@@ -28,8 +29,8 @@ export default class BaseEntity {
 
     }
 
-    addCommand(commandQueueItem) {
-        this.queue.addCommand(commandQueueItem);
+    addCommand(commandQueueItem, repeat = false) {
+        this.queue.addCommand(commandQueueItem, repeat);
         // execute the command
         this.queue.begin();
     }
@@ -61,14 +62,86 @@ export default class BaseEntity {
 
     }
 
+
+    updateHidingTree() {
+        var levelView = this.controller.levelView;
+        // this is not under tree
+        if (!this.underTree.state) {
+            var treeList = levelView.trees;
+            for (var i = 0; i < treeList.length; i++) {
+                if (levelView.isUnderTree(i, this.position)) {
+                    levelView.changeTreeAlpha(i, 0.8);
+                    this.underTree = { state: true, treeIndex: i };
+                    break;
+                }
+            }
+            // this is under tree
+        } else {
+            var currentTreeIndex = this.underTree.treeIndex;
+            var entities = this.controller.levelEntity.entityMap;
+            var isOtherEntityUnderTree = function (currentEntity, entities, currentTreeIndex) {
+                for (var value of entities) {
+                    let entity = value[1];
+                    const sameEntity = entity === currentEntity;
+                    if (!sameEntity && entity.underTree.treeIndex === currentTreeIndex)
+                        return true;
+                }
+                return false;
+            };
+            if (!levelView.isUnderTree(currentTreeIndex, this.position)) {
+                if (!isOtherEntityUnderTree(this, entities, currentTreeIndex))
+                    levelView.changeTreeAlpha(currentTreeIndex, 1);
+                this.underTree = { state: false, treeIndex: -1 };
+            }
+        }
+    }
+
+    updateHidingBlock(prevPosition) {
+        var levelView = this.controller.levelView;
+        let frontBlockCheck = function (entity, position) {
+            let frontPosition = [position[0], position[1] + 1];
+            if (frontPosition[1] < 10) {
+                var sprite = levelView.actionPlaneBlocks[levelView.coordinatesToIndex(frontPosition)];
+                if (sprite !== null) {
+                    var tween = entity.controller.levelView.addResettableTween(sprite).to({
+                        alpha: 0.8
+                    }, 300, Phaser.Easing.Linear.None);
+
+                    tween.start();
+                }
+            }
+        }
+
+        let prevBlockCheck = function (entity, position) {
+            let frontPosition = [position[0], position[1] + 1];
+            if (frontPosition[1] < 10) {
+                var sprite = levelView.actionPlaneBlocks[levelView.coordinatesToIndex(frontPosition)];
+                if (sprite !== null) {
+                    var tween = entity.controller.levelView.addResettableTween(sprite).to({
+                        alpha: 1
+                    }, 300, Phaser.Easing.Linear.None);
+
+                    tween.start();
+                }
+            }
+        }
+
+        frontBlockCheck(this, this.position);
+        if(prevPosition !== undefined)
+            prevBlockCheck(this, prevPosition);
+    }
+
     doMoveForward(commandQueueItem, forwardPosition) {
         var levelModel = this.controller.levelModel, levelView = this.controller.levelView;
+        var prevPosition = this.position;
         this.position = forwardPosition;
         // play sound effect
         let groundType = levelModel.groundPlane[levelModel.yToIndex(this.position[1]) + this.position[0]].blockType;
         // play move forward animation and play idle after that
         this.playMoveForwardAnimation(forwardPosition, this.facing, commandQueueItem, groundType, () => {
         });
+        this.updateHidingTree();
+        this.updateHidingBlock(prevPosition);
     }
 
     bump(commandQueueItem) {
@@ -104,11 +177,14 @@ export default class BaseEntity {
 
     moveForward(commandQueueItem, record = true) {
         if (record)
-            this.controller.addCommandRecord("moveForward", this.type);
+            this.controller.addCommandRecord("moveForward", this.type, commandQueueItem.repeat);
         let forwardPosition = this.controller.levelModel.getMoveForwardPosition(this);
         var forwardPositionInformation = this.controller.levelModel.canMoveForward(this);
+        var treeCheck = function (entity) {
+
+        }
         if (forwardPositionInformation[0]) {
-            this.doMoveForward(commandQueueItem, forwardPosition);
+            this.doMoveForward(commandQueueItem, forwardPosition, treeCheck);
         } else {
             this.bump(commandQueueItem);
             this.callBumpEvents(forwardPositionInformation);
@@ -124,7 +200,7 @@ export default class BaseEntity {
      * @memberOf BaseEntity
      */
     moveAway(commandQueueItem, moveAwayFrom) {
-        this.controller.addCommandRecord("moveAway", this.type);
+        this.controller.addCommandRecord("moveAway", this.type, commandQueueItem.repeat);
         var moveAwayPosition = moveAwayFrom.position;
         var bestPosition = [];
         let absoluteDistanceSquare = function (position1, position2) {
@@ -176,7 +252,7 @@ export default class BaseEntity {
      * @memberOf BaseEntity
      */
     moveToward(commandQueueItem, moveTowardTo) {
-        this.controller.addCommandRecord("moveToward", this.type);
+        this.controller.addCommandRecord("moveToward", this.type, commandQueueItem.repeat);
         var moveTowardPosition = moveTowardTo.position;
         var bestPosition = [];
         let absoluteDistanceSquare = function (position1, position2) {
@@ -266,7 +342,7 @@ export default class BaseEntity {
 
     turn(commandQueueItem, direction, record = true) {
         if (record)
-            this.controller.addCommandRecord("turn", this.type);
+            this.controller.addCommandRecord("turn", this.type, commandQueueItem.repeat);
         // update entity direction
         if (direction === -1) {
             this.controller.levelModel.turnLeft(this);
@@ -283,7 +359,7 @@ export default class BaseEntity {
     }
 
     turnRandom(commandQueueItem) {
-        this.controller.addCommandRecord("turnRandom", this.type);
+        this.controller.addCommandRecord("turnRandom", this.type, commandQueueItem.repeat);
         var getRandomInt = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
@@ -300,7 +376,7 @@ export default class BaseEntity {
     }
 
     drop(commandQueueItem, itemType) {
-        this.controller.addCommandRecord("drop", this.type);
+        this.controller.addCommandRecord("drop", this.type, commandQueueItem.repeat);
         var sprite = this.controller.levelView.createMiniBlock(this.position[0], this.position[1], itemType);
         sprite.sortOrder = this.controller.levelView.yToIndex(this.position[1]) + 2;
         this.controller.levelView.playScaledSpeed(sprite.animations, "animate");
@@ -308,7 +384,7 @@ export default class BaseEntity {
     }
 
     attack(commandQueueItem) {
-        this.controller.addCommandRecord("attack", this.type);
+        this.controller.addCommandRecord("attack", this.type, commandQueueItem.repeat);
         let facingName = this.controller.levelView.getDirectionName(this.facing);
         this.controller.levelView.playScaledSpeed(this.sprite.animations, "attack" + facingName);
         setTimeout(() => {

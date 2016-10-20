@@ -21,7 +21,7 @@ export default class Player extends BaseEntity {
 
     if ((queueIsEmpty || (queueHasOne && movementAlmostFinished)) && isMoving) {
       // Arrow key
-      if(this.movementState >= 0) {
+      if (this.movementState >= 0) {
         let direction = this.movementState;
         let callbackCommand = new CallbackCommand(this, () => { }, () => {
           this.lastMovement = +new Date();
@@ -39,7 +39,7 @@ export default class Player extends BaseEntity {
     }
   }
 
-  doMoveForward(commandQueueItem) {
+  doMoveForward(commandQueueItem, frontPosition) {
     var player = this,
       allFoundCreepers,
       groundType,
@@ -79,6 +79,9 @@ export default class Player extends BaseEntity {
         });
       }
     });
+
+    this.updateHidingTree();
+    this.updateHidingBlock(prevPosition);
     this.collectItems(prevPosition);
     this.collectItems();
   }

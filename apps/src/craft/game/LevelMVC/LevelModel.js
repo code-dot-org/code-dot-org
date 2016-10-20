@@ -51,10 +51,15 @@ export default class LevelModel {
 
     let levelData = Object.create(this.initialLevelData);
     let [x, y] = [levelData.playerStartPosition[0], levelData.playerStartPosition[1]];
-
-    this.player = new Player(this.controller, "Player", x, y, this.initialLevelData.playerName || "Steve", !this.actionPlane[this.yToIndex(y) + x].getIsEmptyOrEntity(), levelData.playerStartDirection);
-    this.controller.levelEntity.pushEntity(this.player);
-    this.controller.player = this.player;
+    if(this.initialLevelData.usePlayer !== undefined)
+      this.usePlayer = this.initialLevelData.usePlayer;
+    else
+      this.usePlayer = true;
+    if (this.usePlayer) {
+      this.player = new Player(this.controller, "Player", x, y, this.initialLevelData.playerName || "Steve", !this.actionPlane[this.yToIndex(y) + x].getIsEmptyOrEntity(), levelData.playerStartDirection);
+      this.controller.levelEntity.pushEntity(this.player);
+      this.controller.player = this.player;
+    }
 
     this.computeShadingPlane();
     this.computeFowPlane();
@@ -89,7 +94,9 @@ export default class LevelModel {
 
   // Verifications
   isPlayerNextTo(blockType) {
-    var position;
+    if (!this.usePlayer)
+      return false;
+    var position, blockIndex;
     var result = false;
 
     // above
@@ -190,7 +197,7 @@ export default class LevelModel {
       var entity = entityList[i];
       const notStarted = !entity.queue.isStarted();
       const notFinished = !entity.queue.isFinished();
-      if((notStarted && entity.queue.commandList_.length > 0) || notFinished)
+      if ((notStarted && entity.queue.commandList_.length > 0) || notFinished)
         return true;
     }
     return false;
@@ -205,8 +212,17 @@ export default class LevelModel {
     return false;
   }
 
+  getEntityCount(entityType) {
+    var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
+    return entityList.length; 
+  }
+
   getCommandExecutedCount(commandName, targetType) {
-    return this.controller.getCommandCount(commandName,targetType);
+    return this.controller.getCommandCount(commandName, targetType, false);
+  }
+
+  getRepeatCommandExecutedCount(commandName, targetType) {
+    return this.controller.getCommandCount(commandName, targetType, true);
   }
 
   getTurnRandomCount() {
@@ -234,6 +250,8 @@ export default class LevelModel {
   }
 
   isPlayerAt(position) {
+    if (!this.usePlayer)
+      return false;
     return this.player.position[0] === position[0] &&
       this.player.position[1] === position[1];
   }
@@ -583,20 +601,20 @@ export default class LevelModel {
         result.push("notEmpty");
       if (this.groundPlane[blockIndex].blockType === "water")
         result.push("water");
-      else if(this.groundPlane[blockIndex].blockType === "lava")
+      else if (this.groundPlane[blockIndex].blockType === "lava")
         result.push("lava");
       var frontEntity = this.getEntityAt(position);
       if (frontEntity !== undefined) {
         result.push("frontEntity");
         result.push(frontEntity);
       }
-      result[0] = (this.actionPlane[blockIndex].isWalkable || ((frontEntity !== undefined && frontEntity.isOnBlock) 
-      // action plane is empty
-      && !this.actionPlane[blockIndex].isEmpty)) 
-      // there is no entity 
-      && (frontEntity === undefined)
-      // no lava or water
-      && (this.groundPlane[blockIndex].blockType !== "water" && this.groundPlane[blockIndex].blockType !== "lava");
+      result[0] = (this.actionPlane[blockIndex].isWalkable || ((frontEntity !== undefined && frontEntity.isOnBlock)
+        // action plane is empty
+        && !this.actionPlane[blockIndex].isEmpty))
+        // there is no entity 
+        && (frontEntity === undefined)
+        // no lava or water
+        && (this.groundPlane[blockIndex].blockType !== "water" && this.groundPlane[blockIndex].blockType !== "lava");
     }
     else
       result.push("outBound");

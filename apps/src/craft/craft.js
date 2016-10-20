@@ -533,10 +533,13 @@ Craft.initializeAppLevel = function (levelConfig) {
     afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
   };
 
+  const doNotShowPlayer = levelConfig.usePlayer === false;
+
   Craft.gameController.loadLevel({
     levelVerificationTimeout: levelConfig.levelVerificationTimeout,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
+    usePlayer: !doNotShowPlayer,
     entities: levelConfig.entities,
     isEventLevel: levelConfig.isEventLevel,
     groundDecorationPlane: levelConfig.groundDecorationPlane,

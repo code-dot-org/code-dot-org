@@ -32,13 +32,13 @@ export default class AssetLoader {
       },
       playerSteve: {
         type: 'atlasJSON',
-        pngPath: `${this.assetRoot}images/Steve1013.png`,
-        jsonPath: `${this.assetRoot}images/Steve1013.json`
+        pngPath: `${this.assetRoot}images/Steve_2016.png`,
+        jsonPath: `${this.assetRoot}images/Steve_2016.json`
       },
       playerAlex: {
         type: 'atlasJSON',
-        pngPath: `${this.assetRoot}images/Alex1013.png`,
-        jsonPath: `${this.assetRoot}images/Alex1013.json`
+        pngPath: `${this.assetRoot}images/DevAlex.png`,
+        jsonPath: `${this.assetRoot}images/DevAlex.json`
       },
       AO: {
         type: 'atlasJSON',
@@ -292,7 +292,7 @@ export default class AssetLoader {
         mp3: `${this.assetRoot}audio/chickenhurt2.mp3`,
         ogg: `${this.assetRoot}audio/chickenhurt2.ogg`
       },
-      chickenBock: {
+      chickenBawk: {
         type: 'sound',
         mp3: `${this.assetRoot}audio/chickensay3.mp3`,
         ogg: `${this.assetRoot}audio/chickensay3.ogg`
@@ -479,7 +479,7 @@ export default class AssetLoader {
         'ironGolem',
         'burningInSun',
         'chickenHurt',
-        'chickenBock',
+        'chickenBawk',
         'cowHuff',
         'cowHurt',
         'cowMoo',

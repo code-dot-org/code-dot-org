@@ -50,6 +50,7 @@ class Craft < Blockly
     :day_night_cycle_time,
     :level_verification_timeout,
     :temporary_feedback_message,
+    :use_player,
     :free_play
   )
 
@@ -384,6 +385,7 @@ class Craft < Blockly
     default_game_params[:player_start_direction] = 1
     default_game_params[:is_daytime] = true
     default_game_params[:is_event_level] = true
+    default_game_params[:use_player] = true
 
     default_game_params[:verification_function] = SAMPLE_VERIFICATION_FUNCTIONS[:isPlayerNextTo]
     default_game_params[:timeout_verification_function] = SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS[:fail]

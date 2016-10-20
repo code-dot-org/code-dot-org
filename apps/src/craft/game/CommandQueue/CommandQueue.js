@@ -11,7 +11,8 @@ export default class CommandQueue {
     this.highPriorityCommands = [];
   }
 
-  addCommand(command) {
+  addCommand(command, repeat = false) {
+    command.repeat = repeat;
     // if we're handling a while command, add to the while command's queue instead of this queue
     if (this.whileCommandQueue) {
       this.whileCommandQueue.addCommand(command);
@@ -65,6 +66,7 @@ export default class CommandQueue {
           if (this.repeatCommands.length === 0)
             this.state = CommandState.SUCCESS;
           // if there are repeat command for this queue, add them
+          this.gameController.startPushRepeatCommand();
           for (var i = 0; i < this.repeatCommands.length; i++) {
             if (this.repeatCommands[i][1] > 0) {
               this.repeatCommands[i][0]();
@@ -75,6 +77,7 @@ export default class CommandQueue {
             else
               this.repeatCommands.splice(i, 1);
           }
+          this.gameController.endPushRepeatCommand();
           return;
         }
         // get new command from the command list

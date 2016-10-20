@@ -6,7 +6,7 @@ export default class Chicken extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
         var zOrderYIndex = this.position[1];
-        this.offset = [-43, -55];
+        this.offset = [-25, -32];
         this.prepareSprite();
         this.sprite.sortOrder = this.controller.levelView.yToIndex(zOrderYIndex);
     }
@@ -20,6 +20,7 @@ export default class Chicken extends BaseEntity {
         var frameList = [];
         var frameName = "chicken"
         this.sprite = actionPlane.create(0, 0, 'chicken', 'chicken0001.png');
+        this.sprite.scale.setTo(0.75,0.75);
         let stillFrameName = ['chicken0222.png', 'chicken0111.png', 'chicken0001.png', 'chicken0333.png'];
         let idleDelayFrame = 8;
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump],[eat]]

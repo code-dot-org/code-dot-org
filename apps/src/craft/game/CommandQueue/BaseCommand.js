@@ -7,6 +7,7 @@ export default class BaseCommand {
     this.HighlightCallback = highlightCallback;
     this.state = CommandState.NOT_STARTED;
     this.target = targetEntity;
+    this.repeat = false;
   }
 
   tick() {
