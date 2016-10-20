@@ -2895,7 +2895,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
-    versionHistoryInInstructionsHeader: config.versionHistoryInInstructionsHeader,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,

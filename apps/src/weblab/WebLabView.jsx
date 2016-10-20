@@ -4,6 +4,10 @@
 import React from 'react';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
+import msg from '@cdo/locale';
+import weblabMsg from '@cdo/weblab/locale';
+import PaneHeader from '../templates/PaneHeader';
+var PaneButton = PaneHeader.PaneButton;
 
 /**
  * Top-level React wrapper for WebLab
@@ -37,7 +41,6 @@ const WebLabView = React.createClass({
   render: function () {
     const iframeStyles = {
       position: 'absolute',
-      top: '20px',
       width: '100%',
       height: 'calc(100% - 20px)'
     };
@@ -46,19 +49,52 @@ const WebLabView = React.createClass({
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
           <div>
-            <a id="add-file-html-link" href="#" onClick={this.props.onAddFileHTML}> Add HTML File </a>
-            |
-            <a id="add-file-css-link" href="#" onClick={this.props.onAddFileCSS}> Add CSS File </a>
-            |
-            <a id="add-file-image-link" href="#" onClick={this.props.onAddFileImage}> Add Image File </a>
-            |
-            <a id="undo-link" href="#" onClick={this.props.onUndo}> Undo </a>
-            |
-            <a id="redo-link" href="#" onClick={this.props.onRedo}> Redo </a>
-            |
-            <a id="inspector-link" href="#" onClick={this.props.onToggleInspector}> Inspector </a>
-            <br/>
+            <PaneHeader hasFocus={true} id="headers">
+              <div>
+              <PaneButton
+                iconClass="fa fa-plus-circle"
+                leftJustified={true}
+                headerHasFocus={true}
+                isRtl={false}
+                onClick={this.props.onAddFileHTML}
+                label={weblabMsg.addHTMLButton()}
+              />
+              <PaneButton
+                iconClass="fa fa-plus-circle"
+                leftJustified={true}
+                headerHasFocus={true}
+                isRtl={false}
+                onClick={this.props.onAddFileCSS}
+                label={weblabMsg.addCSSButton()}
+              />
+              <PaneButton
+                iconClass="fa fa-plus-circle"
+                leftJustified={true}
+                headerHasFocus={true}
+                isRtl={false}
+                onClick={this.props.onAddFileImage}
+                label={weblabMsg.addImageButton()}
+              />
+              <PaneButton
+                id="versions-header"
+                iconClass="fa fa-clock-o"
+                leftJustified={true}
+                headerHasFocus={true}
+                isRtl={false}
+                label={msg.showVersionsHeader()}
+              />
+              <PaneButton
+                iconClass="fa fa-mouse-pointer"
+                leftJustified={false}
+                headerHasFocus={true}
+                isRtl={false}
+                onClick={this.props.onToggleInspector}
+                label={weblabMsg.toggleInspector()}
+              />
+              </div>
+            </PaneHeader>
             <iframe
+              className="weblab-host"
               src="/weblab/host"
               frameBorder="0"
               scrolling="no"
