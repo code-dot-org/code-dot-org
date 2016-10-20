@@ -54,6 +54,7 @@ level 'CSD U4 - Design Mode Input Widgets'
 level 'CSDU4 - Design Mode - 21'
 level 'CSDU4 - Design Mode Icons'
 level 'CSDU4 - Design Mode - 18'
+named_level 'Design a Screen for your App'
 level 'CSD U4 - Design Mode Project'
 
 stage 'Making it Interactive'
