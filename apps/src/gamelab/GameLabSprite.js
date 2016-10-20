@@ -514,7 +514,7 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
                     other.velocity.y = newVelY2*other.restitution;
                 }
               }
-            } else if (type === 'collide') {
+            } else if (type === 'collide' && modifyPosition) {
               // Here, expect the caller to treat the callee as immovable,
               // and to simulate a totally inelastic collision,
               // adopting the callee's velocity along the displacement axis
@@ -549,9 +549,11 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
             // Here, expect the callee to treat the caller as immovable,
             // and to simulate a totally inelastic collision,
             // adopting the caller's velocity along the displacement axis
-            var thisVelocityAlongDisplacement = projectAontoB(this.velocity, displacement);
-            var otherVelocityAlongDisplacement = projectAontoB(other.velocity, displacement);
-            other.velocity.sub(otherVelocityAlongDisplacement).add(thisVelocityAlongDisplacement);
+            if (modifyPosition) {
+              var thisVelocityAlongDisplacement = projectAontoB(this.velocity, displacement);
+              var otherVelocityAlongDisplacement = projectAontoB(other.velocity, displacement);
+              other.velocity.sub(otherVelocityAlongDisplacement).add(thisVelocityAlongDisplacement);
+            }
 
             if(displacement.x > 0)
               this.touching.left = true;
