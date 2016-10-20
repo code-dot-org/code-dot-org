@@ -36,7 +36,6 @@ const styles = {
     background: color.lightest_cyan,
     borderBottomLeftRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
-    overflow: 'hidden',
     padding: 10,
     marginBottom: 20
   },
@@ -66,8 +65,23 @@ const styles = {
   },
   controlIcon: {
     margin: '0 5px'
+  },
+  levelSelect: {
+    marginBottom: 5
+  },
+  levelTypeLabel: {
+    float: 'left',
+    lineHeight: '36px',
+    marginLeft: 5
+  },
+  levelTypeSelect: {
+    width: 'calc(100% - 80px)',
+    marginLeft: 80
   }
 };
+
+const ArrowRenderer = ({onMouseDown}) => <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
+ArrowRenderer.propTypes = {onMouseDown: React.PropTypes.func.isRequried};
 
 /**
  * Component for editing course scripts.
@@ -254,9 +268,12 @@ const LevelEditor = React.createClass({
                   value={id}
                   onChange={this.handleLevelSelected}
                   clearable={false}
+                  arrowRenderer={ArrowRenderer}
+                  style={styles.levelSelect}
                 />
               );
             })}
+            <span style={styles.levelTypeLabel}>Level type:</span>
             <VirtualizedSelect
               value={this.props.level.kind}
               options={[{
@@ -269,7 +286,8 @@ const LevelEditor = React.createClass({
                 label: 'Unplugged', value: 'unplugged'
               }]}
               clearable={false}
-              arrowRenderer={({onMouseDown}) => <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />}
+              arrowRenderer={ArrowRenderer}
+              style={styles.levelTypeSelect}
             />
           </div> :
           <div>
