@@ -32,7 +32,8 @@
     "markdown_instructions": "Now nest this loop inside another loop to draw 10 triangles.  \r\nThis is called a \"nested\" loop.  ",
     "examples_required": "false",
     "authored_hints": "[]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

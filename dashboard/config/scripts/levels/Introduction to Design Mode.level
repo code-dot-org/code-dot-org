@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2016-10-20T16:59:10.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "video_key": "csp_applab_design",
+    "markdown_instructions": "**You do not need to watch this video** to understand or complete this lesson - it is merely here if you are interested in getting a general overview.  \r\n\r\nIn this lesson to get started we will only use a few of the features depicted.",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_teacher_markdown": "76+CN1ZvBAXHCsWRbzPwv0GqR7o2rAWLnKTKJjS6SaUzNxlF75P51nNE/KW+\nXuBwg11O2/zOxpMXTPBbYTlZQC4im1FRC5vxW9hqi5kKgyyOv0QvXURBdUMg\nq08xZCtjkJ5MNnb6x+h3Qz9A+cx0Sw/wnqc5BluSaHzjtVfU/zaAkddxxovA\nejJjcwe3/B9foEb7Y/+WkR+1UPhW5JZMdLCFI4F4nDLBbkoT2PVoPDyRzok8\nCQ2AZOJAXybT/7V7Q1d0n+bIYr+yYV1hOtBIGlpJrr/hPUi2waWiFntMtoI=\n"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
