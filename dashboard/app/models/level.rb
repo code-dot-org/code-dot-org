@@ -184,6 +184,7 @@ class Level < ActiveRecord::Base
     Level.level_cache[id] = self
     Level.level_cache[name] = self
     script_levels.each do |sl|
+      next unless ScriptLevel.script_level_cache.key?(sl.id)
       ScriptLevel.script_level_cache[sl.id].levels = ScriptLevel.includes(
         {levels: [:game, :concepts, :level_concept_difficulty]}).find(sl.id).levels
     end
