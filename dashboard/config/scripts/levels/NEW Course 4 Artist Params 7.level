@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "ideal": "18"
+    "ideal": "18",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

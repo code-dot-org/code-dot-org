@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The artist needs to turn 45 degrees to the right before he starts drawing.\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"This V is really just half of a square.  What would the code be to draw half of a square?\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
