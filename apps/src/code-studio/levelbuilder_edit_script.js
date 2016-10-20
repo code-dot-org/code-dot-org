@@ -60,6 +60,12 @@ const styles = {
     borderRadius: borderRadius,
     padding: 7,
     margin: '5px 0'
+  },
+  controls: {
+    float: 'right'
+  },
+  controlIcon: {
+    margin: '0 5px'
   }
 };
 
@@ -185,7 +191,10 @@ const FlexGroupEditor = React.createClass({
         {_.map(groups, (stages, group) => {
           return (
             <div key={group}>
-              <div style={styles.groupHeader}>Group {count++}: {group}</div>
+              <div style={styles.groupHeader}>
+                Group {count++}: {group}
+                <Controls />
+              </div>
               <div style={styles.groupBody}>
                 {stages.map(stage => <StageEditor key={stage.id} stage={stage} />)}
               </div>
@@ -205,7 +214,10 @@ const StageEditor = React.createClass({
   render() {
     return (
       <div style={styles.stageCard}>
-        <div style={styles.stageCardHeader}>Stage {this.props.stage.position}: {this.props.stage.name}</div>
+        <div style={styles.stageCardHeader}>
+          Stage {this.props.stage.position}: {this.props.stage.name}
+          <Controls />
+        </div>
         {this.props.stage.levels.map(level => <LevelEditor key={level.position} level={level} />)}
       </div>
     );
@@ -265,6 +277,18 @@ const LevelEditor = React.createClass({
             {this.props.level.ids.length > 1 && ` (${this.props.level.ids.length} variants...)`}
           </div>
         }
+      </div>
+    );
+  }
+});
+
+const Controls = React.createClass({
+  render() {
+    return (
+      <div style={styles.controls}>
+        <i style={styles.controlIcon} className="fa fa-caret-up" />
+        <i style={styles.controlIcon} className="fa fa-caret-down" />
+        <i style={styles.controlIcon} className="fa fa-trash" />
       </div>
     );
   }
