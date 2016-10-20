@@ -217,7 +217,7 @@ const LevelEditor = React.createClass({
     this.setState({expanded: true});
   },
 
-  handleValueSelected(value) {
+  handleLevelSelected(value) {
     console.log(value);
   },
 
@@ -232,11 +232,25 @@ const LevelEditor = React.createClass({
                   key={id}
                   options={levelKeyList}
                   value={id}
-                  onChange={this.handleValueSelected}
-                  autofocus={true}
+                  onChange={this.handleLevelSelected}
+                  clearable={false}
                 />
               );
             })}
+            <VirtualizedSelect
+              value={this.props.level.kind}
+              options={[{
+                label: 'Puzzle', value: 'puzzle'
+              }, {
+                label: 'Assessment', value: 'assessment'
+              }, {
+                label: 'Named Level', value: 'named_level'
+              }, {
+                label: 'Unplugged', value: 'unplugged'
+              }]}
+              clearable={false}
+              arrowRenderer={({onMouseDown}) => <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />}
+            />
           </div> :
           <div>
             {this.props.level.key}
