@@ -377,7 +377,7 @@ class FilesApi < Sinatra::Base
     last_modified result[:last_modified]
 
     if result[:status] == 'NOT_FOUND'
-      { "filesVersionId": "unused", "files": [] }.to_json
+      { "filesVersionId": "", "files": [] }.to_json
     else
       # {
       #   "filesVersionId": "sadfhkjahfsdj",
@@ -501,7 +501,7 @@ class FilesApi < Sinatra::Base
     # read the manifest
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, MANIFEST_FILENAME)
-    return { filesVersionId: "unused" }.to_json if manifest_result[:status] == 'NOT_FOUND'
+    return { filesVersionId: "" }.to_json if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
     # overwrite the manifest file with an empty list

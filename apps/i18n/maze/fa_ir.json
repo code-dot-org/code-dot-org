@@ -111,5 +111,8 @@
   "word": "کلمه را پیدا کنید",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "بله",
-  "youSpelled": "اسپل کنید"
+  "youSpelled": "اسپل کنید",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

@@ -516,6 +516,13 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
+  factory :user_profile do
+    user { create :teacher }
+    created_at { Time.zone.now }
+    updated_at { Time.zone.now }
+    course UserProfile::CSP
+  end
+
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first

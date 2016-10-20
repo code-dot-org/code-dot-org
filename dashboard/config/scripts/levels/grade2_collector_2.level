@@ -39,28 +39,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_move">
-              <title name="DIR">moveForward</title>
-              <next>
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -84,15 +63,25 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_dropdown">
-              <title name="TIMES" config="3-10">4</title>
-              <statement name="DO">
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="collector_collect"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
-              </statement>
-              <next>
-                <block type="collector_collect"/>
               </next>
             </block>
           </next>

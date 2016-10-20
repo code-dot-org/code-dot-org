@@ -111,5 +111,8 @@
   "word": "শব্দটি খুঁজুন",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "\"হ্যাঁ\"",
-  "youSpelled": "আপনি বানান করেছেন"
+  "youSpelled": "আপনি বানান করেছেন",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

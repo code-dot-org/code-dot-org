@@ -13,9 +13,10 @@ require 'twilio-ruby'
 def main
   @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
 
-  # Since this script is cronned to run every five minutes, we offset by ten
-  # minutes to assure that we see every message twice.
-  date_to_delete = Time.now - 10 * 60
+  # We backtrack an hour as messages may not receive their final API state for
+  # an hour. We further backtrack five minutes, as this script is cronned to run
+  # every five minutes. We further backtrack a minute for rounding error.
+  date_to_delete = Time.now - (60 + 5 + 1) * 60
 
   messages_to_delete = @client.account.messages.list(
     date_sent: date_to_delete.strftime('%F'),

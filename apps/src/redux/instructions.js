@@ -11,6 +11,7 @@ const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HE
 const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
+const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
 
 const ENGLISH_LOCALE = 'en_us';
 
@@ -30,6 +31,7 @@ const instructionsInitialState = {
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
+  teacherMarkdown: undefined,
   hasContainedLevels: false,
   collapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
@@ -42,8 +44,8 @@ const instructionsInitialState = {
   // The maximum height we'll allow the resizer to drag to. This is based in
   // part off of the size of the code workspace.
   maxAvailableHeight: Infinity,
-
-  hasAuthoredHints: false
+  hasAuthoredHints: false,
+  overlayVisible: false
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -57,7 +59,9 @@ export default function reducer(state = instructionsInitialState, action) {
       shortInstructions,
       shortInstructions2,
       longInstructions,
-      hasContainedLevels
+      hasContainedLevels,
+      overlayVisible,
+      teacherMarkdown,
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -70,7 +74,9 @@ export default function reducer(state = instructionsInitialState, action) {
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      teacherMarkdown,
       hasContainedLevels,
+      overlayVisible,
       collapsed
     });
   }
@@ -116,19 +122,27 @@ export default function reducer(state = instructionsInitialState, action) {
     });
   }
 
+  if (action.type === HIDE_OVERLAY) {
+    return Object.assign({}, state, {
+      overlayVisible: false
+    });
+  }
+
   return state;
 }
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages }) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
   shortInstructions,
   shortInstructions2,
   longInstructions,
-  hasContainedLevels
+  hasContainedLevels,
+  overlayVisible,
+  teacherMarkdown,
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -171,6 +185,10 @@ export const setHasAuthoredHints = hasAuthoredHints => ({
 export const setFeedback = feedback => ({
   type: SET_FEEDBACK,
   feedback
+});
+
+export const hideOverlay = () => ({
+  type: HIDE_OVERLAY
 });
 
 // HELPERS
@@ -221,9 +239,20 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
-  const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane,
-      hasContainedLevels } = config;
-  const { instructions, instructions2, markdownInstructions, inputOutputTable } = level;
+  const {
+    level,
+    locale,
+    noInstructionsWhenCollapsed,
+    showInstructionsInTopPane,
+    hasContainedLevels,
+    teacherMarkdown
+  } = config;
+  const {
+    instructions,
+    instructions2,
+    markdownInstructions,
+    inputOutputTable
+  } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
   if (noInstructionsWhenCollapsed) {
@@ -270,9 +299,11 @@ export const determineInstructionsConstants = config => {
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
+    overlayVisible: !!config.level.instructionsImportant,
     shortInstructions,
     shortInstructions2,
     longInstructions,
+    teacherMarkdown,
     hasContainedLevels
   };
 };

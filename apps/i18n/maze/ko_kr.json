@@ -111,5 +111,8 @@
   "word": "단어 찾기",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "예",
-  "youSpelled": "말"
+  "youSpelled": "말",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

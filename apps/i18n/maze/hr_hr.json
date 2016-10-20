@@ -111,5 +111,8 @@
   "word": "Pronađi riječ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Da",
-  "youSpelled": "Napisano je"
+  "youSpelled": "Napisano je",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

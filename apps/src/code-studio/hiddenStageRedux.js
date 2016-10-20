@@ -130,7 +130,7 @@ export function isHiddenFromState(bySection, sectionId, stageId) {
     return false;
   }
   // if we don't have a sectionId, we must be a student
-  if (sectionId === null){
+  if (!sectionId){
     sectionId = STUDENT_SECTION_ID;
   }
   return !!bySection.getIn([sectionId, stageId.toString()]);
