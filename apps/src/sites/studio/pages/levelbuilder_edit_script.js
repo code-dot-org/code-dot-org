@@ -197,7 +197,8 @@ const FlexGroupEditor = React.createClass({
   },
 
   render() {
-    const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Default'));
+    const nonPeerReviewStages = this.props.stages.filter(stage => stage.id);
+    const groups = _.groupBy(nonPeerReviewStages, stage => (stage.flex_category || 'Default'));
     let count = 1;
 
     return (
