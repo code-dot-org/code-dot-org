@@ -111,3 +111,5 @@
 .field
   =f.label 'Disable code debugger (Console is still enabled)'
   = boolean_check_box f, :debugger_disabled
+
+= render partial: 'levels/editors/teacher_only_markdown', locals: {f: f}
