@@ -212,7 +212,7 @@ const entityActionBlocks = {
 };
 
 const entityActionTargetDropdownBlocks = {
-  'moveToward': 'move toward',
+  'moveToward': 'move a step toward',
   'moveTo': 'move to',
   'moveAway': 'move away from'
 };
