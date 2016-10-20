@@ -15,6 +15,7 @@ import 'codemirror/addon/fold/xml-fold';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
+import marked from 'marked';
 
 CodeMirrorSpellChecker({
   codeMirrorInstance: CodeMirror,
@@ -30,6 +31,8 @@ CodeMirrorSpellChecker({
  *        this editor.
  */
 module.exports = function (target, mode, callback, attachments) {
+  let updatePreview;
+
   // Code mirror parses html using xml mode
   var htmlMode = false;
   if (mode === 'html') {
@@ -41,6 +44,26 @@ module.exports = function (target, mode, callback, attachments) {
   if (mode === 'markdown') {
     backdrop = mode;
     mode = 'spell-checker';
+
+    // In markdown mode, look for a preview element (found by just appending
+    // _preview to the target id), if it exists extend our callback to update
+    // the preview element with the markdown contents
+    const previewElement = $(`#${target}_preview`);
+    if (previewElement.length > 0) {
+      const originalCallback = callback;
+      updatePreview = editor => {
+        previewElement.html(marked(editor.getValue()));
+        previewElement.children('details').details();
+      };
+
+      callback = (editor, ...rest) => {
+        updatePreview(editor);
+        if (originalCallback) {
+          originalCallback(editor, ...rest);
+        }
+      };
+
+    }
   }
 
   var node = target.nodeType ? target : document.getElementById(target);
@@ -57,8 +80,10 @@ module.exports = function (target, mode, callback, attachments) {
   if (callback) {
     editor.on('change', callback);
   }
+  if (updatePreview) {
+     updatePreview(editor);
+  }
   if (attachments) {
-
     // default options are for markdown mode
     var attachOptions = {
       uploadUrl: '/level_assets/upload',

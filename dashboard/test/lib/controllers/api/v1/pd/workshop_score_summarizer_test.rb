@@ -25,7 +25,7 @@ class Api::V1::Pd::WorkshopScoreSummarizerTest < ActiveSupport::TestCase
     PEGASUS_DB.stubs(:[]).returns(@some_dumb_object)
     @some_dumb_object.stubs(:where).returns([happy_teacher_response])
 
-    @workshop = create(:pd_workshop)
+    @workshop = create(:pd_workshop, facilitators: [create(:facilitator)])
     create(:pd_enrollment, workshop: @workshop)
     @workshops = [@workshop]
   end
@@ -56,7 +56,10 @@ class Api::V1::Pd::WorkshopScoreSummarizerTest < ActiveSupport::TestCase
         part_of_community_s: 6
     }
 
-    assert_equal expected_results, get_score_for_workshops(@workshops)
+    expected_facilitator_results = Hash.new
+    expected_facilitator_results[@workshop.facilitators.first.name] = expected_results
+
+    assert_equal [expected_results, expected_facilitator_results], get_score_for_workshops(@workshops, true)
   end
 
   private

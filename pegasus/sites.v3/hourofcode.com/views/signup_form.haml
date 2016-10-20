@@ -1,3 +1,5 @@
+- signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
+
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
@@ -118,7 +120,7 @@
 
   function signupFormError(data)
   {
-    $('#error_message').html('<p>#{hoc_s(:signup_submit_error_message)}</p>').show();
+    $('#error_message').html("<p>#{signup_submit_error_message}</p>").show();
     $("#signup_submit").removeAttr('disabled');
   }
 

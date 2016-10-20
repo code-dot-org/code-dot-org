@@ -42,5 +42,7 @@ You'll see a new set of switches above the app area that let you flip back and f
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Some students may be tempted to start playing around in Code Mode early on, but for this lesson we are going to focus solely on mocking up a User Interface. Let students know that they'll get to the code soon enough.
+### Design First
+
+Some students may be tempted to start playing around in Code Mode early on, but for this lesson we are going to focus solely on mocking up a User Interface. Let students know that they'll get to the code soon enough. These first few levels will allow students to build up a screen of their own design using all of the elements available in App Lab without worrying about the actual app they are creating.
 MARKDOWN

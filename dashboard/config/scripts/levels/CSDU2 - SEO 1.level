@@ -5,8 +5,9 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Personal Website: Search Engine Optimization\r\n\r\nYou are going to update your website to optimize for finding it on a search engine. It is important to know that your website is hosted by Code.org and so it might not be as ease to find as a website with its own special URL and storage area.\r\n\r\n# Do This\r\n\r\n* Run your website through the SEO\r\n* Write down the issues it highlights\r\n* We will learn how to fix some of those issues in the next couple levels however some may be things you want to investigate on your own later such as Social Media presence.",
-    "project_template_level_name": "CSDU2 Portfolio Template"
+    "markdown_instructions": "# Personal Website: Search Engine Optimization\r\n\r\nYou are going to update your website to optimize for finding it on a search engine. It is important to know that your website is hosted by Code.org and so it might not be as ease to find as a website with its own special URL and storage area.\r\n\r\n# Do This\r\n\r\n* Run your website through the <a href=\"http://www.seocentro.com/tools/seo/seo-analyzer.html\" target=\"_blank\"> SEO </a>\r\n* Write down the issues it highlights with your website\r\n* We will learn how to fix some of those issues in the next couple levels however some may be things you want to investigate on your own later such as Social Media presence.",
+    "project_template_level_name": "CSDU2 Portfolio Template",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",

@@ -81,7 +81,6 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
-  config.versionHistoryInInstructionsHeader = true;
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
@@ -142,6 +141,7 @@ WebLab.prototype.init = function (config) {
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
+    noVisualization: true,
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
