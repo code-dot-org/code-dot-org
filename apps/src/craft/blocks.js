@@ -3,7 +3,7 @@ import { singleton as studioApp } from '../StudioApp';
 import { stripQuotes, valueOr } from '../utils';
 import _ from 'lodash';
 
-const ENTITY_INPUT_EXTRA_SPACING = 23;
+const ENTITY_INPUT_EXTRA_SPACING = 14;
 
 const eventTypes = Object.freeze({
   WhenTouched : 0,
