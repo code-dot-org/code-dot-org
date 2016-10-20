@@ -1,4 +1,3 @@
-/* globals appOptions  */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,8 +13,6 @@ import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
   LevelStatus,
-  mergeActivityResult,
-  activityCssClass
 } from './activityUtils';
 import {
   initProgress,

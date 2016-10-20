@@ -3,7 +3,6 @@ import React from 'react';
 import Radium from 'radium';
 import {singleton as studioApp} from '../StudioApp';
 import * as applabConstants from './constants';
-import msg from '@cdo/locale';
 
 const PHONE_MARGIN = 68;
 

@@ -90,7 +90,7 @@ var CONFIGS = {
     corn: 'corn.png',
     pumpkin: 'pumpkin.png',
     sprout: 'sprout.png',
-    bean: 'bean.png',
+    lettuce: 'lettuce.png',
 
     harvestSound: 'dig.mp3',
 

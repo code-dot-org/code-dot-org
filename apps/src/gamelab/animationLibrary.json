@@ -869,6 +869,2184 @@
         "y": 49
       }
     },
+    "category_animals/elephant": {
+      "name": "elephant",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 348,
+        "y": 282
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:40:35 UTC",
+      "pngLastModified": "2016-10-10 22:40:38 UTC",
+      "version": "N5X56OjGe49IqvJtuqzmIBKo8_G60r62",
+      "sourceUrl": "/api/v1/animation-library/N5X56OjGe49IqvJtuqzmIBKo8_G60r62/category_animals/elephant.png",
+      "sourceSize": {
+        "x": 348,
+        "y": 282
+      }
+    },
+    "category_animals/elephant_square": {
+      "name": "elephant_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:40:07 UTC",
+      "pngLastModified": "2016-10-10 22:40:27 UTC",
+      "version": "OKkIf_i3vb_50tp4z6KgPKQfvy_InizO",
+      "sourceUrl": "/api/v1/animation-library/OKkIf_i3vb_50tp4z6KgPKQfvy_InizO/category_animals/elephant_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/elephant_token": {
+      "name": "elephant_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:40:30 UTC",
+      "pngLastModified": "2016-10-10 22:40:33 UTC",
+      "version": "v_1E8sxG0Szoet9Ayv4XVYbKYyA2ddif",
+      "sourceUrl": "/api/v1/animation-library/v_1E8sxG0Szoet9Ayv4XVYbKYyA2ddif/category_animals/elephant_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/giraffe": {
+      "name": "giraffe",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 306,
+        "y": 322
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:40:51 UTC",
+      "pngLastModified": "2016-10-10 22:40:53 UTC",
+      "version": "BVR1B4Bv.Rt9HuRMP95_JWui8UZo0148",
+      "sourceUrl": "/api/v1/animation-library/BVR1B4Bv.Rt9HuRMP95_JWui8UZo0148/category_animals/giraffe.png",
+      "sourceSize": {
+        "x": 306,
+        "y": 322
+      }
+    },
+    "category_animals/giraffe_square": {
+      "name": "giraffe_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:40:40 UTC",
+      "pngLastModified": "2016-10-10 22:40:42 UTC",
+      "version": "A9Y7pxACOBVw5HQRBlH9ZksFI0ZJD2hb",
+      "sourceUrl": "/api/v1/animation-library/A9Y7pxACOBVw5HQRBlH9ZksFI0ZJD2hb/category_animals/giraffe_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/giraffe_token": {
+      "name": "giraffe_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:40:45 UTC",
+      "pngLastModified": "2016-10-10 22:40:48 UTC",
+      "version": "tm8iklvo3rijH75nGw9iJ.RGzt0ClVQ2",
+      "sourceUrl": "/api/v1/animation-library/tm8iklvo3rijH75nGw9iJ.RGzt0ClVQ2/category_animals/giraffe_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/hippo": {
+      "name": "hippo",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 264,
+        "y": 264
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:06 UTC",
+      "pngLastModified": "2016-10-10 22:41:16 UTC",
+      "version": "GkFcUO8pANbOtIl4pJkUBZSMP30piEpZ",
+      "sourceUrl": "/api/v1/animation-library/GkFcUO8pANbOtIl4pJkUBZSMP30piEpZ/category_animals/hippo.png",
+      "sourceSize": {
+        "x": 264,
+        "y": 264
+      }
+    },
+    "category_animals/hippo_square": {
+      "name": "hippo_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 257,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:40:56 UTC",
+      "pngLastModified": "2016-10-10 22:40:58 UTC",
+      "version": "bjPSJiFynJaCzJ0MJefDUituLMPkIR9D",
+      "sourceUrl": "/api/v1/animation-library/bjPSJiFynJaCzJ0MJefDUituLMPkIR9D/category_animals/hippo_square.png",
+      "sourceSize": {
+        "x": 257,
+        "y": 257
+      }
+    },
+    "category_animals/hippo_token": {
+      "name": "hippo_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:00 UTC",
+      "pngLastModified": "2016-10-10 22:41:03 UTC",
+      "version": "JdxaZOJq1NKRQ4gyehMuuqpbKk45hBZ5",
+      "sourceUrl": "/api/v1/animation-library/JdxaZOJq1NKRQ4gyehMuuqpbKk45hBZ5/category_animals/hippo_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/monkey": {
+      "name": "monkey",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 308,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:31 UTC",
+      "pngLastModified": "2016-10-10 22:41:48 UTC",
+      "version": "pi_CHrPyjcbj0BWoaM1xJPmSTcQmH5m7",
+      "sourceUrl": "/api/v1/animation-library/pi_CHrPyjcbj0BWoaM1xJPmSTcQmH5m7/category_animals/monkey.png",
+      "sourceSize": {
+        "x": 308,
+        "y": 257
+      }
+    },
+    "category_animals/monkey_square": {
+      "name": "monkey_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:19 UTC",
+      "pngLastModified": "2016-10-10 22:41:21 UTC",
+      "version": "4D.W8t.tbj2jBNLiJUrvzICwEim7qmk5",
+      "sourceUrl": "/api/v1/animation-library/4D.W8t.tbj2jBNLiJUrvzICwEim7qmk5/category_animals/monkey_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/monkey_token": {
+      "name": "monkey_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:25 UTC",
+      "pngLastModified": "2016-10-10 22:41:28 UTC",
+      "version": "k545_wqEd0hJrW3BJsQwPGpSMGAlLo56",
+      "sourceUrl": "/api/v1/animation-library/k545_wqEd0hJrW3BJsQwPGpSMGAlLo56/category_animals/monkey_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/panda": {
+      "name": "panda",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 304,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:53 UTC",
+      "pngLastModified": "2016-10-10 22:41:54 UTC",
+      "version": "hZom7ki2IVgeqp0h_l6nqcqm5B659enP",
+      "sourceUrl": "/api/v1/animation-library/hZom7ki2IVgeqp0h_l6nqcqm5B659enP/category_animals/panda.png",
+      "sourceSize": {
+        "x": 304,
+        "y": 257
+      }
+    },
+    "category_animals/panda_square": {
+      "name": "panda_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:50 UTC",
+      "pngLastModified": "2016-10-10 22:41:51 UTC",
+      "version": "thV7QONaxlQZJ4oD9N7YfVTKnQUSFdqM",
+      "sourceUrl": "/api/v1/animation-library/thV7QONaxlQZJ4oD9N7YfVTKnQUSFdqM/category_animals/panda_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/panda_token": {
+      "name": "panda_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:41:52 UTC",
+      "pngLastModified": "2016-10-10 22:41:52 UTC",
+      "version": "1W3pCz_OZ3RbZCXGlLC1zzhsk.xpGijB",
+      "sourceUrl": "/api/v1/animation-library/1W3pCz_OZ3RbZCXGlLC1zzhsk.xpGijB/category_animals/panda_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/parrot": {
+      "name": "parrot",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:42:31 UTC",
+      "pngLastModified": "2016-10-10 22:42:32 UTC",
+      "version": "xXCAL6uINUIym3Etog6aoDUdcGt0HT94",
+      "sourceUrl": "/api/v1/animation-library/xXCAL6uINUIym3Etog6aoDUdcGt0HT94/category_animals/parrot.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 257
+      }
+    },
+    "category_animals/parrot_square": {
+      "name": "parrot_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:42:28 UTC",
+      "pngLastModified": "2016-10-10 22:42:29 UTC",
+      "version": "ek17NqWvRApBZ79M4dNdLN9ToVYrUrsH",
+      "sourceUrl": "/api/v1/animation-library/ek17NqWvRApBZ79M4dNdLN9ToVYrUrsH/category_animals/parrot_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/parrot_token": {
+      "name": "parrot_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:42:30 UTC",
+      "pngLastModified": "2016-10-10 22:42:31 UTC",
+      "version": "Hk5w5ym8ILQNGKWlCzaAjV_pqFK8eu94",
+      "sourceUrl": "/api/v1/animation-library/Hk5w5ym8ILQNGKWlCzaAjV_pqFK8eu94/category_animals/parrot_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/penguin": {
+      "name": "penguin",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:42:58 UTC",
+      "pngLastModified": "2016-10-10 22:42:59 UTC",
+      "version": "8YzZ663wbaVW4rd9wEwm6LRAtm1gq3A9",
+      "sourceUrl": "/api/v1/animation-library/8YzZ663wbaVW4rd9wEwm6LRAtm1gq3A9/category_animals/penguin.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 257
+      }
+    },
+    "category_animals/penguin_square": {
+      "name": "penguin_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:42:33 UTC",
+      "pngLastModified": "2016-10-10 22:42:55 UTC",
+      "version": "ctEqoQbMwq5Z1TWB4hrUBNpYC9GFAC93",
+      "sourceUrl": "/api/v1/animation-library/ctEqoQbMwq5Z1TWB4hrUBNpYC9GFAC93/category_animals/penguin_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/penguin_token": {
+      "name": "penguin_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:42:55 UTC",
+      "pngLastModified": "2016-10-10 22:42:57 UTC",
+      "version": "53.mUpm.liSckoCQuorZ.__vGbIjZpPO",
+      "sourceUrl": "/api/v1/animation-library/53.mUpm.liSckoCQuorZ.__vGbIjZpPO/category_animals/penguin_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/pig": {
+      "name": "pig",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 288,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:06 UTC",
+      "pngLastModified": "2016-10-10 22:43:07 UTC",
+      "version": "P3Vr3baMrnxyZx6uzs_C7tKg9JHbm9nk",
+      "sourceUrl": "/api/v1/animation-library/P3Vr3baMrnxyZx6uzs_C7tKg9JHbm9nk/category_animals/pig.png",
+      "sourceSize": {
+        "x": 288,
+        "y": 257
+      }
+    },
+    "category_animals/pig_square": {
+      "name": "pig_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 257,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:00 UTC",
+      "pngLastModified": "2016-10-10 22:43:01 UTC",
+      "version": "YEIa.TaduOb38Csmf.m6V0wsvN5VFuf1",
+      "sourceUrl": "/api/v1/animation-library/YEIa.TaduOb38Csmf.m6V0wsvN5VFuf1/category_animals/pig_square.png",
+      "sourceSize": {
+        "x": 257,
+        "y": 256
+      }
+    },
+    "category_animals/pig_token": {
+      "name": "pig_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:02 UTC",
+      "pngLastModified": "2016-10-10 22:43:03 UTC",
+      "version": "pK_5UOs_qgWODYMDpp6K.jqs7AwiHjhu",
+      "sourceUrl": "/api/v1/animation-library/pK_5UOs_qgWODYMDpp6K.jqs7AwiHjhu/category_animals/pig_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/rabbit": {
+      "name": "rabbit",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 341
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:12 UTC",
+      "pngLastModified": "2016-10-10 22:43:13 UTC",
+      "version": "NGbX87ODObcT_nFr2nNar0M4.UEd4MQA",
+      "sourceUrl": "/api/v1/animation-library/NGbX87ODObcT_nFr2nNar0M4.UEd4MQA/category_animals/rabbit.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 341
+      }
+    },
+    "category_animals/rabbit_square": {
+      "name": "rabbit_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:08 UTC",
+      "pngLastModified": "2016-10-10 22:43:09 UTC",
+      "version": "3B7T5jdWZRPbQHMYJMwmbUReDJsWhdsl",
+      "sourceUrl": "/api/v1/animation-library/3B7T5jdWZRPbQHMYJMwmbUReDJsWhdsl/category_animals/rabbit_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/rabbit_token": {
+      "name": "rabbit_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:10 UTC",
+      "pngLastModified": "2016-10-10 22:43:11 UTC",
+      "version": "xJTbPNStz0FYrp3yUtEoE.uimIXvJVxr",
+      "sourceUrl": "/api/v1/animation-library/xJTbPNStz0FYrp3yUtEoE.uimIXvJVxr/category_animals/rabbit_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_animals/snake": {
+      "name": "snake",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 291
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:20 UTC",
+      "pngLastModified": "2016-10-10 22:43:22 UTC",
+      "version": "cCy2nx1uYgHfs86Mwwuj3sH4dOs2BG9n",
+      "sourceUrl": "/api/v1/animation-library/cCy2nx1uYgHfs86Mwwuj3sH4dOs2BG9n/category_animals/snake.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 291
+      }
+    },
+    "category_animals/snake_square": {
+      "name": "snake_square",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 256,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:15 UTC",
+      "pngLastModified": "2016-10-10 22:43:16 UTC",
+      "version": "nEPwjFWN1hCPNcnNeVUVCsIqT3xgvoP1",
+      "sourceUrl": "/api/v1/animation-library/nEPwjFWN1hCPNcnNeVUVCsIqT3xgvoP1/category_animals/snake_square.png",
+      "sourceSize": {
+        "x": 256,
+        "y": 256
+      }
+    },
+    "category_animals/snake_token": {
+      "name": "snake_token",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 284,
+        "y": 285
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:43:17 UTC",
+      "pngLastModified": "2016-10-10 22:43:18 UTC",
+      "version": "8BRjx0TkiY6Tu6LAyLb_yZzi6hkzuoGk",
+      "sourceUrl": "/api/v1/animation-library/8BRjx0TkiY6Tu6LAyLb_yZzi6hkzuoGk/category_animals/snake_token.png",
+      "sourceSize": {
+        "x": 284,
+        "y": 285
+      }
+    },
+    "category_generic_items/bandage": {
+      "name": "bandage",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 91,
+        "y": 93
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:44:18 UTC",
+      "pngLastModified": "2016-10-10 22:44:18 UTC",
+      "version": "fbMWmu3LQqYd.qCygu3FdVIuQcexRtaY",
+      "sourceUrl": "/api/v1/animation-library/fbMWmu3LQqYd.qCygu3FdVIuQcexRtaY/category_generic_items/bandage.png",
+      "sourceSize": {
+        "x": 91,
+        "y": 93
+      }
+    },
+    "category_generic_items/beaker": {
+      "name": "beaker",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 72,
+        "y": 86
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:44:19 UTC",
+      "pngLastModified": "2016-10-10 22:44:20 UTC",
+      "version": "zSMS.nxFu98tmIoFM3qgmt5HRft.jjIc",
+      "sourceUrl": "/api/v1/animation-library/zSMS.nxFu98tmIoFM3qgmt5HRft.jjIc/category_generic_items/beaker.png",
+      "sourceSize": {
+        "x": 72,
+        "y": 86
+      }
+    },
+    "category_generic_items/bell": {
+      "name": "bell",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 85,
+        "y": 100
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:44:22 UTC",
+      "pngLastModified": "2016-10-10 22:44:27 UTC",
+      "version": "I7FPkVgcsTl8sDFUgd87b9sUTMfwkGfc",
+      "sourceUrl": "/api/v1/animation-library/I7FPkVgcsTl8sDFUgd87b9sUTMfwkGfc/category_generic_items/bell.png",
+      "sourceSize": {
+        "x": 85,
+        "y": 100
+      }
+    },
+    "category_generic_items/blender": {
+      "name": "blender",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 89,
+        "y": 136
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:44:27 UTC",
+      "pngLastModified": "2016-10-10 22:44:28 UTC",
+      "version": "0olJnaCFfnnmbvh0NjTe151c9FhT3SZY",
+      "sourceUrl": "/api/v1/animation-library/0olJnaCFfnnmbvh0NjTe151c9FhT3SZY/category_generic_items/blender.png",
+      "sourceSize": {
+        "x": 89,
+        "y": 136
+      }
+    },
+    "category_generic_items/bone": {
+      "name": "bone",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 81,
+        "y": 119
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:44:41 UTC",
+      "pngLastModified": "2016-10-10 22:44:42 UTC",
+      "version": "gqk2LdXlXg9c1NIhAop3s6MV_eMyGAvB",
+      "sourceUrl": "/api/v1/animation-library/gqk2LdXlXg9c1NIhAop3s6MV_eMyGAvB/category_generic_items/bone.png",
+      "sourceSize": {
+        "x": 81,
+        "y": 119
+      }
+    },
+    "category_generic_items/book": {
+      "name": "book",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 109,
+        "y": 125
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:44:43 UTC",
+      "pngLastModified": "2016-10-10 22:44:57 UTC",
+      "version": "Yj3gZvbqkluo0gtU3reJRQ.GSEMPVzYv",
+      "sourceUrl": "/api/v1/animation-library/Yj3gZvbqkluo0gtU3reJRQ.GSEMPVzYv/category_generic_items/book.png",
+      "sourceSize": {
+        "x": 109,
+        "y": 125
+      }
+    },
+    "category_generic_items/bowl": {
+      "name": "bowl",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 124,
+        "y": 82
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:44:58 UTC",
+      "pngLastModified": "2016-10-10 22:44:59 UTC",
+      "version": "I3hSVlUmlc5AsjOWACXRvbHOqNTi8dCe",
+      "sourceUrl": "/api/v1/animation-library/I3hSVlUmlc5AsjOWACXRvbHOqNTi8dCe/category_generic_items/bowl.png",
+      "sourceSize": {
+        "x": 124,
+        "y": 82
+      }
+    },
+    "category_generic_items/briefcase": {
+      "name": "briefcase",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 155,
+        "y": 116
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:03 UTC",
+      "pngLastModified": "2016-10-10 22:45:04 UTC",
+      "version": "bwRv2xq2grYB9Jnhzz_iR_iHEAoj5lhW",
+      "sourceUrl": "/api/v1/animation-library/bwRv2xq2grYB9Jnhzz_iR_iHEAoj5lhW/category_generic_items/briefcase.png",
+      "sourceSize": {
+        "x": 155,
+        "y": 116
+      }
+    },
+    "category_generic_items/camera": {
+      "name": "camera",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 152,
+        "y": 88
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:04 UTC",
+      "pngLastModified": "2016-10-10 22:45:05 UTC",
+      "version": "m_PZvje0IBudOMcHqijqMJZsNVlPthkW",
+      "sourceUrl": "/api/v1/animation-library/m_PZvje0IBudOMcHqijqMJZsNVlPthkW/category_generic_items/camera.png",
+      "sourceSize": {
+        "x": 152,
+        "y": 88
+      }
+    },
+    "category_generic_items/cassette_player": {
+      "name": "cassette_player",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 82,
+        "y": 96
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:07 UTC",
+      "pngLastModified": "2016-10-10 22:45:08 UTC",
+      "version": "px_0Y6BIgtQhp.wqZsSzg_meF_ozG_3i",
+      "sourceUrl": "/api/v1/animation-library/px_0Y6BIgtQhp.wqZsSzg_meF_ozG_3i/category_generic_items/cassette_player.png",
+      "sourceSize": {
+        "x": 82,
+        "y": 96
+      }
+    },
+    "category_generic_items/cd": {
+      "name": "cd",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 82,
+        "y": 82
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:09 UTC",
+      "pngLastModified": "2016-10-10 22:45:09 UTC",
+      "version": "aQwzPerHleacG2Q0XJwU6H.jA_0WCEA8",
+      "sourceUrl": "/api/v1/animation-library/aQwzPerHleacG2Q0XJwU6H.jA_0WCEA8/category_generic_items/cd.png",
+      "sourceSize": {
+        "x": 82,
+        "y": 82
+      }
+    },
+    "category_generic_items/clip_pen": {
+      "name": "clip_pen",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 50,
+        "y": 74
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:11 UTC",
+      "pngLastModified": "2016-10-10 22:45:11 UTC",
+      "version": "h3Q4cbftvT2akI2z_coA.vydmR5TBjtR",
+      "sourceUrl": "/api/v1/animation-library/h3Q4cbftvT2akI2z_coA.vydmR5TBjtR/category_generic_items/clip_pen.png",
+      "sourceSize": {
+        "x": 50,
+        "y": 74
+      }
+    },
+    "category_generic_items/clipboard": {
+      "name": "clipboard",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 98,
+        "y": 124
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:12 UTC",
+      "pngLastModified": "2016-10-10 22:45:14 UTC",
+      "version": "FhJnQYfoDjsNOw.S4nAPpkIZ_jSoFxJF",
+      "sourceUrl": "/api/v1/animation-library/FhJnQYfoDjsNOw.S4nAPpkIZ_jSoFxJF/category_generic_items/clipboard.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 124
+      }
+    },
+    "category_generic_items/coffee": {
+      "name": "coffee",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 117,
+        "y": 113
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:15 UTC",
+      "pngLastModified": "2016-10-10 22:45:15 UTC",
+      "version": "NP9L6IW9AjDHDUSP9r.VQM3DtCMbDFVs",
+      "sourceUrl": "/api/v1/animation-library/NP9L6IW9AjDHDUSP9r.VQM3DtCMbDFVs/category_generic_items/coffee.png",
+      "sourceSize": {
+        "x": 117,
+        "y": 113
+      }
+    },
+    "category_generic_items/compass": {
+      "name": "compass",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 105,
+        "y": 79
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:16 UTC",
+      "pngLastModified": "2016-10-10 22:45:17 UTC",
+      "version": "8JnSb0OEXhaA.iSEW1nQaG4yJH0qrI47",
+      "sourceUrl": "/api/v1/animation-library/8JnSb0OEXhaA.iSEW1nQaG4yJH0qrI47/category_generic_items/compass.png",
+      "sourceSize": {
+        "x": 105,
+        "y": 79
+      }
+    },
+    "category_generic_items/computer_monitor": {
+      "name": "computer_monitor",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 136,
+        "y": 129
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:18 UTC",
+      "pngLastModified": "2016-10-10 22:45:18 UTC",
+      "version": "MRB.WCg.pPBpUHlnGXC_skQDwj9sbIh.",
+      "sourceUrl": "/api/v1/animation-library/MRB.WCg.pPBpUHlnGXC_skQDwj9sbIh./category_generic_items/computer_monitor.png",
+      "sourceSize": {
+        "x": 136,
+        "y": 129
+      }
+    },
+    "category_generic_items/computer_tower_dark": {
+      "name": "computer_tower_dark",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 98,
+        "y": 128
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:20 UTC",
+      "pngLastModified": "2016-10-10 22:45:20 UTC",
+      "version": "ym5X99oVT35vXAT3GKjBjDjhE7NyxYAm",
+      "sourceUrl": "/api/v1/animation-library/ym5X99oVT35vXAT3GKjBjDjhE7NyxYAm/category_generic_items/computer_tower_dark.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 128
+      }
+    },
+    "category_generic_items/computer_tower_light": {
+      "name": "computer_tower_light",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 96,
+        "y": 135
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:21 UTC",
+      "pngLastModified": "2016-10-10 22:45:22 UTC",
+      "version": "ozFUQ2Hht_Vs2yG_1mlPR1NLCfo75uid",
+      "sourceUrl": "/api/v1/animation-library/ozFUQ2Hht_Vs2yG_1mlPR1NLCfo75uid/category_generic_items/computer_tower_light.png",
+      "sourceSize": {
+        "x": 96,
+        "y": 135
+      }
+    },
+    "category_generic_items/crutch": {
+      "name": "crutch",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 125,
+        "y": 194
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:23 UTC",
+      "pngLastModified": "2016-10-10 22:45:24 UTC",
+      "version": "D2WvXq7qXDh0Qd_jfa4DyEc..F4.iE8B",
+      "sourceUrl": "/api/v1/animation-library/D2WvXq7qXDh0Qd_jfa4DyEc..F4.iE8B/category_generic_items/crutch.png",
+      "sourceSize": {
+        "x": 125,
+        "y": 194
+      }
+    },
+    "category_generic_items/cutter": {
+      "name": "cutter",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 119
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:25 UTC",
+      "pngLastModified": "2016-10-10 22:45:26 UTC",
+      "version": "3b9.hw6QMCdP969K2_mVKRhcPjTM6y29",
+      "sourceUrl": "/api/v1/animation-library/3b9.hw6QMCdP969K2_mVKRhcPjTM6y29/category_generic_items/cutter.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 119
+      }
+    },
+    "category_generic_items/cutting_board": {
+      "name": "cutting_board",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 145,
+        "y": 147
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:27 UTC",
+      "pngLastModified": "2016-10-10 22:45:28 UTC",
+      "version": "1F5Tbedd7Opz9rOOcFbTRUZLLVHM3eXD",
+      "sourceUrl": "/api/v1/animation-library/1F5Tbedd7Opz9rOOcFbTRUZLLVHM3eXD/category_generic_items/cutting_board.png",
+      "sourceSize": {
+        "x": 145,
+        "y": 147
+      }
+    },
+    "category_generic_items/do_not_disturb": {
+      "name": "do_not_disturb",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 73,
+        "y": 132
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:29 UTC",
+      "pngLastModified": "2016-10-10 22:45:33 UTC",
+      "version": "sndPKVjhu4qfgoz8k1ofzC0Pvcq.f.q0",
+      "sourceUrl": "/api/v1/animation-library/sndPKVjhu4qfgoz8k1ofzC0Pvcq.f.q0/category_generic_items/do_not_disturb.png",
+      "sourceSize": {
+        "x": 73,
+        "y": 132
+      }
+    },
+    "category_generic_items/first_aid": {
+      "name": "first_aid",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 117,
+        "y": 117
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:34 UTC",
+      "pngLastModified": "2016-10-10 22:45:36 UTC",
+      "version": "py7vIrlb66cpL9DH8ENcKn9orfvxcfLl",
+      "sourceUrl": "/api/v1/animation-library/py7vIrlb66cpL9DH8ENcKn9orfvxcfLl/category_generic_items/first_aid.png",
+      "sourceSize": {
+        "x": 117,
+        "y": 117
+      }
+    },
+    "category_generic_items/flask": {
+      "name": "flask",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 60,
+        "y": 112
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:41 UTC",
+      "pngLastModified": "2016-10-10 22:45:42 UTC",
+      "version": "B8j35YYyVef3ISC4pEFMmf9cntXaH1GS",
+      "sourceUrl": "/api/v1/animation-library/B8j35YYyVef3ISC4pEFMmf9cntXaH1GS/category_generic_items/flask.png",
+      "sourceSize": {
+        "x": 60,
+        "y": 112
+      }
+    },
+    "category_generic_items/flip_phone": {
+      "name": "flip_phone",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 58,
+        "y": 110
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:43 UTC",
+      "pngLastModified": "2016-10-10 22:45:44 UTC",
+      "version": "nccfUNsKxH9Jwmw3dY_9x8UoFU2AwowA",
+      "sourceUrl": "/api/v1/animation-library/nccfUNsKxH9Jwmw3dY_9x8UoFU2AwowA/category_generic_items/flip_phone.png",
+      "sourceSize": {
+        "x": 58,
+        "y": 110
+      }
+    },
+    "category_generic_items/floppy_disk": {
+      "name": "floppy_disk",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 72,
+        "y": 65
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:48 UTC",
+      "pngLastModified": "2016-10-10 22:45:49 UTC",
+      "version": "X3uiQ3KOuO5A_zfKYPyKzzfy6T0hgtY8",
+      "sourceUrl": "/api/v1/animation-library/X3uiQ3KOuO5A_zfKYPyKzzfy6T0hgtY8/category_generic_items/floppy_disk.png",
+      "sourceSize": {
+        "x": 72,
+        "y": 65
+      }
+    },
+    "category_generic_items/floppy_disk_light": {
+      "name": "floppy_disk_light",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 72,
+        "y": 65
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:45 UTC",
+      "pngLastModified": "2016-10-10 22:45:47 UTC",
+      "version": "U2StS4ikXz6zJdp2JZOseps1BtnbXMNd",
+      "sourceUrl": "/api/v1/animation-library/U2StS4ikXz6zJdp2JZOseps1BtnbXMNd/category_generic_items/floppy_disk_light.png",
+      "sourceSize": {
+        "x": 72,
+        "y": 65
+      }
+    },
+    "category_generic_items/folder": {
+      "name": "folder",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 94,
+        "y": 98
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:52 UTC",
+      "pngLastModified": "2016-10-10 22:45:53 UTC",
+      "version": "R1JLwsKhD__G.vOyZQqalBphmswEYUwF",
+      "sourceUrl": "/api/v1/animation-library/R1JLwsKhD__G.vOyZQqalBphmswEYUwF/category_generic_items/folder.png",
+      "sourceSize": {
+        "x": 94,
+        "y": 98
+      }
+    },
+    "category_generic_items/folder_red": {
+      "name": "folder_red",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 114
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:50 UTC",
+      "pngLastModified": "2016-10-10 22:45:51 UTC",
+      "version": "lJCt.l6XOXgkPcvug4UftJA1P0AuJWf6",
+      "sourceUrl": "/api/v1/animation-library/lJCt.l6XOXgkPcvug4UftJA1P0AuJWf6/category_generic_items/folder_red.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 114
+      }
+    },
+    "category_generic_items/fork": {
+      "name": "fork",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 28,
+        "y": 105
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:55 UTC",
+      "pngLastModified": "2016-10-10 22:45:57 UTC",
+      "version": "zswjvENage6ZYoQ8hvMw9B5O8.vNDFPD",
+      "sourceUrl": "/api/v1/animation-library/zswjvENage6ZYoQ8hvMw9B5O8.vNDFPD/category_generic_items/fork.png",
+      "sourceSize": {
+        "x": 28,
+        "y": 105
+      }
+    },
+    "category_generic_items/fountain_ink": {
+      "name": "fountain_ink",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 57,
+        "y": 56
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:45:58 UTC",
+      "pngLastModified": "2016-10-10 22:45:59 UTC",
+      "version": "eUGiwXzHy3w.I..Qv0v47Cd7MKkHiIMj",
+      "sourceUrl": "/api/v1/animation-library/eUGiwXzHy3w.I..Qv0v47Cd7MKkHiIMj/category_generic_items/fountain_ink.png",
+      "sourceSize": {
+        "x": 57,
+        "y": 56
+      }
+    },
+    "category_generic_items/fountain_pen": {
+      "name": "fountain_pen",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 59,
+        "y": 130
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:00 UTC",
+      "pngLastModified": "2016-10-10 22:46:02 UTC",
+      "version": "WnLnbHmXGITog3v8.9wgjIpQgySVYuLY",
+      "sourceUrl": "/api/v1/animation-library/WnLnbHmXGITog3v8.9wgjIpQgySVYuLY/category_generic_items/fountain_pen.png",
+      "sourceSize": {
+        "x": 59,
+        "y": 130
+      }
+    },
+    "category_generic_items/game_controller": {
+      "name": "game_controller",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 94,
+        "y": 57
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:03 UTC",
+      "pngLastModified": "2016-10-10 22:46:03 UTC",
+      "version": "OoeijokvLjcVuu7Hw3oZIvBYvK3rRH0r",
+      "sourceUrl": "/api/v1/animation-library/OoeijokvLjcVuu7Hw3oZIvBYvK3rRH0r/category_generic_items/game_controller.png",
+      "sourceSize": {
+        "x": 94,
+        "y": 57
+      }
+    },
+    "category_generic_items/headphones": {
+      "name": "headphones",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 106,
+        "y": 118
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:04 UTC",
+      "pngLastModified": "2016-10-10 22:46:05 UTC",
+      "version": "LT9SOj7EYHT2aTEEL3LVILmxNZO3LbQU",
+      "sourceUrl": "/api/v1/animation-library/LT9SOj7EYHT2aTEEL3LVILmxNZO3LbQU/category_generic_items/headphones.png",
+      "sourceSize": {
+        "x": 106,
+        "y": 118
+      }
+    },
+    "category_generic_items/joy_stick": {
+      "name": "joy_stick",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 62,
+        "y": 99
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:06 UTC",
+      "pngLastModified": "2016-10-10 22:46:06 UTC",
+      "version": "37pRc0NjepdKO.gO5k0r3D0AexZvAsBP",
+      "sourceUrl": "/api/v1/animation-library/37pRc0NjepdKO.gO5k0r3D0AexZvAsBP/category_generic_items/joy_stick.png",
+      "sourceSize": {
+        "x": 62,
+        "y": 99
+      }
+    },
+    "category_generic_items/key": {
+      "name": "key",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 63,
+        "y": 65
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:07 UTC",
+      "pngLastModified": "2016-10-10 22:46:08 UTC",
+      "version": "IsMDnviNlgtfq23oG8X8LPgXiVj5lAob",
+      "sourceUrl": "/api/v1/animation-library/IsMDnviNlgtfq23oG8X8LPgXiVj5lAob/category_generic_items/key.png",
+      "sourceSize": {
+        "x": 63,
+        "y": 65
+      }
+    },
+    "category_generic_items/keyboard_dark": {
+      "name": "keyboard_dark",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 129,
+        "y": 40
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:10 UTC",
+      "pngLastModified": "2016-10-10 22:46:10 UTC",
+      "version": "1_Ee_wK3pMgQtR5QUUYLsR7oJEDdXyav",
+      "sourceUrl": "/api/v1/animation-library/1_Ee_wK3pMgQtR5QUUYLsR7oJEDdXyav/category_generic_items/keyboard_dark.png",
+      "sourceSize": {
+        "x": 129,
+        "y": 40
+      }
+    },
+    "category_generic_items/keyboard_light": {
+      "name": "keyboard_light",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 152,
+        "y": 40
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:11 UTC",
+      "pngLastModified": "2016-10-10 22:46:12 UTC",
+      "version": "Qeqv8Yvw9NoMDM6Q6pS..OrHKPnDtDVw",
+      "sourceUrl": "/api/v1/animation-library/Qeqv8Yvw9NoMDM6Q6pS..OrHKPnDtDVw/category_generic_items/keyboard_light.png",
+      "sourceSize": {
+        "x": 152,
+        "y": 40
+      }
+    },
+    "category_generic_items/keys": {
+      "name": "keys",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 94,
+        "y": 73
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:13 UTC",
+      "pngLastModified": "2016-10-10 22:46:13 UTC",
+      "version": "MOcZ8rpFEIDtaVuSYfu4LHWbFErhpPlf",
+      "sourceUrl": "/api/v1/animation-library/MOcZ8rpFEIDtaVuSYfu4LHWbFErhpPlf/category_generic_items/keys.png",
+      "sourceSize": {
+        "x": 94,
+        "y": 73
+      }
+    },
+    "category_generic_items/knife": {
+      "name": "knife",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 20,
+        "y": 106
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:16 UTC",
+      "pngLastModified": "2016-10-10 22:46:16 UTC",
+      "version": "QqabHZUyswfENRI3CsDV_9tdQPvpBU74",
+      "sourceUrl": "/api/v1/animation-library/QqabHZUyswfENRI3CsDV_9tdQPvpBU74/category_generic_items/knife.png",
+      "sourceSize": {
+        "x": 20,
+        "y": 106
+      }
+    },
+    "category_generic_items/knife_blue": {
+      "name": "knife_blue",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 92,
+        "y": 132
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:14 UTC",
+      "pngLastModified": "2016-10-10 22:46:15 UTC",
+      "version": "OlNYYBz3kqFlFae4XkdftWgt3x8EhkaP",
+      "sourceUrl": "/api/v1/animation-library/OlNYYBz3kqFlFae4XkdftWgt3x8EhkaP/category_generic_items/knife_blue.png",
+      "sourceSize": {
+        "x": 92,
+        "y": 132
+      }
+    },
+    "category_generic_items/laptop": {
+      "name": "laptop",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 143,
+        "y": 136
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:21 UTC",
+      "pngLastModified": "2016-10-10 22:46:23 UTC",
+      "version": "iJJlvFIYjY3sqsOR15eE_cv4SuGbB6Of",
+      "sourceUrl": "/api/v1/animation-library/iJJlvFIYjY3sqsOR15eE_cv4SuGbB6Of/category_generic_items/laptop.png",
+      "sourceSize": {
+        "x": 143,
+        "y": 136
+      }
+    },
+    "category_generic_items/laptop_facing_away": {
+      "name": "laptop_facing_away",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 174,
+        "y": 99
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:18 UTC",
+      "pngLastModified": "2016-10-10 22:46:19 UTC",
+      "version": "MP2XxDDr9UhueK2B5kDUZ5PBZ6MND7cv",
+      "sourceUrl": "/api/v1/animation-library/MP2XxDDr9UhueK2B5kDUZ5PBZ6MND7cv/category_generic_items/laptop_facing_away.png",
+      "sourceSize": {
+        "x": 174,
+        "y": 99
+      }
+    },
+    "category_generic_items/large_paint_brush": {
+      "name": "large_paint_brush",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 75,
+        "y": 113
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:24 UTC",
+      "pngLastModified": "2016-10-10 22:46:26 UTC",
+      "version": "gkxwT09CPjaxpnX_f5UV57CS6S1LgzkK",
+      "sourceUrl": "/api/v1/animation-library/gkxwT09CPjaxpnX_f5UV57CS6S1LgzkK/category_generic_items/large_paint_brush.png",
+      "sourceSize": {
+        "x": 75,
+        "y": 113
+      }
+    },
+    "category_generic_items/lens": {
+      "name": "lens",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 93,
+        "y": 117
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:27 UTC",
+      "pngLastModified": "2016-10-10 22:46:27 UTC",
+      "version": "pw5IPkjAV3N_fPjrBNAl_C05mrxscq64",
+      "sourceUrl": "/api/v1/animation-library/pw5IPkjAV3N_fPjrBNAl_C05mrxscq64/category_generic_items/lens.png",
+      "sourceSize": {
+        "x": 93,
+        "y": 117
+      }
+    },
+    "category_generic_items/microphone": {
+      "name": "microphone",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 59,
+        "y": 116
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:28 UTC",
+      "pngLastModified": "2016-10-10 22:46:29 UTC",
+      "version": "tIQr.vdvN3ZdL27exNHUYtusBGoGCXfy",
+      "sourceUrl": "/api/v1/animation-library/tIQr.vdvN3ZdL27exNHUYtusBGoGCXfy/category_generic_items/microphone.png",
+      "sourceSize": {
+        "x": 59,
+        "y": 116
+      }
+    },
+    "category_generic_items/microscope": {
+      "name": "microscope",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 110,
+        "y": 138
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:30 UTC",
+      "pngLastModified": "2016-10-10 22:46:31 UTC",
+      "version": "pb5xDRrJ_VOY7POnH4Jeha9ZBZ3MLLLA",
+      "sourceUrl": "/api/v1/animation-library/pb5xDRrJ_VOY7POnH4Jeha9ZBZ3MLLLA/category_generic_items/microscope.png",
+      "sourceSize": {
+        "x": 110,
+        "y": 138
+      }
+    },
+    "category_generic_items/mitt": {
+      "name": "mitt",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 113,
+        "y": 118
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:32 UTC",
+      "pngLastModified": "2016-10-10 22:46:33 UTC",
+      "version": "68iQr_i5IlSEm0gMtAVxJJ5gLTRt6yM7",
+      "sourceUrl": "/api/v1/animation-library/68iQr_i5IlSEm0gMtAVxJJ5gLTRt6yM7/category_generic_items/mitt.png",
+      "sourceSize": {
+        "x": 113,
+        "y": 118
+      }
+    },
+    "category_generic_items/mixer": {
+      "name": "mixer",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 132,
+        "y": 109
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:34 UTC",
+      "pngLastModified": "2016-10-10 22:46:35 UTC",
+      "version": "PDSiLChzf2Co4cXmx4SbAhn9d4T2zbj_",
+      "sourceUrl": "/api/v1/animation-library/PDSiLChzf2Co4cXmx4SbAhn9d4T2zbj_/category_generic_items/mixer.png",
+      "sourceSize": {
+        "x": 132,
+        "y": 109
+      }
+    },
+    "category_generic_items/money": {
+      "name": "money",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 101,
+        "y": 106
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:36 UTC",
+      "pngLastModified": "2016-10-10 22:46:37 UTC",
+      "version": "AQutaVo9gKPntFWT1_3zumXEDgXqZUWB",
+      "sourceUrl": "/api/v1/animation-library/AQutaVo9gKPntFWT1_3zumXEDgXqZUWB/category_generic_items/money.png",
+      "sourceSize": {
+        "x": 101,
+        "y": 106
+      }
+    },
+    "category_generic_items/mouse_dark": {
+      "name": "mouse_dark",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 46,
+        "y": 38
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:37 UTC",
+      "pngLastModified": "2016-10-10 22:46:38 UTC",
+      "version": "f_jaOtqtETaj9JL6w4BFjAacIfRReeP.",
+      "sourceUrl": "/api/v1/animation-library/f_jaOtqtETaj9JL6w4BFjAacIfRReeP./category_generic_items/mouse_dark.png",
+      "sourceSize": {
+        "x": 46,
+        "y": 38
+      }
+    },
+    "category_generic_items/mouse_light": {
+      "name": "mouse_light",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 51,
+        "y": 38
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:39 UTC",
+      "pngLastModified": "2016-10-10 22:46:40 UTC",
+      "version": "eVb4Y1AsbqMPR8LvokPWE6eN4MIKqVXi",
+      "sourceUrl": "/api/v1/animation-library/eVb4Y1AsbqMPR8LvokPWE6eN4MIKqVXi/category_generic_items/mouse_light.png",
+      "sourceSize": {
+        "x": 51,
+        "y": 38
+      }
+    },
+    "category_generic_items/mp3_player": {
+      "name": "mp3_player",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 60,
+        "y": 94
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:46:41 UTC",
+      "pngLastModified": "2016-10-10 22:46:41 UTC",
+      "version": "5SKw2EFXkkF0jJxN8XoTUiNVBWOrzaut",
+      "sourceUrl": "/api/v1/animation-library/5SKw2EFXkkF0jJxN8XoTUiNVBWOrzaut/category_generic_items/mp3_player.png",
+      "sourceSize": {
+        "x": 60,
+        "y": 94
+      }
+    },
+    "category_generic_items/nail": {
+      "name": "nail",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 52,
+        "y": 68
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:54:54 UTC",
+      "pngLastModified": "2016-10-10 22:46:47 UTC",
+      "version": "4zUwY4nrnnZ7519w_Qf0rYzbZWOy1qJ_",
+      "sourceUrl": "/api/v1/animation-library/4zUwY4nrnnZ7519w_Qf0rYzbZWOy1qJ_/category_generic_items/nail.png",
+      "sourceSize": {
+        "x": 52,
+        "y": 68
+      }
+    },
+    "category_generic_items/name_tag": {
+      "name": "name_tag",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 76,
+        "y": 130
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:03 UTC",
+      "pngLastModified": "2016-10-10 22:47:04 UTC",
+      "version": "jcsqWbyUipajdWTeblCUAnZcqVEVUghT",
+      "sourceUrl": "/api/v1/animation-library/jcsqWbyUipajdWTeblCUAnZcqVEVUghT/category_generic_items/name_tag.png",
+      "sourceSize": {
+        "x": 76,
+        "y": 130
+      }
+    },
+    "category_generic_items/open_book": {
+      "name": "open_book",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 116,
+        "y": 112
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:06 UTC",
+      "pngLastModified": "2016-10-10 22:47:06 UTC",
+      "version": "Pqyyyrge4cgq1dySi2PBg4f4gCiVEf69",
+      "sourceUrl": "/api/v1/animation-library/Pqyyyrge4cgq1dySi2PBg4f4gCiVEf69/category_generic_items/open_book.png",
+      "sourceSize": {
+        "x": 116,
+        "y": 112
+      }
+    },
+    "category_generic_items/paint_brush": {
+      "name": "paint_brush",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 49,
+        "y": 91
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:10 UTC",
+      "pngLastModified": "2016-10-10 22:47:11 UTC",
+      "version": "_sZYQBGHG8ZhqUg5XLwiTyMaVHSgtzDl",
+      "sourceUrl": "/api/v1/animation-library/_sZYQBGHG8ZhqUg5XLwiTyMaVHSgtzDl/category_generic_items/paint_brush.png",
+      "sourceSize": {
+        "x": 49,
+        "y": 91
+      }
+    },
+    "category_generic_items/paint_brush_blue": {
+      "name": "paint_brush_blue",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 50,
+        "y": 89
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:07 UTC",
+      "pngLastModified": "2016-10-10 22:47:08 UTC",
+      "version": "XlzueUa8hsa78p1KD0.JDIvgzsnTzBfU",
+      "sourceUrl": "/api/v1/animation-library/XlzueUa8hsa78p1KD0.JDIvgzsnTzBfU/category_generic_items/paint_brush_blue.png",
+      "sourceSize": {
+        "x": 50,
+        "y": 89
+      }
+    },
+    "category_generic_items/paint_pallette": {
+      "name": "paint_pallette",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 116,
+        "y": 96
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:12 UTC",
+      "pngLastModified": "2016-10-10 22:47:13 UTC",
+      "version": "GcUBwqUiUNtf7m6puJJYyzY4vSYhttay",
+      "sourceUrl": "/api/v1/animation-library/GcUBwqUiUNtf7m6puJJYyzY4vSYhttay/category_generic_items/paint_pallette.png",
+      "sourceSize": {
+        "x": 116,
+        "y": 96
+      }
+    },
+    "category_generic_items/paint_roller": {
+      "name": "paint_roller",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 94,
+        "y": 144
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:14 UTC",
+      "pngLastModified": "2016-10-10 22:47:15 UTC",
+      "version": "OzPr1MlciztJRi9xXYR.9kix1a3p8qIp",
+      "sourceUrl": "/api/v1/animation-library/OzPr1MlciztJRi9xXYR.9kix1a3p8qIp/category_generic_items/paint_roller.png",
+      "sourceSize": {
+        "x": 94,
+        "y": 144
+      }
+    },
+    "category_generic_items/pan": {
+      "name": "pan",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 95,
+        "y": 152
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:16 UTC",
+      "pngLastModified": "2016-10-10 22:47:16 UTC",
+      "version": "DKwIVmQ2di_KIjX5carv7On5M6IVrW7L",
+      "sourceUrl": "/api/v1/animation-library/DKwIVmQ2di_KIjX5carv7On5M6IVrW7L/category_generic_items/pan.png",
+      "sourceSize": {
+        "x": 95,
+        "y": 152
+      }
+    },
+    "category_generic_items/pen": {
+      "name": "pen",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 42,
+        "y": 74
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:18 UTC",
+      "pngLastModified": "2016-10-10 22:47:19 UTC",
+      "version": "4CoKav96WLl5Huz7RNSgLTDW4UCxteI3",
+      "sourceUrl": "/api/v1/animation-library/4CoKav96WLl5Huz7RNSgLTDW4UCxteI3/category_generic_items/pen.png",
+      "sourceSize": {
+        "x": 42,
+        "y": 74
+      }
+    },
+    "category_generic_items/pencil": {
+      "name": "pencil",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 42,
+        "y": 74
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:20 UTC",
+      "pngLastModified": "2016-10-10 22:47:20 UTC",
+      "version": "x0XBVH.qyB0gWBoSzYjIQNa3Fi3MocBZ",
+      "sourceUrl": "/api/v1/animation-library/x0XBVH.qyB0gWBoSzYjIQNa3Fi3MocBZ/category_generic_items/pencil.png",
+      "sourceSize": {
+        "x": 42,
+        "y": 74
+      }
+    },
+    "category_generic_items/pepper": {
+      "name": "pepper",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 47,
+        "y": 95
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:21 UTC",
+      "pngLastModified": "2016-10-10 22:47:22 UTC",
+      "version": "yQTVryGrdcOn51mlTiiJ8CceAgnTzaPr",
+      "sourceUrl": "/api/v1/animation-library/yQTVryGrdcOn51mlTiiJ8CceAgnTzaPr/category_generic_items/pepper.png",
+      "sourceSize": {
+        "x": 47,
+        "y": 95
+      }
+    },
+    "category_generic_items/pick": {
+      "name": "pick",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 123,
+        "y": 154
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:23 UTC",
+      "pngLastModified": "2016-10-10 22:47:23 UTC",
+      "version": "NapzJSTrCSfdys0sb5IfjdLjQElp8qRG",
+      "sourceUrl": "/api/v1/animation-library/NapzJSTrCSfdys0sb5IfjdLjQElp8qRG/category_generic_items/pick.png",
+      "sourceSize": {
+        "x": 123,
+        "y": 154
+      }
+    },
+    "category_generic_items/pliers": {
+      "name": "pliers",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 76,
+        "y": 104
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:24 UTC",
+      "pngLastModified": "2016-10-10 22:47:25 UTC",
+      "version": "k3Obci1qchUqo21bM9DApL3qbFzDT5se",
+      "sourceUrl": "/api/v1/animation-library/k3Obci1qchUqo21bM9DApL3qbFzDT5se/category_generic_items/pliers.png",
+      "sourceSize": {
+        "x": 76,
+        "y": 104
+      }
+    },
+    "category_generic_items/pot": {
+      "name": "pot",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 146,
+        "y": 104
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:26 UTC",
+      "pngLastModified": "2016-10-10 22:47:27 UTC",
+      "version": "GRuWyl8iN_ZINn9TUipfuuFAY.QOeogF",
+      "sourceUrl": "/api/v1/animation-library/GRuWyl8iN_ZINn9TUipfuuFAY.QOeogF/category_generic_items/pot.png",
+      "sourceSize": {
+        "x": 146,
+        "y": 104
+      }
+    },
+    "category_generic_items/power_drill": {
+      "name": "power_drill",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 162,
+        "y": 94
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:29 UTC",
+      "pngLastModified": "2016-10-10 22:47:29 UTC",
+      "version": "LpZnwNArrho.50PpmX2LSz.aVLF5jcqG",
+      "sourceUrl": "/api/v1/animation-library/LpZnwNArrho.50PpmX2LSz.aVLF5jcqG/category_generic_items/power_drill.png",
+      "sourceSize": {
+        "x": 162,
+        "y": 94
+      }
+    },
+    "category_generic_items/purse": {
+      "name": "purse",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 89,
+        "y": 137
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:31 UTC",
+      "pngLastModified": "2016-10-10 22:47:31 UTC",
+      "version": "hn.IueuoKFFqy2v0ZNxObadTVWJeJSdB",
+      "sourceUrl": "/api/v1/animation-library/hn.IueuoKFFqy2v0ZNxObadTVWJeJSdB/category_generic_items/purse.png",
+      "sourceSize": {
+        "x": 89,
+        "y": 137
+      }
+    },
+    "category_generic_items/roller": {
+      "name": "roller",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 100,
+        "y": 158
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:32 UTC",
+      "pngLastModified": "2016-10-10 22:47:33 UTC",
+      "version": "T31Y0CQ31wX6kELJWlSATrnnS8CcUlSp",
+      "sourceUrl": "/api/v1/animation-library/T31Y0CQ31wX6kELJWlSATrnnS8CcUlSp/category_generic_items/roller.png",
+      "sourceSize": {
+        "x": 100,
+        "y": 158
+      }
+    },
+    "category_generic_items/salt": {
+      "name": "salt",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 46,
+        "y": 95
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:34 UTC",
+      "pngLastModified": "2016-10-10 22:47:35 UTC",
+      "version": "wT9Yp0hTy1Un86ae4x9E1dZ5q26BibBI",
+      "sourceUrl": "/api/v1/animation-library/wT9Yp0hTy1Un86ae4x9E1dZ5q26BibBI/category_generic_items/salt.png",
+      "sourceSize": {
+        "x": 46,
+        "y": 95
+      }
+    },
+    "category_generic_items/sander": {
+      "name": "sander",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 120,
+        "y": 110
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:35 UTC",
+      "pngLastModified": "2016-10-10 22:47:36 UTC",
+      "version": "LgPmrzFZvGJ2zXdyfuyYbX.1kTvC6Bpr",
+      "sourceUrl": "/api/v1/animation-library/LgPmrzFZvGJ2zXdyfuyYbX.1kTvC6Bpr/category_generic_items/sander.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 110
+      }
+    },
+    "category_generic_items/saw": {
+      "name": "saw",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 104,
+        "y": 188
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:37 UTC",
+      "pngLastModified": "2016-10-10 22:47:38 UTC",
+      "version": "f2fzyxKBaS9sDBvWnQOKSW0sO3QCcSmX",
+      "sourceUrl": "/api/v1/animation-library/f2fzyxKBaS9sDBvWnQOKSW0sO3QCcSmX/category_generic_items/saw.png",
+      "sourceSize": {
+        "x": 104,
+        "y": 188
+      }
+    },
+    "category_generic_items/screw": {
+      "name": "screw",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 48,
+        "y": 62
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:42 UTC",
+      "pngLastModified": "2016-10-10 22:47:45 UTC",
+      "version": "J0LKKw4mrxbO43V6xN6KGmIWjip9mpM1",
+      "sourceUrl": "/api/v1/animation-library/J0LKKw4mrxbO43V6xN6KGmIWjip9mpM1/category_generic_items/screw.png",
+      "sourceSize": {
+        "x": 48,
+        "y": 62
+      }
+    },
+    "category_generic_items/screwdriver": {
+      "name": "screwdriver",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 66,
+        "y": 105
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:48 UTC",
+      "pngLastModified": "2016-10-10 22:47:48 UTC",
+      "version": "i3KwQKUOMYbn3LlH65MKmFPNNC6uvvCw",
+      "sourceUrl": "/api/v1/animation-library/i3KwQKUOMYbn3LlH65MKmFPNNC6uvvCw/category_generic_items/screwdriver.png",
+      "sourceSize": {
+        "x": 66,
+        "y": 105
+      }
+    },
+    "category_generic_items/shovel": {
+      "name": "shovel",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 87,
+        "y": 162
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:50 UTC",
+      "pngLastModified": "2016-10-10 22:47:50 UTC",
+      "version": "oEKmOGI9swMVejVZOPtPXk0pznEDYWi0",
+      "sourceUrl": "/api/v1/animation-library/oEKmOGI9swMVejVZOPtPXk0pznEDYWi0/category_generic_items/shovel.png",
+      "sourceSize": {
+        "x": 87,
+        "y": 162
+      }
+    },
+    "category_generic_items/spatula": {
+      "name": "spatula",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 88,
+        "y": 140
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:52 UTC",
+      "pngLastModified": "2016-10-10 22:47:53 UTC",
+      "version": "8BlyPwewA_fBdQ29Y_HXoK29oxZ0R0de",
+      "sourceUrl": "/api/v1/animation-library/8BlyPwewA_fBdQ29Y_HXoK29oxZ0R0de/category_generic_items/spatula.png",
+      "sourceSize": {
+        "x": 88,
+        "y": 140
+      }
+    },
+    "category_generic_items/steering_wheel": {
+      "name": "steering_wheel",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 130,
+        "y": 130
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:54 UTC",
+      "pngLastModified": "2016-10-10 22:47:56 UTC",
+      "version": "SWJdzQVvg4pLTcF9L.TZxJq8kWG_iXKU",
+      "sourceUrl": "/api/v1/animation-library/SWJdzQVvg4pLTcF9L.TZxJq8kWG_iXKU/category_generic_items/steering_wheel.png",
+      "sourceSize": {
+        "x": 130,
+        "y": 130
+      }
+    },
+    "category_generic_items/suitcase": {
+      "name": "suitcase",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 113,
+        "y": 202
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:47:56 UTC",
+      "pngLastModified": "2016-10-10 22:47:58 UTC",
+      "version": "J1DgHhZ_AUmbAl13PuOm1X45Zh1jGH7G",
+      "sourceUrl": "/api/v1/animation-library/J1DgHhZ_AUmbAl13PuOm1X45Zh1jGH7G/category_generic_items/suitcase.png",
+      "sourceSize": {
+        "x": 113,
+        "y": 202
+      }
+    },
+    "category_generic_items/tablet": {
+      "name": "tablet",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 84,
+        "y": 98
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:48:01 UTC",
+      "pngLastModified": "2016-10-10 22:48:02 UTC",
+      "version": "4wjrsZhrlwN_rJeoN1XpX7iksn0qPBel",
+      "sourceUrl": "/api/v1/animation-library/4wjrsZhrlwN_rJeoN1XpX7iksn0qPBel/category_generic_items/tablet.png",
+      "sourceSize": {
+        "x": 84,
+        "y": 98
+      }
+    },
+    "category_generic_items/tape_measurer": {
+      "name": "tape_measurer",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 106,
+        "y": 102
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:48:05 UTC",
+      "pngLastModified": "2016-10-10 22:48:06 UTC",
+      "version": "yhLtchydr6LY3l93kXljzRsDU9AdezJG",
+      "sourceUrl": "/api/v1/animation-library/yhLtchydr6LY3l93kXljzRsDU9AdezJG/category_generic_items/tape_measurer.png",
+      "sourceSize": {
+        "x": 106,
+        "y": 102
+      }
+    },
+    "category_generic_items/teapot": {
+      "name": "teapot",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 152,
+        "y": 116
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:48:10 UTC",
+      "pngLastModified": "2016-10-10 22:49:03 UTC",
+      "version": "VtmHkqtXJKKBtcvJd5ESJK4Ns3wYXw23",
+      "sourceUrl": "/api/v1/animation-library/VtmHkqtXJKKBtcvJd5ESJK4Ns3wYXw23/category_generic_items/teapot.png",
+      "sourceSize": {
+        "x": 152,
+        "y": 116
+      }
+    },
+    "category_generic_items/test_tubes": {
+      "name": "test_tubes",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 118,
+        "y": 89
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:05 UTC",
+      "pngLastModified": "2016-10-10 22:49:06 UTC",
+      "version": "Om1VcObS1bsLDu38uKY3REYSDEPAsLNh",
+      "sourceUrl": "/api/v1/animation-library/Om1VcObS1bsLDu38uKY3REYSDEPAsLNh/category_generic_items/test_tubes.png",
+      "sourceSize": {
+        "x": 118,
+        "y": 89
+      }
+    },
+    "category_generic_items/toothbrush": {
+      "name": "toothbrush",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 74,
+        "y": 107
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:06 UTC",
+      "pngLastModified": "2016-10-10 22:49:07 UTC",
+      "version": "e4SiPBpycAxHcjnmHt9EZylngygpQc1D",
+      "sourceUrl": "/api/v1/animation-library/e4SiPBpycAxHcjnmHt9EZylngygpQc1D/category_generic_items/toothbrush.png",
+      "sourceSize": {
+        "x": 74,
+        "y": 107
+      }
+    },
+    "category_generic_items/trowel": {
+      "name": "trowel",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 96,
+        "y": 84
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:08 UTC",
+      "pngLastModified": "2016-10-10 22:49:08 UTC",
+      "version": "t993f3iXQlh8nAKXI8E.8R3.ni2fgsib",
+      "sourceUrl": "/api/v1/animation-library/t993f3iXQlh8nAKXI8E.8R3.ni2fgsib/category_generic_items/trowel.png",
+      "sourceSize": {
+        "x": 96,
+        "y": 84
+      }
+    },
+    "category_generic_items/video_game_controller": {
+      "name": "video_game_controller",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 98,
+        "y": 63
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:10 UTC",
+      "pngLastModified": "2016-10-10 22:49:11 UTC",
+      "version": "osg1eqqz8Elz5JtD.EXSPU_H1a2nU8gR",
+      "sourceUrl": "/api/v1/animation-library/osg1eqqz8Elz5JtD.EXSPU_H1a2nU8gR/category_generic_items/video_game_controller.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 63
+      }
+    },
+    "category_generic_items/wallet": {
+      "name": "wallet",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 98,
+        "y": 102
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:12 UTC",
+      "pngLastModified": "2016-10-10 22:49:13 UTC",
+      "version": "NHN9bdBU0VXfM1Ib8LfYVNfglH0TevuH",
+      "sourceUrl": "/api/v1/animation-library/NHN9bdBU0VXfM1Ib8LfYVNfglH0TevuH/category_generic_items/wallet.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 102
+      }
+    },
+    "category_generic_items/water_glass": {
+      "name": "water_glass",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 55,
+        "y": 84
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:14 UTC",
+      "pngLastModified": "2016-10-10 22:49:18 UTC",
+      "version": "COS_Wm4NUuYxJ0DwBob3X9fLpEY0CtSE",
+      "sourceUrl": "/api/v1/animation-library/COS_Wm4NUuYxJ0DwBob3X9fLpEY0CtSE/category_generic_items/water_glass.png",
+      "sourceSize": {
+        "x": 55,
+        "y": 84
+      }
+    },
+    "category_generic_items/wide_screen_monitor": {
+      "name": "wide_screen_monitor",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 163,
+        "y": 131
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:19 UTC",
+      "pngLastModified": "2016-10-10 22:49:24 UTC",
+      "version": "yNNudG3pxSZphfu3p6jwdaP3BpiAdjg.",
+      "sourceUrl": "/api/v1/animation-library/yNNudG3pxSZphfu3p6jwdaP3BpiAdjg./category_generic_items/wide_screen_monitor.png",
+      "sourceSize": {
+        "x": 163,
+        "y": 131
+      }
+    },
+    "category_generic_items/wrench": {
+      "name": "wrench",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 68,
+        "y": 102
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:38 UTC",
+      "pngLastModified": "2016-10-10 22:49:39 UTC",
+      "version": "XcOn3._rDgGQC7uaxfI4NLtOFqU0mV0w",
+      "sourceUrl": "/api/v1/animation-library/XcOn3._rDgGQC7uaxfI4NLtOFqU0mV0w/category_generic_items/wrench.png",
+      "sourceSize": {
+        "x": 68,
+        "y": 102
+      }
+    },
+    "category_generic_items/wrench_simple": {
+      "name": "wrench_simple",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 70,
+        "y": 88
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-10-10 22:49:25 UTC",
+      "pngLastModified": "2016-10-10 22:49:26 UTC",
+      "version": "irO5EYMiu3RqTH9ujEfa3Eu4JA7n4GX8",
+      "sourceUrl": "/api/v1/animation-library/irO5EYMiu3RqTH9ujEfa3Eu4JA7n4GX8/category_generic_items/wrench_simple.png",
+      "sourceSize": {
+        "x": 70,
+        "y": 88
+      }
+    },
     "cloud": {
       "name": "cloud",
       "frameCount": 1,
@@ -5757,14 +7935,30 @@
     "axe_silver": [
       "axe_silver"
     ],
+    "bandage": [
+      "category_generic_items/bandage"
+    ],
+    "beaker": [
+      "category_generic_items/beaker"
+    ],
     "bee": [
       "bee"
     ],
+    "bell": [
+      "category_generic_items/bell"
+    ],
     "blender": [
-      "blender"
+      "blender",
+      "category_generic_items/blender"
     ],
     "boat": [
       "boat"
+    ],
+    "bone": [
+      "category_generic_items/bone"
+    ],
+    "book": [
+      "category_generic_items/book"
     ],
     "bow": [
       "bow"
@@ -5773,7 +7967,8 @@
       "bowArrow"
     ],
     "bowl": [
-      "bowl"
+      "bowl",
+      "category_generic_items/bowl"
     ],
     "box": [
       "box"
@@ -5783,6 +7978,9 @@
     ],
     "brick_red": [
       "brick_red"
+    ],
+    "briefcase": [
+      "category_generic_items/briefcase"
     ],
     "bronze": [
       "medals/flat_medal2",
@@ -5853,6 +8051,9 @@
     ],
     "cactus_top": [
       "cactus_top"
+    ],
+    "camera": [
+      "category_generic_items/camera"
     ],
     "car_black_1": [
       "racing-pack/car_black_1"
@@ -5938,8 +8139,148 @@
     "carrots": [
       "carrots"
     ],
+    "cassette_player": [
+      "category_generic_items/cassette_player"
+    ],
+    "category_animals": [
+      "category_animals/elephant",
+      "category_animals/elephant_square",
+      "category_animals/elephant_token",
+      "category_animals/giraffe",
+      "category_animals/giraffe_square",
+      "category_animals/giraffe_token",
+      "category_animals/hippo",
+      "category_animals/hippo_square",
+      "category_animals/hippo_token",
+      "category_animals/monkey",
+      "category_animals/monkey_square",
+      "category_animals/monkey_token",
+      "category_animals/panda",
+      "category_animals/panda_square",
+      "category_animals/panda_token",
+      "category_animals/parrot",
+      "category_animals/parrot_square",
+      "category_animals/parrot_token",
+      "category_animals/penguin",
+      "category_animals/penguin_square",
+      "category_animals/penguin_token",
+      "category_animals/pig",
+      "category_animals/pig_square",
+      "category_animals/pig_token",
+      "category_animals/rabbit",
+      "category_animals/rabbit_square",
+      "category_animals/rabbit_token",
+      "category_animals/snake",
+      "category_animals/snake_square",
+      "category_animals/snake_token"
+    ],
+    "category_generic_items": [
+      "category_generic_items/bandage",
+      "category_generic_items/beaker",
+      "category_generic_items/bell",
+      "category_generic_items/blender",
+      "category_generic_items/bone",
+      "category_generic_items/book",
+      "category_generic_items/bowl",
+      "category_generic_items/briefcase",
+      "category_generic_items/camera",
+      "category_generic_items/cassette_player",
+      "category_generic_items/cd",
+      "category_generic_items/clip_pen",
+      "category_generic_items/clipboard",
+      "category_generic_items/coffee",
+      "category_generic_items/compass",
+      "category_generic_items/computer_monitor",
+      "category_generic_items/computer_tower_dark",
+      "category_generic_items/computer_tower_light",
+      "category_generic_items/crutch",
+      "category_generic_items/cutter",
+      "category_generic_items/cutting_board",
+      "category_generic_items/do_not_disturb",
+      "category_generic_items/first_aid",
+      "category_generic_items/flask",
+      "category_generic_items/flip_phone",
+      "category_generic_items/floppy_disk",
+      "category_generic_items/floppy_disk_light",
+      "category_generic_items/folder",
+      "category_generic_items/folder_red",
+      "category_generic_items/fork",
+      "category_generic_items/fountain_ink",
+      "category_generic_items/fountain_pen",
+      "category_generic_items/game_controller",
+      "category_generic_items/headphones",
+      "category_generic_items/joy_stick",
+      "category_generic_items/key",
+      "category_generic_items/keyboard_dark",
+      "category_generic_items/keyboard_light",
+      "category_generic_items/keys",
+      "category_generic_items/knife",
+      "category_generic_items/knife_blue",
+      "category_generic_items/laptop",
+      "category_generic_items/laptop_facing_away",
+      "category_generic_items/large_paint_brush",
+      "category_generic_items/lens",
+      "category_generic_items/microphone",
+      "category_generic_items/microscope",
+      "category_generic_items/mitt",
+      "category_generic_items/mixer",
+      "category_generic_items/money",
+      "category_generic_items/mouse_dark",
+      "category_generic_items/mouse_light",
+      "category_generic_items/mp3_player",
+      "category_generic_items/nail",
+      "category_generic_items/name_tag",
+      "category_generic_items/open_book",
+      "category_generic_items/paint_brush",
+      "category_generic_items/paint_brush_blue",
+      "category_generic_items/paint_pallette",
+      "category_generic_items/paint_roller",
+      "category_generic_items/pan",
+      "category_generic_items/pen",
+      "category_generic_items/pencil",
+      "category_generic_items/pepper",
+      "category_generic_items/pick",
+      "category_generic_items/pliers",
+      "category_generic_items/pot",
+      "category_generic_items/power_drill",
+      "category_generic_items/purse",
+      "category_generic_items/roller",
+      "category_generic_items/salt",
+      "category_generic_items/sander",
+      "category_generic_items/saw",
+      "category_generic_items/screw",
+      "category_generic_items/screwdriver",
+      "category_generic_items/shovel",
+      "category_generic_items/spatula",
+      "category_generic_items/steering_wheel",
+      "category_generic_items/suitcase",
+      "category_generic_items/tablet",
+      "category_generic_items/tape_measurer",
+      "category_generic_items/teapot",
+      "category_generic_items/test_tubes",
+      "category_generic_items/toothbrush",
+      "category_generic_items/trowel",
+      "category_generic_items/video_game_controller",
+      "category_generic_items/wallet",
+      "category_generic_items/water_glass",
+      "category_generic_items/wide_screen_monitor",
+      "category_generic_items/wrench",
+      "category_generic_items/wrench_simple"
+    ],
+    "cd": [
+      "category_generic_items/cd"
+    ],
+    "clip_pen": [
+      "category_generic_items/clip_pen"
+    ],
+    "clipboard": [
+      "category_generic_items/clipboard"
+    ],
     "cloud": [
       "cloud"
+    ],
+    "coffee": [
+      "category_generic_items/coffee"
     ],
     "coin_bronze": [
       "coin_bronze"
@@ -5949,6 +8290,18 @@
     ],
     "coin_silver": [
       "coin_silver"
+    ],
+    "compass": [
+      "category_generic_items/compass"
+    ],
+    "computer_monitor": [
+      "category_generic_items/computer_monitor"
+    ],
+    "computer_tower_dark": [
+      "category_generic_items/computer_tower_dark"
+    ],
+    "computer_tower_light": [
+      "category_generic_items/computer_tower_light"
     ],
     "cotton_blue": [
       "cotton_blue"
@@ -5962,6 +8315,15 @@
     "cotton_tan": [
       "cotton_tan"
     ],
+    "crutch": [
+      "category_generic_items/crutch"
+    ],
+    "cutter": [
+      "category_generic_items/cutter"
+    ],
+    "cutting_board": [
+      "category_generic_items/cutting_board"
+    ],
     "dirt": [
       "dirt"
     ],
@@ -5974,11 +8336,26 @@
     "dirt_snow": [
       "dirt_snow"
     ],
+    "do_not_disturb": [
+      "category_generic_items/do_not_disturb"
+    ],
+    "elephant": [
+      "category_animals/elephant"
+    ],
+    "elephant_square": [
+      "category_animals/elephant_square"
+    ],
+    "elephant_token": [
+      "category_animals/elephant_token"
+    ],
     "fence_stone": [
       "fence_stone"
     ],
     "fence_wood": [
       "fence_wood"
+    ],
+    "first_aid": [
+      "category_generic_items/first_aid"
     ],
     "fish": [
       "fish"
@@ -6018,6 +8395,9 @@
     ],
     "flail_silver": [
       "flail_silver"
+    ],
+    "flask": [
+      "category_generic_items/flask"
     ],
     "flat_medal1": [
       "medals/flat_medal1"
@@ -6073,6 +8453,15 @@
     "flatshadow_medal9": [
       "medals/flatshadow_medal9"
     ],
+    "flip_phone": [
+      "category_generic_items/flip_phone"
+    ],
+    "floppy_disk": [
+      "category_generic_items/floppy_disk"
+    ],
+    "floppy_disk_light": [
+      "category_generic_items/floppy_disk_light"
+    ],
     "fly": [
       "fly"
     ],
@@ -6097,11 +8486,38 @@
     "flyman_still_stand": [
       "flyMan_still_stand"
     ],
+    "folder": [
+      "category_generic_items/folder"
+    ],
+    "folder_red": [
+      "category_generic_items/folder_red"
+    ],
+    "fork": [
+      "category_generic_items/fork"
+    ],
+    "fountain_ink": [
+      "category_generic_items/fountain_ink"
+    ],
+    "fountain_pen": [
+      "category_generic_items/fountain_pen"
+    ],
+    "game_controller": [
+      "category_generic_items/game_controller"
+    ],
     "ghost": [
       "ghost"
     ],
     "ghost_standing": [
       "ghost_standing"
+    ],
+    "giraffe": [
+      "category_animals/giraffe"
+    ],
+    "giraffe_square": [
+      "category_animals/giraffe_square"
+    ],
+    "giraffe_token": [
+      "category_animals/giraffe_token"
     ],
     "glass": [
       "glass"
@@ -6273,6 +8689,18 @@
     "hammer_silver": [
       "hammer_silver"
     ],
+    "headphones": [
+      "category_generic_items/headphones"
+    ],
+    "hippo": [
+      "category_animals/hippo"
+    ],
+    "hippo_square": [
+      "category_animals/hippo_square"
+    ],
+    "hippo_token": [
+      "category_animals/hippo_token"
+    ],
     "hoe_bronze": [
       "hoe_bronze"
     ],
@@ -6297,6 +8725,9 @@
     "jetpack_item": [
       "jetpack_item"
     ],
+    "joy_stick": [
+      "category_generic_items/joy_stick"
+    ],
     "jumper": [
       "bunny1_hurt",
       "bunny1_jump",
@@ -6311,8 +8742,35 @@
       "bunny2_walk1",
       "bunny2_walk2"
     ],
+    "key": [
+      "category_generic_items/key"
+    ],
+    "keyboard_dark": [
+      "category_generic_items/keyboard_dark"
+    ],
+    "keyboard_light": [
+      "category_generic_items/keyboard_light"
+    ],
+    "keys": [
+      "category_generic_items/keys"
+    ],
+    "knife": [
+      "category_generic_items/knife"
+    ],
+    "knife_blue": [
+      "category_generic_items/knife_blue"
+    ],
     "ladybug": [
       "ladybug"
+    ],
+    "laptop": [
+      "category_generic_items/laptop"
+    ],
+    "laptop_facing_away": [
+      "category_generic_items/laptop_facing_away"
+    ],
+    "large_paint_brush": [
+      "category_generic_items/large_paint_brush"
     ],
     "lava": [
       "lava"
@@ -6329,14 +8787,41 @@
     "leaves_transparent": [
       "leaves_transparent"
     ],
+    "lens": [
+      "category_generic_items/lens"
+    ],
     "lifes": [
       "lifes"
     ],
     "lollipop_red": [
       "lollipop_red"
     ],
+    "microphone": [
+      "category_generic_items/microphone"
+    ],
+    "microscope": [
+      "category_generic_items/microscope"
+    ],
     "minecart": [
       "minecart"
+    ],
+    "mitt": [
+      "category_generic_items/mitt"
+    ],
+    "mixer": [
+      "category_generic_items/mixer"
+    ],
+    "money": [
+      "category_generic_items/money"
+    ],
+    "monkey": [
+      "category_animals/monkey"
+    ],
+    "monkey_square": [
+      "category_animals/monkey_square"
+    ],
+    "monkey_token": [
+      "category_animals/monkey_token"
     ],
     "motorcycle_black": [
       "racing-pack/motorcycle_black"
@@ -6356,6 +8841,15 @@
     "mouse": [
       "mouse"
     ],
+    "mouse_dark": [
+      "category_generic_items/mouse_dark"
+    ],
+    "mouse_light": [
+      "category_generic_items/mouse_light"
+    ],
+    "mp3_player": [
+      "category_generic_items/mp3_player"
+    ],
     "mushroom_brown": [
       "mushroom_brown"
     ],
@@ -6364,6 +8858,15 @@
     ],
     "mushroom_tan": [
       "mushroom_tan"
+    ],
+    "nail": [
+      "category_generic_items/nail"
+    ],
+    "name_tag": [
+      "category_generic_items/name_tag"
+    ],
+    "open_book": [
+      "category_generic_items/open_book"
     ],
     "orange": [
       "springMan_hurt",
@@ -6406,6 +8909,60 @@
       "ghost_standing",
       "platform"
     ],
+    "paint_brush": [
+      "category_generic_items/paint_brush"
+    ],
+    "paint_brush_blue": [
+      "category_generic_items/paint_brush_blue"
+    ],
+    "paint_pallette": [
+      "category_generic_items/paint_pallette"
+    ],
+    "paint_roller": [
+      "category_generic_items/paint_roller"
+    ],
+    "pan": [
+      "category_generic_items/pan"
+    ],
+    "panda": [
+      "category_animals/panda"
+    ],
+    "panda_square": [
+      "category_animals/panda_square"
+    ],
+    "panda_token": [
+      "category_animals/panda_token"
+    ],
+    "parrot": [
+      "category_animals/parrot"
+    ],
+    "parrot_square": [
+      "category_animals/parrot_square"
+    ],
+    "parrot_token": [
+      "category_animals/parrot_token"
+    ],
+    "pen": [
+      "category_generic_items/pen"
+    ],
+    "pencil": [
+      "category_generic_items/pencil"
+    ],
+    "penguin": [
+      "category_animals/penguin"
+    ],
+    "penguin_square": [
+      "category_animals/penguin_square"
+    ],
+    "penguin_token": [
+      "category_animals/penguin_token"
+    ],
+    "pepper": [
+      "category_generic_items/pepper"
+    ],
+    "pick": [
+      "category_generic_items/pick"
+    ],
     "pick_bronze": [
       "pick_bronze"
     ],
@@ -6420,6 +8977,15 @@
     ],
     "pick_silver": [
       "pick_silver"
+    ],
+    "pig": [
+      "category_animals/pig"
+    ],
+    "pig_square": [
+      "category_animals/pig_square"
+    ],
+    "pig_token": [
+      "category_animals/pig_token"
     ],
     "platform": [
       "platform"
@@ -6438,11 +9004,20 @@
       "bunny2_walk1",
       "bunny2_walk2"
     ],
+    "pliers": [
+      "category_generic_items/pliers"
+    ],
     "portal_orange": [
       "portal_orange"
     ],
     "portal_yellow": [
       "portal_yellow"
+    ],
+    "pot": [
+      "category_generic_items/pot"
+    ],
+    "power_drill": [
+      "category_generic_items/power_drill"
     ],
     "powerup_bubble": [
       "powerup_bubble"
@@ -6466,6 +9041,18 @@
       "bunny2_stand",
       "bunny2_walk1",
       "bunny2_walk2"
+    ],
+    "purse": [
+      "category_generic_items/purse"
+    ],
+    "rabbit": [
+      "category_animals/rabbit"
+    ],
+    "rabbit_square": [
+      "category_animals/rabbit_square"
+    ],
+    "rabbit_token": [
+      "category_animals/rabbit_token"
     ],
     "red": [
       "spikeMan_jump",
@@ -6522,8 +9109,26 @@
     "rock_moss": [
       "rock_moss"
     ],
+    "roller": [
+      "category_generic_items/roller"
+    ],
+    "salt": [
+      "category_generic_items/salt"
+    ],
     "sand": [
       "sand"
+    ],
+    "sander": [
+      "category_generic_items/sander"
+    ],
+    "saw": [
+      "category_generic_items/saw"
+    ],
+    "screw": [
+      "category_generic_items/screw"
+    ],
+    "screwdriver": [
+      "category_generic_items/screwdriver"
     ],
     "seed": [
       "seed"
@@ -6554,6 +9159,9 @@
     ],
     "shaded_medal9": [
       "medals/shaded_medal9"
+    ],
+    "shovel": [
+      "category_generic_items/shovel"
     ],
     "shovel_bronze": [
       "shovel_bronze"
@@ -6599,8 +9207,20 @@
     "snail": [
       "snail"
     ],
+    "snake": [
+      "category_animals/snake"
+    ],
+    "snake_square": [
+      "category_animals/snake_square"
+    ],
+    "snake_token": [
+      "category_animals/snake_token"
+    ],
     "snow": [
       "snow"
+    ],
+    "spatula": [
+      "category_generic_items/spatula"
     ],
     "spike ball": [
       "spikeBall"
@@ -6640,6 +9260,9 @@
     ],
     "spring_out": [
       "spring_out"
+    ],
+    "steering_wheel": [
+      "category_generic_items/steering_wheel"
     ],
     "stew": [
       "stew"
@@ -6695,6 +9318,9 @@
     "stone_snow": [
       "stone_snow"
     ],
+    "suitcase": [
+      "category_generic_items/suitcase"
+    ],
     "sun": [
       "sun"
     ],
@@ -6716,6 +9342,21 @@
     "table": [
       "table"
     ],
+    "tablet": [
+      "category_generic_items/tablet"
+    ],
+    "tape_measurer": [
+      "category_generic_items/tape_measurer"
+    ],
+    "teapot": [
+      "category_generic_items/teapot"
+    ],
+    "test_tubes": [
+      "category_generic_items/test_tubes"
+    ],
+    "toothbrush": [
+      "category_generic_items/toothbrush"
+    ],
     "track_corner": [
       "track_corner"
     ],
@@ -6727,6 +9368,9 @@
     ],
     "track_straight_alt": [
       "track_straight_alt"
+    ],
+    "trowel": [
+      "category_generic_items/trowel"
     ],
     "trunk_bottom": [
       "trunk_bottom"
@@ -6746,8 +9390,17 @@
     "trunk_white_top": [
       "trunk_white_top"
     ],
+    "video_game_controller": [
+      "category_generic_items/video_game_controller"
+    ],
+    "wallet": [
+      "category_generic_items/wallet"
+    ],
     "water": [
       "water"
+    ],
+    "water_glass": [
+      "category_generic_items/water_glass"
     ],
     "wheat": [
       "wheat"
@@ -6764,6 +9417,9 @@
     "wheat_stage4": [
       "wheat_stage4"
     ],
+    "wide_screen_monitor": [
+      "category_generic_items/wide_screen_monitor"
+    ],
     "wing man": [
       "wingMan"
     ],
@@ -6778,6 +9434,12 @@
     ],
     "wood_red": [
       "wood_red"
+    ],
+    "wrench": [
+      "category_generic_items/wrench"
+    ],
+    "wrench_simple": [
+      "category_generic_items/wrench_simple"
     ],
     "yellow": [
       "sun",

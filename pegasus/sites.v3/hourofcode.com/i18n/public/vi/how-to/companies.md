@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Inspire students and volunteer for the Hour of Code
@@ -32,7 +34,7 @@ nav: how_to_nav
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [ Thử ngay!](<%= resolve_url("https://code.org/learn") %>)
 
 **Tất cả những khóa học Hour of Code:**
 
@@ -41,11 +43,11 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Trải nghiệm Một Giờ Lập Trình tốt nhất cần có máy tính được kết nối Internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**Kế hoạch trước!** Thực hiện các bước dưới đây trước khi chương trình bắt đầu:
 
   * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
@@ -56,9 +58,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## 5) Start your Hour of Code off with an inspiring video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
+Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm hứng cho những người tham gia và bàn luận về cách mà khoa học máy tính tác động đến mọi lĩnh vực trong cuộc sống của chúng ta. Share more about what inspired you to pursue computer science and your role at your company.
 
-**Show an inspirational video:**
+**Chiếu một video truyền cảm hứng:**
 
   * Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
@@ -71,22 +73,22 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   * If you are a tech company, demo fun, innovative products your company is working on.
   * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
   * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * Xem những bí kíp làm cho các bé gái quan tâm vào khoa học máy tính [tại đây](<%= resolve_url('https://code.org/girls') %>).
 
-## 6) Code!
+## 6) Lập Trình!
 
-**Direct participants to the activity**
+**Chỉ dẫn những người tham gia vào các hoạt động**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+  * Viết link bài hướng dẫn lên bảng trắng. Tìm link được liệt kê trên [ thông tin cho bài hướng dẫn đã lựa chọn ](<%= resolve_url('https://code.org/learn') %>) theo số lượng người tham gia.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "Tôi không biết. Chúng ta sẽ cùng nhau tìm cách giải quyết nhé."
+  * "Công nghệ không phải luôn luôn hoạt động theo ý chúng ta muốn."
+  * "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; bạn chưa thể thành thực ngay lập tức."
 
-**What to do if someone finishes early?**
+**Phải làm gì nếu ai đó hoàn thành sớm?**
 
   * They can try another Hour of Code activity at code.org/learn
   * Or, ask them to help a friend who are having trouble with the activity.
@@ -107,12 +109,12 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Chúc mừng
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
 
 [col-33]
 
@@ -138,4 +140,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Tiếp theo Hour of Code sẽ là gì?
 
-Hour of Cord là chỉ là bước đầu tiên vào một cuộc hành trình để tìm hiểu thêm về cách hoạt động của công nghệ và cách để tạo các ứng dụng phần mềm. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

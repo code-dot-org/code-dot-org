@@ -1,5 +1,3 @@
-var msg = require('./locale');
-
 module.exports.blocks = [
   {'func': 'moveForward', 'category': 'Movement' },
   {'func': 'turnLeft', 'category': 'Movement' },

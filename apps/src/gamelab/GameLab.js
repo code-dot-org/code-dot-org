@@ -1,18 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode} from './actions';
+import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
-var commonMsg = require('@cdo/locale');
 var msg = require('@cdo/gamelab/locale');
-var levels = require('./levels');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
@@ -21,18 +17,16 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-var assetPrefix = require('../assetManagement/assetPrefix');
 var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
-var experiments = require('../experiments');
 
 import {
-  animationSourceUrl,
   setInitialAnimationList,
-  saveAnimations
+  saveAnimations,
+  withAbsoluteSourceUrls
 } from './animationListModule';
 import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
@@ -102,10 +96,10 @@ var GameLab = function () {
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
 
-  /** Expose for levelbuilder */
-  window.printSerializedAnimationList = () => {
+  /** Expose for levelbuilders (usable on prod) */
+  window.viewExportableAnimationList = () => {
     this.getExportableAnimationList(list => {
-      console.log(JSON.stringify(list, null, 2));
+      this.studioApp_.reduxStore.dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
     });
   };
 };
@@ -1085,21 +1079,17 @@ GameLab.prototype.getSerializedAnimationList = function (callback) {
 };
 
 /**
- * Get the project's animation metadtaa, this time for use in a level
+ * Get the project's animation metadata, this time for use in a level
  * configuration.  The major difference with SerializedAnimationList is that
  * it includes a sourceUrl for local project animations.
  * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getExportableAnimationList = function (callback) {
   this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
-    let list = getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
-    list.orderedKeys.forEach(key => {
-      let props = list.propsByKey[key];
-      props.sourceUrl = document.location.protocol + '//' +
-          document.location.host +
-          animationSourceUrl(key, props, true);
-    });
-    callback(list);
+    const list = this.studioApp_.reduxStore.getState().animationList;
+    const serializedList = getSerializedAnimationList(list);
+    const exportableList = withAbsoluteSourceUrls(serializedList);
+    callback(exportableList);
   }));
 };
 

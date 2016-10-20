@@ -31,8 +31,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null,
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The image in the drawing uses a turn of 61 degrees.\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Want to know how the sample image was done?\\n\\n![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The image in the drawing uses a turn of 61 degrees.\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Want to know how the sample image was done?\\n\\n![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)\",\r\n  \"hint_id\": \"grade5_artist_for_loopsfreeplay12_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

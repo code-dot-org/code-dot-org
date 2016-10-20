@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Navigation on Personal Website\r\n\r\nNow that you have all the files for your website, connect them together!\r\n\r\n# Do This\r\n\r\n* Add a `<div>` at the top of your index.html file containing the header with the title of the website which you want on every screen\r\n* In the `<div>` add 4 hyperlinks to the 4 html files you have in your project (One for each page and one for the home page)\r\n* Style the `<div>`\r\n* Copy the `<div>` and put it at the top of each web page on your website.\r\n* Copy the style of the `<div>` and put it on each web page as well.\r\n\r\nOnce your website is set up and connected feel free to make improvements to any pages on your website.",
+    "markdown_instructions": "# Navigation on Personal Website\r\n\r\nNow that you have all the files for your website, connect them together!\r\n\r\n# Do This\r\n\r\n* Add a `<div>` at the top of your index.html file containing the header with the title of the website that you want on every screen\r\n* In the `<div>` add 4 hyperlinks to the 4 html files you have in your project (one for each page and one for the home page)\r\n* Style the `<div>`\r\n* Copy the `<div>` and put it at the top of each web page on your website\r\n* Copy the style of the `<div>` and put it on each web page as well\r\n\r\nOnce your website is set up and connected, feel free to make improvements to any pages on your website.",
     "project_template_level_name": "CSDU2 Portfolio Template"
   },
   "published": true,

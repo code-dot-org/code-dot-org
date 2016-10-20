@@ -6,49 +6,53 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ### Níže je ukázka řešení podporující Týden informatiky a jeho cíle, které by mohly být využity státními a místními zákonodárci.
 
   
-[DŮM,SENÁT, STÁT, KRAJ NEBO MĚSTSKÉ REZOLUCE NEBO PROKLAMACE ###] - Zatímco týden informatiky zdůrazňuje nejdůležitější role, které informatika hraje v transformování naší společnosti, a jak informatika povoluje inovace a vytváří ekonomické možnosti;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[SENÁTSKÉ REZOLUCE ###]
+[HOUSE OR SENATE RESOLUTION ###]
 
 [DATE]
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Zatímco informatika transformuje průmysl, vytváří nové obory v komerci, posunuje inovaci vpřed ve všech oborech vědy, a zvětšuje produktivitu v daných ekonomických sektorech;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Zatímco obor informatiky podporuje sektor informatických technologií v naší ekonomice, která je důležitým přispěvatelem v ekonomickém výkonu Spojených států;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Zatímco obor informatiky je základní věda pro digitální věk;
+Whereas the field of computer science is a foundational science for the digital age;
 
-Zatímco sektor informačních technologií je unikátně položen, tak aby pomáhal ekonomice pomocí výzkumů a rozvoji nových inovací;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
 Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Zatímco poskytnutí studentům šanci, zúčastnit se vysoce kvalitních informatičních aktivit, je vystavuje bohatým příležitostem v oboru, které jim prohlubuje kritické myšlení, které jim bude sloužit skrze celý jejich život;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Zatímco všichni studenti si zaslouží důkladnou přípravu v informatice, zahrňující přístup ke kvalifikovaným učitelům, technologii a k věkově odpovídající osnově, která je potřebná k informatice na základní a sekundární úrovni vzdělání;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Zatímco informatika má výzvy, o které se musíme postarat, zahrňující počítání hodin infromatiky k středoškolské maturitě a poskytnutí profesionálního vývinu pro učitele informatiky;
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-Zatímco učástnění v Hodině kódu skrze týden informatiky, může sloužit k demystifikaci oboru informatiky a podporovat více studentů k pokračování studia informatiky;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Zatímco obor informatiky má významnou spravedlnostní bariéru, kterou musíme řešit, zahrnující větší zájem ze strany žen a minorit ke všem úrovním a odvětvím;
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-Zatímco Grace Murray Hopper, jedna z prvních žen v oboru informatiky, vytvořila nové programovací jazyky a propagovala standart pro počítačové systémy, které položily základ pro mnoho pokroků v oblasti informatiky
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Zatímco týden <%= campaign_date('start-long') %>, ve znamení narozenin Grace Hopperové, byl organizován jako týden informatiky’: Od teď tomu tak je
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-Bylo vyřešeno, že [SENÁT, STÁT, KRAJ, MĚSTO NEBO ŠKOLNÍ RADA] --
+Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) podporuje cíl týdne informatiky (<%= campaign_date('full') %>);
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(2) Podporuje účast škol, školitelů, rodičů a tvůrců pravidel na týdnu informatiky, tím že umožňuje jejim studentům účastnit se v Hodině kódu;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) podporuje školy, učitele, výzkumníky, univerzity, podnikatele a tvůrce pravidel v identifikaci mechanizmů pro učitele v získání nejnovějšího profesionálního rozvoje, aby poskytli dostatečné prostředí pro získávání těchto zkušeností v informatice ve všech úrovních vzdělání a podporuje studenty vystavováním konceptům informatiky;
+(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) Podporuje tvůrce pravidel v odstranění bariér, které zabraňují tomu, aby ji byla v maturitní zkoušce přikládána stejná váha jako matematice nebo přířorodovědným předmětům;
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) podporuje možnosti zapojení/uplatnění žen a minorit v oblasti informatiky pomocí existujících programů.
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

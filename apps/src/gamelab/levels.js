@@ -1,9 +1,7 @@
-var msg = require('@cdo/gamelab/locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
-var createCategory = blockUtils.createCategory;
 
 // TODO (bbuchanan): Continue documenting the game lab level object properties.
 /**
@@ -242,4 +240,3 @@ levels.custom = utils.extend(levels.sandbox, {
 
 levels.ec_sandbox = utils.extend(levels.custom, {
 });
-

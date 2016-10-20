@@ -364,8 +364,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    mail_view (2.0.4)
-      tilt
     marked-rails (0.3.2.0)
     memoist (0.14.0)
     metaclass (0.0.4)
@@ -695,7 +693,6 @@ DEPENDENCIES
   konacha!
   le (~> 2.2)
   lograge
-  mail_view
   marked-rails
   memoist
   mini_magick

@@ -5,7 +5,8 @@ var ShareWarnings = require('./ShareWarnings');
 /**
  * Modal for our SharingWarnings.
  */
-var SharingWarningsDialog = module.exports = React.createClass({
+module.exports = React.createClass({
+  displayName: 'SharingWarningsDialog',
   propTypes: {
     is13Plus: React.PropTypes.bool.isRequired,
     showStoreDataAlert: React.PropTypes.bool.isRequired,

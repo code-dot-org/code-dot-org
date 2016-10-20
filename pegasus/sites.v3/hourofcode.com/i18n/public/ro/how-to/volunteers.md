@@ -6,15 +6,17 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Ghidul pentru voluntari
 
 ## 1. Inscrie-te pentru a fi voluntar
 
-Vizitaţi o clasă locala pentru a inspira elevii sa continue sa invete tehnologia computerelor si programare. [ Fii voluntar pentru o oră](https://code.org/volunteer/engineer).
+Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
 ## Alătură-te unei sesiuni de informare a voluntarilor
 
-Vom găzdui două sesiuni de informare pentru a explica cum va fi experiența tipică a unui voluntar. Vom discuta despre cum să se coordoneze cu profesorii înaintea evenimentului lor Hour of Code, şi, de asemenea, ceea ce trebuie să faceţi în ziua evenimentului pentru a va pregăti. Vă rugăm să veniti cu întrebările dumneavoastră! Aceste sesiuni de informare vor fi găzduite pe Hangouts on Air, dacă le ratezi poți să urmărești mai târziu sesiunea înregistrată. [Vezi ordinea de zi](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
@@ -33,7 +35,7 @@ Vom găzdui două sesiuni de informare pentru a explica cum va fi experiența ti
   
   <tr>
     <td>
-      <strong>Sessions to be announced! Stay tuned!</strong>
+      <strong>Sesiunile vor fi anunţate! Fiți pe fază!</strong>
     </td>
     
     <td>
@@ -46,19 +48,19 @@ Vom găzdui două sesiuni de informare pentru a explica cum va fi experiența ti
 
 ## 3. Incercati tutorialele cu 30 de minute inainte
 
-Încercaţi Tutorialele Hour of Code la [code.org/learn](https://code.org/learn). Alegeti cateva dintre cele mai populare tutoriale si petreceti putin timp pentru a va familiariza cu ele. Vă va dura aproximativ 5-10 minute pe tutorial să aveti o idee despre modul în care funcţionează.
+Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Recruteaza-ti colegii sa fie voluntari
 
-Spune-le prietenilor si colegilor despre Hour of Code. Avem mii de profesori care se înscriu şi caută voluntari, așadar să le cereţi să se [înscrie ca voluntar](https://code.org/volunteer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Exemple de email:**
+**Sample email:**
 
-**Subiect**: Fii alaturi de mine in voluntariatul Hour of Code
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Daca iti amintesti prima ta linie de cod, stii ca a dat forma restului vietii tale.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-Despre asta e Hour of Code. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
 **I signed up to volunteer in a local classroom, and you can, too!**   
 Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
@@ -80,7 +82,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 4. Promoveaza Hour of Code în comunitatea ta
 
-Recruteaza un grup local- un club mixt baieti/fete, Biserica, Universitatea, veteranii sau sindicatul. Sau gazduieste Ora de Programare in cadrul unei petreceri pentru cartierul dumneavoastră. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Pregătește-te înainte de a vizita o clasă.
 
@@ -97,3 +99,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Ruleaza [Video-ul Hour of Code](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Lasa elevii sa inceapa tutorialele. Plimba-te prin casa si raspunde la intrebari ghidandu-i prin puzzle-uri. Incearca sa nu le dai elevilor direct solutia. In schimb, incearca sa le pui intrebari pentru ca ei sa raspunda singuri si sa isi dea seama ce nu a functionat corect.
+
+<%= view :signup_button %>

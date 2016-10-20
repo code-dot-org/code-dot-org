@@ -51,10 +51,10 @@ stage 'Unplugged: Conditionals and Piecewise Functions'
 level 'ConditionalsPiecewiseFunctions'
 
 stage 'Eval: Conditionals'
-level "Luigi's Pizza 1"
-level "Luigi's Pizza 2"
-level "Luigi's Pizza 3"
-level "Luigi's Pizza 4"
+level 'Luigi\'s Pizza 1'
+level 'Luigi\'s Pizza 2'
+level 'Luigi\'s Pizza 3'
+level 'Luigi\'s Pizza 4'
 level 'Eval Cond 4'
 level 'Eval Cond 5'
 level 'Big Game Player 1'

@@ -7,7 +7,6 @@
     // color, background, border
     @include button-variant($white, $cyan, $light_gray);
     text-shadow: none;
-    margin: 5px;
   }
 }
 

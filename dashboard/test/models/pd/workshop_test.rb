@@ -218,25 +218,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :pd_ended_workshop
 
     create :pd_workshop_participant, workshop: workshop, enrolled: true
-    Pd::WorkshopMailer.expects(:exit_survey).never
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
 
     workshop.send_exit_surveys
   end
 
   test 'send_exit_surveys teachers in the section get emails' do
     workshop = create :pd_ended_workshop
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true)
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
-    teachers = [
-      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true),
-      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true),
-    ]
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
 
-    mock_mail = stub(deliver_now: nil)
-    teachers.each do |teacher|
-      Pd::WorkshopMailer.expects(:exit_survey).with(
-        workshop, teacher, instance_of(Pd::Enrollment)
-      ).returns(mock_mail)
-    end
     workshop.send_exit_surveys
   end
 

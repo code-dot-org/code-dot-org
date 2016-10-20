@@ -257,6 +257,7 @@ en:
         title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
+      Building a UI with Design Mode: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
@@ -284,6 +285,7 @@ en:
       CSD U3 - complex conditionals - SFLP: {}
       CSD U3 - images - pick your final work: {}
       CSD U3 -conditionals - stop booleans: {}
+      CSD U3 AnimationsMulti STOP project guide: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
@@ -310,6 +312,9 @@ en:
         title: title
       CSD U3 collisions STOP isTouching:
         STOP: STOP
+        description here: description here
+      CSD U3 game intro:
+        Create Your Own Game: Create Your Own Game
         description here: description here
       CSD U3 platform intro:
         Build a Platform Jumper: Build a Platform Jumper
@@ -555,6 +560,89 @@ en:
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
+      CSPU5_ChoosingGoodIds:
+        description here: description here
+        title: title
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: description here
+        title: title
+      CSPU5_FirstTimeDesignMode:
+        description here: description here
+        title: title
+      CSPU5_HowImagesWork:
+        description here: description here
+        title: title
+      CSPU5_HowOnEventWorks_v2:
+        description here: description here
+        title: title
+      CSPU5_U3 - Arrays and Loops - Explain Functions with Returns: {}
+      CSPU5_U3 - Conditionals - Boolean Expressions and Operators: {}
+      CSPU5_U3 - Conditionals - Introducing Else: {}
+      CSPU5_U3 - Conditionals - Translating Flowcharts - Chained: {}
+      CSPU5_U3 - Conditionals - Translating Flowcharts - If Statement: {}
+      CSPU5_U3 - Simulation - Intro: {}
+      CSPU5_U3 Simulation Updating Hypotheses: {}
+      CSPU5_U3 Simulations Hypotheses Reflections: {}
+      CSPU5_U3- L12 -Design Mode SFLP: {}
+      CSPU5_U3-Variables-Memory Breakdown: {}
+      CSPU5_U3L12 - Student Introduction 1:
+        Events Unplugged: Events Unplugged
+      CSPU5_U3L13 Student Facing Lesson Plan: {}
+      CSPU5_U3L13 Student Lesson Introduction:
+        Buttons on the Screen: Buttons on the Screen
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        description here: description here
+        title: title
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        description here: description here
+        title: title
+      CSPU5_U3L15 - explanation of IF and =v==:
+        description here: description here
+        title: title
+      CSPU5_U3L15 Student Lesson Intro - new:
+        description here: description here
+        title: title
+      CSPU5_U3L16 Student Lesson Introduction:
+        Beyond Buttons: Beyond Buttons
+      CSPU5_U3L19 - variable scope explanation pt2:
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
+      CSPU5_U3L19 Student Lesson Intro:
+        Clicker V.1: Clicker V.1
+      CSPU5_U3L20 - combining And and Or explanation:
+        description here: description here
+        title: title
+      CSPU5_U3L21 Student Lesson Introduction v2: {}
+      CSPU5_U3L23 Student Lesson Introduction:
+        Natural Language Processing: Natural Language Processing
+      CSPU5_U3L24 Student Lesson Introduction:
+        Chained Conditionals: Chained Conditionals
+      CSPU5_U3L26 Student Lesson Introduction:
+        Strings and Substrings: Strings and Substrings
+      CSPU5_U3L29 Student Lesson Introduction:
+        While Loops and Counting: While Loops and Counting
+      CSPU5_U3L30 Student Lesson Introduction:
+        An Introduction to Arrays: An Introduction to Arrays
+      CSPU5_U3L31 Student Lesson Introduction:
+        Arrays - Photo Album: Arrays - Photo Album
+      CSPU5_U3L32 Student Lesson Introduction:
+        Images are Arrays: Images are Arrays
+      CSPU5_U3L33 Student Lesson Introduction:
+        'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
+      CSPU5_U3L34 Student Lesson Introduction:
+        'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: description here
+        title: title
+      CSPU5_introToDebugging:
+        description here: description here
+        title: title
+      CSPU5_makingPredictions_ref:
+        description here: description here
+        title: title
+      CSPU5_onEventBreakdown:
+        description here: description here
+        title: title
       CSP_Final_instructions:
         description here: description here
         title: title
@@ -569,15 +657,25 @@ en:
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
       Data Tools in Unit 2 Chapter 2: {}
+      Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint Chirpr lillizard:
+        description here: description here
+        title: title
       Digital Footprint Chirpr solmoon: {}
       Digital Footprint FaceSpace John:
         FaceSpace - John T: FaceSpace - John T
+      Digital Footprint FaceSpace Lizzie:
+        description here: description here
+        title: title
       Digital Footprint FaceSpace Soleil: {}
       Digital Footprint instantframe:
         instantframe - johnsnow: instantframe - johnsnow
       Digital Footprint instantframe moonbeam: {}
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: description here
+        title: title
       Discovery Learning in Unit 1: {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
@@ -948,8 +1046,15 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
+      External MD column Test:
+        description here: description here
+        title: title
+      External MD column Test bootstrap:
+        description here: description here
+        title: title
       External level test (will):
         first computer program: first computer program
       Favicon Instructions: {}
@@ -969,6 +1074,7 @@ en:
       Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Search Works: {}
       How Secure Is Your Password?:
         description here: description here
         title: title
@@ -1877,6 +1983,12 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      courseB_external_MRF:
+        description here: description here
+        title: title
+      courseB_external_loopMRF:
+        description here: description here
+        title: title
       courseB_story_unspottedBugs1:
         UnspottedBugs: UnspottedBugs
       courseB_story_unspottedBugs10:
@@ -2332,6 +2444,7 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      test123: {}
       text compression intro: {}
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
@@ -2700,6 +2813,36 @@ en:
         uses electricity, is pretty cheap: uses electricity, is pretty cheap
         uses light, is expensive: uses light, is expensive
         uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
+      CSPU5_U3L14 - Matching Events to Description:
+        Triggers once, the instant the mouse hovers over the button: Triggers once, the instant the mouse hovers over the button
+        Triggers when the mouse button is clicked once: Triggers when the mouse button is clicked once
+        Triggers when the mouse button is pressed: Triggers when the mouse button is pressed
+        Triggers when the mouse button is released: Triggers when the mouse button is released
+        Triggers whenever the mouse moves: Triggers whenever the mouse moves
+        click: click
+        mousedown: mousedown
+        mousemove: mousemove
+        mouseover: mouseover
+        mouseup: mouseup
+      CSPU5_U3L18 Matching:
+        "'Blue' == 'blue'": "'Blue' == 'blue'"
+        Is the string 'Blue' equal to the string 'blue'?: Is the string 'Blue' equal to the string 'blue'?
+        Is the value of the variable blue equal to the string 'blue'?: Is the value of the variable blue equal to the string 'blue'?
+        Is the value of the variable dice equal to 5?: Is the value of the variable dice equal to 5?
+        Is the value of the variable dice not equal to 5?: Is the value of the variable dice not equal to 5?
+        Is the value of the variable x greater than 3?: Is the value of the variable x greater than 3?
+        Is the value of the variable x greater than or equal to 3?: Is the value of the variable x greater than or equal to 3?
+        Is the value of the variable x less than 3?: Is the value of the variable x less than 3?
+        Is the value of the variable x less than or equal to 3?: Is the value of the variable x less than or equal to 3?
+        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        blue == 'blue': blue == 'blue'
+        dice != 5: dice != 5
+        dice == 5: dice == 5
+        x &gt; 3: x &gt; 3
+        x &gt;= 3: x &gt;= 3
+        x &lt; 3: x &lt; 3
+        x &lt;= 3: x &lt;= 3
       Coordinate Matching:
         "(250, 400)": "(250, 400)"
         "(320, 240)": "(320, 240)"
@@ -4209,6 +4352,59 @@ en:
         I feel like I could run this unit right now: I feel like I could run this unit right now
         I feel like I need to do A LOT of review of the tasks before I run this unit: I feel like I need to do A LOT of review of the tasks before I run this unit
         I feel like I need to do SOME review of the tasks before I run this unit: I feel like I need to do SOME review of the tasks before I run this unit
+      CSPU5_U3L14 - MC Duplicate Ids:
+        A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
+        'Choose Two: Buttons and IDs': 'Choose Two: Buttons and IDs'
+        JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.: JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.
+        The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.: The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.
+        The first button created with the ID will work, the other will not.: The first button created with the ID will work, the other will not.
+        Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.: Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.
+        'What happens when two buttons are given the same ID? Choose two of the following:': 'What happens when two buttons are given the same ID? Choose two of the following:'
+      CSPU5_U3L14 - MC order of button and onEvent:
+        Does the order in which the code for a button and the code for its event handler appear within the program matter?: Does the order in which the code for a button and the code for its event handler appear within the program matter?
+        'Multiple Choice: Buttons and Event Handlers': 'Multiple Choice: Buttons and Event Handlers'
+        No, JavaScript is flexible; the button and its event handler can appear in any order in the code.: No, JavaScript is flexible; the button and its event handler can appear in any order in the code.
+        Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
+        Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
+        Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
+      CSPU5_U3L14 - MC variable reassignment:
+        Code does not execute due to error: Code does not execute due to error
+        a:10 &nbsp; b:10 &nbsp;  c:20: a:10 &nbsp; b:10 &nbsp;  c:20
+        a:10 &nbsp; b:10 &nbsp; c:10: a:10 &nbsp; b:10 &nbsp; c:10
+        a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
+        a:10 &nbsp; b:17 &nbsp;  c:27: a:10 &nbsp; b:17 &nbsp;  c:27
+        a:3 &nbsp; b:7 &nbsp; c:10: a:3 &nbsp; b:7 &nbsp; c:10
+      CSPU5_predict_mc_turtleDriverBadIDs:
+        The turtle WILL NOT move forward when the "Go Forth" button is clicked: The turtle WILL NOT move forward when the "Go Forth" button is clicked
+        The turtle WILL NOT turn left when the "Turn Left" button is clicked: The turtle WILL NOT turn left when the "Turn Left" button is clicked
+        When you hit Run an error message will show that an event handler doesn't recognize an id: When you hit Run an error message will show that an event handler doesn't recognize an id
+        When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.: When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.
+      CSPU5_predict_mc_whichOfTwoEvents:
+        '': ''
+        Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
+        First onEvent block wins - the turtle will only move forward: First onEvent block wins - the turtle will only move forward
+        Last onEvent block wins - the turtle will only turn left: Last onEvent block wins - the turtle will only turn left
+        The program will crash when the button is clicked with an error stating it doesn't know which event handler to run: The program will crash when the button is clicked with an error stating it doesn't know which event handler to run
+        title: title
+      CSPU5_predict_mc_whichOfTwoEvents_2:
+        Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
+        First onEvent block wins - the turtle will only move forward: First onEvent block wins - the turtle will only move forward
+        Last onEvent block wins - the turtle will only turn left: Last onEvent block wins - the turtle will only turn left
+        The program will crash when the button is clicked with an error stating it doesn't know which event handler to run: The program will crash when the button is clicked with an error stating it doesn't know which event handler to run
+        question: question
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Question
+        The code WILL run. But will crash as soon as the button is clicked.: The code WILL run. But will crash as soon as the button is clicked.
+        The code WILL run. When the button is clicked the turtle will move forward.: The code WILL run. When the button is clicked the turtle will move forward.
+        The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id": The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id"
+        The code will NOT run. When you click the button nothing will happen.: The code will NOT run. When you click the button nothing will happen.
+        title: title
+      CSPU5_predict_turtleDriver_logicError:
+        ? Button IDs assigned to wrong event handlers. "Go Forth" button makes the turtle turn left, and "Turn Left" makes the turtle move forward.
+        : Button IDs assigned to wrong event handlers. "Go Forth" button makes the turtle turn left, and "Turn Left" makes the turtle move forward.
+        Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward: Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward
+        Buttons won't work because the button IDs are not descriptive enough: Buttons won't work because the button IDs are not descriptive enough
+        Trick Question! There actually are no errors.  The program will work as intended.: Trick Question! There actually are no errors.  The program will work as intended.
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
@@ -5165,7 +5361,7 @@ en:
         32 users: 32 users
         6 users: 6 users
         64 users: 64 users
-        How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
+        How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?: How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?
         IP Addresses and Bits: IP Addresses and Bits
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
@@ -5991,11 +6187,11 @@ en:
         <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
         <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
       cspu5_assess1_turtle:
-        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">
-        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">
-        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">
-        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">
-        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">
+        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
+        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
+        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
       cspu5_assess1_value:
         'value is: 2': 'value is: 2'
         'value is: 2.3333333': 'value is: 2.3333333'
@@ -6539,15 +6735,6 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-      unique level name here:
-        "<!DOCTYPE html>": "<!DOCTYPE html>"
-        "<head>": "<head>"
-        "<html>": "<html>"
-        "<title>": "<title>"
-        Defines high level information about web page: Defines high level information about web page
-        Shows the name of the page in a new tab: Shows the name of the page in a new tab
-        Starts and ends the HTML document: Starts and ends the HTML document
-        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
@@ -6713,7 +6900,6 @@ en:
         Enter prompt here: Enter prompt here
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
-        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U2L07 Assessment4:
         '43': '43'

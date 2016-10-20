@@ -11,9 +11,12 @@ import TutorialSet from './tutorialSet';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
-    filterGroups: React.PropTypes.array.isRequired,
     tutorials: React.PropTypes.array.isRequired,
-    locale: React.PropTypes.string.isRequired
+    filterGroups: React.PropTypes.array.isRequired,
+    initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
+    locale: React.PropTypes.string.isRequired,
+    backButton: React.PropTypes.bool,
+    roboticsButton: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -21,6 +24,10 @@ const TutorialExplorer = React.createClass({
 
     for (const filterGroup of this.props.filterGroups) {
       filters[filterGroup.name] = [];
+      const initialFiltersForGroup = this.props.initialFilters[filterGroup.name];
+      if (initialFiltersForGroup) {
+        filters[filterGroup.name] = initialFiltersForGroup;
+      }
     }
     return {
       filters: filters
@@ -61,6 +68,8 @@ const TutorialExplorer = React.createClass({
           filterGroups={this.props.filterGroups}
           onUserInput={this.handleUserInput}
           selection={this.state.filters}
+          backButton={this.props.backButton}
+          roboticsButton={this.props.roboticsButton}
         />
 
         {!this.isLocaleEnglish() && (
@@ -92,9 +101,12 @@ window.TutorialExplorerManager = function (options) {
   this.renderToElement = function (element) {
     ReactDOM.render(
       <TutorialExplorer
-        filterGroups={options.filters}
         tutorials={options.tutorials}
+        filterGroups={options.filters}
+        initialFilters={options.initialFilters}
         locale={options.locale}
+        backButton={options.backButton}
+        roboticsButton={options.roboticsButton}
       />,
       element
     );

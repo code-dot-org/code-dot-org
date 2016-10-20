@@ -98,17 +98,11 @@ def hoc_uri(uri)
 end
 
 def codeorg_url
-  if @country == 'ar'
-    return 'ar.code.org'
-  elsif @country == 'br'
-    return 'br.code.org'
-  elsif @country == 'ro'
-    return 'ro.code.org'
-  elsif @country == 'uk'
-    return 'uk.code.org'
-  else
-    return 'code.org'
-  end
+  return 'ar.code.org' if @country == 'ar'
+  return 'br.code.org' if @country == 'br'
+  return 'ro.code.org' if @country == 'ro'
+  return 'uk.code.org' if @country == 'uk'
+  return 'code.org'
 end
 
 def chapter_partner?

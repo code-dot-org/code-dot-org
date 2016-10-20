@@ -1,0 +1,12 @@
+hidden false
+
+stage 'Binary Images'
+level 'BinaryImages'
+level 'grade5_pixelation'
+
+stage 'Binary Artist Puzzles'
+level 'grade5_artist_binary5'
+level 'grade5_artist_binary4'
+level 'grade5_artist_binary8'
+level 'grade5_artist_binary9'
+level 'grade5_artist_binary11'

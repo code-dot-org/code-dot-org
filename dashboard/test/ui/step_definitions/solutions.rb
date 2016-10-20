@@ -1,5 +1,5 @@
 PUZZLE_SOLUTIONS = {
-  "http://learn.code.org/s/allthethings/stage/2/puzzle/1" => %{
+  "http://studio.code.org/s/allthethings/stage/2/puzzle/1" => %{
     And I drag block "4" to block "5"
     And I drag block "4" to block "6" plus offset 0, 50
   }
