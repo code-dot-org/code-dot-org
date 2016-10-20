@@ -56,30 +56,12 @@ var Sounds = module.exports = function () {
   this.audioUnlocked_ = false;
 
   if (window.AudioContext) {
-    function unlockAudioWhenVisible() {
-      try {
-        this.initializeAudioUnlockState_();
-      } catch (e) {
-        /**
-         * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
-         * when iframes are open, potentially related to:
-         *    https://code.google.com/p/chromium/issues/detail?id=308784
-         * or https://code.google.com/p/chromium/issues/detail?id=160022
-         *
-         * In the Chrome case, this will fall-back to the `window.Audio` method
-         */
-      }
-    }
-    // In order to support prerender, disable unlocking audio until the page
-    // exits the "prerender" visibility state.
+    // In order to support prerender, wait until the page exits the
+    // "prerender" visibility state before unlocking audio.
     if (document.visibilityState !== "prerender") {
-      unlockAudioWhenVisible();
+      this.tryUnlockAudio();
     } else {
-      function handleVisibilityChange() {
-        document.removeEventListener("visibilitychange", handleVisibilityChange);
-        this.unlockAudioWhenVisible();
-      }
-      document.addEventListener("visibilitychange", handleVisibilityChange, false);
+      document.addEventListener("visibilitychange", this.handleVisibilityChange, false);
     }
   }
 
@@ -87,6 +69,26 @@ var Sounds = module.exports = function () {
 
   /** @private {function[]} */
   this.whenAudioUnlockedCallbacks_ = [];
+};
+
+Sounds.prototype.handleVisibilityChange = function () {
+  document.removeEventListener("visibilitychange", this.handleVisibilityChange);
+  this.tryUnlockAudio();
+};
+
+/**
+ * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
+ * when iframes are open, potentially related to:
+ *    https://code.google.com/p/chromium/issues/detail?id=308784
+ * or https://code.google.com/p/chromium/issues/detail?id=160022
+ *
+ * In the Chrome case, this will fall-back to the `window.Audio` method
+ */
+Sounds.prototype.tryUnlockAudio = function () {
+  try {
+    this.initializeAudioUnlockState_();
+  } catch (e) {
+  }
 };
 
 /**
