@@ -9,6 +9,8 @@ SLACK_TOKEN = CDO.slack_token.freeze
 PAGERDUTY_TOKEN = CDO.pagerduty_token.freeze
 CHANNEL_ID = CDO.developers_channel_id.freeze
 
+ESCALATION_POLICY_NAME = 'Live Site Issues'.freeze
+
 # @param user [Hash] PagerDuty information for a user.
 # @param level [Integer] the oncall level to query.
 # @return [Boolean] whether the user is the current DOTD oncall at the specified
@@ -17,7 +19,7 @@ def dotd?(user, level)
   return false unless user['on_call']
   user['on_call'].each do |on_call|
     if on_call['level'] == level &&
-      on_call['escalation_policy']['name'] == 'Dev of the day issues'
+      on_call['escalation_policy']['name'] == ESCALATION_POLICY_NAME
       return true
     end
   end
@@ -41,9 +43,11 @@ def main
   end
 
   # Match PagerDuty email to Slack mention name.
-  users_list = open("https://slack.com/api/users.list?token=#{SLACK_TOKEN}").read
-  primary_dotd_user = JSON.parse(users_list)['members'].
-    find { |member| primary_dotd_email == member['profile']['email'] }
+  if primary_dotd_email
+    users_list = open("https://slack.com/api/users.list?token=#{SLACK_TOKEN}").read
+    primary_dotd_user = JSON.parse(users_list)['members'].
+      find { |member| primary_dotd_email == member['profile']['email'] }['name']
+  end
   primary_dotd_user = '(ERROR: check schedule)' unless primary_dotd_user
 
   # Set the new developers room topic
