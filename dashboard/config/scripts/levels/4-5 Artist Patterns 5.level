@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Now, when the artist finished each diamond, he's facing the opposite direction from where he needs to be to start the next one.  \\n\\nHow many degrees does he need to be turned to set himself straight?\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Now, when the artist finished each diamond, he's facing the opposite direction from where he needs to be to start the next one.  \\n\\nHow many degrees does he need to be turned to set himself straight?\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

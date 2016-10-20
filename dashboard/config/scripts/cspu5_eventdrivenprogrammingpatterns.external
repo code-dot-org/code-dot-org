@@ -24,6 +24,22 @@ The code describes what you want the app to do <em>WHEN</em> the specified type 
 
 ### Step 4 - Run. Test. Debug.
 
+If the program doesn't work at first (this is very common) try-try again
+
+
+**Debugging**
+
+We haven't had a ton of practice with debugging yet.  But if you have ever written any code and it threw an error, or didn't work for any other reason and you dug in and figured out why and fixed it, **you were debugging**.
+
+We'll do some debugging practice later on.
+
+The next tip we'll learn about will help make debugging easier for you later on.
+
+
+
+<!--
+
+
  * If the program doesn't work at first (this is very common) try-try again
  * You may run into **syntax** errors - things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say - fix these with careful reading.
  * Or you may run into **logic** errors - the program runs but doesn't do what you think it should.
@@ -57,6 +73,7 @@ Add code to the event handler function you want.</p>
 <div style="clear: both">
 &nbsp;
 </div>
+-->
 
 # Don't Worry!
 
