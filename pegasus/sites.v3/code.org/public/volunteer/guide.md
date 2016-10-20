@@ -41,8 +41,7 @@ Try out tutorials before heading to the classroom by going to https://code.org/l
 Prepare an intro:
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
-* Join the Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk)
-on October 12 2016 at 3pm ET / 12pm PT
+* Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
 * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing)
   * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
 * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
@@ -55,7 +54,7 @@ on October 12 2016 at 3pm ET / 12pm PT
 * Connect with the teacher to discuss what you plan to speak about during your session
 * If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand
 
-### **Day of - Hour of Code Event:**
+### **Day-of Hour of Code Event:**
 * Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
 * Spend 5 minutes talking about yourself, who inspired you to pursue a career in tech and/or computer science.
 	* Introduce yourself: who you are and what you do

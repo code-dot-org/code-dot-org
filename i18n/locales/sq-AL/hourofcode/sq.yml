@@ -4,6 +4,7 @@ sq:
   language: Shqip
   front_title: 'Bashkohuni eventit më të madh në histori, %{campaign_date}, 2015'
   coming_soon: Së shpejti
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 dhjetor
   campaign_date_start_long: 7 dhjetor
   campaign_date_short: 7-13 dhjetor
@@ -18,7 +19,6 @@ sq:
   front_start_learning: Start learning
   header_menu_resources: Burime
   header_menu_faq: Pyetje të Shpeshta (PESH)
-  header_menu_prizes: Shpërblime
   header_menu_how_to: Si
   header_menu_promote: Promovo
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ sq:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Shpërblimet për secilin organizator
-  prizes_every_organizer: Secili organizator i Orës së Kodimit do të marrë shpërblesë nga Dropbox apo Skype në shenjë falënderimi
-  prizes_technology: Një shkollë publike në secilin shtet të SHBA (dhe Washington DC) do të fitojë teknologji në vlerë $10,000
-  prizes_tech_chats: '# klasat do të fitojnë mundësinë për video komunikim me të ftuar special'
-  prizes_robots: 100 klasë do të fitojnë set robotësh me programator
-  prizes_brilliant: Një shkollë në secilën zonë apo territor do të fitojë $2000 për një Projekt Brilant
-  prizes_actua: 15 shkolla nga Kanadaja do të fitojnë 2 ndihmës për STEM punëtoritë nga një prej anëtarëve Actua
-  prizes_details: Detajet
   nav_back_to_resources: Kthehu tek Resurset
   how_to_nav_educators: Për mësuesit
   how_to_nav_after_school: Për aktivitet pas mësimit
@@ -163,23 +155,6 @@ sq:
   how_to_nav_companies: Për kompanitë
   how_to_nav_afterschool_educators: Për mësimdhënësit pas shkolle
   how_to_nav_volunteers: Për vullnetarët
-  prizes_nav_title: Shpërblime
-  prizes_nav_home: Të gjitha shpërblimet
-  prizes_nav_hardware: Regjistrimi për shpërblimet Hardware
-  prizes_nav_terms: Termat dhe Kushtet
-  prizes_nav_faq: PESH (pyetje të shpeshta)
-  prizes_nav_dc: Udhëtimi i mistershëm në Washington D.C.
-  prizes_nav_technology: 10.000$ teknologji për shkollën tënde
-  prizes_nav_video_chat: Bisedë me video me një gjigand të teknologjisë
-  prizes_nav_skype_dropbox: Kredit në Skype ose Dropbox për secilin organizator
-  prizes_nav_brilliant: 2.000$ projekt për Laboratorë të shkëlqyera
-  prizes_nav_actua: Workshop aktual
-  prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
-  prizes_header: Shpërblime për çdo mësimdhënës
-  prizes_10k: Një shkollë publike në secilin shtet të SHBA (dhe Washington DC) do të fitojë teknologji në vlerë $10,000
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Secili</i> organizator i Orës së Kodimit do të marrë shpërblesë <b>10$ nga Amazon.com, iTunes ose Windows Store</b> në shenjë falënderimi!'
-  prizes_more: More exciting prizes
   whats_next_header: çfarë tutje?
   whats_next_description: "Do ju dergojmë materiale dhe këshilla të dobishme për eventin tuaj. Tutorialet e reja të 2015 së shpejti do të arrijnë për çfarëdo browser-i, smartphone -apo edhe pa kompjuter! <a href='http://code.org/learn'>provo tutorialet aktual</a>"
   whats_next_how_to: "<a href='/how-to'>Si të realizojmë një Orë Kodimi</a>"
@@ -196,6 +171,7 @@ sq:
   share_on_facebook: Shpërndaje në Facebook
   share_on_twitter: Shpërndaje në Twitter
   front_join_us_heading: ORA e KODIMIT për çdo student.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: "Shkencat kompjuterike jane bazamenti për çdo nxënës. Na ndihmoni t'ua ofrojmë 100 milionë pjesëmarrësve."
   front_join_us_description_short: Shkencat kompjuterike janë themelet e çdo nxënësi.
   front_join_us_button: Bashkohu me ne
@@ -243,12 +219,13 @@ sq:
   signup_send_posters_address_label: Adresa e shkollës apo organizatës
   signup_whole_school_flag_label: Ky event është për tërë shkollën
   signup_your_event: Regjistroni eventin tuaj
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Më ndihmoni të gjej inxhinier programesh për të nxitur studentët
   signup_multiple_event_warning: Nëse ju po organizoni më shumë se një event, ju lutem dërgoni një emër ose email të veçant për secilin event. Ne njofim vetëm një event për një emër dhe email.
   signup_name_placeholder: Emri juaj
   signup_email_placeholder: ju@shembull.com
   signup_organization_name_placeholder: Për shembull, Shkolla Fan Noli
-  signup_event_location_placeholder: "Kodi postar dhe shteti OSE adresa e plotë.\\r (Do të përdorim këtë për ta vënë shenjën në hartën tonë)"
+  signup_event_location_placeholder: "Kodi postar dhe shteti OSE adresa e plotë.\r (Do të përdorim këtë për ta vënë shenjën në hartën tonë)"
   signup_special_event_details_placeholder: Përshkruaj çfare e bën këtë të jetë event i veçantë
   signup_send_posters_address_placeholder: Kjo adresë nuk do të shfaqet në hartën tonë
   signup_event_type_in_school: Në një shkollë
@@ -273,28 +250,6 @@ sq:
   meta_tag_twitter_title: Ora e Kodimit po vjen
   meta_tag_twitter_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 30 gjuhë. Mosha 4 deri 104.
   twitter_default_text: 'Këtë vit jam pjesëmarres në #OraeKodimit, po ju? @codeorg'
-  hardware_prizes_form_name_label: Emri juaj
-  hardware_prizes_form_name_placeholder: Emri juaj
-  hardware_prizes_form_email_label: Emaili juaj
-  hardware_prizes_form_email_placeholder: Emaili juaj
-  hardware_prizes_form_school_name_label: Emri i shkollës
-  hardware_prizes_form_school_name_placeholder: Emri i shkollës
-  hardware_prizes_form_school_address_label: Adresa e shkollës
-  hardware_prizes_form_school_address_placeholder: Adresa e shkollës
-  hardware_prizes_form_school_type_label: Lloji i shkollës
-  hardware_prizes_form_school_type_option_elementary: 'Fillore '
-  hardware_prizes_form_school_type_option_middle_school: Fillore e lartë
-  hardware_prizes_form_school_type_option_high_school: E mesme
-  hardware_prizes_form_qualifying_school_label: Kjo është shkollë publike K-12 e SHBA
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: Numri i nxënësve pjesëmarrës
-  hardware_prizes_form_number_students_placeholder: Numri i nxënësve
-  hardware_prizes_form_technology_plan_label: Si të përdorësh teknologjitë e reja për të ndihmuar përhapjen e shkencës kompjuterike në shkollën tuaj?
-  hardware_prizes_form_technology_plan_placeholder: Plani për përdorimin e teknologjive të reja
-  hardware_prizes_form_plan_file_label: Ngarko (upload) planin logjistik tuaj për Orën e Kodimit
-  hardware_prizes_form_plan_file_description: 'Paraqit orarin se si planifikon të organizosh secilin nxënës për ta bërë Orën e Kodimit në shkollën tënde. Shih planin shembull: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: dorëzo/paraqit
   hoc_faq_title: PESH (Pyetjet e shpeshta)
   hoc_faq_what_is_hoc_q: Çfarë është Ora e Kodimit?
   hoc_faq_what_is_hoc_a: "Ora e Kodimit është prezantim një orësh për shkencat kompjuterike, i dizajnuar të demistifikojë kodimin dhe të dëshmojë që çdo kush mund të mësojë gjërat bazike. <a href='%{codeorg_url}'>Shikoni tutorialet</a>."
@@ -402,11 +357,6 @@ sq:
   title_proclamation: Shëmbuj Zgjidhjesh në Mbështetje të Javës së Arsmimit në Shkencat Kompjuterike dhe të Orës së Kodimit
   title_stats: Njoftime dhe Statistika
   title_partners: Partnerët
-  title_prizes_faq: Çmimet FAQ
-  title_prizes_terms: Termat për Çmimet
-  title_prizes_thanks: Faleminderit
-  title_prizes: Shpërblime
-  title_hardware_prize_form: Regjistrohuni për Shpërblimet Hardware
   title_resources: Burimet
   title_signup_thanks: Faleminderit që u regjistruat si organizator në Orën e Kodimit!
   title_tutorial_guidelines: Udhëzime për Tutorialin

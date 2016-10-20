@@ -734,15 +734,6 @@ function makeDraggable(jqueryElements) {
         elm.outerWidth(dimensions.width);
         elm.outerHeight(dimensions.height);
 
-        var element = elm[0];
-        // canvas uses width/height. other elements use style.width/style.height
-        var widthProperty = 'style-width';
-        var heightProperty = 'style-height';
-        if (element.hasAttribute('width') || element.hasAttribute('height')) {
-          widthProperty = 'width';
-          heightProperty = 'height';
-        }
-
         // Re-render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);
       }

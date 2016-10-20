@@ -35,7 +35,8 @@ const StageLock = React.createClass({
     stage: stageShape,
 
     // redux provided
-    sectionsLoaded: React.PropTypes.bool.isRequired,
+    sectionId: React.PropTypes.string.isRequired,
+    sectionsAreLoaded: React.PropTypes.bool.isRequired,
     unlocked: React.PropTypes.bool.isRequired,
     saving: React.PropTypes.bool.isRequired,
     openLockDialog: React.PropTypes.func.isRequired,
@@ -44,15 +45,15 @@ const StageLock = React.createClass({
   },
 
   openLockDialog() {
-    this.props.openLockDialog(this.props.stage.id);
+    this.props.openLockDialog(this.props.sectionId, this.props.stage.id);
   },
 
   lockStage() {
-    this.props.lockStage(this.props.stage.id);
+    this.props.lockStage(this.props.sectionId, this.props.stage.id);
   },
 
   render() {
-    if (!this.props.sectionsLoaded) {
+    if (!this.props.sectionsAreLoaded) {
       return <div>{commonMsg.loading()}</div>;
     }
     return (
@@ -93,29 +94,31 @@ const StageLock = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { sectionsLoaded, sections, selectedSection, saving } = state.stageLock;
+  const { stagesBySectionId, saving } = state.stageLock;
+  const { sectionsAreLoaded, selectedSectionId } = state.sections;
   let unlocked = false;
-  if (sectionsLoaded) {
-    const currentSection = sections[selectedSection];
+  if (sectionsAreLoaded) {
+    const currentSection = stagesBySectionId[selectedSectionId];
     if (currentSection) {
-      const stageStudents = currentSection.stages[ownProps.stage.id];
+      const stageStudents = currentSection[ownProps.stage.id];
       unlocked = stageStudents.some(student => !student.locked);
     }
   }
 
   return {
+    sectionId: selectedSectionId,
     unlocked,
-    sectionsLoaded,
+    sectionsAreLoaded,
     saving
   };
 }, dispatch => ({
-  openLockDialog(stageId) {
-    dispatch(openLockDialog(stageId));
+  openLockDialog(sectionId, stageId) {
+    dispatch(openLockDialog(sectionId, stageId));
   },
   closeLockDialog() {
     dispatch(closeLockDialog());
   },
-  lockStage(stageId) {
-    dispatch(lockStage(stageId));
+  lockStage(sectionId, stageId) {
+    dispatch(lockStage(sectionId, stageId));
   }
 }))(Radium(StageLock));

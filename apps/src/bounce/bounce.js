@@ -7,9 +7,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
 var bounceMsg = require('./locale');
-var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -18,13 +16,10 @@ var AppView = require('../templates/AppView');
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
-var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var experiments = require('../experiments');
 
-var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 
 var ResultType = studioApp.ResultType;
@@ -62,19 +57,8 @@ var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 var level;
 var skin;
 
-/**
- * Milliseconds between each animation frame.
- */
-var stepSpeed;
-
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
-
-var getTile = function (map, x, y) {
-  if (map && map[y]) {
-    return map[y][x];
-  }
-};
 
 // Default Scalings
 Bounce.scale = {
@@ -212,7 +196,7 @@ Bounce.deleteBallElements = function (i) {
 
 var drawMap = function () {
   var svg = document.getElementById('svgBounce');
-  var i, x, y, k, tile;
+  var i, x, y, tile;
 
   // Adjust outer element size.
   svg.setAttribute('width', Bounce.MAZE_WIDTH);
@@ -915,8 +899,6 @@ Bounce.reset = function (first) {
   Bounce.paddleSpeed = tiles.DEFAULT_PADDLE_SPEED;
 
   Bounce.displayPaddle(Bounce.paddleX, Bounce.paddleY);
-
-  var svg = document.getElementById('svgBounce');
 
   if (Bounce.paddleFinish_) {
     for (i = 0; i < Bounce.paddleFinishCount; i++) {

@@ -9,7 +9,6 @@ import CompletionButton from './CompletionButton';
 import PlaySpaceHeader from './PlaySpaceHeader';
 import PhoneFrame from './PhoneFrame';
 import BelowVisualization from '../templates/BelowVisualization';
-import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import {connect} from 'react-redux';
 import classNames from 'classnames';

@@ -5,8 +5,6 @@
  */
 
 import Cell from './cell';
-import tiles from './tiles';
-
 const FeatureType = {
   NONE: 0,
   SOIL: 1,

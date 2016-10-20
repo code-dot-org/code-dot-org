@@ -111,5 +111,8 @@
   "word": "Troba la paraula",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Sí",
-  "youSpelled": "Has escrit"
+  "youSpelled": "Has escrit",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

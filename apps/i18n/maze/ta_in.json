@@ -111,5 +111,8 @@
   "word": "சொல்லை கண்டறி",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "ஆம்",
-  "youSpelled": "நீங்கள் உச்சரித்தது"
+  "youSpelled": "நீங்கள் உச்சரித்தது",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

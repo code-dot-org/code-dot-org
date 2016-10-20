@@ -1,5 +1,3 @@
-/* globals dashboard */
-
 import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -40,4 +38,3 @@ if ($('#iconLibraryContainerDiv').length) {
 
   }), document.querySelector('#iconLibraryContainerDiv'));
 }
-

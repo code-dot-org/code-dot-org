@@ -1,0 +1,47 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-10-13T19:04:53.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "markdown_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Stage 16 Puzzle 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/16/puzzle/8) and `playerFall` in [Stage 16 Puzzle 13](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/16/puzzle/13).\r\n\r\nFor each movement:\r\n* Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "CSD U3 game template",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "show_d_pad": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

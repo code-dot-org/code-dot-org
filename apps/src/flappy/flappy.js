@@ -10,7 +10,6 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var flappyMsg = require('./locale');
-var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
 var Provider = require('react-redux').Provider;
@@ -19,7 +18,6 @@ var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
 var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
@@ -48,11 +46,6 @@ var skin;
 
 Flappy.obstacles = [];
 
-/**
- * Milliseconds between each animation frame.
- */
-var stepSpeed;
-
 // whether to show Get Ready and Game Over
 var infoText;
 
@@ -80,7 +73,6 @@ var twitterOptions = {
 
 var AVATAR_HEIGHT = constants.AVATAR_HEIGHT;
 var AVATAR_WIDTH = constants.AVATAR_WIDTH;
-var AVATAR_Y_OFFSET = constants.AVATAR_Y_OFFSET;
 
 var loadLevel = function () {
   // Load maps.
@@ -149,7 +141,7 @@ var loadLevel = function () {
 
 var drawMap = function () {
   var svg = document.getElementById('svgFlappy');
-  var i, x, y, k, tile;
+  var i, tile;
 
   // Adjust outer element size.
   svg.setAttribute('width', Flappy.MAZE_WIDTH);
@@ -306,11 +298,6 @@ var drawMap = function () {
 
 Flappy.calcDistance = function (xDist, yDist) {
   return Math.sqrt(xDist * xDist + yDist * yDist);
-};
-
-var essentiallyEqual = function (float1, float2, opt_variance) {
-  var variance = opt_variance || 0.01;
-  return (Math.abs(float1 - float2) < variance);
 };
 
 /**
@@ -619,7 +606,6 @@ Flappy.clearEventHandlersKillTickLoop = function () {
  * @param {boolean} first True if an opening animation is to be played.
  */
 Flappy.reset = function (first) {
-  var i;
   Flappy.clearEventHandlersKillTickLoop();
 
   Flappy.gameState = Flappy.GameStates.WAITING;
@@ -664,8 +650,6 @@ Flappy.reset = function (first) {
   Flappy.displayObstacles();
   Flappy.displayGround(0);
   Flappy.displayGoal();
-
-  var svg = document.getElementById('svgFlappy');
 };
 
 /**

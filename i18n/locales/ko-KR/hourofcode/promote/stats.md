@@ -4,6 +4,10 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
 
+<a id="blurb"></a>
+
+<%= view :signup_button %>
+
 # 안내 및 유용한 통계자료들
 
 ## 이 짧은 안내 문구를 각종 뉴스레터에 사용하세요.
@@ -14,6 +18,10 @@ With technology changing every industry on the planet, computing knowledge has b
 
 The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
+<a id="infographics"></a>
+
 ## 인포그래픽스
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

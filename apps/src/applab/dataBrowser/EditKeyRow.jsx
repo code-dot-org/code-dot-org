@@ -1,7 +1,6 @@
 /** @overview Component for editing a key/value pair row. */
 
 import FirebaseStorage from '../firebaseStorage';
-import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This spaceship needs a window!\r\n\r\nEach side is 100 pixels and all of the angles are 90 degrees.",
+    "instructions": "This spaceship needs a window!\r\n\r\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
     "x": "150",
     "y": "150",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "8",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "*\"This spaceship needs a window!\"*\r\n\r\nEach side is 100 pixels and all of the angles are 90 degrees.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "*\"This spaceship needs a window!\"*\r\n\r\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

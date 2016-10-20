@@ -114,5 +114,17 @@
   "whenWallCollidedTooltip": "Thực hiện các lệnh dưới đây khi một quả bóng va chạm với một bức tường.",
   "whileMsg": "Lặp khi",
   "whileTooltip": "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả.",
-  "yes": "Đồng ý"
+  "yes": "Đồng ý",
+  "basketballLaunchBall": "throw new ball",
+  "basketballLaunchBallTooltip": "Throw a ball into play.",
+  "basketballSetPaddle": "set hand",
+  "basketballSetPaddleSpeedFast": "set fast hand speed",
+  "basketballSetPaddleSpeedNormal": "set normal hand speed",
+  "basketballSetPaddleSpeedRandom": "set random hand speed",
+  "basketballSetPaddleSpeedSlow": "set slow hand speed",
+  "basketballSetPaddleSpeedTooltip": "Sets the speed of the hand",
+  "basketballSetPaddleSpeedVeryFast": "set very fast hand speed",
+  "basketballSetPaddleSpeedVerySlow": "set very slow hand speed",
+  "basketballWhenBallMissesPaddle": "when ball misses hand",
+  "basketballWhenPaddleCollided": "when ball hits hand"
 }

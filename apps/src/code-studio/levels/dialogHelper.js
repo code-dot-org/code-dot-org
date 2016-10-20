@@ -1,4 +1,4 @@
-/* globals appOptions, Dialog, CDOSounds, showVideoDialog, dashboard */
+/* globals appOptions, Dialog, CDOSounds */
 import $ from 'jquery';
 import React from 'react';
 import PlayZone from '../components/playzone';

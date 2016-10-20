@@ -4,21 +4,21 @@ ko:
   language: 한국어
   front_title: '2015년 12월 7일- 12월 13일, 역사상 가장 큰 학습 이벤트에 참여하세요.'
   coming_soon: 곧 시작됩니다.
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 12월 7일
   campaign_date_start_long: 12월 7일
   campaign_date_short: 12월 7일-13일
   campaign_date_full: 12월 7일-13일
-  campaign_date_year: "2016"
-  campaign_date_full_year: December 5-11, 2016
+  campaign_date_year: 2016년
+  campaign_date_full_year: 2016년 12월 5일부터 11일
   front_header_banner: '2015년 12월 7일- 12월 13일, 역사상 가장 큰 학습 이벤트에 참여하세요.'
   front_intro_default: 'Hour of Code는 전세계 180개 이상의 국가에서 이루어지는 국제적 운동입니다. 어느 누구나 어디에서든지 Hour of Code 행사를 운영할 수 있습니다. 한 시간 분량의 튜토리얼은 40여개 이상의 언어로 준비되어 있습니다. <strong>4살에서 104세</strong>까지 누구든 참여할 수 있습니다.'
   front_watch_video: 새로운 동영상 보기
   front_watch_regular_video: 동영상 보기
   front_volunteers: 전공 자원봉사자 모집합니다.
-  front_start_learning: Start learning
+  front_start_learning: 학습 시작
   header_menu_resources: 각종 자료
   header_menu_faq: 자주 묻는 질문 (FAQ)
-  header_menu_prizes: 상품
   header_menu_how_to: 방법
   header_menu_promote: 홍보/지원
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ ko:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: 모든 운영자에 대한 상품
-  prizes_every_organizer: 모든 Hour of Code 운영자는 감사의 의미로 Dropbox 나 Skype 크레딧을 받게 됩니다.
-  prizes_technology: 모든 미국 주(워싱턴DC 포함)에 속한 공립학교들은 $10,000 상당의 상품을 받게 될 것입니다.
-  prizes_tech_chats: '# 개의 학급들은 매우 특별한 게스트들과 비디오 채팅을 할 수 있는 기회를 얻게 됩니다.'
-  prizes_robots: 100 개의 학급들은 프로그래밍 가능한 로봇 세트를 받게 됩니다.
-  prizes_brilliant: 각 지역/주에서 멋진 프로젝트를 운영한 1개 학교는 $2000 상당의 상품을 받게 됩니다.
-  prizes_actua: 캐나다까지 포함해 15개의 학교들은 Actua 멤버중에 하나에서 진행하는 STEM 활동 워크샵 기회를 얻게 됩니다.
-  prizes_details: 세부 사항
   nav_back_to_resources: 리소스로 돌아가기
   how_to_nav_educators: 교육자를 위한
   how_to_nav_after_school: 방과 후 학교를 위한
@@ -163,23 +155,6 @@ ko:
   how_to_nav_companies: 회사를 위한
   how_to_nav_afterschool_educators: 방과 후 수업 교사를 위한
   how_to_nav_volunteers: 자원봉사자를 위한
-  prizes_nav_title: 상품
-  prizes_nav_home: 모든 상품들
-  prizes_nav_hardware: 하드웨어 상품 응모하기
-  prizes_nav_terms: 이용 약관
-  prizes_nav_faq: 자주 묻는 질문 (FAQ)
-  prizes_nav_dc: 워싱턴 디씨(D.C)로의 신비한 여행
-  prizes_nav_technology: 여러분의 학교에 제공되는 1만 달러 상당의 지원
-  prizes_nav_video_chat: 전세계적으로 유명한 컴퓨터과학기술분야 사람들과의 영상 채팅
-  prizes_nav_skype_dropbox: 모든 주최자에 제공되는 스카이프 크레딧 또는 드롭박스 공간
-  prizes_nav_brilliant: 2천달러 짜리 멋진 연구실 프로젝트
-  prizes_nav_actua: Actua 워크숍
-  prizes_nav_kids_code: 키드 코드 주네세
-  prizes_header: 모든 교육자들을 위한 상품
-  prizes_10k: 미국의 각 주(워싱턴 D.C. 포함)별 1개의 공립학교에는 $10,000 상당의 컴퓨터과학기술 지원비를 상품으로 제공합니다.
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>모든</i> 행사 운영자에게는 감사의 마음으로 <b>아마존, iTunes 또는 윈도 스토어</b>의 $10 상당의 기프트카드를 드립니다!'
-  prizes_more: More exciting prizes
   whats_next_header: 다음은?
   whats_next_description: "여러분의 이벤트에 도움이 될 팁과 자료를 보내드립니다. 모든 인터넷 브라우저와 스마트폰에서 사용할 수 있는, 2015년 새로운 튜토리얼이 곧 제공됩니다. <a href='http://code.org/learn'>현재 튜토리얼 실행하기 </a>"
   whats_next_how_to: "<a href='how-to'>Hour of Code 실행하기</a>"
@@ -196,6 +171,7 @@ ko:
   share_on_facebook: 페이스북에 공유
   share_on_twitter: 트위터에 공유
   front_join_us_heading: 모든 학생들을 위한 1시간짜리 Hour of Code
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: 컴퓨터과학(정보과학) 은 모든 학생들이 배워야하는 기초 교과입니다. 1억명의 학생들에게 소개하기 위해서 함께 도와주세요.
   front_join_us_description_short: 컴퓨터과학(정보과학) 은 모든 학생들에게 필수적으로 필요한 기초입니다.
   front_join_us_button: 함께 참여하기
@@ -243,12 +219,13 @@ ko:
   signup_send_posters_address_label: 학교/소속 주소
   signup_whole_school_flag_label: 이 이벤트는 학교 전체 행사로 운영됩니다.
   signup_your_event: 내 이벤트 행사 등록하기
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: 저희 학교 학생들에게 영감을 줄 수 있는 소프트웨어 엔지니어를 찾을 수 있도록 도와주세요.
   signup_multiple_event_warning: 여러 개의 이벤트를 운영하시면, 하나의 이름과 이메일로 등록해 주세요. 이름과 이메일 조합을 하나로 카운팅합니다.
   signup_name_placeholder: 이름
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 예를 들어, 링컨 고등학교
-  signup_event_location_placeholder: "우편번호와 지역 또는 전체주소\\r\n(이 정보는 지도에 핀으로 나타내기 위해 사용합니다.)"
+  signup_event_location_placeholder: "우편번호와 지역 또는 전체주소\r\n(이 정보는 지도에 핀으로 나타내기 위해 사용합니다.)"
   signup_special_event_details_placeholder: 이 스페셜 이벤트에 대해서 자세히 설명해주세요.
   signup_send_posters_address_placeholder: 이 주소가 지도에 나타나지는 않습니다.
   signup_event_type_in_school: 학교에서
@@ -273,28 +250,6 @@ ko:
   meta_tag_twitter_title: Hour of Code 가 곧 시작됩니다.
   meta_tag_twitter_description: Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지 수천만 명의 학생들과 함께하려는 전세계적 운동입니다.
   twitter_default_text: '저는 이번 #HourOfCode 행사에 참여합니다. 여러분은요? @codeorg'
-  hardware_prizes_form_name_label: 이름
-  hardware_prizes_form_name_placeholder: 이름
-  hardware_prizes_form_email_label: 이메일
-  hardware_prizes_form_email_placeholder: 이메일
-  hardware_prizes_form_school_name_label: 학교명
-  hardware_prizes_form_school_name_placeholder: School name
-  hardware_prizes_form_school_address_label: 학교주소
-  hardware_prizes_form_school_address_placeholder: School address
-  hardware_prizes_form_school_type_label: 학교 유형
-  hardware_prizes_form_school_type_option_elementary: 초등학교
-  hardware_prizes_form_school_type_option_middle_school: 중학교
-  hardware_prizes_form_school_type_option_high_school: 고등학교
-  hardware_prizes_form_qualifying_school_label: 미국 K-12 공립학교입니다.
-  hardware_prizes_form_title_I_school_label: 이 학교는 Title I funding 에 응모하였습니다.
-  hardware_prizes_form_title_I_school_help_text: Title I schools 은 주 표준 기초학습과정 이수가 어려울 수 있는, 연방정부의 지원금을 받는 저소득층 학생들이 많은 학교입니다.
-  hardware_prizes_form_number_students_label: 참여 학생수
-  hardware_prizes_form_number_students_placeholder: 학생수
-  hardware_prizes_form_technology_plan_label: 여러분의 학교에서 컴퓨터과학(정보과학) 수업을 확대하기 위해서 어떻게 새로운 컴퓨터과학기기/기술들을 사용할 예정인가요?
-  hardware_prizes_form_technology_plan_placeholder: 새로운 컴퓨터과학기술을 사용하는 것과 관련한 계획
-  hardware_prizes_form_plan_file_label: Hour of Code 계획서 업로드
-  hardware_prizes_form_plan_file_description: '여러분의 학교에서 학생들이 참여하고 운영하기 위한 간단한 Hour Of Code 행사 스케줄을 제출해 주세요. 예시 계획서를 살펴보세요: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: 제출하기
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: Hour of Code 란?
   hoc_faq_what_is_hoc_a: "Hour of Code 는 1시간짜리 컴퓨터과학(정보과학) 소개 과정으로, 어려울 것 같은 코드에 대해 쉽게 이해하고, 설명하고, 누구나 기초/개념/원리들을 배울 수 있다는 것을 보여주도록 설계되었습니다. <a href='%{codeorg_url}'>튜토리얼들을 확인해 보세요.</a>."
@@ -400,11 +355,6 @@ ko:
   title_proclamation: 컴퓨터과학 교육주간(Computer Science Education Week) 과 Hour of Code 를 지원하기 위한 예시 결의문
   title_stats: 추천 의견들과 통계
   title_partners: 파트너
-  title_prizes_faq: 상품 FAQ
-  title_prizes_terms: 상품 약관
-  title_prizes_thanks: 감사합니다.
-  title_prizes: 상품
-  title_hardware_prize_form: 하드웨어 상품 응모하기
   title_resources: 각종 자료
   title_signup_thanks: Hour of Code! 행사를 운영하는데 가입해 주셔서 감사합니다.
   title_tutorial_guidelines: 튜토리얼 가이드라인
@@ -421,9 +371,9 @@ ko:
   events_orgs_title: 협찬 파트너 조직들에 의해 운영되는 모든 Hour of Code 이벤트들
   event: 이벤트
   events: 이벤트들
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  highlights_title: 하이라이트
+  highlights_header: Hour of Code의 하이라이트
+  highlights_description: Hour of Code 캠페인에서 우리가 가장 좋아하는 순간들
   footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: 파트너

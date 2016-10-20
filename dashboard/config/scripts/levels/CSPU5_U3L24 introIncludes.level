@@ -1,0 +1,56 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-10-12T17:57:35.000Z",
+  "level_num": "custom",
+  "user_id": 112,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "assign_x": null,
+      "declareAssign_x_prompt": null,
+      "console.log": null,
+      "declareAssign_str_hello_world": null,
+      "includes": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "instructions": "Practice using the includes command. (Click to see full instructions)",
+    "markdown_instructions": "# *includes*\r\n<img src=\"https://images.code.org/7373ad2ad98b0d815ce0b8196c2ec177-image-1446070324010.11.43 PM.png\" style=\"width: 250px; float:right\">\r\n\r\nWe're going to explore a new function called `includes`. This function can be used to check if one string appears anywhere inside of another. Just like `toUpperCase` and `toLowerCase` this function is called using **dot notation**.\r\n\r\n# *includes* Returns a Boolean\r\n**`includes` is a function that returns a boolean.** In other words, when the function runs it will **evaulate to either `true` or `false`**. This function can be used **anywhere you would normally use a boolean expression**.\r\n\r\nYou've actually **seen a few functions that return a value before this**. `randomNumber` is a function that returns a number and `getText` is a function that returns a string. In every case we've used these functions **as if they were the data type they return (or evaulate to)**. Notice that in block mode these functions don't have the connectors that other commands do since they will be used as a piece of data within another function.\r\n\r\n# Do This:\r\n\r\n* **Read the documentation** for `includes`.\r\n* **Starter code** has been provided which shows one instance where a string does include a `searchValue` and one where it does not.\r\n* **Replicate the style** of these commands to check the rest of questions provided.\r\n* **Create three statements of your own using `includes`** making use of the `console.log` statements provided.\r\n* **Once you're comfortable with this command move on.**",
+    "start_blocks": "var colors = \"Red Orange Yellow Green Blue Purple\";\r\nvar numbers = \"123 456 789\";\r\n\r\nconsole.log(\"Colors includes Red: \" + colors.includes(\"Red\"));\r\nconsole.log(\"Colors includes red: \" + colors.includes(\"red\"));\r\nconsole.log(\"Colors includes low: \");\r\nconsole.log(\"Numbers includes 123: \");\r\nconsole.log(\"Numbers includes 9: \");\r\nconsole.log(\"Numbers includes 34: \");\r\n\r\n//Use these console.log statements to test out includes for yourself.\r\n\r\nconsole.log( );\r\nconsole.log( );\r\nconsole.log( );",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "execute_palette_apis_only": "false",
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "ZWHa9JdkR3OLuegzVK6G0hB7Jffbf5PUIVG9+Dkqz8ybT4PIV+CNMKwWfXyK\nExCD\n",
+    "contained_level_names": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Applab>

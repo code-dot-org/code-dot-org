@@ -9,36 +9,13 @@ content-type: text/ng-template
 .ops-workshops
   -if can_see_pd_workshop_dashboard?
     %h1
-      New Workshop Dashboard (beta)
+      Workshop Dashboard
     %a{href:CDO.studio_url('/pd/workshop_dashboard')}
       %h3
         Manage PD Workshops
-  -if dashboard_admin?
-    %h1
-      Ops Dashboard
-    %a{href:'/ops-dashboard#/districts'}
-      %h3
-        Manage Districts
-  -if dashboard_admin? || have_permission?('facilitator')
-    -if !dashboard_admin?
-      %h1
-        Facilitator Dashboard
-    %a{href:'/ops-dashboard#/workshops'}
-      %h3
-        Manage PD Workshops
-  -elsif have_permission?('district_contact')
-    %h1
-      District Dashboard
-    %a{href:'/ops-dashboard#/workshops'}
-      %h3
-        View PD Workshops
-  -if dashboard_admin? || have_permission?('district_contact')
-    %a{href:'/ops-dashboard#/teacher-cohorts'}
-      %h3
-        Manage Teacher Cohorts
   -if dashboard_admin? || have_permission?('create_professional_development_workshop')
     %h1
-      Affiliate Dashboard
+      Old CSF Workshop Dashboard
     %a{href:'/manage-professional-development-workshops'}
       %h3
         Manage Workshops

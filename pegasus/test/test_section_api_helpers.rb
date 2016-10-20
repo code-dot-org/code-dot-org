@@ -31,6 +31,7 @@ class SectionApiHelperTest < Minitest::Test
       # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
       @fake_db = Sequel.connect "mock://mysql"
       @fake_db.server_version = 50616
+      I18n.locale = 'en-US'
       Dashboard.stubs(:db).returns(@fake_db)
     end
 
@@ -73,6 +74,14 @@ class SectionApiHelperTest < Minitest::Test
       it 'rewrites mc as Minecraft, hourofcode as "Classic Maze"' do
         assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft'
         assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Classic Maze'
+        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
+        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
+      end
+
+      it 'rewrites mc as Minecraft, hourofcode as "Laberinto clásico" in Spanish"' do
+        I18n.locale = 'es-ES'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Laberinto clásico'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
       end

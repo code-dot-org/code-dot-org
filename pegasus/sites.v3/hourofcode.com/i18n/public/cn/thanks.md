@@ -28,7 +28,7 @@
 
 # 感谢注册并组织编程一小时活动！
 
-你在<%= campaign_date('full') %>的帮助会让全世界的学生了解编程一小时，这有可能*改变他们的一生*。 We'll be in touch about new tutorials and other exciting updates. 现在你能做什么？
+你在<%= campaign_date('full') %>的帮助会让全世界的学生了解编程一小时，这有可能*改变他们的一生*。 我们会保持联系，提供新的课程和其他令人兴奋的更新。 现在你能做什么？
 
 ## 1. 帮助宣传这个活动
 

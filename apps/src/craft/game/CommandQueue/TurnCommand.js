@@ -1,5 +1,3 @@
-
-import CommandState from "./CommandState.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class TurnCommand extends BaseCommand {
@@ -22,4 +20,3 @@ export default class TurnCommand extends BaseCommand {
     }
 
 }
-

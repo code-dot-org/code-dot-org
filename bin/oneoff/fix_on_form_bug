@@ -9,6 +9,7 @@ require src_dir 'database'
 require 'cdo/solr'
 
 time_now = Time.now
+SOLR = Solr::Server.new(host: CDO.solr_server)
 
 DB[:forms].where(kind: 'VolunteerEngineerSubmission2015').each do |volunteer|
   data = JSON.parse(volunteer[:data])

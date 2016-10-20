@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -23,7 +25,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Post dit op sociale media
 
-[![afbeelding](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -31,11 +33,11 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Gebruik het logo van CodeUur om het woord te verspreiden
 
-[![afbeelding](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download Hi-res versies](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"CodeUur" is een handelsmerk. We willen het gebruik niet voorkomen, maar we willen ervoor zorgen dat het past binnen een paar grenzen:**
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
   1. Elke verwijzing naar "Uur Code" moet worden gebruikt op een zodanige manier deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het CodeUur op ACMECorp.com". Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
   2. Gebruik een "TM" superscript op de meest prominente plaatsen waar u "CodeUur" opnoemt, zowel op uw website en app beschrijvingen.
@@ -49,8 +51,8 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Print deze stickers om ze aan de leerlingen te geven
 
-(Stickers zijn 1" diameter, 63 per vel)  
-[![afbeelding](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+(Stickers are 1" diameter, 63 per sheet)  
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -62,45 +64,45 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Het goede nieuws is, we zijn op weg om dit te veranderen. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Dankzij het CodeUur, is programmering op homepages gekomen van Google, MSN, Yahoo! en Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! en Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Ga aan de slag op http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
 ## Vraag de media uw evenement bij te wonen:
 
-**Onderwerp:** Lokale scholen doen mee met de missie om 100 miljoen leerlingen kennismaken te laten maken met programmering
+**Subject line:** Local school joins mission to introduce students to computer science
 
 Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Het goede nieuws is, we zijn op weg om dit te veranderen.
 
-Dankzij het CodeUur, is programmering op homepages gekomen van Google, MSN, Yahoo! en Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! en Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Ik nodig je uit om de aftrap bij te wonen en om uw kinderen de activiteit te zien starten op [DATE].
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Doe alsjeblieft mee.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**Contact:** [YOUR NAME], [TITLE], telefoonnummer
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**Wanneer:** [Datum en tijd van uw evenement]
+**When:** [DATE and TIME of your event]
 
-**Waar:** [Adres en routebeschrijving]
+**Where:** [ADDRESS and DIRECTIONS]
 
-Ik kijk uit naar onze kennismaking.
+I look forward to being in touch.
 
 <a id="parents"></a>
 
 ## Vertel ouders over het evenement op je school:
 
-Beste ouders,
+Dear Parents,
 
-We leven in een wereld omringd door technologie. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
 But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
@@ -133,3 +135,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

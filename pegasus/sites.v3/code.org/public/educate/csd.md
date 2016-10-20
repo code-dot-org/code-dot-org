@@ -57,6 +57,9 @@ CS Discoveries will be designed primarily for students in grades 7-9, so it can 
 <hr/>
 
 ## <a name="content"></a>Course Overview
+
+[**Printable course overview PDF**](https://code.org/files/programs/CSD_1-pager_final.pdf)
+
 Computer Science encompasses far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
 ### Semester 1: CS Discoveries: Exploration and Expression

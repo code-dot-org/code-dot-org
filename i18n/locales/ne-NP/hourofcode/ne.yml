@@ -2,15 +2,16 @@ ne:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: नेपाली
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: छिटै आउँदैछ
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: मङ्सिर २१
   campaign_date_start_long: मङ्सिर २१
   campaign_date_short: मङ्सिर २१-२८
   campaign_date_full: December 5-11
   campaign_date_year: "2016"
   campaign_date_full_year: December 5-11, 2016
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: नयाँ भिडियो हेर्नुहोस्
   front_watch_regular_video: 'यो चल दृश्य हार्नुहोस् '
@@ -18,7 +19,6 @@ ne:
   front_start_learning: Start learning
   header_menu_resources: स्रोतहरू
   header_menu_faq: लगातर सोधिने प्रश्नहरू
-  header_menu_prizes: पुरस्कारहरू
   header_menu_how_to: 'कसरि '
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ ne:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: प्रत्के व्यवस्थापकको लागि पुरस्कारहरू
-  prizes_every_organizer: प्रत्येक Hour of Code को आयोजकले धन्यवादको रूपमा ड्रपबाकस वा Skype क्रेडिट प्राप्त गर्नेछ
-  prizes_technology: हरेक संयुक्त राज्यमा एक पब्लिक विद्यालयले (वासिङ्गटन डीसी) प्रविधिको विकासमा $10000 समान जित्नेछ
-  prizes_tech_chats: '# कक्षाकोठाहरूले एकदमै विशेष पाहुनाहरूसँग भिडियो च्याट गर्न जित्नेछन्'
-  prizes_robots: 100 कक्षाकोठाहरूले निर्देशयोग्य रोबोटको सेट जित्नेछन्नि
-  prizes_brilliant: प्रत्येक प्रदेश तथा क्षेत्रको स्कूलले उत्कृष्ट परियोजनाको लागि डलर 2000 प्राप्त गर्नेछन्
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
-  prizes_details: विवरणहरू
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: प्रशिक्षकको लागि
   how_to_nav_after_school: For after school
@@ -163,25 +155,8 @@ ne:
   how_to_nav_companies: कम्पनिको लागि
   how_to_nav_afterschool_educators: For after-school educators
   how_to_nav_volunteers: For volunteers
-  prizes_nav_title: पुरस्कारहरू
-  prizes_nav_home: 'सबै पुरस्कारहरु '
-  prizes_nav_hardware: हार्डओएर पुरस्कार दर्ता
-  prizes_nav_terms: नियम र शर्तहरू
-  prizes_nav_faq: लगातर सोधिने प्रश्नहरू
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: '$१०००० को प्रविधी तपाइको  बिद्यालयमा '
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
   whats_next_header: 'पछाडी के '
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
@@ -196,6 +171,7 @@ ne:
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   front_join_us_heading: 'हरेक विद्यार्थीको लागि  Hour of Code।'
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: 'कम्प्युटर विज्ञान हरेक विद्यार्थीको लागि आधार हो। यसलाई 100  मदत हमें इसे 100 मिलियनमा परिचय गर्न हामीलाप मदत गर्छ।'
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: हामीसँग आवद्ध हुनुहोस्
@@ -243,12 +219,13 @@ ne:
   signup_send_posters_address_label: विद्यालय वा संगठनको ठेगाना
   signup_whole_school_flag_label: यो घटना सम्पूर्ण विद्यालयको लागि हो
   signup_your_event: Sign up your event
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: तपाइँको नाम
   signup_email_placeholder: तपाइँ@example.com
   signup_organization_name_placeholder: उदाहरणको लागि, लिङकोलन उच्च माध्यामिक विद्यालय
-  signup_event_location_placeholder: "पोस्टल कोड र देश वा पूरा ठेगाना।\\r\n(हाम्रो नक्सामा पिन राख्न हामीले यसको प्रयोग गर्नेछौँ)"
+  signup_event_location_placeholder: "पोस्टल कोड र देश वा पूरा ठेगाना।\r\n(हाम्रो नक्सामा पिन राख्न हामीले यसको प्रयोग गर्नेछौँ)"
   signup_special_event_details_placeholder: केले यो विशेष घटना बनाउँछ बयान गर्नुहोस्
   signup_send_posters_address_placeholder: यो ठेगानालाई हाम्रो नक्सामा साझा गरिएको छैन
   signup_event_type_in_school: विद्यालयमा
@@ -273,28 +250,6 @@ ne:
   meta_tag_twitter_title: Hour of Code आउँदैछ
   meta_tag_twitter_description: Hour of Code 180 देहरूको 30 भन्दा धेरै भाषाहरूमा विद्यार्थीहरूको लाखौँ मानिसमा पहुँच भइरहेको एक विश्वव्यापी आन्दोलन हो।4 देखि 104 उमेर।
   twitter_default_text: 'मैले यो वर्ष #HourOfCode मा सहभागी हुँदैछु, तपाइँ हुनुहुन्छ? @codeorg'
-  hardware_prizes_form_name_label: तपाइँको नाम
-  hardware_prizes_form_name_placeholder: तपाइँको नाम
-  hardware_prizes_form_email_label: तपाइँको इमेल
-  hardware_prizes_form_email_placeholder: तपाइँको इमेल
-  hardware_prizes_form_school_name_label: विद्यालयको नाम
-  hardware_prizes_form_school_name_placeholder: विद्यालयको नाम
-  hardware_prizes_form_school_address_label: विद्यालयको ठेगाना
-  hardware_prizes_form_school_address_placeholder: विद्यालयको ठेगाना
-  hardware_prizes_form_school_type_label: विद्यालयको प्रकार
-  hardware_prizes_form_school_type_option_elementary: प्रारम्भिक
-  hardware_prizes_form_school_type_option_middle_school: बिचको विद्यालय
-  hardware_prizes_form_school_type_option_high_school: उच्च माध्यमिक विद्यालय
-  hardware_prizes_form_qualifying_school_label: यो एक K-12 सार्वजिक विद्यालय हो
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: सहभागी हुने विद्यार्थीहरूको सङ्ख्या
-  hardware_prizes_form_number_students_placeholder: विद्यार्थीहरूको सङ्ख्या
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: तपाइँको Hour of Code को प्रबन्धका योजनालाई अपलोड गर्नुहोस्
-  hardware_prizes_form_plan_file_description: 'तपाइँले कसरी तपाइँको विद्यालयमा हरेक विद्यार्थीले Hour of Code गर्छन् भनि मिलाउन योजना बनाउनु हुने सामान्य अनुसूची पेस गर्नुहोस्। एक योजनाको नमूना हेर्नुहोस्: #PDF# | #Word# '
-  hardware_prizes_form_submit_label: पेस गर्नुहोस्
   hoc_faq_title: लगातार सोधिने प्रश्नहरू
   hoc_faq_what_is_hoc_q: Hour of Code के हो?
   hoc_faq_what_is_hoc_a: |-
@@ -401,14 +356,9 @@ ne:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: साथीहरू
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: धन्यवाद
-  title_prizes: पुरस्कारहरू
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: स्रोतहरू
   title_signup_thanks: Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events
   events_nav_all: All Events

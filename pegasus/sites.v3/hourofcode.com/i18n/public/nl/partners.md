@@ -4,6 +4,8 @@ titel: <%= hoc_s(:title_partners) %>
 
 ---
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Latijns-Amerika Partners
@@ -141,3 +143,5 @@ titel: <%= hoc_s(:title_partners) %>
 # Extra Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

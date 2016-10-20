@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Mẫu văn bản áp dụng giấy biên nhận cho viên chức dân cử
 
 For Immediate Release  
@@ -40,3 +42,9 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+  
+  
+
+
+<%= view :signup_button %>

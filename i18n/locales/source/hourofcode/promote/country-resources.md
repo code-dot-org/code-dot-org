@@ -4,6 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -45,16 +46,6 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 <br/><br/><br/>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/0hfb0d5GxSw"><strong>Friends of Technology Hour of Code (2 min)</strong></a>
-
-<% elsif @country == 'nz' %>
-
-<br/><br/>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=VjFQeG97a9E"><strong>Time to code is now (1 min)</strong></a>
-
-<br/><br/>
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg"/>
 
 <% elsif @country == 'pk' %>
 
@@ -111,4 +102,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 # Additional resources coming soon!
 
 <% end %>
-

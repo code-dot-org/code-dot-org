@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your entire school district
 
 ## Hãy để mọi học sinh đều có cơ hội tham gia!
@@ -22,7 +24,9 @@ nav: how_to_nav
 
 ## Tiếp theo Hour of Code sẽ là gì?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Một Giờ Lập Trình chỉ là bước đầu tiên trên hành trình học tập nhiều hơn về cách công nghệ hoạt động và cách tạo ra các ứng dụng phần mềm. Để tiếp tục hành trình này:
 
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

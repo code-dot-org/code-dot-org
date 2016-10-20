@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Radium from 'radium';
-import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubbleTip from './ChatBubbleTip';
 import { shouldDisplayChatTips } from './utils';
 

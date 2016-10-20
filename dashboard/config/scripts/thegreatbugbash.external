@@ -4,14 +4,9 @@ description 'Debugging Story for K Level'
 markdown <<MARKDOWN
 # The Great Bug Bash
   
-<br/><br/>    
-    
-<a href="https://docs.google.com/document/d/1iyFodiPIPttFLeHpEMOGqPFueeqexXEOb9QqDC4Fbn4/edit?usp=sharing" target="_new">
-<button>
-Go to lesson plan
-</button> 
-</a>
+*Storybook coming soon!*
 
-<br/><br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+In the meantime...learn about the first ever bug!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8NC4TZZqLh8" frameborder="0" allowfullscreen></iframe>
 MARKDOWN

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-is-mounted */
 var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
+var filesApi = require('@cdo/apps/clientApi').files;
 
 var AssetRow = require('./AssetRow');
 var AssetUploader = require('./AssetUploader');
@@ -27,9 +28,10 @@ function getErrorMessage(status) {
 var AssetManager = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
+    assetsChanged: React.PropTypes.func,
     allowedExtensions: React.PropTypes.string,
-    channelId: React.PropTypes.string.isRequired,
-    uploadsEnabled: React.PropTypes.bool.isRequired
+    uploadsEnabled: React.PropTypes.bool.isRequired,
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -40,16 +42,17 @@ var AssetManager = React.createClass({
   },
 
   componentWillMount: function () {
-    assetsApi.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
+    let api = this.props.useFilesApi ? filesApi : assetsApi;
+    api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
   },
 
   /**
    * Called after the component mounts, when the server responds with the
    * current list of assets.
-   * @param xhr
+   * @param result
    */
-  onAssetListReceived: function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
+  onAssetListReceived: function (result) {
+    assetListStore.reset(result.files);
     if (this.isMounted()) {
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }
@@ -68,12 +71,16 @@ var AssetManager = React.createClass({
     }
   },
 
-  onUploadStart: function () {
+  onUploadStart: function (data) {
     this.setState({statusMessage: 'Uploading...'});
+    data.submit();
   },
 
   onUploadDone: function (result) {
     assetListStore.add(result);
+    if (this.props.assetsChanged) {
+      this.props.assetsChanged();
+    }
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
@@ -86,6 +93,9 @@ var AssetManager = React.createClass({
   },
 
   deleteAssetRow: function (name) {
+    if (this.props.assetsChanged) {
+      this.props.assetsChanged();
+    }
     this.setState({
       assets: assetListStore.remove(name),
       statusMessage: 'File "' + name + '" successfully deleted!'
@@ -97,7 +107,7 @@ var AssetManager = React.createClass({
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
         allowedExtensions={this.props.allowedExtensions}
-        channelId={this.props.channelId}
+        useFilesApi={this.props.useFilesApi}
         onUploadStart={this.onUploadStart}
         onUploadDone={this.onUploadDone}
         onUploadError={this.onUploadError}
@@ -138,6 +148,7 @@ var AssetManager = React.createClass({
             name={asset.filename}
             type={asset.category}
             size={asset.size}
+            useFilesApi={this.props.useFilesApi}
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
           />

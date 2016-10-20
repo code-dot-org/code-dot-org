@@ -111,5 +111,8 @@
   "word": "단어 찾기",
   "wrongCropError": "여기에서는 그 작물을 수확할 수 없습니다.",
   "yes": "예",
-  "youSpelled": "말"
+  "youSpelled": "말",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

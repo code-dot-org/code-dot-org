@@ -111,5 +111,8 @@
   "word": "Zoek het woord",
   "wrongCropError": "Ik kan dat gewas vanaf hier niet oogsten.",
   "yes": "Ja",
-  "youSpelled": "Jij spelde"
+  "youSpelled": "Jij spelde",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

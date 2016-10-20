@@ -110,4 +110,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_district)
   end
+
+  test 'send_exit_survey does not send mail when there is no user' do
+    enrollment = create :pd_enrollment
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
+  test 'send_exit_survey does not send mail when the survey was already sent' do
+    enrollment = create :pd_enrollment, user: create(:teacher), survey_sent_at: Time.now
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
+  test 'send_exit_survey sends email and updates survey_sent_at' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    mock_mail = stub(deliver_now: nil)
+    Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
+
+    enrollment.send_exit_survey
+    assert_not_nil enrollment.reload.survey_sent_at
+  end
 end

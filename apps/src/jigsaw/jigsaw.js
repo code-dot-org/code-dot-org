@@ -8,7 +8,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var skins = require('../skins');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');

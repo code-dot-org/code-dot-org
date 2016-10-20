@@ -1,5 +1,4 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
-import {connect} from 'react-redux';
 import React from 'react';
 import {EMPTY_IMAGE, PlayBehavior} from '../constants';
 import * as PropTypes from '../PropTypes';
@@ -62,7 +61,7 @@ const AnimationPreview = React.createClass({
     }
 
     const {currentFrame} = this.state;
-    const {frameCount, frameDelay} = this.props.animationProps;
+    const {frameCount} = this.props.animationProps;
     this.setState({
       currentFrame: (currentFrame + 1) % frameCount
     });

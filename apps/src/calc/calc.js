@@ -24,8 +24,6 @@ var studioApp = require('../StudioApp').singleton;
 var jsnums = require('./js-numbers/js-numbers.js');
 var commonMsg = require('@cdo/locale');
 var calcMsg = require('./locale');
-var skins = require('../skins');
-var levels = require('./levels');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
@@ -846,7 +844,6 @@ Calc.checkExamples_ = function () {
  * animating evaluation.
  */
 function displayComplexUserExpressions() {
-  var result;
   clearSvgExpression('userExpression');
 
   // Clone userSet, as we might make small changes to them (i.e. if we need to
@@ -900,7 +897,6 @@ function displayNonComputeEquations_(userSet, targetSet) {
     !targetSet.computesSingleVariable();
 
   if (targetSet.computesSingleVariable() && appState.failedInput !== null) {
-    var userConstants = userSet.getConstants();
     var targetConstants = targetSet.getConstants();
     // replace constants with failed inputs in the user set.
     targetConstants.forEach(function (targetEquation, index) {

@@ -111,5 +111,8 @@
   "word": "ابحث عن الكلمة",
   "wrongCropError": "أنا لا استطيع حصاد هذا المحصول من هنا.",
   "yes": "نعم",
-  "youSpelled": "قمت بكتابة"
+  "youSpelled": "قمت بكتابة",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

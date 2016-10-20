@@ -4,11 +4,13 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Как да проведете Hour of Code във Вашата компания
 
 ## Вдъхновение за учениците и доброволците -Hour of Code
 
-**Code.org предлага на служители от компанията възможност да [ се свържат](%= resolve_url('https://code.org/volunteer') %) с местните класни стаи и да подпомогнат Hour of Code, за да споделят техническият си опит в кариерата и да вдъхновят учениците да учат компютърни науки.**
+**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
   * [ Регистрирайте се](%= resolve_url('https://code.org/volunteer') %), за доброволец.
   * За повече инструкции за свързване на Вашите служители с класни стаи, използвайте нашето [ ръководство за корпоративни партньори](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
@@ -30,7 +32,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Гледай видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
 
-Ние ще качим разнообразие от [ забавни, дълги около час уроци](%= resolve_url('https://code.org/learn') %) за ученици от всички възрасти, създадени от различни партньори. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [ Изпробвайте ги!](%= resolve_url()
 
 **Всички уроци на Hour of Code:**
 
@@ -41,9 +43,9 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 ## 4) планирай нужните ти технологии - компютрите не са задължителни
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Най-добрият Час на кодирането се провежда с Интернет свързани компютри. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**Предварителен план!** Направете следното, преди вашето събитие да започне:
 
   * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
@@ -136,4 +138,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## Какво идва след Hour of Code?
 
-Hour of Code е само първата стъпка в образователното пътуване за това, как технологията работи и как се създават софтуерни приложения. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

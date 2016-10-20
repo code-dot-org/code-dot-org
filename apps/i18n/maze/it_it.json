@@ -111,5 +111,8 @@
   "word": "Scrivi la parola",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Sì",
-  "youSpelled": "Hai scritto finora"
+  "youSpelled": "Hai scritto finora",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

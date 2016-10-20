@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Latin America Partners
@@ -114,25 +116,25 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Major Promotional Partners
+# Abakhulu bokukhuthaza abasebenzisana kubhizinisi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# International Partners
+# Abahlanganeli Bezizwe Ezihlikene
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Tutorial Partners
+# Abahlanganyele Ngokwe Mfundiso
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure partners and tools
+# Ingqalasizinda yabahlanganyeli kanye namathulusi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
@@ -141,3 +143,5 @@ title: <%= hoc_s(:title_partners) %>
 # Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

@@ -8,9 +8,7 @@ var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
-var styleConstants = require('../styleConstants');
 var color = require('../color');
-var experiments = require('../experiments');
 
 var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
 var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -104,16 +102,6 @@ var CodeWorkspace = React.createClass({
         ]}
       />
     );
-
-    var headerButtonIcon = [
-      styles.headerButtonIcon,
-      (props.localeDirection === 'rtl') && styles.headerButtonIconRtl,
-    ];
-
-    var blocksGlyph = [
-      styles.blocksGlyph,
-      (props.localeDirection === 'rtl') && styles.blocksGlyphRtl,
-    ];
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>

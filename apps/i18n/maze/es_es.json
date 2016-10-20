@@ -111,5 +111,8 @@
   "word": "Encuentra la palabra",
   "wrongCropError": "Yo no puedo cosechar el cultivo desde aquí.",
   "yes": "Sí",
-  "youSpelled": "Escribiste"
+  "youSpelled": "Escribiste",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }
