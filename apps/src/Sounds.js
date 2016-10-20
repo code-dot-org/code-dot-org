@@ -55,8 +55,8 @@ var Sounds = module.exports = function () {
    */
   this.audioUnlocked_ = false;
 
-  if (window.AudioContext) {
-    var tryUnlockAudio = function () {
+  var tryUnlockAudio = function () {
+    if (window.AudioContext) {
       try {
         this.initializeAudioUnlockState_();
       } catch (e) {
@@ -68,20 +68,23 @@ var Sounds = module.exports = function () {
          *
          * In the Chrome case, this will fall-back to the `window.Audio` method
          */
+        this.audioUnlocked_ = true;
       }
-    }.bind(this);
-
-    // In order to support prerender, wait until the page exits the
-    // "prerender" visibility state before unlocking audio.
-    if (document.visibilityState !== "prerender") {
-      tryUnlockAudio();
     } else {
-      var handleVisibilityChange = function () {
-        document.removeEventListener("visibilitychange", handleVisibilityChange);
-        tryUnlockAudio();
-      }.bind(this);
-      document.addEventListener("visibilitychange", handleVisibilityChange, false);
+      this.audioUnlocked_ = true;
     }
+  }.bind(this);
+
+  // In order to support prerender, wait until the page exits the
+  // "prerender" visibility state before unlocking audio.
+  if (document.visibilityState !== "prerender") {
+    tryUnlockAudio();
+  } else {
+    var handleVisibilityChange = function () {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      tryUnlockAudio();
+    }.bind(this);
+    document.addEventListener("visibilitychange", handleVisibilityChange, false);
   }
 
   this.soundsById = {};
