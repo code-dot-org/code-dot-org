@@ -4,8 +4,6 @@ require 'sinatra/base'
 require 'cdo/sinatra'
 
 class FilesApi < Sinatra::Base
-  MANIFEST_FILENAME = 'manifest.json'
-
   def max_file_size
     5_000_000 # 5 MB
   end
@@ -372,7 +370,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     bucket = FileBucket.new
-    result = bucket.get(encrypted_channel_id, MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'])
+    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'])
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
@@ -395,11 +393,11 @@ class FilesApi < Sinatra::Base
   end
 
   def files_put_file(encrypted_channel_id, filename, body)
-    bad_request if filename.downcase == MANIFEST_FILENAME
+    bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
 
     # read the manifest
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, MANIFEST_FILENAME)
+    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     if manifest_result[:status] == 'NOT_FOUND'
       manifest = []
     else
@@ -435,7 +433,7 @@ class FilesApi < Sinatra::Base
     end
 
     # write the manifest (assuming the entry changed)
-    response = bucket.create_or_replace(encrypted_channel_id, MANIFEST_FILENAME, manifest.to_json, params['files-version']) unless manifest_is_unchanged
+    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version']) unless manifest_is_unchanged
 
     # delete a file if requested (same as src file in a rename operation)
     bucket.delete(encrypted_channel_id, params['delete'].downcase) if params['delete']
@@ -500,12 +498,12 @@ class FilesApi < Sinatra::Base
 
     # read the manifest
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, MANIFEST_FILENAME)
+    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     return { filesVersionId: "" }.to_json if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
     # overwrite the manifest file with an empty list
-    response = bucket.create_or_replace(encrypted_channel_id, MANIFEST_FILENAME, [].to_json, params['files-version'])
+    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'])
 
     # delete the files
     bucket.delete_multiple(encrypted_channel_id, manifest.map { |e| e['filename'].downcase }) unless manifest.empty?
@@ -522,14 +520,14 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    bad_request if filename.downcase == MANIFEST_FILENAME
+    bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
 
     owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     not_authorized unless owner_id == storage_id('user')
 
     # read the manifest
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, MANIFEST_FILENAME)
+    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
@@ -538,7 +536,7 @@ class FilesApi < Sinatra::Base
     not_found if reject_result.nil?
 
     # write the manifest
-    response = bucket.create_or_replace(encrypted_channel_id, MANIFEST_FILENAME, manifest.to_json, params['files-version'])
+    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version'])
 
     # delete the file
     bucket.delete(encrypted_channel_id, filename.downcase)
@@ -555,7 +553,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    FileBucket.new.list_versions(encrypted_channel_id, MANIFEST_FILENAME).to_json
+    FileBucket.new.list_versions(encrypted_channel_id, FileBucket::MANIFEST_FILENAME).to_json
   end
 
   #
@@ -572,7 +570,7 @@ class FilesApi < Sinatra::Base
 
     # read the manifest using the version-id specified
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, MANIFEST_FILENAME, nil, params['version'])
+    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, nil, params['version'])
     bad_request if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
@@ -585,7 +583,7 @@ class FilesApi < Sinatra::Base
 
     # save the new manifest
     manifest_json = manifest.to_json
-    result = bucket.create_or_replace(encrypted_channel_id, MANIFEST_FILENAME, manifest_json)
+    result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json)
 
     { "filesVersionId": result[:version_id], "files": manifest }.to_json
   end

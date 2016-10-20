@@ -108,19 +108,20 @@ class BucketHelper
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
     src_prefix = s3_path src_owner_id, src_channel_id
-    @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
+    result = @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
-      if !options[:filenames] || options[:filenames].include?(filename)
+      if (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
         mime_type = Sinatra::Base.mime_type(File.extname(filename))
         category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
         src = "#{@bucket}/#{src_prefix}#{filename}"
         dest = s3_path dest_owner_id, dest_channel_id, filename
-        @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+        response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
-        {filename: filename, category: category, size: fileinfo.size}
+        {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
       end
     end
+    result.compact
   end
 
   def restore_file_version(encrypted_channel_id, filename, version)
