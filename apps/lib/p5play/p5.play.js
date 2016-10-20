@@ -1455,19 +1455,21 @@ function Sprite(pInst, _x, _y, _w, _h) {
    * will be used to detect collisions and overlapping with other sprites,
    * or the mouse cursor.
    *
-   * If the sprite is checked for collision, bounce, overlapping or mouse events a
-   * collider is automatically created from the width and height parameter passed at the
-   * creation of the sprite or the from the image dimension in case of animate sprites.
+   * If the sprite is checked for collision, bounce, overlapping or mouse events
+   * a collider is automatically created from the width and height parameter
+   * passed at the creation of the sprite or the from the image dimension in case
+   * of animated sprites.
    *
-   * Often the image bounding box is not appropriate as active area for
-   * a collision detection so you can set a circular or rectangular sprite with different
-   * dimensions and offset from the sprite's center.
+   * Often the image bounding box is not appropriate as the active area for
+   * collision detection so you can set a circular or rectangular sprite with
+   * different dimensions and offset from the sprite's center.
    *
-   * There are three ways to call this method:
+   * There are four ways to call this method:
    *
-   * 1. setCollider("rectangle", offsetX, offsetY, width, height)
-   * 2. setCollider("circle", offsetX, offsetY, radius)
-   * 3. setCollider("circle") - will use no offset and guess radius
+   * 1. setCollider("rectangle")
+   * 2. setCollider("rectangle", offsetX, offsetY, width, height)
+   * 3. setCollider("circle")
+   * 4. setCollider("circle", offsetX, offsetY, radius)
    *
    * @method setCollider
    * @param {String} type Either "rectangle" or "circle"
@@ -1482,14 +1484,16 @@ function Sprite(pInst, _x, _y, _w, _h) {
       throw new TypeError('setCollider expects the first argument to be either "circle" or "rectangle"');
     } else if (type === 'circle' && !(arguments.length === 1 || arguments.length === 4)) {
       throw new TypeError('Usage: setCollider("circle") or setCollider("circle", offsetX, offsetY, radius)');
-    } else if (type === 'rectangle' && !(arguments.length === 5)) {
-      throw new TypeError('Usage: setCollider("rectangle", offsetX, offsetY, width, height)');
+    } else if (type === 'rectangle' && !(arguments.length === 1 || arguments.length === 5)) {
+      throw new TypeError('Usage: setCollider("rectangle") or setCollider("rectangle", offsetX, offsetY, width, height)');
     }
 
     this.colliderType = 'custom';
 
     var v = createVector(offsetX, offsetY);
-    if (type === 'rectangle' && arguments.length === 5) {
+    if (type === 'rectangle' && arguments.length === 1) {
+      this.collider = new AABB(pInst, this.position, createVector(this.width, this.height));
+    } else if (type === 'rectangle' && arguments.length === 5) {
       this.collider = new AABB(pInst, this.position, createVector(width, height), v);
     } else if (type === 'circle' && arguments.length === 1) {
       this.collider = new CircleCollider(pInst, this.position, Math.floor(Math.max(this.width, this.height) / 2));
