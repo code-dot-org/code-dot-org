@@ -187,7 +187,7 @@ class Craft < Blockly
       sheep: true,
       sheepBaa: true,
       chickenHurt: true,
-      chickenBock: true,
+      chickenBawk: true,
       cowHuff: true,
       cowHurt: true,
       cowMoo: true,

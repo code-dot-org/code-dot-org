@@ -163,7 +163,7 @@ const allSounds = [
   'minecart',
   'sheepBaa',
   'chickenHurt',
-  'chickenBock',
+  'chickenBawk',
   'cowHuff',
   'cowHurt',
   'cowMoo',
