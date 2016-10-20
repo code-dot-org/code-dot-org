@@ -43,6 +43,7 @@ class Applab < Blockly
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
+    teacher_markdown
   )
 
   # List of possible skins, the first is used as a default.
