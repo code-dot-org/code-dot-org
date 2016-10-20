@@ -71,11 +71,6 @@ var Sounds = module.exports = function () {
   this.whenAudioUnlockedCallbacks_ = [];
 };
 
-Sounds.prototype.handleVisibilityChange = function () {
-  document.removeEventListener("visibilitychange", this.handleVisibilityChange);
-  this.tryUnlockAudio();
-};
-
 /**
  * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
  * when iframes are open, potentially related to:
@@ -89,6 +84,11 @@ Sounds.prototype.tryUnlockAudio = function () {
     this.initializeAudioUnlockState_();
   } catch (e) {
   }
+};
+
+Sounds.prototype.handleVisibilityChange = function () {
+  document.removeEventListener("visibilitychange", this.handleVisibilityChange);
+  this.tryUnlockAudio();
 };
 
 /**
