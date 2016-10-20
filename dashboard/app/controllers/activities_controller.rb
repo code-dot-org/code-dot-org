@@ -1,4 +1,5 @@
 require 'cdo/share_filtering'
+require 'cdo/code_timer'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -15,6 +16,9 @@ class ActivitiesController < ApplicationController
   MAX_LINES_OF_CODE = 1000
 
   def milestone
+    user_id = current_user ? current_user.id : -1
+    code_timer = CodeTimer.new(user_id)
+
     # TODO: do we use the :result and :testResult params for the same thing?
     solved = ('true' == params[:result])
     script_name = ''
@@ -27,12 +31,15 @@ class ActivitiesController < ApplicationController
       @level = Script.cache_find_level(params[:level_id].to_i)
     end
 
+    code_timer.record_timing('CacheFindLevel')
+
     # Immediately return with a "Service Unavailable" status if milestone posts are
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     unless enabled
       head 503
+      code_timer.record_timing('ServiceUnavailable')
       return
     end
 
@@ -55,6 +62,8 @@ class ActivitiesController < ApplicationController
       end
     end
 
+    code_timer.record_timing('Sharing')
+
     if current_user && @script_level && @script_level.stage.lockable?
       user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
       # we have a lockable stage, and user_level is locked. disallow milestone requests
@@ -63,11 +72,15 @@ class ActivitiesController < ApplicationController
       end
     end
 
+    code_timer.record_timing('LockedLevelCheck')
+
     if params[:lines]
       params[:lines] = params[:lines].to_i
       params[:lines] = 0 if params[:lines] < MIN_LINES_OF_CODE
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
+
+    code_timer.record_timing('LinesOfCodeCheck')
 
     # Store the image only if the image is set, and the image has not been saved
     if params[:image] && @level_source.try(:id)
@@ -80,6 +93,8 @@ class ActivitiesController < ApplicationController
       end
     end
 
+    code_timer.record_timing('StoreImage')
+
     @new_level_completed = false
     if current_user
       track_progress_for_user if @script_level
@@ -87,11 +102,15 @@ class ActivitiesController < ApplicationController
       track_progress_in_session
     end
 
+    code_timer.record_timing('TrackProgress')
+
     total_lines = if current_user && current_user.total_lines
                     current_user.total_lines
                   else
                     client_state.lines
                   end
+
+    code_timer.record_timing('TotalLines')
 
     render json: milestone_response(script_level: @script_level,
                                     level: @level,
@@ -103,6 +122,8 @@ class ActivitiesController < ApplicationController
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
 
+    code_timer.record_timing('RenderJSON')
+
     if solved
       slog(
         :tag => 'activity_finish',
@@ -113,8 +134,12 @@ class ActivitiesController < ApplicationController
       )
     end
 
+    code_timer.record_timing('slog')
+
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
     log_milestone(@level_source, params)
+
+    code_timer.record_timing('LogMilestone')
   end
 
   private
@@ -124,6 +149,9 @@ class ActivitiesController < ApplicationController
   end
 
   def track_progress_for_user
+    user_id = current_user ? current_user.id : -1
+    code_timer = CodeTimer.new(user_id)
+
     authorize! :create, Activity
     authorize! :create, UserLevel
 
@@ -133,6 +161,8 @@ class ActivitiesController < ApplicationController
     lines = params[:lines].to_i
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
+
+    code_timer.record_timing('BackfillUserScripts')
 
     # Create the activity.
     attributes = {
@@ -145,6 +175,9 @@ class ActivitiesController < ApplicationController
         time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
         level_source_id: @level_source.try(:id)
     }
+
+    code_timer.record_timing('CreateActivity')
+
     # Save the activity synchronously if the level might be saved to the gallery (for which
     # the activity.id is required). This is true for levels auto-saved to the gallery, and for
     # free play and "impressive" levels.
@@ -153,8 +186,10 @@ class ActivitiesController < ApplicationController
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
     if synchronous_save
       @activity = Activity.create!(attributes)
+      code_timer.record_timing('SaveSync')
     else
       @activity = Activity.create_async!(attributes)
+      code_timer.record_timing('SaveAsync')
     end
 
     if @script_level
@@ -168,6 +203,8 @@ class ActivitiesController < ApplicationController
       )
     end
 
+    code_timer.record_timing('TrackLevelProgressAsync')
+
     passed = Activity.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
@@ -175,10 +212,14 @@ class ActivitiesController < ApplicationController
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
 
+    code_timer.record_timing('UpdateTotalLines')
+
     # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
+
+    code_timer.record_timing('SaveToGallery')
   end
 
   def track_progress_in_session

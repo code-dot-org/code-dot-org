@@ -73,6 +73,7 @@
 
 require 'digest/md5'
 require 'cdo/user_helpers'
+require 'cdo/code_timer'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -893,6 +894,8 @@ class User < ActiveRecord::Base
 
   # The synchronous handler for the track_level_progress helper.
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
+    code_timer = CodeTimer.new(user_id)
+
     new_level_completed = false
     new_csf_level_perfected = false
 
@@ -902,8 +905,13 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
+      code_timer.record_timing('GetUserLevel')
+
       new_level_completed = true if !user_level.passing? &&
         Activity.passing?(new_result)
+
+      code_timer.record_timing('IsLevelCompleted')
+
       new_csf_level_perfected = true if !user_level.perfect? &&
         new_result == 100 &&
         Script.get_from_cache(script_id).csf? &&
@@ -914,6 +922,8 @@ class User < ActiveRecord::Base
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
 
+      code_timer.record_timing('NewCSFLevelPerfected')
+
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if user_level.best_result.nil? ||
@@ -923,7 +933,11 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
+      code_timer.record_timing('UpdateUserLevel')
+
       user_level.save!
+
+      code_timer.record_timing('SaveUserLevel')
     end
 
     if pairing_user_ids
@@ -947,18 +961,27 @@ class User < ActiveRecord::Base
       end
     end
 
+    code_timer.record_timing('PairedUserLevel')
+
     # Create peer reviews after submitting a peer_reviewable solution
     if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
       PeerReview.create_for_submission(user_level, level_source_id)
     end
 
+    code_timer.record_timing('PeerReview')
+
     if new_level_completed && script_id
       User.track_script_progress(user_id, script_id)
     end
 
+    code_timer.record_timing('TrackScriptProgress')
+
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
+
+    code_timer.record_timing('TrackProficiency')
+
     user_level
   end
 
