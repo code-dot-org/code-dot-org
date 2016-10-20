@@ -135,7 +135,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(this.VALUE), 'VALUE')
+          .appendTitle(new blockly.FieldAngleDropdown('DIR', this.VALUE), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -219,7 +219,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(this.VALUE), 'VALUE')
+          .appendTitle(new blockly.FieldAngleDropdown('DIR', this.VALUE), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -250,8 +250,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldTextInput('90',
-              blockly.FieldTextInput.numberValidator), 'VALUE')
+          .appendTitle(new blockly.FieldAngleTextInput('DIR', '90'), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
