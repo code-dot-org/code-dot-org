@@ -1,3 +1,5 @@
+require_relative "#{Rails.root}/../pegasus/forms/pd_workshop_survey" unless defined?(PdWorkshopSurvey)
+
 module WorkshopScoreSummarizer
   FACILITATOR_EFFECTIVENESS_QUESTIONS = [
     :how_much_learned_s,
