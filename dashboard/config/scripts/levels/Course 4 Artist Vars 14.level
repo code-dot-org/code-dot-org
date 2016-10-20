@@ -30,7 +30,8 @@
     "scrollbars": "false",
     "markdown_instructions": "**Free Play**: Check it out! Now your algorithm is nested within one more loop. Experiment with changing the values of your two variables to draw cool patterns.\r\n\r\nFor even more effect, try playing with color!  Use random colors inside loops to see how it changes your design.",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
