@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'controllers/api/v1/pd/workshop_score_summarizer'
-require_relative "#{Rails.root}/../pegasus/forms/pd_workshop_survey"
+require_relative "#{Rails.root}/../pegasus/forms/pd_workshop_survey" unless defined?(PdWorkshopSurvey)
 
 class Api::V1::Pd::WorkshopScoreSummarizerTest < ActiveSupport::TestCase
   include WorkshopScoreSummarizer
