@@ -64,13 +64,15 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    # TODO: we want to be able to show the hidden_stage info as a teacher if
-    # they toggle to it
-    if stage_hidden?(@script_level)
+    if stage_hidden_for_user?(@script_level, current_user)
       view_options(full_width: true)
-      render 'levels/hidden_stage'
+      render 'levels/_hidden_stage'
       return
     end
+
+    # if stage_hidden_for_section?(@script_level, params[:section_id])
+    #   render partial: 'levels/hidden_stage_partial'
+    # end
 
     # In the case of the puzzle_page, send it through to be included in the
     # generation of the script level path.
@@ -331,10 +333,10 @@ class ScriptLevelsController < ApplicationController
     render 'levels/show', formats: [:html]
   end
 
-  def stage_hidden?(script_level)
-    return false if !current_user || current_user.try(:teacher?)
+  def stage_hidden_for_user?(script_level, user)
+    return false if !user || user.try(:teacher?)
 
-    sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
+    sections = user.sections_as_student.select{|s| s.deleted_at.nil?}
     return false if sections.empty?
 
     script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
@@ -342,12 +344,16 @@ class ScriptLevelsController < ApplicationController
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.all?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
+      script_sections.all?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
-      sections.any?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
+      sections.any?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
     end
+  end
+
+  def self.stage_hidden_for_section?(script_level, section_id)
+    !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
   end
 
   def get_hidden_stage_ids(script_name)

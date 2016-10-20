@@ -12,6 +12,7 @@ import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherLevelGroup from './components/TeacherLevelGroup';
 import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
+import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 import { queryParams, updateQueryParam } from './utils';
 
@@ -138,7 +139,7 @@ function renderIntoLessonTeacherPanel() {
       renderStageLockedText(stageLockedText);
     }
 
-    renderLevelGroup();
+    renderContentToggle();
   });
 }
 
@@ -216,15 +217,16 @@ function renderStageLockedText(element) {
   }
 }
 
-function renderLevelGroup() {
-  // If we don't have a level gorup, theres nothing to do.
-  const levelGroup = $('.level-group');
-  if (levelGroup.length === 0) {
-    return;
-  }
+// TODO - good desc
+function renderContentToggle() {
+  const levelContent = $('#level-body');
+  const element = $('<div/>').insertAfter(levelContent)[0];
 
-  const element = $('<div/>').insertAfter(levelGroup)[0];
+  // TODO - right place for this?
+  // TODO - name hardcoded :(
+  getStore().dispatch(getHiddenStages('allthethings'));
 
+  // TODO - rename TeacherLevelGroup
   ReactDOM.render(
     <Provider store={getStore()}>
       <TeacherLevelGroup/>
