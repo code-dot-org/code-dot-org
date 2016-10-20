@@ -1,2 +1,6 @@
 {
+  "addCSSButton": "Add CSS",
+  "addImageButton": "Add Image",
+  "addHTMLButton": "Add HTML",
+  "toggleInspector": "Toggle Inspector"
 }
