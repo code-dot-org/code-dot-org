@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Which angle is the smallest?  At which angle is the artist standing? \",\r\n  \"hint_id\": \"4-5_Artist_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
