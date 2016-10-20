@@ -37,7 +37,8 @@
     "day_night_cycle_time": "0",
     "instructions": "Zombies are attacking the village! Code the Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r\n",
     "level_verification_timeout": "60000",
-    "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
+    "failure_message_override": "Oh No! You need to stop ALL of the zombies in order to save the village. Get the Iron Golem to help you!",
     "contained_level_names": null
   },
   "published": true,
@@ -119,7 +120,7 @@
           <title name="DIR">left</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
+          <title name="TYPE">ironGolemHit</title>
         </block>
         <block type="craft_drop">
           <title name="TYPE">egg</title>
