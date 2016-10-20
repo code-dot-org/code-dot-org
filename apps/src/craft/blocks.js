@@ -3,6 +3,8 @@ import { singleton as studioApp } from '../StudioApp';
 import { stripQuotes, valueOr } from '../utils';
 import _ from 'lodash';
 
+const ENTITY_INPUT_EXTRA_SPACING = 23;
+
 const eventTypes = Object.freeze({
   WhenTouched : 0,
   WhenUsed : 1,
@@ -469,7 +471,7 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput()
             .appendTitle(displayName);
         statementNames.forEach((name) => {
-          this.appendStatementInput(name)
+          this.appendStatementInput(name, ENTITY_INPUT_EXTRA_SPACING)
               .appendTitle(statementNameToDisplayName[name]);
         });
         this.setColour(120);
