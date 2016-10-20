@@ -18,4 +18,9 @@ class Api::V1::Pd::CsvDownloadTest < ::ActionController::TestCase
     csv = Api::V1::Pd::ReportControllerBase.new.generate_csv data
     assert_equal expected_csv.strip, csv.strip
   end
+
+  test 'titleize_with_id' do
+    assert_equal 'Organizer Name', 'organizer_name'.titleize_with_id
+    assert_equal 'Account Id', 'account_id'.titleize_with_id
+  end
 end

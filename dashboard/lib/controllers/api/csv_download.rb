@@ -41,7 +41,7 @@ module CsvDownload
       json_array.each do |json_row|
         unless cols
           cols = json_row.keys
-          csv << cols.map(&:to_s).map(&:titleize)
+          csv << cols.map(&:to_s).map(&:titleize_with_id)
         end
         csv << cols.map {|col| json_row[col]}
       end

@@ -194,6 +194,34 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  # Filters by scheduled start date (date of first session)
+  def self.start_on_or_before(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
+  end
+
+  # Filters by scheduled start date (date of first session)
+  def self.start_on_or_after(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+  end
+
+  # Filters by date the workshop actually ended, regardless of scheduled session times.
+  def self.end_on_or_before(date)
+    where('(DATE(ended_at) <= ?)', date)
+  end
+
+  # Filters by date the workshop actually ended, regardless of scheduled session times.
+  def self.end_on_or_after(date)
+    where('(DATE(ended_at) >= ?)', date)
+  end
+
+  def self.start_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+  end
+
+  def self.end_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+  end
+
   def course_name
     COURSE_NAMES_MAP[course]
   end
@@ -239,22 +267,6 @@ class Pd::Workshop < ActiveRecord::Base
   def year
     return nil if sessions.empty?
     sessions.order(:start).first.start.strftime('%Y')
-  end
-
-  def self.start_on_or_before(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
-  end
-
-  def self.start_on_or_after(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
-  end
-
-  def self.start_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
-  end
-
-  def self.end_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
   end
 
   def self.send_reminder_for_upcoming_in_days(days)

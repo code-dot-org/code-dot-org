@@ -36,8 +36,8 @@ class Ability
       # PD models
       Pd::Workshop,
       Pd::DistrictPaymentTerm,
-      Pd::WorkshopOrganizerReport,
-      Pd::TeacherProgressReport,
+      :pd_teacher_progress_report,
+      :pd_workshop_organizer_report,
       Pd::CourseFacilitator
     ]
 
@@ -108,9 +108,9 @@ class Ability
         can :create, Pd::Workshop
         can [:read, :start, :end, :update, :destroy], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
-        can :read, Pd::WorkshopOrganizerReport
-        can :read, Pd::TeacherProgressReport
         can :read, Pd::CourseFacilitator
+        can :read, :pd_workshop_organizer_report
+        can :read, :pd_teacher_progress_report
       end
     end
 
