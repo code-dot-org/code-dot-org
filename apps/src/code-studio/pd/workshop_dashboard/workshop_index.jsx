@@ -27,17 +27,21 @@ const WorkshopIndex = React.createClass({
           </Button>
         </p>
         <h2>In Progress</h2>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=In%20Progress">
+        <WorkshopTableLoader
+          queryUrl="/api/v1/pd/workshops/?state=In%20Progress"
+          canDelete
+        >
           <WorkshopTable
-            canDelete
             showOrganizer={showOrganizer}
           />
         </WorkshopTableLoader>
         <h2>Upcoming</h2>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Not%20Started">
+        <WorkshopTableLoader
+          queryUrl="/api/v1/pd/workshops/?state=Not%20Started"
+          canDelete
+        >
           <WorkshopTable
             canEdit
-            canDelete
             showSignupUrl
             showOrganizer={showOrganizer}
           />

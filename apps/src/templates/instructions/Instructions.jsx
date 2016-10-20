@@ -1,6 +1,4 @@
 import React from 'react';
-import classnames from 'classnames';
-import ReactDOM from 'react-dom';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
@@ -16,16 +14,6 @@ const styles = {
     padding: "5px 10px",
     margin: "0 10px"
   },
-  audio: {
-    verticalAlign: "middle",
-    margin: "0 10px",
-  },
-  error: {
-    display: 'inline-block',
-    marginLeft: 10,
-    marginBottom: 0,
-    padding: '5px 10px'
-  }
 };
 
 /**
@@ -48,38 +36,6 @@ var Instructions = React.createClass({
     ),
     inTopPane: React.PropTypes.bool,
     onResize: React.PropTypes.func,
-    acapelaSrc: React.PropTypes.string,
-  },
-
-  getInitialState: function () {
-    return {
-      audioSrc: undefined,
-      audioError: undefined
-    };
-  },
-
-  playAudio: function () {
-    this.setState({ audioSrc: this.props.acapelaSrc });
-  },
-
-  componentWillUpdate: function (nextProps) {
-    if (this.props.renderedMarkdown !== nextProps.renderedMarkdown) {
-      this.setState({
-        audioSrc: undefined,
-        audioError: undefined
-      });
-    }
-  },
-
-  componentDidUpdate: function () {
-    if (this.refs.audio) {
-      $(ReactDOM.findDOMNode(this.refs.audio)).on("error", e => {
-        this.setState({
-          audioSrc: undefined,
-          audioError: "We're sorry, this audio file could not be played."
-        });
-      });
-    }
   },
 
   render: function () {
@@ -123,24 +79,6 @@ var Instructions = React.createClass({
         {this.props.aniGifURL && this.props.inTopPane &&
           <AniGifPreview/>
         }
-
-        {experiments.isEnabled('tts') && this.props.acapelaSrc &&
-          <div>
-            <a
-              id="tts-button"
-              className={classnames({
-                'btn btn-primary' : true,
-                'disabled': !!this.state.audioError
-              })}
-              onClick={!this.state.audioError && this.playAudio}
-            ><i className="icon-bullhorn icon-white"></i></a>
-            {this.state.audioSrc && <audio ref="audio" style={styles.audio} src={this.state.audioSrc} controls="controls" />}
-            {this.state.audioError && <div className="alert alert-error" style={styles.error}>
-              <div id="alert-content">{this.state.audioError}</div>
-            </div>}
-          </div>
-        }
-
         {this.props.authoredHints}
       </div>
     );

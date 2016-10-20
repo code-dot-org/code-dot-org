@@ -111,6 +111,7 @@ class Ability
         can :read, Pd::WorkshopOrganizerReport
         can :read, Pd::TeacherProgressReport
         can :read, Pd::CourseFacilitator
+        can :read, :workshop_organizer_survey_report
       end
     end
 

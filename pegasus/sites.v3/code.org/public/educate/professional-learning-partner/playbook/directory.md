@@ -12,7 +12,9 @@ Each of our Professional learning partners is listed below in alphabetical order
 
 - **[Alabama](#al)**<br/>
 - **[Arizona](#az)**<br/>
+- **[Arkansas](#ar)**</br/>
 - **[California](#ca)**<br/>
+- **[Colorado](#co)**</br/>
 - **[Florida](#fl)**<br/>
 - **[Georiga](#ga)**<br/>
 - **[Idaho](#id)**<br/>
@@ -20,18 +22,25 @@ Each of our Professional learning partners is listed below in alphabetical order
 - **[Indiana](#in)**<br/>
 - **[Iowa](#ia)**<br/>
 - **[Kentucky](#ky)**<br/>
+- **[Maine](#me)**</br/>
 - **[Maryland](#md)**<br/>
+- **[Massachusetts](#ma)**</br/>
 - **[Michigan](#mi)**<br/>
+- **[Montana](#mt)**</br/>
+- **[Nevada](#nv)**</br/>
+- **[New Jersey](#nj)**</br/>
 - **[New York](#ny)**<br/>
 - **[North Carolina](#nc)**<br/>
 - **[Ohio](#oh)**<br/>
 - **[Oklahoma](#ok)**<br/>
+- **[Pennsylvania](#pa)**</br/>
+- **[South Carolina](#sc)**</br/>
+- **[Tennessee](#tn)**</br/>
 - **[Texas](#tx)**<br/>
 - **[Utah](#ut)**<br/>
 - **[Viriginia](#va)**<br/>
 - **[Washington](#wa)**<br/>
-
-
+- **[Wisconsin](#wi)**</br/>
 
 ________________
 <a id="al"></a>
@@ -85,6 +94,40 @@ lcoyle@sfaz.org
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="ar"></a>
+
+## Arkansas
+### [Arch Ford Education Service Cooperative](http://www.archford.org/)
+Eastern Arkansas	
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/> 
+Lenett Thrasher<br/> 
+lenett.thrasher@archford.org
+
+<br/>
+
+### [Southwest Arkansas Education Cooperative](http://www.swaec.org/)
+Western Arkansas	
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/> 
+David Henderson<br/> 
+david.henderson@swaec.org
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+
 ________________
 <a id="ca"></a>
 
@@ -134,6 +177,36 @@ fnieto@acoe.org
 
 <br/>
 
+### [Contra Costa County Office of Education](http://www.cccoe.k12.ca.us/)<br/>
+East Bay, California	<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Hilary Dito<br/>
+hdito@cccoe.k12.ca.us<br/>
+
+<br/>
+
+### [Elementary Institute of Science](http://www.eisca.org)<br/>
+San Diego, California	<br/>
+
+The Elementary Institute of Science (EIS) engages pre-K to 12th grade students in immersive, hands-on science and engineering education. Working with parents, schools, and community partners, EIS strives to increase access to quality science learning opportunities for students throughout San Diego county.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Finding teacher leaders in other states <br/>
+
+**Contact Information**<br/>
+Anthonette Pena<br/>
+apena@eisca.org
+
+<br/>
+
 ### [Riverside County Office of Education](http://www.rcoe.us/)<br/>
 Inland Empire, California	<br/>
 
@@ -172,9 +245,29 @@ casey@svefoundation.org
 [**Back to the top**](#top)
 <br/>
 
+________________
+<a id="co"></a>
+
+## Colorado
+### Share Fair Nation and Colorado Education Initiative<br/>
+Colorado	
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Brandon Petersen<Br/>
+brandon.petersen@sharefairnation.org
+
+Greg Hessee<Br/>
+ghessee@coloradoedinitiative.org
+
+[**Back to the top**](#top)
+<br/>
+
 _________
 <a id="fl"></a>
-
 
 ## Florida
 ### [Broward County Public Schools](http://www.browardschools.com/)<br/>
@@ -368,7 +461,7 @@ ________________
 <a id="ia"></a>
 
 ## Iowa
-### [NewBoCo](Newbo.co)<br/>
+### [NewBoCo](http://Newbo.co)<br/>
 Iowa	
 
 New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and coworking.
@@ -391,7 +484,7 @@ ________________
 <a id="ky"></a>
 
 ## Kentucky
-### [AdvanceKentucky](www.advanceky.com)<br/>
+### [AdvanceKY](http://www.advanceky.com)<br/>
 Kentucky	
 
 AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
@@ -411,6 +504,26 @@ mmorton@kstc.com<Br/>
 [**Back to the top**](#top)
 <br/>
 
+________________
+<a id="me"></a>
+
+## Maine
+### Educate Maine and the Maine Mathematics and Science Alliance <br/>
+Maine
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Jason Judd<Br/>
+jason@educatemaine.org<Br/>
+
+Tom Keller, Ed.D.<br/>
+tkeller@mmsa.org<br/>
+
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="md"></a>
 
@@ -452,6 +565,23 @@ tchappelear@ccboe.com
 [**Back to the top**](#top)
 <br/>
 ________________
+<a id="ma"></a>
+
+## Massachussetts
+### [MassCAN](http://masscan.edc.org/)<br/>
+Massachussetts
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+James Stanton<Br/>
+JStanton@edc.org<Br/>
+
+[**Back to the top**](#top)
+<br/>
+________________
 <a id="mi"></a>
 
 ## Michigan
@@ -474,11 +604,66 @@ ksurd@wsesd.org
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="mt"></a>
+
+## Montana
+### [America Campaign - Big Sky Code Academy](http://www.bigskycodeacademy.org/)<br/>
+Montana
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Devin Holmes<Br/>
+devin@americacampaign.org<Br/>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="nv"></a>
+
+## Nevada
+### [Southern Nevada Regional Professional Development Program](http://www.rpdp.net/)<br/>
+Nevada
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Frank Mathews<Br/>
+frankm@rpdp.net<Br/>
+
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="nj"></a>
+
+## New Jersey
+### TCNJ Center for Excellence in STEM Education(https://centerforstem.pages.tcnj.edu/)<br/>
+New Jersey
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Laura Doyle<br/>
+segedil1@tcnj.edu<br/>
+
+Henry Harms<br/>
+harms@tcnj.edu<br/>
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="ny"></a>
 ## New York
 ### [Code/Interactive](http://www.weare.ci/)<br/>
-New York<br/>
+New York City<br/>
 
 Code/Interactive is a not-for-profit organization that cultivates the potential of America’s youth by ensuring that all students have access to a high-caliber computer science education, entrepreneurship opportunities, and industry exposure.
 
@@ -493,6 +678,19 @@ CS Discoveries<br/>
 **Contact Information**<br/>
 Jen Noborikawa<br/>
 jen@weare.ci
+
+<br/>
+
+### [WNY STEM Hub](http://wnystem.org/)<br/>
+Western New York<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Dr. Michelle Kavanaugh<br/>
+michelle.kavanaugh@wnystem.org
 
 <br/>
 
@@ -567,10 +765,80 @@ mckalyn@thediv.org<Br/>
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="pa"></a>
+
+## Pennsylvania
+### [Delaware County Intermediate Unit](http://www.dciu.org/)<br/>
+Philadelphia, PA
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Lauren Poutasse<br/>
+lpoutasse@dciu.org <br/>
+
+Jon Regino<br/>
+jregino@dciu.org<br/>
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="sc"></a>
+
+## South Carolina
+### [The STEM Center of Excellence at The Citadel](http://www.citadel.edu/root/stemcenter)<br/>
+South Carolina<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Dr. Jennifer Albert<br/>
+jalbert@citadel.edu<br/>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="tn"></a>
+
+## Tennessee
+### [Tennessee Department of Education](https://www.tn.gov/education)<br/>
+Tennessee<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Jarrod Lockhart<br/>	jarrod.Lockhart@tn.gov<br/>
+
+[**Back to the top**](#top)
+<br/>
+
 ________________
 <a id="tx"></a>
 
 ## Texas
+### [Center for STEM Education, The University of Texas at Austin](http://stemcenter.utexas.edu/)<br/>
+Austin, Texas<Br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information** <br/>
+Amy Werst<br/>
+amy.werst@utexas.edu<br/>
+
+John Owen<br/>
+johnbowen@utexas.edu<br/>
+
 ### [Rice University School Mathematics Project](http://rusmp.rice.edu)<br/>
 Houston, Texas<Br/>
 
@@ -727,15 +995,30 @@ CS Discoveries<br/>
 
 **Contact us for advice on:** Professional development facilitation, what to do when you're just getting started. 
 
-**Contact Information**
-Cheryl Lydon, Program Manager<br/>
-CLydon@psesd.org
-
-<br/>
+**Contact Information**<br/>
+Cheryl Lydon<br/>
+CLydon@psesd.org<br/>
 
 [**Back to the top**](#top)
 <br/>
 
+________________
+<a id="wi"></a>
+
+## Wisconsin
+### [Marquette University](http://marquette.edu/)<br/>
+Wisconsin<br/>
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact Information**<br/>
+Dennis Brylow<br/>
+brylow@pd.code.org<br/>
+
+[**Back to the top**](#top)
+<br/>
 
 
 

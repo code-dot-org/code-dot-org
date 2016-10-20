@@ -1194,8 +1194,8 @@ function animateAction(action, spotlightBlocks, timePerStep) {
     case 'get_pumpkin':
       Maze.subtype.animateGetPumpkin();
       break;
-    case 'get_bean':
-      Maze.subtype.animateGetBean();
+    case 'get_lettuce':
+      Maze.subtype.animateGetLettuce();
       break;
     case 'plant':
       Maze.subtype.animatePlant();

@@ -29,7 +29,7 @@
     "instructions": "\"Let's get the coins!\"",
     "markdown_instructions": "*\"Let's get the coins!\"*",
     "callout_json": "[]",
-    "ideal": "10",
+    "ideal": "9",
     "contained_level_names": null
   },
   "published": true,
@@ -83,13 +83,7 @@
                                     <block type="maze_move">
                                       <title name="DIR">moveForward</title>
                                       <next>
-                                        <block type="collector_collect">
-                                          <next>
-                                            <block type="maze_turn">
-                                              <title name="DIR">turnLeft</title>
-                                            </block>
-                                          </next>
-                                        </block>
+                                        <block type="collector_collect"/>
                                       </next>
                                     </block>
                                   </next>

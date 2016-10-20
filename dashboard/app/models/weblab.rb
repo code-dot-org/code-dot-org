@@ -26,6 +26,7 @@ class Weblab < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
+    teacher_markdown
   )
 
   def self.create_from_level_builder(params, level_params)
