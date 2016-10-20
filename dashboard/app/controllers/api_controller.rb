@@ -166,7 +166,7 @@ class ApiController < ApplicationController
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
     script_level = stage.script_levels[params[:level_position].to_i - 1]
-    level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
+    level = params[:level] ? Level.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
       user_level = current_user.last_attempt(level)

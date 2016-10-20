@@ -233,7 +233,7 @@ class ScriptLevel < ActiveRecord::Base
   def self.summarize_extra_puzzle_pages(last_level_summary)
     extra_levels = []
     level_id = last_level_summary[:ids].first
-    level = Script.cache_find_level(level_id)
+    level = Level.cache_find_level(level_id)
     extra_level_count = level.properties["pages"].length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
@@ -246,8 +246,31 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def self.cache_find(id)
-    Script.cache_find_script_level(id)
+  # Returns a cached map from script level id to script_level, or nil if the
+  # cache is disabled.
+  def self.script_level_cache
+    return nil unless Script.should_cache?
+    @@script_level_cache ||= {}.tap do |cache|
+      Script.script_cache.values.each do |script|
+        cache.merge!(script.script_levels.index_by(&:id))
+      end
+    end
+  end
+
+  # Find the script level with the given id from the cache, unless the level build mode
+  # is enabled in which case it is always fetched from the database. If we need to fetch
+  # the script and we're not in level mode (for example because the script was created after
+  # the cache), then an entry for the script is added to the cache.
+  def self.cache_find(script_level_id)
+    script_level = script_level_cache[script_level_id] if Script.should_cache?
+
+    # If the cache missed or caching is disabled, fetch the script level from the db.
+    if script_level.nil?
+      script_level = ScriptLevel.find(script_level_id)
+      # Cache the script level, unless it wasn't found.
+      @@script_level_cache[script_level_id] = script_level if script_level && Script.should_cache?
+    end
+    script_level
   end
 
   def to_param
