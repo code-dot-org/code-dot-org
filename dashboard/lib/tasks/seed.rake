@@ -98,9 +98,11 @@ namespace :seed do
 
   task school_districts: :environment do
     SchoolDistrict.transaction do
+      school_districts_tsv = CDO.stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+
       # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
       # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
-      SchoolDistrict.find_or_create_all_from_tsv!('config/school_districts.tsv')
+      SchoolDistrict.find_or_create_all_from_tsv!(school_districts_tsv)
     end
   end
 
@@ -109,9 +111,12 @@ namespace :seed do
       # It takes approximately 4 minutes to seed the schools data from tsv.
       # Skip seeding if the data is already up to date.
       unless School.find_by(survey_year: School::CURRENT_SURVEY_YEAR)
+        # use a much smaller dataset in environments that reseed data frequently.
+        schools_tsv = CDO.stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+
         # Since other models will have a foreign key dependency
         # on School, don't reset_db first.  (Callout, above, does that.)
-        School.find_or_create_all_from_tsv!('config/schools.tsv')
+        School.find_or_create_all_from_tsv!(schools_tsv)
       end
     end
   end
