@@ -104,6 +104,18 @@ namespace :seed do
     end
   end
 
+  task schools: :environment do
+    School.transaction do
+      # It takes approximately 4 minutes to seed the schools data from tsv.
+      # Skip seeding if the data is already up to date.
+      unless School.find_by(survey_year: School::CURRENT_SURVEY_YEAR)
+        # Since other models will have a foreign key dependency
+        # on School, don't reset_db first.  (Callout, above, does that.)
+        School.find_or_create_all_from_tsv!('config/schools.tsv')
+      end
+    end
+  end
+
   task prize_providers: :environment do
     PrizeProvider.transaction do
       PrizeProvider.reset_db
@@ -242,9 +254,9 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]
