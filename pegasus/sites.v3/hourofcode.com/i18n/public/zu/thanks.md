@@ -17,7 +17,7 @@
     "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
     "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
     "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}
@@ -28,7 +28,7 @@
 
 # Siyabonga ngokuzinikela ukuze usingathe iHora loKufingqwa!
 
-Wenza kukhonakale ukuba abafundi kumhlaba wonke jikelele bakhone ukufunda ihora elilodwa leHora loKufingqwa elinga *shintsha ukuphila kwabo konke*, phakathi <%= usuku_lomcimbi('oluphelele') %>. Sizoxhumana ngezifundiso ezinsha kanye nezibuyekezo ezithokozisayo. Ungenzani?
+Wenza kukhonakale ukuba abafundi kumhlaba wonke jikelele bakhone ukufunda ihora elilodwa leHora loKufingqwa elinga *shintsha ukuphila kwabo konke*, phakathi <%= campaign_date('full') %>. Sizoxhumana ngezifundiso ezinsha kanye nezibuyekezo ezithokozisayo. Ungenzani?
 
 ## 1. Sabalalisa izwi
 
