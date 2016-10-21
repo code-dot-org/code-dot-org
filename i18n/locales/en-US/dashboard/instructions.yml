@@ -795,6 +795,21 @@ en:
       course3_playlab_stage17_5_instruction: crwdns58068:0crwdne58068:0
       course3_playlab_stage17_6_instruction: crwdns58069:0crwdne58069:0
       course3_playlab_stage17_7_instruction: crwdns58070:0crwdne58070:0
+      courseA_maze_seq1_instruction: crwdns67459:0crwdne67459:0
+      courseA_maze_seq2_instruction: crwdns67460:0crwdne67460:0
+      courseB_playlab_events2_instruction: crwdns67461:0crwdne67461:0
+      courseB_playlab_events3_instruction: crwdns67462:0crwdne67462:0
+      courseB_playlab_events4_instruction: crwdns67463:0crwdne67463:0
+      courseB_playlab_events5_instruction: crwdns67464:0crwdne67464:0
+      courseB_playlab_events6_instruction: crwdns67465:0crwdne67465:0
+      courseB_playlab_events7_instruction: crwdns67466:0crwdne67466:0
+      courseB_playlab_events8_instruction: crwdns67467:0crwdne67467:0
+      courseB_playlab_eventsFP_instruction: crwdns67468:0crwdne67468:0
+      courseB_playlab_eventsToolbox_instruction: crwdns67469:0crwdne67469:0
+      courseC_puppy_loops10_instruction: crwdns67470:0crwdne67470:0
+      courseC_puppy_loops11_instruction: crwdns67471:0crwdne67471:0
+      courseC_puppy_loops8_instruction: crwdns67472:0crwdne67472:0
+      courseC_puppy_loops9_instruction: crwdns67473:0crwdne67473:0
       Crack a Caesar Cipher_instruction: crwdns60154:0crwdne60154:0
       Crack Random Substitution_instruction: crwdns60155:0crwdne60155:0
       CSD Hackathon Pt 1_instruction: crwdns56227:0crwdne56227:0
@@ -1043,6 +1058,15 @@ en:
       grade2_CaringForNewPet_5_instruction: crwdns57467:0crwdne57467:0
       grade2_CaringForNewPet_6_instruction: crwdns57468:0crwdne57468:0
       grade2_CaringForNewPet_7D_instruction: crwdns58081:0crwdne58081:0
+      grade2_collector_10_instruction: crwdns67474:0crwdne67474:0
+      grade2_collector_2_instruction: crwdns67475:0crwdne67475:0
+      grade2_collector_3_instruction: crwdns67476:0crwdne67476:0
+      grade2_collector_4_instruction: crwdns67477:0crwdne67477:0
+      grade2_collector_5_instruction: crwdns67478:0crwdne67478:0
+      grade2_collector_6_instruction: crwdns67479:0crwdne67479:0
+      grade2_collector_7_instruction: crwdns67480:0crwdne67480:0
+      grade2_collector_8_instruction: crwdns67481:0crwdne67481:0
+      grade2_collector_9_instruction: crwdns67482:0crwdne67482:0
       grade2_collector_pre1_instruction: crwdns67412:0crwdne67412:0
       grade2_MakeDogTag_1_instruction: crwdns57469:0crwdne57469:0
       grade2_MakeDogTag_10_instruction: crwdns57470:0crwdne57470:0
@@ -1054,13 +1078,30 @@ en:
       grade2_MakeDogTag_7_instruction: crwdns57476:0crwdne57476:0
       grade2_MakeDogTag_8_instruction: crwdns57477:0crwdne57477:0
       grade2_MakeDogTag_9_instruction: crwdns57478:0crwdne57478:0
+      grade2_MakeDogTag_BFP_instruction: crwdns67483:0crwdne67483:0
+      grade2_MakeDogTag_FP_instruction: crwdns67484:0crwdne67484:0
       grade2_maze_debuggingFP_instruction: crwdns58293:0crwdne58293:0
       grade2_maze_debuggingPre_instruction: crwdns58294:0crwdne58294:0
       grade2_maze_intro10_instruction: crwdns67413:0crwdne67413:0
+      grade2_maze_intro2_instruction: crwdns67485:0crwdne67485:0
+      grade2_maze_intro3_instruction: crwdns67486:0crwdne67486:0
+      grade2_maze_intro4_instruction: crwdns67487:0crwdne67487:0
       grade2_maze_intro6_instruction: crwdns67414:0crwdne67414:0
       grade2_maze_intro7_instruction: crwdns67415:0crwdne67415:0
       grade2_maze_intro8_instruction: crwdns67416:0crwdne67416:0
       grade2_maze_intro9_instruction: crwdns67417:0crwdne67417:0
+      grade2_playlab_project_1_instruction: crwdns67488:0crwdne67488:0
+      grade2_playlab_project_2_instruction: crwdns67489:0crwdne67489:0
+      grade2_playlab_project_3_instruction: crwdns67490:0crwdne67490:0
+      grade2_playlab_project_4_instruction: crwdns67491:0crwdne67491:0
+      grade2_playlab_project_5_instruction: crwdns67492:0crwdne67492:0
+      grade2_playlab_project_6_instruction: crwdns67493:0crwdne67493:0
+      grade2_puppy_loops2_instruction: crwdns67494:0crwdne67494:0
+      grade2_puppy_loops3_instruction: crwdns67495:0crwdne67495:0
+      grade2_puppy_loops4_instruction: crwdns67496:0crwdne67496:0
+      grade2_puppy_loops5_instruction: crwdns67497:0crwdne67497:0
+      grade2_puppy_loops6_instruction: crwdns67498:0crwdne67498:0
+      grade2_puppy_loops7_instruction: crwdns67499:0crwdne67499:0
       grade2_PuppyLoops_1_instruction: crwdns57479:0crwdne57479:0
       grade2_PuppyLoops_10_instruction: crwdns57480:0crwdne57480:0
       grade2_PuppyLoops_2_instruction: crwdns57481:0crwdne57481:0
@@ -1328,6 +1369,8 @@ en:
       grade5_artist_for_loops5_instruction: crwdns57620:0crwdne57620:0
       grade5_artist_for_loops6_instruction: crwdns57621:0crwdne57621:0
       grade5_artist_for_loops7_instruction: crwdns57622:0crwdne57622:0
+      grade5_artist_for_loops7a_instruction: crwdns67500:0crwdne67500:0
+      grade5_artist_for_loops7b_instruction: crwdns67501:0crwdne67501:0
       grade5_artist_for_loops8_instruction: crwdns57623:0crwdne57623:0
       grade5_artist_for_loops9_instruction: crwdns57624:0crwdne57624:0
       grade5_artist_for_loopsfreeplay11_instruction: crwdns57625:0crwdne57625:0

@@ -2184,38 +2184,38 @@
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig."
       course2_playlab_stage17_1_instruction: |
-        Can you make Jorge the Dog (actor 1)
-        say "Hi"?
-      course2_playlab_stage17_10_instruction: "Add blocks to the `when run` event\nto
-        change the background and the speed of Waddles.\r\n\r\nPlay the game and\nmove
-        Waddles with the arrows until you score."
+        ¿Puedes hacer que Jorge el Perro (actor 1)
+        diga "Hola"?
+      course2_playlab_stage17_10_instruction: "Agrega bloques al evento \"cuando se
+        ejecuta\"\npara cambiar el fondo y la velocidad de Waddles.\r\n\r\nJuega y\nmueve
+        a Waddles con las flechas hasta que anotes."
       course2_playlab_stage17_11_instruction: |
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
+        Crea tu propia historia. Cuando
+        termines, da clic en Terminar para dejar que tus amigos prueben tu historia en sus teléfonos.
       course2_playlab_stage17_2_instruction: "¿Puedes hacer que el perro diga algo
         y que a continuación el gato le conteste?"
       course2_playlab_stage17_3_instruction: "¿Puedes escribir un programa para hacer
         que el perro se mueva hasta el gato?"
       course2_playlab_stage17_4_instruction: |
-        Can you write a program that makes
-        Jorge (actor 1) move to Olive the Cat, and have Olive say "Hello" when Jorge
-        reaches her?
+        ¿Puedes escribir un programa que haga que
+        Jorge (actor 1) mueva a Olive el Gato, y que Olive diga "Hola" cuando Jorge
+        la alcance?
       course2_playlab_stage17_5_instruction: |
-        Can you write a program to make Octavia
-        say "Hi" when she is clicked?
+        ¿Puedes escribir un programa que haga que Octavia
+        diga "Hola" cuando se hace clic en ella?
       course2_playlab_stage17_6_instruction: |
-        Now, write a program to make Waddles
-        move around using the up / down / left /right keys to hit all of the targets!
+        Ahora, ¡escribe un programa que haga que Waddles
+        se mueva usando las teclas arriba/abajo/izquierda/derecha para tocar a todos los blancos!
       course2_playlab_stage17_7_instruction: |
         The `repeat forever` block allows you
         to run code over and over forever. Can you attach blocks to move Chomp the
         Dino (actor 2) up and down forever?
-      course2_playlab_stage17_8_instruction: "Can you have Waddles (actor 1) say\n\"Ouch!\"
-        and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen you're\ndone,
-        play the game to make that happen."
-      course2_playlab_stage17_9_instruction: "Can you add a block to score a point\nwhen
-        Waddles runs into Octavia (actor 3)? \r\nPlay the game and move Waddles\nwith
-        the arrows until you score!"
+      course2_playlab_stage17_8_instruction: "¡Puedes hacer que Waddles (actor 1)
+        diga\n\"Ouch!\" y reproduzca un sonido de \"toque\" si choca con Chomp?\r\n\r\nCuando
+        termines,\njuega para que esto suceda."
+      course2_playlab_stage17_9_instruction: "¿Puedes agregar un bloque para ganar
+        un punto\ncuando Waddles choque con Octavia (actor 3)?\r\n¡Juega y mueve a
+        Waddles\ncon las flechas hasta que anotes!"
       course3_playlab_stage16_1_instruction: ¿Puedes hacer que este perro diga "Hola
         mundo"?
       course3_playlab_stage16_2_instruction: "¿Puedes hacer que el perro diga algo
@@ -2223,38 +2223,74 @@
       course3_playlab_stage16_3_instruction: "¿Puedes escribir un programa para hacer
         que el perro se mueva hasta el gato?"
       course3_playlab_stage16_4_instruction: |
-        Can you write a program that makes
-        the dog move to the cat, and have the cat say "hello" when the dog reaches
-        him?
+        ¿Puedes escribir un programa que haga
+        que el perro se mueva hacia el gato, y que el gato diga "hola" cuando el perro
+        lo alcance?
       course3_playlab_stage16_5_instruction: "¿Puedes agregar un bloque para hacer
         feliz al pulpo?"
       course3_playlab_stage16_6_instruction: |
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
-      course3_playlab_stage17_1_instruction: |
-        Can you write a program to make the
-        octopus say "hello" when it is clicked?
+        Crea tu propia historia. Cuando
+        termines, da clic en Terminar para dejar que tus amigos prueben tu historia en sus teléfonos.
+      course3_playlab_stage17_1_instruction: "¿Puedes escribir un programa que haga
+        que \nel pulpo diga \"hola\" cuando se hace clic en él?\n"
       course3_playlab_stage17_2_instruction: |
-        Can you write a program to make Waddles
-        move around using the up / down / left /right keys to hit all of the targets?
+        ¿Puedes escribir un programa que haga que Waddles
+        se mueva usando las teclas arriba/abajo/izquierda/derecha para alcanzar todos los objetivos?
       course3_playlab_stage17_3_instruction: |
-        The "repeat forever" block allows
-        you to run code continuously. Can you attach blocks to move this dinosaur
-        up and down repeatedly?
-      course3_playlab_stage17_4_instruction: |
-        Can you have Waddles say "Ouch!"
-        and play a "hit" sound if he runs into the dinosaur, and then move him with
-        the arrows to make that happen?
-      course3_playlab_stage17_5_instruction: |
-        Can you add a block to score a point
-        when Waddles runs into the octopus, and then move him with the arrows until
-        you score?
+        El bloque "repetir para siempre" te permite
+        ejecutar tu código continuamente. ¿Puedes agregar bloques para mover este dinosaurio
+        hacia arriba y hacia abajo repetidamente?
+      course3_playlab_stage17_4_instruction: "¿Puedes hacer que Waddles diga \"Ouch!\"\ny
+        reproduzca un sonido de \"choque\" si choca con el dinosaurio, y moverlo con
+        \nlas flechas para hacer que esto suceda?\n"
+      course3_playlab_stage17_5_instruction: "¿Puedes agregar un bloque para ganar
+        un punto\ncuando Waddles choque con el pulpo, y moverlo \ncon las flechas
+        hasta que anotes?\n"
       course3_playlab_stage17_6_instruction: |
-        Can you add blocks to change the background
-        and the speed of Waddles, and then move him with the arrows until you score?
+        ¿Puedes agregar bloques para cambiar el fondo
+        y la velocidad de Waddles, y luego moverlo con las flechas hasta que anotes?
       course3_playlab_stage17_7_instruction: |
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
+        Crea tu propia historia. Cuando
+        termines, da clic en Terminar para dejar que tus amigos prueben tu historia en sus teléfonos.
+      courseA_maze_seq1_instruction: |
+        Play with these blocks to see if you can get
+        me to the pig!
+      courseA_maze_seq2_instruction: Cambie el código para traerme al cerdo!
+      courseB_playlab_events2_instruction: |
+        Have Daisy the Dragon say something when
+        you click "Run".
+      courseB_playlab_events3_instruction: |
+        Use an event to make Daisy the Dragon
+        switch to a random mood when you click on her.
+      courseB_playlab_events4_instruction: |
+        Knight time!  Add an event so that the
+        knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events5_instruction: |
+        Now add an event so that the knight runs
+        away from the dragon when you press the right arrow.
+      courseB_playlab_events6_instruction: "Help your knight get all of the flags!\r\n\r\nTo\ndo
+        this, you'll need to add events to help the knight move up and down."
+      courseB_playlab_events7_instruction: |
+        Make this game fun by setting the knight
+        to vanish when he runs into the dragon!  Play a sound when they collide to
+        make it feel more real.
+      courseB_playlab_events8_instruction: |
+        Use your imagination. What can you do
+        to make this game more fun?
+      courseB_playlab_eventsFP_instruction: |
+        Use your imagination. What can you do
+        to make this game more fun?
+      courseB_playlab_eventsToolbox_instruction: |
+        Finish by playing a sound and making
+        the knight vanish when he runs into the dragon!
+      courseC_puppy_loops10_instruction: You are doing great! Keep it up!
+      courseC_puppy_loops11_instruction: |
+        You are almost there! This time, choose
+        any path you like!
+      courseC_puppy_loops8_instruction: |
+        Challenge puzzle! Combine ideas from the
+        last few puzzles to complete this.
+      courseC_puppy_loops9_instruction: You are doing great! Keep it up!
       Crack a Caesar Cipher_instruction: Instrucciones
       Crack Random Substitution_instruction: Instrucciones
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
@@ -3034,33 +3070,62 @@
       grade2_CaringForNewPet_7D_instruction: |
         This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig.
+      grade2_collector_10_instruction: |
+        You're almost done! Collect all of the coins
+        to finish the stage!
+      grade2_collector_2_instruction: |
+        I love to chase the ball, but what should
+        I do when I get to it?
+      grade2_collector_3_instruction: |
+        Sequence matters! The blocks you need are
+        already in the workspace, but not connected.  Order these blocks to solve
+        the puzzle.
+      grade2_collector_4_instruction: |
+        Sequence matters! The blocks you need are
+        already in the workspace, but not connected.  Order these blocks to solve
+        the puzzle.
+      grade2_collector_5_instruction: |
+        These blocks are in the wrong order! Help
+        me collect each coin by putting the commands in the right order.
+      grade2_collector_6_instruction: |
+        These blocks are in the wrong order! Help
+        me collect each coin by putting the commands in the right order.
+      grade2_collector_7_instruction: |
+        Challenge puzzle! What is going on here? Even
+        if we put these in the right order, there will still be some missing.
+      grade2_collector_8_instruction: |
+        Keep up the good work! Help me collect all
+        of the coins.
+      grade2_collector_9_instruction: Let's get the coins!
       grade2_collector_pre1_instruction: |
         Ruff! Can you help me collect some tennis
         balls?
       grade2_MakeDogTag_1_instruction: |
-        Hi, I'm an artist. You can write code to
-        make me draw almost anything. Use a few blocks to make me draw over the grey
-        lines in the picture. (Each line is 100 pixels long)
+        Drag blocks onto the screen to have the artist
+        draw over the grey lines in the picture. (Each line is 100 pixels long)
       grade2_MakeDogTag_10_instruction: Dibuja algo divertido.
-      grade2_MakeDogTag_2_instruction: "This house has a half-finished wall. Each\nside
-        is 100, but the half-finished wall is only 50. Complete the wall. \n"
+      grade2_MakeDogTag_2_instruction: "This spaceship needs a window!\r\n\r\nEach\nside
+        is 100 pixels and all of the angles are 90 degrees."
       grade2_MakeDogTag_3_instruction: Ayúdame a completar la casa para este gato.
       grade2_MakeDogTag_4_instruction: "¡Esta casa necesita un techo! Dibuja el triángulo.
         Pista: Los 3 lados tienen la misma longitud."
-      grade2_MakeDogTag_5_instruction: |
-        Complete the rooms for each of the animals
-        by splitting the rectangle into 2 equal-sized squares. The rectangle is 200
-        pixels wide and 100 pixels tall. There are many different ways to solve this
-        puzzle, so have some fun!
+      grade2_MakeDogTag_5_instruction: "\"Now a tag for Belle!\"\r\n\r\nDraw this\ndiamond
+        with 200 pixel sides."
       grade2_MakeDogTag_6_instruction: "¡Juego libre! Dibuja lo que quieras."
-      grade2_MakeDogTag_7_instruction: "Give the stop sign a border by making an\noctagon
-        with 100 pixels sides. \r\n\r\n"
+      grade2_MakeDogTag_7_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each\nside
+        is 150 pixels)"
       grade2_MakeDogTag_8_instruction: Ahora conectemos un montón de V juntos, dibujándolos
         en un bucle.
       grade2_MakeDogTag_9_instruction: |
         Rebuild the code from the last puzzle, but
         this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
         times instead of 8.
+      grade2_MakeDogTag_BFP_instruction: "\"Hi, I'm an artist. You can write code\nto
+        make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox\nto
+        see what they do!"
+      grade2_MakeDogTag_FP_instruction: |
+        Freeplay: What shape will you make the tag
+        for your pet?
       grade2_maze_debuggingFP_instruction: |
         Now, help me sneak up on the pig any
         way you want to!
@@ -3068,6 +3133,16 @@
         Play with these blocks to see what they
         make the bird do!
       grade2_maze_intro10_instruction: Solve this puzzle.
+      grade2_maze_intro2_instruction: |
+        Welcome to Code Studio! Here you will learn
+        to use blocks to build programs. Press `Run` to run a program now!
+      grade2_maze_intro3_instruction: |
+        The `workspace` is where you will create all
+        of your programs. Can you guess what this program does? Press the “Run” button
+        to find out.
+      grade2_maze_intro4_instruction: |
+        Drag a block from the toolbox into the workspace.
+        Connect it to the other blocks.
       grade2_maze_intro6_instruction: "That’s it!  Now we’re ready to try to solve\na
         few puzzles. \n"
       grade2_maze_intro7_instruction: This time, try something a bit more challenging.
@@ -3077,6 +3152,39 @@
         solve it after several tries, don’t worry!  It will be in the Play Zone at
         the end of the stage and you can try it again when you’ve had more practice.
       grade2_maze_intro9_instruction: Solve this puzzle.
+      grade2_playlab_project_1_instruction: |
+        Ahora, ¡escribe un programa que haga que Waddles
+        se mueva usando las teclas arriba/abajo/izquierda/derecha para tocar a todos los blancos!
+      grade2_playlab_project_2_instruction: |
+        The `repeat forever` block allows you
+        to run code over and over forever. Can you attach blocks to move Chomp the
+        Dino (actor 2) up and down forever?
+      grade2_playlab_project_3_instruction: "Can you have Waddles (actor 1) say \"Ouch!\"\nand
+        play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen you're done,\nplay
+        the game to make that happen."
+      grade2_playlab_project_4_instruction: "¿Puedes agregar un bloque para ganar
+        un punto\ncuando Waddles choque con Octavia (actor 3)?\r\n¡Juega y mueve a
+        Waddles\ncon las flechas hasta que anotes!"
+      grade2_playlab_project_5_instruction: "Add blocks to the `when run` event to\nchange
+        the background and the speed of Waddles.\r\n\r\nPlay the game and move\nWaddles
+        with the arrows until you score."
+      grade2_playlab_project_6_instruction: |
+        Crea tu propia historia. Cuando
+        termines, da clic en Terminar para dejar que tus amigos prueben tu historia en sus teléfonos.
+      grade2_puppy_loops2_instruction: |
+        Can you get to the pig by creating a loop
+        that uses only one `move forward` block inside of a `repeat`?
+      grade2_puppy_loops3_instruction: |
+        Get me to the pig! Solve this puzzle by creating
+        a loop!
+      grade2_puppy_loops4_instruction: |
+        In this puzzle, two `repeat` loops will help
+        you get to the pig with the fewest number of blocks!
+      grade2_puppy_loops5_instruction: Tráeme al cerdo.
+      grade2_puppy_loops6_instruction: |
+        Loops even work with more than one block
+        inside!  Can you loop this sequence to get me to the pig?
+      grade2_puppy_loops7_instruction: Use what you learned to get me to the pig!
       grade2_PuppyLoops_1_instruction: |
         Can you get me to the pig using 5 of the
         same kind of blocks?
@@ -3086,15 +3194,15 @@
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
       grade2_PuppyLoops_3_instruction: |
-        Get me to the pig! You can only use one move
-        forward block this time
+        Get me to the pig! Solve this puzzle by creating
+        a loop!
       grade2_PuppyLoops_4_instruction: |
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
       grade2_PuppyLoops_5_instruction: Tráeme al cerdo.
       grade2_PuppyLoops_6_instruction: |
         Loops even work with more than one block
-        inside!  Can you loop this sequence to get the zombie to the sunflower?
+        inside!  Can you loop this sequence to get me to the pig?
       grade2_PuppyLoops_7_instruction: "¡Llévame al girasol!"
       grade2_PuppyLoops_8_instruction: 'El código para los tres bigotes que ves es
         incorrecto. Sugerencia: cada bigote tiene 75 pixeles de largo. Repara este
@@ -3924,19 +4032,16 @@
         puzzle. As long as you turn by the right number of degrees, the artist will
         make the correct shape!
       grade5_artist_for_loops1b_instruction: |
-        *Free Play:* Experiment with the `for
-        loop` and the `counter` variable.
+        Experiment with the `for` loop and
+        play with the `counter` variable.
       grade5_artist_for_loops2_instruction: |
-        I've put the code for drawing a triangle
-        inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look
-        at the code before you hit "Run".
-      grade5_artist_for_loops3_instruction: |
-        Use the last puzzle as a reference to
-        complete this one.  The smallest triangle has 20 pixel sides, the largest
-        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
-      grade5_artist_for_loops4_instruction: "How would you modify what you've learned\nto
-        draw these squares? They start at 15 pixels long, the largest is 300 pixels\nlong,
-        and each square is 15 pixels larger than the last. \n"
+        Use a `repeat` inside of a `for` loop
+        to create this stack of triangles that goes from 50 pixels to 100 pixels.
+      grade5_artist_for_loops3_instruction: "These triangles go from 20 pixel sides\nto
+        200 pixel sides, and each triangle is 20 pixels larger than the last. \n"
+      grade5_artist_for_loops4_instruction: "These squares start at 15 pixels long,\nthe
+        largest is 300 pixels long, and each square is 15 pixels larger than the\nlast.
+        \n"
       grade5_artist_for_loops5_instruction: "Just one little change to the code from\nthe
         last image can create this drawing. Can you figure out what that change\nis?\r\n\r\nHint:
         \ You need to remove something!"
@@ -3948,6 +4053,12 @@
       grade5_artist_for_loops7_instruction: |
         Make three small changes to the code
         from the last level to get this!
+      grade5_artist_for_loops7a_instruction: |
+        Take the angle down to 72 degrees to
+        get a spiraled pentagon.
+      grade5_artist_for_loops7b_instruction: "Use the counter inside the `set alpha`\nblock
+        to get this faded center.\r\n(This hexagon pattern was made using a\n60 degree
+        turn.)"
       grade5_artist_for_loops8_instruction: "Remember back in a previous stage when\nwe
         used a variable to control the number of sides in a shape? We are going\nto
         do the same thing with the `counter` variable now. This pattern starts\nwith
@@ -3964,9 +4075,8 @@
         crea algo por tu cuenta. \r \r quieres saber cómo se hizo nuestro patron de
         inspiración? Visita https://studio.code.org/c/106387604 para la solución."
       grade5_artist_for_loopsfreeplay12_instruction: |
-        Free Play: Try making some
-        drawings of your own using "for loops". We've added a few useful variables
-        for you as well.
+        Free Play: Try using the `counter`
+        variable with other drawing elements to make magical images like this one.
       grade5_artist_freeplay_instruction: |
         Create your own project! This creation
         will be saved to your Projects dashboard so that you can easily edit it any

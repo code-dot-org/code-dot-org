@@ -336,6 +336,7 @@
       unsubmit: Cancelar envío
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'O enderezo de email non foi confirmado:'
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'

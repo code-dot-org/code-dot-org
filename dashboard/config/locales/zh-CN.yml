@@ -1,12 +1,10 @@
-"zh":
+"zh-CN":
   errors:
     messages:
       not_saved: "请更正以下错误:"
       too_young: "此内容有年龄限制，不适合低龄的学生。"
       teacher_must_accept_terms: 此内容有年龄限制，对于低年级的学生不可用。问你的老师以接受更新的服务条款给你访问此内容。你的老师通过登录到代码工作室并单击代码工作室主页顶部附近的"审查更新条款"按钮来做这件事。
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      pair_programmer: "你正在与另一个不能访问此内容的学生结伴编程。要访问此内容，请停止与这个学生的结伴编程后再次尝试。"
   activerecord:
     errors:
       messages:
@@ -83,9 +81,7 @@
   signup_form:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: 注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。
     teacher_educator_guide: "请参阅教师指南"
     title: "注册 Code.org"
     school_name: "学校名称 （可选）"
@@ -302,6 +298,7 @@
       unsubmit: "未提交"
       worked_with: "一起工作"
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "电子邮件地址尚未被确认："
     email_confirm_needed_required: "你的电子邮件地址%{email} 尚未被确认："
