@@ -99,11 +99,15 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def exit_survey(enrollment)
+  # Exit survey email
+  # @param enrollment [Pd::Enrollment]
+  # @param is_first_workshop: [Boolean]
+  #   Optionally override whether this is treated as the teacher's first workshop.
+  def exit_survey(enrollment, is_first_workshop: nil)
     @workshop = enrollment.workshop
     @teacher = enrollment.user
     @enrollment = enrollment
-    @is_first_workshop = Pd::Workshop.attended_by(@teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
+    @is_first_workshop = is_first_workshop.nil? ? first_workshop_for_teacher?(@teacher) : is_first_workshop
 
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? @workshop.course
       @survey_url = CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{enrollment.code}", 'https:'
@@ -126,6 +130,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   private
+
+  def first_workshop_for_teacher?(teacher)
+    Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
+  end
 
   def generate_csf_certificate
     image = create_certificate_image2(
