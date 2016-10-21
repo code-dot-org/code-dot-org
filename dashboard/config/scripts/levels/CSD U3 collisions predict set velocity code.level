@@ -6,12 +6,9 @@
   "user_id": 106,
   "properties": {
     "skin": "gamelab",
-    "contained_level_names": [
-      "CSD U3 collisions predict set velocity"
-    ],
-    "embed": "false",
+    "embed": "true",
     "instructions_important": "false",
-    "start_blocks": "// Create sprite on the left side of the screen. Set it moving to the right\r\nvar sprite1 = createSprite(30,200);\r\nsprite1.velocityX = 1;\r\n\r\n// Create sprite in the middle of the screen\r\nvar sprite2 = createSprite(200,200);\r\n\r\nfunction draw(){\r\n  // Draw background\r\n  background(\"white\");\r\n  \r\n  // Update Sprites\r\n  if(sprite1.isTouching(sprite2)){\r\n    sprite2.velocityX = sprite1.velocityX;\r\n  }\r\n  \r\n  drawSprites();\r\n}",
+    "start_blocks": "// Create sprite on the left side of the screen. Set it moving to the right\r\nvar sprite1 = createSprite(30,200);\r\nsprite1.setAnimation(\"giraffe\");\r\nsprite1.velocityX = 1;\r\nsprite1.scale = 0.3;\r\n\r\n// Create sprite in the middle of the screen\r\nvar sprite2 = createSprite(300,200);\r\nsprite2.setAnimation(\"monkey\");\r\nsprite2.scale = 0.3;\r\n\r\nfunction draw(){\r\n  // Draw background\r\n  background(\"white\");\r\n  \r\n  // Update Sprites\r\n  if(sprite1.isTouching(sprite2)){\r\n    sprite2.velocityX = sprite1.velocityX;\r\n  }\r\n  \r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,7 +35,10 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "show_d_pad": "false",
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"fe854804-5fd4-4809-93c0-22d4581bb12a\",\r\n    \"f90dbd53-efbc-4f2e-8405-41e70497283c\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"fe854804-5fd4-4809-93c0-22d4581bb12a\": {\r\n      \"name\": \"monkey\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/pi_CHrPyjcbj0BWoaM1xJPmSTcQmH5m7/category_animals/monkey.png\",\r\n      \"frameSize\": {\r\n        \"x\": 308,\r\n        \"y\": 257\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"pi_CHrPyjcbj0BWoaM1xJPmSTcQmH5m7\"\r\n    },\r\n    \"f90dbd53-efbc-4f2e-8405-41e70497283c\": {\r\n      \"name\": \"giraffe\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/BVR1B4Bv.Rt9HuRMP95_JWui8UZo0148/category_animals/giraffe.png\",\r\n      \"frameSize\": {\r\n        \"x\": 306,\r\n        \"y\": 322\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"BVR1B4Bv.Rt9HuRMP95_JWui8UZo0148\"\r\n    }\r\n  }\r\n}",
+    "markdown_instructions": "# Sprite Interactions\r\n\r\nSo far you've been able to create simple sprite interactions by using the `sprite.isTouching()` block. For example, you've reset a coin to a different location on the screen when a character touches it. Now it's time to start making sprites have more complex interactions.\r\n\r\n# Do This\r\n\r\n* Run the program and observe the interaction between the two sprites\r\n* Discuss with a Neighbor: Using only the commands you already know how could you create this kind of interaction? There's many ways to do it, but here's some blocks to consider.\r\n\t* `sprite.isTouching()`\r\n    * `sprite.velocityX` / `sprite.velocityY`\r\n    * `sprite.x` / `sprite.y`\r\n\r\nBe ready to share your ideas with your classmates.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
