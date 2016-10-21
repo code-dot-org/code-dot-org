@@ -1,10 +1,4 @@
 var tb = require('../block_utils').createToolbox;
-var utils = require('../utils');
-
-var category = function (name, blocks) {
-  return '<category id="' + name + '" name="' + name + '">' + blocks + '</category>';
-};
-
 var moveForwardBlock = '<block type="craft_moveForward"></block>';
 
 function craftBlock(type) {

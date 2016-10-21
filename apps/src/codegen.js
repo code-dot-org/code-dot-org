@@ -1,4 +1,4 @@
-/* global Interpreter, CanvasPixelArray, ace, Uint8ClampedArray */
+/* global Interpreter, CanvasPixelArray, Uint8ClampedArray */
 
 var dropletUtils = require('./dropletUtils');
 var utils = require('./utils');
@@ -226,7 +226,6 @@ var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentOb
   if (nativeObj === undefined && interpreter.UNDEFINED) {
     return interpreter.UNDEFINED;  // Reuse the same object.
   }
-  var type = typeof nativeObj;
   var obj = {
     data: nativeObj,
     isPrimitive: false,

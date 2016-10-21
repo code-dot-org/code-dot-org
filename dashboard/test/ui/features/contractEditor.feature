@@ -5,7 +5,7 @@ Feature: Opening the contract editor
 
 Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
-  Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   And I see no difference for "blank game screen"
@@ -27,7 +27,7 @@ Scenario: Testing the contract variable editor
 
 Scenario: Creating and modifying a new contract
   When I open my eyes to test "creating a new contract"
-  Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   And I see no difference for "blank game screen"
@@ -76,7 +76,7 @@ Scenario: Changing Parameter names
   And "evaluate" refers to block "10"
 
   When I open my eyes to test "changing contract parameters"
-  Given I am on "http://learn.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   And I press "modalEditorClose"

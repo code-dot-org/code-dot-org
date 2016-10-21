@@ -7,21 +7,6 @@ namespace :seed do
     Video.setup
   end
 
-  STANFORD_HINTS_FILE = 'config/stanford-hints-bestPath1.tsv'
-  STANFORD_HINTS_IMPORTED = 'config/scripts/.hints_imported'
-  file STANFORD_HINTS_IMPORTED => [STANFORD_HINTS_FILE, :environment] do
-    LevelSourceHint.transaction do
-      source_name = LevelSourceHint::STANFORD
-      LevelSourceHint.where(source: source_name).delete_all
-      CSV.read(STANFORD_HINTS_FILE, { col_sep: "\t" }).each do |row|
-        LevelSourceHint.create!(
-          level_source_id: row[0], hint: row[1],
-          status: 'experiment', source: source_name)
-      end
-    end
-    touch STANFORD_HINTS_IMPORTED
-  end
-
   task concepts: :environment do
     Concept.setup
   end
@@ -257,9 +242,9 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]

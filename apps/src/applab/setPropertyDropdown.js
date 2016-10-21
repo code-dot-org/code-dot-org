@@ -1,9 +1,10 @@
 /**
  * This file manages logic for the dropdown used in our setProperty block
  */
-var _ = require('lodash');
+import _ from 'lodash';
+
 import {getFirstParam} from '../dropletUtils';
-var library = require('./designElements/library');
+import library from './designElements/library';
 var ElementType = library.ElementType;
 
 /**
@@ -273,14 +274,14 @@ function getDropdownProperties(elementType) {
  * containing the internal equivalent for that friendly name, or undefined
  * if we don't have info for this element/property.
  */
-module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
+export function getInternalPropertyInfo(element, friendlyPropName) {
   var elementType = library.getElementType(element, true);
   var info;
   if (elementType) {
     info = PROPERTIES[elementType].infoForFriendlyName[friendlyPropName];
   }
   return info;
-};
+}
 
 /**
  * @returns {function} Gets the value of the first param for this block, gets
@@ -288,7 +289,7 @@ module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
  *   properties that can be set on this element. If it can't determine element
  *   types, provides full list of properties across all types.
  */
-module.exports.setPropertyDropdown = function () {
+export function setPropertyDropdown() {
   return function (editor) {
     // Note: We depend on "this" being the droplet socket when in block mode,
     // such that parent ends up being the block. In text mode, this.parent
@@ -306,9 +307,9 @@ module.exports.setPropertyDropdown = function () {
 
     return getDropdownProperties(library.getElementType(element));
   };
-};
+}
 
-module.exports.__TestInterface = {
+export var __TestInterface = {
   stripQuotes: stripQuotes,
   getDropdownProperties: getDropdownProperties
 };

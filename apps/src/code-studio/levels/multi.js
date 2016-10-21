@@ -1,7 +1,5 @@
-/* global Dialog, appOptions, CDOSounds */
 import $ from 'jquery';
-
-window.levelGroup = window.levelGroup || {levels: {}};
+import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
 var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
@@ -64,9 +62,7 @@ Multi.prototype.choiceClicked = function (button) {
 
   this.clickItem(index);
 
-  if (window.levelGroup && window.levelGroup.answerChangedFn) {
-    window.levelGroup.answerChangedFn(this.levelId, true);
-  }
+  onAnswerChanged(this.levelId, true);
 };
 
 
@@ -157,9 +153,9 @@ Multi.prototype.ready = function () {
   this.enableButton(false);
 
   // If we are relying on the containing page's submission buttons/dialog, then
-  // we need to provide a window.getResult function.
+  // we need to provide a getResult function.
   if (this.standalone) {
-    window.getResult = $.proxy(this.getResult, this);
+    registerGetResult(this.getResult.bind(this));
   }
 
   // Pre-select previously submitted response if available.
@@ -215,11 +211,11 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   }
 
   return {
-    "response": answer,
-    "result": result,
-    "errorType": errorType,
-    "submitted": submitted,
-    "valid": valid
+    response: answer,
+    result: result,
+    errorType: errorType,
+    submitted: submitted,
+    valid: valid
   };
 };
 

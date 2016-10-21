@@ -140,16 +140,21 @@ const DataTable = React.createClass({
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      FirebaseStorage.renameColumn(
-        this.props.tableName,
-        oldName,
-        newName,
-        this.resetColumnState,
-        error => {
-          console.warn(error);
-          this.resetColumnState();
-        }
-      );
+      if (this.props.tableName) {
+        FirebaseStorage.renameColumn(
+          this.props.tableName,
+          oldName,
+          newName,
+          this.resetColumnState,
+          error => {
+            console.warn(error);
+            this.resetColumnState();
+          }
+        );
+      } else {
+        // We've navigated away before the column could be renamed.
+        this.resetColumnState();
+      }
     }, 0);
   },
 

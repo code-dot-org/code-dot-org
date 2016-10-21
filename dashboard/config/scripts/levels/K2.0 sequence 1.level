@@ -34,8 +34,6 @@
   "published": true,
   "notes": "debug: add command to end",
   "level_concept_difficulty": {
-    "sequencing": 1,
-    "debugging": 2
   }
 }]]></config>
   <blocks>

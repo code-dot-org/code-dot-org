@@ -4,9 +4,10 @@
  * For now, uses Google charts.
  * @see {GoogleChart}
  */
- /* global Promise */
-var utils = require('../utils');
-var GoogleChart = require('./GoogleChart');
+/* global Promise */
+import * as utils from '../utils';
+
+import GoogleChart from './GoogleChart';
 
 /**
  * API for requesting/generating charts in Applab.
@@ -15,7 +16,7 @@ var GoogleChart = require('./GoogleChart');
  * @param {Document} [docContext] - default is 'document'
  * @param [appStorage] - default is AppStorage
  */
-var ChartApi = module.exports = function (docContext, appStorage) {
+export default function ChartApi(docContext, appStorage) {
   this.document_ = docContext || document;
   this.appStorage_ = appStorage || Applab.storage;
 
@@ -25,7 +26,7 @@ var ChartApi = module.exports = function (docContext, appStorage) {
    * @type {Error[]}
    */
   this.warnings = [];
-};
+}
 
 /**
  * Record a runtime warning.

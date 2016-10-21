@@ -1,0 +1,14 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-30T02:41:39.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Consistent Style\r\n\r\nYour site’s pages might look crazy since you pulled together the style of all the pages in the last level. It is time to work on that. It will be up to you to determine the style rules for your page.  Remember best practice is to only have one rule per html element. If you want to keep two different styles for certain elements remember you can use classes. In addition you should have taken time to plan out your consistent style design for website.\r\n\r\n# Do This\r\n\r\n* Work on creating a consistent style for your website using the external style sheet and style rules.\r\n* Use classes to make parts of your website stand out.",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Weblab>

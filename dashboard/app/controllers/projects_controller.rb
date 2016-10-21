@@ -28,8 +28,8 @@ class ProjectsController < ApplicationController
       login_required: true
     },
     weblab: {
-        name: 'New Web Lab Project',
-        login_required: true
+      name: 'New Web Lab Project',
+      login_required: true
     },
     algebra_game: {
       name: 'New Algebra Project'
@@ -82,6 +82,19 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    if params[:nosource]
+      # projects can optionally be embedded without making their source
+      # available. to keep people from just twiddling the url to get to the
+      # regular project page, we encode the channel id using a simple
+      # cipher. This is not meant to be secure in any way, just meant to make it
+      # slightly less trivial than changing the url to get to the project
+      # source. The channel id gets encoded when generating the embed url.
+
+      alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+      cipher = 'Iq61F8kiaUHPGcsY7DgX4yAu3LwtWhnCmeR5pVrJoKfQZMx0BSdlOjEv2TbN9z'
+      params[:channel_id] = params[:channel_id].tr(cipher, alphabet)
+    end
+
     iframe_embed = params[:iframe_embed] == true
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
@@ -135,6 +148,7 @@ class ProjectsController < ApplicationController
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
+    FileBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 

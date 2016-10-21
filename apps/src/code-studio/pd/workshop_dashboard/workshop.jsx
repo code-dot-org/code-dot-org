@@ -410,12 +410,12 @@ const Workshop = React.createClass({
           This will generate a report to Code.org as well as email teachers
           a survey regarding the workshop.
         </p>
-        <Button onClick={this.handleEndWorkshopClick}>End Workshop</Button>
+        <Button onClick={this.handleEndWorkshopClick}>End Workshop and Send Survey</Button>
         <ConfirmationDialog
           show={this.state.showEndWorkshopConfirmation}
           onOk={this.handleEndWorkshopConfirmed}
           onCancel={this.handleEndWorkshopCancel}
-          headerText="End Workshop"
+          headerText="End Workshop and Send Survey"
           bodyText="Are you sure? Once ended, the workshop cannot be restarted."
         />
       </div>

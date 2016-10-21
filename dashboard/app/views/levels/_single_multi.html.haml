@@ -7,6 +7,7 @@
 - multi_answer_characters = ("A".."Z").to_a
 
 - layout_class = use_tight_layout ? "tight" : "default"
+- layout_class += " contained" if contained_mode
 
 .multi{id: "level_#{level.id}", class: layout_class}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
@@ -109,7 +110,7 @@
     - answers_feedback = data['answers'].map {|answer| answer['feedback']}
 
   :javascript
-    window.levelGroup.levels[#{level.id}] = new Multi(
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Multi(
       #{level.id},
       "level_#{level.id}",
       "#{app}",
@@ -119,4 +120,4 @@
       #{answers_feedback.to_json},
       #{last_attempt.to_json},
       #{contained_mode}
-    );
+    ));

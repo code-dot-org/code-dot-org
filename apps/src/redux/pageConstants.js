@@ -28,6 +28,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
+  'showDebugSlider',
   'localeDirection',
   'hasContainedLevels',
   'isDroplet',
@@ -42,10 +43,11 @@ var ALLOWED_KEYS = utils.makeEnum(
   'aniGifURL',
   'inputOutputTable',
   'showAnimationMode',
+  'startInAnimationTab',
+  'allAnimationsSingleFrame',
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
-  'isSignedIn',
-  'versionHistoryInInstructionsHeader'
+  'isSignedIn'
 );
 
 const initialState = {

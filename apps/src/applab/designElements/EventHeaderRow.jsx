@@ -1,9 +1,9 @@
-var React = require('react');
-var color = require('../../color');
-var rowStyle = require('./rowStyle');
-var applabMsg = require('@cdo/applab/locale');
+import React from 'react';
+import color from '../../color';
+import * as rowStyle from './rowStyle';
+import applabMsg from '@cdo/applab/locale';
 
-var EventHeaderRow = module.exports = React.createClass({
+var EventHeaderRow = React.createClass({
   render: function () {
     var style = Object.assign({}, rowStyle.container, rowStyle.maxWidth, {
       color: color.charcoal
@@ -16,3 +16,5 @@ var EventHeaderRow = module.exports = React.createClass({
     );
   }
 });
+
+export default EventHeaderRow;

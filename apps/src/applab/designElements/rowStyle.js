@@ -1,6 +1,6 @@
-var color = require('../../color');
+import color from '../../color';
 
-module.exports.input = {
+export var input = {
   display: 'inline-block',
   height: 20,
   padding: '4px 6px',
@@ -16,20 +16,20 @@ module.exports.input = {
   verticalAlign: 'middle'
 };
 
-module.exports.container = {
+export var container = {
   paddingLeft: 20,
   marginBottom: 8
 };
 
-module.exports.maxWidth = {
+export var maxWidth = {
   maxWidth: 245
 };
 
-module.exports.description = {
+export var description = {
   paddingLeft: 2
 };
 
-module.exports.checkbox = {
+export var checkbox = {
   width: 20,
   height: 20,
   fontSize: 20,

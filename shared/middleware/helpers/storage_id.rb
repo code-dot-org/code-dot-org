@@ -1,3 +1,5 @@
+require 'base64'
+
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
   storage_id = user_storage_ids_table.insert(user_id: nil)

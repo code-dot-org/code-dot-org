@@ -142,7 +142,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   private
 
   def mark_attended(user_id, session_id)
-    Pd::Attendance.create(teacher_id: user_id, pd_session_id: session_id)
+    Pd::Attendance.find_or_create_by!(teacher_id: user_id, pd_session_id: session_id)
   end
 
   def workshop_closed?

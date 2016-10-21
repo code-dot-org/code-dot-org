@@ -1,7 +1,7 @@
 Feature: Dropdowns work as expected
 
 Background:
-  Given I am on "http://learn.code.org/flappy/1?noautoplay=true"
+  Given I am on "http://studio.code.org/flappy/1?noautoplay=true"
 
 Scenario: Drag a dropdown and select a different option.
   When I rotate to landscape

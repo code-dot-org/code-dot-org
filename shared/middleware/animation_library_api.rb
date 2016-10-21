@@ -19,7 +19,7 @@ class AnimationLibraryApi < Sinatra::Base
   #
   # Retrieve a file from the animation library
   #
-  get %r{/api/v1/animation-library/([^/]+)/([^/]+)} do |version_id, animation_name|
+  get %r{/api/v1/animation-library/([^/]+)/(.+)} do |version_id, animation_name|
     not_found if version_id.empty? || animation_name.empty?
 
     begin

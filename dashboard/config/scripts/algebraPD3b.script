@@ -1,8 +1,5 @@
-title 'Computer Science in Algebra PD'
-description "CS in Algebra mid year lesson support"
-description_short "CS in Algebra mid year lesson support"
+professional_learning_course 'CS in Algebra Support'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'PDAlg 3BWelcome'

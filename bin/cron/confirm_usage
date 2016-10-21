@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require_relative('../../dashboard/config/environment')
+require 'cdo/hip_chat'
+
+def alert(message)
+  HipChat.log(message, color: 'red', notify: 1)
+end
+
+# Verify an account has been created.
+seconds_since_last_account_create = Time.now - User.last.created_at
+if seconds_since_last_account_create > 30 * 60
+  alert("Account Create: #{seconds_since_last_account_create}")
+end
+
+# Verify an activity has been created.
+seconds_since_last_activity = Time.now - Activity.last.created_at
+if seconds_since_last_activity > 3 * 60
+  alert("Account Password Reset: #{seconds_since_last_activity}")
+end
+
+# Verify a user_level has been created.
+seconds_since_last_user_level = Time.now - UserLevel.last.created_at
+if seconds_since_last_user_level > 5 * 60
+  alert("Account Password Reset: #{seconds_since_last_user_level}")
+end

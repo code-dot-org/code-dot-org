@@ -38,7 +38,7 @@ title: Review Hour of Code special events
 -results = []
 -events = []
 
--DB[:forms].where(kind:'HocSignup2015', review:nil).each do |i|
+-DB[:forms].where(kind:'HocSignup2016', review:nil).each do |i|
   -if i[:processed_data]
     -results << JSON.parse(i[:data]).merge(secret: i[:secret]).merge(JSON.parse(i[:processed_data]))
 
@@ -97,7 +97,7 @@ title: Review Hour of Code special events
 
   function submitReview(secret, review, row) {
     $.ajax({
-      url: "/v2/forms/HocSignup2015/" + secret + "/review",
+      url: "/v2/forms/HocSignup2016/" + secret + "/review",
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify( { review: review } )

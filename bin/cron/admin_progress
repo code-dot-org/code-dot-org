@@ -10,7 +10,7 @@ def main
   return unless only_one_running?(__FILE__)
 
   SeamlessDatabasePool.use_persistent_read_connection do
-    Properties.set(:temp_admin_progress, {
+    Properties.set(:admin_progress, {
       user_count: User.count,
       levels_attempted: UserLevel.where('best_result > 0').group(:level_id).count,
       levels_passed: UserLevel.where('best_result >= 20').group(:level_id).count,

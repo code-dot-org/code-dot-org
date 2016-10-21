@@ -268,3 +268,7 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 - 4 space indent on long line breaks.
 - `npm run lint` should report 0 warnings or errors.
 - See our [project style guide](../STYLEGUIDE.md) for details.
+
+## Other Docs
+
+- [Apps Build System](./docs/build.md)

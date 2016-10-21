@@ -1,6 +1,6 @@
-var React = require('react');
-var commonStyles = require('../../commonStyles');
-var Radium = require('radium');
+import React from 'react';
+import commonStyles from '../../commonStyles';
+import Radium from 'radium';
 
 var styles = {
   duplicateButton: {
@@ -36,4 +36,4 @@ var DuplicateElementButton = React.createClass({
   }
 });
 
-module.exports = Radium(DuplicateElementButton);
+export default Radium(DuplicateElementButton);

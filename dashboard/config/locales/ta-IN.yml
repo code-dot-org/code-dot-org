@@ -2,20 +2,21 @@
   errors:
     messages:
       not_saved: "பின்வரும் பிழைகளைத் திருத்துக:"
-      too_young: This content has age restrictions in place and is not available for
-        younger students
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: "இந்த உள்ளடக்கத்தை இடத்தில் வயது வரையறை செய்துள்ளது மற்றும் இளைய
+        மாணவர்களுக்கும் அல்ல."
+      teacher_must_accept_terms: "இந்த உள்ளடக்கத்தை இடத்தில் வயது வரையறை செய்துள்ளது
+        மற்றும் இளைய மாணவர்களுக்கும் அல்ல. இந்த உள்ளடக்கத்தை அணுக புதுப்பிக்கப்பட்ட
+        சேவை விதிமுறைகளை நீங்கள் அளிக்க ஏற்றுக்கொள்ள உங்கள் ஆசிரியர் கேட்கவும். உங்கள்
+        ஆசிரியர் இதை செய்யலாம்-குறியீடு ஸ்டூடியோ பதிவெடுத்தல் மற்றும் குறியீடு ஸ்டூடியோ
+        முகப்புப்பக்கம் மேல் அருகே 'ஆய்வு விதிமுறைகள் புதுப்பிக்க' பொத்தானை கிளிக்
+        செய்வதன் மூலம்."
+      pair_programmer: "நீங்கள் தற்போது இந்த உள்ளடக்கத்தை அணுக கொண்டிருக்கவில்லை ஒரு
+        மாணவி உடன் நிரலாக்க ஜோடி. இந்த உள்ளடக்கத்தை அணுக, ஜோடி நிரலமைத்தல் நிறுத்து,
+        மீண்டும் முயற்சிக்கவும்."
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: "தேவைப்படுகிறது"
     attributes:
       user:
         name: "காட்டப்படும் பெயர்"
@@ -122,7 +123,7 @@
     user_type_label: Account Type
     user_type_teacher: Teacher
     user_type_student: "மாணவர்"
-    field_is_required: is required
+    field_is_required: "தேவைப்படுகிறது"
     accept_terms: You must agree to create an account
   signin_form:
     title: Have an account already? Sign in
@@ -333,6 +334,7 @@
       unsubmit: Unsubmit
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

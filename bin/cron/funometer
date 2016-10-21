@@ -45,7 +45,7 @@ def main
 
   # TODO(asher): These are being saved as an array of arrays. Consider whether it makes sense to
   # save these as an array of hashes to aid readability in the HAML template.
-  Properties.set(:temp_funometer, {
+  Properties.set(:funometer, {
     overall: overall_percentage,
     ratings_by_day: ratings_by_day,
     ratings_by_script: ratings_by_script,

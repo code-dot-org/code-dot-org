@@ -1,7 +1,7 @@
 Feature: Playing the Artist Game
 
 Background:
-  Given I am on "http://learn.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 10"
   And I close the dialog
@@ -22,7 +22,7 @@ Scenario: Winning the first level
   And element ".congrats" is visible
   And I press "continue-button"
   Then I wait to see a dialog titled "Puzzle 2 of 10"
-  And check that I am on "http://learn.code.org/s/20-hour/stage/5/puzzle/2"
+  And check that I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/2"
 
 Scenario: Losing the first level
   And I drag block "2" to block "4"

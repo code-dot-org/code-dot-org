@@ -59,7 +59,7 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * There are many more topical guides in the [docs](./docs) folder.
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
-  * [code-studio/README](./code-studio/README.md)
+  * [blockly-core/README](./blockly-core/README.md)
 
 ### Everything else
 

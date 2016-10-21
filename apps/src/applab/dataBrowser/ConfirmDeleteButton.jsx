@@ -30,7 +30,7 @@ const ConfirmDeleteButton = React.createClass({
   },
 
   render() {
-    let {confirmText, onConfirm, ...otherProps} = this.props;
+    let {confirmText, ...otherProps} = this.props;
     confirmText = confirmText || "Delete";
     return (
       <div style={[{display: 'inline-block'}, this.props.containerStyle]}>

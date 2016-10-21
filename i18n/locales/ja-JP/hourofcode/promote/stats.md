@@ -4,6 +4,10 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
 
+<a id="blurb"></a>
+
+<%= view :signup_button %>
+
 # 推薦と統計データ
 
 ## ニュースレター用に以下の宣伝文句をご利用ください
@@ -14,6 +18,10 @@ With technology changing every industry on the planet, computing knowledge has b
 
 The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
+<a id="infographics"></a>
+
 ## インフォグラフィック
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

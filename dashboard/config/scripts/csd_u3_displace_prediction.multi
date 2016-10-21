@@ -1,0 +1,11 @@
+name 'CSD U3 displace Prediction'
+right 'The feather will start to fall again.'
+wrong 'The feather will stop moving'
+wrong 'The feather will continue up for a while, then start to fall again.'
+wrong 'The feather will continue up.'
+
+markdown <<MARKDOWN
+# Diagonal Elevator
+
+Last time we saw balloon, it pushed the feather all the way off screen.  This time, the balloon is moving diagonally, so it will only lift the feather for a short while before moving away from it. What do you think will happen when the balloon moves away from the feather after it's lifted it?
+MARKDOWN

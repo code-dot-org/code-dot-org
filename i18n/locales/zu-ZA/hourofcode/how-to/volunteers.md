@@ -1,23 +1,25 @@
 * * *
 
-title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
+isihloko: <%=hoc_s(:isihloko_kanjani_ukuze_abazinikelayo) %> isimiso: ububanzi nav: kanjani_ukuze_zula
 
 * * *
 
-# How-to Guide for Volunteers
+<%= view :signup_button %>
 
-## 1. Sign up to volunteer
+# Indlela yokuqondiya yabazinikelayo
+
+## Bhalisa njengozinikelayo
 
 Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
-## 2. Join a volunteer info session
+## 2. Ngenelela inhlangano yokuthola ulwazi yamavolontiya
 
 We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
     <th>
-      Date
+      Usuku
     </th>
     
     <th>
@@ -25,13 +27,13 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
     </th>
     
     <th>
-      Link to info session
+      Xhumanisa ukuhlangana komhlangano wolwazi
     </th>
   </tr>
   
   <tr>
     <td>
-      <strong>Sessions to be announced! Stay tuned!</strong>
+      <strong>Isikhathi sokwenza sizomemezelwa! Hlala ulalele!</strong>
     </td>
     
     <td>
@@ -42,11 +44,11 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
   </tr>
 </table>
 
-## 3. Spend 30 minutes trying the tutorials beforehand
+## 3. Citha imizuzu engamashumi amathathu uzama ekwenza iziqondisi kusengaphambili
 
 Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
-## 4. Recruit your co-workers to volunteer
+## Faka osebenzisana nabo ukuba bavolontiye
 
 Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
@@ -95,3 +97,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright. Instead try asking them questions so they can answer themselves what went wrong.
+
+<%= view :signup_button %>

@@ -1,31 +1,30 @@
-var studioApp = require('../StudioApp').singleton;
-var apiTimeoutList = require('../timeoutList');
-var ChartApi = require('./ChartApi');
-var EventSandboxer = require('./EventSandboxer');
-var RGBColor = require('./rgbcolor.js');
-var codegen = require('../codegen');
-var sanitizeHtml = require('./sanitizeHtml');
-var utils = require('../utils');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var setPropertyDropdown = require('./setPropertyDropdown');
-var assetPrefix = require('../assetManagement/assetPrefix');
-
-var errorHandler = require('../errorHandler');
+import {singleton as studioApp} from '../StudioApp';
+import apiTimeoutList from '../timeoutList';
+import ChartApi from './ChartApi';
+import EventSandboxer from './EventSandboxer';
+import RGBColor from './rgbcolor.js';
+import sanitizeHtml from './sanitizeHtml';
+import * as utils from '../utils';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import * as setPropertyDropdown from './setPropertyDropdown';
+import assetPrefix from '../assetManagement/assetPrefix';
+import errorHandler from '../errorHandler';
 var ErrorLevel = errorHandler.ErrorLevel;
-var applabTurtle = require('./applabTurtle');
-var ChangeEventHandler = require('./ChangeEventHandler');
-var color = require('../color');
-var logToCloud = require('../logToCloud');
+import applabTurtle from './applabTurtle';
+import ChangeEventHandler from './ChangeEventHandler';
+import color from '../color';
+import logToCloud from '../logToCloud';
 
 var OPTIONAL = true;
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-var ICON_PREFIX_REGEX = require('./constants').ICON_PREFIX_REGEX;
+import {ICON_PREFIX_REGEX} from './constants';
 
-var applabCommands = module.exports;
+var applabCommands = {};
+export default applabCommands;
 
 /**
  * Lookup table of asset URLs. If an asset isn't listed here, initiate a
@@ -59,9 +58,7 @@ function outputError(errorString) {
  */
 function getAsyncErrorHandler() {
   const line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  return errorString => {
-    errorHandler.outputError(errorString, ErrorLevel.WARNING, line);
-  };
+  return error => errorHandler.outputError(String(error), ErrorLevel.WARNING, line);
 }
 
 /**
@@ -240,7 +237,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -439,17 +436,14 @@ applabCommands.arcLeft = function (opts) {
 };
 
 applabCommands.getX = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.x;
 };
 
 applabCommands.getY = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.y;
 };
 
 applabCommands.getDirection = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.heading;
 };
 
@@ -730,8 +724,6 @@ applabCommands.drawImage = function (opts) {
  * drawImageURL(url, x, y, width, height, [callback])
  */
 applabCommands.drawImageURL = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
   apiValidateActiveCanvas(opts, 'drawImageURL');
   apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
   apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
@@ -740,7 +732,6 @@ applabCommands.drawImageURL = function (opts) {
   apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
   apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
 
-  var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
     if (opts.callback) {
       opts.callback.call(null, success);
@@ -1109,7 +1100,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
     return true;
   }
   return false;
@@ -1542,7 +1533,7 @@ var handleGetKeyValueSync = function (opts, value) {
 var handleGetKeyValueSyncError = function (opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.setKeyValue = function (opts) {
@@ -1578,7 +1569,7 @@ var handleSetKeyValueSync = function (opts) {
 var handleSetKeyValueSyncError = function (opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.readRecords = function (opts) {

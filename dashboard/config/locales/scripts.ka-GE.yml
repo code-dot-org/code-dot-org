@@ -21,7 +21,7 @@
             Getting Loopy: "ჩაციკლვა"
             Going Places Safely: "უსაფრთხო მგზავრობა"
             Happy Maps: "ბედნიერი რუკები"
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': "ფაზლი: ისწავლეთ გადმოტანა და ჩასმა"
             'Maze: Debugging': "ლაბირინთი: ბაგების გამოსწორება"
             'Maze: Loops': "ლაბირინთი: ციკლები"
             'Maze: Sequence': "ლაბირინთი: თანმიმდევრობა"
@@ -188,6 +188,7 @@
             Functions and Functions with Parameters: "ფუნქციები და ფუნქციები პარამეტრებით"
             Intro: "შესავალი"
             Variables: "ცვლადები"
+          description_audience: ''
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -217,6 +218,7 @@
               რეცეპტი"
             'Unplugged: Video Games and Coordinate Planes': "გაკვეთილი კომპიუტერის
               გარეშე: ვიდეოთამაშები და საკოორდინატო სიბრტყეები"
+          description_audience: ''
         infinity:
           title: "დისნეის თამაშების ლაბორატორია Infinity"
           description: "გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის
@@ -325,8 +327,8 @@
           description_short: "მოვლენები"
           stage:
             Bounce: Bounce
-            Calc: Calc
-            Eval: Eval
+            Calc: "კალკულატორი"
+            Eval: "შეფასება"
             Studio: "სტუდია"
         flappy:
           title: Flappy კოდი
@@ -402,6 +404,7 @@
             Teacher Dashboard: "მასწავლებლის მართვის პანელი"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -418,6 +421,7 @@
             Your Game - Booleans: Your Game - Booleans
             Your Game - Collision Detection: "თქვენი თამაში – შეჯახების აღმოჩენა"
             Your Game - Player Movement: Your Game - Player Movement
+          description_audience: ''
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
@@ -443,6 +447,7 @@
           stage:
             Lesson 14: Lesson 14
             Lesson 15: Lesson 15
+          description_audience: ''
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -474,6 +479,7 @@
             Using Computer Models in Science: "კომპიუტერული მოდელების გამოყენება მეცნიერებაში"
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: "რას უნდა ველოდოთ"
+          description_audience: ''
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -520,6 +526,7 @@
             Using Simple Commands: "მარტივი ბრძანებების გამოყენება"
             Using Variables in Apps: Using Variables in Apps
             While Loops: '"სანამ" ციკლები'
+          description_audience: ''
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -705,6 +712,7 @@
             Sam the Bat: "ღამურა სემი"
             Strings and Images: "ხაზები და სურათები"
             The Design Recipe: "დიზაინის რეცეპტი"
+          description_audience: ''
         allthethings:
           title: All the Things!
           description: All the level types for UI testing
@@ -761,6 +769,7 @@
             Strings and Images: "ხაზები და სურათები"
             Teacher Dashboard: "მასწავლებლის მართვის პანელი"
             Writing Contracts: "კონტრაქტების წერა"
+          description_audience: ''
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -838,6 +847,7 @@
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: "დიზაინის რეცეპტი"
             Welcome!: "კეთილი იყოს თქვენი მობრძანება!"
+          description_audience: ''
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: "ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა"
@@ -869,6 +879,7 @@
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: "კეთილი იყოს თქვენი მობრძანება!"
             Wrap-Up: "შეჯამება"
+          description_audience: ''
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with
@@ -1027,6 +1038,7 @@
             Prep With Your Modules: Prep With Your Modules
             The TLO: The TLO
             Welcome Back!: "კეთილი იყოს თქვენი დაბრუნება!"
+          description_audience: ''
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies
@@ -1046,6 +1058,7 @@
             Lesson Overviews: "გაკვეთილის მიმოხილვები"
             Teaching Strategies: "სწავლების მეთოდები"
             Unit 2 Challenge: "გაძლიერებული სექცია 2"
+          description_audience: ''
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1057,6 +1070,7 @@
             Teaching Strategies: "სწავლების მეთოდები"
             Unit 3 Challenge: "გაძლიერებული სექცია 3"
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1068,6 +1082,7 @@
             Teaching Strategies: "სწავლების მეთოდები"
             Unit 4 Challenge: "გაძლიერებული სექცია 4"
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1127,6 +1142,7 @@
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: "რას გვეუბნებიან მონაცემები"
             Why Make Apps?: Why Make Apps?
+          description_audience: ''
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description: Phase 3 Academic Year Development
@@ -1160,6 +1176,7 @@
             Getting Started: "დაწყება"
             Share out and Submit: Share out and Submit
             Unit 2 Overview: "სექცია 2 მიმოხილვა"
+          description_audience: ''
         duino:
           title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
@@ -1225,6 +1242,7 @@
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
             While Loops: '"სანამ" ციკლები'
+          description_audience: ''
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1320,6 +1338,7 @@
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+          description_audience: ''
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description: Online Support for CSP Unit 4
@@ -1395,6 +1414,7 @@
             'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
             'Unplugged: The Design Recipe': "გაკვეთილი კომპიუტერის გარეშე: დიზაინის
               რეცეპტი"
+          description_audience: ''
         AlgebraB:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -1420,6 +1440,7 @@
               გარეშე: პირობითი ბრძანებები და ნაწილობითი ფუნქციები"
             'Unplugged: Video Games and Coordinate Planes': "გაკვეთილი კომპიუტერის
               გარეშე: ვიდეოთამაშები და საკოორდინატო სიბრტყეები"
+          description_audience: ''
         gamelab-hackathon:
           title: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -1438,6 +1459,7 @@
             Teacher Dashboard: "მასწავლებლის მართვის პანელი"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         algebraPD3c:
           title: Computer Science in Algebra PD
           description: CS in Algebra end of year reflection
@@ -1523,6 +1545,8 @@
             The Need For Programming Languages: The Need For Programming Languages
             The Need for Algorithms: "ალგორითმების საჭიროება"
             Using Simple Commands: "მარტივი ბრძანებების გამოყენება"
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: ''
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -1543,6 +1567,10 @@
             Simple Encryption: "მარტივი შიფრირება"
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+            Rapid Research - Cybercrime: Rapid Research - Cybercrime
+            Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and
+              Security Dilemmas
+          description_audience: ''
         csp5:
           title: CS Principles Unit 5 - Building Apps
           description: 'This unit continues the introduction of foundational concepts
@@ -1602,6 +1630,10 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: "ცვლადები და ანიმაცია"
+            Functions: "ფუნქციები"
+            Platform Jumper: Platform Jumper
+            Defender: Defender
+          description_audience: ''
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description: In Partnership with Project GUTS
@@ -1622,6 +1654,7 @@
             Using Computer Models in Science: "კომპიუტერული მოდელების გამოყენება მეცნიერებაში"
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: "რას უნდა ველოდოთ"
+          description_audience: ''
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
@@ -1656,6 +1689,7 @@
             Teacher Dashboard: "მასწავლებლის მართვის პანელი"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -1676,6 +1710,7 @@
             Using Computer Models in Science: "კომპიუტერული მოდელების გამოყენება მეცნიერებაში"
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: "რას უნდა ველოდოთ"
+          description_audience: ''
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles
@@ -1691,6 +1726,16 @@
               in the Real World
             Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the
               Real World
+            Unit 1 - Algorithms Detour - Minimum Spanning Tree: Unit 1 - Algorithms
+              Detour - Minimum Spanning Tree
+            Unit 1 - Algorithms Detour - Shortest Path: Unit 1 - Algorithms Detour
+              - Shortest Path
+            Unit 1 - How Routers Learn: Unit 1 - How Routers Learn
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem: Unit 4 - Hard
+              Problems - The Traveling Salesperson Problem
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem: Unit 4 - One-Way
+              Functions - The WiFi Hotspot Problem
+          description_audience: ''
         cspunit1-support:
           title: Online Support for CSP Unit 1
           description: This is a test Professional Learning Course
@@ -1776,6 +1821,28 @@
             Adding Functionality (optional): Adding Functionality (optional)
             Design Mode: Design Mode
             Making it Interactive: Making it Interactive
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            UCD Micro Activity: UCD Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Re-designing a Space: Re-designing a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            User Research: User Research
+            Low Fidelity Prototyping: Low Fidelity Prototyping
+            Preparing for Prototype Testing: Preparing for Prototype Testing
+            Prototype Testing: Prototype Testing
+            Preparing for App Testing: Preparing for App Testing
+            App Testing: App Testing
+            Planning for Improvements: Planning for Improvements
+            Improving and Iterating: Improving and Iterating
+            App Presentation Prep: App Presentation Prep
+            App Presentation: App Presentation
+          description_audience: ''
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description: Temp place to work on U1 of Disco
@@ -1809,6 +1876,12 @@
             Headers and Lists: Headers and Lists
             Designing Web Pages: Designing Web Pages
             Holding: Holding
+            Describing Web pages: Describing Web pages
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Usability and Accessibility: Usability and Accessibility
+          description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1878,7 +1951,7 @@
             Events: "მოვლენები"
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': "ფაზლი: ისწავლეთ გადმოტანა და ჩასმა"
             Loops: "ციკლები"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -1919,7 +1992,7 @@
             Debugging: Debugging
             Events: "მოვლენები"
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': "ფაზლი: ისწავლეთ გადმოტანა და ჩასმა"
             Loops: "ციკლები"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -1928,6 +2001,7 @@
             Programming: "პროგრამირება"
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            Unspotted Bugs: Unspotted Bugs
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
@@ -1993,6 +2067,7 @@
             Lesson Overviews: "გაკვეთილის მიმოხილვები"
             Teaching Strategies: "სწავლების მეთოდები"
             Unit 2 Challenge: "გაძლიერებული სექცია 2"
+          description_audience: ''
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -2004,6 +2079,7 @@
             Teaching Strategies: "სწავლების მეთოდები"
             Unit 3 Challenge: "გაძლიერებული სექცია 3"
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -2015,6 +2091,7 @@
             Teaching Strategies: "სწავლების მეთოდები"
             Unit 4 Challenge: "გაძლიერებული სექცია 4"
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -2077,6 +2154,8 @@
             Lesson 2,10: "გაკვეთილი 2,10"
             Lesson 2,2: "გაკვეთილი 2,2"
             Lesson 2,3: "გაკვეთილი 2,3"
+            Test stage with bubbles: Test stage with bubbles
+          description_audience: ''
         csd3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
@@ -2092,6 +2171,7 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: "ცვლადები და ანიმაცია"
+          description_audience: ''
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -2145,20 +2225,17 @@
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: "დიზაინის რეცეპტი"
             Welcome!: "კეთილი იყოს თქვენი მობრძანება!"
+          description_audience: ''
         csp-pre-survey:
           title: CS Principles Pre-Survey
           stage:
             Anonymous student pre-survey: Anonymous student pre-survey
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
-        sciencepd3-2016:
-          title: CS in Science PD3 Before 1st In-Person
-          description_short: 'Phase 3: Academic Year Development Pre 1'
-          description: 'Phase 3: Academic Year Development (Segment One)'
-          stage:
-            Welcome Back!: "კეთილი იყოს თქვენი დაბრუნება!"
-            The TLO: The TLO
-            Prep With Your Modules: Prep With Your Modules
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: Problem Solving
@@ -2174,6 +2251,7 @@
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+          description_audience: ''
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -2202,3 +2280,40 @@
               and Packets'
             'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
               on the Internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 -
+              2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lesson
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 11: Interpreting Visual Data': 'Lessons 7 - 11: Interpreting
+              Visual Data'
+            'Lessons 12 - 15: Communicating with Visualizations': 'Lessons 12 - 15:
+              Communicating with Visualizations'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting
+              Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15:
+              Communicating with Visualizations'
+          description_audience: ''
+        csp1-support:
+          title: CSP Unit 1 Online Support
+          description_short: TeacherSupports for CSP unit 1
+          description: This is a set of online supports of CSP teachers preparing
+            to teach Unit 1.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding
+              and Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending
+              Text'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
+              on the Internet'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning

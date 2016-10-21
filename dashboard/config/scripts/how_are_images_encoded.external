@@ -1,0 +1,13 @@
+name 'How are Images Encoded?'
+markdown <<MARKDOWN
+## How are Images Encoded?
+
+
+
+
+### Check out the video below for an overview of how pixels and images actually work! 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
+
+
+MARKDOWN

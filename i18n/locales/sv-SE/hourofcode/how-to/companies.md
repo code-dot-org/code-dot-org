@@ -4,9 +4,11 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to bring the Hour of Code to your company
+<%= view :signup_button %>
 
-## Inspire students and volunteer for the Hour of Code
+# Att arrangera Hour of Code via ditt företag
+
+## Inspirera elever och volontära till Hour of Code
 
 **Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
@@ -136,4 +138,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Vad kommer efter kodtimmen?
 
-Kodtimmen är bara första steget på en resa för att lära dig mer om hur teknik fungerar och hur du skapar program. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

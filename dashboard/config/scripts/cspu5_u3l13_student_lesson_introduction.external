@@ -1,0 +1,23 @@
+name 'CSPU5_U3L13 Student Lesson Introduction'
+title 'Buttons on the Screen'
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 3: Lesson 10 - Buttons on the Screen
+
+## Background
+
+In the previous lesson you were introduced to event-driven programming with an unplugged activity. In this lesson you'll begin to develop your own event-driven programs by adding elements (like buttons) to the screen and attaching event handlers to allow your program to respond to events (like a mouse click).
+
+## Vocabulary
+
+* **Event:** a user action or other occurrence that can be detected by a program. Events can be used to trigger execution of specified blocks of code
+* **Event Handler:** indicates which commands should run when a specified event occurs
+
+## Lesson
+
+* Create an event-driven program with a button.
+* Program the button with an event handler. 
+* Write a function to drive the turtle with a button click.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

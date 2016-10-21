@@ -1,8 +1,3 @@
-title 'All the Hidden Things!'
-description 'Unreleased level types for UI testing as admin'
-description_short 'Unreleased level types for UI testing as admin'
-student_of_admin_required 'true'
-
 stage 'Game Lab'
 level 'allthethings_U3 - Simple Drawing - Rectangle Width and Height'
 

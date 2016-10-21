@@ -1,0 +1,38 @@
+:css
+  td {
+    padding-bottom: .5em;
+  }
+  td.heading {
+    padding-right: 1em;
+    text-align: right;
+    vertical-align: top;
+  }
+
+%p
+  We’re excited to partner with you in our effort to ensure that every student in every school has access to computer
+  science education! If you have any questions about your workshop, reach out to your workshop organizer directly:
+  = @workshop.organizer.name
+  at
+  = mail_to(@workshop.organizer.email) + '.'
+
+= render partial: 'workshop_details'
+
+= render partial: 'workshop_logistics'
+
+- unless @workshop.notes.blank?
+  %p
+    = @workshop.notes
+
+%p
+  We strongly encourage you to connect with other educators on Twitter
+  = link_to '@TeachCode', 'https://twitter.com/teachcode'
+  for inspiration and great tips to make #CSforAll. Please note that other workshop attendees may post photos from the
+  workshop to social media. If you don't want your photo taken, make sure the facilitator knows before the workshop
+  begins.
+
+= render partial: 'how_to_cancel'
+
+%p
+  Thank you,
+  %br
+  = @workshop.organizer.name

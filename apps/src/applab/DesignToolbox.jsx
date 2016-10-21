@@ -1,10 +1,10 @@
-var React = require('react');
-var DesignToolboxElement = require('./DesignToolboxElement');
-var applabMsg = require('@cdo/applab/locale');
+import React from 'react';
+import DesignToolboxElement from './DesignToolboxElement';
+import applabMsg from '@cdo/applab/locale';
 
 var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
-module.exports = React.createClass({
+export default React.createClass({
   propTypes: {
     handleDragStart: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired

@@ -7,24 +7,22 @@ import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
+import { NO_SECTION, SET_SECTIONS, SELECT_SECTION } from './sectionsRedux';
+
 export const ViewType = makeEnum('Student', 'Teacher');
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
 // Action types
 const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
-const SET_SECTIONS = 'stageLock/SET_SECTIONS';
-const SELECT_SECTION = 'stageLock/SELECT_SECTION';
 const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
 export const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
 export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
 export const FINISH_SAVE = 'stageLock/FINISH_SAVE';
 const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
-export const initialState = {
+const initialState = {
   viewAs: ViewType.Student,
-  sections: {},
-  selectedSection: null,
-  sectionsLoaded: false,
+  stagesBySectionId: {},
   lockDialogStageId: null,
   // The locking info for the currently selected section/stage
   lockStatus: [],
@@ -50,47 +48,46 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_SECTIONS) {
-    const sectionId = Object.keys(action.sections)[0];
-    const currentSection = action.sections[sectionId];
-    return Object.assign({}, state, {
-      sections: action.sections,
-      sectionsLoaded: true,
-      selectedSection: sectionId,
-    });
+    return {
+      ...state,
+      stagesBySectionId: _.mapValues(action.sections, section => section.stages)
+    };
   }
 
   if (action.type === SELECT_SECTION) {
     const sectionId = action.sectionId;
-    if (!state.sections[sectionId]) {
+    if (sectionId === NO_SECTION) {
+      return {
+        ...state,
+        lockStatus: initialState.lockStatus
+      };
+    }
+    if (!state.stagesBySectionId[sectionId]) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
-    const nextState = {
-      ...state,
-      selectedSection: sectionId,
-    };
-
     // If we have a lockStatus (i.e. from an open dialog) we need to update
     // it with the new section
-    const { lockDialogStageId, lockStatus } = state;
-    return {
-      ...nextState,
-      lockStatus: lockDialogStageId ?
-        lockStatusForStage(nextState, lockDialogStageId) : lockStatus
-    };
+    const { lockDialogStageId } = state;
+    if (lockDialogStageId) {
+      return {
+        ...state,
+        lockStatus: lockStatusForStage(state.stagesBySectionId[sectionId], lockDialogStageId)
+      };
+    }
   }
 
   if (action.type === OPEN_LOCK_DIALOG) {
-    const lockDialogStageId = action.stageId;
+    const { sectionId, stageId } = action;
     return Object.assign({}, state, {
-      lockDialogStageId,
-      lockStatus: lockStatusForStage(state, lockDialogStageId)
+      lockDialogStageId: stageId,
+      lockStatus: lockStatusForStage(state.stagesBySectionId[sectionId], stageId)
     });
   }
 
   if (action.type === CLOSE_LOCK_DIALOG) {
     return Object.assign({}, state, {
       lockDialogStageId: null,
-      lockStatus: []
+      lockStatus: initialState.lockStatus
     });
   }
 
@@ -101,9 +98,9 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === FINISH_SAVE) {
-    const { sections, selectedSection } = state;
-    const { lockStatus: nextLockStatus, stageId } = action;
-    const nextStage = _.cloneDeep(sections[selectedSection].stages[stageId]);
+    const { stagesBySectionId } = state;
+    const { lockStatus: nextLockStatus, sectionId, stageId } = action;
+    const nextStage = _.cloneDeep(stagesBySectionId[sectionId][stageId]);
 
     // Update locked/readonly_answers in stages based on the new lockStatus provided
     // by our dialog.
@@ -119,7 +116,7 @@ export default function reducer(state = initialState, action) {
     });
 
     const nextState = _.cloneDeep(state);
-    nextState.sections[selectedSection].stages[stageId] = nextStage;
+    nextState.stagesBySectionId[sectionId][stageId] = nextStage;
     return Object.assign(nextState, {
       lockStatus: nextLockStatus,
       saving: false
@@ -147,33 +144,25 @@ export const setViewType = viewType => {
   };
 };
 
-export const setSections = sections => ({
-  type: SET_SECTIONS,
-  sections
-});
-
-export const selectSection = sectionId => ({
-  type: SELECT_SECTION,
-  sectionId
-});
-
-export const openLockDialog = stageId => ({
+export const openLockDialog = (sectionId, stageId) => ({
   type: OPEN_LOCK_DIALOG,
+  sectionId,
   stageId
 });
 
 export const beginSave = () => ({ type: BEGIN_SAVE });
-export const finishSave = (newLockStatus, stageId) => ({
+export const finishSave = (sectionId, stageId, newLockStatus) => ({
   type: FINISH_SAVE,
-  lockStatus: newLockStatus,
-  stageId
+  sectionId,
+  stageId,
+  lockStatus: newLockStatus
 });
 
 /**
  * Action asynchronously dispatches a set of actions around saving our
  * lock status.
  */
-const performSave = (newLockStatus, stageId, onComplete) => {
+const performSave = (sectionId, stageId, newLockStatus, onComplete) => {
   return (dispatch, getState) => {
     const oldLockStatus = getState().stageLock.lockStatus;
 
@@ -199,7 +188,7 @@ const performSave = (newLockStatus, stageId, onComplete) => {
       contentType: 'application/json',
       data: JSON.stringify({updates: saveData})
     }).done(() => {
-      dispatch(finishSave(newLockStatus, stageId));
+      dispatch(finishSave(sectionId, stageId, newLockStatus));
       onComplete();
     })
     .fail(err => {
@@ -209,22 +198,25 @@ const performSave = (newLockStatus, stageId, onComplete) => {
   };
 };
 
-export const saveLockDialog = (newLockStatus) => {
+export const saveLockDialog = (sectionId, newLockStatus) => {
   return (dispatch, getState) => {
     const stageId = getState().stageLock.lockDialogStageId;
-    dispatch(performSave(newLockStatus, stageId, () => {
+    dispatch(performSave(sectionId, stageId, newLockStatus, () => {
       dispatch(closeLockDialog());
     }));
   };
 };
 
-export const lockStage = (stageId) => {
+export const lockStage = (sectionId, stageId) => {
   return (dispatch, getState) => {
-    const oldLockStatus = lockStatusForStage(getState().stageLock, stageId);
-    const newLockStatus = oldLockStatus.map(student => Object.assign({}, student, {
+    const state = getState();
+    const section = state.stageLock.stagesBySectionId[sectionId];
+    const oldLockStatus = lockStatusForStage(section, stageId);
+    const newLockStatus = oldLockStatus.map(student => ({
+      ...student,
       lockStatus: LockStatus.Locked
     }));
-    dispatch(performSave(newLockStatus, stageId, () => {}));
+    dispatch(performSave(sectionId, stageId, newLockStatus, () => {}));
   };
 };
 
@@ -233,10 +225,8 @@ export const closeLockDialog = () => ({
 });
 
 // Helpers
-const lockStatusForStage = (state, stageId) => {
-  const { sections, selectedSection } = state;
-
-  const students = sections[selectedSection].stages[stageId];
+const lockStatusForStage = (section, stageId) => {
+  const students = section[stageId];
   return students.map(student => ({
     userLevelData: student.user_level_data,
     name: student.name,
@@ -250,18 +240,13 @@ const lockStatusForStage = (state, stageId) => {
  * in the current section. A stage is fully locked if and only if it is locked
  * for all of the students in the section
  */
-export const fullyLockedStageMapping = (state) => {
-  const { sections, selectedSection }  = state;
-
-  if (!selectedSection) {
+export const fullyLockedStageMapping = (section) => {
+  if (!section) {
     return {};
   }
 
-  const section = sections[selectedSection];
-  const stageIds = Object.keys(section.stages);
-
-  return stageIds.reduce((obj, stageId) => {
-    const students = section.stages[stageId];
+  return Object.keys(section).reduce((obj, stageId) => {
+    const students = section[stageId];
     const fullyLocked = !students.some(student => !student.locked);
     return {
       ...obj,

@@ -305,5 +305,7 @@
   "when": "-enean",
   "whenRun": "martxan dagoenean",
   "workspaceHeaderShort": "Lan eremua: ",
-  "yes": "Bai"
+  "yes": "Bai",
+  "forTeachersOnly": "For Teachers Only",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }

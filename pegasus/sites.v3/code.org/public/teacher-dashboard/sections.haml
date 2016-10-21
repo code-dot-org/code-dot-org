@@ -3,6 +3,24 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
+=view :answer_dash
+
+%div{class: "modal fade assign-confirm-modal", id: "assign-confirm"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button{ type: "button", class: "close", :"data-dismiss"=> "modal" }
+          %span{ :"aria-hidden"=>"true" } &times;
+          %span.sr-only= I18n.t('dashboard_sections_close')
+        %h2{ class: "assign-confirm-header" }
+          = I18n.t('dashboard_sections_assign_hoc_script_desc')
+        .assign-confirm-container
+          %div{style: "text-align: left;"}
+            = I18n.t('dashboard_sections_assign_hoc_script_msg')
+          .modal-buttons
+            %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
+            %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "confirm_save()" }= I18n.t('dashboard_sections_assign_activity')
+
 %div
   %br/
   %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')

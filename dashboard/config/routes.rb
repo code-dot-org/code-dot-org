@@ -10,7 +10,7 @@ Dashboard::Application.routes.draw do
 
   resource :pairing, only: [:show, :update]
 
-  resources :user_levels, only: [:update]
+  resources :user_levels, only: [:update, :destroy]
 
   get '/download/:product', to: 'hoc_download#index'
 
@@ -142,12 +142,6 @@ Dashboard::Application.routes.draw do
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     get 'instructions', to: 'scripts#instructions'
-
-    # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
-
-    # /s/xxx/puzzle/yyy
-    get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
@@ -321,13 +315,14 @@ Dashboard::Application.routes.draw do
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
-
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
+        get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
       resources :district_report, only: :index
       resources :workshop_organizer_report, only: :index
       resources :teacher_progress_report, only: :index
       resources :course_facilitators, only: :index
+      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
     end
   end
 
@@ -349,12 +344,6 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
-
-    # This is a developer aid that allows previewing rendered mail views with fixed test data.
-    # The route is restricted so it only exists in development mode.
-    if Rails.env.development?
-      mount Pd::MailPreviewController => 'mail_preview'
-    end
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

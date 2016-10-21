@@ -2,6 +2,7 @@
 import React from 'react';
 import _ from 'lodash';
 import color from '../../color';
+import {PlayBehavior} from '../constants';
 import * as PropTypes from '../PropTypes';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
@@ -44,6 +45,7 @@ const staticStyles = {
 const ListItemThumbnail = React.createClass({
   propTypes: {
     animationProps: PropTypes.AnimationProps.isRequired,
+    singleFrameAnimation: React.PropTypes.bool.isRequired,
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool
   },
@@ -87,6 +89,12 @@ const ListItemThumbnail = React.createClass({
         border: 'solid 2px ' + (this.props.isSelected ? color.purple : color.light_gray)
       }
     });
+    let playBehavior;
+    if (this.props.singleFrameAnimation) {
+      playBehavior = PlayBehavior.NEVER_PLAY;
+    } else if (this.props.isSelected) {
+      playBehavior = PlayBehavior.ALWAYS_PLAY;
+    }
 
     return (
       <div style={styles.root}>
@@ -96,7 +104,7 @@ const ListItemThumbnail = React.createClass({
             sourceUrl={this.props.animationProps.dataURI}
             width={this.state.previewSize}
             height={this.state.previewSize}
-            alwaysPlay={this.props.isSelected}
+            playBehavior={playBehavior}
           />
           {this.getIndexBubble()}
         </div>

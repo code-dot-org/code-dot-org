@@ -4,9 +4,11 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # 志愿者的操作指南
 
-## 1. Sign up to volunteer
+## 1. 志愿者登记
 
 Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
@@ -17,7 +19,7 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 <table>
   <tr>
     <th>
-      Date
+      日期
     </th>
     
     <th>
@@ -42,7 +44,7 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
   </tr>
 </table>
 
-## 3. Spend 30 minutes trying the tutorials beforehand
+## 3. 事先用 30 分钟尝试教程
 
 Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
@@ -95,3 +97,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright. Instead try asking them questions so they can answer themselves what went wrong.
+
+<%= view :signup_button %>

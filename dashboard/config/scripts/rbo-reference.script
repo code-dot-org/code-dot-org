@@ -1,8 +1,4 @@
-title 'rbo-reference'
-description 'rbo-reference'
-description_short 'rbo-reference'
-
-stage 'reference' 
+stage 'reference'
 level 'PDK5 Intro C'
 level '2-3'
 level 'PDK5 Visual Languages'

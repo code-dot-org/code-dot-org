@@ -1,8 +1,4 @@
-title 'CSD Unit 3 - Interactive Games and Animations'
-description 'U3 of Discoveries'
-description_short 'Programming'
 login_required 'true'
-hidden 'true'
 
 stage 'Drawing in Game Lab'
 level 'CSD-U3-SFLP Simple Drawing'
@@ -42,7 +38,6 @@ level 'CSD U3 Simple Drawing - Background'
 level 'CSD U3 Simple Drawing - Animation'
 level 'CSD U3 Simple Drawing - Animation 2'
 level 'CSD U3 Simple Drawing - Personal Animation'
-
 
 stage 'Variables Unplugged'
 level 'CSD U3 Variables2 SFLP'

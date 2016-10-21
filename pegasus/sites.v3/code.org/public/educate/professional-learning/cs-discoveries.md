@@ -28,7 +28,7 @@ The program has two components:
 
 Code.org TeacherCon: (June-August)
 
-  - 5 days (30 hours) in person. Choose from three dates:
+  - 5 days (30 hours) in person. Events will be hosted in 3 different regions. While regional assignments are TBD, the three dates are:
 	  - June 18-23 in TBD location
 	  - July 16-21 in TBD location
 	  - July 30-Aug 4 in TBD location

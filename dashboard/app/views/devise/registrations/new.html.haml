@@ -60,6 +60,11 @@
           = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
+        #schooladdress-block.itemblock{style: "display: none"}
+          .labelblock= t('signup_form.school_address')
+          = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 1024
+          .error_in_field
+
         #age-block.itemblock
           .labelblock= t('signup_form.age')
           %select#user_user_age.fieldblock{name: "user[age]", type: "select"}

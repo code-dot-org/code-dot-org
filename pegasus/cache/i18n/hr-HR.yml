@@ -4,8 +4,8 @@
   'yes': Da
   'no': Ne
   select_language: Odaberite svoj jezik
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org će uskoro ukloniti podršku za Internet Explorer 8,
+    9 i 10. Nadogradite računalo na moderniji preglednik.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: Doznaj više
@@ -602,7 +602,6 @@
     ovaj tečaj
   dashboard_landing_educator_blog: Pročitajte o novostima i ažuriranjima materijala
     na našem pedagoškom blogu
-  dashboard_landing_smart_hints: Pomozite da dodamo pametne savjete na Code.org tutorijale
   dashboard_landing_video_player: Isprobajte naš novi video player u školi
   dashboard_landing_progress_title: Napredak u glavnom tečaju
   dashboard_landing_progress_biggest: Ovo je napredak u vašem najvećem odjeljenju.
@@ -1037,6 +1036,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

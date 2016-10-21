@@ -1,9 +1,7 @@
-var msg = require('@cdo/gamelab/locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
-var createCategory = blockUtils.createCategory;
 
 // TODO (bbuchanan): Continue documenting the game lab level object properties.
 /**
@@ -15,6 +13,12 @@ var createCategory = blockUtils.createCategory;
  *
  * @property {?boolean} hideAnimationMode - If true, the animation tab should be
  *           inaccessible to the student on this level.
+ *
+ * @property {?boolean} startInAnimationTab - If true, the animation tab should be
+ *           selected on page load.
+ *
+ * @property {?boolean} allAnimationsSingleFrame - If true, the library animations
+ *           should all be shortened to their first frame so they are still images.
  *
  * @property {?boolean} pauseAnimationsByDefault - If true, then after
  *           `setAnimation` a sprite's animation will always be paused,
@@ -109,6 +113,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "setFrame": null,
     "x": null,
     "y": null,
+    "bounciness": null,
     "rotateToDirection": null,
     "rotation": null,
     "rotationSpeed": null,
@@ -235,4 +240,3 @@ levels.custom = utils.extend(levels.sandbox, {
 
 levels.ec_sandbox = utils.extend(levels.custom, {
 });
-

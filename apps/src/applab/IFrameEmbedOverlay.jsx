@@ -1,9 +1,8 @@
 import * as color from '../color';
 import React from 'react';
-var Radium = require('radium');
-var studioApp = require('../StudioApp').singleton;
-var applabConstants = require('./constants');
-var msg = require('@cdo/locale');
+import Radium from 'radium';
+import {singleton as studioApp} from '../StudioApp';
+import * as applabConstants from './constants';
 
 const PHONE_MARGIN = 68;
 

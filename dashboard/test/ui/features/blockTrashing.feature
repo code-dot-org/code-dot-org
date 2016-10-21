@@ -1,7 +1,7 @@
 Feature: Blocks can be trashed in certain circumstances
 
 Background:
-  Given I am on "http://learn.code.org/s/course2/stage/19/puzzle/2"
+  Given I am on "http://studio.code.org/s/course2/stage/19/puzzle/2"
   And I rotate to landscape
   And I wait to see ".markdown-level-header-text"
   Then element ".markdown-level-header-text" has text "Puzzle 2 of 13"

@@ -1,8 +1,5 @@
-title 'CS Principles Unit 2 - Digital Information'
-description 'This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.'
-description_short "Digital Information"
-login_required 'true'
 hidden 'false'
+login_required 'true'
 
 stage 'Bytes and File Sizes'
 level 'v2 U2L1 Student Lesson Introduction'
@@ -47,7 +44,7 @@ assessment 'U1L16 - Matching File Compression Types'
 stage 'Encode a Complex Thing'
 level 'v2 U2L6 Student Lesson Introduction'
 
-stage 'Unit 2 Chapter 1 Assessment', lockable:true
+stage 'Unit 2 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC'
 
 stage 'Intro to Data'
@@ -102,5 +99,5 @@ assessment 'U2L14 Summary Tables MC'
 stage 'Practice PT - Tell a Data Story'
 level 'v2 U2L15 Student Lesson Introduction'
 
-stage 'Unit 2 Chapter 2 Assessment', lockable:true
+stage 'Unit 2 Chapter 2 Assessment', lockable: true
 assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'

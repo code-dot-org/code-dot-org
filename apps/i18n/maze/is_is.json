@@ -111,5 +111,8 @@
   "word": "Finna orðið",
   "wrongCropError": "Ég get ekki uppskorið þessa plöntu héðan.",
   "yes": "Já",
-  "youSpelled": "Þú stafaðir"
+  "youSpelled": "Þú stafaðir",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

@@ -22,15 +22,10 @@
  * @author fraser@google.com (Neil Fraser)
  */
 var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
-
-var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
-  var skin = blockInstallOptions.skin;
-
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 

@@ -2,17 +2,16 @@ import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from './IFrameEmbedOverlay';
 import * as color from '../color';
 
-var React = require('react');
-var Radium = require('radium');
-var Visualization = require('./Visualization');
-var CompletionButton = require('./CompletionButton');
-var PlaySpaceHeader = require('./PlaySpaceHeader');
-var PhoneFrame = require('./PhoneFrame');
-var BelowVisualization = require('../templates/BelowVisualization');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import React from 'react';
+import Radium from 'radium';
+import Visualization from './Visualization';
+import CompletionButton from './CompletionButton';
+import PlaySpaceHeader from './PlaySpaceHeader';
+import PhoneFrame from './PhoneFrame';
+import BelowVisualization from '../templates/BelowVisualization';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-var connect = require('react-redux').connect;
-var classNames = require('classnames');
+import {connect} from 'react-redux';
+import classNames from 'classnames';
 
 var styles = {
   completion: {
@@ -142,7 +141,8 @@ var ApplabVisualizationColumn = React.createClass({
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
+
+export default connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     instructionsInTopPane: state.pageConstants.instructionsInTopPane,

@@ -4,9 +4,6 @@ class Pd::TeacherProgressReport
       if user.admin?
         # All teachers in all workshops
         Pd::Attendance.distinct_teachers
-      elsif user.district_contact?
-        # All teachers attending workshops, from districts for which I am a contact
-        Pd::Attendance.for_district(user.district_as_contact).distinct_teachers
       elsif user.workshop_organizer?
         # All teachers in workshops I organized
         Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).organized_by(user).map do |workshop|

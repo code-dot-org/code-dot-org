@@ -23,6 +23,8 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
   end
 
   test 'Enrolling user in a course creates other assignment objects' do
+    skip 'Run this test manually with TEST_PLC=1' unless ENV['TEST_PLC']
+
     module_assignments = @unit_enrollment.plc_module_assignments
     assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, @unit_enrollment.status
     assert_equal 1, module_assignments.count
