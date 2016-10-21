@@ -47,6 +47,7 @@
     "block_moving_into_walls": "false",
     "callout_json": "[]",
     "instructions_important": "false",
+    "timeout_failure_tick": "400",
     "contained_level_names": null
   },
   "published": true,
@@ -61,7 +62,7 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">What would you like Pegleg to say?</title>
-              <title name="VAR">i</title>
+              <title name="VAR">arrrg</title>
               <next>
                 <block type="studio_saySpriteParamsTime" inline="true">
                   <value name="SPRITE">
@@ -76,7 +77,7 @@
                   </value>
                   <value name="TIME">
                     <block type="math_number">
-                      <title name="NUM">10</title>
+                      <title name="NUM">6</title>
                     </block>
                   </value>
                 </block>
@@ -289,7 +290,14 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE"/>
+        <category name="Variables ">
+          <block type="variables_set" inline="false">
+            <title name="VAR">arrrg</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">arrrg</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>
