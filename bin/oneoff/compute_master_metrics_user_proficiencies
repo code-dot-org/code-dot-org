@@ -11,6 +11,10 @@
 #
 # Note that this script generalizes the back_populate_user_proficiencies_again
 # script, removing the DB writes.
+#
+# CAUTION: This script is being checked-in as run. This SHOULD NOT be run as-is,
+# instead the script should be modified to hit the reporting DB for the list of
+# teacher user IDs.
 
 require 'csv'
 require_relative '../production/dashboard/config/environment'
@@ -130,6 +134,7 @@ user_proficiency_hash = {}
 
 # The set of teacher user IDs, so that these can be skipped when performing
 # counts.
+# TODO(asher): Change this to hit the reporting DB.
 teacher_user_ids = Users.where(user_type: 'teacher').pluck(:id)
 
 # Process the CSV files, populating user_proficiency_hash from their data.
