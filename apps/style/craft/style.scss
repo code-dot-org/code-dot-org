@@ -111,20 +111,28 @@ $original-background-color: #F2F2F2;
   transform: scale($multipleX, $multipleY);
 }
 
-.arrow {
-  display: inline !important;
-  padding: 0 !important;
-  margin-top: 5px !important;
-}
-
-@mixin arrow-icon($direction) {
+@mixin no-interact() {
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  touch-action: none;
+  -ms-touch-action: none;
+}
 
+.arrow {
+  @include no-interact();
+  display: inline !important;
+  padding: 0 !important;
+  margin-top: 5px !important;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+@mixin arrow-icon($direction) {
+  @include no-interact();
   background: url("#{$root}Sliced_Parts/MC_#{$direction}_Arrow_Icon.png") no-repeat !important;
   background-position: center !important;
   // TODO: for offset on click, background-position: calc(50% - 50px) 50%;

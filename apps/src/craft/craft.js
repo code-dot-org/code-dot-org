@@ -326,7 +326,7 @@ Craft.init = function (config) {
               }(btn));
         }
 
-        document.addEventListener('mouseup', Craft.onDocumentMouseUp, false);
+        dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp);
 
         dom.addMouseDownTouchEvent(document.getElementById('phaser-game'),
             function() {
