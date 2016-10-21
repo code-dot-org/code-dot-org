@@ -61,7 +61,7 @@ var IFrameEmbedOverlay = React.createClass({
     appWidth: PropTypes.number.isRequired,
     appHeight: PropTypes.number.isRequired,
     style: PropTypes.object,
-    showPlayButton: PropTypes.bool,
+    playButtonStyle: PropTypes.object,
   },
 
   getInitialState() {
@@ -107,17 +107,19 @@ var IFrameEmbedOverlay = React.createClass({
           </div> :
           <div>
             <div style={styles.overlay.clickText}>Tap or click to run</div>
-            {this.props.showPlayButton &&
-             <div
-               style={[
-                 styles.playButtonWrapper,
-                 {
-                   left: this.props.appWidth/2 - PLAY_BUTTON_SIZE/2 - 7/2
-                 }
-               ]}
-             >
-               <span className="fa fa-play" style={styles.playButton} />
-             </div>}
+            <div
+              style={[
+                styles.playButtonWrapper,
+                {
+                  left: this.props.appWidth/2 -
+                        PLAY_BUTTON_SIZE/2 -
+                        styles.playButtonWrapper.padding/2
+                },
+                this.props.playButtonStyle,
+              ]}
+            >
+              <span className="fa fa-play" style={styles.playButton} />
+            </div>
           </div>
         }
       </div>

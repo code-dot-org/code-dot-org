@@ -83,7 +83,7 @@ const GameLabView = React.createClass({
            appWidth={GAME_WIDTH}
            appHeight={GAME_HEIGHT}
            style={{top: 79, left: 17}}
-           showPlayButton={false}
+           playButtonStyle={{top: 620, left: 179}}
          />}
         <ProtectedStatefulDiv
           id="visualizationResizeBar"
