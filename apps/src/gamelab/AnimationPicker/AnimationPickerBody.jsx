@@ -10,9 +10,9 @@ import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
-import {Pagination} from "react-bootstrap";
+import PaginationWrapper from '../../templates/PaginationWrapper';
 
-const MAX_SEARCH_RESULTS = 40;
+const MAX_SEARCH_RESULTS = 27;
 const animationPickerStyles = {
   allAnimations: {
     color: color.purple,
@@ -21,7 +21,13 @@ const animationPickerStyles = {
   },
   breadCrumbs: {
     margin: "8px 0",
-    fontSize: 14
+    fontSize: 14,
+    display: "inline-block"
+  },
+  pagination: {
+    float: 'right',
+    display: 'inline',
+    marginTop: 10
   }
 };
 
@@ -96,16 +102,20 @@ const AnimationPickerBody = React.createClass({
           value={this.state.searchQuery}
           onChange={this.onSearchQueryChange}
         />
-        {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-          <Pagination bsSize="small" items={pageCount} activePage={this.state.currentPage} onSelect={this.onChangePageNumber} maxButtons={10}/>
-        }
-        {this.state.categoryQuery !== '' &&
-          <div style={animationPickerStyles.breadCrumbs}>
-            <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
-            <span>{AnimationCategories[this.state.categoryQuery]}</span>
-          </div>
-        }
-        <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
+        <div>
+          {this.state.categoryQuery !== '' &&
+            <div style={animationPickerStyles.breadCrumbs}>
+              <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
+              <span>{AnimationCategories[this.state.categoryQuery]}</span>
+            </div>
+          }
+          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+            <div style={animationPickerStyles.pagination}>
+              <PaginationWrapper totalPages={pageCount} currentPage={this.state.currentPage + 1} onChangePage={this.onChangePageNumber}/>
+            </div>
+          }
+        </div>
+        <ScrollableList style={{maxHeight: 420}}> {/* TODO: Is this maxHeight appropriate? */}
           {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
             <div>
               <AnimationPickerListItem
@@ -189,6 +199,6 @@ function searchAnimations(searchQuery, categoryQuery, currentPage) {
       .toArray();
   return {
     pageCount: Math.ceil(results.length / MAX_SEARCH_RESULTS),
-    results: results.slice(currentPage*MAX_SEARCH_RESULTS, (currentPage+1)*MAX_SEARCH_RESULTS - 1)
+    results: results.slice(currentPage*MAX_SEARCH_RESULTS, (currentPage+1)*MAX_SEARCH_RESULTS)
   };
 }
