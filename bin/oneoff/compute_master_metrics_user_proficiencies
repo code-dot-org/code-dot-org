@@ -128,6 +128,10 @@ end
 # A to-be-populated hash from user_ids to user_proficiency data.
 user_proficiency_hash = {}
 
+# The set of teacher user IDs, so that these can be skipped when performing
+# counts.
+teacher_user_ids = Users.where(user_type: 'teacher').pluck(:id)
+
 # Process the CSV files, populating user_proficiency_hash from their data.
 # After processing each CSV file, compute the number of users proficient at each
 # difficulty level.
@@ -146,6 +150,7 @@ user_proficiency_hash = {}
     end
 
     user_id = line[0]
+    next if teacher_user_ids.include? user_id
     historical = if user_proficiency_hash.key?(user_id)
                    user_proficiency_hash[user_id]
                  else
