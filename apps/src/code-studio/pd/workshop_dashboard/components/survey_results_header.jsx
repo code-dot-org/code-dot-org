@@ -168,14 +168,14 @@ const SurveyResultsHeader = React.createClass({
   renderOrganizerSurveyResults() {
     let allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
     let allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
-    let facilitatorData = _.omit(this.state.workshopSurveyData, ['all_workshops_for_course', 'all_my_workshops_for_course']);
+    let breakoutData = _.omit(this.state.workshopSurveyData, ['all_workshops_for_course', 'all_my_workshops_for_course']);
 
     let headings = ['', 'Across all workshops for ' + this.state.selectedCourse, 'Across all workshops I organized for ' + this.state.selectedCourse];
 
     if (this.state.selectedWorkshopId) {
       headings.push(this.state.workshopName);
     } else {
-      headings = headings.concat(Object.keys(facilitatorData));
+      headings = headings.concat(Object.keys(breakoutData));
     }
 
     return (
@@ -207,7 +207,7 @@ const SurveyResultsHeader = React.createClass({
                         <td key={i}>
                           {
                             // TODO: Find a better way to do the below statement
-                            facilitatorData[heading] ? facilitatorData[heading][row['key']] : facilitatorData['this_workshop'][row['key']]
+                            breakoutData[heading] ? breakoutData[heading][row['key']] : breakoutData['this_workshop'][row['key']]
                           }
                         </td>
                       );
