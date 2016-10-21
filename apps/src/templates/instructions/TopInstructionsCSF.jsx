@@ -190,8 +190,8 @@ var TopInstructions = React.createClass({
     ),
     noVisualization: React.PropTypes.bool.isRequired,
 
-    acapelaInstructionsSrc: React.PropTypes.string,
-    acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
+    ttsInstructionsUrl: React.PropTypes.string,
+    ttsMarkdownInstructionsUrl:  React.PropTypes.string,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -508,9 +508,8 @@ var TopInstructions = React.createClass({
       this.props.shortInstructions : this.props.longInstructions;
     const renderedMarkdown = processMarkdown(markdown, { renderer });
 
-    const acapelaSrc = this.shouldDisplayShortInstructions() ?
-      this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
-    const showAudioControls = experiments.isEnabled('tts') && acapelaSrc;
+    const ttsUrl = this.shouldDisplayShortInstructions() ?
+      this.props.ttsInstructionsUrl : this.props.ttsMarkdownInstructionsUrl;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
@@ -635,8 +634,8 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     overlayVisible: state.instructions.overlayVisible,
-    acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
