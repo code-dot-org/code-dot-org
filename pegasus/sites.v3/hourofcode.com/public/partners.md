@@ -2,11 +2,13 @@
 title: <%= hoc_s(:title_partners) %>
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees. Representatives from K-12, academia, nonprofits, for-profits, and international organizations compose the [Advisory Committee](<%= resolve_url('/advisory-committee') %>) that has guided the strategy of the Hour of Code campaign.
+The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands teamed up to assess and recommend activities using the Advisory Committee's rubric. These educators reviewed student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating these activities on metrics such as their educational value, fun and engagement, and appeal to a diverse set of students.
+The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
 
-Both committees' work and dedication has contributed to the success of the Hour of Code and its goal that any student of any age can try an introduction to computer science.
+The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+
+Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 <% if @country == 'la' %>
 
