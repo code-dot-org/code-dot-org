@@ -65,6 +65,9 @@
   font-family: $gotham-regular;
   line-height: 20px;
 }
+#race-modal .disabled {
+  color: $light-gray;
+}
 
 @media (max-width: 600px) {
   #terms-modal, #race-modal {
