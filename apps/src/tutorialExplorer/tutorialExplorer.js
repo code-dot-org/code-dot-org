@@ -67,15 +67,15 @@ const TutorialExplorer = React.createClass({
       newState = state.updateIn(['filters', filterGroup], arr => arr.splice(itemIndex, 1));
     }
 
-    this.setState(newState.toJS(), function () {
-      const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(this.state.filters);
-      this.setState({
-        filteredTutorials: filteredTutorials,
-        filteredTutorialsCount: filteredTutorials.length,
-        filteredTutorialsForLocale: filteredTutorialsForLocale
-      });
-    });
+    newState = newState.toJS();
 
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(newState.filters);
+    this.setState({
+      ...newState,
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      filteredTutorialsForLocale
+    });
   },
 
   filterTutorials(filters) {
