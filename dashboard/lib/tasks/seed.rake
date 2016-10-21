@@ -1,5 +1,4 @@
 require "csv"
-require 'cdo/hip_chat'
 
 namespace :seed do
   verbose false
@@ -107,10 +106,10 @@ namespace :seed do
       # It takes approximately 30 seconds to seed the school districts data from tsv.
       # Skip seeding if the data is already present. Note that this logic may need
       # to be updated once we incorporate data from additional survey years.
-      unless SchoolDistrict.count >= expected_count
+      if SchoolDistrict.count < expected_count
         # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
         # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
-        HipChat.log "seeding school districts (#{expected_count} rows)"
+        puts "seeding school districts (#{expected_count} rows)"
         SchoolDistrict.find_or_create_all_from_tsv!(school_districts_tsv)
       end
     end
@@ -126,10 +125,10 @@ namespace :seed do
       # It takes approximately 4 minutes to seed the schools data from tsv.
       # Skip seeding if the data is already present. Note that this logic may need
       # to be updated once we incorporate data from additional survey years.
-      unless School.count >= expected_count
+      if School.count < expected_count
         # Since other models will have a foreign key dependency
         # on School, don't reset_db first.  (Callout, above, does that.)
-        HipChat.log "seeding schools (#{expected_count} rows)"
+        puts "seeding schools (#{expected_count} rows)"
         School.find_or_create_all_from_tsv!(schools_tsv)
       end
     end
