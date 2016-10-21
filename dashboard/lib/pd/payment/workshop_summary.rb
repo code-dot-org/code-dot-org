@@ -1,5 +1,13 @@
 module Pd::Payment
   class WorkshopSummary
+    # Number of columns for facilitator details, name and email
+    # e.g. facilitator_name_1 and facilitator_email_1
+    REPORT_FACILITATOR_DETAILS_COUNT = 6
+
+    # Number of session attendance columns.
+    # e.g. attendance_day_1
+    REPORT_ATTENDANCE_DAY_COUNT = 5
+
     def initialize(
       workshop:,
       pay_period:,
@@ -83,14 +91,14 @@ module Pd::Payment
       }
 
       # Facilitator names and emails, 1-6
-      (1..6).each do |n|
+      (1..REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
         line_item["facilitator_name_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:name)
         line_item["facilitator_email_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:email)
       end
 
       # Attendance days 1-5
       session_attendance_counts = attendance_count_per_session
-      (1..5).each do |n|
+      (1..REPORT_ATTENDANCE_DAY_COUNT).each do |n|
         line_item["attendance_day_#{n}".to_sym] = session_attendance_counts[n - 1]
       end
 

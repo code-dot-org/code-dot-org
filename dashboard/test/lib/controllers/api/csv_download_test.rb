@@ -1,6 +1,15 @@
 require 'test_helper'
+require 'controllers/api/csv_download'
 
-class Api::V1::Pd::CsvDownloadTest < ::ActionController::TestCase
+class FakeController < ApplicationController
+  include Api::CsvDownload
+end
+
+class Api::CsvDownloadTest < ::ActionController::TestCase
+  setup do
+    @controller = FakeController.new
+  end
+
   test 'generate_csv' do
     data = [
       {organizer_name: 'Organizer1', district: 'district1'},
@@ -15,12 +24,14 @@ class Api::V1::Pd::CsvDownloadTest < ::ActionController::TestCase
       'Organizer3,district3'
     ].join("\n")
 
-    csv = Api::V1::Pd::ReportControllerBase.new.generate_csv data
+    csv = @controller.generate_csv data
     assert_equal expected_csv.strip, csv.strip
   end
 
   test 'titleize_with_id' do
-    assert_equal 'Organizer Name', 'organizer_name'.titleize_with_id
-    assert_equal 'Account Id', 'account_id'.titleize_with_id
+    assert_equal 'Organizer Name', @controller.titleize_with_id('organizer_name')
+    assert_equal 'Organizer Name', @controller.titleize_with_id(:organizer_name)
+    assert_equal 'Account Id', @controller.titleize_with_id('account_id')
+    assert_equal 'Account Id', @controller.titleize_with_id(:account_id)
   end
 end
