@@ -311,7 +311,7 @@ class GameController {
     return this.game.canvas.toDataURL("image/png");
   }
 
-  // command record 
+  // command record
 
   initializeCommandRecord() {
     let commandList = ["moveAway", "moveToward", "moveForward", "turn", "turnRandom", "explode", "wait", "flash", "drop", "spawn", "destroy", "playSound", "attack"];
@@ -950,7 +950,7 @@ class GameController {
         frontEntity.queue.startPushHighPriorityCommands();
         var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
         const isFriendlyEntity = this.levelEntity.isFriendlyEntity(frontEntity.type);
-        // push frienly entity 1 block 
+        // push frienly entity 1 block
         if (!isFriendlyEntity) {
           const pushDirection = player.facing;
           var moveAwayCommand = new CallbackCommand(this, () => { }, () => { frontEntity.pushBack(moveAwayCommand, pushDirection, 150); }, frontEntity.identifier);
@@ -1383,7 +1383,7 @@ class GameController {
     if (!this.levelModel.usePlayer)
       return;
     if (this.player.movementState === direction)
-      this.player.movementState = -1; s
+      this.player.movementState = -1;
     this.player.updateMovement();
   }
 
