@@ -302,3 +302,5 @@ window.TutorialExplorerManager = function (options) {
     );
   };
 };
+
+export default TutorialExplorer;
