@@ -3,7 +3,6 @@
 
 import React from 'react';
 import FilterGroup from './filterGroup';
-import BackButton from './backButton';
 import RoboticsButton from './roboticsButton';
 
 const FilterSet = React.createClass({
@@ -11,7 +10,6 @@ const FilterSet = React.createClass({
     filterGroups: React.PropTypes.array.isRequired,
     onUserInput: React.PropTypes.func.isRequired,
     selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    backButton: React.PropTypes.bool,
     roboticsButton: React.PropTypes.bool
   },
 
@@ -19,14 +17,6 @@ const FilterSet = React.createClass({
     return (
       <div>
         <div className="col-20">
-
-          {this.props.backButton && (
-            <BackButton/>
-          )}
-
-          <div style={{fontSize: 16, paddingLeft: 10}}>
-            Filter By
-          </div>
           {this.props.filterGroups.map(item =>
             item.display !== false && (
               <FilterGroup
