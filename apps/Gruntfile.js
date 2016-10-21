@@ -165,10 +165,19 @@ module.exports = function (grunt) {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
+        // Pull p5.js and p5.play.js into the package from our fork of the
+        // p5.play repo at https://github.com/code-dot-org/p5.play
+        // It's installed into node_modules via a reference in package.json.
         {
           expand: true,
-          cwd: 'lib/p5play',
-          src: ['*.js'],
+          cwd: './node_modules/p5.play/examples/lib',
+          src: ['p5.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: './node_modules/p5.play/lib',
+          src: ['p5.play.js'],
           dest: 'build/package/js/p5play/'
         },
         {
