@@ -49,6 +49,8 @@ const TeacherContentToggle = Radium(React.createClass({
   },
 
   componentDidUpdate(nextProps) {
+    // TODO - apparently needed for applab, but that surprises me given our
+    // strategy of always rendering content. understand this
     fireResizeEvent();
   },
 

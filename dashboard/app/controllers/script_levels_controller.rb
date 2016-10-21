@@ -70,10 +70,6 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # if stage_hidden_for_section?(@script_level, params[:section_id])
-    #   render partial: 'levels/hidden_stage_partial'
-    # end
-
     # In the case of the puzzle_page, send it through to be included in the
     # generation of the script level path.
     extra_params = {}
@@ -353,6 +349,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def self.stage_hidden_for_section?(script_level, section_id)
+    return false if script_level.nil? || section_id.nil?
     !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
   end
 

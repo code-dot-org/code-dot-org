@@ -234,7 +234,6 @@ function renderContentToggle() {
 
   const { scriptName } = store.getState().progress;
 
-  // TODO - right place for this?
   store.dispatch(getHiddenStages(scriptName));
 
   ReactDOM.render(
