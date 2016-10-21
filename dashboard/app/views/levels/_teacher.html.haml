@@ -73,6 +73,9 @@
                     = t('teacher.panel.example_with_number', solution_number: index + 1)
                   - else
                     = t('teacher.panel.example')
+          -# Get rid of this once we turn on viewAsToggle experiment
+          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
+            %button.btn.btn-info{id: "try-it-yourself"}= t('teacher.panel.try_it_yourself')
         - if @section
           .section
             %h4

@@ -9,12 +9,13 @@ import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
-import TeacherLevelGroup from './components/TeacherLevelGroup';
+import TeacherContentToggle from './components/TeacherContentToggle';
 import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 import { queryParams, updateQueryParam } from './utils';
+import experiments from '@cdo/apps/experiments';
 
 function resizeScrollable() {
   var newHeight = $('.teacher-panel').innerHeight() -
@@ -117,7 +118,7 @@ function renderIntoLessonTeacherPanel() {
   const teacherPanelViewAs = document.getElementById('teacher-panel-viewas');
   const stageLockedText = document.getElementById('stage-locked-text');
   const teacherPanelSections = document.getElementById('teacher-panel-sections');
-  if (teacherPanelViewAs) {
+  if (teacherPanelViewAs && experiments.isEnabled('viewAsToggle')) {
     renderViewAsToggle(teacherPanelViewAs);
   }
 
@@ -217,21 +218,28 @@ function renderStageLockedText(element) {
   }
 }
 
-// TODO - good desc
+/**
+ * We may need to toggle to a locked/hidden stage message when viewing as student
+ * Render a content toggle component that does this for us.
+ */
 function renderContentToggle() {
+  if (!experiments.isEnabled('viewAsToggle')) {
+    return;
+  }
+  $("#try-it-yourself").hide();
+
   const levelContent = $('#level-body');
   const element = $('<div/>').insertAfter(levelContent)[0];
+  const store = getStore();
+
+  const { scriptName } = store.getState().progress;
 
   // TODO - right place for this?
-  // TODO - name hardcoded :(
-  // setTimeout( () => {
-    getStore().dispatch(getHiddenStages('allthethings'));
-  // }, 10000);
+  store.dispatch(getHiddenStages(scriptName));
 
-  // TODO - rename TeacherLevelGroup
   ReactDOM.render(
     <Provider store={getStore()}>
-      <TeacherLevelGroup/>
+      <TeacherContentToggle/>
     </Provider>,
     element
   );
