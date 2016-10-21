@@ -23,10 +23,6 @@ const FilterHeader = React.createClass({
     return this.props.mobileLayout && this.props.showingModalFilters;
   },
 
-  barStyle() {
-    return {backgroundColor: "#eee", overflow: "hidden", padding: 10};
-  },
-
   render() {
     return (
       <div style={{marginTop: 8, marginBottom: 8}}>
@@ -36,27 +32,32 @@ const FilterHeader = React.createClass({
           </div>
         )}
 
-        <div style={this.barStyle()}>
-          <div style={{float: "left", paddingTop: 7}}>
+        <div style={{backgroundColor: "#eee", overflow: "hidden", height: 42,}}>
+          <div style={{float: "left", lineHeight: "42px", marginLeft: 10}}>
             Filter By
           </div>
 
-          <div style={{float: "right"}}>
+          <div style={{float: "right", lineHeight: "42px", marginRight: 10}}>
             {this.props.filteredTutorialsCount} results
 
-            &nbsp;
-            &nbsp;
-
             {this.shouldShowOpenFiltersButton() && (
-              <button onClick={this.props.showModalFilters}>
-                Filters
-              </button>
+              <span>
+                &nbsp;
+                &nbsp;
+                <button onClick={this.props.showModalFilters}>
+                  Filters
+                </button>
+              </span>
             )}
 
             {this.shouldShowCloseFiltersButton() && (
-              <button onClick={this.props.hideModalFilters}>
-                Close
-              </button>
+              <span>
+                &nbsp;
+                &nbsp;
+                <button onClick={this.props.hideModalFilters}>
+                  Close
+                </button>
+              </span>
             )}
           </div>
         </div>
