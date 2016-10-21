@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-10-09T06:31:10.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "encrypted_solution": "MGXmWUguxSGISL3XcI64JvEMfyptDsR7HSnQeadNSGTeItO+3F56Jlgvnko3\n6sE/04wXS04NGXSvy3+bg9szzY4juhYZdsSnDnQYCQ7Uef9dqY4d6KC7frgr\nP/YvF7vowC32qSh+pR61IT6kCxyVq2V89owRxFjVNQLkYDYeuU27hEpHk0Lc\nrKymz3NxXM2Ul8QiM8MD6jBGD+GeRkMPpHf1BjlyBPRz9q5xuiaqXi4o0Etq\nL7u0bzolwCYLmQldKNfBNiIqVmcpSnONmXswHcdHV4FnikSzR3k8qVV46ERL\n3Uide2j2K1LkVNkLrr0aQVXE/C16BA0bWezP9sw8V7Y7a2xWKOZGL5p330bJ\njI33+zHR8UdjhFbk1DIjhIhBIj92iB5ODC0x6X3C2UNcs1x2VE4qF49ApcpM\n/R83rrNX71ECNz5s7fGycAWK8DKgTHlvDBpr8/DyDbXAna+GpKkxvWAGUNw0\nPI1GFqGA3q1XBll51zlG0ww2nbvfiYVLeXrvuxM+P2Xc7xgpyhFO2vcJPR3s\nO3fvp6u5pbj4OmHt/jWdbDBoR3RzGcshpVbAcuXVu4tCu245IPZYbmcu+jMr\nMsMauBgSenRbtLSDTjSEJXTU2IzZ5R4XVTzMKjhbBFd+HKIsU/IjgZtaROyK\n4ZrzkH9/iiTfsg6UbfS74yWMZf9q2taYQpp9jM3m56YMs7Gg/Jp07FKgc50G\nECZCypF7/7jiwDRqLFWhCBvnBbvOxYCjeKursLE1bDJIjepmFYV8bqCjZAx7\nZB3Q9WD7yflzw7H3gUx7ZMeUVqjaZkTJ+FVdv0GA5BReomp8h4CG7Apyq7Ci\nLUbuiftAC11VLZPMhlICyLRFV1JOxMCCFLNg7tFJ5jz6c3w4dXZ4C2WAnaCr\n1kur+UMKW42KSZuLMjNlWqjdgCHZ/4ae39SPY+c5U4ayBIK/+7Fss1/REoTF\nl+RPMACeSvMkb0HOGy1BXQ==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "**Short answer:** When should a programmer create a global variable instead of a local variable?"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

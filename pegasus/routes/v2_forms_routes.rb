@@ -2,7 +2,7 @@ Sinatra::Verbs.custom :review
 
 post '/v2/forms/:kind' do |kind|
   dont_cache
-  pass if kind == 'HocSignup2014'
+  pass if kind == 'HocSignup2014' || kind == 'HocSignup2015'
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
 
@@ -62,8 +62,10 @@ end
 review '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
   case kind
-  when "HocSignup2015"
-    forbidden! unless dashboard_user && dashboard_user[:user_type] == 'teacher'
+  when "HocSignup2016"
+    unless dashboard_user && (dashboard_user[:user_type] == 'teacher' || dashboard_user[:admin])
+      forbidden!
+    end
   else
     forbidden! unless dashboard_user && dashboard_user[:admin]
   end

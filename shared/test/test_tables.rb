@@ -8,7 +8,7 @@ class TablesTest < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
+  TABLE_TYPE = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
   def build_rack_mock_session
     @session = Rack::MockSession.new(ChannelsApi.new(TablesApi), "studio.code.org")
@@ -283,6 +283,9 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  # channel id suffix, used by firebase in development and circleci environments
+  TEST_SUFFIX = '-test-suffix'
+
   def test_firebase_export
     create_channel
 
@@ -294,7 +297,7 @@ class TablesTest < Minitest::Test
     response = MiniTest::Mock.new
     response.expect(:body, records_data)
 
-    firebase_path = "/v3/channels/#{@channel_id}/storage/tables/#{@table_name}/records"
+    firebase_path = "/v3/channels/#{@channel_id}#{TEST_SUFFIX}/storage/tables/#{@table_name}/records"
     Firebase::Client.any_instance.expects(:get).with(firebase_path).returns(response)
 
     expected_csv_data = "id,name,age,male\n1,alice,7,false\n2,bob,8,true\n"
@@ -312,7 +315,7 @@ class TablesTest < Minitest::Test
     delete_table 'table1'
     delete_table 'table2'
     delete_table 'new_table'
-    assert_equal [], TableType.table_names(decrypted_channel_id)
+    assert_equal [], TABLE_TYPE.table_names(decrypted_channel_id)
 
     data1 = {
       'table1' => [{'name' => 'trevor'}, {'name' => 'alex'}],
@@ -321,11 +324,11 @@ class TablesTest < Minitest::Test
 
     populate_table(data1, true)
 
-    assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
+    assert_equal ['table1', 'table2'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     # Now add a data that has no records (but should have metadata)
     populate_table({ 'new_table' => [] }, false)
-    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+    assert_equal ['table1', 'table2', 'new_table'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     delete_channel
   end
@@ -439,7 +442,9 @@ class TablesTest < Minitest::Test
   def export_firebase
     CDO.stub(:firebase_name, 'my-firebase-name') do
       CDO.stub(:firebase_secret, 'my-firebase-secret') do
-        get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+        CDO.stub(:firebase_channel_id_suffix, TEST_SUFFIX) do
+          get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+        end
       end
     end
   end

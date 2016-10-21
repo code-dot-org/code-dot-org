@@ -1,9 +1,9 @@
-var React = require('react');
-var color = require('../color');
-var DesignToolbox = require('./DesignToolbox');
-var DesignProperties = require('./designProperties');
+import React from 'react';
+import color from '../color';
+import DesignToolbox from './DesignToolbox';
+import DesignProperties from './designProperties';
 
-module.exports = React.createClass({
+export default React.createClass({
   propTypes: {
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),

@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Recursos
@@ -13,7 +15,7 @@ nav: promote_nav
 ## Vídeos <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
 <
 
-p>[**Por que todos precisam aprender a programar? Participe da Hora do Código na Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
+p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
@@ -58,21 +60,6 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
-
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
@@ -102,7 +89,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Planeje suas necessidades de hardware (computadores são opcionais)
 
-Para uma melhor experiência com a Hora do Código, o ideal são computadores conectados à internet. No entanto, não é necessário um computador por participante, e também é possível fazer a Hora do Código sem o uso de computadores.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **Teste os tutoriais nos computadores ou dispositivos dos alunos.** Verifique se eles funcionam da maneira adequada (com som e vídeo).
   * **Visualize a página de parabenização** para saber o que os alunos veem quando terminam. 
@@ -115,13 +102,13 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 ## 4) Inspire seus alunos - mostre um vídeo a eles
 
-Mostre aos alunos um vídeo inspirador para começar a Hora do Código. Exemplos:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Estimule seus alunos - faça uma breve introdução**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

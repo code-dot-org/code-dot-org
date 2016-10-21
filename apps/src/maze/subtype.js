@@ -2,7 +2,6 @@ import Cell from './cell';
 import DirtDrawer from './dirtDrawer';
 
 import { SquareType } from './tiles';
-import { randomValue } from '../utils';
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/West/South/East squares.
@@ -159,7 +158,7 @@ export default class Subtype {
   drawMapTiles(svg, wallMap) {
     // Compute and draw the tile for each square.
     let tileId = 0;
-    let tile, origTile;
+    let tile;
     this.maze_.map.forEachCell((cell, row, col) => {
       // Compute the tile index.
       tile = this.isOnPathStr_(col, row) +

@@ -1,7 +1,4 @@
-pd 'true'
-title 'Computer Science Principles: Unit 3 PD Challenges'
-description 'Online Exploration of CSP Unit 3-- Lesson Challenges'
-description_short 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+professional_learning_course 'CS Principles Support'
 login_required 'true'
 
 stage 'Challenge Overview'

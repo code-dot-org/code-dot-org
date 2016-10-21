@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Zo kunt u CodeUur uitleggen op de naschoolse opvang
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -129,3 +131,5 @@ Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe 
 
   * Moedig leerlingen aan om online te blijven [leren ](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Woon](<%= resolve_url('https://code.org/professional-development-workshops') %>) een 1-dag in-persoon workshop, om instructie te over programmeren van een ervaren programmeur. (Alleen VS opvoeders)
+
+<%= view :signup_button %>

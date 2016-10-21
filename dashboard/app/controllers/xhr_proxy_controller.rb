@@ -36,6 +36,7 @@ class XhrProxyController < ApplicationController
     data.gv.at
     googleapis.com
     herokuapp.com
+    lakeside-cs.org
     query.yahooapis.com
     noaa.gov
     rhcloud.com

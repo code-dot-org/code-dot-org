@@ -29,6 +29,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   end
 
   test "previewing evaluation already triggers enrollments" do
+    skip 'known flaky test - skipping until investigation is complete on it'
     Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_1, @module_practice_1])
 
     get :preview_assignments, params: {script_id: @course_unit.script.name}
@@ -36,12 +37,14 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   end
 
   test "submit evaluation enrolls user in appropriate modules" do
+    skip 'known flaky test - skipping until investigation is complete on it'
     post :confirm_assignments, script_id: @course_unit.script.name, content_module: @module_content_1, practice_module: @module_practice_1
     assert_redirected_to script_path(@course_unit.script)
     assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
   end
 
   test "Posting anything other than one content and one practice module to confirm_assignments gets redirected" do
+    skip 'known flaky test - skipping until investigation is complete on it'
     [
       [nil, nil],
       [@module_content_1, nil],

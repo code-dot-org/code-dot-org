@@ -1,13 +1,12 @@
 import $ from 'jquery';
 import React from 'react';
-var applabMsg = require('@cdo/applab/locale');
-var color = require('../color');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-
-var DeleteElementButton = require('./designElements/DeleteElementButton');
-var ElementSelect = require('./ElementSelect');
-var DuplicateElementButton = require('./designElements/DuplicateElementButton');
+import applabMsg from '@cdo/applab/locale';
+import color from '../color';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import DeleteElementButton from './designElements/DeleteElementButton';
+import ElementSelect from './ElementSelect';
+import DuplicateElementButton from './designElements/DuplicateElementButton';
 
 var nextKey = 0;
 
@@ -245,4 +244,4 @@ var TabType = {
   EVENTS: 'events'
 };
 DesignProperties.TabType = TabType;
-module.exports = DesignProperties;
+export default DesignProperties;

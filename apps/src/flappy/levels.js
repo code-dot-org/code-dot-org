@@ -5,10 +5,6 @@ var flappyMsg = require('./locale');
 var tb = require('../block_utils').createToolbox;
 var utils = require('../utils');
 
-var category = function (name, blocks) {
-  return '<category id="' + name + '" name="' + name + '">' + blocks + '</category>';
-};
-
 var flapBlock = '<block type="flappy_flap"></block>';
 var flapHeightBlock = '<block type="flappy_flap_height"></block>';
 var endGameBlock = '<block type="flappy_endGame"></block>';
@@ -26,7 +22,6 @@ var setScoreBlock = '<block type="flappy_setScore"></block>';
 
 var AVATAR_HEIGHT = constants.AVATAR_HEIGHT;
 var AVATAR_WIDTH = constants.AVATAR_WIDTH;
-var AVATAR_Y_OFFSET = constants.AVATAR_Y_OFFSET;
 
 var eventBlock = function (type, child) {
   return '<block type="' + type + '" deletable="false">' +

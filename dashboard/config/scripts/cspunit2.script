@@ -1,10 +1,3 @@
-title 'CSP Unit 2 - The Internet'
-description 'In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
-structure and design of the internet and the implications of those design decisions including
-the reliability of network communication, the security of data, and personal privacy. Topics
-include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
-concerns.'
-description_short 'The Internet'
 login_required 'true'
 hidden 'false'
 

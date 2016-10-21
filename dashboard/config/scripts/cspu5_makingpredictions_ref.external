@@ -1,0 +1,65 @@
+name 'CSPU5_makingPredictions_ref'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Learning How to Debug Programs
+
+Debugging is a skill and an art.  With practice you learn how to write relatively bug-free code and more importantly you **learn about yourself and the kinds of errors you typically make**.
+
+But learning how to debug takes some time and getting used to, and you will learn about the different kinds of things that can go wrong when you write programs.
+
+It bears repeating:
+
+**Debugging is part of the problem-solving process of programming**.  Rarely does code work exactly the way you want the first time. If you write some code and need to work out a few bugs that does not mean you are bad programmer - actually the opposite might be true.
+
+**Even professionals do not expect to write bug-free code on the first try!!!** Instead they get in the habit of running their code, checking their assumptions, and making changes as needed. Programming isn't a fixed set of steps. It's a creative and continuous cycle of writing, testing, and improving code. 
+
+With practice you eventually stop making certain kinds of errors that beginners run into, but there's always something around the corner that needs to be worked out.
+
+
+## Making Predictions - Learning to Code Better, Faster
+
+In this course we help you learn faster by asking you to study some code and make a prediction about what will happen before you test it out.
+
+Research has shown that the act of predicting focuses your brain on what's important you end up learning faster by simply **making a prediction about what will happen before you run the program**.  
+
+It's **not actually important if your prediction is correct**, but the simple act of forcing yourself to make a prediction helps you remember the answer.
+
+<hr>
+
+## Prediction levels in Code Studio
+
+* On a "prediction level" you must first select one of the provided answers before you can hit the run button.
+
+* **Investigate First!** use the possible answers as **hints and clues** for things to investigate before selecting your answer.
+
+* **Try stepping through the code in your head** paying careful attention to each step to make sure you've got it right.
+
+<br><br>
+
+<p style="width: 33%; margin-left: 33%">
+<span style="color: #00adbc; font-size: 200%">1.</span> Investigate the code and make a prediction by selecting an answer from among the choices provided.</p>
+
+![](https://images.code.org/2c03c734a3be3ddfeb8499ac5fe158d0-image-1476825744525.png)
+
+<p style="width: 33%; margin-left: 33%">
+<span style="color: #00adbc; font-size: 200%">2.</span> The run button will be activated after you make a selection.  Run the program and see if you were right!</p>
+
+<hr>
+
+* **Predict - Observe - Reflect** - the value of a predicting what will happen only helps if afterward you reflect on why your prediction was right, and especially if your prediction was wrong. What was the difference in **how you thought about the problem vs. what actually happened?**
+
+* Please note that a prediction level **is not a test** and **you are not necessarily expected to know** the answer. The only requirement is that you make a guess!
+
+* Prediction levels often ask you to **think a small amount beyond what you already know**.  They ask you to connect dots, use your intuition and best logical guess.
+
+* Sometimes the code we show in a prediction level has **a surprising or unexpected result**.  That's why we put it in a prediction level!  The more surprising it is, the more likely you are to remember it!
+
+## Prediction Time
+
+Click continue to try it out.
+
+
+MARKDOWN

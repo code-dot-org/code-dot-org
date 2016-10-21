@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -17,7 +19,7 @@ nav: promote_nav
 
 ## 1. みんなに広めましょう
 
-友達に**#HourOfCode**を広める!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -36,3 +38,5 @@ nav: promote_nav
 ## 5. 地元選出の議員にもHour of Codeのサポートをお願いしましょう
 
 [このメール](<%= resolve_url('/promote/resources#sample-emails') %>)を地元選出の議員や教育委員会に送信して、学校で行うHour of Codeのイベントを見学して頂けるようにお願いしましょう。 この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
+
+<%= view :signup_button %>

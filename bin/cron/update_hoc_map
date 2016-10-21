@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-# The map on hourofcode.com is run off of a Google Fusion Table:
-# https://developers.google.com/maps/documentation/javascript/fusiontableslayer
-# This script updates the fusion table using the REST API:
-# https://developers.google.com/fusiontables/docs/v2/using by
-# uploading the entire contents of the HocSignup2015 forms table in
-# our database.
+# The map on hourofcode.com is run off of a Google Fusion Table
+# (documentation: https://developers.google.com/maps/documentation/javascript/fusiontableslayer).
+# This script updates the fusion table using the REST API
+# (documentation: https://developers.google.com/fusiontables/docs/v2/using),
+# populating it with all rows from the pegasus forms table whose kind is the
+# most recent HocSignup (e.g., HocSignup2016 in Fall 2016).
 
 # After setting up authentication, provide the following CDO.* attributes (example values below):
 #   CDO.hoc_map_service_account_email: xxx-abcdef@developer.gserviceaccount.com

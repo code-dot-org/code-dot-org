@@ -75,8 +75,3 @@ Organize and host a 1-day workshop for counselors and administrators of teachers
 We view this to be a long-term partnership. We see your organization as joining a network of organizations supporting a nationwide movement to build local computer science hubs. We hope to find many ways beyond the scope of this document to cooperate in spreading computer science in K-12 schools. That could mean hosting workshops for elementary school teachers, cooperating on state level policy efforts, or more. For now, we want to focus on a limited set of work to begin our relationship.
 
 This is not a binding document. This is a new program, so Code.org may change some of these terms in subsequent years.
-
-**Next Steps:** If your organization agrees to these terms, please click the Apply Now button below to become a Code.org Professional Learning Partner.
-
-
-[<button>Apply now</button>](/educate/professional-learning-partner/application)

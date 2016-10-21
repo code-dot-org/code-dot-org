@@ -9,7 +9,7 @@ Feature: Recommended/Required Blocks Feedback
 # tests.
 
 Scenario: Attempt 2-3 Maze 1
-  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I close the dialog
@@ -74,7 +74,7 @@ Scenario: Attempt 2-3 Maze 1
   And element "#feedbackBlocks" does not exist
 
 Scenario: Solve without recommended blocks
-  Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I close the dialog

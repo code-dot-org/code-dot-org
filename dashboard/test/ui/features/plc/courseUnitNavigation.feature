@@ -1,5 +1,4 @@
 @dashboard_db_access
-@no_circle
 Feature: Basic navigation for PLC stuff
 
 Background:

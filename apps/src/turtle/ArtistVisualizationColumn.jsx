@@ -1,5 +1,4 @@
 var React = require('react');
-var commonStyles = require('../commonStyles');
 
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');

@@ -92,7 +92,7 @@ def load_configuration
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
-    'firebase_name'               => nil,
+    'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
     'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
@@ -106,6 +106,8 @@ def load_configuration
     'max_property_reads_per_sec'  => 40,
     'max_property_writes_per_sec' => 40,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
+    'files_s3_bucket'             => 'cdo-v3-files',
+    'files_s3_directory'          => rack_env == :production ? 'files' : "files_#{rack_env}",
     'animations_s3_bucket'        => 'cdo-v3-animations',
     'animations_s3_directory'     => rack_env == :production ? 'animations' : "animations_#{rack_env}",
     'assets_s3_bucket'            => 'cdo-v3-assets',
@@ -185,6 +187,18 @@ class CDOImpl < OpenStruct
 
   def hourofcode_hostname
     canonical_hostname('hourofcode.com')
+  end
+
+  def circle_run_identifier
+    ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
+  end
+
+  # provide a unique path for firebase channels data for development and circleci,
+  # to avoid conflicts in channel ids.
+  def firebase_channel_id_suffix
+    return "-#{circle_run_identifier}" if ENV['CI']
+    return "-DEVELOPMENT-#{ENV['USER']}" if CDO.firebase_name == 'cdo-v3-dev'
+    ''
   end
 
   def site_url(domain, path = '', scheme = '')
@@ -353,6 +367,6 @@ def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
 end
 
-def code_studio_dir(*dirs)
-  deploy_dir('code-studio', *dirs)
+def lib_dir(*dirs)
+  deploy_dir('lib', *dirs)
 end

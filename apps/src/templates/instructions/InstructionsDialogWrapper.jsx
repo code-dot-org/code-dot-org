@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { closeDialog } from '../../redux/instructions';
 
 /**
  * A component for managing our instructions dialog. Right now the entirety of

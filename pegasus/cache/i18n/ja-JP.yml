@@ -557,7 +557,6 @@
   dashboard_landing_office_hours: "直接質問してみましょう！今月のビデオをご覧ください。"
   dashboard_landing_print_certificates: "このコースを終了した生徒の証明書を印刷します。"
   dashboard_landing_educator_blog: "ニュースと更新（教師用ブログ）を読みます"
-  dashboard_landing_smart_hints: "スマートなヒントやCode.orgのチュートリアルを増やすのにご協力ください"
   dashboard_landing_video_player: "学校で新しいビデオプレイヤーを試す"
   dashboard_landing_progress_title: "メイン クラスの進行状況"
   dashboard_landing_progress_biggest: "一番大きなセクションにおける進捗状況"
@@ -956,6 +955,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

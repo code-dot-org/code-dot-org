@@ -13,7 +13,6 @@ import { TestResults } from '../constants.js';
 import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
 import mazeMsg from './locale';
-import tiles from './tiles';
 
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;

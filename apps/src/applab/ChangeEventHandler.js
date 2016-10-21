@@ -1,6 +1,5 @@
-var constants = require('../constants');
-var KeyCodes = constants.KeyCodes;
-var elementLibrary = require('./designElements/library');
+import {KeyCodes} from '../constants';
+import elementLibrary from './designElements/library';
 
 /**
  * Helper class for generating a synthetic change event when an element's
@@ -9,7 +8,7 @@ var elementLibrary = require('./designElements/library');
  * @param {Function} callback
  * @constructor
  */
-var ChangeEventHandler = module.exports = function (element, callback) {
+export default function ChangeEventHandler(element, callback) {
   /**
    * @type {Element}
    * @private
@@ -29,7 +28,7 @@ var ChangeEventHandler = module.exports = function (element, callback) {
    * @private
    */
   this.initialValue_ = '';
-};
+}
 
 ChangeEventHandler.prototype.onFocus = function () {
   this.initialValue_ = this.getValue();

@@ -32,7 +32,7 @@ var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommende
     return;
   }
 
-  this.xml = this.generateXMLForBlocks_(blocksToDisplay);
+  this.xml = FeedbackBlocks.generateXMLForBlocks(blocksToDisplay);
 
   this.div = document.createElement('div');
   this.div.setAttribute('id', 'feedbackBlocks');
@@ -72,7 +72,7 @@ FeedbackBlocks.prototype.hide = function () {
  * @param {Array} blocks An array of blocks to display (with optional args).
  * @return {string} The generated string of XML.
  */
-FeedbackBlocks.prototype.generateXMLForBlocks_ = function (blocks) {
+FeedbackBlocks.generateXMLForBlocks = function (blocks) {
   var blockXMLStrings = ['<xml>'];
   var blockX = 10; // Prevent left output plugs from being cut off.
   var blockY = 0;

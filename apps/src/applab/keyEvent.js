@@ -1,6 +1,6 @@
 // Table provided by https://www.jabcreations.com/blog/polyfill-for-event.key
 
-module.exports = {
+export default {
   '65':'a',
   '66':'b',
   '67':'c',

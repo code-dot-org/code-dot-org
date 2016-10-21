@@ -1,32 +1,21 @@
 /**
  * Loader for table displaying workshop summaries based on a supplied query.
- * It runs the query specified in queryUrl and displays the resulting workshop data in a
- * WorkshopTable or "None" if no workshops are returned.
+ * It requires exactly one child component that expects workshops in its props.
+ * It runs the query specified in queryUrl and passes resulting workshop data to the child
+ * component or displays "None" if no workshops are returned.
  * It optionally handles deleting workshops.
  */
 
 import $ from 'jquery';
-import _, {orderBy} from 'lodash';
+import _ from 'lodash';
 import React from 'react';
-import WorkshopTable from './workshop_table';
 import FontAwesome from '../../../../templates/FontAwesome';
 
 const WorkshopTableLoader = React.createClass({
   propTypes: {
     queryUrl: React.PropTypes.string.isRequired,
-    canEdit: React.PropTypes.bool,
-    canDelete: React.PropTypes.bool,
-    showSignupUrl: React.PropTypes.bool,
-    showOrganizer: React.PropTypes.bool
-  },
-
-  getDefaultProps() {
-    return {
-      canEdit: false,
-      canDelete: false,
-      showSignupUrl: false,
-      showOrganizer: false
-    };
+    canDelete: React.PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
+    children: React.PropTypes.element.isRequired // Require exactly 1 child component.
   },
 
   getInitialState() {
@@ -80,15 +69,11 @@ const WorkshopTableLoader = React.createClass({
     }
 
     return (
-      <WorkshopTable
-        workshops={this.state.workshops}
-        canEdit={this.props.canEdit}
-        onDelete={this.props.canDelete ? this.handleDelete : null}
-        showSignupUrl={this.props.showSignupUrl}
-        showOrganizer={this.props.showOrganizer}
-      />
+      React.cloneElement(this.props.children, {
+        workshops: this.state.workshops,
+        onDelete: this.props.canDelete ? this.handleDelete : null
+      })
     );
   }
 });
 export default WorkshopTableLoader;
-

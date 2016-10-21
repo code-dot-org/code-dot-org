@@ -26,25 +26,27 @@ end
 
 Given /^I start a new Applab project$/ do
   steps <<-STEPS
-    And I am on "http://learn.code.org/projects/applab/new"
+    And I am on "http://studio.code.org/projects/applab/new?noUseFirebase=1"
     And I rotate to landscape
     And I wait to see "#runButton"
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#viewDataButton" is visible
+    And Firebase is disabled
   STEPS
 end
 
 Given /^I start a new Applab project with Firebase$/ do
   steps <<-STEPS
-    And I am on "http://learn.code.org/projects/applab/new?useFirebase=1"
+    And I am on "http://studio.code.org/projects/applab/new"
     And I rotate to landscape
     And I wait to see "#runButton"
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#dataModeButton" is visible
+    And Firebase is enabled
   STEPS
 end
 
@@ -134,8 +136,18 @@ When /^I navigate to the embedded version of my project$/ do
   STEPS
 end
 
+When /^I navigate to the embedded version of my project with source hidden$/ do
+  steps <<-STEPS
+    When I click selector ".project_share"
+    And I wait to see a dialog titled "Share your project"
+    And I click selector "#project-share a:contains('Show advanced options')"
+    And I click selector "#project-share label:contains('Hide ability to view code')"
+    And I copy the embed code into a new document
+  STEPS
+end
+
 Then(/^the palette has (\d+) blocks$/) do |num_blocks|
-  @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq num_blocks.to_i
+  expect(@browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length")).to eq(num_blocks.to_i)
 end
 
 Then(/^the droplet code is "([^"]*)"$/) do |code|

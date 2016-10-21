@@ -1,9 +1,9 @@
-var React = require('react');
-var applabMsg = require('@cdo/applab/locale');
-var msg = require('@cdo/locale');
-var FontAwesome = require('../templates/FontAwesome');
+import React from 'react';
+import applabMsg from '@cdo/applab/locale';
+import msg from '@cdo/locale';
+import FontAwesome from '../templates/FontAwesome';
 
-module.exports = React.createClass({
+export default React.createClass({
   propTypes: {
     handleManageAssets: React.PropTypes.func.isRequired,
     onToggleToolbox: React.PropTypes.func.isRequired,

@@ -46,7 +46,12 @@ def load_pegasus_settings
   $log = Pegasus.logger
 
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
-  I18n.load_path += Dir[cache_dir("i18n/#{rack_env?(:development) ? 'en*' : '*'}.yml")]
+  if rack_env?(:development)
+    I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
+    I18n.load_path += Dir[cache_dir('i18n/es-ES.yml')]
+  else
+    I18n.load_path += Dir[cache_dir('i18n/*.yml')]
+  end
   I18n.enforce_available_locales = false
   I18n.backend.load_translations
 end

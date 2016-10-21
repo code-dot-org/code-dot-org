@@ -50,13 +50,10 @@ ________________
 
 Refer to the slide decks listed below as a resource for details about the CS Principles curriculum and tools.
 
-[Welcome to CSP Facilitator Program - Slides](https://drive.google.com/open?id=1h5HcI4BKHLwWGYV1mcsV3HUWsb8YMwCcTIbqwI5yps8)
-
-[Navigating Code Studio and the Teacher Experience - Slides](https://drive.google.com/open?id=1QTo_BqHR1yXTqlwHHDXipnfDKEifdCGMFPHBcwa437k)<br/>
-
-[Deep Dive into CSP Curriculum Tools - Slides](https://drive.google.com/open?id=1941E16ptXwvgyHzJOW4_r6f4wnPAlUN9rk25dkHkJ38)<br/>
-
-[CSP and the College Board - Slides](https://drive.google.com/open?id=1z8G-J0aDZnAJSR2jA3JJrHJASUjPRdX8ItouG5OpwZE)<br/>
+- [Welcome to CSP Facilitator Program - Slides](https://drive.google.com/open?id=1h5HcI4BKHLwWGYV1mcsV3HUWsb8YMwCcTIbqwI5yps8)
+- [Navigating Code Studio and the Teacher Experience - Slides](https://drive.google.com/open?id=1QTo_BqHR1yXTqlwHHDXipnfDKEifdCGMFPHBcwa437k)<br/>
+- [Deep Dive into CSP Curriculum Tools - Slides](https://drive.google.com/open?id=1941E16ptXwvgyHzJOW4_r6f4wnPAlUN9rk25dkHkJ38)<br/>
+- [CSP and the College Board - Slides](https://drive.google.com/open?id=1z8G-J0aDZnAJSR2jA3JJrHJASUjPRdX8ItouG5OpwZE)<br/>
 
 
 [**Back to the top**](#top)
@@ -75,6 +72,7 @@ ________________
 - All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
 - Each PLP is responsible for contracting with and paying any facilitators who run local workshops.
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
+- Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
 
 
 [**Back to the top**](#top)

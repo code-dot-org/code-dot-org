@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your entire school district
 
 ## Нека всяко училище да се включи, и всеки ученик да се научи!
@@ -26,3 +28,5 @@ Hour of Code е само първата стъпка в пътешествиет
 
   * Насърчете учениците да продължават да [ учат онлайн](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Дасе присъединят](<%= resolve_url('https://code.org/professional-development-workshops') %>)към 1-деневен уоркшоп, за да получат обучение от опитни фасилитатори. (Само за учители от САЩ)
+
+<%= view :signup_button %>

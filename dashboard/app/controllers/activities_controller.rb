@@ -103,11 +103,15 @@ class ActivitiesController < ApplicationController
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
 
-    slog(:tag => 'activity_finish',
-         :script_level_id => @script_level.try(:id),
-         :level_id => @level.id,
-         :user_agent => request.user_agent,
-         :locale => locale) if solved
+    if solved
+      slog(
+        :tag => 'activity_finish',
+        :script_level_id => @script_level.try(:id),
+        :level_id => @level.id,
+        :user_agent => request.user_agent,
+        :locale => locale
+      )
+    end
 
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
     log_milestone(@level_source, params)

@@ -33,8 +33,6 @@ class ScriptLevel < ActiveRecord::Base
   has_many :callouts, inverse_of: :script_level
   has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
-  NEXT = 'next'
-
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
     super
@@ -64,6 +62,11 @@ class ScriptLevel < ActiveRecord::Base
     levels.sort_by(&:created_at).find do |level|
       !properties_hash[level.name] || properties_hash[level.name]['active'] != false
     end
+  end
+
+  def active?(level)
+    properties_hash = JSON.parse(properties)
+    !properties_hash[level.name] || properties_hash[level.name]['active'] != false
   end
 
   def has_another_level_to_go_to?

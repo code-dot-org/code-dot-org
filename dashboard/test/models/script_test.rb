@@ -227,28 +227,6 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'allow applab and gamelab levels in student_of_admin_required scripts' do
-    Script.add_script(
-      {name: 'test script', hidden: false, student_of_admin_required: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-    Script.add_script(
-      {name: 'test script', hidden: false, student_of_admin_required: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab and gamelab levels in admin_required scripts' do
-    Script.add_script(
-      {name: 'test script', hidden: false, admin_required: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-    Script.add_script(
-      {name: 'test script', hidden: false, admin_required: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
   test 'scripts are hidden or not' do
     visible_scripts = %w{
       20-hour flappy playlab infinity artist course1 course2 course3 course4
@@ -333,6 +311,30 @@ class ScriptTest < ActiveSupport::TestCase
       Script.cache_find_script_level(script_level.id).level
   end
 
+  test 'stage hierarchy uses cache' do
+    script = Script.first
+    stage = script.stages.first
+    expected_script_level = stage.script_levels.first
+    expected_level = stage.script_levels.first.levels.first
+
+    populate_cache_and_disconnect_db
+
+    assert_equal expected_script_level,
+      Script.get_from_cache(script.id).stages.first.script_levels.first
+    assert_equal expected_level,
+      Script.get_from_cache(script.id).
+        stages.first.script_levels.first.levels.first
+  end
+
+  test 'level_concept_difficulty uses preloading' do
+    level = Script.find_by_name('20-hour').script_levels.third.level
+    expected = level.level_concept_difficulty
+
+    populate_cache_and_disconnect_db
+
+    assert_equal expected, level.level_concept_difficulty
+  end
+
   test 'get_without_cache raises exception for bad id' do
     bad_id = Script.last.id + 1
 
@@ -354,9 +356,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'nextech_logo.png', Script.find_by_name('ECSPD-NexTech').logo_image
   end
 
-  test 'pd?' do
-    assert !Script.find_by_name('flappy').pd?
-    assert Script.find_by_name('ECSPD').pd?
+  test 'professional_learning_course?' do
+    refute Script.find_by_name('flappy').professional_learning_course?
+    assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
   test 'hoc?' do
@@ -394,6 +396,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
+    custom_i18n.deep_merge!({'en' => {'data' => {'script' => {'name' => {'test-plc' => {
+      'title' => 'PLC Test',
+      'description' => 'PLC test fixture script'
+    }}}}}})
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     script = scripts.first

@@ -8,4 +8,4 @@
  */
 // locale for applab
 
-module.exports = window.blockly.applab_locale;
+export default window.blockly.applab_locale;

@@ -80,12 +80,9 @@ class Script < ActiveRecord::Base
   end
 
   serialized_attrs %w(
-    admin_required
     hideable_stages
-    pd
     peer_reviews_to_complete
     professional_learning_course
-    student_of_admin_required
   )
 
   def self.twenty_hour_script
@@ -180,7 +177,18 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        script = Script.includes([
+          {
+            script_levels: [
+              {levels: [:game, :concepts, :level_concept_difficulty]},
+              :stage,
+              :callouts
+            ]
+          },
+          {
+            stages: [{script_levels: [:levels]}]
+          }
+        ]).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -325,7 +333,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code'
+    name == 'edit-code' || name == 'gradeKinder' || name == 'grade1' || name == 'grade2' || name == 'grade3' || name == 'grade4' || name == 'grade5'
   end
 
   # TODO(asher): Rename this method to k1?, removing the need to disable lint.
@@ -360,7 +368,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
+    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd3 text-compression netsim pixelation frequency_analysis vigenere gradeKinder grade1 grade2 grade3 grade4 grade5).include?(self.name)
   end
 
   def has_banner?
@@ -375,10 +383,6 @@ class Script < ActiveRecord::Base
     else
       ['playlab', 'artist']
     end
-  end
-
-  def professional_course?
-    pd? || professional_learning_course?
   end
 
   def has_peer_reviews?
@@ -474,7 +478,7 @@ class Script < ActiveRecord::Base
         end
 
         if [Game.applab, Game.gamelab].include? level.game
-          unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+          unless script.hidden || script.login_required
             raise <<-ERROR.gsub(/^\s+/, '')
               Applab and Gamelab levels can only be added to scripts that are hidden or require login
               (while adding level "#{level.name}" to script "#{script.name}")
@@ -564,7 +568,7 @@ class Script < ActiveRecord::Base
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
+    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.find_by!(key: options[:wrapup_video])
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
@@ -572,18 +576,19 @@ class Script < ActiveRecord::Base
     script
   end
 
-  def update_text(script_params, script_text)
+  def update_text(script_params, script_text, metadata_i18n, general_params)
+    script_name = script_params[:name]
     begin
       transaction do
-        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
+        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
         Script.add_script({
-          name: script_params[:name],
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
-          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-          wrapup_video: script_data[:wrapup_video],
-          properties: Script.build_property_hash(script_data)
+          name: script_name,
+          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+          wrapup_video: general_params[:wrapup_video],
+          properties: Script.build_property_hash(general_params)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
-        Script.update_i18n(i18n)
+        Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -592,7 +597,7 @@ class Script < ActiveRecord::Base
     begin
       # write script to file
       filename = "config/scripts/#{script_params[:name]}.script"
-      File.write(filename, script_text)
+      ScriptDSL.serialize(Script.find_by_name(script_name), filename)
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -608,10 +613,11 @@ class Script < ActiveRecord::Base
     Rake::FileTask['config/scripts/.seeded'].invoke
   end
 
-  def self.update_i18n(custom_i18n)
+  def self.update_i18n(stages_i18n, metadata_i18n = {})
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
-    i18n.deep_merge!(custom_i18n){|_, old, _| old} # deep reverse merge
+    i18n.deep_merge!(stages_i18n){|_, old, _| old}
+    i18n.deep_merge!(metadata_i18n)
     File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
 
@@ -652,7 +658,8 @@ class Script < ActiveRecord::Base
       peer_review_section = {
           name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
           flex_category: 'Peer Review',
-          levels: levels
+          levels: levels,
+          lockable: false
       }
 
       summarized_stages << peer_review_section
@@ -661,13 +668,24 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      hidden: hidden,
+      loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_stages: hideable_stages?,
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
 
+    summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
+    summary[:wrapupVideo] = wrapup_video.key if wrapup_video
+
     summary
+  end
+
+  def summarize_i18n
+    %w(title description description_short description_audience).map do |key|
+      [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
+    end.to_h
   end
 
   def self.clear_cache
@@ -682,10 +700,7 @@ class Script < ActiveRecord::Base
   def self.build_property_hash(script_data)
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
-      pd: script_data[:pd] || false, # default false
-      admin_required: script_data[:admin_required] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      student_of_admin_required: script_data[:student_of_admin_required] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
     }.compact
   end

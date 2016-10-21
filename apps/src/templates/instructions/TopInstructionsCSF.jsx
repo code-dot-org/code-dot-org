@@ -4,21 +4,18 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import processMarkdown from 'marked';
+import renderer from '../../StylelessRenderer';
 import { connect } from 'react-redux';
-var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
-var processMarkdown = require('marked');
 
 var Instructions = require('./Instructions');
-var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
-var constants = require('../../constants');
-var msg = require('@cdo/locale');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -27,7 +24,12 @@ import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
+import Button from '../Button';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import experiments from '../../experiments';
+import InlineAudio from './InlineAudio';
+import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
+import msg from '@cdo/locale';
 
 import {
   getOuterHeight,
@@ -36,8 +38,10 @@ import {
   shouldDisplayChatTips
 } from './utils';
 
-const VERTICAL_PADDING = 10;
-const HORIZONTAL_PADDING = 20;
+import {
+  levenshtein
+} from '../../utils';
+
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
@@ -72,6 +76,9 @@ const styles = {
     top: 0,
     left: 0,
     // right handled by media queries for .editor-column
+  },
+  withOverlay: {
+    zIndex: OVERLAY_Z_INDEX + 1
   },
   noViz: {
     left: 0,
@@ -128,9 +135,6 @@ const styles = {
     // is managed outside of React
     marginBottom: 0
   },
-  containedLevelContainer: {
-    minHeight: 200,
-  },
   instructions: {
     padding: '5px 0',
   },
@@ -142,10 +146,19 @@ const styles = {
     width: 'calc(100% - 20px)',
     float: 'left'
   },
+  instructionsWithAudio: {
+    paddingRight: 76
+  },
+  audioControls: {
+    position: 'absolute',
+    top: 7,
+    right: 12
+  }
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
+    overlayVisible: React.PropTypes.bool,
     skinId: React.PropTypes.string,
     hints: React.PropTypes.arrayOf(React.PropTypes.shape({
       hintId: React.PropTypes.string.isRequired,
@@ -157,7 +170,6 @@ var TopInstructions = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
@@ -203,7 +215,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -222,7 +234,6 @@ var TopInstructions = React.createClass({
 
     if (this.refs && this.refs.instructions) {
       const contentContainer = this.refs.instructions.parentElement;
-      const contentHeight = contentContainer.scrollHeight;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
         // see comment above
@@ -356,8 +367,6 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
-    const contentContainer = this.props.hasContainedLevels ?
-        this.refs.containedLevelContainer : this.refs.instructions;
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = getOuterHeight(instructionsContent, true) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
@@ -451,10 +460,32 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
+    // Minecraft should never show the button
     if (this.props.isMinecraft) {
       return false;
     }
-    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+
+    // if we have "extra" (non-instruction) content, we should always
+    // give the option of collapsing it
+    if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
+      return true;
+    }
+
+    // Otherwise, only show the button if we have two versions of
+    // instruction we want to toggle between
+    return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
+  },
+
+  shouldIgnoreShortInstructions() {
+    // if short instructions and long instructions have a Levenshtein
+    // Edit Distance of less than or equal to 10, ignore short
+    // instructions and only show long.
+    let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
+    return dist <= 10;
+  },
+
+  shouldDisplayShortInstructions() {
+    return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
   render: function () {
@@ -469,17 +500,21 @@ var TopInstructions = React.createClass({
         left: this.props.embedViewLeftOffset
       }),
       this.props.noVisualization && styles.noViz,
-      this.props.isMinecraft && craftStyles.main
+      this.props.isMinecraft && craftStyles.main,
+      this.props.overlayVisible && styles.withOverlay
     ];
 
-    const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
-      this.props.shortInstructions : this.props.longInstructions);
-    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
+    const markdown = this.shouldDisplayShortInstructions() ?
+      this.props.shortInstructions : this.props.longInstructions;
+    const renderedMarkdown = processMarkdown(markdown, { renderer });
+
+    const acapelaSrc = this.shouldDisplayShortInstructions() ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
+    const showAudioControls = experiments.isEnabled('tts') && acapelaSrc;
 
     // Only used by star wars levels
-    const instructions2 = this.props.shortInstructions2 ? processMarkdown(
-      this.props.shortInstructions2) : undefined;
+    const instructions2 = this.props.shortInstructions2 ?
+      processMarkdown(this.props.shortInstructions2, { renderer }) : undefined;
 
     const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
@@ -522,27 +557,32 @@ var TopInstructions = React.createClass({
             ]}
           >
             <ChatBubble>
-              {this.props.hasContainedLevels &&
-                <ProtectedStatefulDiv
-                  id="containedLevelContainer"
-                  ref="containedLevelContainer"
-                  style={styles.containedLevelContainer}
-                />}
-              {!this.props.hasContainedLevels &&
+              <div style={[showAudioControls && styles.instructionsWithAudio]}>
                 <Instructions
                   ref="instructions"
                   renderedMarkdown={renderedMarkdown}
-                  acapelaSrc={acapelaSrc}
                   onResize={this.adjustMaxNeededHeight}
                   inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                   aniGifURL={this.props.aniGifURL}
                   inTopPane
-                />}
-              {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
-                <div
-                  className="secondary-instructions"
-                  dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />}
+                />
+                {instructions2 &&
+                  <div
+                    className="secondary-instructions"
+                    dangerouslySetInnerHTML={{ __html: instructions2 }}
+                  />
+                }
+              </div>
+              {showAudioControls &&
+                <div style={[styles.audioControls]}>
+                  <InlineAudio src={acapelaSrc} />
+                </div>
+              }
+              {this.props.overlayVisible &&
+                <Button type="primary">
+                  {msg.dialogOK()}
+                </Button>
+              }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
@@ -594,6 +634,7 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    overlayVisible: state.instructions.overlayVisible,
     acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
     acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
     hints: state.authoredHints.seenHints,
@@ -603,7 +644,6 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
-    hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,

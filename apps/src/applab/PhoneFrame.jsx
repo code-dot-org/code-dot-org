@@ -1,11 +1,10 @@
 import React from 'react';
 import Radium from 'radium';
 import color from '../color';
-import applabConstants from './constants';
-import experiments from '../experiments';
-import ScreenSelector from './ScreenSelector';
-import GameButtons, { RunButton, ResetButton } from '../templates/GameButtons';
-import CompletionButton from './CompletionButton';
+import * as applabConstants from './constants';
+import ScreenSelector, {styles as ScreenSelectorStyles} from './ScreenSelector';
+import { RunButton, ResetButton } from '../templates/GameButtons';
+import {styles as CompletionButtonStyles} from './CompletionButton';
 import FontAwesome from '../templates/FontAwesome';
 
 const RADIUS = 30;
@@ -34,7 +33,7 @@ const styles = {
   screenSelector: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    paddingTop: (FRAME_HEIGHT - ScreenSelector.styles.dropdown.height) / 2,
+    paddingTop: (FRAME_HEIGHT - ScreenSelectorStyles.dropdown.height) / 2,
     width: '80%'
   },
   centeredInFrame: {
@@ -55,7 +54,7 @@ const styles = {
     marginRight: 5
   },
   buttonMinWidth: {
-    minWidth: CompletionButton.styles.phoneFrameButton.minWidth
+    minWidth: CompletionButtonStyles.phoneFrameButton.minWidth
   }
 };
 

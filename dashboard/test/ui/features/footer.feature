@@ -2,7 +2,7 @@ Feature: Checking the footer appearance
 
   @eyes
   Scenario: Desktop puzzle using light small footer
-    Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
     And I close the dialog
 
     When I open my eyes to test "Desktop puzzle using light small footer"
@@ -56,7 +56,7 @@ Feature: Checking the footer appearance
 
   @eyes
   Scenario: Desktop Minecraft puzzle using dark small footer
-    Given I am on "http://learn.code.org/s/mc/stage/1/puzzle/14?noautoplay=true"
+    Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/14?noautoplay=true"
     And I close the dialog
 
     When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
@@ -76,7 +76,7 @@ Feature: Checking the footer appearance
 
   @eyes
   Scenario: Desktop Star Wars share small footer
-    Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/15?noautoplay=true"
+    Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15?noautoplay=true"
     And I close the dialog
     And I press "runButton"
     And I wait until element "#finishButton" is visible
@@ -117,7 +117,7 @@ Feature: Checking the footer appearance
   # TODO: Fix and re-enable (find #sharing-input element)
   @eyes @skip
   Scenario: Desktop Minecraft share small footer
-    Given I am on "http://learn.code.org/s/mc/stage/1/puzzle/14?noautoplay=true"
+    Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/14?noautoplay=true"
     And I close the dialog
     And I wait for 2 seconds
     And I press "runButton"
@@ -174,7 +174,7 @@ Feature: Checking the footer appearance
 
   @eyes_mobile @skip
   Scenario: Mobile Star Wars share small footer
-    Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/15?noautoplay=true"
+    Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15?noautoplay=true"
     And I rotate to landscape
     And I close the dialog
     And I press "runButton"
@@ -204,7 +204,7 @@ Feature: Checking the footer appearance
   # TODO: Fix and re-enable (find #sharing-input element)
   @eyes_mobile @skip
   Scenario: Mobile Minecraft share small footer
-    Given I am on "http://learn.code.org/s/mc/stage/1/puzzle/14?noautoplay=true"
+    Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/14?noautoplay=true"
     And I rotate to landscape
     And I close the dialog
     And I press "runButton"

@@ -1,8 +1,5 @@
-title 'Computer Science in Science PD Phase 3b'
-description "Phase 3 Academic Year Development"
-description_short "Phase 3 Academic Year Development"
+professional_learning_course 'CS in Science Support'
 login_required 'true'
-pd 'true'
 
 stage 'Welcome!'
 level 'sciPD3OLP32 intro'

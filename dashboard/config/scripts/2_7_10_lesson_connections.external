@@ -1,0 +1,60 @@
+name '2.7 -  10 Lesson Connections'
+markdown <<MARKDOWN
+# 2.7 -  10 Lesson Connections
+
+Within the Big Idea of Data, the CSP Framework focuses heavily on how data and information facilitate the creation of knowledge.  In the second half of this unit, students will use the computer to manage and visualize data in order to organize it into useful structures that provide a thorough, accurate interpretation of that data into information. In this set of lessons, students will look at data that already exists, and consider how it may be interpreted.  In doing so, they will also reflect on what makes a good visualization and how flawed assumptions can influence data analysis.
+
+
+## Lesson 7: Introduction to Data
+<img src="https://images.code.org/f1b819301fd401c2014b8d35d7ea56b0-image-1475956442058.jpg" style="float:right; margin-left:30px; width:200px">
+**Lesson Type:** Unplugged | External Tools | Individual and Group Discovery
+
+<a href = “https://curriculum.code.org/csp/unit2/7/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+
+
+This lesson introduces many of the lessons and themes that will run through the unit: identifying patterns and relationships, interpreting data/information, and making connections and inferences. Students are introduced to the Class Data Tracker, which is a Google form that they will complete each day to collect data that they will later interpret. They also begin thinking about the many ways data impacts their lives and how it can be used. While the primary goal of this lesson is to get ideas and processes in place for the rest of the unit, there are many places where students can start asking interesting questions about where and how data is collected, who is collecting it, and how they are using it.
+<br><br>
+<hr />
+
+## Lesson 8: Finding Trends with Visualization
+<img src="https://images.code.org/a14ca88318a8acc562133ed477ce68dc-image-1475956442059.png" style="float:right; margin-left:30px; width:200px">
+**Lesson Type:** External Tools | Research | Presentation
+
+<a href = “https://curriculum.code.org/csp/unit2/8/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+Lesson 8 helps students get acquainted with talking and writing about data.  In particular, we want to make sure that they are able to draw a distinction between describing *what* the data shows and describing *why* the data look the way they do.  In other words, students should be able to describe connections and trends in data separately from drawing conclusions about the data. This will allow them to separate the ‘what’ from the ‘why’ when it comes to talking and writing about data. The next lesson looks deeper into assumptions that people make about data that can lead to unintentional consequences.
+<br><br><br>
+<hr />
+
+## Lesson 9: Check your Assumptions
+
+**Lesson Type:** External Tools | Research | Presentation
+
+<a href = “https://curriculum.code.org/csp/unit2/9/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+<img src="https://images.code.org/463a7b1536eef59fec32c9da73115811-image-1475956442060.png" style="float:right; margin-left:30px; width:200px">
+
+In this lesson we look deeper into why we separate the ‘what’ from the ‘why’ when looking at data. The main purpose here is to raise awareness of the assumptions that we (all people) make when looking at data, and try to call those assumptions out. This is a useful mode of reflection that will serve students well when doing reflective writing on the performance tasks.
+Analyzing and interpreting data will typically require some assumptions to be made about the accuracy of the data and the cause of the relationships observed within it. When decisions are made based on a data, they will often rest just as much on that set of assumptions about the data as the data itself. Identifying and validating (or disproving) assumptions is therefore an important part of data analysis. Furthermore, clear communication about how data was interpreted should also include an account of the assumptions made along the way.
+<br>
+<hr />
+## Lesson 10: Finding Trends with Visualization
+
+**Lesson Type:** External Tools | Research | Presentation
+
+<a href = “https://curriculum.code.org/csp/unit2/10/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+<img src="https://images.code.org/594f355422ebbeeeb47e24d89af9a92a-image-1475956442056.png" style="float:right; margin-left:30px; width:200px">
+An important skill is the ability to critically evaluate information. As our world is increasingly filled with data, more and more the information from that data is conveyed through visualizations. Visualization is useful for both discovery of connections and trends and also communication- both are potentially aspects of the Explore Performance Task. In this lesson we will focus on the communication aspects of visualization.
+
+Interpreting data visualizations is not typically thought of as a core computer science skill, but it is certainly an important one in an age of digital data. Computing has enabled massive amounts of information to be collected, aggregated, analyzed, and visualized. Visualizations are useful in helping humans understand large amounts of data quickly, and they are useful communication tools when presenting findings about a collection of data. Not all visualizations are created equal, however, and in many cases the type of visualization used may distract or even mislead the reader. As both creators and consumers of data visualizations, students need to be on the lookout for these common pitfalls. This lesson aims to help students be savvier readers of data visualizations, and more effective communicators when creating visualizations of their own.
+
+
+
+
+
+
+
+
+MARKDOWN

@@ -17,31 +17,7 @@
 
 = render partial: 'workshop_details'
 
-%h3
-  Logistics
-
-%table
-  %tr
-    %td.heading
-      Date(s):
-    %td
-      - @workshop.sessions.each do |session|
-        = session.formatted_date_with_start_and_end_times
-        %br
-  %tr
-    %td.heading
-      Location:
-    %td
-      = @workshop.location_name
-      %br
-      = @workshop.location_address
-  %tr
-    %td.heading
-      Organizer:
-    %td
-      = @workshop.organizer.name
-      (#{mail_to(@workshop.organizer.email)})
-
+= render partial: 'workshop_logistics'
 
 - unless @workshop.notes.blank?
   %p
@@ -54,13 +30,7 @@
   Other workshop attendees may post photos from the workshop to social media.
   If you don't want your photo taken, make sure the facilitator knows before the workshop begins.
 
-%h3
-  How to cancel your registration
-
-%p
-  If you are unable to attend the workshop, please
-  = link_to 'cancel your registration', @cancel_url
-  in advance so the facilitator can plan accordingly.
+= render partial: 'how_to_cancel'
 
 %p
   Thank you,

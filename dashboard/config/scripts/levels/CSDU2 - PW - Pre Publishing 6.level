@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-10-05T02:47:14.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Publishing!\r\n\r\nIt is time to share your website!\r\n\r\n# Do This\r\n\r\n* Check your website one more time to make sure you are ready to share it with others\r\n* Notice the \"Share\" button has appear at the top of the screen.\r\n* Click the share button and copy the URL for your website.\r\n* Send that URL to friends and family as instructed by your teacher.",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -1,7 +1,7 @@
 Feature: Flappy blocks can be dragged 
 
 Background:
-  Given I am on "http://learn.code.org/flappy/1?noautoplay=true"
+  Given I am on "http://studio.code.org/flappy/1?noautoplay=true"
 
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape

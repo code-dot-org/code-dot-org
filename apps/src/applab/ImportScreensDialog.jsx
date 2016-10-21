@@ -1,9 +1,8 @@
 /* eslint-disable react/no-danger */
-/* eslint no-unused-vars: "error" */
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import applabConstants from './constants';
+import * as applabConstants from './constants';
 import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
 import AssetThumbnail, {
   styles as assetThumbnailStyles

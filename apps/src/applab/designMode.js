@@ -3,20 +3,22 @@ import $ from 'jquery';
 import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
 import ReactDOM from 'react-dom';
-var DesignWorkspace = require('./DesignWorkspace');
-var assetPrefix = require('../assetManagement/assetPrefix');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var studioApp = require('../StudioApp').singleton;
-var KeyCodes = require('../constants').KeyCodes;
-var applabConstants = require('./constants');
-var designMode = module.exports;
-var sanitizeHtml = require('./sanitizeHtml');
-var utils = require('../utils');
-var gridUtils = require('./gridUtils');
-var logToCloud = require('../logToCloud');
-var actions = require('./actions');
-var screens = require('./redux/screens');
+import DesignWorkspace from './DesignWorkspace';
+import assetPrefix from '../assetManagement/assetPrefix';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import {singleton as studioApp} from '../StudioApp';
+import {KeyCodes} from '../constants';
+import * as applabConstants from './constants';
+import sanitizeHtml from './sanitizeHtml';
+import * as utils from '../utils';
+import * as gridUtils from './gridUtils';
+import logToCloud from '../logToCloud';
+import * as actions from './actions';
+import * as screens from './redux/screens';
+
+var designMode = {};
+export default designMode;
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
@@ -647,7 +649,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   }
 
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
-  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml, true));
   var children = $(levelDom).children();
   children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
@@ -731,15 +733,6 @@ function makeDraggable(jqueryElements) {
         // Set original element properties to update values in Property tab
         elm.outerWidth(dimensions.width);
         elm.outerHeight(dimensions.height);
-
-        var element = elm[0];
-        // canvas uses width/height. other elements use style.width/style.height
-        var widthProperty = 'style-width';
-        var heightProperty = 'style-height';
-        if (element.hasAttribute('width') || element.hasAttribute('height')) {
-          widthProperty = 'width';
-          heightProperty = 'height';
-        }
 
         // Re-render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);
@@ -1134,7 +1127,7 @@ designMode.renderDesignWorkspace = function (element) {
  */
 designMode.addScreenIfNecessary = function (html) {
   var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
-  html = sanitizeHtml(html, reportUnsafeHtml);
+  html = sanitizeHtml(html, reportUnsafeHtml, true);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {

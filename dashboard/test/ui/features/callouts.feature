@@ -1,7 +1,7 @@
 Feature: Callouts
 
   Background:
-    Given I am on "http://learn.code.org/reset_session"
+    Given I am on "http://studio.code.org/reset_session"
 
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
@@ -13,16 +13,16 @@ Feature: Callouts
     And callout "<callout_id>" is hidden
   Examples:
     | url                                                | callout_id | text                                                                     | close_target      |
-    | http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true  | 1          | Hit "Run" to try your program                                            | #runButton        |
-    | http://learn.code.org/hoc/1?noautoplay=true        | 1          | Hit "Run" to try your program                                            | #runButton        |
-    | http://learn.code.org/hoc/1?noautoplay=true        | 0          | Drag a "move" block and snap it below the other block                    | [block-id='1']    |
-    | http://learn.code.org/s/20-hour/stage/2/puzzle/9?noautoplay=true | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
-    | http://learn.code.org/hoc/9?noautoplay=true        | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
-    | http://learn.code.org/s/20-hour/stage/2/puzzle/14?noautoplay=true | 0          | Click here to see the code for the program you're making                 | #show-code-header |
-    | http://learn.code.org/hoc/14?noautoplay=true       | 0          | Click here to see the code for the program you're making                 | #show-code-header |
-    | http://learn.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true | 0          | The instructions for each puzzle are repeated here                       | #prompt           |
-    | http://learn.code.org/hoc/15?noautoplay=true       | 0          | The instructions for each puzzle are repeated here                       | #prompt           |
-    | http://learn.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true | 0          | You have all the same blocks but they've now been arranged in categories | .blocklyTreeLabel |
+    | http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true  | 1          | Hit "Run" to try your program                                            | #runButton        |
+    | http://studio.code.org/hoc/1?noautoplay=true        | 1          | Hit "Run" to try your program                                            | #runButton        |
+    | http://studio.code.org/hoc/1?noautoplay=true        | 0          | Drag a "move" block and snap it below the other block                    | [block-id='1']    |
+    | http://studio.code.org/s/20-hour/stage/2/puzzle/9?noautoplay=true | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
+    | http://studio.code.org/hoc/9?noautoplay=true        | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
+    | http://studio.code.org/s/20-hour/stage/2/puzzle/14?noautoplay=true | 0          | Click here to see the code for the program you're making                 | #show-code-header |
+    | http://studio.code.org/hoc/14?noautoplay=true       | 0          | Click here to see the code for the program you're making                 | #show-code-header |
+    | http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true | 0          | The instructions for each puzzle are repeated here                       | #prompt           |
+    | http://studio.code.org/hoc/15?noautoplay=true       | 0          | The instructions for each puzzle are repeated here                       | #prompt           |
+    | http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true | 0          | You have all the same blocks but they've now been arranged in categories | .blocklyTreeLabel |
 
   # See #101702822. "Watch video" section inaccessible from iPhone.
   @no_mobile
@@ -36,18 +36,18 @@ Feature: Callouts
     And callout "<callout_id>" is hidden
   Examples:
     | url                                                | callout_id | text                                                                             | close_target           |
-    | http://learn.code.org/s/20-hour/stage/2/puzzle/6?noautoplay=true  | 0          | Click here to watch the video again                                              | #thumbnail_mgooqyWMTxk |
-    | http://learn.code.org/hoc/6?noautoplay=true        | 0          | Click here to watch the video again                                              | #thumbnail_mgooqyWMTxk |
+    | http://studio.code.org/s/20-hour/stage/2/puzzle/6?noautoplay=true  | 0          | Click here to watch the video again                                              | #thumbnail_mgooqyWMTxk |
+    | http://studio.code.org/hoc/6?noautoplay=true        | 0          | Click here to watch the video again                                              | #thumbnail_mgooqyWMTxk |
 
   Scenario: Modal ordering
-    Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And callout "0" is visible
     And ".modal-backdrop" should be in front of "#qtip-0"
     And I close the dialog
 
   Scenario: Closing using "x" button
-    Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I close the dialog
     And element ".tooltip-x-close" is visible
@@ -60,11 +60,11 @@ Feature: Callouts
     And callout "0" is hidden
 
   Scenario: Only showing seen callouts once
-    Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I close the dialog
     And callout "0" exists
-    Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I close the dialog
     And callout "0" does not exist
@@ -72,7 +72,7 @@ Feature: Callouts
   # Show Code button is hidden on small screens.
   @no_mobile
   Scenario: Opening the Show Code dialog
-    Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I close the dialog
     When I press "show-code-header"

@@ -4,7 +4,6 @@ var MoveDirection = tiles.MoveDirection;
 var TurnDirection = tiles.TurnDirection;
 var SquareType = tiles.SquareType;
 var utils = require('../utils');
-var Bee = require('./bee');
 
 /**
  * Only call API functions if we haven't yet terminated execution
@@ -312,8 +311,8 @@ exports.getPumpkin = API_FUNCTION(function (id) {
   Maze.subtype.getPumpkin(id);
 });
 
-exports.getBean = API_FUNCTION(function (id) {
-  Maze.subtype.getBean(id);
+exports.getLettuce = API_FUNCTION(function (id) {
+  Maze.subtype.getLettuce(id);
 });
 
 exports.atCorn = API_FUNCTION(function (id) {
@@ -324,8 +323,8 @@ exports.atPumpkin = API_FUNCTION(function (id) {
   return Maze.subtype.atPumpkin(id);
 });
 
-exports.atBean = API_FUNCTION(function (id) {
-  return Maze.subtype.atBean(id);
+exports.atLettuce = API_FUNCTION(function (id) {
+  return Maze.subtype.atLettuce(id);
 });
 
 exports.hasCorn = API_FUNCTION(function (id) {
@@ -336,8 +335,8 @@ exports.hasPumpkin = API_FUNCTION(function (id) {
   return Maze.subtype.hasPumpkin(id);
 });
 
-exports.hasBean = API_FUNCTION(function (id) {
-  return Maze.subtype.hasBean(id);
+exports.hasLettuce = API_FUNCTION(function (id) {
+  return Maze.subtype.hasLettuce(id);
 });
 
 /**

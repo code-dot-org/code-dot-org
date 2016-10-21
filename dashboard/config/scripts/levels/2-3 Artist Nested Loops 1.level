@@ -34,6 +34,7 @@
     "never_autoplay_video": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Remember to put all of the grey blocks inside of your loop.\",\r\n  \"hint_id\": \"2-3_Artist_Nested_Loops_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,
