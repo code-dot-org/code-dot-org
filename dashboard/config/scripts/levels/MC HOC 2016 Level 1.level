@@ -40,7 +40,8 @@
     "level_verification_timeout": "20000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "callout_json": "[]",
-    "failure_message_override": "To go on, you’ll need to collect wool. To collect the wool, use the arrow keys to walk to the sheep and then press the spacebar or click the game to sheer the sheep. And, don’t forget to add the “Drop Wool” block to your code.",
+    "failure_message_override": "To go on, you’ll need to collect wool. To collect the wool, use the arrow keys to walk to the sheep and then press the spacebar or click the game to shear the sheep. And, don’t forget to add the “Drop Wool” block to your code.",
+    "use_player": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -51,8 +52,27 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false"/>
-        <block type="craft_sheepClicked" deletable="false"/>
+        <block type="when_run" uservisible="false" movable="false" deletable="false"/>
+        <block type="craft_sheepSpawnedClicked" movable="false" deletable="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever">
+              <statement name="DO">
+                <block type="craft_moveForward">
+                  <next>
+                    <block type="craft_entityTurn">
+                      <title name="DIR">random</title>
+                      <next>
+                        <block type="craft_wait">
+                          <title name="TYPE">2.0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>

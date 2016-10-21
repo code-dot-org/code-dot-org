@@ -39,6 +39,7 @@
     "level_verification_timeout": "7000",
     "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.isEntityTypeRunning('chicken');\r\n }",
     "failure_message_override": "Use a repeat block and Move Forward and Turn commands to keep your chicken wandering.",
+    "use_player": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -49,7 +50,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_chickenSpawnedClicked" deletable="false"/>
+        <block type="craft_chickenSpawned" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

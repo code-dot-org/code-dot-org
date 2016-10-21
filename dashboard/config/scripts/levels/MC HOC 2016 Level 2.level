@@ -1,7 +1,7 @@
 <Craft>
   <config><![CDATA[{
   "game_id": 49,
-  "created_at": "2016-10-07T22:33:19.000Z",
+  "created_at": "2016-10-21T04:08:57.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function(verificationAPI) {\r\n     return verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n   }",
+    "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,43 +32,44 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "This chicken has forgotten how to move! Get it moving around by putting some \"move forward\" and \"turn\" commands in the \"when spawned\" slot. \r\n",
+    "instructions": "This chicken has forgotten how to move! Get it moving around by putting “Move Forward” and “Turn” commands in the “When Spawned” slot. ",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "level_verification_timeout": "5000",
-    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
-    "failure_message_override": "Add at least one move and turn command to your chicken’s When Spawned event to make your chicken move.",
+    "level_verification_timeout": "0",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return false;\r\n }",
+    "failure_message_override": "Use Move Forward and Turn commands to get your chicken moving.",
+    "use_player": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": "Puzzle 2: How did the Chicken Cross the Road?\r\nWhen an entity is created it is called “spawning\". This chicken has forgotten how to move after being spawned! Get it moving around by putting Walk Forward and Turn commands in the When Spawned slot so that the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\nWhen Used\r\nNo code needs to go here\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nVIDEO on how you’ve learned these CS concepts  and then go into how to make those part of the game (Lisa)",
+  "notes": "This chicken has forgotten how to move! Get it moving around by putting “moveWalk fForward” and “tTurn” commands in the “When sSpawned” slot. When an mobentity is created it is called ‘“spawning’,”, so the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\nWhen spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n    When Clicked\r\n\r\n\r\nSuccess criteria: Spawned chicken walks and turns at least once.\r\nHow to check? At least one Turn and Move Forward. (possibly check based on chicken location)\r\nSuccess check function:\r\n\r\n\r\nverificationAPI.getCommandExecutedCount(“moveForward”) >= 1 && verificationAPI.getCommandExecutedCount(“turn”) >= 1\r\nTimer: No timer\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nError message: Add at least one move and turn command to your chicken’s When Spawned event to make your chicken move.",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_chickenSpawnedClicked" deletable="false"/>
+        <block type="craft_chickenSpawned" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="craft_moveForward"/>
-        <block type="craft_entityTurnLR">
+        <block type="craft_turn">
           <title name="DIR">left</title>
         </block>
         <block type="craft_playSound">
           <title name="TYPE">chickenBock</title>
         </block>
-        <block type="craft_drop">
-          <title name="TYPE">egg</title>
-        </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="craft_chickenSpawnedClicked">
+        <block type="craft_chickenSpawned">
           <statement name="WHEN_SPAWNED">
             <block type="craft_moveForward">
               <next>

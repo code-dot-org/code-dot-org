@@ -6,9 +6,9 @@
   "user_id": 1,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"stone\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"gravel\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"gravel\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"gravel\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\"]",
-    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"torch\",\"\",\"torch\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"creeper\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
+    "ground_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"grass\",\"grass\",\"grass\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"stone\",\"gravel\",\"gravel\",\"stone\",\"gravel\",\"gravel\",\"gravel\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"gravel\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"stone\",\"gravel\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\",\"lava\",\"lava\",\"stone\",\"gravel\",\"stone\",\"stone\",\"stone\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"tallGrass\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\"]",
+    "action_plane": "[\"lava\",\"stone\",\"\",\"\",\"stone\",\"lava\",\"stone\",\"oreCoal\",\"stone\",\"stone\",\"oreCoal\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"creeper\",\"\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"lava\",\"lava\",\"oreDiamond\",\"stone\",\"stone\"]",
     "player_start_position": "[3, 1]",
     "grid_width": "10",
     "grid_height": "10",
@@ -35,10 +35,11 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Oh no! The path to the village is blocked by a stone wall. Without any tools, we’re going to have to think outside of the box to get through. Perhaps that nearby Creeper can help! If we lure it to the wall, maybe we can make it explode and blast away the stone… ",
-    "level_verification_timeout": "20000",
+    "instructions": "The path out of the mine is blocked by a stone wall. Luckily there is a Creeper nearby. Creepers explode when you touch them. Lure the Creeper to the wall and blow your way out!",
+    "level_verification_timeout": "40000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
-    "temporary_feedback_message": "Try getting a creeper to follow you for 8 steps and then explode by the thin part of the wall. Can’t get away before he explodes? Use the “Wait” block to give yourself a few seconds.",
+    "temporary_feedback_message": "You need to use the exploding Creeper to blow up the wall. If you don't want to risk your own neck, try making the Creeper move toward the sheep.",
+    "use_player": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -49,7 +50,24 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_creeperSpawnedTouchedClickedDay" deletable="false"/>
+        <block type="craft_creeperSpawnedTouchedClicked" deletable="false" movable="false">
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_flashEntity" deletable="false" movable="false">
+              <next>
+                <block type="craft_flashEntity" deletable="false" movable="false">
+                  <next>
+                    <block type="craft_wait" deletable="false" movable="false">
+                      <title name="TYPE">1.0</title>
+                      <next>
+                        <block type="craft_explodeEntity" deletable="false" movable="false"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -59,12 +77,8 @@
           <title name="DIRECTION">up</title>
         </block>
         <block type="craft_moveForward"/>
-        <block type="craft_moveRandom"/>
         <block type="craft_moveToward">
-          <title name="TYPE">Player</title>
-        </block>
-        <block type="craft_moveAway">
-          <title name="TYPE">Player</title>
+          <title name="TYPE">sheep</title>
         </block>
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
@@ -83,10 +97,6 @@
           <title name="TYPE">0.4</title>
         </block>
         <block type="craft_forever"/>
-        <block type="craft_repeatDropdown">
-          <title name="TIMES">2</title>
-        </block>
-        <block type="craft_repeatRandom"/>
         <block type="craft_whenDay"/>
         <block type="craft_whenNight"/>
         <block type="when_run"/>
