@@ -73,6 +73,7 @@
 
 require 'digest/md5'
 require 'cdo/user_helpers'
+require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -1073,28 +1074,6 @@ class User < ActiveRecord::Base
   end
 
   def show_race_interstitial?
-    if teacher?
-      return false
-    end
-    if under_13?
-      return false
-    end
-    if account_age_days < 7
-      return false
-    end
-    if races && !races.empty?
-      return false
-    end
-    if race_interstitial_shown
-      return false
-    end
-    if defined?(request)
-      location = Geocoder.search(request.ip).first
-      if location && location.country_code.to_s.downcase != 'us'
-        return false
-      end
-    end
-
-    return true
+    RaceInterstitialHelper.show_race_interstitial?(self)
   end
 end
