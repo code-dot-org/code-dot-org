@@ -23,7 +23,7 @@ class SchoolDistrict < ActiveRecord::Base
     :city => 'LCITY',
     :state => 'LSTATE',
     :zip => 'LZIP'
-  }
+  }.freeze
 
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts

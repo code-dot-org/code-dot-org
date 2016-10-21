@@ -103,9 +103,9 @@ namespace :seed do
     raise "#{school_districts_tsv} contains no data" unless expected_count > 0
 
     SchoolDistrict.transaction do
-      # It takes approximately 30 seconds to seed the school districts data from tsv.
+      # It takes approximately 30 seconds to seed config/school_districts.tsv.
       # Skip seeding if the data is already present. Note that this logic may need
-      # to be updated once we incorporate data from additional survey years.
+      # to be updated once we incorporate data from future survey years.
       if SchoolDistrict.count < expected_count
         # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
         # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
@@ -122,14 +122,14 @@ namespace :seed do
     raise "#{schools_tsv} contains no data" unless expected_count > 0
 
     School.transaction do
-      # It takes approximately 4 minutes to seed the schools data from tsv.
+      # It takes approximately 4 minutes to seed config/schools.tsv.
       # Skip seeding if the data is already present. Note that this logic may need
-      # to be updated once we incorporate data from additional survey years.
+      # to be updated once we incorporate data from future survey years.
       if School.count < expected_count
         # Since other models will have a foreign key dependency
         # on School, don't reset_db first.  (Callout, above, does that.)
         puts "seeding schools (#{expected_count} rows)"
-        School.find_or_create_all_from_tsv!(schools_tsv)
+        School.find_or_create_all_from_tsv(schools_tsv)
       end
     end
   end
