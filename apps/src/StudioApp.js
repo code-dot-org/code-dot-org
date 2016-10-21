@@ -76,7 +76,6 @@ var MAX_PHONE_WIDTH = 500;
  */
 
 function StudioApp() {
-
   this.feedback_ = new FeedbackUtils(this);
   this.authoredHintsController_ = new AuthoredHints(this);
 
