@@ -1,9 +1,9 @@
-/** @file Tests for tutorialSet.js */
+/** @file Tests for tutorialExplorer.js */
 
 var assert = require('assert');
-import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
+import TutorialExplorer from '@cdo/apps/tutorialExplorer/tutorialExplorer';
 
-describe("TutorialSet filterFn tests", function () {
+describe("TutorialExplorer filterTutorials tests", function () {
   const tutorials = [
     {name: "tut1", languages_supported: null, tags_platform: "browser,ipad", tags_subject: "english,history"},
     {name: "tut2", languages_supported: "en,fr", tags_platform: "browser,ipad,mac", tags_subject: "english,history"},
@@ -21,7 +21,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "en-us"
     };
 
-    const filtered = TutorialSet.filterTutorials(tutorials, props);
+    const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, tutorials.length);
   });
@@ -34,7 +34,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "en-us"
     };
 
-    const filtered = TutorialSet.filterTutorials(tutorials, props);
+    const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 1);
     assert.equal(filtered[0].name, "tut2");
@@ -49,7 +49,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "en-us"
     };
 
-    const filtered = TutorialSet.filterTutorials(tutorials, props);
+    const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 1);
     assert.equal(filtered[0].name, "tut5");
@@ -63,7 +63,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "gr-gr"
     };
 
-    const filtered = TutorialSet.filterTutorials(tutorials, props);
+    const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 3);
     assert.equal(filtered[0].name, "tut1");
@@ -79,7 +79,7 @@ describe("TutorialSet filterFn tests", function () {
       specificLocale: true
     };
 
-    const filtered = TutorialSet.filterTutorials(tutorials, props);
+    const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 2);
     assert.equal(filtered[0].name, "tut3");
