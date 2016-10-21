@@ -20,11 +20,11 @@ class Api::V1::Pd::WorkshopOrganizerReportControllerTest < ::ActionController::T
     num_qualified_teachers
     days
   ).tap do |fields|
-    (1..6).each do |n|
+    (1..Pd::Payment::WorkshopSummary::REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
       fields << "facilitator_name_#{n}"
       fields << "facilitator_email_#{n}"
     end
-    (1..5).each do |n|
+    (1..Pd::Payment::WorkshopSummary::REPORT_ATTENDANCE_DAY_COUNT).each do |n|
       fields << "attendance_day_#{n}"
     end
   end.freeze
