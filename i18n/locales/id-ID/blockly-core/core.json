@@ -377,7 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"pangkas spasi dari ujung kiri",
   "TEXT_TRIM_OPERATOR_RIGHT":"pangkas spasi dari ujung kanan",
   "TEXT_TRIM_TOOLTIP":"Kembali salinan teks dengan spasi dihapus dari satu atau kedua ujungnya.",
-  "UNUSED_CODE":"Unused code",
+  "UNUSED_CODE":"Kode yang tidak digunakan",
   "VARIABLES_DEFAULT_NAME":"item",
   "VARIABLES_GET_CREATE_SET":"Membuat 'tetapkan %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

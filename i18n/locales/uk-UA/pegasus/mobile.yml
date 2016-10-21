@@ -489,7 +489,6 @@ uk-UA:
   dashboard_landing_office_hours: Задайте своє питання! Відвідайте щомісячний вебінар за розкладом.
   dashboard_landing_print_certificates: Надрукуйте сертифікати для учнів, які завершили цей курс
   dashboard_landing_educator_blog: Читати про новини та оновлення наших матеріалів на нашому педагогічному блозі
-  dashboard_landing_smart_hints: Будь ласка, допоможіть нам додати смарт-теги у підручники на Code.org
   dashboard_landing_video_player: Випробуйте наш новий відео-плеєр у своїй школі
   dashboard_landing_progress_title: Прогрес класу
   dashboard_landing_progress_biggest: Це прогрес Вашої найбільшої групи.
@@ -834,6 +833,7 @@ uk-UA:
   csp1_name: 'Розділ 1: Інтернет'
   csp2_name: 'Розділ 2: Цифрова інформація'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Повний тест - 50 запитань'
   cspexam1-mWU7ilDYM9_name: 'Тест, частина 1 - 25 запитань'
   cspexam2-AKwgAh1ac5_name: 'Тест, частина 2 - 25 запитань'
