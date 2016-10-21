@@ -76,7 +76,7 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races race_interstitial_shown)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -770,6 +770,10 @@ class User < ActiveRecord::Base
       !user_levels.empty?
   end
 
+  def account_age_days
+    DateTime.now - created_at.to_datetime
+  end
+
   # Creates UserScript information based on data contained in UserLevels.
   # Provides backwards compatibility with users created before the UserScript model
   # was introduced (cf. code-dot-org/website-ci#194).
@@ -1004,7 +1008,7 @@ class User < ActiveRecord::Base
 
   def self.csv_attributes
     # same as in UserSerializer
-    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races, :race_interstitial_shown]
   end
 
   def to_csv
@@ -1066,5 +1070,31 @@ class User < ActiveRecord::Base
 
     (authorized_teacher? && script && !script.professional_learning_course?) ||
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
+  end
+
+  def show_race_interstitial?
+    if teacher?
+      return false
+    end
+    if under_13?
+      return false
+    end
+    if account_age_days < 7
+      return false
+    end
+    if races && !races.empty?
+      return false
+    end
+    if race_interstitial_shown
+      return false
+    end
+    if defined?(request)
+      location = Geocoder.search(request.ip).first
+      if location && location.country_code.to_s.downcase != 'us'
+        return false
+      end
+    end
+
+    return true
   end
 end

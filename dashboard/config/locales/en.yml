@@ -609,6 +609,20 @@ en:
     later: "Later"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     review_terms: "Review updated terms"
+  race_interstitial:
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
+    message: "Please tell us your race (check all that apply)"
+    races:
+      - white: "White"
+      - black: "Black or African American"
+      - hispanic: "Hispanic or Latino"
+      - asian: "Asian"
+      - hawaiian: "Native Hawaiian or other Pacific Islander"
+      - american_indian: "American Indian/Alaska Native"
+      - other: "Other"
+      - opt_out: "Prefer not to say"
+    submit: "Submit"
+    decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
     not_started: not started

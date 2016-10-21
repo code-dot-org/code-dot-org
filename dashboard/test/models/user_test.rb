@@ -1393,4 +1393,38 @@ class UserTest < ActiveSupport::TestCase
     create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
     assert user.should_see_inline_answer?((create :script_level))
   end
+
+  test 'do not show race interstitial to teacher' do
+    user = create :teacher
+    refute user.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to users under 13' do
+    user = User.create(@good_data_young)
+    refute user.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to users less than one week old' do
+    user = create :student
+    user.created_at = DateTime.now.to_date - 3
+    refute user.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to users that have already entered race information' do
+    user = create :student
+    user.races = %w(white black)
+    refute user.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial if it has already been displayed' do
+    user = create :student
+    user.race_interstitial_shown = true
+    refute user.show_race_interstitial?
+  end
+
+  test 'show race interstitial for student over 13 with account more than 1 week old' do
+    user = create :student
+    user.created_at = DateTime.now.to_date - 8
+    assert user.show_race_interstitial?
+  end
 end
