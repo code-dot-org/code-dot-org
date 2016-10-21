@@ -36,8 +36,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "level_verification_timeout": "0",
-    "timeout_verification_function": "function(verificationAPI) {\r\n      return true;\r\n }",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return false;\r\n }",
     "failure_message_override": "Use Move Forward and Turn commands to get your chicken moving.",
     "use_player": "false",
     "contained_level_names": null
