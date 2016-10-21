@@ -76,6 +76,7 @@ var MAX_PHONE_WIDTH = 500;
  */
 
 function StudioApp() {
+
   this.feedback_ = new FeedbackUtils(this);
   this.authoredHintsController_ = new AuthoredHints(this);
 
@@ -2880,8 +2881,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: level.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
