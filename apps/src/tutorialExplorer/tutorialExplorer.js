@@ -9,6 +9,7 @@ import Immutable from 'immutable';
 import FilterHeader from './filterheader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
+import _ from 'lodash';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -92,11 +93,7 @@ const TutorialExplorer = React.createClass({
   },
 
   componentDidMount() {
-    window.addEventListener('resize', this.onResize);
-  },
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.onResize);
+    window.addEventListener('resize', _.debounce(this.onResize, 500));
   },
 
   showModalFilters() {
@@ -145,8 +142,6 @@ const TutorialExplorer = React.createClass({
     });
 
     this.setState({mobileLayout: windowWidth <= TutorialExplorer.mobileWidth});
-
-    //console.log("resize", windowWidth, windowHeight);
   },
 
   statics: {
