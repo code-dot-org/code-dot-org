@@ -154,7 +154,7 @@ window.apps = {
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
-        var noAutoplay = !!queryString.parse(location.search).noAutoplay;
+        var noAutoplay = !!queryString.parse(location.search).noautoplay;
 
         if (hasVideo && !noAutoplay) {
           if (hasInstructions) {
