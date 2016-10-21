@@ -1,4 +1,5 @@
 require "csv"
+require 'cdo/hip_chat'
 
 namespace :seed do
   verbose false
@@ -107,15 +108,19 @@ namespace :seed do
   end
 
   task schools: :environment do
+    # use a much smaller dataset in environments that reseed data frequently.
+    schools_tsv = CDO.stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+    expected_count = `wc -l #{schools_tsv}`.to_i - 1
+    raise "#{schools_tsv} contains no data" unless expected_count > 0
+
     School.transaction do
       # It takes approximately 4 minutes to seed the schools data from tsv.
-      # Skip seeding if the data is already up to date.
-      unless School.find_by(survey_year: School::CURRENT_SURVEY_YEAR)
-        # use a much smaller dataset in environments that reseed data frequently.
-        schools_tsv = CDO.stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
-
+      # Skip seeding if the data is already present. Note that this logic may need
+      # to be updated once we incorporate data from additional survey years.
+      unless School.count >= expected_count
         # Since other models will have a foreign key dependency
         # on School, don't reset_db first.  (Callout, above, does that.)
+        HipChat.log "seeding schools (#{expected_count} rows)"
         School.find_or_create_all_from_tsv!(schools_tsv)
       end
     end
