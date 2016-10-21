@@ -3,6 +3,7 @@ import Radium from 'radium';
 import { connect } from 'react-redux';
 import { ViewType, fullyLockedStageMapping } from '../stageLockRedux';
 import { isHiddenFromState } from '../hiddenStageRedux';
+import { fireResizeEvent } from '@cdo/apps/utils';
 
 const styles = {
   hidden: {
@@ -26,11 +27,27 @@ const TeacherLevelGroup = Radium(React.createClass({
     isLockedStage: PropTypes.bool.isRequired
   },
 
+  getInitialState() {
+    return {
+      sizeableContent: false
+    };
+  },
+
   componentDidMount() {
     // Show this element, as parent div (refs.lockMessage) now owns visibility
     $('#locked-stage').appendTo(this.refs.lockMessage).show();
     $('#hidden-stage').appendTo(this.refs.hiddenMessage).show();
     $('#level-body').appendTo(this.refs.content);
+
+    // TODO - do we want to start content hidden in case we flip to locked/hidden?
+    /*eslint-disable react/no-did-mount-set-state*/
+    if ($(this.refs.content).height() > 0) {
+      this.setState({sizeableContent: true});
+    }
+  },
+
+  componentDidUpdate(nextProps) {
+    fireResizeEvent();
   },
 
   render() {
@@ -43,9 +60,15 @@ const TeacherLevelGroup = Radium(React.createClass({
       height: window.screen.height
     };
 
+    // For programming levels where we have an editor, everything is absolutely
+    // positioned and takes up no height. In this case, we want to render it behind
+    // any locked/hidden stage info rather than hide it so that it still sizes
+    // itself correctly. Otherwise we just want to hide the content.
+    const hideContent = (isLockedStage || isHiddenStage) && this.state.sizeableContent;
+
     return (
       <div>
-        <div ref="content"/>
+        <div style={[hideContent && styles.hidden]} ref="content"/>
         <div style={[frameStyle, !isLockedStage && styles.hidden]} ref="lockMessage"/>
         <div style={[frameStyle, !isHiddenStage && styles.hidden]} ref="hiddenMessage"/>
       </div>
