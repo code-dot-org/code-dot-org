@@ -37,6 +37,7 @@ var msg = require('@cdo/locale');
  * @property {string} hintId
  * @property {string} hintClass
  * @property {string} hintType
+ * @property {string} ttsUrl
  *
  * @typedef {Object} UnfinishedHint
  * @augments HintData
@@ -242,6 +243,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
     return {
       content: processMarkdown(msg.recommendedBlockContextualHintTitle(),
           { renderer }),
+      ttsMessage: msg.recommendedBlockContextualHintTitle(),
       block: xmlBlock,
       hintId: "recommended_block_" + blockType,
       hintClass: 'recommended',
@@ -270,6 +272,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
+      ttsUrl: hint.tts_url,
       alreadySeen: false
     };
   });
