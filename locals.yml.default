@@ -16,6 +16,8 @@ dashboard_enable_pegasus: true
 
 # Run dashboard-server without disabling the script and level cache. Slows down
 # server startup and class reloading, so not recommended for dev environments.
+# In dev mode, turning on the script cache also turns on the class cache, which
+# means live class reloading will stop working.
 #disable_script_cache: false
 
 
