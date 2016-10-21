@@ -38,6 +38,7 @@ var msg = require('@cdo/locale');
  * @property {string} hintClass
  * @property {string} hintType
  * @property {string} ttsUrl
+ * @property {string} ttsMessage
  *
  * @typedef {Object} UnfinishedHint
  * @augments HintData

@@ -7,6 +7,10 @@ import experiments from '../../experiments';
 import InlineAudio from './InlineAudio';
 
 const styles = {
+  container: {
+    position: 'relative'
+  },
+
   main: {
     backgroundColor: 'white',
     borderRadius: 10,
@@ -39,13 +43,20 @@ const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMes
   const showAudioControls = experiments.isEnabled('tts') && (ttsUrl || ttsMessage);
 
   return (
-    <div style={{position: 'relative'}}>
-      <div style={[styles.main, isMinecraft && styles.minecraft, showAudioControls && styles.withAudioControls, { borderColor }]}>
+    <div style={styles.container}>
+      <div
+        style={[
+          styles.main,
+          isMinecraft && styles.minecraft,
+          showAudioControls && styles.withAudioControls,
+          { borderColor }
+        ]}
+      >
         {children}
         {shouldDisplayChatTips(skinId) && <ChatBubbleTip color={borderColor} />}
       </div>
       {showAudioControls &&
-        <div style={[styles.audioControls]}>
+        <div style={styles.audioControls}>
           <InlineAudio src={ttsUrl} message={ttsMessage} />
         </div>
       }
