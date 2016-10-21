@@ -36,5 +36,8 @@ class NewRelic
         regex.match event.first
       end
     end
+
+    def self.ignore_enduser
+    end
   end
 end

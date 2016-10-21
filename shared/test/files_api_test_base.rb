@@ -2,6 +2,7 @@ require_relative 'test_helper' # Must be required first to establish load paths
 require 'mocha/mini_test'
 require 'files_api'
 require 'channels_api'
+require_relative 'spy_newrelic_agent'
 
 #
 # Base class for tests against the FilesApi (which include SourcesTest,
