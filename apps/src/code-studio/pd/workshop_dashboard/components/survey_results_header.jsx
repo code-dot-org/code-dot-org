@@ -85,13 +85,13 @@ const SurveyResultsHeader = React.createClass({
   },
 
   setSurveyPanel(course, workshopId, workshopName) {
-    if (!this.props.organizerView && workshopId === undefined) {
+    if (!this.props.organizerView && !workshopId) {
       this.setState({
         workshopSurveyData: undefined,
         workshopName: undefined
       });
     } else {
-      if (this.props.organizerView && workshopId) {
+      if (!this.props.organizerView || workshopId) {
         $.ajax({
           method: 'GET',
           url: "/api/v1/pd/workshops/" + workshopId + "/workshop_survey_report",
@@ -127,9 +127,9 @@ const SurveyResultsHeader = React.createClass({
   },
 
   renderSurveyResults() {
-    let thisWorkshop = this.state.workshopSurveyData['this_workshop'];
-    let allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
-    let allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
+    const thisWorkshop = this.state.workshopSurveyData['this_workshop'];
+    const allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
+    const allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
 
     return (
       <table className="table table-bordered" style={{width: 'auto'}}>
@@ -149,7 +149,7 @@ const SurveyResultsHeader = React.createClass({
         </thead>
         <tbody>
           {
-            rowOrder.map(function (row, i) {
+            rowOrder.map((row, i) => {
               return (
                 <tr key={i}>
                   <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
@@ -166,9 +166,9 @@ const SurveyResultsHeader = React.createClass({
   },
 
   renderOrganizerSurveyResults() {
-    let allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
-    let allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
-    let breakoutData = _.omit(this.state.workshopSurveyData, ['all_workshops_for_course', 'all_my_workshops_for_course']);
+    const allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
+    const allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
+    const breakoutData = _.omit(this.state.workshopSurveyData, ['all_workshops_for_course', 'all_my_workshops_for_course']);
 
     let headings = ['', 'Across all workshops for ' + this.state.selectedCourse, 'Across all workshops I organized for ' + this.state.selectedCourse];
 
@@ -178,12 +178,33 @@ const SurveyResultsHeader = React.createClass({
       headings = headings.concat(Object.keys(breakoutData));
     }
 
+    const rows = rowOrder.map((row, i) => {
+      return (
+        <tr key={i}>
+          <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
+          <td>{allWorkshopsForCourse[row['key']]}</td>
+          <td>{allMyWorkshopsForCourse[row['key']]}</td>
+          {
+            headings.slice(3).map((heading, i) => {
+              return (
+                <td key={i}>
+                  {
+                    this.state.selectedWorkshopId ? breakoutData['this_workshop'][row['key']] : breakoutData[heading][row['key']]
+                  }
+                </td>
+              );
+            })
+          }
+        </tr>
+      );
+    });
+
     return (
       <table className="table table-bordered" style={{width: 'auto'}}>
         <thead>
           <tr>
             {
-              headings.map(function (heading, i) {
+              headings.map((heading, i) => {
                 return (
                   <th key={i}>
                     {heading}
@@ -194,29 +215,7 @@ const SurveyResultsHeader = React.createClass({
           </tr>
         </thead>
         <tbody>
-          {
-            rowOrder.map(function (row, i) {
-              return (
-                <tr key={i}>
-                  <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
-                  <td>{allWorkshopsForCourse[row['key']]}</td>
-                  <td>{allMyWorkshopsForCourse[row['key']]}</td>
-                  {
-                    headings.slice(3).map(function (heading, i) {
-                      return (
-                        <td key={i}>
-                          {
-                            // TODO: Find a better way to do the below statement
-                            breakoutData[heading] ? breakoutData[heading][row['key']] : breakoutData['this_workshop'][row['key']]
-                          }
-                        </td>
-                      );
-                    })
-                  }
-                </tr>
-              );
-            })
-          }
+          {rows}
         </tbody>
       </table>
     );
