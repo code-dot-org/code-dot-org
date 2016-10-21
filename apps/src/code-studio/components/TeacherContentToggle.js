@@ -11,17 +11,19 @@ const styles = {
   }
 };
 
-// TODO - make sure desc is accurate. probably rename this
-// TODO - probably want teacher/student toggle behind flag
+// TODO - unit tests
+// TODO - eyes tests
 /**
- * When viewing a locked level group as a teacher, we want to be able to toggle
- * between what the student would see (a message about the level being locked)
- * and what the teacher would see (the questions + answers). We accomplish this
- * by having the server send down the locked-stage rendering, but having it be
- * hidden. This component moves both the locked stage message and content into
- * a new div, and then toggles which is visible.g
+ * When viewing a puzzle, we want teachers to be able to toggle between what the
+ * student would see and what they see as a teacher. In some cases (such as
+ * locked stages and hidden stages) this means hiding the main content, and
+ * replacing it with something else.
+ * We accomplish this by having the server render that other content to a known
+ * dom element (#locked-stage, #hidden-stage). This component then creates
+ * container elements for the main content and any other content, and toggles
+ * which of those containers is visible as appropriate.
  */
-const TeacherLevelGroup = Radium(React.createClass({
+const TeacherContentToggle = Radium(React.createClass({
   propTypes: {
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
@@ -95,4 +97,4 @@ export default connect(state => {
     isHiddenStage,
     isLockedStage
   };
-})(TeacherLevelGroup);
+})(TeacherContentToggle);
