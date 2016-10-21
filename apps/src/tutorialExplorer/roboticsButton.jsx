@@ -5,7 +5,7 @@ import React from 'react';
 
 const RoboticsButton = (props) => (
   <a href="/learn2016/robotics">
-    <img src="/images/learn/robotics-link.png" style={{marginTop: 10}}/>
+    <img src="/images/learn/robotics-link.png" style={{marginTop: 10, marginBottom: 20}}/>
   </a>
 );
 

@@ -40,7 +40,7 @@ const TutorialExplorer = React.createClass({
       filteredTutorialsForLocale: filteredTutorialsForLocale,
       windowWidth: undefined,
       windowHeight: undefined,
-      mobileLayout: $(window).width() <= 600,
+      mobileLayout: $(window).width() <= TutorialExplorer.mobileWidth,
       showingModalFilters: true
     };
   },
@@ -91,24 +91,20 @@ const TutorialExplorer = React.createClass({
     return { filteredTutorials, filteredTutorialsForLocale };
   },
 
-  showModalFilters() {
-    this.setState({showingModalFilters: true});
-  },
-
-  hideModalFilters() {
-    this.setState({showingModalFilters: false});
-  },
-
-  isLocaleEnglish() {
-    return this.props.locale.substring(0,2) === "en";
-  },
-
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
   },
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
+  },
+
+  showModalFilters() {
+    this.setState({showingModalFilters: true});
+  },
+
+  hideModalFilters() {
+    this.setState({showingModalFilters: false});
   },
 
   shouldShowFilters() {
@@ -123,8 +119,8 @@ const TutorialExplorer = React.createClass({
     return this.shouldShowTutorials() && !this.isLocaleEnglish();
   },
 
-  shouldShowModalButtons() {
-    return this.state.mobileLayout;
+  isLocaleEnglish() {
+    return this.props.locale.substring(0,2) === "en";
   },
 
   /**
@@ -148,12 +144,19 @@ const TutorialExplorer = React.createClass({
       windowHeight: $(window).height()
     });
 
-    this.setState({mobileLayout: windowWidth <= 600});
+    this.setState({mobileLayout: windowWidth <= TutorialExplorer.mobileWidth});
 
     //console.log("resize", windowWidth, windowHeight);
   },
 
   statics: {
+
+    /**
+     * Pixel width at which we begin to start showing mobile view with modal
+     * filters.
+     */
+    mobileWidth: 600,
+
     /**
      * Filters a given array of tutorials by the given filter props.
      *
