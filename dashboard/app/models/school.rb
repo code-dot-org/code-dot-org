@@ -6,7 +6,6 @@
 #  school_district_id :integer
 #  name               :string(255)
 #  school_type        :string(255)
-#  survey_year        :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
@@ -18,8 +17,6 @@
 class School < ActiveRecord::Base
   include Seeded
 
-  CURRENT_SURVEY_YEAR = 2014
-
   # The listing of all US schools comes from http://nces.ed.gov/ccd/pubagency.asp
   # and is then exported into a tab-separated file.
   # The data format is described at http://nces.ed.gov/ccd/pdf/2015150_sc132a_Documentation_052716.pdf
@@ -28,7 +25,6 @@ class School < ActiveRecord::Base
     :school_district_id => 'LEAID',
     :name => 'SCHNAM',
     :charter_status => 'CHARTR',
-    :survey_year => 'SURVYEAR',
   }
 
   # Use the zero byte as the quote character to allow importing double quotes
@@ -58,7 +54,6 @@ class School < ActiveRecord::Base
       school_district_id: row_data[CSV_HEADERS[:school_district_id]],
       name: row_data[CSV_HEADERS[:name]],
       school_type: school_type(row_data[CSV_HEADERS[:charter_status]]),
-      survey_year: row_data[CSV_HEADERS[:survey_year]],
     }
     School.where(params).first_or_create!
   end

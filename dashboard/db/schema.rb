@@ -521,7 +521,6 @@ ActiveRecord::Schema.define(version: 20161019233302) do
     t.integer  "school_district_id"
     t.string   "name"
     t.string   "school_type"
-    t.integer  "survey_year",                     comment: "The survey year from which the data for this school was obtained. This will usually be the current survey year. However, if a school is removed from the list between one survey and the next, then it will appear in this table with a non-current survey year."
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
