@@ -127,7 +127,7 @@ export default class BaseEntity {
         }
 
         frontBlockCheck(this, this.position);
-        if(prevPosition !== undefined)
+        if (prevPosition !== undefined)
             prevBlockCheck(this, prevPosition);
     }
 
@@ -180,11 +180,8 @@ export default class BaseEntity {
             this.controller.addCommandRecord("moveForward", this.type, commandQueueItem.repeat);
         let forwardPosition = this.controller.levelModel.getMoveForwardPosition(this);
         var forwardPositionInformation = this.controller.levelModel.canMoveForward(this);
-        var treeCheck = function (entity) {
-
-        }
         if (forwardPositionInformation[0]) {
-            this.doMoveForward(commandQueueItem, forwardPosition, treeCheck);
+            this.doMoveForward(commandQueueItem, forwardPosition);
         } else {
             this.bump(commandQueueItem);
             this.callBumpEvents(forwardPositionInformation);
@@ -402,6 +399,24 @@ export default class BaseEntity {
                 commandQueueItem.succeeded();
             }, 300, this.controller, frontEntity, this);
         }, 200);
+    }
+
+    pushBack(commandQueueItem, pushDirection, movementTime) {
+        var levelModel = this.controller.levelModel;
+        var pushBackPosition = levelModel.getPushBackPosition(this, pushDirection);
+        var canMoveBack = levelModel.isPositionEmpty(pushBackPosition)[0];
+        if (canMoveBack) {
+            this.position = pushBackPosition;
+            var tween = this.controller.levelView.addResettableTween(this.sprite).to({
+                x: (this.offset[0] + 40 * this.position[0]), y: (this.offset[1] + 40 * this.position[1])
+            }, movementTime, Phaser.Easing.Linear.None);
+            tween.onComplete.add(() => {
+                setTimeout(() => { commandQueueItem.succeeded() }, 1000);
+            });
+            tween.start();
+        } else {
+            commandQueueItem.succeeded()
+        }
     }
 
     takeDamage(callbackCommand) {

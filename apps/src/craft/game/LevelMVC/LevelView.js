@@ -685,7 +685,7 @@ export default class LevelView {
       tween = this.addResettableTween(this.player.sprite).to({
         x: (-18 + 40 * position[0]),
         y: (yOffset + 40 * position[1])
-      }, 200, Phaser.Easing.Linear.None);
+      }, 180, Phaser.Easing.Linear.None);
     } else {
       animName = "jumpDown" + direction;
       this.playScaledSpeed(this.player.sprite.animations, animName);

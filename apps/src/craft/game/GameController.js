@@ -934,7 +934,7 @@ class GameController {
   }
 
   playSound(commandQueueItem, sound) {
-    this.addCommandRecord("playSound", undefined,commandQueueItem.repeat);
+    this.addCommandRecord("playSound", undefined, commandQueueItem.repeat);
     this.levelView.audioPlayer.play(sound);
     commandQueueItem.succeeded();
   }
@@ -946,9 +946,16 @@ class GameController {
       const destroyPosition = this.levelModel.getMoveForwardPosition();
       this.levelView.setSelectionIndicatorPosition(destroyPosition[0], destroyPosition[1]);
       this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
-        var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
 
         frontEntity.queue.startPushHighPriorityCommands();
+        var useCommand = new CallbackCommand(this, () => { }, () => { frontEntity.use(useCommand, player); }, frontEntity.identifier);
+        const isFriendlyEntity = this.levelEntity.isFriendlyEntity(frontEntity.type);
+        // push frienly entity 1 block 
+        if (!isFriendlyEntity) {
+          const pushDirection = player.facing;
+          var moveAwayCommand = new CallbackCommand(this, () => { }, () => { frontEntity.pushBack(moveAwayCommand, pushDirection, 150); }, frontEntity.identifier);
+          frontEntity.addCommand(moveAwayCommand);
+        }
         frontEntity.addCommand(useCommand);
         frontEntity.queue.endPushHighPriorityCommands();
         this.levelView.playExplosionAnimation(player.position, player.facing, frontEntity.position, frontEntity.type, () => { }, false);
@@ -1376,7 +1383,7 @@ class GameController {
     if (!this.levelModel.usePlayer)
       return;
     if (this.player.movementState === direction)
-      this.player.movementState = -1;s
+      this.player.movementState = -1; s
     this.player.updateMovement();
   }
 

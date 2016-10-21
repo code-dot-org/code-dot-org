@@ -89,16 +89,22 @@ export default class Player extends BaseEntity {
   bump(commandQueueItem) {
     var levelView = this.controller.levelView,
       levelModel = this.controller.levelModel;
-    if (levelModel.isForwardBlockOfType("creeper")) {
-      levelView.playCreeperExplodeAnimation(player.position, player.facing, levelModel.getMoveForwardPosition(), player.isOnBlock, () => {
-        commandQueueItem.failed();
-      });
-    } else {
-      levelView.playBumpAnimation(this.position, this.facing, false);
-      this.controller.delayPlayerMoveBy(400, 800, () => {
-        commandQueueItem.succeeded();
-      });
+    levelView.playBumpAnimation(this.position, this.facing, false);
+    let frontEntity = this.controller.levelEntity.getEntityAt(levelModel.getMoveForwardPosition(this));
+    if (frontEntity !== null) {
+      const isFriendlyEntity = this.controller.levelEntity.isFriendlyEntity(frontEntity.type);
+      // push frienly entity 1 block 
+      if (isFriendlyEntity) {
+        const pushDirection = this.facing;
+        var moveAwayCommand = new CallbackCommand(this, () => { }, () => { frontEntity.pushBack(moveAwayCommand, pushDirection, 250); }, frontEntity.identifier);
+        frontEntity.queue.startPushHighPriorityCommands();
+        frontEntity.addCommand(moveAwayCommand);
+        frontEntity.queue.endPushHighPriorityCommands();
+      }
     }
+    this.controller.delayPlayerMoveBy(200, 400, () => {
+      commandQueueItem.succeeded();
+    });
   }
 
   updateDirection(direction) {

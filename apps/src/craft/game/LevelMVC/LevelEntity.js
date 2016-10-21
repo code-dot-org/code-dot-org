@@ -47,6 +47,15 @@ export default class LevelEntity {
         }
     }
 
+    isFriendlyEntity(type) {
+        const friendlyEntityList = ['sheep','ironGolem','cow','chicken'];
+        for(var i = 0 ; i < friendlyEntityList.length; i++) {
+            if(type === friendlyEntityList[i])
+                return true;
+        }
+        return false;
+    }
+
     createEntity(type, identifier, x, y, facing) {
         var entity = null;
         if (!this.entityMap.has(identifier)) {
