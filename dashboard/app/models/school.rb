@@ -2,10 +2,13 @@
 #
 # Table name: schools
 #
-#  id                 :integer
-#  school_district_id :integer
-#  name               :string(255)
-#  school_type        :string(255)
+#  id                 :integer          not null
+#  school_district_id :integer          not null
+#  name               :string(255)      not null
+#  city               :string(255)      not null
+#  state              :string(255)      not null
+#  zip                :string(255)      not null
+#  school_type        :string(255)      not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
@@ -24,6 +27,9 @@ class School < ActiveRecord::Base
     :id => 'NCESSCH',
     :school_district_id => 'LEAID',
     :name => 'SCHNAM',
+    :city => 'LCITY',
+    :state => 'LSTATE',
+    :zip => 'LZIP',
     :charter_status => 'CHARTR',
   }.freeze
 
@@ -51,6 +57,9 @@ class School < ActiveRecord::Base
       id: row_data[CSV_HEADERS[:id]],
       school_district_id: row_data[CSV_HEADERS[:school_district_id]],
       name: row_data[CSV_HEADERS[:name]],
+      city: row_data[CSV_HEADERS[:city]],
+      state: row_data[CSV_HEADERS[:state]],
+      zip: row_data[CSV_HEADERS[:zip]],
       school_type: school_type(row_data[CSV_HEADERS[:charter_status]]),
     }
     School.where(params).first_or_create!

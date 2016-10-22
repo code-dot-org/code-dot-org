@@ -517,10 +517,13 @@ ActiveRecord::Schema.define(version: 20161019233302) do
   end
 
   create_table "schools", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.bigint   "id",                              comment: "NCES public school ID"
-    t.integer  "school_district_id"
-    t.string   "name"
-    t.string   "school_type"
+    t.bigint   "id",                 null: false, comment: "NCES public school ID"
+    t.integer  "school_district_id", null: false
+    t.string   "name",               null: false
+    t.string   "city",               null: false
+    t.string   "state",              null: false
+    t.string   "zip",                null: false
+    t.string   "school_type",        null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
