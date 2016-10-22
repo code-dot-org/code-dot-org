@@ -42,11 +42,11 @@ class School < ActiveRecord::Base
     charter: 'charter'
   }
 
-  def self.school_type(charter_status)
+  private_class_method def self.school_type(charter_status)
     charter_status == '1' ? SCHOOL_TYPE[:charter] : SCHOOL_TYPE[:public]
   end
 
-  def self.first_or_create_from_tsv_row!(row_data)
+  private_class_method def self.first_or_create_from_tsv_row(row_data)
     params = {
       id: row_data[CSV_HEADERS[:id]],
       school_district_id: row_data[CSV_HEADERS[:school_district_id]],
