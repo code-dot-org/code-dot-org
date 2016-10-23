@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n  var grassPositions = [[6,6], [7,6], [8,6], [5,7], [6,7], [7,7], [8,7], [9,7], [6,8], [7,8], [8,8], [9,8], [5,9], [6,9], [7,9], [8,9], [9,9]];\r\n  var cowOnGrassCount = 0;\r\n  for (var i = 0; i < grassPositions.length; i++) {\r\n    if (verificationAPI.isEntityAt(\"cow\", grassPositions[i]))\r\n      cowOnGrassCount++;\r\n    }\r\n  return cowOnGrassCount >= 2 && verificationAPI.getInventoryAmount(\"milk\") >= 1;\r\n}\r\n",
+    "verification_function": "function (verificationAPI) {\r\n  var grassPositions = [[6,6], [7,6], [8,6], [5,7], [6,7], [7,7], [8,7], [9,7], [6,8], [7,8], [8,8], [9,8], [5,9], [6,9], [7,9], [8,9], [9,9]];\r\n  var cowOnGrassCount = 0;\r\n  for (var i = 0; i < grassPositions.length; i++) {\r\n    if (verificationAPI.isEntityAt(\"cow\", grassPositions[i]))\r\n      cowOnGrassCount++;\r\n    }\r\n  return cowOnGrassCount >= 2 && verificationAPI.getInventoryAmount(\"all\") >= 1;\r\n}\r\n",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -35,7 +35,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Now that we can make mobs move and drop items, can you lure both of these cows to the grass and milk them? HINT: Try using the Forever Do Loop!",
+    "instructions": "Now that you can make mobs move and drop things, can you get both of these cows to the grass and milk them? HINT: Try using the 'forever do' loop to have them move toward you!",
     "level_verification_timeout": "60000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "failure_message_override": "Try having the cows \"Move a Step Toward the Player\" when you touch them. How many ways can you think of to get the cows to the grass?",
@@ -56,6 +56,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="craft_forever"/>
         <block type="craft_moveForward"/>
         <block type="craft_moveToward">
           <title name="TYPE">Player</title>
@@ -72,7 +73,6 @@
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
         </block>
-        <block type="craft_forever"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>

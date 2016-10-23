@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.getInventoryAmount(\"wool\") >= 1;\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.getInventoryAmount(\"all\") >= 1;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "The sheep has forgotten what to do when you shear it! Make it drop wool when you walk over to it and press Use.",
+    "instructions": "You need wool. Make the sheep 'drop wool' when you walk over and 'Use' it. (Hint: press the space bar or tap the game space when you are at the sheep to use it.)\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
@@ -77,11 +77,19 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="craft_forever"/>
+        <block type="craft_moveForward"/>
+        <block type="craft_entityTurn">
+          <title name="DIR">left</title>
+        </block>
         <block type="craft_drop">
           <title name="TYPE">wool</title>
         </block>
         <block type="craft_playSound">
           <title name="TYPE">sheepBaa</title>
+        </block>
+        <block type="craft_wait">
+          <title name="TYPE">random</title>
         </block>
       </xml>
     </toolbox_blocks>
