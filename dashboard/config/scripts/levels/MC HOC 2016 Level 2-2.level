@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      return !verificationAPI.isEntityTypeRunning(\"chicken\") && verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,15 +32,15 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "This chicken has forgotten how to move! Get it moving around by putting “Move Forward” and “Turn” commands in the “When Spawned” slot. ",
+    "instructions": "The chicken is stuck. Get it to move with some 'move forward' and 'turn' blocks in the 'when spawned' slot.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "level_verification_timeout": "0",
-    "timeout_verification_function": "function(verificationAPI) {\r\n      return false;\r\n }",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n }",
     "failure_message_override": "Use Move Forward and Turn commands to get your chicken moving.",
     "use_player": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "level_verification_timeout": "5000"
   },
   "published": true,
   "notes": "This chicken has forgotten how to move! Get it moving around by putting “moveWalk fForward” and “tTurn” commands in the “When sSpawned” slot. When an mobentity is created it is called ‘“spawning’,”, so the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\nWhen spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n    When Clicked\r\n\r\n\r\nSuccess criteria: Spawned chicken walks and turns at least once.\r\nHow to check? At least one Turn and Move Forward. (possibly check based on chicken location)\r\nSuccess check function:\r\n\r\n\r\nverificationAPI.getCommandExecutedCount(“moveForward”) >= 1 && verificationAPI.getCommandExecutedCount(“turn”) >= 1\r\nTimer: No timer\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nError message: Add at least one move and turn command to your chicken’s When Spawned event to make your chicken move.",
@@ -56,11 +56,11 @@
     <toolbox_blocks>
       <xml>
         <block type="craft_moveForward"/>
-        <block type="craft_turn">
+        <block type="craft_entityTurnLR">
           <title name="DIR">left</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">chickenBock</title>
+          <title name="TYPE">chickenBawk</title>
         </block>
       </xml>
     </toolbox_blocks>

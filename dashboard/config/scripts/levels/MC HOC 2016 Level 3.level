@@ -32,13 +32,14 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "Great, the chicken moved! But then he stopped. In games, mobs like chickens wander around forever. Let’s use a loop to keep these chickens moving.\r\n",
+    "instructions": "Great, the chicken moved! But then she stopped. In games, chickens walk forever. Let’s use a 'forever do' loop to keep these chickens moving.\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "level_verification_timeout": "7000",
     "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.isEntityTypeRunning('chicken');\r\n }",
     "failure_message_override": "Use a repeat block and Move Forward and Turn commands to keep your chicken wandering.",
+    "use_player": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -49,22 +50,22 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_chickenSpawnedClicked" deletable="false"/>
+        <block type="craft_chickenSpawned" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="craft_forever"/>
         <block type="craft_moveForward"/>
         <block type="craft_entityTurnLR">
           <title name="DIR">left</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">chickenBock</title>
+          <title name="TYPE">chickenBawk</title>
         </block>
         <block type="craft_drop">
           <title name="TYPE">egg</title>
         </block>
-        <block type="craft_forever"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>

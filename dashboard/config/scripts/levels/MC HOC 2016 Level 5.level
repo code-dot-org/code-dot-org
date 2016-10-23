@@ -8,12 +8,12 @@
     "skin": "craft",
     "ground_plane": "[\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"gravel\",\"dirtCoarse\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"water\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"sheep\",\"\",\"\",\"stone\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"grass\",\"grass\"]",
+    "action_plane": "[\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"cow\",\"\",\"\",\"stone\",\"\",\"cow\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"stone\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"grass\",\"grass\"]",
     "player_start_position": "[5,6]",
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n  var grassPositions = [[6,6], [7,6], [8,6], [5,7], [6,7], [7,7], [8,7], [9,7], [6,8], [7,8], [8,8], [9,8], [5,9], [6,9], [7,9], [8,9], [9,9]];\r\n  var sheepOnGrassCount = 0;\r\n  for (var i = 0; i < grassPositions.length; i++) {\r\n    if (verificationAPI.isEntityAt(\"sheep\", grassPositions[i]))\r\n      sheepOnGrassCount++;\r\n    }\r\n  return sheepOnGrassCount >= 2;\r\n}\r\n",
+    "verification_function": "function (verificationAPI) {\r\n  var grassPositions = [[6,6], [7,6], [8,6], [5,7], [6,7], [7,7], [8,7], [9,7], [6,8], [7,8], [8,8], [9,8], [5,9], [6,9], [7,9], [8,9], [9,9]];\r\n  var cowOnGrassCount = 0;\r\n  for (var i = 0; i < grassPositions.length; i++) {\r\n    if (verificationAPI.isEntityAt(\"cow\", grassPositions[i]))\r\n      cowOnGrassCount++;\r\n    }\r\n  return cowOnGrassCount >= 2 && verificationAPI.getInventoryAmount(\"all\") >= 1;\r\n}\r\n",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -35,11 +35,12 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Now that we can make mobs move and drop items, let’s go back and finish our sheep. Can you lure both the sheep to the grass? Hint: try the \"move toward\" block\r\n\r\n\r\n",
-    "level_verification_timeout": "40000",
+    "instructions": "Now that you can make mobs move and drop things, can you get both of these cows to the grass and milk them? HINT: Try using the 'forever do' loop to have them move toward you!",
+    "level_verification_timeout": "60000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
-    "contained_level_names": null,
-    "failure_message_override": "Try having the sheep “Move Toward Player” when you touch them. Can you lead both sheep to the grass?"
+    "failure_message_override": "Try having the cows \"Move a Step Toward the Player\" when you touch them. How many ways can you think of to get the cows to the grass?",
+    "use_player": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 5: Restore the Sheep\r\nNow that we can make entities move and drop items, let’s go back and finish our sheep. Make the sheep wander, around, drop wool when you use it, and follow you if you touch it by using a move toward player command in the when touched slot.\r\n\r\nSolution:               \r\nSheep\r\n§  When spawned: Give them this code\r\n·       Repeat Forever\r\no   Repeat Random\r\n§  Move Forward\r\no   Turn Random\r\n§  When Touched\r\nRepeat forever\r\n·       Move Toward Player\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nSuccess criteria: Sheep follows player; Wool drops when sheared.\r\n\r\nTeaches: Building a full entity, Events, reinforce loops",
@@ -49,47 +50,29 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false"/>
-        <block type="craft_sheepSpawnedTouchedClicked" deletable="false">
-          <statement name="WHEN_USED">
-            <block type="craft_drop">
-              <title name="TYPE">wool</title>
-              <next>
-                <block type="craft_playSound">
-                  <title name="TYPE">sheepBaa</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
+        <block type="when_run" uservisible="false" movable="false" deletable="false"/>
+        <block type="craft_cowSpawnedTouchedClicked" movable="false" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="craft_forever"/>
         <block type="craft_moveForward"/>
         <block type="craft_moveToward">
-          <title name="TYPE">Player</title>
-        </block>
-        <block type="craft_moveAway">
           <title name="TYPE">Player</title>
         </block>
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
         </block>
         <block type="craft_drop">
-          <title name="TYPE">wool</title>
+          <title name="TYPE">milk</title>
         </block>
         <block type="craft_playSound">
-          <title name="TYPE">sheepBaa</title>
+          <title name="TYPE">cowMoo</title>
         </block>
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
         </block>
-        <block type="craft_forever"/>
-        <block type="craft_repeatDropdown">
-          <title name="TIMES">2</title>
-        </block>
-        <block type="craft_repeatRandom"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
