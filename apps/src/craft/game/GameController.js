@@ -93,6 +93,8 @@ class GameController {
     this.dayNightCycle = false;
     this.player = null;
 
+    this.timerSprite = null;
+
     this.game.state.add('earlyLoad', {
       preload: () => {
         // don't let state change stomp essential asset downloads in progress
@@ -126,6 +128,8 @@ class GameController {
     this.specialLevelType = levelConfig.specialLevelType;
     this.timeout = levelConfig.levelVerificationTimeout;
     this.timeoutResult = levelConfig.timeoutResult;
+    this.onDayCallback = levelConfig.onDayCallback;
+    this.onNightCallback = levelConfig.onNightCallback;
     this.game.state.start('levelRunner');
   }
 
@@ -142,6 +146,10 @@ class GameController {
     this.timeouts.forEach((timeout) => {
       clearTimeout(timeout);
     });
+    if (this.timerSprite) {
+      this.timerSprite.kill();
+    }
+    this.timerSprite = null;
     this.timeouts = [];
     this.resettableTimers.length = 0;
     this.events.length = 0;
@@ -160,6 +168,7 @@ class GameController {
     this.game.time.slowMotion = this.initialSlowMotion;
     this.addCheatKeys();
     this.assetLoader.loadPacks(this.levelData.assetPacks.afterLoad);
+    this.game.load.image('timer', `${this.assetRoot}images/placeholderTimer.png`);
     this.game.load.onLoadComplete.addOnce(() => {
       if (this.afterAssetsLoaded) {
         this.afterAssetsLoaded();
@@ -178,10 +187,19 @@ class GameController {
     // set timeout for timeout
     const isNumber = !isNaN(this.timeout);
     if (isNumber && this.timeout > 0) {
-      this.timeouts.push(setTimeout(() => {
+      this.timerSprite = this.game.add.sprite(-50, 390, 'timer');
+      var tween = this.levelView.addResettableTween(this.timerSprite).to({
+        x: -450, alpha: 0.5
+      }, this.timeout, Phaser.Easing.Linear.None);
+
+      tween.start();
+      tween = this.levelView.addResettableTween().to({
+      }, this.timeout, Phaser.Easing.Linear.None);
+
+      tween.onComplete.add(() => {
         this.endLevel(this.timeoutResult(this.levelModel));
-      }
-        , this.timeout));
+      });
+      tween.start();
     }
   }
 
@@ -1238,6 +1256,11 @@ class GameController {
 
   endLevel(result) {
     if (!this.levelModel.usePlayer) {
+      if (result) {
+        this.levelView.audioPlayer.play("success");
+      } else {
+        this.levelView.audioPlayer.play("failure");
+      }
       this.handleEndState(result);
       return;
     }
@@ -1292,6 +1315,8 @@ class GameController {
         this.game.debug.text("Impossible to start day since it's already day time\n");
     }
     else {
+      if (this.onDayCallback !== undefined)
+        this.onDayCallback();
       this.levelModel.isDaytime = true;
       this.levelModel.clearFow();
       this.levelView.updateFowPlane(this.levelModel.fowPlane);
@@ -1318,6 +1343,8 @@ class GameController {
         this.game.debug.text("Impossible to start night since it's already night time\n");
     }
     else {
+      if (this.onNightCallback !== undefined)
+        this.onNightCallback();
       this.levelModel.isDaytime = false;
       this.levelModel.computeFowPlane();
       this.levelView.updateFowPlane(this.levelModel.fowPlane);
