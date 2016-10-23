@@ -1245,7 +1245,7 @@ class GameController {
   }
 
   checkSolution() {
-    if (!this.attemptRunning) {
+    if (!this.attemptRunning || this.resultReported) {
       return;
     }
     // check the final state to see if its solved
@@ -1261,6 +1261,7 @@ class GameController {
       } else {
         this.levelView.audioPlayer.play("failure");
       }
+      this.resultReported = true;
       this.handleEndState(result);
       return;
     }

@@ -35,6 +35,7 @@ export function get(controller) {
       controller.queue.begin();
       controller.run();
       controller.attemptRunning = true;
+      controller.resultReported = false;
     },
 
     resetAttempt: function () {
