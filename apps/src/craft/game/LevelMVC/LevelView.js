@@ -164,13 +164,13 @@ export default class LevelView {
     this.trees = [];
 
     this.resetPlanes(levelModel);
-    if(levelModel.usePlayer) {
-    this.preparePlayerSprite(this.player.name);
-    this.player.sprite.animations.stop();
-    this.setPlayerPosition(this.player.position[0], this.player.position[1], this.player.isOnBlock);
-    this.setSelectionIndicatorPosition(this.player.position[0], this.player.position[1]);
-    this.selectionIndicator.visible = true;
-    this.playIdleAnimation(this.player.position, this.player.facing, this.player.isOnBlock);
+    if (levelModel.usePlayer) {
+      this.preparePlayerSprite(this.player.name);
+      this.player.sprite.animations.stop();
+      this.setPlayerPosition(this.player.position[0], this.player.position[1], this.player.isOnBlock);
+      this.setSelectionIndicatorPosition(this.player.position[0], this.player.position[1]);
+      this.selectionIndicator.visible = true;
+      this.playIdleAnimation(this.player.position, this.player.facing, this.player.isOnBlock);
     }
     this.updateShadingPlane(levelModel.shadingPlane);
     this.updateFowPlane(levelModel.fowPlane);
@@ -1177,7 +1177,7 @@ export default class LevelView {
     this.shadingPlane.removeAll();
 
     this.shadingPlane.add(this.baseShading);
-    if(this.selectionIndicator)
+    if (this.selectionIndicator)
       this.shadingPlane.add(this.selectionIndicator);
 
     for (index = 0; index < shadingData.length; ++index) {
@@ -1710,11 +1710,12 @@ export default class LevelView {
     let collectiblePosition = this.controller.levelModel.spritePositionToIndex([xOffset, yOffset], [sprite.x, sprite.y]);
     var anim = sprite.animations.add("animate", frameList, 10, false);
     anim.onComplete.add(() => {
-
-      if (distanceBetween(this.player.position, collectiblePosition) < 2)
-        this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, () => { }, blockType)
-      else {
-        this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
+      if (this.controller.levelModel.usePlayer) {
+        if (distanceBetween(this.player.position, collectiblePosition) < 2)
+          this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, () => { }, blockType)
+        else {
+          this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
+        }
       }
     });
     this.playScaledSpeed(sprite.animations, "animate");
@@ -2013,7 +2014,7 @@ export default class LevelView {
 
   isUnderTree(treeIndex, position) {
     // invalid index
-    if(treeIndex >= this.trees.length || treeIndex < 0)
+    if (treeIndex >= this.trees.length || treeIndex < 0)
       return false;
     var fluffPositions = this.treeFluffTypes[this.trees[treeIndex].type];
     for (var i = 0; i < fluffPositions.length; i++) {

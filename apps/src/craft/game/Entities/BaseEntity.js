@@ -411,7 +411,7 @@ export default class BaseEntity {
                 x: (this.offset[0] + 40 * this.position[0]), y: (this.offset[1] + 40 * this.position[1])
             }, movementTime, Phaser.Easing.Linear.None);
             tween.onComplete.add(() => {
-                setTimeout(() => { commandQueueItem.succeeded() }, 1000);
+                setTimeout(() => { commandQueueItem.succeeded() }, movementTime);
             });
             tween.start();
         } else {
