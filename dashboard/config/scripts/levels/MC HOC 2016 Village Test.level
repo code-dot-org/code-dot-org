@@ -1,0 +1,102 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2016-10-20T21:46:52.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"gravel\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"gravel\",\"grass\",\"dirt\",\"dirt\",\"dirt\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"zombie\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"bricks\",\"bricks\",\"glass\",\"bricks\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"\",\"zombie\",\"glass\",\"\",\"torch\",\"\",\"glass\",\"zombie\",\"\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"bricks\",\"bricks\",\"logSpruce\",\"bricks\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"zombie\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"ironGolem\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[5, 3]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "player_start_direction": "2",
+    "is_daytime": "false",
+    "is_event_level": "true",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isEntityDied(\"zombie\", 4);\r\n}",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
+    "level_verification_timeout": "60000",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "use_player": "true",
+    "instructions": "Oh no! Zombies have trapped you inside! Code the Iron Golem to defeat the zombies and save the village!",
+    "failure_message_override": "You need to make the Iron Golem chase and attack the zombies to win.",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "This was a test to see if we could get mobs to interact successfully. This will now be level 8.",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="craft_zombie" deletable="false" x="300px" y="15px">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever">
+              <statement name="DO">
+                <block type="craft_moveToward">
+                  <title name="TYPE">Player</title>
+                </block>
+              </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_attack"/>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_destroyEntity"/>
+          </statement>
+          <statement name="WHEN_ATTACKED">
+            <block type="craft_destroyEntity"/>
+          </statement>
+        </block>
+        <block type="craft_ironGolem" deletable="false" x="15px" y="15px"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_forever"/>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveToward">
+          <title name="TYPE">zombie</title>
+        </block>
+        <block type="craft_entityTurn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_attack"/>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
+        </block>
+        <block type="craft_flashEntity"/>
+        <block type="craft_explodeEntity"/>
+        <block type="craft_wait">
+          <title name="TYPE">0.4</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>
