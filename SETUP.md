@@ -31,9 +31,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Run `rbenv init`
   1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
   1. Pick up those changes: `source ~/.bash_profile`
-1. Install Ruby 2.2.3
-  1. `rbenv install 2.2.3`
-  1. Set the global version of Ruby: `rbenv global 2.2.3`
+1. Install Ruby 2.2.5
+  1. `rbenv install 2.2.5`
+  1. Set the global version of Ruby: `rbenv global 2.2.5`
   1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up [nvm](https://github.com/creationix/nvm)
   1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
@@ -53,7 +53,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 1. Check that you have the correct versions of everything:
   1. Open a new Terminal window
-  1. `ruby --version  # --> ruby 2.2.3`
+  1. `ruby --version  # --> ruby 2.2.5`
   1. `nvm ls          # --> v0.12.15`
   1. `node --version  # --> v0.12.15`
   1. `npm --version   # --> 2.15.1`
@@ -75,13 +75,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         - `sudo apt-get install ruby2.2 ruby2.2-dev`
     - B. `rbenv`: ([instructions](https://github.com/sstephenson/rbenv#installation))
         1. Install `rbenv` and `ruby-build`
-        1. `rbenv install 2.2.3`
-        1. `rbenv global 2.2.3`
+        1. `rbenv install 2.2.5`
+        1. `rbenv global 2.2.5`
         1. `rbenv rehash`
     - C. `rvm`. A few folks have had more luck with rvm vs rbenv on linux.
         1. Install rvm from https://rvm.io/
-        1. `rvm install 2.2.3`
-        1. `rvm use 2.2.3 --default`
+        1. `rvm install 2.2.5`
+        1. `rvm use 2.2.5 --default`
 1. Install Node.js 0.12.15 and npm 2.15.1
   1. Option A - [nvm](https://github.com/creationix/nvm)
     1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
@@ -94,7 +94,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. [Nodejs.org](https://nodejs.org/download/)
 1. Check that you have the correct versions of everything:
   1. open a new Terminal window
-  1. `ruby --version  # --> ruby 2.2.3`
+  1. `ruby --version  # --> ruby 2.2.5`
   1. `node --version  # --> v0.12.15`
   1. `npm --version   # --> 2.15.1`
 

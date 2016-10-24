@@ -5,7 +5,7 @@ general:
     - pegasus/log
 machine:
   ruby:
-    version: 2.2.3
+    version: 2.2.5
   node:
     version: 0.12.0
   java:
@@ -28,7 +28,7 @@ dependencies:
     - "apps/node_modules"
     - "apps/.babel-cache"
     - "dashboard/tmp/cache"
-    - "~/.rvm/gems/ruby-2.2.3"
+    - "~/.rvm/gems/ruby-2.2.5"
     - ".tmputils"
   override:
     # Install any dependencies not covered by rake install
