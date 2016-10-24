@@ -619,6 +619,7 @@ ActiveRecord::Schema.define(version: 20161024164952) do
     t.string   "flex_category"
     t.boolean  "lockable"
     t.integer  "relative_position", null: false
+    t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 
   create_table "survey_results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
