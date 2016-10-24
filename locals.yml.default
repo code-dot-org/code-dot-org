@@ -33,12 +33,12 @@ dashboard_enable_pegasus: true
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
-# see changes to: videos, concepts, levels, scripts, trophies, prize providers,
+# see changes to: videos, concepts, levels, scripts, trophies, prize providers, 
 # callouts, hints, secret words, or secret pictures.
 #skip_seed_all: true
 
 # Whether to stub schools and school_districts table with much smaller data,
-# saving a total of 4 min 3 sec during rake seed. Default: true (in development).
+# saving a total of 4 min 30 sec during rake seed. Default: true (in development).
 #stub_school_data: false
 
 # Encryption key required for decoding certain protected level sources.
