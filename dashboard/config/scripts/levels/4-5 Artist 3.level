@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If the flower bed is 600 pixels around and two of the sides are 200 pixels long, here is how to figure out what the short sides add up to:\\n\\n**600 - 200 - 200 = 200**\\n\\nThat means both short sides add up to 200 pixels.\\n\\n**What is 200 / 2?**\",\r\n  \"hint_id\": \"4-5_Artist_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you can't see where the `repeat` loop goes right away, try coding out the whole solution and look for a pattern.\",\r\n  \"hint_id\": \"4-5_Artist_3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

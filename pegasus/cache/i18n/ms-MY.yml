@@ -605,8 +605,6 @@
     ini
   dashboard_landing_educator_blog: Baca tentang berita dan maklumat terkini mengenai
     bahan-bahan kami di Blog pendidik kami
-  dashboard_landing_smart_hints: Sila bantu kami untuk menambah petunjuk pintar ke
-    tutorial Code.org
   dashboard_landing_video_player: Uji pemain video baru kami di sekolah anda
   dashboard_landing_progress_title: Kemajuan kelas utama
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
@@ -1041,6 +1039,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

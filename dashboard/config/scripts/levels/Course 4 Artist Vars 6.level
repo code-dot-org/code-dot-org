@@ -33,7 +33,8 @@
     "markdown_instructions": "Here’s some code that can draw any regular polygon. \r\n\r\nThere’s a new variable called `sides` that is set to 4. \r\n\r\nCan you use the `sides` variable (along with the math block) to turn the right amount regardless of how many sides are in the polygon?",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To draw a regular polygon, turn **360/sides** each time.\",\r\n  \"hint_id\": \"Course_4_Artist_Vars_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To draw a regular polygon, turn **360/sides** each time.\",\r\n  \"hint_id\": \"Course_4_Artist_Vars_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that since the squares are 20 pixels long, you'll need to jump 20 pixels before you start your next square.\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

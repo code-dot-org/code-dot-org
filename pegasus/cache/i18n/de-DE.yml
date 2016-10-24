@@ -601,8 +601,6 @@
     Kurs bestanden haben
   dashboard_landing_educator_blog: Lese Nachrichten und Neuigkeiten zu unseren Materialien
     in unserem Lehrer-Blog
-  dashboard_landing_smart_hints: Bitte helfen Sie uns nützliche Hinweise zu Code.org
-    Tutorials hinzuzufügen
   dashboard_landing_video_player: Teste unseren neuen Video-Player an deiner Schule
   dashboard_landing_progress_title: Fortschritt Deiner Klasse
   dashboard_landing_progress_biggest: Dies ist der Fortschritt Ihrer größten Lerngruppe.
@@ -1058,6 +1056,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

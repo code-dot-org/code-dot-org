@@ -32,7 +32,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try running the code before you add any blocks.   What makes the drawing look a little off?\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't quite put your finger on what's going wrong, try slowing down the artist's by moving the slider to the left.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try running the code before you add any blocks.   What makes the drawing look a little off?\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't quite put your finger on what's going wrong, try slowing down the artist's by moving the slider to the left.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

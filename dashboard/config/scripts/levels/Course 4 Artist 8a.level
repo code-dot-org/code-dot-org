@@ -34,7 +34,8 @@
     "markdown_instructions": "Remember this shape?  Now we're going to let you build it without giving you any blocks to start!",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Need help figuring out how far to turn?\\n\\nThere are 3 triangles within the 360 degree rotation.\\n\\nHow many times does 3 go into 360?\",\r\n  \"hint_id\": \"Course_4_Artist_8a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

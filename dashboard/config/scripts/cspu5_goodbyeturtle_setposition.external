@@ -4,18 +4,20 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Goodbye, Turtle! 
+## Goodbye, Turtle! 
+<img src="https://images.code.org/69a519dbe1999cb10c4978f1f82e942c-image-1476478015272.gif" style="float: right; margin: 10px; width: 200px; border-radius: 5px; box-shadow: 3px 3px 10px #000055;">
 
-<img src="https://images.code.org/69a519dbe1999cb10c4978f1f82e942c-image-1476478015272.gif" style="float: right; width: 150px">
 Using the turtle as a form of output was helpful as we learned about UI elements and event handlers.
 
 But it's time to move on.  **Goodbye, fair turtle!** We'll miss you.
 
 Typically when you handle an event your code **makes changes to UI elements** to make a computation or update the app display in some way.  Since we only have one UI element right now, we'll just add code to change *it* every time we click it.
 
-### setPosition and Screen Dimensions
+<div style="clear: both;">&nbsp;</div>
 
-The `setPosition` command (now added to the Toolbox) you can move UI elements (and optionally set the size at the same time).  Here is the generic form which shows that: *for a given UI id, you can explicitly set the x,y location on the screen as well as the width and height*.
+# setPosition and Screen Dimensions
+
+The `setPosition` command (now added to the Toolbox) lets you move UI elements to an arbitrary position on the screen (and optionally set the size at the same time).  Here is the generic form which shows that: *for a given UI id, you can explicitly set the x,y location on the screen as well as the width and height*.
 
 <img src="https://images.code.org/6db4a1aa3b8a6d300a93e68314980ab7-image-1476887961934.png" style="display: block; margin: auto">
 

@@ -33,7 +33,8 @@
     "video_key": "C4_function_edit",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"NEW_Course_4_Artist_Functions_3_1\",\r\n  \"callout_text\": \"Click here to edit the new function so that it creates a square.\",\r\n  \"element_id\": \"#inProgram1\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -10,\r\n     \"y\": 20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "never_autoplay_video": "false",
-    "ideal": "13"
+    "ideal": "13",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

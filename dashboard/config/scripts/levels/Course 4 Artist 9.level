@@ -32,7 +32,8 @@
     "markdown_instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. ",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Need to know how much to turn? \\n\\nWhat is 360 divided by 10?\",\r\n  \"hint_id\": \"Course_4_Artist_9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

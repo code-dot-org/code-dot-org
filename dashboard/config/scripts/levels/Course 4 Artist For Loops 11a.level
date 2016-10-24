@@ -32,7 +32,8 @@
     "disable_sharing": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"360 divided by the number of sides a shape has is the number of degrees you'll need to turn. \",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_11a_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Each time, you will need to move forward by 10 times the length of the current number of sides. \",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_11a_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"360 divided by the number of sides a shape has is the number of degrees you'll need to turn. \",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_11a_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Each time, you will need to move forward by 10 times the length of the current number of sides. \",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_11a_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -47,12 +47,37 @@ ________________
 <a id="admin"></a>
 <br/>
 ## Administrator and Counselor Workshops
+**What will Code.org pay for?**
+
+Code.org will pay for up to 80 individuals to attend an Adminstrator or Counselor workshop. This includes printed materials & swag.
+
+**How payments are calculated**
+
+Your total rate for 2 workshops has been divided by 80 and turned into a per person rate which will be paid based on the number of individuals who attend each session. This was done to enable each of you to run more than 2 workshops throughout your region while still receiving the same amount of compensation. 
+
+**Example:**<br/>
+Per the MOU, Organization A is to receive:<br/>
+Venue:  $400 x 2 workshops = $800<br/>
+Food: 	 $20 per person x 80 people = $1,600<br/>
+Staffer: $250 x 2 workshops = $500<br/>
+Total:    $2,900
+
+Per person rate Code.org will pay (up to 80 people): $2,900/80 = $36.25
+
+**Can I Host Workshops for More than 80 People?**<br/>
+Yes, but you will need to cover these costs. 
+
+For swag, you can order additional swag bags and pay for them yourself through Mimeo. 
+For printed materials, you can order additional through Mimeo and pay for them or make copies on your own.
+Food, venue and staff time would also need to be covered by your organization.
+
 
 
 ________________
 <a id="community"></a>
 <br/>
 ## Community Events 
+To receive reimbursement for a community event, send an official invoice and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.
 
 
 

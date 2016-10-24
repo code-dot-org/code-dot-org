@@ -10,8 +10,8 @@ level 'grade2_CaringForNewPet_7D'
 level 'grade2_CaringForNewPet_11'
 level 'grade2_maze_debuggingFP'
 
-stage 'Caring for My New Pet'
-level 'grade2_unplugged_rlAlgorithms'
+stage 'Real-life Algorithms: Paper Planes'
+level 'PaperPlanes'
 
 stage 'At The Dog Park'
 level 'grade2_collector_pre1'
@@ -53,8 +53,8 @@ level 'courseC_puppy_loops9'
 level 'courseC_puppy_loops10'
 level 'courseC_puppy_loops11'
 
-stage 'Puppy Event'
-level 'grade2_unplugged_bigEvent'
+stage 'The Big Event'
+level 'BigEvent'
 
 stage 'Puppy Introduction'
 level 'course2_playlab_stage17_1'

@@ -21,6 +21,7 @@
 #     ON user_scripts.user_id = users.id
 #       AND user_scripts.script_id = sections.script_id
 #   WHERE users.created_at < '2014-09-15'
+#     AND sections.script_id IS NOT NULL
 #     AND (
 #       user_scripts.id IS NULL OR
 #       user_scripts.assigned_at IS NULL OR
@@ -58,13 +59,19 @@ begin
     ActiveRecord::Base.transaction do
       data_slice.each do |user_id, script_id, assigned_at|
         user_id_script_id = "#{user_id} , #{script_id}"
-        UserScript.create!(
+        user_script = UserScript.find_by(
           user_id: user_id,
-          script_id: script_id,
-          assigned_at: assigned_at,
-          created_at: TIME_NOW,
-          updated_at: TIME_NOW
+          script_id: script_id
         )
+        unless user_script
+          UserScript.create!(
+            user_id: user_id,
+            script_id: script_id,
+            assigned_at: assigned_at,
+            created_at: TIME_NOW,
+            updated_at: TIME_NOW
+          )
+        end
       end
     end
   end

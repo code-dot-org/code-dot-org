@@ -607,8 +607,6 @@
     този курс"
   dashboard_landing_educator_blog: "Прочетете за новини и актуализации на нашите материали
     в нашия учителски блог"
-  dashboard_landing_smart_hints: "Моля, помогнете ни да добавим умни съвети за Code.org
-    уроците"
   dashboard_landing_video_player: "Тествайте нашият нов видео плейър във вашето училище"
   dashboard_landing_progress_title: "Общ напредък на класа"
   dashboard_landing_progress_biggest: "Това е напредъкът във най-големия ви раздел."
@@ -897,14 +895,15 @@
   dashboard_faq: "Често задавани въпроси"
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: "Съобщения"
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Ние използвахме лятото за да превърнем
+    Вашата обратна връзка в нови функции. Сега можете да <a href="%{pp_url}" target="_blank">
+    следите напредъка на няколко ученици </a> дори ако те са включени в програмиране
+    по двойки на едно устройство. Можете да използвате <a href="%{csp_widgets_url}"
+    target="_blank"> най-добрите интерактивни инструменти</a> от нашия CS принципи
+    курс във <i>всяка</i> класна стая. А Вашите ученици могат да <a href="%{unused_code_url}"
+    target="_blank"> запазят неизползвания код</a> в работната област, така искаме
+    да насърчим експериментирането! Вижте всички наши нови функции и нека разберем
+    какво мислите.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -923,14 +922,14 @@
     съобщения.</a>"
   code_hoc_coming: "Часът на кода е тук - декември 8-14!"
   code_sign_up: "Регистрирайте се за участие по време на CS седмицата на образованието"
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: "Домакин на час"
+  learn_banner_title: "Присъединете се към нас за Часът на кода"
+  learn_banner_desc: "Часът на кода е глобално движение, достигнало до над 100 милиона
+    ученици в над 180 страни. Всеки, навсякъде, може да организира Часът на кода събитие.
+    Помогнете ни дадем възможност на всеки ученик да изучава компютърни науки! Организаторите
+    могат да следват нашия <a href='%{how_to_url}' target='_blank'> наръчник </a>
+    за преподаване на Часът на кода и вдъхновят учениците с <a href='%{videos_url}'
+    target='_blank'> тези клипове</a>."
   learn_more: "Научете повече"
   learn_sign_up_description: "Регистрирайте се, за да участвате в Hour of Code по
     време на CS образователната седмица"
@@ -1061,6 +1060,7 @@
   csp1_name: "Раздел 1: Интернет"
   csp2_name: "Част 1 - Дигитална информация"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "Пълен тест - 50 въпроса"
   cspexam1-mWU7ilDYM9_name: "Тест част 1-25 въпроси"
   cspexam2-AKwgAh1ac5_name: "Тест част 2 - 25 въпроси"
