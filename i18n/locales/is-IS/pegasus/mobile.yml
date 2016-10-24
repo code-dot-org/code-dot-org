@@ -480,7 +480,6 @@ is-IS:
   dashboard_landing_office_hours: Spurðu í eigin persónu! Komdu í mánaðarlega myndspjallstíma okkar.
   dashboard_landing_print_certificates: Prenta skírteini fyrir nemendur sem ljúka þessu námskeiði
   dashboard_landing_educator_blog: Lesa um fréttir og uppfærslur á efni okkar á kennarabloggi okkar
-  dashboard_landing_smart_hints: Vinsamlegast hjálpaðu okkur að bæta gagnlegum vísbendingum við kennsluna á Code.org
   dashboard_landing_video_player: Prófaðu nýja myndbandaspilarann okkar í skólanum þínum
   dashboard_landing_progress_title: Framvinda aðalhóps
   dashboard_landing_progress_biggest: Þetta er framvinda stærsta hópsins þíns.
@@ -824,6 +823,7 @@ is-IS:
   csp1_name: 'Kafli 1: Internetið'
   csp2_name: 'Kafli 2 - Stafrænar upplýsingar'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Fullt próf - 50 spurningar'
   cspexam1-mWU7ilDYM9_name: 'Prófhluti 1 - 25 spurningar'
   cspexam2-AKwgAh1ac5_name: 'Prófhluti 2 - 25 spurningar'

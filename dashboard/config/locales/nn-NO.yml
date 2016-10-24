@@ -330,6 +330,7 @@
       unsubmit: Trekk tilbake
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'E-postadressa di %{email} er ikkje blitt stadfesta:'

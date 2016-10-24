@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"At the end of each diamond, the artist is already facing the right direction to start the next one.  \\n\\nBecause of this, we don't need to add an extra `turn left by` block before we start again.\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_13_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To make each diamond, the artist needs to:   \\n- move\\n- turn right 120 degrees\\n- move\\n- turn right 60 degrees  \\n\\nThen do it all again!\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_13_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Why did we do this with diamonds?  Triangles would have been more appropriate for this age/level.",

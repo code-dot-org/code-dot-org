@@ -33,7 +33,8 @@
     "markdown_instructions": "We have created a new function for you called `draw a triangle`.  Can you edit the function definition to draw a triangle with 100 pixel sides?",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

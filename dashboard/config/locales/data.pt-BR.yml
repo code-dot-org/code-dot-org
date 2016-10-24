@@ -484,9 +484,9 @@
         studio_iceage_hello1: Sid quer reunir todos para uma nova aventura. Você pode
           ajudá-lo a dizer "olá" arrastando o bloco "diga" para nossa área de trabalho
           e digitando "olá" dentro dele?
-        studio_iceage_hello2: Sid (personagem 1) encontrou Manny (actor 2) e quer
-          convidá-lo para uma aventura. Ajude-os a cumprimentarem-se usando o bloco
-          "personagem diz" duas vezes.
+        studio_iceage_hello2: Sid (personagem 1) encontrou Manny (personagem 2) e
+          quer convidá-lo para uma aventura. Ajude-os a cumprimentarem-se usando o
+          bloco "personagem diz" duas vezes.
         studio_iceage_move_to_flag: O Scrat está procurando sua bolota! Ajude-o a
           andar os últimos 200 pixels usando o bloco "mova".
         studio_iceage_move_to_actor: Diego (personagem 1) está procurando por Manny

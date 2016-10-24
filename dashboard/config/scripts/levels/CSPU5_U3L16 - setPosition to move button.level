@@ -47,7 +47,7 @@
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "project_template_level_name": "U3L16 - projectTemplate",
+    "project_template_level_name": "CSPU5_clickerGame_v1_template",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
@@ -55,6 +55,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"randNumReminder\",\r\n  \"callout_text\": \"Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"randomNumber_min_max\\\"]\",\r\n  \"on\": \"showRand\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"Math\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,

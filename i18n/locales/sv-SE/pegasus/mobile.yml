@@ -185,7 +185,7 @@ sv-SE:
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -475,7 +475,6 @@ sv-SE:
   dashboard_landing_office_hours: 'Fråga en person! Besök våra månatliga video- kontorstider.'
   dashboard_landing_print_certificates: Skriva ut diplom för elever som avslutat kursen
   dashboard_landing_educator_blog: Läs om nyheter och uppdateringar till våra material på vår Educator Blog
-  dashboard_landing_smart_hints: Hjälp oss att lägga till smarta tips till Code.org övningar
   dashboard_landing_video_player: Testa vår nya video-spelare på din skola
   dashboard_landing_progress_title: Huvudklass framsteg
   dashboard_landing_progress_biggest: Detta är framstegen för din största avdelning.
@@ -820,6 +819,7 @@ sv-SE:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

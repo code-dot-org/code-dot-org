@@ -31,7 +31,8 @@
     "disable_sharing": "false",
     "markdown_instructions": "Now repeat this code 3 times and draw the whole row. \r\n\r\nEach hexagon is 80 pixels wide from the furthest points left to right.",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

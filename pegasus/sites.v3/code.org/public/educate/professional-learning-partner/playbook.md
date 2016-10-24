@@ -21,7 +21,7 @@ title: Professional Learning Partner Virtual Playbook
 <%= view :educate_box, item: {title_s: 'Ordering Supplies', description_t: "Guidance on ordering swag and materials and access to the Mimeo Marketplace", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/ordering-supplies"), button_s: "Learn more"} %>
 
 
-<%= view :educate_box, item: {title_s: 'Payment Information', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Payment Information', description_t: "Everything you need to know about how your organization will be compensated", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/payments"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Professional Learning Partner Directory', description_t: "Browse the list of Professional Learning Partners supporting the K-12 CS Education movement", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/directory"), button_s: "Learn more"} %>
 

@@ -32,7 +32,8 @@
     "disable_examples": "false",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"To have the `for` loop drive your movement, make sure that you're using `counter` as your distance.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "4/9/16 - Taking the red herring parameters out to make it arguably easier.",

@@ -87,8 +87,7 @@ module LevelsHelper
 
     return unless autoplay_video
 
-    client_state.add_video_seen(autoplay_video.key)
-    autoplay_video.summarize unless params[:noautoplay]
+    autoplay_video.summarize
   end
 
   def select_and_remember_callouts(always_show = false)
@@ -196,6 +195,9 @@ module LevelsHelper
       @app_options = view_options.camelize_keys
     end
 
+    # Blockly caches level properties, whereas this field depends on the user
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
+
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
       preTitle: @level.properties['pre_title'],
@@ -252,6 +254,10 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+
+    # teacherMarkdown lives on the base app_options object, to be consistent with
+    # Blockly levels, where it needs to avoid caching
+    app_options[:level]['teacherMarkdown'] = nil
 
     # ScriptLevel-dependent option
     script_level = @script_level

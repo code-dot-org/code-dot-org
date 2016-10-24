@@ -32,7 +32,8 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will have to use a `turn right by 120 degrees` block after each square.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will have to use a `turn right by 120 degrees` block after each square.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -31,7 +31,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If there are 360 degrees in a circle and each loop turns 3 degrees, how many times would you need to loop draw half of a full circle?\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_11_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
