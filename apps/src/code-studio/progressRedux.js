@@ -27,7 +27,7 @@ const initialState = {
   peerReviewsRequired: {},
   peerReviewsPerformed: [],
   showTeacherInfo: false,
-  bubbleColorsEnabled: true
+  bubbleColorsDisabled: false
 };
 
 /**
@@ -92,7 +92,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === DISABLE_BUBBLE_COLORS) {
     return {
       ...state,
-      bubbleColorsEnabled: false
+      bubbleColorsDisabled: true
     };
   }
 
