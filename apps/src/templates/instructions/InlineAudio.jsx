@@ -2,7 +2,6 @@
 
 import Radium from 'radium';
 import React from 'react';
-import experiments from '../../experiments';
 
 import { connect } from 'react-redux';
 
@@ -113,7 +112,7 @@ const InlineAudio = React.createClass({
   },
 
   render: function () {
-    if (experiments.isEnabled('tts') && this.getAudioSrc()) {
+    if (this.getAudioSrc()) {
       return (
         <div>
           <div style={[styles.button, styles.volumeButton]}>
