@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024154201) do
+ActiveRecord::Schema.define(version: 20161024164952) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -517,6 +517,19 @@ ActiveRecord::Schema.define(version: 20161024154201) do
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
   end
 
+  create_table "schools", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint   "id",                 null: false, comment: "NCES public school ID"
+    t.integer  "school_district_id", null: false
+    t.string   "name",               null: false
+    t.string   "city",               null: false
+    t.string   "state",              null: false
+    t.string   "zip",                null: false
+    t.string   "school_type",        null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
+  end
+
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "level_id"
     t.integer  "script_id",                 null: false
@@ -897,6 +910,7 @@ ActiveRecord::Schema.define(version: 20161024154201) do
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
   add_foreign_key "school_infos", "school_districts"
+  add_foreign_key "schools", "school_districts"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
