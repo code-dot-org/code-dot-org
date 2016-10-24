@@ -3,6 +3,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Radium from 'radium';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
@@ -10,7 +11,7 @@ import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import color from '../../../color';
 
-const borderRadius = 2;
+const borderRadius = 3;
 
 const styles = {
   input: {
@@ -51,14 +52,20 @@ const styles = {
     color: '#5b6770',
     marginBottom: 15
   },
+  levelTokenActive: {
+    padding: 7,
+    outline: '#3b99fc auto',
+    outlineOffset: '-2px'
+  },
   levelToken: {
     fontSize: 12,
     background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)',
     borderRadius: borderRadius,
-    padding: 7,
-    margin: '5px 0'
+    margin: '5px 0',
+    ':focus': {
+      outline: 0
+    }
   },
   controls: {
     float: 'right'
@@ -77,6 +84,34 @@ const styles = {
   levelTypeSelect: {
     width: 'calc(100% - 80px)',
     marginLeft: 80
+  },
+  reorder: {
+    fontSize: 16,
+    display: 'table-cell',
+    background: '#ddd',
+    border: '1px solid #bbb',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 15px',
+    borderTopLeftRadius: borderRadius,
+    borderBottomLeftRadius: borderRadius
+  },
+  remove: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: 'white',
+    background: '#c00',
+    border: '1px solid #a00',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    borderTopRightRadius: borderRadius,
+    borderBottomRightRadius: borderRadius
+  },
+  levelTokenName: {
+    padding: 7,
+    display: 'table-cell',
+    width: '100%',
+    borderTop: '1px solid #ddd',
+    borderBottom: '1px solid #ddd'
   }
 };
 
@@ -239,7 +274,7 @@ const StageEditor = React.createClass({
   }
 });
 
-const LevelEditor = React.createClass({
+const LevelEditor = Radium(React.createClass({
   propTypes: {
     level: React.PropTypes.object.isRequired
   },
@@ -258,7 +293,7 @@ const LevelEditor = React.createClass({
 
   render() {
     return (
-      <div style={styles.levelToken} onClick={this.handleClick}>
+      <div style={[this.state.expanded && styles.levelTokenActive, styles.levelToken]} onClick={this.handleClick}>
         {this.state.expanded ?
           <div>
             {this.props.level.ids.map(id => {
@@ -292,14 +327,22 @@ const LevelEditor = React.createClass({
             />
           </div> :
           <div>
-            {this.props.level.key}
-            {this.props.level.ids.length > 1 && ` (${this.props.level.ids.length} variants...)`}
+            <div style={styles.reorder}>
+              <i className="fa fa-arrows-v" />
+            </div>
+            <span style={styles.levelTokenName}>
+              {this.props.level.key}
+              {this.props.level.ids.length > 1 && ` (${this.props.level.ids.length} variants...)`}
+            </span>
+            <div style={styles.remove}>
+              <i className="fa fa-times" />
+            </div>
           </div>
         }
       </div>
     );
   }
-});
+}));
 
 const Controls = React.createClass({
   render() {
