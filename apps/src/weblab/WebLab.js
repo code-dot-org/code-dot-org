@@ -168,6 +168,10 @@ WebLab.prototype.init = function (config) {
     this.brambleHost.redo();
   }
 
+  function onRefreshPreview() {
+    this.brambleHost.refreshPreview();
+  }
+
   let inspectorOn = false;
   function onToggleInspector() {
     inspectorOn = !inspectorOn;
@@ -186,6 +190,7 @@ WebLab.prototype.init = function (config) {
         onAddFileImage={onAddFileImage.bind(this)}
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
+        onRefreshPreview={onRefreshPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
         onMount={onMount}
       />
