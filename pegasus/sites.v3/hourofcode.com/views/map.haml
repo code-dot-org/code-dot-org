@@ -1,5 +1,7 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
 -max_height_percentage = 0.65 if max_height_percentage.nil?
+-show_static_map ||= nil
+
 -if @company
   -company_name = hoc_s("company_" + @company)
   -company_total = format_integer_with_commas(company_count)
@@ -19,13 +21,18 @@
     %a{href: resolve_url("/events/all")}
       = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
 
-#gmap.full-width
-#belowmaplegend.legend
-  .legend-title= hoc_s(:map_legend_title)
-  .color.brown
-  %div= hoc_s(:map_legend_hoc_events)
-  .color.teal
-  %div= hoc_s(:map_legend_cs_tech_jam)
+-if show_static_map == true
+  #staticmap.full-width
+    %a{href: resolve_url('/map')}
+      %img{src: '/images/map.png', style: 'width: 100%;'}
+-else
+  #gmap.full-width
+  #belowmaplegend.legend
+    .legend-title= hoc_s(:map_legend_title)
+    .color.brown
+    %div= hoc_s(:map_legend_hoc_events)
+    .color.teal
+    %div= hoc_s(:map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
