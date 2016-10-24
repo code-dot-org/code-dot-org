@@ -162,7 +162,7 @@ window.apps = {
           }
           showVideoDialog(appOptions.autoplayVideo);
         } else {
-          if (noAutoplay) {
+          if (hasVideo && noAutoplay) {
             clientState.recordVideoSeen(appOptions.autoplayVideo.key);
           }
           if (hasInstructions) {
