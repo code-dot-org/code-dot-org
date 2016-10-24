@@ -327,6 +327,7 @@
       unsubmit: Poništi objavu
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
     email_confirm_needed_required: 'Vaša e-mail adresa %{email} nije još potvrđena:'

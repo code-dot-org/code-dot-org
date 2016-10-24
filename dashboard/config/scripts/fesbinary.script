@@ -1,5 +1,3 @@
-hidden false
-
 stage 'Binary Images'
 level 'BinaryImages'
 level 'grade5_pixelation'

@@ -2457,25 +2457,26 @@
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Nossa lição sobre abstração usa o conceito de madlibs, onde você basicamente
-          insere uma lacuna em uma história que pode ser preenchida com várias palavras
-          diferentes. Pegamos essa ideia, desafiamos as crianças para que inventem
-          suas próprias palavras para suas próprias histórias, e realmente explicarem
-          o conceito de abstração.
+        text: Nossa aula sobre abstração usa o conceito de mad libs, uma brincadeira
+          em que você basicamente coloca lacunas em uma história que podem ser preenchidas
+          com várias palavras diferentes. Usamos essa ideia, desafiamos as crianças
+          a sugerir as próprias palavras para suas próprias histórias, e realmente
+          explicar o conceito de abstração.
       2:
         image: notes/unplug8_2.png
-        text: Isso está relacionado a funções e como você pode ter uma função, como
-          na música do Old Macdonald, na qual você tem uma estrutura para o seu refrão,
-          mas também tem pequenas alterações, e você as abstrai preenchendo-as toda
-          vez com sua própria palavra. Mas às vezes você tem três palavras que mudam,
-          então você as preenche com três parâmetros, isso é muito útil.
+        text: Isso está relacionado a funções e como você pode usar uma função, como
+          na música do Old Macdonald, na qual você tem uma estrutura para o refrão,
+          mas também tem pequenas mudanças, e você abstrai essas pequenas mudanças
+          e pode preenchê-las a cada ocorrência com suas próprias palavras. Mas, às
+          vezes, você tem três palavras que mudam, então você as preenche com três
+          parâmetros, isso ainda é muito útil.
       3:
         image: notes/unplug8_3.png
         text: Você pode ter uma função que lida com vários problemas diferentes. Muitas
-          vezes, as pessoas vão escrever funções separadas para todos esses problemas,
-          sem perceber que há apenas uma pequena diferença. Se elas pudessem encontrar
-          uma maneira de lidar com essa pequena diferença, elas poderiam reutilizar
-          uma função várias vezes, ao invés de ter 14 funções diferentes.
+          vezes, as pessoas escrevem funções separadas para cada um desses problemas,
+          sem perceber que há apenas uma pequena diferença. Se ao menos elas pudessem
+          encontrar uma maneira de lidar com essa pequena diferença, elas poderiam
+          reutilizar uma função várias vezes, em vez de ter 14 funções diferentes.
     unplug9:
       1:
         image: notes/unplug9_1.png
@@ -2485,12 +2486,12 @@
           adicionar um pouco de emoção à ciência da computação.
       2:
         image: notes/unplug9_2.png
-        text: Você divide todo o mundo em dois grupos nos quais eles ficam em uma
-          fila e correm no estilo revezamento. A primeira pessoa em cada grupo corre
-          até o outro lado da sala, onde há um papel de desenho quadriculado e um
-          papel em branco esperando por eles. Eles escrevem o primeiro passo para
-          criar essa imagem, voltam correndo para a fila e o próximo jogador vai correndo
-          escrever o próximo passo.
+        text: Divida a turma em dois grupos, de modo que fiquem em fila e corram no
+          estilo revezamento. A primeira pessoa de cada grupo corre até o outro lado
+          da sala, onde há um papel de desenho quadriculado e um papel em branco esperando
+          por eles. Eles devem escrever o primeiro passo para criar essa imagem, voltar
+          correndo para a fila, e tocar no próximo jogador que vai correr para escrever
+          o próximo passo.
       3:
         image: notes/unplug9_3.png
         text: Essa é uma ótima maneira de passar a ideia de depuração, a necessidade
@@ -2501,38 +2502,38 @@
       1:
         image: notes/unplug10_1.png
         text: Essa atividade explica, de uma forma fácil de entender, como a internet
-          funciona. Explicamos todas as terminologias que você irá precisar em termos
+          funciona. Explicamos toda a terminologia que você terá que usar de uma maneira
           simples, para que os alunos possam simular transmissões de mensagens, como
-          um e-mail.
+          em um e-mail.
       2:
         image: notes/unplug10_2.png
         text: Os alunos vão transmitir mensagens enquanto fingem ser um dos três métodos
-          de transmissão. Internet sem fio, DSL ou fibra ótica. Os alunos que representam
-          o wi-fi precisam equilibrar a mensagem que eles estão enviando na cabeça,
-          porque o wi-fi tem a maior probabilidade de perder alguma informação.
+          de transmissão. Internet sem fio, DSL ou fibra óptica. Os alunos que representarem
+          o wi-fi precisarão equilibrar a mensagem a ser enviada na cabeça, porque
+          o wi-fi tem a maior probabilidade de perder alguma informação.
       3:
         image: notes/unplug10_3.png
-        text: Os alunos que fingem ser o DSL ou o cabo vão carregar a mensagem nas
-          costas de suas mãos, local com menor probabilidade de perder a informação.
-          E os alunos que representam a fibra ótica vão carregar a mensagem com as
-          duas mãos. Essa atividade é uma ótima forma de compreender algo que muitos
-          de nós usamos todos os dias.
+        text: Os alunos que fizerem o papel do DSL ou do cabo vão carregar a mensagem
+          nas costas das mãos, local com uma probabilidade um pouco menor de perder
+          informações. E os alunos que representarem a fibra óptica vão carregar a
+          mensagem com as duas mãos. Essa atividade é uma ótima forma de compreender
+          algo que muitos de nós usamos todos os dias.
     unplug11:
       1:
         image: notes/unplug11_1.png
         text: Então, agora é hora de dar um passo para trás e dar uma olhada em tudo
-          o que você fez nas últimas dezenove lições. Essa é uma ótima hora para dizer
-          aos alunos que o que eles fizeram já é uma grande conquista. Eles aprenderam
-          mais nessas lições do que muitos adultos sabem sobre ciência da computação.
+          o que você fez nas últimas 19 aulas. Essa é uma ótima hora para dizer aos
+          alunos que o que eles fizeram já é uma grande conquista. Eles aprenderam
+          mais nessas aulas do que a maioria dos adultos sabe sobre ciência da computação.
       2:
         image: notes/unplug11_2.png
-        text: Discuta com a sala toda ou em grupos pequenos sobre suas lições favoritas.
-          Quando você olhar para tudo o que aprendeu, é o momento no qual pode brilhar
-          a criatividade de seus alunos. Divida-os em grupos e peçam para que eles
-          criem sua própria lição offline. Atribua um conceito chave para cada grupo,
-          como funções ou algoritmos, e dê materiais para que eles usem. Peça para
-          que cada grupo apresente sua nova atividade ou até mesmo reserve outro dia
-          para realizar as atividades criadas pelos alunos.
+        text: Discuta com a sala toda ou em grupos pequenos sobre as aulas favoritas
+          dos alunos. Ao analisar tudo o que aprendeu, será o momento de deixar a
+          a criatividade de seus alunos brilhar. Divida-os em grupos e peça para eles
+          criarem sua própria aula off-line. Atribua um conceito principal a cada
+          grupo, como funções ou algoritmos, e disponibilize vários materiais a eles.
+          Peça que cada grupo apresente sua nova atividade off-line, e você pode até
+          reservar outro dia para realizar algumas das atividades criadas pelos alunos.
       3:
         image: notes/unplug11_3.png
         text: De todos aqui da Code.org, esperamos que você tenha tido uma TONELADA
@@ -2543,12 +2544,12 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Oi, sou Kathleen Kennedy, produtora de Star Wars, O Despertar da Força.
-          Hoje, você vai trabalhar com um dos nossos astros, BB-8. BB-8 é um androide
+        text: 'Oi, sou Kathleen Kennedy, produtora de Star Wars: O Despertar da Força.
+          Hoje, você vai trabalhar com um dos nossos astros, BB-8. BB-8 é um robô
           esférico. Tudo o que ele faz e todos os seus movimentos são controlados
-          por softwares de computador. A ciência da computação tem impacto sobre todas
-          as indústrias, do marketing à saúde, aos filmes. De fato, centenas de engenheiros
-          da computação trabalham juntos para criar um filme como O Despertar da Força.
+          por softwares de computador. A Ciência da computação tem impacto sobre todos
+          os setores, do marketing à saúde, aos filmes. Na verdade, centenas de engenheiros
+          da computação trabalham juntos para criar um filme como O Despertar da Força.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Oi, sou Rachel Rose, engenheira sênior de P&D na ILM, e lidero a equipe
@@ -2654,7 +2655,7 @@
           e a tecnologia é essencial para isso.
       2:
         image: notes/starwars_events_2.JPG
-        text: Parabéns, você conseguiu! Você programou BB-8. Agora, acho que estamos
+        text: Parabéns, você conseguiu! Você programou o BB-8. Agora acho que estamos
           prontos para algo mais difícil. Vamos tentar. Agora que você aprendeu os
           conceitos básicos da programação, vamos voltar no tempo para você criar
           seu próprio jogo, estrelando R2-D2 e C3PO.
@@ -2793,7 +2794,7 @@
           e a tecnologia é essencial para isso.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Parabéns, você conseguiu! Você programou BB-8. Agora, acho que estamos
+        text: Parabéns, você conseguiu! Você programou o BB-8. Agora acho que estamos
           prontos para algo mais difícil. Vamos tentar. Agora que você aprendeu os
           conceitos básicos da programação, vamos voltar no tempo para você criar
           seu próprio jogo, estrelando R2-D2 e C3PO.
@@ -3025,23 +3026,23 @@
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: Se você quiser fazer seu próprio jogo, isso é realmente fácil. Tudo
-          o que você precisa são alguns conceitos básicos de programação e você pode
-          começar a jogar o jogo que você criou.
+        text: Fazer seu próprio jogo é realmente fácil. Tudo o que você precisa são
+          alguns conceitos básicos de programação e você pode começar a se divertir
+          com o jogo que você criou.
       2:
         image: notes/gumball_intro_2.JPG
-        text: Você tem um jogo favorito? Vamos dar um passo para a criação de jogos
-          tal como esse no PlayLab. Bons jogos têm uma história, e toda história tem
-          personagens. Os personagens fazem coisas como falar, se mover e interagir
-          uns com os outros. Talvez até mesmo marcar pontos com base nas regras do
-          jogo. Hoje, vamos aprender como fazer todas essas coisas, uma a uma, com
-          personagens divertidos e vamos criar um jogo do zero, que pode ser compartilhado
-          e jogado em um celular.
+        text: Qual é seu videogame preferido? Vamos dar o primeiro passo para a criação
+          de jogos como esse no PlayLab. Bons jogos têm uma história, e toda história
+          tem personagens. Os personagens fazem coisas como falar, se mover e interagir
+          uns com os outros. Eles podem inclusive marcar pontos com base nas regras
+          do jogo. Hoje, vamos aprender como fazer todas essas coisas, uma a uma,
+          com personagens divertidos e, em seguida, vamos criar um jogo do zero, que
+          pode ser compartilhado e jogado em um smartphone.
       3:
         image: notes/gumball_intro_3.JPG
-        text: Hoje, vamos aprender a fazer todas essas coisas, uma por uma, com personagens
-          divertidos e vamos criar um jogo do zero, que pode ser compartilhado e jogado
-          em um celular.
+        text: Hoje, vamos aprender a fazer todas essas coisas, uma a uma, com personagens
+          divertidos e, em seguida, vamos criar um jogo do zero, que pode ser compartilhado
+          e jogado em um smartphone.
       4:
         image: notes/gumball_intro_4.JPG
         text: Sua tela está dividida em três partes principais. À esquerda está o
@@ -3049,8 +3050,8 @@
           nível estão escritas abaixo.
       5:
         image: notes/gumball_intro_5.JPG
-        text: Essa área do meio é a caixa de ferramentas e cada um desses blocos é
-          um trecho de código.
+        text: Essa área do meio é a caixa de ferramentas, e cada um desses blocos
+          é uma parte de código.
       6:
         image: notes/gumball_intro_6.JPG
         text: O espaço branco à direita é chamado área de trabalho e é aqui que vamos
@@ -3058,14 +3059,14 @@
       7:
         image: notes/gumball_intro_7.JPG
         text: Para começar, você terá que conectar seus blocos ao bloco laranja "quando
-          executar". É possível conectar diversos blocos uns aos outros, arrastando-os
-          até ver a linha amarela e, então, eles se encaixam.
+          executar". É possível conectar diversos blocos, arrastando-os até ver a
+          linha amarela e, então, eles vão se encaixar.
       8:
         image: notes/gumball_intro_8.JPG
-        text: Nesse primeiro desafio, vamos fazer os personagens dizerem algo conectando
+        text: Neste primeiro desafio, vamos fazer os personagens dizerem algo conectando
           o bloco "diga" ao bloco "quando executar" e digitando sua mensagem. Quando
-          você colocar os blocos no lugar, pressione o botão Executar e veja o que
-          programou.
+          você colocar os blocos no lugar certo, pressione o botão "Executar" e veja
+          o que programou.
       9:
         image: notes/gumball_intro_9.JPG
         text: Comece e, quando terminar, você vai poder criar seu próprio jogo, com
@@ -3076,42 +3077,41 @@
         image: notes/gumball_events_1.JPG
         text: 'Agora, vamos aprender um pouco sobre algo que todos os programadores
           de jogos usam todos os dias: os eventos. Um evento diz ao seu programa que
-          ele deve ouvir quando algo acontece e, quando essa coisa acontece, ele realiza
-          uma ação.'
+          ele deve ouvir quando algo acontece e, quando essa coisa acontece, o jogo
+          realiza uma ação.'
       2:
         image: notes/gumball_events_2.JPG
         text: 'Alguns exemplos de eventos são: detectar um clique do mouse, o toque
           de uma tecla de direção ou um toque na tela.'
       3:
         image: notes/gumball_events_3.JPG
-        text: Aqui, vamos fazer seu personagem dizer alguma coisa quando o jogador
-          clicar nele. Vamos usar o bloco "quando clicado" e anexar o bloco "diga"
-          à ele. Quando o jogador clicar, todos os blocos anexados a esse bloco serão
-          executados.
+        text: Aqui, vamos fazer o personagem dizer alguma coisa quando o jogador clicar
+          nele. Vamos usar o bloco "quando clicado" e conectar o bloco "diga" a ele.
+          Quando o jogador clicar, todos os blocos conectados a esse bloco serão executados.
       4:
         image: notes/gumball_events_4.JPG
         text: Há também os blocos "quando a seta estiver pressionada". Se você conectar
-          os blocos "mova" a eles, você pode começar a mover seus personagens para
+          os blocos "mova" a eles, você poderá começar a mover seus personagens para
           cima, para baixo, para esquerda e para a direita com as setas do teclado.
           Pouco a pouco, seu jogo está ficando cada vez mais interativo.
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Você consegue imaginar se tivesse que repetir algo para todo o sempre?
-          Felizmente você nunca vai precisar fazer isso, porque os computadores são
-          realmente bons em repetir coisas.
+        text: Você consegue imaginar como seria se tivesse que repetir algo para todo
+          o sempre? Felizmente, você nunca vai precisar fazer isso, porque os computadores
+          são realmente bons em repetir coisas.
       2:
         image: notes/gumball_repeat_2.JPG
         text: Esse é o bloco "repita infinitamente". Tudo dentro desse bloco vai acontecer
-          para sempre no jogo. Se queremos que um personagem faça algo repetidamente
-          sem que o jogador faça nada, vamos colocar esses blocos dentro do bloco
-          "repita infinitamente".
+          para sempre no jogo. Se quisermos que um personagem faça algo repetidamente
+          sem que o jogador precise fazer nada, colocaremos esses blocos dentro do
+          bloco "repita infinitamente".
       3:
         image: notes/gumball_repeat_3.JPG
-        text: Nesse próximo desafio, nosso objetivo é ajudar o personagem a realizar
-          algo continuamente. Aprender sobre o funcionamento dos comandos de repetição
-          vai ajudar você a economizar muito tempo no futuro, quando você criar seu
-          próprio jogo.
+        text: Neste próximo desafio, nosso objetivo é ajudar o personagem a realizar
+          algo continuamente. Aprender sobre como os comandos de repetição funcionam
+          ajudará você a economizar muito tempo no futuro, quando você criar seu próprio
+          jogo.
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
