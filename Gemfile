@@ -46,7 +46,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rerun', '~> 0.10.0'
+  gem 'rerun'
   gem 'shotgun'
   gem 'rack-cache'
   # Use debugger
