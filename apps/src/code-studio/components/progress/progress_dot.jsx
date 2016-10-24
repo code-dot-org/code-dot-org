@@ -205,18 +205,6 @@ export const ProgressDot = Radium(React.createClass({
       this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
     const levelUrl = isLocked ? undefined : level.url + location.search;
 
-    const fooStyle = [
-      styles.dot.common,
-      isLocked ? styles.dot.lockedReview : styles.dot.puzzle,
-      this.props.courseOverviewPage && styles.dot.overview,
-      smallDot && styles.dot.small,
-      level.kind === 'assessment' && styles.dot.assessment,
-      outlineCurrent && {borderColor: color.level_current},
-      showUnplugged && styles.dot.unplugged,
-      styles.status[levelStatus || LevelStatus.not_tried],
-    ];
-    console.log(fooStyle);
-
     return (
       <a
         key="link"
