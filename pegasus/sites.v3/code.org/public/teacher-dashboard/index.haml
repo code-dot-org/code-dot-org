@@ -183,15 +183,17 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.save = function(section) {
-      var course = $scope.course_list.find(function(course) {
-        return course.id === section.course.id;
-      })
-      if ($scope.hocAssignWarningEnabled &&
-          !$scope.hocAssignWarningShown &&
-          course.category === $scope.hocCategoryName) {
-        $scope.sectionToSave = $scope.sections.indexOf(section);
-        $('#assign-confirm').modal('show');
-        return;
+      if (section.course) {
+        var course = $scope.course_list.find(function(course) {
+          return course.id === section.course.id;
+        });
+        if ($scope.hocAssignWarningEnabled &&
+            !$scope.hocAssignWarningShown &&
+            course.category === $scope.hocCategoryName) {
+          $scope.sectionToSave = $scope.sections.indexOf(section);
+          $('#assign-confirm').modal('show');
+          return;
+        }
       }
       $scope.send_save(section);
     };

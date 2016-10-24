@@ -1,0 +1,25 @@
+name 'CSPU5_U3- L12 -Design Mode SFLP'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 12 - Introducing Design Mode
+
+## Background
+
+Designing modern applications entails both creating the user interface (UI) and defining how it will behave when the user interacts with it. Since user interface design is largely a visual process, it is much easier to complete this portion of an application using a visual tool. This lesson introduces Design Mode as an easy way to add and modify elements in your application. In this lesson, we will learn the basics of Design Mode and recreate the game from the last lesson with the addition of multiple screens.
+
+## Lesson
+
+* Setting up a button using Design Mode
+* Setting up an image using Design Mode
+* Creating multi-screen apps using Design Mode
+* Improving the "Chaser Game" with addition of multiple screens and sound
+
+## Resources
+
+* Tutorial video: Design Mode in App Lab
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/-EoTeD4mSNU?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

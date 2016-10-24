@@ -473,7 +473,6 @@
   dashboard_landing_office_hours: "面对面问问题！请访问我们每月的视频办公时间。"
   dashboard_landing_print_certificates: "为完成此课程的学生打印证书"
   dashboard_landing_educator_blog: "阅读有关新闻和我们在教育家博客的材料的更新"
-  dashboard_landing_smart_hints: "请帮助我们将智能提示添加到 Code.org 教程"
   dashboard_landing_video_player: "在你的学校测试我们新的视频。"
   dashboard_landing_progress_title: "主要课程进度"
   dashboard_landing_progress_biggest: "这是您主要课程的进度。"
@@ -846,6 +845,7 @@
   csp1_name: "第一单元：互联网"
   csp2_name: "单元 2︰ 数字信息"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "完整测试 - 共50题"
   cspexam1-mWU7ilDYM9_name: "测试部分 1 - 25 个问题"
   cspexam2-AKwgAh1ac5_name: "测试部分 2 - 25 个问题"

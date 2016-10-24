@@ -3,9 +3,16 @@
 
 import React from 'react';
 
+const styles = {
+  roboticsButtonImage: {
+    marginTop: 10,
+    marginBottom: 20
+  }
+};
+
 const RoboticsButton = (props) => (
   <a href="/learn2016/robotics">
-    <img src="/images/learn/robotics-link.png" style={{marginTop: 10}}/>
+    <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
   </a>
 );
 
