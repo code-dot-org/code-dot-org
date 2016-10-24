@@ -11,7 +11,6 @@
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/07_V2.gif",
     "skip_instructions_popup": "false",
     "ideal": "3",
     "disable_param_editing": "true",
@@ -29,7 +28,9 @@
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\r\n  \"hint_id\": \"K2.0_sequence_3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "Something is not quite right. REMOVE a block to get me to the pig!\r\n\r\n![](https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif)",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",

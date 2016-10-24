@@ -11,7 +11,6 @@
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "skip_instructions_popup": "true",
     "ideal": "6",
     "disable_param_editing": "true",
@@ -28,7 +27,10 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There is 1 block that you need to add to move the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade1_maze_sequence6_1\",\r\n  \"callout_text\": \"These grey blocks are made of stone!  That means that they can't be trashed.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
@@ -44,7 +46,7 @@
               <next>
                 <block type="maze_moveWest" movable="false">
                   <next>
-                    <block type="maze_moveNorth" deletable="false">
+                    <block type="maze_moveNorth" deletable="false" id="callMe">
                       <next>
                         <block type="maze_moveNorth" deletable="false"/>
                       </next>
