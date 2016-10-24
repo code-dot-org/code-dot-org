@@ -22,6 +22,7 @@ import {
   disableBubbleColors
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
+import experiments from '@cdo/apps/experiments';
 
 var progress = module.exports;
 
@@ -65,7 +66,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     store.dispatch(getHiddenStages(scriptData.name));
   }
 
-  if (scriptData.disablePostMilestone) {
+  if (scriptData.disablePostMilestone || experiments.isEnabled('disableBubbleColors')) {
     store.dispatch(disableBubbleColors());
   }
 

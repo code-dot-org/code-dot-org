@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import { getStore } from '../redux';
 import { disableBubbleColors } from '../progressRedux';
+import experiments from '@cdo/apps/experiments';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
@@ -110,7 +111,7 @@ module.exports = function (callback) {
         progress.refreshStageProgress();
       }
 
-      if (data.disablePostMilestone) {
+      if (data.disablePostMilestone || experiments.isEnabled('disableBubbleColors')) {
         getStore().dispatch(disableBubbleColors());
         // TODO - move this into React
         $("#progresswarning").show();
