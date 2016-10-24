@@ -1,10 +1,12 @@
 
 When(/^I begin to edit the direction of turn block "([^"]*)"$/) do |block|
-  @browser.execute_script("$(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(1)\").simulate('click');")
+  @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(1)\")[0], 'mousedown');")
+  @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(1)\")[0], 'mouseup');")
 end
 
 When(/^I begin to edit the angle of turn block "([^"]*)"$/) do |block|
-  @browser.execute_script("$(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(2)\").simulate('click');")
+  @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(2)\")[0], 'mousedown');")
+  @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(2)\")[0], 'mouseup');")
 end
 
 When(/^I change the angle text to "(\d*)"$/) do |val|
