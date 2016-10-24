@@ -24,13 +24,13 @@ class School < ActiveRecord::Base
   # and is then exported into a tab-separated file.
   # The data format is described at http://nces.ed.gov/ccd/pdf/2015150_sc132a_Documentation_052716.pdf
   CSV_HEADERS = {
-    :id => 'NCESSCH',
-    :school_district_id => 'LEAID',
-    :name => 'SCHNAM',
-    :city => 'LCITY',
-    :state => 'LSTATE',
-    :zip => 'LZIP',
-    :charter_status => 'CHARTR',
+    id: 'NCESSCH',
+    school_district_id: 'LEAID',
+    name: 'SCHNAM',
+    city: 'LCITY',
+    state: 'LSTATE',
+    zip: 'LZIP',
+    charter_status: 'CHARTR',
   }.freeze
 
   # Use the zero byte as the quote character to allow importing double quotes
