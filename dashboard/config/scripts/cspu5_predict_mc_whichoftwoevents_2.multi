@@ -7,13 +7,17 @@ wrong 'First onEvent block wins - the turtle will only move forward'
 wrong 'Last onEvent block wins - the turtle will only turn left'
 
 markdown <<MARKDOWN
-# Prediction Time!
-Good programmers do prediction all the time. **They don't expect their code is correct the first time they write it.** Instead they get in the habit of running their code, checking their assumptions, and making changes as needed. Programming isn't a fixed set of steps. It's a creative and continuous cycle of writing, testing, and improving code.
-
 # Predict - Observe - Reflect
+
+Here's another one!
 
 This program creates a button and **two event handlers** which listen for a click on that button. 
 
-**Predict:** What will happen when the "Forward" button is clicked? Force yourself to make a prediction about what the turtle will do! 
+**Predict:** What will happen when the "Forward" button is clicked? 
+
+* Hint: the result might be a little unexpected.
+* Trace the code and make a logical guess.
+
+**NOTE:** if you end up being wrong that's ok! Make sure you understand why.
 
 MARKDOWN

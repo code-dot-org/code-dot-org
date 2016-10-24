@@ -46,12 +46,9 @@
     "markdown_instructions": "# rotationSpeed\r\n\r\nYou've already learned how to make your sprite spin by using the `rotation` block.  For example, when you wanted your sprite to rotate by two degrees each time it was drawn, you put `sprite.rotation = sprite.rotation + 2` inside the draw loop.\r\n\r\nNow, you can use `rotationSpeed` to make your sprites rotate by a certain amount each time they are drawn. If you want your sun to rotate by two degrees each time it's drawn, you can use `sun.rotationSpeed = 2` before the draw loop, after you create your sprite.\r\n\r\n# Do This\r\n\r\nMake the sun rotate by 3 degrees each time using the `rotationSpeed` block.",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false"
+    "all_animations_single_frame": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -181,6 +181,7 @@ var ShareDialog = React.createClass({
                onClickExport={this.props.onClickExport}
                expanded={this.state.showAdvancedOptions}
                onExpand={this.showAdvancedOptions}
+               channelId={this.props.channelId}
              />}
             {/* Awkward that this is called continue-button, when text is
             close, but id is (unfortunately) used for styling */}

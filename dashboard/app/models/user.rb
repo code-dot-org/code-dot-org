@@ -775,21 +775,6 @@ class User < ActiveRecord::Base
   # was introduced (cf. code-dot-org/website-ci#194).
   # TODO apply this migration to all users in database, then remove.
   def backfill_user_scripts
-    # backfill assigned scripts
-    followeds.each do |follower|
-      script = follower.section && follower.section.script
-      next unless script
-
-      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
-        user_script.assigned_at = follower.created_at if
-          follower.created_at &&
-          (!user_script.assigned_at || follower.created_at < user_script.assigned_at)
-
-        user_script.save! if user_script.changed? && !user_script.empty?
-      end
-    end
-
     # backfill progress in scripts
     Script.all.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do

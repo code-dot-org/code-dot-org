@@ -28,6 +28,7 @@
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This path is a zig-zag. You need to move forward 3 times and turn 2 times.\",\r\n  \"hint_id\": \"hint2\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.\",\r\n  \"hint_id\": \"hint3\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "*\"Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!\"*",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade2_CaringForNewPet_3_1\",\r\n  \"callout_text\": \"This is your block limit.  It tells you how many of these blocks you have left to use.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 7,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -42,7 +43,7 @@
         <block type="maze_turn" limit="2">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="maze_turn" limit="2">
+        <block type="maze_turn" limit="2" id="callMe">
           <title name="DIR">turnRight</title>
         </block>
       </xml>

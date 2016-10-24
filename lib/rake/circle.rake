@@ -21,7 +21,7 @@ RUN_ALL_TESTS_TAG = 'test all'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
-# Run UI tests again ChromeLatestWin7
+# Run UI tests against ChromeLatestWin7
 TEST_CHROME_TAG = 'test chrome'.freeze
 
 # Run UI tests against Firefox45Win7
@@ -79,10 +79,10 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
             " --feature #{container_eyes_features.join(',')}" \
+            " --config ChromeLatestWin7,iPhone" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
-            " --config ChromeLatestWin7,iPhone" \
             " --parallel 10" \
             " --retry_count 1" \
             " --html"

@@ -662,34 +662,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "backfill user_scripts backfills assigned_at" do
-    begin
-      Follower.record_timestamps = false
-
-      assigned_date = Time.now - 20.days
-
-      student = create :student
-      section = create :section, script: Script.find_by_name('course1')
-      create :follower, student_user: student, section: section, created_at: assigned_date
-
-      # pretend we created this script before we had the callback to create user_scripts
-      UserScript.last.destroy
-
-      assert_creates(UserScript) do
-        student.backfill_user_scripts
-      end
-
-      user_script = UserScript.last
-      assert_equal nil, user_script.started_at
-      assert_equal nil, user_script.last_progress_at
-      assert_equal assigned_date.to_i, user_script.assigned_at.to_i
-      assert_equal nil, user_script.completed_at
-
-    ensure
-      UserLevel.record_timestamps = true
-    end
-  end
-
   def complete_script_for_user(user, script, completed_date = Time.now)
     # complete all except last level a day earlier
     script.script_levels[0..-2].each do |sl|

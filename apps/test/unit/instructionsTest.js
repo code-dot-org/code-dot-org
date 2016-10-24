@@ -148,7 +148,7 @@ describe('determineInstructionsConstants', () => {
         hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
-        overlayVisible
+        overlayVisible,
       }));
 
       results.forEach(result => {
@@ -257,7 +257,8 @@ describe('determineInstructionsConstants', () => {
           shortInstructions2: undefined,
           longInstructions: 'markdown',
           hasContainedLevels,
-          overlayVisible
+          overlayVisible,
+          teacherMarkdown: undefined
         });
       });
     });
@@ -283,7 +284,8 @@ describe('determineInstructionsConstants', () => {
         shortInstructions2: undefined,
         longInstructions: undefined,
         hasContainedLevels,
-        overlayVisible
+        overlayVisible,
+        teacherMarkdown: undefined
       });
     });
 
@@ -309,7 +311,8 @@ describe('determineInstructionsConstants', () => {
         shortInstructions2: undefined,
         longInstructions: undefined,
         hasContainedLevels,
-        overlayVisible
+        overlayVisible,
+        teacherMarkdown: undefined
       });
     });
 
