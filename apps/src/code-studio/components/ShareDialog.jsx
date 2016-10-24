@@ -4,6 +4,8 @@ import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './abuse_error';
 import SendToPhone from './SendToPhone';
 import color from '../../color';
+import * as applabConstants from '../../applab/constants';
+import * as gamelabConstants from '../../gamelab/constants';
 
 function select(event) {
   event.target.select();
@@ -112,6 +114,22 @@ var ShareDialog = React.createClass({
       !this.props.canShareSocial &&
       (this.props.appType === 'applab' || this.props.appType === 'gamelab')
     );
+    let embedOptions;
+    if (this.props.appType === 'applab') {
+      embedOptions = {
+        // If you change this width and height, make sure to update the
+        // #visualizationColumn.wireframeShare css
+        iframeHeight: applabConstants.APP_HEIGHT + 140,
+        iframeWidth: applabConstants.APP_WIDTH + 32,
+      };
+    } else if (this.props.appType === 'gamelab') {
+      embedOptions = {
+        // If you change this width and height, make sure to update the
+        // #visualizationColumn.wireframeShare css
+        iframeHeight: gamelabConstants.GAME_HEIGHT + 357,
+        iframeWidth: gamelabConstants.GAME_WIDTH + 32,
+      };
+    }
     return (
       <BaseDialog
         useDeprecatedGlobalStyles
@@ -175,12 +193,14 @@ var ShareDialog = React.createClass({
                appType={this.props.appType}
                styles={{label:{marginTop: 15, marginBottom: 0}}}
              />}
-            {this.props.appType === 'applab' &&
+            {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
              <AdvancedShareOptions
                i18n={this.props.i18n}
                onClickExport={this.props.onClickExport}
                expanded={this.state.showAdvancedOptions}
                onExpand={this.showAdvancedOptions}
+               channelId={this.props.channelId}
+               embedOptions={embedOptions}
              />}
             {/* Awkward that this is called continue-button, when text is
             close, but id is (unfortunately) used for styling */}

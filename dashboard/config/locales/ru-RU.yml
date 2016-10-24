@@ -344,6 +344,7 @@
       unsubmit: "Не отправлять"
       worked_with: "Работал с"
       update_lock_settings: "Обновите настройки блокировки здесь."
+      clear_response: Clear response
   user:
     email_confirm_needed: "Адрес электронной почты не был подтвержден:"
     email_confirm_needed_required: "Адрес вашей электронной почты %{email} не был
@@ -936,6 +937,6 @@
   locked_stage: "Содержимое этого этапа скрыто, потому что он в настоящее время заблокирован.
     Ваш учитель может разблокировать этот этап, когда придет время для работы на нем
     или для просмотра ваших ответов."
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  hidden_stage: "Ваш учитель не ожидал увидеть вас здесь. Пожалуйста, спросите у него
+    на каком уроке вы должны быть."
+  return_course_overview: "Перейти к обзору темы"

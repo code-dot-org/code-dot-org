@@ -30,7 +30,15 @@
     "impressive": "false",
     "disable_sharing": "false",
     "markdown_instructions": "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.\r\n\r\n",
-    "examples_required": "false"
+    "examples_required": "false",
+    "contained_level_names": null,
+    "instructions_important": "true",
+    "never_autoplay_video": "false",
+    "discard_background": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

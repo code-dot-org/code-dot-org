@@ -15,6 +15,7 @@ import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
 import Header from './header';
 import SurveyResults from './survey_results.jsx';
+import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import WorkshopIndex from './workshop_index';
 import WorkshopAttendance from './attendance/workshop_attendance';
 
@@ -36,6 +37,11 @@ const WorkshopDashboard = (
         path="survey_results"
         breadcrumbs="Survey Results"
         component={SurveyResults}
+      />
+      <Route
+        path="organizer_survey_results"
+        breadcrumbs="Organizer Survey Results"
+        component={OrganizerSurveyResults}
       />
       <Route
         path="workshops/new"

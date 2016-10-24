@@ -281,6 +281,7 @@ en:
       unsubmit: crwdns49668:0crwdne49668:0
       worked_with: crwdns57406:0crwdne57406:0
       update_lock_settings: crwdns58506:0crwdne58506:0
+      clear_response: crwdns67458:0crwdne67458:0
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
     email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'

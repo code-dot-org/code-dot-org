@@ -112,6 +112,11 @@ October 2016:
 
 - Supplies for Counselor and Administrator PD - [Video](http://videos.code.org/plp/counselor_administrator_supplies.mp4)
 - Supplies for Counselor and Administrator PD - [Slides](https://docs.google.com/presentation/d/1RQeBL7rTcWnqzM48xNv8f1J3da5OVboekLJyw3_WeSk/edit#slide=id.gb846b8ce1_0_5)
+- Hour of Code - [Slides](https://docs.google.com/presentation/d/12NF2r50USaxA7gReTFvBTv-6ggJ0wQHmj8HMPHQ0lNA/edit#slide=id.g1817931dd1_0_0)
+- How to Use Slack - [Video](http://videos.code.org/plp/how-to-use-slack.mp4)
+- How to Use Slack - [Slides](https://docs.google.com/presentation/d/1Rjm0-xrzJUWZHXqwjUkk166P-PeuFKpe9EEQK3RmNJY/edit#slide=id.gb846b8ce1_0_5)
+- Overview of CS Discoveries - [Video](http://videos.code.org/plp/cs-discoveries-program-overview.mp4)
+- Overview of CS Discoveries - [Slides](https://docs.google.com/presentation/d/1MNqdPQK6hIHxIHav5BHgp8_SVCfWmAZwQXhi1Kl-laI/edit#slide=id.g13d52b2d7c_0_159)
 
 [**Back to the top**](#top)
 <br/>

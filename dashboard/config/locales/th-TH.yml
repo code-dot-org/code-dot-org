@@ -314,7 +314,7 @@
     user_not_found: The teacher or student could not be found
     student_teacher_disassociated: "คุณได้ลบ %{teacher_name} ออกจากการเป็นครูผู้สอนของคุณ"
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: "แผงครู"
       student: "นักเรียน"
       viewing_solution: Viewing Solution
       try_it_yourself: "ลองด้วยตัวเอง"
@@ -325,6 +325,7 @@
       unsubmit: "ไม่ส่ง"
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "อีเมล์นี้ยังไม่ได้ยืนยันตัว:"
     email_confirm_needed_required: "อีเมล์ %{email} ของคุณยังไม่ได้รับการยืนยัน："

@@ -1106,6 +1106,7 @@ en:
           description_audience: Ages 10-18
           stage:
             Spring 2016: Spring 2016
+            Halloween 2015: Halloween 2015
         iceage:
           title: Ice Age Play Lab
           description: Create a story or make a game with Ice Age Play Lab!
@@ -1719,6 +1720,7 @@ en:
             External Style Sheets: External Style Sheets
             Usability and Accessibility: Usability and Accessibility
             Peer Review: Peer Review
+            Describing Web Pages: Describing Web Pages
           description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
@@ -2159,6 +2161,7 @@ en:
             Binary Bracelets: Binary Bracelets
             Binary Images: Binary Images
             Binary Artist Puzzles: Binary Artist Puzzles
+            RGB Color: RGB Color
           title: Binary
           description_audience: ''
           description_short: ''

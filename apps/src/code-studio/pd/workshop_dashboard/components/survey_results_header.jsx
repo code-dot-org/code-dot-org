@@ -11,8 +11,14 @@ import {DATE_FORMAT} from '../workshopConstants';
 import { workshopShape } from '../types.js';
 
 const styles = {
+  questionGroupCell: {
+    borderTopWidth: '2px',
+    borderTopColor: 'black'
+  },
   questionGroupHeader: {
-    fontWeight: 'bolder'
+    fontWeight: 'bolder',
+    borderTopWidth: '2px',
+    borderTopColor: 'black'
   },
   individualQuestion: {
     paddingLeft: '50px'
@@ -50,7 +56,8 @@ const SurveyResultsHeader = React.createClass({
   },
 
   propTypes: {
-    workshops: React.PropTypes.arrayOf(workshopShape)
+    workshops: React.PropTypes.arrayOf(workshopShape),
+    organizerView: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -59,7 +66,7 @@ const SurveyResultsHeader = React.createClass({
       filteredWorkshops: [],
       workshopSurveyData: undefined,
       selectedWorkshopId: undefined,
-      workshopName: undefined
+      workshopName: undefined,
     };
   },
 
@@ -72,7 +79,7 @@ const SurveyResultsHeader = React.createClass({
       return workshop.course === course;
     });
 
-    let firstWorkshopId = filteredWorkshops[0] ? filteredWorkshops[0].id : undefined;
+    let firstWorkshopId = this.props.organizerView ? undefined : (filteredWorkshops[0] ? filteredWorkshops[0].id : undefined);
 
     this.setState({
       selectedCourse: course,
@@ -80,27 +87,40 @@ const SurveyResultsHeader = React.createClass({
       selectedWorkshopId: firstWorkshopId,
     });
 
-    this.setSurveyPanel(firstWorkshopId, this.getWorkshopFriendlyName(filteredWorkshops[0]));
+    this.setSurveyPanel(course, firstWorkshopId, firstWorkshopId && this.getWorkshopFriendlyName(filteredWorkshops[0]));
   },
 
-  setSurveyPanel(workshopId, workshopName) {
-    if (workshopId === undefined) {
+  setSurveyPanel(course, workshopId, workshopName) {
+    if (!this.props.organizerView && !workshopId) {
       this.setState({
         workshopSurveyData: undefined,
         workshopName: undefined
       });
     } else {
-      $.ajax({
-        method: 'GET',
-        url: "/api/v1/pd/workshops/" + workshopId + "/workshop_survey_report",
-        dataType: 'json'
-      })
-        .done(data => {
+      if (!this.props.organizerView || workshopId) {
+        $.ajax({
+          method: 'GET',
+          url: "/api/v1/pd/workshops/" + workshopId + "/workshop_survey_report",
+          dataType: 'json'
+        }).done(data => {
           this.setState({
+            selectedWorkshopId: workshopId,
             workshopSurveyData: data,
             workshopName: workshopName
           });
         });
+      } else {
+        $.ajax({
+          method: 'GET',
+          url: '/api/v1/pd/workshop_organizer_survey_report_for_course/' + course
+        }).done(data => {
+          this.setState({
+            selectedWorkshopId: '',
+            workshopSurveyData: data,
+            workshopName: workshopName
+          });
+        });
+      }
     }
   },
 
@@ -109,31 +129,104 @@ const SurveyResultsHeader = React.createClass({
   },
 
   handleWorkshopIdChange(event) {
-    this.setSurveyPanel(event.target.value, event.target.selectedOptions[0].innerHTML);
+    this.setSurveyPanel(this.state.selectedCourse, event.target.value, event.target.selectedOptions[0].innerHTML);
   },
 
   renderSurveyResults() {
-    let thisWorkshop = this.state.workshopSurveyData['this_workshop'];
-    let allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
-    let allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
+    const thisWorkshop = this.state.workshopSurveyData['this_workshop'];
+    const allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
+    const allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
 
     return (
-      <tbody>
-        {
-          rowOrder.map(function (row, i) {
-            return (
-              <tr key={i}>
-                <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
-                <td>{thisWorkshop[row['key']]}</td>
-                <td>{allMyWorkshopsForCourse[row['key']]}</td>
-                <td>{allWorkshopsForCourse[row['key']]}</td>
-              </tr>
-            );
-          })
-        }
-      </tbody>
+      <table className="table table-bordered" style={{width: 'auto'}}>
+        <thead>
+          <tr>
+            <th/>
+            <th>
+              {this.state.workshopName}
+            </th>
+            <th>
+              Across all my workshops for {this.state.selectedCourse}
+            </th>
+            <th>
+              Across all workshops for {this.state.selectedCourse}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rowOrder.map((row, i) => {
+              return (
+                <tr key={i} style={row['heading']}>
+                  <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{thisWorkshop[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{allWorkshopsForCourse[row['key']]}</td>
+                </tr>
+              );
+            })
+          }
+        </tbody>
+      </table>
     );
   },
+
+  renderOrganizerSurveyResults() {
+    const allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
+    const allMyWorkshopsForCourse = this.state.workshopSurveyData['all_my_workshops_for_course'];
+    const breakoutData = _.omit(this.state.workshopSurveyData, ['all_workshops_for_course', 'all_my_workshops_for_course']);
+
+    let headings = ['', 'Across all workshops for ' + this.state.selectedCourse, 'Across all workshops I organized for ' + this.state.selectedCourse];
+
+    if (this.state.selectedWorkshopId) {
+      headings.push(this.state.workshopName);
+    } else {
+      headings = headings.concat(Object.keys(breakoutData));
+    }
+
+    const rows = rowOrder.map((row, i) => {
+      return (
+        <tr key={i}>
+          <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
+          <td style={row['heading'] && styles.questionGroupCell}>{allWorkshopsForCourse[row['key']]}</td>
+          <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
+          {
+            headings.slice(3).map((heading, i) => {
+              return (
+                <td key={i} style={row['heading'] && styles.questionGroupCell}>
+                  {
+                    this.state.selectedWorkshopId ? breakoutData['this_workshop'][row['key']] : breakoutData[heading][row['key']]
+                  }
+                </td>
+              );
+            })
+          }
+        </tr>
+      );
+    });
+
+    return (
+      <table className="table table-bordered" style={{width: 'auto'}}>
+        <thead>
+          <tr>
+            {
+              headings.map((heading, i) => {
+                return (
+                  <th key={i}>
+                    {heading}
+                  </th>
+                );
+              })
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {rows}
+        </tbody>
+      </table>
+    );
+  },
+
 
   renderSurveyPanel() {
     if (this.state.workshopSurveyData === undefined) {
@@ -143,25 +236,7 @@ const SurveyResultsHeader = React.createClass({
         </div>
       );
     } else {
-      return (
-        <table className="table table-bordered" style={{width: 'auto'}}>
-          <thead>
-            <tr>
-              <th/>
-              <th>
-                {this.state.workshopName}
-              </th>
-              <th>
-                Across all my workshops for {this.state.selectedCourse}
-              </th>
-              <th>
-                Across all workshops for {this.state.selectedCourse}
-              </th>
-            </tr>
-          </thead>
-          {this.renderSurveyResults()}
-        </table>
-      );
+      return this.props.organizerView ? this.renderOrganizerSurveyResults() : this.renderSurveyResults();
     }
   },
 
@@ -176,11 +251,21 @@ const SurveyResultsHeader = React.createClass({
 
     const workshopOptions = this.state.filteredWorkshops.map( (workshop, i) => {
       return (
-        <option key={i} value={workshop.id}>
+        <option key={i + (this.props.organizerView && 1)} value={workshop.id}>
           {this.getWorkshopFriendlyName(workshop)}
         </option>
       );
     });
+
+    if (this.props.organizerView) {
+      workshopOptions.unshift(
+        (
+          <option key={0} value={''}>
+            View all workshops
+          </option>
+        )
+      );
+    }
 
     return (
       <div>
