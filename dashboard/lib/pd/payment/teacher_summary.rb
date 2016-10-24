@@ -37,8 +37,51 @@ module Pd::Payment
       enrollment.try(&:school_info).try(&:school_district)
     end
 
+    def state
+      enrollment.try(&:school_info).try(&:state)
+    end
+
     def school
       enrollment.try(&:school)
+    end
+
+    def workshop
+      workshop_summary.workshop
+    end
+
+    def generate_teacher_progress_report_line_item(with_payment = false)
+      line_item = {
+        teacher_name: enrollment.name || teacher.name,
+        teacher_id: teacher.id,
+        teacher_email: teacher.email,
+        plp_name: workshop_summary.plp.try(&:name),
+        state: state,
+        district_name: school_district.try(&:name),
+        district_id: school_district.try(&:id),
+        school: school,
+        course: workshop.course,
+        subject: workshop.subject,
+        workshop_id: workshop.id,
+        workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
+        workshop_name: workshop.friendly_name,
+        workshop_type: workshop.workshop_type,
+        organizer_name: workshop.organizer.name,
+        organizer_email: workshop.organizer.email,
+        year: workshop.year,
+        hours: hours,
+        days: days
+      }
+
+      if with_payment
+        line_item.merge!({
+          payment_type: payment.try(&:type),
+          payment_rate: payment.try(&:rate),
+          qualified: qualified?,
+          payment_amount: payment.try(&:amount)
+        })
+      end
+
+      line_item
     end
   end
 end

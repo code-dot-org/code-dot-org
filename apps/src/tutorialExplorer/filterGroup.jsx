@@ -7,7 +7,7 @@ import FilterChoice from './filterChoice';
 
 const styles = {
   filterGroupOuter: {
-    paddingTop: 20,
+    paddingBottom: 20,
     paddingRight: 40,
     paddingLeft: 10
   },
