@@ -15,6 +15,7 @@ var reporting = require('@cdo/apps/code-studio/reporting');
 var Dialog = require('@cdo/apps/code-studio/dialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
 import { lockContainedLevelAnswers } from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import queryString from 'query-string';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -153,14 +154,20 @@ window.apps = {
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
+        var noAutoplay = !!queryString.parse(location.search).noautoplay;
 
-        if (hasVideo) {
+        if (hasVideo && !noAutoplay) {
           if (hasInstructions) {
             appOptions.autoplayVideo.onClose = afterVideoCallback;
           }
           showVideoDialog(appOptions.autoplayVideo);
-        } else if (hasInstructions) {
-          afterVideoCallback();
+        } else {
+          if (noAutoplay) {
+            clientState.recordVideoSeen(appOptions.autoplayVideo.key);
+          }
+          if (hasInstructions) {
+            afterVideoCallback();
+          }
         }
       }
     };
