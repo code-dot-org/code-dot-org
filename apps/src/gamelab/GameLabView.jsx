@@ -7,7 +7,7 @@ import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
 import AnimationJsonViewer from './AnimationJsonViewer';
-import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+import {GameLabInterfaceMode, GAME_WIDTH, GAME_HEIGHT} from './constants';
 import GameLabVisualizationHeader from './GameLabVisualizationHeader';
 import GameLabVisualizationColumn from './GameLabVisualizationColumn';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
@@ -15,6 +15,8 @@ import InstructionsWithWorkspace from '../templates/instructions/InstructionsWit
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
+import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
+
 
 /**
  * Top-level React wrapper for GameLab
@@ -30,7 +32,9 @@ const GameLabView = React.createClass({
     hideSource: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     allowAnimationMode: React.PropTypes.bool.isRequired,
-    showVisualizationHeader: React.PropTypes.bool.isRequired
+    showVisualizationHeader: React.PropTypes.bool.isRequired,
+    isIframeEmbed: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
   },
 
   getChannelId() {
@@ -46,7 +50,7 @@ const GameLabView = React.createClass({
 
   renderCodeMode() {
     const {interfaceMode, isResponsive, hideSource, pinWorkspaceToBottom,
-        showFinishButton} = this.props;
+           showFinishButton} = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
@@ -73,6 +77,14 @@ const GameLabView = React.createClass({
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
           <GameLabVisualizationColumn finishButton={showFinishButton}/>
         </div>
+        {this.props.isIframeEmbed &&
+         !this.props.isRunning &&
+         <IFrameEmbedOverlay
+           appWidth={GAME_WIDTH}
+           appHeight={GAME_HEIGHT}
+           style={{top: 79, left: 17}}
+           playButtonStyle={{top: 620, left: 179}}
+         />}
         <ProtectedStatefulDiv
           id="visualizationResizeBar"
           className="fa fa-ellipsis-v"
@@ -108,5 +120,7 @@ module.exports = connect(state => ({
   isResponsive: isResponsiveFromState(state),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
   allowAnimationMode: allowAnimationMode(state),
-  showVisualizationHeader: showVisualizationHeader(state)
+  showVisualizationHeader: showVisualizationHeader(state),
+  isRunning: state.runState.isRunning,
+  isIframeEmbed: state.pageConstants.isIframeEmbed,
 }))(GameLabView);

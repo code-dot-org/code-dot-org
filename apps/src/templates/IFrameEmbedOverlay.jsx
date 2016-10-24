@@ -1,10 +1,10 @@
 import * as color from '../color';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {singleton as studioApp} from '../StudioApp';
-import * as applabConstants from './constants';
 
 const PHONE_MARGIN = 68;
+const PLAY_BUTTON_SIZE = 26;
 
 var styles = {
   overlay: {
@@ -12,8 +12,6 @@ var styles = {
       position: 'absolute',
       top: PHONE_MARGIN,
       left: 16,
-      width: applabConstants.APP_WIDTH,
-      height: applabConstants.APP_HEIGHT,
       zIndex: 5,
       textAlign: 'center',
     },
@@ -31,12 +29,11 @@ var styles = {
   playButtonWrapper: {
     color: 'white',
     position: 'absolute',
-    bottom: -PHONE_MARGIN/2 - 26/2 - 5,
-    left: applabConstants.APP_WIDTH/2 - 26/2 - 7/2,
+    bottom: -PHONE_MARGIN/2 - PLAY_BUTTON_SIZE/2 - 5,
     fontSize: 22,
-    height: 26,
-    width: 26,
-    lineHeight: '26px',
+    height: PLAY_BUTTON_SIZE,
+    width: PLAY_BUTTON_SIZE,
+    lineHeight: `${PLAY_BUTTON_SIZE}px`,
     padding: 7,
     borderRadius: 5,
     backgroundColor: color.dark_charcoal,
@@ -60,9 +57,22 @@ var styles = {
 
 var IFrameEmbedOverlay = React.createClass({
 
+  propTypes: {
+    appWidth: PropTypes.number.isRequired,
+    appHeight: PropTypes.number.isRequired,
+    style: PropTypes.object,
+    playButtonStyle: PropTypes.object,
+  },
+
   getInitialState() {
     return {
       tooYoung: false
+    };
+  },
+
+  getDefaultProps() {
+    return {
+      showPlayButton: true,
     };
   },
 
@@ -79,7 +89,15 @@ var IFrameEmbedOverlay = React.createClass({
   render() {
     return (
       <div
-        style={[styles.overlay.wrapper, !this.state.tooYoung && {cursor: 'cursor'}]}
+        style={[
+          styles.overlay.wrapper,
+          {
+            width: this.props.appWidth,
+            height: this.props.appHeight,
+          },
+          !this.state.tooYoung && {cursor: 'cursor'},
+          this.props.style,
+        ]}
         onClick={this.onClick}
       >
         {
@@ -89,7 +107,17 @@ var IFrameEmbedOverlay = React.createClass({
           </div> :
           <div>
             <div style={styles.overlay.clickText}>Tap or click to run</div>
-            <div style={styles.playButtonWrapper}>
+            <div
+              style={[
+                styles.playButtonWrapper,
+                {
+                  left: this.props.appWidth/2 -
+                        PLAY_BUTTON_SIZE/2 -
+                        styles.playButtonWrapper.padding/2
+                },
+                this.props.playButtonStyle,
+              ]}
+            >
               <span className="fa fa-play" style={styles.playButton} />
             </div>
           </div>
