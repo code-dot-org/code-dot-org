@@ -8,6 +8,11 @@ class Api::V1::Pd::WorkshopScoreSummarizerTest < ActiveSupport::TestCase
   setup do
     # One teacher loved the workshop - they gave the best possible answer to each question
     happy_teacher_question_responses = {}
+
+    FREE_RESPONSE_QUESTIONS.each do |question|
+      happy_teacher_question_responses[question] = 'Great!'
+    end
+
     [
       WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,
       WorkshopScoreSummarizer::TEACHER_ENGAGEMENT_QUESTIONS,
@@ -53,13 +58,20 @@ class Api::V1::Pd::WorkshopScoreSummarizerTest < ActiveSupport::TestCase
         know_where_to_go_for_help_s: 6,
         suitable_for_my_experience_s: 6,
         would_recommend_s: 6,
-        part_of_community_s: 6
+        part_of_community_s: 6,
+        things_facilitator_did_well_s: ['Great!'],
+        things_facilitator_could_improve_s: ['Great!'],
+        things_you_liked_s: ['Great!'],
+        things_you_would_change_s: ['Great!'],
+        anything_else_s: ['Great!']
     }
 
     expected_facilitator_results = Hash.new
-    expected_facilitator_results[@workshop.facilitators.first.name] = expected_results
+    expected_facilitator_results[@workshop.facilitators.first.name] = expected_results.reject { |k, _| FREE_RESPONSE_QUESTIONS.include?(k)}
 
-    assert_equal [expected_results, expected_facilitator_results], get_score_for_workshops(@workshops, true)
+    actual_results, actual_facilitator_results = get_score_for_workshops(@workshops, facilitator_breakdown: true, include_free_responses: true)
+    assert_equal expected_results, actual_results
+    assert_equal expected_facilitator_results, actual_facilitator_results
   end
 
   private
