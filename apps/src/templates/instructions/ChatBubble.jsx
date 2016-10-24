@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import Radium from 'radium';
 import ChatBubbleTip from './ChatBubbleTip';
 import { shouldDisplayChatTips } from './utils';
-import experiments from '../../experiments';
 import InlineAudio from './InlineAudio';
 
 const styles = {
@@ -40,7 +39,7 @@ const styles = {
 
 const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMessage }) => {
   borderColor = borderColor || 'white';
-  const showAudioControls = experiments.isEnabled('tts') && (ttsUrl || ttsMessage);
+  const showAudioControls = (ttsUrl || ttsMessage);
 
   return (
     <div style={styles.container}>
