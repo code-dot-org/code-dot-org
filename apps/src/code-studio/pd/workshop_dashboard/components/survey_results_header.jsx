@@ -11,8 +11,14 @@ import {DATE_FORMAT} from '../workshopConstants';
 import { workshopShape } from '../types.js';
 
 const styles = {
+  questionGroupCell: {
+    borderTopWidth: '2px',
+    borderTopColor: 'black'
+  },
   questionGroupHeader: {
-    fontWeight: 'bolder'
+    fontWeight: 'bolder',
+    borderTopWidth: '2px',
+    borderTopColor: 'black'
   },
   individualQuestion: {
     paddingLeft: '50px'
@@ -151,11 +157,11 @@ const SurveyResultsHeader = React.createClass({
           {
             rowOrder.map((row, i) => {
               return (
-                <tr key={i}>
+                <tr key={i} style={row['heading']}>
                   <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
-                  <td>{thisWorkshop[row['key']]}</td>
-                  <td>{allMyWorkshopsForCourse[row['key']]}</td>
-                  <td>{allWorkshopsForCourse[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{thisWorkshop[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{allWorkshopsForCourse[row['key']]}</td>
                 </tr>
               );
             })
@@ -182,12 +188,12 @@ const SurveyResultsHeader = React.createClass({
       return (
         <tr key={i}>
           <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
-          <td>{allWorkshopsForCourse[row['key']]}</td>
-          <td>{allMyWorkshopsForCourse[row['key']]}</td>
+          <td style={row['heading'] && styles.questionGroupCell}>{allWorkshopsForCourse[row['key']]}</td>
+          <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
           {
             headings.slice(3).map((heading, i) => {
               return (
-                <td key={i}>
+                <td key={i} style={row['heading'] && styles.questionGroupCell}>
                   {
                     this.state.selectedWorkshopId ? breakoutData['this_workshop'][row['key']] : breakoutData[heading][row['key']]
                   }
