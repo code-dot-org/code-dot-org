@@ -12,6 +12,10 @@
 #  lockable          :boolean
 #  relative_position :integer          not null
 #
+# Indexes
+#
+#  index_stages_on_script_id  (script_id)
+#
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
