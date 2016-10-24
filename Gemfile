@@ -82,6 +82,8 @@ group :development, :test do
   gem 'colorize'
   gem 'spring', '~> 1.7.2'
   gem 'spring-commands-testunit'
+  # Watch filesystem for changes using Listen instead of polling.
+  gem 'spring-watcher-listen'
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
