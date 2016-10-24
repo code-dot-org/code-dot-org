@@ -114,7 +114,7 @@ class FilesApi < Sinatra::Base
   #
   get %r{/v3/(animations|assets|sources|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    NewRelic::Agent.ignore_enduser
+    NewRelic::Agent.ignore_enduser rescue nil
 
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
