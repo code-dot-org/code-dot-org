@@ -17,7 +17,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "free_play": "true",
+    "free_play": "false",
     "first_sprite_index": "1",
     "edge_collisions": "false",
     "projectile_collisions": "false",
@@ -294,7 +294,14 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE"/>
+        <category name="Variables ">
+          <block type="variables_set" inline="false">
+            <title name="VAR">ye</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">ye</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>

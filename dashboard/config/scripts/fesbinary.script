@@ -1,5 +1,3 @@
-hidden false
-
 stage 'Binary Images'
 level 'BinaryImages'
 level 'grade5_pixelation'
@@ -10,3 +8,11 @@ level 'grade5_artist_binary4'
 level 'grade5_artist_binary8'
 level 'grade5_artist_binary9'
 level 'grade5_artist_binary11'
+
+stage 'RGB Color'
+named_level 'Additive Color (Simulation)'
+named_level '3-Bit Pixel Simulator'
+level 'mike3bit'
+level 'mike3bitbird'
+level 'mike3bitmario'
+level 'mike3bitfreeplay'

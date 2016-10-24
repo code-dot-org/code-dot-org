@@ -125,7 +125,114 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U1 Eval q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U1 Eval q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U1 Eval q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U1 Eval q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U1 Eval q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U1 Eval q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U1 eval q1:
+        Brand new!: Brand new!
+        How experienced would you say you are with computer science?: How experienced would you say you are with computer science?
+        Somewhat Experienced: Somewhat Experienced
+        Very Experienced: Very Experienced
+      U1 eval q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Are you comfortable with the underlying concepts behind how non-decimal number systems work?
+        I have no idea what you're talking about!: I have no idea what you're talking about!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: I know how to convert between number systems, but I don't know about the underlying rules of how they work
+        Yes!: Yes!
+      U1 eval q3:
+        Are you comfortable with HTML or Markdown?: Are you comfortable with HTML or Markdown?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q4:
+        Do you know how IP addresses work?: Do you know how IP addresses work?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q5:
+        Do you know how messages are broken down and routed on the internet?: Do you know how messages are broken down and routed on the internet?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 eval q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q1:
+        Brand new!: Brand new!
+        How experienced would you say you are with computer science?: How experienced would you say you are with computer science?
+        Somewhat Experienced: Somewhat Experienced
+        Very Experienced: Very Experienced
+      U1 evaluation q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U1 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U1 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U1 evaluation q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Are you comfortable with the underlying concepts behind how non-decimal number systems work?
+        I have no idea what you're talking about!: I have no idea what you're talking about!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: I know how to convert between number systems, but I don't know about the underlying rules of how they work
+        Yes!: Yes!
+      U1 evaluation q3:
+        Are you comfortable with HTML or Markdown?: Are you comfortable with HTML or Markdown?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q4:
+        Do you know how IP addresses work?: Do you know how IP addresses work?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q5:
+        Do you know how messages are broken down and routed on the internet?: Do you know how messages are broken down and routed on the internet?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Have you ever looked at the traffic in your web browser when you request a website?
+        Nope!: Nope!
+        Yes!: Yes!
+      U1 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U1 evaluation q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U1 evaluation q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
+      2.1 and 2.2 Lesson Connections: {}
+      2.11 - 15 Lesson Connections: {}
+      2.3 and 2.4 Lesson Connections: {}
+      2.5 and 2.6 Lesson Connections: {}
+      2.7 -  10 Lesson Connections: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -143,10 +250,13 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Assessing Student Learning in Unit 1: {}
+      Balancing Teacher and Tools in Unit 1: {}
       Begin planning your project:
         description here: description here
         title: title
       Binary as an Encoding Scheme: {}
+      Binary, Hex, and Images: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
@@ -178,6 +288,7 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
+      CSD U3 Functions Introduction: {}
       CSD U3 Keypress Stop: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
@@ -200,9 +311,36 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 platform intro:
+        Build a Platform Jumper: Build a Platform Jumper
+        description here: description here
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD U4L01 SFLP: {}
+      CSD U4L02 SFLP: {}
+      CSD U4L03 SFLP: {}
+      CSD U4L04 SFLP: {}
+      CSD U4L05 SFLP: {}
+      CSD U4L06 SFLP: {}
+      CSD U4L07 SFLP: {}
+      CSD U4L08 SFLP: {}
+      CSD U4L09 SFLP: {}
+      CSD U4L10 SFLP: {}
+      CSD U4L11 SFLP: {}
+      CSD U4L12 SFLP: {}
+      CSD U4L13 SFLP: {}
+      CSD U4L14 SFLP: {}
+      CSD U4L15 SFLP: {}
+      CSD U4L16 SFLP: {}
+      CSD U4L17 SFLP: {}
+      CSD U4L18 SFLP: {}
+      CSD U4L19 SFLP: {}
+      CSD U4L20 SFLP: {}
+      CSD U4L21 SFLP: {}
+      CSD U4L22 SFLP: {}
+      CSD U4L23 SFLP: {}
+      CSD U4L24 SFLP: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U1-SFLP Exploring Problem Solving: {}
@@ -219,6 +357,7 @@ en:
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
       CSDU2 - Fundamentals Videos: {}
+      CSDU2 - Pick Elements Styled: {}
       CSDU2 - Rating Quality Websites: {}
       CSDU2 - further styling suggestions: {}
       CSDU2 IP Fair Use:
@@ -425,9 +564,11 @@ en:
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       Categorizing Data: {}
+      Check for Internet Accessibility: {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Data Tools in Unit 2 Chapter 2: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
       Digital Footprint Chirpr solmoon: {}
@@ -437,6 +578,7 @@ en:
       Digital Footprint instantframe:
         instantframe - johnsnow: instantframe - johnsnow
       Digital Footprint instantframe moonbeam: {}
+      Discovery Learning in Unit 1: {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -806,6 +948,7 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
       External level test (will):
         first computer program: first computer program
@@ -823,11 +966,14 @@ en:
       GoodBadVisualizations_v2:
         description here: description here
         title: title
+      Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
       How Secure Is Your Password?:
         description here: description here
         title: title
+      How are Images Encoded?: {}
+      'How to: Make Charts from your Data': {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -839,6 +985,8 @@ en:
         description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      Introduction to Lossless Compression and the Text Compression Widget: {}
+      Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
@@ -855,6 +1003,7 @@ en:
       Lesson 1.7 Overview: {}
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Lossy vs. Lossless Compression: {}
       Making Pivot Tables Part 1 - The Basics: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
       Making a Bar Chart: {}
@@ -866,6 +1015,11 @@ en:
       MarbleMaze2:
         Marble Maze 2: Marble Maze 2
         Second Marble Maze K Activity: Second Marble Maze K Activity
+      Modulo Clock Instructions: {}
+      Modulo Clock Recap: {}
+      New Challenge Introduction:
+        description here: description here
+        title: title
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -918,6 +1072,7 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      Overview of File Sizes and Metrics: {}
       'Overview: Balancing Teachers and Tools': {}
       'Overview: Capturing Student Learning': {}
       'Overview: Discovery Learning': {}
@@ -1134,6 +1289,7 @@ en:
       SFLP - Web - Images on the Web: {}
       SFLP - Web - Quality Websites: {}
       SFLP - Web - Text on the Web: {}
+      Selecting an Appropriate Visualization for your Data: {}
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
@@ -1141,16 +1297,27 @@ en:
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
+      'Stop: Classes': {}
+      'Stop: Common Styles Warm Up': {}
       'Stop: External Style Sheets': {}
       'Stop: Hobbies Page': {}
       'Stop: Images': {}
+      'Stop: Intro to CSS': {}
+      'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
+      'Stop: Website Navigation': {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
         TLO in Practice: TLO in Practice
       TeacherCon Agenda: {}
       Teaching with the Internet Simulator: {}
+      'Technique: Frequency Analysis':
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
+      Terminology Recap:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
@@ -1439,6 +1606,7 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      U3_assessment_loop_vs_function: {}
       U4 - Cleaning Data - Activity Guide:
         description here: description here
         title: title
@@ -1515,6 +1683,12 @@ en:
       U4L06v2 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L07 Public Key Crypto Interstitial:
+        Onto the Public Key Cryptography Widget: Onto the Public Key Cryptography Widget
+        description here: description here
+      U4L07 Student Introduction public key crypto:
+        description here: description here
+        title: title
       U4L07 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1534,6 +1708,9 @@ en:
         description here: description here
         title: title
       U4L08v2 Student Intro:
+        description here: description here
+        title: title
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
         description here: description here
         title: title
       U4L09 Student Lesson Introduction:
@@ -1650,9 +1827,28 @@ en:
       Unit 2 Lesson 8 Overview: {}
       Unit 2 Lesson 9 Overview: {}
       Unit 3 Survey 2: {}
+      Unit 4 Lesson 1 Introduction:
+        description here: description here
+        title: title
+      Unit 4 Lesson 2 Introduction:
+        description here: description here
+        title: title
+      Unit 4 Lesson 3 Introduction: {}
+      Unit 4 Lesson 4 Introduction: {}
+      Unit 4 Lesson 5 Introduction:
+        description here: description here
+        title: title
+      Unit 4 Lesson 6 Introduction:
+        Cracking the Code: Cracking the Code
+      Unit 4 Lesson 7 Introduction: {}
+      Unit 4 Lesson 8 Introduction: {}
+      Unit 4 Lesson 9 Introduction: {}
+      Video - The Future of Big Data: {}
+      'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
       What is ASCII?: {}
       What is HTML?: {}
+      What's inside and how is it organized?: {}
       Why Teach Number Systems?: {}
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
@@ -1681,6 +1877,64 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      courseB_story_unspottedBugs1:
+        UnspottedBugs: UnspottedBugs
+      courseB_story_unspottedBugs10:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs11:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs12:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs13:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs14:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs15:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs16:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs17:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs18:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs2:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs3:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs4:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs5:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs6:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs7:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs8:
+        description here: description here
+        title: title
+      courseB_story_unspottedBugs9:
+        description here: description here
+        title: title
+      courseB_unplugged_mrfLoops:
+        Looping with My Robotic Friends: Looping with My Robotic Friends
+      courseB_unplugged_mrfProgramming:
+        description here: description here
+        title: title
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -1701,6 +1955,7 @@ en:
       duino pov:
         duino pov: duino pov
       ecs unit 2 introduction: {}
+      ecspd-unit 4 what is the challenge: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
@@ -1778,6 +2033,7 @@ en:
       gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
+      intro to self assessment: {}
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
@@ -2197,6 +2453,7 @@ en:
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
+        CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
         CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
@@ -2209,6 +2466,7 @@ en:
         Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        Unit 1 Self-Assessment: {}
         brendan test survey: {}
     match:
       2-3 Big Event Match 1:
@@ -3523,11 +3781,23 @@ en:
         The x and y value are the center of a sprite and in the upper right corner of a rectangle: The x and y value are the center of a sprite and in the upper right corner of a rectangle
         There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
         What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
+      CSD U3 Functions Prediction define first:
+        Both squares will be drawn. You can create functions anywhere you like in your code.: Both squares will be drawn. You can create functions anywhere you like in your code.
+        ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        : Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
+        The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
+        The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
         A 30 will be displayed. Variables grow as you add more to them: A 30 will be displayed. Variables grow as you add more to them
         An error will be generated.: An error will be generated.
+      CSD U3 displace Prediction:
+        The feather will continue up for a while, then start to fall again.: The feather will continue up for a while, then start to fall again.
+        The feather will continue up.: The feather will continue up.
+        The feather will start to fall again.: The feather will start to fall again.
+        The feather will stop moving: The feather will stop moving
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -5573,6 +5843,247 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      cspu3_assess1_callfunction:
+        <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
+        <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
+        <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
+        <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
+        <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
+      cspu3_assess1_codeoutcome:
+        It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
+        The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
+        The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
+        The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
+      cspu3_assess1_collaboration:
+        Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
+        In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
+        ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        : Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        Programmers can write functions without needing to know what they do or how they should work.: Programmers can write functions without needing to know what they do or how they should work.
+        Team members can rely on one another to explain their code.: Team members can rely on one another to explain their code.
+      cspu3_assess1_functionsfalse:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+      cspu3_assess1_loop_or_function1:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function2:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function3:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function4:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_namingconvention:
+        A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
+        A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
+        Function names should be organized alphabetically.: Function names should be organized alphabetically.
+        The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
+        Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
+      cspu3_assess1_naturallanguage:
+        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
+        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
+        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
+        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      cspu3_assess1_outputdrawing:
+        <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
+        <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
+        <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
+        <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">: <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">
+        <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
+      cspu3_assess1_parameters:
+        Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
+        Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
+        Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
+        Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
+      cspu3_assess1_removeline:
+        Line 3 and Line 4: Line 3 and Line 4
+        Line 8 and Line 9: Line 8 and Line 9
+        Line 9: Line 9
+        Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
+      cspu3_assess1_robotpath:
+        <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
+        <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
+        <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
+        <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
+        <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
+      cspu3_assess1_truefunctions:
+        A function can change names over the course of a program.: A function can change names over the course of a program.
+        Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
+        Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
+        Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
+        Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu5_assess1_additem:
+        cart total = 1;: cart total = 1;
+        cartTotal + 1;: cartTotal + 1;
+        cartTotal = cartTotal +1;: cartTotal = cartTotal +1;
+        var cartTotal + 1;: var cartTotal + 1;
+        var cartTotal = cartTotal + 1;: var cartTotal = cartTotal + 1;
+      cspu5_assess1_algorithm:
+        Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
+        apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
+      cspu5_assess1_codevalues:
+        <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>: <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>
+        <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>: <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>
+        <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>: <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>
+        <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>: <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>
+        <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>: <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>
+      cspu5_assess1_debugging:
+        Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.: Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.
+        Change the names of variables within the program and run the program again.: Change the names of variables within the program and run the program again.
+        Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
+        Display the value of variables at various points during the program.: Display the value of variables at various points during the program.
+      cspu5_assess1_drawingoutcome:
+        <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">: <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">
+        <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">: <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">
+        <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
+        <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
+      cspu5_assess1_elementid:
+        ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
+        : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
+        An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
+        IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
+        Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
+        While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
+      cspu5_assess1_eventprograms:
+        An event-driven program cannot implement an algorithm.: An event-driven program cannot implement an algorithm.
+        ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
+        Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
+        The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+        'Error. Unknown Identifier: x': 'Error. Unknown Identifier: x'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+        Nothing will be displayed: Nothing will be displayed
+        a: a
+        b: b
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+        Error.  Cannot make a new variable x inside function increase(): Error.  Cannot make a new variable x inside function increase()
+      cspu5_assess1_snowman:
+        <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">: <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">
+        <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">: <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">
+        <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">: <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">
+        <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">: <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">
+        <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">: <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">
+      cspu5_assess1_swap:
+        <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
+        <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
+        <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
+        <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
+        <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
+      cspu5_assess1_turtle:
+        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">
+        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">
+        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">
+        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">
+        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">
+      cspu5_assess1_value:
+        'value is: 2': 'value is: 2'
+        'value is: 2.3333333': 'value is: 2.3333333'
+        'value is: 3': 'value is: 3'
+        'value is: 4': 'value is: 4'
+        'value is: c': 'value is: c'
+      cspu5_assess2_addstrings:
+        5 + hello: 5 + hello
+        5hello: 5hello
+        'error on num + str: type mismatch': 'error on num + str: type mismatch'
+        result: result
+      cspu5_assess2_appLabError:
+        Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
+        Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
+        Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
+        Line 5 - The setText on line 5 will override the setText on line 3: Line 5 - The setText on line 5 will override the setText on line 3
+      cspu5_assess2_boolean:
+        Any Integer: Any Integer
+        Any single character: Any single character
+        Integers between 1 and 10: Integers between 1 and 10
+        True/False: True/False
+        Yes/Maybe/No: Yes/Maybe/No
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        'error on str1 + str2: type mismatch': 'error on str1 + str2: type mismatch'
+        result: result
+      cspu5_assess2_false:
+        A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
+        Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
+        Strings cannot include numerical digits.: Strings cannot include numerical digits.
+        Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings sometimes include spaces.: Strings sometimes include spaces.
+      cspu5_assess2_goodbye:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed: Nothing will be printed
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
+      cspu5_assess2_hello:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed.: Nothing will be printed.
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
+      cspu5_assess2_numValues:
+        The code will always display the value stored in variable a: The code will always display the value stored in variable a
+        The code will display the largest of the three values: The code will display the largest of the three values
+        The code will display the middle of all three values: The code will display the middle of all three values
+        The code will display the smallest of the three values: The code will display the smallest of the three values
+        The code will not display anything due to an error: The code will not display anything due to an error
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        You are not old enough to be President.: You are not old enough to be President.
+        You are old enough to be President!: You are old enough to be President!
+        'false': 'false'
+        'true': 'true'
+      cspu5_assess2_pseudoCode:
+        " “Time to start studying again!” ": " “Time to start studying again!” "
+        " “You passed!” ": " “You passed!” "
+        " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
+        An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        Nothing will be displayed: Nothing will be displayed
+      cspu5_assess2_setAlarm:
+        "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
+        "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
+        day != “Monday”: day != “Monday”
+        day == “Saturday”: day == “Saturday”
+        day == “Sunday”: day == “Sunday”
+      cspu5_assess2_statementOutput:
+        console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
+        console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
+        console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
+        console.log(“Hello! \nl How are you?”);: console.log(“Hello! \nl How are you?”);
+        console.log(“Hello! \t How are you?”);: console.log(“Hello! \t How are you?”);
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_wrongLogic:
+        Any time between 0 and 20: Any time between 0 and 20
+        Any time between 10 and 19: Any time between 10 and 19
+        Any time between 6 and 9: Any time between 6 and 9
+        The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
+        There is no value of time that will result in “Good Morning” being displayed: There is no value of time that will result in “Good Morning” being displayed
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
@@ -5887,6 +6398,11 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      sarah_test_maggie:
+        <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>: <img src="https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png" width=160>
+        Question: Question
+        right answer: right answer
+        test: test
       sciPD PreQ 1:
         Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
         'No': 'No'

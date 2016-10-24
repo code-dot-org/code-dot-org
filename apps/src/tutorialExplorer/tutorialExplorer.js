@@ -6,8 +6,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
+import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
+import _ from 'lodash';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -29,14 +31,24 @@ const TutorialExplorer = React.createClass({
         filters[filterGroup.name] = initialFiltersForGroup;
       }
     }
+
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(filters);
+
     return {
-      filters: filters
+      filters: filters,
+      filteredTutorials: filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      filteredTutorialsForLocale: filteredTutorialsForLocale,
+      windowWidth: undefined,
+      windowHeight: undefined,
+      mobileLayout: $(window).width() <= TutorialExplorer.mobileWidth,
+      showingModalFilters: true
     };
   },
 
   /**
    * Called when a filter in a filter group has its checkbox
-   * checked or unchecked.  Updates the filters in state.
+   * checked or unchecked.
    *
    * @param {string} filterGroup - The name of the filter group.
    * @param {string} filterEntry - The name of the filter entry.
@@ -54,29 +66,205 @@ const TutorialExplorer = React.createClass({
       const itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
       newState = state.updateIn(['filters', filterGroup], arr => arr.splice(itemIndex, 1));
     }
-    this.setState(newState.toJS());
+
+    newState = newState.toJS();
+
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(newState.filters);
+    this.setState({
+      ...newState,
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      filteredTutorialsForLocale
+    });
+  },
+
+  filterTutorials(filters) {
+    const filterProps = {
+      locale: this.props.locale,
+      filters: filters
+    };
+    filterProps.specificLocale = false;
+    const filteredTutorials = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+
+    filterProps.specificLocale = true;
+    const filteredTutorialsForLocale = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+
+    return { filteredTutorials, filteredTutorialsForLocale };
+  },
+
+  componentDidMount() {
+    window.addEventListener('resize', _.debounce(this.onResize, 500));
+  },
+
+  showModalFilters() {
+    this.setState({showingModalFilters: true});
+  },
+
+  hideModalFilters() {
+    this.setState({showingModalFilters: false});
+  },
+
+  shouldShowFilters() {
+    return !this.state.mobileLayout || this.state.showingModalFilters;
+  },
+
+  shouldShowTutorials() {
+    return !this.state.mobileLayout || !this.state.showingModalFilters;
+  },
+
+  shouldShowTutorialsForLocale() {
+    return this.shouldShowTutorials() && !this.isLocaleEnglish();
   },
 
   isLocaleEnglish() {
     return this.props.locale.substring(0,2) === "en";
   },
 
+  /**
+   * Called when the window resizes. Look to see if width/height changed, then
+   * call adjustTopPaneHeight as our maxHeight may need adjusting.
+   */
+  onResize() {
+    const windowWidth = $(window).width();
+    const windowHeight = $(window).height();
+
+    // We fire window resize events when the grippy is dragged so that non-React
+    // controlled components are able to rerender the editor. If width/height
+    // didn't change, we don't need to do anything else here
+    if (windowWidth === this.state.windowWidth &&
+        windowHeight === this.state.windowHeight) {
+      return;
+    }
+
+    this.setState({
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height()
+    });
+
+    this.setState({mobileLayout: windowWidth <= TutorialExplorer.mobileWidth});
+  },
+
+  statics: {
+
+    /**
+     * Pixel width at which we begin to start showing mobile view with modal
+     * filters.
+     */
+    mobileWidth: 600,
+
+    /**
+     * Filters a given array of tutorials by the given filter props.
+     *
+     * It goes through all active filter categories.  If no filters are set for
+     * a filter group, then that item will default to showing, so long as no other
+     * filter group prevents it from showing.
+     * But if we do have a filter set for a filter group, and the tutorial is tagged
+     * for that filter group, then at least one of the active filters must match a tag.
+     * e.g. If the user chooses two platforms, then at least one of the platforms
+     * must match a platform tag on the tutorial.
+     * A similar check for language is done first.
+     * In the case that filterProps.specificLocale is true, we do something slightly
+     * different.  We don't show tutorials that don't have any language tags, and we
+     * reject tutorials that don't have the current locale explicitly listed.  This
+     * allows us to return a set of tutorials that have explicit support for the
+     * current locale.
+     *
+     * @param {Array} tutorials - Array of tutorials.  Each contains a variety of
+     *   strings, each of which is a list of tags separated by commas, no spaces.
+     * @param {object} filterProps - Object containing filter properties.
+     * @param {string} filterProps.locale - The current locale.
+     * @param {bool} filterProps.specificLocale - Whether we filter to only allow
+     *   through tutorials matching the current locale.
+     * @param {object} filterProps.filters - Contains arrays of strings identifying
+     *   the currently active filters.  Each array is named for its filter group.
+     */
+    filterTutorials(tutorials, filterProps) {
+      const { locale, specificLocale, filters } = filterProps;
+
+      const filteredTutorials = tutorials.filter(tutorial => {
+        // First check that the tutorial language doesn't exclude it immediately.
+        // If the tags contain some languages, and we don't have a match, then
+        // hide the tutorial.
+        if (tutorial.languages_supported) {
+          const languageTags = tutorial.languages_supported.split(',');
+          const currentLocale = locale;
+          if (languageTags.length > 0 &&
+            !languageTags.includes(currentLocale) &&
+            !languageTags.includes(currentLocale.substring(0,2))) {
+            return false;
+          }
+        } else if (specificLocale) {
+          // If the tutorial doesn't have language tags, but we're only looking
+          // for specific matches to our current locale, then don't show this
+          // tutorial.  i.e. don't let non-locale-specific tutorials through.
+          return false;
+        }
+
+        // If we miss any active filter group, then we don't show the tutorial.
+        let filterGroupsSatisfied = true;
+
+        for (const filterGroupName in filters) {
+          const tutorialTags = tutorial["tags_" + filterGroupName];
+          const filterGroup = filters[filterGroupName];
+
+          if (filterGroup.length !== 0 &&
+              tutorialTags &&
+              tutorialTags.length > 0 &&
+              !TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
+            filterGroupsSatisfied = false;
+          }
+        }
+
+        return filterGroupsSatisfied;
+      }).sort((tutorial1, tutorial2) => {
+        return tutorial2.displayweight - tutorial1.displayweight;
+      });
+
+      return filteredTutorials;
+    },
+
+    /* Given a filter group, and the tutorial's relevant tags for that filter group,
+     * see if there's at least a single match.
+     * @param {Array} filterGroup - Array of strings, each of which is a selected filter
+     *   for the group.  e.g. ["beginner", "experienced"].
+     * @param {string} tutorialTags - Comma-separated tags for a tutorial.
+     *   e.g. "beginner,experienced".
+     * @return {bool} - true if the tutorial had at least one tag matching at least
+     *   one of the filterGroup's values.
+     */
+    findMatchingTag(filterGroup, tutorialTags) {
+      return filterGroup.some(filterName => tutorialTags.split(',').includes(filterName));
+    }
+
+  },
+
   render() {
     return (
       <div>
-        <FilterSet
-          filterGroups={this.props.filterGroups}
-          onUserInput={this.handleUserInput}
-          selection={this.state.filters}
+        <FilterHeader
           backButton={this.props.backButton}
-          roboticsButton={this.props.roboticsButton}
+          filteredTutorialsCount={this.state.filteredTutorialsCount}
+          mobileLayout={this.state.mobileLayout}
+          showingModalFilters={this.state.showingModalFilters}
+          showModalFilters={this.showModalFilters}
+          hideModalFilters={this.hideModalFilters}
         />
+        <div style={{clear: "both"}}/>
 
-        {!this.isLocaleEnglish() && (
+        {this.shouldShowFilters() && (
+          <FilterSet
+            filterGroups={this.props.filterGroups}
+            onUserInput={this.handleUserInput}
+            selection={this.state.filters}
+            roboticsButton={this.props.roboticsButton}
+          />
+        )}
+
+        {this.shouldShowTutorialsForLocale() && (
           <div>
             <h1>Tutorials in your language</h1>
             <TutorialSet
-              tutorials={this.props.tutorials}
+              tutorials={this.state.filteredTutorialsForLocale}
               filters={this.state.filters}
               locale={this.props.locale}
               specificLocale={true}
@@ -85,11 +273,13 @@ const TutorialExplorer = React.createClass({
           </div>
         )}
 
-        <TutorialSet
-          tutorials={this.props.tutorials}
-          filters={this.state.filters}
-          locale={this.props.locale}
-        />
+        {this.shouldShowTutorials() && (
+          <TutorialSet
+            tutorials={this.state.filteredTutorials}
+            filters={this.state.filters}
+            locale={this.props.locale}
+          />
+        )}
       </div>
     );
   }
@@ -112,3 +302,5 @@ window.TutorialExplorerManager = function (options) {
     );
   };
 };
+
+export default TutorialExplorer;
