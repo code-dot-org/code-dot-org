@@ -3,7 +3,7 @@
 Feature: Hour of Code tests for users that are signed in
 
 Scenario:
-  Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  Given I am on "http://studio.code.org/hoc/1?noautoplay=true&noprerender=true"
   Then I wait to see a dialog titled "Puzzle 1 of 20"
   And I close the dialog
   Then I wait until element "#runButton" is visible
