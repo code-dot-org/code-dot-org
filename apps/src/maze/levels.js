@@ -74,6 +74,7 @@ module.exports = {
     'startBlocks': startBlocks(2, 1)
   },
   '2_2': {
+    'instructionsImportant': true,
     'toolbox': toolbox(2, 2),
     'ideal': 3,
     'requiredBlocks': [
