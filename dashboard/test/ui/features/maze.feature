@@ -2,7 +2,7 @@ Feature: Complete a complicated maze level
 
 Background:
   Given I am on "http://studio.code.org/reset_session"
-  Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true&noprerender=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 15 of 20"
   And element ".modal-content p:nth-child(2)" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."

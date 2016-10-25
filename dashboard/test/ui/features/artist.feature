@@ -1,7 +1,7 @@
 Feature: Playing the Artist Game
 
 Background:
-  Given I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true&noprerender=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 10"
   And I close the dialog

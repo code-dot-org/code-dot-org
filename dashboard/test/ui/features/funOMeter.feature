@@ -3,7 +3,7 @@ Feature: Fun-O-Meter
 
 @no_circle
 Scenario: Rate a Puzzle
-  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true&noprerender=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I close the dialog

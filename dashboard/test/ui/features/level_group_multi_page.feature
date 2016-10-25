@@ -1,6 +1,7 @@
 @no_mobile
 @no_circle
 @as_taught_student
+@no_ie
 Feature: Level Group
 
 Background:

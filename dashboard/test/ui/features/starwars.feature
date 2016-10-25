@@ -4,7 +4,7 @@ Feature: Hour of Code 2015 tutorial is completable
   Scenario: Solving puzzle 1 in block mode
     Given I am on "http://studio.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"
-    And I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
+    And I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true&noprerender=true"
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 1 of 15"
     And I close the dialog
@@ -19,7 +19,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I verify progress in the header of the current page is "perfect" for level 1
 
   Scenario: Solving puzzle 1 in text mode
-    Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true&noprerender=true"
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 1 of 15"
     And I close the dialog

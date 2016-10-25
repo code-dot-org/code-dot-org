@@ -4,7 +4,7 @@ Background:
   Given I am on "http://studio.code.org/hoc/reset"
 
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
-  Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  Given I am on "http://studio.code.org/hoc/1?noautoplay=true&noprerender=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 20"
   And I close the dialog
