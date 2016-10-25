@@ -288,8 +288,8 @@ const StageEditor = React.createClass({
       return {top: metrics.top, bottom: metrics.bottom};
     });
     this.setState({
-      dragging: position,
-      draggingHeight: this.metrics(position).height + 5,
+      drag: position,
+      dragHeight: this.metrics(position).height + 5,
       initialPageY: pageY,
       startingPositions
     });
@@ -299,17 +299,17 @@ const StageEditor = React.createClass({
 
   handleDrag({pageY}) {
     const delta = (pageY - this.state.initialPageY); // / 1.4;
-    const dragPosition = this.metrics(this.state.dragging).top;
+    const dragPosition = this.metrics(this.state.drag).top;
     const currentPositions = this.state.startingPositions.map((metrics, index) => {
       const postion = index + 1;
-      if (postion === this.state.dragging) {
+      if (postion === this.state.drag) {
         return delta;
       }
-      if (postion < this.state.dragging && dragPosition < metrics.top) {
-        return this.state.draggingHeight;
+      if (postion < this.state.drag && dragPosition < metrics.top) {
+        return this.state.dragHeight;
       }
-      if (postion > this.state.dragging && dragPosition + this.state.draggingHeight > metrics.bottom) {
-        return -this.state.draggingHeight;
+      if (postion > this.state.drag && dragPosition + this.state.dragHeight > metrics.bottom) {
+        return -this.state.dragHeight;
       }
       return 0;
     });
@@ -317,7 +317,7 @@ const StageEditor = React.createClass({
   },
 
   handleDragStop() {
-    this.setState({dragging: null, currentPositions: []});
+    this.setState({drag: null, currentPositions: []});
     window.removeEventListener('mousemove', this.handleDrag);
     window.removeEventListener('mouseup', this.handleDragStop);
   },
@@ -336,7 +336,7 @@ const StageEditor = React.createClass({
             level={level}
             expanded={level.position === this.state.expanded}
             handleExpand={this.handleExpand}
-            dragging={level.position === this.state.dragging}
+            drag={level.position === this.state.drag}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
           />
@@ -351,7 +351,7 @@ const LevelEditor = React.createClass({
     level: React.PropTypes.object.isRequired,
     expanded: React.PropTypes.bool.isRequired,
     handleExpand: React.PropTypes.func.isRequired,
-    dragging: React.PropTypes.bool.isRequired,
+    drag: React.PropTypes.bool.isRequired,
     delta: React.PropTypes.number,
     handleDragStart: React.PropTypes.func.isRequired
   },
@@ -415,7 +415,7 @@ const LevelEditor = React.createClass({
         />
       </div> :
       <Motion
-        style={this.props.dragging ? {
+        style={this.props.drag ? {
           y: this.props.delta,
           scale: spring(1.02, {stiffness: 1000, damping: 80}),
           shadow: spring(5, {stiffness: 1000, damping: 80})
@@ -430,7 +430,7 @@ const LevelEditor = React.createClass({
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
-              zIndex: this.props.dragging ? 1000 : 'auto'
+              zIndex: this.props.drag ? 1000 : 'auto'
             })}
           >
             <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
