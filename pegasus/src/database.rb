@@ -2,8 +2,6 @@ require 'cdo/db'
 require 'cdo/properties'
 
 class Tutorials
-  attr_reader :contents
-
   def initialize(table)
     @table = table
     @contents = DB[@table].all
