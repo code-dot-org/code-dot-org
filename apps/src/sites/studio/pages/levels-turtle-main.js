@@ -5,7 +5,8 @@ import blocks from "@cdo/apps/turtle/blocks";
 import skins from "@cdo/apps/turtle/skins";
 import levels from "@cdo/apps/turtle/levels";
 
-window.turtleMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   var artist = new Artist();
@@ -15,4 +16,4 @@ window.turtleMain = function (options) {
   };
   artist.injectStudioApp(studioApp);
   appMain(artist, levels, options);
-};
+});

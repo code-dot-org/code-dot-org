@@ -7,7 +7,8 @@ if (typeof global !== "undefined") {
 import levels from "@cdo/apps/applab/levels";
 import * as skins from "@cdo/apps/applab/skins";
 
-window.applabMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   appMain(window.Applab, levels, options);
-};
+});

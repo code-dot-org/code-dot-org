@@ -8,9 +8,10 @@ import blocks from "@cdo/apps/maze/blocks";
 import levels from "@cdo/apps/maze/levels";
 import skins from "@cdo/apps/maze/skins";
 
-window.mazeMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
 
   appMain(window.Maze, levels, options);
-};
+});

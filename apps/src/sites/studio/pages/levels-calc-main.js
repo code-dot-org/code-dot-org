@@ -5,8 +5,9 @@ import blocks from "@cdo/apps/calc/blocks";
 import skins from "@cdo/apps/skins";
 import levels from "@cdo/apps/calc/levels";
 
-window.calcMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   appMain(window.Calc, levels, options);
-};
+});

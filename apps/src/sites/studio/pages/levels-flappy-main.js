@@ -8,8 +8,9 @@ import blocks from "@cdo/apps/flappy/blocks";
 import levels from "@cdo/apps/flappy/levels";
 import skins from "@cdo/apps/flappy/skins";
 
-window.flappyMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   appMain(window.Flappy, levels, options);
-};
+});

@@ -8,7 +8,8 @@ import blocks from "@cdo/apps/craft/blocks";
 import levels from "@cdo/apps/craft/levels";
 import skins from "@cdo/apps/craft/skins";
 
-window.craftMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
 
   options.blocksModule = blocks;
@@ -19,4 +20,4 @@ window.craftMain = function (options) {
   options.vizAspectRatio = appWidth / appHeight;
 
   appMain(window.Craft, levels, options);
-};
+});

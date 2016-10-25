@@ -4,11 +4,12 @@ import NetSim from "@cdo/apps/netsim/netsim";
 import levels from "@cdo/apps/netsim/levels";
 import skins from "@cdo/apps/netsim/skins";
 
-window.netsimMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.isEditorless = true;
 
   var netSim = new NetSim();
   netSim.injectStudioApp(studioApp);
   appMain(netSim, levels, options);
-};
+});

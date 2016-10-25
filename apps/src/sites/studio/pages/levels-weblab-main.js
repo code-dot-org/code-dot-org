@@ -4,7 +4,8 @@ import WebLab from "@cdo/apps/weblab/WebLab";
 import skins from "@cdo/apps/skins";
 import levels from '@cdo/apps/weblab/levels';
 
-window.weblabMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.isEditorless = true;
   const weblab = new WebLab();
@@ -14,4 +15,4 @@ window.weblabMain = function (options) {
 
   weblab.injectStudioApp(studioApp);
   appMain(weblab, levels, options);
-};
+});
