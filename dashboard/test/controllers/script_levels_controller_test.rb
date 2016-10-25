@@ -296,14 +296,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:view_options)[:autoplay_video]
   end
 
-  test 'should not have autoplay video when noautoplay param is set' do
-    level_with_autoplay_video = create(:script_level, :with_autoplay_video)
-    get :show, script_id: level_with_autoplay_video.script, stage_position: '1', id: '1', noautoplay: 'true'
-    assert_response :success
-    assert_not_empty assigns(:level).related_videos
-    assert_nil assigns(:view_options)[:autoplay_video]
-  end
-
   test 'should have autoplay video when never_autoplay_video is false on level' do
     level_with_autoplay_video = create(:script_level, :never_autoplay_video_false)
     get :show, script_id: level_with_autoplay_video.script, stage_position: '1',  id: '1'
@@ -317,24 +309,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: level_with_autoplay_video.script, stage_position: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
-    assert_nil assigns(:view_options)[:autoplay_video]
-  end
-
-  test 'should track video play even if noautoplay param is set' do
-    # This behavior is relied on by UI tests that navigate to the next level after completion,
-    # because the ?noautoplay=true parameter does not propagate to the next level.
-    # The video would get autoplayed on the next level if not tracked as seen
-    script = create(:script)
-    stage = create(:stage, script: script, name: 'Testing Stage 1', absolute_position: 1)
-    level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
-    assert !client_state.videos_seen_for_test?
-
-    get :show, script_id: level_with_autoplay_video.script, stage_position: stage.absolute_position, id: '1', noautoplay: 'true'
-    assert_nil assigns(:view_options)[:autoplay_video]
-    assert client_state.videos_seen_for_test?
-
-    @controller = ScriptLevelsController.new
-    get :show, script_id: level_with_autoplay_video.script, stage_position: stage.absolute_position, id: '1'
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
