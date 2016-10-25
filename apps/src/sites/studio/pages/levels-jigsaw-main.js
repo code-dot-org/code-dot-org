@@ -1,11 +1,12 @@
-var appMain = require("../../../appMain");
-window.Jigsaw = require('../../../jigsaw/jigsaw');
+import appMain from "@cdo/apps/appMain";
+import Jigsaw from '@cdo/apps/jigsaw/jigsaw';
+window.Jigsaw = Jigsaw;
 if (typeof global !== 'undefined') {
   global.Jigsaw = window.Jigsaw;
 }
-var blocks = require("../../../jigsaw/blocks");
-var levels = require("../../../jigsaw/levels");
-var skins = require("../../../jigsaw/skins");
+import blocks from "@cdo/apps/jigsaw/blocks";
+import levels from "@cdo/apps/jigsaw/levels";
+import skins from "@cdo/apps/jigsaw/skins";
 
 window.jigsawMain = function (options) {
   options.skinsModule = skins;

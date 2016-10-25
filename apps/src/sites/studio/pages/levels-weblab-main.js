@@ -1,7 +1,7 @@
-import appMain from "../../../appMain";
-import {singleton as studioApp} from "../../../StudioApp";
-import WebLab from "../../../weblab/WebLab";
-import skins from "../../../skins";
+import appMain from "@cdo/apps/appMain";
+import {singleton as studioApp} from "@cdo/apps/StudioApp";
+import WebLab from "@cdo/apps/weblab/WebLab";
+import skins from "@cdo/apps/skins";
 
 window.weblabMain = function (options) {
   options.skinsModule = skins;

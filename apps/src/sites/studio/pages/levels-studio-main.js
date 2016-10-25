@@ -1,11 +1,12 @@
-var appMain = require("../../../appMain");
-window.Studio = require('../../../studio/studio');
+import appMain from "@cdo/apps/appMain";
+import Studio from '@cdo/apps/studio/studio';
+window.Studio = Studio;
 if (typeof global !== 'undefined') {
   global.Studio = window.Studio;
 }
-var blocks = require("../../../studio/blocks");
-var levels = require("../../../studio/levels");
-var skins = require("../../../studio/skins");
+import blocks from "@cdo/apps/studio/blocks";
+import levels from "@cdo/apps/studio/levels";
+import skins from "@cdo/apps/studio/skins";
 
 window.studioMain = function (options) {
   options.skinsModule = skins;

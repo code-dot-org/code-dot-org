@@ -1,9 +1,8 @@
-var appMain = require("../../../appMain");
-var studioApp = require('../../../StudioApp').singleton;
-var NetSim = require("../../../netsim/netsim");
-
-var levels = require("../../../netsim/levels");
-var skins = require("../../../netsim/skins");
+import appMain from "@cdo/apps/appMain";
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import NetSim from "@cdo/apps/netsim/netsim";
+import levels from "@cdo/apps/netsim/levels";
+import skins from "@cdo/apps/netsim/skins";
 
 window.netsimMain = function (options) {
   options.skinsModule = skins;

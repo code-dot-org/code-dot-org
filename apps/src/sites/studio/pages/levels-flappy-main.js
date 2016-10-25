@@ -1,11 +1,12 @@
-var appMain = require("../../../appMain");
-window.Flappy = require('../../../flappy/flappy');
+import appMain from "@cdo/apps/appMain";
+import Flappy from '@cdo/apps/flappy/flappy';
+window.Flappy = Flappy;
 if (typeof global !== 'undefined') {
   global.Flappy = window.Flappy;
 }
-var blocks = require("../../../flappy/blocks");
-var levels = require("../../../flappy/levels");
-var skins = require("../../../flappy/skins");
+import blocks from "@cdo/apps/flappy/blocks";
+import levels from "@cdo/apps/flappy/levels";
+import skins from "@cdo/apps/flappy/skins";
 
 window.flappyMain = function (options) {
   options.skinsModule = skins;
