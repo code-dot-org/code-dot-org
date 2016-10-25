@@ -169,7 +169,7 @@ class ScriptDSL < BaseDSL
           end
           s << 'endvariants'
         else
-          s.concat(self.serialize_level(sl.level, type))
+          s.concat(self.serialize_level(sl.levels[0], type))
         end
       end
       s << ''
