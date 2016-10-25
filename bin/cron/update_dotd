@@ -33,7 +33,7 @@ def main
   current_topic = JSON.parse(channel_info)['channel']['topic']['value']
 
   # Get the primary and secondary site on-calls from PagerDuty.
-  on_call = `curl -H "Content-type: application/json" -H "Authorization: Token token=#{PAGERDUTY_TOKEN}" -X GET -G "https://codeorg.pagerduty.com/api/v1/users/on_call"`
+  on_call = `curl --silent -H "Content-type: application/json" -H "Authorization: Token token=#{PAGERDUTY_TOKEN}" -X GET -G "https://codeorg.pagerduty.com/api/v1/users/on_call"`
   on_call_parsed = JSON.parse(on_call)
   primary_dotd_email = nil
   on_call_parsed['users'].each do |user|

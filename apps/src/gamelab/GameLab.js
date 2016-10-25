@@ -254,7 +254,8 @@ GameLab.prototype.init = function (config) {
     showDebugSlider: false,
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
-    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
+    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
+    isIframeEmbed: !!config.level.iframeEmbed,
   });
 
   if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {

@@ -24,7 +24,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Displace\r\n\r\nThe interaction you've been programming is a very common one to want to use. In fact, it's so common that there's a block designed to do the interaction for you. `sprite.displace()` that will make one sprite push the other when they touch. The code underlying this block might look a lot like what you just wrote, but now you no longer need to worry about those details.\r\n\r\n# Do This\r\n\r\nSomeone tried to use the `sprite.displace()` block to make the **elephant push the hippo**, but there is a bug. Can you change the code so that the cat pushes the yarn?\r\n\r\n* Find the line of code where the `sprite.displace()` block is used and fix the error.",
+    "markdown_instructions": "# Displace\r\n\r\nThe interaction you've been programming is so common that there's a block designed to do the interaction for you. `sprite.displace()` that will make one sprite push the other when they touch. The code underlying this block might look a lot like what you just wrote, but now you no longer need to worry about writing those details yourself.\r\n\r\n# Do This\r\n\r\nSomeone tried to use the `sprite.displace()` block to make the **elephant push the hippo**, but there is a bug. Can you change the code so that the elephant pushes the hippo off the screen?\r\n\r\n* Find the line of code where the `sprite.displace()` block is used and fix the error.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

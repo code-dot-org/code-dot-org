@@ -278,10 +278,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.friendly_name.length == 255
   end
 
-  test 'date filters' do
+  test 'start date filters' do
     pivot_date = Date.today
     workshop_before = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
-    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date)]
+    # Start in the middle of the day. Since the filter is by date, this should be included in all the queries.
+    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 8.hours)]
     workshop_after = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
 
     # on or before
@@ -295,6 +296,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # combined
     assert_equal [workshop_pivot.id],
       Pd::Workshop.start_on_or_after(pivot_date).start_on_or_before(pivot_date).pluck(:id)
+  end
+
+  test 'end date filters' do
+    pivot_date = Date.today
+    workshop_before = create :pd_workshop, ended_at: pivot_date - 1.week
+    # End in the middle of the day. Since the filter is by date, this should be included in all the queries.
+    workshop_pivot = create :pd_workshop, ended_at: pivot_date + 8.hours
+    workshop_after = create :pd_workshop, ended_at: pivot_date + 1.week
+
+    # on or before
+    assert_equal [workshop_before, workshop_pivot].map(&:id).sort,
+      Pd::Workshop.end_on_or_before(pivot_date).pluck(:id).sort
+
+    # on or after
+    assert_equal [workshop_pivot, workshop_after].map(&:id).sort,
+      Pd::Workshop.end_on_or_after(pivot_date).pluck(:id).sort
+
+    # combined
+    assert_equal [workshop_pivot.id],
+      Pd::Workshop.end_on_or_after(pivot_date).end_on_or_before(pivot_date).pluck(:id)
   end
 
   test 'time constraints' do

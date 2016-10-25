@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "*\"Now a tag for Belle!\"*\r\n\r\nDraw this diamond with 200 pixel sides.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "*\"Now a tag for Belle!\"*\r\n\r\nDraw this diamond with 200 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

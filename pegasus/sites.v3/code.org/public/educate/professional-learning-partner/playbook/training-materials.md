@@ -34,17 +34,16 @@ ________________
 Click on the following links to view the resources from TeacherCon 2016.<br>
 
 - [Worksheets and Agenda TeacherCon SLC (including faciitator selection rubric) - gdoc](https://docs.google.com/document/d/1qa_NKPiaGGCWfEexrwwk7GSO8vMQbyYGJE1lDmyt714/edit?usp=sharing)
-- [Overview of the Roadmap - Slides](https://docs.google.com/presentation/d/1XzZm6Z10bHq2jtMrDyOzY0A21j8so0hLnyUcfPO6MZ8/edit?usp=sharing)
-<br>
-<br>
+- [Overview of the Roadmap - Slides](https://docs.google.com/presentation/d/1XzZm6Z10bHq2jtMrDyOzY0A21j8so0hLnyUcfPO6MZ8/edit?usp=sharing)<br/>
+
 Fundraising
 
 - [Exploring the Fundraising Playbook - Slides](https://docs.google.com/presentation/d/1QDzxylUW_Nbp0nzvnSsa8lSVI-63fFoCD0CMF48zpd8/edit?usp=sharing)
 - [Fundraising Examples from the Field - CodeVA - Slides](https://docs.google.com/presentation/d/1k6c-v6HhexjJ5u0Rqknc3X1JrHK62Aqk_6kK33UFQ6c/edit?usp=sharing)
 - [Fundraising Examples from the Field - SFAZ and GCU - Slides](https://docs.google.com/presentation/d/1iPT_iiAIFD1t73dcRFtuI-VIze7aYLXso563M8vLvxM/edit?usp=sharing)
 - [Building Your Funding Roadmap - Slides](https://docs.google.com/presentation/d/10wfV9wzbO1TM_E80TKYNAE-hsTy_RmZavbDrica0KXE/edit?usp=sharing)
-<br>
-<br>
+<br/>
+
 Teacher Implementation
 
 - [How to Keep Teachers Implementing - Broward - Slides](https://docs.google.com/presentation/d/1NuUhD0m0_dIaynB34ePqFJYZUf1t-b1C-wyMcAixsns/edit?usp=sharing)
@@ -53,21 +52,21 @@ Teacher Implementation
 - [IDLA Exemplar - CS Pathways - PDF](https://drive.google.com/open?id=0B_RYFwL0skolbzR4NFFEWnpGMXNBd1Q3X2M4aDlMdUU0X0Rr)
 - [IDLA Exemplar - What We've Accomplish - PDF](https://drive.google.com/file/d/0B_RYFwL0skoldmpFelpJcHo0RUJxcndzSUo5OXpKQWQ2NHR3/view?usp=sharing)
 - [Building Your Teacher Implementation Roadmap - Slides](https://docs.google.com/presentation/d/1OrcEOWndHgfYlCItbfgDB4LILAmG8PT29fq0ARO-JgQ/edit?usp=sharing)
-<br>
-<br>
+<br/>
+
 Facilitator Capacity
 
 - [How Code.org Works With Facilitators - Slides](https://docs.google.com/presentation/d/1mbFc3tnLzjTdQBgAokTtfuCGoe0zGGAiyWP6CsKsvbI/edit?usp=sharing)
 - [Building Your Facilitator Capacity Roadmap - Slides](https://docs.google.com/presentation/d/1NfId_1wNwR7AnLbzG38saPbkBb5vwm1GPmBZ1HxIWzA/edit?usp=sharing)
-<br>
-<br>
+<br/>
+
 Community Building
 
 - [Examples of Community Building - Code Interactive - Slides](https://docs.google.com/presentation/d/1XIb124xm3UX-NYwNnCiofpU_ZZCtsnHvvbL0IadJ4hM/edit?usp=sharing)
 - [Examples of Community Building - 9 Dots, Nextech and RUSMP - Slides](https://docs.google.com/presentation/d/1YzXn87OOJbxOxamUZccubnMiT1vkwIrINGQ68bNhNN4/edit?usp=sharing)
 - [Building your Community Roadmap - Slides](https://docs.google.com/presentation/d/1xfvG8scD4jVRlaNAcpOhctIAHra-9VctpyoLx9PbcKE/edit?usp=sharing)
-<br>
-<br>
+<br/>
+
 CS Expansion
 
 - [Overview of how Code.org recruited districts - Slides](https://docs.google.com/presentation/d/1q7WUYBxrVEOd02r-1ybTsrcA7Tq2j4RtwH13Ej3rnIY/edit?usp=sharing)
@@ -112,6 +111,11 @@ October 2016:
 
 - Supplies for Counselor and Administrator PD - [Video](http://videos.code.org/plp/counselor_administrator_supplies.mp4)
 - Supplies for Counselor and Administrator PD - [Slides](https://docs.google.com/presentation/d/1RQeBL7rTcWnqzM48xNv8f1J3da5OVboekLJyw3_WeSk/edit#slide=id.gb846b8ce1_0_5)
+- Hour of Code - [Slides](https://docs.google.com/presentation/d/12NF2r50USaxA7gReTFvBTv-6ggJ0wQHmj8HMPHQ0lNA/edit#slide=id.g1817931dd1_0_0)
+- How to Use Slack - [Video](http://videos.code.org/plp/how-to-use-slack.mp4)
+- How to Use Slack - [Slides](https://docs.google.com/presentation/d/1Rjm0-xrzJUWZHXqwjUkk166P-PeuFKpe9EEQK3RmNJY/edit#slide=id.gb846b8ce1_0_5)
+- Overview of CS Discoveries - [Video](http://videos.code.org/plp/cs-discoveries-program-overview.mp4)
+- Overview of CS Discoveries - [Slides](https://docs.google.com/presentation/d/1MNqdPQK6hIHxIHav5BHgp8_SVCfWmAZwQXhi1Kl-laI/edit#slide=id.g13d52b2d7c_0_159)
 
 [**Back to the top**](#top)
 <br/>
