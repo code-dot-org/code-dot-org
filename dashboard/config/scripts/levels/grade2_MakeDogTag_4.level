@@ -15,7 +15,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\r\n\r\nFinish this tag by drawing a rectangle around the outside.  \r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>\r\n",
+    "markdown_instructions": "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\r\n\r\nFinish this tag by drawing a rectangle around the outside.  \r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
