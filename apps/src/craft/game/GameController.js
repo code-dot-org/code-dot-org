@@ -358,7 +358,7 @@ class GameController {
   // command record
 
   initializeCommandRecord() {
-    let commandList = ["moveAway", "moveToward", "moveForward", "turn", "turnRandom", "explode", "wait", "flash", "drop", "spawn", "destroy", "playSound", "attack"];
+    let commandList = ["moveAway", "moveToward", "moveForward", "turn", "turnRandom", "explode", "wait", "flash", "drop", "spawn", "destroy", "playSound", "attack", "addScore"];
     this.commandRecord = new Map;
     this.repeatCommandRecord = new Map;
     this.isRepeat = false;
@@ -1314,6 +1314,7 @@ class GameController {
   }
 
   addScore(commandQueueItem, score) {
+    this.addCommandRecord("addScore", undefined, commandQueueItem.repeat);
     if (this.useScore) {
       this.score += score;
 
