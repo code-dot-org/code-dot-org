@@ -45,17 +45,32 @@ module WorkshopScoreSummarizer
     :part_of_community_s
   ]
 
-  def get_score_for_workshops(workshops, facilitator_breakdown = false)
+  FREE_RESPONSE_QUESTIONS = [
+    :things_facilitator_did_well_s,
+    :things_facilitator_could_improve_s,
+    :things_you_liked_s,
+    :things_you_would_change_s,
+    :anything_else_s
+  ]
+
+  def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false)
     report_rows = Hash.new(0)
     response_count = 0
 
     facilitator_scores = nil
+    free_responses = Hash.new
 
     if facilitator_breakdown
       facilitator_scores = Hash.new
 
       workshops.flat_map(&:facilitators).uniq.each do |facilitator|
         facilitator_scores[facilitator.name] = Hash.new(0)
+      end
+    end
+
+    if include_free_responses
+      FREE_RESPONSE_QUESTIONS.each do |question|
+        free_responses[question] = []
       end
     end
 
@@ -81,6 +96,8 @@ module WorkshopScoreSummarizer
         survey_response.symbolize_keys.each do |k, v|
           if OVERALL_SUCCESS_QUESTIONS.include?(k)
             score = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(v) + 1
+          elsif FREE_RESPONSE_QUESTIONS.include?(k)
+            # Do nothing - no score to compute but don't skip this
           else
             next unless PdWorkshopSurvey::OPTIONS.key?(k) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(k)
             score = get_score_for_response(PdWorkshopSurvey::OPTIONS, k, v)
@@ -97,6 +114,10 @@ module WorkshopScoreSummarizer
           if INDIVIDUAL_RESPONSE_QUESTIONS.include?(k)
             add_score_to_hash(report_rows, k, workshop.facilitators, facilitator_scores, score)
           end
+
+          if include_free_responses && FREE_RESPONSE_QUESTIONS.include?(k)
+            free_responses[k].append(v)
+          end
         end
       end
     end
@@ -109,6 +130,10 @@ module WorkshopScoreSummarizer
 
     INDIVIDUAL_RESPONSE_QUESTIONS.each do |question|
       report_rows[question] = (report_rows[question].to_f / response_count).round(2)
+    end
+
+    FREE_RESPONSE_QUESTIONS.map.each do |question|
+      report_rows[question] = free_responses[question]
     end
 
     if facilitator_breakdown

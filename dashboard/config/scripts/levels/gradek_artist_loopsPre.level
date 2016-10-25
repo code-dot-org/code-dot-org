@@ -31,7 +31,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]\r\n"
   },
   "published": true,
   "notes": "",

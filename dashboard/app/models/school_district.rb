@@ -18,12 +18,12 @@ class SchoolDistrict < ActiveRecord::Base
   # and is then exported into a tab-separated file.
   # The data format, notably the LEAID, is described at https://nces.ed.gov/ccd/aadd.asp
   CSV_HEADERS = {
-    :id => 'LEAID',
-    :name => 'NAME',
-    :city => 'LCITY',
-    :state => 'LSTATE',
-    :zip => 'LZIP'
-  }
+    id: 'LEAID',
+    name: 'NAME',
+    city: 'LCITY',
+    state: 'LSTATE',
+    zip: 'LZIP'
+  }.freeze
 
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts

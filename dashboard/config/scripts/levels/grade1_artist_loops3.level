@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Now we need to get the soil ready to plant. Find the bug and help the artist prepare the ground. ",
+    "instructions": "Now we need to get the soil ready to plant. Find the bugs and help the artist prepare the ground. ",
     "x": "25",
     "y": "325",
     "start_direction": "90",
@@ -33,7 +33,8 @@
     "discard_background": "false",
     "authored_hints": "[]",
     "ideal": "4",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
