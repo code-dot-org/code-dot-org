@@ -108,8 +108,10 @@ social:
   -# Map
 
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    #maparea
-      =view :map
+    = view :hoc_events_counter
+    #maparea.full-width
+      %a{href: resolve_url('/map')}
+        %img{src: '/images/map.png', style: 'width: 100%;'}
 
   -# Highlights
 
