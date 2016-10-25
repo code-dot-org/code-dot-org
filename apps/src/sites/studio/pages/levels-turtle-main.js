@@ -1,9 +1,9 @@
-var appMain = require('../appMain');
-var studioApp = require('../StudioApp').singleton;
-var Artist = require('./turtle');
-var blocks = require('./blocks');
-var skins = require('./skins');
-var levels = require('./levels');
+var appMain = require("../../../appMain");
+var studioApp = require('../../../StudioApp').singleton;
+var Artist = require("../../../turtle/turtle");
+var blocks = require("../../../turtle/blocks");
+var skins = require("../../../turtle/skins");
+var levels = require("../../../turtle/levels");
 
 window.turtleMain = function (options) {
   options.skinsModule = skins;
