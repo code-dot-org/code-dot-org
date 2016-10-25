@@ -56,6 +56,7 @@ const styles = {
     padding: 7
   },
   levelToken: {
+    position: 'relative',
     fontSize: 13,
     background: '#eee',
     borderRadius: borderRadius,
@@ -413,6 +414,8 @@ const LevelEditor = React.createClass({
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               zoom: zoom,
+              boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
+              zIndex: this.props.dragging ? 1000 : 'auto'
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`
             })}
           >
