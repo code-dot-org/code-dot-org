@@ -3,7 +3,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Radium from 'radium';
 import {Motion, spring} from 'react-motion';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
@@ -54,18 +53,13 @@ const styles = {
     marginBottom: 15
   },
   levelTokenActive: {
-    padding: 7,
-    outline: '#3b99fc auto',
-    outlineOffset: '-2px'
+    padding: 7
   },
   levelToken: {
-    fontSize: 12,
+    fontSize: 13,
     background: '#eee',
     borderRadius: borderRadius,
-    margin: '5px 0',
-    ':focus': {
-      outline: 0
-    }
+    margin: '5px 0'
   },
   controls: {
     float: 'right'
@@ -317,7 +311,7 @@ const StageEditor = React.createClass({
   }
 });
 
-const LevelEditor = Radium(React.createClass({
+const LevelEditor = React.createClass({
   propTypes: {
     level: React.PropTypes.object.isRequired,
     expanded: React.PropTypes.bool.isRequired,
@@ -339,81 +333,75 @@ const LevelEditor = Radium(React.createClass({
   },
 
   render() {
-    return (
-      <div style={[this.state.expanded && styles.levelTokenActive, styles.levelToken]}>
-        {this.state.expanded ?
-          <div>
-            {this.props.level.ids.map(id => {
-              return (
-                <VirtualizedSelect
-                  key={id}
-                  options={levelKeyList}
-                  value={id}
-                  onChange={this.handleLevelSelected}
-                  clearable={false}
-                  arrowRenderer={ArrowRenderer}
-                  style={styles.levelSelect}
-                />
-              );
-            })}
-            <span style={styles.levelTypeLabel}>Level type:</span>
+    return this.state.expanded ?
+      <div tabIndex="0" style={Object.assign({}, styles.levelTokenActive, styles.levelToken)}>
+        {this.props.level.ids.map(id => {
+          return (
             <VirtualizedSelect
-              value={this.props.level.kind}
-              options={[{
-                label: 'Puzzle', value: 'puzzle'
-              }, {
-                label: 'Assessment', value: 'assessment'
-              }, {
-                label: 'Named Level', value: 'named_level'
-              }, {
-                label: 'Unplugged', value: 'unplugged'
-              }]}
+              key={id}
+              options={levelKeyList}
+              value={id}
+              onChange={this.handleLevelSelected}
               clearable={false}
               arrowRenderer={ArrowRenderer}
-              style={styles.levelTypeSelect}
+              style={styles.levelSelect}
             />
-          </div> :
-          <Motion
-            style={this.props.dragging ? {
-              y: this.props.delta,
-              scale: spring(1.02, {stiffness: 1000, damping: 80}),
-              zoom: spring(1.4, {stiffness: 1000, damping: 80}),
-              shadow: spring(7, {stiffness: 1000, damping: 80})
-            } : {
-              y: 0,
-              scale: 1,
-              zoom: 1,
-              shadow: 0
-            }} key={this.props.level.position}
+          );
+        })}
+        <span style={styles.levelTypeLabel}>Level type:</span>
+        <VirtualizedSelect
+          value={this.props.level.kind}
+          options={[{
+            label: 'Puzzle', value: 'puzzle'
+          }, {
+            label: 'Assessment', value: 'assessment'
+          }, {
+            label: 'Named Level', value: 'named_level'
+          }, {
+            label: 'Unplugged', value: 'unplugged'
+          }]}
+          clearable={false}
+          arrowRenderer={ArrowRenderer}
+          style={styles.levelTypeSelect}
+        />
+      </div> :
+      <Motion
+        style={this.props.dragging ? {
+          y: this.props.delta,
+          scale: spring(1.02, {stiffness: 1000, damping: 80}),
+          zoom: spring(1.4, {stiffness: 1000, damping: 80}),
+          shadow: spring(7, {stiffness: 1000, damping: 80})
+        } : {
+          y: 0,
+          scale: 1,
+          zoom: 1,
+          shadow: 0
+        }} key={this.props.level.position}
+      >
+        {({y, scale, zoom, shadow}) =>
+          <div
+            style={Object.assign({}, styles.levelToken, {
+              transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
+              zoom: zoom,
+              boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 2}px`
+            })}
           >
-            {({y, scale, zoom, shadow}) =>
-              <div
-                style={{
-                  transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
-                  zoom: zoom,
-                  boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 2}px`,
-                  borderRadius: 3
-                }}
-              >
-                <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
-                  <i className="fa fa-arrows-v"/>
-                </div>
-              <span style={styles.levelTokenName} onMouseDown={this.handleClick}>
-                {this.props.level.key}
-                {this.props.level.ids.length > 1 &&
-                ` (${this.props.level.ids.length} variants...)`}
-              </span>
-                <div style={styles.remove}>
-                  <i className="fa fa-times"/>
-                </div>
-              </div>
-            }
-          </Motion>
+            <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
+              <i className="fa fa-arrows-v"/>
+            </div>
+          <span style={styles.levelTokenName} onMouseDown={this.handleClick}>
+            {this.props.level.key}
+            {this.props.level.ids.length > 1 &&
+            ` (${this.props.level.ids.length} variants...)`}
+          </span>
+            <div style={styles.remove}>
+              <i className="fa fa-times"/>
+            </div>
+          </div>
         }
-      </div>
-    );
+      </Motion>;
   }
-}));
+});
 
 const Controls = React.createClass({
   render() {
