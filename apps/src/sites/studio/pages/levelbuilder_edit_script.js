@@ -114,6 +114,10 @@ const styles = {
     WebkitUserSelect: 'none',
     msUserSelect: 'none',
     cursor: 'text'
+  },
+  focused: {
+    outline: '5px auto #3b99fc',
+    outlineOffset: -2
   }
 };
 
@@ -300,7 +304,6 @@ const StageEditor = React.createClass({
           <LevelEditor
             key={level.position}
             level={level}
-            expanded={level.position === this.state.expanded}
             dragging={level.position === this.state.dragging}
             delta={this.state.delta}
             handleDragStart={this.handleDragStart}
@@ -314,7 +317,6 @@ const StageEditor = React.createClass({
 const LevelEditor = React.createClass({
   propTypes: {
     level: React.PropTypes.object.isRequired,
-    expanded: React.PropTypes.bool.isRequired,
     dragging: React.PropTypes.bool.isRequired,
     delta: React.PropTypes.number,
     handleDragStart: React.PropTypes.func.isRequired
@@ -324,17 +326,45 @@ const LevelEditor = React.createClass({
     return {};
   },
 
-  handleClick() {
-    this.setState({expanded: true});
+  componentDidUpdate(_, prevState) {
+    if (this.state.expanded && !prevState.expanded) {
+      window.addEventListener('mousedown', this.handleWindowClick, true);
+    } else if (!this.state.expanded && prevState.expanded) {
+      window.removeEventListener('mousedown', this.handleWindowClick, true);
+    }
+  },
+
+  handleWindowClick(e) {
+    const div = ReactDOM.findDOMNode(this.refs.div);
+    if (e.target !== div && !div.contains(e.target)) {
+      this.setState({expanded: false});
+    }
   },
 
   handleLevelSelected(value) {
     console.log(value);
   },
 
+  handleExpand() {
+    this.setState({expanded: true, focused: true});
+  },
+
+  handleFocus(e) {
+    if (e.target === ReactDOM.findDOMNode(this.refs.div)) {
+      this.setState({focused: true});
+    } else {
+      this.setState({focused: false});
+    }
+  },
+
   render() {
     return this.state.expanded ?
-      <div tabIndex="0" style={Object.assign({}, styles.levelTokenActive, styles.levelToken)}>
+      <div
+        ref="div"
+        onFocus={this.handleFocus}
+        tabIndex="0"
+        style={Object.assign({}, styles.levelTokenActive, styles.levelToken, this.state.focused && styles.focused)}
+      >
         {this.props.level.ids.map(id => {
           return (
             <VirtualizedSelect
@@ -370,7 +400,7 @@ const LevelEditor = React.createClass({
           y: this.props.delta,
           scale: spring(1.02, {stiffness: 1000, damping: 80}),
           zoom: spring(1.4, {stiffness: 1000, damping: 80}),
-          shadow: spring(7, {stiffness: 1000, damping: 80})
+          shadow: spring(5, {stiffness: 1000, damping: 80})
         } : {
           y: 0,
           scale: 1,
@@ -383,13 +413,13 @@ const LevelEditor = React.createClass({
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               zoom: zoom,
-              boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 2}px`
+              boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`
             })}
           >
             <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
               <i className="fa fa-arrows-v"/>
             </div>
-          <span style={styles.levelTokenName} onMouseDown={this.handleClick}>
+          <span style={styles.levelTokenName} onMouseDown={this.handleExpand}>
             {this.props.level.key}
             {this.props.level.ids.length > 1 &&
             ` (${this.props.level.ids.length} variants...)`}
