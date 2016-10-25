@@ -1,6 +1,6 @@
 import appMain from "@cdo/apps/appMain";
 import Bounce from "@cdo/apps/bounce/bounce";
-window.Bound = Bounce;
+window.Bounce = Bounce;
 if (typeof global !== "undefined") {
   global.Bounce = window.Bounce;
 }
