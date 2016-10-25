@@ -8,8 +8,9 @@ import blocks from "@cdo/apps/studio/blocks";
 import levels from "@cdo/apps/studio/levels";
 import skins from "@cdo/apps/studio/skins";
 
-window.studioMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   appMain(window.Studio, levels, options);
-};
+});

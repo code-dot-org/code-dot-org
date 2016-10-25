@@ -7,9 +7,10 @@ if (typeof global !== 'undefined') {
 import blocks from "@cdo/apps/jigsaw/blocks";
 import levels from "@cdo/apps/jigsaw/levels";
 import skins from "@cdo/apps/jigsaw/skins";
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
 
-window.jigsawMain = function (options) {
+createAppLoader(function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   appMain(window.Jigsaw, levels, options);
-};
+});

@@ -4,7 +4,8 @@ import GameLab from "@cdo/apps/gamelab/GameLab";
 import skins from "@cdo/apps/gamelab/skins";
 import levels from "@cdo/apps/gamelab/levels";
 
-window.gamelabMain = function (options) {
+import createAppLoader from "@cdo/apps/code-studio/initApp/loadApp";
+createAppLoader(function (options) {
   options.skinsModule = skins;
   var gamelab = new GameLab();
 
@@ -13,4 +14,4 @@ window.gamelabMain = function (options) {
 
   gamelab.injectStudioApp(studioApp);
   appMain(gamelab, levels, options);
-};
+});

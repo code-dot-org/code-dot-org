@@ -378,7 +378,6 @@ module.exports = function (grunt) {
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'initApp/initApp':              './src/sites/studio/pages/initApp.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
 
