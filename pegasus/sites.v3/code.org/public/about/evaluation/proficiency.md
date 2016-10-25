@@ -5,9 +5,9 @@ nav: about_nav
 
 # What is Basic Coding Proficiency?
 
-2016 is the first year Code.org is reporting on student Basic Coding Proficiency. This is a metric that is based on student performance on Code Studio puzzles in our Computer Science Fundamentals courses. We have defined a matrix of learning objectives organized by concept and difficulty level, and every puzzle is tagged with one or more of these “concept-difficulty” values. 
+2016 is the first year Code.org is reporting on student Basic Coding Proficiency. This is a metric that is based on student performance on Code Studio puzzles in our Computer Science Fundamentals courses. This metric takes into account the concepts used in each puzzle as well as their difficulty. To organize all this information, we have defined a matrix of learning objectives organized by concept and difficulty level. Every puzzle is tagged with one or more of these “concept-difficulty” values, and those values are fundamental to our metric of proficiency.
 
-## Concept-Difficulty Values
+## What Are Concept-Difficulty Values?
 
 A concept-difficulty value is a programming concept (eg: Sequencing, Repeat Loops) and a difficulty level within that concept (from 1 to 5).
 
@@ -109,7 +109,7 @@ This example - [Course 3 Stage 21 Puzzle 13](https://studio.code.org/s/course3/s
 
 ### Combining Concept-Difficulties
 
-Most programming puzzles beyond the simplest examples require students to combine multiple concepts. For this reason, any puzzle can have more than one concept-difficulty tag. For example, [Course 3 Stage 8 Puzzle 9](https://studio.code.org/course3/stage/8/puzzle/9) combines Sequencing, Repeat, and Conditional concepts:
+Most programming puzzles beyond the simplest examples require students to combine multiple concepts. For this reason, any puzzle can have more than one concept-difficulty tag. For example, [Course 3 Stage 8 Puzzle 9](https://studio.code.org/s/course3/stage/8/puzzle/9) combines Sequencing, Repeat, and Conditional concepts:
 
 <img src="/images/c3s8p9.png" />
 
