@@ -1087,6 +1087,7 @@ en:
         title: title
       How are Images Encoded?: {}
       'How to: Make Charts from your Data': {}
+      Importing Screens: {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -2061,6 +2062,7 @@ en:
       courseB_unplugged_mrfProgramming:
         description here: description here
         title: title
+      courseF_external_variableConstant: {}
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -2581,6 +2583,7 @@ en:
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
@@ -3962,6 +3965,11 @@ en:
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
+      CSDU4 Screens Predict Multi:
+        About: About
+        Contact Us: Contact Us
+        Use It: Use It
+        Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -4151,6 +4159,7 @@ en:
         Low bandwidth, high latency: Low bandwidth, high latency
         Low bandwidth, low latency: Low bandwidth, low latency
       CSPFinal_Question_20:
+        Days when certain items sell the most.: Days when certain items sell the most.
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
         Times of day when certain items sell the most.: Times of day when certain items sell the most.
