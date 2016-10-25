@@ -8,8 +8,7 @@ Scenario: View Authored Hints
   # The initial instructions dialog has no hint prompt button
   Then element "#hint-button" does not exist
 
-  When I close the dialog
-  And I wait to see "#prompt-table"
+  When I wait to see "#prompt-table"
 
   # This level has a total of three authored hints
   Then the hint lightbulb shows 3 hints available
@@ -31,15 +30,13 @@ Scenario: View Authored Hints
 
   # Verify that it appears in the instructions dialog
   When I view the instructions and old hints
-  And I wait to see a dialog titled "Puzzle 2 of 2"
 
   Then I see jquery selector .authored-hints ol
   And element ".authored-hints ol" contains text "This is the first hint."
   And element ".authored-hints ol" contains text "It has some basic markup"
 
   # View the second hint verify that it contains an image
-  When I close the dialog
-  And I wait to see "#prompt-table"
+  When I wait to see "#prompt-table"
   And I view the next authored hint
 
   Then element ".qtip" contains text "This is the second hint. It has an image."
@@ -58,7 +55,6 @@ Scenario: View Authored Hints
   # instructions dialog without the "Instructions or Hint option". Also
   # verify that all three hints are in the dialog.
   When I press "prompt-table"
-  And I wait to see a dialog titled "Puzzle 2 of 2"
 
   Then element ".authored-hints" is visible
   And element ".authored-hints" contains text "This is the first hint"
