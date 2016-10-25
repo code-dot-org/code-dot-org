@@ -34,10 +34,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'with the facilitated param, workshop organizers only view workshops they facilitated' do
+    workshop_2 = create(:pd_workshop, organizer: @organizer, facilitators: [@organizer])
+
     sign_in @organizer
     get :index, params: {workshops_ive_facilitated: true}
     assert_response :success
-    assert_equal 0, JSON.parse(@response.body).length
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.length
+    assert_equal workshop_2.id, response[0]['id']
   end
 
   test 'workshop organizers cannot list workshops they are not organizing' do
