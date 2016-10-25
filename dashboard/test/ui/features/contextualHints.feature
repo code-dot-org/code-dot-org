@@ -58,7 +58,7 @@ Scenario: Blocks render in contextual hints
   And I see jquery selector .qtip svg
 
   When I view the instructions and old hints
-  And I wait to see a dialog titled "Puzzle 2 of 2"
+  And I wait to see a dialog titled "Puzzle 2 of 3"
 
   Then I see jquery selector .authored-hints ol
   # the block renders when opening the instructions

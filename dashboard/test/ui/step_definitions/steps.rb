@@ -585,6 +585,10 @@ Then /^I see jquery selector (.*)$/ do |selector|
   expect(exists).to eq(true)
 end
 
+Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num)
+end
+
 Then /^I wait until I see selector "(.*)"$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
 end
