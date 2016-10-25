@@ -269,27 +269,55 @@ const StageEditor = React.createClass({
   },
 
   getInitialState() {
-    return {};
+    return {currentPositions: []};
+  },
+
+  metrics(token) {
+    return ReactDOM.findDOMNode(this.refs[`levelToken${token}`]).getBoundingClientRect();
+  },
+
+  handleExpand(position) {
+    this.setState({
+      expanded: position
+    });
   },
 
   handleDragStart(position, {pageY}) {
+    const startingPositions = this.props.stage.levels.map(level => {
+      const metrics = this.metrics(level.position);
+      return {top: metrics.top, bottom: metrics.bottom};
+    });
     this.setState({
       dragging: position,
+      draggingHeight: this.metrics(position).height + 5,
       initialPageY: pageY,
-      delta: 0
+      startingPositions
     });
     window.addEventListener('mousemove', this.handleDrag);
     window.addEventListener('mouseup', this.handleDragStop);
   },
 
   handleDrag({pageY}) {
-    this.setState({
-      delta: (pageY - this.state.initialPageY) / 1.4
+    const delta = (pageY - this.state.initialPageY); // / 1.4;
+    const dragPosition = this.metrics(this.state.dragging).top;
+    const currentPositions = this.state.startingPositions.map((metrics, index) => {
+      const postion = index + 1;
+      if (postion === this.state.dragging) {
+        return delta;
+      }
+      if (postion < this.state.dragging && dragPosition < metrics.top) {
+        return this.state.draggingHeight;
+      }
+      if (postion > this.state.dragging && dragPosition + this.state.draggingHeight > metrics.bottom) {
+        return -this.state.draggingHeight;
+      }
+      return 0;
     });
+    this.setState({currentPositions});
   },
 
   handleDragStop() {
-    this.setState({dragging: null});
+    this.setState({dragging: null, currentPositions: []});
     window.removeEventListener('mousemove', this.handleDrag);
     window.removeEventListener('mouseup', this.handleDragStop);
   },
@@ -303,10 +331,13 @@ const StageEditor = React.createClass({
         </div>
         {this.props.stage.levels.map(level =>
           <LevelEditor
+            ref={`levelToken${level.position}`}
             key={level.position}
             level={level}
+            expanded={level.position === this.state.expanded}
+            handleExpand={this.handleExpand}
             dragging={level.position === this.state.dragging}
-            delta={this.state.delta}
+            delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
           />
         )}
@@ -318,36 +349,19 @@ const StageEditor = React.createClass({
 const LevelEditor = React.createClass({
   propTypes: {
     level: React.PropTypes.object.isRequired,
+    expanded: React.PropTypes.bool.isRequired,
+    handleExpand: React.PropTypes.func.isRequired,
     dragging: React.PropTypes.bool.isRequired,
     delta: React.PropTypes.number,
     handleDragStart: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
-    return {};
-  },
-
-  componentDidUpdate(_, prevState) {
-    if (this.state.expanded && !prevState.expanded) {
-      window.addEventListener('mousedown', this.handleWindowClick, true);
-    } else if (!this.state.expanded && prevState.expanded) {
-      window.removeEventListener('mousedown', this.handleWindowClick, true);
-    }
-  },
-
-  handleWindowClick(e) {
-    const div = ReactDOM.findDOMNode(this.refs.div);
-    if (e.target !== div && !div.contains(e.target)) {
-      this.setState({expanded: false});
-    }
+    return {focused: true};
   },
 
   handleLevelSelected(value) {
     console.log(value);
-  },
-
-  handleExpand() {
-    this.setState({expanded: true, focused: true});
   },
 
   handleFocus(e) {
@@ -358,11 +372,15 @@ const LevelEditor = React.createClass({
     }
   },
 
+  handleBlur() {
+    this.setState({focused: false});
+  },
+
   render() {
-    return this.state.expanded ?
+    return this.props.expanded ?
       <div
-        ref="div"
         onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
         tabIndex="0"
         style={Object.assign({}, styles.levelTokenActive, styles.levelToken, this.state.focused && styles.focused)}
       >
@@ -400,29 +418,25 @@ const LevelEditor = React.createClass({
         style={this.props.dragging ? {
           y: this.props.delta,
           scale: spring(1.02, {stiffness: 1000, damping: 80}),
-          zoom: spring(1.4, {stiffness: 1000, damping: 80}),
           shadow: spring(5, {stiffness: 1000, damping: 80})
         } : {
-          y: 0,
+          y: spring(this.props.delta, {stiffness: 1000, damping: 80}),
           scale: 1,
-          zoom: 1,
           shadow: 0
         }} key={this.props.level.position}
       >
-        {({y, scale, zoom, shadow}) =>
+        {({y, scale, shadow}) =>
           <div
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
-              zoom: zoom,
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
               zIndex: this.props.dragging ? 1000 : 'auto'
-              boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`
             })}
           >
             <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
               <i className="fa fa-arrows-v"/>
             </div>
-          <span style={styles.levelTokenName} onMouseDown={this.handleExpand}>
+          <span style={styles.levelTokenName} onMouseDown={this.props.handleExpand.bind(null, this.props.level.position)}>
             {this.props.level.key}
             {this.props.level.ids.length > 1 &&
             ` (${this.props.level.ids.length} variants...)`}
