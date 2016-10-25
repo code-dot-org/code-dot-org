@@ -4,6 +4,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import {Motion, spring} from 'react-motion';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
@@ -60,7 +61,6 @@ const styles = {
   levelToken: {
     fontSize: 12,
     background: '#eee',
-    boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)',
     borderRadius: borderRadius,
     margin: '5px 0',
     ':focus': {
@@ -93,7 +93,8 @@ const styles = {
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 15px',
     borderTopLeftRadius: borderRadius,
-    borderBottomLeftRadius: borderRadius
+    borderBottomLeftRadius: borderRadius,
+    cursor: 'ns-resize'
   },
   remove: {
     fontSize: 14,
@@ -104,14 +105,21 @@ const styles = {
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
     borderTopRightRadius: borderRadius,
-    borderBottomRightRadius: borderRadius
+    borderBottomRightRadius: borderRadius,
+    cursor: 'pointer'
   },
   levelTokenName: {
     padding: 7,
     display: 'table-cell',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     width: '100%',
     borderTop: '1px solid #ddd',
-    borderBottom: '1px solid #ddd'
+    borderBottom: '1px solid #ddd',
+    userSelect: 'none',
+    MozUserSelect: 'none',
+    WebkitUserSelect: 'none',
+    msUserSelect: 'none',
+    cursor: 'text'
   }
 };
 
@@ -261,6 +269,32 @@ const StageEditor = React.createClass({
     stage: React.PropTypes.object.isRequired
   },
 
+  getInitialState() {
+    return {};
+  },
+
+  handleDragStart(position, {pageY}) {
+    this.setState({
+      dragging: position,
+      initialPageY: pageY,
+      delta: 0
+    });
+    window.addEventListener('mousemove', this.handleDrag);
+    window.addEventListener('mouseup', this.handleDragStop);
+  },
+
+  handleDrag({pageY}) {
+    this.setState({
+      delta: (pageY - this.state.initialPageY) / 1.4
+    });
+  },
+
+  handleDragStop() {
+    this.setState({dragging: null});
+    window.removeEventListener('mousemove', this.handleDrag);
+    window.removeEventListener('mouseup', this.handleDragStop);
+  },
+
   render() {
     return (
       <div style={styles.stageCard}>
@@ -268,7 +302,16 @@ const StageEditor = React.createClass({
           Stage {this.props.stage.position}: {this.props.stage.name}
           <Controls />
         </div>
-        {this.props.stage.levels.map(level => <LevelEditor key={level.position} level={level} />)}
+        {this.props.stage.levels.map(level =>
+          <LevelEditor
+            key={level.position}
+            level={level}
+            expanded={level.position === this.state.expanded}
+            dragging={level.position === this.state.dragging}
+            delta={this.state.delta}
+            handleDragStart={this.handleDragStart}
+          />
+        )}
       </div>
     );
   }
@@ -276,7 +319,11 @@ const StageEditor = React.createClass({
 
 const LevelEditor = Radium(React.createClass({
   propTypes: {
-    level: React.PropTypes.object.isRequired
+    level: React.PropTypes.object.isRequired,
+    expanded: React.PropTypes.bool.isRequired,
+    dragging: React.PropTypes.bool.isRequired,
+    delta: React.PropTypes.number,
+    handleDragStart: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -293,7 +340,7 @@ const LevelEditor = Radium(React.createClass({
 
   render() {
     return (
-      <div style={[this.state.expanded && styles.levelTokenActive, styles.levelToken]} onClick={this.handleClick}>
+      <div style={[this.state.expanded && styles.levelTokenActive, styles.levelToken]}>
         {this.state.expanded ?
           <div>
             {this.props.level.ids.map(id => {
@@ -326,18 +373,42 @@ const LevelEditor = Radium(React.createClass({
               style={styles.levelTypeSelect}
             />
           </div> :
-          <div>
-            <div style={styles.reorder}>
-              <i className="fa fa-arrows-v" />
-            </div>
-            <span style={styles.levelTokenName}>
-              {this.props.level.key}
-              {this.props.level.ids.length > 1 && ` (${this.props.level.ids.length} variants...)`}
-            </span>
-            <div style={styles.remove}>
-              <i className="fa fa-times" />
-            </div>
-          </div>
+          <Motion
+            style={this.props.dragging ? {
+              y: this.props.delta,
+              scale: spring(1.02, {stiffness: 1000, damping: 80}),
+              zoom: spring(1.4, {stiffness: 1000, damping: 80}),
+              shadow: spring(7, {stiffness: 1000, damping: 80})
+            } : {
+              y: 0,
+              scale: 1,
+              zoom: 1,
+              shadow: 0
+            }} key={this.props.level.position}
+          >
+            {({y, scale, zoom, shadow}) =>
+              <div
+                style={{
+                  transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
+                  zoom: zoom,
+                  boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 2}px`,
+                  borderRadius: 3
+                }}
+              >
+                <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
+                  <i className="fa fa-arrows-v"/>
+                </div>
+              <span style={styles.levelTokenName} onMouseDown={this.handleClick}>
+                {this.props.level.key}
+                {this.props.level.ids.length > 1 &&
+                ` (${this.props.level.ids.length} variants...)`}
+              </span>
+                <div style={styles.remove}>
+                  <i className="fa fa-times"/>
+                </div>
+              </div>
+            }
+          </Motion>
         }
       </div>
     );

@@ -141,6 +141,7 @@
     "react-bootstrap": "0.30.1",
     "react-color": "2.2.5",
     "react-dom": "15.3.0",
+    "react-motion": "0.4.5",
     "react-redux": "4.4.5",
     "react-router": "2.6.0",
     "react-select": "^1.0.0-rc.1",
