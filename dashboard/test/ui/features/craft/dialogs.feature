@@ -11,9 +11,7 @@ Feature: Minecraft dialog levels
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "Character select dialog"
     And I press "close-character-select"
-    Then I wait to see a ".dialog-title"
 #    And I see no difference for "Instructions dialog"
-    And I close the dialog
     And I wait to see "#runButton"
     And element "#runButton" is visible
     Then I wait until the Minecraft game is loaded
@@ -21,7 +19,6 @@ Feature: Minecraft dialog levels
     Then I wait to see a ".congrats"
     Then I wait to see a congrats dialog with title containing "Try using more commands"
 #    And I see no difference for "Try again dialog"
-    And I press "again-button"
     And I wait to see "#resetButton"
     And I press "resetButton"
     And I wait to see "#runButton"
@@ -50,9 +47,7 @@ Feature: Minecraft dialog levels
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "House select dialog"
     And I press "close-house-select"
-    Then I wait to see a ".dialog-title"
 #    And I see no difference for "Instructions dialog"
-    And I close the dialog
     And I wait to see "#runButton"
     And element "#runButton" is visible
     Then I wait until the Minecraft game is loaded
@@ -60,7 +55,6 @@ Feature: Minecraft dialog levels
     Then I wait to see a ".congrats"
     Then I wait to see a congrats dialog with title containing "Place blocks"
 #    And I see no difference for "Try again dialog"
-    And I press "again-button"
     And I wait to see "#resetButton"
     And I press "resetButton"
     And I wait to see "#runButton"

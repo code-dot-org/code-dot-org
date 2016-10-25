@@ -27,7 +27,6 @@ Scenario: Step Only - Failure
   And element "#stepButton" is disabled
   And block "5" doesn't have class "blocklySpotlight"
   And block "6" has class "blocklySpotlight"
-  And I close the dialog
   And element "#runButton" is hidden
   And element "#resetButton" is visible
   And element "#stepButton" is disabled
