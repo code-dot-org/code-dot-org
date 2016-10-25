@@ -1,8 +1,8 @@
-var appMain = require('../appMain');
-var studioApp = require('../StudioApp').singleton;
-var GameLab = require('./GameLab');
-var skins = require('./skins');
-var levels = require('./levels');
+var appMain = require("../../../appMain");
+var studioApp = require('../../../StudioApp').singleton;
+var GameLab = require("../../../gamelab/GameLab");
+var skins = require("../../../gamelab/skins");
+var levels = require("../../../gamelab/levels");
 
 window.gamelabMain = function (options) {
   options.skinsModule = skins;

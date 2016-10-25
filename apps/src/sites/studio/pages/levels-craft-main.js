@@ -1,11 +1,11 @@
-var appMain = require('../appMain');
-window.Craft = require('./craft');
+var appMain = require("../../../appMain");
+window.Craft = require('../../../craft/craft');
 if (typeof global !== 'undefined') {
   global.Craft = window.Craft;
 }
-var blocks = require('./blocks');
-var levels = require('./levels');
-var skins = require('./skins');
+var blocks = require("../../../craft/blocks");
+var levels = require("../../../craft/levels");
+var skins = require("../../../craft/skins");
 
 window.craftMain = function (options) {
   options.skinsModule = skins;
