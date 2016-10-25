@@ -136,6 +136,16 @@ When /^I navigate to the embedded version of my project$/ do
   STEPS
 end
 
+When /^I navigate to the embedded version of my project with source hidden$/ do
+  steps <<-STEPS
+    When I click selector ".project_share"
+    And I wait to see a dialog titled "Share your project"
+    And I click selector "#project-share a:contains('Show advanced options')"
+    And I click selector "#project-share label:contains('Hide ability to view code')"
+    And I copy the embed code into a new document
+  STEPS
+end
+
 Then(/^the palette has (\d+) blocks$/) do |num_blocks|
   expect(@browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length")).to eq(num_blocks.to_i)
 end

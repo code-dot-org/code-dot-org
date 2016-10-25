@@ -51,7 +51,7 @@ module TextToSpeech
   # concern ... I'm not sure how best to deal with that.
 
   included do
-    #before_save :tts_update
+    before_save :tts_update
 
     serialized_attrs %w(
       tts_instructions_override

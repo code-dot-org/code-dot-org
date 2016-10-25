@@ -15,6 +15,7 @@ var reporting = require('@cdo/apps/code-studio/reporting');
 var Dialog = require('@cdo/apps/code-studio/dialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
 import { lockContainedLevelAnswers } from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import queryString from 'query-string';
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -55,7 +56,11 @@ window.apps = {
         if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab' || appOptions.app === 'weblab') {
+        if (!appOptions.level.isK1 &&
+            (appOptions.level.projectTemplateLevelName ||
+             appOptions.app === 'applab' ||
+             appOptions.app === 'gamelab' ||
+             appOptions.app === 'weblab')) {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
           if (project.isEditable()) {
@@ -153,14 +158,20 @@ window.apps = {
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
+        var noAutoplay = !!queryString.parse(location.search).noautoplay;
 
-        if (hasVideo) {
+        if (hasVideo && !noAutoplay) {
           if (hasInstructions) {
             appOptions.autoplayVideo.onClose = afterVideoCallback;
           }
           showVideoDialog(appOptions.autoplayVideo);
-        } else if (hasInstructions) {
-          afterVideoCallback();
+        } else {
+          if (hasVideo && noAutoplay) {
+            clientState.recordVideoSeen(appOptions.autoplayVideo.key);
+          }
+          if (hasInstructions) {
+            afterVideoCallback();
+          }
         }
       }
     };

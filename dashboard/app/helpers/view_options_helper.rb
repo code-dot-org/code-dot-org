@@ -15,6 +15,7 @@ module ViewOptionsHelper
     is_channel_backed
     is_legacy_share
     post_milestone
+    post_final_milestone
     puzzle_ratings_url
     authored_hint_view_requests_url
     server_level_id
