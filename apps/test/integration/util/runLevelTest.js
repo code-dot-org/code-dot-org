@@ -95,7 +95,7 @@ StubDialog.prototype.hide = function () {
 };
 
 function runLevel(app, skinId, level, onAttempt, testData) {
-  require('@cdo/apps/' + app + '/main');
+  require('@cdo/apps/sites/studio/pages/levels-' + app + '-main');
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
