@@ -1,9 +1,10 @@
+/* globals appOptions */
+
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import { ViewType, fullyLockedStageMapping } from '../stageLockRedux';
 import { isHiddenFromState } from '../hiddenStageRedux';
-import { fireResizeEvent } from '@cdo/apps/utils';
 
 const styles = {
   hidden: {
@@ -25,6 +26,8 @@ const styles = {
  */
 const TeacherContentToggle = Radium(React.createClass({
   propTypes: {
+    viewAs: PropTypes.string.isRequired,
+    hiddenStagesInitialized: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
   },
@@ -40,22 +43,10 @@ const TeacherContentToggle = Radium(React.createClass({
     $('#locked-stage').appendTo(this.refs.lockMessage).show();
     $('#hidden-stage').appendTo(this.refs.hiddenMessage).show();
     $('#level-body').appendTo(this.refs.content);
-
-    // TODO - do we want to start content hidden in case we flip to locked/hidden?
-    /*eslint-disable react/no-did-mount-set-state*/
-    if ($(this.refs.content).height() > 0) {
-      this.setState({sizeableContent: true});
-    }
-  },
-
-  componentDidUpdate(nextProps) {
-    // TODO - apparently needed for applab, but that surprises me given our
-    // strategy of always rendering content. understand this
-    fireResizeEvent();
   },
 
   render() {
-    const { isLockedStage, isHiddenStage } = this.props;
+    const { viewAs, hiddenStagesInitialized, isLockedStage, isHiddenStage } = this.props;
 
     const frameStyle = {
       position: 'relative',
@@ -64,17 +55,36 @@ const TeacherContentToggle = Radium(React.createClass({
       height: window.screen.height
     };
 
-    // For programming levels where we have an editor, everything is absolutely
-    // positioned and takes up no height. In this case, we want to render it behind
-    // any locked/hidden stage info rather than hide it so that it still sizes
-    // itself correctly. Otherwise we just want to hide the content.
-    const hideContent = (isLockedStage || isHiddenStage) && this.state.sizeableContent;
+    // TODO - on assessments, page initially loads with teacher content visible
+    // then hides once we've called setViewType (which must happen async)
 
+    let contentStyle = {};
+    let hasOverlayFrame = (isLockedStage || isHiddenStage);
+
+    if (viewAs === ViewType.Student && (!hiddenStagesInitialized || hasOverlayFrame)) {
+      contentStyle.opacity = 0;
+    }
+
+    // In the case where appOptions.app is truthy, we don't want to actually set
+    // display none, as that causes the editor (be it blockly or droplet) to
+    // misrender. We can get away with just setting opacity = 0 because the editor
+    // is rendered to an absolute position and doesnt affect the layout of this
+    // component. For cases where we don't have an IDE (i.e. multi/match) we
+    // need to hide such that it doesnt affect our layout
+    if (hasOverlayFrame && !appOptions.app) {
+      contentStyle.display = 'none';
+    }
+
+    const showLockedStageMessage = isLockedStage && !isHiddenStage;
+    const showHiddenStageMessage = isHiddenStage;
+
+    // Note: This component depends on the fact that the only thing we change about
+    // our children as we rerender is their style.
     return (
       <div>
-        <div style={[hideContent && styles.hidden]} ref="content"/>
-        <div style={[frameStyle, !isLockedStage && styles.hidden]} ref="lockMessage"/>
-        <div style={[frameStyle, !isHiddenStage && styles.hidden]} ref="hiddenMessage"/>
+        <div style={contentStyle} ref="content"/>
+        <div style={[frameStyle, !showLockedStageMessage && styles.hidden]} ref="lockMessage"/>
+        <div style={[frameStyle, !showHiddenStageMessage && styles.hidden]} ref="hiddenMessage"/>
       </div>
     );
   }
@@ -96,6 +106,8 @@ export default connect(state => {
   }
 
   return {
+    viewAs,
+    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     isHiddenStage,
     isLockedStage
   };
