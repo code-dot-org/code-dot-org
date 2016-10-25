@@ -168,6 +168,12 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.moving_students = {editing: true};
 
+    $scope.hocAssignWarningShown = false;
+
+    $scope.hocAssignWarningEnabled = #{Gatekeeper.allows('hoc_assign_warning', default: false)};
+
+    $scope.hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
+
     $scope.edit = function(section) {
       section.editing = true;
     };
@@ -177,6 +183,28 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.save = function(section) {
+      if (section.course) {
+        var course = $scope.course_list.find(function(course) {
+          return course.id === section.course.id;
+        });
+        if ($scope.hocAssignWarningEnabled &&
+            !$scope.hocAssignWarningShown &&
+            course.category === $scope.hocCategoryName) {
+          $scope.sectionToSave = $scope.sections.indexOf(section);
+          $('#assign-confirm').modal('show');
+          return;
+        }
+      }
+      $scope.send_save(section);
+    };
+
+    $scope.confirm_save = function() {
+      $scope.send_save($scope.sections[$scope.sectionToSave]);
+      $scope.hocAssignWarningShown = true;
+      $('#assign-confirm').modal('hide');
+    }
+
+    $scope.send_save = function(section) {
       if (section.id) { // update existing
         sectionsService.update({id: section.id}, section).$promise.then(
           function(result_section) {

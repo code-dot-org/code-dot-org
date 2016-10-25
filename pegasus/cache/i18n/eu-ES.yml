@@ -603,8 +603,6 @@
     ziurtagiriak
   dashboard_landing_educator_blog: Irakurri berriak eta gure materialaren eguneraketak
     Hezitzaileen Blogean
-  dashboard_landing_smart_hints: Mesedez, lagun gaitzazu iradokizun erabilgarriak
-    gehitzen Code.org tutorialetan
   dashboard_landing_video_player: Probatu gure bideo irakurgailu berria zure eskolan
   dashboard_landing_progress_title: Gelako aurrerapena
   dashboard_landing_progress_biggest: Hau da zure sekzio handienaren aurrerapena.
@@ -1047,6 +1045,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
