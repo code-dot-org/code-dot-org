@@ -37,6 +37,10 @@ dashboard_enable_pegasus: true
 # callouts, hints, secret words, or secret pictures.
 #skip_seed_all: true
 
+# Whether to stub schools and school_districts table with much smaller data,
+# saving a total of 4 min 30 sec during rake seed. Default: true (in development).
+#stub_school_data: false
+
 # Encryption key required for decoding certain protected level sources.
 # Ask a Code.org dev for this if you need access to protected levels.
 #properties_encryption_key: ''
