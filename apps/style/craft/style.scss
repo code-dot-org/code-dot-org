@@ -281,6 +281,14 @@ body {
   background-size: 100%;
 }
 
+.minecraft-scoring #minecraft-frame {
+  //@include pixelated();
+  width: 434px;
+  height: 477px;
+  background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_LogoNew.png") !important;
+  background-size: 100%;
+}
+
 #right-button-cell {
   display: none;
   vertical-align: top;

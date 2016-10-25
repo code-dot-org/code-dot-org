@@ -68,6 +68,7 @@ var interfaceImages = {
   DEFAULT: [
     MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
     MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
+    MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_LogoNew.png",
     MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
     MEDIA_URL + "Sliced_Parts/X_Button.png",
     MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
@@ -157,6 +158,10 @@ Craft.init = function (config) {
   var ieVersionNumber = getIEVersion();
   if (ieVersionNumber) {
     $('body').addClass("ieVersion" + ieVersionNumber);
+  }
+
+  if (config.level.useScore) {
+    $('body').addClass("minecraft-scoring");
   }
 
   var bodyElement = document.body;
