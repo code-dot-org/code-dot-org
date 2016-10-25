@@ -154,6 +154,7 @@ en:
             Functions and Functions with Parameters: crwdns65883:0crwdne65883:0
             Intro: crwdns65884:0crwdne65884:0
             Variables: crwdns65885:0crwdne65885:0
+          description_audience: crwdns67502:0crwdne67502:0
         algebra:
           title: crwdns27323:0crwdne27323:0
           description: crwdns27324:0crwdne27324:0
@@ -179,6 +180,7 @@ en:
             "Unplugged: Contracts": crwdns65904:0crwdne65904:0
             "Unplugged: The Design Recipe": crwdns65905:0crwdne65905:0
             "Unplugged: Video Games and Coordinate Planes": crwdns65906:0crwdne65906:0
+          description_audience: crwdns67503:0crwdne67503:0
         infinity:
           title: crwdns36051:0crwdne36051:0
           description: crwdns35313:0crwdne35313:0
@@ -351,6 +353,7 @@ en:
             Preparing for in-person PD: crwdns66066:0crwdne66066:0
             Teacher Dashboard: crwdns66071:0crwdne66071:0
             Why Computer Science belongs in Algebra: crwdns66079:0crwdne66079:0
+          description_audience: crwdns67504:0crwdne67504:0
         algPDmiami:
           title: crwdns35428:0crwdne35428:0
           description: crwdns35429:0crwdne35429:0
@@ -367,6 +370,7 @@ en:
             Your Game - Booleans: crwdns66092:0crwdne66092:0
             Your Game - Collision Detection: crwdns66093:0crwdne66093:0
             Your Game - Player Movement: crwdns66094:0crwdne66094:0
+          description_audience: crwdns67505:0crwdne67505:0
         text-compression:
           title: crwdns35939:0crwdne35939:0
           description: crwdns35940:0crwdne35940:0
@@ -392,6 +396,7 @@ en:
           stage:
             Lesson 14: crwdns66104:0crwdne66104:0
             Lesson 15: crwdns66105:0crwdne66105:0
+          description_audience: crwdns67506:0crwdne67506:0
         ECSPD:
           title: crwdns37922:0crwdne37922:0
           description: crwdns37923:0crwdne37923:0
@@ -420,6 +425,7 @@ en:
             Using Computer Models in Science: crwdns66123:0crwdne66123:0
             Using Models in the Classroom: crwdns66124:0crwdne66124:0
             What to Expect: crwdns66125:0crwdne66125:0
+          description_audience: crwdns67507:0crwdne67507:0
         rbo-reference:
           title: crwdns43245:0crwdne43245:0
           description: crwdns43247:0crwdne43247:0
@@ -466,6 +472,7 @@ en:
             Using Simple Commands: crwdns66208:0crwdne66208:0
             Using Variables in Apps: crwdns66209:0crwdne66209:0
             While Loops: crwdns66216:0crwdne66216:0
+          description_audience: crwdns67508:0crwdne67508:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -633,6 +640,7 @@ en:
             Sam the Bat: crwdns66356:0crwdne66356:0
             Strings and Images: crwdns66357:0crwdne66357:0
             The Design Recipe: crwdns66358:0crwdne66358:0
+          description_audience: crwdns67509:0crwdne67509:0
         allthethings:
           title: crwdns38996:0crwdne38996:0
           description: crwdns38997:0crwdne38997:0
@@ -688,6 +696,7 @@ en:
             Strings and Images: crwdns66407:0crwdne66407:0
             Teacher Dashboard: crwdns66408:0crwdne66408:0
             Writing Contracts: crwdns66409:0crwdne66409:0
+          description_audience: crwdns67510:0crwdne67510:0
         cspfacilitator:
           title: crwdns41625:0crwdne41625:0
           description: crwdns41626:0crwdne41626:0
@@ -750,6 +759,7 @@ en:
             Teaching with the Design Recipe: crwdns66477:0crwdne66477:0
             The Design Recipe: crwdns66478:0crwdne66478:0
             Welcome!: crwdns66479:0crwdne66479:0
+          description_audience: crwdns67511:0crwdne67511:0
         sciencePD2b:
           title: crwdns43280:0crwdne43280:0
           description: crwdns43282:0crwdne43282:0
@@ -781,6 +791,7 @@ en:
             Thinking Ahead to Implementation: crwdns66494:0crwdne66494:0
             Welcome!: crwdns66495:0crwdne66495:0
             Wrap-Up: crwdns66496:0crwdne66496:0
+          description_audience: crwdns67512:0crwdne67512:0
         Equity-OnlinePD:
           title: crwdns43316:0crwdne43316:0
           description: crwdns43318:0crwdne43318:0
@@ -897,6 +908,7 @@ en:
             Prep With Your Modules: crwdns66557:0crwdne66557:0
             The TLO: crwdns66558:0crwdne66558:0
             Welcome Back!: crwdns66559:0crwdne66559:0
+          description_audience: crwdns67513:0crwdne67513:0
         frequency_analysis:
           title: crwdns48420:0crwdne48420:0
           description: crwdns48422:0crwdne48422:0
@@ -914,6 +926,7 @@ en:
             Lesson Overviews: crwdns66574:0crwdne66574:0
             Teaching Strategies: crwdns66576:0crwdne66576:0
             Unit 2 Challenge: crwdns66577:0crwdne66577:0
+          description_audience: crwdns67514:0crwdne67514:0
         ECSPD3-Unit3:
           title: crwdns48442:0crwdne48442:0
           description: crwdns48444:0crwdne48444:0
@@ -925,6 +938,7 @@ en:
             Teaching Strategies: crwdns66601:0crwdne66601:0
             Unit 3 Challenge: crwdns66604:0crwdne66604:0
             Unit 3 Day-by-Day: crwdns66607:0crwdne66607:0
+          description_audience: crwdns67515:0crwdne67515:0
         ECSPD3-Unit4:
           title: crwdns48462:0crwdne48462:0
           description: crwdns48464:0crwdne48464:0
@@ -936,6 +950,7 @@ en:
             Teaching Strategies: crwdns66629:0crwdne66629:0
             Unit 4 Challenge: crwdns66631:0crwdne66631:0
             Unit 4 Day-by-Day: crwdns66636:0crwdne66636:0
+          description_audience: crwdns67516:0crwdne67516:0
         ECSPD3-Unit5:
           title: crwdns48485:0crwdne48485:0
           description: crwdns48487:0crwdne48487:0
@@ -991,6 +1006,7 @@ en:
             Web Requests and APIs: crwdns66707:0crwdne66707:0
             What Data Can Tell Us: crwdns66708:0crwdne66708:0
             Why Make Apps?: crwdns66709:0crwdne66709:0
+          description_audience: crwdns67517:0crwdne67517:0
         ScienceP3OLPT2:
           title: crwdns49768:0crwdne49768:0
           description: crwdns49770:0crwdne49770:0
@@ -1024,6 +1040,7 @@ en:
             Getting Started: crwdns66726:0crwdne66726:0
             Share out and Submit: crwdns66727:0crwdne66727:0
             Unit 2 Overview: crwdns66728:0crwdne66728:0
+          description_audience: crwdns67518:0crwdne67518:0
         duino:
           title: crwdns67418:0crwdne67418:0
           description: crwdns51268:0crwdne51268:0
@@ -1080,6 +1097,7 @@ en:
             "Practice PT: Create": crwdns66763:0crwdne66763:0
             Processing Arrays: crwdns66764:0crwdne66764:0
             While Loops: crwdns66766:0crwdne66766:0
+          description_audience: crwdns67519:0crwdne67519:0
         CSP-Unit3-Support:
           title: crwdns51299:0crwdne51299:0
           description: crwdns51301:0crwdne51301:0
@@ -1161,6 +1179,7 @@ en:
             Rapid Research - Data Innovations: crwdns66805:0crwdne66805:0
             The Cost of Free: crwdns66806:0crwdne66806:0
             What is Big Data?: crwdns66807:0crwdne66807:0
+          description_audience: crwdns67520:0crwdne67520:0
         CSPPD3-Unit4:
           title: crwdns55955:0crwdne55955:0
           description: crwdns55957:0crwdne55957:0
@@ -1229,6 +1248,7 @@ en:
             "Unplugged: Contracts": crwdns66850:0crwdne66850:0
             "Unplugged: Fast Functions": crwdns66851:0crwdne66851:0
             "Unplugged: The Design Recipe": crwdns66852:0crwdne66852:0
+          description_audience: crwdns67521:0crwdne67521:0
         AlgebraB:
           title: crwdns56206:0crwdne56206:0
           description: crwdns56208:0crwdne56208:0
@@ -1245,6 +1265,7 @@ en:
             "Unplugged: Collision Detection and the Distance Formula": crwdns66861:0crwdne66861:0
             "Unplugged: Conditionals and Piecewise Functions": crwdns66862:0crwdne66862:0
             "Unplugged: Video Games and Coordinate Planes": crwdns66863:0crwdne66863:0
+          description_audience: crwdns67522:0crwdne67522:0
         gamelab-hackathon:
           title: crwdns56234:0crwdne56234:0
           description: crwdns56236:0crwdne56236:0
@@ -1262,6 +1283,7 @@ en:
             Preparing for in-person PD: crwdns66868:0crwdne66868:0
             Teacher Dashboard: crwdns66869:0crwdne66869:0
             Why Computer Science belongs in Algebra: crwdns66870:0crwdne66870:0
+          description_audience: crwdns67523:0crwdne67523:0
         algebraPD3c:
           title: crwdns56324:0crwdne56324:0
           description: crwdns56326:0crwdne56326:0
@@ -1329,6 +1351,8 @@ en:
             The Need For Programming Languages: crwdns66925:0crwdne66925:0
             The Need for Algorithms: crwdns66926:0crwdne66926:0
             Using Simple Commands: crwdns66927:0crwdne66927:0
+            Unit 3 Chapter 1 Assessment: crwdns67524:0crwdne67524:0
+          description_audience: crwdns67525:0crwdne67525:0
         csp4:
           title: crwdns56386:0crwdne56386:0
           description: crwdns56388:0crwdne56388:0
@@ -1345,6 +1369,9 @@ en:
             Simple Encryption: crwdns66936:0crwdne66936:0
             The Cost of Free: crwdns66938:0crwdne66938:0
             What is Big Data?: crwdns66939:0crwdne66939:0
+            Rapid Research - Cybercrime: crwdns67526:0crwdne67526:0
+            Practice PT - Big Data and Security Dilemmas: crwdns67527:0crwdne67527:0
+          description_audience: crwdns67528:0crwdne67528:0
         csp5:
           title: crwdns56400:0crwdne56400:0
           description: crwdns56402:0crwdne56402:0
@@ -1399,6 +1426,10 @@ en:
             Sprites and Properties: crwdns66987:0crwdne66987:0
             Variables Unplugged: crwdns66989:0crwdne66989:0
             Variables and Animation: crwdns66990:0crwdne66990:0
+            Functions: crwdns67529:0crwdne67529:0
+            Platform Jumper: crwdns67530:0crwdne67530:0
+            Defender: crwdns67531:0crwdne67531:0
+          description_audience: crwdns67532:0crwdne67532:0
         2016_sciencePD_phase1:
           title: crwdns56470:0crwdne56470:0
           description: crwdns56472:0crwdne56472:0
@@ -1416,6 +1447,7 @@ en:
             Using Computer Models in Science: crwdns67000:0crwdne67000:0
             Using Models in the Classroom: crwdns67001:0crwdne67001:0
             What to Expect: crwdns67002:0crwdne67002:0
+          description_audience: crwdns67533:0crwdne67533:0
         TEMP CSD Unit 3:
           title: crwdns56485:0crwdne56485:0
           description: crwdns56487:0crwdne56487:0
@@ -1448,6 +1480,7 @@ en:
             Introduction to PD: crwdns67016:0crwdne67016:0
             Teacher Dashboard: crwdns67017:0crwdne67017:0
             Why Computer Science belongs in Algebra: crwdns67018:0crwdne67018:0
+          description_audience: crwdns67534:0crwdne67534:0
         sciencePD1:
           title: crwdns56628:0crwdne56628:0
           description: crwdns56630:0crwdne56630:0
@@ -1465,6 +1498,7 @@ en:
             Using Computer Models in Science: crwdns67028:0crwdne67028:0
             Using Models in the Classroom: crwdns67029:0crwdne67029:0
             What to Expect: crwdns67030:0crwdne67030:0
+          description_audience: crwdns67535:0crwdne67535:0
         cspoptional:
           title: crwdns56643:0crwdne56643:0
           description: crwdns56645:0crwdne56645:0
@@ -1475,6 +1509,12 @@ en:
             Algorithms Detour - Shortest Path: crwdns67033:0crwdne67033:0
             Unit 1 - Encoding Numbers in the Real World: crwdns67034:0crwdne67034:0
             Unit 1 - Sending Bits in the Real World: crwdns67035:0crwdne67035:0
+            Unit 1 - Algorithms Detour - Minimum Spanning Tree: crwdns67536:0crwdne67536:0
+            Unit 1 - Algorithms Detour - Shortest Path: crwdns67537:0crwdne67537:0
+            Unit 1 - How Routers Learn: crwdns67538:0crwdne67538:0
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem: crwdns67539:0crwdne67539:0
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem: crwdns67540:0crwdne67540:0
+          description_audience: crwdns67541:0crwdne67541:0
         cspunit1-support:
           title: crwdns56651:0crwdne56651:0
           description: crwdns56652:0crwdne56652:0
@@ -1548,6 +1588,28 @@ en:
             Adding Functionality (optional): crwdns67066:0crwdne67066:0
             Design Mode: crwdns67073:0crwdne67073:0
             Making it Interactive: crwdns67085:0crwdne67085:0
+            Analysis of Design: crwdns67542:0crwdne67542:0
+            Understanding Your User: crwdns67543:0crwdne67543:0
+            Discovering Users: crwdns67544:0crwdne67544:0
+            UCD Micro Activity: crwdns67545:0crwdne67545:0
+            Designing for Social Impact: crwdns67546:0crwdne67546:0
+            Conducting User-Centered Interviews: crwdns67547:0crwdne67547:0
+            Analyzing Interviews: crwdns67548:0crwdne67548:0
+            Re-designing a Space: crwdns67549:0crwdne67549:0
+            Presenting Your Design: crwdns67550:0crwdne67550:0
+            Designing Apps for Good: crwdns67551:0crwdne67551:0
+            Market Research: crwdns67552:0crwdne67552:0
+            User Research: crwdns67553:0crwdne67553:0
+            Low Fidelity Prototyping: crwdns67554:0crwdne67554:0
+            Preparing for Prototype Testing: crwdns67555:0crwdne67555:0
+            Prototype Testing: crwdns67556:0crwdne67556:0
+            Preparing for App Testing: crwdns67557:0crwdne67557:0
+            App Testing: crwdns67558:0crwdne67558:0
+            Planning for Improvements: crwdns67559:0crwdne67559:0
+            Improving and Iterating: crwdns67560:0crwdne67560:0
+            App Presentation Prep: crwdns67561:0crwdne67561:0
+            App Presentation: crwdns67562:0crwdne67562:0
+          description_audience: crwdns67563:0crwdne67563:0
         CSDU1-Draft:
           title: crwdns56817:0crwdne56817:0
           description: crwdns56819:0crwdne56819:0
@@ -1581,6 +1643,12 @@ en:
             Headers and Lists: crwdns67104:0crwdne67104:0
             Designing Web Pages: crwdns67101:0crwdne67101:0
             Holding: crwdns67421:0crwdne67421:0
+            Describing Web pages: crwdns67564:0crwdne67564:0
+            Multi-Page Websites: crwdns67565:0crwdne67565:0
+            Classes: crwdns67566:0crwdne67566:0
+            External Style Sheets: crwdns67567:0crwdne67567:0
+            Usability and Accessibility: crwdns67568:0crwdne67568:0
+          description_audience: crwdns67569:0crwdne67569:0
         CSDU5-Draft:
           title: crwdns56823:0crwdne56823:0
           description: crwdns56825:0crwdne56825:0
@@ -1695,6 +1763,7 @@ en:
             Programming: crwdns67215:0crwdne67215:0
             Programming Unplugged: crwdns67216:0crwdne67216:0
             Sequences & Algorithms: crwdns67217:0crwdne67217:0
+            Unspotted Bugs: crwdns67570:0crwdne67570:0
         grade5:
           title: crwdns57138:0crwdne57138:0
           description: crwdns57140:0crwdne57140:0
@@ -1744,6 +1813,7 @@ en:
             Lesson Overviews: crwdns67270:0crwdne67270:0
             Teaching Strategies: crwdns67271:0crwdne67271:0
             Unit 2 Challenge: crwdns67272:0crwdne67272:0
+          description_audience: crwdns67571:0crwdne67571:0
         ecs-unit3:
           title: crwdns57755:0crwdne57755:0
           description: crwdns57757:0crwdne57757:0
@@ -1755,6 +1825,7 @@ en:
             Teaching Strategies: crwdns67276:0crwdne67276:0
             Unit 3 Challenge: crwdns67277:0crwdne67277:0
             Unit 3 Day-by-Day: crwdns67279:0crwdne67279:0
+          description_audience: crwdns67572:0crwdne67572:0
         ecs-unit4:
           title: crwdns57765:0crwdne57765:0
           description: crwdns57767:0crwdne57767:0
@@ -1766,6 +1837,7 @@ en:
             Teaching Strategies: crwdns67283:0crwdne67283:0
             Unit 4 Challenge: crwdns67284:0crwdne67284:0
             Unit 4 Day-by-Day: crwdns67286:0crwdne67286:0
+          description_audience: crwdns67573:0crwdne67573:0
         ecs-unit5:
           title: crwdns57775:0crwdne57775:0
           description: crwdns57777:0crwdne57777:0
@@ -1825,6 +1897,8 @@ en:
             Lesson 2,10: crwdns67343:0crwdne67343:0
             Lesson 2,2: crwdns67344:0crwdne67344:0
             Lesson 2,3: crwdns67345:0crwdne67345:0
+            Test stage with bubbles: crwdns67574:0crwdne67574:0
+          description_audience: crwdns67575:0crwdne67575:0
         csd3:
           title: crwdns57827:0crwdne57827:0
           description: crwdns57829:0crwdne57829:0
@@ -1840,6 +1914,7 @@ en:
             Sprites and Properties: crwdns67353:0crwdne67353:0
             Variables Unplugged: crwdns67354:0crwdne67354:0
             Variables and Animation: crwdns67355:0crwdne67355:0
+          description_audience: crwdns67576:0crwdne67576:0
         grade2:
           title: crwdns57854:0crwdne57854:0
           description: crwdns57856:0crwdne57856:0
@@ -1892,20 +1967,17 @@ en:
             Teaching with the Design Recipe: crwdns67402:0crwdne67402:0
             The Design Recipe: crwdns67403:0crwdne67403:0
             Welcome!: crwdns67404:0crwdne67404:0
+          description_audience: crwdns67577:0crwdne67577:0
         csp-pre-survey:
           title: crwdns58239:0crwdne58239:0
           stage:
             Anonymous student pre-survey: crwdns67405:0crwdne67405:0
             NEW Unit 1 Chapter 1 Assessment: crwdns67407:0crwdne67407:0
             Unit 1 Chapter 1 Assessment: crwdns67408:0crwdne67408:0
-        sciencepd3-2016:
-          title: crwdns58387:0crwdne58387:0
-          description_short: crwdns58388:0crwdne58388:0
-          description: crwdns58389:0crwdne58389:0
-          stage:
-            Welcome Back!: crwdns67411:0crwdne67411:0
-            The TLO: crwdns67410:0crwdne67410:0
-            Prep With Your Modules: crwdns67409:0crwdne67409:0
+            Unit 3 Chapter 1 Assessment: crwdns67578:0crwdne67578:0
+          description_audience: crwdns67579:0crwdne67579:0
+          description_short: crwdns67580:0crwdne67580:0
+          description: crwdns67581:0crwdne67581:0
         csd1:
           title: crwdns67424:0crwdne67424:0
           description_short: crwdns67425:0crwdne67425:0
@@ -1921,6 +1993,7 @@ en:
             Processing with Apps: crwdns67434:0crwdne67434:0
             "Project: Apps and Problem Solving": crwdns67435:0crwdne67435:0
             Human vs Computer Processing: crwdns67436:0crwdne67436:0
+          description_audience: crwdns67582:0crwdne67582:0
         csp-online-test:
           title: crwdns67437:0crwdne67437:0
           description_short: crwdns67438:0crwdne67438:0
@@ -1942,3 +2015,28 @@ en:
             "Lesson 9: Internet Addressing": crwdns67453:0crwdne67453:0
             "Lessons 10 - 11: Redundancy and Packets": crwdns67454:0crwdne67454:0
             "Lessons 12 - 13: Abstraction on the Internet": crwdns67455:0crwdne67455:0
+            "Lessons 10 - 11: Routers, Redundancy, and Packets": crwdns67583:0crwdne67583:0
+            "Lessons 1 - 2: Bytes, File Sizes, and Text Compression": crwdns67584:0crwdne67584:0
+            "Lessons 3 - 4 : Encoding Images": crwdns67585:0crwdne67585:0
+            "Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme": crwdns67586:0crwdne67586:0
+            "Lessons 7 - 11: Interpreting Visual Data": crwdns67587:0crwdne67587:0
+            "Lessons 12 - 15: Communicating with Visualizations": crwdns67588:0crwdne67588:0
+            "Lessons 7 - 10: Interpreting Visual Data": crwdns67589:0crwdne67589:0
+            "Lessons 11 - 15: Communicating with Visualizations": crwdns67590:0crwdne67590:0
+          description_audience: crwdns67591:0crwdne67591:0
+        csp1-support:
+          title: crwdns67592:0crwdne67592:0
+          description_short: crwdns67593:0crwdne67593:0
+          description: crwdns67594:0crwdne67594:0
+          stage:
+            Unit 1 Overview: crwdns67595:0crwdne67595:0
+            "Lessons 2 - 3: Binary Messages": crwdns67596:0crwdne67596:0
+            "Lessons 4 - 6: Encoding and Sending Numbers": crwdns67597:0crwdne67597:0
+            "Lesson 7: Encoding and Sending Text": crwdns67598:0crwdne67598:0
+            "Lesson 9: Internet Addressing": crwdns67599:0crwdne67599:0
+            "Lessons 10 - 11: Routers, Redundancy, and Packets": crwdns67600:0crwdne67600:0
+            "Lessons 12 - 13: Abstraction on the Internet": crwdns67601:0crwdne67601:0
+            Group Work and Peer Learning: crwdns67602:0crwdne67602:0
+            Balancing Teachers and Tools: crwdns67603:0crwdne67603:0
+            Discovery Learning: crwdns67604:0crwdne67604:0
+            Measuring Student Learning: crwdns67605:0crwdne67605:0

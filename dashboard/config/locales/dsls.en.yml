@@ -2792,13 +2792,6 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
-      CSDU4 - Screens Predict Match:
-        The "About" Button: The "About" Button
-        The "About" Page: The "About" Page
-        The "Contact Us" Button: The "Contact Us" Button
-        The "Contact Us" Screen: The "Contact Us" Screen
-        The "Use It" Button: The "Use It" Button
-        The "Use It" Page: The "Use It" Page
       CSDU4 Screens Predict Match:
         The "About" Button: The "About" Button
         The "About" Page: The "About" Page
@@ -6357,7 +6350,7 @@ en:
         'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
         'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
         'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
-        'Change Line 3 to:  total = promptNum("Enter next item price");': 'Change Line 3 to:  total = promptNum("Enter next item price");'
+        'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
       cspu5_assess3_counter:
         '0': '0'
         '1': '1'
@@ -6401,22 +6394,11 @@ en:
         d: d
         e: e
       cspu5_assess3_robot:
-        <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png width=150">: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png width=150">
         <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>
-        <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png">: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png">
-        <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png width=150">: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png width=150">
         <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>
-        <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png">: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png">
-        <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png width=150">: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png width=150">
         <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>
-        <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png">: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png">
-        <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png width=150">: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png width=150">
         <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>
-        <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png">: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png">
-        <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png width=150">: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png width=150">
         <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>
-        "<img src=https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png width=150>": "<img src=https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png width=150>"
-        "<img src=https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png>": "<img src=https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png>"
       cspu5_assess3_rollDie:
         rolls < 100 && sixes < 25: rolls < 100 && sixes < 25
         rolls < 100 || sixes < 25: rolls < 100 || sixes < 25
@@ -6429,7 +6411,7 @@ en:
         <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
         <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
       cspu5_assess3_whileTrue:
-        While loops are known as "forever loops" and never stop until the program is halted by the user.: While loops are known as "forever loops" and never stop until the program is halted by the user.
+        While loops are known as “forever loops” and never stop until the program is halted by the user.: While loops are known as “forever loops” and never stop until the program is halted by the user.
         While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
         While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
         While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.

@@ -102,7 +102,7 @@ vi:
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn.
-    user_type_label: Account Type
+    user_type_label: Loại tài khoản
     user_type_teacher: Giáo viên
     user_type_student: học sinh
     field_is_required: là bắt buộc
@@ -288,6 +288,7 @@ vi:
       unsubmit: Ngưng gửi
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
@@ -712,7 +713,7 @@ vi:
     download_message: 'Download %{app_name} for offline use (136MB)'
     download_in_english: 'Download in English:'
     download_in_spanish: 'Download in Spanish:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

@@ -87,8 +87,7 @@ module LevelsHelper
 
     return unless autoplay_video
 
-    client_state.add_video_seen(autoplay_video.key)
-    autoplay_video.summarize unless params[:noautoplay]
+    autoplay_video.summarize
   end
 
   def select_and_remember_callouts(always_show = false)
