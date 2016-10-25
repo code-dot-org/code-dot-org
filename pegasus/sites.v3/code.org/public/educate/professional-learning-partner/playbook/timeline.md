@@ -7,7 +7,7 @@ nav: plp_playbook_nav
 
 ## Calendar of Events
 
-###November Areas of Focus
+### November Areas of Focus
 
 - Running Administrator & Counselor PD<br/> 
 - Recruiting new faciliators<br/> 
@@ -20,7 +20,7 @@ nav: plp_playbook_nav
 | November 4, 2016 <br/> 10:00 am - 10:30 am PT| Virtual Meeting: Facilitator Selection Process **(Required)** |
 | November 17, 2016 <br/> 10:00 am - 10:30 am PT | Virtual Meeting: K-12 CS Framework *(Optional)* |
 
-###December Areas of Focus
+### December Areas of Focus
 
 - Promoting Hour of Code<br/>
 - Running Administrator & Counselor PD<br/> 
