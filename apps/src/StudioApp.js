@@ -1555,6 +1555,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
+  this.onFeedback(options);
+
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1826,6 +1828,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onFeedback = config.onFeedback || function () {};
   this.onInitialize = config.onInitialize ?
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
