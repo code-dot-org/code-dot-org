@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"gravel\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"gravel\",\"grass\",\"dirt\",\"dirt\",\"dirt\"]",
-    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "ground_plane": "[\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"dirt\",\"dirt\",\"bricks\",\"bricks\",\"bricks\",\"bricks\",\"bricks\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"bricks\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"bricks\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"bricks\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"bricks\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"bricks\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"bricks\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"bricks\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"bricks\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksSpruce\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"gravel\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"gravel\",\"grass\",\"dirt\",\"dirt\",\"dirt\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"tallGrass\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
     "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"zombie\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"bricks\",\"bricks\",\"glass\",\"bricks\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"\",\"zombie\",\"glass\",\"\",\"torch\",\"\",\"glass\",\"zombie\",\"\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"bricks\",\"bricks\",\"logSpruce\",\"bricks\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"zombie\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"ironGolem\",\"\",\"\",\"\",\"\"]",
     "player_start_position": "[5, 3]",
     "grid_width": "10",
@@ -17,7 +17,6 @@
     "is_event_level": "true",
     "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isEntityDied(\"zombie\", 4);\r\n}",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
-    "level_verification_timeout": "60000",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -38,9 +37,10 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "use_player": "true",
-    "instructions": "Oh no! Zombies have trapped you inside! Code the Iron Golem to defeat the zombies and save the village!",
+    "instructions": "Oh no! Zombies have trapped you inside! Code the Iron Golem to chase and attack the zombies!",
     "failure_message_override": "You need to make the Iron Golem chase and attack the zombies to win.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "level_verification_timeout": "0"
   },
   "published": true,
   "notes": "This was a test to see if we could get mobs to interact successfully. This will now be level 8.",

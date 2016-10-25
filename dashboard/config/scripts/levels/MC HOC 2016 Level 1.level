@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "You need wool. Make the sheep 'drop wool' when you walk over and 'Use' it. (Hint: press the space bar or tap the game space when you are at the sheep to use it.)\r\n",
+    "instructions": "You need wool. Make the sheep 'drop wool' when you walk over and 'Use' it. (Hint: Walk over to the sheep using the arrow keys, then press the space bar or tap the game board to use it.)\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
