@@ -21,6 +21,9 @@
   = f.label :use_player, 'Show player in level'
   = boolean_check_box(f, :use_player)
 .field
+  = f.label :use_score, 'Show a score in the level'
+  = boolean_check_box(f, :use_score)
+.field
   = f.label :day_night_cycle_time, 'Day/night cycle length in seconds (0 is no cycle)'
   = f.text_field :day_night_cycle_time, {value: @level.day_night_cycle_time || 0}
 .field

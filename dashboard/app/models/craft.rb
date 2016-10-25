@@ -42,6 +42,7 @@ class Craft < Blockly
     :timeout_verification_function,
     :show_popup_on_load,
     :is_daytime,
+    :use_score,
     :is_event_level,
     :special_level_type,
     :grid_width,
@@ -386,6 +387,7 @@ class Craft < Blockly
     default_game_params[:is_daytime] = true
     default_game_params[:is_event_level] = true
     default_game_params[:use_player] = true
+    default_game_params[:use_score] = false
 
     default_game_params[:verification_function] = SAMPLE_VERIFICATION_FUNCTIONS[:isPlayerNextTo]
     default_game_params[:timeout_verification_function] = SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS[:fail]
@@ -444,6 +446,7 @@ class Craft < Blockly
 </category>
 <category name="Global Actions">
   <block type='craft_playSound'></block>
+  <block type='craft_addScore'></block>
   <block type="craft_spawnEntity"></block>
   <block type="craft_spawnEntityRandom"></block>
 </category>

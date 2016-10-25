@@ -1266,7 +1266,8 @@ export default class LevelView {
             break;
         }
 
-        this.fowPlane.create(fx, fy, atlas, fowItem.type);
+        var sprite = this.fowPlane.create(fx, fy, atlas, fowItem.type);
+        sprite.alpha = 0.8;
       }
     }
   }

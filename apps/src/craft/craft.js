@@ -540,6 +540,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
     usePlayer: !doNotShowPlayer,
+    useScore: levelConfig.useScore,
     entities: levelConfig.entities,
     isEventLevel: levelConfig.isEventLevel,
     groundDecorationPlane: levelConfig.groundDecorationPlane,
@@ -886,6 +887,10 @@ Craft.executeUserCode = function () {
     playSound: function (soundID, blockID) {
       appCodeOrgAPI.playSound(studioApp.highlight.bind(studioApp, blockID),
           soundID);
+    },
+    addScore: function (scoreAmount, blockID) {
+      appCodeOrgAPI.addScore(studioApp.highlight.bind(studioApp, blockID),
+          parseInt(scoreAmount));
     },
     plantCrop: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),

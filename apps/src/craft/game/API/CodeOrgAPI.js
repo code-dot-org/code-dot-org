@@ -239,6 +239,13 @@ export function get(controller) {
       }
     },
 
+    addScore: function(highlightCallback, score, targetEntity) {
+      var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.addScore(callbackCommand, score)
+      }, targetEntity);
+      controller.addGlobalCommand(callbackCommand);
+    },
+
     arrowDown: function (direction) {
       controller.arrowDown(direction);
     },

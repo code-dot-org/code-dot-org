@@ -83,6 +83,11 @@ class GameController {
     this.timeout = 0;
     this.initializeCommandRecord();
 
+    this.score = 0;
+    this.useScore = false;
+    this.scoreText = null;
+    this.scorePanel = null;
+
     this.events = [];
 
     // Phaser "slow motion" modifier we originally tuned animations using
@@ -127,6 +132,8 @@ class GameController {
     this.levelView = new LevelView(this);
     this.specialLevelType = levelConfig.specialLevelType;
     this.timeout = levelConfig.levelVerificationTimeout;
+    if (levelConfig.useScore !== undefined)
+      this.useScore = levelConfig.useScore;
     this.timeoutResult = levelConfig.timeoutResult;
     this.onDayCallback = levelConfig.onDayCallback;
     this.onNightCallback = levelConfig.onNightCallback;
@@ -153,6 +160,16 @@ class GameController {
     this.timeouts = [];
     this.resettableTimers.length = 0;
     this.events.length = 0;
+
+    this.score = 0;
+    if (this.scoreText) {
+      this.scoreText.kill();
+    }
+    if (this.scorePanel) {
+      this.scorePanel.kill();
+    }
+    this.scoreText = null;
+
     this.initializeCommandRecord();
   }
 
@@ -169,6 +186,7 @@ class GameController {
     this.addCheatKeys();
     this.assetLoader.loadPacks(this.levelData.assetPacks.afterLoad);
     this.game.load.image('timer', `${this.assetRoot}images/placeholderTimer.png`);
+    this.game.load.image('scorePanel', `${this.assetRoot}images/Frame_Large_Plus_LogoNub.png`);
     this.game.load.onLoadComplete.addOnce(() => {
       if (this.afterAssetsLoaded) {
         this.afterAssetsLoaded();
@@ -200,6 +218,14 @@ class GameController {
         this.endLevel(this.timeoutResult(this.levelModel));
       });
       tween.start();
+    }
+    if (this.useScore) {
+      this.scorePanel = this.game.add.sprite(200, 0, 'scorePanel');
+      this.scorePanel.scale.setTo(2 / 3, 2 / 3);
+      this.scorePanel.anchor.x = 0.5;
+      this.scoreText = this.game.add.text(200, -2, 'Score: ' + this.score, { fontSize: '12px', fill: '#FFFFFF' });
+      this.scoreText.anchor.x = 0.5;
+      this.scoreText.fontWeight = 'bold';
     }
   }
 
@@ -879,8 +905,13 @@ class GameController {
       } else {
         this.addCommandRecord("destroy", this.type, commandQueueItem.repeat);
         let entity = this.getEntity(target);
-        entity.healthPoint = 1;
-        entity.takeDamage(commandQueueItem);
+        if (entity !== undefined) {
+          entity.healthPoint = 1;
+          entity.takeDamage(commandQueueItem);
+        }
+        else {
+          commandQueueItem.succeeded();
+        }
       }
     }
     else {
@@ -1280,6 +1311,17 @@ class GameController {
       player.addCommand(callbackCommand, this.isRepeat);
       player.queue.endPushHighPriorityCommands();
     }
+  }
+
+  addScore(commandQueueItem, score) {
+    if (this.useScore) {
+      this.score += score;
+
+      if (this.scoreText) {
+        this.scoreText.text = 'Score: ' + this.score;
+      }
+    }
+    commandQueueItem.succeeded();
   }
 
   isPathAhead(blockType) {

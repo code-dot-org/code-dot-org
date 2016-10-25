@@ -980,6 +980,28 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'playSound("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.craft_addScore = {
+    helpUrl: '',
+    init: function () {
+      var dropdownOptions = keysToDropdownOptions(_.range(1, 11).map(x => `${x}`));
+      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      dropdown.setValue(dropdownOptions[0][1]);
+
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle('add')
+          .appendTitle(dropdown, 'SCORE')
+          .appendTitle('to score');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_addScore = function () {
+    var score = this.getTitleValue('SCORE');
+    return 'addScore("' + score + '", \'block_id_' + this.id + '\');\n';
+  };
+
   blockly.Blocks.craft_placeTorch = {
     helpUrl: '',
     init: function () {
