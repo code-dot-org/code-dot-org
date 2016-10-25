@@ -291,6 +291,7 @@ const StageEditor = React.createClass({
       drag: position,
       dragHeight: this.metrics(position).height + 5,
       initialPageY: pageY,
+      initialScroll: document.body.scrollTop,
       startingPositions
     });
     window.addEventListener('mousemove', this.handleDrag);
@@ -298,8 +299,9 @@ const StageEditor = React.createClass({
   },
 
   handleDrag({pageY}) {
-    const delta = (pageY - this.state.initialPageY); // / 1.4;
-    const dragPosition = this.metrics(this.state.drag).top;
+    const scrollDelta = document.body.scrollTop - this.state.initialScroll;
+    const delta = pageY - this.state.initialPageY;
+    const dragPosition = this.metrics(this.state.drag).top + scrollDelta;
     const currentPositions = this.state.startingPositions.map((metrics, index) => {
       const postion = index + 1;
       if (postion === this.state.drag) {
