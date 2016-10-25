@@ -45,18 +45,18 @@ module.exports = function (grunt) {
 
   /** @const {string[]} */
   var ALL_APPS = [
-    'maze',
-    'turtle',
-    'bounce',
-    'flappy',
-    'studio',
-    'jigsaw',
-    'calc',
     'applab',
-    'eval',
-    'netsim',
+    'bounce',
+    'calc',
     'craft',
+    'eval',
+    'flappy',
     'gamelab',
+    'jigsaw',
+    'maze',
+    'netsim',
+    'studio',
+    'turtle',
     'weblab'
   ];
 
@@ -354,7 +354,7 @@ module.exports = function (grunt) {
 
 
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
-    return [app, './src/' + app + '/main.js'];
+    return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }).concat(
     appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
   ));
