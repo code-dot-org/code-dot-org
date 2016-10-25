@@ -97,6 +97,7 @@ module WorkshopScoreSummarizer
           if OVERALL_SUCCESS_QUESTIONS.include?(k)
             score = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(v) + 1
           elsif FREE_RESPONSE_QUESTIONS.include?(k)
+            # Do nothing - no score to compute but don't skip this
           else
             next unless PdWorkshopSurvey::OPTIONS.key?(k) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(k)
             score = get_score_for_response(PdWorkshopSurvey::OPTIONS, k, v)
@@ -127,7 +128,7 @@ module WorkshopScoreSummarizer
     report_rows[:teacher_engagement] = (report_rows[:teacher_engagement] / (TEACHER_ENGAGEMENT_QUESTIONS.size.to_f * response_count)).round(2)
     report_rows[:overall_success] = (report_rows[:overall_success] / (OVERALL_SUCCESS_QUESTIONS.size.to_f * response_count)).round(2)
 
-    INDIVIDUAL_RESPONSE_QUESTIONS.map.each do |question|
+    INDIVIDUAL_RESPONSE_QUESTIONS.each do |question|
       report_rows[question] = (report_rows[question].to_f / response_count).round(2)
     end
 
