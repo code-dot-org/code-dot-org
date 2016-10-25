@@ -277,7 +277,7 @@ th:
     user_not_found: The teacher could not be found.
     student_teacher_disassociated: 'คุณได้ลบ %{teacher_name} ออกจากการเป็นครูผู้สอนของคุณ'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: แผงครู
       student: นักเรียน
       viewing_solution: Viewing Solution
       try_it_yourself: ลองด้วยตัวเอง
@@ -288,6 +288,7 @@ th:
       unsubmit: ไม่ส่ง
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'อีเมล์นี้ยังไม่ได้ยืนยันตัว:'
     email_confirm_needed_required: 'อีเมล์ %{email} ของคุณยังไม่ได้รับการยืนยัน：'
@@ -712,7 +713,7 @@ th:
     download_message: 'Download %{app_name} for offline use (136MB)'
     download_in_english: 'Download in English:'
     download_in_spanish: 'Download in Spanish:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

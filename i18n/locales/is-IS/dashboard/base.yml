@@ -288,6 +288,7 @@ is:
       unsubmit: Afturkalla innsendingu
       worked_with: vann með
       update_lock_settings: Uppfærðu stillingar fyrir læsingu hér.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'

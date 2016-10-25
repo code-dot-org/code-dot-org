@@ -489,7 +489,6 @@ ga-IE:
   dashboard_landing_office_hours: Cuir ceist go pearsanta! Tabhair cuairt ar na huaireanta oifige go míosúil.
   dashboard_landing_print_certificates: Priontáil teastais do na daltaí a chríochnaigh an cúrsa
   dashboard_landing_educator_blog: Nuacht agus fógraí maidir le hábhar nua ar ár mblag le haghaidh múinteoirí
-  dashboard_landing_smart_hints: Cabhraigh linn leideanna cliste a chur leis na cúrsaí ar Code.org
   dashboard_landing_video_player: Bain triail as ár seinnteoir nua físeán i do scoil
   dashboard_landing_progress_title: Dul chun cinn an phríomhranga
   dashboard_landing_progress_biggest: "Seo é dul chun cinn an ranga is mó s'agat."
@@ -834,6 +833,7 @@ ga-IE:
   csp1_name: 'Aonad 1: An tIdirlíon'
   csp2_name: 'Aonad 2: Faisnéis dhigiteach'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'An Scrúdú Iomlán - 50 ceist'
   cspexam1-mWU7ilDYM9_name: 'Cuid 1 den Scrúdú - 25 ceist'
   cspexam2-AKwgAh1ac5_name: 'Cuid 2 den Scrúdú - 25 ceist'

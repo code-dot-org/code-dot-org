@@ -1,7 +1,7 @@
 # Provides helper functions for a controller to serialize to json and convert to
 # csv which can be sent as an attachment.
 # It also defaults the controller format to json, unless csv is specified explicitly.
-module CsvDownload
+module Api::CsvDownload
   extend ActiveSupport::Concern
 
   included do
@@ -41,10 +41,23 @@ module CsvDownload
       json_array.each do |json_row|
         unless cols
           cols = json_row.keys
-          csv << cols.map(&:to_s).map(&:titleize)
+          csv << cols.map{|col| titleize_with_id(col)}
         end
         csv << cols.map {|col| json_row[col]}
       end
     end
+  end
+
+  # Similar to String.titleize (http://apidock.com/rails/String/titleize),
+  # but it takes a symbol or string and doesn't strip the trailing '_id'
+  #
+  #   'account_id'.titleize == 'Account'
+  #   titleize_with_id('account_id') == 'Account Id'
+  #   titleize_with_id(:account_id) == 'Account Id'
+  #
+  # @return [String]
+  def titleize_with_id(word)
+    stringified = word.to_s
+    stringified.titleize + (stringified.end_with?('_id') ? ' Id' : '')
   end
 end

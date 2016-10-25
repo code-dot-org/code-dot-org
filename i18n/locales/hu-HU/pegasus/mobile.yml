@@ -479,7 +479,6 @@ hu-HU:
   dashboard_landing_office_hours: Kérdezz személyesen! Nézz be a havi videós irodai óránkra.
   dashboard_landing_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték a tanfolyamot
   dashboard_landing_educator_blog: 'Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus Blog-ban'
-  dashboard_landing_smart_hints: Kérlek, segíts bennünket, okos tippekkel oktatóanyagainkhoz a code.org felületére
   dashboard_landing_video_player: Teszteld az új videó lejátszót az iskolában
   dashboard_landing_progress_title: Az elsődleges osztály fejlődése
   dashboard_landing_progress_biggest: Így fejlődik a legnagyobb szekciód.
@@ -823,6 +822,7 @@ hu-HU:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

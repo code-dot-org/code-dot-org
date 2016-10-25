@@ -33,7 +33,8 @@
     "discard_background": "false",
     "authored_hints": "[]",
     "ideal": "4",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
@@ -53,7 +54,7 @@
         <block type="simple_move_right"/>
         <block type="simple_move_left"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-6">???</title>
+          <title name="TIMES" config="2-9">???</title>
         </block>
         <block type="simple_jump_right"/>
         <block type="simple_jump_up"/>
@@ -67,7 +68,7 @@
         <block type="simple_move_up"/>
         <block type="simple_move_left"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">7</title>
+          <title name="TIMES" config="2-9">7</title>
         </block>
       </xml>
     </recommended_blocks>
@@ -79,7 +80,7 @@
               <title name="COLOUR">#228b22</title>
               <next>
                 <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">7</title>
+                  <title name="TIMES" config="2-9">7</title>
                   <statement name="DO">
                     <block type="simple_move_up">
                       <next>
