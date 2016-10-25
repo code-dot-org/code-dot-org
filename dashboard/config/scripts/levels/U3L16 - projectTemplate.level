@@ -23,7 +23,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "onEvent(\"moveBtn\", \"click\", function(){\r\n  moveTo(randomNumber(0, 320), randomNumber(0, 450));\r\n});\r\n",
+    "start_blocks": "button(\"moveBtn\", \"Move it! Move it!\");\r\nonEvent(\"moveBtn\", \"click\", function(){\r\n  moveTo(randomNumber(0, 320), randomNumber(0, 450));\r\n});\r\n",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
@@ -41,10 +41,13 @@
     "debugger_disabled": "false",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"moveBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 135px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 10px; top: 5px;\">Move it! Move it!</button></div></div>",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
