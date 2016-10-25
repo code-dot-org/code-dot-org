@@ -39,7 +39,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "instructions": "Keeping score is a fun way to add a goal to your game. Play 'Tag' with the sheep, and set up a scoring system by using the AddScore block.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "use_score": "true"
   },
   "published": true,
   "notes": "This level will introduce a scoring system.",
@@ -93,6 +94,7 @@
     <toolbox_blocks>
       <xml>
         <block type="craft_forever"/>
+        <block type="craft_addScore"/>
         <block type="craft_playSound">
           <title name="TYPE">dig_wood1</title>
         </block>
