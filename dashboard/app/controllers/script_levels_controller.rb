@@ -91,7 +91,8 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_under_13_without_tos_teacher(@script_level.level)
+    @level = select_level
+    return if redirect_under_13_without_tos_teacher(@level)
 
     present_level
   end
@@ -286,7 +287,6 @@ class ScriptLevelsController < ApplicationController
 
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
-    @level = select_level
     @game = @level.game
     @stage = @script_level.stage
 

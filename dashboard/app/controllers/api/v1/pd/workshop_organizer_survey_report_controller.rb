@@ -8,7 +8,8 @@ class Api::V1::Pd::WorkshopOrganizerSurveyReportController < Api::V1::Pd::Report
   def index
     survey_report = Hash.new
 
-    survey_report[:all_my_workshops_for_course], facilitator_scores = get_score_for_workshops(::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id), true)
+    survey_report[:all_my_workshops_for_course], facilitator_scores = get_score_for_workshops(
+      ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id), facilitator_breakdown: true)
     survey_report.merge!(facilitator_scores)
 
     aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
