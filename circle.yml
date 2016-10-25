@@ -24,6 +24,12 @@ checkout:
     - case $CIRCLE_NODE_INDEX in 0) echo "Skipping step." ;; *) ./bin/circle/merge-base ;; esac:
         parallel: true
 dependencies:
+  pre:
+    # update google chrome; Selenium requires that Chrome version must
+    # be >= 52.0.2743.0
+    - google-chrome --version
+    - ./bin/circle/upgrade-google-chrome.sh
+    - google-chrome --version
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
