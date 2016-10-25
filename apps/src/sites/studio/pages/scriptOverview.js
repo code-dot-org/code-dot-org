@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import { renderCourseProgress } from '@cdo/apps/code-studio/progress';
 
-$(document).ready(() => initPage());
+$(document).ready(initPage);
 
 function initPage() {
   const script = document.querySelector('script[data-scriptoverview]');
