@@ -157,7 +157,7 @@ const SurveyResultsHeader = React.createClass({
           {
             rowOrder.map((row, i) => {
               return (
-                <tr key={i} style={row['heading']}>
+                <tr key={i}>
                   <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
                   <td style={row['heading'] && styles.questionGroupCell}>{thisWorkshop[row['key']]}</td>
                   <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
