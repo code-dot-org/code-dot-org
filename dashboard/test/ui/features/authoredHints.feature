@@ -31,7 +31,7 @@ Scenario: View Authored Hints
 
   # Verify that it appears in the instructions dialog
   When I view the instructions and old hints
-  And I wait to see a dialog titled "Puzzle 2 of 2"
+  And I wait to see a dialog titled "Puzzle 2 of 3"
 
   Then I see jquery selector .authored-hints ol
   And element ".authored-hints ol" contains text "This is the first hint."
@@ -58,7 +58,7 @@ Scenario: View Authored Hints
   # instructions dialog without the "Instructions or Hint option". Also
   # verify that all three hints are in the dialog.
   When I press "prompt-table"
-  And I wait to see a dialog titled "Puzzle 2 of 2"
+  And I wait to see a dialog titled "Puzzle 2 of 3"
 
   Then element ".authored-hints" is visible
   And element ".authored-hints" contains text "This is the first hint"

@@ -69,6 +69,7 @@ const InlineAudio = React.createClass({
     return {
       audio: undefined,
       playing: false,
+      error: false,
     };
   },
 
@@ -103,7 +104,13 @@ const InlineAudio = React.createClass({
   },
 
   playAudio: function () {
-    this.getAudioElement().play();
+    this.getAudioElement().play().catch(function (e) {
+      this.setState({
+        playing: false,
+        error: true
+      });
+    }.bind(this));
+
     this.setState({ playing: true });
   },
 
@@ -113,9 +120,9 @@ const InlineAudio = React.createClass({
   },
 
   render: function () {
-    if (experiments.isEnabled('tts') && this.getAudioSrc()) {
+    if (experiments.isEnabled('tts') && !this.state.error && this.getAudioSrc()) {
       return (
-        <div>
+        <div className="inline-audio">
           <div style={[styles.button, styles.volumeButton]}>
             <img style={styles.buttonImg} src={this.props.assetUrl("media/common_images/volume.png")} />
           </div>
@@ -130,6 +137,8 @@ const InlineAudio = React.createClass({
         </div>
       );
     }
+
+    return null;
   }
 });
 
