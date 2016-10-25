@@ -21,7 +21,7 @@
     %a{href: resolve_url("/events/all")}
       = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
 
--if show_static_map
+-if show_static_map == true
   #staticmap.full-width
     %a{href: resolve_url('/map')}
       %img{src: '/images/map.png', style: 'width: 100%;'}
