@@ -3,7 +3,7 @@ module Api::V1::Pd
     include WorkshopScoreSummarizer
     load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
-    # GET /api/v1/pd/workshops/:id/aggregate_workshop_score
+    # GET /api/v1/pd/workshops/:id/workshop_survey_report
     def workshop_survey_report
       survey_report = Hash.new
 
