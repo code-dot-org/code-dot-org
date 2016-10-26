@@ -28,4 +28,4 @@ Scenario: Failing puzzle 2
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
-  And element ".uitest-topInstructions-inline-feedback .congrats" contains text "Not quite. You have to use a block you aren’t using yet."
+  And element ".uitest-topInstructions-inline-feedback" contains text "Not quite. You have to use a block you aren’t using yet."

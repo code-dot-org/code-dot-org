@@ -16,8 +16,8 @@ Feature: Minecraft dialog levels
     And element "#runButton" is visible
     Then I wait until the Minecraft game is loaded
     And I press "runButton"
-    Then I wait to see a ".congrats"
-    Then I wait to see a congrats dialog with title containing "Try using more commands"
+    Then I wait to see a ".uitest-topInstructions-inline-feedback"
+    And element ".uitest-topInstructions-inline-feedback" has text "Try using more commands to walk to the sheep."
 #    And I see no difference for "Try again dialog"
     And I wait to see "#resetButton"
     And I press "resetButton"
