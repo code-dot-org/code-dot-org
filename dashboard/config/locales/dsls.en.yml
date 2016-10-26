@@ -578,6 +578,7 @@ en:
       CSPU5_HowOnEventWorks_v2:
         description here: description here
         title: title
+      CSPU5_L3 - Student Introduction: {}
       CSPU5_U3 - Arrays and Loops - Explain Functions with Returns: {}
       CSPU5_U3 - Conditionals - Boolean Expressions and Operators: {}
       CSPU5_U3 - Conditionals - Introducing Else: {}
