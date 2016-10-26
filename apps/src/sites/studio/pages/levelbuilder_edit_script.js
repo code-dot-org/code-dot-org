@@ -69,7 +69,8 @@ const styles = {
     float: 'right'
   },
   controlIcon: {
-    margin: '0 5px'
+    margin: '0 5px',
+    cursor: 'pointer'
   },
   levelSelect: {
     marginBottom: 5
@@ -257,10 +258,18 @@ const FlexGroupEditor = React.createClass({
             <div key={group}>
               <div style={styles.groupHeader}>
                 Group {count++}: {group}
-                <Controls />
+                <Controls type="group" position={count - 1} total={Object.keys(groups).length} />
               </div>
               <div style={styles.groupBody}>
-                {stages.map(stage => <StageEditor key={stage.id} stage={stage} />)}
+                {stages.map(stage => {
+                  return (
+                    <StageEditor
+                      key={stage.id}
+                      stagesCount={this.props.stages.length}
+                      stage={stage}
+                    />
+                  );
+                })}
               </div>
             </div>
           );
@@ -272,6 +281,7 @@ const FlexGroupEditor = React.createClass({
 
 const StageEditor = React.createClass({
   propTypes: {
+    stagesCount: React.PropTypes.number.isRequired,
     stage: React.PropTypes.object.isRequired
   },
 
@@ -337,7 +347,7 @@ const StageEditor = React.createClass({
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
           Stage {this.props.stage.position}: {this.props.stage.name}
-          <Controls />
+          <Controls type="stage" position={this.props.stage.position} total={this.props.stagesCount} />
         </div>
         {this.props.stage.levels.map(level =>
           <LevelEditor
@@ -374,6 +384,10 @@ const LevelEditor = React.createClass({
     console.log(value);
   },
 
+  handleRemove() {
+    console.log(`remove level ${this.props.level.position}`);
+  },
+
   render() {
     return (
       <Motion
@@ -404,7 +418,7 @@ const LevelEditor = React.createClass({
                 <span style={styles.variants}>{this.props.level.ids.length} variants</span>
               }
             </span>
-            <div style={styles.remove}>
+            <div style={styles.remove} onMouseDown={this.handleRemove}>
               <i className="fa fa-times"/>
             </div>
             {this.state.expand &&
@@ -448,12 +462,46 @@ const LevelEditor = React.createClass({
 });
 
 const Controls = React.createClass({
+  propTypes: {
+    type: React.PropTypes.oneOf(['group', 'stage']).isRequired,
+    position: React.PropTypes.number.isRequired,
+    total: React.PropTypes.number.isRequired
+  },
+
+  handleMoveUp() {
+    if (this.props.position !== 1) {
+      console.log(`move ${this.props.type} ${this.props.position} up`);
+    }
+  },
+
+  handleMoveDown() {
+    if (this.props.position !== this.props.total) {
+      console.log(`move ${this.props.type} ${this.props.position} down`);
+    }
+  },
+
+  handleRemove() {
+    console.log(`remove ${this.props.type} ${this.props.position}`);
+  },
+
   render() {
     return (
       <div style={styles.controls}>
-        <i style={styles.controlIcon} className="fa fa-caret-up" />
-        <i style={styles.controlIcon} className="fa fa-caret-down" />
-        <i style={styles.controlIcon} className="fa fa-trash" />
+        <i
+          onMouseDown={this.handleMoveUp}
+          style={styles.controlIcon}
+          className="fa fa-caret-up"
+        />
+        <i
+          onMouseDown={this.handleMoveDown}
+          style={styles.controlIcon}
+          className="fa fa-caret-down"
+        />
+        <i
+          onMouseDown={this.handleRemove}
+          style={styles.controlIcon}
+          className="fa fa-trash"
+        />
       </div>
     );
   }
