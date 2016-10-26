@@ -34,6 +34,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
+  'visualizationInWorkspace',
   'hideSource',
   'hideRunButton',
   'playspacePhoneFrame',

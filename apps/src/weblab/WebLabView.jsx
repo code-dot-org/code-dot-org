@@ -14,6 +14,7 @@ var PaneButton = PaneHeader.PaneButton;
  */
 const WebLabView = React.createClass({
   propTypes: {
+    hideToolbar: React.PropTypes.bool.isRequired,
     onUndo: React.PropTypes.func.isRequired,
     onRedo: React.PropTypes.func.isRequired,
     onRefreshPreview: React.PropTypes.func.isRequired,
@@ -50,58 +51,60 @@ const WebLabView = React.createClass({
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
           <div>
-            <PaneHeader hasFocus={true} id="headers">
-              <div>
-              <PaneButton
-                iconClass="fa fa-plus-circle"
-                leftJustified={true}
-                headerHasFocus={true}
-                isRtl={false}
-                onClick={this.props.onAddFileHTML}
-                label={weblabMsg.addHTMLButton()}
-              />
-              <PaneButton
-                iconClass="fa fa-plus-circle"
-                leftJustified={true}
-                headerHasFocus={true}
-                isRtl={false}
-                onClick={this.props.onAddFileCSS}
-                label={weblabMsg.addCSSButton()}
-              />
-              <PaneButton
-                iconClass="fa fa-plus-circle"
-                leftJustified={true}
-                headerHasFocus={true}
-                isRtl={false}
-                onClick={this.props.onAddFileImage}
-                label={weblabMsg.addImageButton()}
-              />
-              <PaneButton
-                id="versions-header"
-                iconClass="fa fa-clock-o"
-                leftJustified={true}
-                headerHasFocus={true}
-                isRtl={false}
-                label={msg.showVersionsHeader()}
-              />
-              <PaneButton
-                iconClass="fa fa-repeat"
-                leftJustified={false}
-                headerHasFocus={true}
-                isRtl={false}
-                onClick={this.props.onRefreshPreview}
-                label={weblabMsg.refreshPreview()}
-              />
-              <PaneButton
-                iconClass="fa fa-mouse-pointer"
-                leftJustified={false}
-                headerHasFocus={true}
-                isRtl={false}
-                onClick={this.props.onToggleInspector}
-                label={weblabMsg.toggleInspector()}
-              />
-              </div>
-            </PaneHeader>
+            {!this.props.hideToolbar &&
+              <PaneHeader hasFocus={true} id="headers">
+                <div>
+                <PaneButton
+                  iconClass="fa fa-plus-circle"
+                  leftJustified={true}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  onClick={this.props.onAddFileHTML}
+                  label={weblabMsg.addHTMLButton()}
+                />
+                <PaneButton
+                  iconClass="fa fa-plus-circle"
+                  leftJustified={true}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  onClick={this.props.onAddFileCSS}
+                  label={weblabMsg.addCSSButton()}
+                />
+                <PaneButton
+                  iconClass="fa fa-plus-circle"
+                  leftJustified={true}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  onClick={this.props.onAddFileImage}
+                  label={weblabMsg.addImageButton()}
+                />
+                <PaneButton
+                  id="versions-header"
+                  iconClass="fa fa-clock-o"
+                  leftJustified={true}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  label={msg.showVersionsHeader()}
+                />
+                <PaneButton
+                  iconClass="fa fa-repeat"
+                  leftJustified={false}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  onClick={this.props.onRefreshPreview}
+                  label={weblabMsg.refreshPreview()}
+                />
+                <PaneButton
+                  iconClass="fa fa-mouse-pointer"
+                  leftJustified={false}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  onClick={this.props.onToggleInspector}
+                  label={weblabMsg.toggleInspector()}
+                />
+                </div>
+              </PaneHeader>
+            }
             <iframe
               className="weblab-host"
               src="/weblab/host"

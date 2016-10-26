@@ -250,8 +250,10 @@ module LevelsHelper
   # Options hash for Weblab
   def weblab_options
     app_options = {}
-    app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+
+    level_options = app_options[:level] ||= Hash.new
+    app_options[:level] = level_options
+    level_options.merge! @level.properties.camelize_keys
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -261,7 +263,30 @@ module LevelsHelper
     # Ensure project_template_level allows start_sources to be overridden
     app_options[:level]['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
 
+    # Process level view options
+    level_overrides = level_view_options(@level.id).dup
+    if level_options['embed'] || level_overrides[:embed]
+      level_overrides[:hide_source] = true
+      level_overrides[:show_finish] = true
+    end
+    if level_overrides[:embed]
+      view_options(no_header: true, no_footer: true, white_background: true)
+    end
+
+    view_options(has_contained_levels: @level.try(:contained_levels).present?)
+
+    # Add all level view options to the level_options hash
+    level_options.merge! level_overrides.camelize_keys
+
     app_options.merge! view_options.camelize_keys
+
+    # Move these values up to the app_options hash
+    %w(hideSource share embed).each do |key|
+      if level_options[key]
+        app_options[key.to_sym] = level_options.delete key
+      end
+    end
+
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
 
