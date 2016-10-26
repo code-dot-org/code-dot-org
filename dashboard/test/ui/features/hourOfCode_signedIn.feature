@@ -51,7 +51,6 @@ Scenario: Progress on the server that is not on the client
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I press "runButton"
-  And I wait to see ".modal"
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I verify progress in the header of the current page is "attempted" for level 20

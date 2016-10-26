@@ -14,7 +14,7 @@ Scenario: Hints viewed in feedback don't become contextual hints
 
   Then element "#hint-request-button" is visible
 
-  WhenI wait to see "#resetButton"
+  When I wait to see "#resetButton"
 
   # This level has two recommended blocks, the first of which now
   # appears as a hint

@@ -13,7 +13,7 @@ Scenario: Submit an invalid solution
   And I press "runButton"
   Then element "#runButton" is hidden
   And element "#resetButton" is visible
-  Then I wait until element ".congrats" is visible
+  Then I wait until element ".uitest-topInstructions-inline-feedback" is visible
   # Skipping due to failing on test.studio.code.org environment
   #   TODO (espertus/bjordan): fix or change level this applies to
   # And element ".congrats" has text "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."

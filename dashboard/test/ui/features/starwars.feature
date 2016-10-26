@@ -110,7 +110,6 @@ Feature: Hour of Code 2015 tutorial is completable
     And I append text to droplet "moveUp();\n"
     And I press "runButton"
     Then element ".modal" is not visible
-    And element "#again-button" is visible
     And element "#continue-button" is not visible
 
   @no_ie @no_mobile

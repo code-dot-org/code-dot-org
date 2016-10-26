@@ -4,7 +4,7 @@ Feature: Complete a simple maze level
     Given I am on "http://studio.code.org/reset_session"
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/11?noautoplay=true"
     And I rotate to landscape
-    Then element ".csf-top-instructions has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
+    Then element ".csf-top-instructions p" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
 
   # This builds an uncommon program to avoid getting a crowdsourced hint.
   @no_mobile
@@ -21,17 +21,6 @@ Feature: Complete a simple maze level
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element ".uitest-topInstructions-inline-feedback" has text "Not quite. You have to use a block you aren’t using yet."
-    # Checking for "show hints" button
-    And I wait to see "#hint-request-button"
-    Then element "#hint-request-button" is visible
-    Then I press "hint-request-button"
-    And element ".uitest-topInstructions-inline-feedback" has text "Try using one of the blocks below:"
-    And element ".modal-content #feedbackBlocks" is visible
-    And element ".modal-content #feedbackBlocks svg" is visible
-    Then I press "again-button"
-    And I press "resetButton"
-    Then element "#runButton" is visible
-    And element "#resetButton" is hidden
 
   Scenario: Submit a program with an empty repeat
     Then element "#runButton" is visible
@@ -43,7 +32,6 @@ Feature: Complete a simple maze level
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element ".uitest-topInstructions-inline-feedback" has text "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."
-    Then I press "again-button"
     And I press "resetButton"
     Then element "#runButton" is visible
     And element "#resetButton" is hidden

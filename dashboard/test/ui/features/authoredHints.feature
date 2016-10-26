@@ -1,14 +1,11 @@
 @no_ie
 Feature: Authored Hints
 
+@skip
 Scenario: View Authored Hints
   Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
   And I rotate to landscape
-
-  # The initial instructions dialog has no hint prompt button
-  Then element "#hint-button" does not exist
-
-  When I wait to see "#prompt-table"
+  And I wait to see "#lightbulb"
 
   # This level has a total of three authored hints
   Then the hint lightbulb shows 3 hints available

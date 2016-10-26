@@ -15,8 +15,8 @@ Scenario: Using a studio dropdown
   And I drag block "1" to block "3" plus offset 0, 10
   Then I press "runButton"
   And element "#resetButton" is visible
-  And I wait to see ".congrats"
-  And element ".congrats" is visible
+  And I wait to see ".uitest-topInstructions-inline-feedback"
+  And element ".uitest-topInstructions-inline-feedback" is visible
 
 Scenario: Resizing Sprites
   Given I am on "http://studio.code.org/s/allthethings/stage/22/puzzle/1?noautoplay=true"

@@ -19,8 +19,6 @@ Feature: Callouts
     | http://studio.code.org/hoc/9?noautoplay=true        | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
     | http://studio.code.org/s/20-hour/stage/2/puzzle/14?noautoplay=true | 0          | Click here to see the code for the program you're making                 | #show-code-header |
     | http://studio.code.org/hoc/14?noautoplay=true       | 0          | Click here to see the code for the program you're making                 | #show-code-header |
-    | http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true | 0          | The instructions for each puzzle are repeated here                       | #prompt           |
-    | http://studio.code.org/hoc/15?noautoplay=true       | 0          | The instructions for each puzzle are repeated here                       | #prompt           |
     | http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true | 0          | You have all the same blocks but they've now been arranged in categories | .blocklyTreeLabel |
 
   # See #101702822. "Watch video" section inaccessible from iPhone.
