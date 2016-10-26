@@ -64,6 +64,7 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.hideSource = config.hideSource;
 
   this.brambleHost = null;
 
@@ -142,6 +143,7 @@ WebLab.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     noVisualization: true,
+    visualizationInWorkspace: true,
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
@@ -185,6 +187,7 @@ WebLab.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <WebLabView
+        hideToolbar={!!config.share}
         onAddFileHTML={onAddFileHTML.bind(this)}
         onAddFileCSS={onAddFileCSS.bind(this)}
         onAddFileImage={onAddFileImage.bind(this)}
@@ -288,6 +291,11 @@ WebLab.prototype.onProjectChanged = function () {
 // Called by Bramble host to set our reference to its interfaces
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
+  this.brambleHost.onBrambleReady(() => {
+    if (this.hideSource) {
+      this.brambleHost.enableFullscreenPreview();
+    }
+  });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
 };
 
