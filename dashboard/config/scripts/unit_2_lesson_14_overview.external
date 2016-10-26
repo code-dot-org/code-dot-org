@@ -1,19 +1,19 @@
 name 'Unit 2 Lesson 14 Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Internet - Web Development: Lesson 14 - Digital Footprint
+# The Internet - Web Development: Lesson 14 - Website Review and Publish
 
 ## Background
 
-As students have recently spent some time beginning to think more deeply about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they should choose to share digitally and to whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released digitally.
-
+After reflecting on their experience exploring digital footprints, students brainstorm a list of Personally Identifiable Information (PII) that should not be included on their websites. Once they have added the list to their Web Development Practices - Project Guide, each student will use the everything in their practices packet to review their own site to make sure it meets those standards before publishing to the world for the first time!
 # Vocabulary
 
-* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.
+* **COPPA** - Children’s Online Privacy Protection Act (COPPA) was designed to protect information of children under age 13 while accounting for the dynamic nature of the Internet. 
+* **PII** - Personally Identifiable Information - any personal details that, if shared online, could allow one to be identified
 
 
 # Resources
 
-* [When Does Your Privacy Matter?](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=doc))
-* [Social Sleuth](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/) - Activity Guide ([PDF](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=doc))
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+
 MARKDOWN

@@ -6,8 +6,8 @@ var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 var ALLOWED_KEYS = utils.makeEnum(
   'skinId',
   'showNextHint',
-  'acapelaInstructionsSrc',
-  'acapelaMarkdownInstructionsSrc',
+  'ttsInstructionsUrl',
+  'ttsMarkdownInstructionsUrl',
   'assetUrl',
   'channelId',
   'hasDataMode',
