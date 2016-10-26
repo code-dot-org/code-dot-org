@@ -20,9 +20,11 @@ const HintPrompt = ({ onConfirm, onDismiss, borderColor }) => {
     }
   };
 
+  let message = msg.hintPromptInline();
+
   return (
-    <ChatBubble borderColor={borderColor}>
-      <p>{msg.hintPromptInline()}</p>
+    <ChatBubble borderColor={borderColor} ttsMessage={message}>
+      <p>{message}</p>
       <button onClick={onConfirm} style={[buttonStyles.common, buttonStyles.yes]}>{msg.yes()}</button>
       <button onClick={onDismiss} style={[buttonStyles.common, buttonStyles.no]}>{msg.no()}</button>
     </ChatBubble>

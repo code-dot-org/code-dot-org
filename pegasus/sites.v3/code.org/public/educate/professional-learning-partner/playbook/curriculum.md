@@ -9,11 +9,12 @@ Use the links below to find our program curriculum guides.
 
 ### CS Principles
 [AP CS Principles Curriculum (Web)](/educate/csp#lessons)<br/>
-[AP CS Principles One-Pager](
+[AP CS Principles One-Pager](https://code.org/files/programs/CSP_1-pager_final.pdf)<br/>
 [Overview of Code.org's Professional Learning Program](https://code.org/educate/professional-learning/cs-principles) 
 
 ### Computer Science Discoveries
-[What is CS Discoveries?](/educate/csd)
+[What is CS Discoveries?](/educate/csd)<br/>
+[CS Discoveries One-Pager](https://code.org/files/programs/CSD_1-pager_final.pdf)
 
 ### CS in Science
 [Project GUTS Instructor Handbook (PDF)](https://www.dropbox.com/s/04fp8dh8ycy2e9r/GUTS_CSS_Instruc_Hbook_wCover%2BBlank_2016.pdf?dl=0)<br/>

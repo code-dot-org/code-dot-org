@@ -28,6 +28,9 @@ const animationPickerStyles = {
     float: 'right',
     display: 'inline',
     marginTop: 10
+  },
+  emptyResults: {
+    paddingBottom: 10
   }
 };
 
@@ -116,7 +119,10 @@ const AnimationPickerBody = React.createClass({
           }
         </div>
         <ScrollableList style={{maxHeight: 420}}> {/* TODO: Is this maxHeight appropriate? */}
-          {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
+          {pageCount === 0 &&
+            <div style={animationPickerStyles.emptyResults}>Sorry, no results found.</div>
+          }
+          {((this.state.searchQuery === '' && this.state.categoryQuery === '') || pageCount === 0) &&
             <div>
               <AnimationPickerListItem
                 label={gamelabMsg.animationPicker_drawYourOwn()}
