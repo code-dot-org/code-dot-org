@@ -2,36 +2,19 @@ import React, { PropTypes } from 'react';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
 
-// TODO - would be great if this was in one place (probably on the server)
-// TODO make sure list is correct
-// TODO - mobile?
-
-function isHocScript(name) {
-  return [
-    "Hour of Code",
-    "flappy",
-    "playlab",
-    "artist",
-    "frozen",
-    "hourofcode",
-    "infinity",
-    "iceage",
-    "starwars",
-    "gumball",
-    "starwarsblocks",
-    "mc"
-  ].includes(name);
-}
-
 const styles = {
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
   }
 };
 
+/**
+ * Component that displays a small notification at the top of the page when
+ * postMilestone is disabled (and thus progress is isable)
+ */
 const DisabledBubblesAlert = React.createClass({
   propTypes: {
-    scriptName: PropTypes.string.isRequired,
+    isHocScript: PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -51,21 +34,27 @@ const DisabledBubblesAlert = React.createClass({
       return null;
     }
 
-    let type, intro;
-    if (isHocScript(this.props.scriptName)) {
+    let type, intro, href;
+    if (this.props.isHocScript) {
       type = 'warning';
-      intro = i18n.disabeldButtonsWhy();
+      intro = i18n.disabledButtonsWhy();
+      href = '/saving-progress-hoc';
     } else {
       type = 'error';
       intro = i18n.disabledButtonsWarning();
+      href = '/saving-progress-csf';
     }
     return (
       <Alert onClose={this.onClose} type={type}>
         <div>
           <span style={styles.bold}>{intro + " "}</span>
           <span>{i18n.disabledButtonsInfo()  + " "}</span>
-          {/* TODO - where should this link go? */}
-          <a href="#">{i18n.learnMore()}</a>
+          <a
+            target="_blank"
+            href={window.dashboard.CODE_ORG_URL + href}
+          >
+            {i18n.learnMore()}
+          </a>
         </div>
       </Alert>
     );

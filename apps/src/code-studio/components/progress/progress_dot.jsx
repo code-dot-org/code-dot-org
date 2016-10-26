@@ -181,12 +181,10 @@ export const ProgressDot = Radium(React.createClass({
   render() {
     const level = this.props.level;
     let levelStatus = this.props.overrideLevelStatus || level.status;
-    // TODO - storybook and/or tests
     if (this.props.bubbleColorsDisabled && levelStatus !== LevelStatus.locked) {
       // During hoc we're going to disable milestone posts. If disabled, we want
       // to display dots as gray (unless the level is locked, in which case we
       // want to leave as is).
-      // TODO - do we want gray or white against white background?
       levelStatus = LevelStatus.dots_disabled;
     }
     const onCurrent = this.props.currentLevelId &&
