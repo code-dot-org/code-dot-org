@@ -1,5 +1,5 @@
-- content_for(:head) do
-  %script{src: minifiable_asset_path('js/plc.js')}
+-# This variable will get any data we need to pass along to scriptOverview.js
+- scriptOverviewData = { scriptData: @script.summarize }
 
 = render partial: 'shared/check_admin'
 #landingpage
@@ -7,12 +7,7 @@
     - if @script.professional_learning_course? && @current_user
       - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
         #breadcrumb
-        - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
-        :javascript
-          ReactDOM.render(
-            React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
-            document.getElementById('breadcrumb')
-          );
+        -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
     - else
       #trynow
         = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
@@ -41,8 +36,6 @@
 
   #stats
     .user-stats-block
-      :javascript
-        dashboard.progress.renderCourseProgress(#{@script.summarize.to_json});
       = render partial: 'shared/user_stats_key'
 
   %div{style: 'clear: both;'}
@@ -75,3 +68,6 @@
           = level.name
         .span8
           = level.instructions
+
+- content_for(:head) do
+  %script{ src: minifiable_asset_path('js/scriptOverview.js'), data: {scriptoverview: scriptOverviewData.to_json }}
