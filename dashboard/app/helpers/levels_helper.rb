@@ -290,6 +290,10 @@ module LevelsHelper
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
 
+    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
+      app_options[:copyrightStrings] = build_copyright_strings
+    end
+
     app_options
   end
 
