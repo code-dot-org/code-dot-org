@@ -1,0 +1,20 @@
+name 'Event Driven Programming Recap'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+Before embarking on making your own app from scratch let's recap a few important things:
+
+# UI elements are all basically the same
+
+# There is a pattern to development
+
+# Tip: have a coding buddy
+
+# Some new commands - use online documentation.
+
+You'll see we've included a more full toolbox of commands for you to use and experiment with.  If you want to know more 
+
+
+MARKDOWN
