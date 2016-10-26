@@ -443,6 +443,7 @@ module.exports = function (grunt) {
       ],
       minify: minify,
       watch: watch,
+      watchNotify: grunt.option('watch-notify'),
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
   }

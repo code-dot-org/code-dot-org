@@ -3,6 +3,8 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import Hammer from "hammerjs";
+
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
@@ -333,23 +335,32 @@ Craft.init = function (config) {
         }
 
         dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp);
-
-        dom.addMouseDownTouchEvent(document.getElementById('phaser-game'),
-            function () {
-              return (e) => {
-                Craft.gameController.codeOrgAPI.clickDown(() => {});
-                e.preventDefault(); // Stop normal events so we see mouseup later.
-              };
-            }());
-
-        dom.addMouseUpTouchEvent(document.getElementById('phaser-game'),
-            function () {
-              return () => {
-                Craft.gameController.codeOrgAPI.clickUp(() => {});
-              };
-            }());
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
+        const phaserGame = document.getElementById('phaser-game');
+        const onDrag = function (e) {
+          const hammerToButton = {
+            [Hammer.DIRECTION_LEFT]: 'leftButton',
+            [Hammer.DIRECTION_RIGHT]: 'rightButton',
+            [Hammer.DIRECTION_UP]: 'upButton',
+            [Hammer.DIRECTION_DOWN]: 'downButton',
+          };
+          if (hammerToButton[e.direction]) {
+            Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[hammerToButton[e.direction]]);
+          }
+          e.preventDefault();
+        };
 
+        var mc = new Hammer.Manager(phaserGame);
+        mc.add(new Hammer.Pan({direction: Hammer.DIRECTION_ALL}));
+        mc.add(new Hammer.Press({time: 150}) );
+        mc.add(new Hammer.Tap() );
+        mc.on("pan", onDrag);
+        mc.on("press", () => Craft.gameController.codeOrgAPI.clickDown(() => {}));
+        mc.on("tap", () => {
+          Craft.gameController.codeOrgAPI.clickDown(() => {});
+          Craft.gameController.codeOrgAPI.clickUp(() => {});
+        });
+        mc.on("pressup", () => Craft.gameController.codeOrgAPI.clickUp(() => {}));
       },
       twitter: {
         text: "Share on Twitter",
