@@ -6,8 +6,6 @@
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   = render partial: 'layouts/terms_interstitial'
 - if current_user && current_user.show_race_interstitial?
-  - current_user.race_interstitial_shown = true
-  - current_user.save
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'home/survey'
