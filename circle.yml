@@ -30,6 +30,9 @@ dependencies:
     - google-chrome --version
     - ./bin/circle/upgrade-google-chrome.sh
     - google-chrome --version
+  post:
+    - chromedriver --verbose --log-path=$CIRCLE_ARTIFACTS/chromedriver.log:
+        background: true
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
