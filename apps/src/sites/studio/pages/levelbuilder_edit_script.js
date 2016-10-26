@@ -118,6 +118,14 @@ const styles = {
     WebkitUserSelect: 'none',
     msUserSelect: 'none',
     cursor: 'text'
+  },
+  variants: {
+    color: 'white',
+    background: color.purple,
+    padding: '3px 5px',
+    lineHeight: '12px',
+    borderRadius: 5,
+    float: 'right'
   }
 };
 
@@ -386,7 +394,8 @@ const LevelEditor = React.createClass({
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
               {this.props.level.key}
               {this.props.level.ids.length > 1 &&
-              ` (${this.props.level.ids.length} variants...)`}
+                <span style={styles.variants}>{this.props.level.ids.length} variants</span>
+              }
             </span>
             <div style={styles.remove}>
               <i className="fa fa-times"/>
