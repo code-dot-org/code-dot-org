@@ -65,7 +65,7 @@ const WorkshopTableLoader = React.createClass({
     }
 
     if (this.state.workshops.length === 0) {
-      return <p>None.</p>;
+      return <p>No workshops found</p>;
     }
 
     return (
