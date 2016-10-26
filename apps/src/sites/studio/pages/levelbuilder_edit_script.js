@@ -40,6 +40,14 @@ const styles = {
     padding: 10,
     marginBottom: 20
   },
+  addGroup: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none',
+    margin: '0 0 30px 0'
+  },
   stageCard: {
     fontSize: 18,
     background: 'white',
@@ -52,6 +60,14 @@ const styles = {
     color: '#5b6770',
     marginBottom: 15
   },
+  addStage: {
+    fontSize: 14,
+    color: '#5b6770',
+    background: 'white',
+    border: '1px solid #ccc',
+    boxShadow: 'none',
+    margin: '0 10px 10px 10px'
+  },
   levelTokenActive: {
     padding: 7,
     background: '#f4f4f4',
@@ -63,6 +79,13 @@ const styles = {
     fontSize: 13,
     background: '#eee',
     borderRadius: borderRadius,
+    margin: '5px 0'
+  },
+  addLevel: {
+    fontSize: 14,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     margin: '5px 0'
   },
   controls: {
@@ -246,10 +269,18 @@ const FlexGroupEditor = React.createClass({
     stages: React.PropTypes.array.isRequired
   },
 
+  handleAddGroup() {
+    console.log('add group');
+  },
+
+  handleAddStage(group) {
+    console.log(`add stage to group ${group}`);
+  },
+
   render() {
     const nonPeerReviewStages = this.props.stages.filter(stage => stage.id);
     const groups = _.groupBy(nonPeerReviewStages, stage => (stage.flex_category || 'Default'));
-    let count = 1;
+    let count = 0;
 
     return (
       <div>
@@ -257,8 +288,8 @@ const FlexGroupEditor = React.createClass({
           return (
             <div key={group}>
               <div style={styles.groupHeader}>
-                Group {count++}: {group}
-                <Controls type="group" position={count - 1} total={Object.keys(groups).length} />
+                Group {++count}: {group}
+                <Controls type="group" position={count} total={Object.keys(groups).length} />
               </div>
               <div style={styles.groupBody}>
                 {stages.map(stage => {
@@ -270,10 +301,18 @@ const FlexGroupEditor = React.createClass({
                     />
                   );
                 })}
+                <button onMouseDown={this.handleAddStage.bind(null, count)} className="btn" style={styles.addStage} type="button">
+                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                  Add Stage
+                </button>
               </div>
             </div>
           );
         })}
+        <button onMouseDown={this.handleAddGroup} className="btn" style={styles.addGroup} type="button">
+          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+          Add Group
+        </button>
       </div>
     );
   }
@@ -342,6 +381,10 @@ const StageEditor = React.createClass({
     window.removeEventListener('mouseup', this.handleDragStop);
   },
 
+  handleAddLevel() {
+    console.log(`add level to stage ${this.props.stage.position}`);
+  },
+
   render() {
     return (
       <div style={styles.stageCard}>
@@ -359,6 +402,10 @@ const StageEditor = React.createClass({
             handleDragStart={this.handleDragStart}
           />
         )}
+        <button onMouseDown={this.handleAddLevel} className="btn" style={styles.addLevel} type="button">
+          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+          Add Level
+        </button>
       </div>
     );
   }
