@@ -213,7 +213,7 @@ function setupApp(appOptions) {
   appOptions.noPadding = userAgentParser.isMobile();
 }
 
-function loadApp(appOptions, callback) {
+function loadAppAsync(appOptions, callback) {
   setupApp(appOptions);
   var lastAttemptLoaded = false;
 
@@ -400,21 +400,13 @@ window.apps = {
  * Attaches an apps.load() function to the window which can be used to initialize an app.
  * Should only be called once per page load.
  */
-export default function createAppLoader(appMain) {
+export default function loadApp(appMain) {
   // Loads the dependencies for the current app based on values in `appOptions`.
   // This function takes a callback which is called once dependencies are ready.
-  if (window.apps.load) {
-    throw new Error(
-      "Atempted to create more than one app loader. Only one app per page is supported."
-    );
-  }
-  window.apps.load = (appOptions) => {
-    loadApp(
-      appOptions,
-      () => {
-        project.init(window.apps.sourceHandler);
-        appMain(appOptions);
-      }
-    );
-  };
+  const script = document.querySelector(`script[data-appoptions]`);
+  const appOptions = JSON.parse(script.dataset.appoptions);
+  loadAppAsync(appOptions, () => {
+    project.init(window.apps.sourceHandler);
+    appMain(appOptions);
+  });
 }
