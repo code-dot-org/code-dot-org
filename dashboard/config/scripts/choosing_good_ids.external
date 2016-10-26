@@ -51,5 +51,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 #### Developing Good Programming Habits
 
-Following clear and consistent naming conventions is an important habit to develop, but one students don't always see the immediate benefit it. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs.
+Following clear and consistent naming conventions is an important habit to develop, but the benefits are rarely immediately obvious to students. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs, but it will also simplify the process of combining each student's screen into a full team app.
 MARKDOWN

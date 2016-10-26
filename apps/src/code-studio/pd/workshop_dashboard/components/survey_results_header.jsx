@@ -11,8 +11,14 @@ import {DATE_FORMAT} from '../workshopConstants';
 import { workshopShape } from '../types.js';
 
 const styles = {
+  questionGroupCell: {
+    borderTopWidth: '2px',
+    borderTopColor: 'black'
+  },
   questionGroupHeader: {
-    fontWeight: 'bolder'
+    fontWeight: 'bolder',
+    borderTopWidth: '2px',
+    borderTopColor: 'black'
   },
   individualQuestion: {
     paddingLeft: '50px'
@@ -42,6 +48,14 @@ const rowOrder = [
   {text: 'This professional development was suitable for my level of experience with teaching CS.', key: 'suitable_for_my_experience_s'},
   {text: 'I would recommend this professional development to others.', key: 'would_recommend_s'},
   {text: 'I feel like I am a part of a community of teachers.', key: 'part_of_community_s'},
+];
+
+const freeResponseQuestions = [
+  {text: 'What were two things your facilitator(s) did well?', key: 'things_facilitator_did_well_s'},
+  {text: 'What were two things your facilitator(s) could do better?', key: 'things_facilitator_could_improve_s'},
+  {text: 'What were the two things you liked most about the activities you did in this workshop and why?', key: 'things_you_liked_s'},
+  {text: 'What are the two things you would change about the activities you did in this workshop?', key: 'things_you_would_change_s'},
+  {text: 'Is there anything else you’d like to tell us about your experience at this workshop?', key: 'anything_else_s'},
 ];
 
 const SurveyResultsHeader = React.createClass({
@@ -153,9 +167,9 @@ const SurveyResultsHeader = React.createClass({
               return (
                 <tr key={i}>
                   <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
-                  <td>{thisWorkshop[row['key']]}</td>
-                  <td>{allMyWorkshopsForCourse[row['key']]}</td>
-                  <td>{allWorkshopsForCourse[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{thisWorkshop[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
+                  <td style={row['heading'] && styles.questionGroupCell}>{allWorkshopsForCourse[row['key']]}</td>
                 </tr>
               );
             })
@@ -182,12 +196,12 @@ const SurveyResultsHeader = React.createClass({
       return (
         <tr key={i}>
           <td style={row['heading'] ? styles.questionGroupHeader : styles.individualQuestion}>{row['text']}</td>
-          <td>{allWorkshopsForCourse[row['key']]}</td>
-          <td>{allMyWorkshopsForCourse[row['key']]}</td>
+          <td style={row['heading'] && styles.questionGroupCell}>{allWorkshopsForCourse[row['key']]}</td>
+          <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
           {
-            headings.slice(3).map((heading, i) => {
+            headings.slice(3).map((heading, j) => {
               return (
-                <td key={i}>
+                <td key={j} style={row['heading'] && styles.questionGroupCell}>
                   {
                     this.state.selectedWorkshopId ? breakoutData['this_workshop'][row['key']] : breakoutData[heading][row['key']]
                   }
@@ -234,6 +248,35 @@ const SurveyResultsHeader = React.createClass({
     }
   },
 
+  renderFreeResponseAnswers() {
+    if (this.state.workshopSurveyData && this.state.selectedWorkshopId) {
+      const thisWorkshop = this.state.workshopSurveyData['this_workshop'];
+
+      const freeResponseAnswers = freeResponseQuestions.map((question, i) => {
+        return (
+          <div key={i} className="well">
+            <b>{question['text']}</b>
+            {
+              thisWorkshop[question['key']].map((answer, j) => {
+                return (
+                  <li key={j}>
+                    {answer}
+                  </li>
+                );
+              })
+            }
+          </div>
+        );
+      });
+
+      return (
+        <div>
+          {freeResponseAnswers}
+        </div>
+      );
+    }
+  },
+
   getWorkshopFriendlyName(workshop) {
     return workshop.course + ' - ' + (workshop.sessions[0] ? moment.utc(workshop.sessions[0].start).format(DATE_FORMAT) : 'no sessions');
   },
@@ -245,7 +288,7 @@ const SurveyResultsHeader = React.createClass({
 
     const workshopOptions = this.state.filteredWorkshops.map( (workshop, i) => {
       return (
-        <option key={i + (this.props.organizerView && 1)} value={workshop.id}>
+        <option key={i} value={workshop.id}>
           {this.getWorkshopFriendlyName(workshop)}
         </option>
       );
@@ -254,7 +297,7 @@ const SurveyResultsHeader = React.createClass({
     if (this.props.organizerView) {
       workshopOptions.unshift(
         (
-          <option key={0} value={''}>
+          <option key={-1} value={''}>
             View all workshops
           </option>
         )
@@ -285,6 +328,7 @@ const SurveyResultsHeader = React.createClass({
         </Row>
         <br/>
         {this.renderSurveyPanel()}
+        {this.renderFreeResponseAnswers()}
       </div>
     );
   }

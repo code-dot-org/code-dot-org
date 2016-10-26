@@ -99,8 +99,6 @@ describe('Level tests', function () {
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
     .then(function () { return loadSource('/base/lib/tooltipster/jquery.tooltipster.js'); })
     .then(function () { return loadSource('/base/lib/phaser/phaser.js'); })
-    .then(function () { return loadSource('/base/lib/p5play/p5.js'); })
-    .then(function () { return loadSource('/base/lib/p5play/p5.play.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
       done();
