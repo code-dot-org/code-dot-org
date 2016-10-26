@@ -21,8 +21,8 @@ RUN_ALL_TESTS_TAG = 'test all'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
-# Don't run UI tests against Chrome
-SKIP_CHROME_TAG = 'skip chrome'.freeze
+# Run UI tests against ChromeLatestWin7
+TEST_CHROME_TAG = 'test chrome'.freeze
 
 # Run UI tests against Firefox45Win7
 TEST_FIREFOX_TAG = 'test firefox'.freeze
@@ -55,26 +55,26 @@ namespace :circle do
       HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
+
     RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
-    start_sauce_connect
+    ui_test_browsers = browsers_to_run
+    use_saucelabs = !ui_test_browsers.empty?
+    start_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      ui_test_browsers = browsers_to_run
-      unless ui_test_browsers.empty?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-            " --feature #{container_features.join(',')}" \
-            " --config #{ui_test_browsers.join(',')}" \
-            " --pegasus localhost.code.org:3000" \
-            " --dashboard localhost.studio.code.org:3000" \
-            " --circle" \
-            " --parallel 16" \
-            " --abort_when_failures_exceed 10" \
-            " --retry_count 2" \
-            " --html"
-      end
+      RakeUtils.system_stream_output "bundle exec ./runner.rb" \
+          " --feature #{container_features.join(',')}" \
+          " --pegasus localhost.code.org:3000" \
+          " --dashboard localhost.studio.code.org:3000" \
+          " --circle" \
+          " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
+          " --parallel #{use_saucelabs ? 16 : 8}" \
+          " --abort_when_failures_exceed 10" \
+          " --retry_count 2" \
+          " --html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
@@ -88,7 +88,7 @@ namespace :circle do
             " --html"
       end
     end
-    close_sauce_connect
+    close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
   end
 end
@@ -96,7 +96,7 @@ end
 # @return [Array<String>] names of browser configurations for this test run
 def browsers_to_run
   browsers = []
-  browsers << 'ChromeLatestWin7' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'ChromeLatestWin7' if CircleUtils.tagged?(TEST_CHROME_TAG)
   browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
   browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
   browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)

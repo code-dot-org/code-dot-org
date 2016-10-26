@@ -4,6 +4,8 @@ import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './abuse_error';
 import SendToPhone from './SendToPhone';
 import color from '../../color';
+import * as applabConstants from '../../applab/constants';
+import * as gamelabConstants from '../../gamelab/constants';
 
 function select(event) {
   event.target.select();
@@ -26,6 +28,19 @@ const styles = {
     fontWeight: 'bold'
   },
 };
+
+
+function checkImageReachability(imageUrl, callback) {
+  const img = new Image();
+  img.onabort = () => callback(false);
+  img.onload = () => callback(true);
+  img.onerror = () => callback(false);
+  img.src = (
+    imageUrl +
+    (imageUrl.indexOf('?') < 0 ? '?' : '&') +
+    '__cacheBust=' + Math.random()
+  );
+}
 
 /**
  * Share Dialog used by projects
@@ -53,7 +68,24 @@ var ShareDialog = React.createClass({
       showAdvancedOptions: false,
       exporting: false,
       exportError: null,
+      isTwitterAvailable: false,
+      isFacebookAvailable: false,
     };
+  },
+
+  componentDidMount() {
+    if (this.props.canShareSocial) {
+      // check if twitter and facebook are actually available
+      // and not blocked by network firewall
+      checkImageReachability(
+        'https://graph.facebook.com/Code.org/picture',
+        isFacebookAvailable => this.setState({isFacebookAvailable})
+      );
+      checkImageReachability(
+        'https://twitter.com/codeorg/profile_image?size=mini',
+        isTwitterAvailable => this.setState({isTwitterAvailable})
+      );
+    }
   },
 
   componentWillReceiveProps: function (newProps) {
@@ -112,6 +144,22 @@ var ShareDialog = React.createClass({
       !this.props.canShareSocial &&
       (this.props.appType === 'applab' || this.props.appType === 'gamelab')
     );
+    let embedOptions;
+    if (this.props.appType === 'applab') {
+      embedOptions = {
+        // If you change this width and height, make sure to update the
+        // #visualizationColumn.wireframeShare css
+        iframeHeight: applabConstants.APP_HEIGHT + 140,
+        iframeWidth: applabConstants.APP_WIDTH + 32,
+      };
+    } else if (this.props.appType === 'gamelab') {
+      embedOptions = {
+        // If you change this width and height, make sure to update the
+        // #visualizationColumn.wireframeShare css
+        iframeHeight: gamelabConstants.GAME_HEIGHT + 357,
+        iframeWidth: gamelabConstants.GAME_WIDTH + 32,
+      };
+    }
     return (
       <BaseDialog
         useDeprecatedGlobalStyles
@@ -157,16 +205,18 @@ var ShareDialog = React.createClass({
               </a>
               {this.props.canShareSocial &&
                <span>
-                 <a
-                   href={facebookShareUrl}
-                   target="_blank"
-                   onClick={this.props.onClickPopup.bind(this)}
-                 >
-                   <i className="fa fa-facebook"></i>
-                 </a>
-                 <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
-                   <i className="fa fa-twitter"></i>
-                 </a>
+                 {this.state.isFacebookAvailable &&
+                  <a
+                    href={facebookShareUrl}
+                    target="_blank"
+                    onClick={this.props.onClickPopup.bind(this)}
+                  >
+                    <i className="fa fa-facebook"></i>
+                  </a>}
+                 {this.state.isTwitterAvailable &&
+                  <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
+                    <i className="fa fa-twitter"></i>
+                  </a>}
                </span>}
             </div>
             {this.state.showSendToPhone &&
@@ -175,12 +225,14 @@ var ShareDialog = React.createClass({
                appType={this.props.appType}
                styles={{label:{marginTop: 15, marginBottom: 0}}}
              />}
-            {this.props.appType === 'applab' &&
+            {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
              <AdvancedShareOptions
                i18n={this.props.i18n}
                onClickExport={this.props.onClickExport}
                expanded={this.state.showAdvancedOptions}
                onExpand={this.showAdvancedOptions}
+               channelId={this.props.channelId}
+               embedOptions={embedOptions}
              />}
             {/* Awkward that this is called continue-button, when text is
             close, but id is (unfortunately) used for styling */}

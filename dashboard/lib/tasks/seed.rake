@@ -97,10 +97,40 @@ namespace :seed do
   end
 
   task school_districts: :environment do
+    # use a much smaller dataset in environments that reseed data frequently.
+    school_districts_tsv = CDO.stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+    expected_count = `wc -l #{school_districts_tsv}`.to_i - 1
+    raise "#{school_districts_tsv} contains no data" unless expected_count > 0
+
     SchoolDistrict.transaction do
-      # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
-      # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
-      SchoolDistrict.find_or_create_all_from_tsv!('config/school_districts.tsv')
+      # It takes approximately 30 seconds to seed config/school_districts.tsv.
+      # Skip seeding if the data is already present. Note that this logic may need
+      # to be updated once we incorporate data from future survey years.
+      if SchoolDistrict.count < expected_count
+        # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
+        # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
+        puts "seeding school districts (#{expected_count} rows)"
+        SchoolDistrict.find_or_create_all_from_tsv(school_districts_tsv)
+      end
+    end
+  end
+
+  task schools: :environment do
+    # use a much smaller dataset in environments that reseed data frequently.
+    schools_tsv = CDO.stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+    expected_count = `wc -l #{schools_tsv}`.to_i - 1
+    raise "#{schools_tsv} contains no data" unless expected_count > 0
+
+    School.transaction do
+      # It takes approximately 4 minutes to seed config/schools.tsv.
+      # Skip seeding if the data is already present. Note that this logic may need
+      # to be updated once we incorporate data from future survey years.
+      if School.count < expected_count
+        # Since other models will have a foreign key dependency
+        # on School, don't reset_db first.  (Callout, above, does that.)
+        puts "seeding schools (#{expected_count} rows)"
+        School.find_or_create_all_from_tsv(schools_tsv)
+      end
     end
   end
 
@@ -242,9 +272,9 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]

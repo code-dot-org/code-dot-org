@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
-require_relative '../../dashboard/lib/controllers/api/v1/pd/workshop_score_summarizer'
+require_relative '../../dashboard/lib/api/v1/pd/workshop_score_summarizer'
 require_relative '../../lib/cdo/only_one'
 require_relative '../../dashboard/config/environment'
 require 'cdo/aws/s3'
 
 def main
-  include WorkshopScoreSummarizer
+  include Api::V1::Pd::WorkshopScoreSummarizer
 
   course_scores = {}
 

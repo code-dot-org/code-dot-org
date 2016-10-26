@@ -560,6 +560,9 @@ en:
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
+      CSPU5 Making a Multi Screen Chaser Game:
+        description here: description here
+        title: title
       CSPU5_ChoosingGoodIds:
         description here: description here
         title: title
@@ -658,6 +661,9 @@ en:
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
       Data Tools in Unit 2 Chapter 2: {}
+      Debugging with Console.log:
+        description here: description here
+        title: title
       Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
@@ -1081,6 +1087,7 @@ en:
         title: title
       How are Images Encoded?: {}
       'How to: Make Charts from your Data': {}
+      Importing Screens: {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -1111,6 +1118,9 @@ en:
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
       Lossy vs. Lossless Compression: {}
+      Making Multiple Screens:
+        description here: description here
+        title: title
       Making Pivot Tables Part 1 - The Basics: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
       Making a Bar Chart: {}
@@ -1124,6 +1134,9 @@ en:
         Second Marble Maze K Activity: Second Marble Maze K Activity
       Modulo Clock Instructions: {}
       Modulo Clock Recap: {}
+      Multi-Screen Apps:
+        description here: description here
+        title: title
       New Challenge Introduction:
         description here: description here
         title: title
@@ -2049,6 +2062,7 @@ en:
       courseB_unplugged_mrfProgramming:
         description here: description here
         title: title
+      courseF_external_variableConstant: {}
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -2569,6 +2583,7 @@ en:
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
@@ -2777,6 +2792,13 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      CSDU4 Screens Predict Match:
+        The "About" Button: The "About" Button
+        The "About" Page: The "About" Page
+        The "Contact Us" Button: The "Contact Us" Button
+        The "Contact Us" Screen: The "Contact Us" Screen
+        The "Use It" Button: The "Use It" Button
+        The "Use It" Page: The "Use It" Page
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -3943,6 +3965,11 @@ en:
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
+      CSDU4 Screens Predict Multi:
+        About: About
+        Contact Us: Contact Us
+        Use It: Use It
+        Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -4132,9 +4159,9 @@ en:
         Low bandwidth, high latency: Low bandwidth, high latency
         Low bandwidth, low latency: Low bandwidth, low latency
       CSPFinal_Question_20:
+        Days when certain items sell the most.: Days when certain items sell the most.
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
-        Times of day when certain items sell the most.: Times of day when certain items sell the most.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_21:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
@@ -6282,6 +6309,112 @@ en:
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
         There is no value of time that will result in “Good Morning” being displayed: There is no value of time that will result in “Good Morning” being displayed
+      cspu5_assess3_ageList:
+        INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
+        REMOVE  the value at the index of 2, then INSERT 13 in the index 2: REMOVE  the value at the index of 2, then INSERT 13 in the index 2
+        Remove all items from the list and start over: Remove all items from the list and start over
+        ages[2] = ages[2] + 1: ages[2] = ages[2] + 1
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+        ab: ab
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array3:
+        <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">: <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">
+        <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+        <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+        <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+        <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+        Error. Index 3 does not exist.: Error. Index 3 does not exist.
+      cspu5_assess3_array5:
+        <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">: <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+        <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">: <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+        <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">: <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+        <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+        <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+      cspu5_assess3_bakeSale:
+        'Add after line 3:     numItems = numItems - 1;': 'Add after line 3:     numItems = numItems - 1;'
+        'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
+        'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
+        'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
+        'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
+      cspu5_assess3_counter:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      cspu5_assess3_impossibleOutput:
+        0, 0: 0, 0
+        1, 1: 1, 1
+        2, 4: 2, 4
+        3, 1: 3, 1
+        3, 3: 3, 3
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+        Error. There is no index 2.: Error. There is no index 2.
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        Infinite loop: Infinite loop
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
+      cspu5_assess3_mysterySwap:
+        a: a
+        b: b
+        c: c
+        d: d
+        e: e
+      cspu5_assess3_robot:
+        <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>
+        <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>
+        <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>
+        <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>
+        <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>
+      cspu5_assess3_rollDie:
+        rolls < 100 && sixes < 25: rolls < 100 && sixes < 25
+        rolls < 100 || sixes < 25: rolls < 100 || sixes < 25
+        rolls < sixes || sixes > 25: rolls < sixes || sixes > 25
+        rolls = 100 || sixes <= 25: rolls = 100 || sixes <= 25
+        rolls >= 0 && sixes < 25: rolls >= 0 && sixes < 25
+      cspu5_assess3_swap:
+        <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">: <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+        <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">: <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+        <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+        <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+      cspu5_assess3_whileTrue:
+        While loops are known as “forever loops” and never stop until the program is halted by the user.: While loops are known as “forever loops” and never stop until the program is halted by the user.
+        While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
+        While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
+        While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.
+        While loops terminate after a fixed number of loops that is pre-determined: While loops terminate after a fixed number of loops that is pre-determined
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
