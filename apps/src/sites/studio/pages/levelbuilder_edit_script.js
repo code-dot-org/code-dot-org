@@ -385,7 +385,7 @@ const LevelEditor = React.createClass({
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
-              zIndex: this.props.drag ? 1000 : 'auto'
+              zIndex: this.props.drag ? 1000 : 500 - this.props.level.position
             })}
           >
             <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
