@@ -16,7 +16,7 @@
     "is_daytime": "true",
     "is_event_level": "true",
     "use_player": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"addScore\");\r\n}",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "level_verification_timeout": "30000",
     "embed": "false",
@@ -38,7 +38,7 @@
     "free_play": "false",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Games let you keep score. Use the \"AddScore\" block to give yourself a point when you tag the sheep. ",
+    "instructions": "Games let you keep score. Use the \"add 1 to score\" block to give yourself a point when you tag the sheep. ",
     "use_score": "true",
     "contained_level_names": null
   },
