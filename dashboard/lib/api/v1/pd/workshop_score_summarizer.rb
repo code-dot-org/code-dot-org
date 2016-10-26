@@ -1,4 +1,4 @@
-module WorkshopScoreSummarizer
+module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_EFFECTIVENESS_QUESTIONS = [
     :how_much_learned_s,
     :how_motivating_s,
