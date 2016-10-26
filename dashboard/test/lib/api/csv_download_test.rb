@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'controllers/api/csv_download'
 
 class FakeController < ApplicationController
   include Api::CsvDownload
