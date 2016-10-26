@@ -1,8 +1,8 @@
-var appMain = require('../appMain');
-var studioApp = require('../StudioApp').singleton;
-var GameLab = require('./GameLab');
-var skins = require('./skins');
-var levels = require('./levels');
+import appMain from "@cdo/apps/appMain";
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import GameLab from "@cdo/apps/gamelab/GameLab";
+import skins from "@cdo/apps/gamelab/skins";
+import levels from "@cdo/apps/gamelab/levels";
 
 window.gamelabMain = function (options) {
   options.skinsModule = skins;
