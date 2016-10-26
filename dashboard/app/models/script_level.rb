@@ -192,6 +192,7 @@ class ScriptLevel < ActiveRecord::Base
 
     summary = {
         ids: ids,
+        activeId: oldest_active_level.id,
         position: position,
         kind: kind,
         icon: level.icon,
