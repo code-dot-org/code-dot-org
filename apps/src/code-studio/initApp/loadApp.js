@@ -17,7 +17,7 @@ import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityU
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
-function showDisabledButtonsAlert() {
+function showDisabledButtonsAlert(isHocScript) {
   const div = $('<div>').css({
     position: 'absolute',
     left: 0,
@@ -27,7 +27,7 @@ function showDisabledButtonsAlert() {
   });
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesAlert scriptName={appOptions.scriptName}/>, div[0]);
+  ReactDOM.render(<DisabledBubblesAlert isHocScript={isHocScript}/>, div[0]);
 }
 
 module.exports = function (callback) {
@@ -129,7 +129,7 @@ module.exports = function (callback) {
 
       if (data.disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI')) {
         getStore().dispatch(disableBubbleColors());
-        showDisabledButtonsAlert();
+        showDisabledButtonsAlert(data.isHoc);
       }
     }).fail(loadLastAttemptFromSessionStorage);
 
