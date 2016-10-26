@@ -285,7 +285,7 @@ const StageEditor = React.createClass({
   handleDragStart(position, {pageY}) {
     const startingPositions = this.props.stage.levels.map(level => {
       const metrics = this.metrics(level.position);
-      return {top: metrics.top, bottom: metrics.bottom};
+      return metrics.top + metrics.height / 2;
     });
     this.setState({
       drag: position,
@@ -302,15 +302,15 @@ const StageEditor = React.createClass({
     const scrollDelta = document.body.scrollTop - this.state.initialScroll;
     const delta = pageY - this.state.initialPageY;
     const dragPosition = this.metrics(this.state.drag).top + scrollDelta;
-    const currentPositions = this.state.startingPositions.map((metrics, index) => {
+    const currentPositions = this.state.startingPositions.map((midpoint, index) => {
       const postion = index + 1;
       if (postion === this.state.drag) {
         return delta;
       }
-      if (postion < this.state.drag && dragPosition < metrics.top) {
+      if (postion < this.state.drag && dragPosition < midpoint) {
         return this.state.dragHeight;
       }
-      if (postion > this.state.drag && dragPosition + this.state.dragHeight > metrics.bottom) {
+      if (postion > this.state.drag && dragPosition + this.state.dragHeight > midpoint) {
         return -this.state.dragHeight;
       }
       return 0;
