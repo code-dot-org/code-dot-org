@@ -60,6 +60,10 @@ const styles = {
     color: '#5b6770',
     marginBottom: 15
   },
+  stageLockable: {
+    fontSize: 13,
+    marginTop: 3
+  },
   addStage: {
     fontSize: 14,
     color: '#5b6770',
@@ -385,12 +389,21 @@ const StageEditor = React.createClass({
     console.log(`add level to stage ${this.props.stage.position}`);
   },
 
+  handleLockableChanged() {
+    const state = this.refs.lockable.checked ? 'lockable' : 'not lockable';
+    console.log(`stage ${this.props.stage.position} marked as ${state}`);
+  },
+
   render() {
     return (
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
           Stage {this.props.stage.position}: {this.props.stage.name}
           <Controls type="stage" position={this.props.stage.position} total={this.props.stagesCount} />
+          <div style={styles.stageLockable}>
+            Require teachers to unlock this stage before students in their section can access it
+            <input onChange={this.handleLockableChanged} ref="lockable" type="checkbox" style={styles.checkbox} />
+          </div>
         </div>
         {this.props.stage.levels.map(level =>
           <LevelEditor
