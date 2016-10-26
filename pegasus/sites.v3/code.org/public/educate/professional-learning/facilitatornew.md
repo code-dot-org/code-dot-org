@@ -26,6 +26,6 @@ Please carefully review the requirements and commitments for the curriculum focu
  
 **Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application for the 2017-2018 Facilitator Development Program will close on February 1, 2017. Application for the 2018-2019 school year will open in late 2017. *This program is currently only operated in the US.*<br/>
 
-Note: We are not currently accepting applications for Computer Science Fundamentals (K-5). Complete this interest form to be notified when the application opens. 
+Note: We are not currently accepting applications for Computer Science Fundamentals (K-5). Complete this [interest form](https://goo.gl/forms/fhovCWWFYiS5agvZ2) to be notified when the application opens. 
 
-
+# Become a Computer Science Principles Facilitator
