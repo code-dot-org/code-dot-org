@@ -162,6 +162,8 @@ $original-background-color: #F2F2F2;
 
 body {
   background-color: $below-header-background;
+  -ms-content-zooming: none;
+  -ms-touch-action: none;
 }
 
 .header-wrapper {
