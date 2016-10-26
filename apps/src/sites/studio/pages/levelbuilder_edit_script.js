@@ -276,12 +276,6 @@ const StageEditor = React.createClass({
     return ReactDOM.findDOMNode(this.refs[`levelToken${token}`]).getBoundingClientRect();
   },
 
-  handleExpand(position) {
-    this.setState({
-      expanded: position
-    });
-  },
-
   handleDragStart(position, {pageY}) {
     const startingPositions = this.props.stage.levels.map(level => {
       const metrics = this.metrics(level.position);
@@ -336,8 +330,6 @@ const StageEditor = React.createClass({
             ref={`levelToken${level.position}`}
             key={level.position}
             level={level}
-            expanded={level.position === this.state.expanded}
-            handleExpand={this.handleExpand}
             drag={level.position === this.state.drag}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
@@ -351,39 +343,26 @@ const StageEditor = React.createClass({
 const LevelEditor = React.createClass({
   propTypes: {
     level: React.PropTypes.object.isRequired,
-    expanded: React.PropTypes.bool.isRequired,
-    handleExpand: React.PropTypes.func.isRequired,
     drag: React.PropTypes.bool.isRequired,
     delta: React.PropTypes.number,
     handleDragStart: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
-    return {focused: true};
+    return {};
+  },
+
+  toggleExpand() {
+    this.setState({expand: !this.state.expand});
   },
 
   handleLevelSelected(value) {
     console.log(value);
   },
 
-  handleFocus(e) {
-    if (e.target === ReactDOM.findDOMNode(this.refs.div)) {
-      this.setState({focused: true});
-    } else {
-      this.setState({focused: false});
-    }
-  },
-
-  handleBlur() {
-    this.setState({focused: false});
-  },
-
   render() {
-    return this.props.expanded ?
+    return this.state.expand ?
       <div
-        onFocus={this.handleFocus}
-        onBlur={this.handleBlur}
-        tabIndex="0"
         style={Object.assign({}, styles.levelTokenActive, styles.levelToken, this.state.focused && styles.focused)}
       >
         {this.props.level.ids.map(id => {
@@ -438,7 +417,7 @@ const LevelEditor = React.createClass({
             <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
               <i className="fa fa-arrows-v"/>
             </div>
-          <span style={styles.levelTokenName} onMouseDown={this.props.handleExpand.bind(null, this.props.level.position)}>
+          <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
             {this.props.level.key}
             {this.props.level.ids.length > 1 &&
             ` (${this.props.level.ids.length} variants...)`}
