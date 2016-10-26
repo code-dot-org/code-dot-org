@@ -5,7 +5,7 @@ class SchoolTest < ActiveSupport::TestCase
 
   test "schools initialized from tsv" do
     # Populate school districts, since schools depends on them as a foreign key.
-    SchoolDistrict.find_or_create_all_from_tsv!('test/fixtures/school_districts.tsv')
+    SchoolDistrict.find_or_create_all_from_tsv('test/fixtures/school_districts.tsv')
 
     schools = School.find_or_create_all_from_tsv('test/fixtures/schools.tsv')
     assert_equal(16, schools.size, 'test data contains 16 schools')
