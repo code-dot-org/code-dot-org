@@ -99,17 +99,13 @@ const styles = {
     margin: '0 5px',
     cursor: 'pointer'
   },
-  levelSelect: {
-    marginBottom: 5
-  },
-  levelTypeLabel: {
-    float: 'left',
+  levelFieldLabel: {
     lineHeight: '36px',
     marginLeft: 5
   },
   levelTypeSelect: {
     width: 'calc(100% - 80px)',
-    marginLeft: 80
+    margin: '0 0 5px 80px'
   },
   reorder: {
     fontSize: 16,
@@ -154,6 +150,10 @@ const styles = {
     lineHeight: '12px',
     borderRadius: 5,
     float: 'right'
+  },
+  divider: {
+    borderColor: '#ddd',
+    margin: '7px 0'
   }
 };
 
@@ -410,6 +410,7 @@ const StageEditor = React.createClass({
             ref={`levelToken${level.position}`}
             key={level.position}
             level={level}
+            stagePosition={this.props.stage.position}
             drag={level.position === this.state.drag}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
@@ -427,10 +428,18 @@ const StageEditor = React.createClass({
 const LevelEditor = React.createClass({
   propTypes: {
     level: React.PropTypes.object.isRequired,
+    stagePosition: React.PropTypes.number.isRequired,
     drag: React.PropTypes.bool.isRequired,
     delta: React.PropTypes.number,
     handleDragStart: React.PropTypes.func.isRequired
   },
+
+  levelKindOptions: [
+    {label: 'Puzzle', value: 'puzzle'},
+    {label: 'Assessment', value: 'assessment'},
+    {label: 'Named Level', value: 'named_level'},
+    {label: 'Unplugged', value: 'unplugged'}
+  ],
 
   getInitialState() {
     return {};
@@ -445,7 +454,7 @@ const LevelEditor = React.createClass({
   },
 
   handleRemove() {
-    console.log(`remove level ${this.props.level.position}`);
+    console.log(`remove level ${this.props.level.position} from stage ${this.props.stagePosition}`);
   },
 
   render() {
@@ -483,35 +492,39 @@ const LevelEditor = React.createClass({
             </div>
             {this.state.expand &&
               <div style={styles.levelTokenActive}>
-                {this.props.level.ids.map(id => {
-                  return (
+                <span style={Object.assign({float: 'left'}, styles.levelFieldLabel)}>
+                  Level type:
+                </span>
+                <VirtualizedSelect
+                  value={this.props.level.kind}
+                  options={this.levelKindOptions}
+                  clearable={false}
+                  arrowRenderer={ArrowRenderer}
+                  style={styles.levelTypeSelect}
+                />
+                {this.props.level.ids.map(id =>
+                  <div key={id}>
+                    {this.props.level.ids.length > 1 &&
+                      <div>
+                        <hr style={styles.divider} />
+                        <span style={styles.levelFieldLabel}>Active</span>
+                        <input
+                          type="radio"
+                          defaultChecked={id === this.props.level.activeId}
+                          style={styles.checkbox}
+                          name={`radio-${this.props.stagePosition}-${this.props.level.position}`}
+                        />
+                      </div>
+                    }
                     <VirtualizedSelect
-                      key={id}
                       options={levelKeyList}
                       value={id}
                       onChange={this.handleLevelSelected}
                       clearable={false}
                       arrowRenderer={ArrowRenderer}
-                      style={styles.levelSelect}
                     />
-                  );
-                })}
-                <span style={styles.levelTypeLabel}>Level type:</span>
-                <VirtualizedSelect
-                  value={this.props.level.kind}
-                  options={[{
-                    label: 'Puzzle', value: 'puzzle'
-                  }, {
-                    label: 'Assessment', value: 'assessment'
-                  }, {
-                    label: 'Named Level', value: 'named_level'
-                  }, {
-                    label: 'Unplugged', value: 'unplugged'
-                  }]}
-                  clearable={false}
-                  arrowRenderer={ArrowRenderer}
-                  style={styles.levelTypeSelect}
-                />
+                  </div>
+                )}
               </div>
             }
           </div>
