@@ -35,6 +35,6 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Training Materials', description_t: "The best of Facilitation Summit, TeacherCon, and virtual trainings", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/training-materials"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Learn how to navigate this critical organizational tool", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/workshop-dashboard"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Access to the Dashboard and guidance on setting up workshops, day of event troubleshooting and more", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/workshop-dashboard"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "Workshop Planning 101: Everything you need to know all wrapped up and tied with a bow", url_s: CDO.code_org_url('/educate/professional-learning-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
