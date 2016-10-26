@@ -127,7 +127,9 @@ module.exports = function (callback) {
         progress.refreshStageProgress();
       }
 
-      if (data.disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI')) {
+      const signedOutUser = Object.keys(data).length === 0;
+      if (!signedOutUser && (data.disablePostMilestone ||
+          experiments.isEnabled('postMilestoneDisabledUI'))) {
         getStore().dispatch(disableBubbleColors());
         showDisabledButtonsAlert(!!data.isHoc);
       }
