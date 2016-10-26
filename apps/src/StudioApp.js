@@ -533,7 +533,7 @@ StudioApp.prototype.init = function (config) {
     }
   }
 
-  if (!!config.level.projectTemplateLevelName) {
+  if (!!config.level.projectTemplateLevelName && !config.level.isK1) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
@@ -2880,8 +2880,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: level.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),

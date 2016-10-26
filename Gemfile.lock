@@ -571,7 +571,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0.beta2)
       tilt (~> 2.0)
-    spring (1.7.2)
+    spring (2.0.0)
+      activesupport (>= 4.2)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
     sprockets (3.6.3)
@@ -749,7 +750,7 @@ DEPENDENCIES
   shotgun
   simplecov (~> 0.9)
   sinatra (~> 2.0.0.beta2)
-  spring (~> 1.7.2)
+  spring
   spring-commands-testunit
   sprockets (~> 3.6.3)
   sprockets-rails (~> 3.1.1)
