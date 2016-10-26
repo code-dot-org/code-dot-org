@@ -1,26 +1,45 @@
 #!/usr/bin/env ruby
 
 require_relative('../../dashboard/config/environment')
+require_relative('../../deployment')
 require 'cdo/hip_chat'
+require 'cdo/only_one'
+
+ALERT_FILENAME = 'confirm_usage_alert'
+SECONDS_PER_MINUTE = 60
 
 def alert(message)
+  message += " Delete production-daemon:production/#{ALERT_FILENAME} to close."
   HipChat.log(message, color: 'red', notify: 1)
+  Dir.chdir(deploy_dir) do
+    system "touch #{ALERT_FILENAME}"
+  end
 end
 
-# Verify an account has been created.
-seconds_since_last_account_create = Time.now - User.last.created_at
-if seconds_since_last_account_create > 30 * 60
-  alert("Account Create: #{seconds_since_last_account_create}")
+def main
+  # Look to see whether there is an active alert in progress. If there is,
+  # indicated by a confirm_usage_alert file, do nothing.
+  Dir.chdir(deploy_dir) do
+    return if File.file?(ALERT_FILENAME)
+  end
+
+  # Verify an account has been created.
+  seconds_since_last_account_create = Time.now - User.last.created_at
+  if seconds_since_last_account_create > 30 * SECONDS_PER_MINUTE
+    alert("Account Create: #{seconds_since_last_account_create}.")
+  end
+
+  # Verify an activity has been created.
+  seconds_since_last_activity = Time.now - Activity.last.created_at
+  if seconds_since_last_activity > 3 * SECONDS_PER_MINUTE
+    alert("Account Password Reset: #{seconds_since_last_activity}.")
+  end
+
+  # Verify a user_level has been created.
+  seconds_since_last_user_level = Time.now - UserLevel.last.created_at
+  if seconds_since_last_user_level > 5 * SECONDS_PER_MINUTE
+    alert("Account Password Reset: #{seconds_since_last_user_level}.")
+  end
 end
 
-# Verify an activity has been created.
-seconds_since_last_activity = Time.now - Activity.last.created_at
-if seconds_since_last_activity > 3 * 60
-  alert("Account Password Reset: #{seconds_since_last_activity}")
-end
-
-# Verify a user_level has been created.
-seconds_since_last_user_level = Time.now - UserLevel.last.created_at
-if seconds_since_last_user_level > 5 * 60
-  alert("Account Password Reset: #{seconds_since_last_user_level}")
-end
+main if only_one_running?(__FILE__)
