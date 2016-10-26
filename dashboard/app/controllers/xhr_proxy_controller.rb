@@ -40,6 +40,7 @@ class XhrProxyController < ApplicationController
     query.yahooapis.com
     noaa.gov
     rhcloud.com
+    swapi.co
     wikipedia.org
   )
 
