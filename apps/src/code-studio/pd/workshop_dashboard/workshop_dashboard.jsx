@@ -18,6 +18,7 @@ import SurveyResults from './survey_results.jsx';
 import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import WorkshopIndex from './workshop_index';
 import WorkshopAttendance from './attendance/workshop_attendance';
+import ReportView from './reports/report_view';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
@@ -28,6 +29,11 @@ const WorkshopDashboard = (
   <Router history={browserHistory} >
     <Route path="/" component={Header}>
       <IndexRedirect to="/workshops"/>
+      <Route
+        path="reports"
+        breadcrumbs="Reports"
+        component={ReportView}
+      />
       <Route
         path="workshops"
         breadcrumbs="Workshops"
