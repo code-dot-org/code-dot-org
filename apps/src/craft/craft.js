@@ -1,4 +1,4 @@
-/* global trackEvent */
+/* global trackEvent Raven */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -136,6 +136,7 @@ function trySetLocalStorageItem(key, value) {
  * Initialize Blockly and the Craft app. Called on page load.
  */
 Craft.init = function (config) {
+
   if (config.level.puzzle_number === 1 && config.level.stage_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
@@ -318,34 +319,34 @@ Craft.init = function (config) {
 
         for (var btn in ArrowIds) {
           dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
-              function(btn) {
+              function (btn) {
                 return () => {
                   Craft.onArrowButtonUp(ArrowIds[btn]);
-                }
+                };
               }(btn));
           dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
-              function(btn) {
+              function (btn) {
                 return (e) => {
                   Craft.onArrowButtonDown(e, ArrowIds[btn]);
-                }
+                };
               }(btn));
         }
 
         dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp);
 
         dom.addMouseDownTouchEvent(document.getElementById('phaser-game'),
-            function() {
+            function () {
               return (e) => {
                 Craft.gameController.codeOrgAPI.clickDown(() => {});
                 e.preventDefault(); // Stop normal events so we see mouseup later.
-              }
+              };
             }());
 
         dom.addMouseUpTouchEvent(document.getElementById('phaser-game'),
-            function() {
+            function () {
               return () => {
                 Craft.gameController.codeOrgAPI.clickUp(() => {});
-              }
+              };
             }());
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
 

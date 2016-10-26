@@ -47,6 +47,9 @@
 
 - if use_phaser
   %script{src: minifiable_asset_path('js/phaser/phaser.js')}
+  %script{src: 'https://cdn.ravenjs.com/3.7.0/raven.min.js', crossorigin: 'anonymous'}
+  :javascript
+    Raven.config('https://83cfabe87e8f4acbbe4bdd9fc836a446@sentry.io/108348').install();
 
 -# Blockly script dependencies
 - if use_blockly

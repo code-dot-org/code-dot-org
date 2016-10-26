@@ -67,15 +67,22 @@ require('./levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in New Relic.
-var windowOnError = window.onerror;
-window.onerror = function (msg, url, ln) {
-  if (/^Script error/.test(msg) && url) {
-    arguments[0] = 'Script Error: ' + url;
-  }
-  if (windowOnError) {
-    return windowOnError.apply(this, arguments);
-  }
-};
+/**
+ * TODO(bjordan): Temporarily disabled for Sentry logging on test server.
+ */
+//var windowOnError = window.onerror;
+
+//window.onerror = function (msg, url, ln) {
+//  if (/^Script error/.test(msg) && url) {
+//    arguments[0] = 'Script Error: ' + url;
+//  }
+//  if (windowOnError) {
+//    if (Raven) {
+//
+//    }
+//    return windowOnError.apply(this, arguments);
+//  }
+//};
 
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;

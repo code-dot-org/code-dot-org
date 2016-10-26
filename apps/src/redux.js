@@ -9,6 +9,8 @@ if (process.env.NODE_ENV !== "production") {
   var createLogger = require('redux-logger');
 }
 
+import RavenMiddleware from 'redux-raven-middleware';
+
 /**
  * Creates a store configured for use the way we want for Code.org.
  * @see http://redux.js.org/docs/api/createStore.html
@@ -57,5 +59,5 @@ module.exports.createStore = function (reducer, initialState) {
     ));
   }
 
-  return redux.createStore(reducer, initialState, redux.applyMiddleware(reduxThunk));
+  return redux.createStore(reducer, initialState, redux.applyMiddleware(RavenMiddleware('https://83cfabe87e8f4acbbe4bdd9fc836a446@sentry.io/108348'), reduxThunk));
 };
