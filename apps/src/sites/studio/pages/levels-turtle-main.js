@@ -1,9 +1,9 @@
-var appMain = require('../appMain');
-var studioApp = require('../StudioApp').singleton;
-var Artist = require('./turtle');
-var blocks = require('./blocks');
-var skins = require('./skins');
-var levels = require('./levels');
+import appMain from "@cdo/apps/appMain";
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import Artist from "@cdo/apps/turtle/turtle";
+import blocks from "@cdo/apps/turtle/blocks";
+import skins from "@cdo/apps/turtle/skins";
+import levels from "@cdo/apps/turtle/levels";
 
 window.turtleMain = function (options) {
   options.skinsModule = skins;
