@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isEntityDied(\"zombie\", 3);\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isEntityDied(\"zombie\", 3) && verificationAPI.getRepeatCommandExecutedCount(\"moveToward\") >= 1;\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -41,7 +41,8 @@
     "callout_json": "[]",
     "temporary_feedback_message": "Use the “Spawn Zombie” command under “When Night” to spawn at least three zombies. Then, add “Move a Step Toward Player” to their “When Spawned” event with a loop to help them chase you. If they’re too fast, add a “Wait” command to slow them down. ",
     "use_player": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "use_score": "false"
   },
   "published": true,
   "notes": "Puzzle 6: \r\nNighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n\r\nSolution:              \r\n             Run\r\n§  When Night Falls\r\nRepeat(5)\r\nSpawn Zombie\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked\r\nDie\r\nWhen Day\r\nDie\r\n\r\n§  When Day?\r\nWhen Night\r\n\r\nTeaches: More loops: Repeat with a parameter and using that vs. repeat forever",

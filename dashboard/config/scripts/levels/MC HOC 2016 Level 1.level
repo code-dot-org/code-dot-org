@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "You need wool. Make the sheep 'drop wool' when you walk over and 'Use' it. (Hint: Walk over to the sheep using the arrow keys, then press the space bar or tap the game board to use it.)\r\n",
+    "instructions": "Code the sheep to 'drop wool' when it is 'used.' To play, use the arrows to walk to the sheep, and press the space bar or tap the game space to 'use' it.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
@@ -42,7 +42,8 @@
     "callout_json": "[]",
     "failure_message_override": "To go on, you’ll need to collect wool. To collect the wool, use the arrow keys to walk to the sheep and then press the spacebar or click the game to shear the sheep. And, don’t forget to add the “Drop Wool” block to your code.",
     "use_player": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "use_score": "false"
   },
   "published": true,
   "notes": "Puzzle 1: Wool for Sheep\r\nThe sheep has forgotten what to do when you sheer it! Make it drop wool when you walk over to it and press the space bar or tap the game to hit it.\r\n\r\nSolution:               \r\nSheep\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nTeaches: Blockley, Movement, Putting commands into the entity structure.",
