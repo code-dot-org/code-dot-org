@@ -53,7 +53,10 @@ const styles = {
     marginBottom: 15
   },
   levelTokenActive: {
-    padding: 7
+    padding: 7,
+    background: '#f4f4f4',
+    border: '1px solid #ddd',
+    borderTop: 0
   },
   levelToken: {
     position: 'relative',
@@ -115,10 +118,6 @@ const styles = {
     WebkitUserSelect: 'none',
     msUserSelect: 'none',
     cursor: 'text'
-  },
-  focused: {
-    outline: '5px auto #3b99fc',
-    outlineOffset: -2
   }
 };
 
@@ -361,40 +360,7 @@ const LevelEditor = React.createClass({
   },
 
   render() {
-    return this.state.expand ?
-      <div
-        style={Object.assign({}, styles.levelTokenActive, styles.levelToken, this.state.focused && styles.focused)}
-      >
-        {this.props.level.ids.map(id => {
-          return (
-            <VirtualizedSelect
-              key={id}
-              options={levelKeyList}
-              value={id}
-              onChange={this.handleLevelSelected}
-              clearable={false}
-              arrowRenderer={ArrowRenderer}
-              style={styles.levelSelect}
-            />
-          );
-        })}
-        <span style={styles.levelTypeLabel}>Level type:</span>
-        <VirtualizedSelect
-          value={this.props.level.kind}
-          options={[{
-            label: 'Puzzle', value: 'puzzle'
-          }, {
-            label: 'Assessment', value: 'assessment'
-          }, {
-            label: 'Named Level', value: 'named_level'
-          }, {
-            label: 'Unplugged', value: 'unplugged'
-          }]}
-          clearable={false}
-          arrowRenderer={ArrowRenderer}
-          style={styles.levelTypeSelect}
-        />
-      </div> :
+    return (
       <Motion
         style={this.props.drag ? {
           y: this.props.delta,
@@ -417,17 +383,51 @@ const LevelEditor = React.createClass({
             <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
               <i className="fa fa-arrows-v"/>
             </div>
-          <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
-            {this.props.level.key}
-            {this.props.level.ids.length > 1 &&
-            ` (${this.props.level.ids.length} variants...)`}
-          </span>
+            <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
+              {this.props.level.key}
+              {this.props.level.ids.length > 1 &&
+              ` (${this.props.level.ids.length} variants...)`}
+            </span>
             <div style={styles.remove}>
               <i className="fa fa-times"/>
             </div>
+            {this.state.expand &&
+              <div style={styles.levelTokenActive}>
+                {this.props.level.ids.map(id => {
+                  return (
+                    <VirtualizedSelect
+                      key={id}
+                      options={levelKeyList}
+                      value={id}
+                      onChange={this.handleLevelSelected}
+                      clearable={false}
+                      arrowRenderer={ArrowRenderer}
+                      style={styles.levelSelect}
+                    />
+                  );
+                })}
+                <span style={styles.levelTypeLabel}>Level type:</span>
+                <VirtualizedSelect
+                  value={this.props.level.kind}
+                  options={[{
+                    label: 'Puzzle', value: 'puzzle'
+                  }, {
+                    label: 'Assessment', value: 'assessment'
+                  }, {
+                    label: 'Named Level', value: 'named_level'
+                  }, {
+                    label: 'Unplugged', value: 'unplugged'
+                  }]}
+                  clearable={false}
+                  arrowRenderer={ArrowRenderer}
+                  style={styles.levelTypeSelect}
+                />
+              </div>
+            }
           </div>
         }
-      </Motion>;
+      </Motion>
+    );
   }
 });
 
