@@ -78,8 +78,7 @@ require 'cdo/race_interstitial_helper'
 class User < ActiveRecord::Base
   include SerializedProperties
   # races: an array of strings, the races that a student has selected, or nil if no selection was made
-  # race_interstitial_shown: true if the race interstitial has ever been shown to the user
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races race_interstitial_shown)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -1011,7 +1010,7 @@ class User < ActiveRecord::Base
 
   def self.csv_attributes
     # same as in UserSerializer
-    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races, :race_interstitial_shown]
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races]
   end
 
   def to_csv

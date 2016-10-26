@@ -1411,14 +1411,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'do not show race interstitial to users that have already entered race information' do
+    # also covers the case where the dialog has been dismissed
     student = create :student
     student.races = %w(white black)
     refute student.show_race_interstitial?
-  end
 
-  test 'do not show race interstitial if it has already been displayed' do
-    student = create :student
-    student.race_interstitial_shown = true
+    student.races = %w(closed_dialog)
     refute student.show_race_interstitial?
   end
 

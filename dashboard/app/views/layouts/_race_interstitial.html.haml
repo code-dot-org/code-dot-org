@@ -12,6 +12,8 @@
                 = f.label race do
                   = f.check_box "races", {class: 'race-checkbox', multiple: true}, race, nil
                   = race_i8n
+            = f.label 'closed_dialog', {id: 'closed-dialog-label'} do
+              = f.check_box "races", {class: 'race-checkbox', multiple: true}, 'closed_dialog', nil
           .form-group
             = f.submit t('race_interstitial.submit'), id: 'race-submit', class: 'btn primary-button disabled-button', disabled: true
             .right.clear

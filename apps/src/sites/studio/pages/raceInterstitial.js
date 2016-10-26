@@ -17,12 +17,12 @@ $(document).ready(function () {
         if (optOutSelected) {
             // Disable and clear all non-opt-out checkboxes and gray out labels
             var others = raceCheckboxes.not('#user_races_opt_out');
-            others.attr('checked', false);
-            others.attr('disabled', true);
+            others.prop('checked', false);
+            others.prop('disabled', true);
             others.parent().addClass('disabled'); // gray out labels
         } else {
             // Re-enable
-            raceCheckboxes.attr('disabled', false);
+            raceCheckboxes.prop('disabled', false);
             raceCheckboxes.parent().removeClass('disabled');
         }
 
@@ -33,24 +33,35 @@ $(document).ready(function () {
         }
     });
 
-    $("#edit_user").submit(function (event) {
-        event.preventDefault();
+    function submitCheckboxData(form) {
         $.ajax({
             type: 'POST',
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
+            url: form.attr('action'),
+            data: form.serialize(),
             dataType: 'json',
-            success: function (data) {$("#race-modal").modal('hide');}
+            success: function (data) {
+                $("#race-modal").modal('hide');
+            }
         });
+    }
+
+    $("#edit_user").submit(function (event) {
+        event.preventDefault();
+        submitCheckboxData($(this));
     });
 
     $('#later-link').click(function () {
+        var raceCheckboxes = $('.race-checkbox');
+        raceCheckboxes.prop('checked', false);
+        $('#user_races_closed_dialog').prop('checked', true);
+        submitCheckboxData($("#edit_user"));
         $("#race-modal").modal('hide');
     });
 });
 
 $(document).ready(function () {
     if (experiments.isEnabled('raceInterstitial')) {
-        $("#race-modal").modal('show');
+        $('#race-modal').modal('show');
+        $('#closed-dialog-label').hide();
     }
 });
