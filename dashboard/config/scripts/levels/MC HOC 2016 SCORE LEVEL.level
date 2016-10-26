@@ -8,7 +8,7 @@
     "skin": "craft",
     "ground_plane": "[\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
     "player_start_position": "[5, 2]",
     "grid_width": "10",
     "grid_height": "10",
@@ -38,9 +38,9 @@
     "free_play": "false",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Keeping score is a fun way to add a goal to your game. Play 'Tag' with the sheep, and set up a scoring system by using the AddScore block.",
-    "contained_level_names": null,
-    "use_score": "true"
+    "instructions": "Games let you keep score. Use the \"AddScore\" block to give yourself a point when you tag the sheep. ",
+    "use_score": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This level will introduce a scoring system.",
@@ -55,7 +55,7 @@
             <block type="craft_forever">
               <statement name="DO">
                 <block type="craft_wait">
-                  <title name="TYPE">1.0</title>
+                  <title name="TYPE">2.0</title>
                   <next>
                     <block type="craft_moveAway">
                       <title name="TYPE">Player</title>
@@ -66,37 +66,39 @@
             </block>
           </statement>
           <statement name="WHEN_TOUCHED">
-            <block type="craft_forever">
-              <statement name="DO">
-                <block type="craft_wait">
-                  <title name="TYPE">1.0</title>
-                  <next>
-                    <block type="craft_moveAway">
-                      <title name="TYPE">Player</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+            <block type="craft_moveAway">
+              <title name="TYPE">Player</title>
             </block>
           </statement>
           <statement name="WHEN_USED">
-            <block type="craft_forever">
-              <statement name="DO">
-                <block type="craft_moveToward">
+            <block type="craft_moveAway">
+              <title name="TYPE">Player</title>
+              <next>
+                <block type="craft_moveAway">
                   <title name="TYPE">Player</title>
                 </block>
-              </statement>
+              </next>
             </block>
           </statement>
+        </block>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="craft_spawnEntity" deletable="false">
+              <title name="TYPE">sheep</title>
+              <title name="DIRECTION">down</title>
+            </block>
+          </next>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="craft_forever"/>
-        <block type="craft_addScore"/>
+        <block type="craft_addScore">
+          <title name="SCORE">1</title>
+        </block>
         <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
+          <title name="TYPE">sheepBaa</title>
         </block>
         <block type="craft_moveToward">
           <title name="TYPE">Player</title>
@@ -109,6 +111,10 @@
         </block>
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
+        </block>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">sheep</title>
+          <title name="DIRECTION">down</title>
         </block>
       </xml>
     </toolbox_blocks>
