@@ -66,10 +66,6 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     store.dispatch(getHiddenStages(scriptData.name));
   }
 
-  if (scriptData.disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI')) {
-    store.dispatch(disableBubbleColors());
-  }
-
   $.ajax(
     '/api/user_progress/' + scriptData.name,
     {
@@ -79,6 +75,12 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     }
   ).done(data => {
     data = data || {};
+
+    const signedOutUser = Object.keys(data).length === 0;
+    if (!signedOutUser && (scriptData.disablePostMilestone ||
+        experiments.isEnabled('postMilestoneDisabledUI'))) {
+      store.dispatch(disableBubbleColors());
+    }
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page
