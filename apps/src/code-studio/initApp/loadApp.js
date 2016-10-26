@@ -22,7 +22,7 @@ function showDisabledButtonsAlert(isHocScript) {
     position: 'absolute',
     left: 0,
     right: 0,
-    top: 0,
+    top: 45,
     zIndex: 1000
   });
   $(document.body).append(div);
@@ -129,7 +129,7 @@ module.exports = function (callback) {
 
       if (data.disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI')) {
         getStore().dispatch(disableBubbleColors());
-        showDisabledButtonsAlert(data.isHoc);
+        showDisabledButtonsAlert(!!data.isHoc);
       }
     }).fail(loadLastAttemptFromSessionStorage);
 
