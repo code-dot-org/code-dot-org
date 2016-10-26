@@ -29,6 +29,19 @@ const styles = {
   },
 };
 
+
+function checkImageReachability(imageUrl, callback) {
+  const img = new Image();
+  img.onabort = () => callback(false);
+  img.onload = () => callback(true);
+  img.onerror = () => callback(false);
+  img.src = (
+    imageUrl +
+    (imageUrl.indexOf('?') < 0 ? '?' : '&') +
+    '__cacheBust=' + Math.random()
+  );
+}
+
 /**
  * Share Dialog used by projects
  */
@@ -55,7 +68,24 @@ var ShareDialog = React.createClass({
       showAdvancedOptions: false,
       exporting: false,
       exportError: null,
+      isTwitterAvailable: false,
+      isFacebookAvailable: false,
     };
+  },
+
+  componentDidMount() {
+    if (this.props.canShareSocial) {
+      // check if twitter and facebook are actually available
+      // and not blocked by network firewall
+      checkImageReachability(
+        'https://graph.facebook.com/Code.org/picture',
+        isFacebookAvailable => this.setState({isFacebookAvailable})
+      );
+      checkImageReachability(
+        'https://twitter.com/codeorg/profile_image?size=mini',
+        isTwitterAvailable => this.setState({isTwitterAvailable})
+      );
+    }
   },
 
   componentWillReceiveProps: function (newProps) {
@@ -175,16 +205,18 @@ var ShareDialog = React.createClass({
               </a>
               {this.props.canShareSocial &&
                <span>
-                 <a
-                   href={facebookShareUrl}
-                   target="_blank"
-                   onClick={this.props.onClickPopup.bind(this)}
-                 >
-                   <i className="fa fa-facebook"></i>
-                 </a>
-                 <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
-                   <i className="fa fa-twitter"></i>
-                 </a>
+                 {this.state.isFacebookAvailable &&
+                  <a
+                    href={facebookShareUrl}
+                    target="_blank"
+                    onClick={this.props.onClickPopup.bind(this)}
+                  >
+                    <i className="fa fa-facebook"></i>
+                  </a>}
+                 {this.state.isTwitterAvailable &&
+                  <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
+                    <i className="fa fa-twitter"></i>
+                  </a>}
                </span>}
             </div>
             {this.state.showSendToPhone &&

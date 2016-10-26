@@ -16,7 +16,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "*\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"*\r\n\r\nFinish Starla's rocket so she can chase her pet.  \r\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles)\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "*\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"*\r\n\r\nFinish Starla's rocket so she can chase her pet.  \r\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles)",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
