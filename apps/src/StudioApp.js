@@ -1,5 +1,8 @@
 /* global trackEvent, Blockly, droplet, dashboard, addToHome */
 
+// noop
+
+
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
