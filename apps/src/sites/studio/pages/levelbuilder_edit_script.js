@@ -293,6 +293,7 @@ const StageEditor = React.createClass({
       dragHeight: this.metrics(position).height + 5,
       initialPageY: pageY,
       initialScroll: document.body.scrollTop,
+      newPosition: position,
       startingPositions
     });
     window.addEventListener('mousemove', this.handleDrag);
@@ -303,24 +304,30 @@ const StageEditor = React.createClass({
     const scrollDelta = document.body.scrollTop - this.state.initialScroll;
     const delta = pageY - this.state.initialPageY;
     const dragPosition = this.metrics(this.state.drag).top + scrollDelta;
+    let newPosition = this.state.drag;
     const currentPositions = this.state.startingPositions.map((midpoint, index) => {
-      const postion = index + 1;
-      if (postion === this.state.drag) {
+      const position = index + 1;
+      if (position === this.state.drag) {
         return delta;
       }
-      if (postion < this.state.drag && dragPosition < midpoint) {
+      if (position < this.state.drag && dragPosition < midpoint) {
+        newPosition--;
         return this.state.dragHeight;
       }
-      if (postion > this.state.drag && dragPosition + this.state.dragHeight > midpoint) {
+      if (position > this.state.drag && dragPosition + this.state.dragHeight > midpoint) {
+        newPosition++;
         return -this.state.dragHeight;
       }
       return 0;
     });
-    this.setState({currentPositions});
+    this.setState({currentPositions, newPosition});
   },
 
   handleDragStop() {
-    this.setState({drag: null, currentPositions: []});
+    if (this.state.drag !== this.state.newPosition) {
+      console.log(`swap ${this.state.drag} and ${this.state.newPosition}`);
+    }
+    this.setState({drag: null, newPosition: null, currentPositions: []});
     window.removeEventListener('mousemove', this.handleDrag);
     window.removeEventListener('mouseup', this.handleDragStop);
   },
