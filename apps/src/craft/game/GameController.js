@@ -162,13 +162,9 @@ class GameController {
     this.events.length = 0;
 
     this.score = 0;
-    if (this.scoreText) {
-      this.scoreText.kill();
+    if (this.useScore) {
+      this.scoreText.text = 'Score: ' + this.score;
     }
-    if (this.scorePanel) {
-      this.scorePanel.kill();
-    }
-    this.scoreText = null;
 
     this.initializeCommandRecord();
   }
@@ -190,6 +186,14 @@ class GameController {
     this.game.load.onLoadComplete.addOnce(() => {
       if (this.afterAssetsLoaded) {
         this.afterAssetsLoaded();
+      }
+      if (this.useScore) {
+        let scale = 400 / 552;
+        this.scorePanel = this.game.add.sprite(216 * scale, 0, 'scorePanel');
+        this.scorePanel.scale.setTo(scale, scale);
+        this.scoreText = this.game.add.text(280 * scale, -2, 'Score: ' + this.score, { fontSize: '14px', fill: '#FFFFFF' });
+        this.scoreText.anchor.x = 0.5;
+        this.scoreText.fontWeight = 'bold';
       }
     });
     this.levelEntity.loadData(this.levelData);
@@ -218,14 +222,6 @@ class GameController {
         this.endLevel(this.timeoutResult(this.levelModel));
       });
       tween.start();
-    }
-    if (this.useScore) {
-      this.scorePanel = this.game.add.sprite(200, 0, 'scorePanel');
-      this.scorePanel.scale.setTo(2 / 3, 2 / 3);
-      this.scorePanel.anchor.x = 0.5;
-      this.scoreText = this.game.add.text(200, -2, 'Score: ' + this.score, { fontSize: '12px', fill: '#FFFFFF' });
-      this.scoreText.anchor.x = 0.5;
-      this.scoreText.fontWeight = 'bold';
     }
   }
 
