@@ -41,11 +41,21 @@ const WebLabView = React.createClass({
   },
 
   render: function () {
-    const iframeStyles = {
+    var iframeStyles = {
       position: 'absolute',
-      width: '100%',
-      height: 'calc(100% - 20px)'
+      width: '100%'
     };
+    var iframeScrolling;
+    var iframeClass;
+    if (this.props.hideToolbar) {
+      iframeStyles.height = '100%';
+      iframeScrolling = 'yes';
+      iframeClass = '';
+    } else {
+      iframeStyles.height = 'calc(100% - 20px)';
+      iframeScrolling = 'no';
+      iframeClass = 'weblab-host';
+    }
 
     return (
       <StudioAppWrapper>
@@ -106,10 +116,10 @@ const WebLabView = React.createClass({
               </PaneHeader>
             }
             <iframe
-              className="weblab-host"
+              className={iframeClass}
               src="/weblab/host"
               frameBorder="0"
-              scrolling="no"
+              scrolling={iframeScrolling}
               style={iframeStyles}
             />
           </div>
