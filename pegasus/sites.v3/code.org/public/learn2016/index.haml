@@ -37,8 +37,8 @@ social:
             Teacher Guide
         %br/
         %br/
-      .col-50.tablet-feature
-        %img{src: "/images/learn/student1.png", style: "text-align: center"}
+      #studentimage.col-50.tablet-feature{style: "height: 278px"}
+        //%img#studentimage{src: "/images/learn/student1.png", style: "text-align: center; opacity: 0"}
 
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
@@ -136,4 +136,16 @@ social:
       }
     );
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
+
+    // Pick a random student image (1-3 inclusive) and fade it in.
+    var studentImageIndex = Math.floor(Math.random() * 3) + 1;
+    var studentImage = '/images/learn/student' + studentImageIndex + '.png';
+
+    var img = $('<img>');
+    img.attr('src', studentImage);
+    img.attr('style', 'opacity: 0');
+    img.appendTo('#studentimage');
+    img.on('load', function() {
+      img.fadeTo('normal', 1);
+    });
   });
