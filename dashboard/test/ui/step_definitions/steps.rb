@@ -296,7 +296,7 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == true }
   @browser.execute_script("$(\"#{selector}\")[0].click();")
 end
 
@@ -726,14 +726,11 @@ def generate_teacher_student(name, teacher_authorized)
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
-    And I click selector ".close"
-    And I wait for 3 seconds
-    And I click selector ".btn-white:contains('New section')"
+    And I click selector ".btn-white:contains('New section')" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
     Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
     And I click selector ".btn-primary:contains('Save')"
-    And I wait for 3 seconds
-    And I click selector "a:contains('Manage Students')"
+    And I click selector "a:contains('Manage Students')" once I see it
     And I save the section url
     Then I sign out
     And I navigate to the section url

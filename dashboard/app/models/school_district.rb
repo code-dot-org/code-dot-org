@@ -29,15 +29,15 @@ class SchoolDistrict < ActiveRecord::Base
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true, quote_char: "\x00" }
 
-  def self.find_or_create_all_from_tsv!(filename)
+  def self.find_or_create_all_from_tsv(filename)
     created = []
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      created << self.first_or_create_from_tsv_row!(row)
+      created << self.first_or_create_from_tsv_row(row)
     end
     created
   end
 
-  def self.first_or_create_from_tsv_row!(row_data)
+  def self.first_or_create_from_tsv_row(row_data)
     params = {
       id: row_data[CSV_HEADERS[:id]],
       name: row_data[CSV_HEADERS[:name]],

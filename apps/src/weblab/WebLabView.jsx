@@ -16,6 +16,7 @@ const WebLabView = React.createClass({
   propTypes: {
     onUndo: React.PropTypes.func.isRequired,
     onRedo: React.PropTypes.func.isRequired,
+    onRefreshPreview: React.PropTypes.func.isRequired,
     onToggleInspector: React.PropTypes.func.isRequired,
     onAddFileHTML: React.PropTypes.func.isRequired,
     onAddFileCSS: React.PropTypes.func.isRequired,
@@ -82,6 +83,14 @@ const WebLabView = React.createClass({
                 headerHasFocus={true}
                 isRtl={false}
                 label={msg.showVersionsHeader()}
+              />
+              <PaneButton
+                iconClass="fa fa-repeat"
+                leftJustified={false}
+                headerHasFocus={true}
+                isRtl={false}
+                onClick={this.props.onRefreshPreview}
+                label={weblabMsg.refreshPreview()}
               />
               <PaneButton
                 iconClass="fa fa-mouse-pointer"
