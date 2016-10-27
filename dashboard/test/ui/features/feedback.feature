@@ -23,6 +23,7 @@ Scenario: Solve without recommended blocks
 
   # the second time, we replace the two moveforwards (#10 and #11) with
   # a new for loop (#13)
+  When I press "again-button"
   And I wait to see "#resetButton"
   And I press "resetButton"
   And I drag block "6" to block "8"
