@@ -143,7 +143,7 @@ const allBlocks = [
 
 
 const soundsToDisplayText = {
-  dig_wood1: 'dig wood',
+  dig_wood1: 'wood break',
   stepGrass: 'step grass',
   stepWood: 'step wood',
   stepStone: 'step stone',
