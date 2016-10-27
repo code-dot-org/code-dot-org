@@ -29,7 +29,8 @@ class FeatureModeManager
           hint_view_request: true,
           postMilestone: true,
           shareEnabled: true,
-          slogging: true
+          slogging: true,
+          tracking_pixel_enabled: true
         },
         gatekeeper_hoc_tutorial_settings: {
           postMilestone: true,
@@ -48,7 +49,8 @@ class FeatureModeManager
         hint_view_request: false,
         postMilestone: true,
         shareEnabled: true,
-        slogging: false
+        slogging: false,
+        tracking_pixel_enabled: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
@@ -67,7 +69,8 @@ class FeatureModeManager
         hint_view_request: false,
         postMilestone: false,
         shareEnabled: false,
-        slogging: false
+        slogging: false,
+        tracking_pixel_enabled: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
