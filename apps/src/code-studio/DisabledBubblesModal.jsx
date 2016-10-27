@@ -16,8 +16,6 @@ const styles = {
   }
 };
 
-// TODO - i18n
-
 /**
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is isable)
@@ -42,18 +40,16 @@ const DisabledBubblesModal = React.createClass({
       >
         <div style={styles.main}>
           <div style={styles.paragraph}>
-            Any progress you make this week on your course will not be saved due
-            to the level of traffic our site receives for the Hour of Code week.
+            {i18n.disabledProgress1()}
           </div>
           <div style={styles.paragraph}>
-            This is why all your bubbles are displayed as gray (don’t worry, your
-            progress from before this week is still safe).
+            {i18n.disabledProgress2()}
           </div>
           <div style={styles.paragraph}>
-            We encourage you to try Hour of Code tutorials instead this week.
+            {i18n.disabledProgress3()}
           </div>
           <div style={styles.paragraph}>
-            <a href={window.dashboard.CODE_ORG_URL +'/saving-progress-csf'}>
+            <a target="_blank" href={window.dashboard.CODE_ORG_URL +'/saving-progress-csf'}>
               {i18n.learnMore()}
             </a>
           </div>
