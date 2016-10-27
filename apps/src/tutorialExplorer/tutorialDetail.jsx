@@ -141,9 +141,10 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>
-                  <div style={styles.tutorialDetailPublisher}>
-                    {this.props.item.orgname}
-                  </div>
+                  {this.props.item.orgname !== "do-not-show" &&
+                    <div style={styles.tutorialDetailPublisher}>
+                      {this.props.item.orgname}
+                    </div>}
                   <div style={styles.tutorialDetailSub}>
                     {getTutorialDetailString(this.props.item)}
                   </div>
