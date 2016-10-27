@@ -102,7 +102,7 @@ const miniBlocks = [
   'egg',
   'poppy',
   'sheep'
-];
+].sort();
 
 const allBlocks = [
   'bedrock',
@@ -141,41 +141,43 @@ const allBlocks = [
   'tree',
   'wool'];
 
-const allSounds = [
-  'dig_wood1',
-  'stepGrass',
-  'stepWood',
-  'stepStone',
-  'stepGravel',
-  'stepFarmland',
-  'failure',
-  'success',
-  'fall',
-  'fuse',
-  'explode',
-  'placeBlock',
-  'collectedBlock',
-  'bump',
-  'punch',
-  'fizz',
-  'doorOpen',
-  'houseSuccess',
-  'minecart',
-  'sheepBaa',
-  'chickenHurt',
-  'chickenBawk',
-  'cowHuff',
-  'cowHurt',
-  'cowMoo',
-  'cowMooLong',
-  'creeperHiss',
-  'ironGolemHit',
-  'metalWhack',
-  'zombieBrains',
-  'zombieGroan',
-  'zombieHurt',
-  'zombieHurt2',
-];
+
+const soundsToDisplayText = {
+  dig_wood1: 'dig wood',
+  stepGrass: 'step grass',
+  stepWood: 'step wood',
+  stepStone: 'step stone',
+  stepGravel: 'step gravel',
+  stepFarmland: 'step farmland',
+  failure: 'level failure',
+  success: 'level success',
+  fall: 'fall',
+  fuse: 'fuse',
+  explode: 'explode',
+  placeBlock: 'block place',
+  collectedBlock: 'block collect',
+  bump: 'bump',
+  punch: 'punch',
+  fizz: 'fizz',
+  doorOpen: 'door open',
+  minecart: 'minecart',
+  sheepBaa: 'sheep baa',
+  chickenHurt: 'chicken hurt',
+  chickenBawk: 'chicken cluck',
+  cowHuff: 'cow huff',
+  cowHurt: 'cow hurt',
+  cowMoo: 'cow moo',
+  cowMooLong: 'cow mooo',
+  creeperHiss: 'creeper hiss',
+  ironGolemHit: 'iron golem hit',
+  metalWhack: 'metal whack',
+  zombieBrains: 'zombie moan',
+  zombieGroan: 'zombie growl',
+  zombieHurt: 'zombie hurt',
+  //zombieHurt2: 'zombie hurt',
+};
+
+const allSounds = Object.keys(soundsToDisplayText);
 
 const ENTITY_TYPES = [
   'Player', // TODO(bjordan): other entity types
@@ -611,13 +613,16 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  function dropdownEntityBlock(simpleFunctionName, blockText, dropdownArray) {
+  function dropdownEntityBlock(simpleFunctionName, blockText, dropdownArray, doSort) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
       init: function () {
         var dropdownOptions = keysToDropdownOptions(dropdownArray);
         var dropdown = new blockly.FieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
+        if (doSort) {
+          dropdownOptions = _.sortBy(dropdownOptions, 0);
+        }
 
         this.setHSV(184, 1.00, 0.74);
         this.appendDummyInput()
@@ -707,7 +712,7 @@ exports.install = function (blockly, blockInstallOptions) {
       'moveTowardSheepPlayerChicken');
 
   dropdownEntityBlock('wait', 'wait', Object.keys(numbersToDisplayText).sort());
-  dropdownEntityBlock('drop', 'drop', craftBlockOptions.dropDropdownOptions || miniBlocks);
+  dropdownEntityBlock('drop', 'drop', craftBlockOptions.dropDropdownOptions || miniBlocks, true);
   dropdownEntityBlock('moveDirection', 'move', ['up', 'down', 'left', 'right']);
   //simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
   //simpleEntityBlock('moveEntityAwayFromPlayer', 'move away from player');
@@ -962,7 +967,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_playSound = {
     helpUrl: '',
     init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.playSoundOptions || allSounds);
+      var dropdownOptions = (craftBlockOptions.playSoundOptions || allSounds).map((key) => {
+        return [soundsToDisplayText[key] || key, key];
+      });
+      dropdownOptions = _.sortBy(dropdownOptions, 0);
+      console.log(dropdownOptions);
       var dropdown = new blockly.FieldDropdown(dropdownOptions, onSoundSelected);
       dropdown.setValue(dropdownOptions[0][1]);
 
