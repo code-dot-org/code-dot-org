@@ -409,7 +409,13 @@ const StageEditor = React.createClass({
           <Controls type="stage" position={this.props.stage.position} total={this.props.stagesCount} />
           <div style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their section can access it
-            <input onChange={this.handleLockableChanged} ref="lockable" type="checkbox" style={styles.checkbox} />
+            <input
+              ref="lockable"
+              defaultChecked={this.props.stage.lockable}
+              onChange={this.handleLockableChanged}
+              type="checkbox"
+              style={styles.checkbox}
+            />
           </div>
         </div>
         {this.props.stage.levels.map(level =>
