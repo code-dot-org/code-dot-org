@@ -30,9 +30,9 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 ## Code.org's AP CS Principles Curriculum
 
-<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles (AP CSP). This endorsement affirms that all components of Code.org CSP’s offerings are aligned to the AP Curriculum Framework standards and the AP CSP assessment. Using an endorsed provider affords schools access to resources including an AP CSP syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CSP.
+<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CS Principles.
 
- * [Code.org 2016-17 AP CSP Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
+ * [Code.org 2016-17 AP CS Principles Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
  * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/export?format=pdf&id=12VOTkJv9R_Db-YDvNjNYkhZ5nnAw8eqFkmwscM8W16M)
 
  [<button>View Curriculum</button>](#lessons)
@@ -129,10 +129,10 @@ All lessons are available at [curriculum.code.org/csp](https://curriculum.code.o
 | [![App](csp/images/thumb_app.png "Unit 5")](https://curriculum.code.org/csp/unit5v1) [Unit 5](https://curriculum.code.org/csp/unit5v1)| **Building Apps (Last updated: January 2016)** This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event­-driven apps. The unit assumes that students have learned the concepts and skills from Unit 3, namely: writing and using functions, using simple repeat loops, being able to read documentation, collaborating, and using the Code Studio environment with App Lab. **Target Date for Revision**: Nov. 1, 2016|
 |  [![survey](csp/images/thumb_survey.png "Unit 6")](https://curriculum.code.org/csp/unit6v1) [Unit 6](https://curriculum.code.org/csp/unit6v1) | **Create and Explore PT (Last updated: January 2016)** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create. |
 
-### Chat about CSP in the CSP forum
-We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
+### Chat about CS Principles in the forum
+We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CS Principles there are two forums that are most useful:
 
-* [General CSP forum](http://forum.code.org/c/csp)
+* [General CS Principles forum](http://forum.code.org/c/csp)
 * [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp1)
 * [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp2)
 * [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp3)
@@ -170,7 +170,7 @@ Any teacher can apply for Code Studio access to protected teacher-only materials
 <br />
 
 #### How can I communicate with other teachers who are using the curriculum? 
-Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CSP discussion as well as unit- and lesson-specific threads.
+Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
 
 <br />
 
@@ -180,13 +180,13 @@ For the '16-'17 school year, we are revising the '15-'16 version of the curricul
 <br />
 #### Can I give feedback on the lessons?
 
-Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CSP forum.
+Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CS Principles forum.
 
 <br />
 
 #### How/Where can I get professional development for this course?
 
-In-person professional development for the Code.org CSP course will be available in select partner districts starting in Summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs.
+In-person professional development for the Code.org CS Principles course will be available in select partner districts starting in Summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs.
 
 <br />
 

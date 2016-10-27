@@ -20,7 +20,7 @@ ________________
 <br/>
 <br/>
 
-## PLP Weekly Update Emails
+## Professional Learning Partner Weekly Update Emails
 Each week we send out an email with important action items, new collateral, CS Education news, etc. You can see an [archive of all weekly emails here](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing).
 
 <br/>
