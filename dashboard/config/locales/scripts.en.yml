@@ -2168,3 +2168,27 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd2:
+          stage:
+            new stage: new stage
+            Quality Websites: Quality Websites
+            Website Design: Website Design
+            Describing Web pages: Describing Web pages
+            Text on the Web: Text on the Web
+            Images on the Web: Images on the Web
+            Clean Code and Debugging: Clean Code and Debugging
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Peer Review: Peer Review
+            Box Model and Page Layout: Box Model and Page Layout
+            Digital Footprint: Digital Footprint
+            Publishing a Website: Publishing a Website
+            Sources and Search Engines: Sources and Search Engines
+            Intellectual Property: Intellectual Property
+            'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
+          title: 'CSD Unit 2 - The Internet: Web Development'
+          description_audience: ''
+          description_short: Web Development
+          description: ''
