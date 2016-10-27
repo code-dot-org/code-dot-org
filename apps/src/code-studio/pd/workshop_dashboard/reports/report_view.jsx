@@ -18,8 +18,8 @@ import {
   ControlLabel,
   FormControl
 } from 'react-bootstrap';
+import {QUERY_BY_OPTIONS, QUERY_BY_VALUES} from './report_constants';
 
-const QUERY_OPTIONS = ['schedule', 'end'];
 const REPORT_OPTIONS = ['Organizer', 'Teacher Progress'];
 const API_DATE_FORMAT = "YYYY-MM-DD";
 
@@ -37,14 +37,14 @@ const ReportView = React.createClass({
     const urlParams = this.props.location.query;
     const start = urlParams.start ? moment(urlParams.start, API_DATE_FORMAT) : null;
     const end = urlParams.end ? moment(urlParams.end, API_DATE_FORMAT) : null;
-    const queryBy = urlParams.queryBy && QUERY_OPTIONS.includes(urlParams.queryBy) ? urlParams.queryBy : null;
+    const queryBy = urlParams.queryBy && QUERY_BY_VALUES.includes(urlParams.queryBy) ? urlParams.queryBy : null;
     const report = urlParams.report && REPORT_OPTIONS.includes(urlParams.report) ? urlParams.report : null;
 
     // Default to the last week, if no start and end are specified
     return {
       startDate: start || moment().subtract(1, 'week'),
       endDate: end || moment(),
-      queryBy: queryBy || QUERY_OPTIONS[0],
+      queryBy: queryBy || QUERY_BY_VALUES[0],
       report: report || REPORT_OPTIONS[0]
     };
   },
@@ -141,7 +141,7 @@ const ReportView = React.createClass({
               />
             </FormGroup>
           </Col>
-          <Col sm={2}>
+          <Col sm={3}>
             <FormGroup>
               <ControlLabel>Query By</ControlLabel>
               <FormControl
@@ -149,7 +149,7 @@ const ReportView = React.createClass({
                 value={this.state.queryBy}
                 onChange={this.handleQueryByChange}
               >
-                {QUERY_OPTIONS.map((o, i) => <option key={i} value={o}>{o}</option>)}
+                {QUERY_BY_OPTIONS.map((o, i) => <option key={i} value={o.value}>{o.option}</option>)}
               </FormControl>
             </FormGroup>
           </Col>
