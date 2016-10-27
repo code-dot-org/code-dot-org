@@ -10,6 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -263,7 +264,13 @@ const TutorialExplorer = React.createClass({
 
   render() {
     return (
-      <div>
+      <ReactCSSTransitionGroup
+        transitionName="fadable"
+        transitionAppear={true}
+        transitionLeave={false}
+        transitionEnterTimeout={200}
+        transitionAppearTimeout={200}
+      >
         <FilterHeader
           backButton={this.props.backButton}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
@@ -303,7 +310,7 @@ const TutorialExplorer = React.createClass({
             locale={this.props.locale}
           />
         )}
-      </div>
+      </ReactCSSTransitionGroup>
     );
   }
 });
