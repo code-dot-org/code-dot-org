@@ -705,11 +705,22 @@ Craft.foldInEntities = function (houseBlockMap, levelConfig) {
       var item = plane[i];
 
       if (item.match(/sheep|zombie|ironGolem|creeper|cow|chicken/)) {
+        const suffixToDirection = {
+          Up: FacingDirection.Up,
+          Down: FacingDirection.Down,
+          Left: FacingDirection.Left,
+          Right: FacingDirection.Right,
+        };
+
         levelConfig.entities = levelConfig.entities || [];
         const x = i % width;
         const y = Math.floor(i / height);
 
-        levelConfig.entities.push([item, x, y, 1]);
+        const directionMatch = item.match(/(.*)(Right|Left|Up|Down)/);
+        const directionToUse = directionMatch ?
+            suffixToDirection[directionMatch[2]] : FacingDirection.Right;
+        const entityToUse = directionMatch ? directionMatch[1] : item;
+        levelConfig.entities.push([entityToUse, x, y, directionToUse]);
         plane[i] = '';
       }
     }
