@@ -971,7 +971,6 @@ exports.install = function (blockly, blockInstallOptions) {
         return [soundsToDisplayText[key] || key, key];
       });
       dropdownOptions = _.sortBy(dropdownOptions, 0);
-      console.log(dropdownOptions);
       var dropdown = new blockly.FieldDropdown(dropdownOptions, onSoundSelected);
       dropdown.setValue(dropdownOptions[0][1]);
 

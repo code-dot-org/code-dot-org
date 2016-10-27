@@ -15,6 +15,7 @@ var GameController = require('./game/GameController');
 var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
+var eventsLevelbuilderOverrides = require('./eventsLevelbuilderOverrides');
 var MusicController = require('../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -129,13 +130,13 @@ var interfaceImages = {
 };
 
 var MUSIC_METADATA = [
-  {volume: 1, hasOgg: true, name: "vignette1"},
-  {volume: 1, hasOgg: true, name: "vignette2-quiet"},
-  {volume: 1, hasOgg: true, name: "vignette3"},
-  {volume: 1, hasOgg: true, name: "vignette4-intro"},
-  {volume: 1, hasOgg: true, name: "vignette5-shortpiano"},
-  {volume: 1, hasOgg: true, name: "vignette7-funky-chirps-short"},
-  {volume: 1, hasOgg: true, name: "vignette8-free-play"},
+  {volume: 1, hasOgg: true, name: "vignette1", group: 'day'},
+  {volume: 1, hasOgg: true, name: "vignette2-quiet", group: 'night'},
+  {volume: 1, hasOgg: true, name: "vignette3", group: 'night'},
+  {volume: 1, hasOgg: true, name: "vignette4-intro", group: 'day'},
+  {volume: 1, hasOgg: true, name: "vignette5-shortpiano", group: 'day'},
+  {volume: 1, hasOgg: true, name: "vignette7-funky-chirps-short", group: 'day'},
+  {volume: 1, hasOgg: true, name: "vignette8-free-play", group: 'day'},
 ];
 
 var CHARACTER_STEVE = 'Steve';
@@ -235,10 +236,9 @@ Craft.init = function (config) {
     config.level.appSpecificFailError = config.level.temporaryFeedbackMessage;
   }
 
-  if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
-    if (!config.level.isEventLevel) {
-      Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);
-    }
+  const overridesToUse = config.level.isEventLevel ? eventsLevelbuilderOverrides : levelbuilderOverrides;
+  if (config.level.puzzle_number && overridesToUse[config.level.puzzle_number]) {
+    Object.assign(config.level, overridesToUse[config.level.puzzle_number]);
   }
   Craft.initialConfig = config;
 
@@ -262,7 +262,7 @@ Craft.init = function (config) {
         return config.skin.assetUrl(`music/${filename}`);
       },
       levelTracks,
-      levelTracks.length > 1 ? 7500 : null
+      config.level.dayNightCycleTime ? 100 : (levelTracks.length > 1 ? 7500 : null)
   );
 
   // Play music when the instructions are shown
@@ -589,6 +589,17 @@ Craft.initializeAppLevel = function (levelConfig) {
   const doNotShowPlayer = levelConfig.usePlayer === false;
 
   Craft.gameController.loadLevel({
+    onDayCallback: () => {
+      Craft.musicController.setGroup('day');
+      Craft.musicController.fadeOut();
+      console.log("onDayCallback");
+    },
+    onNightCallback: () => {
+      Craft.musicController.setGroup('night');
+      Craft.musicController.fadeOut();
+
+      console.log("onNightCallback");
+    },
     levelVerificationTimeout: levelConfig.levelVerificationTimeout,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
