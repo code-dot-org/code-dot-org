@@ -8,7 +8,6 @@ PUZZLE_SOLUTIONS = {
 Then /^I complete the level on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{puzzle_url}?noautoplay=true"
-    And I close the dialog
   }
   steps PUZZLE_SOLUTIONS[puzzle_url]
   steps %{
