@@ -435,6 +435,9 @@ $height-to-width: 434 / 477;
     $width: 144px;
     $height: 268px;
     background-image: url("#{$root}Sliced_Parts/Steve_Character_Select.png");
+    .minecraft-events & {
+      background-image: url("#{$root}Events/Steve_Character_Select.png");
+    }
     width: $width;
     height: $height;
     margin-top: 13px; // matches bottom with Alex
@@ -450,6 +453,9 @@ $height-to-width: 434 / 477;
     $width: 136px;
     $height: 271px;
     background-image: url("#{$root}Sliced_Parts/Alex_Character_Select.png");
+    .minecraft-events & {
+      background-image: url("#{$root}Events/Alex_Character_Select.png");
+    }
     width: $width;
     height: $height;
 

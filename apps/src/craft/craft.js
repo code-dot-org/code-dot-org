@@ -66,6 +66,29 @@ var characters = {
   }
 };
 
+var eventsCharacters = {
+  Steve: {
+    name: "Steve",
+    staticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Neutral.png",
+    smallStaticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Neutral.png",
+    failureAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Fail.png",
+    winAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Win.png",
+  },
+  Alex: {
+    name: "Alex",
+    staticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Neutral.png",
+    smallStaticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Neutral.png",
+    failureAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Fail.png",
+    winAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Win.png",
+  },
+  Chicken: {
+    staticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Neutral.png",
+    smallStaticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Neutral.png",
+    failureAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Fail.png",
+    winAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Win.png",
+  }
+};
+
 var interfaceImages = {
   DEFAULT: [
     MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
@@ -167,16 +190,23 @@ Craft.init = function (config) {
     $('body').addClass("minecraft-scoring");
   }
 
+  if (config.level.isEventLevel) {
+    $('body').addClass("minecraft-events");
+  }
+
   var bodyElement = document.body;
   bodyElement.className = bodyElement.className + " minecraft";
 
   if (config.level.showPopupOnLoad) {
+      console.log("Will Showing")
     config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+      console.log("Showing")
       var event = document.createEvent('Event');
       event.initEvent('instructionsShown', true, true);
       document.dispatchEvent(event);
 
       if (config.level.showPopupOnLoad === 'playerSelection') {
+        console.log("Showing PS")
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
           trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
@@ -248,7 +278,10 @@ Craft.init = function (config) {
   };
   document.addEventListener('instructionsHidden', playOnce);
 
-  var character = characters[Craft.getCurrentCharacter()];
+  let character = characters[Craft.getCurrentCharacter()];
+  if (config.level.isEventLevel) {
+    character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
+  }
   config.skin.staticAvatar = character.staticAvatar;
   config.skin.smallStaticAvatar = character.smallStaticAvatar;
   config.skin.failureAvatar = character.failureAvatar;
@@ -446,6 +479,7 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.updateUIForCharacter = function (character) {
+  let characters = Craft.initialConfig.level.isEventLevel ? eventsCharacters : characters;
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
   Craft.initialConfig.skin.smallStaticAvatar = characters[character].smallStaticAvatar;
   Craft.initialConfig.skin.failureAvatar = characters[character].failureAvatar;
