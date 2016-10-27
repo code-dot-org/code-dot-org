@@ -47,7 +47,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'allAnimationsSingleFrame',
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
-  'isSignedIn'
+  'isSignedIn',
+  'isK1'
 );
 
 const initialState = {

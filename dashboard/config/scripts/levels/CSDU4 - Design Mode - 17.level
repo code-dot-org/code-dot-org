@@ -90,9 +90,9 @@
     "execute_palette_apis_only": "false",
     "encrypted_examples": "LZuHj8gSXW6i9yCPvcIaL/a+ZQLqbpnu3pYXw0wf+/4GJxKedZN7kHCTFPkS\nx7+s\n",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

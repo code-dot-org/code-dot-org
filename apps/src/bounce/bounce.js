@@ -18,7 +18,6 @@ var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
-var experiments = require('../experiments');
 
 var SquareType = tiles.SquareType;
 
@@ -754,7 +753,7 @@ Bounce.init = function (config) {
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   var onMount = function () {
     studioApp.init(config);

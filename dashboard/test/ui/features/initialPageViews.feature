@@ -12,9 +12,6 @@ Feature: Looking at a few things with Applitools Eyes
     And I am on "<url>"
     When I rotate to landscape
     And I see no difference for "initial load"
-    And I wait to see "#x-close"
-    And I close the dialog
-    And I see no difference for "closed dialog"
     And I close my eyes
     And I sign out
     Examples:

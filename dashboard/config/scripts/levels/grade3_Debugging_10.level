@@ -6,18 +6,17 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "This puzzle is making me loopy! \r\nFix the error(s) to collect all of the nectar and make all of the honey.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
-    "nectar_goal": "7",
-    "honey_goal": "5",
+    "nectar_goal": "6",
+    "honey_goal": "6",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,2,1,1,1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,-1,-1,-1,-1,-1,1,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "12",
+    "ideal": "8",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -29,11 +28,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "This puzzle is making me loopy! \r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
+    "markdown_instructions": "**Challenge:** *\"This puzzle is making me loopy!\"*\r\n\r\nAll of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
-    "contained_level_names": null
+    "instructions_important": "false",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Start by looking at just the first loop.\\n\\nWhat does it do?\\n\\nWhat is it supposed to do?\\n\\nWhat does that tell you?\",\"hint_id\":\"grade3_Debugging_10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/8395be3f6ce4ec6ef1615b6d60b5a2eb/grade3_Debugging_10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Once you have the first loop the way you want it, what is left over in your code?\",\"hint_id\":\"grade3_Debugging_10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/00b9f7e3bb17a0ea312813fe2ca40740/grade3_Debugging_10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try wrapping the leftover loop around the rest of your completed code.  Does is work now?\\n\\nIf not, what is still going wrong?\",\"hint_id\":\"grade3_Debugging_10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/cfc1fe0d6e5c27e6b74dbeeddbe63f24/grade3_Debugging_10.mp3\"}]"
   },
   "published": true,
   "notes": "",
@@ -43,44 +45,33 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="maze_moveForward">
-              <next>
-                <block type="maze_nectar"/>
-              </next>
-            </block>
-          </statement>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_turn">
-              <title name="DIR">turnRight</title>
-              <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="maze_nectar"/>
-                      </next>
-                    </block>
-                  </statement>
+            <block type="controls_repeat" deletable="false">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_moveForward" deletable="false">
                   <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnRight</title>
+                    <block type="maze_nectar" deletable="false"/>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat" deletable="false">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward" deletable="false">
                       <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">5</title>
-                          <statement name="DO">
-                            <block type="maze_moveForward"/>
-                          </statement>
+                        <block type="maze_honey" deletable="false">
                           <next>
-                            <block type="maze_honey"/>
+                            <block type="maze_turn" deletable="false">
+                              <title name="DIR">turnRight</title>
+                            </block>
                           </next>
                         </block>
                       </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </next>
             </block>
@@ -89,20 +80,7 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-      </xml>
+      <xml/>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
@@ -111,46 +89,30 @@
             <block type="controls_repeat">
               <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="maze_nectar"/>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
-                  <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="maze_moveForward">
-                          <next>
-                            <block type="maze_nectar"/>
-                          </next>
-                        </block>
-                      </statement>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward">
                       <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
+                        <block type="maze_honey">
                           <next>
-                            <block type="controls_repeat">
-                              <title name="TIMES">5</title>
-                              <statement name="DO">
-                                <block type="maze_moveForward">
-                                  <next>
-                                    <block type="maze_honey"/>
-                                  </next>
-                                </block>
-                              </statement>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_nectar"/>
+                              </next>
                             </block>
                           </next>
                         </block>
                       </next>
                     </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                    </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

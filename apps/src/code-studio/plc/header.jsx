@@ -56,4 +56,5 @@ var PlcHeader = React.createClass({
   }
 });
 
+export default PlcHeader;
 window.dashboard.plcHeader = PlcHeader;
