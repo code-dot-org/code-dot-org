@@ -71,6 +71,7 @@ module AWS
           )).id
 
           begin
+            change_set = {changes: []}
             loop do
               sleep 1
               change_set = cfn.describe_change_set(change_set_name: change_set_id)
