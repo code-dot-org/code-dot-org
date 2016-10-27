@@ -4,7 +4,7 @@ Feature: Hour of Code and Frozen tutorial in Spanish and Portuguese
 Scenario: HoC tutorial in Spanish
   Given I am on "http://studio.code.org/hoc/15/lang/es"
   And I rotate to landscape
-  Then element ".markdown-instructions p" has "es" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions p" has "es" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "es" text from key "data.level.instructions.maze_2_14"
@@ -14,7 +14,7 @@ Scenario: HoC tutorial in Spanish
 Scenario: Frozen tutorial in Spanish
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/es"
   And I rotate to landscape
-  Then element ".markdown-instructions p" has "es" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "es" text from key "data.instructions.frozen perpendicular_instruction"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "es" text from key "data.instructions.frozen perpendicular_instruction"
@@ -24,7 +24,7 @@ Scenario: Frozen tutorial in Spanish
 Scenario: HoC tutorial in Portuguese
   Given I am on "http://studio.code.org/hoc/15/lang/pt-br"
   And I rotate to landscape
-  Then element ".markdown-instructions p" has "pt-br" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions p" has "pt-br" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "pt-br" text from key "data.level.instructions.maze_2_14"
@@ -45,7 +45,7 @@ Scenario: Frozen tutorial in Portuguese
 Scenario: HoC tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/hoc/15/lang/ar-sa"
   And I rotate to landscape
-  Then element ".markdown-instructions p" has "ar-sa" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions p" has "ar-sa" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "ar-sa" text from key "data.level.instructions.maze_2_14"
@@ -55,7 +55,7 @@ Scenario: HoC tutorial in Arabic (RTL)
 Scenario: Frozen tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/ar-sa"
   And I rotate to landscape
-  Then element ".markdown-instructions p" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
