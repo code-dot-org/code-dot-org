@@ -23,7 +23,7 @@ Moving from simple static images you will learn to use randomly generated number
 |draw()|Repeatedly called draw loop| `function draw(){ rect(0,0,20,20) }` | link |
 |background()|Covers the whole display with one color| `background("white")` | link |
 |GameLab.frameRate|Controls speed of draw loop|`GameLab.frameRate = 20`| link |
-|lin(x1, y1, x2, y2)|Draws line|`line(100, 150, 200, 300)`| link |
+|line(x1, y1, x2, y2)|Draws line|`line(100, 150, 200, 300)`| link |
 
 ### Console:
 |Command| Meaning| Example |  Documentation |

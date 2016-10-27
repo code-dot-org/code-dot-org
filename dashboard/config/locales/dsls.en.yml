@@ -578,6 +578,7 @@ en:
       CSPU5_HowOnEventWorks_v2:
         description here: description here
         title: title
+      CSPU5_L3 - Student Introduction: {}
       CSPU5_U3 - Arrays and Loops - Explain Functions with Returns: {}
       CSPU5_U3 - Conditionals - Boolean Expressions and Operators: {}
       CSPU5_U3 - Conditionals - Introducing Else: {}
@@ -1053,6 +1054,12 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Event Driven Programming Recap:
+        description here: description here
+        title: title
+      Event-Driven Programming Patterns:
+        description here: description here
+        title: title
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -1081,11 +1088,20 @@ en:
       Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Images Work:
+        description here: description here
+        title: title
       How Search Works: {}
       How Secure Is Your Password?:
         description here: description here
         title: title
       How are Images Encoded?: {}
+      How onEvent Works:
+        description here: description here
+        title: title
+      How setPosition and screen dimensions work:
+        description here: description here
+        title: title
       'How to: Make Charts from your Data': {}
       Importing Screens: {}
       Internet Simulator Setup:
@@ -1099,6 +1115,9 @@ en:
         description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      Intro to Debugging and Common Problems:
+        description here: description here
+        title: title
       Introduction to Lossless Compression and the Text Compression Widget: {}
       Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
@@ -1125,6 +1144,9 @@ en:
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
       Making a Bar Chart: {}
       Making a Line Chart: {}
+      Making a Multi Screen Chaser Game v.2:
+        description here: description here
+        title: title
       Making a Scatter Plot: {}
       MarbleMaze:
         Marble Maze: Marble Maze
@@ -1403,6 +1425,9 @@ en:
         title: title
       Rating Websites: {}
       Responding to User Input: {}
+      Rules About Choosing Good IDs:
+        description here: description here
+        title: title
       SFLP - Web - Describing Webpages: {}
       SFLP - Web - Designing Code for Computers: {}
       SFLP - Web - Designing Webpages: {}
@@ -3846,6 +3871,11 @@ en:
         "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
+      CB_Question_1_copy:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
       CB_Question_2:
         ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
         : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
@@ -4162,7 +4192,6 @@ en:
         Days when certain items sell the most.: Days when certain items sell the most.
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
-        Times of day when certain items sell the most.: Times of day when certain items sell the most.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_21:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
