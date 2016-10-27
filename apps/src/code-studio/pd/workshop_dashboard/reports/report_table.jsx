@@ -2,7 +2,7 @@
  * Report Table
  */
 import React from 'react';
-import _, {orderBy} from 'lodash';
+import {orderBy} from 'lodash';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import color from '@cdo/apps/color';
@@ -72,7 +72,7 @@ const ReportTable = React.createClass({
   // Apply to all headers
   applyHeaderTransforms(columns) {
     const sortableTransform = this.getSortableTransform();
-    _.each(columns, column => {
+    columns.forEach( column => {
       this.addTransform(column.header, sortableTransform);
     });
 
@@ -81,11 +81,10 @@ const ReportTable = React.createClass({
 
   render() {
     // Since there may not be a unique id per row, add a rowKey based on pre-sorted index.
-    const rows = _.map(this.props.rows, (row, i) =>
-      _.merge(row, {
-        rowKey: i + 1
-      })
-    );
+    const rows = this.props.rows.map( (row, i) => ({
+      ...row,
+      rowKey: i + 1
+    }));
 
     const columns = this.applyHeaderTransforms(this.props.columns);
     const {sortingColumns} = this.state;

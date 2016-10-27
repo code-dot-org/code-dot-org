@@ -7,6 +7,7 @@ import {
   Checkbox,
   Button
 } from 'react-bootstrap';
+import {QUERY_BY_VALUES} from './report_constants';
 
 const FACILITATOR_DETAILS_COUNT = 6;
 const ATTENDANCE_DAYS_COUNT = 5;
@@ -20,7 +21,7 @@ const OrganizerReport = React.createClass({
   propTypes: {
     startDate: React.PropTypes.string.isRequired,
     endDate: React.PropTypes.string.isRequired,
-    queryBy: React.PropTypes.string.isRequired
+    queryBy: React.PropTypes.oneOf(QUERY_BY_VALUES).isRequired
   },
 
   contextTypes: {

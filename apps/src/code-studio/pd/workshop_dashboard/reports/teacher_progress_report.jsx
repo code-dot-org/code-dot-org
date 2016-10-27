@@ -5,6 +5,7 @@ import React from "react";
 import ReportTable from "./report_table";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {Button} from 'react-bootstrap';
+import {QUERY_BY_VALUES} from './report_constants';
 
 const QUERY_URL = "/api/v1/pd/teacher_progress_report";
 
@@ -16,7 +17,7 @@ const TeacherProgressReport = React.createClass({
   propTypes: {
     startDate: React.PropTypes.string.isRequired,
     endDate: React.PropTypes.string.isRequired,
-    queryBy: React.PropTypes.string.isRequired
+    queryBy: React.PropTypes.oneOf(QUERY_BY_VALUES).isRequired
   },
 
   contextTypes: {
