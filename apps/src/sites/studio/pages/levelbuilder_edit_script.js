@@ -11,6 +11,8 @@ import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import color from '../../../color';
 
+const levelKeyOptions = _.map(levelKeyList, (label, value) => ({label, value: +value}));
+
 const borderRadius = 3;
 
 const styles = {
@@ -462,6 +464,10 @@ const LevelEditor = React.createClass({
     this.setState({expand: !this.state.expand});
   },
 
+  containsLegacyLevel() {
+    return this.props.level.ids.some(id => /^blockly:/.test(levelKeyList[id]));
+  },
+
   handleLevelSelected(value) {
     console.log(value);
   },
@@ -519,6 +525,9 @@ const LevelEditor = React.createClass({
                   arrowRenderer={ArrowRenderer}
                   style={styles.levelTypeSelect}
                 />
+                {this.containsLegacyLevel() &&
+                  <span>TODO: legacy options</span>
+                }
                 {this.props.level.ids.map(id =>
                   <div key={id}>
                     {this.props.level.ids.length > 1 &&
@@ -534,7 +543,7 @@ const LevelEditor = React.createClass({
                       </div>
                     }
                     <VirtualizedSelect
-                      options={levelKeyList}
+                      options={levelKeyOptions}
                       value={id}
                       onChange={this.handleLevelSelected}
                       clearable={false}
