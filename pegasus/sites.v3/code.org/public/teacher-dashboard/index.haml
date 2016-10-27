@@ -186,7 +186,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       if (section.course) {
         var course = null;
         for (var i = 0; i < $scope.course_list.length; i++) {
-          if ($scope.course_list[i].id == section.course.id) {
+          if ($scope.course_list[i].id === section.course.id) {
             course = $scope.course_list[i];
             break;
           }
