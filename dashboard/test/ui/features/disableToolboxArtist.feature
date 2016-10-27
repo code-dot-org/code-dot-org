@@ -27,6 +27,7 @@ Scenario: Toolbox in artist category view is reenabled after finished running a 
   And I rotate to landscape
   Then I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
+  And I press ":4.label"
   And I drag block "4" to offset "0, 10"
   Then the workspace has "1" blocks of type "controls_repeat"
 

@@ -1,4 +1,5 @@
 @no_ie
+@skip
 Feature: Contextual Hints
 
 Scenario: Hints viewed in feedback don't become contextual hints

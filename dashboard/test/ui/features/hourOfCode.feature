@@ -29,7 +29,6 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   And block "6" is child of block "5"
   # Level source is reset
   Then I am on "http://studio.code.org/hoc/reset"
-  Then I wait until I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait until element "#runButton" is visible
@@ -68,7 +67,7 @@ Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, s
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait to see "#runButton"
-  Then it until I am on "http://studio.code.org/hoc/9?noautoplay=true"
+  Then I am on "http://studio.code.org/hoc/9?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/9?noautoplay=true"
   Then I wait to see "#runButton"
   Then element ".qtip-content:contains('Blocks that are grey')" does not exist
