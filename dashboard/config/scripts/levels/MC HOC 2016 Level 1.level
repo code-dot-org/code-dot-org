@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "Code the sheep to 'drop wool' when it is 'used.' To play, use the arrows to walk to the sheep, and press the space bar or tap the game space to 'use' it.",
+    "instructions": "This sheep is coded to 'drop wool' when it is 'used.' Use the arrows to walk to the sheep, and press the space bar or tap the game space to 'use' it. Collect the wool to win!",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
@@ -42,19 +42,19 @@
     "callout_json": "[]",
     "failure_message_override": "To go on, you’ll need to collect wool. To collect the wool, use the arrow keys to walk to the sheep and then press the spacebar or click the game to shear the sheep. And, don’t forget to add the “Drop Wool” block to your code.",
     "use_player": "true",
-    "contained_level_names": null,
-    "use_score": "false"
+    "use_score": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": "Puzzle 1: Wool for Sheep\r\nThe sheep has forgotten what to do when you sheer it! Make it drop wool when you walk over to it and press the space bar or tap the game to hit it.\r\n\r\nSolution:               \r\nSheep\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nTeaches: Blockley, Movement, Putting commands into the entity structure.",
+  "notes": "UPDATE:\r\n\r\nChanging focus on first time moving player character around\r\n\r\nPuzzle 1: Wool for Sheep\r\nThe sheep has forgotten what to do when you sheer it! Make it drop wool when you walk over to it and press the space bar or tap the game to hit it.\r\n\r\nSolution:               \r\nSheep\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nTeaches: Blockley, Movement, Putting commands into the entity structure.",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" uservisible="false" movable="false" deletable="false"/>
-        <block type="craft_sheepSpawnedClicked" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false"/>
+        <block type="craft_sheepSpawnedClicked" deletable="false" movable="false">
           <statement name="WHEN_SPAWNED">
             <block type="craft_forever">
               <statement name="DO">
@@ -71,6 +71,11 @@
                   </next>
                 </block>
               </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_drop">
+              <title name="TYPE">wool</title>
             </block>
           </statement>
         </block>

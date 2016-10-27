@@ -8,8 +8,8 @@
     "skin": "craft",
     "ground_plane": "[\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "player_start_position": "[5, 2]",
+    "action_plane": "[\"\",\"\",\"ironGolem\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"ironGolem\",\"\",\"\",\"\",\"\",\"\",\"\",\"ironGolem\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"ironGolem\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"ironGolem\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[5, 5]",
     "grid_width": "10",
     "grid_height": "10",
     "player_start_direction": "2",
@@ -50,7 +50,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_sheep">
+        <block type="craft_ironGolem">
           <statement name="WHEN_SPAWNED">
             <block type="craft_forever">
               <statement name="DO">
@@ -65,29 +65,13 @@
               </statement>
             </block>
           </statement>
-          <statement name="WHEN_TOUCHED">
-            <block type="craft_moveAway">
-              <title name="TYPE">Player</title>
-            </block>
-          </statement>
           <statement name="WHEN_USED">
-            <block type="craft_moveAway">
-              <title name="TYPE">Player</title>
+            <block type="craft_flashEntity">
               <next>
-                <block type="craft_moveAway">
-                  <title name="TYPE">Player</title>
-                </block>
+                <block type="craft_destroyEntity"/>
               </next>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false">
-          <next>
-            <block type="craft_spawnEntity" deletable="false">
-              <title name="TYPE">sheep</title>
-              <title name="DIRECTION">down</title>
-            </block>
-          </next>
         </block>
       </xml>
     </start_blocks>

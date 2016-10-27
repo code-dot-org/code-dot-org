@@ -36,7 +36,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "30",
     "day_night_cycle_time": "30",
-    "instructions": "Now you make the game. 'Spawn' some mobs and then make them do and say what you want. Have fun!\r\n",
+    "instructions": "Now you make the game. 'Spawn' creatures and then make them do and say what you want. Have fun!\r\n",
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
     "use_player": "true",
     "level_verification_timeout": "0",
