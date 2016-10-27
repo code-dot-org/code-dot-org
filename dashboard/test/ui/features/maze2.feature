@@ -4,14 +4,11 @@ Feature: Complete a simple maze level
     Given I am on "http://studio.code.org/reset_session"
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/11?noautoplay=true"
     And I rotate to landscape
-    Then I wait to see a dialog titled "Puzzle 11 of 20"
-    And element ".modal-content p:nth-child(2)" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
-    And element "#prompt" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
+    Then element ".csf-top-instructions p" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
 
   # This builds an uncommon program to avoid getting a crowdsourced hint.
   @no_mobile
   Scenario: Submit an incorrect program missing a block
-    And I close the dialog
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # Repeat: move forward, turn right, turn right
@@ -20,40 +17,26 @@ Feature: Complete a simple maze level
     And I drag block "1" to block "7"
     And I drag block "1" to block "8"
     And I press "runButton"
-    And I wait until element ".congrats" is visible
+    And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
-    # Checking for "show hints" button
-    And I wait to see "#hint-request-button"
-    Then element "#hint-request-button" is visible
-    Then I press "hint-request-button"
-    And element ".congrats" has text "Try using one of the blocks below:"
-    And element ".modal-content #feedbackBlocks" is visible
-    And element ".modal-content #feedbackBlocks svg" is visible
-    Then I press "again-button"
-    And I press "resetButton"
-    Then element "#runButton" is visible
-    And element "#resetButton" is hidden
+    And element ".uitest-topInstructions-inline-feedback" has text "Not quite. You have to use a block you aren’t using yet."
 
   Scenario: Submit a program with an empty repeat
-    When I close the dialog
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # Drag out repeat block.
     Then I drag block "4" to block "5"
     And I press "runButton"
-    And I wait until element ".congrats" is visible
+    And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".congrats" has text "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."
-    Then I press "again-button"
+    And element ".uitest-topInstructions-inline-feedback" has text "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."
     And I press "resetButton"
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
 
   Scenario: Submit a working program that uses too many blocks
-    When I close the dialog
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # move forward, Repeat: move forward, turn left, move forward
