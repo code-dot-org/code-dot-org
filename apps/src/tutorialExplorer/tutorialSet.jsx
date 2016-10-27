@@ -25,7 +25,6 @@ const TutorialSet = React.createClass({
           transitionEnterTimeout={200}
           transitionAppearTimeout={200}
         >
-
           {this.props.tutorials.map((item, index) => (
             <Tutorial
               item={item}
