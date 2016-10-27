@@ -32,10 +32,10 @@
     "disable_sharing": "false",
     "markdown_instructions": "Complete the code to draw these triangles.  The first one is done for you.  Hint:  3 triangles in a 360 degree rotation.\r\n\r\n",
     "examples_required": "false",
-    "contained_level_names": null,
     "instructions_important": "true",
     "never_autoplay_video": "false",
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
