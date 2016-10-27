@@ -198,9 +198,11 @@ class GameController {
         let scale = 400 / 552;
         this.scorePanel = this.game.add.sprite(216 * scale, 0, 'scorePanel');
         this.scorePanel.scale.setTo(scale, scale);
+        this.scorePanel.fixedToCamera = true;
         this.scoreText = this.game.add.text(280 * scale, -2, 'Score: ' + this.score, { fontSize: '14px', fill: '#FFFFFF' });
         this.scoreText.anchor.x = 0.5;
         this.scoreText.fontWeight = 'bold';
+        this.scoreText.fixedToCamera = true;
       }
     });
     this.levelEntity.loadData(this.levelData);
@@ -1029,11 +1031,14 @@ class GameController {
   }
   use(commandQueueItem) {
     let player = this.levelModel.player;
-    let frontEntity = this.levelEntity.getEntityAt(this.levelModel.getMoveForwardPosition(player));
+    let frontPosition = this.levelModel.getMoveForwardPosition(player);
+    let frontEntity = this.levelEntity.getEntityAt(frontPosition);
+    const frontIndex = this.levelModel.yToIndex(frontPosition[1]) + frontPosition[0];
+    let frontBlock = this.levelModel.actionPlane[frontIndex]
+    const isFrontBlockDoor = frontBlock.blockType === "door";
     if (frontEntity != null) {
       // push use command to execute general use behavior of the entity before executing the event
-      const destroyPosition = this.levelModel.getMoveForwardPosition();
-      this.levelView.setSelectionIndicatorPosition(destroyPosition[0], destroyPosition[1]);
+      this.levelView.setSelectionIndicatorPosition(frontPosition[0], frontPosition[1]);
       this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
 
         frontEntity.queue.startPushHighPriorityCommands();
@@ -1047,12 +1052,24 @@ class GameController {
         }
         frontEntity.addCommand(useCommand);
         frontEntity.queue.endPushHighPriorityCommands();
-        this.levelView.playExplosionAnimation(player.position, player.facing, frontEntity.position, frontEntity.type, () => { }, false);
         this.levelView.playPlayerAnimation("idle", player.position, player.facing, false);
         this.delayPlayerMoveBy(0, 0, () => {
           commandQueueItem.succeeded();
         });
         setTimeout(() => { this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]); }, 0);
+      });
+    } else if (isFrontBlockDoor) {
+      this.levelView.setSelectionIndicatorPosition(frontPosition[0], frontPosition[1]);
+      this.levelView.onAnimationEnd(this.levelView.playPlayerAnimation("punch", player.position, player.facing, false), () => {
+        this.audioPlayer.play("doorOpen");
+        // if it's not walable, then open otherwise, close
+        const canOpen = !frontBlock.isWalkable;
+        this.levelView.playDoorAnimation(frontPosition, canOpen, () => {
+          frontBlock.isWalkable = !frontBlock.isWalkable;
+          this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
+          this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]);
+          commandQueueItem.succeeded();
+        })
       });
     } else {
       this.levelView.playPunchDestroyAirAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), () => {

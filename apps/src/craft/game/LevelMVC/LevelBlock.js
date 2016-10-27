@@ -88,7 +88,7 @@ export default class LevelBlock {
 
     if (blockType === "door") {
       this.isEntity = true;
-      this.isWalkable = true;
+      this.isWalkable = false;
       this.isUsable = true;
       this.isDestroyable = false;
       this.isTransparent = true;

@@ -250,6 +250,16 @@ export default class LevelView {
     this.playScaledSpeed(this.player.sprite.animations, "idle" + direction);
   }
   // animations
+
+  playDoorAnimation(position, open, completionHandler) {
+    let blockIndex = (this.yToIndex(position[1])) + position[0];
+    let block = this.actionPlaneBlocks[blockIndex];
+    let animationName = open ? "open" : "close";
+    this.onAnimationEnd(block.animations.play(animationName,60), () => {
+      completionHandler();
+    });
+  }
+
   playPlayerAnimation(animationName, position, facing, isOnBlock) {
     let direction = this.getDirectionName(facing);
     this.player.sprite.sortOrder = this.yToIndex(position[1]) + 5;
@@ -1975,15 +1985,17 @@ export default class LevelView {
         }
         frameList = frameList.concat(animationFrames);
 
-        var animation = sprite.animations.add("open", frameList, 5, false);
-        animation.enableUpdate = true;
-        //play when the door starts opening
-        animation.onUpdate.add(() => {
-          if (animation.frame === 1) {
-            this.audioPlayer.play("doorOpen");
-          }
-        });
-        this.playScaledSpeed(sprite.animations, "open");
+        sprite.animations.add("open", frameList, 5, false);
+
+        frameList = [];
+        animationFrames = Phaser.Animation.generateFrameNames("Door", 3, 0, "", 1);
+        for (var j = 0; j < 5; ++j) {
+          frameList.push("Door3");
+        }
+        frameList = frameList.concat(animationFrames);
+
+        
+        sprite.animations.add("close", frameList, 5, false);
         break;
 
       case "tnt":
