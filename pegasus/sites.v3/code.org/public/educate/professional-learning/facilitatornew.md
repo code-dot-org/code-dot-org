@@ -19,13 +19,12 @@ Code.org will provide instruction to prepare facilitators to deliver professiona
 ## Learn more
 In 2017-2018, Code.org will prepare facilitators in two areas. The focus areas share a basic framework and approach, drawn from adult learning theory and best practices for facilitation, that ensures participants are well prepared to lead high-quality training. However, each focus area’s training curriculum is designed for the specific needs of the teachers and students impacted by the program, and for that reason each has its own unique selection criteria, requirements, commitments and benefits.<br/>
 
-- [Computer Science Principles Facilitator Development (Grades 9 to 12)](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/edit)
-- [Computer Science Discoveries Facilitator Development (Grades 7 to 9)](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/edit)
+- [Computer Science Principles Facilitator Development (Grades 9 to 12)](code.org/educate/facilitator-csp)
+- [Computer Science Discoveries Facilitator Development (Grades 7 to 9)](code.org/educate/facilitator-csp)
+
+*Note: We are not currently accepting applications for Computer Science Fundamentals (K-5). Complete this [interest form](https://goo.gl/forms/fhovCWWFYiS5agvZ2) to be notified when the application opens.*
 
 Please carefully review the requirements and commitments for the curriculum focus area of your choice before applying.<br/>
  
-**Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application for the 2017-2018 Facilitator Development Program will close on February 1, 2017. Application for the 2018-2019 school year will open in late 2017. *This program is currently only operated in the US.*<br/>
+**Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application for the 2017-2018 Facilitator Development Program will close on February 1, 2017. *This program is currently only operated in the US.*<br/>
 
-Note: We are not currently accepting applications for Computer Science Fundamentals (K-5). Complete this [interest form](https://goo.gl/forms/fhovCWWFYiS5agvZ2) to be notified when the application opens. 
-
-# Become a Computer Science Principles Facilitator
