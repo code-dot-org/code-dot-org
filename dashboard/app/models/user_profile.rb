@@ -29,7 +29,8 @@ class UserProfile < ActiveRecord::Base
   # facilitator: True if the user is a Code.org facilitator.
   # nmsi: True if the user was PDed through NMSI (https://www.nms.org/AboutNMSI.aspx).
   # teals: True if the user was PDed through TEALS (www.tealsk12.org).
-  serialized_attrs %w(facilitator nmsi teals)
+  # teaching: False if the user is known not to be teaching course.
+  serialized_attrs %w(facilitator nmsi teals teaching)
 
   YEARS = [
     YEAR_2013_2014 = '2013-2014'.freeze,

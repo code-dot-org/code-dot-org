@@ -6,10 +6,10 @@
 #
 # The CSV is expected to be in the following format.
 #
-#   email,other_emails,other_user_ids,facilitator,nmsi,teals,pd_manual
-#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y"
-#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y"
-#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y"
+#   email,other_emails,other_user_ids,facilitator,nmsi,teals,pd_manual,not_teaching
+#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y",""|"true"
+#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y",""|"true"
+#   <email>,<other_emails>,<other_user_ids>,""|"true",""|"true",""|"true",""|"201x-201y",""|"true"
 #
 # Note that <other_emails> and <other_user_ids> need to be escaped with
 # quotation marks if they contain commas (to separate multiple emails or IDs).
@@ -70,6 +70,10 @@ def process_data(data)
       else
         puts "MALFORMED USER: #{datum[:email]} #{datum[:pd_manual]}"
       end
+    end
+
+    if datum[:not_teaching]
+      user_profile.teaching = false
     end
 
     user_profile.created_at = time_now unless user_profile.created_at
