@@ -176,6 +176,9 @@ const styles = {
 const ArrowRenderer = ({onMouseDown}) => <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
 ArrowRenderer.propTypes = {onMouseDown: React.PropTypes.func.isRequried};
 
+let newStageId = -1;
+let newLevelId = -1;
+
 /**
  * Component for editing course scripts.
  */
@@ -190,20 +193,75 @@ const ScriptEditor = React.createClass({
   },
 
   handleAction(type, options) {
-    const newState = _.cloneDeep(this.state.stages);
+    let newState = _.cloneDeep(this.state.stages);
     switch (type) {
       case 'ADD_GROUP': {
         newState.push({
           id: newStageId--,
           name: 'New Stage',
-          position: newState.length + 1,
           flex_category: `New Group ${Math.round(Math.random() * 10000).toString(16)}`,
           levels: []
         });
+        this.updatePositions(newState);
         break;
       }
+      case 'ADD_STAGE': {
+        const groupName = newState[options.position - 1].flex_category;
+        newState.splice(options.position, 0, {
+          id: newStageId--,
+          name: 'New Stage',
+          flex_category: groupName,
+          levels: []
+        });
+        this.updatePositions(newState);
+        break;
+      }
+      case 'ADD_LEVEL': {
+        const levels = newState[options.stage - 1].levels;
+        levels.push({
+          ids: [newLevelId--]
+        });
+        this.updatePositions(levels);
+        break;
+      }
+      case 'ADD_VARIANT': {
+        newState[options.stage - 1].levels[options.level - 1].ids.push(newLevelId--);
+        break;
+      }
+      case 'REMOVE_GROUP': {
+        const groupName = newState[options.position - 1].flex_category;
+        newState = newState.filter(stage => stage.flex_category !== groupName);
+        this.updatePositions(newState);
+        break;
+      }
+      case 'REMOVE_STAGE': {
+        newState.splice(options.position - 1, 1);
+        this.updatePositions(newState);
+        break;
+      }
+      case 'REMOVE_LEVEL': {
+        const levels = newState[options.stage - 1].levels;
+        levels.splice(options.level - 1, 1);
+        this.updatePositions(levels);
+        break;
+      }
+      case 'REORDER_LEVEL': {
+        const levels = newState[options.stage - 1].levels;
+        const temp = levels.splice(options.levelA - 1, 1);
+        levels.splice(options.levelB - 1, 0, temp[0]);
+        this.updatePositions(levels);
+        break;
+      }
+      default:
+        throw 'Unexpected action';
     }
     this.setState({stages: newState});
+  },
+
+  updatePositions(node) {
+    for (var i = 0; i < node.length; i++) {
+      node[i].position = i + 1;
+    }
   },
 
   render() {
@@ -315,14 +373,15 @@ const FlexGroupEditor = React.createClass({
     this.props.handleAction('ADD_GROUP');
   },
 
-  handleAddStage(group) {
-    console.log(`add stage to group ${group}`);
+  handleAddStage(position) {
+    this.props.handleAction('ADD_STAGE', {position});
   },
 
   render() {
     const nonPeerReviewStages = this.props.stages.filter(stage => stage.id);
     const groups = _.groupBy(nonPeerReviewStages, stage => (stage.flex_category || 'Default'));
     let count = 0;
+    let afterStage = 1;
 
     return (
       <div>
@@ -331,19 +390,26 @@ const FlexGroupEditor = React.createClass({
             <div key={group}>
               <div style={styles.groupHeader}>
                 Group {++count}: {group}
-                <Controls type="group" position={count} total={Object.keys(groups).length} />
+                <Controls
+                  handleAction={this.props.handleAction}
+                  type="GROUP"
+                  position={afterStage}
+                  total={Object.keys(groups).length}
+                />
               </div>
               <div style={styles.groupBody}>
                 {stages.map(stage => {
+                  afterStage++;
                   return (
                     <StageEditor
+                      handleAction={this.props.handleAction}
                       key={stage.id}
                       stagesCount={this.props.stages.length}
                       stage={stage}
                     />
                   );
                 })}
-                <button onMouseDown={this.handleAddStage.bind(null, count)} className="btn" style={styles.addStage} type="button">
+                <button onMouseDown={this.handleAddStage.bind(null, afterStage - 1)} className="btn" style={styles.addStage} type="button">
                   <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                   Add Stage
                 </button>
@@ -362,6 +428,7 @@ const FlexGroupEditor = React.createClass({
 
 const StageEditor = React.createClass({
   propTypes: {
+    handleAction: React.PropTypes.func.isRequired,
     stagesCount: React.PropTypes.number.isRequired,
     stage: React.PropTypes.object.isRequired
   },
@@ -416,7 +483,7 @@ const StageEditor = React.createClass({
 
   handleDragStop() {
     if (this.state.drag !== this.state.newPosition) {
-      console.log(`swap ${this.state.drag} and ${this.state.newPosition}`);
+      this.props.handleAction('REORDER_LEVEL', {stage: this.props.stage.position, levelA: this.state.drag, levelB: this.state.newPosition});
     }
     this.setState({drag: null, newPosition: null, currentPositions: []});
     window.removeEventListener('mousemove', this.handleDrag);
@@ -424,7 +491,7 @@ const StageEditor = React.createClass({
   },
 
   handleAddLevel() {
-    console.log(`add level to stage ${this.props.stage.position}`);
+    this.props.handleAction('ADD_LEVEL', {stage: this.props.stage.position});
   },
 
   handleLockableChanged() {
@@ -437,7 +504,12 @@ const StageEditor = React.createClass({
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
           Stage {this.props.stage.position}: {this.props.stage.name}
-          <Controls type="stage" position={this.props.stage.position} total={this.props.stagesCount} />
+          <Controls
+            handleAction={this.props.handleAction}
+            type="STAGE"
+            position={this.props.stage.position}
+            total={this.props.stagesCount}
+          />
           <div style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their section can access it
             <input
@@ -451,10 +523,12 @@ const StageEditor = React.createClass({
         </div>
         {this.props.stage.levels.map(level =>
           <LevelEditor
+            handleAction={this.props.handleAction}
             ref={`levelToken${level.position}`}
-            key={level.position}
+            key={level.position + '_' + level.ids[0]}
             level={level}
             stagePosition={this.props.stage.position}
+            dragging={!!this.state.drag}
             drag={level.position === this.state.drag}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
@@ -471,8 +545,10 @@ const StageEditor = React.createClass({
 
 const LevelEditor = React.createClass({
   propTypes: {
+    handleAction: React.PropTypes.func.isRequired,
     level: React.PropTypes.object.isRequired,
     stagePosition: React.PropTypes.number.isRequired,
+    dragging: React.PropTypes.bool.isRequired,
     drag: React.PropTypes.bool.isRequired,
     delta: React.PropTypes.number,
     handleDragStart: React.PropTypes.func.isRequired
@@ -486,7 +562,7 @@ const LevelEditor = React.createClass({
   ],
 
   getInitialState() {
-    return {};
+    return {expand: this.props.level.ids[0] === -1};
   },
 
   toggleExpand() {
@@ -502,22 +578,22 @@ const LevelEditor = React.createClass({
   },
 
   handleRemove() {
-    console.log(`remove level ${this.props.level.position} from stage ${this.props.stagePosition}`);
+    this.props.handleAction('REMOVE_LEVEL', {stage: this.props.stagePosition, level: this.props.level.position});
   },
 
   handleAddVariant() {
-    console.log(`add variant to level ${this.props.level.position} in stage ${this.props.stagePosition}`);
+    this.props.handleAction('ADD_VARIANT', {stage: this.props.stagePosition, level: this.props.level.position});
   },
 
   render() {
     return (
       <Motion
         style={this.props.drag ? {
-          y: this.props.delta,
+          y: this.props.dragging ? this.props.delta : 0,
           scale: spring(1.02, {stiffness: 1000, damping: 80}),
           shadow: spring(5, {stiffness: 1000, damping: 80})
         } : {
-          y: spring(this.props.delta, {stiffness: 1000, damping: 80}),
+          y: this.props.dragging ? spring(this.props.delta, {stiffness: 1000, damping: 80}) : 0,
           scale: 1,
           shadow: 0
         }} key={this.props.level.position}
@@ -603,7 +679,8 @@ const LevelEditor = React.createClass({
 
 const Controls = React.createClass({
   propTypes: {
-    type: React.PropTypes.oneOf(['group', 'stage']).isRequired,
+    handleAction: React.PropTypes.func.isRequired,
+    type: React.PropTypes.oneOf(['GROUP', 'STAGE']).isRequired,
     position: React.PropTypes.number.isRequired,
     total: React.PropTypes.number.isRequired
   },
@@ -621,7 +698,7 @@ const Controls = React.createClass({
   },
 
   handleRemove() {
-    console.log(`remove ${this.props.type} ${this.props.position}`);
+    this.props.handleAction('REMOVE_' + this.props.type, {position: this.props.position});
   },
 
   render() {
