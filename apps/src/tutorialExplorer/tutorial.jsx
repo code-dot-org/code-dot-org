@@ -5,6 +5,7 @@ import React from 'react';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
+import Image from './image';
 
 const styles = {
   tutorialName: {
@@ -57,7 +58,7 @@ const Tutorial = React.createClass({
               style={{cursor: 'pointer'}}
               onClick={this.tutorialClicked}
             >
-              <img
+              <Image
                 src={this.props.item.image.replace("/images/", "/images/fill-520x390/")}
                 style={{width: '100%'}}
               />
