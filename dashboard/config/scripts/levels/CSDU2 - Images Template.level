@@ -5,7 +5,8 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!-- Cat face image students will need: https://static.pexels.com/photos/115011/cat-face-close-view-115011.jpeg --> \\n<!DOCTYPE html> \\n<html> \\n \\n    <h1> Dogs vs Cats </h1> \\n \\n    <h3>Dogs</h3> \\n  <img src=\\\"https://upload.wikimedia.org/wikipedia/commons/5/55/Dog_Jump.jpg\\\" \\n      alt=\\\"dog jumping\\\"/> \\n \\n  <h3>Cats</h3> \\n \\n</html>\"\r\n    }\r\n  ]\r\n}"
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n \\n    <h1> Dogs vs Cats </h1> \\n \\n    <h3>Dogs</h3> \\n  <img src=\\\"dog.jpg\\\" \\n      alt=\\\"dog jumping\\\"/> \\n \\n  <h3>Cats</h3> \\n \\n</html>\"\r\n    },\r\n{\r\n      \"name\": \"dog.jpg\",\r\n      \"url\": \"https://images.code.org/16c336007923311ec9b027e2df390e0f-image-1477532468012.jpg\"\r\n    },\r\n{\r\n      \"name\": \"cat.jpeg\",\r\n      \"url\": \"https://images.code.org/7298b8608b5b197372dcd682a8f7f4e5-image-1477532468013.jpeg\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
