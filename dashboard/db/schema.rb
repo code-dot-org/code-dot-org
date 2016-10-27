@@ -516,8 +516,8 @@ ActiveRecord::Schema.define(version: 20161024200011) do
     t.string   "school_district_name"
     t.bigint   "school_id"
     t.boolean  "school_other",          default: false
-    t.string   "school_name"
-    t.string   "full_address"
+    t.string   "school_name",                                        comment: "This column appears to be redundant with pd_enrollments.school and users.school, therefore validation rules must be used to ensure that any user or enrollment with a school_info has its school name stored in the correct place."
+    t.string   "full_address",                                       comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
