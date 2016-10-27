@@ -3,8 +3,6 @@ Feature: Disabling/Reenabling the Toolbox While Running
 Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/19/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  Then I wait to see a dialog titled "Puzzle 1 of 6"
-  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I set slider speed to medium
@@ -27,12 +25,8 @@ Scenario: Toolbox in artist category view is disabled while running
 Scenario: Toolbox in artist category view is reenabled after finished running a short level
   Given I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/5?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
   Then I press "runButton"
-  And I wait to see "#x-close"
-  Then element "#feedback-dialog" is visible
-  Then I press "again-button"
-  Then element "#feedback-dialog" is hidden
+  Then I wait to see ".uitest-topInstructions-inline-feedback"
   And I press ":4.label"
   And I drag block "4" to offset "0, 10"
   Then the workspace has "1" blocks of type "controls_repeat"

@@ -3,8 +3,6 @@ Feature: Disabling/Reenabling the Toolbox While Running
 Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/17?noautoplay=true"
   And I rotate to landscape
-  Then I wait to see a dialog titled "Puzzle 17 of 20"
-  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I drag block "4" to block "6"
@@ -24,10 +22,7 @@ Scenario: Toolbox in maze (non-category) is disabled while running
 @no_mobile
 Scenario: Toolbox in maze (non-category) is reenabled after finished running
   Then I press "runButton"
-  And I wait to see "#x-close"
-  Then element "#feedback-dialog" is visible
-  Then I press "#again-button" using jQuery
-  Then element "#feedback-dialog" is hidden
+  Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I drag block "4" to block "6"
   Then the workspace has "2" blocks of type "maze_forever"
 

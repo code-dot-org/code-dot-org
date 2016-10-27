@@ -16,7 +16,7 @@ The ideal Professional Learning Partner is a regional education unit, a non-prof
 [Check here](/educate/professional-learning-partner#partners) to see if you have a Code.org Professional Learning Partner in your area.  If there is a Professional Learning Partner in your area, and you are not already connected, please fill out the interest form below.  If there is not a Professional Learning Partner in your area, please fill out the interest form and help us recruit by suggesting a good fit for your region!
 
 <br>
-[<button>District / School Interest Form</button>](https://docs.google.com/forms/d/1TmV2OUrCsgy53DWvxgoMouBcskSpkVpqYF3IQ1F87ao/viewform)
+[<button>District / School Interest Form</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## For international groups
 Code.org is looking for individuals, organizations, and educational non-profits to help with translations, promoting the Hour of Code, and advocating for computer science education in your country. Sign up to be an international partner to see how you can make computer science available to students around the world.

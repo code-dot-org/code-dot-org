@@ -6207,7 +6207,7 @@ en:
         You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability: You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability
         ? You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
         : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
-        You get an unwanted email trying to sell you a low quality product or service that seems "fishy.": You get an unwanted email trying to sell you a low quality product or service that seems "fishy."
+        You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”: You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”
       cspu5_assess1_additem:
         cart total = 1;: cart total = 1;
         cartTotal + 1;: cartTotal + 1;
@@ -6357,11 +6357,6 @@ en:
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log("Hello! \b How are you?");: console.log("Hello! \b How are you?");
-        console.log("Hello! \n How are you?");: console.log("Hello! \n How are you?");
-        console.log("Hello! \newLine How are you?");: console.log("Hello! \newLine How are you?");
-        console.log("Hello! \nl How are you?");: console.log("Hello! \nl How are you?");
-        console.log("Hello! \t How are you?");: console.log("Hello! \t How are you?");
         console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
         console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
         console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
@@ -6378,7 +6373,6 @@ en:
         Any time between 10 and 19: Any time between 10 and 19
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
-        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
         There is no value of time that will result in “Good Morning” being displayed: There is no value of time that will result in “Good Morning” being displayed
       cspu5_assess3_ageList:
         INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
