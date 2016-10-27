@@ -1,5 +1,5 @@
-import { extend } from '../utils';
 import { createToolbox as tb } from '../block_utils';
+import { extend } from '../utils';
 
 /*
  * Configuration for all levels.
