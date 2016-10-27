@@ -15,7 +15,7 @@ const TutorialExplorer = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.array.isRequired,
     filterGroups: React.PropTypes.array.isRequired,
-    initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
+    initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
     hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
