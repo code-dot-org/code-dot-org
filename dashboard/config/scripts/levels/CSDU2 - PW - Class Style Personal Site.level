@@ -5,8 +5,9 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Note Card Styling\r\n\r\nYour turn to decide what you want to style! Play with the clases styling and RGB colors to improve your personal website.\r\n\r\n# Do This\r\n\r\n* Uses classes to style at least 2 other elements of your personal website",
-    "project_template_level_name": "CSDU2 Portfolio Template"
+    "markdown_instructions": "# Free Play Styling\r\n\r\nYour turn to decide what you want to style! Play with the classes styling and RGB colors to improve your personal website.\r\n\r\n# Do This\r\n\r\n* Make sure you have completed the checklist below then uses classes to style at least 2 other elements of your personal website\r\n\r\n## Checklist\r\n\r\n* Lists on the Recipes page are styled like notecards using classes\r\n* Use rgb values to set the color of the notecard",
+    "project_template_level_name": "CSDU2 Portfolio Template",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
