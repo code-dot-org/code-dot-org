@@ -185,6 +185,27 @@ const ScriptEditor = React.createClass({
     i18nData: React.PropTypes.object.isRequired
   },
 
+  getInitialState() {
+    return {stages: this.props.scriptData.stages};
+  },
+
+  handleAction(type, options) {
+    const newState = _.cloneDeep(this.state.stages);
+    switch (type) {
+      case 'ADD_GROUP': {
+        newState.push({
+          id: newStageId--,
+          name: 'New Stage',
+          position: newState.length + 1,
+          flex_category: `New Group ${Math.round(Math.random() * 10000).toString(16)}`,
+          levels: []
+        });
+        break;
+      }
+    }
+    this.setState({stages: newState});
+  },
+
   render() {
     return (
       <div>
@@ -278,7 +299,7 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <h2>Stages and Levels</h2>
-        <FlexGroupEditor stages={this.props.scriptData.stages} />
+        <FlexGroupEditor stages={this.state.stages} handleAction={this.handleAction} />
       </div>
     );
   }
@@ -286,11 +307,12 @@ const ScriptEditor = React.createClass({
 
 const FlexGroupEditor = React.createClass({
   propTypes: {
+    handleAction: React.PropTypes.func.isRequired,
     stages: React.PropTypes.array.isRequired
   },
 
   handleAddGroup() {
-    console.log('add group');
+    this.props.handleAction('ADD_GROUP');
   },
 
   handleAddStage(group) {
