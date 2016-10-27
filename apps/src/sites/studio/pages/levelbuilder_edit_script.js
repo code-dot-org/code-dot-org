@@ -154,7 +154,14 @@ const styles = {
   divider: {
     borderColor: '#ddd',
     margin: '7px 0'
-  }
+  },
+  addVariant: {
+    fontSize: 14,
+    background: 'white',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    margin: '0'
+  },
 };
 
 const ArrowRenderer = ({onMouseDown}) => <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
@@ -457,6 +464,10 @@ const LevelEditor = React.createClass({
     console.log(`remove level ${this.props.level.position} from stage ${this.props.stagePosition}`);
   },
 
+  handleAddVariant() {
+    console.log(`add variant to level ${this.props.level.position} in stage ${this.props.stagePosition}`);
+  },
+
   render() {
     return (
       <Motion
@@ -525,6 +536,11 @@ const LevelEditor = React.createClass({
                     />
                   </div>
                 )}
+                <hr style={styles.divider} />
+                <button onMouseDown={this.handleAddVariant} className="btn" style={styles.addVariant} type="button">
+                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                  Add Variant
+                </button>
               </div>
             }
           </div>
