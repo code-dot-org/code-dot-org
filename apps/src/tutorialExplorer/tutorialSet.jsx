@@ -4,6 +4,7 @@
 import React from 'react';
 import Tutorial from './tutorial';
 import shapes from './shapes';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const TutorialSet = React.createClass({
   propTypes: {
@@ -17,13 +18,22 @@ const TutorialSet = React.createClass({
         className="col-80"
         style={{float: 'left'}}
       >
-        {this.props.tutorials.map(item => (
-          <Tutorial
-            item={item}
-            filters={this.props.filters}
-            key={item.code}
-          />
-        ))}
+        <ReactCSSTransitionGroup
+          transitionName="fadable"
+          transitionAppear={true}
+          transitionLeave={false}
+          transitionEnterTimeout={200}
+          transitionAppearTimeout={200}
+        >
+
+          {this.props.tutorials.map((item, index) => (
+            <Tutorial
+              item={item}
+              filters={this.props.filters}
+              key={`item_${item.code}_${index}`}
+            />
+          ))}
+        </ReactCSSTransitionGroup>
       </div>
     );
   }

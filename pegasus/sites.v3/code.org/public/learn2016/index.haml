@@ -13,6 +13,16 @@ social:
   "og:video:type": ""
 ---
 
+:css
+  .fadable-enter {
+    opacity: 0.01;
+  }
+
+  .fadable-enter.fadable-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+  }
+
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
   #desktop-header.desktop-feature
     = view :header, variant: "desktop"
