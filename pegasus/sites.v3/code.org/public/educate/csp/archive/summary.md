@@ -8,7 +8,7 @@ video_player: true
 
 The materials below are from the '15-'16 Computer Science Principles pilot that Code.org is running with approximately 100 teachers across the US. Based on pilot teacher feedback, we are in the middle of making revisions to the material to condense, clarify, and re-order material. Until that material is re-released, please feel free to reference this material. Learn more about our [revision plans](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ).
 
-**IMPORTANT NOTE:** It is only the ['16-'17 syllabus and curriculum](/educate/csp) that is officially endorsed by the College Board and able to be submitted as a pre-approved syllabus for AP&reg; CSP audit.  
+**IMPORTANT NOTE:** It is only the ['16-'17 syllabus and curriculum](/educate/csp) that is officially endorsed by the College Board and able to be submitted as a pre-approved syllabus for AP&reg; CS Principles  audit.  
 
 * ['15-'16 Syllabus and Overview (**not** endorsed by College Board)](https://docs.google.com/document/export?format=pdf&id=15w5_kQOsY0fzT-jIa5TsqC11lEv-ciWB7jHqdEEZXkw)
 
@@ -24,10 +24,10 @@ The materials below are from the '15-'16 Computer Science Principles pilot that 
 |[![binary magic](/educate/csp/images/thumb_app.png "Unit 5")](/educate/csp/unit5) [Unit 5](/educate/csp/archive/unit5)| **Explore and Create:** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create.|
 |[![binary magic](/educate/csp/images/thumb_survey.png "Post-AP")](/educate/csp/postap) [Post-AP](/educate/csp/archive/postap)| **Databases in Apps:** This loosely-structured material includes new content which students can work through after the AP® test. The content includes skill-building levels about remote data storage and how to use App Lab's Data Tools to create data-backed apps.|
 
-### Chat about CSP in the CSP forum
-We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
+### Chat about CS Principles in the forum
+We have forums for educators to discuss and trade ideas about CS Principles  and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CS Principles  there are two forums that are most useful:
 
-* [General CSP forum](http://forum.code.org/c/csp)
+* [General CS Principles  forum](http://forum.code.org/c/csp)
 * [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp-unit1)
 * [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp-unit2)
 * [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp-unit3)

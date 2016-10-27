@@ -20,7 +20,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nThe guests are going to need something to sit on!\r\n<br/><br/>\r\nThe artist has an idea to make some fun chairs. How many times do you need to loop this to draw half of a circle?\r\n</div>\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nThe guests are going to need something to sit on!\r\n<br/><br/>\r\nThe artist has an idea to make some fun chairs. How many times do you need to loop this to draw half of a circle?\r\n</div>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -32,7 +32,8 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If there are 180 degrees in a semicircle and each loop the artist makes turns 3 degrees, how many times would you need to loop to draw half of a full circle?\\n\\n**180 ÷ 3 = ?**\",\r\n  \"hint_id\": \"aE6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"aE6_1\",\r\n  \"callout_text\": \"Only 1 move forward and 1 turn block\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"aE6_1\",\r\n  \"callout_text\": \"Only 1 move forward and 1 turn block\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

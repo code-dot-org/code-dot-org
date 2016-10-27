@@ -3,7 +3,7 @@ title: Learning JS Resources
 video_player: true
 ---
 
-# CSP - Learning JavaScript Resources
+# CS Principles - Learning JavaScript Resources
 
 
 <table>
