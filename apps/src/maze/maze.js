@@ -35,7 +35,6 @@ var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
 var dropletConfig = require('./dropletConfig');
-var experiments = require('../experiments');
 
 var MazeMap = require('./mazeMap');
 
@@ -356,7 +355,7 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.subtype = new Bee(Maze, studioApp, config);

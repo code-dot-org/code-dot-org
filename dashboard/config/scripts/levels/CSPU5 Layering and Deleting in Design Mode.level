@@ -55,8 +55,8 @@
     "instructions_important": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
-    "teacher_markdown": "Change layering"
+    "teacher_markdown": "Change layering",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

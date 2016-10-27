@@ -18,7 +18,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## OS-specific prerequisites
 
-### OS X Mavericks / Yosemite / El Capitan
+### OS X Mavericks / Yosemite / El Capitan / Sierra
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
@@ -97,6 +97,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `ruby --version  # --> ruby 2.2.3`
   1. `node --version  # --> v0.12.15`
   1. `npm --version   # --> 2.15.1`
+1. When running `bundle install`, you may need to run
+   
+   `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
+   
+   first so that nokogiri picks up the built in libxml2 library. See this [stackoverflow answer](http://stackoverflow.com/a/40038954/186771).
 
 ### Windows note: use an Ubuntu VM
 

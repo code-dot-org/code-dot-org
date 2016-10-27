@@ -2,10 +2,8 @@ Feature: Unused Blocks
 
 @eyes
 Scenario: Solve a level with unused blocks
-  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true&enableExperiments=unusedBlocks"
+  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I close the dialog
 
   When I open my eyes to test "Unused Blocks"
 

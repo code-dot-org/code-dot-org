@@ -3,7 +3,7 @@
   -if value[:title_s] == 'Convince your school or state' && ! state.nil_or_empty? && File.exists?(sites_dir("all/files/states/#{state}.pdf"))
     -url = "/files/states/#{state}.pdf"
 
-  #block{:style=>'width:25%; float:left; padding:30px; padding-top:0px; padding-bottom:0px'}
+  #block{:style=>'width:20%; float:left; padding:30px; padding-top:0px; padding-bottom:0px'}
     %a{:href=>url, :target=>'_blank', :style=>'text-decoration:none'}
       %img{:src=>value[:image_url_s], :style=>"width: 60%"}
     #text{:style=>'float:left; width:75%'}

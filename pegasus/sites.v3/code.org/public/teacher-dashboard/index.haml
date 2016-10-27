@@ -184,9 +184,13 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.save = function(section) {
       if (section.course) {
-        var course = $scope.course_list.find(function(course) {
-          return course.id === section.course.id;
-        });
+        var course = null;
+        for (var i = 0; i < $scope.course_list.length; i++) {
+          if ($scope.course_list[i].id === section.course.id) {
+            course = $scope.course_list[i];
+            break;
+          }
+        }
         if ($scope.hocAssignWarningEnabled &&
             !$scope.hocAssignWarningShown &&
             course.category === $scope.hocCategoryName) {

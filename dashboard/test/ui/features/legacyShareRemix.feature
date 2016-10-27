@@ -4,8 +4,6 @@ Feature: Legacy Share Remix
   Background:
     Given I am on "http://studio.code.org/s/artist/stage/1/puzzle/10?noautoplay=true"
     And I rotate to landscape
-    And I wait to see a dialog titled "Puzzle 10 of 10"
-    And I close the dialog
     And element "#runButton" is visible
     And element "#resetButton" is hidden
 

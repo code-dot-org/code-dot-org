@@ -9,7 +9,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"spider\");\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  // Update Values\r\n  // Add Code for: If the up arrow is pressed, move the sprite up on the screen\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}",
+    "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"beetle\");\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  // Update Values\r\n  // Add Code for: If the up arrow is pressed, move the sprite up on the screen\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -32,8 +32,16 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_animations": "{\n    \"orderedKeys\": [\n        \"beetle\",\n        \"dragonfly\",\n        \"ladybug\",\n        \"spider\"\n    ],\n    \"propsByKey\": {\n        \"beetle\": {\n            \"name\": \"beetle\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/beetle.png\",\n            \"sourceSize\": {\n                \"x\": 73,\n                \"y\": 100\n            },\n            \"frameSize\": {\n                \"x\": 73,\n                \"y\": 100\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"dragonfly\": {\n            \"name\": \"dragonfly\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\n            \"sourceSize\": {\n                \"x\": 150,\n                \"y\": 91\n            },\n            \"frameSize\": {\n                \"x\": 150,\n                \"y\": 91\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"ladybug\": {\n            \"name\": \"ladybug\",\n            \"sourceUrl\": \"https://images.code.org/201fd9723053e9c895766873c213b957-image-1468428938279.jpg\",\n            \"sourceSize\": {\n                \"x\": 100,\n                \"y\": 95\n            },\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 95\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"spider\": {\n            \"name\": \"spider\",\n            \"sourceUrl\": \"https://images.code.org/1e2eeeb12bf337e913fc25456e296025-image-1468429040871.png\",\n            \"sourceSize\": {\n                \"x\": 100,\n                \"y\": 91\n            },\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 91\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
-    "contained_level_names": null
+    "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"beetle\",\r\n        \"dragonfly\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"beetle\": {\r\n            \"name\": \"beetle\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/beetle.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 73,\r\n                \"y\": 100\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 73,\r\n                \"y\": 100\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"dragonfly\": {\r\n            \"name\": \"dragonfly\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 150,\r\n                \"y\": 91\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 150,\r\n                \"y\": 91\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false"
   },
   "published": true,
   "notes": "",
