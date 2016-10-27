@@ -110,7 +110,7 @@ namespace :seed do
         # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
         # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
         puts "seeding school districts (#{expected_count} rows)"
-        SchoolDistrict.find_or_create_all_from_tsv!(school_districts_tsv)
+        SchoolDistrict.find_or_create_all_from_tsv(school_districts_tsv)
       end
     end
   end

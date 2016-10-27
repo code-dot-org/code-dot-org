@@ -1,0 +1,18 @@
+-if @company
+  -company_name = hoc_s("company_" + @company)
+  -company_total = format_integer_with_commas(company_count)
+  %h2.counter-title
+    %a{href: resolve_url('/events/all')}
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
+      = hoc_s(:map_header_company).gsub('#', company_total).gsub('company', company_name)
+-elsif @country != 'us'
+  -country_total = format_integer_with_commas(country_count)
+  %h2.counter-title
+    %a{href: resolve_url("/events/all")}
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
+    %a{href: resolve_url("/events/all/#{solr_country_code}")}
+      = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
+-else
+  %h2.counter-title
+    %a{href: resolve_url("/events/all")}
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))

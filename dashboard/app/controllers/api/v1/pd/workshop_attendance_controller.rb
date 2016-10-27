@@ -1,4 +1,3 @@
-require 'controllers/api/csv_download'
 class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   include Api::CsvDownload
   load_and_authorize_resource :workshop, class: 'Pd::Workshop'

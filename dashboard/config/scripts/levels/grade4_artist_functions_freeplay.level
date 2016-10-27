@@ -15,7 +15,7 @@
     "slider_speed": ".6",
     "free_play": "true",
     "embed": "false",
-    "markdown_instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!\r\n<hr/>\r\n<h3>Here are some ideas if you are looking for inspiration, or make your own function!</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img src=\"https://images.code.org/7e85601182e37a5331a17c0e29cf504d-image-1471042674372.42.08 PM.png\" width=\"200\"/><br/>\r\n</td>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/6ae7664d92a706e852d92dc419836557-image-1471042678266.55.48 PM.png\" width=\"200\"/><br/>\r\n</td>\r\n\r\n\r\n</tr>\r\n</table>\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n",
+    "markdown_instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!\r\n<hr/>\r\n<h3>Here are some ideas if you are looking for inspiration, or make your own function!</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img src=\"https://images.code.org/7e85601182e37a5331a17c0e29cf504d-image-1471042674372.42.08 PM.png\" width=\"200\"/><br/>\r\n</td>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/6ae7664d92a706e852d92dc419836557-image-1471042678266.55.48 PM.png\" width=\"200\"/><br/>\r\n</td>\r\n\r\n\r\n</tr>\r\n</table>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

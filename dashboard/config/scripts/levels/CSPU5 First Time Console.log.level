@@ -55,9 +55,19 @@
     "instructions_important": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
     "start_blocks": "console.log(\"Hello, there!\");\r\nconsole.log(\"My Name is:\");",
-    "palette_category_at_start": "variables"
+    "palette_category_at_start": "variables",
+    "log_conditions": [
+      {
+        "entries": [
+          "console.log"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "There should be at least 3 console.log commands executed here."
+      }
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
