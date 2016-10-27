@@ -2,7 +2,7 @@
  * For a comma-separated string of tags, generate a comma-separated string of their friendly
  * names.
  * e.g. Given a prefix of "subject_" and a string of tags of "history,science",
- * generate the readable string "History, Science".  These friendly strings are
+ * generate the readable string "Social Studies, Science".  These friendly strings are
  * stored in the string table as "subject_history" and "subject_science".
  *
  * @param {string} prefix - The prefix applied to the tag in the string table.
@@ -17,7 +17,7 @@ function getTagString(prefix, tagString) {
   const tagToString = {
     length_1hour: "One hour",
     "length_1hour-follow": "One hour with follow-on",
-    length_fewhours: "A few hours",
+    "length_few-hours": "A few hours",
 
     subject_science: "Science",
     subject_math: "Math",

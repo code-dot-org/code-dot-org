@@ -78,11 +78,12 @@ const TutorialDetail = React.createClass({
 
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
-      {key: 1, title: "Length",                  body: getTagString("length", this.props.item.tags_length)},
-      {key: 2, title: "Subjects",                body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 3, title: "Educator Experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
-      {key: 4, title: "Student Experience",      body: getTagString("student_experience", this.props.item.tags_student_experience)},
-      {key: 5, title: "Type of Activity",        body: getTagString("activity_type", this.props.item.tags_activity_type)},
+      // Reserve key 1 for the optional short link.
+      {key: 2, title: "Length",                  body: getTagString("length", this.props.item.tags_length)},
+      {key: 3, title: "Subjects",                body: getTagString("subject", this.props.item.tags_subject)},
+      {key: 4, title: "Educator experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
+      {key: 5, title: "Student experience",      body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 6, title: "Type of activity",        body: getTagString("activity_type", this.props.item.tags_activity_type)},
       // Reserve key 6 for international languages.
     ];
 
@@ -165,7 +166,18 @@ const TutorialDetail = React.createClass({
                           <a href={this.props.item.teachers_notes} target="_blank">
                             <i className="fa fa-external-link" aria-hidden={true}></i>
                             &nbsp;
-                            Teachers' notes
+                            Teacher notes
+                          </a>
+                        </td>
+                      </tr>}
+                    {this.props.item.tags_activity_type.split(',').includes("online-tutorial") &&
+                      <tr key={1}>
+                        <td style={styles.tutorialDetailsTableTitle}>
+                          Short link
+                        </td>
+                        <td style={styles.tutorialDetailsTableBody}>
+                          <a href={`https://hourofcode.com/${this.props.item.short_code}`} target="_blank">
+                            {`https://hourofcode.com/${this.props.item.short_code}`}
                           </a>
                         </td>
                       </tr>}
@@ -184,7 +196,7 @@ const TutorialDetail = React.createClass({
                         International languages
                       </td>
                       <td style={styles.tutorialDetailsTableBody}>
-                        {this.props.item.languages_supported}
+                        {this.props.item.language}
                       </td>
                     </tr>
                   </tbody>
