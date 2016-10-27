@@ -129,10 +129,11 @@ def insert_form(kind, data, options={})
 
   timestamp = DateTime.now
 
+  sanitized_email = data[:email_s].to_s.strip.downcase
   row = {
     secret: SecureRandom.hex,
     parent_id: options[:parent_id],
-    email: data[:email_s].to_s.strip.downcase,
+    email: sanitized_email,
     name: data[:name_s].to_s.strip,
     kind: kind,
     data: data.to_json,
@@ -140,6 +141,7 @@ def insert_form(kind, data, options={})
     created_ip: request.ip,
     updated_at: timestamp,
     updated_ip: request.ip,
+    hashed_email: Digest::MD5.hexdigest(sanitized_email),
   }
   row[:user_id] = dashboard_user ? dashboard_user[:id] : data[:user_id_i]
 
@@ -195,6 +197,7 @@ def update_form(kind, secret, data)
   form[:reviewed_at] = nil
   form[:reviewed_by] = nil
   form[:reviewed_ip] = nil
+  form[:hashed_email] = Digest::MD5.hexdigest(form[:email]) if data.key?(:email_s)
   DB[:forms].where(id: form[:id]).update(form)
 
   form
