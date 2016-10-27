@@ -65,6 +65,19 @@ levels['2'] = {
    '<block type="bounce_whenLeft" deletable="false" x="20" y="20"></block> \
     <block type="bounce_whenRight" deletable="false" x="180" y="20"></block>'
 };
+levels['2_basketball'] = extend(levels['2'], {
+  'useFlagGoal': true,
+  'map': [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [8, 0, 0,16, 0, 0, 0, 8]
+  ],
+});
 levels['3'] = {
   'requiredBlocks': [
     [{'test': 'moveUp', 'type': 'bounce_moveUp'}]
@@ -155,6 +168,10 @@ levels['5'] = {
   'startBlocks':
    '<block type="bounce_whenPaddleCollided" deletable="false" x="20" y="20"></block>'
 };
+levels['5_basketball'] = extend(levels['5'], {
+  'useFlagGoal': true,
+  'toolbox': tb('<block type="bounce_bounceBall"></block>')
+});
 levels['6'] = {
   'timeoutFailureTick': 140,
   'requiredBlocks': [
