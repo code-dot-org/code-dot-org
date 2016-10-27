@@ -57,8 +57,14 @@ social:
 - filters << {name: "student_experience", text: "Student's experience", entries: entries}
 
 - entries = []
-- entries << {name: "robotics", text: "Robotics"}
-- filters << {name: "activity_type", text: "Activity type", entries: entries, display: false}
+- entries << {name: "all", text: "All devices"}
+- entries << {name: "browser", text: "Computers"}
+- entries << {name: "android-tablet", text: "Android Tablet"}
+- entries << {name: "ipad", text: "iPad"}
+- entries << {name: "android-phone", text: "Android phone"}
+- entries << {name: "iphone", text: "iPhones"}
+- entries << {name: "unplugged", text: "No computers or devices"}
+- filters << {name: "platform", text: "Classroom technology", entries: entries}
 
 - entries = []
 - entries << {name: "science", text: "Science"}
@@ -72,14 +78,8 @@ social:
 - filters << {name: "subject", text: "Topics", entries: entries}
 
 - entries = []
-- entries << {name: "all", text: "All devices"}
-- entries << {name: "browser", text: "Computers"}
-- entries << {name: "android-tablet", text: "Android Tablet"}
-- entries << {name: "ipad", text: "iPad"}
-- entries << {name: "android-phone", text: "Android phone"}
-- entries << {name: "iphone", text: "iPhones"}
-- entries << {name: "unplugged", text: "No computers or devices"}
-- filters << {name: "platform", text: "Classroom technology", entries: entries}
+- entries << {name: "robotics", text: "Robotics"}
+- filters << {name: "activity_type", text: "Activity type", entries: entries, display: false}
 
 - entries = []
 - entries << {name: "1hour", text: "One hour"}
