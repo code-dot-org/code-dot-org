@@ -21,7 +21,7 @@ git git_path do
 
   branch = node['cdo-repository']['branch']
   checkout_branch branch
-  revision branch
+  revision node['cdo-repository']['revision'] || branch
 
   action(
     # Skip git-repo sync when using a shared volume to prevent data loss on the host.
@@ -37,6 +37,13 @@ git git_path do
       :checkout
     end
   )
+
+  # Build apps on repo updates.
+  if node['cdo-apps']
+    %w(dashboard pegasus).each do |app|
+      notifies :run, "execute[build-#{app}]", :delayed
+    end
+  end
 
   user node[:user]
   group node[:user]

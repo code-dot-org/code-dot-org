@@ -91,6 +91,7 @@ jq "." <<JSON > ${FIRST_BOOT}
   },
   "cdo-repository": {
     "branch": "${BRANCH}",
+    "revision": "<%=commit%>",
     "sync": true
   },
   "run_list": ${RUN_LIST}

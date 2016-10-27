@@ -20,7 +20,6 @@ module CdoApps
       user user
       group user
       action :nothing
-      notifies :run, "execute[build-#{app_name}]", :immediately
     end
 
     execute "build-#{app_name}" do
@@ -49,7 +48,7 @@ module CdoApps
       notifies :restart, "service[#{app_name}]", :delayed
 
       # Bootstrap the first cdo-apps Rakefile build on a new system.
-      # Runs only on initial install because `rake build` is managed by the CI script after bootstrapping.
+      # Runs only on initial install.
       # TODO move this run-once notification somewhere more appropriate
       notifies :run, setup_cmd, :immediately
     end
