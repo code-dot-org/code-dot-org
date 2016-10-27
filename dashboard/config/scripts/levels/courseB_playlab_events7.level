@@ -48,7 +48,8 @@
       "downButton",
       "upButton"
     ],
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
@@ -56,6 +57,31 @@
   }
 }]]></config>
   <blocks>
+    <initialization_blocks>
+      <block type="controls_repeat_ext" inline="true" uservisible="false">
+        <value name="TIMES">
+          <block type="math_number" uservisible="false">
+            <title name="NUM">200</title>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="studio_setSpritePosition" uservisible="false">
+            <title name="SPRITE">0</title>
+            <title name="VALUE">random</title>
+            <next>
+              <block type="studio_setSpritesWander" uservisible="false">
+                <title name="VALUE">"dragon"</title>
+                <next>
+                  <block type="studio_wait" uservisible="false">
+                    <title name="VALUE">1000</title>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </initialization_blocks>
     <toolbox_blocks>
       <xml>
         <block type="studio_whenArrow">
