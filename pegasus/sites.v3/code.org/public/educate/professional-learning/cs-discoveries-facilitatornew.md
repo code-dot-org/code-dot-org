@@ -10,7 +10,7 @@ The ideal CS Discoveries Facilitator is an enthusiastic supporter of computer sc
 
 <br/>
 
-[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](https://goo.gl/forms/aXgeLRl1UuIwMJMk1)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub)
 <br/>
 
 ## What is the CS Discoveries Facilitator Program?
@@ -26,39 +26,39 @@ CS Discoveries Facilitators accepted to the program will work with a local Code.
 
 **Summer 2017 Facilitator Training**
 
-Accepted facilitators attend an all expense paid trip to one Code.org TeacherCon event (locations TBD), participating in sessions alongside new teachers. 
+Accepted facilitators attend an all expense paid trip to one Code.org TeacherCon event (locations TBD). 
 
 - TeacherCon 1 - Sunday 6/18 to Friday 6/23
 - TeacherCon 2 - Sunday 7/16 to Friday 7/21
 - TeacherCon 3 - Sunday 7/30  to Friday 8/4
-
-TeacherCon is designed to be a fabulous experience to welcome you to the extended Code.org family.
 
 Facilitators will also attend one Facilitator-in-Training workshop to prepare for academic year facilitation.
 
 - Saturday 7/22 - Sunday 7/23 (immediately following TeacherCon 2)
 - Saturday 8/5 - Sunday 8/6 (immediately following TeacherCon 3)
 
+TeacherCon is designed to be a fabulous experience to welcome you to the extended Code.org family.
+
 **Academic Year Facilitator Training (2017-2018)**<br/>
 
 Code.org will provide on-going supports to prepare facilitators to lead 4, 1-day in-person workshops:
 
 - Workshop agenda prep calls
-- Deeper learning supports, leading to curriculum mastery
+- Deeper learning activities that will help you achieve curriculum mastery
 - Office hours
 
 Accepted participants will also attend a Spring 2018 Local Leads Training to prepare you to lead your own 5-day local workshop for new teachers implementing CS Discoveries in 2018-2019. 
 
 ## How to become a CS Discoveries Facilitator?
 
-Carefully review the the [requirements and commitments](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/edit) for the CS Discoveries Facilitator Development program.
+Carefully review the the [requirements and commitments](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub) for the CS Discoveries Facilitator Development program.
 
 **Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application will close on **February 1st, 2017.**
 *This program is currently only operated in the US.*
 <br/>
 <br/>
 
-[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](https://goo.gl/forms/aXgeLRl1UuIwMJMk1)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub)
 <br/>
 
 

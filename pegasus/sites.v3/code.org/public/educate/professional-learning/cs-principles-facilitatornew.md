@@ -10,7 +10,7 @@ The ideal CS Principles Facilitator is an enthusiastic supporter of computer sci
 <br/>
 <br/>
 
-[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](https://goo.gl/forms/aXgeLRl1UuIwMJMk1)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub)
 <br/>
 
 ## What is the CS Principles Facilitator Program?
@@ -27,7 +27,7 @@ CS Principles Facilitators accepted to the program will work with a local Code.o
 
 **Summer 2017 Facilitator Training**
 
-Accepted facilitators attend an all expense paid trip to one Code.org TeacherCon event (locations TBD), participating in sessions alongside new teachers. 
+Accepted facilitators attend an all expense paid trip to one Code.org TeacherCon event (locations TBD). 
 
 - TeacherCon 1 - Sunday 6/18 to Friday 6/23
 - TeacherCon 2 - Sunday 7/16 to Friday 7/21
@@ -57,13 +57,12 @@ Accepted participants will also attend a Spring 2018 Local Leads Training to pre
 ## How to become a CS Principles Facilitator
 
 
-Carefully review the the [requirements and commitments](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/edit) for the CS Principles Facilitator Development program.
+Carefully review the the [requirements and commitments](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub) for the CS Principles Facilitator Development program.
 
-**Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application for the 2017-2018 Facilitator Development Program will close on **February 1, 2017**. Application for the 2018-2019 school year will open in late 2017. *This program is currently only operated in the US.*
+**Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application for the 2017-2018 Facilitator Development Program will close on **February 1, 2017**. *This program is currently only operated in the US.*
 <br/>
 <br/>
 
-[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](https://goo.gl/forms/aXgeLRl1UuIwMJMk1)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub)
 <br/>
-
 
