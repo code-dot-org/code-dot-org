@@ -27,6 +27,13 @@ const styles = {
   checkbox: {
     margin: '0 0 0 7px'
   },
+  textInput: {
+    height: 34,
+    width: 350,
+    boxSizing: 'border-box',
+    verticalAlign: 'baseline',
+    margin: '7px 0 10px 0'
+  },
   groupHeader: {
     fontSize: 18,
     color: 'white',
@@ -103,7 +110,7 @@ const styles = {
   },
   levelFieldLabel: {
     lineHeight: '36px',
-    marginLeft: 5
+    margin: '0 7px 0 5px'
   },
   levelTypeSelect: {
     width: 'calc(100% - 80px)',
@@ -516,7 +523,7 @@ const LevelEditor = React.createClass({
             {this.state.expand &&
               <div style={styles.levelTokenActive}>
                 <span style={Object.assign({float: 'left'}, styles.levelFieldLabel)}>
-                  Level type:
+                  Level type
                 </span>
                 <VirtualizedSelect
                   value={this.props.level.kind}
@@ -526,7 +533,14 @@ const LevelEditor = React.createClass({
                   style={styles.levelTypeSelect}
                 />
                 {this.containsLegacyLevel() &&
-                  <span>TODO: legacy options</span>
+                  <div>
+                    <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Skin</span>
+                    <input defaultValue={this.props.level.skin} type="text" style={styles.textInput} />
+                    <div style={{float: 'right'}}>
+                      <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Video key</span>
+                      <input defaultValue={this.props.level.videoKey} type="text" style={styles.textInput} />
+                    </div>
+                  </div>
                 }
                 {this.props.level.ids.map(id =>
                   <div key={id}>
