@@ -25,7 +25,12 @@ const styles = {
   },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 22
+    fontSize: 22,
+    paddingBottom: 4
+  },
+  tutorialDetailPublisher: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 16
   },
   tutorialDetailSub: {
     fontFamily: '"Gotham 3r", sans-serif',
@@ -61,12 +66,12 @@ const TutorialDetail = React.createClass({
 
   render() {
     if (!this.props.showing) {
-      // Disable body scrolling.
+      // Enable body scrolling.
       $('body').css('overflow', 'auto');
       return null;
     }
 
-    // Enable body scrolling.
+    // Disable body scrolling.
     $('body').css('overflow', 'hidden');
 
     const tableEntries = [
@@ -76,7 +81,7 @@ const TutorialDetail = React.createClass({
       {key: 3, title: "Educator Experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
       {key: 4, title: "Student Experience",      body: getTagString("student_experience", this.props.item.tags_student_experience)},
       {key: 5, title: "Type of Activity",        body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      {key: 6, title: "International Languages", body: getTagString("international_languages", this.props.item.tags_international_languages)},
+      // Reserve key 6 for international languages.
     ];
 
     return (
@@ -133,6 +138,9 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>
+                  <div style={styles.tutorialDetailPublisher}>
+                    {this.props.item.orgname}
+                  </div>
                   <div style={styles.tutorialDetailSub}>
                     {getTutorialDetailString(this.props.item)}
                   </div>
@@ -146,19 +154,19 @@ const TutorialDetail = React.createClass({
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
-                  {this.props.item.teachers_notes &&
-                    <tr key={0}>
-                      <td style={styles.tutorialDetailsTableTitle}>
-                        More resources
-                      </td>
-                      <td style={styles.tutorialDetailsTableBody}>
-                        <a href={this.props.item.teachers_notes} target="_blank">
-                          <i className="fa fa-external-link" aria-hidden={true}></i>
-                          &nbsp;
-                          Teachers' notes
-                        </a>
-                      </td>
-                    </tr>}
+                    {this.props.item.teachers_notes &&
+                      <tr key={0}>
+                        <td style={styles.tutorialDetailsTableTitle}>
+                          More resources
+                        </td>
+                        <td style={styles.tutorialDetailsTableBody}>
+                          <a href={this.props.item.teachers_notes} target="_blank">
+                            <i className="fa fa-external-link" aria-hidden={true}></i>
+                            &nbsp;
+                            Teachers' notes
+                          </a>
+                        </td>
+                      </tr>}
                     {tableEntries.map(item =>
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>
@@ -169,6 +177,14 @@ const TutorialDetail = React.createClass({
                         </td>
                       </tr>
                     )}
+                    <tr key={6}>
+                      <td style={styles.tutorialDetailsTableTitle}>
+                        International languages
+                      </td>
+                      <td style={styles.tutorialDetailsTableBody}>
+                        {this.props.item.languages_supported}
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
