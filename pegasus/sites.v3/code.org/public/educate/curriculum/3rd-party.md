@@ -28,7 +28,7 @@ nav: educate_nav
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
-| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. Intro CS JavaScript, Intro CS Python, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500. | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CSP, 30-40 hour course, $1500/teacher | Online PD for Teaching Intro CS 1, Teaching Intro CS 2, 30-40 hour course, $1500/teacher |
+| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. Intro CS JavaScript, Intro CS Python, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500. | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CS Principles, 30-40 hour course, $1500/teacher | Online PD for Teaching Intro CS 1, Teaching Intro CS 2, 30-40 hour course, $1500/teacher |
 | [Code.org](/educate) | Semester or year-long CS Discoveries intro course is under development to be launched Summer 2017, FREE  | In-person and online workshops available to partner districts, FREE, Portion of teacher stipends covered by Code.org on partner by partner basis |
 | [Codesters](https://www.codesters.com/) |  5-lesson intro and project platform, FREE, 2 40-hr Intro to Python courses and 20-hr Intro to Game Design course, $20/student or a la carte pricing | Half day, 1-day, and 3-day workshops available, $500-$2,000 per teacher depending on length and location. |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
@@ -65,6 +65,12 @@ nav: educate_nav
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
 
+## For school counselors and administrators
+[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/c4c) provides school counselors with
+up-to-date information and resources they can use to guide students toward education and
+careers in computing. Free professional development webinars and 1-day workshops are available
+across the US.   
+
 ## Funding for computer science programs
 
 U.S. Federal law recently recognized [computer science as part of the "well rounded education subjects"](http://blog.code.org/post/134932134563/sweeping-us-education-law-adds-computer-science), and explicitly [names computer science as an important STEM field](http://blog.code.org/post/130358071518/computer-science-is-finally-included-in-stem).
@@ -72,7 +78,6 @@ U.S. Federal law recently recognized [computer science as part of the "well roun
 Your school or district may be able to use Title I or Title II funds, and other department grant programs to apply towards offering CS courses. [More info](http://innovation.ed.gov/2015/12/07/a-new-chapter-for-computer-science-education/).
 
 The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057). 
-
 
 ## More resources &mdash; for classrooms, afterschool clubs or learning online 
 
