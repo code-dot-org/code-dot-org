@@ -15,7 +15,9 @@ const styles = {
   tutorialDetailModalBody: {
     paddingTop: 0,
     overflow: 'hidden',
-    textAlign: 'left'
+    textAlign: 'left',
+    maxHeight: 'calc(100vh - 100px)',
+    overflowY: 'auto'
   },
   popupFullWidth: {
     position: 'absolute',
