@@ -182,6 +182,12 @@ const TutorialExplorer = React.createClass({
       const { locale, specificLocale, filters } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
+        // Check that the tutorial isn't marked as do-not-show.  If it does,
+        // it's hidden.
+        if (tutorial.tags.split(',').includes("do-not-show")) {
+          return false;
+        }
+
         // First check that the tutorial language doesn't exclude it immediately.
         // If the tags contain some languages, and we don't have a match, then
         // hide the tutorial.
