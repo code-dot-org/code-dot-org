@@ -1,3 +1,5 @@
+require_dependency pegasus_dir('forms/pd_workshop_survey')
+
 module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_EFFECTIVENESS_QUESTIONS = [
     :how_much_learned_s,
@@ -95,12 +97,12 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
         survey_response.symbolize_keys.each do |k, v|
           if OVERALL_SUCCESS_QUESTIONS.include?(k)
-            score = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(v) + 1
+            score = ::PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(v) + 1
           elsif FREE_RESPONSE_QUESTIONS.include?(k)
             # Do nothing - no score to compute but don't skip this
           else
-            next unless PdWorkshopSurvey::OPTIONS.key?(k) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(k)
-            score = get_score_for_response(PdWorkshopSurvey::OPTIONS, k, v)
+            next unless ::PdWorkshopSurvey::OPTIONS.key?(k) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(k)
+            score = get_score_for_response(::PdWorkshopSurvey::OPTIONS, k, v)
           end
 
           if FACILITATOR_EFFECTIVENESS_QUESTIONS.include?(k)
