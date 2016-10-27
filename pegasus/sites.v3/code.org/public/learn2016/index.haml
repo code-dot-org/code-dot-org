@@ -14,10 +14,11 @@ social:
 ---
 
 :css
+  // These CSS classes are used by ReactCSSTransitionGroup for fading upon div & image entry/appearance.
+
   .fadable-enter {
     opacity: 0.01;
   }
-
   .fadable-enter.fadable-enter-active {
     opacity: 1;
     transition: opacity 200ms ease-in;
@@ -26,7 +27,6 @@ social:
   .fadable-appear {
     opacity: 0.01;
   }
-
   .fadable-appear.fadable-appear-active {
     opacity: 1;
     transition: opacity 200ms ease-in;

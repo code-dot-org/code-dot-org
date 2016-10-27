@@ -7,17 +7,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const Image = React.createClass({
-  getInitialState: function () {
+  getInitialState() {
     return {
       loaded: false
     };
   },
 
-  onImageLoad: function () {
+  onImageLoad() {
     this.setState({ loaded: true });
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     const imgTag = ReactDOM.findDOMNode(this.refs.img);
     const imgSrc = imgTag.getAttribute('src');
     const img = new window.Image();
@@ -25,11 +25,10 @@ const Image = React.createClass({
     img.src = imgSrc;
   },
 
-  render: function () {
-    const {...props} = this.props;
+  render() {
     const rootClassName = 'image ' + (this.state.loaded ? 'image-loaded' : '');
     return (
-      <img ref="img" {...props} className={rootClassName} />
+      <img ref="img" {...this.props} className={rootClassName} />
     );
   }
 });
