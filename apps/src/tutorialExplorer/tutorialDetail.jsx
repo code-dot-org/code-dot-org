@@ -130,7 +130,7 @@ const TutorialDetail = React.createClass({
               >
                 <div className="col-50">
                   <img
-                    src={this.props.item.image}
+                    src={this.props.item.image.replace(".png", ".jpg")}
                     style={{width: '100%'}}
                   />
                 </div>
