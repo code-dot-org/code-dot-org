@@ -198,6 +198,10 @@ levels['6'] = {
    '<block type="bounce_whenPaddleCollided" deletable="false" x="20" y="20"></block> \
     <block type="bounce_whenWallCollided" deletable="false" x="20" y="120"></block>'
 };
+levels['6_basketball'] = extend(levels['6'], {
+  'useFlagGoal': true,
+  'toolbox': tb('<block type="bounce_bounceBall"></block>')
+});
 levels['7'] = {
   'timeoutFailureTick': 900,
   'requiredBlocks': [
@@ -234,6 +238,13 @@ levels['7'] = {
     <block type="bounce_whenPaddleCollided" deletable="false" x="20" y="120"></block> \
     <block type="bounce_whenWallCollided" deletable="false" x="20" y="220"></block>'
 };
+levels['7_basketball'] = extend(levels['7'], {
+  'useFlagGoal': true,
+  'toolbox':
+    tb('<block type="bounce_moveLeft"></block> \
+        <block type="bounce_moveRight"></block> \
+        <block type="bounce_bounceBall"></block>')
+});
 /*
   '8': {
     'requiredBlocks': [
@@ -346,6 +357,24 @@ levels['10'] = {
     <block type="bounce_whenBallInGoal" deletable="false" x="20" y="260"></block> \
     <block type="bounce_whenBallMissesPaddle" deletable="false" x="20" y="340"></block>'
 };
+levels['10_basketball'] = extend(levels['10'], {
+  'map': [
+    [1, 1, 1, 2, 2, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 4, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0,16, 0, 0, 0, 0, 1]
+  ],
+  'toolbox':
+    tb('<block type="bounce_moveLeft"></block> \
+        <block type="bounce_moveRight"></block> \
+        <block type="bounce_bounceBall"></block> \
+        <block type="bounce_incrementPlayerScore"></block> \
+        <block type="bounce_incrementOpponentScore"></block>')
+});
 levels['11'] = {
   'requiredBlocks': [
     [{'test': 'moveLeft', 'type': 'bounce_moveLeft'}],
@@ -400,6 +429,28 @@ levels['11'] = {
     <block type="bounce_whenBallInGoal" deletable="false" x="20" y="470"></block> \
     <block type="bounce_whenBallMissesPaddle" deletable="false" x="20" y="590"></block>'
 };
+levels['11_basketball'] = extend(levels['11'], {
+  'map': [
+    [1, 1, 1, 2, 2, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0,16, 0, 0, 0, 0, 1]
+  ],
+  'toolbox':
+    tb('<block type="bounce_moveLeft"></block> \
+        <block type="bounce_moveRight"></block> \
+        <block type="bounce_bounceBall"></block> \
+        <block type="bounce_incrementPlayerScore"></block> \
+        <block type="bounce_incrementOpponentScore"></block> \
+        <block type="bounce_launchBall"></block> \
+        <block type="bounce_setPaddleSpeed"></block> \
+        <block type="bounce_setBallSpeed"></block> \
+        <block type="bounce_setPaddleDropdown"></block>'),
+});
 levels['12'] = {
   'requiredBlocks': [
   ],
