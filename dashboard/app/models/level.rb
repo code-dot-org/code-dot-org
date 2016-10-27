@@ -92,7 +92,7 @@ class Level < ActiveRecord::Base
 
   def self.key_list
     @@all_level_keys ||= Level.all.map{ |l| [l.id, l.key] }.to_h
-    @@all_level_keys.map{ |k, v| {label: v, value: k} }
+    @@all_level_keys
   end
 
   def update_key_list
