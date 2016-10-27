@@ -369,6 +369,8 @@ Craft.init = function (config) {
 
         dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp);
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
+        $('#soft-buttons').hide();
+
         const phaserGame = document.getElementById('phaser-game');
         const onDrag = function (e) {
           const hammerToButton = {
@@ -722,6 +724,9 @@ Craft.reset = function (first) {
   if (first) {
     return;
   }
+  if (Craft.level.usePlayer) {
+    $('#soft-buttons').hide();
+  }
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
@@ -737,6 +742,10 @@ Craft.phaserLoaded = function () {
 Craft.runButtonClick = function () {
   if (!Craft.phaserLoaded()) {
     return;
+  }
+
+  if (Craft.level.usePlayer) {
+    $('#soft-buttons').show();
   }
 
   var runButton = document.getElementById('runButton');
