@@ -36,6 +36,9 @@
   = f.label :special_level_type, 'Special level type'
   = f.select :special_level_type, options_for_select(@level.class.special_level_type_options, @level.special_level_type), {include_blank: true}
 .field
+  = f.label :use_verification_function_for_failure, 'Use verification function for failure (rather than success)'
+  = boolean_check_box(f, :use_verification_function_for_failure)
+.field
   = f.label :verification_function, 'Verification Function'
   Click to insert: (
   - Craft::SAMPLE_VERIFICATION_FUNCTIONS.each do |name, value|

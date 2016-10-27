@@ -93,6 +93,7 @@ class GameController {
     // Phaser "slow motion" modifier we originally tuned animations using
     this.assumedSlowMotion = 1.5;
     this.initialSlowMotion = gameControllerConfig.customSlowMotion || this.assumedSlowMotion;
+    this.useVerificationFunctionForFailure = false;
 
     this.playerDelayFactor = 1.0;
     this.dayNightCycle = false;
@@ -134,6 +135,8 @@ class GameController {
     this.timeout = levelConfig.levelVerificationTimeout;
     if (levelConfig.useScore !== undefined)
       this.useScore = levelConfig.useScore;
+    if (levelConfig.useVerificationFunctionForFailure !== undefined)
+      this.useVerificationFunctionForFailure = levelConfig.useVerificationFunctionForFailure;
     this.timeoutResult = levelConfig.timeoutResult;
     this.onDayCallback = levelConfig.onDayCallback;
     this.onNightCallback = levelConfig.onNightCallback;
@@ -859,6 +862,7 @@ class GameController {
         var targetEntity = this.getEntity(target);
         this.levelView.playExplosionCloudAnimation(targetEntity.position);
         this.addCommandRecord("explode", targetEntity.type, commandQueueItem.repeat);
+        this.levelView.audioPlayer.play("explode");
         var entities = this.levelEntity.entityMap;
         for (var value of entities) {
           let entity = value[1];
@@ -1315,9 +1319,16 @@ class GameController {
     if (!this.attemptRunning || this.resultReported) {
       return;
     }
-    // check the final state to see if its solved
-    if (this.levelModel.isSolved()) {
-      this.endLevel(true);
+    if (!this.useVerificationFunctionForFailure) {
+      // check the final state to see if its solved
+      if (this.levelModel.isSolved()) {
+        this.endLevel(true);
+      }
+    } else {
+      // check the final state to see if its solved
+      if (this.levelModel.isSolved()) {
+        this.endLevel(false);
+      }
     }
   }
 

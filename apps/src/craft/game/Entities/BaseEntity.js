@@ -384,10 +384,10 @@ export default class BaseEntity {
         this.controller.addCommandRecord("attack", this.type, commandQueueItem.repeat);
         let facingName = this.controller.levelView.getDirectionName(this.facing);
         this.controller.levelView.playScaledSpeed(this.sprite.animations, "attack" + facingName);
-        setTimeout(() => {
-            let frontEntity = this.controller.levelEntity.getEntityAt(this.controller.levelModel.getMoveForwardPosition(this));
+        setTimeout((entity) => {
+            let frontEntity = entity.controller.levelEntity.getEntityAt(entity.controller.levelModel.getMoveForwardPosition(entity));
             if (frontEntity) {
-                var callbackCommand = new CallbackCommand(this.controller, () => { }, () => { frontEntity.takeDamage(callbackCommand); }, frontEntity);
+                var callbackCommand = new CallbackCommand(entity.controller, () => { }, () => { frontEntity.takeDamage(callbackCommand); }, frontEntity);
                 frontEntity.addCommand(callbackCommand);
             }
             setTimeout(function (controller, entity, thisEntity) {
@@ -397,8 +397,8 @@ export default class BaseEntity {
                     frontEntity.queue.endPushHighPriorityCommands();
                 }
                 commandQueueItem.succeeded();
-            }, 300, this.controller, frontEntity, this);
-        }, 200);
+            }, 300, entity.controller, frontEntity, entity);
+        }, 200, this);
     }
 
     pushBack(commandQueueItem, pushDirection, movementTime) {

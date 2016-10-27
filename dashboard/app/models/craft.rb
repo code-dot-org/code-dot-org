@@ -52,6 +52,7 @@ class Craft < Blockly
     :level_verification_timeout,
     :temporary_feedback_message,
     :use_player,
+    :use_verification_function_for_failure,
     :free_play
   )
 

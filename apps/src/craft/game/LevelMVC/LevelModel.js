@@ -212,6 +212,10 @@ export default class LevelModel {
     return false;
   }
 
+  getScore() {
+    return this.controller.score;
+  }
+
   getEntityCount(entityType) {
     var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
     return entityList.length; 

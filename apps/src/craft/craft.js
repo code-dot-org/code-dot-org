@@ -602,6 +602,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     },
     levelVerificationTimeout: levelConfig.levelVerificationTimeout,
     isDaytime: levelConfig.isDaytime,
+    useVerificationFunctionForFailure: levelConfig.useVerificationFunctionForFailure,
     groundPlane: levelConfig.groundPlane,
     usePlayer: !doNotShowPlayer,
     useScore: levelConfig.useScore,
