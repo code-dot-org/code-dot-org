@@ -1,11 +1,24 @@
 <%
+require 'active_support/core_ext/object/try'
+
+unless system("git ls-remote --exit-code origin #{branch} > /dev/null")
+  raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake stack:start branch=BRANCH`.'
+end
+
+commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
+
 unless dry_run
   update_cookbooks.call
   update_bootstrap_script.call
 end
 
-# Nonce value for AMI resources. Change this value to generate a new base AMI on the next CloudFormation update.
-ami = 1
+old_image_id = (cfn.describe_stacks(stack_name: stack_name) rescue nil).try do |response|
+  response.stacks.first.outputs.find{|output| output.output_key == 'ImageId'}.try(:output_value)
+end || image_id
+
+# Nonce value to generate a new base AMI for each unique commit.
+ami = commit[1..5]
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -27,8 +40,8 @@ Resources:
         Timeout: PT40M
         Count: 1
     Properties:
-      ImageId: <%=image_id%>
-      InstanceType: c4.8xlarge
+      ImageId: <%=old_image_id%>
+      InstanceType: <%=instance_type%>
       IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
       SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
@@ -49,7 +62,8 @@ Resources:
             local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]',
             'recipe[cdo-apps::stop]',
           ],
-          commit: `git ls-remote origin #{branch} | cut -f1`.strip) %>
+          commit: commit
+        )%>
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
     DependsOn: "WebServerAMI#{ami}",
     StackName: {Ref: 'AWS::StackName' },

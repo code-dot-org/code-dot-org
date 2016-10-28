@@ -288,6 +288,7 @@ module AWS
           availability_zone: availability_zones.first,
           availability_zones: availability_zones,
           azs: azs,
+          cfn: cfn,
           s3_bucket: S3_BUCKET,
           file: method(:file),
           js: method(:js),

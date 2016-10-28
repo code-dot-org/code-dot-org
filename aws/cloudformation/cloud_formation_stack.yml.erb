@@ -1,12 +1,17 @@
 <%
 require 'cdo/aws/cloudfront'
-unless dry_run
-  update_bootstrap_script.call
-  update_certs.call unless cdn_enabled
+unless system("git ls-remote --exit-code origin #{branch} > /dev/null")
+  raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake stack:start branch=BRANCH`.'
 end
-commit = '521b9fa4942aded6733afd98bc17079d4c23c457'
-#commit = (ENV['COMMIT'] || `git ls-remote origin #{branch} | cut -f1`.strip)
 
+commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
+
+unless dry_run
+  update_certs.call unless cdn_enabled
+  update_cookbooks.call
+  update_bootstrap_script.call
+end
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -14,7 +19,7 @@ Description: AWS CloudFormation Template for Code.org application
 Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
-  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
+  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}", commit: commit %>
   ASGCount: <%= lambda_fn.call 'ASGCount',
     Default: 1,
     AutoScalingGroupTags: [
@@ -258,6 +263,7 @@ Resources:
             HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
             DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
 <% end -%>
+<% if environment == :production %>
   GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -272,6 +278,7 @@ Resources:
       CacheNodeType: cache.r3.large
       SecurityGroupIds: ['Fn::GetAtt': [VPC, RedisSecurityGroup]]
       CacheSubnetGroupName: {Ref: GeocoderSubnetGroup}
+<% end -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
     Properties:
