@@ -831,7 +831,7 @@ Craft.executeUserCode = function () {
   var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
       'JavaScript',
       'craft_onTouched');
-  console.log(codeCollideObstacle);
+  //console.log(codeCollideObstacle);
   //var whenCollideObstacleFunc = codegen.functionFromCode(
   //    codeCollideObstacle, {
   //      StudioApp: studioApp,
@@ -859,6 +859,9 @@ Craft.executeUserCode = function () {
    *  }
    */
   code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+  if (typeof Raven !== 'undefined') {
+    Raven.setExtraContext({ code: code, blocks: Blockly.Xml.domToPrettyText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) });
+  }
   const evalApiMethods = {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
