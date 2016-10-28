@@ -40,6 +40,4 @@ Feature: Big Game Versions
     And element "button.version-preview" is visible
     And I click selector "button:contains(Restore this Version):eq(0)"
     And I wait until element "#showVersionsModal" is gone
-    Then I wait to see "#x-close"
-    And I close the dialog
     And element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
