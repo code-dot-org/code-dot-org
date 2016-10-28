@@ -7,7 +7,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     Then I wait until element "#runButton" is visible
-    And I click selector ".csf-top-instructions button:contains(OK)"
+    And I close the instructions overlay if it exists
     When I drag droplet block "moveRight" to line 2
     And I press "runButton"
     And I wait to see ".modal"
@@ -21,7 +21,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     Then I wait until element "#runButton" is visible
-    And I click selector ".csf-top-instructions button:contains(OK)"
+    And I close the instructions overlay if it exists
     When I switch to text mode
     And I append text to droplet "moveRight();\n"
     And I press "runButton"
@@ -129,7 +129,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     Then I wait until element "#runButton" is visible
-    And I click selector ".csf-top-instructions button:contains(OK)"
+    And I close the instructions overlay if it exists
     When I drag droplet block "moveUp" to line 2
     And I drag droplet block "moveLeft" to line 3
     And I drag droplet block "moveDown" to line 4
@@ -143,7 +143,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     Then I wait until element "#runButton" is visible
-    And I click selector ".csf-top-instructions button:contains(OK)"
+    And I close the instructions overlay if it exists
     When I switch to text mode
     And I append text to droplet "moveUp();\n"
     And I append text to droplet "moveLeft();\n"

@@ -38,7 +38,7 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   Then I wait until element "#runButton" is visible
-  And I click selector ".csf-top-instructions button:contains(OK)"
+  And I close the instructions overlay if it exists
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
