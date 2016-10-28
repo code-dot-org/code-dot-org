@@ -197,7 +197,7 @@ export default class LevelModel {
     }
     return false;
   }
-
+  
   isEntityTypeRunning(entityType) {
     var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
     for (var i = 0; i < entityList.length; i++) {

@@ -366,6 +366,8 @@ export default class BaseEntity {
 
     use(commandQueueItem, userEntity) {
         // default behavior for use ?
+        var animationName = "lookAtCam" + this.controller.levelView.getDirectionName(this.facing);
+        this.controller.levelView.playScaledSpeed(this.sprite.animations, animationName);
         this.queue.startPushHighPriorityCommands();
         this.controller.events.forEach(e => e({ eventType: EventType.WhenUsed, targetType: this.type, eventSenderIdentifier: userEntity.identifier, targetIdentifier: this.identifier }));
         this.queue.endPushHighPriorityCommands();
@@ -406,7 +408,9 @@ export default class BaseEntity {
         var pushBackPosition = levelModel.getPushBackPosition(this, pushDirection);
         var canMoveBack = levelModel.isPositionEmpty(pushBackPosition)[0];
         if (canMoveBack) {
+            this.updateHidingBlock(this.position);
             this.position = pushBackPosition;
+            this.updateHidingTree();
             var tween = this.controller.levelView.addResettableTween(this.sprite).to({
                 x: (this.offset[0] + 40 * this.position[0]), y: (this.offset[1] + 40 * this.position[1])
             }, movementTime, Phaser.Easing.Linear.None);
@@ -471,7 +475,6 @@ export default class BaseEntity {
 
         animationName += facingName;
         this.controller.levelView.playScaledSpeed(this.sprite.animations, animationName);
-        this.controller.printErrorMsg(this.type + " calls animation : " + animationName + "\n");
     }
 
     updateAnimationDirection() {

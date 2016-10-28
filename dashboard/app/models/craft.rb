@@ -457,6 +457,7 @@ SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
   <block type='craft_plantCrop'></block>
   <block type='craft_tillSoil'></block>
   <block type='craft_placeBlockAhead'></block>
+  <block type="when_run"></block>
 </category>
 <category name="Event Loops">
   <block type="craft_forever"></block>
@@ -509,7 +510,7 @@ SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
   <block type="craft_chicken"></block>
 </category>
 <category name="Global Events">
-  <block type="when_run"></block>
+  <block type="craft_whenRun"></block>
   <block type="craft_whenDay"></block>
   <block type="craft_whenNight"></block>
 </category>

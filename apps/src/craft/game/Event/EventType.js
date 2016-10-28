@@ -6,5 +6,6 @@ export default Object.freeze({
     WhenNight : 4,
     WhenDay : 5,
     WhenNightGlobal : 6,
-    WhenDayGlobal : 7
+    WhenDayGlobal : 7,
+    WhenRun : 8
 });

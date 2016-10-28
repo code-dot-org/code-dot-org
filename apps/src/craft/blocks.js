@@ -13,7 +13,8 @@ const eventTypes = Object.freeze({
   WhenNight : 4,
   WhenDay : 5,
   WhenNightGlobal : 6,
-  WhenDayGlobal : 7
+  WhenDayGlobal : 7,
+  WhenRun : 8
 });
 
 const numbersToDisplayText = {
@@ -547,6 +548,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   makeGlobalEventBlock('whenDay', 'when day', eventTypes.WhenDayGlobal);
   makeGlobalEventBlock('whenNight', 'when night', eventTypes.WhenNightGlobal);
+  makeGlobalEventBlock('whenRun', 'when run', eventTypes.WhenRun);
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
