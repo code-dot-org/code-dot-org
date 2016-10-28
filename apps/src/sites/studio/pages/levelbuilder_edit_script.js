@@ -218,8 +218,11 @@ const ScriptEditor = React.createClass({
       }
       case 'ADD_LEVEL': {
         const levels = newState[options.stage - 1].levels;
+        const id = newLevelId--;
         levels.push({
-          ids: [newLevelId--]
+          ids: [id],
+          activeId: id,
+          expand: true
         });
         this.updatePositions(levels);
         break;
@@ -250,6 +253,20 @@ const ScriptEditor = React.createClass({
         const temp = levels.splice(options.levelA - 1, 1);
         levels.splice(options.levelB - 1, 0, temp[0]);
         this.updatePositions(levels);
+        break;
+      }
+      case 'CHOOSE_LEVEL': {
+        const level = newState[options.stage - 1].levels[options.level - 1];
+        if (level.ids[options.index] === level.activeId) {
+          level.activeId = options.value;
+          level.key = levelKeyList[options.value];
+        }
+        level.ids[options.index] = options.value;
+        break;
+      }
+      case 'TOGGLE_EXPAND': {
+        const level = newState[options.stage - 1].levels[options.level - 1];
+        level.expand = !level.expand;
         break;
       }
       default:
@@ -561,20 +578,16 @@ const LevelEditor = React.createClass({
     {label: 'Unplugged', value: 'unplugged'}
   ],
 
-  getInitialState() {
-    return {expand: this.props.level.ids[0] === -1};
-  },
-
   toggleExpand() {
-    this.setState({expand: !this.state.expand});
+    this.props.handleAction('TOGGLE_EXPAND', {stage: this.props.stagePosition, level: this.props.level.position});
   },
 
   containsLegacyLevel() {
     return this.props.level.ids.some(id => /^blockly:/.test(levelKeyList[id]));
   },
 
-  handleLevelSelected(value) {
-    console.log(value);
+  handleLevelSelected(index, {value}) {
+    this.props.handleAction('CHOOSE_LEVEL', {stage: this.props.stagePosition, level: this.props.level.position, index, value});
   },
 
   handleRemove() {
@@ -618,7 +631,7 @@ const LevelEditor = React.createClass({
             <div style={styles.remove} onMouseDown={this.handleRemove}>
               <i className="fa fa-times"/>
             </div>
-            {this.state.expand &&
+            {this.props.level.expand &&
               <div style={styles.levelTokenActive}>
                 <span style={Object.assign({float: 'left'}, styles.levelFieldLabel)}>
                   Level type
@@ -640,7 +653,7 @@ const LevelEditor = React.createClass({
                     </div>
                   </div>
                 }
-                {this.props.level.ids.map(id =>
+                {this.props.level.ids.map((id, index) =>
                   <div key={id}>
                     {this.props.level.ids.length > 1 &&
                       <div>
@@ -657,7 +670,7 @@ const LevelEditor = React.createClass({
                     <VirtualizedSelect
                       options={levelKeyOptions}
                       value={id}
-                      onChange={this.handleLevelSelected}
+                      onChange={this.handleLevelSelected.bind(null, index)}
                       clearable={false}
                       arrowRenderer={ArrowRenderer}
                     />
