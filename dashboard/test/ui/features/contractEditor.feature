@@ -77,6 +77,7 @@ Scenario: Changing Parameter names
   Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
   And I press "modalEditorClose"
+  And I resize top instructions to "100" pixels tall
 
   When I open the topmost blockly category "Functions"
   And I press the SVG text "Create a Function"
