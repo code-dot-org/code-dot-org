@@ -2,7 +2,7 @@
  * For a comma-separated string of tags, generate a comma-separated string of their friendly
  * names.
  * e.g. Given a prefix of "subject_" and a string of tags of "history,science",
- * generate the readable string "History, Science".  These friendly strings are
+ * generate the readable string "Social Studies, Science".  These friendly strings are
  * stored in the string table as "subject_history" and "subject_science".
  *
  * @param {string} prefix - The prefix applied to the tag in the string table.
@@ -15,19 +15,29 @@ function getTagString(prefix, tagString) {
   }
 
   const tagToString = {
-    length_1_hour: "One hour",
-    subject_english: "English",
-    subject_history: "History",
-    teacher_experience_expert: "Expert",
+    length_1hour: "One hour",
+    "length_1hour-follow": "One hour with follow-on",
+    "length_few-hours": "A few hours",
+
+    subject_science: "Science",
+    subject_math: "Math",
+    subject_history: "Social Studies",
+    subject_la: "Language Arts",
+    subject_art: "Art, Design, Media",
+    subject_other: "Other",
+    "subject_cs-only": "Computer Science only",
+
     teacher_experience_beginner: "Beginner",
-    student_experience_expert: "Expert",
+    teacher_experience_comfortable: "Comfortable",
+
     student_experience_beginner: "Beginner",
-    activity_type_programming: "Programming tutorial",
-    grade_pre: "Pre",
-    "grade_2-5": "2-5",
-    "grade_6-8": "6-8",
-    programming_language_javascript: "JavaScript",
-    programming_language_c: "C",
+    student_experience_comfortable: "Comfortable",
+
+    "activity_type_online-tutorial": "Self-led tutorial",
+    "activity_type_lesson-plan": "Lesson plan",
+
+    // todo:
+    //international_languages_
   };
 
   return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
