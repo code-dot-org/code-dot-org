@@ -43,7 +43,7 @@ const TutorialExplorer = React.createClass({
       windowWidth: undefined,
       windowHeight: undefined,
       mobileLayout: $(window).width() <= TutorialExplorer.mobileWidth,
-      showingModalFilters: true
+      showingModalFilters: false
     };
   },
 
