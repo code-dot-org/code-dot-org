@@ -553,11 +553,125 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
-  factory :school_info do
+  # school info
+
+  # this is the only factory used for testing the deprecated data formats.
+  factory :school_info_without_country, class: SchoolInfo do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
     association :school_district
   end
+
+  factory :school_info_non_us, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_name 'Grazebrook'
+    full_address '31 West Bank, London, England'
+  end
+
+  factory :school_info_us_private, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_us_other, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  # school info public
+
+  factory :public_school_info_with_district_and_school, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    association :school_district
+    association :school, factory: :public_school
+  end
+
+  # intentionally invalid configuration
+  factory :public_school_info_without_district, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    association :school, factory: :public_school
+  end
+
+  # intentionally invalid configuration
+  factory :public_school_info_without_school, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    association :school_district
+  end
+
+  factory :public_school_info_with_other_school, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    association :school_district
+    school_other true
+    school_name "Another School"
+  end
+
+  factory :public_school_info_with_other_district, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    school_district_other true
+    school_district_name "Another District"
+    school_name "Another School"
+  end
+
+  # school info charter
+
+  factory :charter_school_info_with_district_and_school, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
+    state {'WA'}
+    association :school_district
+    association :school, factory: :charter_school
+  end
+
+  # intentionally invalid configuration
+  factory :charter_school_info_without_district, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
+    state {'WA'}
+    association :school, factory: :charter_school
+  end
+
+  # intentionally invalid configuration
+  factory :charter_school_info_without_school, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
+    state {'WA'}
+    association :school_district
+  end
+
+  factory :charter_school_info_with_other_school, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
+    state {'WA'}
+    association :school_district
+    school_other true
+    school_name "Another School"
+  end
+
+  factory :charter_school_info_with_other_district, class: SchoolInfo do
+    country 'US'
+    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
+    state {'WA'}
+    school_district_other true
+    school_district_name "Another District"
+    school_name "Another School"
+  end
+
+  # end school info
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
@@ -594,5 +708,27 @@ FactoryGirl.define do
     city "Seattle"
     state "WA"
     zip "98101"
+  end
+
+  factory :public_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id 333
+    name "A seattle public school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    association :school_district
+  end
+
+  factory :charter_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id 333
+    name "A seattle charter school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    association :school_district
   end
 end
