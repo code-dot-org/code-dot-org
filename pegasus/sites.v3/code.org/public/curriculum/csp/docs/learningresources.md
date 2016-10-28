@@ -3,7 +3,7 @@ title: Learning JS Resources
 video_player: true
 ---
 
-# CSP - Learning JavaScript Resources
+# CS Principles - Learning JavaScript Resources
 
 The following table is intended to outline the main programming topics for Unit 3, so that teachers may familiarize themselves with the material and feel more comfortable running the lessons in the unit. 
 

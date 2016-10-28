@@ -7,6 +7,7 @@ import { extend } from '../utils';
 var levels = {};
 
 levels['1'] = {
+  'instructionsImportant': true,
   'requiredBlocks': [
     [{'test': 'moveLeft', 'type': 'bounce_moveLeft'}]
   ],

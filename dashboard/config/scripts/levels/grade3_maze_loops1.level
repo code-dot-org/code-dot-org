@@ -6,7 +6,6 @@
   "user_id": 6,
   "properties": {
     "skin": "pvz",
-    "instructions": "Assessment:  Get me to the sunflower using only 5 blocks! ",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
@@ -14,7 +13,7 @@
     "skip_instructions_popup": "false",
     "ideal": "5",
     "step_speed": "2",
-    "markdown_instructions": "**Assessment:**  Get me to the sunflower using only 5 blocks! ",
+    "markdown_instructions": "Get me to the sunflower using only 5 blocks! ",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -28,7 +27,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to find errors.\",\"hint_id\":\"grade3_maze_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/f21d2acb307da3eea310786017a7dbc7/grade3_maze_loops1.mp3\"}]",
+    "instructions_important": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",

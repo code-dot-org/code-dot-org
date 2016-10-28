@@ -1472,6 +1472,9 @@ en:
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
         The Great Bug Bash: The Great Bug Bash
+      Tips For Working on Your Own:
+        description here: description here
+        title: title
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -6173,6 +6176,38 @@ en:
         Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
         Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
         Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu4_assess1_DDoS:
+        A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems: A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems
+        An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
+        An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).: An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).
+        An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.: An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.
+      cspu4_assess1_encryption:
+        Asymmetric: Asymmetric
+        Public key: Public key
+        SSL: SSL
+        Symmetric: Symmetric
+      cspu4_assess1_keyEncryption:
+        A Public Key database ensures 3rd party accountability of security: A Public Key database ensures 3rd party accountability of security
+        A key for decrypting is never made public: A key for decrypting is never made public
+        Allows secure communication without establishing a *shared* encryption key ahead of time.: Allows secure communication without establishing a *shared* encryption key ahead of time.
+        Using public key guarantees that only the intended recipient can decrypt the message: Using public key guarantees that only the intended recipient can decrypt the message
+      cspu4_assess1_mod:
+        1 MOD 16: 1 MOD 16
+        52 MOD 32: 52 MOD 32
+        9 MOD 64: 9 MOD 64
+        9 MOD 8: 9 MOD 8
+      cspu4_assess1_moore:
+        Moore's Law describes a relationship of boolean logic statements involving AND and OR: Moore's Law describes a relationship of boolean logic statements involving AND and OR
+        Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
+        Moore's Law is the observation that computing power tends to double every two years: Moore's Law is the observation that computing power tends to double every two years
+        Moore's Law is the principle that one should assume that any traffic on the Internet is insecure: Moore's Law is the principle that one should assume that any traffic on the Internet is insecure
+      cspu4_assess1_phishing:
+        ? You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        : You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability: You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability
+        ? You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”: You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”
       cspu5_assess1_additem:
         cart total = 1;: cart total = 1;
         cartTotal + 1;: cartTotal + 1;
