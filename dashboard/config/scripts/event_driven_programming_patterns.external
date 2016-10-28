@@ -83,3 +83,16 @@ In the next few levels we'll practice this pattern of creating event-driven prog
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tips
+**Key Idea:** 
+
+* There is a pattern to how these programs are constructed and developed in App Lab.
+
+**Key Behavior:** 
+
+* Setting up the expectation that programs don't work on the first try. The Run-Test-Debug cycle is part of programming practice. As you get better you learn to write a small amount of code, verify that it works and then move on.
+
+* You can do a lot as a teacher to model this expectation. We call it acting as the "lead learner" in the classroom.  In the face of some problem or uncertainty, rather teacher-as-source-of-all-knowledge you model the behavior of a good learner, who says "I don't know, but with some effort and attention to detail, together, I'm sure we can find out."
+MARKDOWN

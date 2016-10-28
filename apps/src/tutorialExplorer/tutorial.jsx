@@ -57,10 +57,12 @@ const Tutorial = React.createClass({
               style={{cursor: 'pointer'}}
               onClick={this.tutorialClicked}
             >
-              <img
-                src={this.props.item.image.replace("/images/", "/images/fill-520x390/")}
-                style={{width: '100%'}}
-              />
+              <div style={{position: "relative", width: "100%", height: 0, paddingTop: "75%"}}>
+                <img
+                  src={this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg")}
+                  style={{position: "absolute", top: 0, left: 0, width: "100%"}}
+                />
+              </div>
               <div style={styles.tutorialName}>
                 {this.props.item.name}
               </div>
