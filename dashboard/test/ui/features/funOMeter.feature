@@ -5,6 +5,7 @@ Feature: Fun-O-Meter
 Scenario: Rate a Puzzle
   Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#runButton"
 
   When I drag block "4" to block "11" plus offset 35, 30
   And I press "runButton"
@@ -28,6 +29,7 @@ Scenario: Rate a Puzzle
 
   Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#runButton"
 
   When I wait to see "#runButton"
   And I press "runButton"
