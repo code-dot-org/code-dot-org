@@ -10,8 +10,9 @@ import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
+import PaginationWrapper from '../../templates/PaginationWrapper';
 
-const MAX_SEARCH_RESULTS = 40;
+const MAX_SEARCH_RESULTS = 27;
 const animationPickerStyles = {
   allAnimations: {
     color: color.purple,
@@ -20,7 +21,16 @@ const animationPickerStyles = {
   },
   breadCrumbs: {
     margin: "8px 0",
-    fontSize: 14
+    fontSize: 14,
+    display: "inline-block"
+  },
+  pagination: {
+    float: 'right',
+    display: 'inline',
+    marginTop: 10
+  },
+  emptyResults: {
+    paddingBottom: 10
   }
 };
 
@@ -36,20 +46,25 @@ const AnimationPickerBody = React.createClass({
   getInitialState() {
     return {
       searchQuery: '',
-      categoryQuery: ''
+      categoryQuery: '',
+      currentPage: 0
     };
   },
 
   onSearchQueryChange(value) {
-    this.setState({searchQuery: value});
+    this.setState({searchQuery: value, currentPage: 0});
   },
 
   onCategoryChange(event) {
-    this.setState({categoryQuery: event.target.className});
+    this.setState({categoryQuery: event.target.className, currentPage: 0});
   },
 
   onClearCategories() {
-    this.setState({categoryQuery: '', searchQuery: ''});
+    this.setState({categoryQuery: '', searchQuery: '', currentPage: 0});
+  },
+
+  onChangePageNumber(number) {
+    this.setState({currentPage: number - 1});
   },
 
   animationCategoriesRendering() {
@@ -63,9 +78,8 @@ const AnimationPickerBody = React.createClass({
     );
   },
 
-  animationItemsRendering() {
-    const pageOfResults = searchAnimations(this.state.searchQuery, this.state.categoryQuery);
-    return pageOfResults.map(animationProps =>
+  animationItemsRendering(animations) {
+    return animations.map(animationProps =>
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={animationProps.name}
@@ -76,6 +90,7 @@ const AnimationPickerBody = React.createClass({
   },
 
   render() {
+    let {results, pageCount} = searchAnimations(this.state.searchQuery, this.state.categoryQuery, this.state.currentPage);
     return (
       <div>
         <h1 style={styles.title}>
@@ -90,14 +105,24 @@ const AnimationPickerBody = React.createClass({
           value={this.state.searchQuery}
           onChange={this.onSearchQueryChange}
         />
-        {this.state.categoryQuery !== '' &&
-          <div style={animationPickerStyles.breadCrumbs}>
-            <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
-            <span>{AnimationCategories[this.state.categoryQuery]}</span>
-          </div>
-        }
-        <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
-          {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
+        <div>
+          {this.state.categoryQuery !== '' &&
+            <div style={animationPickerStyles.breadCrumbs}>
+              <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
+              <span>{AnimationCategories[this.state.categoryQuery]}</span>
+            </div>
+          }
+          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+            <div style={animationPickerStyles.pagination}>
+              <PaginationWrapper totalPages={pageCount} currentPage={this.state.currentPage + 1} onChangePage={this.onChangePageNumber}/>
+            </div>
+          }
+        </div>
+        <ScrollableList style={{maxHeight: 420}}> {/* TODO: Is this maxHeight appropriate? */}
+          {pageCount === 0 &&
+            <div style={animationPickerStyles.emptyResults}>Sorry, no results found.</div>
+          }
+          {((this.state.searchQuery === '' && this.state.categoryQuery === '') || pageCount === 0) &&
             <div>
               <AnimationPickerListItem
                 label={gamelabMsg.animationPicker_drawYourOwn()}
@@ -115,7 +140,7 @@ const AnimationPickerBody = React.createClass({
             this.animationCategoriesRendering()
           }
           {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-            this.animationItemsRendering()
+            this.animationItemsRendering(results)
           }
         </ScrollableList>
       </div>
@@ -138,10 +163,11 @@ WarningLabel.propTypes = {
  * can be displayed and used to add an animation to the project.
  * @param {string} searchQuery - text entered by the user to find an animation
  * @param {string} categoryQuery - name of category user selected to filter animations
+ * @param {int} currentPage - current range of animations to display
  * @return {Array.<SerializedAnimationProps>} - Limited list of animations
  *         from the library that match the search query.
  */
-function searchAnimations(searchQuery, categoryQuery) {
+function searchAnimations(searchQuery, categoryQuery, currentPage) {
   // Make sure to generate the search regex in advance, only once.
   // Search is case-insensitive
   // Match any word boundary or underscore followed by the search query.
@@ -173,9 +199,12 @@ function searchAnimations(searchQuery, categoryQuery) {
   // Finally alphabetize the results (for stability), take only the first
   // MAX_SEARCH_RESULTS so we don't load too many images at once, and return
   // the associated metadata for each result.
-  return resultSet
+  const results = resultSet
       .sort()
-      .slice(0, MAX_SEARCH_RESULTS)
       .map(result => animationLibrary.metadata[result])
       .toArray();
+  return {
+    pageCount: Math.ceil(results.length / MAX_SEARCH_RESULTS),
+    results: results.slice(currentPage*MAX_SEARCH_RESULTS, (currentPage+1)*MAX_SEARCH_RESULTS)
+  };
 }

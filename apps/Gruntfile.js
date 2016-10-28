@@ -45,18 +45,18 @@ module.exports = function (grunt) {
 
   /** @const {string[]} */
   var ALL_APPS = [
-    'maze',
-    'turtle',
-    'bounce',
-    'flappy',
-    'studio',
-    'jigsaw',
-    'calc',
     'applab',
-    'eval',
-    'netsim',
+    'bounce',
+    'calc',
     'craft',
+    'eval',
+    'flappy',
     'gamelab',
+    'jigsaw',
+    'maze',
+    'netsim',
+    'studio',
+    'turtle',
     'weblab'
   ];
 
@@ -165,10 +165,18 @@ module.exports = function (grunt) {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
+        // Pull p5.js and p5.play.js into the package from our fork of the
+        // p5.play repo at https://github.com/code-dot-org/p5.play
         {
           expand: true,
-          cwd: 'lib/p5play',
-          src: ['*.js'],
+          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          src: ['p5.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: './node_modules/@code-dot-org/p5.play/lib',
+          src: ['p5.play.js'],
           dest: 'build/package/js/p5play/'
         },
         {
@@ -346,7 +354,7 @@ module.exports = function (grunt) {
 
 
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
-    return [app, './src/' + app + '/main.js'];
+    return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }).concat(
     appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
   ));
@@ -370,6 +378,7 @@ module.exports = function (grunt) {
     'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
     'initApp/initApp':              './src/sites/studio/pages/initApp.js',
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
 
   var otherEntries = {

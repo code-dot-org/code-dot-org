@@ -180,8 +180,8 @@ class ApiController < ApplicationController
         }
       end
       response[:disableSocialShare] = current_user.under_13?
-      response[:disablePostMilestone] =
-        !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+      response[:disablePostMilestone] = script.disable_post_milestone?
+      response[:isHoc] = script.hoc?
 
       recent_driver = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver

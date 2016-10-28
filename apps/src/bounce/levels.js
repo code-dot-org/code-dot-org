@@ -6,6 +6,7 @@ var tb = require('../block_utils').createToolbox;
 module.exports = {
 
   '1': {
+    'instructionsImportant': true,
     'requiredBlocks': [
       [{'test': 'moveLeft', 'type': 'bounce_moveLeft'}]
     ],

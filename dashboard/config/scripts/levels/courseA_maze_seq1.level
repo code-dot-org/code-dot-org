@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Play with these blocks to see if you can get me to the pig!",
     "start_direction": "3",
-    "step_mode": "0",
+    "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -25,9 +25,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.\",\r\n  \"hint_id\": \"K2.0_sequence_pre_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "This should be an angry birds style \"freeplay\"",

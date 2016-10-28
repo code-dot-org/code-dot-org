@@ -24,15 +24,13 @@ social:
       .col-50{style: "text-align: center"}
         %br/
         %br/
-        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 60px"}
+        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
           ROBOTICS
         %br/
         %br/
-        Lines of text about Robotics.
-      .col-50
+        Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
+      .col-50.tablet-feature
         %img{src: "/images/learn/robotics.png", style: "text-align: center"}
-
-%br/
 
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
@@ -51,63 +49,50 @@ social:
 - entries = []
 - entries << {name: "beginner", text: "Beginner"}
 - entries << {name: "comfortable", text: "Comfortable"}
-- entries << {name: "experienced", text: "Experienced"}
-- filters << {name: "teacher_experience", text: "Educator's CS experience", entries: entries}
+- filters << {name: "teacher_experience", text: "Educator's experience", entries: entries}
 
 - entries = []
 - entries << {name: "beginner", text: "Beginner"}
 - entries << {name: "comfortable", text: "Comfortable"}
-- entries << {name: "experienced", text: "Experienced"}
-- filters << {name: "student_experience", text: "Student's CS experience", entries: entries}
+- filters << {name: "student_experience", text: "Student's experience", entries: entries}
 
 - entries = []
-- entries << {name: "robotics", text: "Robotics"}
-- filters << {name: "activity_type", text: "Activity type", entries: entries, display: false}
+- entries << {name: "computers", text: "Computers"}
+- entries << {name: "android", text: "Android"}
+- entries << {name: "ios", text: "iPad/iPhone"}
+- entries << {name: "no-internet", text: "Poor or no internet"}
+- entries << {name: "no-computers", text: "No computers or devices"}
+- filters << {name: "platform", text: "Classroom technology", entries: entries}
 
 - entries = []
 - entries << {name: "science", text: "Science"}
 - entries << {name: "math", text: "Math"}
-- entries << {name: "history", text: "Social Studies, History"}
+- entries << {name: "history", text: "Social Studies"}
 - entries << {name: "la", text: "Language Arts"}
-- entries << {name: "language", text: "World language"}
 - entries << {name: "art", text: "Art, Design, Media"}
 - entries << {name: "other", text: "Other"}
 - entries << {name: "cs-only", text: "Computer Science only"}
 - filters << {name: "subject", text: "Topics", entries: entries}
 
 - entries = []
-- entries << {name: "all", text: "All devices"}
-- entries << {name: "browser", text: "Computers"}
-- entries << {name: "android-tablet", text: "Android Tablet"}
-- entries << {name: "ipad", text: "iPad"}
-- entries << {name: "android-phone", text: "Android phone"}
-- entries << {name: "iphone", text: "iPhones"}
-- entries << {name: "unplugged", text: "No computers or devices"}
-- filters << {name: "platform", text: "Classroom technology", entries: entries}
+- entries << {name: "robotics", text: "Robotics"}
+- filters << {name: "activity_type", text: "Activity type", entries: entries, display: false}
 
 - entries = []
 - entries << {name: "1hour", text: "One hour"}
 - entries << {name: "1hour-follow", text: "One hour with follow-on"}
-- entries << {name: "fewhours", text: "A few hours"}
+- entries << {name: "few-hours", text: "A few hours"}
 - filters << {name: "length", text: "Length", entries: entries}
 
 - entries = []
 - entries << {name: "blocks", text: "Blocks"}
-- entries << {name: "c", text: "C/C++"}
-- entries << {name: "java", text: "Java"}
-- entries << {name: "javascript", text: "JavaScript"}
-- entries << {name: "ios", text: "iOS/Swift"}
-- entries << {name: "python", text: "Python" }
-- entries << {name: "ruby", text: "Ruby" }
-- entries << {name: "none", text: "Language independent" }
+- entries << {name: "typing", text: "Typing"}
 - entries << {name: "other", text: "Other"}
 - filters << {name: "programming_language", text: "Language", entries: entries}
 
 - initial_filters = {}
-- initial_filters[:platform] = ["all"]
 - initial_filters[:teacher_experience] = ["beginner"]
 - initial_filters[:student_experience] = ["beginner"]
-- initial_filters[:length] = ["1hour", "1hour-follow"]
 - initial_filters[:activity_type] = ["robotics"]
 
 .container_responsive

@@ -3,9 +3,6 @@ Feature: Visiting a jigsaw page
 Background:
   Given I am on "http://studio.code.org/s/course1/stage/3/puzzle/1?noautoplay=1"
   And I rotate to landscape
-  Then I wait to see a dialog titled "Puzzle 1 of 12"
-  Then there's an image "instruction_gifs/drag-drop.gif"
-  And I close the dialog
 
 @new_courses
 Scenario: Loading the first jigsaw level

@@ -18,7 +18,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## OS-specific prerequisites
 
-### OS X Mavericks / Yosemite / El Capitan
+### OS X Mavericks / Yosemite / El Capitan / Sierra
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
@@ -35,11 +35,16 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `rbenv install 2.2.3`
   1. Set the global version of Ruby: `rbenv global 2.2.3`
   1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
-1. Set up nvm
+1. Set up [nvm](https://github.com/creationix/nvm)
   1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
   1. Add the following to `~/.bash_profile` or your desired shell configuration file:
-      `export NVM_DIR=~/.nvm`
-      `. $(brew --prefix nvm)/nvm.sh`
+  
+     ```
+     # Load nvm function into the shell
+     export NVM_DIR=~/.nvm
+     source $(brew --prefix nvm)/nvm.sh
+     ```
+     
   1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node 0.12.15
   1. These steps are necessary because of problems with the newest versions of node. We want to be on node 0.12.15 and npm 2.15.1.
@@ -78,7 +83,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         1. `rvm install 2.2.3`
         1. `rvm use 2.2.3 --default`
 1. Install Node.js 0.12.15 and npm 2.15.1
-  1. Option A - nvm
+  1. Option A - [nvm](https://github.com/creationix/nvm)
     1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
       - After completion, close your current terminal window and open a new one.
     1. `nvm install` (this will install the version defined in `.nvmrc`)
@@ -92,6 +97,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `ruby --version  # --> ruby 2.2.3`
   1. `node --version  # --> v0.12.15`
   1. `npm --version   # --> 2.15.1`
+1. When running `bundle install`, you may need to run
+   
+   `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
+   
+   first so that nokogiri picks up the built in libxml2 library. See this [stackoverflow answer](http://stackoverflow.com/a/40038954/186771).
 
 ### Windows note: use an Ubuntu VM
 

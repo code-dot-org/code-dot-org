@@ -1,3 +1,4 @@
+require 'json'
 require 'acapela'
 require 'net/http'
 require 'uri'
@@ -27,6 +28,22 @@ VOICES = {
   }
 }
 
+class TTSSafe < Redcarpet::Render::StripDown
+  def block_code(code, language)
+    ''
+  end
+
+  def link(link, title, content)
+    ''
+  end
+
+  def image(link, title, alt_text)
+    ''
+  end
+end
+
+TTSSafeRenderer = Redcarpet::Markdown.new(TTSSafe)
+
 module TextToSpeech
   extend ActiveSupport::Concern
 
@@ -34,7 +51,7 @@ module TextToSpeech
   # concern ... I'm not sure how best to deal with that.
 
   included do
-    after_save :tts_update
+    before_save :tts_update
 
     serialized_attrs %w(
       tts_instructions_override
@@ -56,43 +73,62 @@ module TextToSpeech
     end
   end
 
+  def tts_upload_to_s3(text, voice=:sharon)
+    filename = self.tts_path(text)
+    TextToSpeech.tts_upload_to_s3(text, filename, voice)
+  end
+
+  def tts_url(text, voice=:sharon)
+    "https://#{TTS_BUCKET}.s3.amazonaws.com/#{self.tts_path(text, voice)}"
+  end
+
+  def tts_path(text, voice=:sharon)
+    content_hash = Digest::MD5.hexdigest(text)
+    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
+  end
+
+  def tts_should_update(property)
+    changed = self.property_changed?(property)
+    changed && write_to_file? && self.published
+  end
+
   def tts_instructions_text
     self.tts_instructions_override || self.instructions || ""
   end
 
   def tts_should_update_instructions?
-    changed = self.property_changed?(self.tts_instructions_override ? 'tts_instructions_override' : 'instructions')
-    changed && write_to_file? && self.published
+    relevant_property = self.tts_instructions_override ? 'tts_instructions_override' : 'instructions'
+    return self.tts_should_update(relevant_property)
   end
 
   def tts_markdown_instructions_text
-    self.tts_markdown_instructions_override || Redcarpet::Markdown.new(Redcarpet::Render::StripDown).render(self.markdown_instructions || "")
+    self.tts_markdown_instructions_override || TTSSafeRenderer.render(self.markdown_instructions || "")
   end
 
   def tts_should_update_markdown_instructions?
-    changed = self.property_changed?(self.tts_markdown_instructions_override ? 'tts_markdown_instructions_override' : 'markdown_instructions')
-    changed && write_to_file? && self.published
+    relevant_property = self.tts_markdown_instructions_override ? 'tts_markdown_instructions_override' : 'markdown_instructions'
+    return self.tts_should_update(relevant_property)
   end
 
-  def tts_instructions_audio_file(voice=:sharon)
-    content_hash = Digest::MD5.hexdigest(self.tts_instructions_text)
-    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
-  end
-
-  def tts_markdown_instructions_audio_file(voice=:sharon)
-    content_hash = Digest::MD5.hexdigest(self.tts_markdown_instructions_text)
-    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
+  def tts_authored_hints_texts
+    JSON.parse(self.authored_hints || '[]').map do |hint|
+      TTSSafeRenderer.render(hint["hint_markdown"])
+    end
   end
 
   def tts_update
-    TextToSpeech.tts_upload_to_s3(
-      self.tts_instructions_text,
-      self.tts_instructions_audio_file
-    ) if self.tts_should_update_instructions?
+    self.tts_upload_to_s3(self.tts_instructions_text) if self.tts_should_update_instructions?
 
-    TextToSpeech.tts_upload_to_s3(
-      self.tts_markdown_instructions_text,
-      self.tts_markdown_instructions_audio_file
-    ) if self.tts_should_update_markdown_instructions?
+    self.tts_upload_to_s3(self.tts_markdown_instructions_text) if self.tts_should_update_markdown_instructions?
+
+    if self.authored_hints && self.tts_should_update('authored_hints')
+      hints = JSON.parse(self.authored_hints)
+      hints.each do |hint|
+        text = TTSSafeRenderer.render(hint["hint_markdown"])
+        self.tts_upload_to_s3(text)
+        hint["tts_url"] = self.tts_url(text)
+      end
+      self.authored_hints = JSON.dump(hints)
+    end
   end
 end

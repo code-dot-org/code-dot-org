@@ -6,6 +6,21 @@ var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
 
+function finished() {
+  // Level is complete and feedback dialog has appeared: exit() succesfully here
+  // (otherwise process may continue indefinitely due to timers)
+  var done = cb;
+  cb = null;
+  // Main blockspace doesn't always exist (i.e. edit-code)
+  if (Blockly.mainBlockSpace) {
+    Blockly.mainBlockSpace.clear();
+  }
+  if (done) {
+    done();
+  }
+}
+
+
 module.exports = function (testCollection, testData, dataItem, done) {
   cb = done;
   var data = dataItem();
@@ -78,24 +93,14 @@ StubDialog.prototype.show = function () {
     // Examine content of the feedback in future tests?
     // console.log(this.options.body.innerHTML);
   }
-  // Level is complete and feedback dialog has appeared: exit() succesfully here
-  // (otherwise process may continue indefinitely due to timers)
-  var done = cb;
-  cb = null;
-  // Main blockspace doesn't always exist (i.e. edit-code)
-  if (Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.clear();
-  }
-  if (done) {
-    done();
-  }
+  finished();
 };
 
 StubDialog.prototype.hide = function () {
 };
 
 function runLevel(app, skinId, level, onAttempt, testData) {
-  require('@cdo/apps/' + app + '/main');
+  require('@cdo/apps/sites/studio/pages/levels-' + app + '-main');
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
@@ -121,6 +126,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
     firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
     isAdmin: true,
+    onFeedback: finished.bind(this),
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already

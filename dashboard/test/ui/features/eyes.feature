@@ -9,9 +9,6 @@ Scenario:
   And I am on "http://studio.code.org/s/events/stage/1/puzzle/1?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
-  And I wait to see "#x-close"
-  And I close the dialog
-  And I see no difference for "closed dialog"
   And I drag block "1" to block "3"
   Then block "4" is child of block "3"
   And I see no difference for "block snap"
@@ -27,8 +24,6 @@ Scenario:
   And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
-  And I close the dialog
-  And I see no difference for "closed dialog"
   And I press "runButton"
   And I hold key "LEFT"
   And I wait to see ".congrats"
@@ -42,8 +37,6 @@ Scenario:
   And I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
-  And I close the dialog
-  And I see no difference for "closed dialog"
   And I press "runButton"
   And I press "finishButton"
   And I hold key "LEFT"
@@ -97,7 +90,6 @@ Scenario:
   When I open my eyes to test "maze"
   Given I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
   And I wait to see "#runButton"
   And I press "runButton"
   And I wait to see ".congrats"
@@ -106,7 +98,6 @@ Scenario:
 
   Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1/lang/ar-sa"
   And I rotate to landscape
-  And I close the dialog
   And I wait to see "#runButton"
   And I see no difference for "maze RTL"
   Given I am on "http://studio.code.org/reset_session/lang/en"
@@ -115,10 +106,8 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "star wars RTL"
-  Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa"
+  Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
-  And I close the dialog
   And I wait to see "#runButton"
   And I see no difference for "star wars RTL"
   And I press "show-code-header"
@@ -149,8 +138,6 @@ Scenario:
   And I open my eyes to test "calc expression evaluation"
   When I am on "http://studio.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
-  And I press ".tooltip-x-close" using jQuery
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
 

@@ -46,6 +46,7 @@
         <block type="maze_moveWest"/>
         <block type="maze_moveNorth"/>
         <block type="maze_moveSouth"/>
+        <block type="collector_collect"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">???</title>
         </block>

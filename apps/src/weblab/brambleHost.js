@@ -382,6 +382,10 @@ function disableInspector() {
   brambleProxy_.disableInspector();
 }
 
+function refreshPreview() {
+  brambleProxy_.refreshPreview();
+}
+
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
@@ -460,6 +464,7 @@ const brambleHost = {
   showTutorial: showTutorial,
   enableInspector: enableInspector,
   disableInspector: disableInspector,
+  refreshPreview: refreshPreview,
   onProjectChanged: onProjectChanged,
   startInitialFileSync: startInitialFileSync,
   syncFiles: syncFiles,

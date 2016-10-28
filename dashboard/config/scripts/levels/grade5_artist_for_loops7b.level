@@ -21,7 +21,7 @@
     "instructions": "Use the counter inside the `set alpha` block to get this faded center.\r\n(This hexagon pattern was made using a 60 degree turn.)",
     "use_contract_editor": "false",
     "embed": "false",
-    "markdown_instructions": "Use the counter inside the `set alpha` block to get this faded center.  \r\n(This hexagon pattern was made using a 60 degree turn.)\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Use the counter inside the `set alpha` block to get this faded center.  \r\n(This hexagon pattern was made using a 60 degree turn.)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

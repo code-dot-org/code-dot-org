@@ -29,7 +29,8 @@
     "instructions": "Add to this code to collect all of the coins.",
     "ideal": "7",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out what's wrong? Try running the code to see what happens.\",\r\n  \"hint_id\": \"gradek_adventurer_loops4a_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
@@ -76,7 +77,9 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveEast"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES">4</title>
+        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>

@@ -12,6 +12,8 @@ require 'logger'
 class S3Packaging
   BUCKET_NAME = 'cdo-build-package'
 
+  attr_reader :commit_hash
+
   # @param package_name [String] Friendly name of the package, used as part of our S3 key
   # @param source_location [String] Path to the location on the filesystem where the build input lives
   # @param target_location [String] Path to the location on the file system where the unzipped packaged contents should lvie
@@ -23,10 +25,6 @@ class S3Packaging
     @target_location = target_location
     @logger = Logger.new(STDOUT)
     regenerate_commit_hash
-  end
-
-  def commit_hash
-    @commit_hash
   end
 
   # Recreates our commit hash (for cases where we may have updated our git tree)

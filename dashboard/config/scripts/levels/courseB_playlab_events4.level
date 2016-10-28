@@ -44,7 +44,9 @@
       "leftButton"
     ],
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the event that controls the left arrow:\\n\\n![](https://images.code.org/445075e3166074f73da6ff96d23c2b4d-image-1475692784084.38.30.png)\",\r\n  \"hint_id\": \"courseB_playlab_events4_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block that makes the knight move left.\\n\\n![](https://images.code.org/f6b9c780dc6ff97bad485553e0aced26-image-1475692773359.38.51.png)\",\r\n  \"hint_id\": \"courseB_playlab_events4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "Knight time!  \r\n\r\nAdd an event so that the knight moves toward the dragon when the left arrow is clicked.",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
