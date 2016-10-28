@@ -88,6 +88,13 @@ export default class LevelModel {
     return this.initialLevelData.verificationFunction(this);
   }
 
+  isFailed() {
+    if(this.initialLevelData.failureCheckFunction !== undefined)
+      return this.initialLevelData.failureCheckFunction(this);
+    else 
+      return false;
+  }
+
   getHouseBottomRight() {
     return this.initialLevelData.houseBottomRight;
   }

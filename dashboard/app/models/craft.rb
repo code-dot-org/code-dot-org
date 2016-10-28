@@ -39,6 +39,7 @@ class Craft < Blockly
     :place_block_options,
     :player_start_direction,
     :verification_function,
+    :failure_check_function,
     :timeout_verification_function,
     :show_popup_on_load,
     :is_daytime,
@@ -52,7 +53,6 @@ class Craft < Blockly
     :level_verification_timeout,
     :temporary_feedback_message,
     :use_player,
-    :use_verification_function_for_failure,
     :free_play
   )
 
@@ -270,6 +270,24 @@ class Craft < Blockly
 
   }
 
+SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
+      neverFailEarly:
+'function (verificationAPI) {
+  // Fail instantly
+  return false;
+}',
+      failInstantly:
+'function (verificationAPI) {
+  // Fail instantly
+  return true;
+}',
+      turnRandomCount:
+'function(verificationAPI) {
+  // Fail instantly when they turn once.
+  return verificationAPI.getTurnRandomCount() >= 1;
+},',
+  }
+
   SAMPLE_VERIFICATION_FUNCTIONS = {
       mapMatches:
 'function (verificationAPI) {
@@ -392,6 +410,7 @@ class Craft < Blockly
 
     default_game_params[:verification_function] = SAMPLE_VERIFICATION_FUNCTIONS[:isPlayerNextTo]
     default_game_params[:timeout_verification_function] = SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS[:fail]
+    default_game_params[:failure_check_function] = SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS[:neverFailEarly]
     default_game_params[:level_verification_timeout] = '30000'
 
     create!(level_params.

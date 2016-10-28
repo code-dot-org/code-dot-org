@@ -602,7 +602,6 @@ Craft.initializeAppLevel = function (levelConfig) {
     },
     levelVerificationTimeout: levelConfig.levelVerificationTimeout,
     isDaytime: levelConfig.isDaytime,
-    useVerificationFunctionForFailure: levelConfig.useVerificationFunctionForFailure,
     groundPlane: levelConfig.groundPlane,
     usePlayer: !doNotShowPlayer,
     useScore: levelConfig.useScore,
@@ -622,6 +621,8 @@ Craft.initializeAppLevel = function (levelConfig) {
         null,
     // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0], // TODO(bjordan): add to utils
+    // eslint-disable-next-line no-eval
+    failureCheckFunction: eval('[' + levelConfig.failureCheckFunction + ']')[0], // TODO(bjordan): add to utils
     // eslint-disable-next-line no-eval
     timeoutResult: eval('[' + (levelConfig.timeoutVerificationFunction || `function() { return false; }`) + ']')[0],
   });

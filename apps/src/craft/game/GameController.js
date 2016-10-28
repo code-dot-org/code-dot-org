@@ -93,7 +93,6 @@ class GameController {
     // Phaser "slow motion" modifier we originally tuned animations using
     this.assumedSlowMotion = 1.5;
     this.initialSlowMotion = gameControllerConfig.customSlowMotion || this.assumedSlowMotion;
-    this.useVerificationFunctionForFailure = false;
 
     this.playerDelayFactor = 1.0;
     this.dayNightCycle = false;
@@ -135,8 +134,6 @@ class GameController {
     this.timeout = levelConfig.levelVerificationTimeout;
     if (levelConfig.useScore !== undefined)
       this.useScore = levelConfig.useScore;
-    if (levelConfig.useVerificationFunctionForFailure !== undefined)
-      this.useVerificationFunctionForFailure = levelConfig.useVerificationFunctionForFailure;
     this.timeoutResult = levelConfig.timeoutResult;
     this.onDayCallback = levelConfig.onDayCallback;
     this.onNightCallback = levelConfig.onNightCallback;
@@ -1336,16 +1333,13 @@ class GameController {
     if (!this.attemptRunning || this.resultReported) {
       return;
     }
-    if (!this.useVerificationFunctionForFailure) {
-      // check the final state to see if its solved
-      if (this.levelModel.isSolved()) {
-        this.endLevel(true);
-      }
-    } else {
-      // check the final state to see if its solved
-      if (this.levelModel.isSolved()) {
-        this.endLevel(false);
-      }
+    // check the final state to see if its solved
+    if (this.levelModel.isSolved()) {
+      this.endLevel(true);
+    }
+    // check the final state to see if its failed
+    if (this.levelModel.isFailed()) {
+      this.endLevel(false);
     }
   }
 

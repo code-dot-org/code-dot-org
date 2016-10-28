@@ -36,9 +36,6 @@
   = f.label :special_level_type, 'Special level type'
   = f.select :special_level_type, options_for_select(@level.class.special_level_type_options, @level.special_level_type), {include_blank: true}
 .field
-  = f.label :use_verification_function_for_failure, 'Use verification function for failure (rather than success)'
-  = boolean_check_box(f, :use_verification_function_for_failure)
-.field
   = f.label :verification_function, 'Verification Function'
   Click to insert: (
   - Craft::SAMPLE_VERIFICATION_FUNCTIONS.each do |name, value|
@@ -60,6 +57,17 @@
   = f.text_area :timeout_verification_function, rows: 10
   :javascript
     var verificationEditorTimeout = levelbuilder.initializeCodeMirror('level_timeout_verification_function', 'javascript');
+.field
+  = f.label :failure_check_function, 'Should fail early function'
+  Click to insert: (
+  - Craft::SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS.each do |name, value|
+    :javascript
+      var earlyFailureFunction#{name} = '#{value.gsub('\n', "\\n' + '")}';
+    %a{style:"cursor: pointer", onclick: "earlyFailureEditor.getDoc().setValue(earlyFailureFunction#{name})"}= "#{name}"
+  )
+  = f.text_area :failure_check_function, rows: 10
+  :javascript
+    var earlyFailureEditor = levelbuilder.initializeCodeMirror('level_failure_check_function', 'javascript');
 .field
   = f.label :level_verification_timeout, 'Level verification timeout in milliseconds (failure if player does not succeed in allotted time)'
   = f.text_field :level_verification_timeout, {value: @level.level_verification_timeout || 0}
