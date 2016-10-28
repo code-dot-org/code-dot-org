@@ -13,7 +13,7 @@ MIN_MESSAGES_PER_THREAD = 50
 
 # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
 CONNECTION_ATTEMPTS = 5
-RETRYABLE_ERROR_TYPES = [Net::SMTPServerBusy, Net::SMTPAuthenticationError]
+RETRYABLE_ERROR_TYPES = [Net::SMTPServerBusy, Net::SMTPAuthenticationError].freeze
 RETRYABLE_ERROR_MESSAGE_MATCH = /(Too many connections, try again later)|(Temporary authentication failure)/
 
 SMTP_OPTIONS = {
