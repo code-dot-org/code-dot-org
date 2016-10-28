@@ -9,7 +9,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import FontAwesome from '../../../../templates/FontAwesome';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const WorkshopTableLoader = React.createClass({
   propTypes: {
@@ -65,7 +65,7 @@ const WorkshopTableLoader = React.createClass({
     }
 
     if (this.state.workshops.length === 0) {
-      return <p>None.</p>;
+      return <p>No workshops found</p>;
     }
 
     return (

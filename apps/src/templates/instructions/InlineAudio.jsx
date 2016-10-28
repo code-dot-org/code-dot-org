@@ -2,7 +2,6 @@
 
 import Radium from 'radium';
 import React from 'react';
-import experiments from '../../experiments';
 
 import { connect } from 'react-redux';
 
@@ -46,6 +45,7 @@ const styles = {
 const InlineAudio = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
+    isK1: React.PropTypes.bool,
     src: React.PropTypes.string,
     message: React.PropTypes.string
   },
@@ -120,7 +120,7 @@ const InlineAudio = React.createClass({
   },
 
   render: function () {
-    if (experiments.isEnabled('tts') && !this.state.error && this.getAudioSrc()) {
+    if (this.props.isK1 && !this.state.error && this.getAudioSrc()) {
       return (
         <div className="inline-audio">
           <div style={[styles.button, styles.volumeButton]}>
@@ -145,5 +145,6 @@ const InlineAudio = React.createClass({
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
+    isK1: state.pageConstants.isK1,
   };
 })(Radium(InlineAudio));

@@ -93,7 +93,7 @@ module TextToSpeech
   end
 
   def tts_instructions_text
-    self.tts_instructions_override || self.instructions || ""
+    self.tts_instructions_override || self.instructions || self.try(:localized_instructions) || ""
   end
 
   def tts_should_update_instructions?
@@ -121,7 +121,7 @@ module TextToSpeech
 
     self.tts_upload_to_s3(self.tts_markdown_instructions_text) if self.tts_should_update_markdown_instructions?
 
-    if self.tts_should_update('authored_hints')
+    if self.authored_hints && self.tts_should_update('authored_hints')
       hints = JSON.parse(self.authored_hints)
       hints.each do |hint|
         text = TTSSafeRenderer.render(hint["hint_markdown"])
