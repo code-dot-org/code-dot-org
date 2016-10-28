@@ -3,15 +3,12 @@
  * the course overview page, and the stage locking dialog.
  */
 import $ from 'jquery';
-import experiments from '@cdo/apps/experiments';
 import Immutable from 'immutable';
 
 export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
 export const ALLOW_HIDEABLE = 'hiddenStage/ALLOW_HIDEABLE';
 
 const STUDENT_SECTION_ID = 'STUDENT';
-
-export const hiddenStagesEnabled = () => experiments.isEnabled('hiddenStages');
 
 const initialState = Immutable.fromJS({
   initialized: false,
@@ -88,10 +85,6 @@ export function allowHideable() {
 
 export function getHiddenStages(scriptName) {
   return dispatch => {
-    if (!hiddenStagesEnabled()) {
-      return;
-    }
-
     $.ajax({
       type: 'GET',
       url: `/s/${scriptName}/hidden_stages`,

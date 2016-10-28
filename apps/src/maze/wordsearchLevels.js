@@ -17,6 +17,7 @@ var wordSearchToolbox = function () {
 module.exports = {
   'k_1': {
     'isK1': true,
+    'instructionsImportant': true,
     'toolbox': wordSearchToolbox(),
     'ideal': 5,
     'requiredBlocks': [

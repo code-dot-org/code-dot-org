@@ -130,7 +130,7 @@ const TutorialDetail = React.createClass({
               >
                 <div className="col-50">
                   <img
-                    src={this.props.item.image}
+                    src={this.props.item.image.replace(".png", ".jpg")}
                     style={{width: '100%'}}
                   />
                 </div>
@@ -171,7 +171,7 @@ const TutorialDetail = React.createClass({
                           </a>
                         </td>
                       </tr>}
-                    {this.props.item.tags_activity_type.split(',').includes("online-tutorial") &&
+                    {this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 &&
                       <tr key={1}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           Short link

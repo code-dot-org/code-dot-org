@@ -185,6 +185,7 @@ module.exports = {
 
   // Formerly page 1
   '1_1': {
+    'instructionsImportant': true,
     'toolbox': toolbox(1, 1),
     'startBlocks': startBlocks(1, 1),
     'ideal': 6,
@@ -555,6 +556,7 @@ module.exports = {
   // Formerly page 2
 
   '2_1': {
+    'instructionsImportant': true,
     'toolbox': toolbox(2, 1),
     'startBlocks': startBlocks(2, 1),
     'ideal': null,
@@ -895,6 +897,7 @@ module.exports = {
   // Page 3 to Debug
 
   'debug_seq_1': {
+    'instructionsImportant': true,
     'toolbox': toolbox(3, 1),
     'startBlocks': startBlocks(3, 1),
     'ideal': 8,
