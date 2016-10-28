@@ -7,7 +7,7 @@ import FilterChoice from './filterChoice';
 
 const styles = {
   filterGroupOuter: {
-    paddingTop: 20,
+    paddingBottom: 20,
     paddingRight: 40,
     paddingLeft: 10
   },
@@ -37,7 +37,7 @@ const FilterGroup = React.createClass({
             groupName={this.props.name}
             name={item.name}
             text={item.text}
-            selected={this.props.selection && this.props.selection.includes(item.name)}
+            selected={this.props.selection && this.props.selection.indexOf(item.name) !== -1}
             onUserInput={this.props.onUserInput}
             key={item.name}
           />

@@ -1,5 +1,6 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
+import {CIPHER, ALPHABET} from '../../constants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -889,9 +890,24 @@ function parsePath() {
     };
   }
 
+  // projects can optionally be embedded without making their source available.
+  // to keep people from just twiddling the url to get to the regular project page,
+  // we encode the channel id using a simple cipher. This is not meant to be secure
+  // in any way, just meant to make it slightly less trivial than changing the url
+  // to get to the project source. The channel id gets encoded when generating the
+  // embed url. Since a lot of our javascript depends on having the decoded channel
+  // id, we do that here when parsing the page's path.
+  let channelId = tokens[PathPart.CHANNEL_ID];
+  if (location.search.indexOf('nosource') >= 0) {
+    channelId = channelId
+      .split('')
+      .map(char => ALPHABET[CIPHER.indexOf(char)] || char)
+      .join('');
+  }
+
   return {
     appName: tokens[PathPart.APP],
-    channelId: tokens[PathPart.CHANNEL_ID],
+    channelId,
     action: tokens[PathPart.ACTION]
   };
 }

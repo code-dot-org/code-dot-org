@@ -4,14 +4,9 @@ description 'Story for K Level about Frustration'
 markdown <<MARKDOWN
 # Stevie and the Marbles
   
-<br/><br/>    
-    
-<a href="https://docs.google.com/document/d/10nozKSxZPkL9k-LFj4Lw97B89b_UYuYMDMDFoWwcRo4/edit?usp=sharing" target="_new">
-<button>
-Go to lesson plan
-</button> 
-</a>
+*Storybook coming soon!*
 
-<br/><br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+In the meantime...watch this ClassDojo video on Growth Mindset:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2zrtHt3bBmQ?list=PLgcsquFBeIxLEmHSbM395aYyl4qhs5bsc" frameborder="0" allowfullscreen></iframe>
 MARKDOWN

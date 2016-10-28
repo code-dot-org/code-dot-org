@@ -290,6 +290,7 @@ fr:
       unsubmit: Ne pas envoyer
       worked_with: Travaille avec
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "L'adresse e-mail n'a pas été confirmée:"
     email_confirm_needed_required: "Votre adresse e-mail %{email} n'a pas été confirmée :"

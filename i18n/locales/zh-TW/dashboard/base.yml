@@ -1,4 +1,4 @@
-zh:
+zh-TW:
   errors:
     messages:
       not_saved: 請修正下列錯誤：
@@ -291,6 +291,7 @@ zh:
       unsubmit: 不提交
       worked_with: 共事
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
     email_confirm_needed_required: '您的電子位址 %{email} 尚未被確認：'

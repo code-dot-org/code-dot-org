@@ -329,6 +329,7 @@
       unsubmit: "Откажи предају"
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "Електронска пошта није потврђена:"
     email_confirm_needed_required: "Ваша електронска пошта %{email} није потврђена:"

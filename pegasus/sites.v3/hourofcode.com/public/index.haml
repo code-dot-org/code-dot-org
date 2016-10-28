@@ -43,7 +43,12 @@ social:
 
 #top{style: "position: relative; width: 100%; overflow: hidden;"}
 
-  #fullwidth0{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_0.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 1; background-position: 70% 20%"}
+  // Canada's first homepage image is localized to be a student picture instead of Obama.
+  // Canada's default langauge is set to 'en' since we don't support 'en-CA' so this is a special case
+  // when we localize in the view instead of using localized_image (which is based on languages other than 'en').
+  - first_slide = @country == 'ca' ? '/images/group_girls.jpg' : localized_image('/images/homepage_0.jpg')
+
+  #fullwidth0{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{first_slide}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 1; background-position: 70% 20%"}
 
   #fullwidth1{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_1.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
 
@@ -108,8 +113,10 @@ social:
   -# Map
 
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    #maparea
-      =view :map
+    = view :hoc_events_counter
+    #maparea.full-width
+      %a{href: resolve_url('/map')}
+        %img{src: '/images/map.png', style: 'width: 100%;'}
 
   -# Highlights
 

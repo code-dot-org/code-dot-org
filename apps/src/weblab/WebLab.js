@@ -81,7 +81,6 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
-  config.versionHistoryInInstructionsHeader = true;
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
@@ -142,6 +141,7 @@ WebLab.prototype.init = function (config) {
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
+    noVisualization: true,
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
@@ -168,6 +168,10 @@ WebLab.prototype.init = function (config) {
     this.brambleHost.redo();
   }
 
+  function onRefreshPreview() {
+    this.brambleHost.refreshPreview();
+  }
+
   let inspectorOn = false;
   function onToggleInspector() {
     inspectorOn = !inspectorOn;
@@ -186,6 +190,7 @@ WebLab.prototype.init = function (config) {
         onAddFileImage={onAddFileImage.bind(this)}
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
+        onRefreshPreview={onRefreshPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
         onMount={onMount}
       />

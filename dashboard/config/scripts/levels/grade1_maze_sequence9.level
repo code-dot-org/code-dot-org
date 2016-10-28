@@ -11,7 +11,6 @@
     "start_direction": "3",
     "step_mode": "0",
     "is_k1": "true",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
     "skip_instructions_popup": "true",
     "ideal": "6",
     "never_autoplay_video": "true",
@@ -28,7 +27,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're having trouble, try writing down the steps on a piece of paper first.\",\r\n  \"hint_id\": \"grade1_maze_sequence9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
