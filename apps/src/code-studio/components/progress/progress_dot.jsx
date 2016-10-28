@@ -116,7 +116,11 @@ const styles = {
     review_accepted: {
       color: color.white,
       backgroundColor: color.level_perfect
-    }
+    },
+    dots_disabled: {
+      color: color.charcoal,
+      backgroundColor: color.lightest_gray
+    },
   }
 };
 
@@ -156,6 +160,7 @@ export const ProgressDot = Radium(React.createClass({
     stageId: React.PropTypes.number,
 
     // redux provdied
+    bubbleColorsDisabled: React.PropTypes.bool,
     overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
     currentLevelId: React.PropTypes.string,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
@@ -175,7 +180,13 @@ export const ProgressDot = Radium(React.createClass({
 
   render() {
     const level = this.props.level;
-    const levelStatus = this.props.overrideLevelStatus || level.status;
+    let levelStatus = this.props.overrideLevelStatus || level.status;
+    if (this.props.bubbleColorsDisabled && levelStatus !== LevelStatus.locked) {
+      // During hoc we're going to disable milestone posts. If disabled, we want
+      // to display dots as gray (unless the level is locked, in which case we
+      // want to leave as is).
+      levelStatus = LevelStatus.dots_disabled;
+    }
     const onCurrent = this.props.currentLevelId &&
         ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
         level.uid === this.props.currentLevelId);
@@ -263,9 +274,11 @@ export default connect((state, ownProps) => {
       !!fullyLocked[stageId]) {
     overrideLevelStatus = LevelStatus.locked;
   }
+
   return {
     currentLevelId: state.progress.currentLevelId,
     saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation,
+    bubbleColorsDisabled: state.progress.bubbleColorsDisabled,
     overrideLevelStatus
   };
 })(ProgressDot);
@@ -321,6 +334,29 @@ if (BUILD_STYLEGUIDE) {
           )
         },
         {
+          name: 'locked assessment in course overview with bubble colors disabled',
+          description: "Should still show lock icon",
+          story: () => (
+            <ProgressDot
+              bubbleColorsDisabled
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275],
+                kind: 'assessment',
+                next: [2, 1],
+                position: 1,
+                previous: false,
+                status: 'locked',
+                title: 1,
+                uid: '5275_0',
+                url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
+              }}
+            />
+          )
+        },
+        {
           name: 'submitted assessment in course overview',
           story: () => (
             <ProgressDot
@@ -345,6 +381,27 @@ if (BUILD_STYLEGUIDE) {
           name: 'attempted puzzle in course overview',
           story: () => (
             <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 1,
+                previous: [7,15],
+                status: 'attempted',
+                title: 1,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'attempted puzzle in course overview with bubble colors disabled',
+          story: () => (
+            <ProgressDot
+              bubbleColorsDisabled
               courseOverviewPage={true}
               saveAnswersBeforeNavigation={false}
               level={{
