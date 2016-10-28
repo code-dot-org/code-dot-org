@@ -93,7 +93,7 @@ module TextToSpeech
   end
 
   def tts_instructions_text
-    self.tts_instructions_override || self.localized_instructions || self.instructions || ""
+    self.tts_instructions_override || self.instructions || ""
   end
 
   def tts_should_update_instructions?
