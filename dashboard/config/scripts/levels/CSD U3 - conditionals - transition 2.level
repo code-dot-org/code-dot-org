@@ -34,15 +34,13 @@
     "callout_json": "[]",
     "show_d_pad": "false",
     "project_template_level_name": "CSD U3 - balloon template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "palette_category_at_start": "variables",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
