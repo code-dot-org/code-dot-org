@@ -7,7 +7,7 @@ Scenario: HoC tutorial in Spanish
   Then element ".csf-top-instructions p" has "es" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "es" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions" has "es" text from key "data.level.instructions.maze_2_14"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -17,7 +17,7 @@ Scenario: Frozen tutorial in Spanish
   Then element ".csf-top-instructions p" has "es" text from key "data.instructions.frozen perpendicular_instruction"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "es" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions" has "es" text from key "data.instructions.frozen perpendicular_instruction"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -27,7 +27,7 @@ Scenario: HoC tutorial in Portuguese
   Then element ".csf-top-instructions p" has "pt-br" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "pt-br" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions" has "pt-br" text from key "data.level.instructions.maze_2_14"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -35,10 +35,10 @@ Scenario: HoC tutorial in Portuguese
 Scenario: Frozen tutorial in Portuguese
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
   And I rotate to landscape
-  Then element ".markdown-insructions p" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -48,7 +48,7 @@ Scenario: HoC tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-sa" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "ar-sa" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions" has "ar-sa" text from key "data.level.instructions.maze_2_14"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -58,6 +58,6 @@ Scenario: Frozen tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
