@@ -16,9 +16,9 @@
     "is_daytime": "true",
     "is_event_level": "true",
     "use_player": "true",
-    "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"addScore\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getScore() >= 5;\r\n}",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
-    "level_verification_timeout": "30000",
+    "level_verification_timeout": "40000",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -38,9 +38,11 @@
     "free_play": "false",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Games let you keep score. Use the \"add 1 to score\" block to give yourself a point when you tag the sheep. ",
+    "instructions": "Some games let you keep score. Play tag with these Iron Golems and use the \"add 1 to score\" block to give yourself a point when you tag them. Reach five points to win!",
     "use_score": "true",
-    "contained_level_names": null
+    "use_verification_function_for_failure": "false",
+    "contained_level_names": null,
+    "failure_message_override": "If you're having trouble tagging 5 Golems, try changing the score to 2 per tag."
   },
   "published": true,
   "notes": "This level will introduce a scoring system.",
@@ -66,11 +68,7 @@
             </block>
           </statement>
           <statement name="WHEN_USED">
-            <block type="craft_flashEntity">
-              <next>
-                <block type="craft_destroyEntity"/>
-              </next>
-            </block>
+            <block type="craft_destroyEntity"/>
           </statement>
         </block>
       </xml>
