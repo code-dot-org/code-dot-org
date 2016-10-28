@@ -555,7 +555,7 @@ FactoryGirl.define do
 
   # school info
 
-  # this is the only factory used for testing the deprecated data formats.
+  # this is the only factory used for testing the deprecated data formats (without country).
   factory :school_info_without_country, class: SchoolInfo do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
@@ -568,6 +568,13 @@ FactoryGirl.define do
     school_name 'Grazebrook'
     full_address '31 West Bank, London, England'
   end
+
+  factory :school_info_us, class: SchoolInfo do
+    country 'US'
+  end
+
+  # although some US school types behave identically, we keep their factories separate here
+  # because the behavior of each school type may diverge over time.
 
   factory :school_info_us_private, class: SchoolInfo do
     country 'US'
@@ -583,92 +590,32 @@ FactoryGirl.define do
     school_name 'Princeton Day School'
   end
 
-  # school info public
-
-  factory :public_school_info_with_district_and_school, class: SchoolInfo do
+  factory :school_info_us_public, class: SchoolInfo do
     country 'US'
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
-    association :school_district
-    association :school, factory: :public_school
+
+    trait :with_district do
+      association :school_district
+    end
+
+    trait :with_school do
+      association :school, factory: :public_school
+    end
   end
 
-  # intentionally invalid configuration
-  factory :public_school_info_without_district, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
-    association :school, factory: :public_school
-  end
-
-  # intentionally invalid configuration
-  factory :public_school_info_without_school, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
-    association :school_district
-  end
-
-  factory :public_school_info_with_other_school, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
-    association :school_district
-    school_other true
-    school_name "Another School"
-  end
-
-  factory :public_school_info_with_other_district, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
-    school_district_other true
-    school_district_name "Another District"
-    school_name "Another School"
-  end
-
-  # school info charter
-
-  factory :charter_school_info_with_district_and_school, class: SchoolInfo do
+  factory :school_info_us_charter, class: SchoolInfo do
     country 'US'
     school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
     state {'WA'}
-    association :school_district
-    association :school, factory: :charter_school
-  end
 
-  # intentionally invalid configuration
-  factory :charter_school_info_without_district, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
-    state {'WA'}
-    association :school, factory: :charter_school
-  end
+    trait :with_district do
+      association :school_district
+    end
 
-  # intentionally invalid configuration
-  factory :charter_school_info_without_school, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
-    state {'WA'}
-    association :school_district
-  end
-
-  factory :charter_school_info_with_other_school, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
-    state {'WA'}
-    association :school_district
-    school_other true
-    school_name "Another School"
-  end
-
-  factory :charter_school_info_with_other_district, class: SchoolInfo do
-    country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
-    state {'WA'}
-    school_district_other true
-    school_district_name "Another District"
-    school_name "Another School"
+    trait :with_school do
+      association :school, factory: :charter_school
+    end
   end
 
   # end school info
