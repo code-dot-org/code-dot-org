@@ -15,6 +15,8 @@ const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
 
 const ENGLISH_LOCALE = 'en_us';
 
+const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
+
 /**
  * Some scenarios:
  * (1) Projects level w/o instructions: shortInstructions and longInstructions
@@ -296,10 +298,20 @@ export const determineInstructionsConstants = config => {
     }
   }
 
+  // If the level is specifically flagged as having important
+  // instructions or if it is the first level in the stage, always show
+  // the overlay. Otherwise, show it exactly once on the very first
+  // level a user looks at.
+  let overlaySeen = localStorage.getItem(LOCALSTORAGE_OVERLAY_SEEN_FLAG);
+  let shouldShowOverlay = config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen;
+  if (shouldShowOverlay) {
+    localStorage.setItem(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
+  }
+
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
-    overlayVisible: !!config.level.instructionsImportant,
+    overlayVisible: !!shouldShowOverlay,
     shortInstructions,
     shortInstructions2,
     longInstructions,
