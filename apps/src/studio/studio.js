@@ -37,7 +37,6 @@ import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
-import experiments from '../experiments';
 import paramLists from './paramLists.js';
 import sharedConstants from '../constants';
 import studioCell from './cell';
@@ -1939,7 +1938,7 @@ Studio.init = function (config) {
   }
 
   config.appMsg = studioMsg;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   Studio.initSprites();
 

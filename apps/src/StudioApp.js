@@ -1555,6 +1555,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
+  this.onFeedback(options);
+
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1826,6 +1828,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onFeedback = config.onFeedback || function () {};
   this.onInitialize = config.onInitialize ?
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
@@ -2860,7 +2863,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 /**
  * Polishes the generated code string before displaying it to the user. If the
  * app provided a polishCodeHook function, it will be called.
- * @returns {string} code string that may/may not have been modified
+ * @returns {string} code string that may/may not have been modified.
  */
 StudioApp.prototype.polishGeneratedCodeString = function (code) {
   if (this.polishCodeHook) {
@@ -2903,6 +2906,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    isK1: config.level.isK1,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
