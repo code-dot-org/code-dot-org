@@ -225,3 +225,17 @@ $debug-input-height: 16px;
   background-position: 0px 21px;
   margin-right: 3px;
 }
+
+.Select-input {
+  height: 28px !important;
+}
+
+.Select-arrow-zone {
+  display: none !important;
+}
+
+.autocomplete-option {
+  height: 25px;
+  outline: 1px;
+  color: white;
+}
