@@ -146,10 +146,6 @@ const styles = {
     width: '100%',
     borderTop: '1px solid #ddd',
     borderBottom: '1px solid #ddd',
-    userSelect: 'none',
-    MozUserSelect: 'none',
-    WebkitUserSelect: 'none',
-    msUserSelect: 'none',
     cursor: 'text'
   },
   variants: {
@@ -475,6 +471,7 @@ const StageEditor = React.createClass({
       newPosition: position,
       startingPositions
     });
+    window.addEventListener('selectstart', this.preventSelect);
     window.addEventListener('mousemove', this.handleDrag);
     window.addEventListener('mouseup', this.handleDragStop);
   },
@@ -507,6 +504,7 @@ const StageEditor = React.createClass({
       this.props.handleAction('REORDER_LEVEL', {stage: this.props.stage.position, levelA: this.state.drag, levelB: this.state.newPosition});
     }
     this.setState({drag: null, newPosition: null, currentPositions: []});
+    window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
     window.removeEventListener('mouseup', this.handleDragStop);
   },
@@ -518,6 +516,10 @@ const StageEditor = React.createClass({
   handleLockableChanged() {
     const state = this.refs.lockable.checked ? 'lockable' : 'not lockable';
     console.log(`stage ${this.props.stage.position} marked as ${state}`);
+  },
+
+  preventSelect(e) {
+    e.preventDefault();
   },
 
   render() {
