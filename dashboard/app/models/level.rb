@@ -97,6 +97,7 @@ class Level < ActiveRecord::Base
   end
 
   def update_key_list
+    @@all_level_keys ||= nil
     @@all_level_keys[id] = key if @@all_level_keys
   end
 
