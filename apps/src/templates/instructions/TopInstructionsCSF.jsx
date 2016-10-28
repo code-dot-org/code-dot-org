@@ -245,6 +245,17 @@ var TopInstructions = React.createClass({
     if (this.props.feedback || this.state.promptForHint || gotNewHint) {
       this.scrollInstructionsToBottom();
     }
+
+    if (!this.props.collapsed && !prevProps.collapsed) {
+      const minHeight = this.getMinHeight();
+      const maxHeight = this.props.maxHeight;
+      const heightOutOfBounds = this.props.height < minHeight || this.props.height > maxHeight;
+
+      if (heightOutOfBounds) {
+        const newHeight = Math.max(Math.min(this.props.height, maxHeight), minHeight);
+        this.props.setInstructionsRenderedHeight(newHeight);
+      }
+    }
   },
 
   componentWillUpdate(nextProps, nextState) {
