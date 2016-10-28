@@ -6,10 +6,6 @@
   "user_id": 13,
   "properties": {
     "skin": "applab",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -41,7 +37,8 @@
     "hide_view_data_button": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "The name of this level indicates what eventually becomes of this template level, but it just starts out blank.\r\n\r\nRepeat.\r\n\r\nThis level intentionally starts blank!",

@@ -6,17 +6,16 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "So many beautiful flowers!\r\n\r\nFix the error(s) to collect all of the nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "start_direction": "3",
-    "nectar_goal": "3",
+    "nectar_goal": "0",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,2,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "4",
+    "ideal": "8",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -31,7 +30,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "contained_level_names": null
+    "instructions_important": "false",
+    "honey_goal": "12",
+    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "markdown_instructions": "*\"This could be sweet!\"*\r\n\r\nFix the error(s) to make all of the honey.",
+    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the debugging process a couple of times in a row. \\n\\nWhat causes the first problem?\\n\\nOnce that problem is fixed, what goes wrong?\",\"hint_id\":\"grade3_Debugging_8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/e5e8bb10b917f8f0e6a334cd1d93d39e/grade3_Debugging_8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \\n\\nDon't forget to point out the direction of the turns!\",\"hint_id\":\"grade3_Debugging_8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/41ec685527cebf32e0a93aecc77262b7/grade3_Debugging_8.mp3\"}]"
   },
   "published": true,
   "notes": "",
@@ -41,23 +45,32 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="maze_moveForward">
-              <next>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="maze_nectar">
                       <next>
-                        <block type="maze_nectar"/>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_nectar"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
                       </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </start_blocks>
@@ -82,11 +95,30 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">3</title>
+              <title name="TIMES">6</title>
               <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
-                    <block type="maze_nectar"/>
+                    <block type="maze_honey">
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_honey">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
                   </next>
                 </block>
               </statement>

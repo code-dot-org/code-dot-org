@@ -1,6 +1,7 @@
-var color = require('../../color.js');
-var React = require('react');
-var Radium = require('radium');
+import React from 'react';
+import Radium from 'radium';
+import * as color from '../../color.js';
+import {CIPHER, ALPHABET} from '../../constants';
 
 const style = {
   nav: {
@@ -43,12 +44,17 @@ const style = {
   },
 };
 
-var AdvancedShareOptions = Radium(React.createClass({
+const AdvancedShareOptions = Radium(React.createClass({
   propTypes: {
     onClickExport: React.PropTypes.func,
     onExpand: React.PropTypes.func.isRequired,
     expanded: React.PropTypes.bool.isRequired,
     i18n: React.PropTypes.object.isRequired,
+    channelId: React.PropTypes.string.isRequired,
+    embedOptions: React.PropTypes.shape({
+      iframeHeight: React.PropTypes.number.isRequired,
+      iframeWidth: React.PropTypes.number.isRequired,
+    }).isRequired,
   },
 
   getInitialState() {
@@ -56,6 +62,7 @@ var AdvancedShareOptions = Radium(React.createClass({
       selectedOption: (this.props.onClickExport && 'export') || 'embed',
       exporting: false,
       exportError: null,
+      embedWithoutCode: false,
     };
   },
 
@@ -73,11 +80,23 @@ var AdvancedShareOptions = Radium(React.createClass({
   },
 
   renderEmbedTab() {
-    var url = window.location.href.replace('edit','embed');
-    // If you change this width and height, make sure to update the
-    // #visualizationColumn.wireframeShare css
-    var iframeHtml = '<iframe width="352" height="612" style="border: 0px;" src="' +
-          url + '"></iframe>';
+    let url = window.location.href.replace('edit', 'embed');
+    if (this.state.embedWithoutCode) {
+      // When embedding without code, we "hide" the real channel id for the
+      // project by encoding it with a cipher. This is not meant to be secure,
+      // it is just meant to make the bar slightly higher for people trying
+      // to get to the original source.
+      url = url.replace(
+        this.props.channelId,
+        this.props.channelId
+          .split('')
+          .map(char => CIPHER[ALPHABET.indexOf(char)] || char)
+          .join('')
+      ) + '?nosource';
+    }
+    const {iframeWidth, iframeHeight} = this.props.embedOptions;
+    var iframeHtml =
+      `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
       <div>
         <p style={style.p}>
@@ -90,6 +109,16 @@ var AdvancedShareOptions = Radium(React.createClass({
           value={iframeHtml}
           style={style.embedInput}
         />
+        <label style={{display: 'flex'}}>
+          <input
+            type="checkbox"
+            checked={this.state.embedWithoutCode}
+            onChange={() => this.setState({embedWithoutCode: !this.state.embedWithoutCode})}
+          />
+          <span style={{marginLeft: 5}}>
+            Hide ability to view code
+          </span>
+        </label>
       </div>
     );
   },
@@ -185,4 +214,4 @@ var AdvancedShareOptions = Radium(React.createClass({
   }
 }));
 
-module.exports = AdvancedShareOptions;
+export default AdvancedShareOptions;

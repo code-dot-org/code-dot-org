@@ -1,26 +1,51 @@
 #!/usr/bin/env ruby
 
-require_relative('../../dashboard/config/environment')
+# A script that confirms we are seeing expected usage on our sites. An alert is
+# raised if we are missing expected usage in the most recent minutes.
+#
+# NOTE: These queries intentionally hit the master DB (not the reporting DB) as
+# we do not want false alarms as a result of replica lag. As such, all of these
+# queries need to be sufficiently performant.
+
+require_relative('../../deployment')
+require 'cdo/db'
 require 'cdo/hip_chat'
+require 'cdo/only_one'
 
+ALERT_FILENAME = 'confirm_usage_alert'.freeze
+SECONDS_PER_MINUTE = 60
+
+# An array of [tablename, num_minutes, {DASHBOARD_DB | PEGASUS_DB}] triples.
+CREATED_CHECKS = [
+  [:activities, 3, DASHBOARD_DB],
+  [:forms, 60, PEGASUS_DB],
+  [:user_levels, 5, DASHBOARD_DB],
+  [:users, 30, DASHBOARD_DB]
+].freeze
+
+# @param message [String] the (base) error message to log.
 def alert(message)
+  message += " Delete production-daemon:production/#{ALERT_FILENAME} to close."
   HipChat.log(message, color: 'red', notify: 1)
+  Dir.chdir(deploy_dir) do
+    system "touch #{ALERT_FILENAME}"
+  end
 end
 
-# Verify an account has been created.
-seconds_since_last_account_create = Time.now - User.last.created_at
-if seconds_since_last_account_create > 30 * 60
-  alert("Account Create: #{seconds_since_last_account_create}")
+def main
+  # Look to see whether there is an active alert in progress. If there is,
+  # indicated by a confirm_usage_alert file, do nothing.
+  Dir.chdir(deploy_dir) do
+    return if File.file? ALERT_FILENAME
+  end
+
+  CREATED_CHECKS.each do |table, duration_min, db|
+    delta_sec = Time.now - db[table].order(:id).last[:created_at]
+    threshold_sec = duration_min * SECONDS_PER_MINUTE
+    if delta_sec > threshold_sec
+      alert "#{table.to_s.upcase} CREATION: too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since last #{table} creation."
+    end
+  end
 end
 
-# Verify an activity has been created.
-seconds_since_last_activity = Time.now - Activity.last.created_at
-if seconds_since_last_activity > 3 * 60
-  alert("Account Password Reset: #{seconds_since_last_activity}")
-end
-
-# Verify a user_level has been created.
-seconds_since_last_user_level = Time.now - UserLevel.last.created_at
-if seconds_since_last_user_level > 5 * 60
-  alert("Account Password Reset: #{seconds_since_last_user_level}")
-end
+main if only_one_running?(__FILE__)

@@ -35,7 +35,8 @@
     "markdown_instructions": "**Functions Super Challenge:** Can you figure out how to collect all of this nectar with the fewest blocks possible?\r\n\r\n",
     "honey_goal": "6",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that the shape of all nectar collection points is similar.  \\n\\nGood place for a function!\",\r\n  \"hint_id\": \"Course_4_SCF_1b_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Look at this idea for how the bee might travel:  \\n\\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)\",\r\n  \"hint_id\": \"Course_4_SCF_1b_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You should consider using a `for loop` for the distance the bee travels.\",\r\n  \"hint_id\": \"Course_4_SCF_1b_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n\\n![Solution Blocks](https://images.code.org/15ef56cd19a1efd510527345f077d6eb-image-1469726894398.png)\",\r\n  \"hint_id\": \"Course_4_SCF_1b_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "true"
   },
   "published": true,
   "notes": "",

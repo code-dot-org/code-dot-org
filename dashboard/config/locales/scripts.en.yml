@@ -1106,6 +1106,7 @@ en:
           description_audience: Ages 10-18
           stage:
             Spring 2016: Spring 2016
+            Halloween 2015: Halloween 2015
         iceage:
           title: Ice Age Play Lab
           description: Create a story or make a game with Ice Age Play Lab!
@@ -1451,6 +1452,8 @@ en:
             While Loops: While Loops
             Edited lessons ABOVE this line: Edited lessons ABOVE this line
             Buttons and Events: Buttons and Events
+            Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
+            Unit 5 Assessment 1: Unit 5 Assessment 1
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1719,6 +1722,7 @@ en:
             External Style Sheets: External Style Sheets
             Usability and Accessibility: Usability and Accessibility
             Peer Review: Peer Review
+            Describing Web Pages: Describing Web Pages
           description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
@@ -2159,7 +2163,34 @@ en:
             Binary Bracelets: Binary Bracelets
             Binary Images: Binary Images
             Binary Artist Puzzles: Binary Artist Puzzles
+            RGB Color: RGB Color
           title: Binary
           description_audience: ''
           description_short: ''
+          description: ''
+        csd2:
+          stage:
+            new stage: new stage
+            Quality Websites: Quality Websites
+            Website Design: Website Design
+            Describing Web pages: Describing Web pages
+            Text on the Web: Text on the Web
+            Images on the Web: Images on the Web
+            Clean Code and Debugging: Clean Code and Debugging
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Peer Review: Peer Review
+            Box Model and Page Layout: Box Model and Page Layout
+            Digital Footprint: Digital Footprint
+            Publishing a Website: Publishing a Website
+            Sources and Search Engines: Sources and Search Engines
+            Intellectual Property: Intellectual Property
+            'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
+            'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
+            Images in HTML: Images in HTML
+          title: 'CSD Unit 2 - The Internet: Web Development'
+          description_audience: ''
+          description_short: Web Development
           description: ''

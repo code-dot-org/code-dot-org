@@ -39,45 +39,13 @@
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
     "authored_hints": "[]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run"/>
-        <block type="studio_whenDown" uservisible="false">
-          <next>
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">200</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="studio_setSpritePosition" uservisible="false">
-                  <title name="SPRITE">0</title>
-                  <title name="VALUE">random</title>
-                  <next>
-                    <block type="studio_setSpritesWander" uservisible="false">
-                      <title name="VALUE">"dragon"</title>
-                      <next>
-                        <block type="studio_wait" uservisible="false">
-                          <title name="VALUE">1000</title>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </start_blocks>
-  </blocks>
+  <blocks/>
 </Studio>

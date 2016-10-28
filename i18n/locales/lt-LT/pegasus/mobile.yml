@@ -184,7 +184,7 @@ lt-LT:
   learn_next_level: Pabandykite kitą Code Studio kursą
   learn_online: Išmėginkite kitus internetinius kursus
   learn_classes: Suraskite kursus savo gyvenvietėje
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Aš užbaigiau #HourOfCode - pažiūrėk! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -457,7 +457,6 @@ lt-LT:
   dashboard_landing_office_hours: Užduok klausimą gyvai! Apsilankyk mūsų vaizdiniuose pokalbiuose, kurie vyksta kartą per mėnesį.
   dashboard_landing_print_certificates: Išspausdinkite sertifikatus mokiniams, kurie užbaigs šias pamokėles
   dashboard_landing_educator_blog: Informaciją apie naujienas rasite Pedagogų Tinklaraštyje
-  dashboard_landing_smart_hints: Padėkite mums sukurti gudrius suflerius Code.org pamokėlėms
   dashboard_landing_video_player: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
   dashboard_landing_progress_title: Pagrindinės klasės pažanga
   dashboard_landing_progress_biggest: Didžiausios grupės pažanga.
@@ -801,6 +800,7 @@ lt-LT:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

@@ -6,18 +6,16 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "These blocks are really bugging me. Fix the error(s) to collect all of the nectar and make all of the honey.",
-    "step_mode": "2",
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "start_direction": "2",
-    "nectar_goal": "3",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,2,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "10",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Is there any place where the bee does something that doesn't make sense? What happens when you change that block?\",\r\n  \"hint_id\": \"2-3_Bee_Debugging_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "5",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Is there any place where the bee does something that doesn't make sense? What happens when you change those blocks?\",\"hint_id\":\"grade3_Debugging_4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/68f3e2a1c58f3a3f2c50ea6dfe30404f/grade3_Debugging_4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try simplifying the code using nested loops.\",\"hint_id\":\"grade3_Debugging_4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/c00cebd5677ae4820132d63c56910474/grade3_Debugging_4.mp3\"}]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -32,7 +30,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "contained_level_names": null
+    "instructions_important": "false",
+    "honey_goal": "15",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "contained_level_names": null,
+    "markdown_instructions": "*\"These blocks are really bugging me.\"*\r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey."
   },
   "published": true,
   "notes": "",
@@ -42,34 +44,25 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="maze_moveForward">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveForward">
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnLeft</title>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="maze_nectar">
                       <next>
                         <block type="maze_nectar">
                           <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnLeft</title>
-                              <next>
-                                <block type="maze_moveForward">
-                                  <next>
-                                    <block type="maze_nectar"/>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
+                            <block type="maze_nectar"/>
                           </next>
                         </block>
                       </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
@@ -85,7 +78,7 @@
           <title name="DIR">turnRight</title>
         </block>
         <block type="maze_nectar"/>
-        <block type="maze_honey"/>
+        <block type="maze_honey" limit="1"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
@@ -95,40 +88,20 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveForward">
-              <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
-                      <next>
-                        <block type="maze_moveForward">
-                          <next>
-                            <block type="maze_nectar">
-                              <next>
-                                <block type="maze_nectar">
-                                  <next>
-                                    <block type="maze_turn">
-                                      <title name="DIR">turnRight</title>
-                                      <next>
-                                        <block type="maze_moveForward">
-                                          <next>
-                                            <block type="maze_nectar"/>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_honey"/>
+                      </statement>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

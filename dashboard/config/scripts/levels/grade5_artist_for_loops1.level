@@ -22,7 +22,7 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Use a `for` loop to draw this triangle that is 50 pixels wide. If you count from 1 to 3 by 1s, you can use this just like a `repeat` loop.\r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)",
+    "markdown_instructions": "Use a `for` loop to draw this triangle that is 50 pixels wide. If you count from 1 to 3 by 1s, you can use this just like a `repeat` loop.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

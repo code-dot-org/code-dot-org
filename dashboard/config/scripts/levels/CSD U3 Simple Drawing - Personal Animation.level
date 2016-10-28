@@ -28,6 +28,7 @@
         "category": "Drawing"
       },
       "draw": null,
+      "Game.frameRate": null,
       "randomNumber_min_max": null,
       "background": null,
       "console.log": null
@@ -58,9 +59,18 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "DO This",
-    "markdown_instructions": "# Your Own Animation\r\n\r\nHere's the drawing you started in the last lesson - let's animate it!\r\n\r\n# Do This\r\n\r\n* Move all of your code into a `draw()` loop\r\n* Use `randomNumber()` in the inputs of some of your shapes\r\n* Set the speed of your animation using the `frameRate()` block\r\n",
+    "markdown_instructions": "# Your Own Animation\r\n\r\nHere's the drawing you planned and started in the last lesson - let's animate it!\r\n\r\n# Do This\r\n\r\n* Move all of your code into a `draw()` loop\r\n* Use `randomNumber()` in the inputs of some of your shapes\r\n* Set the speed of your animation using the `Game.frameRate` block\r\n",
     "start_blocks": "// Create your drawing here",
-    "show_d_pad": "false"
+    "show_d_pad": "false",
+    "instructions_important": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

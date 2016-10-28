@@ -14,7 +14,6 @@ var MusicController = require('../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
-var experiments = require('../experiments');
 
 var TestResults = studioApp.TestResults;
 
@@ -124,7 +123,7 @@ Craft.init = function (config) {
   }
 
   config.level.disableFinalStageMessage = true;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function () {

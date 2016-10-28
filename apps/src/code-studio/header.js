@@ -1,21 +1,21 @@
 /* globals dashboard, appOptions */
 
 import $ from 'jquery';
-var React = require('react');
-var ReactDOM = require('react-dom');
-var _ = require('lodash');
-
-var popupWindow = require('./popup-window');
-var ShareDialog = require('./components/ShareDialog');
-var progress = require('./progress');
-var Dialog = require('./dialog');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import _ from 'lodash';
+import popupWindow from './popup-window';
+import ShareDialog from './components/ShareDialog';
+import progress from './progress';
+import Dialog from './dialog';
+import {Provider} from 'react-redux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
  */
 
 // Namespace for manipulating the header DOM.
-var header = module.exports = {};
+var header = {};
 
 /**
  * See ApplicationHelper::PUZZLE_PAGE_NONE.
@@ -153,20 +153,24 @@ function shareProject() {
     const pageConstants = studioApp.reduxStore.getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
-    var dialog = React.createElement(ShareDialog, {
-      i18n: i18n,
-      icon: appOptions.skin.staticAvatar,
-      shareUrl: shareUrl,
-      isAbusive: dashboard.project.exceedsAbuseThreshold(),
-      channelId: dashboard.project.getCurrentId(),
-      appType,
-      onClickPopup: popupWindow,
-      // TODO: Can I not proliferate the use of global references to Applab somehow?
-      onClickExport: window.Applab && window.Applab.canExportApp() ?
-      window.Applab.exportApp : null,
-      canShareSocial,
-    });
-    ReactDOM.render(dialog, dialogDom);
+    ReactDOM.render(
+      <Provider store={studioApp.reduxStore}>
+        <ShareDialog
+          i18n={i18n}
+          icon={appOptions.skin.staticAvatar}
+          shareUrl={shareUrl}
+          isAbusive={dashboard.project.exceedsAbuseThreshold()}
+          channelId={dashboard.project.getCurrentId()}
+          appType={appType}
+          onClickPopup={popupWindow}
+          // TODO: Can I not proliferate the use of global references to Applab somehow?
+          onClickExport={window.Applab && window.Applab.canExportApp() ?
+                         window.Applab.exportApp : null}
+          canShareSocial={canShareSocial}
+        />
+      </Provider>,
+      dialogDom
+    );
   });
 }
 
@@ -335,3 +339,5 @@ header.updateTimestamp = function () {
     $('.project_updated_at').text("Not saved"); // TODO i18n
   }
 };
+
+export default header;
