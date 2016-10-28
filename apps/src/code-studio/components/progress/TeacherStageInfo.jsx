@@ -10,7 +10,6 @@ import color from '../../../color';
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
 import { toggleHidden, isHiddenFromState } from '../../hiddenStageRedux';
-import experiments from '@cdo/apps/experiments';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -91,7 +90,7 @@ const TeacherStageInfo = Radium(React.createClass({
         children.push(<StageLock key="stageLock" stage={stage}/>);
       }
 
-      if (experiments.isEnabled('hiddenStages') && hiddenStagesInitialized &&
+      if (hiddenStagesInitialized &&
           !hasNoSections) {
         children.push(
           <div key="hiddenStageToggle">
