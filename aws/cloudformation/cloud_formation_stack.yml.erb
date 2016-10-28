@@ -15,6 +15,14 @@ Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
   AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
+  ASGCount: <%= lambda_fn.call 'ASGCount',
+    Default: 1,
+    AutoScalingGroupTags: [
+      {Key: 'aws:cloudformation:stack-id', Value: {Ref: 'AWS::StackId'}},
+      {Key: 'aws:cloudformation:logical-id', Value: 'WebServer'}
+    ],
+    LaunchConfiguration: {Ref: 'LaunchConfig'}
+  %>
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
@@ -45,15 +53,23 @@ Resources:
         Enabled: true
         Timeout: 300
   WebServer:
+    DependsOn: [ASGCount]
     Type: AWS::AutoScaling::AutoScalingGroup
     CreationPolicy:
       ResourceSignal:
         Timeout: PT50M
+        Count: {'Fn::GetAtt': [ASGCount, Count]}
+      AutoScalingCreationPolicy:
+        MinSuccessfulInstancesPercent: 100
+    UpdatePolicy:
+      AutoScalingReplacingUpdate:
+        WillReplace: true
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 2
       MaxSize: 20
+      DesiredCapacity: {'Fn::GetAtt': [ASGCount, Count]}
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]

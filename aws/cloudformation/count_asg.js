@@ -9,36 +9,54 @@ exports.handler = function (event, context) {
     return;
   }
 
-  var name = event.ResourceProperties.AutoScalingGroupName || errorExit('No AutoScalingGroupName found', event, context);
+  var tags = event.ResourceProperties.AutoScalingGroupTags || errorExit('No AutoScalingGroupTags found', event, context);
   var defaultCount = event.ResourceProperties.Default || 0;
 
   var responseData = {};
 
-  var findAutoScalingGroupByName = function(name, callback) {
+  var findAutoScalingGroupByTags = function(tags, callback) {
     var result = 0;
-    autoscaling.describeAutoScalingGroups({
-      AutoScalingGroupNames: [name]
-    }, function(err, data) {
+    autoscaling.describeAutoScalingGroups({}, function(err, data) {
       if (err) {
         callback(err, data);
       } else {
-        if (data.AutoScalingGroups.length < 1) {
-          callback('No AutoScalingGroup found', 0);
-        } else {
-          var count = 0;
-          data.AutoScalingGroups[0].Instances.forEach(function(instance) {
-            if (instance.LifecycleState == 'InService') {
-              count++;
-            }
-          });
-          callback(null, count);
-        }
+        data.AutoScalingGroups.forEach(function (item) {
+          if (match(tags, convertToAssocTags(item.Tags))) {
+            var count = 0;
+            item.Instances.forEach(function(instance) {
+              if (instance.LifecycleState == 'InService') {
+                count++;
+              }
+            });
+            result = Math.max(count, result);
+          }
+        });
+        callback(null, result);
       }
     })
   };
 
+  var match = function(a, b) {
+    var match = true;
+    Object.keys(a).forEach(function(key) {
+      if (a[key] != b[key]) {
+        match = false;
+      }
+    });
+    return match;
+  };
+
+  var convertToAssocTags = function (tags) {
+    var assocTags = {};
+    tags.forEach(function(tag) {
+      assocTags[tag.Key] = tag.Value;
+    });
+    return assocTags;
+  };
+
+
   if (event.RequestType == 'Create' || event.RequestType == 'Update') {
-    findAutoScalingGroupByName(name, function(err, result) {
+    findAutoScalingGroupByTags(convertToAssocTags(tags), function(err, result) {
       if (err) {
         responseData.Error = 'No AutoScalingGroup found';
         responseData.OriginalError = err;
