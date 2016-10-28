@@ -16,6 +16,7 @@
     "instructions": "Add a second “move forward” command to reach the sheep.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
+    "instructions_important": "true",
     "never_autoplay_video": "false",
     "ideal": "3",
     "disable_param_editing": "true",
