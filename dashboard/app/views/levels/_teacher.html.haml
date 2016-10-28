@@ -87,7 +87,12 @@
               %div
               = link_to t('teacher.panel.update_lock_settings'), script_path(@script_level.script)
       - if @section
-        .scrollable-wrapper
+        -# TODO: eventually want all sections
+        - students_info = get_students_info(@section, @script_level)
+        #students_info{data: { students_info: students_info.to_json}}
+        #react-students-list
+
+        .scrollable-wrapper{style: "display: none"}
           %table.section-students
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id

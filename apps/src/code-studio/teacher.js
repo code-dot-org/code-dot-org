@@ -8,6 +8,7 @@ import { getStore } from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
+import TeacherPanelStudentList from './components/TeacherPanelStudentList';
 import { fullyLockedStageMapping } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
@@ -109,6 +110,7 @@ export function renderTeacherPanel(store, scriptId) {
 function renderIntoLessonTeacherPanel() {
   const stageLockedText = document.getElementById('stage-locked-text');
   const teacherPanelSections = document.getElementById('teacher-panel-sections');
+  const studentList = document.getElementById('react-students-list');
   if (!stageLockedText && !teacherPanelSections) {
     return;
   }
@@ -128,6 +130,20 @@ function renderIntoLessonTeacherPanel() {
       );
     }
 
+    if (studentList) {
+      const studentInfo = $("#students_info").data('studentsInfo');
+      const query = queryString.parse(location.search);
+      ReactDOM.render(
+        <Provider store={getStore()}>
+          <TeacherPanelStudentList
+            studentInfo={studentInfo}
+            activeUserId={query.user_id}
+          />
+        </Provider>,
+        studentList
+      );
+    }
+
     if (stageLockedText) {
       const state = store.getState();
 
@@ -136,9 +152,9 @@ function renderIntoLessonTeacherPanel() {
       const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
 
       if (fullyLocked[currentStageId]) {
-        stageLockedText.text(commonMsg.stageLocked());
+        $(stageLockedText).text(commonMsg.stageLocked());
       } else {
-        stageLockedText.text(commonMsg.stageNotFullyLocked());
+        $(stageLockedText).text(commonMsg.stageNotFullyLocked());
       }
     }
   });
