@@ -27,6 +27,7 @@ Scenario: Toolbox in artist category view is disabled while running
 Scenario: Toolbox in artist category view is reenabled after finished running a short level
   Given I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/5?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#runButton"
   Then I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   And I press ":4.label"
