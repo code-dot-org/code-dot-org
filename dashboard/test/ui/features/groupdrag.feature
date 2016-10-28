@@ -5,7 +5,6 @@ Background:
 
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape
-  And I close the dialog
   And I drag block "1" to offset "300, 150"
   And I drag block "3" to offset "300, 80"
   And I wait for 1 seconds

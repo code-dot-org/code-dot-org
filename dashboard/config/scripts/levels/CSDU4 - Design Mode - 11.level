@@ -23,7 +23,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "show_turtle_before_run": "true",
+    "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "markdown_instructions": "# New Elements and Events: New Event Types\r\n<img src=\"https://images.code.org/9f013bd84577eb2498061757e18a72f4-image-1444322870272.46.06 AM.png\" style=\"float: right\">\r\n\r\n**New Events**: You may have noticed that the `onEvent` block has a pull-down menu for the event **type** (see right).\r\n\r\n# Do This:\r\n\r\n* **Experiment** with **each of the different types of mouse events** by selecting from the list. You can also read about them in the documentation.\r\n\t* click\r\n    * mousemove\r\n    * movedown\r\n    * mouseup\r\n    * mouseover\r\n* **Choose** the mouse event type you like most and change your event handler to use it.\r\n* **Note:** There are some events that capture keystroke events. These are interesting, but they do not work easily with buttons.  We'll stick to mouse events for now, and get to keys later.",
     "never_autoplay_video": "false",
@@ -40,6 +40,8 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

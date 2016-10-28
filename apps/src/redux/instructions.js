@@ -31,6 +31,7 @@ const instructionsInitialState = {
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
+  teacherMarkdown: undefined,
   hasContainedLevels: false,
   collapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
@@ -59,7 +60,8 @@ export default function reducer(state = instructionsInitialState, action) {
       shortInstructions2,
       longInstructions,
       hasContainedLevels,
-      overlayVisible
+      overlayVisible,
+      teacherMarkdown,
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -72,6 +74,7 @@ export default function reducer(state = instructionsInitialState, action) {
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      teacherMarkdown,
       hasContainedLevels,
       overlayVisible,
       collapsed
@@ -130,7 +133,7 @@ export default function reducer(state = instructionsInitialState, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible }) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -138,7 +141,8 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   shortInstructions2,
   longInstructions,
   hasContainedLevels,
-  overlayVisible
+  overlayVisible,
+  teacherMarkdown,
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -235,9 +239,20 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
-  const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane,
-      hasContainedLevels } = config;
-  const { instructions, instructions2, markdownInstructions, inputOutputTable } = level;
+  const {
+    level,
+    locale,
+    noInstructionsWhenCollapsed,
+    showInstructionsInTopPane,
+    hasContainedLevels,
+    teacherMarkdown
+  } = config;
+  const {
+    instructions,
+    instructions2,
+    markdownInstructions,
+    inputOutputTable
+  } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
   if (noInstructionsWhenCollapsed) {
@@ -288,6 +303,7 @@ export const determineInstructionsConstants = config => {
     shortInstructions,
     shortInstructions2,
     longInstructions,
+    teacherMarkdown,
     hasContainedLevels
   };
 };

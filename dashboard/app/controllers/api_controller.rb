@@ -180,8 +180,8 @@ class ApiController < ApplicationController
         }
       end
       response[:disableSocialShare] = current_user.under_13?
-      response[:disablePostMilestone] =
-        !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+      response[:disablePostMilestone] = script.disable_post_milestone?
+      response[:isHoc] = script.hoc?
 
       recent_driver = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
@@ -349,8 +349,11 @@ class ApiController < ApplicationController
     authorize! :read, @section
   end
 
+  # NOTE: This method assumes load_section has been previously called.
   def load_script
-    @script = Script.get_from_cache(params[:script_id]) if params[:script_id].present?
-    @script ||= @section.script || Script.twenty_hour_script
+    script_id = params[:script_id] if params[:script_id].present?
+    script_id ||= @section.script.id if @section.script
+    @script = Script.get_from_cache(script_id) if script_id
+    @script ||= Script.twenty_hour_script
   end
 end

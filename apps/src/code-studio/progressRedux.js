@@ -14,6 +14,7 @@ export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
+const DISABLE_BUBBLE_COLORS = 'progress/DISABLE_BUBBLE_COLORS';
 
 const initialState = {
   currentLevelId: null,
@@ -26,6 +27,7 @@ const initialState = {
   peerReviewsRequired: {},
   peerReviewsPerformed: [],
   showTeacherInfo: false,
+  bubbleColorsDisabled: false
 };
 
 /**
@@ -85,6 +87,13 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       showTeacherInfo: true
     });
+  }
+
+  if (action.type === DISABLE_BUBBLE_COLORS) {
+    return {
+      ...state,
+      bubbleColorsDisabled: true
+    };
   }
 
   return state;
@@ -148,6 +157,8 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
 });
 
 export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
+
+export const disableBubbleColors = () => ({ type: DISABLE_BUBBLE_COLORS });
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

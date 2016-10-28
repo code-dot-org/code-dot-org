@@ -63,13 +63,17 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey
   end
 
+  def exit_survey__general_first_workshop
+    mail :exit_survey, options: {is_first_workshop: true}
+  end
+
   def exit_survey__csf
     mail :exit_survey, Pd::Workshop::COURSE_CSF
   end
 
   private
 
-  def mail(method, course = nil, subject = nil)
+  def mail(method, course = nil, subject = nil, options: nil)
     unless course
       course = DEFAULT_COURSE
       subject = DEFAULT_SUBJECT
@@ -81,14 +85,17 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
 
-    #Seattle Public Schools (NCES Id 5307710)
-    school_info = build :school_info, school_district: SchoolDistrict.find(5_307_710)
+    school_info = build :school_info, school_district: SchoolDistrict.first
 
     enrollment = build :pd_enrollment, workshop: workshop, name: teacher.name, email: teacher.email, user: teacher,
       school_info: school_info
 
     enrollment.assign_code
 
-    Pd::WorkshopMailer.send(method, enrollment)
+    if options
+      Pd::WorkshopMailer.send(method, enrollment, options)
+    else
+      Pd::WorkshopMailer.send(method, enrollment)
+    end
   end
 end

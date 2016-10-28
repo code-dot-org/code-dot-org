@@ -530,7 +530,6 @@
   dashboard_landing_office_hours: "직접 물어보세요! monthly video office hours 를 방문해 보세요."
   dashboard_landing_print_certificates: "이 코스를 완료한 학생들을 위해 인증서 출력하기"
   dashboard_landing_educator_blog: "교육 블로그를 통해 관련 뉴스와 최신정보 확인하기"
-  dashboard_landing_smart_hints: Code.org 튜토리얼을 위해 참신한 도움 내용을 만드는 것을 도와주세요.
   dashboard_landing_video_player: "새로 만든 비디오 플레이어를 테스트해 보세요."
   dashboard_landing_progress_title: "반 진도"
   dashboard_landing_progress_biggest: "주요 진도의 상황"
@@ -928,6 +927,7 @@
   csp1_name: "유닛 1: 인터넷"
   csp2_name: "유닛 2: 디지털 정보"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "전체 테스트 - 50 문항"
   cspexam1-mWU7ilDYM9_name: "테스트 part 1 - 25문항"
   cspexam2-AKwgAh1ac5_name: "테스트 part 2 - 25문항"

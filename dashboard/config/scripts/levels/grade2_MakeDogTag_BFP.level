@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "*\"Hi, I'm an artist. You can write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks in the toolbox to see what they do!\r\n\r\n<br>  \r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n",
+    "markdown_instructions": "*\"Hi, I'm an artist. You can write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks in the toolbox to see what they do!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

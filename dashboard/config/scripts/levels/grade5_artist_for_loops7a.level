@@ -21,7 +21,7 @@
     "instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
     "use_contract_editor": "false",
     "embed": "false",
-    "markdown_instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

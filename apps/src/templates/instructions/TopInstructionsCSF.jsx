@@ -35,6 +35,10 @@ import {
   shouldDisplayChatTips
 } from './utils';
 
+import {
+  levenshtein
+} from '../../utils';
+
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
@@ -173,8 +177,8 @@ var TopInstructions = React.createClass({
     ),
     noVisualization: React.PropTypes.bool.isRequired,
 
-    acapelaInstructionsSrc: React.PropTypes.string,
-    acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
+    ttsInstructionsUrl: React.PropTypes.string,
+    ttsMarkdownInstructionsUrl:  React.PropTypes.string,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -198,7 +202,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -432,10 +436,32 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
+    // Minecraft should never show the button
     if (this.props.isMinecraft) {
       return false;
     }
-    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+
+    // if we have "extra" (non-instruction) content, we should always
+    // give the option of collapsing it
+    if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
+      return true;
+    }
+
+    // Otherwise, only show the button if we have two versions of
+    // instruction we want to toggle between
+    return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
+  },
+
+  shouldIgnoreShortInstructions() {
+    // if short instructions and long instructions have a Levenshtein
+    // Edit Distance of less than or equal to 10, ignore short
+    // instructions and only show long.
+    let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
+    return dist <= 10;
+  },
+
+  shouldDisplayShortInstructions() {
+    return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
   render: function () {
@@ -454,11 +480,12 @@ var TopInstructions = React.createClass({
       this.props.overlayVisible && styles.withOverlay
     ];
 
-    const markdown = (this.props.collapsed || !this.props.longInstructions) ?
+    const markdown = this.shouldDisplayShortInstructions() ?
       this.props.shortInstructions : this.props.longInstructions;
     const renderedMarkdown = processMarkdown(markdown, { renderer });
-    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
-      this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
+
+    const ttsUrl = this.shouldDisplayShortInstructions() ?
+      this.props.ttsInstructionsUrl : this.props.ttsMarkdownInstructionsUrl;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
@@ -504,17 +531,16 @@ var TopInstructions = React.createClass({
                 (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
             ]}
           >
-            <ChatBubble>
+            <ChatBubble ttsUrl={ttsUrl}>
               <Instructions
                 ref="instructions"
                 renderedMarkdown={renderedMarkdown}
-                acapelaSrc={acapelaSrc}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                 aniGifURL={this.props.aniGifURL}
                 inTopPane
               />
-              {this.props.collapsed && instructions2 &&
+              {instructions2 &&
                 <div
                   className="secondary-instructions"
                   dangerouslySetInnerHTML={{ __html: instructions2 }}
@@ -531,6 +557,8 @@ var TopInstructions = React.createClass({
                 key={hint.hintId}
                 borderColor={color.yellow}
                 content={hint.content}
+                ttsUrl={hint.ttsUrl}
+                ttsMessage={hint.ttsMessage}
                 block={hint.block}
               />
             )}
@@ -576,8 +604,8 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     overlayVisible: state.instructions.overlayVisible,
-    acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,

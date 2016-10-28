@@ -4,7 +4,7 @@ css 'unplugged'
 markdown <<MARKDOWN
 # Overview
 
-Moving from simple static images you will learn to use randomly generated numbers as inputs to your programs. From there you will be introduced the concept of a flip-book style animation loop, using those randomized shapes to see how the draw() loop calls your code repeatedly to create animation.
+Moving from simple static images you will learn to use randomly generated numbers as inputs to your programs. From there, you will be introduced to the concept of a flip-book style animation loop, using those randomized shapes to see how the draw() loop calls your code repeatedly to create animation.
 
 # Activities
 
@@ -23,7 +23,7 @@ Moving from simple static images you will learn to use randomly generated number
 |draw()|Repeatedly called draw loop| `function draw(){ rect(0,0,20,20) }` | link |
 |background()|Covers the whole display with one color| `background("white")` | link |
 |GameLab.frameRate|Controls speed of draw loop|`GameLab.frameRate = 20`| link |
-|lin(x1, y1, x2, y2)|Draws line|`line(100, 150, 200, 300)`| link |
+|line(x1, y1, x2, y2)|Draws line|`line(100, 150, 200, 300)`| link |
 
 ### Console:
 |Command| Meaning| Example |  Documentation |

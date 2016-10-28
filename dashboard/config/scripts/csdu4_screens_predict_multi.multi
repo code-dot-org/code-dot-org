@@ -1,0 +1,13 @@
+name 'CSDU4 Screens Predict Multi'
+
+
+question 'Which screen with the "Contact Us" button switch to?'
+wrong 'About'
+right 'Use It'
+wrong 'Contact Us'
+
+markdown <<MARKDOWN
+# Predict
+
+Uh oh, someone forgot to create meaningful element IDs and now we're stuck with a program that is not only buggy, but really hard to read. Using Design Mode to figure out which IDs belong to which elements, can you predict which screen each of these buttons will lead to? Test it out after you've made your prediction.
+MARKDOWN

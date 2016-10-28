@@ -15,19 +15,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
 
-    @script = Script.twenty_hour_script
-    @script_level = @script.script_levels.fifth
-
     @custom_script = create(:script, :name => 'laurel', hideable_stages: true)
     @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
     @custom_stage_2 = create(:stage, script: @custom_script, name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
+    @custom_stage_3 = create(:stage, script: @custom_script, name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
     @custom_s1_l1 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_1, :position => 1)
     @custom_s2_l1 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
+    create(:script_level, script: @custom_script, stage: @custom_stage_3, :position => 1)
     client_state.reset
+
+    @script = @custom_script
+    @script_level = @custom_s1_l1
 
     Gatekeeper.clear
   end
@@ -274,12 +276,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<shouldnot:override/>', level_options['toolbox']
   end
 
-  test 'should show video in twenty hour script level' do
-    get :show, script_id: @script, stage_position: @script_level.stage.absolute_position, id: @script_level.position
-    assert_response :success
-    assert_not_empty assigns(:level).related_videos
-  end
-
   test 'should not show concept video for non-legacy script level' do
     non_legacy_script_level = create(:script_level)
     concept_with_video = Concept.find_by_name('sequence')
@@ -300,14 +296,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:view_options)[:autoplay_video]
   end
 
-  test 'should not have autoplay video when noautoplay param is set' do
-    level_with_autoplay_video = create(:script_level, :with_autoplay_video)
-    get :show, script_id: level_with_autoplay_video.script, stage_position: '1', id: '1', noautoplay: 'true'
-    assert_response :success
-    assert_not_empty assigns(:level).related_videos
-    assert_nil assigns(:view_options)[:autoplay_video]
-  end
-
   test 'should have autoplay video when never_autoplay_video is false on level' do
     level_with_autoplay_video = create(:script_level, :never_autoplay_video_false)
     get :show, script_id: level_with_autoplay_video.script, stage_position: '1',  id: '1'
@@ -321,24 +309,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: level_with_autoplay_video.script, stage_position: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
-    assert_nil assigns(:view_options)[:autoplay_video]
-  end
-
-  test 'should track video play even if noautoplay param is set' do
-    # This behavior is relied on by UI tests that navigate to the next level after completion,
-    # because the ?noautoplay=true parameter does not propagate to the next level.
-    # The video would get autoplayed on the next level if not tracked as seen
-    script = create(:script)
-    stage = create(:stage, script: script, name: 'Testing Stage 1', absolute_position: 1)
-    level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
-    assert !client_state.videos_seen_for_test?
-
-    get :show, script_id: level_with_autoplay_video.script, stage_position: stage.absolute_position, id: '1', noautoplay: 'true'
-    assert_nil assigns(:view_options)[:autoplay_video]
-    assert client_state.videos_seen_for_test?
-
-    @controller = ScriptLevelsController.new
-    get :show, script_id: level_with_autoplay_video.script, stage_position: stage.absolute_position, id: '1'
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
@@ -599,12 +569,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: script, stage_position: stage.absolute_position, id: script_level.position
 
     assert(@response.body.include?('Drag a \"move\" block and snap it below the other block'))
-  end
-
-  test 'should render title for puzzle in default script' do
-    get :show, script_id: @script, stage_position: @script_level.stage.absolute_position, id: @script_level.position
-    assert_equal 'Code.org [test] - Accelerated Intro to CS Course: The Maze #4',
-      Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
   test 'should render title for puzzle in custom script' do
@@ -1129,8 +1093,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in student
 
-    section1 = put_student_in_section(student, @teacher, @custom_script)
-    section2 = put_student_in_section(student, @teacher, @custom_script)
+    unattached_course = create(:script)
+    section1 = put_student_in_section(student, @teacher, unattached_course)
+    section2 = put_student_in_section(student, @teacher, unattached_course)
 
     stage1 = @script.stages[0]
     stage2 = @script.stages[1]
@@ -1164,7 +1129,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in student
 
     attached_section = put_student_in_section(student, @teacher, @script)
-    unattached_section = put_student_in_section(student, @teacher, @custom_script)
+    unattached_section = put_student_in_section(student, @teacher, create(:script))
 
     stage1 = @script.stages[0]
     stage2 = @script.stages[1]
@@ -1263,15 +1228,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher can't hide stages if script has hideable_stages false" do
+    script = create(:script, hideable_stages: false)
+    stage = create(:stage, script: script)
+
     teacher = create :teacher
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @script)
-    stage1 = @script.stages[0]
-    assert !@script.hideable_stages
+    section = put_student_in_section(student, teacher, script)
+    assert !script.hideable_stages
 
-    post :toggle_hidden, script_id: @script.id, stage_id: stage1.id, section_id: section.id, hidden: true
+    post :toggle_hidden, script_id: script.id, stage_id: stage.id, section_id: section.id, hidden: true
     assert_response 403
     assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
   end
