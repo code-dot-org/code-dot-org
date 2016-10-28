@@ -2,11 +2,12 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
 import { getOuterHeight, scrollBy } from './utils';
+import { addMouseUpTouchEvent } from '../../dom';
 
 const WIDTH = 20;
 const HEIGHT = WIDTH;
 
-const SCROLL_BY_PERCENT = 0.8;
+const SCROLL_BY = 100;
 
 const styles = {
   arrow: {
@@ -52,11 +53,19 @@ const ScrollButtons = React.createClass({
     return scrollButtonsHeight + (MARGIN * 2);
   },
 
+  componentWillMount: function () {
+    const unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
+    this.setState({ unbindMouseUp });
+  },
+
+  componentWillUnmount: function () {
+    this.state.unbindMouseUp();
+  },
+
   scrollStart(scrollingUp) {
     // initial scroll in response to button click
     const contentContainer = this.props.getScrollTarget();
-    const contentHeight = contentContainer.clientHeight;
-    let initialScroll = contentHeight * SCROLL_BY_PERCENT;
+    let initialScroll = SCROLL_BY;
     if (scrollingUp) {
       initialScroll *= -1;
     }
@@ -112,13 +121,11 @@ const ScrollButtons = React.createClass({
         <div
           ref="scrollUp"
           onMouseDown={this.scrollStart.bind(this, true)}
-          onMouseUp={this.scrollStop}
           style={scrollUpStyle}
         />
         <div
           ref="scrollDown"
           onMouseDown={this.scrollStart.bind(this, false)}
-          onMouseUp={this.scrollStop}
           style={scrollDownStyle}
         />
       </div>
