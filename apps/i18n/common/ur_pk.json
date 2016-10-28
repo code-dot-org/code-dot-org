@@ -306,6 +306,10 @@
   "whenRun": "جب رن ہو تو",
   "workspaceHeaderShort": "ورک اسپیس ",
   "yes": "جی",
+  "disabledButtonsInfo": "Your progress and code will not be saved during Hour of Code.",
+  "disabledButtonsWarning": "Warning:",
+  "disabledButtonsWhy": "Why are my bubbles gray?",
   "forTeachersOnly": "For Teachers Only",
+  "learnMore": "Learn more",
   "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
 }

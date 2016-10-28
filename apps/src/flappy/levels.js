@@ -56,6 +56,7 @@ var anchoredBlock = function (type, child) {
 
 module.exports = {
   '1': {
+    'instructionsImportant': true,
     'requiredBlocks': [
       [{'test': 'flap', 'type': 'flappy_flap'}]
     ],

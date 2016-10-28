@@ -51,7 +51,7 @@ module Pd::Payment
 
     def generate_teacher_progress_report_line_item(with_payment = false)
       line_item = {
-        teacher_name: enrollment.name || teacher.name,
+        teacher_name: enrollment.try(&:name) || teacher.name,
         teacher_id: teacher.id,
         teacher_email: teacher.email,
         plp_name: workshop_summary.plp.try(&:name),
@@ -74,6 +74,7 @@ module Pd::Payment
 
       if with_payment
         line_item.merge!({
+          pay_period: workshop_summary.pay_period,
           payment_type: payment.try(&:type),
           payment_rate: payment.try(&:rate),
           qualified: qualified?,
