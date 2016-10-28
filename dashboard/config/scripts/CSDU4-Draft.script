@@ -71,6 +71,7 @@ level 'CSDU4 Screens Predict'
 level 'CSDU4 - Design Mode - 11'
 level 'CSDU4 - Design Mode - 17'
 named_level 'Importing Screens'
+level 'CSDU4 Project Import'
 
 stage 'Adding Functionality (optional)'
 named_level 'CSD U4L16 SFLP'
@@ -90,6 +91,7 @@ level 'CSDU4 - Design Mode - 12'
 
 stage 'App Testing'
 named_level 'CSD U4L17 SFLP'
+level 'CSDU4 Project Bug Feature'
 
 stage 'Improving and Iterating'
 named_level 'CSD U4L18 SFLP'
