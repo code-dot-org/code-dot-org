@@ -592,13 +592,10 @@ Craft.initializeAppLevel = function (levelConfig) {
     onDayCallback: () => {
       Craft.musicController.setGroup('day');
       Craft.musicController.fadeOut();
-      console.log("onDayCallback");
     },
     onNightCallback: () => {
       Craft.musicController.setGroup('night');
       Craft.musicController.fadeOut();
-
-      console.log("onNightCallback");
     },
     levelVerificationTimeout: levelConfig.levelVerificationTimeout,
     isDaytime: levelConfig.isDaytime,
