@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-10-27T15:13:55.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Search Engine Optimization: Final\r\n\r\nIn the past levels you added metadata to your website to improve your search engine optimization. Go back to your list of issues the Search Engine Optimizer identified and see if there are any others you can solve.\r\n\r\n# Do This\r\n\r\n* Check to make sure you have completed the checklist below\r\n* Continue to optimize your site for better search engine results\r\n\r\n## Checklist\r\n\r\n* Every web page has metadata for title, description and viewport to improve search engine optimization.",
+    "project_template_level_name": "CSDU2 Portfolio Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -199,9 +199,9 @@ const SurveyResultsHeader = React.createClass({
           <td style={row['heading'] && styles.questionGroupCell}>{allWorkshopsForCourse[row['key']]}</td>
           <td style={row['heading'] && styles.questionGroupCell}>{allMyWorkshopsForCourse[row['key']]}</td>
           {
-            headings.slice(3).map((heading, i) => {
+            headings.slice(3).map((heading, j) => {
               return (
-                <td key={i} style={row['heading'] && styles.questionGroupCell}>
+                <td key={j} style={row['heading'] && styles.questionGroupCell}>
                   {
                     this.state.selectedWorkshopId ? breakoutData['this_workshop'][row['key']] : breakoutData[heading][row['key']]
                   }
@@ -288,7 +288,7 @@ const SurveyResultsHeader = React.createClass({
 
     const workshopOptions = this.state.filteredWorkshops.map( (workshop, i) => {
       return (
-        <option key={i + (this.props.organizerView && 1)} value={workshop.id}>
+        <option key={i} value={workshop.id}>
           {this.getWorkshopFriendlyName(workshop)}
         </option>
       );
@@ -297,7 +297,7 @@ const SurveyResultsHeader = React.createClass({
     if (this.props.organizerView) {
       workshopOptions.unshift(
         (
-          <option key={0} value={''}>
+          <option key={-1} value={''}>
             View all workshops
           </option>
         )

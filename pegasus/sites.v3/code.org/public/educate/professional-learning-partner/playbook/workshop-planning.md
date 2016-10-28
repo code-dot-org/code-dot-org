@@ -38,7 +38,7 @@ ________________
 
 ## **Computer Science Fundamentals**
 
-Refer to the [CSF Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop.
+Refer to the [CS Fundamentals Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop.
 
 [**Back to the top**](#top)
 <br/>
@@ -79,7 +79,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 <br/><br/>
 
 **When to Host the Academic Year Workshop**<br/>
-Phase 3 is best held in early October prior to when order of operations and early math take place in the classroom, which are the concepts that CSinA Course A integrate into.
+Phase 3 is best held in early October prior to when order of operations and early math take place in the classroom, which are the concepts that CS in Algebra Course A integrate into.
 	
 **Ordering Supplies**<br/>
 [Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.

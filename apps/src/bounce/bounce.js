@@ -18,7 +18,6 @@ var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
-var experiments = require('../experiments');
 
 var SquareType = tiles.SquareType;
 
@@ -79,6 +78,8 @@ var loadLevel = function () {
   Bounce.softButtons_ = level.softButtons || [];
   Bounce.respawnBalls = level.respawnBalls || false;
   Bounce.failOnBallExit = level.failOnBallExit || false;
+  Bounce.goal = level.useFlagGoal ? skin.flagGoal : skin.goal;
+  Bounce.goalSuccess = level.useFlagGoal ? skin.flagGoalSuccess : skin.goalSuccess;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -336,7 +337,7 @@ var drawMap = function () {
       paddleFinishMarker.setAttribute('id', 'paddlefinish' + i);
       paddleFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
-                                        skin.goal);
+                                        Bounce.goal);
       paddleFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
       paddleFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
       svg.appendChild(paddleFinishMarker);
@@ -349,7 +350,7 @@ var drawMap = function () {
     ballFinishMarker.setAttribute('id', 'ballfinish');
     ballFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                     'xlink:href',
-                                    skin.goal);
+                                    Bounce.goal);
     ballFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
     ballFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
     svg.appendChild(ballFinishMarker);
@@ -754,7 +755,7 @@ Bounce.init = function (config) {
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   var onMount = function () {
     studioApp.init(config);
@@ -918,7 +919,7 @@ Bounce.reset = function (first) {
       paddleFinishIcon.setAttributeNS(
           'http://www.w3.org/1999/xlink',
           'xlink:href',
-          skin.goal);
+          Bounce.goal);
     }
   }
 
@@ -936,7 +937,7 @@ Bounce.reset = function (first) {
     ballFinishIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink',
         'xlink:href',
-        skin.goal);
+        Bounce.goal);
   }
 
   // Reset the obstacle image.
@@ -1270,7 +1271,7 @@ Bounce.allFinishesComplete = function () {
           paddleFinishIcon.setAttributeNS(
               'http://www.w3.org/1999/xlink',
               'xlink:href',
-              skin.goalSuccess);
+              Bounce.goalSuccess);
         }
       } else {
         finished++;
@@ -1295,7 +1296,7 @@ Bounce.allFinishesComplete = function () {
         ballFinishIcon.setAttributeNS(
             'http://www.w3.org/1999/xlink',
             'xlink:href',
-            skin.goalSuccess);
+            Bounce.goalSuccess);
         return true;
       }
     }
