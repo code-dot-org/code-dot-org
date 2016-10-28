@@ -264,6 +264,10 @@ const ScriptEditor = React.createClass({
         level.ids[options.index] = options.value;
         break;
       }
+      case 'CHOOSE_LEVEL_TYPE': {
+        newState[options.stage - 1].levels[options.level - 1].kind = options.value;
+        break;
+      }
       case 'TOGGLE_EXPAND': {
         const level = newState[options.stage - 1].levels[options.level - 1];
         level.expand = !level.expand;
@@ -586,6 +590,10 @@ const LevelEditor = React.createClass({
     return this.props.level.ids.some(id => /^blockly:/.test(levelKeyList[id]));
   },
 
+  handleLevelTypeSelected({value}) {
+    this.props.handleAction('CHOOSE_LEVEL_TYPE', {stage: this.props.stagePosition, level: this.props.level.position, value});
+  },
+
   handleLevelSelected(index, {value}) {
     this.props.handleAction('CHOOSE_LEVEL', {stage: this.props.stagePosition, level: this.props.level.position, index, value});
   },
@@ -639,6 +647,7 @@ const LevelEditor = React.createClass({
                 <VirtualizedSelect
                   value={this.props.level.kind}
                   options={this.levelKindOptions}
+                  onChange={this.handleLevelTypeSelected}
                   clearable={false}
                   arrowRenderer={ArrowRenderer}
                   style={styles.levelTypeSelect}
