@@ -14,6 +14,7 @@ import color from '../../../color';
 const levelKeyOptions = _.map(levelKeyList, (label, value) => ({label, value: +value}));
 
 const borderRadius = 3;
+const levelTokenMargin = 7;
 
 const styles = {
   input: {
@@ -92,7 +93,7 @@ const styles = {
     fontSize: 13,
     background: '#eee',
     borderRadius: borderRadius,
-    margin: '5px 0'
+    margin: `${levelTokenMargin}px 0`
   },
   addLevel: {
     fontSize: 14,
@@ -465,7 +466,7 @@ const StageEditor = React.createClass({
     });
     this.setState({
       drag: position,
-      dragHeight: this.metrics(position).height + 5,
+      dragHeight: this.metrics(position).height + levelTokenMargin,
       initialPageY: pageY,
       initialScroll: document.body.scrollTop,
       newPosition: position,
