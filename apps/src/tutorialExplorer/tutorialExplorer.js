@@ -25,7 +25,8 @@ const TutorialExplorer = React.createClass({
   getInitialState() {
     let filters = {};
 
-    for (const filterGroup of this.props.filterGroups) {
+    for (const filterGroupName in this.props.filterGroups) {
+      const filterGroup = this.props.filterGroups[filterGroupName];
       filters[filterGroup.name] = [];
       const initialFiltersForGroup = this.props.initialFilters[filterGroup.name];
       if (initialFiltersForGroup) {
@@ -187,7 +188,7 @@ const TutorialExplorer = React.createClass({
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as do-not-show.  If it does,
         // it's hidden.
-        if (tutorial.tags.split(',').includes("do-not-show")) {
+        if (tutorial.tags.split(',').indexOf("do-not-show") !== -1) {
           return false;
         }
 
@@ -198,8 +199,8 @@ const TutorialExplorer = React.createClass({
           const languageTags = tutorial.languages_supported.split(',');
           const currentLocale = locale;
           if (languageTags.length > 0 &&
-            !languageTags.includes(currentLocale) &&
-            !languageTags.includes(currentLocale.substring(0,2))) {
+            languageTags.indexOf(currentLocale) === -1 &&
+            languageTags.indexOf(currentLocale.substring(0,2)) === -1) {
             return false;
           }
         } else if (specificLocale) {
@@ -256,7 +257,7 @@ const TutorialExplorer = React.createClass({
      *   one of the filterGroup's values.
      */
     findMatchingTag(filterGroup, tutorialTags) {
-      return filterGroup.some(filterName => tutorialTags.split(',').includes(filterName));
+      return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
     }
 
   },

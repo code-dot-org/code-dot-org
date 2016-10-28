@@ -171,7 +171,7 @@ const TutorialDetail = React.createClass({
                           </a>
                         </td>
                       </tr>}
-                    {this.props.item.tags_activity_type.split(',').includes("online-tutorial") &&
+                    {this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 &&
                       <tr key={1}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           Short link
