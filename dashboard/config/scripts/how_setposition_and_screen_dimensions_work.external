@@ -41,3 +41,9 @@ You (perhaps obviously) need to plug actual numbers into these parameters of `se
 </div>
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tip
+
+This might be a good reference to project at the front of the room for students as they work on the last few levels.
+MARKDOWN

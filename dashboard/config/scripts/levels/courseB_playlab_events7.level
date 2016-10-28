@@ -48,8 +48,8 @@
       "downButton",
       "upButton"
     ],
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
