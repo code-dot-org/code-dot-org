@@ -64,6 +64,7 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#runButton"
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/10?noautoplay=true"
