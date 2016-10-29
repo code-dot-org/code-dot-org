@@ -72,7 +72,7 @@ const FilterHeader = React.createClass({
                 &nbsp;
                 &nbsp;
                 <button onClick={this.props.hideModalFilters}>
-                  Close
+                  Apply
                 </button>
               </span>
             )}
