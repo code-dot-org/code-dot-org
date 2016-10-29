@@ -23,6 +23,14 @@ suites:
   - name: upgrade
     steps:
       - run_list:
-        - recipe[nodejs_test::old]
+        - recipe[cdo-nodejs]
+        attributes:
+          cdo-nodejs:
+            version: '0.12'
+            npm_version: '2'
       - run_list:
         - recipe[cdo-nodejs]
+        attributes:
+          cdo-nodejs:
+            version: '6.x'
+            npm_version: '3'

@@ -23,7 +23,10 @@ Event=driven programs like these are dynamic but also bring challenges since you
 
 * **Event-driven program** -  a program designed to run blocks of code or functions in response to specified events (e.g. a mouse click)
 * **Event handling** - an overarching term for the coding tasks involved in making your app respond to events by triggering functions.
-* **Event listener** - a command (`onEvent` in App Lab) that can be set up to trigger a function when a particular type of event occurs on a particular UI element.
+ * **Event listener** - a command (`onEvent` in App Lab) that can be set up to trigger a function when a particular type of event occurs on a particular UI element.
+ * **Callback function** - a function specified as part of an event listener; it is written by the programmer but *called* by the system as the result of an event trigger.
+
+
 
 ## Lesson
 
@@ -38,4 +41,16 @@ Event=driven programs like these are dynamic but also bring challenges since you
 * Video: Introduction to Design Mode (embedded in code studio)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teacher Notes for this lesson:
+
+* This is looks like a long lesson, but there is actually a relatively small amount of content - the end product that students make is something that could be composed in under 30 seconds once you know what you're doing, but it involves pulling together several different abstract ideas and concepts.
+
+* The lesson is broken up into a lot of small pieces, and each piece is explained in detail. Each piece is important because it lays the foundation for almost everything that comes later.
+
+* Getting solid on Design Mode and how Event-Driven programming patterns work is definitely a “go slow in order to go fast” situation. Taking time here to root out misconceptions and develop good practices will pay dividends down the line.
+
+* Finally, there is a lot of vocabulary introduced in this lesson, while there is almost none introduced in the next lesson. So, it’s okay if every detail of the vocabulary is not understood here, it will have time to sink in over the next few lessons.
 MARKDOWN

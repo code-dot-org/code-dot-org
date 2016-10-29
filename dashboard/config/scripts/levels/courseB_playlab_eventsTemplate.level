@@ -39,8 +39,8 @@
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
     "authored_hints": "[]",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

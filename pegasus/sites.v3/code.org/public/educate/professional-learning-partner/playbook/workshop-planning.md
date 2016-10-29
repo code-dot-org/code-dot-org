@@ -232,7 +232,7 @@ ________________
 **Workshop Preparation Process**<br/>
 
 1. Setup your CS Principles Workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
-2. Make sure ALL facilitators are added to the workshop **If you forget to add them, they will not get paid!*<br/>
+2. Make sure ALL facilitators are added to the workshop *If you forget to add them, they will not get paid!*<br/>
 *(Skip to step 4 if this is not a summer workshop)*
 3. Send teachers their [accept email and information on how to setup a Code Studio account and access the Phase 1 online module](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit?usp=sharing).<br/>
 4. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization.<br/>
@@ -266,7 +266,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- 9-12 weeks into school
 	- Should occur before teachers begin teaching unit 3
 - Workshop 3 = unit 4, first half of unit 5 
-	- Start of second semester or December
+	- Start of second semester is recommended, but December may be appropriate if schools in your region went back at the beginning of August)
 - Workshop 4 = second half of unit 5, unit 6 
 	- Ideally in mid February. 
 	- Early March  at the latest
