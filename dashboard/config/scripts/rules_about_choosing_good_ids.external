@@ -35,15 +35,15 @@ In making descriptive and meaningful IDs there **are some rules about IDs** you 
 
 **Why no spaces?** 
 
-Many computer systems do not allow function names and IDs to contain spaces. In App Lab we typicall use camelcase. 
+Many computer systems do not allow function names and IDs to contain spaces. We typically use camelcase in our lessons. 
 
-You've already seen several examples like this: `moveForward`, `onEvent`, `turnLeft`, etc.  It's important to realize that camelcase is a style convention, not a hard and fast rule.
+You've already seen several examples like this: `moveForward`, `onEvent`, `turnLeft`, etc.  It's important to realize that camelcase is a style convention, not a hard and fast rule of JavaScript.
 
 **Case-sensitive?**
 
 This means there is a difference between `LeftBtn` and `leftBtn`  (notice the Capital L on the first one).
 
-These differences seem annoying at first, but you get used to it, and actually appreciate the fact that the computer requires such precision.
+These differences seem annoying at first, but you get used to it, and actually learn to appreciate the fact that the computer requires such precision.
 
 There are a few common styles for capitalizing and spelling multi-word IDs:
 

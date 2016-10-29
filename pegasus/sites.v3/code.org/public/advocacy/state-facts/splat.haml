@@ -203,14 +203,9 @@ theme: pdf
     %ul
       - if state_info[:professional_learning_partners_t] != 'none'
         %li
-          Code.org's professional learning partner(s) is/are:
+          Code.org's regional partner(s) is/are:
           = succeed '.' do
             = state_info[:professional_learning_partners_t]
-      - if state_info[:school_district_partners_t] != 'no school districts in the state'
-        %li
-          Code.org has partnered with the following school district(s):
-          = succeed '.' do
-            = state_info[:school_district_partners_t]
       - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
         %li
           - if state_info[:num_affiliates_i] == 0
@@ -262,6 +257,11 @@ theme: pdf
           in
           = state_info[:state_name_s]
           to teach computer science.
+      - if state_info[:other_partners_t] != 'none'
+        %li
+          Code.org has a partnership with 
+          =state_info[:other_partners_t]
+          to help spread K-5 computer science to its schools.         
 
   .quote-center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
