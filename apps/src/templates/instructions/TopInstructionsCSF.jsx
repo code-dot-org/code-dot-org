@@ -483,7 +483,7 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && Object.assign({}, styles.embedView),
+      this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main,
       this.props.overlayVisible && styles.withOverlay
