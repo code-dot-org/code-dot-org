@@ -1,7 +1,13 @@
 import React, { PropTypes } from 'react';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+const styles = {
+  main: {
+  }
+};
 
 const StudentEntry = (props) => {
-  const { isActive, status, isUnplugged, position, isNavigator, name, id } = props;
+  const { isActive, status, isUnplugged, position, isPairing, isNavigator, name, id } = props;
 
   const path = `$(window.location.href)&user_id=${id}`;
 
@@ -34,6 +40,7 @@ const StudentEntry = (props) => {
       <td className={'name' + (isNavigator ? ' navigator' : '')}>
         <a href={path}>
           {name}
+          {isPairing && <FontAwesome icon="users" className="pair-programming-icon"/>}
         </a>
       </td>
     </tr>
@@ -45,6 +52,7 @@ StudentEntry.propTypes = {
   isUnplugged: PropTypes.bool.isRequired,
   position: PropTypes.number.isRequired,
   isNavigator: PropTypes.bool.isRequired,
+  isPairing: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired
 };
@@ -57,11 +65,11 @@ const TeacherPanelStudentList = React.createClass({
   render() {
     const { studentInfo, activeUserId } = this.props;
     return (
-      <div className="scrollable-wrapper">
+      <div className="scrollable-wrapper" style={styles.main}>
         <table className="section-students">
           <tbody>
             {studentInfo.map((student, index) => {
-              const { name, id, status, unplugged, position, navigator, path }  = student;
+              const { name, id, status, unplugged, position, pairing, navigator, path }  = student;
               return (
                 <StudentEntry
                   key={index}
@@ -72,6 +80,7 @@ const TeacherPanelStudentList = React.createClass({
                   isUnplugged={unplugged}
                   status={status}
                   position={position}
+                  isPairing={!!pairing}
                   isNavigator={!!navigator}
                 />
               );
