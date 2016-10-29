@@ -3,6 +3,7 @@ Feature: Puzzle share page
 
 Background:
   Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
+  And I wait to see "#runButton"
   And I've initialized the workspace with my flappy puzzle.
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace
@@ -10,7 +11,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   Then I press "rightButton"
   And I wait to see "#x-close"
   Then I navigate to the share URL
-  
+
   Then ensure Flappy gameState is WAITING
   Then I press "runButton"
   And ensure Flappy gameState is WAITING

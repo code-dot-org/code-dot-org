@@ -16,6 +16,7 @@ const TutorialExplorer = React.createClass({
     tutorials: React.PropTypes.array.isRequired,
     filterGroups: React.PropTypes.array.isRequired,
     initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
+    hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
     roboticsButton: React.PropTypes.bool
@@ -24,7 +25,8 @@ const TutorialExplorer = React.createClass({
   getInitialState() {
     let filters = {};
 
-    for (const filterGroup of this.props.filterGroups) {
+    for (const filterGroupName in this.props.filterGroups) {
+      const filterGroup = this.props.filterGroups[filterGroupName];
       filters[filterGroup.name] = [];
       const initialFiltersForGroup = this.props.initialFilters[filterGroup.name];
       if (initialFiltersForGroup) {
@@ -42,7 +44,7 @@ const TutorialExplorer = React.createClass({
       windowWidth: undefined,
       windowHeight: undefined,
       mobileLayout: $(window).width() <= TutorialExplorer.mobileWidth,
-      showingModalFilters: true
+      showingModalFilters: false
     };
   },
 
@@ -78,10 +80,11 @@ const TutorialExplorer = React.createClass({
     });
   },
 
-  filterTutorials(filters) {
+  filterTutorials(filters, hideFilters) {
     const filterProps = {
       locale: this.props.locale,
-      filters: filters
+      filters: filters,
+      hideFilters: this.props.hideFilters
     };
     filterProps.specificLocale = false;
     const filteredTutorials = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
@@ -158,6 +161,7 @@ const TutorialExplorer = React.createClass({
      * It goes through all active filter categories.  If no filters are set for
      * a filter group, then that item will default to showing, so long as no other
      * filter group prevents it from showing.
+     * hideFilters is an explicit list of filters that we actually hide if matched.
      * But if we do have a filter set for a filter group, and the tutorial is tagged
      * for that filter group, then at least one of the active filters must match a tag.
      * e.g. If the user chooses two platforms, then at least one of the platforms
@@ -179,9 +183,15 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters } = filterProps;
+      const { locale, specificLocale, filters, hideFilters } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
+        // Check that the tutorial isn't marked as do-not-show.  If it does,
+        // it's hidden.
+        if (tutorial.tags.split(',').indexOf("do-not-show") !== -1) {
+          return false;
+        }
+
         // First check that the tutorial language doesn't exclude it immediately.
         // If the tags contain some languages, and we don't have a match, then
         // hide the tutorial.
@@ -189,8 +199,8 @@ const TutorialExplorer = React.createClass({
           const languageTags = tutorial.languages_supported.split(',');
           const currentLocale = locale;
           if (languageTags.length > 0 &&
-            !languageTags.includes(currentLocale) &&
-            !languageTags.includes(currentLocale.substring(0,2))) {
+            languageTags.indexOf(currentLocale) === -1 &&
+            languageTags.indexOf(currentLocale.substring(0,2)) === -1) {
             return false;
           }
         } else if (specificLocale) {
@@ -198,6 +208,20 @@ const TutorialExplorer = React.createClass({
           // for specific matches to our current locale, then don't show this
           // tutorial.  i.e. don't let non-locale-specific tutorials through.
           return false;
+        }
+
+        // If we are explicitly hiding a matching filter, then don't show the
+        // the tutorial.
+        for (const filterGroupName in hideFilters) {
+          const tutorialTags = tutorial["tags_" + filterGroupName];
+          const filterGroup = hideFilters[filterGroupName];
+
+          if (filterGroup.length !== 0 &&
+              tutorialTags &&
+              tutorialTags.length > 0 &&
+              TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
+            return false;
+          }
         }
 
         // If we miss any active filter group, then we don't show the tutorial.
@@ -233,7 +257,7 @@ const TutorialExplorer = React.createClass({
      *   one of the filterGroup's values.
      */
     findMatchingTag(filterGroup, tutorialTags) {
-      return filterGroup.some(filterName => tutorialTags.split(',').includes(filterName));
+      return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
     }
 
   },
@@ -294,6 +318,7 @@ window.TutorialExplorerManager = function (options) {
         tutorials={options.tutorials}
         filterGroups={options.filters}
         initialFilters={options.initialFilters}
+        hideFilters={options.hideFilters}
         locale={options.locale}
         backButton={options.backButton}
         roboticsButton={options.roboticsButton}
