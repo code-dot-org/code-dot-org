@@ -85,6 +85,13 @@ const InlineAudio = React.createClass({
       });
     });
 
+    audio.addEventListener("error", e => {
+      this.setState({
+        playing: false,
+        error: true
+      });
+    });
+
     this.setState({ audio });
     return audio;
   },
@@ -104,13 +111,7 @@ const InlineAudio = React.createClass({
   },
 
   playAudio: function () {
-    this.getAudioElement().play().catch(function (e) {
-      this.setState({
-        playing: false,
-        error: true
-      });
-    }.bind(this));
-
+    this.getAudioElement().play();
     this.setState({ playing: true });
   },
 
