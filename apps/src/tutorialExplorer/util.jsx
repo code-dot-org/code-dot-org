@@ -37,7 +37,7 @@ function getTagString(prefix, tagString) {
     "activity_type_lesson-plan": "Lesson plan"
   };
 
-  return tagString.split(',').filter(tag => tagToString[`${prefix}_${tag}`]).map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
+  return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).filter(str => !!str).join(', ');
 }
 
 /**
