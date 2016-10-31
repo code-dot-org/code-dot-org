@@ -26,6 +26,7 @@ class Api::V1::Pd::TeacherProgressReportControllerTest < ::ActionController::Tes
   ).freeze
 
   EXPECTED_PAYMENT_FIELDS = %w(
+    pay_period
     payment_type
     payment_rate
     qualified
