@@ -5,13 +5,15 @@ Background:
 
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape
+  And I wait to see "#runButton"
   And I drag block "1" to block "3"
   And I drag block "1" to block "4"
   And I wait for 1 seconds
   Then block "5" is child of block "4"
 
 Scenario: Connect two blocks from toolbox
-  When I drag block "1" to block "3"
+  When I wait to see "#runButton"
+  And I drag block "1" to block "3"
   And I drag block "1" to block "4"
   And I wait for 1 seconds
   Then block "5" is child of block "4"
