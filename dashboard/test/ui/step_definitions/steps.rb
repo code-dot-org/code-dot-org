@@ -586,7 +586,7 @@ Then /^I see jquery selector (.*)$/ do |selector|
 end
 
 Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
-  expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num)
+  expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
 end
 
 Then /^I wait until I see selector "(.*)"$/ do |selector|
