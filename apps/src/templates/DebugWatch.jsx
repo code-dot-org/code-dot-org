@@ -221,6 +221,8 @@ const DebugWatch = React.createClass({
                   width: '159px',
                   marginTop: '0px',
                   height: '25px',
+                  fontFamily: 'monospace',
+                  fontSize: '12px',
                 }}
             >
             </input>
