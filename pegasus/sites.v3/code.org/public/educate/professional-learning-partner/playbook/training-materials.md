@@ -27,6 +27,8 @@ The following resources were discussed and distributed at Facilitation Summit in
 - [Running an Effective Professional Learning Event - Slides](https://docs.google.com/a/code.org/presentation/d/148wkzac1rwnK-O6q3PqIYer87MjwlVHLDBENOdbfBmA/edit?usp=sharing)</br>
 - [Being a Successful Program Manager - Slides](https://docs.google.com/a/code.org/presentation/d/1Q8m-DquU2ZtCpIFC4-Oxc1MrSViOvFq4quc9qeTYZGc/edit?usp=sharing)<br/>
 
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="teachercon"></a>
 <br/>
@@ -75,6 +77,9 @@ CS Expansion
 - [Building your CS Expansion Roadmap - Slides](https://docs.google.com/presentation/d/1HMLVhOU7R5B0M6w-xVA68g2isXo07PHuay6UnNsRT0M/edit?usp=sharing)
 - [Administrator and Counselor PD Overview - Slides](https://docs.google.com/presentation/d/1rgA370lNX2L88S5sew5ZWThbBwXOlzSUVjb2Dcx-I84/edit?usp=sharing)
 
+[**Back to the top**](#top)
+<br/>
+
 ________________
 <a id="pmsummit"></a>
 <br/>
@@ -89,6 +94,8 @@ ________________
 
 *For administrator and counselor PD materials and slide decks see the counselor and administrator professional development tile.
 
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="virtual"></a>
 <br/>

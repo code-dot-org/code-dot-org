@@ -44,7 +44,8 @@ level 'CSPU5 Add game over screen'
 stage 'Make Your Own Multi-Screen App'
 level 'CSPU5_L3 - Student Introduction'
 named_level 'Event Driven Programming Recap'
-named_level 'CSPU5 Project - Multi Screen App'
+named_level 'Tips For Working on Your Own'
+named_level 'Project - Your Own Multi Screen App'
 
 stage 'Edited lessons ABOVE this line'
 level 'CSPU5_U3L12 - Student Introduction 1'
@@ -213,6 +214,9 @@ level 'CSPU5_U3 - Movie Bot - When Multiple If Statements'
 stage 'Digital Assistant Project'
 level 'CSPU5_U3L21 Student Lesson Introduction v2'
 level 'CSPU5_U3L24 Chatbot Basic Conditionals'
+
+stage 'Unit 5 Assessment 2', lockable: true
+assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
 
 stage 'While Loops'
 level 'CSPU5_U3L28 Student Lesson Introduction'

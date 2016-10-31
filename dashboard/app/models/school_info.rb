@@ -3,17 +3,24 @@
 # Table name: school_infos
 #
 #  id                    :integer          not null, primary key
+#  country               :string(255)
 #  school_type           :string(255)
 #  zip                   :integer
 #  state                 :string(255)
 #  school_district_id    :integer
 #  school_district_other :boolean          default(FALSE)
+#  school_district_name  :string(255)
+#  school_id             :integer
+#  school_other          :boolean          default(FALSE)
+#  school_name           :string(255)
+#  full_address          :string(255)
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
 #
 # Indexes
 #
-#  fk_rails_951bceb7e3  (school_district_id)
+#  fk_rails_951bceb7e3              (school_district_id)
+#  index_school_infos_on_school_id  (school_id)
 #
 
 class SchoolInfo < ActiveRecord::Base

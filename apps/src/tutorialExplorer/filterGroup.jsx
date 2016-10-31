@@ -37,7 +37,7 @@ const FilterGroup = React.createClass({
             groupName={this.props.name}
             name={item.name}
             text={item.text}
-            selected={this.props.selection && this.props.selection.includes(item.name)}
+            selected={this.props.selection && this.props.selection.indexOf(item.name) !== -1}
             onUserInput={this.props.onUserInput}
             key={item.name}
           />
