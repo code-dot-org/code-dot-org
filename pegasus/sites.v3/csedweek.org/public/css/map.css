@@ -48,3 +48,8 @@
 .red {
   background: #ff4b4b;
 }
+
+.footnote {
+  font-size: 12px;
+  line-height: 14px;
+}

@@ -52,6 +52,7 @@ const SectionSelector = React.createClass({
     const { requireSelection, sections, selectedSectionId } = this.props;
     return (
       <select
+        className="uitest-sectionselect"
         name="sections"
         style={styles.select}
         value={selectedSectionId}

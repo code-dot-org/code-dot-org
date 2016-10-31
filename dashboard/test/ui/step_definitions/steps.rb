@@ -998,6 +998,9 @@ Then /^I unlock the stage for students$/ do
 end
 
 Then /^I select the first section$/ do
+  steps %{
+    And I wait to see ".uitest-sectionselect"
+  }
   @browser.execute_script(
     "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
   )
