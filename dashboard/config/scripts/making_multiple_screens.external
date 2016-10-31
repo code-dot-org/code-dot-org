@@ -104,3 +104,19 @@ Select the ID of the screen you want to change to. In this case, when the smiley
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This page contains a lot of information and several large diagrams.  But like many other things so far, once you know what you're doing there's not *that* much to it.  Adding a screen fits the same kinds patterns we've used before.
+
+When you encounter large pages like this an instructional option you might consider is **Demo-and-Reference** - demonstrate the key ideas outline on this page for the students, and let them use this page as reference afterward.
+
+This is a technique you might use to have some whole-class interaction mid-lesson where you can also do small checks for understanding.
+
+**Demo and Reference for Adding Screens**
+
+* Have students read the first section "What's a screen anyway" then pause.
+* Do a **demonstration or walk through** of adding a new screen, setting its style, and adding a call to `setScreen`
+* Remind students that this page exists for reference later on.
+* The last two diagrams might be useful to have projected at the front of the room as students continue to work.
+
+MARKDOWN
