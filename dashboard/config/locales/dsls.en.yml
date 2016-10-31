@@ -227,12 +227,91 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U2 evaluation q0:
+        Creating visualizations in order to communicate about a topic: Creating visualizations in order to communicate about a topic
+        Digitally representing images: Digitally representing images
+        In general, which topic sounds most like something you do not already have experience with?: In general, which topic sounds most like something you do not already have experience with?
+        Interpreting visual data to better understand a topic: Interpreting visual data to better understand a topic
+        The pros and cons of different file types, as well at the types of compression found in common applications: The pros and cons of different file types, as well at the types of compression found in common applications
+        Understanding why different file types are often different sizes and looking at the units of measure common to file types: Understanding why different file types are often different sizes and looking at the units of measure common to file types
+        Using or creating pivot tables to better understand a topic: Using or creating pivot tables to better understand a topic
+      U2 evaluation q1:
+        How comfortable are you using spreadsheet tools to find relationships in data?: How comfortable are you using spreadsheet tools to find relationships in data?
+        Not very comfortable: Not very comfortable
+        Very comfortable!: Very comfortable!
+      U2 evaluation q10:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U2 evaluation q11:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Very Comfortable: Very Comfortable
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U2 evaluation q12:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U2 evaluation q13:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U2 evaluation q14:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U2 evaluation q15:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U2 evaluation q2:
+        Eh, I have noticed that certain file types are typically bigger than others, but do not have a good sense of why: Eh, I have noticed that certain file types are typically bigger than others, but do not have a good sense of why
+        Have you ever explored or thought about why different files types make files different sizes?: Have you ever explored or thought about why different files types make files different sizes?
+        I... have no idea what you are talking about: I... have no idea what you are talking about
+        Yep--- I have a good sense of the relationship between file type and size: Yep--- I have a good sense of the relationship between file type and size
+      U2 evaluation q3:
+        HELP--- I am really struggling with the idea of abstraction: HELP--- I am really struggling with the idea of abstraction
+        How comfortable are you with the idea of abstraction?: How comfortable are you with the idea of abstraction?
+        I am pretty comfortable with abstraction: I am pretty comfortable with abstraction
+        I am still getting comfortable, but I have some sense of its role in Computer Science: I am still getting comfortable, but I have some sense of its role in Computer Science
+      U2 evaluation q4:
+        How much do you know about different types of compression?: How much do you know about different types of compression?
+        I know a decent amount: I know a decent amount
+        Not much at all: Not much at all
+      U2 evaluation q5:
+        How much have you thought about how images are represented digitally on computers?: How much have you thought about how images are represented digitally on computers?
+        I do not have much of an idea of how it works: I do not have much of an idea of how it works
+        I have thought about this and have a good sense of how it works: I have thought about this and have a good sense of how it works
+      U2 evaluation q6:
+        Do you have experience using Google Trends?: Do you have experience using Google Trends?
+        I have used it before, but not extensively.: I have used it before, but not extensively.
+        Nope--- never used it!: Nope--- never used it!
+        Yep--- I am super comfortable with Google Trends!: Yep--- I am super comfortable with Google Trends!
+      U2 evaluation q7:
+        Do you have experience using or making pivot or summary tables?: Do you have experience using or making pivot or summary tables?
+        I am pretty new to it or have never done it at all.: I am pretty new to it or have never done it at all.
+        I have some experience, but would not call myself a pro.: I have some experience, but would not call myself a pro.
+        Yes--- I use pivot or summary tables frequently!: Yes--- I use pivot or summary tables frequently!
+      U2 evaluation q8:
+        Do you have experience **making** data visualizations?: Do you have experience **making** data visualizations?
+        I am pretty new to it or have never done it at all.: I am pretty new to it or have never done it at all.
+        I have some experience, but would not call myself a pro.: I have some experience, but would not call myself a pro.
+        Yes--- I make visualizations frequently!: Yes--- I make visualizations frequently!
+      U2 evaluation q9:
+        Do you have experience **using or interpreting data visualizations made by other people**?: Do you have experience **using or interpreting data visualizations made by other people**?
+        Eh, I look at them occasionally.: Eh, I look at them occasionally.
+        I more or less ignore or skim over data visualizations.: I more or less ignore or skim over data visualizations.
+        Yes--- I look at data visualizations all the time!: Yes--- I look at data visualizations all the time!
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
       2.3 and 2.4 Lesson Connections: {}
       2.5 and 2.6 Lesson Connections: {}
       2.7 -  10 Lesson Connections: {}
+      A Note On Metadata in the Curriculum Framework: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -251,6 +330,7 @@ en:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
       Assessing Student Learning in Unit 1: {}
+      Assessing Student Learning in Unit 2: {}
       Balancing Teacher and Tools in Unit 1: {}
       Begin planning your project:
         description here: description here
@@ -661,6 +741,9 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Correlation vs Causation: {}
+      Curriculum Framework Connections: {}
+      Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging with Console.log:
         description here: description here
@@ -1121,6 +1204,7 @@ en:
       Introduction to Lossless Compression and the Text Compression Widget: {}
       Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
+      Introduction to Unit 2: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1420,6 +1504,7 @@ en:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
       Practice Performance Tasks in Unit 1: {}
+      Practice Performance Tasks in Unit 2: {}
       Prepare for your presentation:
         description here: description here
         title: title
@@ -1452,6 +1537,7 @@ en:
       'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
       'Stop: Website Navigation': {}
+      Summary Tables 101: {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -1975,6 +2061,7 @@ en:
       Unit 2 Lesson 7 Overview: {}
       Unit 2 Lesson 8 Overview: {}
       Unit 2 Lesson 9 Overview: {}
+      Unit 2 Tool Talk: {}
       Unit 3 Survey 2: {}
       Unit 4 Lesson 1 Introduction:
         description here: description here
@@ -1995,6 +2082,7 @@ en:
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
+      What Makes an Effective Visualization?: {}
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
@@ -2613,6 +2701,7 @@ en:
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC: {}
         CSP Unit 5 Cumulative Assessment 1 MC: {}
+        CSP Unit 5 Cumulative Assessment 2 MC: {}
         CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
@@ -2626,6 +2715,7 @@ en:
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
         Unit 1 Self-Assessment: {}
+        Unit 2 Self-Assessment: {}
         brendan test survey: {}
     match:
       2-3 Big Event Match 1:
@@ -6481,6 +6571,59 @@ en:
         While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
         While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.
         While loops terminate after a fixed number of loops that is pre-determined: While loops terminate after a fixed number of loops that is pre-determined
+      cspu5_assess4_arrayContains:
+        <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">: <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+        <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">: <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+        <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">: <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+        <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">: <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+        <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">: <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listContains:
+        <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">: <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+        <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">: <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+        <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">: <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+        <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">: <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+        Error. Index 1 does not exist.: Error. Index 1 does not exist.
+      cspu5_assess4_mysteryMethod:
+        Mystery displays the index of every occurrence of the value n in the list.: Mystery displays the index of every occurrence of the value n in the list.
+        Mystery displays the index of the first occurrence of the value n in the list.: Mystery displays the index of the first occurrence of the value n in the list.
+        Mystery displays the index of the last occurrence of the value n in the list.: Mystery displays the index of the last occurrence of the value n in the list.
+        Mystery displays the number at index n.: Mystery displays the number at index n.
+        Mystery displays true if n is in the list.: Mystery displays true if n is in the list.
+      cspu5_assess4_mysteryResult:
+        It always returns c: It always returns c
+        It returns the average of the three input values: It returns the average of the three input values
+        It returns the largest of the three input values: It returns the largest of the three input values
+        It returns the middle of the three input values: It returns the middle of the three input values
+        mystery returns the smallest of the three input values: mystery returns the smallest of the three input values
+      cspu5_assess4_mysteryReturn:
+        The procedure counts how long it takes to find two numbers in descending order and returns that number: The procedure counts how long it takes to find two numbers in descending order and returns that number
+        The procedure returns false when data is in descending order: The procedure returns false when data is in descending order
+        The procedure returns how long it takes to find two numbers in ascending order: The procedure returns how long it takes to find two numbers in ascending order
+        The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
+        The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
+      cspu5_assess4_playGame:
+        DISPLAY ("game over"): DISPLAY ("game over")
+        DISPLAY (count): DISPLAY (count)
+        Nothing. Procedure works as is.: Nothing. Procedure works as is.
+        RETURN ("game over"): RETURN ("game over")
+        RETURN (count): RETURN (count)
+      cspu5_assess4_robot:
+        <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">: <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+        <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">: <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+        <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+        <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+        <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
