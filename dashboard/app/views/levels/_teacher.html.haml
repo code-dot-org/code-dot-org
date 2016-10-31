@@ -73,12 +73,7 @@
                     = t('teacher.panel.example')
           = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
             %button.btn.btn-info= t('teacher.panel.try_it_yourself')
-        - if @section
-          .section
-            %h4
-              = t('teacher.panel.section')
-              = link_to @section.name, teacher_dashboard_section_progress_url(@section)
-        - if current_user.sections.many?
+        - if current_user.sections.any?
           -# This is rendered into by react
           #teacher-panel-sections
           - if @section && @script_level.stage.lockable?
@@ -86,33 +81,9 @@
               #stage-locked-text
               %div
               = link_to t('teacher.panel.update_lock_settings'), script_path(@script_level.script)
-      - if @section
-        -# TODO: eventually want all sections
-        - students_info = get_students_info(@section, @script_level)
-        #students_info{data: { students_info: students_info.to_json}}
-        #react-students-list
-
-        .scrollable-wrapper{style: "display: none"}
-          %table.section-students
-            - @section.students.order(:name).each do |student|
-              - active = 'active' if @user && student.id == @user.id
-              %tr.section-student{class: active}
-                - user_level = student.last_attempt_for_any(@script_level.levels)
-                - status = activity_css_class(user_level)
-                %td
-                  .level_link{class: status}
-                    - if (user_level.try(:level) || @script_level.oldest_active_level).unplugged?
-                      %span.puzzle-named
-                        Unplugged
-                    - elsif status == 'passed' || status == 'perfect'
-                      = check_mark_html
-                    - else
-                      %span.puzzle-number
-                        = @script_level.position
-                %td.name{class: user_level && user_level.navigator? && !user_level.driver? ? 'navigator' : ''}
-                  = link_to build_script_level_path(@script_level, user_id: student.id, section_id: @section.id) do
-                    = student.name
-                    - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
-                      %i.fa.fa-users.pair-programming-icon
+      -# TODO: eventually want all sections
+      - students_info = get_students_info(@script_level)
+      #students_info{data: { students_info: students_info.to_json}}
+      #react-students-list
   :javascript
     $(document).ready(window.dashboard.teacher.onReady);

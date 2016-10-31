@@ -8,6 +8,7 @@ import { getStore } from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
+import CurrentSection from './components/progress/CurrentSection';
 import TeacherPanelStudentList from './components/TeacherPanelStudentList';
 import { fullyLockedStageMapping } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
@@ -127,7 +128,10 @@ function renderIntoLessonTeacherPanel() {
     if (teacherPanelSections) {
       ReactDOM.render(
         <Provider store={getStore()}>
-          <SectionSelector onChange={changeSection}/>
+          <div>
+            <CurrentSection/>
+            <SectionSelector/>
+          </div>
         </Provider>,
         teacherPanelSections
       );
@@ -161,15 +165,4 @@ function renderIntoLessonTeacherPanel() {
       }
     }
   });
-}
-
-/**
- * Changes the url to navigate to the new section
- * @param {string} newSectionId - section id of the section we want to change to
- */
-function changeSection() {
-  // Depend on the fact that SectionSelector already changed the URL for us
-  // via pushState. We actually want to do a reload though, so that we hit the
-  // server with the new section_id
-  window.location.reload();
 }

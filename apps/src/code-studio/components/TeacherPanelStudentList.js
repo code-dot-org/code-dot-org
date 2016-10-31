@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
@@ -9,7 +10,7 @@ const styles = {
 const StudentEntry = (props) => {
   const { isActive, status, isUnplugged, position, isPairing, isNavigator, name, id } = props;
 
-  const path = `$(window.location.href)&user_id=${id}`;
+  const path = `${window.location.href}&user_id=${id}`;
 
   let statusIcon;
   if (isUnplugged) {
@@ -59,16 +60,19 @@ StudentEntry.propTypes = {
 
 const TeacherPanelStudentList = React.createClass({
   propTypes: {
-    studentInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+    studentInfo: PropTypes.object.isRequired,
+    sectionId: PropTypes.string.isRequired,
     activeUserId: PropTypes.string
   },
   render() {
-    const { studentInfo, activeUserId } = this.props;
+    const { studentInfo, activeUserId, sectionId } = this.props;
+
+    const sectionStudentInfo = studentInfo[sectionId] || [];
     return (
       <div className="scrollable-wrapper" style={styles.main}>
         <table className="section-students">
           <tbody>
-            {studentInfo.map((student, index) => {
+            {sectionStudentInfo.map((student, index) => {
               const { name, id, status, unplugged, position, pairing, navigator, path }  = student;
               return (
                 <StudentEntry
@@ -92,4 +96,6 @@ const TeacherPanelStudentList = React.createClass({
   }
 });
 
-export default TeacherPanelStudentList;
+export default connect(state => ({
+  sectionId: state.sections.selectedSectionId
+}))(TeacherPanelStudentList);

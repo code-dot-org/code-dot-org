@@ -15,7 +15,6 @@ const styles = {
 const SectionSelector = React.createClass({
   propTypes: {
     requireSelection: React.PropTypes.bool,
-    onChange: React.PropTypes.func,
 
     // redux provided
     sections: React.PropTypes.arrayOf(
@@ -42,10 +41,6 @@ const SectionSelector = React.createClass({
       newLocation += '?' + newQueryString;
     }
     window.history.pushState(null, document.title, newLocation);
-
-    if (this.props.onChange) {
-      this.props.onChange(newSectionId);
-    }
   },
 
   render() {

@@ -237,20 +237,23 @@ module ApplicationHelper
   end
 
   # TODO: belongs elsewhere
-  # TODO: eventually want to get it for all sections
-  def get_students_info(section, script_level)
-    section.students.order(:name).map do |student|
-      user_level = student.last_attempt_for_any(script_level.levels)
-      {
-        name: student.name,
-        id: student.id,
-        status: activity_css_class(user_level),
-        unplugged: (user_level.try(:level) || script_level.oldest_active_level).unplugged?,
-        position: script_level.position,
-        navigator: user_level && user_level.navigator? && !user_level.driver?,
-        pairing: user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?)
-      }
+  def get_students_info(script_level)
+    info_by_section = {}
+    current_user.sections.each do |section|
+      info_by_section[section.id] = section.students.order(:name).map do |student|
+        user_level = student.last_attempt_for_any(script_level.levels)
+        {
+          name: student.name,
+          id: student.id,
+          status: activity_css_class(user_level),
+          unplugged: (user_level.try(:level) || script_level.oldest_active_level).unplugged?,
+          position: script_level.position,
+          navigator: user_level && user_level.navigator? && !user_level.driver?,
+          pairing: user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?)
+        }
+      end
     end
+    info_by_section
   end
 
   private
