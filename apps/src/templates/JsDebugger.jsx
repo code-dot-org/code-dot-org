@@ -155,8 +155,8 @@ var JsDebugger = function (props) {
         {props.debugWatch &&
         <PaneSection id="debug-watch-header">
           <i
-              id="hide-toolbox-icon"
-              style={{
+            id="hide-toolbox-icon"
+            style={{
                 position: 'absolute',
                 top: '2px',
                 right: '6px',
@@ -164,7 +164,7 @@ var JsDebugger = function (props) {
                 lineHeight: '30px',
                 fontSize: '18px'
               }}
-              className="fa fa-chevron-circle-right"
+            className="fa fa-chevron-circle-right"
           />
           <span
             style={styles.noUserSelect}
