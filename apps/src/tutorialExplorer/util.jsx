@@ -23,8 +23,7 @@ function getTagString(prefix, tagString) {
     subject_math: "Math",
     subject_history: "Social Studies",
     subject_la: "Language Arts",
-    subject_art: "Art, Design, Media",
-    subject_other: "Other",
+    subject_art: "Art, Media, Music",
     "subject_cs-only": "Computer Science only",
 
     teacher_experience_beginner: "Beginner",
