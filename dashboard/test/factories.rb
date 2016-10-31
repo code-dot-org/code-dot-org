@@ -557,8 +557,8 @@ FactoryGirl.define do
 
   # this is the only factory used for testing the deprecated data formats (without country).
   factory :school_info_without_country, class: SchoolInfo do
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
     association :school_district
   end
 
@@ -592,8 +592,8 @@ FactoryGirl.define do
 
   factory :school_info_us_public, class: SchoolInfo do
     country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
 
     trait :with_district do
       association :school_district
@@ -606,8 +606,8 @@ FactoryGirl.define do
 
   factory :school_info_us_charter, class: SchoolInfo do
     country 'US'
-    school_type {SchoolInfo::SCHOOL_TYPE_CHARTER}
-    state {'WA'}
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    state 'WA'
 
     trait :with_district do
       association :school_district
