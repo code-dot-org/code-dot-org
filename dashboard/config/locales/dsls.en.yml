@@ -244,12 +244,9 @@ en:
         Not Comfortable: Not Comfortable
         Very Comfortable: Very Comfortable
       U2 evaluation q11:
-        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
-        Not Comfortable: Not Comfortable
         Students working in small groups to build knowledge: Students working in small groups to build knowledge
         Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
         The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
-        Very Comfortable: Very Comfortable
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
       U2 evaluation q12:
         Answer it yourself: Answer it yourself
@@ -742,7 +739,6 @@ en:
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
       Correlation vs Causation: {}
-      Curriculum Framework Connections: {}
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging with Console.log:
@@ -6613,11 +6609,11 @@ en:
         The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
         The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
       cspu5_assess4_playGame:
-        DISPLAY ("game over"): DISPLAY ("game over")
         DISPLAY (count): DISPLAY (count)
+        DISPLAY (“game over”): DISPLAY (“game over”)
         Nothing. Procedure works as is.: Nothing. Procedure works as is.
-        RETURN ("game over"): RETURN ("game over")
         RETURN (count): RETURN (count)
+        RETURN (“game over”): RETURN (“game over”)
       cspu5_assess4_robot:
         <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">: <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
         <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">: <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
