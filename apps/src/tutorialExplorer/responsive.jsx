@@ -22,7 +22,7 @@ function getItemWidthMobile(itemWidth, windowWidth) {
   if (windowWidth < 600) {
     return `${itemWidth}%`;
   } else {
-    return "";
+    return "100%";
   }
 }
 
