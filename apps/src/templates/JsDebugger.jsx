@@ -52,6 +52,7 @@ var styles = {
     position: 'absolute',
     top: 0,
     right: '6px',
+    width: '18px',
     margin: 0,
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     fontSize: 18,
