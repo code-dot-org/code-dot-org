@@ -153,7 +153,7 @@ const TutorialExplorer = React.createClass({
      * Pixel width at which we begin to start showing mobile view with modal
      * filters.
      */
-    mobileWidth: 600,
+    mobileWidth: 970,
 
     /**
      * Filters a given array of tutorials by the given filter props.
