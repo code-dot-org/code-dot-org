@@ -39,7 +39,6 @@
 - content_for :body_scripts do
   :javascript
     var data_by_day = #{event_signups_by_day.try(:to_json)};
-    console.log(data_by_day.length);
 
     if (data_by_day.length > 0) {
       // Generate the signups and cumulative breakdowns from the data, if data exists.
@@ -72,7 +71,6 @@
 
       // Load the Visualization API and the appropriate packages, setting a callback
       // to run to create the charts when the API is loaded.
-      console.log(signups_by_day);
       google.load('visualization', '1.0', {'packages':['corechart']});
       google.setOnLoadCallback(function() {
         drawChart('HOC Signups by Day', signups_by_day, 'signups_by_day');
