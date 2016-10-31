@@ -8,17 +8,22 @@ end
 
 commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 
+# Nonce value to generate a new base AMI for each unique commit.
+ami = commit[0..4]
+
 unless dry_run
   update_cookbooks.call
   update_bootstrap_script.call
 end
 
-old_image_id = (cfn.describe_stacks(stack_name: stack_name) rescue nil).try do |response|
-  response.stacks.first.outputs.find{|output| output.output_key == 'ImageId'}.try(:output_value)
+old_image_id = (cfn.describe_stack_resources(stack_name: stack_name) rescue nil).try do |response|
+  ami_resource = response.stack_resources.find{|resource| resource.resource_type == 'Custom::AMIManager'}
+  if ami_resource.logical_resource_id[-5..-1] == ami
+    raise "Commit is unchanged from previous AMI creation."
+  else
+    ami_resource.try(:physical_resource_id)
+  end
 end || image_id
-
-# Nonce value to generate a new base AMI for each unique commit.
-ami = commit[0..4]
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
