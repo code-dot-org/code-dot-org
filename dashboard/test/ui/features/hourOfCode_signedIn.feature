@@ -32,6 +32,7 @@ Scenario:
 Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/6?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#runButton"
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
@@ -40,6 +41,7 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
 
 Scenario: Async progress write followed by a stale read
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
+  And I wait to see "#runButton"
   And I verify progress in the header of the current page is "not_tried" for level 20
   Then mark the current level as completed on the client
   And I reload the page
@@ -49,6 +51,7 @@ Scenario: Async progress write followed by a stale read
 
 Scenario: Progress on the server that is not on the client
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
+  And I wait to see "#runButton"
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I press "runButton"
   Then I am on "http://studio.code.org/hoc/reset"
@@ -61,6 +64,7 @@ Scenario: Progress on the server that is not on the client
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
   Given I am on "http://studio.code.org/hoc/10"
   And I rotate to landscape
+  And I wait to see "#runButton"
   Then I wait until element ".video-modal" is visible
   Then I close the dialog
   Then I am on "http://studio.code.org/hoc/11"
@@ -69,6 +73,7 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#runButton"
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I am on "http://studio.code.org/hoc/9?noautoplay=true"

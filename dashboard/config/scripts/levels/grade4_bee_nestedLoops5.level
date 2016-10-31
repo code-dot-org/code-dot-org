@@ -34,9 +34,9 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":0,\"value\":5,\"range\":5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":5,\"range\":5},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":3},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need 4 repeat blocks!\",\"hint_id\":\"grade4_bee_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/713022a24d5579df767ef67aefbab6e9/grade4_bee_nestedLoops5.mp3\"}]",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

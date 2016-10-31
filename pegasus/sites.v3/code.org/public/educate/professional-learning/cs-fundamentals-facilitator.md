@@ -11,7 +11,7 @@ Code.org Computer Science Fundamentals facilitators are experienced computer sci
 The ideal CS Fundamentals Facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. 
 
 
-**Find a [CS Fundamentals Facilitator](https://code.org/educate/professional-learning/cs-fundamentals-directory) near you.**
+**Find a [CS Fundamentals Facilitator](/educate/professional-learning/cs-fundamentals-directory) near you.**
 
 If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).
 

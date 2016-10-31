@@ -155,7 +155,7 @@ const TutorialExplorer = React.createClass({
      * Pixel width at which we begin to start showing mobile view with modal
      * filters.
      */
-    mobileWidth: 600,
+    mobileWidth: 970,
 
     /**
      * Filters a given array of tutorials by the given filter props.
@@ -349,8 +349,7 @@ function getFilters(robotics) {
         {name: "math", text: "Math"},
         {name: "history", text: "Social Studies"},
         {name: "la", text: "Language Arts"},
-        {name: "art", text: "Art, Design, Media"},
-        {name: "other", text: "Other"},
+        {name: "art", text: "Art, Media, Music"},
         {name: "cs-only", text: "Computer Science only"}]},
     { name: "activity_type",
       text: "Activity type",
