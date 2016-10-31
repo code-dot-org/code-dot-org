@@ -144,104 +144,86 @@ const DebugWatch = React.createClass({
   render() {
     let classes = 'debug-watch';
     return (
-        <div id="debugger-watch-container" style={{
-          width: '100%',
-          height: '100%'
-        }}>
-          <div id="debug-watch" ref="scrollableContainer" className={classes}>
-            {
-                this.props.watchedExpressions.map(wv => {
-                    const varName = wv.get('expression');
-                    const varValue = wv.get('lastValue');
-                    return (
-                    <div className="debug-watch-item" key={wv.get('uuid')}>
-                      <div
-                        style={{
-                            fontSize: '18px',
-                            float: 'right',
-                            cursor: 'pointer',
-                            width: '25px',
-                            backgroundColor: '#be0712',
-                            color: 'white',
-                            padding: '6px',
-                            paddingRight: '0px',
-                            paddingLeft: '10px'
-                          //  style="font-size: 18px;
-                          // float: right;
-                          // width: 25px;
-                          // background-color: red;
-                          // color: white;
-                          // padding: 6px;padding-right: 0px;padding-left: 10px;"
-                          }}
-                        onClick={()=>this.props.dispatch(remove(wv.get('expression')))}
-                      >
-                        x
-                      </div>
-                      <div style={{
-                        float: 'left',
-                        marginTop: '7px',
-                        marginLeft: '2px',
-                        whiteSpace: 'nowrap',
-                        overflow: 'scroll',
-                        width: '160px',
-                        height: '21px',
-                      }}>
-                        <span
-                          className="watch-variable"
-                        >{varName}</span>
-                        <span
-                          className="watch-separator"
-                        >: </span>
-                        {this.renderValue(varValue)}
-                      </div>
+        <div id="debug-watch" ref="scrollableContainer" className={classes}>
+          {
+              this.props.watchedExpressions.map(wv => {
+                  const varName = wv.get('expression');
+                  const varValue = wv.get('lastValue');
+                  return (
+                  <div className="debug-watch-item" key={wv.get('uuid')}>
+                    <div
+                      style={{
+                          fontSize: '18px',
+                          float: 'right',
+                          cursor: 'pointer',
+                          width: '25px',
+                          backgroundColor: '#be0712',
+                          color: 'white',
+                          padding: '6px',
+                          paddingRight: '0px',
+                          paddingLeft: '10px'
+                        //  style="font-size: 18px;
+                        // float: right;
+                        // width: 25px;
+                        // background-color: red;
+                        // color: white;
+                        // padding: 6px;padding-right: 0px;padding-left: 10px;"
+                        }}
+                      onClick={()=>this.props.dispatch(remove(wv.get('expression')))}
+                    >
+                      x
                     </div>
-                        );
-                    })
-                }
-            <div style={{clear: 'both'}}>
-              <div
-                style={{
-                            fontSize: '18px',
-                            float: 'right',
-                            cursor: 'pointer',
-                            width: '25px',
-                            backgroundColor: '#1e93cd',
-                            color: 'white',
-                            padding: '6px',
-                            paddingRight: '0px',
-                            paddingLeft: '10px'
-                          }}
-                onClick={()=>this.addFromInput()}
-              >
-                +
-              </div>
-              <input
-                ref="debugInput"
-                placeholder="Variable / Property"
-                onKeyDown={this.onKeyDown}
-                onChange={this.onChange}
-                value={this.state.text}
-                style={{
-                    width: '159px',
-                    marginTop: '0px',
-                    height: '25px',
-                  }}
-              >
-              </input>
+                    <div style={{
+                      float: 'left',
+                      marginTop: '7px',
+                      marginLeft: '2px',
+                      whiteSpace: 'nowrap',
+                      overflow: 'scroll',
+                      width: '160px',
+                      height: '21px',
+                    }}>
+                      <span
+                        className="watch-variable"
+                      >{varName}</span>
+                      <span
+                        className="watch-separator"
+                      >: </span>
+                      {this.renderValue(varValue)}
+                    </div>
+                  </div>
+                      );
+                  })
+              }
+          <div style={{clear: 'both'}}>
+            <div
+              style={{
+                          fontSize: '18px',
+                          float: 'right',
+                          cursor: 'pointer',
+                          width: '25px',
+                          backgroundColor: '#1e93cd',
+                          color: 'white',
+                          padding: '6px',
+                          paddingRight: '0px',
+                          paddingLeft: '10px'
+                        }}
+              onClick={()=>this.addFromInput()}
+            >
+              +
             </div>
-          </div>
-          <div id="autocomplete-panel" style={{
-              display: 'none',
-              width: '200px',
-              height: '200px',
-              position: 'absolute',
-              background: 'gray',
-              right: '-10px',
-              bottom: '76px',
-          }}>
-            <div className="autocomplete-option">Option 1</div>
-            <div className="autocomplete-option">Option 2</div>
-            <div className="autocomplete-option">Option 3</div>
+            <input
+              ref="debugInput"
+              placeholder="Variable / Property"
+              onKeyDown={this.onKeyDown}
+              onChange={this.onChange}
+              value={this.state.text}
+              style={{
+                  width: '159px',
+                  marginTop: '0px',
+                  height: '25px',
+                }}
+            >
+            </input>
           </div>
         </div>
     );
