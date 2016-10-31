@@ -7,7 +7,24 @@ import { addMouseUpTouchEvent } from '../../dom';
 const WIDTH = 20;
 const HEIGHT = WIDTH;
 
+// By how many pixels should we scroll when clicked?
 const SCROLL_BY = 100;
+
+// How long (in ms) should we wait after click and hold to start
+// continuous scrolling?
+const CONTINUOUS_SCROLL_TIMEOUT = 500;
+
+// When continuously scrolling, how often (in ms) should we 'tick'?
+const CONTINUOUS_SCROLL_INTERVAL = 10;
+
+// When continuously scrolling, by how many pixels should we scroll at
+// each 'tick'?
+const CONTINUOUS_SCROLL_BY = 2;
+
+const DIRECTIONS = {
+  UP: 0,
+  DOWN: 1
+};
 
 const styles = {
   arrow: {
@@ -53,20 +70,20 @@ const ScrollButtons = React.createClass({
     return scrollButtonsHeight + (MARGIN * 2);
   },
 
-  componentWillMount: function () {
+  componentWillMount() {
     const unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
     this.setState({ unbindMouseUp });
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     this.state.unbindMouseUp();
   },
 
-  scrollStart(scrollingUp) {
+  scrollStart(dir) {
     // initial scroll in response to button click
     const contentContainer = this.props.getScrollTarget();
     let initialScroll = SCROLL_BY;
-    if (scrollingUp) {
+    if (dir === DIRECTIONS.UP) {
       initialScroll *= -1;
     }
     scrollBy(contentContainer, initialScroll);
@@ -75,12 +92,16 @@ const ScrollButtons = React.createClass({
     // scroll
     var timeout = setTimeout(function () {
       var interval = setInterval(function () {
-        scrollBy(contentContainer, scrollingUp ? -2 : 2, false);
-      }.bind(this), 10);
+        let dist = CONTINUOUS_SCROLL_BY;
+        if (dir === DIRECTIONS.UP) {
+          dist *= -1;
+        }
+        scrollBy(contentContainer, dist, false);
+      }.bind(this), CONTINUOUS_SCROLL_INTERVAL);
       this.setState({
         scrollInterval: interval
       });
-    }.bind(this), 500);
+    }.bind(this), CONTINUOUS_SCROLL_TIMEOUT);
 
     this.setState({
       scrollTimeout: timeout
@@ -120,12 +141,12 @@ const ScrollButtons = React.createClass({
       <div style={this.props.style}>
         <div
           ref="scrollUp"
-          onMouseDown={this.scrollStart.bind(this, true)}
+          onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
           style={scrollUpStyle}
         />
         <div
           ref="scrollDown"
-          onMouseDown={this.scrollStart.bind(this, false)}
+          onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
           style={scrollDownStyle}
         />
       </div>
