@@ -34,13 +34,10 @@ function getTagString(prefix, tagString) {
     student_experience_comfortable: "Comfortable",
 
     "activity_type_online-tutorial": "Self-led tutorial",
-    "activity_type_lesson-plan": "Lesson plan",
-
-    // todo:
-    //international_languages_
+    "activity_type_lesson-plan": "Lesson plan"
   };
 
-  return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
+  return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).filter(str => !!str).join(', ');
 }
 
 /**
