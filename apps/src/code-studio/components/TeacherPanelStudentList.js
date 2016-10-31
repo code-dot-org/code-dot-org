@@ -4,6 +4,9 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   main: {
+    overflowY: 'auto',
+    overflowX: 'hidden',
+    padding: '0 5px'
   }
 };
 
@@ -16,10 +19,13 @@ const StudentEntry = (props) => {
   if (isUnplugged) {
     statusIcon = <span className="puzzle-named">Unplugged</span>;
   } else if (status === "passed" || status === "perfect") {
-    // TODO: have server pass this down?
+    // We want to use the same check-mark asset that is used elsewhere in dashboard.
+    // We do this by letting Rails render a hidden element, that we extract the
+    // src attribute from.
+    const src = $("#check-mark-container").children().attr('src');
     statusIcon = (
       <img
-        src="https://studio.code.org/assets/white-checkmark-f80a03318e57c26afca1a6e50c5973da929daf81a694b1783d3017df5875c712.png"
+        src={src}
         alt="White checkmark"
       />
     );
@@ -64,12 +70,51 @@ const TeacherPanelStudentList = React.createClass({
     sectionId: PropTypes.string.isRequired,
     activeUserId: PropTypes.string
   },
+
+  getInitialState() {
+    return {
+      width: $(window).width(),
+      height: $(window).height(),
+      maxHeight: this.getMaxHeight()
+    };
+  },
+
+  getMaxHeight() {
+    // This isn't a great pattern, as we're depending on DOM outside of ourselves.
+    // In this case, it is difficult to avoid since this DOM is not React based.
+    return $('.teacher-panel').innerHeight() -
+      $('.teacher-panel h3').outerHeight() -
+      15 - // magic..
+      $('.non-scrollable-wrapper').outerHeight();
+  },
+
+  componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+  },
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+  },
+
+  onResize() {
+    this.setState({
+      width: $(window).width(),
+      height: $(window).height(),
+      maxHeight: this.getMaxHeight()
+    });
+  },
+
   render() {
     const { studentInfo, activeUserId, sectionId } = this.props;
 
+    const mainStyle = {
+      ...styles.main,
+      maxHeight: this.state.maxHeight
+    };
+
     const sectionStudentInfo = studentInfo[sectionId] || [];
     return (
-      <div className="scrollable-wrapper" style={styles.main}>
+      <div style={mainStyle} ref="scrollableWrapper">
         <table className="section-students">
           <tbody>
             {sectionStudentInfo.map((student, index) => {

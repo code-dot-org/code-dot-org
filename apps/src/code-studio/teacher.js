@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import debounce from 'lodash/debounce';
 import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,22 +13,7 @@ import { fullyLockedStageMapping } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
 
-// TODO - move to react ?
-// TODO - this should also happen on initial render
-function resizeScrollable() {
-  var newHeight = $('.teacher-panel').innerHeight() -
-      $('.teacher-panel h3').outerHeight() -
-      15 - // magic..
-      5 - // height of border
-      $('.non-scrollable-wrapper').outerHeight();
-  $('.scrollable-wrapper').css('max-height', newHeight);
-}
-
 export function onReady() {
-  $(window).resize(debounce(resizeScrollable, 250));
-
-  resizeScrollable();
-
   var submittedTimestamp = $('#submitted .timestamp');
   submittedTimestamp.text((new Date(submittedTimestamp.text())).toLocaleString());
 

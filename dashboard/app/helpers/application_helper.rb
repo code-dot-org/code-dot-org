@@ -236,10 +236,12 @@ module ApplicationHelper
     end
   end
 
-  # TODO: belongs elsewhere
+  # For the current user, goes through each of their sections and gets the necessary
+  # info for each student needed to display our student list in the teacher panel
+  # @param script_level: The level we want to display student info for
   def get_students_info(script_level)
     info_by_section = {}
-    current_user.sections.each do |section|
+    current_user.sections.select{|s| s.deleted_at.nil?}.each do |section|
       info_by_section[section.id] = section.students.order(:name).map do |student|
         user_level = student.last_attempt_for_any(script_level.levels)
         {
