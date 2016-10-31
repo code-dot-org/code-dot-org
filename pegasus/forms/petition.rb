@@ -58,7 +58,7 @@ class Petition
     if location
       location.data['address_components'].each do |component|
         if component['types'].include? 'administrative_area_level_1'
-          result['state_code_s'] = component['short_name']
+          result['state_code_s'] = component['short_name'].downcase
         end
         if component['types'].include? 'country'
           result['country_s'] = component['long_name'].downcase
