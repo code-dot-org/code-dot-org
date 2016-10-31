@@ -95,9 +95,15 @@ namespace :build do
         end
       end
 
+      # Skip asset precompile in development where `config.assets.digest = false`.
       unless rack_env?(:development)
-        HipChat.log 'Precompiling <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:precompile'
+        if CDO.sync_assets && !CDO.daemon
+          HipChat.log 'Fetching <b>dashboard</b> manifest...'
+          RakeUtils.rake 'assets:manifest'
+        else
+          HipChat.log 'Precompiling <b>dashboard</b> assets...'
+          RakeUtils.rake 'assets:precompile'
+        end
       end
 
       HipChat.log 'Starting <b>dashboard</b>.'
