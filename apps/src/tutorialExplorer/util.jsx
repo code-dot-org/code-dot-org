@@ -23,8 +23,7 @@ function getTagString(prefix, tagString) {
     subject_math: "Math",
     subject_history: "Social Studies",
     subject_la: "Language Arts",
-    subject_art: "Art, Design, Media",
-    subject_other: "Other",
+    subject_art: "Art, Media, Music",
     "subject_cs-only": "Computer Science only",
 
     teacher_experience_beginner: "Beginner",
@@ -34,13 +33,10 @@ function getTagString(prefix, tagString) {
     student_experience_comfortable: "Comfortable",
 
     "activity_type_online-tutorial": "Self-led tutorial",
-    "activity_type_lesson-plan": "Lesson plan",
-
-    // todo:
-    //international_languages_
+    "activity_type_lesson-plan": "Lesson plan"
   };
 
-  return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
+  return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).filter(str => !!str).join(', ');
 }
 
 /**

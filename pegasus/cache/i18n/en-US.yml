@@ -25,8 +25,8 @@
   submit: "Submit"
   twentyhours_heading: "Try our Intro to Computer Science Course"
   twentyhours_text: "Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course."
-  og_title: "Every child deserves opportunity"
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_title: "The Hour of Code is coming"
+  og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
   hoc2014_students: "Students"
   hoc2014_try: "Try it"
@@ -184,7 +184,7 @@
   learn_next_level: "Try another Code Studio course"
   learn_online: "Try other courses online"
   learn_classes: "Find local classes"
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
+  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: "I just finished Course 1 - check it out! @codeorg"
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"

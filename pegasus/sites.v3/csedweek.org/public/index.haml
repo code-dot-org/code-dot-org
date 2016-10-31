@@ -4,11 +4,11 @@ banner: null
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "https://csedweek.org/images/cs-is-everything-thumbnail.png"
+  "og:image": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
   "og:image:width": "1200"
   "og:image:height": "627"
-  "og:video:url": "http://youtube.com/v/QvyTEx1wyOY"
-  "og:video:secure_url": "https://youtube.com/v/QvyTEx1wyOY"
+  "og:video:url": "http://youtube.com/v/KsOIlDT145A"
+  "og:video:secure_url": "https://youtube.com/v/KsOIlDT145A"
   "og:video:type": "application/x-shockwave-flash"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -17,8 +17,8 @@ social:
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "https://csedweek.org/images/cs-is-everything-thumbnail.png"
-  "twitter:player": "https://youtube.com/v/QvyTEx1wyOY"
+  "twitter:image:src": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
+  "twitter:player": "https://youtube.com/v/KsOIlDT145A"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 video_player: true
@@ -39,7 +39,7 @@ video_player: true
 
   #top
     #video.col-63.desktop-pad-right
-      = view :display_video_thumbnail, id: "cs_is_everything", video_code: "QvyTEx1wyOY", play_button: 'center', download_path: "//videos.code.org/social/cs-is-everything.mp4"
+      = view :display_video_thumbnail, id: "hoc_2016", video_code: "KsOIlDT145A", play_button: 'center', download_path: "//videos.code.org/social/hour-of-code-2016.mp4"
 
     #start.col-36
       %div.desktop-feature{:style=>'height: 25px;'}
@@ -56,9 +56,13 @@ video_player: true
             =count_string
 
         %div{:style=>'margin-bottom: 8px'}
-          %a#trybutton{:href=>'/learn'}
+          %a#signup-button{:href=>'https://hourofcode.com', style: 'text-decoration: none;'}
             %button.optionbutton{:style=>'min-width: 100px;'}
-              =I18n.t :homepage_action_text_learn
+              =I18n.t :homepage_action_text_join_us     
+          &nbsp;
+          %a#try-button{:href=>'/learn'}
+            %button.optionbutton{:style=>'min-width: 100px;'}
+              =I18n.t :homepage_action_text_try_it
 
     -download_filename = 'cs-is-everything.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
