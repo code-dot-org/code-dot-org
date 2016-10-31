@@ -2,7 +2,7 @@ namespace :stack do
   task :environment do
     require_relative '../../deployment'
     CDO.chef_local_mode = false
-    ENV['INSTANCE_TYPE'] ||= 'c4.8xlarge'
+    ENV['INSTANCE_TYPE'] ||= rack_env?(:production) ? 'c4.8xlarge' : 't2.large'
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     ENV['CDN_ENABLED'] ||= '1'
     ENV['DOMAIN'] ||= 'code.org'
@@ -29,10 +29,19 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
 
   # `stop` command intentionally removed. Use AWS console to manually delete stacks.
 
-  desc 'Validate CloudFormation template.'
-  task validate: :environment do
-    AWS::CloudFormation.validate
+  namespace :validate do
+    task default: :environment do
+      AWS::CloudFormation.validate
+    end
+    desc 'Validate template with CloudFront CDN disabled.'
+    task no_cdn: :environment do
+      ENV['CDN_ENABLED'] = nil
+      AWS::CloudFormation.validate
+    end
   end
+
+  desc 'Validate CloudFormation template.'
+  task validate: ['validate:default']
 
   %I(vpc iam ami lambda).each do |stack|
     namespace stack do

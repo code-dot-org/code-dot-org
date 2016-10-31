@@ -15,7 +15,7 @@ exports.handler = function (event, context) {
   var responseData = {};
 
   var findAutoScalingGroupByTags = function(tags, callback) {
-    var result = 0;
+    var result = -1;
     autoscaling.describeAutoScalingGroups({}, function(err, data) {
       if (err) {
         callback(err, data);
@@ -31,6 +31,9 @@ exports.handler = function (event, context) {
             result = Math.max(count, result);
           }
         });
+        if (result == -1) {
+          result = defaultCount;
+        }
         callback(null, result);
       }
     })

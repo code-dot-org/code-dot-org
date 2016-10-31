@@ -20,8 +20,8 @@ Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
   AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}", commit: commit %>
-  ASGCount: <%= lambda_fn.call 'ASGCount',
-    Default: 1,
+  ASGCount: <%= lambda_fn.call 'CountASG',
+    Default: 2,
     AutoScalingGroupTags: [
       {Key: 'aws:cloudformation:stack-id', Value: {Ref: 'AWS::StackId'}},
       {Key: 'aws:cloudformation:logical-id', Value: 'WebServer'}
@@ -244,9 +244,9 @@ Resources:
         "origin-#{subdomain}",
         [app_domain],
         {
-          IamCertificateId: iam_certificate_id,
-          SslSupportMethod: 'sni-only',
-          MinimumProtocolVersion: 'TLSv1'
+          AcmCertificateArn: certificate_arn,
+          MinimumProtocolVersion: 'TLSv1',
+          SslSupportMethod: 'sni-only'
         }
       )%>
 <%   end -%>
