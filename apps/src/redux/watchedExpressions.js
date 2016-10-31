@@ -36,7 +36,7 @@ export default function reducer(state = watchedExpressionsInitialState, action) 
 
   if (action.type === UPDATE_VALUE) {
     const {value, expression} = action;
-    return state.map(e => e.get('expression') == expression ? Immutable.Map({
+    return state.map(e => e.get('expression') === expression ? Immutable.Map({
       lastValue: value,
       expression,
       uuid: e.get('uuid')

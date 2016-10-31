@@ -2,7 +2,7 @@ import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {add, update, remove} from '../redux/watchedExpressions'
+import {add, update, remove} from '../redux/watchedExpressions';
 
 const WATCH_TIMER_PERIOD = 50;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
@@ -17,7 +17,7 @@ const DebugWatch = React.createClass({
     watchedExpressions: React.PropTypes.instanceOf(Immutable.List)
   },
 
-  getInitialState : function() {
+  getInitialState : function () {
     return {
       text : "",
       history : [],
@@ -62,11 +62,12 @@ const DebugWatch = React.createClass({
     const isError = obj instanceof Error;
 
     if (isError) {
-      return <span
-        className="watch-value watch-unavailable">{i18n.debugWatchNotAvailable()}</span>;
+      return (<span
+        className="watch-value watch-unavailable"
+              >{i18n.debugWatchNotAvailable()}</span>);
     }
 
-    switch(descriptor) {
+    switch (descriptor) {
       case 'null':
       case 'undefined':
         return <span className="watch-value">{descriptor}</span>;
@@ -85,7 +86,7 @@ const DebugWatch = React.createClass({
   scrollToBottom() {
     window.requestAnimationFrame(() => {
       this.refs.scrollableContainer.scrollTop = this.refs.scrollableContainer.scrollHeight;
-    })
+    });
   },
 
   addFromInput() {
@@ -155,7 +156,7 @@ const DebugWatch = React.createClass({
                     return (
                     <div className="debug-watch-item" key={wv.get('uuid')}>
                       <div
-                          style={{
+                        style={{
                             fontSize: '18px',
                             float: 'right',
                             cursor: 'pointer',
@@ -172,7 +173,8 @@ const DebugWatch = React.createClass({
                           // color: white;
                           // padding: 6px;padding-right: 0px;padding-left: 10px;"
                           }}
-                          onClick={()=>this.props.dispatch(remove(wv.get('expression')))}>
+                        onClick={()=>this.props.dispatch(remove(wv.get('expression')))}
+                      >
                         x
                       </div>
                       <div style={{
@@ -185,9 +187,11 @@ const DebugWatch = React.createClass({
                         height: '21px',
                       }}>
                         <span
-                            className="watch-variable">{varName}</span>
+                          className="watch-variable"
+                        >{varName}</span>
                         <span
-                            className="watch-separator">: </span>
+                          className="watch-separator"
+                        >: </span>
                         {this.renderValue(varValue)}
                       </div>
                     </div>
@@ -196,7 +200,7 @@ const DebugWatch = React.createClass({
                 }
             <div style={{clear: 'both'}}>
               <div
-                  style={{
+                style={{
                             fontSize: '18px',
                             float: 'right',
                             cursor: 'pointer',
@@ -207,16 +211,17 @@ const DebugWatch = React.createClass({
                             paddingRight: '0px',
                             paddingLeft: '10px'
                           }}
-                  onClick={()=>this.addFromInput()}>
+                onClick={()=>this.addFromInput()}
+              >
                 +
               </div>
               <input
-                  ref="debugInput"
-                  placeholder="Variable / Property"
-                  onKeyDown={this.onKeyDown}
-                  onChange={this.onChange}
-                  value={this.state.text}
-                  style={{
+                ref="debugInput"
+                placeholder="Variable / Property"
+                onKeyDown={this.onKeyDown}
+                onChange={this.onChange}
+                value={this.state.text}
+                style={{
                     width: '159px',
                     marginTop: '0px',
                     height: '25px',
