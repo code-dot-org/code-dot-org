@@ -68,11 +68,8 @@
     "start_blocks": "var balloon = createSprite(200,200);\r\nballoon.setAnimation(\"balloon\");\r\n\r\nvar tack = createSprite(300, 100);\r\ntack.setAnimation(\"tack\");\r\n\r\nfunction draw() {\r\n  // check if tack is touching balloon\r\n  if((((tack.x - balloon.x) > 0) && ((tack.x - balloon.x) < (tack.width/2 + balloon.width/2))) || \r\n    (((tack.x - balloon.x) < 0) && ((tack.x - balloon.x) > -(tack.width/2 + balloon.width/2)))){\r\n    if((((tack.y - balloon.y) > 0) && ((tack.y - balloon.y) < (tack.height/2 + balloon.height/2))) || \r\n      (((tack.y - balloon.y) < 0) && ((tack.y - balloon.y) > -(tack.height/2 + balloon.height/2)))){\r\n      // Pop the balloon\r\n      balloon.setAnimation(\"popped\");\r\n\r\n    } \r\n  }\r\n  \r\n  // make tack move with arrow keys\r\n  if (keyDown(\"up\")) {\r\n    tack.y = tack.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    tack.y = tack.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    tack.x = tack.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    tack.x = tack.x + 1;\r\n  }\r\n  \r\n  background(\"gray\");\r\n  drawSprites();\r\n}\r\n",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
