@@ -59,3 +59,15 @@ Over the next few levels we'll practice with `console.log` and use it to investi
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tips
+
+This is a level that might be worth pausing on.  There are a few things that are important to reinforce:
+
+* Every programming language has some way of display simple plaintext output
+* Printing to the console is a very common technique not only for debugging but also as an aid in program construction and development.
+* In other words, you can use console.log to send messages to yourself to verify the program is doing what you think it's doing which helps *prevent* errors down the line.
+
+
+MARKDOWN

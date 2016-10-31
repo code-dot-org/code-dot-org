@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 As you are about to embark on your first solo project we thought it would be a good time to give you some tips.
 
-## Tip 1: have a coding buddy and "thought partner"
+## Tip 1: have a "coding buddy" and "thought partner"
 
-It's very useful to have someone nearby who you can use as a "thought partner". Many professionals work at the same table or desk, even if they are working on completely different projects, because of the benefits of having someone nearby. Thought partners:
+Working on your own doesn't mean working by yourself.  It's very useful to have someone nearby who you can use as a "thought partner". Many professionals work at the same table or desk, even if they are working on completely different projects, because of the benefits of having someone nearby.  There's a lot to remember and a lot to try to keep straight, so it's helpful to have someone nearby who provide another perspective.
 
 
 <table style="width: 600px; display: block; margin: auto;">
@@ -35,7 +35,7 @@ It's very useful to have someone nearby who you can use as a "thought partner". 
 
 When you are learning to program, you will inevitably run into problems.
 
-As you get better, this doesn't change :)  Only the types of problems do.  Like anything else you learn how to do, over time you stop making the same mistakes you made as a novice, and in fact, you don't even think about them as mistakes.
+As you get better, this doesn't change :)  Only the types of problems do.  Like anything else, over time you stop making the same mistakes you made as a novice, and in fact, you don't even think about them as mistakes.
 
 **Remember**: 
 
@@ -54,7 +54,7 @@ As you get better, this doesn't change :)  Only the types of problems do.  Like 
 
 
 
-## Tip 3. Some new commands - use online documentation.
+## Tip 3. Use online documentation - some new commands
 
 You'll see we've included a more full toolbox of commands for you to use and experiment with.  Some of the commands may be new to you, but you can probably figure out how to use them if you **read the documentation**.
 
@@ -69,4 +69,33 @@ Click on "see examples" to expand the documentation. It gives more explanation p
 </div>
 
 ### With those lessons learned...click continue to start making your own app!
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tip
+
+You may want to review the 3 things on this page as a whole class to kickoff to the upcoming project.
+
+Especially true for talking about "coding buddies" which is a form of collaboration.
+
+For this an future projects it's worth pointing out that *even if you're doing independent work, you can have a buddy to help you with technical problems and to bounce ideas off of.*  Remind students that:
+
+  * It's not a competition!
+  * Work on your own ideas, be generous when helping others. 
+  * You should *always write your own code* but you can have a friend help you spot problems.
+
+Plagiarism can present a gray area for students here.  
+
+"Help" means:
+
+  * Helping a friend work through their ideas
+  * Helping a friend get "unstuck" from a bug of a particular kind.
+  * Suggesting a strategy for getting something done.
+  * Pointing out a cool idea
+
+"Help" **does not** mean:
+
+  * Writing code for a friend
+  * Giving your project to a friend to use as a starting point
+  * Telling your friend what to do
 MARKDOWN
