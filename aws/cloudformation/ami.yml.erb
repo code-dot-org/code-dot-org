@@ -18,7 +18,7 @@ old_image_id = (cfn.describe_stacks(stack_name: stack_name) rescue nil).try do |
 end || image_id
 
 # Nonce value to generate a new base AMI for each unique commit.
-ami = commit[1..5]
+ami = commit[0..4]
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
