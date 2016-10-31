@@ -9,6 +9,7 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
+import { getContainerWidth, getItemWidth } from './responsive';
 import _ from 'lodash';
 
 
@@ -42,8 +43,8 @@ const TutorialExplorer = React.createClass({
       filteredTutorials: filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
       filteredTutorialsForLocale: filteredTutorialsForLocale,
-      windowWidth: undefined,
-      windowHeight: undefined,
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height(),
       mobileLayout: $(window).width() <= TutorialExplorer.mobileWidth,
       showingModalFilters: false
     };
@@ -97,7 +98,7 @@ const TutorialExplorer = React.createClass({
   },
 
   componentDidMount() {
-    window.addEventListener('resize', _.debounce(this.onResize, 500));
+    window.addEventListener('resize', _.debounce(this.onResize, 100));
   },
 
   showModalFilters() {
@@ -265,7 +266,7 @@ const TutorialExplorer = React.createClass({
 
   render() {
     return (
-      <div>
+      <div style={{width: getContainerWidth(this.state.windowWidth), margin: "0 auto"}}>
         <FilterHeader
           backButton={this.props.backButton}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
@@ -282,6 +283,7 @@ const TutorialExplorer = React.createClass({
             onUserInput={this.handleUserInput}
             selection={this.state.filters}
             roboticsButton={this.props.roboticsButton}
+            windowWidth={this.state.windowWidth}
           />
         )}
 
@@ -293,6 +295,7 @@ const TutorialExplorer = React.createClass({
               filters={this.state.filters}
               locale={this.props.locale}
               specificLocale={true}
+              windowWidth={this.state.windowWidth}
             />
             <h1>Tutorials in many languages</h1>
           </div>
@@ -303,6 +306,7 @@ const TutorialExplorer = React.createClass({
             tutorials={this.state.filteredTutorials}
             filters={this.state.filters}
             locale={this.props.locale}
+            windowWidth={this.state.windowWidth}
           />
         )}
       </div>

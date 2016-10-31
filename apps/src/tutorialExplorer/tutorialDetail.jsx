@@ -4,6 +4,7 @@
 import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
+import { getContainerWidth, getItemWidth } from './responsive';
 
 const styles = {
   tutorialDetailModalHeader: {
@@ -64,6 +65,7 @@ const TutorialDetail = React.createClass({
     showing: React.PropTypes.bool.isRequired,
     item: shapes.tutorial.isRequired,
     closeClicked: React.PropTypes.func.isRequired,
+    windowWidth: React.PropTypes.number.isRequired
   },
 
   render() {
@@ -100,6 +102,7 @@ const TutorialDetail = React.createClass({
         >
           <div
             className="modal-dialog modal-lg"
+            style={{width: 900}}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-content">
@@ -128,16 +131,13 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div className="col-50">
+                <div style={{float: "left", width: getItemWidth(50, this.props.windowWidth)}}>
                   <img
                     src={this.props.item.image.replace(".png", ".jpg")}
                     style={{width: '100%'}}
                   />
                 </div>
-                <div
-                  className="col-50"
-                  style={{paddingLeft: 20}}
-                >
+                <div style={{float: "left", paddingLeft: 20, width: getItemWidth(50, this.props.windowWidth)}}>
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>

@@ -4,6 +4,7 @@
 
 import React from 'react';
 import FilterChoice from './filterChoice';
+import { getContainerWidth, getItemWidth, getItemWidthMobile } from './responsive';
 
 const styles = {
   filterGroupOuter: {
@@ -23,12 +24,13 @@ const FilterGroup = React.createClass({
     text: React.PropTypes.string.isRequired,
     filterEntries: React.PropTypes.array.isRequired,
     selection: React.PropTypes.array.isRequired,
-    onUserInput: React.PropTypes.func.isRequired
+    onUserInput: React.PropTypes.func.isRequired,
+    windowWidth: React.PropTypes.number.isRequired
   },
 
   render() {
     return (
-      <div style={styles.filterGroupOuter} className="col-mobile-50">
+      <div style={styles.filterGroupOuter} style={{float: "left", width: getItemWidthMobile(50, this.props.windowWidth)}}>
         <div style={styles.filterGroupText}>
           {this.props.text}
         </div>
