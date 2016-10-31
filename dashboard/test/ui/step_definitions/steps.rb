@@ -74,9 +74,7 @@ When /^I go to the newly opened tab$/ do
 end
 
 When /^I close the instructions overlay if it exists$/ do
-  steps <<-STEPS
-    When I click selector ".csf-top-instructions button:contains(OK)" if it exists
-  STEPS
+  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
 end
 
 When /^I close the dialog$/ do
@@ -302,7 +300,7 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
-  if @browser.execute_script("return (\"#{jquery_selector}\").length > 0")
+  if @browser.execute_script("return $(\"#{jquery_selector}\").length > 0")
     @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
   end
 end
