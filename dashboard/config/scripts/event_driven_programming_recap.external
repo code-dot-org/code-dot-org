@@ -50,3 +50,9 @@ As you learn more, of course, you'll see there are nuances to these steps, but t
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tip
+
+Perhaps show/review this page as a warm-up just to tie up loose threads from previous lessons.
+MARKDOWN
