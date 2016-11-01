@@ -146,7 +146,7 @@ function installWhenRun(blockly, skin, isK1) {
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.whenRun())
-          .appendTitle(new blockly.FieldImage(skin.runArrow));
+          .appendTitle(new blockly.FieldImage(skin.runArrow, 22, 26));
       } else {
         this.appendDummyInput().appendTitle(commonMsg.whenRun());
       }
