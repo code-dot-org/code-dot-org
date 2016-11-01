@@ -26,11 +26,7 @@ TABLE_ID = CDO.hoc_map_table_id
 
 all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2016')
 
-puts "Processing #{all_forms.count} forms"
-
 file = Tempfile.new(['data', '.csv'])
-
-exported = 0
 
 CSV.open(file.path, 'w') do |csv|
   all_forms.each do |form|
@@ -44,12 +40,9 @@ CSV.open(file.path, 'w') do |csv|
     next if form[:review] != "approved" && processed_data['location_city_s'].nil?
 
     row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
-    exported += 1
     csv << row
   end
 end
-
-puts "#{exported} rows exported"
 
 file.close
 
@@ -74,7 +67,7 @@ fusiontables = client.discovered_api('fusiontables', 'v2')
 
 media = Google::APIClient::UploadIO.new(file.path, 'application/octet-stream')
 
-result = client.execute(
+client.execute(
   api_method: fusiontables.table.replace_rows,
   parameters: {
     tableId: TABLE_ID,
@@ -82,4 +75,3 @@ result = client.execute(
   },
   media: media
 )
-p result
