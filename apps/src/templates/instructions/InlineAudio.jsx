@@ -69,6 +69,7 @@ const InlineAudio = React.createClass({
     return {
       audio: undefined,
       playing: false,
+      error: false,
     };
   },
 
@@ -81,6 +82,13 @@ const InlineAudio = React.createClass({
     audio.addEventListener("ended", e => {
       this.setState({
         playing: false
+      });
+    });
+
+    audio.addEventListener("error", e => {
+      this.setState({
+        playing: false,
+        error: true
       });
     });
 
@@ -113,9 +121,9 @@ const InlineAudio = React.createClass({
   },
 
   render: function () {
-    if (this.props.isK1 && this.getAudioSrc()) {
+    if (this.props.isK1 && !this.state.error && this.getAudioSrc()) {
       return (
-        <div>
+        <div className="inline-audio">
           <div style={[styles.button, styles.volumeButton]}>
             <img style={styles.buttonImg} src={this.props.assetUrl("media/common_images/volume.png")} />
           </div>
@@ -130,6 +138,8 @@ const InlineAudio = React.createClass({
         </div>
       );
     }
+
+    return null;
   }
 });
 
