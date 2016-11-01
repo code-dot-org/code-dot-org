@@ -458,7 +458,7 @@ Craft.onArrowButtonUp = function (btn) {
 };
 
 Craft.onDocumentMouseUp = function () {
-  if (!Craft.phaserLoaded()) {
+  if (!Craft.phaserLoaded() || !Craft.levelInitialized()) {
     return;
   }
 
@@ -754,7 +754,13 @@ Craft.reset = function (first) {
 Craft.phaserLoaded = function () {
   return Craft.gameController &&
       Craft.gameController.game &&
+      Craft.gameController.game.load &&
       !Craft.gameController.game.load.isLoading;
+};
+
+Craft.levelInitialized = function () {
+  return Craft.gameController &&
+      Craft.gameController.levelModel;
 };
 
 /**
