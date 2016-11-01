@@ -5,7 +5,9 @@ import { hideOverlay } from '../redux/instructions';
 
 import { connect } from 'react-redux';
 
-export const Z_INDEX = 1000;
+// 9900 puts this at 100 z-levels below the #rotateContainer, the
+// topmost element in our system.
+export const Z_INDEX = 9900;
 
 const visible_style = {
   position: 'fixed',
