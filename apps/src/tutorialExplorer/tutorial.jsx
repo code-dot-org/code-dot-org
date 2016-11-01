@@ -5,7 +5,7 @@ import React from 'react';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
-import { getContainerWidth, getItemWidth } from './responsive';
+import { getItemWidthVariable } from './responsive';
 
 const styles = {
   tutorialName: {
@@ -52,24 +52,22 @@ const Tutorial = React.createClass({
           closeClicked={this.tutorialDetailClosed}
           windowWidth={this.props.windowWidth}
         />
-        <div style={{float: 'left', padding: 2, width: getItemWidth(33, this.props.windowWidth)}}>
-          <div style={{padding: 5}}>
-            <div
-              style={{cursor: 'pointer'}}
-              onClick={this.tutorialClicked}
-            >
-              <div style={{position: "relative", width: "100%", height: 0, paddingTop: "75%"}}>
-                <img
-                  src={this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg")}
-                  style={{position: "absolute", top: 0, left: 0, width: "100%"}}
-                />
-              </div>
-              <div style={styles.tutorialName}>
-                {this.props.item.name}
-              </div>
-              <div style={styles.tutorialSub}>
-                {getTutorialDetailString(this.props.item)}
-              </div>
+        <div style={{float: 'left', paddingTop: 5, paddingBottom: 5, paddingLeft: 7, paddingRight: 7, width: getItemWidthVariable({lg: 33, sm: 50, xs: 100}, this.props.windowWidth)}}>
+          <div
+            style={{cursor: 'pointer'}}
+            onClick={this.tutorialClicked}
+          >
+            <div style={{position: "relative", width: "100%", height: 0, paddingTop: "75%"}}>
+              <img
+                src={this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg")}
+                style={{position: "absolute", top: 0, left: 0, width: "100%"}}
+              />
+            </div>
+            <div style={styles.tutorialName}>
+              {this.props.item.name}
+            </div>
+            <div style={styles.tutorialSub}>
+              {getTutorialDetailString(this.props.item)}
             </div>
           </div>
         </div>

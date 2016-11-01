@@ -4,7 +4,7 @@
 import React from 'react';
 import Tutorial from './tutorial';
 import shapes from './shapes';
-import { getContainerWidth, getItemWidth } from './responsive';
+import { getItemWidthVariable } from './responsive';
 
 const TutorialSet = React.createClass({
   propTypes: {
@@ -15,7 +15,7 @@ const TutorialSet = React.createClass({
 
   render() {
     return (
-      <div style={{float: 'left', width: getItemWidth(80, this.props.windowWidth)}}>
+      <div style={{float: 'left', width: getItemWidthVariable({xs: 100, md: 80}, this.props.windowWidth)}}>
         {this.props.tutorials.map(item => (
           <Tutorial
             item={item}

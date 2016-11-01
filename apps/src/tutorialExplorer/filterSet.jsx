@@ -4,7 +4,7 @@
 import React from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
-import { getContainerWidth, getItemWidth } from './responsive';
+import { getItemWidthVariable } from './responsive';
 
 const FilterSet = React.createClass({
   propTypes: {
@@ -17,7 +17,7 @@ const FilterSet = React.createClass({
 
   render() {
     return (
-      <div id="filterset" style={{float: "left", width: getItemWidth(20, this.props.windowWidth)}}>
+      <div id="filterset" style={{float: "left", width: getItemWidthVariable({xs: 100, md: 20}, this.props.windowWidth)}}>
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup

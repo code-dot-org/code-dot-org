@@ -9,7 +9,7 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import { getContainerWidth, getItemWidth } from './responsive';
+import { getContainerWidth } from './responsive';
 import _ from 'lodash';
 
 
@@ -155,7 +155,7 @@ const TutorialExplorer = React.createClass({
      * Pixel width at which we begin to start showing mobile view with modal
      * filters.
      */
-    mobileWidth: 970,
+    mobileWidth: 800,
 
     /**
      * Filters a given array of tutorials by the given filter props.

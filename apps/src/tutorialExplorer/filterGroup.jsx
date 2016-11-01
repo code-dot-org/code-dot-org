@@ -4,7 +4,7 @@
 
 import React from 'react';
 import FilterChoice from './filterChoice';
-import { getItemWidthMobile } from './responsive';
+import { getItemWidthVariable } from './responsive';
 
 const styles = {
   filterGroupOuter: {
@@ -30,7 +30,7 @@ const FilterGroup = React.createClass({
 
   render() {
     var filterGroupOuterStyle = {};
-    Object.assign(filterGroupOuterStyle, styles.filterGroupOuter, {float: "left", width: getItemWidthMobile(50, this.props.windowWidth)});
+    Object.assign(filterGroupOuterStyle, styles.filterGroupOuter, {float: "left", width: getItemWidthVariable({xs: 100, sm: 50, md: 100}, this.props.windowWidth)});
     return (
       <div style={filterGroupOuterStyle}>
         <div style={styles.filterGroupText}>
