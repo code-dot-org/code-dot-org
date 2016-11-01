@@ -424,7 +424,7 @@ module.exports = function (grunt) {
           otherEntries
         ),
         function (val) {
-          return ['babel-polyfill'].concat(val);
+          return ['./src/util/idempotent-babel-polyfill'].concat(val);
         }
       ),
       externals: [
