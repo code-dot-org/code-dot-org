@@ -7,7 +7,7 @@
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\"]",
-    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"flowerDandelion\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\"]",
     "action_plane": "[\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\"]",
     "player_start_position": "[4, 1]",
     "grid_width": "10",
@@ -35,12 +35,13 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "They look weird moving the same way. Random moves help chickens look real in games. Make your chickens 'turn random.'",
+    "instructions": "Now the chickens look weird moving the same way. Games use random moves to make things look real. Make the chickens 'Turn Random.'",
     "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"turnRandom\") >= 1 || verificationAPI.getRepeatCommandExecutedCount(\"turnRandom\") >= 1;\r\n    }",
     "level_verification_timeout": "7000",
-    "failure_message_override": "If your chickens are all moving in the same direction, use “Turn random” to make your chickens turn randomly left or right.",
+    "failure_message_override": "If the chickens are all moving in the same direction, use 'Turn Random' to make the chickens turn randomly left or right.",
     "use_player": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "use_score": "false"
   },
   "published": true,
   "notes": "Puzzle 4:\r\nThey’re moving now, but they look weird. Randomness helps multiple entities to move differently. Use a Repeat Random, a Turn Random or both to make your chickens look more natural. \r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever \r\no   Repeat Random\r\n§  Move Forward\r\no   Turn Random\r\n\r\n·       Teaches: Randomness, repeats loops with less scaffolding/instruction\r\n\r\nWhen Used:\r\nNo code required here\r\n\r\nSolution: only requires using random in turn or repeat - nothing in particular. Ok  if it doesn’t repeat forever.",

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_plane": "[\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
     "action_plane": "[\"\",\"\",\"ironGolem\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"ironGolem\",\"\",\"\",\"\",\"\",\"\",\"\",\"ironGolem\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"ironGolem\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"ironGolem\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
     "player_start_position": "[5, 5]",
@@ -38,11 +38,12 @@
     "free_play": "false",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Some games let you keep score. Play tag with these Iron Golems and use the \"add 1 to score\" block to give yourself a point when you tag them. Reach five points to win!",
+    "instructions": "Some games let you keep score. Play tag with these Iron Golems and use the 'Add 1 to Score' block to give yourself a point when you tag them. Reach five points to win!",
     "use_score": "true",
     "use_verification_function_for_failure": "false",
-    "contained_level_names": null,
-    "failure_message_override": "If you're having trouble tagging 5 Golems, try changing the score to 2 per tag."
+    "failure_message_override": "If you're having trouble tagging 5 Golems, try changing the score to 2 per tag.",
+    "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return verificationAPI.getEntityCount(\"ironGolem\") === 0;\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This level will introduce a scoring system.",
@@ -67,7 +68,13 @@
               </statement>
             </block>
           </statement>
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_destroyEntity"/>
+          </statement>
           <statement name="WHEN_USED">
+            <block type="craft_destroyEntity"/>
+          </statement>
+          <statement name="WHEN_ATTACKED">
             <block type="craft_destroyEntity"/>
           </statement>
         </block>
@@ -100,5 +107,12 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="craft_addScore">
+          <title name="SCORE">1</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Craft>

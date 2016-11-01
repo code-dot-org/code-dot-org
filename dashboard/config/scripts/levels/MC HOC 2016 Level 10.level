@@ -36,7 +36,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "30",
     "day_night_cycle_time": "30",
-    "instructions": "Now you make the game. 'Spawn' creatures and then make them do and say what you want. Have fun!\r\n",
+    "instructions": "It's time to make your own Minecraft! 'Spawn' creatures and then make them do whatever you want. Have fun!",
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
     "use_player": "true",
     "level_verification_timeout": "0",
@@ -51,9 +51,9 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" x="15px" y="15px"/>
-        <block type="craft_whenDay" deletable="false" x="15px" y="80px"/>
-        <block type="craft_whenNight" deletable="false" x="15px" y="170px"/>
+        <block type="craft_whenRun" deletable="false" x="15px" y="15px"/>
+        <block type="craft_whenDay" deletable="false" x="15px" y="105px"/>
+        <block type="craft_whenNight" deletable="false" x="15px" y="195px"/>
         <block type="craft_creeper" deletable="false" x="300px" y="15px"/>
         <block type="craft_ironGolem" deletable="false" x="15px" y="300px"/>
         <block type="craft_sheep" deletable="false" x="15px" y="600px"/>
