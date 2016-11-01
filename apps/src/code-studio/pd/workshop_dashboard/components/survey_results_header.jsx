@@ -3,6 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import {
+  Button,
   Row,
   Col,
 } from 'react-bootstrap';
@@ -138,6 +139,14 @@ const SurveyResultsHeader = React.createClass({
 
   handleWorkshopIdChange(event) {
     this.setSurveyPanel(this.state.selectedCourse, event.target.value, event.target.selectedOptions[0].innerHTML);
+  },
+
+  handleOnClickDownloadCsv() {
+    if (this.props.organizerView && !this.state.selectedWorkshopId) {
+      window.open(`/api/v1/pd/workshop_organizer_survey_report_for_course/${this.state.selectedCourse}.csv`);
+    } else if (this.state.selectedWorkshopId) {
+      window.open(`/api/v1/pd/workshops/${this.state.selectedWorkshopId}/workshop_survey_report.csv`);
+    }
   },
 
   renderSurveyResults() {
@@ -277,6 +286,14 @@ const SurveyResultsHeader = React.createClass({
     }
   },
 
+  renderDownloadCsvButton() {
+    return (
+      <Button bsStyle="info" onClick={this.handleOnClickDownloadCsv}>
+        Download as CSV
+      </Button>
+    );
+  },
+
   getWorkshopFriendlyName(workshop) {
     return workshop.course + ' - ' + (workshop.sessions[0] ? moment.utc(workshop.sessions[0].start).format(DATE_FORMAT) : 'no sessions');
   },
@@ -329,6 +346,7 @@ const SurveyResultsHeader = React.createClass({
         <br/>
         {this.renderSurveyPanel()}
         {this.renderFreeResponseAnswers()}
+        {this.renderDownloadCsvButton()}
       </div>
     );
   }
