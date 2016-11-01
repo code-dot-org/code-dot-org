@@ -10,7 +10,7 @@ The ideal CS Discoveries Facilitator is an enthusiastic supporter of computer sc
 
 <br/>
 
-[<button>Apply now</button>](https://goo.gl/forms/qfMF06eNHsLFTzMf2)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub)
+[<button>Apply now</button>](https://goo.gl/forms/qfMF06eNHsLFTzMf2)&nbsp;&nbsp;[<button>Learn more</button>](https://code.org/files/Code.orgFacilitatorDevelopmentProgram2017-18%20(1).pdf)
 <br/>
 
 ## What is the CS Discoveries Facilitator Program?
@@ -51,14 +51,14 @@ Accepted participants will also attend a Spring 2018 Local Leads Training to pre
 
 ## How to become a CS Discoveries Facilitator?
 
-Carefully review the the [requirements and commitments](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub) for the CS Discoveries Facilitator Development program.
+Carefully review the the [requirements and commitments](https://code.org/files/Code.orgFacilitatorDevelopmentProgram2017-18%20(1).pdf) for the CS Discoveries Facilitator Development program.
 
 **Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application will close on **February 1st, 2017.**
 *This program is currently only operated in the US.*
 <br/>
 <br/>
 
-[<button>Apply now</button>](https://goo.gl/forms/qfMF06eNHsLFTzMf2)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1n5N04tz3RBCEeU_QfzC-vwPwvoFbjqhcLA_3Mi3i-Hs/pub)
+[<button>Apply now</button>](https://goo.gl/forms/qfMF06eNHsLFTzMf2)&nbsp;&nbsp;[<button>Learn more</button>](https://code.org/files/Code.orgFacilitatorDevelopmentProgram2017-18%20(1).pdf)
 <br/>
 
 
