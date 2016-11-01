@@ -12,6 +12,14 @@ social:
   "og:video:type": ""
 ---
 
+-# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
+:css
+  @media (min-width: 992px)
+  {
+    .modal-lg {
+        width: 900px;
+  }
+
 -# #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
   #desktop-header.desktop-feature
     = view :header, variant: "desktop"

@@ -4,7 +4,6 @@
 import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
-import { getItemValue } from './responsive';
 
 const styles = {
   tutorialDetailModalHeader: {
@@ -101,7 +100,7 @@ const TutorialDetail = React.createClass({
         >
           <div
             className="modal-dialog modal-lg"
-            style={{width: 900}}
+            style={{}}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-content">
@@ -130,13 +129,13 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div style={{float: "left", width: getItemValue(50)}}>
+                <div style={{float: "left", paddingBottom: 10}} className="col-xs-12 col-sm-6">
                   <img
                     src={this.props.item.image.replace(".png", ".jpg")}
                     style={{width: '100%'}}
                   />
                 </div>
-                <div style={{float: "left", paddingLeft: 20, width: getItemValue(50)}}>
+                <div style={{float: "left", paddingLeft: 20}} className="col-xs-12 col-sm-6">
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>

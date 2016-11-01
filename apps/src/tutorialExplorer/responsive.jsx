@@ -1,4 +1,12 @@
-function getContainerWidth() {
+/* A very simple responsive layout system.
+ */
+
+  /**
+   * Gets the container width.
+   * Returns either a number (e.g. 1170) or a string (e.g. "97%").
+   */
+
+function getResponsiveContainerWidth() {
   const windowWidth = $(window).width();
 
   if (windowWidth >= 1200) {
@@ -8,7 +16,25 @@ function getContainerWidth() {
   }
 }
 
-function getItemValue(values) {
+/**
+ * From a set of values provided, returns the appropriate one for the current
+ * window width.
+ * Note that we default to the largest-provided value that is not for a width
+ * that's greater than the current window width.  e.g. If the window width is
+ * "md" then we use the provided "md" width, otherwise provided "sm" width,
+ * otherwise provided "xs" width.
+ * Note also that when the value being returned is a number, it's converted into
+ * a percentage string.  e.g. 4 becomes "4%"
+ *
+ * @param {Object} values - A set of values from which we want one.
+ * @param {number|string} values.xs - Value returned on extra-small layout.
+ * @param {number|string} values.sm - Value returned on small layout.
+ * @param {number|string} values.md - Value returned on medium layout.
+ * @param {number|string} values.lg - Value returned on large layout.
+
+ */
+
+function getResponsiveValue(values) {
   const windowWidth = $(window).width();
 
   var value;
@@ -22,7 +48,7 @@ function getItemValue(values) {
     } else {
       value = values.xs;
     }
-  } else if (windowWidth >= 800) {
+  } else if (windowWidth >= 820) {
     if (values.md) {
        value = values.md;
     } else if (values.sm) {
@@ -49,4 +75,4 @@ function getItemValue(values) {
   }
 }
 
-export { getContainerWidth, getItemValue };
+export { getResponsiveContainerWidth, getResponsiveValue };

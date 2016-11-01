@@ -9,7 +9,7 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import { getContainerWidth } from './responsive';
+import { getResponsiveContainerWidth } from './responsive';
 import _ from 'lodash';
 
 
@@ -266,7 +266,7 @@ const TutorialExplorer = React.createClass({
 
   render() {
     return (
-      <div style={{width: getContainerWidth(), margin: "0 auto"}}>
+      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
         <FilterHeader
           backButton={this.props.backButton}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
