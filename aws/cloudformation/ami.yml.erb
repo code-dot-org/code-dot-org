@@ -15,8 +15,6 @@ unless dry_run
   update_cookbooks.call
   update_bootstrap_script.call
 end
-
-image_id = 'ami-458bd152' if stack_name == 'AMI-staging'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09

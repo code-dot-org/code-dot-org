@@ -44,7 +44,7 @@ module AWS
     # Fully qualified domain name
     FQDN = "#{STACK_NAME}.#{DOMAIN}".downcase
     SSH_KEY_NAME = 'server_access_key'
-    IMAGE_ID = 'ami-df0607b5' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
+    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
