@@ -22,7 +22,7 @@ var GameLabVisualizationColumn = React.createClass({
   },
 
   getInitialState() {
-    // Cache mouse coordinates in app-space, which we get from the
+    // Cache app-space mouse coordinates, which we get from the
     // VisualizationOverlay when they change.
     return {
       mouseX: -1,
@@ -44,7 +44,12 @@ var GameLabVisualizationColumn = React.createClass({
     }
     return (
       <div>
-        x: {Math.floor(mouseX)}, y: {Math.floor(mouseY)}
+        <span style={{display: 'inline-block', minWidth: '3.5em'}}>
+          x: {Math.floor(mouseX)},
+        </span>
+        <span>
+          y: {Math.floor(mouseY)}
+        </span>
       </div>
     );
   },
