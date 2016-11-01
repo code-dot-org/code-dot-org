@@ -996,7 +996,7 @@ end
 
 Then /^I scroll our lockable stage into view$/ do
   wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
-  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
