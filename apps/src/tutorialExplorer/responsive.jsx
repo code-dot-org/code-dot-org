@@ -1,29 +1,44 @@
 function getContainerWidth(windowWidth) {
   if (windowWidth >= 1200) {
     return 1170;
-  } else if (windowWidth >= 992) {
-    return 970;
-  } else if (windowWidth >= 768) {
-    return 750;
   } else {
-    return "100%";
+    return "95%";
   }
 }
 
-function getItemWidth(itemWidth, windowWidth) {
-  if (windowWidth >= 600) {
-    return `${itemWidth}%`;
-  } else {
-    return "100%";
+function getItemWidthVariable(widths, windowWidth) {
+  var width;
+  if (windowWidth >= 1024) {
+    if (widths.lg) {
+      width = widths.lg;
+    } else if (widths.md) {
+       width = widths.md;
+    } else if (widths.sm) {
+       width = widths.sm;
+    } else {
+      width = widths.xs;
+    }
+  } else if (windowWidth >= 800) {
+    if (widths.md) {
+       width = widths.md;
+    } else if (widths.sm) {
+       width = widths.sm;
+    } else {
+      width = widths.xs;
+    }
+  } else if (windowWidth >= 650) {
+    if (widths.sm) {
+       width = widths.sm;
+    } else {
+      width = widths.xs;
+    }
+  } else if (widths.xs) {
+    width = widths.xs;
+  }
+
+  if (width) {
+    return `${width}%`;
   }
 }
 
-function getItemWidthMobile(itemWidth, windowWidth) {
-  if (windowWidth < 600) {
-    return `${itemWidth}%`;
-  } else {
-    return "100%";
-  }
-}
-
-export { getContainerWidth, getItemWidth, getItemWidthMobile };
+export { getContainerWidth, getItemWidthVariable };
