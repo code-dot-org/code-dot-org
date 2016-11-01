@@ -1,7 +1,7 @@
 - require 'state_abbr'
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/districtDropdown.js')}
+  %script{src: minifiable_asset_path('js/schoolInfo.js')}
 
 #pl-application-form
   #pl-application-facets.form-section
@@ -51,5 +51,5 @@
     var options = #{existing_school_info.to_json};
 
     // Send through some values that the JavaScript will need.
-    window.districtDropdownManager = new DistrictDropdownManager(options);
+    window.schoolInfoManager = new SchoolInfoManager(options);
   });

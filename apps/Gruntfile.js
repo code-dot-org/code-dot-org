@@ -360,7 +360,6 @@ module.exports = function (grunt) {
   ));
   var codeStudioEntries = {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
-    'districtDropdown':             './src/sites/studio/pages/districtDropdown.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
@@ -374,6 +373,7 @@ module.exports = function (grunt) {
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
