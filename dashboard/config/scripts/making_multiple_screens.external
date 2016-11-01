@@ -4,9 +4,9 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Making Multiple Screens
+# Making and Using Multiple Screens
 
-You may imagine that a typical app has a number of "screens" or views that user goes through as part of using your app.  Below is a typical example with a welcome screen, a screen that plays a game and a game over screen.
+You may imagine that a typical app has a number of "screens" or views that user goes through as part of using your app.  Below is a typical example with 1) a welcome screen, 2) a screen that plays a game and 3) a "game over" screen.
 
 <img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
 
@@ -21,8 +21,14 @@ A screen is just a UI element like anything else in Design Mode.  But it has a f
   * Even though your *design elements* might be spread across multiple screens, your code does not get broken up like that.
   * There is only one coding workspace, that will still house all of your code for the app.
 
-*(In reality, screens aren't really "real". A screen is just a convenient way to show and hide certain UI elements.  Every program you write in app lab could be done without screens by simply being clever about what elements show and hide at any given time.  But they're very difficult and annoying to write.  So the concept of a "screen" makes the UI much easier to design.)*
-
+<details><summary>A little bit more about screens...[click to expand]</summary>
+<strong>In reality, screens aren't really "real"**</strong><br>
+<li>A screen is just a convenient way to show and hide certain UI elements</li>
+<li>Every program you write in App Lab could be done <em>without</em> screens by simply being clever about what elements show and hide at any given time</li>
+<li>But programs like that are very difficult and annoying to write.  So the concept of a "screen" makes the UI much easier to design.</li>
+<br><br>
+**If you must know, a screen is just an HTML &lt;div&gt; tag that contains other html elements. To show a screen it is made visible and the other divs are hidden.
+</details>
 
 ## How to Make a new Screen
 
@@ -86,28 +92,15 @@ Find <em>setScreen</em> in the UI Elements toolbox and drag it into the code wor
 Most of the time you change the screen in response to some user-event. In this case <em>setScreen</em> is being added to a "click" event handler for the image with id: <em>smileyFace</em></p>
 
 <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
-Select the ID of the screen you want to change to. In this case, when smiley face is clicked on the screen that says "hello" we want to change to the screen that says "goodbye."</p>
+Select the ID of the screen you want to change to. In this case, when the smiley face is clicked we want to change to the screen that says "goodbye."</p>
 
 <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
-<strong>Key idea: Multiple Screens - One Coding Workspace.</strong> This is the code that handles a "click" event for an <em>image that is on a different screen</em> - the <em>goodbyeScreen</em>. You can't see that image right now, or that screen, because the screen isn't selected.  However, the code for it still goes here.</p>
+<strong>Key idea: Multiple Screens - One Coding Workspace.</strong> This is the code that handles a "click" event for an <em>image that is on a different screen</em> - the <em>goodbyeScreen</em>. You can't see that image or that screen right now because the screen isn't selected.  However, the code for <em>everything</em> goes here in the coding workspace.</p>
 
 </div>
 
-<hr><hr>
+### We'll practice making screens and adding code in the next few levels.  Click Continue.  
 
-To make an example like this you need to know how it fits into the Event Driven Programming Pattern we saw before:
-
-** Step 1 - Design Mode** -- add a screen to your app in design mode, it gets an ID just like any other UI Element
-
-** Step 2 - Add onEvent to Code** -- 
-
-Set the id and event type to listen for some event on that element.
-
-Step 3 - Write the code for the event handling function
-
-The code describes what you want the app to do WHEN the specified type of event happens on the specified ID.
-
-Step 4 - Run. Test. Debug.
 
 
 MARKDOWN

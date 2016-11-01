@@ -7,7 +7,7 @@ const SurveyResults = React.createClass({
   render() {
     return (
       <div>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended">
+        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended&workshops_ive_facilitated=1">
           <SurveyResultsHeader />
         </WorkshopTableLoader>
       </div>

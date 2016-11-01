@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import {Button} from 'react-bootstrap';
+import {Link} from 'react-router';
 import WorkshopTable from './components/workshop_table';
 import WorkshopTableLoader from './components/workshop_table_loader';
 
@@ -17,9 +18,12 @@ const WorkshopIndex = React.createClass({
   },
 
   render() {
-    const showOrganizer = window.dashboard.workshop.permission === "admin";
+    const isAdmin = window.dashboard.workshop.permission === "admin";
+    const showOrganizer = isAdmin;
+
     return (
       <div>
+        {isAdmin && <Link to="reports">Payment Reports</Link>}
         <h1>Your Workshops</h1>
         <p>
           <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
