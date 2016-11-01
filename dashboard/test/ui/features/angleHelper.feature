@@ -1,7 +1,10 @@
+@no_mobile
+@no_ie
 Feature: Angle Helper
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/7"
+  And I wait to see "#runButton"
 
 @eyes
 Scenario: Angle Helper Eyes Tests
@@ -27,7 +30,7 @@ Scenario: Free Text Input Angle Helper
 
   # updating the angle helper should update the text input
   When I drag the Angle Helper circle to coordinates (5,5)
-  Then Angle Helper circle is at coordinates (31,31)
+  Then the Angle Helper circle is at coordinates (31,31)
   Then the angle text is at "225"
 
 Scenario: Dropdown Angle Helper
@@ -38,10 +41,13 @@ Scenario: Dropdown Angle Helper
 
   # updating the dropdown should update the angle helper
   When I change the angle dropdown to "45"
+  # updating the dropdown also automatically closes it, so reopen
+  And I begin to edit the angle of turn block "3"
+
   Then the angle dropdown is at "45"
   And the Angle Helper circle is at coordinates (118,141)
 
   # updating the angle helper should update the dropdown
   When I drag the Angle Helper circle to coordinates (200,5)
-  Then Angle Helper circle is at coordinates (74,36)
-  Then the angle dropdown is at "270"
+  Then the Angle Helper circle is at coordinates (137,98)
+  Then the angle dropdown is at "0"
