@@ -236,6 +236,23 @@ module.exports.createSprite = function (x, y, width, height) {
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
 
+  /**
+   * Plays/resumes the sprite's current animation.
+   * If the animation is currently playing this has no effect.
+   * If the animation has stopped at its last frame, this will start it over
+   * at the beginning.
+   */
+  s.play = function () {
+   // Normally this just sets the 'playing' flag without changing the animation
+   // frame, which will cause the animation to continue on the next update().
+   // If the animation is non-looping and is stopped at the last frame
+   // we also rewind the animation to the beginning.
+    if (!s.animation.looping && s.animation.getFrame() === s.animation.images.length - 1) {
+      s.animation.rewind();
+    }
+    s.animation.play();
+  };
+
   return s;
 };
 
@@ -639,7 +656,6 @@ const ALIASED_METHODS = {
   'animation.changeFrame': 'setFrame',
   'animation.nextFrame': 'nextFrame',
   'animation.previousFrame': 'previousFrame',
-  'animation.play': 'play',
   'animation.stop': 'pause'
 };
 
