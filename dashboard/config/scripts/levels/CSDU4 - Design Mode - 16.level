@@ -14,6 +14,8 @@
           "function(){\n\n}"
         ]
       },
+      "setText": null,
+      "setScreen": null,
       "console.log": null,
       "comment": null
     },
@@ -52,7 +54,9 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",
