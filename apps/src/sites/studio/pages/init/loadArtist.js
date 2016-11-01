@@ -5,7 +5,7 @@ import blocks from "@cdo/apps/turtle/blocks";
 import skins from "@cdo/apps/turtle/skins";
 import levels from "@cdo/apps/turtle/levels";
 
-export default function loadartist(options) {
+export default function loadArtist(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   var artist = new Artist();
