@@ -595,6 +595,10 @@ Then /^I see jquery selector (.*)$/ do |selector|
   expect(exists).to eq(true)
 end
 
+Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
+end
+
 Then /^I wait until I see selector "(.*)"$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
 end
@@ -992,7 +996,7 @@ end
 
 Then /^I scroll our lockable stage into view$/ do
   wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
-  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do

@@ -100,7 +100,7 @@ table {width: 100%;}
 
 | **June** ||
 |------|-------|
-| June 19, 2017 | First day of TeacherCon #1 |
+| June 19, 2017 | First day of TeacherCon #1 (teachers staying at the hotel should arrive on Sunday)|
 
 ## July Areas of Focus
 
@@ -109,8 +109,8 @@ table {width: 100%;}
 
 | **July** ||
 |------|-------|
-| July 17, 2017 | First day of TeacherCon #2 |
-| July 31, 2017 | First day of TeacherCon #3 |
+| July 17, 2017 | First day of TeacherCon #2 (teachers staying at the hotel should arrive on Sunday)|
+| July 31, 2017 | First day of TeacherCon #3 (teachers staying at the hotel should arrive on Sunday)|
 
 <br/>
 [**Back to the top**](#top)
