@@ -91,7 +91,10 @@ const AnimationTab = React.createClass({
             </div>
           </div>
         </ResizablePanes>
-        <AnimationPicker channelId={this.props.channelId}/>
+        <AnimationPicker
+          channelId={this.props.channelId}
+          allowedExtensions=".png,.jpg,.jpeg"
+        />
       </div>
     );
   }

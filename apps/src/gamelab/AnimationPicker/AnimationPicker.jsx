@@ -27,7 +27,7 @@ const AnimationPicker = React.createClass({
   propTypes: {
     // Provided externally
     channelId: React.PropTypes.string.isRequired,
-    typeFilter: React.PropTypes.string,
+    allowedExtensions: React.PropTypes.string,
 
     // Provided via Redux
     visible: React.PropTypes.bool.isRequired,
@@ -80,7 +80,7 @@ const AnimationPicker = React.createClass({
         <HiddenUploader
           ref="uploader"
           toUrl={'/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png'}
-          typeFilter={this.props.typeFilter}
+          allowedExtensions={this.props.allowedExtensions}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
