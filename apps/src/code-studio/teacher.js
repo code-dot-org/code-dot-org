@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import debounce from 'lodash/debounce';
 import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -8,23 +7,13 @@ import { getStore } from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
+import CurrentSection from './components/progress/CurrentSection';
+import TeacherPanelStudentList from './components/TeacherPanelStudentList';
 import { fullyLockedStageMapping } from './stageLockRedux';
 import { setSections, selectSection } from './sectionsRedux';
 import commonMsg from '@cdo/locale';
 
-function resizeScrollable() {
-  var newHeight = $('.teacher-panel').innerHeight() -
-      $('.teacher-panel h3').outerHeight() -
-      15 - // magic..
-      $('.non-scrollable-wrapper').outerHeight();
-  $('.scrollable-wrapper').css('max-height', newHeight);
-}
-
 export function onReady() {
-  $(window).resize(debounce(resizeScrollable, 250));
-
-  resizeScrollable();
-
   var submittedTimestamp = $('#submitted .timestamp');
   submittedTimestamp.text((new Date(submittedTimestamp.text())).toLocaleString());
 
@@ -109,6 +98,7 @@ export function renderTeacherPanel(store, scriptId) {
 function renderIntoLessonTeacherPanel() {
   const stageLockedText = document.getElementById('stage-locked-text');
   const teacherPanelSections = document.getElementById('teacher-panel-sections');
+  const studentList = document.getElementById('react-students-list');
   if (!stageLockedText && !teacherPanelSections) {
     return;
   }
@@ -122,9 +112,26 @@ function renderIntoLessonTeacherPanel() {
     if (teacherPanelSections) {
       ReactDOM.render(
         <Provider store={getStore()}>
-          <SectionSelector onChange={changeSection}/>
+          <div>
+            <CurrentSection/>
+            <SectionSelector/>
+          </div>
         </Provider>,
         teacherPanelSections
+      );
+    }
+
+    if (studentList) {
+      const studentInfo = $("#students_info").data('studentsInfo');
+      const query = queryString.parse(location.search);
+      ReactDOM.render(
+        <Provider store={getStore()}>
+          <TeacherPanelStudentList
+            studentInfo={studentInfo}
+            activeUserId={query.user_id}
+          />
+        </Provider>,
+        studentList
       );
     }
 
@@ -136,21 +143,10 @@ function renderIntoLessonTeacherPanel() {
       const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
 
       if (fullyLocked[currentStageId]) {
-        stageLockedText.text(commonMsg.stageLocked());
+        $(stageLockedText).text(commonMsg.stageLocked());
       } else {
-        stageLockedText.text(commonMsg.stageNotFullyLocked());
+        $(stageLockedText).text(commonMsg.stageNotFullyLocked());
       }
     }
   });
-}
-
-/**
- * Changes the url to navigate to the new section
- * @param {string} newSectionId - section id of the section we want to change to
- */
-function changeSection() {
-  // Depend on the fact that SectionSelector already changed the URL for us
-  // via pushState. We actually want to do a reload though, so that we hit the
-  // server with the new section_id
-  window.location.reload();
 }

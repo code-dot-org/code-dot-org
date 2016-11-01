@@ -236,6 +236,28 @@ module ApplicationHelper
     end
   end
 
+  # For the current user, goes through each of their sections and gets the necessary
+  # info for each student needed to display our student list in the teacher panel
+  # @param script_level: The level we want to display student info for
+  def get_students_info(script_level)
+    info_by_section = {}
+    current_user.sections.select{|s| s.deleted_at.nil?}.each do |section|
+      info_by_section[section.id] = section.students.order(:name).map do |student|
+        user_level = student.last_attempt_for_any(script_level.levels)
+        {
+          name: student.name,
+          id: student.id,
+          status: activity_css_class(user_level),
+          unplugged: (user_level.try(:level) || script_level.oldest_active_level).unplugged?,
+          position: script_level.position,
+          navigator: user_level && user_level.navigator? && !user_level.driver?,
+          pairing: user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?)
+        }
+      end
+    end
+    info_by_section
+  end
+
   private
 
   def share_failure_message(failure_type)
