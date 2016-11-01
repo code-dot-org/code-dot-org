@@ -5,7 +5,7 @@ import React from 'react';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
-import { getItemValue } from './responsive';
+import { getResponsiveValue } from './responsive';
 
 const styles = {
   tutorialName: {
@@ -50,7 +50,7 @@ const Tutorial = React.createClass({
           item={this.props.item}
           closeClicked={this.tutorialDetailClosed}
         />
-        <div style={{float: 'left', paddingTop: 5, paddingBottom: 5, paddingLeft: 7, paddingRight: 7, width: getItemValue({lg: 33.3333333, sm: 50, xs: 100})}}>
+        <div style={{float: 'left', paddingTop: 5, paddingBottom: 5, paddingLeft: 7, paddingRight: 7, width: getResponsiveValue({lg: 33.3333333, sm: 50, xs: 100})}}>
           <div
             style={{cursor: 'pointer'}}
             onClick={this.tutorialClicked}

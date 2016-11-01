@@ -2,7 +2,7 @@
  */
 
 import React from 'react';
-import { getItemValue } from './responsive';
+import { getResponsiveValue } from './responsive';
 
 const styles = {
   roboticsButtonImage: {
@@ -21,12 +21,12 @@ const styles = {
 
 const RoboticsButton = (props) => (
   <div style={{float:"left"}}>
-    <div style={{display: getItemValue({md: "block", xs: "none"})}}>
+    <div style={{display: getResponsiveValue({md: "block", xs: "none"})}}>
       <a href="/learn/robotics">
         <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
       </a>
     </div>
-    <div style={{...styles.roboticsText, display: getItemValue({xs: "block", md: "none"})}}>
+    <div style={{...styles.roboticsText, display: getResponsiveValue({xs: "block", md: "none"})}}>
       Got robots? <a href="/learn/robotics">Use these activities</a> and make a tangible Hour of Code for students of any age!
     </div>
   </div>

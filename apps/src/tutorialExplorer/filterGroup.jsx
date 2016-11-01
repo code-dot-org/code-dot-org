@@ -4,7 +4,7 @@
 
 import React from 'react';
 import FilterChoice from './filterChoice';
-import { getItemValue } from './responsive';
+import { getResponsiveValue } from './responsive';
 
 const styles = {
   filterGroupOuter: {
@@ -29,7 +29,7 @@ const FilterGroup = React.createClass({
 
   render() {
     return (
-      <div style={{...styles.filterGroupOuter, float: "left", width: getItemValue({xs: 100, sm: 50, md: 100})}}>
+      <div style={{...styles.filterGroupOuter, float: "left", width: getResponsiveValue({xs: 100, sm: 50, md: 100})}}>
         <div style={styles.filterGroupText}>
           {this.props.text}
         </div>
