@@ -4,7 +4,7 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Making a Multi-screen Chaser Game
+# Guided Example: Making a Multi-screen Chaser Game
 
 In the last lesson we got some very basic functionality for a simple chaser game going.  Now that we know how to add screens and use console.log to help us debug problems, let's make our game a little more polished.  
 

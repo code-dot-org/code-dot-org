@@ -1,8 +1,8 @@
 @no_ie
 @no_mobile
+@no_circle
 @dashboard_db_access
 @pegasus_db_access
-@no_circle
 Feature: Using the teacher dashboard
 
   Scenario: Loading the teacher dashboard

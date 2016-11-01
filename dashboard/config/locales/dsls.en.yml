@@ -578,6 +578,7 @@ en:
       CSPU5_HowOnEventWorks_v2:
         description here: description here
         title: title
+      CSPU5_L3 - Student Introduction: {}
       CSPU5_U3 - Arrays and Loops - Explain Functions with Returns: {}
       CSPU5_U3 - Conditionals - Boolean Expressions and Operators: {}
       CSPU5_U3 - Conditionals - Introducing Else: {}
@@ -1053,6 +1054,12 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Event Driven Programming Recap:
+        description here: description here
+        title: title
+      Event-Driven Programming Patterns:
+        description here: description here
+        title: title
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -1081,12 +1088,22 @@ en:
       Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Images Work:
+        description here: description here
+        title: title
       How Search Works: {}
       How Secure Is Your Password?:
         description here: description here
         title: title
       How are Images Encoded?: {}
+      How onEvent Works:
+        description here: description here
+        title: title
+      How setPosition and screen dimensions work:
+        description here: description here
+        title: title
       'How to: Make Charts from your Data': {}
+      Importing Screens: {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -1098,6 +1115,9 @@ en:
         description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      Intro to Debugging and Common Problems:
+        description here: description here
+        title: title
       Introduction to Lossless Compression and the Text Compression Widget: {}
       Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
@@ -1124,6 +1144,9 @@ en:
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
       Making a Bar Chart: {}
       Making a Line Chart: {}
+      Making a Multi Screen Chaser Game v.2:
+        description here: description here
+        title: title
       Making a Scatter Plot: {}
       MarbleMaze:
         Marble Maze: Marble Maze
@@ -1402,6 +1425,9 @@ en:
         title: title
       Rating Websites: {}
       Responding to User Input: {}
+      Rules About Choosing Good IDs:
+        description here: description here
+        title: title
       SFLP - Web - Describing Webpages: {}
       SFLP - Web - Designing Code for Computers: {}
       SFLP - Web - Designing Webpages: {}
@@ -1446,6 +1472,9 @@ en:
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
         The Great Bug Bash: The Great Bug Bash
+      Tips For Working on Your Own:
+        description here: description here
+        title: title
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -2061,6 +2090,7 @@ en:
       courseB_unplugged_mrfProgramming:
         description here: description here
         title: title
+      courseF_external_variableConstant: {}
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -2581,6 +2611,8 @@ en:
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 4 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
@@ -3843,6 +3875,11 @@ en:
         "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
+      CB_Question_1_copy:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
       CB_Question_2:
         ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
         : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
@@ -3962,6 +3999,11 @@ en:
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
+      CSDU4 Screens Predict Multi:
+        About: About
+        Contact Us: Contact Us
+        Use It: Use It
+        Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -4151,9 +4193,9 @@ en:
         Low bandwidth, high latency: Low bandwidth, high latency
         Low bandwidth, low latency: Low bandwidth, low latency
       CSPFinal_Question_20:
+        Days when certain items sell the most.: Days when certain items sell the most.
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
-        Times of day when certain items sell the most.: Times of day when certain items sell the most.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_21:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
@@ -6135,6 +6177,38 @@ en:
         Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
         Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
         Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu4_assess1_DDoS:
+        A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems: A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems
+        An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
+        An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).: An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).
+        An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.: An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.
+      cspu4_assess1_encryption:
+        Asymmetric: Asymmetric
+        Public key: Public key
+        SSL: SSL
+        Symmetric: Symmetric
+      cspu4_assess1_keyEncryption:
+        A Public Key database ensures 3rd party accountability of security: A Public Key database ensures 3rd party accountability of security
+        A key for decrypting is never made public: A key for decrypting is never made public
+        Allows secure communication without establishing a *shared* encryption key ahead of time.: Allows secure communication without establishing a *shared* encryption key ahead of time.
+        Using public key guarantees that only the intended recipient can decrypt the message: Using public key guarantees that only the intended recipient can decrypt the message
+      cspu4_assess1_mod:
+        1 MOD 16: 1 MOD 16
+        52 MOD 32: 52 MOD 32
+        9 MOD 64: 9 MOD 64
+        9 MOD 8: 9 MOD 8
+      cspu4_assess1_moore:
+        Moore's Law describes a relationship of boolean logic statements involving AND and OR: Moore's Law describes a relationship of boolean logic statements involving AND and OR
+        Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
+        Moore's Law is the observation that computing power tends to double every two years: Moore's Law is the observation that computing power tends to double every two years
+        Moore's Law is the principle that one should assume that any traffic on the Internet is insecure: Moore's Law is the principle that one should assume that any traffic on the Internet is insecure
+      cspu4_assess1_phishing:
+        ? You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        : You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability: You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability
+        ? You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”: You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”
       cspu5_assess1_additem:
         cart total = 1;: cart total = 1;
         cartTotal + 1;: cartTotal + 1;

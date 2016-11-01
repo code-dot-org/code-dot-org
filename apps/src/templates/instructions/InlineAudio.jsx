@@ -1,8 +1,11 @@
+/* global CryptoJS */
+
 import Radium from 'radium';
 import React from 'react';
-import experiments from '../../experiments';
 
 import { connect } from 'react-redux';
+
+const TTS_URL = "https://cdo-tts.s3.amazonaws.com/sharon22k/180/100";
 
 const styles = {
   error: {
@@ -42,11 +45,14 @@ const styles = {
 const InlineAudio = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
-    src: React.PropTypes.string.isRequired
+    isK1: React.PropTypes.bool,
+    src: React.PropTypes.string,
+    message: React.PropTypes.string
   },
 
   componentWillUpdate: function (nextProps) {
-    if (this.props.src !== nextProps.src) {
+    if (this.props.src !== nextProps.src ||
+        this.props.message !== nextProps.message) {
       // unload current Audio object
       var audio = this.state.audio;
       audio.src = undefined;
@@ -71,7 +77,7 @@ const InlineAudio = React.createClass({
       return this.state.audio;
     }
 
-    var audio = new Audio(this.props.src);
+    var audio = new Audio(this.getAudioSrc());
     audio.addEventListener("ended", e => {
       this.setState({
         playing: false
@@ -82,6 +88,15 @@ const InlineAudio = React.createClass({
     return audio;
   },
 
+  getAudioSrc: function () {
+    if (this.props.src) {
+      return this.props.src;
+    }
+
+    let hash = CryptoJS.MD5(this.props.message).toString(CryptoJS.enc.Base64);
+    let ttsUrl = `${TTS_URL}/${hash}/${encodeURIComponent(this.props.message)}.mp3`;
+    return ttsUrl;
+  },
 
   toggleAudio: function () {
     this.state.playing ? this.pauseAudio() : this.playAudio();
@@ -98,7 +113,7 @@ const InlineAudio = React.createClass({
   },
 
   render: function () {
-    if (experiments.isEnabled('tts') && this.props.src) {
+    if (this.props.isK1 && this.getAudioSrc()) {
       return (
         <div>
           <div style={[styles.button, styles.volumeButton]}>
@@ -121,5 +136,6 @@ const InlineAudio = React.createClass({
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
+    isK1: state.pageConstants.isK1,
   };
 })(Radium(InlineAudio));

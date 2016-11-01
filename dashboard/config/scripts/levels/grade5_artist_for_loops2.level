@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Use a `repeat` inside of a `for` loop to create this stack of triangles that goes from 50 pixels to 100 pixels.\r\n\r\n<br/><br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Use a `repeat` inside of a `for` loop to create this stack of triangles that goes from 50 pixels to 100 pixels.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
