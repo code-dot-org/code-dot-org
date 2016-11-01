@@ -5,17 +5,17 @@ class WorkshopSurveyReportCsvConverterTest < ActionController::TestCase
 
   setup do
     @survey_report = {
-      'First Workshop': {question_1: 1, multiline: ['hello', 'there']},
-      'Second Workshop': {question_1: 2, multiline: ['how', 'are', 'you']},
-      'Third Workshop': {question_1: 3, multiline: ['whassup']}
+      'First Workshop': {overall_success: 1, anything_else_s: %w(hello there)},
+      'Second Workshop': {overall_success: 2, anything_else_s: %w(how are you)},
+      'Third Workshop': {overall_success: 3, anything_else_s: %w(good bye)}
     }
   end
 
   test 'WorkshopSurveyReportConverter converts to csv as expected' do
     expected = [
-      {'Workshops': 'First Workshop', 'question_1': 1, 'multiline': 'hello / there'}.stringify_keys,
-      {'Workshops': 'Second Workshop', 'question_1': 2, 'multiline': 'how / are / you'}.stringify_keys,
-      {'Workshops': 'Third Workshop', 'question_1': 3, 'multiline': 'whassup'}.stringify_keys
+      {Workshops: 'First Workshop', 'Overall Success Score (out of 6)' => 1, 'Is there anything else you’d like to tell us about your experience at this workshop?' => 'hello / there'},
+      {Workshops: 'Second Workshop', 'Overall Success Score (out of 6)' => 2, 'Is there anything else you’d like to tell us about your experience at this workshop?' => 'how / are / you'},
+      {Workshops: 'Third Workshop', 'Overall Success Score (out of 6)' => 3, 'Is there anything else you’d like to tell us about your experience at this workshop?' => 'good / bye'}
     ]
 
     assert_equal expected, convert_to_csv(@survey_report)

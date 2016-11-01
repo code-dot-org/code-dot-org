@@ -11,6 +11,9 @@ import moment from 'moment';
 import {DATE_FORMAT} from '../workshopConstants';
 import { workshopShape } from '../types.js';
 
+const organizerViewApiRoot = '/api/v1/pd/workshop_organizer_survey_report_for_course/';
+const facilitatorViewApiRoot = '/api/v1/pd/workshops/';
+
 const styles = {
   questionGroupCell: {
     borderTopWidth: '2px',
@@ -109,7 +112,7 @@ const SurveyResultsHeader = React.createClass({
       if (!this.props.organizerView || workshopId) {
         $.ajax({
           method: 'GET',
-          url: "/api/v1/pd/workshops/" + workshopId + "/workshop_survey_report",
+          url: `${facilitatorViewApiRoot}${workshopId}/workshop_survey_report`,
           dataType: 'json'
         }).done(data => {
           this.setState({
@@ -121,7 +124,7 @@ const SurveyResultsHeader = React.createClass({
       } else {
         $.ajax({
           method: 'GET',
-          url: '/api/v1/pd/workshop_organizer_survey_report_for_course/' + course
+          url: `${organizerViewApiRoot}${course}`
         }).done(data => {
           this.setState({
             selectedWorkshopId: '',
@@ -143,9 +146,9 @@ const SurveyResultsHeader = React.createClass({
 
   handleOnClickDownloadCsv() {
     if (this.props.organizerView && !this.state.selectedWorkshopId) {
-      window.open(`/api/v1/pd/workshop_organizer_survey_report_for_course/${this.state.selectedCourse}.csv`);
+      window.open(`${organizerViewApiRoot}${this.state.selectedCourse}.csv`);
     } else if (this.state.selectedWorkshopId) {
-      window.open(`/api/v1/pd/workshops/${this.state.selectedWorkshopId}/workshop_survey_report.csv`);
+      window.open(`${facilitatorViewApiRoot}${this.state.selectedWorkshopId}/workshop_survey_report.csv`);
     }
   },
 
