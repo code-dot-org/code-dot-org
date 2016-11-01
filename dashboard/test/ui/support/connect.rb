@@ -11,7 +11,7 @@ $browser_configs = JSON.load(open("browsers.json"))
 MAX_CONNECT_RETRIES = 3
 
 def slow_browser?
-  ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
+  (ENV['TEST_LOCAL'] == 'true') || (['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG'])
 end
 
 def saucelabs_browser
@@ -144,6 +144,7 @@ After do |_s|
       end
       @browser.execute_script 'sessionStorage.clear()'
     else
+      @browser.close unless @browser.nil?
       @browser.quit unless @browser.nil?
     end
   end
