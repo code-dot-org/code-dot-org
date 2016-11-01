@@ -38,7 +38,7 @@
     "free_play": "false",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Some games let you keep score. Play tag with these Iron Golems and use the \"add 1 to score\" block to give yourself a point when you tag them. Reach five points to win!",
+    "instructions": "Some games let you keep score. Play tag with these Iron Golems and use the 'Add 1 to Score' block to give yourself a point when you tag them. Reach five points to win!",
     "use_score": "true",
     "use_verification_function_for_failure": "false",
     "failure_message_override": "If you're having trouble tagging 5 Golems, try changing the score to 2 per tag.",
