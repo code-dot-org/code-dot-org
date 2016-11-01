@@ -1,0 +1,31 @@
+name 'Introduction to Unit 2' 
+
+markdown <<MARKDOWN
+# Unit 2: Digital Information
+
+## Concepts and Topics
+
+<img src="https://images.code.org/779dbdd626f941ea5d18615bceb5205f-image-1477927312858.png" style="width:500px; float:right; boarder-left:20px">
+
+This unit further explores the ways that digital information is encoded, represented and manipulated. In this unit students will look at and generate data, clean it, manipulate it, and create and use visualizations to identify patterns and trends.  Students will use a variety of tools including Code.org widgets and external data manipulation and visualization tools (such as Excel or Google Sheets).
+
+
+## Unit Flow and Breakdown
+
+### Chapter 1
+
+The unit begins by continuing to look at the possibilities and limitations of encoding information in binary and building on the enduring understanding that **there are trade offs when representing information as digital data (3.3).**  Students create an image that they encode with binary by hand, and also look at a variety of data compression techniques for text and images.  The Practice PT: Encode an Experience has students devise their own completely new data encoding scheme for something complex like a human experience which has students deeply consider how a **variety of abstractions built upon binary sequences can be used to represent all digital data (2.1).**
+
+### Chapter 2
+
+In the second chapter students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - in which students themselves are the subject of the data, students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. These activities build toward the enduring understandings that **people use computer programs to process information to gain insight and knowledge (3.1) and that computing facilitates exploration and the discovery of connections in information (3.2).**
+
+
+As students explore ways in which **computing enhances communication, interaction, and cognition (7.1)**, they also examine how human error during data analysis can lead to inaccurate and potentially damaging conclusions. This leads to a deeper understanding that there are **trade offs**, and potentially **beneficial and harmful effects when representing information as digital data (3.3, 7.3).**
+
+### Practice Performance Tasks
+
+There are two practice performance tasks in this chapter -- one at the end of each chapter. In the first practice performance task is related to breaking down and encoding complex information in binary. The second practice PT is related to creating computational artifacts, a key element of the Explore Performance Task. 
+
+
+MARKDOWN
