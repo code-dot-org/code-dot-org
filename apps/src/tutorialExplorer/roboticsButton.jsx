@@ -1,4 +1,4 @@
-/* RoboticsButton: A button shown below the filters that goes to /learn2016/robotics.
+/* RoboticsButton: A button shown below the filters that goes to /learn/robotics.
  */
 
 import React from 'react';
@@ -21,12 +21,12 @@ const styles = {
 const RoboticsButton = (props) => (
   <div style={{float:"left"}}>
     <div className="desktop-feature">
-      <a href="/learn2016/robotics">
+      <a href="/learn/robotics">
         <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
       </a>
     </div>
     <div className="mobile-feature" style={styles.roboticsText}>
-      Got robots? <a href="/learn2016/robotics">Use these activities</a> and make a tangible Hour of Code for students of any age!
+      Got robots? <a href="/learn/robotics">Use these activities</a> and make a tangible Hour of Code for students of any age!
     </div>
   </div>
 );
