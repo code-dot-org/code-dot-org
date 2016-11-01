@@ -1,4 +1,3 @@
-
 When(/^I begin to edit the direction of turn block "([^"]*)"$/) do |block|
   @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(1)\")[0], 'mousedown');")
   @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(1)\")[0], 'mouseup');")
@@ -16,12 +15,13 @@ end
 
 When(/^I change the angle dropdown to "(\d*)"$/) do |val|
   @browser.execute_script("$('.blocklyWidgetDiv .goog-menu .goog-option:contains(#{val})').simulate('mousedown')")
+  @browser.execute_script("$('.blocklyWidgetDiv .goog-menu .goog-option:contains(#{val})').simulate('mouseup')")
 end
 
 When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y|
   @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousedown')")
   @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousemove', {offsetX: #{x}, offsetY: #{y}})")
-  @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousemove')")
+  @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mouseup')")
 end
 
 Then(/^the angle text is at "(\d*)"$/) do |val|
@@ -33,6 +33,6 @@ Then(/^the angle dropdown is at "(\d*)"$/) do |val|
 end
 
 Then(/^the Angle Helper circle is at coordinates \((\d*),(\d*)\)$/) do |x, y|
-  expect(@browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cx')")).to eq(x)
-  expect(@browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cy')")).to eq(y)
+  expect(@browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cx'))")).to eq(x.to_i)
+  expect(@browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cy'))")).to eq(y.to_i)
 end
