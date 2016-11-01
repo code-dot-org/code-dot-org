@@ -233,7 +233,6 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {array} config.level.inputOutputTable
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
- * @param {boolean} config.showInstructionsInTopPane
  * @param {boolean} config.hasContainedLevels
  * @param {Object} config.skin.instructions2ImageSubstitutions
  * @returns {Object}
@@ -243,7 +242,6 @@ export const determineInstructionsConstants = config => {
     level,
     locale,
     noInstructionsWhenCollapsed,
-    showInstructionsInTopPane,
     hasContainedLevels,
     teacherMarkdown
   } = config;
@@ -272,10 +270,10 @@ export const determineInstructionsConstants = config => {
     shortInstructions = instructions;
     shortInstructions2 = instructions2;
 
-    // In the case that we're in the top pane, if the two sets of instructions
-    // are identical, only use the short version (such that we dont end up
-    // minimizing/expanding between two identical sets).
-    if (showInstructionsInTopPane && shortInstructions === longInstructions) {
+    // if the two sets of instructions are identical, only use the short
+    // version (such that we dont end up minimizing/expanding between
+    // two identical sets).
+    if (shortInstructions === longInstructions) {
       longInstructions = undefined;
     }
 

@@ -756,7 +756,6 @@ Bounce.init = function (config) {
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
-  config.showInstructionsInTopPane = true;
 
   var onMount = function () {
     studioApp.init(config);
