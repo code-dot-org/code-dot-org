@@ -1366,35 +1366,41 @@ class UserTest < ActiveSupport::TestCase
     assert user.should_see_inline_answer?((create :script_level))
   end
 
+  test 'account_age_days should return days since account creation' do
+    student = create :student, created_at: DateTime.now - 10
+    assert student.account_age_days == 10
+  end
+
   test 'do not show race interstitial to teacher' do
-    teacher = create :teacher
+    teacher = create :teacher, created_at: DateTime.now - 8
     refute teacher.show_race_interstitial?
   end
 
-  test 'do not show race interstitial to users under 13' do
+  test 'do not show race interstitial to user accounts under 13' do
     student = User.create(@good_data_young)
+    student.created_at = DateTime.now - 8
     refute student.show_race_interstitial?
   end
 
-  test 'do not show race interstitial to users less than one week old' do
-    student = create :student
-    student.created_at = DateTime.now.to_date - 3
+  test 'do not show race interstitial to user accounts less than one week old' do
+    student = create :student, created_at: DateTime.now - 3
     refute student.show_race_interstitial?
   end
 
-  test 'do not show race interstitial to users that have already entered race information' do
-    # also covers the case where the dialog has been dismissed
-    student = create :student
+  test 'do not show race interstitial to user accounts that have already entered race information' do
+    student = create :student, created_at: DateTime.now - 8
     student.races = %w(white black)
     refute student.show_race_interstitial?
+  end
 
+  test 'do not show race interstitial to user accounts that have closed the dialog already' do
+    student = create :student, created_at: DateTime.now - 8
     student.races = %w(closed_dialog)
     refute student.show_race_interstitial?
   end
 
   test 'show race interstitial for student over 13 with account more than 1 week old' do
-    student = create :student
-    student.created_at = DateTime.now.to_date - 8
+    student = create :student, created_at: DateTime.now - 8
     assert student.show_race_interstitial?
   end
 end
