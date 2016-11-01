@@ -104,7 +104,12 @@ social:
 - hide_filters = {}
 - hide_filters[:activity_type] = ["robotics"]
 
--# = tutorialsContents.to_json
+
+- tutorials_contents.each do |tutorial|
+  - tutorial[:contact] = nil
+
+-# = tutorials_contents.to_json
+
 
 .container_responsive
   #tutorials
