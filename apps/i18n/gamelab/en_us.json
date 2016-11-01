@@ -1,6 +1,7 @@
 {
   "animationPicker_drawYourOwn": "Draw your own",
   "animationPicker_error": "Error: {message}",
+  "animationPicker_failedToParseImage": "The image could not be parsed",
   "animationPicker_title": "Animation Library",
   "animationPicker_unsupportedType": "Sorry, this file type is not supported.",
   "animationPicker_uploadImage": "Upload image",

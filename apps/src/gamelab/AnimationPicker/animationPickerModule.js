@@ -123,7 +123,7 @@ export function handleUploadComplete(result) {
       }
       dispatch(hide());
     }, () => {
-      dispatch(handleUploadError(gamelabMsg.animationPicker_unsupportedType()));
+      dispatch(handleUploadError(gamelabMsg.animationPicker_failedToParseImage()));
     });
   };
 }
