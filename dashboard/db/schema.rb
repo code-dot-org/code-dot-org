@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024200011) do
+ActiveRecord::Schema.define(version: 20161102143101) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -361,6 +361,12 @@ ActiveRecord::Schema.define(version: 20161024200011) do
     t.index ["submitter_id"], name: "index_peer_reviews_on_submitter_id", using: :btree
   end
 
+  create_table "persons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "emails"
+  end
+
   create_table "plc_course_units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "plc_course_id"
     t.string   "unit_name"
@@ -660,6 +666,20 @@ ActiveRecord::Schema.define(version: 20161024200011) do
     t.index ["user_id"], name: "index_teacher_prizes_on_user_id", using: :btree
   end
 
+  create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "person_id",                 null: false
+    t.string   "course",                    null: false
+    t.boolean  "facilitator"
+    t.boolean  "teaching"
+    t.string   "pd_year"
+    t.string   "pd"
+    t.string   "other_pd"
+    t.text     "properties",  limit: 65535
+    t.index ["person_id"], name: "index_teacher_profiles_on_person_id", using: :btree
+  end
+
   create_table "unexpected_teachers_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "workshop_id",           null: false
     t.integer "unexpected_teacher_id", null: false
@@ -801,6 +821,7 @@ ActiveRecord::Schema.define(version: 20161024200011) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "person_id"
     t.string   "email",                                    default: "",      null: false
     t.string   "encrypted_password",                       default: ""
     t.string   "reset_password_token"
@@ -857,6 +878,7 @@ ActiveRecord::Schema.define(version: 20161024200011) do
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
     t.index ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
+    t.index ["person_id"], name: "index_users_on_person_id", using: :btree
     t.index ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
