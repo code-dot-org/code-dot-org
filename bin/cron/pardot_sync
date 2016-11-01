@@ -372,9 +372,10 @@ def update_district
 
   start = Time.now
   log "Updating district information from dashboard.pd_enrollments"
-  DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(email: nil).exclude(school_district_id: nil).
+  DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
     select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
-    inner_join(:school_districts, id => :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
+    inner_join(:school_infos, :id => :school_info_id).
+    inner_join(:school_districts, :id => :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
 
     PEGASUS_DB[:contacts_rollup].where(email: pd_enrollment[:email]).update(district_name: pd_enrollment[:district_name], district_city: pd_enrollment[:city],
       district_state: pd_enrollment[:state], district_zip: pd_enrollment[:zip])
@@ -396,6 +397,7 @@ def main
 
   start = Time.now
   PEGASUS_DB.run "SET SQL_SAFE_UPDATES = 0"
+
   truncate_contacts_rollup
   insert_from_pegasus_forms
   insert_from_dashboard_contacts
