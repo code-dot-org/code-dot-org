@@ -5,9 +5,9 @@ import { hideOverlay } from '../redux/instructions';
 
 import { connect } from 'react-redux';
 
-// 9900 puts this at 100 z-levels below the #rotateContainer, the
-// topmost element in our system.
-export const Z_INDEX = 9900;
+// 1020 puts this halfway between the small footer (at 1000) and the
+// video modal backdrop (at 1040)
+export const Z_INDEX = 1020;
 
 const visible_style = {
   position: 'fixed',
