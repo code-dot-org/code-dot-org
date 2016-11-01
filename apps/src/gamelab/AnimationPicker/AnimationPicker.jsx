@@ -108,8 +108,12 @@ export default connect(state => ({
     dispatch(pickLibraryAnimation(animation));
   },
   onUploadStart(data) {
-    dispatch(beginUpload(data.files[0].name));
-    data.submit();
+    if (data.files[0].type === 'image/png' || data.files[0].type === 'image/jpeg') {
+      dispatch(beginUpload(data.files[0].name));
+      data.submit();
+    } else {
+      dispatch(handleUploadError(gamelabMsg.animationPicker_unsupportedType()));
+    }
   },
   onUploadDone(result) {
     dispatch(handleUploadComplete(result));
