@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 export const Z_INDEX = 1000;
 
 const visible_style = {
-  position: 'fixed',
+  position: 'absolute',
   top: 0,
   left: 0,
   height: '100%',
