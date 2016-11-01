@@ -266,7 +266,7 @@ const TutorialExplorer = React.createClass({
 
   render() {
     return (
-      <div style={{width: getContainerWidth(this.state.windowWidth), margin: "0 auto"}}>
+      <div style={{width: getContainerWidth(), margin: "0 auto"}}>
         <FilterHeader
           backButton={this.props.backButton}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
@@ -283,7 +283,6 @@ const TutorialExplorer = React.createClass({
             onUserInput={this.handleUserInput}
             selection={this.state.filters}
             roboticsButton={this.props.roboticsButton}
-            windowWidth={this.state.windowWidth}
           />
         )}
 
@@ -295,7 +294,6 @@ const TutorialExplorer = React.createClass({
               filters={this.state.filters}
               locale={this.props.locale}
               specificLocale={true}
-              windowWidth={this.state.windowWidth}
             />
             <h1>Tutorials in many languages</h1>
           </div>
@@ -306,7 +304,6 @@ const TutorialExplorer = React.createClass({
             tutorials={this.state.filteredTutorials}
             filters={this.state.filters}
             locale={this.props.locale}
-            windowWidth={this.state.windowWidth}
           />
         )}
       </div>

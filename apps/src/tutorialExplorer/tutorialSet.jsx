@@ -4,24 +4,22 @@
 import React from 'react';
 import Tutorial from './tutorial';
 import shapes from './shapes';
-import { getItemWidthVariable } from './responsive';
+import { getItemValue } from './responsive';
 
 const TutorialSet = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
-    filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    windowWidth: React.PropTypes.number.isRequired
+    filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired
   },
 
   render() {
     return (
-      <div style={{float: 'left', width: getItemWidthVariable({xs: 100, md: 80}, this.props.windowWidth)}}>
+      <div style={{float: 'left', width: getItemValue({xs: 100, md: 80})}}>
         {this.props.tutorials.map(item => (
           <Tutorial
             item={item}
             filters={this.props.filters}
             key={item.code}
-            windowWidth={this.props.windowWidth}
           />
         ))}
       </div>

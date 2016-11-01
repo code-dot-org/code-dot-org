@@ -4,7 +4,7 @@
 
 import React from 'react';
 import FilterChoice from './filterChoice';
-import { getItemWidthVariable } from './responsive';
+import { getItemValue } from './responsive';
 
 const styles = {
   filterGroupOuter: {
@@ -24,15 +24,12 @@ const FilterGroup = React.createClass({
     text: React.PropTypes.string.isRequired,
     filterEntries: React.PropTypes.array.isRequired,
     selection: React.PropTypes.array.isRequired,
-    onUserInput: React.PropTypes.func.isRequired,
-    windowWidth: React.PropTypes.number.isRequired
+    onUserInput: React.PropTypes.func.isRequired
   },
 
   render() {
-    var filterGroupOuterStyle = {};
-    Object.assign(filterGroupOuterStyle, styles.filterGroupOuter, {float: "left", width: getItemWidthVariable({xs: 100, sm: 50, md: 100}, this.props.windowWidth)});
     return (
-      <div style={filterGroupOuterStyle}>
+      <div style={{...styles.filterGroupOuter, float: "left", width: getItemValue({xs: 100, sm: 50, md: 100})}}>
         <div style={styles.filterGroupText}>
           {this.props.text}
         </div>

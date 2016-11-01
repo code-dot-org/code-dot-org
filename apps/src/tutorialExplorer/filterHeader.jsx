@@ -8,7 +8,9 @@ import BackButton from './backButton';
 const styles = {
   header: {
     marginTop: 8,
-    marginBottom: 8
+    marginBottom: 8,
+    paddingLeft: 7,
+    paddingRight: 7
   },
   bar: {
     backgroundColor: "#eee",

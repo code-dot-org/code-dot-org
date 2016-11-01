@@ -1,44 +1,52 @@
-function getContainerWidth(windowWidth) {
+function getContainerWidth() {
+  const windowWidth = $(window).width();
+
   if (windowWidth >= 1200) {
     return 1170;
   } else {
-    return "95%";
+    return "97%";
   }
 }
 
-function getItemWidthVariable(widths, windowWidth) {
-  var width;
+function getItemValue(values) {
+  const windowWidth = $(window).width();
+
+  var value;
   if (windowWidth >= 1024) {
-    if (widths.lg) {
-      width = widths.lg;
-    } else if (widths.md) {
-       width = widths.md;
-    } else if (widths.sm) {
-       width = widths.sm;
+    if (values.lg) {
+      value = values.lg;
+    } else if (values.md) {
+       value = values.md;
+    } else if (values.sm) {
+       value = values.sm;
     } else {
-      width = widths.xs;
+      value = values.xs;
     }
   } else if (windowWidth >= 800) {
-    if (widths.md) {
-       width = widths.md;
-    } else if (widths.sm) {
-       width = widths.sm;
+    if (values.md) {
+       value = values.md;
+    } else if (values.sm) {
+       value = values.sm;
     } else {
-      width = widths.xs;
+      value = values.xs;
     }
   } else if (windowWidth >= 650) {
-    if (widths.sm) {
-       width = widths.sm;
+    if (values.sm) {
+       value = values.sm;
     } else {
-      width = widths.xs;
+      value = values.xs;
     }
-  } else if (widths.xs) {
-    width = widths.xs;
+  } else if (values.xs) {
+    value = values.xs;
   }
 
-  if (width) {
-    return `${width}%`;
+  if (value) {
+    if (typeof(value) === "number") {
+      return `${value}%`;
+    } else if (typeof(value) === "string") {
+      return value;
+    }
   }
 }
 
-export { getContainerWidth, getItemWidthVariable };
+export { getContainerWidth, getItemValue };

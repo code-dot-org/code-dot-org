@@ -5,7 +5,7 @@ import React from 'react';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
-import { getItemWidthVariable } from './responsive';
+import { getItemValue } from './responsive';
 
 const styles = {
   tutorialName: {
@@ -25,8 +25,7 @@ const styles = {
 
 const Tutorial = React.createClass({
   propTypes: {
-    item: shapes.tutorial.isRequired,
-    windowWidth: React.PropTypes.number.isRequired
+    item: shapes.tutorial.isRequired
   },
 
   getInitialState() {
@@ -50,9 +49,8 @@ const Tutorial = React.createClass({
           showing={this.state.showingDetail}
           item={this.props.item}
           closeClicked={this.tutorialDetailClosed}
-          windowWidth={this.props.windowWidth}
         />
-        <div style={{float: 'left', paddingTop: 5, paddingBottom: 5, paddingLeft: 7, paddingRight: 7, width: getItemWidthVariable({lg: 33, sm: 50, xs: 100}, this.props.windowWidth)}}>
+        <div style={{float: 'left', paddingTop: 5, paddingBottom: 5, paddingLeft: 7, paddingRight: 7, width: getItemValue({lg: 33.3333333, sm: 50, xs: 100})}}>
           <div
             style={{cursor: 'pointer'}}
             onClick={this.tutorialClicked}

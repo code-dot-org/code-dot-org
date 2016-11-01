@@ -4,20 +4,19 @@
 import React from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
-import { getItemWidthVariable } from './responsive';
+import { getItemValue } from './responsive';
 
 const FilterSet = React.createClass({
   propTypes: {
     filterGroups: React.PropTypes.array.isRequired,
     onUserInput: React.PropTypes.func.isRequired,
     selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    roboticsButton: React.PropTypes.bool,
-    windowWidth: React.PropTypes.number.isRequired
+    roboticsButton: React.PropTypes.bool
   },
 
   render() {
     return (
-      <div id="filterset" style={{float: "left", width: getItemWidthVariable({xs: 100, md: 20}, this.props.windowWidth)}}>
+      <div id="filterset" style={{float: "left", width: getItemValue({xs: 100, md: 20})}}>
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup
@@ -27,7 +26,6 @@ const FilterSet = React.createClass({
               onUserInput={this.props.onUserInput}
               selection={this.props.selection[item.name]}
               key={item.name}
-              windowWidth={this.props.windowWidth}
             />
           )
         )}
