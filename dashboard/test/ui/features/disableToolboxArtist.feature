@@ -4,7 +4,7 @@ Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/19/puzzle/1?noautoplay=true"
   And I rotate to landscape
   And I wait until element "#runButton" is visible
-  And I click selector ".csf-top-instructions button:contains(OK)"
+  And I close the instructions overlay if it exists
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I set slider speed to medium

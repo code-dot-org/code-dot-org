@@ -72,7 +72,7 @@
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :ops_first_name, :ops_last_name, :district, :ops_school, :ops_gender
+  attributes :id, :email, :ops_first_name, :ops_last_name, :district, :ops_school, :ops_gender, :races
   def district
     DistrictSerializer.new(object.district).attributes if object
   end
