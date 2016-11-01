@@ -47,9 +47,9 @@ class Petition
   def self.get_location(zip_code_or_country)
     # Note that, empirically, we see non-US zip codes so we check for
     # numerality and length.
-    is_us_zip_code = zip_code_or_country.length == 5 &&
-      zip_code_or_country == zip_code_or_country.to_i.to_s
-    return {country_s: zip_code_or_country} unless is_us_zip_code
+    unless /^\d{5}$/ =~ zip_code_or_country
+      return {country_s: zip_code_or_country}
+    end
 
     # Attempt to geocode the (presumed) US zip code. If successful, return the
     # data.
