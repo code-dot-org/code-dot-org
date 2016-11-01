@@ -45,6 +45,9 @@ var GameLabVisualizationColumn = function (props) {
           </button>
         </div>}
       </GameButtons>
+      <div>
+        x: 62, y: 65
+      </div>
       <BelowVisualization instructionsInTopPane={props.instructionsInTopPane}/>
     </span>
   );
