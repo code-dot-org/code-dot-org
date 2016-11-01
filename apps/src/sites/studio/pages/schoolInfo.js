@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-window.DistrictDropdownManager = function (existingOptions) {
+window.SchoolInfoManager = function (existingOptions) {
 
   var districtListFirstLoad = true;
 
