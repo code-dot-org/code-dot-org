@@ -56,13 +56,6 @@ describe('GameLabSprite', function () {
       expect(testSprite.animation.previousFrame.calledOnce).to.be.true;
     });
 
-    it('aliases animation.play to play', function () {
-      testSprite.addAnimation('label', createTestAnimation());
-      stub(testSprite.animation, 'play');
-      testSprite.play();
-      expect(testSprite.animation.play.calledOnce).to.be.true;
-    });
-
     it('aliases animation.stop to pause', function () {
       testSprite.addAnimation('label', createTestAnimation());
       stub(testSprite.animation, 'stop');
@@ -319,7 +312,7 @@ describe('GameLabSprite', function () {
     });
   });
 
-  describe('setAnimation', function () {
+  describe('setAnimation(label)', function () {
     const ANIMATION_LABEL = 'animation1',
           SECOND_ANIMATION_LABEL = 'animation2';
     let sprite, projectAnimations;
@@ -427,6 +420,128 @@ describe('GameLabSprite', function () {
           expect(sprite.animation.playing).to.be.true;
         });
       });
+    });
+  });
+
+  describe('play()', function () {
+    // Plays/resumes the sprite's current animation.
+    // If the animation is currently playing, this has no effect.
+    // If the animation is stopped at the last frame, this will restart the
+    // animation from the beginning.
+    // If the animation is stopped at any other frame, this will resume playing
+    // the animation at that frame.
+
+    const LOOPING_ANIMATION = 'looping-animation',
+      NON_LOOPING_ANIMATION = 'non-looping-animation';
+    let sprite;
+
+    beforeEach(function () {
+      sprite = createSprite(0, 0);
+
+      // Manually preload animations onto p5.projectAnimations
+      gameLabP5.p5.projectAnimations = {
+        [LOOPING_ANIMATION]: createTestAnimation(3, true),
+        [NON_LOOPING_ANIMATION]: createTestAnimation(3, false)
+      };
+    });
+    it('has no effect on a playing, looping animation', function () {
+      sprite.setAnimation(LOOPING_ANIMATION);
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.update();  // The test animation frameDelay=1, so this advances a frame.
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(1);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(1);
+
+      sprite.update();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      sprite.update();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
+    });
+
+    it('has no effect on a playing, non-looping animation until it reaches the final frame', function () {
+      sprite.setAnimation(NON_LOOPING_ANIMATION);
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.update();  // The test animation frameDelay=1, so this advances a frame.
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(1);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(1);
+
+      sprite.update();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
+    });
+
+    it('resumes a stopped, looping animation at the current frame', function () {
+      sprite.setAnimation(LOOPING_ANIMATION);
+      for (var i = 0; i < 3; i++) {
+        sprite.animation.changeFrame(i);
+        sprite.pause();
+        expect(sprite.animation.playing).to.be.false;
+        expect(sprite.animation.getFrame()).to.equal(i);
+
+        sprite.play();
+        expect(sprite.animation.playing).to.be.true;
+        expect(sprite.animation.getFrame()).to.equal(i);
+      }
+    });
+
+    it('resumes a stopped, non-looping animation at the current frame if at a nonterminal frame', function () {
+      sprite.setAnimation(NON_LOOPING_ANIMATION);
+      for (var i = 0; i < 2; i++) {
+        sprite.animation.changeFrame(i);
+        sprite.pause();
+        expect(sprite.animation.playing).to.be.false;
+        expect(sprite.animation.getFrame()).to.equal(i);
+
+        sprite.play();
+        expect(sprite.animation.playing).to.be.true;
+        expect(sprite.animation.getFrame()).to.equal(i);
+      }
+    });
+
+    it('resumes a stopped, non-looping animation at the first frame if at the terminal frame', function () {
+      sprite.setAnimation(NON_LOOPING_ANIMATION);
+      sprite.animation.changeFrame(2);
+      sprite.pause();
+      expect(sprite.animation.playing).to.be.false;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(0);
     });
   });
 
@@ -1177,14 +1292,17 @@ describe('GameLabSprite', function () {
     });
   });
 
-  function createTestAnimation(frameCount = 1) {
+  function createTestAnimation(frameCount = 1, looping = true) {
     let image = new p5.Image(100, 100, gameLabP5.p5);
     let frames = [];
     for (var i = 0; i < frameCount; i++) {
       frames.push({name: i, frame: {x: 0, y: 0, width: 50, height: 50}});
     }
     let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-    return new gameLabP5.p5.Animation(sheet);
+    let animation = new gameLabP5.p5.Animation(sheet);
+    animation.looping = looping;
+    animation.frameDelay = 1;
+    return animation;
   }
 
   function expectVectorsAreClose(vA, vB) {
