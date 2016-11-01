@@ -20,7 +20,7 @@ Scenario: Blocks render in contextual hints
 Scenario: Contextual hints in level without Authored Hints
   Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/6?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
 
   Then element "#lightbulb" does not exist
 
