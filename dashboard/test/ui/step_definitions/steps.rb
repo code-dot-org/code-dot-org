@@ -980,10 +980,10 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   end
 
   filename = File.expand_path(filename, '../fixtures')
-  @browser.execute_script('$("input[type=file]").show()')
-  element = @browser.find_element :css, 'input[type=file]'
+  @browser.execute_script('$("input[accept=\'*\']").show()')
+  element = @browser.find_element :css, 'input[accept=\'*\']'
   element.send_keys filename
-  @browser.execute_script('$("input[type=file]").hide()')
+  @browser.execute_script('$("input[accept=\'*\']").hide()')
 
   unless ENV['TEST_LOCAL'] == 'true'
     @browser.file_detector = nil
