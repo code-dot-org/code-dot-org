@@ -73,6 +73,10 @@ When /^I go to the newly opened tab$/ do
   @browser.switch_to.window(@browser.window_handles.last)
 end
 
+When /^I close the instructions overlay if it exists$/ do
+  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+end
+
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps <<-STEPS
@@ -293,6 +297,12 @@ end
 When /^I click selector "([^"]*)"$/ do |jquery_selector|
   # normal a href links can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+end
+
+When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
+  if @browser.execute_script("return $(\"#{jquery_selector}\").length > 0")
+    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  end
 end
 
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
