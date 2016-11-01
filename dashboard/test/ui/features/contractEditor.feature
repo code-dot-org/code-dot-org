@@ -7,6 +7,7 @@ Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
   Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
+  And I wait for the page to fully load
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -28,6 +29,7 @@ Scenario: Creating and modifying a new contract
   When I open my eyes to test "creating a new contract"
   Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
+  And I wait for the page to fully load
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
