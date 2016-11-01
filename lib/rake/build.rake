@@ -54,7 +54,7 @@ namespace :build do
       end
 
       HipChat.log 'Stopping <b>dashboard</b>...'
-      RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
+      RakeUtils.stop_service_with_retry CDO.dashboard_unicorn_name unless rack_env?(:development)
 
       HipChat.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
