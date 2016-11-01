@@ -91,10 +91,10 @@ Scenario:
   Given I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#runButton"
-  And I click selector ".csf-top-instructions button:contains(OK)"
+  And I close the instructions overlay if it exists
   And I press "runButton"
-  And I wait to see ".congrats"
-  And element ".congrats" is visible
+  And I wait until element ".uitest-topInstructions-inline-feedback" is visible
+  And element ".uitest-topInstructions-inline-feedback" is visible
   And I see no difference for "maze feedback with blocks"
 
   Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1/lang/ar-sa"
@@ -110,7 +110,7 @@ Scenario:
   Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#runButton"
-  And I click selector ".csf-top-instructions button:contains(OK)"
+  And I close the instructions overlay if it exists
   And I see no difference for "star wars RTL"
   And I press "show-code-header"
   And I see no difference for "star wars RTL text mode"
@@ -123,6 +123,7 @@ Scenario:
   When I am on "http://studio.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#runButton"
+  And I click selector ".csf-top-instructions button:contains(OK)"
   Then element "#runButton" is visible
   And I see no difference for "level load"
 

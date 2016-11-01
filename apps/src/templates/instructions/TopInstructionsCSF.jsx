@@ -31,7 +31,6 @@ import msg from '@cdo/locale';
 
 import {
   getOuterHeight,
-  scrollBy,
   scrollTo,
   shouldDisplayChatTips
 } from './utils';
@@ -44,9 +43,6 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
-const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
-
-const SCROLL_BY_PERCENT = 0.8;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -103,8 +99,7 @@ const styles = {
     marginRight: 0
   },
   embedView: {
-    height: undefined,
-    bottom: 0
+    display: 'none',
   },
   collapserButton: {
     position: 'absolute',
@@ -158,7 +153,6 @@ var TopInstructions = React.createClass({
     hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
-    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
@@ -382,21 +376,10 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * Handle a click to our "scroll up" button
+   * @return {Element} scrollTarget
    */
-  handleScrollInstructionsUp() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
-  },
-
-  /**
-   * Handle a click to our "scroll down" button
-   */
-  handleScrollInstructionsDown() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
+  getScrollTarget() {
+    return this.refs.instructions.parentElement;
   },
 
   /**
@@ -486,9 +469,7 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && Object.assign({}, styles.embedView, {
-        left: this.props.embedViewLeftOffset
-      }),
+      this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main,
       this.props.overlayVisible && styles.withOverlay
@@ -600,8 +581,7 @@ var TopInstructions = React.createClass({
               <ScrollButtons
                 style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
-                onScrollUp={this.handleScrollInstructionsUp}
-                onScrollDown={this.handleScrollInstructionsDown}
+                getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
               />}
@@ -626,7 +606,6 @@ module.exports = connect(function propsFromStore(state) {
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
-    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
