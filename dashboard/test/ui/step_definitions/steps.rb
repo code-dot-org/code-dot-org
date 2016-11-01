@@ -73,6 +73,10 @@ When /^I go to the newly opened tab$/ do
   @browser.switch_to.window(@browser.window_handles.last)
 end
 
+When /^I close the instructions overlay if it exists$/ do
+  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+end
+
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps <<-STEPS
@@ -293,6 +297,12 @@ end
 When /^I click selector "([^"]*)"$/ do |jquery_selector|
   # normal a href links can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+end
+
+When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
+  if @browser.execute_script("return $(\"#{jquery_selector}\").length > 0")
+    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  end
 end
 
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
@@ -583,6 +593,10 @@ end
 Then /^I see jquery selector (.*)$/ do |selector|
   exists = @browser.execute_script("return $(\"#{selector}\").length != 0;")
   expect(exists).to eq(true)
+end
+
+Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
 end
 
 Then /^I wait until I see selector "(.*)"$/ do |selector|
@@ -982,7 +996,7 @@ end
 
 Then /^I scroll our lockable stage into view$/ do
   wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
-  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
