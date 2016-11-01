@@ -16,14 +16,7 @@ unless dry_run
   update_bootstrap_script.call
 end
 
-old_image_id = (cfn.describe_stack_resources(stack_name: stack_name) rescue nil).try do |response|
-  ami_resource = response.stack_resources.find{|resource| resource.resource_type == 'Custom::AMIManager'}
-  if ami_resource.logical_resource_id[-5..-1] == ami
-    raise "Commit is unchanged from previous AMI creation."
-  else
-    ami_resource.try(:physical_resource_id)
-  end
-end || image_id
+image_id = 'ami-458bd152' if stack_name == 'AMI-staging'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -31,27 +24,23 @@ Description: AWS CloudFormation Template for Code.org application
 Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC' %>
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM' %>
-  AMIComplete<%=ami%>:
+  # Signal when the instance is fully provisioned and ready for AMI creation.
+  AMICreate<%=ami%>:
     Type: AWS::CloudFormation::WaitCondition
-    DependsOn: AMI<%=ami%>
+    DependsOn: WebServerAMI
     CreationPolicy:
       ResourceSignal:
         Timeout: PT60M
         Count: 1
-  WebServerAMI<%=ami%>:
+  WebServerAMI:
     Type: AWS::EC2::Instance
-    CreationPolicy:
-      ResourceSignal:
-        Timeout: PT40M
-        Count: 1
     Properties:
-      ImageId: <%=old_image_id%>
+      ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>
       IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
       SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
       KeyName: <%=ssh_key_name%>
-      InstanceInitiatedShutdownBehavior: terminate
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
@@ -59,21 +48,17 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file.call('ami_bootstrap.sh.erb',
-          create_id: "WebServerAMI#{ami}",
           ami_id: "AMI#{ami}",
-          complete_id: "AMIComplete#{ami}",
+          create_id: "AMICreate#{ami}",
           node_name: 'ami-${INSTANCE_ID}',
           run_list: [
-            local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]',
-            'recipe[cdo-apps::stop]',
+            local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
           ],
           commit: commit
         )%>
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
-    DependsOn: "WebServerAMI#{ami}",
-    StackName: {Ref: 'AWS::StackName' },
-    Region: {Ref: 'AWS::Region' },
-    InstanceId: {Ref: "WebServerAMI#{ami}" } %>
+    DependsOn: "AMICreate#{ami}",
+    InstanceId: {Ref: "WebServerAMI" } %>
 Outputs:
   ImageId:
     Description: Image ID

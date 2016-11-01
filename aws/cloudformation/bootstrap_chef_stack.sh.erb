@@ -3,11 +3,6 @@
 # Note: Minimize changes to this script! Every time its contents change,
 # the next CloudFormation update will reboot all servers using this script.
 
-# Bootstrap prerequisites
-apt-get update
-apt-get -y install python3-pip curl
-test "$(pip3 show awscli)" || pip3 install awscli
-
 STACK=<%=stack_name%>
 REGION=<%=region%>
 
@@ -27,27 +22,8 @@ INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
 
-FIRST_BOOT=/etc/chef/first-boot.json
-mkdir -p $(dirname ${FIRST_BOOT})
-cat <<JSON > ${FIRST_BOOT}
-{
-  "cdo-repository": {
-    "revision": "<%=commit%>",
-    "sync": true
-  },
-  "run_list": ${RUN_LIST}
-}
-JSON
-
-# Bootstrap the first cdo-apps Rakefile build on a new instance.
-# TODO move this run-once notification somewhere more appropriate
-rm -f /etc/init.d/{dashboard,pegasus}
-
-OPTIONS="<%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIRONMENT}"
-sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
-
-[ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
-[ ${STATUS} = 'SUCCESS' ] && LIFECYCLE_RESULT=CONTINUE || LIFECYCLE_RESULT=ABANDON
+STATUS=SUCCESS
+LIFECYCLE_RESULT=CONTINUE
 
 # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
 LIFECYCLE_HOOK=$(ref WebServerHook)

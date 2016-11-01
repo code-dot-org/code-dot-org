@@ -68,6 +68,10 @@ Resources:
                   - "ec2:DescribeSnapshots"
                   - "ec2:DeleteSnapshot"
                 Resource: "*"
+              # allow recursive calls
+              - Effect: Allow
+                Action: ['lambda:InvokeFunction']
+                Resource: '*'
   VpcClassicLink:
     Type: AWS::Lambda::Function
     Properties:
