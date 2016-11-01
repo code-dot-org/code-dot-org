@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PublicKeyCryptographyWidget from './PublicKeyCryptographyWidget';
 import ModuloClockWidget from './ModuloClockWidget';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 // These constants should stay in sync with the levelbuilder options on
 // _public_key_cryptography.html.haml
@@ -11,6 +12,7 @@ const MODULO_CLOCK_VIEW = 1;
 const ALICE_EVE_BOB_VIEW = 2;
 
 function initialize(options) {
+  registerGetResult(); // a default getResult function.
   ReactDOM.render(
       parseInt(options.cryptographyWidgetView, 10) === ALICE_EVE_BOB_VIEW ?
           <PublicKeyCryptographyWidget/> :
