@@ -61,7 +61,6 @@ def main
   # Verify rows with certain column values have been created recently in certain
   # tables.
   KEY_VALUE_CHECKS.each do |table, duration_min, db, column, column_value|
-    puts "k #{column}, v #{column_value}"
     delta_sec = Time.now - db[table].where(column => column_value).order(:id).limit(1).last[:created_at]
     threshold_sec = duration_min * SECONDS_PER_MINUTE
     if delta_sec > threshold_sec
@@ -73,12 +72,12 @@ def main
 
   # Verify emails are being sent. Alert if (a) an email has not been sent for
   # five minutes and (b) no email has been sent for five minutes.
-  last_sent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).invert.order(:id).limit(1).last[:created_at]
-  last_unsent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).order(:id).limit(1).last[:created_at]
+  last_sent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).invert.order(Sequel.desc(:id)).limit(1).first[:created_at]
+  first_unsent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).order(:id).limit(1).first[:created_at]
   threshold_sec = 5 * SECONDS_PER_MINUTE
-  if last_sent_sec > threshold_sec && last_unsent_sec > threshold_sec
+  if last_sent_sec > threshold_sec && first_unsent_sec > threshold_sec
     alert "POSTE_DELIVERIES MESSAGES UNSENT: too long "\
-      "(#{last_sent_sec} seconds [threshold #{threshold_sec}]) since "\
+      "(#{first_unsent_sec} seconds [threshold #{threshold_sec}]) since "\
       "last email delivered"
   end
 end
