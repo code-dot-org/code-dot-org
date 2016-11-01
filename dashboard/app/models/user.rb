@@ -77,7 +77,17 @@ require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  # races: an array of strings, the races that a student has selected, or nil if no selection was made
+  # races: array of strings, the races that a student has selected, or nil if no selection was made
+  # Allowed values for race are:
+  # white: "White"
+  # black: "Black or African American"
+  # hispanic: "Hispanic or Latino"
+  # asian: "Asian"
+  # hawaiian: "Native Hawaiian or other Pacific Islander"
+  # american_indian: "American Indian/Alaska Native"
+  # other: "Other"
+  # opt_out: "Prefer not to say" (but selected this value and hit "Submit")
+  # closed_dialog: This is a special value indicating that the user closed the dialog rather than selecting a race
   serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
 
   # Include default devise modules. Others available are:
@@ -772,8 +782,9 @@ class User < ActiveRecord::Base
       !user_levels.empty?
   end
 
+  # Returns integer days since account creation, rounded down
   def account_age_days
-    DateTime.now - created_at.to_datetime
+    (DateTime.now - created_at.to_datetime).to_i
   end
 
   # Creates UserScript information based on data contained in UserLevels.

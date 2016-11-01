@@ -10,9 +10,7 @@ module RaceInterstitialHelper
     # Restrict to US
     if defined?(request)
       location = Geocoder.search(request.ip).first
-      if location && location.country_code.to_s.downcase != 'us'
-        return false
-      end
+      return false if location && location.country_code.to_s.downcase != 'us'
     end
 
     return true
