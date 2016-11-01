@@ -1938,7 +1938,6 @@ Studio.init = function (config) {
   }
 
   config.appMsg = studioMsg;
-  config.showInstructionsInTopPane = true;
 
   Studio.initSprites();
 
