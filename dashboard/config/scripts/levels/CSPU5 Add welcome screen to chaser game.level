@@ -60,6 +60,7 @@
       "setSize": null,
       "console.log": null
     },
+    "teacher_markdown": "### Teaching Tip\r\n\r\nThe thing students are most likely to miss here is clicking **Make Default** to make the new screen they just made the default screen for the app.\r\n\r\nAlso you may need to **collapse the instructions** in order to see the \"Screen\" element in the design toolbox. \r\n\r\n",
     "contained_level_names": null
   },
   "published": true,
