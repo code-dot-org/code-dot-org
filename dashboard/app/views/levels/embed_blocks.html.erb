@@ -13,7 +13,7 @@
   <%= javascript_include_tag "js/#{js_locale}/common_locale" %>
   <script src="<%= minifiable_asset_path('js/essential.js') %>"></script>
   <script src="<%= minifiable_asset_path('js/code-studio-common.js') %>"></script>
-  <%= render partial: 'levels/apps_dependencies', locals: { app: app, use_blockly: true } %>
+  <%= render partial: 'levels/apps_dependencies', locals: { app: app, use_blockly: true, app_options: options } %>
 </head>
 <body class="readonly embed-block">
   <div id="codeWorkspace"></div>
