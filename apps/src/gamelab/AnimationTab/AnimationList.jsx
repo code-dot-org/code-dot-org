@@ -1,7 +1,7 @@
 /** @file Vertical scrolling list of animation sequences */
 import React from 'react';
 import { connect } from 'react-redux';
-import color from '../../color';
+import color from "../../util/color";
 import * as PropTypes from '../PropTypes';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 import AnimationListItem from './AnimationListItem';

@@ -3,8 +3,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import marked from 'marked';
-import renderer from '../../StylelessRenderer';
-import color from '../../color';
+import renderer from "../../util/StylelessRenderer";
+import color from "../../util/color";
 import i18n from '@cdo/locale';
 
 const styles = {

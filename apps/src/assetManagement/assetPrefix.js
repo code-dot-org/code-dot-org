@@ -6,7 +6,9 @@ var MEDIA_PROXY = '//' + location.host + '/media?u=';
 // starts with http or https
 var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
-var ICON_PREFIX = require('../applab/constants').ICON_PREFIX;
+export const ICON_PREFIX = 'icon://';
+export const ICON_PREFIX_REGEX = new RegExp('^icon://');
+
 
 var assetPathPrefix = "/v3/assets/";
 var channelId;

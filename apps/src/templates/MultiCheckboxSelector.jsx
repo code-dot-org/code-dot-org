@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
-import color from '../color';
+import color from "../util/color";
 
 const MARGIN = 10;
 export const styles = {

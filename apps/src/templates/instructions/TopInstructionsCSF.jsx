@@ -5,11 +5,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
-import renderer from '../../StylelessRenderer';
+import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
-var color = require('../../color');
+var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 

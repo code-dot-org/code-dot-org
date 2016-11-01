@@ -1,5 +1,5 @@
 var React = require('react');
-var color = require('../color');
+var color = require("../util/color");
 
 var Lightbulb = React.createClass({
 

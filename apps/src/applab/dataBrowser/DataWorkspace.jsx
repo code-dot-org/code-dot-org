@@ -8,7 +8,7 @@ import PaneHeader, { PaneSection } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
 import { clearWarning } from '../redux/data';
 import msg from '@cdo/locale';
-import color from '../../color';
+import color from "../../util/color";
 
 const styles = {
   container: {
