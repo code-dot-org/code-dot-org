@@ -215,6 +215,9 @@ stage 'Digital Assistant Project'
 level 'CSPU5_U3L21 Student Lesson Introduction v2'
 level 'CSPU5_U3L24 Chatbot Basic Conditionals'
 
+stage 'Unit 5 Assessment 2', lockable: true
+assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
+
 stage 'While Loops'
 level 'CSPU5_U3L28 Student Lesson Introduction'
 level 'CSPU5_U3 - Loops - 1'
