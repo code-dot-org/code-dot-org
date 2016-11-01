@@ -66,6 +66,11 @@ exports.handler = function (event, context) {
   if (event.waiter) {
     wait(event.waiter);
   } else if (event.RequestType == "Delete") {
+    if (physicalId.indexOf('ami-') !== 0) {
+      responseData.Info = "No image to delete";
+      success();
+      return;
+    }
     var params = {
       ImageIds: [ physicalId ]
     };
@@ -112,55 +117,54 @@ exports.handler = function (event, context) {
     });
   } else if (event.RequestType == "Create") {
     if (instanceId) {
-      ec2.createImage(
-        {
-          InstanceId: instanceId,
-          Name: stackName + '-' + instanceId + '-' + event.RequestId
-        }, function (err, data) {
-          if (err) {
-            error(err, "CreateImage call failed");
-          } else {
-            var imageId = data.ImageId;
-            physicalId = imageId;
-            console.log('SUCCESS: ', "ImageId - " + imageId);
+      var imageParams = {
+        InstanceId: instanceId,
+        Name: stackName + '-' + instanceId + '-' + event.RequestId
+      };
+      ec2.createImage(imageParams, function (err, data) {
+        if (err) {
+          error(err, "CreateImage call failed");
+        } else {
+          var imageId = data.ImageId;
+          physicalId = imageId;
+          console.log('SUCCESS: ', "ImageId - " + imageId);
 
-            var params = {
-              Resources: [imageId],
-              Tags: [
-                {
-                  Key: 'cloudformation:amimanager:stack-name',
-                  Value: stackName
-                },
-                {
-                  Key: 'cloudformation:amimanager:stack-id',
-                  Value: event.StackId
-                },
-                {
-                  Key: 'cloudformation:amimanager:logical-id',
-                  Value: event.LogicalResourceId
-                }
-              ]
-            };
-            ec2.createTags(params, function (err, data) {
-              if (err) {
-                error(err, "Create tags call failed");
-              } else {
-                responseData.ImageId = imageId;
-                if (waitImageAvailable) {
-                  wait({
-                    state: 'imageAvailable',
-                    params: {
-                      ImageIds: [ physicalId ]
-                    }
-                  });
-                } else {
-                  success();
-                }
+          var params = {
+            Resources: [imageId],
+            Tags: [
+              {
+                Key: 'cloudformation:amimanager:stack-name',
+                Value: stackName
+              },
+              {
+                Key: 'cloudformation:amimanager:stack-id',
+                Value: event.StackId
+              },
+              {
+                Key: 'cloudformation:amimanager:logical-id',
+                Value: event.LogicalResourceId
               }
-            });
-          }
+            ]
+          };
+          ec2.createTags(params, function (err, data) {
+            if (err) {
+              error(err, "Create tags call failed");
+            } else {
+              responseData.ImageId = imageId;
+              if (waitImageAvailable) {
+                wait({
+                  state: 'imageAvailable',
+                  params: {
+                    ImageIds: [ physicalId ]
+                  }
+                });
+              } else {
+                success();
+              }
+            }
+          });
         }
-      );
+      });
     } else {
       error(null, "InstanceId not specified");
     }

@@ -59,6 +59,3 @@ aws cloudformation signal-resource \
   --status ${STATUS} \
   --region ${REGION} \
   || true
-
-# Return the instance to `stopped` state.
-shutdown -h now
