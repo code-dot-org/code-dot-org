@@ -21,8 +21,8 @@ module Api::V1::Pd
           render json: survey_report
         end
         format.csv do
-          csv_report = convert_to_csv(survey_report)
-          send_as_csv_attachment csv_report, 'workshop_organizer_survey_report.csv'
+          csv_report = convert_to_csv survey_report
+          send_as_csv_attachment(csv_report, 'workshop_organizer_survey_report.csv', titleize: false)
         end
       end
     end
