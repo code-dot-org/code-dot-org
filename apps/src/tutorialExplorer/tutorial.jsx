@@ -17,7 +17,8 @@ const styles = {
   tutorialSub: {
     fontFamily: '"Gotham 3r", sans-serif',
     fontSize: 12,
-    paddingBottom: 20
+    lineHeight: "16px",
+    height: 40
   }
 };
 
