@@ -1,6 +1,6 @@
 ---
 title: Learn
-layout: wide
+layout: wide_index
 social:
   "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
   "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
@@ -20,31 +20,28 @@ social:
         width: 900px;
   }
 
--# #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
-  #desktop-header.desktop-feature
-    = view :header, variant: "desktop"
-  #mobile-header.mobile-feature
-    = view :header, variant: "mobile"
+#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+  = view :header
 
   .banner
-    .container_responsive{style: "color: white"}
-      .col-50{style: "text-align: center"}
-        %img{src: "/images/learn/hour-of-code-logo-2016.png", style: "margin-top: 30px; margin-bottom: 30px; max-width: 100%; padding-left: 5px; padding-right: 5px;"}
+    .container-fluid{style: "color: white"}
+      .col-xs-12.col-sm-6{style: "text-align: center"}
+        %img{src: CDO.code_org_url("/images/learn/hour-of-code-logo-2016.png"), style: "margin-top: 30px; margin-bottom: 30px; max-width: 100%; padding-left: 5px; padding-right: 5px;"}
         %br/
         The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages.
         %br/
         %br/
-        %a{href: "https://hourofcode.com/#join", target: "_blank"}
+        %a{href: "/#join", target: "_blank"}
           %button
             Host an Hour
         &nbsp;
         &nbsp;
-        %a{href: "https://hourofcode.com/how-to", target: "_blank"}
+        %a{href: "/how-to", target: "_blank"}
           %button
             Teacher Guide
         %br/
         %br/
-      #studentimage.col-50.tablet-feature{style: "height: 278px"}
+      #studentimage.col-xs-12.col-sm-6.hidden-xs{style: "height: 278px"}
 
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
@@ -70,7 +67,7 @@ social:
 
     // Pick a random student image (1-2 inclusive) and fade it in.
     var studentImageIndex = Math.floor(Math.random() * 2) + 1;
-    var studentImage = '/images/learn/student' + studentImageIndex + '.png';
+    var studentImage = "#{CDO.code_org_url('/images/learn/student')}" + studentImageIndex + '.png';
 
     var img = $('<img>');
     img.attr('src', studentImage);
