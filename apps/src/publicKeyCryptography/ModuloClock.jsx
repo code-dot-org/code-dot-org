@@ -1,7 +1,7 @@
 /** @file Centered animated Modulo Clock component for the Crypto widget levels */
 import _ from 'lodash';
 import React from 'react';
-import color from '../color';
+import color from "../util/color";
 
 // Defines the coordinate scale for SVG elements
 const VIEWBOX_SIDE = 100;

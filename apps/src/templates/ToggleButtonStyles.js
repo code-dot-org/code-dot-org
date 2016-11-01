@@ -1,6 +1,6 @@
 /** @file Reusable styles for interface mode toggle buttons. */
 
-var color = require('../color');
+var color = require("../util/color");
 
 module.exports = {
   buttonStyle: {

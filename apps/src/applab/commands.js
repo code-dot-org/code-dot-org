@@ -13,7 +13,7 @@ import errorHandler from '../errorHandler';
 var ErrorLevel = errorHandler.ErrorLevel;
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import color from '../color';
+import color from "../util/color";
 import logToCloud from '../logToCloud';
 
 var OPTIONAL = true;

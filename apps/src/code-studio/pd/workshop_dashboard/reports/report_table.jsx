@@ -5,7 +5,7 @@ import React from 'react';
 import {orderBy} from 'lodash';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
-import color from '@cdo/apps/color';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   container: {

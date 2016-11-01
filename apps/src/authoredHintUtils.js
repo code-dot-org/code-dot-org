@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import processMarkdown from 'marked';
-import renderer from './StylelessRenderer';
+import renderer from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('@cdo/locale');
