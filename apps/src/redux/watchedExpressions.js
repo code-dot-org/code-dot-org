@@ -70,14 +70,3 @@ export const update = (expression, value) => ({
   expression,
   value
 });
-
-///**
-// * SELECTOR FUNCTIONS
-// * (e.g. function getThing(state, n) { return state.deep.place[n]; })
-// */
-//
-//export const getExpressions = () => ({
-//  type: UPDATE_VALUE,
-//  expression,
-//  value
-//});
