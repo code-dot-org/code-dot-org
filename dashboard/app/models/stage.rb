@@ -150,7 +150,8 @@ class Stage < ActiveRecord::Base
         }
 
         %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
-          level_json[key] = level.properties[key] if level.properties[key]
+          value = level.properties[key] || level.try(key)
+          level_json[key] = value if value
         end
         if level.video_key
           level_json[:video_youtube] = level.specified_autoplay_video.youtube_url

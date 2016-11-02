@@ -3,12 +3,16 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import {
+  Button,
   Row,
   Col,
 } from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshopConstants';
 import { workshopShape } from '../types.js';
+
+const organizerViewApiRoot = '/api/v1/pd/workshop_organizer_survey_report_for_course/';
+const facilitatorViewApiRoot = '/api/v1/pd/workshops/';
 
 const styles = {
   questionGroupCell: {
@@ -108,7 +112,7 @@ const SurveyResultsHeader = React.createClass({
       if (!this.props.organizerView || workshopId) {
         $.ajax({
           method: 'GET',
-          url: "/api/v1/pd/workshops/" + workshopId + "/workshop_survey_report",
+          url: `${facilitatorViewApiRoot}${workshopId}/workshop_survey_report`,
           dataType: 'json'
         }).done(data => {
           this.setState({
@@ -120,7 +124,7 @@ const SurveyResultsHeader = React.createClass({
       } else {
         $.ajax({
           method: 'GET',
-          url: '/api/v1/pd/workshop_organizer_survey_report_for_course/' + course
+          url: `${organizerViewApiRoot}${course}`
         }).done(data => {
           this.setState({
             selectedWorkshopId: '',
@@ -138,6 +142,14 @@ const SurveyResultsHeader = React.createClass({
 
   handleWorkshopIdChange(event) {
     this.setSurveyPanel(this.state.selectedCourse, event.target.value, event.target.selectedOptions[0].innerHTML);
+  },
+
+  handleOnClickDownloadCsv() {
+    if (this.props.organizerView && !this.state.selectedWorkshopId) {
+      window.open(`${organizerViewApiRoot}${this.state.selectedCourse}.csv`);
+    } else if (this.state.selectedWorkshopId) {
+      window.open(`${facilitatorViewApiRoot}${this.state.selectedWorkshopId}/workshop_survey_report.csv`);
+    }
   },
 
   renderSurveyResults() {
@@ -277,6 +289,14 @@ const SurveyResultsHeader = React.createClass({
     }
   },
 
+  renderDownloadCsvButton() {
+    return (
+      <Button bsStyle="info" onClick={this.handleOnClickDownloadCsv}>
+        Download as CSV
+      </Button>
+    );
+  },
+
   getWorkshopFriendlyName(workshop) {
     return workshop.course + ' - ' + (workshop.sessions[0] ? moment.utc(workshop.sessions[0].start).format(DATE_FORMAT) : 'no sessions');
   },
@@ -329,6 +349,7 @@ const SurveyResultsHeader = React.createClass({
         <br/>
         {this.renderSurveyPanel()}
         {this.renderFreeResponseAnswers()}
+        {this.renderDownloadCsvButton()}
       </div>
     );
   }

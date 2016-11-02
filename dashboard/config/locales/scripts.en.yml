@@ -2215,3 +2215,28 @@ en:
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
           description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+        csd4:
+          stage:
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            User-Centered Design Micro Activity: User-Centered Design Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Redesigning a Space: Redesigning a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            Paper Prototypes: Paper Prototypes
+            Prototype Testing: Prototype Testing
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Testing the App: Testing the App
+            Improving and Iterating: Improving and Iterating
+            App Presentation: App Presentation
+          title: 'CSD Unit 4 - Problem Solving: The Design Process'
+          description_audience: ''
+          description_short: The Design Process
+          description: ''
