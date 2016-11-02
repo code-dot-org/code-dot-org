@@ -17,7 +17,10 @@ social:
   #desktop-header.desktop-feature
     = view :header, variant: "desktop"
   #mobile-header.mobile-feature
-    = view :header, variant: "mobile"
+    - if request.site == 'csedweek.org'
+      = view :mobile_header_responsive
+    - else
+      = view :header, variant: "mobile"
 
   .banner
     .container_responsive{style: "color: white"}
