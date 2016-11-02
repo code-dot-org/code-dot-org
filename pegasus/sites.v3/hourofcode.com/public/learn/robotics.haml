@@ -26,22 +26,15 @@ social:
   .banner
     .container{style: "color: white"}
       .col-xs-12.col-sm-6{style: "text-align: center"}
-        %img{src: CDO.code_org_url("/images/learn/hour-of-code-logo-2016.png"), style: "margin-top: 30px; margin-bottom: 30px; max-width: 100%; padding-left: 5px; padding-right: 5px;"}
-        %br/
-        The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages.
         %br/
         %br/
-        %a{href: "/#join", target: "_blank"}
-          %button
-            Host an Hour
-        &nbsp;
-        &nbsp;
-        %a{href: "/how-to", target: "_blank"}
-          %button
-            Teacher Guide
+        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
+          ROBOTICS
         %br/
         %br/
-      #studentimage.col-xs-12.col-sm-6.hidden-xs{style: "height: 278px"}
+        Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
+      #studentimage.col-xs-12.col-sm-6.hidden-xs
+        %img{src: CDO.code_org_url("/images/learn/robotics.png"), style: "text-align: center"}
 
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
@@ -62,21 +55,9 @@ social:
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
-      roboticsButton: true,
-      legacyLink: "#{CDO.code_org_url('/learn/legacy')}"
+      robotics: true,
+      backButton: true
       }
     );
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
-
-    // Pick a random student image (1-2 inclusive) and fade it in.
-    var studentImageIndex = Math.floor(Math.random() * 2) + 1;
-    var studentImage = "#{CDO.code_org_url('/images/learn/student')}" + studentImageIndex + '.png';
-
-    var img = $('<img>');
-    img.attr('src', studentImage);
-    img.attr('style', 'opacity: 0');
-    img.appendTo('#studentimage');
-    img.on('load', function() {
-      img.fadeTo('normal', 1);
-    });
   });

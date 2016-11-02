@@ -56,7 +56,8 @@ social:
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
-      roboticsButton: true
+      roboticsButton: true,
+      legacyLink: true
       }
     );
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
