@@ -4,6 +4,7 @@ Feature: Contextual Hints
 Scenario: Blocks render in contextual hints
   Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
   And I rotate to landscape
+  And I wait for the page to fully load
   And I wait to see "#lightbulb"
 
   When I press "runButton"

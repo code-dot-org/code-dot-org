@@ -6,6 +6,7 @@ Feature: Callouts
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
     And I rotate to landscape
+    And I wait for the page to fully load
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
     And I send click events to selector "<close_target>"
