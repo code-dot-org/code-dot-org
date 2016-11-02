@@ -51,6 +51,9 @@ social:
 - tutorials_contents.each do |tutorial|
   - tutorial[:image] = CDO.code_org_url(tutorial[:image])
 
+- tutorials_contents.each do |tutorial|
+  - tutorial[:contact] = nil
+
 #tutorials
 
 .clear{style: "clear: both"}

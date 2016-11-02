@@ -9,7 +9,7 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import { getResponsiveContainerWidth } from './responsive';
+import { getResponsiveContainerWidth, getResponsiveWindowWidth } from './responsive';
 import _ from 'lodash';
 
 
@@ -46,7 +46,7 @@ const TutorialExplorer = React.createClass({
       filteredTutorialsForLocale: filteredTutorialsForLocale,
       windowWidth: $(window).width(),
       windowHeight: $(window).height(),
-      mobileLayout: $(window).width() <= TutorialExplorer.mobileWidth,
+      mobileLayout: $(window).width() < getResponsiveWindowWidth('md'),
       showingModalFilters: false
     };
   },
@@ -147,17 +147,10 @@ const TutorialExplorer = React.createClass({
       windowHeight: $(window).height()
     });
 
-    this.setState({mobileLayout: windowWidth <= TutorialExplorer.mobileWidth});
+    this.setState({mobileLayout: windowWidth < getResponsiveWindowWidth('md')});
   },
 
   statics: {
-
-    /**
-     * Pixel width at which we begin to start showing mobile view with modal
-     * filters.
-     */
-    mobileWidth: 800,
-
     /**
      * Filters a given array of tutorials by the given filter props.
      *

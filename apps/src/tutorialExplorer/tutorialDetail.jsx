@@ -25,6 +25,14 @@ const styles = {
     top: 0,
     width: '100%'
   },
+  tutorialDetailImageContainer: {
+    float: "left",
+    paddingBottom: 10
+  },
+  tutorialDetailInfoContainer: {
+    float: "left",
+    paddingLeft: 20
+  },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 22,
@@ -100,7 +108,6 @@ const TutorialDetail = React.createClass({
         >
           <div
             className="modal-dialog modal-lg"
-            style={{}}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-content">
@@ -129,13 +136,13 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div style={{float: "left", paddingBottom: 10}} className="col-xs-12 col-sm-6">
+                <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
                   <img
                     src={this.props.item.image.replace(".png", ".jpg")}
                     style={{width: '100%'}}
                   />
                 </div>
-                <div style={{float: "left", paddingLeft: 20}} className="col-xs-12 col-sm-6">
+                <div style={styles.tutorialDetailInfoContainer} className="col-xs-12 col-sm-6">
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>
