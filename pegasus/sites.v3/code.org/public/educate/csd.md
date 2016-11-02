@@ -180,7 +180,7 @@ We are releasing drafts of CS Discoveries units as they are finished, and would 
 
 ### <a name="relationship"></a>What is the relationship between CS Discoveries and Exploring Computer Science?
 
-This course is deeply inspired by the philosophy of Exploring CS, based on our years of experience teaching ECS, scaling it to hundreds of classrooms nationwide, and evaluation of feedback from the teachers. This course teaches similar core concepts as ECS, and has a shared _**inquiry-based philosophy**_ and _**teacher-learner-observer PD model**_. It also shares the same emphasis on _**equity**_ which has pervaded Code.org's curriculum in other grade levels.
+The CS Discoveries course is deeply inspired by the philosophy of ECS, based on our experience teaching ECS, scaling it to thousands of classrooms nationwide, and evaluation of feedback from the teachers. This course teaches similar core concepts as ECS, and has a shared _**inquiry-based philosophy**_ and _**teacher-learner-observer PD model**_. It also shares the same emphasis on _**equity**_ which has pervaded Code.org's curriculum in other grade levels.
 
 [Learn more](/educate/csd/ecs_and_csd) about Code.org's transition to CS Discoveries from Exploring Computer Science. 
 
