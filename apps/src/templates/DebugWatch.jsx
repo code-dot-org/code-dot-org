@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {add, update, remove} from '../redux/watchedExpressions';
-import TetherComponent from 'react-tether'
+import TetherComponent from 'react-tether';
 
 const WATCH_TIMER_PERIOD = 50;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
@@ -11,52 +11,53 @@ const WATCH_VALUE_NOT_RUNNING = "undefined";
 const AutocompleteSelector = React.createClass({
   getInitialState() {
     return {
-      selectedOption: this.props.options.length - 1,
+      selectedOption: this.props.options.length - 1
     };
   },
 
   render() {
-    // http://stackoverflow.com/a/6633271
-    // Giving div keyboard focus
-    // range of matches
-    //    http://stackoverflow.com/a/2295681
+    // If we ever want to highlight range of matches:
+    // http://stackoverflow.com/a/2295681
 
     let index = 0;
     return (
-            <div id="autocomplete-panel" style={{
-              width: 162,
-              height: 'initial',
-              background: 'white',
-              color: '#808080',
-              border: '1px gray solid',
-              padding: 0,
-              marginTop: -2,
-              marginLeft: -1,
-            }}>
-          {this.props.options.map((option) => {
-              const isSelected = index === this.props.currentIndex;
-              const myIndex = index;
-              index++;
-              const selectedStyle = {
-                backgroundColor: '#cad6fa',
-                color: 'black',
-              };
-              return (
-                <div
-                    key={option}
-                    className="autocomplete-option"
-                    onClick={() => this.props.onOptionClicked(option)}
-                    onMouseOver={() => this.props.onOptionHovered(myIndex)}
-                    style={Object.assign({}, {
+      <div
+        id="autocomplete-panel"
+        style={{
+          width: 162,
+          height: 'initial',
+          background: 'white',
+          color: '#808080',
+          border: '1px gray solid',
+          padding: 0,
+          marginTop: -2,
+          marginLeft: -1
+        }}
+      >
+        {this.props.options.map((option) => {
+          const isSelected = index === this.props.currentIndex;
+          const myIndex = index;
+          index++;
+          const selectedStyle = {
+            backgroundColor: '#cad6fa',
+            color: 'black'
+            };
+          return (
+          <div
+            key={option}
+            className="autocomplete-option"
+            onClick={() => this.props.onOptionClicked(option)}
+            onMouseOver={() => this.props.onOptionHovered(myIndex)}
+            style={Object.assign({}, {
                       cursor: 'pointer',
                       marginLeft: 2
                     }, isSelected ? selectedStyle : {})}
-                >
-                  {option}
-                </div>
-              );
+          >
+            {option}
+          </div>
+            );
           })}
-        </div>
+      </div>
     );
   },
 
@@ -66,7 +67,7 @@ const AutocompleteSelector = React.createClass({
     options: React.PropTypes.arrayOf(React.PropTypes.string),
     onOptionClicked: React.PropTypes.func,
     onOptionHovered: React.PropTypes.func
-  },
+  }
 });
 
 /**
@@ -79,11 +80,11 @@ const DebugWatch = React.createClass({
     watchedExpressions: React.PropTypes.instanceOf(Immutable.List)
   },
 
-  getInitialState : function () {
+  getInitialState: function () {
     return {
-      text : "",
-      history : [],
-      editing : false,
+      text: "",
+      history: [],
+      editing: false,
       autocompleteOpen: false,
       autocompleteIndex: this.autocompleteOptions.length - 1,
       autocompleteOptions: this.autocompleteOptions,
@@ -139,7 +140,7 @@ const DebugWatch = React.createClass({
     if (isError) {
       return (<span
         className="watch-value watch-unavailable"
-              >{i18n.debugWatchNotAvailable()}</span>);
+      >{i18n.debugWatchNotAvailable()}</span>);
     }
 
     switch (descriptor) {
@@ -152,7 +153,8 @@ const DebugWatch = React.createClass({
         return <span className="watch-value">[array]</span>;
       case 'function':
         // [function MyFunctionName]
-        return <span className="watch-value">{`[${obj.toString().match(/(.*)\(/)[1]}]`}</span>;
+        return <span
+          className="watch-value">{`[${obj.toString().match(/(.*)\(/)[1]}]`}</span>;
       default:
         return <span className="watch-value">{obj.toString()}</span>;
     }
@@ -271,19 +273,19 @@ const DebugWatch = React.createClass({
 
   render() {
     return (
-        <div id="debugger-watch-container" style={{
+      <div id="debugger-watch-container" style={{
           width: '100%',
           height: '100%'
         }}>
-          <div id="debug-watch" ref="scrollableContainer" className='debug-watch'>
-            {
-                this.props.watchedExpressions.map(wv => {
-                    const varName = wv.get('expression');
-                    const varValue = wv.get('lastValue');
-                    return (
-                    <div className="debug-watch-item" key={wv.get('uuid')}>
-                      <div
-                        style={{
+        <div id="debug-watch" ref="scrollableContainer" className='debug-watch'>
+          {
+            this.props.watchedExpressions.map(wv => {
+              const varName = wv.get('expression');
+              const varValue = wv.get('lastValue');
+              return (
+              <div className="debug-watch-item" key={wv.get('uuid')}>
+                <div
+                  style={{
                             fontSize: 18,
                             float: 'right',
                             cursor: 'pointer',
@@ -294,11 +296,11 @@ const DebugWatch = React.createClass({
                             paddingRight: 0,
                             paddingLeft: 10
                           }}
-                        onClick={()=>this.props.dispatch(remove(wv.get('expression')))}
-                      >
-                        x
-                      </div>
-                      <div style={{
+                  onClick={()=>this.props.dispatch(remove(wv.get('expression')))}
+                >
+                  x
+                </div>
+                <div style={{
                         float: 'left',
                         marginTop: 7,
                         marginLeft: 2,
@@ -313,65 +315,63 @@ const DebugWatch = React.createClass({
                         <span
                           className="watch-separator"
                         >: </span>
-                        {this.renderValue(varValue)}
-                      </div>
-                    </div>
-                        );
-                    })
-                }
-            <div style={{clear: 'both'}}>
-              <div
-                style={{
-                  fontSize: '18px',
-                  float: 'right',
-                  cursor: 'pointer',
-                  width: 25,
-                  backgroundColor: '#1e93cd',
-                  color: 'white',
-                  padding: 6,
-                  paddingRight: 0,
-                  paddingLeft: 10
-                }}
-                onClick={()=>this.addButtonClick()}
-              >
-                +
+                  {this.renderValue(varValue)}
+                </div>
               </div>
-              <TetherComponent
-                  attachment="top center"
-                  constraints={[{
+                );
+              })
+            }
+          <div style={{clear: 'both'}}>
+            <div
+              style={{
+                fontSize: '18px',
+                float: 'right',
+                cursor: 'pointer',
+                width: 25,
+                backgroundColor: '#1e93cd',
+                color: 'white',
+                padding: 6,
+                paddingRight: 0,
+                paddingLeft: 10
+              }}
+              onClick={()=>this.addButtonClick()}
+            >
+              +
+            </div>
+            <TetherComponent
+              attachment="top center"
+              constraints={[{
                 to: 'scrollParent',
                 attachment: 'together'
               }]}
-              >
-                <input
-                    placeholder="Variable / Property"
-                    ref='debugInput'
-                    onKeyDown={this.onKeyDown}
-                    onChange={this.onChange}
-                    onClick={() => this.setState({autocompleteOpen: true})}
-                    value={this.state.text}
-                    style={{
+            >
+              <input
+                placeholder="Variable / Property"
+                ref="debugInput"
+                onKeyDown={this.onKeyDown}
+                onChange={this.onChange}
+                onClick={() => this.setState({autocompleteOpen: true})}
+                value={this.state.text}
+                style={{
                       width: 159,
                       marginTop: 0,
                       height: 25,
                       fontFamily: 'monospace',
-                      fontSize: '12px',
+                      fontSize: '12px'
                     }}
-                />
-                {this.state.autocompleteOpen &&
-                    <AutocompleteSelector
-                    options={this.state.autocompleteOptions}
-                    currentIndex={this.state.autocompleteIndex}
-                    currentText={this.state.text}
-                    onOptionClicked={this.onAutocompleteOptionClicked}
-                    onOptionHovered={(index) => {
-                      this.setState({autocompleteIndex: index})
-                    }}
-                />}
-              </TetherComponent>
-            </div>
+              />
+              {this.state.autocompleteOpen &&
+              <AutocompleteSelector
+                options={this.state.autocompleteOptions}
+                currentIndex={this.state.autocompleteIndex}
+                currentText={this.state.text}
+                onOptionClicked={this.onAutocompleteOptionClicked}
+                onOptionHovered={(index) => this.setState({autocompleteIndex: index})}
+              />}
+            </TetherComponent>
           </div>
         </div>
+      </div>
     );
   }
 });
@@ -379,7 +379,7 @@ const DebugWatch = React.createClass({
 export default connect(state => {
   return {
     watchedExpressions: state.watchedExpressions,
-    isRunning: state.runState.isRunning,
+    isRunning: state.runState.isRunning
   };
 })(DebugWatch);
 

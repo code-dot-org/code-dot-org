@@ -206,7 +206,9 @@ GameLab.prototype.init = function (config) {
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
     if (config.level.watchersOptions) {
-      JSON.parse(config.level.watchersOptions).forEach((option) => this.studioApp_.reduxStore.dispatch(addWatcher(option)));
+      JSON.parse(config.level.watchersOptions).forEach((option) => {
+        this.studioApp_.reduxStore.dispatch(addWatcher(option));
+      });
     }
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
