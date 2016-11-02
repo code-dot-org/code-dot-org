@@ -227,12 +227,88 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U2 evaluation q0:
+        Creating visualizations in order to communicate about a topic: Creating visualizations in order to communicate about a topic
+        Digitally representing images: Digitally representing images
+        In general, which topic sounds most like something you do not already have experience with?: In general, which topic sounds most like something you do not already have experience with?
+        Interpreting visual data to better understand a topic: Interpreting visual data to better understand a topic
+        The pros and cons of different file types, as well at the types of compression found in common applications: The pros and cons of different file types, as well at the types of compression found in common applications
+        Understanding why different file types are often different sizes and looking at the units of measure common to file types: Understanding why different file types are often different sizes and looking at the units of measure common to file types
+        Using or creating pivot tables to better understand a topic: Using or creating pivot tables to better understand a topic
+      U2 evaluation q1:
+        How comfortable are you using spreadsheet tools to find relationships in data?: How comfortable are you using spreadsheet tools to find relationships in data?
+        Not very comfortable: Not very comfortable
+        Very comfortable!: Very comfortable!
+      U2 evaluation q10:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U2 evaluation q11:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U2 evaluation q12:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U2 evaluation q13:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U2 evaluation q14:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U2 evaluation q15:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U2 evaluation q2:
+        Eh, I have noticed that certain file types are typically bigger than others, but do not have a good sense of why: Eh, I have noticed that certain file types are typically bigger than others, but do not have a good sense of why
+        Have you ever explored or thought about why different files types make files different sizes?: Have you ever explored or thought about why different files types make files different sizes?
+        I... have no idea what you are talking about: I... have no idea what you are talking about
+        Yep--- I have a good sense of the relationship between file type and size: Yep--- I have a good sense of the relationship between file type and size
+      U2 evaluation q3:
+        HELP--- I am really struggling with the idea of abstraction: HELP--- I am really struggling with the idea of abstraction
+        How comfortable are you with the idea of abstraction?: How comfortable are you with the idea of abstraction?
+        I am pretty comfortable with abstraction: I am pretty comfortable with abstraction
+        I am still getting comfortable, but I have some sense of its role in Computer Science: I am still getting comfortable, but I have some sense of its role in Computer Science
+      U2 evaluation q4:
+        How much do you know about different types of compression?: How much do you know about different types of compression?
+        I know a decent amount: I know a decent amount
+        Not much at all: Not much at all
+      U2 evaluation q5:
+        How much have you thought about how images are represented digitally on computers?: How much have you thought about how images are represented digitally on computers?
+        I do not have much of an idea of how it works: I do not have much of an idea of how it works
+        I have thought about this and have a good sense of how it works: I have thought about this and have a good sense of how it works
+      U2 evaluation q6:
+        Do you have experience using Google Trends?: Do you have experience using Google Trends?
+        I have used it before, but not extensively.: I have used it before, but not extensively.
+        Nope--- never used it!: Nope--- never used it!
+        Yep--- I am super comfortable with Google Trends!: Yep--- I am super comfortable with Google Trends!
+      U2 evaluation q7:
+        Do you have experience using or making pivot or summary tables?: Do you have experience using or making pivot or summary tables?
+        I am pretty new to it or have never done it at all.: I am pretty new to it or have never done it at all.
+        I have some experience, but would not call myself a pro.: I have some experience, but would not call myself a pro.
+        Yes--- I use pivot or summary tables frequently!: Yes--- I use pivot or summary tables frequently!
+      U2 evaluation q8:
+        Do you have experience **making** data visualizations?: Do you have experience **making** data visualizations?
+        I am pretty new to it or have never done it at all.: I am pretty new to it or have never done it at all.
+        I have some experience, but would not call myself a pro.: I have some experience, but would not call myself a pro.
+        Yes--- I make visualizations frequently!: Yes--- I make visualizations frequently!
+      U2 evaluation q9:
+        Do you have experience **using or interpreting data visualizations made by other people**?: Do you have experience **using or interpreting data visualizations made by other people**?
+        Eh, I look at them occasionally.: Eh, I look at them occasionally.
+        I more or less ignore or skim over data visualizations.: I more or less ignore or skim over data visualizations.
+        Yes--- I look at data visualizations all the time!: Yes--- I look at data visualizations all the time!
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
       2.3 and 2.4 Lesson Connections: {}
       2.5 and 2.6 Lesson Connections: {}
       2.7 -  10 Lesson Connections: {}
+      A Note On Metadata in the Curriculum Framework: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -251,12 +327,14 @@ en:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
       Assessing Student Learning in Unit 1: {}
+      Assessing Student Learning in Unit 2: {}
       Balancing Teacher and Tools in Unit 1: {}
       Begin planning your project:
         description here: description here
         title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
+      Building a UI with Design Mode: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
@@ -284,6 +362,7 @@ en:
       CSD U3 - complex conditionals - SFLP: {}
       CSD U3 - images - pick your final work: {}
       CSD U3 -conditionals - stop booleans: {}
+      CSD U3 AnimationsMulti STOP project guide: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
@@ -310,6 +389,9 @@ en:
         title: title
       CSD U3 collisions STOP isTouching:
         STOP: STOP
+        description here: description here
+      CSD U3 game intro:
+        Create Your Own Game: Create Your Own Game
         description here: description here
       CSD U3 platform intro:
         Build a Platform Jumper: Build a Platform Jumper
@@ -555,6 +637,93 @@ en:
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
+      CSPU5 Making a Multi Screen Chaser Game:
+        description here: description here
+        title: title
+      CSPU5_ChoosingGoodIds:
+        description here: description here
+        title: title
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: description here
+        title: title
+      CSPU5_FirstTimeDesignMode:
+        description here: description here
+        title: title
+      CSPU5_HowImagesWork:
+        description here: description here
+        title: title
+      CSPU5_HowOnEventWorks_v2:
+        description here: description here
+        title: title
+      CSPU5_L3 - Student Introduction: {}
+      CSPU5_U3 - Arrays and Loops - Explain Functions with Returns: {}
+      CSPU5_U3 - Conditionals - Boolean Expressions and Operators: {}
+      CSPU5_U3 - Conditionals - Introducing Else: {}
+      CSPU5_U3 - Conditionals - Translating Flowcharts - Chained: {}
+      CSPU5_U3 - Conditionals - Translating Flowcharts - If Statement: {}
+      CSPU5_U3 - Simulation - Intro: {}
+      CSPU5_U3 Simulation Updating Hypotheses: {}
+      CSPU5_U3 Simulations Hypotheses Reflections: {}
+      CSPU5_U3- L12 -Design Mode SFLP: {}
+      CSPU5_U3-Variables-Memory Breakdown: {}
+      CSPU5_U3L12 - Student Introduction 1:
+        Events Unplugged: Events Unplugged
+      CSPU5_U3L13 Student Facing Lesson Plan: {}
+      CSPU5_U3L13 Student Lesson Introduction:
+        Buttons on the Screen: Buttons on the Screen
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        description here: description here
+        title: title
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        description here: description here
+        title: title
+      CSPU5_U3L15 - explanation of IF and =v==:
+        description here: description here
+        title: title
+      CSPU5_U3L15 Student Lesson Intro - new:
+        description here: description here
+        title: title
+      CSPU5_U3L16 Student Lesson Introduction:
+        Beyond Buttons: Beyond Buttons
+      CSPU5_U3L19 - variable scope explanation pt2:
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
+      CSPU5_U3L19 Student Lesson Intro:
+        Clicker V.1: Clicker V.1
+      CSPU5_U3L20 - combining And and Or explanation:
+        description here: description here
+        title: title
+      CSPU5_U3L21 Student Lesson Introduction v2: {}
+      CSPU5_U3L23 Student Lesson Introduction:
+        Natural Language Processing: Natural Language Processing
+      CSPU5_U3L24 Student Lesson Introduction:
+        Chained Conditionals: Chained Conditionals
+      CSPU5_U3L26 Student Lesson Introduction:
+        Strings and Substrings: Strings and Substrings
+      CSPU5_U3L29 Student Lesson Introduction:
+        While Loops and Counting: While Loops and Counting
+      CSPU5_U3L30 Student Lesson Introduction:
+        An Introduction to Arrays: An Introduction to Arrays
+      CSPU5_U3L31 Student Lesson Introduction:
+        Arrays - Photo Album: Arrays - Photo Album
+      CSPU5_U3L32 Student Lesson Introduction:
+        Images are Arrays: Images are Arrays
+      CSPU5_U3L33 Student Lesson Introduction:
+        'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
+      CSPU5_U3L34 Student Lesson Introduction:
+        'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: description here
+        title: title
+      CSPU5_introToDebugging:
+        description here: description here
+        title: title
+      CSPU5_makingPredictions_ref:
+        description here: description here
+        title: title
+      CSPU5_onEventBreakdown:
+        description here: description here
+        title: title
       CSP_Final_instructions:
         description here: description here
         title: title
@@ -564,20 +733,37 @@ en:
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       Categorizing Data: {}
+      Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
+      Choosing Good IDs: {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Correlation vs Causation: {}
+      Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
+      Debugging with Console.log:
+        description here: description here
+        title: title
+      Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint Chirpr lillizard:
+        description here: description here
+        title: title
       Digital Footprint Chirpr solmoon: {}
       Digital Footprint FaceSpace John:
         FaceSpace - John T: FaceSpace - John T
+      Digital Footprint FaceSpace Lizzie:
+        description here: description here
+        title: title
       Digital Footprint FaceSpace Soleil: {}
       Digital Footprint instantframe:
         instantframe - johnsnow: instantframe - johnsnow
       Digital Footprint instantframe moonbeam: {}
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: description here
+        title: title
       Discovery Learning in Unit 1: {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
@@ -948,8 +1134,21 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Event Driven Programming Recap:
+        description here: description here
+        title: title
+      Event-Driven Programming Patterns:
+        description here: description here
+        title: title
+      Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
+      External MD column Test:
+        description here: description here
+        title: title
+      External MD column Test bootstrap:
+        description here: description here
+        title: title
       External level test (will):
         first computer program: first computer program
       Favicon Instructions: {}
@@ -969,11 +1168,22 @@ en:
       Group Work and Peer Learning in Unit 1: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Images Work:
+        description here: description here
+        title: title
+      How Search Works: {}
       How Secure Is Your Password?:
         description here: description here
         title: title
       How are Images Encoded?: {}
+      How onEvent Works:
+        description here: description here
+        title: title
+      How setPosition and screen dimensions work:
+        description here: description here
+        title: title
       'How to: Make Charts from your Data': {}
+      Importing Screens: {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -985,9 +1195,13 @@ en:
         description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      Intro to Debugging and Common Problems:
+        description here: description here
+        title: title
       Introduction to Lossless Compression and the Text Compression Widget: {}
       Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
+      Introduction to Unit 2: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1004,10 +1218,16 @@ en:
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
       Lossy vs. Lossless Compression: {}
+      Making Multiple Screens:
+        description here: description here
+        title: title
       Making Pivot Tables Part 1 - The Basics: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
       Making a Bar Chart: {}
       Making a Line Chart: {}
+      Making a Multi Screen Chaser Game v.2:
+        description here: description here
+        title: title
       Making a Scatter Plot: {}
       MarbleMaze:
         Marble Maze: Marble Maze
@@ -1017,6 +1237,9 @@ en:
         Second Marble Maze K Activity: Second Marble Maze K Activity
       Modulo Clock Instructions: {}
       Modulo Clock Recap: {}
+      Multi-Screen Apps:
+        description here: description here
+        title: title
       New Challenge Introduction:
         description here: description here
         title: title
@@ -1278,10 +1501,15 @@ en:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
       Practice Performance Tasks in Unit 1: {}
+      Practice Performance Tasks in Unit 2: {}
       Prepare for your presentation:
         description here: description here
         title: title
       Rating Websites: {}
+      Responding to User Input: {}
+      Rules About Choosing Good IDs:
+        description here: description here
+        title: title
       SFLP - Web - Describing Webpages: {}
       SFLP - Web - Designing Code for Computers: {}
       SFLP - Web - Designing Webpages: {}
@@ -1306,6 +1534,7 @@ en:
       'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
       'Stop: Website Navigation': {}
+      Summary Tables 101: {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -1326,6 +1555,9 @@ en:
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
         The Great Bug Bash: The Great Bug Bash
+      Tips For Working on Your Own:
+        description here: description here
+        title: title
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -1826,6 +2058,7 @@ en:
       Unit 2 Lesson 7 Overview: {}
       Unit 2 Lesson 8 Overview: {}
       Unit 2 Lesson 9 Overview: {}
+      Unit 2 Tool Talk: {}
       Unit 3 Survey 2: {}
       Unit 4 Lesson 1 Introduction:
         description here: description here
@@ -1846,6 +2079,7 @@ en:
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
+      What Makes an Effective Visualization?: {}
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
@@ -1877,6 +2111,12 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      courseB_external_MRF:
+        description here: description here
+        title: title
+      courseB_external_loopMRF:
+        description here: description here
+        title: title
       courseB_story_unspottedBugs1:
         UnspottedBugs: UnspottedBugs
       courseB_story_unspottedBugs10:
@@ -1935,6 +2175,7 @@ en:
       courseB_unplugged_mrfProgramming:
         description here: description here
         title: title
+      courseF_external_variableConstant: {}
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -2332,6 +2573,7 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      test123: {}
       text compression intro: {}
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
@@ -2454,6 +2696,9 @@ en:
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 4 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 5 Cumulative Assessment 1 MC: {}
+        CSP Unit 5 Cumulative Assessment 2 MC: {}
         CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
@@ -2467,6 +2712,7 @@ en:
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
         Unit 1 Self-Assessment: {}
+        Unit 2 Self-Assessment: {}
         brendan test survey: {}
     match:
       2-3 Big Event Match 1:
@@ -2662,6 +2908,13 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      CSDU4 Screens Predict Match:
+        The "About" Button: The "About" Button
+        The "About" Page: The "About" Page
+        The "Contact Us" Button: The "Contact Us" Button
+        The "Contact Us" Screen: The "Contact Us" Screen
+        The "Use It" Button: The "Use It" Button
+        The "Use It" Page: The "Use It" Page
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -2700,6 +2953,36 @@ en:
         uses electricity, is pretty cheap: uses electricity, is pretty cheap
         uses light, is expensive: uses light, is expensive
         uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
+      CSPU5_U3L14 - Matching Events to Description:
+        Triggers once, the instant the mouse hovers over the button: Triggers once, the instant the mouse hovers over the button
+        Triggers when the mouse button is clicked once: Triggers when the mouse button is clicked once
+        Triggers when the mouse button is pressed: Triggers when the mouse button is pressed
+        Triggers when the mouse button is released: Triggers when the mouse button is released
+        Triggers whenever the mouse moves: Triggers whenever the mouse moves
+        click: click
+        mousedown: mousedown
+        mousemove: mousemove
+        mouseover: mouseover
+        mouseup: mouseup
+      CSPU5_U3L18 Matching:
+        "'Blue' == 'blue'": "'Blue' == 'blue'"
+        Is the string 'Blue' equal to the string 'blue'?: Is the string 'Blue' equal to the string 'blue'?
+        Is the value of the variable blue equal to the string 'blue'?: Is the value of the variable blue equal to the string 'blue'?
+        Is the value of the variable dice equal to 5?: Is the value of the variable dice equal to 5?
+        Is the value of the variable dice not equal to 5?: Is the value of the variable dice not equal to 5?
+        Is the value of the variable x greater than 3?: Is the value of the variable x greater than 3?
+        Is the value of the variable x greater than or equal to 3?: Is the value of the variable x greater than or equal to 3?
+        Is the value of the variable x less than 3?: Is the value of the variable x less than 3?
+        Is the value of the variable x less than or equal to 3?: Is the value of the variable x less than or equal to 3?
+        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        blue == 'blue': blue == 'blue'
+        dice != 5: dice != 5
+        dice == 5: dice == 5
+        x &gt; 3: x &gt; 3
+        x &gt;= 3: x &gt;= 3
+        x &lt; 3: x &lt; 3
+        x &lt;= 3: x &lt;= 3
       Coordinate Matching:
         "(250, 400)": "(250, 400)"
         "(320, 240)": "(320, 240)"
@@ -3679,6 +3962,11 @@ en:
         "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
+      CB_Question_1_copy:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
       CB_Question_2:
         ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
         : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
@@ -3798,6 +4086,11 @@ en:
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
+      CSDU4 Screens Predict Multi:
+        About: About
+        Contact Us: Contact Us
+        Use It: Use It
+        Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -3987,9 +4280,9 @@ en:
         Low bandwidth, high latency: Low bandwidth, high latency
         Low bandwidth, low latency: Low bandwidth, low latency
       CSPFinal_Question_20:
+        Days when certain items sell the most.: Days when certain items sell the most.
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
-        Times of day when certain items sell the most.: Times of day when certain items sell the most.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_21:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
@@ -4209,6 +4502,59 @@ en:
         I feel like I could run this unit right now: I feel like I could run this unit right now
         I feel like I need to do A LOT of review of the tasks before I run this unit: I feel like I need to do A LOT of review of the tasks before I run this unit
         I feel like I need to do SOME review of the tasks before I run this unit: I feel like I need to do SOME review of the tasks before I run this unit
+      CSPU5_U3L14 - MC Duplicate Ids:
+        A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
+        'Choose Two: Buttons and IDs': 'Choose Two: Buttons and IDs'
+        JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.: JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.
+        The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.: The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.
+        The first button created with the ID will work, the other will not.: The first button created with the ID will work, the other will not.
+        Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.: Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.
+        'What happens when two buttons are given the same ID? Choose two of the following:': 'What happens when two buttons are given the same ID? Choose two of the following:'
+      CSPU5_U3L14 - MC order of button and onEvent:
+        Does the order in which the code for a button and the code for its event handler appear within the program matter?: Does the order in which the code for a button and the code for its event handler appear within the program matter?
+        'Multiple Choice: Buttons and Event Handlers': 'Multiple Choice: Buttons and Event Handlers'
+        No, JavaScript is flexible; the button and its event handler can appear in any order in the code.: No, JavaScript is flexible; the button and its event handler can appear in any order in the code.
+        Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
+        Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
+        Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
+      CSPU5_U3L14 - MC variable reassignment:
+        Code does not execute due to error: Code does not execute due to error
+        a:10 &nbsp; b:10 &nbsp;  c:20: a:10 &nbsp; b:10 &nbsp;  c:20
+        a:10 &nbsp; b:10 &nbsp; c:10: a:10 &nbsp; b:10 &nbsp; c:10
+        a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
+        a:10 &nbsp; b:17 &nbsp;  c:27: a:10 &nbsp; b:17 &nbsp;  c:27
+        a:3 &nbsp; b:7 &nbsp; c:10: a:3 &nbsp; b:7 &nbsp; c:10
+      CSPU5_predict_mc_turtleDriverBadIDs:
+        The turtle WILL NOT move forward when the "Go Forth" button is clicked: The turtle WILL NOT move forward when the "Go Forth" button is clicked
+        The turtle WILL NOT turn left when the "Turn Left" button is clicked: The turtle WILL NOT turn left when the "Turn Left" button is clicked
+        When you hit Run an error message will show that an event handler doesn't recognize an id: When you hit Run an error message will show that an event handler doesn't recognize an id
+        When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.: When you hit Run nothing will happen; there will be no error messages until you click one of the buttons.
+      CSPU5_predict_mc_whichOfTwoEvents:
+        '': ''
+        Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
+        First onEvent block wins - the turtle will only move forward: First onEvent block wins - the turtle will only move forward
+        Last onEvent block wins - the turtle will only turn left: Last onEvent block wins - the turtle will only turn left
+        The program will crash when the button is clicked with an error stating it doesn't know which event handler to run: The program will crash when the button is clicked with an error stating it doesn't know which event handler to run
+        title: title
+      CSPU5_predict_mc_whichOfTwoEvents_2:
+        Both event handlers will fire - the turtle will move forward and turn left: Both event handlers will fire - the turtle will move forward and turn left
+        First onEvent block wins - the turtle will only move forward: First onEvent block wins - the turtle will only move forward
+        Last onEvent block wins - the turtle will only turn left: Last onEvent block wins - the turtle will only turn left
+        The program will crash when the button is clicked with an error stating it doesn't know which event handler to run: The program will crash when the button is clicked with an error stating it doesn't know which event handler to run
+        question: question
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Question
+        The code WILL run. But will crash as soon as the button is clicked.: The code WILL run. But will crash as soon as the button is clicked.
+        The code WILL run. When the button is clicked the turtle will move forward.: The code WILL run. When the button is clicked the turtle will move forward.
+        The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id": The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id"
+        The code will NOT run. When you click the button nothing will happen.: The code will NOT run. When you click the button nothing will happen.
+        title: title
+      CSPU5_predict_turtleDriver_logicError:
+        ? Button IDs assigned to wrong event handlers. "Go Forth" button makes the turtle turn left, and "Turn Left" makes the turtle move forward.
+        : Button IDs assigned to wrong event handlers. "Go Forth" button makes the turtle turn left, and "Turn Left" makes the turtle move forward.
+        Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward: Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward
+        Buttons won't work because the button IDs are not descriptive enough: Buttons won't work because the button IDs are not descriptive enough
+        Trick Question! There actually are no errors.  The program will work as intended.: Trick Question! There actually are no errors.  The program will work as intended.
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
@@ -5165,7 +5511,7 @@ en:
         32 users: 32 users
         6 users: 6 users
         64 users: 64 users
-        How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
+        How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?: How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?
         IP Addresses and Bits: IP Addresses and Bits
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
@@ -5918,6 +6264,38 @@ en:
         Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
         Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
         Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu4_assess1_DDoS:
+        A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems: A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems
+        An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
+        An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).: An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).
+        An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.: An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.
+      cspu4_assess1_encryption:
+        Asymmetric: Asymmetric
+        Public key: Public key
+        SSL: SSL
+        Symmetric: Symmetric
+      cspu4_assess1_keyEncryption:
+        A Public Key database ensures 3rd party accountability of security: A Public Key database ensures 3rd party accountability of security
+        A key for decrypting is never made public: A key for decrypting is never made public
+        Allows secure communication without establishing a *shared* encryption key ahead of time.: Allows secure communication without establishing a *shared* encryption key ahead of time.
+        Using public key guarantees that only the intended recipient can decrypt the message: Using public key guarantees that only the intended recipient can decrypt the message
+      cspu4_assess1_mod:
+        1 MOD 16: 1 MOD 16
+        52 MOD 32: 52 MOD 32
+        9 MOD 64: 9 MOD 64
+        9 MOD 8: 9 MOD 8
+      cspu4_assess1_moore:
+        Moore's Law describes a relationship of boolean logic statements involving AND and OR: Moore's Law describes a relationship of boolean logic statements involving AND and OR
+        Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
+        Moore's Law is the observation that computing power tends to double every two years: Moore's Law is the observation that computing power tends to double every two years
+        Moore's Law is the principle that one should assume that any traffic on the Internet is insecure: Moore's Law is the principle that one should assume that any traffic on the Internet is insecure
+      cspu4_assess1_phishing:
+        ? You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        : You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability: You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability
+        ? You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”: You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”
       cspu5_assess1_additem:
         cart total = 1;: cart total = 1;
         cartTotal + 1;: cartTotal + 1;
@@ -5991,11 +6369,11 @@ en:
         <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
         <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
       cspu5_assess1_turtle:
-        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png">
-        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png">
-        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png">
-        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png">
-        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png">
+        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
+        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
+        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
       cspu5_assess1_value:
         'value is: 2': 'value is: 2'
         'value is: 2.3333333': 'value is: 2.3333333'
@@ -6084,6 +6462,165 @@ en:
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
         There is no value of time that will result in “Good Morning” being displayed: There is no value of time that will result in “Good Morning” being displayed
+      cspu5_assess3_ageList:
+        INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
+        REMOVE  the value at the index of 2, then INSERT 13 in the index 2: REMOVE  the value at the index of 2, then INSERT 13 in the index 2
+        Remove all items from the list and start over: Remove all items from the list and start over
+        ages[2] = ages[2] + 1: ages[2] = ages[2] + 1
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+        ab: ab
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array3:
+        <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">: <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">
+        <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+        <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+        <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+        <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+        Error. Index 3 does not exist.: Error. Index 3 does not exist.
+      cspu5_assess3_array5:
+        <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">: <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+        <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">: <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+        <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">: <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+        <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+        <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+      cspu5_assess3_bakeSale:
+        'Add after line 3:     numItems = numItems - 1;': 'Add after line 3:     numItems = numItems - 1;'
+        'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
+        'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
+        'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
+        'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
+      cspu5_assess3_counter:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      cspu5_assess3_impossibleOutput:
+        0, 0: 0, 0
+        1, 1: 1, 1
+        2, 4: 2, 4
+        3, 1: 3, 1
+        3, 3: 3, 3
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+        Error. There is no index 2.: Error. There is no index 2.
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        Infinite loop: Infinite loop
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
+      cspu5_assess3_mysterySwap:
+        a: a
+        b: b
+        c: c
+        d: d
+        e: e
+      cspu5_assess3_robot:
+        <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>
+        <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>
+        <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>
+        <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>
+        <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>
+      cspu5_assess3_rollDie:
+        rolls < 100 && sixes < 25: rolls < 100 && sixes < 25
+        rolls < 100 || sixes < 25: rolls < 100 || sixes < 25
+        rolls < sixes || sixes > 25: rolls < sixes || sixes > 25
+        rolls = 100 || sixes <= 25: rolls = 100 || sixes <= 25
+        rolls >= 0 && sixes < 25: rolls >= 0 && sixes < 25
+      cspu5_assess3_swap:
+        <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">: <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+        <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">: <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+        <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+        <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+      cspu5_assess3_whileTrue:
+        While loops are known as “forever loops” and never stop until the program is halted by the user.: While loops are known as “forever loops” and never stop until the program is halted by the user.
+        While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
+        While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
+        While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.
+        While loops terminate after a fixed number of loops that is pre-determined: While loops terminate after a fixed number of loops that is pre-determined
+      cspu5_assess4_arrayContains:
+        <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">: <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+        <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">: <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+        <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">: <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+        <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">: <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+        <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">: <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listContains:
+        <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">: <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+        <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">: <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+        <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">: <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+        <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">: <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+        Error. Index 1 does not exist.: Error. Index 1 does not exist.
+      cspu5_assess4_mysteryMethod:
+        Mystery displays the index of every occurrence of the value n in the list.: Mystery displays the index of every occurrence of the value n in the list.
+        Mystery displays the index of the first occurrence of the value n in the list.: Mystery displays the index of the first occurrence of the value n in the list.
+        Mystery displays the index of the last occurrence of the value n in the list.: Mystery displays the index of the last occurrence of the value n in the list.
+        Mystery displays the number at index n.: Mystery displays the number at index n.
+        Mystery displays true if n is in the list.: Mystery displays true if n is in the list.
+      cspu5_assess4_mysteryResult:
+        It always returns c: It always returns c
+        It returns the average of the three input values: It returns the average of the three input values
+        It returns the largest of the three input values: It returns the largest of the three input values
+        It returns the middle of the three input values: It returns the middle of the three input values
+        mystery returns the smallest of the three input values: mystery returns the smallest of the three input values
+      cspu5_assess4_mysteryReturn:
+        The procedure counts how long it takes to find two numbers in descending order and returns that number: The procedure counts how long it takes to find two numbers in descending order and returns that number
+        The procedure returns false when data is in descending order: The procedure returns false when data is in descending order
+        The procedure returns how long it takes to find two numbers in ascending order: The procedure returns how long it takes to find two numbers in ascending order
+        The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
+        The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
+      cspu5_assess4_playGame:
+        DISPLAY (count): DISPLAY (count)
+        DISPLAY (“game over”): DISPLAY (“game over”)
+        Nothing. Procedure works as is.: Nothing. Procedure works as is.
+        RETURN (count): RETURN (count)
+        RETURN (“game over”): RETURN (“game over”)
+      cspu5_assess4_robot:
+        <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">: <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+        <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">: <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+        <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+        <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+        <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
@@ -6539,15 +7076,6 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-      unique level name here:
-        "<!DOCTYPE html>": "<!DOCTYPE html>"
-        "<head>": "<head>"
-        "<html>": "<html>"
-        "<title>": "<title>"
-        Defines high level information about web page: Defines high level information about web page
-        Shows the name of the page in a new tab: Shows the name of the page in a new tab
-        Starts and ends the HTML document: Starts and ends the HTML document
-        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
@@ -6713,7 +7241,6 @@ en:
         Enter prompt here: Enter prompt here
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
-        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U2L07 Assessment4:
         '43': '43'

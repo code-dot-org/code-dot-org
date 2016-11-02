@@ -31,8 +31,8 @@ level '2-3 Artist 3.4'
 level '2-3 Artist 4'
 level '2-3 Artist 6'
 variants
-level '2-3 Artist 9',active:false
-level '2-3 Artist 9 NEW',active:true
+  level '2-3 Artist 9', active: false
+  level '2-3 Artist 9 NEW', active: true
 endvariants
 level '2-3 Artist 7'
 level '2-3 Artist 8'
@@ -56,7 +56,7 @@ level '2-3 Maze Loops 18'
 level '2-3 Maze Loops 19'
 level '2-3 Maze Loops 20'
 level '2-3 Maze Loops 21'
-assessment '2-3 maze loops assessment 1'
+assessment '2-3 Maze Loops Assessment 1'
 assessment '2-3 maze multi 1'
 assessment '2-3 maze match 1'
 

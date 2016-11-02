@@ -4,49 +4,53 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Më poshtë gjeni model rezolutë mbështetëse për Javën Edukative në Shkencat Kompjuterike dhe qëllimet e saj që të mund të përdoret nga ligjvënësit e qeverisjes qendrore dhe lokale.
 
   
-[VENDIM SENATI, SHTETI,KOMUNE OSE QYTETI APO PROKLAMATË###] - Ndërsa Java Edukative në Shkencat Kompjuterike thekson rolin vendimtar që shkencat kompjuterike luajnë në transformimin e shoqërisë tonë dhe se si shkenca kompjuterike mundëson inovacion dhe krijon mundësi ekonomike;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[VENDIM SENATI APO KUVENDI ###]
+[HOUSE OR SENATE RESOLUTION ###]
 
-[DATË]
+[DATE]
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Ndërsa shkencat kompjuterike po transformojnë industrinë, duke krijuar fusha të reja të tregtisë, inovacioni po drejtohet drejt të gjitha fushave të shkencës, dhe forcimin e produktivitetit në sektorët e përcaktuara ekonomik;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Ndaj shkencat kompjuterike mbështesin sektorin e teknologjisë së informacionit të ekonomisë sonë, që është një kontribues i rëndësishëm për prodhimin ekonomik të Shteteve të Bashkuara;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Ndërsa shkencat kompjuterike janë shkencë themelore për moshën dixhitale;
+Whereas the field of computer science is a foundational science for the digital age;
 
-Ndërsa sektori i teknologjisë së informacionit është pozicionuar në mënyrë unike për të ndihmuar me rimëkëmbjen ekonomike nëpërmjet kërkimit dhe zhvillimit të risive/inovacioneve të reja;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
 Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Ndërsa nxënësve/studentëve iu jepet mundesia të marrin pjesë në aktivitetet me nivel të lartë të shkencave kompjuterike për të i ekspozuar me mundësitë e pasura të ofertave në terren dhe i ofrohen aftësitë e të menduarit kritik që t'i shërbejnë gjatë gjithë jetës së tyre;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Ndërsa të gjithë nxënësit/studentët meritojnë një përgatitje të plotë në arsimin e shkencave kompjuterike, duke përfshirë aksesin në mësues të kualifikuar, teknologji, dhe moshë-të përshtatshme të kurrikulumit të nevojshme për të mësuar shkencat kompjuterike në nivelet fillestare dhe të mesme të arsimit;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Ndërsa arsimi në shkenca kompjuterike ka sfida për t'u adresuar, duke përfshirë numrin e klasëve të shkencave kompjuterike në raport me nevojat për perfundimin e shkollës së mesme, ne sigurimin e zhvillimit profesional për mësuesit e shkencave kompjuterike;
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-Ndërsa marrja pjesë në Orën e Kodimit gjatë Javës Edukative në Shkencat Kompjuterike mund të shërbejë për të demitizuar fushën e shkencave kompjuterike dhe për të inkurajuar më shumë nxënës për të marrë studime të mëtejme në shkencat kompjuterike;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Ndërsa shkencat kompjuterike kanë pengesa të konsiderueshme në barabartësi duke përfshirë angazhimin e më shumë femrave pjesmarrëse dhe minoriteteve të papërfaqësuara në të gjitha nivelet dhe degët;
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-Ndërsa Grace Murray Hopper, një nga femrat e para në shkencat kompjuterike, projektoi gjuhë të reja programimi dhe standarde udhëheqëse për sistemet kompjuterike të cilat hodhën themelet për shumë avancime në shkenca kompjuterike; dhe
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Perderisa java e <%= campaign_date('start-long') %>, në nderim të ditëlindjes së Grace Hopper's dedikohet si, ‘Java e Edukimit në Shkencat Kompjuterike’: ndaj dhe të jetë
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-Vendosur, nga [KUVENDI APO SENATI, SHTETI, KOMUNA, QYTETI OSE BORDI SHKOLLËS] --
+Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) mbështet vendosjen e Javës së Arsimimit në Shkencat Kompjuterike (<%= campaign_date('full') %>);
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(2) inkurajo shkollat, mësuesit, prindërit dhe politikëbërësit për të marrë pjesë në Javën Edukative në Shkencat Kompjuterike duke bërë të mundur që nxënësit e tyre të marrin pjesë në Orën e Kodimit;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) nxit shkollat, mësuesit, studiuesit, universitetet, liderët e biznesit dhe politikë bërësit për të identifikuar mekanizmat për mësuesit për të marrë zhvillim profesional për të siguruar përvoja të qëndrueshme të mësuarit në shkenca kompjuterike në të gjitha nivelet arsimore dhe për të inkurajuar nxënësit që të jenë të ekspozuar ndaj koncepteve shkencore kompjuterike;
+(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) inkurajo politikëbërësit për të hequr pengesat që parandalojnë mësimet e shkencave kompjuterike nga të qenit të numërueshëm si kredite matematike ose shkence drejt kërkesave të diplomimit;
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) inkurajo mundësitë, duke përfshirë programet ekzistuese, për femra dhe të pakicave të pa përfaqësuara në shkenca kompjuterike.
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

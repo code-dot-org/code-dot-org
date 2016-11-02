@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Recursos
@@ -56,21 +58,6 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
-
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
@@ -100,7 +87,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერები არ არის აუცილებელი
 
-საუკეთესო გამოცდილებას კომპიუტერებითა და ინტერნეტით აღჭურვილ კლასში მიიღებთ, თუმცა თქვენ არ გჭირდებათ კომპიუტერი ყოველი ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * ** გატესტეთ ტუტორიალები მოსწავლეების კომპიუტერებზე.** დარმწუნდით, რომ ვიდეო ჩანს და ხმა ისმის.
   * **გაეცანით მილოცვის გვერდს** და გაიგეთ, რას ნახავენ მოსწავლეები, როცა დაასრულებენ ტუტორიალს. 
@@ -113,13 +100,13 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 4) შთააგონეთ მოსწავლეები - აჩვენეთ მათ ვიდეო
 
-აჩვენეთ მოსწავლეებს ჩვენი ერთ-ერთი ვიდეო კოდის ერთი საათის ენერგიულად დასაწყებად. მაგალითად:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**დააინტერესეთ თქვენი მოსწავლეები - აჩვენეთ, რასთან აქვთ საქმე**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

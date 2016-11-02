@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -23,7 +25,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Posten diese auf Sozialnetzwerke
 
-[![Bild](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Bild](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Bild](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -31,7 +33,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Use the Hour of Code logo to spread the word
 
-[![Bild](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
@@ -50,7 +52,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 ## Print these stickers to give to your students
 
 (Stickers are 1" diameter, 63 per sheet)  
-[![Bild](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -133,3 +135,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

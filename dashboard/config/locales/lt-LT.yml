@@ -317,6 +317,7 @@
       unsubmit: Atšaukti
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'

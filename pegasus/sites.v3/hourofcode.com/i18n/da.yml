@@ -4,21 +4,21 @@ da:
   language: Dansk
   front_title: Bliv en del af den største læringsevent nogensinde, den 7.-13. december 2015
   coming_soon: Kommer snart
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7. dec.
   campaign_date_start_long: 7. december
   campaign_date_short: 7.-13. dec.
   campaign_date_full: 7.-13. december
   campaign_date_year: "2016"
-  campaign_date_full_year: December 5-11, 2016
+  campaign_date_full_year: 5.-11. december 2016
   front_header_banner: Bliv en del af den største læringsevent nogensinde, den 7.-13. december 2015
   front_intro_default: 'Hour of Code er en global bevægelse, som når ud til millioner af elever i 180+ lande. Alle, hvor som helst, kan organisere en Hour of Code begivenhed. Én-times introduktioner findes på mere end 40 sprog. Ingen erfaring er nødvendig. <strong>Fra 4 til 104 år.</strong>'
   front_watch_video: Se den nye video
   front_watch_regular_video: Se videoen
   front_volunteers: Tekniske frivillige ønskes
-  front_start_learning: Start learning
+  front_start_learning: Start nu
   header_menu_resources: Ressourcer
   header_menu_faq: FAQ
-  header_menu_prizes: Præmier
   header_menu_how_to: Vejledning
   header_menu_promote: Vær med
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ da:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Præmier til alle arrangører
-  prizes_every_organizer: Alle Hour of Code-arrangører får ekstra lagerplads hos DropBox eller taletid hos Skype som tak
-  prizes_technology: En offentlig skole i alle amerikanske stater (og Washington DC) vinder for $10,000 it-udstyr
-  prizes_tech_chats: '# klasser kan vinde video-chats med en helt specielle gæster'
-  prizes_robots: 100 klasseværelser vil vinde et sæt af programmerbare robotter
-  prizes_brilliant: En skole i hver provins og territory i USA vil modtage $2000 for et fremragende projekt
-  prizes_actua: 15 skoler på tværs af Canada vil modtage 2 hands-on til naturfags workshops af et af Actua´s medlemmer
-  prizes_details: Detaljer
   nav_back_to_resources: Tilbage til materialer
   how_to_nav_educators: For lærere
   how_to_nav_after_school: Til fritiden
@@ -163,23 +155,6 @@ da:
   how_to_nav_companies: Til virksomheder
   how_to_nav_afterschool_educators: Til fritidslærere
   how_to_nav_volunteers: Til frivillige
-  prizes_nav_title: Præmier
-  prizes_nav_home: Alle præmier
-  prizes_nav_hardware: 'Hardwarepræmier - tilmelding'
-  prizes_nav_terms: Vilkår og betingelser
-  prizes_nav_faq: FAQ
-  prizes_nav_dc: Gådefuld rejse til Washington D.C.
-  prizes_nav_technology: 10.000$ til teknologi til din skole
-  prizes_nav_video_chat: Videochat med en tech titan
-  prizes_nav_skype_dropbox: Skype kredit eller Dropbox plads til alle organisatorer
-  prizes_nav_brilliant: $2.000 Brilliant Labs projekt
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Præmier til alle lærere
-  prizes_10k: Én offentlig skole i alle amerikanske stater (og Washington D.C.) vinder for $10,000 it-udstyr
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Alle</i> arrangører vil modtage <b>$10 til Amazon.com, iTunes eller Windows Store</b> som en takkegave!'
-  prizes_more: More exciting prizes
   whats_next_header: Hvad er det næste?
   whats_next_description: "Vi sender dig materiale og nyttige tips til dit arrangement. I 2015 kommer nye øvelser til alle browsere, smartphones – og endda til brug uden computer! <a href='http://code.org/learn'> Prøv nuværende øvelser </a>"
   whats_next_how_to: "<a href='/how-to'>Sådan holder du en Hour of Code</a>"
@@ -196,6 +171,7 @@ da:
   share_on_facebook: Del på Facebook
   share_on_twitter: Del på Twitter
   front_join_us_heading: 'Hour of Code - programmering for alle elever.'
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Programmering er et godt grundlag for alle elever. Hjælp os med at nå ud til 100 millioner.
   front_join_us_description_short: Programmering er grundlæggende for alle elever.
   front_join_us_button: Deltag
@@ -243,12 +219,13 @@ da:
   signup_send_posters_address_label: Adresse på skole/organisation
   signup_whole_school_flag_label: Dette arrangement er for en hel skole
   signup_your_event: Tilmeld dit arrangement
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Hjælp mig med at finde en lokal programmør til at inspirere mine elever
   signup_multiple_event_warning: Hvis du er vært for flere begivenheder, bedes du sende et entydigt navn eller en e-mail for hver enkelt. Vi tæller kun én begivenhed pr. kombination af navn og e-mail.
   signup_name_placeholder: Dit navn
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: For eksempel, Gammelby Skole
-  signup_event_location_placeholder: "Postnr og land ELLER fuldstændig adresse.\\r\n(Vi bruger det til at vise arrangementet på vores kort)"
+  signup_event_location_placeholder: "Postnr og land ELLER fuldstændig adresse.\r\n(Vi bruger det til at vise arrangementet på vores kort)"
   signup_special_event_details_placeholder: Beskriv hvad der gør dette til et særligt arrangement
   signup_send_posters_address_placeholder: Denne adresse deles ikke på vores kort
   signup_event_type_in_school: På en skole
@@ -257,7 +234,7 @@ da:
   signup_submit_error_message: Der er sket en fejl. Tjek at du har udfyldt alle krævede felter korrekt.
   signup_thank_you_header: Tak fordi du har meldt dig som arrangør af Hour of Code.
   signup_thank_you_message: Vi har sendt en bekræftelsesmail med hjælp til hvordan du kommer i gang.
-  map_title: Hour of Code map
+  map_title: Hour of Code kort
   map_header: '# Hour of Code arrangementer verden over'
   see_all_events: Se alle arrangementer
   map_header_company: '# arrangeret i samarbejde med'
@@ -273,28 +250,6 @@ da:
   meta_tag_twitter_title: Hour of Code nærmer sig
   meta_tag_twitter_description: Hour of Code er en global bevægelse som når millioner af elever i 180+ lande og på mere end 30 sprog. Fra 4 til 104 år.
   twitter_default_text: 'Jeg deltager i dette års #HourOfCode, gør du? @codeorg'
-  hardware_prizes_form_name_label: Dit navn
-  hardware_prizes_form_name_placeholder: Dit navn
-  hardware_prizes_form_email_label: Din email
-  hardware_prizes_form_email_placeholder: Din email
-  hardware_prizes_form_school_name_label: Skolens navn
-  hardware_prizes_form_school_name_placeholder: Skolens navn
-  hardware_prizes_form_school_address_label: Skolens adresse
-  hardware_prizes_form_school_address_placeholder: Skolens adresse
-  hardware_prizes_form_school_type_label: Type af skole
-  hardware_prizes_form_school_type_option_elementary: Grundskole (indskoling/mellemtrin)
-  hardware_prizes_form_school_type_option_middle_school: Grundskole (mellemtrin/udskoling)
-  hardware_prizes_form_school_type_option_high_school: Ungdomsuddannelse
-  hardware_prizes_form_qualifying_school_label: Dette er en offentlig grundskole i USA (K-12)
-  hardware_prizes_form_title_I_school_label: Denne skole er kvalificeret til Titel I midler
-  hardware_prizes_form_title_I_school_help_text: Title I skoler er skoler med et højt antal eller andel af børn fra lavindkomstfamilier, der modtager offentlig støtte for at sikre, at alle børn når de fastsatte akademiske standarder i de enkelte stater (Usa).
-  hardware_prizes_form_number_students_label: Antal elever som deltager
-  hardware_prizes_form_number_students_placeholder: Antal elever
-  hardware_prizes_form_technology_plan_label: Hvordan vil du bruge ny teknologi til at hjælpe flere til at lære om computere og programmering på din skole?
-  hardware_prizes_form_technology_plan_placeholder: Plan for brug af ny teknologi
-  hardware_prizes_form_plan_file_label: Upload time/ugeplan for dit Hour of Code arrangement
-  hardware_prizes_form_plan_file_description: 'Indsend en enkel plan for hvordan du planlægger at organisere elev-deltagelsen i dit Hour of Code arrangement. Se et eksempel på en plan: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Indsend
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Hvad er Hour of Code?
   hoc_faq_what_is_hoc_a: "Hour of Code er een times introduktion til at programmere, designed for at afmystificere kode og vise at alle kan lære det grundlæggende. <a href='http://code.org/learn'>Prøv selv øvelserne</a>."
@@ -309,8 +264,8 @@ da:
   hoc_faq_behind_hoc_a: "Hour of Code er organiseret af <a href='http://code.org'>Code.org</a>, en offentlig frivillig organisation dedikeret til at øge deltagelse i datalogi og programmering ved at gøre det tilgængelig i flere skoler, øge andelen af piger og kvinder, og elever fra etniske minoriteter. En  <a href='http://code.org/about/partners'>stor koalition af partnere</a> er gået sammen for at støtte Hour of Code. Den inkluderer bl.a. Microsoft, Apple, Amazon, Boys and Girls Clubs of America og det amerikanske «College Board»."
   hoc_faq_host_q: Jeg ved ikke noget om at programmere. Kan jeg stadig være arrangør?
   hoc_faq_host_a: "Selvfølgelig, Hour of Code aktivteter er selv-instruerende. Alt du behøver at gøre er <a href='%{codeorg_url}/learn'>at prøve vores nuværende øvelser</a>, vælg den øvelse du ønsker, og vælg et tidspunkt &mdash; så tager vi os af resten. Vi har øvelser rettet mod enhver alder og erfaring, fra børnehave og op. Start planlægningen af dit arrangement ved at læse vores <a href='/how-to'>«Sådan gør du»-vejledning</a>."
-  hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
+  hoc_faq_devices_q: Hvilke enheder eller computere skal jeg bruge til mine elever?
+  hoc_faq_devices_a: "Code.org øvelser virker på alle enheder og i alle browsere. Du kan læse mere om tekniske forudsætninger for at bruge Code.org's øvelser <a href='%{codeorg_url}/educate/it'>her</a>. Tekniske forudsætninger for øvelser udenfor Code.org kan du finde <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> i beskrivelsen af de enkelte øvelser. Glem ikke at vi også har <a href='%{unplugged_url}'>unplugged aktiviteter</a> hvis du ikke har adgang til computere eller andre enheder øvelserne kan gennemføres på!"
   hoc_faq_need_computers_q: Skal jeg have computere til alle deltagere?
   hoc_faq_need_computers_a: "Nej. Vi har Hour of Code øvelser som virker på PCer, smartphones, tablet og endda nogen som slet ikke kræver nogen form for computer! Du kan være med uanset hvor du er, med hvad du end har til rådighed. <p><i>Her er nogen muligheter:</i><br><ul><li><b>Arbejd to og to.</b> Forskning viser at elever lærer bedst gennem  <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>par-programmering</a>, hvor de deler en computer og arbejder sammen. Så få eleverne til at arbejde sammen to og to. <li><b>Brug en projektor.</b> Hvis du har en projektor og en computer med net-adgang, så kan hele din gruppe arbejde sammen i Hour of Code. Se videoerne sammen og løs opgaverne eller svar på spørgsmål på skift. <li><b>Gå unplugged.</b> Vi tilbyder øvelser, som slet ikke kræver nogen form for computer.</ul>"
   hoc_faq_international_q: 'Jeg er i <country>. Hvordan deltager jeg internationalt?'
@@ -324,10 +279,10 @@ da:
   hoc_faq_scratch_q: Jeg bruger Scratch til Hour of Code, men hvad nu hvis mine elever har iPads i stedet for bærbare computere?
   hoc_faq_scratch_a: "Scratch kan ikke køre på tablets. Hvis du har yngre elever, kan de bruge ScratchJR iPad appen. Hvis du ser på øvelserne på <a href='http://code.org/learn'> Code.org/learn</a>, kan du finde andre øvelser, som virker på iPads - fra Code.org, Tynker, Lightbot eller CodeSpark."
   hoc_faq_count_hoc_q: Hvordan tælles antallet af Hours of Code?
-  hoc_faq_map_q: "Why don't I see my dot on the map?"
-  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
+  hoc_faq_map_q: Hvorfor kan jeg ikke se min prik på kortet?
+  hoc_faq_map_a: 'Vi er så kede af at du ikke ser dit arrangement på Hour of Code-kortet. På grund af de titusindvis af arrangementer, samler kortet flere i en enkelt markør på kortet. Hvis du klikker på tallet over kortet, kommer du til en liste med alle arrangementer, og der kan du finde dit også. Og på grund af de mange tilmeldinger tager det også typisk op til 48 timer før kortet og arrangementslisten er fuldt opdaterede - så kom tilbage om et par dage!'
   hoc_faq_count_hoc_a: "Optællingen giver ikke et nøjagtigt mål for deltagelse. Fordi vi ikke kræver at eleverne er logget ind eller registreret kan det ske at nogle elever bliver talt to gange mens elever der par-programmerer for eksempel kun bliver talt en gang. Læs flere detaljer om målingen<a href='http://code.org/loc'> her</a>."
-  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_q: Hvor meget kan man lære på en time?
   hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
   hoc_faq_more_questions_q: Flere spørgsmål?
   hoc_faq_more_questions_a: "Prøv at finde svaret i vores <a href='http://support.code.org'>support-forum</a>."
@@ -400,11 +355,6 @@ da:
   title_proclamation: Eksempel på støtteerklæring til Computer Sceince Education Week og Hour of Code
   title_stats: Info og Statistik
   title_partners: Partnere
-  title_prizes_faq: 'Præmier - FAQ'
-  title_prizes_terms: 'Præmier - Vilkår'
-  title_prizes_thanks: Tak
-  title_prizes: Præmier
-  title_hardware_prize_form: 'Tilmeding - hardware præmier'
   title_resources: Ressourcer
   title_signup_thanks: Tak fordi du vil arrangere Hour of Code!
   title_tutorial_guidelines: Guidelines for Øvelser

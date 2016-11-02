@@ -8,83 +8,84 @@ crwdns49064:0crwdne49064:0
 
 # crwdns54829:0crwdne54829:0
 
-## crwdns49066:0crwdne49066:0
+## crwdns57189:0crwdne57189:0 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## crwdns57190:0crwdne57190:0
 
-  * crwdns49067:0crwdne49067:0 <%= campaign_date('short') %>.
-  * crwdns49068:0crwdne49068:0
+crwdns67610:0crwdne67610:0 crwdns67611:0crwdne67611:0
 
-## crwdns49069:0crwdne49069:0 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## crwdns49070:0crwdne49070:0
+**crwdns67612:0crwdne67612:0**
 
-crwdns49071:0crwdne49071:0 crwdns49072:0crwdne49072:0
-
-**crwdns49073:0crwdne49073:0**
-
-  * crwdns49074:0crwdne49074:0
-  * crwdns49075:0crwdne49075:0
+  * crwdns55300:0crwdne55300:0
+  * crwdns55301:0crwdne55301:0
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+## crwdns57194:0crwdne57194:0
+
+crwdns67613:0crwdne67613:0
+
 ## crwdns49076:0crwdne49076:0
 
-crwdns49077:0crwdne49077:0
+crwdns67614:0crwdne67614:0 crwdns67615:0crwdne67615:0
 
-  * crwdns49078:0crwdne49078:0
-  * crwdns49079:0crwdne49079:0
-  * crwdns49080:0crwdne49080:0 crwdns49081:0crwdne49081:0 crwdns49082:0crwdne49082:0
-  * crwdns49083:0crwdne49083:0
+crwdns67616:0crwdne67616:0
+
+  * crwdns57199:0crwdne57199:0
+  * crwdns57200:0crwdne57200:0
+  * crwdns55304:0crwdne55304:0 crwdns57201:0crwdne57201:0 crwdns55306:0crwdne55306:0
+  * crwdns57202:0crwdne57202:0
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## crwdns49084:0crwdne49084:0
+## crwdns57203:0crwdne57203:0
 
-crwdns50150:0crwdne50150:0
+crwdns67617:0crwdne67617:0
 
-**crwdns49086:0crwdne49086:0**
+**crwdns67618:0crwdne67618:0**
 
-  * crwdns49087:0crwdne49087:0
-  * crwdns50151:0crwdne50151:0 <% end %>
-  * [crwdns49089:0crwdne49089:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * crwdns49090:0crwdne49090:0.
+  * crwdns55308:0crwdne55308:0
+  * crwdns55309:0crwdne55309:0 <% end %>
+  * [crwdns55310:0crwdne55310:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * crwdns55311:0crwdne55311:0.
 
-**crwdns49091:0crwdne49091:0**
+**crwdns67619:0crwdne67619:0**
 
-  * crwdns49092:0crwdne49092:0
-  * crwdns49093:0crwdne49093:0
-  * crwdns50988:0crwdne50988:0.
+  * crwdns55312:0crwdne55312:0
+  * crwdns55313:0crwdne55313:0
+  * crwdns55314:0crwdne55314:0.
 
-crwdns49095:0crwdne49095:0.
+crwdns67620:0crwdne67620:0.
 
-crwdns49096:0crwdne49096:0
+crwdns67621:0crwdne67621:0
 
 ## crwdns49097:0crwdne49097:0
 
-**crwdns49098:0crwdne49098:0**
+**crwdns67622:0crwdne67622:0**
 
-  * crwdns49099:0crwdne49099:0
+  * crwdns55315:0crwdne55315:0
 
-**crwdns49100:0crwdne49100:0**
+**crwdns67623:0crwdne67623:0**
 
-  * crwdns49101:0crwdne49101:0
-  * crwdns49102:0crwdne49102:0
-  * crwdns49103:0crwdne49103:0
+  * crwdns55316:0crwdne55316:0
+  * crwdns55317:0crwdne55317:0
+  * crwdns55318:0crwdne55318:0
 
-**crwdns49104:0crwdne49104:0**
+**crwdns67624:0crwdne67624:0**
 
-  * crwdns49105:0crwdne49105:0[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
-  * crwdns49106:0crwdne49106:0
+  * crwdns55319:0crwdne55319:0[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * crwdns55320:0crwdne55320:0
 
-crwdns49107:0[col-33]crwdne49107:0
+crwdns67625:0[col-33]crwdne67625:0
 
 ![](/images/fit-250/highschoolgirls.jpeg)
 
-crwdns49108:0[/col-33]crwdne49108:0
+crwdns67626:0[/col-33]crwdne67626:0
 
-crwdns49109:0[col-33]crwdne49109:0
+crwdns67627:0[col-33]crwdne67627:0
 
 ![](/images/fit-300/group_ar.jpg)
 
-crwdns49110:0[/col-33]crwdne49110:0
+crwdns67628:0[/col-33]crwdne67628:0
 
 <p style="clear:both">
   &nbsp;
@@ -92,28 +93,22 @@ crwdns49110:0[/col-33]crwdne49110:0
 
 ## crwdns49111:0crwdne49111:0
 
-  * crwdns49112:0crwdne49112:0
-  * crwdns50249:0crwdne50249:0
-  * crwdns54830:0crwdne54830:0
-  * crwdns54831:0crwdne54831:0
-
-crwdns49115:0[col-33]crwdne49115:0
-
-![](/images/fit-250/celebrate2.jpeg)
-
-crwdns49116:0[/col-33]crwdne49116:0
-
-crwdns49117:0[col-33]crwdne49117:0
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-crwdns49118:0[/col-33]crwdne49118:0
-
-crwdns49119:0[col-33]crwdne49119:0
+crwdns67629:0[col-33]crwdne67629:0
 
 ![](/images/fit-300/boy-certificate.jpg)
 
-crwdns49120:0[/col-33]crwdne49120:0
+crwdns67630:0[/col-33]crwdne67630:0
+
+  * crwdns55321:0crwdne55321:0
+  * crwdns57218:0crwdne57218:0
+  * crwdns57219:0crwdne57219:0
+  * crwdns55324:0crwdne55324:0
+
+crwdns67631:0[col-33]crwdne67631:0
+
+![](/images/fit-260/highlight-certificates.jpg)
+
+crwdns67632:0[/col-33]crwdne67632:0
 
 <p style="clear:both">
   &nbsp;
@@ -121,18 +116,18 @@ crwdns49120:0[/col-33]crwdne49120:0
 
 ## crwdns49121:0crwdne49121:0
 
-  * crwdns49122:0crwdne49122:0
-  * crwdns49123:0crwdne49123:0 
-  * crwdns54832:0crwdne54832:0.
-  * crwdns54833:0crwdne54833:0
-  * crwdns54834:0crwdne54834:0 <% if @country == 'us' %>
-  * crwdns54835:0crwdne54835:0 <% end %>
+  * crwdns55325:0crwdne55325:0
+  * crwdns55326:0crwdne55326:0 
+  * crwdns55327:0crwdne55327:0.
+  * crwdns55328:0crwdne55328:0
+  * crwdns55329:0crwdne55329:0 <% if @country == 'us' %>
+  * crwdns55330:0crwdne55330:0 <% end %>
 
 ## crwdns49127:0crwdne49127:0
 
-crwdns49128:0crwdne49128:0 crwdns54836:0crwdne54836:0 crwdns54837:0crwdne54837:0
+crwdns67633:0crwdne67633:0
 
-  * crwdns54838:0crwdne54838:0.
-  * crwdns54839:0crwdne54839:0 crwdns54840:0crwdne54840:0
+  * crwdns55331:0crwdne55331:0.
+  * crwdns55332:0crwdne55332:0 crwdns55333:0crwdne55333:0
 
 <%= view :signup_button %>

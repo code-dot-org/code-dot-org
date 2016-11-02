@@ -449,7 +449,6 @@ es-MX:
   dashboard_landing_office_hours: ¡Pregunta en persona! Utiliza nuestras horas mensuales para consultas por video.
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que terminan este curso
   dashboard_landing_educator_blog: Lee noticias y actualizaciones de nuestro material en nuestro Blog del Educador
-  dashboard_landing_smart_hints: Ayúdenos a agregar consejos útiles a los tutoriales de Code.org
   dashboard_landing_video_player: Pruebe nuestro nuevo reproductor de video en su escuela
   dashboard_landing_progress_title: Progreso de la clase principal
   dashboard_landing_progress_biggest: Éste es el progreso de tu sección más grande.
@@ -493,14 +492,14 @@ es-MX:
   dashboard_action_remove_confirm: ¿Eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: Imprimir certificados
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: 'Mayoría de los maestros medir el progreso de sus estudiantes usando la pestaña de "Ver avances". Si usted está interesado en dar a sus estudiantes evaluaciones adicionales, usted puede encontrar preguntas recomendadas y áreas en los planes de lección. Estos son realizados fuera de estudio código.'
   dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso de la secundaria, tenemos preguntas de evaluación disponibles como parte del Code Studio para ayudar a sus estudiantes a prepararse para el examen de AP. Para utilizar estas evaluaciones, primero asigne el curso a su clase y luego escoge el curso desde el desplegable de arriba y aquí verás las respuestas de sus estudiantes.
   dashboard_assessments_summaries: Sumarios
   dashboard_assessments_answers: Todas las respuestas
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Encuestas
+  dashboard_percent: Porcentaje
   dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
@@ -663,19 +662,18 @@ es-MX:
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_message_fall2016_features: |-
-    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+  dashboard_announce_message_fall2016_features: 'Pasamos el verano convirtiendo tus comentarios en nuevas características. AHora, puedes <a href="%{pp_url}" target="_blank">dar seguimiento al progreso de varios alumnos</a> aún si hacen programación por pares en un sólo dispositivo. Puedes usar <a href="%{csp_widgets_url}" target="_blank">las mejores herramientas interactivas</a> de nuestro curso de Principios de CS en <i>cualquier</i> salón de clases. ¡Y tus alumnos pueden <a href="%{unused_code_url}" target="_blank">mantener código sin usar</a> en su espacio de trabajo para fomentar la experimentación! Consulta todas las nuevas características y déjanos saber que piensas de ellas.'
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Aprende más
   dashboard_announce_try_now_button: Probar ahora
   dashboard_announce_petition: Como profesor, usted está liderando un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender computación. Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes de la educación, 28 gobernadores y CEOs de las compañías más grandes de América se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para financiar en la educacion de K-12 informática.
   dashboard_announce_petition_button: Agrega tu nombre
-  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+  dashboard_announce_all: "Manténte al día con las nuevas características y actualizaciones en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver anuncios anteriores.</a>"
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
+  host_an_hour: Hospeda una hora
+  learn_banner_title: Únete a nosotros para la Hora de Código
+  learn_banner_desc: "La Hora de Código es un movimiento mundial que alcanza más de 100 millones de alumnos en mas de 180 países. Cualquier persona, en cualquier lugar puede organizar un evento de la Hora de Código. ¡Ayúdanos a dar a cada alumno la oportunidad de aprender ciencias computacionales! Los organizadores puede seguir nuestra <a href='%{how_to_url}' target='_blank'>guía de como hacerlo</a> para enseñar en una Hora de Código e inspirar a los alumnos con <a href='%{videos_url}' target='_blank'>estos videos</a>."
   learn_more: Aprenda más
   learn_sign_up_description: Regístrate para participar en la Hour of Code durante la Semana de Educación en Ciencias de la Computación
   learn_sign_up_button: Registrarse
@@ -792,6 +790,7 @@ es-MX:
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Prueba completa - 50 preguntas'
   cspexam1-mWU7ilDYM9_name: 'Parte del test 1 - 25 preguntas'
   cspexam2-AKwgAh1ac5_name: 'Parte del test 2 - 25 preguntas'
@@ -1206,7 +1205,7 @@ es-MX:
   processing_beyond_longdescription: Processing es un lenguaje de programación, un entorno de desarrollo y una comunidad online. Desde 2001 Processing ha promovido el aprendizaje de programación dentro de las artes visuales y la literatura visual dentro de la tecnología. Creado inicialmente para servir como medio de prototipado rápido de software y para enseñar conceptos fundamentales de programación en un entorno visual, Processing se transformó en una herramienta de desarrollo para profesionales. Hoy hay miles de estudiantes, artistas, diseñadores, investigadores y entusiastas que utilizan Processing para aprender, prototipar y producir.
   alice_beyond_longdescription: Usando un innovador entorno de programación que permite la creación de animaciones 3D, el proyecto Alice provee herramientas y materiales para aprender y enseñar pensamiento computacional, solución de problemas y programación de computadoras a un amplio espectro de edades y niveles escolares.
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK proveen a los niños un divertido curso intensivo de programación de robots, y permite mejorar habilidades en matemáticas y ciencias.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Oculta esta advertencia
   compatibility_unsupported_browser: "Su navegador no es compatible. Por favor, actualice su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una funcionalidad rota."
   starwars_shortcode: star
   mc_shortcode: mc

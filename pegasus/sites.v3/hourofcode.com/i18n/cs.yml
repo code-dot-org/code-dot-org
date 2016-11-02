@@ -4,21 +4,21 @@ cs:
   language: Čeština
   front_title: 'Připojte se k největší vzdělávací akci v dějinách, %{campaign_date}, 2015'
   coming_soon: Bude to brzy
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7. prosince
   campaign_date_start_long: 7. prosinec
   campaign_date_short: Prosinec 7-13
   campaign_date_full: Prosinec 7-13
   campaign_date_year: "2016"
-  campaign_date_full_year: December 5-11, 2016
+  campaign_date_full_year: Prosinec 5.-11, 2016
   front_header_banner: Připojte se k největší vzdělávací akce v dějinách, Prosinec 7-13, 2015
   front_intro_default: 'Hodina kódu je celosvětová akce, které se účastní desítky milionů žáků z více než 180 zemí světa. Kdokoliv může zorganizovat svoji akci v rámci Hodiny kódu. Jsou k dispozici jednohodinové výukové programy. Nejsou požadované žádné předchozí zkušenosti. <strong>Určeno pro věk od 4 do 104.</strong>'
   front_watch_video: Podívejte se na nové video
   front_watch_regular_video: Podívejte se na video
   front_volunteers: Hledáme technické dobrovolníky
-  front_start_learning: Start learning
+  front_start_learning: Začněte se učit
   header_menu_resources: Zdroje
   header_menu_faq: Nejčastější dotazy
-  header_menu_prizes: Ceny
   header_menu_how_to: Jak na to
   header_menu_promote: Rozšiřte dále
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ cs:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Ocenění pro každého organizátora
-  prizes_every_organizer: Každý organizátor Hodiny Kódu dostane jako poděkování kredit na Dropbox nebo Skype
-  prizes_technology: 'Jedna obecná škola v každém státě USA (& Washingtonu DC) získá vybavení v hodnotě 10 000 dolarů'
-  prizes_tech_chats: třídy vyhrají videochat s velmi zajímavými hostmi
-  prizes_robots: 100 tříd v USA a Kanadě vyhraje sadu programovatelných robotů
-  prizes_brilliant: Každá škola v každém kraji a území obdrží 2000 dolarů za skvělý projekt
-  prizes_actua: 15 kanadských škol získá 2 přístupy na STEM dílny s jedným z Actua členů
-  prizes_details: Podrobnosti
   nav_back_to_resources: Zpět ke zdrojům
   how_to_nav_educators: Pro učitele
   how_to_nav_after_school: Po škole
@@ -163,23 +155,6 @@ cs:
   how_to_nav_companies: Pro firmy
   how_to_nav_afterschool_educators: Pro mimoškolní pedagogy
   how_to_nav_volunteers: Pro dobrovolníky
-  prizes_nav_title: Ceny
-  prizes_nav_home: Všechny ceny
-  prizes_nav_hardware: Registrace pro hardwarové ceny
-  prizes_nav_terms: Podmínky
-  prizes_nav_faq: 'FAQ - často kladené dotazy'
-  prizes_nav_dc: Záhada výlet do Washingtonu D.C.
-  prizes_nav_technology: technologie za $10,000 pro vaši školu
-  prizes_nav_video_chat: Video chat s technickým velikánem
-  prizes_nav_skype_dropbox: Kredit na Skype nebo prostor na Dropboxu pro každého organizátora
-  prizes_nav_brilliant: $2,000 Brilantní Labs projekt
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Ceny pro každého učitele
-  prizes_10k: Jedna veřejná škola v každém státě US (a Washington D.C.) vyhraje technologie v ceně $10,000
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Každý</i> organizátor dostane <b> $10 na Amazon.com, iTunes nebo Windows Store</b> jako děkovný dárek! Dokuď vydrží zásoby.'
-  prizes_more: More exciting prizes
   whats_next_header: Co dál?
   whats_next_description: "Zašleme Vám materiály a užitečné tipy pro Vaší akci. Brzy budou k dispozici nové tutoriály pro rok 2015, které budou pro všechny prohlížeče, smartphony - nebo dokonce i bez počítače. <a href='http://code.org/learn'>Zkuste současné tutoriály</a>"
   whats_next_how_to: "<a href='/how-to'>Jak vést Hodinu kódu</a>"
@@ -196,6 +171,7 @@ cs:
   share_on_facebook: Sdílet na Facebook
   share_on_twitter: Sdílet na Twitter
   front_join_us_heading: Hodina kódu pro každého studenta.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Informatika je základem pro každého studenta. Pomozte nám ji představit stovce milionů.
   front_join_us_description_short: Informatika je základ pro každého studenta.
   front_join_us_button: Připojte se k nám
@@ -243,12 +219,13 @@ cs:
   signup_send_posters_address_label: Adresa školy nebo organizace
   signup_whole_school_flag_label: Tato událost je pro celou školu
   signup_your_event: Zaregistrujte svoji akci
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Pomozte mi najít místního experta, aby inspiroval mé studenty
   signup_multiple_event_warning: Pokud pořádáte více událostí, zvolte prosím jiné jméno nebo email pro každou akci. Počítáme pouze jednu událost na jméno a email.
   signup_name_placeholder: Vaše jméno
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Např. Lincolnova střední škola
-  signup_event_location_placeholder: "PSČ a zemi nebo plnou adresu. \\r (použijeme to k umístění špendlíku na mapě)"
+  signup_event_location_placeholder: "PSČ a zemi nebo plnou adresu. \r (použijeme to k umístění špendlíku na mapě)"
   signup_special_event_details_placeholder: Popiště, co je to za zvláštní událost
   signup_send_posters_address_placeholder: Tato adresa nebude sdílena na naší mapě
   signup_event_type_in_school: Ve škole
@@ -273,28 +250,6 @@ cs:
   meta_tag_twitter_title: Hodina kódu se blíží
   meta_tag_twitter_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104 let.
   twitter_default_text: 'Účastním se letošní akce #HourOfCode, co ty? @codeorg'
-  hardware_prizes_form_name_label: Vaše jméno
-  hardware_prizes_form_name_placeholder: Vaše jméno
-  hardware_prizes_form_email_label: Váš email
-  hardware_prizes_form_email_placeholder: Váš email
-  hardware_prizes_form_school_name_label: Název školy
-  hardware_prizes_form_school_name_placeholder: Název školy
-  hardware_prizes_form_school_address_label: Adresa školy
-  hardware_prizes_form_school_address_placeholder: Adresa školy
-  hardware_prizes_form_school_type_label: Typ školy
-  hardware_prizes_form_school_type_option_elementary: Základní
-  hardware_prizes_form_school_type_option_middle_school: Střední škola
-  hardware_prizes_form_school_type_option_high_school: Vysoká škola
-  hardware_prizes_form_qualifying_school_label: To je K-12 státní škola
-  hardware_prizes_form_title_I_school_label: Tato škola se kvalifikovala pro Title I financování
-  hardware_prizes_form_title_I_school_help_text: Title I školy jsou školy s velkým počtem nebo velkým procentem detí z rodin s nizkým příjmem, které dostávají federální dotace k ujištění, že všechny děti dosáhnout stejného státního akademického standartu.
-  hardware_prizes_form_number_students_label: Počet studentů, která se zúčastní
-  hardware_prizes_form_number_students_placeholder: Počet studentů
-  hardware_prizes_form_technology_plan_label: Jak použijete nové technologie k expanzi informatiky ve vaší škole?
-  hardware_prizes_form_technology_plan_placeholder: Plán pro používání nových technologií
-  hardware_prizes_form_plan_file_label: 'Nahrajte logistický plán akce Hodina kódu '
-  hardware_prizes_form_plan_file_description: 'Předložte jednoduchý plán, jak plánujete uspořádat pro každého studenta vaší škole akci Hodinu kódu. Viz ukázkový plán: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Odeslat
   hoc_faq_title: Nejčastější dotazy
   hoc_faq_what_is_hoc_q: 'Co je Hodina kódu? '
   hoc_faq_what_is_hoc_a: "Hodina kódu je hodinovým úvodem do informatiky, který má za cíl přiblížit programování a ukázat, že každý se může naučit jeho základy. <a href='%{codeorg_url}'> Podívejte se na kurzy</a>."
@@ -400,11 +355,6 @@ cs:
   title_proclamation: Ukázkové řešení podporující Týden informatiky a Hodinu kódu
   title_stats: Popisky a statistiky
   title_partners: Partneři
-  title_prizes_faq: Nejčastější dotazy k cenám
-  title_prizes_terms: Podmínky cen
-  title_prizes_thanks: Děkuji
-  title_prizes: Ceny
-  title_hardware_prize_form: Zaregistrujte se pro hardwarové ceny
   title_resources: Zdroje
   title_signup_thanks: Děkujeme, že jste nabízíte hostování akce Hodina kódu!
   title_tutorial_guidelines: Pokyny k výukovým programům

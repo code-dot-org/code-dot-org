@@ -185,7 +185,12 @@ $failures = []
 
 if $options.local
   SeleniumBrowser.ensure_chromedriver_running
-  $browsers = [{:browser => "local"}]
+  $browsers = [{
+    "browser": "local",
+    "name": "ChromeDriver",
+    "browserName": "chrome",
+    "version": "latest"
+  }]
 end
 
 if $options.config
@@ -516,7 +521,6 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
         success: succeeded.to_s
     })
   end
-  HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
 
   $lock.synchronize do
     if succeeded

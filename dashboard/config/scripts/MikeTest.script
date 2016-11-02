@@ -1,4 +1,4 @@
-professional_learning_course "Other plc course"
+professional_learning_course 'Other plc course'
 
 stage 'Sample Stage'
 level 'MikeTest1'

@@ -282,7 +282,7 @@
         calculate: Calculate Something
         applab: App එකක් හදන්න
     user:
-      classroom: Teacher Home Page
+      classroom: "ගුරු මුල් පිටුව"
       district_dashboard: "දිස්ත්‍රික්ක උපකරණ පුවරුව"
       label: "ආයුබෝවන් %{username}"
       stats: "කේත මැදිරිය"
@@ -333,6 +333,7 @@
       unsubmit: "යොමු නොකරන්න"
       worked_with: "වැඩ කරන්නේ"
       update_lock_settings: "අගුලු සැකසුම් මෙහිදී යාවත්කාලීන කරන්න."
+      clear_response: Clear response
   user:
     email_confirm_needed: "විද්යුත් තැපැල් ලිපිනය තහවුරු කර නොමැත:"
     email_confirm_needed_required: "ඔබේ විද්යුත් තැපැල් ලිපිනය %{email} තහවුරු කර

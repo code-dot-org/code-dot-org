@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # How-to Guide for Volunteers
 
 ## 1. Sign up to volunteer
@@ -78,7 +80,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 6. Promote the Hour of Code in your community
 
-एक स्थानीय समूह — केटा/केटी, स्काउट क्लब, चर्च, विश्वविद्यालय, अनुभविहरूको समूह वा श्रमिकको यूनियनको भर्ना गर्नुहोस्। वा तपाइँको छिमेकीको लागि Hour of Code "ब्लक पार्टी" लाई होस्ट गर्नुहोस्। [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Prepare before you visit a classroom.
 
@@ -95,3 +97,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright. Instead try asking them questions so they can answer themselves what went wrong.
+
+<%= view :signup_button %>

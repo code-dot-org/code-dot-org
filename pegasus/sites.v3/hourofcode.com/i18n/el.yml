@@ -4,6 +4,7 @@ el:
   language: ελληνικά
   front_title: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση, 7-13 Δεκεμβρίου, 2015
   coming_soon: Προσεχώς
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 Δεκεμβρίου
   campaign_date_start_long: 7 Δεκεμβρίου
   campaign_date_short: '7 - 13 Δεκεμβρίου'
@@ -18,7 +19,6 @@ el:
   front_start_learning: Start learning
   header_menu_resources: Πόροι
   header_menu_faq: Συχνές Ερωτήσεις
-  header_menu_prizes: Βραβεία
   header_menu_how_to: Πώς-να
   header_menu_promote: Προώθηση
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ el:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Βραβεία για κάθε διοργανωτή
-  prizes_every_organizer: Κάθε διοργανωτής μιας Ώρας Κώδικα θα λάβει μονάδες για το Dropbox ή το Skype ως ένα ευχαριστώ
-  prizes_technology: 'Ένα δημόσιο σχολείο, σε κάθε πολιτεία των ΗΠΑ (& Washington DC) θα κερδίσει προϊόντα τεχνολογίας αξίας $10.000'
-  prizes_tech_chats: '# τάξεις θα κερδίσουν συνομιλίες μέσω βίντεο με πολύ ξεχωριστούς καλεσμένους'
-  prizes_robots: 100 τάξεις θα κερδίσουν ένα σετ από προγραμματιζόμενα ρομπότ
-  prizes_brilliant: Ένα σχολείο σε κάθε επαρχία και επικράτεια θα λάβει $2000 για ένα Σπουδαίο Πρότζεκτ
-  prizes_actua: 15 σχολεία σε όλο τον Καναδά θα λάβουν δυο εργαστήρια STEM από ένα από τα μέλη της Actua
-  prizes_details: Λεπτομέρειες
   nav_back_to_resources: Πίσω στους πόρους
   how_to_nav_educators: Για εκπαιδευτικούς
   how_to_nav_after_school: Για μετά το σχολείο
@@ -163,23 +155,6 @@ el:
   how_to_nav_companies: Για επιχειρήσεις
   how_to_nav_afterschool_educators: Για εκπαιδευτές και φροντιστές
   how_to_nav_volunteers: Για εθελοντές
-  prizes_nav_title: Βραβεία
-  prizes_nav_home: Όλα τα βραβεία
-  prizes_nav_hardware: Εγγραφή για το μεγάλο βραβείο σε υλικοτεχνική υποδομή (μόνο για σχολεία σε ΗΠΑ)
-  prizes_nav_terms: τους Όρους και τις Προϋποθέσεις
-  prizes_nav_faq: Συχνές Ερωτήσεις
-  prizes_nav_dc: Μυστηριώδες ταξίδι στην Ουάσινγκτον.
-  prizes_nav_technology: Δώρα αξίας $10.000 σε τεχνολογία για το σχολείο σας
-  prizes_nav_video_chat: Συνομιλία μέσω βίντεο με έναν γίγαντα της τεχνολογίας
-  prizes_nav_skype_dropbox: Πίστωση Skype ή χώρο στο Dropbox για κάθε διοργανωτή
-  prizes_nav_brilliant: Πρόγραμμα αξίας $2.000 από την Brilliant Labs
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Βραβεία για κάθε εκπαιδευτικό
-  prizes_10k: 'Ένα δημόσιο σχολείο, σε κάθε πολιτεία των ΗΠΑ (& Washington DC) θα κερδίσει προϊόντα τεχνολογίας αξίας $10.000'
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Κάθε</i> διοργανωτής θα λάβει <b>$10 για την Amazon.com, το iTunes ή το Windows store</b> ως ευχαριστήριο δώρο!'
-  prizes_more: More exciting prizes
   whats_next_header: Τι υπάρχει στη συνέχεια;
   whats_next_description: "Θα σας στείλουμε υλικό και χρήσιμες συμβουλές για την εκδήλωσή σας. Νέοι οδηγοί για το 2015 έρχονται σύντομα για οποιονδήποτε φυλλομετρητή, για smartphone - ακόμη οδηγοί χωρίς υπολογιστή! <a href='http://code.org/learn'>Δοκιμάστε τους υπάρχοντες οδηγούς </a>"
   whats_next_how_to: "<a href='/how-to'> Πώς να οργανώσετε μια ώρα του κώδικα</a>"
@@ -196,6 +171,7 @@ el:
   share_on_facebook: Κοινή χρήση στο Facebook
   share_on_twitter: Κοινή χρήση στο Twitter
   front_join_us_heading: Μια Ώρα του Κώδικα για κάθε μαθητή.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: H επιστήμη υπολογιστών είναι θεμέλιο για κάθε μαθητή. Βοηθήστε μας να το εισαγάγουμε σε 100 εκατομμύρια.
   front_join_us_description_short: Η Επιστήμη των Υπολογιστών είναι μία βάση για κάθε μαθητή.
   front_join_us_button: Ελάτε μαζί μας
@@ -243,12 +219,13 @@ el:
   signup_send_posters_address_label: Διεύθυνση του σχολείου ή του οργανισμού
   signup_whole_school_flag_label: 'Αυτή η εκδήλωση είναι για ολόκληρο  το σχολείο'
   signup_your_event: Προσθέστε την εκδήλωσή σας
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Βοήθησέ με να βρω έναν τοπικό μηχανικό λογισμικού για να εμπνεύσω τους μαθητές μου
   signup_multiple_event_warning: Εάν φιλοξενείτε πολλές εκδηλώσεις, παρακαλούμε να υποβάλλετε ένα μοναδικό όνομα ή ηλεκτρονικό ταχυδρομείο για κάθε μια. Μετράμε μόνο μία εκδήλωση ανά συνδυασμό ονόματος και ηλεκτρονικού ταχυδρομείου.
   signup_name_placeholder: Το όνομα σας
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Για παράδειγμα, Γυμνάσιο του Λίνκολν
-  signup_event_location_placeholder: "Ταχυδρομικό κωδικό και  χώρα ή πλήρη διεύθυνση. \\r (θα τα χρησιμοποιήσουμε για να τοποθετήσουμε μια καρφίτσα στο χάρτη μας)"
+  signup_event_location_placeholder: "Ταχυδρομικό κωδικό και  χώρα ή πλήρη διεύθυνση. \r (θα τα χρησιμοποιήσουμε για να τοποθετήσουμε μια καρφίτσα στο χάρτη μας)"
   signup_special_event_details_placeholder: Περιγράψτε τι είναι αυτό που την κάνει μια ειδική εκδήλωση
   signup_send_posters_address_placeholder: Αυτή η διεύθυνση δεν θα κοινοποιηθεί στον χάρτη μας
   signup_event_type_in_school: Σε ένα σχολείο
@@ -273,28 +250,6 @@ el:
   meta_tag_twitter_title: Η Ώρα του Κώδικα είναι εδώ
   meta_tag_twitter_description: Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.
   twitter_default_text: 'Συμμετέχω στη φετινή #HourOfCode, εσύ; @codeorg'
-  hardware_prizes_form_name_label: Το όνομά σου
-  hardware_prizes_form_name_placeholder: Το όνομά σου
-  hardware_prizes_form_email_label: Το email σας
-  hardware_prizes_form_email_placeholder: Το email σας
-  hardware_prizes_form_school_name_label: Όνομα του σχολείου
-  hardware_prizes_form_school_name_placeholder: Όνομα του σχολείου
-  hardware_prizes_form_school_address_label: Διεύθυνση σχολείου
-  hardware_prizes_form_school_address_placeholder: Διεύθυνση σχολείου
-  hardware_prizes_form_school_type_label: Τύπος σχολείου
-  hardware_prizes_form_school_type_option_elementary: Δημοτικό
-  hardware_prizes_form_school_type_option_middle_school: Γυμνάσιο
-  hardware_prizes_form_school_type_option_high_school: Λύκειο
-  hardware_prizes_form_qualifying_school_label: Αυτό είναι ένα Κ-12 δημόσιο σχολείο των ΗΠΑ
-  hardware_prizes_form_title_I_school_label: Αυτό το σχολείο πληρεί τις προϋποθέσεις για τίτλο | χρηματοδότηση
-  hardware_prizes_form_title_I_school_help_text: Τίτλος I σχολεία, είναι σχολεία με υψηλούς αριθμούς ή υψηλά ποσοστά παιδιών από οικογένειες με χαμηλό εισόδημα που λαμβάνουν επιδόματα για να εξασφαλιστεί η πρόσβαση όλων των παιδιά στα αυστηρά ακαδημαϊκά πρότυπα.
-  hardware_prizes_form_number_students_label: Αριθμός μαθητών που συμμετέχουν
-  hardware_prizes_form_number_students_placeholder: Αριθμός των μαθητών
-  hardware_prizes_form_technology_plan_label: Πώς θα χρησιμοποιήσετε τη νέα τεχνολογία για να επεκτείνετε την διδασκαλία της επιστήμης της Πληροφορικής στο σχολείο σας;
-  hardware_prizes_form_technology_plan_placeholder: Σχεδιάστε τη χρήση νέας τεχνολογίας
-  hardware_prizes_form_plan_file_label: 'Ανεβάσετε το σχέδιο διαχείρισης της  Ώρας του Κώδικα'
-  hardware_prizes_form_plan_file_description: 'Υποβάλετε ένα απλό πρόγραμμα για το πώς σκοπεύετε να οργανώσετε  κάθε μαθητή να κάνει την Ώρα του Κώδικα στο σχολείο σας. Δείτε ένα δείγμα σχέδιου: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Υποβολή
   hoc_faq_title: Συχνές ερωτήσεις
   hoc_faq_what_is_hoc_q: Τί είναι το Hour of Coding;
   hoc_faq_what_is_hoc_a: "Στην ώρα του κώδικα είναι μια ωριαία εισαγωγή στην επιστήμη των υπολογιστών, σχεδιασμένο να απομυθοποιήσει κώδικα και να δείξει ότι μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'> Ρίξτε μια ματιά στα έτοιμα μαθήματα</a>."
@@ -400,11 +355,6 @@ el:
   title_proclamation: Δείγματα από σχόλια υποστηρικτών για την εβδομάδα εκπαίδευσης της επιστήμης της Πληροφορικής και της Ώρας Κώδικα
   title_stats: Blurbs και στατιστικά
   title_partners: Συνεργάτες
-  title_prizes_faq: Βραβεία FAQ
-  title_prizes_terms: Όροι για τα βραβεία
-  title_prizes_thanks: Ευχαριστούμε
-  title_prizes: Βραβεία
-  title_hardware_prize_form: Εγγραφείτε για τα βραβεία του υλικοτεχνικής υποδομής (μόνο για σχολεία στις ΗΠΑ)
   title_resources: Πόροι
   title_signup_thanks: Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
   title_tutorial_guidelines: Οδηγίες για τα μαθήματα

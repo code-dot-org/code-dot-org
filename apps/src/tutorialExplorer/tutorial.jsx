@@ -4,7 +4,7 @@
 import React from 'react';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
-import getTagString from './util';
+import { getTutorialDetailString } from './util';
 
 const styles = {
   tutorialName: {
@@ -17,7 +17,8 @@ const styles = {
   tutorialSub: {
     fontFamily: '"Gotham 3r", sans-serif',
     fontSize: 12,
-    paddingBottom: 20
+    lineHeight: "16px",
+    height: 40
   }
 };
 
@@ -57,15 +58,17 @@ const Tutorial = React.createClass({
               style={{cursor: 'pointer'}}
               onClick={this.tutorialClicked}
             >
-              <img
-                src={this.props.item.image.replace("/images/", "/images/fill-520x390/")}
-                style={{width: '100%'}}
-              />
+              <div style={{position: "relative", width: "100%", height: 0, paddingTop: "75%"}}>
+                <img
+                  src={this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg")}
+                  style={{position: "absolute", top: 0, left: 0, width: "100%"}}
+                />
+              </div>
               <div style={styles.tutorialName}>
                 {this.props.item.name}
               </div>
               <div style={styles.tutorialSub}>
-                {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
+                {getTutorialDetailString(this.props.item)}
               </div>
             </div>
           </div>

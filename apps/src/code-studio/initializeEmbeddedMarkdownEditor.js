@@ -24,18 +24,14 @@ marked.setOptions({
  * @param {jQuery} embeddedElement textarea element within which to embed the markdown
  * @param {string} markdownTextArea id (which will be prefixed by "level_")
  *                                  of textarea where editor will live
- * @param {jQuery} markdownPreviewArea
  * @param {string} name of the property within the textarea
  */
-module.exports = function (embeddedElement, markdownTextArea, markdownPreviewArea, markdownProperty) {
+module.exports = function (embeddedElement, markdownTextArea, markdownProperty) {
   var regex = new RegExp("^" + markdownProperty + " <<(\\w*)\\n([\\s\\S]*?)\\n\\1\\s*$", "m");
   var dslElement = embeddedElement;
   var dslText = dslElement.val();
 
   var mdEditor = initializeCodeMirror(markdownTextArea, 'markdown', function (editor, change) {
-    markdownPreviewArea.html(marked(editor.getValue()));
-    markdownPreviewArea.children('details').details();
-
     var editorText = editor.getValue();
     var dslText = dslElement.val();
     var replacedText;

@@ -185,7 +185,7 @@ uz-UZ:
   learn_next_level: Boshqa Dasturlash studiyasi kursini sinab ko‘ring
   learn_online: Boshqa kurslarni onlayn tarzda sinab ko‘ring
   learn_classes: Mahalliy darslar toping
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: "Men #HourOfCode'ni o‘tdim - siz ham sinab ko‘ring! @codeorg"
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -489,7 +489,6 @@ uz-UZ:
   dashboard_landing_office_hours: Shaxsan savol bering! Oylik video offis soatlarimizga tashrif buyuring.
   dashboard_landing_print_certificates: Print certificates for students who finish this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Sinfning asosiy yutuqlari
   dashboard_landing_progress_biggest: Bu sizning eng katta bo‘limingiz uchun yutuqlaringiz.
@@ -833,6 +832,7 @@ uz-UZ:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

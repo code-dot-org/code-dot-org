@@ -4,6 +4,7 @@ id:
   language: Bahasa Indonesia
   front_title: 'Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal %{campaign_date}, 2015'
   coming_soon: Akan Datang
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: Tanggal 7 Desember
   campaign_date_start_long: Tanggal 7 Desember
   campaign_date_short: Tanggal 7-13 Desember
@@ -18,7 +19,6 @@ id:
   front_start_learning: Start learning
   header_menu_resources: Alat-alat Promosi
   header_menu_faq: FAQ
-  header_menu_prizes: Hadiah
   header_menu_how_to: How-To
   header_menu_promote: Mempromosikan
   company_4-H: Pengembangan kaum muda 4-H
@@ -144,14 +144,6 @@ id:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Hadiah untuk tiap penyelanggara
-  prizes_every_organizer: Setiap Penyelanggara Hour of Code akan mendapatkan Dropbox atau Kredit Skype sebagai tanda terima kasih
-  prizes_technology: 'Satu sekolah umum di setiap negara bagian US (& Washington DC) akan memenangkan teknologi bernilai $10.000'
-  prizes_tech_chats: '# ruang kelas akan memenangkan percakapan video dengan tamu-tamu istimewa'
-  prizes_robots: 100 Kelas akan memenangkan satu set robot yang siap diprogram
-  prizes_brilliant: Satu sekolah di masing-masing propinsi dan teritori akan menerima $2000 untuk proyek yang brilian
-  prizes_actua: '15 sekolah di Kanada akan menerima 2  hands-on STEM workshop diberikan oleh salah satu anggota Actua'
-  prizes_details: Rincian
   nav_back_to_resources: Kembali ke sumber daya
   how_to_nav_educators: Untuk pendidik
   how_to_nav_after_school: Untuk bimbel
@@ -163,23 +155,6 @@ id:
   how_to_nav_companies: Untuk perusahaan
   how_to_nav_afterschool_educators: Untuk pengajar les
   how_to_nav_volunteers: For volunteers
-  prizes_nav_title: Hadiah
-  prizes_nav_home: Semua hadiah
-  prizes_nav_hardware: Daftar hadiah Hardware
-  prizes_nav_terms: Syarat dan Ketentuan
-  prizes_nav_faq: FAQ
-  prizes_nav_dc: Perjalanan ke Washington D.C.
-  prizes_nav_technology: $10.000 teknologi untuk sekolah Anda
-  prizes_nav_video_chat: Video chat dengan seorang ahli teknologi
-  prizes_nav_skype_dropbox: Skype kredit atau ruang Dropbox untuk setiap penyelenggara.
-  prizes_nav_brilliant: Labs project yang cemerlang sebesar $2,000
-  prizes_nav_actua: ' Workshop Actua'
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Hadiah untuk para pendidik
-  prizes_10k: Satu sekolah umum di setiap negara bagian AS (dan Washington DC) akan memenangkan teknologi senilai $10.000
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: "Setiap penyelenggara akan menerima gift card dari untuk Amazon.com atau Microsoft's Windows Store."
-  prizes_more: More exciting prizes
   whats_next_header: Apa berikutnya?
   whats_next_description: "Kami akan mengirimkan materi-materi dan tip yang berguna untuk acaramu. Tutorial 2015 yang baru akan hadir untuk semua browser, smarthphone - bahkan untuk tanpa komputer! <a href = 'http://code.org/learn'>Coba tutorial saat ini</a>"
   whats_next_how_to: "<a href='/how-to'>Bagaimana cara menjalankan Hour of Code</a>"
@@ -196,6 +171,7 @@ id:
   share_on_facebook: Bagikan di Facebook
   share_on_twitter: Bagikan di Twitter
   front_join_us_heading: Hour of Code diperuntukan untuk setiap pelajar.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Ilmu komputer adalah dasar untuk setiap pelajar. Bantu kami memperkenalkannya kepada 100 juta pelajar.
   front_join_us_description_short: Ilmu komputer adalah dasar fondasi untuk setiap siswa.
   front_join_us_button: Bergabunglah
@@ -243,12 +219,13 @@ id:
   signup_send_posters_address_label: Alamat sekolah atau organisasi
   signup_whole_school_flag_label: Acara ini untuk suluruh sekolah
   signup_your_event: Daftarkan acaramu
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Bantu saya menemukan seorang ahli program lokal untuk menginspirasi siswa saya
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Nama anda
   signup_email_placeholder: anda@contoh.com
   signup_organization_name_placeholder: Contohnya, SMA Lincoln
-  signup_event_location_placeholder: "Kode pos dan negara ATAU alamat lengkap.\\r\n(Ini akan digunakan sebagai penanda pada peta kami)"
+  signup_event_location_placeholder: "Kode pos dan negara ATAU alamat lengkap.\r\n(Ini akan digunakan sebagai penanda pada peta kami)"
   signup_special_event_details_placeholder: Deskripsikan apa yang membuat acara ini spesial
   signup_send_posters_address_placeholder: Alamat ini tidak akan dibagikan pada peta kami
   signup_event_type_in_school: Di sekolah
@@ -273,28 +250,6 @@ id:
   meta_tag_twitter_title: Hour of Code akan segera hadir
   meta_tag_twitter_description: Hour of Code adalah gerakan mendunia yang mencapai sepuluh juta pelajar dari lebih 180+ negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.
   twitter_default_text: 'Saya berpartisipasi dalam #HourOfCode tahun ini, Bagaimana dengan Anda? @codeorg'
-  hardware_prizes_form_name_label: Nama anda
-  hardware_prizes_form_name_placeholder: Nama anda
-  hardware_prizes_form_email_label: Email Anda
-  hardware_prizes_form_email_placeholder: Email Anda
-  hardware_prizes_form_school_name_label: Nama sekolah
-  hardware_prizes_form_school_name_placeholder: Nama sekolah
-  hardware_prizes_form_school_address_label: Alamat sekolah
-  hardware_prizes_form_school_address_placeholder: Alamat sekolah
-  hardware_prizes_form_school_type_label: Jenis sekolah
-  hardware_prizes_form_school_type_option_elementary: Sekolah Dasar
-  hardware_prizes_form_school_type_option_middle_school: Sekolah Menengah Pertama
-  hardware_prizes_form_school_type_option_high_school: Sekolah Menengah Atas
-  hardware_prizes_form_qualifying_school_label: Ini adalah sekolah umum K-12 US
-  hardware_prizes_form_title_I_school_label: Sekolah ini memenuhi syarat untuk pendanaan Titel I
-  hardware_prizes_form_title_I_school_help_text: Sekolah Titel I merupakan sekolah dengan tingginya angka atau persentase dari anak-anak yang berasala dari keluarga berpenghasilan rendah yang menerima dana federal untuk membantu memastikan bahwa semua anak memenuhi standar akademis yang ditentukan.
-  hardware_prizes_form_number_students_label: Jumlah peserta pelajar
-  hardware_prizes_form_number_students_placeholder: Jumlah pelajar
-  hardware_prizes_form_technology_plan_label: Bagaimana Anda akan menggunakan teknologi baru untuk membantu memperluas instruksi ilmu komputer di sekolah Anda?
-  hardware_prizes_form_technology_plan_placeholder: Rencana untuk menggunakan teknologi baru
-  hardware_prizes_form_plan_file_label: Unggah rencana logistik Hour of Code anda
-  hardware_prizes_form_plan_file_description: 'Masukkan jadwal sederhana bagaimana perencanaan Hour of Code dari setiap pelajar pada sekolah Anda. Lihat contoh berikut: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Masukkan
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Apa itu Hour of Code?
   hoc_faq_what_is_hoc_a: "Hour of Code adalah satu jam perkenalan mengenai ilmu komputer, didesain untuk melawan mitos tentang kode dan menunjukkan pada siapa pun bisa belajar dasar-dasarnya. <a href='%{codeorg_url}'>Lihat tutorial</a>."
@@ -403,11 +358,6 @@ id:
   title_proclamation: Sampel Resolusi Dukungan Minggu Edukasi Ilmu Komputer dan Hour of Code
   title_stats: Deskripsi singkat dan statistik
   title_partners: Mitra-mitra
-  title_prizes_faq: FAQ hadiah
-  title_prizes_terms: Persyaratan hadiah
-  title_prizes_thanks: Terima kasih
-  title_prizes: Hadiah
-  title_hardware_prize_form: Daftar untuk hadiah Hardware
   title_resources: Alat-alat Promosi
   title_signup_thanks: Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
   title_tutorial_guidelines: Panduan Tutorial

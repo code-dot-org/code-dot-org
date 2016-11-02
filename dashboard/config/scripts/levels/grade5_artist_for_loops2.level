@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Use a `repeat` inside of a `for` loop to create this stack of triangles that goes from 50 pixels to 100 pixels.\r\n\r\n<br/><br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Use a `repeat` inside of a `for` loop to create this stack of triangles that goes from 50 pixels to 100 pixels.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -34,8 +34,8 @@
     "video_key": "C4_for_loops_no_bee",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null,
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use `counter` for the length of your triangles inside your `repeat` loop.\\n\\n![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)\",\r\n  \"hint_id\": \"grade5_artist_for_loops2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use `counter` for the length of your triangles inside your `repeat` loop.\\n\\n![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)\",\r\n  \"hint_id\": \"grade5_artist_for_loops2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

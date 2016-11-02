@@ -25,8 +25,9 @@ title: "Professional Development Workshop Survey"
   course = workshop[:course]
   subject = workshop[:subject]
 
-  def local_view(name, *params)
-    view "pd_workshop_survey/#{name.to_s}", *params
+  def local_view(name, options = {})
+    options[:form] = PdWorkshopSurvey
+    view "pd_workshop_survey/#{name.to_s}", options
   end
 
 :javascript

@@ -4,39 +4,47 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Model de comunicat de presa pentru functionarii alesi
 
-Pentru lansare imediata  
-[**DATA**]  
-Contact: [**Informatii de contact**]  
+For Immediate Release  
+[**DATE**]  
+Contact: [**CONTACT INFORMATION**]  
   
 
 
 **
 
 <center>
-  GUVERNATOR/SENATOR/MEMBRU AL CONSILIULUI/REPREZENTANT/PRIMAR/ [INTRODU NUMELE][A PARTICIPAT LA HOUR OF CODE IMPREUNA CU ELEVII LOCALI]</strong><br /> Comunitatea se uneste pentru a mari gradul de informare cu privire la importanta stiintei computer-ului prin participarea la Saptamana Mondiala a Educatiei
+  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
 </center>
 
   
   
 </p> 
 
-**DATA** - [**INTRODUCETI NUMELE**] s-a alaturat Directorului si membrilor scolii [**INTRODUCETI NUMELE SCOLII**], lideri de business si familii locale astazi pentru [**NUMITI EVENIMENTUL**] a participa la Hour of Code ca parte a Saptamanii Mondiale a Stiintei si Educatiei. [INTRODUCETI NUMELE] si membrii comunitatii s-au alaturat milioanelor de oameni din jurul lumii ce au luat parte la cel mai amplu eveniment de invatare din istorie.
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
 
-[**INTRODUCETI DETALII DESPRE EVENIMENT, UTILIZATI UN LIMBAJ DESCRIPTIV SI CUANTIFICABIL. DE EXEMPLU:**]  
-“Scoala elementara Daniels Run a tinut, la nivel de scoala, un eveniment Hour of Code pentru a le expune elevilor stiinta calculatorului. Mai mult de 700 de elevi din toate clasele au participat la cel putin o Ora de Programare. Si cativa parinti si voluntari din comunitate au ajutat in aceasta zi, aducand copii impreuna pentru a le arata de ce stiinta computer-ului conteaza atat de mult in viata unui elev
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
 
-[**TEXT ESANTION PENTRU CONTEXT:**]  
-Computerele sunt peste tot, dar mai putine scoli predau acum stiinta computerului decat cu 10 ani in urma. Fetele si elevii de culoare sunt grav subestimate. Vestea buna e ca noi facem aceasta schimbare in bine. Hour of Code este o poarta a elevilor spre accesarea informatiilor de calitate despre stiinta calculatorului.
+[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-Peste 100 de milioane de studenţi din întreaga lume au încercat deja o Ora de Programare. Multumita Hour of Code, tehnologia computerelor a fost vizibila pe site-urile Google, MSN, Yahoo! și Disney. Președintele Obama, Shakira și Ashton Kutcher au susținut cu toții Ora de Programare cu secvențe video. S-au adunat peste 100 de parteneri pentru a susține această mișcare.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! și Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-[**INSERARE CITAT PURTATOR DE CUVANT, EXEMPLU MAI JOS:**]  
-“Trebuie sa incurajam si sa atintim interesul elevilor nostri asupra stiintei computerului,” a spus [**INSEREAZA NUME**]. "Fiecare student merita snasa de a invata stiinta computerului si programarea pentru a accesa cele mai bune cariere ale secolului 21."
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
 
-[A SE **INSEREAZA MAI MULTE INFORMAŢII DESPRE EVENIMENTUL SAU/SI ORGANIZAŢIA DUMNEAVOASTRĂ**]
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
 
-[**INTRODUCEŢI CITAT DE LA O ALTĂ ORGANIZAŢIE SAU CINEVA CARE A PARTICIPAT LA EVENIMENT**]
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
-Pentru mai multe informaţii despre [**Eveniment/PROGRAM/ETC**], vizitaţi [**INSERATI SITE**] sau contactaţi [**Introduceţi informaţii de CONTACT**]
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+  
+  
+
+
+<%= view :signup_button %>

@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Comment enseigner une Heure de Code après l'école
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -127,3 +129,5 @@ L'Heure de Code n'est que la première étape pour apprendre comment fonctionne 
 
   * Encouragez vos élèves à continuer d'[apprendre en ligne](%= resolve_url('https://code.org/learn/beyond') %).
   * [Participez](%= resolve_url('https://code.org/professional-development-workshops') %) à un atelier d'un jour en personne pour être formé par un animateur en informatique expérimenté. (Enseignants américains seulement)
+
+<%= view :signup_button %>

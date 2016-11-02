@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -17,7 +19,7 @@ nav: promote_nav
 
 ## 1. Organizasyonu yayın
 
-Arkadaşlarına **#HourOfCode**'tan söz et!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -36,3 +38,5 @@ Arkadaşlarına **#HourOfCode**'tan söz et!
 ## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini rica edin
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+
+<%= view :signup_button %>

@@ -6,8 +6,8 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a line eight steps long. This will become our horizon.",
-    "x": "0",
+    "instructions": "Draw a line seven steps long. This will become our horizon.",
+    "x": "25",
     "y": "200",
     "start_direction": "90",
     "is_k1": "true",
@@ -32,9 +32,12 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using what you've learned about repeat blocks to complete this puzzle!\",\r\n  \"hint_id\": \"artistLoopsK3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nDraw a line eight steps long. This will become our horizon.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif\" width=\"300\"/>\r\n",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nDraw a line seven steps long. This will become our horizon.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif\" width=\"300\"/>\r\n",
     "ideal": "3",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",
+    "permitted_errors": "-1"
   },
   "published": true,
   "notes": "",
@@ -59,7 +62,7 @@
       <xml>
         <block type="simple_move_right"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">8</title>
+          <title name="TIMES" config="3-10">7</title>
         </block>
       </xml>
     </recommended_blocks>
@@ -68,7 +71,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">8</title>
+              <title name="TIMES" config="3-10">7</title>
               <statement name="DO">
                 <block type="simple_move_right"/>
               </statement>
