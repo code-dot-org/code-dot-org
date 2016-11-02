@@ -77,7 +77,10 @@ const DebugWatch = React.createClass({
   propTypes: {
     debugButtons: React.PropTypes.bool,
     isRunning: React.PropTypes.bool,
-    watchedExpressions: React.PropTypes.instanceOf(Immutable.List)
+    watchedExpressions: React.PropTypes.instanceOf(Immutable.List),
+    add: React.PropTypes.func.isRequired,
+    update: React.PropTypes.func.isRequired,
+    remove: React.PropTypes.func.isRequired,
   },
 
   getInitialState: function () {
@@ -109,7 +112,7 @@ const DebugWatch = React.createClass({
 
       if (!this.props.isRunning) {
         if (justStoppedRunning) {
-          this.props.watchedExpressions.map(we => this.props.dispatch(update(we.get('expression'), WATCH_VALUE_NOT_RUNNING)));
+          this.props.watchedExpressions.map(we => this.props.update(we.get('expression'), WATCH_VALUE_NOT_RUNNING));
         }
         return;
       }
@@ -117,7 +120,7 @@ const DebugWatch = React.createClass({
       this.props.watchedExpressions.map(we => {
         if (window.tempJSInterpreter) {
           const currentValue = window.tempJSInterpreter.evaluateWatchExpression(we.get('expression'));
-          this.props.dispatch(update(we.get('expression'), currentValue));
+          this.props.update(we.get('expression'), currentValue);
         }
       });
     }, WATCH_TIMER_PERIOD);
@@ -178,7 +181,7 @@ const DebugWatch = React.createClass({
     if (inputText === '') {
       return;
     }
-    this.props.dispatch(add(inputText));
+    this.props.add(inputText);
     this.setState({
       history: this.state.history.concat(inputText),
       editing: false,
@@ -296,7 +299,7 @@ const DebugWatch = React.createClass({
                             paddingRight: 0,
                             paddingLeft: 10
                           }}
-                  onClick={()=>this.props.dispatch(remove(wv.get('expression')))}
+                  onClick={()=> this.props.remove(wv.get('expression'))}
                 >
                   x
                 </div>
@@ -380,6 +383,18 @@ export default connect(state => {
   return {
     watchedExpressions: state.watchedExpressions,
     isRunning: state.runState.isRunning
+  };
+}, dispatch => {
+  return {
+    add(expression) {
+      dispatch(add(expression));
+    },
+    update(expression, value) {
+      dispatch(update(expression, value));
+    },
+    remove(expression) {
+      dispatch(remove(expression));
+    },
   };
 })(DebugWatch);
 
