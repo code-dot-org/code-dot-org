@@ -51,12 +51,16 @@
       "textAlign": null,
       "textFont": null,
       "textSize": null,
-      "comment": null,
+      "comment_GameLab": null,
+      "comment_Variables": null,
+      "comment_Math": null,
+      "comment_Drawing": null,
       "draw": null,
       "randomNumber_min_max": null,
       "console.log": null
     },
-    "show_d_pad": "false"
+    "show_d_pad": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
