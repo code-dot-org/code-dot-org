@@ -257,11 +257,13 @@ module LevelsHelper
 
     # ScriptLevel-dependent option
     script_level = @script_level
-    app_options[:level]['puzzle_number'] = script_level ? script_level.position : 1
-    app_options[:level]['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['puzzle_number'] = script_level ? script_level.position : 1
+    level_options['stage_total'] = script_level ? script_level.stage_total : 1
 
     # Ensure project_template_level allows start_sources to be overridden
-    app_options[:level]['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
+    level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
+
+    level_options['levelId'] = @level.level_num
 
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
@@ -289,6 +291,11 @@ module LevelsHelper
 
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
+    app_options[:report] = {
+        fallback_response: @fallback_response,
+        callback: @callback,
+        sublevelCallback: @sublevel_callback,
+    }
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
       app_options[:copyrightStrings] = build_copyright_strings

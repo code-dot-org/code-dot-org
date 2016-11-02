@@ -140,6 +140,8 @@ WebLab.prototype.init = function (config) {
     // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
     // this.studioApp_.init(config);
 
+    this.studioApp_.setConfigValues_(config);
+
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
     var container = document.getElementById(config.containerId);
@@ -201,6 +203,18 @@ WebLab.prototype.init = function (config) {
     }
   }
 
+  function onFinish() {
+    this.studioApp_.report({
+      app: 'weblab',
+      level: this.level.id,
+      result: true,
+      testResult: this.studioApp_.TestResults.FREE_PLAY,
+      program: this.getCurrentFilesVersionId() || '',
+      submitted: false,
+      onComplete: this.studioApp_.onContinue.bind(this.studioApp_),
+    });
+  }
+
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <WebLabView
@@ -212,6 +226,7 @@ WebLab.prototype.init = function (config) {
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
+        onFinish={onFinish.bind(this)}
         onMount={onMount}
       />
     </Provider>
