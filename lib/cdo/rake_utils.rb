@@ -30,29 +30,37 @@ module RakeUtils
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
 
+  # We've been having problems with 'sudo service dashboard stop', where it
+  # gets hung waiting for the process to stop, but the signal never takes effect.
+  # This calls and retries stop-with-status, which will wait for a bit but
+  # return an error code if the service doesn't actually stop. It finishes with
+  # a call to the normal stop method, which will wait indefinitely, if the retries
+  # all fail - this allows us to manually go in and kill the process without needing
+  # to restart the build.
   def self.stop_service_with_retry(id, retry_count)
     if OS.linux? && CDO.chef_managed
       success = false
       (1..retry_count + 1).each do |i|
         begin
-          if sudo('service', id.to_s, 'fail-to-stop-with-status')
+          if sudo('service', id.to_s, 'stop-with-status')
             success = true
             HipChat.log "Successfully stopped service #{id}"
             break
           end
         rescue
           HipChat.log "Service #{id} failed to stop, retrying (attempt #{i})"
-          if i == retry_count
-            if sudo('service', id.to_s, 'stop-with-status')
-              success = true
-              HipChat.log "Successfully stopped service #{id}"
-              break
-            end
-          end
           next
         end
       end
-      raise "Could not stop #{id} after #{retry_count + 1} attempts" unless success
+      unless success
+        # Alert the relevant room that the service may be hung...
+        HipChat.log "Could not stop #{id} after #{retry_count + 1} attempts"
+        # ...but we're trying one last time and going into a wait loop, so it can be stopped manually
+        HipChat.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
+          "log into the server and manually stop the process. The build will resume automatically "\
+          "once the #{id} has stopped."
+        self.stop_service(id)
+      end
     end
   end
 
