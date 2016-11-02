@@ -33,6 +33,7 @@ var ALLOWED_KEYS = new Set([
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
+  'visualizationInWorkspace',
   'hideSource',
   'hideRunButton',
   'playspacePhoneFrame',
