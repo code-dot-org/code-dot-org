@@ -9,7 +9,6 @@ require_relative '../mailing-common/mailing-list-utils'
 #   - HocHardwarePrizes2015
 #   - HocSignup2014
 #   - HocSignup2015
-#   - HocSignup2016
 #   - HocSurvey2014
 #   - HocSurvey2015
 #   - CSEdWeekEvent2013
@@ -38,7 +37,6 @@ queries = {
     kind_s: HocHardwarePrizes2015 ||
     kind_s: HocSignup2014 ||
     kind_s: HocSignup2015 ||
-    kind_s: HocSignup2016 ||
     kind_s: HocSurvey2014 ||
     kind_s: HocSurvey2015 ||
     kind_s: CSEdWeekEvent2013
@@ -46,9 +44,9 @@ queries = {
 
   teacher: '
     (
-      kind_s:user && role_s:teacher
+      kind_s: user && role_s: teacher
     ) || (
-      kind_s:Petition && role_s: educator
+      kind_s: Petition && role_s: educator
     ) ||
     kind_s: BringToSchool2013 ||
     kind_s: ClassSubmission ||
