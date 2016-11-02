@@ -7,7 +7,7 @@ var JSInterpreter = require('./JSInterpreter');
 var Observer = require('./Observer');
 var utils = require('./utils');
 import {setStepSpeed} from './redux/runState';
-import {add, update, remove} from './redux/watchedExpressions';
+import {add, remove} from './redux/watchedExpressions';
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
@@ -16,14 +16,10 @@ var StepType = JSInterpreter.StepType;
 var MIN_DEBUG_AREA_HEIGHT = 120;
 /** @const {number} */
 var MAX_DEBUG_AREA_HEIGHT = 400;
-/** @const {number} (in milliseconds) */
-var WATCH_TIMER_PERIOD = 500;
 /** @const {string} */
 var WATCH_COMMAND_PREFIX = "$watch ";
 /** @const {string} */
 var UNWATCH_COMMAND_PREFIX = "$unwatch ";
-/** @const {string} */
-var WATCH_VALUE_NOT_RUNNING = "undefined";
 
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
