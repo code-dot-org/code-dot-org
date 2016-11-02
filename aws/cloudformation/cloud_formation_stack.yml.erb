@@ -21,7 +21,11 @@ Resources:
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
   AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}", commit: commit %>
   ASGCount: <%= lambda_fn.call 'CountASG',
-    Default: 2,
+    Default: {
+      MinSize: 2,
+      MaxSize: 20,
+      DesiredCapacity: 2
+    },
     AutoScalingGroupTags: [
       {Key: 'aws:cloudformation:stack-id', Value: {Ref: 'AWS::StackId'}},
       {Key: 'aws:cloudformation:logical-id', Value: 'WebServer'}
@@ -72,9 +76,9 @@ Resources:
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
-      MinSize: 2
-      MaxSize: 20
-      DesiredCapacity: {'Fn::GetAtt': [ASGCount, Count]}
+      MinSize: {'Fn::GetAtt': [ASGCount, MinSize]}
+      MaxSize: {'Fn::GetAtt': [ASGCount, MaxSize]}
+      DesiredCapacity: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
@@ -180,10 +184,7 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
-          resource_id: 'WebServer',
-          node_name: 'fe-${INSTANCE_ID}',
-          run_list: ['role[front-end]'],
-          commit: commit )%>
+          resource_id: 'WebServer')%>
   WebServerHook:
     Type: AWS::AutoScaling::LifecycleHook
     Properties:
