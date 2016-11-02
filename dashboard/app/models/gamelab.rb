@@ -34,6 +34,7 @@ class Gamelab < Blockly
     submittable
     data_properties
     hide_view_data_button
+    show_debug_watch
     debugger_disabled
     pause_animations_by_default
     start_animations
@@ -57,7 +58,8 @@ class Gamelab < Blockly
       properties: {
         code_functions: JSON.parse(palette),
         show_d_pad: true,
-        edit_code: true
+        edit_code: true,
+        show_debug_watch: true
       }
     ))
   end
