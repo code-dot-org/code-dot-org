@@ -4,20 +4,20 @@ var gmap;
 var gmap_loc;
 var selectize;
 
-$(document).ready(function() {
+$(document).ready(function () {
   initializeMap();
   $('#contact-volunteer-form select').selectize({
     plugins: ['fast_click']
   });
 });
 
-$(function() {
+$(function () {
   selectize = $('#volunteer-search-facets select').selectize({
     plugins: ['fast_click']
   });
 
   $("#location").geocomplete()
-    .bind("geocode:result", function(event, result){
+    .bind("geocode:result", function (event, result){
       var loc = result.geometry.location;
       gmap_loc = loc.lat() + ',' + loc.lng();
       resetFacets();
@@ -25,7 +25,7 @@ $(function() {
     });
 
   // Trigger query when a facet is changed.
-  $('#volunteer-search-facets').find('select').change(function() {
+  $('#volunteer-search-facets').find('select').change(function () {
     initializeMap();
   });
 });
@@ -43,7 +43,7 @@ function initializeMap() {
 function getLatLng(address) {
   var geocoder = new google.maps.Geocoder();
 
-  geocoder.geocode({'address': address}, function(results, status) {
+  geocoder.geocode({'address': address}, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       var loc;
       loc = results[0].geometry.location;
@@ -77,7 +77,7 @@ function getParams(form_data) {
     value: gmap_loc
   });
 
-  $.each(form_data, function(key, field) {
+  $.each(form_data, function (key, field) {
     if (field.value !== '' && field.name != 'location') {
       params.push(field);
     }
@@ -87,7 +87,7 @@ function getParams(form_data) {
 }
 
 function sendQuery(params) {
-  $.post('/forms/VolunteerEngineerSubmission2015/query', $.param(params), function(response){
+  $.post('/forms/VolunteerEngineerSubmission2015/query', $.param(params), function (response) {
     var results = JSON.parse(response); // Convert the JSON string to a JavaScript object.
     var locations = getLocations(results);
     updateResults(locations);
@@ -108,11 +108,11 @@ function updateResults(locations) {
 function getLocations(results) {
   var locations = [];
 
-  if(results.response){
+  if (results.response) {
     var volunteers = results.response.docs; // The actual volunteers that were returned by Solr.
     var volunteers_count = volunteers.length;
 
-    for(var index = 0; index < volunteers_count; index++){
+    for (var index = 0; index < volunteers_count; index++) {
       var coordinates = volunteers[index].location_p.split(',');
       // 0.01 degree is approximately 1km. randomize within this 1km to avoid showing exact addresses
       var lat = coordinates[0] - 0.005 + (0.01 * Math.random());
@@ -141,7 +141,7 @@ function getLocations(results) {
 }
 
 function resetFacets() {
-  $.each(selectize, function(key, select) {
+  $.each(selectize, function (key, select) {
     select.selectize.clear();
     select.selectize.refreshOptions(false);
   });
@@ -156,7 +156,7 @@ function displayNoResults() {
 
   // If a facet has a value, show the facets.
   var form_data = $('#volunteer-search-form').serializeArray();
-  $.each(form_data, function(key, field) {
+  $.each(form_data, function (key, field) {
     if (field.name != 'location' && field.value) {
     }
   });
@@ -188,7 +188,7 @@ function loadMap(locations) {
   if (locations.length > 0) {
     mapOptions.forceGenerateControls = true;
     mapOptions.locations = locations;
-    mapOptions.afterOpenInfowindow = function(index, location, marker) {
+    mapOptions.afterOpenInfowindow = function (index, location, marker) {
       setContactTrigger(index, location, marker);
     };
   }
@@ -214,7 +214,7 @@ function compileHTML(index, location) {
   }
 
   if (location.location_flexibility_ss) {
-    $.each(location.location_flexibility_ss, function(key, field) {
+    $.each(location.location_flexibility_ss, function (key, field) {
       location.location_flexibility_ss[key] = i18n('location_' + field);
     });
 
@@ -245,15 +245,14 @@ function compileHTML(index, location) {
     lines.push(line);
   }
 
-  $.each(lines, function(key, field) {
-    html += '<div>' + field + '</div>';
+  $.each(lines, function (key, field) {
+    html += '<div class="profile-detail">' + field + '</div>';
   });
 
   return html;
 }
 
-function compileContact(index, location)
-{
+function compileContact(index, location) {
   var details =  location.name_s + ' (' + i18n(location.experience_s) + ')';
   var html = '<div id="addressee-details-' + index + '">' + details + '</div>';
   $('#allnames').append(html);
@@ -263,14 +262,13 @@ function compileContact(index, location)
 
 function setContactTrigger(index, location, marker) {
   var contact_trigger = '.contact-trigger';
-  $('#gmap').on('click', contact_trigger, function() {
+  $('#gmap').on('click', contact_trigger, function () {
     $('#name').html(location.contact_title);
     $('#volunteer-id').val(location.id);
   });
 }
 
-function contactVolunteer()
-{
+function contactVolunteer() {
   $('#name').show();
   $('#volunteer-contact').show();
   $('#success-message').hide();
@@ -280,14 +278,12 @@ function contactVolunteer()
   return false;
 }
 
-function processResponse(data)
-{
+function processResponse(data) {
   $('#error-message').hide();
   $('#success-message').show();
 }
 
-function processError(data)
-{
+function processError(data) {
   $('.has-error').removeClass('has-error');
 
   var errors = Object.keys(data.responseJSON);
@@ -304,8 +300,7 @@ function processError(data)
   $('#success-message').hide();
 }
 
-function sendEmail(data)
-{
+function sendEmail(data) {
   var typeTaskSelected = $('#volunteer-type-task input:checked').length > 0;
   if (typeTaskSelected) {
     $.ajax({
@@ -314,8 +309,7 @@ function sendEmail(data)
       dataType: "json",
       data: $('#contact-volunteer-form').serialize()
     }).done(processResponse).fail(processError);
-  }
-  else {
+  } else {
     var error = '<font color="#a94442">Please select at least one way for the volunteer to help.</font>';
     $('#error-message').html(error).show();
   }
@@ -323,8 +317,7 @@ function sendEmail(data)
   return false;
 }
 
-function adjustScroll(destination)
-{
+function adjustScroll(destination) {
   $('html, body').animate({
     scrollTop: $("#" + destination).offset().top
   }, 1000);

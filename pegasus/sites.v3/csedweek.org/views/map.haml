@@ -3,10 +3,17 @@
   %h2.mapheader
     %a{:href=> "https://hourofcode.com/events"}
       = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
+    %a{:href=> "https://hourofcode.com/#join"}
+      %button.signup-button
+        = I18n.t(:host_an_hour)
 
   .row
     .col-sm-12
       #gmap.full-width
+      .footnote
+        The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on
+        %a{href: resolve_url('/events')}
+          the events page.
   #belowmaplegend.legend
     .legend-title= I18n.t(:csedweek_map_legend_title)
     .color.red

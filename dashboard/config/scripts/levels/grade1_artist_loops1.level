@@ -68,10 +68,10 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="simple_move_right"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">6</title>
         </block>
+        <block type="simple_move_down"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>

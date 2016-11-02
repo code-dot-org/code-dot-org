@@ -136,3 +136,6 @@ exports.Position = {
 
 /** @const {string} SVG element namespace */
 exports.SVG_NS = 'http://www.w3.org/2000/svg';
+
+exports.ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+exports.CIPHER = 'Iq61F8kiaUHPGcsY7DgX4yAu3LwtWhnCmeR5pVrJoKfQZMx0BSdlOjEv2TbN9z';

@@ -294,7 +294,9 @@ StudioApp.prototype.createReduxStore_ = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions || config.level.aniGifURL);
+  return !!(config.level.instructions ||
+      config.level.markdownInstructions ||
+      config.level.aniGifURL);
 };
 
 /**
@@ -525,7 +527,7 @@ StudioApp.prototype.init = function (config) {
     }
   }
 
-  if (!!config.level.projectTemplateLevelName) {
+  if (!!config.level.projectTemplateLevelName && !config.level.isK1) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
@@ -1547,6 +1549,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
+  this.onFeedback(options);
+
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1554,7 +1558,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_, options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
@@ -1818,6 +1822,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onFeedback = config.onFeedback || function () {};
   this.onInitialize = config.onInitialize ?
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
@@ -2852,7 +2857,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 /**
  * Polishes the generated code string before displaying it to the user. If the
  * app provided a polishCodeHook function, it will be called.
- * @returns {string} code string that may/may not have been modified
+ * @returns {string} code string that may/may not have been modified.
  */
 StudioApp.prototype.polishGeneratedCodeString = function (code) {
   if (this.polishCodeHook) {
@@ -2872,8 +2877,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: level.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
@@ -2896,6 +2901,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    isK1: config.level.isK1,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

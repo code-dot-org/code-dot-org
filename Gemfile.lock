@@ -364,8 +364,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    mail_view (2.0.4)
-      tilt
     marked-rails (0.3.2.0)
     memoist (0.14.0)
     metaclass (0.0.4)
@@ -573,7 +571,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0.beta2)
       tilt (~> 2.0)
-    spring (1.7.2)
+    spring (2.0.0)
+      activesupport (>= 4.2)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
     sprockets (3.6.3)
@@ -695,7 +694,6 @@ DEPENDENCIES
   konacha!
   le (~> 2.2)
   lograge
-  mail_view
   marked-rails
   memoist
   mini_magick
@@ -752,7 +750,7 @@ DEPENDENCIES
   shotgun
   simplecov (~> 0.9)
   sinatra (~> 2.0.0.beta2)
-  spring (~> 1.7.2)
+  spring
   spring-commands-testunit
   sprockets (~> 3.6.3)
   sprockets-rails (~> 3.1.1)

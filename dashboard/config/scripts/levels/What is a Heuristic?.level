@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-10-19T17:54:07.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "## What is a Heuristic? \r\n\r\nIn lesson 2 students will take on the challenge of compressing various pieces of text. Over time, they will see that different types of text require different approaches to compression. The lesson ends with an activity where students develop a heuristic, or a rule of thumb, that can be applied to different pieces of text in order to compress them. \r\n\r\nThere are three Essential Knowledge Statements and one Exclusion Statement in the Framework dealing with Heuristics: \r\n\r\n>- 4.2.1D Some problems can be solved but not in a reasonable time. In these cases, heuristic approaches may be helpful to find solutions in reasonable time. \r\n- 4.2.2A A heuristic is a technique that may allow us to find an approximate solution when typical methods fail to find an exact solution. \r\n- 4.2.2B Heuristics may be helpful for finding an approximate solution more quickly when exact methods are too slow. \r\n- Exclusion Statement (4.2.2B): Specific heuristic solutions are beyond the scope of this course and the AP Exam.\r\n\r\nMany people are confused by the difference between *algorithms* and *heuristics*. Check out the following resource for some clarification about the overlaps and differences between the two. ",
+    "link_title": "Stack Overflow: What is the difference between a heuristic and an algorithm? ",
+    "url": "http://stackoverflow.com/a/2342759"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</ExternalLink>

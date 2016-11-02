@@ -29,7 +29,8 @@
     "instructions": "Can you fix Laurel's path to get all of this gold?",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Is something not right? Try using the step button to figure out where things go wrong.\",\r\n  \"hint_id\": \"grade1_adventurer_loops3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "ideal": "8",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
@@ -42,7 +43,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">5</title>
+              <title name="TIMES" config="2-10">5</title>
               <statement name="DO">
                 <block type="maze_moveEast" deletable="false">
                   <next>
@@ -68,8 +69,9 @@
         <block type="maze_moveWest"/>
         <block type="maze_moveNorth"/>
         <block type="maze_moveSouth"/>
+        <block type="collector_collect"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">5</title>
+          <title name="TIMES" config="2-10">5</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -83,7 +85,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">4</title>
+              <title name="TIMES" config="2-10">4</title>
               <statement name="DO">
                 <block type="maze_moveEast">
                   <next>

@@ -80,7 +80,7 @@ group :development, :test do
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
-  gem 'spring', '~> 1.7.2'
+  gem 'spring'
   gem 'spring-commands-testunit'
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
@@ -222,6 +222,5 @@ gem 'acmesmith'
 gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
-gem 'mail_view'
 gem 'bcrypt'
 gem 'addressable'

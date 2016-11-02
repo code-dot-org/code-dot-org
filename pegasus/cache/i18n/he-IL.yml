@@ -577,7 +577,6 @@
     שלנו."
   dashboard_landing_print_certificates: "הדפס תעודות לתלמידים שגמרו את הקורס הזה"
   dashboard_landing_educator_blog: קרא על חדשות ועדכונים לחומרים שלנו ב"בלוג מחנכים"
-  dashboard_landing_smart_hints: "אנא עזור לנו להוסים רמזים חכמים למדריכים code.org"
   dashboard_landing_video_player: "נסה את נגן הוידאו החדש שלנו בבית ספרך"
   dashboard_landing_progress_title: "התקדמות השיעור הראשי"
   dashboard_landing_progress_biggest: ". זאת ההתקדמות עבור מקטע הכי גדול שלך."
@@ -1004,6 +1003,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

@@ -73,6 +73,10 @@ When /^I go to the newly opened tab$/ do
   @browser.switch_to.window(@browser.window_handles.last)
 end
 
+When /^I close the instructions overlay if it exists$/ do
+  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+end
+
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps <<-STEPS
@@ -117,6 +121,10 @@ end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+end
+
+When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
 end
 
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
@@ -291,8 +299,14 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
+  if @browser.execute_script("return $(\"#{jquery_selector}\").length > 0")
+    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  end
+end
+
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == true }
   @browser.execute_script("$(\"#{selector}\")[0].click();")
 end
 
@@ -365,19 +379,27 @@ Then /^mark the current level as completed on the client/ do
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  # Sometimes there's a momentary delay loading progress (which updates the color)
+  # so allow a brief wait for the appropriate styling to show up.
+  selector = ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    And I wait to see ".header_level_container"
-    And I wait for 10 seconds
-    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait until element "#{selector}" is in the DOM
+    And I wait up to 5 seconds for element "#{selector}" to have css property "background-color" equal to "#{color_for_status(test_result)}"
+  }
+end
+
+Then /^I open the progress drop down of the current page$/ do
+  steps %{
+    Then I click selector ".header_popup_link"
+    And I wait to see ".user-stats-block"
   }
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
+  selector = ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
   steps %{
-    Then I click selector ".header_popup_link"
-    And I wait to see ".user-stats-block"
-    And I wait for 10 seconds
-    And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And I wait until element "#{selector}" is in the DOM
+    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -385,12 +407,18 @@ Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, 
   element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
 end
 
-Then /^I navigate to the course page and verify progress for course "([^"]*)" stage (\d+) level (\d+) is "([^"]*)"/ do |course, stage, level, test_result|
+Then /^I navigate to the course page for "([^"]*)"$/ do |course|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
-    And I wait for 10 seconds
-    And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+  }
+end
+
+Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
+  selector = ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
+  steps %{
+    And I wait until element "#{selector}" is visible
+    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -402,6 +430,12 @@ end
 
 Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_value|
   element_has_css(selector, property, expected_value)
+end
+
+Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to have css property "([^"]*)" equal to "([^"]*)"$/ do |seconds, selector, property, expected_value|
+  Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
+    element_css_value(selector, property) == expected_value
+  end
 end
 
 Then /^elements "([^"]*)" have css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_values|
@@ -561,6 +595,10 @@ Then /^I see jquery selector (.*)$/ do |selector|
   expect(exists).to eq(true)
 end
 
+Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
+end
+
 Then /^I wait until I see selector "(.*)"$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
 end
@@ -702,14 +740,11 @@ def generate_teacher_student(name, teacher_authorized)
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
-    And I click selector ".close"
-    And I wait for 3 seconds
-    And I click selector ".btn-white:contains('New section')"
+    And I click selector ".btn-white:contains('New section')" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
     Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
     And I click selector ".btn-primary:contains('Save')"
-    And I wait for 3 seconds
-    And I click selector "a:contains('Manage Students')"
+    And I click selector "a:contains('Manage Students')" once I see it
     And I save the section url
     Then I sign out
     And I navigate to the section url
@@ -961,7 +996,7 @@ end
 
 Then /^I scroll our lockable stage into view$/ do
   wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
-  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
@@ -974,4 +1009,13 @@ Then /^I unlock the stage for students$/ do
   @browser.execute_script("$('.modal-body button').first().click()")
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
+end
+
+Then /^I select the first section$/ do
+  steps %{
+    And I wait to see ".uitest-sectionselect"
+  }
+  @browser.execute_script(
+    "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
+  )
 end

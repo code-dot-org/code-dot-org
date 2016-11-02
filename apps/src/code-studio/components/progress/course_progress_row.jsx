@@ -149,7 +149,6 @@ const CourseProgressRow = React.createClass({
           />
         </div>
         {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
-            this.props.sectionId &&
           <div style={styles.teacherInfo}>
             <TeacherStageInfo stage={stage}/>
           </div>
@@ -161,7 +160,7 @@ const CourseProgressRow = React.createClass({
 
 export default connect(state => {
   return {
-    sectionId: state.stageLock.selectedSection,
+    sectionId: state.sections.selectedSectionId,
     hiddenStageMap: state.hiddenStage.get('bySection'),
     showTeacherInfo: state.progress.showTeacherInfo,
     viewAs: state.stageLock.viewAs,

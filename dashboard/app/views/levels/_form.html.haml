@@ -42,9 +42,6 @@
   .field
     = f.hidden_field :published
   .actions
-    = f.submit 'Save your progress but do not publish', {:id => 'saveProgress'}
-    %br
-    %br
     = f.submit 'Save and publish your completed work', {:id => 'publishLevel', :style => "background-color: #f0c14b"}
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript

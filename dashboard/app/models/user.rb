@@ -73,10 +73,22 @@
 
 require 'digest/md5'
 require 'cdo/user_helpers'
+require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
+  # races: array of strings, the races that a student has selected, or nil if no selection was made
+  # Allowed values for race are:
+  # white: "White"
+  # black: "Black or African American"
+  # hispanic: "Hispanic or Latino"
+  # asian: "Asian"
+  # hawaiian: "Native Hawaiian or other Pacific Islander"
+  # american_indian: "American Indian/Alaska Native"
+  # other: "Other"
+  # opt_out: "Prefer not to say" (but selected this value and hit "Submit")
+  # closed_dialog: This is a special value indicating that the user closed the dialog rather than selecting a race
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -770,26 +782,16 @@ class User < ActiveRecord::Base
       !user_levels.empty?
   end
 
+  # Returns integer days since account creation, rounded down
+  def account_age_days
+    (DateTime.now - created_at.to_datetime).to_i
+  end
+
   # Creates UserScript information based on data contained in UserLevels.
   # Provides backwards compatibility with users created before the UserScript model
   # was introduced (cf. code-dot-org/website-ci#194).
   # TODO apply this migration to all users in database, then remove.
   def backfill_user_scripts
-    # backfill assigned scripts
-    followeds.each do |follower|
-      script = follower.section && follower.section.script
-      next unless script
-
-      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
-        user_script.assigned_at = follower.created_at if
-          follower.created_at &&
-          (!user_script.assigned_at || follower.created_at < user_script.assigned_at)
-
-        user_script.save! if user_script.changed? && !user_script.empty?
-      end
-    end
-
     # backfill progress in scripts
     Script.all.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -1004,7 +1006,7 @@ class User < ActiveRecord::Base
 
   def self.csv_attributes
     # same as in UserSerializer
-    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races]
   end
 
   def to_csv
@@ -1066,5 +1068,9 @@ class User < ActiveRecord::Base
 
     (authorized_teacher? && script && !script.professional_learning_course?) ||
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
+  end
+
+  def show_race_interstitial?
+    RaceInterstitialHelper.show_race_interstitial?(self)
   end
 end

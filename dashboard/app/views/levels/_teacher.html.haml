@@ -79,7 +79,8 @@
               = t('teacher.panel.section')
               = link_to @section.name, teacher_dashboard_section_progress_url(@section)
         - if current_user.sections.many?
-          = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
+          -# This is rendered into by react
+          #teacher-panel-sections
           - if @section && @script_level.stage.lockable?
             %div{:style => "margin: 10px"}
               #stage-locked-text

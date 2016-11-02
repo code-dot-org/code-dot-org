@@ -39,7 +39,7 @@ If they are not completed, go ahead and Add a New Language and complete translat
 * [Wrap Up](http://amara.org/en/videos/ocU9lQ4CIZel/info/hour-of-code-wrap-up/)
 
 ## Promotional
-* [CS is Changing Everything](https://amara.org/en/videos/sve4MYv5Btdn/info/computer-science-is-changing-everything/)
+* [CS is Changing Everything](https://amara.org/en/videos/atEXdPApYAO8/info/computer-science-is-changing-everything/)
 * [Change the World - Hour of Code 2015](https://amara.org/en/videos/yOXuiXs9lWrn/info/change-the-world-hour-of-code-2015/)
 * [The Hour of Code 2015](https://amara.org/en/videos/hlM6lmrQc6DR/info/hour-of-code-2015-worldwide/)
 * [What Most schools Don't Teach](http://amara.org/en/videos/ZuVc6mobngWz/info/what-most-schools-dont-teach/)
