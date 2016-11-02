@@ -42,7 +42,11 @@ const TeacherContentToggle = Radium(React.createClass({
     // Show this element, as parent div (refs.lockMessage) now owns visibility
     $('#locked-stage').appendTo(this.refs.lockMessage).show();
     $('#hidden-stage').appendTo(this.refs.hiddenMessage).show();
-    $('#level-body').appendTo(this.refs.content);
+    // Server initially sets level-body opacity to 0 when viewAs=Student so that
+    // student view doesnt show content while we make async calls. Once this
+    // component has mounted, we move level-body into our first div, which will
+    // now own toggling visibility
+    $('#level-body').css('opacity', '').appendTo(this.refs.content);
   },
 
   render() {
@@ -55,24 +59,23 @@ const TeacherContentToggle = Radium(React.createClass({
       height: window.screen.height
     };
 
-    // TODO - on assessments, page initially loads with teacher content visible
-    // then hides once we've called setViewType (which must happen async)
-
     let contentStyle = {};
     let hasOverlayFrame = (isLockedStage || isHiddenStage);
 
-    if (viewAs === ViewType.Student && (!hiddenStagesInitialized || hasOverlayFrame)) {
-      contentStyle.opacity = 0;
-    }
+    if (viewAs === ViewType.Student) {
+      if (!hiddenStagesInitialized || hasOverlayFrame) {
+        contentStyle.opacity = 0;
+      }
 
-    // In the case where appOptions.app is truthy, we don't want to actually set
-    // display none, as that causes the editor (be it blockly or droplet) to
-    // misrender. We can get away with just setting opacity = 0 because the editor
-    // is rendered to an absolute position and doesnt affect the layout of this
-    // component. For cases where we don't have an IDE (i.e. multi/match) we
-    // need to hide such that it doesnt affect our layout
-    if (hasOverlayFrame && !appOptions.app) {
-      contentStyle.display = 'none';
+      // In the case where appOptions.app is truthy, we don't want to actually set
+      // display none, as that causes the editor (be it blockly or droplet) to
+      // misrender. We can get away with just setting opacity = 0 because the editor
+      // is rendered to an absolute position and doesnt affect the layout of this
+      // component. For cases where we don't have an IDE (i.e. multi/match) we
+      // need to hide such that it doesnt affect our layout
+      if (hasOverlayFrame && !appOptions.app) {
+        contentStyle.display = 'none';
+      }
     }
 
     const showLockedStageMessage = isLockedStage && !isHiddenStage;
