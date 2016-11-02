@@ -1,6 +1,7 @@
 <%- # Embedded Blockly block html template. Derived from /blockly/src/templates/readonly.html.ejs, converted to erb %>
 <%-
   options = local_assigns
+  options[:embedded] = true
   app = options.delete :app
 %>
 <!DOCTYPE html>
@@ -17,11 +18,5 @@
 </head>
 <body class="readonly embed-block">
   <div id="codeWorkspace"></div>
-  <script>
-    var appOptions = <%= raw options.to_json %>;
-    window.onload = function () {
-      <%= app %>Main(appOptions);
-    };
-  </script>
 </body>
 </html>
