@@ -116,8 +116,9 @@
     %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', '/volunteer/local')
   - if !form.secret
     #edit-information
-      You can edit your information anytime
+      You can update your volunteer information or email subscription preferences anytime
       %a#edit-link-tag{href: "#"} here.
+      Please bookmark this page to easily reference later.
 
 :javascript
   $(document).ready(function() {

@@ -11,9 +11,6 @@ rightbar: blank
 - unsubscribed = form.data['unsubscribed_s']
 
 %h1 Update volunteer information
-%p
-  You can update your volunteer information anytime by visiting this
-  %a{href: '/volunteer/engineer/edit/' + secret} edit page
 
 #unsubscribe-volunteer-thanks{:style=>"display: none;"}
   .alert.alert-success{role:"alert"} You have successfully updated your email preferences.
@@ -47,3 +44,8 @@ rightbar: blank
   %button.btn.btn-submit Confirm
 
 = view :volunteer_engineer_form, {form: form}
+
+%p
+  You can update your volunteer information or email subscription preferences anytime
+  %a{href: '/volunteer/engineer/edit/' + secret} here.
+  Please bookmark this page to easily reference later.
