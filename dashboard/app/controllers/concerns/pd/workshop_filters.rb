@@ -1,6 +1,11 @@
+# Controller concern for common Pd::Workshop loading and filtering methods
+# To use, include in a controller and call the desired method.
 module Pd::WorkshopFilters
   extend ActiveSupport::Concern
 
+  # Query by either:
+  #   schedule - the workshop's scheduled start date (date of first session)
+  #   end - the date the workshop was ended
   QUERY_BY_SCHEDULE = 'schedule'
   QUERY_BY_END = 'end'
 

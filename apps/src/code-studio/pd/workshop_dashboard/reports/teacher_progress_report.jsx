@@ -63,6 +63,10 @@ const TeacherProgressReport = React.createClass({
   load(props = this.props) {
     const url = `${QUERY_URL}?${this.formatQueryParams(props)}`;
 
+    // Abort any existing load request.
+    if (this.loadRequest) {
+      this.loadRequest.abort();
+    }
     this.setState({loading: true});
     this.loadRequest = $.ajax({
       method: 'GET',
