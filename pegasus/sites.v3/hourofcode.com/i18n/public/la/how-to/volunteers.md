@@ -6,15 +6,17 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Guía para voluntarios
 
 ## 1. Regístrese como voluntario
 
-Visite una clase local para motivar a los estudiantes a seguir aprendiendo Ciencias de la Computación. [Sea voluntario por una hora](https://code.org/volunteer/engineer).
+Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
 ## 2. Únete a una sesión de información voluntaria
 
-Daremos dos sesiones de información para explicar como sería una experiencia de voluntariado típica. Analizaremos cómo coordinarse con los profesores antes de su evento de la Hora del Código y también lo que deben hacer el día del evento para preparase. Por favor, ¡traiga sus preguntas! Estas sesiones de información se celebrarán vía Hangouts on Air, así que si te lo pierdes todavía puedes ver la sesión grabada más tarde. [Vea la agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
@@ -46,19 +48,19 @@ Daremos dos sesiones de información para explicar como sería una experiencia d
 
 ## 3. Pase 30 minutos probando los tutoriales por adelantado
 
-Pruebe los tutoriales de la Hora de Código en [code.org/learn](https://code.org/learn). Elija algunos de los tutoriales más populares y dedique algo de tiempo para familiarizarse con cada uno de ellos. Se tarda unos 5-10 minutos por tutorial para tener una idea de cómo funciona.
+Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Reclute a sus compañeros de trabajo para ser voluntarios
 
-Dígale a sus amigos y compañeros de trabajo acerca de la Hora del Código. Tenemos miles de maestros registrados que están buscando voluntarios, así que pídales que se [inscriban como voluntarios](https://code.org/volunteer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Correo electrónico de ejemplo:**
+**Sample email:**
 
-**Asunto**: Únase a mí en el voluntariado para la Hora del Código
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Si te acuerdas de tu primera línea de código, sabes que moldeó el resto de tu vida.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-Eso es de lo que se trata la Hora del Código. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
 **I signed up to volunteer in a local classroom, and you can, too!**   
 Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
@@ -80,7 +82,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 4. Promueva la Hora de Código en su comunidad
 
-Incorpore un grupo local — club de niños/niñas scouts, iglesia, universidad, grupo de veteranos o sindicato de trabajo. O patrocine una Hora de Código "una fiesta de conocidos" para su vecindario. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. prepare antes de visitar un salón de clases.
 
@@ -97,3 +99,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Muestre [el video Hora del Código](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Deje que los estudiantes se sumerjan en los tutoriales. Camine por el aula, respondiendo preguntas y guiándolos a través de los retos difíciles. Trate de no dar a los estudiantes la solución al reto. Mejor trate de hacerles preguntas para que ellos mismos pueden contestar lo que salió mal.
+
+<%= view :signup_button %>

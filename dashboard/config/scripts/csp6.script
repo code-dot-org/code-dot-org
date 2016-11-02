@@ -1,5 +1,4 @@
 login_required 'true'
-hidden 'true'
 
 stage 'Create PT Prep'
 level 'U5 - Create PT Prep - Student Introduction'

@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ## Como atrair os media para o teu evento da Hora do Código
 
 *For all press and media inquiries, contact <press@code.org>*
@@ -59,3 +61,5 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+
+<%= view :signup_button %>

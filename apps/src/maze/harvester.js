@@ -28,8 +28,8 @@ export default class Harvester extends Gatherer {
     return this.hasCrop(HarvesterCell.FeatureType.PUMPKIN, id);
   }
 
-  hasBean(id) {
-    return this.hasCrop(HarvesterCell.FeatureType.BEAN, id);
+  hasLettuce(id) {
+    return this.hasCrop(HarvesterCell.FeatureType.LETTUCE, id);
   }
 
   hasCrop(crop, id) {
@@ -50,8 +50,8 @@ export default class Harvester extends Gatherer {
     return this.atCrop(HarvesterCell.FeatureType.PUMPKIN, id);
   }
 
-  atBean(id) {
-    return this.atCrop(HarvesterCell.FeatureType.BEAN, id);
+  atLettuce(id) {
+    return this.atCrop(HarvesterCell.FeatureType.LETTUCE, id);
   }
 
   atCrop(crop, id) {
@@ -77,8 +77,8 @@ export default class Harvester extends Gatherer {
     this.getCrop(HarvesterCell.FeatureType.PUMPKIN, id);
   }
 
-  getBean(id) {
-    this.getCrop(HarvesterCell.FeatureType.BEAN, id);
+  getLettuce(id) {
+    this.getCrop(HarvesterCell.FeatureType.LETTUCE, id);
   }
 
   getCrop(crop, id) {
@@ -109,8 +109,8 @@ export default class Harvester extends Gatherer {
     this.animateGetCrop(HarvesterCell.FeatureType.PUMPKIN);
   }
 
-  animateGetBean(id) {
-    this.animateGetCrop(HarvesterCell.FeatureType.BEAN);
+  animateGetLettuce(id) {
+    this.animateGetCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
   animateGetCrop(crop) {

@@ -16,7 +16,7 @@
     "ideal": "3",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. \r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

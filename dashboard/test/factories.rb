@@ -44,14 +44,12 @@ FactoryGirl.define do
         name 'Facilitator Person'
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
-          facilitator.save
         end
       end
       factory :workshop_organizer do
         name 'Workshop Organizer Person'
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
-          workshop_organizer.save
         end
       end
       factory :district_contact do
@@ -61,7 +59,6 @@ FactoryGirl.define do
         admin false
         after(:create) do |district_contact|
           district_contact.permission = UserPermission::DISTRICT_CONTACT
-          district_contact.save
         end
       end
       # Creates a teacher optionally enrolled in a workshop,
@@ -519,25 +516,33 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
+  factory :user_profile do
+    user { create :teacher }
+    created_at { Time.zone.now }
+    updated_at { Time.zone.now }
+    course UserProfile::CSP
+  end
+
   factory :pd_workshop, class: 'Pd::Workshop' do
-    organizer {create(:workshop_organizer)}
+    association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
     transient do
       num_sessions 0
+      sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
     end
-    after(:create) do |workshop, evaluator|
+    after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << create(:pd_session, workshop: workshop, start: Date.today + i.days)
+        workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
       end
     end
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
     num_sessions 1
-    section {create(:section)}
+    association :section
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
   end
@@ -548,17 +553,78 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
-  factory :school_info do
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
+  # school info
+
+  # this is the only factory used for testing the deprecated data formats (without country).
+  factory :school_info_without_country, class: SchoolInfo do
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
     association :school_district
   end
+
+  factory :school_info_non_us, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_name 'Grazebrook'
+    full_address '31 West Bank, London, England'
+  end
+
+  factory :school_info_us, class: SchoolInfo do
+    country 'US'
+  end
+
+  # although some US school types behave identically, we keep their factories separate here
+  # because the behavior of each school type may diverge over time.
+
+  factory :school_info_us_private, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_us_other, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_us_public, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
+
+    trait :with_district do
+      association :school_district
+    end
+
+    trait :with_school do
+      association :school, factory: :public_school
+    end
+  end
+
+  factory :school_info_us_charter, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    state 'WA'
+
+    trait :with_district do
+      association :school_district
+    end
+
+    trait :with_school do
+      association :school, factory: :charter_school
+    end
+  end
+
+  # end school info
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
-    association :school_info
+    association :school_info, factory: :school_info_without_country
     school {'Example School'}
   end
 
@@ -589,5 +655,27 @@ FactoryGirl.define do
     city "Seattle"
     state "WA"
     zip "98101"
+  end
+
+  factory :public_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id 333
+    name "A seattle public school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    association :school_district
+  end
+
+  factory :charter_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id 333
+    name "A seattle charter school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    association :school_district
   end
 end
