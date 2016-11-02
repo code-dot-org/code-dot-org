@@ -90,16 +90,13 @@ const AutocompleteSelector = React.createClass({
     // If we ever want to highlight range of matches:
     // http://stackoverflow.com/a/2295681
 
-    let index = 0;
     return (
       <div
         id="autocomplete-panel"
         style={styles.autocompletePanel}
       >
-        {this.props.options.map((option) => {
+        {this.props.options.map((option, index) => {
           const isSelected = index === this.props.currentIndex;
-          const myIndex = index;
-          index++;
           const selectedStyle = {
             backgroundColor: '#cad6fa',
             color: 'black'
@@ -108,7 +105,7 @@ const AutocompleteSelector = React.createClass({
           <div
             key={option}
             onClick={() => this.props.onOptionClicked(option)}
-            onMouseOver={() => this.props.onOptionHovered(myIndex)}
+            onMouseOver={() => this.props.onOptionHovered(index)}
             style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
           >
             {option}
