@@ -2,7 +2,7 @@ import {singleton as studioApp} from '../StudioApp';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-var assetPrefix = require('../assetManagement/assetPrefix');
+import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabGame = require('./GameLabGame');
 
 /**

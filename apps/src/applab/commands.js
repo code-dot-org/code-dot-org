@@ -8,7 +8,7 @@ import * as utils from '../utils';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
-import assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '../assetManagement/assetPrefix';
 import errorHandler from '../errorHandler';
 var ErrorLevel = errorHandler.ErrorLevel;
 import applabTurtle from './applabTurtle';

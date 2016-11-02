@@ -29,7 +29,7 @@ var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
-var assetPrefix = require('./assetManagement/assetPrefix');
+import * as assetPrefix from './assetManagement/assetPrefix';
 var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
