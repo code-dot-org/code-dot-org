@@ -33,13 +33,14 @@ exports.handler = function (event, context) {
     response.send(event, context, response.SUCCESS, responseData, physicalId);
   }
 
-  // Execute a waiter and recurse if it doesn't complete before the timeout.
+  // Execute a waiter, and recurse if it doesn't complete before the timeout.
   function wait(waiter) {
     try {
       event.waiter = waiter;
       event.responseData = responseData;
+      event.PhysicalResourceId = physicalId;
       ec2.waitFor(waiter.state, waiter.params, function (err, data) {
-        if (err) { error(err, 'error in ' + method);}
+        if (err) { error(err, 'error waiting for ' + waiter.state);}
         else success();
       });
 
