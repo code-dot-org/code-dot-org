@@ -160,13 +160,13 @@ var JsDebugger = React.createClass({
         <div id="debug-area">
           <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
           <PaneHeader
-              id="debug-area-header"
-              hasFocus={hasFocus}
-              style={styles.debugAreaHeader}
+            id="debug-area-header"
+            hasFocus={hasFocus}
+            style={styles.debugAreaHeader}
           >
       <span
-          style={styles.noUserSelect}
-          className="header-text"
+        style={styles.noUserSelect}
+        className="header-text"
       >
         {i18n.debugConsoleHeader()}
       </span>
@@ -176,8 +176,8 @@ var JsDebugger = React.createClass({
               <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
               <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"></i>
               <span
-                  style={styles.noUserSelect}
-                  className="header-text"
+                style={styles.noUserSelect}
+                className="header-text"
               >
                 {i18n.debugCommandsHeaderWhenOpen()}
               </span>
@@ -201,19 +201,19 @@ var JsDebugger = React.createClass({
                 className={"fa " + (this.state.watchersHidden ? "fa-chevron-circle-left" : "fa-chevron-circle-right")}
               />
               <span
-                  style={styles.noUserSelect}
-                  className="header-text"
+                style={styles.noUserSelect}
+                className="header-text"
               >
                 {this.state.watchersHidden ? 'Show Watch' : i18n.debugWatchHeader()}
               </span>
             </PaneSection>
                 }
             <PaneButton
-                id="clear-console-header"
-                iconClass="fa fa-eraser"
-                label="Clear"
-                headerHasFocus={hasFocus}
-                isRtl={false}
+              id="clear-console-header"
+              iconClass="fa fa-eraser"
+              label="Clear"
+              headerHasFocus={hasFocus}
+              isRtl={false}
             />
             {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
           </PaneHeader>

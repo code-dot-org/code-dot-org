@@ -141,9 +141,11 @@ const DebugWatch = React.createClass({
     const isError = obj instanceof Error;
 
     if (isError) {
-      return (<span
-        className="watch-value watch-unavailable"
-      >{i18n.debugWatchNotAvailable()}</span>);
+      return (
+        <span className="watch-value watch-unavailable">
+          {i18n.debugWatchNotAvailable()}
+        </span>
+      );
     }
 
     switch (descriptor) {
@@ -156,8 +158,11 @@ const DebugWatch = React.createClass({
         return <span className="watch-value">[array]</span>;
       case 'function':
         // [function MyFunctionName]
-        return <span
-          className="watch-value">{`[${obj.toString().match(/(.*)\(/)[1]}]`}</span>;
+        return (
+          <span className="watch-value">
+            {`[${obj.toString().match(/(.*)\(/)[1]}]`}
+          </span>
+        );
       default:
         return <span className="watch-value">{obj.toString()}</span>;
     }
@@ -270,17 +275,20 @@ const DebugWatch = React.createClass({
 
   onChange(e) {
     this.setState({
-      text: e.target.value,
+      text: e.target.value
     });
   },
 
   render() {
     return (
-      <div id="debugger-watch-container" style={{
+      <div
+        id="debugger-watch-container"
+        style={{
           width: '100%',
           height: '100%'
-        }}>
-        <div id="debug-watch" ref="scrollableContainer" className='debug-watch'>
+        }}
+      >
+        <div id="debug-watch" ref="scrollableContainer" className="debug-watch">
           {
             this.props.watchedExpressions.map(wv => {
               const varName = wv.get('expression');
@@ -289,35 +297,33 @@ const DebugWatch = React.createClass({
               <div className="debug-watch-item" key={wv.get('uuid')}>
                 <div
                   style={{
-                            fontSize: 18,
-                            float: 'right',
-                            cursor: 'pointer',
-                            width: 25,
-                            backgroundColor: '#be0712',
-                            color: 'white',
-                            padding: 6,
-                            paddingRight: 0,
-                            paddingLeft: 10
-                          }}
+                    fontSize: 18,
+                    float: 'right',
+                    cursor: 'pointer',
+                    width: 25,
+                    backgroundColor: '#be0712',
+                    color: 'white',
+                    padding: 6,
+                    paddingRight: 0,
+                    paddingLeft: 10
+                  }}
                   onClick={()=> this.props.remove(wv.get('expression'))}
                 >
                   x
                 </div>
-                <div style={{
-                        float: 'left',
-                        marginTop: 7,
-                        marginLeft: 2,
-                        whiteSpace: 'nowrap',
-                        overflow: 'scroll',
-                        width: 160,
-                        height: 21,
-                      }}>
-                        <span
-                          className="watch-variable"
-                        >{varName}</span>
-                        <span
-                          className="watch-separator"
-                        >: </span>
+                <div
+                  style={{
+                    float: 'left',
+                    marginTop: 7,
+                    marginLeft: 2,
+                    whiteSpace: 'nowrap',
+                    overflow: 'scroll',
+                    width: 160,
+                    height: 21,
+                  }}
+                >
+                  <span className="watch-variable"> {varName} </span>
+                  <span className="watch-separator">: </span>
                   {this.renderValue(varValue)}
                 </div>
               </div>
