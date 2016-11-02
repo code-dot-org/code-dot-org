@@ -44,78 +44,10 @@ social:
 
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
-- filters = []
-
-- entries = []
-- entries << {name: "pre", text: "Pre-reader"}
-- entries << {name: "2-5", text: "Grades 2-5"}
-- entries << {name: "6-8", text: "Grades 6-8"}
-- entries << {name: "9+", text: "Grades 9+"}
-- filters << {name: "grade", text: "Grades", entries: entries}
-
-- entries = []
-- entries << {name: "beginner", text: "Beginner"}
-- entries << {name: "comfortable", text: "Comfortable"}
-- filters << {name: "teacher_experience", text: "Educator's experience", entries: entries}
-
-- entries = []
-- entries << {name: "beginner", text: "Beginner"}
-- entries << {name: "comfortable", text: "Comfortable"}
-- filters << {name: "student_experience", text: "Student's experience", entries: entries}
-
-- entries = []
-- entries << {name: "computers", text: "Computers"}
-- entries << {name: "android", text: "Android"}
-- entries << {name: "ios", text: "iPad/iPhone"}
-- entries << {name: "no-internet", text: "Poor or no internet"}
-- entries << {name: "no-computers", text: "No computers or devices"}
-- filters << {name: "platform", text: "Classroom technology", entries: entries}
-
-- entries = []
-- entries << {name: "science", text: "Science"}
-- entries << {name: "math", text: "Math"}
-- entries << {name: "history", text: "Social Studies"}
-- entries << {name: "la", text: "Language Arts"}
-- entries << {name: "art", text: "Art, Media, Music"}
-- entries << {name: "cs-only", text: "Computer Science only"}
-- filters << {name: "subject", text: "Topics", entries: entries}
-
-- entries = []
-- entries << {name: "online-tutorial", text: "Self-led tutorials"}
-- entries << {name: "lesson-plan", text: "Lesson plan"}
-- filters << {name: "activity_type", text: "Activity type", entries: entries}
-
-- entries = []
-- entries << {name: "1hour", text: "One hour"}
-- entries << {name: "1hour-follow", text: "One hour with follow-on"}
-- entries << {name: "few-hours", text: "A few hours"}
-- filters << {name: "length", text: "Length", entries: entries}
-
-- entries = []
-- entries << {name: "blocks", text: "Blocks"}
-- entries << {name: "typing", text: "Typing"}
-- entries << {name: "other", text: "Other"}
-- filters << {name: "programming_language", text: "Language", entries: entries}
-
-- initial_filters = {}
-- initial_filters[:teacher_experience] = ["beginner"]
-- initial_filters[:student_experience] = ["beginner"]
-
-- hide_filters = {}
-- hide_filters[:activity_type] = ["robotics"]
-
-
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
 
-
-
-.container_responsive
-  .legacy_link{style: "float: right; padding-top: 6px; text-decoration: underline"}
-    %a{href: "/learn/legacy"}
-      Back to last year's tutorials
-  %div{style: "clear:both"}
-  #tutorials
+#tutorials
 
 :javascript
 
@@ -123,11 +55,9 @@ social:
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
-      filters: #{filters.to_json},
-      initialFilters: #{initial_filters.to_json},
-      hideFilters: #{hide_filters.to_json},
       locale: "#{request.locale}",
-      roboticsButton: true
+      roboticsButton: true,
+      legacyLink: '/learn/legacy'
       }
     );
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));

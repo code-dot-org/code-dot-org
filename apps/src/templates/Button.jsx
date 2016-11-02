@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 
-import color from '../color';
+import color from "../util/color";
 
 const ARROW_WIDTH = 58;
 const ARROW_HEIGHT = ARROW_WIDTH * 2;

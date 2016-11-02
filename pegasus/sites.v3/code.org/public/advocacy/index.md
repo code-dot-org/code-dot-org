@@ -72,6 +72,8 @@ For more information, please contact advocacy@code.org.
 
 <%= view :promote_tools, state: nil, section_name: 'local_tools' %>
 
+<div style="clear:both"></div>
+
 ## Policy development resources
 
 <%= view :promote_tools, state: nil, section_name: 'policy_resources' %>

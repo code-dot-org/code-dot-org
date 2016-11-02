@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: Here are the functions you've written, and some more for you to play with. Draw something awesome! Play with the pen width to see how different your drawings look!",
+    "instructions": "Freeplay: Below there are functions you've written, and more for you to play with. Draw something awesome! Play with the pen width to see how different your drawings look!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
@@ -29,11 +29,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**Freeplay:** Here are the functions you've written, and some more for you to play with. Play with the pen width to see how different your drawings look!",
+    "markdown_instructions": "**Freeplay:** Below there are functions you've written, and more for you to play with. Play with the pen width to see how different your drawings look!",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
@@ -435,6 +436,64 @@
                       <value name="VALUE">
                         <block type="math_number" uservisible="false">
                           <title name="NUM">90</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation>
+            <arg name="length"/>
+            <arg name="sides"/>
+            <arg name="min"/>
+          </mutation>
+          <title name="NAME">draw a spiral edge</title>
+          <statement name="STACK">
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="parameters_get">
+                  <title name="VAR">min</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="parameters_get">
+                  <title name="VAR">length</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="parameters_get">
+                              <title name="VAR">sides</title>
+                            </block>
+                          </value>
                         </block>
                       </value>
                     </block>
