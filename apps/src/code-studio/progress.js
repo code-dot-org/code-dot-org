@@ -1,4 +1,3 @@
-/* globals appOptions  */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -7,6 +6,7 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
+import DisabledBubblesModal from './/DisabledBubblesModal';
 import { getStore } from './redux';
 import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
 import { getHiddenStages } from './hiddenStageRedux';
@@ -14,18 +14,26 @@ import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
   LevelStatus,
-  mergeActivityResult,
-  activityCssClass
 } from './activityUtils';
 import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showTeacherInfo
+  showTeacherInfo,
+  disableBubbleColors
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
+import experiments from '@cdo/apps/experiments';
 
 var progress = module.exports;
+
+function showDisabledBubblesModal() {
+  const div = $('<div>');
+  $(document.body).append(div);
+
+  ReactDOM.render(<DisabledBubblesModal/>, div[0]);
+}
+
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
     currentLevelId, saveAnswersBeforeNavigation) {
@@ -76,6 +84,15 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     }
   ).done(data => {
     data = data || {};
+
+    const signedOutUser = Object.keys(data).length === 0;
+    if (!signedOutUser && (scriptData.disablePostMilestone ||
+        experiments.isEnabled('postMilestoneDisabledUI'))) {
+      store.dispatch(disableBubbleColors());
+      if (!scriptData.isHocScript) {
+        showDisabledBubblesModal();
+      }
+    }
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page

@@ -4,7 +4,7 @@
 Feature: Level Group
 
 Background:
-  Given I am on "http://learn.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
@@ -53,14 +53,14 @@ Scenario: Submit three pages.
   And I wait for 3 seconds
 
   # Go back to the first page to see that correct options are selected.
-  Then I am on "http://learn.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true"
+  Then I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true"
   And element ".level-group-content:nth(0) #checked_2" is visible
   And element ".level-group-content:nth(1) #checked_1" is visible
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
 
   # Go to the second page to see that correct answers are selected.
-  Then I am on "http://learn.code.org/s/allthethings/stage/23/puzzle/2/page/2?noautoplay=true"
+  Then I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/2?noautoplay=true"
   And element ".level-group-content:nth(0) #checked_2" is visible
   And element ".level-group-content:nth(1) #checked_0" is visible
   And element ".level-group-content:nth(2) #checked_1" is visible
@@ -68,6 +68,6 @@ Scenario: Submit three pages.
   And element "textarea:nth(1)" has escaped value 'Another first line \nsecond "line"\n!@#$%^&*()_+-=~`\n\\ \\n \\t'
 
   # Go to the third page to see that correct options are selected.
-  Then I am on "http://learn.code.org/s/allthethings/stage/23/puzzle/2/page/3?noautoplay=true"
+  Then I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/3?noautoplay=true"
   And element ".level-group-content:nth(0) #checked_2" is visible
   And element ".level-group-content:nth(1) #checked_1" is visible

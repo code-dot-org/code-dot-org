@@ -32,10 +32,8 @@ var _ = require('lodash');
  * @property {Object} categories configuration of categories within which to place blocks
  */
 
-var COLOR_PINK = '#F57AC6';
 var COLOR_PURPLE = '#BB77C7';
 var COLOR_GREEN = '#68D995';
-var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_WHITE = '#FFFFFF';
 var COLOR_BLUE = '#64B5F6';
 var COLOR_ORANGE = '#FFB74D';

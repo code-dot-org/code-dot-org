@@ -106,6 +106,8 @@ def load_configuration
     'max_property_reads_per_sec'  => 40,
     'max_property_writes_per_sec' => 40,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
+    'files_s3_bucket'             => 'cdo-v3-files',
+    'files_s3_directory'          => rack_env == :production ? 'files' : "files_#{rack_env}",
     'animations_s3_bucket'        => 'cdo-v3-animations',
     'animations_s3_directory'     => rack_env == :production ? 'animations' : "animations_#{rack_env}",
     'assets_s3_bucket'            => 'cdo-v3-assets',
@@ -116,6 +118,7 @@ def load_configuration
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
     'pusher_application_secret'   => 'fake_application_secret',
+    'stub_school_data'            => [:adhoc, :development, :test].include?(rack_env),
     'videos_s3_bucket'            => 'videos.code.org',
     'videos_url'                  => '//videos.code.org'
   }.tap do |config|
@@ -201,7 +204,8 @@ class CDOImpl < OpenStruct
 
   def site_url(domain, path = '', scheme = '')
     host = canonical_hostname(domain)
-    if rack_env?(:development) && !CDO.https_development
+    if (rack_env?(:development) && !CDO.https_development) ||
+        (ENV['CI'] && host.include?('localhost'))
       port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
       host += ":#{port}"
     end
@@ -363,4 +367,8 @@ end
 
 def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
+end
+
+def lib_dir(*dirs)
+  deploy_dir('lib', *dirs)
 end

@@ -9,7 +9,7 @@ nav: educate_nav
 
 ### Quick Links
 
-[General CSP Forum](http://forum.code.org/c/csp) | [Unit 1 Discussion Forum](http://forum.code.org/c/csp-unit1) |  [CSP Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
+[General CS Principles Forum](http://forum.code.org/c/csp) | [Unit 1 Discussion Forum](http://forum.code.org/c/csp-unit1) |  [CS Principles Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
 
 
 
@@ -22,7 +22,7 @@ nav: educate_nav
 				
 				<li> When you go to <a href="https://studio.code.org/s/cspunit1">Unit 1 in Code Studio</a> each "stage" number corresponds to the lesson number.</li> 
 
-				<li> Unlike other Code.org courses, lessons for CSP on Code Studio are <strong>not self-guided</strong>. They require specific structure and context provided by the classroom teacher through the lesson plan. 
+				<li> Unlike other Code.org courses, lessons for CS Principles on Code Studio are <strong>not self-guided</strong>. They require specific structure and context provided by the classroom teacher through the lesson plan. 
 
 				<li>  When exploring the curriculum, or preparing for a lesson, <strong>start with the lesson plan</strong>, which contains all of the necessary details and links for how and when to use the online tools.
 

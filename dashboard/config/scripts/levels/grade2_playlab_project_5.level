@@ -135,6 +135,10 @@
         <block type="studio_setBackground">
           <title name="VALUE">"cave"</title>
         </block>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
         <block type="studio_moveDistance">
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>
@@ -154,6 +158,11 @@
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
         </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+        <block type="studio_repeatForever"/>
       </xml>
     </toolbox_blocks>
   </blocks>

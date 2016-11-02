@@ -87,8 +87,7 @@ module LevelsHelper
 
     return unless autoplay_video
 
-    client_state.add_video_seen(autoplay_video.key)
-    autoplay_video.summarize unless params[:noautoplay]
+    autoplay_video.summarize
   end
 
   def select_and_remember_callouts(always_show = false)
@@ -162,6 +161,8 @@ module LevelsHelper
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
+    post_final_milestone = @script ? Gatekeeper.allows('postFinalMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_final_milestone: post_final_milestone)
 
     @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
@@ -195,6 +196,9 @@ module LevelsHelper
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       @app_options = view_options.camelize_keys
     end
+
+    # Blockly caches level properties, whereas this field depends on the user
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -252,6 +256,10 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+
+    # teacherMarkdown lives on the base app_options object, to be consistent with
+    # Blockly levels, where it needs to avoid caching
+    app_options[:level]['teacherMarkdown'] = nil
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -321,6 +329,7 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['final_level'] = script_level.final_level? if script_level
 
     # Unused Blocks option
     ## TODO (elijah) replace this with more-permanent level configuration
@@ -376,8 +385,8 @@ module LevelsHelper
     # TTS
     # TTS is currently only enabled for k1
     if script && script.is_k1?
-      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file}"
-      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file}"
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end
 
     if @level.is_a? NetSim
@@ -564,11 +573,20 @@ module LevelsHelper
     ]
   end
 
+  def session_id
+    # session.id may not be available on the first visit unless we write to the session first.
+    session['init'] = true
+    session.id
+  end
+
+  def user_or_session_id
+    current_user ? current_user.id.to_s : session_id
+  end
+
   # Unique, consistent ID for a user of an applab app.
   def applab_user_id
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
-    user_id = current_user ? current_user.id.to_s : session.id
-    Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
+    Digest::SHA1.base64digest("#{channel_id}:#{user_or_session_id}").tr('=', '')
   end
 
   # Assign a firebase authentication token based on the firebase secret,
@@ -581,16 +599,8 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    if current_user
-      user_id = current_user.id.to_s
-    elsif session.id
-      user_id = session.id.to_s
-    else
-      # a signed-out user may not have a session id on their first visit
-      user_id = 'anon'
-    end
     payload = {
-      :uid => user_id,
+      :uid => user_or_session_id,
       :is_dashboard_user => !!current_user
     }
     options = {}

@@ -49,7 +49,6 @@ var DeleteElementButton = React.createClass({
   },
 
   render: function () {
-    var confirm;
     if (this.state.confirming) {
       return (
         <div style={[styles.right, styles.confirming]}>

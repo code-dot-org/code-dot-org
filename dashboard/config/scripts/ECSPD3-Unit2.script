@@ -1,10 +1,10 @@
+professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'ECS Phase 3 Welcome'
 level 'ECS Phase 3 Overview'
-level 'PDECS Tour'
+level 'PDECS tour'
 level 'PD check your progress'
 level 'ECSPD Unit 2 Outline'
 level 'ECSPD P3 Plan'
@@ -48,4 +48,3 @@ level 'ECSU2 Challenge Submission'
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
-# level 'ECSPD 1 page template'

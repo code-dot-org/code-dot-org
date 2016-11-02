@@ -81,7 +81,6 @@ export default {
     appElement.classList.remove('notRunning');
     appElement.classList.remove('withCrosshair');
 
-    var htmlBody = appElement.outerHTML;
     var css = extractCSSFromHTML(appElement);
     var html = exportProjectEjs({htmlBody: appElement.outerHTML});
     var readme = exportProjectReadmeEjs({appName: appName});

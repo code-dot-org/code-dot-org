@@ -1,5 +1,4 @@
 import {expect} from '../../../util/configuredChai';
-import 'babel-polyfill';
 import sinon from 'sinon';
 
 import {
@@ -61,7 +60,7 @@ describe("Applab Screens Reducer", function () {
       sinon.stub(sourcesApi, 'withProjectId').returnsThis();
       sinon.stub(channelsApi, 'ajax');
       sinon.stub(channelsApi, 'withProjectId').returnsThis();
-      sinon.stub(assetsApi, 'ajax');
+      sinon.stub(assetsApi, 'getFiles');
       sinon.stub(assetsApi, 'withProjectId').returnsThis();
     });
 
@@ -70,7 +69,7 @@ describe("Applab Screens Reducer", function () {
       sourcesApi.withProjectId.restore();
       channelsApi.ajax.restore();
       channelsApi.withProjectId.restore();
-      assetsApi.ajax.restore();
+      assetsApi.getFiles.restore();
       assetsApi.withProjectId.restore();
     });
 
@@ -110,8 +109,8 @@ describe("Applab Screens Reducer", function () {
         beforeEach(() => {
           [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
           [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
-          [, , existingAssetsSuccess, existingAssetsFail] = assetsApi.ajax.firstCall.args;
-          [, , assetsSuccess, assetsFail] = assetsApi.ajax.secondCall.args;
+          [existingAssetsSuccess, existingAssetsFail] = assetsApi.getFiles.firstCall.args;
+          [assetsSuccess, assetsFail] = assetsApi.getFiles.secondCall.args;
         });
 
         describe("and sources fail", () => {
@@ -132,8 +131,8 @@ describe("Applab Screens Reducer", function () {
           beforeEach(() => {
             channelsSuccess({response: '"bar"'});
             sourcesSuccess({response: '"foo"'});
-            assetsSuccess({response: '[]'});
-            existingAssetsSuccess({response: '[]'});
+            assetsSuccess({files: []});
+            existingAssetsSuccess({files: []});
           });
           it("will set isFetchingProject=false and fetchedProject=the fetched results", () => {
             expect(store.getState().importProject.isFetchingProject).to.be.false;

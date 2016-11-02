@@ -4,9 +4,6 @@
  * Copyright 2014 Code.org
  *
  */
-
-
-import { Direction, SquareType } from './constants';
 import { singleton as studioApp } from '../StudioApp';
 
 export default class Collidable {

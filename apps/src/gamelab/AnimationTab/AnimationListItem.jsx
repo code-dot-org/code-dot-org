@@ -92,6 +92,7 @@ const AnimationListItem = React.createClass({
     setAnimationFrameDelay: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
+    allAnimationsSingleFrame: React.PropTypes.bool.isRequired
   },
 
   getAnimationProps(props) {
@@ -247,6 +248,7 @@ const AnimationListItem = React.createClass({
           ref="thumbnail"
           animationProps={animationProps}
           isSelected={this.props.isSelected}
+          singleFrameAnimation={this.props.allAnimationsSingleFrame}
         />
         {animationName}
         {this.props.isSelected &&
@@ -257,13 +259,15 @@ const AnimationListItem = React.createClass({
             onLoopingChanged={this.setAnimationLooping}
             looping={animationProps.looping}
             frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
+            singleFrameAnimation={this.props.allAnimationsSingleFrame}
           />}
       </div>
     );
   }
 });
 export default connect(state => ({
-  columnWidth: state.animationTab.columnSizes[0]
+  columnWidth: state.animationTab.columnSizes[0],
+  allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame || false
 }), dispatch => {
   return {
     cloneAnimation(animationKey) {

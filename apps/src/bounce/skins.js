@@ -36,12 +36,17 @@ exports.load = function (assetUrl, id) {
     paddle: skin.assetUrl('retro_paddle.png'),
     ball: skin.assetUrl('retro_ball.png')
   };
+  skin.hand_2 = {
+    paddle: skin.assetUrl('hand_2.png'),
+  };
 
   // Images
   skin.tiles = skin.assetUrl(config.tiles ||'tiles_wall.png');
   skin.goalTiles = skin.assetUrl(config.goalTiles ||'tiles_goal.png');
   skin.goal = skin.assetUrl(config.goal ||'goal.png');
   skin.goalSuccess = skin.assetUrl(config.goalSuccess ||'goal_success.png');
+  skin.flagGoal = skin.assetUrl('flag_goal.png');
+  skin.flagGoalSuccess = skin.assetUrl('flag_goal_success.png');
   skin.ball = skin.assetUrl(config.ball ||'ball.png');
   skin.paddle = skin.assetUrl(config.paddle ||'paddle.png');
   skin.obstacle = skin.assetUrl(config.obstacle ||'obstacle.png');

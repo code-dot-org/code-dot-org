@@ -1,7 +1,4 @@
-hidden 'true'
-
 login_required 'true'
-hidden 'true'
 
 stage 'CS Principles Culminating Assessment'
 level 'CSP_Final_instructions'

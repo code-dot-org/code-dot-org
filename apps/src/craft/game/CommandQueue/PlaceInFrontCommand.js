@@ -1,5 +1,3 @@
-
-import CommandState from "./CommandState.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class PlaceInFrontCommand extends BaseCommand {
@@ -18,4 +16,3 @@ export default class PlaceInFrontCommand extends BaseCommand {
         this.GameController.placeBlockForward(this, this.BlockType);
     }
 }
-

@@ -90,7 +90,8 @@
     "encrypted_examples": "DT0qfO/yLwEZeJphEi3U4pMBzIahA/iqKGqv7HdAhJ5ykquX/wcPuF5aSP0V\nOjhG\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

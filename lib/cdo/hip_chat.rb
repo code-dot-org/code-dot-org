@@ -43,10 +43,6 @@ class HipChat
     Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
 
-  def self.notify(room, message, options={})
-    message(room, message, options.merge(notify: true))
-  end
-
   def self.slackify(message)
     # format with slack markdownish formatting instead of html
     # https://slack.zendesk.com/hc/en-us/articles/202288908-Formatting-your-messages
@@ -72,8 +68,12 @@ class HipChat
   def self.post_to_hipchat(room, message, options={})
     unless CDO.hip_chat_logging
       # Output to standard log if HipChat isn't configured
-      CDO.log.info("#{room}: #{message}")
+      CDO.log.info(message.to_s)
       return
+    end
+
+    if options[:wrap_with_tag]
+      message = "<#{options[:wrap_with_tag]}>#{message}</#{options[:wrap_with_tag]}>"
     end
 
     # Make the initial request synchronously.

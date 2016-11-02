@@ -125,6 +125,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
         <block type="studio_moveDistance">
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>
@@ -144,6 +148,7 @@
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">2</title>
         </block>
+        <block type="studio_repeatForever" limit="1"/>
       </xml>
     </toolbox_blocks>
   </blocks>

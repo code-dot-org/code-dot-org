@@ -1,5 +1,4 @@
 import React from 'react';
-import applabMsg from '@cdo/applab/locale';
 import DesignModeBox from './DesignModeBox';
 import DesignModeHeaders from './DesignModeHeaders';
 

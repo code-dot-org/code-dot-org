@@ -20,6 +20,7 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Gamelab < Blockly
@@ -29,6 +30,8 @@ class Gamelab < Blockly
     free_play
     text_mode_at_start
     hide_animation_mode
+    start_in_animation_tab
+    all_animations_single_frame
     show_d_pad
     soft_buttons
     submittable
@@ -39,6 +42,7 @@ class Gamelab < Blockly
     debugger_disabled
     pause_animations_by_default
     start_animations
+    teacher_markdown
   )
 
   # List of possible skins, the first is used as a default.
@@ -143,6 +147,7 @@ class Gamelab < Blockly
         "setFrame": null,
         "x": null,
         "y": null,
+        "bounciness": null,
         "rotateToDirection": null,
         "rotation": null,
         "rotationSpeed": null,

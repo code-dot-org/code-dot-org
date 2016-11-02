@@ -44,6 +44,7 @@
     ],
     "first_sprite_index": "0",
     "project_template_level_name": "grade2_playlab_project_template",
+    "markdown_instructions": "Can you have Waddles (actor 1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen you're done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)",
     "contained_level_names": null
   },
   "published": true,
@@ -110,6 +111,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
         <block type="studio_moveDistance">
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>
@@ -126,6 +131,7 @@
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
         </block>
+        <block type="studio_repeatForever" limit="1"/>
       </xml>
     </toolbox_blocks>
   </blocks>

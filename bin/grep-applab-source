@@ -81,7 +81,7 @@ applab_channels.each_slice(MAX_THREADS) do |chunk|
       end if source
     end
   end
-  threads.each &:join
+  threads.each(&:join)
 
   count += chunk.length
   puts "#{count} files scanned..." if count % LOG_INCREMENT == 0

@@ -61,10 +61,9 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="studio_moveDistance">
+        <block type="studio_move">
           <title name="SPRITE">0</title>
           <title name="DIR">1</title>
-          <title name="DISTANCE">25</title>
         </block>
         <block type="studio_saySprite">
           <title name="SPRITE">0</title>

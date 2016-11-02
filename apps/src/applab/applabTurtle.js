@@ -20,7 +20,6 @@ applabTurtle.getTurtleContext = function () {
 
     // And create the turtle (defaults to visible):
     Applab.turtle.visible = true;
-    var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
     turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';

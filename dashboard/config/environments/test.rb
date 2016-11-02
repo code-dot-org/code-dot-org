@@ -63,6 +63,10 @@ Dashboard::Application.configure do
 #  config.action_mailer.raise_delivery_errors = true
 #  config.action_mailer.delivery_method = :smtp
 
+  # Show mail previews (rails/mailers).
+  # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
+  config.action_mailer.show_previews = true
+
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = true
 

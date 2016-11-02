@@ -261,6 +261,10 @@ Use these activities to enhance student learning. They can be used as outside of
 - Repeat until the class can go through this process fairly undirected.
 - Can you figure out how to pass parameters in this exercise?
 
+### Functional Suncatchers
+
+- [Functional Suncatchers](https://code.org/curriculum/course3/4/Teacher) This activity shows functions from a different perspective. The students will follow a series of repetitive steps, then be asked to identify certain sets of “skills” that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper.
+
 [/together]
 
 [together]

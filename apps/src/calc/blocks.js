@@ -22,7 +22,6 @@
  * @author fraser@google.com (Neil Fraser)
  */
 var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
 
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 

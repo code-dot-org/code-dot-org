@@ -1,11 +1,10 @@
 professional_learning_course 'ECS Support'
 login_required 'true'
-pd 'true'
 
 stage 'Getting Started'
 level 'ECS Phase 3 Unit3 Welcome'
 level 'ECS Phase 3 Unit 3 Overview'
-level 'PDECS Tour'
+level 'PDECS tour'
 level 'PLC- check your progress'
 level 'ECSPD Unit 3 Outline'
 level 'ECSPD P3 Plan'
@@ -38,16 +37,13 @@ level 'ECSPD U3 D 22-25 Intro'
 
 stage 'Unit 3 Challenge'
 level 'ECSPD-unit2 What is the Challenge'
-level  'ECSPD U3 Challenges'
-named_level ‘ECS Unit 3 Challenge Selection’
-level 'ECSD3-u5 do the challenge’
+level 'ECSPD U3 Challenges'
+named_level 'ECS Unit 3 Challenge Selection'
+level 'ECSD3-u5 do the challenge'
 level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
-named_level ‘ECS Unit 3 Challenge Submission’
+named_level 'ECS Unit 3 Challenge Submission'
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
-
-
-

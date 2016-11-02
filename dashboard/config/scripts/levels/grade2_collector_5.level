@@ -26,12 +26,13 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "These blocks are in the wrong order! Help me collect each bone by putting them in the right order.",
-    "markdown_instructions": "These blocks are in the wrong order! Help me collect each bone by putting them in the right order.",
+    "instructions": "\"Help me collect each gold coin!\"\r\n\r\nThese blocks are in the wrong order. Can you fix them?",
+    "markdown_instructions": "*\"Help me collect each gold coin!\"*\r\n\r\nThese blocks are in the wrong order. Can you fix them?",
+    "ideal": "10",
     "contained_level_names": null
   },
   "published": true,
-  "notes": " All blocks already attached, but some in wrong order. How do you fix?",
+  "notes": "All blocks already attached, but some in wrong order. How do you fix?",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -40,31 +41,30 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_move">
+            <block type="maze_move" deletable="false">
               <title name="DIR">moveForward</title>
               <next>
-                <block type="collector_collect">
+                <block type="maze_move" deletable="false">
+                  <title name="DIR">moveForward</title>
                   <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
+                    <block type="maze_turn" deletable="false">
+                      <title name="DIR">turnRight</title>
                       <next>
-                        <block type="collector_collect">
+                        <block type="maze_move" deletable="false">
+                          <title name="DIR">moveForward</title>
                           <next>
-                            <block type="maze_move">
+                            <block type="maze_move" deletable="false">
                               <title name="DIR">moveForward</title>
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnRight</title>
+                                <block type="maze_move" deletable="false">
+                                  <title name="DIR">moveForward</title>
                                   <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
+                                    <block type="maze_turn" deletable="false">
+                                      <title name="DIR">turnLeft</title>
                                       <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
+                                        <block type="collector_collect" deletable="false">
                                           <next>
-                                            <block type="maze_move">
-                                              <title name="DIR">moveForward</title>
-                                            </block>
+                                            <block type="collector_collect" deletable="false"/>
                                           </next>
                                         </block>
                                       </next>
@@ -85,23 +85,6 @@
         </block>
       </xml>
     </start_blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="maze_move">
-          <title name="DIR">moveForward</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
-        </block>
-        <block type="collector_collect"/>
-      </xml>
-    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

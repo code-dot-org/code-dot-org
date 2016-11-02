@@ -16,6 +16,8 @@
 # where kappa is some pre-determined constant and actual is the outcome in the
 # UserLevel.
 
+# USAGE: ruby experimental/csf_proficiency/elo_modeling.rb user_data.csv level_concept_difficulty.csv {'all' | user_id} {'all' | concept} [out_file.csv]
+
 require 'csv'
 
 # Picked so that Prob_C(D, AP) = 0.9 anytime AP - D = 1.
@@ -59,7 +61,7 @@ def read_lcd_file(file)
   data = {}
   CSV.foreach(file) do |row|
     row = row.map(&:to_i)
-    data[row[1]] = row[4..13]
+    data[row[2]] = row[4..13]
   end
   data
 end
@@ -88,45 +90,72 @@ end
 # @param difficulty [Integer] the difficulty for the fixed concept of the
 #   level.
 # @param user_level_data [Array[Integer]] a user_levels summary for the level.
-# @return [Float] a post proficiency belief for the fixed concept.
+# @return [Float] a post proficiency belief for the fixed concept, truncated to
+#   the interval [0, 6].
 def new_proficiency(prior, difficulty, user_level_data)
+  return prior if user_level_data[0] == 30
   actual = perfect_without_hints(*user_level_data)
   expected = get_expected_score(prior, difficulty)
-  prior + KAPPA * (actual - expected)
+  post = prior + KAPPA * (actual - expected)
+  [[0.0, post].max, 6.0].min
 end
 
-# @param user_data [Hash[Integer, Array[Integer]]] mapping from level_id to a
-#   user_level summary.
-# @param lcd [Hash[Integer, Array[Integer]]] mapping from level_id to a
-#   LevelConceptDifficult summary.
-# @param concept [Symbol] the concept to process
-def process_user(user_data, lcd, concept)
-  lcd_index = CONCEPT_TO_INDEX_HASH[concept]
-  proficiency = 0
-  user_data.each do |level_id, level_data|
-    puts "  PROCESSING #{concept} , #{level_id}..."
-    next unless lcd[level_id][lcd_index] > 0
-    next if level_data[0] == 30
-    puts "    PRIOR: #{proficiency}"
-    proficiency = new_proficiency(proficiency, lcd[level_id][lcd_index], level_data)
-    puts "    POST: #{proficiency}  (#{level_data} , #{lcd[level_id][lcd_index]})"
+# @param user_level_data [...]
+# @param level_data [Array[FixNum] an array of length ten, giving the
+#   level_concept_difficulties for the level.
+# @param prior_proficiency [Array[FixNum]] an array of length ten, giving the
+#   prior measured proficiency for the ten concepts.
+# @returns [Array[FixNum]] an array of length ten, giving the post measured
+#   proficiency for the ten concepts.
+def process_level(user_level_data, level_data, prior_proficiency)
+  post_proficiency = prior_proficiency.clone
+  level_data.each_with_index do |level_concept_difficulty, index|
+    next unless level_concept_difficulty > 0
+    post_proficiency[index] = new_proficiency(
+      prior_proficiency[index],
+      level_concept_difficulty,
+      user_level_data
+    )
   end
+  post_proficiency
 end
 
 # @param data [Hash] ...
 # @param lcd [Hash] ...
-# @param concept [Symbol | nil] the concept which should be analyzed, with nil
-#   specifying that all concepts should be analyzed
 # @param user [Integer | nil] the user to analyze, with nil specifying that all
 #   users (in the data file) should be analyzed
-def process_data(data, lcd, concept, user)
+# @returns [Array[Array[FixNum]] an array of arrays of measured proficiencies,
+#   with each outer array corresponding to the post proficiency of a level
+def process_data(data, lcd, user)
+  output = []
   data.each do |user_id, user_data|
     next if user && user_id != user
-    puts "PROCESSING USER #{user_id}..."
-    CONCEPT_TO_INDEX_HASH.keys.each do |concept_key|
-      unless concept && concept != concept_key
-        process_user(user_data, lcd, concept_key)
+    current_user_proficiency = Array.new(10, 0)
+    lcd.each do |level_id, level_data|
+      if user_data.key? level_id
+        user_level_data = user_data[level_id]
+        current_user_proficiency = process_level(
+          user_level_data,
+          level_data,
+          current_user_proficiency
+        )
       end
+      output << current_user_proficiency
+    end
+  end
+  output
+end
+
+# @param concept [String | nil] the concept to filter output to, with nil
+#   specifying all concepts should be output
+# @param output [Array[Array[String]]] an array of arrays of strings to be
+#   written to out_file
+# @param out_file [String] the filepath to write output to
+def write_output(concept, output, out_file)
+  # TODO(asher): Filter by the concept argument.
+  CSV.open(out_file, 'w') do |csv|
+    output.each do |line|
+      csv << line
     end
   end
 end
@@ -136,8 +165,11 @@ def main
   lcd = read_lcd_file ARGV[1]
   concept = ARGV[2] == 'all' ? nil : ARGV[2].to_sym
   user = ARGV[3] == 'all' ? nil : ARGV[3].to_i
+  out_file = ARGV[4]
 
-  process_data(data, lcd, concept, user)
+  output = process_data(data, lcd, user)
+
+  write_output(concept, output, out_file) if out_file
 end
 
 main

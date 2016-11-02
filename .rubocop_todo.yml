@@ -6,10 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 11
-Lint/AmbiguousOperator:
-  Enabled: false
-
 # Offense count: 248
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
@@ -23,10 +19,6 @@ Lint/IneffectiveAccessModifier:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: runtime_error, standard_error
 Lint/InheritException:
-  Enabled: false
-
-# Offense count: 9
-Lint/Loop:
   Enabled: false
 
 # Offense count: 24
@@ -309,13 +301,6 @@ Style/TernaryParentheses:
 # Cop supports --auto-correct.
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
-  Enabled: false
-
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: ExactNameMatch, AllowPredicates, AllowDSLWriters, IgnoreClassMethods, Whitelist.
-# Whitelist: to_ary, to_a, to_c, to_enum, to_h, to_hash, to_i, to_int, to_io, to_open, to_path, to_proc, to_r, to_regexp, to_str, to_s, to_sym
-Style/TrivialAccessors:
   Enabled: false
 
 # Offense count: 31

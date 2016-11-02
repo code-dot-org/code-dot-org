@@ -7,9 +7,7 @@
   "properties": {
     "skip_dialog": true,
     "href": "public_key_cryptography/public_key_cryptography.html",
-    "cryptography_widget_view": "1",
-    "markdown_instructions": "### Directions\r\n\r\nHere are some instructions\r\n\r\n### Try this:\r\n\r\n* blah \r\n* blah \r\n* blah",
-    "instructions": "Instructions"
+    "cryptography_widget_view": "1"
   },
   "published": true,
   "notes": "",

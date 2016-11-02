@@ -15,7 +15,7 @@
     "instructions": "Now, let's make a function called \"jump to upper right\" that moves the artist to the upper-right of the octagon that you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself to the upper-right corner, try jumping in a pattern that makes just 3/8 of the octagon.",
     "ideal": "21",
     "embed": "false",
-    "markdown_instructions": "Now, let's make a function called `jump to upper right` that moves the artist to the upper-right of the octagon that you just drew so we can finish this pattern.  \r\n<br/>\r\n*Hint:  To get yourself to the upper-right corner, try jumping in a pattern that makes just 3/8 of the octagon.*  \r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Now, let's make a function called `jump to upper right` that moves the artist to the upper-right of the octagon that you just drew so we can finish this pattern.  \r\n<br/>\r\n*Hint:  To get yourself to the upper-right corner, try jumping in a pattern that makes just 3/8 of the octagon.*  ",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",

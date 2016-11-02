@@ -15,6 +15,7 @@ export let VisualizationOverlay = React.createClass({
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
     areOverlaysVisible: React.PropTypes.bool.isRequired,
+    onMouseMove: React.PropTypes.func,
     children: React.PropTypes.node,
   },
 
@@ -67,6 +68,9 @@ export let VisualizationOverlay = React.createClass({
       mouseX: this.mousePos_.x,
       mouseY: this.mousePos_.y
     });
+    if (typeof this.props.onMouseMove === 'function') {
+      this.props.onMouseMove(this.mousePos_.x, this.mousePos_.y);
+    }
   },
 
   renderOverlays() {

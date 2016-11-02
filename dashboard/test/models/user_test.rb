@@ -662,34 +662,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "backfill user_scripts backfills assigned_at" do
-    begin
-      Follower.record_timestamps = false
-
-      assigned_date = Time.now - 20.days
-
-      student = create :student
-      section = create :section, script: Script.find_by_name('course1')
-      create :follower, student_user: student, section: section, created_at: assigned_date
-
-      # pretend we created this script before we had the callback to create user_scripts
-      UserScript.last.destroy
-
-      assert_creates(UserScript) do
-        student.backfill_user_scripts
-      end
-
-      user_script = UserScript.last
-      assert_equal nil, user_script.started_at
-      assert_equal nil, user_script.last_progress_at
-      assert_equal assigned_date.to_i, user_script.assigned_at.to_i
-      assert_equal nil, user_script.completed_at
-
-    ensure
-      UserLevel.record_timestamps = true
-    end
-  end
-
   def complete_script_for_user(user, script, completed_date = Time.now)
     # complete all except last level a day earlier
     script.script_levels[0..-2].each do |sl|
@@ -1111,12 +1083,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'generate_username for existing username via fallback' do
-    ['', '6', '1', '4', '77', '19', '93'].each do |suffix|
+    ['', '6', '1', '4', '77', '19', '93', '377', '854', '904'].each do |suffix|
       create_user_with_username "captain_picard#{suffix}"
     end
 
     srand 0
-    assert_equal 'captain_picard94',
+    assert_equal 'captain_picard905',
       UserHelpers.generate_username(User, 'Captain Picard')
   end
 
@@ -1373,5 +1345,62 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.permission?(UserPermission::FACILITATOR)
     assert !user.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  test 'should_see_inline_answer? returns true in levelbuilder' do
+    user = create :user
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    assert user.should_see_inline_answer?(nil)
+    assert user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns false for non teachers' do
+    user = create :student
+    assert_not user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns true for authorized teachers in csp' do
+    user = create :teacher
+    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
+    assert user.should_see_inline_answer?((create :script_level))
+  end
+
+  test 'account_age_days should return days since account creation' do
+    student = create :student, created_at: DateTime.now - 10
+    assert student.account_age_days == 10
+  end
+
+  test 'do not show race interstitial to teacher' do
+    teacher = create :teacher, created_at: DateTime.now - 8
+    refute teacher.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts under 13' do
+    student = User.create(@good_data_young)
+    student.created_at = DateTime.now - 8
+    refute student.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts less than one week old' do
+    student = create :student, created_at: DateTime.now - 3
+    refute student.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts that have already entered race information' do
+    student = create :student, created_at: DateTime.now - 8
+    student.races = %w(white black)
+    refute student.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts that have closed the dialog already' do
+    student = create :student, created_at: DateTime.now - 8
+    student.races = %w(closed_dialog)
+    refute student.show_race_interstitial?
+  end
+
+  test 'show race interstitial for student over 13 with account more than 1 week old' do
+    student = create :student, created_at: DateTime.now - 8
+    assert student.show_race_interstitial?
   end
 end

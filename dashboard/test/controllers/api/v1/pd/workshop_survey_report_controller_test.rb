@@ -5,6 +5,7 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     @facilitator = create :facilitator
     @organizer = create :workshop_organizer
     @workshop = create(:pd_workshop, organizer: @organizer, facilitators: [@facilitator])
+    AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
   end
 
   API = '/api/v1/pd/workshops'

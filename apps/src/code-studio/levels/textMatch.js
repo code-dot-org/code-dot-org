@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { registerGetResult } from './codeStudioLevels';
+import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
 var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
 
@@ -36,10 +36,10 @@ TextMatch.prototype.ready = function () {
 
   var textarea = $("#" + this.id + " textarea.response");
   textarea.blur(() => {
-    window.dashboard.codeStudioLevels.onAnswerChanged(this.levelId, true);
+    onAnswerChanged(this.levelId, true);
   });
   textarea.on("input", null, null, () => {
-    window.dashboard.codeStudioLevels.onAnswerChanged(this.levelId, false);
+    onAnswerChanged(this.levelId, false);
   });
 };
 

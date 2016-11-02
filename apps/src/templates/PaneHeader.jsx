@@ -10,7 +10,6 @@ var Radium = require('radium');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
 var color = require('../color');
-var experiments = require('../experiments');
 
 var styles = {
   paneSection: {
@@ -119,7 +118,7 @@ PaneSection.propTypes = {
 var PaneButton = function (props) {
   var divStyle = [
     styles.headerButton,
-    props.isRtl && styles.headerButtonRtl,
+    (props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
     props.isMinecraft && styles.headerButtonMinecraft,
     !props.headerHasFocus && styles.headerButtonUnfocused
   ];
@@ -132,6 +131,7 @@ var PaneButton = function (props) {
     <div
       id={props.id}
       style={divStyle}
+      onClick={props.onClick}
     >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
@@ -146,6 +146,8 @@ PaneButton.propTypes = {
   iconClass: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   isRtl: React.PropTypes.bool.isRequired,
+  leftJustified: React.PropTypes.bool,
+  onClick: React.PropTypes.func,
   hiddenImage: React.PropTypes.element,
   isMinecraft: React.PropTypes.bool,
   id: React.PropTypes.string,
