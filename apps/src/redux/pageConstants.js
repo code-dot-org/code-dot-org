@@ -28,7 +28,6 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
-  'watchersOptions',
   'showDebugSlider',
   'localeDirection',
   'hasContainedLevels',

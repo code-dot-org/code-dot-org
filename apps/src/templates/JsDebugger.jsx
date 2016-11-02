@@ -186,6 +186,9 @@ var JsDebugger = React.createClass({
             {this.props.debugWatch &&
             <PaneSection
               id="debug-watch-header"
+              onClick={() => {
+                this.setState({watchersHidden: !this.state.watchersHidden});
+              }}
               style={this.state.watchersHidden ? {
                 borderLeft: 'none',
                 textAlign: 'right',
@@ -196,9 +199,6 @@ var JsDebugger = React.createClass({
                 id="hide-toolbox-icon"
                 style={styles.showDebugWatchIcon}
                 className={"fa " + (this.state.watchersHidden ? "fa-chevron-circle-left" : "fa-chevron-circle-right")}
-                onClick={() => {
-                  this.setState({watchersHidden: !this.state.watchersHidden});
-                }}
               />
               <span
                   style={styles.noUserSelect}
