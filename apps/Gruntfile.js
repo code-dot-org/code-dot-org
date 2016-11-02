@@ -392,7 +392,7 @@ module.exports = function (grunt) {
     embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 

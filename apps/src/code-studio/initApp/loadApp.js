@@ -1,4 +1,4 @@
-/* global dashboard appOptions addToHome script_path CDOSounds appOptions trackEvent Applab Blockly */
+/* global dashboard appOptions addToHome CDOSounds appOptions trackEvent Applab Blockly */
 import $ from 'jquery';
 import { getStore } from '../redux';
 import { disableBubbleColors } from '../progressRedux';
@@ -47,7 +47,7 @@ function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
   }
-  timing.startTiming('Puzzle', script_path, '');
+  timing.startTiming('Puzzle', window.script_path, '');
 
   var lastSavedProgram;
 
@@ -100,15 +100,15 @@ function setupApp(appOptions) {
           clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
         report.callback = appOptions.report.callback;
-        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
+        trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
       }
       report.scriptName = appOptions.scriptName;
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
-      trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
+      trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
       if (report.pass) {
-        trackEvent('Puzzle', 'Success', script_path, report.attempt);
-        timing.stopTiming('Puzzle', script_path, '');
+        trackEvent('Puzzle', 'Success', window.script_path, report.attempt);
+        timing.stopTiming('Puzzle', window.script_path, '');
       }
       reporting.sendReport(report);
     },
@@ -397,16 +397,24 @@ window.apps = {
 };
 
 /**
- * Attaches an apps.load() function to the window which can be used to initialize an app.
- * Should only be called once per page load.
+ * Sets up everything needed for an app (like applab, gamelab, eval, etc.) to run.
+ * This should only be called once per page load, with appoptions specified as a
+ * data attribute on the script tag.
  */
 export default function loadApp(appMain) {
   // Loads the dependencies for the current app based on values in `appOptions`.
   // This function takes a callback which is called once dependencies are ready.
   const script = document.querySelector(`script[data-appoptions]`);
   const appOptions = JSON.parse(script.dataset.appoptions);
-  loadAppAsync(appOptions, () => {
-    project.init(window.apps.sourceHandler);
+  if (appOptions.embedded) {
+    // when we just "embed" an app (i.e. via embed_blocks.html.erb),
+    // we just want to call the appMain function immediately without
+    // loading a bunch of other stuff.
     appMain(appOptions);
-  });
+  } else {
+    loadAppAsync(appOptions, () => {
+      project.init(window.apps.sourceHandler);
+      appMain(appOptions);
+    });
+  }
 }
