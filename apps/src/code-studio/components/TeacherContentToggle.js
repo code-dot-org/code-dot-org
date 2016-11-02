@@ -28,14 +28,9 @@ const TeacherContentToggle = Radium(React.createClass({
   propTypes: {
     viewAs: PropTypes.string.isRequired,
     hiddenStagesInitialized: PropTypes.bool.isRequired,
+    sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
-  },
-
-  getInitialState() {
-    return {
-      sizeableContent: false
-    };
   },
 
   componentDidMount() {
@@ -46,11 +41,12 @@ const TeacherContentToggle = Radium(React.createClass({
     // student view doesnt show content while we make async calls. Once this
     // component has mounted, we move level-body into our first div, which will
     // now own toggling visibility
-    $('#level-body').appendTo(this.refs.content);
+    $('#level-body').css('opacity', '').appendTo(this.refs.content);
+    console.log('componentdidmount');
   },
 
   render() {
-    const { viewAs, hiddenStagesInitialized, isLockedStage, isHiddenStage } = this.props;
+    const { viewAs, hiddenStagesInitialized, sectionsAreLoaded, isLockedStage, isHiddenStage } = this.props;
 
     const frameStyle = {
       position: 'relative',
@@ -63,7 +59,9 @@ const TeacherContentToggle = Radium(React.createClass({
     let hasOverlayFrame = (isLockedStage || isHiddenStage);
 
     if (viewAs === ViewType.Student) {
-      if (!hiddenStagesInitialized || hasOverlayFrame) {
+      // Keep this hidden until we've made our async calls for hidden_stages and
+      // locked stages, so that we don't flash content before hiding it
+      if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.opacity = 0;
       }
 
@@ -110,6 +108,7 @@ export default connect(state => {
 
   return {
     viewAs,
+    sectionsAreLoaded: state.sections.sectionsAreLoaded,
     hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     isHiddenStage,
     isLockedStage

@@ -6,6 +6,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
+import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
 import { NO_SECTION, SET_SECTIONS, SELECT_SECTION } from './sectionsRedux';
 
@@ -134,13 +135,24 @@ export default function reducer(state = initialState, action) {
 export const authorizeLockable = () => ({ type: AUTHORIZE_LOCKABLE });
 
 export const setViewType = viewType => {
-  if (!ViewType[viewType]) {
-    throw new Error('unknown ViewType: ' + viewType);
-  }
+  return dispatch => {
+    if (!ViewType[viewType]) {
+      throw new Error('unknown ViewType: ' + viewType);
+    }
 
-  return {
-    type: SET_VIEW_TYPE,
-    viewAs: viewType
+    // If changing to viewAs student while we are a particular student, remove
+    // the user_id and do a reload so that we're instead viewing as a generic
+    // student
+    if (viewType === ViewType.Student && queryParams('user_id')) {
+      updateQueryParam('user_id', undefined);
+      window.location.reload();
+      return;
+    }
+
+    dispatch({
+      type: SET_VIEW_TYPE,
+      viewAs: viewType
+    });
   };
 };
 
