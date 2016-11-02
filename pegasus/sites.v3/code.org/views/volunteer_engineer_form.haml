@@ -177,7 +177,7 @@
 
     var serializedData = $('#volunteer-engineer-submit-form').serializeArray();
 
-    // Reset volunteer all year to null if the checkbox is unchecked.
+    // Send null when checkbox is unchecked to reset the value. Otherwise nothing will be updated for the field.
     serializedData = serializedData.concat(
       $('input[type=checkbox]:not(:checked)#volunteer-after-hoc').map(
         function() {
