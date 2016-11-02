@@ -23,7 +23,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
 
   test 'defaults' do
     set_default_date_expectations
-    @controller.load_workshops
+    @controller.load_filtered_ended_workshops
   end
 
   test 'organizer view' do
@@ -31,7 +31,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @user.unstub :admin?
     @user.expects admin?: false
     expects(:organized_by).with(@user)
-    @controller.load_workshops
+    @controller.load_filtered_ended_workshops
   end
 
   test 'query by start' do
@@ -40,7 +40,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     expects(:start_on_or_after).with(start_date)
     expects(:start_on_or_before).with(end_date)
     params start: start_date, end: end_date, query_by: 'schedule'
-    @controller.load_workshops
+    @controller.load_filtered_ended_workshops
   end
 
   test 'query by end' do
@@ -51,7 +51,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     expects(:end_on_or_before).with(end_date)
 
     params start: start_date, end: end_date, query_by: 'end'
-    @controller.load_workshops
+    @controller.load_filtered_ended_workshops
   end
 
   test 'include course' do
@@ -59,7 +59,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     expects(:where).with(course: Pd::Workshop::COURSE_CSF)
 
     params course: 'csf'
-    @controller.load_workshops
+    @controller.load_filtered_ended_workshops
   end
 
   test 'exclude course' do
@@ -68,7 +68,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     expects(:not).with(course: Pd::Workshop::COURSE_CSF)
 
     params course: '-csf'
-    @controller.load_workshops
+    @controller.load_filtered_ended_workshops
   end
 
   private

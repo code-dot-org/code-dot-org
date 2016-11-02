@@ -5,6 +5,8 @@ class Api::V1::Pd::WorkshopOrganizerReportController < Api::V1::Pd::ReportContro
   # GET /api/v1/pd/workshop_organizer_report
   # GET /api/v1/pd/workshop_organizer_report.csv
   def index
+    @workshops = load_filtered_ended_workshops
+
     report = @workshops.map do |workshop|
       ::Pd::Payment::PaymentFactory.get_payment(workshop).try do |workshop_summary|
         workshop_summary.generate_organizer_report_line_item(current_user.admin?)

@@ -6,6 +6,8 @@ class Api::V1::Pd::TeacherProgressReportController < Api::V1::Pd::ReportControll
   # GET /api/v1/pd/teacher_progress_report
   # GET /api/v1/pd/teacher_progress_report.csv
   def index
+    @workshops = load_filtered_ended_workshops
+
     report = @workshops.map do |workshop|
       ::Pd::Payment::PaymentFactory.get_payment(workshop).try do |workshop_summary|
         workshop_summary.teacher_summaries.map do |teacher_summary|
