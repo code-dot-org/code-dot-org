@@ -32,7 +32,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Use randomNumber() to animate Gary's mouth.",
-    "markdown_instructions": "<img src=\"https://images.code.org/0f364a404009d72fcd6b6c41974e44d5-image-1472661945223.gif\" style=\"float:right;\"/>\r\n# Gary\r\nMeet Gary - he's a cool dude made from some simple shapes. We put Gary in the `draw()` loop so that we could animate him, but it doesn't seem to be doing anything. We want his mouth to move like the image on the right, so that it looks like he's talking\r\n\r\n# Do This\r\n* Find the code that draws Gary's mouth and replace the width and height with calls to `randomNumber()`\r\n* Experiment with different ranges of random numbers to get the kind of animation you're looking for.\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/0f364a404009d72fcd6b6c41974e44d5-image-1472661945223.gif\" style=\"float:right;\"/>\r\n# Animation\r\n\r\nLook at this face made from some simple shapes. We put it in the `draw()` loop so that we could animate it, but it doesn't seem to be doing anything. We want the mouth to move like the image on the right, so that it looks like it's talking\r\n\r\n# Do This\r\n* Find the code that draws the mouth and replace the width and height with calls to `randomNumber()`\r\n* Experiment with different ranges of random numbers to get the kind of animation you're looking for.\r\n\r\nHint: Don't worry if it's going too fast.  You'll slow it down on the next level.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -61,6 +61,7 @@
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,

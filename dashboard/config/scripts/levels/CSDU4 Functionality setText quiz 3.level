@@ -1,0 +1,51 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-11-02T17:10:55.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "embed": "false",
+    "markdown_instructions": "# Don't Skip The Question\r\n\r\nThe way this screen currently works, a user could just click immediately on \"Next Question\" and not bother answering. Worse still, the user could click one answer, see that it's wrong, and then click the other. Let's use `hideElement()` and `showElement()` to prevent that.\r\n\r\n# Do This\r\n\r\nYou'll need to hide or show all three of the buttons in order to make this work, so let's focus on one at a time:\r\n\r\n**Next Question**\r\n\r\nThe \"Next Question\" button should be hidden to start with, and then show up once the question has been answered.\r\n\r\n* In Design Mode, select the \"Next Question\" button and check the \"hidden\" checkbox. This will make sure the button is already hidden when the app starts\r\n* In the event handler for each of the answer buttons, add code to show the \"Next Question\" button\r\n\r\n**Answer Buttons**\r\n\r\n* In the event handler for each button, add code to hide the question buttons\r\n\t* If you want to allow a user to re-answer using only the answers they haven't tried yet, you could hide just the button that was clicked",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "CSDU4 Functionality setText template",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>
