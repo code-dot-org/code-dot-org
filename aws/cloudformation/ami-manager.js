@@ -37,15 +37,21 @@ exports.handler = function (event, context) {
   function wait(waiter) {
     try {
       event.waiter = waiter;
-      event.responseData = responseData;
+      event.ResponseData = responseData;
       event.PhysicalResourceId = physicalId;
+      var currentlyWaiting = true;
       ec2.waitFor(waiter.state, waiter.params, function (err, data) {
-        if (err) { error(err, 'error waiting for ' + waiter.state);}
-        else success();
+        if (currentlyWaiting) {
+          if (err) { error(err, 'error waiting for ' + waiter.state);}
+          else success();
+        } else {
+          console.log("No longer waiting:", err, data);
+        }
       });
 
       setTimeout(function () {
         console.log("Timeout reached, re-executing function");
+        currentlyWaiting = false;
         var lambda = new AWS.Lambda();
         lambda.invoke({
           FunctionName: context.invokedFunctionArn,
@@ -118,53 +124,61 @@ exports.handler = function (event, context) {
     });
   } else if (event.RequestType == "Create") {
     if (instanceId) {
-      var imageParams = {
-        InstanceId: instanceId,
-        Name: stackName + '-' + instanceId + '-' + event.RequestId
-      };
-      ec2.createImage(imageParams, function (err, data) {
+      // Wait for instance to reach the 'stopped' state before creating image.
+      ec2.waitFor('instanceStopped', {InstanceIds: [instanceId]}, function (err, data) {
         if (err) {
-          error(err, "CreateImage call failed");
-        } else {
-          var imageId = data.ImageId;
-          physicalId = imageId;
-          console.log('SUCCESS: ', "ImageId - " + imageId);
-
-          var params = {
-            Resources: [imageId],
-            Tags: [
-              {
-                Key: 'cloudformation:amimanager:stack-name',
-                Value: stackName
-              },
-              {
-                Key: 'cloudformation:amimanager:stack-id',
-                Value: event.StackId
-              },
-              {
-                Key: 'cloudformation:amimanager:logical-id',
-                Value: event.LogicalResourceId
-              }
-            ]
-          };
-          ec2.createTags(params, function (err, data) {
-            if (err) {
-              error(err, "Create tags call failed");
-            } else {
-              responseData.ImageId = imageId;
-              if (waitImageAvailable) {
-                wait({
-                  state: 'imageAvailable',
-                  params: {
-                    ImageIds: [ physicalId ]
-                  }
-                });
-              } else {
-                success();
-              }
-            }
-          });
+          error(err, "waitFor instanceStopped failed");
+          return;
         }
+
+        var imageParams = {
+          InstanceId: instanceId,
+          Name: stackName + '-' + instanceId + '-' + event.RequestId
+        };
+        ec2.createImage(imageParams, function (err, data) {
+          if (err) {
+            error(err, "CreateImage call failed");
+          } else {
+            var imageId = data.ImageId;
+            physicalId = imageId;
+            console.log('SUCCESS: ', "ImageId - " + imageId);
+
+            var params = {
+              Resources: [imageId],
+              Tags: [
+                {
+                  Key: 'cloudformation:amimanager:stack-name',
+                  Value: stackName
+                },
+                {
+                  Key: 'cloudformation:amimanager:stack-id',
+                  Value: event.StackId
+                },
+                {
+                  Key: 'cloudformation:amimanager:logical-id',
+                  Value: event.LogicalResourceId
+                }
+              ]
+            };
+            ec2.createTags(params, function (err, data) {
+              if (err) {
+                error(err, "Create tags call failed");
+              } else {
+                responseData.ImageId = imageId;
+                if (waitImageAvailable) {
+                  wait({
+                    state: 'imageAvailable',
+                    params: {
+                      ImageIds: [ physicalId ]
+                    }
+                  });
+                } else {
+                  success();
+                }
+              }
+            });
+          }
+        });
       });
     } else {
       error(null, "InstanceId not specified");
