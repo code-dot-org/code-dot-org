@@ -7,7 +7,7 @@ import {
   Checkbox,
   Button
 } from 'react-bootstrap';
-import {QUERY_BY_VALUES} from './report_constants';
+import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 
 const FACILITATOR_DETAILS_COUNT = 6;
 const ATTENDANCE_DAYS_COUNT = 5;
@@ -21,7 +21,8 @@ const OrganizerReport = React.createClass({
   propTypes: {
     startDate: React.PropTypes.string.isRequired,
     endDate: React.PropTypes.string.isRequired,
-    queryBy: React.PropTypes.oneOf(QUERY_BY_VALUES).isRequired
+    queryBy: React.PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
+    course: React.PropTypes.oneOf(COURSE_VALUES)
   },
 
   contextTypes: {
@@ -50,19 +51,21 @@ const OrganizerReport = React.createClass({
     if (
       nextProps.startDate !== this.props.startDate ||
       nextProps.endDate !== this.props.endDate ||
-      nextProps.queryBy !== this.props.queryBy
+      nextProps.queryBy !== this.props.queryBy ||
+      nextProps.course !== this.props.course
     ) {
-      this.load();
+      this.load(nextProps);
     }
   },
 
-  formatQueryParams() {
-    const {startDate, endDate, queryBy} = this.props;
-    return `start=${startDate}&end=${endDate}&query_by=${queryBy}`;
+  formatQueryParams(props) {
+    const {startDate, endDate, queryBy, course} = props;
+    const course_param = course ? `&course=${course}` : "";
+    return `start=${startDate}&end=${endDate}&query_by=${queryBy}${course_param}`;
   },
 
-  load() {
-    const url = `${QUERY_URL}?${this.formatQueryParams()}`;
+  load(props = this.props) {
+    const url = `${QUERY_URL}?${this.formatQueryParams(props)}`;
 
     this.setState({loading: true});
     this.loadRequest = $.ajax({
