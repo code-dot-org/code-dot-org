@@ -24,14 +24,14 @@ const AutocompleteSelector = React.createClass({
     let index = 0;
     return (
             <div id="autocomplete-panel" style={{
-              width: '162px',
+              width: 162,
               height: 'initial',
               background: 'white',
               color: '#808080',
               border: '1px gray solid',
-              padding: '0px',
-              marginTop: '-2px',
-              marginLeft: '-1px',
+              padding: 0,
+              marginTop: -2,
+              marginLeft: -1,
             }}>
           {this.props.options.map((option) => {
               const isSelected = index === this.props.currentIndex;
@@ -49,7 +49,7 @@ const AutocompleteSelector = React.createClass({
                     onMouseOver={() => this.props.onOptionHovered(myIndex)}
                     style={Object.assign({}, {
                       cursor: 'pointer',
-                      marginLeft: '2px'
+                      marginLeft: 2
                     }, isSelected ? selectedStyle : {})}
                 >
                   {option}
@@ -159,9 +159,7 @@ const DebugWatch = React.createClass({
   },
 
   scrollToBottom() {
-    window.requestAnimationFrame(() => {
-      this.refs.scrollableContainer.scrollTop = this.refs.scrollableContainer.scrollHeight;
-    });
+    this.refs.scrollableContainer.scrollTop = this.refs.scrollableContainer.scrollHeight;
   },
 
   addButtonClick() {
@@ -184,10 +182,8 @@ const DebugWatch = React.createClass({
       editing: false,
       text: ''
     }, () => {
-      this.forceUpdate();
       this.scrollToBottom();
       this.filterOptions();
-      // TODO(bjordan): add re-focusing (seemingly having trouble with duplicate refs)
     });
   },
 
@@ -207,12 +203,14 @@ const DebugWatch = React.createClass({
     }
     if (e.key === 'ArrowUp') {
       if (this.state.autocompleteOpen) {
-        const newIndex = (this.state.autocompleteIndex - 1 + this.state.autocompleteOptions.length) % this.state.autocompleteOptions.length;
+        const nOptions = this.state.autocompleteOptions.length;
+        const newIndex = (this.state.autocompleteIndex - 1 + nOptions) % nOptions;
         this.setState({
           autocompleteIndex: newIndex,
         });
       } else {
-        const historyIndex = (this.state.historyIndex - 1 + this.state.history.length) % this.state.history.length
+        const nOptions = this.state.history.length;
+        const historyIndex = (this.state.historyIndex - 1 + nOptions) % nOptions;
         this.setState({
           editing: false,
           text: this.state.history[historyIndex],
@@ -272,14 +270,12 @@ const DebugWatch = React.createClass({
   },
 
   render() {
-    let classes = 'debug-watch';
-
     return (
         <div id="debugger-watch-container" style={{
           width: '100%',
           height: '100%'
         }}>
-          <div id="debug-watch" ref="scrollableContainer" className={classes}>
+          <div id="debug-watch" ref="scrollableContainer" className='debug-watch'>
             {
                 this.props.watchedExpressions.map(wv => {
                     const varName = wv.get('expression');
@@ -288,21 +284,15 @@ const DebugWatch = React.createClass({
                     <div className="debug-watch-item" key={wv.get('uuid')}>
                       <div
                         style={{
-                            fontSize: '18px',
+                            fontSize: 18,
                             float: 'right',
                             cursor: 'pointer',
-                            width: '25px',
+                            width: 25,
                             backgroundColor: '#be0712',
                             color: 'white',
-                            padding: '6px',
-                            paddingRight: '0px',
-                            paddingLeft: '10px'
-                          //  style="font-size: 18px;
-                          // float: right;
-                          // width: 25px;
-                          // background-color: red;
-                          // color: white;
-                          // padding: 6px;padding-right: 0px;padding-left: 10px;"
+                            padding: 6,
+                            paddingRight: 0,
+                            paddingLeft: 10
                           }}
                         onClick={()=>this.props.dispatch(remove(wv.get('expression')))}
                       >
@@ -310,12 +300,12 @@ const DebugWatch = React.createClass({
                       </div>
                       <div style={{
                         float: 'left',
-                        marginTop: '7px',
-                        marginLeft: '2px',
+                        marginTop: 7,
+                        marginLeft: 2,
                         whiteSpace: 'nowrap',
                         overflow: 'scroll',
-                        width: '160px',
-                        height: '21px',
+                        width: 160,
+                        height: 21,
                       }}>
                         <span
                           className="watch-variable"
@@ -335,12 +325,12 @@ const DebugWatch = React.createClass({
                   fontSize: '18px',
                   float: 'right',
                   cursor: 'pointer',
-                  width: '25px',
+                  width: 25,
                   backgroundColor: '#1e93cd',
                   color: 'white',
-                  padding: '6px',
-                  paddingRight: '0px',
-                  paddingLeft: '10px'
+                  padding: 6,
+                  paddingRight: 0,
+                  paddingLeft: 10
                 }}
                 onClick={()=>this.addButtonClick()}
               >
@@ -361,12 +351,12 @@ const DebugWatch = React.createClass({
                     onClick={() => this.setState({autocompleteOpen: true})}
                     value={this.state.text}
                     style={{
-                    width: '159px',
-                    marginTop: '0px',
-                    height: '25px',
-                    fontFamily: 'monospace',
-                    fontSize: '12px',
-                  }}
+                      width: 159,
+                      marginTop: 0,
+                      height: 25,
+                      fontFamily: 'monospace',
+                      fontSize: '12px',
+                    }}
                 />
                 {this.state.autocompleteOpen &&
                     <AutocompleteSelector
