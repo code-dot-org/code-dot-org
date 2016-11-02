@@ -1,5 +1,5 @@
-hidden false
-login_required true
+hidden 'false'
+login_required 'true'
 
 stage 'What is Big Data?'
 named_level 'Unit 4 Lesson 1 Introduction'
@@ -41,6 +41,10 @@ assessment 'U2L14 Free Response Wrap Up'
 assessment 'U2L14 Assessment2'
 assessment 'U2L15 Assessment1'
 
+#level 'U2L15 Student Lesson Introduction'
+
+#level 'U2L16 Student Lesson Introduction'
+
 stage 'Public Key Crypto'
 named_level 'Unit 4 Lesson 7 Introduction'
 named_level 'Video - Encryption and Public Keys'
@@ -64,5 +68,6 @@ named_level 'Video - Cybersecurity and Crime'
 stage 'Practice PT - Big Data and Security Dilemmas'
 named_level 'Unit 4 Lesson 9 Introduction'
 
-stage 'Unit 4 Chapter 1 Assessment', lockable: true
-assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC'
+stage 'Alice and Bob and Asymmetric Keys'
+stage 'Practice PT - Propose an Innovation'
+stage 'Practice PT - Cybersecurity Innovations'

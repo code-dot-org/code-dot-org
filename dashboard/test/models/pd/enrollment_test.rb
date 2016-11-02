@@ -47,7 +47,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.name = 'name'
     enrollment.email = 'teacher@example.net'
     enrollment.school = 'test school'
-    enrollment.school_info = create(:school_info_without_country)
+    enrollment.school_info = create(:school_info)
     assert enrollment.valid?
   end
 
@@ -104,7 +104,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'for_school_district' do
     school_district = create :school_district
-    school_info = create :school_info_without_country, school_district: school_district
+    school_info = create :school_info, school_district: school_district
     enrollment_in_district = create :pd_enrollment, school_info: school_info
     _enrollment_out_of_district = create :pd_enrollment
 

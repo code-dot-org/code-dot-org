@@ -43,6 +43,10 @@ class HipChat
     Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
 
+  def self.notify(room, message, options={})
+    message(room, message, options.merge(notify: true))
+  end
+
   def self.slackify(message)
     # format with slack markdownish formatting instead of html
     # https://slack.zendesk.com/hc/en-us/articles/202288908-Formatting-your-messages

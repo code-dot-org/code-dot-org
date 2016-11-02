@@ -11,7 +11,6 @@ Scenario:
   And element ".modal .congrats" contains text "You completed Puzzle 1."
   Then I close the dialog
   Then I wait until I am on "http://studio.code.org/hoc/2"
-  And I wait to see "#runButton"
   When element "#runButton" is visible
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
@@ -37,7 +36,6 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
-  And I wait to see "#runButton"
   When element "#runButton" is visible
   Then I verify progress in the header of the current page is "attempted" for level 6
 

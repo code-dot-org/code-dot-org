@@ -375,7 +375,6 @@ module.exports = function (grunt) {
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'signup':                       './src/sites/studio/pages/signup.js',
-    'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
     'initApp/initApp':              './src/sites/studio/pages/initApp.js',

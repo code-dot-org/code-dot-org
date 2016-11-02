@@ -39,14 +39,14 @@ Feature: Callouts
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait until element "#runButton" is visible
-    And I close the instructions overlay if it exists
+    And I click selector ".csf-top-instructions button:contains(OK)"
     And callout "0" is visible
 
   Scenario: Closing using "x" button
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait until element "#runButton" is visible
-    And I close the instructions overlay if it exists
+    And I click selector ".csf-top-instructions button:contains(OK)"
     And element ".tooltip-x-close" is visible
     And callout "0" is visible
     And callout "1" is visible
@@ -70,6 +70,6 @@ Feature: Callouts
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait until element "#runButton" is visible
-    And I close the instructions overlay if it exists
+    And I click selector ".csf-top-instructions button:contains(OK)"
     When I press "show-code-header"
     Then ".modal-backdrop" should be in front of "#qtip-0"

@@ -295,9 +295,7 @@ StudioApp.prototype.createReduxStore_ = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions ||
-      config.level.markdownInstructions ||
-      config.level.aniGifURL);
+  return !!(config.level.instructions || config.level.aniGifURL);
 };
 
 /**

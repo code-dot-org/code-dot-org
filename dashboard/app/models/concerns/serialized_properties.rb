@@ -16,7 +16,7 @@ module SerializedProperties
   def assign_attributes(new_attributes)
     init_properties
     attributes = new_attributes.stringify_keys
-    new_properties = attributes.delete('properties').try(:stringify_keys)
+    new_properties = attributes.delete('properties').try(:stringify_keys!)
 
     super(attributes)
     # If the properties hash is explicitly assigned then merge its keys with existing properties
