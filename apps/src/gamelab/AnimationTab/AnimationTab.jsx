@@ -2,7 +2,7 @@
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import color from '../../color';
+import color from "../../util/color";
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
 import { setColumnSizes } from './animationTabModule';

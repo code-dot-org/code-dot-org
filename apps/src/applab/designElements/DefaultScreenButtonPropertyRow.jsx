@@ -1,5 +1,5 @@
 import React from 'react';
-import color from '../../color';
+import color from "../../util/color";
 import * as elementUtils from './elementUtils';
 
 var DefaultScreenButtonPropertyRow = React.createClass({

@@ -1,6 +1,6 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
-import * as color from '../color';
+import * as color from "../util/color";
 import * as applabConstants from './constants';
 import React from 'react';
 import Radium from 'radium';

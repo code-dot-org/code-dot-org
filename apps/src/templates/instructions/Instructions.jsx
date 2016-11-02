@@ -3,7 +3,7 @@ import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
-import experiments from '../../experiments';
+import experiments from "../../util/experiments";
 
 const styles = {
   main: {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
 import { LockStatus, saveLockDialog } from '../../stageLockRedux';
-import color from '../../../color';
+import color from "../../../util/color";
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
 
