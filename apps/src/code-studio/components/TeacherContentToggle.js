@@ -46,7 +46,7 @@ const TeacherContentToggle = Radium(React.createClass({
     // student view doesnt show content while we make async calls. Once this
     // component has mounted, we move level-body into our first div, which will
     // now own toggling visibility
-    $('#level-body').css('opacity', '').appendTo(this.refs.content);
+    $('#level-body').appendTo(this.refs.content);
   },
 
   render() {
