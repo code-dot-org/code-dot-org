@@ -2,6 +2,7 @@ import appMain from '../appMain';
 import {singleton as studioApp} from '../StudioApp';
 import WebLab from './WebLab';
 import skins from '../skins';
+import levels from './levels';
 
 window.weblabMain = function (options) {
   options.skinsModule = skins;
@@ -12,5 +13,5 @@ window.weblabMain = function (options) {
   // options.getAnimationMetadata = gamelab.getAnimationMetadata.bind(gamelab);
 
   weblab.injectStudioApp(studioApp);
-  appMain(weblab, null, options);
+  appMain(weblab, levels, options);
 };
