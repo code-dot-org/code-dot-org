@@ -50,7 +50,6 @@ const AutocompleteSelector = React.createClass({
                     style={Object.assign({}, {
                       cursor: 'pointer',
                       marginLeft: '2px'
-                      //':hover': selectedStyle,
                     }, isSelected ? selectedStyle : {})}
                 >
                   {option}
@@ -102,9 +101,11 @@ const DebugWatch = React.createClass({
   ],
 
   componentDidMount() {
+    if (this.props.watchersOptions) {
+      this.props.watchersOptions.forEach((option) => this.props.dispatch(add(option)));
+    }
     this.wasRunning = null;
     this.intervalId_ = setInterval(() => {
-      console.log("Watching!");
       const justStoppedRunning = this.wasRunning && !this.props.isRunning;
       this.wasRunning = this.props.isRunning;
 
@@ -390,6 +391,7 @@ const DebugWatch = React.createClass({
 
 export default connect(state => {
   return {
+    watchersOptions: state.pageConstants.watchersOptions,
     watchedExpressions: state.watchedExpressions,
     isRunning: state.runState.isRunning,
   };
