@@ -5,44 +5,14 @@
 
 STACK=<%=stack_name%>
 REGION=<%=region%>
-
-function ref() {
-  aws cloudformation describe-stack-resources \
-    --stack-name=${STACK} \
-    --logical-resource-id=$1 \
-    --output=text \
-    --region ${REGION} \
-    | cut -f3
-}
-
-S3_BUCKET=<%=s3_bucket%>
-ENVIRONMENT=<%=environment%>
-RUN_LIST='<%=run_list.to_json%>'
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
-NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
-
-STATUS=SUCCESS
-LIFECYCLE_RESULT=CONTINUE
-
-# Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
-LIFECYCLE_HOOK=$(ref WebServerHook)
-AUTO_SCALING_GROUP=$(ref WebServer)
-if [ -n "${LIFECYCLE_HOOK}" ] && [ -n "${AUTO_SCALING_GROUP}" ]; then
-  aws autoscaling complete-lifecycle-action \
-    --lifecycle-action-result ${LIFECYCLE_RESULT} \
-    --instance-id ${INSTANCE_ID} \
-    --lifecycle-hook-name ${LIFECYCLE_HOOK} \
-    --auto-scaling-group-name ${AUTO_SCALING_GROUP} \
-    --region ${REGION} \
-    || true
-fi
 
 # Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
 aws cloudformation signal-resource \
+  --status SUCCESS \
   --unique-id ${INSTANCE_ID} \
   --stack-name ${STACK} \
   --logical-resource-id ${RESOURCE_ID} \
-  --status ${STATUS} \
   --region ${REGION} \
   || true
