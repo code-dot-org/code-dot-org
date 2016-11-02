@@ -13,7 +13,7 @@
     "start_blocks": "// Predict what this code will do\r\nstrokeWeight(randomNumber(2,10));\r\nstroke(randomNumber(255),randomNumber(255),randomNumber(255));\r\n\r\nfunction draw() {\r\n  fill(randomNumber(255),randomNumber(255),randomNumber(255));\r\n  rect(randomNumber(0, 300), randomNumber(0, 300), randomNumber(0, 200), randomNumber(0, 200));\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -65,6 +65,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
+    "video_key": "csd_gamelab_drawloop",
     "contained_level_names": null
   },
   "published": true,
