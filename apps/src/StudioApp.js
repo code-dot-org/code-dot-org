@@ -2895,6 +2895,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
+    visualizationInWorkspace: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
