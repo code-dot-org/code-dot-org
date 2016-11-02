@@ -1,12 +1,13 @@
 /* A very simple responsive layout system.
  */
 
+import * as utils from '../utils';
+
 /**
  * Gets the container width.
  * Returns either a number (e.g. 1170) or a string (e.g. "97%").
  */
-
-function getResponsiveContainerWidth() {
+export function getResponsiveContainerWidth() {
   const windowWidth = $(window).width();
 
   if (windowWidth >= 1200) {
@@ -16,12 +17,15 @@ function getResponsiveContainerWidth() {
   }
 }
 
-/* Window widths that are the starting points for each width category. */
+// makeEnum comes from apps/src/utils
+const ResponsiveSize = utils.makeEnum('lg', 'md', 'sm', 'xs');
+
+// Window widths that are the starting points for each width category.
 const responsiveWindowWidth = {
-  lg: 1024,
-  md: 820,
-  sm: 650,
-  xs: 0
+  [ResponsiveSize.lg]: 1024,
+  [ResponsiveSize.md]: 820,
+  [ResponsiveSize.sm]: 650,
+  [ResponsiveSize.xs]: 0
 };
 
 /**
@@ -29,9 +33,28 @@ const responsiveWindowWidth = {
  *
  * @param {string} id - "xs", "sm", "md", or "lg"
  */
-
-function getResponsiveWindowWidth(category) {
+export function getResponsiveWindowWidth(category) {
   return responsiveWindowWidth[category];
+}
+
+/**
+ * Returns whether provided category is active, given current window width.
+ * e.g. called with "md" when window width >= 820px returns true.
+ *
+ * @param {string} id - "xs", "sm", "md", or "lg"
+ */
+export function isResponsiveCategoryActive(category) {
+  return $(window).width() >= responsiveWindowWidth[category];
+}
+
+/**
+ * Returns whether provided category is inactive, given current window width.
+ * e.g. called with "md" when window width < 820px returns false.
+ *
+ * @param {string} id - "xs", "sm", "md", or "lg"
+ */
+export function isResponsiveCategoryInactive(category) {
+  return $(window).width() < responsiveWindowWidth[category];
 }
 
 /**
@@ -49,14 +72,13 @@ function getResponsiveWindowWidth(category) {
  * @param {number|string} values.sm - Value returned on small layout.
  * @param {number|string} values.md - Value returned on medium layout.
  * @param {number|string} values.lg - Value returned on large layout.
-
  */
 
-function getResponsiveValue(values) {
+export function getResponsiveValue(values) {
   const windowWidth = $(window).width();
 
-  var value;
-  if (windowWidth >= getResponsiveWindowWidth("lg")) {
+  let value;
+  if (windowWidth >= responsiveWindowWidth[ResponsiveSize.lg]) {
     if (values.lg) {
       value = values.lg;
     } else if (values.md) {
@@ -66,7 +88,7 @@ function getResponsiveValue(values) {
     } else {
       value = values.xs;
     }
-  } else if (windowWidth >= getResponsiveWindowWidth("md")) {
+  } else if (windowWidth >= responsiveWindowWidth[ResponsiveSize.md]) {
     if (values.md) {
        value = values.md;
     } else if (values.sm) {
@@ -74,7 +96,7 @@ function getResponsiveValue(values) {
     } else {
       value = values.xs;
     }
-  } else if (windowWidth >= getResponsiveWindowWidth("sm")) {
+  } else if (windowWidth >= responsiveWindowWidth[ResponsiveSize.sm]) {
     if (values.sm) {
        value = values.sm;
     } else {
@@ -92,5 +114,3 @@ function getResponsiveValue(values) {
     }
   }
 }
-
-export { getResponsiveContainerWidth, getResponsiveWindowWidth, getResponsiveValue };
