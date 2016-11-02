@@ -1,6 +1,6 @@
 - if current_user.try(:teacher?) && @script_level
-
-  .teacher-panel{class: params[:user_id] || params[:section_id] || params[:solution] ? '' : 'hidden'}
+  - show_panel = (params[:user_id] || params[:section_id] || params[:solution]) && params[:viewAs] != 'Student'
+  .teacher-panel{class: show_panel ? '' : 'hidden'}
     .hide-handle
       %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
     .show-handle
@@ -112,5 +112,10 @@
                     = student.name
                     - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
                       %i.fa.fa-users.pair-programming-icon
+- content_for(:head) do
   :javascript
-    $(document).ready(window.dashboard.teacher.onReady);
+    console.log('head', new Date());
+    $(document).ready(function () {
+      console.log('ready', new Date());
+      window.dashboard.teacher.onReady();
+    });

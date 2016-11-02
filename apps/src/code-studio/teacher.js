@@ -84,9 +84,6 @@ function queryLockStatus(store, scriptId) {
       if (query.section_id) {
         store.dispatch(selectSection(query.section_id));
       }
-      if (query.viewAs) {
-        store.dispatch(setViewType(query.viewAs));
-      }
       resolve();
     });
   });
@@ -129,6 +126,8 @@ function renderIntoLessonTeacherPanel() {
   const store = getStore();
   const scriptId = store.getState().progress.stages[0].script_id;
 
+  renderContentToggle();
+
   // We depend on having information gathered from querying lockStatus to render
   // these
   queryLockStatus(store, scriptId).then(() => {
@@ -139,23 +138,13 @@ function renderIntoLessonTeacherPanel() {
     if (stageLockedText) {
       renderStageLockedText(stageLockedText);
     }
-
-    renderContentToggle();
   });
 }
 
-/**
- * Changes the url to navigate to the new section
- * @param {string} newSectionId - section id of the section we want to change to
- */
-function sectionChanged() {
-  // Depend on the fact that SectionSelector already changed the URL for us
-  // via pushState. We actually want to do a reload though, so that we hit the
-  // server with the new section_id
-  window.location.reload();
-}
-
 function viewAsChanged(viewAs) {
+  // We only support student view for a section (not a particular user), so get
+  // rid of user id and reload if switch to student view while we have a selected
+  // user.
   if (viewAs === ViewType.Student && queryParams('user_id')) {
     updateQueryParam('user_id', undefined);
     window.location.reload();
@@ -172,7 +161,10 @@ function renderViewAsToggle(element) {
   const store = getStore();
 
   // Start viewing as teacher
-  store.dispatch(setViewType(ViewType.Teacher));
+  const query = queryString.parse(location.search);
+  const viewAs = query.viewAs || ViewType.Teacher;
+  store.dispatch(setViewType(viewAs));
+  viewAsChanged(viewAs);
 
   ReactDOM.render(
     <Provider store={store}>
@@ -197,7 +189,7 @@ function renderViewAsToggle(element) {
 function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <SectionSelector onChange={sectionChanged}/>
+      <SectionSelector reloadOnChange={true}/>
     </Provider>,
     element
   );
