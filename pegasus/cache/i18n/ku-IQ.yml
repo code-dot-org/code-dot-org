@@ -41,7 +41,7 @@
     و بیرۆکەکانی پرۆگرامسازی بە لەگەڵ ئەم کۆرسە تەواوکاریە."
   og_title: Every child deserves opportunity
   og_description: Every student in every school deserves the opportunity to study
-    computer science.
+    computer science. It's changing everything.
   hoc2014_heading: "بەشداربە لە \n<a href=\"http://hourofcode.com\">كاژێری كۆدنووسی</a>\n<br/>لە
     ٨ تا ١٤ ی دیسێمبەری ٢٠١٤<br/>\n"
   hoc2014_students: "خوێندکارەکان"
@@ -254,7 +254,7 @@
   learn_next_level: "بەردەوام بە بۆ ئاستی داهاتوو"
   learn_online: "کۆرسی تر تاقیکەوە"
   learn_classes: "پۆلی ناوەخۆ بدۆزەوە"
-  hoc_is_here: "تاگی #کاتژێری_کۆدنووسی لێرەیە - سەیرەکی @codeorg بكە"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: "هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری
     بکەی"
   just_did_course1: I just finished Course 1 - check it out! @codeorg
@@ -1739,3 +1739,21 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
+  dashboard_announce_host_an_hour_button: Host an Hour
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
