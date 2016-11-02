@@ -13,11 +13,13 @@
 
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
   - if form.secret
-    %h1= I18n.t(:volunteer_engineer_submission_update_information)
+    %h2= I18n.t(:volunteer_engineer_submission_update_information)
+    %h3= I18n.t(:volunteer_engineer_submission_header_shared)
 
-  %h2= I18n.t(:volunteer_engineer_submission_header_shared)
+  - else 
+    %h2= I18n.t(:volunteer_engineer_submission_header_shared)
 
-  #error-message{style: 'display: none'}
+  .alert.alert-danger#error-message{style: 'display: none', role: 'alert'}
 
   .form-group
     %label.control-label{for: "volunteer-name"}= I18n.t(:volunteer_engineer_submission_field_name)
@@ -108,7 +110,12 @@
     %button.btn.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
 #volunteer-engineer-thanks{:style=>"display: none;"}
-  %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', '/volunteer/local')
+  .alert.alert-success{role:"alert"}
+    %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', '/volunteer/local')
+  - if !form.secret
+    #edit-information
+      You can edit your information anytime
+      %a#edit-link-tag{href: "#"} here.
 
 :javascript
   $(document).ready(function() {
@@ -140,6 +147,7 @@
   {
     $('form').hide();
     $('#volunteer-engineer-thanks').show();
+    $('#edit-link-tag').attr('href', '/volunteer/engineer/edit/' + data.secret);
   }
 
   function processVolunteerEngineerFormError(data)
