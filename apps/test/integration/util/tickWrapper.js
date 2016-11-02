@@ -1,6 +1,5 @@
 /* global Promise */
 var _ = require('lodash');
-require("babel-polyfill"); // required for Promises in IE / Phantom
 
 /**
  * tickWrapper allows us to insert functions that get run at the beginning of
