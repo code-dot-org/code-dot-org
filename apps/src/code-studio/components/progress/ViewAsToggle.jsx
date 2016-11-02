@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import { ViewType, setViewType } from '../../stageLockRedux';
-import { updateQueryParam } from '../../utils';
+import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
 const styles = {
   main: {
@@ -18,18 +18,32 @@ const styles = {
   },
 };
 
+/**
+ * Toggle that lets us change between seeing a page as a teacher, or as the
+ * student sees it
+ */
 const ViewAsToggle = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     setViewType: React.PropTypes.func.isRequired
   },
 
-  onChange(viewAs) {
+  onChange(viewType) {
     const { setViewType } = this.props;
 
-    updateQueryParam('viewAs', viewAs);
+    updateQueryParam('viewAs', viewType);
 
-    setViewType(viewAs);
+    if (viewType === ViewType.Student && queryParams('user_id')) {
+      // In this case, the setViewType thunk is going to do a reload and we dont
+      // want to change our UI.
+    } else {
+      // Ideally all the things we would want to hide would be redux backed, and
+      // would just update automatically. However, we're not in such a world. Instead,
+      // explicitly hide or show elements with this class name based on new toggle state.
+      $(".hide-as-student").toggle(viewType === ViewType.Teacher);
+    }
+
+    setViewType(viewType);
   },
 
   render() {

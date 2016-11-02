@@ -14,6 +14,7 @@ const styles = {
 const SectionSelector = React.createClass({
   propTypes: {
     requireSelection: React.PropTypes.bool,
+    // If true, changing sections results in us hitting the server
     reloadOnChange: React.PropTypes.bool,
 
     // redux provided

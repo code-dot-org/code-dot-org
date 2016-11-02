@@ -14,7 +14,6 @@ import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux
 import { setSections, selectSection } from './sectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
-import { queryParams, updateQueryParam } from './utils';
 import experiments from '@cdo/apps/experiments';
 
 function resizeScrollable() {
@@ -141,22 +140,6 @@ function renderIntoLessonTeacherPanel() {
   });
 }
 
-function viewAsChanged(viewAs) {
-  // We only support student view for a section (not a particular user), so get
-  // rid of user id and reload if switch to student view while we have a selected
-  // user.
-  if (viewAs === ViewType.Student && queryParams('user_id')) {
-    updateQueryParam('user_id', undefined);
-    window.location.reload();
-    return;
-  }
-  // Ideally all the things we would want to hide would be redux backed, and
-  // would just update automatically. However, we're not in such a world. Instead,
-  // explicitly hide or show elements with this class name based on new toggle state.
-  $(".hide-as-student").toggle(viewAs === ViewType.Teacher);
-  $(".hide-as-teacher").toggle(viewAs === ViewType.Student);
-}
-
 function renderViewAsToggle(element) {
   const store = getStore();
 
@@ -164,7 +147,6 @@ function renderViewAsToggle(element) {
   const query = queryString.parse(location.search);
   const viewAs = query.viewAs || ViewType.Teacher;
   store.dispatch(setViewType(viewAs));
-  viewAsChanged(viewAs);
 
   ReactDOM.render(
     <Provider store={store}>
@@ -172,18 +154,6 @@ function renderViewAsToggle(element) {
     </Provider>,
     element
   );
-
-
-  let lastState = store.getState();
-  store.subscribe(() => {
-    const state = store.getState();
-
-    if (state.stageLock.viewAs !== lastState.stageLock.viewAs) {
-      viewAsChanged(state.stageLock.viewAs);
-    }
-
-    lastState = state;
-  });
 }
 
 function renderTeacherPanelSections(element) {
@@ -204,7 +174,6 @@ function renderStageLockedText(element) {
 
   if (fullyLocked[currentStageId]) {
     $(element).text(commonMsg.stageLocked());
-    $('.locked-stage-message').addClass('hide-as-teacher');
   } else {
     $(element).text(commonMsg.stageNotFullyLocked());
   }
@@ -233,9 +202,10 @@ function renderContentToggle() {
       </Provider>,
       element
     );
+  } else {
+    // In our haml, we set the opacity of level body with the intention of letting
+    // TeacherContentToggle whether or not it's visible. Since we're not using
+    // that here, just make it visible again
+    $('#level-body').css('opacity', '');
   }
-
-  // Reset level-body opacity, as either TeacherContentToggle now owns opacity
-  // or the experiment is not enabled and we don't actually want this hidden
-  $('#level-body').css('opacity', '');
 }

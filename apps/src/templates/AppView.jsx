@@ -42,7 +42,6 @@ const AppView = React.createClass({
         <InstructionsWithWorkspace>
           <CodeWorkspace/>
         </InstructionsWithWorkspace>
-        <Overlay />
       </StudioAppWrapper>
     );
   }
