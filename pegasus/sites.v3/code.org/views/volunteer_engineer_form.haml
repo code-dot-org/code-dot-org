@@ -11,6 +11,8 @@
 /[if lt IE 9]
   %script{src: "/js/es5-shim.min.js"}
 
+-puts form
+
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
   - if form.secret
     %h2= I18n.t(:volunteer_engineer_submission_update_information)
@@ -61,7 +63,7 @@
   .form-group
     .checkbox
       %label
-        %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: '1', required: false}/
+        %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: '1', checked: form.data["volunteer_after_hoc_b"], required: false}/
         = I18n.t(:volunteer_engineer_submission_checkbox_after_hoc)
 
   .form-group{style: "display: none;"}
@@ -133,14 +135,13 @@
         $('#volunteer-languages-other-wrapper').hide();
       }
     }).triggerHandler('change');
-
     $('#volunteer-after-hoc').change(function() {
       if($(this).is(':checked')) {
         $('#volunteer-time-commitment').closest('.form-group').slideDown();
       } else {
         $('#volunteer-time-commitment').closest('.form-group').slideUp();
       }
-    });
+    }).triggerHandler('change');
   });
 
   function processVolunteerEngineerFormResponse(data)
@@ -175,11 +176,21 @@
     $("#volunteer-engineer-submit-form #btn-submit").attr('disabled','disabled');
     $("#volunteer-engineer-submit-form #btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
+    var serializedData = $('#volunteer-engineer-submit-form').serializeArray();
+
+    // Reset volunteer all year to null if the checkbox is unchecked.
+    serializedData = serializedData.concat(
+      $('input[type=checkbox]:not(:checked)#volunteer-after-hoc').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get()
+    );
+
     $.ajax({
       url: "/forms/VolunteerEngineerSubmission2015#{'/' + form.secret if form && form.secret}",
       type: "post",
       dataType: "json",
-      data: $('#volunteer-engineer-submit-form').serialize()
+      data: serializedData
     }).done(processVolunteerEngineerFormResponse).fail(processVolunteerEngineerFormError);
 
     return false;
