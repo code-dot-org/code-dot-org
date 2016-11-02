@@ -43,12 +43,12 @@
   = paginate @users
   %table.users
     %tr
-      - ['ID', 'Name', 'Email', 'Deleted At', 'Undelete'].each do |field|
+      - ['ID', 'Name', 'Email', 'Deleted At', 'Provider', 'Undelete'].each do |field|
         %th
           %span= field
     - @users.each do |user|
       %tr
-        - [:id, :name, :email, :deleted_at].each do |field|
+        - [:id, :name, :email, :provider, :deleted_at].each do |field|
           %td
             %span= user[field]
         - if user[:deleted_at]

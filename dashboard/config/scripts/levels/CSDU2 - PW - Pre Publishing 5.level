@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-10-05T02:46:20.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Personally Identifiable Information Check\r\n\r\nEarlier in this lesson you made a list of information you would not want to give away on your website. Use that list to check your site. This is the most important step before publishing your website for all to see.\r\n\r\n# Do This\r\n\r\n* Open your Web Development Practices to page 5\r\n* Read through your list of rules for protecting your PII\r\n* Be a sleuth on your own page and make sure people can not find out that important information you want to protect.\r\n* Remove the information you don't want people to know. This doesn’t have to mean stripping all of the personal importance out of your site, it can be as simple as cropping an image to remove faces or replacing your school’s name with “my school”.",
+    "project_template_level_name": "CSDU2 Portfolio Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

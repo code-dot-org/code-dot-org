@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
+import clientApi from '@cdo/apps/clientApi';
+var assetsApi = clientApi.assets;
+var filesApi = clientApi.files;
 
 var defaultIcons = {
   image: 'fa fa-picture-o',
@@ -44,16 +46,18 @@ var AssetThumbnail = Radium(React.createClass({
     type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     style: React.PropTypes.object,
     iconStyle: React.PropTypes.object,
+    useFilesApi: React.PropTypes.bool.isRequired,
   },
 
   render: function () {
     var type = this.props.type;
     var name = this.props.name;
+    let api = this.props.useFilesApi ? filesApi : assetsApi;
 
     return (
       <div className="assetThumbnail" style={[styles.wrapper, this.props.style]}>
         {type === 'image' ?
-         <img src={assetsApi.basePath(name)} style={assetThumbnailStyle} /> :
+         <img src={api.basePath(name)} style={assetThumbnailStyle} /> :
          <i
            className={defaultIcons[type] || defaultIcons.unknown}
            style={[assetIconStyle, this.props.iconStyle]}

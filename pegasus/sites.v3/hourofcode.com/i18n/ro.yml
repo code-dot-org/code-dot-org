@@ -4,21 +4,21 @@ ro:
   language: Română
   front_title: 'Alatura-te celui mai mare eveniment educational din istorie %{campaign_date}, 2015'
   coming_soon: În curând
-  campaign_date_start_short: 7 decembrie
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+  campaign_date_start_short: 5 decembrie
   campaign_date_start_long: 7 decembrie
   campaign_date_short: 7-13 decembrie
   campaign_date_full: 7-13 decembrie
   campaign_date_year: "2016"
-  campaign_date_full_year: December 5-11, 2016
+  campaign_date_full_year: 5-11 decembrie, 2016
   front_header_banner: Alăturaţi-vă celui mai mare eveniment educational din istorie, 7-13 decembrie, 2015
   front_intro_default: 'Hour of Code (Ora de Programare) este o mişcare globală ce a atins zeci de milioane de elevi si studenţi din peste 180+ de ţări. Oricine, oriunde poate organiza un eveniment Hour of Code. Tutoriale de o ora sunt traduse în peste 40 de limbi. Nu ai nevoie de cunostinte speciale. <strong>Vârsta: de la 4 la 104 ani.</strong>'
   front_watch_video: Urmăriţi noul clip video
   front_watch_regular_video: Urmăriţi clipul video
   front_volunteers: Cautam voluntari tehnici
-  front_start_learning: Start learning
+  front_start_learning: Începerea învațării
   header_menu_resources: Resurse
   header_menu_faq: Întrebări frecvente
-  header_menu_prizes: Premii
   header_menu_how_to: Tutoriale informative
   header_menu_promote: Promoveaza
   company_4-H: Dezvoltarea tineretului
@@ -144,14 +144,6 @@ ro:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Premii pentru fiecare organizator
-  prizes_every_organizer: Fiecare organizator al Orei de Cod va primi spațiu pe Dropbox sau credit Skype drept mulțumire, în funcție de disponibilitate.
-  prizes_technology: 'O şcoală publică din fiecare stat din SUA (& Washington DC) va câştiga echipamente de tehnologie in valoare de 10.000 dolari'
-  prizes_tech_chats: '# sălile de clasă vor câştiga conferințe video cu invitați foarte speciali'
-  prizes_robots: 100 de sali de clasa vor castiga un set de roboti programabili
-  prizes_brilliant: O şcoală din fiecare provincie şi teritoriu va primi $2000 pentru un proiect Genial
-  prizes_actua: 15 şcoli din Canada vor primi 2 ateliere de lucru STEM de la unul dintre membrii Actua
-  prizes_details: Detalii
   nav_back_to_resources: Înapoi la resurse
   how_to_nav_educators: Pentru educatori/profesori
   how_to_nav_after_school: Pentru After-School
@@ -163,23 +155,6 @@ ro:
   how_to_nav_companies: Pentru companii
   how_to_nav_afterschool_educators: Pentru cadrele didactice din After-School
   how_to_nav_volunteers: Pentru voluntari
-  prizes_nav_title: Premii
-  prizes_nav_home: Toate premiile
-  prizes_nav_hardware: Înscrierea pentru premiul hardware
-  prizes_nav_terms: Termeni şi condiţii
-  prizes_nav_faq: Întrebări frecvente
-  prizes_nav_dc: O calatorie misterioasa catre Washington D.C.
-  prizes_nav_technology: echipament tehnologic de 10,000 de dolari pentru scoala ta
-  prizes_nav_video_chat: O conferinta video cu un titan al tehnologiei
-  prizes_nav_skype_dropbox: Credit Skype sau Spatiu Dropbox pentru fiecare organizator
-  prizes_nav_brilliant: Proiecte stralucitoare de laborator in valoare de 2,000 de dolari
-  prizes_nav_actua: Workshop
-  prizes_nav_kids_code: Copii ce codeaza
-  prizes_header: Premii pentru fiecare organizator
-  prizes_10k: 'O şcoală publică din fiecare stat al SUA (& Washington D.C.) va câştiga echipamente tehnologice in valoare de 10.000 dolari'
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: Fiecare organizator va primi un card cadou Amazon.com sau Microsoft Windows Store.
-  prizes_more: More exciting prizes
   whats_next_header: Ce urmează?
   whats_next_description: "Vă vom trimite materialele şi sfaturi utile pentru evenimentul dumneavoastră. Noile tutoriale din 2015 vor fi disponibile în curând pentru orice browser, smartphone – sau chiar pentru activitati fara calculator! <a href='http://code.org/learn'> încercaţi tutorialele actuale</a>"
   whats_next_how_to: "<a href='/how-to'>Cum organizati o Ora de Programare</a>"
@@ -196,6 +171,7 @@ ro:
   share_on_facebook: Distribuie pe Facebook
   share_on_twitter: Distribuie pe Twitter
   front_join_us_heading: O oră de programare pentru fiecare elev.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Tehnologia computerelor si programarea este o bază pentru fiecare. Ajută-ne sa o promovam la 100 de milioane de elevi.
   front_join_us_description_short: Tehnologia computerelor este o stiinta de baza pentru fiecare elev.
   front_join_us_button: Alătură-te
@@ -243,12 +219,13 @@ ro:
   signup_send_posters_address_label: Adresă şcoală sau organizaţie
   signup_whole_school_flag_label: Acest eveniment este pentru întreaga şcoală
   signup_your_event: Înscrieţi-vă evenimentul
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Ajuta-ma sa gasesc un inginer software care sa ii poata inspira pe elevii mei
   signup_multiple_event_warning: Daca organizati mai multe evenimente, va rog sa trimiteti un nume unic sau cate un e-mail pentru fiecare. Noi luam in considerare doar un event pe un nume sau combinatie de e-mail.
   signup_name_placeholder: Numele tău
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 'De exemplu, Colegiul Național "Sfântul Sava"'
-  signup_event_location_placeholder: "Cod poştal şi ţara SAU adresa completă. \\r (vom folosi datele pentru a plasa un pin pe harta noastră)"
+  signup_event_location_placeholder: "Cod poştal şi ţara SAU adresa completă. \r (vom folosi datele pentru a plasa un pin pe harta noastră)"
   signup_special_event_details_placeholder: Descrie de ce este un eveniment special
   signup_send_posters_address_placeholder: Această adresă nu va fi ilustrată pe harta noastră
   signup_event_type_in_school: Într-o şcoală
@@ -257,7 +234,7 @@ ro:
   signup_submit_error_message: Eroare. Vă rugăm să verificaţi dacă toate câmpurile necesare au fost completate în mod corespunzător.
   signup_thank_you_header: Vă mulţumim ca v-ați înscris pentru a găzdui un eveniment Hour of Code (Ora de Programare).
   signup_thank_you_message: Am trimis un e-mail de confirmare cu informaţii pentru a vă ajuta să începeţi.
-  map_title: Hour of Code map
+  map_title: Logo-ul Hour of Code
   map_header: Evenimentele Hour of Code din întreaga lume
   see_all_events: Vezi toate evenimentele
   map_header_company: '# de '
@@ -273,28 +250,6 @@ ro:
   meta_tag_twitter_title: Hour of Code este aici
   meta_tag_twitter_description: Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani.
   twitter_default_text: 'În acest an particip la #HourOfCode, tu? @codeorg'
-  hardware_prizes_form_name_label: Numele tău
-  hardware_prizes_form_name_placeholder: Numele tău
-  hardware_prizes_form_email_label: Adresa de email
-  hardware_prizes_form_email_placeholder: Adresa de email
-  hardware_prizes_form_school_name_label: Numele școlii
-  hardware_prizes_form_school_name_placeholder: Numele școlii
-  hardware_prizes_form_school_address_label: Adresa şcolii
-  hardware_prizes_form_school_address_placeholder: Adresa şcolii
-  hardware_prizes_form_school_type_label: Tipul Școlii
-  hardware_prizes_form_school_type_option_elementary: Primară
-  hardware_prizes_form_school_type_option_middle_school: Gimnaziu
-  hardware_prizes_form_school_type_option_high_school: Liceu
-  hardware_prizes_form_qualifying_school_label: Acesta este o școală publică
-  hardware_prizes_form_title_I_school_label: Aceasta scoala se califică pentru titlul I de fonduri
-  hardware_prizes_form_title_I_school_help_text: Scolile cu Titlul I sunt scoli cu un numar mare de copii care provin din familii cu venit scazut, ce iau fonduri federale pentru a-i ajuta sa le asigure copiilor necesarul pentru a atinge standardele academice actuale ale statului.
-  hardware_prizes_form_number_students_label: Numărul elevilor care participă
-  hardware_prizes_form_number_students_placeholder: Numărul de elevi
-  hardware_prizes_form_technology_plan_label: Cum puteti folosi noile tehnologii pentru a ajuta la extinderea instruirii in tehnologia computerelor si programare in cadrul scolii dumneavoastra?
-  hardware_prizes_form_technology_plan_placeholder: Planul pentru folosirea noilor tehnologii
-  hardware_prizes_form_plan_file_label: Încarcă planul de acțiune pentru Ora de Programare
-  hardware_prizes_form_plan_file_description: 'Prezentați un plan simplu despre cum intenţionaţi să organizaţi fiecare student pentru a beneficia de o oră de programare la şcoala dumneavoastră. Un plan exemplu: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Trimite
   hoc_faq_title: Întrebări frecvente
   hoc_faq_what_is_hoc_q: Ce reprezintă Hour of Code?
   hoc_faq_what_is_hoc_a: "Ora de Programare reprezinta o introducere de o ora in stiinta computerului si programare, cu scopul de a demiestifica limbajul specific si de a arata ca oricine poate invata bazele acestuia. <a href='http://code.org/learn'>Iata tutorialele</a>."
@@ -335,8 +290,8 @@ ro:
   hoc_faq_keep_learning_a: "Oricine poate găzdui o Oră de Cod oricând. Tutorialele rămân disponibile pe tot parcursul anului. Așteptați-vă să gasiți toate tutorialele noastre și curriculum-ul disponibile pe site-ul nostru la nesfârșit. Vă rugăm mergeți la <a href='/promote'>resursele noastre</a> pentru ghidurile how-to ale evenimentului și alte resurse care vă ajută să faceți Ora dvs. de Cod un succes."
   hoc_faq_certificates_q: Unde pot imprima certificate pentru elevii mei?
   hoc_faq_certificates_a: "Mergeți la a noastră <a href='%{codeorg_url}/certificates'>pagină de certificate</a> de unde puteți imprima certificate pentru întreaga clasă încă din timp. Puteți, de asemenea, tipări <a href='%{codeorg_url}/certificates?course=mc'>certificate speciale</a> pentru studenții care participă la tutorialul Minecraft."
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
+  hoc_faq_logo_q: Există limitări la cum pot folosi sigla Hour of Code sau numele?
+  hoc_faq_logo_a: "Hour of Code este marcă înregistrată. Nu vrem să prevină utilizarea acesteia, dar vrem să vă asiguraţi că utilizarea acesteia se încadrează în câteva limitele. Vă rugăm să consultaţi <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'> aceste orientări pentru utilizare</a>."
   stats_hoc_2013_image_alt: Statistici Hour of Code (Ora de Programare) din 2013
   stats_growth: A fost proiectul cu cea mai rapida crestere pana la 15 milioane de utilizatori.
   stats_i18n: Elevii învaţa în 40 de limbi
@@ -400,11 +355,6 @@ ro:
   title_proclamation: Model de ezolutie prin care se sustine Tehnologia computerelor si programarea si evenimentul Hour of Code
   title_stats: Materiale si statistici
   title_partners: Parteneri
-  title_prizes_faq: Intrebari frecvente despre premii
-  title_prizes_terms: Termenii premiilor
-  title_prizes_thanks: Vă mulţumesc
-  title_prizes: Premii
-  title_hardware_prize_form: Înscrie-te pentru premiile hardware
   title_resources: Resurse
   title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea unui eveniment Hour of Code!
   title_tutorial_guidelines: Orientari si ghiduri pentru tutoriale
@@ -421,9 +371,9 @@ ro:
   events_orgs_title: Toate evenimentele Hour of Code sunt organizate de Organizațiile Partenere
   event: Eveniment
   events: Evenimente
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  highlights_title: Repere
+  highlights_header: Reperele Hour of Code
+  highlights_description: Unele dintre momentele noastre preferate din campania Hour of Code.
   footer_copyright_message: Copyright 2015 Code.org. Toate drepturile rezervate.
   footer_trademark_message: Hour of Code™ este o marcă înregistrată Code.org.
   footer_menu_partners: Parteneri

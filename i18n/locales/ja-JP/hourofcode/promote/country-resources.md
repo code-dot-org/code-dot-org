@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Recursos
@@ -56,21 +58,6 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
-
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
@@ -113,13 +100,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 生徒達を刺激してください-彼らにビデオを見せてください。
 
-生徒達にHour of Codeのキックオフ用の感動的なビデオを見せましょう。例:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [アメリカのオバマ大統領が生徒たちにコンピュータサイエンスを学ぶよう呼びかけてる映像もあります。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**あなたの生徒たちを興奮させます - 短いイントロを紹介する。**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

@@ -114,5 +114,17 @@
   "whenWallCollidedTooltip": "공이 벽에 부딪치면 아래의 동작을 실행합니다.",
   "whileMsg": "반복(~인 동안):",
   "whileTooltip": "어떤 조건이 될 때까지(~할 때까지), 반복적으로 실행합니다.",
-  "yes": "예"
+  "yes": "예",
+  "basketballLaunchBall": "throw new ball",
+  "basketballLaunchBallTooltip": "Throw a ball into play.",
+  "basketballSetPaddle": "set hand",
+  "basketballSetPaddleSpeedFast": "set fast hand speed",
+  "basketballSetPaddleSpeedNormal": "set normal hand speed",
+  "basketballSetPaddleSpeedRandom": "set random hand speed",
+  "basketballSetPaddleSpeedSlow": "set slow hand speed",
+  "basketballSetPaddleSpeedTooltip": "Sets the speed of the hand",
+  "basketballSetPaddleSpeedVeryFast": "set very fast hand speed",
+  "basketballSetPaddleSpeedVerySlow": "set very slow hand speed",
+  "basketballWhenBallMissesPaddle": "when ball misses hand",
+  "basketballWhenPaddleCollided": "when ball hits hand"
 }

@@ -1,6 +1,5 @@
-/* global Dialog, appOptions, CDOSounds */
 import $ from 'jquery';
-import { registerGetResult } from './codeStudioLevels';
+import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
 var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
@@ -63,7 +62,7 @@ Multi.prototype.choiceClicked = function (button) {
 
   this.clickItem(index);
 
-  window.dashboard.codeStudioLevels.onAnswerChanged(this.levelId, true);
+  onAnswerChanged(this.levelId, true);
 };
 
 
@@ -212,11 +211,11 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   }
 
   return {
-    "response": answer,
-    "result": result,
-    "errorType": errorType,
-    "submitted": submitted,
-    "valid": valid
+    response: answer,
+    result: result,
+    errorType: errorType,
+    submitted: submitted,
+    valid: valid
   };
 };
 

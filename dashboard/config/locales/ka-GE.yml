@@ -334,6 +334,7 @@
       unsubmit: "ჩაბარების გაუქმება"
       worked_with: "იმუშავა"
       update_lock_settings: "დახურვის პარამეტრები განაახლეთ აქ."
+      clear_response: Clear response
   user:
     email_confirm_needed: "ელ.ფოსტა არ არის დადასტურებული:"
     email_confirm_needed_required: "თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:"
@@ -405,14 +406,14 @@
     choose_next_course: "სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი"
     print_certificate: "სერტიფიკატის ამობეჭდვა"
     announcement_title: "განცხადებები"
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
+    announcement_message_fall2016_features: ზაფხულის განმავლობაში თქვენი უკუკავშირის
+      საშუალებით ახალი ფუნქციები შევქმენით. ახლა შეგიძლიათ <a href="%{pp_url}" target="_blank">რამოდენიმე
+      მოსწავლის პროგრესი შეამოწმოთ</a> იმ შემთხვევაშიც კი, თუ ისინი ერთი მოწყობილობით
+      სარგებლობენ. შეგიძლიათ გამოიყენოთ <a href="%{csp_widgets_url}" target="_blank">ინტერაქტიული
+      ინსტრუმენტები </a> კომპიუტერული მეცნიერების პრინციპების კურსიდან <i>ნებისმიერ</i>
+      კლასში. თქვენს მოსწავლეებს შეუძლიათ <a href="%{unused_code_url}" target="_blank">შეინახონ
+      გამოუყენებელი კოდი</a> თავიანთ სამუშაო სივრცეში სამომავლო ექსპერიმენტებისთვის!
+      ნახეთ ყველა ახალი ფუნქცია და გაგვაგებინეთ თქვენი აზრი.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -719,12 +720,12 @@
       Code Studio-ში.</i> ეს ჩვენთვის ძალიან მნიშვნელოვანია და ვიმედოვნებთ, რომ ამით
       დავნერგავთ ახალ სტანდარტს მოსწავლეთა კონფიდენციალურობის კუთხით განათლების ტექნოლოგიებში.
       ჩვენ ელექტრონულ მისამართზე გამოგიგზავნეთ სხვა ცვლილებების მოკლე მიმოხილვა."
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    intro_instructions: "თქვენ უნდა დაეთანხმოთ ახალ პირობებს, რომ თქვენს კლასში 13
+      წლამდე მოსწავლეებს სრული წვდომა ჰქონდეთ ყველა უახლეს ფუნქციაზე კოდის სტუდიაში.
+      13 წლამდე მოსწავლის ანგარიშის შექმნის დროს, თქვენ გთხოვენ დაადასტუროთ, რომ თქვენს
+      სკოლას აქვს მშობლის თანხმობა მოსწავლის პერსონალური ინფორმაციის შეგროვებაზე და
+      ამ ინფორმაციის მოსწავლისთვის სასარგებლოდ გამოყენებაზე სკოლაში, ისეთი საგანმანათლებლო
+      პროგრამების ჩათვლის, როგორიცაა კოდის სტუდია."
     tos: "მომსახურების პირობები"
     privacy: "კონფიდენციალურობის პოლიტიკა"
     privacy_notice: "კონფიდენციალურობის ცნობა"
@@ -914,9 +915,8 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
+  locked_stage: "ამ დონის მასალა არ ჩანს, რადგან ეს დონე ახლა დახურულია. თქვენი მასწავლებელი
+    გააღებს ამ დონეს, როცა მასზე მუშაობის დრო მოვა ან როცა თქვენს პასუხებს შეამოწმებს."
   hidden_stage: "თქვენი მასწავლებელი არ გელოდათ აქ. გთხოვთ, ჰკითხეთ მას, რომელ გაკვეთილზე
     უნდა იყოთ."
   return_course_overview: "თავის მიმოხილვაზე გადასვლა"

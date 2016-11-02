@@ -137,7 +137,7 @@ algebraPD:
   hidden: true
   user_id:
   login_required: true
-  properties: '{"pd":true}'
+  properties: '{"professional_learning_course":"CS in Algebra Support"}'
 flappy:
   id: 6
   name: flappy
@@ -267,7 +267,7 @@ ECSPD:
   hidden: true
   user_id:
   login_required: true
-  properties: '{"pd":true}'
+  properties: '{"professional_learning_course":"ECS Support"}'
 ECSPD-NexTech:
   id: 14
   name: ECSPD-NexTech
@@ -277,7 +277,7 @@ ECSPD-NexTech:
   hidden: true
   user_id:
   login_required: true
-  properties: '{"pd":true}'
+  properties: '{"professional_learning_course":"ECS Support"}'
 allthethings:
   id: 45
   name: allthethings

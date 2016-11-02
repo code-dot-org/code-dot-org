@@ -114,5 +114,17 @@
   "whenWallCollidedTooltip": "බෝලය බිත්තිය හා ඝට්ටනය වු විට පහත ක්‍රියාමාර්ග ක්‍රියාත්මක කරන්න.",
   "whileMsg": "එතෙක්",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "ඔව්"
+  "yes": "ඔව්",
+  "basketballLaunchBall": "throw new ball",
+  "basketballLaunchBallTooltip": "Throw a ball into play.",
+  "basketballSetPaddle": "set hand",
+  "basketballSetPaddleSpeedFast": "set fast hand speed",
+  "basketballSetPaddleSpeedNormal": "set normal hand speed",
+  "basketballSetPaddleSpeedRandom": "set random hand speed",
+  "basketballSetPaddleSpeedSlow": "set slow hand speed",
+  "basketballSetPaddleSpeedTooltip": "Sets the speed of the hand",
+  "basketballSetPaddleSpeedVeryFast": "set very fast hand speed",
+  "basketballSetPaddleSpeedVerySlow": "set very slow hand speed",
+  "basketballWhenBallMissesPaddle": "when ball misses hand",
+  "basketballWhenPaddleCollided": "when ball hits hand"
 }

@@ -10,10 +10,6 @@
 #  updated_at          :datetime
 #  school              :string(255)
 #  code                :string(255)
-#  school_district_id  :integer
-#  school_zip          :integer
-#  school_type         :string(255)
-#  school_state        :string(255)
 #  user_id             :integer
 #  survey_sent_at      :datetime
 #  completed_survey_id :integer
@@ -22,9 +18,8 @@
 #
 # Indexes
 #
-#  index_pd_enrollments_on_code                (code) UNIQUE
-#  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
-#  index_pd_enrollments_on_school_district_id  (school_district_id)
+#  index_pd_enrollments_on_code            (code) UNIQUE
+#  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
 class Pd::Enrollment < ActiveRecord::Base
@@ -45,6 +40,10 @@ class Pd::Enrollment < ActiveRecord::Base
 
   validates_presence_of :school, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
+
+  def self.for_school_district(school_district)
+    self.joins(:school_info).where(school_infos: {school_district_id: school_district.id})
+  end
 
   def has_user?
     self.user_id
@@ -70,6 +69,21 @@ class Pd::Enrollment < ActiveRecord::Base
 
     # Teachers enrolled in the workshop are "students" in the section.
     self.workshop.section.students.exists?(user.id)
+  end
+
+  def send_exit_survey
+    return unless self.user
+
+    # In case the workshop is reprocessed, do not send duplicate exit surveys.
+    if survey_sent_at
+      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{self.id}"
+      return
+    end
+
+    Pd::WorkshopMailer.exit_survey(self).deliver_now
+
+    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
+    self.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
   end
 
   protected

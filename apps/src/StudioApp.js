@@ -1,4 +1,4 @@
-/* global trackEvent, Blockly, ace:true, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, droplet, dashboard, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -24,7 +24,6 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
@@ -34,12 +33,11 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
-import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
+import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
 import {
-  substituteInstructionImages,
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
@@ -296,7 +294,9 @@ StudioApp.prototype.createReduxStore_ = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions || config.level.aniGifURL);
+  return !!(config.level.instructions ||
+      config.level.markdownInstructions ||
+      config.level.aniGifURL);
 };
 
 /**
@@ -356,9 +356,9 @@ StudioApp.prototype.init = function (config) {
     assetPrefix.init(config);
 
     // Pre-populate asset list
-    assetsApi.ajax('GET', '', function (xhr) {
-      dashboard.assets.listStore.reset(JSON.parse(xhr.responseText));
-    }, function () {
+    assetsApi.getFiles(result => {
+      dashboard.assets.listStore.reset(result.files);
+    }, xhr => {
       // Unable to load asset list
     });
   }
@@ -527,7 +527,7 @@ StudioApp.prototype.init = function (config) {
     }
   }
 
-  if (!!config.level.projectTemplateLevelName) {
+  if (!!config.level.projectTemplateLevelName && !config.level.isK1) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
@@ -627,30 +627,12 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
         id: 'showVersionsModal'
       });
       ReactDOM.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+        useFilesApi: config.useFilesApi
       }), codeDiv);
 
       dialog.show();
     }).bind(this));
-  }
-};
-
-StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.hasContainedLevels) {
-    var firstResult = codeStudioLevels.getContainedLevelResult();
-    var containedResult = firstResult.result;
-    var testResults = utils.valueOr(firstResult.testResult,
-        containedResult.result ? this.TestResults.ALL_PASS :
-          this.TestResults.GENERIC_FAIL);
-    return {
-      app: firstResult.app,
-      level: firstResult.id,
-      callback: firstResult.callback,
-      result: containedResult.result,
-      testResults: testResults,
-      program: containedResult.response,
-      feedback: firstResult.feedback
-    };
   }
 };
 
@@ -932,7 +914,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
   if (this.hasContainedLevels) {
-    codeStudioLevels.lockContainedLevelAnswers();
+    lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');
@@ -1567,6 +1549,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
+  this.onFeedback(options);
+
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1574,7 +1558,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_, options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
@@ -1650,23 +1634,6 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 * {function} onComplete Function to be called upon completion.
 */
 StudioApp.prototype.report = function (options) {
-
-  if (options.containedLevelResultsInfo) {
-    // If we have contained level results, just submit those directly and return
-    this.onAttempt({
-      callback: options.containedLevelResultsInfo.callback,
-      app: options.containedLevelResultsInfo.app,
-      level: options.containedLevelResultsInfo.level,
-      serverLevelId: options.containedLevelResultsInfo.level,
-      result: options.containedLevelResultsInfo.result,
-      testResult: options.containedLevelResultsInfo.testResults,
-      submitted: options.submitted,
-      program: options.containedLevelResultsInfo.program,
-      onComplete: options.onComplete
-    });
-    this.enableShowLinesCount = false;
-    return;
-  }
 
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
@@ -1841,7 +1808,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
-  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false &&
+    !config.hasContainedLevels);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -1854,6 +1822,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onFeedback = config.onFeedback || function () {};
   this.onInitialize = config.onInitialize ?
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
@@ -2054,11 +2023,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     return;
   }
 
-  var displayMessage, examplePrograms, messageElement, onChange, startingText;
-
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
+  /* eslint-disable */
   ace = window.ace;
+  /* eslint-enable */
 
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
   // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
@@ -2707,7 +2676,6 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
   var increment = options.increment;
 
   var CANVAS_HEIGHT = 400;
-  var CANVAS_WIDTH = 400;
 
   var svg = document.getElementById(svgName);
 
@@ -2889,7 +2857,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 /**
  * Polishes the generated code string before displaying it to the user. If the
  * app provided a polishCodeHook function, it will be called.
- * @returns {string} code string that may/may not have been modified
+ * @returns {string} code string that may/may not have been modified.
  */
 StudioApp.prototype.polishGeneratedCodeString = function (code) {
   if (this.polishCodeHook) {
@@ -2909,8 +2877,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: level.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
@@ -2924,7 +2892,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
-    versionHistoryInInstructionsHeader: config.versionHistoryInInstructionsHeader,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
@@ -2933,6 +2900,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    isK1: config.level.isK1,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

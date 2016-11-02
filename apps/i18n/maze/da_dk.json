@@ -111,5 +111,8 @@
   "word": "Find ordet",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Ja",
-  "youSpelled": "Du har stavet"
+  "youSpelled": "Du har stavet",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

@@ -187,7 +187,7 @@ kk-KZ:
   learn_next_level: Келесі деңгейге өту
   learn_online: Біздің басқа да онлайн курстарымызды көріңіз
   learn_classes: Бағдарламалауды үйрететін ұйымдарды іздеу
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
   just_did_hoc: 'Мен #HourOfCode бітірдім- көріңіз! @codeorg'
   just_did_course1: Мен жаңа ғана 1-Курсты аяқтадым, @codeorg-тан нәтижесін көр
   just_did_course2: Мен жаңа ғана 2-Курсты аяқтадым, @codeorg-тан нәтижесін көр
@@ -452,7 +452,6 @@ kk-KZ:
   dashboard_landing_office_hours: Жеке сұрағыңды қой ! Біздің ай сайынғы видео-қабылдауымызды көріңіз.
   dashboard_landing_print_certificates: Осы курсты бітірген оқушылардың сертификаттарын басып шығару
   dashboard_landing_educator_blog: Біздің Оқытушы Блогымыздан жаңалықтар мен жаңартулар жайында оқыңыз
-  dashboard_landing_smart_hints: Өтінеміз бізге Code.org сабақтарына көмексөздерді қосуға көмектесіңіз
   dashboard_landing_video_player: Біздің жаңа видео ойнатқышты сыныбыңызда тексеріп көріңіз
   dashboard_landing_progress_title: Сыныптың басты жетістіктері
   dashboard_landing_progress_biggest: Бұл сіздің үлкен бөліміңіздің жетістіктері.
@@ -795,6 +794,7 @@ kk-KZ:
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

@@ -1,5 +1,5 @@
-login_required 'true'
 hidden 'false'
+login_required 'true'
 
 stage 'The Need For Programming Languages'
 level 'v2 U3L01 Student Lesson Introduction'
@@ -94,3 +94,6 @@ stage 'Practice PT - Design a Digital Scene'
 level 'v2 U3L10 Student Lesson Introduction'
 level 'U3L08 - individualCode'
 level 'U3L08 - digitalScene'
+
+stage 'Unit 3 Chapter 1 Assessment', lockable: true
+assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'

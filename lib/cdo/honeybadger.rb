@@ -57,7 +57,7 @@ module Honeybadger
     # The following addition will parse the message from the end of the first line
     corrected_input_format = Regexp.new(Honeybadger::Backtrace::Line::INPUT_FORMAT.source.sub(/\$$/, '(?:: (.+))?$')).freeze
 
-    error_lines = error.lines.map &:strip
+    error_lines = error.lines.map(&:strip)
     _, _file, _number, _method, error_message = error_lines[0].match(corrected_input_format).to_a
     error_lines[0].chomp!(": #{error_message}")
 

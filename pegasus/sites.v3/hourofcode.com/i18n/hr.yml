@@ -4,6 +4,7 @@ hr:
   language: Hrvatski
   front_title: 'Pridružite se najvećem edukacijskom događanju u povijesti, %{campaign_date}, 2015'
   coming_soon: Uskoro
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7. prosinca
   campaign_date_start_long: 7. prosinca
   campaign_date_short: '7. - 13. prosinca'
@@ -18,7 +19,6 @@ hr:
   front_start_learning: Start learning
   header_menu_resources: Resursi
   header_menu_faq: Učestalo postavljana pitanja
-  header_menu_prizes: Nagrade
   header_menu_how_to: Upute
   header_menu_promote: Promocija
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ hr:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Nagrade za svakog organizatora
-  prizes_every_organizer: 'Svaki  organizator sata kodiranja dobit će Dropbox ili Skype kredit kao zahvalu'
-  prizes_technology: Jedna javna škola u svakoj državi SAD-a (i Washington okrug) osvojit će 10 tisuća dolara tehnologije
-  prizes_tech_chats: '# razreda osvojit će video razgovore sa vrlo posebnim gostima'
-  prizes_robots: '100 učionica će osvojiti set  robota za programiranej'
-  prizes_brilliant: Jedna škola u svakoj pokrajini i teritoriju će primiti $2000 za Briljantan projekt
-  prizes_actua: 15 škola diljem Kanade dobivaju 2 hands-on STEM radionice od jednog od članova Actua grupe
-  prizes_details: Detalji
   nav_back_to_resources: Povratak na resurse
   how_to_nav_educators: Za nastavnike
   how_to_nav_after_school: Za poslije škole
@@ -163,23 +155,6 @@ hr:
   how_to_nav_companies: Za poduzeća
   how_to_nav_afterschool_educators: Za nastavnike izvanškolskih aktivnosti
   how_to_nav_volunteers: Za volontere
-  prizes_nav_title: Nagrade
-  prizes_nav_home: Sve nagrade
-  prizes_nav_hardware: Prijava za hardverske nagrade
-  prizes_nav_terms: Uvjeti korištenja
-  prizes_nav_faq: Učestalo postavljana pitanja
-  prizes_nav_dc: Tajanstveno putovanje u Washington D.C.
-  prizes_nav_technology: tehnologija vrijedna $10,000 za vašu školu
-  prizes_nav_video_chat: Video chat s tehnološkim titanom
-  prizes_nav_skype_dropbox: Skype kredit ili Dropbox prostor za svakog organizatora
-  prizes_nav_brilliant: $2,000 Brilliant Labs projekt
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Nagrade za svakog nastavnika
-  prizes_10k: Jedna javna škola u svakoj državi SAD-a (i Washington D.C.-a) osvojit će tehnologiju u vrijednosti 10 tisuća dolara
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Svaki</i> organizator primit će <b>$10 na Amazon.com, iTunes ili Windows Store</b> kao dar zahvalnosti. Do isteka zaliha.'
-  prizes_more: More exciting prizes
   whats_next_header: Što je sljedeće?
   whats_next_description: "Poslat ćemo vam materijale i korisne savjete za vaš događaj. Novi tutorijali uskoro su tu za bilo koji preglednik, smartphone – ili čak i bez računala! <a href='http://code.org/learn'> Isprobajte trenutne tutorijale</a>"
   whats_next_how_to: "<a href='/how-to'> Kako pokrenuti Sat kodiranja</a>"
@@ -196,6 +171,7 @@ hr:
   share_on_facebook: Podijeli na Facebooku
   share_on_twitter: Podijeli na Twitteru
   front_join_us_heading: Sat Kodiranja za svakog učenika.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Informatika je temelj za svakog učenika. Pomozite nam predstaviti je stotinama milijuna.
   front_join_us_description_short: Računarstvo je temelj za svakog učenika.
   front_join_us_button: Pridružite nam se
@@ -243,12 +219,13 @@ hr:
   signup_send_posters_address_label: Adresa škole ili ustanove
   signup_whole_school_flag_label: Ovaj događaj je za cijelu školu
   signup_your_event: Prijavite vaš događaj
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Pomozite mi pronaći programera koji bi inspirirao moje učenike
   signup_multiple_event_warning: Ako ste domaćih više događanja, molimo vas da pošaljete jedinstveni naziv ili adresu e-pošte za svaki od njih. Računamo samo jedan događaj prema kombinaciji imena i adrese e-pošte.
   signup_name_placeholder: Vaše ime
   signup_email_placeholder: VašeIme@primjer.com
   signup_organization_name_placeholder: Primjerice, srednja škola
-  signup_event_location_placeholder: "Poštanski broj i zemlja ILI puna adresa. \\r (Upotrijebit ćemo ove podatke da bi mjesto označili na našoj karti)"
+  signup_event_location_placeholder: "Poštanski broj i zemlja ILI puna adresa. \r (Upotrijebit ćemo ove podatke da bi mjesto označili na našoj karti)"
   signup_special_event_details_placeholder: Opišite ono što čini ovaj događaj posebnim
   signup_send_posters_address_placeholder: Ova adresa neće biti prikazana na našoj karti
   signup_event_type_in_school: U školi
@@ -273,28 +250,6 @@ hr:
   meta_tag_twitter_title: Sat kodiranja se približava
   meta_tag_twitter_description: Sat Kodiranja je globalni pokret koji doseže milijune učenika u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.
   twitter_default_text: 'Ja sudjelujem u ovogodišnjem Satu Kodiranja #HourOfCode, a vi? @codeorg'
-  hardware_prizes_form_name_label: Ime
-  hardware_prizes_form_name_placeholder: Ime
-  hardware_prizes_form_email_label: E-pošta
-  hardware_prizes_form_email_placeholder: E-pošta
-  hardware_prizes_form_school_name_label: Ime škole
-  hardware_prizes_form_school_name_placeholder: Ime škole
-  hardware_prizes_form_school_address_label: Adresa škole
-  hardware_prizes_form_school_address_placeholder: Adresa škole
-  hardware_prizes_form_school_type_label: Vrsta škole
-  hardware_prizes_form_school_type_option_elementary: Osnovna škola
-  hardware_prizes_form_school_type_option_middle_school: Srednja škola
-  hardware_prizes_form_school_type_option_high_school: Visoka skola
-  hardware_prizes_form_qualifying_school_label: To je K-12 javna škola u SAD-u
-  hardware_prizes_form_title_I_school_label: Ova škola kvalificirana je za financiranje prvog stupnja
-  hardware_prizes_form_title_I_school_help_text: Škole I. stupnja su škole s visokim brojem ili visokim postotkom djece iz siromašnih obitelji koje primaju državna sredstva kako bi se osiguralo da sva djeca zadovoljavaju izazovne državne akademske standarde.
-  hardware_prizes_form_number_students_label: Broj učenika koji sudjeluju
-  hardware_prizes_form_number_students_placeholder: Broj učenika
-  hardware_prizes_form_technology_plan_label: Kako ćete koristiti nove tehnologije kako biste proširili poduku informatike u vašoj školi?
-  hardware_prizes_form_technology_plan_placeholder: Plan za korištenje nove tehnologije
-  hardware_prizes_form_plan_file_label: Učitajte logistički plan za vaš Sat Kodiranja
-  hardware_prizes_form_plan_file_description: 'Pošaljite jednostavan raspored koji pojašnjava kako namjeravate organizirati svakog pojedinačnog učenika da bi odradio Sat Kodiranja u školi. Pogledajte primjer: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Pošaljite
   hoc_faq_title: Učestalo postavljana pitanja
   hoc_faq_what_is_hoc_q: Što je Sat Kodiranja?
   hoc_faq_what_is_hoc_a: "Sat kodiranja jednosatni je uvod u računarstvo, osmišljen za demistifikaciju kodiranja i kao dokaz da svatko može naučiti osnove. <a href='%{codeorg_url}'> Pogledajte tutorijale</a>."
@@ -400,11 +355,6 @@ hr:
   title_proclamation: Primjer Rezolucije podrške tjednu podučavanja informatike i Satu kodiranja
   title_stats: Pohvale i statistika
   title_partners: Partneri
-  title_prizes_faq: UPP o nagradama
-  title_prizes_terms: Uvjeti nagrađivanja
-  title_prizes_thanks: Hvala vam
-  title_prizes: Nagrade
-  title_hardware_prize_form: Prijavite se za tehnološke nagrade
   title_resources: Resursi
   title_signup_thanks: Hvala na prijavi za domaćina Sata Kodiranja!
   title_tutorial_guidelines: Smjernice za tutorijale

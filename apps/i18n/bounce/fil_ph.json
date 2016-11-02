@@ -114,5 +114,17 @@
   "whenWallCollidedTooltip": "I-execute ang mga aksyon sa ibaba kapag ang bola ay tumama sa pader.",
   "whileMsg": "habang",
   "whileTooltip": "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot.",
-  "yes": "Oo"
+  "yes": "Oo",
+  "basketballLaunchBall": "throw new ball",
+  "basketballLaunchBallTooltip": "Throw a ball into play.",
+  "basketballSetPaddle": "set hand",
+  "basketballSetPaddleSpeedFast": "set fast hand speed",
+  "basketballSetPaddleSpeedNormal": "set normal hand speed",
+  "basketballSetPaddleSpeedRandom": "set random hand speed",
+  "basketballSetPaddleSpeedSlow": "set slow hand speed",
+  "basketballSetPaddleSpeedTooltip": "Sets the speed of the hand",
+  "basketballSetPaddleSpeedVeryFast": "set very fast hand speed",
+  "basketballSetPaddleSpeedVerySlow": "set very slow hand speed",
+  "basketballWhenBallMissesPaddle": "when ball misses hand",
+  "basketballWhenPaddleCollided": "when ball hits hand"
 }

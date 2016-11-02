@@ -258,7 +258,7 @@ The animation has been skipped.
     alias_map = Hash.new {|h, k| h[k] = []}
     animation_metadata.each do |name, metadata|
       aliases = [metadata['name'].downcase]
-      aliases += metadata['aliases'].map &:downcase unless metadata['aliases'].nil?
+      aliases += metadata['aliases'].map(&:downcase) unless metadata['aliases'].nil?
       aliases.each do |aliaz|
         # Push name into target array, deduplicate, and sort
         alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort

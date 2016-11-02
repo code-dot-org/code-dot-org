@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Motiva gli studenti e volontari per l'Ora del Codice
@@ -32,7 +34,7 @@ nav: how_to_nav
 ## 2) Guarda questo video di istruzioni <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Scegli un corso:
 
-Mettiamo a disposizione [corsi divertenti da un'ora](<%= resolve_url('https://code.org/learn') %>) per partecipanti di tutte le età, realizzati da molti partner. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
 
 **Tutte i corsi dell'Ora del Codice:**
 
@@ -138,4 +140,6 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 ## Cosa c'è dopo l'Ora del Codice?
 
-L'Ora del Codice è soltanto il primo passo di un viaggio per imparare di più su come la tecnologia funziona e su come si creano gli applicativi software. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

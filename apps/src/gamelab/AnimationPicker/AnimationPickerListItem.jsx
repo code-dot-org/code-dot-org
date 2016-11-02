@@ -2,6 +2,7 @@
 import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
+import {PlayBehavior} from '../constants';
 import * as PropTypes from '../PropTypes';
 import AnimationPreview from './AnimationPreview';
 
@@ -46,6 +47,9 @@ const styles = {
   },
   labelIcon: {
     fontStyle: 'italic'
+  },
+  categoryImage: {
+    borderRadius: 10
   }
 };
 
@@ -54,7 +58,9 @@ const AnimationPickerListItem = React.createClass({
     animationProps: PropTypes.AnimationProps,
     icon: React.PropTypes.string,
     label: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func
+    onClick: React.PropTypes.func,
+    playAnimations: React.PropTypes.bool,
+    category: React.PropTypes.string
   },
 
   render() {
@@ -68,6 +74,8 @@ const AnimationPickerListItem = React.createClass({
       this.props.icon && styles.labelIcon
     ];
 
+    const iconImageSrc = this.props.category ? `/blockly/media/gamelab/animation-previews/${this.props.category}.png` : '';
+
     return (
       <div style={styles.root} onClick={this.props.onClick}>
         <div style={thumbnailStyle}>
@@ -77,9 +85,13 @@ const AnimationPickerListItem = React.createClass({
                 sourceUrl={this.props.animationProps.sourceUrl}
                 width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
                 height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                playBehavior={!this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null}
               />
           }
           {this.props.icon && <i className={"fa fa-" + this.props.icon} />}
+          {this.props.category &&
+            <img className={this.props.category} style={styles.categoryImage} src={iconImageSrc}/>
+          }
         </div>
         <div style={labelStyle}>
           {this.props.label}

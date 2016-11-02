@@ -111,5 +111,8 @@
   "word": "ស្វែងរក​ពាក្យ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "យល់ព្រម",
-  "youSpelled": "អ្នក​បាន​ប្រកប"
+  "youSpelled": "អ្នក​បាន​ប្រកប",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

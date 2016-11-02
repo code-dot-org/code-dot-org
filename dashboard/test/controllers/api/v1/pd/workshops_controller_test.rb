@@ -33,6 +33,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 1, JSON.parse(@response.body).length
   end
 
+  test 'with the facilitated param, workshop organizers only view workshops they facilitated' do
+    workshop_2 = create(:pd_workshop, organizer: @organizer, facilitators: [@organizer])
+
+    sign_in @organizer
+    get :index, params: {workshops_ive_facilitated: true}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.length
+    assert_equal workshop_2.id, response[0]['id']
+  end
+
   test 'workshop organizers cannot list workshops they are not organizing' do
     sign_in create(:workshop_organizer)
     get :index
@@ -200,6 +211,31 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params[:location_address] = @workshop.location_address
     Pd::Workshop.expects(:process_location).never
     put :update, id: @workshop.id, pd_workshop: params
+  end
+
+  test 'updating with notify true sends detail change notification emails' do
+    sign_in @admin
+
+    # create some enrollments
+    5.times do
+      create :pd_enrollment, workshop: @workshop
+    end
+    mock_mail = stub(deliver_now: nil)
+    Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
+
+    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: true
+  end
+
+  test 'updating with notify false does not send detail change notification emails' do
+    sign_in @admin
+
+    # create some enrollments
+    5.times do
+      create :pd_enrollment, workshop: @workshop
+    end
+    Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).never
+
+    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: false
   end
 
   # Update sessions via embedded attributes

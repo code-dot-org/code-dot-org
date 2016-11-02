@@ -4,6 +4,9 @@
 /* global Promise */
 
 try {
+  // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
+  process.hrtime = require('browser-process-hrtime');
+
   var five = require('johnny-five');
   var ChromeSerialPort = require('chrome-serialport');
   var PlaygroundIO = require('playground-io');

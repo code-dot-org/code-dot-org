@@ -3,7 +3,7 @@ title: CS Discoveries Professional Learning Program
 ---
 # CS Discoveries Professional Learning Program
 
-The Code.org Computer Science Discoveries (CSD) Professional Learning Program is an intensive professional learning program for middle school and high school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program is designed to prepare educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms.
+The Code.org Computer Science Discoveries Professional Learning Program is an intensive professional learning program for middle school and high school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program is designed to prepare educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms.
 
 ## What does a Code.org CS Discoveries educator do?
 If accepted into the Code.org CS Discoveries Professional Learning Program, you will:
@@ -22,13 +22,13 @@ The program has two components:
      - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further explorating the curriculum.
 
 
-[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
+[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## <a name="commitments"></a>What are the program commitments?
 
 Code.org TeacherCon: (June-August)
 
-  - 5 days (30 hours) in person. Choose from three dates:
+  - 5 days (30 hours) in person. Events will be hosted in 3 different regions. While regional assignments are TBD, the three dates are:
 	  - June 18-23 in TBD location
 	  - July 16-21 in TBD location
 	  - July 30-Aug 4 in TBD location
@@ -46,6 +46,6 @@ The CS Discoveries Professional Learning Program is open to teachers who are int
 
 ## <a name="locations"></a>Where is the program offered?
 
-We're so excited that you're interested in applying for our Professional Learning Program! The application is not open yet for Summer 2017, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when the application is live.
+We're so excited that you're interested in applying for our Professional Learning Program! The application is not open yet for Summer 2017, but [fill out our interest form](https://goo.gl/forms/jBWAHg5jvEV8lSV52) to find out when the application is live.
 
-[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
+[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)

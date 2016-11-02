@@ -1,0 +1,11 @@
+name 'courseB_story_unspottedBugs4'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<h3>
+
+“That’s why I hired you.” Jasmine said to JD. </h3>
+
+![](https://images.code.org/f1fae8ca86dd5e06a199138bbe1fcbc8-image-1475981443395.jpg)
+MARKDOWN

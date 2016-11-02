@@ -4,13 +4,11 @@ import React from 'react';
 
 import {ApplabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
-import * as utils from '../utils';
 import * as actions from './actions';
 import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';
 import ViewDataButton from './ViewDataButton';
-import experiments from '../experiments';
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
@@ -33,7 +31,7 @@ var PlaySpaceHeader = React.createClass({
 
   handleViewData: function () {
     window.open(
-      '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + this.props.channelId,
+      '//' + window.dashboard.CODE_ORG_URL + '/v3/edit-csp-app/' + this.props.channelId,
       '_blank');
   },
 

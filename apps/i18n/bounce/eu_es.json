@@ -114,5 +114,17 @@
   "whenWallCollidedTooltip": "Exekutatu ekintza hauek pilota batek hormaren bat jotzean.",
   "whileMsg": "bitartean",
   "whileTooltip": "Bukaerako puntua eskuratu arte barruko ekintzak errepikatu.",
-  "yes": "Bai"
+  "yes": "Bai",
+  "basketballLaunchBall": "throw new ball",
+  "basketballLaunchBallTooltip": "Throw a ball into play.",
+  "basketballSetPaddle": "set hand",
+  "basketballSetPaddleSpeedFast": "set fast hand speed",
+  "basketballSetPaddleSpeedNormal": "set normal hand speed",
+  "basketballSetPaddleSpeedRandom": "set random hand speed",
+  "basketballSetPaddleSpeedSlow": "set slow hand speed",
+  "basketballSetPaddleSpeedTooltip": "Sets the speed of the hand",
+  "basketballSetPaddleSpeedVeryFast": "set very fast hand speed",
+  "basketballSetPaddleSpeedVerySlow": "set very slow hand speed",
+  "basketballWhenBallMissesPaddle": "when ball misses hand",
+  "basketballWhenPaddleCollided": "when ball hits hand"
 }

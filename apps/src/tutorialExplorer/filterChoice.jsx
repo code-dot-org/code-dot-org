@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const styles = {
   filterChoiceOuter: {
@@ -18,6 +17,9 @@ const styles = {
     paddingBottom: 0,
     marginBottom: 0,
     cursor: 'pointer'
+  },
+  filterChoiceInput: {
+    marginRight: 5
   }
 };
 
@@ -46,7 +48,7 @@ const FilterChoice = React.createClass({
             type="checkbox"
             checked={this.props.selected}
             onChange={this.handleChange}
-            style={{marginRight: 5}}
+            style={styles.filterChoiceInput}
           />
           {this.props.text}
         </label>

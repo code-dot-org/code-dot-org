@@ -46,3 +46,12 @@ function countAllowedModes(state) {
 export function showVisualizationHeader(state) {
   return countAllowedModes(state) > 1;
 }
+
+/**
+ * Decide whether we should start in the Animation Tab on page load.
+ * @param {Object} state - Game Lab redux state.
+ * @returns {boolean}
+ */
+export function startInAnimationTab(state) {
+  return state.pageConstants.startInAnimationTab;
+}

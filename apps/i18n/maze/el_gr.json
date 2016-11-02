@@ -111,5 +111,8 @@
   "word": "Βρες τη λέξη",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Ναι",
-  "youSpelled": "Έγραψες"
+  "youSpelled": "Έγραψες",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

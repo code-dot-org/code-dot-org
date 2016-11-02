@@ -1,4 +1,4 @@
-/* global define, $ */
+import $ from 'jquery';
 import Immutable from 'immutable';
 import constants from './constants';
 
@@ -279,34 +279,6 @@ export function isInfiniteRecursionError(err) {
   return false;
 }
 
-// TODO(dave): move this logic to dashboard.
-export function getPegasusHost() {
-  switch (window.location.hostname) {
-    case 'studio.code.org':
-    case 'learn.code.org':
-      return 'code.org';
-    default:
-      var name = window.location.hostname.split('.')[0];
-      switch (name) {
-        case 'localhost':
-          return 'localhost.code.org:3000';
-        case 'development':
-        case 'staging':
-        case 'test':
-        case 'levelbuilder':
-          return name + '.code.org';
-        case 'staging-studio':
-          return 'staging.code.org';
-        case 'test-studio':
-          return 'test.code.org';
-        case 'levelbuilder-studio':
-          return 'levelbuilder.code.org';
-        default:
-          return null;
-      }
-  }
-}
-
 /**
  * IE9 throws an exception when trying to access the media field of a stylesheet
  */
@@ -317,7 +289,7 @@ export function browserSupportsCssMedia() {
     try {
       if (rules.length > 0) {
         // see if we can access media
-        var media = rules[0].media;
+        rules[0].media;
       }
     } catch (e) {
       return false;
@@ -641,4 +613,39 @@ export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
     case constants.Position.OUTBOTTOMOUTRIGHT:
       return containerHeight;
   }
+}
+
+/**
+ * Calculate the Levenshtein distance between two strings
+ * @param {string} a
+ * @param {string} b
+ * @return {number} distance
+ */
+export function levenshtein(a, b) {
+  if (!a || !b) {
+    return (a || b).length;
+  }
+
+  const matrix = [];
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+    if (i === 0) {
+      continue;
+    }
+
+    for (let j = 0; j <= a.length; j++) {
+      matrix[0][j] = j;
+      if (j === 0) {
+        continue;
+      }
+
+      matrix[i][j] = b.charAt(i - 1) === a.charAt(j - 1) ? matrix[i - 1][j - 1] : Math.min(
+        matrix[i - 1][j - 1] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j] + 1
+      );
+    }
+  }
+
+  return matrix[b.length][a.length];
 }

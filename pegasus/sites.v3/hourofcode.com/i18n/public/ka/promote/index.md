@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -17,13 +19,13 @@ nav: promote_nav
 
 ## 1. გაავრცელეთ ხმა
 
-მოუყევით თქვენს მეგობრებს **#HourOfCode**-ის შესახებ!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. სთხოვეთ მთელ თქვენს სკოლას კოდის ერთი საათის ჩატარება
 
-[გაუგზავნეთ ეს წერილი](<%= resolve_url('/promote/resources#sample-emails') %>) თქვენს დირექტორს და შესთავაზეთ რეგისტრაციის გავლა სკოლის ყოველ კლასს. <% if @country == 'us' %> თითო იღბლიანი სკოლა *ყოველ* აშშ–ის შტატში (და ვაშინგტონის ოლქში) მოიგებთ 10,000$ ღირებულების ტექნიკას. <% end %>
+[გაუგზავნეთ ეს წერილი](<%= resolve_url('/promote/resources#sample-emails') %>) თქვენს დირექტორს და შესთავაზეთ რეგისტრაციის გავლა სკოლის ყოველ კლასს. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## 3. მოუხმეთ თქვენს დამსაქმებელს, მიიღოს მონაწილეობა
 
@@ -36,3 +38,5 @@ nav: promote_nav
 ## 5. მიმართეთ თქვენს ადგილობრივ ოფიციალური თანამდებობის პირს, მხარი დაუჭიროს კოდის ერთ საათს
 
 [გაუგზავნეთ ეს წერილი](<%= resolve_url('/promote/resources#sample-emails') %>) თქვენს ადგილობრივ წარმომადგენლებს, ქალაქის მერიას ან სკოლის საბჭოს და მოიწვიეთ, ესტუმრონ სკოლას კოდის ერთი საათის ღონისძიების ფარგლებში. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
+
+<%= view :signup_button %>

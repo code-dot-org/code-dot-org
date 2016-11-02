@@ -1,5 +1,4 @@
-import BaseCommand from "./BaseCommand";
-import CommandState from "./CommandState.js";
+import CommandState from "./CommandState";
 
 
 export default class CommandQueue {
@@ -101,4 +100,3 @@ export default class CommandQueue {
     return this.state === CommandState.FAILURE;
   }
 }
-

@@ -2,15 +2,16 @@ km:
   site_name: ពេលវេលា​នៃ​កូដ
   hour_of_code: Hour of Code
   language: អង់គ្លេស
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: នឹងមកដល់នាពេលឆាប់ៗនេះ
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: Dec. 5
   campaign_date_start_long: December 5
   campaign_date_short: Dec. 5-11
   campaign_date_full: December 5-11
   campaign_date_year: "2016"
   campaign_date_full_year: December 5-11, 2016
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: សូមទស្សនានៅវិដេអូថ្មីៗ
   front_watch_regular_video: Watch the video
@@ -18,7 +19,6 @@ km:
   front_start_learning: Start learning
   header_menu_resources: ប្រភពមេរៀន
   header_menu_faq: FAQ
-  header_menu_prizes: រង្វាន់
   header_menu_how_to: How-To
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ km:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: រង្វាន់សម្រាប់អ្នករៀបចំ
-  prizes_every_organizer: គ្រប់អ្នករៀបចំ ម៉ោងនៃកូដនឹងទទួល Dropbox ឬកម្មវិធី Skype ឥណទានសំរាប់ជាការថ្លែងអំណរគុណ
-  prizes_technology: 'គ្រប់សាលារដ្ធនៅគ្រប់រដ្ធរបស់ អាមេរិក (& Washington DC) នឹងឈ្មះ  $១០,០០០ សំរាប់បច្ចេកវិទ្យានេះ'
-  prizes_tech_chats: '# ថ្នាក់រៀនដែលនឹងឈ្នះការសន្ទនាវីដេអូជាមួយភ្ញៀវកិត្តិយស'
-  prizes_robots: ថ្នាក់រៀនចំនួន១០០ នឹងត្រូវឈ្នះរង្វាន់រូប៉ូតដែលអាចសរសេរកូដបញ្ជាបាន មួយឈុត
-  prizes_brilliant: សាលារៀនចំនួន១ នៅតាមតំបន់ឬខេត្តមួយ នឹងត្រូវឈ្នះរង្វាន់ជាទឹកប្រាក់ចំនួន២០០០$ សម្រាប់គម្រោងវិសេសមួយ
-  prizes_actua: សាលារៀនចំនួន១៥ ទូទាំងប្រទេសកាណាដា នឹងត្រូវទទួលបានវគ្គបណ្ដុះបណ្ដាលវិទ្យាសាស្ត្រ STEM ចំនួន២លើក ដោយសមាជិករបស់ Actua
-  prizes_details: ព័ត៌មានលម្អិត
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -163,25 +155,8 @@ km:
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   how_to_nav_volunteers: For volunteers
-  prizes_nav_title: រង្វាន់
-  prizes_nav_home: All prizes
-  prizes_nav_hardware: Hardware prize signup
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: FAQ
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  prizes_more: More exciting prizes
   whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
@@ -196,6 +171,7 @@ km:
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   front_join_us_heading: ម៉ោងនៃកូដសំរាប់សិស្សគ្រប់គ្នា
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: វិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាគ្រឹះសម្រាប់សិស្សគ្រប់គ្នា។ សូមជួយយើងណែនាំវាទៅ 100 លាននាក់។
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: ចូលរួមជាមួយយើង
@@ -243,6 +219,7 @@ km:
   signup_send_posters_address_label: អាស័យដ្ធានរបស់សាលា ឬអង្គការ
   signup_whole_school_flag_label: ព្រឹត្តិការណ៏នេះសំរាប់សាលាទាំងមូល
   signup_your_event: ចុះឈ្មោះ​ព្រឹត្តិការណ៍​របស់​អ្នក
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: ឈ្មេាះរបស់អ្នក
@@ -275,28 +252,6 @@ km:
   meta_tag_twitter_title: ម៉ោងសំរាប់កូដនឹងមកដល់ក្នុងពេលឆាប់ៗនេះ
   meta_tag_twitter_description: ម៉ោងសំរាប់កូដគឺជាចលនាសកលក្នុងការឈោងចាប់សិស្ស និស្សិតរាប់លានអ្នកនៅក្នុង ១៨០ប្រទេស នឹងមានភាសាច្រើនជាង៣០។ អាយុចាប់ពី ៤ ដល់ ១០៤ឆ្នាំ
   twitter_default_text: 'ខ្ញំុចូលរួមក្នុងឆ្នាំនេះ #HourOfCode, are you? @codeorg'
-  hardware_prizes_form_name_label: ឈ្មេាះរបស់អ្នក
-  hardware_prizes_form_name_placeholder: ឈ្មេាះរបស់អ្នក
-  hardware_prizes_form_email_label: អ៊ីុម៉េល
-  hardware_prizes_form_email_placeholder: អ៊ីុម៉េល
-  hardware_prizes_form_school_name_label: ឈ្មេាះសាលា
-  hardware_prizes_form_school_name_placeholder: ឈ្មេាះសាលា
-  hardware_prizes_form_school_address_label: អាស័យដ្ធានសាលា
-  hardware_prizes_form_school_address_placeholder: អាស័យដ្ធានសាលា
-  hardware_prizes_form_school_type_label: ប្រភេទសាលា
-  hardware_prizes_form_school_type_option_elementary: មឋមសិក្សា
-  hardware_prizes_form_school_type_option_middle_school: អនុវិទ្យាល័យ
-  hardware_prizes_form_school_type_option_high_school: វិទ្យាល័យ
-  hardware_prizes_form_qualifying_school_label: នេះជាសិស្សថ្នាក់ទី១២ សាលារដ្ធ
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
-  hardware_prizes_form_number_students_label: ចំនួនសិស្សដែលចូលរួម
-  hardware_prizes_form_number_students_placeholder: ចំនួនសិស្ស
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: តំឡើងម៉ោងសំរាប់កូដទៅក្នុងគំរោង
-  hardware_prizes_form_plan_file_description: 'ដាក់បញ្ចូលនៅកាលវិភាគក្នុងការរៀបចំនៅសិស្សនីមួយៗក្នុងការអនុវត្តន៏នៅម៉ោងសំរាប់កូដនៅសាលារបស់អ្នក។ សូមមើលគំរូ #PDF# #Word#'
-  hardware_prizes_form_submit_label: ' ដាក់ស្នើរ'
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: តើម៉ោងសំរាប់កូដជាអ្វី?
   hoc_faq_what_is_hoc_a: |-
@@ -405,14 +360,9 @@ km:
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Partners
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: សូមអរគុណ
-  title_prizes: រង្វាន់
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: ប្រភពមេរៀន
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
@@ -429,7 +379,7 @@ km:
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
+  footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: Partners
   footer_menu_contact: Contact us

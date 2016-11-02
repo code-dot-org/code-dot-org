@@ -329,6 +329,7 @@
       unsubmit: Unsubmit
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'Adresa e email-it nuk është konfirmuar:'
     email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'

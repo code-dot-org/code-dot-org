@@ -2,12 +2,12 @@
   errors:
     messages:
       not_saved: "الرجاء تصحيح الأخطاء التالية:"
-      too_young: "هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
+      too_young: "هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً."
+      teacher_must_accept_terms: هذا المحتو يخضع لقيود العمر في ولا يتوفر للطلاب الأصغر
+        سنا. اسأل المعلم الخاص بك لقبول "شروط الخدمة" المستحدثة لتمنحك الوصول إلى
+        هذا المحتوى. يستطيع المعلم الخاص بك القيام بذلك بتسجيل الدخول إلى "استوديو
+        التعليمات البرمجية" والنقر فوق الزر "تحديث مراجعة شروط" بالقرب من أعلى الصفحة
+        الرئيسية "ستوديو التعليمات البرمجية".
       pair_programmer: You are currently pair programming with a student who does
         not have access to this content. To access this content, stop pair programming
         and try again.
@@ -90,11 +90,11 @@
   signup_form:
     student_count: "عدد الطلاب المسجلين حالياً هو %{count}."
     teacher_count: "عدد المعلّمين المسجلين حالياً هو %{count}."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: قم بالتسجيل للحصول على حساب لتتبع التقدم المحرز الخاص بك أو إدارة الفصول
+      الدراسية الخاصة بك. <a href="/"> يمكنك استعراض مختلف مراحل والالغاز</a> دون
+      حساب، ولكنك ستحتاج للتسجيل لحفظ التقدم والمشاريع الخاصة بك.
     teacher_educator_guide: "راجع دليل المعلم"
-    title: Sign up for Code.org
+    title: "الاشتراك في Code.org"
     school_name: "اسم المدرسة (اختياري)"
     school_address: "عنوان المدرسة (اختياري)"
     address_placeholder: "العنوان، المدينة، الدولة، الرمز البريدي"
@@ -110,19 +110,20 @@
     valid_password: "كلمة المرور متاحة!"
     invalid_password: "كلمة المرور يجب ان تكون على الاقل 6 احرف"
     mismatch_password: "كلمة المرور التي ادخلتها غير متطابقة"
-    student_terms: "أنا أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a>
-      Code.org. إذا كنت أنا دون 13 سنة من العمر، فأنا أؤكد من خلال تقديم هذا النموذج
-      بأنه لدي الإذن من أولياء الأمر أو الوصي القانوني لاستخدام خدمات Code.org.<br/>لا
-      يتم تخزين البريد الإلكتروني للمستخدمين دون سن 13 عام بطريقة تسمح لنا الاتصال
-      بهم."
-    teacher_terms: "أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a>
-      Code.org."
+    student_terms: "أوافق على الالتزام <a href='http://code.org/tos'> شروط الخدمة</a>
+      Code.org. إذا كنت دون سن 13 عاماً، اؤكد بتقديم هذه الاستمارة بان أحد والدي أو
+      وأي امري اذن باستخدام الخدمات Code.org. <br/> <br/> لا يتم تخزين عناوين البريد
+      الإلكتروني في شكل يسمح لنا بالاتصال بالطلاب. سوف يتلقى الطلاب ابدأ رسائل البريد
+      الإلكتروني من Code.org باستثناء استرداد كلمة المرور. الاطلاع على <a href='http://code.org/privacy'>
+      سياسة الخصوصية</a> لمزيد من المعلومات."
+    teacher_terms: "أوافق على الالتزام بشروط الخدمة Code.org. لمزيد من المعلومات حول
+      الخصوصية، راجع لدينا <a href='http://code.org/privacy'> سياسة الخصوصية</a>."
     additional_information: "نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع."
     user_type_label: "نوع الحساب"
     user_type_teacher: "المدرس"
     user_type_student: "طالب"
     field_is_required: "مطلوب"
-    accept_terms: You must agree to create an account
+    accept_terms: "يجب عليك الموافقة على إنشاء حساب"
   signin_form:
     title: "هل لديك حساب؟ قم بتسجيل الدخول"
     login: "البريد الإلكتروني"
@@ -144,8 +145,8 @@
   password:
     reset_form:
       title: "نسيت كلمة المرور؟"
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: "قم بإدخال عنوان بريدك الإلكتروني أدناه وسيتم إرسال إرشادات لإعادة
+        تعيين كلمة المرور."
       email: "البريد الإلكتروني"
       submit: "تسجيل"
     change_form:
@@ -284,10 +285,10 @@
       prizes: "الجوائز"
       logout: "تسجيل الخروج"
       signin: "تسجيل الدخول"
-      signup: "تسجيل"
+      signup: "إنشاء حساب"
       already_registered: "هل قمت بالتسجيل من قبل؟"
       pair_programming: "البرمجة الزوجية"
-      team: Team
+      team: "فريق"
       driver: Driver
       navigator: Navigator
     popup:
@@ -315,7 +316,7 @@
     user_not_found: "لا يمكن العثور على المعلم."
     student_teacher_disassociated: "لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك."
     panel:
-      answer_viewer: "عارض الأجوبة"
+      answer_viewer: "لوحة المعلم"
       student: "طالب"
       viewing_solution: "عرض الحلول"
       try_it_yourself: "جربها بنفسك"
@@ -324,8 +325,9 @@
       example_with_number: "مثال الحل %{solution_number}"
       submitted_on: "تم تقديمه في:"
       unsubmit: "عدم تقديم"
-      worked_with: Worked With
+      worked_with: "عملت مع"
       update_lock_settings: Update lock settings here.
+      clear_response: Clear response
   user:
     email_confirm_needed: "لم يتم تأكيد عنوان البريد الإلكتروني:"
     email_confirm_needed_required: "لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:"
@@ -585,8 +587,8 @@
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
         or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      body_short: "إذا لم يكن لديك أجهزة حاسب، حاول هذه الدروس الغير متصلة بالشبكة
+        في الفصول الدراسية الخاصة بك."
   gallery:
     students_drew_these_with_code: "قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!"
     students_made_these_with_code: "قام الطلبة بصنع هؤلاء باستخدام البرمجة (الكود)!"
@@ -648,11 +650,10 @@
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
       date.  Are you sure?
     submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
+    submit-incomplete-body: "تركت بعض الأسئلة غير مكتملة.  لا يمكنك تحرير مشروعكم
+      بعد تقديمه.  هل أنت متأكد؟"
     submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    submit-complete-body: "لا يمكنك تعديل مشروعك بعد تقديمه، هل تريد بالفعل تقديمه؟"
   match:
     wrong_title: "الحل غير صحيح"
     wrong_body: "الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!"
@@ -692,33 +693,31 @@
       بإعارة أو بيع أو مشاركة هذه المعلومات مع أي طرف آخر."
     sign_out: إذا كنت لا ترغب بالإدلاء بعمرك، يمكنك <a href="%{url}"> تسجيل الخروج</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    title: "تحديث شروط الخدمة وسياسة الخصوصية"
+    intro_desc: 'قمنا بتحديث لدينا شروط الخدمة وسياسة الخصوصية، كما هو موضح أدناه.
+      فهذه التغييرات اعتبارا من 24 أغسطس 2016.  أكبر تغيير: أننا سوف <i>لم نعد نخزن
+      عناوين البريد الإلكتروني لحسابات الطلاب في "استوديو البرمجية".</i> هذا فرق كبير
+      بالنسبة لنا، ونحن نأمل أن يضع معياراً جديداً لخصوصية الطالب في التعليم والتكنولوجيا.
+      لقد أرسلنا لك ملخص للتغييرات الأخرى عبر البريد الإلكتروني.'
+    intro_instructions: سوف تحتاج إلى قبول هذه الشروط الجديدة للطلاب تحت سن ال 13
+      في الفصول الدراسية الخاصة بك للوصول الكامل إلى جميع أحدث الميزات في "الاستوديو
+      التعليمات البرمجية".  عند تسجيل حساب لطالب دون سن 13، سيتم مطالبتك بتأكيد أن
+      المدرسة الخاصة بك بموافقة الوالدين لجمع المعلومات الشخصية للطالب لاستخدام والاستفادة
+      من المدرسة، بما في ذلك البرامج التعليمية مثل Studio التعليمات البرمجية.
     tos: "شروط الخدمة"
     privacy: "سياسة الخصوصية"
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: "ملاحظة: سياسة الخصوصية"
+    accept_label: أوافق على <a href="%{tos_url}" target="_blank"> شروط الخدمة</a>
+      و <a href="%{privacy_url}" target="_blank"> سياسة الخصوصية</a> المحدثة
+    accept: "اوافق"
     print: "طباعة"
-    later: Later
+    later: "لاحقا"
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: Review updated terms
+    review_terms: "راجع سياسة الخصوصية المستحدثة"
   zendesk_too_young_message: عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع
     دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> دون تسجيل الدخول
     أو الطلب من والديك أو معلمك التواصل معنا نيابة عنك.
@@ -747,10 +746,10 @@
     share: "المشاركة"
     share_title: "شارك مشاريعك"
     share_copy_link: "إنسخ الرابط:"
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
+    share_embed_description: "يمكنك لصق تضمين رمز في صفحة HTML لعرض المشروع على صفحة
+      ويب."
+    share_u13_warning: "اسأل المعلم الخاص بك قبل مشاركة. فقط تستطيع المشاركة مع الآخرين
+      في المدرسة الخاصة بك."
     embed: Embed
     advanced_share: "إظهار الخيارات المتقدمة"
     close: "إغلاق"
@@ -777,8 +776,8 @@
     abuse:
       tos: "هذا المشروع قد تم الإبلاغ عنه بانتهاكه Code.org، <a href='http://code.org/tos'>
         شروط الخدمة</a>، ولا يمكن مشاركته مع الآخرين."
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "هذا المشروع يحتوي على معلومات لا يمكن مشاركتها مع الآخرين.
+        الرجاء الاتصال بمالك التطبيق لإصلاح محتويات على التطبيق."
       contact_us: "إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'>
         مراسلتنا.</a>"
       go_to_code_studio: "الذهاب الي Code Studio"
@@ -806,7 +805,7 @@
           الاستخدام%{link_end}"
   peer_review:
     accepted:
-      name: Accepted
+      name: "مقبول"
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
@@ -834,11 +833,11 @@
       no_icons_found: "لم يتم العثور على ايقونات"
     playzone:
       artist_description: "ارسم صور رائعة و صمم مع الرسام !"
-      artist_title: New Drawing
+      artist_title: "رسم جديد"
       continue_button: "انتقل إلى المرحلة التالية"
       playlab_description: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
+      playlab_title: "التطبيق الجديد "
+      primary_header: "مبروك لقد اكملت المرحلة%{stageName}!"
       projects_description: Revisit one of your existing projects.
       projects_title: "قم بفتح مشروع"
       secondary_header: "اسأل المعلم الخاص بك ماذا تفعل المقبل"
@@ -868,12 +867,12 @@
       ملاحظة: سوف لا يكون للطلاب القدره على تسجيل الدخول إلى "استوديو التعليمات البرمجية"
       أو حفظ التقدم، أو طباعة الشهادات. يمكن للمعلمين طباعة الشهادات قبل الموعد المحدد
       <a href="%{url}"> هنا</a>.'
-    minecraft_name: Minecraft Hour Of Code
+    minecraft_name: "ساعة البرمجة ماين كرافت"
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    starwars_javascript_name: "حرب النجوم: بناء مجرة باستعمال البرمجة (جافا سكريبت)"
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_english: "تحميل الإنجليزية:"
+    download_in_spanish: "تحميل بالإسبانية:"
     windows: Windows
     mac: "نظام تشغيل ماك"
   plc:

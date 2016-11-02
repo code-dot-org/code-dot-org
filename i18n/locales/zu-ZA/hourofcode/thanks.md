@@ -12,29 +12,29 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Thanks for signing up to host an Hour of Code!
+# Siyabonga ngokuzinikela ukuze usingathe iHora loKufingqwa!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. What can you do now?
+Wenza kukhonakale ukuba abafundi kumhlaba wonke jikelele bakhone ukufunda ihora elilodwa leHora loKufingqwa elinga *shintsha ukuphila kwabo konke*, phakathi <%= usuku_lomcimbi('oluphelele') %>. Sizoxhumana ngezifundiso ezinsha kanye nezibuyekezo ezithokozisayo. Ungenzani?
 
-## 1. Spread the word
+## 1. Sabalalisa izwi
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Usuzibandakanye nonyakazo weHora loKufingqwa. Xoxela izihlobo zakho nge**#HoraloKufingqwa**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Thola ivolontiya yendawo ukukusiza ngomcimbi wakho.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[ Cinga ibalazwe yamavolontiya ethu](%= resolve_url('https://code.org/volunteer/local') %) ukuthola amavolontiya angasiza ukuvakashela ikilasi lakho okanye baxoxisane ngokwe vidiyo ukugqugquzela abafundi bakho ngobubanzi bamathuba ngekhompyutha sayensi.
 
-## 3. Ask your whole school to offer an Hour of Code
+## 3. Cela isikole sakho sonke sinikezele iHora loKufingqwa
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
+[Thumela imeyili leli](%= resolve_url('/promote/resources#sample-emails') %) kuthisha nhloko wakho uphinde ufake inselela kumakilasi wonke akho kusikole sakho ukuba babhalise.
 
-## 4. Ask your employer to get involved
+## 4. Cela umqashi wakho azibandakanye
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+[Thumela le imeyili](%= resolve_url('/promote/resources#sample-emails') %) kumphathi wakho okanye kuCEO yenkampani.
 
-## 5. Promote Hour of Code in your community
+## 5. Khuthaza iHora loKufingqwa kumphakathi wakho
 
 [Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 

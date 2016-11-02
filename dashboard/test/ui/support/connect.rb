@@ -37,6 +37,7 @@ def saucelabs_browser
   capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
+  capabilities[:idleTimeout] = 180
 
   puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 

@@ -114,5 +114,17 @@
   "whenWallCollidedTooltip": "বল দেয়ালে আঘাত করলে নিচের কাজগুলো নির্বাহ করুন।",
   "whileMsg": "যখন",
   "whileTooltip": "সমাপ্তি বিন্দুতে না পৌঁছানো পর্যন্ত ঘিরা কাজ পুনরাবৃত্তি করুন।",
-  "yes": "\"হ্যাঁ\""
+  "yes": "\"হ্যাঁ\"",
+  "basketballLaunchBall": "throw new ball",
+  "basketballLaunchBallTooltip": "Throw a ball into play.",
+  "basketballSetPaddle": "set hand",
+  "basketballSetPaddleSpeedFast": "set fast hand speed",
+  "basketballSetPaddleSpeedNormal": "set normal hand speed",
+  "basketballSetPaddleSpeedRandom": "set random hand speed",
+  "basketballSetPaddleSpeedSlow": "set slow hand speed",
+  "basketballSetPaddleSpeedTooltip": "Sets the speed of the hand",
+  "basketballSetPaddleSpeedVeryFast": "set very fast hand speed",
+  "basketballSetPaddleSpeedVerySlow": "set very slow hand speed",
+  "basketballWhenBallMissesPaddle": "when ball misses hand",
+  "basketballWhenPaddleCollided": "when ball hits hand"
 }

@@ -1,0 +1,45 @@
+name 'CSPU5_introToDebugging'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Learning How to Debug Programs
+
+Debugging is a skill and an art.  With practice you learn how to write relatively bug-free code and more importantly you **learn about yourself and the kinds of errors you typically make**.
+
+But learning how to debug takes some time and getting used to, and you will learn about the different kinds of things that can go wrong when you write programs.
+
+It bears repeating:
+
+**Debugging is part of the problem-solving process of programming**.  
+
+* Rarely does code work exactly the way you want the first time. 
+* If you write some code and need to work out a few bugs that does not mean you are bad programmer - actually the opposite might be true.
+
+**Be a Pro! Even professionals do not expect to write bug-free code on the first try!!!** 
+
+ * Instead they get in the habit of running their code, checking their assumptions, and making changes as needed. Programming isn't a fixed set of steps. 
+ * It's a creative and continuous cycle of writing, testing, and improving code. 
+
+**Don't Worry! We'll Practice.**
+
+* With practice you eventually stop making certain kinds of errors that beginners run into, but there's always something around the corner that needs to be worked out.
+
+# Common Types of Errors
+In the next few levels we'll practice debugging a few common types of errors.  They generally fall in two categories:
+
+**Syntax errors**
+
+ * things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say
+ * usually the computer spits out an error message of some kind that is a clue about what it can't understand
+ * fix these with careful reading of the lines that have errors
+ 
+**Logic errors** 
+
+ * the program runs but doesn't do what you think it should.
+ * can be tricky to fix because there might not be an error message
+ * fix by retracing your steps, being humble, and trying to understand why the computer is interpretting what you wrote the way it is.
+ 
+### Click Continue to start practicing
+MARKDOWN

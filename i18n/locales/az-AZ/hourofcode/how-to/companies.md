@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Şagirdləri həvəsləndirin və Kod Saatında könüllü olun
@@ -136,4 +138,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Kod Saatından sonra nə gəlir?
 
-Kod Saatı texnologiyanın necə işlədiyi və proqram təminatının necə hazırlandığını öyrənmək yolunda ancaq birinci addımdır. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

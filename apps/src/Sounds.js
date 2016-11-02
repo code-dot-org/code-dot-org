@@ -4,7 +4,6 @@
  * Interface for a sound registry and playback mechanism
  * @interface AudioPlayer
  */
-function AudioPlayer() {}
 
 /**
  * Register a sound to a given ID

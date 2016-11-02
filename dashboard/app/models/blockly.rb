@@ -20,11 +20,13 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
+  before_save :fix_examples
 
   serialized_attrs %w(
     level_url
@@ -67,6 +69,7 @@ class Blockly < Level
     droplet_tooltips_disabled
     lock_zero_param_functions
     contained_level_names
+    encrypted_examples
   )
 
   before_save :update_ideal_level_source
@@ -292,6 +295,10 @@ class Blockly < Level
         level_prop.delete('fn_failureCondition')
       end
 
+      # We don't want this to be cached (as we only want it to be seen by authorized teachers), so
+      # set it to nil here and let other code put it in app_options
+      level_prop['teacherMarkdown'] = nil
+
       # Set some values that Blockly expects on the root of its options string
       level_prop.reject!{|_, value| value.nil?}
     end
@@ -326,5 +333,11 @@ class Blockly < Level
   def autoplay_blocked_by_level?
     # Wrapped since we store our serialized booleans as strings.
     self.never_autoplay_video == 'true'
+  end
+
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
   end
 end

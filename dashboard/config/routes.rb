@@ -143,12 +143,6 @@ Dashboard::Application.routes.draw do
 
     get 'instructions', to: 'scripts#instructions'
 
-    # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
-
-    # /s/xxx/puzzle/yyy
-    get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
-
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
@@ -321,13 +315,14 @@ Dashboard::Application.routes.draw do
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
-
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
+        get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
       resources :district_report, only: :index
       resources :workshop_organizer_report, only: :index
       resources :teacher_progress_report, only: :index
       resources :course_facilitators, only: :index
+      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
     end
   end
 
@@ -349,12 +344,6 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
-
-    # This is a developer aid that allows previewing rendered mail views with fixed test data.
-    # The route is restricted so it only exists in development mode.
-    if Rails.env.development?
-      mount Pd::MailPreviewController => 'mail_preview'
-    end
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -395,6 +384,7 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+      get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }

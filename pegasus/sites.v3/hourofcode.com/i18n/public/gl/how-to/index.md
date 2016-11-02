@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Como ensinar unha Hora do Código
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
@@ -15,12 +17,12 @@ Join the movement and introduce a group of students to their first hour of compu
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Titoriais autoexplicativos da Hora do Código:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
   * Requiren dun tempo de preparación mínimo por parte dos mestres
   * Son titoriais guiados, o que permite os estudantes traballaren ao seu propio ritmo e segundo as súas habilidades
 
-**[Titoriais para profesores da Hora do Código:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
   * Son plans de clase que esixen algunha preparación máis avanzada do profesor
   * Son clasificados por nivel *e* por disciplina (por exemplo, matemáticas, inglés, etc)
@@ -140,3 +142,5 @@ A Hora do Código é só o primeiro paso dunha viaxe para aprender máis sobre c
 
   * Anime os alunos a continuar a [aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Asista](<%= resolve_url('https://code.org/professional-development-workshops') %>) a uha clase presencial, de un día, para recibir instrucións de unha persoa con experiencia en informática. (Sómente para educadores dos EUA)
+
+<%= view :signup_button %>

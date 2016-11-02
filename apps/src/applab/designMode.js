@@ -731,17 +731,16 @@ function makeDraggable(jqueryElements) {
         ui.size.height = dimensions.height;
 
         // Set original element properties to update values in Property tab
+        if (elm.is("canvas")) {
+          // for canvas we need to set width/height attributes directly as these
+          // control canvas size rather than style.width/style.height
+          elm.attr('width', dimensions.width + "px");
+          elm.attr('height', dimensions.height + "px");
+        }
+        // set style.width/style.height regardless, as this is used to size our
+        // background image
         elm.outerWidth(dimensions.width);
         elm.outerHeight(dimensions.height);
-
-        var element = elm[0];
-        // canvas uses width/height. other elements use style.width/style.height
-        var widthProperty = 'style-width';
-        var heightProperty = 'style-height';
-        if (element.hasAttribute('width') || element.hasAttribute('height')) {
-          widthProperty = 'width';
-          heightProperty = 'height';
-        }
 
         // Re-render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);

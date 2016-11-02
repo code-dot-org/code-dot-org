@@ -1,0 +1,34 @@
+name '2.1 and 2.2 Lesson Connections'
+markdown <<MARKDOWN
+# 2.1 and 2.2 Lesson Connections
+
+In the previous unit, students were motivated by the need to to transmit data from one computer to another.  They focused on the protocols used to send bits from one place to another.  Here, we transition away from thinking about transmitting data, and focus on the ways these pieces of information are stored on an individual computer.
+
+
+## Lesson 1: Bytes and File Sizes
+**Lesson type:** Research
+
+<a href = “https://curriculum.code.org/csp/unit2/1/” target=_blank> Lesson Plan Link >> <i class="fa fa-external-link-square"/></a>
+
+<img src="https://images.code.org/4cb801bc626a07e72c9bf50b2e234677-image-1475945304876.png" style="float:right; margin-left:30px; width:200px">
+In this lesson, students will: 
+
+- Be introduced to the term bytes and becoming comfortable with this new vocabulary. *Note:  This may feel like it is the antithesis of our A-B-C C-B-V philosophy, however by this point in the curriculum, students have completed many activities about bits, and should have a firm grasp on how they can be used to represent information.  This A-B-C C-B-V cycle began on the second day of school and is now just coming to a close.*
+- Become somewhat conversant with file types and sizes
+- Grapple with orders-of-magnitude differences between things.
+
+Paralleling the explosion of computing power and speed, the sheer size of the digital data now created and consumed every day is staggering. Units of measure (terabytes) that previously seemed unfathomably large are now making their way into personal computing. This rapid growth of digital data presents many new opportunities and also poses new challenges to engineers and programmers. The implications of so-called Big Data will not be investigated until later in the course, but it’s good and interesting to be thinking about the size of things now.
+> This transitions into lesson two, because at some point we reach a physical limit of how fast we can send bits. If we want to send a large amount of information faster, or reduce the size of the file storing our digital information, we have to find a way to represent the same information with fewer bits, or  - compress the data.  
+
+
+
+
+## Lesson 2: Text Compression
+**Lesson Type:** Widget - Text Compression | Individual and Group Discovery
+
+<a href = “https://curriculum.code.org/csp/unit2/2/” target=_blank> Lesson Plan Link >> <i class="fa fa-external-link-square"/></a>
+
+<img src="https://images.code.org/886da7e6a79454e21d0c6e7969ef9fde-image-1475945307650.png" style="float:right; margin-left:30px; width:200px"> 
+Lesson 2 is a big lesson that covers a lot of bases, and it will take at least 2 days of class, because it covers three topics from the CSP framework.  Students will take a look at  *lossless compression* and create their own compression format.  In doing so, they will need to consider the best *heuristic* for compression. By the end of this lesson, students should see that there is no single correct way to compress text using the method we use in this lesson because a) there is no known algorithm for finding an optimal solution, and b) we don’t even know a way to verify whether a given solution is optimal. There is no way to prove it or derive it beyond trying all possibilities by brute force.This is an example of an algorithm that cannot run in a “reasonable amount of time” - one of the CSP learning objectives. In situations such as this, it is better to use a heuristic that will give a ‘pretty good’ answer, instead of trying to find the best compression.  Lastly, the Text Compression Activity is an important lesson to refer back to when students start programming. The activity engages students in thinking and problem solving behaviors that foreshadow skills that are particularly useful for programming later down the line.
+
+MARKDOWN

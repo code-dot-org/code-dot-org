@@ -92,7 +92,6 @@ export default class LevelModel {
     // Verifications
   isPlayerNextTo(blockType) {
     var position;
-    var result = false;
 
     // above
     position = [this.player.position[0], this.player.position[1] - 1];
@@ -285,7 +284,6 @@ export default class LevelModel {
 
   houseGroundToFloorHelper(position, woolType, arrayCheck) {
     var checkActionBlock,
-        checkGroundBlock,
         posAbove,
         posBelow,
         posRight,
@@ -311,7 +309,6 @@ export default class LevelModel {
     posRight[0] = this.yToIndex(posRight[2]) + posRight[1];
 
     checkActionBlock = this.actionPlane[index];
-    checkGroundBlock = this.groundPlane[index];
     for (var i = 0; i < array.length; ++i) {
       if (array[i][0] === index) {
         checkIndex = -1;
@@ -589,8 +586,7 @@ export default class LevelModel {
   }
 
   destroyBlock(position) {
-    var i,
-        block = null;
+    var block = null;
 
     let blockPosition = position;
     let blockIndex = this.yToIndex(blockPosition[1]) + blockPosition[0];
@@ -611,9 +607,7 @@ export default class LevelModel {
   }
 
   destroyBlockForward() {
-    var i,
-        shouldAddToInventory = true,
-        block = null;
+    var block = null;
 
     let blockForwardPosition = this.getMoveForwardPosition();
     let blockIndex = this.yToIndex(blockForwardPosition[1]) + blockForwardPosition[0];
@@ -911,7 +905,6 @@ export default class LevelModel {
     var x,
         y,
         index,
-        hasLeft,
         hasRight;
 
     this.shadingPlane = [];
@@ -920,7 +913,6 @@ export default class LevelModel {
       x = index % this.planeWidth;
       y = Math.floor(index / this.planeWidth);
 
-      hasLeft = false;
       hasRight = false;
 
       if (this.actionPlane[index].isEmpty || this.actionPlane[index].isTransparent) {
@@ -944,7 +936,6 @@ export default class LevelModel {
         if (x < this.planeWidth - 1 && !this.actionPlane[this.yToIndex(y) + x + 1].getIsEmptyOrEntity()) {
           // needs a left side AO shadow
           this.shadingPlane.push({ x: x, y: y, type: 'AOeffect_Left' });
-          hasLeft = true;
         }
 
         if (x > 0 && !this.actionPlane[this.yToIndex(y) + x - 1].getIsEmptyOrEntity()) {

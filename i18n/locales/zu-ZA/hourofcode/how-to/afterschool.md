@@ -4,31 +4,33 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to teach one Hour of Code in after-school
+<%= view :signup_button %>
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+# Indlela yokufundisa ihora elilodwa kuHora loKufingqwa emva kokuphuma kwesikole
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+## 1) Bukela levideo ngendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Khetha indlela yokufunda:
+
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Zizamele wona!](%= resolve_url("https://code.org/learn") %)
 
 **All Hour of Code tutorials:**
 
   * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Iziluleko eziqondisiwe zivumela izingane ukuba zisebenze ngesikhathi nangolwazi lwabo
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 3) Promote your Hour of Code
+## 3) Khuthaza iHora loKufingqwa lakho
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+Khuthaza iHora loKufingqwa lwakho [ngalawa mathulusi](%= resolve_url('/promote') %) uphinde ukhuthaze obanye ukuba bahlele eyabo imicimbi.
 
-## 4) Plan your technology needs - computers are optional
+## 4) Hlela izidingo zakho zobuchwepheshe - amakhompyutha ayakhetheka
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhumana ngakhompyutha aneinternet. Kodwa wena **awu** dingi ikhompyutha eyodwa kungane, kanti futhi ungaze wenze iHora loKufingqwa ngaphandle kwekhompyutha.
 
-**Plan Ahead!** Do the following before your event starts:
+** Lungiselela Phambilini!** Yenza lokhu ngaphambi kokucala komcimbi wakho:
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
+  * Vivinya izifundiso kuma khompyutha abafundi okanye kumadivaysi. Yenza isiqinisekiso sokuba asebenza ngedlela efanele kusi phequluli nakumavidiyo.
   * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
   * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
@@ -125,5 +127,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+  * Khuthaza abafundi ukuba baqhubeke uku [ukufunda](%= resolve_url('https://code.org/learn/beyond') %).
+  * [Thamela](%= resolve_url('https://code.org/professional-development-workshops') %) eyosuku olulodwa, ingqungquthela yomuntu-okhona ukuthola imfundiso evela kumkhuthazi wekhompyutha sayensi onesipiliyoni. (abafundisi baseMelika kuphela)
+
+<%= view :signup_button %>

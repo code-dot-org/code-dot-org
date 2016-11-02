@@ -4,6 +4,7 @@ ru:
   language: Русский
   front_title: 'Присоединяетесь к самому масштабному образовательному событию, %{campaign_date}, 2015'
   coming_soon: Скоро
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 декабря
   campaign_date_start_long: 7 декабря
   campaign_date_short: 7-13 декабря
@@ -18,7 +19,6 @@ ru:
   front_start_learning: Start learning
   header_menu_resources: Ресурсы
   header_menu_faq: Часто задаваемые вопросы
-  header_menu_prizes: Призы
   header_menu_how_to: Как
   header_menu_promote: Содействуйте популяризации
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ ru:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Призы для каждого организатора
-  prizes_every_organizer: Каждый организатор Часа Программирования в благодарность получит бонусы в Dropbox или кредит в Skype
-  prizes_technology: 'Одна из государственных школ в каждом штате США (и Вашингтоне ) выиграет компьютерную технику на стоимость  $10,000 дол.США'
-  prizes_tech_chats: '# классы могут выиграть видео чаты с особыми гостями'
-  prizes_robots: 100 классов заработают набор программируемых роботов
-  prizes_brilliant: одна школа в каждом районе или области может получить 2000$ за лучший проект
-  prizes_actua: 15 школ Канады получат по 2 семинара с одним из членов Actua
-  prizes_details: Подробности
   nav_back_to_resources: Обратно к ресурасам
   how_to_nav_educators: Для преподавателей
   how_to_nav_after_school: Для окончивших школу
@@ -163,23 +155,6 @@ ru:
   how_to_nav_companies: Для компаний
   how_to_nav_afterschool_educators: Для преподавателей во внеучебное время
   how_to_nav_volunteers: Для волонтеров
-  prizes_nav_title: Призы
-  prizes_nav_home: Все призы
-  prizes_nav_hardware: Регистрация на получение крупного приза
-  prizes_nav_terms: Положения и условия
-  prizes_nav_faq: Часто задаваемые вопросы
-  prizes_nav_dc: Загадочный тур в город Вашингтон.
-  prizes_nav_technology: 10 000 долларов для на закупку техники для вашей школы
-  prizes_nav_video_chat: Видеочат с техническими знатоками
-  prizes_nav_skype_dropbox: Кредит в Skype или свободное хранилище на Dropbox для каждого организатора
-  prizes_nav_brilliant: $2,000 на проект Brilliant Labs
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Призы для каждого преподавателя
-  prizes_10k: В каждом штате США, включая город Вашингтон, одна школа выиграет технику на сумму 10 000 долларов
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Каждый</i> организатор получит <b>10 долларов на Amazon.com, iTunes или Windows Store</b> в знак благодарности за участие. Количество подарков ограничено.'
-  prizes_more: More exciting prizes
   whats_next_header: Что дальше?
   whats_next_description: "Мы отправим вам материалы и некоторые указания по поводу мероприятия. Для каждого браузера, смартфона и даже компьютера в 2015 году появятся новые уроки!<a href='http://code.org/learn'>Попробовать существующие уроки</a>"
   whats_next_how_to: "<a href='/how-to'>Как организовать Час Кода</a>"
@@ -196,6 +171,7 @@ ru:
   share_on_facebook: Поделитесь на Facebook
   share_on_twitter: Расскажите в Twitter
   front_join_us_heading: Час Программирования для каждого ученика или студента.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Информатика является хорошей базой для каждого ученика или студента. Помогите нам дать эту базу 100 миллионам.
   front_join_us_description_short: Компьютерная наука является основой для каждого учащегося.
   front_join_us_button: Присоединяйтесь к нам
@@ -243,12 +219,13 @@ ru:
   signup_send_posters_address_label: Адрес школы или организации
   signup_whole_school_flag_label: 'Это мероприятие - для всей школы'
   signup_your_event: Зарегистрируйте ваше мероприятие
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Мне нужна помощь в поиске разработчика программного обечпечения, который вдохновит моих учеников
   signup_multiple_event_warning: Если вы организуете сразу несколько мероприятий, просьба присвоить свое уникальное название и email каждому из них. Мы принимаем к регистрации только одно название для мероприятия с присвоенным ему email.
   signup_name_placeholder: Ваше имя
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Например, Старшая школа им.Линкольна
-  signup_event_location_placeholder: "Почтовый индекс и страна ИЛИ полный адрес.\\r\n(Мы используем это для того, чтобы отметить вас на нашей карте)"
+  signup_event_location_placeholder: "Почтовый индекс и страна ИЛИ полный адрес.\r\n(Мы используем это для того, чтобы отметить вас на нашей карте)"
   signup_special_event_details_placeholder: Опишите, что делает ваше мероприятие особенным
   signup_send_posters_address_placeholder: Этот адрес не будет показан на нашей карте
   signup_event_type_in_school: В школе
@@ -273,28 +250,6 @@ ru:
   meta_tag_twitter_title: Скоро наступит Час Программирования
   meta_tag_twitter_description: 'Час Кода - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до 104.'
   twitter_default_text: 'Я участвую в этом году в #HourOfCode, а ты? @codeorg'
-  hardware_prizes_form_name_label: Ваше имя
-  hardware_prizes_form_name_placeholder: Ваше имя
-  hardware_prizes_form_email_label: Ваш адрес эл.почты
-  hardware_prizes_form_email_placeholder: Ваш адрес эл.почты
-  hardware_prizes_form_school_name_label: Название школы
-  hardware_prizes_form_school_name_placeholder: Название школы
-  hardware_prizes_form_school_address_label: Адрес школы
-  hardware_prizes_form_school_address_placeholder: Адрес школы
-  hardware_prizes_form_school_type_label: Тип школы
-  hardware_prizes_form_school_type_option_elementary: Начальная школа
-  hardware_prizes_form_school_type_option_middle_school: Средняя школа
-  hardware_prizes_form_school_type_option_high_school: Старшая школа
-  hardware_prizes_form_qualifying_school_label: К-12, публичная школа США
-  hardware_prizes_form_title_I_school_label: Эта школа зарегистрирована для финансирования Title I
-  hardware_prizes_form_title_I_school_help_text: 'Школы Tile I - это школы с большим процентом детей, чьи семьи имеют низкий доход и которые получают деньги из федерального фонда страны с целью того, чтобы детьми было получено образование в соответствии с академическими стандартами.'
-  hardware_prizes_form_number_students_label: Количество участвующих учеников
-  hardware_prizes_form_number_students_placeholder: Количество учеников
-  hardware_prizes_form_technology_plan_label: Как вы будете использовать новые технологии для улучшения методики преподавания информатики в своем учебном заведении?
-  hardware_prizes_form_technology_plan_placeholder: План использования новых технологий
-  hardware_prizes_form_plan_file_label: Загрузите ваш план проведения Часа Программирования
-  hardware_prizes_form_plan_file_description: 'Предоставьте простой план того, как вы собираетесь организовать участие каждого ученика в Часе Программирования в вашей школе. Посмотрите пример плана: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Отправить
   hoc_faq_title: Часто задаваемые вопросы
   hoc_faq_what_is_hoc_q: 'Что такое Час Кода? '
   hoc_faq_what_is_hoc_a: "Час программирования - это часовое введение в информатику, призванное развеять мифы о сложности программирования и показать, что  каждый может научиться его основам. <a href='http://code.org/learn'>Перейти к обучению</a>."
@@ -400,11 +355,6 @@ ru:
   title_proclamation: Образец заявления в поддержку Образовательной Недели информатики
   title_stats: Реклама и статистика
   title_partners: Партнеры
-  title_prizes_faq: FAQ по призам
-  title_prizes_terms: Условия получения приза
-  title_prizes_thanks: Благодарим вас
-  title_prizes: Призы
-  title_hardware_prize_form: Зарегистрироваться на участие в розыгрыше технических призов
   title_resources: Ресурсы
   title_signup_thanks: Спасибо за регистрацию на проведение Часа Кода!
   title_tutorial_guidelines: Дополнительная информация по урокам

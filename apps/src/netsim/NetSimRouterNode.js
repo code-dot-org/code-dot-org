@@ -1470,8 +1470,6 @@ NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
       return;
     }
 
-    var cachedNodeRows = this.shard_.nodeTable.readAll();
-
     this.log(
         droppablePacket.payload,
         this.getSenderNameForMessage_(droppablePacket),

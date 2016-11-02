@@ -23,11 +23,7 @@ class Pd::Attendance < ActiveRecord::Base
   has_one :workshop, class_name: 'Pd::Workshop', through: :session
 
   def self.for_teacher(teacher)
-    self.joins(:workshop).where(teacher_id: teacher.id)
-  end
-
-  def self.for_district(district)
-    self.joins(teacher: {districts_users: :district}).where(districts_users: {district_id: district.id})
+    self.where(teacher_id: teacher.id)
   end
 
   def self.for_workshop(workshop)

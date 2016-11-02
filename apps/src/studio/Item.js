@@ -5,7 +5,6 @@ import { ShakeActor } from './spriteActions';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
-import studioMsg from './locale';
 
 const Direction = constants.Direction;
 const NextTurn = constants.NextTurn;

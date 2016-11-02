@@ -3,11 +3,11 @@
 Feature: Blocks can be copied and pasted using the keyboard
 
 Background:
-  Given I am on "http://learn.code.org/s/20-hour/stage/7/puzzle/6?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/stage/7/puzzle/6?noautoplay=true"
 
 Scenario: Copy and paste a block
   When I rotate to landscape
-  And I close the dialog
+  And I wait to see "#runButton"
   And I drag block "1" to offset "300, 150"
   Then the workspace has "1" blocks of type "draw_move_by_constant"
   And I ctrl-c
@@ -16,7 +16,7 @@ Scenario: Copy and paste a block
 
 Scenario: Cut and paste a block
   When I rotate to landscape
-  And I close the dialog
+  And I wait to see "#runButton"
   And I drag block "1" to offset "300, 150"
   Then the workspace has "1" blocks of type "draw_move_by_constant"
   And I ctrl-x

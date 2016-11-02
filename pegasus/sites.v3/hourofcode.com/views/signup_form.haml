@@ -1,3 +1,5 @@
+- signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
+
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
@@ -70,8 +72,9 @@
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
-    %p.multiple-event-warning
+    %p.footnote
       = hoc_s(:signup_multiple_event_warning)
+      %strong= hoc_s(:signup_registration_deadline)
     .form-group.submit-btn
       %div
         %button{type: "submit"}= hoc_s(:signup_submit_label)
@@ -118,7 +121,7 @@
 
   function signupFormError(data)
   {
-    $('#error_message').html('<p>#{hoc_s(:signup_submit_error_message)}</p>').show();
+    $('#error_message').html("<p>#{signup_submit_error_message}</p>").show();
     $("#signup_submit").removeAttr('disabled');
   }
 
