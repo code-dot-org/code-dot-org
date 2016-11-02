@@ -28,6 +28,7 @@ var experiments = require('../experiments');
 
 import {setInitialAnimationList, saveAnimations} from './animationListModule';
 import {getSerializedAnimationList} from './PropTypes';
+import {add as addWatcher} from '../redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -204,6 +205,9 @@ GameLab.prototype.init = function (config) {
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
+    if (config.level.watchersOptions) {
+      JSON.parse(config.level.watchersOptions).forEach((option) => this.studioApp_.reduxStore.dispatch(addWatcher(option)));
+    }
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
     config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
@@ -246,7 +250,6 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: config.level.showDebugWatch,
-    watchersOptions: config.level.watchersOptions && JSON.parse(config.level.watchersOptions),
     showDebugSlider: false,
     showAnimationMode: !config.level.hideAnimationMode
   });
