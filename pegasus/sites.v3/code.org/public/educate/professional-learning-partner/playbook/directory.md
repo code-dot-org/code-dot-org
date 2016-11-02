@@ -49,8 +49,12 @@ ________________
 ### [A+ College Ready](http://www.apluscollegeready.org)
 Alabama	
 
+A+ College Ready works to dramatically increase the number of students in Alabama taking math, science, and English AP courses, earning qualifying scores on AP exams and attending and succeeding in college.
+
 **Programs**<br/>
 CS Principles<br/>
+
+**Contact us for adivce on:** Working with districts statewide
 
 **Contact Information**<br/> 
 Melissa Crook<br/> 
@@ -180,9 +184,13 @@ fnieto@acoe.org
 ### [Contra Costa County Office of Education](http://www.cccoe.k12.ca.us/)<br/>
 East Bay, California	<br/>
 
+The Contra Costa County Office of Education (CCCOE) plays a leadership role in the delivery of quality education to more than 174,000 K-12 students in Contra Costa. Under the leadership of an elected superintendent of schools and a five-member elected board of education, the CCCOE provides services to students, school districts, and the community. 
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
+
+**Contact us for advice on:** Running Professional Development for Educators
 
 **Contact Information**<br/>
 Hilary Dito<br/>
@@ -630,9 +638,13 @@ ________________
 ### [Southern Nevada Regional Professional Development Program](http://www.rpdp.net/)<br/>
 Nevada
 
+Southern Nevada Regional Professional Development Program (SNRPDP) is a state funded teacher professional development organization.
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
+
+**Contact us for advice on:** Google Profeesional Development
 
 **Contact Information**<br/>
 Frank Mathews<Br/>

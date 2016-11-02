@@ -129,7 +129,8 @@
         "minTimes": 4,
         "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
       }
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

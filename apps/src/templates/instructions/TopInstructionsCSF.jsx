@@ -26,14 +26,11 @@ import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import Button from '../Button';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import experiments from '../../experiments';
-import InlineAudio from './InlineAudio';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
 
 import {
   getOuterHeight,
-  scrollBy,
   scrollTo,
   shouldDisplayChatTips
 } from './utils';
@@ -46,9 +43,6 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
-const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
-
-const SCROLL_BY_PERCENT = 0.8;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -105,8 +99,7 @@ const styles = {
     marginRight: 0
   },
   embedView: {
-    height: undefined,
-    bottom: 0
+    display: 'none',
   },
   collapserButton: {
     position: 'absolute',
@@ -146,14 +139,6 @@ const styles = {
     width: 'calc(100% - 20px)',
     float: 'left'
   },
-  instructionsWithAudio: {
-    paddingRight: 76
-  },
-  audioControls: {
-    position: 'absolute',
-    top: 7,
-    right: 12
-  }
 };
 
 var TopInstructions = React.createClass({
@@ -168,7 +153,6 @@ var TopInstructions = React.createClass({
     hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
-    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
@@ -190,8 +174,8 @@ var TopInstructions = React.createClass({
     ),
     noVisualization: React.PropTypes.bool.isRequired,
 
-    acapelaInstructionsSrc: React.PropTypes.string,
-    acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
+    ttsInstructionsUrl: React.PropTypes.string,
+    ttsMarkdownInstructionsUrl:  React.PropTypes.string,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -392,21 +376,10 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * Handle a click to our "scroll up" button
+   * @return {Element} scrollTarget
    */
-  handleScrollInstructionsUp() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
-  },
-
-  /**
-   * Handle a click to our "scroll down" button
-   */
-  handleScrollInstructionsDown() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
+  getScrollTarget() {
+    return this.refs.instructions.parentElement;
   },
 
   /**
@@ -496,9 +469,7 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && Object.assign({}, styles.embedView, {
-        left: this.props.embedViewLeftOffset
-      }),
+      this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main,
       this.props.overlayVisible && styles.withOverlay
@@ -508,9 +479,8 @@ var TopInstructions = React.createClass({
       this.props.shortInstructions : this.props.longInstructions;
     const renderedMarkdown = processMarkdown(markdown, { renderer });
 
-    const acapelaSrc = this.shouldDisplayShortInstructions() ?
-      this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
-    const showAudioControls = experiments.isEnabled('tts') && acapelaSrc;
+    const ttsUrl = this.shouldDisplayShortInstructions() ?
+      this.props.ttsInstructionsUrl : this.props.ttsMarkdownInstructionsUrl;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
@@ -556,27 +526,20 @@ var TopInstructions = React.createClass({
                 (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
             ]}
           >
-            <ChatBubble>
-              <div style={[showAudioControls && styles.instructionsWithAudio]}>
-                <Instructions
-                  ref="instructions"
-                  renderedMarkdown={renderedMarkdown}
-                  onResize={this.adjustMaxNeededHeight}
-                  inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                  aniGifURL={this.props.aniGifURL}
-                  inTopPane
+            <ChatBubble ttsUrl={ttsUrl}>
+              <Instructions
+                ref="instructions"
+                renderedMarkdown={renderedMarkdown}
+                onResize={this.adjustMaxNeededHeight}
+                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                aniGifURL={this.props.aniGifURL}
+                inTopPane
+              />
+              {instructions2 &&
+                <div
+                  className="secondary-instructions"
+                  dangerouslySetInnerHTML={{ __html: instructions2 }}
                 />
-                {instructions2 &&
-                  <div
-                    className="secondary-instructions"
-                    dangerouslySetInnerHTML={{ __html: instructions2 }}
-                  />
-                }
-              </div>
-              {showAudioControls &&
-                <div style={[styles.audioControls]}>
-                  <InlineAudio src={acapelaSrc} />
-                </div>
               }
               {this.props.overlayVisible &&
                 <Button type="primary">
@@ -589,6 +552,8 @@ var TopInstructions = React.createClass({
                 key={hint.hintId}
                 borderColor={color.yellow}
                 content={hint.content}
+                ttsUrl={hint.ttsUrl}
+                ttsMessage={hint.ttsMessage}
                 block={hint.block}
               />
             )}
@@ -616,8 +581,7 @@ var TopInstructions = React.createClass({
               <ScrollButtons
                 style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
-                onScrollUp={this.handleScrollInstructionsUp}
-                onScrollDown={this.handleScrollInstructionsDown}
+                getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
               />}
@@ -635,14 +599,13 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     overlayVisible: state.instructions.overlayVisible,
-    acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
-    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,

@@ -87,8 +87,7 @@ module LevelsHelper
 
     return unless autoplay_video
 
-    client_state.add_video_seen(autoplay_video.key)
-    autoplay_video.summarize unless params[:noautoplay]
+    autoplay_video.summarize
   end
 
   def select_and_remember_callouts(always_show = false)
@@ -162,6 +161,8 @@ module LevelsHelper
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
+    post_final_milestone = @script ? Gatekeeper.allows('postFinalMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_final_milestone: post_final_milestone)
 
     @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
@@ -328,6 +329,7 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['final_level'] = script_level.final_level? if script_level
 
     # Unused Blocks option
     ## TODO (elijah) replace this with more-permanent level configuration
@@ -383,8 +385,8 @@ module LevelsHelper
     # TTS
     # TTS is currently only enabled for k1
     if script && script.is_k1?
-      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file}"
-      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file}"
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end
 
     if @level.is_a? NetSim

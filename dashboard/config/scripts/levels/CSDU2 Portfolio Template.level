@@ -5,7 +5,8 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n   <head>\\n\\n   </head>\\n\\n   <body>\\n\\n   </body>\\n\\n</html>\"\r\n    }\r\n  ]\r\n}"
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n   <head>\\n\\n   </head>\\n\\n   <body>\\n\\n   </body>\\n\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",

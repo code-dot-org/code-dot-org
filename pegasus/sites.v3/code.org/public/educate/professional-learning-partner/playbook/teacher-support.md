@@ -37,7 +37,7 @@ ________________
 - [CS in Algebra](https://www.dropbox.com/s/lo60ydun7pdh127/Code.orgCSinAlgebra_1-pager_03082016.pdf?dl=0)<br/> 
 - [CS in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
 - [Exploring CS](https://www.dropbox.com/s/na6um5intbw4c8w/2016_welcome_ECS_031816_v5.pdf?dl=0)<br/>
-- [CS Princples](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
+- [CS Principles](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
 
 #### Online Modules ####
 Online course modules will be assigned to teachers through [Code Studio](https://studio.code.org). See [this 1-pager](https://docs.google.com/document/d/1PQiWFF21zTmM2WSeXnuZcAddvErtP6Rrv4Tci3XAEiA/edit) for more information on the modules that will be assigned to them. 
@@ -58,8 +58,8 @@ These forums are program specific and are a great way for teachers to help each 
 [Code.org FAQ](/educate/pd/15-16/faq)<br/>
 This FAQ from previous workshops should NOT be used to answer your teacher's questions, but can provide you with a great example of how to set up your own FAQ for your teachers' specific needs. 
 
-[CSP Teacher Dashboard Walkthrough](https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be)
-This video helps CSP teachers create sections and move students between sections as needed. 
+[CS Principles Teacher Dashboard Walkthrough](https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be)
+This video helps CS Principles teachers create sections and move students between sections as needed. 
 
 
 [**Back to the top**](#top)

@@ -294,7 +294,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'gradeKinder' || name == 'grade1' || name == 'grade2' || name == 'grade3' || name == 'grade4' || name == 'grade5'
+    name == 'edit-code' || name == 'gradeKinder' || name == 'grade1' || name == 'grade2' || name == 'grade3' || name == 'grade4' || name == 'grade5' || name.start_with?('csd')
   end
 
   # TODO(asher): Rename this method to k1?, removing the need to disable lint.
@@ -329,7 +329,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd3 text-compression netsim pixelation frequency_analysis vigenere gradeKinder grade1 grade2 grade3 grade4 grade5).include?(self.name)
+    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd2 csd3 text-compression netsim pixelation frequency_analysis vigenere gradeKinder grade1 grade2 grade3 grade4 grade5).include?(self.name)
   end
 
   def has_banner?
@@ -633,6 +633,8 @@ class Script < ActiveRecord::Base
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_stages: hideable_stages?,
+      disablePostMilestone: disable_post_milestone?,
+      isHocScript: hoc?,
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
@@ -656,6 +658,10 @@ class Script < ActiveRecord::Base
 
   def localized_title
     I18n.t "data.script.name.#{name}.title"
+  end
+
+  def disable_post_milestone?
+    !Gatekeeper.allows('postMilestone', where: {script_name: self.name}, default: true)
   end
 
   def self.build_property_hash(script_data)
