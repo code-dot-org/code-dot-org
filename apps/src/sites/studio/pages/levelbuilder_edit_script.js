@@ -270,6 +270,17 @@ const ScriptEditor = React.createClass({
         level.expand = !level.expand;
         break;
       }
+      case 'MOVE_GROUP': {
+        break;
+      }
+      case 'MOVE_STAGE': {
+        const index = options.position - 1;
+        const swap = (options.direction === 'up' ? index - 1 : index + 1);
+        const temp = newState[index];
+        newState[index] = newState[swap];
+        newState[swap] = temp;
+        break;
+      }
       default:
         throw 'Unexpected action';
     }
@@ -712,13 +723,13 @@ const Controls = React.createClass({
 
   handleMoveUp() {
     if (this.props.position !== 1) {
-      console.log(`move ${this.props.type} ${this.props.position} up`);
+      this.props.handleAction('MOVE_' + this.props.type, {position: this.props.position, direction: 'up'});
     }
   },
 
   handleMoveDown() {
     if (this.props.position !== this.props.total) {
-      console.log(`move ${this.props.type} ${this.props.position} down`);
+      this.props.handleAction('MOVE_' + this.props.type, {position: this.props.position, direction: 'down'});
     }
   },
 
