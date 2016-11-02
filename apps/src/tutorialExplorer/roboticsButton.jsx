@@ -21,7 +21,6 @@ const styles = {
 
 const RoboticsButton = React.createClass({
   render() {
-
     const roboticsTextStyle = {
       ...styles.roboticsText,
       display: getResponsiveValue({xs: "block", md: "none"})

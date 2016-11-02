@@ -9,9 +9,8 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import { getResponsiveContainerWidth, getResponsiveWindowWidth } from './responsive';
+import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
 import _ from 'lodash';
-
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -46,7 +45,7 @@ const TutorialExplorer = React.createClass({
       filteredTutorialsForLocale: filteredTutorialsForLocale,
       windowWidth: $(window).width(),
       windowHeight: $(window).height(),
-      mobileLayout: $(window).width() < getResponsiveWindowWidth('md'),
+      mobileLayout: isResponsiveCategoryInactive('md'),
       showingModalFilters: false
     };
   },
@@ -147,7 +146,7 @@ const TutorialExplorer = React.createClass({
       windowHeight: $(window).height()
     });
 
-    this.setState({mobileLayout: windowWidth < getResponsiveWindowWidth('md')});
+    this.setState({mobileLayout: isResponsiveCategoryInactive('md')});
   },
 
   statics: {
@@ -370,13 +369,12 @@ function getFilters(robotics) {
   };
 
   if (robotics) {
-    for (var index = 0; index < filters.length; index++) {
-      var filterGroup = filters[index];
+    filters.forEach(filterGroup => {
       if (filterGroup.name === "activity_type") {
         filterGroup.entries = [{name: "robotics", text: "Robotics"}];
         filterGroup.display = false;
       }
-    }
+    });
 
     initialFilters.activity_type = ["robotics"];
 
