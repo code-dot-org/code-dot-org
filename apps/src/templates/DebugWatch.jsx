@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {add, update, remove} from '../redux/watchedExpressions';
 import TetherComponent from 'react-tether';
 
-const WATCH_TIMER_PERIOD = 50;
+const WATCH_TIMER_PERIOD = 250;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
 const DEFAULT_AUTOCOMPLETE_OPTIONS = [
   'Game.mouseX',
