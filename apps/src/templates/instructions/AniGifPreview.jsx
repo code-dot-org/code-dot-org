@@ -58,7 +58,6 @@ export default connect(state => ({
   showInstructionsDialog() {
     dispatch(openDialog({
       autoClose: false,
-      showHints: true,
       aniGifOnly: true,
       hintsOnly: false
     }));

@@ -19,9 +19,6 @@ const DialogInstructions = React.createClass({
     aniGifURL: React.PropTypes.string,
     aniGifOnly: React.PropTypes.bool,
     hintsOnly: React.PropTypes.bool,
-
-    // not redux
-    authoredHints: React.PropTypes.element
   },
   render() {
     const renderedMarkdown = this.props.longInstructions ?
@@ -29,7 +26,6 @@ const DialogInstructions = React.createClass({
 
     const showInstructions = !(this.props.aniGifOnly || this.props.hintsOnly);
     const showAniGif = !this.props.hintsOnly;
-    const showHints = !this.props.aniGifOnly;
     return (
       <Instructions
         puzzleTitle={msg.puzzleTitle({
@@ -40,7 +36,6 @@ const DialogInstructions = React.createClass({
         instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
         renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
         aniGifURL={showAniGif ? this.props.aniGifURL : undefined}
-        authoredHints={showHints ? this.props.authoredHints : undefined}
       />
     );
   }
