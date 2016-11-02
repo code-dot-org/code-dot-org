@@ -20,8 +20,8 @@ module Api::CsvDownload
   end
 
   # Generates csv from an array of hashes (see below) and sends it as an attachment (download).
-  def send_as_csv_attachment(json_array, filename)
-    send_data generate_csv(json_array), type: 'text/csv', disposition: 'attachment', filename: filename
+  def send_as_csv_attachment(json_array, filename, titleize: true)
+    send_data generate_csv(json_array, titleize: titleize), type: 'text/csv', disposition: 'attachment', filename: filename
   end
 
   # Converts an array of hashes to csv
@@ -35,13 +35,13 @@ module Api::CsvDownload
   #   Organizer Name,District
   #   Teacher1,District1
   #   Teacher2,District2
-  def generate_csv(json_array)
+  def generate_csv(json_array, titleize: true)
     cols = nil
     CSV.generate(headers: true) do |csv|
       json_array.each do |json_row|
         unless cols
           cols = json_row.keys
-          csv << cols.map{|col| titleize_with_id(col)}
+          csv << cols.map{|col| titleize ? titleize_with_id(col) : col}
         end
         csv << cols.map {|col| json_row[col]}
       end

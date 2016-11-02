@@ -56,7 +56,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   ]
 
   def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false)
-    report_rows = Hash.new(0)
+    report_rows = Hash.new(0).merge({number_teachers: 0, response_count: 0})
+
     response_count = 0
 
     facilitator_scores = nil
