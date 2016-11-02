@@ -85,7 +85,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
 
-    school_info = build :school_info_without_country, school_district: SchoolDistrict.first
+    school_info = build :school_info, school_district: SchoolDistrict.first
 
     enrollment = build :pd_enrollment, workshop: workshop, name: teacher.name, email: teacher.email, user: teacher,
       school_info: school_info

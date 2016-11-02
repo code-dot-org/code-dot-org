@@ -3,7 +3,6 @@ Feature: Opening / closing the function editor
 Background:
   Given I am on "http://studio.code.org/s/course4/stage/14/puzzle/12?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 

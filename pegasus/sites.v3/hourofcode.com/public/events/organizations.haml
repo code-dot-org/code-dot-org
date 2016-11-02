@@ -18,4 +18,4 @@ nav: events_nav
 %ul
   -by_company.each_pair do |company, events|
     %li{class: "hoc-event-country"}
-      =events.count > 1 ? "#{hoc_s('company_'+company)} (#{events.count} #{hoc_s(:events)})" : "#{hoc_s('company_'+company)} (#{events.count} #{hoc_s(:event)})"
+      %a{href: "#"}=events.count > 1 ? "#{hoc_s('company_'+company)} (#{events.count} #{hoc_s(:events)})" : "#{hoc_s('company_'+company)} (#{events.count} #{hoc_s(:event)})"

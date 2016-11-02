@@ -20,7 +20,7 @@ Code.org will provide instruction to prepare facilitators to deliver professiona
 In 2017-2018, Code.org will prepare facilitators in two areas. The focus areas share a basic framework and approach, drawn from adult learning theory and best practices for facilitation, that ensures participants are well prepared to lead high-quality training. However, each focus area’s training curriculum is designed for the specific needs of the teachers and students impacted by the program, and for that reason each has its own unique selection criteria, requirements, commitments and benefits.<br/>
 
 - [Computer Science Principles Facilitator Development (Grades 9 to 12)](/educate/facilitator-csp)
-- [Computer Science Discoveries Facilitator Development (Grades 7 to 9)](/educate/professional-learning/cs-discoveries-facilitator)
+- [Computer Science Discoveries Facilitator Development (Grades 7 to 9)](/educate/facilitator-csp)
 
 *Note: We are not currently accepting applications for Computer Science Fundamentals (K-5). Complete this [interest form](https://goo.gl/forms/yMONgd2bd73tI6UD3) to be notified when the application opens.*
 

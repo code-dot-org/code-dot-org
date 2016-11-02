@@ -673,7 +673,6 @@ class Script < ActiveRecord::Base
       plc: professional_learning_course?,
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }

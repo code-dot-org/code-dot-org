@@ -21,10 +21,6 @@
 class School < ActiveRecord::Base
   include Seeded
 
-  self.primary_key = 'id'
-
-  belongs_to :school_district
-
   # The listing of all US schools comes from http://nces.ed.gov/ccd/pubagency.asp
   # and is then exported into a tab-separated file.
   # The data format is described at http://nces.ed.gov/ccd/pdf/2015150_sc132a_Documentation_052716.pdf

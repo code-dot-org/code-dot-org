@@ -348,7 +348,7 @@ if (BUILD_STYLEGUIDE) {
           )
         }, {
           name: 'with icon',
-          description: `An icon can be specified for the dialog`,
+          description: `An icon can be specifid for the dialog`,
           story: () => (
             <ShareDialog
               hideBackdrop={true}
