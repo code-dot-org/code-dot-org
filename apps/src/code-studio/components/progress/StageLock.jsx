@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import color from '../../../color';
+import color from "../../../util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLockDialog from './StageLockDialog';
 import progressStyles from './progressStyles';

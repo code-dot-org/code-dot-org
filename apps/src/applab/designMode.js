@@ -4,7 +4,7 @@ import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DesignWorkspace from './DesignWorkspace';
-import assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import {singleton as studioApp} from '../StudioApp';

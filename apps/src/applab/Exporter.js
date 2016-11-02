@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/exportProject.html.ejs';
