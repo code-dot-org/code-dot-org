@@ -7,6 +7,14 @@ import TetherComponent from 'react-tether';
 
 const WATCH_TIMER_PERIOD = 50;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
+const DEFAULT_AUTOCOMPLETE_OPTIONS = [
+  'Game.mouseX',
+  'Game.mouseY',
+  'Game.width',
+  'Game.height',
+  'Game.frameRate',
+  'Game.frameCount',
+];
 
 const styles = {
   watchContainer: {
@@ -29,7 +37,7 @@ const styles = {
     padding: 4
   },
   watchRemoveButton: {
-    fontSize: 18,
+    fontSize: 23,
     float: 'right',
     cursor: 'pointer',
     width: 25,
@@ -40,7 +48,7 @@ const styles = {
     paddingLeft: 10
   },
   watchAddButton: {
-    fontSize: '18px',
+    fontSize: 20,
     float: 'right',
     cursor: 'pointer',
     width: 25,
@@ -139,20 +147,11 @@ const DebugWatch = React.createClass({
       history: [],
       editing: false,
       autocompleteOpen: false,
-      autocompleteIndex: this.autocompleteOptions.length - 1,
-      autocompleteOptions: this.autocompleteOptions,
+      autocompleteIndex: 0,
+      autocompleteOptions: DEFAULT_AUTOCOMPLETE_OPTIONS,
       historyIndex: -1
     };
   },
-
-  autocompleteOptions: [
-    'Game.mouseX',
-    'Game.mouseY',
-    'Game.width',
-    'Game.height',
-    'Game.frameRate',
-    'Game.frameCount',
-  ],
 
   componentDidMount() {
     this.wasRunning = null;
@@ -317,7 +316,7 @@ const DebugWatch = React.createClass({
 
   filterOptions() {
     const text = this.state.text;
-    const filteredOptions = this.autocompleteOptions.filter((option) => option.match(new RegExp(text, 'i')));
+    const filteredOptions = DEFAULT_AUTOCOMPLETE_OPTIONS.filter((option) => option.match(new RegExp(text, 'i')));
     const completeMatch = filteredOptions.length === 1 && filteredOptions[0] === text;
     this.setState({
       autocompleteIndex: this.state.autocompleteIndex > filteredOptions.length ? 0 : this.state.autocompleteIndex,
@@ -353,7 +352,7 @@ const DebugWatch = React.createClass({
                   style={styles.watchRemoveButton}
                   onClick={()=> this.props.remove(wv.get('expression'))}
                 >
-                  x
+                  ×
                 </div>
                 <div
                   style={styles.watchValue}
