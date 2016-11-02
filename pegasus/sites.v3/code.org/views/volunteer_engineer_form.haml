@@ -11,8 +11,6 @@
 /[if lt IE 9]
   %script{src: "/js/es5-shim.min.js"}
 
--puts form
-
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
   - if form.secret
     %h2= I18n.t(:volunteer_engineer_submission_update_information)
