@@ -298,12 +298,16 @@ export const determineInstructionsConstants = config => {
     }
   }
 
+  // If the level has instructions to show, we will in some situations
+  // want to show an overlay.
+  let hasInstructionsToShow = shortInstructions || longInstructions;
   // If the level is specifically flagged as having important
   // instructions or if it is the first level in the stage, always show
   // the overlay. Otherwise, show it exactly once on the very first
   // level a user looks at.
   let overlaySeen = localStorage.getItem(LOCALSTORAGE_OVERLAY_SEEN_FLAG);
-  let shouldShowOverlay = config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen;
+  let shouldShowOverlay = hasInstructionsToShow &&
+      (config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen);
   if (shouldShowOverlay) {
     localStorage.setItem(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
   }
