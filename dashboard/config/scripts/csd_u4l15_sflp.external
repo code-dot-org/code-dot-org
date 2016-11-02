@@ -1,1 +1,14 @@
 name 'CSD U4L15 SFLP'
+markdown <<MARKDOWN
+# Problem Solving - The Design Process: Lesson 15 - Event Driven Programming
+
+## New Blocks
+
+* **console.log** - `console.log(message)`
+* **onEvent** - `onEvent(id, type, function(event) {
+  // Code to execute
+});`
+* **setScreen** - `setScreen(id)`
+* **setText** - `setText(id, text)`
+
+MARKDOWN

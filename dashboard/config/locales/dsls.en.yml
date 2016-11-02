@@ -309,6 +309,7 @@ en:
       2.5 and 2.6 Lesson Connections: {}
       2.7 -  10 Lesson Connections: {}
       A Note On Metadata in the Curriculum Framework: {}
+      Adding Functionality to your App: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -739,6 +740,7 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Conditions and Logic: {}
       Correlation vs Causation: {}
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
@@ -1158,6 +1160,7 @@ en:
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Getting Better User Input: {}
       Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
         description here: description here
