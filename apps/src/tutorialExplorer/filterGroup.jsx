@@ -8,6 +8,7 @@ import { getResponsiveValue } from './responsive';
 
 const styles = {
   filterGroupOuter: {
+    float: "left",
     paddingBottom: 20,
     paddingRight: 40,
     paddingLeft: 10
@@ -28,8 +29,13 @@ const FilterGroup = React.createClass({
   },
 
   render() {
+    const filterGroupOuterStyle = {
+      ...styles.filterGroupOuter,
+      width: getResponsiveValue({xs: 100, sm: 50, md: 100})
+    };
+
     return (
-      <div style={{...styles.filterGroupOuter, float: "left", width: getResponsiveValue({xs: 100, sm: 50, md: 100})}}>
+      <div style={filterGroupOuterStyle}>
         <div style={styles.filterGroupText}>
           {this.props.text}
         </div>

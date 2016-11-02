@@ -16,7 +16,7 @@ const FilterSet = React.createClass({
 
   render() {
     return (
-      <div id="filterset" style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+      <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup
