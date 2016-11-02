@@ -215,23 +215,27 @@ function renderStageLockedText(element) {
  * Render a content toggle component that does this for us.
  */
 function renderContentToggle() {
-  if (!experiments.isEnabled('viewAsToggle')) {
-    return;
+  if (experiments.isEnabled('viewAsToggle')) {
+
+    $("#try-it-yourself").hide();
+
+    const levelContent = $('#level-body');
+    const element = $('<div/>').insertAfter(levelContent)[0];
+    const store = getStore();
+
+    const { scriptName } = store.getState().progress;
+
+    store.dispatch(getHiddenStages(scriptName));
+
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <TeacherContentToggle/>
+      </Provider>,
+      element
+    );
   }
-  $("#try-it-yourself").hide();
 
-  const levelContent = $('#level-body');
-  const element = $('<div/>').insertAfter(levelContent)[0];
-  const store = getStore();
-
-  const { scriptName } = store.getState().progress;
-
-  store.dispatch(getHiddenStages(scriptName));
-
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <TeacherContentToggle/>
-    </Provider>,
-    element
-  );
+  // Reset level-body opacity, as either TeacherContentToggle now owns opacity
+  // or the experiment is not enabled and we don't actually want this hidden
+  $('#level-body').css('opacity', '');
 }
