@@ -102,16 +102,16 @@ const AutocompleteSelector = React.createClass({
             color: 'black'
             };
           return (
-          <div
-            key={option}
-            onClick={() => this.props.onOptionClicked(option)}
-            onMouseOver={() => this.props.onOptionHovered(index)}
-            style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
-          >
-            {option}
-          </div>
-            );
-          })}
+            <div
+              key={option}
+              onClick={() => this.props.onOptionClicked(option)}
+              onMouseOver={() => this.props.onOptionHovered(index)}
+              style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
+            >
+              {option}
+            </div>
+          );
+        })}
       </div>
     );
   },
