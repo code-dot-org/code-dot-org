@@ -4,7 +4,7 @@
 import _ from 'lodash';
 import codemirror from 'codemirror';
 import marked from 'marked';
-import renderer from '@cdo/apps/StylelessRenderer';
+import renderer from '@cdo/apps/util/StylelessRenderer';
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {

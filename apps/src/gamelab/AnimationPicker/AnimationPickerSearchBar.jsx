@@ -1,6 +1,6 @@
 /** Animation picker dialog search bar */
 import React from 'react';
-var color = require('../../color');
+var color = require("../../util/color");
 
 var BORDER_WIDTH = 1;
 var BORDER_COLOR = color.light_gray;

@@ -2,7 +2,7 @@
 import React from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
-import color from '../../color';
+import color from "../../util/color";
 import {AllAnimationsCategory, AnimationCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';

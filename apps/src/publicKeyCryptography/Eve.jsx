@@ -1,6 +1,6 @@
 /** @file The Eve character from the cryptography widget */
 import React from 'react';
-import color from '../color';
+import color from "../util/color";
 import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
