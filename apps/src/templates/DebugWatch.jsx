@@ -8,6 +8,69 @@ import TetherComponent from 'react-tether';
 const WATCH_TIMER_PERIOD = 50;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
 
+const styles = {
+  watchContainer: {
+    width: '100%',
+    height: '100%'
+  },
+  autocompletePanel: {
+    width: 163,
+    height: 'initial',
+    background: 'white',
+    color: '#808080',
+    border: '1px gray solid',
+    padding: 0,
+    marginTop: -2,
+    marginLeft: -1
+  },
+  autocompleteOption: {
+    cursor: 'pointer',
+    margin: 0,
+    padding: 4
+  },
+  watchRemoveButton: {
+    fontSize: 18,
+    float: 'right',
+    cursor: 'pointer',
+    width: 25,
+    backgroundColor: '#be0712',
+    color: 'white',
+    padding: 6,
+    paddingRight: 0,
+    paddingLeft: 10
+  },
+  watchAddButton: {
+    fontSize: '18px',
+    float: 'right',
+    cursor: 'pointer',
+    width: 25,
+    backgroundColor: '#1e93cd',
+    color: 'white',
+    padding: 6,
+    paddingRight: 0,
+    paddingLeft: 10
+  },
+  watchValue: {
+    float: 'left',
+    marginTop: 7,
+    marginLeft: 2,
+    whiteSpace: 'nowrap',
+    overflow: 'scroll',
+    width: 160,
+    height: 21,
+  },
+  watchInputSection: {
+    clear: 'both'
+  },
+  watchInput: {
+    width: 159,
+    marginTop: 0,
+    height: 25,
+    fontFamily: 'monospace',
+    fontSize: '12px'
+  }
+};
+
 const AutocompleteSelector = React.createClass({
   getInitialState() {
     return {
@@ -23,16 +86,7 @@ const AutocompleteSelector = React.createClass({
     return (
       <div
         id="autocomplete-panel"
-        style={{
-          width: 162,
-          height: 'initial',
-          background: 'white',
-          color: '#808080',
-          border: '1px gray solid',
-          padding: 0,
-          marginTop: -2,
-          marginLeft: -1
-        }}
+        style={styles.autocompletePanel}
       >
         {this.props.options.map((option) => {
           const isSelected = index === this.props.currentIndex;
@@ -45,13 +99,9 @@ const AutocompleteSelector = React.createClass({
           return (
           <div
             key={option}
-            className="autocomplete-option"
             onClick={() => this.props.onOptionClicked(option)}
             onMouseOver={() => this.props.onOptionHovered(myIndex)}
-            style={Object.assign({}, {
-                      cursor: 'pointer',
-                      marginLeft: 2
-                    }, isSelected ? selectedStyle : {})}
+            style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
           >
             {option}
           </div>
@@ -283,10 +333,7 @@ const DebugWatch = React.createClass({
     return (
       <div
         id="debugger-watch-container"
-        style={{
-          width: '100%',
-          height: '100%'
-        }}
+        style={styles.watchContainer}
       >
         <div id="debug-watch" ref="scrollableContainer" className="debug-watch">
           {
@@ -296,33 +343,15 @@ const DebugWatch = React.createClass({
               return (
               <div className="debug-watch-item" key={wv.get('uuid')}>
                 <div
-                  style={{
-                    fontSize: 18,
-                    float: 'right',
-                    cursor: 'pointer',
-                    width: 25,
-                    backgroundColor: '#be0712',
-                    color: 'white',
-                    padding: 6,
-                    paddingRight: 0,
-                    paddingLeft: 10
-                  }}
+                  style={styles.watchRemoveButton}
                   onClick={()=> this.props.remove(wv.get('expression'))}
                 >
                   x
                 </div>
                 <div
-                  style={{
-                    float: 'left',
-                    marginTop: 7,
-                    marginLeft: 2,
-                    whiteSpace: 'nowrap',
-                    overflow: 'scroll',
-                    width: 160,
-                    height: 21,
-                  }}
+                  style={styles.watchValue}
                 >
-                  <span className="watch-variable"> {varName} </span>
+                  <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
                   {this.renderValue(varValue)}
                 </div>
@@ -330,19 +359,9 @@ const DebugWatch = React.createClass({
                 );
               })
             }
-          <div style={{clear: 'both'}}>
+          <div style={styles.watchInputSection}>
             <div
-              style={{
-                fontSize: '18px',
-                float: 'right',
-                cursor: 'pointer',
-                width: 25,
-                backgroundColor: '#1e93cd',
-                color: 'white',
-                padding: 6,
-                paddingRight: 0,
-                paddingLeft: 10
-              }}
+              style={styles.watchAddButton}
               onClick={()=>this.addButtonClick()}
             >
               +
@@ -361,13 +380,7 @@ const DebugWatch = React.createClass({
                 onChange={this.onChange}
                 onClick={() => this.setState({autocompleteOpen: true})}
                 value={this.state.text}
-                style={{
-                      width: 159,
-                      marginTop: 0,
-                      height: 25,
-                      fontFamily: 'monospace',
-                      fontSize: '12px'
-                    }}
+                style={styles.watchInput}
               />
               {this.state.autocompleteOpen &&
               <AutocompleteSelector
