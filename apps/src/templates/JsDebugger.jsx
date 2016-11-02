@@ -155,72 +155,72 @@ var JsDebugger = React.createClass({
 
     const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
     return (
-        <div id="debug-area">
-          <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
-          <PaneHeader
-            id="debug-area-header"
-            hasFocus={hasFocus}
-            style={styles.debugAreaHeader}
+      <div id="debug-area">
+        <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
+        <PaneHeader
+          id="debug-area-header"
+          hasFocus={hasFocus}
+          style={styles.debugAreaHeader}
+        >
+          <span
+            style={styles.noUserSelect}
+            className="header-text"
           >
-      <span
-        style={styles.noUserSelect}
-        className="header-text"
-      >
-        {i18n.debugConsoleHeader()}
-      </span>
-            <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down" style={styles.showHideIcon}/>
-            {this.props.debugButtons &&
-            <PaneSection id="debug-commands-header">
-              <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
-              <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"></i>
-              <span
-                style={styles.noUserSelect}
-                className="header-text"
-              >
-                {i18n.debugCommandsHeaderWhenOpen()}
-              </span>
-            </PaneSection>
-                }
-            {this.props.debugWatch &&
-            <PaneSection
-              id="debug-watch-header"
-              onClick={() => {
-                this.setState({watchersHidden: !this.state.watchersHidden});
-              }}
-              style={this.state.watchersHidden ? {
-                borderLeft: 'none',
-                textAlign: 'right',
-                marginRight: '30px'
-              } : {}}
+            {i18n.debugConsoleHeader()}
+          </span>
+          <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down" style={styles.showHideIcon}/>
+          {this.props.debugButtons &&
+          <PaneSection id="debug-commands-header">
+            <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"/>
+            <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"/>
+            <span
+              style={styles.noUserSelect}
+              className="header-text"
             >
-              <i
-                id="hide-toolbox-icon"
-                style={styles.showDebugWatchIcon}
-                className={"fa " + (this.state.watchersHidden ? "fa-chevron-circle-left" : "fa-chevron-circle-right")}
-              />
-              <span
-                style={styles.noUserSelect}
-                className="header-text"
-              >
-                {this.state.watchersHidden ? 'Show Watch' : i18n.debugWatchHeader()}
-              </span>
-            </PaneSection>
-                }
-            <PaneButton
-              id="clear-console-header"
-              iconClass="fa fa-eraser"
-              label="Clear"
-              headerHasFocus={hasFocus}
-              isRtl={false}
+              {i18n.debugCommandsHeaderWhenOpen()}
+            </span>
+          </PaneSection>
+          }
+          {this.props.debugWatch &&
+          <PaneSection
+            id="debug-watch-header"
+            onClick={() => {
+              this.setState({watchersHidden: !this.state.watchersHidden});
+            }}
+            style={this.state.watchersHidden ? {
+              borderLeft: 'none',
+              textAlign: 'right',
+              marginRight: '30px'
+            } : {}}
+          >
+            <i
+              id="hide-toolbox-icon"
+              style={styles.showDebugWatchIcon}
+              className={"fa " + (this.state.watchersHidden ? "fa-chevron-circle-left" : "fa-chevron-circle-right")}
             />
-            {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
-          </PaneHeader>
-          {this.props.debugButtons && <DebugButtons/>}
-          {this.props.debugConsole && <DebugConsole debugButtons={this.props.debugButtons} debugWatch={showWatchPane}/>}
-          {showWatchPane && <DebugWatch debugButtons={this.props.debugButtons}/>}
-        </div>
-      );
-    }
+            <span
+              style={styles.noUserSelect}
+              className="header-text"
+            >
+              {this.state.watchersHidden ? 'Show Watch' : i18n.debugWatchHeader()}
+            </span>
+          </PaneSection>
+          }
+          <PaneButton
+            id="clear-console-header"
+            iconClass="fa fa-eraser"
+            label="Clear"
+            headerHasFocus={hasFocus}
+            isRtl={false}
+          />
+          {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
+        </PaneHeader>
+        {this.props.debugButtons && <DebugButtons/>}
+        {this.props.debugConsole && <DebugConsole debugButtons={this.props.debugButtons} debugWatch={showWatchPane}/>}
+        {showWatchPane && <DebugWatch debugButtons={this.props.debugButtons}/>}
+      </div>
+    );
+  }
 });
 
 module.exports = connect(function propsFromStore(state) {
