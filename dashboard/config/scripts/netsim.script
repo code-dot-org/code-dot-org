@@ -1,5 +1,3 @@
-hidden 'true'
-
 stage 'Overview and Setup Instructions'
 level 'Internet Simulator Setup'
 level 'Internet Simulator Setup 2'
@@ -31,4 +29,3 @@ level 'NetSim Standalone Automatic DNS'
 
 stage 'Internet Simulator Freeplay'
 level 'NetSim Standalone Freeplay'
-

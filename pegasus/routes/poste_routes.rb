@@ -56,16 +56,6 @@ get '/unsubscribe/:email' do |email|
   halt(200, "#{email} unsubscribed.\n")
 end
 
-get '/emails/:name' do |name|
-  pass unless template = Poste.resolve_template(name)
-  @locals[:tracking_pixel] = '/images/1x1.png'
-  @locals[:unsubscribe_link] = '#'
-  result = document(template)
-  @locals[:header]['layout'] = 'sendy'
-  @locals[:header]['theme'] = 'none'
-  result
-end
-
 post '/v2/poste/send-message' do
   forbidden! unless dashboard_user_helper && dashboard_user_helper.admin?
 

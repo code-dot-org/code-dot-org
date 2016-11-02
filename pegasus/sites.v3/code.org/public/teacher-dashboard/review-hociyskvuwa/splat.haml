@@ -2,7 +2,7 @@
 title: Review Hour of Code special events
 ---
 -dont_cache
-- authentication_required!
+-authentication_required!
 -forbidden! unless dashboard_user[:user_type] == 'teacher'
 
 :css
@@ -38,9 +38,12 @@ title: Review Hour of Code special events
 -results = []
 -events = []
 
--DB[:forms].where(kind:'HocSignup2016', review:nil).each do |i|
-  -if i[:processed_data]
-    -results << JSON.parse(i[:data]).merge(secret: i[:secret]).merge(JSON.parse(i[:processed_data]))
+-#
+  TODO(asher): Given that are we are grabbing all non-reviewed HocSignup2016, we
+  should restrict the fields we are grabbing to only those necessary for performance.
+-DB[:forms].where(kind: 'HocSignup2016', review: nil).each do |form|
+  -if form[:processed_data]
+    -results << JSON.parse(form[:data]).merge(secret: form[:secret]).merge(JSON.parse(form[:processed_data]))
 
 -if country == 'us' && state_code
   -results.each do |result|

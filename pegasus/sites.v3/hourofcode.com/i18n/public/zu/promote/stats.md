@@ -6,16 +6,24 @@ nav: promote_nav
 
 ---
 
-# Blurbs and Useful Stats
+<a id="blurb"></a>
 
-## Use this short blurb in newsletters
+<%= view :signup_button %>
 
-### Bring computer science to your school. Start with an Hour of Code
+# AmaBlurbs kanye nezibalo ezisizayo (AmaBlurbs incazelo emfushane echaza incwadi, ifilimu okanye umkhiqizo obhalelwe injongo yokukhuthaza)
+
+## Sebenzisa leblurb emfushane ephephandabeni
+
+### Letha ikhompyutha sayensi esikoleni sakho. Qala ngeHora loKufingqwa
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
-## Infographics
+<a id="infographics"></a>
+
+## Ihluzo yezolwazi
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

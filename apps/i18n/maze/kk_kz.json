@@ -111,5 +111,8 @@
   "word": "Сөзді табу",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Иә",
-  "youSpelled": "Сіздің жазғаныңыз"
+  "youSpelled": "Сіздің жазғаныңыз",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

@@ -688,7 +688,7 @@
           Line to make it go up.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Orada almak için gitmek zorunda olduğu yönü daire içine al.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
         text: Create your algorithm by gluing arrows next to the map that you're trying
@@ -753,8 +753,8 @@
           the smiley face goal.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Ama gülen yüz aşağı doğru ve oraya nasıl gidileceğini bilen sadece bir
+          kişi. Bu programı başltalım.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
         text: A program is an algorithm that has been coded into something that can
@@ -953,8 +953,8 @@
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials
-          on a bracelet we can wear and show all our friends!
+        text: Bu ikili bilezik dersidir. İsmimizin baş harflerini bir bileziğe kodlayacağız
+          ve arkadaşlarımıza göstereceğiz!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: Binary is a way of representing information using only two options.
@@ -979,8 +979,8 @@
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions
-          based on what you see and hear.
+        text: 'Bu derse kartlarla koşullar denir. Hergün duyfuğunuz veya gördüğünüz
+          şeylere göre karar verirsiniz. '
       2:
         image: notes/C2_conditionals_with_cards_2.png
         text: I want to walk to the park but first I have to decide whether I should
@@ -1161,9 +1161,9 @@
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things
-          that people do everyday. Cookie recipes and directions for building a birdhouse
-          are both everyday algorithms.
+        text: Bu derse gerçek hayat algoritmaları denir. Algoritmalar insanlar her
+          gün yaptığı şeyi açıklar. Kurabiye tarifleri ve kuş yuvası oluşturmak için
+          yapılması gerekenler birer algoritmadır.
       2:
         image: notes/C2_paper_airplanes_2.png
         text: Today we're gonna make, create, and test an algorithm for a paper airplane.
@@ -2094,9 +2094,10 @@
           see what you've programmed.
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: Get started and by the end you'll be able to create your own game with
-          these amazing actors that can interact, score points, throw microbots, cherries,
-          saucepans, sparkles, and ice.. and vanish each other. It's all up to you!
+        text: Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular
+          iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, micro robot,
+          vişne, buz, tencere atabilir ve hatta birbirini yok edebilirsin. Bunların
+          hepsi senin elinde istediğin gibi oyununu yapabilirsin.
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
@@ -2496,8 +2497,8 @@
           action.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı
+          tuşu veya ekrana bir kere dokunma.
       5:
         image: notes/starwars_events_5.JPG
         text: Here we're going to make R2-D2 move up to deliver a message to a rebel
@@ -2552,8 +2553,8 @@
           advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Oyununuzu tamamladığınızda, arkadaşlarınızla paylaşabilir veya telefonunuzda
+          oynayabilirsiniz. İyi eğlenceler!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -2628,8 +2629,8 @@
           action.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı
+          tuşu veya ekrana bir kere dokunma.
       5:
         image: notes/starwars_blocks_events_5.JPG
         text: Here we're going to make R2-D2 move up to deliver a message to a rebel
@@ -2673,8 +2674,8 @@
           advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Oyununuzu tamamladığınızda, arkadaşlarınızla paylaşabilir veya telefonunuzda
+          oynayabilirsiniz. İyi eğlenceler!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -2839,9 +2840,9 @@
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Kendi oyununuzu yapmak istiyorsanız, gerçekten kolaydır. Tüm ihtiyacınız
+          sadece birkaç programlama temeli ve ardından oluşturduğunuz bir oyunu oynamaya
+          başlayabilirsiniz.
       2:
         image: notes/gumball_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
@@ -2857,9 +2858,8 @@
           on a phone.
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
+        text: Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı
+          oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır.
       5:
         image: notes/gumball_intro_5.JPG
         text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
@@ -2869,9 +2869,8 @@
           yaparsınız.
       7:
         image: notes/gumball_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: Kendi ekleyeceğiniz blokları "Çalıştığı zaman" bloğuna bağlamak gerekir.
+          Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz.
       8:
         image: notes/gumball_intro_8.JPG
         text: In this first puzzle, we'll make the actors say something by linking
@@ -2879,15 +2878,15 @@
           have your blocks in place, hit the run button to see what you programmed.
       9:
         image: notes/gumball_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular
+          iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, birşeyler
+          atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin
+          gibi oyununu yapabilirsin.
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
+        text: Şimdi oyun programcılarının her zaman kullandığı "Olay" kavramını öğreneceğiz.
+          Olay  bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir.
       2:
         image: notes/gumball_events_2.JPG
         text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı
@@ -2900,9 +2899,9 @@
           performed.
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: Ayrıca "zaman okları" parçaları var. Eğer "hareket" parçalarını bunlara
+          bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye
+          başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor.
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
@@ -2922,9 +2921,9 @@
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Kendi oyununuzu yapmak istiyorsanız, gerçekten kolaydır. Tüm ihtiyacınız
+          sadece birkaç programlama temeli ve ardından oluşturduğunuz bir oyunu oynamaya
+          başlayabilirsiniz.
       2:
         image: notes/iceage_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
@@ -2940,9 +2939,8 @@
           on a phone.
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
+        text: Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı
+          oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır.
       5:
         image: notes/iceage_intro_5.JPG
         text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
@@ -2952,9 +2950,8 @@
           yaparsınız.
       7:
         image: notes/iceage_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: Kendi ekleyeceğiniz blokları "Çalıştığı zaman" bloğuna bağlamak gerekir.
+          Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz.
       8:
         image: notes/iceage_intro_8.JPG
         text: In this first puzzle, we'll make the actors say something by linking
@@ -2962,15 +2959,15 @@
           have your blocks in place, hit the run button to see what you programmed.
       9:
         image: notes/iceage_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular
+          iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, birşeyler
+          atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin
+          gibi oyununu yapabilirsin.
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
+        text: Şimdi oyun programcılarının her zaman kullandığı "Olay" kavramını öğreneceğiz.
+          Olay  bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir.
       2:
         image: notes/iceage_events_2.JPG
         text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı
@@ -2983,9 +2980,9 @@
           performed.
       4:
         image: notes/iceage_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: Ayrıca "zaman okları" parçaları var. Eğer "hareket" parçalarını bunlara
+          bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye
+          başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor.
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG

@@ -4,33 +4,35 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to organize an Hour of Code event
+<%= view :signup_button %>
 
-## 1) Prepare for your event
+# Indlela yoku hlela isehlo seHora loKufingqwa
 
-  * Determine a venue, date and time
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+## 1) Hlela isehlo sakho
 
-## 2) During your event
+  * Nquma inkundla, usuku, kanye nesikhathi
+  * Thumela [ incwadi](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) yokumema umphathi dolobha, umuntu wenhlangano, undunankulu, noma usomabhizinizi ocavile azokhuluma.
+  * Mema abokusasaza/abezindaba. isb. iziteshi zezindaba zendawo, amaphephandaba, ababhala ngemfundo/ubuchwepheshe. Bheka i [khithi yabezindaba](%= resolve_url('/promote/press-kit') %) ukuze othole usizo.
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+## 2) Ngesikhathi kungumcimbi wakho
+
+  * Qala umcimbi wakho ngokukodwa kulokhu [amavidiyo anogqozi](%= resolve_url('/promote/resources#videos') %).
+  * Nikeza isingeniso esibukisisa ukubaluleka kwekhompyutha sayensi, usebenzise lezi [zibalo kanye nohluzololwazi](%= resolve_url('/promote/stats') %).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Amanye amasu omcimbi: 
+      * Mema umholi wemboni yendawo ukuzoxoxa ngomsebenzi wakhe ongekhompyutha sayensi
+      * Mema owezombusazwe wendawo abafundi bamfundise ukufingqwa
+      * Ibaneqembu labafundi ilibonisa umsebenzi onqanyuliwe
+      * Ibaneqembu labafundi abazofundisa uthisha nhloko okanye iqembu lothisha ukufingqwa
+      * Uma isikole sakho siyifundisa ikhompyutha sayensi, abafundi abanze amaphrojekthi esikhombisi
 
-## 3) Share how it went
+## 3) Yabelana ngokuthi ihambe kanjani
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Yabelana ngemifanekiso yomcimbi wakho kuFacebook nakuTwitter. 
+  * Sebenzisa le hashtag **#HoraloKufingqwa**
 
-## Example Event Plan
+## Isibonakaliso sohlelo lomcimbi
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+
+<%= view :signup_button %>

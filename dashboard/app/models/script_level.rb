@@ -64,12 +64,21 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def active?(level)
+    properties_hash = JSON.parse(properties)
+    !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+  end
+
   def has_another_level_to_go_to?
     if script.professional_learning_course?
       !end_of_stage?
     else
       next_progression_level
     end
+  end
+
+  def final_level?
+    !has_another_level_to_go_to?
   end
 
   def next_level_or_redirect_path_for_user(user)

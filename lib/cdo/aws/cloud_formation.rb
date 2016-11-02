@@ -48,7 +48,6 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
-    CDN_ENABLED = !!ENV['CDN_ENABLED']
 
     STACK_ERROR_LINES = 250
     LOG_NAME = '/var/log/bootstrap.log'
@@ -282,7 +281,7 @@ module AWS
           ssh_ip: SSH_IP,
           iam_certificate_id: IAM_CERTIFICATE_ID,
           certificate_arn: CERTIFICATE_ARN,
-          cdn_enabled: CDN_ENABLED,
+          cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
           subdomain: FQDN,
           availability_zone: availability_zones.first,

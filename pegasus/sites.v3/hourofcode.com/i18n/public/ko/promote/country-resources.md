@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # 리소스들
@@ -46,7 +48,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Hour of Code 학습 가이드](/files/HourofCodeLessonGuideJapan.pdf)
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
@@ -57,21 +59,6 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 <
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
-
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
 
 <% elsif @country == 'pk' %>
 
@@ -91,7 +78,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 ## 1) 다음 튜토리얼을 따라해 보세요:
 
-우리는 수많은 파트너들에 의해서 만들어진 다양한 재미가 있는 1시간짜리 튜토리얼들을 제공할 것입니다. 새로운 튜토리얼들은 Hour of Code 이전에 공개될 것입니다. <%= campaign_date('full') %>.
+We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
 **모든 Hour of Code 튜토리얼들은:**
 
@@ -102,7 +89,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 ## 2) 필요한 하드웨어 - 컴퓨터가 꼭 필요하지는 않습니다.
 
-인터넷에 연결된 컴퓨터를 사용하는 것이 가장 최적으로 Hour of Code를 경험할 수 있습니다. 하지만, 모든 아이들이 컴퓨터가 있어야 하는 것은 아니며, 심지어 컴퓨터가 없이도 Hour of Code 를 해 볼 수 있습니다.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **학생용 컴퓨터나 기기들에서 튜토리얼을 테스트 해보세요. ** 잘 실행되는지 살펴보세요.(사운드와 비디오 등)
   * **축하 페이지 미리보기** 를 통해 학생들이 완료했을 때 보게 될 내용들을 살펴보세요. 
@@ -115,13 +102,13 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
     
     ## 4) 학생들 적극적으로 참여시키기 - 동영상을 보여주세요.
     
-    학생들이 Hour of Code에 흥미를 가질 수 있도록 돕는 영상을 보여주세요.
+    Show students an inspirational video to kick off the Hour of Code. Examples:
     
       * 빌 게이츠(Bill Gates), 마크 주커버그(Mark Zuckerberg)와 NBA 농구 스타인 크리스 보쉬(Chris Bosh)의 원래 Code.org 소개 동영상이 있습니다.([ 1분 ](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5분 ](https://www.youtube.com/watch?v=nKIu9yen5nc), [ 9분 ](https://www.youtube.com/watch?v=dU1xS07N-FA) 버전들이 있습니다.)
       * [Hour of Code 2013 런칭 동영상](https://www.youtube.com/watch?v=FC5FbmsH4fw) 또는 [Hour of Code 2014 동영상](https://www.youtube.com/watch?v=96B5-JGA9EQ)
       * [오바마 대통령은 모든 학생들이 컴퓨터과학(정보과학)을 배울 수 있도록 도와달라고 요청하고 있습니다.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
     
-    **학생들의 주의를 집중시키세요 - 짧은 동영상 보여주기**
+    **Get your students excited - give them a short intro**
     
     <% else %>
     

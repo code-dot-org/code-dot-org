@@ -1,14 +1,16 @@
 * * *
 
-titel: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Hoe kunt u CodeUur introduceren in uw bedrijf?
 
 ## Inspireer leerlingen en vrijwilligers voor het CodeUur
 
-**Code.org biedt medewerkers van het bedrijf de mogelijkheid om te [verbinden](%= resolve_url('https://code.org/volunteer') %) met lokale klaslokalen die het CodeUur hebben, zodat hun tech carrière en ervaringen de leerlingen kunnen inspireren om informatica te studeren. **
+**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
   * [Meld u aan](%= resolve_url('https://code.org/volunteer') %) als vrijwilliger.
   * Voor meer instructies om werknemers in aanmerking te laten komen met scholen, kunt u gebruik maken van onze [gids voor corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
@@ -30,7 +32,7 @@ titel: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 ## 1) Bekijk deze how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Kies een tutorial:
 
-Wij zullen een verscheidenheid van [leuke, één uur langdurende tutorials](%= resolve_url('https://code.org/learn') %) voor deelnemers van alle leeftijden, gemaakt door verschillende partners hosten. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
 
 **Alle CodeUur handleidingen:**
 
@@ -136,4 +138,6 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 ## Wat komt er na het CodeUur?
 
-Het CodeUur is slechts de eerste stap in de reis om meer te weten te komen over hoe technologie werkt en hoe je softwaretoepassingen kunt maken. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

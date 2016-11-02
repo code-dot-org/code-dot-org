@@ -1,6 +1,5 @@
-require 'controllers/api/csv_download'
 class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
-  include CsvDownload
+  include Api::CsvDownload
   load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
   # GET /api/v1/pd/workshops/1/enrollments

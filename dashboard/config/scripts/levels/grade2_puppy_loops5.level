@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,4,2,0],[0,3,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Can you figure out the fastest way to get me to the pig?",
+    "instructions": "\"Get me to the pig as quickly as possible!\"",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,6 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The best solution uses two `move forward` commands and one loop.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "*\"Get me to the pig as quickly as possible!\"*",
     "contained_level_names": null
   },
   "published": true,

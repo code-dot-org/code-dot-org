@@ -24,7 +24,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# displace()\r\n\r\nBecause this is a type of action that happens a lot, a programmer created a block called `displace` that will make one sprite push the other when they touch.  Someone tried to use the block in the code below, but there is a bug.  Can you change the code so that the cat pushes the yarn?\r\n\r\n# Do This\r\n\r\nFind the line of code where the `displace` block is used and fix the error.\r\n\r\n[//]: #  (https://images.code.org/2e6b993747a39cd5076dce219037903d-image-1470319674401.png)\r\n\r\n[//]: #  (https://images.code.org/d44d7c1aa87ea7eeceea9e9b023408f9-image-1470319674396.png)",
+    "markdown_instructions": "# Displace\r\n\r\nThe interaction you've been programming is so common that there's a block designed to do the interaction for you. `sprite.displace()` that will make one sprite push the other when they touch. The code underlying this block might look a lot like what you just wrote, but now you no longer need to worry about writing those details yourself.\r\n\r\n# Do This\r\n\r\nSomeone tried to use the `sprite.displace()` block to make the **elephant push the hippo**, but there is a bug. Can you change the code so that the elephant pushes the hippo off the screen?\r\n\r\n* Find the line of code where the `sprite.displace()` block is used and fix the error.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -49,10 +49,16 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"yarn\",\r\n        \"cat\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"yarn\": {\r\n            \"name\": \"yarn\",\r\n            \"sourceUrl\": \"https://images.code.org/2e6b993747a39cd5076dce219037903d-image-1470319674401.png\",\r\n            \"frameSize\": {\r\n                \"x\": 50,\r\n                \"y\": 50\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"cat\": {\r\n            \"name\": \"cat\",\r\n            \"sourceUrl\": \"https://images.code.org/d44d7c1aa87ea7eeceea9e9b023408f9-image-1470319674396.png\",\r\n            \"frameSize\": {\r\n                \"x\": 100,\r\n                \"y\": 114\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
-    "start_blocks": "var cat = createSprite(50, 250);\r\ncat.setAnimation(\"cat\");\r\ncat.velocityX = randomNumber(2,4);\r\n\r\nvar yarn = createSprite(375, 270);\r\nyarn.setAnimation(\"yarn\");\r\nyarn.velocityX = -2;\r\nyarn.rotationSpeed = -3;\r\n\r\nfunction draw() {\r\n  \r\n  // fix the error in this line\r\n  yarn.displace(cat);\r\n  \r\n  background(\"skyblue\");\r\n  strokeWeight(0);\r\n  fill(\"sienna\");\r\n  rect(0, 280, 400, 120);\r\n  drawSprites();\r\n}\r\n",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"8e2c3f03-8036-4396-b4cb-37dbb109b09e\",\r\n    \"4ebdd257-efc8-49b1-adb0-6453b75f53cd\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"8e2c3f03-8036-4396-b4cb-37dbb109b09e\": {\r\n      \"name\": \"elephant\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/N5X56OjGe49IqvJtuqzmIBKo8_G60r62/category_animals/elephant.png\",\r\n      \"frameSize\": {\r\n        \"x\": 348,\r\n        \"y\": 282\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"N5X56OjGe49IqvJtuqzmIBKo8_G60r62\"\r\n    },\r\n    \"4ebdd257-efc8-49b1-adb0-6453b75f53cd\": {\r\n      \"name\": \"hippo\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/GkFcUO8pANbOtIl4pJkUBZSMP30piEpZ/category_animals/hippo.png\",\r\n      \"frameSize\": {\r\n        \"x\": 264,\r\n        \"y\": 264\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"GkFcUO8pANbOtIl4pJkUBZSMP30piEpZ\"\r\n    }\r\n  }\r\n}",
+    "start_blocks": "// Create elephant sprite\r\nvar elephant = createSprite(200, 400);\r\nelephant.setAnimation(\"elephant\");\r\nelephant.scale = 0.5;\r\nelephant.velocityY = randomNumber(-3,-1);\r\n\r\n// Create hippo sprite\r\nvar hippo = createSprite(200,100);\r\nhippo.setAnimation(\"hippo\");\r\nhippo.scale = 0.5;\r\n\r\nfunction draw(){\r\n  // Draw background\r\n  background(\"white\");\r\n  \r\n  // Update Sprites\r\n  hippo.displace(elephant);\r\n  \r\n  drawSprites();\r\n}",
     "palette_category_at_start": "sprites",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false"
   },
   "published": true,
   "notes": "",

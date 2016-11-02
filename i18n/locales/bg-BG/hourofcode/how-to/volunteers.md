@@ -4,15 +4,17 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Практически пътеводител за доброволци
 
 ## 1. Регистрация на доброволци
 
-Посетете местните класни стаи, за да вдъхновите учениците да продължават да учат компютърни науки. [ Доброволец за един час](https://code.org/volunteer/engineer).
+Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
 ## 2. Присъединете се към сесия за доброволци
 
-Ще проведем две информационни сесии, за да обясним какъв типичен доброволчески опит търсим. Ние ще обсъдим как да координирате действията си с учителите преди тяхното Hour of Code събитие, а също и какво трябва да направите в деня на събитието, за да подготвите събитието. Моля, задайте вашите въпроси! Тези уебинари ще бъдат проведени през Hangouts on Air, така че ако ги пропуснете все още можете да ги гледате записани по-късно. [ вижте дневния ред](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
 <table>
   <tr>
@@ -44,19 +46,19 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 ## 3. Отделете 30 минути, за да опитате уроците предварително
 
-Опитайте Hour of Code уроците в [ code.org/learn](https://code.org/learn). Изберете някои от най-популярните уроци и прекарайте известно време, за да се запознаете с всеки един от тях. Това ще ви отнеме около 5-10 минути на урок, за да получите усещане за това как той работи.
+Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Превърнете Вашите колеги в доброволци
 
-Кажете на приятели и колеги за Hour of Code. Ние имаме хиляди учители, записали се, че търсят доброволци, помолете им като [ се регистрирате като доброволец](https://code.org/volunteer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Примерни имейли:**
+**Sample email:**
 
-**Тема**: Присъединете се към мен в доброволческата дейност за Hour of Code
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Ако си спомняш първия си ред код, знаеш, че той оформи останалата част от живота ти.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-Това е причината, заради която Hour of Code съществува. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
 **I signed up to volunteer in a local classroom, and you can, too!**   
 Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
@@ -78,7 +80,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 4. Промотиране на Hour of Code във Вашата общност
 
-Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Подгответе се преди да посетите класната стая.
 
@@ -95,3 +97,5 @@ Review a typical agenda below, and [review these tips](https://code.org/files/CS
 ### 4. Пуснете [ Hour of Code видео](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
 ### 5. Нека учениците сами пробват уроците. Разходете се из класната стая, отговаряйки на въпросите им и ги насочвайте през трудните пъзели. Опитайте се да не давате на учениците отговорите направо. Вместо това, опитайте да им задавате въпроси, така че те да могат да си отговорят сами какво се е объркало.
+
+<%= view :signup_button %>

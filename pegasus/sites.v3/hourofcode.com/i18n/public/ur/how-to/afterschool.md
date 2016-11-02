@@ -6,27 +6,29 @@ nav: how_to_nav
 
 ---
 
-# How to teach one Hour of Code in after-school
+<%= view :signup_button %>
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+# آور-آف-کوڈ اسکول کے بعد کیسے سیکھائیں
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+## ١) اس ویڈیو کو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## ٢) ٹیٹوریئل منتخب کریں:
+
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [انہیں آزمائیں!](<%= resolve_url("https://code.org/learn") %>)
 
 **آور-آف-کوڈ کے تمام ٹیٹوریئلز**
 
   * آرگنائزرز کے لیے تیاری کا کم از کم درکار وقت
-  * یہ سیلف-گائیڈڈ ہیں – جو کہ بچوں (کڈز) کو انکی اپنی رفتار اور اسکل-لیول کے مطابق کام کرنے کا موقع دیتا ہے۔
+  * یہ سیلف-گائیڈڈ ہیں – جو کہ بچوں کو انکی اپنی رفتار اور مہارت کے مطابق کام کرنے کا موقع دیتا ہیں
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Promote your Hour of Code
+## ٣) اپنے آور-آف-کوڈ کو پروموٹ کریں
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+اپنے آور-آف-کوڈ کو [ان ٹولز کے ساتھ](<%= resolve_url('/promote') %>) فروغ دیں اور دوسروں کو اپنی تقریبات ہوسٹ کرنے پر حوصلہ افزائی کریں.
 
-## 4) اپنی ٹیکنالوجی کی ضروریات کا پلان کریں – کمپیوٹرز آپشنل ہیں
+## 4) اپنی ٹیکنالوجی کی ضروریات کو پلان کریں – کمپیوٹرز آپشنل ہیں
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 **Plan Ahead!** Do the following before your event starts:
 
@@ -129,3 +131,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

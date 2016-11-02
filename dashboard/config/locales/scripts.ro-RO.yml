@@ -64,11 +64,11 @@
             Your Digital Footprint: Amprenta ta Digitală
         course3:
           title: Cursul 3
-          description: "Cursul 3 este conceput pentru elevii care au parcurs cursul
-            2. Elevii vor aprofunda subiectele introduse în cursurile anterioare,
-            pentru a le adapta la soluţii pentru probleme mai complexe de programare.
-            La sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
-            pe care le pot distribui oricui. \nRecomandat claselor 4-5.\n"
+          description: Cursul 3 este conceput pentru elevii care au parcurs cursul
+            2. Elevii vor aprofunda subiectele introduse în cursurile anterioare pentru
+            a le adapta la soluţii pentru probleme mai complexe de programare. Până
+            la sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
+            pe care le pot partaja cu oricine. Recomandat pentru clasele 4-5.
           description_short: Cursul 3 este un continuarea cursului 2.
           description_audience: Vârste 8 - 18 ani
           stage:
@@ -185,6 +185,7 @@
             Functions and Functions with Parameters: Funcții și funcții cu parametri
             Intro: Introducere
             Variables: Variabile
+          description_audience: "[șir gol]"
         algebra:
           title: Informatică în Algebră
           description: "Învață Programare Funcțională prin Algebră"
@@ -213,6 +214,7 @@
             'Unplugged: The Design Recipe': 'Fără calculator: Rețeta pentru design'
             'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
               video și planuri de coordonate'
+          description_audience: "[șir gol]"
         infinity:
           title: Laborator de joacă Disney Infinity
           description: Folosește Laboratorul de Joacă pentru a crea o poveste sau
@@ -247,7 +249,7 @@
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Unplugged lessons: Lecţii fără calculator
             Writing computer programs: Scrierea de programe pentru computer
         netsim:
@@ -321,9 +323,9 @@
           description_short: Evenimente
           stage:
             Bounce: Săritură
-            Calc: Calc
-            Eval: Eval
-            Studio: Studio
+            Calc: Calculează
+            Eval: Evaluează
+            Studio: Studiou
         flappy:
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute?
@@ -355,13 +357,13 @@
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Puzzle-uri
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Puzzle-uri
         cspunit1:
           title: CSP Unit 1
           description: CSP Unit 1 Stages
@@ -394,9 +396,10 @@
             Evaluation Blocks: Blocuri de evaluare
             Introduction to PD: Introducere in Dezvoltarea Profesională
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: "[șir gol]"
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -413,6 +416,7 @@
             Your Game - Booleans: Your Game - Booleans
             Your Game - Collision Detection: Your Game - Collision Detection
             Your Game - Player Movement: Your Game - Player Movement
+          description_audience: "[șir gol]"
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
@@ -438,6 +442,7 @@
           stage:
             Lesson 14: Lesson 14
             Lesson 15: Lesson 15
+          description_audience: "[șir gol]"
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -469,6 +474,7 @@
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: "[șir gol]"
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -515,6 +521,7 @@
             Using Simple Commands: Using Simple Commands
             Using Variables in Apps: Using Variables in Apps
             While Loops: Repetiții While
+          description_audience: "[șir gol]"
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -525,7 +532,7 @@
             Evaluation Blocks: Blocuri de evaluare
             Next Steps: Next Steps
             Strings and Images: "Șiruri și Imagini"
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             The Big Game: The Big Game
             The Design Recipe: Rețeta pentru design
         ECSPD-NexTech:
@@ -562,7 +569,7 @@
             Evaluation Blocks: Blocuri de evaluare
             Introduction to PD: Introducere in Dezvoltarea Profesională
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
         algebraPD-iZone:
@@ -575,7 +582,7 @@
             Evaluation Blocks: Blocuri de evaluare
             Introduction to PD: Introducere in Dezvoltarea Profesională
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
         sciencePD-NexTech:
@@ -700,6 +707,7 @@
             Sam the Bat: Sam the Bat
             Strings and Images: "Șiruri și Imagini"
             The Design Recipe: Rețeta pentru design
+          description_audience: "[șir gol]"
         allthethings:
           title: Toate lucrurile!
           description: Toate tipurile de nivel pentru testarea interfeței utilizatorului
@@ -733,7 +741,7 @@
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: Studiou
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
@@ -754,8 +762,9 @@
             Next Steps: Next Steps
             Rocket-Height: Rocket-Height
             Strings and Images: "Șiruri și Imagini"
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Writing Contracts: Writing Contracts
+          description_audience: "[șir gol]"
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -825,11 +834,12 @@
           description_short: 'Etapa 2 online: Studiu de vara mixt'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Rețeta pentru design
             Welcome!: Bine ai venit!
+          description_audience: "[șir gol]"
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: 'Etapa 2 online: Studiu de vara mixt'
@@ -861,6 +871,7 @@
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Bine ai venit!
             Wrap-Up: Revizuire
+          description_audience: "[șir gol]"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with
@@ -1015,6 +1026,7 @@
             Prep With Your Modules: Prep With Your Modules
             The TLO: The TLO
             Welcome Back!: Welcome Back!
+          description_audience: "[șir gol]"
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies
@@ -1034,6 +1046,7 @@
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: "[șir gol]"
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1045,6 +1058,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: "[șir gol]"
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1056,6 +1070,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: "[șir gol]"
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1115,6 +1130,7 @@
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: What Data Can Tell Us
             Why Make Apps?: Why Make Apps?
+          description_audience: "[șir gol]"
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description: Phase 3 Academic Year Development
@@ -1148,6 +1164,7 @@
             Getting Started: Getting Started
             Share out and Submit: Share out and Submit
             Unit 2 Overview: Unit 2 Overview
+          description_audience: "[șir gol]"
         duino:
           title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
@@ -1212,6 +1229,7 @@
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
             While Loops: Repetiții While
+          description_audience: "[șir gol]"
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1307,6 +1325,7 @@
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+          description_audience: "[șir gol]"
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description: Online Support for CSP Unit 4
@@ -1381,6 +1400,7 @@
             'Unplugged: Contracts': 'Fără calculator: Contracte'
             'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
             'Unplugged: The Design Recipe': 'Fără calculator: Rețeta pentru design'
+          description_audience: "[șir gol]"
         AlgebraB:
           title: Informatică în Algebră
           description: "Învață Programare Funcțională prin Algebră"
@@ -1403,6 +1423,7 @@
               și funcții pe porțiuni'
             'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
               video și planuri de coordonate'
+          description_audience: "[șir gol]"
         gamelab-hackathon:
           title: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -1418,9 +1439,10 @@
             Evaluation Blocks: Blocuri de evaluare
             Introduction to PD: Introducere in Dezvoltarea Profesională
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: "[șir gol]"
         algebraPD3c:
           title: Computer Science in Algebra PD
           description: CS in Algebra end of year reflection
@@ -1506,6 +1528,8 @@
             The Need For Programming Languages: The Need For Programming Languages
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Using Simple Commands
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: "[șir gol]"
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -1526,6 +1550,10 @@
             Simple Encryption: Simple Encryption
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+            Rapid Research - Cybercrime: Rapid Research - Cybercrime
+            Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and
+              Security Dilemmas
+          description_audience: "[șir gol]"
         csp5:
           title: CS Principles Unit 5 - Building Apps
           description: 'This unit continues the introduction of foundational concepts
@@ -1585,6 +1613,10 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Functions: Funcţii
+            Platform Jumper: Platform Jumper
+            Defender: Defender
+          description_audience: "[șir gol]"
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description: In Partnership with Project GUTS
@@ -1605,6 +1637,7 @@
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: "[șir gol]"
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: "[șir gol]"
@@ -1636,9 +1669,10 @@
           stage:
             Evaluation Blocks: Blocuri de evaluare
             Introduction to PD: Introducere in Dezvoltarea Profesională
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: "[șir gol]"
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -1659,6 +1693,7 @@
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: "[șir gol]"
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles
@@ -1674,6 +1709,16 @@
               in the Real World
             Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the
               Real World
+            Unit 1 - Algorithms Detour - Minimum Spanning Tree: Unit 1 - Algorithms
+              Detour - Minimum Spanning Tree
+            Unit 1 - Algorithms Detour - Shortest Path: Unit 1 - Algorithms Detour
+              - Shortest Path
+            Unit 1 - How Routers Learn: Unit 1 - How Routers Learn
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem: Unit 4 - Hard
+              Problems - The Traveling Salesperson Problem
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem: Unit 4 - One-Way
+              Functions - The WiFi Hotspot Problem
+          description_audience: "[șir gol]"
         cspunit1-support:
           title: Online Support for CSP Unit 1
           description: This is a test Professional Learning Course
@@ -1759,6 +1804,28 @@
             Adding Functionality (optional): Adding Functionality (optional)
             Design Mode: Design Mode
             Making it Interactive: Making it Interactive
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            UCD Micro Activity: UCD Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Re-designing a Space: Re-designing a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            User Research: User Research
+            Low Fidelity Prototyping: Low Fidelity Prototyping
+            Preparing for Prototype Testing: Preparing for Prototype Testing
+            Prototype Testing: Prototype Testing
+            Preparing for App Testing: Preparing for App Testing
+            App Testing: App Testing
+            Planning for Improvements: Planning for Improvements
+            Improving and Iterating: Improving and Iterating
+            App Presentation Prep: App Presentation Prep
+            App Presentation: App Presentation
+          description_audience: "[șir gol]"
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description: Temp place to work on U1 of Disco
@@ -1792,6 +1859,12 @@
             Headers and Lists: Headers and Lists
             Designing Web Pages: Designing Web Pages
             Holding: Holding
+            Describing Web pages: Describing Web pages
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Usability and Accessibility: Usability and Accessibility
+          description_audience: "[șir gol]"
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1913,6 +1986,7 @@
             Programming: Programare
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            Unspotted Bugs: Unspotted Bugs
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
@@ -1974,6 +2048,7 @@
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: "[șir gol]"
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -1985,6 +2060,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: "[șir gol]"
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -1996,6 +2072,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: "[șir gol]"
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -2058,6 +2135,8 @@
             Lesson 2,10: Lesson 2,10
             Lesson 2,2: Lesson 2,2
             Lesson 2,3: Lesson 2,3
+            Test stage with bubbles: Test stage with bubbles
+          description_audience: "[șir gol]"
         csd3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
@@ -2073,6 +2152,7 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+          description_audience: "[șir gol]"
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -2121,25 +2201,22 @@
           description_short: "\\tPhase 3: School Year Support"
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Tabloul de bord al profesorilor
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Rețeta pentru design
             Welcome!: Bine ai venit!
+          description_audience: "[șir gol]"
         csp-pre-survey:
           title: CS Principles Pre-Survey
           stage:
             Anonymous student pre-survey: Anonymous student pre-survey
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
-        sciencepd3-2016:
-          title: CS in Science PD3 Before 1st In-Person
-          description_short: 'Phase 3: Academic Year Development Pre 1'
-          description: 'Phase 3: Academic Year Development (Segment One)'
-          stage:
-            Welcome Back!: Welcome Back!
-            The TLO: The TLO
-            Prep With Your Modules: Prep With Your Modules
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: Problem Solving
@@ -2155,6 +2232,7 @@
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+          description_audience: "[șir gol]"
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -2183,3 +2261,40 @@
               and Packets'
             'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
               on the Internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 -
+              2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lesson
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 11: Interpreting Visual Data': 'Lessons 7 - 11: Interpreting
+              Visual Data'
+            'Lessons 12 - 15: Communicating with Visualizations': 'Lessons 12 - 15:
+              Communicating with Visualizations'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting
+              Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15:
+              Communicating with Visualizations'
+          description_audience: "[șir gol]"
+        csp1-support:
+          title: CSP Unit 1 Online Support
+          description_short: TeacherSupports for CSP unit 1
+          description: This is a set of online supports of CSP teachers preparing
+            to teach Unit 1.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding
+              and Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending
+              Text'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
+              on the Internet'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning

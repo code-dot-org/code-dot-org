@@ -41,9 +41,15 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "contained_level_names": null,
+    "instructions_important": "true",
+    "never_autoplay_video": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1

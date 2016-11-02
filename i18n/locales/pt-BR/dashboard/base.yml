@@ -2,9 +2,9 @@ pt-BR:
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
-      too_young: This content has age restrictions in place and is not available for younger students.
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
-      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
+      too_young: Este conteúdo tem restrições de idade e não está disponível para alunos mais novos.
+      teacher_must_accept_terms: 'Este conteúdo tem restrições de idade e não está disponível para alunos mais novos. Peça ao seu professor para aceitar os Termos de Serviço atualizados para que você tenha acesso a este conteúdo. Seu professor pode fazer isso fazendo login no Code Studio e clicando no botão "Ver termos atualizados", próximo ao topo da página inicial do Code Studio.'
+      pair_programmer: No momento você está programando em parceria com um aluno que não tem acesso a este conteúdo. Para acessá-lo, interrompa a programação em pares e tente novamente.
   activerecord:
     errors:
       messages:
@@ -81,9 +81,9 @@ pt-BR:
   signup_form:
     student_count: '%{count} alunos já se registraram.'
     teacher_count: '%{count} professores já se registraram.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
+    overview: 'Cadastre-se para ter uma conta e acompanhar seu progresso ou gerenciar sua sala de aula. <a href="/">Você pode explorar diversas fases e desafios</a> sem uma conta, mas precisará fazer login para salvar seu progresso e seus projetos.'
     teacher_educator_guide: Consultar o guia do professor
-    title: Sign up for Code.org
+    title: Cadastre-se na Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: endereço, cidade, estado, CEP
@@ -99,14 +99,14 @@ pt-BR:
     valid_password: Senha válida!
     invalid_password: A senha deve ter pelo menos 6 caracteres
     mismatch_password: As duas senhas que você digitou são diferentes
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
+    student_terms: "Eu aceito os <a href='http://code.org/tos'>Termos de Serviço</a> da Code.org. Se eu tiver menos de 13 anos de idade, confirmo, com o envio deste formulário, que tenho a permissão dos meus pais ou tutores legais para usar os serviços da Code.org.<br/><br/>Os endereços de e-mail não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão e-mails da Code.org, exceto em caso de recuperação de senha. Consulte nossa <a href='http://code.org/privacy'>Política de Privacidade</a> para ver outras informações."
+    teacher_terms: "Eu aceito os Termos de Serviço da Code.org. Para ver mais informações sobre privacidade, consulte nossa <a href='http://code.org/privacy'>Política de Privacidade</a>."
     additional_information: Precisamos de mais informações para continuar com o processo de inscrição.
     user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Estudante
     field_is_required: é obrigatório
-    accept_terms: You must agree to create an account
+    accept_terms: Você precisa aceitar criar uma conta
   signin_form:
     title: Já tem uma conta? Entre
     login: E-mail
@@ -128,7 +128,7 @@ pt-BR:
   password:
     reset_form:
       title: Esqueceu sua senha?
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: Insira seu endereço de e-mail abaixo para enviarmos as instruções de redefinição de senha.
       email: Endereço de email
       submit: Enviar
     change_form:
@@ -233,10 +233,10 @@ pt-BR:
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Entre para salvar o progresso
       free_play:
-        playlab: Criar um aplicativo do Laboratório
+        playlab: Criar um aplicativo do Play Lab
         artist: Desenhar algo
         calculate: Calculate something
-        applab: Criar um aplicativo do Laboratório
+        applab: Criar um aplicativo do Play Lab
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -246,7 +246,7 @@ pt-BR:
       prizes: Prêmios
       logout: Sair
       signin: Entrar
-      signup: Create an account
+      signup: Criar uma conta
       already_registered: Já se cadastrou?
       pair_programming: Programação em duplas
       team: Equipe
@@ -287,7 +287,8 @@ pt-BR:
       submitted_on: 'Enviado em:'
       unsubmit: Cancelar envio
       worked_with: Trabalhou com
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Atualize as configurações de bloqueio aqui.
+      clear_response: Clear response
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -346,8 +347,7 @@ pt-BR:
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
     announcement_title: Anúncios
-    announcement_message_fall2016_features: |-
-      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+    announcement_message_fall2016_features: 'Passamos as férias transformando seu feedback em novos recursos. Agora, você pode <a href="%{pp_url}" target="_blank">acompanhar o progresso de vários alunos</a>, mesmo se eles estiverem programando em pares em um dispositivo. Você pode usar <a href="%{csp_widgets_url}" target="_blank">as melhores ferramentas interativas</a> do nosso curso "Princípios da CC" em <i>qualquer</i> sala de aula. E seus alunos podem <a href="%{unused_code_url}" target="_blank">manter códigos não utilizados</a> em sua área de trabalho para incentivar ainda mais descobertas! Confira todos os nossos novos recursos e conte-nos o que você achou.'
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Saiba mais
     announcement_try_now_button: Experimente agora
@@ -382,7 +382,7 @@ pt-BR:
     help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar esses materiais.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados.<br />A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br />O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org usa p5.play, que é licenciado sob <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> a GNU LGPL 2.1</a>.'
+    code_from_html: 'A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: Direitos Autorais
@@ -415,7 +415,7 @@ pt-BR:
     download: Baixar Vídeo
   compatibility:
     upgrade:
-      unsupported_message: "Seu navegador não é suportado. Por favor atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidades podem não funcionar."
+      unsupported_message: "Seu navegador não é compatível. Atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores compatíveis</a>. Você pode tentar visualizar a página, mas é possível que algumas funcionalidades não funcionem."
       link: Saiba mais
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
@@ -452,10 +452,10 @@ pt-BR:
   upsell:
     applab:
       title: Laboratório de Aplicativo
-      body: App Lab é um ambiente de programação onde você pode fazer simples aplicativos. Projetar uma aplicação, codificar com blocos ou JavaScript para fazê-los funcionar, compartilhar seu aplicativo em minutos.
-      body_short: Projetar uma aplicação, codificar com blocks ou JavaScript para fazê-lo funcionar, e compartilhar seu aplicativo em segundos.
+      body: O App Lab é um ambiente de programação onde você pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.
+      body_short: Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.
       audience: A partir de 13 anos
-      cta: Aprenda como
+      cta: Saiba como
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.
@@ -483,17 +483,17 @@ pt-BR:
       title: Minecraft
       body: Explore o mundo de Minecraft usando códigos.
     unplugged:
-      title: Aulas offline
-      audience: A partir de 6 anos
-      body: Nós compilamos uma lista de lições offline para você usar em sua sala de aula. Agora você pode ensinar os fundamentos da ciência da computação, se você tiver computadores em sua sala de aula ou não! Tente usar essas lições como vídeo-aulas ou como aulas complementares para qualquer curso de ciência da computação.
-      body_short: Se você não tem computadores, tente essas lições offline em sua sala de aula.
+      title: Aulas off-line
+      audience: A partir de 4 anos
+      body: Nós fizemos uma lista de aulas off-line para você usar em sua sala de aula. Agora você pode ensinar os conceitos básicos da ciência da computação, independentemente de ter ou não computadores na sala! Use essas aulas como um curso independente ou como aulas complementares para qualquer curso de ciência da computação.
+      body_short: Se não tiver computadores, teste essas lições off-line em sua sala de aula.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
     picture_count: 'Nos <b>%{days}</b> dias anteriores, alunos criaram <b>%{count}</b> imagens desenvolvendo seus próprios programas de computador. Clique nas imagens para ver cada programa em execução.'
     activity_count: 'Nos últimos <b>%{days}</b> dias, os alunos criaram <b>%{count}</b> aplicativos e figuras escrevendo seus próprios programas de computador. Clique nas figuras e capturas de tela para ver cada programa em funcionamento.'
     want_to_make_your_own: Quer criar seu próprio programa?
-    how_to_save: 'No último nível destes tutoriais, clique em "Terminar" e "Salvar" para salvar seu trabalho na galeria.'
+    how_to_save: 'No último nível destes tutoriais, clique em "Concluir" e em "Salvar" para salvar seu trabalho na galeria.'
     more: 'Mais &rarr;'
     caption_by_name_age: 'feito por %{name}, %{age} anos'
     caption_time_ago: 'há %{time_ago}'
@@ -524,21 +524,21 @@ pt-BR:
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Obrigado
-    wrong_body: Obrigado por enviar uma resposta
+    wrong_body: Obrigado por enviar respostas.
     correct_title: Obrigado
-    correct_body: Obrigado por enviar uma resposta
-    hide_survey_last_answer: Este questionário é anônimo. Por favor visite o painel de controle do professor para ver os resultados. Observe que estes só estarão visíveis se pelo menos cinco alunos enviarem suas respostas.
+    correct_body: Obrigado por enviar respostas.
+    hide_survey_last_answer: Esta pesquisa é anônima. Acesse o painel do professor para ver os resultados gerais. Observe que os resultados só poderão ser vistos se, no mínimo, cinco alunos enviarem suas respostas.
   level_group-submittable:
     wrong_title: Obrigado
-    wrong_body: Obrigado por enviar uma resposta
+    wrong_body: Obrigado por enviar respostas.
     correct_title: Obrigado
-    correct_body: Obrigado por enviar uma resposta
+    correct_body: Obrigado por enviar respostas.
     unsubmit-title: Cancelar o envio de sua avaliação
-    unsubmit-body: 'Cancelando o envio de sua avaliação irá redefinir a data e enviado.  Tem certeza?'
+    unsubmit-body: 'Cancelar o envio de sua avaliação redefinirá a data e horário do envio.  Tem certeza disso?'
     submit-incomplete-title: Envie sua avaliação
-    submit-incomplete-body: 'Você deixou algumas perguntas incompletas.  Você não pode modificar a sua avaliação depois de enviar.  Tem certeza?'
+    submit-incomplete-body: 'Você deixou algumas perguntas incompletas.  Não é possível editar sua avaliação depois de enviá-la.  Tem certeza disso?'
     submit-complete-title: Envie sua avaliação
-    submit-complete-body: 'Você não pode modificar a sua avaliação depois de que enviar.  Tem certeza?'
+    submit-complete-body: 'Não é possível editar sua avaliação depois de enviá-la.  Tem certeza disso?'
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
@@ -574,18 +574,18 @@ pt-BR:
     message: 'Estamos atualizando nossa experiência para que você tenha proteções de privacidade ainda mais fortes. Para isso, precisamos que os usuários nos informem sua idade.<br/>Como sempre, a code.org nunca vai locar, vender ou compartilhar essa informação com terceiros.'
     sign_out: 'Se você não quer informar sua idade, você pode <a href="%{url}">sair</a>.'
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
-    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    title: Termos de Serviço e Política de Privacidade atualizados
+    intro_desc: 'Atualizamos nossos Termos de Serviço e Política de Privacidade, conforme exibido abaixo. As alterações estão em vigor desde 24 de agosto de 2016.  A principal mudança: nós <i>não armazenaremos mais endereços de e-mail de contas de alunos no Code Studio.</i> Essa é uma grande mudança para nós, e esperamos que essa decisão defina um novo padrão para a privacidade dos alunos na tecnologia da educação. Enviamos um resumo das demais alterações a você por e-mail.'
+    intro_instructions: É preciso aceitar esses novos termos para alunos com menos de 13 anos na sua sala de aula para ter acesso completo a todos os recursos mais recentes do Code Studio. Ao cadastrar uma conta para um aluno menor de 13 anos, você terá que confirmar que sua escola tem o consentimento dos pais ou responsáveis para a coleta de informações pessoais do aluno para uso e benefício da escola, incluindo programas educativos, como o Code Studio.
     tos: Termos de Serviço
     privacy: Política de Privacidade
-    privacy_notice: Privacy Notice
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
+    privacy_notice: Aviso de privacidade
+    accept_label: 'Eu aceito os <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e a <a href="%{privacy_url}" target="_blank">Política de Privacidade</a> atualizados'
+    accept: Aceitar
     print: Imprimir
-    later: Later
-    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: Review updated terms
+    later: Mais tarde
+    reminder_desc: 'Atualizamos nossos <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e <a href="%{privacy_url}" target="_blank">Política de Privacidade</a>. Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.'
+    review_terms: Ver os termos atualizados
   zendesk_too_young_message: 'Desculpe, usuários mais jovens não podem se inscrever em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a> sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em contato conosco.'
   progress:
     not_started: não iniciado
@@ -612,8 +612,8 @@ pt-BR:
     share: Compartilhar
     share_title: Compartilhar seu projeto
     share_copy_link: 'Copie o link:'
-    share_embed_description: Você pode colar o código embed em uma página HTML para exibir o projeto em uma página da Web.
-    share_u13_warning: Pergunte ao seu professor antes de compartilhar. Somente compartilhe com colegas de sua escola.
+    share_embed_description: Você pode colar o código incorporado em uma página HTML para exibir o projeto em uma página da Web.
+    share_u13_warning: Pergunte ao seu professor antes de compartilhar. Compartilhe apenas com pessoas da sua escola.
     embed: Incorporar
     advanced_share: Mostrar opções avançadas
     close: Fechar
@@ -621,8 +621,8 @@ pt-BR:
     name: Nome
     updated: Atualizado
     project_type: Tipo de projeto
-    help_text: 'Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma coisa</strong> abaixo para iniciar um novo projeto!<br/>Você pode voltar a trabalhar nos seus projetos a qualquer hora.'
-    need_help: Precisa de ajuda para começar?
+    help_text: 'Clique em <strong>Criar um app</strong> ou em <strong>Desenhar algo</strong> abaixo para iniciar um novo projeto!<br/>Você pode voltar e trabalhar em seus projetos a qualquer momento.'
+    need_help: Conheça esses cursos que vão ajudar você a iniciar seu novo projeto
     really_delete: Excluir?
     delete_yes: Sim
     delete_no: Não
@@ -637,7 +637,7 @@ pt-BR:
     edit_project: Editar projeto
     abuse:
       tos: "Esse projeto foi denunciado por violar os <a href='http://code.org/tos'>Termos de Serviço</a> da Code.org e não pode ser compartilhado com outras pessoas."
-      policy_violation: Este projeto tem informações que não podem ser compartilhadas. Por favor, entre em contato com o dono do app para corrigir o seu conteúdo.
+      policy_violation: Este projeto tem informações que não podem ser compartilhadas. Entre em contato com o proprietário do aplicativo para corrigir o conteúdo dele.
       contact_us: "Se você acha que isso é um erro, <a href='https://code.org/contact'>contate-nos.</a>"
       go_to_code_studio: Ir para o Code Studio
       report_abuse_form:
@@ -655,20 +655,20 @@ pt-BR:
           infringement: Violação de direitos autorais
           other: Outros
         detail: Forneça o maior número de detalhes possível sobre o conteúdo que você está reportando.
-        acknowledge: 'Ao enviar essas informações você reconhece que elas serão tratadas de acordo com a %{link_start_privacy}Política de Privacidade%{link_end} e os %{link_start_tos}Termos de Serviço%{link_end}'
+        acknowledge: 'Ao enviar essas informações, você reconhece que elas serão tratadas de acordo com os termos da %{link_start_privacy}Política de Privacidade%{link_end} e com os %{link_start_tos}Termos de Serviço%{link_end}.'
   peer_review:
     accepted:
       name: Aceito
-      description: '<strong>Sim</strong>, essa submissão<strong>cumpre</strong>os requisitos'
+      description: '<strong>Sim</strong>, este envio <strong>atende</strong> aos requisitos'
     rejected:
       name: Rejeitado
-      description: '<strong>Não</strong>, essa submissão <strong>não satisfaz</strong> os requisitos'
+      description: '<strong>Não</strong>, este envio <strong>não atende</strong> aos requisitos'
     escalated:
-      name: Escalonado
-      description: Eu gostaria de um instrutor para rever esta apresentação
+      name: Encaminhado
+      description: Eu gostaria que um instrutor revisasse este envio
     instructor_feedback: Feedback do instrutor
-    peer_feedback: Feedback de mesmo nível
-    outdated: Este feedback foi adicionado para uma versão anterior apresentada
+    peer_feedback: Feedback de colegas
+    outdated: Este feedback foi adicionado para uma versão enviada anteriormente
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -683,33 +683,33 @@ pt-BR:
       no_icons_found: Nenhum ícone encontrado
     playzone:
       artist_description: Faça desenhos e figuras legais com o Artista!
-      artist_title: Novo Desenho
+      artist_title: Novo desenho
       continue_button: Vá para a próxima fase
       playlab_description: Crie uma história ou um jogo no Laboratório!
-      playlab_title: Novo Aplicativo
+      playlab_title: Novo aplicativo
       primary_header: 'Parabéns! Você completou %{stageName}!'
-      projects_description: Revisite um dos seus projetos existentes.
+      projects_description: Veja novamente um de seus projetos existentes.
       projects_title: Abrir um projeto
-      secondary_header: Pergunte a seu professor o que fazer em seguida
+      secondary_header: Pergunte ao seu professor o que fazer em seguida
   flex_category:
     required: Visão geral
     content: Conteúdo
-    practice: Professor de práticas
+    practice: Práticas de ensino
     peer_review: Revisão em grupo
   external_links:
-    disclaimer: Alerta
-    leaving_domain: Você está saindo do nosso domínio para um endereço não controlado pela Code.org.
-    disclaimer_text: "Este site pode ter políticas de privacidade diferentes do Code.org. Nós indicamos sites de terceiros porque acreditamos que eles possam ser úteis para você. Portanto nós não somos diretamente responsáveis pelo conteúdo dos mesmos, por favor <a href='%{support_url}'> contate o nosso suporte</a> caso tenha alguma objeção ou se os links não estiverem disponíveis."
+    disclaimer: Aviso
+    leaving_domain: Você está deixando este domínio para acessar um site que não é operado pela Code.org.
+    disclaimer_text: "Este site pode ter políticas de privacidade diferentes daquelas da Code.org. Escolhemos esses recursos de terceiros porque acreditamos que eles possam ser úteis para você. Portanto, não somos diretamente responsáveis pelo conteúdo deste site. <a href='%{support_url}'>Fale com o suporte</a> caso encontre conteúdos inadequados ou se os links redirecionarem para sites indisponíveis."
   hoc_download:
-    title: Downloads do Hour of Code
-    capsule_title: Você tem Internet?
-    capsule_desc: 'Use o on-line, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: Sem Internet?
-    instructions: 'Instruções para os professores: se você tem um mau serviço de Internet, estes tutoriais do Hour of Code (Hora de Código) estão disponiveis para baixar e instalar para uso offline. Escolha seu idioma e a plataforma, baixe e instale-o em todos os computadores da sua sala de aula. Você pode usar um Pendrive para instalar em todas as maquinas. Nota: os estudantes não serão capaz de fazer entrar no Code Studio (Estúdio de Código) para salvar ou imprimir certificados. Os professores podem imprimimir os certificados <a href="%{url}">aqui</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Construindo uma galáxia com código (Blocos)'
-    starwars_javascript_name: 'Star Wars: Construindo uma galáxia com código (JavaScript)'
-    download_message: 'Baixar %{app_name} para uso offline (136MB)'
+    title: Downloads da Hora do Código
+    capsule_title: Você tem internet?
+    capsule_desc: 'Use o <a href="%{url}">%{app_name}</a> on-line, baseado na Web.'
+    instructions_headline: Sem internet?
+    instructions: 'Instruções para professores: se a qualidade da sua internet é ruim, estes tutoriais da Hora do Código estão disponíveis para download e podem ser instalados para uso off-line. Escolha seu idioma e a plataforma, faça o download e instale-os em todos os computadores da sua sala de aula. Você pode usar uma unidade USB para fazer o download uma só vez e instalar os tutoriais em todos os computadores. Observação: os alunos não poderão fazer login no Code Studio, salvar o progresso ou imprimir certificados. Os professores podem imprimir os certificados antes da hora <a href="%{url}">aqui</a>.'
+    minecraft_name: Hora do Código com Minecraft
+    starwars_blocks_name: 'Star Wars: Construa uma galáxia com a programação (Blocos)'
+    starwars_javascript_name: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
+    download_message: 'Faça o download de %{app_name} para usar off-line (136 MB)'
     download_in_english: 'Download em inglês:'
     download_in_spanish: 'Download em espanhol:'
     windows: Windows
@@ -723,6 +723,6 @@ pt-BR:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
-  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: Go to unit overview
+  locked_stage: O conteúdo desta fase não pode ser visto, pois ela está bloqueada no momento. Seu professor pode desbloquear esta fase quando chegar a hora de trabalhar com ela ou quando for revisar suas respostas.
+  hidden_stage: Seu professor não esperava você por aqui. Pergunte a ele em que aula você deveria estar.
+  return_course_overview: Ir para visão geral da unidade

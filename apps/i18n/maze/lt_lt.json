@@ -111,5 +111,8 @@
   "word": "Surast žodį",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Taip",
-  "youSpelled": "Tu įvedei"
+  "youSpelled": "Tu įvedei",
+  "haslettuce": "there is lettuce",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce"
 }

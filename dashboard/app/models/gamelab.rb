@@ -20,6 +20,7 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Gamelab < Blockly
@@ -39,6 +40,7 @@ class Gamelab < Blockly
     debugger_disabled
     pause_animations_by_default
     start_animations
+    teacher_markdown
   )
 
   # List of possible skins, the first is used as a default.

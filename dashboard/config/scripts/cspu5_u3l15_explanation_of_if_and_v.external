@@ -1,0 +1,93 @@
+name 'CSPU5_U3L15 - explanation of IF and =v=='
+title 'title'
+description 'description here'
+css 'unplugged'
+markdown <<MARKDOWN
+# Having Your App Make Decisions
+
+Now that you have variables keeping track of useful information in an app, the next thing you probably want to do is make decisions based on their values.
+
+For example: in the Count Up/Down App what we want to say is **“if the score reaches 20 then switch screens”**
+
+# *if* Statements
+Most programming languages have a way to do this: to check to see if some condition is true, and if it is do something.  It’s called an **“`if` statement”**.  `if` statements are a big topic in and of themselves, but for now we’ll just look at a simple example to meet our current needs.
+
+Here’s an example of an `if` statement (shown in both block and text form)
+
+<table>
+<tr>
+<td>
+<img src="https://images.code.org/621491cac1e3b105c9c2794b01d8de23-image-1446153210916.png" style="width: 230px">
+</td>
+<td>
+<img src="https://images.code.org/5ca15eabd31a8a60ab9a3960a105faae-image-1446153241063.png" style="width: 230px">
+</td>
+</tr>
+</table>
+
+There are a couple of things happening here that we should explain.
+
+# How to Add an *if* Statement to Your Program
+
+In the toolbox you’ll now see an `if` statement.  To add it to your program just drag it out.  For our current program we want to check the value of count *inside* the up arrow event handler.
+
+<img src="https://images.code.org/285ec021f4f5e12ea409c2a6d2603645-image-1446153790212.gif" style="width: 500px">
+
+You’ll notice it has an empty space where you need to insert the **condition** that you want to check.  We’ll get to that next.
+
+The `if` statement defines a block of code to execute between open and closing curly braces {}.
+
+**If the condition is true** then the block of code inside the curly braces is executed from top to bottom, exactly once.
+**If the condition is false** then the entire block of code is ignored.
+
+# Misconception Alert - Where to Put *if* Statements
+
+An `if` statement does not constantly monitor your program checking the condition to see if it's true or false.  An `if` statement is an instruction just like any other that gets executed line by line in order from top to bottom.
+
+This means that you need to insert an `if` statement into your code **at the exact place where you need the condition checked**.  Once the condition is checked program execution picks up at the end of the `if` statement and proceeds from there.
+
+This is why we need to **check the value of <code>count</code> EVERY time the up arrow is clicked**.  So that means the `if` statment must be written into the event handler for the up arrow, and checked *after* we update the value of `count`.  Here's what the full event handler should look like:
+
+![](https://images.code.org/a65dec71bc103397f2ceed603f328531-image-1446154248803.png)
+
+# How to Define a Condition for an *if* Statement
+
+An `if` statement requires you to define an **expression that evaluates to true or false.** 
+
+Just as in arithmetic there are some operators you can use to write expressions that evaluate to a number, programming languages also have a number of operators that let you write expressions that evaluate to true or false.
+
+A simple one is the `==` operator which tells you whether one value **is equal** to another.  If the two values are equal the expression evaluates to **true**.  If they are not equal it evaluates to **false**.
+
+For example:
+
+| Code | Result |
+|:--:|:--:|
+|`7 == 7` | true |
+|`8 == 5` | false |
+|<hr>|<hr> 	|
+| ``var a = 3;``<br>``var b = 5;``| |
+| `a == 3` | true |
+| `b == 5` | true |
+| `a == b` | false |
+
+
+# The == Operator vs. =
+
+`=` read as: “gets”
+
+`==` read as: “equal-equal”
+
+The reason why we recommended that you read `=` as “gets” is really to avoid confusion with the `==` operator, which to avoid confusion even further, many programmers read as “equal-equal”. 
+
+To state what should be obvious by this point: `=` is for assigning a value to a variable and `==` is for checking or testing to see what a value is.  You can probably imagine the number of mistakes that beginners might make here.
+
+**TIP:** if you continue to read code "aloud" in your head using "gets" and "equal-equal" it might help you discover bugs in your code or avoid them in the first place.  For example, here is an arbitrary piece of code:
+
+| code | read as |
+|:---|---|
+| ![](https://images.code.org/acf7d36df4d669f284b35ccc82509f1b-image-1446154925792.png) | "var *a* gets 7.<br>If *a* equal-equal 9 then<br> *a* gets 0" |
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

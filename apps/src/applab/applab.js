@@ -373,12 +373,11 @@ function renderFooterInSharedGame() {
       link: '/report_abuse',
       newWindow: true
     },
-    {
+    !dom.isMobile() && {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
-      hideOnMobile: true
     },
-    {
+    window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
       link: getProjectUrl() + '/view',
     },
@@ -392,12 +391,7 @@ function renderFooterInSharedGame() {
       link: 'https://code.org/privacy',
       newWindow: true
     }
-  ];
-  if (dom.isMobile()) {
-    menuItems = menuItems.filter(function (item) {
-      return !item.hideOnMobile;
-    });
-  }
+  ].filter(item => item);
 
   ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',

@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %> - 编程一小时
@@ -12,13 +14,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. 帮助宣传这个活动
 
-告诉你的朋友们关于**#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. 邀请全校师生尝试编程一小时
+## 2. 邀请你的学校加入编程一小时
 
-[发送这封电子邮件](%= resolve_url('/promote/resources#sample-emails') %) 给你的校长并让学校的每个班级来报名。 <% if @country == 'us' %> *每个* 美国的州(包括华盛顿特区) 会有一个幸运的学校赢得$10,000的科技产品。 <% end %>
+[发送这封电子邮件](%= resolve_url('/promote/resources#sample-emails') %) 给你的校长并让学校的每个班级来报名。 <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
 
 ## 请求你的雇主参与其中
 
@@ -31,3 +33,5 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 ## 5.邀请当地官员支持编程一小时活动
 
 [发送这封电子邮件](%= resolve_url('/promote/resources#sample-emails') %) 给您当地的代表、 市议会或学校董事会，并邀请他们来你们学校参观编程一小时。 它能为你在你领域的计算机科学找到一小时之外的支持。
+
+<%= view :signup_button %>

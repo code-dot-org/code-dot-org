@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-10-12T17:57:35.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Natural Language Processing",
+    "markdown_instructions": "Identify a global problem that a NLP (Natural Language Processing) application could be used to help solve. \n\n* Describe the problem.\n* Explain how you think a NLP app could contribute to a solution.\n* Describe how the app would interact with the user. \n* What would you name the app? \n\n",
+    "encrypted_solution": "10NUU7ZqSKJa4Deg0Fsfm+ad4Ls9mTLxFnORZRSCFJQ=\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
