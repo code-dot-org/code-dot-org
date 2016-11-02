@@ -176,6 +176,13 @@ const DebugWatch = React.createClass({
     }, WATCH_TIMER_PERIOD);
   },
 
+  componentWillUnmount() {
+    if (this.intervalId_) {
+      clearInterval(this.intervalId_);
+      this.intervalId_ = null;
+    }
+  },
+
   // http://stackoverflow.com/a/7390612
   nonValueDescriptor(obj) {
     return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
