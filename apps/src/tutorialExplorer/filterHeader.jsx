@@ -8,7 +8,9 @@ import BackButton from './backButton';
 const styles = {
   header: {
     marginTop: 8,
-    marginBottom: 8
+    marginBottom: 8,
+    paddingLeft: 7,
+    paddingRight: 7
   },
   bar: {
     backgroundColor: "#eee",
@@ -29,6 +31,7 @@ const styles = {
 const FilterHeader = React.createClass({
   propTypes: {
     backButton: React.PropTypes.bool,
+    legacyLink: React.PropTypes.string,
     filteredTutorialsCount: React.PropTypes.number.isRequired,
     mobileLayout: React.PropTypes.bool.isRequired,
     showingModalFilters: React.PropTypes.bool.isRequired,
@@ -48,6 +51,15 @@ const FilterHeader = React.createClass({
     return (
       <div style={styles.header}>
         {this.props.backButton && <BackButton/>}
+
+        {this.props.legacyLink && (
+          <div>
+            <a href={this.props.legacyLink} style={{textDecoration: "underline", float: "right", paddingBottom: 6}}>
+              Back to last year's tutorials
+            </a>
+            <div style={{clear: "both"}}/>
+          </div>
+        )}
 
         <div style={styles.bar}>
           <div style={styles.filterBy}>
