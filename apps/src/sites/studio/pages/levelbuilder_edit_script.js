@@ -186,7 +186,7 @@ const ScriptEditor = React.createClass({
   },
 
   getInitialState() {
-    return {stages: this.props.scriptData.stages};
+    return {stages: this.props.scriptData.stages.filter(stage => stage.id)};
   },
 
   handleAction(type, options) {
@@ -271,6 +271,22 @@ const ScriptEditor = React.createClass({
         break;
       }
       case 'MOVE_GROUP': {
+        if (options.direction !== 'up' && options.position === newState.length) {
+          break;
+        }
+        const index = options.position - 1;
+        const groupName = newState[index].flex_category;
+        let categories = newState.map(s => s.flex_category);
+        let start = categories.indexOf(groupName);
+        let count = categories.filter(c => c === groupName).length;
+        const swap = newState.splice(start, count);
+        categories = newState.map(s => s.flex_category);
+        const swappedGroupName = newState[options.direction === 'up' ? index - 1 : index].flex_category;
+        start = categories.indexOf(swappedGroupName);
+        count = categories.filter(c => c === swappedGroupName).length;
+        newState.splice(options.direction === 'up' ? start : start + count, 0, ...swap);
+        console.log(newState.map(s => s.flex_category));
+        this.updatePositions(newState);
         break;
       }
       case 'MOVE_STAGE': {
@@ -279,6 +295,7 @@ const ScriptEditor = React.createClass({
         const temp = newState[index];
         newState[index] = newState[swap];
         newState[swap] = temp;
+        this.updatePositions(newState);
         break;
       }
       default:
@@ -407,8 +424,7 @@ const FlexGroupEditor = React.createClass({
   },
 
   render() {
-    const nonPeerReviewStages = this.props.stages.filter(stage => stage.id);
-    const groups = _.groupBy(nonPeerReviewStages, stage => (stage.flex_category || 'Default'));
+    const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Default'));
     let count = 0;
     let afterStage = 1;
 
