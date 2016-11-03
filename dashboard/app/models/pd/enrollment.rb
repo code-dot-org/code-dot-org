@@ -38,7 +38,6 @@ class Pd::Enrollment < ActiveRecord::Base
   validates :name, :email, presence: true
   validates_confirmation_of :email
 
-  #validates_presence_of :school, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
 
   def self.for_school_district(school_district)
@@ -113,6 +112,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
     # The checkbox comes through as "true" when we really want true.
     attr[:school_district_other] = true if attr[:school_district_other] == "true"
+    attr[:school_other] = true if attr[:school_other] == "true"
 
     return false unless SchoolInfo.new(attr).valid?
 

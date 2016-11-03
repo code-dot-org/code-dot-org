@@ -8,7 +8,6 @@
   #pl-application-facets.form-section
     .form-group
       .question School Country
-      -#{style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
       %select#school-country.form-control{name: "#{form_name}[country]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
         - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
@@ -57,6 +56,25 @@
           %div.controls
             %input#school-district-name.form-control{name: "school_info[school_district_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
+    .form-group{style: "display: none;"}
+      .question School
+      #school
+
+        -# We'll apply the Selectize UI control to this input.
+        %input#school-id.form-control{name: "school_id_source", type: "text", required: false}
+
+        -# This is the input we'll actually submit as part of the form.  We'll copy the Selectized value into
+        -# here whenever it's changed.  Sometimes we'll override this with code, say 0 for "unknown school".
+        -# Selectize was showing this 0 as a character when it was disabled, hence giving Selectize its own
+        -# input to work with above.
+        %input#school-id-form.form-control{name: "#{form_name}[school_id]", type: "hidden", required: false}
+
+        %label
+          %input#school-other{name: "#{form_name}[school_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
+          %span{style: "font-size: 12px"}
+            Other school not listed above
+
+    -# '#school-name' is outside of '#school' so that we can still show it when the school dropdown is hidden.
     .form-group{style: "display: none;"}
       %label
         School Name
