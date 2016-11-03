@@ -59,8 +59,6 @@ social:
 
 .clear{style: "clear: both"}
 
-= view 'mobilecheck.js'
-
 :javascript
 
   $(document).ready(function() {
@@ -69,8 +67,7 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButton: true,
-      legacyLink: "#{CDO.code_org_url('/learn/legacy')}",
-      mobile: window.mobilecheck()
+      legacyLink: "#{CDO.code_org_url('/learn/legacy')}"
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
