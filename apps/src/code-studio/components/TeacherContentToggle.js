@@ -37,12 +37,11 @@ const TeacherContentToggle = Radium(React.createClass({
     // Show this element, as parent div (refs.lockMessage) now owns visibility
     $('#locked-stage').appendTo(this.refs.lockMessage).show();
     $('#hidden-stage').appendTo(this.refs.hiddenMessage).show();
-    // Server initially sets level-body opacity to 0 when viewAs=Student so that
-    // student view doesnt show content while we make async calls. Once this
-    // component has mounted, we move level-body into our first div, which will
-    // now own toggling visibility
-    $('#level-body').css('opacity', '').appendTo(this.refs.content);
-    console.log('componentdidmount');
+    // Server initially sets level-body visibility to hidden when viewAs=Student
+    // so that student view doesnt show content while we make async calls. Once
+    // this component has mounted, we move level-body into our first div, which
+    // will now own toggling visibility
+    $('#level-body').css('visibility', '').appendTo(this.refs.content);
   },
 
   render() {
@@ -62,15 +61,15 @@ const TeacherContentToggle = Radium(React.createClass({
       // Keep this hidden until we've made our async calls for hidden_stages and
       // locked stages, so that we don't flash content before hiding it
       if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
-        contentStyle.opacity = 0;
+        contentStyle.visibility = 'hidden';
       }
 
       // In the case where appOptions.app is truthy, we don't want to actually set
       // display none, as that causes the editor (be it blockly or droplet) to
-      // misrender. We can get away with just setting opacity = 0 because the editor
+      // misrender. We can get away with just setting visibilityhidden because the editor
       // is rendered to an absolute position and doesnt affect the layout of this
       // component. For cases where we don't have an IDE (i.e. multi/match) we
-      // need to hide such that it doesnt affect our layout
+      // need to set display:none such that it doesnt affect our layout
       if (hasOverlayFrame && !appOptions.app) {
         contentStyle.display = 'none';
       }
