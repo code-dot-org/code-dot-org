@@ -182,11 +182,17 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   def school_info_params
     params.require(:school_info).permit(
+      :country,
       :school_type,
       :school_state,
-      :school_district_id,
       :school_zip,
-      :school_district_other
+      :school_district_id,
+      :school_district_other,
+      :school_district_name,
+      :school_id,
+      :school_other,
+      :school_name,
+      :full_address,
     )
   end
 end
