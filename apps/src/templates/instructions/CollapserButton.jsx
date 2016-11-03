@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import color from '../../color';
+import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import msg from '@cdo/locale';
 import { connect } from 'react-redux';

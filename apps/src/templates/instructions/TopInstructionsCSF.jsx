@@ -5,11 +5,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
-import renderer from '../../StylelessRenderer';
+import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
-var color = require('../../color');
+var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
@@ -31,6 +31,7 @@ import msg from '@cdo/locale';
 
 import {
   getOuterHeight,
+  scrollBy,
   scrollTo,
   shouldDisplayChatTips
 } from './utils';
@@ -43,6 +44,8 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+
+const SCROLL_BY_PERCENT = 0.8;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -239,6 +242,17 @@ var TopInstructions = React.createClass({
     if (this.props.feedback || this.state.promptForHint || gotNewHint) {
       this.scrollInstructionsToBottom();
     }
+
+    if (!this.props.collapsed && !prevProps.collapsed) {
+      const minHeight = this.getMinHeight();
+      const maxHeight = this.props.maxHeight;
+      const heightOutOfBounds = this.props.height < minHeight || this.props.height > maxHeight;
+
+      if (heightOutOfBounds) {
+        const newHeight = Math.max(Math.min(this.props.height, maxHeight), minHeight);
+        this.props.setInstructionsRenderedHeight(newHeight);
+      }
+    }
   },
 
   componentWillUpdate(nextProps, nextState) {
@@ -376,10 +390,21 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * @return {Element} scrollTarget
+   * Handle a click to our "scroll up" button
    */
-  getScrollTarget() {
-    return this.refs.instructions.parentElement;
+  handleScrollInstructionsUp() {
+    const contentContainer = this.refs.instructions.parentElement;
+    const contentHeight = contentContainer.clientHeight;
+    scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
+  },
+
+  /**
+   * Handle a click to our "scroll down" button
+   */
+  handleScrollInstructionsDown() {
+    const contentContainer = this.refs.instructions.parentElement;
+    const contentHeight = contentContainer.clientHeight;
+    scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
   },
 
   /**
@@ -581,7 +606,8 @@ var TopInstructions = React.createClass({
               <ScrollButtons
                 style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
-                getScrollTarget={this.getScrollTarget}
+                onScrollUp={this.handleScrollInstructionsUp}
+                onScrollDown={this.handleScrollInstructionsDown}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
               />}

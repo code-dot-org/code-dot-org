@@ -73,18 +73,19 @@
         video: Unplug6
       Unplug7:
         title: Låtskriving
-        desc: "Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
-          Vi vil ta en aktivitet som allerede er kjent, og benytte den for å gi en
-          god opplæring i å definere og kalle funksjoner. Når elevene er blitt kjent
-          med definere/kalle prosessen, vi vil legge til ekstra funksjoner, kombinert
-          med med passerende parametre."
+        desc: "Å lese ein tekst er ein ganske kjend aktivitet for dei fleste elevar.
+          Vi skal ta ein aktivitet som allereie er kjend og bruke den for å gi ei
+          god forståing i å definere og kalle funksjonar. Når elevane er blitt kjend
+          med definere-/kalleprosessen, vil vi legge til ekstra funksjonar som kjem
+          saman med å sende parametrar innanfor desse funksjonane."
         pdfs:
         - unplug7
         video: Unplug7
       Unplug8:
         title: Abstraksjon
-        desc: 'Denne aktiviteten kombinerer elvenes daglige rutine og Mad Lib stil
-          tenker spillet for å hjelpe klassen å lære om effektiviteten av det abstrakte. '
+        desc: Denne aktiviteten kombinerer elevane sin daglege rutine og en Mad lib
+          stil tankespel, for å hjelpe klassen til å forstå effektiviteten av det
+          abstrakte.
         pdfs:
         - unplug8
         video: Unplug8

@@ -1,3 +1,4 @@
 Spring.watch ['../lib',
               '../shared',
-              '../deployment.rb']
+              '../deployment.rb',
+              '../locals.yml']

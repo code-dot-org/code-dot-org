@@ -109,6 +109,15 @@
       },
       {
         "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
           "turnAround"
         ],
         "matchType": "exact",
@@ -117,18 +126,6 @@
       },
       {
         "entries": [
-          "turnAround",
-          "turnLeft",
-          "turnLeft"
-        ],
-        "matchType": "exact",
-        "minTimes": 1,
-        "message": "The turnAround function should be calling turnLeft two times."
-      },
-      {
-        "entries": [
-          "turnAround",
-          "turnAround",
           "moveForward",
           "moveForward",
           "moveForward",
@@ -136,7 +133,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 1,
-        "message": "It doesn't seem like you are calling turnAround() or moving forward enough times to draw the figure."
+        "message": "It doesn't seem like you are drawing enough line segments to draw the figure."
       }
     ],
     "makerlab_enabled": "false",
