@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
-import color from '../../../color';
+import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
 import { LevelStatus } from '../../activityUtils';
 import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';

@@ -1,4 +1,4 @@
-import color from '../../../color';
+import color from "../../../util/color";
 
 export const createOutline = color => {
   return `

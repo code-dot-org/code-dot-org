@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import color from '../../color';
+import color from "../../util/color";
 import { getOuterHeight, scrollBy } from './utils';
 import { addMouseUpTouchEvent } from '../../dom';
 
