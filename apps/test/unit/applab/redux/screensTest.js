@@ -1,4 +1,5 @@
 import {expect} from '../../../util/configuredChai';
+import 'babel-polyfill';
 import sinon from 'sinon';
 
 import {
