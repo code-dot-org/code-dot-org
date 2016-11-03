@@ -20,7 +20,6 @@ after_fork do |_server, _worker|
 end
 
 before_fork do |server, _worker|
-
   # Quit the old unicorn process
   old_pid = "#{server.config[:pid]}.oldbin"
   if File.exist?(old_pid) && server.pid != old_pid
