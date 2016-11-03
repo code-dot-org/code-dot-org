@@ -37,6 +37,9 @@ social:
 
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
+- tutorials_contents.each do |tutorial|
+  - tutorial[:contact] = nil
+
 - filters = []
 
 - entries = []
