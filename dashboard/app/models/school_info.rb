@@ -45,6 +45,26 @@ class SchoolInfo < ActiveRecord::Base
     self.state = input
   end
 
+  ATTRIBUTES = %w(
+    country
+    school_type
+    state
+    zip
+    school_district_id
+    school_district_other
+    school_district_name
+    school_id
+    school_other
+    school_name
+    full_address
+  )
+
+  before_validation do
+    ATTRIBUTES.each do |attr|
+      self[attr] = nil if self[attr].blank?
+    end
+  end
+
   validate :validate_with_country
   validate :validate_without_country
 
