@@ -4,10 +4,10 @@
   'yes': Ja
   'no': Nej
   select_language: Vælg dit sprog
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org vil snart fjerne understøttelse af Internet Explorer
+    8, 9 og 10. Opgrader venligst til en moderne browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org vil snart fjerne understøttelse af Internet
+    Explorer 8, 9 og 10. Opgrader venligst til en moderne browser.
   upgrade_ie_link: Lær mere
   en: Datalogi
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
@@ -34,8 +34,8 @@
   twentyhours_text: Færdig med din første Hour of Code? Lær flere centrale datalogi-
     og programmeringbegreber i dette opfølgende kursus.
   og_title: Ethvert barn fortjener muligheder
-  og_description: Alle elev i alle skoler fortjener muligheden for at studere computer
-    science.
+  og_description: Alle elever i alle skoler fortjener mulighed for at lære seg at
+    programmere. Det forandrer det hele.
   hoc2014_heading: Vær med i <a href="http://hourofcode.com">Hour of Code</a> <br/>8.
     - 14. December 2014 <br/>
   hoc2014_students: Elever
@@ -83,43 +83,42 @@
   congratulations_volunteer: Tillykke, nu hvor du har prøvet Hour of Code <a href="https://code.org/volunteer">
     kan du tilmelde dig som frivillig i et klasselokale</a> og hjælpe andre studerende
     med at lære Hour of Code!
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Tillykke med at du fuldførte Kursus 1
+  congratulations_on_completing_course2: Tillykke med at du fuldførte Kursus 2
+  congratulations_on_completing_course3: Tillykke med at du fuldførte Kursus 3
+  congratulations_on_completing_course4: Tillykke med at du fuldførte Kursus 4
+  congratulations_on_completing_accelerated: Tillykke med at du fuldførte Lynkurset
   congrats_next_tutorials_title: Prøv dissse øvelser nu
   congrats_next_tutorials_desc: Prøv disse kortere, 1 times øvelser eller prøv en
     <a href="%{current_path}/next">partner-øvelse</a>.
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: Se kursus
+  view_unit: Se enhed
+  make_app: Lav en app
+  congrats_guest_speaker_title: Find en gæsteforelæser til dit klasseværelse
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
+  congrats_guest_speaker_cta: Find en gæsteforelæser
+  congrats_third_party_title: Brug dine nye færdigheder sammen med disse apps og netsider
+  third_party_gradelevel_kto8: 0. til 8. klasse
+  third_party_gradelevel_kto2: 0. til 2. klasse
+  third_party_gradelevel_2to8: 2. til 8. klasse
+  third_party_gradelevel_4to12: 4. klasse til gymnasium
+  third_party_gradelevel_5to12: 5. klasse til gymnasium
+  third_party_gradelevel_6plus: 6. klasse+
+  third_party_gradelevel_8plus: 8. klasse+
+  third_party_platform_all: 'Platform: Net, iPad og Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_platform_web: 'Platform: Net'
+  third_party_price_varies: 'Pris: abonnementer varierer'
+  third_party_price_free: 'Pris: gratis'
+  third_party_price_299: 'Pris: $2.99/download'
+  third_party_price_individual: 'Individuel Pris: Gratis prøveperiode & $25/month'
+  third_party_price_school: 'Skolepris: Frie abonnementer & Pro for $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -249,8 +248,7 @@
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: 'Denne sidste Computer videnskab uddannelse uge, #HourOfCode har nået
-    50 millioner studerende.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -297,43 +295,43 @@
     et barn mere
   studiobar_shop_title: Butik
   studiobar_shop_body: Nedbryd stereotyper. Bær vores logo med stolthed.
-  homepage_hero_text_malala: |
+  homepage_hero_text_malala: |-
     &ldquo;Jeg udfordrer piger i alle verdens lande til at prøve en Hour of Code&rdquo;
     Malala, modtager af Nobels Fredspris
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;Hvis du kan ændre teknologi, kan du ændre verden&rdquo;
     Susan, CEO YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Lad være med kun at spille på din telefon, programmer den.&rdquo;
     Præsident Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Vores børn &mdash; også pigerne &mdash; skal have muligheden for at lære at programmere.&rdquo;
     Sheryl, COO Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Programmering kan åbne for de bedste muligheder i verden.&rdquo;
     Satya, CEO Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Hvis du kan kode, kan du selv vælge retningen på dit liv.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;At have lært det her, har ændret min fremtid. Og så er det oven i købet sjovt.&rdquo;
     Luna, 7. klasse
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Jeg har aldrig nogensinde set mine elever så begejstrede for at lære noget.&rdquo;
     Michael, lærer
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Du ved ikke om du kan lide at programmere før du har prøvet det.&rdquo;
     Jackson, 6. klasse
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;Lige meget hvad du finder på, kan du gøre det med programmering.&rdquo;
     Maya, 2. klasse
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;Programmering er ikke bare for de andre. Det er også noget for dig, lige nu.&rdquo;
     Geraldo, lærer
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo;At programmere giver kreativitet, inspiration og innovation &mdash; som er essentielt for enhver karriere.&rdquo;
     Floresa, lærer
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Det fik 100% af mine elever engagerede, involverede og til at deltage.&rdquo;
     Adam, lærer
   homepage_hero_text_stat_loc: "#loc linjer kode skrevet af elever"
@@ -376,7 +374,7 @@
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: Læs mere
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Lær mere
   homepage_slot_text_title_hoc: Hour of Code
@@ -393,7 +391,7 @@
   homepage_slot_text_link_othercourses: Andre online kurser
   homepage_slot_text_title_educators: Undervisere
   homepage_slot_text_blurb_educators: Undervis dine elever
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Grundskole
   homepage_slot_text_link_middle: Folkeskole
   homepage_slot_text_link_high: Gymnasium
   homepage_slot_text_link_k5: Kurser for 0.-5. klasse
@@ -404,7 +402,7 @@
   homepage_slot_text_link_stats: Se statistikken
   homepage_slot_text_link_buy: Deltag
   homepage_slot_text_link_donate: Giv et bidrag
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-shirts, hatte og mere
   homepage_header_codestudio: Elevprodukter fra Code Studio
   homepage_header_donors: Code.org takker sine støtter
   homepage_donors_seall: Se alle
@@ -471,12 +469,11 @@
   mc_platformtext: Moderne browsere, smartphones, tabletter
   mc_specs: Mange sprog | Moderne browsere og tablets | Alder 6+
   minecraft_subtitle: Minecraft Hour of Code
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: Før du går i gang, se så én af disse inspirerende videoer
+  speak_another_language: Taler du et andet sprog?
+  help_translate: Hjælp os med at oversætte.
+  no_internet: Har du ikke internet?
+  download_offline: Download en offlineudgave.
   are_you_teacher: Er du lærer?
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspirer studerende og frivillge til Hour Of
@@ -673,8 +670,8 @@
   dashboard_action_remove_confirm: Fjern?
   dashboard_action_done: Udfør
   dashboard_action_required: krævet
-  dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_action_print_certificates: Udskriv certifikater
+  dashboard_assessments_view: 'Se vurderinger i:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
     course, we have assessment questions available as part of Code Studio to help
@@ -683,8 +680,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Undersøgelser
+  dashboard_percent: Procent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -757,6 +754,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -849,18 +858,18 @@
   dashboard_puzzle: Opgave
   dashboard_question: Spørgsmål
   dashboard_response: Svar
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Korrekthed
+  dashboard_correctness_free_response: Gratis svar
+  dashboard_correctness_unsubmitted: Ikke insendt
   dashboard_correctness_correct: Rigtigt
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_correctness_incorrect: Ukorrekt
+  dashboard_submission_submitted: Indsendt
+  dashboard_submission_in_progress: I gang
   dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_correct: "# multiple choice korrekt"
   dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_multi_correct_percent: "% multiple choice korrekt"
+  dashboard_submission_timestamp: Indsendelsestid
   stats_hoc_2013_heading: 'Utrolige statistikker fra sidste års "Hour of Code". I
     en uge alene:'
   stats_hoc_2013_image_alt: Statistik fra 2013 "Hour of Code"
@@ -896,6 +905,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Lær mere
   dashboard_announce_try_now_button: Prøv nu
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -904,6 +914,11 @@
   dashboard_announce_petition_button: Tilføj dit navn
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Hour of Code er her - 8.-14. december!
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   host_an_hour: Host an hour
@@ -1744,7 +1759,7 @@
   sphero_beyond_longdescription: Uanset om du er lærer eller forælder, vil SPRK lektionerne
     giver børnene et sjovt kursus i at programmere robotter, og samtidig skærpe deres
     færdigheder i matematik og naturfag.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Skjul denne advarsel
   compatibility_unsupported_browser: Your browser is not supported. Please upgrade
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
     supported browsers</a>. You can try viewing the page, but expect functionality

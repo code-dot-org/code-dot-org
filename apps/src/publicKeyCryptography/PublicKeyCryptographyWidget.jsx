@@ -51,9 +51,9 @@ const PublicKeyCryptographyWidget = React.createClass({
   },
 
   runModuloClock(dividend, onStep, onComplete) {
-    const speed = 7;
+    const duration = 1000;
     this.setState({animating: true});
-    this.moduloClock.animateTo(dividend, speed, onStep, (finalValue) => {
+    this.moduloClock.animateTo(dividend, duration, onStep, (finalValue) => {
       this.setState({animating: false});
       onComplete(finalValue);
     });

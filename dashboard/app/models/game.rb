@@ -173,7 +173,7 @@ class Game < ActiveRecord::Base
 
   # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
-    app === APPLAB
+    app === APPLAB || app == WEBLAB
   end
 
   def has_i18n?

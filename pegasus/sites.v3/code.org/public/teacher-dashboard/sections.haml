@@ -16,7 +16,7 @@ content-type: text/ng-template
           = I18n.t('dashboard_sections_assign_hoc_script_desc')
         .assign-confirm-container
           %div{style: "text-align: left;"}
-            = I18n.t('dashboard_sections_assign_hoc_script_msg')
+            = I18n.t('dashboard_sections_assign_hoc_script_msg', certificate_url: CDO.code_org_url('/certificates'))
           .modal-buttons
             %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
             %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "confirm_save()" }= I18n.t('dashboard_sections_assign_activity')

@@ -25,8 +25,8 @@
   submit: "Submit"
   twentyhours_heading: "Try our Intro to Computer Science Course"
   twentyhours_text: "Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course."
-  og_title: "Every child deserves opportunity"
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_title: "The Hour of Code is coming"
+  og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
   hoc2014_students: "Students"
   hoc2014_try: "Try it"
@@ -184,7 +184,7 @@
   learn_next_level: "Try another Code Studio course"
   learn_online: "Try other courses online"
   learn_classes: "Find local classes"
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY."
+  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: "I just finished Course 1 - check it out! @codeorg"
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"
@@ -208,7 +208,7 @@
   contact_form_topic_press: "Press/media (interview or speaking engagement)"
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." -  Frank Martinez, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_title_nolink: "Explore Code Studio"
   studiobar_elementary_title: "Elementary courses"
@@ -586,6 +586,9 @@
   dashboard_sections_yes_both: "Yes, I want to copy student(s) to be in this current section AND the new section"
   dashboard_sections_no_move: "No, I want to move student(s) to be in the new section only."
   dashboard_sections_move_students: "Move students"
+  dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
+  dashboard_sections_assign_hoc_script_msg: "Please note that we will not save progress in this course during the week of December 5-11, due to the unprecedented level of traffic our site will receive for the Hour of Code.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)<br/><br/>We are thrilled by the number of teachers and students participating and we're sorry we won't be able to save everything.  If your class wants to go further, you can go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.  Our teacher dashboard will let you track your student's progress every other week of the year."
+  dashboard_sections_assign_activity: "Assign Course"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: "Add student"
@@ -692,9 +695,11 @@
   dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
   dashboard_announce_learn_more_button: "Learn more"
   dashboard_announce_try_now_button: "Try now"
+  dashboard_announce_host_an_hour_button: "Host an Hour"
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: "Add your name"
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+  dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
   code_hoc_coming: "The Hour of Code is here - December 8-14!"
   code_sign_up: "Sign up to participate during CS Education Week"
   host_an_hour: "Host an hour"
