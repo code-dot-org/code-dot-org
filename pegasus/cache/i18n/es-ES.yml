@@ -34,7 +34,7 @@
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: "¿Terminaste tu primera Hora de Code? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
-  og_title: Todos los niños merecen una oportunidad
+  og_title: Todos los niños merecen oportunidades
   og_description: Todos los alumnos de todas las escuelas merecen la oportunidad de
     estudiar Ciencias de la Informática.
   hoc2014_heading: Únete a la <a href="http://hourofcode.com">Hora de Code</a><br/>Del
@@ -290,8 +290,8 @@
     Nichols Peery, profesora'
   stats_student: '"Sabía que era una oportunidad<b> única en la vida</b>." - Mariana
     Alzate, estudiante de 5º grado'
-  stats_michael: '"<b>Nunca antes</b> había visto a mis estudiantes tan entusiasmados
-    por aprender" - Michael Clark, Profesor'
+  stats_michael: '" <b>Nunca antes</b> había visto a mis estudiantes tan entusiasmados
+    por aprender." - Michael Clark, Profesor'
   studiobar_title: Explora <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Explora Code Studio
   studiobar_elementary_title: Cursos elementales
@@ -302,7 +302,7 @@
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
   studiobar_teacher_title: Pensado para los profesores
   studiobar_teacher_body: Presenta Code Studio en tu aula
-  studiobar_frozen_title: Hora del Codigo
+  studiobar_frozen_title: Hora del Código
   studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que donas
@@ -771,6 +771,18 @@
   dashboard_sections_no_move: No, deseo mover al (a los) estudiante (s) para que solo
     permanezcan en la nueva sección.
   dashboard_sections_move_students: Mover alumnos
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: No seleccionó a ningún estudiante para mover. Por
     favor seleccione al menos a un estudiante.
   dashboard_error_other_section: Si están moviendo estudiantes entre sus propias secciones,
@@ -917,6 +929,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Aprende más
   dashboard_announce_try_now_button: Probar ahora
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Como profesor, está liderando el camino de un movimiento
     para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática.
     Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana,
@@ -927,6 +940,11 @@
   dashboard_announce_all: Manténte al día con las nuevas características y actualizaciones
     en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver
     anuncios anteriores.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   host_an_hour: Hospeda una hora
@@ -1089,7 +1107,7 @@
   minecraft_name: Minecraft
   starwarsblocks_name: Bloques de La Guerra de Las Galaxias
   math_category_name: Matemáticas
-  hoc_category_name: Hora del Codigo
+  hoc_category_name: Hora del Código
   csf_category_name: Fundamentos de CS
   csp_category_name: "'15-'16 Principios de CS"
   csp17_category_name: "'16-'17 Principios de CS"
@@ -1279,7 +1297,7 @@
     Python.
   texasinstruments_shortdescription: Aprende codificación básica usando TI-84™ calculadora
     Plus.
-  teacherled_shortdescription: |
+  teacherled_shortdescription: |-
     Inspírate para diseñar tu propia Hora de Code con estos planes de lecciones.
     &#160;
   course2_shortdescription_congrats: Para los estudiantes con habilidades de lectura
@@ -1828,21 +1846,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
