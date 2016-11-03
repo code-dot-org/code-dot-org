@@ -54,8 +54,6 @@ social:
 
 .clear{style: "clear: both"}
 
-= view 'mobilecheck.js'
-
 :javascript
 
   $(document).ready(function() {
@@ -64,8 +62,7 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       robotics: true,
-      backButton: true,
-      mobile: window.mobilecheck()
+      backButton: true
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });

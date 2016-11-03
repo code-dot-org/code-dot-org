@@ -9,6 +9,7 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
+import { mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
 import _ from 'lodash';
 
@@ -306,7 +307,7 @@ const TutorialExplorer = React.createClass({
 });
 
 
-function getFilters(options) {
+function getFilters({robotics, mobile}) {
   const filters = [
     { name: "grade",
       text: "Grades",
@@ -368,7 +369,7 @@ function getFilters(options) {
     activity_type: ["robotics"]
   };
 
-  if (options.robotics) {
+  if (robotics) {
     filters.forEach(filterGroup => {
       if (filterGroup.name === "activity_type") {
         filterGroup.entries = [{name: "robotics", text: "Robotics"}];
@@ -381,7 +382,7 @@ function getFilters(options) {
     hideFilters.activity_type = [];
   }
 
-  if (options.mobile) {
+  if (mobile) {
     initialFilters.platform = ["android", "ios"];
   }
 
@@ -389,8 +390,7 @@ function getFilters(options) {
 }
 
 window.TutorialExplorerManager = function (options) {
-  this.options = options;
-
+  options.mobile = mobileCheck();
   const {filters, initialFilters, hideFilters} = getFilters(options);
 
   this.renderToElement = function (element) {
