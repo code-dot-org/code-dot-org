@@ -14,7 +14,7 @@ import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux
 import { setSections, selectSection } from './sectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
-import experiments from '@cdo/apps/experiments';
+import experiments from '@cdo/apps/util/experiments';
 
 function resizeScrollable() {
   var newHeight = $('.teacher-panel').innerHeight() -
