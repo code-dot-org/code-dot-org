@@ -6,6 +6,9 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
+// Require this first at each bundle entry point for full ES6 support.
+require("babel-polyfill");
+
 import $ from 'jquery';
 
 // Shim window.console to be safe in IE

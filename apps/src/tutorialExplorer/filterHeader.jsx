@@ -15,12 +15,13 @@ const styles = {
   bar: {
     backgroundColor: "rgb(0, 178, 192)",
     color: "white",
-    height: 42
+    height: 44
   },
   select: {
     backgroundColor: "rgb(0, 178, 192)",
     color: "white",
-    borderColor: "white"
+    borderColor: "white",
+    height: 34
   },
   filterBy: {
     float: "left",
@@ -91,8 +92,9 @@ const FilterHeader = React.createClass({
               onChange={this.handleChangeSort}
               style={styles.select}
             >
-              <option value="displayweight">Rank</option>
-              <option value="popularityrank">Popularity</option>
+              <option disabled selected>Sort</option>
+              <option value="displayweight">Top rated</option>
+              <option value="popularityrank">Most popular</option>
             </select>
 
             {this.shouldShowOpenFiltersButton() && (

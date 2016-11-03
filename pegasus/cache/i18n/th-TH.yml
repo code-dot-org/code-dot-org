@@ -292,23 +292,23 @@
   studiobar_shop_body: "แตกประเภทออก ใส่โลโก้ของเราด้วยความภาคภูมิใจ"
   homepage_hero_text_malala: '"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียน Hour of Code"
     มาลาลา, ผู้ชนะรางวัลโนเบลสันติภาพ'
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo; ถ้าคุณสามารถเปลี่ยนแปลงเทคโนโลยี,
     คุณสามารถเปลี่ยนแปลงโลกของเรา &rdquo;
     Susan, ประธานกรรมการบริหาร YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;อย่าเพียงแค่เล่นเกมบนโทรศัพท์ของคุณ
     ลองสร้างโปรแกรมดูสิ&rdquo;
     ประธานาธิบดีสหรัฐ บารัก โอบามา
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;เด็กๆของพวกเรา &mdash; รวมไปถึงเด็กผู้หญิง &mdash;
     ต้องการโอกาสที่จะได้เรียนรู้วิชาวิทยาการคอมพิวเตอร์ &rdquo;
     Sheryl, ประธานฝ่ายปฎิบัติการ Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;วิทยาการคอมพิวเตอร์สามารถสร้าง
     โอกาสที่ดีที่สุดในโลกนี้ &rdquo;
     Satya, ประธานกรรมการบริหาร Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;หากคุณโค้ด คุณสามารถเลือก
     เส้นทางของชีวิตคุณได้ &rdquo;
     Chris Bosh
@@ -320,23 +320,23 @@
     "ผมไม่เคยเห็นเด็กๆ
      ตื่นเต้นกับการเรียนรู้มากขนาดนี้"
     Michael, ครู
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo; วิทยาการคอมพิวเตอร์ เป็นศาสตร์ที่คุณจะ
     ไม่รู้ว่าคุณจะชอบหรือไม่ หากคุณไม่เคยลองมัน &rdquo;
     Jackson, นักเรียนชั้นป.6
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;คุณสามารถทำอะไรก็ได้ที่คุณต้องการ
     ด้วยโปรแกรมมิ่ง&rdquo;
     Maya, นักเรียนชั้นป.2
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;วิทนาการคอมพิวเตอร์ไม่ได้เป็นของใครอื่น
     มันสำหรับคุณ ที่นี่ ตอนนี้ &rdquo;
     Geraldo, ครู
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo;การเขียนโปรแกรม กระตุ้นความคิดส้รางสรรค์ แรงบันดาลใจ และนวัตกรรม &mdash;
     ซึ่งทักษะเหล่านี้มีความสำคัญในการประกอบอาชีพในอนาคต &rdquo;
     Floresa, ครู
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;โครงการนี้ได้รับความร่วมมือ 100% จากนักเรียน &rdquo;
     Adam, ครู
   homepage_hero_text_stat_loc: "มีเด็กหญิง 2.5 ล้านคนที่ได้ลงทะเบียนเรียนกับ Code
@@ -736,6 +736,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -862,6 +874,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "สิ่งที่น่าเรียนรู้ยังมีอีก"
   dashboard_announce_try_now_button: "ลองตอนนี้"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -870,6 +883,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "นี่คือ Hour of Code - 8-14 ธันวาคม!"
   code_sign_up: "ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์"
   host_an_hour: Host an hour
@@ -1673,21 +1691,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "เล่น"
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
