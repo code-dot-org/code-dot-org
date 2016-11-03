@@ -25,6 +25,14 @@ const styles = {
     top: 0,
     width: '100%'
   },
+  tutorialDetailImageContainer: {
+    float: "left",
+    paddingBottom: 10
+  },
+  tutorialDetailInfoContainer: {
+    float: "left",
+    paddingLeft: 20
+  },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 22,
@@ -63,7 +71,7 @@ const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
     item: shapes.tutorial.isRequired,
-    closeClicked: React.PropTypes.func.isRequired,
+    closeClicked: React.PropTypes.func.isRequired
   },
 
   render() {
@@ -128,16 +136,13 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div className="col-50">
+                <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
                   <img
                     src={this.props.item.image.replace(".png", ".jpg")}
                     style={{width: '100%'}}
                   />
                 </div>
-                <div
-                  className="col-50"
-                  style={{paddingLeft: 20}}
-                >
+                <div style={styles.tutorialDetailInfoContainer} className="col-xs-12 col-sm-6">
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>

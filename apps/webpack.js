@@ -10,7 +10,7 @@ var baseConfig = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
-      '@cdo/locale': path.resolve(__dirname, 'src', 'locale-do-not-import.js'),
+      '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
       '@cdo/applab/locale': path.resolve(__dirname, 'src', 'applab', 'locale-do-not-import.js'),
       '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
