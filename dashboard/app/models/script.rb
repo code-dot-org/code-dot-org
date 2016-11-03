@@ -368,7 +368,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd2 csd3 text-compression netsim pixelation frequency_analysis vigenere gradeKinder grade1 grade2 grade3 grade4 grade5).include?(self.name)
+    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere gradeKinder grade1 grade2 grade3 grade4 grade5).include?(self.name)
   end
 
   def has_banner?

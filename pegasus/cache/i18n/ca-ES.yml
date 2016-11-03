@@ -96,8 +96,8 @@
     una <a href="%{current_path}/next"> classe de soci</a>.
   get_a_certificate_of_achievement: Aconseguiu el certificat d'assoliment
   view_course: Veure el curs
-  view_unit: View unit
-  make_app: Make an app
+  view_unit: Veure la unitat
+  make_app: Fer una aplicació
   congrats_guest_speaker_title: Trobar un orador convidat per a l'aula
   congrats_guest_speaker_desc: Ara que els estudiants han acabat un curs d'informàtica,
     considereu el fet de celebrar-ho i de connectar-ho a coses que ells puguin construir
@@ -106,7 +106,8 @@
     ciutat estudiants o professionals que estiguin disposats a inspirar els estudiants
     remotament, amb xats de vídeo.
   congrats_guest_speaker_cta: Trobar un orador convidat
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_third_party_title: Utilitzar les seves noves habilitats amb aquestes aplicacions
+    i llocs web
   third_party_gradelevel_kto8: Qualificacions K-8
   third_party_gradelevel_kto2: Qualificacions K-2
   third_party_gradelevel_2to8: Qualificacions 2-8
@@ -306,27 +307,27 @@
     una hora de codi" Malala, Premi Nobel de la pau'
   homepage_hero_text_susan: '"Si es pot canviar la tecnologia, es pot canviar el món."
     Susan, CEO de YouTube'
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;No juguis només amb el telèfon,
     programa'l&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: "&ldquo;Els nostres fills &mdash;les nenes incloses&mdash;
     \nnecessiten l'oportunitat d'aprendre ciència de la computació.&rdquo;\nSheryl,
-    COO de Facebook\n"
-  homepage_hero_text_satya: |
+    COO de Facebook"
+  homepage_hero_text_satya: |-
     &ldquo;La informàtica obrir
     les millors oportunitats del món.&rdquo;
     Satya, CEO de Microsoft
   homepage_hero_text_bosh: "&ldquo;Si programes, pots triar \nel curs de la teva vida.&rdquo;\nChris
-    Bosh\n"
+    Bosh"
   homepage_hero_text_student1: "&ldquo;Aquestes habilitats han canviat el meu futur.
-    \nPer no parlar, és simplement diversió.&rdquo;\nLuna, 7è grau\n"
+    \nPer no parlar, és simplement diversió.&rdquo;\nLuna, 7è grau"
   homepage_hero_text_student2: '"Jo mai, mai vist els meus fills tan entusiasmat amb
     l''aprenentatge." Michael, professor'
   homepage_hero_text_student3: '"Informàtica és un camp que no saps si t''agrada o
     no abans de provar-lo" Jackson, 6è grau'
   homepage_hero_text_student4: "&ldquo;Es pot fer res la ment \nvol fer amb programació.&rdquo;\nMaya,
-    2n grau\n"
+    2n grau"
   homepage_hero_text_student5: '"Informàtica no és per a algú altre. És per a vostè,
     aquí, ara."Geraldo, professor'
   homepage_hero_text_teacher1: '"La Codificació provoca creativitat, inspiració i
@@ -762,6 +763,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -905,6 +918,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Aprèn més
   dashboard_announce_try_now_button: Intenteu-ho ara
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -913,6 +927,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: L'hora del Codi és aquí - 8-14 de desembre!
   code_sign_up: Inscriure's a participar durant la setmana de l'educació CS
   host_an_hour: Host an hour
@@ -1806,21 +1825,3 @@
   infinity_shortcode: inf
   playlab_shortcode: reprodueix
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.

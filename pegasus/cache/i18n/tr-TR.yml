@@ -260,14 +260,14 @@
   learn_next_level: Bir sonraki seviyeye devam et
   learn_online: Diğer online kurslarımızı deneyin
   learn_classes: Yerel sınıfları bulun
-  hoc_is_here: Bilgisayar bilimini öğrenin. En önemli şey değişimdir. https://youtu.be/xJqSu1IbcHg.
+  hoc_is_here: Bilgisayar bilimini öğrenin. Bu herşeyi değiştirir. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: "#HourOfCode yeni yaptım - @codeorg u kontrol edin"
   just_did_course1: Ders1'i yeni bitirdim.@codeorg ile kontrol et
   just_did_course2: Ders2'yi yeni bitirdim. @codeorg ile kontrol et
   just_did_course3: Ders3'ü yeni bitirdim. @codeorg ile kontrol et
   just_did_course4: Ders4'ü yeni bitirdim. @codeorg ile kontrol et
   just_did_accelerated: Hızlandırılmış Kursu yeni bitirdim. @codeorg ile kontrol et
-  twitter_teach_cs: |
+  twitter_teach_cs: |-
     10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
     http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
   learn_hoc: Bir Saat Kodu öğrenin
@@ -315,31 +315,31 @@
     onu programlayın.&rdquo; ABD Başkanı Barack Obama"
   homepage_hero_text_sheryl: "&ldquo;Çocuklarımız &mdash; kızlarımız dahil &mdash;
     \nbilgisayar bilimlerini öğrenmek için fırsata ihtiyacı vardır.&rdquo;\nSheryl,
-    Facebook COo\n"
+    Facebook COo"
   homepage_hero_text_satya: "&ldquo;Bilgisayar bilimi dünyadaki en iyi fırsatların
     önünü açabilir.&rdquo; Satya, Microsoft CEO"
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Eğer kod yazıyorsanız, hayatınızın seyrini seçebilirsiniz.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Bu yetenekler geleceğimi değiştirdi. Anlatmaya gerek yok, burası çok eğlenceli.&rdquo;
     Luna, 7'nci sınıf
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &Idquo;Ben çocuklarımın öğrenmek için heyecanlandığını hiç görmemiştim,&
     rdquoİ; Michael, öğretmen
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Bilgisayar bilimi, beğenip beğenmediğinizi denemeden bilemeyeceğiniz bir alandır.&rdquo;
     Jackson, 6'ncı sınıf
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;Programlama ile aklınızdan geçen herhangi bir şeyi yapabilirsiniz.&rdquo;
     Maya, 2'nci sınıf
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;Bilgisayar bilimi başkası için değildir. Şimdi burada senin için var.&rdquo;
     Geraldo, öğretmen
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo;Kodlama, yaratıcılığı, ilhamı ve yeniliği ateşler&mdash; bunların hepsi bir kariyerde gerekli olan parçalardır.&rdquo;
     Floresa, öğretmen
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Bu program, öğrencilerimin %100'ünün ilgisinde ve katılımında.&rdquo;
     Adam, öğretmen
   homepage_hero_text_stat_loc: "öğrenciler tarafından #loc satır kod yazılmıştır"
@@ -730,7 +730,7 @@
   dashboard_sections_table_code: Bölge Kodu
   dashboard_sections_name: Bölüm İsmi
   dashboard_sections_choose_secret: "Öğrencilerinize hesap açmak istiyorsanız, o bölüm
-    için gizli bir \n<b>kelime</b> veya <b>resim</b> seçin.\n"
+    için gizli bir \n<b>kelime</b> veya <b>resim</b> seçin."
   dashboard_sections_secret_word: Bir <b>kelime</b> her bir öğrenci için gizli bir
     kelime ayarlamanızı sağlar.
   dashboard_sections_secret_picture: Bir <b>resim</b> size her bir öğrenci için gizli
@@ -756,6 +756,18 @@
     olmasını istiyorum
   dashboard_sections_no_move: Hayır, sadece yeni bölüme taşımak istiyorum.
   dashboard_sections_move_students: "Öğrencileri taşı"
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: Taşımak için herhangi bir öğrenci seçmediniz. Lütfen
     en az bir öğrenci seçin.
   dashboard_error_other_section: "Öğrenciler kendi bölümleri arasında taşıyorsanız,
@@ -896,6 +908,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Daha fazlasını öğren
   dashboard_announce_try_now_button: "Şimdi dene"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
     bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
     izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
@@ -904,6 +917,11 @@
   dashboard_announce_petition_button: Adınızı Ekleyin
   dashboard_announce_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
     takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   host_an_hour: yaklaşık bir saat
@@ -1741,21 +1759,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
