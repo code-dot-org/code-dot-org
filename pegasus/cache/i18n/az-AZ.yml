@@ -180,7 +180,7 @@
   third_party_organization: Organization
   third_party_curriculum: Curriculum
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: "Şagird və müəllimlər üçün ödənişsiz"
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/download"
   third_party_cost_free_399: Free to try, $399/classroom
@@ -298,17 +298,17 @@
   studiobar_shop_title: Dükan
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: "&ldquo;Mən hər bir ölkədə qızları \nbir Kod Saatı öyrənməyə
-    çağırıram.&rdquo; \nMalala, Nobel Sülh Mükafatı laureatı\n"
+    çağırıram.&rdquo; \nMalala, Nobel Sülh Mükafatı laureatı"
   homepage_hero_text_susan: "&ldquo;Texnologiyanı dəyişə bilirsinizsə, \ndünyanı dəyişə
-    bilərsiniz.&rdquo;\nSyuzan, \"YouTube\"da baş icraçı direktor\n"
+    bilərsiniz.&rdquo;\nSyuzan, \"YouTube\"da baş icraçı direktor"
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+  homepage_hero_text_sheryl: |-
+    &ldquo;Uşaqlarımıza &mdash; o cümlədən qızlarımıza &mdash;
+    informatikanı öyrənmək fürsəti gərəkdir.&rdquo;
+    Şeril, "Facebook"da əməliyyatlar üzrə baş director
   homepage_hero_text_satya: |
     &ldquo;Computer science can unlock
     the best opportunities in the world.&rdquo;
@@ -321,7 +321,7 @@
     &ldquo;These skills have changed my future.
     Not to mention, it's just plain fun.&rdquo;
     Luna, 7th grade
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Mən şagirdlərimi heç vaxt öyrənməyə
     bu qədər həvəsli görməmişdim&rdquo;
     Maykl, müəllim
@@ -333,8 +333,9 @@
     with programming.&rdquo; \nMaya, 2nd grade\n"
   homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
     for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Proqramlaşdırma yaradıcılıq, həvəs və ixtiraçılığı
+    alovlandırır &mdash; \nbunların hamısı istənilən peşədə zəruridir.&rdquo;\nFloresa,
+    müəllim"
   homepage_hero_text_teacher2: |
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
@@ -755,6 +756,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -786,12 +799,12 @@
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_print_info: Print out cards with your students' login information.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Məxfi şəkil
   dashboard_students_secret_picture: Secret Picture
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Məxfi söz
   dashboard_students_secret_word: Secret Word
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
@@ -801,8 +814,8 @@
   dashboard_students_no_email: "Şagirdlərinizin e-poçt ünvanı yoxdursa, yaxud onların
     hesablarını özünüz düzəltmək istəyirsinizsə, bu bölmənin məxfi kodunu <b>söz</b>
     və ya <b>şəkil</b> növünə dəyişin."
-  dashboard_students_print_page: Print this page
-  dashboard_students_url: URL
+  dashboard_students_print_page: Bu səhifəni çap et
+  dashboard_students_url: URL ünvan
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
   dashboard_curriculum_k5_title: K-5 Educator Resources
@@ -888,6 +901,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Daha ətraflı
   dashboard_announce_try_now_button: Elə indi sınaqdan keçirin
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -896,6 +910,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Kod Saatı artıq buradadır - 8-14 dekabr!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -1532,8 +1551,7 @@
   sphero_beyond_platformtext: Robot purchase
   codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   khan_beyond_shortdescription: Learn to draw in JavaScript
-  tynker_beyond_shortdescription: A fun and engaging course for children in grades
-    4-8
+  tynker_beyond_shortdescription: 4-8-ci sinif uşaqları üçün əyləncəli, maraqlı kurs
   scratch_beyond_shortdescription: "İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin."
   lightbot_beyond_shortdescription: A game to teach coding concepts
   codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
@@ -1747,21 +1765,3 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.

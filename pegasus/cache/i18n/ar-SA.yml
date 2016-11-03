@@ -130,13 +130,13 @@
     استخدام كتل البرمجة جعل شخصياتهم تأتي في الحياة."
   third_party_scratchjr_btn_curriculum: "تحميل المناهج الدراسية الابن الصفر"
   third_party_scratchjr_btn_site: "زر Scratch Jr."
-  third_party_scratch_desc: |
+  third_party_scratch_desc: |-
     مع سكراتش, يمكنك برمجة قصصك التفاعلية, الألعاب, و الرسوم المتحركة و مشاركة إبداعاتك مع الأخرين في المجتمع على شبكة الانترنت.
     سكراتش يساعد الأشخاص اليافعين على تعلم التفكير بإبداع, الأسباب المنهجية, والعمل عن طريق مشاركة المهارات الضرورية للحياة في القرن الواحد و العشرين.
   third_party_scratch_btn_curriculum: "حمّل المنهاج الدراسي لـِ سكراتش"
   third_party_scratch_btn_forum: "منتدى سكراتش التعليمي"
   third_party_scratch_btn_site: "زر Scratch"
-  third_party_lightbot_desc: |
+  third_party_lightbot_desc: |-
     في Lightbot, يجب على الطلاب تعلم برمجة روبوت من خلال كتابة الأوامر و حل الألغاز.
     قد يلعب الطلاب الألعاب من خلال المتصفح (يتطلب تحميل Flash Player), أو على الأندرويد أو أجهزة الأيفون و الأيباد. الطلاب يلعبون مجموعة من الالعاب في المستوى "المبتدئ" في Lightbot. و سوف يتعلمون كيف يخبرون جهاز الحاسوب ماذا يفعل من خلال سلسة من الأوامر البسيطة و الحصول على نتيجة العملية وذلك من خلال برنامج حاسوبي الذي قد تمت كتابته.
   third_party_lightbot_btn_curriculum: "حمّل المنهاج الدراسي لـِ Lightbot"
@@ -147,7 +147,7 @@
     أستكشف ما قام بصنعه الأخرون و تعلموا من بعضكم!"
   third_party_khan_btn_learn: "تعلم CS مع أكاديمية خان"
   third_party_khan_btn_forum: "منتدى أكاديمية خان للـ CS"
-  third_party_appinv_desc: |
+  third_party_appinv_desc: |-
     برنامج MIT هو أداة برمجية مبنية على أسس القطع و التي تسمح للجميع, حتى المبتدئين منهم, لبدأ البرمجة و بناء تطبيقات متاكملة لأجهزة الأندرويد.
     الوافدون الجدد لمجال أختراع التطبيقات يمكن أن يحصلوا على تطبيقهم الأول يعمل و يشتغل في خلال ساعة واحدة أو أقل, ويمكن للمبرمجين بناء تطبيقات أكثر تعقيداً بوقت أقل بكثير من الوقت اللازم لبنائها في الطرق التقليدية التي تستخدمها لغات البرمجة المبنية على الكتابة.
   third_party_appinv_btn_curriculum: "تحميل منهج مخترع التطبيق 2"
@@ -240,17 +240,15 @@
   learn_classes: "ابحث عن الفئات المحلية"
   hoc_is_here: "تعلم علوم الكمبيوتر. هو تغيير كل شيء.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "انا عملت هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg"
-  just_did_course1: |
-    لقد انتهيت للتو من الدرس 1 - رؤية الدرس! @codeorg
-
-    لقد انهيت الان الدرس الاول - رؤية الدرس! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: |
-    لماذا لا تعلّم المزيد من المدارس علوم الحاسب؟ بإمكاننا إصلاح ذلك. http://youtu.be/nKIu9yen5nc.
-    قم بزيارة http://code.org لمعرفة المزيد.
+  just_did_course1: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 1 - تَفَقَّدْ ذَلِك! @codeorg"
+  just_did_course2: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 2 - تَفَقَّدْ ذَلِك! @codeorg"
+  just_did_course3: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 3 - تَفَقَّدْ ذَلِك! @codeorg"
+  just_did_course4: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 4 - تَفَقَّدْ ذَلِك! @codeorg"
+  just_did_accelerated: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر المُسَرّع - تَفَقَّدْ
+    ذَلِك! @codeorg"
+  twitter_teach_cs: |-
+    يتَّفِقُ 9 مِن بَيْنَ كُلِّ 10 أشخاص، المدارِس يَنْبَغِي أن تُدَرِّسّ عِلْمَ الحَاسُوب.
+    http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: "تعلم ساعة من البرمجة"
   beyond_hoc: "بعد تعلم ساعة من البرمجة"
   what_gender: "ماهو جنسك؟"
@@ -320,7 +318,7 @@
   homepage_hero_text_stat_served: "ساعة البرمجة: #served خدمة قدمت"
   homepage_slot_text_hoc: "الساعة من التعليمات البرمجية"
   homepage_slot_text_frozen: "ملكة الثلج مع أنّا و إلزا"
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: "لَوْحَة التَحَكُّم"
   homepage_slot_text_studio: "كل دروسنا"
   homepage_slot_text_course4: "الدورة 4"
   homepage_slot_text_shop: "تسوق"
@@ -349,12 +347,12 @@
   homepage_banner_20k_teachers: 20,000 معلم دربوا, والآن يعلمون علم الكمبيوتر في الصفوف
     الدراسية.
   homepage_banner_20k_teachers_link: "اعرف المزيد"
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
+  homepage_banner_congress: "قادة أمريكا تدعو الكونغرس إلى تَعَهُد تعليم الحاسوب لمراحل
+    الدراسة الإبتدائية والأساسية والثانوية."
   homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: "نَحْنُ نقوم بتَغْيِير مُهِمّ على كيفية دعْمنا لخُصُوصِيَّة
+    الطالِب."
+  homepage_banner_emailprivacy_link: "مُتَابَعَة َالقِرَاءة"
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: "اعرف المزيد"
   homepage_slot_text_title_hoc: "ساعة البرمجة"
@@ -453,14 +451,13 @@
   mc_specs: "العديد من اللغات | المتصفحات الحديثة والاجهزة اللوحية | الذين تتراوح
     أعمارهم بين 6-106"
   minecraft_subtitle: "ساعة البرمجة ماين كرافت"
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: "قبلَ أنْ تبدأ، شَاهِد أَحَدّ هَذِه الفِيديُوهات الإلْهَامِيَة"
+  speak_another_language: "هلْ تَتَحَدَثُ لُغَةً أُخْرى؟"
+  help_translate: "سَاعِدْنا في التَرْجَمَة."
+  no_internet: "ليسَ لديكَ إنتِرْنِتّ؟"
+  download_offline: "تَنْزِيلِ النُسْخَةِ الَّتي تَعْمَلُ دونَ إتِصال."
   are_you_teacher: "هل أنت معلم؟"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: "قُمْ بإسْتِعْراض خِطَّة الدرس والموارِد الآخرى الخاصة بالمُعَلِّم."
   volunteer_engineer_submission_title: ألهم الطلاب و تطوع لأجل "Hour of code".
   volunteer_engineer_submission_subtitle_generic: 100.000 مدرس سيقدمون فعالية "ساعة
     برمجة" في أقسامهم هذه السنة، من 07 إلى 13 ديسمبر 2015. إنهم يحتاجون ساعدتكم
@@ -641,7 +638,7 @@
   dashboard_action_remove_confirm: "حذف؟"
   dashboard_action_done: "‏‏تم"
   dashboard_action_required: "متطلب"
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: "إطْبَع الشَهَادَات"
   dashboard_assessments_view: "عرض التقييمات في:"
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -724,6 +721,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -859,6 +868,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "اعرف المزيد"
   dashboard_announce_try_now_button: "جرب الآن"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: "كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في
     كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع
     منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات
@@ -867,6 +877,11 @@
   dashboard_announce_petition_button: "أضف أسمك"
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "إرسال رسالة إلكترونية"
   code_sign_up: "قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب"
   host_an_hour: Host an hour
@@ -1682,21 +1697,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
