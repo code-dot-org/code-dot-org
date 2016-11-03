@@ -14,7 +14,7 @@ import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './res
 import * as utils from '../utils';
 import _ from 'lodash';
 
-const SortBy = utils.makeEnum('popularityrank', 'displayweight');
+const SortBy = utils.makeEnum('default', 'popularityrank', 'displayweight');
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -25,7 +25,8 @@ const TutorialExplorer = React.createClass({
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
     legacyLink: React.PropTypes.string,
-    roboticsButton: React.PropTypes.bool
+    roboticsButton: React.PropTypes.bool,
+    showSortBy: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -39,7 +40,7 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    let sortBy = SortBy.displayweight;
+    let sortBy = SortBy.default;
 
     const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(filters, sortBy);
 
@@ -296,6 +297,7 @@ const TutorialExplorer = React.createClass({
           showingModalFilters={this.state.showingModalFilters}
           showModalFilters={this.showModalFilters}
           hideModalFilters={this.hideModalFilters}
+          showSortBy={this.props.showSortBy}
         />
         <div style={{clear: "both"}}/>
 
@@ -430,6 +432,7 @@ window.TutorialExplorerManager = function (options) {
         backButton={options.backButton}
         legacyLink={options.legacyLink}
         roboticsButton={options.roboticsButton}
+        showSortBy={options.showSortBy}
       />,
       element
     );
