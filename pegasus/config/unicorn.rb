@@ -7,3 +7,16 @@ stderr_path pegasus_dir('log/unicorn_stderr.log')
 stdout_path pegasus_dir('log/unicorn_stdout.log')
 working_directory pegasus_dir
 #logger $log
+
+before_fork do |server, worker|
+
+  # Quit the old unicorn process
+  old_pid = "#{server.config[:pid]}.oldbin"
+  if File.exists?(old_pid) && server.pid != old_pid
+    begin
+      Process.kill("QUIT", File.read(old_pid).to_i)
+    rescue Errno::ENOENT, Errno::ESRCH
+      # someone else did our job for us
+    end
+  end
+end
