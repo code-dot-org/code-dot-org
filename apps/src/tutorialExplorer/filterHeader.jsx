@@ -15,22 +15,28 @@ const styles = {
   bar: {
     backgroundColor: "rgb(0, 178, 192)",
     color: "white",
-    height: 44
+    minHeight: 44,
+    overflow: "hidden"
   },
   select: {
-    backgroundColor: "rgb(0, 178, 192)",
+    backgroundColor: "rgb(101, 205, 214)",
     color: "white",
     borderColor: "white",
     height: 34
   },
   filterBy: {
     float: "left",
-    lineHeight: "42px",
+    lineHeight: "44px",
+    marginLeft: 10
+  },
+  left: {
+    float: "left",
+    lineHeight: "44px",
     marginLeft: 10
   },
   right: {
     float: "right",
-    lineHeight: "42px",
+    lineHeight: "44px",
     marginRight: 10
   }
 };
@@ -45,7 +51,8 @@ const FilterHeader = React.createClass({
     mobileLayout: React.PropTypes.bool.isRequired,
     showingModalFilters: React.PropTypes.bool.isRequired,
     showModalFilters: React.PropTypes.func.isRequired,
-    hideModalFilters: React.PropTypes.func.isRequired
+    hideModalFilters: React.PropTypes.func.isRequired,
+    showSortBy: React.PropTypes.bool.isRequired
   },
 
   shouldShowOpenFiltersButton() {
@@ -77,25 +84,42 @@ const FilterHeader = React.createClass({
         )}
 
         <div style={styles.bar}>
-          <div style={styles.filterBy}>
-            Filter By
+          <div style={styles.left}>
+            {this.props.mobileLayout && (
+              <span>
+                {this.props.filteredTutorialsCount} results
+              </span>
+            )}
+
+            {!this.props.mobileLayout && (
+              <div style={styles.filterBy}>
+                Filter By
+              </div>
+            )}
           </div>
 
           <div style={styles.right}>
-            {this.props.filteredTutorialsCount} results
+            {!this.props.mobileLayout && (
+              <span>
+                {this.props.filteredTutorialsCount} results
+              </span>
+            )}
 
             &nbsp;
             &nbsp;
 
-            <select
-              value={this.props.sortBy}
-              onChange={this.handleChangeSort}
-              style={styles.select}
-            >
-              <option disabled selected>Sort</option>
-              <option value="displayweight">Top rated</option>
-              <option value="popularityrank">Most popular</option>
-            </select>
+            {this.props.showSortBy && (
+              <select
+                value={this.props.sortBy}
+                onChange={this.handleChangeSort}
+                style={styles.select}
+                className="noFocusButton"
+              >
+                <option disabled value="default">Sort</option>
+                <option value="displayweight">Top rated</option>
+                <option value="popularityrank">Most popular</option>
+              </select>
+            )}
 
             {this.shouldShowOpenFiltersButton() && (
               <span>
