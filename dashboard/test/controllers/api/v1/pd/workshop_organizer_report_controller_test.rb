@@ -45,11 +45,13 @@ class Api::V1::Pd::WorkshopOrganizerReportControllerTest < ::ActionController::T
     @admin = create :admin
     @organizer = create :workshop_organizer
 
-    @workshop = create :pd_ended_workshop, organizer: @organizer
+    # CSF workshop for this organizer.
+    @workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
     create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
 
-    # Extra workshop from a different organizer
-    @other_workshop = create :pd_ended_workshop
+    # Non-CSF workshop from a different organizer
+    @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
+      subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
   end
 
   test 'admins can view the report' do
@@ -161,6 +163,22 @@ class Api::V1::Pd::WorkshopOrganizerReportControllerTest < ::ActionController::T
     response = JSON.parse(@response.body)
     assert_equal 1, response.count
     assert_equal workshop_in_range.id, response.first['workshop_id']
+  end
+
+  test 'filter by course' do
+    sign_in @admin
+
+    # @workshop is CSF; @other_workshop is not
+    {
+      'csf' => @workshop,
+      '-csf' => @other_workshop
+    }.each do |course_param, workshop|
+      get :index, params: {course: course_param}
+      assert_response :success
+      response = JSON.parse(@response.body)
+      assert_equal 1, response.count
+      assert_equal workshop.id, response.first['workshop_id']
+    end
   end
 
   test 'csv' do
