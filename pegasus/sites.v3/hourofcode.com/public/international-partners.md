@@ -40,9 +40,11 @@ If you're in one of the countries below, reach out to the partner listed and get
 | France      | Microsoft                                  | Béatrice Matlega             | [http://www.aka.ms/code2016](http://www.aka.ms/code2016) <br>email: hourofcode@outlook.fr                
 | Ghana       | Ghana Code Club                            | Ernestina Appiah             | [http://www.ghanacodeclub.org](http://www.ghanacodeclub.org) <br>email: tinasupport@gmail.com                  
 | Ireland     | Cybersmarties                              | Diarmuid Hudner              | diarmuid@cybersmarties.com             |                                                                                                             
-| Italy       | CINI and Univ. Roma "Tor Vergata"          | Enrico Nardelli              | [http://programmailfuturo.it](http://programmailfuturo.it) <br>email: nardelli@mat.uniroma2.it            |                                                                                
+| Italy       | CINI and Univ. Roma "Tor Vergata"          | Enrico Nardelli              | [http://programmailfuturo.it](http://programmailfuturo.it) <br>email: nardelli@mat.uniroma2.it            |
+| Japan|	湘南ゼミナール (Shonan Seminar) | 	Team Hour of Code |	[https://www.shozemi.com/](https://www.shozemi.com/)  |                                                                              
 | Japan       | 一般社団法人みんなのコード (Code for Everyone)          | 利根川 裕太 (Yuta Tonegawa)       | [http://caravan2016.hourofcode.jp/](http://caravan2016.hourofcode.jp/) <br> email: info@code.or.jp                     |                                                                            
-| New Zealand | Google                                     | Sally-Ann Williams           | [https://www.google.com/edu/cs/](https://www.google.com/edu/cs/)         |                                                                                                             
+| New Zealand | Google                                     | Sally-Ann Williams           | [https://www.google.com/edu/cs/](https://www.google.com/edu/cs/)         |          
+| Nigeria     |  Tech Accelerate     |   'Tope Ogunnusi    |[www.techaccelerateng.com](http://www.techaccelerateng.com)<br> email: info@techaccelerateng.com  |                                                                                                  
 | Norway      | Lær Kidsa Koding                           | Line Moseng                  | [http://kodetimen.no](http://kodetimen.no)  <br>email: kodetimen@kidsakoder.no               |                                                                                         
 | Pakistan    | KnowledgeJump                              | Nasir Khan                   | nasir@knowledgejump.net                |                                                                                                             
 | Romania     | ADFABER                                    | Alin Chiriac                 | alin@adfaber.org                       |                                                                                                             
@@ -50,10 +52,8 @@ If you're in one of the countries below, reach out to the partner listed and get
 | Sri Lanka   | Microsoft                                  | Janakie Karunarathne         | a-janakk@microsoft.com                 |                                                                                                             
 | Sri Lanka   | XiCigny                                    | Dileepa Rajapaksa            | dileepa@xicigny.com                    |                                                                                                             
 | Sweden      | Edvira AB                                  | Linnea Rothin                | [http://hoc.edvira.com](http://hoc.edvira.com) <br>email: info@edvira.com                            |                                                                                    
-| Turkey      | RobinCode                                  | Suveyda Yeniterzi            | info@robincode.org                     |                                                                                                             
-
-
-
+| Turkey      | RobinCode                                  | Suveyda Yeniterzi            | info@robincode.org                     |    
+| UK      | Microsoft                                 |           | email: ukhourofcode@microsoft.com                    |                                                                                                          
 
 
 <%= view :signup_button %>
