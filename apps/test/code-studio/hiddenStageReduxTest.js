@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import Immutable from 'immutable';
 
 import reducer, { toggleHidden, getHiddenStages } from '@cdo/apps/code-studio/hiddenStageRedux';
-import experiments from '@cdo/apps/experiments';
+import experiments from '@cdo/apps/util/experiments';
 
 function fakeStageLockReducer(state, action) {
   return {
