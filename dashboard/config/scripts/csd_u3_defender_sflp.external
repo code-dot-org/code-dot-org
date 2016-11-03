@@ -1,0 +1,13 @@
+name 'CSD U3 Defender SFLP'
+css 'unplugged'
+markdown <<MARKDOWN
+# Programming - Interactive Games and Animations: Lesson 16 - The Game Design Process
+
+## Background
+
+See how an idea for a game gets translated into a structured plan and eventually the completed code. You'll first learn a little bit more about animating your sprites before diving into the process of implementing a plan for a game. In the coming lessons you'll have more freedom to create and use this plan process yourself.
+
+# Resources
+
+* [Project Guide - Defender Game](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/edit?usp=sharing) - Project Guide ([PDF](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=doc))
+MARKDOWN
