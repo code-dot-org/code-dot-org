@@ -192,76 +192,84 @@ theme: pdf
     %h2.no-margin-bottom.together
       Code.org's Impact in
       = state_info[:state_name_s]
-    %p.larger
-      There are
-      = format_integer_with_commas(state_info[:teacher_studio_acct_i])
-      teacher accounts and
-      = format_integer_with_commas(state_info[:student_studio_acct_i])
-      student accounts in Code Studio in
-      = succeed '.' do
-        = state_info[:state_name_s]
+      
     %ul
-      - if state_info[:professional_learning_partners_t] != 'none'
-        %li
-          Code.org's regional partner(s) is/are:
-          = succeed '.' do
-            = state_info[:professional_learning_partners_t]
-      - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
-        %li
-          - if state_info[:num_affiliates_i] == 0
-            There are no Code.org K-12 facilitators in the state to offer professional learning for elementary teachers.
-          - else
-            - if state_info[:num_elementary_trained_i] == 0
-              There are
-              = state_info[:num_affiliates_i]
-              Code.org K-12 facilitators that offer professional learning for elementary teachers in
-              = state_info[:state_name_s]
-            - else
-              = format_integer_with_commas(state_info[:num_affiliates_i])
-              Code.org
-              - if state_info[:num_affiliates_i] == 1
-                K-12 facilitator
-              - else
-                K-12 facilitators
-              in
-              = state_info[:state_name_s]
-              - if state_info[:num_affiliates_i] == 1
-                has provided professional learning for
-              - else
-                have provided professional learning for
-              %b
-                = format_integer_with_commas(state_info[:num_elementary_trained_i])
-                elementary
-                - if state_info[:num_elementary_trained_i] == 1
-                  teacher.
-                - else
-                  teachers.
-      - if state_info[:num_ms_trained_i] + state_info[:num_hs_trained_i] != 0
-        %li
-          Code.org has provided professional learning for 
-          %b
-            = format_integer_with_commas(state_info[:num_ms_trained_i])
-            middle school
-            - if state_info[:num_ms_trained_i] == 1
-              teacher
-            - else
-              teachers
-          and
-          %b
-            = format_integer_with_commas(state_info[:num_hs_trained_i])
-            high school
-            - if state_info[:num_hs_trained_i] == 1
-              teacher
-            - else
-              teachers
-          in
+      %li
+        There are
+        = format_integer_with_commas(state_info[:teacher_studio_acct_i])
+        teacher accounts and
+        = format_integer_with_commas(state_info[:student_studio_acct_i])
+        student accounts in Code Studio in
+        = succeed '.' do
           = state_info[:state_name_s]
-          to teach computer science.
-      - if state_info[:other_partners_t] != 'none'
-        %li
-          Code.org has a partnership with 
-          =state_info[:other_partners_t]
-          to help spread K-5 computer science to its schools.         
+      %li
+        Code.org, its regional partner(s)
+        = succeed "," do
+          = state_info[:professional_learning_partners_t]
+        and 
+        = format_integer_with_commas(state_info[:num_affiliates_i])
+        K-12 facilitators have provided professional learning for 
+        = format_integer_with_commas(state_info[:num_elementary_trained_i])
+        teachers in CS Fundamentals (K-5), 
+        = format_integer_with_commas(state_info[:num_ecs_csd_i]) 
+        teachers in Exploring Computer Science and CS Discoveries (7-9), and 
+        = format_integer_with_commas(state_info[:num_csp_i]) 
+        teachers in AP CS Principles (9-12) in 
+        = succeed "." do
+          = state_info[:state_name_s]
+      %li
+        Code.org and 
+        = format_integer_with_commas(state_info[:num_affiliates_i])
+        K-12 facilitators have provided professional learning for 
+        = format_integer_with_commas(state_info[:num_elementary_trained_i])
+        teachers in CS Fundamentals (K-5),
+        = format_integer_with_commas(state_info[:num_ecs_csd_i]) 
+        teachers in Exploring Computer Science and CS Discoveries (7-9), and
+        = format_integer_with_commas(state_info[:num_csp_i]) 
+        teachers in AP CS Principles (9-12) in
+        = succeed "." do
+          = state_info[:state_name_s]
+      %li
+        Code.org, its regional partner(s)
+        = succeed "," do
+          = state_info[:professional_learning_partners_t]
+        and
+        = format_integer_with_commas(state_info[:num_affiliates_i])
+        K-12 facilitators have provided professional learning for
+        = format_integer_with_commas(state_info[:num_elementary_trained_i])
+        teachers in CS Fundamentals (K-5),
+        = format_integer_with_commas(state_info[:num_ecs_csd_i])
+        teachers in Exploring Computer Science and CS Discoveries (7-9), and
+        = format_integer_with_commas(state_info[:num_csp_i]) 
+        teachers in AP CS Principles (9-12) in
+        = succeed "." do
+          = state_info[:state_name_s]
+      %li
+        Code.org, its regional partner(s)
+        = succeed "," do
+          = state_info[:professional_learning_partners_t]
+        and
+        = format_integer_with_commas(state_info[:num_affiliates_i])
+        K-12 facilitators have provided professional learning for
+        = format_integer_with_commas(state_info[:num_elementary_trained_i])
+        teachers in CS Fundamentals (K-5),
+        = format_integer_with_commas(state_info[:num_ecs_csd_i]) 
+        teachers in Exploring Computer Science and CS Discoveries (7-9), and
+        = format_integer_with_commas(state_info[:num_csp_i]) 
+        teachers in AP CS Principles (9-12) in
+        = succeed "." do
+          = state_info[:state_name_s]
+      %li
+        Code.org, its regional partner(s)
+        = succeed "," do
+          = state_info[:professional_learning_partners_t]
+        and
+        = format_integer_with_commas(state_info[:num_affiliates_i])
+        K-12 facilitators have provided professional learning for
+        = format_integer_with_commas(state_info[:num_elementary_trained_i])
+        teachers in CS Fundamentals (K-5) in
+        = succeed "." do
+          = state_info[:state_name_s]
 
   .quote-center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
