@@ -306,7 +306,7 @@ const SurveyResultsHeader = React.createClass({
   },
 
   getCoursesForWorkshops() {
-    return _.uniq(_.flatMap(this.props.workshops, function (workshop) { return workshop.course; }));
+    return _.uniq(_.flatMap(this.props.workshops, workshop => workshop.course));
   },
 
   render() {
