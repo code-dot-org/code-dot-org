@@ -110,6 +110,7 @@ Scenario:
   Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#runButton"
+  And I press "x-close"
   And I close the instructions overlay if it exists
   And I see no difference for "star wars RTL"
   And I press "show-code-header"
@@ -123,7 +124,6 @@ Scenario:
   When I am on "http://studio.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#runButton"
-  And I click selector ".csf-top-instructions button:contains(OK)"
   Then element "#runButton" is visible
   And I see no difference for "level load"
 

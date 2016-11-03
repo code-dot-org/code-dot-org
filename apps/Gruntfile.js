@@ -678,6 +678,7 @@ module.exports = function (grunt) {
     'karma:integration'
   ]);
 
+  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
   grunt.registerTask('codeStudioTest', [
     'preconcat',
     'concat',

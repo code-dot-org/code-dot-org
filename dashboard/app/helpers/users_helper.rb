@@ -206,15 +206,9 @@ module UsersHelper
     pages_completed
   end
 
-  def percent_complete(script, user = current_user)
-    summary = summarize_user_progress(script, user)
-    script.stages.map do |stage|
-      levels = stage.script_levels.map(&:level)
-      completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
-      completed.to_f / levels.count
-    end
-  end
-
+  # NOTE: Though the method name would suggest this returns a percentage, the
+  # method returns a decimal.
+  # TODO(asher): Make the name and the return consistent.
   def percent_complete_total(script, user = current_user)
     summary = summarize_user_progress(script, user)
     levels = script.script_levels.map(&:level)

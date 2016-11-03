@@ -249,7 +249,7 @@
   learn_next_level: Pokračovať na ďalšiu úroveň
   learn_online: Skúste iné online kurzy
   learn_classes: Nájsť miestne triedy
-  hoc_is_here: "#HourOfCode je tu - pozri na to! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -297,43 +297,43 @@
   studiobar_shop_body: Prelom stereotypy. Nos naše logo s hrdosťou.
   homepage_hero_text_malala: "&ldquo;Vyzývam dievčatá v každej krajiny, sa aby naučili
     jednu Hodinu Kódu&rdquo;  Malala, nositeľ Nobelovej ceny mieru"
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;Ak môžeš zmeniť techológiu, môžeš zmeniť svet.&rdquo;
     Susan, CEO spoločnosti YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Nepoužívaj svoj telefón len na hranie,
      programujte ho.&rdquo;
     Prezident Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Naše deti &mdash; vrátane dievčat &mdash;
     potrebujú príležitosť učiť sa počítačovú vedu.&rdquo;
     Sheryl, COO Facebook
   homepage_hero_text_satya: "&ldquo;Počítačová veda odomyká \ntie najlepšie príležitosti
-    sveta.&rdquo;\nSatya, CEO Microsoft\n"
-  homepage_hero_text_bosh: |
+    sveta.&rdquo;\nSatya, CEO Microsoft"
+  homepage_hero_text_bosh: |-
     &ldquo;Ak programuješ, môžeš si zvoliť
     smer svojho života.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Tieto zručnosti zmenili moju budúcnosť.
     A okrem toho je to aj skvelá zábava.&rdquo;
     Luna, 7. ročník
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Nikdy predtým som nevidel svojich žiakov
     učiť sa s takým nadšením.&rdquo;
     Michael, učiteľ
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Počítačová veda je oblasť, o ktorej nevieš,
     či sa ti páči alebo nie, kým to neskúsiš.&rdquo;
     Jackson, 6. ročník
   homepage_hero_text_student4: "&ldquo;S programovaním urobíš čokoľvek,\nčo len tvoja
-    myseľ chce.&rdquo; \nMaya, 2. ročník\n"
+    myseľ chce.&rdquo; \nMaya, 2. ročník"
   homepage_hero_text_student5: "&ldquo;Počítačová veda nie je učená pre iných.\nJe
-    pre teba, tu a teraz.&rdquo; \nGeraldo, učiteľ\n"
+    pre teba, tu a teraz.&rdquo; \nGeraldo, učiteľ"
   homepage_hero_text_teacher1: "&ldquo;Programovanie podnecuje tvorivosť, inšpirácie
     a inovácie &mdash; \na tieto sú to najdôležitejšie v akomkoľvek povolaní.&rdquo;\nFloresa,
-    učiteľka\n"
-  homepage_hero_text_teacher2: |
+    učiteľka"
+  homepage_hero_text_teacher2: |-
     &ldquo;Tento  program mojich žiakov na 100%
     zaujal, zapojili sa a prispeli svojím dielom.&rdquo;
     Adam, učiteľ
@@ -758,6 +758,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -895,6 +907,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Dozvedieť sa viac
   dashboard_announce_try_now_button: Skús teraz
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Ako učiteľ patríte medzi propagátorov hnutia za to,
     aby každý študent v každej škole dostal príležitosť učiť sa informatiku. A teraz
     je čas, aby si vaši zástupcovia vypočuli Váš názor. Tento týždeň sa zástupcovia
@@ -904,6 +917,11 @@
   dashboard_announce_petition_button: Pridaj svoje meno
   dashboard_announce_all: Sleduj nové vlastnosti a aktualizácie na našom učiteľskom
     blogu. <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   host_an_hour: Host an hour
@@ -1023,7 +1041,7 @@
   hourofcode_name: Klasické bludisko
   playlab_name: Play Lab
   infinity_name: Neobmedzená Play Lab
-  artist_name: Artist
+  artist_name: Umelec
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Bež Marko!
   csfirst_name: CS First
@@ -1125,9 +1143,9 @@
   codesters_gradelevel: Vek 12-14
   texasinstruments_gradelevel: Vek 13-16
   teacherled_gradelevel: Vek 5+
-  course1_gradelevel: Ages 4-6
+  course1_gradelevel: Vek 4-6
   course2_gradelevel: Ages 6-18
-  course3_gradelevel: Ages 8-18
+  course3_gradelevel: Vek 8-18
   course4_gradelevel: Ages 10-18
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety

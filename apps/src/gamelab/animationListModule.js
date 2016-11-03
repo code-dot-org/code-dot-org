@@ -10,7 +10,7 @@ import {
   dataURIToSourceSize
 } from '../imageUtils';
 import {animations as animationsApi} from '../clientApi';
-import assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';

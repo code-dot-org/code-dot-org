@@ -291,7 +291,7 @@
         desc: "Scopri come i videogiochi che ami sono controllati dall'algebra! \nScopri
           come le espressioni algebriche e il piano cartesiano possono aiutarci a
           capire il funzionamento dei videogiochi. Dopodichè inizierai a progettare
-          il tuo videogioco.\n"
+          il tuo videogioco."
         video: alg_11_coordinate_plane
       Contracts:
         title: Contratti, Dominio e Range

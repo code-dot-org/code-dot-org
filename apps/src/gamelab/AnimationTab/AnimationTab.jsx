@@ -2,7 +2,7 @@
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import color from '../../color';
+import color from "../../util/color";
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
 import { setColumnSizes } from './animationTabModule';
@@ -91,7 +91,10 @@ const AnimationTab = React.createClass({
             </div>
           </div>
         </ResizablePanes>
-        <AnimationPicker channelId={this.props.channelId}/>
+        <AnimationPicker
+          channelId={this.props.channelId}
+          allowedExtensions=".png,.jpg,.jpeg"
+        />
       </div>
     );
   }

@@ -101,7 +101,7 @@
         turtle_1_2: 'Nyt piirrä neliö. HUOM: käytä lempiväriäsi valitsemalla "aseta
           väri" -lohko.'
         turtle_1_3: Tee neliö käyttäen vain kolme lohkoa.
-        turtle_1_4: |
+        turtle_1_4: |-
           Piirrä kolmio, jonka sivut ovat kaikki eri värisiä. Käytä "satunnainen väri" -toimintoa valitsemaan kunkin sivun väri.
           Vihje: sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku "käänny"-lohkoon.
         turtle_1_5: Harjoituksen vuoksi voisit nyt piirtää kirjekuoren käyttäen kolmiota
@@ -300,6 +300,28 @@
         maze_3_3: Miten pääsisin possun luo? Varmistathan, etten törmää TNT-laatikoihin!
         maze_3_4: Argh! Kirjoita minulle ohjelma, jolla pääsen TNT-laatikoiden ohi
           possun luo.
+        bounce_1_basketball: Attach a block to the "when left arrow" block and press
+          "Run". Move the hand using the left arrow to reach the finish target.
+        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
+          arrow" blocks. Move the hand to reach both finish targets.
+        bounce_5_basketball: We're going to send a ball flying down towards the hand.
+          Attach a block to the "when ball hits hand" block to ensure the ball reaches
+          the flag.
+        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
+          to both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
+          ball until it hits the flag.
+        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice.
+        bounce_11_basketball: You can now attach blocks to the "when run" block. You
+          have to attach the new "throw new ball" block in more than one place. Also,
+          try changing the scene or the speed of the hand and the ball and see how
+          many points you can score before your opponent scores twice!
+        bounce_12_basketball: Create your own Basketball game. You can change all
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
         bounce_1: Liitä lohko "kun nuoli vasemmalle" -lohkoon ja paina Suorita. Liikuta
           mailaa käyttäen vasenta nuolta, kunnes se osuu lippuun.
         bounce_2: Liitä lohko "kun nuoli oikealle" -lohkoon ja paina Suorita. Liikuta
@@ -676,6 +698,11 @@
         infinity_playlab_intro: Pelilabra - Johdanto
         infinity_playlab_events: Pelilabra - Tapahtumia
         infinity_playlab_repeat_forever: Pelilabra - Ikuinen Toisto
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
