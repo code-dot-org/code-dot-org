@@ -7,6 +7,7 @@ STACK=<%=stack_name%>
 REGION=<%=region%>
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 RESOURCE_ID=<%=resource_id%>
+COMMIT=<%=commit%>
 
 # Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
 aws cloudformation signal-resource \

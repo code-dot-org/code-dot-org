@@ -67,7 +67,7 @@ Resources:
     CreationPolicy:
       ResourceSignal:
         Timeout: PT50M
-        Count: {'Fn::GetAtt': [ASGCount, Count]}
+        Count: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 100
     UpdatePolicy:
@@ -184,17 +184,8 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
-          resource_id: 'WebServer')%>
-  WebServerHook:
-    Type: AWS::AutoScaling::LifecycleHook
-    Properties:
-      AutoScalingGroupName: {Ref: WebServer}
-      LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
-      DefaultResult: ABANDON
-      HeartbeatTimeout: 3000 # seconds = 50 minutes
-      NotificationTargetARN: {Ref: WebServerHookTopic}
-      RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
-  WebServerHookTopic: {Type: 'AWS::SNS::Topic'}
+          resource_id: 'WebServer',
+          commit: commit)%>
 
   # Scale up min instances at 4AM PDT (=11:00 UTC)
   ClassroomTrafficBegin:
