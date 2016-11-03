@@ -92,15 +92,15 @@ const TutorialExplorer = React.createClass({
   /**
    * Called when the sort order is changed via dropdown.
    *
-   * @param {string} value - The new sort order.
+   * @param {SortBy} value - The new sort order.
    */
   handleUserInputSortBy(value) {
-    this.setState({sortBy: value});
     const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(this.state.filters, value);
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
-      filteredTutorialsForLocale
+      filteredTutorialsForLocale,
+      sortBy: value
     });
   },
 
