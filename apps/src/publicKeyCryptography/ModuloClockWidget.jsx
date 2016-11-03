@@ -58,7 +58,8 @@ const ModuloClockWidget = React.createClass({
 
   onGoClick() {
     this.setState({animating: true});
-    this.moduloClock.animateTo(this.state.dividend, this.state.speed, null, () => {
+    const maximumDuration = 8000 / this.state.speed + 2000;
+    this.moduloClock.animateTo(this.state.dividend, maximumDuration, null, () => {
       this.setState({animating: false});
     });
   },
