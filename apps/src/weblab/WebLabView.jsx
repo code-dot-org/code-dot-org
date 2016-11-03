@@ -16,6 +16,7 @@ var PaneButton = PaneHeader.PaneButton;
 const WebLabView = React.createClass({
   propTypes: {
     isProjectLevel: React.PropTypes.bool.isRequired,
+    isInspectorOn: React.PropTypes.bool.isRequired,
     hideToolbar: React.PropTypes.bool.isRequired,
     onUndo: React.PropTypes.func.isRequired,
     onRedo: React.PropTypes.func.isRequired,
@@ -116,7 +117,7 @@ const WebLabView = React.createClass({
                 <PaneButton
                   iconClass="fa fa-mouse-pointer"
                   leftJustified={false}
-                  headerHasFocus={true}
+                  headerHasFocus={!this.props.isInspectorOn}
                   isRtl={false}
                   onClick={this.props.onToggleInspector}
                   label={weblabMsg.toggleInspector()}
@@ -147,5 +148,6 @@ const WebLabView = React.createClass({
 export default connect(function propsFromStore(state) {
   return {
     isProjectLevel: state.pageConstants.isProjectLevel,
+    isInspectorOn: state.inspectorOn,
   };
 })(WebLabView);
