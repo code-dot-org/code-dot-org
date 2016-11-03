@@ -1,5 +1,6 @@
-hidden 'false'
-login_required 'true'
+hidden false
+login_required true
+hideable_stages true
 
 stage 'The Need For Programming Languages'
 level 'v2 U3L01 Student Lesson Introduction'
