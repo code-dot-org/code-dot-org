@@ -214,11 +214,13 @@ window.SchoolInfoManager = function (existingOptions) {
 
       show('#school-district-name');
       clearAndHideSchool();
+      show('#school-zipcode');
       show('#school-name');
     } else {
       // Enable districts.
       enableDistrictDropdown(true);
       clearAndHide('#school-district-name');
+      clearAndHide('#school-zipcode');
       clearAndHide('#school-name');
     }
   });
@@ -230,9 +232,11 @@ window.SchoolInfoManager = function (existingOptions) {
       // Clear school id.
       $("#school-id-form").val('');
 
+      show('#school-zipcode');
       show('#school-name');
     } else {
       enableSchoolDropdown(true);
+      clearAndHide('#school-zipcode');
       clearAndHide('#school-name');
     }
   });

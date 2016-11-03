@@ -30,10 +30,6 @@
         %option{value: SchoolInfo::SCHOOL_TYPE_OTHER} Other
 
     .form-group{style: "display: none;"}
-      .question School’s ZIP code
-      %input#school-zipcode.form-control{name: "#{form_name}[school_zip]", type: "text", required: false}
-
-    .form-group{style: "display: none;"}
       .question State
       %select#school-state.form-control{name: "#{form_name}[school_state]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
@@ -80,6 +76,10 @@
           %input#school-other{name: "#{form_name}[school_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
           %span{style: "font-size: 12px"}
             Other school not listed above
+
+    .form-group{style: "display: none;"}
+      .question School’s ZIP code
+      %input#school-zipcode.form-control{name: "#{form_name}[school_zip]", type: "text", required: false}
 
     -# '#school-name' is outside of '#school' so that we can still show it when the school dropdown is hidden.
     .form-group{style: "display: none;"}
