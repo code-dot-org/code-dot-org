@@ -451,10 +451,9 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.bounce_setTeam.VALUES = skin.teams ?
+  blockly.Blocks.bounce_setTeam.VALUES =
     [[msg.setTeamRandom(), 'random']].concat(
-        skin.teams.map((team) => [msg.setTeam({team: team}), `"${team}"`])):
-    [];
+      skin.teams.map((team) => [msg.setTeam({team: team}), `"${team}"`]));
 
   generator.bounce_setTeam = function () {
     return generateSetterCode(this, 'setTeam');
