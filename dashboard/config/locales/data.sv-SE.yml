@@ -303,6 +303,28 @@
           in i lådan med TNT!
         maze_3_4: Argh! Skriv ett program till mig som tar mig runt lådan med TNT
           och till grisen.
+        bounce_1_basketball: Attach a block to the "when left arrow" block and press
+          "Run". Move the hand using the left arrow to reach the finish target.
+        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
+          arrow" blocks. Move the hand to reach both finish targets.
+        bounce_5_basketball: We're going to send a ball flying down towards the hand.
+          Attach a block to the "when ball hits hand" block to ensure the ball reaches
+          the flag.
+        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
+          to both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
+          ball until it hits the flag.
+        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice.
+        bounce_11_basketball: You can now attach blocks to the "when run" block. You
+          have to attach the new "throw new ball" block in more than one place. Also,
+          try changing the scene or the speed of the hand and the ball and see how
+          many points you can score before your opponent scores twice!
+        bounce_12_basketball: Create your own Basketball game. You can change all
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
         bounce_1: Lägg till ett block till den "när vänster pile" blocket och tryck
           på "Kör". Flytta paddeln med vänsterpilen för att nå målet.
         bounce_2: Lägg till ett block till  "när höger pil" och "när vänster pilen"
@@ -499,7 +521,7 @@
         studio_iceage_throw_hearts: "Sid vill låta sin mormor, farmor, veta att han
           älskar henne. Med kommandot \"skådespelare kasta\" kastar Sid (skådespelare
           1) hjärtan på farmor (skådespelare 2)! \nStäll in mormors, farmors humör
-          så att hon blir glad när hon blir träffad av hjärtan.\n"
+          så att hon blir glad när hon blir träffad av hjärtan."
         studio_iceage_free_play: Skapa ditt eget spel eller din egen berättelse. När
           du är klar, klicka på "Slutför" för att låta dina vänner prova ditt spel
           på sina telefoner, surfplattor eller datorer!
@@ -684,6 +706,11 @@
         infinity_playlab_intro: Play Lab - introduktion
         infinity_playlab_events: Play Lab - Händelser
         infinity_playlab_repeat_forever: Play Lab -  Upprepa för evigt
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

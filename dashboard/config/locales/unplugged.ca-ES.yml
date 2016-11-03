@@ -139,9 +139,9 @@
         video: C1_building_foundation
       GettingLoopy:
         title: Fent bucles
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
+          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
+          senzilles i, a continuació, aprendran a repetir-ho.
         video: C1_getting_loopy
       RelayProgramming:
         title: Programació en relleus

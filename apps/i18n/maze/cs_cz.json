@@ -3,8 +3,6 @@
   "atFlower": "na květině",
   "atHoneycomb": "na plástvi",
   "avoidCowAndRemove": "Vyhni se krávě a odstraň 1",
-  "bean": "fazole",
-  "beanTooltip": "Sklízet fazole",
   "collect": "sbírat",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Sebrat položku",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Květina, na které jsi, už nemá nektar.",
   "get": "získat",
   "has": "has",
-  "hasbean": "tam jsou fazole",
+  "haslettuce": "there is lettuce",
   "hascorn": "tam je zrno",
   "haspumpkin": "tam jsou dýně",
   "heightParameter": "výška",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Pokud je v daném směru cesta, proveď první blok akcí. V opačném případě proveď druhý blok akcí.",
   "insufficientHoney": "Používáš správné bloky, ale je potřeba vyrobit správné množství medu.",
   "insufficientNectar": "Používáš správné bloky, ale je potřeba nasbírat správné množství nektaru.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "vyrob",
   "moveBackward": "posunout zpět",
   "moveEastTooltip": "Posuň mě na východ o jedno políčko.",
@@ -111,8 +111,5 @@
   "word": "Najdi slovo",
   "wrongCropError": "Nemůžu zde sklidit tuto plodinu.",
   "yes": "Ano",
-  "youSpelled": "Vyhláskoval(a) jsi",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "Vyhláskoval(a) jsi"
 }
