@@ -13,8 +13,14 @@ const styles = {
     paddingRight: 7
   },
   bar: {
-    backgroundColor: "#eee",
+    backgroundColor: "rgb(0, 178, 192)",
+    color: "white",
     height: 42
+  },
+  select: {
+    backgroundColor: "rgb(0, 178, 192)",
+    color: "white",
+    borderColor: "white"
   },
   filterBy: {
     float: "left",
@@ -30,6 +36,8 @@ const styles = {
 
 const FilterHeader = React.createClass({
   propTypes: {
+    onUserInput: React.PropTypes.func.isRequired,
+    sortBy: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
     legacyLink: React.PropTypes.string,
     filteredTutorialsCount: React.PropTypes.number.isRequired,
@@ -45,6 +53,12 @@ const FilterHeader = React.createClass({
 
   shouldShowCloseFiltersButton() {
     return this.props.mobileLayout && this.props.showingModalFilters;
+  },
+
+  handleChangeSort(event) {
+    this.props.onUserInput(
+      event.target.value
+    );
   },
 
   render() {
@@ -68,6 +82,18 @@ const FilterHeader = React.createClass({
 
           <div style={styles.right}>
             {this.props.filteredTutorialsCount} results
+
+            &nbsp;
+            &nbsp;
+
+            <select
+              value={this.props.sortBy}
+              onChange={this.handleChangeSort}
+              style={styles.select}
+            >
+              <option value="displayweight">Rank</option>
+              <option value="popularityrank">Popularity</option>
+            </select>
 
             {this.shouldShowOpenFiltersButton() && (
               <span>
