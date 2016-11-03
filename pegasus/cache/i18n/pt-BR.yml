@@ -36,8 +36,8 @@
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
   og_title: Toda criança deve ter uma oportunidade
-  og_description: Todos os alunos de qualquer escola merecem a oportunidade de estudar
-    ciência da computação. Isso muda tudo.
+  og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
+    da computação. Isso muda tudo.
   hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -315,47 +315,47 @@
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
   homepage_hero_text_malala: "&ldquo;Eu desafio as meninas do mundo todo a fazer a
-    Hora do Código&rdquo;  \nMalala, ganhadora do Prêmio Nobel da Paz\n"
-  homepage_hero_text_susan: |
+    Hora do Código&rdquo;  \nMalala, ganhadora do Prêmio Nobel da Paz"
+  homepage_hero_text_susan: |-
     &ldquo;Se você pode mudar a tecnologia,
     você pode mudar o mundo.&rdquo;
     Susan, CEO do YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Em vez de simplesmente jogar em seu celular,
     aprenda a programá-lo.&rdquo;
     Presidente Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Nossos filhos &mdash; inclusive nossas meninas &mdash;
     precisam ter a oportunidade de aprender ciência da computação.&rdquo;
     Sheryl, COO do Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;A ciência da computação leva
     às melhores oportunidades no mundo.&rdquo;
     Satya, CEO da Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Se você programa, você pode escolher
     o rumo da sua vida.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Essas habilidades mudaram meu futuro.
     Sem contar que elas são muito divertidas.&rdquo;
     Luna, aluna do 7º ano
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Eu nunca vi meus alunos tão
     animados em aprender.&rdquo;
     Michael, professor
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;A ciência da computação é um campo que
     não tem como você saber se gosta ou não antes de experimentar.&rdquo;
     Jackson, aluno do 6º ano
   homepage_hero_text_student4: "&ldquo;Você pode fazer o que quiser\ncom a programação.&rdquo;
-    \nMaya, 2º ano\n"
+    \nMaya, 2º ano"
   homepage_hero_text_student5: "&ldquo;A ciência da computação não é para\noutra pessoa.
-    É para você, aqui e agora.&rdquo; \nGeraldo, professor\n"
+    É para você, aqui e agora.&rdquo; \nGeraldo, professor"
   homepage_hero_text_teacher1: "&ldquo;A programação estimula a criatividade, inspiração
     e inovação &mdash; \ne tudo isso é essencial em qualquer carreira.&rdquo;\nFloresa,
-    professora\n"
-  homepage_hero_text_teacher2: |
+    professora"
+  homepage_hero_text_teacher2: |-
     &ldquo;Esse programa manteve 100% dos meus alunos
     engajados, envolvidos e participando.&rdquo;
     Adam, professor
@@ -800,6 +800,18 @@
     E para a nova seção
   dashboard_sections_no_move: Não, quero mover o(s) aluno(s) apenas para a nova seção.
   dashboard_sections_move_students: Mover alunos
+  dashboard_sections_assign_hoc_script_desc: Participando da Hora do Código?
+  dashboard_sections_assign_hoc_script_msg: Por favor note que nós não salvaremos
+    o progresso neste curso durante a semana de de 5 a 11 de Dezembro, devido ao nível
+    de tráfego sem precedentes que nosso site receberá pela Hora do Código. Você pode
+    ainda atribuir o curso e dar a todos os estudantes certificados de participação.
+    (A maioria dos professores imprime eles antecipadamente <a href="http://www.code.org/certificates">).</a>.)<br/><br/>Nós
+    estamos emocionados pelo número de professores e estudantes que estão participando
+    e nos desculpamos porque não poderemos salvar tudo. Se sua sala quer ir mais longe,
+    você pode ir além da Hora do Código e ensinar um curso tal como Fundamentos da
+    Ciência da Computação. Nosso painel do professor permitirá que você monitore o
+    progresso dos seus alunos semana sim semana não durante todo o ano.
+  dashboard_sections_assign_activity: Atribuir Curso
   dashboard_error_none_selected: Você não selecionou nenhum aluno para mover. Selecione
     pelo menos um aluno.
   dashboard_error_other_section: Se estiver movendo alunos entre suas próprias seções,
@@ -946,6 +958,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Saiba mais
   dashboard_announce_try_now_button: Experimente agora
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Como professor, você está abrindo as portas de um movimento
     que dará a cada aluno de todas as escolas a oportunidade de aprender ciência da
     computação. Agora chegou a hora de seus representantes ouvirem o que você tem
@@ -957,6 +970,11 @@
   dashboard_announce_all: Fique por dentro dos novos recursos e atualizações em nosso
     blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas
     novidades.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1866,21 +1884,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.

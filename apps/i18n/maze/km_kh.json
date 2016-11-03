@@ -3,8 +3,6 @@
   "atFlower": "នៅ​ផ្កា",
   "atHoneycomb": "នៅ​សំបុក​ឃ្មុំ",
   "avoidCowAndRemove": "ចៀស​គោ ហើយ​ដក​ចេញ 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "ផ្កា​ដែល​អ្នក​កំពុង​យក លែង​មាន​លម្អងហើយ",
   "get": "យក",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "កម្ពស់",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "ប្រ​សិន​បើ មាន​ផ្លូវ​ក្នុង​ទិស​ដៅ​កំ​ណត់​ណា​មួយ នោះ​ចូរ​ធ្វើ​បណ្ដុំ​សកម្ម​ភាព​ទី​មួយ។ បើ​មិន​ពុំ​នោះទេ ចូរធ្វើ​បណ្ដុំ​នៃ​សកម្ម​ភាពទីពីរ",
   "insufficientHoney": "អ្នក​បាន​ប្រើ​ប្លុក​​ត្រូវ​​អស់​ហើយ ប៉ុន្តែ​អ្នក​ត្រូវ​ការ​ប្រមូល​​ទឹក​ឃ្មុំ​អោយ​ត្រូវ​ចំនួន។",
   "insufficientNectar": "អ្នក​បាន​ប្រើ​ប្លុក​ត្រូវ​អស់​ហើយ ប៉ុន្តែ​អ្នក​ត្រូវ​ការ​ប្រមូល​​លម្អង​អោយ​ត្រូវ​ចំនួន។",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "ធ្វើ",
   "moveBackward": "ថយ​ក្រោយ",
   "moveEastTooltip": "រំកិល​ខ្ញុំ​ទៅខាង​កើត​​ មួយចន្លោះ",
@@ -111,8 +111,5 @@
   "word": "ស្វែងរក​ពាក្យ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "យល់ព្រម",
-  "youSpelled": "អ្នក​បាន​ប្រកប",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "អ្នក​បាន​ប្រកប"
 }

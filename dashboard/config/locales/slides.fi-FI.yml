@@ -2656,7 +2656,7 @@
           kymmentätuhatta sikaa voitat pelin."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: |
+        text: |-
           [opiskelijat kertovat]
           "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
           "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
@@ -2782,7 +2782,7 @@
           kymmentätuhatta sikaa voitat pelin."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: |
+        text: |-
           [opiskelijat kertovat]
           "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
           "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
