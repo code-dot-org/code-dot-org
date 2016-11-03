@@ -1,3 +1,5 @@
+/* global appOptions */
+
 import $ from 'jquery';
 import debounce from 'lodash/debounce';
 import queryString from 'query-string';
@@ -185,7 +187,7 @@ function renderStageLockedText(element) {
  */
 function renderContentToggle() {
   if (experiments.isEnabled('viewAsToggle')) {
-
+    // We can remove this element once we get rid of the experiment
     $("#try-it-yourself").hide();
 
     const levelContent = $('#level-body');
@@ -198,7 +200,7 @@ function renderContentToggle() {
 
     ReactDOM.render(
       <Provider store={getStore()}>
-        <TeacherContentToggle/>
+        <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app}/>
       </Provider>,
       element
     );

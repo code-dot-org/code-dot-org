@@ -1,5 +1,4 @@
-/* globals appOptions */
-
+import $ from 'jquery';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
@@ -24,8 +23,10 @@ const styles = {
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
-const TeacherContentToggle = Radium(React.createClass({
+export const TeacherContentToggle = Radium(React.createClass({
   propTypes: {
+    isBlocklyOrDroplet: PropTypes.bool.isRequired,
+    // redux provided
     viewAs: PropTypes.string.isRequired,
     hiddenStagesInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
@@ -34,6 +35,9 @@ const TeacherContentToggle = Radium(React.createClass({
   },
 
   componentDidMount() {
+    if ($('#level-body').length === 0) {
+      throw new Error('Expected level-body');
+    }
     // Show this element, as parent div (refs.lockMessage) now owns visibility
     $('#locked-stage').appendTo(this.refs.lockMessage).show();
     $('#hidden-stage').appendTo(this.refs.hiddenMessage).show();
@@ -45,7 +49,14 @@ const TeacherContentToggle = Radium(React.createClass({
   },
 
   render() {
-    const { viewAs, hiddenStagesInitialized, sectionsAreLoaded, isLockedStage, isHiddenStage } = this.props;
+    const {
+      viewAs,
+      hiddenStagesInitialized,
+      sectionsAreLoaded,
+      isLockedStage,
+      isHiddenStage,
+      isBlocklyOrDroplet
+    } = this.props;
 
     const frameStyle = {
       position: 'relative',
@@ -64,13 +75,13 @@ const TeacherContentToggle = Radium(React.createClass({
         contentStyle.visibility = 'hidden';
       }
 
-      // In the case where appOptions.app is truthy, we don't want to actually set
+      // In the case where isBlocklyOrDroplet is true, we don't want to actually set
       // display none, as that causes the editor (be it blockly or droplet) to
       // misrender. We can get away with just setting visibilityhidden because the editor
       // is rendered to an absolute position and doesnt affect the layout of this
       // component. For cases where we don't have an IDE (i.e. multi/match) we
       // need to set display:none such that it doesnt affect our layout
-      if (hasOverlayFrame && !appOptions.app) {
+      if (hasOverlayFrame && !isBlocklyOrDroplet) {
         contentStyle.display = 'none';
       }
     }
