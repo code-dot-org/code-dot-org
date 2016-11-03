@@ -2,7 +2,7 @@ class Api::V1::Pd::WorkshopAttendanceSerializer < ActiveModel::Serializer
   attributes :state, :section_code, :session_attendances
 
   def section_code
-    object.section.code
+    object.section.try(:code)
   end
 
   def session_attendances
