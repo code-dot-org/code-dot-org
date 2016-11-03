@@ -4,7 +4,7 @@ Dashboard::Application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  config.cache_classes = false
+  config.cache_classes = !CDO.with_default(true).disable_script_cache
   config.cache_store = :null_store
 
   # Do not eager load code on boot.
@@ -65,4 +65,8 @@ Dashboard::Application.configure do
   # don't act like a levelbuilder by default
   # set "levelbuilder_mode: true" in locals.yml if you want to be able to create levels or test levelbuilder functionality
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  # disable script cache by default in development mode, to reduce server
+  # startup time. Set 'disable_script_cache: false" in locals.yml to override
+  config.disable_script_cache = CDO.with_default(true).disable_script_cache
 end

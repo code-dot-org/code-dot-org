@@ -5,6 +5,9 @@ Dashboard::Application.configure do
   # Show full error reports
   config.consider_all_requests_local = true
 
+  # Cache classes to persist Script.script_cache
+  config.cache_classes = true
+
   # Act like levelbuilder mode by default.
   config.levelbuilder_mode = CDO.with_default(true).levelbuilder_mode
 
