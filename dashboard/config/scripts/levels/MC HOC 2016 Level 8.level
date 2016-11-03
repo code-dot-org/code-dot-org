@@ -85,7 +85,6 @@
         <block type="craft_attack"/>
         <block type="craft_explodeEntity"/>
         <block type="craft_flashEntity"/>
-        <block type="craft_destroyEntity"/>
         <block type="craft_drop">
           <title name="TYPE">gunPowder</title>
         </block>

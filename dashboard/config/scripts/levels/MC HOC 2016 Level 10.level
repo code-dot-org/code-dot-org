@@ -36,7 +36,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "30",
     "day_night_cycle_time": "30",
-    "instructions": "It's time to make your own Minecraft! 'Spawn' creatures and then make them do whatever you want. Have fun!",
+    "instructions": "It's time to make your own Minecraft! Spawn creatures and then make them do whatever you want. Have fun!",
     "timeout_verification_function": "function(verificationAPI) {\r\n  // if we have reached the timeout without fail, they succeeded.\r\n  return true;\r\n},",
     "use_player": "true",
     "level_verification_timeout": "0",
