@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import color from '../color';
+import color from "../util/color";
 import * as applabConstants from './constants';
 import ScreenSelector, {styles as ScreenSelectorStyles} from './ScreenSelector';
 import { RunButton, ResetButton } from '../templates/GameButtons';

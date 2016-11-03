@@ -2670,19 +2670,19 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: |
+        text: |-
           Jmenuji se Jens Bergensten, ale jsem znám jako Jeb. Jsem vedoucí vývojář Minecraftu zde v mojang.com. Myslím, že mi bylo 11 nebo 12, když jsem programovat, protože jsem chtěl dělat hry. Jeden z přátel táty mi pověděl, že abych dělal hry, potřebuji se naučit, jak se programuje. Takže jsem se do toho dal. Rád navrhuji a zjišťuji architekturu věcí. Tohle je to, co
           mám skutečně rád na Minecraftu.
       2:
         image: notes/mc_intro_2.JPG
-        text: |
+        text: |-
           Během následující hodiny se naučíš základy informatiky programováním pohybů Alex nebo Steva v simulovaném kousku světa
           Minecraftu.
       3:
         image: notes/mc_intro_3.JPG
         text: "Tradiční programování je běžně text, ale dnes použijeme Blockly: \nvyužívání
           bloků, které přetahujete k psaní programů. Na pozadí tvoříte\nJavaScript
-          kód.\n"
+          kód."
       4:
         image: notes/mc_intro_4.JPG
         text: Pojmy, které se naučíš, počítačoví programátoři používají denně a jsou

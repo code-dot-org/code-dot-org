@@ -1,5 +1,5 @@
 /** @file Non-p5 GameLab commands */
-var assetPrefix = require('../assetManagement/assetPrefix');
+import * as assetPrefix from '../assetManagement/assetPrefix';
 var studioApp = require('../StudioApp').singleton;
 
 var gamelabCommands = module.exports;

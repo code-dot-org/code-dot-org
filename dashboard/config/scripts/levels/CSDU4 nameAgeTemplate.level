@@ -67,13 +67,10 @@
     "instructions": "Add an Text Input box for the name and age. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
