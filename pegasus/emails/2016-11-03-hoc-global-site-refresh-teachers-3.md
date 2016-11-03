@@ -1,6 +1,6 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
-subject: "New: Personalize your classroom’s Hour of Code"
+subject: "Personalize the Hour of Code in your classroom"
 ---
 
 <h3>The Hour of Code is coming during Computer Science Education Week: December 5-11!</h3>
