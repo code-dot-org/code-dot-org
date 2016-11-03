@@ -1,4 +1,4 @@
-import * as color from '../color';
+import * as color from "../util/color";
 import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {singleton as studioApp} from '../StudioApp';

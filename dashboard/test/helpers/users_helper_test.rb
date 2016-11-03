@@ -3,7 +3,7 @@ require 'test_helper'
 class UsersHelperTest < ActionView::TestCase
   include UsersHelper
 
-  def test_summarize_user_progress_and_percent_complete
+  def test_summarize_user_progress
     script = Script.twenty_hour_script
     user = create :user, total_lines: 42
 
@@ -58,7 +58,6 @@ class UsersHelperTest < ActionView::TestCase
      }
     }, summarize_user_progress_for_all_scripts(user))
 
-    assert_equal [0.0, 0.1] + Array.new(18, 0.0), percent_complete(script, user)
     assert_in_delta 0.0183, percent_complete_total(script, user)
 
     # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.

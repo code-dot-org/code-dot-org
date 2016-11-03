@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import { getStore } from '../redux';
 import { disableBubbleColors } from '../progressRedux';
-import experiments from '@cdo/apps/experiments';
+import experiments from '../../util/experiments';
 import DisabledBubblesAlert from '../DisabledBubblesAlert';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -10,7 +10,7 @@ var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
-var color = require('../../color');
+var color = require("../../util/color");
 
 import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityUtils';
 

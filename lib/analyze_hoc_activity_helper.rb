@@ -9,10 +9,6 @@ require 'cdo/properties'
 DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
-def add_count_to_hash(hash, key, count)
-  hash[key] = hash.key?(key) ? hash[key] + count : count
-end
-
 def analyze_day_fast(date)
   day = date.strftime('%Y-%m-%d')
   next_day = (date + 1).strftime('%Y-%m-%d')
