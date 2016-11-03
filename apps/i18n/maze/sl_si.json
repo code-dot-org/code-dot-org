@@ -3,8 +3,6 @@
   "atFlower": "v cvetu",
   "atHoneycomb": "pri satovju",
   "avoidCowAndRemove": "izogni se kravi in odstrani 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Roža, na kateri si, nima več medu.",
   "get": "najdi",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "višina",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Če obstaja pot naprej v določeni smeri, potem naredi prvi blok dejanj. V nasprotnem primeru, naredi drugi blok dejanj.",
   "insufficientHoney": "Uporabil si prave bloke, vendar moraš narediti pravo količino medu.",
   "insufficientNectar": "Uporabil si prave bloke, vendar moraš nabrati pravo količino nektarja.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "naredi",
   "moveBackward": "premakni nazaj",
   "moveEastTooltip": "Premakni me vzhodno vsaj za eno mesto.",
@@ -111,8 +111,5 @@
   "word": "Poišči besedo",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Da",
-  "youSpelled": "Ti si črkoval",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "Ti si črkoval"
 }

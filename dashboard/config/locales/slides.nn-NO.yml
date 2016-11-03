@@ -1894,10 +1894,11 @@
           seg frem en boks? Da legger jeg til en blokk til i programmet vårt.
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Jeg kommer til å velge en "rotér mot høyre"-blokk og dra den inn under
+          "gå fremover"-blokken, til det dukker opp en gul pil. Da slipper jeg den
+          og de to blokkene fester seg til hverandre. Når jeg så trykker på "Kjør"
+          igjen, vil fuglen utføre kommandoene i arbeidsområdet i rekkefølge fra toppen
+          og nedover.
       5:
         image: notes/C4_intro_5.png
         text: Hvis du vil slette en blokk, kan du dra den vekk fra stablen og dra
@@ -1906,78 +1907,80 @@
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: If I want to draw a rectangle 50 pixels tall and that is twice as wide
-          as it is tall, how would I program the computer to do that? Well, I could
-          tell the artist to go up fifty, turn right, and then go over 100 and move
-          the whole thing twice. But then I'm doing the math for the computer.
+        text: Hvis jeg ønsker å tegne en firkant som er 50 punkter høy og dobbelt
+          så bred som høy, hvordan kunne jeg programmere en datamaskin til å gjøre
+          dét? Jeg kunne jo be kunstneren om å gå opp femti punkt, snu mot høyre og
+          så gå 100 punkt og så flytte alt sammen to ganger. Da ville jeg imidlertid
+          ha gjort utregningen for datamaskinen selv.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers
-          are really good at doing math so we should leave it to them whenever possible.
-          If I just used a variable called height instead, then I could easily change
-          height to fifty and then change my algorithm to tell the artist to go up
-          by height, turn right and then go over by height times 2, which gives us
-          a rectangle that is twice as wide as it is tall.
+        text: "Å gange femti med to i hodet er ikke vanskelig, men datamaskiner er
+          skikkelig flinke til å regne ut slikt så vi bør la dem gjøre det når vi
+          kan. Ved å lage en variabel jeg kaller høyde isteden kan jeg enkelt endre
+          høyden til femti og så andre algoritmen min til å be artisten gå opp høyde
+          punkter, snu mot høyre og så gå i to ganger høyden. Dette gir oss en rektangel
+          som er dobbelt så bred som den er høy."
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: This lesson is called Tangram Algorithms. A tangram is a puzzle with
-          seven pieces that can be put together to make other shapes. You'll be using
-          an algorithm to explain to your partner how to put the puzzle together.
+        text: Denne økta heter Tangram-algoritmer. Et tangram er et puslespill med
+          syv brikker som kan settes sammen til mange figurer. Du kommer til å bruke
+          en algoritme som forteller partneren din hvordan han eller hun skal sette
+          sammen puslespillet.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a
-          task. We use them every day with things like shopping lists and recipes.
-          If you keep an algorithm simple, there are lots of ways to interpret it
-          and whoever performs that algorithm might not get exactly what you wanted.
-          If you want to make sure that everyone ends up with the exact same thing,
-          then your algorithm will need to be detailed and very specific.
+        text: En algoritme er bare en liste med steg man kan utføre for å gjøre en
+          oppgave. Vi bruker algoritmer hver dag, slik som handlelister og oppskrifter.
+          Veldig forenklede algoritmer kan ofte tolkes på mange måter, og forskjellige
+          utførere kan ende opp med forskjellige resultater. Hvis du ønsker å ende
+          opp med samme resultat må algoritmen din være svært detaljert, presis og
+          nøyaktig.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: I'm using an algorithm today to complete a painting. I wanted to try
-          doing a painting of some wolves but I'm not the most amazing painter. Luckily
-          for people by me, there is paint by numbers. There are forty colors and
-          it has little letters and numbers that tell you which color to paint each
-          section. Paint by numbers tells me exactly what color to use and where.
+        text: "I dag bruker jeg en algoritme i dag for å male et maleri. Jeg vil lage
+          et maleri av noen ulver, men jeg er nok ikke en kjempeflink kunstmaler.
+          Heldigvis for folk som meg, fins det bilder som kan males etter et tallsystem.
+          I dette bildet er det førti farger og bildets mange felt har små bokstaver
+          og tall som forteller deg hvilken farge hver av delene skal ha. (uferdig)
+          Maling av tall forteller meg nøyaktig hvilken farge å bruke og hvor.(uferdig)\n
+          \nkontekst | forespørsel Kontekst."
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: It's very specific so I'm able to follow directions and the painting
-          will come out looking awesome. It's a great algorithm. If the instructions
-          weren't specific enough, my wolves wouldn't look as good. When you really
-          want something to turn out exactly the way that you planned it, it's best
-          to be extremely precise.
+        text: Jeg kan enkelt følge de detaljerte instruksjonene, og det ferdige maleriet
+          blir kjempefint. Det er en veldig bra algoritme. Hvis instruksjonene ikke
+          hadde vært så detaljerte, ville ikke ulvene mine sett så bra ut. Når du
+          har tenkt ut akkurat hvordan du vil at noe skal bli, er det viktig å være
+          ekstremt nøyaktig.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: Each team, the person who's instructing that's the person who's holding
-          the paper, has to figure out what their off symbol is going to be and what
-          their on symbol is going to be. In binary, it's kind of like an alphabet
-          with two letters. Like having A and B be your entire alphabet but you've
-          got a 0 and a 1.
+        text: For hvert team må personen som gir instruksjoner og holder arket, finne
+          ut hva som skal være symbolet for "på", og hva som skal være symbolet for
+          "av". Binærkode er som et alfabet med bare to bokstaver. Som om hele alfabetet
+          besto bare av A og B, bare med 0 og 1 istedet.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: The most common way you use binary is in an if statement. It's a classic
-          thing from programming. The program runs along and it says if something
-          is true, then do this. Or it's not true and you do something else. What
-          if you want to do something maybe a little more complicated. Instead an
-          if statement, you want to work with something like an image or a sound in
-          a computer.
+        text: Den vanligste måten å bruke binærkode på er med if-setninger. Det er
+          en klassisk ting innenfor programmering. Programmet kjører i vei og sier
+          at hvis (if) noe er sant (true) så gjør dette. Eller hvis det ikke er sant,
+          så gjør noe annet. Kanskje vil du heller gjøre litt mer komplekse ting.
+          Istedet for en if-setning kan du heller jobbe med for eksempel et bilde
+          eller lyd i datamaskinen.
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: 'A computer only knows binary but an image, it''s not binary, it''s
-          not ones and zeros so how do you do that? Here''s an example: You have this
-          beautiful picture. Now a picture is basically a form of information. All
-          information can be encoded in binary one way or another, you just have to
-          figure out how to do it.'
+        text: 'En datamaskin forstår bare binærkode, men et bilde er jo ikke binært,
+          det består ikke av 0 og 1, så hvordan funker det? Her er et eksempel: du
+          har et vakkert bilde. Et bilde er i bunn og grunn en form for informasjon.
+          All informasjon kan uttrykkes i binærkode på en eller annen måte, man må
+          bare finne ut hvordan man gjør det.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: You imagine that we're going to put a grid over this panda bear and
-          for each square, we're going to decide whether that square is more black
-          or more white. And then we're going to color it that way. Now each cell
-          on the grid is either black or white and then the black squares we say those
-          are zeros (binary digit) and the white squares are ones, the other binary
-          digit. At the end, you're left with just a bunch of ones and zeros. That's
-          how you represent this image in binary.
+        text: Forestill deg at vi tegner et rutenettverk over bildet av pandabjørnen.
+          For hver rute må vi avgjøre om ruten ser mest svart eller hvit ut. Så må
+          vi gi den riktig farge. Nå er hver rute enten svart eller hvit, og vi kan
+          si at de svarte er 0 (binært tall) og de hvite er 1 (det andre binære tallet).
+          Til slutt sitter du igjen med en haug med 0 og 1, og slik kan du altså beskrive
+          bildet med binærkode.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
@@ -1989,18 +1992,18 @@
           value. The person with the highest score wins!
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: For loops can come in handy a lot of places and if you were to become
-          a meteorologist, you would use for loops all the time. Hi, I'm Becky. I
-          work at EverPower Renewables as a wind meteorologist. I forecast wind speeds
-          for the Columbia River Gorge area where the company owns wind farms.
+        text: For-løkker kan være praktiske i mange situasjoner. Hvis du skal bli
+          meteorolog vil du komme til å bruke for-løkker hele tiden. Hei, jeg heter
+          Becky. Jeg jobber på EverPower Renewables som vindmeteorolog. Jeg lager
+          vindhastighetsprognoser for området rundt Columbia River Gorge, der selskapet
+          mitt eier vindmølleparker.
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: We're trying to understand how much wind is going to be there so that
-          we know how much power is going to be outputted. We give that information
-          to real time energy traders. They buy and sell power based on how much power
-          we tell them is going to be there in order to make sure the power grid is
-          balanced, your lights stay on, and that we maximize the amount of energy
-          we get out of our farms.
+        text: Vi prøver å finne ut hvor mye vind vi kan forvente slik at vi vet hvor
+          mye strøm som vil bli produsert. Informasjonen gir vi til sanntids kraftleverandører.
+          De kjøper og selger strøm basert på hvor mye strøm vi sier vil være tilgjengelig
+          slik at strømnettet blir balansert, lyset ditt ikke blir borte, og vi får
+          maksimal utnyttelse av energien som produseres i våre vindmølleparker.
       4:
         image: notes/C4_unplugged_forloops_4.png
         text: We're at the national control center for EverPower Renewables here in

@@ -252,7 +252,7 @@
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_online: Provo kurse të tjera online
   learn_classes: Gjej klasa lokale
-  hoc_is_here: "#OraPërKodim është ketu - provoje! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -300,41 +300,41 @@
   studiobar_shop_title: Dyqani
   studiobar_shop_body: Anashkalo stereotipet. Vishni logon tonë me krenari.
   homepage_hero_text_malala: "&ldquo; Sfidoj vajzat në mbarëbotën të mësojnë të kodojnë
-    për një orë &rdquo; \nMalala, Fituese e Çmimit Nobel për Paqen\n"
-  homepage_hero_text_susan: |
+    për një orë &rdquo; \nMalala, Fituese e Çmimit Nobel për Paqen"
+  homepage_hero_text_susan: |-
     &ldquo; Nëse mund të ndryshosh teknologjinë mund të ndryshosh botën. &rdquo;
     Susan, Themeluese e YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo; Mos e përdor telefonin vetëm për të luajtur, mëso ta programosh atë. &rdquo;
     Presidenti Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo; Fëmijët tanë &mdash; duke përfshirë edhe vajzat tona &mdash;
     kanë nevojë t'ju jepet mundësia të mësojnë shkencat kompjuterike. &rdquo;
     Sheryl, COO në Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo; Shkenca kompjuterike mund të hap
     mundësitë më të mira në botë. &rdquo;
     Satya, Shef Ekzekutiv në Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Nëse arrin të kodosh mund të zgjedhësh dhe kryesh kursin e jetës tënde. &rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo; Këto aftësi kanë ndryshuar të ardhmen time.
     Për të mos folur për argëtimin që bën përmes tyre. &rdquo;
     Luna, klasa e 7-të
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo; Nuk i kam parë kurrë fëmijët e mi më të apasionuar pas të mësuarit se tani. &rdquo;
     Michael, mësues
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo; Shkencat Kompjuterike është terren të cilin pa e provuar nuk arrin do ta kuptosh nëse e pëlqen apo jo. &rdquo;
     Jackson, klasa e 6-të
   homepage_hero_text_student4: "&ldquo; Ti mund të bësh çdo gjë që të thotë mendja
-    me anë të programimit. &rdquo; \nMaya, klasa e 2-të\n"
+    me anë të programimit. &rdquo; \nMaya, klasa e 2-të"
   homepage_hero_text_student5: "&ldquo; Shkencat kompjuterike nuk janë për ndokënd
-    tjetër. Janë për ty, këtu, tani. &rdquo; \nGeraldo, mësues\n"
+    tjetër. Janë për ty, këtu, tani. &rdquo; \nGeraldo, mësues"
   homepage_hero_text_teacher1: "&ldquo; Kodimi sjell kreativitet, frymëzim dhe risi
-    &mdash; \ntë gjitha këto janë thelbësore në karrierë. &rdquo;\nFloresa, mësuese\n"
-  homepage_hero_text_teacher2: |
+    &mdash; \ntë gjitha këto janë thelbësore në karrierë. &rdquo;\nFloresa, mësuese"
+  homepage_hero_text_teacher2: |-
     &ldquo; Ky program i bën të gjithë nxënësit të përfshihen, të marrin pjesë dhe të angazhohen plotësisht.&rdquo;
     Adam, mësues
   homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
@@ -760,6 +760,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -904,6 +916,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Mëso më shumë
   dashboard_announce_try_now_button: Provo tani
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -912,6 +925,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   host_an_hour: Host an hour

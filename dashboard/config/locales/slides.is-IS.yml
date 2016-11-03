@@ -2482,17 +2482,17 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: |
+        text: |-
           Hæ, ég er Kathleen Kennedy og ég er framleiðandi Star Wars: The Force Awakens. Í dag færð þú að vinna með einni af stjörnunum okkar, BB-8. BB-8 er kúlulaga vélmenni. Allt sem hann gerir og sérhver hreyfing hans er undir stjórn tölvuhugbúnaðar.
           Tölvunarfræði kemur við sögu í allri starfsemi, í markaðssetningu, í heilbrigðisþjónustu, í kvikmyndum. Reyndar unnu hundruðir tölvunarfræðinga saman við að búa til kvikmyndina The Force Awakens.
       2:
         image: notes/starwars_intro_2.JPG
-        text: |
+        text: |-
           Hæ, ég er Rachel Rose. Ég er yfirmaður í rannsóknum og þróun hjá ILM og ég leiði hópinn sem gerir hreyfingar og leikverur.
           Í The Force Awakens ber ég ábyrgð á að hjálpa listamönnunum að útbúa stoðkerfi, en það eru þeir hlutar leikveru sem hreyfast og gera hana trúverðuga í órafjarlægri vetrarbraut.
       3:
         image: notes/starwars_intro_3.JPG
-        text: |
+        text: |-
           Næstu klukkustundina ætlum við að búa til okkar eigin Star Wars leik sem mun kenna þér undirstöðuatriði forritunar. Venjulega er forritun öll í texta en við ætlum að nota kubba sem við getum dregið til að búa til forrit. Bak við tjöldin ertu enn að búa til kóða.
           Eftir að þú hefur prófað grunnatriðin með kubbum ætlum við að láta þig skipta yfir í JavaScript, eitt vinsælasta forritunarmálið á vefnum.
       4:
@@ -2557,7 +2557,7 @@
           nota þessa flýtifyllingu."
       5:
         image: notes/starwars_typing_5.JPG
-        text: |
+        text: |-
           Þegar þú skrifar kóða er nauðsynlegt fyrir tölvuna að þú vandir þig. Þú verður að hafa alla stafi og hástafi nákvæmlega rétta. Og ekki gleyma sviganum og semikommunni.
           Minnsta villa í ritun veldur því að BB-8 skilur ekki kóðann og getur ekki hreyft sig.
       6:
@@ -2655,12 +2655,12 @@
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: |
+        text: |-
           Hæ, ég er Kathleen Kennedy og ég er framleiðandi Star Wars: The Force Awakens. Í dag færð þú að vinna með einni af stjörnunum okkar, BB-8. BB-8 er kúlulaga vélmenni. Allt sem hann gerir og sérhver hreyfing hans er undir stjórn tölvuhugbúnaðar.
           Tölvunarfræði kemur við sögu í allri starfsemi, í markaðssetningu, í heilbrigðisþjónustu, í kvikmyndum. Reyndar unnu hundruðir tölvunarfræðinga saman við að búa til kvikmyndina The Force Awakens.
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: |
+        text: |-
           Hæ, ég er Rachel Rose. Ég er yfirmaður í rannsóknum og þróun hjá ILM og ég leiði hópinn sem gerir hreyfingar og leikverur.
           Í The Force Awakens ber ég ábyrgð á að hjálpa listamönnunum að útbúa stoðkerfi, en það eru þeir hlutar leikveru sem hreyfast og gera hana trúverðuga í órafjarlægri vetrarbraut.
       3:

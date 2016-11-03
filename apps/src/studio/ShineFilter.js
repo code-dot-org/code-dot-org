@@ -1,7 +1,7 @@
 /** @file Runs a specular spotlight across the image from top-left to bottom-right. */
 
 require('../utils'); // Provides Function.prototype.inherits
-var color = require('../color');
+var color = require("../util/color");
 var SVG_NS = require('../constants').SVG_NS;
 var ImageFilter = require('./ImageFilter');
 
