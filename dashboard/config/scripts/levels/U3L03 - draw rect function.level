@@ -105,32 +105,41 @@
       },
       {
         "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. You can use this knowledge later, but for now, try to stick to the constraints of this problem and just write a function called right()."
+      },
+      {
+        "entries": [
+          "right"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "You need to define a function called \"right\" and call it. Did you spell and capitalize it the same way as the instructions? Did you call it enough times to travel around the rectangle in a clock-wise fashion?"
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 6,
+        "message": "It doesn't seem like you are moving forward enough times to draw the figure. Note the long sides of the rectangle are 2 moveForwards long."
+      },
+      {
+        "entries": [
           "drawRectangle"
         ],
         "matchType": "exact",
         "minTimes": 1,
         "message": "You need to define a function called \"drawRectangle\" and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
-      },
-      {
-        "entries": [
-          "drawRectangle",
-          "moveForward",
-          "moveForward",
-          "right",
-          "moveForward",
-          "right",
-          "moveForward",
-          "moveForward",
-          "right",
-          "moveForward",
-          "right"
-        ],
-        "matchType": "inexact",
-        "minTimes": 1,
-        "message": "Hmmm, something isn't right.  Your code should now start with a call to drawRectangle() - a function you defined. It also doesn't seem like you are calling right() or moving forward enough times to draw the figure and end up where you started, facing the same direction."
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,
