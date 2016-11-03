@@ -70,6 +70,12 @@ For more information, please contact advocacy@code.org.
 
 ## Tools to help you advocate locally
 
-<%= view :promote_tools, state: nil %>
+<%= view :promote_tools, state: nil, section_name: 'local_tools' %>
+
+<div style="clear:both"></div>
+
+## Policy development resources
+
+<%= view :promote_tools, state: nil, section_name: 'policy_resources' %>
 
 [/tools-section]
