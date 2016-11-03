@@ -1,6 +1,6 @@
 var React = require('react');
 var Radium = require('radium');
-var color = require('../../color');
+var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 
 var styles = {

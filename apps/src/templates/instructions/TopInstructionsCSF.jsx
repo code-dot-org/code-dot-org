@@ -5,11 +5,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
-import renderer from '../../StylelessRenderer';
+import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
-var color = require('../../color');
+var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
@@ -241,6 +241,17 @@ var TopInstructions = React.createClass({
 
     if (this.props.feedback || this.state.promptForHint || gotNewHint) {
       this.scrollInstructionsToBottom();
+    }
+
+    if (!this.props.collapsed && !prevProps.collapsed) {
+      const minHeight = this.getMinHeight();
+      const maxHeight = this.props.maxHeight;
+      const heightOutOfBounds = this.props.height < minHeight || this.props.height > maxHeight;
+
+      if (heightOutOfBounds) {
+        const newHeight = Math.max(Math.min(this.props.height, maxHeight), minHeight);
+        this.props.setInstructionsRenderedHeight(newHeight);
+      }
     }
   },
 

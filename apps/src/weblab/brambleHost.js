@@ -20,6 +20,8 @@ let brambleProxy_ = null;
 let webLab_ = null;
 // the registered onProjectChanged callback function
 let onProjectChangedCallback_ = null;
+// the registered onBrambleReady callback function
+let onBrambleReadyCallback_ = null;
 // the set of recent changes since the last syncFilesWithBramble() called
 let _recentBrambleChanges;
 // the version id of the project at the time of the last bramble file sync
@@ -386,8 +388,16 @@ function refreshPreview() {
   brambleProxy_.refreshPreview();
 }
 
+function enableFullscreenPreview() {
+  brambleProxy_.enableFullscreenPreview();
+}
+
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
+}
+
+function onBrambleReady(callback) {
+  onBrambleReadyCallback_ = callback;
 }
 
 function startInitialFileSync(callback, forceResetToStartSources) {
@@ -465,7 +475,9 @@ const brambleHost = {
   enableInspector: enableInspector,
   disableInspector: disableInspector,
   refreshPreview: refreshPreview,
+  enableFullscreenPreview: enableFullscreenPreview,
   onProjectChanged: onProjectChanged,
+  onBrambleReady: onBrambleReady,
   startInitialFileSync: startInitialFileSync,
   syncFiles: syncFiles,
 };
@@ -525,6 +537,10 @@ function load(Bramble) {
     bramble.on("folderRename", handleFolderRename);
 
     brambleProxy_ = bramble;
+
+    if (onBrambleReadyCallback_) {
+      onBrambleReadyCallback_();
+    }
   });
 
   Bramble.once("error", function (err) {

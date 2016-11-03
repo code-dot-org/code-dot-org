@@ -7,7 +7,7 @@ import StageProgress from './stage_progress';
 import TeacherStageInfo from './TeacherStageInfo';
 import { ViewType } from '../../stageLockRedux';
 import { isHiddenFromState } from '../../hiddenStageRedux';
-import color from '../../../color';
+import color from "../../../util/color";
 
 const styles = {
   row: {
