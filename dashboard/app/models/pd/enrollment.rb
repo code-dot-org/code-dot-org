@@ -38,7 +38,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validates :name, :email, presence: true
   validates_confirmation_of :email
 
-  validates_presence_of :school, unless: :skip_school_validation
+  #validates_presence_of :school, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
 
   def self.for_school_district(school_district)
@@ -94,11 +94,17 @@ class Pd::Enrollment < ActiveRecord::Base
   # that case.
   def check_school_info(school_info_attr)
     attr = {
+      country: school_info_attr['country'],
       school_type: school_info_attr['school_type'],
       state: school_info_attr['school_state'],
-      school_district_id: school_info_attr['school_district_id'],
       zip: school_info_attr['school_zip'],
-      school_district_other: school_info_attr['school_district_other']
+      school_district_id: school_info_attr['school_district_id'],
+      school_district_other: school_info_attr['school_district_other'],
+      school_district_name: school_info_attr['school_district_name'],
+      school_id: school_info_attr['school_id'],
+      school_other: school_info_attr['school_other'],
+      school_name: school_info_attr['school_name'],
+      full_address: school_info_attr['full_address'],
     }
 
     # Remove empty attributes.  Notably school_district_id can come through

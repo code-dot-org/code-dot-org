@@ -63,48 +63,74 @@ window.SchoolInfoManager = function (existingOptions) {
     }
   }
 
-  function clearZip() {
-    var zipElement = $('#school-zipcode');
-    zipElement.val("");
-  }
-
-  function clearState() {
-    var stateElement = $("#school-state");
-    stateElement.val("");
-  }
-
   function clearDistrict() {
     $("#school-district-id-form").val("");
+    $("#school-district-other").val(false);
+    $("#school-district-name").val("");
   }
 
-  $('#school-type').change(function () {
-    if (['public', 'other'].indexOf($(this).val()) > -1) {
-      // Show state.
-      $('#school-state').closest('.form-group').show();
-      $('#school-zipcode').closest('.form-group').hide();
-      // And clear ZIP.
-      clearZip();
+  function clearAndHideDistrict() {
+    clearDistrict();
+    $('#school-district').closest('.form-group').hide();
+  }
 
+  function isPrivateOrOther() {
+    return ['private', 'other'].indexOf($('#school-type').val()) > -1;
+  }
+
+  function isPublicOrCharter() {
+    return ['public', 'charter'].indexOf($('#school-type').val()) > -1;
+  }
+
+  function isUs() {
+    return $('#school-country').val() === 'US';
+  }
+
+  function show(selector) {
+    $(selector).closest('.form-group').show();
+  }
+
+  function clearAndHide(selector) {
+    $(selector).val('');
+    $(selector).closest('.form-group').hide();
+  }
+
+  $('#school-country').change(function () {
+    if ($(this).val() === 'US') {
+      clearAndHide('#school-name');
+      clearAndHide('#school-address');
+      // Show fields corresponding to the current contents of the type dropdown.
+      $('#school-type').change();
+    } else { // non-US
+      clearAndHide('#school-zipcode');
+      clearAndHide('#school-state');
+      clearAndHideDistrict();
+      show('#school-name');
+      show('#school-address');
+    }
+  });
+
+  $('#school-type').change(function () {
+    if (isUs() && isPublicOrCharter()) {
+      show('#school-state');
+      clearAndHide('#school-zipcode');
+      clearAndHide('#school-name');
+    } else if (isUs() && isPrivateOrOther()) {
+      clearAndHide('#school-state');
+      show('#school-zipcode');
+      clearAndHideDistrict();
+      show('#school-name');
     } else {
-      // Show ZIP.
-      $('#school-state').closest('.form-group').hide();
-      $('#school-zipcode').closest('.form-group').show();
-      $('#school-district').closest('.form-group').hide();
-      // And clear state and district.
-      clearState();
-      clearDistrict();
+      // no type or non-US
     }
   });
 
   $('#school-state').change(function () {
     if ($(this).val() !== 'other') {
-      // Show districts.  (State is already showing, so ZIP is already clear.)
-      $('#school-district').closest('.form-group').show();
+      show('#school-district');
       setupDistrictDropdown($('#school-state').val());
     } else {
-      $('#school-district').closest('.form-group').hide();
-      // Clear district.
-      clearDistrict();
+      clearAndHideDistrict();
     }
   });
 
@@ -125,6 +151,10 @@ window.SchoolInfoManager = function (existingOptions) {
   // values if they were provided.
 
   if (existingOptions) {
+    if (existingOptions.country) {
+      $('#school-country').val(existingOptions.country).change();
+    }
+
     if (existingOptions.school_type) {
       $('#school-type').val(existingOptions.school_type).change();
     }
@@ -139,6 +169,14 @@ window.SchoolInfoManager = function (existingOptions) {
 
     if (existingOptions.school_district_other) {
       $('#school-district-other').prop('checked', true).change();
+    }
+
+    if (existingOptions.school_name) {
+      $('#school-name').val(existingOptions.school_name).change();
+    }
+
+    if (existingOptions.full_address) {
+      $('#school-address').val(existingOptions.full_address).change();
     }
   }
 };
