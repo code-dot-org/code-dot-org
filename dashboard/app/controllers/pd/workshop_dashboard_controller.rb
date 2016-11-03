@@ -3,16 +3,17 @@ module Pd
     before_action :authenticate_user!
 
     def index
-      @permission =
-        if current_user.admin?
-          :admin
-        elsif current_user.workshop_organizer?
-          :workshop_organizer
-        elsif current_user.facilitator?
-          :facilitator
-        else
-          nil
-        end
+      @permission = nil
+
+      if current_user.admin?
+        @permission = :admin
+      elsif current_user.workshop_organizer?
+        @permission = current_user.facilitator? ? [:workshop_organizer, :facilitator] : [:workshop_organizer]
+      elsif current_user.facilitator?
+        @permission = [:facilitator]
+      else
+        nil
+      end
 
       unless @permission
         render_404
