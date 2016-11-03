@@ -50,6 +50,8 @@ social:
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
 
+= view 'mobilecheck.js'
+
 #tutorials
 
 :javascript
@@ -60,9 +62,9 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButton: true,
-      legacyLink: '/learn/legacy'
-      }
-    );
+      legacyLink: '/learn/legacy',
+      mobile: window.mobilecheck()
+    });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
     // Pick a random student image (1-2 inclusive) and fade it in.
