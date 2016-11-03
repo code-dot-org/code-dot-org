@@ -115,10 +115,10 @@ export function get(controller) {
       controller.addCommand(callbackCommand);
     },
 
-    playSound: function (highlightCallback, sound) {
+    playSound: function (highlightCallback, sound, targetEntity) {
       const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.playSound(callbackCommand, sound);
-      });
+      }, targetEntity);
       controller.addCommand(callbackCommand);
     },
 

@@ -48,9 +48,9 @@ export default class LevelEntity {
     }
 
     isFriendlyEntity(type) {
-        const friendlyEntityList = ['sheep','ironGolem','cow','chicken'];
-        for(var i = 0 ; i < friendlyEntityList.length; i++) {
-            if(type === friendlyEntityList[i])
+        const friendlyEntityList = ['sheep', 'ironGolem', 'cow', 'chicken'];
+        for (var i = 0; i < friendlyEntityList.length; i++) {
+            if (type === friendlyEntityList[i])
                 return true;
         }
         return false;
@@ -91,6 +91,17 @@ export default class LevelEntity {
         return entity;
     }
 
+    isSpawnableInBetween(minX, minY, maxX, maxY) {
+        for (var i = minX; i <= maxX; i++) {
+            for (var j = minY; j <= maxY; j++) {
+                if (this.controller.levelModel.isPositionEmpty([i, j])[0]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     spawnEntity(type, spawnDirection) {
         var getRandomInt = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -99,27 +110,21 @@ export default class LevelEntity {
         var width = levelModel.planeWidth;
         var height = levelModel.planeHeight;
         if (spawnDirection === "middle") {
-            var isSpawable = false;
-            for(var i = 1 ; i < width -1 ; i++)
-            {
-                for(var j = 1; j < height -1 ; j++)
-                {
-                    if(levelModel.isPositionEmpty([i,j])[0])
-                    {
-                        isSpawable = true;
-                        break;
-                    }
+            if (this.isSpawnableInBetween(Math.floor(0.25 * width), Math.floor(0.25 * height), Math.floor(0.75 * width), Math.floor(0.75 * height))) {
+                var position = [getRandomInt(Math.floor(0.25 * width), Math.floor(0.75 * width)), getRandomInt(Math.floor(0.25 * height), Math.floor(0.75 * height))];
+                while (!levelModel.isPositionEmpty(position)[0]) {
+                    position = [getRandomInt(Math.floor(0.25 * width), Math.floor(0.75 * width)), getRandomInt(Math.floor(0.25 * height), Math.floor(0.75 * height))];
                 }
-                if(isSpawable === true)
-                    break;
+                return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
+            } else {
+                if (!this.isSpawnableInBetween(1, 1, width - 2, height - 2))
+                    return null;
+                var position = [getRandomInt(1, width - 2), getRandomInt(1, height - 2)];
+                while (!levelModel.isPositionEmpty(position)[0]) {
+                    position = [getRandomInt(1, width - 2), getRandomInt(1, height - 2)];
+                }
+                return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
-            if(!isSpawable)
-                return null;
-            var position = [getRandomInt(0, width -1), getRandomInt(0, height -1)];
-            while (!levelModel.isPositionEmpty(position)[0]) {
-                position = [getRandomInt(0, width -1), getRandomInt(0, height -1)];
-            }
-            return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
         } else if (spawnDirection === "left") {
             var xIndex = 0;
             var columnFull = true;
@@ -131,13 +136,13 @@ export default class LevelEntity {
                         break;
                     }
                 }
-                if(columnFull)
+                if (columnFull)
                     xIndex++;
             }
             if (xIndex < width) {
-                var position = [xIndex, getRandomInt(0, height -1)];
+                var position = [xIndex, getRandomInt(0, height - 1)];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [xIndex, getRandomInt(0, height -1)];
+                    position = [xIndex, getRandomInt(0, height - 1)];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
@@ -152,13 +157,13 @@ export default class LevelEntity {
                         break;
                     }
                 }
-                if(columnFull)
+                if (columnFull)
                     xIndex--;
             }
             if (xIndex > -1) {
-                var position = [xIndex, getRandomInt(0, height -1)];
+                var position = [xIndex, getRandomInt(0, height - 1)];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [xIndex, getRandomInt(0, height -1)];
+                    position = [xIndex, getRandomInt(0, height - 1)];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
@@ -168,39 +173,39 @@ export default class LevelEntity {
             while (yIndex < height && rowFull) {
                 rowFull = true;
                 for (var i = 0; i < width; i++) {
-                    if (levelModel.isPositionEmpty([i,yIndex])[0]) {
+                    if (levelModel.isPositionEmpty([i, yIndex])[0]) {
                         rowFull = false;
                         break;
                     }
                 }
-                if(rowFull)
+                if (rowFull)
                     yIndex++;
             }
             if (yIndex < height) {
-                var position = [getRandomInt(0, height -1), yIndex];
+                var position = [getRandomInt(0, height - 1), yIndex];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [getRandomInt(0, height -1), yIndex];
+                    position = [getRandomInt(0, height - 1), yIndex];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
-        } else if(spawnDirection === "down") {
+        } else if (spawnDirection === "down") {
             var yIndex = height - 1;
             var rowFull = true;
             while (yIndex > -1 && rowFull) {
                 rowFull = true;
                 for (var i = 0; i < width; i++) {
-                    if (levelModel.isPositionEmpty([i,yIndex])[0]) {
+                    if (levelModel.isPositionEmpty([i, yIndex])[0]) {
                         rowFull = false;
                         break;
                     }
                 }
-                if(rowFull)
+                if (rowFull)
                     yIndex--;
             }
             if (yIndex > -1) {
-                var position = [getRandomInt(0, height -1), yIndex];
+                var position = [getRandomInt(0, height - 1), yIndex];
                 while (!levelModel.isPositionEmpty(position)[0]) {
-                    position = [getRandomInt(0, height -1), yIndex];
+                    position = [getRandomInt(0, height - 1), yIndex];
                 }
                 return this.createEntity(type, this.id++, position[0], position[1], getRandomInt(0, 3));
             }
@@ -215,10 +220,10 @@ export default class LevelEntity {
     destroyEntity(identifier) {
         if (this.entityMap.has(identifier)) {
             var entity = this.entityMap.get(identifier);
-            if(this.entityDeathCount.has(entity.type))
-                this.entityDeathCount.set(entity.type,this.entityDeathCount.get(entity.type) +1);
+            if (this.entityDeathCount.has(entity.type))
+                this.entityDeathCount.set(entity.type, this.entityDeathCount.get(entity.type) + 1);
             else
-                this.entityDeathCount.set(entity.type,1);
+                this.entityDeathCount.set(entity.type, 1);
             entity.reset();
             entity.sprite.animations.stop(null, true);
             entity.sprite.destroy();
@@ -238,13 +243,23 @@ export default class LevelEntity {
     }
 
     getEntitiesOfType(type) {
-        var entities = [];
-        for (var value of this.entityMap) {
-            let entity = value[1];
-            if (entity.type === type)
-                entities.push(entity);
+        if (type === "all") {
+            var entities = [];
+            for (var value of this.entityMap) {
+                let entity = value[1];
+                if (entity.type !== 'Player')
+                    entities.push(entity);
+            }
+            return entities;
+        } else {
+            var entities = [];
+            for (var value of this.entityMap) {
+                let entity = value[1];
+                if (entity.type === type)
+                    entities.push(entity);
+            }
+            return entities;
         }
-        return entities;
     }
 
     reset() {
