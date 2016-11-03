@@ -29,6 +29,8 @@ social:
         %br/
         %br/
         Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
+        %br/
+        %br/
       .col-50.tablet-feature
         %img{src: "/images/learn/robotics.png", style: "text-align: center"}
 
@@ -43,6 +45,8 @@ social:
 .container_responsive
   #tutorials
 
+= view 'mobilecheck.js'
+
 :javascript
 
   $(document).ready(function() {
@@ -51,7 +55,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       robotics: true,
-      backButton: true
+      backButton: true,
+      mobile: window.mobilecheck()
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });

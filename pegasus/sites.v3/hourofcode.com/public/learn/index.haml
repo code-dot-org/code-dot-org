@@ -59,6 +59,8 @@ social:
 
 .clear{style: "clear: both"}
 
+= view 'mobilecheck.js'
+
 :javascript
 
   $(document).ready(function() {
@@ -67,9 +69,9 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButton: true,
-      legacyLink: "#{CDO.code_org_url('/learn/legacy')}"
-      }
-    );
+      legacyLink: "#{CDO.code_org_url('/learn/legacy')}",
+      mobile: window.mobilecheck()
+    });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
     // Pick a random student image (1-2 inclusive) and fade it in.

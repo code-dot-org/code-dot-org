@@ -306,7 +306,7 @@ const TutorialExplorer = React.createClass({
 });
 
 
-function getFilters(robotics) {
+function getFilters(options) {
   const filters = [
     { name: "grade",
       text: "Grades",
@@ -368,7 +368,7 @@ function getFilters(robotics) {
     activity_type: ["robotics"]
   };
 
-  if (robotics) {
+  if (options.robotics) {
     filters.forEach(filterGroup => {
       if (filterGroup.name === "activity_type") {
         filterGroup.entries = [{name: "robotics", text: "Robotics"}];
@@ -381,13 +381,17 @@ function getFilters(robotics) {
     hideFilters.activity_type = [];
   }
 
+  if (options.mobile) {
+    initialFilters.platform = ["android", "ios"];
+  }
+
   return {filters, initialFilters, hideFilters};
 }
 
 window.TutorialExplorerManager = function (options) {
   this.options = options;
 
-  const {filters, initialFilters, hideFilters} = getFilters(options.robotics);
+  const {filters, initialFilters, hideFilters} = getFilters(options);
 
   this.renderToElement = function (element) {
     ReactDOM.render(

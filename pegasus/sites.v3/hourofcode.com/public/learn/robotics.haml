@@ -34,6 +34,8 @@ social:
         %br/
         %br/
         Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
+        %br/
+        %br/
       #studentimage.col-xs-12.col-sm-6.hidden-xs
         %img{src: CDO.code_org_url("/images/learn/robotics.png"), style: "text-align: center"}
 
@@ -52,6 +54,8 @@ social:
 
 .clear{style: "clear: both"}
 
+= view 'mobilecheck.js'
+
 :javascript
 
   $(document).ready(function() {
@@ -60,8 +64,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       robotics: true,
-      backButton: true
-      }
-    );
+      backButton: true,
+      mobile: window.mobilecheck()
+    });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });
