@@ -1186,11 +1186,24 @@ var skinTheme = function (value) {
   return skin[value];
 };
 
+Bounce.setTeam = function (value) {
+  Bounce.setBackgroundImage(skin.teamBackgrounds[value]);
+  Bounce.loadTiles(skin.tiles, skin.goalTiles);
+};
+
 Bounce.setBackground = function (value) {
+  var theme = skinTheme(value);
+  Bounce.setBackgroundImage(theme.background);
+  Bounce.loadTiles(theme.tiles, theme.goalTiles);
+};
+
+Bounce.setBackgroundImage = function (backgroundUrl) {
   var element = document.getElementById('background');
   element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skinTheme(value).background);
+    backgroundUrl);
+};
 
+Bounce.loadTiles = function (tiles, goalTiles) {
   // Recompute all of the tiles to determine if they are walls, goals, or empty
   // TODO: do this once during init and cache the result
   var tileId = 0;
@@ -1207,7 +1220,7 @@ Bounce.setBackground = function (value) {
 
       // Draw the tile.
       if (WALL_TILE_SHAPES[tile]) {
-        image = skinTheme(value).tiles;
+        image = tiles;
       } else {
         // Compute the tile index.
         tile = goalNormalize(x, y) +
@@ -1219,10 +1232,10 @@ Bounce.setBackground = function (value) {
         if (!GOAL_TILE_SHAPES[tile]) {
           empty = true;
         }
-        image = skinTheme(value).goalTiles;
+        image = goalTiles;
       }
       if (!empty) {
-        element = document.getElementById('tileElement' + tileId);
+        var element = document.getElementById('tileElement' + tileId);
         element.setAttributeNS(
             'http://www.w3.org/1999/xlink', 'xlink:href', image);
       }
