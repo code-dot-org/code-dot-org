@@ -47,10 +47,15 @@
         -# input to work with above.
         %input#school-district-id-form.form-control{name: "#{form_name}[school_district_id]", type: "hidden", required: false}
 
-      %label
-        %input#school-district-other{name: "#{form_name}[school_district_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
-        %span{style: "font-size: 12px"}
-          Other district not listed above
+        %label
+          %input#school-district-other{name: "#{form_name}[school_district_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
+          %span{style: "font-size: 12px"}
+            Other district not listed above
+
+        .form-group{style: "display: none;"}
+          .question District Name
+          %div.controls
+            %input#school-district-name.form-control{name: "school_info[school_district_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
     .form-group{style: "display: none;"}
       %label

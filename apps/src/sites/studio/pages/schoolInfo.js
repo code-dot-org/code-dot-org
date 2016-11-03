@@ -72,6 +72,7 @@ window.SchoolInfoManager = function (existingOptions) {
   function clearAndHideDistrict() {
     clearDistrict();
     $('#school-district').closest('.form-group').hide();
+    $('#school-district-name').closest('.form-group').hide();
   }
 
   function isPrivateOrOther() {
@@ -139,11 +140,14 @@ window.SchoolInfoManager = function (existingOptions) {
       // Disable districts.
       enableDistricts(false);
 
-      // And clear district.
-      clearDistrict();
+      // And clear district id.
+      $("#school-district-id-form").val('');
+
+      show('#school-district-name');
     } else {
-      // Enable districts.  (And clear "unknown district".)
+      // Enable districts.
       enableDistricts(true);
+      clearAndHide('#school-district-name');
     }
   });
 
@@ -169,6 +173,10 @@ window.SchoolInfoManager = function (existingOptions) {
 
     if (existingOptions.school_district_other) {
       $('#school-district-other').prop('checked', true).change();
+    }
+
+    if (existingOptions.school_district_name) {
+      $('#school-district-name').val(existingOptions.school_district_name).change();
     }
 
     if (existingOptions.school_name) {
