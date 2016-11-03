@@ -3,8 +3,6 @@
   "atFlower": "மலரில்",
   "atHoneycomb": "தேன்கூட்டில்",
   "avoidCowAndRemove": "பசுவை தவிர்த்து ஒன்றை நீக்கு",
-  "bean": "பீன்ஸ்",
-  "beanTooltip": "ஒரு பீன்ஸ் சேகரிப்புக்கான",
   "collect": "சேகரி",
   "collectiblePresent": "சில செல்வங்களைக் காக்கும் கலைக் களஞ்சியமாக உள்ளது",
   "collectorCollectTooltip": "ஒரு உருப்படியை சேகரிக்க",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "நீங்கள் இருக்கும் மலரில் தேன் தீர்ந்துவிட்டது.",
   "get": "பெறு",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "உயரம்",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "குறிப்பிட்ட திசையில் ஒரு பாதை உள்ளது என்றால், நடவடிக்கைகள் முதல் தொகுதி செய்கிறது. இல்லையெனில், நடவடிக்கைகள் இரண்டாவது தொகுதி செய்கிறது.",
   "insufficientHoney": "நீங்கள் சரியான தொகுதிகளை பயன்படுத்துகிறீர்கள், ஆனால் சரியான அளவு தேன் உருவாக்க வேண்டும்.",
   "insufficientNectar": "நீங்கள் சரியான தொகுதிகளை பயன்படுத்துகிறீர்கள், ஆனால் சரியான அளவு பூ அமுது சேகரிக்க வேண்டும்.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "உருவாக்கு",
   "moveBackward": "பின்னோக்கி நகர்",
   "moveEastTooltip": "என்னை ஒரு அடி கிழக்கே நகர்த்து.",
@@ -111,8 +111,5 @@
   "word": "சொல்லை கண்டறி",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "ஆம்",
-  "youSpelled": "நீங்கள் உச்சரித்தது",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "நீங்கள் உச்சரித்தது"
 }

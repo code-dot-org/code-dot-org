@@ -84,7 +84,7 @@
   congratulations: Gratulacje!
   congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania
     (One Hour of Code)
-  congratulations_volunteer: |
+  congratulations_volunteer: |-
     Gratulacje: Spróbowałeś Godzinę Kodowania,
     <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
   congratulations_on_completing_course1: Gratulacje z okazji ukończenia Kursu 1
@@ -108,7 +108,7 @@
     znaleźć studentów informatyki lub specjalistów technicznych, którzy są gotowi,
     aby zainspirować twoich uczniów zdalnie, za pośrednictwem czatu wideo.
   congrats_guest_speaker_cta: Znajdź tłumacza
-  congrats_third_party_title: |
+  congrats_third_party_title: |-
     Używaj nowych funkcji  tych aplikacji i stron internetowych
      
   third_party_gradelevel_kto8: Klasa K-8
@@ -258,7 +258,7 @@
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: "#HourOfCode jest tutaj - Sprawdź to! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   just_did_course1: Właśnie skończyłem Kurs 1 - sprawdź to! @codeorg
   just_did_course2: Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg
@@ -305,15 +305,15 @@
   studiobar_shop_title: Sklep
   studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
-    podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla\n"
-  homepage_hero_text_susan: |
+    podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla"
+  homepage_hero_text_susan: |-
     &ldquo;Jeśli potrafisz zmienić technologię, potrafisz zmienić świat.&rdquo;
     Susan,  YouTube CEO
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Nie tylko graj na swoim telefonie,
     zaprogramuj go.&rdquo;
     Prezydent Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Nasze dzieci &mdash; w tym również dziewczęta &mdash;
     potrzebują możliwości, by uczyć się informatyki.&rdquo;
     Sheryl, COO Facebook
@@ -326,16 +326,16 @@
   homepage_hero_text_student2: '"Nigdy nie widziałem moich dzieci tak podekscytowanych
     uczeniem się." Michael, nauczyciel'
   homepage_hero_text_student3: "&ldquo;Informatyka jest dziedziną, o której nie będziesz
-    wiedzieć, \nczy ją lubisz, zanim jej nie spróbujesz .&rdquo;\nJackson, 6. klasa\n"
+    wiedzieć, \nczy ją lubisz, zanim jej nie spróbujesz .&rdquo;\nJackson, 6. klasa"
   homepage_hero_text_student4: "&ldquo;Możesz zrobić wszystko, co ci przyjdzie do\ngłowy
-    za pomocą programowania.&rdquo; \nMaya, 2nd grade\n"
+    za pomocą programowania.&rdquo; \nMaya, 2nd grade"
   homepage_hero_text_student5: "&ldquo;Informatyka nie jest dla kogoś\ninnego. Jest
-    ona dla ciebie, tu i teraz.&rdquo; \nGeraldo, nauczyciel\n"
+    ona dla ciebie, tu i teraz.&rdquo; \nGeraldo, nauczyciel"
   homepage_hero_text_teacher1: "&ldquo;Programowanie to twórczość, inspiracja i innowacje,
     &mdash; \na to wszystko ma podstawowe znaczenie dla jakiejkolwiek kariery.&rdquo;\nFloresa,
-    nauczyciel\n"
+    nauczyciel"
   homepage_hero_text_teacher2: "&ldquo;Ten program zainteresował i zaangażował do
-    \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel\n"
+    \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel"
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
   homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
@@ -758,6 +758,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -905,6 +917,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Ucz się więcej
   dashboard_announce_try_now_button: Spróbuj teraz
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Jako nauczyciel prowadzisz drogę w ruchu, aby dać każdemu
     uczniowi w każdej szkole możliwość nauki informatyki. Nadszedł czas, aby poinformować
     swoich przedstawicieli żeby usłyszeli od Ciebie. W tym tygodniu liderów edukacji,
@@ -914,6 +927,11 @@
   dashboard_announce_all: Na bieżąco z nowymi funkcjami i aktualizacje na naszym blogu
     nauczycieli. <a href='%{teacher_blog_url}' target='_blank'> Zobacz poprzednie
     ogłoszenia.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)

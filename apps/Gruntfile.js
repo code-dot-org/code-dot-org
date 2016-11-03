@@ -416,16 +416,11 @@ module.exports = function (grunt) {
 
     return webpackConfig.create({
       output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: _.mapValues(
-        _.extend(
-          {},
-          appsEntries,
-          codeStudioEntries,
-          otherEntries
-        ),
-        function (val) {
-          return ['./src/util/idempotent-babel-polyfill'].concat(val);
-        }
+      entries: _.extend(
+        {},
+        appsEntries,
+        codeStudioEntries,
+        otherEntries
       ),
       externals: [
         {

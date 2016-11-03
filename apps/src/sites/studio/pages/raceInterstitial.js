@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import experiments from '@cdo/apps/experiments';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(() => {
   var editUser = $('#edit_user');

@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import Button from './Button';
 import BaseDialog from './BaseDialog';
-import color from '../color';
+import color from "../util/color";
 import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
 import locale from '@cdo/locale';
 

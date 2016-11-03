@@ -600,13 +600,13 @@
         text: "Een lus is een herhaling van werkzaamheden. Dus, wanneer ik een bijenkorf
           betreed die ik wil inspecteren, bekijk ik een raam en stop deze daarna weer
           terug. \nIk herhaal dus de zelfde werkzaamheden meerdere keren. Het gaat
-          in een lus: het meerdere keer uitvoeren van dezelfde werkzaamheden.\n"
+          in een lus: het meerdere keer uitvoeren van dezelfde werkzaamheden."
       2:
         image: notes/C1_bee_loops_2.png
         text: "In dit level willen we dat de bij drie stukken nectar uit de bloem
           verzamelt. In plaats van driemaal \"verkrijg nectar\" blokken te gebruiken,
           ga je het \"herhaal\" blok gebruiken om drie keer nectar te verkrijgen.
-          \nKlik op \"Start\" en kijk of je het goed hebt. Mooi!\n"
+          \nKlik op \"Start\" en kijk of je het goed hebt. Mooi!"
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
@@ -1058,7 +1058,7 @@
           gaat doen.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: |
+        text: |-
           Denk aan je leukste videospel. Verdien je voor het een meer punten dan voor iets anders? Dit gebeurt omdat de computer voorwaarden gebruikt. Zo maakt de computer beslissingen. Wat denk je van, als je het doel raakt krijg je tien punten en anders verlies je er drie?
           Wanneer je weet hoe voorwaarden werken, kun je allemaal leuke spellen maken.
     C2_artist_debugging:
@@ -1183,7 +1183,7 @@
         text: "Een lus is een herhaling van werkzaamheden. Dus, wanneer ik een bijenkorf
           betreed die ik wil inspecteren, bekijk ik een raam en stop deze daarna weer
           terug. \nIk herhaal dus de zelfde werkzaamheden meerdere keren. Het gaat
-          in een lus: het meerdere keer uitvoeren van dezelfde werkzaamheden.\n"
+          in een lus: het meerdere keer uitvoeren van dezelfde werkzaamheden."
       2:
         image: notes/C2_bee_loops_2.png
         text: Dit is de "herhaal"-blok. Wat je in het herhaal-blok stopt, zal zo vaak

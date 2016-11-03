@@ -3,8 +3,6 @@
   "atFlower": "na flor",
   "atHoneycomb": "na colmeia",
   "avoidCowAndRemove": "desvie da vaca e remova 1",
-  "bean": "feijão",
-  "beanTooltip": "Colher um feijão",
   "collect": "coletar",
   "collectiblePresent": "existe algum tesouro",
   "collectorCollectTooltip": "Coletar um item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "A flor em que você está não tem mais néctar.",
   "get": "obter",
   "has": "tem",
-  "hasbean": "há feijões",
+  "haslettuce": "há alface",
   "hascorn": "há milho",
   "haspumpkin": "há abóboras",
   "heightParameter": "altura",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Se há um caminho na direção especificada, então faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações.",
   "insufficientHoney": "Você precisa fazer a quantidade certa de mel.",
   "insufficientNectar": "Você precisa coletar a quantidade certa de néctar.",
+  "lettuce": "alface",
+  "lettuceTooltip": "Colher um pouco de alface",
   "make": "faça",
   "moveBackward": "mova para trás",
   "moveEastTooltip": "Mova-me um espaço para leste.",
@@ -111,8 +111,5 @@
   "word": "Encontre a palavra",
   "wrongCropError": "Não posso colher aqui.",
   "yes": "Sim",
-  "youSpelled": "Você escreveu",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "Você escreveu"
 }
