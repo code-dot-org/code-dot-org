@@ -1,5 +1,5 @@
 var commonStyles = module.exports;
-var color = require('./color');
+var color = require("./util/color");
 var styleConstants = require('./styleConstants');
 
 commonStyles.hidden = {

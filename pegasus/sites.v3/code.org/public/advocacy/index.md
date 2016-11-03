@@ -16,7 +16,7 @@ The Code.org Advocacy Coalition is a non-partisan group that believes computer s
 ## Our Agenda
 Despite demand for computer science professionals, the country’s K-12 education system continues to marginalize computer science education. While decisions about what is taught in elementary, middle and high schools are vested in state and local authority, policy at all level of government must support putting students on a path to fill high-demand, high-skilled, high-paying computing jobs across all sectors of our economy. 
 
-The Code.org Advocacy Coalition supports the implementation of the following policies to make computer science a fundamental in part of the K-12 education system: 
+The Code.org Advocacy Coalition supports the implementation of the following policies to make computer science a fundamental part of the K-12 education system: 
 
 * Define computer science and establish rigorous K-12 computer science academic standards
 * Fund computer science professional development and support course development 
@@ -71,6 +71,8 @@ For more information, please contact advocacy@code.org.
 ## Tools to help you advocate locally
 
 <%= view :promote_tools, state: nil, section_name: 'local_tools' %>
+
+<div style="clear:both"></div>
 
 ## Policy development resources
 

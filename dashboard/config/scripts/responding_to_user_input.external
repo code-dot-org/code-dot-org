@@ -76,8 +76,8 @@ In Game Lab, we might use the following code to check if a sprite named "button"
 ```javascript
 function draw() {
 	if (mousePressedOver(button)) {
-    	// Do something
-    }
+   		// Do something
+   	}
 }
 
 ```

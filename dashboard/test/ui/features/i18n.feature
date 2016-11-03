@@ -39,10 +39,10 @@ Scenario: Frozen tutorial in Portuguese
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
   And I rotate to landscape
   And I wait for the page to fully load
-  Then element ".csf-top-instructions" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
