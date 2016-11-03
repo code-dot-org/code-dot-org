@@ -167,6 +167,7 @@ window.SchoolInfoManager = function (existingOptions) {
   }
 
   $('#school-country').change(function () {
+    $("input[type=submit]").prop("disabled", false);
     if ($(this).val() === 'US') {
       clearAndHide('#school-name');
       clearAndHide('#school-address');
