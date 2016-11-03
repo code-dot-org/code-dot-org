@@ -25,6 +25,7 @@ describe('ProgressDot component tests', () => {
   });
 
   it('adds an onClick handler when saveAnswersBeforeNavigation is true', () => {
+    expect(false).to.equal(true);
     renderer.render(
       <ProgressDot level={level} saveAnswersBeforeNavigation={true} />
     );
