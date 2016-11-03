@@ -20,6 +20,7 @@ def disallow_case_change
     if (%r{^R  ([^ ]+) -> ([^ ]+)}.match(line) || %r{^R  ("[^"]+") -> ("[^"]+")}.match(line)) && $1.casecmp($2) == 0
       STDERR.puts "\nAborting due to case-only rename:\n\n    #{line}\n\n"
       STDERR.puts "To fix this, run the following commands:\n\n"
+      STDERR.puts "    git add #{$2}\n\n"
       STDERR.puts "    git mv #{$2} #{$2}.tmp\n\n"
       STDERR.puts "    git commit --only #{$1} #{$2}.tmp -m 'temporarily rename #{$1} -> #{$2}.tmp'\n\n"
       STDERR.puts "    git mv #{$2}.tmp #{$2}\n\n"
