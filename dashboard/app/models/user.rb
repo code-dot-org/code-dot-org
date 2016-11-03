@@ -111,6 +111,7 @@ class User < ActiveRecord::Base
   USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
+  belongs_to :megauser
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
 
