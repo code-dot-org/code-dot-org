@@ -1070,7 +1070,7 @@ class User < ActiveRecord::Base
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 
-  def show_race_interstitial?
-    RaceInterstitialHelper.show_race_interstitial?(self)
+  def show_race_interstitial?(ip = nil)
+    RaceInterstitialHelper.show_race_interstitial?(self, ip)
   end
 end
