@@ -10,7 +10,10 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
+import * as utils from '../utils';
 import _ from 'lodash';
+
+const SortBy = utils.makeEnum('popularityrank', 'displayweight');
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -26,7 +29,6 @@ const TutorialExplorer = React.createClass({
 
   getInitialState() {
     let filters = {};
-
     for (const filterGroupName in this.props.filterGroups) {
       const filterGroup = this.props.filterGroups[filterGroupName];
       filters[filterGroup.name] = [];
@@ -36,7 +38,9 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(filters);
+    let sortBy = SortBy.displayweight;
+
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(filters, sortBy);
 
     return {
       filters: filters,
@@ -46,7 +50,8 @@ const TutorialExplorer = React.createClass({
       windowWidth: $(window).width(),
       windowHeight: $(window).height(),
       mobileLayout: isResponsiveCategoryInactive('md'),
-      showingModalFilters: false
+      showingModalFilters: false,
+      sortBy: sortBy
     };
   },
 
@@ -58,7 +63,7 @@ const TutorialExplorer = React.createClass({
    * @param {string} filterEntry - The name of the filter entry.
    * @param {bool} value - Whether the entry was checked or not.
    */
-  handleUserInput(filterGroup, filterEntry, value) {
+  handleUserInputFilter(filterGroup, filterEntry, value) {
     const state = Immutable.fromJS(this.state);
 
     let newState = {};
@@ -73,7 +78,7 @@ const TutorialExplorer = React.createClass({
 
     newState = newState.toJS();
 
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(newState.filters);
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(newState.filters, this.state.sortBy);
     this.setState({
       ...newState,
       filteredTutorials,
@@ -82,11 +87,27 @@ const TutorialExplorer = React.createClass({
     });
   },
 
-  filterTutorials(filters, hideFilters) {
+  /**
+   * Called when the sort order is changed via dropdown.
+   *
+   * @param {string} value - The new sort order.
+   */
+  handleUserInputSortBy(value) {
+    this.setState({sortBy: value});
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(this.state.filters, value);
+    this.setState({
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      filteredTutorialsForLocale
+    });
+  },
+
+  filterTutorialSet(filters, sortBy) {
     const filterProps = {
       locale: this.props.locale,
       filters: filters,
-      hideFilters: this.props.hideFilters
+      hideFilters: this.props.hideFilters,
+      sortBy: sortBy
     };
     filterProps.specificLocale = false;
     const filteredTutorials = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
@@ -178,7 +199,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters, hideFilters } = filterProps;
+      const { locale, specificLocale, filters, hideFilters, sortBy } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as do-not-show.  If it does,
@@ -236,7 +257,11 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        return tutorial2.displayweight - tutorial1.displayweight;
+        if (sortBy === SortBy.popularityrank) {
+          return tutorial1.popularityrank - tutorial2.popularityrank;
+        } else {
+          return tutorial2.displayweight - tutorial1.displayweight;
+        }
       });
 
       return filteredTutorials;
@@ -261,6 +286,8 @@ const TutorialExplorer = React.createClass({
     return (
       <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
         <FilterHeader
+          onUserInput={this.handleUserInputSortBy}
+          sortBy={this.state.sortBy}
           backButton={this.props.backButton}
           legacyLink={this.props.legacyLink}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
@@ -274,7 +301,7 @@ const TutorialExplorer = React.createClass({
         {this.shouldShowFilters() && (
           <FilterSet
             filterGroups={this.props.filterGroups}
-            onUserInput={this.handleUserInput}
+            onUserInput={this.handleUserInputFilter}
             selection={this.state.filters}
             roboticsButton={this.props.roboticsButton}
           />
@@ -304,7 +331,6 @@ const TutorialExplorer = React.createClass({
     );
   }
 });
-
 
 function getFilters(robotics) {
   const filters = [
