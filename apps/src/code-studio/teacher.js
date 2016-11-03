@@ -203,9 +203,9 @@ function renderContentToggle() {
       element
     );
   } else {
-    // In our haml, we set the opacity of level body with the intention of letting
-    // TeacherContentToggle whether or not it's visible. Since we're not using
+    // In our haml, we set the visibility of level body to hidden with the intention
+    // of letting TeacherContentToggle whether or not it's visible. Since we're not using
     // that here, just make it visible again
-    $('#level-body').css('opacity', '');
+    $('#level-body').css('visibility', '');
   }
 }
