@@ -35,7 +35,7 @@ class HomeController < ApplicationController
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-      @request_ip = params[:ip]
+      @request_ip = request.remote_ip
       @force_race_interstitial = params[:forceRaceInterstitial]
     end
   end
