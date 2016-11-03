@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Keď lopta narazí do steny, vykonaj nasledujúce príkazy.",
   "whileMsg": "pokiaľ",
   "whileTooltip": "Opakujte priložené činnosti dokým dosiahnete cieľový bod.",
-  "yes": "Áno"
+  "yes": "Áno",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

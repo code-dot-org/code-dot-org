@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Führe die nachfolgenden Aktionen aus, wenn ein Ball eine Wand trifft.",
   "whileMsg": "solange",
   "whileTooltip": "Wiederhole diese Aktionen bis das Ziel erreicht ist.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

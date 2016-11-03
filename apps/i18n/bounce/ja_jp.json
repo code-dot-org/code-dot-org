@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "ボールが壁に当たった場合、下記のアクションを実行",
   "whileMsg": "以下の間",
   "whileTooltip": "終点に到着するまで、封じられた行動を繰り返してください",
-  "yes": "はい"
+  "yes": "はい",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }
