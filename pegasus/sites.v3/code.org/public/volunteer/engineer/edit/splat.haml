@@ -10,12 +10,15 @@ rightbar: blank
 - pass unless form = Form2.from_row(DB[:forms].where(kind:'VolunteerEngineerSubmission2015', secret:secret).first)
 - unsubscribed = form.data['unsubscribed_s']
 
-#unsubscribe-volunteer-thanks{:style=>"display: none;"} You have successfully updated your email preferences.
+%h1 Update volunteer information
+
+#unsubscribe-volunteer-thanks{:style=>"display: none;"}
+  .alert.alert-success{role:"alert"} You have successfully updated your email preferences.
 
 %form#unsubscribe-volunteer-form{role: "form", onsubmit: "event.preventDefault(); unsubscribeVolunteerList();"}
-  %h1 Update email preferences
+  %h2 Update email preferences
 
-  #error-message{style: 'display: none'}
+  .alert.alert-danger#error-message{style: 'display: none'}
   %p
     - if unsubscribed == 'until2016' || unsubscribed == 'untilhoc'
       You've <strong>unsubscribed</strong> from teacher requests <strong>until the next Hour of Code</strong>.
@@ -41,3 +44,8 @@ rightbar: blank
   %button.btn.btn-submit Confirm
 
 = view :volunteer_engineer_form, {form: form}
+
+%p
+  You can update your volunteer information or email subscription preferences anytime
+  %a{href: '/volunteer/engineer/edit/' + secret} here.
+  Please bookmark this page to easily reference later.
