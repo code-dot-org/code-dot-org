@@ -50,6 +50,13 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
+  # make sure empty strings are converted to nil
+  test 'US private with empty zip fails' do
+    school_info = build :school_info_us_private, zip: ''
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'Zip is required', school_info.errors.full_messages.first
+  end
+
   test 'US private without school name fails' do
     school_info = build :school_info_us_private, school_name: nil
     refute school_info.valid?  # Run the validations and set errors
