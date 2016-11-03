@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Veikt zemāk esošās darbības, kad bumba saskaras ar sienu.",
   "whileMsg": "kamēr",
   "whileTooltip": "Atārtot slegtās darbības kamēr finiša punkts ir sasniegts.",
-  "yes": "Jā"
+  "yes": "Jā",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

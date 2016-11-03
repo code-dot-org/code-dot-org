@@ -1,4 +1,4 @@
-/* global CryptoJS */
+/* global CryptoJS, trackEvent */
 
 import Radium from 'radium';
 import React from 'react';
@@ -78,7 +78,8 @@ const InlineAudio = React.createClass({
       return this.state.audio;
     }
 
-    var audio = new Audio(this.getAudioSrc());
+    var src = this.getAudioSrc();
+    var audio = new Audio(src);
     audio.addEventListener("ended", e => {
       this.setState({
         playing: false
@@ -93,6 +94,7 @@ const InlineAudio = React.createClass({
     });
 
     this.setState({ audio });
+    trackEvent('InlineAudio', 'getAudioElement', src);
     return audio;
   },
 

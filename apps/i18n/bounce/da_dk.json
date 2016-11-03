@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Udfør handlingerne herunder når bolden rammer en mur.",
   "whileMsg": "mens",
   "whileTooltip": "Gentag de lukkede handlinger indtil målet er nået.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

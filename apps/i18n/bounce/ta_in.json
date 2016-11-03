@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Execute the actions below when a ball collides with a wall.",
   "whileMsg": "while",
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
-  "yes": "ஆம்"
+  "yes": "ஆம்",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }
