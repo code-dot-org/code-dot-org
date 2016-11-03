@@ -10,10 +10,16 @@ const WATCH_VALUE_NOT_RUNNING = "undefined";
 const DEFAULT_AUTOCOMPLETE_OPTIONS = [
   'Game.mouseX',
   'Game.mouseY',
-  'Game.width',
-  'Game.height',
   'Game.frameRate',
   'Game.frameCount',
+  'camera.x',
+  'camera.y',
+  'sprite.x',
+  'sprite.y',
+  'sprite.velocityX',
+  'sprite.velocityY',
+  'sprite.width',
+  'sprite.height',
 ];
 
 const styles = {
@@ -104,7 +110,7 @@ const AutocompleteSelector = React.createClass({
           return (
             <div
               key={option}
-              onClick={() => this.props.onOptionClicked(option)}
+              onClick={(e) => this.props.onOptionClicked(option, e)}
               onMouseOver={() => this.props.onOptionHovered(index)}
               style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
             >
@@ -143,6 +149,7 @@ const DebugWatch = React.createClass({
       text: "",
       history: [],
       editing: false,
+      autocompleteSelecting: false,
       autocompleteOpen: false,
       autocompleteIndex: 0,
       autocompleteOptions: DEFAULT_AUTOCOMPLETE_OPTIONS,
@@ -250,25 +257,31 @@ const DebugWatch = React.createClass({
     });
   },
 
+  closeAutocomplete: function () {
+    this.setState({
+      editing: false,
+      autocompleteSelecting: false,
+      autocompleteOpen: false
+    });
+  },
+
   onKeyDown(e) {
     if (e.key === 'Enter') {
-      if (this.state.autocompleteOpen) {
+      if (this.state.autocompleteOpen && this.state.autocompleteSelecting) {
         this.addFromInput(this.state.autocompleteOptions[this.state.autocompleteIndex]);
       } else {
         this.addFromInput();
       }
     }
     if (e.key === 'Escape') {
-      this.setState({
-        editing: false,
-        autocompleteOpen: false
-      });
+      this.closeAutocomplete();
     }
     if (e.key === 'ArrowUp') {
       if (this.state.autocompleteOpen) {
         const nOptions = this.state.autocompleteOptions.length;
         const newIndex = (this.state.autocompleteIndex - 1 + nOptions) % nOptions;
         this.setState({
+          autocompleteSelecting: true,
           autocompleteIndex: newIndex,
         });
       } else {
@@ -289,6 +302,7 @@ const DebugWatch = React.createClass({
       if (this.state.autocompleteOpen) {
         const newIndex = (this.state.autocompleteIndex + 1) % this.state.autocompleteOptions.length;
         this.setState({
+          autocompleteSelecting: true,
           autocompleteIndex: newIndex,
         });
       } else {
@@ -305,9 +319,19 @@ const DebugWatch = React.createClass({
     }
   },
 
+  resetAutocomplete: function () {
+    this.setState({
+      autocompleteIndex: 0,
+      autocompleteSelecting: false
+    });
+  },
+
   componentDidUpdate(_, prevState) {
     if (prevState.text !== this.state.text) {
       this.filterOptions();
+    }
+    if (prevState.autocompleteOpen && !this.state.autocompleteOpen) {
+      this.resetAutocomplete();
     }
   },
 
@@ -322,8 +346,9 @@ const DebugWatch = React.createClass({
     });
   },
 
-  onAutocompleteOptionClicked(text) {
+  onAutocompleteOptionClicked(text, e) {
     this.addFromInput(text);
+    e.preventDefault();
   },
 
   onChange(e) {
@@ -388,10 +413,13 @@ const DebugWatch = React.createClass({
               {this.state.autocompleteOpen &&
               <AutocompleteSelector
                 options={this.state.autocompleteOptions}
-                currentIndex={this.state.autocompleteIndex}
+                currentIndex={this.state.autocompleteSelecting ? this.state.autocompleteIndex : -1}
                 currentText={this.state.text}
                 onOptionClicked={this.onAutocompleteOptionClicked}
-                onOptionHovered={(index) => this.setState({autocompleteIndex: index})}
+                onOptionHovered={(index) => this.setState({
+                  autocompleteSelecting: true,
+                  autocompleteIndex: index
+                })}
               />}
             </TetherComponent>
           </div>
