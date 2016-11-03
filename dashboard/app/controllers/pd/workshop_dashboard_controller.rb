@@ -7,12 +7,10 @@ module Pd
 
       if current_user.admin?
         @permission = :admin
-      elsif current_user.workshop_organizer?
-        @permission = current_user.facilitator? ? [:workshop_organizer, :facilitator] : [:workshop_organizer]
-      elsif current_user.facilitator?
-        @permission = [:facilitator]
-      else
-        nil
+      elsif current_user.workshop_organizer? || current_user.facilitator?
+        @permission = []
+        @permission << :workshop_organizer if current_user.workshop_organizer?
+        @permission << :facilitator if current_user.facilitator?
       end
 
       unless @permission

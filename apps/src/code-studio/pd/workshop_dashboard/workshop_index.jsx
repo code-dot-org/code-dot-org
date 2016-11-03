@@ -21,11 +21,11 @@ const WorkshopIndex = React.createClass({
   },
 
   handleOrganizerSurveyResultsClick() {
-    this.context.router.push('organizer_survey_results');
+    this.context.router.push('/organizer_survey_results');
   },
 
   handleSurveyResultsClick() {
-    this.context.router.push('survey_results');
+    this.context.router.push('/survey_results');
   },
 
   render() {
