@@ -22,6 +22,38 @@ var CONFIGS = {
     paddle: 'hand_1.png',
     markerHeight: 61,
     markerWidth: 54,
+    teams: [
+      'Atlanta Hawks',
+      'Boston Celtics',
+      'Brooklyn Nets',
+      'Charlotte Hornets',
+      'Chicago Bulls',
+      'Cleveland Cavaliers',
+      'Dallas Mavericks',
+      'Denver Nuggets',
+      'Detroit Pistons',
+      'Golden State Warriors',
+      'Houston Rockets',
+      'Indiana Pacers',
+      'Los Angeles Clippers',
+      'Los Angeles Lakers',
+      'Memphis Grizzlies',
+      'Miami Heat',
+      'Milwaukee Bucks',
+      'Minnesota Timberwolves',
+      'New Orleans Pelicans',
+      'New York Knicks',
+      'Oklahoma City Thunder',
+      'Orlando Magic',
+      'Philadelphia 76ers',
+      'Phoenix Suns',
+      'Portland Trail Blazers',
+      'Sacramento Kings',
+      'San Antonio Spurs',
+      'Toronto Raptors',
+      'Utah Jazz',
+      'Washington Wizards',
+    ],
   }
 };
 
@@ -63,6 +95,10 @@ exports.load = function (assetUrl, id) {
       skin.assetUrl(config.hittingWallAnimation);
   skin.approachingGoalAnimation =
       skin.assetUrl(config.approachingGoalAnimation);
+  skin.teams = config.teams || [];
+  skin.teamBackgrounds = {};
+  skin.teams.forEach((team) =>
+      skin.teamBackgrounds[team] = skin.assetUrl(`teams/${team}.png`));
 
   // Sounds
   skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
