@@ -33,7 +33,7 @@ describe("Maze", function () {
     });
 
     it("can cycle through all types", function () {
-      assert(false, 'This should fail for sure!!');
+      // assert(false, 'This should fail for sure!!');
       var dirtId = DirtDrawer.cellId('', Maze.pegmanX, Maze.pegmanY);
       var image;
 
