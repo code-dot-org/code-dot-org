@@ -1,5 +1,12 @@
 - require 'country_codes'
 - require 'state_abbr'
+- require 'geocoder'
+
+- location = Geocoder.search(request.ip).try(:first)
+-# geocoder sometimes shows localhost's country as RD/Reserved
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+- existing_school_info ||= {}
+- existing_school_info[:country] ||= 'US' if us_ip
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/schoolInfo.js')}
