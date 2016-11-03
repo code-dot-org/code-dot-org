@@ -8,7 +8,7 @@ stdout_path pegasus_dir('log/unicorn_stdout.log')
 working_directory pegasus_dir
 #logger $log
 
-before_fork do |server, worker|
+before_fork do |server, _worker|
 
   # Quit the old unicorn process
   old_pid = "#{server.config[:pid]}.oldbin"

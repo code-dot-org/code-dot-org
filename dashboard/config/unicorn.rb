@@ -19,7 +19,7 @@ after_fork do |_server, _worker|
   DCDO.after_fork
 end
 
-before_fork do |server, worker|
+before_fork do |server, _worker|
 
   # Quit the old unicorn process
   old_pid = "#{server.config[:pid]}.oldbin"
