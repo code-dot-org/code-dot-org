@@ -8,7 +8,7 @@ module RaceInterstitialHelper
     return false if user.races && !user.races.empty?
 
     # Restrict to US, if we have an IP
-    if defined?(request_ip) && !request_ip.nil?
+    unless request_ip.nil?
       location = Geocoder.search(request_ip).first
       return false if location && location.country_code.to_s.downcase != 'us'
     end
