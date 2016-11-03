@@ -3,8 +3,6 @@
   "atFlower": "tại bông hoa",
   "atHoneycomb": "tại tổ ong",
   "avoidCowAndRemove": "tránh con bò và loại bỏ 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "thu thập",
   "collectiblePresent": "đó là một số kho báu",
   "collectorCollectTooltip": "Thu thập các mục",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Bông hoa bạn đang ở trên không còn mật.",
   "get": "nhận được",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "chiều cao",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Nếu có đường ở hướng được xét, thực hiện khối lệnh đầu tiên. Nếu không, thực hiện khối lệnh thứ hai.",
   "insufficientHoney": "Bạn đã sử dụng đúng các lệnh, nhưng bạn cần tạo đúng số lượng mật ong.",
   "insufficientNectar": "Bạn đã sử dụng đúng các lệnh, nhưng cần thu lượm đúng số lượng phấn hoa.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "làm",
   "moveBackward": "Lùi lại",
   "moveEastTooltip": "Di chuyển tôi về phía đông một bước.",
@@ -111,8 +111,5 @@
   "word": "Tìm các từ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Đồng ý",
-  "youSpelled": "Bạn hãy đánh vần",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "Bạn hãy đánh vần"
 }

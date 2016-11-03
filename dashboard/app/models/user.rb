@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id                         :integer          not null, primary key
+#  megauser_id                :integer
 #  email                      :string(255)      default(""), not null
 #  encrypted_password         :string(255)      default("")
 #  reset_password_token       :string(255)
@@ -62,6 +63,7 @@
 #  index_users_on_invitation_token                       (invitation_token) UNIQUE
 #  index_users_on_invitations_count                      (invitations_count)
 #  index_users_on_invited_by_id                          (invited_by_id)
+#  index_users_on_megauser_id                            (megauser_id)
 #  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
 #  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
 #  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
@@ -1070,7 +1072,7 @@ class User < ActiveRecord::Base
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 
-  def show_race_interstitial?
-    RaceInterstitialHelper.show_race_interstitial?(self)
+  def show_race_interstitial?(ip = nil)
+    RaceInterstitialHelper.show_race_interstitial?(self, ip)
   end
 end

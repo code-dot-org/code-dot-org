@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
 import processMarkdown from 'marked';
-import renderer from '../../StylelessRenderer';
+import renderer from "../../util/StylelessRenderer";
 
 /**
  * Component for displaying our instructions in the context of a modal dialog

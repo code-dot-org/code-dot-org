@@ -1,9 +1,9 @@
 /** @file Dropdown for selecting design mode screens */
 /* global Applab */
-import experiments from '../experiments';
+import experiments from "../util/experiments";
 import React from 'react';
 import Radium from 'radium';
-import color from '../color';
+import color from "../util/color";
 import commonStyles from '../commonStyles';
 import * as constants from './constants';
 import {connect} from 'react-redux';

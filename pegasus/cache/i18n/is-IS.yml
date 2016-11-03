@@ -68,7 +68,7 @@
   flappy_heading: Afmæliskveðja til Code.org
   flappy_text: "Code.org er orðið 1 árs gamalt.<br/><br/>Fagnaðu með okkur með því
     að búa \ntil eigin(n) sérhannaðan <b>Flappy</b> leik. Kóðaðu þínar eigin(n) reglur
-    og deildu honum með vinum!\n"
+    og deildu honum með vinum!"
   view_english_site: Skoða síðuna á ensku
   non_english_tutorials: 'Kennsluefni þýtt á fjölda tungumála:'
   write_your_first_program: Skrifaðu fyrsta forritið þitt
@@ -299,41 +299,41 @@
   studiobar_shop_title: Verslun
   studiobar_shop_body: Klæðstu merkinu okkar með stolti.
   homepage_hero_text_malala: "&ldquo;Ég skora á stúlkur í hverju einasta landi að
-    læra Klukkustund kóðunar&rdquo; \nMalala, Nóbelsverðlaunahafi\n"
-  homepage_hero_text_susan: |
+    læra Klukkustund kóðunar&rdquo; \nMalala, Nóbelsverðlaunahafi"
+  homepage_hero_text_susan: |-
     &ldquo;Getir þú breytt tækninni, getur þú breytt heiminum.&rdquo;
     Susan, aðalframkvæmdastjóri YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Láttu ekki nægja að spila á símann þinn, forritaðu hann.&rdquo;
     Barack Obama, forseti Bandaríkjanna
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Börnin okkar &mdash; líka stúlkurnar &mdash;
     þurfa að fá tækifæri til að læra tölvunarfræði.&rdquo;
     Sheryl, forstjóri Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Tölvunarfræði getur verið lykillinn að bestu tækifærunum í heiminum.&rdquo;
     Satya, aðalframkvæmdastjóri Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Ef þú kannt að kóða, hefur þú valkosti í lífinu.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Þessi færni hefur breytt framtíð minni.
     Svo ég nefni ekki hvað þetta er skemmtilegt.&rdquo;
     Luna, 7. bekk
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Ég hef aldrei nokkurn tímann séð börnin svona spennt að læra.&rdquo;
     Michael, kennari
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Tölvunarfræði er þannig að þú getur ekki vitað hvort þér líkar hún nema þú prófir hana.&rdquo;
     Jackson, 6. bekk
   homepage_hero_text_student4: "&ldquo;Þú getur gert allt sem hugur þinn vill með
-    forritun.&rdquo; \nMaya, 2. bekk\n"
+    forritun.&rdquo; \nMaya, 2. bekk"
   homepage_hero_text_student5: "&ldquo;Tölvunarfræði er ekki fyrir einhvern annan.
-    Hún er fyrir þig, hér og nú.&rdquo; \nGeraldo, kennari\n"
+    Hún er fyrir þig, hér og nú.&rdquo; \nGeraldo, kennari"
   homepage_hero_text_teacher1: "&ldquo;Forritun er kveikja sköpunar, innblásturs og
     nýbreytni &mdash; \nsem allt eru ómissandi þættir í hvaða starfsferli sem er.&rdquo;\nFloresa,
-    kennari\n"
-  homepage_hero_text_teacher2: |
+    kennari"
+  homepage_hero_text_teacher2: |-
     &ldquo;Í þessu verkefni voru 100% nemendanna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
   homepage_hero_text_stat_loc: 2,5 miljón stúlkur er skráðar til náms í Kóðastúdíóinu
@@ -695,7 +695,7 @@
   dashboard_navigation_section_lesson_plans: Kennsluáætlanir og tilföng
   dashboard_navigation_section_community: Hjálp og samfélag
   dashboard_navigation_section_pd: Fagmenntun
-  dashboard_navigation_section_speakers: |
+  dashboard_navigation_section_speakers: |-
     Gestafyrirlesarar<br/>
     í Tölvunarfræði
   dashboard_navigation_all_sections: Reikningar og árangur nemenda
@@ -763,6 +763,18 @@
   dashboard_sections_yes_both: Já, ég vil að þeir séu í núverandi hópi OG í nýja hópnum
   dashboard_sections_no_move: 'Nei, ég vil aðeins færa þá í nýja hópinn. '
   dashboard_sections_move_students: Færa nemendur
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: "Þú valdir ekki neina nemendur til að færa. Vinsamlegast
     veldu a.m.k. einn nemanda."
   dashboard_error_other_section: Ef þú ert að færa nemendur milli eigin hópa, skaltu
@@ -906,6 +918,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Læra meira
   dashboard_announce_try_now_button: Prófa núna
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Sem kennari ert þú í fararbroddi hreyfingar sem vill
     gefa öllum nemendum í öllum skólum tækifæri til að læra tölvunarfræði. Nú er kominn
     tími til að kjörnir fulltrúar þínir heyri frá þér. Í Bandaríkjunum hafa skólastjórar,
@@ -914,6 +927,11 @@
   dashboard_announce_petition_button: Bættu nafni þínu við
   dashboard_announce_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
     kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   host_an_hour: Sjá um klukkustund

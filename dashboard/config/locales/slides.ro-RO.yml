@@ -1871,7 +1871,7 @@
           de pornire pana la o una de incheieri folosind o anumita crestere.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: |
+        text: |-
           Spre exemplu, repetarea a trei blocuri se numara de la 1 la 3 de 1 ori. Mereu acesta numara, porneste codul in interiorul unui loop. Pentru loop-ul stiut de cate ori ruleaza folosind o variabila de numarare care seteaza valoarea de incepere la inceputul loop-ului are o crestere de fiecare data cand loop-ul este rulat.
           De indata ce numararea variabilei este mai mare decat valoarea de la sfarsit, loop-ul se opreste din rulat.
           Beneficile de folosire ale unui loop real imediat in loc de repetarea blocului este ca poti vedea variabila numarata si sa iti folosesti loop-ul.
@@ -2593,7 +2593,7 @@
           care se misca si il fac sa arate real intr-o galaxie indepartata.
       3:
         image: notes/starwars_intro_3.JPG
-        text: |
+        text: |-
           In urmatoarea ora vom realiza propriul joc Star Wars cu care vei invata conceptele
           de baza ale programarii. De obicei, programarea se face prin text, dar noi
           vom folosi aici blocuri pentru a scrie programe. In spatele acestora, tu chiar creezi programe. Dupa ce incerci bazele programarii cu blocuri, vom trece la JavaScript, unul dintre cele mai populare limbaje de programare pentru web.
@@ -2605,7 +2605,7 @@
           pentru fiecare nivel se scriu sub spatiul jocului.
       5:
         image: notes/starwars_intro_5.JPG
-        text: |
+        text: |-
           Aceasta zona din mijloc se numeste toolbox si fiecare din aceste blocuri este o comanda pe care
           BB-8 o poate intelege.
       6:
@@ -2721,7 +2721,7 @@
           comenzii. Si vom face acelasi lucru pentru a-l cobora pe R2-D2.
       9:
         image: notes/starwars_events_9.JPG
-        text: |
+        text: |-
           In loc sa scriem tot codul pentru miscarea droidului, il facem pe R2-D2 sa
           reactioneze la evenimente de apasare a butoanelor si sa se miste pe ecran. Pas
           cu pas, jocul devine tot mai interactiv.
@@ -2739,7 +2739,7 @@
           comenzi pentru a face chiar mai mult.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: |
+        text: |-
           [elevi vorbind] Noi am facut un joc in care primesti puncte cand prinzi porcusori.
           De fiecare data cand prinzi porcusori apare storm trooper. In cele din urma,
           ecranul e plin de porcusori si atunci cand atingi 10,000 din ei, castigi.
@@ -2771,7 +2771,7 @@
           care se misca si il fac sa arate real intr-o galaxie indepartata.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: |
+        text: |-
           In urmatoarea ora vom realiza propriul joc Star Wars cu care vei invata conceptele
           de baza ale programarii. De obicei, programarea se face prin text, dar noi
           vom folosi aici blocuri pentru a scrie programe. In spatele acestora, tu chiar creezi programe. Pentru inceput, vom lucra cu Rey pentru a-l programa pe BB-8 sa mearga si sa colecteze toate reziduurile.
@@ -2782,7 +2782,7 @@
           sub spatiul jocului.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: |
+        text: |-
           Aceasta zona din mijloc se numeste toolbox si fiecare din aceste blocuri este o comanda pe care
           BB-8 o poate intelege.
       6:
@@ -2845,7 +2845,7 @@
           evenimente de apasare a butoanelor si sa se miste pe ecran.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: |
+        text: |-
           Pas
           cu pas, jocul devine tot mai interactiv.
     starwars_blocks_congrats:
@@ -2862,7 +2862,7 @@
           comenzi pentru a face chiar mai mult.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: |
+        text: |-
           [elevi vorbind] Noi am facut un joc in care primesti puncte cand prinzi porcusori.
           De fiecare data cand prinzi porcusori apare storm trooper. In cele din urma,
           ecranul e plin de porcusori si atunci cand atingi 10,000 din ei, castigi.

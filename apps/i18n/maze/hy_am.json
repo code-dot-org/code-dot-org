@@ -3,8 +3,6 @@
   "atFlower": "ժամը ծաղիկ",
   "atHoneycomb": "ժամը բջիջ",
   "avoidCowAndRemove": "պետք է խուսափել կովը եւ հեռացնել 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Ծաղիկ դու չունի ավելի նեկտար:",
   "get": "ստանալ",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "բարձրություն",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Եթե ​​կա մի ճանապարհ է, նշված ուղղությամբ, ապա առաջին բլոկի գործողությունների: Հակառակ դեպքում, դա անել երկրորդ բլոկի գործողությունների:",
   "insufficientHoney": "Դուք պետք է կատարել ճիշտ քանակությամբ մեղր:",
   "insufficientNectar": "Դուք պետք է հավաքել ճիշտ քանակությամբ նեկտար:",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "ստեղծել",
   "moveBackward": "տեղափոխել հետամնաց",
   "moveEastTooltip": "Տեղափոխել ինձ արեւելք մեկ տարածք:",
@@ -111,8 +111,5 @@
   "word": "Գտնել բառը",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "այո",
-  "youSpelled": "Դուք ուղղագրությամբ.",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "Դուք ուղղագրությամբ."
 }
