@@ -38,7 +38,7 @@ def request_pardot_api_key
   uri = URI.parse(PARDOT_AUTHENTICATION_URL)
 
   response = Net::HTTP.post_form(uri,
-                      {email: CDO.pardot_user,
+                      {email: CDO.pardot_username,
                       password: CDO.pardot_password,
                       user_key: CDO.pardot_user_key})
 
@@ -58,13 +58,8 @@ def request_pardot_api_key
   api_key
 end
 
-def upsert_prospect_batch(prospects)
-  prospects_json = prospects.to_json
-  puts prospects_json
-end
-
 def submit_create_batch(api_key, prospects)
-  return if prospects.empty
+  return if prospects.empty?
 
   prospects_payload = { prospects: prospects }
   prospects_payload_json = prospects_payload.to_json
@@ -73,7 +68,7 @@ def submit_create_batch(api_key, prospects)
 
   puts prospects_payload_json_encoded
 
-  uri = URI.parse("#{PARDOT_BATCH_CREATE_URL}?prospects=#{prospects_payload_json_ascii}&api_key=#{api_key}&user_key=#{PARDOT_USER_KEY}")
+  uri = URI.parse("#{PARDOT_BATCH_CREATE_URL}?prospects=#{prospects_payload_json_encoded}&api_key=#{api_key}&user_key=#{CDO.pardot_user_key}")
 
   response = Net::HTTP.post_form(uri, {})
 
@@ -89,8 +84,12 @@ def submit_create_batch(api_key, prospects)
 end
 
 def test
+  api_key = request_pardot_api_key
+
   prospects = []
-  prospect = {email: "test+test@testtest.com"}
+  email = "test+test@testtest.com"
+  email = email.gsub("+", "%2B")
+  prospect = {email: email}
   prospects << prospect
 
   submit_create_batch api_key, prospects
@@ -124,6 +123,8 @@ def main
         end
       end
     end
+    # Pardot insists you encode certain characters in email address
+    prospect[:email] = prospect[:email].gsub("+", "%2B")
     prospects << prospect
 
     if prospects.size == 10
