@@ -4,6 +4,7 @@
 
 import React from 'react';
 import BackButton from './backButton';
+import { TutorialsSortBy } from './util';
 
 const styles = {
   header: {
@@ -44,7 +45,7 @@ const styles = {
 const FilterHeader = React.createClass({
   propTypes: {
     onUserInput: React.PropTypes.func.isRequired,
-    sortBy: React.PropTypes.string.isRequired,
+    sortBy: React.PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
     backButton: React.PropTypes.bool,
     legacyLink: React.PropTypes.string,
     filteredTutorialsCount: React.PropTypes.number.isRequired,
