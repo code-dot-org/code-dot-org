@@ -34,5 +34,13 @@
   "filterProgrammingLanguageBlocks": "Blocks",
   "filterProgrammingLanguageTyping": "Typing",
   "filterProgrammingLanguageOther": "Other",
-  "filterActivityTypeRobotics": "Robotics"
+  "filterActivityTypeRobotics": "Robotics",
+  "backButtonBack": "Back to all tutorials",
+  "filterHeaderFilterBy": "Filter By",
+  "filterHeaderShowFilters": "Filters",
+  "filterHeaderHideFilters": "Apply",
+  "roboticsButtonText": "Got robots? <a href='/learn/robotics'>Use these activities</a> and make a tangible Hour of Code for students of any age!",
+  "tutorialDetailsTeacherNotes": "Teacher notes",
+  "tutorialDetailsShortLink": "Short link",
+  "tutorialDetailInternationalLanguages": "International languages"
 }
