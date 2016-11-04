@@ -81,33 +81,26 @@ const ScrollButtons = React.createClass({
 
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
-    var scrollTimeout = setTimeout(function () {
-      var scrollInterval = setInterval(function () {
+    this.scrollTimeout = setTimeout(function () {
+      this.scrollInterval = setInterval(function () {
         let dist = CONTINUOUS_SCROLL_BY;
         if (dir === DIRECTIONS.UP) {
           dist *= -1;
         }
         scrollBy(contentContainer, dist, false);
       }.bind(this), CONTINUOUS_SCROLL_INTERVAL);
-      this.setState({ scrollInterval });
     }.bind(this), CONTINUOUS_SCROLL_TIMEOUT);
 
-    const unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
-    this.setState({
-      scrollTimeout,
-      unbindMouseUp
-    });
+    this.unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
   },
 
   scrollStop() {
-    this.state.unbindMouseUp();
-    clearTimeout(this.state.scrollTimeout);
-    clearInterval(this.state.scrollInterval);
-    this.setState({
-      scrollTimeout: null,
-      scrollInterval: null,
-      unbindMouseUp: null
-    });
+    this.unbindMouseUp();
+    clearTimeout(this.scrollTimeout);
+    clearInterval(this.scrollInterval);
+    this.unbindMouseUp = null;
+    this.scrollTimeout = null;
+    this.scrollInterval = null;
   },
 
   render() {
