@@ -987,7 +987,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Generator.get('JavaScript').craft_playSound = function () {
     var blockType = this.getTitleValue('TYPE');
-    return 'playSound("' + blockType + '", \'block_id_' + this.id + '\');\n';
+    return `playSound("${blockType}", event.targetIdentifier, "block_id_${this.id}");\n`;
   };
 
   blockly.Blocks.craft_addScore = {

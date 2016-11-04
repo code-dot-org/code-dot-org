@@ -974,9 +974,9 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
           blockType);
     },
-    playSound: function (soundID, blockID) {
+    playSound: function (soundID, targetEntity, blockID) {
       appCodeOrgAPI.playSound(studioApp.highlight.bind(studioApp, blockID),
-          soundID);
+          soundID, targetEntity);
     },
     addScore: function (scoreAmount, blockID) {
       appCodeOrgAPI.addScore(studioApp.highlight.bind(studioApp, blockID),
