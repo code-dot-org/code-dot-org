@@ -6,7 +6,6 @@ import {add, update, remove} from '../redux/watchedExpressions';
 import TetherComponent from 'react-tether';
 import onClickOutside from 'react-onclickoutside';
 
-const WATCH_TIMER_PERIOD = 250;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
 const DEFAULT_AUTOCOMPLETE_OPTIONS = [
   'Game.mouseX',
@@ -23,13 +22,18 @@ const DEFAULT_AUTOCOMPLETE_OPTIONS = [
   'sprite.height',
 ];
 
+const buttonSize = '34px';
+const inputValueWidth = 159;
+const autocompletePanelWidth = 163;
+const inputElementHeight = 29;
+
 const styles = {
   watchContainer: {
     width: '100%',
     height: '100%'
   },
   autocompletePanel: {
-    width: 163,
+    width: autocompletePanelWidth,
     height: 'initial',
     background: 'white',
     color: '#808080',
@@ -47,40 +51,43 @@ const styles = {
     fontSize: 23,
     float: 'right',
     cursor: 'pointer',
-    width: 25,
+    width: buttonSize,
+    lineHeight: buttonSize,
+    height: buttonSize,
+    textAlign: 'center',
     backgroundColor: '#be0712',
     color: 'white',
-    padding: 6,
-    paddingRight: 0,
-    paddingLeft: 10
+    margin: 0,
+    padding: 0
   },
   watchAddButton: {
     fontSize: 20,
+    width: buttonSize,
+    lineHeight: buttonSize,
+    height: buttonSize,
+    textAlign: 'center',
     float: 'right',
     cursor: 'pointer',
-    width: 25,
     backgroundColor: '#1e93cd',
     color: 'white',
-    padding: 6,
-    paddingRight: 0,
-    paddingLeft: 10
+    margin: 0,
+    padding: 0
   },
   watchValue: {
-    float: 'left',
-    marginTop: 7,
-    marginLeft: 2,
     whiteSpace: 'nowrap',
+    height: buttonSize,
+    lineHeight: buttonSize,
+    marginLeft: 3,
     overflow: 'scroll',
-    width: 160,
-    height: 21,
+    width: inputValueWidth,
   },
   watchInputSection: {
     clear: 'both'
   },
   watchInput: {
-    width: 159,
+    width: inputValueWidth,
     marginTop: 0,
-    height: 25,
+    height: inputElementHeight,
     fontFamily: 'monospace',
     fontSize: '12px'
   }
@@ -163,35 +170,6 @@ const DebugWatch = React.createClass({
     };
   },
 
-  componentDidMount() {
-    this.wasRunning = null;
-    this.intervalId_ = setInterval(() => {
-      const justStoppedRunning = this.wasRunning && !this.props.isRunning;
-      this.wasRunning = this.props.isRunning;
-
-      if (!this.props.isRunning) {
-        if (justStoppedRunning) {
-          this.props.watchedExpressions.map(we => this.props.update(we.get('expression'), WATCH_VALUE_NOT_RUNNING));
-        }
-        return;
-      }
-
-      this.props.watchedExpressions.map(we => {
-        if (window.tempJSInterpreter) {
-          const currentValue = window.tempJSInterpreter.evaluateWatchExpression(we.get('expression'));
-          this.props.update(we.get('expression'), currentValue);
-        }
-      });
-    }, WATCH_TIMER_PERIOD);
-  },
-
-  componentWillUnmount() {
-    if (this.intervalId_) {
-      clearInterval(this.intervalId_);
-      this.intervalId_ = null;
-    }
-  },
-
   // http://stackoverflow.com/a/7390612
   nonValueDescriptor(obj) {
     return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
@@ -203,6 +181,10 @@ const DebugWatch = React.createClass({
    * @returns {*}
    */
   renderValue(obj) {
+    if (!this.props.isRunning) {
+      return (<span className="watch-value">{WATCH_VALUE_NOT_RUNNING}</span>);
+    }
+
     const descriptor = this.nonValueDescriptor(obj);
     const isError = obj instanceof Error;
 
