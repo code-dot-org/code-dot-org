@@ -44,6 +44,12 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert school_info.valid?, school_info.errors.full_messages
   end
 
+  test 'US private without state fails' do
+    school_info = build :school_info_us_private, state: nil
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'State is required', school_info.errors.full_messages.first
+  end
+
   test 'US private without zip fails' do
     school_info = build :school_info_us_private, zip: nil
     refute school_info.valid?  # Run the validations and set errors
@@ -68,6 +74,12 @@ class SchoolInfoTest < ActiveSupport::TestCase
   test 'US other with zip and school name succeeds' do
     school_info = build :school_info_us_other
     assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'US other without state fails' do
+    school_info = build :school_info_us_other, state: nil
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'State is required', school_info.errors.full_messages.first
   end
 
   test 'US other without zip fails' do
