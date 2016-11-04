@@ -51,27 +51,27 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_zombie" deletable="false" x="300px" y="15px">
+        <block type="craft_ironGolemNoDayNight" deletable="false"/>
+        <block type="craft_zombieNoDayNight" deletable="false">
+          <statement name="WHEN_USED">
+            <block type="craft_destroyEntity" deletable="false"/>
+          </statement>
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_attack" deletable="false"/>
+          </statement>
           <statement name="WHEN_SPAWNED">
-            <block type="craft_forever">
+            <block type="craft_forever" deletable="false">
               <statement name="DO">
-                <block type="craft_moveToward">
+                <block type="craft_moveToward" deletable="false" editable="false">
                   <title name="TYPE">Player</title>
                 </block>
               </statement>
             </block>
           </statement>
-          <statement name="WHEN_TOUCHED">
-            <block type="craft_attack"/>
-          </statement>
-          <statement name="WHEN_USED">
-            <block type="craft_destroyEntity"/>
-          </statement>
           <statement name="WHEN_ATTACKED">
-            <block type="craft_destroyEntity"/>
+            <block type="craft_destroyEntity" deletable="false"/>
           </statement>
         </block>
-        <block type="craft_ironGolem" deletable="false" x="15px" y="15px"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
