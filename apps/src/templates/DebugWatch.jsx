@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {add, update, remove} from '../redux/watchedExpressions';
 import TetherComponent from 'react-tether';
+import onClickOutside from 'react-onclickoutside';
 
 const WATCH_TIMER_PERIOD = 250;
 const WATCH_VALUE_NOT_RUNNING = "undefined";
@@ -85,11 +86,15 @@ const styles = {
   }
 };
 
-const AutocompleteSelector = React.createClass({
+const AutocompleteSelector = onClickOutside(React.createClass({
   getInitialState() {
     return {
       selectedOption: this.props.options.length - 1
     };
+  },
+
+  handleClickOutside() {
+    this.props.onClickOutside();
   },
 
   render() {
@@ -127,9 +132,10 @@ const AutocompleteSelector = React.createClass({
     currentIndex: React.PropTypes.number,
     options: React.PropTypes.arrayOf(React.PropTypes.string),
     onOptionClicked: React.PropTypes.func,
-    onOptionHovered: React.PropTypes.func
+    onOptionHovered: React.PropTypes.func,
+    onClickOutside: React.PropTypes.func
   }
-});
+}));
 
 /**
  * A "watchers" window for our debugger.
@@ -248,8 +254,9 @@ const DebugWatch = React.createClass({
     }
     this.props.add(inputText);
     this.setState({
-      history: this.state.history.concat(inputText),
+      history: [inputText].concat(this.state.history),
       editing: false,
+      historyIndex: -1,
       text: ''
     }, () => {
       this.scrollToBottom();
@@ -257,12 +264,65 @@ const DebugWatch = React.createClass({
     });
   },
 
-  closeAutocomplete: function () {
+  closeAutocomplete() {
     this.setState({
       editing: false,
       autocompleteSelecting: false,
       autocompleteOpen: false
     });
+  },
+
+  clearInput() {
+    this.setState({
+      editing: false,
+      text: '',
+    }, () => {
+      this.filterOptions();
+      this.setState({editing: true});
+    });
+  },
+
+  selectHistoryIndex(historyIndex) {
+    this.setState({
+      editing: false,
+      text: this.state.history[historyIndex],
+      historyIndex: historyIndex,
+      autocompleteSelecting: false,
+      autocompleteOpen: false,
+    }, () => {
+      this.filterOptions();
+      this.setState({editing: true,});
+    });
+  },
+
+  selectAutocompleteIndex(autocompleteIndex) {
+    this.setState({
+      autocompleteSelecting: true,
+      autocompleteIndex: autocompleteIndex
+    });
+  },
+
+  historyDown() {
+    const historyIndex = this.wrapValue(this.state.historyIndex - 1, this.state.history.length);
+    this.selectHistoryIndex(historyIndex);
+  },
+
+  historyUp() {
+    const atTopmostHistoryItem = this.state.historyIndex === this.state.history.length - 1;
+    if (atTopmostHistoryItem) {
+      return;
+    }
+
+    const historyIndex = this.wrapValue(this.state.historyIndex + 1, this.state.history.length);
+    this.selectHistoryIndex(historyIndex);
+  },
+
+  autocompleteDown() {
+    this.selectAutocompleteIndex(this.wrapValue(this.state.autocompleteIndex + 1, this.state.autocompleteOptions.length));
+  },
+
+  autocompleteUp() {
+    this.selectAutocompleteIndex(this.wrapValue(this.state.autocompleteIndex - 1, this.state.autocompleteOptions.length));
   },
 
   onKeyDown(e) {
@@ -276,59 +336,53 @@ const DebugWatch = React.createClass({
     if (e.key === 'Escape') {
       this.closeAutocomplete();
     }
+
     if (e.key === 'ArrowUp') {
       if (this.state.autocompleteOpen) {
-        const nOptions = this.state.autocompleteOptions.length;
-        const newIndex = (this.state.autocompleteIndex - 1 + nOptions) % nOptions;
-        this.setState({
-          autocompleteSelecting: true,
-          autocompleteIndex: newIndex,
-        });
-      } else {
-        const nOptions = this.state.history.length;
-        const historyIndex = (this.state.historyIndex - 1 + nOptions) % nOptions;
-        this.setState({
-          editing: false,
-          text: this.state.history[historyIndex],
-          historyIndex: historyIndex
-        });
-        this.setState({
-          editing: true
-        });
+        this.autocompleteUp();
+      } else if (this.state.history.length > 0) {
+        this.historyUp();
       }
       e.preventDefault();
     }
     if (e.key === 'ArrowDown') {
       if (this.state.autocompleteOpen) {
-        const newIndex = (this.state.autocompleteIndex + 1) % this.state.autocompleteOptions.length;
-        this.setState({
-          autocompleteSelecting: true,
-          autocompleteIndex: newIndex,
-        });
-      } else {
-        this.setState({
-          editing: false,
-          text: ''
-        }, () => {
-          this.setState({
-            editing: true
-          });
-        });
+        this.autocompleteDown();
+      } else if (this.navigatingHistory()) {
+        const atFirstHistoryItem = this.state.historyIndex === 0;
+        if (atFirstHistoryItem) {
+          this.setState({historyIndex: -1}, () => this.clearInput());
+        } else {
+          this.historyDown();
+        }
       }
       e.preventDefault();
     }
   },
 
-  resetAutocomplete: function () {
+  navigatingHistory() {
+    return this.state.historyIndex >= 0;
+  },
+
+  wrapValue(index, length) {
+    return (index + length) % length;
+  },
+
+  handleClickOutside() {
+    this.closeAutocomplete();
+  },
+
+  resetAutocomplete() {
     this.setState({
       autocompleteIndex: 0,
+      historyIndex: -1,
       autocompleteSelecting: false
     });
   },
 
   componentDidUpdate(_, prevState) {
     if (prevState.text !== this.state.text) {
-      this.filterOptions();
+      //this.filterOptions();
     }
     if (prevState.autocompleteOpen && !this.state.autocompleteOpen) {
       this.resetAutocomplete();
@@ -339,10 +393,12 @@ const DebugWatch = React.createClass({
     const text = this.state.text;
     const filteredOptions = DEFAULT_AUTOCOMPLETE_OPTIONS.filter((option) => option.match(new RegExp(text, 'i')));
     const completeMatch = filteredOptions.length === 1 && filteredOptions[0] === text;
+    const navigatingHistory = this.state.historyIndex >= 0;
+    const historyTextModified = navigatingHistory && this.state.history[this.state.historyIndex] !== text;
     this.setState({
       autocompleteIndex: this.state.autocompleteIndex > filteredOptions.length ? 0 : this.state.autocompleteIndex,
       autocompleteOptions: filteredOptions,
-      autocompleteOpen: text.length && filteredOptions.length && !completeMatch
+      autocompleteOpen: text.length && filteredOptions.length && !completeMatch && (!navigatingHistory || historyTextModified)
     });
   },
 
@@ -354,6 +410,8 @@ const DebugWatch = React.createClass({
   onChange(e) {
     this.setState({
       text: e.target.value
+    }, () => {
+      this.filterOptions();
     });
   },
 
@@ -420,6 +478,7 @@ const DebugWatch = React.createClass({
                   autocompleteSelecting: true,
                   autocompleteIndex: index
                 })}
+                onClickOutside={this.closeAutocomplete}
               />}
             </TetherComponent>
           </div>
@@ -447,4 +506,3 @@ export default connect(state => {
     },
   };
 })(DebugWatch);
-
