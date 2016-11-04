@@ -4,6 +4,7 @@
 
 import React from 'react';
 import BackButton from './backButton';
+import i18n from './locale';
 
 const styles = {
   header: {
@@ -63,7 +64,7 @@ const FilterHeader = React.createClass({
 
         <div style={styles.bar}>
           <div style={styles.filterBy}>
-            Filter By
+            {i18n.filterHeaderFilterBy()}
           </div>
 
           <div style={styles.right}>
@@ -74,7 +75,7 @@ const FilterHeader = React.createClass({
                 &nbsp;
                 &nbsp;
                 <button onClick={this.props.showModalFilters}>
-                  Filters
+                  {i18n.filterHeaderShowFilters()}
                 </button>
               </span>
             )}
@@ -84,7 +85,7 @@ const FilterHeader = React.createClass({
                 &nbsp;
                 &nbsp;
                 <button onClick={this.props.hideModalFilters}>
-                  Apply
+                  {i18n.filterHeaderHideFilters()}
                 </button>
               </span>
             )}

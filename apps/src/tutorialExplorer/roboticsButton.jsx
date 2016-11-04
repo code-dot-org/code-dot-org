@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { getResponsiveValue } from './responsive';
+import i18n from './locale';
 
 const styles = {
   roboticsButtonImage: {
@@ -34,7 +35,7 @@ const RoboticsButton = React.createClass({
           </a>
         </div>
         <div style={roboticsTextStyle}>
-          Got robots? <a href="/learn/robotics">Use these activities</a> and make a tangible Hour of Code for students of any age!
+          {i18n.roboticsButtonText()}
         </div>
       </div>
     );

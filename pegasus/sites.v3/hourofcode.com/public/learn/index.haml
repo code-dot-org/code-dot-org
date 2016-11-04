@@ -44,8 +44,10 @@ social:
         %br/
       #studentimage.col-xs-12.col-sm-6.hidden-xs{style: "height: 278px"}
 
--# Not ideal but we can pull the undigested file from /blockly.
-%script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
+-# Not ideal but we can pull the undigested files from /blockly.
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
 
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
