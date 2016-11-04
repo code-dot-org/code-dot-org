@@ -32,15 +32,15 @@
   = boolean_check_box f, :show_debug_watch
 
 .field
-  = f.label 'Watchers Autocomplete Suggestions'
+  = f.label 'Pre-populated Watchers'
   %pre
     = preserve do
       :escaped
         Example:
         ["Game.mouseX", "Game.mouseY", "Game.width"]
-  = f.text_area 'watchers_options', placeholder: 'Insert JSON array', rows: 4, value: @level.watchers_options or ''
+  = f.text_area 'watchers_prepopulated', placeholder: 'Insert JSON array', rows: 4, value: @level.watchers_prepopulated or ''
   :javascript
-    levelbuilder.initializeCodeMirror('level_watchers_options', 'javascript');
+    levelbuilder.initializeCodeMirror('level_watchers_prepopulated', 'javascript');
 
 .field
   = f.label :soft_buttons, 'Controls buttons'

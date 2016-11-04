@@ -41,6 +41,8 @@ class Applab < Blockly
     data_tables
     data_properties
     hide_view_data_button
+    show_debug_watch
+    watchers_prepopulated
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled

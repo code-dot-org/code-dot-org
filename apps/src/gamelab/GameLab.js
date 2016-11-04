@@ -210,8 +210,8 @@ GameLab.prototype.init = function (config) {
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
-    if (config.level.watchersOptions) {
-      JSON.parse(config.level.watchersOptions).forEach(option => {
+    if (config.level.watchersPrepopulated) {
+      JSON.parse(config.level.watchersPrepopulated).forEach(option => {
         this.studioApp_.reduxStore.dispatch(addWatcher(option));
       });
     }
