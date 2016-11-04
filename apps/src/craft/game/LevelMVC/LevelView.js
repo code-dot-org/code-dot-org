@@ -56,7 +56,6 @@ export default class LevelView {
       "milk": ["Miniblocks", 186, 191],
       "egg": ["Miniblocks", 192, 197],
       "poppy": ["Miniblocks", 198, 203],
-      "sheep": ["Miniblocks", 102, 107]
     };
 
     this.blocks = {
