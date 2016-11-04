@@ -17,8 +17,8 @@
   in some cases we want to give them an entirely different rendering (i.e. hidden/locked stages). We do
   this by hiding level-body and unhiding the other content.
 #level-body{style: params[:viewAs] ? 'visibility: hidden' : nil}
-  - if ScriptLevelsController.stage_hidden_for_section?(@script_level, params[:section_id])
-    = render partial: 'levels/hidden_stage', locals: {hidden: true}
+  -# Render the hidden stage partial, but make it hidden so that client can unhide if needed
+  = render partial: 'levels/hidden_stage', locals: {hidden: true}
 
   - if @game.unplugged?
     :javascript
