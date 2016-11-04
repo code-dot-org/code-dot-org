@@ -1,7 +1,7 @@
 /** @file A clickable item in the scroll area of the animation picker */
 import React from 'react';
 import Radium from 'radium';
-import color from '../../color';
+import color from "../../util/color";
 import {PlayBehavior} from '../constants';
 import * as PropTypes from '../PropTypes';
 import AnimationPreview from './AnimationPreview';

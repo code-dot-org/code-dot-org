@@ -1,7 +1,7 @@
 /** Pagination controls */
 var React = require('react');
 var Radium = require('radium');
-import color from '../color';
+import color from "../util/color";
 import {Style} from 'radium';
 import Pagination from "react-bootstrap/lib/Pagination";
 

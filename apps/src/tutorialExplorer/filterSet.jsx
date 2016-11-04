@@ -4,6 +4,7 @@
 import React from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
+import { getResponsiveValue } from './responsive';
 
 const FilterSet = React.createClass({
   propTypes: {
@@ -15,26 +16,24 @@ const FilterSet = React.createClass({
 
   render() {
     return (
-      <div>
-        <div className="col-20">
-          {this.props.filterGroups.map(item =>
-            item.display !== false && (
-              <FilterGroup
-                name={item.name}
-                text={item.text}
-                filterEntries={item.entries}
-                onUserInput={this.props.onUserInput}
-                selection={this.props.selection[item.name]}
-                key={item.name}
-              />
-            )
-          )}
+      <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+        {this.props.filterGroups.map(item =>
+          item.display !== false && (
+            <FilterGroup
+              name={item.name}
+              text={item.text}
+              filterEntries={item.entries}
+              onUserInput={this.props.onUserInput}
+              selection={this.props.selection[item.name]}
+              key={item.name}
+            />
+          )
+        )}
 
-          {this.props.roboticsButton && (
-            <RoboticsButton/>
-          )}
+        {this.props.roboticsButton && (
+          <RoboticsButton/>
+        )}
 
-        </div>
       </div>
     );
   }

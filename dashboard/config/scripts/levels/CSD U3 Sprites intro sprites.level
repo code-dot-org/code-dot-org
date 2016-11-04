@@ -21,7 +21,7 @@
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -49,13 +49,11 @@
     "palette_category_at_start": "sprites",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false"
+    "all_animations_single_frame": "false",
+    "video_key": "csd_gamelab_sprites_1",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

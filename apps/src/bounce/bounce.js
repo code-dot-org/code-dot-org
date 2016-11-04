@@ -78,6 +78,8 @@ var loadLevel = function () {
   Bounce.softButtons_ = level.softButtons || [];
   Bounce.respawnBalls = level.respawnBalls || false;
   Bounce.failOnBallExit = level.failOnBallExit || false;
+  Bounce.goal = level.useFlagGoal ? skin.flagGoal : skin.goal;
+  Bounce.goalSuccess = level.useFlagGoal ? skin.flagGoalSuccess : skin.goalSuccess;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -335,7 +337,7 @@ var drawMap = function () {
       paddleFinishMarker.setAttribute('id', 'paddlefinish' + i);
       paddleFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
-                                        skin.goal);
+                                        Bounce.goal);
       paddleFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
       paddleFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
       svg.appendChild(paddleFinishMarker);
@@ -348,7 +350,7 @@ var drawMap = function () {
     ballFinishMarker.setAttribute('id', 'ballfinish');
     ballFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                     'xlink:href',
-                                    skin.goal);
+                                    Bounce.goal);
     ballFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
     ballFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
     svg.appendChild(ballFinishMarker);
@@ -917,7 +919,7 @@ Bounce.reset = function (first) {
       paddleFinishIcon.setAttributeNS(
           'http://www.w3.org/1999/xlink',
           'xlink:href',
-          skin.goal);
+          Bounce.goal);
     }
   }
 
@@ -935,7 +937,7 @@ Bounce.reset = function (first) {
     ballFinishIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink',
         'xlink:href',
-        skin.goal);
+        Bounce.goal);
   }
 
   // Reset the obstacle image.
@@ -1184,11 +1186,24 @@ var skinTheme = function (value) {
   return skin[value];
 };
 
+Bounce.setTeam = function (value) {
+  Bounce.setBackgroundImage(skin.teamBackgrounds[value]);
+  Bounce.loadTiles(skin.tiles, skin.goalTiles);
+};
+
 Bounce.setBackground = function (value) {
+  var theme = skinTheme(value);
+  Bounce.setBackgroundImage(theme.background);
+  Bounce.loadTiles(theme.tiles, theme.goalTiles);
+};
+
+Bounce.setBackgroundImage = function (backgroundUrl) {
   var element = document.getElementById('background');
   element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skinTheme(value).background);
+    backgroundUrl);
+};
 
+Bounce.loadTiles = function (tiles, goalTiles) {
   // Recompute all of the tiles to determine if they are walls, goals, or empty
   // TODO: do this once during init and cache the result
   var tileId = 0;
@@ -1205,7 +1220,7 @@ Bounce.setBackground = function (value) {
 
       // Draw the tile.
       if (WALL_TILE_SHAPES[tile]) {
-        image = skinTheme(value).tiles;
+        image = tiles;
       } else {
         // Compute the tile index.
         tile = goalNormalize(x, y) +
@@ -1217,10 +1232,10 @@ Bounce.setBackground = function (value) {
         if (!GOAL_TILE_SHAPES[tile]) {
           empty = true;
         }
-        image = skinTheme(value).goalTiles;
+        image = goalTiles;
       }
       if (!empty) {
-        element = document.getElementById('tileElement' + tileId);
+        var element = document.getElementById('tileElement' + tileId);
         element.setAttributeNS(
             'http://www.w3.org/1999/xlink', 'xlink:href', image);
       }
@@ -1269,7 +1284,7 @@ Bounce.allFinishesComplete = function () {
           paddleFinishIcon.setAttributeNS(
               'http://www.w3.org/1999/xlink',
               'xlink:href',
-              skin.goalSuccess);
+              Bounce.goalSuccess);
         }
       } else {
         finished++;
@@ -1294,7 +1309,7 @@ Bounce.allFinishesComplete = function () {
         ballFinishIcon.setAttributeNS(
             'http://www.w3.org/1999/xlink',
             'xlink:href',
-            skin.goalSuccess);
+            Bounce.goalSuccess);
         return true;
       }
     }

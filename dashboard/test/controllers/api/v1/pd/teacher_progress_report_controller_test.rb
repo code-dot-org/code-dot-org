@@ -37,14 +37,15 @@ class Api::V1::Pd::TeacherProgressReportControllerTest < ::ActionController::Tes
     @admin = create :admin
     @organizer = create :workshop_organizer
 
-    # Workshop with 10 teachers.
-    @workshop = create :pd_ended_workshop, organizer: @organizer
+    # CSF workshop from this organizer with 10 teachers.
+    @workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
     10.times do
       create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
     end
 
-    # Extra workshop from a different organizer, with 1 teacher.
-    @other_workshop = create :pd_ended_workshop
+    # Non-CSF workshop from a different organizer, with 1 teacher.
+    @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
+      subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, in_section: true, attended: true
   end
 
@@ -174,6 +175,22 @@ class Api::V1::Pd::TeacherProgressReportControllerTest < ::ActionController::Tes
     assert_equal 1, response.count
     assert_equal teacher_in_range.id, response.first['teacher_id']
     assert_equal workshop_in_range.id, response.first['workshop_id']
+  end
+
+  test 'filter by course' do
+    sign_in @admin
+
+    # @workshop is CSF; @other_workshop is not
+    {
+      'csf' => {workshop_id: @workshop.id, teacher_count: 10},
+      '-csf' => {workshop_id: @other_workshop.id, teacher_count: 1}
+    }.each do |course_param, expected|
+      get :index, params: {course: course_param}
+      assert_response :success
+      response = JSON.parse(@response.body)
+      assert_equal expected[:teacher_count], response.count
+      assert_equal [expected[:workshop_id]], response.map{|r| r['workshop_id']}.uniq.sort
+    end
   end
 
   test 'csv' do

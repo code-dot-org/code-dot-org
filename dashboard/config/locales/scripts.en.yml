@@ -1423,6 +1423,7 @@ en:
             What is Big Data?: What is Big Data?
             Rapid Research - Cybercrime: Rapid Research - Cybercrime
             Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and Security Dilemmas
+            Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
@@ -1454,6 +1455,7 @@ en:
             Buttons and Events: Buttons and Events
             Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
             Unit 5 Assessment 1: Unit 5 Assessment 1
+            Unit 5 Assessment 2: Unit 5 Assessment 2
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1489,6 +1491,8 @@ en:
             Defender: Defender
             'Project: Build a Game': 'Project: Build a Game'
             Velocity: Velocity
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
           description_audience: ''
         2016_sciencePD_phase1:
           title: 'CS in Science: Part 1'
@@ -2004,6 +2008,14 @@ en:
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Build a Game': 'Project: Build a Game'
           description_audience: ''
         grade2:
           title: Grade 2
@@ -2075,6 +2087,7 @@ en:
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+            Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
           description_audience: ''
           description_short: ''
           description: ''
@@ -2123,6 +2136,8 @@ en:
             'Lessons 12 - 15: Communicating with Visualizations': 'Lessons 12 - 15: Communicating with Visualizations'
             'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting Visual Data'
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
+            Unit 2 Overview: Unit 2 Overview
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2193,4 +2208,45 @@ en:
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
+          description: ''
+        csp2-support:
+          stage:
+            Unit 2 Overview: Unit 2 Overview
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 2 Online Support
+          description_audience: ''
+          description_short: Teacher Supports for CSP Unit 2
+          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+        csd4:
+          stage:
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            User-Centered Design Micro Activity: User-Centered Design Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Redesigning a Space: Redesigning a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            Paper Prototypes: Paper Prototypes
+            Prototype Testing: Prototype Testing
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Testing the App: Testing the App
+            Improving and Iterating: Improving and Iterating
+            App Presentation: App Presentation
+          title: 'CSD Unit 4 - Problem Solving: The Design Process'
+          description_audience: ''
+          description_short: The Design Process
           description: ''

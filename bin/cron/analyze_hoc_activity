@@ -77,20 +77,20 @@ def main
   end
 
   # Compute the number of hoc events (the grand total and broken down by company and country).
-  hoc_country_totals = {}
-  hoc_company_totals = {}
+  hoc_country_totals = Hash.new(0)
+  hoc_company_totals = Hash.new(0)
   unique_hoc_events = DB[:forms].where(kind: 'HocSignup2016').group(:email, :name).select(:name, :email, :processed_data, :data)
   total_hoc_count = DB[:forms].where(kind: 'HocSignup2016').group(:email, :name).select(:email, :name).count
 
   unique_hoc_events.each do |row|
     data = JSON.parse(row[:data])
     data['hoc_company_s'] = 'Other' if data['hoc_company_s'].nil_or_empty?
-    add_count_to_hash hoc_company_totals, data['hoc_company_s'], 1
+    hoc_company_totals[data['hoc_company_s']] += 1
 
     unless row[:processed_data].nil?
       processed_data = JSON.parse(row[:processed_data])
       processed_data['location_country_code_s'] = 'Other' if processed_data['location_country_code_s'].nil_or_empty?
-      add_count_to_hash hoc_country_totals, processed_data['location_country_code_s'], 1
+      hoc_country_totals[processed_data['location_country_code_s']] += 1
     end
   end
 

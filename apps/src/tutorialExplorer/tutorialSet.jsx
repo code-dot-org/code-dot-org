@@ -4,6 +4,7 @@
 import React from 'react';
 import Tutorial from './tutorial';
 import shapes from './shapes';
+import { getResponsiveValue } from './responsive';
 
 const TutorialSet = React.createClass({
   propTypes: {
@@ -13,10 +14,7 @@ const TutorialSet = React.createClass({
 
   render() {
     return (
-      <div
-        className="col-80"
-        style={{float: 'left'}}
-      >
+      <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
         {this.props.tutorials.map(item => (
           <Tutorial
             item={item}

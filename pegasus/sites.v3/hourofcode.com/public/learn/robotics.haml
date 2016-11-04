@@ -1,0 +1,68 @@
+---
+title: Learn
+layout: wide_index
+social:
+  "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
+  "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
+  "og:image:width": 520
+  "og:image:height": 391
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+-# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
+:css
+  @media (min-width: 992px)
+  {
+    .modal-lg {
+      width: 900px;
+    }
+  }
+
+#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+  = view :header
+
+  .banner
+    .container{style: "color: white"}
+      .col-xs-12.col-sm-6{style: "text-align: center"}
+        %br/
+        %br/
+        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
+          ROBOTICS
+        %br/
+        %br/
+        Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
+        %br/
+        %br/
+      #studentimage.col-xs-12.col-sm-6.hidden-xs
+        %img{src: CDO.code_org_url("/images/learn/robotics.png"), style: "text-align: center"}
+
+-# Not ideal but we can pull the undigested file from /blockly.
+%script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
+
+-# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
+- tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
+- tutorials_contents.each do |tutorial|
+  - tutorial[:image] = CDO.code_org_url(tutorial[:image])
+
+- tutorials_contents.each do |tutorial|
+  - tutorial[:contact] = nil
+
+#tutorials
+
+.clear{style: "clear: both"}
+
+:javascript
+
+  $(document).ready(function() {
+    // Send through some values that the JavaScript will need.
+    var tutorialExplorerManager = new window.TutorialExplorerManager({
+      tutorials: #{tutorials_contents.to_json},
+      locale: "#{request.locale}",
+      robotics: true,
+      backButton: true
+    });
+    tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
+  });
