@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "බෝලය බිත්තිය හා ඝට්ටනය වු විට පහත ක්‍රියාමාර්ග ක්‍රියාත්මක කරන්න.",
   "whileMsg": "එතෙක්",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "ඔව්"
+  "yes": "ඔව්",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

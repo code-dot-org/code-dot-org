@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Execută acţiunile de mai jos când o bilă se ciocneşte cu un perete.",
   "whileMsg": "în timp ce",
   "whileTooltip": "Repetă acţiunile cuprinse până când punctul final este atins.",
-  "yes": "Da"
+  "yes": "Da",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

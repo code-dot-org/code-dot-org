@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Ejecuta las instrucciones siguientes cuando la pelota choca con una pared.",
   "whileMsg": "mientras",
   "whileTooltip": "Repetir las acciones dentro del bloque hasta alcanzar el punto final.",
-  "yes": "Sí"
+  "yes": "Sí",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

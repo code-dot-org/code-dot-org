@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "جب ایک دیوار کے ساتھ ایک گیند ٹکرائے مندرجہ ذیل افعال سرانجام دیں",
   "whileMsg": "جب تک",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "جی"
+  "yes": "جی",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "ทำคำสั่งด้านล่างเมื่อลูกบอลชนกับกำแพง.",
   "whileMsg": "ในขณะที่",
   "whileTooltip": "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด",
-  "yes": "ใช่"
+  "yes": "ใช่",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

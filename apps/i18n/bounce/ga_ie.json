@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Cuireann seo na gníomhartha ceangailte i bhfeidhm nuair a bhuaileann liathróid balla.",
   "whileMsg": "chomh fada is atá",
   "whileTooltip": "Athdhéan na horduithe istigh go dtí go mbainfear an críochphointe amach.",
-  "yes": "Tá"
+  "yes": "Tá",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

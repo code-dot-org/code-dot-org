@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Top divarla toqquşanda aşağıdakı əmrləri icra et.",
   "whileMsg": "hələ ki,",
   "whileTooltip": "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla.",
-  "yes": "Bəli"
+  "yes": "Bəli",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

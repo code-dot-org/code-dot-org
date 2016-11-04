@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Gera aðgerðirnar fyrir neðan þegar bolti rekst á vegg.",
   "whileMsg": "meðan",
   "whileTooltip": "Endurtaka innifaldar aðgerðir þar til endapunkti er náð.",
-  "yes": "Já"
+  "yes": "Já",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }
