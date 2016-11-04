@@ -300,7 +300,8 @@ module AWS
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
           update_bootstrap_script: method(:update_bootstrap_script),
-          log_name: LOG_NAME
+          log_name: LOG_NAME,
+          hipchat_room: ENV['HIPCHAT_ROOM']
         )
         erb_output = erb_eval(template_string, filename)
         YAML.load(erb_output).to_json

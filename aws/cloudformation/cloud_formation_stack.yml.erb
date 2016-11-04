@@ -287,6 +287,41 @@ Resources:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
       QueueName: <%="activities_dead-#{stack_name}"%>
+<% unless environment == :production -%>
+  Daemon:
+    Type: AWS::EC2::Instance
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT60M
+    Properties:
+      ImageId: {'Fn::GetAtt': [AMI, ImageId]}
+      InstanceType: <%=instance_type%>
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      KeyName: <%=ssh_key_name%>
+      Tags: [{Key: Name, Value: <%=stack_name%>}]
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 64
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: <%=file.call('bootstrap_chef.sh.erb',
+          create_id: 'Daemon',
+          node_name: '${ENVIRONMENT}-daemon',
+          run_list: [
+            local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
+          ],
+          commit: commit,
+          shutdown: false
+        )%>
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+          GroupSet:
+            - 'Fn::GetAtt': [VPC, FrontendSecurityGroup]
+            - 'Fn::GetAtt': [VPC, GatewaySecurityGroup]
+          SubnetId: {'Fn::GetAtt': [VPC, PublicSubnet<%=azs.first%>]}
+<% end -%>
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"

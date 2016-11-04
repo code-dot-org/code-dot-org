@@ -32,17 +32,20 @@ cat <<JSON > ${FIRST_BOOT}
     "sync": true
   },
   "cdo-secrets": {
-    "stack_name": "${STACK}",
-<% if local_mode %>
+<% if hipchat_room -%>
+    "hip_chat_log_room": "<%=hipchat_room%>",
+<% end -%>
+<% if local_mode -%>
     "build_apps": true,
-    "use_my_apps": true
-<% end %>
+    "use_my_apps": true,
+<% end -%>
+    "stack_name": "${STACK}"
   },
-<% if local_mode %>
+<% if local_mode -%>
   "omnibus_updater": {
     "version": "${CHEF_VERSION}"
   },
-<% end %>
+<% end -%>
   "run_list": ${RUN_LIST}
 }
 JSON
@@ -64,4 +67,6 @@ aws cloudformation signal-resource \
   --region ${REGION} \
   || true
 
+<% if shutdown -%>
 shutdown -h now
+<% end -%>
