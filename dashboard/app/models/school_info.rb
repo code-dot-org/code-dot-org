@@ -74,11 +74,11 @@ class SchoolInfo < ActiveRecord::Base
   # Country “USA” + charter + State + District + School name [selected]
   # Country “USA” + charter + State + District + zip + School name “other” [typed]
   # Country “USA” + charter + State + District “other” [typed] + zip + School name [typed]
-  # Country “USA” + private + zip + School name [typed]
+  # Country “USA” + private + State + zip + School name [typed]
   # Country “USA” + public + State + District + School name [selected]
   # Country “USA” + public + State + District + zip + School name “other” [typed]
   # Country “USA” + public + State + District “other” [typed] + zip + School name [typed]
-  # Country “USA” + other + zip + School name [typed]
+  # Country “USA” + other + State + zip + School name [typed]
   # Non-USA Country + any school type + address + school name
   #
   # This method reports errors if the record has a country and is invalid.
@@ -108,10 +108,10 @@ class SchoolInfo < ActiveRecord::Base
   end
 
   def validate_private_other
+    errors.add(:state, "is required") unless state
     errors.add(:zip, "is required") unless zip
     errors.add(:school_name, "is required") unless school_name
 
-    errors.add(:state, "is forbidden") if state
     errors.add(:school_district, "is forbidden") if school_district
     errors.add(:school_district_other, "is forbidden") if school_district_other
     errors.add(:school_district_name, "is forbidden") if school_district_name

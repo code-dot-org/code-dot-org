@@ -186,10 +186,12 @@ window.SchoolInfoManager = function (existingOptions) {
   $('#school-type').change(function () {
     if (isUs() && isPublicOrCharter()) {
       show('#school-state');
+      // Trigger the district dropdown if state is already set.
+      $('#school-state').change();
       clearAndHide('#school-zipcode');
       clearAndHide('#school-name');
     } else if (isUs() && isPrivateOrOther()) {
-      clearAndHide('#school-state');
+      show('#school-state');
       show('#school-zipcode');
       clearAndHideDistrict();
       clearAndHideSchool();
@@ -200,8 +202,10 @@ window.SchoolInfoManager = function (existingOptions) {
   });
 
   $('#school-state').change(function () {
-    setupDistrictDropdown($('#school-state').val());
-    clearAndHideSchool();
+    if (isPublicOrCharter()) {
+      setupDistrictDropdown($('#school-state').val());
+      clearAndHideSchool();
+    }
   });
 
   $('#school-district-other').change(function () {
