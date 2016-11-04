@@ -77,19 +77,22 @@
           %span{style: "font-size: 12px"}
             Other school not listed above
 
-    .form-group{style: "display: none;"}
-      .question School’s ZIP code
-      %input#school-zipcode.form-control{name: "#{form_name}[school_zip]", type: "text", required: false}
+    #no-schools-warning{style: "display: none; margin-bottom: 5px;"}
+      .question No schools of that type were found in this district.
 
     -# '#school-name' is outside of '#school' so that we can still show it when the school dropdown is hidden.
     .form-group{style: "display: none;"}
-      %label
+      .question
         School Name
       %div.controls
         %input#school-name.form-control{name: "school_info[school_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
     .form-group{style: "display: none;"}
-      %label
+      .question School’s ZIP code
+      %input#school-zipcode.form-control{name: "#{form_name}[school_zip]", type: "text", required: false}
+
+    .form-group{style: "display: none;"}
+      .question
         School Address
       %div.controls
         %textarea#school-address.form-control{name: "school_info[full_address]", required: false, rows: 4, style: "width: calc(100% - 15px);"}

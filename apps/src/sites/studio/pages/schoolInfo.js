@@ -73,6 +73,7 @@ window.SchoolInfoManager = function (existingOptions) {
 
   function setupSchoolDropdown(districtCode, schoolType) {
     show('#school');
+    // hides school name and zip
     $('#school-other').prop('checked', false).change();
     var selectize = schoolElement[0].selectize;
     if (selectize) {
@@ -112,6 +113,14 @@ window.SchoolInfoManager = function (existingOptions) {
             $('#school-id')[0].selectize.setValue(existingOptions.school_id);
           }
           schoolListFirstLoad = false;
+
+          // Some districts have only charter or only public schools in them. Hide the
+          // dropdown and show a warning if there are no schools of the selected type.
+          if (schools.length === 0) {
+            $('#school-other').prop('checked', true).change();
+            $('#school').closest('.form-group').hide();
+            $('#no-schools-warning').show();
+          }
         }
       });
     });
@@ -139,9 +148,10 @@ window.SchoolInfoManager = function (existingOptions) {
 
   function clearAndHideSchool() {
     $("#school-id-form").val("");
-    $("#school-other").val(false);
+    $("#school-other").prop('checked', false);
     $("#school-name").val("");
     $('#school').closest('.form-group').hide();
+    $('#no-schools-warning').hide();
     $('#school-name').closest('.form-group').hide();
   }
 
@@ -271,6 +281,10 @@ window.SchoolInfoManager = function (existingOptions) {
 
     if (existingOptions.school_district_name) {
       $('#school-district-name').val(existingOptions.school_district_name).change();
+    }
+
+    if (existingOptions.school_other) {
+      $('#school-other').prop('checked', true).change();
     }
 
     if (existingOptions.school_name) {
