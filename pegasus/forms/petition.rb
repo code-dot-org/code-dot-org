@@ -1,3 +1,5 @@
+require 'cdo/geocoder'
+
 class Petition
   def self.normalize(data)
     result = {}
@@ -15,14 +17,7 @@ class Petition
       result[:name_s] = nil unless result[:name_s].class == FieldError
     end
 
-    location = data[:zip_code_or_country_s].to_s.strip
-    zip_code = zip_code_from_code(location)
-    if zip_code
-      result[:zip_code_s] = location
-      result[:state_code_s] = zip_code[:state_code_s].downcase
-      location = 'United States'
-    end
-    result[:country_s] = nil_if_empty downcased location
+    result.merge! get_location(data[:zip_code_or_country_s].to_s.strip)
 
     role = default_if_empty downcased(stripped(data[:role_s])), 'other'
     result[:role_s] = enum role, %w(student parent educator engineer other)
@@ -44,5 +39,35 @@ class Petition
 
   def self.receipt
     'petition_receipt'
+  end
+
+  # @params zip_code_or_country [String] a five digit US zip code or country
+  #   name.
+  # @returns [Hash] data about zip_code_or_country.
+  def self.get_location(zip_code_or_country)
+    # Note that, empirically, we see non-US zip codes so we check for
+    # numerality and length.
+    unless /^\d{5}$/ =~ zip_code_or_country
+      return {country_s: zip_code_or_country}
+    end
+
+    # Attempt to geocode the (presumed) US zip code. If successful, return the
+    # data.
+    result = {zip_code_s: zip_code_or_country}
+    location = Geocoder.search(zip_code_or_country).first
+    if location
+      location.data['address_components'].each do |component|
+        if component['types'].include? 'administrative_area_level_1'
+          result['state_code_s'] = component['short_name'].downcase
+        end
+        if component['types'].include? 'country'
+          result['country_s'] = component['long_name'].downcase
+        end
+      end
+      return result if result['country_s'] == 'united states'
+    end
+
+    # The zip code was not a US zip code, return the user input.
+    {country_s: zip_code_or_country}
   end
 end
