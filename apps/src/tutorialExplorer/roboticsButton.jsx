@@ -35,7 +35,7 @@ const RoboticsButton = React.createClass({
           </a>
         </div>
         <div style={roboticsTextStyle}>
-          {i18n.roboticsButtonText()}
+          {i18n.roboticsButtonText({robotics_url: "/learn/robotics"})}
         </div>
       </div>
     );
