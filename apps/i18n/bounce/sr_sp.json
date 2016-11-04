@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Изврши акције испод кад се лоптица судари са зидом.",
   "whileMsg": "док",
   "whileTooltip": "Понавлјај затворену акцију док се не досегне циљна тачка.",
-  "yes": "Да"
+  "yes": "Да",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

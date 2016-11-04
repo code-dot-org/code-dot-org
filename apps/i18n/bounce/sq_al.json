@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Kryej veprimet si më poshtë kur një top të përplaset në mur.",
   "whileMsg": "ndersa",
   "whileTooltip": "Perserit veprimet e brendshme derisa pika e mbarimit arritet.",
-  "yes": "Po"
+  "yes": "Po",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

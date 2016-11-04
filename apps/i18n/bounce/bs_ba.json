@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Kad lopta udari u zid, izvrši dolje navedene akcije.",
   "whileMsg": "dok",
   "whileTooltip": "Ponavlja umetnute akcije dok se ne dosegne zadani cilj.",
-  "yes": "Da"
+  "yes": "Da",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

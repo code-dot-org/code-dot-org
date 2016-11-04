@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Spusťte níže uvedené akce, když se míč dotkne zdi.",
   "whileMsg": "dokud",
   "whileTooltip": "Opakuje obsažené akce dokud nedosáhne cíle.",
-  "yes": "Ano"
+  "yes": "Ano",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

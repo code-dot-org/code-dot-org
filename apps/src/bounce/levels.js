@@ -535,6 +535,7 @@ levels['12_basketball'] = {
         <block type="bounce_incrementPlayerScore"></block> \
         <block type="bounce_incrementOpponentScore"></block> \
         <block type="bounce_launchBall"></block> \
+        <block type="bounce_setTeam"></block> \
         <block type="bounce_setPaddleSpeed"></block> \
         <block type="bounce_setPaddleDropdown"></block> \
         <block type="bounce_setBallSpeed"></block>'),

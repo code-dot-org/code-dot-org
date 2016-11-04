@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Կատարել գործողությունները ստորեւ, երբ է գնդակը բախվում է պատին.",
   "whileMsg": "ժամանակ",
   "whileTooltip": "Կրկնել կից գործողությունները, մինչեւ Սալոնի կետն է հասել:",
-  "yes": "այո"
+  "yes": "այո",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }
