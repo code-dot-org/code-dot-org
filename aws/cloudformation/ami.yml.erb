@@ -45,7 +45,7 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('ami_bootstrap.sh.erb',
+        Fn::Base64: <%=file.call('bootstrap_chef.sh.erb',
           create_id: "AMICreate#{ami}",
           node_name: 'ami-${INSTANCE_ID}',
           run_list: [

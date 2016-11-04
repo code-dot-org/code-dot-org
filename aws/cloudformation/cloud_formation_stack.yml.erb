@@ -183,7 +183,7 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
+        Fn::Base64: <%=file.call('bootstrap_frontend.sh.erb',
           node_name: 'fe-${INSTANCE_ID}',
           resource_id: 'WebServer',
           commit: commit)%>
