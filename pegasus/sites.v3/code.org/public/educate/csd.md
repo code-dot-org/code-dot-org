@@ -169,7 +169,7 @@ We are releasing drafts of CS Discoveries units as they are finished, and would 
 | Unit | Lesson Plans | Code Studio |
 | :------------------:|-----------|------|
 |**Unit 1 - Problem Solving: Computers and Logic**| [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1)|
-|**Unit 3 - Programming: Interactive Games and Animations** *Chapter 1 only* | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3)|
+|**Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3)|
 
 
 
