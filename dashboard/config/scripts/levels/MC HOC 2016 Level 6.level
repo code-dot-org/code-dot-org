@@ -35,11 +35,11 @@
     "is_event_level": "true",
     "day_night_cycle_start": "3",
     "day_night_cycle_time": "25",
-    "instructions": "Now you make the zombies. Use the 'Spawn' block to make 3 zombies when night falls. Get them to move towards you. Survive until morning.",
+    "instructions": "Now you make the zombies. Use the `spawn` block to make 3 zombies when night falls. Get them to move towards you. Survive until morning.",
     "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"spawn\",\"zombie\") >= 3 && verificationAPI.getRepeatCommandExecutedCount(\"moveToward\") >= 1 && verificationAPI.getEntityCount(\"zombie\") === 0;\r\n}\r\n",
     "level_verification_timeout": "35000",
     "callout_json": "[]",
-    "temporary_feedback_message": "Use the 'Spawn Zombie' command under 'When Night' to spawn at least three zombies. Then, add 'Move a Step Toward Player' to their 'When Spawned' event with a loop to help them chase you. If they’re too fast, add a 'Wait' command to slow them down.",
+    "temporary_feedback_message": "Use the `spawn zombie` command under `when night` to spawn at least three zombies. Then, add `move a step toward player` to their `when spawned` event with a loop to help them chase you. If they’re too fast, add a `wait` command to slow them down.",
     "use_player": "true",
     "use_score": "false",
     "contained_level_names": null
