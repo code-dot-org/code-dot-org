@@ -1,7 +1,7 @@
 name 'CSD U3 Project Build a Game SFLP'
 css 'unplugged'
 markdown <<MARKDOWN
-# Programming - Interactive Games and Animations: Lesson 18 - Build Your Own Game
+# Programming - Interactive Games and Animations: Lesson 18 - Project: Design a Game
 
 ## Background
 
@@ -9,5 +9,5 @@ It's time to use everything you've learned in this unit to build your own game. 
 
 # Resources
 
-* [Make Your Own Game](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing) - Project Guide ([PDF](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=doc))
+* [Project: Design a Game](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing) - Project Guide ([PDF](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=doc))
 MARKDOWN
