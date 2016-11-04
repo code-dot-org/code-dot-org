@@ -1,6 +1,6 @@
 import React from 'react';
 import {Motion, spring} from 'react-motion';
-import color from '../../../../color';
+import color from '../../../../util/color';
 import { borderRadius, levelTokenMargin } from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
 
