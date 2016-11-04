@@ -109,8 +109,24 @@ window.SchoolInfoManager = function (existingOptions) {
           // Only do this first time we do a load of this dropdown content.
           // The assumption is that if we had a valid school_id then
           // we would hit this codepath immediately after page load.
-          if (schoolListFirstLoad && existingOptions && existingOptions.school_id) {
-            $('#school-id')[0].selectize.setValue(existingOptions.school_id);
+          if (schoolListFirstLoad && existingOptions) {
+            if (existingOptions.school_id) {
+              $('#school-id')[0].selectize.setValue(existingOptions.school_id);
+            }
+
+            // Try to set these fields again in case they only recently became visible.
+
+            if (existingOptions.school_other) {
+              $('#school-other').prop('checked', true).change();
+            }
+
+            if (existingOptions.school_name) {
+              $('#school-name').val(existingOptions.school_name).change();
+            }
+
+            if (existingOptions.zip) {
+              $('#school-zipcode').val(existingOptions.zip).change();
+            }
           }
           schoolListFirstLoad = false;
 
@@ -197,7 +213,9 @@ window.SchoolInfoManager = function (existingOptions) {
     if (isUs() && isPublicOrCharter()) {
       show('#school-state');
       // Trigger the district dropdown if state is already set.
-      $('#school-state').change();
+      if ($('#school-state').val()) {
+        $('#school-state').change();
+      }
       clearAndHide('#school-zipcode');
       clearAndHide('#school-name');
     } else if (isUs() && isPrivateOrOther()) {
@@ -267,10 +285,6 @@ window.SchoolInfoManager = function (existingOptions) {
       $('#school-type').val(existingOptions.school_type).change();
     }
 
-    if (existingOptions.zip) {
-      $('#school-zipcode').val(existingOptions.zip).change();
-    }
-
     if (existingOptions.state) {
       $('#school-state').val(existingOptions.state).change();
     }
@@ -289,6 +303,10 @@ window.SchoolInfoManager = function (existingOptions) {
 
     if (existingOptions.school_name) {
       $('#school-name').val(existingOptions.school_name).change();
+    }
+
+    if (existingOptions.zip) {
+      $('#school-zipcode').val(existingOptions.zip).change();
     }
 
     if (existingOptions.full_address) {
