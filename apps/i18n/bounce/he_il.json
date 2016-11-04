@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "בצע את הפעולות להלן כאשר הכדור מתנגש עם הקיר.",
   "whileMsg": "כאשר",
   "whileTooltip": "חזור על הפעולות עד שנקודת הסיום הושגה.",
-  "yes": "כן"
+  "yes": "כן",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

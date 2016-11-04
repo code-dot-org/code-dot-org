@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "當球打在牆上時，執行以下的行動。",
   "whileMsg": "當",
   "whileTooltip": "重覆程式積木內的動作，直到完成為止。",
-  "yes": "是"
+  "yes": "是",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

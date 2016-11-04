@@ -12,11 +12,11 @@ module MysqlConsoleHelper
     command << "--password=#{db.password}" unless db.password.nil?
 
     warning =
-      "*************************************************************\n"\
-      "*** You are connecting to the master production database. ***\n"\
-      "*** Please connect to the reporting database instead via  ***\n"\
-      "*** bin/dashboard-replica-sql or bin/pegasus-replica-sql. ***\n"\
-      "*************************************************************"
+      "*****************************************************************\n"\
+      "*** You are connecting to the master production database.     ***\n"\
+      "*** Please connect to the reporting database instead via      ***\n"\
+      "*** bin/dashboard-reporting-sql or bin/pegasus-reporting-sql. ***\n"\
+      "*****************************************************************"
     puts warning if db.host.start_with?('production')
 
     system(command.join(' '))

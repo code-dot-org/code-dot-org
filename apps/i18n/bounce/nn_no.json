@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Utfør handlingane nedanfor når ein ball kolliderer med ein vegg.",
   "whileMsg": "så lenge",
   "whileTooltip": "Gjenta handlingene som er omslutta inntil målet blir nådd.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

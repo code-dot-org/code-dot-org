@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Įvykdyk žemiau nurodytus veiksmus, kai kamuolys atsitrenkia į sieną.",
   "whileMsg": "kol",
   "whileTooltip": "Pakartok sujungtus veiksmus, kol bus pasiektas finišas.",
-  "yes": "Taip"
+  "yes": "Taip",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

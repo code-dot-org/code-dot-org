@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Laksanakan aksi-aksi dibawah ini ketika bola bertabrakan dengan dinding.",
   "whileMsg": "Selagi",
   "whileTooltip": "Ulangi perintah sampai tujuan tercapai.",
-  "yes": "Ya"
+  "yes": "Ya",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }
