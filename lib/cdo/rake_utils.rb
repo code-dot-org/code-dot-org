@@ -47,7 +47,7 @@ module RakeUtils
             HipChat.log "Successfully stopped service #{id}"
             break
           end
-        rescue
+        rescue RuntimeError # sudo call raises a RuntimeError if it fails
           HipChat.log "Service #{id} failed to stop, retrying (attempt #{i})"
           next
         end
