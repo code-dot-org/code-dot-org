@@ -11,6 +11,7 @@ import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import { mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
+import i18n from './locale';
 import _ from 'lodash';
 
 const TutorialExplorer = React.createClass({
@@ -310,55 +311,56 @@ const TutorialExplorer = React.createClass({
 function getFilters({robotics, mobile}) {
   const filters = [
     { name: "grade",
-      text: "Grades",
+      text: i18n.filterGrades(), //"Grades",
       entries: [
-        {name: "pre", text: "Pre-reader"},
-        {name: "2-5", text: "Grades 2-5"},
-        {name: "6-8", text: "Grades 6-8"},
-        {name: "9+", text: "Grades 9+"}]},
+        {name: "pre", text: i18n.filterGradesPre()},
+        {name: "2-5", text: i18n.filterGrades25()},
+        {name: "6-8", text: i18n.filterGrades68()},
+        {name: "9+",  text: i18n.filterGrades9()}]},
     { name: "teacher_experience",
-      text: "Educator's experience",
+      text: i18n.filterTeacherExperience(),
       entries: [
-        {name: "beginner", text:"Beginner"},
-        {name: "comfortable", text:"Comfortable"}]},
+        {name: "beginner",    text: i18n.filterTeacherExperienceBeginner()},
+        {name: "comfortable", text: i18n.filterTeacherExperienceComfortable()}]},
     { name: "student_experience",
-      text: "Student's experience",
+      text: i18n.filterStudentExperience(),
       entries: [
-        {name: "beginner", text: "Beginner"},
-        {name: "comfortable", text: "Comfortable"}]},
+        {name: "beginner",    text: i18n.filterStudentExperienceBeginner()},
+        {name: "comfortable", text: i18n.filterStudentExperienceComfortable()}]},
     { name: "platform",
-      text: "Classroom technology",
+      text: i18n.filterPlatform(),
       entries: [
-        {name: "computers", text: "Computers"},
-        {name: "android", text: "Android"},
-        {name: "ios", text: "iPad/iPhone"},
-        {name: "no-internet", text: "Poor or no internet"},
-        {name: "no-computers", text: "No computers or devices"}]},
+        {name: "computers",    text: i18n.filterPlatformComputers()},
+        {name: "android",      text: i18n.filterPlatformAndroid()},
+        {name: "ios",          text: i18n.filterPlatformIos()},
+        {name: "no-internet",  text: i18n.filterPlatformNoInternet()()},
+        {name: "no-computers", text: i18n.filterPlatformNoComputers()}]},
     { name: "subject",
-      text: "Topics",
+      text: i18n.filterTopics(),
       entries: [
-        {name: "science", text: "Science"},
-        {name: "math", text: "Math"},
-        {name: "history", text: "Social Studies"},
-        {name: "la", text: "Language Arts"},
-        {name: "art", text: "Art, Media, Music"},
-        {name: "cs-only", text: "Computer Science only"}]},
+        {name: "science", text: i18n.filterTopicsScience()},
+        {name: "math",    text: i18n.filterTopicsMath()},
+        {name: "history", text: i18n.filterTopicsHistory()},
+        {name: "la",      text: i18n.filterTopicsLa()},
+        {name: "art",     text: i18n.filterTopicsArt()},
+        {name: "cs-only", text: i18n.filterTopicsCsOnly()}]},
     { name: "activity_type",
-      text: "Activity type",
+      text: i18n.filterActivityType(),
       entries: [
-        {name: "online-tutorial", text: "Self-led tutorials"},
-        {name: "lesson-plan", text: "Lesson plan"}]},
-    { name: "length", text: "Length",
+        {name: "online-tutorial", text: i18n.filterActivityTypeOnlineTutorial()},
+        {name: "lesson-plan",     text: i18n.filterActivityTypeLessonPlan()}]},
+    { name: "length",
+      text: i18n.filterLength(),
       entries: [
-        {name: "1hour", text: "One hour"},
-        {name: "1hour-follow", text: "One hour with follow-on"},
-        {name: "few-hours", text: "A few hours"}]},
+        {name: "1hour",        text: i18n.filterLength1Hour()},
+        {name: "1hour-follow", text: i18n.filterLength1HourFollow()},
+        {name: "few-hours",    text: i18n.filterLengthFewHours()}]},
     { name: "programming_language",
-      text: "Language",
+      text: i18n.filterProgrammingLanguage(),
       entries: [
-        {name: "blocks", text: "Blocks"},
-        {name: "typing", text: "Typing"},
-        {name: "other", text: "Other"}]}];
+        {name: "blocks", text: i18n.filterProgrammingLanguageBlocks()},
+        {name: "typing", text: i18n.filterProgrammingLanguageTyping()},
+        {name: "other",  text: i18n.filterProgrammingLanguageOther()}]}];
 
   const initialFilters = {
     teacher_experience: ["beginner"],
@@ -372,7 +374,7 @@ function getFilters({robotics, mobile}) {
   if (robotics) {
     filters.forEach(filterGroup => {
       if (filterGroup.name === "activity_type") {
-        filterGroup.entries = [{name: "robotics", text: "Robotics"}];
+        filterGroup.entries = [{name: "robotics", text: i18n.filterActivityTypeRobotics()}];
         filterGroup.display = false;
       }
     });

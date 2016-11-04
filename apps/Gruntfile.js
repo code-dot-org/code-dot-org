@@ -591,7 +591,7 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    appsToBuild.concat('common').map(function (item) {
+    appsToBuild.concat('common').concat('tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';
