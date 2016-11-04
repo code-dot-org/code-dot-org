@@ -278,6 +278,10 @@ GameLab.prototype.init = function (config) {
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
+        evaluateExpression={expression => {
+          return this.JSInterpreter &&
+            this.JSInterpreter.evaluateWatchExpression(expression);
+        }}
       />
     </Provider>
   ), document.getElementById(config.containerId));

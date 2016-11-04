@@ -7,7 +7,7 @@ var JSInterpreter = require('./JSInterpreter');
 var Observer = require('./Observer');
 var utils = require('./utils');
 import {setStepSpeed} from './redux/runState';
-import {add, remove} from './redux/watchedExpressions';
+import {add, update, remove} from './redux/watchedExpressions';
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
@@ -16,6 +16,8 @@ var StepType = JSInterpreter.StepType;
 var MIN_DEBUG_AREA_HEIGHT = 120;
 /** @const {number} */
 var MAX_DEBUG_AREA_HEIGHT = 400;
+/** @const {number} (in milliseconds) */
+var WATCH_TIMER_PERIOD = 250;
 /** @const {string} */
 var WATCH_COMMAND_PREFIX = "$watch ";
 /** @const {string} */
@@ -94,6 +96,8 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.updatePauseUiState();
   this.clearDebugOutput();
   this.clearDebugInput();
+  this.watchIntervalId_ = setInterval(this.updateWatchExpressions_.bind(this),
+      WATCH_TIMER_PERIOD);
 };
 
 /**
@@ -508,4 +512,16 @@ JsDebuggerUi.prototype.onStepOutButton = function () {
     jsInterpreter.handleStepOut();
     this.updatePauseUiState();
   }
+};
+
+/**
+ * Refresh values of watched expressions.
+ * @private
+ */
+JsDebuggerUi.prototype.updateWatchExpressions_ = function () {
+  var jsInterpreter = this.jsInterpreter_;
+  this.reduxStore_.getState().watchedExpressions.forEach(we => {
+    const currentValue = jsInterpreter.evaluateWatchExpression(we.get('expression'));
+    this.reduxStore_.dispatch(update(we.get('expression'), currentValue));
+  });
 };
