@@ -11,8 +11,6 @@ const styles = {
   }
 };
 
-// TODO - unit tests
-// TODO - eyes tests
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
  * student would see and what they see as a teacher. In some cases (such as
