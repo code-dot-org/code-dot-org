@@ -4,10 +4,10 @@
   "filterGrades25": "Grades 2-5",
   "filterGrades68": "Grades 6-8",
   "filterGrades9": "Grades 9+",
-  "filterTeacherExperience": "Educator's experience",
+  "filterTeacherExperience": "Educator experience",
   "filterTeacherExperienceBeginner": "Beginner",
   "filterTeacherExperienceComfortable": "Comfortable",
-  "filterStudentExperience": "Student's experience",
+  "filterStudentExperience": "Student experience",
   "filterStudentExperienceBeginner": "Beginner",
   "filterStudentExperienceComfortable": "Comfortable",
   "filterPlatform": "Classroom technology",
@@ -16,7 +16,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Poor or no internet",
   "filterPlatformNoComputers": "No computers or devices",
-  "filterTopics": "Topics",
+  "filterTopics": "Topic",
   "filterTopicsScience": "Science",
   "filterTopicsMath": "Math",
   "filterTopicsHistory": "Social Studies",
@@ -39,8 +39,8 @@
   "filterHeaderFilterBy": "Filter By",
   "filterHeaderShowFilters": "Filters",
   "filterHeaderHideFilters": "Apply",
-  "roboticsButtonText": "Got robots? <a href='/learn/robotics'>Use these activities</a> and make a tangible Hour of Code for students of any age!",
+  "roboticsButtonText": "Got robots? <a href='{robotics_url}'>Use these activities</a> and make a tangible Hour of Code for students of any age!",
   "tutorialDetailsTeacherNotes": "Teacher notes",
   "tutorialDetailsShortLink": "Short link",
-  "tutorialDetailInternationalLanguages": "International languages"
+  "tutorialDetailInternationalLanguages": "Languages"
 }
