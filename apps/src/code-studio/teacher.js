@@ -134,7 +134,17 @@ function renderIntoLessonTeacherPanel() {
     }
 
     if (stageLockedText) {
-      renderStageLockedText(stageLockedText);
+      const state = store.getState();
+
+      const { currentStageId } = state.progress;
+      const { selectedSectionId } = state.sections;
+      const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
+
+      if (fullyLocked[currentStageId]) {
+        $(stageLockedText).text(commonMsg.stageLocked());
+      } else {
+        $(stageLockedText).text(commonMsg.stageNotFullyLocked());
+      }
     }
   });
 }
@@ -162,20 +172,6 @@ function renderTeacherPanelSections(element) {
     </Provider>,
     element
   );
-}
-
-function renderStageLockedText(element) {
-  const state = getStore().getState();
-
-  const { currentStageId } = state.progress;
-  const { selectedSectionId } = state.sections;
-  const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
-
-  if (fullyLocked[currentStageId]) {
-    $(element).text(commonMsg.stageLocked());
-  } else {
-    $(element).text(commonMsg.stageNotFullyLocked());
-  }
 }
 
 /**

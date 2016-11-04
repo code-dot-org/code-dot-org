@@ -58,7 +58,7 @@ class UsersHelperTest < ActionView::TestCase
      }
     }, summarize_user_progress_for_all_scripts(user))
 
-    assert_in_delta 0.0183, percent_complete_total(script, user)
+    assert_in_delta 1.83, percent_complete_total(script, user)
 
     # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
     course1 = Script.course1_script

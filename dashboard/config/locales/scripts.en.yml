@@ -1491,6 +1491,8 @@ en:
             Defender: Defender
             'Project: Build a Game': 'Project: Build a Game'
             Velocity: Velocity
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
           description_audience: ''
         2016_sciencePD_phase1:
           title: 'CS in Science: Part 1'
@@ -2006,6 +2008,15 @@ en:
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Build a Game': 'Project: Build a Game'
+            'Project: Design a Game': 'Project: Design a Game'
           description_audience: ''
         grade2:
           title: Grade 2
