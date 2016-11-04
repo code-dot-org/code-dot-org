@@ -364,18 +364,25 @@ en:
       CSD U3 - images - pick your final work: {}
       CSD U3 -conditionals - stop booleans: {}
       CSD U3 AnimationsMulti STOP project guide: {}
+      CSD U3 Collision Detection: {}
+      CSD U3 Collisions SFLP: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
+      CSD U3 Defender SFLP: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Functions Introduction: {}
+      CSD U3 Functions SFLP: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 Project Build a Game SFLP: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
       CSD U3 SFLP Sprites and Images:
         description here: description here
         title: title
+      CSD U3 SFLP Velocity: {}
       CSD U3 Sprites STOP sprites and variables: {}
+      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
@@ -391,6 +398,7 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 complex sprite movement SFLP: {}
       CSD U3 game intro:
         Create Your Own Game: Create Your Own Game
         description here: description here
@@ -1169,6 +1177,7 @@ en:
         description here: description here
         title: title
       Group Work and Peer Learning in Unit 1: {}
+      HOC survey 2016 external text: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
       How Images Work:
@@ -1470,6 +1479,9 @@ en:
         CS in Science PD commitments: CS in Science PD commitments
         overview of program commitments: overview of program commitments
       PLC- check your progress: {}
+      PS - Responding to User Input:
+        description here: description here
+        title: title
       Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
@@ -2703,6 +2715,8 @@ en:
         CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP Unit 5 Cumulative Assessment 2 MC: {}
         CSP pre-assessment survey: {}
+        HOC post-survey 2016 levelgroup: {}
+        HOC pre-survey 2016 levelgroup: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
@@ -2900,6 +2914,10 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD U3 keyinput match:
+        Answer 1: Answer 1
+        CSD U3 keyinput match: CSD U3 keyinput match
+        Question: Question
       CSD validator Matching:
         "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
         "&lt;head&gt;": "&lt;head&gt;"
@@ -3600,6 +3618,10 @@ en:
         Where is Brendan from?: Where is Brendan from?
         blue: blue
         salt: salt
+      unique level name here:
+        Answer 1: Answer 1
+        CSD U3 keyinput match: CSD U3 keyinput match
+        Question: Question
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -4072,6 +4094,13 @@ en:
         The x and y value are the center of a sprite and in the upper right corner of a rectangle: The x and y value are the center of a sprite and in the upper right corner of a rectangle
         There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
         What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
+      CSD U3 Boolean MC:
+        "  200<br>10<br>-20": "  200<br>10<br>-20"
+        "  false<br>true<br>false": "  false<br>true<br>false"
+        "  true<br>error<br>true": "  true<br>error<br>true"
+        Which result will be printed in the console by this program?: Which result will be printed in the console by this program?
+        title: title
+        true<br>false<br>true: true<br>false<br>true
       CSD U3 Functions Prediction define first:
         Both squares will be drawn. You can create functions anywhere you like in your code.: Both squares will be drawn. You can create functions anywhere you like in your code.
         ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
@@ -4653,6 +4682,64 @@ en:
         right answer: right answer
         title: title
         wrong answer: wrong answer
+      HOC post-survey 2016 q1:
+        Before today, I have...: Before today, I have...
+        Done more computer science than just an Hour of Code: Done more computer science than just an Hour of Code
+        Never done an Hour of Code: Never done an Hour of Code
+        Only done an Hour of Code: Only done an Hour of Code
+      HOC post-survey 2016 q2:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I like computer science.: I like computer science.
+      HOC post-survey 2016 q3:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I think computer science is interesting.: I think computer science is interesting.
+      HOC post-survey 2016 q4:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+      HOC post-survey 2016 q5:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I am better at computer science than most kids at my school.: I am better at computer science than most kids at my school.
+      HOC pre-survey 2016 q1:
+        Before today, I have...: Before today, I have...
+        Done more computer science than just an Hour of Code: Done more computer science than just an Hour of Code
+        Never done an Hour of Code: Never done an Hour of Code
+        Only done an Hour of Code: Only done an Hour of Code
+      HOC pre-survey 2016 q2:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I like computer science.: I like computer science.
+      HOC pre-survey 2016 q3:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I think computer science is interesting.: I think computer science is interesting.
+      HOC pre-survey 2016 q4:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+      HOC pre-survey 2016 q5:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I am better at computer science than most kids at my school.: I am better at computer science than most kids at my school.
       K-1 Artist 1 Multi 1:
         "/script_assets/k_1_images/artist_images/E-S-S.png": "/script_assets/k_1_images/artist_images/E-S-S.png"
         "/script_assets/k_1_images/artist_images/E-S.png": "/script_assets/k_1_images/artist_images/E-S.png"
@@ -7079,6 +7166,12 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
+      unique level name here:
+        " Press the _w_ key ": " Press the _w_ key "
+        'Press the _space_ bar  ': 'Press the _space_ bar  '
+        'red_sprite gets bigger and blue_sprite gets smaller ': 'red_sprite gets bigger and blue_sprite gets smaller '
+        'red_sprite moves up and blue_sprite moves down ': 'red_sprite moves up and blue_sprite moves down '
+        title: title
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

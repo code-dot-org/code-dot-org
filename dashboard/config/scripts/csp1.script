@@ -1,25 +1,24 @@
-hidden 'false'
-login_required 'true'
+hidden false
+login_required true
+hideable_stages true
 
-stage 'CS Principles Pre-survey', lockable: true
+stage 'CS Principles Pre-survey', lockable: true
 assessment 'CSP pre-assessment survey'
 
 stage 'Personal Innovations'
-# named_level 'CSP Pre-survey'
 level 'U1L1 Student Lesson Introduction'
 named_level 'Computer Science is Changing Everything'
-# level 'U1L1 - FR computer science word association'
 
 stage 'Sending Binary Messages'
 level 'v2 U1L2 Student Lesson Introduction'
 assessment 'U1L2 Multiple Choice Assessment Question'
 assessment 'U1L2 Free response assessment question'
-assessment  'U1L3 Free response reflection question'
+assessment 'U1L3 Free response reflection question'
 assessment 'U1L3 Free Response'
 
 stage 'Sending Binary Messages with the Internet Simulator'
 level 'v2 U1L3 Student Lesson Introduction'
-named_level 'Internet Simulator: sending binary messages'
+named_level 'Internet Simulator: Sending Binary Messages'
 named_level 'The Internet: Wires, Cables, and Wifi'
 assessment 'U1L4 Multiple Choice'
 assessment 'U1L3 Multiple Choice'
@@ -39,14 +38,13 @@ assessment 'U1L7 Free Response Reflection'
 
 stage 'Sending Numbers'
 level 'v2 U1L6 Student Lesson Introduction'
-named_level 'Internet Simulator: sending numbers'
+named_level 'Internet Simulator: Sending Numbers'
 assessment 'U1L8 Free Response Reflection'
 assessment 'U1L8 Multiple Choice'
 
 stage 'Encoding and Sending Formatted Text'
 level 'v2 U1L8 Student Lesson Introduction'
-#level 'U1L10 NetSim numbers with decimal'
-named_level 'Internet Simulator: sending text'
+named_level 'Internet Simulator: Sending Text'
 assessment 'U1L10 Assessment 1'
 assessment 'U1L10 Assessment 2'
 assessment 'U1L10 Assessment Free Response'
@@ -55,8 +53,7 @@ assessment 'U1L11 Assessment 2'
 assessment 'U1L11 Reflection Free Response'
 assessment 'U1L11 Collaboration Reflection'
 
-stage 'Unit 1 Chapter 1 Assessment', lockable:true
-#level 'csp_unit_assessment_overview'
+stage 'Unit 1 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group'
 
 stage 'The Internet'
@@ -115,5 +112,4 @@ stage 'Practice PT - The Internet and Society'
 level 'v2 U1L14 Student Lesson Introduction'
 
 stage 'Unit 1 Chapter 2 Assessment', lockable: true
-#level 'csp_unit_assessment_overview'
 assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group'

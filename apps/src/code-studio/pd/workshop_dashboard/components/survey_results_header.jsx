@@ -83,7 +83,11 @@ const SurveyResultsHeader = React.createClass({
   },
 
   componentDidMount() {
-    this.filterWorkshops('CS Fundamentals');
+    const courses = this.getCoursesForWorkshops();
+
+    if (courses.length > 0) {
+      this.filterWorkshops(courses[0]);
+    }
   },
 
   filterWorkshops(course) {
@@ -301,8 +305,12 @@ const SurveyResultsHeader = React.createClass({
     return workshop.course + ' - ' + (workshop.sessions[0] ? moment.utc(workshop.sessions[0].start).format(DATE_FORMAT) : 'no sessions');
   },
 
+  getCoursesForWorkshops() {
+    return _.uniq(_.flatMap(this.props.workshops, workshop => workshop.course));
+  },
+
   render() {
-    const courseOptions = window.dashboard.workshop.COURSES.map(function (course, i) {
+    const courseOptions = this.getCoursesForWorkshops().map(function (course, i) {
       return (<option key={i} value={course}>{course}</option>);
     });
 
