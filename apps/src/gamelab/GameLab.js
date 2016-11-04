@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+import experiments from '../experiments';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
@@ -256,7 +257,7 @@ GameLab.prototype.init = function (config) {
     nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: config.level.showDebugWatch,
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
     showDebugSlider: false,
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
