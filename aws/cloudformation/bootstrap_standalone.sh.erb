@@ -83,6 +83,7 @@ jq "." <<JSON > ${FIRST_BOOT}
     "build_apps": true,
     "use_my_apps": true,
 <% end %>
+    "stack_name": "${STACK}",
     "override_dashboard": "dashboard-<%=subdomain%>",
     "override_pegasus": "<%=subdomain%>"
   },

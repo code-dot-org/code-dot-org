@@ -31,11 +31,14 @@ cat <<JSON > ${FIRST_BOOT}
     "revision": "<%=commit%>",
     "sync": true
   },
-<% if local_mode %>
   "cdo-secrets": {
+    "stack_name": "${STACK}",
+<% if local_mode %>
     "build_apps": true,
     "use_my_apps": true
+<% end %>
   },
+<% if local_mode %>
   "omnibus_updater": {
     "version": "${CHEF_VERSION}"
   },
