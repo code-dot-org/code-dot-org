@@ -9,12 +9,10 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import { mobileCheck } from './util';
+import { TutorialsSortBy, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
-import * as utils from '../utils';
 import _ from 'lodash';
 
-const SortBy = utils.makeEnum('default', 'popularityrank', 'displayweight');
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -40,7 +38,7 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    let sortBy = SortBy.default;
+    let sortBy = TutorialsSortBy.default;
 
     const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(filters, sortBy);
 
@@ -259,7 +257,7 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        if (sortBy === SortBy.popularityrank) {
+        if (sortBy === TutorialsSortBy.popularityrank) {
           return tutorial1.popularityrank - tutorial2.popularityrank;
         } else {
           return tutorial2.displayweight - tutorial1.displayweight;
