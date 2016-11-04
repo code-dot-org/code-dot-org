@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Izvedi spodnja dejanja, ko žoga zadene zid.",
   "whileMsg": "dokler",
   "whileTooltip": "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke.",
-  "yes": "Da"
+  "yes": "Da",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

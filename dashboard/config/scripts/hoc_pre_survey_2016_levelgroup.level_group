@@ -1,0 +1,12 @@
+name 'HOC pre-survey 2016 levelgroup'
+title 'Pre-survey: Hour of Code'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'HOC pre-survey 2016 q1'
+text 'HOC survey 2016 external text'
+level 'HOC pre-survey 2016 q2'
+level 'HOC pre-survey 2016 q3'
+level 'HOC pre-survey 2016 q4'
+level 'HOC pre-survey 2016 q5'

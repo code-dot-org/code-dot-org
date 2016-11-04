@@ -1,5 +1,6 @@
 hidden false
 login_required true
+hideable_stages true
 
 stage 'What is Big Data?'
 named_level 'Unit 4 Lesson 1 Introduction'

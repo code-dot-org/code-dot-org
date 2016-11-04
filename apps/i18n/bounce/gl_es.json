@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Fai as accions que se mostran abaixo cando a pelota bate na parede.",
   "whileMsg": "mentras",
   "whileTooltip": "Repita as accións até satisfacer a condición.",
-  "yes": "Si"
+  "yes": "Si",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

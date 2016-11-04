@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Извршување на активностите под кога топката се судира со лопатката.",
   "whileMsg": "Додека",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes"
+  "yes": "Yes",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

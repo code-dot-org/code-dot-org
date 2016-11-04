@@ -545,9 +545,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Pošalji
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: Nesigurno
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 sat tjedno
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 sata tjedno
@@ -1775,3 +1775,12 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'
