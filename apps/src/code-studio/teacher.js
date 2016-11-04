@@ -127,6 +127,8 @@ function renderIntoLessonTeacherPanel() {
   const store = getStore();
   const scriptId = store.getState().progress.stages[0].script_id;
 
+  // TODO - likely needs to move above line 123. also test with a teacher who
+  // has no sections
   renderContentToggle();
 
   // We depend on having information gathered from querying lockStatus to render

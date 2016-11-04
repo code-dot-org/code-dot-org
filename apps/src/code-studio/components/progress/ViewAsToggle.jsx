@@ -60,8 +60,8 @@ const ViewAsToggle = React.createClass({
             selected={viewAs}
             onChange={this.onChange}
           >
-            <button value={ViewType.Student}>{commonMsg.student()}</button>
-            <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
+            <button className="uitest-viewAsStudent" value={ViewType.Student}>{commonMsg.student()}</button>
+            <button className="uitest-viewAsTeacher" value={ViewType.Teacher}>{commonMsg.teacher()}</button>
           </ToggleGroup>
         </div>
       </div>
