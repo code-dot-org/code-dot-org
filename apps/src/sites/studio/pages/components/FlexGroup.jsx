@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import color from '../../../../color';
+import color from '../../../../util/color';
 import { borderRadius } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
