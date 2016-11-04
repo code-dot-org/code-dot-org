@@ -2,7 +2,7 @@
 #
 # Table name: schools
 #
-#  id                 :integer          not null
+#  id                 :integer          not null, primary key
 #  school_district_id :integer          not null
 #  name               :string(255)      not null
 #  city               :string(255)      not null
@@ -20,6 +20,10 @@
 
 class School < ActiveRecord::Base
   include Seeded
+
+  self.primary_key = 'id'
+
+  belongs_to :school_district
 
   # The listing of all US schools comes from http://nces.ed.gov/ccd/pubagency.asp
   # and is then exported into a tab-separated file.

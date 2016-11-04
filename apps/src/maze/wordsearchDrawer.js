@@ -4,7 +4,7 @@
  * skin-specific functionality.
  */
 import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
-import color from '../color';
+import color from "../util/color";
 
 /**
  * @param {MaseMap} map The map from the maze, which shows the current

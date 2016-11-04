@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '../../../color';
+import color from "../../../util/color";
 import commonMsg from '@cdo/locale';
 
 const styles = {

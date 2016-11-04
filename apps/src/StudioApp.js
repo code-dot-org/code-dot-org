@@ -4,14 +4,14 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var aceMode = require('./acemode/mode-javascript_codeorg');
-var color = require('./color');
+var color = require("./util/color");
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
-var experiments = require('./experiments');
+var experiments = require("./util/experiments");
 var KeyCodes = constants.KeyCodes;
 var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
@@ -28,9 +28,8 @@ var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
-import Overlay from './templates/Overlay';
 var assetsApi = require('./clientApi').assets;
-var assetPrefix = require('./assetManagement/assetPrefix');
+import * as assetPrefix from './assetManagement/assetPrefix';
 var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
@@ -295,7 +294,9 @@ StudioApp.prototype.createReduxStore_ = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions || config.level.aniGifURL);
+  return !!(config.level.instructions ||
+      config.level.markdownInstructions ||
+      config.level.aniGifURL);
 };
 
 /**
@@ -347,13 +348,6 @@ StudioApp.prototype.init = function (config) {
             this.showInstructionsDialog_(config.level, autoClose, showHints);
           }}
       />
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
-
-  ReactDOM.render(
-    <Provider store={this.reduxStore}>
-      <Overlay />
     </Provider>,
     document.body.appendChild(document.createElement('div'))
   );
@@ -2863,7 +2857,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 /**
  * Polishes the generated code string before displaying it to the user. If the
  * app provided a polishCodeHook function, it will be called.
- * @returns {string} code string that may/may not have been modified
+ * @returns {string} code string that may/may not have been modified.
  */
 StudioApp.prototype.polishGeneratedCodeString = function (code) {
   if (this.polishCodeHook) {
@@ -2901,6 +2895,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
+    visualizationInWorkspace: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,

@@ -27,7 +27,7 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var color = require('../color');
+var color = require("../util/color");
 var commonMsg = require('@cdo/locale');
 var turtleMsg = require('./locale');
 var codegen = require('../codegen');

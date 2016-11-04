@@ -35,7 +35,8 @@
   twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih
     programiranja v tem spremljanjem tečaju.
   og_title: Vsak otrok si zasluži priložnost
-  og_description: Vsak učenec v vsaki šoli si zasluži priložnost, da se uči računalništva.
+  og_description: Every student in every school deserves the opportunity to study
+    computer science. It's changing everything.
   hoc2014_heading: Pridružite se <a href="http://hourofcode.com"> Uri za kodo</a>
     <br/> 8. do 14. decembra, 2014 <br/>
   hoc2014_students: Učenci
@@ -249,7 +250,7 @@
   learn_next_level: Nadaljujte na naslednjo stopnjo
   learn_online: Poskusite druge spletne tečaje
   learn_classes: Poišči lokalne tečaje
-  hoc_is_here: "#UraZaKodo je tu! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -296,43 +297,43 @@
   studiobar_shop_title: trgovina
   studiobar_shop_body: Razbij stereotipe. Ponosno nosi naš logo.
   homepage_hero_text_malala: "&ldquo;Pozivam vsa dekleta v vseh državah sveta da sodelujejo
-    pri Uri za kodo&rdquo; \nMalala, dobitnica Nobelove nagrade za mir\n"
-  homepage_hero_text_susan: |
+    pri Uri za kodo&rdquo; \nMalala, dobitnica Nobelove nagrade za mir"
+  homepage_hero_text_susan: |-
     &ldquo;Če lahko spremeniš tehnologijo, lahko spremeniš svet.&rdquo;
     Susan, generalna direktorica YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Ne se le igratiu s telefonom, programirajte ga.&rdquo;
     Predsednik ZDA, Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Naši otroci &mdash; tudi dekleta &mdash;
     potrebujejo možnost, da se naučijo računalništva.&rdquo;
     Sheryl, direktorica pri podjetju Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Računalništvo nam lahko odklene najboljše priložnosti na svetu.&rdquo;
     Satya, glavni direktor podjetja Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Če znaš programirati, lahko izbereš smer svojega življenja.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Ta znanja so spremenila mojo prihodnost. In da sploh ne govorimo o tem, kako
     zabavno je vse skupaj. &rdquo;
     Luna, 7. razred
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Še nokoli in nikdar nisem videl svojih učencev
     tako navdušenih nad učenjem.&rdquo;
     Michael, učitelj
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Računalništvo je področje za katerega ne moreš
     vedti, če ti je všeč, ne da bi ga preizkusil.&rdquo;
     Jackson, 6. razred
   homepage_hero_text_student4: "&ldquo;S programiranjem lahko narediš vse, kar si
-    zamisliš.&rdquo; \nMaya, 2. razred\n"
+    zamisliš.&rdquo; \nMaya, 2. razred"
   homepage_hero_text_student5: "&ldquo;Računalništvo ni za nekoga drugega. Je zate,
-    tukaj, sedaj.&rdquo; \nGeraldo, učitelj\n"
-  homepage_hero_text_teacher1: |
+    tukaj, sedaj.&rdquo; \nGeraldo, učitelj"
+  homepage_hero_text_teacher1: |-
     &ldquo;Računalništvo razvije kreativnost, navdih in inovacije &mdash; vse to je bitvenega pomena za vsako kariero.&rdquo;
     Floresa, učiteljica
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Ta program je k aktivnemu sodelovanju pritegnil prav vse moje učence .&rdquo;
     Adam, učitelj
   homepage_hero_text_stat_loc: 2,5 milijona deklet se je vpisalo, da bi se učile na
@@ -753,6 +754,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -888,6 +901,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Več o tem
   dashboard_announce_try_now_button: Poskusite zdaj
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -896,6 +910,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Ura za kodo je tu - 8. do 14. december!
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   host_an_hour: Host an hour
@@ -1353,7 +1372,7 @@
   flappy_longdescription: Uporabi programiranje povleci in spusti in ustvari svojo
     lastno Flappy Ptič igro, in prilagodi njen izgled (Flappy morski pes, Flappy božiček,
     karkoli). Naloži igro na svoj telefon z enim klikom.
-  bitsbox_longdescription: |
+  bitsbox_longdescription: |-
     Ustvari virtualno tablico in napiši nekaj aplikacij za igro in deljenje prijateljem.
     Tudi najmlajši otroci se lahko naučijo programiranja v JavaScriptu. Več kot že znaš, dlje lahko prideš.
   makeschool_longdescription: Learn to code by making an iPhone game using a brand

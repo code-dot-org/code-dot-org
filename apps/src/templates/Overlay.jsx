@@ -5,10 +5,12 @@ import { hideOverlay } from '../redux/instructions';
 
 import { connect } from 'react-redux';
 
-export const Z_INDEX = 1000;
+// 1020 puts this halfway between the small footer (at 1000) and the
+// video modal backdrop (at 1040)
+export const Z_INDEX = 1020;
 
 const visible_style = {
-  position: 'absolute',
+  position: 'fixed',
   top: 0,
   left: 0,
   height: '100%',

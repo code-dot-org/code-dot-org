@@ -6,4 +6,5 @@ Background:
 @new_courses
 Scenario: The level loads
   When I rotate to landscape
+  And I wait to see "#runButton"
   Then element "#codeWorkspace" is visible

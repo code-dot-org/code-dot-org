@@ -1,4 +1,4 @@
--DB[:cdo_promote_tools].all.each do |value|
+-DB[:cdo_promote_tools].where(section_s: section_name).each do |value|
   -url = value[:url_s]
   -if value[:title_s] == 'Convince your school or state' && ! state.nil_or_empty? && File.exists?(sites_dir("all/files/states/#{state}.pdf"))
     -url = "/files/states/#{state}.pdf"

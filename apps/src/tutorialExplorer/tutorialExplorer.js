@@ -9,6 +9,8 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
+import { mobileCheck } from './util';
+import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
 import _ from 'lodash';
 
 const TutorialExplorer = React.createClass({
@@ -19,6 +21,7 @@ const TutorialExplorer = React.createClass({
     hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
+    legacyLink: React.PropTypes.string,
     roboticsButton: React.PropTypes.bool
   },
 
@@ -41,9 +44,9 @@ const TutorialExplorer = React.createClass({
       filteredTutorials: filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
       filteredTutorialsForLocale: filteredTutorialsForLocale,
-      windowWidth: undefined,
-      windowHeight: undefined,
-      mobileLayout: $(window).width() <= TutorialExplorer.mobileWidth,
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height(),
+      mobileLayout: isResponsiveCategoryInactive('md'),
       showingModalFilters: false
     };
   },
@@ -96,7 +99,7 @@ const TutorialExplorer = React.createClass({
   },
 
   componentDidMount() {
-    window.addEventListener('resize', _.debounce(this.onResize, 500));
+    window.addEventListener('resize', _.debounce(this.onResize, 100));
   },
 
   showModalFilters() {
@@ -144,17 +147,10 @@ const TutorialExplorer = React.createClass({
       windowHeight: $(window).height()
     });
 
-    this.setState({mobileLayout: windowWidth <= TutorialExplorer.mobileWidth});
+    this.setState({mobileLayout: isResponsiveCategoryInactive('md')});
   },
 
   statics: {
-
-    /**
-     * Pixel width at which we begin to start showing mobile view with modal
-     * filters.
-     */
-    mobileWidth: 600,
-
     /**
      * Filters a given array of tutorials by the given filter props.
      *
@@ -264,9 +260,10 @@ const TutorialExplorer = React.createClass({
 
   render() {
     return (
-      <div>
+      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
         <FilterHeader
           backButton={this.props.backButton}
+          legacyLink={this.props.legacyLink}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
           mobileLayout={this.state.mobileLayout}
           showingModalFilters={this.state.showingModalFilters}
@@ -309,18 +306,103 @@ const TutorialExplorer = React.createClass({
   }
 });
 
+
+function getFilters({robotics, mobile}) {
+  const filters = [
+    { name: "grade",
+      text: "Grades",
+      entries: [
+        {name: "pre", text: "Pre-reader"},
+        {name: "2-5", text: "Grades 2-5"},
+        {name: "6-8", text: "Grades 6-8"},
+        {name: "9+", text: "Grades 9+"}]},
+    { name: "teacher_experience",
+      text: "Educator's experience",
+      entries: [
+        {name: "beginner", text:"Beginner"},
+        {name: "comfortable", text:"Comfortable"}]},
+    { name: "student_experience",
+      text: "Student's experience",
+      entries: [
+        {name: "beginner", text: "Beginner"},
+        {name: "comfortable", text: "Comfortable"}]},
+    { name: "platform",
+      text: "Classroom technology",
+      entries: [
+        {name: "computers", text: "Computers"},
+        {name: "android", text: "Android"},
+        {name: "ios", text: "iPad/iPhone"},
+        {name: "no-internet", text: "Poor or no internet"},
+        {name: "no-computers", text: "No computers or devices"}]},
+    { name: "subject",
+      text: "Topics",
+      entries: [
+        {name: "science", text: "Science"},
+        {name: "math", text: "Math"},
+        {name: "history", text: "Social Studies"},
+        {name: "la", text: "Language Arts"},
+        {name: "art", text: "Art, Media, Music"},
+        {name: "cs-only", text: "Computer Science only"}]},
+    { name: "activity_type",
+      text: "Activity type",
+      entries: [
+        {name: "online-tutorial", text: "Self-led tutorials"},
+        {name: "lesson-plan", text: "Lesson plan"}]},
+    { name: "length", text: "Length",
+      entries: [
+        {name: "1hour", text: "One hour"},
+        {name: "1hour-follow", text: "One hour with follow-on"},
+        {name: "few-hours", text: "A few hours"}]},
+    { name: "programming_language",
+      text: "Language",
+      entries: [
+        {name: "blocks", text: "Blocks"},
+        {name: "typing", text: "Typing"},
+        {name: "other", text: "Other"}]}];
+
+  const initialFilters = {
+    teacher_experience: ["beginner"],
+    student_experience: ["beginner"]
+  };
+
+  const hideFilters = {
+    activity_type: ["robotics"]
+  };
+
+  if (robotics) {
+    filters.forEach(filterGroup => {
+      if (filterGroup.name === "activity_type") {
+        filterGroup.entries = [{name: "robotics", text: "Robotics"}];
+        filterGroup.display = false;
+      }
+    });
+
+    initialFilters.activity_type = ["robotics"];
+
+    hideFilters.activity_type = [];
+  }
+
+  if (mobile) {
+    initialFilters.platform = ["android", "ios"];
+  }
+
+  return {filters, initialFilters, hideFilters};
+}
+
 window.TutorialExplorerManager = function (options) {
-  this.options = options;
+  options.mobile = mobileCheck();
+  const {filters, initialFilters, hideFilters} = getFilters(options);
 
   this.renderToElement = function (element) {
     ReactDOM.render(
       <TutorialExplorer
         tutorials={options.tutorials}
-        filterGroups={options.filters}
-        initialFilters={options.initialFilters}
-        hideFilters={options.hideFilters}
+        filterGroups={filters}
+        initialFilters={initialFilters}
+        hideFilters={hideFilters}
         locale={options.locale}
         backButton={options.backButton}
+        legacyLink={options.legacyLink}
         roboticsButton={options.roboticsButton}
       />,
       element

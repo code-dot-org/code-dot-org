@@ -318,7 +318,6 @@ Dashboard::Application.routes.draw do
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
-      resources :district_report, only: :index
       resources :workshop_organizer_report, only: :index
       resources :teacher_progress_report, only: :index
       resources :course_facilitators, only: :index

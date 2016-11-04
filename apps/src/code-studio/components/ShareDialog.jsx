@@ -3,7 +3,7 @@ import BaseDialog from '../../templates/BaseDialog';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './abuse_error';
 import SendToPhone from './SendToPhone';
-import color from '../../color';
+import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
 
@@ -348,7 +348,7 @@ if (BUILD_STYLEGUIDE) {
           )
         }, {
           name: 'with icon',
-          description: `An icon can be specifid for the dialog`,
+          description: `An icon can be specified for the dialog`,
           story: () => (
             <ShareDialog
               hideBackdrop={true}

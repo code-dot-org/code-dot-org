@@ -125,7 +125,7 @@
           postavu cez bludisko použitím jednoduchých príkazov."
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Algoritmus z reálneho života: Zasaď semienko'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.

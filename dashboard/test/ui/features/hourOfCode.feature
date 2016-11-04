@@ -38,9 +38,11 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   Then I wait until element "#runButton" is visible
+  And I close the instructions overlay if it exists
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
+  Then I wait until element "#runButton" is visible
   When element "#runButton" is visible
   And I verify progress in the header of the current page is "attempted" for level 1
   And I navigate to the course page for "hourofcode"
@@ -63,6 +65,7 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#runButton"
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/10?noautoplay=true"
