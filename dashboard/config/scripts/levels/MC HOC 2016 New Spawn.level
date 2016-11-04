@@ -13,7 +13,7 @@
     "grid_width": "10",
     "grid_height": "10",
     "is_daytime": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // sheep is spawned and end of the movement\r\n      return verificationAPI.getEntityCount(\"sheep\") >= 1 && !verificationAPI.isEntityTypeRunning(\"sheep\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n      // sheep is spawned and end of the movement\r\n      return (verificationAPI.getEntityCount(\"all\") >= 1 && !verificationAPI.isEntityTypeRunning(\"all\")) || verificationAPI.isEntityDied('zombie') || verificationAPI.isEntityDied('creeper');\r\n}",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,12 +32,12 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "Now let's spawn something! In games, spawning means adding something to the world. Place a `spawn` block under `when run` to spawn something.",
+    "instructions": "In games, spawning means adding something to the world. Place a `spawn` block under `when run` to spawn something when the game starts.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "level_verification_timeout": "20000",
-    "timeout_verification_function": "function (verificationAPI) {\r\n  // sheep is spawned\r\n  return verificationAPI.getEntityCount(\"sheep\") >= 1;\r\n}",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // sheep is spawned\r\n  return (verificationAPI.getEntityCount(\"all\") >= 1) || verificationAPI.isEntityDied('zombie') || verificationAPI.isEntityDied('creeper');\r\n}",
     "callout_json": "[]",
     "failure_message_override": "Place `spawn sheep` under `when run`.",
     "use_player": "true",
@@ -70,27 +70,17 @@
                             <block type="craft_entityTurn" uservisible="false">
                               <title name="DIR">right</title>
                               <next>
-                                <block type="craft_entityTurn" uservisible="false">
+                                <block type="craft_entityTurn">
                                   <title name="DIR">right</title>
                                   <next>
-                                    <block type="craft_entityTurn" uservisible="false">
-                                      <title name="DIR">right</title>
+                                    <block type="craft_wait">
+                                      <title name="TYPE">1.0</title>
                                       <next>
-                                        <block type="craft_entityTurn" uservisible="false">
-                                          <title name="DIR">right</title>
+                                        <block type="craft_playSound">
+                                          <title name="TYPE">sheepBaa</title>
                                           <next>
-                                            <block type="craft_wait" uservisible="false">
-                                              <title name="TYPE">1.0</title>
-                                              <next>
-                                                <block type="craft_playSound" uservisible="false">
-                                                  <title name="TYPE">sheepBaa</title>
-                                                  <next>
-                                                    <block type="craft_drop" uservisible="false">
-                                                      <title name="TYPE">wool</title>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
+                                            <block type="craft_drop">
+                                              <title name="TYPE">wool</title>
                                             </block>
                                           </next>
                                         </block>
@@ -112,38 +102,28 @@
         </block>
         <block type="craft_zombie" uservisible="false">
           <statement name="WHEN_SPAWNED">
-            <block type="craft_entityTurn" uservisible="false">
+            <block type="craft_entityTurn">
               <title name="DIR">random</title>
               <next>
-                <block type="craft_entityTurn" uservisible="false">
+                <block type="craft_entityTurn">
                   <title name="DIR">random</title>
                   <next>
-                    <block type="craft_entityTurn" uservisible="false">
+                    <block type="craft_entityTurn">
                       <title name="DIR">random</title>
                       <next>
-                        <block type="craft_entityTurn" uservisible="false">
+                        <block type="craft_entityTurn">
                           <title name="DIR">random</title>
                           <next>
-                            <block type="craft_entityTurn" uservisible="false">
-                              <title name="DIR">random</title>
+                            <block type="craft_playSound">
+                              <title name="TYPE">zombieHurt</title>
                               <next>
-                                <block type="craft_entityTurn" uservisible="false">
+                                <block type="craft_entityTurn">
                                   <title name="DIR">random</title>
                                   <next>
-                                    <block type="craft_playSound" uservisible="false">
-                                      <title name="TYPE">zombieHurt</title>
+                                    <block type="craft_entityTurn">
+                                      <title name="DIR">random</title>
                                       <next>
-                                        <block type="craft_entityTurn" uservisible="false">
-                                          <title name="DIR">random</title>
-                                          <next>
-                                            <block type="craft_entityTurn" uservisible="false">
-                                              <title name="DIR">random</title>
-                                              <next>
-                                                <block type="craft_destroyEntity" uservisible="false"/>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
+                                        <block type="craft_destroyEntity"/>
                                       </next>
                                     </block>
                                   </next>
@@ -227,25 +207,20 @@
                                 <block type="craft_drop" uservisible="false">
                                   <title name="TYPE">egg</title>
                                   <next>
-                                    <block type="craft_moveAway" uservisible="false">
+                                    <block type="craft_moveAway">
                                       <title name="TYPE">Player</title>
                                       <next>
-                                        <block type="craft_moveAway" uservisible="false">
+                                        <block type="craft_moveAway">
                                           <title name="TYPE">Player</title>
                                           <next>
-                                            <block type="craft_moveAway" uservisible="false">
-                                              <title name="TYPE">Player</title>
+                                            <block type="craft_wait">
+                                              <title name="TYPE">1.0</title>
                                               <next>
-                                                <block type="craft_wait" uservisible="false">
-                                                  <title name="TYPE">1.0</title>
+                                                <block type="craft_playSound">
+                                                  <title name="TYPE">chickenHurt</title>
                                                   <next>
-                                                    <block type="craft_playSound" uservisible="false">
-                                                      <title name="TYPE">chickenHurt</title>
-                                                      <next>
-                                                        <block type="craft_drop" uservisible="false">
-                                                          <title name="TYPE">diamond</title>
-                                                        </block>
-                                                      </next>
+                                                    <block type="craft_drop">
+                                                      <title name="TYPE">diamond</title>
                                                     </block>
                                                   </next>
                                                 </block>
