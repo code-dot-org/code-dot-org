@@ -757,7 +757,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: false
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
