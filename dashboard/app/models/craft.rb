@@ -500,6 +500,8 @@ SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
   <block type="craft_cowSpawnedTouchedClicked"></block>
   <block type="craft_zombieSpawnedTouchedClickedDay"></block>
   <block type="craft_creeperSpawnedTouchedClickedDay"></block>
+  <block type="craft_zombieNoDayNight"></block>
+  <block type="craft_ironGolemNoDayNight"></block>
 </category>
 <category name="Entities">
   <block type="craft_sheep"></block>
