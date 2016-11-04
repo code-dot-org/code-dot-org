@@ -192,7 +192,6 @@ theme: pdf
     %h2.no-margin-bottom.together
       Code.org's Impact in
       = state_info[:state_name_s]
-      
     %ul
       %li
         There are
@@ -206,13 +205,30 @@ theme: pdf
         - if state_info[:professional_learning_partners_t] == 'none' && state_info[:num_affiliates_i] > 0
           Code.org and 
           = format_integer_with_commas(state_info[:num_affiliates_i])
-          K-12 facilitators have provided professional learning for 
+          K-12
+          - if state_info[:num_affiliates_i] == 1
+            facilitator
+          - else
+            facilitators
+          have provided professional learning for 
           = format_integer_with_commas(state_info[:num_elementary_trained_i])
-          teachers in CS Fundamentals (K-5),
+          - if state_info[:num_elementary_trained_i] == 1
+            teacher
+          - else
+            teachers
+          in CS Fundamentals (K-5),
           = format_integer_with_commas(state_info[:num_ecs_csd_i]) 
-          teachers in Exploring Computer Science and CS Discoveries (7-9), and
+          - if state_info[:num_ecs_csd_i] == 1
+            teacher
+          - else
+            teachers
+          in Exploring Computer Science and CS Discoveries (7-9), and
           = format_integer_with_commas(state_info[:num_csp_i]) 
-          teachers in AP CS Principles (9-12) in
+          - if state_info[:num_csp_i] == 1
+            teacher
+          - else
+            teachers
+          in AP CS Principles (9-12) in
           = succeed "." do
             = state_info[:state_name_s]
         - elsif state_info[:num_csp_i] == 0 && state_info[:num_ecs_csd_i] == 0
@@ -221,9 +237,18 @@ theme: pdf
             = state_info[:professional_learning_partners_t]
           and
           = format_integer_with_commas(state_info[:num_affiliates_i])
-          K-12 facilitators have provided professional learning for
+          K-12
+          - if state_info[:num_affiliates_i] == 1
+            facilitator
+          - else
+            facilitators
+          have provided professional learning for
           = format_integer_with_commas(state_info[:num_elementary_trained_i])
-          teachers in CS Fundamentals (K-5) in
+          - if state_info[:num_elementary_trained_i] == 1
+            teacher
+          - else
+            teachers
+          in CS Fundamentals (K-5) in
           = succeed "." do
             = state_info[:state_name_s]
         - elsif state_info[:num_ecs_csd_i] == 0
@@ -232,13 +257,24 @@ theme: pdf
             = state_info[:professional_learning_partners_t]
           and
           = format_integer_with_commas(state_info[:num_affiliates_i])
-          K-12 facilitators have provided professional learning for
+          K-12
+          - if state_info[:num_affiliates_i] == 1
+            facilitator
+          - else
+            facilitators
+          have provided professional learning for
           = format_integer_with_commas(state_info[:num_elementary_trained_i])
-          teachers in CS Fundamentals (K-5),
-          = format_integer_with_commas(state_info[:num_ecs_csd_i])
-          teachers in Exploring Computer Science and CS Discoveries (7-9), and
+          - if state_info[:num_elementary_trained_i] == 1
+            teacher
+          - else
+            teachers
+          in CS Fundamentals (K-5) and
           = format_integer_with_commas(state_info[:num_csp_i]) 
-          teachers in AP CS Principles (9-12) in
+          - if state_info[:num_csp_i] == 1
+            teacher
+          - else
+            teachers
+          in AP CS Principles (9-12) in
           = succeed "." do
             = state_info[:state_name_s]
         - elsif state_info[:num_csp_i] == 0
@@ -247,13 +283,24 @@ theme: pdf
             = state_info[:professional_learning_partners_t]
           and
           = format_integer_with_commas(state_info[:num_affiliates_i])
-          K-12 facilitators have provided professional learning for
+          K-12
+          - if state_info[:num_affiliates_i] == 1
+            facilitator
+          - else
+            facilitators
+          have provided professional learning for
           = format_integer_with_commas(state_info[:num_elementary_trained_i])
-          teachers in CS Fundamentals (K-5),
+          - if state_info[:num_elementary_trained_i] == 1
+            teacher
+          - else
+            teachers
+          in CS Fundamentals (K-5) and
           = format_integer_with_commas(state_info[:num_ecs_csd_i]) 
-          teachers in Exploring Computer Science and CS Discoveries (7-9), and
-          = format_integer_with_commas(state_info[:num_csp_i]) 
-          teachers in AP CS Principles (9-12) in
+          - if state_info[:num_ecs_csd_i] == 1
+            teacher
+          - else
+            teachers
+          in Exploring Computer Science and CS Discoveries (7-9) in
           = succeed "." do
             = state_info[:state_name_s]
         - else
@@ -262,13 +309,30 @@ theme: pdf
             = state_info[:professional_learning_partners_t]
           and 
           = format_integer_with_commas(state_info[:num_affiliates_i])
-          K-12 facilitators have provided professional learning for 
+          K-12
+          - if state_info[:num_affiliates_i] == 1
+            facilitator
+          - else
+            facilitators
+          have provided professional learning for
           = format_integer_with_commas(state_info[:num_elementary_trained_i])
-          teachers in CS Fundamentals (K-5), 
+          - if state_info[:num_elementary_trained_i] == 1
+            teacher
+          - else
+            teachers
+          in CS Fundamentals (K-5), 
           = format_integer_with_commas(state_info[:num_ecs_csd_i]) 
-          teachers in Exploring Computer Science and CS Discoveries (7-9), and 
+          - if state_info[:num_ecs_csd_i] == 1
+            teacher
+          - else
+            teachers
+          in Exploring Computer Science and CS Discoveries (7-9), and 
           = format_integer_with_commas(state_info[:num_csp_i]) 
-          teachers in AP CS Principles (9-12) in 
+          - if state_info[:num_csp_i] == 1
+            teacher
+          - else
+            teachers
+          in AP CS Principles (9-12) in 
           = succeed "." do
             = state_info[:state_name_s]
 
