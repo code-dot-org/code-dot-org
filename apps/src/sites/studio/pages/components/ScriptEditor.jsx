@@ -41,7 +41,7 @@ const ScriptEditor = React.createClass({
         newState.push({
           id: newStageId--,
           name: 'New Stage',
-          flex_category: `New Group ${Math.round(Math.random() * 10000).toString(16)}`,
+          flex_category: prompt('Enter new group name'),
           levels: []
         });
         this.updatePositions(newState);
@@ -51,7 +51,7 @@ const ScriptEditor = React.createClass({
         const groupName = newState[options.position - 1].flex_category;
         newState.splice(options.position, 0, {
           id: newStageId--,
-          name: 'New Stage',
+          name: prompt('Enter new stage name'),
           flex_category: groupName,
           levels: []
         });
