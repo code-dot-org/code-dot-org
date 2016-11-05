@@ -10,7 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import { mobileCheck } from './util';
-import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
+import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
 
@@ -274,34 +274,38 @@ const TutorialExplorer = React.createClass({
         <div style={{clear: "both"}}/>
 
         {this.shouldShowFilters() && (
-          <FilterSet
-            filterGroups={this.props.filterGroups}
-            onUserInput={this.handleUserInput}
-            selection={this.state.filters}
-            roboticsButton={this.props.roboticsButton}
-          />
-        )}
-
-        {this.shouldShowTutorialsForLocale() && (
-          <div>
-            <h1>Tutorials in your language</h1>
-            <TutorialSet
-              tutorials={this.state.filteredTutorialsForLocale}
-              filters={this.state.filters}
-              locale={this.props.locale}
-              specificLocale={true}
+          <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+            <FilterSet
+              filterGroups={this.props.filterGroups}
+              onUserInput={this.handleUserInput}
+              selection={this.state.filters}
+              roboticsButton={this.props.roboticsButton}
             />
-            <h1>Tutorials in many languages</h1>
           </div>
         )}
 
-        {this.shouldShowTutorials() && (
-          <TutorialSet
-            tutorials={this.state.filteredTutorials}
-            filters={this.state.filters}
-            locale={this.props.locale}
-          />
-        )}
+        <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
+          {this.shouldShowTutorialsForLocale() && (
+            <div>
+              <h1>{i18n.headingTutorialsYourLanguage()}</h1>
+              <TutorialSet
+                tutorials={this.state.filteredTutorialsForLocale}
+                filters={this.state.filters}
+                locale={this.props.locale}
+                specificLocale={true}
+              />
+              <h1>{i18n.headingTutorialsManyLanguages()}</h1>
+            </div>
+          )}
+
+          {this.shouldShowTutorials() && (
+            <TutorialSet
+              tutorials={this.state.filteredTutorials}
+              filters={this.state.filters}
+              locale={this.props.locale}
+            />
+          )}
+        </div>
       </div>
     );
   }
