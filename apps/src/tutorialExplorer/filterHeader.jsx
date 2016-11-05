@@ -137,7 +137,7 @@ const FilterHeader = React.createClass({
                   style={styles.button}
                   className="noFocusButton"
                 >
-                  Filters
+                  Filter
                 </button>
               </span>
             )}
