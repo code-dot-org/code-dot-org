@@ -1,5 +1,3 @@
-/* global dashboard */
-
 var React = require('react');
 
 var SendToPhone = window.dashboard ? window.dashboard.SendToPhone : undefined;
@@ -68,14 +66,25 @@ function getProjectUrl() {
 
 
 /**
- * @param url complete url, possibly including query string
+ * Appends the given fragment to the given url. Query string is retained, but hash string is removed.
+ * Also ensures that string join does not end up duplicating '/' char.
+ * @param url complete url
  * @param fragment text to add to url path, before query string if any
  * @returns new url
  */
 function appendUrl(url, fragment) {
-  var queryIndex = url.indexOf('?');
-  if (queryIndex === -1) {
-    return url + fragment;
+  var hashIndex = url.indexOf('#');
+  if (hashIndex != -1) {
+    url = url.substring(0, hashIndex);
+  }
+  var queryString = '';
+  var queryIndex = url.indexOf('?')
+  if (queryIndex != -1) {
+    queryString = url.substring(queryIndex);
+    url = url.substring(0, queryIndex);
+  }
+  if (url.endsWith('/') && fragment.startsWith('/')) {
+    fragment = fragment.substring(1);
   }
   return url.substring(0, queryIndex) + fragment + url.substring(queryIndex);
 }
@@ -121,7 +130,7 @@ module.exports = React.createClass({
     );
   },
 
-  renderViewCodeButton: function() {
+  renderViewCodeButton: function () {
     if (APP_TYPES_WITH_VIEW_CODE.includes(this.props.appType)) {
       return (
           <span>
@@ -133,7 +142,7 @@ module.exports = React.createClass({
     }
   },
 
-  renderNewProjectButton: function() {
+  renderNewProjectButton: function () {
     var appTypeAndLegacy = this.props.appType + (this.props.isLegacyShare ? '_legacy' : '');
     var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     if (url) {
@@ -143,7 +152,7 @@ module.exports = React.createClass({
             <i className="fa fa-pencil-square-o"/> Make my own
           </a><sp/>
         </span>
-      )
+      );
     }
   },
 
@@ -152,9 +161,9 @@ module.exports = React.createClass({
       return (
           <div className="WireframeButtons_active">
             <SendToPhone
-                styles={styles.sendToPhone}
-                channelId={this.props.channelId}
-                appType={this.props.appType}
+              styles={styles.sendToPhone}
+              channelId={this.props.channelId}
+              appType={this.props.appType}
             />
           </div>
       );
