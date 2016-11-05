@@ -40,7 +40,7 @@ social:
         %img{src: CDO.code_org_url("/images/learn/robotics.png"), style: "text-align: center"}
 
 -# Not ideal but we can pull the undigested files from /blockly.
-- js_locale = request.locale.to_s.downcase.tr('-', '_')
+- js_locale = hoc_locale.to_s.downcase.tr('-', '_')
 %script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
 
@@ -62,7 +62,7 @@ social:
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
-      locale: "#{request.locale}",
+      locale: "#{hoc_locale}",
       robotics: true,
       backButton: true
     });
