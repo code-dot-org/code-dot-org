@@ -6,8 +6,8 @@
 import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-import OrganizerReport from './organizer_report';
-import TeacherProgressReport from './teacher_progress_report';
+import WorkshopSummaryReport from './workshop_summary_report';
+import TeacherAttendanceReport from './teacher_attendance_report';
 import DatePicker from '../components/date_picker';
 
 import {
@@ -25,7 +25,7 @@ import {
   COURSE_VALUES
 } from './report_constants';
 
-const REPORT_VALUES = ['Organizer', 'Teacher Progress'];
+const REPORT_VALUES = ['Teacher Attendance', 'Workshop Summary'];
 const API_DATE_FORMAT = "YYYY-MM-DD";
 
 const ReportView = React.createClass({
@@ -108,18 +108,18 @@ const ReportView = React.createClass({
 
   renderReport() {
     const {startDate, endDate, queryBy, course, report} = this.state;
-    if (report === 'Organizer') {
+    if (report === 'Workshop Summary') {
       return (
-        <OrganizerReport
+        <WorkshopSummaryReport
           startDate={startDate.format(API_DATE_FORMAT)}
           endDate={endDate.format(API_DATE_FORMAT)}
           queryBy={queryBy}
           course={course}
         />
       );
-    } else { // Teacher Progress
+    } else { // Teacher Attendance
       return (
-        <TeacherProgressReport
+        <TeacherAttendanceReport
           startDate={startDate.format(API_DATE_FORMAT)}
           endDate={endDate.format(API_DATE_FORMAT)}
           queryBy={queryBy}

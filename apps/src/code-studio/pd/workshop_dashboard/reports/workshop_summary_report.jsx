@@ -1,19 +1,23 @@
 /**
- * Teacher Progress Report
+ * Workshop Summary Report
  */
 import React from "react";
-import ReportTable from "./report_table";
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {Button} from 'react-bootstrap';
+import ReportTable from "./report_table";import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {
+  Checkbox,
+  Button
+} from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 
-const QUERY_URL = "/api/v1/pd/teacher_progress_report";
+const FACILITATOR_DETAILS_COUNT = 6;
+const ATTENDANCE_DAYS_COUNT = 5;
+const QUERY_URL = "/api/v1/pd/workshop_summary_report";
 
 const styles = {
   link: {cursor: 'pointer'}
 };
 
-const TeacherProgressReport = React.createClass({
+const WorkshopSummaryReport = React.createClass({
   propTypes: {
     startDate: React.PropTypes.string.isRequired,
     endDate: React.PropTypes.string.isRequired,
@@ -56,7 +60,7 @@ const TeacherProgressReport = React.createClass({
 
   formatQueryParams(props) {
     const {startDate, endDate, queryBy, course} = props;
-    const course_param = course ? `&course=${course}` : null;
+    const course_param = course ? `&course=${course}` : "";
     return `start=${startDate}&end=${endDate}&query_by=${queryBy}${course_param}`;
   },
 
@@ -104,64 +108,71 @@ const TeacherProgressReport = React.createClass({
 
   getColumns() {
     let columns = [{
-      property: 'teacher_name',
-      header: {label: 'Teacher Name'}
+      property: 'organizer_name',
+      header: {label: 'Organizer Name'}
     }, {
-      property: 'teacher_id',
-      header: {label: 'Teacher Id'}
+      property: 'organizer_id',
+      header: {label: 'Organizer Id'}
     }, {
-      property: 'teacher_email',
-      header: {label: 'Teacher Email'}
+      property: 'organizer_email',
+      header: {label: 'Organizer Email'}
     }, {
-      property: 'plp_name',
-      header: {label: 'PLP Name'}
+      property: 'workshop_name',
+      header: {label: 'Workshop Name'}
     }, {
-      property: 'state',
-      header: {label: 'State'}
-    }, {
-      property: 'district_name',
-      header: {label: 'District Name'},
-    }, {
-      property: 'district_id',
-      header: {label: 'District Id'},
-    }, {
-      property: 'school',
-      header: {label: 'School'},
-    }, {
-      property: 'course',
-      header: {label: 'Course'},
-    }, {
-      property: 'subject',
-      header: {label: 'Subject'},
+      property: 'workshop_dates',
+      header: {label: 'Dates'}
     }, {
       property: 'workshop_id',
       header: {label: 'Workshop Id'},
       cell: {format: this.formatWorkshopId}
     }, {
-      property: 'workshop_dates',
-      header: {label: 'Workshop Dates'},
+      property: 'course',
+      header: {label: 'Course'}
     }, {
-      property: 'workshop_name',
-      header: {label: 'Workshop Name'},
+      property: 'subject',
+      header: {label: 'Subject'}
     }, {
-      property: 'workshop_type',
-      header: {label: 'Workshop Type'},
+      property: 'section_url',
+      header: {label: 'Section URL'},
+      cell: {format: this.formatUrl}
     }, {
-      property: 'organizer_name',
-      header: {label: 'Organizer Name'},
+      property: 'facilitators',
+      header: {label: 'Facilitators'}
     }, {
-      property: 'organizer_email',
-      header: {label: 'Organizer Email'},
+      property: 'num_facilitators',
+      header: {label: 'Num Facilitators'}
+    }];
+
+    if (this.state.showFacilitatorDetails) {
+      for (let i = 1; i <= FACILITATOR_DETAILS_COUNT; i++) {
+        columns.push({
+          property: `facilitator_name_${i}`,
+          header: {label: `Facilitator Name ${i}`}
+        }, {
+          property: `facilitator_email_${i}`,
+          header: {label: `Facilitator Email ${i}`}
+        });
+      }
+    }
+
+    columns.push({
+      property: 'num_registered',
+      header: {label: 'Num Registered'}
     }, {
-      property: 'year',
-      header: {label: 'Year'},
-    }, {
-      property: 'hours',
-      header: {label: 'Hours'},
+      property: 'num_qualified_teachers',
+      header: {label: 'Num Qualified Teachers'}
     }, {
       property: 'days',
       header: {label: 'Days'}
-    }];
+    });
+
+    for (let i = 1; i <= ATTENDANCE_DAYS_COUNT; i++) {
+      columns.push({
+        property: `attendance_day_${i}`,
+        header: {label: `Attendance Day ${i}`}
+      });
+    }
 
     if (this.isAdmin()) {
       columns.push({
@@ -171,15 +182,28 @@ const TeacherProgressReport = React.createClass({
         property: `payment_type`,
         header: {label: `Payment Type`}
       }, {
-        property: `payment_rate`,
-        header: {label: `Payment Rate`}
-      }, {
         property: `qualified`,
         header: {label: `Qualified`},
         cell: {format: this.formatYesNo}
       }, {
-        property: `payment_amount`,
-        header: {label: `Payment Amount`},
+        property: `food_payment`,
+        header: {label: `Food Payment`},
+        cell: {format: this.formatCurrency}
+      }, {
+        property: `facilitator_payment`,
+        header: {label: `Facilitator Payment`},
+        cell: {format: this.formatCurrency}
+      }, {
+        property: `staffer_payment`,
+        header: {label: `Staffer Payment`},
+        cell: {format: this.formatCurrency}
+      }, {
+        property: `venue_payment`,
+        header: {label: `Venue Payment`},
+        cell: {format: this.formatCurrency}
+      }, {
+        property: `payment_total`,
+        header: {label: `Payment Total`},
         cell: {format: this.formatCurrency}
       });
     }
@@ -204,11 +228,16 @@ const TeacherProgressReport = React.createClass({
     return (
       <div>
         <Button
-          style={{marginBottom: 20}}
           onClick={this.handleDownloadCSVClick}
         >
           Download CSV
         </Button>
+        <Checkbox
+          checked={this.state.showFacilitatorDetails}
+          onChange={this.handleFacilitatorDetailsChange}
+        >
+          Show Facilitator Details
+        </Checkbox>
         <ReportTable
           columns={this.getColumns()}
           rows={this.state.rows}
@@ -217,4 +246,4 @@ const TeacherProgressReport = React.createClass({
     );
   },
 });
-export default TeacherProgressReport;
+export default WorkshopSummaryReport;
