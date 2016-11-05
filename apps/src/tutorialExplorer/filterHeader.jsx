@@ -25,6 +25,12 @@ const styles = {
     borderColor: "white",
     height: 34
   },
+  button: {
+    backgroundColor: "rgb(101, 205, 214)",
+    color: "white",
+    borderColor: "white",
+    height: 34
+  },
   filterBy: {
     float: "left",
     lineHeight: "44px",
@@ -126,7 +132,11 @@ const FilterHeader = React.createClass({
               <span>
                 &nbsp;
                 &nbsp;
-                <button onClick={this.props.showModalFilters}>
+                <button
+                  onClick={this.props.showModalFilters}
+                  style={styles.button}
+                  className="noFocusButton"
+                >
                   Filters
                 </button>
               </span>
@@ -136,7 +146,11 @@ const FilterHeader = React.createClass({
               <span>
                 &nbsp;
                 &nbsp;
-                <button onClick={this.props.hideModalFilters}>
+                <button
+                  onClick={this.props.hideModalFilters}
+                  style={styles.button}
+                  className="noFocusButton"
+                >
                   Apply
                 </button>
               </span>
