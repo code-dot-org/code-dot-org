@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import FlexGroup from './FlexGroup';
 
 const styles = {
@@ -22,7 +21,6 @@ const styles = {
 const ScriptEditor = React.createClass({
   propTypes: {
     scriptData: React.PropTypes.object.isRequired,
-    stages: React.PropTypes.array.isRequired,
     i18nData: React.PropTypes.object.isRequired
   },
 
@@ -119,12 +117,10 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <h2>Stages and Levels</h2>
-        <FlexGroup stages={this.props.stages} />
+        <FlexGroup />
       </div>
     );
   }
 });
 
-export default connect(state => ({
-  stages: state
-}))(ScriptEditor);
+export default ScriptEditor;
