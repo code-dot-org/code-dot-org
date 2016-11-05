@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {Motion, spring} from 'react-motion';
 import color from '../../../../util/color';
 import { borderRadius, levelTokenMargin } from './constants';
@@ -56,7 +57,8 @@ const styles = {
 
 const LevelToken = React.createClass({
   propTypes: {
-    handleAction: React.PropTypes.func.isRequired,
+    toggleExpand: React.PropTypes.func.isRequired,
+    removeLevel: React.PropTypes.func.isRequired,
     level: React.PropTypes.object.isRequired,
     stagePosition: React.PropTypes.number.isRequired,
     dragging: React.PropTypes.bool.isRequired,
@@ -66,11 +68,11 @@ const LevelToken = React.createClass({
   },
 
   toggleExpand() {
-    this.props.handleAction('TOGGLE_EXPAND', {stage: this.props.stagePosition, level: this.props.level.position});
+    this.props.toggleExpand(this.props.stagePosition, this.props.level.position);
   },
 
   handleRemove() {
-    this.props.handleAction('REMOVE_LEVEL', {stage: this.props.stagePosition, level: this.props.level.position});
+    this.props.removeLevel(this.props.stagePosition, this.props.level.position);
   },
 
   render() {
@@ -108,7 +110,6 @@ const LevelToken = React.createClass({
             </div>
             {this.props.level.expand &&
             <LevelTokenDetails
-              handleAction={this.props.handleAction}
               level={this.props.level}
               stagePosition={this.props.stagePosition}
             />
@@ -120,4 +121,11 @@ const LevelToken = React.createClass({
   }
 });
 
-export default LevelToken;
+export default connect(state => ({}), dispatch => ({
+  toggleExpand(stage, level) {
+    dispatch({type: 'TOGGLE_EXPAND', stage, level});
+  },
+  removeLevel(stage, level) {
+    dispatch({type: 'REMOVE_LEVEL', stage, level});
+  }
+}))(LevelToken);
