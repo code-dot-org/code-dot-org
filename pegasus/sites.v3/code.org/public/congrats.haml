@@ -86,14 +86,18 @@ max_age: 60
 
   %div{:style=>'clear: both; height:30px'}
 
-  = view :congrats_continue
+  // if cert_script == 'mc' || cert_script == 'minecraft'
+  -if cert_script == 'mc'
+    = view :congrats_continue_mc
+  -else
+    = view :congrats_continue
 
   %div{:style=>'clear: both; height:30px'}
 
   = view :congrats_leaderboards
 
   %br
-  = view :petition
+  = view :petition_expand
 
 = view 'popup_window.js'
 
