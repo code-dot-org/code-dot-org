@@ -42,5 +42,7 @@
   "roboticsButtonText": "Got robots? <a href='/learn/robotics'>Use these activities</a> and make a tangible Hour of Code for students of any age!",
   "tutorialDetailsTeacherNotes": "Teacher notes",
   "tutorialDetailsShortLink": "Short link",
-  "tutorialDetailInternationalLanguages": "International languages"
+  "tutorialDetailInternationalLanguages": "International languages",
+  "headingTutorialsYourLanguage": "Tutorials in your language",
+  "headingTutorialsManyLanguages": "Tutorials in many languages"
 }
