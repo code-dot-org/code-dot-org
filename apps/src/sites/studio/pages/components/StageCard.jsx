@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import { borderRadius, levelTokenMargin } from './constants';
 import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
@@ -35,7 +36,8 @@ const styles = {
 
 const StageCard = React.createClass({
   propTypes: {
-    handleAction: React.PropTypes.func.isRequired,
+    reorderLevel: React.PropTypes.func.isRequired,
+    addLevel: React.PropTypes.func.isRequired,
     stagesCount: React.PropTypes.number.isRequired,
     stage: React.PropTypes.object.isRequired
   },
@@ -91,7 +93,7 @@ const StageCard = React.createClass({
 
   handleDragStop() {
     if (this.state.drag !== this.state.newPosition) {
-      this.props.handleAction('REORDER_LEVEL', {stage: this.props.stage.position, levelA: this.state.drag, levelB: this.state.newPosition});
+      this.props.reorderLevel(this.props.stage.position, this.state.drag, this.state.newPosition);
     }
     this.setState({drag: null, newPosition: null, currentPositions: []});
     window.removeEventListener('selectstart', this.preventSelect);
@@ -100,7 +102,7 @@ const StageCard = React.createClass({
   },
 
   handleAddLevel() {
-    this.props.handleAction('ADD_LEVEL', {stage: this.props.stage.position});
+    this.props.addLevel(this.props.stage.position);
   },
 
   handleLockableChanged() {
@@ -118,7 +120,6 @@ const StageCard = React.createClass({
         <div style={styles.stageCardHeader}>
           Stage {this.props.stage.position}: {this.props.stage.name}
           <OrderControls
-            handleAction={this.props.handleAction}
             type="STAGE"
             position={this.props.stage.position}
             total={this.props.stagesCount}
@@ -136,7 +137,6 @@ const StageCard = React.createClass({
         </div>
         {this.props.stage.levels.map(level =>
           <LevelToken
-            handleAction={this.props.handleAction}
             ref={`levelToken${level.position}`}
             key={level.position + '_' + level.ids[0]}
             level={level}
@@ -156,4 +156,11 @@ const StageCard = React.createClass({
   }
 });
 
-export default StageCard;
+export default connect(state => ({}), dispatch => ({
+  reorderLevel(stage, levelA, levelB) {
+    dispatch({type: 'REORDER_LEVEL', stage, levelA, levelB});
+  },
+  addLevel(stage) {
+    dispatch({type: 'ADD_LEVEL', stage});
+  }
+}))(StageCard);

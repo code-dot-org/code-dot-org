@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import _ from 'lodash';
 import color from '../../../../util/color';
 import { borderRadius } from './constants';
@@ -41,16 +42,17 @@ const styles = {
 
 const FlexGroup = React.createClass({
   propTypes: {
-    handleAction: React.PropTypes.func.isRequired,
+    addGroup: React.PropTypes.func.isRequired,
+    addStage: React.PropTypes.func.isRequired,
     stages: React.PropTypes.array.isRequired
   },
 
   handleAddGroup() {
-    this.props.handleAction('ADD_GROUP');
+    this.props.addGroup();
   },
 
   handleAddStage(position) {
-    this.props.handleAction('ADD_STAGE', {position});
+    this.props.addStage(position);
   },
 
   render() {
@@ -66,7 +68,6 @@ const FlexGroup = React.createClass({
               <div style={styles.groupHeader}>
                 Group {++count}: {group}
                 <OrderControls
-                  handleAction={this.props.handleAction}
                   type="GROUP"
                   position={afterStage}
                   total={Object.keys(groups).length}
@@ -77,7 +78,6 @@ const FlexGroup = React.createClass({
                   afterStage++;
                   return (
                     <StageCard
-                      handleAction={this.props.handleAction}
                       key={stage.id}
                       stagesCount={this.props.stages.length}
                       stage={stage}
@@ -101,4 +101,11 @@ const FlexGroup = React.createClass({
   }
 });
 
-export default FlexGroup;
+export default connect(state => ({}), dispatch => ({
+  addGroup() {
+    dispatch({type: 'ADD_GROUP'});
+  },
+  addStage(position) {
+    dispatch({type: 'ADD_STAGE', position});
+  }
+}))(FlexGroup);

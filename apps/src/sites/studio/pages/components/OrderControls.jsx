@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const styles = {
   controls: {
@@ -12,7 +13,8 @@ const styles = {
 
 const OrderControls = React.createClass({
   propTypes: {
-    handleAction: React.PropTypes.func.isRequired,
+    move: React.PropTypes.func.isRequired,
+    remove: React.PropTypes.func.isRequired,
     type: React.PropTypes.oneOf(['GROUP', 'STAGE']).isRequired,
     position: React.PropTypes.number.isRequired,
     total: React.PropTypes.number.isRequired
@@ -20,18 +22,18 @@ const OrderControls = React.createClass({
 
   handleMoveUp() {
     if (this.props.position !== 1) {
-      this.props.handleAction('MOVE_' + this.props.type, {position: this.props.position, direction: 'up'});
+      this.props.move(this.props.type, this.props.position, 'up');
     }
   },
 
   handleMoveDown() {
     if (this.props.position !== this.props.total) {
-      this.props.handleAction('MOVE_' + this.props.type, {position: this.props.position, direction: 'down'});
+      this.props.move(this.props.type, this.props.position, 'down');
     }
   },
 
   handleRemove() {
-    this.props.handleAction('REMOVE_' + this.props.type, {position: this.props.position});
+    this.props.remove(this.props.type, this.props.position);
   },
 
   render() {
@@ -57,4 +59,11 @@ const OrderControls = React.createClass({
   }
 });
 
-export default OrderControls;
+export default connect(state => ({}), dispatch => ({
+  move(type, position, direction) {
+    dispatch({type: `MOVE_${type}`, position, direction});
+  },
+  remove(type, position) {
+    dispatch({type: `REMOVE_${type}`, position});
+  }
+}))(OrderControls);

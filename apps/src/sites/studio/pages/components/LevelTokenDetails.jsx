@@ -1,6 +1,7 @@
 /* global levelKeyList */
 
 import React from 'react';
+import { connect } from 'react-redux';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
@@ -52,7 +53,9 @@ ArrowRenderer.propTypes = {onMouseDown: React.PropTypes.func.isRequried};
 
 const LevelTokenDetails = React.createClass({
   propTypes: {
-    handleAction: React.PropTypes.func.isRequired,
+    chooseLevelType: React.PropTypes.func.isRequired,
+    chooseLevel: React.PropTypes.func.isRequired,
+    addVariant: React.PropTypes.func.isRequired,
     level: React.PropTypes.object.isRequired,
     stagePosition: React.PropTypes.number.isRequired
   },
@@ -69,15 +72,15 @@ const LevelTokenDetails = React.createClass({
   },
 
   handleLevelTypeSelected({value}) {
-    this.props.handleAction('CHOOSE_LEVEL_TYPE', {stage: this.props.stagePosition, level: this.props.level.position, value});
+    this.props.chooseLevelType(this.props.stagePosition, this.props.level.position, value);
   },
 
   handleLevelSelected(index, {value}) {
-    this.props.handleAction('CHOOSE_LEVEL', {stage: this.props.stagePosition, level: this.props.level.position, index, value});
+    this.props.chooseLevel(this.props.stagePosition, this.props.level.position, index, value);
   },
 
   handleAddVariant() {
-    this.props.handleAction('ADD_VARIANT', {stage: this.props.stagePosition, level: this.props.level.position});
+    this.props.addVariant(this.props.stagePosition, this.props.level.position);
   },
 
   render() {
@@ -137,4 +140,14 @@ const LevelTokenDetails = React.createClass({
   }
 });
 
-export default LevelTokenDetails;
+export default connect(state => ({}), dispatch => ({
+  chooseLevelType(stage, level, value) {
+    dispatch({type: 'CHOOSE_LEVEL_TYPE', stage, level, value});
+  },
+  chooseLevel(stage, level, variant, value) {
+    dispatch({type: 'CHOOSE_LEVEL', stage, level, variant, value});
+  },
+  addVariant(stage, level) {
+    dispatch({type: 'ADD_VARIANT', stage, level});
+  }
+}))(LevelTokenDetails);

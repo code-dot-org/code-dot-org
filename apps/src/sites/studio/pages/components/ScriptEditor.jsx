@@ -1,7 +1,5 @@
-/* global levelKeyList */
-
 import React from 'react';
-import _ from 'lodash';
+import { connect } from 'react-redux';
 import FlexGroup from './FlexGroup';
 
 const styles = {
@@ -18,141 +16,14 @@ const styles = {
   }
 };
 
-let newStageId = -1;
-let newLevelId = -1;
-
 /**
  * Component for editing course scripts.
  */
 const ScriptEditor = React.createClass({
   propTypes: {
     scriptData: React.PropTypes.object.isRequired,
+    stages: React.PropTypes.array.isRequired,
     i18nData: React.PropTypes.object.isRequired
-  },
-
-  getInitialState() {
-    return {stages: this.props.scriptData.stages.filter(stage => stage.id)};
-  },
-
-  handleAction(type, options) {
-    let newState = _.cloneDeep(this.state.stages);
-    switch (type) {
-      case 'ADD_GROUP': {
-        newState.push({
-          id: newStageId--,
-          name: 'New Stage',
-          flex_category: prompt('Enter new group name'),
-          levels: []
-        });
-        this.updatePositions(newState);
-        break;
-      }
-      case 'ADD_STAGE': {
-        const groupName = newState[options.position - 1].flex_category;
-        newState.splice(options.position, 0, {
-          id: newStageId--,
-          name: prompt('Enter new stage name'),
-          flex_category: groupName,
-          levels: []
-        });
-        this.updatePositions(newState);
-        break;
-      }
-      case 'ADD_LEVEL': {
-        const levels = newState[options.stage - 1].levels;
-        const id = newLevelId--;
-        levels.push({
-          ids: [id],
-          activeId: id,
-          expand: true
-        });
-        this.updatePositions(levels);
-        break;
-      }
-      case 'ADD_VARIANT': {
-        newState[options.stage - 1].levels[options.level - 1].ids.push(newLevelId--);
-        break;
-      }
-      case 'REMOVE_GROUP': {
-        const groupName = newState[options.position - 1].flex_category;
-        newState = newState.filter(stage => stage.flex_category !== groupName);
-        this.updatePositions(newState);
-        break;
-      }
-      case 'REMOVE_STAGE': {
-        newState.splice(options.position - 1, 1);
-        this.updatePositions(newState);
-        break;
-      }
-      case 'REMOVE_LEVEL': {
-        const levels = newState[options.stage - 1].levels;
-        levels.splice(options.level - 1, 1);
-        this.updatePositions(levels);
-        break;
-      }
-      case 'REORDER_LEVEL': {
-        const levels = newState[options.stage - 1].levels;
-        const temp = levels.splice(options.levelA - 1, 1);
-        levels.splice(options.levelB - 1, 0, temp[0]);
-        this.updatePositions(levels);
-        break;
-      }
-      case 'CHOOSE_LEVEL': {
-        const level = newState[options.stage - 1].levels[options.level - 1];
-        if (level.ids[options.index] === level.activeId) {
-          level.activeId = options.value;
-          level.key = levelKeyList[options.value];
-        }
-        level.ids[options.index] = options.value;
-        break;
-      }
-      case 'CHOOSE_LEVEL_TYPE': {
-        newState[options.stage - 1].levels[options.level - 1].kind = options.value;
-        break;
-      }
-      case 'TOGGLE_EXPAND': {
-        const level = newState[options.stage - 1].levels[options.level - 1];
-        level.expand = !level.expand;
-        break;
-      }
-      case 'MOVE_GROUP': {
-        if (options.direction !== 'up' && options.position === newState.length) {
-          break;
-        }
-        const index = options.position - 1;
-        const groupName = newState[index].flex_category;
-        let categories = newState.map(s => s.flex_category);
-        let start = categories.indexOf(groupName);
-        let count = categories.filter(c => c === groupName).length;
-        const swap = newState.splice(start, count);
-        categories = newState.map(s => s.flex_category);
-        const swappedGroupName = newState[options.direction === 'up' ? index - 1 : index].flex_category;
-        start = categories.indexOf(swappedGroupName);
-        count = categories.filter(c => c === swappedGroupName).length;
-        newState.splice(options.direction === 'up' ? start : start + count, 0, ...swap);
-        console.log(newState.map(s => s.flex_category));
-        this.updatePositions(newState);
-        break;
-      }
-      case 'MOVE_STAGE': {
-        const index = options.position - 1;
-        const swap = (options.direction === 'up' ? index - 1 : index + 1);
-        const temp = newState[index];
-        newState[index] = newState[swap];
-        newState[swap] = temp;
-        this.updatePositions(newState);
-        break;
-      }
-      default:
-        throw 'Unexpected action';
-    }
-    this.setState({stages: newState});
-  },
-
-  updatePositions(node) {
-    for (var i = 0; i < node.length; i++) {
-      node[i].position = i + 1;
-    }
   },
 
   render() {
@@ -248,10 +119,12 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <h2>Stages and Levels</h2>
-        <FlexGroup stages={this.state.stages} handleAction={this.handleAction} />
+        <FlexGroup stages={this.props.stages} />
       </div>
     );
   }
 });
 
-export default ScriptEditor;
+export default connect(state => ({
+  stages: state
+}))(ScriptEditor);
