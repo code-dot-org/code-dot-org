@@ -81,7 +81,7 @@ class Karel < Maze
       <block type="harvester_whileHasCrop"></block>
       <block type="harvester_corn"></block>
       <block type="harvester_pumpkin"></block>
-      <block type="harvester_bean"></block>
+      <block type="harvester_lettuce"></block>
       <block type="harvester_ifAtCorn"></block>
       <block type="harvester_ifAtCornElse"></block>
       <block type="harvester_ifHasCorn"></block>
@@ -90,10 +90,10 @@ class Karel < Maze
       <block type="harvester_ifAtPumpkinElse"></block>
       <block type="harvester_ifHasPumpkin"></block>
       <block type="harvester_whileHasPumpkin"></block>
-      <block type="harvester_ifAtBean"></block>
-      <block type="harvester_ifAtBeanElse"></block>
-      <block type="harvester_ifHasBean"></block>
-      <block type="harvester_whileHasBean"></block>
+      <block type="harvester_ifAtLettuce"></block>
+      <block type="harvester_ifAtLettuceElse"></block>
+      <block type="harvester_ifHasLettuce"></block>
+      <block type="harvester_whileHasLettuce"></block>
     </category>
     <category name="Planter">
       <block type="planter_plant"></block>
