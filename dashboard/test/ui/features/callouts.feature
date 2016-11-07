@@ -27,6 +27,8 @@ Feature: Callouts
   Scenario Outline: Callouts having correct content and being dismissable via the x-button
     Given I am on "<url>"
     And I rotate to landscape
+    And I wait for the page to fully load
+    And I close the instructions overlay if it exists
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
     And I close callout "<callout_id>"
