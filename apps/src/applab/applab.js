@@ -37,6 +37,7 @@ import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
 import {Provider} from 'react-redux';
 import reducers from './reducers';
+import {add as addWatcher} from '../redux/watchedExpressions';
 import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
@@ -727,6 +728,15 @@ Applab.init = function (config) {
     }
 
     setupReduxSubscribers(studioApp.reduxStore);
+    if (config.level.watchersPrepopulated) {
+      try {
+        JSON.parse(config.level.watchersPrepopulated).forEach(option => {
+          studioApp.reduxStore.dispatch(addWatcher(option));
+        });
+      } catch (e) {
+        console.warn('Error pre-populating watchers.');
+      }
+    }
 
     designMode.addKeyboardHandlers();
     designMode.renderDesignWorkspace();
@@ -757,7 +767,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: false
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(

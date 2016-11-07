@@ -21,6 +21,11 @@ social:
     }
   }
 
+:css
+  .noFocusButton:focus {
+    outline: 0;
+  }
+
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
   = view :header
 
@@ -64,7 +69,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{hoc_locale}",
       robotics: true,
-      backButton: true
+      backButton: true,
+      showSortBy: window.location.search.indexOf("showsort") !== -1
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });
