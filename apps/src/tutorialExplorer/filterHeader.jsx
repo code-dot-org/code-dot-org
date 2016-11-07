@@ -5,6 +5,7 @@
 import React from 'react';
 import BackButton from './backButton';
 import { TutorialsSortBy } from './util';
+import i18n from './locale';
 
 const styles = {
   header: {
@@ -77,6 +78,11 @@ const FilterHeader = React.createClass({
   },
 
   render() {
+    const tutorialCount = this.props.filteredTutorialsCount;
+    const tutorialCountString = tutorialCount === 1 ?
+      i18n.filterHeaderTutorialCountSingle() :
+      i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
+
     return (
       <div style={styles.header}>
         {this.props.backButton && <BackButton/>}
@@ -94,13 +100,13 @@ const FilterHeader = React.createClass({
           <div style={styles.left}>
             {this.props.mobileLayout && (
               <span>
-                {this.props.filteredTutorialsCount} results
+                {tutorialCountString}
               </span>
             )}
 
             {!this.props.mobileLayout && (
               <div style={styles.filterBy}>
-                Filter By
+                {i18n.filterHeaderFilterBy()}
               </div>
             )}
           </div>
@@ -108,7 +114,7 @@ const FilterHeader = React.createClass({
           <div style={styles.right}>
             {!this.props.mobileLayout && (
               <span>
-                {this.props.filteredTutorialsCount} results
+                {tutorialCountString}
               </span>
             )}
 
@@ -137,7 +143,7 @@ const FilterHeader = React.createClass({
                   style={styles.button}
                   className="noFocusButton"
                 >
-                  Filter
+                  {i18n.filterHeaderShowFilters()}
                 </button>
               </span>
             )}
@@ -151,7 +157,7 @@ const FilterHeader = React.createClass({
                   style={styles.button}
                   className="noFocusButton"
                 >
-                  Apply
+                  {i18n.filterHeaderHideFilters()}
                 </button>
               </span>
             )}
