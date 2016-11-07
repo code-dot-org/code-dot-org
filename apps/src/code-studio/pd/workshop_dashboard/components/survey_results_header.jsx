@@ -128,7 +128,7 @@ const SurveyResultsHeader = React.createClass({
       } else {
         $.ajax({
           method: 'GET',
-          url: `${organizerViewApiRoot}${course}`
+          url: `${organizerViewApiRoot}${course}${this.props.organizerView && '?organizer_view=1'}`
         }).done(data => {
           this.setState({
             selectedWorkshopId: '',
