@@ -22,7 +22,9 @@ table {width: 100%;}
 |------|-------|
 | November 1, 2016 | Facilitator Applications Open |
 | November 4, 2016 <br/> 10:00 am - 10:30 am PT| Virtual Meeting: Facilitator Selection Process **(Required)** |
-| November 17, 2016 <br/> 10:00 am - 10:30 am PT | Virtual Meeting: K-12 CS Framework *(Optional)* |
+| November 11, 2016 <br/> 12:00 pm - 1:00 pm PT | Virtual Meeting: How to Run a Virtual Administrator & Counselor PD *(Optional)* <br/> Click [here](https://code.zoom.us/j/510341435) to join the Zoom Meeting.|
+| November 17, 2016 <br/> 10:00 am - 11:00 am PT | Virtual Meeting: K-12 CS Framework *(Optional)* <br/> Click [here](https://code.zoom.us/j/827230209) to join the Zoom Meeting. |
+| November 29, 2016 <br/> 8:30 am - 9:30 am PT | Virtual Meeting: Diving into CS Discoveries *(Optional)*<br/> *You are welcome to invite district personnel who are interested in adding this course to this webinar.* <br/> Click [here](https://code.zoom.us/j/510341435) to join the Zoom Meeting.|
 
 ## December Areas of Focus
 
@@ -57,7 +59,7 @@ table {width: 100%;}
 
 | **February** ||
 |------|-------|
-| Week of February 6th 2017 | Program Manager Summit (location TBD) |
+| Week of February 8th - 10th, 2017 <br/> *Sessions will start at 8am on Wednesday and end at noon on Friday*| Program Manager Summit (location TBD) |
 
 ## March Areas of Focus
 
