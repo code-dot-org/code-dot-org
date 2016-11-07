@@ -1,4 +1,5 @@
 {
+  "blockActionAdd": "add",
   "blockActionAttack": "hit",
   "blockActionDestroyEntity": "disappear",
   "blockActionDrop": "drop",
@@ -10,8 +11,11 @@
   "blockActionMoveRandom": "move random",
   "blockActionMoveTo": "move to",
   "blockActionMoveToward": "move a step toward",
+  "blockActionPlaySound": "play sound",
   "blockActionRepeat": "repeat",
   "blockActionRepeatRandom": "repeat random",
+  "blockActionSpawn": "spawn",
+  "blockActionToScore": "to score",
   "blockActionWait": "wait",
   "blockDestroyBlock": "destroy block",
   "blockIf": "if",
@@ -190,6 +194,6 @@
   "timeShort": "short",
   "timeVeryLong": "very long",
   "timeVeryShort": "very short",
-  "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}."
-  "turnRandom": "turn random",
+  "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}.",
+  "turnRandom": "turn random"
 }

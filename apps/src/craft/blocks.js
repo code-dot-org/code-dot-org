@@ -6,15 +6,15 @@ import _ from 'lodash';
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
 const eventTypes = Object.freeze({
-  WhenTouched : 0,
-  WhenUsed : 1,
-  WhenSpawned : 2,
-  WhenAttacked : 3,
-  WhenNight : 4,
-  WhenDay : 5,
-  WhenNightGlobal : 6,
-  WhenDayGlobal : 7,
-  WhenRun : 8
+  WhenTouched: 0,
+  WhenUsed: 1,
+  WhenSpawned: 2,
+  WhenAttacked: 3,
+  WhenNight: 4,
+  WhenDay: 5,
+  WhenNightGlobal: 6,
+  WhenDayGlobal: 7,
+  WhenRun: 8
 });
 
 const numbersToDisplayText = {
@@ -884,7 +884,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel('spawn'))
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionSpawn()))
           .appendTitle(entityTypeDropdown, 'TYPE')
           .appendTitle(new blockly.FieldLabel(' '))
           .appendTitle(locationDropdown, 'DIRECTION');
@@ -1039,7 +1039,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-          .appendTitle('play sound')
+          .appendTitle(i18n.blockActionPlaySound())
           .appendTitle(dropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1060,9 +1060,9 @@ exports.install = function (blockly, blockInstallOptions) {
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-          .appendTitle('add')
+          .appendTitle(i18n.blockActionAdd())
           .appendTitle(dropdown, 'SCORE')
-          .appendTitle('to score');
+          .appendTitle(i18n.blockActionToScore());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -1141,4 +1141,3 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
 };
-
