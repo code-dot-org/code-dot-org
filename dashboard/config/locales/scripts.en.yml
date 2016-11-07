@@ -389,6 +389,7 @@ en:
           description_short: Compress text by identifying repeated patterns.
           stage:
             Text Compression: Text Compression
+          description_audience: ''
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
