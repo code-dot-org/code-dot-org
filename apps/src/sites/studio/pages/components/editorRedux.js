@@ -17,16 +17,16 @@ export default function reducer(state, action) {
   switch (action.type) {
     case 'REORDER_LEVEL': {
       const levels = newState[action.stage - 1].levels;
-      const temp = levels.splice(action.levelA - 1, 1);
-      levels.splice(action.levelB - 1, 0, temp[0]);
+      const temp = levels.splice(action.originalPosition - 1, 1);
+      levels.splice(action.newPosition - 1, 0, temp[0]);
       updatePositions(levels);
       break;
     }
     case 'ADD_GROUP': {
       newState.push({
         id: newStageId--,
-        flex_category: prompt('Enter new group name'),
-        name: prompt('Enter new stage name'),
+        flex_category: action.groupName,
+        name: action.stageName,
         levels: []
       });
       updatePositions(newState);
@@ -36,7 +36,7 @@ export default function reducer(state, action) {
       const groupName = newState[action.position - 1].flex_category;
       newState.splice(action.position, 0, {
         id: newStageId--,
-        name: prompt('Enter new stage name'),
+        name: action.stageName,
         flex_category: groupName,
         levels: []
       });

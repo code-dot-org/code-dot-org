@@ -48,11 +48,11 @@ const FlexGroup = React.createClass({
   },
 
   handleAddGroup() {
-    this.props.addGroup();
+    this.props.addGroup(prompt('Enter new stage name'), prompt('Enter new group name'));
   },
 
   handleAddStage(position) {
-    this.props.addStage(position);
+    this.props.addStage(position, prompt('Enter new stage name'));
   },
 
   render() {
@@ -104,10 +104,10 @@ const FlexGroup = React.createClass({
 export default connect(state => ({
   stages: state
 }), dispatch => ({
-  addGroup() {
-    dispatch({type: 'ADD_GROUP'});
+  addGroup(stageName, groupName) {
+    dispatch({type: 'ADD_GROUP', stageName, groupName});
   },
-  addStage(position) {
-    dispatch({type: 'ADD_STAGE', position});
+  addStage(position, stageName) {
+    dispatch({type: 'ADD_STAGE', position, stageName});
   }
 }))(FlexGroup);
