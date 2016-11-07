@@ -18,12 +18,12 @@ const eventTypes = Object.freeze({
 });
 
 const numbersToDisplayText = {
-  '0.4': 'very short',
-  '1.0': 'short',
-  '2.0': 'medium',
-  '4.0': 'long',
-  '8.0': 'very long',
-  'random': 'random',
+  '0.4': i18n.timeVeryShort(),
+  '1.0': i18n.timeShort(),
+  '2.0': i18n.timeMedium(),
+  '4.0': i18n.timeLong(),
+  '8.0': i18n.timeVeryLong(),
+  'random': i18n.timeRandom(),
 };
 
 const blocksToDisplayText = {
@@ -105,6 +105,44 @@ const miniBlocks = [
   'sheep'
 ].sort();
 
+const miniBlocksToDisplayText = {
+  dirt: i18n.miniBlockDirt(),
+  dirtCoarse: i18n.miniBlockDirtCoarse(),
+  sand: i18n.miniBlockSand(),
+  gravel: i18n.miniBlockGravel(),
+  bricks: i18n.miniBlockBricks(),
+  logAcacia: i18n.miniBlockLogAcacia(),
+  logBirch: i18n.miniBlockLogBirch(),
+  logJungle: i18n.miniBlockLogJungle(),
+  logOak: i18n.miniBlockLogOak(),
+  logSpruce: i18n.miniBlockLogSpruce(),
+  planksAcacia: i18n.miniBlockPlanksAcacia(),
+  planksBirch: i18n.miniBlockPlanksBirch(),
+  planksJungle: i18n.miniBlockPlanksJungle(),
+  planksOak: i18n.miniBlockPlanksOak(),
+  planksSpruce: i18n.miniBlockPlanksSpruce(),
+  cobblestone: i18n.miniBlockCobblestone(),
+  sandstone: i18n.miniBlockSandstone(),
+  wool: i18n.miniBlockWool(),
+  redstoneDust: i18n.miniBlockRedstoneDust(),
+  lapisLazuli: i18n.miniBlockLapisLazuli(),
+  ingotIron: i18n.miniBlockIngotIron(),
+  ingotGold: i18n.miniBlockIngotGold(),
+  emerald: i18n.miniBlockEmerald(),
+  diamond: i18n.miniBlockDiamond(),
+  coal: i18n.miniBlockCoal(),
+  bucketWater: i18n.miniBlockBucketWater(),
+  bucketLava: i18n.miniBlockBucketLava(),
+  gunPowder: i18n.miniBlockGunPowder(),
+  wheat: i18n.miniBlockWheat(),
+  potato: i18n.miniBlockPotato(),
+  carrots: i18n.miniBlockCarrots(),
+  milk: i18n.miniBlockMilk(),
+  egg: i18n.miniBlockEgg(),
+  poppy: i18n.miniBlockPoppy(),
+  sheep: i18n.miniBlockSheep(),
+};
+
 const allBlocks = [
   'bedrock',
   'bricks',
@@ -144,37 +182,37 @@ const allBlocks = [
 
 
 const soundsToDisplayText = {
-  dig_wood1: 'wood break',
-  stepGrass: 'step grass',
-  stepWood: 'step wood',
-  stepStone: 'step stone',
-  stepGravel: 'step gravel',
-  stepFarmland: 'step farmland',
-  failure: 'level failure',
-  success: 'level success',
-  fall: 'fall',
-  fuse: 'fuse',
-  explode: 'explode',
-  placeBlock: 'block place',
-  collectedBlock: 'block collect',
-  bump: 'bump',
-  punch: 'punch',
-  fizz: 'fizz',
-  doorOpen: 'door open',
-  minecart: 'minecart',
-  sheepBaa: 'sheep baa',
-  chickenHurt: 'chicken hurt',
-  chickenBawk: 'chicken cluck',
-  cowHuff: 'cow huff',
-  cowHurt: 'cow hurt',
-  cowMoo: 'cow moo',
-  cowMooLong: 'cow mooo',
-  creeperHiss: 'creeper hiss',
-  ironGolemHit: 'iron golem hit',
-  metalWhack: 'metal whack',
-  zombieBrains: 'zombie moan',
-  zombieGroan: 'zombie growl',
-  zombieHurt: 'zombie hurt',
+  dig_wood1: i18n.soundTypeDig_wood1(),
+  stepGrass: i18n.soundTypeStepGrass(),
+  stepWood: i18n.soundTypeStepWood(),
+  stepStone: i18n.soundTypeStepStone(),
+  stepGravel: i18n.soundTypeStepGravel(),
+  stepFarmland: i18n.soundTypeStepFarmland(),
+  failure: i18n.soundTypeFailure(),
+  success: i18n.soundTypeSuccess(),
+  fall: i18n.soundTypeFall(),
+  fuse: i18n.soundTypeFuse(),
+  explode: i18n.soundTypeExplode(),
+  placeBlock: i18n.soundTypePlaceBlock(),
+  collectedBlock: i18n.soundTypeCollectedBlock(),
+  bump: i18n.soundTypeBump(),
+  punch: i18n.soundTypePunch(),
+  fizz: i18n.soundTypeFizz(),
+  doorOpen: i18n.soundTypeDoorOpen(),
+  minecart: i18n.soundTypeMinecart(),
+  sheepBaa: i18n.soundTypeSheepBaa(),
+  chickenHurt: i18n.soundTypeChickenHurt(),
+  chickenBawk: i18n.soundTypeChickenBawk(),
+  cowHuff: i18n.soundTypeCowHuff(),
+  cowHurt: i18n.soundTypeCowHurt(),
+  cowMoo: i18n.soundTypeCowMoo(),
+  cowMooLong: i18n.soundTypeCowMooLong(),
+  creeperHiss: i18n.soundTypeCreeperHiss(),
+  ironGolemHit: i18n.soundTypeIronGolemHit(),
+  metalWhack: i18n.soundTypeMetalWhack(),
+  zombieBrains: i18n.soundTypeZombieBrains(),
+  zombieGroan: i18n.soundTypeZombieGroan(),
+  zombieHurt: i18n.soundTypeZombieHurt(),
   //zombieHurt2: 'zombie hurt',
 };
 
@@ -190,6 +228,16 @@ const ENTITY_TYPES = [
   'chicken',
 ];
 
+const entityTypesToDisplayText = {
+  Player: i18n.entityTypePlayer(),
+  sheep: i18n.entityTypeSheep(),
+  zombie: i18n.entityTypeZombie(),
+  ironGolem: i18n.entityTypeIronGolem(),
+  creeper: i18n.entityTypeCreeper(),
+  cow: i18n.entityTypeCow(),
+  chicken: i18n.entityTypeChicken(),
+};
+
 const SPAWNABLE_ENTITY_TYPES = [
   'sheep',
   'zombie',
@@ -199,27 +247,40 @@ const SPAWNABLE_ENTITY_TYPES = [
   'chicken',
 ];
 
+const directionsToDisplay = {
+  up: i18n.directionUp(),
+  middle: i18n.directionMiddle(),
+  down: i18n.directionDown(),
+  left: i18n.directionLeft(),
+  right: i18n.directionRight(),
+};
+
 function keysToDropdownOptions(keysList) {
   return keysList.map(function (key) {
-    var displayText = (blocksToDisplayText[key] || numbersToDisplayText[key] || key);
+    var displayText = (blocksToDisplayText[key] ||
+      numbersToDisplayText[key] ||
+      directionsToDisplay[key] ||
+      entityTypesToDisplayText[key] ||
+      miniBlocksToDisplayText[key] ||
+      key);
     return [displayText, key];
   });
 }
 
 
 const entityActionBlocks = {
-  'destroyEntity': 'disappear',
-  'attack': 'attack',
-  'flashEntity': 'flash',
-  'moveForward': 'move forward',
-  'moveRandom': 'move random',
-  'explodeEntity': 'explode'
+  destroyEntity: i18n.blockActionDestroyEntity(),
+  attack: i18n.blockActionAttack(),
+  flashEntity: i18n.blockActionFlashEntity(),
+  moveForward: i18n.blockActionMoveForward(),
+  moveRandom: i18n.blockActionMoveRandom(),
+  explodeEntity: i18n.blockActionExplodeEntity()
 };
 
 const entityActionTargetDropdownBlocks = {
-  'moveToward': 'move a step toward',
-  'moveTo': 'move to',
-  'moveAway': 'move away from'
+  'moveToward': i18n.blockActionMoveToward(),
+  'moveTo': i18n.blockActionMoveTo(),
+  'moveAway': i18n.blockActionMoveAway(),
 };
 
 exports.entityActionBlocks = Object.keys(entityActionBlocks);
@@ -311,7 +372,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS =
       [[i18n.blockTurnLeft() + ' \u21BA', 'left'],
         [i18n.blockTurnRight() + ' \u21BB', 'right'],
-        ['turn random', 'random']
+        [i18n.turnRandom(), 'random']
       ];
 
   blockly.Generator.get('JavaScript').craft_entityTurnLR = function () {
@@ -460,12 +521,12 @@ exports.install = function (blockly, blockInstallOptions) {
   ];
 
   const statementNameToDisplayName = {
-    WHEN_USED: "when used",
-    WHEN_TOUCHED: "when touched",
-    WHEN_SPAWNED: "when spawned",
-    WHEN_ATTACKED: "when attacked",
-    WHEN_NIGHT: "when night",
-    WHEN_DAY: "when day",
+    WHEN_USED: i18n.eventTypeWhenUsed(),
+    WHEN_TOUCHED: i18n.eventTypeWhenTouched(),
+    WHEN_SPAWNED: i18n.eventTypeWhenSpawned(),
+    WHEN_ATTACKED: i18n.eventTypeWhenAttacked(),
+    WHEN_NIGHT: i18n.eventTypeWhenNight(),
+    WHEN_DAY: i18n.eventTypeWhenDay(),
   };
 
   function blockFor(displayName, statementNames = defaultEventOrder) {
@@ -504,23 +565,23 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(entityType, statementNames);
   }
 
-  createEventBlockForEntity('cow', 'cow');
-  createEventBlockForEntity('sheep', 'sheep');
-  createEventBlockForEntity('zombie', 'zombie');
-  createEventBlockForEntity('ironGolem', 'iron golem');
-  createEventBlockForEntity('creeper', 'creeper');
-  createEventBlockForEntity('chicken', 'chicken');
-  createLimitedEventBlockForEntity('sheep', 'sheepClicked', 'sheep', ['WHEN_USED']);
-  createLimitedEventBlockForEntity('chicken', 'chickenSpawnedClicked', 'chicken', ['WHEN_SPAWNED', 'WHEN_USED']);
-  createLimitedEventBlockForEntity('sheep', 'sheepSpawnedTouchedClicked', 'sheep', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
-  createLimitedEventBlockForEntity('cow', 'cowSpawnedTouchedClicked', 'cow', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
-  createLimitedEventBlockForEntity('zombie', 'zombieSpawnedTouchedClickedDay', 'zombie', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
-  createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClickedDay', 'creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
-  createLimitedEventBlockForEntity('chicken', 'chickenSpawned', 'chicken', ['WHEN_SPAWNED']);
-  createLimitedEventBlockForEntity('sheep', 'sheepSpawnedClicked', 'sheep', ['WHEN_SPAWNED', 'WHEN_USED']);
-  createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClicked', 'creeper', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
-  createLimitedEventBlockForEntity('zombie', 'zombieNoDayNight', 'zombie', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_ATTACKED']);
-  createLimitedEventBlockForEntity('ironGolem', 'ironGolemNoDayNight', 'iron golem', ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_ATTACKED']);
+  createEventBlockForEntity('cow', i18n.entityTypeCow());
+  createEventBlockForEntity('sheep', i18n.entityTypeSheep());
+  createEventBlockForEntity('zombie', i18n.entityTypeZombie());
+  createEventBlockForEntity('ironGolem', i18n.entityTypeIronGolem());
+  createEventBlockForEntity('creeper', i18n.entityTypeCreeper());
+  createEventBlockForEntity('chicken', i18n.entityTypeChicken());
+  createLimitedEventBlockForEntity('sheep', 'sheepClicked', i18n.entityTypeSheep(), ['WHEN_USED']);
+  createLimitedEventBlockForEntity('chicken', 'chickenSpawnedClicked', i18n.entityTypeChicken(), ['WHEN_SPAWNED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('sheep', 'sheepSpawnedTouchedClicked', i18n.entityTypeSheep(), ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('cow', 'cowSpawnedTouchedClicked', i18n.entityTypeCow(), ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('zombie', 'zombieSpawnedTouchedClickedDay', i18n.entityTypeZombie(), ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
+  createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClickedDay', i18n.entityTypeCreeper(), ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_DAY']);
+  createLimitedEventBlockForEntity('chicken', 'chickenSpawned', i18n.entityTypeChicken(), ['WHEN_SPAWNED']);
+  createLimitedEventBlockForEntity('sheep', 'sheepSpawnedClicked', i18n.entityTypeSheep(), ['WHEN_SPAWNED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('creeper', 'creeperSpawnedTouchedClicked', i18n.entityTypeCreeper(), ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED']);
+  createLimitedEventBlockForEntity('zombie', 'zombieNoDayNight', i18n.entityTypeZombie(), ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_ATTACKED']);
+  createLimitedEventBlockForEntity('ironGolem', 'ironGolemNoDayNight', i18n.entityTypeIronGolem(), ['WHEN_SPAWNED', 'WHEN_TOUCHED', 'WHEN_USED', 'WHEN_ATTACKED']);
 
   function makeGlobalEventBlock(functionName, text, eventType) {
     blockly.Blocks[`craft_${functionName}`] = {
@@ -546,9 +607,9 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  makeGlobalEventBlock('whenDay', 'when day', eventTypes.WhenDayGlobal);
-  makeGlobalEventBlock('whenNight', 'when night', eventTypes.WhenNightGlobal);
-  makeGlobalEventBlock('whenRun', 'when run', eventTypes.WhenRun);
+  makeGlobalEventBlock('whenDay', i18n.eventTypeWhenDay(), eventTypes.WhenDayGlobal);
+  makeGlobalEventBlock('whenNight', i18n.eventTypeWhenNight(), eventTypes.WhenNightGlobal);
+  makeGlobalEventBlock('whenRun', i18n.eventTypeWhenRun(), eventTypes.WhenRun);
 
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
@@ -713,9 +774,9 @@ exports.install = function (blockly, blockInstallOptions) {
       ['Player', 'sheep', 'chicken'],
       'moveTowardSheepPlayerChicken');
 
-  dropdownEntityBlock('wait', 'wait', Object.keys(numbersToDisplayText).sort());
-  dropdownEntityBlock('drop', 'drop', craftBlockOptions.dropDropdownOptions || miniBlocks, true);
-  dropdownEntityBlock('moveDirection', 'move', ['up', 'down', 'left', 'right']);
+  dropdownEntityBlock('wait', i18n.blockActionWait(), Object.keys(numbersToDisplayText).sort());
+  dropdownEntityBlock('drop', i18n.blockActionDrop(), craftBlockOptions.dropDropdownOptions || miniBlocks, true);
+  dropdownEntityBlock('moveDirection', i18n.blockActionMove(), ['up', 'down', 'left', 'right']);
   //simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
   //simpleEntityBlock('moveEntityAwayFromPlayer', 'move away from player');
   //simpleEntityBlock('turnEntityRight', 'turn it right');
@@ -729,7 +790,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
-          .appendTitle('forever');
+          .appendTitle(i18n.forever());
       this.appendStatementInput('DO')
           .appendTitle(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -747,7 +808,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
-          .appendTitle('repeat')
+          .appendTitle(i18n.blockActionRepeat())
           .appendTitle(new blockly.FieldTextInput('5', blockly.FieldTextInput.nonnegativeIntegerValidator), 'TIMES');
       this.appendStatementInput('DO')
           .appendTitle(i18n.blockWhileXAheadDo());
@@ -767,7 +828,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
-          .appendTitle('repeat random')
+          .appendTitle(i18n.blockActionRepeatRandom())
       this.appendStatementInput('DO')
           .appendTitle(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -790,7 +851,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
-          .appendTitle('repeat')
+          .appendTitle(i18n.blockActionRepeat())
           .appendTitle(dropdown, 'TIMES');
       this.appendStatementInput('DO')
           .appendTitle(i18n.blockWhileXAheadDo());
