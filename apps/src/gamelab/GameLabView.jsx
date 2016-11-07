@@ -35,7 +35,6 @@ const GameLabView = React.createClass({
     showVisualizationHeader: React.PropTypes.bool.isRequired,
     isIframeEmbed: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
-    evaluateExpression: React.PropTypes.function,
   },
 
   getChannelId() {
