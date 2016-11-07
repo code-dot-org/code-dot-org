@@ -9,7 +9,7 @@
         "apps/src/util/**/*.js",
         "apps/src/redux/**/*.js",
         "apps/src/applab/**/*.js",
-        "apps/src/sites/**/*.*",
+        "apps/src/sites/**/*.*"
       ],
       "skipTeamPrs": false
     }
