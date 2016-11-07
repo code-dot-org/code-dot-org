@@ -1,5 +1,6 @@
 var React = require('react');
 var msg = require('@cdo/locale');
+var connect = require('react-redux').connect;
 
 var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
