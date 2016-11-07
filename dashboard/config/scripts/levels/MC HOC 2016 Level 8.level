@@ -38,7 +38,6 @@
     "instructions": "The path to your sheep is blocked by a stone wall. Luckily there is a Creeper here. Creepers explode after you touch them. Get the Creeper to explode the wall so you can reach your sheep!",
     "level_verification_timeout": "40000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
-    "temporary_feedback_message": "You need to use the exploding Creeper to blow up the wall. If you don't want to risk your own neck, try making the Creeper move toward the sheep.",
     "use_player": "true",
     "failure_message_override": "You need to use the exploding Creeper to blow up the wall so you can reach your sheep.",
     "use_score": "false",
