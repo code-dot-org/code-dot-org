@@ -7,6 +7,7 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
+import { chooseLevelType, chooseLevel, addVariant } from './editorRedux';
 
 const levelKeyOptions = _.map(levelKeyList, (label, value) => ({label, value: +value}));
 
@@ -142,12 +143,12 @@ const LevelTokenDetails = React.createClass({
 
 export default connect(state => ({}), dispatch => ({
   chooseLevelType(stage, level, value) {
-    dispatch({type: 'CHOOSE_LEVEL_TYPE', stage, level, value});
+    dispatch(chooseLevelType(stage, level, value));
   },
   chooseLevel(stage, level, variant, value) {
-    dispatch({type: 'CHOOSE_LEVEL', stage, level, variant, value});
+    dispatch(chooseLevel(stage, level, variant, value));
   },
   addVariant(stage, level) {
-    dispatch({type: 'ADD_VARIANT', stage, level});
+    dispatch(addVariant(stage, level));
   }
 }))(LevelTokenDetails);

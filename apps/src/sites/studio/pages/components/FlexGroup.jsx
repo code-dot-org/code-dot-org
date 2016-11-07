@@ -5,6 +5,7 @@ import color from '../../../../util/color';
 import { borderRadius } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
+import { addStage, addGroup } from './editorRedux';
 
 const styles = {
   groupHeader: {
@@ -105,9 +106,9 @@ export default connect(state => ({
   stages: state
 }), dispatch => ({
   addGroup(stageName, groupName) {
-    dispatch({type: 'ADD_GROUP', stageName, groupName});
+    dispatch(addGroup(stageName, groupName));
   },
   addStage(position, stageName) {
-    dispatch({type: 'ADD_STAGE', position, stageName});
+    dispatch(addStage(position, stageName));
   }
 }))(FlexGroup);

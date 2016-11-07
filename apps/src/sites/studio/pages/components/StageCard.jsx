@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { borderRadius, levelTokenMargin } from './constants';
 import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
+import { reorderLevel, addLevel } from './editorRedux';
 
 const styles = {
   checkbox: {
@@ -158,9 +159,9 @@ const StageCard = React.createClass({
 
 export default connect(state => ({}), dispatch => ({
   reorderLevel(stage, originalPosition, newPosition) {
-    dispatch({type: 'REORDER_LEVEL', stage, originalPosition, newPosition});
+    dispatch(reorderLevel(stage, originalPosition, newPosition));
   },
   addLevel(stage) {
-    dispatch({type: 'ADD_LEVEL', stage});
+    dispatch(addLevel(stage));
   }
 }))(StageCard);
