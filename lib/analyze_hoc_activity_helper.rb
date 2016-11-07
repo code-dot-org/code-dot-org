@@ -48,28 +48,28 @@ def analyze_day_fast(date)
     end
   end
 
-  countries = {}
+  countries = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT country, #{weighted_count} #{from_where} GROUP BY country ORDER BY count DESC"
   ).each do |row|
     row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
-    add_count_to_hash countries, row[:country], row[:count].to_i
+    countries[row[:country]] += row[:count].to_i
   end
 
-  states = {}
+  states = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT state, #{weighted_count} #{from_where} GROUP BY state ORDER BY count DESC"
   ).each do |row|
     row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
-    add_count_to_hash states, row[:state], row[:count].to_i
+    states[row[:state]] += row[:count].to_i
   end
 
-  cities = {}
+  cities = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT city, #{weighted_count} #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
   ).each do |row|
     row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
-    add_count_to_hash cities, row[:city], row[:count].to_i
+    cities[row[:city]] += row[:count].to_i
   end
 
   started = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{from_where}").first[:count].to_i

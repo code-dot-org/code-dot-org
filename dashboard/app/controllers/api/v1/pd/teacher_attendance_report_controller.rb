@@ -1,7 +1,7 @@
-class Api::V1::Pd::TeacherProgressReportController < Api::V1::Pd::ReportControllerBase
+class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportControllerBase
   include Pd::WorkshopFilters
 
-  authorize_resource class: :pd_teacher_progress_report
+  authorize_resource class: :pd_teacher_attendance_report
 
   # GET /api/v1/pd/teacher_progress_report
   # GET /api/v1/pd/teacher_progress_report.csv
