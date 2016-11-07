@@ -7,12 +7,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.in_state(params[:state])
     end
 
-    if params[:facilitator_view]
+    if params[:workshops_ive_facilitated]
       @workshops = @workshops.facilitated_by(current_user)
-    end
-
-    if params[:organizer_view]
-      @workshops = @workshops.organized_by(current_user)
     end
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
