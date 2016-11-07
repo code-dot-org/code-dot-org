@@ -16,13 +16,13 @@ export default class RepeatCommand extends BaseCommand {
     super.begin();
     this.succeeded();
     this.addRepeatCommand();
-    }      
+    }
 
     addRepeatCommand()
     {
         var entity = this.GameController.levelEntity.entityMap.get(this.target);
         // if target is undefined, push this command to the master queue
-        if(entity === undefined)
+        if (entity === undefined)
           this.GameController.queue.addRepeatCommands(this.actionCallback,this.iteration);
         else
           entity.queue.addRepeatCommands(this.actionCallback,this.iteration);

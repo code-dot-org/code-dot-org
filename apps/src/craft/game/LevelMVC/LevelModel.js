@@ -1,6 +1,6 @@
 import LevelBlock from "./LevelBlock.js";
 import FacingDirection from "./FacingDirection.js";
-import Player from "../Entities/Player.js"
+import Player from "../Entities/Player.js";
 
 // for blocks on the action plane, we need an actual "block" object, so we can model
 
@@ -51,7 +51,7 @@ export default class LevelModel {
 
     let levelData = Object.create(this.initialLevelData);
     let [x, y] = [levelData.playerStartPosition[0], levelData.playerStartPosition[1]];
-    if(this.initialLevelData.usePlayer !== undefined)
+    if (this.initialLevelData.usePlayer !== undefined)
       this.usePlayer = this.initialLevelData.usePlayer;
     else
       this.usePlayer = true;
@@ -89,9 +89,9 @@ export default class LevelModel {
   }
 
   isFailed() {
-    if(this.initialLevelData.failureCheckFunction !== undefined)
+    if (this.initialLevelData.failureCheckFunction !== undefined)
       return this.initialLevelData.failureCheckFunction(this);
-    else 
+    else
       return false;
   }
 
@@ -197,7 +197,7 @@ export default class LevelModel {
     }
     return false;
   }
-  
+
   isEntityTypeRunning(entityType) {
     var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
     for (var i = 0; i < entityList.length; i++) {
@@ -225,7 +225,7 @@ export default class LevelModel {
 
   getEntityCount(entityType) {
     var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
-    return entityList.length; 
+    return entityList.length;
   }
 
   getCommandExecutedCount(commandName, targetType) {
@@ -243,10 +243,10 @@ export default class LevelModel {
   getInventoryAmount(inventoryType) {
     if (!this.usePlayer)
       return 0;
-    if(inventoryType === "all" || inventoryType === "All") {
+    if (inventoryType === "all" || inventoryType === "All") {
       var inventory = this.player.inventory;
       var count = 0;
-      for(var key in inventory) {
+      for (var key in inventory) {
         count += inventory[key];
       }
       return count;
@@ -659,7 +659,7 @@ export default class LevelModel {
       result[0] = (this.actionPlane[blockIndex].isWalkable || ((frontEntity !== undefined && frontEntity.isOnBlock)
         // action plane is empty
         && !this.actionPlane[blockIndex].isEmpty))
-        // there is no entity 
+        // there is no entity
         && (frontEntity === undefined)
         // no lava or water
         && (this.groundPlane[blockIndex].blockType !== "water" && this.groundPlane[blockIndex].blockType !== "lava");

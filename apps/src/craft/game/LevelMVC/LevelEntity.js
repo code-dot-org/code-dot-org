@@ -34,7 +34,7 @@ export default class LevelEntity {
     tick() {
         let updateEntity = function (value, key, map) {
             value.tick();
-        }
+        };
         this.entityMap.forEach(updateEntity);
     }
 
@@ -105,7 +105,7 @@ export default class LevelEntity {
     spawnEntity(type, spawnDirection) {
         var getRandomInt = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
+        };
         var levelModel = this.controller.levelModel;
         var width = levelModel.planeWidth;
         var height = levelModel.planeHeight;

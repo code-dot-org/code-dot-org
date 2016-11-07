@@ -1,6 +1,6 @@
-import BaseEntity from "./BaseEntity.js"
+import BaseEntity from "./BaseEntity.js";
 import AssetLoader from "../LevelMVC/AssetLoader.js";
-import LevelView from "../LevelMVC/LevelView.js"
+import LevelView from "../LevelMVC/LevelView.js";
 import FacingDirection from "../LevelMVC/FacingDirection.js";
 export default class Cow extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
@@ -14,18 +14,18 @@ export default class Cow extends BaseEntity {
     prepareSprite() {
         let getRandomSecondBetween = function (min, max) {
             return (Math.random() * (max - min) + min) * 1000;
-        }
+        };
         let frameRate = 12, pauseFrame = 30, randomPauseMin = 0.2, randomPauseMax = 1;
         let actionPlane = this.controller.levelView.actionPlane;
         var frameList = [];
-        var frameName = "Cow"
+        var frameName = "Cow";
         this.sprite = actionPlane.create(0, 0, 'cow', 'Cow0001.png');
         let stillFrameName = ['Cow0222.png', 'Cow0111.png', 'Cow0001.png', 'Cow0333.png'];
         let idleDelayFrame = 20;
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump],[idle2],[eat]]
         var frameListPerDirection = [[[258, 264], [225, 227], [224, 226],[285,287] ,[240, 241], [291, 302], [303, 313], [314, 326], [327, 332], [460, 467], [276, 282], [240, 249]], // down
             [[147, 153], [114, 116], [129, 130], [174, 176], [129, 130], [180, 191], [192, 202], [203, 215], [216, 221], [452, 459], [165, 171], [129, 138]], // right
-            [[36, 42], [3, 5], [12, 14], [63, 65], [18, 19], [69, 80], [81, 91], [92, 104], [105, 110], [444, 451], [51, 54], [18, 27]], // up 
+            [[36, 42], [3, 5], [12, 14], [63, 65], [18, 19], [69, 80], [81, 91], [92, 104], [105, 110], [444, 451], [51, 54], [18, 27]], // up
             [[369, 375], [336, 338], [335, 337], [396, 398], [351, 352], [402, 413], [414, 424], [425, 437], [438, 443], [468, 475], [387, 393], [351, 360]]]; // left
         for (var i = 0; i < 4; i++) {
             var facingName = this.controller.levelView.getDirectionName(i);
@@ -108,7 +108,7 @@ export default class Cow extends BaseEntity {
                 this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // idle2 sequence
-            if( i === 2) {
+            if ( i === 2) {
                 frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][10][0], frameListPerDirection[i][10][1], ".png", 4);
                 this.sprite.animations.add("idle2" + facingName, frameList, frameRate/2, false).onComplete.add(() => {
                     this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle2" + this.controller.levelView.getDirectionName(this.facing) + "_reverse");

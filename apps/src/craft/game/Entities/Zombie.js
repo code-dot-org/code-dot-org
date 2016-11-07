@@ -1,6 +1,6 @@
-import BaseEntity from "./BaseEntity.js"
+import BaseEntity from "./BaseEntity.js";
 import AssetLoader from "../LevelMVC/AssetLoader.js";
-import LevelView from "../LevelMVC/LevelView.js"
+import LevelView from "../LevelMVC/LevelView.js";
 import FacingDirection from "../LevelMVC/FacingDirection.js";
 export default class Zombie extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
@@ -79,12 +79,12 @@ export default class Zombie extends BaseEntity {
     prepareSprite() {
         let getRandomSecondBetween = function (min, max) {
             return (Math.random() * (max - min) + min) * 1000;
-        }
+        };
         let frameRate = 10, pauseFrame = 30, randomPauseMin = 0.2, randomPauseMax = 1;
         let actionPlane = this.controller.levelView.actionPlane;
         let fluffPlane = this.controller.levelView.fluffPlane;
         var frameList = [];
-        var frameName = "Zombie_"
+        var frameName = "Zombie_";
         this.sprite = actionPlane.create(0, 0, 'zombie', 'Zombie_001.png');
         // update sort order and position
         this.sprite.sortOrder = this.controller.levelView.yToIndex(this.position[1]);
@@ -109,7 +109,7 @@ export default class Zombie extends BaseEntity {
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump]]
         var frameListPerDirection = [[[73, 79], [57, 59], [61, 63], [69, 71], [65, 67], [80, 88], [89, 91], [93, 101], [102, 110], [229, 236]], // down
         [[183, 189], [167, 169], [171, 173], [179, 181], [175, 177], [190, 198], [199, 201], [203, 211], [212, 220], [245, 252]], // right
-        [[18, 24], [2, 4], [6, 8], [14, 16], [10, 12], [25, 33], [34, 36], [38, 46], [47, 55], [221, 228]], // up 
+        [[18, 24], [2, 4], [6, 8], [14, 16], [10, 12], [25, 33], [34, 36], [38, 46], [47, 55], [221, 228]], // up
         [[128, 134], [112, 114], [116, 118], [124, 126], [120, 122], [135, 143], [144, 146], [148, 156], [158, 165], [237, 244]]]; // left
         for (var i = 0; i < 4; i++) {
             var facingName = this.controller.levelView.getDirectionName(i);
@@ -165,7 +165,7 @@ export default class Zombie extends BaseEntity {
             this.sprite.animations.add("lookDown" + facingName, frameList, frameRate / 3, false).onComplete.add(() => {
                 this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
-            // walk 
+            // walk
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][5][0], frameListPerDirection[i][5][1], ".png", 3);
             this.sprite.animations.add("walk" + facingName, frameList, frameRate, true);
             // attack
@@ -198,7 +198,7 @@ export default class Zombie extends BaseEntity {
         let levelView = this.controller.levelView;
         let facingName = levelView.getDirectionName(this.facing);
         if (this.healthPoint > 1) {
-            levelView.playScaledSpeed(this.sprite.animations, "hurt" + facingName)
+            levelView.playScaledSpeed(this.sprite.animations, "hurt" + facingName);
             setTimeout(() => {
                 this.healthPoint--;
                 callbackCommand.succeeded();

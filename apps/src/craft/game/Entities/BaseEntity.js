@@ -1,5 +1,5 @@
 import CommandQueue from "../CommandQueue/CommandQueue.js";
-import LevelView from "../LevelMVC/LevelView.js"
+import LevelView from "../LevelMVC/LevelView.js";
 import LevelModel from "../LevelMVC/LevelModel.js";
 import FacingDirection from "../LevelMVC/FacingDirection.js";
 import EventType from "../Event/EventType.js";
@@ -110,7 +110,7 @@ export default class BaseEntity {
                     tween.start();
                 }
             }
-        }
+        };
 
         let prevBlockCheck = function (entity, position) {
             let frontPosition = [position[0], position[1] + 1];
@@ -124,7 +124,7 @@ export default class BaseEntity {
                     tween.start();
                 }
             }
-        }
+        };
 
         frontBlockCheck(this, this.position);
         if (prevPosition !== undefined)
@@ -190,10 +190,10 @@ export default class BaseEntity {
 
     /**
      * check all the movable points and choose the farthest one
-     * 
+     *
      * @param {any} commandQueueItem
      * @param {any} moveAwayFrom (entity)
-     * 
+     *
      * @memberOf BaseEntity
      */
     moveAway(commandQueueItem, moveAwayFrom) {
@@ -202,10 +202,10 @@ export default class BaseEntity {
         var bestPosition = [];
         let absoluteDistanceSquare = function (position1, position2) {
             return Math.pow(position1[0] - position2[0], 2) + Math.pow(position1[1] - position2[1], 2);
-        }
+        };
         let comparePositions = function (moveAwayPosition, position1, position2) {
             return absoluteDistanceSquare(position1[1], moveAwayPosition) < absoluteDistanceSquare(position2[1], moveAwayPosition) ? position2 : position1;
-        }
+        };
         var currentDistance = absoluteDistanceSquare(moveAwayPosition, this.position);
         // this entity is on the right side and can move to right
         if (moveAwayPosition[0] <= this.position[0] && this.controller.levelModel.canMoveDirection(this, FacingDirection.Right)[0]) {
@@ -242,10 +242,10 @@ export default class BaseEntity {
 
     /**
      * check all the movable points and choose the farthest one
-     * 
+     *
      * @param {any} commandQueueItem
      * @param {any} moveTowardTo (entity)
-     * 
+     *
      * @memberOf BaseEntity
      */
     moveToward(commandQueueItem, moveTowardTo) {
@@ -254,10 +254,10 @@ export default class BaseEntity {
         var bestPosition = [];
         let absoluteDistanceSquare = function (position1, position2) {
             return Math.pow(position1[0] - position2[0], 2) + Math.pow(position1[1] - position2[1], 2);
-        }
+        };
         let comparePositions = function (moveTowardPosition, position1, position2) {
             return absoluteDistanceSquare(position1[1], moveTowardPosition) > absoluteDistanceSquare(position2[1], moveTowardPosition) ? position2 : position1;
-        }
+        };
         var currentDistance = absoluteDistanceSquare(moveTowardPosition, this.position);
         // this entity is on the right side and can move to right
         if (moveTowardPosition[0] >= this.position[0] && this.controller.levelModel.canMoveDirection(this, FacingDirection.Right)[0]) {
@@ -314,7 +314,7 @@ export default class BaseEntity {
 
         let absoluteDistanceSquare = function (position1, position2) {
             return Math.sqrt(Math.pow(position1[0] - position2[0], 2) + Math.pow(position1[1] - position2[1], 2));
-        }
+        };
         if (absoluteDistanceSquare(moveTowardTo.position, this.position) === 1) {
             /// north
             if (moveTowardTo.position[1] - this.position[1] == -1)
@@ -359,7 +359,7 @@ export default class BaseEntity {
         this.controller.addCommandRecord("turnRandom", this.type, commandQueueItem.repeat);
         var getRandomInt = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
+        };
         var direction = getRandomInt(0, 1) === 0 ? 1 : -1;
         this.turn(commandQueueItem, direction, false);
     }
@@ -395,7 +395,7 @@ export default class BaseEntity {
             setTimeout(function (controller, entity, thisEntity) {
                 if (entity !== null) {
                     frontEntity.queue.startPushHighPriorityCommands();
-                    controller.events.forEach(e => e({ eventType: EventType.WhenAttacked, targetType: entity.type, eventSenderIdentifier: thisEntity.identifier, targetIdentifier: entity.identifier }))
+                    controller.events.forEach(e => e({ eventType: EventType.WhenAttacked, targetType: entity.type, eventSenderIdentifier: thisEntity.identifier, targetIdentifier: entity.identifier }));
                     frontEntity.queue.endPushHighPriorityCommands();
                 }
                 commandQueueItem.succeeded();
@@ -415,11 +415,11 @@ export default class BaseEntity {
                 x: (this.offset[0] + 40 * this.position[0]), y: (this.offset[1] + 40 * this.position[1])
             }, movementTime, Phaser.Easing.Linear.None);
             tween.onComplete.add(() => {
-                setTimeout(() => { commandQueueItem.succeeded() }, movementTime);
+                setTimeout(() => { commandQueueItem.succeeded(); }, movementTime);
             });
             tween.start();
         } else {
-            commandQueueItem.succeeded()
+            commandQueueItem.succeeded();
         }
     }
 
@@ -427,7 +427,7 @@ export default class BaseEntity {
         let levelView = this.controller.levelView;
         let facingName = levelView.getDirectionName(this.facing);
         if (this.healthPoint > 1) {
-            levelView.playScaledSpeed(this.sprite.animations, "hurt" + facingName)
+            levelView.playScaledSpeed(this.sprite.animations, "hurt" + facingName);
             setTimeout(() => {
                 this.healthPoint--;
                 callbackCommand.succeeded();

@@ -1,4 +1,4 @@
-import BaseEntity from "./BaseEntity.js"
+import BaseEntity from "./BaseEntity.js";
 import CallbackCommand from "../CommandQueue/CallbackCommand.js";
 
 export default class Player extends BaseEntity {
@@ -93,7 +93,7 @@ export default class Player extends BaseEntity {
     let frontEntity = this.controller.levelEntity.getEntityAt(levelModel.getMoveForwardPosition(this));
     if (frontEntity !== null) {
       const isFriendlyEntity = this.controller.levelEntity.isFriendlyEntity(frontEntity.type);
-      // push frienly entity 1 block 
+      // push frienly entity 1 block
       if (isFriendlyEntity) {
         const pushDirection = this.facing;
         var moveAwayCommand = new CallbackCommand(this, () => { }, () => { frontEntity.pushBack(moveAwayCommand, pushDirection, 250); }, frontEntity.identifier);
@@ -116,7 +116,7 @@ export default class Player extends BaseEntity {
     var collectibles = this.controller.levelView.collectibleItems;
     var distanceBetween = function (position, position2) {
       return Math.sqrt(Math.pow(position[0] - position2[0], 2) + Math.pow(position[1] - position2[1], 2));
-    }
+    };
     for (var i = 0; i < collectibles.length; i++) {
       let sprite = collectibles[i][0];
       // already collected item

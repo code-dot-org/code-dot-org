@@ -220,14 +220,14 @@ export function get(controller) {
 
     wait: function (highlightCallback, time, targetEntity) {
       var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
-        controller.wait(callbackCommand, time)
+        controller.wait(callbackCommand, time);
       }, targetEntity);
       controller.addGlobalCommand(callbackCommand);
     },
 
     attack: function (highlightCallback, targetEntity) {
       var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
-        controller.attack(callbackCommand)
+        controller.attack(callbackCommand);
       }, targetEntity);
       controller.addCommand(callbackCommand);
     },
@@ -239,9 +239,9 @@ export function get(controller) {
       }
     },
 
-    addScore: function(highlightCallback, score, targetEntity) {
+    addScore: function (highlightCallback, score, targetEntity) {
       var callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
-        controller.addScore(callbackCommand, score)
+        controller.addScore(callbackCommand, score);
       }, targetEntity);
       controller.addGlobalCommand(callbackCommand);
     },
