@@ -7,7 +7,7 @@ const OrganizerSurveyResults = React.createClass({
   render() {
     return (
       <div>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended&workshops_ive_organized=1">
+        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended&organizer_view=1">
           <SurveyResultsHeader
             organizerView={true}
           />
