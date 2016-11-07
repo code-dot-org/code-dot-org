@@ -19,7 +19,7 @@ class AdminUsersController < ApplicationController
       teacher.update!(email: params[:email])
       flash[:alert] = 'User fixed.'
     else
-      flash[:alert] = 'Teacher not found.'
+      flash[:alert] = 'Malformed teacher not found.'
     end
 
     render :account_repair_form
