@@ -24,9 +24,6 @@ var blocksCommon = require('./blocksCommon');
 
 module.exports = function (app, levels, options) {
 
-  // ugh, a lot of code expects this to be on the window object pretty early on.
-  window.appOptions = options;
-
   // If a levelId is not provided, then options.level is specified in full.
   // Otherwise, options.level overrides resolved level on a per-property basis.
   //
