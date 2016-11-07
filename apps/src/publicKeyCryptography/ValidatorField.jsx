@@ -1,7 +1,7 @@
 /** @file Non-editable integer field that checks its value against an expected
  *        value and communicates a correct match or a failure. */
 import React from 'react';
-import color from '../color';
+import color from "../util/color";
 import IntegerField from './IntegerField';
 
 const UNKNOWN = 0;

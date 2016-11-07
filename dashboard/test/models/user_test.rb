@@ -1399,6 +1399,28 @@ class UserTest < ActiveSupport::TestCase
     refute student.show_race_interstitial?
   end
 
+  test 'show race interstitial if IP address is nil' do
+    student = create :student, created_at: DateTime.now - 8
+    mock_ip = nil
+    assert RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
+  end
+
+  test 'do not show race interstitial to non-US users' do
+    mock_non_us_object = OpenStruct.new(:country_code => 'CA')
+    Geocoder.stubs(:search).returns([mock_non_us_object])
+    student = create :student, created_at: DateTime.now - 8
+    unused_ip = '127.0.0.1'
+    refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  end
+
+  test 'show race interstitial to US users' do
+    mock_us_object = OpenStruct.new(:country_code => 'US')
+    Geocoder.stubs(:search).returns([mock_us_object])
+    student = create :student, created_at: DateTime.now - 8
+    unused_ip = '8.8.8.8'
+    assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  end
+
   test 'show race interstitial for student over 13 with account more than 1 week old' do
     student = create :student, created_at: DateTime.now - 8
     assert student.show_race_interstitial?

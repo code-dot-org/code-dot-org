@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 var integrationContext = require.context("./integration", false, /Tests?\.js$/);
 integrationContext.keys()
   .filter(

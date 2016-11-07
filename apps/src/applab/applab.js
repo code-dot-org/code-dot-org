@@ -20,7 +20,7 @@ import AppStorage from './appStorage';
 import FirebaseStorage from './firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
 import { getDatabase } from './firebaseUtils';
-import experiments from '../experiments';
+import experiments from "../util/experiments";
 import apiTimeoutList from '../timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';

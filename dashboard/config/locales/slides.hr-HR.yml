@@ -2464,7 +2464,7 @@
           je sferni droid. Sve što on radi i svaki njegov pokret je kontroliran softverom.
           \nRačunalna znanost utječe na sve djelatnosti, od marketinga i zdravstva,
           do filma. Stotine programera radilo je zajedno da stvore film \"Sila se
-          budi\".\n"
+          budi\"."
       2:
         image: notes/starwars_intro_2.JPG
         text: Ja sam Rachel Rose. Ja sam starija Inženjerka istraživanja i razvoja
@@ -2556,12 +2556,12 @@
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: |
+        text: |-
           Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje
           i pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor.
       2:
         image: notes/starwars_events_2.JPG
-        text: |
+        text: |-
           Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove
           programiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama.
       3:
@@ -2690,12 +2690,12 @@
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: |
+        text: |-
           Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje
           i pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: |
+        text: |-
           Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove
           programiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama.
       3:
@@ -2773,7 +2773,7 @@
           napisali program. No ispod "haube" vi pišete JavaScript kod.
       4:
         image: notes/mc_intro_4.JPG
-        text: |
+        text: |-
           Koncepte koje ćete danas naučiti su isti koje programeri inače svakodnevno koriste i temelj su računalne znanosti. Ovdje u Mojangu koristimo iste
           koncepte u razvoju Minecrafta.
       5:
@@ -2808,7 +2808,7 @@
         text: Ako želimo pobrisati blok samo ga odvučemo natrag u alatnu traku.
       12:
         image: notes/mc_intro_12.JPG
-        text: |
+        text: |-
           Da poništimo svoje izmjene i vratimo se na početno stanje nivoa, kliknemo Ispočetka gumb gore desno. I još jedna sitnica. Vidite male strelice
           na blokovima za okret? Svaki put kad ih vidite, to znači da možete odabrati neku drugu opciju. Krenimo s programiranjem!
     mc_repeat:
@@ -2838,7 +2838,7 @@
           na sigurnom. Koristit ćemo petlje za ovo.
       6:
         image: notes/mc_repeat_6.JPG
-        text: |
+        text: |-
           Za izgradnju kuće možemo reći Alex da ide naprijed i postavi daske 4 puta ili da ide naprijed i uzme tu naredbu i da ju uz pomoć "Ponovi"
           bloka izvrši više puta. Sad ćemo kliknuti na "Ponovi" blok i reći joj koliko puta da izvrši ove radnje. A sad izgradimo kuću prije nego padne noć. Zabavite se!
     mc_if_statements:

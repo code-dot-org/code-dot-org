@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import color from '../../color';
+import color from "../../util/color";
 import { getOuterHeight, scrollBy } from './utils';
 import { addMouseUpTouchEvent } from '../../dom';
 
@@ -70,15 +70,6 @@ const ScrollButtons = React.createClass({
     return scrollButtonsHeight + (MARGIN * 2);
   },
 
-  componentWillMount() {
-    const unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
-    this.setState({ unbindMouseUp });
-  },
-
-  componentWillUnmount() {
-    this.state.unbindMouseUp();
-  },
-
   scrollStart(dir) {
     // initial scroll in response to button click
     const contentContainer = this.props.getScrollTarget();
@@ -90,31 +81,26 @@ const ScrollButtons = React.createClass({
 
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
-    var timeout = setTimeout(function () {
-      var interval = setInterval(function () {
+    this.scrollTimeout = setTimeout(function () {
+      this.scrollInterval = setInterval(function () {
         let dist = CONTINUOUS_SCROLL_BY;
         if (dir === DIRECTIONS.UP) {
           dist *= -1;
         }
         scrollBy(contentContainer, dist, false);
       }.bind(this), CONTINUOUS_SCROLL_INTERVAL);
-      this.setState({
-        scrollInterval: interval
-      });
     }.bind(this), CONTINUOUS_SCROLL_TIMEOUT);
 
-    this.setState({
-      scrollTimeout: timeout
-    });
+    this.unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
   },
 
   scrollStop() {
-    clearTimeout(this.state.scrollTimeout);
-    clearInterval(this.state.scrollInterval);
-    this.setState({
-      scrollTimeout: null,
-      scrollInterval: null
-    });
+    this.unbindMouseUp();
+    clearTimeout(this.scrollTimeout);
+    clearInterval(this.scrollInterval);
+    this.unbindMouseUp = null;
+    this.scrollTimeout = null;
+    this.scrollInterval = null;
   },
 
   render() {

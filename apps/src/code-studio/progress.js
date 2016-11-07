@@ -6,7 +6,7 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
-import DisabledBubblesModal from './/DisabledBubblesModal';
+import DisabledBubblesModal from './DisabledBubblesModal';
 import { getStore } from './redux';
 import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
 import { getHiddenStages } from './hiddenStageRedux';
@@ -23,7 +23,7 @@ import {
   disableBubbleColors
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
-import experiments from '@cdo/apps/experiments';
+import experiments from '../util/experiments';
 
 var progress = module.exports;
 

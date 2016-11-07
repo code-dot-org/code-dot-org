@@ -136,9 +136,9 @@ function renderIntoLessonTeacherPanel() {
       const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
 
       if (fullyLocked[currentStageId]) {
-        stageLockedText.text(commonMsg.stageLocked());
+        $(stageLockedText).text(commonMsg.stageLocked());
       } else {
-        stageLockedText.text(commonMsg.stageNotFullyLocked());
+        $(stageLockedText).text(commonMsg.stageNotFullyLocked());
       }
     }
   });

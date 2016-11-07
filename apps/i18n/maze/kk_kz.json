@@ -3,8 +3,6 @@
   "atFlower": "гүлде",
   "atHoneycomb": "ара ұясында",
   "avoidCowAndRemove": "сиырдан қашу және 1 алып тастау",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Cіздегі гүлде мүлде шырын қалған жоқ.",
   "get": "алу",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "биіктік",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Егер көрсетілген бағытта жол болса, онда бірінші бөлшек іс-әрекетін жасаңыз. Әйтпесе, екінші бөлшек іс-әрекетін жасаңыз.",
   "insufficientHoney": "Сіз барлық дұрыс бөлшектерді пайдаландыңыз, бірақ сізге керекті мөлшерде бал жинау керек.",
   "insufficientNectar": "Сіз барлық дұрыс бөлшектерді пайдаландыңыз, бірақ сізге керекті мөлшерде шырын жинау керек.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "жасау",
   "moveBackward": "артқа қозғалу",
   "moveEastTooltip": "Мені шығысқа қарай бір орынға жылжыту.",
@@ -111,8 +111,5 @@
   "word": "Сөзді табу",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Иә",
-  "youSpelled": "Сіздің жазғаныңыз",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "youSpelled": "Сіздің жазғаныңыз"
 }

@@ -9,7 +9,7 @@ var Radium = require('radium');
 
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
-var color = require('../color');
+var color = require("../util/color");
 
 var styles = {
   paneSection: {

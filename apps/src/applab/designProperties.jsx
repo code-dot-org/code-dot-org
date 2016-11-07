@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
-import color from '../color';
+import color from "../util/color";
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import DeleteElementButton from './designElements/DeleteElementButton';

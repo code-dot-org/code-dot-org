@@ -43,6 +43,11 @@ module ScriptConstants
   CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'
   CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'
 
+  CSD1_NAME = 'csd1'
+  CSD2_NAME = 'csd2'
+  CSD3_NAME = 'csd3'
+  CSD4_NAME = 'csd4'
+
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
@@ -75,6 +80,12 @@ module ScriptConstants
       COURSE2_NAME,
       COURSE3_NAME,
       COURSE4_NAME
+    ],
+    csd: [
+      CSD1_NAME,
+      CSD2_NAME,
+      CSD3_NAME,
+      CSD4_NAME
     ],
     csp: [
       CSP_UNIT1_NAME,

@@ -216,6 +216,19 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_response :forbidden
   end
 
+  test 'section_code' do
+    sign_in @organizer
+    get_attendance @workshop.id
+    response = JSON.parse(@response.body)
+    assert_nil response['section_code']
+
+    # Start the workshop, creating a section
+    @workshop.start!
+    get_attendance @workshop.id
+    response = JSON.parse(@response.body)
+    assert_equal @workshop.reload.section.code, response['section_code']
+  end
+
   private
 
   def params(attended = true)

@@ -37,8 +37,8 @@
   twentyhours_text: "আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান
     এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।"
   og_title: "প্রতিটি শিশু সুযোগের দাবীদার"
-  og_description: "প্রত্যেক স্কুলে প্রতিটি ছাত্র কম্পিউটার বিজ্ঞানের পড়াশোনা করার
-    সুযোগের দাবীদার।"
+  og_description: Every student in every school deserves the opportunity to study
+    computer science. It's changing everything.
   hoc2014_heading: যুক্ত হন <a href="http://hourofcode.com"> Hour of Code</a><br/>
     ডিসেম্বর 8-14, ২০১৪ <br/>
   hoc2014_students: "ছাত্র"
@@ -255,8 +255,7 @@
   learn_next_level: "পরবর্তী ধাপে যান"
   learn_online: "অনলাইনে অন্যান্য কোর্স করুন"
   learn_classes: "স্থানীয় শ্রেণি খুঁজুন"
-  hoc_is_here: "গত কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহে #HourOfCode 50 মিলিয়ন ছাত্রের
-    কাছে পৌঁছেছে।  https://youtu.be/Ofze6CWUCx8."
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: "#HourOfCode সম্পন্ন করেছি @codeorg"
   just_did_course1: " দেখ আমি কেবল কোর্স ১ শেষ করছে! @codeorg"
   just_did_course2: " দেখ আমি কেবল কোর্স ২ শেষ করছে! @codeorg"
@@ -493,7 +492,7 @@
     ''Gotham 7r'', sans-serif;"> যারা অনুপ্রাণিত করতে পারবে</span> তাদের ছাত্রদের
     কম্পিউটার বিজ্ঞানের প্রসার সম্ভাবনা নিয়ে কথা বলে (যা একটি ভিডিও আলাপের মাধ্যমেও
     করা সম্ভব)।'
-  volunteer_engineer_submission_intro_signup: |2
+  volunteer_engineer_submission_intro_signup: |2-
      প্রয়োজন হয়।
     আপনি কম্পিউটার বিজ্ঞানের ছাত্র বা সফটওয়্যার পেশাদার হলে নিম্নবর্ণিত তথ্য জমা দিন। <span class="form-required-field">*</span> চিহ্নিত স্থানগুলি অবশ্যক।
   volunteer_engineer_submission_intro_links: স্বেচ্ছাসেবক খুজছেন না? এখনে নিজের এক
@@ -655,7 +654,7 @@
   dashboard_course_ecs: "কম্পিউটার বিজ্ঞানের প্রসার করা হচ্ছে"
   dashboard_course_ecs_desc: " অনুসন্ধান করছে। রাষ্ট্রটি : \nমানব কম্পিউটার পরস্পর
     ক্রিয়াশীলতার, সমস্যা সমাধান, ওয়েব ডিজাইন, প্রোগ্রামিং, কম্পিউটিং এবং উপাত্ত
-    বিশ্লেষণ এবং রবোটিক্স এই ৬ ইউনিটের বছর ব্যাপি কোর্সে কম্পিউটার বিজ্ঞান বিচরণ করুন।\n"
+    বিশ্লেষণ এবং রবোটিক্স এই ৬ ইউনিটের বছর ব্যাপি কোর্সে কম্পিউটার বিজ্ঞান বিচরণ করুন।"
   dashboard_course_csp: "এপি ® কম্পিউটার বিজ্ঞানের মূলনীতি"
   dashboard_course_csp_desc: Code.org এমন একটি যথাযথ, আকর্ষক এবং সহজগম্য কোর্স পরিকল্পনা
     করাছে যা কম্পিউটিং এর মৌলিক ধারণাগুলি বিচরণ করে।
@@ -757,6 +756,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: " শিক্ষার্থীদের স্থানান্তর করুন"
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -892,6 +903,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "আরও জানুন"
   dashboard_announce_try_now_button: "এখন চেষ্টা করুন"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -900,6 +912,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "এক ঘন্টা কোড এখানে-ডিসেম্বর 8-14"
   code_sign_up: CS শিক্ষা সপ্তাহ সময় অংশগ্রহণ করা সাইন আপ করুন
   host_an_hour: Host an hour
@@ -1251,10 +1268,10 @@
     কোড আয়জন করতে উদ্বুদ্ধ হন।"
   course2_shortdescription_congrats: "যেসব ছাত্রের পড়ার প্রাথমিক দক্ষতা আছে তাদের
     উদ্দেশ্যে, এই কোর্সটি কোর্স ১-এর ওপর ভিত্তি করে তৈরি করা হয়েছে।"
-  course3_shortdescription_congrats: |
+  course3_shortdescription_congrats: |-
     পরবর্তী ধাপে যেতে প্রস্তুত? ছাত্ররা অনেক জটিল সমস্যার সহজবোধ্য সমাধান বের করার জন্য পূর্ববর্তী কোর্সে দেখানো প্রোগ্রামিং বিষয়গুলো আরো ভাল ভাবে দেখবে। এই কোর্সের শেষের দিকে, ছাত্ররা ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে পারেন যা তারা যে কারো সাথে শেয়ার করতে পারেন।
     ৪-৮ গ্রেডের জন্য প্রস্তাবিত।
-  course4_shortdescription_congrats: |
+  course4_shortdescription_congrats: |-
     আরও এগোতে প্রস্তুত? ছাত্ররা অনেক জটিল সমস্যার সহজবোধ্য সমাধান বের করার জন্য পূর্ববর্তী কোর্সে দেখানো প্রোগ্রামিং বিষয়গুলো আরো ভাল ভাবে দেখবে। এই কোর্সের শেষের দিকে, ছাত্ররা ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে পারেন যা তারা যে কারো সাথে শেয়ার করতে পারেন।
     ৪-৮ গ্রেডের জন্য প্রস্তাবিত।
   codeorg_longdescription: "ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
@@ -1764,3 +1781,12 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

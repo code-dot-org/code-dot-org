@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import experiments from '@cdo/apps/experiments';
 
 $(document).ready(() => {
   var editUser = $('#edit_user');
@@ -60,8 +59,6 @@ $(document).ready(() => {
 });
 
 $(document).ready(() => {
-  if (experiments.isEnabled('raceInterstitial')) {
-    $('#race-modal').modal('show');
-    $('#closed-dialog-label').hide();
-  }
+  $('#race-modal').modal('show');
+  $('#closed-dialog-label').hide();
 });
