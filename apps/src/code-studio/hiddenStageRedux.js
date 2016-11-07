@@ -91,8 +91,6 @@ export function getHiddenStages(scriptName) {
       dataType: 'json',
       contentType: 'application/json'
     }).done(response => {
-      dispatch(allowHideable());
-
       // For a teacher, we get back a map of section id to hidden stage ids
       // For a student, we just get back a list of hidden stage ids. Turn that
       // into an object, under the 'sectionId' of STUDENT_SECTION_ID
@@ -106,6 +104,7 @@ export function getHiddenStages(scriptName) {
           dispatch(updateHiddenStage(sectionId, stageId, true));
         });
       });
+      dispatch(allowHideable());
     }).fail(err => {
       console.error(err);
     });
