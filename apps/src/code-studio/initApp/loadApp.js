@@ -1,4 +1,4 @@
-/* global dashboard appOptions addToHome CDOSounds appOptions trackEvent Applab Blockly */
+/* global dashboard appOptions addToHome CDOSounds trackEvent Applab Blockly */
 import $ from 'jquery';
 import { getStore } from '../redux';
 import { disableBubbleColors } from '../progressRedux';
@@ -406,6 +406,10 @@ export default function loadApp(appMain) {
   // This function takes a callback which is called once dependencies are ready.
   const script = document.querySelector(`script[data-appoptions]`);
   const appOptions = JSON.parse(script.dataset.appoptions);
+
+  // ugh, a lot of code expects this to be on the window object pretty early on.
+  window.appOptions = appOptions;
+
   if (appOptions.embedded) {
     // when we just "embed" an app (i.e. via embed_blocks.html.erb),
     // we just want to call the appMain function immediately without
