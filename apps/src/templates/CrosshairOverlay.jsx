@@ -1,6 +1,6 @@
 /** @file Crosshair and guides over visualization */
 import React from 'react';
-import { isMouseInBounds } from '../applab/gridUtils';
+import { isMouseInBounds } from '../util/grid';
 export const CROSSHAIR_MARGIN = 6;
 
 export const styles = {

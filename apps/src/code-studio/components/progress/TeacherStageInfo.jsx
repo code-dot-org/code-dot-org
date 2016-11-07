@@ -6,7 +6,7 @@ import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLock from './StageLock';
 import HiddenStageToggle from './HiddenStageToggle';
-import color from '../../../color';
+import color from "../../../util/color";
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
 import { toggleHidden, isHiddenFromState } from '../../hiddenStageRedux';

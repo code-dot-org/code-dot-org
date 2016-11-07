@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import * as color from '../../color.js';
+import * as color from "../../util/color";
 import {CIPHER, ALPHABET} from '../../constants';
 
 const style = {

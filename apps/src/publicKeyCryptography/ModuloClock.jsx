@@ -1,7 +1,7 @@
 /** @file Centered animated Modulo Clock component for the Crypto widget levels */
 import _ from 'lodash';
 import React from 'react';
-import color from '../color';
+import color from "../util/color";
 
 // Defines the coordinate scale for SVG elements
 const VIEWBOX_SIDE = 100;
@@ -46,21 +46,21 @@ const ModuloClock = React.createClass({
 
   /**
    * @param {number} dividend - The left-hand-side of the modulus operation
-   * @param {number} speed - A value from 1 to 10 where 10 is the fastest option
+   * @param {number} maximumDuration - The longest the clock animation should
+   *        take, in milliseconds.
    * @param {function} onStep - callback called on each frame of animation,
    *        which lets us sync other work to it.
    * @param {function} onComplete - callback called at end of animation
    */
-  animateTo(dividend, speed, onStep, onComplete) {
-    const MAXIMUM_TIME_PER_SEGMENT = 500 / speed;
-    const MAXIMUM_TOTAL_TIME = 8000 / speed + 2000;
+  animateTo(dividend, maximumDuration, onStep, onComplete) {
+    const maximumTimePerSegment = Math.min(1000, maximumDuration / 10);
 
     this.targetDividend = dividend;
     this.startTime = Date.now();
     this.interval = setInterval(this.tick, 33);
     this.onStep = onStep || function () {};
     this.onComplete = onComplete || function () {};
-    this.duration = Math.min(MAXIMUM_TOTAL_TIME, dividend * MAXIMUM_TIME_PER_SEGMENT);
+    this.duration = Math.min(maximumDuration, dividend * maximumTimePerSegment);
     this.setState({currentDividend: 0});
   },
 
