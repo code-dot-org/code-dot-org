@@ -490,7 +490,7 @@ Eval.execute = function () {
     document.getElementById('svgEval').toDataURL("image/png", {
       callback: function (pngDataUrl) {
         Eval.feedbackImage = pngDataUrl;
-        Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
+        Eval.encodedFeedbackImage = dom.encodeImageDataUrl(Eval.feedbackImage);
 
         studioApp.report(reportData);
       }

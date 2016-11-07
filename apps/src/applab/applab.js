@@ -1422,7 +1422,7 @@ Applab.onPuzzleComplete = function (submit) {
     divApplab.toDataURL("image/png", {
       callback: function (pngDataUrl) {
         Applab.feedbackImage = pngDataUrl;
-        Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
+        Applab.encodedFeedbackImage = dom.encodeImageDataUrl(Applab.feedbackImage);
 
         sendReport();
       }

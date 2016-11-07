@@ -530,7 +530,7 @@ GameLab.prototype.onPuzzleComplete = function () {
     divGameLab.toDataURL("image/png", {
       callback: function (pngDataUrl) {
         this.feedbackImage = pngDataUrl;
-        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
+        this.encodedFeedbackImage = dom.encodeImageDataUrl(this.feedbackImage);
 
         sendReport();
       }.bind(this)
