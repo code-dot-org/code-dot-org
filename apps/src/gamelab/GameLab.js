@@ -212,9 +212,13 @@ GameLab.prototype.init = function (config) {
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
     if (config.level.watchersPrepopulated) {
-      JSON.parse(config.level.watchersPrepopulated).forEach(option => {
-        this.studioApp_.reduxStore.dispatch(addWatcher(option));
-      });
+      try {
+        JSON.parse(config.level.watchersPrepopulated).forEach(option => {
+          this.studioApp_.reduxStore.dispatch(addWatcher(option));
+        });
+      } catch (e) {
+        console.warn('Error pre-populating watchers.');
+      }
     }
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
@@ -278,10 +282,6 @@ GameLab.prototype.init = function (config) {
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
-        evaluateExpression={expression => {
-          return this.JSInterpreter &&
-            this.JSInterpreter.evaluateWatchExpression(expression);
-        }}
       />
     </Provider>
   ), document.getElementById(config.containerId));
