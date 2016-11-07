@@ -52,24 +52,24 @@
     <start_blocks>
       <xml>
         <block type="craft_ironGolemNoDayNight" deletable="false"/>
-        <block type="craft_zombieNoDayNight" deletable="false">
-          <statement name="WHEN_USED">
-            <block type="craft_destroyEntity" deletable="false"/>
-          </statement>
-          <statement name="WHEN_TOUCHED">
-            <block type="craft_attack" deletable="false"/>
-          </statement>
+        <block type="craft_zombieNoDayNight" deletable="false" uservisible="false">
           <statement name="WHEN_SPAWNED">
-            <block type="craft_forever" deletable="false">
+            <block type="craft_forever" deletable="false" uservisible="false">
               <statement name="DO">
-                <block type="craft_moveToward" deletable="false" editable="false">
+                <block type="craft_moveToward" deletable="false" editable="false" uservisible="false">
                   <title name="TYPE">Player</title>
                 </block>
               </statement>
             </block>
           </statement>
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_attack" deletable="false" uservisible="false"/>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_destroyEntity" deletable="false" uservisible="false"/>
+          </statement>
           <statement name="WHEN_ATTACKED">
-            <block type="craft_destroyEntity" deletable="false"/>
+            <block type="craft_destroyEntity" deletable="false" uservisible="false"/>
           </statement>
         </block>
       </xml>
