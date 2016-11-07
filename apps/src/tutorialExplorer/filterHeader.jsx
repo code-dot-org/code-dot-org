@@ -128,9 +128,9 @@ const FilterHeader = React.createClass({
                 style={styles.select}
                 className="noFocusButton"
               >
-                <option disabled value="default">Sort</option>
-                <option value="displayweight">Top rated</option>
-                <option value="popularityrank">Most popular</option>
+                <option disabled value="default">{i18n.filterHeaderDefault()}</option>
+                <option value="displayweight">{i18n.filterHeaderDisplayWeight()}</option>
+                <option value="popularityrank">{i18n.filterHeaderPopularityRank()}</option>
               </select>
             )}
 
