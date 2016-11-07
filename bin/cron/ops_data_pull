@@ -35,9 +35,8 @@ SeamlessDatabasePool.use_persistent_read_connection do
         :District => user.district.try(:name) || 'None',
         :School => user.ops_school || 'None'
       }
-      row[:'Script Percent Complete'] = (
-        100.0 * percent_complete_total(script, user)
-      ).round(2).to_s
+      row[:'Script Percent Complete'] = percent_complete_total(script, user).
+        to_s
       headers ||= row.keys
       row.values
     end

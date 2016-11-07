@@ -9,10 +9,12 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import { mobileCheck } from './util';
+
+import { TutorialsSortBy, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
+
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -23,12 +25,12 @@ const TutorialExplorer = React.createClass({
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
     legacyLink: React.PropTypes.string,
-    roboticsButton: React.PropTypes.bool
+    roboticsButton: React.PropTypes.bool,
+    showSortBy: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
     let filters = {};
-
     for (const filterGroupName in this.props.filterGroups) {
       const filterGroup = this.props.filterGroups[filterGroupName];
       filters[filterGroup.name] = [];
@@ -38,7 +40,9 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(filters);
+    let sortBy = TutorialsSortBy.default;
+
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(filters, sortBy);
 
     return {
       filters: filters,
@@ -48,7 +52,8 @@ const TutorialExplorer = React.createClass({
       windowWidth: $(window).width(),
       windowHeight: $(window).height(),
       mobileLayout: isResponsiveCategoryInactive('md'),
-      showingModalFilters: false
+      showingModalFilters: false,
+      sortBy: sortBy
     };
   },
 
@@ -60,7 +65,7 @@ const TutorialExplorer = React.createClass({
    * @param {string} filterEntry - The name of the filter entry.
    * @param {bool} value - Whether the entry was checked or not.
    */
-  handleUserInput(filterGroup, filterEntry, value) {
+  handleUserInputFilter(filterGroup, filterEntry, value) {
     const state = Immutable.fromJS(this.state);
 
     let newState = {};
@@ -75,7 +80,7 @@ const TutorialExplorer = React.createClass({
 
     newState = newState.toJS();
 
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(newState.filters);
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(newState.filters, this.state.sortBy);
     this.setState({
       ...newState,
       filteredTutorials,
@@ -84,11 +89,27 @@ const TutorialExplorer = React.createClass({
     });
   },
 
-  filterTutorials(filters, hideFilters) {
+  /**
+   * Called when the sort order is changed via dropdown.
+   *
+   * @param {SortBy} value - The new sort order.
+   */
+  handleUserInputSortBy(value) {
+    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(this.state.filters, value);
+    this.setState({
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      filteredTutorialsForLocale,
+      sortBy: value
+    });
+  },
+
+  filterTutorialSet(filters, sortBy) {
     const filterProps = {
       locale: this.props.locale,
       filters: filters,
-      hideFilters: this.props.hideFilters
+      hideFilters: this.props.hideFilters,
+      sortBy: sortBy
     };
     filterProps.specificLocale = false;
     const filteredTutorials = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
@@ -180,7 +201,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters, hideFilters } = filterProps;
+      const { locale, specificLocale, filters, hideFilters, sortBy } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as do-not-show.  If it does,
@@ -238,7 +259,11 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        return tutorial2.displayweight - tutorial1.displayweight;
+        if (sortBy === TutorialsSortBy.popularityrank) {
+          return tutorial1.popularityrank - tutorial2.popularityrank;
+        } else {
+          return tutorial2.displayweight - tutorial1.displayweight;
+        }
       });
 
       return filteredTutorials;
@@ -263,6 +288,8 @@ const TutorialExplorer = React.createClass({
     return (
       <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
         <FilterHeader
+          onUserInput={this.handleUserInputSortBy}
+          sortBy={this.state.sortBy}
           backButton={this.props.backButton}
           legacyLink={this.props.legacyLink}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
@@ -270,6 +297,7 @@ const TutorialExplorer = React.createClass({
           showingModalFilters={this.state.showingModalFilters}
           showModalFilters={this.showModalFilters}
           hideModalFilters={this.hideModalFilters}
+          showSortBy={this.props.showSortBy}
         />
         <div style={{clear: "both"}}/>
 
@@ -277,7 +305,7 @@ const TutorialExplorer = React.createClass({
           <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
             <FilterSet
               filterGroups={this.props.filterGroups}
-              onUserInput={this.handleUserInput}
+              onUserInput={this.handleUserInputFilter}
               selection={this.state.filters}
               roboticsButton={this.props.roboticsButton}
             />
@@ -310,7 +338,6 @@ const TutorialExplorer = React.createClass({
     );
   }
 });
-
 
 function getFilters({robotics, mobile}) {
   const filters = [
@@ -410,6 +437,7 @@ window.TutorialExplorerManager = function (options) {
         backButton={options.backButton}
         legacyLink={options.legacyLink}
         roboticsButton={options.roboticsButton}
+        showSortBy={options.showSortBy}
       />,
       element
     );

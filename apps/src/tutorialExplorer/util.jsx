@@ -1,4 +1,9 @@
 import i18n from './locale';
+import * as utils from '../utils';
+
+
+// Sorting for tutorials.
+export const TutorialsSortBy = utils.makeEnum('default', 'popularityrank', 'displayweight');
 
 
 /**
