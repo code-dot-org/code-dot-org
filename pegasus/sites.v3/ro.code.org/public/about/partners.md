@@ -40,40 +40,7 @@ social:
                 </div>
             </div>
             <h1 class="text-align-center">Sponsori</h1>
-            <div class="row">
-                <div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.cisco.com/web/RO" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Cisco.png"></a>
-                    </div>
-                </div>
-                     <div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.gameloft.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ok_black_1_cleanfinalcs5-e1415645270641-228x160.png"></a>
-                    </div>
-                </div>
-                <div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ibm.com/ro/ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ibmlogo.jpg"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.intel.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/intSFT_rgb-175x160.png"></a>
-                    </div>
-                </div>
-                <div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://sianimage.com/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/sianimage.png"></a>
-                    </div>
-                </div>
-                <div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.siveco.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-siveco.png"></a>
-                    </div>
-                </div>
-                <div class="col-sm-3 col span_3">
+                            <div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                         <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://strategad.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/strategad-163x160.png"></a>
                     </div>
@@ -88,11 +55,6 @@ social:
                 <div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                         <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.cargus.ro/ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/urgentcargus.png"></a>
-                    </div>
-                </div>
-                <div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.zitec.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ziteclogo.png"></a>
                     </div>
                 </div>
             </div>

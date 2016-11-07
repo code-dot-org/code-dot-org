@@ -153,6 +153,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
+  // Don't show the continue button on share pages.
+  if (this.studioApp_.share) {
+    continueButton.style.display = 'none';
+  }
+
   const hasNeitherBackButton = !againButton && !previousLevelButton;
   const onlyContinue = continueButton && hasNeitherBackButton;
   const defaultContinue = onlyContinue || options.defaultToContinue;
