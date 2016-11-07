@@ -154,7 +154,7 @@ class ActivitiesController < ApplicationController
     # to the gallery (for which the activity.id and user_level.id is required).
     # This is true for levels auto-saved to the gallery, free play levels, and
     # "impressive" levels.
-    synchronous_save = solved && @level_source_image &&
+    synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
     if synchronous_save
@@ -164,7 +164,7 @@ class ActivitiesController < ApplicationController
     end
     if @script_level
       if synchronous_save
-        @new_level_completed = current_user.track_level_progress_sync(
+        @new_level_completed = User.track_level_progress_sync(
           user_id: current_user.id,
           level_id: @level.id,
           script_id: @script_level.script_id,
@@ -198,7 +198,7 @@ class ActivitiesController < ApplicationController
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
         activity: @activity,
-        user_level_id: user_level_id,
+        user_level_id: @new_level_completed.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
       )
