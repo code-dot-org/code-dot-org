@@ -641,7 +641,7 @@ class Script < ActiveRecord::Base
   def summarize
     summarized_stages = stages.map(&:summarize)
 
-    if peer_reviews_to_complete
+    if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
