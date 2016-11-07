@@ -4,6 +4,7 @@ import {Motion, spring} from 'react-motion';
 import color from '../../../../util/color';
 import { borderRadius, levelTokenMargin } from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
+import { toggleExpand, removeLevel } from './editorRedux';
 
 const styles = {
   levelToken: {
@@ -123,9 +124,9 @@ const LevelToken = React.createClass({
 
 export default connect(state => ({}), dispatch => ({
   toggleExpand(stage, level) {
-    dispatch({type: 'TOGGLE_EXPAND', stage, level});
+    dispatch(toggleExpand(stage, level));
   },
   removeLevel(stage, level) {
-    dispatch({type: 'REMOVE_LEVEL', stage, level});
+    dispatch(removeLevel(stage, level));
   }
 }))(LevelToken);
