@@ -66,11 +66,11 @@ export default class Zombie extends BaseEntity {
 
     setBurn(burn) {
         if (burn) {
-            for (var i = 0; i < 2; i++) {
+            for (let i = 0; i < 2; i++) {
                 this.burningSprite[i].alpha = 1;
             }
         } else {
-            for (var i = 0; i < 2; i++) {
+            for (let i = 0; i < 2; i++) {
                 this.burningSprite[i].alpha = 0;
             }
         }
@@ -116,8 +116,9 @@ export default class Zombie extends BaseEntity {
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 3);
-            for (var j = 0; j < idleDelayFrame; j++)
+            for (var j = 0; j < idleDelayFrame; j++) {
                 frameList.push(stillFrameName[i]);
+            }
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });

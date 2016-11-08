@@ -51,10 +51,11 @@ export default class LevelModel {
 
     let levelData = Object.create(this.initialLevelData);
     let [x, y] = [levelData.playerStartPosition[0], levelData.playerStartPosition[1]];
-    if (this.initialLevelData.usePlayer !== undefined)
+    if (this.initialLevelData.usePlayer !== undefined) {
       this.usePlayer = this.initialLevelData.usePlayer;
-    else
+    } else {
       this.usePlayer = true;
+    }
     if (this.usePlayer) {
       this.player = new Player(this.controller, "Player", x, y, this.initialLevelData.playerName || "Steve", !this.actionPlane[this.yToIndex(y) + x].getIsEmptyOrEntity(), levelData.playerStartDirection);
       this.controller.levelEntity.pushEntity(this.player);
@@ -89,10 +90,11 @@ export default class LevelModel {
   }
 
   isFailed() {
-    if (this.initialLevelData.failureCheckFunction !== undefined)
+    if (this.initialLevelData.failureCheckFunction !== undefined) {
       return this.initialLevelData.failureCheckFunction(this);
-    else
+    } else {
       return false;
+    }
   }
 
   getHouseBottomRight() {
@@ -101,8 +103,9 @@ export default class LevelModel {
 
   // Verifications
   isPlayerNextTo(blockType) {
-    if (!this.usePlayer)
+    if (!this.usePlayer) {
       return false;
+    }
     var position, blockIndex;
     var result = false;
 
@@ -116,21 +119,21 @@ export default class LevelModel {
     // below
     position = [this.player.position[0], this.player.position[1] + 1];
     blockIndex = this.yToIndex(position[1]) + position[0];
-     if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
+    if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
       return true;
     }
 
     // left
     position = [this.player.position[0] + 1, this.player.position[1]];
     blockIndex = this.yToIndex(position[1]) + position[0];
-     if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
+    if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
       return true;
     }
 
     // Right
     position = [this.player.position[0] - 1, this.player.position[1]];
     blockIndex = this.yToIndex(position[1]) + position[0];
-     if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
+    if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
       return true;
     }
 
@@ -147,28 +150,28 @@ export default class LevelModel {
       // above
       position = [entity.position[0], entity.position[1] - 1];
       blockIndex = this.yToIndex(position[1]) + position[0];
-       if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
+      if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
         return true;
       }
 
       // below
       position = [entity.position[0], entity.position[1] + 1];
       blockIndex = this.yToIndex(position[1]) + position[0];
-       if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
+      if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
         return true;
       }
 
       // left
       position = [entity.position[0] + 1, entity.position[1]];
       blockIndex = this.yToIndex(position[1]) + position[0];
-       if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
+      if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
         return true;
       }
 
       // Right
       position = [entity.position[0] - 1, entity.position[1]];
       blockIndex = this.yToIndex(position[1]) + position[0];
-       if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
+      if (this.inBounds(position[0], position[1]) && (this.isBlockOfType(position, blockType) || this.isEntityOfType(position, blockType) || this.groundPlane[blockIndex].blockType === blockType)) {
         return true;
       }
     }
@@ -192,8 +195,9 @@ export default class LevelModel {
     var entityList = this.controller.levelEntity.getEntitiesOfType(entityType);
     for (var i = 0; i < entityList.length; i++) {
       var entity = entityList[i];
-      if (entity.position[0] == position[0] && entity.position[1] == position[1])
+      if (entity.position[0] === position[0] && entity.position[1] === position[1]) {
         return true;
+      }
     }
     return false;
   }
@@ -204,8 +208,9 @@ export default class LevelModel {
       var entity = entityList[i];
       const notStarted = !entity.queue.isStarted();
       const notFinished = !entity.queue.isFinished();
-      if ((notStarted && entity.queue.commandList_.length > 0) || notFinished)
+      if ((notStarted && entity.queue.commandList_.length > 0) || notFinished) {
         return true;
+      }
     }
     return false;
   }
@@ -213,8 +218,9 @@ export default class LevelModel {
   isEntityDied(entityType, count = 1) {
     var deathCount = this.controller.levelEntity.entityDeathCount;
     if (deathCount.has(entityType)) {
-      if (deathCount.get(entityType) >= count)
+      if (deathCount.get(entityType) >= count) {
         return true;
+      }
     }
     return false;
   }
@@ -241,8 +247,9 @@ export default class LevelModel {
   }
 
   getInventoryAmount(inventoryType) {
-    if (!this.usePlayer)
+    if (!this.usePlayer) {
       return 0;
+    }
     if (inventoryType === "all" || inventoryType === "All") {
       var inventory = this.player.inventory;
       var count = 0;
@@ -255,8 +262,9 @@ export default class LevelModel {
   }
 
   getInventoryTypes() {
-    if (!this.usePlayer)
+    if (!this.usePlayer) {
       return [];
+    }
     return Object.keys(this.player.inventory);
   }
 
@@ -273,8 +281,9 @@ export default class LevelModel {
   }
 
   isPlayerAt(position) {
-    if (!this.usePlayer)
+    if (!this.usePlayer) {
       return false;
+    }
     return this.player.position[0] === position[0] &&
       this.player.position[1] === position[1];
   }
@@ -535,8 +544,9 @@ export default class LevelModel {
 
   getEntityAt(position) {
     for (var entity of this.controller.levelEntity.entityMap) {
-      if (entity[1].position[0] == position[0] && entity[1].position[1] == position[1])
+      if (entity[1].position[0] === position[0] && entity[1].position[1] === position[1]) {
         return entity[1];
+      }
     }
     return undefined;
   }
@@ -631,7 +641,6 @@ export default class LevelModel {
   }
 
   canMoveForward(entity = this.player) {
-
     let blockForwardPosition = this.getMoveForwardPosition(entity);
     return this.isPositionEmpty(blockForwardPosition);
   }
@@ -645,12 +654,14 @@ export default class LevelModel {
       if (!this.actionPlane[blockIndex].isWalkable) {
         result.push("notWalkable");
       }
-      if (!this.actionPlane[blockIndex].isEmpty)
+      if (!this.actionPlane[blockIndex].isEmpty) {
         result.push("notEmpty");
-      if (this.groundPlane[blockIndex].blockType === "water")
+      }
+      if (this.groundPlane[blockIndex].blockType === "water") {
         result.push("water");
-      else if (this.groundPlane[blockIndex].blockType === "lava")
+      } else if (this.groundPlane[blockIndex].blockType === "lava") {
         result.push("lava");
+      }
       var frontEntity = this.getEntityAt(position);
       if (frontEntity !== undefined) {
         result.push("frontEntity");
@@ -663,9 +674,9 @@ export default class LevelModel {
         && (frontEntity === undefined)
         // no lava or water
         && (this.groundPlane[blockIndex].blockType !== "water" && this.groundPlane[blockIndex].blockType !== "lava");
-    }
-    else
+    } else {
       result.push("outBound");
+    }
 
     return result;
   }

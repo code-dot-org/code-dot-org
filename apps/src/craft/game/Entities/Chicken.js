@@ -33,8 +33,9 @@ export default class Chicken extends BaseEntity {
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 4);
-            for (var j = 0; j < idleDelayFrame; j++)
+            for (var j = 0; j < idleDelayFrame; j++) {
                 frameList.push(stillFrameName[i]);
+            }
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });

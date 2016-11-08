@@ -15,9 +15,12 @@ export default class Sheep extends BaseEntity {
     }
 
     use(commandQueueItem, userEntity) {
-        this.controller.levelView.setSelectionIndicatorPosition(this.position[0], this.position[1]);
+        var animationName = this.getNakedSuffix() + "lookAtCam" + this.controller.levelView.getDirectionName(this.facing);
+        this.controller.levelView.playScaledSpeed(this.sprite.animations, animationName);
+        this.queue.startPushHighPriorityCommands();
+        this.controller.events.forEach(e => e({ eventType: EventType.WhenUsed, targetType: this.type, eventSenderIdentifier: userEntity.identifier, targetIdentifier: this.identifier }));
+        this.queue.endPushHighPriorityCommands();
         commandQueueItem.succeeded();
-        super.use(commandQueueItem, userEntity);
     }
 
     playMoveForwardAnimation(position, facing, commandQueueItem, groundType, completionHandler) {
@@ -29,16 +32,11 @@ export default class Sheep extends BaseEntity {
         // stepping sound
         levelView.playBlockSound(groundType);
         // play walk animation
-        var animName = "";
-        if (this.naked)
-            animName += "naked_";
-        animName += "walk" + this.controller.levelView.getDirectionName(this.facing);
-        var idleName = "";
-        if (this.naked)
-            idleName += "naked_";
-        idleName += "idle" + this.controller.levelView.getDirectionName(this.facing);
+        var animName = this.getNakedSuffix() + "walk" + this.controller.levelView.getDirectionName(this.facing);
+        var idleName = this.getNakedSuffix() + "idle" + this.controller.levelView.getDirectionName(this.facing);
         levelView.playScaledSpeed(this.sprite.animations, animName);
         setTimeout(() => {
+            // smooth movement using tween
             tween = this.controller.levelView.addResettableTween(this.sprite).to({
                 x: (this.offset[0] + 40 * position[0]), y: (this.offset[1] + 40 * position[1])
             }, 300, Phaser.Easing.Linear.None);
@@ -49,15 +47,10 @@ export default class Sheep extends BaseEntity {
 
             tween.start();
         }, 50);
-        // smooth movement using tween
-
     }
 
     bump(commandQueueItem) {
-        var animName = "";
-        if (this.naked)
-            animName += "naked_";
-        animName += "bump";
+        var animName = this.getNakedSuffix() + "bump";
         var facingName = this.controller.levelView.getDirectionName(this.facing);
         this.controller.levelView.playScaledSpeed(this.sprite.animations, animName + facingName);
         let forwardPosition = this.controller.levelModel.getMoveForwardPosition(this);
@@ -89,14 +82,14 @@ export default class Sheep extends BaseEntity {
         [[144, 153], [112, 114], [120, 123], [168, 171], [162, 167], [174, 185], [186, 197], [198, 209], [210, 215], [126, 135], [872, 879]], // right
         [[36, 45], [3, 6], [12, 15], [60, 63], [54, 59], [66, 77], [78, 89], [90, 101], [102, 108], [18, 26], [864, 871]], // down
         [[360, 369], [328, 330], [336, 339], [384, 387], [378, 383], [390, 401], [402, 413], [414, 425], [426, 431], [342, 351], [888, 895]]]; // left
-        for (var i = 0; i < 4; i++) {
-            var facingName = this.controller.levelView.getDirectionName(i);
-
+        for (let i = 0; i < 4; i++) {
+            let facingName = this.controller.levelView.getDirectionName(i);
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 3);
             // idle delay
-            for (var j = 0; j < idleDelayFrame; j++)
+            for (let j = 0; j < idleDelayFrame; j++) {
                 frameList.push(stillFrameName[i]);
+            }
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });
@@ -106,10 +99,11 @@ export default class Sheep extends BaseEntity {
                 this.sprite.animations.stop();
                 setTimeout(() => {
 
-                    if (this.naked)
+                    if (this.naked) {
                         this.controller.levelView.playScaledSpeed(this.sprite.animations, "naked_lookLeft" + this.controller.levelView.getDirectionName(this.facing) + "_2");
-                    else
+                    } else {
                         this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookLeft" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    }
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
 
             });
@@ -122,10 +116,11 @@ export default class Sheep extends BaseEntity {
             this.sprite.animations.add("lookRight" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.sprite.animations.stop();
                 setTimeout(() => {
-                    if (this.naked)
+                    if (this.naked) {
                         this.controller.levelView.playScaledSpeed(this.sprite.animations, "naked_lookRight" + this.controller.levelView.getDirectionName(this.facing) + "_2");
-                    else
+                    } else {
                         this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookRight" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    }
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
 
             });
@@ -138,10 +133,11 @@ export default class Sheep extends BaseEntity {
             this.sprite.animations.add("lookAtCam" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.sprite.animations.stop();
                 setTimeout(() => {
-                    if (this.naked)
+                    if (this.naked) {
                         this.controller.levelView.playScaledSpeed(this.sprite.animations, "naked_lookAtCam" + this.controller.levelView.getDirectionName(this.facing) + "_2");
-                    else
+                    } else {
                         this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookAtCam" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    }
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
 
             });
@@ -190,14 +186,15 @@ export default class Sheep extends BaseEntity {
         [[468, 477], [436, 438], [444, 447], [492, 495], [486, 491], [498, 509], [510, 521], [522, 533], [534, 539], [450, 459], [896, 903]], // down
         [[792, 801], [760, 762], [768, 771], [816, 819], [810, 815], [822, 833], [834, 845], [846, 857], [858, 863], [774, 783], [920, 927]]]; // left
         stillFrameName = ['ShadowSheep_2016649.png', 'ShadowSheep_2016541.png', 'ShadowSheep_2016433.png', 'ShadowSheep_2016757.png'];
-        for (var i = 0; i < 4; i++) {
-            var facingName = this.controller.levelView.getDirectionName(i);
+        for (let i = 0; i < 4; i++) {
+            let facingName = this.controller.levelView.getDirectionName(i);
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 3);
             // idle delay
-            for (var j = 0; j < idleDelayFrame; j++)
+            for (let j = 0; j < idleDelayFrame; j++) {
                 frameList.push(stillFrameName[i]);
+            }
             this.sprite.animations.add("naked_idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });
@@ -283,12 +280,9 @@ export default class Sheep extends BaseEntity {
     playRandomIdle(facing) {
         var facingName,
             rand,
-            animationName = "";
+            animationName = this.getNakedSuffix();
         facingName = this.controller.levelView.getDirectionName(facing);
         rand = Math.trunc(Math.random() * 6) + 1;
-
-        if (this.naked)
-            animationName = "naked_";
         switch (rand) {
             case 1:
                 animationName += "idle";
@@ -307,6 +301,7 @@ export default class Sheep extends BaseEntity {
                 break;
             case 6:
                 animationName += "eat";
+                break;
             default:
         }
 
@@ -316,14 +311,11 @@ export default class Sheep extends BaseEntity {
     }
 
     attack(commandQueueItem) {
-        let nakedSuffix = "";
-        if (this.naked)
-            nakedSuffix = "naked_";
         let facingName = this.controller.levelView.getDirectionName(this.facing);
-        this.controller.levelView.onAnimationEnd(this.controller.levelView.playScaledSpeed(this.sprite.animations, nakedSuffix + "attack" + facingName), () => {
+        this.controller.levelView.onAnimationEnd(this.controller.levelView.playScaledSpeed(this.sprite.animations, this.getNakedSuffix() + "attack" + facingName), () => {
             let frontEntity = this.controller.levelEntity.getEntityAt(this.controller.levelModel.getMoveForwardPosition(this));
             if (frontEntity !== null) {
-                this.controller.levelView.onAnimationEnd(this.controller.levelView.playScaledSpeed(frontEntity.sprite.animations, nakedSuffix + "hurt" + facingName), () => {
+                this.controller.levelView.onAnimationEnd(this.controller.levelView.playScaledSpeed(frontEntity.sprite.animations, this.getNakedSuffix() + "hurt" + facingName), () => {
                     this.controller.events.forEach(e => e({ eventType: EventType.WhenAttacked, targetType: this.type, eventSenderIdentifier: this.identifier, targetIdentifier: frontEntity.identifier }));
                 });
             }
@@ -333,11 +325,8 @@ export default class Sheep extends BaseEntity {
 
 
     updateAnimationDirection() {
-        let suffix = "";
         let facingName = this.controller.levelView.getDirectionName(this.facing);
-        if (this.naked)
-            suffix = "naked_";
-        this.controller.levelView.playScaledSpeed(this.sprite.animations, suffix + "idle" + facingName);
+        this.controller.levelView.playScaledSpeed(this.sprite.animations, this.getNakedSuffix() + "idle" + facingName);
     }
 
     drop(commandQueueItem, itemType) {
@@ -353,18 +342,17 @@ export default class Sheep extends BaseEntity {
     }
 
     takeDamage(callbackCommand) {
-        let naked = this.naked ? "naked_" : "";
         let levelView = this.controller.levelView;
         let facingName = levelView.getDirectionName(this.facing);
         if (this.healthPoint > 1) {
-            levelView.playScaledSpeed(this.sprite.animations, naked + "hurt" + facingName);
+            levelView.playScaledSpeed(this.sprite.animations, this.getNakedSuffix() + "hurt" + facingName);
             setTimeout(() => {
                 this.healthPoint--;
                 callbackCommand.succeeded();
             }, 1500);
         } else {
             this.healthPoint--;
-            this.controller.levelView.playScaledSpeed(this.sprite.animations, naked + "die" + facingName);
+            this.controller.levelView.playScaledSpeed(this.sprite.animations, this.getNakedSuffix() + "die" + facingName);
             setTimeout(() => {
 
                 var tween = this.controller.levelView.addResettableTween(this.sprite).to({
@@ -378,5 +366,9 @@ export default class Sheep extends BaseEntity {
                 tween.start();
             }, 1500);
         }
+    }
+
+    getNakedSuffix() {
+        return this.naked ? "naked_" : "";
     }
 }

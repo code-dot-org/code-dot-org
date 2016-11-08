@@ -17,10 +17,11 @@ export default class CommandQueue {
     if (this.whileCommandQueue) {
       this.whileCommandQueue.addCommand(command);
     } else {
-      if (this.setUnshiftState)
+      if (this.setUnshiftState) {
         this.highPriorityCommands.push(command);
-      else
+      } else {
         this.commandList_.push(command);
+      }
     }
   }
 
@@ -51,8 +52,9 @@ export default class CommandQueue {
 
   endPushHighPriorityCommands() {
     // unshift highPriorityCommands to the command list
-    for (var i = this.highPriorityCommands.length - 1; i >= 0; i--)
+    for (var i = this.highPriorityCommands.length - 1; i >= 0; i--) {
       this.commandList_.unshift(this.highPriorityCommands[i]);
+    }
     this.setUnshiftState = false;
   }
 
@@ -63,19 +65,20 @@ export default class CommandQueue {
         // if command list is empty
         if (this.commandList_.length === 0) {
           // mark this queue as a success if there is no repeat command
-          if (this.repeatCommands.length === 0)
+          if (this.repeatCommands.length === 0) {
             this.state = CommandState.SUCCESS;
+          }
           // if there are repeat command for this queue, add them
           this.gameController.startPushRepeatCommand();
           for (var i = 0; i < this.repeatCommands.length; i++) {
             if (this.repeatCommands[i][1] > 0) {
               this.repeatCommands[i][0]();
               this.repeatCommands[i][1]--;
-            }
-            else if (this.repeatCommands[i][1] === -1)
+            } else if (this.repeatCommands[i][1] === -1) {
               this.repeatCommands[i][0]();
-            else
+            } else {
               this.repeatCommands.splice(i, 1);
+            }
           }
           this.gameController.endPushRepeatCommand();
           return;

@@ -23,16 +23,17 @@ export default class Creeper extends BaseEntity {
         // for normal sheep
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[explode],[take dmg],[die],[bump]]
         var frameListPerDirection = [[[128, 128], [128, 131], [134, 137], [140, 143], [146, 149], [152, 163], [164, 167], [164, 178], [179, 184], [185, 191], [272, 279]], // down
-            [[64, 64], [64, 67], [70, 73], [76, 89], [82, 85], [88, 99], [100, 103], [100, 114], [115, 120], [121, 127], [264, 271]], // right
-            [[0, 0], [0, 3], [6, 10], [12, 16], [18, 21], [24, 35], [36, 39], [36, 50], [51, 56], [57, 63], [256, 263]], // up
-            [[192, 192], [192, 195], [198, 201], [204, 207], [210, 213], [216, 227], [228, 231], [228, 242], [243, 248], [249, 255], [280, 287]]]; // left
+        [[64, 64], [64, 67], [70, 73], [76, 89], [82, 85], [88, 99], [100, 103], [100, 114], [115, 120], [121, 127], [264, 271]], // right
+        [[0, 0], [0, 3], [6, 10], [12, 16], [18, 21], [24, 35], [36, 39], [36, 50], [51, 56], [57, 63], [256, 263]], // up
+        [[192, 192], [192, 195], [198, 201], [204, 207], [210, 213], [216, 227], [228, 231], [228, 242], [243, 248], [249, 255], [280, 287]]]; // left
         for (var i = 0; i < 4; i++) {
             var facingName = this.controller.levelView.getDirectionName(i);
 
             // idle sequence
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 3);
-            for (var j = 0; j < 12; j++)
+            for (var j = 0; j < 12; j++) {
                 frameList.push(frameList[0]);
+            }
             this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.playRandomIdle(this.facing);
             });

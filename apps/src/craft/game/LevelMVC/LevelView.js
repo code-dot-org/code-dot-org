@@ -254,7 +254,7 @@ export default class LevelView {
     let blockIndex = (this.yToIndex(position[1])) + position[0];
     let block = this.actionPlaneBlocks[blockIndex];
     let animationName = open ? "open" : "close";
-    this.onAnimationEnd(block.animations.play(animationName,60), () => {
+    this.onAnimationEnd(block.animations.play(animationName, 60), () => {
       completionHandler();
     });
   }
@@ -1070,8 +1070,7 @@ export default class LevelView {
         sprite.kill();
         this.toDestroy.push(sprite);
         completionHandler();
-      }
-      else {
+      } else {
         this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, completionHandler, blockType);
       }
     });
@@ -1182,8 +1181,9 @@ export default class LevelView {
     this.shadingPlane.removeAll();
 
     this.shadingPlane.add(this.baseShading);
-    if (this.selectionIndicator)
+    if (this.selectionIndicator) {
       this.shadingPlane.add(this.selectionIndicator);
+    }
 
     for (index = 0; index < shadingData.length; ++index) {
       shadowItem = shadingData[index];
@@ -1717,9 +1717,9 @@ export default class LevelView {
     var anim = sprite.animations.add("animate", frameList, 10, false);
     anim.onComplete.add(() => {
       if (this.controller.levelModel.usePlayer) {
-        if (distanceBetween(this.player.position, collectiblePosition) < 2)
+        if (distanceBetween(this.player.position, collectiblePosition) < 2) {
           this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, () => { }, blockType);
-        else {
+        } else {
           this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
         }
       }
@@ -1975,7 +1975,7 @@ export default class LevelView {
 
         frameList = [];
         var animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
-        for (var j = 0; j < 5; ++j) {
+        for (let j = 0; j < 5; ++j) {
           frameList.push("Door0");
         }
         frameList = frameList.concat(animationFrames);
@@ -1984,12 +1984,10 @@ export default class LevelView {
 
         frameList = [];
         animationFrames = Phaser.Animation.generateFrameNames("Door", 3, 0, "", 1);
-        for (var j = 0; j < 5; ++j) {
+        for (let j = 0; j < 5; ++j) {
           frameList.push("Door3");
         }
         frameList = frameList.concat(animationFrames);
-
-
         sprite.animations.add("close", frameList, 5, false);
         break;
 
@@ -2022,8 +2020,9 @@ export default class LevelView {
 
   isUnderTree(treeIndex, position) {
     // invalid index
-    if (treeIndex >= this.trees.length || treeIndex < 0)
+    if (treeIndex >= this.trees.length || treeIndex < 0) {
       return false;
+    }
     var fluffPositions = this.treeFluffTypes[this.trees[treeIndex].type];
     for (var i = 0; i < fluffPositions.length; i++) {
       if (this.trees[treeIndex].position[0] + fluffPositions[i][0] === position[0] && this.trees[treeIndex].position[1] + fluffPositions[i][1] === position[1]) {
