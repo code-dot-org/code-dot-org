@@ -75,11 +75,11 @@ const FlexGroup = React.createClass({
                 />
               </div>
               <div style={styles.groupBody}>
-                {stages.map(stage => {
+                {stages.map((stage, index) => {
                   afterStage++;
                   return (
                     <StageCard
-                      key={stage.id}
+                      key={`stage-${index}`}
                       stagesCount={this.props.stages.length}
                       stage={stage}
                     />

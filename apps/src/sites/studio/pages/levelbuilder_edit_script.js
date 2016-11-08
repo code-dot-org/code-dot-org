@@ -9,10 +9,24 @@ import reducer from '@cdo/apps/lib/script-editor/editorRedux';
 import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
 const scriptData = scriptEditorData.script;
+const stages = scriptData.stages.filter(stage => stage.id).map(stage => ({
+  position: stage.position,
+  flex_category: stage.flex_category,
+  lockable: stage.lockable,
+  name: stage.name,
+  levels: stage.levels.map(level => ({
+    position: level.position,
+    activeId: level.activeId,
+    ids: level.ids.slice(),
+    kind: level.kind,
+    skin: level.skin,
+    videoKey: level.videoKey
+  }))
+}));
 
 const store = createStore(reducer, {
   levelKeyList: scriptEditorData.levelKeyList,
-  stages: scriptData.stages.filter(stage => stage.id)
+  stages
 });
 
 ReactDOM.render(

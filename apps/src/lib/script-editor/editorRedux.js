@@ -167,7 +167,6 @@ export default function reducer(state, action) {
       const level = newState[action.stage - 1].levels[action.level - 1];
       if (level.ids[action.variant] === level.activeId) {
         level.activeId = action.value;
-        level.key = state.levelKeyList[action.value];
       }
       level.ids[action.variant] = action.value;
       break;
