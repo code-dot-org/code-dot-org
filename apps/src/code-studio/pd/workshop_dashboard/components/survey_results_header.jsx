@@ -116,7 +116,7 @@ const SurveyResultsHeader = React.createClass({
       if (!this.props.organizerView || workshopId) {
         $.ajax({
           method: 'GET',
-          url: `${facilitatorViewApiRoot}${workshopId}/workshop_survey_report`,
+          url: `${facilitatorViewApiRoot}${workshopId}/workshop_survey_report${this.props.organizerView ? '?organizer_view=1' : ''}`,
           dataType: 'json'
         }).done(data => {
           this.setState({
@@ -128,7 +128,7 @@ const SurveyResultsHeader = React.createClass({
       } else {
         $.ajax({
           method: 'GET',
-          url: `${organizerViewApiRoot}${course}`
+          url: `${organizerViewApiRoot}${course}${this.props.organizerView ? '?organizer_view=1' : ''}`
         }).done(data => {
           this.setState({
             selectedWorkshopId: '',

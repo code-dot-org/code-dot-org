@@ -192,7 +192,7 @@ theme: pdf
     %h2.no-margin-bottom.together
       Code.org's Impact in
       = state_info[:state_name_s]
-    %p.larger
+    %p
       There are
       = format_integer_with_commas(state_info[:teacher_studio_acct_i])
       teacher accounts and
@@ -200,68 +200,67 @@ theme: pdf
       student accounts in Code Studio in
       = succeed '.' do
         = state_info[:state_name_s]
-    %ul
-      - if state_info[:professional_learning_partners_t] != 'none'
-        %li
-          Code.org's regional partner(s) is/are:
-          = succeed '.' do
-            = state_info[:professional_learning_partners_t]
-      - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
-        %li
-          - if state_info[:num_affiliates_i] == 0
-            There are no Code.org K-12 facilitators in the state to offer professional learning for elementary teachers.
-          - else
-            - if state_info[:num_elementary_trained_i] == 0
-              There are
-              = state_info[:num_affiliates_i]
-              Code.org K-12 facilitators that offer professional learning for elementary teachers in
-              = state_info[:state_name_s]
-            - else
-              = format_integer_with_commas(state_info[:num_affiliates_i])
-              Code.org
-              - if state_info[:num_affiliates_i] == 1
-                K-12 facilitator
-              - else
-                K-12 facilitators
-              in
-              = state_info[:state_name_s]
-              - if state_info[:num_affiliates_i] == 1
-                has provided professional learning for
-              - else
-                have provided professional learning for
-              %b
-                = format_integer_with_commas(state_info[:num_elementary_trained_i])
-                elementary
-                - if state_info[:num_elementary_trained_i] == 1
-                  teacher.
-                - else
-                  teachers.
-      - if state_info[:num_ms_trained_i] + state_info[:num_hs_trained_i] != 0
-        %li
-          Code.org has provided professional learning for 
-          %b
-            = format_integer_with_commas(state_info[:num_ms_trained_i])
-            middle school
-            - if state_info[:num_ms_trained_i] == 1
+    %p
+      - if state_info[:professional_learning_partners_t] == 'none' && (state_info[:num_elementary_trained_i] != 0 || state_info[:num_ecs_csd_i] != 0 || state_info[:num_csp_i] != 0)
+        Code.org
+      - elsif state_info[:professional_learning_partners_t] != 'none'
+        Code.org, its regional partner(s)
+        = succeed "," do
+          = state_info[:professional_learning_partners_t]
+      - if state_info[:num_affiliates_i] != 0
+        and
+        = format_integer_with_commas(state_info[:num_affiliates_i])
+        - if state_info[:num_affiliates_i] == 1
+          facilitator
+        - else
+          facilitators
+        have provided professional learning for 
+        = format_integer_with_commas(state_info[:num_elementary_trained_i])
+        - if state_info[:num_elementary_trained_i] == 1
+          teacher
+        - else
+          teachers
+        in CS Fundamentals (K-5)
+        - if state_info[:num_ecs_csd_i] != 0
+          - if state_info[:num_csp_i] == 0
+            and
+            = format_integer_with_commas(state_info[:num_ecs_csd_i])
+            - if state_info[:num_ecs_csd_i] == 1
               teacher
-            - else
+            -else 
               teachers
+            in Exploring Computer Science 
+          - else 
+            , 
+            = format_integer_with_commas(state_info[:num_ecs_csd_i])
+            - if state_info[:num_ecs_csd_i] == 1
+              teacher
+            -else 
+              teachers
+            in Exploring Computer Science, and
+            = format_integer_with_commas(state_info[:num_csp_i])
+            - if state_info[:num_csp_i] == 1
+              teacher
+            -else 
+              teachers
+            in Computer Science Principles
+        - elsif state_info[:num_csp_i] != 0 
           and
-          %b
-            = format_integer_with_commas(state_info[:num_hs_trained_i])
-            high school
-            - if state_info[:num_hs_trained_i] == 1
-              teacher
-            - else
-              teachers
-          in
+          = format_integer_with_commas(state_info[:num_csp_i])
+          - if state_info[:num_csp_i] == 1
+            teacher
+          - else
+            teachers
+          in Computer Science Principles
+      - if state_info[:professional_learning_partners_t] != 'none' || state_info[:num_affiliates_i] != 0
+        in 
+        = succeed "." do
           = state_info[:state_name_s]
-          to teach computer science.
+    %p
       - if state_info[:other_partners_t] != 'none'
-        %li
-          Code.org has a partnership with 
-          =state_info[:other_partners_t]
-          to help spread K-5 computer science to its schools.         
+        Code.org has a partnership with 
+        = state_info[:other_partners_t]
+        to help spread K-5 computer science to its schools. 
 
   .quote-center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
@@ -440,5 +439,4 @@ theme: pdf
     %div
       %p Launched in 2013, Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
     %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup and Google research study Education Trends in the State of Computer Science in U.S. K-12 Schools for schools that offer computer science and parent demand, and Code.org for its own courses, professional learning programs, and participation data.
-
 

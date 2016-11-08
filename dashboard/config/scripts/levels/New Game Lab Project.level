@@ -24,6 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "show_debug_watch": "true",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "false",
@@ -32,7 +33,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "start_blocks": "function draw() {\r\n  \r\n}\r\n",
-    "show_d_pad": "true"
+    "show_d_pad": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

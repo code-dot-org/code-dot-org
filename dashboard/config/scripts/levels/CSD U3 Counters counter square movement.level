@@ -65,7 +65,14 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "contained_level_names": null
+    "encrypted_examples": "pw3Cks4k0JPjCCkTrB6zd2x4cQr2GlYAAySVlDF+GmwzLNK+vbkkRyaj7sfl\nLrg4\n",
+    "instructions_important": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "contained_level_names": null,
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

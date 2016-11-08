@@ -124,5 +124,10 @@ October 2016:
 - Overview of CS Discoveries - [Video](http://videos.code.org/plp/cs-discoveries-program-overview.mp4)
 - Overview of CS Discoveries - [Slides](https://docs.google.com/presentation/d/1MNqdPQK6hIHxIHav5BHgp8_SVCfWmAZwQXhi1Kl-laI/edit#slide=id.g13d52b2d7c_0_159)
 
+November 2016:
+
+- Facilitator Selection Process [Video](http://videos.code.org/plp/facilitator-application-process.mp4)
+- Facilitator Selection Process [Slides](https://docs.google.com/presentation/d/12ZZ3hyVzjmhv3ymjrOKstbVptteAneMFOJkOog6jMD8/edit#slide=id.g18aec17c00_6_25)
+
 [**Back to the top**](#top)
 <br/>

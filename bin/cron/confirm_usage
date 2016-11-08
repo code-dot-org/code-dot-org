@@ -72,13 +72,15 @@ def main
 
   # Verify emails are being sent. Alert if (a) an email has not been sent for
   # five minutes and (b) no email has been sent for five minutes.
-  last_sent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).invert.order(Sequel.desc(:id)).limit(1).first[:created_at]
-  first_unsent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).order(:id).limit(1).first[:created_at]
-  threshold_sec = 5 * SECONDS_PER_MINUTE
-  if last_sent_sec > threshold_sec && first_unsent_sec > threshold_sec
-    alert "POSTE_DELIVERIES MESSAGES UNSENT: too long "\
-      "(#{first_unsent_sec} seconds [threshold #{threshold_sec}]) since "\
-      "last email delivered"
+  if first_unsent = PEGASUS_DB[:poste_deliveries].where(sent_at: nil).order(:id).limit(1).first
+    last_sent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).invert.order(Sequel.desc(:id)).limit(1).first[:created_at]
+    first_unsent_sec = Time.now - first_unsent[:created_at]
+    threshold_sec = 5 * SECONDS_PER_MINUTE
+    if last_sent_sec > threshold_sec && first_unsent_sec > threshold_sec
+      alert "POSTE_DELIVERIES MESSAGES UNSENT: too long "\
+        "(#{first_unsent_sec} seconds [threshold #{threshold_sec}]) since "\
+        "last email delivered"
+    end
   end
 end
 

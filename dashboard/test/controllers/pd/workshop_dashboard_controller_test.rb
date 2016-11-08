@@ -32,6 +32,17 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
     assert_equal [:workshop_organizer, :facilitator], assigns(:permission)
   end
 
+  test 'plps have plp permissions' do
+    # PLPs are also organizers
+    user = create(:workshop_organizer)
+    create :professional_learning_partner, contact: user
+
+    sign_in user
+    get :index
+    assert_response :success
+    assert_equal [:workshop_organizer, :plp], assigns(:permission)
+  end
+
   test 'normal teachers cannot see the dashboard' do
     sign_in create(:teacher)
     get :index
