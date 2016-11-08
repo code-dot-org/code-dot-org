@@ -29,12 +29,37 @@ def trans_load_i18n
 end
 TRANS_I18N = trans_load_i18n
 
-def hoc_s(id)
+def hoc_s_by_language(id, language)
   id = id.to_s
-
   return TRANS_I18N['en-US'][id] if request.site == 'translate.hourofcode.com'
+  HOC_I18N[language][id] || HOC_I18N['en'][id]
+end
 
-  HOC_I18N[@language][id] || HOC_I18N['en'][id]
+# Called by pages on hourofcode.com, which have two-letter language in @language.
+def hoc_s(id)
+  hoc_s_by_language(id, @language)
+end
+
+# Called by pages on code.org/csedweek.org, which have XX-XX locale in
+# request.locale.
+def hoc_s_by_locale(id)
+  locale = request.locale[0..1]
+
+  case locale
+  when 'en-GB'
+    locale = 'gb'
+  when 'es-MX'
+    locale = 'la'
+  when 'fa-AF'
+    locale = 'af'
+  when 'pt-PT'
+    locale = 'po'
+  when 'zh-CN'
+    locale = 'cn'
+  end
+
+  @language = locale
+  hoc_s(id)
 end
 
 def hoc_canonicalized_i18n_path(uri)
@@ -102,12 +127,26 @@ HOC_LOCALES = load_supported_locales
 
 def language_to_locale(language)
   case language
+  when 'gb'
+    return 'en-GB'
   when 'en'
     return 'en-US'
   when 'es'
     return 'es-ES'
+  when 'la'
+    return 'es-MX'
+  when 'af'
+    return 'fa-AF'
   when 'fa'
     return 'fa-IR'
+  when 'pt'
+    return 'pt-BR'
+  when 'po'
+    return 'pt-PT'
+  when 'cn'
+    return 'zh-CN'
+  when 'zh'
+    return 'zh-TW'
   else
     language = language.to_s.downcase
     return nil unless locale = HOC_LOCALES.find{|i| i == language || i.split('-').first == language}
