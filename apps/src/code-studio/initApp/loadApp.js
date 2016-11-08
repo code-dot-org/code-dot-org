@@ -1,4 +1,4 @@
-/* global dashboard appOptions addToHome CDOSounds trackEvent Applab Blockly */
+/* global dashboard addToHome CDOSounds trackEvent Applab Blockly */
 import $ from 'jquery';
 import { getStore } from '../redux';
 import { disableBubbleColors } from '../progressRedux';
@@ -26,6 +26,35 @@ import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityU
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
+
+function mergeProgressData(scriptName, serverProgress) {
+  const clientProgress = clientState.allLevelsProgress()[scriptName] || {};
+  Object.keys(serverProgress).forEach(levelId => {
+    if (serverProgress[levelId] !== clientProgress[levelId]) {
+      var mergedResult = mergeActivityResult(
+        clientProgress[levelId],
+        serverProgress[levelId]
+      );
+      var status = activityCssClass(mergedResult);
+
+      // Set the progress color
+      var css = {backgroundColor: color[`level_${status}`] || color.level_not_tried};
+      if (status && status !== LevelStatus.not_tried && status !== LevelStatus.attempted) {
+        Object.assign(css, {color: color.white});
+      }
+      $('.level-' + levelId).css(css);
+
+      // Write down new progress in sessionStorage
+      clientState.trackProgress(
+        null,
+        null,
+        serverProgress[levelId],
+        scriptName,
+        levelId
+      );
+    }
+  });
+}
 
 function showDisabledButtonsAlert(isHocScript) {
   const div = $('<div>').css({
@@ -213,130 +242,122 @@ export function setupApp(appOptions) {
   appOptions.noPadding = userAgentParser.isMobile();
 }
 
-function loadAppAsync(appOptions, callback) {
-  setupApp(appOptions);
-  var lastAttemptLoaded = false;
+function loadAppAsync(appOptions) {
+  return new Promise((resolve, reject) => {
+    setupApp(appOptions);
 
-  var loadLastAttemptFromSessionStorage = function () {
-    if (!lastAttemptLoaded) {
-      lastAttemptLoaded = true;
+    let lastAttemptLoaded = false;
 
-      // Load the locally-cached last attempt (if one exists)
-      appOptions.level.lastAttempt = clientState.sourceForLevel(
-        appOptions.scriptName, appOptions.serverLevelId);
-
-      callback();
-    }
-  };
-
-  var isViewingSolution = (clientState.queryParams('solution') === 'true');
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
-
-  if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
-    window.addEventListener("load", function () {
-      addToHome.show(true);
-    }, false);
-  }
-
-
-  if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
-
-    if (appOptions.publicCaching) {
-      // Disable social share by default on publicly-cached pages, because we don't know
-      // if the user is underage until we get data back from /api/user_progress/ and we
-      // should err on the side of not showing social links
-      appOptions.disableSocialShare = true;
-    }
-
-    $.ajax(
-      `/api/user_progress` +
-      `/${appOptions.scriptName}` +
-      `/${appOptions.stagePosition}` +
-      `/${appOptions.levelPosition}` +
-      `/${appOptions.serverLevelId}`
-    ).done(function (data) {
-      appOptions.disableSocialShare = data.disableSocialShare;
-
-      // Merge progress from server (loaded via AJAX)
-      var serverProgress = data.progress || {};
-      var clientProgress = clientState.allLevelsProgress()[appOptions.scriptName] || {};
-      Object.keys(serverProgress).forEach(function (levelId) {
-        if (serverProgress[levelId] !== clientProgress[levelId]) {
-          var mergedResult = mergeActivityResult(clientProgress[levelId], serverProgress[levelId]);
-          var status = activityCssClass(mergedResult);
-
-          // Set the progress color
-          var css = {backgroundColor: color[`level_${status}`] || color.level_not_tried};
-          if (status && status !== LevelStatus.not_tried && status !== LevelStatus.attempted) {
-            Object.assign(css, {color: color.white});
-          }
-          $('.level-' + levelId).css(css);
-
-          // Write down new progress in sessionStorage
-          clientState.trackProgress(null, null, serverProgress[levelId], appOptions.scriptName, levelId);
-        }
-      });
-
+    const loadLastAttemptFromSessionStorage = () => {
       if (!lastAttemptLoaded) {
-        if (data.lastAttempt) {
-          lastAttemptLoaded = true;
+        lastAttemptLoaded = true;
 
-          var timestamp = data.lastAttempt.timestamp;
-          var source = data.lastAttempt.source;
+        // Load the locally-cached last attempt (if one exists)
+        appOptions.level.lastAttempt = clientState.sourceForLevel(
+          appOptions.scriptName,
+          appOptions.serverLevelId
+        );
 
-          var cachedProgram = clientState.sourceForLevel(
-            appOptions.scriptName, appOptions.serverLevelId, timestamp);
-          if (cachedProgram !== undefined) {
-            // Client version is newer
-            appOptions.level.lastAttempt = cachedProgram;
-          } else if (source && source.length) {
-            // Sever version is newer
-            appOptions.level.lastAttempt = source;
+        resolve(appOptions);
+      }
+    };
 
-            // Write down the lastAttempt from server in sessionStorage
-            clientState.writeSourceForLevel(appOptions.scriptName,
-                                            appOptions.serverLevelId, timestamp, source);
+    var isViewingSolution = (clientState.queryParams('solution') === 'true');
+    var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+
+    if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
+      // show a little instruction panel for how to add this app to your home screen
+      // on an iPhone
+      window.addEventListener(
+        "load",
+        () => addToHome.show(true),
+        false
+      );
+    }
+
+    if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
+
+      if (appOptions.publicCaching) {
+        // Disable social share by default on publicly-cached pages, because we don't know
+        // if the user is underage until we get data back from /api/user_progress/ and we
+        // should err on the side of not showing social links
+        appOptions.disableSocialShare = true;
+      }
+
+      $.ajax(
+        `/api/user_progress` +
+        `/${appOptions.scriptName}` +
+        `/${appOptions.stagePosition}` +
+        `/${appOptions.levelPosition}` +
+        `/${appOptions.serverLevelId}`
+      ).done(data => {
+        appOptions.disableSocialShare = data.disableSocialShare;
+
+        // Merge progress from server (loaded via AJAX)
+        const serverProgress = data.progress || {};
+        mergeProgressData(appOptions.scriptName, serverProgress);
+
+        if (!lastAttemptLoaded) {
+          if (data.lastAttempt) {
+            lastAttemptLoaded = true;
+
+            var timestamp = data.lastAttempt.timestamp;
+            var source = data.lastAttempt.source;
+
+            var cachedProgram = clientState.sourceForLevel(
+              appOptions.scriptName, appOptions.serverLevelId, timestamp);
+            if (cachedProgram !== undefined) {
+              // Client version is newer
+              appOptions.level.lastAttempt = cachedProgram;
+            } else if (source && source.length) {
+              // Sever version is newer
+              appOptions.level.lastAttempt = source;
+
+              // Write down the lastAttempt from server in sessionStorage
+              clientState.writeSourceForLevel(appOptions.scriptName,
+                                              appOptions.serverLevelId, timestamp, source);
+            }
+            resolve(appOptions);
+          } else {
+            loadLastAttemptFromSessionStorage();
           }
-          callback();
-        } else {
-          loadLastAttemptFromSessionStorage();
+
+          if (data.pairingDriver) {
+            appOptions.level.pairingDriver = data.pairingDriver;
+          }
         }
 
-        if (data.pairingDriver) {
-          appOptions.level.pairingDriver = data.pairingDriver;
+        if (progress.refreshStageProgress) {
+          progress.refreshStageProgress();
         }
-      }
 
-      if (progress.refreshStageProgress) {
-        progress.refreshStageProgress();
-      }
+        const signedOutUser = Object.keys(data).length === 0;
+        if (!signedOutUser && (data.disablePostMilestone ||
+                               experiments.isEnabled('postMilestoneDisabledUI'))) {
+          getStore().dispatch(disableBubbleColors());
+          showDisabledButtonsAlert(!!data.isHoc);
+        }
+      }).fail(loadLastAttemptFromSessionStorage);
 
-      const signedOutUser = Object.keys(data).length === 0;
-      if (!signedOutUser && (data.disablePostMilestone ||
-          experiments.isEnabled('postMilestoneDisabledUI'))) {
-        getStore().dispatch(disableBubbleColors());
-        showDisabledButtonsAlert(!!data.isHoc);
-      }
-    }).fail(loadLastAttemptFromSessionStorage);
-
-    // Use this instead of a timeout on the AJAX request because we still want
-    // the header progress data even if the last attempt data takes too long.
-    // The progress dots can fade in at any time without impacting the user.
-    setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-  } else if (window.dashboard && dashboard.project) {
-    dashboard.project.load().then(function () {
-      if (dashboard.project.hideBecauseAbusive()) {
-        renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
-        return $.Deferred().reject();
-      }
-      if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
-        return $.Deferred().reject();
-      }
-    }).then(callback);
-  } else {
-    loadLastAttemptFromSessionStorage();
-  }
+      // Use this instead of a timeout on the AJAX request because we still want
+      // the header progress data even if the last attempt data takes too long.
+      // The progress dots can fade in at any time without impacting the user.
+      setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
+    } else if (window.dashboard && dashboard.project) {
+      dashboard.project.load().then(function () {
+        if (dashboard.project.hideBecauseAbusive()) {
+          renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
+          return $.Deferred().reject();
+        }
+        if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
+          renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
+          return $.Deferred().reject();
+        }
+      }).then(() => resolve(appOptions));
+    } else {
+      loadLastAttemptFromSessionStorage();
+    }
+  });
 }
 
 window.dashboard = window.dashboard || {};
@@ -356,18 +377,19 @@ window.apps = {
   // level source, HTML and headers.
   sourceHandler: {
     setInitialLevelHtml: function (levelHtml) {
-      appOptions.level.levelHtml = levelHtml;
+      getAppOptions().level.levelHtml = levelHtml;
     },
     getLevelHtml: function () {
       return window.Applab && Applab.getHtml();
     },
     setInitialLevelSource: function (levelSource) {
-      appOptions.level.lastAttempt = levelSource;
+      getAppOptions().level.lastAttempt = levelSource;
     },
     // returns a Promise to the level source
     getLevelSource: function (currentLevelSource) {
       return new Promise((resolve, reject) => {
         let source;
+        let appOptions = getAppOptions();
         if (window.Blockly) {
           // If we're readOnly, source hasn't changed at all
           source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
@@ -384,17 +406,33 @@ window.apps = {
       });
     },
     setInitialAnimationList: function (animationList) {
-      appOptions.initialAnimationList = animationList;
+      getAppOptions().initialAnimationList = animationList;
     },
     getAnimationList: function (callback) {
-      if (appOptions.getAnimationList) {
-        appOptions.getAnimationList(callback);
+      if (getAppOptions().getAnimationList) {
+        getAppOptions().getAnimationList(callback);
       } else {
         callback({});
       }
     }
   },
 };
+
+let APP_OPTIONS;
+function setAppOptions(appOptions) {
+  APP_OPTIONS = appOptions;
+  // ugh, a lot of code expects this to be on the window object pretty early on.
+  window.appOptions = appOptions;
+}
+
+export function getAppOptions() {
+  if (!APP_OPTIONS) {
+    throw new Error(
+      "App Options have not been loaded yet! Did you forget to call loadAppOptions()?"
+    );
+  }
+  return APP_OPTIONS;
+}
 
 /**
  * Loads the "appOptions" object from the dom and augments it with additional
@@ -408,28 +446,25 @@ window.apps = {
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {
     const script = document.querySelector(`script[data-appoptions]`);
-    let appOptions;
     try {
-      appOptions = JSON.parse(script.dataset.appoptions);
+      setAppOptions(JSON.parse(script.dataset.appoptions));
     } catch (e) {
       console.error("failed to parse appoptions from script tag", e);
       reject(e);
       return;
     }
-
-    // ugh, a lot of code expects this to be on the window object pretty early on.
-    window.appOptions = appOptions;
-
+    const appOptions = getAppOptions();
     if (appOptions.embedded) {
       // when we just "embed" an app (i.e. via embed_blocks.html.erb),
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
       resolve(appOptions);
     } else {
-      loadAppAsync(appOptions, () => {
-        project.init(window.apps.sourceHandler);
-        resolve(appOptions);
-      });
+      loadAppAsync(appOptions)
+        .then((appOptions) => {
+          project.init(window.apps.sourceHandler);
+          resolve(appOptions);
+        });
     }
   });
 }
