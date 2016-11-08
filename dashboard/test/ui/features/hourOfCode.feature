@@ -7,6 +7,7 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   And I drag block "1" to block "5"
   And I press "runButton"
   Then I wait to see ".modal"
@@ -66,6 +67,7 @@ Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, s
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/10?noautoplay=true"
