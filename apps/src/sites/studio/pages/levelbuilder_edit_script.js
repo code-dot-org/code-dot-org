@@ -5,8 +5,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from '@cdo/apps/redux';
-import reducer from './components/editorRedux';
-import ScriptEditor from './components/ScriptEditor';
+import reducer from '@cdo/apps/lib/script-editor/editorRedux';
+import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
 const scriptData = scriptEditorData.script;
 

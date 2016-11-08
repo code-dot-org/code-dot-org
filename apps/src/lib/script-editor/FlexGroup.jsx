@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import color from '../../../../util/color';
+import color from '../../util/color';
 import { borderRadius, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
