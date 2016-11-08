@@ -1,3 +1,11 @@
+import i18n from './locale';
+import * as utils from '../utils';
+
+
+// Sorting for tutorials.
+export const TutorialsSortBy = utils.makeEnum('default', 'popularityrank', 'displayweight');
+
+
 /**
  * For a comma-separated string of tags, generate a comma-separated string of their friendly
  * names.
@@ -15,25 +23,25 @@ export function getTagString(prefix, tagString) {
   }
 
   const tagToString = {
-    length_1hour: "One hour",
-    "length_1hour-follow": "One hour with follow-on",
-    "length_few-hours": "A few hours",
+    length_1hour:                     i18n.filterLength1Hour(),
+    "length_1hour-follow":            i18n.filterLength1HourFollow(),
+    "length_few-hours":               i18n.filterLengthFewHours(),
 
-    subject_science: "Science",
-    subject_math: "Math",
-    subject_history: "Social Studies",
-    subject_la: "Language Arts",
-    subject_art: "Art, Media, Music",
-    "subject_cs-only": "Computer Science only",
+    subject_science:                  i18n.filterTopicsScience(),
+    subject_math:                     i18n.filterTopicsMath(),
+    subject_history:                  i18n.filterTopicsHistory(),
+    subject_la:                       i18n.filterTopicsLa(),
+    subject_art:                      i18n.filterTopicsArt(),
+    "subject_cs-only":                i18n.filterTopicsCsOnly(),
 
-    teacher_experience_beginner: "Beginner",
-    teacher_experience_comfortable: "Comfortable",
+    teacher_experience_beginner:      i18n.filterTeacherExperienceBeginner(),
+    teacher_experience_comfortable:   i18n.filterTeacherExperienceComfortable(),
 
-    student_experience_beginner: "Beginner",
-    student_experience_comfortable: "Comfortable",
+    student_experience_beginner:      i18n.filterStudentExperienceBeginner(),
+    student_experience_comfortable:   i18n.filterStudentExperienceComfortable(),
 
-    "activity_type_online-tutorial": "Self-led tutorial",
-    "activity_type_lesson-plan": "Lesson plan"
+    "activity_type_online-tutorial":  i18n.filterActivityTypeOnlineTutorial(),
+    "activity_type_lesson-plan":      i18n.filterActivityTypeLessonPlan()
   };
 
   return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).filter(str => !!str).join(', ');

@@ -27,6 +27,8 @@
   = f.label :show_d_pad
   = boolean_check_box f, :show_d_pad
 
+= render partial: 'levels/editors/watchers_ui', locals: {f: f}
+
 .field
   = f.label :soft_buttons, 'Controls buttons'
   %p

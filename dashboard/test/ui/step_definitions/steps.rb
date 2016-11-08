@@ -139,6 +139,10 @@ Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
 end
 
+Then /^I wait until element "([^"]*)" is not visible/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return !$(#{selector.dump}).is(':visible')") }
+end
+
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }

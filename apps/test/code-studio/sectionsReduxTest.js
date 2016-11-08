@@ -28,7 +28,22 @@ describe('reducer tests', () => {
         [section1Id]: 'My Section',
         [section2Id]: 'My Other Section'
       });
+    });
 
+    it('defaults selectedSectionId if only one section', () => {
+      const initialState = reducer(undefined, {});
+      assert.equal(initialState.sectionsAreLoaded, false);
+      assert.equal(initialState.selectedSectionId, NO_SECTION);
+
+      const singleSection = {
+        [section1Id]: fakeSectionData[section1Id]
+      };
+      const action = setSections(singleSection);
+
+      const nextState = reducer(initialState, action);
+      assert.equal(nextState.sectionsAreLoaded, true);
+      assert.equal(nextState.selectedSectionId, section1Id);
+      assert.deepEqual(nextState.sectionIds, [section1Id]);
     });
   });
 
