@@ -1,4 +1,3 @@
-require 'digest/md5'
 require 'test_helper'
 
 class MegauserTest < ActiveSupport::TestCase
