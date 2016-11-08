@@ -826,9 +826,9 @@ Craft.executeUserCode = function () {
   // For each top-level event block,
   //code += // Get [userCallback] the user's code and [eventType], [blockType] the type this is scoped for
   // e.g. eventType = whenTouched, blockType = logOak, userCallback = (blockReference) => { moveItForward(blockReference); moveItForward(blockReference); }
-  var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
-      'JavaScript',
-      'craft_onTouched');
+  //var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
+  //    'JavaScript',
+  //    'craft_onTouched');
   //console.log(codeCollideObstacle);
   //var whenCollideObstacleFunc = codegen.functionFromCode(
   //    codeCollideObstacle, {
