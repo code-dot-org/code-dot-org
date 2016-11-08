@@ -57,6 +57,25 @@ function getLatLng(address) {
 function getParams(form_data) {
   var params = [];
 
+  if (window.location.pathname === "/volunteer/remote") {
+    gmap_loc = '37.6,-95.665';
+
+    params.push({
+      name: 'distance',
+      value: 10500
+    });
+
+    params.push({
+      name: 'num_volunteers',
+      value: 1000
+    });
+
+    params.push({
+      name: 'location_flexibility_ss[]',
+      value: 'remote'
+    });
+  }
+
   // Default showing US results
   if (!gmap_loc) {
     gmap_loc = '37.6,-95.665';
@@ -152,7 +171,7 @@ function updateFacets(results) {
 }
 
 function displayNoResults() {
-  $('#controls').html('<p>No results were found.</p>');
+  $('#controls').html('<p>Sorry! No volunteers were found with that search criteria. <a href="/volunteer/remote">Find a volunteer who can video chat</a> with your classroom and inspire your students.</p>');
 
   // If a facet has a value, show the facets.
   var form_data = $('#volunteer-search-form').serializeArray();

@@ -104,8 +104,11 @@ const TeacherAttendanceReport = React.createClass({
 
   getColumns() {
     let columns = [{
-      property: 'teacher_name',
-      header: {label: 'Teacher Name'}
+      property: 'teacher_first_name',
+      header: {label: 'Teacher First Name'}
+    }, {
+      property: 'teacher_last_name',
+      header: {label: 'Teacher Last Name'}
     }, {
       property: 'teacher_id',
       header: {label: 'Teacher Id'}

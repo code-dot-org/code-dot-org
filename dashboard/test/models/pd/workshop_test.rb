@@ -33,7 +33,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'query by enrolled teacher' do
     # Teachers enroll in a workshop as a whole
     teacher = create :teacher
-    create :pd_enrollment, workshop: @workshop, name: teacher.name, email: teacher.email
+    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
 
     # create a workshop with a different teacher enrollment, which should not be returned below
     other_workshop = create(:pd_workshop)

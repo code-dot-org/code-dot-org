@@ -3,8 +3,9 @@ from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "An important message about Computer Science Fundamentals during Dec 5-11"
 ---
 
-Part of Code.org’s mission is to remove the obstacles that keep students all over the world from the opportunity to learn computer science. That’s why we offer tools, curriculum, and resources for teachers at no cost. We’re also thrilled that we’ve been able to introduce millions of students to computer science through the Hour of Code campaign. During Computer Science Education Week (December 5-11) this year, our systems will be overloaded again as organizers across the globe lead their classrooms through activities. 
+<img src="https://s3.amazonaws.com/cdo-email-images/Screen+Shot+2016-11-07+at+12.28.06+PM.png" width="80%"/>
 
+Part of Code.org’s mission is to remove the obstacles that keep students all over the world from the opportunity to learn computer science. That’s why we offer tools, curriculum, and resources for teachers at no cost. We’re also thrilled that we’ve been able to introduce millions of students to computer science through the Hour of Code campaign. During Computer Science Education Week (December 5-11) this year, our systems will be overloaded again as organizers across the globe lead their classrooms through activities. 
 
 It’s an exciting time of year, but our servers can’t handle it! We simply can’t store progress for millions of students simultaneously.
 
@@ -28,7 +29,7 @@ Have your students pair program with another classroom as they do the Hour of Co
 <h3>Do an “unplugged” activity with your classroom</h3>
 Want to keep making progress on the Computer Science Fundamentals curriculum? The courses have [dozens of unplugged activities](https://code.org/curriculum/unplugged) you can do without a computer that allow you to help students transfer their learning to real life activities. 
 
-*Note, the middle school, high school, and teacher professional learning courses and resources on our site will save progress throughout the Hour of Code. These courses are lower volume and don’t overload our systems.*
+*Note: the middle school, high school, and teacher professional learning courses and resources on our site will save progress throughout the Hour of Code. These courses are lower volume and don’t overload our systems.*
 
 Thank you so much for leading the K–12 computer science movement in the US, and please let us know if you have any questions. 
 
