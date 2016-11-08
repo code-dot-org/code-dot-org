@@ -15,7 +15,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "5",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Is there any place where the bee does something that doesn't make sense? What happens when you change those blocks?\",\"hint_id\":\"grade3_Debugging_4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/68f3e2a1c58f3a3f2c50ea6dfe30404f/grade3_Debugging_4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try simplifying the code using nested loops.\",\"hint_id\":\"grade3_Debugging_4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/c00cebd5677ae4820132d63c56910474/grade3_Debugging_4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Is there any place where the bee does something that doesn't make sense? What happens when you change those blocks?\",\"hint_id\":\"grade3_Debugging_4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68f3e2a1c58f3a3f2c50ea6dfe30404f/grade3_Debugging_4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try simplifying the code using nested loops.\",\"hint_id\":\"grade3_Debugging_4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c00cebd5677ae4820132d63c56910474/grade3_Debugging_4.mp3\"}]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
