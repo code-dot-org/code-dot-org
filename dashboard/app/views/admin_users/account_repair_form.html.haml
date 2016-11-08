@@ -1,0 +1,8 @@
+%h1 Account Repair
+
+= form_tag(account_repair_path, method: :post) do
+  What is the email address of the account needing repair?
+  %br
+  = text_field_tag 'email', ''
+  %br
+  = submit_tag 'Fix!'
