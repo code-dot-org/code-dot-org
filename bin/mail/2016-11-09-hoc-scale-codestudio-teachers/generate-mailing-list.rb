@@ -7,7 +7,7 @@ require_relative '../mailing-common/mailing-list-utils'
 # 3. a last progress at date that is not null for any CSF script
 
 CSF_SCRIPT_IDS = [1, 17, 18, 19, 23].freeze
-CSF_SCRIPT_ID_QUERY = "(#{CSF_SCRIPT_IDS.join(',')})"
+CSF_SCRIPT_ID_QUERY = "(#{CSF_SCRIPT_IDS.join(',')})".freeze
 
 queries = []
 
