@@ -2,6 +2,7 @@
  */
 
 import React from 'react';
+import i18n from './locale';
 
 const styles = {
   backButton: {
@@ -15,7 +16,7 @@ const BackButton = (props) => (
     <button style={styles.backButton}>
       <i className="fa fa-arrow-left" aria-hidden={true}/>
       &nbsp;
-      Back to all tutorials
+      {i18n.backButtonBack()}
     </button>
   </a>
 );
