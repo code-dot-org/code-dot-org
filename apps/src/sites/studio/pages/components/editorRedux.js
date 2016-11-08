@@ -1,5 +1,3 @@
-/* global levelKeyList */
-
 import _ from 'lodash';
 
 const ADD_GROUP = 'scriptEditor/ADD_GROUP';
@@ -105,7 +103,7 @@ let newStageId = -1;
 let newLevelId = -1;
 
 export default function reducer(state, action) {
-  let newState = _.cloneDeep(state);
+  let newState = _.cloneDeep(state.stages);
 
   switch (action.type) {
     case REORDER_LEVEL: {
@@ -172,7 +170,7 @@ export default function reducer(state, action) {
       const level = newState[action.stage - 1].levels[action.level - 1];
       if (level.ids[action.variant] === level.activeId) {
         level.activeId = action.value;
-        level.key = levelKeyList[action.value];
+        level.key = state.levelKeyList[action.value];
       }
       level.ids[action.variant] = action.value;
       break;
@@ -215,5 +213,5 @@ export default function reducer(state, action) {
     }
   }
 
-  return newState;
+  return {stages: newState, levelKeyList: state.levelKeyList};
 }
