@@ -12,7 +12,15 @@ const store = createStore(reducer, scriptData.stages.filter(stage => stage.id));
 
 ReactDOM.render(
   <Provider store={store}>
-    <ScriptEditor scriptData={scriptData} i18nData={i18nData} />
+    <ScriptEditor
+      i18nData={i18nData}
+      hidden={scriptData.hidden}
+      loginRequired={scriptData.loginRequired}
+      hideableStages={scriptData.hideable_stages}
+      professionalLearningCourse={scriptData.professionalLearningCourse}
+      peerReviewsRequired={scriptData.peerReviewsRequired}
+      wrapupVideo={scriptData.wrapupVideo}
+    />
   </Provider>,
   document.querySelector('.edit_container')
 );

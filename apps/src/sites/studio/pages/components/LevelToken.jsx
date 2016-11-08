@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Motion, spring} from 'react-motion';
+import { Motion, spring } from 'react-motion';
 import color from '../../../../util/color';
 import { borderRadius, levelTokenMargin } from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
@@ -56,6 +56,9 @@ const styles = {
   }
 };
 
+/**
+ * Component for editing puzzle dots with one or more level variants.
+ */
 const LevelToken = React.createClass({
   propTypes: {
     toggleExpand: React.PropTypes.func.isRequired,
@@ -68,6 +71,10 @@ const LevelToken = React.createClass({
     handleDragStart: React.PropTypes.func.isRequired
   },
 
+  handleDragStart() {
+    this.props.handleDragStart(this.props.level.position);
+  },
+
   toggleExpand() {
     this.props.toggleExpand(this.props.stagePosition, this.props.level.position);
   },
@@ -77,19 +84,22 @@ const LevelToken = React.createClass({
   },
 
   render() {
+    const springConfig = {stiffness: 1000, damping: 80};
     return (
       <Motion
         style={this.props.drag ? {
           y: this.props.dragging ? this.props.delta : 0,
-          scale: spring(1.02, {stiffness: 1000, damping: 80}),
-          shadow: spring(5, {stiffness: 1000, damping: 80})
+          scale: spring(1.02, springConfig),
+          shadow: spring(5, springConfig)
         } : {
-          y: this.props.dragging ? spring(this.props.delta, {stiffness: 1000, damping: 80}) : 0,
+          y: this.props.dragging ? spring(this.props.delta, springConfig) : 0,
           scale: 1,
           shadow: 0
         }} key={this.props.level.position}
       >
-        {({y, scale, shadow}) =>
+        {
+          // Use react-motion to interpolate the following values and create smooth transitions.
+          ({y, scale, shadow}) =>
           <div
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
@@ -97,7 +107,7 @@ const LevelToken = React.createClass({
               zIndex: this.props.drag ? 1000 : 500 - this.props.level.position
             })}
           >
-            <div style={styles.reorder} onMouseDown={this.props.handleDragStart.bind(null, this.props.level.position)}>
+            <div style={styles.reorder} onMouseDown={this.handleDragStart}>
               <i className="fa fa-arrows-v"/>
             </div>
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>

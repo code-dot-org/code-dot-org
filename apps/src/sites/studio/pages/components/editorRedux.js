@@ -96,7 +96,7 @@ export const removeStage = (position) => ({
 });
 
 function updatePositions(node) {
-  for (var i = 0; i < node.length; i++) {
+  for (let i = 0; i < node.length; i++) {
     node[i].position = i + 1;
   }
 }
@@ -201,7 +201,6 @@ export default function reducer(state, action) {
       start = categories.indexOf(swappedGroupName);
       count = categories.filter(c => c === swappedGroupName).length;
       newState.splice(action.direction === 'up' ? start : start + count, 0, ...swap);
-      console.log(newState.map(s => s.flex_category));
       updatePositions(newState);
       break;
     }

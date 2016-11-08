@@ -20,8 +20,13 @@ const styles = {
  */
 const ScriptEditor = React.createClass({
   propTypes: {
-    scriptData: React.PropTypes.object.isRequired,
-    i18nData: React.PropTypes.object.isRequired
+    i18nData: React.PropTypes.object.isRequired,
+    hidden: React.PropTypes.bool.isRequired,
+    loginRequired: React.PropTypes.bool.isRequired,
+    hideableStages: React.PropTypes.bool.isRequired,
+    professionalLearningCourse: React.PropTypes.bool.isRequired,
+    peerReviewsRequired: React.PropTypes.number.isRequired,
+    wrapupVideo: React.PropTypes.string.isRequired
   },
 
   render() {
@@ -67,7 +72,7 @@ const ScriptEditor = React.createClass({
           <input
             name="visible_to_teachers"
             type="checkbox"
-            defaultChecked={!this.props.scriptData.hidden}
+            defaultChecked={!this.props.hidden}
             style={styles.checkbox}
           />
           <p>If checked this script will show up in the dropdown on the Teacher Dashboard, for teachers to assign to students.</p>
@@ -77,7 +82,7 @@ const ScriptEditor = React.createClass({
           <input
             name="login_required"
             type="checkbox"
-            defaultChecked={this.props.scriptData.loginRequired}
+            defaultChecked={this.props.loginRequired}
             style={styles.checkbox}
           />
           <p>Require users to log in before viewing this script. This should be enabled on scripts that contain App Lab or Game Lab levels.</p>
@@ -87,7 +92,7 @@ const ScriptEditor = React.createClass({
           <input
             name="hideable_stages"
             type="checkbox"
-            defaultChecked={this.props.scriptData.hideable_stages}
+            defaultChecked={this.props.hideableStages}
             style={styles.checkbox}
           />
           <p>Allow teachers to toggle whether or not specific stages in this script are visible to students in their section.</p>
@@ -96,7 +101,7 @@ const ScriptEditor = React.createClass({
           Professional Learning Course
           <input
             name="professional_learning_course"
-            defaultValue={this.props.scriptData.professionalLearningCourse}
+            defaultValue={this.props.professionalLearningCourse}
             style={styles.input}
           />
         </label>
@@ -104,7 +109,7 @@ const ScriptEditor = React.createClass({
           Peer Reviews to Complete
           <input
             name="peer_reviews_to_complete"
-            defaultValue={this.props.scriptData.peerReviewsRequired}
+            defaultValue={this.props.peerReviewsRequired}
             style={styles.input}
           />
         </label>
@@ -112,7 +117,7 @@ const ScriptEditor = React.createClass({
           Wrap-up Video
           <input
             name="wrapup_video"
-            defaultValue={this.props.scriptData.wrapupVideo}
+            defaultValue={this.props.wrapupVideo}
             style={styles.input}
           />
         </label>
