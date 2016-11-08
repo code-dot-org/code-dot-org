@@ -65,7 +65,14 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "nQAP+gdExO/l4CPvW77/dXOgt+9XrS45sGQqBUXXjgw33hDkvuxmLpTiwlvM\nY4xp\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false"
   },
   "published": true,
   "notes": "",
