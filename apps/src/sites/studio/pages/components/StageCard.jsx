@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { borderRadius, levelTokenMargin } from './constants';
 import OrderControls from './OrderControls';
@@ -44,11 +43,19 @@ const StageCard = React.createClass({
   },
 
   getInitialState() {
-    return {currentPositions: []};
+    return {
+      currentPositions: [],
+      drag: null,
+      dragHeight: null,
+      initialPageY: null,
+      initialScroll: null,
+      newPosition: null,
+      startingPositions: null
+    };
   },
 
   metrics(token) {
-    return ReactDOM.findDOMNode(this.refs[`levelToken${token}`]).getBoundingClientRect();
+    return this.refs[`levelToken${token}`].getBoundingClientRect();
   },
 
   handleDragStart(position, {pageY}) {

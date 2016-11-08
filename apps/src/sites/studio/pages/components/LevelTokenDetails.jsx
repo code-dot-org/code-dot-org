@@ -99,14 +99,14 @@ const LevelTokenDetails = React.createClass({
           style={styles.levelTypeSelect}
         />
         {this.containsLegacyLevel() &&
-        <div>
-          <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Skin</span>
-          <input defaultValue={this.props.level.skin} type="text" style={styles.textInput} />
-          <div style={{float: 'right'}}>
-            <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Video key</span>
-            <input defaultValue={this.props.level.videoKey} type="text" style={styles.textInput} />
+          <div>
+            <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Skin</span>
+            <input defaultValue={this.props.level.skin} type="text" style={styles.textInput} />
+            <div style={{float: 'right'}}>
+              <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Video key</span>
+              <input defaultValue={this.props.level.videoKey} type="text" style={styles.textInput} />
+            </div>
           </div>
-        </div>
         }
         {this.props.level.ids.map((id, index) =>
           <div key={id}>

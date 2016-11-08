@@ -85,7 +85,12 @@ const FlexGroup = React.createClass({
                     />
                   );
                 })}
-                <button onMouseDown={this.handleAddStage.bind(null, afterStage - 1)} className="btn" style={styles.addStage} type="button">
+                <button
+                  onMouseDown={this.handleAddStage.bind(null, afterStage - 1)}
+                  className="btn"
+                  style={styles.addStage}
+                  type="button"
+                >
                   <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                   Add Stage
                 </button>
@@ -93,7 +98,12 @@ const FlexGroup = React.createClass({
             </div>
           );
         })}
-        <button onMouseDown={this.handleAddGroup} className="btn" style={styles.addGroup} type="button">
+        <button
+          onMouseDown={this.handleAddGroup}
+          className="btn"
+          style={styles.addGroup}
+          type="button"
+        >
           <i style={{marginRight: 7}} className="fa fa-plus-circle" />
           Add Group
         </button>
