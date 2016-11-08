@@ -5,7 +5,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
-const TTS_URL = "https://cdo-tts.s3.amazonaws.com/sharon22k/180/100";
+const TTS_URL = "https://tts.code.org/sharon22k/180/100";
 
 const styles = {
   error: {
