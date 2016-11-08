@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Motion, spring } from 'react-motion';
-import color from '../../../../util/color';
+import color from '../../util/color';
 import { borderRadius, levelTokenMargin } from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
 import { toggleExpand, removeLevel } from './editorRedux';
