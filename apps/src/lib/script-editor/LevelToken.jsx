@@ -61,6 +61,7 @@ const styles = {
  */
 const LevelToken = React.createClass({
   propTypes: {
+    levelKeyList: React.PropTypes.object.isRequired,
     toggleExpand: React.PropTypes.func.isRequired,
     removeLevel: React.PropTypes.func.isRequired,
     level: React.PropTypes.object.isRequired,
@@ -112,7 +113,7 @@ const LevelToken = React.createClass({
               <i className="fa fa-arrows-v"/>
             </div>
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
-              {this.props.level.key}
+              {this.props.levelKeyList[this.props.level.activeId]}
               {this.props.level.ids.length > 1 &&
               <span style={styles.variants}>
                 {this.props.level.ids.length} variants
@@ -135,7 +136,9 @@ const LevelToken = React.createClass({
   }
 });
 
-export default connect(state => ({}), dispatch => ({
+export default connect(state => ({
+  levelKeyList: state.levelKeyList
+}), dispatch => ({
   toggleExpand(stage, level) {
     dispatch(toggleExpand(stage, level));
   },
