@@ -397,28 +397,39 @@ window.apps = {
 };
 
 /**
- * Sets up everything needed for an app (like applab, gamelab, eval, etc.) to run.
+ * Loads the "appOptions" object from the dom and augments it with additional
+ * information needed by apps to run.
+ *
  * This should only be called once per page load, with appoptions specified as a
  * data attribute on the script tag.
+ *
+ * @returns a Promise object which resolves to the fully populated appOptions
  */
-export default function loadApp(appMain) {
-  // Loads the dependencies for the current app based on values in `appOptions`.
-  // This function takes a callback which is called once dependencies are ready.
-  const script = document.querySelector(`script[data-appoptions]`);
-  const appOptions = JSON.parse(script.dataset.appoptions);
+export default function loadAppOptions() {
+  return new Promise((resolve, reject) => {
+    const script = document.querySelector(`script[data-appoptions]`);
+    let appOptions;
+    try {
+      appOptions = JSON.parse(script.dataset.appoptions);
+    } catch (e) {
+      console.error("failed to parse appoptions from script tag", e);
+      reject(e);
+      return;
+    }
 
-  // ugh, a lot of code expects this to be on the window object pretty early on.
-  window.appOptions = appOptions;
+    // ugh, a lot of code expects this to be on the window object pretty early on.
+    window.appOptions = appOptions;
 
-  if (appOptions.embedded) {
-    // when we just "embed" an app (i.e. via embed_blocks.html.erb),
-    // we just want to call the appMain function immediately without
-    // loading a bunch of other stuff.
-    appMain(appOptions);
-  } else {
-    loadAppAsync(appOptions, () => {
-      project.init(window.apps.sourceHandler);
-      appMain(appOptions);
-    });
-  }
+    if (appOptions.embedded) {
+      // when we just "embed" an app (i.e. via embed_blocks.html.erb),
+      // we don't need to load anything else onto appOptions, so just resolve
+      // immediately
+      resolve(appOptions);
+    } else {
+      loadAppAsync(appOptions, () => {
+        project.init(window.apps.sourceHandler);
+        resolve(appOptions);
+      });
+    }
+  });
 }
