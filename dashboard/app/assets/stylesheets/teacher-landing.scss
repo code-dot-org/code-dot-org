@@ -19,3 +19,12 @@ $transparency: rgba(0, 0, 0, 0.5);
 .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
   color: $white;
 }
+
+.new-mc {
+  color: $white;
+  background-color: $purple;
+  width: 260px;
+  margin: -10px;
+  padding: 5px;
+  text-align: center;
+}
