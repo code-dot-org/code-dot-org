@@ -28,6 +28,7 @@ const Overlay = React.createClass({
   render() {
     return (this.props.visible ?
       <div
+        id="overlay"
         onClick={this.props.hide}
         style={style}
       /> :
