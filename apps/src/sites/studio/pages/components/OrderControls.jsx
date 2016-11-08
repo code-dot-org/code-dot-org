@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { ControlTypes } from './constants';
 import { moveGroup, moveStage, removeGroup, removeStage } from './editorRedux';
 
 const styles = {
@@ -16,7 +17,7 @@ const OrderControls = React.createClass({
   propTypes: {
     move: React.PropTypes.func.isRequired,
     remove: React.PropTypes.func.isRequired,
-    type: React.PropTypes.oneOf(['GROUP', 'STAGE']).isRequired,
+    type: React.PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
     position: React.PropTypes.number.isRequired,
     total: React.PropTypes.number.isRequired
   },
@@ -62,12 +63,12 @@ const OrderControls = React.createClass({
 
 export default connect(state => ({}), dispatch => ({
   move(type, position, direction) {
-    type === 'GROUP' ?
+    type === ControlTypes.Group ?
       dispatch(moveGroup(position, direction)) :
       dispatch(moveStage(position, direction));
   },
   remove(type, position) {
-    type === 'GROUP' ?
+    type === ControlTypes.Group ?
       dispatch(removeGroup(position)) :
       dispatch(removeStage(position));
   }
