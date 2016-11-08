@@ -38,12 +38,5 @@
     .header_button.header_user
       %span= t('nav.user.signin')
 
-%script{
-  src: minifiable_asset_path('js/shared/_user_header.js'),
-  data: {
-    userheader:{
-      showPairingDialog: @show_pairing_dialog}.to_json,
-      pairingUrl: pairing_url,
-    }
-  }
-}
+%script{src: minifiable_asset_path('js/shared/_user_header.js'),
+        data: {userheader: {showPairingDialog: @show_pairing_dialog, pairingUrl: pairing_url}.to_json}}
