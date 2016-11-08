@@ -38,7 +38,18 @@ class Pd::Enrollment < ActiveRecord::Base
   validates :name, :email, presence: true
   validates_confirmation_of :email
 
+  validate :validate_school_name, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
+
+  # enrollment.school is required in the old format (no country) and forbidden in the new format (with country).
+  # To avoid breaking any existing codepaths, use the old format when school_info is absent.
+  def validate_school_name
+    if school_info.try(:country)
+      errors.add(:school, 'is forbidden') if school
+    else
+      errors.add(:school, 'is required') unless school
+    end
+  end
 
   def self.for_school_district(school_district)
     self.joins(:school_info).where(school_infos: {school_district_id: school_district.id})
