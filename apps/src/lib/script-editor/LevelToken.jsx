@@ -98,7 +98,8 @@ const LevelToken = React.createClass({
         }} key={this.props.level.position}
       >
         {
-          // Use react-motion to interpolate the following values and create smooth transitions.
+          // Use react-motion to interpolate the following values and create
+          // smooth transitions.
           ({y, scale, shadow}) =>
           <div
             style={Object.assign({}, styles.levelToken, {
@@ -113,7 +114,9 @@ const LevelToken = React.createClass({
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
               {this.props.level.key}
               {this.props.level.ids.length > 1 &&
-              <span style={styles.variants}>{this.props.level.ids.length} variants</span>
+              <span style={styles.variants}>
+                {this.props.level.ids.length} variants
+              </span>
               }
             </span>
             <div style={styles.remove} onMouseDown={this.handleRemove}>
