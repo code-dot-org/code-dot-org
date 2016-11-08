@@ -55,7 +55,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'required field validations with country' do
     enrollment = Pd::Enrollment.new
-    enrollment.name = 'name'
+    enrollment.first_name = 'FirstName'
+    enrollment.last_name = 'LastName'
     enrollment.email = 'teacher@example.net'
     enrollment.school_info = build :school_info_us_public, :with_district, :with_school
     assert enrollment.valid?
