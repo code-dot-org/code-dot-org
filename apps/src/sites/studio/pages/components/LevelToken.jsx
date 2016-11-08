@@ -71,8 +71,8 @@ const LevelToken = React.createClass({
     handleDragStart: React.PropTypes.func.isRequired
   },
 
-  handleDragStart() {
-    this.props.handleDragStart(this.props.level.position);
+  handleDragStart(e) {
+    this.props.handleDragStart(this.props.level.position, e);
   },
 
   toggleExpand() {

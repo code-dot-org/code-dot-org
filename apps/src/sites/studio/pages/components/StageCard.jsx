@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { borderRadius, levelTokenMargin, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
@@ -55,7 +56,7 @@ const StageCard = React.createClass({
   },
 
   metrics(token) {
-    return this.refs[`levelToken${token}`].getBoundingClientRect();
+    return ReactDOM.findDOMNode(this.refs[`levelToken${token}`]).getBoundingClientRect();
   },
 
   handleDragStart(position, {pageY}) {
