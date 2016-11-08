@@ -1,16 +1,4 @@
-import appMain from "@cdo/apps/appMain";
-import Maze from '@cdo/apps/maze/maze';
-window.Maze = Maze;
-if (typeof global !== 'undefined') {
-  global.Maze = window.Maze;
-}
-import blocks from "@cdo/apps/maze/blocks";
-import levels from "@cdo/apps/maze/levels";
-import skins from "@cdo/apps/maze/skins";
+import loadMaze from "./init/loadMaze";
+import loadApp from "@cdo/apps/code-studio/initApp/loadApp";
 
-window.mazeMain = function (options) {
-  options.skinsModule = skins;
-  options.blocksModule = blocks;
-
-  appMain(window.Maze, levels, options);
-};
+loadApp(loadMaze);
