@@ -270,7 +270,7 @@ class Craft < Blockly
 
   }
 
-SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
+  SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
       neverFailEarly:
 'function (verificationAPI) {
   // Fail instantly

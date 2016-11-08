@@ -199,15 +199,12 @@ Craft.init = function (config) {
   bodyElement.className = bodyElement.className + " minecraft";
 
   if (config.level.showPopupOnLoad) {
-      console.log("Will Showing")
     config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
-      console.log("Showing")
       var event = document.createEvent('Event');
       event.initEvent('instructionsShown', true, true);
       document.dispatchEvent(event);
 
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        console.log("Showing PS")
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
           trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();

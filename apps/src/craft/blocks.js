@@ -552,7 +552,7 @@ exports.install = function (blockly, blockInstallOptions) {
           ${blockly.Generator.get('JavaScript').statementToCode(this, statementName)}
         }, 'block_id_${this.id}');`;
       }).join("\n");
-    }
+    };
   }
 
   function createEventBlockForEntity(entityID, displayName) {
@@ -800,7 +800,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Generator.get('JavaScript').craft_forever = function () {
     var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function() { ${innerCode} }, -1, event.targetIdentifier);`
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, -1, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatTimes = {
@@ -820,7 +820,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Generator.get('JavaScript').craft_repeatTimes = function () {
     const times = this.getTitleValue('TIMES');
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatRandom = {
@@ -828,7 +828,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
-          .appendTitle(i18n.blockActionRepeatRandom())
+          .appendTitle(i18n.blockActionRepeatRandom());
       this.appendStatementInput('DO')
           .appendTitle(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -839,7 +839,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Generator.get('JavaScript').craft_repeatRandom = function () {
     const times = this.getTitleValue('TIMES');
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeatRandom('block_id_${this.id}', function() { ${innerCode} }, event.targetIdentifier);`
+    return `repeatRandom('block_id_${this.id}', function() { ${innerCode} }, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatDropdown = {
@@ -863,7 +863,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Generator.get('JavaScript').craft_repeatDropdown = function () {
     const times = this.getTitleValue('TIMES');
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`;
   };
 
   blockly.Blocks[`craft_spawnEntity`] = {
