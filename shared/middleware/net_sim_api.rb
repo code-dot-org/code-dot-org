@@ -485,7 +485,11 @@ end
 def parse_ids_from_query_string(query_string)
   [].tap do |ids|
     CGI.parse(query_string)['id[]'].each do |id|
-      ids << Integer(id, 10) rescue ArgumentError
+      begin
+        ids << Integer(id, 10)
+      rescue
+        ArgumentError
+      end
     end
   end
 end

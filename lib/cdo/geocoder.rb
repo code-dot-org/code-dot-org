@@ -25,7 +25,11 @@ module Geocoder
 
     first_number_to_end = number_to_end_search.first.first
 
-    return nil if Float(first_number_to_end) rescue false # is a number
+    begin
+      return nil if Float(first_number_to_end)
+    rescue
+      false
+    end # is a number
     return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
 
     results = Geocoder.search(first_number_to_end)
