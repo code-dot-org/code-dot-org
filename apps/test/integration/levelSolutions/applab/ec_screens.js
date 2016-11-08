@@ -65,7 +65,7 @@ module.exports = {
           'expected Code button (inactive) to have white background.');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
-        assert.equal(screenSelector.options.length, 2, 'expected 2 options');
+        assert.equal(screenSelector.options.length, 3, 'expected 3 options');
         assert.equal($(screenSelector).val(), 'screen1');
         assert.equal($('#designWorkspace').is(':visible'), true);
 
@@ -102,7 +102,7 @@ module.exports = {
 
         assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
         assert.equal($("#designModeViz").children().length, 2, 'has two screen divs');
-        assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
+        assert.equal(screenSelector.options.length, 4, 'has four options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
         validatePropertyRow(0, 'id', 'screen2', assert);
@@ -152,7 +152,7 @@ module.exports = {
 
         assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
         assert.equal($("#designModeViz").children().length, 2, 'has two screen divs');
-        assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
+        assert.equal(screenSelector.options.length, 4, 'has four options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
         validatePropertyRow(0, 'id', 'screen2', assert);
@@ -618,15 +618,15 @@ module.exports = {
         assert.equal($("#designModeViz").children().length, 2, 'has two screen divs');
         validatePropertyRow(0, 'id', 'screen2', assert);
 
-        assert.equal($("#screenSelector").children().length, 3);
-        assert.equal($("#screenSelector").children().eq(2).text(), "New screen...");
+        assert.equal($("#screenSelector").children().length, 4);
+        assert.equal($("#screenSelector").children().eq(3).text(), "New screen...");
 
         // New screen via dropdown
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
           { target: { value: 'New screen...' } });
 
         assert.equal($("#designModeViz").children().length, 3, 'has three screen divs');
-        assert.equal($("#screenSelector").children().length, 4);
+        assert.equal($("#screenSelector").children().length, 5);
         validatePropertyRow(0, 'id', 'screen3', assert);
 
         Applab.onPuzzleComplete();
@@ -671,15 +671,15 @@ module.exports = {
         assert.equal($("#propertyRowContainer button").last().text(), 'Make Default', 'Third screen should have default button');
         assert.equal($("#propertiesBody button").first().text(), 'Delete', 'first button should be delete');
 
-        assert.equal($("#screenSelector").children().length, 4);
-        assert.equal($("#screenSelector").children().eq(3).text(), "New screen...");
+        assert.equal($("#screenSelector").children().length, 5);
+        assert.equal($("#screenSelector").children().eq(4).text(), "New screen...");
 
         // New screen via dropdown
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
           { target: { value: 'New screen...' } });
 
         assert.equal($("#designModeViz").children().length, 4, 'has four screen divs');
-        assert.equal($("#screenSelector").children().length, 5);
+        assert.equal($("#screenSelector").children().length, 6);
         assert.equal($("#propertyRowContainer button").last().text(), 'Make Default', 'New screen should have default button');
         assert.equal($("#propertiesBody button").first().text(), 'Delete', 'first button should be delete');
         validatePropertyRow(0, 'id', 'screen4', assert);
