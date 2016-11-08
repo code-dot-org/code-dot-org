@@ -4,6 +4,8 @@ crwdns49654:0crwdne49654:0
 
 * * *
 
+<a id="blurb"></a>
+
 <%= view :signup_button %>
 
 # crwdns49655:0crwdne49655:0
@@ -12,7 +14,11 @@ crwdns49654:0crwdne49654:0
 
 ### crwdns49657:0crwdne49657:0
 
-crwdns49658:0crwdne49658:0 crwdns49659:0crwdne49659:0 crwdns49660:0crwdne49660:0 crwdns49661:0crwdne49661:0 crwdns49662:0crwdne49662:0 crwdns49663:0crwdne49663:0 crwdns49664:0crwdne49664:0 crwdns49665:0crwdne49665:0<%= @country %>
+crwdns67945:0crwdne67945:0 crwdns67946:0crwdne67946:0 crwdns67947:0crwdne67947:0 crwdns67948:0crwdne67948:0 crwdns67949:0crwdne67949:0
+
+crwdns67950:0crwdne67950:0 crwdns67951:0crwdne67951:0
+
+<a id="infographics"></a>
 
 ## crwdns49666:0crwdne49666:0
 

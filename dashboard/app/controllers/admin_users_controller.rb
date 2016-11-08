@@ -1,6 +1,29 @@
+require 'digest/md5'
+
 class AdminUsersController < ApplicationController
   before_action :authenticate_user!
   before_action :require_admin
+
+  def account_repair_form
+  end
+
+  def account_repair
+    return unless params[:email]
+    hashed_email = Digest::MD5.hexdigest(params[:email])
+    teacher = User.where(user_type: User::TYPE_TEACHER).
+      where(hashed_email: hashed_email).
+      where(email: '').
+      first
+
+    if teacher
+      teacher.update!(email: params[:email])
+      flash[:alert] = 'User fixed.'
+    else
+      flash[:alert] = 'Malformed teacher not found.'
+    end
+
+    render :account_repair_form
+  end
 
   def assume_identity_form
   end

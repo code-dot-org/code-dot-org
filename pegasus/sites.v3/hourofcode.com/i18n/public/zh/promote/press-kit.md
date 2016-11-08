@@ -6,9 +6,11 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ## 如何吸引媒體目光至您的Hour of Code活動
 
-*所有的記者和媒體查詢，請聯繫 <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### 關鍵技巧
 
@@ -19,7 +21,7 @@ nav: promote_nav
 
 ### 逐步指南
 
-**1.規畫您的活動**
+**1. Plan your event**
 
   * 規劃如何揭開Hour of Code序幕。
   * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
@@ -27,35 +29,37 @@ nav: promote_nav
   * 組織系列活動 (如示範不插電的程式設計活動)，或展示學生創建和領導的活動。
   * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
-**2.確定具體涵蓋教育或本地事件的當地記者。**
+**2. Identify specific local reporters that cover education or local events.**
 
-思索當地的報紙、 電視台、 廣播電臺或部落格。
+Think a local newspaper, TV station, radio station or blog.
 
-檢索網路以找到記者的聯繫資訊。 如果你找不到它，打電話給駐點辦事處詢問，或寄電子郵件 tips@PUBLICATIONNAME.com 至它們的一般的電子郵件服務信箱，要求讓您的消息可以發佈給適當的記者。
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3.聯繫當地媒體**
+**3. Contact local media**
 
-最好的聯繫方法是透過電子郵件。 信件應該簡短明確： 為甚麼其他人應該關心此活動？ 包括為誰在事件現場的聯繫資訊 (包括手機號碼)。 **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
-**4.準備學校辦理此活動相關問題的現場提問稿。這裡有一些例子：**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*為甚麼您的學校進行Hour of Code活動？*
+*Why is your school doing an Hour of Code?*
 
-雖然我們都知道，學生學會如何在當今科技飽和的世界導航是重要的，但很多教師沒有在電腦科學中經歷過，也不知道從哪裡開始。 此事件是讓我們大家都有機會看到甚麼電腦科學大概與甚麼有關。
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-我們希望它會引發學生繼續學習的興趣。 Research also shows that kids can pick up programming concepts before they know how to read and write. 事實上，他們的大腦在年紀小的時候更容易接受電腦語言，就像外國語言一般。
+We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*為甚麼這是重要的?*
+*Why is this important?*
 
 Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
-**你可以使用教材裡更多的細節和引用**
+**More details and a quote you can use in materials**
 
 "The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**關於 Code.org**
+**About Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. 其設想是在每個學校每個學生應該有機會學習電腦程式設計。 After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. 有關詳細資訊，請訪問: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+
+<%= view :signup_button %>

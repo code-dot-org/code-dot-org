@@ -2,12 +2,32 @@
  */
 
 import React from 'react';
-import FilterSet from './filterSet';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
-import getTagString from './util';
+import { getTutorialDetailString } from './util';
+import { getResponsiveValue } from './responsive';
 
 const styles = {
+  tutorialOuter: {
+    float: 'left',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 7,
+    paddingRight: 7,
+    cursor: 'pointer'
+  },
+  tutorialImageContainer: {
+    position: "relative",
+    width: "100%",
+    height: 0,
+    paddingTop: "75%"
+  },
+  tutorialImage: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%"
+  },
   tutorialName: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 15,
@@ -18,7 +38,8 @@ const styles = {
   tutorialSub: {
     fontFamily: '"Gotham 3r", sans-serif',
     fontSize: 12,
-    paddingBottom: 20
+    lineHeight: "16px",
+    height: 40
   }
 };
 
@@ -42,6 +63,11 @@ const Tutorial = React.createClass({
   },
 
   render() {
+    const tutorialOuterStyle = {
+      ...styles.tutorialOuter,
+      width: getResponsiveValue({lg: 33.3333333, sm: 50, xs: 100})
+    };
+
     return (
       <div>
         <TutorialDetail
@@ -50,25 +76,20 @@ const Tutorial = React.createClass({
           closeClicked={this.tutorialDetailClosed}
         />
         <div
-          className="col-33"
-          style={{float: 'left', padding: 2}}
+          style={tutorialOuterStyle}
+          onClick={this.tutorialClicked}
         >
-          <div style={{padding: 5}}>
-            <div
-              style={{cursor: 'pointer'}}
-              onClick={this.tutorialClicked}
-            >
-              <img
-                src={this.props.item.image.replace("/images/", "/images/fill-520x390/")}
-                style={{width: '100%'}}
-              />
-              <div style={styles.tutorialName}>
-                {this.props.item.name}
-              </div>
-              <div style={styles.tutorialSub}>
-                {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
-              </div>
-            </div>
+          <div style={styles.tutorialImageContainer}>
+            <img
+              src={this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg")}
+              style={styles.tutorialImage}
+            />
+          </div>
+          <div style={styles.tutorialName}>
+            {this.props.item.name}
+          </div>
+          <div style={styles.tutorialSub}>
+            {getTutorialDetailString(this.props.item)}
           </div>
         </div>
       </div>

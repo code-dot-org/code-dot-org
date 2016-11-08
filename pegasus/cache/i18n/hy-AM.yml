@@ -248,7 +248,7 @@
   learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
   learn_classes: Find local classes
-  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg.
+  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -294,55 +294,55 @@
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: |
+  homepage_hero_text_malala: |-
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo;
     Malala, Nobel Peace Prize winner
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;If you can change technology,
     you can change the world.&rdquo;
     Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Մեր երեխաները &mdash; ներառյալ մեր աղջիկները &mdash;
     պետք է հնարավորություն ունենան սովորելու համակգչային գիտություններ.&rdquo;
     Sheryl, Facebook-ի COO
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Computer science can unlock
     the best opportunities in the world.&rdquo;
     Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Եթե դու գիտես կոդ գրել,
     դու կարող ես ընտրեոլ քո կյանքի ուղին.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Այս հմտությունները փոխեցին իմ ապագան.
     Էլ չասած, թե ինչ զվարճալի է.&rdquo;
     Luna, 7-րդ դասարան
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;I have never, ever seen my kids
     so excited about learning.&rdquo;
     Michael, teacher
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
     Jackson, 6th grade
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;You can do anything your mind
     wants to do with programming.&rdquo;
     Maya, 2nd grade
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;Computer science isn't for someone
     else. It's for you, here, now.&rdquo;
     Geraldo, teacher
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo;Coding sparks creativity, inspiration and innovation &mdash;
     all of which are essential in any career.&rdquo;
     Floresa, teacher
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo; Այս ծրագիրը օգնեց իմ բոլոր աշակերտներին.&rdquo;
     Adam, ուսուցիչ
   homepage_hero_text_stat_loc: 2.5 միլին աղջիկներ են սովորում Code Studio-ի միջոցով
@@ -609,8 +609,6 @@
     ավարտել այս դասընթացը"
   dashboard_landing_educator_blog: "Կարդալ մասին նորություններից եւ թարմացումներից
     մեր նյութերի մեր մանկավարժ Օրագիր"
-  dashboard_landing_smart_hints: "Խնդրում ենք օգնել մեզ է ավելացնել խելացի ակնարկներ
-    Code.org ճանապարհները"
   dashboard_landing_video_player: Test մեր նոր տեսամագնիտոֆոն ձեր դպրոցում
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
@@ -764,6 +762,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 5-11, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href='%{certificate_url}'>print these in advance</a>.)<br/><br/>We are thrilled
+    by the number of teachers and students participating and we're sorry we won't
+    be able to save everything.  If your class wants to go further, you can go beyond
+    an Hour of Code to teach a course such as Computer Science Fundamentals.  Our
+    teacher dashboard will let you track your student's progress every other week
+    of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -903,6 +913,7 @@
     and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: "Սովորել ավելին"
   dashboard_announce_try_now_button: "Փորձել հիմա"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ
     յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային
     գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ,
@@ -912,6 +923,11 @@
   dashboard_announce_petition_button: "Հավելեք ձեր անունը"
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -1051,6 +1067,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1759,3 +1776,12 @@
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

@@ -1,6 +1,4 @@
 var tiles = require('./tiles');
-var Direction = tiles.Direction;
-var SquareType = tiles.SquareType;
 var studioApp = require('../StudioApp').singleton;
 
 exports.PaddleSpeed = {
@@ -35,6 +33,11 @@ exports.setBallSpeed = function (id, value) {
 exports.setBackground = function (id, value) {
   studioApp.highlight(id);
   Bounce.setBackground(value);
+};
+
+exports.setTeam = function (id, value) {
+  studioApp.highlight(id);
+  Bounce.setTeam(value);
 };
 
 exports.setBall = function (id, value) {

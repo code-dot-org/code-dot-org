@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/exportProject.html.ejs';
@@ -81,7 +81,6 @@ export default {
     appElement.classList.remove('notRunning');
     appElement.classList.remove('withCrosshair');
 
-    var htmlBody = appElement.outerHTML;
     var css = extractCSSFromHTML(appElement);
     var html = exportProjectEjs({htmlBody: appElement.outerHTML});
     var readme = exportProjectReadmeEjs({appName: appName});

@@ -1,7 +1,7 @@
 /** @file Code.org configured store-creation method.
  *  @see http://redux.js.org/docs/api/createStore.html */
 import Immutable from 'immutable';
-import experiments from './experiments';
+import experiments from "./util/experiments";
 
 var redux = require('redux');
 var reduxThunk = require('redux-thunk').default;

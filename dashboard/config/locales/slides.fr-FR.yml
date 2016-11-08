@@ -204,8 +204,8 @@
           imperméable.»'
       3:
         image: notes/hoc4_3.jpg
-        text: Nous pouvons dire au zombie d'aller vérifier SI il y a un chemin à gauche,
-          et SI il en trouve un, il peut tourner dans cette direction.
+        text: Nous pouvons dire au zombie de vérifier SI il y a un chemin à gauche,
+          et si il en trouve un, nous pouvons le faire tourner dans cette direction.
       4:
         image: notes/hoc4_4.jpg
         text: Afin d'écrire le code pour ceci, déposons un bloc « Si » et mettons-y
@@ -332,11 +332,11 @@
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Salut, je m'appelle Janete, et je suis ingénieur chez Zynga.
+        text: Salut, je m'appelle Janete, et je suis ingénieure chez Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: Que faudrait-il faire pour dessiner un ensemble de triangles de différentes
-          tailles ?
+        text: Que faire si nous voulons dessiner un paquet de triangles de sorte que
+          leurs côtés soient de tailles différentes ?
       3:
         image: notes/stage15_3.jpg
         text: Nous pouvons écrire tout ce code à la main, ou bien utiliser une fonction
@@ -508,8 +508,8 @@
         text: Tu peux définir ceci comme une fonction « Créer un carré ».
       6:
         image: notes/frozen3_6.jpg
-        text: Tu as maintenant un nouveau bloc que tu peux utiliser plusieurs fois
-          pour créer plusieurs carrés.
+        text: Tu dispose maintenant d'un nouveau bloc que tu peux utiliser plusieurs
+          fois pour créer plusieurs carrés.
       7:
         image: notes/frozen3_7.jpg
         text: Beaucoup de formes simples peuvent être utilisées pour créer des motifs
@@ -602,9 +602,9 @@
           là où il doit se rendre pour remplir les lignes grises.
       2:
         image: notes/C1_artist_intro_2.png
-        text: Ce sont des blocs de saut. Lorsque tu utilises ces blocs, ton artiste
-          se déplace sans dessiner, alors utilise-les pour sauter jusqu'à la prochaine
-          ligne grise.
+        text: Ce sont des blocs de saut. Lorsque tu les utilises, ton artiste se déplace
+          sans dessiner, alors utilise-les pour sauter jusqu'à la prochaine ligne
+          grise.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png

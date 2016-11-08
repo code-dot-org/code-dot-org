@@ -8,9 +8,7 @@ import Hammer from "hammerjs";
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
-var skins = require('../skins');
 var codegen = require('../codegen');
-var api = require('./api');
 var GameController = require('./game/GameController');
 var dom = require('../dom');
 var houseLevels = require('./houseLevels');
@@ -20,10 +18,8 @@ var MusicController = require('../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
-var experiments = require('../experiments');
 import {entityActionBlocks, entityActionTargetDropdownBlocks} from './blocks';
 
-var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 var MEDIA_URL = '/blockly/media/craft/';
@@ -142,7 +138,6 @@ var MUSIC_METADATA = [
 var CHARACTER_STEVE = 'Steve';
 var CHARACTER_ALEX = 'Alex';
 var DEFAULT_CHARACTER = CHARACTER_STEVE;
-var AUTO_LOAD_CHARACTER_ASSET_PACK = 'player' + DEFAULT_CHARACTER;
 
 function trySetLocalStorageItem(key, value) {
   try {
@@ -175,7 +170,7 @@ Craft.init = function (config) {
   }
 
   config.level.disableFinalStageMessage = true;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function () {
@@ -1093,11 +1088,17 @@ Craft.reportResult = function (success) {
 
   var keepPlayingText = Craft.replayTextForResult(testResultType);
 
+  const image = Craft.initialConfig.level.freePlay ?
+      Craft.gameController.getScreenshot() : null;
+  // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
+  const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
+
   studioApp.report({
     app: 'craft',
     level: Craft.initialConfig.level.id,
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
+    image: encodedImage,
     program: encodeURIComponent(
         Blockly.Xml.domToText(
             Blockly.Xml.blockSpaceToDom(
@@ -1121,7 +1122,7 @@ Craft.reportResult = function (success) {
           tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
-        feedbackImage: Craft.initialConfig.level.freePlay ? Craft.gameController.getScreenshot() : null,
+        feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay
       });
     }

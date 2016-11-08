@@ -4,11 +4,13 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to bring the Hour of Code to your company
+<%= view :signup_button %>
+
+# როგორ უნდა გააცნოთ კოდის ერთი საათი თქვენს კომპანიას
 
 ## მოანდომეთ მოსწავლეებსა და მოხალისეებს მიიღონ მონაწილეობა კოდის ერთ საათში
 
-**Code.org კომპანიების თანამშრომლებს სთავაზობს შესაძლებლობას [დაუკავშირდნენ](%= resolve_url('https://code.org/volunteer') %) ადგილობრივ სკოლებს და კოდის ერთი საათის ფარგლებში გაუზიარონ მოსწავლეებს თავიანთი კარიერული გამოცდილება და შთააგონონ პროგრამირების სწავლა.**
+**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
   * [დარეგისტრირდით](%= resolve_url('https://code.org/volunteer') %) მოხალისედ.
   * თქვენი თანამშრომლებისა და კლასების დაკავშირებაზე მეტი რჩევების სანახავად, გადახედეთ [კორპორატიული პარტნიორების სახელმძღვანელოს](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
@@ -30,7 +32,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) აირჩიეთ ტუტორიალი:
 
-ჩვენ მოგაწოდებთ ნებისმიერი ასაკის მონაწილეებისთვის განკუთვნილს სხვადასხვა პარტნიორის მიერ შექმნილ მრავალ [სახალისო, ერთსაათიან ტუტორიალს](%= resolve_url('https://code.org/learn') %). [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [სცადეთ ისინი!](%= resolve_url("https://code.org/learn") %)
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
@@ -41,18 +43,18 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 ## 4) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+კოდის ერთი საათის საუკეთესო გამოცდილება მოიცავს ინტერნეტთან დაკავშირებულ კომპიუტერებს. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**დაგეგმეთ წინასწარ!** ღონისძიების დაწყებამდე შეასრულეთ ჩამოთვლილი:
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **არ გაქვთ საკმარისი რაოდენობის მოწყობილობა?** სცადეთ[პროგრამირება წყვილებში](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * გატესტეთ ტუტორიალები კომპიუტერებზე, ან მოწყობილობებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში.
+  * თუ თქვენ მიერ არჩეული ტუტორიალი ხმით უკეთ მუშაობს, უზრუნველყავით მონაწილეები ყურსასმენებით, ან სთოხვეთ მათ თავიანთი ყურსასმენების მოტანა.
+  * **არ გაქვთ საკმარისი რაოდენობის მოწყობილობა?** სცადეთ[პროგრამირება წყვილებში](https://www.youtube.com/watch?v=vgkahOzFH2Q). ერთად მუშაობისას მონაწილეები ერთმანეთს ეხმარებიან და ნაკლებად არიან დამოკიდებულნი ორგანიზატორზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
+  * **ინტერნეტს დაბალი სიჩქარე აქვს?** აჩვენეთ ვიდეოები ერთ დიდ ეკრანზე - ასე ყველა მონაწილეს არ დასჭირდება ცალკე ვიდეოს ჩატვირთვა. ან სცადეთ ოფლაინ-ტუტორიალები.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) კოდის ერთი საათი დაიწყეთ შთამაგონებელი ვიდეოთი
 
 დაიწყეთ თქვენი ღონისძიება მონაწილეებთან ერთად იმის განხილვით, თუ როგორ გავლენას იქონიებს მათ ცხოვრებაზე კომპიუტერული მეცნიერებების ცოდნა. Share more about what inspired you to pursue computer science and your role at your company.
 
@@ -65,10 +67,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Ideas to introduce your Hour of Code activity:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+  * ახსენით, რა გავლენას ახდენს ტექნოლოგია ჩვენს ცხოვრებაზე. გამოიყენეთ მაგალითები, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება (ესაუბრეთ ტექნოლოგიებზე, რომელიც სიცოცხლის გადასარჩენად, ადამიანების დასახმარებლად და მათ დასაკავშირებლად გამოიყენება). 
+  * თუ ტექნოლოგიური კომპანია ხართ, წარმოადგინეთ სახალისო, ინოვაციური პროდუქტები, რომლებზეც მუშაობთ.
+  * თუ არ ხართ ტექნოლოგიური კომპანია, ისაუბრეთ, როგორ იყენებთ ტექნოლოგიას პრობლემების გადასაჭრელად და მიზნების მისაღწევად.
+  * მოიწვიეთ პროგრამისტები თქვენი კომპანიიდან, რათა ისაუბრონ იმაზე, რატომ გადაწყვიტეს კომპიუტერული მეცნიერების სწავლა და რა პროექტებზე მუშაობენ ამჟამად.
   * გაიგეთ, როგორ დააინტერესოთ გოგონები პროგრამირებითა და ინფორმატიკით [აქ](%= resolve_url('https://code.org/girls') %).
 
 ## 6) დაწერეთ კოდი!
@@ -76,7 +78,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 **მიეცით მონაწილეებს მითითებები აქტივობის შესახებ**
 
   * დაწერეთ გაკვეთილის ბმული დაფაზე. ლინკი შეგიძლიათ მონაწილეების რიცხვს ქვემოთ, [თქვენი არჩეული გაკვეთილის ინფორმაციაში](%= resolve_url('https://code.org/learn') %) იხილოთ.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+  * უმცროსი მოსწავლეებისთვის, წინასწარ ჩატვირთეთ ტუტორიალების გვერდი ან შეინახეთ სანიშნის სახით.
 
 **When participants come across difficulties it's okay to respond:**
 
@@ -86,8 +88,8 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
 
-  * They can try another Hour of Code activity at code.org/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+  * შეუძლიათ სცადონ კოდის ერთი საათის სხვა აქტივობა აქ: code.org/learn
+  * ან სთხოვეთ, დაეხმარონ მეგობარს, რომელსაც უჭირს დავალების შესრულება.
 
 [col-33]
 
@@ -107,9 +109,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## 7) აღნიშნეთ
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+  * [დაბეჭდეთ სერთიფიკატები](%= resolve_url('https://code.org/certificates') %) მონაწილეებისთვის.
+  * [ამობეჭდეთ სტიკერები "მე გავიარე კოდის ერთი საათი!"](%= resolve_url('/promote/resources#stickers') %).
+  * [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი თანამშრომლებისთვის.
   * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 [col-33]
@@ -136,4 +138,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## რა ხდება კოდის ერთი საათის შემდეგ?
 
-კოდის ერთი საათი ტექნოლოგიებისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

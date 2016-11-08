@@ -4,181 +4,185 @@
       name:
         course1:
           title: "පාඨමාලා අංක 1"
-          description: Start with Course 1 for early readers. Students will create
-            computer programs that will help them learn to collaborate with others,
-            develop problem-solving skills, and persist through difficult tasks. By
-            the end of this course, students create their very own custom game or
-            story that they can share. Recommended for grades K-1.
-          description_short: Start with Course 1 for early readers.
+          description: |2-
+
+            මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
+          description_short: "මුල් පාඨකයන් පාඨමාලා අංක 1 ආරම්භ කරන්න."
           description_audience: "වයස් 4-6"
           stage:
-            'Artist: Loops': 'Artist: Loops'
-            'Artist: Sequence': 'Artist: Sequence'
-            'Artist: Shapes': 'Artist: Shapes'
-            'Bee: Loops': 'Bee: Loops'
-            'Bee: Sequence': 'Bee: Sequence'
-            Building a Foundation: Building a Foundation
-            Getting Loopy: Getting Loopy
-            Going Places Safely: Going Places Safely
+            'Artist: Loops': "කලාකරු: ලූපයන්"
+            'Artist: Sequence': "කලාකරු: අනුක්‍රමය"
+            'Artist: Shapes': "කලාකරු: හැඩයන්"
+            'Bee: Loops': "බඹරා: ලූපයන්"
+            'Bee: Sequence': "බඹරා: අනුක්‍රමය"
+            Building a Foundation: "පදනමක් තැනීම"
+            Getting Loopy: "ඔල්මාද වීම"
+            Going Places Safely: "තැන්වලට සුරක්ෂිතව යාම"
             Happy Maps: "සතුටු සිතියම්"
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': "පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට
+              පුරුදු වන්න"
             'Maze: Debugging': "නි‍දොස් කිරීම"
-            'Maze: Loops': 'Maze: Loops'
-            'Maze: Sequence': 'Maze: Sequence'
-            Move it, Move it: Move it, Move it
-            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee: Spelling Bee
-            'Studio: Create a Story': 'Play Lab: Create a Story'
-            The Big Event: The Big Event
+            'Maze: Loops': "අවුල් ජාලය: ලූපයන්"
+            'Maze: Sequence': "අවුල් ජාලය: අනුක්‍රමය"
+            Move it, Move it: "එය ගෙන යන්න, ගෙන යන්න"
+            'Real-life Algorithms: Plant a Seed': "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල
+              කරන්න"
+            Spelling Bee: "අක්ෂර වින්‍යාස බඹරා"
+            'Studio: Create a Story': "ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න"
+            The Big Event: "විශාල සිදුවීම"
         course2:
-          title: Course 2
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
-          description_short: Start with Course 2 for students who can read.
+          title: "පාඨමාලාව 2"
+          description: "කියවීමට හැකි ක්‍රමලේඛනය පිලිබඳ පෙර දැනුමක් නැති සිසුන් සඳහා
+            පාඨමාලා අංක 2න් පටන් ගත හැකිය. මෙහිදී සිසුන් විසින් ගැටලු විසඳීමට වැඩසටහන්
+            නිර්මාණය කල යුතුයි. නැතහොත් ක්‍රීඩා හෝ කතන්දර සෑදිය හැක. මේවා බෙදා ගත
+            හැක. වයස අවුරුදු 2 සිට 5 දක්වා ළමුන් සඳහා නිර්දේශිතයි."
+          description_short: "කියවීම ට හැකි සිසුන් පාඨමාලා අංක 2 ආරම්භ කරන්න."
           description_audience: Ages 6-18
           stage:
-            'Artist: Debugging': 'Artist: Debugging'
-            'Artist: Loops': 'Artist: Loops'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Sequence': 'Artist: Sequence'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Loops': 'Bee: Loops'
-            Binary Bracelets: Binary Bracelets
+            'Artist: Debugging': "කලාකරු: නිදොසීම"
+            'Artist: Loops': "කලාකරු: ලූපයන්"
+            'Artist: Nested Loops': "කලාකරු: කැදැලි ලූපයන්"
+            'Artist: Sequence': "කලාකරු: අනුක්‍රමය"
+            'Bee: Conditionals': "බඹරා: කොන්දෙසිගත"
+            'Bee: Debugging': "බඹරා: නිදොසීම"
+            'Bee: Loops': "බඹරා: ලූපයන්"
+            Binary Bracelets: "ද්විමය වළලු"
             Conditionals: "කන්ඩිෂනලස්"
-            Flappy: Flappy
-            Getting Loopy: Getting Loopy
+            Flappy: "ෆ්ලැපි"
+            Getting Loopy: "ඔල්මාද වීම"
             Graph Paper Programming: "ප්‍රස්තාර රටා වැඩසටහන්"
-            'Maze: Loops': 'Maze: Loops'
-            'Maze: Sequence': 'Maze: Sequence'
-            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-            Relay programming: Relay programming
-            'Studio: Create a Story': 'Play Lab: Create a Story'
-            The Big Event: The Big Event
-            Your Digital Footprint: Your Digital Footprint
+            'Maze: Loops': "අවුල් ජාලය: ලූපයන්"
+            'Maze: Sequence': "අවුල් ජාලය: අනුක්‍රමය"
+            'Real-life Algorithms: Paper Planes': "තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල"
+            Relay programming: "ප්‍රතිචාරණ ක්‍රමලේඛනය"
+            'Studio: Create a Story': "ක්‍රීඩා පරීක්ෂණාගාරය: කථාවක් සාදන්න"
+            The Big Event: "විශාල සිදුවීම"
+            Your Digital Footprint: "ඔබේ ඩිජිටල් පා සටහන"
         course3:
           title: "පාඨමාලාව 3"
-          description: Course 3 is designed for students who have taken Course 2.
-            Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-5.
-          description_short: Course 3 is a follow-up to Course 2.
-          description_audience: Ages 8-18
+          description: "පාඨමාලා 3 නිර්මාණය කරලා තියෙන්නේ පාඨමාලා 2 ගන්නා ලද සිසුන්
+            සඳහා පමණි. නම්‍යශීලී විසඳුම් සඳහා කලින් පාඨමාලාවේ හඳුන්වා ක්‍රම ලේඛන මාතෘකා
+            තවත් සංකීර්ණ ගැටළු විසඳිමට සිසුන් ගැඹුරට අධ්‍යනය කරාවි. මෙම පාඨමාලාව අවසන්
+            වන විට, අනිත් අය සමහ බෙදා ගත හැකි අන්තර් කතා සහ ක්‍රීඩා සිසුන් නිර්මාණය
+            කරයි. 4-5 ශ්‍රේණි සඳහා නිර්දේශිතයි."
+          description_short: "පාඨමාලා 3 , පාඨමාලා 2 හි පසු විපරමකි"
+          description_audience: "වයස අවුරුදු 8-18"
           stage:
             Artist: "කලාකරු"
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Patterns': 'Artist: Patterns'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Functions': 'Bee: Functions'
-            'Bee: Nested Loops': 'Bee: Nested Loops'
+            'Artist: Functions': "කලාකරු: ශ්‍රිත"
+            'Artist: Nested Loops': "කලාකරු: කැදැලි ලූපයන්"
+            'Artist: Patterns': "කලාකරු: රටා"
+            'Bee: Conditionals': "බඹරා: කොන්දෙසිගත"
+            'Bee: Debugging': "බඹරා: නිදොසීම"
+            'Bee: Functions': "බඹරා: ශ්‍රිත"
+            'Bee: Nested Loops': "බඹරා: කැදැලි ලූපයන්"
             Bounce: "පොළා පනිනවා"
             Computational Thinking: "සංඛ්‍යාත්මක සිතීම"
-            Crowdsourcing: Crowdsourcing
-            Dice Race: Dice Race
-            Digital Citizenship: Digital Citizenship
-            'Farmer: While Loops': 'Farmer: While Loops'
-            Functional Suncatchers: Functional Suncatchers
+            Crowdsourcing: Crowdsourcing වැඩසටහන
+            Dice Race: "දාදු කැටය විහිදීම"
+            Digital Citizenship: "ඩිජිටල් පුරවැසිකම"
+            'Farmer: While Loops': "ගොවියා: ලූපයන් අතරේ"
+            Functional Suncatchers: "කියාකාරී නිර්මානාත්මක විදුරු කැබැල්ල"
             Internet: "අන්තර්ජාලය"
-            Maze: Maze
-            'Maze: Conditionals': 'Maze: Conditionals'
-            Songwriting: Songwriting
-            'Studio: Create a Game': 'Play Lab: Create a Game'
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            Maze: "පැටලිලි සහිත මාර්ගය"
+            'Maze: Conditionals': "අවුල් ජාලය: කොන්දෙසිගත"
+            Songwriting: "ගීත ලිවීම"
+            'Studio: Create a Game': "ක්‍රීඩා පරීක්ෂණාගාරය: ක්‍රීඩාවක් සාදන්න"
+            'Studio: Create a Story': "ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න"
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          description_short: Create a story or make a game with Play Lab!
+          title: "ක්‍රීඩා පරීක්ෂණාගාරය"
+          description: "ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!"
+          description_short: "ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
+            හදන්න!"
           stage:
-            Play Lab: Play Lab
+            Play Lab: "ක්‍රීඩා පරීක්ෂණාගාරය"
         artist:
           title: "කලාකරු"
-          description: Draw cool pictures and designs with the Artist!
-          description_short: Draw cool pictures and designs with the Artist!
+          description: "චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!"
+          description_short: "චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!"
           stage:
             Artist: "කලාකරු"
         hourofcode:
-          title: "පැයේ කේතය"
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          title: "පැරණි වංකගිරිය"
+          description: Angry Birds, Plants vs. Zombies, Ice Age වල චරිත ඇසුරෙන් පරිගණක
+            විද්‍යාවේ මූලික කරුණු ඉගෙනගන්න!
+          description_short: "පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
+            කරන්න!"
           stage:
-            Maze: Maze
+            Maze: "පැටලිලි සහිත මාර්ගය"
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
-          description_short: Let's use code to join Anna and Elsa as they explore
-            the magic and beauty of ice.
+          title: "ඇනා සහ එල්සා සමඟ කේතනය කරන්න"
+          description: "ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු වීමට අපිත්
+            කෝඩ් කරමු. ඔබ හිම පදින අතරතුරු හිම බිඳිති සහ රටා වලින් නව හිම ලන්තයක්
+            නිර්මාණය කර ඔබේ මිතුරන් සමග බෙදා ගත හැකියි!"
+          description_short: "ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු
+            වීමට අපිත් කෝඩ් කරමු."
           stage:
             Artist: "කලාකරු"
         course4:
-          title: Course 4
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description_audience: Ages 10-18
+          title: "පාඨමාලාව 4"
+          description: "පාඨමාලා අංක 4, 2 සහ 3 පාඨමාලා නිම කල සිසුන්ටයි. සංකල්ප කිහිපයක්
+            භාවිතයෙන් සංකීර්ණ ප්‍රහේලිකා විසඳීම මෙහිදී සිදු කෙරේ. පාඨමාලාව අවසන් කරන
+            විට ලූප්ස් සහ ශ්‍රිත ඇතුලත් වැඩසටහන් නිර්මාණය කරමින් තම හැකියාවන් ඉදිරිපත්
+            කිරීමට සිසුනට හැකිය. වයස අවුරුදු 4 සිට 8 දක්වා ළමුන් සඳහා නිර්දේශිතයි."
+          description_short: "පාඨමාලා අංක 4 තෝරාගන්නා සිසු 2වන සහ 3වන පාඨමාලා නිඅ
+            කර තිබිය යුතුයි."
+          description_audience: "වයස අවුරුදු 10-18"
           stage:
             Artist: "කලාකරු"
-            Artist Binary: Artist Binary
-            'Artist: For Loops': 'Artist: For Loops'
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-            Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
-            Maze and Bee: Maze and Bee
-            'Play Lab: For Loops': 'Play Lab: For Loops'
-            'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-            'Play Lab: Variables': 'Play Lab: Variables'
-            Super Challenge - For Loops: Super Challenge - For Loops
-            Super Challenge - Functions and Parameters: Super Challenge - Functions
-              and Parameters
-            Super Challenge - Variables: Super Challenge - Variables
-            'Unplugged: Binary': 'Unplugged: Binary'
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-            'Unplugged: Madlibs': 'Unplugged: Madlibs'
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with
-              Parameters'
-            'Unplugged: Tangrams': 'Unplugged: Tangrams'
+            Artist Binary: "කලාකරු ද්විමය"
+            'Artist: For Loops': "කලාකරු: ලූපයන් සඳහා"
+            'Artist: Functions': "කලාකරු: ශ්‍රිත"
+            'Artist: Functions with Parameters': "කලාකරු: පරාමිතියන් සහිත ශ්‍රිත"
+            'Artist: Variables': "කලාකරු: විචල්‍ය"
+            'Bee: For Loops': "බඹරා: ලූපයන් සඳහා"
+            'Bee: Functions with Parameters': "බඹරා: පරාමිතියන් සහිත ශ්‍රිත"
+            Extreme Challenge - Comprehensive: "දැඩි අභියෝගය - පුළුල්"
+            Maze and Bee: "අවුල් ජාලය සහ බඹරා"
+            'Play Lab: For Loops': "ක්‍රීඩා පරීක්ෂණාගාරය: ලූපයන් සඳහා"
+            'Play Lab: Functions with Parameters': "ක්‍රීඩා පරීක්ෂණාගාරය: පරාමිතියන්
+              සහිත ශ්‍රිත"
+            'Play Lab: Variables': "ක්‍රීඩා විද්‍යාගාරය: විචල්‍යන්"
+            Super Challenge - For Loops: "සුපිරි අභියෝගය - For loops"
+            Super Challenge - Functions and Parameters: "සුපිරි අභියෝගය - පරාමිතියන්
+              සහ ශ්‍රිත"
+            Super Challenge - Variables: "සුපිරි අභියෝගය - විචල්‍යන්"
+            'Unplugged: Binary': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා"
+            'Unplugged: Envelope Variables': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ආවරණය
+              කරන ලද විචල්‍යන්"
+            'Unplugged: For Loop Fun': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: For Loop සෙල්ලම"
+            'Unplugged: Madlibs': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Madlibs"
+            'Unplugged: Songwriting with Parameters': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්:
+              පරාමිතීන් සමඟ ගීත ලිවීම"
+            'Unplugged: Tangrams': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Tangrams"
         Course4pre:
-          title: Course 4 Prerequisite
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
+          title: "පාඨමාලා අංක 4 සඳහා පෙර අවශ්‍යතාවයකි"
+          description: "පාඨමාලා 1 සහ 2 සම්පූර්ණ නොකරන ලද සිසුන් සඳහා කෙටි වැඩි කිරීමක්."
+          description_short: "පාඨමාලා 1 සහ 2 සම්පූර්ණ නොකරන ලද සිසුන් සඳහා කෙටි වැඩි
+            කිරීමක්."
           stage:
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Loops': 'Artist: Loops'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Sequence': 'Artist: Sequence'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Nested Loops': 'Bee: Nested Loops'
-            'Farmer: While Loops': 'Farmer: While Loops'
-            'Maze: Sequence': 'Maze: Sequence'
+            'Artist: Functions': "කලාකරු: ශ්‍රිත"
+            'Artist: Loops': "කලාකරු: ලූපයන්"
+            'Artist: Nested Loops': "කලාකරු: කැදැලි ලූපයන්"
+            'Artist: Sequence': "කලාකරු: අනුක්‍රමය"
+            'Bee: Conditionals': "බඹරා: කොන්දෙසිගත"
+            'Bee: Debugging': "බඹරා: නිදොසීම"
+            'Bee: Nested Loops': "බඹරා: කැදැලි ලූපයන්"
+            'Farmer: While Loops': "ගොවියා: ලූපයන් අතරේ"
+            'Maze: Sequence': "අවුල් ජාලය: අනුක්‍රමය"
+          description_audience: ''
         usability:
           title: Usability Testing
           description: A selection of Course 4 levels for usability testing.
           description_short: ''
           stage:
             Binary: "ද්විමය"
-            For Loops: For Loops
-            Functions and Functions with Parameters: Functions and Functions with
-              Parameters
-            Intro: Intro
+            For Loops: "ලූපයන් සඳහා"
+            Functions and Functions with Parameters: "ශ්‍රිතයන් සහ පරාමිතියන් සහිත
+              ශ්‍රිත"
+            Intro: "හැඳින්වීම"
             Variables: "විචල්‍යන්"
+          description_audience: ''
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -186,11 +190,11 @@
           stage:
             'Calc: Defining Variables': Defining Variables and Substitution
             'Calc: Evaluation Blocks': Evaluation Blocks and Arithmetic Expressions
-            'Eval: Boolean Operators': Boolean Operators
+            'Eval: Boolean Operators': "බූලියන් මෙහෙයුම් සංකේත"
             'Eval: Conditionals': "කන්ඩිෂනලස්"
             'Eval: Defining Functions': Composite Functions
             'Eval: Functions': Solving Word Problems with the Design Recipe
-            'Eval: Strings and Images': Strings and Images
+            'Eval: Strings and Images': "තන්තු සහ රූප"
             'Eval: Writing Contracts': Writing Contracts
             'Play Lab: Animation (Big Game)': The Big Game - Animation
             'Play Lab: Boolean (Big Game)': The Big Game - Booleans
@@ -207,12 +211,13 @@
             'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
             'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
               and Coordinate Planes'
+          description_audience: ''
         infinity:
-          title: Disney Infinity Play Lab
-          description: Use Play Lab to create a story or game starring Disney Infinity
-            characters.
-          description_short: Use Play Lab to create a story or game starring Disney
-            Infinity characters.
+          title: "ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය"
+          description: "ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත ඇති කතාවක්
+            හෝ ක්‍රීඩාවක් සාදන්න."
+          description_short: "ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත
+            ඇති කතාවක් හෝ ක්‍රීඩාවක් සාදන්න."
           stage:
             Infinity: "අනන්තය"
         algebrademo:
@@ -226,40 +231,42 @@
             Defining Variables: Defining Variables
             Evaluation Blocks: Evaluation Blocks
             Making Pictures: Making Pictures
-            The Design Recipe: The Design Recipe
+            The Design Recipe: "නිර්මාණ වට්ටෝරුව"
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
           description_short: Professional Development for K5 Courses
           stage:
             Computer Science Pedagogy: Computer Science Pedagogy
-            Introduction to PD: Introduction to PD
-            K-5 Courses: K-5 Courses
-            Next Steps: Next Steps
-            'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
-            'Programming Concept: Events': 'Programming Concept: Events'
-            'Programming Concept: Functions': 'Programming Concept: Functions'
-            'Programming Concept: Loops': 'Programming Concept: Loops'
-            Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
-            Unplugged lessons: Unplugged lessons
-            Writing computer programs: Writing computer programs
+            Introduction to PD: PD වෙත හඳුන්වාදීම
+            K-5 Courses: K-5 පාඨමාලා
+            Next Steps: "ඉදිරි පියවර"
+            'Programming Concept: Conditionals': "ක්‍රමලේඛන සංකල්පය: කොන්දේසිගත"
+            'Programming Concept: Events': "ක්‍රමලේඛන සංකල්පය: සිදුවීම්"
+            'Programming Concept: Functions': "ක්‍රමලේඛන සංකල්පය: ශ්‍රිත"
+            'Programming Concept: Loops': "ක්‍රමලේඛන සංකල්පය: ලූපයන්"
+            Reflection: "අන්තරාවලෝකනය"
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
+            Unplugged lessons: "එළිදැක්වූ පාඩම්"
+            Writing computer programs: "පරිගණක ක්‍රමලේඛන ලිවිම"
+          description_audience: ''
         netsim:
           title: "අන්තර්ජාල සමාකෘතිය"
-          description: Learn about how the Internet works
-          description_short: Learn about how the Internet works
+          description: "අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න"
+          description_short: "අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න"
           stage:
-            Automatic DNS node: Automatic DNS node
-            Broadcasting messages: Broadcasting messages
-            Internet Simulator Freeplay: Internet Simulator Freeplay
-            Manual DNS: Manual DNS
-            Overview and Setup Instructions: Overview and Setup Instructions
+            Automatic DNS node: "ස්වයංක්‍රීය DNS නෝඩුව"
+            Broadcasting messages: "ප්‍රචාරණ පණිවිඩ"
+            Internet Simulator Freeplay: "අන්තර්ජාල සමාකෘති නිදහස්ව ක්‍රීඩා කිරීම"
+            Manual DNS: "හස්තීය DNS"
+            Overview and Setup Instructions: "දළ විශ්ලේෂණය සහ පිහිටුවීමේ උපදෙස්"
             Packets and Reliability: Packets and Reliability
             Peer to Peer - Sending Ascii: Peer to Peer - Sending Ascii
             Peer to Peer - Sending Bits on a Shared Wire: Peer to Peer - Sending Bits
               on a Shared Wire
             Peer to Peer - Sending Numbers: Peer to Peer - Sending Numbers
             Routers and addresses: Routers and addresses
+          description_audience: ''
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -270,14 +277,17 @@
             Color Pixelation Examples: Color Pixelation Examples
             Color Pixelation Freeplay: Color Pixelation Freeplay
             Color Pixelation Tutorial: Color Pixelation Tutorial
+          description_audience: ''
         20-hour:
-          title: Accelerated Intro to CS Course
-          description: This 20-hour course covers the core computer science and programming
-            concepts in courses 2-4. The course is designed for use with ages 10-18.
-            Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
-          description_audience: Ages 10-18
+          title: CS පාඨමාලාව වෙත වේගවත් හැඳින්වීමක්
+          description: "මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය
+            වන අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය වේ. අවුරුදු
+            10-18 අතර සිසුන් සඳහා මෙය නිර්මාණය කර ඇත. පරිපූර්ණ අත්දැකීමක් සඳහා 2 සිට
+            4 දක්වා ඇති පාඨමාලාවන් බලන්න!"
+          description_short: "මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප
+            ආවරණය වන අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය
+            වේ."
+          description_audience: "වයස අවුරුදු 10-18"
           stage:
             Abstraction: "ඇබ්ස්ට්‍රැක්ෂන්"
             Algorithms: "ඇල්ගොරිතම්"
@@ -306,9 +316,10 @@
           stage:
             Applab: Applab
             Hoc2015 Blockly: Hoc2015 Blockly
-            Play Lab: Play Lab
+            Play Lab: "ක්‍රීඩා පරීක්ෂණාගාරය"
             The Artist: "කලාකරුවා"
             The Maze: "වංකගිරිය"
+          description_audience: ''
         events:
           title: "සිද්ධීන්"
           description: "සිද්ධීන්"
@@ -317,45 +328,51 @@
             Bounce: "පොළා පනිනවා"
             Calc: Calc
             Eval: Eval
-            Studio: Studio
+            Studio: "ස්ටූඩියෝව"
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description: "විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද?
+            අපගේ Flappy Code නිබන්දනය කියවන්න!"
+          description_short: "ඔබේම ෆ්ලැපී බර්ඩ් ගේම් එකක් විනාඩි 10කින් හදන්න!"
           stage:
             Flappy Code: Flappy Code
         jigsaw:
           title: "පින්තූර ප්‍රෙහේලිකාව"
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: "අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න"
+          description_short: "අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න"
           stage:
             Jigsaw: "පින්තූර ප්‍රෙහේලිකාව"
+          description_audience: ''
         step:
           title: "පියවර"
           description: "පියවර නිබන්ධනය"
           description_short: "පියවර නිබන්ධනය"
           stage:
             Step: "පියවර"
+          description_audience: ''
         Hour of Code:
           title: "පැයේ කේතය 2013"
-          description: Try the basics of computer science with characters from Angry
-            Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
+          description: "ඇන්ග්‍රි බර්ඩ්ස් සහ ගස් යක්කු වල චරිත වලින් පරිගණක විද්‍යාවේ
+            මූලිකාංග ඉගෙනගන්න!"
+          description_short: "පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
+            කරන්න!"
           stage:
             Hour of Code 2013: "පැයේ කේතය 2013"
+          description_audience: ''
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "ප්‍රහේලිකා"
+          description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "ප්‍රහේලිකා"
+          description_audience: ''
         cspunit1:
           title: CSP Unit 1 - Digital Information
           description: This unit explores the technical challenges and questions that
@@ -388,11 +405,12 @@
           stage:
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -404,11 +422,12 @@
             Luigi's Pizza: Luigi's Pizza
             Rocket-Height: Rocket-Height
             Sam the Bat: Sam the Bat
-            Strings and Images: Strings and Images
+            Strings and Images: "තන්තු සහ රූප"
             Your Game - Animation: Your Game - Animation
             Your Game - Booleans: Your Game - Booleans
             Your Game - Collision Detection: Your Game - Collision Detection
             Your Game - Player Movement: Your Game - Player Movement
+          description_audience: ''
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
@@ -423,7 +442,7 @@
             Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
             Growth Mindset: Growth Mindset
             Impact of Computer Science: Impact of Computer Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is CSP?: What is CSP?
@@ -434,6 +453,7 @@
           stage:
             Lesson 14: Lesson 14
             Lesson 15: Lesson 15
+          description_audience: ''
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -441,7 +461,7 @@
           stage:
             Growth Mindset: Growth Mindset
             Impact of Computer Science: Impact of Computer Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is ECS?: What is ECS?
@@ -458,19 +478,21 @@
             Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
               Systems
             Introduction to Computational Science: Introduction to Computational Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Introduction to StarLogo Nova: Introduction to StarLogo Nova
             Post-Survey: Post-Survey
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
           description_short: rbo-reference
           stage:
             reference: reference
+          description_audience: ''
         Test Wednesday:
           title: Test Wednesday
           description: Test Wednesday
@@ -491,7 +513,7 @@
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
             Compound Conditional Logic: Compound Conditional Logic
             Controlling Memory with Variables: Controlling Memory with Variables
-            Creating Functions: Creating Functions
+            Creating Functions: "ශ්‍රිතය නිර්මාණය කරන්න"
             Creating functions with Parameters: Creating Functions with Parameters
             Digital Assistant Project: Digital Assistant Project
             Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -514,7 +536,8 @@
             User Input and Strings: User Input and Strings
             Using Simple Commands: Using Simple Commands
             Using Variables in Apps: Using Variables in Apps
-            While Loops: While Loops
+            While Loops: "නැවත සිදුවන ලුප"
+          description_audience: ''
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -523,11 +546,12 @@
             Computer Science Pedagogy: Computer Science Pedagogy
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
-            Next Steps: Next Steps
-            Strings and Images: Strings and Images
-            Teacher Dashboard: Teacher Dashboard
+            Next Steps: "ඉදිරි පියවර"
+            Strings and Images: "තන්තු සහ රූප"
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             The Big Game: The Big Game
-            The Design Recipe: The Design Recipe
+            The Design Recipe: "නිර්මාණ වට්ටෝරුව"
+          description_audience: ''
         ECSPD-NexTech:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -536,7 +560,7 @@
           stage:
             Growth Mindset: Growth Mindset
             Impact of Computer Science: Impact of Computer Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is ECS?: What is ECS?
@@ -548,7 +572,7 @@
           stage:
             Growth Mindset: Growth Mindset
             Impact of Computer Science: Impact of Computer Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is ECS?: What is ECS?
@@ -560,9 +584,9 @@
           stage:
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
         algebraPD-iZone:
@@ -573,9 +597,9 @@
           stage:
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
         sciencePD-NexTech:
@@ -592,7 +616,7 @@
             Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
               Systems
             Introduction to Computational Science: Introduction to Computational Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Introduction to StarLogo Nova: Introduction to StarLogo Nova
             Post-Survey: Post-Survey
             The Tutorial: The Tutorial
@@ -613,7 +637,7 @@
             Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
               Systems
             Introduction to Computational Science: Introduction to Computational Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Introduction to StarLogo Nova: Introduction to StarLogo Nova
             Post-Survey: Post-Survey
             The Tutorial: The Tutorial
@@ -631,7 +655,7 @@
             Revisiting Agent Movement: Revisiting Agent Movement
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: "ආයුබෝවන්!"
-            Wrap-Up: "අවසන් කරන්න"
+            Wrap-Up: "වෙළනවා"
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -698,8 +722,9 @@
             Luigi's Pizza: Luigi's Pizza
             Rocket-Height: Rocket-Height
             Sam the Bat: Sam the Bat
-            Strings and Images: Strings and Images
-            The Design Recipe: The Design Recipe
+            Strings and Images: "තන්තු සහ රූප"
+            The Design Recipe: "නිර්මාණ වට්ටෝරුව"
+          description_audience: ''
         allthethings:
           title: All the Things!
           description: All the level types for UI testing
@@ -713,14 +738,14 @@
             Bounce: "පොළා පනිනවා"
             CSinA: CSinA
             Farmer: Farmer
-            Flappy: Flappy
+            Flappy: "ෆ්ලැපි"
             Free Response: Free Response
             Gamelab: Gamelab
             Jigsaw: "පින්තූර ප්‍රෙහේලිකාව"
             Long assessment: Long assessment
             Markdown Details: Markdown Details
             Match: "ගළපන්න"
-            Maze: Maze
+            Maze: "පැටලිලි සහිත මාර්ගය"
             Minecraft: "මයින්ක්‍රාෆ්ට්"
             Multi: "බහුවිධ"
             Multi2: Multi2
@@ -733,11 +758,12 @@
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: "ස්ටූඩියෝව"
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+          description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -751,11 +777,12 @@
             Defining Variables: Defining Variables
             'Eval: Conditionals': 'Eval: Conditionals'
             Evaluation Blocks: Evaluation Blocks
-            Next Steps: Next Steps
+            Next Steps: "ඉදිරි පියවර"
             Rocket-Height: Rocket-Height
-            Strings and Images: Strings and Images
-            Teacher Dashboard: Teacher Dashboard
+            Strings and Images: "තන්තු සහ රූප"
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Writing Contracts: Writing Contracts
+          description_audience: ''
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -768,6 +795,7 @@
             Text Compression Lesson: Text Compression Lesson
             Text Compression Widget: Text Compression Widget
             Welcome!: "ආයුබෝවන්!"
+          description_audience: ''
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -785,8 +813,9 @@
             'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
             'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
             'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
-            Next Steps: Next Steps
+            Next Steps: "ඉදිරි පියවර"
             Planning: Planning
+          description_audience: ''
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -799,10 +828,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -812,6 +841,7 @@
               Impact of Computers and Communication
             Welcome!: "ආයුබෝවන්!"
             Wrap-up: "වෙළනවා"
+          description_audience: ''
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -825,11 +855,12 @@
           description_short: 'Phase 2 Online: Blended Summer Study'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
-            The Design Recipe: The Design Recipe
+            The Design Recipe: "නිර්මාණ වට්ටෝරුව"
             Welcome!: "ආයුබෝවන්!"
+          description_audience: ''
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -841,7 +872,7 @@
             Reviewing the Modules: Reviewing the Modules
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: "ආයුබෝවන්!"
-            Wrap-Up: "අවසන් කරන්න"
+            Wrap-Up: "වෙළනවා"
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -849,6 +880,7 @@
           stage:
             Code.org Equity PD: Code.org Equity PD
             Necessary Background: Necessary Background
+          description_audience: ''
         science-PD2:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -860,7 +892,8 @@
             Reviewing the Modules: Reviewing the Modules
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: "ආයුබෝවන්!"
-            Wrap-Up: "අවසන් කරන්න"
+            Wrap-Up: "වෙළනවා"
+          description_audience: ''
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with
@@ -872,7 +905,8 @@
               Environments
             Getting Started: Getting Started
             Introduction to Equity: Introduction to Equity
-            Next Steps: Next Steps
+            Next Steps: "ඉදිරි පියවර"
+          description_audience: ''
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -884,7 +918,7 @@
             Reviewing the Modules: Reviewing the Modules
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: "ආයුබෝවන්!"
-            Wrap-Up: "අවසන් කරන්න"
+            Wrap-Up: "වෙළනවා"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -897,10 +931,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -922,10 +956,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -961,6 +995,7 @@
           description_short: Odometer widget
           stage:
             Odometer Widget: Odometer Widget
+          description_audience: ''
         asUnplugged:
           title: Afterschool Unplugged
           description: Afterschool Unplugged is designed to teach computational thinking
@@ -971,15 +1006,16 @@
           description_short: Short unplugged course designed for informal learning
           description_audience: Ages 6-13
           stage:
-            Binary Bracelets: Binary Bracelets
-            Building a Foundation: Building a Foundation
-            Getting Loopy: Getting Loopy
+            Binary Bracelets: "ද්විමය වළලු"
+            Building a Foundation: "පදනමක් තැනීම"
+            Getting Loopy: "ඔල්මාද වීම"
             Graph Paper Programming: "ප්‍රස්තාර රටා වැඩසටහන්"
             Happy Maps: "සතුටු සිතියම්"
-            Move it, Move it: Move it, Move it
-            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-            Songwriting: Songwriting
-            The Big Event: The Big Event
+            Move it, Move it: "එය ගෙන යන්න, ගෙන යන්න"
+            'Real-life Algorithms: Plant a Seed': "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල
+              කරන්න"
+            Songwriting: "ගීත ලිවීම"
+            The Big Event: "විශාල සිදුවීම"
         afterschool1:
           title: Afterschool 1
           description: Afterschool 1 is designed to for informal classrooms where
@@ -997,6 +1033,7 @@
           description_short: Vigenere Cipher Widget
           stage:
             Vigenere: Vigenere
+          description_audience: ''
         algebraPD3a:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra blended online school year
@@ -1008,6 +1045,7 @@
             Updates - The Big Game and Projects: Updates - The Big Game and Projects
             Updates - The Design Recipe: Updates - The Design Recipe
             Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          description_audience: ''
         sciencePD3_pre1:
           title: Computer Science in Science PD Phase 3 Before 1st In-Person
           description: Phase 3 Blended Summer Study (Segment One)
@@ -1016,6 +1054,7 @@
             Prep With Your Modules: Prep With Your Modules
             The TLO: The TLO
             Welcome Back!: Welcome Back!
+          description_audience: ''
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies
@@ -1037,6 +1076,7 @@
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: ''
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description: Refer to this online professional development content throughout
@@ -1050,6 +1090,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit4:
           title: 'Exploring Computer Science: Unit 4'
           description: Refer to this online professional development content throughout
@@ -1063,6 +1104,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1074,6 +1116,7 @@
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+          description_audience: ''
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1085,11 +1128,12 @@
             Unit 6 Challenge: Unit 6 Challenge
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
+          description_audience: ''
         cspunit4draft:
           title: CS Principles Unit 4 - Data
-          description: |
-            Collect, analyze, and extract knowledge from data by programming and
-            building apps. Process data imported from other sources and also pull
+          description: |-
+            Collect, analyze, and extract knowledge from data by programming and\r
+            building apps. Process data imported from other sources and also pull\r
             data from live data APIs.
           description_short: Data
           stage:
@@ -1122,6 +1166,7 @@
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: What Data Can Tell Us
             Why Make Apps?: Why Make Apps?
+          description_audience: ''
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description: Phase 3 Academic Year Development
@@ -1132,7 +1177,7 @@
             Physical Science Challenges: Physical Science Challenges
             Thinking About Implementation: Thinking About Implementation
             Welcome!: "ආයුබෝවන්!"
-            Wrap-Up: "අවසන් කරන්න"
+            Wrap-Up: "වෙළනවා"
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1145,6 +1190,7 @@
             Teaching Support - Lessons 17-20: Teaching Support - Lessons 17-20
             Teaching Support - Lessons 4-7: Teaching Support - Lessons 4-7
             Teaching Support - Lessons 8-12: Teaching Support - Lessons 8-12
+          description_audience: ''
         CSPPD3-Unit2:
           title: 'Computer Science Principles: Unit 2 PD'
           description: Online Exploration of CSP Unit 2
@@ -1155,6 +1201,7 @@
             Getting Started: Getting Started
             Share out and Submit: Share out and Submit
             Unit 2 Overview: Unit 2 Overview
+          description_audience: ''
         duino:
           title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
@@ -1167,24 +1214,29 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: "වයස අවුරුදු 10-18"
           stage:
             Halloween 2015: Halloween 2015
+          description: ''
         SpecialSeries:
           title: Special Levels
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: "වයස අවුරුදු 10-18"
           stage:
             Spring 2016: Spring 2016
+            Halloween 2015: Halloween 2015
         iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
+          title: "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය"
+          description: "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
+            හදන්න!"
+          description_short: "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
+            එකක් හදන්න!"
           stage:
-            Ice Age Play Lab: Ice Age Play Lab
+            Ice Age Play Lab: "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය"
+          description_audience: ''
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1217,7 +1269,8 @@
             Loops and Simulations: Loops and Simulations
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
-            While Loops: While Loops
+            While Loops: "නැවත සිදුවන ලුප"
+          description_audience: ''
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1231,32 +1284,36 @@
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
+          title: "ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය"
+          description: "ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
+            හදන්න!"
+          description_short: "ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
+            එකක් හදන්න!"
           stage:
-            Gumball Play Lab: Gumball Play Lab
+            Gumball Play Lab: "ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය"
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
+          title: 'Star Wars: කේතය සමඟින් මන්දාකිණියක් තැනීම'
+          description: "ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක
+            ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න."
+          description_short: "ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
+            මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න."
           stage:
             Hour of Code 2015: "පැයක කේතය 2015"
+          description_audience: ''
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
+          title: 'Star Wars: කේතය සමඟින් මන්දාකිණියක් තැනීම'
+          description: "ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක
+            ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න."
+          description_short: "ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
+            මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න."
           stage:
             Hour of Code 2015: "පැයක කේතය 2015"
+          description_audience: ''
         mc:
           title: Minecraft Hour of Code
           description: "මෙම මයින්ක්‍රාෆ්ට් ලෝකය හරහා දුෂ්කර වූ ක්‍රියාවක් මත ස්ටීව්
             හෝ ඇලෙක්ස් රැඟෙන යාමට කේත කොටස් භාවිතා කරන්න"
-          description_short: Explore a Minecraft world through code
+          description_short: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
           stage:
             Hour of Code 2015: "පැයක කේතය 2015"
         CSPPD3-Unit3-pt2:
@@ -1276,7 +1333,7 @@
               Refresh your connection to Complex Adaptive Systems"
             Assessing Computer Models: Assessing Computer Models
             Welcome!: "ආයුබෝවන්!"
-            Wrap-Up: "අවසන් කරන්න"
+            Wrap-Up: "වෙළනවා"
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -1313,6 +1370,7 @@
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+          description_audience: ''
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description: Online Support for CSP Unit 4
@@ -1372,6 +1430,7 @@
             Sample Apps: Sample Apps
             Updating Records: Updating Records
             Visualizing Data: Visualizing Data
+          description_audience: ''
         AlgebraA:
           title: 'Computer Science in Algebra: Course A'
           description: Learn Functional Programming through Algebra
@@ -1387,6 +1446,7 @@
             'Unplugged: Contracts': 'Unplugged: Contracts'
             'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
             'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          description_audience: ''
         AlgebraB:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -1408,6 +1468,7 @@
               and Piecewise Functions'
             'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
               and Coordinate Planes'
+          description_audience: ''
         gamelab-hackathon:
           title: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -1421,11 +1482,12 @@
           stage:
             Course Overview: Course Overview
             Evaluation Blocks: Evaluation Blocks
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         algebraPD3c:
           title: Computer Science in Algebra PD
           description: CS in Algebra end of year reflection
@@ -1434,6 +1496,7 @@
             Getting Started: Getting Started
             Planning For the Future: Planning For the Future
             Sharing Student Work: Sharing Student Work
+          description_audience: ''
         csp1:
           title: CS Principles Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
@@ -1463,6 +1526,7 @@
             The Need for DNS: The Need for DNS
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 2 Assessment: Unit 1 Chapter 2 Assessment
+          description_audience: ''
         csp2:
           title: CS Principles Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
@@ -1492,6 +1556,7 @@
             Text Compression: Text Compression
             Unit 2 Chapter 1 Assessment: Unit 2 Chapter 1 Assessment
             Unit 2 Chapter 2 Assessment: Unit 2 Chapter 2 Assessment
+          description_audience: ''
         csp3:
           title: CSP Unit 3 - Programming
           description: This unit introduces the foundational concepts of computer
@@ -1502,7 +1567,7 @@
           description_short: Programming
           stage:
             APIs and Function Parameters: APIs and Function Parameters
-            Creating Functions: Creating Functions
+            Creating Functions: "ශ්‍රිතය නිර්මාණය කරන්න"
             Creating functions with Parameters: Creating functions with Parameters
             Creativity in Algorithms: Creativity in Algorithms
             Functions and Top-Down Design: Functions and Top-Down Design
@@ -1511,6 +1576,8 @@
             The Need For Programming Languages: The Need For Programming Languages
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Using Simple Commands
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+          description_audience: ''
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -1531,6 +1598,11 @@
             Simple Encryption: Simple Encryption
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
+            Rapid Research - Cybercrime: Rapid Research - Cybercrime
+            Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and
+              Security Dilemmas
+            Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
+          description_audience: ''
         csp5:
           title: CS Principles Unit 5 - Building Apps
           description: 'This unit continues the introduction of foundational concepts
@@ -1560,7 +1632,13 @@
             Understanding Program Flow and Logic: Understanding Program Flow and Logic
             User Input and Strings: User Input and Strings
             Using Variables in Apps: Using Variables in Apps
-            While Loops: While Loops
+            While Loops: "නැවත සිදුවන ලුප"
+            Edited lessons ABOVE this line: Edited lessons ABOVE this line
+            Buttons and Events: Buttons and Events
+            Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
+            Unit 5 Assessment 1: Unit 5 Assessment 1
+            Unit 5 Assessment 2: Unit 5 Assessment 2
+          description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
           description: This unit covers the preparation and completion of the Create
@@ -1571,6 +1649,7 @@
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+          description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
@@ -1590,6 +1669,12 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Functions: "ශ්‍රිතයන්"
+            Platform Jumper: Platform Jumper
+            Defender: Defender
+            'Project: Build a Game': 'Project: Build a Game'
+            Velocity: Velocity
+          description_audience: ''
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description: In Partnership with Project GUTS
@@ -1603,24 +1688,26 @@
             Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
               Systems
             Introduction to Computational Science: Introduction to Computational Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Introduction to StarLogo Nova: Introduction to StarLogo Nova
             Post-Survey: Post-Survey
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
           description_short: "ක්‍රමලේඛනය"
           stage:
             Drawing in Game Lab: Drawing in Game Lab
+          description_audience: ''
         CSF_Secret_Sample:
           title: Secret Sample
           description: Test of new educational philosophy
           description_short: This is a secret...shhhhh
-          description_audience: Ages 8-18
+          description_audience: "වයස අවුරුදු 8-18"
           stage:
             Sample Stage: Sample Stage
         ECSPD1:
@@ -1634,16 +1721,18 @@
             ECS Curriculum: ECS Curriculum
             Welcome to Phase 1!: Welcome to Phase 1!
             Wrap Up: Wrap Up
+          description_audience: ''
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           stage:
             Evaluation Blocks: Evaluation Blocks
-            Introduction to PD: Introduction to PD
-            Teacher Dashboard: Teacher Dashboard
+            Introduction to PD: PD වෙත හඳුන්වාදීම
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -1657,13 +1746,14 @@
             Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
               Systems
             Introduction to Computational Science: Introduction to Computational Science
-            Introduction to PD: Introduction to PD
+            Introduction to PD: PD වෙත හඳුන්වාදීම
             Introduction to StarLogo Nova: Introduction to StarLogo Nova
             Post-Survey: Post-Survey
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles
@@ -1679,6 +1769,16 @@
               in the Real World
             Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the
               Real World
+            Unit 1 - Algorithms Detour - Minimum Spanning Tree: Unit 1 - Algorithms
+              Detour - Minimum Spanning Tree
+            Unit 1 - Algorithms Detour - Shortest Path: Unit 1 - Algorithms Detour
+              - Shortest Path
+            Unit 1 - How Routers Learn: Unit 1 - How Routers Learn
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem: Unit 4 - Hard
+              Problems - The Traveling Salesperson Problem
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem: Unit 4 - One-Way
+              Functions - The WiFi Hotspot Problem
+          description_audience: ''
         cspunit1-support:
           title: Online Support for CSP Unit 1
           description: This is a test Professional Learning Course
@@ -1691,6 +1791,8 @@
             Strategies for Student Writing: Strategies for Student Writing
             Supporting Peer Learning: Supporting Peer Learning
             'Tool Talk: Intro to Netsim': 'Tool Talk: Intro to Netsim'
+          description_audience: ''
+          description_short: ''
         test-teaching-ap-cs-unit-1:
           title: Test CPS PD
           stage:
@@ -1701,6 +1803,9 @@
             test Unit 1 practice module Echo: test Unit 1 practice module Echo
             test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
             test Unit 1 required reading: test Unit 1 required reading
+          description_audience: ''
+          description_short: ''
+          description: ''
         allthehiddenthings:
           title: All the Hidden Things!
           description: Unreleased level types for UI testing as admin
@@ -1713,6 +1818,8 @@
           description: Online Supports for CSP Unit 1
           stage:
             Unit 1 Overview: Unit 1 Overview
+          description_audience: ''
+          description_short: ''
         cspunit1-tools:
           title: netsim task completion
           description: introduction to the internet simulator and a discussion of
@@ -1729,6 +1836,7 @@
             Introduction to Events: Introduction to Events
             Introduction to Text Compression: Introduction to Text Compression
             Turtle Programming: Turtle Programming
+          description_audience: ''
         cspassessment:
           title: CS Principles Culminating Assessment
           description: 'This 55-question multiple choice assessment covers questions
@@ -1737,6 +1845,7 @@
           description_short: Culminating
           stage:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
+          description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions
@@ -1746,6 +1855,7 @@
           stage:
             CS Principles Culminating Assessment Part 1: CS Principles Culminating
               Assessment Part 1
+          description_audience: ''
         cspexam2-AKwgAh1ac5:
           title: CS Principles Culminating Assessment - Part 2
           description: 'This 25 question multiple choice assessment covers questions
@@ -1756,6 +1866,7 @@
           stage:
             CS Principles Culminating Assessment Part 2: CS Principles Culminating
               Assessment Part 2
+          description_audience: ''
         CSDU4-Draft:
           title: " TEMP CSD Unit 4 - The Design Process"
           description: Temp place to work on U4 of Disco
@@ -1764,6 +1875,28 @@
             Adding Functionality (optional): Adding Functionality (optional)
             Design Mode: Design Mode
             Making it Interactive: Making it Interactive
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            UCD Micro Activity: UCD Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Re-designing a Space: Re-designing a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            User Research: User Research
+            Low Fidelity Prototyping: Low Fidelity Prototyping
+            Preparing for Prototype Testing: Preparing for Prototype Testing
+            Prototype Testing: Prototype Testing
+            Preparing for App Testing: Preparing for App Testing
+            App Testing: App Testing
+            Planning for Improvements: Planning for Improvements
+            Improving and Iterating: Improving and Iterating
+            App Presentation Prep: App Presentation Prep
+            App Presentation: App Presentation
+          description_audience: ''
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description: Temp place to work on U1 of Disco
@@ -1797,6 +1930,14 @@
             Headers and Lists: Headers and Lists
             Designing Web Pages: Designing Web Pages
             Holding: Holding
+            Describing Web pages: Describing Web pages
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Usability and Accessibility: Usability and Accessibility
+            Peer Review: "සමූහ විමර්ශනය"
+            Describing Web Pages: Describing Web Pages
+          description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1820,7 +1961,7 @@
           description_short: Just a script for playing around
           description_audience: Ages 8-98
           stage:
-            Artist Functions: Artist Functions
+            Artist Functions: "කලාකරුවාගේ ශ්‍රිත"
             Sample Stage: Sample Stage
             The same thing with named levels: The same thing with named levels
             You are a coding STAR: You are a coding STAR
@@ -1828,7 +1969,7 @@
           title: Artist Exemplar
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
-          description_audience: Ages 8-18
+          description_audience: "වයස අවුරුදු 8-18"
           stage:
             Artist Exemplar: Artist Exemplar
         teachercon:
@@ -1851,10 +1992,15 @@
             Lesson 2,2: 'Lesson 2.2: Text Compression'
             Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
             Measuring Student Learning: Measuring Student Learning
+          description_audience: ''
         kinderTest:
           stage:
-            'Bee: Conditionals': 'Bee: Conditionals'
+            'Bee: Conditionals': "බඹරා: කොන්දෙසිගත"
             Kindergarten Stage 1: Kindergarten Stage 1
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
         gradeKinder:
           title: Kindergarten
           description: Planning Script for CSF 2.0
@@ -1866,7 +2012,8 @@
             Events: "සිද්ධීන්"
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': "පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට
+              පුරුදු වන්න"
             Loops: "ලූපයන්"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -1874,6 +2021,9 @@
             Programming: "ක්‍රමලේඛනය"
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            'Real-life Algorithms: Plant a Seed': "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල
+              කරන්න"
+            'Programming Unplugged: Happy Maps': 'Programming Unplugged: Happy Maps'
         grade4:
           title: Grade 4
           description: Planning Script for CSF 2.0
@@ -1883,7 +2033,7 @@
             'Bee: Determine the Concept': 'Bee: Determine the Concept'
             'Bee: Functions (Course 3)': 'Bee: Functions (Course 3)'
             Build a Star Wars Game!: Build a Star Wars Game!
-            Digital Citizenship: Digital Citizenship
+            Digital Citizenship: "ඩිජිටල් පුරවැසිකම"
             Explore project ideas: Explore project ideas
             'Farmer: Functions (New)': 'Farmer: Functions (New)'
             Final Project - Presentation Day: Final Project - Presentation Day
@@ -1895,7 +2045,7 @@
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded
               Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Songwriting
+            Songwriting: "ගීත ලිවීම"
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -1907,7 +2057,8 @@
             Debugging: Debugging
             Events: "සිද්ධීන්"
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': "පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට
+              පුරුදු වන්න"
             Loops: "ලූපයන්"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -1916,18 +2067,21 @@
             Programming: "ක්‍රමලේඛනය"
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            Unspotted Bugs: Unspotted Bugs
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+            'Events Unplugged: The Big Event': 'Events Unplugged: The Big Event'
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 10-110
           stage:
-            'Artist: For Loops': 'Artist: For Loops'
-            'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-            Digital Citizenship: Digital Citizenship
+            'Artist: For Loops': "කලාකරු: ලූපයන් සඳහා"
+            'Artist: Functions with Parameters': "කලාකරු: පරාමිතියන් සහිත ශ්‍රිත"
+            'Artist: Variables': "කලාකරු: විචල්‍ය"
+            'Bee: For Loops': "බඹරා: ලූපයන් සඳහා"
+            'Bee: Functions with Parameters': "බඹරා: පරාමිතියන් සහිත ශ්‍රිත"
+            Digital Citizenship: "ඩිජිටල් පුරවැසිකම"
             Explore project ideas: Explore project ideas
             Final Project - Presentation Day: Final Project - Presentation Day
             Final Project - Review/Revise Day: Final Project - Review/Revise Day
@@ -1935,12 +2089,13 @@
               Design Process'
             'Final Project - Work Day: Build Project Online': 'Final Project - Work
               Day: Build Project Online'
-            'Play Lab: Variables': 'Play Lab: Variables'
+            'Play Lab: Variables': "ක්‍රීඩා විද්‍යාගාරය: විචල්‍යන්"
             Try programming with Khan Academy: Try programming with Khan Academy
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with
-              Parameters'
+            'Unplugged: Envelope Variables': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ආවරණය
+              කරන ලද විචල්‍යන්"
+            'Unplugged: For Loop Fun': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: For Loop සෙල්ලම"
+            'Unplugged: Songwriting with Parameters': "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්:
+              පරාමිතීන් සමඟ ගීත ලිවීම"
         ecs-unit1:
           title: ECS Part 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -1953,10 +2108,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -1966,6 +2121,7 @@
               Impact of Computers and Communication
             Welcome!: "ආයුබෝවන්!"
             Wrap-up: "වෙළනවා"
+          description_audience: ''
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -1977,6 +2133,7 @@
             Lesson Overviews: Lesson Overviews
             Teaching Strategies: Teaching Strategies
             Unit 2 Challenge: Unit 2 Challenge
+          description_audience: ''
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -1988,6 +2145,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          description_audience: ''
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -1999,6 +2157,7 @@
             Teaching Strategies: Teaching Strategies
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          description_audience: ''
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -2010,6 +2169,7 @@
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+          description_audience: ''
         ecs-unit6:
           title: ECS Unit 6
           description: 'Unit 6: Robotics'
@@ -2028,15 +2188,15 @@
           description_audience: Ages 5-18
           stage:
             " Bee: Conditionals": " Bee: Conditionals"
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            Bee Debugging: Bee Debugging
+            'Artist: Nested Loops': "කලාකරු: කැදැලි ලූපයන්"
+            Bee Debugging: "මී මැසි නිදොස් කිරීම"
             Bounce: "පොළා පනිනවා"
             Build a Game: Build a Game
             Farmer Conditional with Cards: Farmer Conditional with Cards
             Farmer Debug Relay Programming: Farmer Debug Relay Programming
             Farmer Graph Paper Programming: Farmer Graph Paper Programming
             Farmer Impacts of Computing: Farmer Impacts of Computing
-            'Farmer: While Loops': 'Farmer: While Loops'
+            'Farmer: While Loops': "ගොවියා: ලූපයන් අතරේ"
             'Maze: Conditionals with Loops': 'Maze: Conditionals with Loops'
             'Maze: Nested Loops': 'Maze: Nested Loops'
             More Programming with CS4FN: More Programming with CS4FN
@@ -2061,6 +2221,8 @@
             Lesson 2,10: Lesson 2,10
             Lesson 2,2: Lesson 2,2
             Lesson 2,3: Lesson 2,3
+            Test stage with bubbles: Test stage with bubbles
+          description_audience: ''
         csd3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
@@ -2076,6 +2238,7 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+          description_audience: ''
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -2085,7 +2248,7 @@
             At The Dog Park: At The Dog Park
             Caring for My New Pet: Caring for My New Pet
             Exploring the Neighborhood: Exploring the Neighborhood
-            Flappy: Flappy
+            Flappy: "ෆ්ලැපි"
             Getting Loopy with Puppy: Getting Loopy with Puppy
             Make a Dog Tag: Make a Dog Tag
             More CS with Run Marco: More CS with Run Marco
@@ -2098,6 +2261,9 @@
             How to behave in the lab_How to use Code_org puzzles: How to behave in
               the lab/How to use Code.org puzzles
             Programming at home with my pet: Programming at home with my pet
+            Binary Bracelets: "ද්විමය වළලු"
+            'Real-life Algorithms: Paper Planes': "තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල"
+            The Big Event: "විශාල සිදුවීම"
         transferring-over:
           stage:
             20-hr Stage 2: 20-hr Stage 2
@@ -2105,44 +2271,49 @@
             Course 2 Stage 17: Course 2 Stage 17
             Course 3 Stage 16: Course 3 Stage 16
             Course 3 Stage 17: Course 3 Stage 17
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
         k5concepts:
           title: K5 Concepts
           stage:
             Binary: "ද්විමය"
             Conditionals: "කන්ඩිෂනලස්"
             Events: "සිද්ධීන්"
-            For Loops: For Loops
+            For Loops: "ලූපයන් සඳහා"
             Functions: "ශ්‍රිතයන්"
-            Functions with Parameters: Functions with Parameters
+            Functions with Parameters: "පරාමිතියන් සහිත ශ්‍රිත"
             Loops: "ලූපයන්"
-            Nested Loops: Nested Loops
+            Nested Loops: "නැවත නැවත සිදුවන ලුප"
             Variables: "විචල්‍යන්"
-            While Loops: While Loops
+            While Loops: "නැවත සිදුවන ලුප"
+          description_audience: ''
+          description_short: ''
+          description: ''
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
           description_short: "\\tPhase 3: School Year Support"
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "ගුරු උපකරණ පුවරුව"
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
-            The Design Recipe: The Design Recipe
+            The Design Recipe: "නිර්මාණ වට්ටෝරුව"
             Welcome!: "ආයුබෝවන්!"
+          description_audience: ''
         csp-pre-survey:
           title: CS Principles Pre-Survey
           stage:
             Anonymous student pre-survey: Anonymous student pre-survey
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
-        sciencepd3-2016:
-          title: CS in Science PD3 Before 1st In-Person
-          description_short: 'Phase 3: Academic Year Development Pre 1'
-          description: 'Phase 3: Academic Year Development (Segment One)'
-          stage:
-            Welcome Back!: Welcome Back!
-            The TLO: The TLO
-            Prep With Your Modules: Prep With Your Modules
+            Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+            Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: Problem Solving
@@ -2158,6 +2329,7 @@
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+          description_audience: ''
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -2186,3 +2358,145 @@
               and Packets'
             'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
               on the Internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 -
+              2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lesson
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 11: Interpreting Visual Data': 'Lessons 7 - 11: Interpreting
+              Visual Data'
+            'Lessons 12 - 15: Communicating with Visualizations': 'Lessons 12 - 15:
+              Communicating with Visualizations'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting
+              Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15:
+              Communicating with Visualizations'
+            Unit 2 Overview: Unit 2 Overview
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
+          description_audience: ''
+        csp1-support:
+          title: CSP Unit 1 Online Support
+          description_short: TeacherSupports for CSP unit 1
+          description: This is a set of online supports of CSP teachers preparing
+            to teach Unit 1.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding
+              and Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending
+              Text'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets': 'Lessons 10 - 11:
+              Routers, Redundancy, and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction
+              on the Internet'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          description_audience: ''
+        basketball:
+          stage:
+            Bounce: "පොළා පනිනවා"
+          title: Basketball
+          description_audience: ''
+          description_short: Code your own basketball game
+          description: ''
+        sample-csp5:
+          stage:
+            Controlling Memory with Variables: Controlling Memory with Variables
+        hoc-encryption:
+          stage:
+            Simple Encryption: Simple Encryption
+          title: 'Hour of Code: Simple Encryption'
+          description_audience: ''
+          description_short: In this lesson, students are introduced to the need for
+            encryption and simple techniques for breaking (or cracking) secret messages.
+          description: In this lesson, students are introduced to the need for encryption
+            and simple techniques for breaking (or cracking) secret messages.
+        fesbinary:
+          stage:
+            Binary Bracelets: "ද්විමය වළලු"
+            Binary Images: "ද්විමය පින්තූර"
+            Binary Artist Puzzles: Binary Artist Puzzles
+            RGB Color: RGB Color
+          title: "ද්විමය"
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd2:
+          stage:
+            new stage: new stage
+            Quality Websites: Quality Websites
+            Website Design: Website Design
+            Describing Web pages: Describing Web pages
+            Text on the Web: Text on the Web
+            Images on the Web: Images on the Web
+            Clean Code and Debugging: Clean Code and Debugging
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Peer Review: "සමූහ විමර්ශනය"
+            Box Model and Page Layout: Box Model and Page Layout
+            Digital Footprint: Digital Footprint
+            Publishing a Website: Publishing a Website
+            Sources and Search Engines: Sources and Search Engines
+            Intellectual Property: Intellectual Property
+            'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
+            'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
+            Images in HTML: Images in HTML
+          title: 'CSD Unit 2 - The Internet: Web Development'
+          description_audience: ''
+          description_short: Web Development
+          description: ''
+        csp2-support:
+          stage:
+            Unit 2 Overview: Unit 2 Overview
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 -
+              2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting
+              Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15:
+              Communicating with Visualizations'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 2 Online Support
+          description_audience: ''
+          description_short: Teacher Supports for CSP Unit 2
+          description: 'This is a set of online supports of CSP teachers preparing
+            to teach Unit 2. '
+        csd4:
+          stage:
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            User-Centered Design Micro Activity: User-Centered Design Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Redesigning a Space: Redesigning a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            Paper Prototypes: Paper Prototypes
+            Prototype Testing: Prototype Testing
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Testing the App: Testing the App
+            Improving and Iterating: Improving and Iterating
+            App Presentation: App Presentation
+          title: 'CSD Unit 4 - Problem Solving: The Design Process'
+          description_audience: ''
+          description_short: The Design Process
+          description: ''

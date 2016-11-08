@@ -1,0 +1,87 @@
+#!/usr/bin/env ruby
+
+# A script that confirms we are seeing expected usage on our sites. An alert is
+# raised if we are missing expected usage in the most recent minutes.
+#
+# NOTE: These queries intentionally hit the master DB (not the reporting DB) as
+# we do not want false alarms as a result of replica lag. As such, all of these
+# queries need to be sufficiently performant.
+
+require_relative('../../deployment')
+require 'cdo/db'
+require 'cdo/hip_chat'
+require 'cdo/only_one'
+
+ALERT_FILENAME = 'confirm_usage_alert'.freeze
+SECONDS_PER_MINUTE = 60
+
+# An array of [tablename, num_minutes, {DASHBOARD_DB | PEGASUS_DB}] triples.
+CREATED_CHECKS = [
+  [:activities, 3, DASHBOARD_DB],
+  [:forms, 60, PEGASUS_DB],
+  [:user_levels, 5, DASHBOARD_DB],
+  [:users, 30, DASHBOARD_DB]
+].freeze
+# An array of
+#   [tablename, num_minutes, {DASHBOARD_DB | PEGASUS_DB}, column, column_value]
+# tuples.
+KEY_VALUE_CHECKS = [
+  [:forms, 120, PEGASUS_DB, :kind, 'HocSignup2016'],
+  [:users, 120, DASHBOARD_DB, :provider, 'google_oauth2'],
+  [:users, 120, DASHBOARD_DB, :provider, 'sponsored'],
+  [:users, 120, DASHBOARD_DB, :provider, nil]
+].freeze
+
+# @param message [String] the (base) error message to log.
+def alert(message)
+  message += " Delete production-daemon:production/#{ALERT_FILENAME} to close."
+  HipChat.log(message, color: 'red', notify: 1)
+  Dir.chdir(deploy_dir) do
+    system "touch #{ALERT_FILENAME}"
+  end
+end
+
+def main
+  # Look to see whether there is an active alert in progress. If there is,
+  # indicated by a confirm_usage_alert file, do nothing.
+  Dir.chdir(deploy_dir) do
+    return if File.file? ALERT_FILENAME
+  end
+
+  # Verify rows have been created recently in certain tables.
+  CREATED_CHECKS.each do |table, duration_min, db|
+    delta_sec = Time.now - db[table].order(:id).last[:created_at]
+    threshold_sec = duration_min * SECONDS_PER_MINUTE
+    if delta_sec > threshold_sec
+      alert "#{table.to_s.upcase} CREATION: too long (#{delta_sec} seconds "\
+        "[threshold #{threshold_sec}]) since last #{table} creation."
+    end
+  end
+
+  # Verify rows with certain column values have been created recently in certain
+  # tables.
+  KEY_VALUE_CHECKS.each do |table, duration_min, db, column, column_value|
+    delta_sec = Time.now - db[table].where(column => column_value).order(:id).limit(1).last[:created_at]
+    threshold_sec = duration_min * SECONDS_PER_MINUTE
+    if delta_sec > threshold_sec
+      alert "#{table.to_s.upcase} KEY-VALUE CREATION: "\
+        "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since "\
+        "last #{table} creation with column #{k} having value #{v}."
+    end
+  end
+
+  # Verify emails are being sent. Alert if (a) an email has not been sent for
+  # five minutes and (b) no email has been sent for five minutes.
+  if first_unsent = PEGASUS_DB[:poste_deliveries].where(sent_at: nil).order(:id).limit(1).first
+    last_sent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).invert.order(Sequel.desc(:id)).limit(1).first[:created_at]
+    first_unsent_sec = Time.now - first_unsent[:created_at]
+    threshold_sec = 5 * SECONDS_PER_MINUTE
+    if last_sent_sec > threshold_sec && first_unsent_sec > threshold_sec
+      alert "POSTE_DELIVERIES MESSAGES UNSENT: too long "\
+        "(#{first_unsent_sec} seconds [threshold #{threshold_sec}]) since "\
+        "last email delivered"
+    end
+  end
+end
+
+main if only_one_running?(__FILE__)

@@ -27,11 +27,9 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var color = require('../color');
+var color = require("../util/color");
 var commonMsg = require('@cdo/locale');
 var turtleMsg = require('./locale');
-var levels = require('./levels');
-var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
@@ -39,14 +37,11 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
-var experiments = require('../experiments');
-var constants = require('../constants');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -195,7 +190,7 @@ Artist.prototype.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;

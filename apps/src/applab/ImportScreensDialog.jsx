@@ -1,5 +1,4 @@
 /* eslint-disable react/no-danger */
-/* eslint no-unused-vars: "error" */
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
@@ -11,7 +10,7 @@ import AssetThumbnail, {
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles
 } from '../templates/MultiCheckboxSelector';
-import color from '../color';
+import color from "../util/color";
 import {toggleImportScreen, importIntoProject} from './redux/screens';
 import {
   importableAssetShape,

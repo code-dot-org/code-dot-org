@@ -1,0 +1,19 @@
+name 'CSPU5_U3L13 Student Facing Lesson Plan'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 5: Lesson 2 - Making Multi-screen Apps
+
+## Background
+
+In the last lesson we looked at Design Mode, an easy way to add UI elements to our apps. This lesson is all about you getting a chance to use those new skills to make a multi-screen app. We'll teach you more about design mode and how to make new screens for you app and switch between them.
+
+## Lesson
+
+* More design mode tips and tricks
+* Using `console.log`
+* Adding new screens and using `setScreen`
+* Guided Example: Making a Multi-Screen Chaser Game
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

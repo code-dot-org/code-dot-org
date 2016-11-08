@@ -1,5 +1,3 @@
-/* global appOptions */
-
 /**
  * A non-protected div that wraps our ProtectedStatefulDiv codeWorkspace, allowing
  * us to position it vertically. Causes resize events to fire when receiving new props
@@ -99,7 +97,7 @@ var CodeWorkspaceContainer = React.createClass({
   }
 });
 module.exports = connect(state => ({
-  hidden: state.pageConstants.hideSource,
+  hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
   isRtl: state.pageConstants.localeDirection === 'rtl',
   noVisualization: state.pageConstants.noVisualization,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom

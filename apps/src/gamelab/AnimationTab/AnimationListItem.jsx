@@ -2,7 +2,7 @@
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import color from '../../color';
+import color from "../../util/color";
 import * as PropTypes from '../PropTypes';
 import {setAnimationName, cloneAnimation, deleteAnimation,setAnimationFrameDelay, setAnimationLooping,
   isNameUnique} from '../animationListModule';

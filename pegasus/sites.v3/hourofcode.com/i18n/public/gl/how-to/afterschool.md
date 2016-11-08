@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Como ensinar unha Hora de Código nas actividades Extraescolares
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -129,3 +131,5 @@ A Hora do Código é só o primeiro paso dunha viaxe para aprender máis sobre c
 
   * Anime os alunos a continuar a [aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Asista](<%= resolve_url('https://code.org/professional-development-workshops') %>) a uha clase presencial, de un día, para recibir instrucións de unha persoa con experiencia en informática. (Sómente para educadores dos EUA)
+
+<%= view :signup_button %>

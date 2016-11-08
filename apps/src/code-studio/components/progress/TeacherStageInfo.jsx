@@ -6,11 +6,10 @@ import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLock from './StageLock';
 import HiddenStageToggle from './HiddenStageToggle';
-import color from '../../../color';
+import color from "../../../util/color";
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
 import { toggleHidden, isHiddenFromState } from '../../hiddenStageRedux';
-import experiments from '@cdo/apps/experiments';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -45,7 +44,7 @@ const TeacherStageInfo = Radium(React.createClass({
     stage: stageShape,
 
     // redux provided
-    sectionId: React.PropTypes.string.isRequired,
+    sectionId: React.PropTypes.string,
     hiddenStagesInitialized: React.PropTypes.bool.isRequired,
     hiddenStageMap: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
@@ -69,30 +68,49 @@ const TeacherStageInfo = Radium(React.createClass({
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
     const lockable = stage.lockable && !hasNoSections;
-    if (!lockable && !lessonPlanUrl) {
+
+    const children = [];
+    if (lessonPlanUrl) {
+      children.push(
+        <button
+          key="lessonPlan"
+          style={styles.lessonPlanButton}
+          onClick={this.clickLessonPlan}
+        >
+          <FontAwesome icon="file-text"/>
+          <span style={styles.lessonPlanText}>
+            {dashboard.i18n.t('view_lesson_plan')}
+          </span>
+        </button>
+      );
+    }
+
+    if (sectionId) {
+      if (lockable) {
+        children.push(<StageLock key="stageLock" stage={stage}/>);
+      }
+
+      if (hiddenStagesInitialized &&
+          !hasNoSections) {
+        children.push(
+          <div key="hiddenStageToggle">
+            <HiddenStageToggle
+              hidden={!!isHidden}
+              onChange={this.onClickHiddenToggle}
+            />
+          </div>
+        );
+      }
+    }
+
+    if (children.length === 0) {
       return null;
     }
 
     return (
       <div style={styles.main}>
         <div style={styles.inner}>
-          {lessonPlanUrl &&
-            <button style={styles.lessonPlanButton} onClick={this.clickLessonPlan}>
-              <FontAwesome icon="file-text"/>
-              <span style={styles.lessonPlanText}>
-                {dashboard.i18n.t('view_lesson_plan')}
-              </span>
-            </button>
-          }
-          {lockable && <StageLock stage={stage}/>}
-          {experiments.isEnabled('hiddenStages') && hiddenStagesInitialized && !hasNoSections &&
-            <div>
-              <HiddenStageToggle
-                hidden={!!isHidden}
-                onChange={this.onClickHiddenToggle}
-              />
-            </div>
-          }
+          {children}
         </div>
       </div>
     );
@@ -101,12 +119,12 @@ const TeacherStageInfo = Radium(React.createClass({
 
 export default connect(state => {
   return {
-    sectionId: state.stageLock.selectedSection,
+    sectionId: state.sections.selectedSectionId,
     hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     hiddenStageMap: state.hiddenStage.get('bySection'),
     scriptName: state.progress.scriptName,
-    hasNoSections: state.stageLock.sectionsLoaded &&
-      Object.keys(state.stageLock.sections).length === 0
+    hasNoSections: state.sections.sectionsAreLoaded &&
+      state.sections.sectionIds.length === 0
     };
 }, dispatch => ({
   toggleHidden(scriptName, sectionId, stageId, hidden) {

@@ -5,7 +5,7 @@
   'no': 'No'
   select_language: Selecciona tu idioma
   upgrade_ie_message: Code.org pronto eliminará el soporte para Internet Explorer
-    8, 9 y 10. Por favor actualice a un navegador moderno.
+    8, 9 y 10. Por favor actualicese a un navegador moderno.
   upgrade_ie_message_csedweek: CSEdWeek.org pronto eliminará el soporte para Internet
     Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
   upgrade_ie_link: Aprende más
@@ -34,7 +34,7 @@
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: "¿Terminaste tu primera Hora de Code? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
-  og_title: Todos los niños merecen una oportunidad
+  og_title: Todos los niños merecen oportunidades
   og_description: Todos los alumnos de todas las escuelas merecen la oportunidad de
     estudiar Ciencias de la Informática.
   hoc2014_heading: Únete a la <a href="http://hourofcode.com">Hora de Code</a><br/>Del
@@ -88,7 +88,8 @@
   congratulations_on_completing_course2: Felicidades por completar Curso 2
   congratulations_on_completing_course3: Felicidades por completar Curso 3
   congratulations_on_completing_course4: Felicidades por completar Curso 4
-  congratulations_on_completing_accelerated: Enhorabuena por completar el curso acelerado
+  congratulations_on_completing_accelerated: Felicitaciones por completar el curso
+    acelerado
   congrats_next_tutorials_title: Prueba estos tutoriales a continuación
   congrats_next_tutorials_desc: Prueba estos tutoriales de duración inferior a una
     hora, o prueba un <a href="%{current_path}/next">tutorial para colaboradores</a>.
@@ -96,15 +97,15 @@
   view_course: Ver el curso
   view_unit: Ver la unidad
   make_app: Crear una aplicación
-  congrats_guest_speaker_title: Encontrar un orador invitado para tu clase
-  congrats_guest_speaker_desc: Ahora que sus alumnos han terminado el curso de ciencia
+  congrats_guest_speaker_title: Encontrar un ponente invitado para tu clase
+  congrats_guest_speaker_desc: Ahora que sus alumnos han terminado un curso de ciencia
     de la computación, considere celebrar y conectarlos a cosas que ellos pueden construir
-    en el mundo real invitando a un orador a su clase. Puedes utilizar nuestro mapa
+    en el mundo real invitando a un ponente a su clase. Puede utilizar nuestro mapa
     de voluntarios para contactar a voluntarios locales para visitar su clase, o buscar
     en cualquier ciudad para encontrar estudiantes de ciencias de la computación o
     profesionales técnicos que estén listos para inspirar a sus estudiantes vía video
     chat.
-  congrats_guest_speaker_cta: Encontrar un orador invitado
+  congrats_guest_speaker_cta: Encontrar un ponente invitado
   congrats_third_party_title: Utiliza sus nuevas habilidades con estas aplicaciones
     y sitios web
   third_party_gradelevel_kto8: Grados K-8
@@ -289,8 +290,8 @@
     Nichols Peery, profesora'
   stats_student: '"Sabía que era una oportunidad<b> única en la vida</b>." - Mariana
     Alzate, estudiante de 5º grado'
-  stats_michael: '"<b>Nunca antes</b> había visto a mis estudiantes tan entusiasmados
-    por aprender" - Michael Clark, Profesor'
+  stats_michael: '" <b>Nunca antes</b> había visto a mis estudiantes tan entusiasmados
+    por aprender." - Michael Clark, Profesor'
   studiobar_title: Explora <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Explora Code Studio
   studiobar_elementary_title: Cursos elementales
@@ -301,7 +302,7 @@
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
   studiobar_teacher_title: Pensado para los profesores
   studiobar_teacher_body: Presenta Code Studio en tu aula
-  studiobar_frozen_title: Hora del Codigo
+  studiobar_frozen_title: Hora del Código
   studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que donas
@@ -372,9 +373,9 @@
   homepage_banner_congress: Líderes de Estados Unidos están pidiendo al Congreso financiar
     la informática K-12.
   homepage_banner_congress_link: Añadir su apoyo
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Estamos haciendo un cambio importante en la manera
+    en que apoyamos la privacidad de los alumnos.
+  homepage_banner_emailprivacy_link: Leer más
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
@@ -387,7 +388,7 @@
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
   homepage_slot_text_blurb_students_courses: Explora nuestros cursos
   homepage_slot_text_link_codestudio: Prueba Code Studio
-  homepage_slot_text_link_local: Encuentra una clase local
+  homepage_slot_text_link_local: Busca una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
   homepage_slot_text_title_educators: Educadores
   homepage_slot_text_blurb_educators: Enseña a tus alumnos
@@ -475,14 +476,13 @@
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
   mc_specs: Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106
   minecraft_subtitle: Hora de Código de Minecraft
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: Antes de empezar, ve uno de estos videos inspiradores
+  speak_another_language: "¿Hablas otro idioma?"
+  help_translate: Ayúdanos a traducir.
+  no_internet: "¿No tienes Internet?"
+  download_offline: Descarga la versión fuera de línea.
   are_you_teacher: "¿Eres profesor/a?"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Revisa el plan de lecciones y otros recursos del maestro.
   volunteer_engineer_submission_title: Inspirar a estudiantes y voluntarios para la
     Hora de Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a llevar
@@ -611,8 +611,6 @@
     terminan este curso
   dashboard_landing_educator_blog: Lee noticias y actualizaciones de nuestro material
     en nuestro Blog del Educador
-  dashboard_landing_smart_hints: Por favor ayúdenos a agregar consejos útiles a los
-    tutoriales de Code.org
   dashboard_landing_video_player: Pruebe nuestro nuevo reproductor de vídeo en su
     escuela
   dashboard_landing_progress_title: Progreso de la clase principal
@@ -686,7 +684,7 @@
   dashboard_action_remove_confirm: "¿Eliminar?"
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: Imprimir certificados
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Sin evaluaciones
   dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso
@@ -696,8 +694,8 @@
     desde el desplegable de arriba y aquí verás las respuestas de sus estudiantes.
   dashboard_assessments_summaries: Sumarios
   dashboard_assessments_answers: Todas las respuestas
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Encuestas
+  dashboard_percent: Porcentaje
   dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
@@ -712,7 +710,7 @@
   dashboard_navigation_view_progress: Progreso
   dashboard_navigation_view_text_responses: Respuestas de texto
   dashboard_navigation_view_assessments: Evaluaciones
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Evaluaciones/Encuestas
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
@@ -773,6 +771,18 @@
   dashboard_sections_no_move: No, deseo mover al (a los) estudiante (s) para que solo
     permanezcan en la nueva sección.
   dashboard_sections_move_students: Mover alumnos
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: No seleccionó a ningún estudiante para mover. Por
     favor seleccione al menos a un estudiante.
   dashboard_error_other_section: Si están moviendo estudiantes entre sus propias secciones,
@@ -904,20 +914,22 @@
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Pasamos el verano convirtiendo tus
+    comentarios en nuevas características. AHora, puedes <a href="%{pp_url}" target="_blank">dar
+    seguimiento al progreso de varios alumnos</a> aún si hacen programación por pares
+    en un sólo dispositivo. Puedes usar <a href="%{csp_widgets_url}" target="_blank">las
+    mejores herramientas interactivas</a> de nuestro curso de Principios de CS en
+    <i>cualquier</i> salón de clases. ¡Y tus alumnos pueden <a href="%{unused_code_url}"
+    target="_blank">mantener código sin usar</a> en su espacio de trabajo para fomentar
+    la experimentación! Consulta todas las nuevas características y déjanos saber
+    que piensas de ellas.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Aprende más
   dashboard_announce_try_now_button: Probar ahora
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Como profesor, está liderando el camino de un movimiento
     para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática.
     Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana,
@@ -925,18 +937,25 @@
     grandes de América se unieron en una carta abierta pidiendo al congreso de los
     Estados Unidos financiar la educación en informática para K-12.
   dashboard_announce_petition_button: Agrega tu nombre
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Manténte al día con las nuevas características y actualizaciones
+    en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver
+    anuncios anteriores.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: Hospeda una hora
+  learn_banner_title: "Únete a nosotros para la Hora de Código"
+  learn_banner_desc: La Hora de Código es un movimiento mundial que alcanza más de
+    100 millones de alumnos en mas de 180 países. Cualquier persona, en cualquier
+    lugar puede organizar un evento de la Hora de Código. ¡Ayúdanos a dar a cada alumno
+    la oportunidad de aprender ciencias computacionales! Los organizadores puede seguir
+    nuestra <a href='%{how_to_url}' target='_blank'>guía de como hacerlo</a> para
+    enseñar en una Hora de Código e inspirar a los alumnos con <a href='%{videos_url}'
+    target='_blank'>estos videos</a>.
   learn_more: Aprenda más
   learn_sign_up_description: Regístrate para participar en la Hora de Code durante
     la Semana de Educación en Ciencias de la Computación
@@ -1068,6 +1087,7 @@
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Prueba completa - 50 preguntas
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
@@ -1087,7 +1107,7 @@
   minecraft_name: Minecraft
   starwarsblocks_name: Bloques de La Guerra de Las Galaxias
   math_category_name: Matemáticas
-  hoc_category_name: Hora del Codigo
+  hoc_category_name: Hora del Código
   csf_category_name: Fundamentos de CS
   csp_category_name: "'15-'16 Principios de CS"
   csp17_category_name: "'16-'17 Principios de CS"
@@ -1277,7 +1297,7 @@
     Python.
   texasinstruments_shortdescription: Aprende codificación básica usando TI-84™ calculadora
     Plus.
-  teacherled_shortdescription: |
+  teacherled_shortdescription: |-
     Inspírate para diseñar tu propia Hora de Code con estos planes de lecciones.
     &#160;
   course2_shortdescription_congrats: Para los estudiantes con habilidades de lectura
@@ -1813,7 +1833,7 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Oculta esta advertencia
   compatibility_unsupported_browser: Su navegador no es compatible. Por favor, actualice
     su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros
     navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una
@@ -1826,3 +1846,12 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

@@ -2,18 +2,11 @@
 var React = require('react');
 import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
-var color = require('../color');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
 import AniGifPreview from './instructions/AniGifPreview';
 import { openDialog } from '../redux/instructionsDialog';
-
-const styles = {
-  aniGifPreviewWrapper: {
-    display: 'inline-block'
-  }
-};
 
 /**
  * The area below our visualization that is share dby all apps.

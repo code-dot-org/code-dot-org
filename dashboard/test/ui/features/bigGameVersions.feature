@@ -1,3 +1,6 @@
+# Disabled on CircleCI 20 Oct 2016
+# Brad B. assigned to fix and re-enable
+@no_circle
 @dashboard_db_access
 @as_student
 Feature: Big Game Versions
@@ -5,9 +8,8 @@ Feature: Big Game Versions
   Background:
     Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/6?noautoplay=true"
     And I rotate to landscape
-    Then I wait to see a dialog titled "Puzzle 6 of 11"
-    And I close the dialog
-    And I close the React alert
+    And I wait to see "#runButton"
+    Then I close the React alert
     And element "#runButton" is visible
 
   @no_safari
@@ -27,7 +29,6 @@ Feature: Big Game Versions
 
     # Reset the puzzle to the start
     Then I reset the puzzle to the starting version
-    And I close the dialog
     And element "g#game_title > .blocklyText:eq(0)" contains text "title"
 
     # Restore to the previous version, which should have title "VERSION_TEST"
@@ -40,6 +41,4 @@ Feature: Big Game Versions
     And element "button.version-preview" is visible
     And I click selector "button:contains(Restore this Version):eq(0)"
     And I wait until element "#showVersionsModal" is gone
-    Then I wait to see "#x-close"
-    And I close the dialog
     And element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"

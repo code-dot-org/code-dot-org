@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Obrigado por se inscrever para sediar a Hora do Código!
 
-Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode *mudar suas vidas*, no período de <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. O que você pode fazer agora?
+Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode *mudar suas vidas*, no período de <%= campaign_date('full') %>. Entraremos em contato para falar de novos tutoriais e outras atualizações interessantes. O que você pode fazer agora?
 
 ## 1. Divulgue
 

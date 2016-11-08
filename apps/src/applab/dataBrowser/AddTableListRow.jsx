@@ -1,4 +1,3 @@
-import { DataView } from '../constants';
 import Radium from 'radium';
 import React from 'react';
 import msg from '@cdo/locale';

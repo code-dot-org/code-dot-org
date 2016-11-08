@@ -43,6 +43,10 @@ module.exports.createSprite = function (x, y, width, height) {
   s._verticalStretch = 1;
 
   s.setAnimation = function (animationName) {
+    if (animationName === s.getAnimationLabel()) {
+      return;
+    }
+
     var animation = p5Inst.projectAnimations[animationName];
     if (typeof animation === 'undefined') {
       throw new Error('Unable to find an animation named "' + animationName +
@@ -231,6 +235,23 @@ module.exports.createSprite = function (x, y, width, height) {
 
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
+
+  /**
+   * Plays/resumes the sprite's current animation.
+   * If the animation is currently playing this has no effect.
+   * If the animation has stopped at its last frame, this will start it over
+   * at the beginning.
+   */
+  s.play = function () {
+   // Normally this just sets the 'playing' flag without changing the animation
+   // frame, which will cause the animation to continue on the next update().
+   // If the animation is non-looping and is stopped at the last frame
+   // we also rewind the animation to the beginning.
+    if (!s.animation.looping && s.animation.getFrame() === s.animation.images.length - 1) {
+      s.animation.rewind();
+    }
+    s.animation.play();
+  };
 
   return s;
 };
@@ -510,9 +531,14 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
                     other.velocity.y = newVelY2*other.restitution;
                 }
               }
+            } else if (type === 'collide' && modifyPosition) {
+              // Here, expect the caller to treat the callee as immovable,
+              // and to simulate a totally inelastic collision,
+              // adopting the callee's velocity along the displacement axis
+              var thisVelocityAlongDisplacement = projectAontoB(this.velocity, displacement);
+              var otherVelocityAlongDisplacement = projectAontoB(other.velocity, displacement);
+              this.velocity.sub(thisVelocityAlongDisplacement).add(otherVelocityAlongDisplacement);
             }
-            //else if(type === "collide")
-              //this.velocity = createVector(0,0);
 
             if(callback !== undefined && typeof callback === 'function')
               callback.call(this, this, other);
@@ -536,6 +562,15 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
           if(displacement.x !== 0 || displacement.y !== 0 )
           {
             other.position.sub(displacement);
+
+            // Here, expect the callee to treat the caller as immovable,
+            // and to simulate a totally inelastic collision,
+            // adopting the caller's velocity along the displacement axis
+            if (modifyPosition) {
+              var thisVelocityAlongDisplacement = projectAontoB(this.velocity, displacement);
+              var otherVelocityAlongDisplacement = projectAontoB(other.velocity, displacement);
+              other.velocity.sub(otherVelocityAlongDisplacement).add(thisVelocityAlongDisplacement);
+            }
 
             if(displacement.x > 0)
               this.touching.left = true;
@@ -562,6 +597,18 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
 
   return result;
 };
+
+/**
+ * Projects a vector onto the line parallel to a second vector, giving a third
+ * vector which is the orthogonal projection of that vector onto the line.
+ * @see https://en.wikipedia.org/wiki/Vector_projection
+ * @param {p5.Vector} a - vector being projected
+ * @param {p5.Vector} b - vector defining the projection target line.
+ * @returns {p5.Vector} projection of a onto the line parallel to b.
+ */
+function projectAontoB(a, b) {
+  return p5.Vector.mult(b, p5.Vector.dot(a, b) / p5.Vector.dot(b, b));
+}
 
 /* eslint-enable */
 
@@ -609,7 +656,6 @@ const ALIASED_METHODS = {
   'animation.changeFrame': 'setFrame',
   'animation.nextFrame': 'nextFrame',
   'animation.previousFrame': 'previousFrame',
-  'animation.play': 'play',
   'animation.stop': 'pause'
 };
 

@@ -6,11 +6,13 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Inspirer les étudiants et s'engager pour Une Heure de Code
 
-**Code.org propose aux salariés d'entreprise de se [connecter](<%= resolve_url('https://code.org/volunteer') %>) aux classes d'école locales durant Une Heure de Code pour partager leur expérience de métier en technologie et stimuler l'intérêt des élèves à l'étude de l'informatique.**
+**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
   * [Inscrivez-vous](<%= resolve_url('https://code.org/volunteer') %>) pour participer.
   * Pour obtenir plus d'informations sur la connexion de vos employés avec des écoles, consultez notre [guide pour les entreprises partenaires](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
@@ -32,7 +34,7 @@ nav: how_to_nav
 ## 2) Regardez cette vidéo de présentation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choisissez un tutoriel :
 
-Nous allons proposer de nombreux [tutoriels amusants d'une heure](<%= resolve_url('https://code.org/learn') %>) pour les participants de tous âges, créés par divers partenaires. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
 
 **Tous les tutoriels Une Heure de Code:**
 
@@ -138,4 +140,6 @@ Lancez le coup d'envoi de votre Heure de Code en inspirant les participants et e
 
 ## Et après l'Heure de Code ?
 
-Une Heure de Code n'est qu'une première étape pour apprendre comment fonctionne la technologie et comment créer des applications logicielles. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

@@ -4,9 +4,8 @@
 
 import _, {orderBy} from 'lodash';
 import React from 'react';
-import {Button} from 'react-bootstrap';
 import {Table, sort} from 'reactabular';
-import color from '../../../../color';
+import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
@@ -109,6 +108,7 @@ const WorkshopTable = React.createClass({
       this.getSortingColumns,
       this.onSort,
       {
+        container: {whiteSpace: 'nowrap'},
         default: {color: color.light_gray}
       }
     );

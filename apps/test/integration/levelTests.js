@@ -99,8 +99,6 @@ describe('Level tests', function () {
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
     .then(function () { return loadSource('/base/lib/tooltipster/jquery.tooltipster.js'); })
     .then(function () { return loadSource('/base/lib/phaser/phaser.js'); })
-    .then(function () { return loadSource('/base/lib/p5play/p5.js'); })
-    .then(function () { return loadSource('/base/lib/p5play/p5.play.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
       done();
@@ -131,7 +129,7 @@ describe('Level tests', function () {
       var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
       StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
-      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true});
+      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true, configurable: true});
     }
 
     // Recreate our redux store so that we have a fresh copy

@@ -21,10 +21,6 @@ Lint/IneffectiveAccessModifier:
 Lint/InheritException:
   Enabled: false
 
-# Offense count: 9
-Lint/Loop:
-  Enabled: false
-
 # Offense count: 24
 Lint/NestedMethodDefinition:
   Enabled: false
@@ -126,12 +122,6 @@ Style/CommentIndentation:
 # Configuration parameters: EnforcedStyle, SupportedStyles, SingleLineConditionsOnly.
 # SupportedStyles: assign_to_condition, assign_inside_condition
 Style/ConditionalAssignment:
-  Enabled: false
-
-# Offense count: 7
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: format, sprintf, percent
-Style/FormatString:
   Enabled: false
 
 # Offense count: 268
@@ -305,13 +295,6 @@ Style/TernaryParentheses:
 # Cop supports --auto-correct.
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
-  Enabled: false
-
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: ExactNameMatch, AllowPredicates, AllowDSLWriters, IgnoreClassMethods, Whitelist.
-# Whitelist: to_ary, to_a, to_c, to_enum, to_h, to_hash, to_i, to_int, to_io, to_open, to_path, to_proc, to_r, to_regexp, to_str, to_s, to_sym
-Style/TrivialAccessors:
   Enabled: false
 
 # Offense count: 31

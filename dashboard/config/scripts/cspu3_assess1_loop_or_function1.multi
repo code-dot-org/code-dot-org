@@ -7,3 +7,7 @@ For this scenario related to turtle drawing, indicate whether it is better to wr
 
 **Drawing out the letters of a word “HELLO”** 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Loops are good to use when specific actions are repeated; however, in this case, since there are four different letters in "HELLO" it is best to write each function to draw each letter.
+MARKDOWN

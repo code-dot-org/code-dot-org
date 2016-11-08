@@ -8,3 +8,7 @@ div.editor-column {
 html[dir='rtl'] div.editor-column {
   right: 0;
 }
+
+iframe.weblab-host {
+  top: $workspace-headers-height;
+}

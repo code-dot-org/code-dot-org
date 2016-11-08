@@ -4,33 +4,23 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global dashboard */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
-import skins from '../skins';
 import codegen from '../codegen';
-import * as api from './api';
-import * as dontMarshalApi from './dontMarshalApi';
 import AppLabView from './AppLabView';
-import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
-import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 import dom from '../dom';
-import {parseElement as parseXmlElement} from '../xml';
 import * as utils from '../utils';
-import dropletUtils from '../dropletUtils';
 import * as dropletConfig from './dropletConfig';
 import makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
 import FirebaseStorage from './firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
 import { getDatabase } from './firebaseUtils';
-import constants from '../constants';
-import experiments from '../experiments';
-import _ from 'lodash';
+import experiments from "../util/experiments";
 import apiTimeoutList from '../timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -38,10 +28,8 @@ import applabCommands from './commands';
 import JSInterpreter from '../JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import JsDebuggerUi from '../JsDebuggerUi';
-import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
-import VisualizationOverlay, { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
 import DialogButtons from '../templates/DialogButtons';
 import executionLog from '../executionLog';
@@ -49,11 +37,10 @@ import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
 import {Provider} from 'react-redux';
 import reducers from './reducers';
+import {add as addWatcher} from '../redux/watchedExpressions';
 import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
-var setInstructionsInTopPane = actions.setInstructionsInTopPane;
-import {setPageConstants} from '../redux/pageConstants';
 import * as applabConstants from './constants';
 const { ApplabInterfaceMode, DataView } = applabConstants;
 import consoleApi from '../consoleApi';
@@ -115,9 +102,6 @@ var copyrightStrings;
 studioApp.setCheckForEmptyBlocks(true);
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
-
-// For proxying non-https assets
-var MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // Default Scalings
 Applab.scale = {
@@ -390,12 +374,11 @@ function renderFooterInSharedGame() {
       link: '/report_abuse',
       newWindow: true
     },
-    {
+    !dom.isMobile() && {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
-      hideOnMobile: true
     },
-    {
+    window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
       link: getProjectUrl() + '/view',
     },
@@ -409,12 +392,7 @@ function renderFooterInSharedGame() {
       link: 'https://code.org/privacy',
       newWindow: true
     }
-  ];
-  if (dom.isMobile()) {
-    menuItems = menuItems.filter(function (item) {
-      return !item.hideOnMobile;
-    });
-  }
+  ].filter(item => item);
 
   ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',
@@ -750,6 +728,15 @@ Applab.init = function (config) {
     }
 
     setupReduxSubscribers(studioApp.reduxStore);
+    if (config.level.watchersPrepopulated) {
+      try {
+        JSON.parse(config.level.watchersPrepopulated).forEach(option => {
+          studioApp.reduxStore.dispatch(addWatcher(option));
+        });
+      } catch (e) {
+        console.warn('Error pre-populating watchers.');
+      }
+    }
 
     designMode.addKeyboardHandlers();
     designMode.renderDesignWorkspace();
@@ -770,7 +757,7 @@ Applab.init = function (config) {
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: useFirebase,
+    hasDataMode: useFirebase && !config.level.hideViewDataButton,
     hasDesignMode: !config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
@@ -780,7 +767,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: false
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -952,8 +939,7 @@ Applab.toggleDivApplab = function (isVisible) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Applab.reset = function (first) {
-  var i;
+Applab.reset = function () {
   Applab.clearEventHandlersKillTickLoop();
 
   // Reset configurable variables
@@ -1054,10 +1040,6 @@ Applab.serializeAndSave = function (callback) {
  */
 // XXX This is the only method used by the templates!
 Applab.runButtonClick = function () {
-  var runButton = document.getElementById('runButton');
-  var resetButton = document.getElementById('resetButton');
-  // Ensure that Reset button is at least as wide as Run button.
-
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -1133,7 +1115,6 @@ Applab.execute = function () {
   Applab.testResults = TestResults.NO_TESTS_RUN;
   Applab.waitingForReport = false;
   Applab.response = null;
-  var i;
 
   studioApp.reset(false);
   studioApp.clearAndAttachRuntimeAnnotations();
@@ -1332,7 +1313,7 @@ Applab.onPuzzleSubmit = function () {
 Applab.unsubmit = function () {
   $.post(level.unsubmitUrl,
          {"_method": 'PUT', user_level: {submitted: false}},
-         function ( data ) {
+         function () {
            location.reload();
          });
 };

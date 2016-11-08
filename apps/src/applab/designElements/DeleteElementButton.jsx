@@ -1,5 +1,5 @@
 import React from 'react';
-import color from '../../color';
+import color from "../../util/color";
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
 
@@ -49,7 +49,6 @@ var DeleteElementButton = React.createClass({
   },
 
   render: function () {
-    var confirm;
     if (this.state.confirming) {
       return (
         <div style={[styles.right, styles.confirming]}>

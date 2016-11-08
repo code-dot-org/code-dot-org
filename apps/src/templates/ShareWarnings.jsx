@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var color = require('../color');
+var color = require("../util/color");
 var AgeDropdown = require('./AgeDropdown');
 
 var commonMsg = require('@cdo/locale');
@@ -10,7 +10,8 @@ var commonMsg = require('@cdo/locale');
  * it will ask your age. If the app stores data, it will also alert you to
  * that.
  */
-var SharingWarnings = module.exports = React.createClass({
+module.exports = React.createClass({
+  displayName: 'ShareWarnings',
   propTypes: {
     is13Plus: React.PropTypes.bool.isRequired,
     showStoreDataAlert: React.PropTypes.bool.isRequired,

@@ -1,5 +1,6 @@
-login_required 'true'
-hidden 'false'
+hidden false
+login_required true
+hideable_stages true
 
 stage 'Intro to Problem Solving'
 named_level 'Unit 1 Lesson 1 Overview'
@@ -39,6 +40,3 @@ level 'CSD U1 Input Output C4'
 
 stage 'Project: Apps and Problem Solving'
 named_level 'Unit 1 Lesson 9 Overview'
-
-# Graveyard
-stage 'Human vs. Computer Processing'

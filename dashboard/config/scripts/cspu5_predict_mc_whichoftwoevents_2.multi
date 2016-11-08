@@ -1,0 +1,23 @@
+name 'CSPU5_predict_mc_whichOfTwoEvents_2'
+title ''
+question 'question'
+wrong 'The program will crash when the button is clicked with an error stating it doesn\'t know which event handler to run'
+right 'Both event handlers will fire - the turtle will move forward and turn left'
+wrong 'First onEvent block wins - the turtle will only move forward'
+wrong 'Last onEvent block wins - the turtle will only turn left'
+
+markdown <<MARKDOWN
+# Predict - Observe - Reflect
+
+Here's another one!
+
+This program creates a button and **two event handlers** which listen for a click on that button. 
+
+**Predict:** What will happen when the "Forward" button is clicked? 
+
+* Hint: the result might be a little unexpected.
+* Trace the code and make a logical guess.
+
+**NOTE:** if you end up being wrong that's ok! Make sure you understand why.
+
+MARKDOWN

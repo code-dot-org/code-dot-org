@@ -11,10 +11,11 @@ var baseConfig = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
-      '@cdo/locale': path.resolve(__dirname, 'src', 'locale-do-not-import.js'),
+      '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
       '@cdo/applab/locale': path.resolve(__dirname, 'src', 'applab', 'locale-do-not-import.js'),
       '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
+      '@cdo/weblab/locale': path.resolve(__dirname, 'src', 'weblab', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       repl: path.resolve(__dirname, 'src/noop'),
     }
@@ -105,6 +106,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       '@cdo/netsim/locale': path.resolve(__dirname, 'test', 'util', 'netsim', 'locale-do-not-import.js'),
       '@cdo/applab/locale': path.resolve(__dirname, 'test', 'util', 'applab', 'locale-do-not-import.js'),
       '@cdo/gamelab/locale': path.resolve(__dirname, 'test', 'util', 'gamelab', 'locale-do-not-import.js'),
+      '@cdo/weblab/locale': path.resolve(__dirname, 'test', 'util', 'weblab', 'locale-do-not-import.js'),
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
     }),
   }),
@@ -172,6 +174,7 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
+      new webpack.optimize.OccurrenceOrderPlugin(true)
     ].concat(plugins),
     watch: watch,
     keepalive: watch,

@@ -4,6 +4,7 @@ bg:
   language: Български
   front_title: 'Присъединете се към най-голямото обучение събитие в историята, %{campaign_date}, 2015 г'
   coming_soon: Очаквайте скоро
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   campaign_date_start_short: 7 дек.
   campaign_date_start_long: 7 декември
   campaign_date_short: Декември 7-13
@@ -18,7 +19,6 @@ bg:
   front_start_learning: Start learning
   header_menu_resources: Ресурси
   header_menu_faq: ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
-  header_menu_prizes: Награди
   header_menu_how_to: Практически съвети
   header_menu_promote: Реклама
   company_4-H: 4-H Youth Development
@@ -144,14 +144,6 @@ bg:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  prizes_all: Награди за всеки организатор
-  prizes_every_organizer: Всеки организатор на събитие ще получи Dropbox или Skype кредит в знак на благодарност
-  prizes_technology: По едно държавно училище от всеки американски щат( включително и Вашингтон) ще спечели $10,000 за технологии
-  prizes_tech_chats: '# класни стаи ще спечелят видео чат с много специални гости'
-  prizes_robots: 100 класни стаи ще спечелят набор от програмируеми роботи
-  prizes_brilliant: 'Едно училище във всяка провинция и територия ще получи $2000 за  блестящ проект'
-  prizes_actua: 15 училища в Канада участват в 2 STEM семинара с един от членовете на Actua
-  prizes_details: Детайли
   nav_back_to_resources: Обратно към ресурси
   how_to_nav_educators: За преподаватели
   how_to_nav_after_school: За след училище
@@ -163,23 +155,6 @@ bg:
   how_to_nav_companies: За фирми
   how_to_nav_afterschool_educators: За преподаватели в кръжоци и занимални
   how_to_nav_volunteers: За доброволци
-  prizes_nav_title: Награди
-  prizes_nav_home: Всички награди
-  prizes_nav_hardware: Регистрация за хардуерна награда
-  prizes_nav_terms: Правила и условия
-  prizes_nav_faq: ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
-  prizes_nav_dc: Специално пътуване до столицата Вашингтон.
-  prizes_nav_technology: $10,000 за закупуване на техника за вашето училище
-  prizes_nav_video_chat: Видео чат с Титан на техниката
-  prizes_nav_skype_dropbox: Skype кредит или Dropbox пространство за всеки организатор
-  prizes_nav_brilliant: $2,000 невероятни проекти за Упражнения
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Награди за всеки учител
-  prizes_10k: По едно държавно училище от всеки американски щат( включително и Вашингтон) ще спечели $10,000 за технологии
-  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
-  prizes_gift_cards: '<i>Всеки</i> организатор ще получи подарък - карта за магазините на Amazon. iTunes или Microsoft!'
-  prizes_more: More exciting prizes
   whats_next_header: Какво следва?
   whats_next_description: "Ние ще ви изпратим материали и полезни съвети за вашето събитие. Нови уроци за 2015 очаквайте скоро за всеки браузър, смартфон- или дори без компютър! <a href='http://code.org/learn'> Опитайте текущите уроци</a>"
   whats_next_how_to: "<a href='/how-to'> Как да стартираме Hour of Code</a>"
@@ -196,6 +171,7 @@ bg:
   share_on_facebook: Споделете във Facebook
   share_on_twitter: Сподели в Twitter
   front_join_us_heading: Hour of Code за всеки ученик.
+  front_join_us_anybody_can_learn: Anybody can learn
   front_join_us_description: Компютърните науки са необходимост за всеки ученик. Помогнете ни да ги представим на 100 милиона.
   front_join_us_description_short: Компютърните науки са основа за всеки ученик.
   front_join_us_button: Присъединете се към нас
@@ -243,12 +219,13 @@ bg:
   signup_send_posters_address_label: Адрес на училището или организацията
   signup_whole_school_flag_label: Събитието е за цялото училище
   signup_your_event: Запишете вашето събитие
+  signup_host_an_hour: Host an hour
   signup_match_volunteer: Помогнете ми да намеря местен софтуерен инженер да вдъхнови учениците ми
   signup_multiple_event_warning: Ако си домакин на множество събития, моля, подай уникално име или имейл за всяко едно. Ние ще отчетем само едно събитие на името и електронната ти поща.
   signup_name_placeholder: Вашето Име
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Примерно, Lincoln High School
-  signup_event_location_placeholder: "Пощенски код и държава ИЛИ пълен адрес.\\r(Ще го използваме за да ви маркираме на картата)"
+  signup_event_location_placeholder: "Пощенски код и държава ИЛИ пълен адрес.\r(Ще го използваме за да ви маркираме на картата)"
   signup_special_event_details_placeholder: Опишете защо това е специално събитие
   signup_send_posters_address_placeholder: Този адрес няма да бъде споделян на нашата карта
   signup_event_type_in_school: В училище
@@ -273,28 +250,6 @@ bg:
   meta_tag_twitter_title: Hour of Code е тук
   meta_tag_twitter_description: Hour of Code е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.
   twitter_default_text: 'Аз ще участвам тази година в #HourOfCode, а ти? @codeorg'
-  hardware_prizes_form_name_label: Вашето име
-  hardware_prizes_form_name_placeholder: Вашето име
-  hardware_prizes_form_email_label: Вашият имейл
-  hardware_prizes_form_email_placeholder: Вашият имейл
-  hardware_prizes_form_school_name_label: Име на училището
-  hardware_prizes_form_school_name_placeholder: Име на училището
-  hardware_prizes_form_school_address_label: Адрес на училището
-  hardware_prizes_form_school_address_placeholder: Адрес на училището
-  hardware_prizes_form_school_type_label: Тип училище
-  hardware_prizes_form_school_type_option_elementary: Начално
-  hardware_prizes_form_school_type_option_middle_school: Средно училище
-  hardware_prizes_form_school_type_option_high_school: Гимназия
-  hardware_prizes_form_qualifying_school_label: 'Това е K-12  държавно училище в САЩ'
-  hardware_prizes_form_title_I_school_label: Това училище се класира за място I финансиране
-  hardware_prizes_form_title_I_school_help_text: Класираните I училища са училища с високо число или висок процент на деца от семействата с ниски доходи, които държавни помощи, за да могат всички деца да отговарят на държавните академични стандарти.
-  hardware_prizes_form_number_students_label: Брой на участващите ученици
-  hardware_prizes_form_number_students_placeholder: Брой на учениците
-  hardware_prizes_form_technology_plan_label: Как ще използвате новата технология, за да помогнете за разширяване обучението по компютърни науки във Вашето училище?
-  hardware_prizes_form_technology_plan_placeholder: План за използване на нови технологии
-  hardware_prizes_form_plan_file_label: Качване на вашия план за логистика на Часът на кодирането
-  hardware_prizes_form_plan_file_description: 'Представяне на график  как планирате да организирате всеки ученик по време на Часът на кодирането във вашето училище. Вижте Примерен план: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Изпращане
   hoc_faq_title: Често задавани въпроси
   hoc_faq_what_is_hoc_q: Какво е Hour of Code?
   hoc_faq_what_is_hoc_a: "Hour of Code е един час въведение в компютърните науки, предназначен да демитологизира програмирането и да се покаже, че всеки може да научи основите.<a href='%{codeorg_url}'>Вижте уроците ни</a>."
@@ -402,11 +357,6 @@ bg:
   title_proclamation: Примерна резолюция за подкрепа на CSEW и Hour of Code
   title_stats: Blurbs и статистика
   title_partners: Партньори
-  title_prizes_faq: Награди често задавани въпроси
-  title_prizes_terms: Условия за наградите
-  title_prizes_thanks: Благодаря
-  title_prizes: Награди
-  title_hardware_prize_form: Регистрирайте се за хардуерните награди
   title_resources: Ресурси
   title_signup_thanks: Благодаря за регистрирането Ви като домакин на Hour of Code събитие!
   title_tutorial_guidelines: Насоки по уроците

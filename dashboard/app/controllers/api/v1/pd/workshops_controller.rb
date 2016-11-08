@@ -7,6 +7,14 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.in_state(params[:state])
     end
 
+    if params[:facilitator_view]
+      @workshops = @workshops.facilitated_by(current_user)
+    end
+
+    if params[:organizer_view]
+      @workshops = @workshops.organized_by(current_user)
+    end
+
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
 
@@ -30,6 +38,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     adjust_facilitators
     process_location
     if @workshop.update(workshop_params)
+      notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
       render json: {errors: @workshop.errors.full_messages}, status: :bad_request
@@ -68,6 +77,16 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   end
 
   private
+
+  def should_notify?
+    ActiveRecord::Type::Boolean.new.deserialize(params[:notify])
+  end
+
+  def notify
+    @workshop.enrollments.each do |enrollment|
+      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
+    end
+  end
 
   def process_location(force: false)
     location_address = workshop_params[:location_address]

@@ -7,14 +7,18 @@ class Tutorials
     @contents = DB[@table].all
   end
 
-  def contents
-    @contents
+  # Returns an array of the tutorials.  Includes launch_url for each.
+  def contents(host_with_port)
+    @contents.each do |tutorial|
+      tutorial[:launch_url] = launch_url_for(tutorial[:code], host_with_port)
+    end
   end
 
   def launch_url_for(code, domain)
     return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org', 'code.org')
+    api_domain = api_domain.gsub('hourofcode.com', 'code.org')
     api_domain = api_domain.gsub('ar.code.org', 'code.org')
     api_domain = api_domain.gsub('br.code.org', 'code.org')
     api_domain = api_domain.gsub('ro.code.org', 'code.org')

@@ -12,7 +12,6 @@ import * as utils from '../utils';
 import _ from 'lodash';
 import AppView from '../templates/AppView';
 import BigGameLogic from './bigGameLogic';
-import Collidable from './collidable';
 import CollisionMaskWalls from './collisionMaskWalls';
 import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
@@ -38,11 +37,8 @@ import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
-import dropletUtils from '../dropletUtils';
-import experiments from '../experiments';
 import paramLists from './paramLists.js';
 import sharedConstants from '../constants';
-import skins from '../skins';
 import studioCell from './cell';
 import studioMsg from './locale';
 import { GridMove, GridMoveAndCancel } from './spriteActions';
@@ -110,15 +106,8 @@ var EdgeClassNames = [
 var level;
 var skin;
 
-/**
- * Milliseconds between each animation frame.
- */
-var stepSpeed;
-
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
-
-var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
 var AUTO_HANDLER_MAP = {
   whenRun: 'whenGameStarts',
@@ -159,9 +148,6 @@ var TITLE_SCREEN_TEXT_WIDTH = 360;
 var TITLE_SCREEN_TEXT_HEIGHT =
       TITLE_SCREEN_TEXT_TOP_MARGIN + TITLE_SCREEN_TEXT_V_PADDING +
       (TITLE_SCREEN_TEXT_MAX_LINES * TITLE_SCREEN_TEXT_LINE_HEIGHT);
-
-var TITLE_SPRITE_X_POS = 3;
-var TITLE_SPRITE_Y_POS = 6;
 
 var SPEECH_BUBBLE_RADIUS = 20;
 var SPEECH_BUBBLE_H_OFFSET = 50;
@@ -291,7 +277,7 @@ function reorderedStartAvatars(avatarList, firstSpriteIndex) {
 
 var drawMap = function () {
   var svg = document.getElementById('svgStudio');
-  var i, x, y, k;
+  var i;
 
   // Adjust outer element size.
   svg.setAttribute('width', Studio.MAZE_WIDTH);
@@ -1128,7 +1114,6 @@ Studio.onTick = function () {
     }
 
     // After 5 ticks of no movement, turn sprite forward.
-    var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].setDirection(Direction.NONE);
       Studio.movementAudioOff();
@@ -1953,7 +1938,7 @@ Studio.init = function (config) {
   }
 
   config.appMsg = studioMsg;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   Studio.initSprites();
 
@@ -2866,11 +2851,16 @@ Studio.execute = function () {
 
     Studio.interpretedHandlers = {};
 
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
     if (studioApp.initializationBlocks) {
-      let initializationCode = Blockly.Generator.blocksToCode('JavaScript',
-          studioApp.initializationBlocks);
-      registerHandlersForCode(handlers, 'whenGameStarts', initializationCode);
+      studioApp.initializationBlocks.forEach(function (topBlock) {
+        // by default, blocks are queued to run once at game start.
+        // Repeat forever blocks, however, need their own handler.
+        const handlerType = (topBlock.type === 'studio_repeatForever') ?
+          'repeatForever' :
+          'whenGameStarts';
+        const code = Blockly.Generator.blocksToCode('JavaScript', [topBlock]);
+        registerHandlersForCode(handlers, handlerType, code);
+      });
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
@@ -2987,7 +2977,8 @@ Studio.execute = function () {
           // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
           Object.defineProperty(Studio, 'Globals', {
             get: () => {return hook.func() || {};},
-            set: () => {}
+            set: () => {},
+            configurable: true,
           });
         } else {
           registerEventHandler(handlers, hook.name, hook.func);
@@ -3112,10 +3103,6 @@ function getFrameCount(className, exceptionList, defaultCount) {
     return exceptionList[className].frames;
   }
   return defaultCount;
-}
-
-function cellId(prefix, row, col) {
-  return prefix + '_' + row + '_' + col;
 }
 
 /**
@@ -3426,13 +3413,6 @@ Studio.displaySprite = function (i) {
     return;
   }
 
-  var extraOffsetX = 0;
-  var extraOffsetY = 0;
-
-  if (level.gridAlignedMovement) {
-    extraOffsetX = skin.gridSpriteRenderOffsetX || 0;
-    extraOffsetY = skin.gridSpriteRenderOffsetY || 0;
-  }
   if (sprite.hasActions()) {
     sprite.updateActions();
   } else {
@@ -5376,7 +5356,6 @@ Studio.getSkin = function () {
  */
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
-  var lastMove = sprite.lastMove;
   sprite.lastMove = Studio.tickCount;
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
@@ -5559,7 +5538,7 @@ function spriteAtGoal(sprite, goal) {
 }
 
 Studio.allGoalsVisited = function () {
-  var i, playSound;
+  var playSound;
   // If protagonistSpriteIndex is set, the sprite with this index must navigate
   // to the goals.  Otherwise any sprite can navigate to each goal.
   var protagonistSprite = Studio.sprite[Studio.protagonistSpriteIndex];

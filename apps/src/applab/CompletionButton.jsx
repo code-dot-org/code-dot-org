@@ -2,7 +2,6 @@ import msg from '@cdo/locale';
 import React from 'react';
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
-import experiments from '../experiments';
 
 const styles = {
   main: {

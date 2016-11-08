@@ -93,22 +93,43 @@ def hoc_detect_language
   nil
 end
 
+def load_supported_locales
+  Dir.glob(pegasus_dir('cache', 'i18n', '*.yml')).map do |i|
+    File.basename(i, '.yml').downcase
+  end.sort
+end
+HOC_LOCALES = load_supported_locales
+
+def language_to_locale(language)
+  case language
+  when 'en'
+    return 'en-US'
+  when 'es'
+    return 'es-ES'
+  when 'fa'
+    return 'fa-IR'
+  else
+    language = language.to_s.downcase
+    return nil unless locale = HOC_LOCALES.find{|i| i == language || i.split('-').first == language}
+    parts = locale.split('-')
+    return "#{parts[0].downcase}-#{parts[1].upcase}"
+  end
+end
+
+def hoc_locale
+  language_to_locale(@language)
+end
+
 def hoc_uri(uri)
   File.join(['/', (@company || @country), @user_language, uri].select{|i| !i.nil_or_empty?})
 end
 
 def codeorg_url
-  if @country == 'ar'
-    return 'ar.code.org'
-  elsif @country == 'br'
-    return 'br.code.org'
-  elsif @country == 'ro'
-    return 'ro.code.org'
-  elsif @country == 'uk'
-    return 'uk.code.org'
-  else
-    return 'code.org'
-  end
+  return 'ar.code.org' if @country == 'ar'
+  return 'br.code.org' if @country == 'br'
+  return 'ro.code.org' if @country == 'ro'
+  return 'uk.code.org' if @country == 'uk'
+  return 'code.org'
 end
 
 def chapter_partner?

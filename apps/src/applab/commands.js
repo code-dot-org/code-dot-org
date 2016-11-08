@@ -3,18 +3,17 @@ import apiTimeoutList from '../timeoutList';
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import RGBColor from './rgbcolor.js';
-import codegen from '../codegen';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
-import assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '../assetManagement/assetPrefix';
 import errorHandler from '../errorHandler';
 var ErrorLevel = errorHandler.ErrorLevel;
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import color from '../color';
+import color from "../util/color";
 import logToCloud from '../logToCloud';
 
 var OPTIONAL = true;
@@ -437,17 +436,14 @@ applabCommands.arcLeft = function (opts) {
 };
 
 applabCommands.getX = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.x;
 };
 
 applabCommands.getY = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.y;
 };
 
 applabCommands.getDirection = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.heading;
 };
 
@@ -728,8 +724,6 @@ applabCommands.drawImage = function (opts) {
  * drawImageURL(url, x, y, width, height, [callback])
  */
 applabCommands.drawImageURL = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
   apiValidateActiveCanvas(opts, 'drawImageURL');
   apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
   apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
@@ -738,7 +732,6 @@ applabCommands.drawImageURL = function (opts) {
   apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
   apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
 
-  var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
     if (opts.callback) {
       opts.callback.call(null, success);

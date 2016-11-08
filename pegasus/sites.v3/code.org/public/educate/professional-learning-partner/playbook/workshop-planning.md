@@ -38,7 +38,7 @@ ________________
 
 ## **Computer Science Fundamentals**
 
-Refer to the [CSF Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop.
+Refer to the [CS Fundamentals Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop.
 
 [**Back to the top**](#top)
 <br/>
@@ -73,13 +73,13 @@ These guidelines explain the type of space your facilitators need to run a succe
 |:-----|:-----------|
 |**Location**|**Ask yourself these questions when searching for the the ideal location for your workshop.**<br/> - Central location: Is the location central to the spread of teachers attending? <br/>- Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/> - Parking: Does parking cost anything? Will teachers need parking passes? Is the lot close to an entrance? *Tip: teachers are more likely to show up to the workshop when parking is free.* <br/> - Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?| 
 |**Rooms and <br/>Set Up**| Reservation time: <br/>Rooms need to be reserved from 7:30am to 4:30pm.<Br/><br/> General itinerary:<br/> 7:30 am - 8:00 am - facilitators arrive and set up room<br/>8:00 am - 8:30 am - teachers arrive, register & eat breakfast</br> 8:30 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 4:00 pm - workshop time<br/>4:00 pm - 4:30 pm - facilitators clean up for the night<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We recommend doing this to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with blue painter's tape<br/>- Space to store supplies overnight: We recommend asking your venue if supplies and posters can be left in the room and locked up overnight to avoid having to pack everything up each day.<br/><br/>Table set up and Seating:<br/>- Classroom style seating with tables that can seat pairs.| 
-|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants<br/> |
+|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 
 <br/><br/>
 
 **When to Host the Academic Year Workshop**<br/>
-Phase 3 is best held in early October prior to when order of operations and early math take place in the classroom, which are the concepts that CSinA Course A integrate into.
+Phase 3 is best held in early October prior to when order of operations and early math take place in the classroom, which are the concepts that CS in Algebra Course A integrate into.
 	
 **Ordering Supplies**<br/>
 [Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
@@ -124,7 +124,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 |:-----|:-----------|
 |**Location**|**Ask yourself these questions when searching for the the ideal location for your workshop.**<br/> - Central location: Is the location central to the spread of teachers attending? <br/>- Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/> - Parking: Does parking cost anything? Will teachers need parking passes? Is the lot close to an entrance? *Tip: teachers are more likely to show up to the workshop when parking is free.* <br/> - Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?| 
 |**Rooms and <br/>Set Up**| Reservation time: <br/>Rooms need to be reserved from 7:30am to 4:30pm.<Br/><br/> General itinerary:<br/> 7:30 am - 8:00 am - facilitators arrive and set up room<br/>8:00 am - 8:30 am - teachers arrive, register & eat breakfast</br> 8:30 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 4:00 pm - workshop time<br/>4:00 pm - 4:30 pm - facilitators clean up for the night <br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We recommend doing this to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with blue painter's tape<br/>- Space to store supplies overnight: We recommend asking your venue if supplies and posters can be left in the room and locked up overnight to avoid having to pack everything up each day.<br/><br/>Table set up and Seating:<br/>- Classroom style seating with tables that can seat pairs.| 
-|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants<br/> |
+|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 
 <br/><br/>
@@ -184,7 +184,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 |:-----|:-----------|
 |**Location**|**Ask yourself these questions when searching for the the ideal location for your workshop.**<br/> - Central location: Is the location central to the spread of teachers attending? <br/>- Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/> - Parking: Does parking cost anything? Will teachers need parking passes? Is the lot close to an entrance? *Tip: teachers are more likely to show up to the workshop when parking is free.* <br/> - Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?| 
 |**Rooms and <br/>Set Up**|Reservation time: <br/>Rooms need to be reserved from 7:30 am to 4:30 pm (M-Th) and 7:30 am to 2:30 pm (F).<Br/><br/> General itinerary:<br/> 7:30 am - 8:30 am - facilitators arrive and set up room<br/>8:30 am - 9:00 am - teachers arrive, register & eat breakfast</br> 9:00 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 3:30 pm - workshop time<br/>3:30 pm - 4:30 pm - facilitators clean up for the night<br/>Note: ECS workshops end at 1:30 pm on Fridays.<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
-|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants<br/> |
+|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.<br/> 
 <br/>
 <br/>
@@ -232,7 +232,7 @@ ________________
 **Workshop Preparation Process**<br/>
 
 1. Setup your CS Principles Workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
-2. Make sure ALL facilitators are added to the workshop **If you forget to add them, they will not get paid!*<br/>
+2. Make sure ALL facilitators are added to the workshop *If you forget to add them, they will not get paid!*<br/>
 *(Skip to step 4 if this is not a summer workshop)*
 3. Send teachers their [accept email and information on how to setup a Code Studio account and access the Phase 1 online module](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit?usp=sharing).<br/>
 4. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization.<br/>
@@ -252,7 +252,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 |:-----|:-----------|
 |**Location**|**Ask yourself these questions when searching for the the ideal location for your workshop.**<br/> - Central location: Is the location central to the spread of teachers attending? <br/>- Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/> - Parking: Does parking cost anything? Will teachers need parking passes? Is the lot close to an entrance? *Tip: teachers are more likely to show up to the workshop when parking is free.* <br/> - Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?| 
 |**Rooms and <br/>Set Up**|Reservation time: <br/>8:00am to 4:30pm.<Br/> General itinerary:<br/> 8:00 am - 8:30 am - facilitators arrive and set up room<br/>8:30 am - 9:00 am - teachers arrive, register & eat breakfast</br> 9:00 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 3:30 pm - workshop time<br/>3:30 pm - 4:30 pm - facilitators clean up for the night <br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
-|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants<br/> |
+|**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 <br/>
 
@@ -266,7 +266,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- 9-12 weeks into school
 	- Should occur before teachers begin teaching unit 3
 - Workshop 3 = unit 4, first half of unit 5 
-	- Start of second semester or December
+	- Start of second semester is recommended, but December may be appropriate if schools in your region went back at the beginning of August)
 - Workshop 4 = second half of unit 5, unit 6 
 	- Ideally in mid February. 
 	- Early March  at the latest
@@ -285,9 +285,16 @@ Take a look at the [CSP pacing guide](https://code.org/curriculum/docs/csp/units
 		- [Teacher Packet](https://docs.google.com/document/d/13CPBruuyfu9xA7mhMBNEVvS0_TbfAF4PK-tlPmiKaqg/edit?usp=sharing)
 		- [Facilitator Prep](https://docs.google.com/document/d/1oE3khvNrgIuUl4gmqEzG1qbocHbmI3RLo0l69Irc3wc/edit?usp=sharing)
 		- [Template Slide Deck](https://docs.google.com/presentation/d/1YC0M0hASMuIs4ZXJoYJ15tv78PMG5hMoRkKgdpl-rPY/edit?usp=sharing)
-	- Session B<br/>
+	- Session B
+		- [Teacher Packet](https://docs.google.com/document/d/109MZiM8CVW3hbdeCtMdjMlzEF2PhkJF3n2tvOxKRm1E/edit?usp=sharing)
+		- [Facilitator Prep](https://docs.google.com/document/d/1n0CvzrNYUV6WH0GC3l9QBV7M-5Mt0hxy-_xCmhzOq2A/edit?usp=sharing)
+		- [Template Slide Deck](https://docs.google.com/presentation/d/1XRlmGCL33jj2Yiomr-6h_Sf819C3k-1hsKshVvtz350/edit?usp=sharing)
+
 	- Session C<br/>
 	- Session D<br/>
+
+**Automated Emails**<br/>
+Teachers attending your workshop will receive [this](https://docs.google.com/document/d/1KQ3OOb87mF1NZ3sSs_5VmQLQjDEBwxvRTG-3hCR2uG0/edit?usp=sharing) email 2 weeks prior to the training. 
 
 **Ordering Supplies**<br/>
 Code.org will send each partner a full year's worth of supplies for the continuing workshops prior to your first continuing workshop.

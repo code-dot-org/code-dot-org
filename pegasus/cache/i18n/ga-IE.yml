@@ -302,20 +302,20 @@
   studiobar_shop_title: Siopa
   studiobar_shop_body: Bris steiréitíopaí. Caith ár suaitheantas go bródúil.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, buaiteoir Dhuais Nobel na Síochána\n"
-  homepage_hero_text_susan: |
+    learn one Hour of Code&rdquo; \nMalala, buaiteoir Dhuais Nobel na Síochána"
+  homepage_hero_text_susan: |-
     &ldquo;If you can change technology,
     you can change the world.&rdquo;
     Susan, Príomhoifigeach Feidhmiúcháin YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     An tUachtarán Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Our children &mdash; including our girls &mdash;
     need the opportunity to learn computer science.&rdquo;
     Sheryl, Príomhoifigeach Oibriúcháin Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Computer science can unlock
     the best opportunities in the world.&rdquo;
     Satya, Príomhoifigeach Feidhmiúcháin Microsoft
@@ -323,25 +323,25 @@
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;These skills have changed my future.
     Not to mention, it's just plain fun.&rdquo;
     Luna, 7ú bliain
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;I have never, ever seen my kids
     so excited about learning.&rdquo;
     Michael, múinteoir
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
     Jackson, 6ú bliain
   homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2ú bliain\n"
+    with programming.&rdquo; \nMaya, 2ú bliain"
   homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, múinteoir\n"
+    for you, here, now.&rdquo; \nGeraldo, múinteoir"
   homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, múinteoir\n"
-  homepage_hero_text_teacher2: |
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, múinteoir"
+  homepage_hero_text_teacher2: |-
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, múinteoir
@@ -620,8 +620,6 @@
     an cúrsa
   dashboard_landing_educator_blog: Nuacht agus fógraí maidir le hábhar nua ar ár mblag
     le haghaidh múinteoirí
-  dashboard_landing_smart_hints: Cabhraigh linn leideanna cliste a chur leis na cúrsaí
-    ar Code.org
   dashboard_landing_video_player: Bain triail as ár seinnteoir nua físeán i do scoil
   dashboard_landing_progress_title: Dul chun cinn an phríomhranga
   dashboard_landing_progress_biggest: Seo é dul chun cinn an ranga is mó s'agat.
@@ -790,6 +788,18 @@
   dashboard_sections_no_move: Níl. Ba mhaith liom an dalta nó na daltaí a bhogadh
     go dtí an rannán nua amháin.
   dashboard_sections_move_students: Bog na daltaí
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: Níor roghnaigh tú aon daltaí le bogadh. Roghnaigh
     dalta amháin ar a laghad.
   dashboard_error_other_section: Má tá tú ag iarraidh daltaí a bhogadh idir rannáin
@@ -933,6 +943,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Tuilleadh eolais
   dashboard_announce_try_now_button: Bain triail as anois
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
     chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
     Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
@@ -943,6 +954,11 @@
   dashboard_announce_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár
     mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
     ar fhógraí roimhe seo.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Tá an Uair Chódála anseo - 8-14 Nollaig!
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   host_an_hour: Host an hour
@@ -1087,6 +1103,7 @@
   csp1_name: 'Aonad 1: An tIdirlíon'
   csp2_name: 'Aonad 2: Faisnéis dhigiteach'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
   cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
   cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
@@ -1857,3 +1874,12 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

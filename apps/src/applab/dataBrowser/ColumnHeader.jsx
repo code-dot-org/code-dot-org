@@ -7,7 +7,7 @@ import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
-import color from '../../color';
+import color from "../../util/color";
 import * as dataStyles from './dataStyles';
 import { valueOr } from '../../utils';
 

@@ -1,4 +1,3 @@
-/* global dashboard */
 import $ from 'jquery';
 
 $(window).load(function () {

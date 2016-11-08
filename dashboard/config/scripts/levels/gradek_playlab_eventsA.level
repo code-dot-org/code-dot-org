@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.35,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"size\":0.35,\"sprite\":0},{\"tileType\":16,\"size\":0.35,\"sprite\":4},{\"tileType\":16,\"size\":0.35,\"sprite\":15},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.35,\"sprite\":7},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Now, have the actor change to a random size AND have it play a random sound when you click the center button.",
+    "instructions": "Now, have the cat change to a random size AND have it play a random sound when you click the center button.",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,6 +38,8 @@
     "block_moving_into_walls": "false",
     "first_sprite_index": "0",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If this seems like too much to do, try breaking it down into steps:\\n\\n1)  Have the actor change to a random size on click.\\n2) Play a random sound when you click the actor.\\n\\nNow, make sure both of those actions are attached underneath the same event!\",\r\n  \"hint_id\": \"gradek_playlab_eventsA_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "instructions_important": "false",
+    "project_template_level_name": "gradek_playlab_events5c_template",
     "contained_level_names": null
   },
   "published": true,
@@ -46,49 +48,6 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">2</title>
-        </block>
-        <block type="studio_whenSpriteClicked" x="250px">
-          <title name="SPRITE">4</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">5</title>
-              <title name="DIR">4</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteClicked" x="250px">
-          <title name="SPRITE">1</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">5</title>
-              <title name="DIR">8</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteClicked" x="250px">
-          <title name="SPRITE">0</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">5</title>
-              <title name="DIR">1</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteClicked" x="250px">
-          <title name="SPRITE">3</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">5</title>
-              <title name="DIR">2</title>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="when_run"/>

@@ -4,10 +4,10 @@
   'yes': Tak
   'no': Nie
   select_language: Wybierz język
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org wkrótce zaprzestanie wsparcia dla Internet Explorer
+    8, 9 i 10. Zaktualizuj swoją przeglądarkę.
+  upgrade_ie_message_csedweek: CSEdWeek.org wkrótce zaprzestanie wsparcia dla Internet
+    Explorer 8, 9 i 10. Zaktualizuj swoją przeglądarkę.
   upgrade_ie_link: Ucz się więcej
   en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
@@ -84,7 +84,7 @@
   congratulations: Gratulacje!
   congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania
     (One Hour of Code)
-  congratulations_volunteer: |
+  congratulations_volunteer: |-
     Gratulacje: Spróbowałeś Godzinę Kodowania,
     <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
   congratulations_on_completing_course1: Gratulacje z okazji ukończenia Kursu 1
@@ -108,7 +108,7 @@
     znaleźć studentów informatyki lub specjalistów technicznych, którzy są gotowi,
     aby zainspirować twoich uczniów zdalnie, za pośrednictwem czatu wideo.
   congrats_guest_speaker_cta: Znajdź tłumacza
-  congrats_third_party_title: |
+  congrats_third_party_title: |-
     Używaj nowych funkcji  tych aplikacji i stron internetowych
      
   third_party_gradelevel_kto8: Klasa K-8
@@ -140,15 +140,15 @@
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_curriculum: Pobierz Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Odwiedź Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Pobierz Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: Odwiedź Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
@@ -258,7 +258,7 @@
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: "#HourOfCode jest tutaj - Sprawdź to! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   just_did_course1: Właśnie skończyłem Kurs 1 - sprawdź to! @codeorg
   just_did_course2: Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg
@@ -305,15 +305,15 @@
   studiobar_shop_title: Sklep
   studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
-    podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla\n"
-  homepage_hero_text_susan: |
+    podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla"
+  homepage_hero_text_susan: |-
     &ldquo;Jeśli potrafisz zmienić technologię, potrafisz zmienić świat.&rdquo;
     Susan,  YouTube CEO
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Nie tylko graj na swoim telefonie,
     zaprogramuj go.&rdquo;
     Prezydent Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Nasze dzieci &mdash; w tym również dziewczęta &mdash;
     potrzebują możliwości, by uczyć się informatyki.&rdquo;
     Sheryl, COO Facebook
@@ -326,16 +326,16 @@
   homepage_hero_text_student2: '"Nigdy nie widziałem moich dzieci tak podekscytowanych
     uczeniem się." Michael, nauczyciel'
   homepage_hero_text_student3: "&ldquo;Informatyka jest dziedziną, o której nie będziesz
-    wiedzieć, \nczy ją lubisz, zanim jej nie spróbujesz .&rdquo;\nJackson, 6. klasa\n"
+    wiedzieć, \nczy ją lubisz, zanim jej nie spróbujesz .&rdquo;\nJackson, 6. klasa"
   homepage_hero_text_student4: "&ldquo;Możesz zrobić wszystko, co ci przyjdzie do\ngłowy
-    za pomocą programowania.&rdquo; \nMaya, 2nd grade\n"
+    za pomocą programowania.&rdquo; \nMaya, 2nd grade"
   homepage_hero_text_student5: "&ldquo;Informatyka nie jest dla kogoś\ninnego. Jest
-    ona dla ciebie, tu i teraz.&rdquo; \nGeraldo, nauczyciel\n"
+    ona dla ciebie, tu i teraz.&rdquo; \nGeraldo, nauczyciel"
   homepage_hero_text_teacher1: "&ldquo;Programowanie to twórczość, inspiracja i innowacje,
     &mdash; \na to wszystko ma podstawowe znaczenie dla jakiejkolwiek kariery.&rdquo;\nFloresa,
-    nauczyciel\n"
+    nauczyciel"
   homepage_hero_text_teacher2: "&ldquo;Ten program zainteresował i zaangażował do
-    \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel\n"
+    \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel"
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
   homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
@@ -478,10 +478,10 @@
     videos
   speak_another_language: Speak another language?
   help_translate: Help us translate.
-  no_internet: Don't have Internet?
+  no_internet: Nie masz internetu?
   download_offline: Download the offline version.
   are_you_teacher: Czy jesteś nauczycielem?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Przejrzyj plan lekcji i inne materiały dla nauczycieli.
   volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
     Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
@@ -596,14 +596,13 @@
   dashboard_landing_new_beta: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5.
   dashboard_landing_new_k5courses: Nowość! Wypróbuj nasze kursy dla uczniów w K-5.
   dashboard_landing_useful_links: Inne przydatne linki
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Materiały dla Twojej klasy
   dashboard_landing_office_hours: Zapytaj osobiście! Odwiedź nasze co miesięczne wideo
     godziny.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy
     ukończyli ten kurs
   dashboard_landing_educator_blog: Przeczytaj o nowościach i aktualizacjach materiałów
     na naszym blogu pedagogicznym
-  dashboard_landing_smart_hints: Pomóż nam dodać wskazówki do samouczków Code.org
   dashboard_landing_video_player: Sprawdź nasz nowy odtwarzacz wideo w swojej szkole
   dashboard_landing_progress_title: Zasadnicze postępy klasy
   dashboard_landing_progress_biggest: To jest postęp dla Twojego największego działu.
@@ -617,11 +616,11 @@
     oferowanych przez naszych partnerów.</a> Naucz się programować z robotami, twórz
     strony w sieci, utwórz własną aplikację, poznaj inne języki programowania, jak
     C++, Ruby i Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_inspire: Zainspiruj swoich uczniów plakatami, filmami i innymi.
   dashboard_landing_video_library: Use a video from the Video Library of computer
     science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_report_bug: Poddaj pomysł lub zgłoś błąd.
+  dashboard_landing_teacher_forum: Dołącz do społeczności profesjonalnego nauczania.
   dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
   dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych
     samouczków!
@@ -674,8 +673,8 @@
   dashboard_action_remove_confirm: Usunąć?
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
-  dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_action_print_certificates: Drukuj certyfikaty
+  dashboard_assessments_view: 'Zobacz oceny w:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
     course, we have assessment questions available as part of Code Studio to help
@@ -759,6 +758,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -906,6 +917,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Ucz się więcej
   dashboard_announce_try_now_button: Spróbuj teraz
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Jako nauczyciel prowadzisz drogę w ruchu, aby dać każdemu
     uczniowi w każdej szkole możliwość nauki informatyki. Nadszedł czas, aby poinformować
     swoich przedstawicieli żeby usłyszeli od Ciebie. W tym tygodniu liderów edukacji,
@@ -915,6 +927,11 @@
   dashboard_announce_all: Na bieżąco z nowymi funkcjami i aktualizacje na naszym blogu
     nauczycieli. <a href='%{teacher_blog_url}' target='_blank'> Zobacz poprzednie
     ogłoszenia.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
@@ -1061,6 +1078,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1817,3 +1835,12 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

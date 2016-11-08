@@ -5,21 +5,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
-import renderer from '../../StylelessRenderer';
+import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
-var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
-var color = require('../../color');
+var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
 
 var Instructions = require('./Instructions');
-var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
-var constants = require('../../constants');
-var msg = require('@cdo/locale');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -28,24 +24,25 @@ import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
+import Button from '../Button';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
+import msg from '@cdo/locale';
 
 import {
   getOuterHeight,
-  scrollBy,
   scrollTo,
   shouldDisplayChatTips
 } from './utils';
 
-const VERTICAL_PADDING = 10;
-const HORIZONTAL_PADDING = 20;
+import {
+  levenshtein
+} from '../../utils';
+
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
-const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
-
-const SCROLL_BY_PERCENT = 0.8;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -74,6 +71,9 @@ const styles = {
     left: 0,
     // right handled by media queries for .editor-column
   },
+  withOverlay: {
+    zIndex: OVERLAY_Z_INDEX + 1
+  },
   noViz: {
     left: 0,
     right: 0,
@@ -99,8 +99,7 @@ const styles = {
     marginRight: 0
   },
   embedView: {
-    height: undefined,
-    bottom: 0
+    display: 'none',
   },
   collapserButton: {
     position: 'absolute',
@@ -144,6 +143,7 @@ const styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
+    overlayVisible: React.PropTypes.bool,
     skinId: React.PropTypes.string,
     hints: React.PropTypes.arrayOf(React.PropTypes.shape({
       hintId: React.PropTypes.string.isRequired,
@@ -153,7 +153,6 @@ var TopInstructions = React.createClass({
     hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
-    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
@@ -175,8 +174,8 @@ var TopInstructions = React.createClass({
     ),
     noVisualization: React.PropTypes.bool.isRequired,
 
-    acapelaInstructionsSrc: React.PropTypes.string,
-    acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
+    ttsInstructionsUrl: React.PropTypes.string,
+    ttsMarkdownInstructionsUrl:  React.PropTypes.string,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -200,7 +199,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -219,7 +218,6 @@ var TopInstructions = React.createClass({
 
     if (this.refs && this.refs.instructions) {
       const contentContainer = this.refs.instructions.parentElement;
-      const contentHeight = contentContainer.scrollHeight;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
         // see comment above
@@ -240,6 +238,17 @@ var TopInstructions = React.createClass({
 
     if (this.props.feedback || this.state.promptForHint || gotNewHint) {
       this.scrollInstructionsToBottom();
+    }
+
+    if (!this.props.collapsed && !prevProps.collapsed) {
+      const minHeight = this.getMinHeight();
+      const maxHeight = this.props.maxHeight;
+      const heightOutOfBounds = this.props.height < minHeight || this.props.height > maxHeight;
+
+      if (heightOutOfBounds) {
+        const newHeight = Math.max(Math.min(this.props.height, maxHeight), minHeight);
+        this.props.setInstructionsRenderedHeight(newHeight);
+      }
     }
   },
 
@@ -378,21 +387,10 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * Handle a click to our "scroll up" button
+   * @return {Element} scrollTarget
    */
-  handleScrollInstructionsUp() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
-  },
-
-  /**
-   * Handle a click to our "scroll down" button
-   */
-  handleScrollInstructionsDown() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.clientHeight;
-    scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
+  getScrollTarget() {
+    return this.refs.instructions.parentElement;
   },
 
   /**
@@ -446,10 +444,32 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
+    // Minecraft should never show the button
     if (this.props.isMinecraft) {
       return false;
     }
-    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+
+    // if we have "extra" (non-instruction) content, we should always
+    // give the option of collapsing it
+    if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
+      return true;
+    }
+
+    // Otherwise, only show the button if we have two versions of
+    // instruction we want to toggle between
+    return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
+  },
+
+  shouldIgnoreShortInstructions() {
+    // if short instructions and long instructions have a Levenshtein
+    // Edit Distance of less than or equal to 10, ignore short
+    // instructions and only show long.
+    let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
+    return dist <= 10;
+  },
+
+  shouldDisplayShortInstructions() {
+    return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
   render: function () {
@@ -460,18 +480,18 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && Object.assign({}, styles.embedView, {
-        left: this.props.embedViewLeftOffset
-      }),
+      this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.isMinecraft && craftStyles.main
+      this.props.isMinecraft && craftStyles.main,
+      this.props.overlayVisible && styles.withOverlay
     ];
 
-    const markdown = (this.props.collapsed || !this.props.longInstructions) ?
+    const markdown = this.shouldDisplayShortInstructions() ?
       this.props.shortInstructions : this.props.longInstructions;
     const renderedMarkdown = processMarkdown(markdown, { renderer });
-    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
-      this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
+
+    const ttsUrl = this.shouldDisplayShortInstructions() ?
+      this.props.ttsInstructionsUrl : this.props.ttsMarkdownInstructionsUrl;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
@@ -517,21 +537,25 @@ var TopInstructions = React.createClass({
                 (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
             ]}
           >
-            <ChatBubble>
+            <ChatBubble ttsUrl={ttsUrl}>
               <Instructions
                 ref="instructions"
                 renderedMarkdown={renderedMarkdown}
-                acapelaSrc={acapelaSrc}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                 aniGifURL={this.props.aniGifURL}
                 inTopPane
               />
-              {this.props.collapsed && instructions2 &&
+              {instructions2 &&
                 <div
                   className="secondary-instructions"
                   dangerouslySetInnerHTML={{ __html: instructions2 }}
                 />
+              }
+              {this.props.overlayVisible &&
+                <Button type="primary">
+                  {msg.dialogOK()}
+                </Button>
               }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
@@ -539,6 +563,8 @@ var TopInstructions = React.createClass({
                 key={hint.hintId}
                 borderColor={color.yellow}
                 content={hint.content}
+                ttsUrl={hint.ttsUrl}
+                ttsMessage={hint.ttsMessage}
                 block={hint.block}
               />
             )}
@@ -566,8 +592,7 @@ var TopInstructions = React.createClass({
               <ScrollButtons
                 style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
-                onScrollUp={this.handleScrollInstructionsUp}
-                onScrollDown={this.handleScrollInstructionsDown}
+                getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
               />}
@@ -584,14 +609,14 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
+    overlayVisible: state.instructions.overlayVisible,
+    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
-    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,

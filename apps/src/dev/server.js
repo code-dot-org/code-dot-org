@@ -1,7 +1,5 @@
-var url = require('url');
 var express = require('express');
 var ejs = require('ejs');
-var fs = require('fs');
 var httpProxy = require('http-proxy');
 
 var app = express();

@@ -20,6 +20,7 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Karel < Maze
@@ -116,6 +117,7 @@ class Karel < Maze
     </category>
     <category name="Collector">
       <block type="collector_collect"></block>
+      <block type="collector_collect_simplified"></block>
       <block type="collector_ifCollectible"></block>
       <block type="collector_whileCollectible"></block>
     </category>

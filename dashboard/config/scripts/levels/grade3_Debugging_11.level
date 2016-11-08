@@ -6,18 +6,17 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment:  Now it's time to show what you know!\r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
-    "nectar_goal": "5",
+    "nectar_goal": "30",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,2,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,5,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "7",
-    "markdown_instructions": "**Assessment:**  Now it's time to show what you know!\r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
+    "ideal": "10",
+    "markdown_instructions": "**Challenge:**  Fix the errors to collect all of the nectar and make all of the honey.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -33,6 +32,10 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "step_speed": "1",
+    "instructions_important": "false",
+    "honey_goal": "30",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try running through the code using the \\\"Step\\\" button.  Is everything good at the first step?\\n\\nHow about the second?\\n\\nWhere do things go wrong?\",\"hint_id\":\"grade3_Debugging_11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/13e077f14de817f8356d1aef830612c1/grade3_Debugging_11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It looks like all of the right steps are here, you just need more of them.  How can you repeat the `get nectar` and `make honey` actions multiple times?\",\"hint_id\":\"grade3_Debugging_11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/7339ed9d629bff95db9c53905f5f9455/grade3_Debugging_11.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -43,26 +46,36 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="maze_moveForward"/>
-          </statement>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_turn">
-              <title name="DIR">turnRight</title>
-              <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">5</title>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
+                    <block type="maze_nectar">
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_honey">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
@@ -77,8 +90,8 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
+        <block type="maze_nectar" limit="1"/>
+        <block type="maze_honey" limit="1"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
@@ -89,27 +102,41 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">4</title>
+              <title name="TIMES">5</title>
               <statement name="DO">
-                <block type="maze_moveForward"/>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnLeft</title>
+                <block type="maze_moveForward">
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="controls_repeat">
+                      <title name="TIMES">6</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
                       <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">5</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">6</title>
+                                  <statement name="DO">
+                                    <block type="maze_honey"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

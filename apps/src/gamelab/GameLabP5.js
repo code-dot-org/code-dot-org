@@ -1,9 +1,8 @@
 import {singleton as studioApp} from '../StudioApp';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
-var animationsApi = require('../clientApi').animations;
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-var assetPrefix = require('../assetManagement/assetPrefix');
+import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabGame = require('./GameLabGame');
 
 /**
@@ -552,6 +551,8 @@ GameLabP5.prototype.startExecution = function () {
         });
 
         p5obj.angleMode(p5obj.DEGREES);
+        // Set default frameRate to 30 instead of 60.
+        p5obj.frameRate(30);
 
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has

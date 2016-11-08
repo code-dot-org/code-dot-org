@@ -1,8 +1,10 @@
 * * *
 
-Tytuł: < % = hoc_s(:title_country_resources) %> Układ: szeroki nav: promote_nav
+title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 * * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -29,7 +31,7 @@ p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 ## Filmy <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
 <
 
-p > [**Dołącz do Nowej Szkocji na Godzinę Kodowania (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
 <% elsif @country == 'id' %>
 
@@ -42,9 +44,9 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 ## Godzina Kodowania (アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
 <
 
-p>[**Godzina Kodowania (アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Przewodnik po lekcjach Godziny Kodowania](/files/HourofCodeLessonGuideJapan.pdf)
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
@@ -55,21 +57,6 @@ p>[**Godzina Kodowania (アワーオブコード) 2015紹介ビデオ (1 min)**]
 <
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
-
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
 
 <% elsif @country == 'pk' %>
 
@@ -89,7 +76,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 ## 1) Wypróbuj samouczki:
 
-Doświadczysz wiele radości goszcząc godzinne samouczki, tworzone przez różnych partnerów. Nowe samouczki pojawią się jeszcze przed inauguracją Godziny Kodowania <%= campaign_date('full') %>.
+We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
 **Wszystkie samouczki Godziny Kodowania:**
 
@@ -100,7 +87,7 @@ Doświadczysz wiele radości goszcząc godzinne samouczki, tworzone przez różn
 
 ## 2) Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
-Najlepiej jest poprowadzić Godzinę Kodowania na komputerach z dostępem do Internetu. Nie potrzebujesz jednak osobnego komputera dla każdego ucznia. Godzinę Kodowania można przeprowadzić nawet bez komputerów.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **Przetestuj samouczki na szkolnych komputerach lub urządzeniach.** Upewnij się, że działają prawidłowo (z dźwiękiem i obrazem).
   * **Przeglądnij strony końcowe z gratulacjami**, aby sprawdzić, co uczniowie zobaczą, kiedy skończą. 
@@ -113,13 +100,13 @@ Najlepiej jest poprowadzić Godzinę Kodowania na komputerach z dostępem do Int
 
 ## 4) Zainspiruj uczniów - pokaż im film
 
-Pokaż uczniom inspirujący filmik, aby wystartować z Godziną Kodowania. Przykłady:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [Inauguracja Godziny Kodowania w 2013 roku](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub [wideo z Godziny Kodowania w 2014 roku](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Spowoduj, że Twoi uczniowie są podekscytowani - zrób im krótkie wprowadzenie**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

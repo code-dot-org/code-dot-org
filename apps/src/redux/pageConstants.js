@@ -1,13 +1,12 @@
 var _ = require('lodash');
-var utils = require('../utils');
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 
-var ALLOWED_KEYS = utils.makeEnum(
+var ALLOWED_KEYS = new Set([
   'skinId',
   'showNextHint',
-  'acapelaInstructionsSrc',
-  'acapelaMarkdownInstructionsSrc',
+  'ttsInstructionsUrl',
+  'ttsMarkdownInstructionsUrl',
   'assetUrl',
   'channelId',
   'hasDataMode',
@@ -34,6 +33,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
+  'visualizationInWorkspace',
   'hideSource',
   'hideRunButton',
   'playspacePhoneFrame',
@@ -43,12 +43,13 @@ var ALLOWED_KEYS = utils.makeEnum(
   'aniGifURL',
   'inputOutputTable',
   'showAnimationMode',
+  'startInAnimationTab',
   'allAnimationsSingleFrame',
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
-  'versionHistoryInInstructionsHeader'
-);
+  'isK1',
+]);
 
 const initialState = {
   assetUrl() {
@@ -58,7 +59,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   if (action.type === SET_PAGE_CONSTANTS) {
     Object.keys(action.props).forEach(function (key) {
-      if (ALLOWED_KEYS[key] === undefined) {
+      if (!ALLOWED_KEYS.has(key)) {
         throw new Error(`Property "${key}" may not be set using the ${action.type} action.`);
       }
       if (state[key] !== initialState[key] && state[key] !== action.props[key]) {

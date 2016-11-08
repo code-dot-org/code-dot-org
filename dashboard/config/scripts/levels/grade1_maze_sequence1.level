@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "A bug! Fix the code to get me to the pig.",
     "start_direction": "3",
-    "step_mode": "0",
+    "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "ideal": "4",
@@ -28,7 +28,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This program is missing one block. Can you figure out which one?\",\r\n  \"hint_id\": \"grade1_maze_sequence1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "debug: add command to end",

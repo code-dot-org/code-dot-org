@@ -1,4 +1,4 @@
-import {Direction, Emotions} from './constants';
+import {Emotions} from './constants';
 import msg from './locale';
 import { extend } from '../utils';
 import blockUtils from '../block_utils';
@@ -145,29 +145,11 @@ var moveDistanceNSEW = blockOfType('studio_moveNorthDistance') +
   blockOfType('studio_moveSouthDistance') +
   blockOfType('studio_moveWestDistance');
 
-var moveNSEW = blockOfType('studio_moveNorth') +
-  blockOfType('studio_moveEast') +
-  blockOfType('studio_moveSouth') +
-  blockOfType('studio_moveWest');
-
 function whenArrowBlocks(yOffset, yDelta) {
   return '<block type="studio_whenUp" deletable="false" x="20" y="' + (yOffset).toString() + '"></block> \
     <block type="studio_whenDown" deletable="false" x="20" y="'+ (yDelta + yOffset).toString() +'"></block> \
     <block type="studio_whenLeft" deletable="false" x="20" y="' + (2 * yDelta + yOffset).toString() + '"></block> \
     <block type="studio_whenRight" deletable="false" x="20" y="' + (3 * yDelta + yOffset).toString() + '"></block>';
-}
-
-function foreverUpAndDownBlocks(yPosition) {
-  return '<block type="studio_repeatForever" deletable="false" x="20" y="' + yPosition + '"> \
-      <statement name="DO"><block type="studio_moveDistance"> \
-        <title name="SPRITE">1</title> \
-        <title name="DISTANCE">400</title> \
-        <next><block type="studio_moveDistance"> \
-          <title name="SPRITE">1</title> \
-          <title name="DISTANCE">400</title> \
-          <title name="DIR">4</title></block> \
-        </next></block> \
-      </statement></block>';
 }
 
 /*
@@ -188,6 +170,7 @@ levels.custom = {
 // Can you make this dog say "hello world"
 levels.dog_hello = {
   'ideal': 2,
+  'instructionsImportant': true,
   'requiredBlocks': [
     saySpriteRequiredBlock({
       notDefaultText: true
@@ -556,6 +539,7 @@ levels.gumball_move_to_actor = extend(levels.playlab_4, {
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
+  'instructionsImportant': true,
   'ideal': 3,
   'requiredBlocks': [
     saySpriteRequiredBlock({
@@ -1883,6 +1867,7 @@ levels.ec_sandbox = extend(levels.sandbox, {
 /* ******* Hour of Code 2015 ********/
 
 levels.js_hoc2015_move_right = {
+  'instructionsImportant': true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -3215,6 +3200,7 @@ levels.js_hoc2015_event_free = {
 };
 
 levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right,  {
+  instructionsImportant: true,
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,

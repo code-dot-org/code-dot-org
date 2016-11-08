@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Cum sa organizezi un eveniment Hour of Code
 
 ## 1) Pregăteşte-te pentru eveniment
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30-10:40 am | Elevii vor desfasura o activitate demonstrativa in cadrul Orei de Programare pentru scoala. Intorsatura amuzanta - ei trebuie sa predea directorului, politicienilor sau altor elevi. |
 | 10:40-11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul.                                         |
 | 11:00-11:05 am | Profesorul organizator ofera concluzii de final.                                                                                                                                      |
+
+<%= view :signup_button %>

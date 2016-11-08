@@ -22,13 +22,14 @@ crowdin.yaml
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log
-/apps/src/color.js
+/apps/src/util/color.js
 /apps/src/styleConstants.js
 /apps/test/entry-tests.js
 /aws/.code-studio-built
 /aws/.code-studio-commit-built
 /aws/.shared-built
 /aws/.shared-commit-built
+/bin/cron/log
 /build-started
 /coverage
 /crontab

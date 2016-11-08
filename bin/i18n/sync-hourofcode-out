@@ -1,14 +1,14 @@
 #! /usr/bin/env ruby
 
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 require 'fileutils'
 require 'tempfile'
 
 def push_out_translated_files
-  # rename_downloads_from_crowdin_code_to_locale
-  # copy_from_i18n_source_to_hoc
-  # clean_crowdin_markdown_errors
+  rename_downloads_from_crowdin_code_to_locale
+  copy_from_i18n_source_to_hoc
+  clean_crowdin_markdown_errors
   check_for_bad_translations
 end
 

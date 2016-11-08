@@ -16,11 +16,11 @@
     font-weight:bold">یەك کاژێری کۆد نووسی</a> نزیك بوەتەوە. , بانگەشەیەك بۆ هەموو
     مامۆستا و رێکخەران<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">پلانی یەك کاتژێری کۆدنووسی خۆت داڕێژە</a>'
-  csedweek_banner_teachers: |
+  csedweek_banner_teachers: |-
     <a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">
     ئایا تۆ مامۆستای زانستی کۆمپیوتەری؟ تکایە سەیری سەرچاوەی تری هەفتەی فێرکاری زانستی کۆمپیوتەر
     </a>
-  n_have_learned_an_hoc: |
+  n_have_learned_an_hoc: |-
     <h1>Try an</h1>
     <h2>كاژێری كۆدنووسی</h2>
     <h3> # تەواوبووە </h3>
@@ -41,9 +41,9 @@
     و بیرۆکەکانی پرۆگرامسازی بە لەگەڵ ئەم کۆرسە تەواوکاریە."
   og_title: Every child deserves opportunity
   og_description: Every student in every school deserves the opportunity to study
-    computer science.
+    computer science. It's changing everything.
   hoc2014_heading: "بەشداربە لە \n<a href=\"http://hourofcode.com\">كاژێری كۆدنووسی</a>\n<br/>لە
-    ٨ تا ١٤ ی دیسێمبەری ٢٠١٤<br/>\n"
+    ٨ تا ١٤ ی دیسێمبەری ٢٠١٤<br/>"
   hoc2014_students: "خوێندکارەکان"
   hoc2014_try: "تاقیبکەوە"
   hoc2014_teachers: "مامۆستایان"
@@ -66,18 +66,18 @@
   california_text: "هەموو مامۆستایەك دەتوانی \n<a href='http://studio.code.org/'>کۆرسی
     بەخۆڕایی</a>مان بڵێتەوە.\n هەر قوتابخانەیەکی بنەڕەتی دەتوانی \n <a href='http://code.org/educate/k5'>زانستی
     کۆمپیوتەر فێربکا</a>. \nداوا لە خوێندنگا دواناوەندیەکان بکە\n<a href='http://code.org/educate/districts'>\nهاوکارمان
-    بن.\n"
+    بن."
   california_button: "زیاتر فێرببە"
   flappy_heading: "ڕۆژی لەدایك بوونی Code.org فلاپی بێ"
   flappy_text: "Code.org بووە یەك ساڵان.\n<br/><br/>\nیاری\n <b>Flappy</b>\n تایبەت
-    بەخۆت دروستبكە. \nبە ڕێسای خۆت کۆدی لۆ بکە و لە نێو برادەرانت بڵاویبکەوە!\n"
+    بەخۆت دروستبكە. \nبە ڕێسای خۆت کۆدی لۆ بکە و لە نێو برادەرانت بڵاویبکەوە!"
   view_english_site: "ماڵپەڕی ئینگلیزی ببینە"
   non_english_tutorials: "فێركاریەكان بۆ چەند زمانێك وەرگێڕدراون:"
   write_your_first_program: "یەكەم پرۆگرامی خۆت بنوسە"
   learn_cs_concepts: "چەمکە بەراییەکانی کۆمپیوتەر زانی بە بەکارهێنانی پرۆگرامی ئاساند.
     ئەو فێرکاریە لە شێوەی یاریدایە ڤیدوۆی وانەکان بە پالەوانیەتی بیل گێتس و مارک زوگبێرگ
     و یاری Angry Bird و Plants vs. Zombies پێشکەش دەکرێن. \nفێرە دەستەواژەی سوڕی دووبارەکردنەوە
-    و ئەگەر-ئەوا ببە لەگەڵ هەندێك لە سەرەتاکەنی خوارزمیە.\n"
+    و ئەگەر-ئەوا ببە لەگەڵ هەندێك لە سەرەتاکەنی خوارزمیە."
   all_ages: "هەموو تەمەنەكان"
   beginner: "شاگرد"
   n_participants: "# بەشداربوو"
@@ -254,7 +254,7 @@
   learn_next_level: "بەردەوام بە بۆ ئاستی داهاتوو"
   learn_online: "کۆرسی تر تاقیکەوە"
   learn_classes: "پۆلی ناوەخۆ بدۆزەوە"
-  hoc_is_here: "تاگی #کاتژێری_کۆدنووسی لێرەیە - سەیرەکی @codeorg بكە"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: "هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری
     بکەی"
   just_did_course1: I just finished Course 1 - check it out! @codeorg
@@ -308,7 +308,7 @@
     بگۆڕی.&rdquo; سوزان، بەڕێوەبەری یوتیوب"
   homepage_hero_text_fistbump: "&ldquo;تەنها یاری لەسەر مۆبایلەكەت مەکە، پرۆگرامی
     بكە.&rdquo; باڕاك ئۆباما، سەرۆكی ولایەتە یەکگرتوەکانی ئەمریکا"
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;منداڵەکانمان &mdash;بەكچەكانمانەوە&mdash; پێویستیان بە دەرفەتی فێربوونی زانستی کۆمپیوتەر هەیە.&rdquo;
     شێریل، گەورە فەرمانبەری بەکاربردن لە فەیسبووك
   homepage_hero_text_satya: "&ldquo;زانستی کۆمپیوتەر دەتوانی باشترین دەرفەتەکانی جیهان
@@ -316,22 +316,22 @@
   homepage_hero_text_bosh: "&ldquo; ئەگەت کۆدی پرۆگرام  بنوسی، دەتوانی ڕێگای ژیانت
     هەڵبژێری.&rdquo; کریس بۆش"
   homepage_hero_text_student1: "&ldquo; ئەو بەهرانە داهاتوومیان گۆڕی، وە لەیاديش نەکەین،
-    كە هەر خۆشیەکی بێ گەردە. &rdquo; \nلونا، پۆلی حەفت\n"
+    كە هەر خۆشیەکی بێ گەردە. &rdquo; \nلونا، پۆلی حەفت"
   homepage_hero_text_student2: "&ldquo; من هەرگیز منداڵەکانی خۆم نەدیتییە  ئەوەندە
-    بەپەرۆشی فێربوون بن. &rdquo; \nمایكل، مامۆستا\n"
-  homepage_hero_text_student3: |
+    بەپەرۆشی فێربوون بن. &rdquo; \nمایكل، مامۆستا"
+  homepage_hero_text_student3: |-
     &ldquo;زانستی کۆمپیوتەر ئەو بوارەیە کە نازانی ڕات لێ یە یان نا تا بەخۆت تاقی نەکەیەوە. &rdquo;
     جاکسۆن، پۆلی شەشی سەرەتایی
   homepage_hero_text_student4: "&ldquo; هەر شتێك مێشكت بیەوێت دەتانی بە به‌رنامه‌
-    بی ‌هێنییە  جێ.&rdquo; \nمایا، پۆلی دوو\n"
-  homepage_hero_text_student5: |
+    بی ‌هێنییە  جێ.&rdquo; \nمایا، پۆلی دوو"
+  homepage_hero_text_student5: |-
     &ldquo;زانستی کۆمپیوتەر لۆ خەلکی تر نییە. هەر ئێستا لۆ تۆیە. &rdquo;
     گیرالدۆ، مامۆستا
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo; کۆد نووسین پڕيشك و هاندەرە بۆ داهێنان و نوێکاری&mdash; کە هەموویان زۆر گرینگن بۆ هەر پیشەیەك.&rdquo;
     فلۆریسا، مامۆستا
   homepage_hero_text_teacher2: "&ldquo; ئەو پرۆگرامە وای لە قوتابیانم کرد ١٠٠% بەشداربن.&rdquo;
-    \nئادەم، مامۆستا\n"
+    \nئادەم، مامۆستا"
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
@@ -541,9 +541,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: "بنێرە"
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
@@ -596,7 +596,6 @@
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
@@ -750,6 +749,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -883,6 +894,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "زیاتر فێرببە"
   dashboard_announce_try_now_button: "ئێستا تاقیبکەوە"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -891,6 +903,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -1030,6 +1047,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1739,3 +1757,12 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

@@ -24,8 +24,6 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var evalMsg = require('./locale');
-var skins = require('../skins');
-var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var Provider = require('react-redux').Provider;
@@ -36,7 +34,6 @@ var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
 var utils = require('../utils');
-var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -80,7 +77,7 @@ Eval.init = function (config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');

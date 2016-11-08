@@ -20,6 +20,7 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Gamelab < Blockly
@@ -29,15 +30,19 @@ class Gamelab < Blockly
     free_play
     text_mode_at_start
     hide_animation_mode
+    start_in_animation_tab
     all_animations_single_frame
     show_d_pad
     soft_buttons
     submittable
     data_properties
     hide_view_data_button
+    show_debug_watch
+    watchers_prepopulated
     debugger_disabled
     pause_animations_by_default
     start_animations
+    teacher_markdown
   )
 
   # List of possible skins, the first is used as a default.
@@ -58,7 +63,8 @@ class Gamelab < Blockly
       properties: {
         code_functions: JSON.parse(palette),
         show_d_pad: true,
-        edit_code: true
+        edit_code: true,
+        show_debug_watch: false
       }
     ))
   end

@@ -1,5 +1,6 @@
-login_required 'true'
-hidden 'false'
+hidden false
+login_required true
+hideable_stages true
 
 stage 'Bytes and File Sizes'
 level 'v2 U2L1 Student Lesson Introduction'
@@ -36,7 +37,6 @@ named_level 'Widget: Color Pixelation'
 assessment 'U2L5 Color Pixel MC Question'
 assessment 'U2L5 FR brighten darken image'
 
-
 stage 'Lossy Compression and File Formats'
 level 'v2 U2L5 Student Lesson Introduction'
 assessment 'U1L16 - Matching File Compression Types'
@@ -44,7 +44,7 @@ assessment 'U1L16 - Matching File Compression Types'
 stage 'Encode a Complex Thing'
 level 'v2 U2L6 Student Lesson Introduction'
 
-stage 'Unit 2 Chapter 1 Assessment', lockable:true
+stage 'Unit 2 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC'
 
 stage 'Intro to Data'
@@ -88,7 +88,6 @@ named_level 'Categorizing Data'
 assessment 'U2L13 Cleaning Data MC'
 assessment 'U2L13 FR Reflection data analysis objective'
 
-
 stage 'Creating Summary Tables'
 level 'v2 U2L14 Student Lesson Introduction'
 named_level 'Making Pivot Tables Part 1 - The Basics'
@@ -99,5 +98,5 @@ assessment 'U2L14 Summary Tables MC'
 stage 'Practice PT - Tell a Data Story'
 level 'v2 U2L15 Student Lesson Introduction'
 
-stage 'Unit 2 Chapter 2 Assessment', lockable:true
+stage 'Unit 2 Chapter 2 Assessment', lockable: true
 assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'
