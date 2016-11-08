@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import color from '../../../../util/color';
-import { borderRadius } from './constants';
+import { borderRadius, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import { addStage, addGroup } from './editorRedux';
@@ -69,7 +69,7 @@ const FlexGroup = React.createClass({
               <div style={styles.groupHeader}>
                 Group {++count}: {group}
                 <OrderControls
-                  type="GROUP"
+                  type={ControlTypes.Group}
                   position={afterStage}
                   total={Object.keys(groups).length}
                 />

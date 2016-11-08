@@ -21,12 +21,12 @@ const styles = {
 const ScriptEditor = React.createClass({
   propTypes: {
     i18nData: React.PropTypes.object.isRequired,
-    hidden: React.PropTypes.bool.isRequired,
-    loginRequired: React.PropTypes.bool.isRequired,
-    hideableStages: React.PropTypes.bool.isRequired,
-    professionalLearningCourse: React.PropTypes.bool.isRequired,
-    peerReviewsRequired: React.PropTypes.number.isRequired,
-    wrapupVideo: React.PropTypes.string.isRequired
+    hidden: React.PropTypes.bool,
+    loginRequired: React.PropTypes.bool,
+    hideableStages: React.PropTypes.bool,
+    professionalLearningCourse: React.PropTypes.bool,
+    peerReviewsRequired: React.PropTypes.number,
+    wrapupVideo: React.PropTypes.string
   },
 
   render() {

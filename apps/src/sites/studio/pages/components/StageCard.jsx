@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { borderRadius, levelTokenMargin } from './constants';
+import { borderRadius, levelTokenMargin, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
 import { reorderLevel, addLevel } from './editorRedux';
@@ -128,7 +128,7 @@ const StageCard = React.createClass({
         <div style={styles.stageCardHeader}>
           Stage {this.props.stage.position}: {this.props.stage.name}
           <OrderControls
-            type="STAGE"
+            type={ControlTypes.Stage}
             position={this.props.stage.position}
             total={this.props.stagesCount}
           />
