@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import _ from 'lodash';
-import clientState from './clientState';
+import * as clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';

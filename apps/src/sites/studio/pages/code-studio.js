@@ -32,7 +32,6 @@ require('@cdo/apps/code-studio/components/Attachments');
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
 window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts');
 window.dashboard.hashEmail = require('@cdo/apps/code-studio/hashEmail');
 window.dashboard.funometer = require('@cdo/apps/code-studio/funometerPercentagesByDay');
