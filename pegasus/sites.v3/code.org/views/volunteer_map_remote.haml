@@ -1,0 +1,30 @@
+-experience_s ||= nil
+
+%h1 Find a remote volunteer
+
+%p
+  Find a volunteer who can call into your classroom through a video conference to answer questions about computer science.
+  The map shows the volunteer's location but since they are willing to video conference remotely, you can contact a volunteer from anywhere.
+%p
+  Want to sign up to volunteer?
+  %a{href: "https://code.org/volunteer"}
+    Sign up here
+  to be included on this map.
+
+%form#volunteer-search-form{role: "form", onsubmit: "event.preventDefault();"}
+  #volunteer-search-facets.form-section.row
+    .form-group.col-xs-4
+      %label.control-label.small{for: "experience-level"} Volunteer experience level
+      %div
+        %select#experience-level.form-control{name: "experience_s", type: "select"}
+          %option{selected: experience_s.nil_or_empty?, value: ""}= "any"
+          -VolunteerEngineerSubmission2015.experiences.each do |key, value|
+            %option{value: key, selected: (experience_s||[]).include?(key.to_s)}= value
+
+#volunteer-search-results.row.top-margin
+  #volunteer-search-controls.col-xs-5
+    #controls
+  #volunteer-search-map.col-xs-7
+    #gmap
+.row
+  #volunteer-search-error.col-xs-12.display-none.top-margin
