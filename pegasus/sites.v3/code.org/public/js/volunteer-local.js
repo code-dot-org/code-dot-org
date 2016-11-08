@@ -172,7 +172,7 @@ function updateFacets(results) {
 }
 
 function displayNoResults() {
-  $('#controls').html('<p>No results were found. Instead find a remote volunteer to have a video conference Q&A <a href="/volunteer/remote">here</a></p>');
+  $('#controls').html('<p>Sorry! No volunteers were found with that search criteria. <a href="/volunteer/remote">Find a volunteer who can video chat</a> with your classroom and inspire your students.</p>');
 
   // If a facet has a value, show the facets.
   var form_data = $('#volunteer-search-form').serializeArray();
