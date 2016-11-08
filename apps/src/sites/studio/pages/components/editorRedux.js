@@ -99,8 +99,7 @@ function updatePositions(node) {
   }
 }
 
-let newStageId = -1;
-let newLevelId = -1;
+const NEW_LEVEL_ID = -1;
 
 export default function reducer(state, action) {
   let newState = _.cloneDeep(state.stages);
@@ -115,7 +114,6 @@ export default function reducer(state, action) {
     }
     case ADD_GROUP: {
       newState.push({
-        id: newStageId--,
         flex_category: action.groupName,
         name: action.stageName,
         levels: []
@@ -126,7 +124,7 @@ export default function reducer(state, action) {
     case ADD_STAGE: {
       const groupName = newState[action.position - 1].flex_category;
       newState.splice(action.position, 0, {
-        id: newStageId--,
+        id: state.newStageId,
         name: action.stageName,
         flex_category: groupName,
         levels: []
@@ -136,17 +134,16 @@ export default function reducer(state, action) {
     }
     case ADD_LEVEL: {
       const levels = newState[action.stage - 1].levels;
-      const id = newLevelId--;
       levels.push({
-        ids: [id],
-        activeId: id,
+        ids: [NEW_LEVEL_ID],
+        activeId: NEW_LEVEL_ID,
         expand: true
       });
       updatePositions(levels);
       break;
     }
     case ADD_VARIANT: {
-      newState[action.stage - 1].levels[action.level - 1].ids.push(newLevelId--);
+      newState[action.stage - 1].levels[action.level - 1].ids.push(NEW_LEVEL_ID);
       break;
     }
     case REMOVE_GROUP: {
