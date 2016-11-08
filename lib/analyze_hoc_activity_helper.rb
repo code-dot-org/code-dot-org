@@ -9,10 +9,6 @@ require 'cdo/properties'
 DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
-def add_count_to_hash(hash, key, count)
-  hash[key] = hash.key?(key) ? hash[key] + count : count
-end
-
 def analyze_day_fast(date)
   day = date.strftime('%Y-%m-%d')
   next_day = (date + 1).strftime('%Y-%m-%d')
@@ -41,39 +37,39 @@ def analyze_day_fast(date)
   end
 
   codedotorg_tutorial_count = 0
-  tutorials = {}
+  tutorials = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT tutorial, #{weighted_count} #{from_where} GROUP BY tutorial ORDER BY count DESC"
   ).each do |row|
     next if row[:tutorial].nil_or_empty?
-    add_count_to_hash tutorials, row[:tutorial], row[:count].to_i
+    tutorials[row[:tutorial]] = row[:count].to_i
     if codedotorg_tutorials.include? row[:tutorial]
       codedotorg_tutorial_count += row[:count].to_i
     end
   end
 
-  countries = {}
+  countries = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT country, #{weighted_count} #{from_where} GROUP BY country ORDER BY count DESC"
   ).each do |row|
     row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
-    add_count_to_hash countries, row[:country], row[:count].to_i
+    countries[row[:country]] += row[:count].to_i
   end
 
-  states = {}
+  states = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT state, #{weighted_count} #{from_where} GROUP BY state ORDER BY count DESC"
   ).each do |row|
     row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
-    add_count_to_hash states, row[:state], row[:count].to_i
+    states[row[:state]] += row[:count].to_i
   end
 
-  cities = {}
+  cities = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT city, #{weighted_count} #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
   ).each do |row|
     row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
-    add_count_to_hash cities, row[:city], row[:count].to_i
+    cities[row[:city]] += row[:count].to_i
   end
 
   started = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{from_where}").first[:count].to_i

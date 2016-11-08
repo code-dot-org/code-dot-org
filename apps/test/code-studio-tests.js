@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 var testsContext = require.context("./code-studio", true, /\.js$/);
 testsContext.keys()
   .filter(

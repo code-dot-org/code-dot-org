@@ -258,7 +258,7 @@
   homepage_hero_text_stat_served: "编程一小时：已有 #served 次参与"
   homepage_slot_text_hoc: "编程一小时"
   homepage_slot_text_frozen: "与安娜与埃尔莎一起来玩冰雪奇缘"
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: "教师的仪表板"
   homepage_slot_text_studio: "我们的所有教程"
   homepage_slot_text_course4: "课程 4"
   homepage_slot_text_shop: "商店"
@@ -590,6 +590,18 @@
   dashboard_sections_yes_both: "是的，我想要复制学生到本章节和新章节中。"
   dashboard_sections_no_move: "不，我想移动学生到新章节中。"
   dashboard_sections_move_students: "转移学生"
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: "你没有选择任何要转移的学生，请至少选择一个学生。"
   dashboard_error_other_section: "如果你要在自己管理的单元中调整学生，可以从下拉菜单选择你要调的单元。如果你要将学生调整到其他教师负责的单元，请选择”其它单元”。"
   dashboard_students_add_student: "添加学生"
@@ -637,7 +649,7 @@
   dashboard_course1: "课程 1:"
   dashboard_course2: "课程 2："
   dashboard_course3: "课程 3："
-  dashboard_course4: "课程 4 (测试版)： "
+  dashboard_course4: "课程 4 (测试版)："
   dashboard_unplugged: "如果你没有电脑，可以在你的教室<a href='%{unplugged_url}'>试试这些离线的教程。</a>"
   dashboard_curriculum: "课程"
   dashboard_curriculum_overview: K-5课程概述
@@ -695,35 +707,34 @@
   dashboard_faq: "常见的问题"
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: "公告"
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: 我们利用夏天的时间将您的反馈意见变成新的功能。现在，您可以 <a href="%{pp_url}"target="_blank">
+    跟踪多个学生取得的进步</a> 即使他们结对编程在一台设备。你可以用 <i>任何</i> 课堂从我们 CS 原理课 <a href="%{csp_widgets_url}"target="_blank">
+    的最佳互动的工具</a>。你的学生可以 <a href="%{unused_code_url}"target="_blank"> 保持未使用的代码</a>
+    在他们的工作区，鼓励实验 ！签出我们所有的新功能，让我们知道你的想法。
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "了解详情"
   dashboard_announce_try_now_button: "现在就试试"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
     28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
   dashboard_announce_petition_button: "添加您的姓名"
   dashboard_announce_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
     看以前的公告。</a>"
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "代码小时就在这里 — — 12 月 8-14 ！"
   code_sign_up: "注册以便在计算机科学教育周期间参加"
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: "主办一小时"
+  learn_banner_title: "加入我们的代码小时"
+  learn_banner_desc: "代码小时是一个全球性的活动，达到 180 多个国家的超过 1 亿学生。任何人，任何地方都可以组织一个小时的代码事件。帮助我们给每个学生学习计算机科学的机会
+    ！组织者可以按照我们的 <a href='%{how_to_url}' target='_blank'> 操作指南</a> 为教学代码小时，激发学生的 <a
+    href='%{videos_url}' target='_blank'> 这些</a> 视频。"
   learn_more: "现在就试试"
   learn_sign_up_description: "报名参与在计算机科学教育周期间的编程一小时活动。"
   learn_sign_up_button: "注册"
@@ -1276,13 +1287,13 @@
     C 、PHP 和 JavaScript 加 SQL、CSS、和 HTML。在哈佛校园内，CS50x 是大学中人数第二多的课程。
   coursera_beyond_longdescription: "斯坦福大学的 CS 101（免费！）课堂的导师是尼克 • 帕兰蒂 。CS101 专门向毫无经验的学生们教导计算机学的根本概念。您可以通过玩和试探简短的代码来领悟到计算机的潜能和限度。通过
     CS 101，您也能够意识到今日计算机界的背景，了解什么叫计算机，什么叫硬件、什么叫软件、和什么叫互联网。参与这趟课程除了懂得使用浏览器之外无需任何经验，。"
-  udacity_beyond_longdescription: |
+  udacity_beyond_longdescription: |-
     在这个过程中，你会学到计算机科学的关键概念，并学习如何构建网络爬虫，编写自己的计算机程序.
     这门课程不需要事先编程知识. 欢迎初学者！在这个课程结束时，你会学到计算机科学和足够的编程关键概念来编写Python程序来解决你自己的问题。本课程将会让你准备好升到中级计算的课程.
   teachingtree_beyond_longdescription: TeachingTree是一个开放的平台，任何人都可以组织教育内容. 我们的目标是为学生快速存取他们所需要的精确的剪辑，以便了解各个概念.  鼓励每个人帮助添加视频或标记概念.
   kodu_beyond_longdescription: Kodu让孩子们通过一个简单的可视化编程语来言创建PC和Xbox上的游戏。Kodu可以用来教创造力，解决问题，讲故事，以及编程。任何人都可以使用Kodu制作游戏，幼儿以及成人，没有设计或编程技能。PC的Kodu可免费下载。Xbox的Kudo也是在美国的Xbox市场有售，在独立游戏频道里面约需要5美元.
   cargobot_beyond_longdescription: Cargo-Bot 是一种益智游戏，你教机器人如何移动箱子。听起来很简单，对不对？它拥有36个巧妙复杂的关卡，魔幻的音乐和令人惊叹的图形。你甚至可以录下解决方案，并在视频网站上和你的朋友分享。
-  kidsruby_beyond_longdescription: |
+  kidsruby_beyond_longdescription: |-
     做出有趣的游戏，或使用Ruby来做作业！只用告诉你的父母或老师你正在学习Ruby编程...;)
     可以免费在任何计算机上使用. [注：需要安装桌面软件]
   w3schools_beyond_longdescription: "学西在自己的计算机上创建的网站。在一天内了解服务器的基础支持。学习如何添加数据库到您的网站上。"
@@ -1315,21 +1326,12 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

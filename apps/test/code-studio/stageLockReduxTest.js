@@ -29,17 +29,24 @@ const [section1Id, section2Id] = Object.keys(fakeSectionData);
 const stage1Id = Object.keys(fakeSectionData[section1Id].stages)[0];
 
 describe('stageLockRedux reducer tests', () => {
+  let store;
+  beforeEach(() => {
+    store = createStore(combineReducers({stageLock: reducer}));
+  });
+
   describe('setViewType', () => {
     it('can set as teacher', () => {
       const action = setViewType(ViewType.Teacher);
-      const nextState = reducer(undefined, action);
-      assert.equal(nextState.viewAs, ViewType.Teacher);
+      store.dispatch(action);
+      const nextState = store.getState();
+      assert.equal(nextState.stageLock.viewAs, ViewType.Teacher);
     });
 
     it('can set as student', () => {
       const action = setViewType(ViewType.Student);
-      const nextState = reducer(undefined, action);
-      assert.equal(nextState.viewAs, ViewType.Student);
+      store.dispatch(action);
+      const nextState = store.getState();
+      assert.equal(nextState.stageLock.viewAs, ViewType.Student);
     });
   });
 

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 
 import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/progress_dot';
-import color from '@cdo/apps/color';
+import color from '@cdo/apps/util/color';
 
 describe('ProgressDot component tests', () => {
   let renderer, level;

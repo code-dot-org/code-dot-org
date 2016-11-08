@@ -378,7 +378,6 @@ module.exports = function (grunt) {
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'initApp/initApp':              './src/sites/studio/pages/initApp.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
 
@@ -393,7 +392,7 @@ module.exports = function (grunt) {
     embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
@@ -596,7 +595,7 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    appsToBuild.concat('common').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';
@@ -683,6 +682,7 @@ module.exports = function (grunt) {
     'karma:integration'
   ]);
 
+  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
   grunt.registerTask('codeStudioTest', [
     'preconcat',
     'concat',

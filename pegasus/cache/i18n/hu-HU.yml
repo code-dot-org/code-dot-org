@@ -299,43 +299,43 @@
   studiobar_shop_title: "Áruház"
   studiobar_shop_body: Számoljunk le az előítéletekkel. Viseld büszkén a logónkat.
   homepage_hero_text_malala: "&ldquo;Kihívom a lányokat a világ minden országában,
-    hogy vegyenek részt a Kódolás óráján&rdquo; \nMalala, Nobel Békedíjas\n"
-  homepage_hero_text_susan: |
+    hogy vegyenek részt a Kódolás óráján&rdquo; \nMalala, Nobel Békedíjas"
+  homepage_hero_text_susan: |-
     &ldquo;Ha változtatni tudsz a technológián,
     a világot is meg tudod változtatni.&rdquo;
     Susan, a YouTube vezérigazgatója
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Ne csak játssz a telefonodon,
     programozd is.&rdquo;
     Barack Obama, az USA elnöke
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;A gyermekeinknek &mdash; ideértve a lányokat is &mdash;
     szükségük van a lehetőségre, hogy informatikát tanuljanak.&rdquo;
     Sheryl, Facebook üzemeltetési igazgató
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;A számítástechnika a világ
     legjobb lehetőségeit nyitja meg.&rdquo;
     Satya, a Microsoft vezérigazgatója
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Ha kódolsz, akkor életed legjobb tanfolyamán vehetsz részt.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Ezek a képességek megváltoztatták a jövőmet. Arról nem is beszélve, hogy ez tisztán szórakozás.&rdquo;
     Luna, 7. osztály
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Soha nem láttam a gyermekeimet ennyire izgatottnak amikor tanulásról volt szó.&rdquo;
     Michael, tanár
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Az informatika egy olyan dolog, amiről nem tudod eldönteni, hogy szereted vagy nem, amíg ki nem próbálod.&rdquo;
     Jackson, 6. osztály
   homepage_hero_text_student4: "&ldquo;A programozás segítségével bármit megvalósíthatsz,
-    amit az elméd ki tud találni.&rdquo; \nMaya, 2. osztály\n"
+    amit az elméd ki tud találni.&rdquo; \nMaya, 2. osztály"
   homepage_hero_text_student5: "&ldquo;Az informatika nem valaki más karrierje, hanem
-    a tiéd. Itt és most.&rdquo; \nGeraldo, tanár\n"
-  homepage_hero_text_teacher1: |
+    a tiéd. Itt és most.&rdquo; \nGeraldo, tanár"
+  homepage_hero_text_teacher1: |-
     &ldquo;A kódolás beindítja a kreativitást, inspriációt és az innovációt &mdash; ezekre minden karrier esetén szükség van.&rdquo;
     Floresa, tanár
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Ez a program minden diákom érdeklődését felkeltette, így aktívak voltak és részt vettek a munkában.&rdquo;
     Adam, tanár
   homepage_hero_text_stat_loc: "#loc sor kód, amit a diákok írtak"
@@ -758,6 +758,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -897,6 +909,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Tudj meg többet
   dashboard_announce_try_now_button: Próbálja ki most
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -905,6 +918,11 @@
   dashboard_announce_petition_button: Add meg a nevedet
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Megkezdődött a Kódolás Órája - December 8-14.
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás
     hete keretében
@@ -1794,21 +1812,12 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

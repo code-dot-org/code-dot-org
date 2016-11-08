@@ -201,7 +201,11 @@ const DataTable = React.createClass({
         onComplete();
       },
       msg => {
-        console.warn(msg);
+        if (String(msg).includes('data is too large')) {
+          this.props.onShowWarning(msg);
+        } else {
+          console.warn(msg);
+        }
         onComplete();
       });
   },

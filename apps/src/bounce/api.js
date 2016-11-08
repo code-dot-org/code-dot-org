@@ -35,6 +35,11 @@ exports.setBackground = function (id, value) {
   Bounce.setBackground(value);
 };
 
+exports.setTeam = function (id, value) {
+  studioApp.highlight(id);
+  Bounce.setTeam(value);
+};
+
 exports.setBall = function (id, value) {
   studioApp.highlight(id);
   Bounce.setBall(value);

@@ -12,9 +12,6 @@
       data: data,
       colHeaders: headers,
       cells: function(row, col, prop) {
-        if([13, 20, 27, 35, 38, 46, 53, 60, 64, 74, 78, 82, 83].indexOf(col) != -1) {
-          return cellProperties = {format: '0.00'};
-        }
         return {};
       }
   });

@@ -95,14 +95,17 @@
     Kurs 3
   congratulations_on_completing_course4: Herzlichen Glückwunsch zum Abschluss von
     Kurs 4
-  congratulations_on_completing_accelerated: "\\n"
+  congratulations_on_completing_accelerated: |2+
+
   congrats_next_tutorials_title: Probieren Sie als Nächstes diese Anleitungen
   congrats_next_tutorials_desc: Probieren Sie diese kürzeren, ca. 1-stündigen Anleitungen
     oder eine unserer <a href="%{current_path}/next">Partneranleitungen</a>.
   get_a_certificate_of_achievement: Erhalten Sie eine Leistungsurkunde
   view_course: Kurs anzeigen
-  view_unit: "\\n"
-  make_app: "\\n"
+  view_unit: |2+
+
+  make_app: |2+
+
   congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
   congrats_guest_speaker_desc: Jetzt, da ihre SchülerInnen den Informatik-Kurs abgeschlossen
     haben, sollten Sie dies feiern und sie mit Dingen in Verbindung bringen, die es
@@ -305,7 +308,7 @@
     Code für ein Kind
   studiobar_shop_title: Shop
   studiobar_shop_body: Brich mit dem Klischee. Trage unser Logo mit Stolz.
-  homepage_hero_text_malala: |
+  homepage_hero_text_malala: |-
     „Ich fordere Mädchen in jedem Land auf, an einer Hour of Code teilzunehmen“
     Malala, Friedensnobelpreisträgerin
   homepage_hero_text_susan: "„Wenn man Technologien verändern kann, kann man auch
@@ -758,6 +761,18 @@
     die neue Abteilung kopieren
   dashboard_sections_no_move: Nein, ich möchte Schüler nur in die neue Abteilung verschieben.
   dashboard_sections_move_students: Verschiebe Schüler
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -903,6 +918,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Mehr erfahren
   dashboard_announce_try_now_button: Probiere es jetzt aus
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder
     Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an
     der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten
@@ -912,6 +928,11 @@
   dashboard_announce_petition_button: Fügen Sie Ihren Namen ein
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   host_an_hour: Host an hour
@@ -1277,7 +1298,7 @@
     Dies ist eine spielerische, selbstgesteuerte Einführung mit Videolektionen von
     Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. Lerne Wiederholungsschleifen,
     Wenn-Sonst-Anweisungen und einfache Algorithmen. In 34 Sprachen verfügbar.
-  codeintl_longdescription: |
+  codeintl_longdescription: |-
     Lerne die Grundlagen des Programmierens ganz einfach durch "Drag & Drop". Ganz spielerisch kannst Du dich selbst durch unseren Unterricht mit Videos von Bill Gates, Mark Zuckerberg, Angry Birds oder Plants vs. Zombies navigieren.
     Lerne, Schleifen zu programmieren, Bedingungen einzusetzen und einfache Algorithmen zu entwickeln. Das Programm ist in 34 Sprachen verfügbar.
   thinkersmithspanish_longdescription: Mit vordefiniertem "Roboter-Vokabular" finden
@@ -1798,21 +1819,12 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'
