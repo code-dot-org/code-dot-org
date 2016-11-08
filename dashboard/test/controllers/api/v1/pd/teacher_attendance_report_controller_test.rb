@@ -4,7 +4,8 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
   freeze_time
 
   EXPECTED_COMMON_FIELDS = %w(
-    teacher_name
+    teacher_first_name
+    teacher_last_name
     teacher_id
     teacher_email
     plp_name
