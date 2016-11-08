@@ -53,10 +53,7 @@ RocketHeightLogic.prototype.onTick = function () {
  * @returns {number} Height of rocket after seconds
  */
 RocketHeightLogic.prototype.rocket_height = function (seconds) {
-  const rocketHeight = this.resolveCachedBlock_('VALUE');
-  if (rocketHeight) {
-    return rocketHeight(seconds);
-  }
+  return this.resolveCachedBlock_('VALUE')(seconds);
 };
 
 module.exports = RocketHeightLogic;
