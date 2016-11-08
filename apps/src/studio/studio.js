@@ -2977,8 +2977,7 @@ Studio.execute = function () {
           // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
           Object.defineProperty(Studio, 'Globals', {
             get: () => {return hook.func() || {};},
-            set: () => {},
-            configurable: true,
+            set: () => {}
           });
         } else {
           registerEventHandler(handlers, hook.name, hook.func);
