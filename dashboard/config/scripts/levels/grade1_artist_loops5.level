@@ -33,8 +33,9 @@
     "discard_background": "false",
     "authored_hints": "[]",
     "ideal": "4",
+    "instructions_important": "false",
     "contained_level_names": null,
-    "instructions_important": "false"
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/bd4e1ddff37c5efbbbb00dff166948e2-image-1478588910222.png\", \"position\": [0,0]}\r\n]"
   },
   "published": true,
   "notes": "",
