@@ -201,16 +201,7 @@ GameLabP5.prototype.init = function (options) {
       mousePosition = this.createVector(this.mouseX, this.mouseY);
     }
 
-    if (sprite.collider instanceof this.CircleCollider) {
-      return this.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
-    } else if (sprite.collider instanceof this.AABB) {
-      return mousePosition.x > sprite.collider.left() &&
-          mousePosition.y > sprite.collider.top() &&
-          mousePosition.x < sprite.collider.right() &&
-          mousePosition.y < sprite.collider.bottom();
-    }
-
-    return false;
+    return sprite.collider.overlap(new window.p5.PointCollider(mousePosition));
   };
 
   window.p5.prototype.mousePressedOver = function (sprite) {
@@ -715,6 +706,7 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: window.p5.Font },
     { instance: window.p5.Table },
     { instance: window.p5.TableRow },
+    // TODO: Maybe add collider types here?
   ];
 };
 
