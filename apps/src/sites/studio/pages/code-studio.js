@@ -42,7 +42,6 @@ window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
 window.dashboard.header = require('@cdo/apps/code-studio/header');
 window.dashboard.videos = require('@cdo/apps/code-studio/videos');
 window.dashboard.assets = require('@cdo/apps/code-studio/assets');
-window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.teacher = require('@cdo/apps/code-studio/teacher');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
@@ -89,3 +88,8 @@ setTimeout(function () {
 activateReferenceAreaOnLoad();
 
 window.CDOSounds = new Sounds();
+
+import {trackProgress} from '@cdo/apps/code-studio/clientState';
+window.__TestHooks = {
+  trackProgress,
+};

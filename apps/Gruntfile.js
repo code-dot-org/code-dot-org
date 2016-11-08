@@ -379,7 +379,10 @@ module.exports = function (grunt) {
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
+    'devise/sessions/new':          './src/sites/studio/pages/devise/sessions/new.js',
+    'devise/shared/_links':         './src/sites/studio/pages/devise/shared/_links.js',
+    'shared/_user_header':          './src/sites/studio/pages/shared/_user_header.js',
   };
 
   var otherEntries = {
