@@ -38,13 +38,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment = Pd::Enrollment.new
     refute enrollment.valid?
     assert_equal [
-      'Name is required',
+      'First name is required',
+      'Last name is required',
       'Email is required',
       'School is required',
       'School info is required'
     ], enrollment.errors.full_messages
 
-    enrollment.name = 'name'
+    enrollment.first_name = 'FirstName'
+    enrollment.last_name = 'LastName'
     enrollment.email = 'teacher@example.net'
     enrollment.school = 'test school'
     enrollment.school_info = create(:school_info_without_country)
@@ -73,7 +75,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.in_section?
 
     # section with disconnected user: false
-    teacher = create :teacher, name: enrollment.name, email: enrollment.email
+    teacher = create :teacher, name: enrollment.full_name, email: enrollment.email
     refute enrollment.in_section?
 
     # in section: true
@@ -133,5 +135,37 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     enrollment.send_exit_survey
     assert_not_nil enrollment.reload.survey_sent_at
+  end
+
+  test 'name is deprecated and calls through to full_name' do
+    enrollment = create :pd_enrollment
+    enrollment.expects(:full_name)
+    assert_deprecated 'name is deprecated. Use first_name & last_name instead.' do
+      enrollment.name
+    end
+
+    enrollment.expects('full_name=' => 'First Last')
+    assert_deprecated 'name is deprecated. Use first_name & last_name instead.' do
+      enrollment.name = 'First Last'
+    end
+  end
+
+  test 'full_name' do
+    enrollment = create :pd_enrollment
+    enrollment.full_name = 'SplitFirst SplitLast'
+    assert_equal 'SplitFirst', enrollment.first_name
+    assert_equal 'SplitLast', enrollment.last_name
+
+    enrollment.full_name = 'FirstOnly'
+    assert_equal 'FirstOnly', enrollment.first_name
+    assert_equal '', enrollment.last_name
+
+    enrollment.full_name = 'SplitFirst SplitSecond SplitThird'
+    assert_equal 'SplitFirst', enrollment.first_name
+    assert_equal 'SplitSecond SplitThird', enrollment.last_name
+
+    enrollment.first_name = 'SeparateFirst'
+    enrollment.last_name = 'SeparateLast'
+    assert_equal 'SeparateFirst SeparateLast', enrollment.full_name
   end
 end

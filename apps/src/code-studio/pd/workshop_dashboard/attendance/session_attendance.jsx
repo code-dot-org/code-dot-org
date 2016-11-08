@@ -36,9 +36,9 @@ const SessionAttendance = React.createClass({
         <Table striped bordered condensed hover>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>First Name</th>
+              <th>Last Name</th>
               <th>Email</th>
-              <th>Enrolled</th>
               <th>Code Studio Account</th>
               <th>Joined Section</th>
               <th>Attended</th>
