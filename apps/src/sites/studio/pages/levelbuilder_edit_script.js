@@ -1,5 +1,5 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
-/* globals scriptData, i18nData */
+/* globals scriptEditorData */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -8,12 +8,17 @@ import { createStore } from '@cdo/apps/redux';
 import reducer from './components/editorRedux';
 import ScriptEditor from './components/ScriptEditor';
 
-const store = createStore(reducer, scriptData.stages.filter(stage => stage.id));
+const scriptData = scriptEditorData.script;
+
+const store = createStore(reducer, {
+  levelKeyList: scriptEditorData.levelKeyList,
+  stages: scriptData.stages.filter(stage => stage.id)
+});
 
 ReactDOM.render(
   <Provider store={store}>
     <ScriptEditor
-      i18nData={i18nData}
+      i18nData={scriptEditorData.i18n}
       hidden={scriptData.hidden}
       loginRequired={scriptData.loginRequired}
       hideableStages={scriptData.hideable_stages}

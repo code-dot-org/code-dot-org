@@ -1,5 +1,3 @@
-/* global levelKeyList */
-
 import React from 'react';
 import { connect } from 'react-redux';
 import VirtualizedSelect from 'react-virtualized-select';
@@ -8,8 +6,6 @@ import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import { chooseLevelType, chooseLevel, addVariant } from './editorRedux';
-
-const levelKeyOptions = _.map(levelKeyList, (label, value) => ({label, value: +value}));
 
 const styles = {
   checkbox: {
@@ -54,6 +50,7 @@ ArrowRenderer.propTypes = {onMouseDown: React.PropTypes.func.isRequried};
 
 const LevelTokenDetails = React.createClass({
   propTypes: {
+    levelKeyList: React.PropTypes.object.isRequired,
     chooseLevelType: React.PropTypes.func.isRequired,
     chooseLevel: React.PropTypes.func.isRequired,
     addVariant: React.PropTypes.func.isRequired,
@@ -68,8 +65,12 @@ const LevelTokenDetails = React.createClass({
     {label: 'Unplugged', value: 'unplugged'}
   ],
 
+  componentWillMount() {
+    this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({label, value: +value}));
+  },
+
   containsLegacyLevel() {
-    return this.props.level.ids.some(id => /^blockly:/.test(levelKeyList[id]));
+    return this.props.level.ids.some(id => /^blockly:/.test(this.props.levelKeyList[id]));
   },
 
   handleLevelTypeSelected({value}) {
@@ -123,7 +124,7 @@ const LevelTokenDetails = React.createClass({
             </div>
             }
             <VirtualizedSelect
-              options={levelKeyOptions}
+              options={this.levelKeyOptions}
               value={id}
               onChange={this.handleLevelSelected.bind(null, index)}
               clearable={false}
@@ -141,7 +142,9 @@ const LevelTokenDetails = React.createClass({
   }
 });
 
-export default connect(state => ({}), dispatch => ({
+export default connect(state => ({
+  levelKeyList: state.levelKeyList
+}), dispatch => ({
   chooseLevelType(stage, level, value) {
     dispatch(chooseLevelType(stage, level, value));
   },

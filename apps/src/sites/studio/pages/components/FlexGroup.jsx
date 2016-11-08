@@ -113,7 +113,7 @@ const FlexGroup = React.createClass({
 });
 
 export default connect(state => ({
-  stages: state
+  stages: state.stages
 }), dispatch => ({
   addGroup(stageName, groupName) {
     dispatch(addGroup(stageName, groupName));
