@@ -16,6 +16,8 @@ Dashboard::Application.routes.draw do
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
 
+  get '/minecraft', to: 'tutorial_landing#minecraft'
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
