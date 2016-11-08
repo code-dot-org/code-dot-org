@@ -273,7 +273,7 @@
   just_did_course3: Mình vừa hoàn thành khóa 3 tại @codeorg, xem thử đi
   just_did_course4: Mình vừa hoàn thành khóa 4 tại @codeorg, xem thử đi
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: |
+  twitter_teach_cs: |-
     Cứ 10 người thì có 9 người đồng ý "các trường học nên dạy khoa học máy tính".
     http://youtu.be/nKIu9yen5nc. Truy cập vào trang web: https://code.org/.
   learn_hoc: Học một Giờ lập trình
@@ -328,10 +328,10 @@
     cơ hội tối nhất trên thế giới&rdquo; Satya, CEO của Microsoft"
   homepage_hero_text_bosh: "&ldquo;Nếu bạn biết lập trình, bạn có thể chọn khóa học
     cho cuộc sống của bạn.&rdquo; Chris Bosh"
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Các kỹ năng này đã thay đổi tương lai của tôi. Đó là chưa đề cập đến việc điều này thực sự rất vui.&rdquo;
     Luna, lớp 7
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Tôi chưa từng bao giờ thấy những đứa trẻ của mình
     hào hứng về việc học đến như vậy.&rdquo;
     Michael, giáo viên
@@ -341,13 +341,13 @@
   homepage_hero_text_student4: "&ldquo;Bạn có thể làm bất cứ điều gì bạn muốn bằng
     cách lập trình.&rdquo; Maya, lớp 2"
   homepage_hero_text_student5: "&ldquo;Khoa học máy tính không chỉ dành cho người
-    khác. \nNó là dành cho bạn, ở đây, bây giờ.&rdquo;\nGeraldo, giáo viên\n"
-  homepage_hero_text_teacher1: |
+    khác. \nNó là dành cho bạn, ở đây, bây giờ.&rdquo;\nGeraldo, giáo viên"
+  homepage_hero_text_teacher1: |-
     &ldquo;Lập trình làm sự sáng tạo nguồn cảm hứng tỏa sáng &mdash;
     và những điều đó là cần thiết cho bất kỳ ngành nghề nào.&rdquo;
     Floresa, giáo viên
   homepage_hero_text_teacher2: "&ldquo;Chương trình này thu hút 100% số học sinh của
-    tôi \ntham gia.&rdquo;\nAdam, giáo viên\n"
+    tôi \ntham gia.&rdquo;\nAdam, giáo viên"
   homepage_hero_text_stat_loc: "#loc các dòng mã học viên viết"
   homepage_hero_text_stat_students: "#student_count tài khoản học viên trên Code Studio"
   homepage_hero_text_stat_served: 'Giờ lập trình: đã phục vụ #served'
@@ -779,6 +779,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -916,6 +928,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Tìm hiểu thêm
   dashboard_announce_try_now_button: Thử ngay bây giờ
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Là một giáo viên, bạn đang dẫn đầu trong phong trào
     để trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây
     giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh đạo
@@ -925,6 +938,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
   code_sign_up: "Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính"
   host_an_hour: Host an hour
@@ -1782,21 +1800,12 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

@@ -35,8 +35,8 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The length of sides for each shape is 7 times the number of sides it has.\",\"hint_id\":\"NEW_Course_4_Artist_Params_13_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/f9aa06898d49c6a6faa2752e93958b98/grade5_artist_functionparameters8.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade5_artist_functionparameters8_1\",\r\n  \"callout_text\": \"You will find the polygon function in here.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade5_artist_functionparameters8_1\",\r\n  \"callout_text\": \"You will find the polygon function in here.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

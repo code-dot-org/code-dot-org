@@ -1,15 +1,16 @@
 /**
  * @file JavaScript loaded in all Widget-type levels.
  */
-/* global apps, appOptions */
+/* global appOptions */
 import $ from 'jquery';
 import _ from 'lodash';
 import { showInstructionsDialog } from '@cdo/apps/code-studio/levels/dialogHelper';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 
 function setupWidgetLevel() {
   window.script_path = location.pathname;
-  apps.setupApp(appOptions);
+  setupApp(appOptions);
 
   appOptions.showInstructionsWrapper(showInstructionsDialog);
   registerGetResult();

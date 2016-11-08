@@ -117,6 +117,7 @@ class Karel < Maze
     </category>
     <category name="Collector">
       <block type="collector_collect"></block>
+      <block type="collector_collect_simplified"></block>
       <block type="collector_ifCollectible"></block>
       <block type="collector_whileCollectible"></block>
     </category>

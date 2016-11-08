@@ -312,7 +312,7 @@
     gyvenimo kelią.&rdquo; Chris Bosh"
   homepage_hero_text_student1: "&ldquo;Programavimo gebėjimai pakeitė mano ateitį.
     Net nekalbant apie tai, kad tai labai linksma.&rdquo; Luna, septintokė"
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Dar niekada niekada nemačiau savo vaikų taip įsitraukusių į mokymąsi.&rdquo;
     Michael, mokytojas
   homepage_hero_text_student3: "&ldquo;Informatika yra mokslas, kur nežinosi, ar patiks,
@@ -320,11 +320,11 @@
   homepage_hero_text_student4: "&ldquo;Su programavimu gali padaryti bet ką, ką sugalvoja
     tavo galva.&rdquo; Maya, antrokė"
   homepage_hero_text_student5: "&ldquo;Informatika nėra skirta kažkam kitam. Ji yra
-    skirta tau, čia ir dabar.&rdquo; \nGeraldo, mokytojas\n"
-  homepage_hero_text_teacher1: |
+    skirta tau, čia ir dabar.&rdquo; \nGeraldo, mokytojas"
+  homepage_hero_text_teacher1: |-
     &ldquo;Kodavimas lavina kūrybiškumą, įkvepia ir yra inovatyvus &mdash; tai yra viskas, ko reikia bet kokiai profesijai.&rdquo;
     Floresa, mokytoja
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Ši programa sudomino 100% mano mokinių.&rdquo;
     Adam, mokytojas
   homepage_hero_text_stat_loc: 'Mokiniai parašė #loc kodo eilučių'
@@ -536,9 +536,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Pateikti
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: Neaiškus
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 valanda per savaitę
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 valandos per savaitę
@@ -742,6 +742,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -876,6 +888,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Sužinok daugiau
   dashboard_announce_try_now_button: Išmėginkite dabar
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -884,6 +897,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "„Programavimo valanda“ jau čia – gruodžio 8-14!"
   code_sign_up: Užsiregistruokite ir dalyvaukite CS švietimo savaitėje
   host_an_hour: Host an hour
@@ -1739,21 +1757,12 @@
   infinity_shortcode: inf
   playlab_shortcode: "žaisti"
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

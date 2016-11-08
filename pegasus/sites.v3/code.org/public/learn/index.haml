@@ -3,15 +3,27 @@ title: Learn
 theme: responsive_wide
 layout: wide
 social:
-  "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
-  "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
-  "og:image:width": 520
-  "og:image:height": 391
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://<%=request.host%>/learn"
+  "twitter:image:src" : "https://code.org/images/learn/og-learn-student.png"
+  "twitter:title": "Hour of Code"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
+  "og:title": "Hour of Code"
+  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages."
+  "og:image" : "https://code.org/images/learn/og-learn-student.png"
+  "og:image:width": "853"
+  "og:image:height": "447"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
   "og:video:type": ""
 ---
+
+:css
+  .noFocusButton:focus {
+    outline: 0;
+  }
 
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
   #desktop-header.desktop-feature
@@ -42,8 +54,10 @@ social:
         %br/
       #studentimage.col-50.tablet-feature{style: "height: 278px"}
 
--# Not ideal but we can pull the undigested file from /blockly.
-%script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
+-# Not ideal but we can pull the undigested files from /blockly.
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
 
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
@@ -60,9 +74,9 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButton: true,
-      legacyLink: '/learn/legacy'
-      }
-    );
+      legacyLink: '/learn/legacy',
+      showSortBy: window.location.search.indexOf("showsort") !== -1
+    });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
     // Pick a random student image (1-2 inclusive) and fade it in.

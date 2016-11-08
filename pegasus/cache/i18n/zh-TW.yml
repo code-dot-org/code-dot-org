@@ -81,8 +81,8 @@
   get_a_certificate_of_achievement: "獲取成就證書"
   view_course: "查看課程"
   view_unit: "查看單元"
-  make_app: "製作一個App"
-  congrats_guest_speaker_title: "給特別的演講者一個教室。"
+  make_app: "製作一個應用程式"
+  congrats_guest_speaker_title: "為你的教室特邀一名演講者"
   congrats_guest_speaker_desc: "你的學生完成了電腦科學課程的話，喝采一下，並且試著邀請他成為一個客座講者到你的教室，讓他的經驗連結到真實的世界中。你可以使用我們的志願者地圖來連繫當地的志願者去參訪你的教室，或者搜尋一下任何城市中的電腦科學學生，或專業技術人員，透過遠端視訊的方式，激發啟發你的學生。"
   congrats_guest_speaker_cta: "尋找一位特約講者"
   congrats_third_party_title: "利用你的新技能來使用這些程式和網站。"
@@ -198,14 +198,14 @@
   learn_next_level: "繼續到下一級別"
   learn_online: "嘗試其他線上課程"
   learn_classes: "尋找當地的教室"
-  hoc_is_here: "學習電腦科學。它改變了一切。 Https://youtu.be/xJqSu1IbcHg。"
+  hoc_is_here: "學習電腦科學。它改變了一切。 https://youtu.be/xJqSu1IbcHg"
   just_did_hoc: "我已經完成了 #HourOfCode - 快來看看吧！ @codeorg"
   just_did_course1: "我完成課程 1-快來瞧瞧 ！@codeorg"
   just_did_course2: "我完成課程 2-快來瞧瞧 ！@codeorg"
   just_did_course3: "我完成課程 3-快來瞧瞧 ！@codeorg"
   just_did_course4: "我完成課程 4-快來瞧瞧 ！@codeorg"
   just_did_accelerated: "我剛剛完成加速課程-快來瞧瞧 ！@codeorg"
-  twitter_teach_cs: |
+  twitter_teach_cs: |-
     每10人中就有9人同意，學校應該教電腦科學。Http://youtu.be/nKIu9yen5nc。
     訪問 Https://code.org/。
   learn_hoc: "學習一小時的程式設計"
@@ -261,7 +261,7 @@
   homepage_hero_text_stat_served: "一小時程式課程：已有 #served 參與"
   homepage_slot_text_hoc: "一小時的編程"
   homepage_slot_text_frozen: "冰雪奇緣：安娜公主與艾莎女王"
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: "教師用儀錶盤"
   homepage_slot_text_studio: "我們所有的教學課程"
   homepage_slot_text_course4: "課程 4"
   homepage_slot_text_shop: "商店"
@@ -530,7 +530,7 @@
   dashboard_assessments_none_part2: "如果你在教中學或高中課程，我們代碼工作室提供的部分評估問題可幫助你的學生用於準備 AP 考試。若要使用這些評估，首先將課程分配到課堂，然後上面的下拉列表中選擇課程，你將會在此處看到學生的答案。"
   dashboard_assessments_summaries: "評估摘要"
   dashboard_assessments_answers: "所有評價答案"
-  dashboard_surveys_answers: Surveys
+  dashboard_surveys_answers: "調查問卷"
   dashboard_percent: "%"
   dashboard_filter_by_stage: "按階段篩選︰"
   dashboard_filter_all: "所有"
@@ -564,7 +564,7 @@
   dashboard_progress_student_in_script: "%{student_name} 的進度信息在 %{script_name}"
   dashboard_progress_pair_programming: "結對程式設計"
   dashboard_responses_view: "觀看文字回應:"
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: "我們開設的大部分的班級都是面嚮年輕一代的。我們並不要求這些同學用鍵入文字的方法回答問題，因此你不會在這裏找到任何為文字答案。對於面嚮較爲年長的，就讀于中學或大學的同學開設的課程，你可以從上方下拉並選擇分配課程，找到他們對一些問題的開放式文字答案。"
   dashboard_sections_new_section: "新增一堂課"
   dashboard_sections_jumbotron_instruction: "建立新課程區段，並新增學生資料。課程區段可協助您將學生分成更小的群組，以便您可以追蹤他們的進度和管理他們的帳戶。"
   dashboard_sections_table_section: "班級"
@@ -593,6 +593,18 @@
   dashboard_sections_yes_both: "是的，我想要復制學生到本章節和新章節中。"
   dashboard_sections_no_move: "不，我想移動學生到新章節中。"
   dashboard_sections_move_students: "管理學生們"
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: "您沒有選擇任何學生要移動。請選擇至少一名學生。"
   dashboard_error_other_section: "如果你要在自己管理的單元中調整學生，可以從下拉菜單選擇你要調的單元。如果你要將學生調整到其他教師負責的單元，請選擇”其它單元”。"
   dashboard_students_add_student: "新增學生"
@@ -698,35 +710,34 @@
   dashboard_faq: "常見問題集"
   dashboard_faq_k5: "五年級課程的常見問題"
   dashboard_announcements: "公告"
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: 我們花了整個夏天以將反饋添加到新功能。從現在起，你可以<a href="%{pp_url}"
+    target="_blank">跟蹤多名同學的進度</a>，儘管他們在同一台設備上進行結對程式設計。依照我們的電子計算機科學原則，你可以在<i>任意</i>的教室，使用<a
+    href="%{csp_widgets_url}" target="_blank">最好的交互工具</a>。同時，爲了鼓勵動手實驗，你的學生們可以在他們的工作空間中<a
+    href="%{unused_code_url}" target="_blank">存檔未使用的代碼</a>。檢視所有的新功能，並且讓我們瞭解你的想法。
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "瞭解更多資訊"
   dashboard_announce_try_now_button: "快來試試"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、
     28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
   dashboard_announce_petition_button: "新增你的名字"
   dashboard_announce_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}'
     target='_blank'> 看過去的公告。</a>"
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "代碼小時就在這裡 — — 12 月 8-14 ！"
   code_sign_up: "註冊參與電腦科學教育週"
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: "舉辦一小時"
+  learn_banner_title: "加入我們的代碼一小時"
+  learn_banner_desc: "代碼一小時是一個全球性的運動，影響了來自至少180個國家的超過一億的學生。任何人，任何地方都可以組織一個代碼一小時活動。幫助我們，給每位學生一個學習電子計算機科學的機會！召集人可以按照我們的<a
+    href='%{how_to_url}' target='_blank'>操作指南</a>以教學代碼一小時，並且通過<a href='%{videos_url}'
+    target='_blank'>這些視頻</a>激勵學生們。"
   learn_more: "快來試試"
   learn_sign_up_description: "在 CS 教育週期間報名參加一小時的程式碼課程"
   learn_sign_up_button: "註冊帳號"
@@ -740,11 +751,9 @@
     來協助您。
   learn_teacher_led_lesson_plans: 得到 <a href="https://code.org/teacher-led"> 發起編程一小時教案的老師給你的</a>
     啟發
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_how_to_hoc: 跟蹤<a href="https://hourofcode.com/how-to">我們的指南</a>教學代碼一小時
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">知道更多</a> 關於教師的獎勵。
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: 展示<a href="https://code.org/educate/inspire">這些視頻</a>用以激勵學生們
   hoc2014_try_new_tutorials: "試試我們新的Hour of Code活動教案"
   hoc2014_try_new_tutorial: "試試全新Beta版的一小時程式碼教程"
   hoc2014_try_scrat: "憤怒的小鳥，PvZ 和Scrat"
@@ -758,7 +767,7 @@
   carousel_heading_beginners: "適合初學者的教程"
   carousel_heading_beyond_beginners: "適合初學者的教程"
   carousel_heading_javascript: "教 JAVAscript 的自學教案"
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: "用以教學的JavaScript教案"
   carousel_heading_unplugged: "沒有設備或網際網路嗎？試試 '不插電'的電腦科學"
   carousel_heading_devices: "手機和平板電腦的自學APPs"
   carousel_heading_beyond_devices: "手機和平板電腦的自學APPs"
@@ -771,14 +780,11 @@
   carousel_heading_ide: "教師們的熱門平臺"
   educator_notes: "教育者注意事項"
   teach_led_lesson_plans: "一小時程式碼的教學計畫"
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: 參閲<a href="https://code.org/educate/allhourofcode">代碼一小時教程的完整清單</a>。<a
+    href="https://hourofcode.com/tutorial-guidelines">點此</a>檢視我們代碼一小時的標準和提交指南。
   how_to_teach_hoc: "如何教an Hour of Code (一個小時的代碼)"
   more_resources_educators: "給教師和教育工作者的更多資源"
-  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
-    and submission form.
+  beyond_submission: "想要提交一份一小時程式設計的教程嗎？檢視標準和提交表單。"
   participants: "參與者"
   teachers_notes: "老師的重要提示"
   teachers_notes_hoc: "教師： 閱讀重要教育家筆記在這裡"
@@ -832,45 +838,45 @@
   infinity_name: Infinity Play Lab
   artist_name: "畫家"
   monstercoding_name: "神秘島編程任務"
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  allcancode_name: "運行宏！"
+  csfirst_name: "電子計算機科學優先"
+  boxisland_name: "盒子島"
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: "程式設計十分鐘"
   teacherled_name: "一小時程式碼的教學計畫"
   course1_name: "課程 1"
   course2_name: "課程 2"
   course3_name: "課程 3"
   course4_name: "課程 4"
   accelerated_name: "速成課程"
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
+  cspunit1_name: "（舊版）第一單元：數碼資訊"
+  cspunit2_name: "（舊版）第二單元：網際網路"
+  cspunit3_name: "（舊版）第三單元：程式設計"
+  cspunit4_name: "（舊版）第四單元：資料"
+  cspunit5_name: "（舊版）第五單元：探索及建立PT"
+  cspunit6_name: Post-AP：應用程式中的資料庫
+  csp1_name: "第一單元：網際網路"
+  csp2_name: "第二單元：數碼資訊"
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
+  cspassessment_name: "完整測驗 — 50題"
+  cspexam1-mWU7ilDYM9_name: "測驗第一部分 — 25題"
+  cspexam2-AKwgAh1ac5_name: "測驗第二部分 — 25題"
+  cspunit3_gradelevel: 9-12年級
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: "速成課程"
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
-  gumball_name: Gumball
+  algebra_name: "電子計算機科學用於代數"
+  AlgebraA_name: "用於代數電子計算機科學課程A"
+  AlgebraB_name: "電子計算機科學用於代數B"
+  gumball_name: "陶阿甘"
   classicmaze_name: "經典迷宮"
   iceage_name: "冰原歷險記"
   minecraft_name: "當個創世神"
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: "星球大戰（方塊）"
   math_category_name: "運算類"
   hoc_category_name: "一小時的程式課程"
   csf_category_name: CS Fundamentals
@@ -1370,21 +1376,12 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'
