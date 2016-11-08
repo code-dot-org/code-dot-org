@@ -9,6 +9,9 @@ FactoryGirl.define do
     navigator_user_level {user_level}
   end
 
+  factory :megauser do
+  end
+
   factory :user do
     birthday Date.new(1991, 3, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -73,7 +76,7 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
+          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
           evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
@@ -624,10 +627,11 @@ FactoryGirl.define do
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
-    sequence(:name) { |n| "Workshop Participant #{n} " }
+    sequence(:first_name) { |n| "Participant#{n}" }
+    last_name 'Codeberg'
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     association :school_info, factory: :school_info_without_country
-    school {'Example School'}
+    school 'Example School'
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

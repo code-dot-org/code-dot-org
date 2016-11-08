@@ -87,6 +87,8 @@ const InlineAudio = React.createClass({
     });
 
     audio.addEventListener("error", e => {
+      // e is an instance of a MediaError object
+      trackEvent('InlineAudio', 'error', e.target.error.code);
       this.setState({
         playing: false,
         error: true

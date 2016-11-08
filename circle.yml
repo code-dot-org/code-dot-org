@@ -103,3 +103,8 @@ test:
     - ./test.sh:
         pwd:
             cookbooks
+experimental:
+  notify:
+    branches:
+      only:
+        - staging

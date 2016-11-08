@@ -333,6 +333,9 @@ en:
       Begin planning your project:
         description here: description here
         title: title
+      'Big Picture: If-statements':
+        description here: description here
+        title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
       Building a UI with Design Mode: {}
@@ -2099,6 +2102,9 @@ en:
       What is HTML?: {}
       What's inside and how is it organized?: {}
       Why Teach Number Systems?: {}
+      'Worked Example: If-statements and Robot':
+        description here: description here
+        title: title
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
@@ -6330,7 +6336,7 @@ en:
         <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
         <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
         <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
-        <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">: <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">
+        <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">: <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">
         <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
       cspu3_assess1_parameters:
         Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.

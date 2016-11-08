@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103222851) do
+ActiveRecord::Schema.define(version: 20161104075248) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -297,7 +297,9 @@ ActiveRecord::Schema.define(version: 20161103222851) do
 
   create_table "pd_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_workshop_id",      null: false
-    t.string   "name",                null: false
+    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -664,6 +666,20 @@ ActiveRecord::Schema.define(version: 20161103222851) do
     t.datetime "updated_at"
     t.index ["prize_provider_id"], name: "index_teacher_prizes_on_prize_provider_id", using: :btree
     t.index ["user_id"], name: "index_teacher_prizes_on_user_id", using: :btree
+  end
+
+  create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "user_id",                   null: false
+    t.string   "course",                    null: false
+    t.boolean  "facilitator"
+    t.boolean  "teaching"
+    t.string   "pd_year"
+    t.string   "pd"
+    t.string   "other_pd"
+    t.text     "properties",  limit: 65535
+    t.index ["user_id"], name: "index_teacher_profiles_on_user_id", using: :btree
   end
 
   create_table "unexpected_teachers_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
