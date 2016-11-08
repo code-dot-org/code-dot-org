@@ -58,7 +58,6 @@ function getParams(form_data) {
   var params = [];
 
   if (window.location.pathname === "/volunteer/remote") {
-    console.log("on remote");
     gmap_loc = '37.6,-95.665';
 
     params.push({
