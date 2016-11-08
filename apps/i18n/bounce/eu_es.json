@@ -126,5 +126,8 @@
   "whenWallCollidedTooltip": "Exekutatu ekintza hauek pilota batek hormaren bat jotzean.",
   "whileMsg": "bitartean",
   "whileTooltip": "Bukaerako puntua eskuratu arte barruko ekintzak errepikatu.",
-  "yes": "Bai"
+  "yes": "Bai",
+  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeam": "Set team {team}",
+  "setTeamRandom": "Set team random"
 }

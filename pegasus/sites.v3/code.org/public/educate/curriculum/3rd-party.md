@@ -37,7 +37,7 @@ nav: educate_nav
 | [Scalable Game Design](http://scalablegamedesign.cs.colorado.edu) | Introduction to Game Design, Advanced Game Design (3D), and Introduction to Simulation Design, FREE | In-person summer institute, FREE to schools participating in NSF research. Otherwise, $1900/teacher and travel not included |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
-| [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, robotics, and film production. Annual subscription/$1000. Software $300/computer lab. Free PDF files.  | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
+| [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, robotics, and film production. Annual subscription/$800. Software $300/computer lab. Free PDF files.  | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
