@@ -37,12 +37,12 @@ def analyze_day_fast(date)
   end
 
   codedotorg_tutorial_count = 0
-  tutorials = {}
+  tutorials = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT tutorial, #{weighted_count} #{from_where} GROUP BY tutorial ORDER BY count DESC"
   ).each do |row|
     next if row[:tutorial].nil_or_empty?
-    add_count_to_hash tutorials, row[:tutorial], row[:count].to_i
+    tutorials[row[:tutorial]] = row[:count].to_i
     if codedotorg_tutorials.include? row[:tutorial]
       codedotorg_tutorial_count += row[:count].to_i
     end
