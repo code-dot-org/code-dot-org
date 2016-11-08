@@ -45,7 +45,9 @@ const styles = {
   }
 };
 
-const ArrowRenderer = ({onMouseDown}) => <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
+const ArrowRenderer = ({onMouseDown}) => {
+  return <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
+};
 ArrowRenderer.propTypes = {onMouseDown: React.PropTypes.func.isRequried};
 
 const LevelTokenDetails = React.createClass({
@@ -66,7 +68,10 @@ const LevelTokenDetails = React.createClass({
   ],
 
   componentWillMount() {
-    this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({label, value: +value}));
+    this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
+      label,
+      value: +value
+    }));
   },
 
   containsLegacyLevel() {
@@ -101,11 +106,33 @@ const LevelTokenDetails = React.createClass({
         />
         {this.containsLegacyLevel() &&
           <div>
-            <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Skin</span>
-            <input defaultValue={this.props.level.skin} type="text" style={styles.textInput} />
+            <span
+              style={Object.assign(
+                {display: 'inline-block'},
+                styles.levelFieldLabel
+              )}
+            >
+              Skin
+            </span>
+            <input
+              defaultValue={this.props.level.skin}
+              type="text"
+              style={styles.textInput}
+            />
             <div style={{float: 'right'}}>
-              <span style={Object.assign({display: 'inline-block'}, styles.levelFieldLabel)}>Video key</span>
-              <input defaultValue={this.props.level.videoKey} type="text" style={styles.textInput} />
+              <span
+                style={Object.assign(
+                  {display: 'inline-block'},
+                  styles.levelFieldLabel
+                )}
+              >
+                Video key
+              </span>
+              <input
+                defaultValue={this.props.level.videoKey}
+                type="text"
+                style={styles.textInput}
+              />
             </div>
           </div>
         }
@@ -133,7 +160,12 @@ const LevelTokenDetails = React.createClass({
           </div>
         )}
         <hr style={styles.divider} />
-        <button onMouseDown={this.handleAddVariant} className="btn" style={styles.addVariant} type="button">
+        <button
+          onMouseDown={this.handleAddVariant}
+          className="btn"
+          style={styles.addVariant}
+          type="button"
+        >
           <i style={{marginRight: 7}} className="fa fa-plus-circle" />
           Add Variant
         </button>

@@ -75,7 +75,10 @@ const ScriptEditor = React.createClass({
             defaultChecked={!this.props.hidden}
             style={styles.checkbox}
           />
-          <p>If checked this script will show up in the dropdown on the Teacher Dashboard, for teachers to assign to students.</p>
+          <p>
+            If checked this script will show up in the dropdown on the Teacher
+            Dashboard, for teachers to assign to students.
+          </p>
         </label>
         <label>
           Login Required
@@ -85,7 +88,10 @@ const ScriptEditor = React.createClass({
             defaultChecked={this.props.loginRequired}
             style={styles.checkbox}
           />
-          <p>Require users to log in before viewing this script. This should be enabled on scripts that contain App Lab or Game Lab levels.</p>
+          <p>
+            Require users to log in before viewing this script. This should be
+            enabled on scripts that contain App Lab or Game Lab levels.
+          </p>
         </label>
         <label>
           Hideable Stages
@@ -95,7 +101,10 @@ const ScriptEditor = React.createClass({
             defaultChecked={this.props.hideableStages}
             style={styles.checkbox}
           />
-          <p>Allow teachers to toggle whether or not specific stages in this script are visible to students in their section.</p>
+          <p>
+            Allow teachers to toggle whether or not specific stages in this
+            script are visible to students in their section.
+          </p>
         </label>
         <label>
           Professional Learning Course

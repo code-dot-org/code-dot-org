@@ -102,7 +102,11 @@ const StageCard = React.createClass({
 
   handleDragStop() {
     if (this.state.drag !== this.state.newPosition) {
-      this.props.reorderLevel(this.props.stage.position, this.state.drag, this.state.newPosition);
+      this.props.reorderLevel(
+        this.props.stage.position,
+        this.state.drag,
+        this.state.newPosition
+      );
     }
     this.setState({drag: null, newPosition: null, currentPositions: []});
     window.removeEventListener('selectstart', this.preventSelect);
@@ -134,7 +138,8 @@ const StageCard = React.createClass({
             total={this.props.stagesCount}
           />
           <div style={styles.stageLockable}>
-            Require teachers to unlock this stage before students in their section can access it
+            Require teachers to unlock this stage before students in their
+            section can access it
             <input
               ref="lockable"
               defaultChecked={this.props.stage.lockable}
@@ -156,7 +161,12 @@ const StageCard = React.createClass({
             handleDragStart={this.handleDragStart}
           />
         )}
-        <button onMouseDown={this.handleAddLevel} className="btn" style={styles.addLevel} type="button">
+        <button
+          onMouseDown={this.handleAddLevel}
+          className="btn"
+          style={styles.addLevel}
+          type="button"
+        >
           <i style={{marginRight: 7}} className="fa fa-plus-circle" />
           Add Level
         </button>
