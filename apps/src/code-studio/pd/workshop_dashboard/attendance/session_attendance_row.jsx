@@ -17,9 +17,9 @@ const SessionAttendanceRow = React.createClass({
   propTypes: {
     sessionId: React.PropTypes.number,
     attendance: React.PropTypes.shape({
-      name: React.PropTypes.string.isRequired,
+      first_name: React.PropTypes.string.isRequired,
+      last_name: React.PropTypes.string.isRequired,
       email: React.PropTypes.string.isRequired,
-      enrolled: React.PropTypes.bool.isRequired,
       user_id: React.PropTypes.number,
       in_section: React.PropTypes.bool.isRequired,
       attended: React.PropTypes.bool.isRequired
@@ -77,13 +77,13 @@ const SessionAttendanceRow = React.createClass({
     return (
       <tr className={this.props.attendance.attended ? 'success' : null}>
         <td>
-          {this.props.attendance.name}
+          {this.props.attendance.first_name}
+        </td>
+        <td>
+          {this.props.attendance.last_name}
         </td>
         <td>
           {this.props.attendance.email}
-        </td>
-        <td>
-          {this.props.attendance.enrolled ? "Yes" : "No"}
         </td>
         <td>
           {this.props.attendance.user_id ? "Yes" : "No"}
