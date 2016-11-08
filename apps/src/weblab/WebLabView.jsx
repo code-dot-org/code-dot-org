@@ -117,10 +117,12 @@ const WebLabView = React.createClass({
                 <PaneButton
                   iconClass="fa fa-mouse-pointer"
                   leftJustified={false}
-                  headerHasFocus={!this.props.isInspectorOn}
+                  headerHasFocus={true}
+                  isPressed={this.props.isInspectorOn}
+                  pressedLabel={weblabMsg.toggleInspectorOff()}
                   isRtl={false}
                   onClick={this.props.onToggleInspector}
-                  label={weblabMsg.toggleInspector()}
+                  label={weblabMsg.toggleInspectorOn()}
                 />
                 </div>
               </PaneHeader>
