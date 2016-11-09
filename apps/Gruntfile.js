@@ -394,7 +394,7 @@ module.exports = function (grunt) {
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
-    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
+    'levels/embed_blocks': './src/sites/studio/pages/levels/embed_blocks.js',
 
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
