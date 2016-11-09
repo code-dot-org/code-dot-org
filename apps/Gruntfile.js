@@ -369,7 +369,7 @@ module.exports = function (grunt) {
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
-    'levels/external':              './src/sites/studio/pages/levels/external.js',
+    'levels/_external':              './src/sites/studio/pages/levels/_external.js',
     'levels/_level_group':            './src/sites/studio/pages/levels/_level_group.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/_text_match':             './src/sites/studio/pages/levels/_text_match.js',
