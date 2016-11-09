@@ -42,10 +42,10 @@
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "contained_level_names": null,
     "encrypted_examples": "Vw3PHTR7zcoN973xW3G8SQeynP8iBoEg6pXqahG2l4CDlch8XA/okiUcdeOt\nqZdQ\n",
     "instructions_important": "false",
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
