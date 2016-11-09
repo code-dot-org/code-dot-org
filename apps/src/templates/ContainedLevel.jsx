@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import * as codeStudioLevels from '../code-studio/levels/codeStudioLevels';
+import { setAwaitingContainedResponse } from '../redux/runState';
 
 const styles = {
   main: {
@@ -10,6 +12,10 @@ const styles = {
 };
 
 const ContainedLevel = React.createClass({
+  propTypes: {
+    setAwaitingContainedResponse: React.PropTypes.func.isRequired
+  },
+
   // Note: This component modifies portions of the DOM outside of itself upon
   // mounting. This is generally considered a bad practice, and should not be
   // copied elsewhere.
@@ -26,9 +32,16 @@ const ContainedLevel = React.createClass({
     } else {
       // No answers yet, disable Run button until there is an answer
       $('#runButton').prop('disabled', true);
+      this.props.setAwaitingContainedResponse(true);
 
       codeStudioLevels.registerAnswerChangedFn(() => {
+        // Ideally, runButton would be declaratively disabled or not based on redux
+        // store state. We might be close to a point where we can do that, but
+        // because runButton is also mutated outside of React (here and elsewhere)
+        // we need to worry about cases where the DOM gets out of sync with the
+        // React layer
         $('#runButton').prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
+        this.props.setAwaitingContainedResponse(!codeStudioLevels.hasValidContainedLevelResult());
       });
     }
   },
@@ -41,4 +54,8 @@ const ContainedLevel = React.createClass({
     );
   }
 });
-export default ContainedLevel;
+export default connect(null, dispatch => ({
+  setAwaitingContainedResponse(awaiting) {
+    dispatch(setAwaitingContainedResponse(awaiting));
+  }
+}))(ContainedLevel);
