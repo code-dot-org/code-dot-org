@@ -5,7 +5,7 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
-import { chooseLevelType, chooseLevel, addVariant } from './editorRedux';
+import { chooseLevelType, chooseLevel, addVariant, setActiveVariant } from './editorRedux';
 
 const styles = {
   checkbox: {
@@ -90,6 +90,10 @@ const LevelTokenDetails = React.createClass({
     this.props.addVariant(this.props.stagePosition, this.props.level.position);
   },
 
+  handleActiveVariantChanged(id) {
+    this.props.setActiveVariant(this.props.stagePosition, this.props.level.position, id);
+  },
+
   render() {
     return (
       <div style={styles.levelTokenActive}>
@@ -144,6 +148,7 @@ const LevelTokenDetails = React.createClass({
               <span style={styles.levelFieldLabel}>Active</span>
               <input
                 type="radio"
+                onChange={this.handleActiveVariantChanged.bind(this, id)}
                 defaultChecked={id === this.props.level.activeId}
                 style={styles.checkbox}
                 name={`radio-${this.props.stagePosition}-${this.props.level.position}`}
@@ -185,5 +190,8 @@ export default connect(state => ({
   },
   addVariant(stage, level) {
     dispatch(addVariant(stage, level));
+  },
+  setActiveVariant(stage, level, id) {
+    dispatch(setActiveVariant(stage, level, id));
   }
 }))(LevelTokenDetails);
