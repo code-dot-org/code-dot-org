@@ -14,6 +14,7 @@ const MOVE_GROUP = 'scriptEditor/MOVE_GROUP';
 const MOVE_STAGE = 'scriptEditor/MOVE_STAGE';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_STAGE = 'scriptEditor/REMOVE_STAGE';
+const SET_STAGE_LOCKABLE = 'scriptEditor/SET_STAGE_LOCKABLE';
 
 export const addGroup = (stageName, groupName) => ({
   type: ADD_GROUP,
@@ -99,6 +100,12 @@ export const removeGroup = (position) => ({
 export const removeStage = (position) => ({
   type: REMOVE_STAGE,
   position
+});
+
+export const setStageLockable = (stage, lockable) => ({
+  type: SET_STAGE_LOCKABLE,
+  stage,
+  lockable
 });
 
 function updatePositions(node) {
@@ -218,6 +225,9 @@ export default function reducer(state, action) {
       newState[swap] = temp;
       updatePositions(newState);
       break;
+    }
+    case SET_STAGE_LOCKABLE: {
+      newState[action.stage - 1].lockable = action.lockable;
     }
   }
 
