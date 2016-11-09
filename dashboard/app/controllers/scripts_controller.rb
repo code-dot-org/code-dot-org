@@ -88,12 +88,10 @@ class ScriptsController < ApplicationController
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
-      :stages,
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
     h.delete(:visible_to_teachers)
-    h[:stages] = JSON.parse(h[:stages])
     h
   end
 
