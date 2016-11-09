@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: studio_persons
+# Table name: studio_people
 #
 #  id         :integer          not null, primary key
 #  created_at :datetime         not null
