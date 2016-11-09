@@ -348,7 +348,7 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def self.stage_hidden_for_section?(script_level, section_id)
+  private_class_method def self.stage_hidden_for_section?(script_level, section_id)
     return false if script_level.nil? || section_id.nil?
     !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
   end
