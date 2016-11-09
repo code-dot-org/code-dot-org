@@ -107,7 +107,7 @@ function updatePositions(node) {
   }
 }
 
-const NEW_LEVEL_ID = -1;
+export const NEW_LEVEL_ID = -1;
 
 export default function reducer(state, action) {
   let newState = _.cloneDeep(state.stages);

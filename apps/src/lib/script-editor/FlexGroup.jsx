@@ -5,7 +5,7 @@ import color from '../../util/color';
 import { borderRadius, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
-import { addStage, addGroup } from './editorRedux';
+import { NEW_LEVEL_ID, addStage, addGroup } from './editorRedux';
 
 const styles = {
   groupHeader: {
@@ -85,6 +85,10 @@ const FlexGroup = React.createClass({
   },
 
   serializeLevel(id, level, active) {
+    if (id === NEW_LEVEL_ID) {
+      return;
+    }
+
     const s = [];
     const key = this.props.levelKeyList[id];
     if (/^blockly:/.test(key)) {
