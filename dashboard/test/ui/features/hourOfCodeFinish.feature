@@ -15,7 +15,6 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And I press "rightButton"
   Then I wait to see a congrats dialog with title containing "Keep Playing"
   And I press "#continue-button" using jQuery
-  # This is forwarding to test.code.org. Disabling on CircleCI until stays on localhost.
   And I wait to see element with ID "hoc-certificate-small"
   And I get redirected to "/congrats" via "dashboard"
   And my query params match "\?i\=.*\&s\=bWM\="
