@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to find errors.\",\"hint_id\":\"grade3_maze_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/f21d2acb307da3eea310786017a7dbc7/grade3_maze_loops1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to find errors.\",\"hint_id\":\"grade3_maze_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f21d2acb307da3eea310786017a7dbc7/grade3_maze_loops1.mp3\"}]",
     "instructions_important": "false",
     "contained_level_names": null
   },
