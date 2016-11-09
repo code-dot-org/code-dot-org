@@ -382,7 +382,7 @@ module.exports = function (grunt) {
   };
 
   var otherEntries = {
-    plc: './src/sites/studio/pages/plc.js',
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the

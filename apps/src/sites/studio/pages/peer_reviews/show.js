@@ -1,5 +1,5 @@
 /**
- * Entry point for plc.js bundle
+ * Entry point for peer_reviews/show.js bundle
  */
 import '@cdo/apps/code-studio/plc/evaluation_creation';
 import '@cdo/apps/code-studio/plc/header';
