@@ -7,6 +7,7 @@ import levels from '@cdo/apps/weblab/levels';
 export default function loadweblab(options) {
   options.skinsModule = skins;
   options.isEditorless = true;
+  options.skinId = 'weblab';
   const weblab = new WebLab();
 
   // Bind helper that provides project metadata for gamelab autosave
