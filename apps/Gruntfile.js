@@ -375,7 +375,7 @@ module.exports = function (grunt) {
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'signup':                       './src/sites/studio/pages/signup.js',
-    'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
+    'layouts/_race_interstitial':   './src/sites/studio/pages/layouts/_race_interstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scripts/show':                 './src/sites/studio/pages/scripts/show.js'
