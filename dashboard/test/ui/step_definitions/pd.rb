@@ -17,12 +17,11 @@ And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) d
 end
 
 And(/^I create a workshop for course "([^"]*)" facilitated by "([^"]*)"$/) do |course, name|
-  organizer = User.find_or_create_teacher({
-                                            name: 'Organizer',
-                                            email: "organizer#{SecureRandom.hex}@code.org"
-                                          },
-                                          nil,
-                                          'workshop_organizer')
+  organizer = User.find_or_create_teacher(
+    {name: 'Organizer', email: "organizer#{SecureRandom.hex}@code.org"},
+    nil,
+    'workshop_organizer'
+  )
   workshop = Pd::Workshop.create(
     workshop_type: 'Public',
     course: course,
