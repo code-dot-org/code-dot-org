@@ -29,6 +29,9 @@ def trans_load_i18n
 end
 TRANS_I18N = trans_load_i18n
 
+# For internal use by hoc_s and hoc_s_by_locale.
+# Looks up a string in the hourofcode translations using the provided two-letter
+# language.
 def hoc_s_by_language(id, language)
   id = id.to_s
   return TRANS_I18N['en-US'][id] if request.site == 'translate.hourofcode.com'

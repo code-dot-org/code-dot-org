@@ -32,19 +32,23 @@ social:
   .banner
     .container{style: "color: white"}
       .col-xs-12.col-sm-6{style: "text-align: center"}
-        %img{src: CDO.code_org_url("/images/learn/hour-of-code-logo-2016.png"), style: "margin-top: 30px; margin-bottom: 30px; max-width: 100%; padding-left: 5px; padding-right: 5px;"}
         %br/
-        The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages.
+        %br/
+        %span{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
+          = hoc_s_by_locale(:learn_banner_heading)
+        %br/
+        %br/
+        = hoc_s_by_locale(:learn_banner_blurb)
         %br/
         %br/
         %a{href: "/#join", target: "_blank"}
           %button
-            Host an Hour
+            = hoc_s_by_locale(:learn_banner_host)
         &nbsp;
         &nbsp;
         %a{href: "/how-to", target: "_blank"}
           %button
-            Teacher Guide
+            = hoc_s_by_locale(:learn_banner_teacherguide)
         %br/
         %br/
       #studentimage.col-xs-12.col-sm-6.hidden-xs{style: "height: 278px"}
