@@ -377,8 +377,8 @@ module.exports = function (grunt) {
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'scripts/show':               './src/sites/studio/pages/scripts/show.js'
+    'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
+    'scripts/show':                 './src/sites/studio/pages/scripts/show.js'
   };
 
   var otherEntries = {
