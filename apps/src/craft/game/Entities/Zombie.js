@@ -1,6 +1,4 @@
 import BaseEntity from "./BaseEntity.js";
-import AssetLoader from "../LevelMVC/AssetLoader.js";
-import LevelView from "../LevelMVC/LevelView.js";
 import FacingDirection from "../LevelMVC/FacingDirection.js";
 export default class Zombie extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
@@ -24,8 +22,8 @@ export default class Zombie extends BaseEntity {
         }
     }
 
-    playMoveForwardAnimation(position, facing, commandQueueItem, groundType, completionHandler) {
-        var levelModel = this.controller.levelModel, levelView = this.controller.levelView;
+    playMoveForwardAnimation(position, facing, commandQueueItem, groundType) {
+        var levelView = this.controller.levelView;
         var tween;
         // update z order
         var zOrderYIndex = position[1] + (facing === FacingDirection.Up ? 1 : 0);
@@ -80,9 +78,8 @@ export default class Zombie extends BaseEntity {
         let getRandomSecondBetween = function (min, max) {
             return (Math.random() * (max - min) + min) * 1000;
         };
-        let frameRate = 10, pauseFrame = 30, randomPauseMin = 0.2, randomPauseMax = 1;
+        let frameRate = 10, randomPauseMin = 0.2, randomPauseMax = 1;
         let actionPlane = this.controller.levelView.actionPlane;
-        let fluffPlane = this.controller.levelView.fluffPlane;
         var frameList = [];
         var frameName = "Zombie_";
         this.sprite = actionPlane.create(0, 0, 'zombie', 'Zombie_001.png');

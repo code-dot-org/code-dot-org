@@ -1,7 +1,4 @@
 import BaseEntity from "./BaseEntity.js";
-import AssetLoader from "../LevelMVC/AssetLoader.js";
-import LevelView from "../LevelMVC/LevelView.js";
-import FacingDirection from "../LevelMVC/FacingDirection.js";
 export default class Chicken extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
@@ -15,7 +12,7 @@ export default class Chicken extends BaseEntity {
         let getRandomSecondBetween = function (min, max) {
             return (Math.random() * (max - min) + min) * 1000;
         };
-        let frameRate = 12, pauseFrame = 30, randomPauseMin = 0.2, randomPauseMax = 1;
+        let frameRate = 12, randomPauseMin = 0.2, randomPauseMax = 1;
         let actionPlane = this.controller.levelView.actionPlane;
         var frameList = [];
         var frameName = "chicken";

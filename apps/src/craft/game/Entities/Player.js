@@ -39,9 +39,8 @@ export default class Player extends BaseEntity {
     }
   }
 
-  doMoveForward(commandQueueItem, frontPosition) {
+  doMoveForward(commandQueueItem) {
     var player = this,
-      allFoundCreepers,
       groundType,
       jumpOff,
       levelModel = this.controller.levelModel,
@@ -61,9 +60,6 @@ export default class Player extends BaseEntity {
 
     levelView.playMoveForwardAnimation(player.position, player.facing, jumpOff, player.isOnBlock, groundType, () => {
       levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
-
-      // First arg is if we found a creeper
-      allFoundCreepers = levelModel.isPlayerStandingNearCreeper();
 
       if (levelModel.isPlayerStandingInWater()) {
         levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
@@ -105,10 +101,6 @@ export default class Player extends BaseEntity {
     this.controller.delayPlayerMoveBy(200, 400, () => {
       commandQueueItem.succeeded();
     });
-  }
-
-  updateDirection(direction) {
-    this.controller.levelView.updatePlayerDirection(this.position, this.facing);
   }
 
   collectItems(targetPosition = this.position) {

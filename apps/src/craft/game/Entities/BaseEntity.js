@@ -1,6 +1,4 @@
 import CommandQueue from "../CommandQueue/CommandQueue.js";
-import LevelView from "../LevelMVC/LevelView.js";
-import LevelModel from "../LevelMVC/LevelModel.js";
 import FacingDirection from "../LevelMVC/FacingDirection.js";
 import EventType from "../Event/EventType.js";
 import CallbackCommand from "../CommandQueue/CallbackCommand.js";
@@ -35,8 +33,8 @@ export default class BaseEntity {
         this.queue.begin();
     }
 
-    playMoveForwardAnimation(position, facing, commandQueueItem, groundType, completionHandler) {
-        var levelModel = this.controller.levelModel, levelView = this.controller.levelView;
+    playMoveForwardAnimation(position, facing, commandQueueItem, groundType) {
+        var levelView = this.controller.levelView;
         var tween;
         // update z order
         var zOrderYIndex = position[1] + (facing === FacingDirection.Up ? 1 : 0);
@@ -135,7 +133,7 @@ export default class BaseEntity {
     }
 
     doMoveForward(commandQueueItem, forwardPosition) {
-        var levelModel = this.controller.levelModel, levelView = this.controller.levelView;
+        var levelModel = this.controller.levelModel;
         var prevPosition = this.position;
         this.position = forwardPosition;
         // play sound effect
@@ -266,7 +264,6 @@ export default class BaseEntity {
         let comparePositions = function (moveTowardPosition, position1, position2) {
             return absoluteDistanceSquare(position1[1], moveTowardPosition) > absoluteDistanceSquare(position2[1], moveTowardPosition) ? position2 : position1;
         };
-        var currentDistance = absoluteDistanceSquare(moveTowardPosition, this.position);
         // this entity is on the right side and can move to right
         if (moveTowardPosition[0] >= this.position[0] && this.controller.levelModel.canMoveDirection(this, FacingDirection.Right)[0]) {
             bestPosition = [FacingDirection.Right, [this.position[0] + 1, this.position[1]]];

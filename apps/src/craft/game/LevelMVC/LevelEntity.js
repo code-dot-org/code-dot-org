@@ -32,7 +32,7 @@ export default class LevelEntity {
     }
 
     tick() {
-        let updateEntity = function (value, key, map) {
+        let updateEntity = function (value) {
             value.tick();
         };
         this.entityMap.forEach(updateEntity);

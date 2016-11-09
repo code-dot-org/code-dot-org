@@ -1,4 +1,4 @@
-import CommandState from "./CommandState";
+import CommandState from "./CommandState.js";
 
 export default class CommandQueue {
   constructor(gameController) {
@@ -153,3 +153,4 @@ export default class CommandQueue {
     this.begin();
   }
 }
+

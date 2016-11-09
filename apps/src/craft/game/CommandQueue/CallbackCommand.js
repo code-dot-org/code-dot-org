@@ -1,4 +1,3 @@
-import CommandState from "./CommandState.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class CallbackCommand extends BaseCommand {

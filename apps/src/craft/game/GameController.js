@@ -1,10 +1,4 @@
 import CommandQueue from "./CommandQueue/CommandQueue.js";
-import BaseCommand from "./CommandQueue/BaseCommand.js";
-import DestroyBlockCommand from "./CommandQueue/DestroyBlockCommand.js";
-import MoveForwardCommand from "./CommandQueue/MoveForwardCommand.js";
-import TurnCommand from "./CommandQueue/TurnCommand.js";
-import WhileCommand from "./CommandQueue/WhileCommand.js";
-import IfBlockAheadCommand from "./CommandQueue/IfBlockAheadCommand.js";
 import CallbackCommand from "./CommandQueue/CallbackCommand.js";
 
 import EventType from "./Event/EventType.js";
@@ -14,8 +8,6 @@ import LevelModel from "./LevelMVC/LevelModel.js";
 import LevelView from "./LevelMVC/LevelView.js";
 import LevelEntity from "./LevelMVC/LevelEntity.js";
 import AssetLoader from "./LevelMVC/AssetLoader.js";
-
-import BaseEntity from "./Entities/BaseEntity.js";
 
 import * as CodeOrgAPI from "./API/CodeOrgAPI.js";
 
@@ -1093,9 +1085,8 @@ class GameController {
     }
   }
 
-  destroyBlock(commandQueueItem, type) {
+  destroyBlock(commandQueueItem) {
     let player = this.levelModel.player;
-    let frontEntity = this.levelEntity.getEntityAt(this.levelModel.getMoveForwardPosition(player));
     // if there is a destroyable block in front of the player
     if (this.levelModel.canDestroyBlockForward()) {
       let block = this.levelModel.destroyBlockForward();
