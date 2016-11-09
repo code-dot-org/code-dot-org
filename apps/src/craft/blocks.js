@@ -801,7 +801,7 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Generator.get('JavaScript').craft_repeatRandom = function () {
-    const innerCode = blockly.Generator.get`('JavaScript').statementToCode(this, 'DO');
+    const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
     return `repeatRandom('block_id_${this.id}', function() { ${innerCode} }, event.targetIdentifier);`;
   };
 
