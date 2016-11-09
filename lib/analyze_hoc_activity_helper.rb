@@ -58,44 +58,18 @@ end
 #   rankings. Note that this excludes activities from the date itself.
 # @return [Hash] hash of hashes of tutorials and their ranks.
 def rank_tutorials(end_date)
-  one_day = {}
-  PEGASUS_REPORTING_DB_READONLY.fetch(
-    "SELECT tutorial, #{WEIGHTED_COUNT} #{generate_from_where(end_date - 1.day, end_date: end_date, tutorial_pixel: false)} GROUP BY tutorial ORDER BY count DESC"
-  ).each_with_index do |row, index|
-    next if row[:tutorial].nil_or_empty?
-    one_day[row[:tutorial]] = index + 1
+  [1, 3, 7, 14].reduce({}) do |memo, num_days|
+    key = "#{num_days} days"
+    memo[key] = {}
+    start_date = end_date - num_days.days
+    PEGASUS_REPORTING_DB_READONLY.fetch(
+      "SELECT tutorial, #{WEIGHTED_COUNT} #{generate_from_where(start_date, end_date: end_date, tutorial_pixel: false)} GROUP BY tutorial ORDER BY count DESC"
+    ).each_with_index do |row, index|
+      next if row[:tutorial].nil_or_empty?
+      memo[key][row[:tutorial]] = index + 1
+    end
+    memo
   end
-
-  three_days = {}
-  PEGASUS_REPORTING_DB_READONLY.fetch(
-    "SELECT tutorial, #{WEIGHTED_COUNT} #{generate_from_where(end_date - 3.days, end_date: end_date, tutorial_pixel: false)} GROUP BY tutorial ORDER BY count DESC"
-  ).each_with_index do |row, index|
-    next if row[:tutorial].nil_or_empty?
-    three_days[row[:tutorial]] = index + 1
-  end
-
-  one_week = {}
-  PEGASUS_REPORTING_DB_READONLY.fetch(
-    "SELECT tutorial, #{WEIGHTED_COUNT} #{generate_from_where(end_date - 1.week, end_date: end_date, tutorial_pixel: false)} GROUP BY tutorial ORDER BY count DESC"
-  ).each_with_index do |row, index|
-    next if row[:tutorial].nil_or_empty?
-    one_week[row[:tutorial]] = index + 1
-  end
-
-  two_weeks = {}
-  PEGASUS_REPORTING_DB_READONLY.fetch(
-    "SELECT tutorial, #{WEIGHTED_COUNT} #{generate_from_where(end_date - 2.weeks, end_date: end_date, tutorial_pixel: false)} GROUP BY tutorial ORDER BY count DESC"
-  ).each_with_index do |row, index|
-    next if row[:tutorial].nil_or_empty?
-    two_weeks[row[:tutorial]] = index + 1
-  end
-
-  {
-    one_day: one_day,
-    three_days: three_days,
-    one_week: one_week,
-    two_weeks: two_weeks,
-  }
 end
 
 def analyze_day_fast(date)
