@@ -8,11 +8,12 @@ require 'set'
 # Reads responses from an exported form_responses.csv (not checked into the repo because it contains PII)
 # For responses that requested a prize, claim a prize and prepare to send email with that prize code.
 
-PRIZE_PURPOSE = 'TeacherImplementation1617'
-PRIZE_TYPE = 'Apple.US'
+# 1617 suffix for the 2016/2017 school year
+PRIZE_PURPOSE = 'TeacherImplementation1617'.freeze
+PRIZE_TYPE = 'Apple.US'.freeze
 
-COL_RECEIVE_PRIZE = 'Would you like to receive a $10 Apple gift card for completing this survey? If so, you will receive a follow up email by November 20th with instructions about how to claim your gift.'
-COL_EMAIL = 'Please provide your email address to receive your gift card.'
+COL_RECEIVE_PRIZE = 'Would you like to receive a $10 Apple gift card for completing this survey? If so, you will receive a follow up email by November 20th with instructions about how to claim your gift.'.freeze
+COL_EMAIL = 'Please provide your email address to receive your gift card.'.freeze
 
 emails = Set.new
 
