@@ -3,9 +3,6 @@
  * Keyed by "puzzle_number", which is the order of a given level in its script.
  */
 
-var utils = require('../utils');
-var i18n = require('./locale');
-
 module.exports = {
   1: {
     songs: ['vignette4-intro'],

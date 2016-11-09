@@ -1,6 +1,6 @@
 const i18n = require('./locale');
 import { singleton as studioApp } from '../StudioApp';
-import { stripQuotes, valueOr } from '../utils';
+import { stripQuotes } from '../utils';
 import _ from 'lodash';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
@@ -659,23 +659,6 @@ exports.install = function (blockly, blockInstallOptions) {
     '}, \'block_id_' + this.id + '\');\n';
   };
 
-  function simpleEntityBlock(simpleFunctionName, blockText) {
-    blockly.Blocks[`craft_${simpleFunctionName}`] = {
-      helpUrl: '',
-      init: function () {
-        this.setHSV(184, 1.00, 0.74);
-        this.appendDummyInput()
-            .appendTitle(new blockly.FieldLabel(blockText));
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-      }
-    };
-
-    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
-      return `${simpleFunctionName}(block, 'block_id_${this.id}');\n`;
-    };
-  }
-
   function dropdownEntityBlock(simpleFunctionName, blockText, dropdownArray, doSort) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
@@ -699,25 +682,6 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
       const dropdownValue = this.getTitleValue('TYPE');
       return `${simpleFunctionName}('${dropdownValue}', event.targetIdentifier, 'block_id_${this.id}');\n`;
-    };
-  }
-
-  function numberEntryBlock(simpleFunctionName, blockText) {
-    blockly.Blocks[`craft_${simpleFunctionName}`] = {
-      helpUrl: '',
-      init: function () {
-        this.setHSV(184, 1.00, 0.74);
-        this.appendDummyInput()
-            .appendTitle(new blockly.FieldLabel(blockText))
-            .appendTitle(new blockly.FieldTextInput('2', blockly.FieldTextInput.nonnegativeIntegerValidator), 'VALUE');
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-      }
-    };
-
-    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
-      const value = this.getTitleValue('VALUE');
-      return `${simpleFunctionName}('${value}', event.targetIdentifier, 'block_id_${this.id}');\n`;
     };
   }
 
@@ -837,8 +801,7 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Generator.get('JavaScript').craft_repeatRandom = function () {
-    const times = this.getTitleValue('TIMES');
-    const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    const innerCode = blockly.Generator.get`('JavaScript').statementToCode(this, 'DO');
     return `repeatRandom('block_id_${this.id}', function() { ${innerCode} }, event.targetIdentifier);`;
   };
 
