@@ -80,7 +80,6 @@ const FlexGroup = React.createClass({
       });
       s.push('');
     });
-    console.log(s.join('\n'));
     return s.join('\n');
   },
 

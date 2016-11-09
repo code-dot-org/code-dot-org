@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { borderRadius, levelTokenMargin, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
-import { reorderLevel, addLevel } from './editorRedux';
+import { reorderLevel, addLevel, setStageLockable } from './editorRedux';
 
 const styles = {
   checkbox: {
@@ -119,8 +119,7 @@ const StageCard = React.createClass({
   },
 
   handleLockableChanged() {
-    const state = this.refs.lockable.checked ? 'lockable' : 'not lockable';
-    console.log(`stage ${this.props.stage.position} marked as ${state}`);
+    this.props.setStageLockable(this.props.stage.position, this.refs.lockable.checked);
   },
 
   preventSelect(e) {
@@ -181,5 +180,8 @@ export default connect(state => ({}), dispatch => ({
   },
   addLevel(stage) {
     dispatch(addLevel(stage));
+  },
+  setStageLockable(stage, lockable) {
+    dispatch(setStageLockable(stage, lockable));
   }
 }))(StageCard);
