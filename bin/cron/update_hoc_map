@@ -31,7 +31,7 @@ file = Tempfile.new(['data', '.csv'])
 CSV.open(file.path, 'w') do |csv|
   all_forms.each do |form|
     data = JSON.parse(form[:data])
-    processed_data = JSON.parse(form[:processed_data])
+    processed_data = JSON.parse(form[:processed_data]) rescue {}
 
     # In order to be placed on the map, all events require an organization name,
     # processed location, and city. With the exception that approved special events
