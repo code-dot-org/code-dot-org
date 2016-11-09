@@ -1,4 +1,4 @@
--# This variable will get any data we need to pass along to scriptOverview.js
+-# This variable will get any data we need to pass along to scripts/show.js
 - scriptOverviewData = { scriptData: @script.summarize }
 
 - if current_user && current_user.show_race_interstitial?
@@ -73,4 +73,4 @@
           = level.instructions
 
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/scriptOverview.js'), data: {scriptoverview: scriptOverviewData.to_json }}
+  %script{ src: minifiable_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
