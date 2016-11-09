@@ -373,7 +373,7 @@ module.exports = function (grunt) {
     'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
-    'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'levels/_widget':                './src/sites/studio/pages/levels/_widget.js',
     'devise/registrations/new':     './src/sites/studio/pages/devise/registrations/new.js',
     'layouts/_race_interstitial':   './src/sites/studio/pages/layouts/_race_interstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
