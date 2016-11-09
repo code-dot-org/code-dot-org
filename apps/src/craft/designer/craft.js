@@ -10,9 +10,8 @@ var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
 var codegen = require('../../codegen');
 var GameController = require('./game/GameController');
+import FacingDirection from './game/LevelMVC/FacingDirection';
 var dom = require('../../dom');
-var houseLevels = require('./houseLevels');
-var levelbuilderOverrides = require('./levelbuilderOverrides');
 var eventsLevelbuilderOverrides = require('./eventsLevelbuilderOverrides');
 var MusicController = require('../../MusicController');
 var Provider = require('react-redux').Provider;
@@ -30,13 +29,6 @@ var ArrowIds = {
   RIGHT: 'rightButton',
   DOWN: 'downButton'
 };
-
-var FacingDirection = Object.freeze({
-  Up: 0,
-  Right: 1,
-  Down: 2,
-  Left: 3,
-});
 
 /**
  * Create a namespace for the application.
@@ -119,9 +111,6 @@ var interfaceImages = {
     characters.Steve.failureAvatar,
   ],
   6: [
-    MEDIA_URL + "Sliced_Parts/House_Option_A_v3.png",
-    MEDIA_URL + "Sliced_Parts/House_Option_B_v3.png",
-    MEDIA_URL + "Sliced_Parts/House_Option_C_v3.png",
   ]
 };
 
@@ -201,22 +190,10 @@ Craft.init = function (config) {
 
       if (config.level.showPopupOnLoad === 'playerSelection') {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
-          trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
+          trackEvent('MinecraftDesigner', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
           trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
           Craft.updateUIForCharacter(selectedPlayer);
-          Craft.initializeAppLevel(config.level);
-          showInstructions();
-        });
-      } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
-        Craft.showHouseSelectionPopup(function (selectedHouse) {
-          trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
-          if (!levelConfig.edit_blocks) {
-            Object.assign(config.level, houseLevels[selectedHouse]);
-
-            Blockly.mainBlockSpace.clear();
-            studioApp.setStartBlocks_(config, true);
-          }
           Craft.initializeAppLevel(config.level);
           showInstructions();
         });
@@ -224,13 +201,8 @@ Craft.init = function (config) {
     };
   }
 
-  if (config.level.isEventLevel) {
-    config.level.appSpecificFailError = config.level.temporaryFeedbackMessage;
-  }
-
-  const overridesToUse = config.level.isEventLevel ? eventsLevelbuilderOverrides : levelbuilderOverrides;
-  if (config.level.puzzle_number && overridesToUse[config.level.puzzle_number]) {
-    Object.assign(config.level, overridesToUse[config.level.puzzle_number]);
+  if (config.level.puzzle_number && eventsLevelbuilderOverrides[config.level.puzzle_number]) {
+    Object.assign(config.level, eventsLevelbuilderOverrides[config.level.puzzle_number]);
   }
   Craft.initialConfig = config;
 
@@ -270,33 +242,14 @@ Craft.init = function (config) {
   };
   document.addEventListener('instructionsHidden', playOnce);
 
-  let character = characters[Craft.getCurrentCharacter()];
-  if (config.level.isEventLevel) {
-    character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
-  }
+  const character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
+
   config.skin.staticAvatar = character.staticAvatar;
   config.skin.smallStaticAvatar = character.smallStaticAvatar;
   config.skin.failureAvatar = character.failureAvatar;
   config.skin.winAvatar = character.winAvatar;
 
   var levelConfig = config.level;
-  var specialLevelType = levelConfig.specialLevelType;
-  switch (specialLevelType) {
-    case 'houseWallBuild':
-      levelConfig.blocksToStore = [
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "houseBottomA", "houseBottomB", "houseBottomC", "houseBottomD", "", "", "",
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", ""
-      ];
-      break;
-  }
 
   var onMount = function () {
     studioApp.init(Object.assign({}, config, {
@@ -322,7 +275,7 @@ Craft.init = function (config) {
           /**
            * First asset packs to load while video playing, etc.
            * Won't matter for levels without delayed level initialization
-           * (due to e.g. character / house select popups).
+           * (due to e.g. character popup).
            */
           earlyLoadAssetPacks: config.level.isEventLevel ? null :
               Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
@@ -501,71 +454,23 @@ Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
   }.bind(this));
   dom.addClickTouchEvent($('#choose-steve')[0], function () {
     selectedPlayer = CHARACTER_STEVE;
-    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
+    trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-alex')[0], function () {
     selectedPlayer = CHARACTER_ALEX;
-    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
+    trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
-  popupDialog.show();
-};
-
-Craft.showHouseSelectionPopup = function (onSelectedCallback) {
-  var popupDiv = document.createElement('div');
-  popupDiv.innerHTML = require('./dialogs/houseSelection.html.ejs')({
-    image: studioApp.assetUrl()
-  });
-  var selectedHouse = 'houseA';
-
-  var popupDialog = studioApp.createModalDialog({
-    contentDiv: popupDiv,
-    defaultBtnSelector: '#choose-house-a',
-    onHidden: function () {
-      onSelectedCallback(selectedHouse);
-    },
-    id: 'craft-popup-house-selection',
-    icon: characters[Craft.getCurrentCharacter()].staticAvatar
-  });
-
-  dom.addClickTouchEvent($('#close-house-select')[0], function () {
-    popupDialog.hide();
-  }.bind(this));
-  dom.addClickTouchEvent($('#choose-house-a')[0], function () {
-    selectedHouse = "houseA";
-    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
-    popupDialog.hide();
-  }.bind(this));
-  dom.addClickTouchEvent($('#choose-house-b')[0], function () {
-    selectedHouse = "houseB";
-    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
-    popupDialog.hide();
-  }.bind(this));
-  dom.addClickTouchEvent($('#choose-house-c')[0], function () {
-    selectedHouse = "houseC";
-    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
-    popupDialog.hide();
-  }.bind(this));
-
   popupDialog.show();
 };
 
 Craft.clearPlayerState = function () {
-  window.localStorage.removeItem('craftHouseBlocks');
-  window.localStorage.removeItem('craftPlayerInventory');
   window.localStorage.removeItem('craftSelectedPlayer');
-  window.localStorage.removeItem('craftSelectedHouse');
-};
-
-Craft.onHouseSelected = function (houseType) {
-  trySetLocalStorageItem('craftSelectedHouse', houseType);
 };
 
 Craft.initializeAppLevel = function (levelConfig) {
-  var houseBlocks = JSON.parse(window.localStorage.getItem('craftHouseBlocks'));
-  Craft.foldInCustomHouseBlocks(houseBlocks, levelConfig);
-  Craft.foldInEntities(houseBlocks, levelConfig);
+  Craft.foldInEntities(levelConfig);
 
   var fluffPlane = [];
   // TODO(bjordan): remove configuration requirement in visualization
@@ -603,8 +508,6 @@ Craft.initializeAppLevel = function (levelConfig) {
     playerStartDirection: levelConfig.playerStartDirection,
     playerName: Craft.getCurrentCharacter(),
     assetPacks: levelAssetPacks,
-    specialLevelType: levelConfig.specialLevelType,
-    houseBottomRight: levelConfig.houseBottomRight,
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
@@ -684,20 +587,7 @@ Craft.foldInArray = function (arrayA, arrayB) {
   }
 };
 
-Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
-  var planesToCustomize = [levelConfig.groundPlane, levelConfig.actionPlane];
-  planesToCustomize.forEach(function (plane) {
-    for (var i = 0; i < plane.length; i++) {
-      var item = plane[i];
-      if (item.match(/house/)) {
-        plane[i] = (houseBlockMap && houseBlockMap[item]) ?
-            houseBlockMap[item] : "planksBirch";
-      }
-    }
-  });
-};
-
-Craft.foldInEntities = function (houseBlockMap, levelConfig) {
+Craft.foldInEntities = function (levelConfig) {
   const [width, height] = levelConfig.gridWidth && levelConfig.gridHeight ?
       [levelConfig.gridWidth, levelConfig.gridHeight] : [10, 10];
 
@@ -817,75 +707,15 @@ Craft.executeUserCode = function () {
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
-  var code = '';
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   if (studioApp.initializationBlocks) {
     codeBlocks = studioApp.initializationBlocks.concat(codeBlocks);
   }
+  const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
 
-  // For each top-level event block,
-  //code += // Get [userCallback] the user's code and [eventType], [blockType] the type this is scoped for
-  // e.g. eventType = whenTouched, blockType = logOak, userCallback = (blockReference) => { moveItForward(blockReference); moveItForward(blockReference); }
-  //var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
-  //    'JavaScript',
-  //    'craft_onTouched');
-  //console.log(codeCollideObstacle);
-  //var whenCollideObstacleFunc = codegen.functionFromCode(
-  //    codeCollideObstacle, {
-  //      StudioApp: studioApp,
-  //      Flappy: api } );
-  /**
-   *
-   * onTouched('stone', function(block)
-   *   destroyEntity(blockReference);
-   * });
-   *   appCodeOrgAPI.registerEventCallback((e) => {
-   *    if (e.type !== typeForThisEventCode) {
-   *      return;
-   *    }
-   *
-   *    if (e.blockType !== '[dropdown value, e.g. logOak') {
-   *      return;
-   *    }
-   *
-   *    evalWith(usersCode, {
-   *      blockReference: e.block,
-   *      moveItForward: function (codeHighlightID, blockReference) {
-   *        appCodeOrgAPI.moveItForward(studioApp.highlight.bind(studioApp, blockID), blockReference);
-    *     }
-   *    });
-   *  }
-   */
-  code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   const evalApiMethods = {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
-    },
-    onTouched: function (type, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
-          function (event) {
-            if (event.eventType !== 'blockTouched') {
-              return;
-            }
-            if (event.blockType !== type) {
-              return;
-            }
-
-            callback(event.blockReference);
-          });
-    },
-    onPlayerMoved: function (type, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
-          function (event) {
-            if (event.eventType !== 'playerMoved') {
-              return;
-            }
-            if (event.blockType !== type) {
-              return;
-            }
-
-            callback(event.blockReference);
-          });
     },
     onEventTriggered: function (type, eventType, callback, blockID) {
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
@@ -920,24 +750,6 @@ Craft.executeUserCode = function () {
     destroyBlock: function (blockID) {
       appCodeOrgAPI.destroyBlock(studioApp.highlight.bind(studioApp, blockID));
     },
-    shear: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp.highlight.bind(studioApp, blockID));
-    },
-    tillSoil: function (blockID) {
-      appCodeOrgAPI.tillSoil(studioApp.highlight.bind(studioApp, blockID));
-    },
-    whilePathAhead: function (blockID, callback) {
-      // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.whilePathAhead(studioApp.highlight.bind(studioApp, blockID),
-          '',
-          callback);
-    },
-    whileBlockAhead: function (blockID, blockType, callback) {
-      // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.whilePathAhead(studioApp.highlight.bind(studioApp, blockID),
-          blockType,
-          callback);
-    },
     repeat: function (blockID, callback, iterations, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.repeat(studioApp.highlight.bind(studioApp, blockID),
@@ -948,21 +760,6 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.repeatRandom(studioApp.highlight.bind(studioApp, blockID),
           callback, targetEntity);
     },
-    ifLavaAhead: function (callback, blockID) {
-      // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.ifBlockAhead(studioApp.highlight.bind(studioApp, blockID),
-          "lava",
-          callback);
-    },
-    ifBlockAhead: function (blockType, callback, blockID) {
-      appCodeOrgAPI.ifBlockAhead(studioApp.highlight.bind(studioApp, blockID),
-          blockType,
-          callback);
-    },
-    placeBlock: function (blockType, blockID) {
-      appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-          blockType);
-    },
     playSound: function (soundID, targetEntity, blockID) {
       appCodeOrgAPI.playSound(studioApp.highlight.bind(studioApp, blockID),
           soundID, targetEntity);
@@ -970,18 +767,6 @@ Craft.executeUserCode = function () {
     addScore: function (scoreAmount, blockID) {
       appCodeOrgAPI.addScore(studioApp.highlight.bind(studioApp, blockID),
           parseInt(scoreAmount));
-    },
-    plantCrop: function (blockID) {
-      appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-          "cropWheat");
-    },
-    placeTorch: function (blockID) {
-      appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
-          "torch");
-    },
-    placeBlockAhead: function (blockType, blockID) {
-      appCodeOrgAPI.placeInFront(studioApp.highlight.bind(studioApp, blockID),
-          blockType);
     },
     moveDirection: function (direction, targetEntity, blockID) {
       const dirStringToDirection = {
@@ -1012,10 +797,10 @@ Craft.executeUserCode = function () {
         'down',
         'left',
       ];
-      const direction = _.sample(locationOptions);
+      const randomDirection = _.sample(locationOptions);
 
       appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
-          type, direction);
+          type, randomDirection);
     }
   };
 
@@ -1032,32 +817,11 @@ Craft.executeUserCode = function () {
   });
 
   codegen.evalWith(code, evalApiMethods, true);
-  appCodeOrgAPI.startAttempt(function (success, levelModel) {
+  appCodeOrgAPI.startAttempt(function (success) {
     if (Craft.level.freePlay) {
       return;
     }
     this.reportResult(success);
-
-    var tileIDsToStore = Craft.initialConfig.level.blocksToStore;
-    if (success && tileIDsToStore) {
-      var newHouseBlocks = JSON.parse(window.localStorage.getItem('craftHouseBlocks')) || {};
-      for (var i = 0; i < levelModel.actionPlane.length; i++) {
-        if (tileIDsToStore[i] !== '') {
-          newHouseBlocks[tileIDsToStore[i]] = levelModel.actionPlane[i].blockType;
-        }
-      }
-      trySetLocalStorageItem('craftHouseBlocks', JSON.stringify(newHouseBlocks));
-    }
-
-    var attemptInventoryTypes = levelModel.getInventoryTypes();
-    var playerInventoryTypes = JSON.parse(window.localStorage.getItem('craftPlayerInventory')) || [];
-
-    var newInventorySet = {};
-    attemptInventoryTypes.concat(playerInventoryTypes).forEach(function (type) {
-      newInventorySet[type] = true;
-    });
-
-    trySetLocalStorageItem('craftPlayerInventory', JSON.stringify(Object.keys(newInventorySet)));
   }.bind(this));
 
   if (Craft.initialConfig.level.dayNightCycleTime) {

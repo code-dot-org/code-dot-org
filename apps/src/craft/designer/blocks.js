@@ -2,20 +2,9 @@ const i18n = require('./locale');
 import { singleton as studioApp } from '../../StudioApp';
 import { stripQuotes } from '../../utils';
 import _ from 'lodash';
+import eventTypes from './game/Event/EventType.js';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
-
-const eventTypes = Object.freeze({
-  WhenTouched: 0,
-  WhenUsed: 1,
-  WhenSpawned: 2,
-  WhenAttacked: 3,
-  WhenNight: 4,
-  WhenDay: 5,
-  WhenNightGlobal: 6,
-  WhenDayGlobal: 7,
-  WhenRun: 8
-});
 
 const numbersToDisplayText = {
   '0.4': i18n.timeVeryShort(),
@@ -67,44 +56,6 @@ const blocksToDisplayText = {
   '': i18n.blockTypeEmpty()
 };
 
-const miniBlocks = [
-  'dirt',
-  'dirtCoarse',
-  'sand',
-  'gravel',
-  'bricks',
-  'logAcacia',
-  'logBirch',
-  'logJungle',
-  'logOak',
-  'logSpruce',
-  'planksAcacia',
-  'planksBirch',
-  'planksJungle',
-  'planksOak',
-  'planksSpruce',
-  'cobblestone',
-  'sandstone',
-  'wool',
-  'redstoneDust',
-  'lapisLazuli',
-  'ingotIron',
-  'ingotGold',
-  'emerald',
-  'diamond',
-  'coal',
-  'bucketWater',
-  'bucketLava',
-  'gunPowder',
-  'wheat',
-  'potato',
-  'carrots',
-  'milk',
-  'egg',
-  'poppy',
-  'sheep'
-].sort();
-
 const miniBlocksToDisplayText = {
   dirt: i18n.miniBlockDirt(),
   dirtCoarse: i18n.miniBlockDirtCoarse(),
@@ -143,43 +94,7 @@ const miniBlocksToDisplayText = {
   sheep: i18n.miniBlockSheep(),
 };
 
-const allBlocks = [
-  'bedrock',
-  'bricks',
-  'clay',
-  'oreCoal',
-  'dirtCoarse',
-  'cobblestone',
-  'oreDiamond',
-  'dirt',
-  'oreEmerald',
-  'farmlandWet',
-  'glass',
-  'oreGold',
-  'grass',
-  'gravel',
-  'clayHardened',
-  'oreIron',
-  'oreLapis',
-  'lava',
-  'logAcacia',
-  'logBirch',
-  'logJungle',
-  'logOak',
-  'logSpruce',
-  'planksAcacia',
-  'planksBirch',
-  'planksJungle',
-  'planksOak',
-  'planksSpruce',
-  'oreRedstone',
-  'sand',
-  'sandstone',
-  'stone',
-  'tnt',
-  'tree',
-  'wool'];
-
+const miniBlocks = Object.keys(miniBlocksToDisplayText).sort();
 
 const soundsToDisplayText = {
   dig_wood1: i18n.soundTypeDig_wood1(),
@@ -213,20 +128,9 @@ const soundsToDisplayText = {
   zombieBrains: i18n.soundTypeZombieBrains(),
   zombieGroan: i18n.soundTypeZombieGroan(),
   zombieHurt: i18n.soundTypeZombieHurt(),
-  //zombieHurt2: 'zombie hurt',
 };
 
 const allSounds = Object.keys(soundsToDisplayText);
-
-const ENTITY_TYPES = [
-  'Player', // TODO(bjordan): other entity types
-  'sheep',
-  'zombie',
-  'ironGolem',
-  'creeper',
-  'cow',
-  'chicken',
-];
 
 const entityTypesToDisplayText = {
   Player: i18n.entityTypePlayer(),
@@ -237,6 +141,8 @@ const entityTypesToDisplayText = {
   cow: i18n.entityTypeCow(),
   chicken: i18n.entityTypeChicken(),
 };
+
+const ENTITY_TYPES = Object.keys(entityTypesToDisplayText);
 
 const SPAWNABLE_ENTITY_TYPES = [
   'sheep',
@@ -288,47 +194,10 @@ exports.entityActionTargetDropdownBlocks = Object.keys(entityActionTargetDropdow
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
-  var dropdownBlocks = (blockInstallOptions.level.availableBlocks || []).concat(
-    JSON.parse(window.localStorage.getItem('craftPlayerInventory')) || []);
-
-  var dropdownBlockSet = {};
-
-  dropdownBlocks.forEach(function (type) {
-    dropdownBlockSet[type] = true;
-  });
-
   var craftBlockOptions = {
-    inventoryBlocks: Object.keys(dropdownBlockSet),
-    ifBlockOptions: blockInstallOptions.level.ifBlockOptions,
     playSoundOptions: blockInstallOptions.level.playSoundOptions,
     dropDropdownOptions: blockInstallOptions.level.dropDropdownOptions,
-    placeBlockOptions: blockInstallOptions.level.placeBlockOptions
   };
-
-  var inventoryBlocksEmpty = !craftBlockOptions.inventoryBlocks ||
-      craftBlockOptions.inventoryBlocks.length === 0;
-  var allDropdownBlocks = inventoryBlocksEmpty ?
-      allBlocks : craftBlockOptions.inventoryBlocks;
-
-  var allOnTouchedBlocks = [].concat([
-    'sheep',
-  ]).concat(allBlocks);
-
-  //blockly.Blocks.craft_moveForward = {
-  //  helpUrl: '',
-  //  init: function () {
-  //    this.setHSV(184, 1.00, 0.74);
-  //    this.appendDummyInput()
-  //        .appendTitle(new blockly.FieldLabel(i18n.blockMoveForward()));
-  //    this.setPreviousStatement(true);
-  //    this.setNextStatement(true);
-  //  }
-  //};
-  //
-  //blockly.Generator.get('JavaScript').craft_moveForward = function () {
-  //  return 'moveForward(\'block_id_' + this.id + '\');\n';
-  //};
-
 
   blockly.Blocks.craft_turn = {
     // Block for turning left or right.
@@ -414,92 +283,6 @@ exports.install = function (blockly, blockInstallOptions) {
     return methodCall + '(\'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_destroyBlock = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockDestroyBlock()));
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_destroyBlock = function () {
-    return 'destroyBlock(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_shear = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockShear()));
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_shear = function () {
-    return 'shear(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_whileBlockAhead = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.ifBlockOptions || allDropdownBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-
-      this.setHSV(322, 0.90, 0.95);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockWhileXAheadWhile())
-          .appendTitle(dropdown, 'TYPE')
-          .appendTitle(i18n.blockWhileXAheadAhead());
-      this.appendStatementInput('DO')
-          .appendTitle(i18n.blockWhileXAheadDo());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_whileBlockAhead = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    var blockType = this.getTitleValue('TYPE');
-    return 'whileBlockAhead(\'block_id_' + this.id + '\',\n"' +
-            blockType + '", ' +
-        '  function() { '+
-            innerCode +
-        '  }' +
-        ');\n';
-  };
-
-  blockly.Blocks.craft_ifBlockAhead = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.ifBlockOptions || allDropdownBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockIf())
-          .appendTitle(dropdown, 'TYPE')
-          .appendTitle(i18n.blockWhileXAheadAhead());
-      this.appendStatementInput('DO')
-          .appendTitle(i18n.blockWhileXAheadDo());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_ifBlockAhead = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    var blockType = this.getTitleValue('TYPE');
-    return 'ifBlockAhead("' + blockType + '", function() {\n' +
-      innerCode +
-    '}, \'block_id_' + this.id + '\');\n';
-  };
-
   const statementNameToEvent = {
     WHEN_USED: eventTypes.WhenUsed,
     WHEN_TOUCHED: eventTypes.WhenTouched,
@@ -508,8 +291,6 @@ exports.install = function (blockly, blockInstallOptions) {
     WHEN_NIGHT: eventTypes.WhenNight,
     WHEN_DAY: eventTypes.WhenDay,
   };
-
-  //When Spawned, When Touched, When Clicked, When Attacked, When Day, When Night
 
   const defaultEventOrder = [
     'WHEN_SPAWNED',
@@ -587,9 +368,6 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Blocks[`craft_${functionName}`] = {
       helpUrl: '',
       init: function () {
-        var dropdownOptions = keysToDropdownOptions(allOnTouchedBlocks);
-        var dropdown = new blockly.FieldDropdown(dropdownOptions);
-        dropdown.setValue(dropdownOptions[0][1]);
         this.setHSV(140, 1.00, 0.74);
         this.appendDummyInput()
             .appendTitle(text);
@@ -610,54 +388,6 @@ exports.install = function (blockly, blockInstallOptions) {
   makeGlobalEventBlock('whenDay', i18n.eventTypeWhenDay(), eventTypes.WhenDayGlobal);
   makeGlobalEventBlock('whenNight', i18n.eventTypeWhenNight(), eventTypes.WhenNightGlobal);
   makeGlobalEventBlock('whenRun', i18n.eventTypeWhenRun(), eventTypes.WhenRun);
-
-  blockly.Blocks.craft_onTouched = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(allOnTouchedBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-      this.setHSV(140, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle('on touched')
-          .appendTitle(dropdown, 'TYPE');
-      this.appendStatementInput('DO');
-      this.setPreviousStatement(false);
-      this.setNextStatement(false);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_onTouched = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    var blockType = this.getTitleValue('TYPE');
-    return 'onTouched("' + blockType + '", function(block) {\n' +
-      innerCode +
-    '}, \'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_onPlayerMoved = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(allOnTouchedBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-      this.setHSV(140, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle('on player moved')
-          .appendTitle(dropdown, 'TYPE');
-      this.appendStatementInput('DO');
-      this.setPreviousStatement(false);
-      this.setNextStatement(false);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_onPlayerMoved = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    var blockType = this.getTitleValue('TYPE');
-    return 'onPlayerMoved("' + blockType + '", function(block) {\n' +
-      innerCode +
-    '}, \'block_id_' + this.id + '\');\n';
-  };
 
   function dropdownEntityBlock(simpleFunctionName, blockText, dropdownArray, doSort) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
@@ -741,13 +471,6 @@ exports.install = function (blockly, blockInstallOptions) {
   dropdownEntityBlock('wait', i18n.blockActionWait(), Object.keys(numbersToDisplayText).sort());
   dropdownEntityBlock('drop', i18n.blockActionDrop(), craftBlockOptions.dropDropdownOptions || miniBlocks, true);
   dropdownEntityBlock('moveDirection', i18n.blockActionMove(), ['up', 'down', 'left', 'right']);
-  //simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
-  //simpleEntityBlock('moveEntityAwayFromPlayer', 'move away from player');
-  //simpleEntityBlock('turnEntityRight', 'turn it right');
-  //simpleEntityBlock('turnEntityLeft', 'turn it left');
-  //simpleEntityBlock('turnEntityRandom', 'turn it random');
-  //simpleEntityBlock('turnEntityToPlayer', 'turn toward player');
-
 
   blockly.Blocks.craft_forever = {
     helpUrl: '',
@@ -944,47 +667,6 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'moveEntityWest(block, \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_ifLavaAhead = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockIfLavaAhead());
-      this.appendStatementInput('DO')
-          .appendTitle(i18n.blockWhileXAheadDo());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_ifLavaAhead = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return 'ifLavaAhead(function() {\n' +
-      innerCode +
-    '}, \'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_placeBlock = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.placeBlockOptions || allDropdownBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlaceXPlace())
-          .appendTitle(dropdown, 'TYPE');
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_placeBlock = function () {
-    var blockType = this.getTitleValue('TYPE');
-    return 'placeBlock("' + blockType + '", \'block_id_' + this.id + '\');\n';
-  };
-
   function onSoundSelected(soundValue) {
     var soundName = stripQuotes(soundValue).trim();
     studioApp.playAudio(soundName);
@@ -1035,72 +717,4 @@ exports.install = function (blockly, blockInstallOptions) {
     var score = this.getTitleValue('SCORE');
     return 'addScore("' + score + '", \'block_id_' + this.id + '\');\n';
   };
-
-  blockly.Blocks.craft_placeTorch = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlaceTorch());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_placeTorch = function () {
-    return 'placeTorch(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_plantCrop = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlantCrop());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_plantCrop = function () {
-    return 'plantCrop(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_tillSoil = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockTillSoil());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_tillSoil = function () {
-    return 'tillSoil(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_placeBlockAhead = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.placeBlockOptions || allDropdownBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlaceXAheadPlace())
-          .appendTitle(dropdown, 'TYPE')
-          .appendTitle(i18n.blockPlaceXAheadAhead());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_placeBlockAhead = function () {
-    var blockType = this.getTitleValue('TYPE');
-    return 'placeBlockAhead("' + blockType + '", \'block_id_' + this.id + '\');\n';
-  };
-
 };
