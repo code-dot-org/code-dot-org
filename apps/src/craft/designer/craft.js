@@ -5,18 +5,18 @@ import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import Hammer from "hammerjs";
 
-var studioApp = require('../StudioApp').singleton;
+var studioApp = require('../../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
-var codegen = require('../codegen');
+var codegen = require('../../codegen');
 var GameController = require('./game/GameController');
-var dom = require('../dom');
+var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var eventsLevelbuilderOverrides = require('./eventsLevelbuilderOverrides');
-var MusicController = require('../MusicController');
+var MusicController = require('../../MusicController');
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+var AppView = require('../../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 import {entityActionBlocks, entityActionTargetDropdownBlocks} from './blocks';
 

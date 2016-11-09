@@ -1,4 +1,4 @@
-var tb = require('../block_utils').createToolbox;
+var tb = require('../../block_utils').createToolbox;
 var moveForwardBlock = '<block type="craft_moveForward"></block>';
 
 function craftBlock(type) {
