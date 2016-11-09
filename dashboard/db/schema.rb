@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103222852) do
+ActiveRecord::Schema.define(version: 20161108095700) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -297,7 +297,9 @@ ActiveRecord::Schema.define(version: 20161103222852) do
 
   create_table "pd_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_workshop_id",      null: false
-    t.string   "name",                null: false
+    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -872,6 +874,7 @@ ActiveRecord::Schema.define(version: 20161103222852) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",                        default: 0
     t.integer  "terms_of_service_version"
+    t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
     t.index ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree

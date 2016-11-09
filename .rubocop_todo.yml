@@ -10,10 +10,6 @@
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 6
-Lint/IneffectiveAccessModifier:
-  Enabled: false
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -122,12 +118,6 @@ Style/CommentIndentation:
 # Configuration parameters: EnforcedStyle, SupportedStyles, SingleLineConditionsOnly.
 # SupportedStyles: assign_to_condition, assign_inside_condition
 Style/ConditionalAssignment:
-  Enabled: false
-
-# Offense count: 7
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: format, sprintf, percent
-Style/FormatString:
   Enabled: false
 
 # Offense count: 268

@@ -21,7 +21,8 @@ video_player: true
 
 <div style="margin-left: 300px;">
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
+Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
+
 
 </div>
 
