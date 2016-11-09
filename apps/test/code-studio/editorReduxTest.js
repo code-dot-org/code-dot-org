@@ -3,8 +3,9 @@ import { createStore } from '@cdo/apps/redux';
 import reducer, {
   reorderLevel,
   addGroup,
-  addStage
-} from '@cdo/apps/sites/studio/pages/components/editorRedux';
+  addStage,
+  setActiveVariant
+} from '@cdo/apps/lib/script-editor/editorRedux';
 
 const initialState = {
   levelKeyList: {},
@@ -46,5 +47,9 @@ describe('editorRedux reducer tests', () => {
   it('add stage', () => {
     const nextState = reducer(initialState, addStage(1, 'New Stage 2')).stages;
     assert.deepEqual(nextState.map(s => s.name), ['A', 'New Stage 2', 'B']);
+  });
+  it('set active variant', () => {
+    const nextState = reducer(initialState, setActiveVariant(2, 1, 2)).stages;
+    assert.equal(nextState[1].levels[0].activeId, 2);
   });
 });
