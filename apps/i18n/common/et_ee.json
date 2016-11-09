@@ -314,5 +314,6 @@
   "when": "kui",
   "whenRun": "pärast käivitamist",
   "workspaceHeaderShort": "Tööruum: ",
-  "yes": "Jah"
+  "yes": "Jah",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

@@ -111,5 +111,6 @@
   "word": "Encontra a palavra",
   "wrongCropError": "Não consigo fazer essa colheita a partir daqui.",
   "yes": "Sim",
-  "youSpelled": "Tu escreveste"
+  "youSpelled": "Tu escreveste",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

@@ -49,12 +49,12 @@
     "show_d_pad": "false",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
     "encrypted_examples": "V3xU80vZ3GmHxgClHcJBKpTUFn3t+KBX+6d7Qa1Lu+k7D/h+/AayyqxgvGki\nW6PY\n",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

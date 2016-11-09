@@ -116,6 +116,7 @@ const CourseProgressRow = React.createClass({
 
     return (
       <div
+        className={stage.lockable && lockableAuthorized ? "uitest-locked" : ""}
         style={[
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},

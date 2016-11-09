@@ -314,5 +314,6 @@
   "when": "ketika",
   "whenRun": "ketika dijalankan",
   "workspaceHeaderShort": "Area kerja: ",
-  "yes": "Ya"
+  "yes": "Ya",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

@@ -111,5 +111,6 @@
   "word": "Pronađi riječ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Da",
-  "youSpelled": "Napisao si"
+  "youSpelled": "Napisao si",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

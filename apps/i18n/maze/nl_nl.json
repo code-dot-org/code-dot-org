@@ -111,5 +111,6 @@
   "word": "Zoek het woord",
   "wrongCropError": "Ik kan dat gewas vanaf hier niet oogsten.",
   "yes": "Ja",
-  "youSpelled": "Jij spelde"
+  "youSpelled": "Jij spelde",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }
