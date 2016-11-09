@@ -111,5 +111,6 @@
   "word": "Sözcüğü bul",
   "wrongCropError": "Ürünü buradan toplayamam.",
   "yes": "Evet",
-  "youSpelled": "Açıkladınız"
+  "youSpelled": "Açıkladınız",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

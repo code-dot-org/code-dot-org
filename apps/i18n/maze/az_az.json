@@ -111,5 +111,6 @@
   "word": "Sözü tap",
   "wrongCropError": "Məhsulu buradan toplaya bilmərəm.",
   "yes": "Bəli",
-  "youSpelled": "Açıqladınız"
+  "youSpelled": "Açıqladınız",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

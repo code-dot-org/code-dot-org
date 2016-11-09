@@ -111,5 +111,6 @@
   "word": "ค้นหาคำ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "ใช่",
-  "youSpelled": "คุณถูกสะกด"
+  "youSpelled": "คุณถูกสะกด",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }
