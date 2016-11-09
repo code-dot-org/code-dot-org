@@ -90,6 +90,6 @@ activateReferenceAreaOnLoad();
 window.CDOSounds = new Sounds();
 
 import {trackProgress} from '@cdo/apps/code-studio/clientState';
-window.__TestHooks = {
+window.__TestInterface = {
   trackProgress,
 };
