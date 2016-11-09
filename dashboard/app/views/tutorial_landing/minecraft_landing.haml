@@ -3,6 +3,12 @@
     color: white;
   }
 
+  .color-block a:link, .color-block a:visited, .color-block a:hover, .color-block a:active {
+    font-family: "Gotham 5r", sans-serif;
+    color: white;
+    text-decoration: underline;
+  }
+
 %h1 Minecraft Hour of Code Tutorials
 %p Many languages | Modern browsers and tablets | Grades 2+
 %div{style: "clear:both"}
@@ -30,57 +36,38 @@
 %br
 %h2.mc-header2
   Don't have Internet?
-  %a{href: CDO.studio_url("/download/mc")} Download the offline version.
+  %a{href: CDO.studio_url("/download/mc")} Download the offline version of Minecraft Adventurer.
 %br
 
-%div{style: 'width: 45%; height: 200px; background-color: #0094ca; color: white; float: left; padding: 0 20px;'}
+
+.color-block{style: 'width: 45%; height: 220px; background-color: #0094ca; color: white; float: left; padding: 0 20px;'}
   %h2.white-text Microsoft Store Hour of Code Camps
-  Sign up for free Hour of Code camps at the Microsoft Store and learn how to combine your creativity with coding.
-  %br
-  %br
   %a{href: 'https://www.microsoft.com/youthsparkprograms'}
-    %button.primary{style: 'background-color: #59b9dc; border-color: white;'}
-      Sign up
+    Sign up
+  for free Hour of Code camps at the Microsoft Store and learn how to combine your creativity with coding. Visit one of 700 workshops in more than 60 countries.
 
-%div{style: 'width: 45%; height: 200px; background-color: #b9bf15; color: white; float: right; padding: 0 20px;'}
+.color-block{style: 'width: 45%; height: 220px; background-color: #b9bf15; color: white; float: right; padding: 0 20px;'}
   %h2.white-text Host an Hour of Code Minecraft Event
-  Anyone, anywhere can host their own Hour of Code Minecraft event. Download everything you need right here!
-  %br
-  %br
   %a{href: 'https://docs.com/hourofcode2016'}
-    %button.primary{style: 'background-color: #d1d567; border-color: white;'}
-      Download
+    Download the teacher guide and resources.
+  %br
+  %br
+  Facilitating an event? Join Microsoft and Minecraft for online training (in English only):
+  %ul
+    %li
+      %a.white-link{href: 'https://aka.ms/vir748pal-register'}
+        Nov 22, 7AM Pacific
+    %li
+      %a.white-link{href: 'https://aka.ms/vir748pal2-register'}
+        Nov 22, 5PM Pacific
+    %li
+      %a.white-link{href: 'https://aka.ms/vir748pal3-register'}
+        Nov 29, 3PM Pacific
 
 .clear
 
-%div{style: 'width: 45%; height: 230px; background-color: #7665a0; color: white; float: left; padding: 0 20px; margin-top: 20px;'}
-  %h2.white-text Join Facilitator Training
-  Join Microsoft and Minecraft for an Hour of Code Facilitator Training. Training will be held online from November 22 to 29, to be conducted in English only.
-  %br
-  %br
-  %a{href: 'https://aka.ms/vir748pal-register', style: 'font-family: "Gotham 4r", sans-serif;'}
-    %div{style: 'width: 25%; height: 50px; background-color: #a69bc1; color: white; float: left; padding: 10px; border: 1px solid white; border-radius: 5px;'}
-      November 22
-      %br
-      7:00 - 8:00 AM Pacific
-  %a{href: 'https://aka.ms/vir748pal2-register', style: 'font-family: "Gotham 4r", sans-serif;'}
-    %div{style: 'width: 25%; height: 50px; background-color: #a69bc1; color: white; float: left; padding: 10px; border: 1px solid white; border-radius: 5px; margin-left: 10px;'}
-      November 22
-      %br
-      5:00 - 6:00 PM Pacific
-  %a{href: 'https://aka.ms/vir748pal3-register', style: 'font-family: "Gotham 4r", sans-serif;'}
-    %div{style: 'width: 25%; height: 50px; background-color: #a69bc1; color: white; float: left; padding: 10px; border: 1px solid white; border-radius: 5px; margin-left: 10px;'}
-      November 29
-      %br
-      3:00 - 4:00 PM Pacific
-
-%div{style: 'width: 45%; height: 230px; background-color: #ffa400; color: white; float: right; padding: 0 20px; margin-top: 20px;'}
-  %h2.white-text Explore Microsoft YouthSpark
-  Whatever you’re passionate about, you can use computer science to imagine, create, and make a future that’s yours. Microsoft YouthSpark provides free tools and resources to pursue your passion.
-  %br
-  %br
+.color-block{style: 'background-color: #7665a0; color: white; margin-top: 15px; padding: 20px; font-size: 14px;'}
+  Whatever you’re passionate about, you can use computer science to imagine, create, and make a future that’s yours.
   %a{href: 'https://www.microsoft.com/about/philanthropies/youthspark/youthsparkhub'}
-    %button.primary{style: 'background-color: #ffc459; border-color: white;'}
-      Explore
-
-.clear
+    Microsoft YouthSpark
+  provides free tools and resources to pursue your passion.
