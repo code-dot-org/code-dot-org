@@ -314,5 +314,6 @@
   "when": "þegar",
   "whenRun": "þegar keyrt",
   "workspaceHeaderShort": "Vinnusvæði: ",
-  "yes": "Já"
+  "yes": "Já",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

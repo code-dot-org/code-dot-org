@@ -314,5 +314,6 @@
   "when": "کب",
   "whenRun": "جب رن ہو تو",
   "workspaceHeaderShort": "ورک اسپیس ",
-  "yes": "جی"
+  "yes": "جی",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

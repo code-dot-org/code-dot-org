@@ -314,5 +314,6 @@
   "when": "когда",
   "whenRun": "при запуске",
   "workspaceHeaderShort": "Место сбора блоков: ",
-  "yes": "Да"
+  "yes": "Да",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

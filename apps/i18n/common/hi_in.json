@@ -314,5 +314,6 @@
   "when": "कब",
   "whenRun": "जब चलाएँ",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "हाँ"
+  "yes": "हाँ",
+  "predictionInstructions": "Make a prediction before you run the program."
 }
