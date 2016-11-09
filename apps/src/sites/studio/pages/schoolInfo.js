@@ -6,15 +6,8 @@ window.SchoolInfoManager = function (existingOptions) {
 
   var districtElement = $('#school-district-id');
 
-  // Comparison function to sort objects by their 'name' property.
-  function byName(entry1, entry2) {
-    if (entry1.name < entry2.name) {
-      return -1;
-    }
-    if (entry1.name > entry2.name) {
-      return 1;
-    }
-    return 0;
+  function scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
   }
 
   function setupDistrictDropdown(stateCode) {
@@ -28,15 +21,20 @@ window.SchoolInfoManager = function (existingOptions) {
 
     selectize = districtElement.selectize({
       maxItems: 1,
+      sortField: [{field: 'text', direction: 'asc'}],
       onChange: function () {
         var districtId = districtElement[0].selectize.getValue();
         if (districtId) {
           setupSchoolDropdown(districtId, $('#school-type').val());
         }
-      }
+      },
+      onDropdownOpen: scrollToBottom,
     });
 
     districtElement[0].selectize.load(function (callback) {
+      // Scroll down to show the loading spinner at just the right time.
+      // onInitialize is too early, and onLoad is too late.
+      scrollToBottom();
       $.ajax({
         url: "/dashboardapi/v1/school-districts/" + stateCode,
         type: 'GET',
@@ -46,10 +44,8 @@ window.SchoolInfoManager = function (existingOptions) {
         },
         success: function (res) {
           var districts = [];
-          var entries = res.object;
-          entries.sort(byName);
-          for (var i = 0; i < entries.length; i++) {
-            var entry = entries[i];
+          for (var i = 0; i < res.object.length; i++) {
+            var entry = res.object[i];
             districts.push({value: entry.id, text: entry.name});
           }
           callback(districts);
@@ -93,10 +89,15 @@ window.SchoolInfoManager = function (existingOptions) {
     }
 
     selectize = schoolElement.selectize({
-      maxItems: 1
+      maxItems: 1,
+      sortField: [{field: 'text', direction: 'asc'}],
+      onDropdownOpen: scrollToBottom,
     });
 
     schoolElement[0].selectize.load(function (callback) {
+      // Scroll down to show the loading spinner at just the right time.
+      // onInitialize is too early, and onLoad is too late.
+      scrollToBottom();
       $.ajax({
         url: "/dashboardapi/v1/schools/" + districtCode + "/" + schoolType,
         type: 'GET',
@@ -106,8 +107,6 @@ window.SchoolInfoManager = function (existingOptions) {
         },
         success: function (response) {
           var schools = [];
-
-          response.sort(byName);
           for (var i = 0; i < response.length; i++) {
             var entry = response[i];
             schools.push({value: entry.id, text: entry.name});
