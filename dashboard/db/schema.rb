@@ -632,7 +632,7 @@ ActiveRecord::Schema.define(version: 20161109165252) do
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 
-  create_table "studio_persons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "studio_people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "emails"
@@ -671,7 +671,6 @@ ActiveRecord::Schema.define(version: 20161109165252) do
   create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.integer  "user_id",                   null: false
     t.string   "course",                    null: false
     t.boolean  "facilitator"
     t.boolean  "teaching"
@@ -679,6 +678,7 @@ ActiveRecord::Schema.define(version: 20161109165252) do
     t.string   "pd"
     t.string   "other_pd"
     t.text     "properties",  limit: 65535
+    t.integer  "user_id"
     t.index ["user_id"], name: "index_teacher_profiles_on_user_id", using: :btree
   end
 
