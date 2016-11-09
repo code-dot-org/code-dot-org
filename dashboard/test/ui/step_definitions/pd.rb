@@ -18,8 +18,8 @@ end
 
 And(/^I create a workshop for course "([^"]*)" facilitated by "([^"]*)"$/) do |course, name|
   organizer = User.find_or_create_teacher({
-                                              name: 'Organizer',
-                                              email: "organizer#{SecureRandom.hex}@code.org"
+                                            name: 'Organizer',
+                                            email: "organizer#{SecureRandom.hex}@code.org"
                                           },
                                           nil,
                                           'workshop_organizer')
