@@ -15,8 +15,21 @@ WEIGHTED_COUNT = "SUM(" \
   "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
   # The session does not specify the session weight, default to one.
   "   1)" \
-  " ) AS count"
+  " ) AS count".freeze
 
+# Generates a MySQL Query over a range of dates and configurable subset
+# of rows from the hoc_activity table
+#
+# @param start_date [Date] earliest date from which to select (inclusive)
+# @param end_date [optional, Date] latest date from which to select (exclusive).
+#   Defaults to one day after start_date
+# @param tutorial [optional, boolean] whether or not to include local tutorial
+#   views. Defaults to true.
+# @param tutorial_pixel [optional, boolean] whether or not to include remote
+#   (pixel-tracked) tutorial views. Defaults to true.
+# @param finished [optional, boolean] whether to examine activity completions or
+#   beginnings (default).
+# @return [String] formatted query
 def generate_from_where(start_date, end_date: nil, tutorial: true, tutorial_pixel: true, finished: false)
   start_day = start_date.strftime('%Y-%m-%d')
   end_day = (end_date || start_date + 1).strftime('%Y-%m-%d')
@@ -37,6 +50,13 @@ def generate_from_where(start_date, end_date: nil, tutorial: true, tutorial_pixe
   "FROM hoc_activity" + (filters.empty? ? "" : " WHERE #{filters.join(' OR ')}")
 end
 
+# Ranks all HoC tutorials by the number of activities initiated through our API
+# up to a given date. Ignores activities tracked by the remote tracking pixel,
+# and gives rankings by 1, 3, 7, and 14 days.
+#
+# @param [Date] end_date the date from which we will work backwards to generate
+#   rankings. Note that this excludes activities from the date itself.
+# @return [Hash] hash of hashes of tutorials and their ranks.
 def rank_tutorials(end_date)
   one_day = {}
   PEGASUS_REPORTING_DB_READONLY.fetch(
