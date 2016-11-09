@@ -12,6 +12,7 @@ nav: plp_playbook_nav
 
 ## Table of Contents
 - [Facilitator Application Process](#application)
+- [Facilitator Recommendation Form](#recommend)
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Support Documents](#support)
@@ -22,6 +23,11 @@ ________________
 <a id="application"></a>
 ## Facilitator Application Process
 The facilitator application will launch on November 1, 2016. If you have any questions about the Facilitator Application Process or your role in recruiting new facilitators, please refer to [this document](https://docs.google.com/document/d/1Q8xi7xyFOIVLWWNfrW5g8WXvyk56ta4UwB3YnHKeBe4/edit).  
+
+________________
+<a id="recommend"></a>
+## Facilitator Recommendation Form
+Each Regional Partner has the opportunity to refer 4 facilitators per program. **Please use [this form](https://goo.gl/forms/VTLHe9hMDg3gIN452) to recommend facilitators.** The form is editable so you do not have to submit all your recommendations at once - however, please keep in mind, you will be asked to rank individuals if you are recommending multiple.
 
 ________________
 <a id="page"></a>

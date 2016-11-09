@@ -35,7 +35,7 @@
     "honey_goal": "5",
     "instructions_important": "false",
     "markdown_instructions": "**Challenge:** Something looks a little different. Can you modify your function to make honey as well?",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need a second parameter for this function, only a second `if` statement.\",\"hint_id\":\"grade5_bee_parameters_new7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/dd9c99446ee6e2833e4d66f535ba19dd/grade5_bee_parameters_new7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need a second parameter for this function, only a second `if` statement.\",\"hint_id\":\"grade5_bee_parameters_new7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dd9c99446ee6e2833e4d66f535ba19dd/grade5_bee_parameters_new7.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
