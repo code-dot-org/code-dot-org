@@ -241,10 +241,12 @@ module RakeUtils
       RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
       RakeUtils.system 'sudo npm install -g npm@2.9.1'
       RakeUtils.npm_install_g 'grunt-cli'
+      RakeUtils.npm_install_g 'yarn'
     elsif OS.mac?
       RakeUtils.system 'brew install node'
       RakeUtils.system 'npm', 'update', '-g', 'npm'
       RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+      RakeUtils.system 'npm', 'install', '-g', 'yarn'
     end
   end
 
