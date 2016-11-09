@@ -19,14 +19,5 @@ after_fork do |_server, _worker|
   DCDO.after_fork
 end
 
-before_fork do |server, _worker|
-  # Quit the old unicorn process
-  old_pid = "#{server.config[:pid]}.oldbin"
-  if File.exist?(old_pid) && server.pid != old_pid
-    begin
-      Process.kill("QUIT", File.read(old_pid).to_i)
-    rescue Errno::ENOENT, Errno::ESRCH
-      # someone else did our job for us
-    end
-  end
-end
+require 'cdo/unicorn'
+before_fork $unicorn_upgrade
