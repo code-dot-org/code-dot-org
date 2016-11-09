@@ -9,7 +9,7 @@ It’s an exciting time of year, but our servers can’t handle it! We simply ca
 
 <h2>Due to this, we unfortunately will not be saving or reporting student progress on Course 1-4, our Accelerated Course or the Hour of Code tutorials from December 3-11.</h2>
 
-See below for a full list of affected courses:
+Below is a full list of affected courses:
 
 <img src="https://s3.amazonaws.com/cdo-email-images/progress+saved+chart.png" width="100%"/>
 
