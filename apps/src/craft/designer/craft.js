@@ -312,7 +312,7 @@ Craft.init = function (config) {
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
-          assetRoot: Craft.skin.assetUrl(''),
+          assetRoot: Craft.skin.assetUrl('designer/'),
           audioPlayer: {
             register: studioApp.registerAudio.bind(studioApp),
             play: studioApp.playAudio.bind(studioApp)
