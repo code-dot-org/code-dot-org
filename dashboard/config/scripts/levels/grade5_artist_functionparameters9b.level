@@ -31,7 +31,7 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If your function is correct, you shouldn't need to change it for this puzzle.\",\"hint_id\":\"grade5_artist_functionparameters9b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/d2433f9c2a2e075eb6a984de97515271/grade5_artist_functionparameters9b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The only thing you should need to do between function calls is change the color of the line.\",\"hint_id\":\"grade5_artist_functionparameters9b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/5226f551f9c4f53924533eb8764fc9e7/grade5_artist_functionparameters9b.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If your function is correct, you shouldn't need to change it for this puzzle.\",\"hint_id\":\"grade5_artist_functionparameters9b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d2433f9c2a2e075eb6a984de97515271/grade5_artist_functionparameters9b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The only thing you should need to do between function calls is change the color of the line.\",\"hint_id\":\"grade5_artist_functionparameters9b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5226f551f9c4f53924533eb8764fc9e7/grade5_artist_functionparameters9b.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
     "contained_level_names": null
