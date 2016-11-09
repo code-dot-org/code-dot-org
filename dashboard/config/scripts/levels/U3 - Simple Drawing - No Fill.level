@@ -47,12 +47,12 @@
     "show_d_pad": "false",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
     "encrypted_examples": "dYovxVeM/5CaA7fBWShAKzTFS3BF2CD4O4vIif32/m6at17f7egCPjDVufYp\nvSvK\n",
     "instructions_important": "false",
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false"
+    "all_animations_single_frame": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
