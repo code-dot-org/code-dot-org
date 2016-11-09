@@ -359,12 +359,12 @@ module.exports = function (grunt) {
     appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
   ));
   var codeStudioEntries = {
-    'code-studio':                  './src/sites/studio/pages/code-studio.js',
-    'districtDropdown':             './src/sites/studio/pages/districtDropdown.js',
+    'layouts/application':          './src/sites/studio/pages/layouts/application.js',
+    'shared/_district_dropdown':    './src/sites/studio/pages/shared/_district_dropdown.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
-    'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
-    'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
-    'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
+    'levels/editors/_applab':       './src/sites/studio/pages/levels/editors/_applab.js',
+    'scripts/_form':                './src/sites/studio/pages/scripts/_form.js',
+    'levels/editors/_gamelab':      './src/sites/studio/pages/levels/editors/_gamelab.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'levels/editors/_studio':       './src/sites/studio/pages/levels/editors/_studio.js',
     'levels/_contract_match':       './src/sites/studio/pages/levels/_contract_match.jsx',
@@ -397,9 +397,9 @@ module.exports = function (grunt) {
     'levels/embed_blocks': './src/sites/studio/pages/levels/embed_blocks.js',
 
     // tutorialExplorer for code.org/learn 2016 edition.
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
+    'learn/index': './src/sites/code.org/pages/learn/index.js',
 
-    makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
+    'maker/dependencies': './src/sites/studio/pages/maker/dependencies.js',
 
     'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
 
@@ -627,7 +627,10 @@ module.exports = function (grunt) {
   grunt.registerTask('check-entry-points', function () {
     console.log("checking entry points");
     let numBadEntryPoints = 0;
-    var validDirectories = ['../dashboard/app/views'];
+    var validDirectories = {
+      'studio': ['../dashboard/app/views'],
+      'code.org': ['../pegasus/sites.v3/code.org/public'],
+    };
 
     function walkDirectory(directory, callback) {
       var files = fs.readdirSync(path.resolve(directory));
@@ -648,7 +651,15 @@ module.exports = function (grunt) {
       var searchString = 'js/'+key+'.js';
       var possibleValidKeys = new Set();
       var matchedTemplatePaths = {};
-      validDirectories.forEach(function (directory)  {
+      var entryPointPatternMatch = entryPointPath.match(
+        /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/
+      );
+      let directoriesToSearch = [];
+      if (entryPointPatternMatch) {
+        console.log('this is for site', entryPointPatternMatch[1]);
+        directoriesToSearch = validDirectories[entryPointPatternMatch[1]] || [];
+      }
+      directoriesToSearch.forEach(function (directory)  {
         matchedTemplatePaths[directory+'/'] = [];
         var fullDirectoryPath = path.resolve(directory);
         walkDirectory(fullDirectoryPath, function (filePath) {
@@ -674,11 +685,8 @@ module.exports = function (grunt) {
           `but this one is used by ${possibleValidKeys.size}!`
         );
       }
-      var entryPointPatternMatch = entryPointPath.match(
-        /^\.\/src\/sites\/\w+\/pages\/(.*)\.jsx?$/
-      );
       if (entryPointPatternMatch) {
-        if (entryPointPatternMatch[1] !== key) {
+        if (entryPointPatternMatch[2] !== key) {
           errors.push(`Entry points should have the same name as the file they point to!`);
         }
       } else {
