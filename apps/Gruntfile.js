@@ -405,7 +405,7 @@ module.exports = function (grunt) {
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
-    brambleHost: './src/weblab/brambleHost.js',
+    'weblab_host/index': './src/sites/studio/pages/weblab_host/index.js',
   };
 
   // Create a config for each of our bundles
