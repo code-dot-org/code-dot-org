@@ -102,7 +102,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   end
 
   test 'see enrolled teachers' do
-    create :pd_enrollment, workshop: @workshop, name: @teacher.name, email: @teacher.email
+    enrollment = create :pd_enrollment, workshop: @workshop, full_name: @teacher.name, email: @teacher.email
 
     sign_in @facilitator
     get_attendance @workshop.id
@@ -112,37 +112,17 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     attendance = response['session_attendances'][0]['attendance']
     assert_equal 1, attendance.length
 
-    assert_equal @teacher.name, attendance[0]['name']
+    assert_equal enrollment.first_name, attendance[0]['first_name']
+    assert_equal enrollment.last_name, attendance[0]['last_name']
     assert_equal @teacher.email, attendance[0]['email']
-    assert attendance[0]['enrolled']
     assert_equal @teacher.id, attendance[0]['user_id']
     refute attendance[0]['in_section']
     refute attendance[0]['attended']
   end
 
-  test 'see teachers in section' do
-    @workshop.start!
-    @workshop.section.add_student @teacher
-
-    sign_in @facilitator
-    get_attendance @workshop.id
-    response = JSON.parse(@response.body)
-    assert_equal 1, response['session_attendances'].length
-
-    attendance = response['session_attendances'][0]['attendance']
-    assert_equal 1, attendance.length
-
-    assert_equal @teacher.name, attendance[0]['name']
-    assert_equal @teacher.email, attendance[0]['email']
-    refute attendance[0]['enrolled']
-    assert_equal @teacher.id, attendance[0]['user_id']
-    assert attendance[0]['in_section']
-    refute attendance[0]['attended']
-  end
-
   test 'see teacher attendance' do
     # Enrolled, in section, signed in, and attended
-    create :pd_enrollment, workshop: @workshop, name: @teacher.name, email: @teacher.email
+    enrollment = create :pd_enrollment, workshop: @workshop, full_name: @teacher.name, email: @teacher.email
     @workshop.start!
     @workshop.section.add_student @teacher
     create :pd_attendance, session: @session, teacher: @teacher
@@ -155,9 +135,9 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     attendance = response['session_attendances'][0]['attendance']
     assert_equal 1, attendance.length
 
-    assert_equal @teacher.name, attendance[0]['name']
+    assert_equal enrollment.first_name, attendance[0]['first_name']
+    assert_equal enrollment.last_name, attendance[0]['last_name']
     assert_equal @teacher.email, attendance[0]['email']
-    assert attendance[0]['enrolled']
     assert_equal @teacher.id, attendance[0]['user_id']
     assert attendance[0]['in_section']
     assert attendance[0]['attended']
@@ -165,7 +145,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
 
   test 'toggle teacher attendance' do
     # Enrolled and in section
-    create :pd_enrollment, workshop: @workshop, name: @teacher.name, email: @teacher.email
+    create :pd_enrollment, workshop: @workshop, full_name: @teacher.name, email: @teacher.email
     @workshop.start!
     @workshop.section.add_student @teacher
     assert_empty Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop)

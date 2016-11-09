@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import queryString from 'query-string';
 import { selectSection, NO_SECTION } from '../../sectionsRedux';
 import i18n from '@cdo/locale';
-
+import { updateQueryParam } from '../../utils';
 
 const styles = {
   select: {
@@ -15,7 +14,8 @@ const styles = {
 const SectionSelector = React.createClass({
   propTypes: {
     requireSelection: React.PropTypes.bool,
-    onChange: React.PropTypes.func,
+    // If true, changing sections results in us hitting the server
+    reloadOnChange: React.PropTypes.bool,
 
     // redux provided
     sections: React.PropTypes.arrayOf(
@@ -30,21 +30,12 @@ const SectionSelector = React.createClass({
 
   handleSelectChange(event) {
     const newSectionId = event.target.value;
-    this.props.selectSection(newSectionId);
-    const newQueryString = queryString.stringify({
-      ...queryString.parse(location.search),
-      section_id: newSectionId === NO_SECTION ? undefined : newSectionId
-    });
 
-    // Push section_id update to query string (but don't do a navigation)
-    let newLocation = window.location.pathname;
-    if (newQueryString) {
-      newLocation += '?' + newQueryString;
-    }
-    window.history.pushState(null, document.title, newLocation);
-
-    if (this.props.onChange) {
-      this.props.onChange(newSectionId);
+    updateQueryParam('section_id', newSectionId === NO_SECTION ? undefined : newSectionId);
+    if (this.props.reloadOnChange) {
+      window.location.reload();
+    } else {
+      this.props.selectSection(newSectionId);
     }
   },
 
