@@ -614,6 +614,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
+    'check-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -622,6 +623,105 @@ module.exports = function (grunt) {
     'newer:strip_code',
     'ejs'
   ]);
+
+  grunt.registerTask('check-entry-points', function () {
+    console.log("checking entry points");
+    let numBadEntryPoints = 0;
+    var validDirectories = ['../dashboard/app/views'];
+
+    function walkDirectory(directory, callback) {
+      var files = fs.readdirSync(path.resolve(directory));
+      files.forEach(function (filename) {
+        var fullPath = path.resolve(directory, filename);
+        if (fs.statSync(fullPath).isDirectory()) {
+          walkDirectory(fullPath, callback);
+        } else {
+          callback(fullPath);
+        }
+      });
+    }
+
+    for (var key in config.webpack.build.entry) {
+      var errors = [];
+      var usageCount = 0;
+      var entryPointPath = config.webpack.build.entry[key][1];
+      var searchString = 'js/'+key+'.js';
+      var possibleValidKeys = new Set();
+      var matchedTemplatePaths = {};
+      validDirectories.forEach(function (directory)  {
+        matchedTemplatePaths[directory+'/'] = [];
+        var fullDirectoryPath = path.resolve(directory);
+        walkDirectory(fullDirectoryPath, function (filePath) {
+          if (fs.readFileSync(filePath).indexOf(searchString) >= 0) {
+            usageCount++;
+            var relativePath = filePath.replace(fullDirectoryPath, '').slice(1);
+            possibleValidKeys.add(relativePath.split('.')[0]);
+            matchedTemplatePaths[directory+'/'].push(relativePath);
+          }
+        });
+      });
+      if (possibleValidKeys.size === 1) {
+        var keyShouldBe = possibleValidKeys.keys().next().value;
+        if (keyShouldBe !== key) {
+          errors.push(
+            `Entry point names should match the name of the file they are used in.\n` +
+            `This entry point should be renamed to ${chalk.underline(keyShouldBe)}!`
+          );
+        }
+      } else {
+        errors.push(
+          `Entry points should only be used by one template ` +
+          `but this one is used by ${possibleValidKeys.size}!`
+        );
+      }
+      var entryPointPatternMatch = entryPointPath.match(
+        /^\.\/src\/sites\/\w+\/pages\/(.*)\.jsx?$/
+      );
+      if (entryPointPatternMatch) {
+        if (entryPointPatternMatch[1] !== key) {
+          errors.push(`Entry points should have the same name as the file they point to!`);
+        }
+      } else {
+        errors.push(
+          `Entry points should point to files in the ./src/sites/<site-name>/pages/ directory!`
+        );
+      }
+
+      console.log(
+        errors.length === 0 ?
+        chalk.green(`✓ ${key}`) :
+        chalk.red(`✘ ${key}`),
+        '➜',
+        entryPointPath
+      );
+
+      errors.forEach(
+        error => console.log(chalk.red(`  ✘ ${error.split('\n').join('\n    ')}`))
+      );
+
+      if (errors.length > 0) {
+        numBadEntryPoints++;
+        for (let key in matchedTemplatePaths) {
+          const templates = matchedTemplatePaths[key];
+          if (templates.length > 0) {
+            console.log(chalk.yellow(
+              `  this entry point is referenced by the following templates:`
+            ));
+            console.log(`    ${key}`+chalk.blue(templates[0]));
+            for (let template of templates.slice(1)) {
+              console.log('   ', chalk.blue(' '.repeat(key.length) + template));
+            }
+          }
+        }
+      }
+    }
+    if (numBadEntryPoints > 0) {
+      // comment this out while we fix all this stuff.
+      //grunt.warn(
+      //  `${numBadEntryPoints} entry points do not conform to naming conventions`
+      //);
+    }
+  });
 
   grunt.registerTask('compile-firebase-rules', function () {
     try {
