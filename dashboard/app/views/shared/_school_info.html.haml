@@ -41,13 +41,7 @@
       #school-district
 
         -# We'll apply the Selectize UI control to this input.
-        %input#school-district-id.form-control{name: "school_district_id_source", type: "text", required: false}
-
-        -# This is the input we'll actually submit as part of the form.  We'll copy the Selectized value into
-        -# here whenever it's changed.  Sometimes we'll override this with code, say 0 for "unknown district".
-        -# Selectize was showing this 0 as a character when it was disabled, hence giving Selectize its own
-        -# input to work with above.
-        %input#school-district-id-form.form-control{name: "#{form_name}[school_district_id]", type: "hidden", required: false}
+        %input#school-district-id.form-control{name: "#{form_name}[school_district_id]", type: "text", required: false}
 
         %label
           %input#school-district-other{name: "#{form_name}[school_district_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
@@ -64,13 +58,7 @@
       #school
 
         -# We'll apply the Selectize UI control to this input.
-        %input#school-id.form-control{name: "school_id_source", type: "text", required: false}
-
-        -# This is the input we'll actually submit as part of the form.  We'll copy the Selectized value into
-        -# here whenever it's changed.  Sometimes we'll override this with code, say 0 for "unknown school".
-        -# Selectize was showing this 0 as a character when it was disabled, hence giving Selectize its own
-        -# input to work with above.
-        %input#school-id-form.form-control{name: "#{form_name}[school_id]", type: "hidden", required: false}
+        %input#school-id.form-control{name: "#{form_name}[school_id]", type: "text", required: false}
 
         %label
           %input#school-other{name: "#{form_name}[school_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
