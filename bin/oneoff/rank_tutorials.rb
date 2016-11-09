@@ -1,5 +1,13 @@
 #!/usr/bin/env ruby
+
+# Generates to stdout a hash containing four hashes, each giving a
+# ranking of all of our HoC Tutorials by popularity for a given time
+# interval; one day, three days, one week, or two weeks.
 #
+# By default, the script will use the current date as the "end date" for
+# all these ranges. Any other date can be passed as an argument to
+# override.
+
 require_relative '../../dashboard/config/environment'
 require_relative '../../lib/analyze_hoc_activity_helper'
 require 'json'
