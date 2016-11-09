@@ -999,7 +999,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 end
 
 Then /^I scroll our lockable stage into view$/ do
-  wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
+  wait_with_short_timeout.until { @browser.execute_script('return $(".uitest-locked").length') > 0 }
   @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
