@@ -401,7 +401,7 @@ module.exports = function (grunt) {
 
     makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
 
-    pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
+    'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 

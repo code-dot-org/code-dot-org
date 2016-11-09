@@ -1,5 +1,3 @@
-/* global window */
-
 /**
  * Main landing page and router for the workshop dashboard.
  */
@@ -76,4 +74,3 @@ const WorkshopDashboard = (
 );
 
 export default WorkshopDashboard;
-window.WorkshopDashboard = WorkshopDashboard;
