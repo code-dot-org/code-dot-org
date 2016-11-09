@@ -3,5 +3,6 @@
   "addImageButton": "Add Image",
   "addHTMLButton": "Add HTML",
   "refreshPreview": "Refresh",
-  "toggleInspector": "Toggle Inspector"
+  "toggleInspectorOn": "Inspector: Off",
+  "toggleInspectorOff": "Inspector: On"
 }
