@@ -71,7 +71,6 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButton: true,
-      legacyLink: '/learn/legacy',
       showSortBy: window.location.search.indexOf("showsort") !== -1
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
