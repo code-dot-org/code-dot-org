@@ -99,13 +99,13 @@ const FlexGroup = React.createClass({
         s.push(`video_key_for_next_level '${level.videoKey}'`);
       }
       if (level.concepts) {
-        // TODO
+        s.push(`concepts ${level.concepts}`);
       }
       if (level.conceptDifficulty) {
-        // TODO
+        s.push(`level_concept_difficulty '${level.conceptDifficulty}'`);
       }
     }
-    let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(/'/, "'")}'`;
+    let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(/'/, "\\'")}'`;
     if (active === false) {
       l += ', active: false'
     }
@@ -114,7 +114,7 @@ const FlexGroup = React.createClass({
   },
 
   normalizeLevelKind(kind) {
-    return kind === 'puzzle' ? 'level' : kind;
+    return (!kind || kind === 'puzzle' || kind === 'unplugged') ? 'level' : kind;
   },
 
   render() {

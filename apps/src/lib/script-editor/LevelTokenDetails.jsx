@@ -138,6 +138,35 @@ const LevelTokenDetails = React.createClass({
                 style={styles.textInput}
               />
             </div>
+            <div style={{clear: 'both'}}></div>
+            <span
+              style={Object.assign(
+                {display: 'inline-block'},
+                styles.levelFieldLabel
+              )}
+            >
+              Difficulty
+            </span>
+            <input
+              defaultValue={this.props.level.conceptDifficulty}
+              type="text"
+              style={styles.textInput}
+            />
+            <div style={{float: 'right'}}>
+              <span
+                style={Object.assign(
+                  {display: 'inline-block'},
+                  styles.levelFieldLabel
+                )}
+              >
+                Concepts
+              </span>
+              <input
+                defaultValue={this.props.level.concepts}
+                type="text"
+                style={Object.assign({}, styles.textInput, {width: 320})}
+              />
+            </div>
           </div>
         }
         {this.props.level.ids.map((id, index) =>

@@ -20,7 +20,9 @@ const stages = scriptData.stages.filter(stage => stage.id).map(stage => ({
     ids: level.ids.slice(),
     kind: level.kind,
     skin: level.skin,
-    videoKey: level.videoKey
+    videoKey: level.videoKey,
+    concepts: level.concepts,
+    conceptDifficulty: level.conceptDifficulty
   }))
 }));
 
