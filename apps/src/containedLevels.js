@@ -19,14 +19,14 @@ let callOnPostCompletion = null;
 export function getContainedLevelResultInfo() {
   const containedResult = codeStudioLevels.getContainedLevelResult();
   const levelResult = containedResult.result;
-  const testResults = valueOr(containedResult.testResult,
+  const testResult = valueOr(containedResult.testResult,
     levelResult.result ? TestResults.ALL_PASS : TestResults.GENERIC_FAIL);
   return {
     app: containedResult.app,
     level: containedResult.id,
     callback: containedResult.callback,
     result: levelResult.result,
-    testResults: testResults,
+    testResult: testResult,
     program: levelResult.response,
     feedback: containedResult.feedback,
     submitted: false
