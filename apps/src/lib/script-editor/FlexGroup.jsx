@@ -107,6 +107,11 @@ const FlexGroup = React.createClass({
           <i style={{marginRight: 7}} className="fa fa-plus-circle" />
           Add Group
         </button>
+        <input
+          type="hidden"
+          name="stages"
+          value={JSON.stringify(this.props.stages)}
+        />
       </div>
     );
   }
