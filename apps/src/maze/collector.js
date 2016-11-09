@@ -19,6 +19,7 @@ const COLLECTED_NOTHING = 1;
 const COLLECTED_SOME = 2;
 const COLLECTED_EVERYTHING = 3;
 const COLLECTED_TOO_MANY = 4;
+const COLLECTED_NOT_ENOUGH = 5;
 
 export default class Collector extends Subtype {
   constructor(maze, studioApp, config) {
@@ -27,6 +28,8 @@ export default class Collector extends Subtype {
     // Collector level types treat the "ideal" block count as a hard
     // requirement
     this.maxBlocks_ = config.level.ideal;
+
+    this.minCollected_ = config.level.minCollected;
   }
 
   /**
@@ -122,6 +125,8 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.collectedAll()) {
       executionInfo.terminateWithValue(COLLECTED_EVERYTHING);
+    } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
+      executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
     } else {
       executionInfo.terminateWithValue(COLLECTED_SOME);
     }
@@ -152,6 +157,8 @@ export default class Collector extends Subtype {
         return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
       case COLLECTED_TOO_MANY:
         return mazeMsg.collectorCollectedTooMany();
+      case COLLECTED_NOT_ENOUGH:
+        return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
       default:
         return null;
     }
@@ -168,6 +175,7 @@ export default class Collector extends Subtype {
       case TOO_MANY_BLOCKS:
       case COLLECTED_NOTHING:
       case COLLECTED_TOO_MANY:
+      case COLLECTED_NOT_ENOUGH:
         return TestResults.APP_SPECIFIC_FAIL;
       case COLLECTED_SOME:
         return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
