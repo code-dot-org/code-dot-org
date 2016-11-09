@@ -389,7 +389,7 @@ module.exports = function (grunt) {
     // embedded video page, keeping it fairly lightweight.
     // (I wonder how much more we could slim it down by removing jQuery!)
     // @see embed.html.haml
-    embedVideo: './src/sites/studio/pages/embedVideo.js',
+    'videos/embed': './src/sites/studio/pages/videos/embed.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amount of stuff we need when loading blocks
