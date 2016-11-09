@@ -1,4 +1,4 @@
-/* global trackEvent Raven */
+/* global trackEvent */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -857,9 +857,6 @@ Craft.executeUserCode = function () {
    *  }
    */
   code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-  if (typeof Raven !== 'undefined') {
-    Raven.setExtraContext({ code: code, blocks: Blockly.Xml.domToPrettyText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) });
-  }
   const evalApiMethods = {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
