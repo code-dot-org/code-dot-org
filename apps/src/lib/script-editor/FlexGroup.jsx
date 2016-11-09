@@ -56,6 +56,63 @@ const FlexGroup = React.createClass({
     this.props.addStage(position, prompt('Enter new stage name'));
   },
 
+  serializeStages(stages) {
+    let s = [];
+    stages.forEach(stage => {
+      let t = `stage '${stage.name}'`;
+      if (stage.lockable) {
+        t += ', lockable: true';
+      }
+      if (stage.flex_category) {
+        t += `, flex_category: '${stage.flex_category}'`;
+      }
+      s.push(t);
+      stage.levels.forEach(level => {
+        if (level.ids.length > 1) {
+          s.push('variants');
+          level.ids.forEach(id => {
+            s = s.concat(this.serializeLevel(id, level, level.activeId === id));
+          });
+          s.push('endvariants');
+        } else {
+          s = s.concat(this.serializeLevel(level.ids[0], level));
+        }
+      });
+      s.push('');
+    });
+    console.log(s.join('\n'));
+    return s.join('\n');
+  },
+
+  serializeLevel(id, level, active) {
+    const s = [];
+    const key = this.props.levelKeyList[id];
+    if (/^blockly:/.test(key)) {
+      if (level.skin) {
+        s.push(`skin '${level.skin}'`);
+      }
+      if (level.videoKey) {
+        s.push(`video_key_for_next_level '${level.videoKey}'`);
+      }
+      if (level.concepts) {
+        // TODO
+      }
+      if (level.conceptDifficulty) {
+        // TODO
+      }
+    }
+    let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(/'/, "'")}'`;
+    if (active === false) {
+      l += ', active: false'
+    }
+    s.push(l);
+    return s;
+  },
+
+  normalizeLevelKind(kind) {
+    return kind === 'puzzle' ? 'level' : kind;
+  },
+
   render() {
     const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Default'));
     let count = 0;
@@ -110,7 +167,7 @@ const FlexGroup = React.createClass({
         <input
           type="hidden"
           name="stages"
-          value={JSON.stringify(this.props.stages)}
+          value={this.serializeStages(this.props.stages)}
         />
       </div>
     );
@@ -118,6 +175,7 @@ const FlexGroup = React.createClass({
 });
 
 export default connect(state => ({
+  levelKeyList: state.levelKeyList,
   stages: state.stages
 }), dispatch => ({
   addGroup(stageName, groupName) {
