@@ -170,7 +170,7 @@ const FlexGroup = React.createClass({
         </button>
         <input
           type="hidden"
-          name="stages"
+          name="script_text"
           value={this.serializeStages(this.props.stages)}
         />
       </div>
