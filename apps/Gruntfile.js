@@ -377,7 +377,7 @@ module.exports = function (grunt) {
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
-    'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
+    'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
