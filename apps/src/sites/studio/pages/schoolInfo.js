@@ -6,6 +6,17 @@ window.SchoolInfoManager = function (existingOptions) {
 
   var districtElement = $('#school-district-id');
 
+  // Comparison function to sort objects by their 'name' property.
+  function byName(entry1, entry2) {
+    if (entry1.name < entry2.name) {
+      return -1;
+    }
+    if (entry1.name > entry2.name) {
+      return 1;
+    }
+    return 0;
+  }
+
   function setupDistrictDropdown(stateCode) {
     show('#school-district');
     $('#school-district-other').prop('checked', false).change();
@@ -36,9 +47,10 @@ window.SchoolInfoManager = function (existingOptions) {
         },
         success: function (res) {
           var districts = [];
-
-          for (var i = 0; i < res.object.length; i++) {
-            var entry = res.object[i];
+          var entries = res.object;
+          entries.sort(byName);
+          for (var i = 0; i < entries.length; i++) {
+            var entry = entries[i];
             districts.push({value: entry.id, text: entry.name});
           }
           callback(districts);
@@ -100,6 +112,7 @@ window.SchoolInfoManager = function (existingOptions) {
         success: function (response) {
           var schools = [];
 
+          response.sort(byName);
           for (var i = 0; i < response.length; i++) {
             var entry = response[i];
             schools.push({value: entry.id, text: entry.name});
