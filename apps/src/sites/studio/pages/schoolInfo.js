@@ -30,7 +30,6 @@ window.SchoolInfoManager = function (existingOptions) {
       maxItems: 1,
       onChange: function () {
         var districtId = districtElement[0].selectize.getValue();
-        $("#school-district-id-form").val(districtId);
         if (districtId) {
           setupSchoolDropdown(districtId, $('#school-type').val());
         }
@@ -94,11 +93,7 @@ window.SchoolInfoManager = function (existingOptions) {
     }
 
     selectize = schoolElement.selectize({
-      maxItems: 1,
-      onChange: function () {
-        var schoolId = schoolElement[0].selectize.getValue();
-        $("#school-id-form").val(schoolId);
-      }
+      maxItems: 1
     });
 
     schoolElement[0].selectize.load(function (callback) {
@@ -168,7 +163,7 @@ window.SchoolInfoManager = function (existingOptions) {
   }
 
   function clearAndHideDistrict() {
-    $("#school-district-id-form").val("");
+    enableDistrictDropdown(false);
     $("#school-district-other").val(false);
     $("#school-district-name").val("");
     $('#school-district').closest('.form-group').hide();
@@ -176,7 +171,7 @@ window.SchoolInfoManager = function (existingOptions) {
   }
 
   function clearAndHideSchool() {
-    $("#school-id-form").val("");
+    enableSchoolDropdown(false);
     $("#school-other").prop('checked', false);
     $("#school-name").val("");
     $('#school').closest('.form-group').hide();
@@ -254,9 +249,6 @@ window.SchoolInfoManager = function (existingOptions) {
       // Disable districts.
       enableDistrictDropdown(false);
 
-      // And clear district id.
-      $("#school-district-id-form").val('');
-
       show('#school-district-name');
       clearAndHideSchool();
       show('#school-zipcode');
@@ -273,10 +265,6 @@ window.SchoolInfoManager = function (existingOptions) {
   $('#school-other').change(function () {
     if ($(this).prop('checked')) {
       enableSchoolDropdown(false);
-
-      // Clear school id.
-      $("#school-id-form").val('');
-
       show('#school-zipcode');
       show('#school-name');
     } else {
