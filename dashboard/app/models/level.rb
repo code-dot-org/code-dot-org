@@ -101,6 +101,14 @@ class Level < ActiveRecord::Base
     @@all_level_keys[id] = key if @@all_level_keys
   end
 
+  def summarize_concepts
+    concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')
+  end
+
+  def summarize_concept_difficulty
+    (level_concept_difficulty.try(:serializable_hash) || {}).to_json
+  end
+
   def complete_toolbox(type)
     "<xml id='toolbox' style='display: none;'>#{toolbox(type)}</xml>"
   end

@@ -210,6 +210,8 @@ class ScriptLevel < ActiveRecord::Base
       summary[:key] = level.key
       summary[:skin] = level.try(:skin)
       summary[:videoKey] = level.video_key
+      summary[:concepts] = level.summarize_concepts
+      summary[:conceptDifficulty] = level.summarize_concept_difficulty
     end
 
     # Add a previous pointer if it's not the obvious (level-1)
