@@ -348,10 +348,13 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  private_class_method def self.stage_hidden_for_section?(script_level, section_id)
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
+  def self.stage_hidden_for_section?(script_level, section_id)
     return false if script_level.nil? || section_id.nil?
     !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def get_hidden_stage_ids(script_name)
     return [] unless current_user
