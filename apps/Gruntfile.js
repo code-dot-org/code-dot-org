@@ -367,7 +367,7 @@ module.exports = function (grunt) {
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
-    'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/_contract_match':        './src/sites/studio/pages/levels/_contract_match.jsx',
     'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
     'levels/_external':              './src/sites/studio/pages/levels/_external.js',
     'levels/_level_group':            './src/sites/studio/pages/levels/_level_group.js',
