@@ -3,8 +3,6 @@
   "atFlower": "c'è un fiore",
   "atHoneycomb": "c'è un favo",
   "avoidCowAndRemove": "evita la mucca e rimuovi 1",
-  "bean": "fagiolo",
-  "beanTooltip": "Raccogliere un fagiolo",
   "collect": "raccogli",
   "collectiblePresent": "c'è qualcosa di interessante",
   "collectorCollectTooltip": "Raccoglie un oggetto",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Il fiore su cui ti trovi non ha più nettare.",
   "get": "prendi",
   "has": "ha",
-  "hasbean": "ci sono dei fagioli",
+  "haslettuce": "there is lettuce",
   "hascorn": "c'è una pannocchia",
   "haspumpkin": "ci sono delle zucche",
   "heightParameter": "altezza",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Se c'è strada nella direzione specificata, allora esegue il primo blocco di azioni. Altrimenti, esegue il secondo.",
   "insufficientHoney": "Stai utilizzando tutti i blocchi necessari, ma la quantità di miele raccolto è ancora insufficiente.",
   "insufficientNectar": "Stai utilizzando tutti i blocchi necessari, ma la quantità di miele raccolto è ancora insufficiente.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "fai",
   "moveBackward": "vai indietro",
   "moveEastTooltip": "Sposta di una casella verso est.",
@@ -112,7 +112,5 @@
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Sì",
   "youSpelled": "Hai scritto finora",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

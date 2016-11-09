@@ -1,0 +1,25 @@
+name 'Worked Example: If-statements and Robot'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# A Worked Example
+
+The following shows a step-by-step, line-by-line execution of a 10-line program with if-statements that uses the AP pseudocode for if-statements and the robot.
+
+The purpose of the example is to show:
+
+* Code executes one line at a time from top to bottom.
+* Each if-statement condition is checked in the order of execution
+* The conditions of later if-statements may be affected by what did, or didn’t happen, in earlier lines of code.
+
+<iframe src="https://docs.google.com/document/d/1KGF-HxAP65bvQbzugKORXnzfplptWvw2eqCMntm8qS0/pub?embedded=true" style="width:800px; height:600px"></iframe>
+
+View the above as a separate document: [Worked Example - If-Statements and Robot](https://docs.google.com/document/d/1KGF-HxAP65bvQbzugKORXnzfplptWvw2eqCMntm8qS0)
+
+Before clicking continue make sure you:
+
+* Understand each step of the example
+* Have tried out the last one on your own and compared results with a classmate
+MARKDOWN

@@ -6,8 +6,14 @@ import consoleApi from '../consoleApi';
 import errorHandler from '../errorHandler';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
+import commonMsg from '@cdo/locale';
+import dom from '../dom';
+import reducers from './reducers';
+import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
+
+export const WEBLAB_FOOTER_HEIGHT = 30;
 
 /**
  * An instantiable WebLab class
@@ -64,6 +70,16 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.hideSource = config.hideSource;
+
+  if (config.share) {
+    $("#codeApp").css({
+      top: "0",
+      left: "0",
+      right: "0",
+      bottom: `${WEBLAB_FOOTER_HEIGHT}px`
+    });
+  }
 
   this.brambleHost = null;
 
@@ -126,6 +142,8 @@ WebLab.prototype.init = function (config) {
     // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
     // this.studioApp_.init(config);
 
+    this.studioApp_.setConfigValues_(config);
+
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
     var container = document.getElementById(config.containerId);
@@ -136,12 +154,17 @@ WebLab.prototype.init = function (config) {
 
     // NOTE: if we called studioApp_.init(), this call would not be needed...
     this.studioApp_.initVersionHistoryUI(config);
+
+    if (config.share) {
+      this.renderFooterInSharedMode(container, config.copyrightStrings);
+    }
   };
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     noVisualization: true,
+    visualizationInWorkspace: true,
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
@@ -180,11 +203,27 @@ WebLab.prototype.init = function (config) {
     } else {
       this.brambleHost.disableInspector();
     }
+    this.studioApp_.reduxStore.dispatch(actions.changeInspectorOn(inspectorOn));
+  }
+
+  function onFinish() {
+    window.dashboard.project.autosave(() => {
+      this.studioApp_.report({
+        app: 'weblab',
+        level: this.level.id,
+        result: true,
+        testResult: this.studioApp_.TestResults.FREE_PLAY,
+        program: this.getCurrentFilesVersionId() || '',
+        submitted: false,
+        onComplete: this.studioApp_.onContinue.bind(this.studioApp_),
+      });
+    });
   }
 
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <WebLabView
+        hideToolbar={!!config.share}
         onAddFileHTML={onAddFileHTML.bind(this)}
         onAddFileCSS={onAddFileCSS.bind(this)}
         onAddFileImage={onAddFileImage.bind(this)}
@@ -192,10 +231,80 @@ WebLab.prototype.init = function (config) {
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
+        onFinish={onFinish.bind(this)}
         onMount={onMount}
       />
     </Provider>
   ), document.getElementById(config.containerId));
+};
+
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+/**
+ * @returns the absolute url to the root of this project without a trailing slash.
+ *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
+ */
+function getProjectUrl() {
+  const match = location.href.match(PROJECT_URL_PATTERN);
+  if (match) {
+    return match[1];
+  }
+  return location.href; // i give up. Let's try this?
+}
+
+WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {
+  var footerDiv = document.createElement('div');
+  footerDiv.setAttribute('id', 'footerDiv');
+  document.body.appendChild(footerDiv);
+  var menuItems = [
+    {
+      text: commonMsg.reportAbuse(),
+      link: '/report_abuse',
+      newWindow: true
+    },
+/*    {
+      text: applabMsg.makeMyOwnApp(),
+      link: '/projects/applab/new',
+      hideOnMobile: true
+    },
+*/
+    {
+      text: commonMsg.openWorkspace(),
+      link: getProjectUrl() + '/view',
+    },
+    {
+      text: commonMsg.copyright(),
+      link: '#',
+      copyright: true
+    },
+    {
+      text: commonMsg.privacyPolicy(),
+      link: 'https://code.org/privacy',
+      newWindow: true
+    }
+  ];
+  if (dom.isMobile()) {
+    menuItems = menuItems.filter(function (item) {
+      return !item.hideOnMobile;
+    });
+  }
+
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
+    i18nDropdown: '',
+    copyrightInBase: false,
+    copyrightStrings: copyrightStrings,
+    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
+    rowHeight: WEBLAB_FOOTER_HEIGHT,
+    style: {
+      fontSize: 18
+    },
+    baseStyle: {
+      width: '100%',
+      paddingLeft: 0
+    },
+    className: 'dark',
+    menuItems: menuItems,
+    phoneFooter: true
+  }), footerDiv);
 };
 
 WebLab.prototype.getCodeAsync = function () {
@@ -288,6 +397,11 @@ WebLab.prototype.onProjectChanged = function () {
 // Called by Bramble host to set our reference to its interfaces
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
+  this.brambleHost.onBrambleReady(() => {
+    if (this.hideSource) {
+      this.brambleHost.enableFullscreenPreview();
+    }
+  });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
 };
 
@@ -345,6 +459,10 @@ WebLab.prototype.loadFileEntries = function () {
  */
 WebLab.prototype.reset = function (ignore) {
   // TODO - implement
+};
+
+WebLab.prototype.getAppReducers = function () {
+  return reducers;
 };
 
 export default WebLab;

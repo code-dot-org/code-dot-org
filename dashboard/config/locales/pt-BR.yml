@@ -1,4 +1,4 @@
-"pt-BR":
+"pt":
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -344,7 +344,7 @@
       unsubmit: Cancelar envio
       worked_with: Trabalhou com
       update_lock_settings: Atualize as configurações de bloqueio aqui.
-      clear_response: Clear response
+      clear_response: Apagar resposta
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -432,6 +432,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Saiba mais
     announcement_try_now_button: Experimente agora
+    announcement_host_an_hour_button: Host an Hour
     announcement_petition: Como professor, você está abrindo as portas de um movimento
       que dará a cada aluno de todas as escolas a oportunidade de aprender ciência
       da computação. Agora chegou a hora de seus representantes ouvirem o que você
@@ -443,6 +444,11 @@
     announcement_all: Fique por dentro dos novos recursos e atualizações em nosso
       blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as
       últimas novidades.</a>
+    announcement_hoc_launch: Thousands of educators in more than 180 countries will
+      start teaching computer science during the Hour of Code this December 5-11.
+      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+      target='_blank'>Register your Hour of Code event</a> and let another teacher
+      know that anyone can start teaching computer science.
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
@@ -759,6 +765,21 @@
       termos atualizados, observe que nossas ferramentas para o ensino de JavaScript
       podem estar indisponíveis aos seus alunos.
     review_terms: Ver os termos atualizados
+  race_interstitial:
+    title: 'Opcional: Ajude-nos a acompanhar nosso progresso através do aumento de
+      diversidade na ciência da computação'
+    message: Por favor diga-nos sua raça (marque todas aplicáveis)
+    races:
+    - white: Branco
+    - black: Negro ou Afro Americano
+    - hispanic: Hispânico ou Latino
+    - asian: Asiático
+    - hawaiian: Havaiano Nativo ou outro Ilhéu do Pacífico
+    - american_indian: "Índio Americano/Nativo do Alaska"
+    - other: Outros
+    - opt_out: Prefiro não dizer
+    submit: Enviar
+    decline: Fechar
   zendesk_too_young_message: Desculpe, usuários mais jovens não podem se inscrever
     em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a>
     sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em
@@ -918,7 +939,7 @@
     download_message: Faça o download de %{app_name} para usar off-line (136 MB)
     download_in_english: 'Download em inglês:'
     download_in_spanish: 'Download em espanhol:'
-    windows: Windows
+    windows: Janelas
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -939,3 +960,51 @@
   hidden_stage: Seu professor não esperava você por aqui. Pergunte a ele em que aula
     você deveria estar.
   return_course_overview: Ir para visão geral da unidade
+  pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?

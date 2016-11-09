@@ -3,12 +3,16 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import {
+  Button,
   Row,
   Col,
 } from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshopConstants';
 import { workshopShape } from '../types.js';
+
+const organizerViewApiRoot = '/api/v1/pd/workshop_organizer_survey_report_for_course/';
+const facilitatorViewApiRoot = '/api/v1/pd/workshops/';
 
 const styles = {
   questionGroupCell: {
@@ -79,7 +83,11 @@ const SurveyResultsHeader = React.createClass({
   },
 
   componentDidMount() {
-    this.filterWorkshops('CS Fundamentals');
+    const courses = this.getCoursesForWorkshops();
+
+    if (courses.length > 0) {
+      this.filterWorkshops(courses[0]);
+    }
   },
 
   filterWorkshops(course) {
@@ -108,7 +116,7 @@ const SurveyResultsHeader = React.createClass({
       if (!this.props.organizerView || workshopId) {
         $.ajax({
           method: 'GET',
-          url: "/api/v1/pd/workshops/" + workshopId + "/workshop_survey_report",
+          url: `${facilitatorViewApiRoot}${workshopId}/workshop_survey_report${this.props.organizerView ? '?organizer_view=1' : ''}`,
           dataType: 'json'
         }).done(data => {
           this.setState({
@@ -120,7 +128,7 @@ const SurveyResultsHeader = React.createClass({
       } else {
         $.ajax({
           method: 'GET',
-          url: '/api/v1/pd/workshop_organizer_survey_report_for_course/' + course
+          url: `${organizerViewApiRoot}${course}${this.props.organizerView ? '?organizer_view=1' : ''}`
         }).done(data => {
           this.setState({
             selectedWorkshopId: '',
@@ -138,6 +146,14 @@ const SurveyResultsHeader = React.createClass({
 
   handleWorkshopIdChange(event) {
     this.setSurveyPanel(this.state.selectedCourse, event.target.value, event.target.selectedOptions[0].innerHTML);
+  },
+
+  handleOnClickDownloadCsv() {
+    if (this.props.organizerView && !this.state.selectedWorkshopId) {
+      window.open(`${organizerViewApiRoot}${this.state.selectedCourse}.csv`);
+    } else if (this.state.selectedWorkshopId) {
+      window.open(`${facilitatorViewApiRoot}${this.state.selectedWorkshopId}/workshop_survey_report.csv`);
+    }
   },
 
   renderSurveyResults() {
@@ -277,12 +293,24 @@ const SurveyResultsHeader = React.createClass({
     }
   },
 
+  renderDownloadCsvButton() {
+    return (
+      <Button bsStyle="info" onClick={this.handleOnClickDownloadCsv}>
+        Download as CSV
+      </Button>
+    );
+  },
+
   getWorkshopFriendlyName(workshop) {
     return workshop.course + ' - ' + (workshop.sessions[0] ? moment.utc(workshop.sessions[0].start).format(DATE_FORMAT) : 'no sessions');
   },
 
+  getCoursesForWorkshops() {
+    return _.uniq(_.flatMap(this.props.workshops, workshop => workshop.course));
+  },
+
   render() {
-    const courseOptions = window.dashboard.workshop.COURSES.map(function (course, i) {
+    const courseOptions = this.getCoursesForWorkshops().map(function (course, i) {
       return (<option key={i} value={course}>{course}</option>);
     });
 
@@ -329,6 +357,7 @@ const SurveyResultsHeader = React.createClass({
         <br/>
         {this.renderSurveyPanel()}
         {this.renderFreeResponseAnswers()}
+        {this.renderDownloadCsvButton()}
       </div>
     );
   }

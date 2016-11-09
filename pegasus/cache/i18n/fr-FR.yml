@@ -761,7 +761,7 @@
   dashboard_sections_table_secret: Type de connexion
   dashboard_sections_table_grade: Classe
   dashboard_sections_table_course: Cours
-  dashboard_sections_table_stage_extras: |
+  dashboard_sections_table_stage_extras: |-
     Root -> dashboard_sélections_table_stage_extras When a student completes a stage in a course, they have the option to see additional resources, suggested tutorials, etc. This string is for the teacher dashboard, to enable whether students see these extras at the end of each stage.
 
     Quand un élève complète une stage dans une course, ils ont l'option à voir des ressources additionelles, des tutoriels suggérés, etc. Cette string est pour le dashboard de l'enseignant, pour activer si les élèves peuvent voir ses extras à la fin de chaque stage
@@ -798,6 +798,18 @@
   dashboard_sections_no_move: Non, je veux déplacer le/les élève(s) afin qu'ils ne
     se trouvent que dans la nouvelle section.
   dashboard_sections_move_students: Déplacer les élèves
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: Vous n'avez sélectionné aucun élève à déplacer. Veuillez
     sélectionner au moins un élève.
   dashboard_error_other_section: Si vous déplacez des élèves entre vos propres sections,
@@ -933,20 +945,21 @@
   dashboard_faq: Foire aux Questions
   dashboard_faq_k5: Foire aux Questions CM2
   dashboard_announcements: Annonces
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Nous avons passer l'été à transformer
+    vos retours en de nouvelles fonctionnalités. Maintenant, vous pouvez <a href="%{pp_url}"
+    target="_blank">suivre l'avancé de plusieurs élèves</a> même si ils développent
+    sur le même appareil. Vous pouvez utiliser <a href="%{csp_widgets_url}" target="_blank">les
+    meilleurs outils interactifs</a> venant de nos cours de Principes de CS dans <i>toutes</i>
+    les classes. Et vos élèves peuvent <a href="%{unused_code_url}" target="_blank">garder
+    le code inutilisé</a> dans leur espace de travail pour les encourager à expérimenter!
+    Découvrez toutes nos nouveautés et laissez-nous savoir ce que vous pensez.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Pour en savoir plus
   dashboard_announce_try_now_button: Essaie maintenant
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
     visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
     Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
@@ -957,11 +970,16 @@
   dashboard_announce_all: Tenu à jour avec de nouvelles fonctionnalités et mises à
     jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir
     les anciennes annonces.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
   host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
+  learn_banner_title: Rejoins-nous pour l'Heure de Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
     Code event. Help us give every student the opportunity to learn computer science!
@@ -1897,3 +1915,12 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

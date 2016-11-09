@@ -3,7 +3,7 @@ import React from 'react';
 import orderBy from 'lodash/orderBy';
 import {Table, sort} from 'reactabular';
 import moment from 'moment';
-import color from '../color';
+import color from "../util/color";
 import wrappedSortable from '../templates/tables/wrapped_sortable';
 import Packet from './Packet';
 

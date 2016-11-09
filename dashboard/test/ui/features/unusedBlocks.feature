@@ -14,8 +14,7 @@ Scenario: Solve a level with unused blocks
 
   # Run and retry
   When I press "runButton"
-  And I wait to see "#again-button"
-  And I press "again-button"
+  And I wait to see ".uitest-topInstructions-inline-feedback"
   And I wait to see ".blocklyHelp"
 
   # Block should now have an "unused code" container

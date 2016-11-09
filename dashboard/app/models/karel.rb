@@ -24,7 +24,7 @@
 #
 
 class Karel < Maze
-  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation, :serialized_maze
+  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation, :serialized_maze, :min_collected
 
   # List of possible skins, the first is used as a default.
   def self.skins
@@ -81,7 +81,7 @@ class Karel < Maze
       <block type="harvester_whileHasCrop"></block>
       <block type="harvester_corn"></block>
       <block type="harvester_pumpkin"></block>
-      <block type="harvester_bean"></block>
+      <block type="harvester_lettuce"></block>
       <block type="harvester_ifAtCorn"></block>
       <block type="harvester_ifAtCornElse"></block>
       <block type="harvester_ifHasCorn"></block>
@@ -90,10 +90,10 @@ class Karel < Maze
       <block type="harvester_ifAtPumpkinElse"></block>
       <block type="harvester_ifHasPumpkin"></block>
       <block type="harvester_whileHasPumpkin"></block>
-      <block type="harvester_ifAtBean"></block>
-      <block type="harvester_ifAtBeanElse"></block>
-      <block type="harvester_ifHasBean"></block>
-      <block type="harvester_whileHasBean"></block>
+      <block type="harvester_ifAtLettuce"></block>
+      <block type="harvester_ifAtLettuceElse"></block>
+      <block type="harvester_ifHasLettuce"></block>
+      <block type="harvester_whileHasLettuce"></block>
     </category>
     <category name="Planter">
       <block type="planter_plant"></block>
@@ -117,6 +117,7 @@ class Karel < Maze
     </category>
     <category name="Collector">
       <block type="collector_collect"></block>
+      <block type="collector_collect_simplified"></block>
       <block type="collector_ifCollectible"></block>
       <block type="collector_whileCollectible"></block>
     </category>

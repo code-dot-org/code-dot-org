@@ -3,15 +3,12 @@
  * the course overview page, and the stage locking dialog.
  */
 import $ from 'jquery';
-import experiments from '@cdo/apps/experiments';
 import Immutable from 'immutable';
 
 export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
 export const ALLOW_HIDEABLE = 'hiddenStage/ALLOW_HIDEABLE';
 
 const STUDENT_SECTION_ID = 'STUDENT';
-
-export const hiddenStagesEnabled = () => experiments.isEnabled('hiddenStages');
 
 const initialState = Immutable.fromJS({
   initialized: false,
@@ -88,18 +85,12 @@ export function allowHideable() {
 
 export function getHiddenStages(scriptName) {
   return dispatch => {
-    if (!hiddenStagesEnabled()) {
-      return;
-    }
-
     $.ajax({
       type: 'GET',
       url: `/s/${scriptName}/hidden_stages`,
       dataType: 'json',
       contentType: 'application/json'
     }).done(response => {
-      dispatch(allowHideable());
-
       // For a teacher, we get back a map of section id to hidden stage ids
       // For a student, we just get back a list of hidden stage ids. Turn that
       // into an object, under the 'sectionId' of STUDENT_SECTION_ID
@@ -113,6 +104,7 @@ export function getHiddenStages(scriptName) {
           dispatch(updateHiddenStage(sectionId, stageId, true));
         });
       });
+      dispatch(allowHideable());
     }).fail(err => {
       console.error(err);
     });

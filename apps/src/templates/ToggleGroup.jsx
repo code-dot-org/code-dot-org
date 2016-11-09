@@ -43,6 +43,7 @@ const ToggleGroup = React.createClass({
       return (
         <ToggleButton
           id={child.props.id}
+          className={child.props.className}
           key={child.key}
           active={child.props.value === this.props.selected}
           first={index === 0}

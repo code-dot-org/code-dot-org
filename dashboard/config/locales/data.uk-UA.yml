@@ -304,6 +304,28 @@
         maze_3_3: "Як я повинен дістатися до свині? Зроби так, аби я не зачепив вибухівку!"
         maze_3_4: "Ох! Напиши програму, яка приведе мене до свині і допоможе уникнути
           вибухівки."
+        bounce_1_basketball: Attach a block to the "when left arrow" block and press
+          "Run". Move the hand using the left arrow to reach the finish target.
+        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
+          arrow" blocks. Move the hand to reach both finish targets.
+        bounce_5_basketball: We're going to send a ball flying down towards the hand.
+          Attach a block to the "when ball hits hand" block to ensure the ball reaches
+          the flag.
+        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
+          to both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
+          ball until it hits the flag.
+        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice.
+        bounce_11_basketball: You can now attach blocks to the "when run" block. You
+          have to attach the new "throw new ball" block in more than one place. Also,
+          try changing the scene or the speed of the hand and the ball and see how
+          many points you can score before your opponent scores twice!
+        bounce_12_basketball: Create your own Basketball game. You can change all
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
         bounce_1: Додай блок до блоку "коли стрілка вліво" і натисни "Запустити".
           Переміщуй платформу, використовуючи стрілку ліворуч для досягнення цілі.
         bounce_2: Додайте блоки до блоків "коли стрілка вправо" і "коли стрілка вліво".
@@ -401,16 +423,16 @@
           який скаже "привіт" при наближенні собаки?
         studio_c2_5: Можеш запрограмувати восьминога, щоб він говорив "Привіт", коли
           його клацають?
-        studio_c2_6: "Можеш написати програму, у якій пінгвін рухатиметься за допомогою
+        studio_c2_6: "Можеш написати програму, у якій Ведл рухатиметься за допомогою
           клавіш вгору / вниз / вправо / вліво до усіх цілей?"
         studio_c2_7: Блок "повторювати завжди" дозволяє виконувати код безперервно.
           Можеш прикріпити такі блоки, щоб динозавр постійно рухався вгору та вниз?
-        studio_c2_8: Можеш запрограмувати пінгвіна, щоб він сказав "Ой!" і програв
-          звук "удар", якщо він натрапить на динозавра, а тоді перемістити його за
-          допомогою стрілок, щоб переконатись, що так і станеться?
-        studio_c2_9: Можеш додати блок "додати бал" коли пінгвін натрапляє на восьминога
+        studio_c2_8: Можеш запрограмувати Ведла, щоб він сказав "Ой!" і програв звук
+          "удар", якщо він натрапить на динозавра, а тоді перемістити його за допомогою
+          стрілок, щоб переконатись, що так і станеться?
+        studio_c2_9: Можеш додати блок "додати бал" коли Ведл натрапляє на восьминога
           і потім перемістити його стрілками поки не отримаєш бал?
-        studio_c2_10: "Можеш додати блоки, щоб змінити фон і швидкість руху пінгвіна
+        studio_c2_10: "Можеш додати блоки, щоб змінити фон і швидкість руху Ведла
           і потім перемістити його стрілками до отримання балу?"
         studio_c2_11: "Створи власну історію. Коли завершиш, клацни Готово, щоб запросити
           друзів випробувати гру на своїх телефонах."
@@ -439,7 +461,7 @@
           пінгвіна і потім перемістити його стрілками до отримання балу?"
         studio_c3_game_7: "Створи власну гру. Коли завершиш, натисни кнопку Готово,
           щоб поділитись грою з друзями."
-        studio_playlab_1: Пінгвін хоче сказати "Привіт" - можеш йому допомогти?
+        studio_playlab_1: Ведл хоче сказати "Привіт" - можеш йому допомогти?
         studio_playlab_2: Печерний хлопчик (персонаж 1) та Печерна дівчинка (персонаж
           2) хочуть привітатись один з одним. Можеш їм допомогти, двічі використавши
           блок "говорити"?
@@ -678,6 +700,11 @@
         infinity_playlab_intro: "Ігрова лабораторія - Вступ"
         infinity_playlab_events: "Ігрова лабораторія - Події"
         infinity_playlab_repeat_forever: "Ігрова лабораторія - Повторювати завжди"
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

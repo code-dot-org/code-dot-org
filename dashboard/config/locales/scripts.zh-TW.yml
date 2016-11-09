@@ -147,6 +147,7 @@
             'Bee: Nested Loops': "蜜蜂： 嵌套的迴圈"
             'Farmer: While Loops': "農夫： ｢當｣迴圈　"
             'Maze: Sequence': "迷宮: 序列"
+          description_audience: ''
         usability:
           title: "可用性測試"
           description: A selection of Course 4 levels for usability testing.
@@ -217,9 +218,10 @@
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Unplugged lessons: Unplugged lessons
             Writing computer programs: "編寫電腦程式"
+          description_audience: ''
         netsim:
           title: "網路模擬器"
           description: ''
@@ -236,6 +238,7 @@
               on a Shared Wire
             Peer to Peer - Sending Numbers: Peer to Peer - Sending Numbers
             Routers and addresses: Routers and addresses
+          description_audience: ''
         pixelation:
           title: Pixelation
           description: "以 bits 與 bytes 創造圖像"
@@ -246,6 +249,7 @@
             Color Pixelation Examples: Color Pixelation Examples
             Color Pixelation Freeplay: Color Pixelation Freeplay
             Color Pixelation Tutorial: Color Pixelation Tutorial
+          description_audience: ''
         20-hour:
           title: 20小時 課程簡介
           description: "這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。"
@@ -263,13 +267,13 @@
             Relay Programming: "接力式程式設計"
             Song Writing: "歌曲創作"
             The Artist: "藝術家"
-            The Artist 2: "藝術家 2 "
-            The Artist 3: "藝術家 3 "
-            The Artist 4: "藝術家 4 "
-            The Artist 5: "藝術家 5 "
+            The Artist 2: "藝術家 2"
+            The Artist 3: "藝術家 3"
+            The Artist 4: "藝術家 4"
+            The Artist 5: "藝術家 5"
             The Farmer: "農夫"
-            The Farmer 2: "農夫 2 "
-            The Farmer 3: "農夫 3 "
+            The Farmer 2: "農夫 2"
+            The Farmer 3: "農夫 3"
             The Internet: "網際網路"
             The Maze: "迷宮"
             Wrap-up: "總結"
@@ -283,6 +287,7 @@
             Play Lab: "播放實驗室"
             The Artist: "藝術家"
             The Maze: "迷宮"
+          description_audience: ''
         events:
           title: "事件類別"
           description: "事件類別"
@@ -304,30 +309,35 @@
           description_short: Try our Jigsaw tutorial
           stage:
             Jigsaw: "拼圖"
+          description_audience: ''
         step:
           title: "步驟"
           description: ''
           description_short: Step tutorial
           stage:
             Step: "步驟"
+          description_audience: ''
         Hour of Code:
           title: "一小時Code 2013"
           description: ''
           description_short: "嘗試計算機科學的基礎知識與許多好玩的人物！"
           stage:
             Hour of Code 2013: "一小時Code 2013"
+          description_audience: ''
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description: "試試這些有趣的編碼拼圖。盡力 ！"
           description_short: "挑戰自己 ！"
           stage:
             Puzzles: Puzzles
+          description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: "試試這些有趣的編碼拼圖。盡力 ！"
           description_short: "挑戰自己 ！"
           stage:
             Puzzles: Puzzles
+          description_audience: ''
         cspunit1:
           title: CSP Unit 1
           description: CSP Unit 1 Stages
@@ -360,7 +370,7 @@
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -445,6 +455,7 @@
           description_short: rbo-reference
           stage:
             reference: reference
+          description_audience: ''
         Test Wednesday:
           title: Test Wednesday
           description: Test Wednesday
@@ -496,9 +507,10 @@
             Evaluation Blocks: Evaluation Blocks
             Next Steps: Next Steps
             Strings and Images: "字串和圖像"
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             The Big Game: The Big Game
             The Design Recipe: "設計程序"
+          description_audience: ''
         ECSPD-NexTech:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -533,7 +545,7 @@
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
         algebraPD-iZone:
@@ -546,7 +558,7 @@
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
         sciencePD-NexTech:
@@ -710,6 +722,7 @@
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+          description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -726,7 +739,7 @@
             Next Steps: Next Steps
             Rocket-Height: Rocket-Height
             Strings and Images: "字串和圖像"
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Writing Contracts: Writing Contracts
           description_audience: ''
         cspfacilitator:
@@ -741,6 +754,7 @@
             Text Compression Lesson: Text Compression Lesson
             Text Compression Widget: Text Compression Widget
             Welcome!: "歡迎！"
+          description_audience: ''
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -760,6 +774,7 @@
             'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
             Next Steps: Next Steps
             Planning: Planning
+          description_audience: ''
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -772,10 +787,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -785,6 +800,7 @@
               Impact of Computers and Communication
             Welcome!: "歡迎！"
             Wrap-up: "總結"
+          description_audience: ''
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -798,7 +814,7 @@
           description_short: 'Phase 2 Online: Blended Summer Study'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: "設計程序"
@@ -823,6 +839,7 @@
           stage:
             Code.org Equity PD: Code.org Equity PD
             Necessary Background: Necessary Background
+          description_audience: ''
         science-PD2:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -848,6 +865,7 @@
             Getting Started: Getting Started
             Introduction to Equity: Introduction to Equity
             Next Steps: Next Steps
+          description_audience: ''
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -872,10 +890,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -897,10 +915,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -936,6 +954,7 @@
           description_short: Odometer widget
           stage:
             Odometer Widget: Odometer Widget
+          description_audience: ''
         asUnplugged:
           title: Afterschool Unplugged
           description: Afterschool Unplugged is designed to teach computational thinking
@@ -972,6 +991,7 @@
           description_short: Vigenere Cipher Widget
           stage:
             Vigenere: Vigenere
+          description_audience: ''
         algebraPD3a:
           title: Computer Science in Algebra PD
           description: CS in Algebra blended online school year study
@@ -981,6 +1001,7 @@
             Updates - The Big Game and Projects: Updates - The Big Game and Projects
             Updates - The Design Recipe: Updates - The Design Recipe
             Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          description_audience: ''
         sciencePD3_pre1:
           title: Computer Science in Science PD Phase 3 Before 1st In-Person
           description: Phase 3 Blended Summer Study (Segment One)
@@ -1045,6 +1066,7 @@
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+          description_audience: ''
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1056,11 +1078,12 @@
             Unit 6 Challenge: Unit 6 Challenge
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
+          description_audience: ''
         cspunit4draft:
           title: CS Principles Unit 4 - Data
-          description: |
-            Collect, analyze, and extract knowledge from data by programming and
-            building apps. Process data imported from other sources and also pull
+          description: |-
+            Collect, analyze, and extract knowledge from data by programming and\r
+            building apps. Process data imported from other sources and also pull\r
             data from live data APIs.
           description_short: Data
           stage:
@@ -1117,6 +1140,7 @@
             Teaching Support - Lessons 17-20: Teaching Support - Lessons 17-20
             Teaching Support - Lessons 4-7: Teaching Support - Lessons 4-7
             Teaching Support - Lessons 8-12: Teaching Support - Lessons 8-12
+          description_audience: ''
         CSPPD3-Unit2:
           title: 'Computer Science Principles: Unit 2 PD'
           description: Online Exploration of CSP Unit 2
@@ -1143,6 +1167,7 @@
           description_audience: "適合年齡 10 至 18 歲"
           stage:
             Halloween 2015: Halloween 2015
+          description: ''
         SpecialSeries:
           title: Special Levels
           description: Something special for those who know it exists. These puzzles
@@ -1152,12 +1177,14 @@
           description_audience: "適合年齡 10 至 18 歲"
           stage:
             Spring 2016: Spring 2016
+            Halloween 2015: Halloween 2015
         iceage:
           title: Ice Age Play Lab
           description: Create a story or make a game with Ice Age Play Lab!
           description_short: Create a story or make a game with Ice Age Play Lab!
           stage:
             Ice Age Play Lab: Ice Age Play Lab
+          description_audience: ''
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1216,12 +1243,14 @@
           description_short: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           stage:
             Hour of Code 2015: Hour of Code 2015
+          description_audience: ''
         starwarsblocks:
           title: "星際大戰: 用程式建立一個銀河系"
           description: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           description_short: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           stage:
             Hour of Code 2015: Hour of Code 2015
+          description_audience: ''
         mc:
           title: Minecraft 程式碼時間
           description: "請利用程式碼方塊帶領 Steve 或 Alex 在這個 Minecraft 世界當中遊歷一番"
@@ -1342,6 +1371,7 @@
             Sample Apps: Sample Apps
             Updating Records: Updating Records
             Visualizing Data: Visualizing Data
+          description_audience: ''
         AlgebraA:
           title: 'Computer Science in Algebra: Course A'
           description: Learn Functional Programming through Algebra
@@ -1393,7 +1423,7 @@
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -1405,6 +1435,7 @@
             Getting Started: Getting Started
             Planning For the Future: Planning For the Future
             Sharing Student Work: Sharing Student Work
+          description_audience: ''
         csp1:
           title: CS Principles Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
@@ -1434,6 +1465,7 @@
             The Need for DNS: The Need for DNS
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 2 Assessment: Unit 1 Chapter 2 Assessment
+          description_audience: ''
         csp2:
           title: CS Principles Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
@@ -1463,6 +1495,7 @@
             Text Compression: Text Compression
             Unit 2 Chapter 1 Assessment: Unit 2 Chapter 1 Assessment
             Unit 2 Chapter 2 Assessment: Unit 2 Chapter 2 Assessment
+          description_audience: ''
         csp3:
           title: CSP Unit 3 - Programming
           description: This unit introduces the foundational concepts of computer
@@ -1507,6 +1540,7 @@
             Rapid Research - Cybercrime: Rapid Research - Cybercrime
             Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and
               Security Dilemmas
+            Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
           description_audience: ''
         csp5:
           title: CS Principles Unit 5 - Building Apps
@@ -1538,6 +1572,12 @@
             User Input and Strings: User Input and Strings
             Using Variables in Apps: Using Variables in Apps
             While Loops: '"當..."迴圈'
+            Edited lessons ABOVE this line: Edited lessons ABOVE this line
+            Buttons and Events: Buttons and Events
+            Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
+            Unit 5 Assessment 1: Unit 5 Assessment 1
+            Unit 5 Assessment 2: Unit 5 Assessment 2
+          description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
           description: This unit covers the preparation and completion of the Create
@@ -1548,6 +1588,7 @@
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+          description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
@@ -1570,6 +1611,8 @@
             Functions: "函式類別"
             Platform Jumper: Platform Jumper
             Defender: Defender
+            'Project: Build a Game': 'Project: Build a Game'
+            Velocity: Velocity
           description_audience: ''
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
@@ -1598,6 +1641,7 @@
           description_short: Programming
           stage:
             Drawing in Game Lab: Drawing in Game Lab
+          description_audience: ''
         CSF_Secret_Sample:
           title: Secret Sample
           description: Test of new educational philosophy
@@ -1616,6 +1660,7 @@
             ECS Curriculum: ECS Curriculum
             Welcome to Phase 1!: Welcome to Phase 1!
             Wrap Up: Wrap Up
+          description_audience: ''
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: "通過函數式程式設計教代數"
@@ -1623,7 +1668,7 @@
           stage:
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -1685,6 +1730,8 @@
             Strategies for Student Writing: Strategies for Student Writing
             Supporting Peer Learning: Supporting Peer Learning
             'Tool Talk: Intro to Netsim': 'Tool Talk: Intro to Netsim'
+          description_audience: ''
+          description_short: ''
         test-teaching-ap-cs-unit-1:
           title: Test CPS PD
           stage:
@@ -1695,6 +1742,9 @@
             test Unit 1 practice module Echo: test Unit 1 practice module Echo
             test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
             test Unit 1 required reading: test Unit 1 required reading
+          description_audience: ''
+          description_short: ''
+          description: ''
         allthehiddenthings:
           title: All the Hidden Things!
           description: Unreleased level types for UI testing as admin
@@ -1707,6 +1757,8 @@
           description: Online Supports for CSP Unit 1
           stage:
             Unit 1 Overview: Unit 1 Overview
+          description_audience: ''
+          description_short: ''
         cspunit1-tools:
           title: netsim task completion
           description: introduction to the internet simulator and a discussion of
@@ -1723,6 +1775,7 @@
             Introduction to Events: Introduction to Events
             Introduction to Text Compression: Introduction to Text Compression
             Turtle Programming: Turtle Programming
+          description_audience: ''
         cspassessment:
           title: CS Principles Culminating Assessment
           description: 'This 55-question multiple choice assessment covers questions
@@ -1731,6 +1784,7 @@
           description_short: Culminating
           stage:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
+          description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions
@@ -1740,6 +1794,7 @@
           stage:
             CS Principles Culminating Assessment Part 1: CS Principles Culminating
               Assessment Part 1
+          description_audience: ''
         cspexam2-AKwgAh1ac5:
           title: CS Principles Culminating Assessment - Part 2
           description: 'This 25 question multiple choice assessment covers questions
@@ -1750,6 +1805,7 @@
           stage:
             CS Principles Culminating Assessment Part 2: CS Principles Culminating
               Assessment Part 2
+          description_audience: ''
         CSDU4-Draft:
           title: " TEMP CSD Unit 4 - The Design Process"
           description: Temp place to work on U4 of Disco
@@ -1818,6 +1874,8 @@
             Classes: Classes
             External Style Sheets: External Style Sheets
             Usability and Accessibility: Usability and Accessibility
+            Peer Review: "同儕審查"
+            Describing Web Pages: Describing Web Pages
           description_audience: ''
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
@@ -1873,10 +1931,15 @@
             Lesson 2,2: 'Lesson 2.2: Text Compression'
             Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
             Measuring Student Learning: Measuring Student Learning
+          description_audience: ''
         kinderTest:
           stage:
             'Bee: Conditionals': "蜜蜂: 判斷條件"
             Kindergarten Stage 1: Kindergarten Stage 1
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
         gradeKinder:
           title: Kindergarten
           description: Planning Script for CSF 2.0
@@ -1896,6 +1959,8 @@
             Programming: Programming
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
+            'Real-life Algorithms: Plant a Seed': "生活中的演算法: 種一棵種子"
+            'Programming Unplugged: Happy Maps': 'Programming Unplugged: Happy Maps'
         grade4:
           title: Grade 4
           description: Planning Script for CSF 2.0
@@ -1939,6 +2004,8 @@
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
             Unspotted Bugs: Unspotted Bugs
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+            'Events Unplugged: The Big Event': 'Events Unplugged: The Big Event'
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
@@ -1976,10 +2043,10 @@
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1,
               Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: |
+            0: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            1: |
+            1: |-
               Unit 1, Days 1-2
               What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
@@ -1989,6 +2056,7 @@
               Impact of Computers and Communication
             Welcome!: "歡迎！"
             Wrap-up: "總結"
+          description_audience: ''
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -2036,6 +2104,7 @@
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+          description_audience: ''
         ecs-unit6:
           title: ECS Unit 6
           description: 'Unit 6: Robotics'
@@ -2127,6 +2196,9 @@
             How to behave in the lab_How to use Code_org puzzles: How to behave in
               the lab/How to use Code.org puzzles
             Programming at home with my pet: Programming at home with my pet
+            Binary Bracelets: "二進位的手環"
+            'Real-life Algorithms: Paper Planes': "真實生活裡的演算法: 紙飛機"
+            The Big Event: "大事件"
         transferring-over:
           stage:
             20-hr Stage 2: 20-hr Stage 2
@@ -2134,6 +2206,10 @@
             Course 2 Stage 17: Course 2 Stage 17
             Course 3 Stage 16: Course 3 Stage 16
             Course 3 Stage 17: Course 3 Stage 17
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
         k5concepts:
           title: K5 Concepts
           stage:
@@ -2147,13 +2223,16 @@
             Nested Loops: "巢狀迴圈"
             Variables: "變數類"
             While Loops: '"當..."迴圈'
+          description_audience: ''
+          description_short: ''
+          description: ''
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: "通過函數式程式設計教代數"
           description_short: "\\tPhase 3: School Year Support"
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: "教師用儀錶盤"
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: "設計程序"
@@ -2166,6 +2245,7 @@
             NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+            Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
           description_audience: ''
           description_short: ''
           description: ''
@@ -2228,6 +2308,9 @@
               Visual Data'
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15:
               Communicating with Visualizations'
+            Unit 2 Overview: Unit 2 Overview
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2250,3 +2333,105 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+          description_audience: ''
+        basketball:
+          stage:
+            Bounce: "彈跳"
+          title: Basketball
+          description_audience: ''
+          description_short: Code your own basketball game
+          description: ''
+        sample-csp5:
+          stage:
+            Controlling Memory with Variables: Controlling Memory with Variables
+        hoc-encryption:
+          stage:
+            Simple Encryption: Simple Encryption
+          title: 'Hour of Code: Simple Encryption'
+          description_audience: ''
+          description_short: In this lesson, students are introduced to the need for
+            encryption and simple techniques for breaking (or cracking) secret messages.
+          description: In this lesson, students are introduced to the need for encryption
+            and simple techniques for breaking (or cracking) secret messages.
+        fesbinary:
+          stage:
+            Binary Bracelets: "二進位的手環"
+            Binary Images: "二進位圖形"
+            Binary Artist Puzzles: Binary Artist Puzzles
+            RGB Color: RGB Color
+          title: "二進位"
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd2:
+          stage:
+            new stage: new stage
+            Quality Websites: Quality Websites
+            Website Design: Website Design
+            Describing Web pages: Describing Web pages
+            Text on the Web: Text on the Web
+            Images on the Web: Images on the Web
+            Clean Code and Debugging: Clean Code and Debugging
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            Multi-Page Websites: Multi-Page Websites
+            Classes: Classes
+            External Style Sheets: External Style Sheets
+            Peer Review: "同儕審查"
+            Box Model and Page Layout: Box Model and Page Layout
+            Digital Footprint: Digital Footprint
+            Publishing a Website: Publishing a Website
+            Sources and Search Engines: Sources and Search Engines
+            Intellectual Property: Intellectual Property
+            'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
+            'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
+            Images in HTML: Images in HTML
+          title: 'CSD Unit 2 - The Internet: Web Development'
+          description_audience: ''
+          description_short: Web Development
+          description: ''
+        csp2-support:
+          stage:
+            Unit 2 Overview: Unit 2 Overview
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression': 'Lessons 1 -
+              2: Bytes, File Sizes, and Text Compression'
+            'Lessons 3 - 4 : Encoding Images': 'Lessons 3 - 4 : Encoding Images'
+            'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons
+              5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            'Lessons 7 - 10: Interpreting Visual Data': 'Lessons 7 - 10: Interpreting
+              Visual Data'
+            'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15:
+              Communicating with Visualizations'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 2 Online Support
+          description_audience: ''
+          description_short: Teacher Supports for CSP Unit 2
+          description: 'This is a set of online supports of CSP teachers preparing
+            to teach Unit 2. '
+        csd4:
+          stage:
+            Analysis of Design: Analysis of Design
+            Understanding Your User: Understanding Your User
+            Discovering Users: Discovering Users
+            User-Centered Design Micro Activity: User-Centered Design Micro Activity
+            Designing for Social Impact: Designing for Social Impact
+            Conducting User-Centered Interviews: Conducting User-Centered Interviews
+            Analyzing Interviews: Analyzing Interviews
+            Redesigning a Space: Redesigning a Space
+            Presenting Your Design: Presenting Your Design
+            Designing Apps for Good: Designing Apps for Good
+            Market Research: Market Research
+            Paper Prototypes: Paper Prototypes
+            Prototype Testing: Prototype Testing
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Testing the App: Testing the App
+            Improving and Iterating: Improving and Iterating
+            App Presentation: App Presentation
+          title: 'CSD Unit 4 - Problem Solving: The Design Process'
+          description_audience: ''
+          description_short: The Design Process
+          description: ''

@@ -433,6 +433,33 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   /**
+   * setTeam
+   */
+  blockly.Blocks.bounce_setTeam = {
+    helpUrl: '',
+    init: function () {
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[10][1]); // default to warriors
+
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setTeamTooltip());
+    }
+  };
+
+  blockly.Blocks.bounce_setTeam.VALUES =
+    [[msg.setTeamRandom(), 'random']].concat(
+      skin.teams.map((team) => [msg.setTeam({team: team}), `"${team}"`]));
+
+  generator.bounce_setTeam = function () {
+    return generateSetterCode(this, 'setTeam');
+  };
+
+  /**
    * setBall
    */
   blockly.Blocks.bounce_setBall = {

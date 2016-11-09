@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import processMarkdown from 'marked';
-import renderer from '../../StylelessRenderer';
+import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 var instructions = require('../../redux/instructions');
-var color = require('../../color');
+var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 

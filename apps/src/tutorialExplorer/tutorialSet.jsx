@@ -13,10 +13,7 @@ const TutorialSet = React.createClass({
 
   render() {
     return (
-      <div
-        className="col-80"
-        style={{float: 'left'}}
-      >
+      <div style={{overflow: "hidden"}}>
         {this.props.tutorials.map(item => (
           <Tutorial
             item={item}

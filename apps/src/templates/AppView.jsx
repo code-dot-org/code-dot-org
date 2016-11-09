@@ -1,4 +1,3 @@
-
 import React from 'react';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
@@ -7,6 +6,7 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import StudioAppWrapper from './StudioAppWrapper';
 import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
 import CodeWorkspace from './CodeWorkspace';
+import Overlay from './Overlay';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -34,6 +34,7 @@ const AppView = React.createClass({
 
     return (
       <StudioAppWrapper>
+        <Overlay />
         <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}
         </div>

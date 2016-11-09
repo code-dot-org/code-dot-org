@@ -47,6 +47,7 @@ const WorkshopAttendance = React.createClass({
     return {
       loading: true,
       workshopState: undefined,
+      sectionCode: undefined,
       sessionAttendances: undefined,
       adminOverride: false,
       saving: false,
@@ -77,6 +78,7 @@ const WorkshopAttendance = React.createClass({
       this.setState({
         loading: false,
         workshopState: data.state,
+        sectionCode: data.section_code,
         sessionAttendances: data.session_attendances
       });
     });
@@ -214,6 +216,15 @@ const WorkshopAttendance = React.createClass({
         <p>
           This workshop has ended. As an admin, you can still update attendance.
           Note this will not be reflected in the payment report if it's already gone out.
+        </p>
+      );
+    } else if (this.state.sectionCode) {
+      const joinUrl = location.origin + "/join/" + this.state.sectionCode;
+      intro = (
+        <p>
+          Remember to have your participants go to this address before taking attendance:
+          <br/>
+          <a href={joinUrl} target="_blank">{joinUrl}</a>
         </p>
       );
     }

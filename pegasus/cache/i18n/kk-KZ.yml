@@ -38,7 +38,8 @@
   twentyhours_text: Бірінші "Код жазу Сағатын" аяқтадыңыз ба? Информатика және бағдарламалау
     ұғымы туралы толығырақ келесі курста біліңіз.
   og_title: "Әр бір бала мүмкіндікке лайық"
-  og_description: "Кез келген мектептегі әр бір оқушы компьютер ғылымдарын оқуға лайық."
+  og_description: Every student in every school deserves the opportunity to study
+    computer science. It's changing everything.
   hoc2014_heading: 8-14 желтоқсан 2014 ж. <br/><a href="http://hourofcode.com">"Код
     жазу Сағатына"</a> қатысыңыз <br/>'
   hoc2014_students: "Оқушылар"
@@ -254,7 +255,7 @@
   learn_next_level: "Келесі деңгейге өту"
   learn_online: "Біздің басқа да онлайн курстарымызды көріңіз"
   learn_classes: "Бағдарламалауды үйрететін ұйымдарды іздеу"
-  hoc_is_here: "#HourOfCode осы жерде - көріңіз! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: "Мен #HourOfCode бітірдім- көріңіз! @codeorg"
   just_did_course1: "Мен жаңа ғана 1-Курсты аяқтадым, @codeorg-тан нәтижесін көр"
   just_did_course2: "Мен жаңа ғана 2-Курсты аяқтадым, @codeorg-тан нәтижесін көр"
@@ -752,6 +753,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: "Оқушыларды көшіру"
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -890,6 +903,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "толығырақ білу"
   dashboard_announce_try_now_button: "Қазір қолданып көріңіз"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -898,6 +912,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: '"Код Жазу Сағаты" - 8-14 желтоқсанда басталады!'
   code_sign_up: "Информатика Апталығына қатысу үшін тіркеліңіз"
   host_an_hour: Host an hour
@@ -1778,3 +1797,12 @@
   infinity_shortcode: inf
   playlab_shortcode: "ойнау"
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

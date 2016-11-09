@@ -12,7 +12,7 @@ If accepted into the Code.org CS in Science Professional Learning Program, you w
 
 - Join a nationwide community of educators working to change the face of CS education 
 - Participate in in-person and online professional development
-- Plan and deliver the CSP curriculum to your students, and reflect on your experiences
+- Plan and deliver the CS in Science curriculum to your students, and reflect on your experiences
  
  
 ## <a name="components"></a>How does it work?

@@ -71,8 +71,8 @@
     "instructions_important": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
-    "palette_category_at_start": "uicontrols"
+    "palette_category_at_start": "uicontrols",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

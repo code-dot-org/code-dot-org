@@ -13,7 +13,7 @@ import Radium from 'radium';
 import React from 'react';
 import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
-import color from '../../color';
+import color from "../../util/color";
 import { connect } from 'react-redux';
 import { getColumnNamesFromRecords } from '../firebaseMetadata';
 
@@ -201,7 +201,11 @@ const DataTable = React.createClass({
         onComplete();
       },
       msg => {
-        console.warn(msg);
+        if (String(msg).includes('data is too large')) {
+          this.props.onShowWarning(msg);
+        } else {
+          console.warn(msg);
+        }
         onComplete();
       });
   },
