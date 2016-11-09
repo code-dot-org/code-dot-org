@@ -13,7 +13,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
-        @enrollment.name = current_user.name
+        @enrollment.full_name = current_user.name
         @enrollment.email = current_user.email
         @enrollment.email_confirmation = current_user.email
       end
@@ -166,14 +166,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     ).first || Pd::Enrollment.new(
       pd_workshop_id: @workshop.id,
       user_id: current_user.id,
-      name: current_user.name,
+      full_name: current_user.name,
       email: current_user.email
     )
   end
 
   def enrollment_params
     params.require(:pd_enrollment).permit(
-      :name,
+      :first_name,
+      :last_name,
       :email,
       :email_confirmation,
       :school

@@ -35,7 +35,7 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "1.4.1",
-    "@code-dot-org/bramble": "0.1.5",
+    "@code-dot-org/bramble": "0.1.6",
     "@code-dot-org/p5.play": "1.0.0-cdo",
     "@code-dot-org/piskel": "0.8.6",
     "@kadira/react-storybook-addon-info": "^3.0.4",
@@ -48,7 +48,7 @@
     "babel-plugin-transform-es2015-classes": "^6.9.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babel-polyfill": "^6.9.0",
+    "babel-polyfill": "6.9.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
     "bootstrap-sass": "^3.3.6",
