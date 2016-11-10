@@ -297,7 +297,4 @@ var SmallFooter = React.createClass({
     );
   }
 });
-module.exports = SmallFooter;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.SmallFooter = SmallFooter;
+export default SmallFooter;
