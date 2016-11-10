@@ -68,6 +68,7 @@ social:
 
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
+  - tutorial[:longdescription] = hoc_s("tutorial_#{tutorial[:short_code]}_longdescription")
 
 #tutorials
 
