@@ -17,3 +17,6 @@ assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
 
 stage 'Unit 4 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC'
+
+stage 'Anonymous student survey: Taking the AP exam'
+assessment 'csp_ap_questions'
