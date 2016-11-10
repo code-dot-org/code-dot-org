@@ -56,6 +56,11 @@ const FlexGroup = React.createClass({
     this.props.addStage(position, prompt('Enter new stage name'));
   },
 
+  /**
+   * Generate the ScriptDSL format.
+   * @param stages
+   * @return {string}
+   */
   serializeStages(stages) {
     let s = [];
     stages.forEach(stage => {
@@ -112,6 +117,12 @@ const FlexGroup = React.createClass({
     return s;
   },
 
+  /**
+   * Levels with kind "puzzle" and "unplugged" are special cases of "level", for
+   * the purpose of the ScriptDSL.
+   * @param kind
+   * @return {string}
+   */
   normalizeLevelKind(kind) {
     return (!kind || kind === 'puzzle' || kind === 'unplugged') ? 'level' : kind;
   },
@@ -123,41 +134,39 @@ const FlexGroup = React.createClass({
 
     return (
       <div>
-        {_.map(groups, (stages, group) => {
-          return (
-            <div key={group}>
-              <div style={styles.groupHeader}>
-                Group {++count}: {group}
-                <OrderControls
-                  type={ControlTypes.Group}
-                  position={afterStage}
-                  total={Object.keys(groups).length}
-                />
-              </div>
-              <div style={styles.groupBody}>
-                {stages.map((stage, index) => {
-                  afterStage++;
-                  return (
-                    <StageCard
-                      key={`stage-${index}`}
-                      stagesCount={this.props.stages.length}
-                      stage={stage}
-                    />
-                  );
-                })}
-                <button
-                  onMouseDown={this.handleAddStage.bind(null, afterStage - 1)}
-                  className="btn"
-                  style={styles.addStage}
-                  type="button"
-                >
-                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                  Add Stage
-                </button>
-              </div>
+        {_.map(groups, (stages, group) =>
+          <div key={group}>
+            <div style={styles.groupHeader}>
+              Group {++count}: {group}
+              <OrderControls
+                type={ControlTypes.Group}
+                position={afterStage}
+                total={Object.keys(groups).length}
+              />
             </div>
-          );
-        })}
+            <div style={styles.groupBody}>
+              {stages.map((stage, index) => {
+                afterStage++;
+                return (
+                  <StageCard
+                    key={`stage-${index}`}
+                    stagesCount={this.props.stages.length}
+                    stage={stage}
+                  />
+                );
+              })}
+              <button
+                onMouseDown={this.handleAddStage.bind(null, afterStage - 1)}
+                className="btn"
+                style={styles.addStage}
+                type="button"
+              >
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                Add Stage
+              </button>
+            </div>
+          </div>
+        )}
         <button
           onMouseDown={this.handleAddGroup}
           className="btn"

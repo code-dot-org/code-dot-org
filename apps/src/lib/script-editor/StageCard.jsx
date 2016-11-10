@@ -43,6 +43,11 @@ const StageCard = React.createClass({
     stage: React.PropTypes.object.isRequired
   },
 
+  /**
+   * To be populated with the bounding client rect of each level token element.
+   */
+  metrics: {},
+
   getInitialState() {
     return {
       currentPositions: [],
@@ -55,18 +60,14 @@ const StageCard = React.createClass({
     };
   },
 
-  metrics(token) {
-    return ReactDOM.findDOMNode(this.refs[`levelToken${token}`]).getBoundingClientRect();
-  },
-
   handleDragStart(position, {pageY}) {
     const startingPositions = this.props.stage.levels.map(level => {
-      const metrics = this.metrics(level.position);
+      const metrics = this.metrics[level.position];
       return metrics.top + metrics.height / 2;
     });
     this.setState({
       drag: position,
-      dragHeight: this.metrics(position).height + levelTokenMargin,
+      dragHeight: this.metrics[position].height + levelTokenMargin,
       initialPageY: pageY,
       initialScroll: document.body.scrollTop,
       newPosition: position,
@@ -80,7 +81,7 @@ const StageCard = React.createClass({
   handleDrag({pageY}) {
     const scrollDelta = document.body.scrollTop - this.state.initialScroll;
     const delta = pageY - this.state.initialPageY;
-    const dragPosition = this.metrics(this.state.drag).top + scrollDelta;
+    const dragPosition = this.metrics[this.state.drag].top + scrollDelta;
     let newPosition = this.state.drag;
     const currentPositions = this.state.startingPositions.map((midpoint, index) => {
       const position = index + 1;
@@ -150,7 +151,12 @@ const StageCard = React.createClass({
         </div>
         {this.props.stage.levels.map(level =>
           <LevelToken
-            ref={`levelToken${level.position}`}
+            ref={levelToken => {
+              if (levelToken) {
+                const metrics = ReactDOM.findDOMNode(levelToken).getBoundingClientRect();
+                this.metrics[level.position] = metrics;
+              }
+            }}
             key={level.position + '_' + level.ids[0]}
             level={level}
             stagePosition={this.props.stage.position}

@@ -18,6 +18,7 @@ const styles = {
     borderTop: 0
   },
   levelFieldLabel: {
+    display: 'inline-block',
     lineHeight: '36px',
     margin: '0 7px 0 5px'
   },
@@ -96,8 +97,11 @@ const LevelTokenDetails = React.createClass({
     this.props.setActiveVariant(this.props.stagePosition, this.props.level.position, id);
   },
 
-  handleFieldChange(modifier) {
-    this.props.setField(this.props.stagePosition, this.props.level.position, modifier);
+  handleFieldChange(field) {
+    const ref = this[`${field}Input`];
+    if (ref) {
+      this.props.setField(this.props.stagePosition, this.props.level.position, {[field]: ref.value});
+    }
   },
 
   render() {
@@ -116,69 +120,41 @@ const LevelTokenDetails = React.createClass({
         />
         {this.containsLegacyLevel() &&
           <div>
-            <span
-              style={Object.assign(
-                {display: 'inline-block'},
-                styles.levelFieldLabel
-              )}
-            >
-              Skin
-            </span>
+            <span style={styles.levelFieldLabel}>Skin</span>
             <input
               defaultValue={this.props.level.skin}
               type="text"
               style={styles.textInput}
               ref={skinInput => this.skinInput = skinInput}
-              onChange={this.handleFieldChange.bind(this, {skin: this.skinInput.value})}
+              onChange={this.handleFieldChange.bind(this, 'skin')}
             />
             <div style={{float: 'right'}}>
-              <span
-                style={Object.assign(
-                  {display: 'inline-block'},
-                  styles.levelFieldLabel
-                )}
-              >
-                Video key
-              </span>
+              <span style={styles.levelFieldLabel}>Video key</span>
               <input
                 defaultValue={this.props.level.videoKey}
                 type="text"
                 style={styles.textInput}
                 ref={videoKeyInput => this.videoKeyInput = videoKeyInput}
-                onChange={this.handleFieldChange.bind(this, {videoKey: this.videoKeyInput.value})}
+                onChange={this.handleFieldChange.bind(this, 'videoKey')}
               />
             </div>
             <div style={{clear: 'both'}}></div>
-            <span
-              style={Object.assign(
-                {display: 'inline-block'},
-                styles.levelFieldLabel
-              )}
-            >
-              Difficulty
-            </span>
+            <span style={styles.levelFieldLabel}>Difficulty</span>
             <input
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
               style={styles.textInput}
               ref={conceptDifficultyInput => this.conceptDifficultyInput = conceptDifficultyInput}
-              onChange={this.handleFieldChange.bind(this, {conceptDifficulty: this.conceptDifficultyInput.value})}
+              onChange={this.handleFieldChange.bind(this, 'conceptDifficulty')}
             />
             <div style={{float: 'right'}}>
-              <span
-                style={Object.assign(
-                  {display: 'inline-block'},
-                  styles.levelFieldLabel
-                )}
-              >
-                Concepts
-              </span>
+              <span style={styles.levelFieldLabel}>Concepts</span>
               <input
                 defaultValue={this.props.level.concepts}
                 type="text"
                 style={Object.assign({}, styles.textInput, {width: 320})}
                 ref={conceptsInput => this.conceptsInput = conceptsInput}
-                onChange={this.handleFieldChange.bind(this, {concepts: this.conceptsInput.value})}
+                onChange={this.handleFieldChange.bind(this, 'concepts')}
               />
             </div>
           </div>
@@ -186,17 +162,17 @@ const LevelTokenDetails = React.createClass({
         {this.props.level.ids.map((id, index) =>
           <div key={id}>
             {this.props.level.ids.length > 1 &&
-            <div>
-              <hr style={styles.divider} />
-              <span style={styles.levelFieldLabel}>Active</span>
-              <input
-                type="radio"
-                onChange={this.handleActiveVariantChanged.bind(this, id)}
-                defaultChecked={id === this.props.level.activeId}
-                style={styles.checkbox}
-                name={`radio-${this.props.stagePosition}-${this.props.level.position}`}
-              />
-            </div>
+              <div>
+                <hr style={styles.divider} />
+                <span style={styles.levelFieldLabel}>Active</span>
+                <input
+                  type="radio"
+                  onChange={this.handleActiveVariantChanged.bind(this, id)}
+                  defaultChecked={id === this.props.level.activeId}
+                  style={styles.checkbox}
+                  name={`radio-${this.props.stagePosition}-${this.props.level.position}`}
+                />
+              </div>
             }
             <VirtualizedSelect
               options={this.levelKeyOptions}
@@ -237,7 +213,7 @@ export default connect(state => ({
   setActiveVariant(stage, level, id) {
     dispatch(setActiveVariant(stage, level, id));
   },
-  setField(modifier) {
-    dispatch(setField(modifier));
+  setField(stage, level, modifier) {
+    dispatch(setField(stage, level, modifier));
   }
 }))(LevelTokenDetails);
