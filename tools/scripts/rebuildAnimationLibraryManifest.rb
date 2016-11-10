@@ -25,7 +25,7 @@ require_relative '../../lib/cdo/png_utils'
 include CdoCli
 
 DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
-DEFAULT_OUTPUT_FILE = 'apps/src/gamelab/animationLibrary.json'.freeze
+DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/animationLibrary.json".freeze
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
