@@ -230,7 +230,7 @@ const SurveyResultsHeader = React.createClass({
     });
 
     return (
-      <table className="table table-bordered" style={{width: 'auto'}}>
+      <table id="surveyResultsTable" className="table table-bordered" style={{width: 'auto'}}>
         <thead>
           <tr>
             {

@@ -8,6 +8,16 @@ Given(/^I am a facilitator with completed courses$/) do
   }
 end
 
+Given(/^I am an organizer with completed courses$/) do
+  random_name = "TestOrganizer" + SecureRandom.hex
+  steps %Q{
+    And I create a teacher named "#{random_name}"
+    And I make the teacher named "#{random_name}" a workshop organizer
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}"
+    And I enroll 5 people in the workshop organized by "#{random_name}" and end it
+  }
+end
+
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
   require_rails_env
 
@@ -16,12 +26,27 @@ And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) d
   Pd::CourseFacilitator.create(facilitator_id: user.id, course: course)
 end
 
-And(/^I create a workshop for course "([^"]*)" facilitated by "([^"]*)"$/) do |course, name|
-  organizer = User.find_or_create_teacher(
-    {name: 'Organizer', email: "organizer#{SecureRandom.hex}@code.org"},
-    nil,
-    'workshop_organizer'
-  )
+And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
+  require_rails_env
+
+  user = User.find_by(name: name)
+  user.permission = UserPermission::WORKSHOP_ORGANIZER
+end
+
+And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)"$/) do |course, role, name|
+  if role == 'organized'
+    organizer = User.find_by(name: name)
+    facilitator = User.find_or_create_teacher(
+      {name: 'Facilitator', email: "organizer#{SecureRandom.hex}@code.org"}, nil, 'facilitator'
+    )
+    Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
+  else
+    organizer = User.find_or_create_teacher(
+      {name: 'Organizer', email: "organizer#{SecureRandom.hex}@code.org"}, nil, 'workshop_organizer'
+    )
+    facilitator = User.find_by(name: name)
+  end
+
   workshop = Pd::Workshop.create(
     workshop_type: 'Public',
     course: course,
@@ -29,15 +54,14 @@ And(/^I create a workshop for course "([^"]*)" facilitated by "([^"]*)"$/) do |c
     capacity: 5
   )
 
-  facilitator = User.find_by(name: name)
   workshop.facilitators << facilitator
 end
 
-And (/^I enroll (\d+) people in the workshop facilitated by "([^"]*)" and end it$/) do |number, name|
+And (/^I enroll (\d+) people in the workshop ([a-z]+) by "([^"]*)" and end it$/) do |number, role, name|
   include Api::V1::Pd::WorkshopScoreSummarizer
 
-  facilitator = User.find_by(name: name)
-  workshop = Pd::Workshop.facilitated_by(facilitator).first
+  user = User.find_by(name: name)
+  workshop = role == 'organized' ? Pd::Workshop.organized_by(user).first : Pd::Workshop.facilitated_by(user).first
 
   number.to_i.times do |x|
     Pd::Enrollment.create(
@@ -64,6 +88,7 @@ And (/^I enroll (\d+) people in the workshop facilitated by "([^"]*)" and end it
   end
 
   workshop.enrollments.each do |enrollment|
+    puts "Enrollment ID - #{enrollment.id}"
     PEGASUS_DB[:forms].insert(
       secret: SecureRandom.hex,
       source_id: enrollment.id,
