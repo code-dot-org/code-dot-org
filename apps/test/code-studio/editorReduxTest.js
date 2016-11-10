@@ -4,7 +4,8 @@ import reducer, {
   reorderLevel,
   addGroup,
   addStage,
-  setActiveVariant
+  setActiveVariant,
+  setField
 } from '@cdo/apps/lib/script-editor/editorRedux';
 
 const initialState = {
@@ -51,5 +52,15 @@ describe('editorRedux reducer tests', () => {
   it('set active variant', () => {
     const nextState = reducer(initialState, setActiveVariant(2, 1, 2)).stages;
     assert.equal(nextState[1].levels[0].activeId, 2);
+  });
+  it('set level field', () => {
+    let nextState = reducer(initialState, setField(1, 1, {videoKey: '_a_'}));
+    assert.equal(nextState.stages[0].levels[0].videoKey, '_a_');
+    nextState = reducer(nextState, setField(1, 1, {skin: '_b_'}));
+    assert.equal(nextState.stages[0].levels[0].skin, '_b_');
+    nextState = reducer(nextState, setField(1, 1, {conceptDifficulty: '_c_'}));
+    assert.equal(nextState.stages[0].levels[0].conceptDifficulty, '_c_');
+    nextState = reducer(nextState, setField(1, 1, {concepts: '_d_'}));
+    assert.equal(nextState.stages[0].levels[0].concepts, '_d_');
   });
 });

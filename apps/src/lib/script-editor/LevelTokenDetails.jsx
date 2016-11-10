@@ -5,7 +5,7 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
-import { chooseLevelType, chooseLevel, addVariant, setActiveVariant } from './editorRedux';
+import { chooseLevelType, chooseLevel, addVariant, setActiveVariant, setField } from './editorRedux';
 
 const styles = {
   checkbox: {
@@ -56,6 +56,8 @@ const LevelTokenDetails = React.createClass({
     chooseLevelType: React.PropTypes.func.isRequired,
     chooseLevel: React.PropTypes.func.isRequired,
     addVariant: React.PropTypes.func.isRequired,
+    setActiveVariant: React.PropTypes.func.isRequired,
+    setField: React.PropTypes.func.isRequired,
     level: React.PropTypes.object.isRequired,
     stagePosition: React.PropTypes.number.isRequired
   },
@@ -94,6 +96,10 @@ const LevelTokenDetails = React.createClass({
     this.props.setActiveVariant(this.props.stagePosition, this.props.level.position, id);
   },
 
+  handleFieldChange(modifier) {
+    this.props.setField(this.props.stagePosition, this.props.level.position, modifier);
+  },
+
   render() {
     return (
       <div style={styles.levelTokenActive}>
@@ -122,6 +128,8 @@ const LevelTokenDetails = React.createClass({
               defaultValue={this.props.level.skin}
               type="text"
               style={styles.textInput}
+              ref={skinInput => this.skinInput = skinInput}
+              onChange={this.handleFieldChange.bind(this, {skin: this.skinInput.value})}
             />
             <div style={{float: 'right'}}>
               <span
@@ -136,6 +144,8 @@ const LevelTokenDetails = React.createClass({
                 defaultValue={this.props.level.videoKey}
                 type="text"
                 style={styles.textInput}
+                ref={videoKeyInput => this.videoKeyInput = videoKeyInput}
+                onChange={this.handleFieldChange.bind(this, {videoKey: this.videoKeyInput.value})}
               />
             </div>
             <div style={{clear: 'both'}}></div>
@@ -151,6 +161,8 @@ const LevelTokenDetails = React.createClass({
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
               style={styles.textInput}
+              ref={conceptDifficultyInput => this.conceptDifficultyInput = conceptDifficultyInput}
+              onChange={this.handleFieldChange.bind(this, {conceptDifficulty: this.conceptDifficultyInput.value})}
             />
             <div style={{float: 'right'}}>
               <span
@@ -165,6 +177,8 @@ const LevelTokenDetails = React.createClass({
                 defaultValue={this.props.level.concepts}
                 type="text"
                 style={Object.assign({}, styles.textInput, {width: 320})}
+                ref={conceptsInput => this.conceptsInput = conceptsInput}
+                onChange={this.handleFieldChange.bind(this, {concepts: this.conceptsInput.value})}
               />
             </div>
           </div>
@@ -222,5 +236,8 @@ export default connect(state => ({
   },
   setActiveVariant(stage, level, id) {
     dispatch(setActiveVariant(stage, level, id));
+  },
+  setField(modifier) {
+    dispatch(setField(modifier));
   }
 }))(LevelTokenDetails);
