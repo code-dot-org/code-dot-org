@@ -6,7 +6,7 @@ import eventTypes from './game/Event/EventType.js';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
-const numbersToDisplayText = {
+const NUMBERS_TO_DISPLAY_TEXT = {
   '0.4': i18n.timeVeryShort(),
   '1.0': i18n.timeShort(),
   '2.0': i18n.timeMedium(),
@@ -15,7 +15,7 @@ const numbersToDisplayText = {
   'random': i18n.timeRandom(),
 };
 
-const blocksToDisplayText = {
+const BLOCKS_TO_DISPLAY_TEXT = {
   bedrock: i18n.blockTypeBedrock(),
   bricks: i18n.blockTypeBricks(),
   clay: i18n.blockTypeClay(),
@@ -56,7 +56,7 @@ const blocksToDisplayText = {
   '': i18n.blockTypeEmpty()
 };
 
-const miniBlocksToDisplayText = {
+const MINIBLOCKS_TO_DISPLAY_TEXT = {
   dirt: i18n.miniBlockDirt(),
   dirtCoarse: i18n.miniBlockDirtCoarse(),
   sand: i18n.miniBlockSand(),
@@ -94,9 +94,9 @@ const miniBlocksToDisplayText = {
   sheep: i18n.miniBlockSheep(),
 };
 
-const miniBlocks = Object.keys(miniBlocksToDisplayText).sort();
+const MINIBLOCKS = Object.keys(MINIBLOCKS_TO_DISPLAY_TEXT).sort();
 
-const soundsToDisplayText = {
+const SOUNDS_TO_DISPLAY_TEXT = {
   dig_wood1: i18n.soundTypeDig_wood1(),
   stepGrass: i18n.soundTypeStepGrass(),
   stepWood: i18n.soundTypeStepWood(),
@@ -130,9 +130,9 @@ const soundsToDisplayText = {
   zombieHurt: i18n.soundTypeZombieHurt(),
 };
 
-const allSounds = Object.keys(soundsToDisplayText);
+const ALL_SOUNDS = Object.keys(SOUNDS_TO_DISPLAY_TEXT);
 
-const entityTypesToDisplayText = {
+const ENTITY_TYPES_TO_DISPLAY_TEXT = {
   Player: i18n.entityTypePlayer(),
   sheep: i18n.entityTypeSheep(),
   zombie: i18n.entityTypeZombie(),
@@ -142,7 +142,7 @@ const entityTypesToDisplayText = {
   chicken: i18n.entityTypeChicken(),
 };
 
-const ENTITY_TYPES = Object.keys(entityTypesToDisplayText);
+const ENTITY_TYPES = Object.keys(ENTITY_TYPES_TO_DISPLAY_TEXT);
 
 const SPAWNABLE_ENTITY_TYPES = [
   'sheep',
@@ -153,7 +153,7 @@ const SPAWNABLE_ENTITY_TYPES = [
   'chicken',
 ];
 
-const directionsToDisplay = {
+const DIRECTIONS_TO_DISPLAY_TEXT = {
   up: i18n.directionUp(),
   middle: i18n.directionMiddle(),
   down: i18n.directionDown(),
@@ -161,20 +161,27 @@ const directionsToDisplay = {
   right: i18n.directionRight(),
 };
 
+/**
+ * Converts an array of keys into a blockly-friendly set of dropdown options,
+ * in the form of [[displayText, key], [displayText, key]], grabbing key
+ * translations from a set of key -> i18n string mappings.
+ * @param keysList
+ * @returns {Array.<Array.<String>>}
+ */
 function keysToDropdownOptions(keysList) {
   return keysList.map(function (key) {
-    var displayText = (blocksToDisplayText[key] ||
-      numbersToDisplayText[key] ||
-      directionsToDisplay[key] ||
-      entityTypesToDisplayText[key] ||
-      miniBlocksToDisplayText[key] ||
+    var displayText = (BLOCKS_TO_DISPLAY_TEXT[key] ||
+      NUMBERS_TO_DISPLAY_TEXT[key] ||
+      DIRECTIONS_TO_DISPLAY_TEXT[key] ||
+      ENTITY_TYPES_TO_DISPLAY_TEXT[key] ||
+      MINIBLOCKS_TO_DISPLAY_TEXT[key] ||
       key);
     return [displayText, key];
   });
 }
 
 
-const entityActionBlocks = {
+const ENTITY_ACTION_BLOCKS_TO_DISPLAY_TEXT = {
   destroyEntity: i18n.blockActionDestroyEntity(),
   attack: i18n.blockActionAttack(),
   flashEntity: i18n.blockActionFlashEntity(),
@@ -183,18 +190,18 @@ const entityActionBlocks = {
   explodeEntity: i18n.blockActionExplodeEntity()
 };
 
-const entityActionTargetDropdownBlocks = {
-  'moveToward': i18n.blockActionMoveToward(),
-  'moveTo': i18n.blockActionMoveTo(),
-  'moveAway': i18n.blockActionMoveAway(),
+const ENTITY_TARGET_ACTION_BLOCKS_TO_DISPLAY_TEXT = {
+  moveToward: i18n.blockActionMoveToward(),
+  moveTo: i18n.blockActionMoveTo(),
+  moveAway: i18n.blockActionMoveAway(),
 };
 
-exports.entityActionBlocks = Object.keys(entityActionBlocks);
-exports.entityActionTargetDropdownBlocks = Object.keys(entityActionTargetDropdownBlocks);
+export const ENTITY_ACTION_BLOCKS = Object.keys(ENTITY_ACTION_BLOCKS_TO_DISPLAY_TEXT);
+export const ENTITY_TARGET_ACTION_BLOCKS = Object.keys(ENTITY_TARGET_ACTION_BLOCKS_TO_DISPLAY_TEXT);
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
-  var craftBlockOptions = {
+export const install = (blockly, blockInstallOptions) => {
+  const craftBlockOptions = {
     playSoundOptions: blockInstallOptions.level.playSoundOptions,
     dropDropdownOptions: blockInstallOptions.level.dropDropdownOptions,
   };
@@ -217,8 +224,8 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Generator.get('JavaScript').craft_entityTurn = function () {
     // Generate JavaScript for turning left or right.
-    var dir = this.getTitleValue('DIR');
-    var methodCalls = {
+    const dir = this.getTitleValue('DIR');
+    const methodCalls = {
       left: 'turnLeft',
       right: 'turnRight',
       random: 'turnRandom'
@@ -246,8 +253,8 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Generator.get('JavaScript').craft_entityTurnLR = function () {
     // Generate JavaScript for turning left or right.
-    var dir = this.getTitleValue('DIR');
-    var methodCalls = {
+    const dir = this.getTitleValue('DIR');
+    const methodCalls = {
       left: 'turnLeft',
       right: 'turnRight',
       random: 'turnRandom'
@@ -278,8 +285,8 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Generator.get('JavaScript').craft_turn = function () {
     // Generate JavaScript for turning left or right.
-    var dir = this.getTitleValue('DIR');
-    var methodCall = dir === "left" ? "turnLeft" : "turnRight";
+    const dir = this.getTitleValue('DIR');
+    const methodCall = dir === "left" ? "turnLeft" : "turnRight";
     return methodCall + '(\'block_id_' + this.id + '\');\n';
   };
 
@@ -393,8 +400,8 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
       init: function () {
-        var dropdownOptions = keysToDropdownOptions(dropdownArray);
-        var dropdown = new blockly.FieldDropdown(dropdownOptions);
+        let dropdownOptions = keysToDropdownOptions(dropdownArray);
+        const dropdown = new blockly.FieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
         if (doSort) {
           dropdownOptions = _.sortBy(dropdownOptions, 0);
@@ -436,8 +443,8 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Blocks[`craft_${blockName}`] = {
       helpUrl: '',
       init: function () {
-        var dropdownOptions = keysToDropdownOptions(types);
-        var dropdown = new blockly.FieldDropdown(dropdownOptions);
+        const dropdownOptions = keysToDropdownOptions(types);
+        const dropdown = new blockly.FieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
 
         this.setHSV(184, 1.00, 0.74);
@@ -455,21 +462,22 @@ exports.install = function (blockly, blockInstallOptions) {
     };
   }
 
-  Object.keys(entityActionBlocks).forEach((name) => {
-    simpleEntityActionBlock(name, entityActionBlocks[name]);
+  Object.keys(ENTITY_ACTION_BLOCKS_TO_DISPLAY_TEXT).forEach((name) => {
+    simpleEntityActionBlock(name, ENTITY_ACTION_BLOCKS_TO_DISPLAY_TEXT[name]);
   });
 
-  Object.keys(entityActionTargetDropdownBlocks).forEach((name) => {
-    entityTargetActionBlock(name, entityActionTargetDropdownBlocks[name]);
+  ENTITY_TARGET_ACTION_BLOCKS.forEach((name) => {
+    entityTargetActionBlock(name, ENTITY_TARGET_ACTION_BLOCKS_TO_DISPLAY_TEXT[name]);
   });
 
+  // Also make a limited version with just sheep, player, chicken in dropdown
   entityTargetActionBlock('moveToward',
-      entityActionTargetDropdownBlocks['moveToward'],
-      ['Player', 'sheep', 'chicken'],
-      'moveTowardSheepPlayerChicken');
+    ENTITY_TARGET_ACTION_BLOCKS_TO_DISPLAY_TEXT['moveToward'],
+    ['Player', 'sheep', 'chicken'],
+    'moveTowardSheepPlayerChicken');
 
-  dropdownEntityBlock('wait', i18n.blockActionWait(), Object.keys(numbersToDisplayText).sort());
-  dropdownEntityBlock('drop', i18n.blockActionDrop(), craftBlockOptions.dropDropdownOptions || miniBlocks, true);
+  dropdownEntityBlock('wait', i18n.blockActionWait(), Object.keys(NUMBERS_TO_DISPLAY_TEXT).sort());
+  dropdownEntityBlock('drop', i18n.blockActionDrop(), craftBlockOptions.dropDropdownOptions || MINIBLOCKS, true);
   dropdownEntityBlock('moveDirection', i18n.blockActionMove(), ['up', 'down', 'left', 'right']);
 
   blockly.Blocks.craft_forever = {
@@ -486,7 +494,7 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Generator.get('JavaScript').craft_forever = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
     return `repeat('block_id_${this.id}', function() { ${innerCode} }, -1, event.targetIdentifier);`;
   };
 
@@ -531,8 +539,8 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_repeatDropdown = {
     helpUrl: '',
     init: function () {
-      var dropdownOptions = [2, 3, 4, 5, 6, 7, 8, 9, 10].map((k) => [k.toString(), k.toString()]);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      const dropdownOptions = [2, 3, 4, 5, 6, 7, 8, 9, 10].map((k) => [k.toString(), k.toString()]);
+      const dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setHSV(322, 0.90, 0.95);
@@ -555,7 +563,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks[`craft_spawnEntity`] = {
     helpUrl: '',
     init: function () {
-      var locationOptions = keysToDropdownOptions([
+      const locationOptions = keysToDropdownOptions([
         'up',
         'middle',
         'down',
@@ -563,9 +571,9 @@ exports.install = function (blockly, blockInstallOptions) {
         'right',
       ]);
       const entityTypeDropdownOptions = keysToDropdownOptions(SPAWNABLE_ENTITY_TYPES);
-      var entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
+      const entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
-      var locationDropdown = new blockly.FieldDropdown(locationOptions);
+      const locationDropdown = new blockly.FieldDropdown(locationOptions);
       locationDropdown.setValue(locationOptions[0][1]);
 
       this.setHSV(184, 1.00, 0.74);
@@ -589,7 +597,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       const entityTypeDropdownOptions = keysToDropdownOptions(SPAWNABLE_ENTITY_TYPES);
-      var entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
+      const entityTypeDropdown = new blockly.FieldDropdown(entityTypeDropdownOptions);
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
 
       this.setHSV(184, 1.00, 0.74);
@@ -668,18 +676,18 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   function onSoundSelected(soundValue) {
-    var soundName = stripQuotes(soundValue).trim();
+    const soundName = stripQuotes(soundValue).trim();
     studioApp.playAudio(soundName);
   }
 
   blockly.Blocks.craft_playSound = {
     helpUrl: '',
     init: function () {
-      var dropdownOptions = (craftBlockOptions.playSoundOptions || allSounds).map((key) => {
-        return [soundsToDisplayText[key] || key, key];
+      let dropdownOptions = (craftBlockOptions.playSoundOptions || ALL_SOUNDS).map((key) => {
+        return [SOUNDS_TO_DISPLAY_TEXT[key] || key, key];
       });
       dropdownOptions = _.sortBy(dropdownOptions, 0);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions, onSoundSelected);
+      const dropdown = new blockly.FieldDropdown(dropdownOptions, onSoundSelected);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setHSV(184, 1.00, 0.74);
@@ -692,15 +700,15 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Generator.get('JavaScript').craft_playSound = function () {
-    var blockType = this.getTitleValue('TYPE');
+    const blockType = this.getTitleValue('TYPE');
     return `playSound("${blockType}", event.targetIdentifier, "block_id_${this.id}");\n`;
   };
 
   blockly.Blocks.craft_addScore = {
     helpUrl: '',
     init: function () {
-      var dropdownOptions = keysToDropdownOptions(_.range(1, 11).map(x => `${x}`));
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      const dropdownOptions = keysToDropdownOptions(_.range(1, 11).map(x => x.toString()));
+      const dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setHSV(184, 1.00, 0.74);
@@ -714,7 +722,7 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Generator.get('JavaScript').craft_addScore = function () {
-    var score = this.getTitleValue('SCORE');
+    const score = this.getTitleValue('SCORE');
     return 'addScore("' + score + '", \'block_id_' + this.id + '\');\n';
   };
 };

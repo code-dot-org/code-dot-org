@@ -12,11 +12,13 @@ import skins from "@cdo/apps/craft/simple/skins";
  * Minecraft Designer ("events" style, program entities & player controls character)
  */
 import DesignerCraft from '@cdo/apps/craft/designer/craft';
-import designerBlocks from "@cdo/apps/craft/designer/blocks";
+import * as designerBlocks from "@cdo/apps/craft/designer/blocks";
 import designerLevels from "@cdo/apps/craft/designer/levels";
 import designerSkins from "@cdo/apps/craft/designer/skins";
 
 export default function loadCraft(options) {
+  console.log(DesignerCraft, designerBlocks, designerLevels, designerSkins);
+
   window.Craft = options.level.isEventLevel ? DesignerCraft : Craft;
   if (typeof global !== 'undefined') {
     global.Craft = window.Craft;

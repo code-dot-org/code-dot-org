@@ -187,7 +187,7 @@ MusicController.prototype.play = function (trackName) {
 };
 
 /**
- * Stops playing whatever music is currently playing, immediately.
+ * Sets the current group of music to play.
  */
 MusicController.prototype.setGroup = function (group) {
   this.currentGroup_ = group;
@@ -267,9 +267,9 @@ MusicController.prototype.getTrackByName_ = function (name) {
  * @private
  */
 MusicController.prototype.getRandomTrack_ = function () {
-  const groupTracks = this.trackList_.filter((t) => {
+  const groupTracks = this.trackList_.filter(t => {
     return !this.currentGroup_ || t.group === this.currentGroup_;
   });
-  var trackIndex = Math.floor(Math.random() * groupTracks.length);
+  const trackIndex = Math.floor(Math.random() * groupTracks.length);
   return groupTracks[trackIndex];
 };

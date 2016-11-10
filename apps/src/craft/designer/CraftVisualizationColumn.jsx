@@ -1,32 +1,32 @@
 import React from 'react';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 
-var GameButtons = require('../../templates/GameButtons').default;
-var BelowVisualization = require('../../templates/BelowVisualization');
-var ArrowButtons = require('../../templates/ArrowButtons');
+import {default as GameButtons} from '../../templates/GameButtons';
+import BelowVisualization from '../../templates/BelowVisualization';
+import ArrowButtons from '../../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 
-var CraftVisualizationColumn = function () {
-  return (
-    <span>
-      <ProtectedVisualizationDiv>
-        <div id="minecraft-frame">
-          <div id="phaser-game">
+export default React.createClass({
+  render() {
+    return (
+      <span>
+        <ProtectedVisualizationDiv>
+          <div id="minecraft-frame">
+            <div id="phaser-game">
+            </div>
           </div>
-        </div>
-      </ProtectedVisualizationDiv>
-      <GameButtons>
-        <ArrowButtons/>
+        </ProtectedVisualizationDiv>
+        <GameButtons>
+          <ArrowButtons/>
 
-        <div id="right-button-cell">
-          <button id="rightButton" className="share mc-share-button">
-            <div>{msg.finish()}</div>
-          </button>
-        </div>
-      </GameButtons>
-      <BelowVisualization/>
-    </span>
-  );
-};
-
-module.exports = CraftVisualizationColumn;
+          <div id="right-button-cell">
+            <button id="rightButton" className="share mc-share-button">
+              <div>{msg.finish()}</div>
+            </button>
+          </div>
+        </GameButtons>
+        <BelowVisualization/>
+      </span>
+    );
+  }
+});

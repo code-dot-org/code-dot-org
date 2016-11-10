@@ -5,25 +5,25 @@ import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import Hammer from "hammerjs";
 
-var studioApp = require('../../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
-var craftMsg = require('./locale');
-var codegen = require('../../codegen');
-var GameController = require('./game/GameController');
+import {singleton as studioApp} from '../../StudioApp';
+import commonMsg from '@cdo/locale';
+import craftMsg from './locale';
+import codegen from '../../codegen';
+import GameController from './game/GameController';
 import FacingDirection from './game/LevelMVC/FacingDirection';
-var dom = require('../../dom');
-var eventsLevelbuilderOverrides = require('./eventsLevelbuilderOverrides');
-var MusicController = require('../../MusicController');
-var Provider = require('react-redux').Provider;
-var AppView = require('../../templates/AppView');
-var CraftVisualizationColumn = require('./CraftVisualizationColumn');
-import {entityActionBlocks, entityActionTargetDropdownBlocks} from './blocks';
+import dom from '../../dom';
+import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
+import MusicController from '../../MusicController';
+import {Provider} from 'react-redux';
+import AppView from '../../templates/AppView';
+import CraftVisualizationColumn from './CraftVisualizationColumn';
+import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
 
-var TestResults = studioApp.TestResults;
+const TestResults = studioApp.TestResults;
 
-var MEDIA_URL = '/blockly/media/craft/';
+const MEDIA_URL = '/blockly/media/craft/';
 
-var ArrowIds = {
+const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
@@ -38,24 +38,7 @@ var Craft = module.exports;
 window.Craft = Craft;
 window.Blockly = Blockly;
 
-var characters = {
-  Steve: {
-    name: "Steve",
-    staticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Neutral.png",
-    smallStaticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Neutral.png",
-    failureAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Fail.png",
-    winAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Win.png",
-  },
-  Alex: {
-    name: "Alex",
-    staticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Neutral.png",
-    smallStaticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Neutral.png",
-    failureAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Fail.png",
-    winAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Win.png",
-  }
-};
-
-var eventsCharacters = {
+const eventsCharacters = {
   Steve: {
     name: "Steve",
     staticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Neutral.png",
@@ -78,7 +61,7 @@ var eventsCharacters = {
   }
 };
 
-var interfaceImages = {
+const interfaceImages = {
   DEFAULT: [
     MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
     MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
@@ -97,24 +80,24 @@ var interfaceImages = {
   1: [
     MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
     MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
-    characters.Steve.staticAvatar,
-    characters.Steve.smallStaticAvatar,
-    characters.Alex.staticAvatar,
-    characters.Alex.smallStaticAvatar,
+    eventsCharacters.Steve.staticAvatar,
+    eventsCharacters.Steve.smallStaticAvatar,
+    eventsCharacters.Alex.staticAvatar,
+    eventsCharacters.Alex.smallStaticAvatar,
   ],
   2: [
     // TODO(bjordan): find different pre-load point for feedback images,
     // bucket by selected character
-    characters.Alex.winAvatar,
-    characters.Steve.winAvatar,
-    characters.Alex.failureAvatar,
-    characters.Steve.failureAvatar,
+    eventsCharacters.Alex.winAvatar,
+    eventsCharacters.Steve.winAvatar,
+    eventsCharacters.Alex.failureAvatar,
+    eventsCharacters.Steve.failureAvatar,
   ],
   6: [
   ]
 };
 
-var MUSIC_METADATA = [
+const MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: "vignette1", group: 'day'},
   {volume: 1, hasOgg: true, name: "vignette2-quiet", group: 'night'},
   {volume: 1, hasOgg: true, name: "vignette3", group: 'night'},
@@ -124,9 +107,9 @@ var MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: "vignette8-free-play", group: 'day'},
 ];
 
-var CHARACTER_STEVE = 'Steve';
-var CHARACTER_ALEX = 'Alex';
-var DEFAULT_CHARACTER = CHARACTER_STEVE;
+const CHARACTER_STEVE = 'Steve';
+const CHARACTER_ALEX = 'Alex';
+const DEFAULT_CHARACTER = CHARACTER_STEVE;
 
 function trySetLocalStorageItem(key, value) {
   try {
@@ -146,7 +129,6 @@ function trySetLocalStorageItem(key, value) {
  * Initialize Blockly and the Craft app. Called on page load.
  */
 Craft.init = function (config) {
-
   if (config.level.puzzle_number === 1 && config.level.stage_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
@@ -249,10 +231,9 @@ Craft.init = function (config) {
   config.skin.failureAvatar = character.failureAvatar;
   config.skin.winAvatar = character.winAvatar;
 
-  var levelConfig = config.level;
-
-  var onMount = function () {
-    studioApp.init(Object.assign({}, config, {
+  const onMount = function () {
+    studioApp.init({
+      ...config,
       forceInsertTopBlock: config.level.isEventLevel ? null : 'when_run',
       appStrings: {
         generatedCodeDescription: craftMsg.generatedCodeDescription(),
@@ -278,13 +259,13 @@ Craft.init = function (config) {
            * (due to e.g. character popup).
            */
           earlyLoadAssetPacks: config.level.isEventLevel ? null :
-              Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+              Craft.earlyLoadAssetsForLevel(config.level.puzzle_number),
           afterAssetsLoaded: function () {
             // preload music after essential game asset downloads completely finished
             Craft.musicController.preload();
           },
           earlyLoadNiceToHaveAssetPacks: config.level.isEventLevel ? null:
-              Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
+              Craft.niceToHaveAssetsForLevel(config.level.puzzle_number),
         });
 
         if (!config.level.showPopupOnLoad) {
@@ -346,7 +327,7 @@ Craft.init = function (config) {
         text: "Share on Twitter",
         hashtag: "Craft"
       }
-    }));
+    });
 
     var interfaceImagesToLoad = [];
     interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
@@ -386,11 +367,11 @@ Craft.init = function (config) {
   );
 };
 
-var directionToFacing = {
-  'upButton': FacingDirection.Up,
-  'downButton': FacingDirection.Down,
-  'leftButton': FacingDirection.Left,
-  'rightButton': FacingDirection.Right,
+const directionToFacing = {
+  upButton: FacingDirection.Up,
+  downButton: FacingDirection.Down,
+  leftButton: FacingDirection.Left,
+  rightButton: FacingDirection.Right,
 };
 
 Craft.onArrowButtonDown = function (e, btn) {
@@ -426,7 +407,7 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.updateUIForCharacter = function (character) {
-  let characters = Craft.initialConfig.level.isEventLevel ? eventsCharacters : characters;
+  let characters = eventsCharacters;
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
   Craft.initialConfig.skin.smallStaticAvatar = characters[character].smallStaticAvatar;
   Craft.initialConfig.skin.failureAvatar = characters[character].failureAvatar;
@@ -470,15 +451,15 @@ Craft.clearPlayerState = function () {
 };
 
 Craft.initializeAppLevel = function (levelConfig) {
-  Craft.foldInEntities(levelConfig);
+  convertActionPlaneEntitiesToConfig(levelConfig);
 
-  var fluffPlane = [];
-  // TODO(bjordan): remove configuration requirement in visualization
+  // Fluff plane is no longer configured by level builders, pass in an empty plane
+  const fluffPlane = [];
   for (var i = 0; i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10); i++) {
     fluffPlane.push('');
   }
 
-  var levelAssetPacks = {
+  const levelAssetPacks = {
     beforeLoad: Craft.minAssetsForLevelWithCharacter(levelConfig.puzzle_number),
     afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
   };
@@ -578,16 +559,15 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   }
 };
 
-/** Folds array B on top of array A */
-Craft.foldInArray = function (arrayA, arrayB) {
-  for (var i = 0; i < arrayA.length; i++) {
-    if (arrayB[i] !== '') {
-      arrayA[i] = arrayB[i];
-    }
-  }
-};
-
-Craft.foldInEntities = function (levelConfig) {
+/**
+ * Converts entities found within the levelConfig.actionPlane to a
+ * levelConfig.entities suitable for loading by the game initializer.
+ *
+ * ['sheepRight', 'creeperUp] -> [['sheep', 0, 0, 1], ['creeper', 1, 0, 0]]
+ *
+ * @param levelConfig
+ */
+function convertActionPlaneEntitiesToConfig(levelConfig) {
   const [width, height] = levelConfig.gridWidth && levelConfig.gridHeight ?
       [levelConfig.gridWidth, levelConfig.gridHeight] : [10, 10];
 
@@ -617,7 +597,7 @@ Craft.foldInEntities = function (levelConfig) {
       }
     }
   });
-};
+}
 
 /**
  * Reset the app to the start position and kill any pending animation tasks.
@@ -804,13 +784,13 @@ Craft.executeUserCode = function () {
     }
   };
 
-  entityActionBlocks.concat(['turnLeft', 'turnRight', 'turnRandom']).forEach((methodName) => {
+  ENTITY_ACTION_BLOCKS.concat(['turnLeft', 'turnRight', 'turnRandom']).forEach((methodName) => {
     evalApiMethods[methodName] = function (targetEntity, blockID) {
       appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity);
     };
   });
 
-  entityActionTargetDropdownBlocks.forEach((methodName) => {
+  ENTITY_TARGET_ACTION_BLOCKS.forEach((methodName) => {
     evalApiMethods[methodName] = function (targetEntity, moveTo, blockID) {
       appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity, moveTo);
     };
