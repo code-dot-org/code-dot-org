@@ -10,6 +10,7 @@ module ScriptConstants
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
   STARWARS_NAME = 'starwars'
   MINECRAFT_NAME = 'mc'
+  MINECRAFT_DESIGNER_NAME = 'minecraft'
   STARWARS_BLOCKS_NAME = 'starwarsblocks'
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
@@ -48,7 +49,8 @@ module ScriptConstants
   CSD3_NAME = 'csd3'
   CSD4_NAME = 'csd4'
 
-  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
+  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft-simple'
+  MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'minecraft-designer'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
   # The order here matters. The first category a script appears under will be
@@ -71,6 +73,7 @@ module ScriptConstants
       STARWARS_NAME,
       STARWARS_BLOCKS_NAME,
       MINECRAFT_NAME,
+      MINECRAFT_DESIGNER_NAME,
       INFINITY_NAME,
       ARTIST_NAME
     ],
@@ -113,7 +116,10 @@ module ScriptConstants
     ],
     twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
-    minecraft: [MINECRAFT_NAME]
+    minecraft: [
+      MINECRAFT_NAME,
+      MINECRAFT_DESIGNER_NAME
+    ]
   }
 
   # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
@@ -143,6 +149,8 @@ module ScriptConstants
   def self.teacher_dashboard_name(script)
     if script == MINECRAFT_NAME
       MINECRAFT_TEACHER_DASHBOARD_NAME
+    elsif script == MINECRAFT_DESIGNER_NAME
+      MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME
     elsif script == HOC_NAME
       HOC_TEACHER_DASHBOARD_NAME
     else
