@@ -34,6 +34,7 @@ var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
+import SmallFooter from '@cdo/apps/code-studio/components/small_footer';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -869,8 +870,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     phoneFooter: true
   };
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
-    footerDiv);
+  ReactDOM.render(<SmallFooter {...reactProps}/>, footerDiv);
 };
 
 /**
