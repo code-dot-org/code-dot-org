@@ -1,0 +1,92 @@
+{"frames": {
+
+"Leaves_Jungle0.png":
+{
+	"frame": {"x":162,"y":0,"w":157,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":60,"w":157,"h":152},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle1.png":
+{
+	"frame": {"x":0,"y":130,"w":157,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":60,"w":157,"h":152},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle2.png":
+{
+	"frame": {"x":0,"y":282,"w":157,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":60,"w":157,"h":152},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle3.png":
+{
+	"frame": {"x":157,"y":152,"w":157,"h":144},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":68,"w":157,"h":144},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle4.png":
+{
+	"frame": {"x":157,"y":296,"w":157,"h":132},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":80,"w":157,"h":132},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle5.png":
+{
+	"frame": {"x":0,"y":0,"w":162,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":80,"w":162,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle6.png":
+{
+	"frame": {"x":319,"y":0,"w":113,"h":129},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":97,"y":80,"w":113,"h":129},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle7.png":
+{
+	"frame": {"x":319,"y":129,"w":113,"h":129},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":97,"y":80,"w":113,"h":129},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle8.png":
+{
+	"frame": {"x":314,"y":258,"w":117,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":92,"y":80,"w":117,"h":88},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Jungle9.png":
+{
+	"frame": {"x":314,"y":346,"w":113,"h":86},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":93,"y":79,"w":113,"h":86},
+	"sourceSize": {"w":240,"h":240}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Leaves_Jungle_Decay.png",
+	"format": "RGBA8888",
+	"size": {"w":432,"h":434},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ed4e9dba0f5e81aef1987ff4bcad43d2:873b69325f23d58c734a49fc679e2382:6b9b6cc0a4c9dc5524cbf3b83a14d989$"
+}
+}
