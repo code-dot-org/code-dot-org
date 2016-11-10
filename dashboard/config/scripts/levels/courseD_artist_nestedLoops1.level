@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a triangle to kickstart this stage.  \r\n(Each side is 100 pixels long.)",
+    "instructions": "Draw a triangle to kickstart this stage.  \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees for each exterior angle.)",
     "x": "150",
     "y": "200",
     "start_direction": "90",
