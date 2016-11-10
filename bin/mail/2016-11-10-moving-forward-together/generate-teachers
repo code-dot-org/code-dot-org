@@ -28,9 +28,6 @@ query = '
     kind_s: BringToSchool2013 ||
     kind_s: ClassSubmission ||
     kind_s: DistrictPartnerSubmission ||
-    kind_s: PLP interest form ||
-    kind_s: Teacher interest form ||
-    kind_s: School interest form ||
     kind_s: HelpUs2013 ||
     kind_s: K5OnlineProfessionalDevelopmentPostSurvey ||
     kind_s: K5ProfessionalDevelopmentSurvey ||
