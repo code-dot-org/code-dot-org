@@ -14,27 +14,27 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. What can you do now?
+Dünya'nın her yerinden öğrencilerin *tüm hayatlarını değiştirebilecek* bir Kodlama Saati öğrenmelerini sağlayabilirsiniz. Yeni öğreticiler ve diğer ilginç güncellemeler hakkında sizi haberdar edeceğiz. Şimdi neler yapıyorsun?
 
 ## 1. Organizasyonu yayın
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Sen Kodlama Saati hareketine katıldın. Arkadaşlarına **#HourOfCode** etiketi ile haber ver!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 1. Etkinliğiniz için size yardımcı olacak yerel gönüllüler bulun.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+Öğrencilerinize bilgisayar bilimindeki tüm olasılıklar hakkında ilham verebilecek, sınıfınızı ziyaret edebilecek veya uzaktan video chat yapabilecek gönüllüleri bulmak için [gönüllü haritamızda arama yapın](https://code. org/volunteer/local).
 
-## 3. Ask your whole school to offer an Hour of Code
+## Tüm okulun Kodlama Saati'ne katılmasını isteyin
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
+Müdürünüze [bu maili gönderin](%= resolve_url('/promote/resources#sample-emails') %) ve tüm sınıfların kayıt olması için mücadele edin.
 
 ## İş vereninizden de etkinliğe dahil olmasını rica edin
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+Şirket CEO'nuza veya yöneticinize [bu maili gönderin.](%= resolve_url('/promote/resources#sample-emails') %).
 
-## 5. Promote Hour of Code in your community
+## 5. Kodlama Saati'ni çevrenize tanıtın
 
 [Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 
@@ -45,5 +45,9 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 ## 7. Plan your Hour of Code
 
 Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

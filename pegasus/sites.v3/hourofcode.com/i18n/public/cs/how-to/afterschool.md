@@ -22,6 +22,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) Propagujte vaši Hodinu kódu
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
@@ -118,11 +120,10 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 ## Jiné zdroje Hodiny kódu pro pedagogy:
 
-  * Používejte tuto [šablonu plánu lekce ](/files/AfterschoolEducatorLessonPlanOutline.docx) k organizování Hodiny kódu.
-  * Zkontrolujte si [nejlepší praxi organizátorů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) z minulých Hodin kódu. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Zhlédněte záznam nášeho webináře [Návod pro kouče Hodiny kódu](https://youtu.be/EJeMeSW2-Mw).
   * [Navštivte live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) s naším zakladatelem, Hadi Partovi, abyste připravili Hodinu kódu.
-  * Navštivte [fórum Hodinu kódu, ](http://forum.code.org/c/plc/hour-of-code) abyste získali rady, náhled a podporu od jiných organizátorů. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Zkontrolujte si [FAQ Hodiny kódu ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co přijde po Hodině kódu?

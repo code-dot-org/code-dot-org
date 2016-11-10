@@ -25,7 +25,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Vraag je hele school om een Uur Code aan te bieden
 
-[Stuur deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) naar uw opdrachtgever en daag elk klaslokaal op uw school uit om aan te melden. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Stuur deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) naar uw opdrachtgever en daag elk klaslokaal op uw school uit om aan te melden.
 
 ## 3. Vraag je werkgever betrokken te raken
 
