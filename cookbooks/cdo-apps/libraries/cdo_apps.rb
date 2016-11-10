@@ -26,7 +26,7 @@ module CdoApps
     # Runs only once on initial install.
     file "#{app_name}_setup" do
       path "#{Chef::Config[:file_cache_path]}/#{app_name}_setup"
-      notifies :run, "execute[setup-#{app_name}", :immediately
+      notifies :run, "execute[setup-#{app_name}]", :immediately
       only_if { node['cdo-apps']['local_mysql'] || node['cdo-apps']['daemon'] }
     end
 
