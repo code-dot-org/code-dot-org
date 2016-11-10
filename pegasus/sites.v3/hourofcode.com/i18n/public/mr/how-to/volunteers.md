@@ -1,6 +1,8 @@
 ---
 
-शीर्षक: <%= hoc_s(:कशी_करायची_स्वयंसेवा) %> लेआऊट: रुंद न्यावं: न्यावं_कसे_करायचे
+title: <%= hoc_s(:title_how_to_volunteers) %>
+layout: wide
+nav: how_to_nav
 
 ---
 
