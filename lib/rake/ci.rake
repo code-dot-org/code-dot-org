@@ -32,7 +32,6 @@ namespace :ci do
   tasks << :lint if CDO.lint
   tasks << 'build:chef'
   tasks << :build
-  tasks << 'stack:ami:start'
   tasks << 'stack:start'
   task all: tasks
 end

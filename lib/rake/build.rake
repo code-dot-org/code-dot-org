@@ -2,11 +2,20 @@ require_relative '../../deployment'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'tempfile'
 
 namespace :build do
   desc 'Runs Chef Client to configure the OS environment.'
   task :chef do
     if CDO.chef_managed
+      if rack_env?(:adhoc)
+        RakeUtils.with_bundle_dir(cookbooks_dir) do
+          Tempfile.open(['berks','.tgz']) do |file|
+            RakeUtils.bundle_exec "berks package #{file.path}"
+            RakeUtils.sudo "tar xzf #{file.path} -C /var/chef"
+          end
+        end
+      end
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end

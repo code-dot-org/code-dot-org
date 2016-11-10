@@ -7,6 +7,8 @@ end
 
 commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 
+ami = commit[0..4]
+
 unless dry_run
   update_certs.call unless cdn_enabled
   update_cookbooks.call
@@ -19,7 +21,44 @@ Description: AWS CloudFormation Template for Code.org application
 Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
-  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}", commit: commit %>
+  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'AMI-staging', Nonce: 0, commit: commit %>
+
+  # Signal when the instance is fully provisioned and ready for AMI creation.
+  AMICreate<%=ami%>:
+    Type: AWS::CloudFormation::WaitCondition
+    DependsOn: WebServerAMI
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT60M
+        Count: 1
+  WebServerAMI:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: {'Fn::GetAtt': [AMI, ImageId]}
+      InstanceType: <%=instance_type%>
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
+      SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
+      KeyName: <%=ssh_key_name%>
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 64
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: <%=file.call('bootstrap_chef.sh.erb',
+          create_id: "AMICreate#{ami}",
+          node_name: 'ami-${INSTANCE_ID}',
+          run_list: [
+            local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
+          ],
+          commit: commit,
+          shutdown: true
+        )%>
+  AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
+    DependsOn: "AMICreate#{ami}",
+    InstanceId: {Ref: "WebServerAMI" } %>
+
   ASGCount: <%= lambda_fn.call 'CountASG',
     Default: {
       MinSize: 2,
@@ -172,7 +211,7 @@ Resources:
   LaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
-      ImageId: {'Fn::GetAtt': [AMI, ImageId]}
+      ImageId: {'Fn::GetAtt': [AMI<%=ami%>, ImageId]}
       InstanceType: <%=instance_type%>
       IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       SecurityGroups: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
@@ -311,8 +350,8 @@ Resources:
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],
-          commit: commit,
-          shutdown: false
+          shutdown: false,
+          daemon: true
         )%>
       NetworkInterfaces:
         - AssociatePublicIpAddress: true

@@ -1,12 +1,15 @@
 namespace :stack do
   task :environment do
     require_relative '../../deployment'
-    CDO.chef_local_mode = false
     ENV['INSTANCE_TYPE'] ||= rack_env?(:production) ? 'c4.8xlarge' : 't2.large'
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     ENV['CDN_ENABLED'] ||= '1'
-    ENV['DOMAIN'] ||= 'code.org'
-    ENV['STACK_NAME'] ||= rack_env.to_s
+    if rack_env?(:adhoc)
+      ENV['DOMAIN'] ||= 'cdn-code.org'
+    else
+      ENV['DOMAIN'] ||= 'code.org'
+      CDO.chef_local_mode = false
+    end
     require 'cdo/aws/cloud_formation'
   end
 
@@ -49,9 +52,9 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
         require_relative '../../deployment'
         ENV['TEMPLATE'] ||= "#{stack}.yml.erb"
         ENV['STACK_NAME'] ||= 'lambda' if stack == :lambda
-        ENV['STACK_NAME'] ||= stack == :ami ? "AMI-#{rack_env}" : stack.upcase.to_s
         CDO.chef_local_mode = true if rack_env? :adhoc
         require 'cdo/aws/cloud_formation'
+        ENV['STACK_NAME'] ||= stack == :ami ? "AMI-#{AWS::CloudFormation.stack_name}" : stack.upcase.to_s
       end
 
       desc "Launch/update #{stack} stack component."
