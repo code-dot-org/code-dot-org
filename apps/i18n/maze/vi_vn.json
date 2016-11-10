@@ -111,5 +111,6 @@
   "word": "Tìm các từ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Đồng ý",
-  "youSpelled": "Bạn hãy đánh vần"
+  "youSpelled": "Bạn hãy đánh vần",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

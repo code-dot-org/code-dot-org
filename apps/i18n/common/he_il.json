@@ -314,5 +314,6 @@
   "when": "מתי",
   "whenRun": "התחל ריצה",
   "workspaceHeaderShort": "סביבת העבודה: ",
-  "yes": "כן"
+  "yes": "כן",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

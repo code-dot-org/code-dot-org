@@ -1,9 +1,7 @@
 ---
-
-isihloko: <%=hoc_s(:isihloko_kanjani_ukuze_abazinikelayo) %>
-isimiso: ububanzi
-nav: kanjani_ukuze_zula
-
+title: <%= hoc_s(:title_how_to_volunteers) %>
+layout: wide
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>

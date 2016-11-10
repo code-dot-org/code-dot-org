@@ -314,5 +314,6 @@
   "when": "když",
   "whenRun": "po spuštění",
   "workspaceHeaderShort": "Pracovní prostor: ",
-  "yes": "Ano"
+  "yes": "Ano",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

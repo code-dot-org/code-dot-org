@@ -314,5 +314,6 @@
   "when": "nini",
   "whenRun": "when run",
   "workspaceHeaderShort": "indawo yokusebenzela: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "predictionInstructions": "Make a prediction before you run the program."
 }
