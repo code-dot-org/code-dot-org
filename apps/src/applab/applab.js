@@ -51,7 +51,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/small_footer';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;

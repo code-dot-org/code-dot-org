@@ -34,7 +34,7 @@ var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/small_footer';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
