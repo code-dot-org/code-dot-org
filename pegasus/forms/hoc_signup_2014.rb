@@ -1,3 +1,5 @@
+require 'honeybadger'
+
 class HocSignup2014
   def self.normalize(data)
     Honeybadger.context({ :data => data })
