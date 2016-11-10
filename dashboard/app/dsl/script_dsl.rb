@@ -137,7 +137,7 @@ class ScriptDSL < BaseDSL
     s << "id '#{legacy_script_ids[script.name]}'" if legacy_script_ids[script.name]
 
     s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
-    s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete
+    s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
@@ -145,7 +145,13 @@ class ScriptDSL < BaseDSL
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
 
     s << '' unless s.empty?
+    s << self.serialize_stages(script)
 
+    File.write(filename, s.join("\n"))
+  end
+
+  def self.serialize_stages(script)
+    s = []
     script.stages.each do |stage|
       t = "stage '#{stage.name}'"
       t += ', lockable: true' if stage.lockable
@@ -168,8 +174,7 @@ class ScriptDSL < BaseDSL
       end
       s << ''
     end
-
-    File.write(filename, s.join("\n"))
+    s.join("\n")
   end
 
   def self.serialize_level(level, type, active = nil)

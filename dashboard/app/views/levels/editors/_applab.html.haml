@@ -20,6 +20,7 @@
 .field
   = f.label :makerlab_enabled, 'Enable Maker APIs'
   = boolean_check_box f, :makerlab_enabled
+= render partial: 'levels/editors/watchers_ui', locals: {f: f}
 .field
   = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
   = boolean_check_box f, :autocomplete_palette_apis_only
@@ -111,3 +112,5 @@
 .field
   =f.label 'Disable code debugger (Console is still enabled)'
   = boolean_check_box f, :debugger_disabled
+
+= render partial: 'levels/editors/teacher_only_markdown', locals: {f: f}

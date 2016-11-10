@@ -81,6 +81,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
     ],
     COURSE_CSP => [
+      SUBJECT_CSP_SUMMER_WORKSHOP = 'Summer Workshop',
       SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
       SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
       SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
@@ -118,6 +119,7 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CSP_SUMMER_WORKSHOP => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
@@ -194,6 +196,34 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  # Filters by scheduled start date (date of first session)
+  def self.start_on_or_before(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
+  end
+
+  # Filters by scheduled start date (date of first session)
+  def self.start_on_or_after(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+  end
+
+  # Filters by date the workshop actually ended, regardless of scheduled session times.
+  def self.end_on_or_before(date)
+    where('(DATE(ended_at) <= ?)', date)
+  end
+
+  # Filters by date the workshop actually ended, regardless of scheduled session times.
+  def self.end_on_or_after(date)
+    where('(DATE(ended_at) >= ?)', date)
+  end
+
+  def self.start_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+  end
+
+  def self.end_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+  end
+
   def course_name
     COURSE_NAMES_MAP[course]
   end
@@ -241,22 +271,6 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
-  def self.start_on_or_before(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
-  end
-
-  def self.start_on_or_after(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
-  end
-
-  def self.start_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
-  end
-
-  def self.end_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
-  end
-
   def self.send_reminder_for_upcoming_in_days(days)
     start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
@@ -279,12 +293,16 @@ class Pd::Workshop < ActiveRecord::Base
     workshop.update!(processed_at: Time.zone.now)
   end
 
-  def send_exit_surveys
-    # Update enrollments with resolved users.
+  # Updates enrollments with resolved users.
+  def resolve_enrolled_users
     self.enrollments.each do |enrollment|
       # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
       enrollment.update!(user: enrollment.resolve_user, skip_school_validation: true) unless enrollment.user
     end
+  end
+
+  def send_exit_surveys
+    resolve_enrolled_users
 
     # Send the emails
     self.enrollments.each do |enrollment|

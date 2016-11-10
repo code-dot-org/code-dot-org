@@ -525,7 +525,7 @@
           معا.
       5:
         image: notes/playlab_intro_5.png
-        text: |
+        text: |-
           في اللغز الأول, ممثلنا هو البطريق وسوف نجعله يقول "مرحباً" عبر سحب القطعة البرمجية للنطق, و ربطها في قطعة عند التشغيل, و كتابة "مرحباً" بداخلها.
           يمكننا أيضاً جعل البطريق يتحرك عبر سحب القطعة البرمجية تحرك لليمين و تحرك لليسار.
           حالما تحصل على قطعك البرمجية في الأمكنة, أضغط على زر التشغيل لترى ما قد قمت ببرمجته.
@@ -537,7 +537,7 @@
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: |
+        text: |-
           الأن, سوف نقوم بتعلم شيئاً يستخدمه جميع مبرمجي الالعاب يومياً.
           ويسمونه بالأحداث.
           الحدث يخبر برنامجك بالاستماع عندما يحدث شيئاً معيناً. وعند حدوث ذلك الشيء, سوف يقوم الحدث باتخاذ فعل.
@@ -547,7 +547,7 @@
           على الشاشة."
       3:
         image: notes/playlab_events_3.png
-        text: |
+        text: |-
           هنا, سوف نقوم بإنشاء روبوت فضائي يقوم بتحية أهل الأرض عندما يقوم اللاعب بالضغط عليه.
           سوف نستخدم القطعة البرمجية "عند الضغط" و ارفاق القطعة البرمجية "إنطق" لها. عندما يضغط اللاعب على الروبوت الفضائي, كل شيء مرفق بحدث القطعة البرمجية "عند الضغط" سوف يقوم بالتنفيذ. ماذا سيقول المخلوق الفضائي الخاص بك ؟
       4:
@@ -567,7 +567,7 @@
           إلى الأبد".
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: |
+        text: |-
           في اللغز التالي, هدفنا هو مساعدة دورية حرس الحدود لهذه المملكة, يساراً ويميناً بشكل متكرر.
           تَعلَّم كيف تعمل الأوامر المتكررة, والتي سوف توفر عليك الكثير من الوقت لاحقاً عندما تريد إنشاء لعبتك الخاصة.
     C1_artist_intro:
@@ -648,21 +648,19 @@
           أفضل و أكثر متعة لك. المثابرة هو أسم اللعبة. ابقى معها, سوف تحب ذلك."
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: This lesson is called building a foundation. In this lesson, we'll work
-          on a task that is meant to be really difficult. You will figure out how
-          to make a structure at least as tall as one of these cups and it's got to
-          be strong enough to hold the weight of a book.
+        text: |-
+          يسمى هذا الدرس بناء مؤسسة. في هذا الدرس, سوف نعمل في مهمة التي تعتبر صعبة حقاً.
+          سوف تعرف كيفية صنع منشأة لها على الأقل نفس طول إحدى هذه المكعبات و يجب أن تكون قوية كفاية لتتحمل وزن الكتاب.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: There might be times that our creation doesn't work out. There might
-          be times that we get frusrated and want to give up. There might be a lot
-          of those moments. But if we keep on trying, give it our best shot over and
-          over again, then we're sure to get it before long.
+        text: "قد نمر بأوقات الأشياء التي صنعناها لا تعمل. و قد نمر بأوقات نصبح فيها
+          محبطين و نريد الإستسلام. قد نمر بكثير من هذه اللحظات. و لكن إذا استمرينا
+          بالمحاولة, و اعطينا أفضل ما لدينا مرة بعد مرة, عندها سنكون متأكدين أننا
+          سنحقق ما نريد قريباً."
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistence is all about hanging in there when you really want to give
-          up. If you want to create something new and different, there's going to
-          be a lot of failures along the way.
+        text: "المثابرة لا تعني سوى الصمود عندما ترغب بالإستسلام، إذا كنت تريد صنع
+          شيء جديد ومختلف فلا بد أن تواجه العديد من الإخفاقات في الطريق."
       5:
         image: notes/C1_building_foundation_5.jpg
         text: The trick to persistence is choosing to keep on going and learn from
@@ -2995,7 +2993,7 @@
       1:
         image: notes/gumball_repeat_1.JPG
         text: "هل لك أن تتخيل لو اردت تكريرأحد الأوامر مرةً بعد مرة و للأبد؟ \nنأمل
-          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة.\n"
+          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة."
       2:
         image: notes/gumball_repeat_2.JPG
         text: "يسمى هذا بأمرالتكرار للأبد. وأي شيء يربط به يتكرر باستمرار في اللعبة.
@@ -3074,7 +3072,7 @@
       1:
         image: notes/iceage_repeat_1.JPG
         text: "هل لك أن تتخيل لو اردت تكريرأحد الأوامر مرةً بعد مرة و للأبد؟ \nنأمل
-          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة.\n"
+          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة."
       2:
         image: notes/iceage_repeat_2.JPG
         text: "يسمى هذا بأمرالتكرار للأبد. وأي شيء يربط به يتكرر باستمرار في اللعبة.

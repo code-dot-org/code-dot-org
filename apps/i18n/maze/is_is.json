@@ -3,8 +3,6 @@
   "atFlower": "við blóm",
   "atHoneycomb": "við býkúpu",
   "avoidCowAndRemove": "forðast kúna og fjarlægja 1",
-  "bean": "baun",
-  "beanTooltip": "Uppskera baun",
   "collect": "safna",
   "collectiblePresent": "það er meira að finna",
   "collectorCollectTooltip": "Safna hlut",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Blómið sem þú ert á hefur ekki meiri blómasafa.",
   "get": "sækja",
   "has": "hefur",
-  "hasbean": "það eru baunir",
+  "haslettuce": "there is lettuce",
   "hascorn": "það er maís",
   "haspumpkin": "það eru grasker",
   "heightParameter": "hæð",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Ef það er slóð í þessa stefnu þá á að gera fyrstu kubbastæðuna. Annars á að gera stæðu númer tvö.",
   "insufficientHoney": "Þú þarft að búa til rétt magn hunangs.",
   "insufficientNectar": "Þú þarft að safna réttu magni af blómasafa.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "búa til",
   "moveBackward": "fara aftur á bak",
   "moveEastTooltip": "Færa mig austur um eitt bil.",
@@ -111,5 +111,6 @@
   "word": "Finna orðið",
   "wrongCropError": "Ég get ekki uppskorið þessa plöntu héðan.",
   "yes": "Já",
-  "youSpelled": "Þú stafaðir"
+  "youSpelled": "Þú stafaðir",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

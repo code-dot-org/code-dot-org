@@ -27,7 +27,7 @@ const AnimationPicker = React.createClass({
   propTypes: {
     // Provided externally
     channelId: React.PropTypes.string.isRequired,
-    typeFilter: React.PropTypes.string,
+    allowedExtensions: React.PropTypes.string,
 
     // Provided via Redux
     visible: React.PropTypes.bool.isRequired,
@@ -75,11 +75,12 @@ const AnimationPicker = React.createClass({
         useDeprecatedGlobalStyles
         handleClose={this.props.onClose}
         uncloseable={this.props.uploadInProgress}
+        fullWidth={true}
       >
         <HiddenUploader
           ref="uploader"
           toUrl={'/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png'}
-          typeFilter={this.props.typeFilter}
+          allowedExtensions={this.props.allowedExtensions}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
@@ -107,8 +108,12 @@ export default connect(state => ({
     dispatch(pickLibraryAnimation(animation));
   },
   onUploadStart(data) {
-    dispatch(beginUpload(data.files[0].name));
-    data.submit();
+    if (data.files[0].type === 'image/png' || data.files[0].type === 'image/jpeg') {
+      dispatch(beginUpload(data.files[0].name));
+      data.submit();
+    } else {
+      dispatch(handleUploadError(gamelabMsg.animationPicker_unsupportedType()));
+    }
   },
   onUploadDone(result) {
     dispatch(handleUploadComplete(result));

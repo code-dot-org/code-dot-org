@@ -87,8 +87,7 @@ module LevelsHelper
 
     return unless autoplay_video
 
-    client_state.add_video_seen(autoplay_video.key)
-    autoplay_video.summarize unless params[:noautoplay]
+    autoplay_video.summarize
   end
 
   def select_and_remember_callouts(always_show = false)
@@ -162,6 +161,8 @@ module LevelsHelper
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
+    post_final_milestone = @script ? Gatekeeper.allows('postFinalMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_final_milestone: post_final_milestone)
 
     @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
@@ -195,6 +196,9 @@ module LevelsHelper
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       @app_options = view_options.camelize_keys
     end
+
+    # Blockly caches level properties, whereas this field depends on the user
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -250,20 +254,60 @@ module LevelsHelper
   # Options hash for Weblab
   def weblab_options
     app_options = {}
-    app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+
+    level_options = app_options[:level] ||= Hash.new
+    app_options[:level] = level_options
+    level_options.merge! @level.properties.camelize_keys
+
+    # teacherMarkdown lives on the base app_options object, to be consistent with
+    # Blockly levels, where it needs to avoid caching
+    app_options[:level]['teacherMarkdown'] = nil
 
     # ScriptLevel-dependent option
     script_level = @script_level
-    app_options[:level]['puzzle_number'] = script_level ? script_level.position : 1
-    app_options[:level]['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['puzzle_number'] = script_level ? script_level.position : 1
+    level_options['stage_total'] = script_level ? script_level.stage_total : 1
 
     # Ensure project_template_level allows start_sources to be overridden
-    app_options[:level]['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
+    level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
+
+    level_options['levelId'] = @level.level_num
+
+    # Process level view options
+    level_overrides = level_view_options(@level.id).dup
+    if level_options['embed'] || level_overrides[:embed]
+      level_overrides[:hide_source] = true
+      level_overrides[:show_finish] = true
+    end
+    if level_overrides[:embed]
+      view_options(no_header: true, no_footer: true, white_background: true)
+    end
+
+    view_options(has_contained_levels: @level.try(:contained_levels).present?)
+
+    # Add all level view options to the level_options hash
+    level_options.merge! level_overrides.camelize_keys
 
     app_options.merge! view_options.camelize_keys
+
+    # Move these values up to the app_options hash
+    %w(hideSource share embed).each do |key|
+      if level_options[key]
+        app_options[key.to_sym] = level_options.delete key
+      end
+    end
+
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
+    app_options[:report] = {
+        fallback_response: @fallback_response,
+        callback: @callback,
+        sublevelCallback: @sublevel_callback,
+    }
+
+    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
+      app_options[:copyrightStrings] = build_copyright_strings
+    end
 
     app_options
   end
@@ -321,6 +365,7 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['final_level'] = script_level.final_level? if script_level
 
     # Unused Blocks option
     ## TODO (elijah) replace this with more-permanent level configuration
@@ -376,8 +421,8 @@ module LevelsHelper
     # TTS
     # TTS is currently only enabled for k1
     if script && script.is_k1?
-      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file}"
-      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file}"
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end
 
     if @level.is_a? NetSim

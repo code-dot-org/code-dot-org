@@ -303,41 +303,41 @@
   studiobar_shop_title: Obchod
   studiobar_shop_body: Opusťte stereotypy. Noste hrdě naše logo.
   homepage_hero_text_malala: "&ldquo;Vyzývám divky v každé zemi, aby se učily jednu
-    Hodinu kódu&rdquo; \nMalala, nosiltelka Nobelovy ceny za mír\n"
-  homepage_hero_text_susan: |
+    Hodinu kódu&rdquo; \nMalala, nosiltelka Nobelovy ceny za mír"
+  homepage_hero_text_susan: |-
     &ldquo;Když umíš změnit technologii,
     umíš změnit svět.&rdquo;
     Susan, CEO YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Nehraj si jen se svým telefonem,
     programuj ho.&rdquo;
     President Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Naše děti &mdash; včetně dívek &mdash;
     potřebují dostat příležitost učit se informatiku.&rdquo;
     Sheryl, COO z Facebooku
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Informatika umí otevřít ty nejlepší příležitosti ve světě.&rdquo;
     Satya, CEO Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Když programuješ, můžeš si vybrat a zvolit směr svého života.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: '"Tyto dovednosti změnily moji budoucnost. Nemluvě
     o tom, že je to prostě zábava." Luna, sedmá třída'
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Nikdy před tím jsem neviděl děti tak nadšené z učení.&rdquo;
     Michael, učitel
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Informatika je oblast, o které nevíte, zda ji máte nebo nemáte rádi, dokud si ji nevyzkoušíte.&rdquo;
     Jackson, 6th grade
   homepage_hero_text_student4: "&ldquo;Cokoliv co tvůj rozum chce, můžeš naprogramovat.&rdquo;
-    \nMaya, 2. třída\n"
+    \nMaya, 2. třída"
   homepage_hero_text_student5: "&ldquo;Informatika není pro někoho jiného. Je zde
-    pro tebe a hned.&rdquo; \nGeraldo, učitel\n"
+    pro tebe a hned.&rdquo; \nGeraldo, učitel"
   homepage_hero_text_teacher1: "&ldquo;Programování podněcuje kreativitu, inspiraci
     a inovaci &mdash; \nvšechno toto je nezbytné pro jakoukoliv kariéru.&rdquo;\nFloresa,
-    učitel\n"
-  homepage_hero_text_teacher2: |
+    učitel"
+  homepage_hero_text_teacher2: |-
     &ldquo;Tento program zaujal 100% mé studenty tak, že se zapojili a zúčastnili.&rdquo;
     Adam, učitel
   homepage_hero_text_stat_loc: 2.5 milionů dívek se zapsalo na výuku v Code Studiu
@@ -606,8 +606,6 @@
     dokončili tento kurz
   dashboard_landing_educator_blog: Přečti si o novinkách a aktualizacích našich materiálů
     na našem blogu Educator
-  dashboard_landing_smart_hints: Prosím, pomozte nám s přidáním chytrých tipů na Code.org
-    výukové programy
   dashboard_landing_video_player: Vyzkoušejte náš nový video přehrávač ve vaší škole
   dashboard_landing_progress_title: Hlavní postup ve třídě
   dashboard_landing_progress_biggest: To je postup pro váš největší oddíl.
@@ -768,6 +766,18 @@
   dashboard_sections_no_move: Ne, chci studenta nebo studenty přesunout tak, aby byli
     pouze v nové sekci.
   dashboard_sections_move_students: Přesunout studenty
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: Nevybrali jste žádné studenty pro přesun. Vyberte
     prosím alespoň jednoho studenta.
   dashboard_error_other_section: Jestliže přesouváte studenty mezi vašimi vlastními
@@ -906,6 +916,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Zjisti více
   dashboard_announce_try_now_button: Vyzkoušej hned
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Jako učitel patříte mezi propagátory hnutí za to, aby
     každý student v každé škole dostal příležitost učit se informatiku. A teď je čas,
     aby vaši zástupci vyslechli Váš názor. Tento týden se zástupci učitelů, 28 guvernérů
@@ -915,6 +926,11 @@
   dashboard_announce_petition_button: Přidej své jméno
   dashboard_announce_all: Udržuj krok s novými funkcemi a aktualizacemi na našem blogu
     učitele. <a href='%{teacher_blog_url}' target='_blank'>Podívej se na minulé oznámení.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   host_an_hour: Host an hour
@@ -1053,6 +1069,7 @@
   csp1_name: '1. lekce: Internet'
   csp2_name: '2. lekce: Digitální informace'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "Úplný test - 50 otázek"
   cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
   cspexam2-AKwgAh1ac5_name: 2. část testu - 25 otázek
@@ -1758,3 +1775,12 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

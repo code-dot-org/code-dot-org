@@ -4,6 +4,7 @@
 import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
+import i18n from './locale';
 
 const styles = {
   tutorialDetailModalHeader: {
@@ -15,7 +16,9 @@ const styles = {
   tutorialDetailModalBody: {
     paddingTop: 0,
     overflow: 'hidden',
-    textAlign: 'left'
+    textAlign: 'left',
+    maxHeight: 'calc(100vh - 100px)',
+    overflowY: 'auto'
   },
   popupFullWidth: {
     position: 'absolute',
@@ -23,9 +26,22 @@ const styles = {
     top: 0,
     width: '100%'
   },
+  tutorialDetailImageContainer: {
+    float: "left",
+    paddingBottom: 10
+  },
+  tutorialDetailInfoContainer: {
+    float: "left",
+    paddingLeft: 20
+  },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 22
+    fontSize: 22,
+    paddingBottom: 4
+  },
+  tutorialDetailPublisher: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 16
   },
   tutorialDetailSub: {
     fontFamily: '"Gotham 3r", sans-serif',
@@ -56,27 +72,28 @@ const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
     item: shapes.tutorial.isRequired,
-    closeClicked: React.PropTypes.func.isRequired,
+    closeClicked: React.PropTypes.func.isRequired
   },
 
   render() {
     if (!this.props.showing) {
-      // Disable body scrolling.
+      // Enable body scrolling.
       $('body').css('overflow', 'auto');
       return null;
     }
 
-    // Enable body scrolling.
+    // Disable body scrolling.
     $('body').css('overflow', 'hidden');
 
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
-      {key: 1, title: "Length",                  body: getTagString("length", this.props.item.tags_length)},
-      {key: 2, title: "Subjects",                body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 3, title: "Educator Experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
-      {key: 4, title: "Student Experience",      body: getTagString("student_experience", this.props.item.tags_student_experience)},
-      {key: 5, title: "Type of Activity",        body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      {key: 6, title: "International Languages", body: getTagString("international_languages", this.props.item.tags_international_languages)},
+      // Reserve key 1 for the optional short link.
+      {key: 2, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
+      {key: 3, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
+      {key: 4, title: i18n.filterTeacherExperience(), body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
+      {key: 5, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 6, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
+      // Reserve key 6 for international languages.
     ];
 
     return (
@@ -120,19 +137,20 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div className="col-50">
+                <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
                   <img
-                    src={this.props.item.image}
+                    src={this.props.item.image.replace(".png", ".jpg")}
                     style={{width: '100%'}}
                   />
                 </div>
-                <div
-                  className="col-50"
-                  style={{paddingLeft: 20}}
-                >
+                <div style={styles.tutorialDetailInfoContainer} className="col-xs-12 col-sm-6">
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>
+                  {this.props.item.orgname !== "do-not-show" &&
+                    <div style={styles.tutorialDetailPublisher}>
+                      {this.props.item.orgname}
+                    </div>}
                   <div style={styles.tutorialDetailSub}>
                     {getTutorialDetailString(this.props.item)}
                   </div>
@@ -146,19 +164,30 @@ const TutorialDetail = React.createClass({
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
-                  {this.props.item.teachers_notes &&
-                    <tr key={0}>
-                      <td style={styles.tutorialDetailsTableTitle}>
-                        More resources
-                      </td>
-                      <td style={styles.tutorialDetailsTableBody}>
-                        <a href={this.props.item.teachers_notes} target="_blank">
-                          <i className="fa fa-external-link" aria-hidden={true}></i>
-                          &nbsp;
-                          Teachers' notes
-                        </a>
-                      </td>
-                    </tr>}
+                    {this.props.item.teachers_notes &&
+                      <tr key={0}>
+                        <td style={styles.tutorialDetailsTableTitle}>
+                          More resources
+                        </td>
+                        <td style={styles.tutorialDetailsTableBody}>
+                          <a href={this.props.item.teachers_notes} target="_blank">
+                            <i className="fa fa-external-link" aria-hidden={true}></i>
+                            &nbsp;
+                            {i18n.tutorialDetailsTeacherNotes()}
+                          </a>
+                        </td>
+                      </tr>}
+                    {this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 &&
+                      <tr key={1}>
+                        <td style={styles.tutorialDetailsTableTitle}>
+                          {i18n.tutorialDetailsShortLink()}
+                        </td>
+                        <td style={styles.tutorialDetailsTableBody}>
+                          <a href={`https://hourofcode.com/${this.props.item.short_code}`} target="_blank">
+                            {`https://hourofcode.com/${this.props.item.short_code}`}
+                          </a>
+                        </td>
+                      </tr>}
                     {tableEntries.map(item =>
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>
@@ -169,6 +198,14 @@ const TutorialDetail = React.createClass({
                         </td>
                       </tr>
                     )}
+                    <tr key={6}>
+                      <td style={styles.tutorialDetailsTableTitle}>
+                        {i18n.tutorialDetailInternationalLanguages()}
+                      </td>
+                      <td style={styles.tutorialDetailsTableBody}>
+                        {this.props.item.language}
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>

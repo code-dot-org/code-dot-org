@@ -35,7 +35,6 @@ var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
 var dropletConfig = require('./dropletConfig');
-var experiments = require('../experiments');
 
 var MazeMap = require('./mazeMap');
 
@@ -356,7 +355,7 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.subtype = new Bee(Maze, studioApp, config);
@@ -1194,8 +1193,8 @@ function animateAction(action, spotlightBlocks, timePerStep) {
     case 'get_pumpkin':
       Maze.subtype.animateGetPumpkin();
       break;
-    case 'get_bean':
-      Maze.subtype.animateGetBean();
+    case 'get_lettuce':
+      Maze.subtype.animateGetLettuce();
       break;
     case 'plant':
       Maze.subtype.animatePlant();

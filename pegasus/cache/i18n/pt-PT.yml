@@ -38,8 +38,8 @@
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
   og_title: Todos os alunos merecem uma oportunidade
-  og_description: Todos os alunos de todas as escolas merecem a oportunidade de ter
-    uma disciplina de informática.
+  og_description: Every student in every school deserves the opportunity to study
+    computer science. It's changing everything.
   hoc2014_heading: Participa na <a href="http://hourofcode.com">Hora de Código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -267,7 +267,7 @@
   learn_next_level: Experimentar outro curso do Code Studio
   learn_online: Experimentar outros cursos online
   learn_classes: Encontrar aulas perto de ti
-  hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
   just_did_course1: Vejam! Acabei de concluir o curso 1! @codeorg
   just_did_course2: Vejam! Acabei de concluir o curso 2! @codeorg
@@ -295,8 +295,8 @@
     100%." - Nina Nichols Peery, Professora'
   stats_student: '"Eu sabia que isto era uma oportunidade <b>única</b>." - Mariana
     Alzate, Aluna do 5.º Ano'
-  stats_michael: '"<b>Nunca vi</b> os meus alunos tão interessados em explorar um
-    assunto." - Michael Clark, Professor'
+  stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
+    - Michael Clark, professor'
   studiobar_title: Explora o <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Explora o Code Studio
   studiobar_elementary_title: Cursos elementares
@@ -314,51 +314,51 @@
     a programar
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
-  homepage_hero_text_malala: |
+  homepage_hero_text_malala: |-
     &ldquo;Eu desafio todas as raparigas do mundo
     a experimentarem uma Hora de Código.&rdquo;
     Malala, Prémio Nobel da Paz
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;Se é possível mudar a tecnologia,
     é possível mudar o mundo.&rdquo;
     Susan, CEO do YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Em vez de jogares no teu telemóvel,
     aprende a programá-lo.&rdquo;
     Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Os nossos filhos &mdash; e filhas &mdash; devem ter
     todos a oportunidade de ter uma disciplina de informática.&rdquo;
     Sheryl, COO do Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;A informática permite-te descobrir as
     melhores oportunidades no mundo.&rdquo;
     Satya, CEO da Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Se souberes programar, sabes
     que podes definir toda a tua vida.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;A informática mudou o meu futuro.
     Além de que é muito divertida.&rdquo;
     Luna, Aluna do 7.º Ano
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Nunca vi os meus alunos tão interessados
     em explorar um assunto.&rdquo;
     Michael, Professor
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;A única forma de saberes se gostas, ou não,
     de informática é experimentar.&rdquo;
     Jackson, Aluno do 6.º Ano
   homepage_hero_text_student4: "&ldquo;Com a programação, podes\nfazer tudo o que
-    quiseres.&rdquo; \nMaya, 2nd grade\n"
+    quiseres.&rdquo; \nMaya, 2nd grade"
   homepage_hero_text_student5: "&ldquo;A informática é para ti.\nAqui e agora.&rdquo;
-    \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: |
+    \nGeraldo, teacher"
+  homepage_hero_text_teacher1: |-
     &ldquo;A programação estimula a criatividade, a inspiração e a inovação &mdash;
     que são essenciais para qualquer carreira.&rdquo;
     Floresa, Professora
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Este programa consegue que os meus
     alunos se empenhem a 100% em tudo o que fazem.&rdquo;
     Adam, Professor
@@ -405,7 +405,7 @@
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Saber mais
   homepage_slot_text_title_hoc: Hora de Código
-  homepage_slot_text_blurb_hoc: |
+  homepage_slot_text_blurb_hoc: |-
     Todos podem aprender.
     Começa hoje com uma Hora de Código.
   homepage_slot_text_link_hoc: Exprimenta a Hora de Código
@@ -645,8 +645,6 @@
     esse curso
   dashboard_landing_educator_blog: Leia sobre notícias e atualizações nos materiais
     disponíveis em nosso Blog do Professor
-  dashboard_landing_smart_hints: Ajude-nos a acrescentar dicas inteligentes nos tutoriais
-    da Code.org
   dashboard_landing_video_player: Teste nosso novo player de vídeo na sua escola
   dashboard_landing_progress_title: Progresso da turma principal
   dashboard_landing_progress_biggest: Este é o progresso da tua maior turma.
@@ -803,6 +801,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Mover alunos
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -944,6 +954,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Saber mais
   dashboard_announce_try_now_button: Experimentar agora
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -952,6 +963,11 @@
   dashboard_announce_petition_button: Adicionar o teu nome
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1093,6 +1109,7 @@
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 1: Informação Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Teste Completo - 50 questões
   cspexam1-mWU7ilDYM9_name: Teste Parte 1 - 25 perguntas
   cspexam2-AKwgAh1ac5_name: Teste Parte 2 - 25 perguntas
@@ -1858,3 +1875,12 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

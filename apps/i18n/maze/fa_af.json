@@ -3,8 +3,6 @@
   "atFlower": "در گل",
   "atHoneycomb": "در کندوی عسل",
   "avoidCowAndRemove": "از گاو دوری کنید و ۱ را حذف کنید",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "گلی که رویش هستی دیگر شهد ندارد.",
   "get": "بگیر",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "ارتفاع",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "اگر راهی در مسیر مشخصی وجود دارد,اولین از سری اقدامات را انجام ده,در غیر این صورت به سراغ دومین اقدام برو.",
   "insufficientHoney": "تو از بلوک‌های درست استفاده میکنی، اما باید به مقدار صحیح عسل درست کنی.",
   "insufficientNectar": "تو از بلوک‌های درست استفاده میکنی، اما باید میزان شهد صحیح را جمع کنی.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "بساز",
   "moveBackward": "حرکت به عقب",
   "moveEastTooltip": "من را یک قدم به سمت شرق ببر.",
@@ -111,5 +111,6 @@
   "word": "کلمه را پیدا کنید",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "بله",
-  "youSpelled": "اسپل کنید"
+  "youSpelled": "اسپل کنید",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

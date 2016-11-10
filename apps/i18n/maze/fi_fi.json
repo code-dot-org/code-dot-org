@@ -3,8 +3,6 @@
   "atFlower": "kukan luona",
   "atHoneycomb": "hunajakennossa",
   "avoidCowAndRemove": "Vältä lehmää ja poista 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Kukkassa jonka päällä olet ei ole enään mettä.",
   "get": "kerää",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "korkeus",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Jos määrätyssä suunnassa on polku, niin suorita ensimmäinen lohko toimintoja. Muuten suorita toinen lohko toimintoja.",
   "insufficientHoney": "Sinun täytyy tehdä oikea määrä hunajaa.",
   "insufficientNectar": "Sinun täytyy kerätä oikea määrä mettä.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "tee",
   "moveBackward": "Liiku taaksepäin",
   "moveEastTooltip": "Liikuta minua yksi askel itään.",
@@ -111,5 +111,6 @@
   "word": "Etsi sana",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Kyllä",
-  "youSpelled": "Kirjoitit"
+  "youSpelled": "Kirjoitit",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

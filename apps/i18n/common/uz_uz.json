@@ -53,6 +53,12 @@
   "directionNortheastLetter": "NE",
   "directionSouthwestLetter": "SW",
   "directionSoutheastLetter": "SE",
+  "disabledButtonsInfo": "Your progress and code will not be saved during Hour of Code.",
+  "disabledButtonsWarning": "Warning:",
+  "disabledButtonsWhy": "Why are my bubbles gray?",
+  "disabledProgress1": "Any progress you make this week on your course will not be saved due to the level of traffic our site receives for the Hour of Code week.",
+  "disabledProgress2": "This is why all your bubbles are displayed as gray (don’t worry, your progress from before this week is still safe).",
+  "disabledProgress3": "We encourage you to try Hour of Code tutorials instead this week.",
   "dontForget": "Don't forget",
   "dropletBlock_addOperator_description": "Add two numbers",
   "dropletBlock_addOperator_signatureOverride": "Add operator",
@@ -161,6 +167,7 @@
   "finalStage": "Congratulations! You have completed the final stage.",
   "finalStageTrophies": "Congratulations! You have completed the final stage and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "Finish",
+  "forTeachersOnly": "For Teachers Only",
   "generatedCodeInfo": "Even top universities teach block-based coding (e.g., {berkeleyLink}, {harvardLink}). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:",
   "hashError": "Sorry, '%1' doesn't correspond with any saved program.",
   "help": "Help",
@@ -180,6 +187,7 @@
   "jump": "jump",
   "keepPlaying": "Keep playing",
   "keyValuePairLink": "Key/value pairs",
+  "learnMore": "Ko‘proq bilish",
   "less": "Less",
   "levelIncompleteError": "You are using all of the necessary types of blocks but not in the right way.",
   "listVariable": "list",
@@ -250,6 +258,7 @@
   "saving": "Saving...",
   "score": "score",
   "selectSection": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left.",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left.",
   "sendToPhone": "Send To Phone",
   "shareFailure": "Sorry, we can't share this program.",
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
@@ -306,5 +315,5 @@
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
   "yes": "Yes",
-  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
+  "predictionInstructions": "Make a prediction before you run the program."
 }

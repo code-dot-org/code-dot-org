@@ -20,7 +20,7 @@ import AppStorage from './appStorage';
 import FirebaseStorage from './firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
 import { getDatabase } from './firebaseUtils';
-import experiments from '../experiments';
+import experiments from "../util/experiments";
 import apiTimeoutList from '../timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -37,6 +37,7 @@ import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
 import {Provider} from 'react-redux';
 import reducers from './reducers';
+import {add as addWatcher} from '../redux/watchedExpressions';
 import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
@@ -373,12 +374,11 @@ function renderFooterInSharedGame() {
       link: '/report_abuse',
       newWindow: true
     },
-    {
+    !dom.isMobile() && {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
-      hideOnMobile: true
     },
-    {
+    window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
       link: getProjectUrl() + '/view',
     },
@@ -392,12 +392,7 @@ function renderFooterInSharedGame() {
       link: 'https://code.org/privacy',
       newWindow: true
     }
-  ];
-  if (dom.isMobile()) {
-    menuItems = menuItems.filter(function (item) {
-      return !item.hideOnMobile;
-    });
-  }
+  ].filter(item => item);
 
   ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',
@@ -733,6 +728,15 @@ Applab.init = function (config) {
     }
 
     setupReduxSubscribers(studioApp.reduxStore);
+    if (config.level.watchersPrepopulated) {
+      try {
+        JSON.parse(config.level.watchersPrepopulated).forEach(option => {
+          studioApp.reduxStore.dispatch(addWatcher(option));
+        });
+      } catch (e) {
+        console.warn('Error pre-populating watchers.');
+      }
+    }
 
     designMode.addKeyboardHandlers();
     designMode.renderDesignWorkspace();
@@ -763,7 +767,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: false
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(

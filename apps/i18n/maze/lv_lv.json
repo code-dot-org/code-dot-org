@@ -3,8 +3,6 @@
   "atFlower": "pie zieda",
   "atHoneycomb": "pie meduskāres",
   "avoidCowAndRemove": "izvairies no govs un noņem 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Zieds, uz kura tu atrodies, vairs nesatur nektāru.",
   "get": "iegūt",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "augstums",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Ja ir ceļš noteiktājā virzienā, tad darīt pirmā bloka darbības. Citādi, darīt otra bloka darbības.",
   "insufficientHoney": "Tev jāpagatavo pareizo daudzumu medus.",
   "insufficientNectar": "Tev ir jāsavāc pareizais nektāra daudzums.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "pagatavot",
   "moveBackward": "pārvietot uz atpakaļ",
   "moveEastTooltip": "Pārvietot mani uz austrumiem vienu lauciņu.",
@@ -111,5 +111,6 @@
   "word": "Atrodi vārdu",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Jā",
-  "youSpelled": "Jūs uzrakstījāt"
+  "youSpelled": "Jūs uzrakstījāt",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

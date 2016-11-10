@@ -7,14 +7,14 @@ nav: plc_csp_nav
 <iframe width="600" height="337" src="https://www.youtube.com/embed/HoKRZRI9IDk" frameborder="0" allowfullscreen></iframe>
 <br />
 
-The Code.org Computer Science Principles (CSP) Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CSP course. This program is designed to prepare educators to provide high quality instruction based on the [CSP curriculum](/educate/csp), tools and approach to students in their classrooms. 
+The Code.org Computer Science Principles Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. 
 
-## What does a Code.org CSP educator do?
-If accepted into the Code.org CSP Professional Learning Program, you will:
+## What does a Code.org CS Principles educator do?
+If accepted into the Code.org CS Principles Professional Learning Program, you will:
 
 - Join a nationwide community of educators working to change the face of CS education 
 - Participate in in-person and online professional development
-- Plan and deliver the CSP curriculum to your students, and reflect on your experiences 
+- Plan and deliver the CS Principles curriculum to your students, and reflect on your experiences 
  
  
 ## <a name="components"></a>How does it work?
@@ -26,7 +26,7 @@ The program has two components:
   - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further explorating the curriculum.
 
 
-[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
+[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## <a name="commitments"></a>What are the program commitments?
 
@@ -45,11 +45,11 @@ Continuing Professional Development: (September - June)
 
 ## <a name="participate"></a>Who can participate?
 
-The CSP Educator Development Program is open to teachers who are interested in teaching the Code.org CSP course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2017-18 school year by having a slot on their school's master schedule. 
+The CS Principles Educator Development Program is open to teachers who are interested in teaching the Code.org CS Principles course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CS Principles course in their classroom during the 2017-18 school year by having a slot on their school's master schedule. 
 
 
 ## <a name="locations"></a>Where is the program offered?
 
-We're so excited that you're interested in applying for our Professional Learning Program! We are at capacity for this year, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when next year's application is live.
+We're so excited that you're interested in applying for our Professional Learning Program! We are at capacity for this year, but [fill out our interest form](https://goo.gl/forms/jBWAHg5jvEV8lSV52) to find out when next year's application is live.
 
-[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
+[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)

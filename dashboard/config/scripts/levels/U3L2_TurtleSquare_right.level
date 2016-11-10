@@ -103,6 +103,15 @@
       },
       {
         "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnRight() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of turnLeft() commands."
+      },
+      {
+        "entries": [
           "turnLeft"
         ],
         "matchType": "exact",
@@ -117,7 +126,10 @@
         "minTimes": 4,
         "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
       }
-    ]
+    ],
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

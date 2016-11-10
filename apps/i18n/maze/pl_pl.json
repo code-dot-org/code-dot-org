@@ -3,8 +3,6 @@
   "atFlower": "na kwiatku",
   "atHoneycomb": "na plastrze miodu",
   "avoidCowAndRemove": "unikaj krowy i usuń 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "zbierz",
   "collectiblePresent": "tu jest trochę skarbu",
   "collectorCollectTooltip": "Zbierz rzecz",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Kwiat, na którym jesteś nie ma już nektaru.",
   "get": "weź",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "wysokość",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Jeśli jest ścieżka w określonym kierunku, to wykonaj pierwszy blok działań. W przeciwnym razie, wykonaj drugi blok działań.",
   "insufficientHoney": "Musisz wyprodukować odpowiednią ilość miodu.",
   "insufficientNectar": "Musisz zgromadzić odpowiednią ilość nektaru.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "zrób",
   "moveBackward": "idź do tyłu",
   "moveEastTooltip": "Przesuń mnie o jedno miejsce na wschód.",
@@ -111,5 +111,6 @@
   "word": "Znajdź słowa",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Tak",
-  "youSpelled": "Przeliterowałeś"
+  "youSpelled": "Przeliterowałeś",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

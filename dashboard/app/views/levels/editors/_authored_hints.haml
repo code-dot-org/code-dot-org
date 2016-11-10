@@ -4,6 +4,7 @@
     .json_template
       .authored_hint_space
         %input.hint_type{type: 'hidden', value: 'general'}
+        %input.tts_url{type: 'hidden', value: 'general'}
         .row
           .span10
             %input.hint_id{type: 'text', placeholder: 'hint_id'}
@@ -79,7 +80,8 @@
           hint_class: "",
           hint_markdown: "",
           hint_id: "",
-          hint_type: "general"
+          hint_type: "general",
+          tts_url: "",
         }
       });
     });

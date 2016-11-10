@@ -251,7 +251,7 @@
   learn_next_level: "Продовжити до наступного рівня"
   learn_online: "Спробуйте інші курси онлайн"
   learn_classes: "Знайти місцеві класи"
-  hoc_is_here: "Вивчайте інформатику. Вона змінює все. https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: "Вивчайте інформатику. Вона змінює все.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "Я щойно завершив #HourOfCode - подивіться, що це! @codeorg"
   just_did_course1: "Щойно завершено Курс 1 - подивіться! @codeorg"
   just_did_course2: "Щойно завершено Курс 2 - подивіться! @codeorg"
@@ -298,47 +298,47 @@
   studiobar_shop_title: "Магазин"
   studiobar_shop_body: "Ламайте стереотипи. Гордо носіть наш логотип."
   homepage_hero_text_malala: "&ldquo;Я закликаю дівчат у всіх країнах\nвивчити одну
-    Годину коду&rdquo; \nМалала, лауеат Нобелівскої премії миру\n"
-  homepage_hero_text_susan: |
+    Годину коду&rdquo; \nМалала, лауеат Нобелівскої премії миру"
+  homepage_hero_text_susan: |-
     &ldquo;Якщо ви можете змінити технології,
     ви можете змінити світ.&rdquo;
     Сюзен, виконавчий директор YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Не просто грайтесь на вашому телефоні,
     програмуйте його.&rdquo;
     Президент Барак Обама
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Нашим дітям &mdash; включно з дівчатками &mdash;
     потрібна можливість вивчати програмування.&rdquo;
     Шерил, операційний директор Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Інформатика допоможе розкрити
     кращі можливості в світі.&rdquo;
     Сатья, Генеральный директор Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Якщо вмієте програмувати, ви можете
     вибирати стежину в житті.&rdquo;
     Кріс Бош
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Ці знання змінили моє майбутнє.
     Вже не кажучи про те, що це цікаво.&rdquo;
     Луна, 7 клас
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Я ніколи не бачив своїх учнів
     настільки захопленими навчанням.&rdquo;
     Майкл, вчитель
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Інформатика - це така сфера, у якій ви не можете
     знати, чи вам це подобається, поки не спробуєте.&rdquo;
     Джексон, 6 клас
   homepage_hero_text_student4: "&ldquo;З допомогою програмування можна зробити \nвсе,
-    що забажає ваша фантазія .&rdquo; \nМайя, 2 клас\n"
+    що забажає ваша фантазія .&rdquo; \nМайя, 2 клас"
   homepage_hero_text_student5: "&ldquo;Інформатика - не для когось-там.\nВона для
-    тебе, тут і зараз.&rdquo; \nДжеральдо, вчитель\n"
+    тебе, тут і зараз.&rdquo; \nДжеральдо, вчитель"
   homepage_hero_text_teacher1: "&ldquo;Програмування пробуджує творчість, натхнення
     та інноваційність &mdash; \nа всі вони важливі для будь-якої професії.&rdquo;\nФлореза,
-    вчитель\n"
-  homepage_hero_text_teacher2: |
+    вчитель"
+  homepage_hero_text_teacher2: |-
     &ldquo;Ця програма спонукала 100% моїх учнів
     до активної участі та залучення.&rdquo;
     Адам, вчитель
@@ -348,7 +348,7 @@
   homepage_hero_text_stat_served: "Година коду: навчились #served"
   homepage_slot_text_hoc: "Година Коду"
   homepage_slot_text_frozen: "Крижане серце з Анною і Ельзою"
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: "Панель вчителя"
   homepage_slot_text_studio: "Всі наші підручники"
   homepage_slot_text_course4: "Курс 4"
   homepage_slot_text_shop: "Магазин"
@@ -608,8 +608,6 @@
     цей курс"
   dashboard_landing_educator_blog: "Читати про новини та оновлення наших матеріалів
     на нашому педагогічному блозі"
-  dashboard_landing_smart_hints: "Будь ласка, допоможіть нам додати смарт-теги у підручники
-    на Code.org"
   dashboard_landing_video_player: "Випробуйте наш новий відео-плеєр у своїй школі"
   dashboard_landing_progress_title: "Прогрес класу"
   dashboard_landing_progress_biggest: "Це прогрес Вашої найбільшої групи."
@@ -767,6 +765,18 @@
     ТА новій групі"
   dashboard_sections_no_move: "Ні, я хочу перемістити учнів у нову групу."
   dashboard_sections_move_students: "Перемістити учнів"
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: "Ви не обрали жодного учня для переміщення. Будь
     ласка, оберіть хоча б одного учня."
   dashboard_error_other_section: Якщо ви переміщуте учнів між власними групами, оберіть
@@ -889,20 +899,21 @@
   dashboard_faq: "Запитання й відповіді"
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: "Оголошення"
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Ціле літо ми перетворювали ваші відгуки
+    на нові можливості. Тепер ви можете <a href="%{pp_url}" target="_blank">відстежувати
+    прогрес багатьох учнів</a> навіть якщо вони програмують за одним пристроєм. Ви
+    можете скористатись <a href="%{csp_widgets_url}" target="_blank">найкращими інтерактивними
+    інструментами</a> з нашого курсу Основ інформатики у <i>будь-якому</i> класі.
+    А учні можуть <a href="%{unused_code_url}" target="_blank">зберігати невикористаний
+    код</a> у робочій області, що заохотить експерименти! Познайомтесь із усіма нашими
+    новими функціями і поділіться своїми враженнями.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "Дізнайтеся більше"
   dashboard_announce_try_now_button: "Спробувати"
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного
     учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися
     із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори
@@ -911,16 +922,21 @@
   dashboard_announce_petition_button: "Додайте своє ім'я"
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: "Година коду вже тут - 8-14 грудня!"
   code_sign_up: "Зареєструватися для участі протягом тижня інформатики"
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: "Проведіть Годину коду"
+  learn_banner_title: "Приєднуйтесь до нас на Годину коду"
+  learn_banner_desc: "Година коду - це глобальний рух, що сягнуть 100 мільйонів учнів
+    у більш, як 180 країнах світу. Кожен, у будь-якому місці може організувати подію
+    Години коду. Допоможіть нам надати кожному учневі можливість вивчати інформатику!
+    Організатори можуть слідкувати за нашими <a href='%{how_to_url}' target='_blank'>інструкціями</a>
+    для викладання Години коду та заохочення учнів <a href='%{videos_url}' target='_blank'>цими
+    роликами</a>."
   learn_more: "Спробувати зараз"
   learn_sign_up_description: "Зареєструйтесь для участі в Годині коду протягом тижня
     інформатики"
@@ -1052,6 +1068,7 @@
   csp1_name: "Розділ 1: Інтернет"
   csp2_name: "Розділ 2: Цифрова інформація"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "Повний тест - 50 запитань"
   cspexam1-mWU7ilDYM9_name: "Тест, частина 1 - 25 запитань"
   cspexam2-AKwgAh1ac5_name: "Тест, частина 2 - 25 запитань"
@@ -1767,3 +1784,12 @@
   infinity_shortcode: inf
   playlab_shortcode: "грати"
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

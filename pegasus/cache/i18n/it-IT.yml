@@ -217,7 +217,7 @@
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
   get_a_certificate_message: Ti manderemo un attestato e le informazioni su come <a
     href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>
-  get_a_certificate_message_after: |
+  get_a_certificate_message_after: |-
     Clicca sull'attestato per scaricarlo o stamparlo. Se sei un insegnante della scuola italiana scarica gli attestati dal sito di <a href="http://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">Programma il Futuro</a>.<br><br>
     Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
   thanks_for_submitting: Grazie per l'invio!
@@ -267,7 +267,7 @@
   learn_next_level: Prova un altro corso di Code Studio
   learn_online: Prova altri corsi on-line
   learn_classes: Trova le scuole locali
-  hoc_is_here: Impara l'informatica. Essa sta cambiando tutto. https://youtu.be/xJqSu1IbcHg.
+  hoc_is_here: Impara la scienza dell'informatica. Sta cambiando ogni cosa.
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala!
     @codeorg @programmafuturo'
   just_did_course1: Ho appena completato il Corso 1 - Provalo! Su @codeorg @programmafuturo
@@ -317,48 +317,48 @@
     imparare
   studiobar_shop_title: Negozio
   studiobar_shop_body: Rompete gli stereotipi. Indossate con orgoglio il nostro logo.
-  homepage_hero_text_malala: |
+  homepage_hero_text_malala: |-
     &ldquo;Invito le ragazze di ogni singola nazione ad imparare una Ora di Codice
     &rdquo; 
     Malala, Premio Nobel per la pace
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;Se si può cambiare la tecnologia,
     si può cambiare il mondo.&rdquo;
     Susan, Amministratore Delegato di YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Col tuo telefono non giocarci soltanto,
     programmalo.&rdquo;
     Il Presidente Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;I nostri figli &mdash; tra cui le nostre ragazze &mdash;
     devono avere l'opportunità di imparare informatica.&rdquo;
     Sheryl, Direttore Operativo di Facebook
   homepage_hero_text_satya: "&ldquo;L'informatica può creare \nle migliori opportunità
-    del mondo.&rdquo;\nSatya, Amministratore Delegato di Microsoft\n"
-  homepage_hero_text_bosh: |
+    del mondo.&rdquo;\nSatya, Amministratore Delegato di Microsoft"
+  homepage_hero_text_bosh: |-
     &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Queste competenze hanno cambiato il mio futuro.
     Per non parlare del fatto che per me è puro divertimento.&rdquo;
     Luna, 2° media
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Non ho mai e poi mai visto i miei studenti
     così entusiasti di imparare.&rdquo; 
     Michael, insegnante
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Non puoi sapere se l'informatica ti piacerà o meno prima di provarla.&rdquo;
     Jackson, 1° Media
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo; Con la programmazione puoi fare qualsiasi cosa la tua mente riesca ad immaginare.&rdquo;
     Maya, 2° elementare
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;Informatica non è per qualcun altro. È per te, qui e ora.&rdquo;
     Geraldo, insegnante
   homepage_hero_text_teacher1: "&ldquo;La programmazione stimola la creatività, l'ispirazione
     e l'innovazione &mdash; tutte qualità essenziali in qualsiasi settore lavorativo.&rdquo;
-    \nFloresa, insegnante\n"
-  homepage_hero_text_teacher2: |
+    \nFloresa, insegnante"
+  homepage_hero_text_teacher2: |-
     &ldquo;Questo programma ha fatto sì che il 100% dei miei studenti fosse impegnato, coinvolto e partecipe.&rdquo;
     Adam, insegnante
   homepage_hero_text_stat_loc: 2,5 milioni di ragazze si sono iscritte per imparare
@@ -367,7 +367,7 @@
   homepage_hero_text_stat_served: 'L''Ora del Codice: ne hanno già fatte #served'
   homepage_slot_text_hoc: L'Ora del Codice
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Cruscotto dell'Insegnante
   homepage_slot_text_studio: Tutti i nostri corsi
   homepage_slot_text_course4: Corso 4
   homepage_slot_text_shop: Negozio
@@ -638,8 +638,6 @@
     completano questo corso
   dashboard_landing_educator_blog: Leggi notizie e aggiornamenti relativi al nostro
     materiale didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
-  dashboard_landing_smart_hints: Per favore aiutaci ad aggiungere suggerimenti intelligenti
-    ai corsi di Code.org (solo in inglese, al momento)
   dashboard_landing_video_player: Prova nella tua scuola  il nostro nuovo visualizzatore
     di video
   dashboard_landing_progress_title: Progressi della classe principale
@@ -798,7 +796,7 @@
     le informazioni degli account di ognuno dei tuoi studenti.
   dashboard_sections_switch_section: 'Cambia classe:'
   dashboard_sections_close: Chiudi
-  dashboard_sections_move_students_desc: |
+  dashboard_sections_move_students_desc: |-
     Seleziona gli studenti da spostare in una nuova classe. Spostare gli studenti non eliminerà i loro progressi.<br><br>
     Se alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda "Avanzamento" dovrai selezionare dal menù a tendina il corso che avevano nella classe da cui provengono.<br><br>
     Inoltre, se la classe in cui vengono inseriti ha un diverso <i>tipo di accesso</i> rispetto alla classe da cui provengono, gli studenti riceveranno delle nuove password.
@@ -816,6 +814,18 @@
   dashboard_sections_no_move: No, voglio <b><u>spostare</u></b> gli studenti nella
     nuova classe <b><u>togliendoli</u></b> da quella attuale.
   dashboard_sections_move_students: Sposta gli studenti
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: Non hai selezionato alcuno studente. Per favore,
     scegli almeno uno studente.
   dashboard_error_other_section: Se stai spostando degli studenti tra le tue classi,
@@ -955,20 +965,22 @@
   dashboard_faq: FAQ - Domande e risposte
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Abbiamo passato l'estate a trasformare
+    le vostre segnalazioni in nuove funzionalità. Ora, potete <a href="%{pp_url}"
+    target="_blank">monitorare i vari progressi degli studenti</a> anche se stanno
+    programmando in coppia su un unico dispositivo. Potete utilizzare <a href="%{csp_widgets_url}"
+    target="_blank">i migliori strumenti interattivi</a> dal nostro corso CS prinicipale
+    in <i>qualsiasi</i> aula. E i vostri studenti possono <a href="%{unused_code_url}"
+    target="_blank">tenere i codici inutilizzati</a> nella loro area di lavoro per
+    incoraggiare la sperimentazione! Scoprite tutte le nostre nuove funzionalità e
+    fateci sapere che ne pensate.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Ulteriori informazioni
   dashboard_announce_try_now_button: Prova adesso
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Come insegnante, stai aprendo la strada per permettere
     ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
     è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
@@ -980,16 +992,21 @@
   dashboard_announce_all: Rimani aggiornato sulle nuove caratteristiche dei corsi
     di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli
     insegnanti (in inglese)</a>.
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: Ospita un'ora
+  learn_banner_title: Unisciti a noi per l'Ora del Codice
+  learn_banner_desc: L'ora del codice è un movimento globale che ha raggiunto oltre
+    100 milioni di studenti in più di 180 paesi. Chiunque, dovunque può organizzare
+    un evento Ora Del Codice. Aiutaci a dare ad ogni studente l'opportunità di imparare
+    la scienza dell'informatica! Gli organizzatori possono seguire la nostra <a href='%{how_to_url}'
+    target='_blank'>Guida alle procedure</a> per insegnare un Ora del Codice ed ispirare
+    gli studenti con <a href='%{videos_url}' target='_blank'>Questi video</a>.
   learn_more: Ulteriori informazioni
   learn_sign_up_description: Iscriviti per partecipare all'Ora del Codice durante
     la Settimana di Educazione all'Informatica
@@ -1122,6 +1139,7 @@
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Test completo - 50 domande
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
@@ -1892,3 +1910,12 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

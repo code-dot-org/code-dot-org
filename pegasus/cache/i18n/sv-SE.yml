@@ -4,10 +4,10 @@
   'yes': Ja
   'no': Nej
   select_language: Välj ditt språk
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org kommer snart ta bort stöd för Internet Explorer 8,
+    9 och 10. Uppgradera till en modern webbläsare.
+  upgrade_ie_message_csedweek: CSEdWeek.org kommer snart ta bort stöd för Internet
+    Explorer 8, 9 och 10. Uppgradera till en modern webbläsare.
   upgrade_ie_link: Lär dig mer
   en: Datavetenskap
   computer_science_edweek: Utbildningsvecka för dataveteskap
@@ -18,8 +18,8 @@
     font-weight:bold"> planera din kodtimme</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Är du en CS lärare? Se andra CSEdWeek resurser</a>'
-  n_have_learned_an_hoc: "<h1>Prova en</h1><h2>Timme av kod</h2><h3># serverad</h3>"
-  anybody_can_learn: Vem som helst kan lära sig.
+  n_have_learned_an_hoc: "<h1>Prova en</h1><h2>Hour of Code</h2><h3># har redan provat</h3>"
+  anybody_can_learn: Alla kan lära sig.
   learn_now: Lär dig nu
   petition_message: Alla elever i alla skolor borde ha möjligheten att lära sig datavetenskap
   petition_sign_message: 'Om du håller med så skriv ditt namn. Delta # andra.'
@@ -31,11 +31,11 @@
   zipcode: Postnummer eller land
   submit: Skicka in
   twentyhours_heading: Prova vår Introduktionskurs i Datavetenskap
-  twentyhours_text: Avslutat din första Kodtimme? Lär dig mer om grunderna i datavetenskap
+  twentyhours_text: Avslutat din första Hour of Code? Lär dig mer om grunderna i datavetenskap
     och programmering i den här uppföljningskursen.
   og_title: Every child deserves opportunity
   og_description: Every student in every school deserves the opportunity to study
-    computer science.
+    computer science. It's changing everything.
   hoc2014_heading: Gå med i <a href="http://hourofcode.com"> kodtimmen</a> <br/> 8-14
     December 2014 <br/>
   hoc2014_students: Elever
@@ -248,7 +248,7 @@
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
-  hoc_is_here: "#HourOfCode/Timmen med Kod är här - kolla! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -298,36 +298,36 @@
     lära sig med en Timme av Kod&rdquo; Malala, vinnare av Nobels fredspris"
   homepage_hero_text_susan: "&ldquo; Om du kan förändra tekniken, kan du förändra
     världen.&rdquo;Susan, CEO YouTube"
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Använd inte din telefon bara till att spela på, programmera den..&rdquo;
     President Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Våra barn &mdash; inklusive våra flickor &mdash;
     behöver få möjlighet att lära sig datavetenskap.&rdquo;
     Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Datavetenskap kan ge dig de bästa möjligheter i världen.&rdquo;
     Satya, CEO Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Om du kodar, kan du välja din egen kurs i livet.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Dessa kunskaper har förändrat min framtid. För att inte tala om att det helt enkelt är roligt.&rdquo;
     Luna, 7th grade
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Jag har aldrig sett mina elever så exalterade i undervisningen.&rdquo;
     Michael, teacher
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Datavetenskap är något du inte kan veta om du gillar innan du provat.&rdquo;
     Jackson, 6:e klass
   homepage_hero_text_student4: "&ldquo;Du kan göra allt du kan föreställa dig med
-    programmering.&rdquo; \nMaya, 2:a klass\n"
+    programmering.&rdquo; \nMaya, 2:a klass"
   homepage_hero_text_student5: "&ldquo;Datavetenskap är inte för någon annan. Det
-    är för dig, nu.&rdquo; \nGeraldo, lärare\n"
+    är för dig, nu.&rdquo; \nGeraldo, lärare"
   homepage_hero_text_teacher1: "&ldquo;Kodning får igång kreativitet, inspiration
     och uppfinningslusta &mdash; \nvilka alla är viktiga i alla karriärer.&rdquo;\nFloresa,
-    teacher\n"
-  homepage_hero_text_teacher2: |
+    teacher"
+  homepage_hero_text_teacher2: |-
     &ldquo;Det här programmet fick 100% av mina elever att bli engagerade, involverade och deltagande.&rdquo;
     Adam, lärare
   homepage_hero_text_stat_loc: "#loc rader kod skriven av studenter"
@@ -353,7 +353,7 @@
   homepage_action_text_signpetition: Skriv på uppropet
   homepage_signpetition_dropdown: Underteckna vår namninsamling &#x25BE;
   homepage_diversity_pledge: Ta mångfalds-märket
-  homepage_banner_text_prizes: 'Hour of Code kommer igen, December 7-13. '
+  homepage_banner_text_prizes: 'Hour of Code kommer igen, 5-11 december. '
   homepage_banner_link_prizes: 'Gå med i det största lärande eventet i historien. '
   homepage_banner_text_main: Code.org och College Board bildar en allians för att
     förbättra mångfalden i datavetenskap.
@@ -476,15 +476,15 @@
   volunteer_engineer_submission_title: Inspirera elever och frivilliga för Hour of
     Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 lärare kommer att vara
-    värdar för Hour of Code i sina klassrum detta år,7-13 dec, 2015. De vill ha din
-    hjälp! '
+    värdar för Hour of Code i sina klassrum detta år,5-11 december 2016. De vill ha
+    din hjälp! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} lärare önskar
     frivilliga brinner för datavetenskaplig utbildning att hjälpa till med deras Hour
     of Code i December. <br>%{num_volunteers} frivilliga har anmält sig. Anslut dig."
   volunteer_engineer_submission_intro_background: Hour of Code är en global rörelse
     för att prova en timme introduktion till datavetenskap som når tiotals miljoner
     studenter i 180 + länder. Kom gärna med under Computer Science Education Week,
-    7-13 december.
+    5-11 december.
   volunteer_engineer_submission_intro_recruit: 'Dessa lärare vill gärna ha någon <span
     style="font-family: ''Gotham 7r'', sans-serif;"> teknisk person</span> som kan
     hjälpa till i klassrummet, eller någon som kan <span style="font-family: ''Gotham
@@ -598,8 +598,6 @@
   dashboard_landing_print_certificates: Skriva ut diplom för elever som avslutat kursen
   dashboard_landing_educator_blog: Läs om nyheter och uppdateringar till våra material
     på vår Educator Blog
-  dashboard_landing_smart_hints: Hjälp oss att lägga till smarta tips till Code.org
-    övningar
   dashboard_landing_video_player: Testa vår nya video-spelare på din skola
   dashboard_landing_progress_title: Huvudklass framsteg
   dashboard_landing_progress_biggest: Detta är framstegen för din största avdelning.
@@ -751,6 +749,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -887,6 +897,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Lär dig mer
   dashboard_announce_try_now_button: Prova nu
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -895,7 +906,12 @@
   dashboard_announce_petition_button: Ange ditt namn
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
-  code_hoc_coming: Kodtimmen är här – 8-14 december!
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
+  code_hoc_coming: Hour of Code är här 5-11 december!
   code_sign_up: Registrera dig för att kunna delta i CS utbildnings- vecka
   host_an_hour: Host an hour
   learn_banner_title: Join us for the Hour of Code
@@ -1033,6 +1049,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1751,3 +1768,12 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

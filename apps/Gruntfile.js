@@ -45,18 +45,18 @@ module.exports = function (grunt) {
 
   /** @const {string[]} */
   var ALL_APPS = [
-    'maze',
-    'turtle',
-    'bounce',
-    'flappy',
-    'studio',
-    'jigsaw',
-    'calc',
     'applab',
-    'eval',
-    'netsim',
+    'bounce',
+    'calc',
     'craft',
+    'eval',
+    'flappy',
     'gamelab',
+    'jigsaw',
+    'maze',
+    'netsim',
+    'studio',
+    'turtle',
     'weblab'
   ];
 
@@ -165,10 +165,18 @@ module.exports = function (grunt) {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
+        // Pull p5.js and p5.play.js into the package from our fork of the
+        // p5.play repo at https://github.com/code-dot-org/p5.play
         {
           expand: true,
-          cwd: 'lib/p5play',
-          src: ['*.js'],
+          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          src: ['p5.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: './node_modules/@code-dot-org/p5.play/lib',
+          src: ['p5.play.js'],
           dest: 'build/package/js/p5play/'
         },
         {
@@ -346,49 +354,47 @@ module.exports = function (grunt) {
 
 
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
-    return [app, './src/' + app + '/main.js'];
+    return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }).concat(
     appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
   ));
   var codeStudioEntries = {
-    'code-studio': './src/code-studio/code-studio.js',
-    'levelbuilder': './src/code-studio/levelbuilder.js',
-    'levelbuilder_markdown': './src/code-studio/levelbuilder_markdown.js',
-    'levelbuilder_studio': './src/code-studio/levelbuilder_studio.js',
-    'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
-    'levelbuilder_applab': './src/code-studio/levelbuilder_applab.js',
-    'levelbuilder_edit_script': './src/code-studio/levelbuilder_edit_script.js',
-    'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
-    'districtDropdown': './src/code-studio/districtDropdown.js',
-    'signup': './src/code-studio/signup.js',
-    'termsInterstitial': './src/code-studio/termsInterstitial.js',
-    'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
-    'levels/widget': './src/code-studio/levels/widget.js',
-    'levels/external': './src/code-studio/levels/external.js',
-    // put these entry points in arrays so that they can be required elsewhere
-    // https://github.com/webpack/webpack/issues/300
-    'levels/multi': ['./src/code-studio/levels/multi.js'],
-    'levels/textMatch': ['./src/code-studio/levels/textMatch.js'],
-    'levels/levelGroup': './src/code-studio/levels/levelGroup.js',
-    'levels/dashboardDialogHelper': './src/code-studio/levels/dashboardDialogHelper.js',
-    'initApp/initApp': './src/code-studio/initApp/initApp.js'
+    'code-studio':                  './src/sites/studio/pages/code-studio.js',
+    'districtDropdown':             './src/sites/studio/pages/districtDropdown.js',
+    'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
+    'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
+    'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
+    'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
+    'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
+    'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
+    'levels/external':              './src/sites/studio/pages/levels/external.js',
+    'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
+    'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
+    'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
+    'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'signup':                       './src/sites/studio/pages/signup.js',
+    'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
+    'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
+    'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
 
   var otherEntries = {
-    plc: './src/code-studio/plc/plc.js',
-
+    plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
     // (I wonder how much more we could slim it down by removing jQuery!)
     // @see embed.html.haml
-    embedVideo: './src/code-studio/embedVideo.js',
+    embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
-    embedBlocks: './src/code-studio/embedBlocks.js',
+    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
@@ -409,11 +415,16 @@ module.exports = function (grunt) {
 
     return webpackConfig.create({
       output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: _.extend(
-        {},
-        appsEntries,
-        codeStudioEntries,
-        otherEntries
+      entries: _.mapValues(
+        _.extend(
+          {},
+          appsEntries,
+          codeStudioEntries,
+          otherEntries
+        ),
+        function (val) {
+          return ['./src/util/idempotent-babel-polyfill'].concat(val);
+        }
       ),
       externals: [
         {
@@ -584,7 +595,7 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    appsToBuild.concat('common').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';
@@ -671,6 +682,7 @@ module.exports = function (grunt) {
     'karma:integration'
   ]);
 
+  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
   grunt.registerTask('codeStudioTest', [
     'preconcat',
     'concat',

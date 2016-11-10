@@ -37,7 +37,6 @@ import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
-import experiments from '../experiments';
 import paramLists from './paramLists.js';
 import sharedConstants from '../constants';
 import studioCell from './cell';
@@ -1939,7 +1938,7 @@ Studio.init = function (config) {
   }
 
   config.appMsg = studioMsg;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   Studio.initSprites();
 
@@ -2853,9 +2852,15 @@ Studio.execute = function () {
     Studio.interpretedHandlers = {};
 
     if (studioApp.initializationBlocks) {
-      let initializationCode = Blockly.Generator.blocksToCode('JavaScript',
-          studioApp.initializationBlocks);
-      registerHandlersForCode(handlers, 'whenGameStarts', initializationCode);
+      studioApp.initializationBlocks.forEach(function (topBlock) {
+        // by default, blocks are queued to run once at game start.
+        // Repeat forever blocks, however, need their own handler.
+        const handlerType = (topBlock.type === 'studio_repeatForever') ?
+          'repeatForever' :
+          'whenGameStarts';
+        const code = Blockly.Generator.blocksToCode('JavaScript', [topBlock]);
+        registerHandlersForCode(handlers, handlerType, code);
+      });
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
@@ -2972,7 +2977,8 @@ Studio.execute = function () {
           // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
           Object.defineProperty(Studio, 'Globals', {
             get: () => {return hook.func() || {};},
-            set: () => {}
+            set: () => {},
+            configurable: true,
           });
         } else {
           registerEventHandler(handlers, hook.name, hook.func);

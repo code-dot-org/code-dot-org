@@ -30,8 +30,12 @@ class ActivitiesController < ApplicationController
     # Immediately return with a "Service Unavailable" status if milestone posts are
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
-    enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    unless enabled
+    # Check a second switch if we passed the last level of the script.
+    # Keep this logic in sync with code-studio/reporting#sendReport on the client.
+    post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
+    post_final_milestone = Gatekeeper.allows('postFinalMilestone', where: {script_name: script_name}, default: true)
+    solved_final_level = solved && @script_level.try(:final_level?)
+    unless post_milestone || (post_final_milestone && solved_final_level)
       head 503
       return
     end
@@ -55,7 +59,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if current_user && @script_level && @script_level.stage.lockable?
+    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
       user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
       # we have a lockable stage, and user_level is locked. disallow milestone requests
       if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)

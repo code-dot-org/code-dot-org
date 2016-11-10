@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+import experiments from '../util/experiments';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
@@ -29,6 +30,7 @@ import {
   withAbsoluteSourceUrls
 } from './animationListModule';
 import {getSerializedAnimationList} from './PropTypes';
+import {add as addWatcher} from '../redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -209,6 +211,15 @@ GameLab.prototype.init = function (config) {
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
+    if (config.level.watchersPrepopulated) {
+      try {
+        JSON.parse(config.level.watchersPrepopulated).forEach(option => {
+          this.studioApp_.reduxStore.dispatch(addWatcher(option));
+        });
+      } catch (e) {
+        console.warn('Error pre-populating watchers.');
+      }
+    }
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
     config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
@@ -250,11 +261,12 @@ GameLab.prototype.init = function (config) {
     nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: true,
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
     showDebugSlider: false,
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
-    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame
+    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
+    isIframeEmbed: !!config.level.iframeEmbed,
   });
 
   if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
@@ -759,6 +771,7 @@ GameLab.prototype.initInterpreter = function () {
     customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
     customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties()
   });
+  window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
   if (this.debugger_) {

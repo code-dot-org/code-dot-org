@@ -1,5 +1,6 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
+import {CIPHER, ALPHABET} from '../../constants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -357,7 +358,7 @@ var projects = module.exports = {
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
+        window.setInterval(this.autosave.bind(this), AUTOSAVE_INTERVAL);
 
         if (current.hidden) {
           if (!this.isFrozen()) {
@@ -521,20 +522,30 @@ var projects = module.exports = {
     header.updateTimestamp();
   },
   /**
-   * Autosave the code if things have changed
+   * Autosave the code if things have changed. Calls `callback` if autosave was
+   * not needed or after autosave success if a callback function was provided.
+   * @param {function} callback Function to be called after saving.
    */
-  autosave_() {
+  autosave(callback) {
+    const callCallback = () => {
+      if (callback) {
+        callback();
+      }
+    };
     // Bail if baseline code doesn't exist (app not yet initialized)
     if (currentSources.source === null) {
+      callCallback();
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
+      callCallback();
       return;
     }
 
     if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
+      callCallback();
       return;
     }
 
@@ -545,11 +556,13 @@ var projects = module.exports = {
         const newSources = {source, html, animations};
         if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
           hasProjectChanged = false;
+          callCallback();
           return;
         }
 
         this.save(newSources, () => {
           hasProjectChanged = false;
+          callCallback();
         });
       });
     });
@@ -889,9 +902,24 @@ function parsePath() {
     };
   }
 
+  // projects can optionally be embedded without making their source available.
+  // to keep people from just twiddling the url to get to the regular project page,
+  // we encode the channel id using a simple cipher. This is not meant to be secure
+  // in any way, just meant to make it slightly less trivial than changing the url
+  // to get to the project source. The channel id gets encoded when generating the
+  // embed url. Since a lot of our javascript depends on having the decoded channel
+  // id, we do that here when parsing the page's path.
+  let channelId = tokens[PathPart.CHANNEL_ID];
+  if (location.search.indexOf('nosource') >= 0) {
+    channelId = channelId
+      .split('')
+      .map(char => ALPHABET[CIPHER.indexOf(char)] || char)
+      .join('');
+  }
+
   return {
     appName: tokens[PathPart.APP],
-    channelId: tokens[PathPart.CHANNEL_ID],
+    channelId,
     action: tokens[PathPart.ACTION]
   };
 }

@@ -35,7 +35,7 @@
     and programming concepts in this follow-up course.
   og_title: Every child deserves opportunity
   og_description: Every student in every school deserves the opportunity to study
-    computer science.
+    computer science. It's changing everything.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Studenti
@@ -248,7 +248,7 @@
   learn_next_level: Continue to the next level
   learn_online: Try other courses online
   learn_classes: Find local classes
-  hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -277,7 +277,7 @@
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
     Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+    -  Frank Martinez, Teacher'
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Elementary courses
@@ -545,9 +545,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Submit
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
@@ -600,8 +600,6 @@
     dan il-kors
   dashboard_landing_educator_blog: Aqra aħbarijiet u aġġornamenti tal-materjali tagħna
     fil-Blog ta l'Edukaturi
-  dashboard_landing_smart_hints: Jekk jogħġbok tgħinna biex iżżid suġġerimenti smart
-    fil-lezzjonijiet Code.org
   dashboard_landing_video_player: Ittestja il-Video Plyer il-gdid taghna flis-skola
     tieghek
   dashboard_landing_progress_title: Main class progress
@@ -756,6 +754,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -889,6 +899,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Learn more
   dashboard_announce_try_now_button: Try it now
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -897,6 +908,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -1036,6 +1052,7 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1744,3 +1761,12 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csd_category_name: 'Under Development: CS Discoveries'

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import React from 'react';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
-import color from '../color';
+import color from "../util/color";
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import * as applabConstants from './constants';

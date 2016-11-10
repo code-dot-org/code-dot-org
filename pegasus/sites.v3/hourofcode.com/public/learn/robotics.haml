@@ -1,0 +1,83 @@
+---
+title: Learn
+layout: wide_index
+social:
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://<%=request.host%>/learn"
+  "twitter:image:src" : "https://code.org/images/learn/og-learn-robotics.png"
+  "twitter:title": "Hour of Code"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
+  "og:title": "Hour of Code"
+  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages."
+  "og:image" : "https://code.org/images/learn/og-learn-robotics.png"
+  "og:image:width": "853"
+  "og:image:height": "447"
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+-# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
+:css
+  @media (min-width: 992px)
+  {
+    .modal-lg {
+      width: 900px;
+    }
+  }
+
+:css
+  .noFocusButton:focus {
+    outline: 0;
+  }
+
+#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+  = view :header
+
+  .banner
+    .container{style: "color: white"}
+      .col-xs-12.col-sm-6{style: "text-align: center"}
+        %br/
+        %br/
+        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
+          ROBOTICS
+        %br/
+        %br/
+        Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
+        %br/
+        %br/
+      #studentimage.col-xs-12.col-sm-6.hidden-xs
+        %img{src: CDO.code_org_url("/images/learn/robotics.png"), style: "text-align: center"}
+
+-# Not ideal but we can pull the undigested files from /blockly.
+- js_locale = hoc_locale.to_s.downcase.tr('-', '_')
+%script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
+
+-# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
+- tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
+- tutorials_contents.each do |tutorial|
+  - tutorial[:image] = CDO.code_org_url(tutorial[:image])
+
+- tutorials_contents.each do |tutorial|
+  - tutorial[:contact] = nil
+
+#tutorials
+
+.clear{style: "clear: both"}
+
+:javascript
+
+  $(document).ready(function() {
+    // Send through some values that the JavaScript will need.
+    var tutorialExplorerManager = new window.TutorialExplorerManager({
+      tutorials: #{tutorials_contents.to_json},
+      locale: "#{hoc_locale}",
+      robotics: true,
+      backButton: true,
+      showSortBy: window.location.search.indexOf("showsort") !== -1
+    });
+    tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
+  });

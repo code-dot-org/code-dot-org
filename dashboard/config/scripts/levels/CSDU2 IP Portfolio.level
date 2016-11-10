@@ -5,9 +5,9 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "# Publish to your Portfolio\r\n\r\nWith your new page complete, it's time to publish it to your portfolio.\r\n\r\n# Do This\r\n\r\n* Go back to the previoius bubble and copy the share link for your new page\r\n* Come back here and use an `<a>` tag to add a link to your new page in the _Website Projects_ list.",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1>A Thing that I Care About</h1> \\n \"\r\n    }\r\n  ]\r\n}",
-    "project_template_level_name": "CSDU2 Portfolio Template"
+    "markdown_instructions": "# Cause Page\r\n\r\nLet's start by setting up the page you will be using to create your cause page.\r\n\r\n# Do This\r\n\r\n* Add a new HTML file to your project for your cause page.\r\n* Add a title, viewport, and description\r\n* Link the style sheet for your website to the cause page",
+    "project_template_level_name": "CSDU2 Portfolio Template",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",

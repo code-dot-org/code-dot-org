@@ -53,6 +53,12 @@
   "directionNortheastLetter": "NE",
   "directionSouthwestLetter": "SW",
   "directionSoutheastLetter": "SE",
+  "disabledButtonsInfo": "Your progress and code will not be saved during Hour of Code.",
+  "disabledButtonsWarning": "Warning:",
+  "disabledButtonsWhy": "Why are my bubbles gray?",
+  "disabledProgress1": "Any progress you make this week on your course will not be saved due to the level of traffic our site receives for the Hour of Code week.",
+  "disabledProgress2": "This is why all your bubbles are displayed as gray (don’t worry, your progress from before this week is still safe).",
+  "disabledProgress3": "We encourage you to try Hour of Code tutorials instead this week.",
   "dontForget": "Don't forget",
   "dropletBlock_addOperator_description": "দুটো সংখ্যা যুক্ত কর",
   "dropletBlock_addOperator_signatureOverride": "চালনাকারী যুক্ত কর",
@@ -161,6 +167,7 @@
   "finalStage": "অভিনন্দন! আপনি চূড়ান্ত পর্যায় সম্পন্ন করেছেন।",
   "finalStageTrophies": "অভিনন্দন! আপনি চূড়ান্ত পর্যায়ে সম্পন্ন এবং জিতেছে্ন {numTrophies, plural, one {a trophy} other {# trophies}}।.",
   "finish": "শেষ",
+  "forTeachersOnly": "শুধু শিক্ষকদের জন্য",
   "generatedCodeInfo": "এমনকি শীর্ষ বিশ্ববিদ্যালয় ব্লক ভিত্তিক কোডিং শেখান (যেমন, {berkeleyLink}, {harvardLink}). কিন্তু ব্লকের নিচে, আপনি যে ব্লক একত্র করেছেন তা বিশ্বের সবচেয়ে বহুল ব্যবহৃত কোডিং ভাষা জাভাস্ক্রিপ্টে দেখানো যেতে পারে:",
   "hashError": "দুঃখিত, '% 1' কোনো সংরক্ষিত প্রোগ্রামের সাথে সঙ্গতিপূর্ণ নয়।",
   "help": "সাহায্য",
@@ -180,6 +187,7 @@
   "jump": "লাফান",
   "keepPlaying": "খেলতে থাকুন",
   "keyValuePairLink": "নাম ও মানের জুটি",
+  "learnMore": "আরও জানুন",
   "less": "কম",
   "levelIncompleteError": "আপনি প্রয়োজনীয় সব ধরনের ব্লক ব্যবহার করছেন কিন্তু সঠিক ভাবে নয়।",
   "listVariable": "তালিকা",
@@ -250,6 +258,7 @@
   "saving": "Saving...",
   "score": "স্কোর",
   "selectSection": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left.",
+  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left.",
   "sendToPhone": "ফোনে পাঠান",
   "shareFailure": "দুঃখিত, আমরা এই প্রোগ্রাম শেয়ার করতে পারছি না.",
   "shareWarningsAge": "নিচে আপনার বয়স প্রদান করুন এবং চলিয়ে যাবার জন্য OK ক্লিক করুন।",
@@ -306,5 +315,5 @@
   "whenRun": "চালানোর সময়",
   "workspaceHeaderShort": "কর্মপরিসর:",
   "yes": "\"হ্যাঁ\"",
-  "selectSectionInstructions": "Select a section to be able to lock and unlock assessments or surveys. Click the lock settings button in the stage to the left."
+  "predictionInstructions": "Make a prediction before you run the program."
 }

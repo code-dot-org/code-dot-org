@@ -6,6 +6,21 @@ var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
 
+function finished() {
+  // Level is complete and feedback dialog has appeared: exit() succesfully here
+  // (otherwise process may continue indefinitely due to timers)
+  var done = cb;
+  cb = null;
+  // Main blockspace doesn't always exist (i.e. edit-code)
+  if (Blockly.mainBlockSpace) {
+    Blockly.mainBlockSpace.clear();
+  }
+  if (done) {
+    done();
+  }
+}
+
+
 module.exports = function (testCollection, testData, dataItem, done) {
   cb = done;
   var data = dataItem();
@@ -78,24 +93,30 @@ StubDialog.prototype.show = function () {
     // Examine content of the feedback in future tests?
     // console.log(this.options.body.innerHTML);
   }
-  // Level is complete and feedback dialog has appeared: exit() succesfully here
-  // (otherwise process may continue indefinitely due to timers)
-  var done = cb;
-  cb = null;
-  // Main blockspace doesn't always exist (i.e. edit-code)
-  if (Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.clear();
-  }
-  if (done) {
-    done();
-  }
+  finished();
 };
 
 StubDialog.prototype.hide = function () {
 };
 
+const appLoaders = {
+  applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
+  bounce: require('@cdo/apps/sites/studio/pages/init/loadBounce'),
+  calc: require('@cdo/apps/sites/studio/pages/init/loadCalc'),
+  craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
+  eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
+  flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
+  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
+  maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
+  netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
+  studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
+  turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
+  weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
+};
 function runLevel(app, skinId, level, onAttempt, testData) {
-  require('@cdo/apps/' + app + '/main');
+
+  var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
@@ -108,8 +129,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     return Boolean(testData.useFirebase);
   };
 
-  var main = window[app + 'Main'];
-  main({
+  loadApp({
     skinId: skinId,
     level: level,
     baseUrl: '/base/build/package/',
@@ -121,6 +141,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
     firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
     isAdmin: true,
+    onFeedback: finished.bind(this),
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already

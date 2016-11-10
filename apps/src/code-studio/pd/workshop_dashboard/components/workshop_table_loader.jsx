@@ -9,11 +9,12 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import FontAwesome from '../../../../templates/FontAwesome';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const WorkshopTableLoader = React.createClass({
   propTypes: {
     queryUrl: React.PropTypes.string.isRequired,
+    canDelete: React.PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
     children: React.PropTypes.element.isRequired // Require exactly 1 child component.
   },
 
@@ -64,11 +65,14 @@ const WorkshopTableLoader = React.createClass({
     }
 
     if (this.state.workshops.length === 0) {
-      return <p>None.</p>;
+      return <p>No workshops found</p>;
     }
 
     return (
-      React.cloneElement(this.props.children, {workshops: this.state.workshops})
+      React.cloneElement(this.props.children, {
+        workshops: this.state.workshops,
+        onDelete: this.props.canDelete ? this.handleDelete : null
+      })
     );
   }
 });

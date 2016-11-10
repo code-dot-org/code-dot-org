@@ -3,8 +3,6 @@
   "atFlower": "na cvijetu",
   "atHoneycomb": "na saću",
   "avoidCowAndRemove": "izbjegni kravu i ukloni 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Cvijet na kojem se nalaziš nema više nektara.",
   "get": "nađi",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "visina",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Ako staza vodi u zadanom smjeru, onda napravi prvi grupu akcija, a inače napravi drugu grupu akcija.",
   "insufficientHoney": "Koristiš sve odgovarajuće blokove, ali trebaš napraviti pravu količinu meda.",
   "insufficientNectar": "Koristiš sve odgovarajuće blokove, ali trebaš prikupiti pravu količinu nektara.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "napravi",
   "moveBackward": "idi unatrag",
   "moveEastTooltip": "Premjesti me za jedno polje na Istok.",
@@ -111,5 +111,6 @@
   "word": "Pronađi riječ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Da",
-  "youSpelled": "Napisano je"
+  "youSpelled": "Napisano je",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

@@ -20,6 +20,8 @@ let brambleProxy_ = null;
 let webLab_ = null;
 // the registered onProjectChanged callback function
 let onProjectChangedCallback_ = null;
+// the registered onBrambleReady callback function
+let onBrambleReadyCallback_ = null;
 // the set of recent changes since the last syncFilesWithBramble() called
 let _recentBrambleChanges;
 // the version id of the project at the time of the last bramble file sync
@@ -52,28 +54,58 @@ function putFilesInBramble(sources, callback) {
     // create project root directory
     sh.mkdirp(projectRoot, err => {
 
-      function writeFileData(path, data, callback) {
-        path = Path.join(projectRoot, path);
+      function writeFileDataAndContinue(filename, data, currentIndex) {
+        var path = Path.join(projectRoot, filename);
         // write the data
-        fs.writeFile(path, data, err => {
-          // call completion callback
-          callback(err);
-        });
+        function onWriteComplete(err) {
+          if (err) {
+            // call completion callback
+            callback(err);
+          } else {
+            // force these writes into the fileChange log since the events take
+            // too long to appear (the later events will not be harmful):
+            _recentBrambleChanges.fileChange[filename] = true;
+
+            // continue on to the next item on the list
+            writeSourceFile(currentIndex + 1);
+          }
+        }
+        if (typeof data === 'string') {
+          fs.writeFile(path, data, onWriteComplete);
+        } else {
+          fs.writeFile(path, data, { encoding: null }, onWriteComplete);
+        }
       }
 
       // async-chained enumeration: write the i-th file into Bramble file system
-      function writeSourceFile(sources, i, callback) {
-        if (i < sources.files.length) {
-          const file = sources.files[i];
-          // write file data into Bramble
-          writeFileData(file.name, file.data, () => {
-            // force these writes into the fileChange log since the events take
-            // too long to appear (the later events will not be harmful):
-            _recentBrambleChanges.fileChange[file.name] = true;
-
-            // continue on to the next item on the list
-            writeSourceFile(sources, i + 1, callback);
-          });
+      function writeSourceFile(currentIndex) {
+        if (currentIndex < sources.files.length) {
+          const file = sources.files[currentIndex];
+          if (!file.name) {
+            console.warn(`startSources file entry has no name property!`);
+            writeSourceFile(currentIndex + 1);
+            return;
+          }
+          if (file.url) {
+            if (file.data) {
+              console.warn(`startSources ${file.name} has both url and data!`);
+            }
+            // read the data from the URL
+            $.ajax(file.url, {
+              dataType: 'binary',
+              responseType: 'arraybuffer'
+            }).done(data => {
+              writeFileDataAndContinue(file.name, new Buffer(data), currentIndex);
+            }).fail((jqXHR, textStatus, errorThrown) => {
+              callback(errorThrown);
+            });
+          } else if (file.data) {
+            // write file data into Bramble
+            writeFileDataAndContinue(file.name, file.data, currentIndex);
+          } else {
+            console.warn(`startSources ${file.name} has neither url or data!`);
+            writeSourceFile(currentIndex + 1);
+          }
         } else {
           // end of list, call completion callback
           callback(null);
@@ -84,7 +116,7 @@ function putFilesInBramble(sources, callback) {
         callback(err);
       } else {
         // start an async-chained enumeration through the file list
-        writeSourceFile(sources, 0, callback);
+        writeSourceFile(0);
       }
     });
   });
@@ -352,8 +384,20 @@ function disableInspector() {
   brambleProxy_.disableInspector();
 }
 
+function refreshPreview() {
+  brambleProxy_.refreshPreview();
+}
+
+function enableFullscreenPreview() {
+  brambleProxy_.enableFullscreenPreview();
+}
+
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
+}
+
+function onBrambleReady(callback) {
+  onBrambleReadyCallback_ = callback;
 }
 
 function startInitialFileSync(callback, forceResetToStartSources) {
@@ -430,7 +474,10 @@ const brambleHost = {
   showTutorial: showTutorial,
   enableInspector: enableInspector,
   disableInspector: disableInspector,
+  refreshPreview: refreshPreview,
+  enableFullscreenPreview: enableFullscreenPreview,
   onProjectChanged: onProjectChanged,
+  onBrambleReady: onBrambleReady,
   startInitialFileSync: startInitialFileSync,
   syncFiles: syncFiles,
 };
@@ -490,6 +537,10 @@ function load(Bramble) {
     bramble.on("folderRename", handleFolderRename);
 
     brambleProxy_ = bramble;
+
+    if (onBrambleReadyCallback_) {
+      onBrambleReadyCallback_();
+    }
   });
 
   Bramble.once("error", function (err) {

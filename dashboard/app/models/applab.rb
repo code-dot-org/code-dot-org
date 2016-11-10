@@ -20,6 +20,7 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Applab < Blockly
@@ -40,9 +41,12 @@ class Applab < Blockly
     data_tables
     data_properties
     hide_view_data_button
+    show_debug_watch
+    watchers_prepopulated
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
+    teacher_markdown
   )
 
   # List of possible skins, the first is used as a default.

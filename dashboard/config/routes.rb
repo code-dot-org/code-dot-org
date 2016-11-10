@@ -232,6 +232,8 @@ Dashboard::Application.routes.draw do
   get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
   post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
+  get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
+  post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
   get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
@@ -315,13 +317,13 @@ Dashboard::Application.routes.draw do
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
-
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
+        get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
-      resources :district_report, only: :index
-      resources :workshop_organizer_report, only: :index
-      resources :teacher_progress_report, only: :index
+      resources :workshop_summary_report, only: :index
+      resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
+      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
     end
   end
 
@@ -383,6 +385,7 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+      get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }

@@ -237,7 +237,7 @@
           užpildyčiau visas duobes ir išlyginčiau visas krūvas.
         turtle_3_1: "Šioje užduotyje yra duotos komandos „nubrėžk kvadratą“ ir „nubrėžk
           apskritimą“. \nSukūrus naują komandą, ji nėra vykdoma, kol nepanaudotas
-          blokelis „nubrėžk kvadratą“.\n"
+          blokelis „nubrėžk kvadratą“."
         turtle_3_2: Pagal „nubrėžk kvadratą“ pavyzdį sukurk komandą „nubrėžk trikampį“
           ir ją panaudok.
         turtle_3_3: 'Nubrėžk po trikampį aplinkui kates ir kvadratą aplink karvę.
@@ -246,7 +246,7 @@
           kvadratą“ (bei keletą kitų blokelių), kad nupieštum namą aplink liūtą.
         turtle_3_5: "Sukurk komandą „namas“ ir panaudok ją, kad nupieštum namą aplink
           dvi kates. \nSufleris: sukurk naują komandą panaudodamas blokelį „daryk
-          ką nors“ ir įrašyk norimą jos pavadinimą.\n"
+          ką nors“ ir įrašyk norimą jos pavadinimą."
         turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti
           dydį „n“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris: kad komandai
           pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
@@ -301,6 +301,28 @@
         maze_3_3: Kaip man pasiekti kiaulę? Saugokis, kad nepaliesčiau TNT dėžės!
         maze_3_4: Oi! Parašyk programą, kuri mane privers apibėgti aplinkui TNT dėžę
           ir pasiekti kiaulę.
+        bounce_1_basketball: Attach a block to the "when left arrow" block and press
+          "Run". Move the hand using the left arrow to reach the finish target.
+        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
+          arrow" blocks. Move the hand to reach both finish targets.
+        bounce_5_basketball: We're going to send a ball flying down towards the hand.
+          Attach a block to the "when ball hits hand" block to ensure the ball reaches
+          the flag.
+        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
+          to both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
+          ball until it hits the flag.
+        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice.
+        bounce_11_basketball: You can now attach blocks to the "when run" block. You
+          have to attach the new "throw new ball" block in more than one place. Also,
+          try changing the scene or the speed of the hand and the ball and see how
+          many points you can score before your opponent scores twice!
+        bounce_12_basketball: Create your own Basketball game. You can change all
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
         bounce_1: Prijunk blokelį prie  „kai ... rodyklė kairėn“ ir paleisk programą.
           Kad pasiektum tikslą, judink raketę su rodykle.
         bounce_2: Prijunk blokelį prie  „kai ... rodyklė dešinėn“ ir „kai ... kairėn“
@@ -674,6 +696,11 @@
         infinity_playlab_intro: "Žaidimų laboratorija – įvadas"
         infinity_playlab_events: "Žaidimų laboratorija – įvykiai"
         infinity_playlab_repeat_forever: "Žaidimų laboratorija – amžinas kartojimas"
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

@@ -1,2 +1,8 @@
 {
+  "addCSSButton": "Add CSS",
+  "addImageButton": "Add Image",
+  "addHTMLButton": "Add HTML",
+  "refreshPreview": "Refresh",
+  "toggleInspectorOn": "Inspector: Off",
+  "toggleInspectorOff": "Inspector: On"
 }

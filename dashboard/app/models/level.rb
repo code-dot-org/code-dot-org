@@ -20,6 +20,7 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Level < ActiveRecord::Base
@@ -55,6 +56,7 @@ class Level < ActiveRecord::Base
     instructions
     markdown_instructions
     authored_hints
+    instructions_important
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

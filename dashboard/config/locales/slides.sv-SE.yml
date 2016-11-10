@@ -567,7 +567,7 @@
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |
+        text: |-
           Är inte bin supercoola? I nästa uppsättning av pussel är ditt mål att hjälpa biet att komma till blommorna, hämta nektar från blommorna och flyga över till honungskakan för att göra honung.
           Du behöver använda blocken "hämta nektar" och "gör honung" i den här övningen.
       2:
