@@ -10,15 +10,15 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# AmaBlurbs kanye nezibalo ezisizayo (AmaBlurbs incazelo emfushane echaza incwadi, ifilimu okanye umkhiqizo obhalelwe injongo yokukhuthaza)
+# AmaBlurbs kanye nezibalo ezisizayo (AmaBlurbs incazelo emfushane echaza incwadi, ifilimu okanye umkhiqizo abhalelwe injongo yokukhuthaza)
 
-## Sebenzisa leblurb emfushane ephephandabeni
+## Sebenzisa leblurb emfushane emaphephandabeni
 
 ### Letha ikhompyutha sayensi esikoleni sakho. Qala ngeHora loKufingqwa
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Njengoba ubuchwepheshe bezekhompyutha bushintsha imikhakha yonke kunozungezilanga, ulwazi lokukhompyutha libe yilunga lekhono eliqinile. But fewer than half of all schools teach computer science! Izindaba ezimnandi ukuthi, sisendleleni yethu yokushintsha lokhu. Uma uzwile ngeHora loKufingqwa ngonyaka ophelile, kungenzeka uyazi ukuthi yenza umlando. Ikhulu lesigidi sabafundi selithole ukuthi iwubumnandi kanti futhi ifinyeleleka kalula kanjani ikhompyutha sayensi ngokwenza ihora ililodwa lweHora loKufingqwa.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Ihora loKufingqwa liyihora lokwazisa ikhompyutha sayensi, elisongozele ukwenza ukufingqwa kubelula kanye ukubonakalisa ukuthi ngunoma ngubani ongafunda isisekelo. Funda ngokudlulele ku [http://Hourofcode.com](http://HourofCode.com), zama ihora ngokwakho, okanye uhlele umcimbi weHora loKufingqwa ukwazisa abanye kumhlaba woku khompyutha!
 
 <a id="infographics"></a>
 

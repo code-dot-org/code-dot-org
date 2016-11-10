@@ -8,21 +8,21 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Indlela yokufundisa ihora elilodwa leHora loKufingqwa
+# Indlela yokufundisa iHora loKufingqwa elilodwa
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+Zibandakanye nomnyakazo ubese wazisa iqembu labafundi kuhora labo lokuqala lwekhompyutha sayensi ngalezi zigxathi:
 
-## 1) Bukela levideo ngendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Khetha imfundiso yelakho ihora:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
+Sinikezela ngezinhlobonhlobo ezo [kudlala, ihora lonke lemfundiso](<%= resolve_url('https://code.org/learn') %>) ezabafundi beminyaka yonke, edalwe inhlobonhlobo yababambisene.
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Izihlahlandlela zabafundi zokufunda iHora loKufingqwa:](<%= resolve_url("https://code.org/learn") %>)**
 
-  * Zindinga isikhathi sokulungisa eshifushane kothishala
+  * Zindinga isikhathi sokulungiselela eshifushane kothishala
   * Are self-guided - allowing students to work at their own pace and skill-level
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Izihlahlandlela zothisha zokufundisa iHora loKufingqwa:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
   * Yizifundiso ezilungiselelwe ezidinga ukufundisa okulungiselewe ngaphambilini
   * Zikhona ngononina ngamazinga ebanga *kanye* ngesihloko sesifundo (isib. Izibalo, Isingisi, njll)
@@ -40,40 +40,40 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
 ** Lungiselela Phambilini!** Yenza lokhu ngaphambi kokucala komcimbi wakho:
 
   * Vivinya izifundiso kuma khompyutha abafundi okanye kumadivaysi. Yenza isiqinisekiso sokuba asebenza ngedlela efanele kusi phequluli nakumavidiyo.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+  * Nika ikilasi lakho ama-efoni, okanye ucele abafundi baziphathele awabo, uma imfundiso oyikhethile isebenza kahle ngomsindo.
+  * **Awunamadivayisi anganela?** Sebenzisa [ ukuklama ngamaqembu](https://www.youtube.com/watch?v=vgkahOzFH2Q). Uma abafundi bebambisana, bathola ithuba lokusizana kanti futhi abathembeli kakhulu kuthisha. Bazobona futhi ukuba ikhompyutha sayensi iyabambisana futhi iyahlanganisa.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring speaker or video
+## 5) Qala iHora loKufingqwa lakho ngevidiyo egqugquzelayo okanye isikhulumi esikhuthazayo
 
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+**Mema i [ volontiya lendawo](https://code.org/volunteer/local) ukukhuthaza abafundi bakho ngokuxoxisana ngobubanzi bamathuba kukhompyutha sayensi.** Kunezinkulungwane zamavolontiya umhlaba wanke ukulungiselela ukusiza ngeHora loKufingqwa lwakho. [Sebenzisa lemephu](https://code.org/volunteer/local) ukuthola amavolontiya kusigodi angavakashela ikilasi lakho okanye bahlanganyele kunkulumo yevidiyo nabafundi bakho.
 
 [![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
 
-**Show an inspirational video:**
+**Bonisa ngevidiyo ekhuthazayo:**
 
   * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * I [Ividiyo yokwethulwa kweHora loKufingqwa 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), okanye i <% uma @izwe== 'uk' %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% okanye %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Kulungile uma wena nabafundi bakho nibasha kukhompyutha sayensi. Lapha kukhona amanye amasu okwazisa umsebenzi wakho weHora loKufingqwa:**
 
-  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-  * As a class, list things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * Chaza izindlela ithekhinoloji enomthelela ngayo empilweni zethu, ngezibonelo amantombazane nabafana abazokhathala ngayo (Xoxa ngokusindiswa kwezimpilo, ukusizwa kwabantu, ukuxhumana kwabantu njll).
+  * Njengekilasi, bala izinto ezisebenzisa ukufingqwa kumpilo yemihla ngemihla.
+  * Bona amathiphu okuthola amantombazane ukuba alangazelele ikhompyutha sayensi [lapha](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Udinga isiqondiso esiningana?** Thwebula lokhu [ ithempulethi yehlelo lesifundiso](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+**Ufunu amibono yokufundisa?** Hlola [imikhuba emihle](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) avela kothushala abanesipiliyoni.
 
-## 6) Code!
+## 6) Ukufingqwa!
 
-**Direct students to the activity**
+**Khombisa abahlanganyeli kumsebenzi**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+  * Bhala isixhumanisi sesifundiso kubhodi. Thola isixhumaniso sibhaliwe ku [ulwazi ngemfundiso yakho oyikhethile](<%= resolve_url('https://code.org/learn') %>) ngaphansi kwenani lwabazinikelayo.
 
 [col-33]
 
@@ -81,18 +81,18 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
 
 [/col-33]
 
-**When your students come across difficulties it's okay to respond:**
+**Uma abafundi bakho behlangabezana nobunzima kwamukelekile ukuphendula:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "Angazi. Asisebenzisane ukuthola isicazululo."
+  * "Ithekhiniloji ayisebenzi ngendlela esithandangayo njalonjalo."
+  * "Ukufunda ukuphrogrema kufana nokufunda ulwimi olusha, awuzoqephuza ngokushesha."
 
-**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**[Bheka lamathiphu okufundisa](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-**What to do if a student finishes early?**
+**Ungenzani uma kukhona umfundi oqeda masinya?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Abafundi bangakhona ukubona zonke izifundiso baphinde bazame omunye umsebensi weHora loKufingqwa ku [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Okanye, cela abafundi abaqeda kuqala ukuba basize labo bafunda abanekinga ngomsebenzi.
 
 [col-33]
 
@@ -104,7 +104,7 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Zithokozise
 
 [col-33]
 
@@ -112,10 +112,10 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
 
 [/col-33]
 
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * [Phrinta izitifiketi](<%= resolve_url('https://code.org/certificates') %>) ezabafundi bakho.
+  * [Phrinta "Ngenze iHora loKufingqea!"](<%= resolve_url('/promote/resources#stickers') %>) izitembu zabafundi.
+  * [Faka isicelo sokuthenga amahembe akhethekile](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) esikole sakho.
+  * Yabelana ngezithombe kanye namavidiyo omcimbi wakho weHora loKufingqwa kwezokusakaza. Sebenzisa #iHoraloKufingqwa kanye @codeorg ukuze sikwazi ukugqamisa ngempumelelo yakho, nawe!
 
 [col-33]
 
@@ -127,18 +127,18 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
   &nbsp;
 </p>
 
-## Other Hour of Code resources for educators:
+## Izinsiza ezinye zeHora loKufingqwa ezothisha:
 
-  * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
-  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+  * Sebenzisa lokhu [ithempulethi yehlelo lesifundo](/files/EducatorHourofCodeLessonPlanOutline.docx) ukuhlela iHora loKufingqwa lwakho.
+  * Hlola [imikhuba emihle](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) evela kothisha beHora loKufingqwa eselidlule. 
+  * Bukela ukuqoshwa kwe [Ululeko loThisha lwewebhina yeHora loKufingqwa](https://youtu.be/EJeMeSW2-Mw).
+  * [ Yiza esithangameni sochungechunge lwemibuzo](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911), nomsungululi wethu, uHadi Partovi ukuze silungiselele iHora loKufingqwa.
+  * Vakashela [Iforamu lothisha leHora loKufingqwa](http://forum.code.org/c/plc/hour-of-code) ukuthola izeluleko, ukuqondisisa kanye nokusekelwa okuvela kwabanye othisha. <% if @country == 'us' %>
+  * Buyekeza i[ IMIBUZO EBUZWA NJALO kuHora loKufingqwa](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## What comes after the Hour of Code?
+## Kuyini okuza ngemva kweHora loKufingqwa?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+IHora loKufingqwa liyisi nyathelo sokuqala kuhambo lokufunda kabanzi ngokuba ithekhinoloji isebenza kanjani kanye nokuba ama aplikheyishini amasofthiwe adalwa kanjani. Ukuqhubekela phambili ngalohambo:
 
   * Khuthaza abafundi ukuba baqhubeke uku [ukufunda](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Thamela](<%= resolve_url('https://code.org/professional-development-workshops') %>) eyosuku olulodwa, ingqungquthela yomuntu-okhona ukuthola imfundiso evela kumkhuthazi wekhompyutha sayensi onesipiliyoni. (abafundisi baseMelika kuphela)
