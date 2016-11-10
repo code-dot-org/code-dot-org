@@ -1,3 +1,5 @@
+require 'cdo/activity_constants'
+
 module UsersHelper
   include ApplicationHelper
 
@@ -108,7 +110,7 @@ module UsersHelper
       script_levels.each do |sl|
         sl.level_ids.each do |level_id|
           # if we have a contained level, use that to represent progress
-          contained_level_id = Level.find(level_id).contained_levels.try(:first).try(:id)
+          contained_level_id = Level.cache_find(level_id).contained_levels.try(:first).try(:id)
           ul = uls.try(:[], contained_level_id || level_id)
           completion_status = activity_css_class(ul)
           # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
