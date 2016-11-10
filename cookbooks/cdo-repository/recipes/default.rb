@@ -40,9 +40,7 @@ git git_path do
 
   # Build apps on repo updates.
   if node['cdo-apps']
-    %w(dashboard pegasus).each do |app|
-      notifies :run, "execute[build-#{app}]", :delayed
-    end
+    notifies :run, "execute[build-cdo]", :delayed
   end
 
   user node[:user]
