@@ -124,6 +124,7 @@ level 'CSPU5_U3L16 Mad Lib Clear Input'
 level 'CSPU5_U3L25 Free Response 3'
 
 stage '"If" Statements Unplugged'
+level 'U5L08 - Student Intro If statements'
 named_level 'Big Picture: If-statements'
 named_level 'Worked Example: If-statements and Robot'
 
