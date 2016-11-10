@@ -71,3 +71,5 @@ Scenario: Submit three pages.
   Then I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/3?noautoplay=true"
   And element ".level-group-content:nth(0) #checked_2" is visible
   And element ".level-group-content:nth(1) #checked_1" is visible
+  # Work around a bug where sign out fails in Firefox
+  And I wait for 3 seconds
