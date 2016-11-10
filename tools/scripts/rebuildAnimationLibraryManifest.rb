@@ -143,14 +143,9 @@ class ManifestBuilder
       # Download the JSON file and PNG file
       begin
         verbose "Writing #{json_destination}"
-        File.open(json_destination, 'w') do |file|
-          objects['json'].get(response_target: file)
-        end
-
+        objects['json'].get(response_target: json_destination)
         verbose "Writing #{png_destination}"
-        File.open(png_destination, 'w') do |file|
-          objects['png'].get(response_target: file)
-        end
+        objects['png'].get(response_target: png_destination)
       rescue Aws::Errors::ServiceError => service_error
         next <<-WARN
 There was an error retrieving #{name}.json and #{name}.png from S3:
