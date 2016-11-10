@@ -52,7 +52,7 @@ level 'blockly:Jigsaw:12'
 skin 'jigsaw'
 assessment 'blockly:Jigsaw:13'
 
-stage 'Being Safe Online'
+stage 'Keep it Private'
 level 'onlineNeighbors'
 
 stage 'Programming: My Robotic Friends'
