@@ -32,8 +32,8 @@
     "never_autoplay_video": "false",
     "instructions_important": "false",
     "discard_background": "false",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need to repeat your outer loop 6 times now, instead of only 4.\",\"hint_id\":\"courseD_artist_nestedLoops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/7f29104f732ab0b85f52f6318c23ec7b/courseD_artist_nestedLoops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Now that you're breaking 360 degrees into six pieces instead of only four, you will only need to turn 60 degrees between circles. \",\"hint_id\":\"courseD_artist_nestedLoops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/3e4be1f5a364193f164d998c3b3776a1/courseD_artist_nestedLoops6.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need to repeat your outer loop 6 times now, instead of only 4.\",\"hint_id\":\"courseD_artist_nestedLoops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/7f29104f732ab0b85f52f6318c23ec7b/courseD_artist_nestedLoops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Now that you're breaking 360 degrees into six pieces instead of only four, you will only need to turn 60 degrees between circles. \",\"hint_id\":\"courseD_artist_nestedLoops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/3e4be1f5a364193f164d998c3b3776a1/courseD_artist_nestedLoops6.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

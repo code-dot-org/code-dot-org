@@ -92,7 +92,11 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "show_debug_watch": "true"
   },
   "published": true,
   "notes": "",
