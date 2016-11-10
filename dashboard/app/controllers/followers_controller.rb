@@ -95,7 +95,7 @@ class FollowersController < ApplicationController
     end
 
     @section = Section.find_by_code(params[:section_code])
-    unless @section
+    unless @section && @section.user
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end
