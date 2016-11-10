@@ -30,8 +30,8 @@
     "step_speed": "2",
     "ideal": "5",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to look for corn 5 times, using a repeat loop.\",\"hint_id\":\"grade3_RunningFarm_1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7dfd811977886609fbf4a6c4400ddbe/grade3_RunningFarm_1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure to use an `if corn` block or you might try to pick something that's not there!\",\"hint_id\":\"grade3_RunningFarm_1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e11eaeacf8e898b9ec346f5eb4b08d17/grade3_RunningFarm_1.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Collect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",
@@ -41,7 +41,7 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_move">
+        <block type="maze_move" limit="1">
           <title name="DIR">moveForward</title>
         </block>
         <block type="maze_turn">
