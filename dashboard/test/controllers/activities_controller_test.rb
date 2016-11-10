@@ -416,10 +416,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
-    # csoreated gallery activity and activity for user
+    # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
     assert_equal Activity.last, GalleryActivity.last.activity
+    assert_equal UserLevel.last.id, GalleryActivity.last.user_level_id
+    assert_equal LevelSource.last.id,  GalleryActivity.last.level_source_id
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with a jpg image" do
