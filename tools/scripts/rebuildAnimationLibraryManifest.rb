@@ -15,9 +15,6 @@
 #
 # See also: The Animation Library Tech Spec (requires login):
 # https://docs.google.com/document/d/18-LVuvKd0jKTUiGo5GYReUWM5oFWCyKRyEQURJ5HCOM/edit
-#
-# TODO: Optimize: Read existing manifest and don't do full object reads for
-#       entries whose modify date hasn't changed.
 require 'aws-sdk'
 require 'ruby-progressbar'
 require 'optparse'
