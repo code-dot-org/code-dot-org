@@ -9,6 +9,7 @@ namespace :build do
   task :chef do
     if CDO.chef_managed
       if rack_env?(:adhoc)
+        # Update local cookbooks from repository in adhoc environment.
         RakeUtils.with_bundle_dir(cookbooks_dir) do
           Tempfile.open(['berks','.tgz']) do |file|
             RakeUtils.bundle_exec "berks package #{file.path}"
