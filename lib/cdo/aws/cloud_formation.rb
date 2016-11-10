@@ -53,7 +53,7 @@ module AWS
       end
 
       def stack_name
-        (ENV['STACK_NAME'] || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
+        (ENV['STACK_NAME'] || CDO.stack_name || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
       end
 
       # Fully qualified domain name
@@ -157,6 +157,8 @@ module AWS
       end
 
       def delete
+        puts "Stack: #{stack_name}"
+        return
         if stack_exists?
           CDO.log.info "Shutting down #{stack_name}..."
           start_time = Time.now

@@ -310,13 +310,14 @@ class CDOImpl < OpenStruct
     DelegateWithDefault.new(self, default_value)
   end
 
-  # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
+  # When running on Chef Server, use EC2 API to fetch a dynamic list of app-server front-ends,
   # appending to the static list already provided by configuration files.
   def app_servers
-    return super unless CDO.chef_managed && rack_env?(:production)
+    return super unless CDO.chef_managed
     require 'aws-sdk'
+    stack_name = rack_env?(:production) ? 'autoscale-prod' : CDO.stack_name
     servers = Aws::EC2::Client.new.describe_instances(filters: [
-        { name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name || 'autoscale-prod'] },
+        { name: 'tag:aws:cloudformation:stack-name', values: [stack_name]},
         { name: 'tag:aws:cloudformation:logical-id', values: ['WebServer'] },
         { name: 'instance-state-name', values: ['running']}
     ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
