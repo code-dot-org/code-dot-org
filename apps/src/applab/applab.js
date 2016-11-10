@@ -398,6 +398,7 @@ function renderFooterInSharedGame() {
   ReactDOM.render(
     <SmallFooter
       i18nDropdown={''}
+      privacyPolicyInBase={false}
       copyrightInBase={false}
       copyrightStrings={copyrightStrings}
       baseMoreMenuString={commonMsg.builtOnCodeStudio()}

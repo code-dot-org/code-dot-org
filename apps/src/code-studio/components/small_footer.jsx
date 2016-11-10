@@ -43,7 +43,7 @@ var SmallFooter = React.createClass({
       trademark: React.PropTypes.string.isRequired
     }),
     basePrivacyPolicyString: React.PropTypes.string,
-    baseCopyrightString: React.PropTypes.string.isRequired,
+    baseCopyrightString: React.PropTypes.string,
     baseMoreMenuString: React.PropTypes.string.isRequired,
     baseStyle: React.PropTypes.object,
     menuItems: React.PropTypes.arrayOf(
