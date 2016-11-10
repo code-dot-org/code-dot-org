@@ -6,6 +6,7 @@ namespace :stack do
     ENV['CDN_ENABLED'] ||= '1'
     if rack_env?(:adhoc)
       ENV['DOMAIN'] ||= 'cdn-code.org'
+      CDO.chef_local_mode = !ENV['CHEF_SERVER']
     else
       ENV['DOMAIN'] ||= 'code.org'
       CDO.chef_local_mode = false
