@@ -32,3 +32,17 @@ Below is the official documentation for Selection and Robot statements along wit
 
 View as a separate document: [Annotated Pseudocode - If-statements and Robot](https://docs.google.com/document/d/1i3g-wTNQ0MlCeL57SdNZ-e6QhdiKk9txfrAKTAQ4pDc)
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+!!!tip
+    Review this as a class and:
+    * point out the **key idea** 
+    * have students read the annotations in the pseudocode documentation.
+    
+The important part here is to familiarize students with AP Pseudocode for if-statements and the robot commands.
+
+Some of the terminology can be reviewed later by students.
+
+
+
+MARKDOWN
