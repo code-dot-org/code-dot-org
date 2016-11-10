@@ -1,3 +1,5 @@
+require 'cdo/activity_constants'
+
 module UsersHelper
   include ApplicationHelper
 
