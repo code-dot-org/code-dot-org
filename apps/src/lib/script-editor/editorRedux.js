@@ -8,6 +8,7 @@ const CHOOSE_LEVEL_TYPE = 'scriptEditor/CHOOSE_LEVEL_TYPE';
 const CHOOSE_LEVEL = 'scriptEditor/CHOOSE_LEVEL';
 const ADD_VARIANT = 'scriptEditor/ADD_VARIANT';
 const SET_ACTIVE_VARIANT = 'scriptEditor/SET_ACTIVE_VARIANT';
+const SET_FIELD = 'scriptEditor/SET_FIELD';
 const REORDER_LEVEL = 'scriptEditor/REORDER_LEVEL';
 const ADD_LEVEL = 'scriptEditor/ADD_LEVEL';
 const MOVE_GROUP = 'scriptEditor/MOVE_GROUP';
@@ -66,6 +67,13 @@ export const setActiveVariant = (stage, level, id) => ({
   stage,
   level,
   id
+});
+
+export const setField = (stage, level, modifier) => ({
+  type: SET_FIELD,
+  stage,
+  level,
+  modifier
 });
 
 export const reorderLevel = (stage, originalPosition, newPosition) => ({
@@ -163,6 +171,11 @@ export default function reducer(state, action) {
     }
     case SET_ACTIVE_VARIANT: {
       newState[action.stage - 1].levels[action.level - 1].activeId = action.id;
+      break;
+    }
+    case SET_FIELD: {
+      const type = Object.keys(action.modifier)[0];
+      newState[action.stage - 1].levels[action.level - 1][type] = action.modifier[type];
       break;
     }
     case REMOVE_GROUP: {
