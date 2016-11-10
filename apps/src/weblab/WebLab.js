@@ -12,7 +12,7 @@ import reducers from './reducers';
 import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
-import SmallFooter from '@cdo/apps/code-studio/components/small_footer';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
