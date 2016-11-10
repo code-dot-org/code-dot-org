@@ -26,32 +26,36 @@ social:
     outline: 0;
   }
 
+  .banner {
+    color: white;
+    text-align: center;
+  }
+  .bannerHeading {
+    font-family: 'Gotham 5r', sans-serif;
+    font-size: 56px;
+    line-height: 56px;
+    padding: 20px 0px 20px 0px;
+  }
+  .bannerButtons {
+    padding: 20px 0px 20px 0px;
+  }
+  #studentImage {
+    height: 278px;
+  }
+
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
   = view :header
 
-  .banner
-    .container{style: "color: white"}
-      .col-xs-12.col-sm-6{style: "text-align: center"}
-        %br/
-        %br/
-        %span{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
-          = hoc_s_by_locale(:learn_banner_heading)
-        %br/
-        %br/
-        = hoc_s_by_locale(:learn_banner_blurb)
-        %br/
-        %br/
-        %a{href: "/#join", target: "_blank"}
-          %button
-            = hoc_s_by_locale(:learn_banner_host)
-        &nbsp;
-        &nbsp;
-        %a{href: "/how-to", target: "_blank"}
-          %button
-            = hoc_s_by_locale(:learn_banner_teacherguide)
-        %br/
-        %br/
-      #studentimage.col-xs-12.col-sm-6.hidden-xs{style: "height: 278px"}
+  .banner.container{style: "color: white"}
+    .col-xs-12.col-sm-6{style: "text-align: center"}
+      .bannerHeading= hoc_s(:learn_banner_heading)
+      = hoc_s(:learn_banner_blurb)
+      .bannerButtons
+        %a{href: "https://hourofcode.com/#join", target: "_blank"}
+          %button= hoc_s(:learn_banner_host)
+        %a{href: "https://hourofcode.com/how-to", target: "_blank", style: "padding-left: 20px"}
+          %button= hoc_s(:learn_banner_teacherguide)
+    #studentImage.col-xs-12.col-sm-6.hidden-xs
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = hoc_locale.to_s.downcase.tr('-', '_')
@@ -89,7 +93,7 @@ social:
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');
-    img.appendTo('#studentimage');
+    img.appendTo('#studentImage');
     img.on('load', function() {
       img.fadeTo('normal', 1);
     });
