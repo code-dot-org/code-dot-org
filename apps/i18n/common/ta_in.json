@@ -314,5 +314,6 @@
   "when": "எப்போது",
   "whenRun": "இயங்கும் போது",
   "workspaceHeaderShort": "பணிவெளி: ",
-  "yes": "ஆம்"
+  "yes": "ஆம்",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

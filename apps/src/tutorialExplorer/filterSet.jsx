@@ -4,7 +4,6 @@
 import React from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
-import { getResponsiveValue } from './responsive';
 
 const FilterSet = React.createClass({
   propTypes: {
@@ -16,7 +15,7 @@ const FilterSet = React.createClass({
 
   render() {
     return (
-      <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+      <div>
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup

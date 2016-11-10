@@ -314,5 +314,6 @@
   "when": "當",
   "whenRun": "當按下\"執行\"時",
   "workspaceHeaderShort": "工作區:",
-  "yes": "是"
+  "yes": "是",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

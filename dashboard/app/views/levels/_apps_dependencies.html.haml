@@ -10,6 +10,7 @@
 - hide_source ||= false
 - use_phaser ||= false
 - use_makerlab ||= false
+- app_options[:locale] = js_locale
 
 -# Common style dependencies
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
@@ -55,11 +56,11 @@
 
 -# Common script dependencies
 %script{src: minifiable_asset_path('js/marked/marked.js')}
-%script{src: minifiable_asset_path('js/initApp/initApp.js')}
 %script{src: minifiable_asset_path('js/common.js')}
 -# common_locale is included in application.html.haml
 %script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
-%script{src: minifiable_asset_path("js/#{app}.js")}
+%script{src: minifiable_asset_path("js/#{app}.js"),
+        data: {appoptions: app_options.to_json}}
 
 -# Applab external script dependencies
 - if use_applab

@@ -314,5 +314,6 @@
   "when": "-enean",
   "whenRun": "martxan dagoenean",
   "workspaceHeaderShort": "Lan eremua: ",
-  "yes": "Bai"
+  "yes": "Bai",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

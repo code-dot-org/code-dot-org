@@ -314,5 +314,6 @@
   "when": "када",
   "whenRun": "Када кренеш",
   "workspaceHeaderShort": "Радни простор: ",
-  "yes": "Да"
+  "yes": "Да",
+  "predictionInstructions": "Make a prediction before you run the program."
 }
