@@ -46,7 +46,6 @@ module TestRunUtils
     Dir.chdir(dashboard_dir) do
       with_hipchat_logging('dashboard tests') do
         RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
-        RakeUtils.rake_stream_output 'konacha:run'
       end
     end
   end
