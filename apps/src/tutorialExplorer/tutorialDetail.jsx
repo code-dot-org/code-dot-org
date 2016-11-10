@@ -50,7 +50,8 @@ const styles = {
   },
   tutorialDetailDescription: {
     fontFamily: '"Gotham 3r", sans-serif',
-    fontSize: 14
+    fontSize: 14,
+    whiteSpace: "pre-wrap"
   },
   tutorialDetailsTable: {
     marginTop: 20,
