@@ -45,7 +45,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
   test 'Pull review pulls a peer review' do
     @script.update(professional_learning_course: true)
-    Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course)
+    Plc::UserCourseEnrollment.enroll_users([@user.email], @script.plc_course_unit.plc_course.id)
 
     assert_equal 0, PeerReview.where(reviewer: @user).size
     get :pull_review, script_id: @script.name

@@ -201,8 +201,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'Merging peer review progress merges progress for enrolled users' do
     @script.update(professional_learning_course: true, peer_reviews_to_complete: 3)
-    Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course)
-
+    Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course).create_enrollment_unit_assignments
     assert PeerReview.get_peer_review_summaries(@user, @script).empty?
 
     submitter_1 = create :teacher

@@ -30,8 +30,6 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     COMPLETED = 'completed'
   ]
 
-  after_save :enroll_user_in_required_modules
-
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
 
   def module_assignment_for_type(module_type)
@@ -55,6 +53,8 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
       Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
         module_assignment_for_type(module_type).try(:destroy)
       end
+
+      enroll_user_in_required_modules
 
       learning_modules.each do |learning_module|
         enroll_in_module learning_module
