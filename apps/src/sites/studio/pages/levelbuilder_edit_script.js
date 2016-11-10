@@ -14,6 +14,7 @@ const stages = scriptData.stages.filter(stage => stage.id).map(stage => ({
   flex_category: stage.flex_category,
   lockable: stage.lockable,
   name: stage.name,
+  // Only include the first level of an assessment (uid ending with "_0").
   levels: stage.levels.filter(level => !level.uid || /_0$/.test(level.uid)).map(level => ({
     position: level.position,
     activeId: level.activeId,

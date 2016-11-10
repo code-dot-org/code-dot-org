@@ -118,7 +118,12 @@ level 'allthethings_template_backed2'
 level 'allthethings_moviebot'
 level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
-level 'Test Applab Predictive'
+variants
+  level 'Test Applab Predictive'
+  level 'Test Contained Free Response', active: false
+  level 'Test Contained Free Response', active: false
+  level 'Test Contained Free Response', active: false
+endvariants
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
@@ -202,11 +207,21 @@ stage 'Anonymous student survey'
 assessment 'Test anonymous student survey'
 
 stage 'Anonymous student survey 2', lockable: true
-assessment 'CSP pre-assessment survey'
+skin 'flappy'
+video_key_for_next_level 'C1_spelling_bee_intro'
+concepts 'sequence'
+level_concept_difficulty '{"repeat_loops":1}'
+assessment 'blockly:Maze:2_3'
 
 stage 'Public Key Cryptography'
 level 'AllTheThings Modulo Clock'
 level 'AllTheThings Public Key Cryptography'
 
 stage 'Web Lab'
-level 'Web Lab 1'
+variants
+  level 'Web Lab 1', active: false
+  skin 'flappy'
+  video_key_for_next_level 'C1_spelling_bee_intro'
+  level_concept_difficulty '{"variables":3}'
+  level 'blockly:Maze:2_2_5'
+endvariants
