@@ -8,7 +8,6 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
   * Integration Tests - Used to test level solutions and some block behaviors
 * Dashboard directory
   * Ruby tests - All of the server side business logic testing is through here. 
-  * Konacha Tests - Subset of client-side functionality testing is here, we use this to test storage of client state.
   * UI tests - Used to test overall functionality. Intended to run across browsers. Runs either on Saucelabs or with a local Chromedriver
     * Eyes tests - Subset of UI tests intended to test the precise layout of controls on certain UI pages. Eyes tests are run through Applitools and work by comparing an expected screenshot to an actual screenshot of a certain page. Eyes tests only run on Chrome for now. If you make a change that affects layout, you will likely break eyes tests. Work with whoever is reviewing your PR to figure out if the layout change should be accepted, and the baseline will be adjusted.
  * Shared directory
@@ -62,11 +61,6 @@ It's also possible to run a subset of tests:
 To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 
 See [the apps readme](./apps/README.md) for more details.
-
-### Konacha Tests
-`cd dashboard && bundle exec rake konacha:server` will run konacha tests. Visit the URL it provides to see your test results.
-
-Tests run pretty quickly
 
 ### Dashboard Tests
 `cd dashboard && rake test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.

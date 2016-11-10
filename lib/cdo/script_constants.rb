@@ -8,7 +8,8 @@ module ScriptConstants
   JIGSAW_NAME = 'jigsaw'.freeze
   ACCELERATED_NAME = 'accelerated'.freeze
 
-  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'.freeze
+  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft-simple'.freeze
+  MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'minecraft-designer'.freeze
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
 
   # The order here matters. The first category a script appears under will be
@@ -31,6 +32,7 @@ module ScriptConstants
       STARWARS_NAME = 'starwars'.freeze,
       STARWARS_BLOCKS_NAME = 'starwarsblocks'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
+      MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       INFINITY_NAME = 'infinity'.freeze,
       ARTIST_NAME = 'artist'.freeze,
     ],
@@ -77,7 +79,10 @@ module ScriptConstants
     ],
     twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
-    minecraft: [MINECRAFT_NAME]
+    minecraft: [
+      MINECRAFT_NAME,
+      MINECRAFT_DESIGNER_NAME
+    ]
   }
 
   # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
@@ -108,6 +113,8 @@ module ScriptConstants
   def self.teacher_dashboard_name(script)
     if script == MINECRAFT_NAME
       MINECRAFT_TEACHER_DASHBOARD_NAME
+    elsif script == MINECRAFT_DESIGNER_NAME
+      MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME
     elsif script == HOC_NAME
       HOC_TEACHER_DASHBOARD_NAME
     else
