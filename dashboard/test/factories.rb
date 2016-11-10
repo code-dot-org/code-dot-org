@@ -9,7 +9,7 @@ FactoryGirl.define do
     navigator_user_level {user_level}
   end
 
-  factory :megauser do
+  factory :studio_person do
   end
 
   factory :user do

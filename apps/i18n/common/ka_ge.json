@@ -314,5 +314,6 @@
   "when": "როდის",
   "whenRun": "გაშვებისას",
   "workspaceHeaderShort": "სამუშაო სივრცე: ",
-  "yes": "დიახ"
+  "yes": "დიახ",
+  "predictionInstructions": "Make a prediction before you run the program."
 }
