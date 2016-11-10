@@ -314,5 +314,6 @@
   "when": "wanneer",
   "whenRun": "als gestart",
   "workspaceHeaderShort": "Werkplaats: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

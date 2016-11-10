@@ -314,5 +314,6 @@
   "when": "apabila",
   "whenRun": "apabila berjalan",
   "workspaceHeaderShort": "Ruang kerja: ",
-  "yes": "Ya"
+  "yes": "Ya",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

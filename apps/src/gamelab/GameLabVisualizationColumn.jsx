@@ -10,15 +10,23 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
+import i18n from '@cdo/locale';
 
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 var GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
+
+const styles = {
+  containedInstructions: {
+    marginTop: 10
+  }
+};
 
 var GameLabVisualizationColumn = React.createClass({
   propTypes: {
     finishButton: React.PropTypes.bool.isRequired,
     instructionsInTopPane: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired
+    isShareView: React.PropTypes.bool.isRequired,
+    awaitingContainedResponse: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -91,6 +99,11 @@ var GameLabVisualizationColumn = React.createClass({
           </div>}
         </GameButtons>
         {this.renderAppSpaceCoordinates()}
+        {this.props.awaitingContainedResponse && (
+          <div style={styles.containedInstructions}>
+            {i18n.predictionInstructions()}
+          </div>
+        )}
         <BelowVisualization instructionsInTopPane={props.instructionsInTopPane}/>
       </span>
     );
@@ -100,6 +113,7 @@ var GameLabVisualizationColumn = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     instructionsInTopPane: state.pageConstants.instructionsInTopPane,
-    isShareView: state.pageConstants.isShareView
+    isShareView: state.pageConstants.isShareView,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
   };
 })(GameLabVisualizationColumn);

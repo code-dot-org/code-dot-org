@@ -314,5 +314,6 @@
   "when": "kiedy",
   "whenRun": "po uruchomieniu",
   "workspaceHeaderShort": "Obszar roboczy: ",
-  "yes": "Tak"
+  "yes": "Tak",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

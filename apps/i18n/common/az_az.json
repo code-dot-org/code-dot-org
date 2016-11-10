@@ -314,5 +314,6 @@
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
   "workspaceHeaderShort": "iş sahəsi: ",
-  "yes": "Bəli"
+  "yes": "Bəli",
+  "predictionInstructions": "Make a prediction before you run the program."
 }
