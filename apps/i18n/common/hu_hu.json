@@ -314,5 +314,6 @@
   "when": "amikor",
   "whenRun": "futtatáskor",
   "workspaceHeaderShort": "Munkaterület: ",
-  "yes": "Igen"
+  "yes": "Igen",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

@@ -111,5 +111,6 @@
   "word": "Намерете думата",
   "wrongCropError": "Не мога да прибера тази култура от тук.",
   "yes": "Да",
-  "youSpelled": "ти образува думи"
+  "youSpelled": "ти образува думи",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

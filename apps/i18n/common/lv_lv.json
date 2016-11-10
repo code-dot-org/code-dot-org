@@ -314,5 +314,6 @@
   "when": "kad",
   "whenRun": "kad izpilda",
   "workspaceHeaderShort": "Darba virsma: ",
-  "yes": "Jā"
+  "yes": "Jā",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

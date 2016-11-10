@@ -314,5 +314,6 @@
   "when": "кезде",
   "whenRun": "қосу кезінде",
   "workspaceHeaderShort": "Жұмыс аумағы: ",
-  "yes": "Иә"
+  "yes": "Иә",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

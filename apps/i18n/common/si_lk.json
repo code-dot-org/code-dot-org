@@ -314,5 +314,6 @@
   "when": "විට",
   "whenRun": "දුවන විට",
   "workspaceHeaderShort": "වැඩ අවකාශය: ",
-  "yes": "ඔව්"
+  "yes": "ඔව්",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

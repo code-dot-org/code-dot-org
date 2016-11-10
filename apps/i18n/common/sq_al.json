@@ -314,5 +314,6 @@
   "when": "kur",
   "whenRun": "kur vrapon",
   "workspaceHeaderShort": "Vendi i punës: ",
-  "yes": "Po"
+  "yes": "Po",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

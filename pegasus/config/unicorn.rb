@@ -7,3 +7,6 @@ stderr_path pegasus_dir('log/unicorn_stderr.log')
 stdout_path pegasus_dir('log/unicorn_stdout.log')
 working_directory pegasus_dir
 #logger $log
+
+require 'cdo/unicorn'
+before_fork $unicorn_upgrade
