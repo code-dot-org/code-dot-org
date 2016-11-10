@@ -737,8 +737,6 @@ GameLab.prototype.execute = function () {
     return;
   }
 
-  this.studioApp_.playAudio('start');
-
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
