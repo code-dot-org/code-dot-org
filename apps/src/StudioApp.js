@@ -827,6 +827,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
 
   var reactProps = {
     i18nDropdown: '',
+    privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
     baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
