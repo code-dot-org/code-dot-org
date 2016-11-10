@@ -110,7 +110,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
-    And I wait until element "#showVersionsModal" is gone
+    And I wait until element "#showVersionsModal" is not visible
   STEPS
 end
 
