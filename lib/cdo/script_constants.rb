@@ -48,6 +48,9 @@ module ScriptConstants
   CSD3_NAME = 'csd3'
   CSD4_NAME = 'csd4'
 
+  HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'
+  FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'
+
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
@@ -111,6 +114,10 @@ module ScriptConstants
       ALGEBRA_A_NAME,
       ALGEBRA_B_NAME
     ],
+    research_studies: [
+      HOC_IMPACT_STUDY_NAME,
+      FLAPPY_IMPACT_STUDY_NAME
+    ],
     twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
     minecraft: [MINECRAFT_NAME]
@@ -120,7 +127,8 @@ module ScriptConstants
   # This can be used to override that, with lower numbers ordered sooner, and higher numbers
   # ordered later.
   CATEGORY_ORDERING_PRIORITY = {
-    csp: 1,
+    research_studies: 1,
+    csp: 2,
   }
 
   def self.script_in_category?(category, script)
