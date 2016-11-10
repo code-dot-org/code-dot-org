@@ -1792,4 +1792,7 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies
