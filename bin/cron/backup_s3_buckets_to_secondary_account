@@ -12,7 +12,7 @@ S3S3MIRROR_COMMAND = 's3s3mirror.sh'
 BUCKETS_TO_BACKUP = [
   'audio.code.org',
   'cdo-animation-library',
-  # 'cdo-art', # 120M elements, 7.1tb, definitely skip on the nightly!
+  # 'cdo-art', # 120M elements, 7.1tb, seems to be safe to skip
   'cdo-backups',
   'cdo-build-logs',
   'cdo-build-package',
@@ -35,11 +35,11 @@ BUCKETS_TO_BACKUP = [
   'cdo-travisci',
   'cdo-tts', # 2.5k, 500mb
   'cdo-v3-animations', # 4k, 190mb
-  # 'cdo-v3-assets', # 455k, 250gb
+  'cdo-v3-assets', # 455k, 250gb
   'cdo-v3-files',
   'cdo-v3-prod-firebase-backups',
   'cdo-v3-sources-contributors',
-  # 'cdo-v3-sources', # 5M, 30gb - ???
+  'cdo-v3-sources', # 5M, 30gb - ???
   'cdo-videos',
   'cf-templates-p9nfb0gyyrpf-us-east-1',
   'codepipeline-us-east-1-418960518203',
