@@ -134,19 +134,21 @@ class ManifestBuilder
       # the success case.
       objects = animation_objects[name]
 
+      json_destination = File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['json'].key}")
+      png_destination = File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['png'].key}")
+
       # Make sure there's a directory to put the downloaded files in
-      directory = File.dirname "#{DOWNLOAD_DESTINATION}/#{objects['json'].key}"
-      `mkdir -p #{directory}`
+      `mkdir -p #{File.dirname json_destination}`
 
       # Download the JSON file and PNG file
       begin
-        verbose "Writing " + File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['json'].key}")
-        File.open(File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['json'].key}"), 'w') do |file|
+        verbose "Writing #{json_destination}"
+        File.open(json_destination, 'w') do |file|
           objects['json'].get(response_target: file)
         end
 
-        verbose "Writing " + File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['png'].key}")
-        File.open(File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['png'].key}"), 'w') do |file|
+        verbose "Writing #{png_destination}"
+        File.open(png_destination, 'w') do |file|
           objects['png'].get(response_target: file)
         end
       rescue Aws::Errors::ServiceError => service_error
