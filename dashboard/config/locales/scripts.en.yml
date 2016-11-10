@@ -1457,6 +1457,8 @@ en:
             Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
             Unit 5 Assessment 1: Unit 5 Assessment 1
             Unit 5 Assessment 2: Unit 5 Assessment 2
+            "'If' Statements Unplugged": "'If' Statements Unplugged"
+            '"If" Statements Unplugged': '"If" Statements Unplugged'
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -2090,6 +2092,7 @@ en:
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
             Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey: Taking the AP exam'
           description_audience: ''
           description_short: ''
           description: ''
@@ -2252,3 +2255,153 @@ en:
           description_audience: ''
           description_short: The Design Process
           description: ''
+        flappy-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Flappy Code: Flappy Code
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Flappy Code with Survey
+          description_audience: ''
+          description_short: 'Write your own Flappy game in less than 10 minutes! '
+          description: Want to write your own game in less than 10 minutes? Try our Flappy Code tutorial! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
+        coursea-draft:
+          stage:
+            'Debugging: Bugs in Codeville': 'Debugging: Bugs in Codeville'
+            'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration: Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
+            Learn to Drag and Drop: Learn to Drag and Drop
+            'Programming: Happy Maps': 'Programming: Happy Maps'
+            Programming in Maze: Programming in Maze
+            Being Safe Online: Being Safe Online
+            'Loops: Happy Loops': 'Loops: Happy Loops'
+            Loops in Collector: Loops in Collector
+            Loops in Artist: Loops in Artist
+            'Events: The Big Event': 'Events: The Big Event'
+            Events in Play Lab: Events in Play Lab
+            Fuzz Fiesta: Fuzz Fiesta
+            Going Places Safely: Going Places Safely
+          title: 'CS Fundamentals: Course A'
+          description_audience: ''
+          description_short: ''
+          description: "Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r\nRecommended for grade K."
+        courseb-draft:
+          stage:
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration: Stevie and the Marbles'
+            Sequence & Algorithms: Sequence & Algorithms
+            Learn to Drag and Drop: Learn to Drag and Drop
+            Being Safe Online: Being Safe Online
+            'Programming: My Robotic Friends': 'Programming: My Robotic Friends'
+            Programming in Maze: Programming in Maze
+            'Loops: My Loopy Robotic Friends': 'Loops: My Loopy Robotic Friends'
+            Loops in Collector: Loops in Collector
+            Loops in Artist: Loops in Artist
+            'Events: The Big Event': 'Events: The Big Event'
+            Events in Play Lab: Events in Play Lab
+            More Computer Science: More Computer Science
+            Keep it Private: Keep it Private
+          title: 'CS Fundamentals: Course B'
+          description_audience: ''
+          description_short: ''
+          description: Course B is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for 1st grade.
+        coursec-draft:
+          stage:
+            Programming in Maze: Programming in Maze
+            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
+            Programming in Collector: Programming in Collector
+            Programming in Artist: Programming in Artist
+            'Loops: Getting Loopy': 'Loops: Getting Loopy'
+            Loops in Maze: Loops in Maze
+            'Events: The Big Event': 'Events: The Big Event'
+            Puppy Introduction: Puppy Introduction
+            Online Internet Safety: Online Internet Safety
+            Build a Flappy Game: Build a Flappy Game
+            More CS with Run Marco: More CS with Run Marco
+            Binary Bracelets: Binary Bracelets
+            Events in Play Lab: Events in Play Lab
+            Your Digital Footprint: Your Digital Footprint
+          title: 'CS Fundamentals: Course C'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 2nd grade.
+        coursed-draft:
+          stage:
+            'Algorithms: Graph Paper Programming': 'Algorithms: Graph Paper Programming'
+            Events in Bounce: Events in Bounce
+            Nested Loops in Maze: Nested Loops in Maze
+            Nested Loops in Artist: Nested Loops in Artist
+            'Algorithms: Relay Programming': 'Algorithms: Relay Programming'
+            Debugging in Bee: Debugging in Bee
+            While Loops in Farmer: While Loops in Farmer
+            Conditionals with Cards: Conditionals with Cards
+            Conditionals with Bee: Conditionals with Bee
+            Conditionals & Loops in Maze: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer: Conditionals & Loops in Farmer
+            Impacts of Computing: Impacts of Computing
+            More Programming with CS4FN: More Programming with CS4FN
+            Build a Play Lab Game: Build a Play Lab Game
+            Conditionals in Bee: Conditionals in Bee
+            Digital Citizenship: Digital Citizenship
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 3rd grade.
+        coursee-draft:
+          stage:
+            Digital Citizenship: Digital Citizenship
+            Build a Star Wars Game: Build a Star Wars Game
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept in Bee: Determine the Concept in Bee
+            Build a Play Lab Game: Build a Play Lab Game
+            Explore Project Ideas: Explore Project Ideas
+            The Design Process: The Design Process
+            Build Your Project: Build Your Project
+            Present Your Project: Present Your Project
+            More Programming with Scratch: More Programming with Scratch
+          title: 'CS Fundamentals: Course E'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 4th grade.
+        coursef-draft:
+          stage:
+            Digital Citizenship: Digital Citizenship
+            Envelope Variables: Envelope Variables
+            Variables in Play Lab: Variables in Play Lab
+            Variables in Artist: Variables in Artist
+            For Loop Fun: For Loop Fun
+            For Loops in Bee: For Loops in Bee
+            For Loops in Artist: For Loops in Artist
+            'Functions with Parameters: Songwriting with Parameters': 'Functions with Parameters: Songwriting with Parameters'
+            Functions with Parameters in Artist: Functions with Parameters in Artist
+            Functions with Parameters in Bee: Functions with Parameters in Bee
+            Explore Project Ideas: Explore Project Ideas
+            The Design Process: The Design Process
+            Build Your Project: Build Your Project
+            Revise Your Project: Revise Your Project
+            Presentation Your Project: Presentation Your Project
+            Try programming with Khan Academy: Try programming with Khan Academy
+          title: 'CS Fundamentals: Course F'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 5th grade.
+        classic-hoc-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Hour of Code 2013: Hour of Code 2013
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Hour of Code with Survey
+          description_audience: ''
+          description_short: Try the basics of computer science with many fun characters!
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
+        hoc-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Hour of Code 2013: Hour of Code 2013
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Hour of Code with Survey
+          description_audience: ''
+          description_short: Try the basics of computer science with many fun characters!
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.

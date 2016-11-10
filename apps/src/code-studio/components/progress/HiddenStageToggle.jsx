@@ -22,7 +22,7 @@ export default function HiddenStageToggle({hidden, onChange}) {
           <FontAwesome icon="eye"/>
           <span style={styles.buttonText}>{commonMsg.visible()}</span>
         </button>
-        <button value="hidden" title={commonMsg.hidden()}>
+        <button className="uitest-hidden" value="hidden" title={commonMsg.hidden()}>
           <FontAwesome icon="eye-slash"/>
           <span style={styles.buttonText}>{commonMsg.hidden()}</span>
         </button>

@@ -99,8 +99,24 @@ StubDialog.prototype.show = function () {
 StubDialog.prototype.hide = function () {
 };
 
+const appLoaders = {
+  applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
+  bounce: require('@cdo/apps/sites/studio/pages/init/loadBounce'),
+  calc: require('@cdo/apps/sites/studio/pages/init/loadCalc'),
+  craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
+  eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
+  flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
+  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
+  maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
+  netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
+  studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
+  turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
+  weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
+};
 function runLevel(app, skinId, level, onAttempt, testData) {
-  require('@cdo/apps/sites/studio/pages/levels-' + app + '-main');
+
+  var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
@@ -113,8 +129,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     return Boolean(testData.useFirebase);
   };
 
-  var main = window[app + 'Main'];
-  main({
+  loadApp({
     skinId: skinId,
     level: level,
     baseUrl: '/base/build/package/',
