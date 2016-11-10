@@ -9,15 +9,15 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'Enrolling user in a task creates unit enrollments' do
-    skip 'Skipping plc unit tests temporarily'
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
+
+    sleep(0.1)
 
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
     assert_equal [Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status).uniq
   end
 
   test 'test bulk enrollments' do
-    skip 'Skipping plc unit tests temporarily'
     @student = create :student
     student_email = 'some_student@code.org'
     @student.update(email: student_email)
@@ -26,6 +26,8 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     created_enrollments, nonexistent_users, nonteacher_users, other_failure_users =
       Plc::UserCourseEnrollment.enroll_users([@user.email, nonexistent_email, student_email], @course.id)
 
+    sleep(0.1)
+
     assert_equal created_enrollments, [@user.email]
     assert_equal nonexistent_users, [nonexistent_email]
     assert_equal nonteacher_users, [student_email]
@@ -33,10 +35,11 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'enrolling in a started course creates unit enrollments that are in progress' do
-    skip 'Skipping plc unit tests temporarily'
     @course_unit1.update(started: true)
 
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
+
+    sleep(0.1)
 
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
     assert_equal [Plc::EnrollmentUnitAssignment::IN_PROGRESS, Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status)

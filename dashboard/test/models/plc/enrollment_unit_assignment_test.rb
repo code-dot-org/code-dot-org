@@ -20,10 +20,11 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     @enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
     @unit_enrollment = @enrollment.plc_unit_assignments.first
+
+    sleep(0.1)
   end
 
   test 'Enrolling user in a course creates other assignment objects' do
-    skip 'Skipping plc unit tests temporarily'
     module_assignments = @unit_enrollment.plc_module_assignments
     assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, @unit_enrollment.status
     assert_equal 1, module_assignments.count

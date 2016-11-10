@@ -26,6 +26,10 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
     @unit_assignment = @enrollment.plc_unit_assignments.first
+
+    sleep(0.1)
+
+    assert_equal [@module_required], @unit_assignment.plc_module_assignments.map(&:plc_learning_module)
   end
 
   test "previewing evaluation already triggers enrollments" do
@@ -36,14 +40,12 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   end
 
   test "submit evaluation enrolls user in appropriate modules" do
-    skip 'temporarily disabled while we evaluate what is wrong with some plc unit tests'
     post :confirm_assignments, script_id: @course_unit.script.name, content_module: @module_content_1, practice_module: @module_practice_1
     assert_redirected_to script_path(@course_unit.script)
     assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
   end
 
   test "Posting anything other than one content and one practice module to confirm_assignments gets redirected" do
-    skip 'temporarily disabled while we evaluate what is wrong with some plc unit tests'
     [
       [nil, nil],
       [@module_content_1, nil],
