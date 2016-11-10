@@ -28,7 +28,10 @@ mkdir -p $(dirname ${FIRST_BOOT})
 cat <<JSON > ${FIRST_BOOT}
 {
   "cdo-repository": {
-    "revision": "<%=commit%>",
+    <% if commit %>
+      "revision": "<%=commit%>",
+    <% end -%>
+    "branch": "<%=branch%>",
     "sync": true
   },
   "cdo-secrets": {
@@ -49,7 +52,7 @@ cat <<JSON > ${FIRST_BOOT}
 <% if daemon -%>
   "cdo-apps": {
     "daemon": true
-  }
+  },
 <% end -%>
   "run_list": ${RUN_LIST}
 }
