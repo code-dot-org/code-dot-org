@@ -108,6 +108,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "button:contains(Delete Progress)" is visible
     And I close the dialog
     And I wait until element "#showVersionsModal" is gone
+    And I wait for 3 seconds
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
