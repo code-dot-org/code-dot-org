@@ -1,0 +1,68 @@
+%link{href: "/css/minecraft.css", rel: "stylesheet"}
+
+%h1 Minecraft Hour of Code Tutorials
+%p Many languages | Modern browsers and tablets | Grades 2+
+%div{style: "clear:both"}
+.mc-container
+  .mc-tutorials
+    .tutorial-box{style: "margin-right: 14px;"}
+      .img-container
+        %img.mc-img{:src => '/images/fit-478/mc/mc_landing_2016.jpg'}
+      .mc-tutorial-info
+        %h1.new-mc New!
+        %h2.mc-h1-second-box Minecraft Designer
+        %p.mc-tutorial-description Program animals and enemies in your own version of Minecraft.
+        %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+          %button.primary Try 2016 now
+    .tutorial-box
+      .img-container
+        %img.mc-img{:src => '/images/fit-478/mc/mc_landing_2015.jpg'}
+      .mc-tutorial-info
+        %h2.mc-h1-second-box Minecraft Adventurer
+        %p.mc-tutorial-description Use code to take Alex or Steve on an adventure.
+        %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+          %button.primary Try 2015 now
+
+.clear
+%br
+%h2.mc-header2
+  Don't have Internet?
+  %a{href: CDO.studio_url("/download/mc")} Download the offline version of Minecraft Adventurer.
+%br
+
+
+.color-block{style: 'width: 478px; height: 300px; background-color: #0094ca; color: white; float: left; padding: 0 20px;'}
+  %h2.white-text Microsoft Store Hour of Code Camps
+  %a{href: 'https://www.microsoft.com/youthsparkprograms'}
+    Sign up
+  for free Hour of Code camps at the Microsoft Store and learn how to combine your creativity with coding. Visit one of 700 workshops in more than 60 countries.
+
+.color-block{style: 'width: 478px; height: 300px; background-color: #b9bf15; color: white; float: right; padding: 0 20px;'}
+  %h2.white-text Host an Hour of Code Minecraft Event
+  %a{href: 'https://docs.com/hourofcode2016'}
+    Download the teacher guide and resources.
+  %br
+  %br
+  Facilitating an event? Join Microsoft and Minecraft for online training (in English only):
+  %ul
+    %li
+      %a.white-link{href: 'https://aka.ms/vir748pal-register'}
+        Nov 22, 7AM Pacific
+    %li
+      %a.white-link{href: 'https://aka.ms/vir748pal2-register'}
+        Nov 22, 5PM Pacific
+    %li
+      %a.white-link{href: 'https://aka.ms/vir748pal3-register'}
+        Nov 29, 3PM Pacific
+
+.clear
+
+.color-block{style: 'background-color: #7665a0; color: white; margin-top: 15px; padding: 20px; font-size: 14px;'}
+  Whatever you’re passionate about, you can use computer science to imagine, create, and make a future that’s yours.
+  %a{href: 'https://www.microsoft.com/about/philanthropies/youthspark/youthsparkhub'}
+    Microsoft YouthSpark
+  provides free tools and resources to pursue your passion.
+
+.mc-videos{style: "clear: both;"}
+  %h2.mc-header2= I18n.t(:watch_inspirational_videos)
+  =view :inspirational_videos
