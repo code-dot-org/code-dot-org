@@ -157,8 +157,6 @@ module AWS
       end
 
       def delete
-        puts "Stack: #{stack_name}"
-        return
         if stack_exists?
           CDO.log.info "Shutting down #{stack_name}..."
           start_time = Time.now
