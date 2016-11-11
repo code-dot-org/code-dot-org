@@ -43,7 +43,6 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
         nonteacher_users << email
       else
         enrollment = find_or_create_by(user: user, plc_course: course)
-        enrollment.create_enrollment_unit_assignments
         if enrollment.valid?
           enrollment.create_enrollment_unit_assignments
           enrolled_users << email
