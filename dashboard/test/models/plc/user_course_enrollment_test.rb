@@ -8,7 +8,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     @course_unit2 = create(:plc_course_unit, plc_course: @course)
   end
 
-  test 'Enrolling user in a task creates unit enrollments' do
+  test 'Enrolling user in a course creates unit enrollments' do
     Plc::UserCourseEnrollment.enroll_users([@user.email], @course.id)
     enrollment = Plc::UserCourseEnrollment.find_by(user: @user)
 

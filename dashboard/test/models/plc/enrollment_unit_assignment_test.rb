@@ -18,7 +18,8 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 
-    @enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
+    Plc::UserCourseEnrollment.enroll_users([@teacher.email], @course.id)
+    @enrollment = Plc::UserCourseEnrollment.find_by(user: @teacher)
     @unit_enrollment = @enrollment.plc_unit_assignments.first
   end
 
