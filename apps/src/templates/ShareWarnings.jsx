@@ -32,14 +32,14 @@ const styles = {
  */
 const ShareWarnings = React.createClass({
   propTypes: {
-    is13Plus: React.PropTypes.bool.isRequired,
+    promptForAge: React.PropTypes.bool.isRequired,
     showStoreDataAlert: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired,
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
   handleOk() {
-    if (this.props.is13Plus) {
+    if (!this.props.promptForAge) {
       this.props.handleClose();
       return;
     }
@@ -64,7 +64,7 @@ const ShareWarnings = React.createClass({
         {this.props.showStoreDataAlert &&
           <div style={styles.dataMessage}>{commonMsg.shareWarningsStoreData()}</div>
         }
-        {!this.props.is13Plus &&
+        {this.props.promptForAge &&
           <div>
             <div style={styles.ageMessage}>{commonMsg.shareWarningsAge()}</div>
             <AgeDropdown style={styles.ageDropdonw} ref="age"/>
