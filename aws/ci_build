@@ -75,13 +75,10 @@ def build
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
 
-    status = 0
-    Dir.chdir(deploy_dir) do
-      status = begin
-        RakeUtils.rake_stream_output 'ci'
-      rescue => e
-        "Error: #{e.message}\n#{CDO.backtrace(e)}"
-      end
+    status = begin
+      RakeUtils.rake_stream_output 'ci'
+    rescue => e
+      "Error: #{e.message}\n#{CDO.backtrace(e)}"
     end
 
     FileUtils.rm STARTED if File.file?(STARTED)

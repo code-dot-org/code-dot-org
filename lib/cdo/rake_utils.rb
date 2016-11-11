@@ -107,6 +107,7 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
       raise error, error.message
     end
+    0
   end
 
   def self.exec_in_background(command)
