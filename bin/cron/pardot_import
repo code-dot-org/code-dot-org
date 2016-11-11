@@ -24,37 +24,42 @@ PARDOT_CREATE_PROSPECT_URL = "https://pi.pardot.com/api/prospect/version/4/do/cr
 
 # Max # of prospects allowed in one batch
 MAX_PROSPECT_BATCH_SIZE = 25
-# Emperically determined safe max URL length for batch operations
-MAX_URL_LENGTH = 6200
+# Empirically determined safe max URL length for batch operations
+URL_LENGTH_SEND_THRESHOLD = 6200
 
 # Map of database fields to Pardot field names
 MYSQL_TO_PARDOT_MAP = {
-    email: { field: 'email', multi: false},
-    name: { field: 'first_name', multi: false},
-    street_address: { field: 'address_one', multi: false},
-    city: { field: 'city', multi: false},
-    state: { field: 'state', multi: false},
-    postal_code: { field: 'zip', multi: false},
-    country: { field: 'country', multi: false},
-    district_name: { field: 'District', multi: false},
-    district_city: { field: 'District_City', multi: false},
-    district_state: { field: 'District_State', multi: false},
-    school_name: { field: 'School', multi: false},
-    roles: { field: 'Roles', multi: true},
-    courses_facilitated: { field: 'Facilitator_Type', multi: true},
-    professional_learning_enrolled: { field: 'Professional_Learning_Enrolled', multi: true},
-    professional_learning_attended: { field: 'Professional_Learning_Attended', multi: true},
-    hoc_organizer_years: { field: 'Hour_of_Code_Organizer', multi: true},
-    grades_taught: { field: 'Grades_Taught', multi: true},
-    ages_taught: { field: 'Ages_Taught', multi: true}
-}
+    email: { field: 'email', multi: false },
+    name: { field: 'first_name', multi: false },
+    street_address: { field: 'address_one', multi: false },
+    city: { field: 'city', multi: false },
+    state: { field: 'state', multi: false },
+    postal_code: { field: 'zip', multi: false },
+    country: { field: 'country', multi: false },
+    district_name: { field: 'District', multi: false },
+    district_city: { field: 'District_City', multi: false },
+    district_state: { field: 'District_State', multi: false },
+    school_name: { field: 'School', multi: false },
+    roles: { field: 'Roles', multi: true },
+    courses_facilitated: { field: 'Facilitator_Type', multi: true },
+    professional_learning_enrolled: { field: 'Professional_Learning_Enrolled', multi: true },
+    professional_learning_attended: { field: 'Professional_Learning_Attended', multi: true },
+    hoc_organizer_years: { field: 'Hour_of_Code_Organizer', multi: true },
+    grades_taught: { field: 'Grades_Taught', multi: true },
+    ages_taught: { field: 'Ages_Taught', multi: true }
+}.freeze
+
+def log(s)
+  puts s           # emit to stdout
+  CDO.log.info s   # emit to log file
+end
 
 # Log into Pardot and request an API key. The API key is valid for (up to) one hour, after which
 # it will become invalid and we will need to request a new one.
 def request_pardot_api_key
   uri = URI.parse(PARDOT_AUTHENTICATION_URL)
 
-  puts "Requesting new API key"
+  log "Requesting new API key"
   response = Net::HTTP.post_form(uri,
                       {email: CDO.pardot_username,
                       password: CDO.pardot_password,
@@ -101,9 +106,7 @@ end
 # Build the URL to batch create prospects in Pardot. The prospect data is a JSON blob in the
 # query param.
 def build_create_batch_prospects_url(prospects)
-  prospects_payload = { prospects: prospects }
-  prospects_payload_json = prospects_payload.to_json
-  prospects_payload_json_encoded = URI.encode(prospects_payload_json)
+  prospects_payload_json_encoded = URI.encode({ prospects: prospects }.to_json)
   # We also need to encode plus signs in email addresses, otherwise Pardot rejects them as invalid.
   # URI.encode does not encode plus signs, as they are valid characters in the base of a URL.
   # (Although they are NOT valid in the query string, which is where this data is going.)
@@ -130,7 +133,7 @@ def post_request(url)
   uri = URI(auth_url)
   response = Net::HTTP.post_form(uri, {})
 
-  puts "Response: " + response.to_s
+  log "Response: " + response.to_s
 
   xml = Nokogiri::XML(response.body, &:noblanks)
   raise "Pardot create user response did not return parsable XML" if xml.nil?
@@ -154,8 +157,6 @@ def main
 
   # query the conact rolliups
   PEGASUS_DB[:contact_rollups].where("roles like '%Teacher%' AND pardot_sync_at IS NULL").each do |contact_rollup|
-    puts contact_rollup[:email]
-
     # Pardot explicitly considers invalid any email addresses that end with a period in the base
     # (before the @). We have at least one of these, which appears to be a typo.
     next if contact_rollup[:email].include? ".@"
@@ -164,14 +165,12 @@ def main
     prospect = {}
     MYSQL_TO_PARDOT_MAP.each do |mysql_key, pardot_info|
       db_value = contact_rollup[mysql_key]
-      if db_value.presence
+      if db_value.present?
         if pardot_info[:multi]
           # For multi data fields (multiselect,etc ), we set value names as [fieldname]_0, [fieldname]_1, etc
           values = db_value.split(",")
-          i = 0
-          values.each do |value|
-            prospect["#{pardot_info[:field]}_#{i}"] = value
-            i += 1
+          values.each do |value, index|
+            prospect["#{pardot_info[:field]}_#{index}"] = value
           end
         else
           # for single data fields, just set [fieldname] = value
@@ -182,7 +181,7 @@ def main
     # special case: if contact has opted out, set the two different Pardot flavors of opted out
     # to true. Also, only ever set this to true, otherwise set no value; never set it back
     # to false. Pardot is the authority on opt-out data, so never reset any opt-out setting it has stored.
-    if contact_rollup[:opted_out] == true
+    if contact_rollup[:opted_out]
       prospect[:opted_out] = true
       prospect[:is_do_not_email] = true
     end
@@ -196,10 +195,10 @@ def main
     # so we can see how long it is
     url = build_create_batch_prospects_url(prospects)
 
-    # If the URL is longer than an emperically determined maximum safe length, or if
+    # If the URL is longer than an empirically determined maximum safe length, or if
     # we have hit our max # of prospects allowed by Pardot in one batch API call, go ahead
     # and submit the batch
-    if url.length > MAX_URL_LENGTH || prospects.size == MAX_PROSPECT_BATCH_SIZE
+    if url.length > URL_LENGTH_SEND_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE
       submit_create_batch prospects
       prospects = []
     end
