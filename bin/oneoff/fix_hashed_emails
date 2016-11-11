@@ -18,7 +18,7 @@ User.with_deleted.where(user_type: 'teacher').where.not(email: nil).where.not(em
     "correct_hashed_email: #{correct_hashed_email}..."
 
   print "Update? Y/S/Q: "
-  response = gets.strip.downcase
+  response = gets
   if response == 'Y'
     user.update!(hashed_email: correct_hashed_email)
   elsif response == 'S'
