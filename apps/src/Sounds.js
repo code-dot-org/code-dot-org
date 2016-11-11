@@ -292,7 +292,7 @@ Sounds.prototype.isPlayingURL = function (url) {
  * Stop all playing sounds immediately.
  */
 Sounds.prototype.stopAllAudio = function () {
-  for (var soundId in this.soundsById) {
+  for (let soundId in this.soundsById) {
     if (this.soundsById[soundId].isPlaying()) {
       this.soundsById[soundId].stop();
     }
