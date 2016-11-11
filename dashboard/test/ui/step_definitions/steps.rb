@@ -703,7 +703,8 @@ def enroll_in_plc_course(user_email)
   require_rails_env
   user = User.find_by_email_or_hashed_email(user_email)
   course = Plc::Course.find_by(name: 'All The PLC Things')
-  enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
+  Plc::UserCourseEnrollment.enroll_users([user.email], course.id)
+  enrollment = Plc::UserCourseEnrollment.find_by(user: user)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
 end
 
