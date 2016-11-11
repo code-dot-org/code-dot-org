@@ -45,12 +45,13 @@
   "filterHeaderDisplayWeight": "Top rated",
   "filterHeaderPopularityRank": "Most popular",
   "roboticsButtonText": "View robotics activities",
-  "roboticsText": "Got robots? <a href='{robotics_url}'>Use these activities</a> and make a tangible Hour of Code for students of any age!",
+  "roboticsText": "Got robots?  Use these activities and make a tangible Hour of Code for students of any age!",
   "tutorialDetailsTeacherNotes": "Teacher notes",
   "tutorialDetailsShortLink": "Short link",
   "tutorialDetailInternationalLanguages": "Languages",
   "tutorialDetailStandards": "Standards",
   "headingTutorialsYourLanguage": "Tutorials in your language",
   "headingTutorialsManyLanguages": "Tutorials in many languages",
-  "bottomGuidelinesLink": "To see our criteria and submission guidelines for Hour of Code tutorials, <a href='{guidelines_url}'>click here</a>."
+  "bottomGuidelinesLink": "Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
+  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students."
 }

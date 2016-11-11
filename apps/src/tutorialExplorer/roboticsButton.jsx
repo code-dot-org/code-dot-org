@@ -60,8 +60,11 @@ const RoboticsButton = React.createClass({
             </a>
           </div>
         </div>
+
         <div style={roboticsTextStyle}>
-          <div dangerouslySetInnerHTML={{__html: i18n.roboticsText({robotics_url: "/learn/robotics"})}}/>
+          <a href="/learn/robotics">
+            {i18n.roboticsText()}
+          </a>
         </div>
       </div>
     );
