@@ -26,10 +26,10 @@ describe('ShareWarningsDialog', function () {
     return isTagWithText(childComponent, 'DIV', msg.shareWarningsAge());
   }
 
-  it('only shows age prompt if not is13Plus and app doesnt store data', function () {
+  it('only shows age prompt if promptForAge and app doesnt store data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: false,
-      is13Plus: false,
+      promptForAge: true,
       handleClose: function () {},
       handleTooYoung: function () {}
     });
@@ -45,15 +45,15 @@ describe('ShareWarningsDialog', function () {
     var ageDropdowns = ReactTestUtils.scryRenderedComponentsWithType(shareWarnings,
       AgeDropdown);
 
-    assert.strictEqual(dataPromptDivs.length, 0);
-    assert.strictEqual(ageDivs.length, 1);
-    assert.strictEqual(ageDropdowns.length, 1);
+    assert.strictEqual(dataPromptDivs.length, 0, 'zero data prompt divs');
+    assert.strictEqual(ageDivs.length, 1, 'one age div');
+    assert.strictEqual(ageDropdowns.length, 1, 'one age dropdown div');
   });
 
-  it('only shows data prompt if is13Plus and app stores data', function () {
+  it('only shows data prompt if not promptForAge and app stores data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
-      is13Plus: true,
+      promptForAge: false,
       handleClose: function () {},
       handleTooYoung: function () {}
     });
@@ -74,10 +74,10 @@ describe('ShareWarningsDialog', function () {
     assert.strictEqual(ageDropdowns.length, 0);
   });
 
-  it('shows both age and data if not is13Plus and app stores data', function () {
+  it('shows both age and data if promptForAge and app stores data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
-      is13Plus: false,
+      promptForAge: true,
       handleClose: function () {},
       handleTooYoung: function () {}
     });
@@ -98,10 +98,10 @@ describe('ShareWarningsDialog', function () {
     assert.strictEqual(ageDropdowns.length, 1);
   });
 
-  it('doesnt show a dialog when is13Plus and app doesnt store data', function () {
+  it('doesnt show a dialog when note promptForAge and app doesnt store data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: false,
-      is13Plus: true,
+      promptForAge: false,
       handleClose: function () {},
       handleTooYoung: function () {}
     });
@@ -113,7 +113,7 @@ describe('ShareWarningsDialog', function () {
     var handleCloseCalled = false;
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
-      is13Plus: true,
+      promptForAge: false,
       handleClose: function () {
         handleCloseCalled = true;
       },
@@ -139,7 +139,7 @@ describe('ShareWarningsDialog', function () {
     var handleCloseCalled = false;
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
-      is13Plus: false,
+      promptForAge: true,
       handleClose: function () {
         handleCloseCalled = true;
       },
@@ -165,7 +165,7 @@ describe('ShareWarningsDialog', function () {
     var handleCloseCalled = false;
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
-      is13Plus: false,
+      promptForAge: true,
       handleClose: function () {
         handleCloseCalled = true;
       },
@@ -195,7 +195,7 @@ describe('ShareWarningsDialog', function () {
     var handleTooYoungCalled = false;
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
-      is13Plus: false,
+      promptForAge: true,
       handleClose: function () { },
       handleTooYoung: function () {
         handleTooYoungCalled = true;

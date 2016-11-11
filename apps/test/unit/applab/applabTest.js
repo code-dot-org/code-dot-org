@@ -339,14 +339,14 @@ describe('startSharedAppAfterWarnings', function () {
     window.dashboard = originalState.dashboard;
   });
 
-  describe('is13plus', function () {
+  describe('promptForAge', function () {
     it('is true if user is signed in and the server says so', function () {
       var component = shareWarnings.checkSharedAppWarnings({
         channelId: 'current_channel',
         isSignedIn: true,
         is13Plus: true,
       });
-      assert.equal(component.props.is13Plus, true);
+      assert.equal(component.props.promptForAge, true);
     });
 
     it('is true if user is not signed in but has local storage set', function () {
@@ -354,14 +354,14 @@ describe('startSharedAppAfterWarnings', function () {
       var component = shareWarnings.checkSharedAppWarnings({
         channelId: 'current_channel'
       });
-      assert.equal(component.props.is13Plus, true);
+      assert.equal(component.props.promptForAge, true);
     });
 
     it('is false if user is not signed in and has no local storage set', function () {
       var component = shareWarnings.checkSharedAppWarnings({
         channelId: 'current_channel'
       });
-      assert.equal(component.props.is13Plus, false);
+      assert.equal(component.props.promptForAge, false);
     });
   });
 

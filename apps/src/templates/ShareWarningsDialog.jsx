@@ -36,14 +36,14 @@ const styles = {
  */
 const ShareWarningsDialog = React.createClass({
   propTypes: {
-    is13Plus: React.PropTypes.bool.isRequired,
+    promptForAge: React.PropTypes.bool.isRequired,
     showStoreDataAlert: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired,
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
-    return { modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert };
+    return { modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert };
   },
 
   componentDidMount() {
@@ -79,7 +79,7 @@ const ShareWarningsDialog = React.createClass({
         <div style={styles.overlay}/>
         <div style={mainStyle}>
           <ShareWarnings
-            is13Plus={this.props.is13Plus}
+            promptForAge={this.props.promptForAge}
             showStoreDataAlert={this.props.showStoreDataAlert}
             handleTooYoung={this.handleTooYoung}
             handleClose={this.handleClose}

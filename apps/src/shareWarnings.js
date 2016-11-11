@@ -48,15 +48,6 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
   }
 }
 
-function handleShareWarningsTooYoung(onTooYoung) {
-  utils.trySetLocalStorage('is13Plus', 'false');
-  if (onTooYoung) {
-    onTooYoung();
-  } else if (!IN_UNIT_TEST) {
-    window.location.href = '/too_young';
-  }
-}
-
 /**
  * When necessary, show a modal warning about data sharing (if appropriate) and
  * determining if the user is old enough.
@@ -75,27 +66,31 @@ function handleShareWarningsTooYoung(onTooYoung) {
  *        redirected to /too_young
  */
 exports.checkSharedAppWarnings = function (options) {
-  var handleTooYoung = handleShareWarningsTooYoung.bind(null, options.onTooYoung);
+  const handleShareWarningsTooYoung = () => {
+    utils.trySetLocalStorage('is13Plus', 'false');
+    if (options.onTooYoung) {
+      options.onTooYoung();
+    } else if (!IN_UNIT_TEST) {
+      window.location.href = '/too_young';
+    }
+  };
+
+  const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
+
   // dashboard will redirect young signed in users unless they are on an iframe
   // embed, so we will redirect them if they got here somehow
-  var is13Plus = (options.isSignedIn && options.is13Plus) ||
-                  localStorage.getItem('is13Plus') === "true";
+  const promptForAge = !(options.isSignedIn && options.is13Plus) &&
+    !localStorage.getItem('is13Plus') === "true";
 
-  var showStoreDataAlert = (options.hasDataAPIs && options.hasDataAPIs()) &&
-      !hasSeenDataAlert(options.channelId);
-  // Ensure the property is true or false and not undefined.
-  showStoreDataAlert = !!showStoreDataAlert;
-
-  var modal = document.createElement('div');
-  document.body.appendChild(modal);
+  const showStoreDataAlert = hasDataAPIs && !hasSeenDataAlert(options.channelId);
 
   return ReactDOM.render(
       <ShareWarningsDialog
-        showStoreDataAlert={showStoreDataAlert}
-        is13Plus={is13Plus}
+        showStoreDataAlert={!!showStoreDataAlert}
+        promptForAge={promptForAge}
         handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert, options)}
-        handleTooYoung={handleTooYoung}
+        handleTooYoung={handleShareWarningsTooYoung}
       />,
-    modal
+    document.body.appendChild(document.createElement('div'))
   );
 };
