@@ -8,7 +8,7 @@ require 'cdo/properties'
 
 # Global variable for Pardot API key. This can become invalid and need to be refreshed
 # and replaced midstream.
-$api_key = nil
+$pardot_api_key = nil
 
 # Exception to throw to ourselves if Pardot API key is invalid (which probably means it needs to be
 # re-authed)
@@ -78,7 +78,7 @@ def request_pardot_api_key
   api_key = xml.xpath('/rsp/api_key').text
   raise "Pardot authentication response did not include api_key" if api_key.nil?
 
-  $api_key = api_key
+  $pardot_api_key = api_key
 end
 
 # create a single prospect
@@ -127,7 +127,7 @@ end
 
 # Make an API request
 def post_request(url)
-  request_pardot_api_key if $api_key.nil?
+  request_pardot_api_key if $pardot_api_key.nil?
   # add the API key and user key parameters to the URL
   auth_url = append_auth_params_to_url(url)
   uri = URI(auth_url)
@@ -148,14 +148,14 @@ def post_request(url)
 end
 
 def append_auth_params_to_url(url)
-  "#{url}&api_key=#{$api_key}&user_key=#{CDO.pardot_user_key}"
+  "#{url}&api_key=#{$pardot_api_key}&user_key=#{CDO.pardot_user_key}"
 end
 
 def main
   return unless only_one_running?(__FILE__)
   prospects = []
 
-  # query the conact rolliups
+  # query the contact rolliups
   PEGASUS_DB[:contact_rollups].where("roles like '%Teacher%' AND pardot_sync_at IS NULL").each do |contact_rollup|
     # Pardot explicitly considers invalid any email addresses that end with a period in the base
     # (before the @). We have at least one of these, which appears to be a typo.
@@ -167,7 +167,7 @@ def main
       db_value = contact_rollup[mysql_key]
       if db_value.present?
         if pardot_info[:multi]
-          # For multi data fields (multiselect,etc ), we set value names as [fieldname]_0, [fieldname]_1, etc
+          # For multi data fields (multiselect,etc.), we set value names as [fieldname]_0, [fieldname]_1, etc
           values = db_value.split(",")
           values.each do |value, index|
             prospect["#{pardot_info[:field]}_#{index}"] = value
